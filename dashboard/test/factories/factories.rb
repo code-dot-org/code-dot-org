@@ -1088,6 +1088,17 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :music_dance_ai, parent: :bubble_choice_level do
+    sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    sublevels do
+      [
+        create(:dance),
+        create(:music),
+        create(:dance)
+      ]
+    end
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -2308,6 +2319,30 @@ FactoryBot.define do
     is_preset {false}
   end
 
+  factory :aidiff_exit_ticket do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffExitTicket"}
+  end
+
+  factory :aidiff_lesson_hook do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffLessonHook"}
+  end
+
+  factory :aidiff_artifact_association do
+    association :aidiff_artifact
+    association :unit
+    association :unit_group
+    association :lesson
+    association :section
+  end
+
   factory :modular_course_context, class: Hash do
     skip_create
     initialize_with do
@@ -2362,5 +2397,19 @@ FactoryBot.define do
   factory :misc_survey, class: 'Pd::MiscSurvey' do
     association :user
     form_id {1}
+  end
+
+  factory :teacher_notification do
+    association :user
+    title {"Test Teacher Notification"}
+    description {"Test teacher notification description"}
+    icon_name {"notification_icon"}
+    icon_color {"blue"}
+    href_links {[{'url' => 'https://example.com', 'text' => 'Test Link'}]}
+    ai_prompts {[{'text' => 'Test Prompt', 'prompt' => 'Test prompt text'}]}
+    priority {0}
+    expires_at {1.day.from_now}
+    read_at {nil}
+    is_dismissed {false}
   end
 end

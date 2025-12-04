@@ -16,8 +16,8 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import {setViewMode} from '../redux';
 import {ViewMode} from '../types';
+import {setViewMode} from '../weblab2Redux';
 
 import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
@@ -87,6 +87,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     buttons: [
       {
         label: weblab2I18n.code(),
+        ariaLabel: 'View code editor only',
         value: ViewMode.CODE,
         iconLeft: {
           iconName: 'code',
@@ -95,6 +96,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.preview(),
+        ariaLabel: 'View web preview only',
         value: ViewMode.PREVIEW,
         iconLeft: {
           iconName: 'eye',
@@ -103,6 +105,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.splitView(),
+        ariaLabel: 'View code and web preview side by side',
         value: ViewMode.SPLIT,
         iconLeft: {
           iconName: 'table-columns',
@@ -113,6 +116,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     size: 'xs',
     selectedButtonValue: viewMode,
     onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
+    className: weblab2Styles.truncateButtonText,
   };
 
   useEffect(() => {

@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
@@ -121,7 +120,7 @@ const PROJECT_INFO = {
   music: {
     label: i18n.projectTypeMusic(),
     thumbnail: studio('/shared/images/courses/logo_music.png'),
-    urlOverride: '/s/music-intro-2024/reset',
+    urlOverride: pegasus('/music'),
   },
   pythonlab: {
     label: i18n.projectTypePythonlab(),
@@ -148,34 +147,35 @@ class NewProjectButtons extends React.Component {
         {_.chunk(projectTypes, TILES_PER_ROW).map(
           (projectTypesRow, rowIndex) => (
             <div style={styles.row} key={rowIndex}>
-              {projectTypesRow.map((projectType, index) => (
-                <a
-                  key={index}
-                  href={
-                    PROJECT_INFO[projectType].urlOverride ||
-                    '/projects/' + projectType + '/new'
-                  }
-                >
-                  <div
-                    className="newProject-button-tile"
-                    style={[
-                      styles.tile,
-                      index < TILES_PER_ROW - 1 && styles.tilePadding,
-                    ]}
+              {projectTypesRow.map((projectType, index) => {
+                const tileStyle =
+                  index < TILES_PER_ROW - 1
+                    ? {...styles.tile, ...styles.tilePadding}
+                    : styles.tile;
+
+                return (
+                  <a
+                    key={index}
+                    href={
+                      PROJECT_INFO[projectType].urlOverride ||
+                      '/projects/' + projectType + '/new'
+                    }
                   >
-                    <img
-                      style={thumbnailStyle}
-                      src={PROJECT_INFO[projectType].thumbnail}
-                      alt=""
-                      width="70"
-                      height="70"
-                    />
-                    <div style={styles.label}>
-                      {PROJECT_INFO[projectType].label}
+                    <div className="newProject-button-tile" style={tileStyle}>
+                      <img
+                        style={thumbnailStyle}
+                        src={PROJECT_INFO[projectType].thumbnail}
+                        alt=""
+                        width="70"
+                        height="70"
+                      />
+                      <div style={styles.label}>
+                        {PROJECT_INFO[projectType].label}
+                      </div>
                     </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                );
+              })}
               <div style={{clear: 'both'}} />
             </div>
           )
@@ -233,4 +233,4 @@ const styles = {
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(NewProjectButtons));
+}))(NewProjectButtons);

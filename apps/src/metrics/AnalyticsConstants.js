@@ -515,6 +515,11 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
+  // AI chat response copied. Shared across features; check event properties for usage and clientType
+  // to determine feature.
+  CHAT_COPIED: 'User copied an AI chat response',
+  CODE_COPIED: 'User copied AI-generated code snippet',
+
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
     'Teacher gave feedback on AIs summary of student work',
@@ -708,4 +713,10 @@ const EVENT_GROUPS = {
   [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};
+const EXPERIMENTS = {
+  SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION:
+    'select_grades_taught_on_account_creation',
+  ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
+};
+
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS, EXPERIMENTS};
