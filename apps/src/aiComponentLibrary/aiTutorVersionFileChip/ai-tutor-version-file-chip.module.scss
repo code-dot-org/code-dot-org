@@ -5,12 +5,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 0.5rem 0.25rem calc(32px + 8px);
+  padding: 0.25rem 0.25rem 0.25rem calc(32px + 8px);
   border-radius: var(--border-radius-br-s, 4px);
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--borders-neutral-strong);
   position: relative;
-  height: 32px;
   box-sizing: border-box;
 
   .statusIndicator {
@@ -65,10 +64,12 @@
 
 .acceptedIcon {
   margin-left: auto;
+  margin-right: 0.25rem;
   color: var(--text-success-primary);
 }
 
 .rejectedIcon {
   margin-left: auto;
+  margin-right: 0.25rem;
   color: var(--text-error-primary);
 }
