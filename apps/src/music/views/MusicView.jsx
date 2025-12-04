@@ -301,7 +301,7 @@ class UnconnectedMusicView extends React.Component {
         this.loadCode(workspaceCode);
         this.setState({hasEdited: false});
       } catch (e) {
-        console.error('Error parsing project source JSON', e);
+        console.error('Error loading blocks from project sources', e);
       }
     }
   }
