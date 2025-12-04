@@ -1,6 +1,5 @@
 /** @file Top-level view for AI Chat Lab */
 
-import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
@@ -405,20 +404,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
-    <div>
-      <IconButtonWithTooltip
-        id="start-over"
-        label={aichatI18n.aria_startOver()}
-        icon={{iconName: 'refresh', iconStyle: 'solid'}}
-        type="tertiary"
-        color="gray"
-        buttonSize="xs"
-        tooltipSize="xs"
-        tooltipDirection="onBottom"
-        hideTooltipTail={true}
-        onClick={onStartOver}
-      />
-    </div>
+    <IconButtonWithTooltip
+      id="start-over"
+      label={aichatI18n.aria_startOver()}
+      icon={{iconName: 'refresh', iconStyle: 'solid'}}
+      type="tertiary"
+      color="gray"
+      buttonSize="xs"
+      tooltipSize="xs"
+      tooltipDirection="onBottom"
+      hideTooltipTail={true}
+      onClick={onStartOver}
+    />
   );
 };
 
@@ -427,24 +424,17 @@ const renderInstructionsHeaderRight = (
   onInfoClick: () => void
 ) => {
   return isUserTeacher ? (
-    <ActionDropdown
-      name="instructionsInfoDropdown"
-      labelText={aichatI18n.instructionsHeaderRight()}
-      size="xs"
-      triggerButtonProps={{
-        type: 'tertiary',
-        isIconOnly: true,
-        color: 'black',
-        icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
-      }}
-      options={[
-        {
-          value: 'teacherOnboardingModal',
-          label: aichatI18n.aboutAichatLab(),
-          icon: {iconName: 'circle-info', iconStyle: 'solid'},
-          onClick: onInfoClick,
-        },
-      ]}
+    <IconButtonWithTooltip
+      id="about-aichat-lab"
+      label={aichatI18n.aboutAichatLab()}
+      icon={{iconName: 'message-question', iconStyle: 'solid'}}
+      type="tertiary"
+      color="black"
+      buttonSize="xs"
+      tooltipSize="xs"
+      tooltipDirection="onBottom"
+      hideTooltipTail={true}
+      onClick={onInfoClick}
     />
   ) : null;
 };

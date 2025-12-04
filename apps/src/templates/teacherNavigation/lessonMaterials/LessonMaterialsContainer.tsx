@@ -12,7 +12,9 @@ import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
-import {EXT_COMPONENT_OPEN_FAB_EVENT} from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -27,12 +29,12 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
-import UnitSelectorV2 from '../../UnitSelectorV2';
+import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
-import {AIF_UNITS} from './LessonSummaryConstants';
+import {AIF_UNIT_IDS} from './LessonSummaryConstants';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
@@ -95,13 +97,6 @@ const createDisplayName = (
   }
 };
 
-const handleLessonSummaryAskAITAClick = () => {
-  const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
-    bubbles: true,
-  });
-  document.dispatchEvent(openAITAEvent);
-};
-
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
 }
@@ -125,20 +120,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const needsReload = useAppSelector(
     state => state.teacherSections.needsReload
   );
-
-  const showAITALessonSummary = useAppSelector(
-    state => state.currentUser.showAITALessonSummary
-  );
-
-  const unitName = useAppSelector(
-    state => state.teacherSections.selectedSectionUnitName
-  );
-
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  const canShowLessonSummaries =
-    (showAITALessonSummary || AIF_UNITS.includes(unitName)) &&
-    aiTALessonSummaryInfo;
 
   const hasCompletedPersonalizationQuiz = useAppSelector(
     state => state.currentUser.hasCompletedPersonalizationQuiz
@@ -173,6 +154,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         : null,
     [selectedSection.unitId, selectedUnitId]
   );
+
+  const showAITALessonSummary = useAppSelector(
+    state => state.currentUser.showAITALessonSummary
+  );
+
+  // This checks to see if the AI lesson summaries experiment or DCDO key are set
+  // or if the section has AIF assigned in order to enable AI Lesson Summaries
+  const canShowLessonSummaries =
+    (showAITALessonSummary || AIF_UNIT_IDS.includes(unitToLoad)) &&
+    aiTALessonSummaryInfo;
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -290,6 +281,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     () => generateLessonDropdownOptions(),
     [generateLessonDropdownOptions]
   );
+
+  const handleLessonSummaryAskAITAClick = () => {
+    dispatch(
+      fetchThreadMessages({
+        thread: 0,
+        threadType: THREAD_TYPES.lessonSummaryHelp,
+      })
+    );
+    dispatch(setChatIsOpen(true));
+  };
 
   const renderHeader = () => {
     return (

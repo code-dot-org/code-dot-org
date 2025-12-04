@@ -1092,9 +1092,9 @@ FactoryBot.define do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
       [
-        create(:dance, name: 'Generate Dancer'),
-        create(:music, name: 'Generate Music'),
-        create(:dance, name: 'Generate Dance')
+        create(:dance),
+        create(:music),
+        create(:dance)
       ]
     end
   end
