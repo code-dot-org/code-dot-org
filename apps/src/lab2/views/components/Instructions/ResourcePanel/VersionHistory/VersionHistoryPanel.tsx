@@ -53,6 +53,12 @@ type VersionSegment =
       groupIndex: number;
     };
 
+// Regex to match space before AM/PM at end of string
+const AM_PM_SPACE_REGEX = /\s(AM|PM)$/i;
+function stripSpaceBeforeAmPm(value: string): string {
+  return value.replace(AM_PM_SPACE_REGEX, '$1');
+}
+
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
 > = ({
@@ -321,12 +327,10 @@ const VersionHistoryPanel: React.FunctionComponent<
 
       // Within the current year, show month and day only.
       if (now.getFullYear() === versionDate.getFullYear()) {
-        return dateFormatter.format(versionDate).replace(/\s(AM|PM)/gi, '$1');
+        return stripSpaceBeforeAmPm(dateFormatter.format(versionDate));
       }
       // Older than a year, show month, day, and year.
-      return dateFormatterWithYear
-        .format(versionDate)
-        .replace(/\s(AM|PM)/gi, '$1');
+      return stripSpaceBeforeAmPm(dateFormatterWithYear.format(versionDate));
     },
     [dateFormatter, dateFormatterWithYear]
   );
