@@ -733,6 +733,8 @@ Resources:
               Type: string
             - Name: httprequest
               Type: struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>
+            - Name: nonterminatingmatchingrules
+              Type: array<struct<ruleid:string,action:string,rulematchdetails:array<struct<conditiontype:string,sensitivitylevel:string,location:string,matchedelements:array<string>>>,captcharesponse:struct<responsecode:int,solvetimestamp:bigint>,challengeresponse:struct<responsecode:int,solvetimestamp:bigint>>>
             - Name: ja3fingerprint
               Type: string
           OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat

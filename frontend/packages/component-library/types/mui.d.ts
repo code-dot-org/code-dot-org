@@ -1,7 +1,3 @@
-import {Theme as MuiTheme} from '@mui/material/styles';
-
-type Theme = Omit<MuiTheme, 'components'>;
-
 declare module '@mui/material/styles' {
   // Custom Typography definitions
   interface TypographyVariants {

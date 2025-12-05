@@ -24,11 +24,16 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications', {}, undefined)
       .then(response => {
         setLoading(false);
-        const loadedNotifications = response?.value?.map(n => ({
-          ...n,
-          publishedAt: new Date(n.publishedAt),
-          readAt: n.readAt ? new Date(n.readAt) : null,
-        }));
+        const loadedNotifications =
+          response?.value
+            ?.map(n => ({
+              ...n,
+              publishedAt: new Date(n.publishedAt),
+              readAt: n.readAt ? new Date(n.readAt) : null,
+            }))
+            .sort(
+              (a, b) => b.publishedAt.getTime() - a.publishedAt.getTime()
+            ) || [];
         setNotifications(loadedNotifications);
       })
       .catch(error => {
@@ -41,8 +46,17 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
   React.useEffect(() => {
     const unreadNotifications = notifications.filter(n => n.readAt === null);
     if (unreadNotifications.length > 0) {
-      const unreadIds = unreadNotifications.map(n => n.externalId);
-      const payload = {external_notification_ids: unreadIds};
+      const unreadExternalIds = unreadNotifications
+        .filter(n => !!n.externalId)
+        .map(n => n.externalId);
+
+      const unreadTeacherNotificationIds = unreadNotifications
+        .filter(n => !n.externalId)
+        .map(n => n.id);
+      const payload = {
+        external_notification_ids: unreadExternalIds,
+        teacher_notification_ids: unreadTeacherNotificationIds,
+      };
 
       // We don't mark the notifications locally as read so that we still get the `unread`
       // UI state until the user refreshes.
@@ -65,7 +79,7 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
 
   return (
     <div className={styles.listContainer}>
-      <div className={styles.list}>
+      <ol className={styles.list}>
         {loading ? (
           <>
             <Notification notification={null} key={'1'} />
@@ -76,12 +90,12 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
           notifications.map(notification => (
             <Notification
               notification={notification}
-              key={notification.externalId}
+              key={notification.externalId || notification.id}
               aiPromptClick={aiPromptClick}
             />
           ))
         )}
-      </div>
+      </ol>
     </div>
   );
 };

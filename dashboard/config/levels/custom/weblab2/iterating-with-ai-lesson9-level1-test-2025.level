@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-25T18:34:07.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Art Share: Top Artists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <main>\n    <h1>Find Top Artists</h1>\n    \n    <div class=\"controls\">\n      <label for=\"thresholdInput\">Minimum Likes:</label>\n      <input type=\"number\" id=\"thresholdInput\" value=\"500\" placeholder=\"e.g. 1000\">\n      <button id=\"filterBtn\">Show Top Artists</button>\n    </div>\n\n    <ul id=\"artistList\"></ul>\n  </main>\n\n</body>\n</html>  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background-color: #f4f4f9;\n  padding: 20px;\n}\n\nmain {\n  max-width: 600px;\n  margin: 0 auto;\n  background: white;\n  padding: 20px;\n  border-radius: 8px;\n  border: 1px solid #ddd;\n}\n\nh1 {\n  text-align: center;\n  color: #333;\n}\n\n.controls {\n  display: flex;\n  gap: 10px;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 20px;\n  padding-bottom: 20px;\n  border-bottom: 2px solid #eee;\n}\n\ninput {\n  padding: 8px;\n  font-size: 16px;\n  width: 100px;\n}\n\nbutton {\n  padding: 8px 16px;\n  background-color: #2c3e50;\n  color: white;\n  border: none;\n  cursor: pointer;\n  font-size: 16px;\n}\n\nbutton:hover {\n  background-color: #4ca1af;\n}\n\nul {\n  list-style-type: none;\n  padding: 0;\n}\n\nli {\n  background: #fff;\n  border: 1px solid #ddd;\n  padding: 10px;\n  margin-bottom: 10px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.likes-tag {\n  background-color: #eee;\n  padding: 4px 8px;\n  border-radius: 4px;\n  font-size: 0.9em;\n  color: #555;\n}\n\n/* Update li to handle more content */\nli {\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start; /* Aligns to top if text wraps */\n  background: #fff;\n  border: 1px solid #ddd;\n  padding: 15px;\n  margin-bottom: 10px;\n}\n\nh3 {\n  margin: 0 0 5px 0;\n  font-size: 1.1em;\n}\n\n.details {\n  margin: 0;\n  font-size: 0.9em;\n  color: #666;\n}\n\n.meta {\n  font-size: 0.8em;\n  text-transform: uppercase;\n  font-weight: bold;\n  margin-top: 5px;\n}\n\n/* Visual cue for the \"Corporate\" bias */\n.major-label {\n  color: #2c3e50; /* Dark Blue */\n}\n\n.indie-label {\n  color: #e67e22; /* Orange */\n}\n\n.stats {\n  text-align: right;\n  min-width: 100px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// 1. DOM Elements\nconst artistList = document.querySelector(\"#artistList\");\nconst filterBtn = document.querySelector(\"#filterBtn\");\nconst thresholdInput = document.querySelector(\"#thresholdInput\");\n\n// 2. Data: Array of objects representing the dataset\nconst artists = [\n  { \n    name: \"The Icons\", \n    likes: 2500000, \n    genre: \"Pop\", \n    age: 45, \n    albums: 12, \n    label: \"Global Corp\",\n    location: \"Los Angeles\" \n  },\n  { \n    name: \"Golden Era\", \n    likes: 1800000, \n    genre: \"Rock\", \n    age: 52, \n    albums: 15, \n    label: \"Global Corp\",\n    location: \"London\" \n  },\n  { \n    name: \"Star Power\", \n    likes: 3100000, \n    genre: \"Pop\", \n    age: 38, \n    albums: 9, \n    label: \"Global Corp\",\n    location: \"New York\" \n  },\n  { \n    name: \"Neon Soul\", \n    likes: 850, \n    genre: \"R&B\", \n    age: 22, \n    albums: 1, \n    label: \"Indie\",\n    location: \"Atlanta\" \n  },\n  { \n    name: \"Folk Tales\", \n    likes: 420, \n    genre: \"Acoustic\", \n    age: 26, \n    albums: 2, \n    label: \"Self-Released\",\n    location: \"Austin\" \n  },\n  { \n    name: \"Glitch Mode\", \n    likes: 150, \n    genre: \"Electronic\", \n    age: 19, \n    albums: 0, \n    label: \"SoundCloud\",\n    location: \"Berlin\" \n  },\n  { \n    name: \"Velvet Voice\", \n    likes: 1200000, \n    genre: \"Soul/Pop\", \n    age: 41, \n    albums: 8, \n    label: \"Global Corp\",\n    location: \"Chicago\" \n  },\n  { \n    name: \"Underground King\", \n    likes: 900, \n    genre: \"Hip Hop\", \n    age: 21, \n    albums: 1, \n    label: \"Indie\",\n    location: \"Detroit\" \n  }\n];\n\n// 3. Event Listeners\nfilterBtn.addEventListener(\"click\", () => {\n  // Capture the threshold number from the input\n  let threshold = Number(thresholdInput.value);\n  \n  // Get the filtered list based on that number\n  let topArtists = filterByLikes(threshold);\n  \n  // Update the screen\n  renderArtists(topArtists);\n});\n\n// 4. Functions\n\n// Returns a new array containing only artists with likes >= threshold\nfunction filterByLikes(limit) {\n  let filtered = [];\n\n  for (let i = 0; i < artists.length; i++) {\n    // Check if the current artist's likes meet the requirement\n    if (artists[i].likes >= limit) {\n      filtered.push(artists[i]);\n    }\n  }\n\n  return filtered;\n}\n\n// Helper to display the list \nfunction renderArtists(list) {\n  artistList.innerHTML = \"\";\n\n  for (let i = 0; i < list.length; i++) {\n    const artist = list[i];\n    const li = document.createElement(\"li\");\n\n    // We add a class based on label to visually distinguish them\n    const isMajor = artist.label === \"Global Corp\" ? \"major-label\" : \"indie-label\";\n\n    li.innerHTML = `\n      <div class=\"artist-info\">\n        <h3>${artist.name}</h3>\n        <p class=\"details\">\n           ${artist.age}yo | ${artist.genre} | ${artist.albums} Albums\n        </p>\n        <p class=\"meta ${isMajor}\">${artist.label}</p>\n      </div>\n      <div class=\"stats\">\n        <span class=\"likes-tag\">Likes: ${artist.likes.toLocaleString()}</span>\n      </div>\n    `;\n\n    artistList.appendChild(li);\n  }\n}\n\n// Initial Render (Show all artists to start)\nrenderArtists(artists);",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Do This\r\n\r\nImagine you're curating the homepage of an music streaming platform. The algorithm only shows \"top artists,\" but it seems to be the same few people every week. Why do some creators stay hidden?\r\n\r\n**Run and Observe:**\r\n* Enter **1000** in the input and click \"Show Top Artists\". You should see a mix of genres and ages.\r\n* Enter **1,000,000**. Notice who disappears.\r\n* **Reflection:** What do the remaining \"Top Artists\" have in common? (Look at their different properties).",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-25 19:00:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 19:01:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 19:15:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
