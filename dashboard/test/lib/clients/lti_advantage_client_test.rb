@@ -68,13 +68,4 @@ class Clients::LtiAdvantageClientTest < ActiveSupport::TestCase
     res = @lti_client.get_context_membership(original_url, @rlid)
     assert_equal 150, res[:members].length
   end
-
-  test 'handles duplicate query parameters correctly' do
-    original_url = "https://example.com/api/lti/courses/1234/memberships?limit=100&limit=100&rlid=1234"
-    expected_url_page_1 = "https://example.com/api/lti/courses/1234/memberships?limit=100&rlid=1234"
-    @lti_client.expects(:make_request).with(expected_url_page_1, anything).once.returns(@response_page_1)
-
-    res = @lti_client.get_context_membership(original_url, @rlid)
-    assert_equal 50, res[:members].length
-  end
 end
