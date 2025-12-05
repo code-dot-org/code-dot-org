@@ -26,10 +26,10 @@ class Clients::LtiAdvantageClient
     next_page = next_page_url(res[:headers])
     parsed_res = res[:body]
     # For Schoology, we need to pass the next page number due to a bug in their API implementation.
-    # Since we've alredy fetched the first page, we start at page 2.
+    # Since we've already fetched the first page, we start at page 2.
     page = 2
     while next_page
-      next_page = @issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer] ?  build_uri_schoology(next_page, resource_link_id, page) : build_uri(next_page, resource_link_id)
+      next_page = @issuer == Policies::Lti::LMS_PLATFORMS[:schoology][:issuer] ?  build_uri_schoology(next_page, page) : build_uri(next_page, resource_link_id)
       current_page = make_request(next_page, options)
       parsed_res[:members].concat(current_page[:body][:members])
       return parsed_res unless parsed_res[:members].length <= Policies::Lti::MAX_COURSE_MEMBERSHIP
@@ -57,7 +57,7 @@ private def build_uri(url, resource_link_id)
   uri.to_s
 end
 
-private def build_uri_schoology(url, resource_link_id, page)
+private def build_uri_schoology(url, page)
   uri = URI(url)
   uri.query = {
     limit: @page_limit,
