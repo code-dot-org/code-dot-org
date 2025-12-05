@@ -569,7 +569,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :vocabularies, only: [:create, :update] do
+    resources :vocabularies, only: [:create, :update, :destroy] do
       collection do
         get :search
       end
