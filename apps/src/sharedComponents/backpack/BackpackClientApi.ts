@@ -72,6 +72,7 @@ export default class BackpackClientApi {
     );
   }
 
+  // Async version of fetchFile that returns the full Response object.
   async fetchFileAsync(filename: string, onError: ErrorCallback) {
     if (!this.channelId) {
       onError();
