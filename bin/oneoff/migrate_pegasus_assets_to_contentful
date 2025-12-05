@@ -228,7 +228,7 @@ Parallel.each(asset_rows, in_threads: options[:threads]) do |asset_row|
           file_uri.query  = URI.encode_www_form(fm: contentful_asset.file.content_type == 'image/gif' ? 'webp' : 'avif')
         end.to_s
 
-        image_params[:w] = '1920'
+        image_params[:w] = '3840'
         image_params[:q] = '100'
 
         image_uri.query = URI.encode_www_form(image_params)
