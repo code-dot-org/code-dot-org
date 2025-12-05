@@ -202,6 +202,55 @@ module AichatAiHelper
     response
   end
 
+  def self.stream_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id, &on_delta)
+    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
+
+    model_id = aichat_model_customizations["selectedModelId"]
+    temperature = aichat_model_customizations['temperature'].to_f
+    client_type = aichat_model_customizations['clientType']
+    system_prompt = aichat_model_customizations['systemPrompt']
+    retrieval_contexts = aichat_model_customizations['retrievalContexts']
+    json_schema = aichat_model_customizations['responseJsonSchema']
+
+    usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
+    client = create_ai_client_instance(client_type, model_id, usage_reporter)
+    raise ArgumentError, "Streaming is not supported for model #{model_id}" unless client.respond_to?(:stream_response)
+
+    config, request, context = get_config_request_context(
+      stored_messages,
+      new_message,
+      temperature,
+      system_prompt,
+      retrieval_contexts,
+      model_id,
+      level_id,
+      encrypted_channel_id,
+      user_id,
+      project_id,
+      client_type,
+      json_schema
+    )
+
+    full_text = +""
+    client.stream_response(config, request, context) do |event|
+      next unless event
+      text_delta = extract_stream_text_delta(event)
+      next unless text_delta
+      full_text << text_delta
+      on_delta&.call(text_delta, event)
+    end
+
+    full_text
+  end
+
+  def self.extract_stream_text_delta(event)
+    event.dig('output_text', 0, 'content', 0, 'text') ||
+      event.dig('delta', 'content')&.map {|content| content['text']}&.join ||
+      event.dig('content', 0, 'text') ||
+      event.dig('candidates', 0, 'content', 'parts', 0, 'text') ||
+      event['text']
+  end
+
   def self.token_throttling_key(model_id, user_id)
     # "/user/" included to leave space for potential throttling at the classroom/teacher level.
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
