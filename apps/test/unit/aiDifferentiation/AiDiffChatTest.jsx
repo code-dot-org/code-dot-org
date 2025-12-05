@@ -1,4 +1,10 @@
-import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -176,7 +182,12 @@ describe('AiDiffChat', () => {
       SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
     );
     //suggested prompts
-    expect(screen.getAllByRole('button')).toHaveLength(5);
+    const suggestedPromptsGroup = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      5
+    );
     screen.getByRole('button', {name: 'Give me an example'});
     screen.getByRole('button', {name: 'Explain a concept'});
     screen.getByRole('button', {name: 'Debug common mistakes'});
@@ -264,7 +275,12 @@ describe('AiDiffChat', () => {
     renderDefault(0, overrideThreadMessages);
 
     //click a suggested prompt
-    expect(screen.getAllByRole('button')).toHaveLength(7);
+    const suggestedPromptsGroup = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      7
+    );
     const prompt = screen.getByRole('button', {name: 'Create task support'});
     fireEvent.click(prompt);
 
@@ -275,7 +291,9 @@ describe('AiDiffChat', () => {
     );
 
     //second set of suggested prompts
-    expect(screen.getAllByRole('button')).toHaveLength(13);
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      13
+    );
     screen.getByRole('button', {name: 'Create Performance Task samples'});
     screen.getByRole('button', {
       name: 'Can teachers review student submissions?',
@@ -570,9 +588,7 @@ describe('AiDiffChat', () => {
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
 
     //should display only the provided messages, not the default initial msg and prompts
-    DEFAULT_SUGGESTED_PROMPTS.forEach(prompt => {
-      expect(screen.queryByRole('button', {name: prompt.label})).toBeNull();
-    });
+    expect(screen.queryByRole('group', {name: 'Suggested Prompts'})).toBeNull();
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
     expect(bot_messages).toHaveLength(1);
     expect(bot_messages[0]).toHaveTextContent('beep boop');
@@ -736,7 +752,12 @@ describe('AiDiffChat', () => {
 
   it('Suggest prompt button is present and works', () => {
     renderDefault();
-    expect(screen.getAllByRole('button')).toHaveLength(5);
+    const suggestedPromptsGroup = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      5
+    );
     const suggest_prompt = screen.getByRole('button', {
       name: i18n.aiDifferentiation_suggest_prompt(),
     });
@@ -745,19 +766,23 @@ describe('AiDiffChat', () => {
       name: /Get Started/i,
     });
     fireEvent.click(getStartedButton);
-    expect(screen.getAllByRole('button')).toHaveLength(10);
-    // Check the last new prompt is from the second set.
-    expect(screen.getAllByRole('button').pop()).toHaveAccessibleName(
-      'Get help using Code.org'
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      10
     );
+    // Check the last new prompt is from the second set.
+    expect(
+      within(suggestedPromptsGroup).getAllByRole('button').pop()
+    ).toHaveAccessibleName('Get help using Code.org');
     fireEvent.click(suggest_prompt);
     const createButton = screen.getByRole('button', {name: /Create/i});
     fireEvent.click(createButton);
 
-    expect(screen.getAllByRole('button')).toHaveLength(15);
-    // Check the last new prompt is from the first set.
-    expect(screen.getAllByRole('button').pop()).toHaveAccessibleName(
-      'Write a lesson hook'
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      15
     );
+    // Check the last new prompt is from the first set.
+    expect(
+      within(suggestedPromptsGroup).getAllByRole('button').pop()
+    ).toHaveAccessibleName('Write a lesson hook');
   });
 });
