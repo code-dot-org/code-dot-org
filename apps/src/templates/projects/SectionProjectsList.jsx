@@ -65,7 +65,6 @@ class SectionProjectsList extends Component {
 
     return (
       <div>
-        <h1>Hi!</h1>
         <div style={styles.filterRow}>
           <StudentFilterDropdown
             onChangeStudent={this.onChangeStudent.bind(this)}
