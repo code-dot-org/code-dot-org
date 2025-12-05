@@ -36,7 +36,6 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
 
   const [selectedFileId, setSelectedFileId] = useState<string>('');
 
-  // Set initial file when files become available
   React.useEffect(() => {
     if (projectFiles.length > 0 && !selectedFileId) {
       setSelectedFileId(projectFiles[0].id);

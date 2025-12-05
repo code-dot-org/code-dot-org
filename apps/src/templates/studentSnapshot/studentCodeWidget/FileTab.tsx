@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import styles from './studentCodeWidget.module.scss';
@@ -27,7 +27,9 @@ const FileTab: React.FC<FileTabProps> = ({file, isActive, onClick}) => {
           iconStyle={iconStyle}
           className={iconClassName}
         />
-        <BodyFourText noMargin>{file.name}</BodyFourText>
+        <Typography component="p" variant="body4">
+          {file.name}
+        </Typography>
       </div>
     </div>
   );

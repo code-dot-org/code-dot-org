@@ -50,7 +50,6 @@ const Editor: React.FC<EditorProps> = ({code, theme}) => {
     );
   }, [editorRef, code, editorView, theme, themeCompartment]);
 
-  // When theme changes, reconfigure the editor
   useEffect(() => {
     if (editorView) {
       editorView.dispatch({
@@ -63,7 +62,6 @@ const Editor: React.FC<EditorProps> = ({code, theme}) => {
     }
   }, [theme, editorView, themeCompartment]);
 
-  // When code changes, update the editor content
   useEffect(() => {
     if (editorView && editorView.state.doc.toString() !== code) {
       editorView.dispatch({

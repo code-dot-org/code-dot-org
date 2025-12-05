@@ -1,5 +1,5 @@
 import {ProjectFile} from '@codebridge/types';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import Editor from './Editor';
 import FileTabs from './FileTabs';
@@ -19,9 +19,12 @@ const Workspace: React.FC<WorkspaceProps> = ({
   onFileSelect,
   theme,
 }) => {
-  // Get current file code
-  const currentFile = files.find(f => f.id === selectedFileId);
-  const code = currentFile?.contents || '';
+  const currentFile = useMemo(
+    () => files.find(f => f.id === selectedFileId),
+    [files, selectedFileId]
+  );
+
+  const code = useMemo(() => currentFile?.contents || '', [currentFile]);
 
   return (
     <div className={styles.workspaceContainer}>
@@ -29,14 +32,12 @@ const Workspace: React.FC<WorkspaceProps> = ({
         <Editor code={'# No code to display'} theme={theme} />
       ) : (
         <>
-          {/* File tabs */}
           <FileTabs
             files={files}
             selectedFileId={selectedFileId}
             onFileSelect={onFileSelect}
           />
 
-          {/* Code editor */}
           <Editor code={code} theme={theme} />
         </>
       )}
