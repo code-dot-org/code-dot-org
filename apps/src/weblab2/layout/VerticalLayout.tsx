@@ -1,4 +1,3 @@
-import Alert from '@code-dot-org/component-library/alert';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
@@ -9,6 +8,7 @@ import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
+import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -42,6 +42,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   );
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
+  );
+
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2.aiTutorVersionFiles
   );
 
   const dispatch = useAppDispatch();
@@ -177,11 +181,11 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           <div className={weblab2Styles.workspaceContainer}>
             {isAiTutorVersion && (
               <div className={weblab2Styles.aiTutorVersionContainer}>
-                <Alert
+                <AiTutorVersionAlert
                   text={
                     'AI Tutor generated changes to your project. Accept to apply changes or reject to discard.'
                   }
-                  type={'aqua'}
+                  aiTutorVersionFiles={aiTutorVersionFiles}
                 />
               </div>
             )}
