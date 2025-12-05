@@ -1,11 +1,10 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import commonMsg from '@cdo/locale';
 
-import color from '../../util/color';
+import styles from './StudentFilterDropdown.module.scss';
 
 export const ALL_STUDENTS = '_all_students';
 
@@ -24,42 +23,28 @@ class StudentFilterDropdown extends Component {
 
   render() {
     return (
-      <span style={[styles.filterWrapper, this.props.style]}>
-        <span style={styles.filterText}>{commonMsg.filterByStudent()}</span>
-        &nbsp;
-        <select
-          value={this.props.selectedStudent}
+      <span className={styles.filterWrapper} style={this.props.style}>
+        <SimpleDropdown
+          labelText={commonMsg.filterByStudent()}
+          aria-label={commonMsg.filterByStudent()}
+          selectedValue={this.props.selectedStudent}
           onChange={this.onChange.bind(this)}
-          style={styles.filterSelect}
-        >
-          <option value={ALL_STUDENTS} key={ALL_STUDENTS}>
-            {commonMsg.allStudents()}
-          </option>
-          {this.props.studentNames.map(studentName => (
-            <option value={studentName} key={studentName}>
-              {studentName}
-            </option>
-          ))}
-        </select>
+          size="s"
+          name="students"
+          items={[
+            {
+              value: ALL_STUDENTS,
+              text: commonMsg.allStudents(),
+            },
+            ...this.props.studentNames.map(studentName => ({
+              value: studentName,
+              text: studentName,
+            })),
+          ]}
+        />
       </span>
     );
   }
 }
 
-const styles = {
-  filterWrapper: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    fontSize: 14,
-  },
-  filterSelect: {
-    margin: 0,
-    color: 'dimgray',
-  },
-  filterText: {
-    color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
-  },
-};
-
-export default Radium(StudentFilterDropdown);
+export default StudentFilterDropdown;
