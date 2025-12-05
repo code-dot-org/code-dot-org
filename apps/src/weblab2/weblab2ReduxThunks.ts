@@ -53,8 +53,6 @@ export const acceptAiTutorVersion = createAsyncThunk<
     source: state.lab2Project.projectSourceBeforeAiTutorVersion,
   };
 
-  console.log('sourcesBeforeAiTutorVersion', sourcesBeforeAiTutorVersion);
-
   // Add accept notification.
   const notification: Notification = {
     timestamp: Date.now(),
@@ -85,7 +83,6 @@ export const acceptAiTutorVersion = createAsyncThunk<
   const updatedSources = {
     source: updatedSource,
   };
-  console.log('updatedSources', updatedSources);
   // Save sources before AI Tutor version.
   await thunkAPI.dispatch(
     setAndSaveProjectSources(
