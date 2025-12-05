@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
@@ -39,6 +40,10 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+
   const dispatch = useAppDispatch();
 
   const infoPanelInitialWidth = isStandaloneCollapsed
@@ -169,32 +174,47 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             }
             rightHeaderContent={<HeaderButtons />}
           />
-          <div className={weblab2Styles.editorAndPreviewContainer}>
-            {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
-              <>
-                <Workspace
-                  style={{width: middlePanelWidth}}
+          <div className={weblab2Styles.workspaceContainer}>
+            {isAiTutorVersion && (
+              <div className={weblab2Styles.aiTutorVersionContainer}>
+                <Alert
+                  text={
+                    'AI Tutor generated changes to your project. Accept to apply changes or reject to discard.'
+                  }
+                  type={'aqua'}
+                />
+              </div>
+            )}
+            <div className={weblab2Styles.editorAndPreviewContainer}>
+              {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
+                <>
+                  <Workspace
+                    style={{width: middlePanelWidth}}
+                    className={classNames(
+                      lab2Styles.shrinkAndGrow,
+                      panelClassName
+                    )}
+                    hideHeaders
+                  />
+                  <ResizeBar
+                    isVertical={true}
+                    separatorProps={rightPanelSeparatorProps}
+                    isDragging={rightPanelDragging}
+                  />
+                </>
+              )}
+              {viewMode !== ViewMode.CODE && (
+                <div
+                  style={{width: rightPanelWidth}}
                   className={classNames(
                     lab2Styles.shrinkAndGrow,
                     panelClassName
                   )}
-                  hideHeaders
-                />
-                <ResizeBar
-                  isVertical={true}
-                  separatorProps={rightPanelSeparatorProps}
-                  isDragging={rightPanelDragging}
-                />
-              </>
-            )}
-            {viewMode !== ViewMode.CODE && (
-              <div
-                style={{width: rightPanelWidth}}
-                className={classNames(lab2Styles.shrinkAndGrow, panelClassName)}
-              >
-                <HTMLPreview />
-              </div>
-            )}
+                >
+                  <HTMLPreview />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

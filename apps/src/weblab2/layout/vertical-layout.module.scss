@@ -6,6 +6,12 @@
   border-bottom: variables.$default-border;
 }
 
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .editorAndPreviewContainer {
   display: flex;
   flex-grow: 1;
