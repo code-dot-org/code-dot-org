@@ -16,6 +16,7 @@
   teacher_dashboard_data[:showAITALessonSummary] = DCDO.get('show-aita-lesson-summaries', false)
   teacher_dashboard_data[:hasCompletedPersonalizationQuiz] = @current_user.present? && TeachingProfileData.find_by(user: @current_user).present?
   teacher_dashboard_data[:providers] = @current_user.providers
+  teacher_dashboard_data[:flash] = @flash if @flash.present?
 
 = render partial: 'shared/emulate_print_media'
 
