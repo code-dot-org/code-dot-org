@@ -22,6 +22,8 @@ import {
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -34,6 +36,7 @@ type OpenImportFromBackpackPromptArgsType = {
     eventName: string,
     payload?: Record<string, string>
   ) => void;
+  channelId: string;
 };
 
 export const openImportFromBackpackPrompt = async ({
@@ -44,6 +47,7 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
   sendLab2AnalyticsEvent,
+  channelId,
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>
@@ -77,36 +81,53 @@ export const openImportFromBackpackPrompt = async ({
   };
 
   // Fetch file content from backpack and then update or create a project file.
-  const fetchFileContentAndProcess = (
+  const fetchFileContentAndProcess = async (
     selectedFileName: string,
     successMetric: string,
     newFileName?: string
   ) => {
-    backpackApi.fetchFile(
-      selectedFileName,
-      handleError(
-        codebridgeI18n.importFromBackpackTitle(),
-        codebridgeI18n.getBackpackFileError({selectedFileName}) +
-          ' ' +
-          codebridgeI18n.closeWindowTryAgain(),
-        'Backpack file fetch error'
-      ),
-      (fileContent: string) => {
-        if (newFileName) {
-          newFile({fileName: newFileName, contents: fileContent});
-        } else {
-          const fileId = Object.keys(projectFiles).find(
-            id =>
-              projectFiles[id].name === selectedFileName &&
-              projectFiles[id].folderId === DEFAULT_FOLDER_ID
-          );
-          if (fileId) saveFile(fileId, fileContent);
-        }
-        sendLab2AnalyticsEvent(successMetric, {
-          fileType: newFileName?.split('.').pop()?.toLowerCase() || '',
-        });
-      }
+    const onError = handleError(
+      codebridgeI18n.importFromBackpackTitle(),
+      codebridgeI18n.getBackpackFileError({selectedFileName}) +
+        ' ' +
+        codebridgeI18n.closeWindowTryAgain(),
+      'Backpack file fetch error'
     );
+    const response = await backpackApi.fetchFileAsync(
+      selectedFileName,
+      onError
+    );
+    if (!response) {
+      onError();
+      return;
+    }
+    let fileContent = '';
+    let url: string | undefined = undefined;
+    if (response?.headers.get('Content-Type')?.startsWith('image/')) {
+      // Handle image file content as a blob, and upload as an asset.
+      // Store the url as the new file contents.
+      const blob = await response.blob();
+      const uuid = createUuid();
+      const fileType = selectedFileName.split('.').pop();
+      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
+      await HttpClient.put(uploadUrl, blob);
+      url = uploadUrl;
+    } else {
+      fileContent = await response.text();
+    }
+    if (newFileName) {
+      newFile({fileName: newFileName, contents: fileContent, url});
+    } else {
+      const fileId = Object.keys(projectFiles).find(
+        id =>
+          projectFiles[id].name === selectedFileName &&
+          projectFiles[id].folderId === DEFAULT_FOLDER_ID
+      );
+      if (fileId) saveFile(fileId, fileContent, url);
+    }
+    sendLab2AnalyticsEvent(successMetric, {
+      fileType: newFileName?.split('.').pop()?.toLowerCase() || '',
+    });
   };
 
   dialogControl?.showDialog({

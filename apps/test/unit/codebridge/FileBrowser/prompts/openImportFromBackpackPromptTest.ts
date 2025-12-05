@@ -51,6 +51,7 @@ describe('openImportFromBackpackPrompt', () => {
       saveFile: saveFileFunction,
       projectFiles,
       sendLab2AnalyticsEvent: jest.fn(),
+      channelId: 'test-channel-id',
       ...extraArgs,
     });
   };

@@ -12,6 +12,10 @@ interface FilesObject {
 
 type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 
+const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
+// Cache bust suffix ensures we always get the latest version of the file.
+const getCacheBustSuffix = () => `?t=${Date.now()}`;
+
 export default class BackpackClientApi {
   backpackApi: ClientApi;
   appType: string;
@@ -55,10 +59,8 @@ export default class BackpackClientApi {
     if (!this.hasBackpack()) {
       onError();
     }
-    // Cache bust suffix ensures we always get the latest version of the file.
-    const cacheBustSuffix = `?t=${Date.now()}`;
     this.backpackApi.fetch(
-      this.channelId + '/' + filename + cacheBustSuffix,
+      this.channelId + '/' + filename + getCacheBustSuffix(),
       (error, data) => {
         if (error) {
           onError(error);
@@ -68,6 +70,20 @@ export default class BackpackClientApi {
       },
       'text'
     );
+  }
+
+  async fetchFileAsync(filename: string, onError: ErrorCallback) {
+    if (!this.channelId) {
+      onError();
+    }
+
+    try {
+      return await HttpClient.get(
+        `${rootUrl(this.channelId!)}/${filename}${getCacheBustSuffix()}`
+      );
+    } catch (error) {
+      onError(error as Error);
+    }
   }
 
   getFileList(
@@ -155,6 +171,10 @@ export default class BackpackClientApi {
     onError: ErrorCallback,
     onSuccess: () => void
   ) {
+    if (!this.channelId) {
+      onError();
+      return;
+    }
     try {
       const fileResponse = await HttpClient.get(fileUrl);
       if (fileResponse.ok) {
@@ -163,7 +183,7 @@ export default class BackpackClientApi {
           type: responseBlob.type,
         });
         const uploadResponse = await HttpClient.put(
-          `/v3/libraries/${this.channelId}/${filename}`,
+          `${rootUrl(this.channelId)}/${filename}`,
           fileToUpload
         );
         console.log({uploadResponse});
