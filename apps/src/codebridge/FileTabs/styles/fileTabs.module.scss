@@ -35,7 +35,7 @@
   border-radius: variables.$default-border-radius;
   transition: all 0.2s ease-in-out;
 
-  &:hover:not(.active) {
+  &:hover:not(.active, .aiTutorVersionActive, .aiTutorVersionInactive) {
     background-color: var(--background-neutral-tertiary);
   }
 }
@@ -61,5 +61,18 @@
   p,
   i {
     color: var(--text-neutral-white-fixed);
+  }
+}
+
+.aiTutorVersionActive {
+  background-color: var(--background-brand-aqua-primary);
+}
+
+.aiTutorVersionInactive {
+  background-color: var(--background-brand-aqua-extra-light);
+  border: 1px solid var(--borders-brand-aqua-primary);
+
+  &:hover:not(.active) {
+    background-color: var(--background-brand-aqua-light);
   }
 }
