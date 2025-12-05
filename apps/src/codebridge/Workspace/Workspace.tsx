@@ -7,7 +7,7 @@ import {FileBrowser} from '@codebridge/FileBrowser/FileBrowser';
 import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserHeaderPopUpButton';
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
-import React, {useMemo, useRef} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
@@ -59,6 +59,25 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const versionDetails = useAppSelector(
     state => state.lab2Project.versionDetails
   );
+  const isTeacherOfProjectOwner = useAppSelector(
+    state => state.lab.isTeacherOfProjectOwner
+  );
+
+  // Persist the teacher viewing state once detected to ensure
+  // the alert remains visible even if the component refreshes
+  // when another student profile is selected.
+  const [isTeacherViewingStudent, setIsTeacherViewingStudent] = useState(false);
+
+  useEffect(() => {
+    // Update the state to match current Redux values
+    // This ensures the alert shows when conditions are true
+    // and persists even if Redux state temporarily becomes undefined during refresh
+    if (isTeacherOfProjectOwner && isReadOnly) {
+      setIsTeacherViewingStudent(true);
+    } else if (!isTeacherOfProjectOwner && !isReadOnly) {
+      setIsTeacherViewingStudent(false);
+    }
+  }, [isTeacherOfProjectOwner, isReadOnly]);
 
   const locale = currentLocale();
   const versionDate = useMemo(() => {
@@ -96,9 +115,17 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
+        {isTeacherViewingStudent && (
+          <Alert
+            className={moduleStyles.workspaceAlertBanner}
+            text="You are viewing a student project in read only mode."
+            type="info"
+            size="xs"
+          />
+        )}
         {viewingOldVersion && (
           <Alert
-            className={moduleStyles.previousVersionBanner}
+            className={moduleStyles.workspaceAlertBanner}
             text={versionBannerText}
             type="warning"
             size="xs"
