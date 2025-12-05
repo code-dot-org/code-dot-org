@@ -291,9 +291,11 @@ describe('AiDiffChat', () => {
     );
 
     //second set of suggested prompts
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      13
-    );
+    // Re-query the group after new prompts are added
+    const updatedGroup = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(updatedGroup).getAllByRole('button')).toHaveLength(13);
     screen.getByRole('button', {name: 'Create Performance Task samples'});
     screen.getByRole('button', {
       name: 'Can teachers review student submissions?',
@@ -766,23 +768,29 @@ describe('AiDiffChat', () => {
       name: /Get Started/i,
     });
     fireEvent.click(getStartedButton);
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      10
-    );
+
+    // Re-query the group after new prompts are added
+    const updatedGroup1 = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(updatedGroup1).getAllByRole('button')).toHaveLength(10);
     // Check the last new prompt is from the second set.
     expect(
-      within(suggestedPromptsGroup).getAllByRole('button').pop()
+      within(updatedGroup1).getAllByRole('button').pop()
     ).toHaveAccessibleName('Get help using Code.org');
+
     fireEvent.click(suggest_prompt);
     const createButton = screen.getByRole('button', {name: /Create/i});
     fireEvent.click(createButton);
 
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      15
-    );
+    // Re-query the group again after more prompts are added
+    const updatedGroup2 = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(updatedGroup2).getAllByRole('button')).toHaveLength(15);
     // Check the last new prompt is from the first set.
     expect(
-      within(suggestedPromptsGroup).getAllByRole('button').pop()
+      within(updatedGroup2).getAllByRole('button').pop()
     ).toHaveAccessibleName('Write a lesson hook');
   });
 });
