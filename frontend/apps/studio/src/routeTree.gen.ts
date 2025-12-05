@@ -8,71 +8,71 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import {Route as rootRouteImport} from './routes/__root';
-import {Route as IndexRouteImport} from './routes/index';
-import {Route as ProjectsLabTypeChannelIdEditRouteImport} from './routes/projects/$labType/$channelId/edit';
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ProjectsLabTypeChannelIdEditRoute =
   ProjectsLabTypeChannelIdEditRouteImport.update({
     id: '/projects/$labType/$channelId/edit',
     path: '/projects/$labType/$channelId/edit',
     getParentRoute: () => rootRouteImport,
-  } as any);
+  } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute;
-  '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute;
+  '/': typeof IndexRoute
+  '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute;
-  '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute;
+  '/': typeof IndexRoute
+  '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  '/': typeof IndexRoute;
-  '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: '/' | '/projects/$labType/$channelId/edit';
-  fileRoutesByTo: FileRoutesByTo;
-  to: '/' | '/projects/$labType/$channelId/edit';
-  id: '__root__' | '/' | '/projects/$labType/$channelId/edit';
-  fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/projects/$labType/$channelId/edit'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/projects/$labType/$channelId/edit'
+  id: '__root__' | '/' | '/projects/$labType/$channelId/edit'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute;
+  IndexRoute: typeof IndexRoute
+  ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
-      id: '/';
-      path: '/';
-      fullPath: '/';
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/$labType/$channelId/edit': {
-      id: '/projects/$labType/$channelId/edit';
-      path: '/projects/$labType/$channelId/edit';
-      fullPath: '/projects/$labType/$channelId/edit';
-      preLoaderRoute: typeof ProjectsLabTypeChannelIdEditRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/projects/$labType/$channelId/edit'
+      path: '/projects/$labType/$channelId/edit'
+      fullPath: '/projects/$labType/$channelId/edit'
+      preLoaderRoute: typeof ProjectsLabTypeChannelIdEditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
