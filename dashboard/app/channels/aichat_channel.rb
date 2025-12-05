@@ -1,0 +1,112 @@
+class AichatChannel < ApplicationCable::Channel
+  def subscribed
+    reject unless current_user
+    stream_for current_user
+  end
+
+  # Expects payload similar to AichatRequestsController#start_chat_completion
+  # but streams the response over ActionCable instead of enqueuing a job.
+  def request_completion(data)
+    payload = data.deep_stringify_keys
+    new_message = payload['newMessage'] || {}
+    stored_messages = Array(payload['storedMessages']).select do |message|
+      message['status'] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        message['chatMessageText'].present?
+    end
+    model_customizations = (payload['modelParameters'] || {})
+    context = payload['aichatContext'] || {}
+    locale = payload['locale'] || 'en'
+
+    model_customizations['clientType'] ||= context['clientType']
+
+    level_id = context['currentLevelId']
+    project_id = project_id_from_context(context)
+
+    user_text = new_message['chatMessageText']
+    return broadcast_error('missing_new_message') if user_text.blank?
+
+    request = AichatRequest.create!(
+      user_id: current_user.id,
+      model_customizations: model_customizations,
+      stored_messages: stored_messages,
+      new_message: new_message,
+      level_id: level_id,
+      script_id: context['scriptId'],
+      project_id: project_id,
+      execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:RUNNING]
+    )
+
+    user_toxicity = AichatSafetyHelper.find_toxicity(user_text, level_id)
+    if user_toxicity
+      request.update!(
+        response: user_toxicity.to_json,
+        execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY]
+      )
+      return broadcast_error('USER_PROFANITY', user_toxicity, request.id)
+    end
+
+    request_id = request.id
+
+    AichatChannel.broadcast_to(current_user, {event: 'start', request_id: request_id})
+
+    full_response = AichatAiHelper.stream_assistant_response(
+      model_customizations,
+      stored_messages,
+      new_message,
+      level_id,
+      project_id,
+      current_user.id
+    ) {|delta, raw_event| handle_stream_delta(delta, raw_event, request_id)}
+
+    request.update!(
+      response: full_response,
+      execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
+    )
+
+    AichatChannel.broadcast_to(current_user, {event: 'complete', text: full_response, request_id: request_id})
+  rescue OpenaiUserInputResponseTimeout => exception
+    request&.update!(
+      response: exception.message,
+      execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT]
+    )
+    broadcast_error('MODEL_TIMEOUT', exception.message, request_id)
+  rescue ArgumentError => exception
+    request&.update!(
+      response: exception.message,
+      execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+    )
+    broadcast_error('STREAMING_UNSUPPORTED', exception.message, request_id)
+  rescue StandardError => exception
+    request&.update!(
+      response: exception.message,
+      execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE]
+    )
+    Honeybadger.notify(
+      "AichatChannel streaming failed: #{exception.message}",
+      context: {
+        user_id: current_user&.id,
+        locale: locale
+      }
+    )
+    broadcast_error('ERROR', exception.message, request_id)
+  end
+
+  private def broadcast_error(code, details = nil, request_id = nil)
+    AichatChannel.broadcast_to(current_user, {event: 'error', code: code, details: details, request_id: request_id})
+  end
+
+  private def handle_stream_delta(delta, raw_event, request_id)
+    return if delta.blank?
+    AichatChannel.broadcast_to(current_user, {event: 'delta', text: delta, raw_event: raw_event, request_id: request_id})
+  end
+
+  private def project_id_from_context(context)
+    return context['projectId'] if context['projectId']
+    return unless context['channelId']
+    return unless defined?(storage_decrypt_channel_id)
+    _, project_id = storage_decrypt_channel_id(context['channelId'])
+    project_id
+  rescue StandardError
+    nil
+  end
+end
