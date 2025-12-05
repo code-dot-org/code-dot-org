@@ -413,4 +413,5 @@ gem 'openssl', '>= 3.3.1'
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'
 
 # Client for the Contentful Content Management API
+# TODO(INF-1989): Remove the gem once the one-off script `migrate_pegasus_assets_to_contentful` is retired
 gem 'contentful-management', '~> 3.11', require: false
