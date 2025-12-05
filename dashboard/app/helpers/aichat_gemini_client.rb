@@ -1,8 +1,69 @@
 # This class implements a gemini backend for the generic AichatAiClient.
 class AichatGeminiClient < AichatAiClient
+  require 'net/http'
+
+  # Stream a response from Gemini, yielding each parsed chunk to the provided block.
+  def stream_response(config, request, context = [], &block)
+    AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
+    AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
+    AichatRubyTypes.assert_value_is_type(context, AichatAiClientTypes::AiContext)
+
+    body = create_body(config, request, context)
+    AichatAiClientTypes.validate_json_schema(body)
+
+    uri = URI(stream_url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.open_timeout = DCDO.get('gemini_http_open_timeout', 5)
+    http.read_timeout = DCDO.get('gemini_http_read_timeout', SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]] || 30)
+
+    req = Net::HTTP::Post.new(uri, headers.merge({'Accept' => 'application/json'}))
+    req.body = body.to_json
+
+    buffer = +""
+    buffer.force_encoding('UTF-8')
+    http.request(req) do |response|
+      response.read_body do |chunk|
+        sanitized_chunk = chunk.dup.force_encoding('UTF-8')
+        sanitized_chunk.encode!('UTF-8', invalid: :replace, undef: :replace, replace: '')
+        buffer << sanitized_chunk
+        begin
+          parsed = JSON.parse(buffer)
+          if parsed.is_a?(Array)
+            parsed.each {|item| block&.call(item)}
+          else
+            block&.call(parsed)
+          end
+          buffer.clear
+        rescue JSON::ParserError
+          # Keep buffering until we have a full JSON payload.
+          next
+        end
+      end
+      unless buffer.empty?
+        begin
+          parsed = JSON.parse(buffer)
+          if parsed.is_a?(Array)
+            parsed.each {|item| block&.call(item)}
+          else
+            block&.call(parsed)
+          end
+        rescue JSON::ParserError
+          # ignore trailing partials
+        end
+      end
+    end
+  rescue Net::ReadTimeout
+    raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
+  end
+
   # The url to send with the post request.
   private def url
     "https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent?key=#{api_key}"
+  end
+
+  private def stream_url
+    "https://generativelanguage.googleapis.com/v1beta/models/#{model}:streamGenerateContent?key=#{api_key}"
   end
 
   # Take response_body and raise any errors if appropriate.
