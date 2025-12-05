@@ -1,5 +1,6 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 import {ClientApi} from '@cdo/apps/code-studio/initApp/clientApiType';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const REQUEST_RETRY_COUNT = 1;
 
@@ -146,6 +147,31 @@ export default class BackpackClientApi {
       onSuccess,
       () => this.saveFilesHelper(fileObject, [filename], onError, onSuccess)
     );
+  }
+
+  async saveCodebridgeFileFromUrl(
+    filename: string,
+    fileUrl: string,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    try {
+      const fileResponse = await HttpClient.get(fileUrl);
+      if (fileResponse.ok) {
+        const responseBlob = await fileResponse.blob();
+        const fileToUpload = new File([responseBlob], filename, {
+          type: responseBlob.type,
+        });
+        const uploadResponse = await HttpClient.put(
+          `/v3/libraries/${this.channelId}/${filename}`,
+          fileToUpload
+        );
+        console.log({uploadResponse});
+      }
+    } catch (error) {
+      onError(error as Error);
+    }
+    onSuccess();
   }
 
   /**
