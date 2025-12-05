@@ -1,5 +1,45 @@
 # This class implements an openai backend for the generic AichatAiClient.
 class AichatOpenaiResponsesClient < AichatAiClient
+  require 'net/http'
+
+  # Stream an ai response, yielding each parsed event to the provided block.
+  # UNTESTED, needs manual testing
+  def stream_response(config, request, context = [], &block)
+    AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
+    AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
+    AichatRubyTypes.assert_value_is_type(context, AichatAiClientTypes::AiContext)
+
+    body = create_body(config, request, context).merge(stream: true)
+    AichatAiClientTypes.validate_json_schema(body)
+
+    uri = URI(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.open_timeout = DCDO.get('openai_http_open_timeout', 5)
+    http.read_timeout = DCDO.get('openai_http_read_timeout', SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]] || 30)
+
+    request_headers = headers.merge({"Accept" => "text/event-stream"})
+    req = Net::HTTP::Post.new(uri, request_headers)
+    req.body = body.to_json
+
+    http.request(req) do |response|
+      response.read_body do |chunk|
+        chunk.each_line do |line|
+          next unless line.start_with?("data:")
+          data = line.delete_prefix("data:").strip
+          next if data.empty? || data == "[DONE]"
+          begin
+            parsed = JSON.parse(data)
+            block&.call(parsed)
+          rescue JSON::ParserError
+            next
+          end
+        end
+      end
+    end
+  rescue Net::ReadTimeout
+    raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
+  end
   # The url to send with the post request
   private def url
     "https://api.openai.com/v1/responses"
