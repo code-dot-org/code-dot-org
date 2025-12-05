@@ -176,19 +176,19 @@ describe('AiDiffChat', () => {
       SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
     );
     //suggested prompts
-    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
-    screen.getByRole('checkbox', {name: 'Give me an example'});
-    screen.getByRole('checkbox', {name: 'Explain a concept'});
-    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
-    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
-    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
+    expect(screen.getAllByRole('button')).toHaveLength(5);
+    screen.getByRole('button', {name: 'Give me an example'});
+    screen.getByRole('button', {name: 'Explain a concept'});
+    screen.getByRole('button', {name: 'Debug common mistakes'});
+    screen.getByRole('button', {name: 'Generate a mini lesson'});
+    screen.getByRole('button', {name: 'Write an exit ticket'});
   });
 
   it('Selecting a suggested prompt gives response', async () => {
     renderDefault();
 
     //click a suggested prompt
-    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
+    const prompt = screen.getByRole('button', {name: 'Explain a concept'});
     fireEvent.click(prompt);
 
     const responseEventData = {
@@ -264,8 +264,8 @@ describe('AiDiffChat', () => {
     renderDefault(0, overrideThreadMessages);
 
     //click a suggested prompt
-    expect(screen.getAllByRole('checkbox')).toHaveLength(7);
-    const prompt = screen.getByRole('checkbox', {name: 'Create task support'});
+    expect(screen.getAllByRole('button')).toHaveLength(7);
+    const prompt = screen.getByRole('button', {name: 'Create task support'});
     fireEvent.click(prompt);
 
     //bot message should show in the chat
@@ -275,22 +275,22 @@ describe('AiDiffChat', () => {
     );
 
     //second set of suggested prompts
-    expect(screen.getAllByRole('checkbox')).toHaveLength(13);
-    screen.getByRole('checkbox', {name: 'Create Performance Task samples'});
-    screen.getByRole('checkbox', {
+    expect(screen.getAllByRole('button')).toHaveLength(13);
+    screen.getByRole('button', {name: 'Create Performance Task samples'});
+    screen.getByRole('button', {
       name: 'Can teachers review student submissions?',
     });
-    screen.getByRole('checkbox', {
+    screen.getByRole('button', {
       name: 'Student collaboration on the Create Task',
     });
-    screen.getByRole('checkbox', {name: 'AI Tools on the Create Task'});
-    screen.getByRole('checkbox', {name: 'Can I grade the Create Task'});
-    screen.getByRole('checkbox', {
+    screen.getByRole('button', {name: 'AI Tools on the Create Task'});
+    screen.getByRole('button', {name: 'Can I grade the Create Task'});
+    screen.getByRole('button', {
       name: 'Resources to prepare for written responses',
     });
 
     //click a second step suggested prompt
-    const prompt2 = screen.getByRole('checkbox', {
+    const prompt2 = screen.getByRole('button', {
       name: 'Can I grade the Create Task',
     });
     fireEvent.click(prompt2);
@@ -362,7 +362,7 @@ describe('AiDiffChat', () => {
     expect(postStub).not.toHaveBeenCalled();
 
     //click a suggested prompt
-    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
+    const prompt = screen.getByRole('button', {name: 'Explain a concept'});
     fireEvent.click(prompt);
 
     const responseEventData = {
@@ -570,7 +570,9 @@ describe('AiDiffChat', () => {
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
 
     //should display only the provided messages, not the default initial msg and prompts
-    expect(screen.queryByRole('checkbox')).toBeNull();
+    DEFAULT_SUGGESTED_PROMPTS.forEach(prompt => {
+      expect(screen.queryByRole('button', {name: prompt.label})).toBeNull();
+    });
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
     expect(bot_messages).toHaveLength(1);
     expect(bot_messages[0]).toHaveTextContent('beep boop');
@@ -724,7 +726,7 @@ describe('AiDiffChat', () => {
     ).toHaveTextContent("Beep boop I'm a bot");
 
     //Try to click an old suggested prompt
-    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
+    const prompt = screen.getByRole('button', {name: 'Explain a concept'});
     //reset spies so we can check it hasn't been called again
     jest.clearAllMocks();
     fireEvent.click(prompt);
@@ -734,7 +736,7 @@ describe('AiDiffChat', () => {
 
   it('Suggest prompt button is present and works', () => {
     renderDefault();
-    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    expect(screen.getAllByRole('button')).toHaveLength(5);
     const suggest_prompt = screen.getByRole('button', {
       name: i18n.aiDifferentiation_suggest_prompt(),
     });
@@ -743,18 +745,18 @@ describe('AiDiffChat', () => {
       name: /Get Started/i,
     });
     fireEvent.click(getStartedButton);
-    expect(screen.getAllByRole('checkbox')).toHaveLength(10);
+    expect(screen.getAllByRole('button')).toHaveLength(10);
     // Check the last new prompt is from the second set.
-    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+    expect(screen.getAllByRole('button').pop()).toHaveAccessibleName(
       'Get help using Code.org'
     );
     fireEvent.click(suggest_prompt);
     const createButton = screen.getByRole('button', {name: /Create/i});
     fireEvent.click(createButton);
 
-    expect(screen.getAllByRole('checkbox')).toHaveLength(15);
+    expect(screen.getAllByRole('button')).toHaveLength(15);
     // Check the last new prompt is from the first set.
-    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+    expect(screen.getAllByRole('button').pop()).toHaveAccessibleName(
       'Write a lesson hook'
     );
   });

@@ -1,5 +1,5 @@
 @use '@code-dot-org/component-library-styles/mixins';
-@import 'color.scss';
+@import '@cdo/apps/lab2/views/components/layout/variables.scss';
 
 .prompts {
   display: flex;
@@ -10,7 +10,7 @@
     // Base chip styles (from component library chip.module.scss)
     display: inline-block;
     background-color: var(--neutral-base-white);
-    border: 1px solid var(--neutral-base-black);
+    border: $default-border;
     color: var(--neutral-base-black);
     min-width: 30px;
     text-align: center;
@@ -26,18 +26,14 @@
 
     @include mixins.button-three-text;
 
-    // Hover state
     &:hover:not(:disabled) {
       background-color: var(--neutral-gray-10);
     }
 
-    // Focus state
     &:focus-visible {
-      outline: 2px solid $brand_primary_default;
-      outline-offset: 2px;
+      @include mixins.focus-styles;
     }
 
-    // Selected state
     &.selected {
       background-color: var(--brand-teal-50);
       color: white;
@@ -48,7 +44,6 @@
       }
     }
 
-    // Disabled state
     &.disabled {
       opacity: 0.5;
       cursor: not-allowed;

@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import moduleStyles from './suggested-prompt.module.scss';
@@ -35,9 +36,10 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
           <button
             key={prompt.label}
             type="button"
-            className={`${moduleStyles.prompt} ${
-              prompt.selected ? moduleStyles.selected : ''
-            } ${isDisabled ? moduleStyles.disabled : ''}`}
+            className={classNames(moduleStyles.prompt, {
+              [moduleStyles.selected]: prompt.selected,
+              [moduleStyles.disabled]: isDisabled,
+            })}
             onClick={() => !isDisabled && prompt.onClick(prompt)}
             aria-disabled={isDisabled}
             aria-pressed={prompt.selected}
