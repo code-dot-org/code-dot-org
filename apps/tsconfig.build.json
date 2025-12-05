@@ -14,7 +14,7 @@
     "jsx": "react",
     "target": "es5",
     "lib": ["ES2022", "DOM"],
-    "module": "node16",
+    "module": "node20",
     "rootDir": "./",
     "moduleResolution": "node16",
     "outDir": "build",
