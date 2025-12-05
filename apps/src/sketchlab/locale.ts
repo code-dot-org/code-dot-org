@@ -4,10 +4,6 @@
  */
 import {Locale} from '@cdo/apps/types/locale';
 
-import * as sketchlabMsg from './localeUntyped';
-
-const typedSketchlabMsg = sketchlabMsg as Locale<
+export default require('@cdo/sketchlab/locale') as Locale<
   typeof import('@cdo/i18n/sketchlab/en_us.json')
 >;
-
-export default typedSketchlabMsg;
