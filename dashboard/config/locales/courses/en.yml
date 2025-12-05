@@ -6560,3 +6560,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        miniglobal-2025:
+          title: miniglobal-2025
+          description_short: First half of express
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

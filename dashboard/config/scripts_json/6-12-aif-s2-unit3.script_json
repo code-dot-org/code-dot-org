@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-01 18:37:14 UTC",
+    "serialized_at": "2025-12-04 19:46:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -957,15 +957,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "building-data-driven-systems-lesson1-level5-test-2025"
-        ],
         "progression": "Vocab: Array"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson1-level5-test-2025"
+          "building-data-driven-systems-lesson1-level5a-test-2025"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -973,7 +970,7 @@
         "activity_section.key": "ecf300a2-e401-4fbe-9646-13301053a945"
       },
       "level_keys": [
-        "building-data-driven-systems-lesson1-level5-test-2025"
+        "building-data-driven-systems-lesson1-level5a-test-2025"
       ]
     },
     {
@@ -1657,6 +1654,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson5-level3-test-2025"
+        ],
         "progression": "Plan and Build"
       },
       "bonus": false,
@@ -2550,9 +2550,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "building-data-driven-systems-lesson1-level5-test-2025",
+        "level.key": "building-data-driven-systems-lesson1-level5a-test-2025",
         "script_level.level_keys": [
-          "building-data-driven-systems-lesson1-level5-test-2025"
+          "building-data-driven-systems-lesson1-level5a-test-2025"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

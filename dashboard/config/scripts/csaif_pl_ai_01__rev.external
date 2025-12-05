@@ -5,7 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Chat Lab
 
-#### The AI you and your students will use throughout this Unit and the Foundations of AI course is a chatbot called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
+#### The LLM you and your students will use throughout this Unit and the Foundations of AI course is called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
+</div>
+
+#### When you try out the AI Chat Lab, you’ll see how the AI uses your prompts to generate its replies. As you experiment, you'll how how the AI responds and how the wording of your prompt shapes what it says.
 
 <br>
 
@@ -13,15 +19,16 @@ markdown <<MARKDOWN
 
 <br>
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
-</div>
+#### While there is much more happening under the hood, a simple way to think about it is this: *The AI looks at your prompt and tries to choose the next word that best fits, much like how we can often predict the next word in a familiar sentence.*
 
-#### AI selects words for its response based on probability. While there is much more going on, in general, generative AI tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.
+#### It does this using probability: based on patterns it has learned from large amounts of text, the AI estimates which words are most likely to come next and selects from those possibilities.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Probability</strong> is the likelihood that a specific outcome might occur.</p>
-</div>
+---
 
+## Important Safety Note:
+#### AI Chat Lab is designed for educational use, so we’ve built in guardrails to keep the experience safe and appropriate.
+* #### The system flags inappropriate messages from the user or from the chatbot.
+* #### All messages that are sent are saved, and as the teacher, you can review them if needed.
 
+#### For more information about safety with AI Chat Lab check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank">FAQ Support Article</a>.
 MARKDOWN

@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Side Effect\n\nA **side effect** is a  change that a function causes outside itself, like modifying a global variable, changing an array passed in, updating the screen, or logging to the console. \n\nSide effects can make code harder to predict and can ‘mutate’ original data\n",
+        "text": "# Side Effect\n\nA **side effect** is a change that a function causes outside itself, like modifying a global variable, changing an array passed in, updating the screen, or logging to the console. \n\nSide effects can make code harder to predict and can `mutate` original data.\n",
         "imageUrl": "https://images.code.org/d8b5233c9045d62d4c6a858baa824a1b-Screenshot 2025-11-24 125525.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
         "layout": "text-bottom-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-24T16:11:44.565+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson7-vocab-pure-function-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson7-vocab-pure-function-test-2025\"},{\"changed_at\":\"2025-11-24 16:12:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:55:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:55:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:11:44.565+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson7-vocab-pure-function-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson7-vocab-pure-function-test-2025\"},{\"changed_at\":\"2025-11-24 16:12:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:55:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:55:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-04 23:34:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
