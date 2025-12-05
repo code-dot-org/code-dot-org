@@ -1242,6 +1242,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9.15.0"
     "@tsconfig/node22": "npm:^22.0.4"
+    "@tsconfig/vite-react": "npm:^7.0.2"
     eslint: "npm:^9.15.0"
     eslint-import-resolver-typescript: "npm:^3.6.3"
     eslint-plugin-import-x: "npm:^4.4.3"
@@ -5491,6 +5492,13 @@ __metadata:
   version: 22.0.4
   resolution: "@tsconfig/node22@npm:22.0.4"
   checksum: 10c0/3c55efaa4a097740f5280bbe0e94baef673cd71925c07e8a6251d878809ef1ed065d8a44085ebe39b496612f40fe4c7cff7ab67c199534b60dc2236407e752b7
+  languageName: node
+  linkType: hard
+
+"@tsconfig/vite-react@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "@tsconfig/vite-react@npm:7.0.2"
+  checksum: 10c0/cc63685e4f7b70a2ca34becb81939dad3f852f5640b6072aeeb2671b41f8bd1d80746ac7438c166090d6f22ca41db89282238e09a8877b8ac495c9fb0fa58257
   languageName: node
   linkType: hard
 
