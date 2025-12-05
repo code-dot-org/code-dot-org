@@ -60,6 +60,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
 
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isViewingOldVersion = state.lab2Project.viewingOldVersion;
+  const isAiTutorVersion = state.lab2Project.viewingAiTutorVersion;
   const readOnlyPredictLevel = isReadOnlyPredictLevel(state);
 
   // Also check for temporary read-only state (running/validating).
@@ -72,6 +73,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     isRunningAndReadonly ||
     hasSubmitted ||
     isViewingOldVersion ||
+    isAiTutorVersion ||
     readOnlyPredictLevel
   );
 };

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {getStore} from '@cdo/apps/redux';
 import {
   asyncLoadCoursesWithProgress,
@@ -15,8 +16,6 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import i18n from '@cdo/locale';
-
-import firehoseClient from '../metrics/firehose';
 
 import styles from './unit-selector-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
@@ -50,6 +49,8 @@ function UnitSelectorV2({
   isLoadingCourses,
   isLoadingSectionData,
   selectedSectionCourse,
+  isLabelVisible = false,
+  labelText = i18n.selectUnit(),
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -124,12 +125,12 @@ function UnitSelectorV2({
       name="unitSelector"
       onChange={onSelectUnit}
       className={className}
-      isLabelVisible={false}
+      isLabelVisible={isLabelVisible}
       size="s"
       dropdownTextThickness="thin"
       id="unit-selector-v2"
       color="gray"
-      labelText={i18n.selectUnit()}
+      labelText={labelText}
     />
   );
 }
@@ -148,6 +149,8 @@ UnitSelectorV2.propTypes = {
   isLoadingCourses: PropTypes.bool,
   isLoadingSectionData: PropTypes.bool.isRequired,
   selectedSectionCourse: PropTypes.any,
+  isLabelVisible: PropTypes.bool,
+  labelText: PropTypes.string,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;

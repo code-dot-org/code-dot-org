@@ -8,6 +8,7 @@ import {
   MultiFileSource,
   ProjectSources,
   ProjectFileType,
+  ProjectVersion,
 } from '@cdo/apps/lab2/types';
 import {
   activateFileHelper,
@@ -20,7 +21,10 @@ import {
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
+  projectSourceBeforeAiTutorVersion?: MultiFileSource;
+  versionDetails: ProjectVersion | undefined;
   viewingOldVersion: boolean;
+  viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
@@ -29,7 +33,10 @@ export interface Lab2ProjectState {
 
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
+  projectSourceBeforeAiTutorVersion: undefined,
+  versionDetails: undefined,
   viewingOldVersion: false,
+  viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
@@ -51,15 +58,31 @@ const projectSlice = createSlice({
         source: action.payload,
       };
     },
+    setProjectSourceBeforeAiTutorVersion(
+      state,
+      action: PayloadAction<MultiFileSource | undefined>
+    ) {
+      state.projectSourceBeforeAiTutorVersion = action.payload;
+    },
     setPreviousVersionSource(
       state,
-      action: PayloadAction<ProjectSources | undefined>
+      action: PayloadAction<{
+        sources: ProjectSources | undefined;
+        version?: ProjectVersion;
+      }>
     ) {
-      state.projectSources = action.payload;
+      state.projectSources = action.payload.sources;
+      state.versionDetails = action.payload.version;
       state.viewingOldVersion = true;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
+      if (!action.payload) {
+        state.versionDetails = undefined;
+      }
+    },
+    setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
+      state.viewingAiTutorVersion = action.payload;
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
@@ -417,8 +440,10 @@ const projectSlice = createSlice({
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
+      state.versionDetails = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+      state.viewingAiTutorVersion = false;
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
@@ -428,8 +453,10 @@ const projectSlice = createSlice({
 
 export const {
   setProjectSource,
+  setProjectSourceBeforeAiTutorVersion,
   setPreviousVersionSource,
   setViewingOldVersion,
+  setViewingAiTutorVersion,
   setRestoredOldVersion,
   resetProjectMetadata,
   setHasEdited,

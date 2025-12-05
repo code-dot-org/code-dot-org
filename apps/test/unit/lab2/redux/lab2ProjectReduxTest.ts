@@ -80,7 +80,9 @@ const createMockProjectSources = (
 
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
+  versionDetails: undefined,
   viewingOldVersion: false,
+  projectSourceBeforeAiTutorVersion: undefined,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
