@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
+      studio-changed: ${{ steps.changes.outputs.studio }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -36,6 +37,17 @@ jobs:
               - 'frontend/packages/fonts/**'
               - 'frontend/*'
               - '.github/**'
+            studio:
+              - 'frontend/apps/studio/**'
+              - 'frontend/*'
+              - '.github/**'
+
+  # Start the studio app CI workflow
+  studio:
+    if: ${{ needs.setup.outputs.studio-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/studio-ci.yml
+    secrets: inherit
 
   # Start the component library CI workflow
   component-library:

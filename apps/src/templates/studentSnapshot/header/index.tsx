@@ -2,26 +2,34 @@ import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState} from 'react';
 
+import LessonSelector, {
+  LessonOption,
+} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
+import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
+
 import styles from './header.module.scss';
 
-const Header: React.FC = () => {
-  const [selectedUnit, setSelectedUnit] = useState<string>('');
-  const [selectedLesson, setSelectedLesson] = useState<string>('');
+interface HeaderProps {
+  lessons: LessonOption[];
+  selectedLessonId: number | null;
+  setSelectedLessonId: (lessonId: number | null) => void;
+  isLessonsLoading: boolean;
+  hasUnnumberedLessons?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({
+  lessons,
+  selectedLessonId,
+  setSelectedLessonId,
+  isLessonsLoading,
+  hasUnnumberedLessons = false,
+}) => {
   const [selectedStudent, setSelectedStudent] = useState<string>('');
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
     useState<string>('');
 
-  const unitOptions = [
-    {value: 'unit1', text: 'Unit 1'},
-    {value: 'unit2', text: 'Unit 2'},
-    {value: 'unit3', text: 'Unit 3'},
-  ];
-
-  const lessonOptions = [
-    {value: 'lesson1', text: 'Lesson 1'},
-    {value: 'lesson2', text: 'Lesson 2'},
-    {value: 'lesson3', text: 'Lesson 3'},
-  ];
+  const selectedLesson =
+    lessons?.find(lesson => lesson.id === selectedLessonId) || null;
 
   const studentOptions = [
     {value: 'student1', text: 'Student 1'},
@@ -53,23 +61,23 @@ const Header: React.FC = () => {
   return (
     <div className={styles.header}>
       <div className={styles.headerColumn}>
-        <SimpleDropdown
+        <UnitSelectorV2
+          filterToSelectedCourse={true}
+          className={styles.unitSelector}
+          isLabelVisible={true}
           labelText="Unit"
-          name="unit"
-          items={unitOptions}
-          selectedValue={selectedUnit}
-          onChange={event => setSelectedUnit(event.target.value)}
-          placeholder="Select a unit"
-          className={styles.dropdown}
         />
-        <SimpleDropdown
-          labelText="Lesson"
-          name="lesson"
-          items={lessonOptions}
-          selectedValue={selectedLesson}
-          onChange={event => setSelectedLesson(event.target.value)}
-          placeholder="Select a lesson"
+        <LessonSelector
+          lessons={lessons || []}
+          selectedLesson={selectedLesson}
+          onLessonChange={(lessonId: number) => {
+            setSelectedLessonId(lessonId);
+          }}
+          hasUnnumberedLessons={hasUnnumberedLessons}
+          isLoading={isLessonsLoading}
           className={styles.dropdown}
+          isLabelVisible={true}
+          labelText="Lesson"
         />
         <div className={styles.buttonGroup}>
           <Button

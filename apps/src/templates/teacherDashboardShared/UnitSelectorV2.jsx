@@ -49,6 +49,8 @@ function UnitSelectorV2({
   isLoadingCourses,
   isLoadingSectionData,
   selectedSectionCourse,
+  isLabelVisible = false,
+  labelText = i18n.selectUnit(),
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -123,12 +125,12 @@ function UnitSelectorV2({
       name="unitSelector"
       onChange={onSelectUnit}
       className={className}
-      isLabelVisible={false}
+      isLabelVisible={isLabelVisible}
       size="s"
       dropdownTextThickness="thin"
       id="unit-selector-v2"
       color="gray"
-      labelText={i18n.selectUnit()}
+      labelText={labelText}
     />
   );
 }
@@ -147,6 +149,8 @@ UnitSelectorV2.propTypes = {
   isLoadingCourses: PropTypes.bool,
   isLoadingSectionData: PropTypes.bool.isRequired,
   selectedSectionCourse: PropTypes.any,
+  isLabelVisible: PropTypes.bool,
+  labelText: PropTypes.string,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
