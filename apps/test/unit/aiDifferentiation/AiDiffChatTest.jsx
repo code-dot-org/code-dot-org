@@ -500,7 +500,7 @@ describe('AiDiffChat', () => {
     expect(submit_btn).toBeEnabled();
     fireEvent.click(submit_btn);
 
-    //After click, but before server response, user message editor should be disabled
+    // After click, but before server response, user message editor should be disabled
     expect(submit_btn).not.toBeEnabled();
     expect(textbox).not.toBeEnabled();
 
@@ -607,7 +607,7 @@ describe('AiDiffChat', () => {
     expect(submit_btn).toBeEnabled();
     fireEvent.click(submit_btn);
 
-    //After click, but before server response, user message editor should be disabled
+    // After click, but before server response, user message editor should be disabled
     expect(submit_btn).not.toBeEnabled();
     expect(textbox).not.toBeEnabled();
 
@@ -784,8 +784,8 @@ describe('AiDiffChat', () => {
     expect(totalButtons1.pop()).toHaveAccessibleName('Get help using Code.org');
 
     fireEvent.click(suggest_prompt);
-    const createButton = screen.getByRole('button', {name: /Create/i});
-    fireEvent.click(createButton);
+    const createButtons = screen.getAllByRole('button', {name: /Create/i});
+    fireEvent.click(createButtons[0]);
 
     // Count buttons across all groups after more prompts are added
     const allGroups2 = screen.getAllByRole('group', {
