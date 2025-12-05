@@ -107,7 +107,7 @@ progress_bar = ProgressBar.create(total: asset_rows.size, format: 'Migrated[%c/%
 result_csv_path = "migrate_pegasus_assets_to_contentful_result_#{Time.now.strftime("%Y%m%d_%H%M%S")}.csv"
 result_csv_headers = %w[cs-uri-stem contentful_asset_location redirected_location redirect_entry_id]
 unless options[:dry_run]
-  CSV.open(result_csv_path, 'w', write_headers: true, headers: result_csv_headers)
+  CSV.open(result_csv_path, 'w', write_headers: true, headers: result_csv_headers) {}
   progress_bar.log "[CSV output file]: #{File.expand_path(result_csv_path)}"
 end
 
@@ -216,7 +216,26 @@ Parallel.each(asset_rows, in_threads: options[:threads]) do |asset_row|
   ### BEGIN Contentful Redirect Creation ###
   contentful_redirect_brand = 'Code.org'
   contentful_redirect_src   = normalized_asset_path
-  contentful_redirect_dest  = URI.parse(contentful_asset.file.url).tap {_1.scheme = 'https'}.to_s
+  contentful_redirect_dest  =
+    if contentful_asset.file.content_type.start_with?('image/')
+      # Generates an optimized image URL that serves the asset from the code.org CDN instead of Contentful,
+      # using AVIF for standard images or WEBP for GIFs.
+      URI('https://code.org/_next/image').tap do |image_uri|
+        image_params = {}
+
+        image_params[:url] = URI(contentful_asset.file.url).tap do |file_uri|
+          file_uri.scheme = 'https'
+          file_uri.query  = URI.encode_www_form(fm: contentful_asset.file.content_type == 'image/gif' ? 'webp' : 'avif')
+        end.to_s
+
+        image_params[:w] = '1920'
+        image_params[:q] = '100'
+
+        image_uri.query = URI.encode_www_form(image_params)
+      end.to_s
+    else
+      URI(contentful_asset.file.url).tap {_1.scheme = 'https'}.to_s
+    end
 
   contentful_redirect = process_contentful_request.call(
     @contentful_redirect_type.entries, :all,
