@@ -4,14 +4,14 @@ import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {
   ExcalidrawElement,
   Theme as ExcalidrawTheme,
-} from '@excalidraw/excalidraw/types/element/types';
+} from '@excalidraw/excalidraw/element/types';
 import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
   DataURL,
-} from '@excalidraw/excalidraw/types/types';
+} from '@excalidraw/excalidraw/types';
 import React, {useEffect, useCallback, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';

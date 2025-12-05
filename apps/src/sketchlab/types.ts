@@ -1,5 +1,5 @@
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
-import {AppState} from '@excalidraw/excalidraw/types/types';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/element/types';
+import {AppState} from '@excalidraw/excalidraw/types';
 
 import {
   ExcalidrawSourceWithExternalFiles,

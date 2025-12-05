@@ -8,12 +8,12 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/element/types';
 import {
   ExcalidrawInitialDataState,
   BinaryFileData,
   DataURL,
-} from '@excalidraw/excalidraw/types/types';
+} from '@excalidraw/excalidraw/types';
 import type * as GoogleBlockly from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 

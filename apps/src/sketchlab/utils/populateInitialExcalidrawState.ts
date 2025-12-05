@@ -1,8 +1,8 @@
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/element/types';
 import {
   ExcalidrawInitialDataState,
   DataURL,
-} from '@excalidraw/excalidraw/types/types';
+} from '@excalidraw/excalidraw/types';
 import cloneDeep from 'lodash/cloneDeep';
 
 import {ExcalidrawSourceWithExternalFiles} from '@cdo/apps/lab2/types';
