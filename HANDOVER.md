@@ -5,7 +5,7 @@
 #### Birds Skin (Programming with Angry Birds)
 - **Location**: `apps/static/skins/birds/`
 - **Changes**:
-  - Replaced Angry Birds sprites with generic bird sprites from Code.org Skins drive by manually deleting and  adding 
+  - Replaced Angry Birds sprites with generic bird sprites from Code.org Skins drive by manually deleting and adding both in build and static
   - Updated `static_avatar.png` and `small_static_avatar.png` with generic bird from poetry assets
   - Created new `move_avatar.png` sprite sheet (7×9 grid, 600×1800px) using chick sprites
   - Replaced various bird sprites throughout the skin
