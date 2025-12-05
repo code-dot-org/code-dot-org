@@ -1,35 +1,31 @@
-## Key Changes Summary
+## Michelle's Handover Documentation (F25)
 
-### 1. Sprite Asset Replacements
+### 1. Angry Birds Sprite Asset Updates
 
-#### Birds Skin (Programming with Angry Birds)
-- **Location**: `apps/static/skins/birds/`
+- **Folder Location**: `apps/static/skins/birds/` and `build/package/media/skins/birds` (MUST DO BOTH)
 - **Changes**:
-  - Replaced Angry Birds sprites with generic bird sprites from Code.org Skins drive by manually deleting and adding both in build and static
-  - Updated `static_avatar.png` and `small_static_avatar.png` with generic bird from poetry assets
-  - Created new `move_avatar.png` sprite sheet (7×9 grid, 600×1800px) using chick sprites
-  - Replaced various bird sprites throughout the skin
-  - **Impact**: Affects 713 maze levels using the "birds" skin
-- **Documentation**: See `SPRITE_REPLACEMENT_PLAN.md` for implementation details
-- **Backup Files**: Original sprites preserved with `_old.png` and `_backup.png` suffixes
+  - Replaced Angry Birds sprites with generic bird sprites from Code.org Skins drive by manually deleting and adding both into both the `apps/static/skins/birds/` folder and the `build/package/media/skins/birds` folder
+  - Used generic Code.org chick/chicken skin, greenery, and 8-bit grass background to avoid copyright from Angry Birds but provide accessibility to children in India 
+  - Reused the image for `avatar.png` for all of the same still images
+  - Created new `move_avatar.png` sprite sheet (7×9 grid, 600×1800px) with new chick sprites to imitate the original Angry Birds sprites sheet but still buggy for some reason (perhaps the metadata is faulty)
+  - Sprites changes reflected in all Programming with Angry Birds maze levels
+- **Documentation**: See `SPRITE_REPLACEMENT_PLAN.md` for more implementation details
+- **Backup Files**: Original Angry Birds sprites preserved with `_old.png` and `_backup.png` suffixes for future developer use and easy reference
 
-### 2. Global Animation Disabling
+### 2. GIF Disable
 
-- **Purpose**: Disabled animations across all skins and apps to improve performance and reduce complexity
-- **Files Modified**:
-  - `apps/src/maze/skins.js` - Added animation frame number overrides (set to 1)
-  - `apps/src/studio/StudioAnimation.js` - Disabled animation playback
-  - `apps/src/studio/StudioSpriteSheet.js` - Disabled sprite sheet animations
+- **File Location**: `apps/src/maze/skins.js`
+- **Background**:
+  - `apps/src/maze/skins.js` - visual theme configuration 
+  - Defines skins for the maze levels (incl. bee, farmer, pvz, birds)
+  - Configures animations, sprites, sounds, and other visual properties
+- **Changes**:
+  - Reconfigured default GIFs with still PNGs because no uncopyrighted sprite GIFs for levels
+  - ie. idlePegmanAnimation: ‘idle_avatar.gif’ → ‘avatar.png’
 
-- **Implementation Details**:
-  - All animation frame counts forced to 1
-  - Animation speed scales maintained but animations don't play
-  - Sprite sheets still load but only show first frame
-  - This is a global change affecting all skins and apps
+### 3. Final Merge for Midpoint Demo
 
-### 3. Other Changes
-
-#### Studio/SpriteLab Updates
-- Updated sprite handling in `apps/src/studio/Sprite.js`
-- Modified animation system in `apps/src/studio/StudioAnimation.js`
-- Updated sprite sheet processing in `apps/src/studio/StudioSpriteSheet.js`
+- **Merging Details**:
+  - Merged `K zfinal` branch by kylezheng12
+  - `K zfinal` branch had merged in `Kyle Deliv7` with `Disable animations globally for all skins and app` branch by lijuliana
+  - Final version has updated sprite assets for Elsa, Star Wars, Ice Age, and more levels (see exact info from those branches' commits)
