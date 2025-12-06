@@ -113,6 +113,10 @@ end
 
 mutex = Mutex.new
 
+contentful_url_for = lambda do |resource|
+  resource.sys[:urn].sub('crn:contentful:::content:', 'https://app.contentful.com/')
+end
+
 # Processes a request to a Contentful resource, retrying up to 3 times in case of rate limit errors.
 #
 # @param resource [Object] The Contentful resource on which the method will be called
@@ -148,7 +152,7 @@ publish_contentful_resource = lambda do |resource|
     break if resource.published?
     sleep(attempt * 0.3)
   end
-  raise %Q[Failed to publish "#{resource.sys[:urn]}"] unless resource.published?
+  raise %Q[Failed to publish "#{contentful_url_for[resource]}"] unless resource.published?
 
   true
 end
@@ -207,7 +211,7 @@ Parallel.each(asset_rows, in_threads: options[:threads]) do |asset_row|
       sleep(attempt * 0.5)
       process_contentful_request.call(contentful_asset, :reload)
     end
-    raise %Q[Failed to process file for the Asset "#{contentful_asset.sys[:urn]}"] unless contentful_asset.file.url
+    raise %Q[Failed to process file for "#{contentful_url_for[contentful_asset]}"] unless contentful_asset.file.url
 
     publish_contentful_resource.call(contentful_asset)
   end
@@ -265,8 +269,8 @@ Parallel.each(asset_rows, in_threads: options[:threads]) do |asset_row|
     CSV.open(result_csv_path, 'a') do |csv|
       csv << CSV::Row.new(result_csv_headers, []).tap do |row|
         row['cs-uri-stem']               = asset_path
-        row['contentful_asset_location'] = contentful_asset.sys[:urn].sub('crn:contentful:::content:', 'https://app.contentful.com/')
-        row['redirected_location']       = contentful_redirect.sys[:urn].sub('crn:contentful:::content:', 'https://app.contentful.com/')
+        row['contentful_asset_location'] = contentful_url_for[contentful_asset]
+        row['redirected_location']       = contentful_url_for[contentful_redirect]
         row['redirect_entry_id']         = contentful_redirect.id
       end
     end
