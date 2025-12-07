@@ -52,21 +52,27 @@ const VersionHistoryRow: React.FunctionComponent<
     label = commonI18n.currentVersion();
   }
 
-  let rowMarginStyle, ariaLabel;
+  let ariaLabel;
   let isBoldtype = true;
+  const isAiSaveComment = comment && comment === 'AI Save';
+  const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
-    rowMarginStyle = moduleStyles.initialVersionRow;
+    classes.push(moduleStyles.initialVersionRow);
   } else if (isLatest) {
     // Note that the latest or most current version can also include a comment.
     // This styling adds the appropriate margin to a given row.
-    rowMarginStyle = moduleStyles.currentVersionRow;
-  } else if (comment) {
-    rowMarginStyle = moduleStyles.commentRow;
+    classes.push(moduleStyles.currentVersionRow);
+  } else if (comment && !isAiSaveComment) {
+    classes.push(moduleStyles.commentRow);
     ariaLabel = lab2I18n.committedVersion();
   } else {
-    rowMarginStyle = moduleStyles.row;
+    classes.push(moduleStyles.row);
     ariaLabel = lab2I18n.autosavedVersion();
     isBoldtype = false;
+  }
+  if (isAiSaveComment) {
+    classes.push(moduleStyles.aiSaveRow);
+    ariaLabel = 'AI Save';
   }
 
   const showAutoSavedIcon = ariaLabel === lab2I18n.autosavedVersion();
@@ -74,11 +80,7 @@ const VersionHistoryRow: React.FunctionComponent<
   return (
     <div
       id={versionId}
-      className={classNames(
-        moduleStyles.rowContainer,
-        rowMarginStyle,
-        className
-      )}
+      className={classNames(classes, moduleStyles.rowContainer, className)}
     >
       <div className={moduleStyles.versionContent}>
         <div className={moduleStyles.versionHeader}>
@@ -110,6 +112,9 @@ const VersionHistoryRow: React.FunctionComponent<
               disabled={restoreDisabled}
             />
           )}
+          {isAiSaveComment && !showRestoreButton && (
+            <FontAwesomeV6Icon iconFamily="kit" iconName="ai-head-solid" />
+          )}
           {showAutoSavedIcon && !showRestoreButton && (
             <WithTooltip
               tooltipProps={{
@@ -127,7 +132,7 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
         </div>
         {children}
-        {comment && (
+        {comment && !isAiSaveComment && (
           <BodyFourText className={moduleStyles.commitDescription} noMargin>
             {comment}
           </BodyFourText>
