@@ -113,7 +113,11 @@ const VersionHistoryRow: React.FunctionComponent<
             />
           )}
           {isAiSaveComment && !showRestoreButton && (
-            <FontAwesomeV6Icon iconFamily="kit" iconName="ai-head-solid" />
+            <FontAwesomeV6Icon
+              iconFamily="kit"
+              iconName="ai-head-solid"
+              className={moduleStyles.aiSaveIcon}
+            />
           )}
           {showAutoSavedIcon && !showRestoreButton && (
             <WithTooltip
