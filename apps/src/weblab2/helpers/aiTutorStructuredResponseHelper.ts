@@ -274,7 +274,6 @@ export const getMergedAiTutorCodeWithSource = (
   // For each AI code file, find and replace the updated file if the file already exists in student code.
   // If the AI code file is a new file, add it to updatedSource.
   code.forEach((aiFile: AiTutorCodeFile) => {
-    console.log('aiFile', aiFile);
     // First check active file is the same as the AI code file.
     const activeFile = getActiveFileForSource(source);
     if (activeFile?.name === aiFile.name) {
@@ -297,6 +296,7 @@ export const getMergedAiTutorCodeWithSource = (
       updatedSource.files[matchingFiles[0].id] = {
         ...matchingFiles[0],
         contents: aiFile.contents,
+        isAiTutorVersionUpdated: true,
       };
       aiTutorVersionFiles.push(updatedSource.files[matchingFiles[0].id]);
       return;
