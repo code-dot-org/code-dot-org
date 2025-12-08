@@ -9,7 +9,6 @@ import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -17,11 +16,11 @@ import {
   isReadOnlyWorkspace,
   isProjectTemplateLevel,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -45,6 +44,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const [isTeacherViewingStudent, setIsTeacherViewingStudent] = useState(false);
 
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
@@ -61,41 +61,18 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const versionDetails = useAppSelector(
     state => state.lab2Project.versionDetails
   );
-
-  // Get student and teacher info from Redux.
-  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const studentsInSection = useAppSelector(
-    state => state.teacherSections.selectedStudents
-  );
   const isTeacherOfProjectOwner = useAppSelector(
     state => state.lab.isTeacherOfProjectOwner
   );
 
-  // Determine if the current level has not been started.
-  const levelNotStarted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.not_tried
-  );
-
-  // Persist the teacher viewing state once detected to ensure
-  // the alert remains visible even if the component refreshes
-  // when another student profile is selected.
-  const [isTeacherViewingStudent, setIsTeacherViewingStudent] = useState(false);
-
+  // Determine if the teacher is viewing a student's project in read-only mode.
   useEffect(() => {
-    // Update the state to match current Redux values.
-    // This ensures the alert shows when conditions are true and persists
-    // even if Redux state temporarily becomes undefined during refresh.
     if (isTeacherOfProjectOwner && isReadOnly) {
       setIsTeacherViewingStudent(true);
     } else if (!isTeacherOfProjectOwner && !isReadOnly) {
       setIsTeacherViewingStudent(false);
     }
   }, [isTeacherOfProjectOwner, isReadOnly]);
-
-  const selectedStudentName = useMemo(() => {
-    const student = studentsInSection?.find(s => s.id === viewAsUserId);
-    return student?.name;
-  }, [viewAsUserId, studentsInSection]);
 
   const locale = currentLocale();
   const versionDate = useMemo(() => {
@@ -113,17 +90,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       .format(new Date(versionDetails.lastModified))
       .replace(/\s(AM|PM)/gi, '$1');
   }, [versionDetails, locale]);
-
-  const isTeacherViewingStudentBannerText = levelNotStarted ? (
-    <>
-      <strong>{selectedStudentName}</strong> has not started the level.
-    </>
-  ) : (
-    <>
-      You are viewing <strong>{selectedStudentName}'s</strong> project in read
-      only mode.
-    </>
-  );
 
   const versionBannerText = versionDate ? (
     <>
@@ -144,14 +110,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
-        {isTeacherViewingStudent && (
-          <Alert
-            className={moduleStyles.workspaceAlertBanner}
-            text={isTeacherViewingStudentBannerText}
-            type="info"
-            size="xs"
-          />
-        )}
+        {isTeacherViewingStudent && <TeacherViewingStudentProjectAlert />}
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.workspaceAlertBanner}

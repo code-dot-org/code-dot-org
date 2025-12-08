@@ -20,6 +20,7 @@ import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -63,6 +64,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     setReinitializationHandler,
     showStartOverDialog,
   } = useSources<SketchlabSources>();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const [isTeacherViewingStudent, setIsTeacherViewingStudent] = useState(false);
+  const isTeacherOfProjectOwner = useAppSelector(
+    state => state.lab.isTeacherOfProjectOwner
+  );
 
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -204,6 +210,15 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  // Determine if the teacher is viewing a student's project in read-only mode.
+  useEffect(() => {
+    if (isTeacherOfProjectOwner && isReadOnly) {
+      setIsTeacherViewingStudent(true);
+    } else if (!isTeacherOfProjectOwner && !isReadOnly) {
+      setIsTeacherViewingStudent(false);
+    }
+  }, [isTeacherOfProjectOwner, isReadOnly]);
+
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <SketchlabTourSteps />
@@ -240,6 +255,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             )
           }
         >
+          {isTeacherViewingStudent && <TeacherViewingStudentProjectAlert />}
           <Excalidraw
             initialData={
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
