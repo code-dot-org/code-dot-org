@@ -1,7 +1,10 @@
 import {createSelector} from '@reduxjs/toolkit';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import type {RootState} from '@cdo/apps/types/redux';
+import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {isChatMessage} from '../../types';
 import {
   allFieldsHidden,
   anyFieldsChanged,
@@ -31,12 +34,21 @@ export const selectSavedCustomizationsMatchInitial = createSelector(
   anyFieldsChanged
 );
 
+export const selectIsWaitingForChatResponse = (state: RootState) => {
+  const lastChatMessage =
+    state.aichat.chatEventsCurrent[state.aichat.chatEventsCurrent.length - 1];
+  if (!lastChatMessage) return false;
+
+  return (
+    isChatMessage(lastChatMessage) &&
+    lastChatMessage.role === Role.USER &&
+    lastChatMessage.status === AiInteractionStatus.UNKNOWN
+  );
+};
+
 export const selectAllVisibleMessages = (state: RootState) => {
-  const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
+  const {chatEventsPast, chatEventsCurrent} = state.aichat;
   const messages = [...chatEventsPast, ...chatEventsCurrent];
-  if (chatMessagePending) {
-    messages.push(chatMessagePending);
-  }
   return messages;
 };
 
