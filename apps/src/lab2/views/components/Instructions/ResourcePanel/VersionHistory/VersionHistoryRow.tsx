@@ -54,7 +54,7 @@ const VersionHistoryRow: React.FunctionComponent<
 
   let ariaLabel;
   let isBoldtype = true;
-  const isAiSaveComment = comment && comment === 'AI Save';
+  const isAiSaveComment = comment && comment === 'AI***Save';
   const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
     classes.push(moduleStyles.initialVersionRow);

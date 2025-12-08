@@ -110,7 +110,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
     const payload = {
       storage_id: channelId,
       version_id: newVersionId,
-      comment: 'AI Save',
+      comment: 'AI***Save',
     };
 
     // Save commit comment.
