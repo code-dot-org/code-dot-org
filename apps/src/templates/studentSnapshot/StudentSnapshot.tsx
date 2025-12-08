@@ -78,9 +78,7 @@ const StudentSnapshot: React.FC = () => {
           className={styles.studentNameHeader}
           gutterBottom
         >
-          <Typography variant="inherit" component="strong">
-            {selectedStudent ? getFullName(selectedStudent) : 'Unknown student'}
-          </Typography>
+          {selectedStudent ? getFullName(selectedStudent) : 'Unknown student'}
         </Typography>
       )}
 
