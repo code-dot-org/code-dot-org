@@ -72,7 +72,7 @@ const VersionHistoryRow: React.FunctionComponent<
   }
   if (isAiSaveComment) {
     classes.push(moduleStyles.aiSaveRow);
-    ariaLabel = 'AI Save';
+    ariaLabel = 'AI Version Save';
   }
 
   const showAutoSavedIcon = ariaLabel === lab2I18n.autosavedVersion();

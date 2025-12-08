@@ -180,12 +180,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           />
           <div className={weblab2Styles.workspaceContainer}>
             {isAiTutorVersion && (
-              <AiTutorVersionAlert
-                text={
-                  'AI Tutor generated changes to your project. Accept to apply changes or reject to discard.'
-                }
-                aiTutorVersionFiles={aiTutorVersionFiles}
-              />
+              <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
             )}
             <div
               className={classNames(

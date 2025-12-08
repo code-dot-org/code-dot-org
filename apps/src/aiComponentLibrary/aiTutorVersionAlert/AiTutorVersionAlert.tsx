@@ -14,8 +14,6 @@ import moduleStyles from './ai-tutor-version-alert.module.scss';
 
 export interface AiTutorVersionAlertProps
   extends HTMLAttributes<HTMLDivElement> {
-  /** Alert text */
-  text: string;
   /** AI Tutor version files */
   aiTutorVersionFiles: ProjectFile[] | undefined;
   /** Custom className */
@@ -23,13 +21,12 @@ export interface AiTutorVersionAlertProps
 }
 
 /**
- * Alert component for AI Tutor version actions.
- * Displays an alert with file chips and Accept/Reject buttons.
+ * Worskpace alert when in AI Tutor version and includes Accept/Reject buttons.
  */
 const AiTutorVersionAlert = forwardRef<
   HTMLDivElement,
   AiTutorVersionAlertProps
->(({text, aiTutorVersionFiles, className, ...htmlAttributes}, ref) => {
+>(({aiTutorVersionFiles, className, ...htmlAttributes}, ref) => {
   const dispatch = useAppDispatch();
 
   const handleAccept = useCallback(() => {
@@ -41,6 +38,9 @@ const AiTutorVersionAlert = forwardRef<
     if (!aiTutorVersionFiles) return;
     dispatch(rejectAiTutorVersion(aiTutorVersionFiles));
   }, [dispatch, aiTutorVersionFiles]);
+
+  const text =
+    'AI Tutor generated changes to your project. Accept to apply changes or reject to discard.';
 
   return (
     <div
