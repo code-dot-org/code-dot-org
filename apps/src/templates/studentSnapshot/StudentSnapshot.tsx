@@ -48,8 +48,7 @@ const StudentSnapshot: React.FC = () => {
   }, [selectedUnitId]);
 
   // TODO: replace with actual values from URL/Redux later
-  const HARDCODED_RUBRIC_ID = 1; // Replace with actual rubric ID
-  const HARDCODED_STUDENT_ID = 1; // Replace with actual student ID
+  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
 
   return (
     <div className={styles.snapshotContainer}>
@@ -70,14 +69,16 @@ const StudentSnapshot: React.FC = () => {
       </Typography>
 
       <div className={styles.widgetGrid}>
-        <StudentRubricWidget
-          gridWidth={3}
-          gridHeight={2}
-          rubricId={HARDCODED_RUBRIC_ID}
-          studentId={HARDCODED_STUDENT_ID}
-          teacherHasEnabledAi={false}
-          canProvideFeedback={true}
-        />
+        {selectedLessonId && (
+          <StudentRubricWidget
+            gridWidth={3}
+            gridHeight={2}
+            lessonId={selectedLessonId}
+            studentId={HARDCODED_STUDENT_ID}
+            teacherHasEnabledAi={false}
+            canProvideFeedback={true}
+          />
+        )}
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>

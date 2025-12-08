@@ -6,7 +6,6 @@ import {aiEvaluationShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import type {
   Rubric,
-  RubricData,
   StudentLevelInfo,
   ReportingData,
 } from '@cdo/apps/types/rubricTypes';
@@ -17,8 +16,9 @@ type AiEvaluation = InferProps<typeof aiEvaluationShape>['isRequired'];
 interface StudentRubricWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
-  rubricId: number;
+  lessonId: number;
   studentId: number;
+  levelId?: number; // Optional - if not provided, uses lesson.rubric (first rubric for lesson)
   // These map directly to LearningGoals props so we can reuse it as-is.
   studentLevelInfo?: StudentLevelInfo;
   teacherHasEnabledAi?: boolean;
@@ -38,8 +38,9 @@ interface StudentRubricWidgetProps {
 const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   gridWidth = 2,
   gridHeight = 2,
-  rubricId,
+  lessonId,
   studentId,
+  levelId,
   studentLevelInfo,
   teacherHasEnabledAi = false,
   canProvideFeedback = true,
@@ -66,8 +67,8 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
     } as StudentLevelInfo);
 
   useEffect(() => {
-    if (!rubricId) {
-      setError('No rubric ID provided');
+    if (!lessonId) {
+      setError('No lesson ID provided');
       setIsLoading(false);
       return;
     }
@@ -77,9 +78,16 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
       setError(null);
 
       try {
-        const rubricResponse = await HttpClient.fetchJson<RubricData>(
-          `/rubrics/${rubricId}`
-        );
+        // Fetch rubric by lesson_id (and optionally level_id)
+        const params = new URLSearchParams({lesson_id: lessonId.toString()});
+        if (levelId) {
+          params.append('level_id', levelId.toString());
+        }
+        const rubricResponse = await HttpClient.fetchJson<{
+          rubricId: number;
+          rubric: Rubric;
+          levelId: number;
+        }>(`/rubrics/find?${params.toString()}`);
 
         if (rubricResponse.value?.rubric) {
           setRubric(rubricResponse.value.rubric);
@@ -100,14 +108,14 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
         }
       } catch (err) {
         console.error('Failed to fetch rubric data:', err);
-        setError('Failed to load rubric data');
+        setError('No rubric found');
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchData();
-  }, [rubricId, studentId, studentLevelInfo]);
+  }, [lessonId, levelId, studentId, studentLevelInfo]);
 
   // Loading state
   if (isLoading) {
