@@ -9,6 +9,8 @@ const octokit = github.getOctokit(GH_TOKEN);
 
 // Label to identify our auto-generated issues
 const ISSUE_LABEL = 'dependabot-alerts-monitor';
+// Prefix for issue titles
+const ISSUE_TITLE_PREFIX = 'Dependabot Alert Without PR';
 
 /**
  * Get all open Dependabot alerts
@@ -158,13 +160,71 @@ function getUniqueTeamReviewers(alerts) {
 }
 
 /**
- * Create or update GitHub issue for alerts without PRs
+ * Create or update GitHub issue for a single alert without PR
  */
-async function createOrUpdateIssue(alertsWithoutPRs) {
+async function createOrUpdateIssueForAlert(alert) {
+    const dependencyName = alert.dependency;
+    const team = getTeamReviewer(dependencyName);
+    const daysOpen = Math.floor((new Date() - new Date(alert.created_at)) / (1000 * 60 * 60 * 24));
+    
+    const issueTitle = `${ISSUE_TITLE_PREFIX} - ${dependencyName}`;
+    
+    let issueBody = `## ⚠️ Dependabot Alert Without Pull Request\n\n`;
+    issueBody += `Dependabot detected a security vulnerability but **could not automatically create a PR**.\n\n`;
+    issueBody += `**Dependency:** \`${dependencyName}\` (${alert.ecosystem})\n`;
+    issueBody += `**Severity:** ${alert.severity.toUpperCase()} (CVSS: ${alert.cvss})\n`;
+    issueBody += `**CVE:** ${alert.cve}\n`;
+    issueBody += `**Days Open:** ${daysOpen}\n`;
+    issueBody += `**Dependabot Alert:** [#${alert.number}](${alert.url})\n`;
+    issueBody += `**Assigned Team:** ${team}\n\n`;
+    issueBody += `**Summary:**\n${alert.summary}\n\n`;
+    issueBody += `---\n\n`;
+    issueBody += `**Why no PR?**\n`;
+    issueBody += `Dependabot cannot resolve path-based dependencies in \`Gemfile\` (local engines). This requires manual PR creation.\n\n`;
+    issueBody += `**Action Required:**\n`;
+    issueBody += `1. Manually create a PR to update \`${dependencyName}\` to a patched version\n`;
+    issueBody += `2. Test that the update doesn't break local engines\n`;
+    issueBody += `3. Merge and deploy\n\n`;
+    issueBody += `*This issue is auto-generated and will be updated daily if the alert persists.*\n`;
+
+    // Search for existing issue by title (dependency name)
+    try {
+        const existingIssue = await findExistingIssueForDependency(dependencyName);
+        
+        if (existingIssue) {
+            // Update existing issue
+            await octokit.rest.issues.update({
+                owner: REPO_OWNER,
+                repo: REPO,
+                issue_number: existingIssue.number,
+                title: issueTitle,
+                body: issueBody,
+                state: 'open' // Reopen if it was closed
+            });
+            info(`✅ Updated existing issue #${existingIssue.number} for ${dependencyName}`);
+        } else {
+            // Create new issue
+            const newIssue = await octokit.rest.issues.create({
+                owner: REPO_OWNER,
+                repo: REPO,
+                title: issueTitle,
+                body: issueBody,
+                labels: ['dependabot', 'security', 'automated', ISSUE_LABEL, team]
+            });
+            info(`✅ Created new issue #${newIssue.data.number} for ${dependencyName}`);
+        }
+    } catch (err) {
+        error(`Failed to create/update issue for ${dependencyName}: ${err.message}`);
+        throw err;
+    }
+}
+
+/**
+ * Process all alerts without PRs - create/update one issue per dependency
+ */
+async function processAlertsWithoutPRs(alertsWithoutPRs) {
     if (alertsWithoutPRs.length === 0) {
         info('✅ All critical/high alerts have associated PRs or are low severity');
-        // Close existing issue if all alerts are resolved
-        await closeExistingIssueIfOpen();
         return;
     }
 
@@ -182,127 +242,79 @@ async function createOrUpdateIssue(alertsWithoutPRs) {
 
     if (criticalAlerts.length === 0) {
         info('✅ No critical/high severity alerts without PRs');
-        await closeExistingIssueIfOpen();
         return;
     }
 
-    // Get unique team reviewers for assignment
-    const teamReviewers = getUniqueTeamReviewers(criticalAlerts);
-    info(`Assigning to teams: ${teamReviewers.join(', ')}`);
+    info(`Processing ${criticalAlerts.length} critical/high alerts without PRs...`);
 
-    const issueTitle = `🚨 Dependabot Alerts Without PRs (${criticalAlerts.length} critical/high)`;
-    
-    let issueBody = `## ⚠️ Dependabot Alerts Without Pull Requests\n\n`;
-    issueBody += `This issue tracks Dependabot alerts that **could not automatically create PRs**.\n\n`;
-    issueBody += `**Total alerts without PRs:** ${criticalAlerts.length} (critical/high severity)\n\n`;
-    issueBody += `These alerts need **manual intervention** to create PRs, likely due to path-based dependencies in \`Gemfile\`.\n\n`;
-    issueBody += `**Assigned teams:** ${teamReviewers.join(', ')}\n\n`;
-    issueBody += `---\n\n`;
-
-    // Group alerts by team for better organization
-    const alertsByTeam = {};
-    criticalAlerts.forEach(alert => {
-        const team = getTeamReviewer(alert.dependency);
-        if (!alertsByTeam[team]) {
-            alertsByTeam[team] = [];
-        }
-        alertsByTeam[team].push(alert);
-    });
-
-    // List alerts grouped by team
-    Object.keys(alertsByTeam).sort().forEach(team => {
-        issueBody += `### ${team.toUpperCase()} Team\n\n`;
-        alertsByTeam[team].forEach((alert, index) => {
-            const daysOpen = Math.floor((new Date() - new Date(alert.created_at)) / (1000 * 60 * 60 * 24));
-            issueBody += `${index + 1}. **${alert.dependency}** (${alert.ecosystem})\n`;
-            issueBody += `   - Severity: ${alert.severity.toUpperCase()} (CVSS: ${alert.cvss})\n`;
-            issueBody += `   - CVE: ${alert.cve}\n`;
-            issueBody += `   - Days Open: ${daysOpen}\n`;
-            issueBody += `   - Alert: [#${alert.number}](${alert.url})\n`;
-            issueBody += `   - Summary: ${alert.summary}\n\n`;
-        });
-    });
-
-    issueBody += `---\n\n`;
-    issueBody += `**Action Required:**\n`;
-    issueBody += `1. Review each alert above\n`;
-    issueBody += `2. Manually create PRs to fix critical/high severity vulnerabilities\n`;
-    issueBody += `3. Consider reducing path-based dependencies in \`Gemfile\` to enable auto-PRs\n\n`;
-    issueBody += `*This issue is auto-generated and will be updated daily.*\n`;
-
-    // Search for existing issue using label (more reliable than title search)
-    try {
-        const existingIssue = await findExistingIssue();
-        
-        if (existingIssue) {
-            // Update existing issue
-            await octokit.rest.issues.update({
-                owner: REPO_OWNER,
-                repo: REPO,
-                issue_number: existingIssue.number,
-                title: issueTitle,
-                body: issueBody,
-                state: 'open' // Reopen if it was closed
-            });
-            
-            // Note: GitHub Issues don't support team assignment directly
-            // Teams are mentioned in the issue body for visibility
-            // Individual users can be manually assigned if needed
-            info(`✅ Updated existing issue #${existingIssue.number}`);
-        } else {
-            // Create new issue
-            const newIssue = await octokit.rest.issues.create({
-                owner: REPO_OWNER,
-                repo: REPO,
-                title: issueTitle,
-                body: issueBody,
-                labels: ['dependabot', 'security', 'automated', ISSUE_LABEL]
-            });
-            info(`✅ Created new issue #${newIssue.data.number}`);
-        }
-    } catch (err) {
-        error(`Failed to create/update issue: ${err.message}`);
-        throw err;
+    // Create/update one issue per dependency
+    for (const alert of criticalAlerts) {
+        await createOrUpdateIssueForAlert(alert);
     }
+
+    // Close issues for dependencies that now have PRs
+    await closeResolvedIssues(criticalAlerts);
 }
 
 /**
- * Find existing issue by label
+ * Find existing issue for a specific dependency
  */
-async function findExistingIssue() {
+async function findExistingIssueForDependency(dependencyName) {
     try {
-        const issues = await octokit.rest.issues.listForRepo({
-            owner: REPO_OWNER,
-            repo: REPO,
-            labels: ISSUE_LABEL,
-            state: 'all', // Check both open and closed
-            per_page: 1
+        const searchQuery = `repo:${REPO_OWNER}/${REPO} is:issue label:${ISSUE_LABEL} "${ISSUE_TITLE_PREFIX} - ${dependencyName}"`;
+        const searchResults = await octokit.rest.search.issuesAndPullRequests({
+            q: searchQuery
         });
         
-        return issues.data.length > 0 ? issues.data[0] : null;
+        // Find exact match (title should be exactly "Dependabot Alert Without PR - {dependencyName}")
+        const exactMatch = searchResults.data.items.find(issue => 
+            issue.title === `${ISSUE_TITLE_PREFIX} - ${dependencyName}`
+        );
+        
+        return exactMatch || null;
     } catch (err) {
-        warning(`Failed to search for existing issue: ${err.message}`);
+        warning(`Failed to search for existing issue for ${dependencyName}: ${err.message}`);
         return null;
     }
 }
 
 /**
- * Close existing issue if all alerts are resolved
+ * Close issues for dependencies that now have PRs or are resolved
  */
-async function closeExistingIssueIfOpen() {
+async function closeResolvedIssues(currentAlerts) {
     try {
-        const existingIssue = await findExistingIssue();
-        if (existingIssue && existingIssue.state === 'open') {
-            await octokit.rest.issues.update({
-                owner: REPO_OWNER,
-                repo: REPO,
-                issue_number: existingIssue.number,
-                state: 'closed'
-            });
-            info(`✅ Closed issue #${existingIssue.number} (all alerts resolved)`);
+        // Get all issues with our label
+        const allIssues = await octokit.rest.issues.listForRepo({
+            owner: REPO_OWNER,
+            repo: REPO,
+            labels: ISSUE_LABEL,
+            state: 'open',
+            per_page: 100
+        });
+
+        // Get list of dependencies that currently have alerts without PRs
+        const currentDependencies = new Set(currentAlerts.map(a => a.dependency));
+
+        // Close issues for dependencies that are no longer in the list
+        for (const issue of allIssues.data) {
+            // Extract dependency name from title: "Dependabot Alert Without PR - {name}"
+            const match = issue.title.match(new RegExp(`${ISSUE_TITLE_PREFIX} - (.+)`));
+            if (match) {
+                const dependencyName = match[1];
+                if (!currentDependencies.has(dependencyName)) {
+                    // This dependency no longer has an alert without PR, close the issue
+                    await octokit.rest.issues.update({
+                        owner: REPO_OWNER,
+                        repo: REPO,
+                        issue_number: issue.number,
+                        state: 'closed'
+                    });
+                    info(`✅ Closed issue #${issue.number} for ${dependencyName} (alert resolved or PR created)`);
+                }
+            }
         }
     } catch (err) {
-        warning(`Failed to close existing issue: ${err.message}`);
+        warning(`Failed to close resolved issues: ${err.message}`);
     }
 }
 
@@ -338,10 +350,12 @@ async function main() {
         info(`Found ${alertsWithoutPRs.length} alerts without PRs`);
         
         if (alertsWithoutPRs.length > 0) {
-            info('📝 Creating/updating GitHub issue...');
-            await createOrUpdateIssue(alertsWithoutPRs);
+            info('📝 Creating/updating GitHub issues (one per dependency)...');
+            await processAlertsWithoutPRs(alertsWithoutPRs);
         } else {
             info('✅ All alerts have associated PRs');
+            // Close any open issues since all alerts are resolved
+            await closeResolvedIssues([]);
         }
 
     } catch (err) {
