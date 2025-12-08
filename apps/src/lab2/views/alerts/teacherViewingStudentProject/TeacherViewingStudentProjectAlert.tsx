@@ -9,8 +9,15 @@ import moduleStyles from './teacherViewingStudentProjectAlert.module.scss';
 
 const TeacherViewingStudentProjectAlert: React.FC = () => {
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
+  // Get the list of students in the selected section.
   const studentsInSection = useAppSelector(
     state => state.teacherSections.selectedStudents
+  );
+
+  // Determine if the current level has not been started.
+  const levelNotStarted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.not_tried
   );
 
   // Get the name of the student being viewed to use in the alert text.
@@ -19,12 +26,13 @@ const TeacherViewingStudentProjectAlert: React.FC = () => {
     return student?.name;
   }, [viewAsUserId, studentsInSection]);
 
-  // Determine if the current level has not been started.
-  const levelNotStarted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.not_tried
-  );
-
-  const alertText = levelNotStarted ? (
+  const alertText = !selectedStudentName ? (
+    levelNotStarted ? (
+      <>This student has not started the level.</>
+    ) : (
+      <>You are viewing this student's project in read only mode.</>
+    )
+  ) : levelNotStarted ? (
     <>
       <strong>{selectedStudentName}</strong> has not started the level.
     </>
