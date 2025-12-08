@@ -9,8 +9,8 @@ class Clients::LtiAdvantageClientTest < ActiveSupport::TestCase
 
     @lti_client = Clients::LtiAdvantageClient.new(@client_id, @issuer)
     @lti_client.stubs(:get_access_token).returns('fake_access_token')
-    @page_2_url = 'https://example.com/api/lti/courses/1234/memberships?limit=100&page=2&rlid=1234'
-    @page_3_url = 'https://example.com/api/lti/courses/1234/memberships?limit=100&page=3&rlid=1234'
+    @page_2_url = 'https://example.com/api/lti/courses/1234/memberships?rlid=1234&page=2'
+    @page_3_url = 'https://example.com/api/lti/courses/1234/memberships?rlid=1234&page=3'
     @response_page_1 = {
       headers: {
         link: "<#{@page_2_url}>; rel=\"next\""
@@ -39,15 +39,19 @@ class Clients::LtiAdvantageClientTest < ActiveSupport::TestCase
     response_body = 'expected_response_body'
 
     access_token = 'expected_access_token'
-    url = 'expected_url?limit=100&rlid=expected_rlid'
+    url = 'expected_url'
     expected_headers = {
       'Accept' => 'application/vnd.ims.lti-nrps.v2.membershipcontainer+json',
       'Authorization' => "Bearer #{access_token}"
     }
+    expected_query = {
+      rlid: @rlid,
+      limit: 100
+    }
 
     @lti_client.expects(:sign_jwt).never # should not be called since the get_access_token method is stubbed
     @lti_client.expects(:get_access_token).with(@client_id, @issuer).once.returns(access_token)
-    HTTParty.expects(:get).with(url, headers: expected_headers).once.returns(stub(code: response_code, body: response_body))
+    HTTParty.expects(:get).with(url, headers: expected_headers, query: expected_query).once.returns(stub(code: response_code, body: response_body))
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     actual_error = assert_raises(RuntimeError) {@lti_client.get_context_membership(url, @rlid)}
     assert_equal "Error getting context membership: #{response_code} #{response_body}", actual_error.message
@@ -61,8 +65,7 @@ class Clients::LtiAdvantageClientTest < ActiveSupport::TestCase
 
   test 'fetches the next page if present' do
     original_url = "https://example.com/api/lti/courses/1234/memberships?rlid=1234"
-    expected_url_page_1 = "https://example.com/api/lti/courses/1234/memberships?limit=100&rlid=1234"
-    @lti_client.expects(:make_request).with(expected_url_page_1, anything).once.returns(@response_page_1)
+    @lti_client.expects(:make_request).with(original_url, anything).once.returns(@response_page_1)
     @lti_client.expects(:make_request).with(@page_2_url, anything).once.returns(@response_page_2)
     @lti_client.expects(:make_request).with(@page_3_url, anything).once.returns(@response_page_3)
     res = @lti_client.get_context_membership(original_url, @rlid)
