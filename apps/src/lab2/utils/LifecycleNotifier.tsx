@@ -4,6 +4,7 @@ export enum LifecycleEvent {
   LevelChangeRequested,
   LevelLoadStarted,
   LevelLoadCompleted,
+  VersionSaved,
 }
 
 type CallbackArgs = {
@@ -21,6 +22,7 @@ type CallbackArgs = {
     projectSharingDisabled: boolean | undefined,
     isTeacherOfProjectOwner: boolean | undefined
   ];
+  [LifecycleEvent.VersionSaved]: [];
 };
 
 export type Callback<T extends LifecycleEvent> = (

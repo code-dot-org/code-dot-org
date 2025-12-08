@@ -17,6 +17,7 @@ import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
 import {ValidationError} from '../responseValidators';
 import {Channel, ProjectAndSources, ProjectSources} from '../types';
+import {LifecycleEvent} from '../utils/LifecycleNotifier';
 
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
@@ -569,6 +570,9 @@ export default class ProjectManager {
     this.channelToSave = undefined;
     this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .notify(LifecycleEvent.VersionSaved);
     this.initialSaveComplete = true;
   }
 
