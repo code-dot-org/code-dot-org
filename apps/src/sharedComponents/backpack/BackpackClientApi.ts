@@ -56,27 +56,24 @@ export default class BackpackClientApi {
     onError: ErrorCallback,
     onSuccess: (data: string) => void
   ) {
-    if (!this.channelId) {
+    const response = await this.fetchFileResponse(filename);
+    if (!response) {
       onError();
       return;
     }
-    try {
-      // Cache bust suffix ensures we always get the latest version of the file.
-      const cacheBustSuffix = `?t=${Date.now()}`;
-      const response = await HttpClient.get(
-        `${rootUrl(this.channelId)}/${filename}${cacheBustSuffix}`
-      );
-      const fileContents = await response.text();
-      onSuccess(fileContents);
-    } catch (error) {
-      onError(error as Error);
+    if (response instanceof Error) {
+      onError(response);
+      return;
     }
+
+    const fileContents = await response.text();
+    onSuccess(fileContents);
   }
 
-  // Async version of fetchFile that returns the full Response object.
-  async fetchFileAsync(filename: string, onError: ErrorCallback) {
+  // Fetch a file from the backpack, and return the full response object, or false/Error if the fetch fails.
+  async fetchFileResponse(filename: string) {
     if (!this.channelId) {
-      onError();
+      return false;
     }
 
     try {
@@ -84,7 +81,7 @@ export default class BackpackClientApi {
         `${rootUrl(this.channelId!)}/${filename}${getCacheBustSuffix()}`
       );
     } catch (error) {
-      onError(error as Error);
+      return error as Error;
     }
   }
 

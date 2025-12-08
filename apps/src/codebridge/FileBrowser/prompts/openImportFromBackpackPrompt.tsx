@@ -93,11 +93,8 @@ export const openImportFromBackpackPrompt = async ({
         codebridgeI18n.closeWindowTryAgain(),
       'Backpack file fetch error'
     );
-    const response = await backpackApi.fetchFileAsync(
-      selectedFileName,
-      onError
-    );
-    if (!response) {
+    const response = await backpackApi.fetchFileResponse(selectedFileName);
+    if (!response || response instanceof Error) {
       onError();
       return;
     }
