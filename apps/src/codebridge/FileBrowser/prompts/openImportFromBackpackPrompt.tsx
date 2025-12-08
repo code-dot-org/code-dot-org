@@ -86,16 +86,15 @@ export const openImportFromBackpackPrompt = async ({
     successMetric: string,
     newFileName?: string
   ) => {
-    const onError = handleError(
-      codebridgeI18n.importFromBackpackTitle(),
-      codebridgeI18n.getBackpackFileError({selectedFileName}) +
-        ' ' +
-        codebridgeI18n.closeWindowTryAgain(),
-      'Backpack file fetch error'
-    );
     const response = await backpackApi.fetchFileResponse(selectedFileName);
     if (!response || response instanceof Error) {
-      onError();
+      handleError(
+        codebridgeI18n.importFromBackpackTitle(),
+        codebridgeI18n.getBackpackFileError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain(),
+        'Backpack file fetch error'
+      );
       return;
     }
     let fileContent = '';
