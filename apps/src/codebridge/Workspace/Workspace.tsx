@@ -113,7 +113,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         {isTeacherViewingStudent && <TeacherViewingStudentProjectAlert />}
         {viewingOldVersion && (
           <Alert
-            className={moduleStyles.workspaceAlertBanner}
+            className={moduleStyles.previousVersionBanner}
             text={versionBannerText}
             type="warning"
             size="xs"
