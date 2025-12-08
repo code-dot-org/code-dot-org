@@ -29,7 +29,6 @@ export interface Lab2ProjectState {
   hasEdited: boolean;
   projectTooLarge: boolean;
   lastSavedLabConfig: LabConfig | undefined;
-  versionHistoryListStale: boolean;
 }
 
 const initialState: Lab2ProjectState = {
@@ -42,7 +41,6 @@ const initialState: Lab2ProjectState = {
   hasEdited: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
-  versionHistoryListStale: false,
 };
 
 // SLICE
@@ -450,9 +448,6 @@ const projectSlice = createSlice({
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
     },
-    setVersionHistoryListStale(state, action: PayloadAction<boolean>) {
-      state.versionHistoryListStale = action.payload;
-    },
   },
 });
 
@@ -483,7 +478,6 @@ export const {
   renameFolder,
   rearrangeFiles,
   setLastSavedLabConfig,
-  setVersionHistoryListStale,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

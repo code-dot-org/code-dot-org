@@ -87,7 +87,6 @@ const initialState: Lab2ProjectState = {
   hasEdited: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
-  versionHistoryListStale: false,
 };
 
 describe('lab2ProjectRedux', () => {

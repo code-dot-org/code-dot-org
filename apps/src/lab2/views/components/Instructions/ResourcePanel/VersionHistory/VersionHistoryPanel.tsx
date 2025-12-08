@@ -14,7 +14,6 @@ import {
   setViewingOldVersion,
   setRestoredOldVersion,
   setHasEdited,
-  setVersionHistoryListStale,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   loadVersion,
@@ -104,9 +103,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.projectSources
   );
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
-  const versionHistoryListStale = useAppSelector(
-    state => state.lab2Project.versionHistoryListStale
-  );
   const dialogControl = useDialogControl();
 
   const dateFormatter = useMemo(() => {
@@ -184,11 +180,10 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   // Reload version history list when tab becomes active and list is stale.
   useEffect(() => {
-    if (isOpen && versionHistoryListStale) {
+    if (isOpen) {
       loadVersionList(true);
-      dispatch(setVersionHistoryListStale(false));
     }
-  }, [isOpen, versionHistoryListStale, loadVersionList, dispatch]);
+  }, [isOpen, loadVersionList, dispatch]);
 
   useEffect(() => {
     if (selectedVersion === '') {

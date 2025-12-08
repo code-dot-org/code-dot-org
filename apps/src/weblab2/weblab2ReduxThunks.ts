@@ -7,7 +7,6 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   setProjectSourceBeforeAiTutorVersion,
   setSource,
-  setVersionHistoryListStale,
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -19,6 +18,7 @@ import {
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
 import {setAiFilePathToPreview, setAiTutorVersionFiles} from './weblab2Redux';
 
@@ -110,7 +110,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
     const payload = {
       storage_id: channelId,
       version_id: newVersionId,
-      comment: 'AI***Save',
+      comment: AI_SAVED_COMMENT,
     };
 
     // Save commit comment.
@@ -122,9 +122,6 @@ export const acceptAiTutorVersion = createAsyncThunk<
       console.error('Failed to save commit comment:', error);
     }
   }
-
-  // Mark version list as stale so it reloads when the user next views version history.
-  thunkAPI.dispatch(setVersionHistoryListStale(true));
 });
 
 /**

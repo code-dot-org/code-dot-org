@@ -9,6 +9,7 @@ import React from 'react';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
 import moduleStyles from './version-history-row.module.scss';
 
@@ -54,7 +55,7 @@ const VersionHistoryRow: React.FunctionComponent<
 
   let ariaLabel;
   let isBoldtype = true;
-  const isAiSaveComment = comment && comment === 'AI***Save';
+  const isAiSaveComment = comment && comment === AI_SAVED_COMMENT;
   const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
     classes.push(moduleStyles.initialVersionRow);

@@ -177,7 +177,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       canContinue = validationSatisfied;
     } else if (isAiTutorVersion) {
       action = 'AiTutorVersion';
-      canContinue = !isAiTutorVersion;
+      canContinue = false;
     } else if (requireRun) {
       action = 'Run';
       canContinue = hasRun;
