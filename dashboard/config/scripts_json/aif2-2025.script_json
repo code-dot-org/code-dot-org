@@ -14,16 +14,6 @@
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "Let's Go!"
-        },
-        {
-          "key": "17daa075-29c4-47ee-b672-1269b3db06b9",
-          "notice": "Coming Soon: Resource Panel in Labs",
-          "details": "A new Resource Panel is coming soon to Python Lab! This feature makes it easier to access helpful materials directly while teaching or coding.",
-          "link": "https://support.code.org/hc/en-us/articles/40421580261133-Resource-Panel-in-Labs",
-          "type": "bullhorn_yellow",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Learn more here"
         }
       ],
       "content_area": "curriculum_9_12",
@@ -45,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-20 19:31:47 UTC",
+    "serialized_at": "2025-12-05 19:17:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

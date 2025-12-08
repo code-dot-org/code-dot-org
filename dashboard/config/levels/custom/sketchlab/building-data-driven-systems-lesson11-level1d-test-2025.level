@@ -1,12 +1,12 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2025-11-25T15:23:38.000Z",
+  "created_at": "2025-12-05T23:54:31.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Milestone Two: Wireframe Your Data Page and Cards\r\n\r\n**Goal**: Design a clear, accessible interface that displays your dataset using .map()\r\n\r\n*Design Spec:*\r\n- A full-page wireframe indicating: header/title, description area, section where cards will render, and placeholders for future controls.\r\n- A detailed card wireframe showing where each schema field will display, with clearly written headings or labels.\r\n- Annotated connections between schema fields and UI labels (arrows or text notes).\r\n\r\n*Constraints and Norms.*\r\n\r\n- Wireframes should be simple (boxes, labels, arrows) rather than fully designed art.\r\n- Every schema field should have a visible place in the UI.\r\n\r\n",
+    "long_instructions": "#Milestone One: Wireframe Your Data Page and Cards\r\n\r\n**Goal**: Design a clear, accessible interface that displays your dataset using .map()\r\n\r\n*Design Spec:*\r\n- A full-page wireframe indicating: header/title, description area, section where cards will render, and placeholders for future controls.\r\n- A detailed card wireframe showing where each schema field will display, with clearly written headings or labels.\r\n- Annotated connections between schema fields and UI labels (arrows or text notes).\r\n\r\n*Constraints and Norms.*\r\n\r\n- Wireframes should be simple (boxes, labels, arrows) rather than fully designed art.\r\n- Every schema field should have a visible place in the UI.\r\n\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -3794,10 +3794,9 @@
       }
     },
     "project_template_level_name": "building-data-driven-systems-lesson11-template-sketchlab-test-2025",
-    "display_name": "Wireframe Your Page",
-    "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png"
+    "display_name": "Schema Sketch Lab"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-25 15:23:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:45:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:46:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:51:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:54:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:56:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:58:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:53:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:02:29 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:03:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:05:31 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:05:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:08:31 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:09:05 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-05T23:54:31.858+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-12-05 23:54:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:56:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

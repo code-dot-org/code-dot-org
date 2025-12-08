@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-04 21:23:41 UTC",
+    "serialized_at": "2025-12-05 21:23:39 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6966,20 +6966,6 @@
       }
     },
     {
-      "name": "Spotify Cards",
-      "url": "https://drive.google.com/file/d/1Tjk4Euy6dHpghtyWU654CqU99wg8Qzy-/view?usp=sharing",
-      "key": "spotify_cards",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "spotify_cards"
-      }
-    },
-    {
       "name": "[Dataset] States' Education",
       "url": "https://docs.google.com/spreadsheets/d/1D3jlwnWnFVdKX_59d2nRMNdxuTx5qqDV7z4XidvR9uY/edit?usp=drivesdk",
       "key": "states_education",
@@ -7343,12 +7329,6 @@
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
         "resource.key": "pizza_party_survey_dataset"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Data Visualization",
-        "resource.key": "spotify_cards"
       }
     },
     {
