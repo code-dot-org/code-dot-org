@@ -61,9 +61,17 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const versionDetails = useAppSelector(
     state => state.lab2Project.versionDetails
   );
+
+  // Get student and teacher info from Redux.
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const studentsInSection = useAppSelector(
+    state => state.teacherSections.selectedStudents
+  );
   const isTeacherOfProjectOwner = useAppSelector(
     state => state.lab.isTeacherOfProjectOwner
   );
+
+  // Determine if the current level has not been started.
   const levelNotStarted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.not_tried
   );
@@ -84,6 +92,11 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
     }
   }, [isTeacherOfProjectOwner, isReadOnly]);
 
+  const selectedStudentName = useMemo(() => {
+    const student = studentsInSection?.find(s => s.id === viewAsUserId);
+    return student?.name;
+  }, [viewAsUserId, studentsInSection]);
+
   const locale = currentLocale();
   const versionDate = useMemo(() => {
     if (!versionDetails?.lastModified) {
@@ -101,9 +114,16 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       .replace(/\s(AM|PM)/gi, '$1');
   }, [versionDetails, locale]);
 
-  const isTeacherViewingStudentBannerText = levelNotStarted
-    ? 'This student has not started the level.'
-    : 'You are viewing a student project in read only mode.';
+  const isTeacherViewingStudentBannerText = levelNotStarted ? (
+    <>
+      <strong>{selectedStudentName}</strong> has not started the level.
+    </>
+  ) : (
+    <>
+      You are viewing <strong>{selectedStudentName}'s</strong> project in read
+      only mode.
+    </>
+  );
 
   const versionBannerText = versionDate ? (
     <>
