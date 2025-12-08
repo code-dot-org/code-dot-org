@@ -9,6 +9,7 @@ import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -20,6 +21,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -62,6 +64,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const isTeacherOfProjectOwner = useAppSelector(
     state => state.lab.isTeacherOfProjectOwner
   );
+  const levelNotStarted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.not_tried
+  );
 
   // Persist the teacher viewing state once detected to ensure
   // the alert remains visible even if the component refreshes
@@ -69,9 +74,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const [isTeacherViewingStudent, setIsTeacherViewingStudent] = useState(false);
 
   useEffect(() => {
-    // Update the state to match current Redux values
-    // This ensures the alert shows when conditions are true
-    // and persists even if Redux state temporarily becomes undefined during refresh
+    // Update the state to match current Redux values.
+    // This ensures the alert shows when conditions are true and persists
+    // even if Redux state temporarily becomes undefined during refresh.
     if (isTeacherOfProjectOwner && isReadOnly) {
       setIsTeacherViewingStudent(true);
     } else if (!isTeacherOfProjectOwner && !isReadOnly) {
@@ -96,6 +101,10 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       .replace(/\s(AM|PM)/gi, '$1');
   }, [versionDetails, locale]);
 
+  const isTeacherViewingStudentBannerText = levelNotStarted
+    ? 'This student has not started the level.'
+    : 'You are viewing a student project in read only mode.';
+
   const versionBannerText = versionDate ? (
     <>
       You're viewing a previous version of this project from{' '}
@@ -118,7 +127,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         {isTeacherViewingStudent && (
           <Alert
             className={moduleStyles.workspaceAlertBanner}
-            text="You are viewing a student project in read only mode."
+            text={isTeacherViewingStudentBannerText}
             type="info"
             size="xs"
           />
