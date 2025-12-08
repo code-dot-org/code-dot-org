@@ -1,14 +1,15 @@
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
-  AiInteractionStatus,
   AiRequestExecutionStatus,
   AiChatReadTimeouts,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {Role} from '../aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '../types/utils';
 
 import {chatHistoryValidator} from './api/validators';
+import {getUpdatedMessages} from './getUpdatedMessages';
+import {streamAichatCompletionMessage} from './helpers/aiChatStream';
 import {
   AiCustomizations,
   AichatContext,
@@ -160,17 +161,34 @@ export async function postAichatCompletionMessage(
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,
   aichatContext: AichatContext,
-  maxPollingTimeMs?: number
+  maxPollingTimeMs?: number,
+  streamCallbacks?: {
+    onStart?: (requestId: number) => void;
+    onDelta?: (delta: string) => void;
+    onComplete?: (fullText: string) => void;
+    onError?: (code?: string, details?: string) => void;
+  }
 ): Promise<CompletedChatMessage[]> {
+  maxPollingTimeMs =
+    maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
+
+  if (experiments.isEnabledAllowingQueryString('ai-chat-stream')) {
+    return streamAichatCompletionMessage(
+      newMessage,
+      storedMessages,
+      modelParameters,
+      aichatContext,
+      maxPollingTimeMs,
+      streamCallbacks
+    );
+  }
+
   const payload = {
     newMessage,
     storedMessages,
     modelParameters,
     aichatContext,
   };
-
-  maxPollingTimeMs =
-    maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
   const response = await HttpClient.post(
     paths.START_CHAT_COMPLETION_URL,
@@ -218,101 +236,6 @@ export async function postAichatCompletionMessage(
   return getUpdatedMessages(newMessage, modelResponse, executionStatus).map(
     message => ({...message, requestId})
   );
-}
-
-/**
- * Get the updated user and assistant message based on the status of the chat completion request.
- * Returns a {@link CompletedChatMessage} without a request ID (added by the caller).
- */
-function getUpdatedMessages(
-  userMessage: PendingChatMessage,
-  modelResponse: string,
-  executionStatus: ValueOf<typeof AiRequestExecutionStatus>
-) {
-  switch (executionStatus) {
-    case AiRequestExecutionStatus.SUCCESS:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.OK,
-        },
-        {
-          chatMessageText: modelResponse,
-          role: Role.ASSISTANT,
-          timestamp: Date.now(),
-          status: AiInteractionStatus.OK,
-        },
-      ];
-    case AiRequestExecutionStatus.USER_PROFANITY:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.PROFANITY_VIOLATION,
-        },
-      ];
-    case AiRequestExecutionStatus.USER_PII:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.PII_VIOLATION,
-        },
-      ];
-    case AiRequestExecutionStatus.MODEL_PROFANITY:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.ERROR,
-        },
-        {
-          chatMessageText: modelResponse,
-          role: Role.ASSISTANT,
-          timestamp: Date.now(),
-          status: AiInteractionStatus.PROFANITY_VIOLATION,
-        },
-      ];
-    case AiRequestExecutionStatus.FAILURE:
-    case AiRequestExecutionStatus.MODEL_PII:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.ERROR,
-        },
-        {
-          chatMessageText: modelResponse,
-          role: Role.ASSISTANT,
-          timestamp: Date.now(),
-          status: AiInteractionStatus.ERROR,
-        },
-      ];
-    case AiRequestExecutionStatus.USER_INPUT_TOO_LARGE:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
-        },
-        {
-          chatMessageText: modelResponse,
-          role: Role.ASSISTANT,
-          timestamp: Date.now(),
-          status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
-        },
-      ];
-    case AiRequestExecutionStatus.MODEL_TIMEOUT:
-      return [
-        {
-          ...userMessage,
-          status: AiInteractionStatus.MODEL_TIMEOUT,
-        },
-        {
-          chatMessageText: modelResponse, // Note that this message (and the ones above) are overwritten in the ChatMessageView component.
-          role: Role.ASSISTANT,
-          timestamp: Date.now(),
-          status: AiInteractionStatus.MODEL_TIMEOUT,
-        },
-      ];
-    default:
-      throw new Error(`Unexpected status: ${executionStatus}`);
-  }
 }
 
 /**
