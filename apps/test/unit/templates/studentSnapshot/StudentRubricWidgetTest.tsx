@@ -5,11 +5,7 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
 import StudentRubricWidget from '@cdo/apps/templates/studentSnapshot/studentRubricWidget/StudentRubricWidget';
-import type {
-  Rubric,
-  RubricData,
-  StudentLevelInfo,
-} from '@cdo/apps/types/rubricTypes';
+import type {Rubric, StudentLevelInfo} from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 // Mock HttpClient - must be before imports that use it
@@ -94,7 +90,7 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={1} />
+        <StudentRubricWidget lessonId={1} studentId={1} />
       </Provider>
     );
 
@@ -102,17 +98,18 @@ describe('StudentRubricWidget', () => {
     expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
   });
 
-  it('renders error state when rubric ID is not provided', async () => {
+  it('renders error state when lesson ID is not provided', async () => {
+    // Using 0 to test the !lessonId check (0 is falsy in JavaScript)
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={0} studentId={1} />
+        <StudentRubricWidget lessonId={0} studentId={1} />
       </Provider>
     );
 
     // Component starts with isLoading=true, then sets error and isLoading=false
     await waitFor(
       () => {
-        expect(screen.getByText('No rubric ID provided')).toBeInTheDocument();
+        expect(screen.getByText('No lesson ID provided')).toBeInTheDocument();
       },
       {timeout: 1000}
     );
@@ -123,26 +120,24 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={1} />
+        <StudentRubricWidget lessonId={1} studentId={1} />
       </Provider>
     );
 
     await waitFor(() => {
-      expect(
-        screen.getByText('Failed to load rubric data')
-      ).toBeInTheDocument();
+      expect(screen.getByText('No rubric found')).toBeInTheDocument();
     });
   });
 
   it('renders error state when no rubric data is found', async () => {
     mockFetchJson.mockResolvedValue({
-      value: {} as RubricData,
+      value: {} as {rubricId: number; rubric: Rubric; levelId: number},
       response: new Response(),
     });
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={1} />
+        <StudentRubricWidget lessonId={1} studentId={1} />
       </Provider>
     );
 
@@ -154,17 +149,19 @@ describe('StudentRubricWidget', () => {
   it('renders "No rubric data available" when rubric has no learning goals', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
+        rubricId: 1,
         rubric: {
           ...mockRubric,
           learningGoals: [],
         },
-      } as unknown as RubricData,
+        levelId: 10000,
+      },
       response: new Response(),
     });
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={1} />
+        <StudentRubricWidget lessonId={1} studentId={1} />
       </Provider>
     );
 
@@ -176,14 +173,16 @@ describe('StudentRubricWidget', () => {
   it('renders LearningGoals component when rubric data is loaded successfully', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
+        rubricId: 1,
         rubric: mockRubric,
-      } as RubricData,
+        levelId: 10000,
+      },
       response: new Response(),
     });
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={1} />
+        <StudentRubricWidget lessonId={1} studentId={1} />
       </Provider>
     );
 
@@ -199,15 +198,17 @@ describe('StudentRubricWidget', () => {
   it('uses provided studentLevelInfo when available', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
+        rubricId: 1,
         rubric: mockRubric,
-      } as RubricData,
+        levelId: 10000,
+      },
       response: new Response(),
     });
 
     render(
       <Provider store={mockStore}>
         <StudentRubricWidget
-          rubricId={1}
+          lessonId={1}
           studentId={1}
           studentLevelInfo={mockStudentLevelInfo}
         />
@@ -223,14 +224,16 @@ describe('StudentRubricWidget', () => {
   it('creates placeholder studentLevelInfo when not provided', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
+        rubricId: 1,
         rubric: mockRubric,
-      } as RubricData,
+        levelId: 10000,
+      },
       response: new Response(),
     });
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={123} />
+        <StudentRubricWidget lessonId={1} studentId={123} />
       </Provider>
     );
 
@@ -243,15 +246,17 @@ describe('StudentRubricWidget', () => {
   it('passes correct props to LearningGoals component', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
+        rubricId: 1,
         rubric: mockRubric,
-      } as RubricData,
+        levelId: 10000,
+      },
       response: new Response(),
     });
 
     render(
       <Provider store={mockStore}>
         <StudentRubricWidget
-          rubricId={1}
+          lessonId={1}
           studentId={1}
           studentLevelInfo={mockStudentLevelInfo}
           teacherHasEnabledAi={true}
@@ -266,17 +271,19 @@ describe('StudentRubricWidget', () => {
     });
   });
 
-  it('refetches data when rubricId changes', async () => {
+  it('refetches data when lessonId changes', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
+        rubricId: 1,
         rubric: mockRubric,
-      } as RubricData,
+        levelId: 10000,
+      },
       response: new Response(),
     });
 
     const {rerender} = render(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={1} studentId={1} />
+        <StudentRubricWidget lessonId={1} studentId={1} />
       </Provider>
     );
 
@@ -286,18 +293,41 @@ describe('StudentRubricWidget', () => {
     });
 
     expect(mockFetchJson).toHaveBeenCalledTimes(1);
-    expect(mockFetchJson).toHaveBeenCalledWith('/rubrics/1');
+    expect(mockFetchJson).toHaveBeenCalledWith('/rubrics/find?lesson_id=1');
 
-    // Change rubricId
+    // Change lessonId
     rerender(
       <Provider store={mockStore}>
-        <StudentRubricWidget rubricId={2} studentId={1} />
+        <StudentRubricWidget lessonId={2} studentId={1} />
       </Provider>
     );
 
     await waitFor(() => {
       expect(mockFetchJson).toHaveBeenCalledTimes(2);
-      expect(mockFetchJson).toHaveBeenCalledWith('/rubrics/2');
+      expect(mockFetchJson).toHaveBeenCalledWith('/rubrics/find?lesson_id=2');
+    });
+  });
+
+  it('includes levelId in request when provided', async () => {
+    mockFetchJson.mockResolvedValue({
+      value: {
+        rubricId: 1,
+        rubric: mockRubric,
+        levelId: 123,
+      },
+      response: new Response(),
+    });
+
+    render(
+      <Provider store={mockStore}>
+        <StudentRubricWidget lessonId={1} studentId={1} levelId={123} />
+      </Provider>
+    );
+
+    await waitFor(() => {
+      expect(mockFetchJson).toHaveBeenCalledWith(
+        '/rubrics/find?lesson_id=1&level_id=123'
+      );
     });
   });
 });
