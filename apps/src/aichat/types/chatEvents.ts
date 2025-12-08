@@ -41,6 +41,7 @@ interface BaseChatMessage extends BaseChatEvent {
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */
 export interface PendingChatMessage extends BaseChatMessage {
   status: 'unknown';
+  requestId?: number;
 }
 
 /** Chat message that could not be completed due to a server error. Does not have a request ID. */
