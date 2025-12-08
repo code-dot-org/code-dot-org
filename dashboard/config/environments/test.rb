@@ -30,7 +30,9 @@ Dashboard::Application.configure do
   config.consider_all_requests_local = true
   config.action_controller.perform_caching = false
 
-  # Use smaller cache size when running unit tests.
+  # Use null cache store by default when running unit tests. Individual tests
+  # can override this if needed via setup_script_cache and
+  # teardown_script_cache.
   config.cache_store = :null_store if CDO.unit_test
 
   # config.action_mailer.raise_delivery_errors = true
