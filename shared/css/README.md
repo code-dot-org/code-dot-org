@@ -11,10 +11,10 @@ If you are looking to update the FontAwesome files in `font.scss`, you'll need t
 4. **Upload the css and webfont files to the `cdo-dsco` bucket S3 bucket.** Timestamp the folder location in S3 with the current unix timestamp. For example, you'd end up with a S3 locations like:
    - `cdo-dsco/assets/font-awesome-pro/1762452190/css/all.css`
    - `cdo-dsco/assets/font-awesome-pro/1762452190/webfonts/custom-icons.woff2`
-6. **[Only necessary if starting from scratch, should apply by default to new uploads] Update CORS configuration on `cdo-dsco` bucket**
+5. **[Only necessary if starting from scratch, should apply by default to new uploads] Update CORS configuration on `cdo-dsco` bucket**
    to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
    More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
-7. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
+6. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
 
 At time of writing, these files were referenced in the following places:
 
