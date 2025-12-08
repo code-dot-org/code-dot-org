@@ -6,7 +6,7 @@
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
-    - managed_test_server = "#{CDO.running_web_application? && CDO.test_system?}"
+    - managed_test_server = "#{CDO.managed_test_server?}"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
     -# make sure robots do not index non production environments or disallowed routes
