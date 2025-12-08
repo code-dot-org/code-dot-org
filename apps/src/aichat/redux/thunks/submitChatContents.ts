@@ -1,10 +1,10 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {
-  clearChatMessagePending,
+  addEventToChatEventsCurrent,
   clearStagedFiles,
   clearUserAddedSelectionContext,
-  setChatMessagePending,
+  updateChatMessage,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -34,6 +34,7 @@ import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
+import {logChatEvent} from './logChatEvent';
 import {sendAnalytics} from './sendAnalytics';
 
 // This thunk's callback function submits a user's chat content and AI customizations to
@@ -71,9 +72,9 @@ export const submitChatContents = createAsyncThunk(
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
-    thunkAPI.dispatch(clearStagedFiles());
+    dispatch(clearStagedFiles());
     // Clear any user added context if present.
-    thunkAPI.dispatch(clearUserAddedSelectionContext());
+    dispatch(clearUserAddedSelectionContext());
 
     const aichatContext: AichatContext = {
       clientType,
@@ -107,7 +108,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext,
       timestamp: Date.now(),
     };
-    dispatch(setChatMessagePending(newUserMessage));
+    dispatch(addEventToChatEventsCurrent(newUserMessage));
     if (logLevelActivity) {
       logLevelActivity();
     }
@@ -184,7 +185,6 @@ export const submitChatContents = createAsyncThunk(
       return;
     }
 
-    thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending
     // a chat message and then receiving a response from the chatbot.
     // A teacher will view that the level is now in progress.
@@ -193,7 +193,13 @@ export const submitChatContents = createAsyncThunk(
       if (responseCallback && message.role === Role.ASSISTANT) {
         message.chatMessageText = responseCallback(message.chatMessageText);
       }
-      dispatch(addChatEvent(message));
+      if (message.role === Role.ASSISTANT) {
+        dispatch(addChatEvent(message));
+      }
+      if (message.role === Role.USER) {
+        dispatch(updateChatMessage(message));
+        dispatch(logChatEvent(message));
+      }
     });
   }
 );
@@ -210,8 +216,7 @@ async function handleChatCompletionError(
       .logError('Error in aichat completion request', error as Error);
   }
 
-  dispatch(clearChatMessagePending());
-  dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+  dispatch(updateChatMessage({...newUserMessage, status: Status.ERROR}));
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
