@@ -11,6 +11,10 @@ class CachingTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
+  def teardown
+    teardown_script_cache
+  end
+
   test "should get /hoc/1" do
     create_hourofcode_unit_and_levels
     setup_script_cache

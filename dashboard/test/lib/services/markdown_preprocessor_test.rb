@@ -6,33 +6,39 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     course_version = create(:course_version,
       course_offering: course_offering,
       key: '1999'
-)
+    )
 
     create(:resource,
       key: 'first-resource',
       name: "First Resource",
       url: "example.com/first",
       course_version: course_version
-)
+    )
     create(:resource,
       key: 'second-resource',
       name: "Second Resource",
       url: "example.com/second",
       course_version: course_version
-)
+    )
 
     create(:vocabulary,
       key: 'first_vocab',
       word: "First Vocabulary",
       definition: "The first of the vocabulary entries.",
       course_version: course_version
-)
+    )
     create(:vocabulary,
       key: 'second_vocab',
       word: "Second Vocabulary",
       definition: "The second of the vocabulary entries.",
       course_version: course_version
-)
+    )
+
+    setup_script_cache
+  end
+
+  teardown do
+    teardown_script_cache
   end
 
   test 'process method invokes both resource and vocab substitutions' do

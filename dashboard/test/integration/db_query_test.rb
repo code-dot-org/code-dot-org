@@ -8,6 +8,10 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
+  def teardown
+    teardown_script_cache
+  end
+
   test "script level show" do
     student = create(:student)
     sign_in student

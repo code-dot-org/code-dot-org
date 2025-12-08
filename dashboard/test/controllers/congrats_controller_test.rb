@@ -1,5 +1,10 @@
 require 'test_helper'
 
+# ensure we clean up after any test cases that call setup_script_cache
+def teardown
+  teardown_script_cache
+end
+
 class CongratsControllerTest < ActionController::TestCase
   test "shows congrats page for HoC course" do
     hoc_course = create(:hoc_course)

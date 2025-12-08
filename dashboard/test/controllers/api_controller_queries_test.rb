@@ -5,6 +5,10 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
+  def teardown
+    teardown_script_cache
+  end
+
   test "section_level_progress" do
     skip "flaky as of 7/17/2023"
     section = create(:section)

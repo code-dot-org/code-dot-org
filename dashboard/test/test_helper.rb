@@ -410,6 +410,11 @@ class ActiveSupport::TestCase
 
     Rails.cache.clear
   end
+
+  def teardown_script_cache
+    Rails.cache.clear
+    Rails.application.config.cache_store = :null_store
+  end
 end
 
 # Helpers for all controller test cases
