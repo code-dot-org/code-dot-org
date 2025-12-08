@@ -290,52 +290,81 @@ Oct 30 18:04:11 ip-10-0-1-23 sudo:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu ; USE
 
 ### Useful Queries/Patterns
 
+See all JSON logs, with most useful fields:
+```
+fields @timestamp
+| parse "@cee: *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| fields json.user_id, json.admin_id, json.method, json.status, json.path, json.controller, json.action, json.duration as duration_ms, json.view as view_duration_ms, json.db as db_duration_ms
+# | filter ispresent(json.user_id)
+| filter ispresent(json.duration)
+| sort @timestamp desc
+| limit 30
+```
+
+Get total unique users in the time period:
+```
+fields @timestamp
+| parse "@cee: *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| filter ispresent(json.user_id)
+| stats count_distinct(json.user_id) as unique_user_count
+```
+
 Get the top 50 most frequent 500 errors by controller and action:
 ```
-parse @message "@cee: *" as payload
-| filter ispresent(payload)
-| parse payload /"controller":"(?<controller>[^"]+)".*"action":"(?<action>[^"]+)".*"status":(?<status>\d+)/
-| filter status >= 500
-| stats count() as err by controller, action, status
+fields @timestamp
+| parse @message "@cee: *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| fields json.controller, json.action, json.status
+| filter ispresent(json.status) and json.status >= 500
+| stats count() as err by json.controller, json.action, json.status
 | sort err desc
 | limit 50
 ```
 
 Get the 95th percentile and average duration of requests by controller and action:
 ```
-parse @message "@cee: *" as payload
-| filter ispresent(payload)
-| parse payload /"controller":"(?<controller>[^"]+)".*"action":"(?<action>[^"]+)".*"duration":(?<duration>[\d.]+)/
-| stats pct(duration, 95) as p95_ms, avg(duration) as avg_ms, count() as count by controller, action
+fields @timestamp
+| parse @message "@cee: *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| fields json.controller, json.action, json.duration as duration_ms
+| filter ispresent(json.duration)
+| stats pct(duration_ms, 95) as p95_ms, avg(duration_ms) as avg_ms, count() as count by json.controller, json.action
 | sort p95_ms desc
 | limit 20
 ```
 
 Get the top 200 slowest requests to a given endpoint:
 ```
-parse @message "@cee: *" as payload
-| filter ispresent(payload)
-| parse payload /"path":"(?<path>[^"]+)".*"status":(?<status>\d+).*"duration":(?<duration>[\d.]+)/
-| filter path = "/api/v1/users/current" and duration > 300
-| sort duration desc
+fields @timestamp
+| parse @message "@cee: *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| fields json.path, json.status, json.duration as duration_ms, json.view as view_duration_ms, json.db as db_duration_ms
+| filter ispresent(json.duration) and json.path = "/api/v1/users/current" and json.duration > 300
+| sort duration_ms desc
 | limit 200
 ```
 
 Find actions performed by an admin user, while using "Assume Identity" as another user:
 ```
-fields @timestamp, @message, @logStream, @log
-| parse @message /"user_id"\s*:\s*(?<user_id>\d+)/
-| parse @message /"admin_id"\s*:\s*(?<admin_id>\d+)/
-| filter ispresent(admin_id)
+fields @timestamp
+| filter @message like /admin_id/
+| parse @message "@cee: *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| fields json.user_id, json.admin_id, json.method, json.status, json.path, json.controller, json.action
+| filter ispresent(json.admin_id)
 | sort @timestamp desc
 | limit 30
 ```
 
 Find Admin-only actions like deleting a user, granting a role, or starting an "Assume  Identity" session:
 ```
-fields @timestamp, @message, @logStream, @log
-| parse @message '"namespace":"*"' as namespace
-| filter namespace = "admin"
+fields @timestamp
+| parse @message ": *" as jsonStr
+| fields jsonParse(jsonStr) as json
+| fields json.namespace, json.event, json.affected_user_id, json.authenticated_user_id, json.permission
+| filter ispresent(json.namespace) and json.namespace = "admin"
 | sort @timestamp desc
 | limit 30
 ```
