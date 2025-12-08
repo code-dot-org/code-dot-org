@@ -158,6 +158,15 @@ const VersionHistoryPanel: React.FunctionComponent<
     loadVersionList(true);
   });
 
+  // Refresh version history list when a new version is saved and the panel is open.
+  const onVersionSaved = useCallback(() => {
+    if (isOpen) {
+      loadVersionList(false);
+    }
+  }, [isOpen, loadVersionList]);
+
+  useLifecycleNotifier(LifecycleEvent.VersionSaved, onVersionSaved);
+
   // Ensure the version list is empty if the levelId changes or if viewAsUserId changes,
   // then load the version list.
   // We do this again when the level load finishes to ensure we have the correct list,
