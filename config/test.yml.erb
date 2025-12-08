@@ -1,3 +1,6 @@
+# Any secrets set here will only be set on the chef-managed test-system.
+# In other test environments, we clear all secrets below.
+
 github_webhook_secret: !Secret
 slack_set_last_dtt_green_token: !Secret
 slack_start_build_token: !Secret
@@ -12,9 +15,9 @@ imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
 # This saves 30 seconds each time the rails environment is loaded.
 lazy_load_i18n: <%= !(running_web_application? || unit_test) %>
 
-# Disable Secrets for CI, unit-test runs,
-# and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
-<% unless chef_managed && running_web_application? -%>
+# Disable Secrets unless we are running the web application on the chef-managed
+# test system.
+<% unless running_web_application? && test_system? -%>
 <%= clear_secrets %>
 
 dashboard_honeybadger_api_key: '00000000'
