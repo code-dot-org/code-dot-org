@@ -6,7 +6,6 @@
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
-    - managed_test_server = "#{CDO.managed_test_server?}"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
     -# make sure robots do not index non production environments or disallowed routes
@@ -41,7 +40,7 @@
     -# auth key needed for statsig analytics
     %script{data: {'statsig-api-client-key-session-replay': CDO.safe_statsig_api_client_key_session_replay}}
     -# for statsig to recognized managed test server
-    %script{data: {'managed-test-server': managed_test_server}}
+    %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
     -# user id and type for analytics logging- may not work for cached pages
     %script{data: {'user-id': current_user&.id}}
     %script{data: {'user-type': current_user&.user_type}}
