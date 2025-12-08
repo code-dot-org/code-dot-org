@@ -499,7 +499,7 @@ disable_s3_image_uploads: false
 channels_api_secret: !Secret
 
 daemon: <%=name == 'production-daemon'%>
-image_optim: <%=chef_managed && !unit_test%>
+image_optim: <%=chef_managed && running_web_application?%>
 
 # Used to export data on professional learning to gsheets
 enrollments_summer_2020_gsheet_key:

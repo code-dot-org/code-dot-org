@@ -242,8 +242,7 @@ module Dashboard
       require 'newrelic_rpm'
     end
 
-    # Compress JavaScripts and CSS.
-    # webpack handles js compression for us
+    # Webpack handles js compression for us, so don't compress by default.
     # config.assets.js_compressor = :uglifier
     # config.assets.css_compressor = :sass
 
