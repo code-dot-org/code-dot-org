@@ -164,6 +164,9 @@ export default class BackpackClientApi {
     );
   }
 
+  /**
+   * Save a file to the backpack from the given URL.
+   */
   async saveCodebridgeFileFromUrl(
     filename: string,
     fileUrl: string,
@@ -181,14 +184,14 @@ export default class BackpackClientApi {
         const fileToUpload = new File([responseBlob], filename, {
           type: responseBlob.type,
         });
-        const uploadResponse = await HttpClient.put(
+        await HttpClient.put(
           `${rootUrl(this.channelId)}/${filename}`,
           fileToUpload
         );
-        console.log({uploadResponse});
       }
     } catch (error) {
       onError(error as Error);
+      return;
     }
     onSuccess();
   }

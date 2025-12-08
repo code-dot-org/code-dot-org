@@ -37,6 +37,17 @@ describe('BackpackClientApi (jest)', () => {
     (HttpClient.delete as jest.Mock).mockImplementationOnce(() =>
       Promise.reject(new Error('fail'))
     );
+  const setGetResolveOnce = (fileContent: string) =>
+    (HttpClient.get as jest.Mock).mockImplementationOnce(() =>
+      Promise.resolve({
+        ok: true,
+        text: jest.fn().mockResolvedValueOnce(fileContent),
+      })
+    );
+  const setGetRejectOnce = () =>
+    (HttpClient.get as jest.Mock).mockImplementationOnce(() =>
+      Promise.reject(new Error('fail'))
+    );
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -134,6 +145,78 @@ describe('BackpackClientApi (jest)', () => {
       expect(successCallback).not.toHaveBeenCalled();
       expect(HttpClient.delete as jest.Mock).toHaveBeenCalledTimes(2);
     });
+
+    it('saveCodebridgeFileFromUrl uploads file fetched from URL and calls success', async () => {
+      // Mock a successful GET that returns a blob
+      (HttpClient.get as jest.Mock).mockResolvedValueOnce(
+        Promise.resolve({
+          ok: true,
+          blob: jest
+            .fn()
+            .mockResolvedValueOnce(new Blob(['data'], {type: 'text/plain'})),
+        })
+      );
+      setPutResolveOnce();
+
+      await backpackClientApi.saveCodebridgeFileFromUrl(
+        'fromUrl.txt',
+        'https://example.com/file.txt',
+        errorCallback,
+        successCallback
+      );
+
+      expect(HttpClient.get).toHaveBeenCalledWith(
+        'https://example.com/file.txt'
+      );
+      expect(HttpClient.put).toHaveBeenCalledWith(
+        `/v3/libraries/${channelId}/fromUrl.txt`,
+        expect.any(File)
+      );
+      expect(errorCallback).not.toHaveBeenCalled();
+      expect(successCallback).toHaveBeenCalledTimes(1);
+    });
+
+    it('saveCodebridgeFileFromUrl calls error when GET throws, does not upload', async () => {
+      (HttpClient.get as jest.Mock).mockRejectedValueOnce(new Error('network'));
+
+      await backpackClientApi.saveCodebridgeFileFromUrl(
+        'fromUrl.txt',
+        'https://example.com/file.txt',
+        errorCallback,
+        successCallback
+      );
+
+      expect(HttpClient.put).not.toHaveBeenCalled();
+      expect(errorCallback).toHaveBeenCalledTimes(1);
+      expect(successCallback).not.toHaveBeenCalled();
+    });
+
+    it('fetch file calls success callback on successful fetch', async () => {
+      setGetResolveOnce('file contents');
+
+      await backpackClientApi.fetchFile(
+        'test.java',
+        errorCallback,
+        successCallback
+      );
+
+      expect(successCallback).toHaveBeenCalledTimes(1);
+      expect(successCallback).toHaveBeenCalledWith('file contents');
+      expect(errorCallback).not.toHaveBeenCalled();
+    });
+
+    it('fetch file calls error callback on failed fetch', async () => {
+      setGetRejectOnce();
+
+      await backpackClientApi.fetchFile(
+        'test.java',
+        errorCallback,
+        successCallback
+      );
+
+      expect(errorCallback).toHaveBeenCalledTimes(1);
+      expect(successCallback).not.toHaveBeenCalled();
+    });
   });
 
   describe('without provided channel id', () => {
@@ -174,6 +257,7 @@ describe('BackpackClientApi (jest)', () => {
 
     it('fetch file calls error callback', async () => {
       backpackClientApi.fetchFile('test.java', errorCallback, successCallback);
+      await Promise.resolve();
       expect(errorCallback).toHaveBeenCalledTimes(1);
       expect(successCallback).not.toHaveBeenCalled();
     });
