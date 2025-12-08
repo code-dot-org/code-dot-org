@@ -130,11 +130,23 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     };
   }, [inProgrammaticScroll]);
 
-  useEffect(() => {
-    if (previousEventsLength.current !== events.length) {
-      previousEventsLength.current = events.length;
+  // Hide assistant placeholders that are still empty while we stream deltas.
+  const visibleEvents = events.filter(event => {
+    if (!isChatMessage(event)) {
+      return true;
+    }
+    const isEmptyAssistantPlaceholder =
+      event.role === 'assistant' &&
+      event.status === 'unknown' &&
+      !event.chatMessageText?.trim();
+    return !isEmptyAssistantPlaceholder;
+  });
 
-      const lastMessage = events[events.length - 1];
+  useEffect(() => {
+    if (previousEventsLength.current !== visibleEvents.length) {
+      previousEventsLength.current = visibleEvents.length;
+
+      const lastMessage = visibleEvents[visibleEvents.length - 1];
       let lastMessageRole: Role | null = null;
       if (lastMessage && isChatMessage(lastMessage)) {
         lastMessageRole = lastMessage.role;
@@ -159,7 +171,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
       previousLastMessageRole.current = lastMessageRole;
     }
-  }, [events, events.length, scrollToLastMessage]);
+  }, [visibleEvents, visibleEvents.length, scrollToLastMessage]);
 
   return (
     <div
@@ -198,8 +210,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
-            {events.map((event, index) => {
-              const isLastMessage = index === events.length - 1;
+            {visibleEvents.map((event, index) => {
+              const isLastMessage = index === visibleEvents.length - 1;
               return (
                 <ChatEventView
                   event={event}
