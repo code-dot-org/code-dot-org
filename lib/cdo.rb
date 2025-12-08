@@ -332,6 +332,12 @@ module Cdo
       %w(puma thin).include?(File.basename($0))
     end
 
+    # Whether we are executing within a web application server on the
+    # chef-managed test system (test.code.org / test-studio.code.org).
+    def managed_test_server?
+      test_system? && running_web_application?
+    end
+
     # Is this code running in a webserver as part of our Continuous Integration
     # builds?
     def ci_webserver?
