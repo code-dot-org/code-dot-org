@@ -32,6 +32,7 @@ import {
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
+  ChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -181,14 +182,13 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    setChatMessagePending: (
-      state,
-      action: PayloadAction<PendingChatMessage>
-    ) => {
-      state.chatMessagePending = action.payload;
-      state.hasSentMessage = true;
+    updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+      let event = state.chatEventsCurrent.find(
+        event => event.timestamp === action.payload.timestamp
+      );
+      if (!event) return;
+      event = action.payload;
     },
-    clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
@@ -433,8 +433,7 @@ export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  setChatMessagePending,
-  clearChatMessagePending,
+  updateChatMessage,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
