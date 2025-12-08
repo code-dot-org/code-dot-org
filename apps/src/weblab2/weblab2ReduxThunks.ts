@@ -83,7 +83,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
   const updatedSources = {
     source: updatedSource,
   };
-  // Save sources before AI Tutor version.
+  // Save sources before AI Tutor version if there were any changes to the project before last saved version.
   await thunkAPI.dispatch(
     setAndSaveProjectSources(
       sourcesBeforeAiTutorVersion as ProjectSources,
