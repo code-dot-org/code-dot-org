@@ -21,7 +21,7 @@
       ClusterName: <%=stack_name[0..19]%> # Max 20 chars
       Engine: memcached
       EngineVersion: 1.4
-      NumCacheNodes: 2
+      NumCacheNodes: 3
       AZMode: cross-az
       PreferredAvailabilityZones: <%= AVAILABILITY_ZONES.first(2).to_json %>
       PreferredMaintenanceWindow: sat:03:00-sat:04:00

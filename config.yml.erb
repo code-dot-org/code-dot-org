@@ -657,6 +657,10 @@ openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
 openai_lesson_summaries_api_key: !Secret
 
+# Credentials for Langfuse API
+langfuse_secret_key: !Secret
+langfuse_public_key: !Secret
+
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
@@ -707,3 +711,6 @@ contentful_cs_for_all_access_token: !Secret
 contentful_cs_for_all_space: 27jkibac934d
 contentful_cs_for_all_namespace: master
 contentful_cs_for_all_api_url: preview.contentful.com
+
+# HoC/HoAI tracking configuration. See `dashboard/engines/hoc_legacy`
+hoc_tracking_enabled: true

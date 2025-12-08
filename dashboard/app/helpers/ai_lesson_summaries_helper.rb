@@ -4,7 +4,7 @@ module AiLessonSummariesHelper
   API_KEY = CDO.openai_lesson_summaries_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
-  def self.get_ai_lesson_summary(lesson_id, user_id = nil, response_format = AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+  def self.generate_lesson_summary(lesson_id, user_id = nil, response_format = AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     system_prompt = AiSystemPrompts::LessonSummariesSystemPromptHelper.get_system_prompt(lesson_id, user_id, response_format)
     client = Client.new(API_KEY, MODEL)
 
@@ -25,10 +25,29 @@ module AiLessonSummariesHelper
     end
   end
 
+  # Retrieves existing AiLessonSummary with the desired response_format if it exists, otherwise generates and saves it it.
   def self.retrieve_and_save_ai_lesson_summary(lesson_id, user_id, response_format)
-    ai_lesson_summary = get_ai_lesson_summary(lesson_id, user_id, response_format)
-    if ai_lesson_summary[:status] == 200 && response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]
-      AiLessonSummary.create!({user_id: user_id, lesson_id: lesson_id, lesson_summary: ai_lesson_summary[:json]})
+    # Check for existing AiLessonSummary with the desired response_format
+    existing_summary_with_given_response_format = get_existing_summary(lesson_id, user_id, response_format)
+    return existing_summary_with_given_response_format if existing_summary_with_given_response_format.present?
+
+    # Obtain AiLessonSummary for this lesson + user pairing if it exists with a format other than the desired response_format
+    existing_summary = get_existing_summary(lesson_id, user_id, nil)
+    # Generate lesson summary in the desired response_format
+    new_ai_lesson_summary = generate_lesson_summary(lesson_id, user_id, response_format)
+
+    if new_ai_lesson_summary[:status] == 200
+      if existing_summary.present?
+        response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
+          existing_summary.update!(lesson_summary: new_ai_lesson_summary[:json]) :
+          existing_summary.update!(script: JSON.parse(new_ai_lesson_summary[:json])['podcast_script'])
+        existing_summary
+      else
+        new_ai_lesson_summary_params = response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
+          {user_id: user_id, lesson_id: lesson_id, lesson_summary: new_ai_lesson_summary[:json]} :
+          {user_id: user_id, lesson_id: lesson_id, script: JSON.parse(new_ai_lesson_summary[:json])['podcast_script']}
+        AiLessonSummary.create!(new_ai_lesson_summary_params)
+      end
     end
   end
 
@@ -83,6 +102,25 @@ module AiLessonSummariesHelper
         open_timeout: DCDO.get('openai_http_open_timeout', 5),
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
+    end
+  end
+
+  private_class_method def self.get_existing_summary(lesson_id, user_id, response_format)
+    if response_format.present?
+      response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
+        AiLessonSummary.where(
+          user_id: user_id,
+          lesson_id: lesson_id
+        ).where.not(lesson_summary: nil)&.first :
+        AiLessonSummary.where(
+          user_id: user_id,
+          lesson_id: lesson_id
+        ).where.not(script: nil)&.first
+    else
+      AiLessonSummary.where(
+        user_id: user_id,
+        lesson_id: lesson_id
+      )&.first
     end
   end
 end

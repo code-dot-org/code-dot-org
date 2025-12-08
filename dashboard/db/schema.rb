@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_12_01_160346) do
+ActiveRecord::Schema.define(version: 2025_12_03_202435) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -181,6 +181,8 @@ ActiveRecord::Schema.define(version: 2025_12_01_160346) do
     t.text "preset_chip_text"
     t.text "raw_content"
     t.json "source_links"
+    t.boolean "is_artifact_candidate", default: false
+    t.string "artifact_candidate_type"
     t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
   end
 
@@ -2418,7 +2420,7 @@ ActiveRecord::Schema.define(version: 2025_12_01_160346) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at"
     t.datetime "anonymized_at"

@@ -18,7 +18,9 @@ async function canvasToBlob(
 export async function uploadBase64ToUrl(
   dataUrl: string,
   uploadUrl: string,
-  mimeType: string
+  mimeType: string,
+  starterAsset: boolean,
+  filenameWithExtension: string
 ): Promise<Response> {
   const img = new Image();
   img.src = dataUrl;
@@ -33,9 +35,16 @@ export async function uploadBase64ToUrl(
 
   const blob = await canvasToBlob(canvas, mimeType);
 
-  const file = new File([blob], 'file', {
+  const file = new File([blob], filenameWithExtension, {
     type: mimeType,
   });
 
-  return await HttpClient.put(uploadUrl, file);
+  if (starterAsset) {
+    const bodyData = new FormData();
+    bodyData.append('files[]', file);
+
+    return await HttpClient.post(uploadUrl, bodyData, true);
+  } else {
+    return await HttpClient.put(uploadUrl, file);
+  }
 }

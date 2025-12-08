@@ -17,10 +17,6 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {
-  getIsStartMode,
-  getAppOptionsEditingExemplar,
-} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
@@ -157,18 +153,13 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        // TO DO: figure out how to update to support starter assets.
-        // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
-        // In starter code and exemplar editing modes, we manage saving explicitly via the button in the header.
-        let uploadedFiles;
-        if (!(getIsStartMode() || getAppOptionsEditingExemplar())) {
-          uploadedFiles = await uploadExternalFiles(
-            currentSources.source.externalFiles || {},
-            serializedData.files,
-            filesBeingUploadedRef,
-            channelId
-          );
-        }
+        const uploadedFiles = await uploadExternalFiles(
+          currentSources.source.externalFiles || {},
+          serializedData.files,
+          filesBeingUploadedRef,
+          channelId,
+          levelProperties.name
+        );
 
         updateSources({
           source: {
@@ -181,7 +172,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         });
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, channelId, currentSources.source]
+    [updateSources, channelId, currentSources.source, levelProperties.name]
   );
 
   useEffect(() => {
