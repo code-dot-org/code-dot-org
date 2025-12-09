@@ -111,6 +111,11 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       @programming_expression = create(:programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)
       @programming_class = create(:programming_class, programming_environment: @programming_environment, programming_environment_category: programming_environment_category)
       create(:programming_method, programming_class: @programming_class)
+      setup_script_cache
+    end
+
+    def teardown
+      teardown_script_cache
     end
 
     test "environment index should cache all queries" do

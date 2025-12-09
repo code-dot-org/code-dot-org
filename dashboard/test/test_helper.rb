@@ -406,14 +406,15 @@ class ActiveSupport::TestCase
     Unit.clear_cache
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Rails.application.config.action_controller.perform_caching = true
-    Rails.application.config.cache_store = :memory_store, {size: 64.megabytes}
-
+    # Actually replace the cache instance, not just the config
+    Rails.cache = ActiveSupport::Cache.lookup_store(:memory_store, {size: 64.megabytes})
     Rails.cache.clear
   end
 
   def teardown_script_cache
     Rails.cache.clear
-    Rails.application.config.cache_store = :null_store
+    # Actually replace the cache instance back to null_store
+    Rails.cache = ActiveSupport::Cache.lookup_store(:null_store)
   end
 end
 
