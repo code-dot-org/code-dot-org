@@ -21,7 +21,10 @@ echo "=============================================="
 echo "=== BRAKEMAN SECURITY SCAN ==="
 echo "=============================================="
 cd dashboard
-if ! bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --exit-on-warn; then
+# Run Brakeman and capture both stdout and stderr
+# Use --skip-files to skip initializers that cause parsing errors in old Brakeman versions
+# The refresh_activemodel_cached_attributes.rb file uses syntax that Brakeman 4.5.0 cannot parse
+if ! bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --exit-on-warn --skip-files config/initializers/refresh_activemodel_cached_attributes.rb 2>&1; then
   echo ""
   echo "=============================================="
   echo "=== BRAKEMAN SECURITY SCAN FAILED ==="
