@@ -38,9 +38,9 @@ interface VersionHistoryPanelProps {
   startSources: ProjectSources;
   selectedVersion: string;
   setSelectedVersion: (version: string) => void;
-  appName: string;
   levelId: number;
   disabled?: boolean;
+  isOpen?: boolean;
   alwaysShowAutoSaves?: boolean;
 }
 
@@ -65,9 +65,9 @@ const VersionHistoryPanel: React.FunctionComponent<
   selectedVersion,
   setSelectedVersion,
   startSources,
-  appName,
   levelId,
   disabled = false,
+  isOpen = false,
   alwaysShowAutoSaves = false,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
@@ -197,6 +197,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     previousLevelId.current = levelId;
     previewViewAsUserId.current = viewAsUserId;
   }, [loadVersionList, levelId, viewAsUserId]);
+
+  // Reload version history list when tab becomes active.
+  useEffect(() => {
+    if (isOpen) {
+      loadVersionList(true);
+    }
+  }, [isOpen, loadVersionList, dispatch]);
 
   useEffect(() => {
     if (selectedVersion === '') {

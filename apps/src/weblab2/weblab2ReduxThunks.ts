@@ -3,14 +3,22 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 import {addChatEvent} from '@cdo/apps/aichat/redux/thunks/addChatEvent';
 import {getNewRemoveId} from '@cdo/apps/aichat/redux/utils';
 import {Notification} from '@cdo/apps/aichat/types/chatEvents';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   setProjectSourceBeforeAiTutorVersion,
   setSource,
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
 import {setAiFilePathToPreview, setAiTutorVersionFiles} from './weblab2Redux';
 
@@ -34,7 +42,16 @@ export const acceptAiTutorVersion = createAsyncThunk<
   {dispatch: AppDispatch; state: RootState}
 >('weblab2/acceptAiTutorVersion', async (files, thunkAPI) => {
   const state = thunkAPI.getState();
-  const source = state.lab2Project.projectSources?.source as MultiFileSource;
+  const sources = state.lab2Project.projectSources;
+  const channelId = state.lab.channel?.id;
+  if (!channelId || !sources) {
+    console.error('Channel ID or project sources not available');
+    // TODO: add error handling.
+    return;
+  }
+  const sourcesBeforeAiTutorVersion = {
+    source: state.lab2Project.projectSourceBeforeAiTutorVersion,
+  };
 
   // Add accept notification.
   const notification: Notification = {
@@ -46,25 +63,64 @@ export const acceptAiTutorVersion = createAsyncThunk<
     files: files,
   };
   thunkAPI.dispatch(addChatEvent(notification));
-
   resetAiTutorVersionState(thunkAPI.dispatch);
 
   // Update current source so that isAiTutorVersionUpdated and isAiTutorVersionCreated are set to false.
-  if (source) {
-    const updatedSource = {
-      ...source,
-      files: Object.fromEntries(
-        Object.entries(source.files).map(([fileId, file]) => [
-          fileId,
-          {
-            ...file,
-            isAiTutorVersionUpdated: false,
-            isAiTutorVersionCreated: false,
-          },
-        ])
-      ),
+  const source = sources.source as MultiFileSource;
+  const updatedSource = {
+    ...source,
+    files: Object.fromEntries(
+      Object.entries(source.files).map(([fileId, file]) => [
+        fileId,
+        {
+          ...file,
+          isAiTutorVersionUpdated: false,
+          isAiTutorVersionCreated: false,
+        },
+      ])
+    ),
+  };
+  const updatedSources = {
+    source: updatedSource,
+  };
+  // Save sources before AI Tutor version if there were any changes to the project since the last saved version.
+  await thunkAPI.dispatch(
+    setAndSaveProjectSources(
+      sourcesBeforeAiTutorVersion as ProjectSources,
+      /* forceSave */ true,
+      /* forceNewVersion */ true
+    )
+  );
+  // Save AI Tutor version sources.
+  await thunkAPI.dispatch(
+    setAndSaveProjectSources(
+      updatedSources,
+      /* forceSave */ true,
+      /* forceNewVersion */ true
+    )
+  );
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
+  if (!projectManager) {
+    console.error('Project manager not available');
+    return;
+  }
+  const newVersionId = projectManager.getCurrentVersionId();
+
+  if (newVersionId) {
+    const payload = {
+      storage_id: channelId,
+      version_id: newVersionId,
+      comment: AI_SAVED_COMMENT,
     };
-    thunkAPI.dispatch(setSource(updatedSource));
+
+    // Save commit comment.
+    try {
+      await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
+        'Content-Type': 'application/json; charset=UTF-8',
+      });
+    } catch (error) {
+      console.error('Failed to save commit comment:', error);
+    }
   }
 });
 
