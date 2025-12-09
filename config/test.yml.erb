@@ -68,7 +68,7 @@ active_job_queue_adapter: :test
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true
-use_pusher: <%= managed_test_server? %>
+use_pusher: <%= !unit_test %>
 
 # Install i18n dependencies for i18n tests
 build_i18n: true
