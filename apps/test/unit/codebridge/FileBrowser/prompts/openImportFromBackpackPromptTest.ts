@@ -82,19 +82,16 @@ describe('openImportFromBackpackPrompt', () => {
       .mockResolvedValueOnce({type: 'confirm'}); // User confirms import.
 
     await runImportFromBackpackPrompt();
-    await Promise.resolve();
-    await Promise.resolve();
-    await Promise.resolve();
-    await Promise.resolve();
-    await Promise.resolve();
 
-    expect(mockBackpackApi.getFileList).toHaveBeenCalled();
-    expect(mockBackpackApi.fetchFileResponse).toHaveBeenCalledWith(
-      'backpack_file.py'
-    );
-    expect(newFileFunction).toHaveBeenCalledWith({
-      contents: 'Mock contents of backpack file backpack_file.py',
-      fileName: 'backpack_file.py',
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(mockBackpackApi.fetchFileResponse).toHaveBeenCalledWith(
+        'backpack_file.py'
+      );
+      expect(newFileFunction).toHaveBeenCalledWith({
+        contents: 'Mock contents of backpack file backpack_file.py',
+        fileName: 'backpack_file.py',
+      });
     });
   });
 

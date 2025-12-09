@@ -197,7 +197,7 @@ export const openImportFromBackpackPrompt = async ({
               confirmText: codebridgeI18n.importAsNewName({newFileName}),
             });
             if (results.type === 'confirm') {
-              fetchFileContentAndProcess(
+              await fetchFileContentAndProcess(
                 selectedBackpackFileName,
                 EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
                 newFileName
@@ -219,12 +219,12 @@ export const openImportFromBackpackPrompt = async ({
               neutralText: codebridgeI18n.importAsNewName({newFileName}),
             });
             if (results.type === 'confirm') {
-              fetchFileContentAndProcess(
+              await fetchFileContentAndProcess(
                 selectedBackpackFileName,
                 EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
               ); // Update existing project file.
             } else if (results.type === 'neutral') {
-              fetchFileContentAndProcess(
+              await fetchFileContentAndProcess(
                 selectedBackpackFileName,
                 EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
                 newFileName
@@ -232,7 +232,7 @@ export const openImportFromBackpackPrompt = async ({
             }
           } else {
             // Fetch backpack file content and import new file to project - not a duplicate file name.
-            fetchFileContentAndProcess(
+            await fetchFileContentAndProcess(
               selectedBackpackFileName,
               EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW,
               selectedBackpackFileName
