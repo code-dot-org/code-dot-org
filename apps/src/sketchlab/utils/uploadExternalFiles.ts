@@ -28,61 +28,32 @@ const MIME_TO_EXT = {
 };
 
 export const uploadExternalFiles = async (
-  savedFiles: SketchlabExternalFiles,
+  filesToUpload: SketchlabExternalFiles,
   excalidrawFiles: ExcalidrawFilesWithOptionalData,
   filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
-  channelId: string,
-  levelName: string
+  onError: () => void
 ) => {
-  const savedFileIds = Object.keys(savedFiles || {});
-  const excalidrawFileIds = Object.keys(excalidrawFiles || {});
-  const newFileIds = excalidrawFileIds.filter(
-    id => !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
-  );
+  for (const [fileId, fileContents] of Object.entries(filesToUpload)) {
+    filesBeingUploadedRef.current.add(fileId);
 
-  const uploadedFiles: SketchlabExternalFiles = {};
-  if (newFileIds.length && excalidrawFiles) {
-    const fileUploadPromises = newFileIds.map(async fileId => {
-      filesBeingUploadedRef.current.add(fileId);
-
-      const newFile = excalidrawFiles[fileId];
-      const extension = MIME_TO_EXT[newFile.mimeType];
-      const filenameWithExtension = `${fileId}.${extension}`;
-      const isStarterAssetOrExemplar = !!(
-        getIsStartMode() || getAppOptionsEditingExemplar()
-      );
-      const externalUrl = isStarterAssetOrExemplar
-        ? `/level_starter_assets/${encodeURIComponent(
-            levelName
-          )}/uuid/${filenameWithExtension}`
-        : `/v3/assets/${channelId}/${filenameWithExtension}`;
-      const newExternalFile: SketchlabProjectFile = {
-        id: fileId,
-      };
-
-      try {
+    try {
+      const excalidrawFile = excalidrawFiles[fileId];
+      if (excalidrawFile) {
+        const dataUrl = excalidrawFile.dataURL as string;
+        const externalUrl = fileContents.url as string;
         await uploadBase64ToUrl(
-          newFile.dataURL as string,
+          dataUrl,
           externalUrl,
-          newFile.mimeType,
-          isStarterAssetOrExemplar,
-          filenameWithExtension
+          excalidrawFile.mimeType,
+          !!fileContents?.starterAsset,
+          fileContents?.filenameWithExtension || ''
         );
-        newExternalFile.url = externalUrl;
-      } catch {
-        // If an upload fails, still add an entry to externalFiles
-        // so we don't reattempt the upload repeatedly.
-        // Longer term work to handle failed uploads tracked here:
-        // https://codedotorg.atlassian.net/browse/AFL-345
-        newExternalFile.uploadFailed = true;
       }
+    } catch {
+      onError();
+      console.error(`Error uploading file with id ${fileId}`);
+    }
 
-      uploadedFiles[fileId] = newExternalFile;
-      filesBeingUploadedRef.current.delete(fileId);
-    });
-
-    await Promise.allSettled(fileUploadPromises);
+    filesBeingUploadedRef.current.delete(fileId);
   }
-
-  return uploadedFiles;
 };

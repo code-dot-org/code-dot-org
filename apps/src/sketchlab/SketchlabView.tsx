@@ -17,9 +17,18 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  LevelProperties,
+  SketchlabExternalFiles,
+  SketchlabProjectFile,
+} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -52,6 +61,19 @@ const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 const DEFAULT_SOURCES = {source: {}};
 
 const S3_IMAGE_EXPERIMENT = 's3-images';
+
+const MIME_TO_EXT = {
+  'image/svg+xml': 'svg',
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/gif': 'gif',
+  'image/webp': 'webp',
+  'image/bmp': 'bmp',
+  'image/x-icon': 'ico',
+  'image/avif': 'avif',
+  'image/jfif': 'jfif',
+  'application/octet-stream': 'bin',
+};
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
@@ -153,23 +175,67 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        const uploadedFiles = await uploadExternalFiles(
-          currentSources.source.externalFiles || {},
-          serializedData.files,
-          filesBeingUploadedRef,
-          channelId,
-          levelProperties.name
+        const savedFiles = currentSources.source.externalFiles || {};
+        const excalidrawFiles = serializedData.files;
+        const levelName = levelProperties.name;
+
+        const savedFileIds = Object.keys(savedFiles || {});
+        const excalidrawFileIds = Object.keys(excalidrawFiles || {});
+        const newFileIds = excalidrawFileIds.filter(
+          id =>
+            !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
         );
+
+        // Compare serialized data and saved data to identify new files.
+        // Use whether we're in start mode to generate the URL.
+        // Save these new files to the external files property.
+        // Come up with a list of new files, which we pass to the helper to actually upload (but don't wait).
+        // On error, toast notification? Update sources to mark as failed upload?
+
+        const newFiles: SketchlabExternalFiles = {};
+        if (newFileIds.length && excalidrawFiles) {
+          newFileIds.forEach(fileId => {
+            const newFile = excalidrawFiles[fileId];
+            const extension = MIME_TO_EXT[newFile.mimeType];
+            const filenameWithExtension = `${fileId}.${extension}`;
+            const isStarterAssetOrExemplar = !!(
+              getIsStartMode() || getAppOptionsEditingExemplar()
+            );
+            const externalUrl = isStarterAssetOrExemplar
+              ? `/level_starter_assets/${encodeURIComponent(
+                  levelName
+                )}/uuid/${filenameWithExtension}`
+              : `/v3/assets/${channelId}/${filenameWithExtension}`;
+            const newExternalFile: SketchlabProjectFile = {
+              id: fileId,
+              url: externalUrl,
+              starterAsset: isStarterAssetOrExemplar,
+              filenameWithExtension,
+            };
+
+            newFiles[fileId] = newExternalFile;
+          });
+        }
 
         updateSources({
           source: {
             ...serializedData,
             externalFiles: {
               ...currentSources.source.externalFiles,
-              ...(uploadedFiles || {}),
+              ...(newFiles || {}),
             },
           },
         });
+
+        if (newFiles) {
+          const onError = () => excalidrawApi?.setToast({message: 'error'});
+          uploadExternalFiles(
+            newFiles,
+            serializedData.files,
+            filesBeingUploadedRef,
+            onError
+          );
+        }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [updateSources, channelId, currentSources.source, levelProperties.name]
