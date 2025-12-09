@@ -11,7 +11,8 @@ module WebPurify
   REQUEST_LIMIT = 4
   CONNECTION_OPTIONS = {
     read_timeout: DCDO.get('webpurify_http_read_timeout', 10),
-    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5)
+    open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
+    keep_alive_timeout: DCDO.get('webpurify_http_keep_alive_timeout', 0) # Disable HTTP connection pooling.
   }
   ISO_639_1_TO_WEBPURIFY = {
     'es' => 'sp',

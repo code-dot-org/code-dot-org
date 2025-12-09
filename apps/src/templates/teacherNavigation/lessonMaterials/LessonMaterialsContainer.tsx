@@ -1,15 +1,13 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyTwoText,
   BodyThreeText,
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
-import classNames from 'classnames';
 import _ from 'lodash';
-import React, {useState, useMemo, useCallback} from 'react';
+import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
@@ -29,16 +27,16 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
+import LessonSelector from '../../teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
-import {AIF_UNITS} from './LessonSummaryConstants';
+import {AIF_UNIT_IDS} from './LessonSummaryConstants';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
-import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 interface LessonMaterialsData {
   unitId: number;
@@ -69,34 +67,6 @@ const lessonMaterialsApiCall = (unitId: number) =>
     `/dashboardapi/lesson_materials/${unitId}`
   ).then(response => response?.value);
 
-const skeletonDropdown = () => (
-  <div
-    className={classNames(
-      styles.skeletonDropdown,
-      skeletonizeContent.skeletonizeContent
-    )}
-  />
-);
-
-// Some lessons are lockable and don't have lesson plans (typically assessments or surveys).
-// In this case, we want to display the lesson name without a number.  See CSP1-2022 for an example.
-const createDisplayName = (
-  lessonName: string,
-  lessonPosition: number,
-  hasLessonPlan: boolean,
-  isLockable: boolean,
-  hasUnnumberedLessons: boolean
-) => {
-  if (hasUnnumberedLessons || (isLockable && !hasLessonPlan)) {
-    return lessonName;
-  } else {
-    return i18n.lessonNumberAndName({
-      lessonNumber: lessonPosition,
-      lessonName: lessonName,
-    });
-  }
-};
-
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
 }
@@ -120,20 +90,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const needsReload = useAppSelector(
     state => state.teacherSections.needsReload
   );
-
-  const showAITALessonSummary = useAppSelector(
-    state => state.currentUser.showAITALessonSummary
-  );
-
-  const unitName = useAppSelector(
-    state => state.teacherSections.selectedSectionUnitName
-  );
-
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  const canShowLessonSummaries =
-    (showAITALessonSummary || AIF_UNITS.includes(unitName)) &&
-    aiTALessonSummaryInfo;
 
   const hasCompletedPersonalizationQuiz = useAppSelector(
     state => state.currentUser.hasCompletedPersonalizationQuiz
@@ -168,6 +124,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         : null,
     [selectedSection.unitId, selectedUnitId]
   );
+
+  const showAITALessonSummary = useAppSelector(
+    state => state.currentUser.showAITALessonSummary
+  );
+
+  // This checks to see if the AI lesson summaries experiment or DCDO key are set
+  // or if the section has AIF assigned in order to enable AI Lesson Summaries
+  const canShowLessonSummaries =
+    (showAITALessonSummary || AIF_UNIT_IDS.includes(unitToLoad)) &&
+    aiTALessonSummaryInfo;
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -227,16 +193,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     hasNoLessonsWithLessonPlans ||
     !lessonMaterials;
 
-  const getLessonFromId = (lessonId: number): Lesson | null => {
-    return lessons.find(lesson => lesson.id === lessonId) || null;
-  };
-
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   React.useEffect(() => {
     if (selectedLesson) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
-        `/ai_lesson_summaries/show?user_id=${userId}&lesson_id=${selectedLesson?.id}`
+        `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
         .then(response => {
           const preParsedResponse = response.value?.lesson_summary;
@@ -252,39 +214,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         });
     }
   }, [userId, selectedLesson]);
-
-  React.useEffect(() => {
-    if (lessons.length > 0) {
-      setSelectedLesson(lessons[0]);
-    }
-  }, [lessons]);
-
-  const onDropdownChange = (value: string) => {
-    setSelectedLesson(getLessonFromId(Number(value)));
-
-    analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
-      unitName: lessonMaterials?.unitName,
-      lessonId: value,
-    });
-  };
-
-  const generateLessonDropdownOptions = useCallback(() => {
-    return lessons.map((lesson: Lesson) => {
-      const displayName = createDisplayName(
-        lesson.name,
-        lesson.position,
-        lesson.hasLessonPlan,
-        lesson.isLockable,
-        hasUnnumberedLessons
-      );
-      return {text: displayName, value: lesson.id.toString()};
-    });
-  }, [lessons, hasUnnumberedLessons]);
-
-  const lessonOptions = useMemo(
-    () => generateLessonDropdownOptions(),
-    [generateLessonDropdownOptions]
-  );
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
@@ -304,21 +233,17 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             filterToSelectedCourse={true}
             className={styles.unitSelector}
           />
-          {isLoading || isLoadingCoursesWithProgress || needsReload ? (
-            skeletonDropdown()
-          ) : (
-            <SimpleDropdown
-              labelText={i18n.chooseLesson()}
-              isLabelVisible={false}
-              onChange={event => onDropdownChange(event.target.value)}
-              items={lessonOptions}
-              color="gray"
-              selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
-              name={'lessons-in-assigned-unit-dropdown'}
-              size="s"
-              id="ui-test-lessons-in-assigned-unit-dropdown"
-            />
-          )}
+          <LessonSelector
+            lessons={lessons}
+            selectedLesson={selectedLesson}
+            onLessonChange={(lessonId: number) => {
+              const lesson = _.find(lessons, {id: lessonId}) || null;
+              setSelectedLesson(lesson);
+            }}
+            hasUnnumberedLessons={hasUnnumberedLessons}
+            isLoading={isLoading || isLoadingCoursesWithProgress || needsReload}
+            unitName={lessonMaterials?.unitName}
+          />
         </div>
         {lessonMaterials && (
           <UnitResourcesDropdown

@@ -4,17 +4,17 @@ require 'cdo/db'
 
 module HocLegacy
   class TutorialsController < ApplicationController
-    before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel]
-    before_action :require_tutorial, only: %i[show begin begin_pixel finish finish_pixel]
+    before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel], if: -> {CDO.hoc_tracking_enabled}
+    before_action :require_tutorial, only: %i[begin begin_pixel finish finish_pixel], if: -> {CDO.hoc_tracking_enabled}
 
-    after_action :disable_caching, only: %i[begin begin_pixel finish_current finish finish_pixel]
+    after_action :disable_caching
 
     # GET /api/hour/begin/:code
     def begin
-      tutorial_url = @tutorial.primary_link_ref&.fields.try(:[], :primary_target)
+      tutorial_url = @tutorial&.primary_link_ref&.fields.try(:[], :primary_target)
       return render_404 if tutorial_url.blank?
 
-      TutorialLauncher.call(controller: self, tutorial: @tutorial)
+      TutorialLauncher.call(controller: self, tutorial: @tutorial) if CDO.hoc_tracking_enabled
 
       # If the tutorial_url is a relative path, make it absolute by prepending code.org
       tutorial_url = CDO.code_org_url(tutorial_url, CDO.default_scheme) if tutorial_url.starts_with?('/')
@@ -24,25 +24,25 @@ module HocLegacy
 
     # GET /api/hour/begin_:code.png
     def begin_pixel
-      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial)
+      TutorialPixelLauncher.call(controller: self, tutorial: @tutorial) if CDO.hoc_tracking_enabled
       send_pixel_png
     end
 
     # GET /api/hour/finish
     def finish_current
-      session_row = TutorialCompleter.call(controller: self)
+      session_row = TutorialCompleter.call(controller: self) if CDO.hoc_tracking_enabled
       redirect_to_course_completion_certificate_url(session_row:)
     end
 
     # GET /api/hour/finish/:code
     def finish
-      session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial)
+      session_row = TutorialCompleter.call(controller: self, tutorial: @tutorial) if CDO.hoc_tracking_enabled
       redirect_to_course_completion_certificate_url(session_row:)
     end
 
     # GET /api/hour/finish_:code.png
     def finish_pixel
-      TutorialPixelCompleter.call(controller: self, tutorial: @tutorial)
+      TutorialPixelCompleter.call(controller: self, tutorial: @tutorial) if CDO.hoc_tracking_enabled
       send_pixel_png
     end
 

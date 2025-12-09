@@ -1,10 +1,32 @@
-import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const REQUEST_RETRY_COUNT = 1;
 
+interface FilesObject {
+  [filename: string]: {
+    text: string;
+  };
+}
+interface FileMetadata {
+  filename: string;
+  category?: string;
+  size: number;
+  timestamp: string;
+}
+
+type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
+const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
+
 export default class BackpackClientApi {
-  constructor(appType, channelId) {
-    this.backpackApi = clientApi.create('/v3/libraries');
+  appType: string;
+  channelId: string | null;
+  uploadingFiles: boolean;
+  fileUploadsInProgress: string[];
+  fileUploadsFailed: string[];
+  fileDeletesInProgress: string[];
+  fileDeletesFailed: string[];
+
+  constructor(appType: string, channelId: string | null) {
     this.appType = appType;
     this.channelId = channelId;
     this.uploadingFiles = false;
@@ -18,48 +40,55 @@ export default class BackpackClientApi {
     return !!this.channelId;
   }
 
-  fetchChannelId(callback) {
-    $.ajax({
-      url: `/backpacks/channel/${this.appType}`,
-      type: 'get',
-    }).done(response => {
-      this.channelId = response.channel;
+  fetchChannelId(callback: () => void) {
+    HttpClient.fetchJson<{channel: string}>(
+      `/backpacks/channel/${this.appType}`
+    ).then(response => {
+      this.channelId = response.value.channel;
       callback();
     });
   }
 
-  fetchFile(filename, onError, onSuccess) {
-    if (!this.hasBackpack()) {
+  async fetchFile(
+    filename: string,
+    onError: ErrorCallback,
+    onSuccess: (data: string) => void
+  ) {
+    if (!this.channelId) {
       onError();
+      return;
     }
-    // Cache bust suffix ensures we always get the latest version of the file.
-    const cacheBustSuffix = `?t=${Date.now()}`;
-    this.backpackApi.fetch(
-      this.channelId + '/' + filename + cacheBustSuffix,
-      (error, data) => {
-        if (error) {
-          onError(error);
-        } else {
-          onSuccess(data);
-        }
-      },
-      'text'
-    );
+    try {
+      // Cache bust suffix ensures we always get the latest version of the file.
+      const cacheBustSuffix = `?t=${Date.now()}`;
+      const response = await HttpClient.get(
+        `${rootUrl(this.channelId)}/${filename}${cacheBustSuffix}`
+      );
+      const fileContents = await response.text();
+      onSuccess(fileContents);
+    } catch (error) {
+      onError(error as Error);
+    }
   }
 
-  getFileList(onError, onSuccess) {
-    if (!this.hasBackpack() && this.appType === 'javalab') {
+  async getFileList(
+    onError: ErrorCallback,
+    onSuccess: (filenames: string[]) => void
+  ) {
+    if (!this.channelId && this.appType === 'javalab') {
       onError();
+      return;
     }
-    const fetchFiles = () => {
-      this.backpackApi.fetch(this.channelId, (error, data) => {
-        if (error) {
-          onError(error);
-          return;
-        }
-        const filenames = data.map(fileData => fileData.filename);
+    const fetchFiles = async () => {
+      try {
+        const response = await HttpClient.fetchJson<FileMetadata[]>(
+          rootUrl(this.channelId!)
+        );
+        const filenames = response.value.map(fileData => fileData.filename);
         onSuccess(filenames);
-      });
+      } catch (error) {
+        onError(error as Error);
+      }
     };
 
     // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
@@ -82,7 +111,12 @@ export default class BackpackClientApi {
    * @param {Function} onError Function to call if any file fails to save
    * @param {Function} onSuccess Function to call if all files save.
    */
-  saveFiles(files, filenames, onError, onSuccess) {
+  saveFiles(
+    files: FilesObject,
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.updateFilesHelper(
       this.fileUploadsInProgress,
       filenames,
@@ -100,7 +134,12 @@ export default class BackpackClientApi {
    * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
-  saveCodebridgeFile(filename, fileContents, onError, onSuccess) {
+  saveCodebridgeFile(
+    filename: string,
+    fileContents: string,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     const fileObject = {[filename]: {text: fileContents}};
     this.updateFilesHelper(
       this.fileUploadsInProgress,
@@ -118,7 +157,11 @@ export default class BackpackClientApi {
    * @param {Function} onSuccess Function to call if all files are deleted.
    */
 
-  deleteFiles(filenames, onError, onSuccess) {
+  deleteFiles(
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.updateFilesHelper(
       this.fileDeletesInProgress,
       filenames,
@@ -138,7 +181,13 @@ export default class BackpackClientApi {
    * @param {Function} onSuccess success callback, only called if there is nothing to update
    * @param {Function} callback callback function to continue updating files
    */
-  updateFilesHelper(filesInProgress, filenames, onError, onSuccess, callback) {
+  updateFilesHelper(
+    filesInProgress: string[],
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    callback: () => void
+  ) {
     if (filesInProgress.length > 0) {
       // If an update is currently in progress (a previous update has not gone through its
       // entire list of files to resolve), return an error. Frontend should prevent multiple
@@ -159,7 +208,12 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(files, filenames, onError, onSuccess) {
+  saveFilesHelper(
+    files: FilesObject,
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
@@ -175,48 +229,58 @@ export default class BackpackClientApi {
     });
   }
 
-  writeSingleFileToBackpack(
-    filename,
-    fileContents,
-    onError,
-    onSuccess,
-    retryCount
+  async writeSingleFileToBackpack(
+    filename: string,
+    fileContents: string,
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    retryCount: number
   ) {
-    this.backpackApi.put(this.channelId, fileContents, filename, (error, _) => {
-      if (error) {
-        if (retryCount > 0) {
-          this.writeSingleFileToBackpack(
-            filename,
-            fileContents,
-            onError,
-            onSuccess,
-            retryCount - 1
-          );
-        } else {
-          // record failure and check if all files are done attempting upload/uploading
-          this.fileUploadsFailed.push(filename);
-          this.onRequestComplete(
-            filename,
-            this.fileUploadsInProgress,
-            this.fileUploadsFailed,
-            onError,
-            onSuccess,
-            error
-          );
-        }
+    if (!this.channelId) {
+      onError();
+      return;
+    }
+    try {
+      await HttpClient.put(
+        `${rootUrl(this.channelId)}/${filename}`,
+        fileContents
+      );
+      this.onRequestComplete(
+        filename,
+        this.fileUploadsInProgress,
+        this.fileUploadsFailed,
+        onError,
+        onSuccess
+      );
+    } catch (error) {
+      if (retryCount > 0) {
+        this.writeSingleFileToBackpack(
+          filename,
+          fileContents,
+          onError,
+          onSuccess,
+          retryCount - 1
+        );
       } else {
+        // Record failure and check if all files are done attempting upload/uploading
+        this.fileUploadsFailed.push(filename);
         this.onRequestComplete(
           filename,
           this.fileUploadsInProgress,
           this.fileUploadsFailed,
           onError,
-          onSuccess
+          onSuccess,
+          error as Error
         );
       }
-    });
+    }
   }
 
-  deleteFilesHelper(filenames, onError, onSuccess) {
+  deleteFilesHelper(
+    filenames: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
     this.fileDeletesInProgress = [...filenames];
     this.fileDeletesFailed = [];
     filenames.forEach(filename => {
@@ -230,53 +294,54 @@ export default class BackpackClientApi {
     });
   }
 
-  deleteSingleFileFromBackpack(filename, onError, onSuccess, retryCount) {
-    this.backpackApi.deleteObject(
-      this.channelId + '/' + filename,
-      (error, _) => {
-        if (error) {
-          if (retryCount > 0) {
-            this.deleteSingleFileFromBackpack(
-              filename,
-              onError,
-              onSuccess,
-              retryCount - 1
-            );
-          } else {
-            // record failure and check if all files are done attempting delete
-            this.fileDeletesFailed.push(filename);
-            this.onRequestComplete(
-              filename,
-              this.fileDeletesInProgress,
-              this.fileDeletesFailed,
-              onError,
-              onSuccess,
-              error
-            );
-          }
-        } else {
-          this.onRequestComplete(
-            filename,
-            this.fileDeletesInProgress,
-            this.fileDeletesFailed,
-            onError,
-            onSuccess
-          );
-        }
+  async deleteSingleFileFromBackpack(
+    filename: string,
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    retryCount: number
+  ) {
+    try {
+      await HttpClient.delete(`${rootUrl(this.channelId!)}/${filename}`);
+      this.onRequestComplete(
+        filename,
+        this.fileDeletesInProgress,
+        this.fileDeletesFailed,
+        onError,
+        onSuccess
+      );
+    } catch (error) {
+      if (retryCount > 0) {
+        this.deleteSingleFileFromBackpack(
+          filename,
+          onError,
+          onSuccess,
+          retryCount - 1
+        );
+      } else {
+        // record failure and check if all files are done attempting delete
+        this.fileDeletesFailed.push(filename);
+        this.onRequestComplete(
+          filename,
+          this.fileDeletesInProgress,
+          this.fileDeletesFailed,
+          onError,
+          onSuccess,
+          error as Error
+        );
       }
-    );
+    }
   }
 
   // Mark the given file as done updating/attempting to update.
   // Check if all files are done updating. If they are, call either onSuccess
   // or onError depending on if we saw any errors.
   onRequestComplete(
-    filename,
-    filesInRequest,
-    failedFileList,
-    onError,
-    onSuccess,
-    error
+    filename: string,
+    filesInRequest: string[],
+    failedFileList: string[],
+    onError: ErrorCallback,
+    onSuccess: () => void,
+    error?: Error
   ) {
     const filenameIndex = filesInRequest.indexOf(filename);
     if (filenameIndex >= 0) {
