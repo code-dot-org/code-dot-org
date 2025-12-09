@@ -49,6 +49,7 @@ const StudentSnapshot: React.FC = () => {
 
   // TODO: replace with actual values from URL/Redux later
   const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
+  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
   return (
     <div className={styles.snapshotContainer}>
@@ -74,6 +75,7 @@ const StudentSnapshot: React.FC = () => {
           gridHeight={2}
           lessonId={selectedLessonId}
           studentId={HARDCODED_STUDENT_ID}
+          studentName={HARDCODED_STUDENT_NAME}
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
         />

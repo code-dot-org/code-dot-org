@@ -207,6 +207,7 @@ export const Default: Story = {
     gridHeight: 2,
     lessonId: 11, // Mock lesson ID
     studentId: 1, // Mock student ID
+    studentName: 'Student1',
     studentLevelInfo: mockStudentLevelInfo,
     teacherHasEnabledAi: true,
     canProvideFeedback: true,
@@ -222,6 +223,7 @@ export const WithLevelId: Story = {
     lessonId: 11,
     levelId: 10000, // Optional: specify level ID for specific rubric
     studentId: 1,
+    studentName: 'Student1',
     studentLevelInfo: mockStudentLevelInfo,
     teacherHasEnabledAi: true,
     canProvideFeedback: true,

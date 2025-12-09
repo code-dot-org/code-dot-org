@@ -19,6 +19,7 @@ interface StudentRubricWidgetProps {
   gridHeight?: number;
   lessonId: number | null;
   studentId: number;
+  studentName?: string; // Optional - student name for display in AiAssessment
   levelId?: number; // Optional - if not provided, uses lesson.rubric (first rubric for lesson)
   // These map directly to LearningGoals props so we can reuse it as-is.
   studentLevelInfo?: StudentLevelInfo;
@@ -41,6 +42,7 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   gridHeight = 2,
   lessonId,
   studentId,
+  studentName = 'Student',
   levelId,
   studentLevelInfo,
   teacherHasEnabledAi = false,
@@ -49,23 +51,25 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
   aiEvaluations,
 }) => {
   const [rubric, setRubric] = useState<Rubric | null>(null);
-  const [internalStudentLevelInfo, setInternalStudentLevelInfo] =
-    useState<StudentLevelInfo | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [feedbackAdded, setFeedbackAdded] = useState(false);
 
-  // Use provided studentLevelInfo or create a placeholder
-  const effectiveStudentLevelInfo =
-    studentLevelInfo ||
-    internalStudentLevelInfo ||
-    ({
-      name: 'Student',
-      user_id: studentId,
-      timeSpent: 0,
-      attempts: 0,
-      lastAttempt: new Date().toISOString(),
-    } as StudentLevelInfo);
+  // Create minimal studentLevelInfo - only user_id is required
+  // LearningGoals uses:
+  // - user_id: Required - used for API calls (autosave, fetching evaluations, analytics)
+  // - name: Optional - passed to AiAssessment as studentName prop
+  // To add more student info from Redux in the future:
+  // - Lesson progress: state.sectionProgress.studentLessonProgressByUnit[unitId][studentId][lessonId]
+  //   - Contains: timeSpent (number), lastTimestamp (number, Unix seconds)
+  // - Level progress: state.sectionProgress.studentLevelProgressByUnit[unitId][studentId][levelId]
+  //   - Contains: timeSpent (number), lastTimestamp (number, Unix seconds), status, result, etc.
+  //
+  // OR pass studentLevelInfo with full date instead of individual studentId/studentName props.
+  const effectiveStudentLevelInfo: StudentLevelInfo = studentLevelInfo || {
+    user_id: studentId,
+    name: studentName,
+  };
 
   useEffect(() => {
     if (!lessonId) {
@@ -95,18 +99,6 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
           setRubric(rubricResponse.value.rubric);
         } else {
           setError('No rubric data found');
-        }
-
-        // TODO: Fetch actual student level info from backend if not provided
-        // For now, create placeholder if not provided
-        if (!studentLevelInfo) {
-          setInternalStudentLevelInfo({
-            name: 'Student',
-            user_id: studentId,
-            timeSpent: 0,
-            attempts: 0,
-            lastAttempt: new Date().toISOString(),
-          });
         }
       } catch (err) {
         console.error('Failed to fetch rubric data:', err);

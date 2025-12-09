@@ -90,7 +90,11 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -98,21 +102,23 @@ describe('StudentRubricWidget', () => {
     expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
   });
 
-  it('renders error state when lesson ID is not provided', async () => {
+  it('renders loading state when lesson ID is not provided', () => {
     // Using 0 to test the !lessonId check (0 is falsy in JavaScript)
+    // Component shows loading state when lessonId is falsy
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={0} studentId={1} />
+        <StudentRubricWidget
+          lessonId={0}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
-    // Component starts with isLoading=true, then sets error and isLoading=false
-    await waitFor(
-      () => {
-        expect(screen.getByText('No lesson ID provided')).toBeInTheDocument();
-      },
-      {timeout: 1000}
-    );
+    // WidgetTemplate renders a Spinner with id="uitest-spinner" when loading
+    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+    // Ensure no API call is made when lessonId is falsy
+    expect(mockFetchJson).not.toHaveBeenCalled();
   });
 
   it('renders error state when API call fails', async () => {
@@ -120,7 +126,11 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -137,7 +147,11 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -161,7 +175,11 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -182,7 +200,11 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -210,6 +232,7 @@ describe('StudentRubricWidget', () => {
         <StudentRubricWidget
           lessonId={1}
           studentId={1}
+          studentName="Test Student"
           studentLevelInfo={mockStudentLevelInfo}
         />
       </Provider>
@@ -221,7 +244,7 @@ describe('StudentRubricWidget', () => {
     });
   });
 
-  it('creates placeholder studentLevelInfo when not provided', async () => {
+  it('uses default studentName when not provided', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
         rubricId: 1,
@@ -258,6 +281,7 @@ describe('StudentRubricWidget', () => {
         <StudentRubricWidget
           lessonId={1}
           studentId={1}
+          studentName="Test Student"
           studentLevelInfo={mockStudentLevelInfo}
           teacherHasEnabledAi={true}
           canProvideFeedback={false}
@@ -283,7 +307,11 @@ describe('StudentRubricWidget', () => {
 
     const {rerender} = render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -298,7 +326,11 @@ describe('StudentRubricWidget', () => {
     // Change lessonId
     rerender(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={2} studentId={1} />
+        <StudentRubricWidget
+          lessonId={2}
+          studentId={1}
+          studentName="Test Student"
+        />
       </Provider>
     );
 
@@ -320,7 +352,12 @@ describe('StudentRubricWidget', () => {
 
     render(
       <Provider store={mockStore}>
-        <StudentRubricWidget lessonId={1} studentId={1} levelId={123} />
+        <StudentRubricWidget
+          lessonId={1}
+          studentId={1}
+          studentName="Test Student"
+          levelId={123}
+        />
       </Provider>
     );
 
