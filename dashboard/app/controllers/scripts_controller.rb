@@ -19,6 +19,7 @@ class ScriptsController < ApplicationController
 
   def show
     if @script.is_deprecated
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
     #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
@@ -40,7 +41,7 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.id == @course&.id}
         most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.id == @course.id}.last
         section_id = params[:section_id]
         section_id ||= most_recent_section&.id
@@ -87,7 +88,7 @@ class ScriptsController < ApplicationController
 
     # Lastly, if user is assigned to newer version of this unit, we will
     # ask if they want to be redirected to the newer version.
-    @redirect_unit_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
+    @redirect_unit_url = @script.redirect_to_unit_url(current_user, unit_group: @course, locale: request.locale)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
@@ -119,8 +120,10 @@ class ScriptsController < ApplicationController
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    link = Unit.latest_stable_version(@script.family_name)&.link(unit_group_unit: @unit_group_unit)
-    @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
+    if @script.get_original_unit_group&.single_unit_course?
+      canonical_ug = UnitGroup.latest_stable_version(@course.family_name)&.name
+      @canonical_url = CDO.studio_url("/courses/#{canonical_ug}/units/1") if canonical_ug
+    end
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -135,54 +138,12 @@ class ScriptsController < ApplicationController
   end
 
   def new
-    @versioned_unit_families = []
-    @unit_families_course_types = []
-    Unit.family_names.map do |cf|
-      co = CourseOffering.find_by(key: cf)
-
-      # There are some old family names for connecting between units in a course which will not be a course offering
-      next unless co
-      first_cv = co.course_versions.first
-      next unless first_cv
-      @versioned_unit_families << cf unless first_cv.key == 'unversioned'
-
-      unit = first_cv.content_root
-      next unless unit
-      @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
-    end
-
-    @unit_families_course_types = @unit_families_course_types.compact.to_h
   end
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-
-    # These fields should be set unless a unit is in a unit group
-    # and are required to be set if is_course is true. When creating
-    # a unit it is not yet in a unit group so we set default values here
-    #
-    # Setting default values for the columns would not work because those
-    # are not used when you call new() just when you call create
-    updated_unit_params = unit_params.merge(
-      {
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      }
-    )
-
-    updated_general_params = general_params.merge(
-      {
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      }
-    )
-
-    @script = Unit.new(updated_unit_params)
-    if @script.save && @script.update_text(unit_params, i18n_params, updated_general_params)
+    @script = Unit.new(unit_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Unit.model_name.human)
     else
       render json: @script.errors
@@ -212,6 +173,7 @@ class ScriptsController < ApplicationController
   def edit
     # Deprecated scripts should not be edited.
     if @script.is_deprecated
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
@@ -220,8 +182,6 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       locales: Cdo::I18n.locale_options,
-      script_families: Unit.family_names,
-      version_year_options: Unit.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?
     }
   end
@@ -234,8 +194,6 @@ class ScriptsController < ApplicationController
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
       raise msg
     end
-
-    raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
 
     if @script.update_text(unit_params, i18n_params, general_params)
       @script.reload
@@ -337,12 +295,6 @@ class ScriptsController < ApplicationController
 
     return {script: script} if script
 
-    if Unit.family_names.include?(unit_name)
-      script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
-      Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return {script: script}
-    end
-
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)
       unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
@@ -394,13 +346,8 @@ class ScriptsController < ApplicationController
   private def general_params
     h = params.permit(
       :hide_within_course,
-      :instruction_type,
-      :instructor_audience,
-      :participant_audience,
       :deprecated,
       :curriculum_umbrella,
-      :family_name,
-      :version_year,
       :project_sharing,
       :login_required,
       :hideable_lessons,
@@ -415,12 +362,10 @@ class ScriptsController < ApplicationController
       :has_unnumbered_lessons,
       :has_verified_resources,
       :tts,
-      :is_course,
       :show_calendar,
       :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
-      :pilot_experiment,
       :editor_experiment,
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
@@ -459,12 +404,7 @@ class ScriptsController < ApplicationController
 
   private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
-    return nil if !unit || unit.can_view_version?(current_user, locale: locale)
-
-    # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
-    # none are assigned.
-    redirect_unit = Unit.latest_assigned_version(unit.family_name, current_user)
-    redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
+    return nil if !unit || unit.can_view_version?(current_user, locale: locale, unit_group: course)
 
     if course&.single_unit_course?
       redirect_unit_group = UnitGroup.latest_assigned_version(course.family_name, current_user)

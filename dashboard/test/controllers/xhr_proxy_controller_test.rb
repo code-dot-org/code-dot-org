@@ -11,7 +11,7 @@ class XhrProxyControllerTest < ActionController::TestCase
   BAD_CHANNEL_MSG = "XhrProxyController request with invalid channel_id"
 
   setup do
-    @user = create :user
+    @user = create(:user)
     sign_in @user
     stub_storage_id_for_user_id(@user.id)
     @channel_id = storage_encrypt_channel_id(storage_id_for_user_id(@user.id), 123)

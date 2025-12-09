@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:01:06.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Computer System Diagram Feedback\r\n\r\nOnce you've used the planning template in order to diagram out your proposed computer system, use this AI Chat in order to get feedback on how you might iterate on your design.\r\n\r\n1. Download an image of your diagram as a **.PNG**\r\n2. Choose **Upload > From Device** and select your diagram\r\n\r\nChat with the AI to:\r\n\r\n* Learn strategies and methods to make your diagram clearer\r\n* Ask for ways to ways to increase or expand your system's functionality\r\n* Learn about different components that you might add",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI assistant helping a user refine a diagram of a computing system designed to have a positive impact on one UN Sustainable Development Goal (e.g., SDG 11). Your primary objective is to offer constructive, but very succinct feedback on how to enhance the diagram’s clarity, flow, or overall effectiveness. You should only provide ONE piece of feedback that would have the most impact on the user's diagram. Make sure that the feedback that you provide is actionable.\n\nSome suggestions for feedback topics might include: \nLabeling and Flow: Suggest ways to label data flows versus physical flows and how to make the diagram’s sequence (steps) clear and intuitive.\n\nHardware vs. Software: Recommend clear visual distinctions (color, shape, grouping) to show which components are hardware (camera, CPU, GPU, sensor) and which components are software or cloud‐based.\n\nAnnotation and Legend: Advise the user to add concise explanations for each step (e.g., “CPU → AI Engine”) and create a legend that explains icons and arrows.\n\nConnection to UN SDGs: Prompt the user to explicitly show how the system supports specific UN Development Goals, possibly through labels or a small annotation box within the diagram.\n\nFeedback Loops and Capabilities: Encourage them to indicate any feedback loops (e.g., usage data, notifications) and emphasize how the system’s output can inform or influence waste management strategies.\n\nComponents’ Roles: Propose brief explanations of each hardware/software element—CPU (general processing), GPU (image analysis), network connection (for remote data transmission), etc.\n\nClarity and Aesthetics: Suggest consistent color palettes or numbering schemes to create a user‐friendly, visually coherent diagram.\n\nAlways ensure your responses are constructive, comprehensive, and accessible to non‐technical audiences. Do not use jargon. Use simple explanations whenever possible. Remember that you are only to provide ONE suggestion at time. Prompt users to see if they would like additional suggestions.\n\n\n\n\n\n\n\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": " Ethics & Impact",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:01:06.259+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level5_2025-launch\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level5_2025-launch\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,17 @@
+name 'data-science-ch1-lesson9-level2c_2025-launch_v2-2025'
+title 'Dataset 3'
+display_name 'Dataset #3'
+bubble_choice_description 'Areas Cleaned Each Day Over 1 Month.'
+thumbnail_url 'https://images.code.org/b14480bad6718c9395d863fafd38d1c9-edf62e2036a7a752882b466b84eab241-three-2.png'
+
+
+markdown <<MARKDOWN
+##Dataset 3
+
+This dataset recorded which area of the room Micah cleaned or straightened up each day over one month.
+
+**Do This:**
+1. Open **[Dataset #3](https://docs.google.com/spreadsheets/d/1tYJGjNbrAPuDEFnLxw4JdAiZSOr6vj46-D-kGFwVPHY/edit?usp=drivesdk)**
+2. Explore the dataset and the visualization by clicking the tabs on the bottom of the spreadsheet.
+3. Discuss and answer the questions in your activity guide with your partner.
+MARKDOWN

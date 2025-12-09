@@ -8,8 +8,12 @@
     :javascript
         (function() {
           var email = "#{@form_data[:email]}";
+          var givenName = "#{@form_data[:given_name]}";
+          var familyName = "#{@form_data[:family_name]}";
           var oauthType = "#{@form_data[:provider]}";
           sessionStorage.setItem('email', email);
+          sessionStorage.setItem('givenName', givenName);
+          sessionStorage.setItem('familyName', familyName);
           sessionStorage.setItem('oauthType', oauthType);
           window.location.href = "#{sign_up_url}";
         })();

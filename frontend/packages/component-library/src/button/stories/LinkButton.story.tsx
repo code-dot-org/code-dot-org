@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import {buttonColors} from '../index';
 import LinkButton, {LinkButtonProps} from '../LinkButton';
@@ -80,6 +80,14 @@ IconLinkButton.args = {
   isIconOnly: true,
   href: 'https://www.google.com',
   size: 'm',
+};
+
+export const AnalyticsCallbackLinkButton = SingleTemplate.bind({});
+AnalyticsCallbackLinkButton.args = {
+  text: 'Button',
+  href: 'https://www.google.com',
+  size: 'm',
+  analyticsCallback: () => alert('Sending analytics event...'),
 };
 
 export const GroupOfColorsOfLinkButtons = MultipleTemplate.bind({});

@@ -4,9 +4,9 @@ module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
     setup_all do
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
-      @daily_survey_day_0 = create :foorm_form_summer_pre_survey
-      @daily_survey_day_5 = create :foorm_form_summer_post_survey
-      @csf_intro_post = create :foorm_form_csf_intro_post_survey
+      @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)
+      @daily_survey_day_5 = create(:foorm_form_summer_post_survey)
+      @csf_intro_post = create(:foorm_form_csf_intro_post_survey)
       @parsed_forms_csd = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
     end
 
@@ -91,7 +91,7 @@ module Pd::Foorm
 
     test 'ignores inconsistent questions' do
       # inconsistent form has different scale for expertise_rating, so that question should be ignored
-      inconsistent_form = create :foorm_form_with_inconsistent_questions
+      inconsistent_form = create(:foorm_form_with_inconsistent_questions)
       @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5, inconsistent_form])
       question_details = RollupHelper.get_question_details_for_rollup(
         @parsed_forms,

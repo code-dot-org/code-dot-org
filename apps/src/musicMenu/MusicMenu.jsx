@@ -84,17 +84,6 @@ const optionsList = [
     description: 'Use a specific icon for text to speech stop button.',
   },
   {
-    name: 'play-tune-block-drums',
-    type: 'radio',
-    values: [
-      {
-        value: 'false',
-        description: "Don't use shared editor UI for drums (default).",
-      },
-      {value: 'true', description: 'Use shared editor UI for drums.'},
-    ],
-  },
-  {
     name: 'play-pattern-ai-block',
     type: 'radio',
     values: [

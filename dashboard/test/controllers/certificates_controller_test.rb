@@ -3,8 +3,12 @@ require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
   setup_all do
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     @teacher.freeze
+  end
+
+  before do
+    CDO.stubs(:default_scheme).returns('http:')
   end
 
   test 'can show given name and course' do
@@ -30,8 +34,9 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
+    assert_equal expected_image_url, response_data['imageUrl']
   end
 
   test 'shows static image for unpersonalized hoc course' do
@@ -39,11 +44,15 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/MC_Hour_Of_Code_Certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal '//test.code.org/images/MC_Hour_Of_Code_Certificate.png', response_data['imageUrl']
+    assert_equal expected_image_url, response_data['imageUrl']
   end
 
   test 'shows custom image for unpersonalized csf course' do
+    unit = create(:unit, name: 'course1')
+    unit_group = create(:single_unit_course, :stable, unit: unit, name: 'course1')
+    CourseOffering.add_course_offering(unit_group)
     data = {course: 'course1'}
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
@@ -61,8 +70,9 @@ class CertificatesControllerTest < ActionController::TestCase
   test 'shows static image for blank certificate' do
     get :blank
     assert_response :success
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
+    assert_equal expected_image_url, response_data['imageUrl']
   end
 
   test_user_gets_response_for :batch, user: nil, response: :success
@@ -73,22 +83,24 @@ class CertificatesControllerTest < ActionController::TestCase
     sign_in @teacher
     get :batch
     assert_response :success
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'hourofcode', response_data['courseName']
-    assert_equal '//test.code.org/images/hour_of_code_certificate.jpg', response_data['imageUrl']
+    assert_equal expected_image_url, response_data['imageUrl']
   end
 
   test 'batch page loads custom image for oceans course' do
-    oceans = create :script, name: 'oceans'
-    oceans_course = create :single_unit_course, unit: oceans, name: 'oceans'
-    create :course_version, content_root: oceans_course
+    oceans = create(:script, name: 'oceans')
+    oceans_course = create(:single_unit_course, unit: oceans, name: 'oceans')
+    create(:course_version, content_root: oceans_course)
 
     sign_in @teacher
     encoded_course_name = Base64.urlsafe_encode64('oceans')
     get :batch, params: {course: encoded_course_name}
     assert_response :success
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/oceans_hoc_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'oceans', response_data['courseName']
-    assert_equal '//test.code.org/images/oceans_hoc_certificate.png', response_data['imageUrl']
+    assert_equal expected_image_url, response_data['imageUrl']
   end
 end

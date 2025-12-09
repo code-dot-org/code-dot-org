@@ -94,8 +94,6 @@ class Pd::Workshop < ApplicationRecord
   validate :valid_facilitators_for_course_offerings, if: -> {course == COURSE_BUILD_YOUR_OWN}
   validate :config_validation
 
-  before_create :set_registration_link
-
   before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
@@ -109,12 +107,14 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def subject_must_be_valid_for_course
-    unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
+    unless SUBJECTS[course]&.include?(subject) || LEGACY_SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course')
     end
   end
 
   def config_validation
+    return if ARCHIVED_COURSES.include?(course)
+
     config = WORKSHOP_COURSE_CONFIGS.find do |c|
       c[:label] == course
     end
@@ -170,8 +170,8 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def valid_registration_link_format
-    unless self.class.valid_url?(registration_link, true)
-      errors.add(:registration_link, "is not a valid URL")
+    unless self.class.valid_url?(registration_link)
+      errors.add(:registration_link, "is not valid or is missing http or https")
     end
   end
 
@@ -190,12 +190,6 @@ class Pd::Workshop < ApplicationRecord
 
   def sanitize_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
-  end
-
-  def set_registration_link
-    if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-      self.registration_link = "/pd/application/teacher"
-    end
   end
 
   # Whether enrollment in this workshop requires an application
@@ -482,11 +476,11 @@ class Pd::Workshop < ApplicationRecord
     update_attribute(:ended_at, Time.zone.now)
 
     # We want to send exit surveys now, but that needs to be done on the
-    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # production-daemon machine, so we'll let the process_pd_workshop_ends
     # cron job call the process_ends function below on that machine.
   end
 
-  # This is called by the process_pd_workshop_emails cron job which is run
+  # This is called by the process_pd_workshop_ends cron job which is run
   # on the production-daemon machine, and will send exit surveys to workshops
   # that have been ended in the last two days when they haven't already had
   # that done.
@@ -499,7 +493,10 @@ class Pd::Workshop < ApplicationRecord
       # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
-      workshop.send_facilitator_post_surveys
+      workshop.facilitators&.each do |facilitator|
+        next unless facilitator.email
+        Pd::WorkshopMailjetMailer.send_facilitator_post_workshop_survey(workshop, facilitator)
+      end
       # using update_attribute to skip validation
       workshop.update_attribute(:processed_at, Time.zone.now)
     end
@@ -539,21 +536,31 @@ class Pd::Workshop < ApplicationRecord
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      next if workshop.suppress_reminders?
+
+      # Send reminder email to workshop enrollees
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
-        email.deliver_now
+        user = enrollment.user
+        Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, false, days)
 
         # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
-        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
-          alt_summer_email = enrollment.user&.alternate_email
-          if alt_summer_email.present?
-            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
-          end
+        if workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+          Pd::WorkshopMailjetMailer.send_teacher_workshop_reminder(enrollment, user, true, days)
         end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
 
+      # Send reminder email to the workshop Regional Partner (if available)
+      if workshop.regional_partner.present?
+        begin
+          Pd::WorkshopMailjetMailer.send_rp_workshop_reminder(workshop, days)
+        rescue => exception
+          errors << "regional partner #{workshop.regional_partner.id} - #{exception.message}"
+        end
+      end
+
+      # Send reminder email to facilitators (if available)
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
@@ -563,6 +570,7 @@ class Pd::Workshop < ApplicationRecord
         end
       end
 
+      # Send reminder email to the workshop organizer
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => exception
@@ -631,51 +639,37 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Called at the very end of the async close-workshop workflow, to actually send exit
-  # surveys to attended teachers.  Note that logic here is more-or-less independent
+  # surveys to attended teachers. Note that logic here is more-or-less independent
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
-    # FiT workshops should not send exit surveys
-    return if subject == SUBJECT_FIT || course == COURSE_FACILITATOR || course == COURSE_ADMIN_COUNSELOR
-
     resolve_enrolled_users
 
     # Send the emails
     enrollments.each do |enrollment|
-      if account_required_for_attendance?
-        next unless enrollment.user
+      user = enrollment.user
 
-        next unless attending_teachers.include?(enrollment.user)
+      if enrollment.survey_sent_at
+        CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
+        next
+      end
+      next unless user
+      next unless attending_teachers.include?(enrollment.user)
+
+      Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(enrollment, user, false)
+
+      # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
+      if enrollment.workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+        Pd::WorkshopMailjetMailer.send_teacher_post_workshop_survey(enrollment, user, true)
       end
 
-      enrollment.send_exit_survey
+      enrollment.update!(survey_sent_at: Time.zone.now)
+    rescue => exception
+      raise "teacher enrollment #{enrollment.id} - #{exception.message}"
     end
   end
 
-  # Send Post-surveys to facilitators of CSD and CSP workshops
-  def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF || course == COURSE_BUILD_YOUR_OWN
-      facilitators.each do |facilitator|
-        next unless facilitator.email
-
-        Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
-      end
-    end
-  end
-
-  # Min number of days a teacher must attend for it to count.
-  # @return [Integer]
-  def min_attendance_days
-    [1, time_constraint(:min_days)].compact.max
-  end
-
-  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
-  # @return [Integer] number of payment days, after applying constraints
-  def effective_num_days
-    [sessions.count, time_constraint(:max_days)].compact.min
-  end
-
-  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
-  # @return [Integer] number of payment hours, after applying constraints
+  # Apply max # of hours for certificates, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of pd hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min
@@ -930,6 +924,7 @@ class Pd::Workshop < ApplicationRecord
       sessions: sessions,
       location_name: location_name,
       location_address: location_address,
+      time_zone: time_zone,
       on_map: on_map,
       funded: funded,
       virtual: virtual?,
@@ -961,17 +956,12 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def summarize_for_marketing_page
-    facilitators_info = facilitators.map do |facilitator|
-      # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-
-      bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-      image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
+    facilitators_info = facilitators.includes(:facilitator_info).map do |facilitator|
       {
         name: facilitator.name,
         email: facilitator.email,
-        bio: File.exist?(bio_file) ? File.read(bio_file) : nil,
-        image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil
+        bio: facilitator.facilitator_bio,
+        image_path: nil
       }
     end
 
@@ -995,6 +985,34 @@ class Pd::Workshop < ApplicationRecord
       regional_partner_name: regional_partner&.name,
       organizer: organizer&.slice(:name, :email),
       facilitators: facilitators_info
+    }
+  end
+
+  def relevant_to_user?(user)
+    return false if hidden?
+
+    case participant_group_type
+    when "National"
+      true
+    when "Regional"
+      school = Queries::SchoolInfo.current_school(user)
+      zip = school&.dig(:school_zip)
+      return false if zip.blank?
+
+      zip_codes = regional_partner&.mappings&.pluck(:zip_code)
+      zip_codes&.include?(zip)
+    else
+      false
+    end
+  end
+
+  def summarize_for_pl_catalog
+    {
+      id: id,
+      title: name,
+      sessions: Array(sessions).map {|s| {start: s.start.iso8601}},
+      link: "/professional-learning/workshops/#{id}",
+      is_virtual: virtual?
     }
   end
 end

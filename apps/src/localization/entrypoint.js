@@ -11,42 +11,73 @@ import {get, set} from 'js-cookie';
  * The current course listing and a mapping between them and Localize project
  * keys. This is a temporary measure for now.
  */
-const csd_prefixes = ['/courses/csd-2024'];
+const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024'];
 
 const csf_prefixes = [
   '/courses/k5-unplugged',
   '/courses/express-2024',
   '/courses/pre-express-2024',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
 ];
 
 const donor_prefixes = [
+  '/courses/customizing-llms-2024',
+  '/courses/self-paced-pl-ai-101-2024',
+  '/courses/foundations-gen-ai-2024',
+  '/courses/foundations-gen-ai-2025',
+  '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
-  '/courses/elementaryai-2024',
   '/courses/elem-game-design-2024',
-  '/courses/3-5gamedesign-2024',
+  '/courses/mix-move-ai-2025',
 ];
 
-const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
+const aif_prefixes = [
+  '/courses/artificial-intelligence-foundations-2025',
+  '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
+  '/courses/how-ai-works-2023',
+];
+
+const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
 
 const prefixes = {
   MlKri360o3v2T: csd_prefixes,
   '3vPUSGZrdllW2': csf_prefixes,
   I0P5RaUEW8s5h: donor_prefixes,
   zM53S8yC4TNgU: aif_prefixes,
+  XJXXkBlsAbHVD: dashboard_prefixes,
 };
 
-const experiments = JSON.parse(window.localStorage.experimentsList || '[]');
+const live = [
+  '/courses/3-5gamedesign-2024',
+  '/courses/foundations-gen-ai-2024',
+  '/courses/foundations-gen-ai-2025',
+  '/courses/foundations-generative-ai-unplugged',
+  '/courses/k5-ai-data-2024',
+  '/courses/artificial-intelligence-foundations-2025/',
+  '/courses/mix-move-ai-2025',
+];
+
+const experiments =
+  JSON.parse(window.localStorage.experimentsList || '[]') || [];
 const inExperiment =
-  experiments.some(experiment =>
+  experiments?.some(experiment =>
     experiment ? experiment.key === 'localizejs' : false
   ) || window.location.search.includes('localizejs=');
-const projectKeys = Object.entries(prefixes).filter(
-  ([projectId, prefixes]) =>
-    prefixes.filter(prefix => window.location.pathname.startsWith(prefix))
-      .length > 0
+const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) =>
+  prefixes.some(prefix => window.location.pathname.startsWith(prefix))
 );
+
+const isLive = live.some(prefix => window.location.pathname.startsWith(prefix));
 
 function loadLocalize() {
   !(function (a) {
@@ -130,7 +161,7 @@ function loadLocalize() {
     };
 
     // When the site loads, ensure the language selector has the correct value
-    document.addEventListener('DOMContentLoaded', () => {
+    const onDOMLoad = () => {
       const localeSelect =
         document.querySelector('#locale') ||
         document.querySelector("select[name='locale']");
@@ -149,7 +180,14 @@ function loadLocalize() {
         localeSelect.addEventListener('change', handleChange);
       }
       ensureSelector(cdoLanguage);
-    });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onDOMLoad);
+    } else {
+      // 'interactive' or 'complete' — DOMContentLoaded has already fired
+      onDOMLoad();
+    }
 
     // Translate everything in the Blockly message pool
     ensureSelector(cdoLanguage);
@@ -166,7 +204,7 @@ function loadLocalize() {
   Localize.hideWidget();
 }
 
-if (projectKeys.length > 0 && inExperiment) {
+if (projectKeys.length > 0 && (inExperiment || isLive)) {
   /**
    * If the current locale is not English, we must reload in English.
    */
@@ -186,7 +224,7 @@ if (projectKeys.length > 0 && inExperiment) {
     // Localization class.
     window.LocalizeLoader = new Promise((resolve, reject) => {
       script.onload = () => {
-        // Optional: Handle script load event
+        // Load the localize widget
         loadLocalize();
         resolve(window.Localize);
       };
@@ -195,6 +233,7 @@ if (projectKeys.length > 0 && inExperiment) {
         reject();
       };
     });
+
     document.head.appendChild(script);
   }
 }

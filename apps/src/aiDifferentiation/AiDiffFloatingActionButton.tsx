@@ -1,6 +1,11 @@
+import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
+import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
@@ -8,13 +13,16 @@ import {
   trySetLocalStorage,
 } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
+import aiFabWithIconBase from '@cdo/static/ai-bot-ta-base.png';
+import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
+import aiFabWithIconTag from '@cdo/static/ai-bot-ta-tag-cyan.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffContainer from './AiDiffContainer';
+import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -27,42 +35,86 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffFloatingActionButtonProps {
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
+  canShowPulse?: boolean;
+  canStartOpen?: boolean;
+  canDefaultOpen?: boolean;
 }
+
+const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
+const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
+const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   context,
   scriptName,
-  unitDisplayName,
+  canShowPulse = true,
+  /**
+   * Prevents the FAB opening without direct user click.
+   */
+  canStartOpen = true,
+  /**
+   * Whether the FAB can start open if a user has never interacted with it.
+   * Does not prevent auto-opening if the user has interacted with the FAB before.
+   */
+  canDefaultOpen = true,
 }) => {
-  const sessionStorageKey = 'AiDiffFabOpenStateKey';
-  const localStorageOpenedKey = 'AiDiffHasOpenedKey';
-  const localStorageClosedKey = 'AiDiffHasClosedKey';
-
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
-    JSON.parse(tryGetLocalStorage(localStorageOpenedKey, false.toString())) ||
-    false;
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_OPENED_KEY, false.toString())
+    ) || false;
 
   const hasClosed =
-    JSON.parse(tryGetLocalStorage(localStorageClosedKey, false.toString())) ||
-    false;
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, false.toString())
+    ) || false;
 
-  // Open the chat window if this is the first time the user has seen the FAB in this
-  // session and they haven't interacted with the FAB yet.
-  // Depends on other logic which sets the open state in session storage.
-  const isFirstSession =
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null &&
-    !hasOpened &&
-    !hasClosed;
+  const [unreadNotificationCount, setUnreadNotificationCount] = useState<
+    number | 'loading'
+  >('loading');
 
-  // Keeps FAB open/closed on new pages in the same tab or window
-  // New tab or window is default closed if they have previously opened/closed the FAB
-  // Default open if they have never opened/closed the fab before (i.e. first time on the site)
-  const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
-      isFirstSession
-  );
+  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    // If the user has manually opened or closed the FAB, we should not open it automatically.
+    if (!hasOpened && !hasClosed) {
+      // Open the chat window if this is the first time the user has seen the FAB in this
+      // session and they haven't interacted with the FAB yet.
+      // Depends on other logic which sets the open state in session storage.
+      const isFirstSession =
+        JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, null)) === null;
+
+      // Keeps FAB open/closed on new pages in the same tab or window
+      // New tab or window is default closed if they have previously opened/closed the FAB
+      // Default open if they have never opened/closed the fab before (i.e. first time on the site)
+      dispatch(
+        setChatIsOpen(
+          canStartOpen &&
+            ((isFirstSession && canDefaultOpen) ||
+              JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
+        )
+      );
+    }
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+
+  const updateUnreadNotificationCount = React.useCallback(() => {
+    HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
+      .then(response => {
+        const unreadNotificationCount =
+          response?.value?.filter(n => n.readAt === null).length || 0;
+        setUnreadNotificationCount(unreadNotificationCount);
+      })
+      .catch(error => {
+        console.error('Error fetching notifications for count:', error);
+        setUnreadNotificationCount(0);
+      });
+  }, []);
+
+  React.useEffect(() => {
+    updateUnreadNotificationCount();
+  }, [updateUnreadNotificationCount]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -70,7 +122,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const body = JSON.stringify({
       context: context,
     });
-    HttpClient.post(`/ai_diff/curriculum_courses`, body, true, {
+    HttpClient.post(`/aidiff_threads/curriculum_courses`, body, true, {
       'Content-Type': 'application/json',
     })
       .then(response => response.json())
@@ -85,7 +137,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
-  const showPulse = !hasOpened && isFabImageLoaded;
+  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -94,23 +146,21 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const eventData = {
       aiDiffChatContext: context,
       scriptName,
-      unitName: unitDisplayName,
     };
-    const eventName = isOpen
+    const eventName = chatIsOpen
       ? EVENTS.AI_DIFF_CHAT_CLOSED
       : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
     if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
-      trySetLocalStorage(localStorageOpenedKey, true.toString());
+      trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
-      trySetLocalStorage(localStorageClosedKey, true.toString());
+      trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
-    setIsOpen(!isOpen);
+    dispatch(setChatIsOpen(!chatIsOpen));
+    dispatch(fetchThreadMessages({thread: 0}));
+    trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
+    updateUnreadNotificationCount();
   };
-
-  useEffect(() => {
-    trySetSessionStorage(sessionStorageKey, isOpen);
-  }, [isOpen]);
 
   return (
     <div id="fab-contained">
@@ -121,19 +171,74 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         onClick={handleClick}
         type="button"
       >
-        <img
-          alt="AI bot"
-          src={aiFabWithIcon}
-          onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-        />
+        {experiments.isEnabled('teacher-notifications') ? (
+          <Badge
+            badgeContent={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount > 0
+                ? unreadNotificationCount
+                : 'TA'
+            }
+            color="error"
+            overlap="circular"
+            aria-label={
+              unreadNotificationCount &&
+              i18n.unreadNotificationsCount({
+                unreadCount: unreadNotificationCount,
+              })
+            }
+            sx={{
+              height: '48px',
+              width: '48px',
+              '& .MuiBadge-badge': {
+                backgroundColor:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--background-error-primary)'
+                    : '#3CFFF8',
+                color:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--text-neutral-white-fixed)'
+                    : 'var(--text-neutral-black-fixed)',
+                top: '5%',
+                right: '5%',
+              },
+            }}
+            className={style.badge}
+          >
+            <img
+              alt="AI bot - unread notifications"
+              src={aiFabWithoutText}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+              className={style.fabImageWithBadge}
+            />
+          </Badge>
+        ) : (
+          <div>
+            <img
+              alt="AI bot"
+              src={aiFabWithIconBase}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+            />
+            <img
+              alt="TA tag"
+              src={aiFabWithIconTag}
+              className={style.floatingActionButtonTag}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+            />
+          </div>
+        )}
       </button>
       <AiDiffContainer
-        open={isOpen || isFirstSession}
         context={context}
         closeTutor={handleClick}
         scriptName={scriptName}
-        unitDisplayName={unitDisplayName}
         curriculumCourses={curriculumCourses}
+        unreadNotificationCount={
+          unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+        }
       />
     </div>
   );

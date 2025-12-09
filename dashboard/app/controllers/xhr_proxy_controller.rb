@@ -14,6 +14,7 @@ require 'cdo/shared_constants'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
+  include AllowedHostnameHelper
 
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
@@ -23,114 +24,6 @@ class XhrProxyController < ApplicationController
       text/json
       text/plain
     )
-  ).freeze
-
-  # bible-api.com has been replaced with the more official api.scripture.api.bible. However, since
-  # bible-api.com is still working, we'll leave it up during a transition period. If today's date is
-  # later than June 1, 2024 and you are reading this, go ahead and remove bible-api.com as well as
-  # this comment.
-
-  # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
-  ALLOWED_HOSTNAME_SUFFIXES = %w(
-    api.amadeus.com
-    api.arasaac.org
-    api.blizzard.com
-    api.census.gov
-    api.coinlayer.com
-    api.datamuse.com
-    api.energidataservice.dk
-    api.exchangeratesapi.io
-    api.fda.gov
-    api.football-data.org
-    api.foursquare.com
-    api.github.com
-    api.mathjs.org
-    api.mojang.com
-    api.nal.usda.gov
-    api.nasa.gov
-    api.nookipedia.com
-    api.opencagedata.com
-    api.open-notify.org
-    api.open-meteo.com
-    api.openrouteservice.org
-    api.openweathermap.org
-    api.pegelalarm.at
-    api.quotable.io
-    api.randomuser.me
-    api.rebrandly.com
-    api.scripture.api.bible
-    api.scryfall.com
-    api.spoonacular.com
-    api.sportsdata.io
-    api.si.edu
-    api.spacexdata.com
-    api.spotify.com
-    api.themoviedb.org
-    api.thingspeak.com
-    api.waqi.info
-    api.weather.gov
-    api.weatherapi.com
-    api.wolframalpha.com
-    api.zippopotam.us
-    bible-api.com
-    bnefoodtrucks.com.au
-    ch.tetr.io
-    code.org
-    covidtracking.com
-    cryptonator.com
-    currencyapi.com
-    data.austintexas.gov
-    data.cityofchicago.org
-    data.gv.at
-    data.nasa.gov
-    data.weather.gov.hk
-    dataservice.accuweather.com
-    deckofcardsapi.com
-    distanza.org
-    githubusercontent.com
-    googleapis.com
-    grobchess.com
-    hubblesite.org
-    images-api.nasa.gov
-    itunes.apple.com
-    io.adafruit.com
-    isenseproject.org
-    lakeside-cs.org
-    maker.ifttt.com
-    moneyconvert.net
-    myschoolapp.com
-    native-land.ca
-    newsapi.org
-    noaa.gov
-    numbersapi.com
-    open.mapquestapi.com
-    openlibrary.org
-    opentdb.com
-    perenual.com
-    pixabay.com
-    pokeapi.co
-    pro-api.coinmarketcap.com
-    qrng.anu.edu.au
-    quandl.com
-    random.org
-    rejseplanen.dk
-    restcountries.com
-    roblox.com
-    runescape.com
-    serpapi.com
-    sessionserver.mojang.com
-    stats.minecraftservers.org
-    swapi.dev
-    textures.minecraft.net
-    thecatapi.com
-    thedogapi.com
-    theunitedstates.io
-    transitchicago.com
-    vpic.nhtsa.dot.gov
-    wikipedia.org
-    worldclockapi.com
-    worldtimeapi.org
-    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

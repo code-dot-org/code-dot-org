@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:31.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're helping build a simple digital art tool that creates a stylized design using shapes and effects. Each function performs a basic drawing action, like placing a shape or adding a visual effect. Your task is to combine these into one full art routine to create a layered masterpiece.\r\n\r\n1. Three drawing functions are already defined:\r\n\r\n   * `draw_circle()`\r\n   \r\n   * `draw_triangle()`\r\n   \r\n   * `add_shadow_effect()`\r\n\r\n2. Write a new function called `create_art()` that:\r\n\r\n   * Calls `draw_circle()` twice\r\n   \r\n   * Then calls `draw_triangle()`\r\n   \r\n   * Finishes with `add_shadow_effect()`\r\n\r\n3. After defining `create_art()`, call it to display the steps of your digital art routine.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "display_name": "Digital Art Routine",
+    "bubble_choice_description": "You're helping build a simple digital art tool that creates a stylized design using shapes and effects. Each function performs a basic drawing action, like placing a shape or adding a visual effect. Your task is to combine these into one full art routine to create a layered masterpiece.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def draw_circle():\n  # Prints a message that a circle has been drawn\n  print(\"🟠 Drawing a circle\")\n\ndef draw_triangle():\n  # Prints a message that a triangle has been drawn\n  print(\"🔺 Drawing a triangle\")\n\ndef add_shadow_effect():\n  # Prints a message that a shadow effect has been added\n  print(\"🌫️ Adding a shadow effect\")\n\n# TODO - Write the create_art() function\n\n\n\n# TODO - Call the create_art() function\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzqcLSoXF519XS1b8of+zkd9p585/PHzK\nXsuwJjXXhDmFlmCgMtDsH2tKhh2P/gVriKoQLdG6fXOeAjOvVPQOUFKeWmDB\neQuYsBsTe291GhqyolrR7rhYF+O1bbTtFrY9zyViaCu7hPqcEv4jShlnEWPP\nDyu2q4ii+OzlTYB5nc7TpLFmUvgU8YsVHCl4dDDU+bUzQtV5gWlTCroxWwPp\n1FsHAc8LcIWlZ88V+ZCbWy4jrfBjbCp9zkyfdxRft1xOhdUK2pwTcQ4braTd\ncLhjTZBKmmxwAtEvtxonwIvW08pLR8D2zP6UkKhLcXxcpMsuwHz2nCSLz0io\nFDiYoEbYHQOFKxbV5NeGahwNl40cbhZK47gkvt8XE9iAB7M9UjVO8bHN/sUa\nXH1IjuMHDicsfHGk37XHRL7hwlPm/cvAyMcVismNYU7UOMMkcVV2Bl9Uh7Sx\nkWDooKO2n7OuSc3RVPeconSP/62b+tnBp3WDJmk+vgdGxrkWOyJIzhw+EMtU\nhX8RO9JeHuVjyf+3O+ngL/5Ofj2LE3c6SFDG3Zxt/JLrxqyEhJISym+OaUph\nUba6Hx+T9wp1QYpfz1eMkQQaZSsDKuZcINP9X+UUapEbLpWYB3T3AZLV96Rm\n+eKhrGV/wWjw4hVTdAj2Fc9HDRebkX1E4es6AOayBiVFN9ormioj1OWgXI3R\nuxWrkQghOIwrXQ5SQW5aK1Iw8TUDjpN4qHN2K+Qp8thmnBgVPilQoKd4Aubh\nzq8sGxudTrzx7VTmz7bqXcGDaDg0NEDGXsDzrpyUd57fi4aBEe+oGIp2gjnl\n",
+    "thumbnail_url": "https://images.code.org/e88e870f2b9319c1b4cde1235036cf0b-digital_art.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestCreateArtFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_full_art_sequence(self):\n        \"\"\"create_art() should call all drawing functions in order\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()] \n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            4,\n            \"Make sure your create_art() function draws two circles, one triangle, and adds a shadow effect!\"\n        )\n\n        circle_count = sum(1 for line in printed_messages if \"circle\" in line.lower())\n        triangle_drawn = any(\"triangle\" in line.lower() for line in printed_messages)\n        shadow_added = any(\"shadow\" in line.lower() for line in printed_messages)\n\n        self.assertGreaterEqual(\n            circle_count,\n            2,\n            \"Make sure draw_circle() is called twice at the start of create_art().\"\n        )\n\n        self.assertTrue(\n            triangle_drawn,\n            \"It looks like draw_triangle() wasn't called. Make sure you draw a triangle after the circles.\"\n        )\n\n        self.assertTrue(\n            shadow_added,\n            \"It looks like add_shadow_effect() wasn't called. Make sure you finish by adding a shadow effect.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:31.322+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:59:42.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Random Access Memory (RAM)\n\n**RAM** is a type of temporary memory that stores active applications and data while the computer is running. It allows the computer to access information quickly, making programs and multitasking smoother. However, RAM is **volatile**, meaning everything is erased when the computer shuts down.\n\n**Example**: When you switch between open tabs in a web browser, RAM helps keep them loaded instantly.\n",
+        "imageUrl": "https://images.code.org/d57d7953fd4ba28a62d2cb8efea4f878-photo-1562976540-1502c2145186.jpg",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Hard Disk Drive (HDD)\n\nAn **HDD** is a traditional storage device that saves data using spinning disks. It can store **large amounts of information** but is slower than newer storage technologies because it relies on moving parts. HDDs are often used for **long-term storage and backups** where speed isn’t the priority.\n\n**Example**: When you save photos and videos on an external hard drive, it can store thousands of files, but retrieving them takes longer compared to a phone or tablet with faster storage.",
+        "imageUrl": "https://images.code.org/432b490c2ed2f51b517a1c5c2d9825e9-hard-disk-isolated-on-white-background-2024-10-18-05-43-48-utc.jpg",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Solid State Drive (SSD)\n\nA **SSD** is a modern storage device that keeps files, applications, and the operating system saved **permanently**. Unlike HDDs, SSDs have no moving parts, making them faster, quieter, and more reliable. They significantly improve a computer’s boot-up time and performance.\n\n**Example**: A laptop with an SSD starts up in seconds, while one with an HDD takes much longer.",
+        "imageUrl": "https://images.code.org/7710f5e391be68b4e66517d5461e8fba-clipboard-image-1740061552.png",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Flash Storage\n\n**Flash storage** is a type of **permanent storage** that has no moving parts, making it faster and more durable than traditional hard drives. It is often used for **small, portable storage devices** and is found in USB drives, memory cards, and even smartphones.\n\n**Example**: A USB flash drive lets you quickly save and transfer files between computers, while an SD card is used in cameras to store photos.",
+        "imageUrl": "https://images.code.org/da69bec3f16a4a3279ffc58d4b18ee52-clipboard-image-1740061662.png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:42.062+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level1_2025\"}]"
+}]]></config>
+</Panels>

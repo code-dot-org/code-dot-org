@@ -77,4 +77,18 @@ class Teacher < User
   def self.sti_name
     TYPE_TEACHER
   end
+
+  def self.set_teacher_names_from_auth(user, auth)
+    name_from_auth = auth.info.name
+    user.given_name = if name_from_auth.is_a?(Hash) && name_from_auth['first'].present?
+                        name_from_auth['first']
+                      else
+                        auth.info.first_name.presence || auth.info.given_name
+                      end
+    user.family_name = if name_from_auth.is_a?(Hash) && name_from_auth['last'].present?
+                         name_from_auth['last']
+                       else
+                         auth.info.last_name.presence || auth.info.family_name
+                       end
+  end
 end

@@ -1,5 +1,5 @@
 require 'test_helper'
-
+require 'cdo/shared_constants'
 class SkillsHelperTest < ActiveSupport::TestCase
   setup do
     @section = create(:section)
@@ -23,28 +23,31 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data returns correct structure with evaluations" do
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
       level_id: @level1.id,
-      evaluation: 'Great'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill2.id,
       level_id: @level1.id,
-      evaluation: 'Ok'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student2.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
       level_id: @level1.id,
-      evaluation: 'Needs revision'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT]
     )
 
     result = SkillsHelper.get_section_skills_data(@section, @unit)
@@ -110,28 +113,31 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data handles multiple evaluations for same student-skill" do
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
       level_id: @level1.id,
-      evaluation: 'Needs revision'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
       level_id: @level2.id,
-      evaluation: 'Ok'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
       level_id: @level3.id,
-      evaluation: 'Great'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
     )
 
     result = SkillsHelper.get_section_skills_data(@section, @unit)
@@ -144,20 +150,20 @@ class SkillsHelperTest < ActiveSupport::TestCase
     assert_equal 'Not seen', result
   end
 
-  test "determine_mastery_level_for_student returns 'Mastered' when Great is present" do
-    evaluations = ['Needs revision', 'Ok', 'Great']
+  test "determine_mastery_level_for_student returns 'Mastered' when all_complete_all_correct is present" do
+    evaluations = [SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]]
     result = SkillsHelper.send(:determine_mastery_level_for_student, evaluations)
     assert_equal 'Mastered', result
   end
 
-  test "determine_mastery_level_for_student returns 'Shown' when Ok is present but no Great" do
-    evaluations = ['Needs revision', 'Ok', 'Needs revision']
+  test "determine_mastery_level_for_student returns 'Shown' when partial_complete_correct is present but no all_complete_correct" do
+    evaluations = [SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT]]
     result = SkillsHelper.send(:determine_mastery_level_for_student, evaluations)
     assert_equal 'Shown', result
   end
 
-  test "determine_mastery_level_for_student returns 'Needs practice' when all are 'Needs revision'" do
-    evaluations = ['Needs revision', 'Needs revision', 'Needs revision']
+  test "determine_mastery_level_for_student returns 'Needs practice' when all are incomplete_incorrect" do
+    evaluations = [SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT]]
     result = SkillsHelper.send(:determine_mastery_level_for_student, evaluations)
     assert_equal 'Needs practice', result
   end
@@ -173,24 +179,87 @@ class SkillsHelperTest < ActiveSupport::TestCase
     other_unit_level = other_unit.script_levels.first.level
     other_unit_level.skills << @skill1
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: other_unit.id,
       skill_id: @skill1.id,
       level_id: other_unit_level.id,
-      evaluation: 'Great'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
       level_id: @level1.id,
-      evaluation: 'Ok'
+      evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT]
     )
 
     result = SkillsHelper.get_section_skills_data(@section, @unit)
 
     assert_equal 'Shown', result[@student1.id][@skill1.id][:mastery_level]
+  end
+
+  test "filter_evaluations keeps most recent evaluation for each unique combination" do
+    evaluations_data = [
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], @level1.id, 1.day.ago, nil],
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], @level1.id, Time.current, nil],
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], @level2.id, 2.days.ago, 'CODE_VERSION_HASH_1'],
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], @level2.id, 1.day.ago, 'CODE_VERSION_HASH_1'],
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], @level2.id, Time.current, 'CODE_VERSION_HASH_2']
+    ]
+
+    result = SkillsHelper.send(:filter_evaluations, evaluations_data)
+
+    assert_equal 3, result.length
+
+    most_recent_level1_nil = result.find {|r| r[3] == @level1.id && r[5].nil?}
+    assert_equal SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], most_recent_level1_nil[2]
+
+    most_recent_level2_v1 = result.find {|r| r[3] == @level2.id && r[5] == 'CODE_VERSION_HASH_1'}
+    assert_equal SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], most_recent_level2_v1[2]
+
+    most_recent_level2_v2 = result.find {|r| r[3] == @level2.id && r[5] == 'CODE_VERSION_HASH_2'}
+    assert_equal SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], most_recent_level2_v2[2]
+  end
+
+  test "filter_evaluations handles empty array" do
+    result = SkillsHelper.send(:filter_evaluations, [])
+    assert_equal [], result
+  end
+
+  test "filter_evaluations handles single evaluation" do
+    evaluations_data = [
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], @level1.id, Time.current, nil]
+    ]
+
+    result = SkillsHelper.send(:filter_evaluations, evaluations_data)
+
+    assert_equal 1, result.length
+    assert_equal evaluations_data.first, result.first
+  end
+
+  test "filter_evaluations handles different students and skills" do
+    evaluations_data = [
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], @level1.id, 1.day.ago, nil],
+      [@student1.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], @level1.id, Time.current, nil],
+      [@student2.id, @skill1.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], @level1.id, 2.days.ago, nil],
+      [@student1.id, @skill2.id, SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], @level1.id, Time.current, nil]
+    ]
+
+    result = SkillsHelper.send(:filter_evaluations, evaluations_data)
+
+    assert_equal 3, result.length
+
+    student1_skill1 = result.find {|r| r[0] == @student1.id && r[1] == @skill1.id}
+    assert_equal SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT], student1_skill1[2]
+
+    student2_skill1 = result.find {|r| r[0] == @student2.id && r[1] == @skill1.id}
+    assert_equal SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT], student2_skill1[2]
+
+    student1_skill2 = result.find {|r| r[0] == @student1.id && r[1] == @skill2.id}
+    assert_equal SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT], student1_skill2[2]
   end
 end

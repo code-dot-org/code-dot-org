@@ -14,14 +14,14 @@ const BlocklySourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const blocklyValidator = (responseToValidate: Record<string, unknown>) => {
-    // Blockly sources are always stringified JSON.
-    let blocklySource;
-    try {
-      blocklySource = JSON.parse(
-        responseToValidate.source as string
-      ) as BlocklySource;
-    } catch (e) {
-      throw new ValidationError('Error parsing JSON: ' + e);
+    // Blockly sources can be stringified or plain JSON.
+    let blocklySource = responseToValidate.source as BlocklySource;
+    if (typeof responseToValidate.source === 'string') {
+      try {
+        blocklySource = JSON.parse(responseToValidate.source as string);
+      } catch (e) {
+        throw new ValidationError('Error parsing JSON: ' + e);
+      }
     }
     if (blocklySource.blocks === undefined) {
       throw missingFieldError('blocks');

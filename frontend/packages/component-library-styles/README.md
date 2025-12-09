@@ -233,10 +233,10 @@ palette and ensure a unified visual language across all Code.org components.
 
 ### Fonts
 
-The `fonts.scss` file defines the fonts used throughout the Code.org design system.  
+The `fonts.scss` file defines the fonts used throughout the Code.org design system.
 We use a combination of **Figtree** and **Noto Sans** fonts to maintain a consistent look and feel across the platform.
 
-We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.  
+We provide font definitions, weights, and mixins to simplify applying consistent font styles across components.
 All fonts are available globally through CSS variables and SCSS mixins.
 
 ---
@@ -408,7 +408,7 @@ const Example = () => (
 
 ### Typography
 
-The `typography.module.scss` file defines the typography styles used throughout the Code.org design system.  
+The `typography.module.scss` file defines the typography styles used throughout the Code.org design system.
 It includes mixins and utility classes for consistent heading, paragraph, and label styles. You can also find some
 additional documentation in [typography.module.scss](./typography.module.scss) file itslef.
 
@@ -469,12 +469,11 @@ h1 {
 
 #### ✅ Additional Typography Mixins
 
-| Mixin          | Description     |
-| -------------- | --------------- |
-| `strong`       | Bold text       |
-| `extra-strong` | Extra bold text |
-| `em`           | Italic text     |
-| `figcaption`   | Caption text    |
+| Mixin        | Description  |
+| ------------ | ------------ |
+| `strong`     | Bold text    |
+| `em`         | Italic text  |
+| `figcaption` | Caption text |
 
 ---
 
@@ -513,7 +512,7 @@ We also provide utility classes that you can apply directly in the markup:
 
 ### Variables
 
-The `variables.scss` file defines the **shared design system variables** used across the Code.org frontend.  
+The `variables.scss` file defines the **shared design system variables** used across the Code.org frontend.
 These variables cover consistent sizing, spacing, border radius, and other common design properties.
 
 Variables in this file are intended to be used **consistently** across the design system components to ensure a
@@ -566,7 +565,7 @@ With time there'll be more variables added to this file, so make sure to check i
 
 The `mixins.scss` file defines reusable patterns and logic to simplify consistent styling across Code.org components.
 
-Mixins help avoid repetition and keep the SCSS code clean and organized.  
+Mixins help avoid repetition and keep the SCSS code clean and organized.
 They allow you to define a set of styles that can be reused throughout your project.
 
 ---
@@ -656,7 +655,7 @@ For information on how to contribute to this package, please refer to the [CONTR
 
 ## FAQ / Troubleshooting
 
-- **Why aren't my styles being applied?**  
+- **Why aren't my styles being applied?**
   Check for conflicting styles or CSS specificity issues. You may need to add additional selectors to the element you'd like to style.
 
 ## Changelog

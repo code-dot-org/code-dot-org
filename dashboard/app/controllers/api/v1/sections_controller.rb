@@ -86,7 +86,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    current_user.assign_script @unit if @unit
+    current_user.assign_script(@unit, @course) if @unit
 
     render json: section.summarize
   end
@@ -126,7 +126,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section.update!(fields)
     if @unit
       section.students.each do |student|
-        student.assign_script(@unit)
+        student.assign_script(@unit, @course)
       end
     end
 
@@ -180,9 +180,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return
     end
     render json: {
-      sections: current_user.sections_as_student.reload.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.reload.map(&:summarize_for_participant),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_for_participant),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_for_participant),
       result: result
     }
   end
@@ -192,9 +192,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     authorize! :destroy, @follower
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
+      sections: current_user.sections_as_student.map(&:summarize_for_participant),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_for_participant),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_for_participant),
       result: "success"
     }
   end
@@ -314,24 +314,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      case course_version.content_root_type
-      when 'UnitGroup'
-        course_id = course_version.content_root_id
-        @course = UnitGroup.get_from_cache(course_id)
-        return head :bad_request unless @course
-        return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = if @course.single_unit_course?
-                  @course.units_for_user(current_user).first
-                else
-                  params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
-                end
-        return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
-      when 'Unit'
-        unit_id = course_version.content_root_id
-        @unit = Unit.get_from_cache(unit_id)
-        return head :bad_request unless @unit
-        return head :forbidden unless @unit.course_assignable?(current_user)
-      end
+      course_id = course_version.content_root_id
+      @course = UnitGroup.get_from_cache(course_id)
+      return head :bad_request unless @course
+      return head :forbidden unless @course.course_assignable?(current_user)
+      @unit = if @course.single_unit_course?
+                @course.units_for_user(current_user).first
+              else
+                params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+              end
+      return head :bad_request if @unit && @course && @unit.unit_groups.exclude?(@course)
     else
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]

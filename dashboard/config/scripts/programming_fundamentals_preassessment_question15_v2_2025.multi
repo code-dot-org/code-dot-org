@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question15_v2-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 15'
+
+wrong 'A function that calls another function'
+wrong 'A variable inside a loop'
+wrong 'A method used for sorting data'
+right 'A conditional statement inside another conditional statement'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a **nested conditional**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Two-Way and Nested Selection
+MARKDOWN

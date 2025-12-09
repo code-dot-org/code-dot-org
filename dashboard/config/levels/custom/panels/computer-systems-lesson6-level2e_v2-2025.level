@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:00:02.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "**Scientist Sam**\n\n**Job/Hobby:** Data scientist and researcher\n\n**Purpose:** Data analysis, simulations, and machine learning.\n\n\n",
+        "imageUrl": "https://images.code.org/28a011e33a6a6b46606d355d9ad2247e-young-asian-researcher-in-whitecoat-working-with-m-2023-11-27-05-34-01-utc.jpg",
+        "key": "undefined-031fe85f-4e54-4fe0-b3a7-24c6bde9c151",
+        "fadeInOverPrevious": false,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "**Budget:** $3,000",
+        "imageUrl": "https://images.code.org/f439ee061d22e07682472fb1d3925461-piggy-bank-savings-investment-and-hand-with-money-2023-11-27-05-12-13-utc.jpg",
+        "key": "undefined-14706a7d-89bf-4177-9129-aefdc10f29d6"
+      },
+      {
+        "text": "**Important Info:** Needs robust backup solutions and Linux compatibility\n\n**Preferences:**\n* High-performance CPU and GPU for computations.\n* 64 GB RAM or more for large datasets.\n* Reliable cooling system.",
+        "imageUrl": "https://images.code.org/4ce99f7a26b51068ac207e6198126d8b-closeup-of-computer-hard-disk-drive-2025-02-10-10-51-11-utc.jpg",
+        "key": "undefined-fbda9709-191d-4453-b773-2d163636fe7a",
+        "layout": "text-top-left"
+      }
+    ],
+    "display_name": "Scientist Sam",
+    "bubble_choice_description": "Data scientist and researcher",
+    "thumbnail_url": "https://images.code.org/d08886587e82d150548eb4ecd571f116-scientist sam.jpg",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:02.758+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level2e_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level2e_2025\"}]"
+}]]></config>
+</Panels>

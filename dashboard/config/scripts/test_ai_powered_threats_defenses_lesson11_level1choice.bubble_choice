@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson11-level1choice'
+display_name 'Investigate an Experience '
+description 'Pick a user and follow them through their day as they interact with different systems that have security features. For each feature, they will decide if it worked well, partially, or not at all for their user and place the feature on a Security vs. Usability Matrix'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson11-level1a'
+level 'test-ai-powered-threats-defenses-lesson11-level1b'
+level 'test-ai-powered-threats-defenses-lesson11-level1c'
+level 'test-ai-powered-threats-defenses-lesson11-level1d'

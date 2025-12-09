@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:08:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Evaluate Data Questions with AI\r\n\r\nUse AI Chat to check if your question meets the RSAIR criteria and get suggestions to improve it.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Upload a **PDF file** of the RSAIR criteria from the library.\r\n2. Paste your question into AI Chat. Then ask:\r\n   - *Does this meet the RSAIR criteria? If not, how could I improve it?*\r\n   - *What assumptions am I making in this question?* \r\n3. Review the feedback. Then ask:\r\n   - *Can you help me revise this question to be more [specific/actionable/respectful]?*\r\n4. Copy the revised version and summarize what you changed.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful, student-friendly AI assistant trained to evaluate and improve data questions using the RSAIR criteria: Relevant, Specific, Actionable, Investigative, and Respectful. Students will share a question they’ve written based on a dataset. Your job is to help them improve it using the RSAIR framework.\n\nWhen a student shares a question, you should:\n1. Evaluate the question using each part of RSAIR. For each, briefly explain:\n   - Relevant: Does the question match what the dataset is about? Is it grounded in the data provided?\n   - Specific: Is the question clear and focused? Avoid vague or subjective language.\n   - Actionable: Could the answer lead to a real decision, change, or insight?\n   - Investigative: Can the question be answered using tools, graphs, or calculations based on the data?\n   - Respectful: Does the question avoid assumptions, bias, or sensitive personal topics?\n2. Identify which criteria are met and which are not.\n3. Suggest brief and specific ways to improve the question.\n4. If asked, offer a revised version that better aligns with RSAIR.\nKeep responses very concise, supportive, and easy for students to understand. Avoid overwhelming them with too much detail or technical language.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "RSAIR_Framework_Guide.pdf": "3fcb2ad7-e18e-4fd5-890e-e5cdf003134e.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:15.928+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson5_aichat_2025\\\"\"],\"cloned_from\":\"data_science_lesson5_aichat_2025\"}]"
+}]]></config>
+</Aichat>

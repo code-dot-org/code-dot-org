@@ -1,0 +1,17 @@
+name 'networks-preassessment-question11_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 11'
+
+wrong 'AI replaces all human security experts'
+wrong 'AI can slow down Internet connections'
+wrong 'AI makes it impossible for hackers to attack networks'
+right 'AI helps detect and prevent cyber threats in real time'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+How is artificial intelligence (AI) used in network security?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Emerging Technologies
+MARKDOWN

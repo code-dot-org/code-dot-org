@@ -1,138 +1,160 @@
-// Making sure that css is first so that it is imported for other classes.
-// This might not be necessary.
-import './styles/Weblab2View.css';
-
 import {Codebridge} from '@codebridge/Codebridge';
-import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
+import {javascript} from '@codemirror/lang-javascript';
+import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
-import HorizontalLayout from './layout/HorizontalLayout';
+import {
+  WEBLAB2_EDITABLE_FILE_TYPES,
+  WEBLAB2_SUPPORTED_FILE_TYPES,
+} from './constants';
+import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
+import {getPromptNameFromMode} from './helpers/aiTutorHelper';
+import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
+import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {Weblab2LevelProperties, ViewMode} from './types';
+import {setViewMode} from './weblab2Redux';
 
-const weblabLangMapping: {[key: string]: LanguageSupport} = {
+import moduleStyles from './styles/weblab2-view.module.scss';
+
+const aiTutorHelper = new AiTutorWebLab2ContextHelper();
+
+const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
+  js: javascript(),
+  md: markdown(),
 };
 
 const defaultConfig: ConfigType = {
-  languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css'],
+  languageMapping: weblab2LangMapping,
+  editableFileTypes: WEBLAB2_EDITABLE_FILE_TYPES,
+  supportedFileTypes: WEBLAB2_SUPPORTED_FILE_TYPES,
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
-    horizontal: HorizontalLayout,
+    widget: VerticalLayout,
+    share: ShareView,
   },
-  showFileBrowser: true,
 };
 
 const defaultSource: MultiFileSource = {
-  folders: {
-    '1': {id: '1', name: 'foo', parentId: '0'},
-    '2': {id: '2', name: 'bar', parentId: '1'},
-    '3': {id: '3', name: 'baz', parentId: '0'},
-    '4': {id: '4', name: 'f1', parentId: '1'},
-    '5': {id: '5', name: 'f2', parentId: '1'},
-    '6': {id: '6', name: 'b1', parentId: '2'},
-  },
-
+  folders: {},
   files: {
     '1': {
       id: '1',
-      name: 'index.html',
+      name: DEFAULT_START_HTML_FILE,
       language: 'html',
-      contents: `<!DOCTYPE html><html>
-  <link rel="stylesheet" href="styles.css"/>
+      contents: `<!DOCTYPE html>
+<html>
   <body>
     Content goes here!
-    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
-`,
-      open: true,
+  `,
       active: true,
       folderId: '0',
     },
-    '2': {
-      id: '2',
-      name: 'styles.css',
-      language: 'css',
-      contents: '.foo { color : red}',
-      open: true,
-      folderId: '0',
-    },
-    '3': {
-      id: '3',
-      name: 'page.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
-      open: false,
-      folderId: '0',
-    },
-    '4': {
-      id: '4',
-      name: 'test4.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '2',
-    },
-    '5': {
-      id: '5',
-      name: 'test5.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '4',
-    },
-    '6': {
-      id: '6',
-      name: 'test6-1.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '1',
-    },
   },
+  openFiles: ['1'],
 };
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View: React.FC<
-  LabProps<CodebridgeLevelProperties, ProjectSources>
+  LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject, startSources, projectVersion} = useSource(
+
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
+
+  const source = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+
+  const {startSources} = useSource(
     defaultProject,
     levelProperties,
     initialSources
   );
 
+  const hasSource = useAppSelector(
+    state => !!state.lab2Project.projectSources?.source
+  );
+
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+
+  // Note: this causes Web Lab 2 to re-render when sources change.
+  // Unfortunately, the way AI tutor is set up right now requires passing in a context
+  // rather than a callback for the context. In the future, we should consider refactoring AI
+  // Tutor so we don't have to re-render the entire lab when sources change (this is also the case for Python Lab).
+  useEffect(() => {
+    aiTutorHelper.setAiTutorContext({
+      source,
+      longInstructions: levelProperties.longInstructions,
+      hasEdited,
+      hasRun,
+    });
+  }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
+
+  // Since there's no run button in Weblab2, set it to true by default
+  // to enable the Submit button on edit on submittable levels.
+  // Set back to false on unmount in case we switch to a different level type.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (hasEdited) {
+      logLevelActivity();
+    }
+  }, [hasEdited, logLevelActivity]);
+
+  useEffect(() => {
+    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
+  }, [dispatch, levelProperties?.initialViewMode]);
+
+  const aiTutorResponseSchemaSettings =
+    useAiTutorResponseSchemaSettings(source);
+
   return (
-    <div className="app-wrapper">
-      <div className="app-ide">
-        {source && (
-          <Codebridge
-            source={source}
-            config={config}
-            setProject={setProject}
-            setConfig={setConfig}
-            startSources={startSources}
-            projectVersion={projectVersion}
-            levelProperties={levelProperties}
-          />
-        )}
-      </div>
+    <div className={moduleStyles.weblab2Container}>
+      {hasSource && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={startSources}
+          levelProperties={levelProperties}
+          hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          aiTutorMultimodalEnabled={true}
+          aiTutorChatButtonData={[]}
+          aiTutorContextHelper={aiTutorHelper}
+          aiTutorSystemPromptName={getPromptNameFromMode(
+            levelProperties.aiTutorMode
+          )}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+        />
+      )}
     </div>
   );
 };

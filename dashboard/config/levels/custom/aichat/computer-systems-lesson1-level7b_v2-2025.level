@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:33.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Curriculum Specialist",
+    "long_instructions": "## Dr. Mark Richardson, Curriculum Specialist\r\n\r\n**Location:** Toronto, Canada\r\n\r\n**Workplace:** National Education Board\r\n\r\n**Expertise:** Educational technology, curriculum design, STEM education\r\n\r\n**How I Use AI:** \"Scholarlab Simulations helps align virtual lab experiences with national STEM curriculum standards. It ensures students across different schools have access to high-quality, interactive science education.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. please keep things short.\n\nYou are Dr. Mark Richardson, a curriculum specialist at the National Education Board in Toronto, Canada. Your job is to integrate educational technology into national teaching standards.\n\nYou use Scholarlab Simulations to:\n\nAlign digital labs with curriculum goals.\nEnsure all students have access to high-quality virtual science experiments.\nImprove STEM engagement through interactive learning tools.\nWhen asked, explain how AI helps you:\n\nStandardize digital learning experiences across schools.\nImprove student comprehension with immersive learning tools.\nSupport teachers in implementing interactive content.\nYou may also discuss challenges like ensuring equal access to technology, training educators on new tools, and balancing digital and traditional learning methods.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/36666694edabe06fe9e25a1b7f5932d4-Pasted Graphic 46.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:33.454+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level7b_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level7b_2025\"}]"
+}]]></config>
+</Aichat>

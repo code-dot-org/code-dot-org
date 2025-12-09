@@ -2,17 +2,17 @@ require 'test_helper'
 
 class FeaturedProjectsControllerTest < ActionController::TestCase
   setup_all do
-    @project_validator = create :project_validator
-    @teacher = create :teacher
+    @project_validator = create(:project_validator)
+    @teacher = create(:teacher)
 
-    @project_new = create :project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
-    @project_new_2 = create :project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
-    @project_active = create :project, value: {frozen: true, hidden: true, updatedAt: DateTime.now}.to_json
-    @project_archived = create :project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json
+    @project_new = create(:project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json)
+    @project_new_2 = create(:project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json)
+    @project_active = create(:project, value: {frozen: true, hidden: true, updatedAt: DateTime.now}.to_json)
+    @project_archived = create(:project, value: {frozen: false, hidden: false, updatedAt: DateTime.now}.to_json)
 
-    @new_featured_project = create :featured_project, project_id: @project_new.id
-    @active_featured_project = create :active_featured_project, project_id: @project_active.id
-    @archived_featured_project = create :archived_featured_project, project_id: @project_archived.id
+    @new_featured_project = create(:featured_project, project_id: @project_new.id)
+    @active_featured_project = create(:active_featured_project, project_id: @project_active.id)
+    @archived_featured_project = create(:archived_featured_project, project_id: @project_archived.id)
   end
 
   test 'project validators can bookmark a project as a featured project' do

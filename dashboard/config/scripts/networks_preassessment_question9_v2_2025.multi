@@ -1,0 +1,17 @@
+name 'networks-preassessment-question9_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 9'
+
+wrong 'The space between computers on a network'
+wrong 'The way computers break data into smaller packets'
+wrong 'The difference between wired and wireless connections'
+right 'The gap between those who have reliable Internet access and those who do not'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What does the digital divide refer to?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: The Internet's Hidden Barriers
+MARKDOWN

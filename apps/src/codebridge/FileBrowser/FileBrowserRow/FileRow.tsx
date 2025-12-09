@@ -1,7 +1,9 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
+
+import {setActiveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {FileRowIcon} from './FileRowIcon';
 import {FileRowName} from './FileRowName';
@@ -31,11 +33,16 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
   hasValidationFile,
   isDragging,
 }) => {
-  const {openFile} = useCodebridgeContext();
+  const dispatch = useAppDispatch();
   const dropdownOptions = useFileRowOptions(item, hasValidationFile);
   const isActive = item.active || false;
+  const isAiTutorVersion =
+    item.isAiTutorVersionUpdated || item.isAiTutorVersionCreated || false;
   const className = useMemo(() => {
     const classes = [];
+    if (isAiTutorVersion) {
+      classes.push(moduleStyles.aiTutorVersion);
+    }
     if (isActive) {
       classes.push(moduleStyles.activeFile);
     }
@@ -43,7 +50,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       classes.push(moduleStyles.dragging);
     }
     return classNames(...classes);
-  }, [isActive, isDragging]);
+  }, [isActive, isDragging, isAiTutorVersion]);
 
   return (
     <ItemRow
@@ -52,7 +59,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       dropdownOptions={dropdownOptions}
       IconComponent={FileRowIcon}
       NameComponent={FileRowName}
-      openFunction={openFile}
+      openFunction={id => dispatch(setActiveFileThunk(id))}
       className={className}
     />
   );

@@ -1,7 +1,7 @@
 Feature: Visiting a jigsaw page
 
 Background:
-  Given I am on "http://studio.code.org/courses/course1/units/1/lessons/3/levels/1?noautoplay=1"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/1/levels/1?noautoplay=1"
   And I wait for the lab page to fully load
 
 Scenario: Loading the first jigsaw level

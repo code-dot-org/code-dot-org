@@ -1,0 +1,15 @@
+name 'student-end-of-unit-survey-q27_-cyber_v2-2025'
+
+question 'I planned my work, wrote down my thoughts, or took notes to support my learning.'
+
+right 'Never'
+right 'Occasionally'
+right 'About half of the lessons'
+right 'Most of the lessons'
+right 'Almost every lesson'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

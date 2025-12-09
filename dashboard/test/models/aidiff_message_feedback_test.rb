@@ -2,7 +2,7 @@ require "test_helper"
 
 class AidiffMessageFeedbackTest < ActiveSupport::TestCase
   setup_all do
-    @user = create :user
+    @user = create(:user)
   end
 
   test 'thread, message, feedback create' do
@@ -11,7 +11,8 @@ class AidiffMessageFeedbackTest < ActiveSupport::TestCase
       external_id: 'openai_1234',
       llm_version: 'chatgpt3.4.5',
       title: 'Unit 3 differentiation thread',
-      unit_id: 3
+      unit_id: 3,
+      context_type: "unit"
     )
 
     assert thread.aidiff_messages.empty?

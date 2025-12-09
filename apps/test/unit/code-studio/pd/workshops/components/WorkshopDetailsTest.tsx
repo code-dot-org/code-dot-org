@@ -2,12 +2,12 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 import WorkshopDetails from '@cdo/apps/code-studio/pd/workshops/components/WorkshopDetails';
 
 const baseProps = {
   name: 'Cybersecurity Basics Workshop',
-  grade_levels: ['K', '1', '2'],
+  gradeLevels: ['K', '1', '2'],
   sessions: [
     {
       id: 1,
@@ -23,8 +23,7 @@ const baseProps = {
   fee: '0',
   prereq: 'Some workshop A, Some workshop B',
   description: 'Workshop description goes here.',
-  notes: 'Bring your device. Stay hydrated!',
-  course_offerings: ['AI and Machine Learning', 'Apps with Devices'],
+  courseOfferings: ['AI and Machine Learning', 'Apps with Devices'],
   facilitators: [
     {
       name: 'Facilitator A',
@@ -54,21 +53,17 @@ describe('WorkshopDetails', () => {
     expect(screen.getByText(/free/i)).toBeInTheDocument();
   });
 
-  it('renders description and notes', () => {
+  it('renders description', () => {
     render(<WorkshopDetails {...baseProps} />);
     expect(
       screen.getByRole('heading', {name: /description/i})
     ).toBeInTheDocument();
     expect(screen.getByText(baseProps.description)).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', {name: /attendee notes/i})
-    ).toBeInTheDocument();
-    expect(screen.getByText(baseProps.notes)).toBeInTheDocument();
   });
 
   it('renders course offering tags if provided', () => {
     render(<WorkshopDetails {...baseProps} />);
-    baseProps.course_offerings.forEach(course =>
+    baseProps.courseOfferings.forEach(course =>
       expect(screen.getByText(course)).toBeInTheDocument()
     );
   });
@@ -78,6 +73,12 @@ describe('WorkshopDetails', () => {
     expect(screen.getByText(/facilitator a/i)).toBeInTheDocument();
     expect(screen.getByText(/facilitator@example.com/i)).toBeInTheDocument();
     expect(screen.getByText(/show biography/i)).toBeInTheDocument();
+  });
+
+  it('does not render facilitator info if none provided', () => {
+    render(<WorkshopDetails {...baseProps} facilitators={undefined} />);
+    expect(screen.queryByText(/facilitator a/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/show biography/i)).not.toBeInTheDocument();
   });
 
   it('renders data sharing notice section with anchor', () => {
@@ -97,7 +98,7 @@ describe('WorkshopDetails', () => {
   });
 
   it('does not render course tags section if list is empty', () => {
-    render(<WorkshopDetails {...baseProps} course_offerings={[]} />);
+    render(<WorkshopDetails {...baseProps} courseOfferings={[]} />);
     expect(screen.queryByText(/PL Topics Covered/i)).not.toBeInTheDocument();
   });
 });

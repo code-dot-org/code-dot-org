@@ -1,0 +1,15 @@
+name 'self-paced-CSDMusicLab-L2-playtogether5'
+display_name 'Practice'
+description 'Teacher note: This is a choice level! When students direct to choice levels, they will see this overview page. They can click into any or all of the sub-levels to complete it. This is a great way to allow student autonomy in the classroom. This is Lesson 2, level 8 in the curriculum.'
+
+sublevels
+level 'test-music-lab-sequences-explore-choice-level-a_v2'
+level 'test-music-lab-sequences-explore-choice-level-b_v2'
+level 'test-music-lab-sequences-explore-choice-level-d_v2'
+level 'test-music-lab-sequences-explore-choice-level-e_v2'
+level 'test-music-lab-sequences-explore-choice-level-f_v2'
+uses_lab2
+
+markdown <<MARKDOWN
+
+MARKDOWN

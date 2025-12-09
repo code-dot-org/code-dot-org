@@ -1,0 +1,19 @@
+name 'computer-systems-postassessment-question11_v2-2025'
+title 'Computer Systems and Devices Post-Assessment: Question 11'
+
+right 'CPU – Processes data and instructions'
+wrong 'RAM – Stores files permanently'
+wrong 'Hard Drive – Executes program instructions'
+wrong 'GPU – Controls the operating system
+
+'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following correctly matches the hardware component to its function?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Hardware
+MARKDOWN

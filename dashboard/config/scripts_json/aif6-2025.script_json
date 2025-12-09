@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-04 14:16:34 UTC",
+    "serialized_at": "2025-10-21 13:43:11 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6405,6 +6405,34 @@
       }
     },
     {
+      "name": "Chart Match Visuals",
+      "url": "https://docs.google.com/presentation/d/1na9AAerHF9eITn2Y6RicBbRQspNvZZinDPWwp29vsSk/",
+      "key": "chart_match_visuals",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "chart_match_visuals"
+      }
+    },
+    {
+      "name": "Chart Match Warm-Up",
+      "url": "https://docs.google.com/document/d/1fW16bxEUMirRgq0LWewQv1zoIFzo0Kr-QnZPcdZUris/",
+      "key": "chart_match_warm-up",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "chart_match_warm-up"
+      }
+    },
+    {
       "name": "Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1It3QM-Ji8Yfz782pcBZAM3lb6fZBmqlSRfxhOxqg7w8/edit?usp=drivesdk",
       "key": "cleaning_data",
@@ -7282,6 +7310,18 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "chart_match_visuals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "chart_match_warm-up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
         "resource.key": "introduction_to_data_visualization"
       }
     },
@@ -7527,7 +7567,7 @@
     {
       "key": "data",
       "word": "data",
-      "definition": "any form of organized information, such as words, numbers, pictures, etc.",
+      "definition": "Information that is collected, stored, and used to understand and solve problems",
       "properties": {
       },
       "seeding_key": {

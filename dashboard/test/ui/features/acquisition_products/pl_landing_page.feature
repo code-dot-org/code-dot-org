@@ -19,7 +19,7 @@ Feature: Professional Learning landing page
 
     # Sees Recommended for you section
     And element "a:contains(Learn more about workshops)" is visible
-    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/middle-high"
+    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/workshops"
     And element "a:contains(Start professional learning courses)" is visible
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
     And I see no difference for "PL Recommended for you section"
@@ -72,9 +72,7 @@ Feature: Professional Learning landing page
     Then I click selector "button:contains(Regional Partner Center)"
 
     # Sees Regional Partner Resources section
-    And I wait until element "a:contains(Manage applications)" is visible
-    And the href of selector "a:contains(Manage applications)" contains "/pd/application_dashboard"
-    And element "a:contains(View workshop dashboard)" is visible
+    And I wait until element "a:contains(View workshop dashboard)" is visible
     And the href of selector "a:contains(View workshop dashboard)" contains "/pd/workshop_dashboard"
     And element "a:contains(View playbook)" is visible
     And the href of selector "a:contains(View playbook)" contains "/professional-learning/regional-partner/playbook"
@@ -112,7 +110,7 @@ Feature: Professional Learning landing page
 
     # Sees Recommended for you section
     And element "a:contains(Learn more about workshops)" is visible
-    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/middle-high"
+    And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/workshops"
     And element "a:contains(Start professional learning courses)" is visible
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
 

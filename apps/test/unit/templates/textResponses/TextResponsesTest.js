@@ -58,8 +58,9 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setScriptId={() => {}}
-            scriptName="A Script"
+            setUnit={() => {}}
+            courseVersionName="csd-2024"
+            unitPosition={1}
           />
         );
       });
@@ -75,8 +76,9 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setScriptId={() => {}}
-            scriptName="A Script"
+            setUnit={() => {}}
+            courseVersionName="csd-2024"
+            unitPosition={1}
           />
         );
       });
@@ -85,7 +87,8 @@ describe('TextResponses', () => {
       const textResponsesTable = wrapper.findOne('TextResponsesTable');
       expect(textResponsesTable.props.responses).toEqual(responses);
       expect(textResponsesTable.props.sectionId).toBe(2);
-      expect(textResponsesTable.props.scriptName).toBe('A Script');
+      expect(textResponsesTable.props.courseVersionName).toBe('csd-2024');
+      expect(textResponsesTable.props.unitPosition).toBe(1);
     });
 
     it('renders a CSVLink if there are 1 or more text responses', async () => {
@@ -96,8 +99,9 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setScriptId={() => {}}
-            scriptName="A Script"
+            setUnit={() => {}}
+            courseVersionName="csd-2024"
+            unitPosition={1}
           />
         );
       });
@@ -114,8 +118,9 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setScriptId={() => {}}
-            scriptName="A Script"
+            setUnit={() => {}}
+            courseVersionName="csd-2024"
+            unitPosition={1}
           />
         );
       });
@@ -147,8 +152,9 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setScriptId={() => {}}
-            scriptName="A Script"
+            setUnit={() => {}}
+            courseVersionName="csd-2024"
+            unitPosition={1}
           />
         );
       });

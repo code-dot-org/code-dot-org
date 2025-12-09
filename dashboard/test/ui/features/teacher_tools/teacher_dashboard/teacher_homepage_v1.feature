@@ -1,5 +1,11 @@
+# Deprecated - remove after confirming coverage on new homepage: https://codedotorg.atlassian.net/browse/TEACH-2165
+@skip
 @no_mobile
 Feature: Using the teacher dashboard homepage (v1)
+
+  Background:
+    Given I am on "http://studio.code.org/home"
+    Given I use a cookie to mock the DCDO key "teacher-homepage-v2" as "false"
 
   Scenario: Attempt to join a section you own redirects to dashboard with error message
     Given I am a teacher
@@ -86,9 +92,9 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am a teacher and go home
 
     # Add new courses so new tiles are visible on the teacher dashboard
-    And I create a new "Hour of Code" student section named "Section 1" assigned to "AI for Oceans"
+    And I create a new "Hour of AI" student section named "Section 1" assigned to "AI for Oceans"
     And I press keys ":escape"
-    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'17-'18"
+    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'25-'26"
     And I create a new "Hour of Code" student section named "Section 3" assigned to "Artist"
     And I create a new "Hour of Code" student section named "Section 4" assigned to "Classic Maze"
     And element ".ui-test-view-more-courses" is not visible

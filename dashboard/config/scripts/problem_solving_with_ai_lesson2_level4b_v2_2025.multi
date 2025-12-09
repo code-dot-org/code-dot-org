@@ -1,0 +1,11 @@
+name 'problem-solving-with-ai-lesson2-level4b_v2-2025'
+title ''
+description ''
+question 'Which response was more useful?'
+right 'Text only'
+right 'Text and Image'
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Use this question to help run a class discussion if necessary
+MARKDOWN

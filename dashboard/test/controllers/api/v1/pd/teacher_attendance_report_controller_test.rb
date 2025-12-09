@@ -30,20 +30,20 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
   end
 
   setup do
-    @workshop_admin = create :workshop_admin
-    @organizer = create :workshop_organizer
-    @program_manager = create :program_manager
+    @workshop_admin = create(:workshop_admin)
+    @organizer = create(:workshop_organizer)
+    @program_manager = create(:program_manager)
 
     # CSF workshop for this program manager with 10 teachers
-    @pm_workshop = build :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 3
+    @pm_workshop = build(:workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 3)
     @pm_workshop.save(validate: false)
 
     # CSF workshop for this organizer with 2 teachers
-    @workshop = build :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 2
+    @workshop = build(:workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF, enrolled_and_attending_users: 2)
     @workshop.save(validate: false)
 
     # Non-CSF workshop from a different organizer, with 1 teacher
-    @other_workshop = create :byo_workshop, :ended, enrolled_and_attending_users: 1
+    @other_workshop = create(:byo_workshop, :ended, enrolled_and_attending_users: 1)
   end
 
   [:admin, :workshop_organizer, :program_manager].each do |user_type|
@@ -118,11 +118,11 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
 
   test 'returns only workshops that have ended and have teachers' do
     # Workshop, not ended, with teachers (should not be returned)
-    workshop_in_progress = create :workshop, enrolled_and_attending_users: 2
+    workshop_in_progress = create(:workshop, enrolled_and_attending_users: 2)
     workshop_in_progress.start!
 
     # Workshop, ended, with no teachers (should not be returned)
-    teacherless_workshop = create :workshop, :ended
+    teacherless_workshop = create(:workshop, :ended)
 
     sign_in @workshop_admin
     get :index
@@ -141,15 +141,15 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
-    teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
+    workshop_in_range = create(:workshop, :ended, sessions_from: start_date + 2.weeks)
+    teacher_in_range = create(:pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true)
 
     # Noise
-    workshop_before = create :workshop, :ended, sessions_from: start_date - 1.day
-    create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
+    workshop_before = create(:workshop, :ended, sessions_from: start_date - 1.day)
+    create(:pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true)
 
-    workshop_after = create :workshop, :ended, sessions_from: end_date + 1.day
-    create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
+    workshop_after = create(:workshop, :ended, sessions_from: end_date + 1.day)
+    create(:pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true)
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'schedule'}
@@ -165,15 +165,15 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
-    teacher_in_range = create :pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true
+    workshop_in_range = create(:workshop, :ended, ended_at: start_date + 2.weeks)
+    teacher_in_range = create(:pd_workshop_participant, workshop: workshop_in_range, enrolled: true, attended: true)
 
     # Noise
-    workshop_before = create :workshop, :ended, ended_at: start_date - 1.day
-    create :pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true
+    workshop_before = create(:workshop, :ended, ended_at: start_date - 1.day)
+    create(:pd_workshop_participant, workshop: workshop_before, enrolled: true, attended: true)
 
-    workshop_after = create :workshop, :ended, ended_at: end_date + 1.day
-    create :pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true
+    workshop_after = create(:workshop, :ended, ended_at: end_date + 1.day)
+    create(:pd_workshop_participant, workshop: workshop_after, enrolled: true, attended: true)
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'end'}

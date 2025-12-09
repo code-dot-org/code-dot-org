@@ -1,6 +1,10 @@
-import React, {useCallback, useMemo, useRef} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -13,15 +17,25 @@ export type FileUploaderProps = {
   callback: (
     filename: string,
     contents: string,
-    callbackArgs?: unknown
+    uploadUrl?: string,
+    callbackArgs?: unknown,
+    flagged?: boolean
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  uploadExternalFile: (file: File) => Promise<string>;
   validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
   sendAnalyticsEvent?: (
     eventName: analyticsEvents,
     payload: Record<string, string>
+  ) => void;
+  appName?: string;
+  isBlockedAbuse?: boolean;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
   ) => void;
 };
 
@@ -59,9 +73,32 @@ const isValidMimeType = (
   );
 };
 
+const moderateImage = async (
+  file: File,
+  ext: string,
+  appName?: string
+): Promise<'ok' | 'flagged' | 'skipped'> => {
+  if (appName !== 'weblab2' || !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)) {
+    return 'skipped';
+  }
+  const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
+    'Content-Type': file.type || 'application/octet-stream',
+  });
+  if (!response.ok) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error with image moderation');
+    return 'skipped';
+  }
+  const json = await response.json();
+  if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
+    return 'flagged';
+  }
+  return 'ok';
+};
 /**
  * A custom hook that provides functionality for file uploads,
- * including validation, reading, and handling callbacks.
+ * including validation, reading, uploading to S3 for non-text files, and handling callbacks.
  *
  * @param props An object containing configuration options for the hook.
  *
@@ -70,10 +107,12 @@ const isValidMimeType = (
  * @property props.errorCallback - A function to be called with an error message if the upload fails.
  * @property props.validMimeTypes - An optional array of strings representing the allowed MIME types for uploaded files.
  *                                  If not provided, the hook will validate against the internal defaultMimeTypes array
+ * @property props.uploadExternalFile - Required so that we can upload non-text files to S3.
  * @property props.sendAnalyticsEvent - An optional function that will be called with analytics data. It will generated analytics events for
                                         analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
                                         Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
                                         If the function is not provided, then no analytics will be tracked
+ * @property props.multiple - Optionally disable multiple file uploads. Defaults to true.
  *
  * @returns An object containing the following properties:
  *
@@ -86,15 +125,27 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
+  uploadExternalFile,
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
+  appName,
+  onImageFlagged,
+  isBlockedAbuse,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
+  const [showBlockedModal, setShowBlockedModal] = useState(false);
 
   const changeHandler = useCallback(() => {
-    Array.from(inputRef.current?.files || []).forEach(file => {
+    const handleError = (error: Error) => {
+      sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
+        error: error.message,
+      });
+      errorCallback(error.message, callbackArgs.current);
+    };
+
+    Array.from(inputRef.current?.files || []).forEach(async file => {
       const fileNameErrorMessage = validateFileName(file.name);
       if (fileNameErrorMessage) {
         errorCallback(fileNameErrorMessage, callbackArgs.current);
@@ -106,7 +157,7 @@ export const useFileUploader = ({
           name: file.name,
           type: file.type,
         });
-        const [, fileType] = file.name.split('.');
+        const fileType = file.name.split('.').pop() || '';
         errorCallback(
           codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current
@@ -114,62 +165,113 @@ export const useFileUploader = ({
         return;
       }
 
-      const reader = new FileReader();
       if (file.type.match(/^text/)) {
+        const reader = new FileReader();
         reader.readAsText(file);
-      } else {
-        reader.readAsArrayBuffer(file);
-      }
 
-      reader.onload = () => {
-        if (!reader.result) {
-          callback(file.name, '', callbackArgs.current);
-        } else {
-          const result =
-            typeof reader.result === 'string'
-              ? reader.result
-              : bufferToString(reader.result);
+        reader.onload = () => {
+          if (!reader.result) {
+            callback(file.name, '', undefined, callbackArgs.current);
+          } else {
+            const result =
+              typeof reader.result === 'string'
+                ? reader.result
+                : bufferToString(reader.result);
+            sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+              name: file.name,
+              type: file.type,
+            });
+            callback(
+              file.name,
+              result as string,
+              undefined,
+              callbackArgs.current
+            );
+          }
+        };
+
+        reader.onerror = () => {
+          if (reader.error) {
+            handleError(reader.error);
+          }
+        };
+      } else {
+        try {
+          if (onImageFlagged) {
+            const ext = file.name.split('.').pop()?.toLowerCase() || '';
+            const moderationStatus = await moderateImage(file, ext, appName);
+            if (moderationStatus === 'flagged') {
+              const uploadFunction = async () => {
+                const url = await uploadExternalFile(file);
+                sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                  name: file.name,
+                  type: file.type,
+                });
+                callback(file.name, '', url, callbackArgs.current, true);
+              };
+              // FlagedImageModal will be shown to the user and user can choose to upload the image or not.
+              onImageFlagged(file, ext, uploadFunction);
+              return;
+            }
+          }
+
+          // For non-text files that are not moderated (eg, files uploaded in start mode by levelbuilders)
+          // and images that are deemed safe, upload directly to assets.
+          const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
             type: file.type,
           });
-          callback(file.name, result as string, callbackArgs.current);
+          callback(file.name, '', url, callbackArgs.current);
+        } catch (error) {
+          if (error instanceof Error) {
+            handleError(error);
+          }
         }
-      };
-      reader.onerror = () => {
-        if (reader.error) {
-          sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
-            error: reader.error.message,
-          });
-          errorCallback(reader.error.message, callbackArgs.current);
-        }
-      };
+      }
     });
   }, [
-    validMimeTypes,
-    validateFileName,
     sendAnalyticsEvent,
     errorCallback,
+    validateFileName,
+    validMimeTypes,
     callback,
+    uploadExternalFile,
+    appName,
+    onImageFlagged,
   ]);
+
+  const BlockedModal = useCallback(() => {
+    return showBlockedModal ? (
+      <UploadsDisabledModal onClose={() => setShowBlockedModal(false)} />
+    ) : null;
+  }, [showBlockedModal]);
 
   return useMemo(
     () => ({
       startFileUpload: (newCallbackArgs?: unknown) => {
         callbackArgs.current = newCallbackArgs;
 
+        if (isBlockedAbuse) {
+          setShowBlockedModal(true);
+          return;
+        }
+
         inputRef.current?.click();
       },
       FileUploaderComponent: () => (
-        <input
-          type="file"
-          style={{display: 'none'}}
-          onChange={changeHandler}
-          ref={inputRef}
-          multiple={multiple}
-        />
+        <>
+          <input
+            type="file"
+            style={{display: 'none'}}
+            onChange={changeHandler}
+            ref={inputRef}
+            multiple={multiple}
+          />
+          <BlockedModal />
+        </>
       ),
     }),
-    [changeHandler, inputRef, multiple]
+    [changeHandler, inputRef, multiple, isBlockedAbuse, BlockedModal]
   );
 };

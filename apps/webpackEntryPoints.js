@@ -28,6 +28,8 @@ const CODE_STUDIO_ENTRIES = {
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
+  'codeprojects_preview/page_not_found': './src/sites/studio/pages/codeprojects_preview/page_not_found.js',
+  'codeprojects_preview/show': './src/sites/studio/pages/codeprojects_preview/show.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
   'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
@@ -59,10 +61,12 @@ const CODE_STUDIO_ENTRIES = {
   'devise/registrations/finish_teacher_account': './src/sites/studio/pages/devise/registrations/finish_teacher_account.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
+  'devise/registrations/personalization_information': './src/sites/studio/pages/devise/registrations/personalization_information.js',
   'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
   'gates/logged_out': './src/sites/studio/pages/gates/logged_out.js',
   'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',
+  'errors/deprecated_course': './src/sites/studio/pages/errors/deprecated_course.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
@@ -198,14 +202,10 @@ const PEGASUS_ENTRIES = {
   'code.org/public/helloworld': './src/sites/code.org/pages/public/helloworld.js',
   'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-  'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-  'code.org/public/yourschoolteststaging': './src/sites/code.org/pages/public/yourschoolteststaging.js',
-  'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
   'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
-  'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
   'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
   'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
@@ -223,16 +223,12 @@ const PEGASUS_ENTRIES = {
   'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
   'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
-  'code.org/public/embeddable_census_map': './src/sites/code.org/pages/public/embeddable_census_map.js',
 
   // hourofcode.com
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
   'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
   'hourofcode.com/views/swiper_page_resources': './src/sites/hourofcode.com/pages/views/swiper_page_resources.js',
-
-  // shared between code.org and hourofcode.com
-  'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
 };
 
 // prettier-ignore
@@ -247,7 +243,6 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
   'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
   'pd/workshop_daily_survey/new_general_foorm': './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
-  'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
   'pd/workshop_enrollment/join': './src/sites/studio/pages/pd/workshop_enrollment/join.js',
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
   'pd/session_attendance/attendance_recorded': './src/sites/studio/pages/pd/session_attendance/attendance_recorded.js',

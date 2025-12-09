@@ -102,6 +102,7 @@ class Level < ApplicationRecord
     skip_url
     stay_on_level_after_submit
     skill_keys
+    additional_ai_evaluation_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -166,12 +167,6 @@ class Level < ApplicationRecord
 
   def finishable?
     !unplugged?
-  end
-
-  # This does not include DSL levels which also use teacher markdown
-  # but access it in a different way
-  def include_teacher_only_markdown_editor?
-    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
   end
 
   def enable_scrolling?
@@ -340,6 +335,7 @@ class Level < ApplicationRecord
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
+    'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
     'TextMatch', # dsl defined, covered in dsl
@@ -403,7 +399,7 @@ class Level < ApplicationRecord
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    dance_party_free_play = is_a?(Dancelab) && (try(:free_play?) || try(:uses_lab2?))
     project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
@@ -498,7 +494,7 @@ class Level < ApplicationRecord
   # Programming levels are levels where students write code.
   # These are the lab types that support programming used in 6-12th grade curriculum.
   def upper_grades_programming_level?
-    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+    %w(Applab Gamelab Javalab Pythonlab Weblab Music).include?(type)
   end
 
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
@@ -524,7 +520,7 @@ class Level < ApplicationRecord
   end
 
   def ai_tutor_available?
-    properties["ai_tutor_available"] == "true"
+    properties["ai_tutor_available"] == "true" || properties["ai_tutor_available"] == true
   end
 
   def summarize
@@ -910,8 +906,9 @@ class Level < ApplicationRecord
     properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: unit_group_unit) if script_level
     properties_camelized[:baseAssetUrl] = Blockly.base_url
     properties_camelized[:isAssessment] = script_level&.assessment
-    properties_camelized[:progressionType] = script_level&.primm_progression_type
     properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
+    # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
+    properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
@@ -939,6 +936,18 @@ class Level < ApplicationRecord
       # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
+    end
+
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
+    # project template level as this level.
+    rubric_level_id = script_level&.lesson&.rubric&.level_id
+    if rubric_level_id
+      if rubric_level_id == id
+        properties_camelized[:showRubric] = true
+      else
+        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
+        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+      end
     end
     properties_camelized
   end
@@ -1004,17 +1013,45 @@ class Level < ApplicationRecord
     {
       level_id: id,
       level_name: name,
-      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      unit_names: unit_names,
       skills: skill_identifiers,
     }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  # This method returns the names of all units that this level is part of.
+  # For contained levels, we also include the names of the units that
+  # the parent levels are part of.
+  # This is used to filter levels by unit for display on /skills.
+  def unit_names
+    unit_names = script_levels.map {|sl| sl.script.name}
+    parent_levels.each do |parent_level|
+      unit_names += parent_level.script_levels.map {|sl| sl.script.name}
+    end
+    unit_names.uniq.sort
   end
 
   def skill_identifiers
     skills.map {|skill| {id: skill.id, key: skill.key}}
   end
 
-  def skill_keys
-    skills.pluck(:key)
+  def remove_skill_key(skill_key)
+    leftover_skill_keys = JSON.parse(skill_keys)&.delete_if {|sk| sk == skill_key} if skill_keys
+    properties['skill_keys'] = leftover_skill_keys.empty? ? nil : leftover_skill_keys.to_json
+    save!
+  end
+
+  def add_skill_key(skill_key)
+    properties['skill_keys'] = if skill_keys && JSON.parse(skill_keys).is_a?(Array)
+                                 JSON.parse(skill_keys).push(skill_key).uniq.to_json
+                               else
+                                 [skill_key].to_json
+                               end
+    save!
+  end
+
+  def uses_theme_preference?
+    # These are the level types that set and use the theme preference in UserPreferences right now.
+    is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

@@ -1,6 +1,7 @@
 require 'active_support'
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/integer/time'
 require 'honeybadger/ruby'
 require 'dalli/elasticache'
 
@@ -27,6 +28,7 @@ module Cdo
         return nil unless memcached_hosts.present?
 
         ActiveSupport::Cache::MemCacheStore.new memcached_hosts, {
+          expires_in: 1.month, # prevent permanent entries, but let them stick around for a while
           value_max_bytes: 64.megabytes # max size of single value
         }
       end
@@ -35,7 +37,16 @@ module Cdo
     # Generic shared cache.
     # Use memcached if available, with FileStore as fallback.
     def self.cache
-      @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared')))
+      @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(cache_dir))
+    end
+
+    def self.cache_dir
+      # In parallel tests, use a unique cache directory per test process
+      if ENV['TEST_ENV_NUMBER']
+        dashboard_dir('tmp', 'cache', 'shared', ENV['TEST_ENV_NUMBER'])
+      else
+        dashboard_dir('tmp', 'cache', 'shared')
+      end
     end
   end
 end

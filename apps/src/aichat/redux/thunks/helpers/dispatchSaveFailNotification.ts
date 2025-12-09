@@ -1,24 +1,14 @@
+import {SaveErrorType} from '@cdo/apps/aichat/types';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {endSave} from '../../slice';
-import {getNewRemoveId} from '../../utils';
-import {addChatEvent} from '../addChatEvent';
+import {endSave, setSaveError} from '../../slice';
 
 export const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
-  errorMessage: string,
-  includeInChatHistory?: boolean
+  type: SaveErrorType,
+  message?: string
 ) => {
-  dispatch(
-    addChatEvent({
-      removeId: getNewRemoveId(),
-      text: errorMessage,
-      notificationType: 'error',
-      timestamp: Date.now(),
-      includeInChatHistory,
-    })
-  );
-
+  dispatch(setSaveError({type, message}));
   // Notify the UI that the save is complete.
   dispatch(endSave());
 };

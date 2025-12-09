@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:58:24.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Example 3: \"The Mystery of the Missing Cupcake\" \r\n\r\n**Narrative:** The player is a detective solving the case of a stolen cupcake. They interrogate suspects, gather clues, and make decisions that lead to different suspects being accused.\r\n\r\n**Key Features:**\r\n- Three interrogation questions with two possible answers each\r\n- Uses conditionals to track clues and determine the outcome\r\n- Fun and light-hearted, with simple logic puzzles",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def cupcake_mystery():\n    print(\"Welcome to The Mystery of the Missing Cupcake!\")\n    detective = input(\"What's your detective name? \")\n    print(f\"Detective {detective}, you have a case to solve!\")\n\n    suspect = input(\"Do you want to question Alex or Jordan first? (Alex/Jordan) \").lower()\n    if suspect == \"alex\":\n        print(\"Alex says they were at the library during the time of the theft.\")\n    elif suspect == \"jordan\":\n        print(\"Jordan claims they were baking cookies at home.\")\n    else:\n        print(\"Hmm... that's not an option. Try again.\")\n\n    clue = input(\"Do you check the kitchen for clues or the library? (kitchen/library) \").lower()\n    if clue == \"kitchen\":\n        print(\"You find crumbs leading to Jordan's backpack!\")\n    elif clue == \"library\":\n        print(\"At the library, you find Alex's signed logbook proving they were present.\")\n    else:\n        print(\"Hmm... that's not an option. Try again.\")\n\n    print(\"🎉 Congratulations! You've solved the mystery! 🎉\")\n\ncupcake_mystery()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Detective Theme",
+    "thumbnail_url": "https://images.code.org/7aca9500153a19e728dc0858ba1f21bc-cupcake-sweet-sprikles-pastry-muffin-cartoon-vector.jpg",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:58:24.947+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson19-level1c_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson19-level1c_2025\"}]"
+}]]></config>
+</Pythonlab>

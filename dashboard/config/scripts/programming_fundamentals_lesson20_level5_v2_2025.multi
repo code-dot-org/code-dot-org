@@ -1,0 +1,27 @@
+name 'programming-fundamentals-lesson20-level5_v2-2025'
+title 'Functions and Parameters'
+
+wrong '❌ Incorrect! Try again.`'
+wrong '✅ Correct! Princess Rhyme is trapped.'
+right '✅ Correct! Princess Rhyme is trapped." and "🏰 You begin your quest to the Castle in the Air!'
+wrong '✅ Correct! Princess Rhyme is trapped." and "You decide to wait for reinforcements.'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What will be the output of the following code if the user inputs "rhyme" and "yes"?
+
+```
+answer = input("Who is trapped in the Castle in the Air? ").lower()
+
+if answer == "rhyme":
+    print("✅ Correct! Princess Rhyme is trapped.")
+    rescue = input("Do you want to rescue her? (yes/no) ").lower()
+    if rescue == "yes":
+        print("🏰 You begin your quest to the Castle in the Air!")
+    else:
+        print("You decide to wait for reinforcements.")
+else:
+    print("❌ Incorrect! Try again.")
+
+```
+MARKDOWN

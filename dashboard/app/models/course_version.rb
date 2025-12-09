@@ -6,7 +6,6 @@
 #  key                :string(255)      not null
 #  display_name       :string(255)      not null
 #  properties         :text(65535)
-#  content_root_type  :string(255)      not null
 #  content_root_id    :integer          not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
@@ -15,9 +14,9 @@
 #
 # Indexes
 #
-#  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
-#  index_course_versions_on_course_offering_id                     (course_offering_id)
-#  index_course_versions_on_offering_id_and_key_and_type           (course_offering_id,key,content_root_type) UNIQUE
+#  index_course_versions_on_content_root_id      (content_root_id)
+#  index_course_versions_on_course_offering_id   (course_offering_id)
+#  index_course_versions_on_offering_id_and_key  (course_offering_id,key) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
@@ -28,10 +27,7 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
-  unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
-    attr_readonly :content_root_type
-    attr_readonly :content_root_id
-  end
+  attr_readonly :content_root_id
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -44,15 +40,10 @@ class CourseVersion < ApplicationRecord
   UNVERSIONED = 'unversioned'.freeze
 
   def units
-    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
+    content_root.default_units
   end
 
-  # "Interface" for content_root:
-  #
-  # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
-  #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
-  #   False for the CSP1-2019 Unit.
-  belongs_to :content_root, polymorphic: true, optional: true
+  belongs_to :content_root, class_name: "UnitGroup", optional: true
 
   alias_attribute :version_year, :key
 
@@ -85,20 +76,18 @@ class CourseVersion < ApplicationRecord
   end
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
-  # potential content root, i.e. a Unit or UnitGroup.
+  # potential content root, i.e. a UnitGroup.
   #
   # Examples:
-  #
-  # coursea-2019.script represents the content root for Course A, Version 2019.
-  # Therefore, it should contain "is_course true", which will cause this method to create the
-  # corresponding CourseVersion object.
   #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
   # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
   def self.add_course_version(course_offering, content_root)
-    if content_root.is_course?
-      raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
+    unless content_root.is_a?(UnitGroup)
+      raise "cannot create CourseVersion for content root #{content_root.name} that is not a UnitGroup"
+    end
 
+    if content_root.is_course?
       course_version = CourseVersion.find_or_initialize_by(
         course_offering: course_offering,
         key: content_root.version_year,
@@ -121,8 +110,7 @@ class CourseVersion < ApplicationRecord
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
-    #   - is_course? changed from true to false, such as if "is_course true" was removed from a .script file, or
-    #     family_name or version_year was removed from a .course file.
+    #   - is_course? changed from true to false, such as if family_name or version_year was removed from a .course file.
     content_root.course_version&.destroy_and_destroy_parent_if_empty if content_root.course_version != course_version
     content_root.course_version = course_version
 
@@ -142,32 +130,17 @@ class CourseVersion < ApplicationRecord
   end
 
   def all_standards_url
-    content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
+    standards_course_path(content_root)
   end
 
   def self.should_cache?
     Unit.should_cache?
   end
 
-  def self.course_offering_keys(content_root_type)
-    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
-      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
+  def self.course_offering_keys
+    Rails.cache.fetch("course_version/course_offering_keys", force: !should_cache?) do
+      CourseVersion.includes(:course_offering).filter_map {|cv| cv.course_offering&.key}.uniq.sort
     end
-  end
-
-  def latest_stable_version(family_name, locale_code: 'en-us')
-    latest_stable_unit = Unit.latest_stable_version(family_name, locale: locale_code)
-    latest_stable_unitgroup = UnitGroup.latest_stable_version(family_name, locale: locale_code)
-
-    if latest_stable_unit && !latest_stable_unitgroup
-      return latest_stable_unit
-    elsif !latest_stable_unit && latest_stable_unitgroup
-      return latest_stable_unitgroup
-    elsif latest_stable_unit && latest_stable_unitgroup
-      return latest_stable_unit.version_year >= latest_stable_unitgroup.version_year ? latest_stable_unit : latest_stable_unitgroup
-    end
-
-    nil
   end
 
   def recommended?(locale_code = 'en-us')
@@ -176,7 +149,7 @@ class CourseVersion < ApplicationRecord
 
     family_name = course_offering.key
 
-    latest_stable_version = latest_stable_version(family_name, locale_code: locale_code)
+    latest_stable_version = UnitGroup.latest_stable_version(family_name, locale: locale_code)
 
     latest_stable_version == content_root
   end
@@ -189,12 +162,10 @@ class CourseVersion < ApplicationRecord
   # CSD has multiple headers in the list with the units for that year under it.
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
-  def self.courses_for_unit_selector(unit_ids)
-    standalone_units = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.compact.uniq
-
-    unit_groups =  Unit.joins(unit_groups: :course_version).where(id: unit_ids).where(course_version: {content_root_type: 'UnitGroup'}).flat_map {|u| u.unit_groups.map(&:course_version)}.map(&:summarize_for_unit_selector).uniq
-
-    standalone_units.concat(unit_groups).sort_by {|c| c[:display_name]}
+  def self.courses_for_unit_selector(unit_ids, user)
+    Unit.joins(unit_groups: :course_version).where(id: unit_ids).
+        flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_assignable?(user)}.
+        map(&:summarize_for_unit_selector).uniq.sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -203,11 +174,10 @@ class CourseVersion < ApplicationRecord
       {
         id: id,
         key: key,
-        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
+        version_year: content_root.localized_version_title,
         content_root_id: content_root.id,
         name: content_root.localized_title,
         path: content_root.link,
-        type: content_root_type,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
         locales: content_root.supported_locale_names,
@@ -227,6 +197,7 @@ class CourseVersion < ApplicationRecord
     end
     {
       id: id,
+      course_name: content_root.name,
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
       units: unit_summaries.sort_by {|u| u[:position]},
     }
@@ -234,5 +205,13 @@ class CourseVersion < ApplicationRecord
 
   def hoc?
     !!course_offering&.hoc?
+  end
+
+  def hoai?
+    !!course_offering&.hoai?
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
   end
 end

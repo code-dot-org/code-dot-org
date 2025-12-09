@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'cdo/mailjet'
 require 'cdo/delete_accounts_helper'
 
@@ -15,6 +17,10 @@ module Services
     # renders the account unusuable.
     class PiiScrubber < Services::Base
       attr_reader :user, :email
+
+      REDACTED_STRING = 'redacted'
+      REDACTED_EMAIL_STRING = 'redacted@code.org'
+      EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i
 
       def initialize(user:)
         raise ArgumentError, 'user must be a soft-deleted User' unless user.is_a?(::User) && user.deleted_at.present?
@@ -39,6 +45,7 @@ module Services
           ao.assign_attributes(email: '', hashed_email: '', authentication_id: nil, data: nil)
           ao.save(validate: false) # Records may be invalid due to duplicate empty string emails
         end
+        user.primary_contact_info_id = nil # in rare cases, this might point to a different account's live auth option
         user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
         user.email = ''
         user.hashed_email = nil
@@ -52,19 +59,20 @@ module Services
         user.secret_picture_id = nil
         user.secret_words = nil
         user.studio_person&.destroy # Studio person record may contain emails
+        user.facilitator_info&.destroy
 
         # Users might have multiple accounts with the same email address.
         # If there is a live user with the same email, these data points will not be scrubbed.
         if email.present? && ::User.find_by_email(email).blank?
           EmailPreference.where(email: email).destroy_all
-          census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
-          csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
-          csfms.destroy_all
-          census_submissions.destroy_all
+          Census::CensusSubmission.where(submitter_email_address: email).find_each do |cs|
+            cs.update!(submitter_email_address: REDACTED_EMAIL_STRING, submitter_name: REDACTED_STRING)
+          end
         end
 
         # Names
         user.name = nil
+        user.given_name = nil
         user.family_name = nil
         user.username = SecureRandom.alphanumeric(20)
         user.ops_first_name = nil
@@ -74,8 +82,15 @@ module Services
         user.full_address = nil
         user.current_sign_in_ip = nil
         user.last_sign_in_ip = nil
-        user.data_transfer_agreement_request_ip = nil
+        user.data_transfer_agreement_request_ip = REDACTED_STRING
         user.user_geos.each(&:clear_user_geo)
+
+        # PD data
+        scrub_pd_surveys
+        scrub_pd_enrollments
+
+        # Project IP addresses (but no other project data)
+        scrub_project_ips
       end
 
       # Legacy delete acccounts helper client for purging data from deprecated tables
@@ -84,22 +99,55 @@ module Services
         @delete_accounts_helper ||= DeleteAccountsHelper.new(bypass_safety_constraints: true)
       end
 
+      private def pd_applications
+        @pd_applications ||= user.pd_applications.with_deleted
+      end
+
+      private def pd_enrollments
+        @pd_enrollments ||= user.pd_enrollments.with_deleted
+      end
+
+      private def scrub_project_ips
+        DASHBOARD_DB[:projects].
+          where(storage_id: user.user_storage_id).
+          update(updated_ip: '', updated_at: Time.now)
+      end
+
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
-      # Also deletes PII from Pegasus DB, which is planned to for deprecation and should not generally
-      # be accessed from Dashboard code. Pegasus DB is a separate database in the RDS cluster, and includes
-      # PII such as:
       # - PD applications and forms with email addresses, names, addresses
       # - Email addresses in Poste tables
       # - Location and email data in "forms" tables
       # - Email addresses in contact rollup tables
       private def scrub_legacy_data
         if email.present?
-          delete_accounts_helper.clean_and_destroy_pd_content(user.id, email)
+          delete_accounts_helper.anonymize_regional_partner_contacts(user.id)
+          delete_accounts_helper.anonymize_legacy_pd_tables(user.id, pd_applications.pluck(:id))
+          delete_accounts_helper.anonymize_peer_reviews(user.id)
+          delete_accounts_helper.anonymize_pd_applications(user.id, email)
+          delete_accounts_helper.anonymize_workshop_surveys(pd_enrollments.pluck(:id))
           delete_accounts_helper.remove_poste_data(email)
-          delete_accounts_helper.remove_census_submissions(email)
           delete_accounts_helper.purge_contact_rollups(email)
         end
-        delete_accounts_helper.clean_pegasus_forms_for_user(user)
+      end
+
+      private def scrub_pd_surveys
+        user.misc_surveys.each do |ms|
+          ms.update!(answers: nil)
+        end
+
+        user.simple_survey_submissions.each do |sss|
+          foorm_submission = sss.foorm_submission
+          if foorm_submission.present?
+            foorm_submission.update!(answers: foorm_submission.answers.gsub(EMAIL_REGEX, REDACTED_EMAIL_STRING))
+          end
+        end
+      end
+
+      private def scrub_pd_enrollments
+        pd_enrollments.find_each do |e|
+          e.destroy!
+          e.update!(first_name: nil, last_name: nil, email: '')
+        end
       end
 
       # Removes any third-party data that requires an API call. Called after

@@ -8,7 +8,7 @@ remain the same, and we'll just need to update the import statements once it's i
 ### Why there's semanticTag and visualAppearance props?
 
 We're using `semanticTag` prop to define the semantic tag of the element we're going to render (h1, h2, ..., h6, p, strong,
-em, figcaption ), and `visualAppearance` prop to define the components styles based on our Design system styling.
+em, figcaption, div), and `visualAppearance` prop to define the components styles based on our Design system styling.
 
 Short explanation is that we in order to use semantic tags correctly we might want to render an h2 element, but make it look like h5 or vice versa.
 
@@ -59,7 +59,7 @@ Here are some examples:
                 </Heading1>
             </div>
 
-// 2. (Not recomended since we're trying to avoid inline stlyes) Use inline styles:
+// 2. (Not recommended since we're trying to avoid inline styles) Use inline styles:
             <div>
                 <Heading1 visualAppearance="heading-lg" style={{color: '#f00'}}>
                     Some Heading
@@ -68,7 +68,7 @@ Here are some examples:
 
 ```
 
-**_Always relly on css selector priority, not the order of stylesheets being loaded._** (Since order of stylesheets load can be changed almost randomly [example here](https://codedotorg.slack.com/archives/C0T0PNTM3/p1710363328926969))
+**_Always rely on css selector priority, not the order of stylesheets being loaded._** (Since order of stylesheets load can be changed almost randomly [example here](https://codedotorg.slack.com/archives/C0T0PNTM3/p1710363328926969))
 
 ## Consuming This Package
 
@@ -85,6 +85,9 @@ import Typography from './../componentLibrary/typography';
 
 <Typography semanticTag="h1" visualAppearance="heading-xxl">Some Heading1</Typography>
 <Typography semanticTag="p" visualAppearance="body-two">Some body text</Typography>
+<Typography semanticTag="div" visualAppearance="body-three">
+  <p>Some body text</p>
+</Typography>
 
 
 ```

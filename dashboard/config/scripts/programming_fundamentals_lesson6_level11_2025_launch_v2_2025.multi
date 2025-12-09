@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson6-level11_2025-launch_v2-2025'
+title 'Check Your Understanding'
+
+question 'Which of the following best describes the difference between a function and a method in Python?'
+
+wrong 'A method performs a task, while a function cannot.'
+wrong 'A method is defined with a different keyword than a function.'
+wrong 'A function belongs to an object, but a method does not.'
+right 'A method is attached to an object, while a function is not.'
+
+allow_multiple_attempts false

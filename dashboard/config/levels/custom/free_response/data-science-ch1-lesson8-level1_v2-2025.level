@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:25.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "####Look at two graphs trying to help a human answer the question: “When should we have the party?”\r\n\r\n![bar graph showing when students want to have a party and each of the many options has a count of 1](https://images.code.org/88cc6295c0c3bc43351554e65c5ebd38-image-1744311924443.05.10 PM.png)\r\n&nbsp;\r\n\r\n![bar graph showing when students want to have a party with after school receiving 8 votes, during lunch receiving 6, and either receiving 6](https://images.code.org/d1e512fef214a5dca7dd3c0988581a9c-image-1744311969647.04.08 PM.png)\r\n\r\n####What do you notice? What do you wonder?\r\n####Which of these makes it easier for a human to decide when the party should be? Explain your answer.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:25.038+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson8-level1_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson8-level1_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

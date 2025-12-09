@@ -37,7 +37,6 @@ class Ability
       Pd::Workshop,
       Pd::Session,
       Pd::Enrollment,
-      Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
@@ -60,7 +59,10 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalTeacherEvaluation
+      LearningGoalTeacherEvaluation,
+      AidiffThread,
+      AidiffMessage,
+      AidiffArtifact,
     ]
     cannot :index, Level
 
@@ -80,7 +82,7 @@ class Ability
       environment.published || user.levelbuilder?
     end
 
-    can [:read, :show_by_keys], ProgrammingClass do |programming_class|
+    can [:read, :show_by_keys, :get_serialized], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
 
@@ -169,10 +171,13 @@ class Ability
       can :get_level_source, UserLevel
 
       can :evaluate, :openai_evaluate
+      can :evaluate_section, :openai_evaluate
+      can :match_teaching_profile, :openai_personalization
 
-      # all signed in users can access the aichat_request endpoint
-      # additional permission logic lives in the controller itself
+      # all signed in users can access the aichat_request and aichat_events endpoints
+      # additional permission logic lives in the controllers themselves
       can [:start_chat_completion, :chat_request], :aichat_request
+      can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
         can :manage, Section do |s|
@@ -186,7 +191,9 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
-        can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
+        can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
@@ -207,6 +214,9 @@ class Ability
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
         can :get_most_recent_user_level_evaluation, StudentWorkEvaluation do |evaluation|
           user.students.exists?(id: evaluation.student_id)
+        end
+        can :get_feedbacks, TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
         end
 
       end
@@ -276,10 +286,20 @@ class Ability
       end
 
       if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
-        can :chat_completion, :ai_diff
-        can :curriculum_courses, :ai_diff
         can :submit_feedback, AidiffMessage
+        can :create, AidiffThread
+        can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
+        if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
+          can :create, AidiffArtifact
+          can :create, AidiffExitTicket
+          can :create, AidiffLessonHook
+          can [:index], AidiffArtifact, user_id: user.id
+          can [:index, :update, :show], AidiffExitTicket, user_id: user.id
+          can [:index, :update, :show], AidiffLessonHook, user_id: user.id
+        end
       end
+
+      can :show, Rubric
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
@@ -308,20 +328,11 @@ class Ability
 
     can :read, Unit do |script, context_unit_group|
       unit_group = context_unit_group || script.original_unit_group
+      unit_group ||= script.get_professional_learning_course if script.old_professional_learning_course?
       if unit_group
         can?(:read, unit_group)
       else
-        if script.can_be_participant?(user) || script.can_be_instructor?(user)
-          if script.in_development?
-            user.levelbuilder?
-          elsif script.pilot?
-            script.has_pilot_access?(user)
-          else
-            true
-          end
-        else
-          false
-        end
+        user.levelbuilder?
       end
     end
 
@@ -432,7 +443,7 @@ class Ability
 
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
-      can [:upload, :destroy], :level_starter_asset
+      can [:upload, :upload_by_uuid, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
@@ -507,29 +518,8 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can :index, AiTutorInteraction do
-        user.can_view_student_ai_chat_messages? || user.has_ai_tutor_access?
-      end
-
-      can :create, AiTutorInteraction do
-        user.has_ai_tutor_access?
-      end
-
-      can :chat_completion, :openai_chat do
-        user.has_ai_tutor_access?
-      end
-
       can :find_toxicity, :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
-      end
-
-      # Additional logic that confirms that a given teacher or student should have access
-      # to a given student (or their own, in the case of a student viewer) chat history is in aichat_events_controller.
-      can [:log_chat_event, :chat_history], :aichat_event do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
-      end
-      can :submit_teacher_feedback, :aichat_event do
-        user.teacher_can_access_ai_chat?
       end
 
       can :user_has_access, :aichat
@@ -556,6 +546,7 @@ class Ability
         Lesson,
         ReferenceGuide,
         ScriptLevel,
+        TeacherFeedback,
         UserLevel,
         UserScript,
         DataDoc,

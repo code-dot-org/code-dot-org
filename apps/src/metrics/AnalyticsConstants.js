@@ -119,6 +119,8 @@ const EVENTS = {
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_BY_ENROLLED_USER_EVENT:
+    'Workshop Enrollment Page Visited By Enrolled User',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
@@ -318,17 +320,20 @@ const EVENTS = {
   AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
+  AI_DIFF_NOTIFICATIONS_OPENED: 'AI Differentiation Notifications Opened',
+  AI_DIFF_NOTIFICATION_URL_CLICKED:
+    'AI Differentiation Notification URL Clicked',
+  AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED:
+    'AI Differentiation Notification AI Prompt Clicked',
+
   // AI Tutor
-  AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
-  AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
-  AI_TUTOR_CHAT_EVENT: 'AI Tutor was asked a question',
-  AI_TUTOR_SUGGESTED_PROMPT_NONE: 'None - general chat',
-  AI_TUTOR_SUGGESTED_PROMPT_COMPILATION: 'Compilation',
-  AI_TUTOR_SUGGESTED_PROMPT_GENERIC_HELP: 'Generic Help',
-  AI_TUTOR_SUGGESTED_PROMPT_VALIDATION: 'Validation',
   AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
   AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
-  AI_TUTOR_FEEDBACK_SUBMITTED: 'AI Tutor Feedback Submitted',
+  AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
+  AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',
+  AI_TUTOR_CODE_SNIPPET_ADDED_TO_CONTEXT:
+    'AI Tutor Code Snippet Added to Context',
+  AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
@@ -443,11 +448,19 @@ const EVENTS = {
   // Add custom image to project
   UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
   SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
+  FLAGGED_CUSTOM_IMAGE:
+    'User attempting to upload an image that is flagged for abuse',
+  ACCEPT_FLAGGED_CUSTOM_IMAGE:
+    'User accepts and uploads a flagged custom image',
+  CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
-  // Curriculumm Recommender
+  // Import project
+  APPLAB_IMPORT_PROJECT: 'User Imports Another App Lab Project',
+
+  // Curriculum Recommender
   RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
@@ -497,12 +510,18 @@ const EVENTS = {
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
-  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
+  SUBMIT_AICHAT_REQUEST_INITIATED: 'User submits aichat request',
+  SUBMIT_AICHAT_REQUEST_SUCCESS: 'User aichat request succeeds',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+
+  // AI chat response copied. Shared across features; check event properties for usage and clientType
+  // to determine feature.
+  CHAT_COPIED: 'User copied an AI chat response',
+  CODE_COPIED: 'User copied AI-generated code snippet',
 
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
@@ -543,17 +562,7 @@ const EVENTS = {
   CODEBRIDGE_POP_OUT_IMAGE: 'Image popped out of console on codebridge',
   CODEBRIDGE_RUN_CLICK: 'Run button clicked on codebridge',
   CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
-  CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
-  CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
-  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
-    'Toggled to For Teachers Only on codebridge',
-  CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
   CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
-  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
-    'User changed font size on codebridge editor',
-  CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
-    'User changed font size on codebridge console',
-  CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
   BLOCKLY_LAB_SETTING_CHANGED: 'Setting changed in Blockly Lab',
@@ -592,6 +601,9 @@ const EVENTS = {
   TEACHER_NAV_COURSE_OVERVIEW_FAILED:
     'Teacher Nav Course Overview Load Failure',
 
+  DEPRECATED_CURRICULUM_ERROR_PAGE_VISITED:
+    'Deprecated Curriculum Error Page Visited',
+
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
@@ -613,8 +625,50 @@ const EVENTS = {
 
   // Lab2
   LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+  LAB2_VERSION_RESTORED: 'Version restored on lab2',
+  LAB2_VERSION_VIEWED: 'Version viewed on lab2',
+  LAB2_VERSION_COMMITTED: 'Version committed on lab2',
+
+  // Resource Panel
+  RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',
+  RESOURCE_PANEL_SETTINGS_PANEL_OPENED: 'Resource Panel Settings Panel Opened',
+  RESOURCE_PANEL_SETTINGS_CHANGED: 'Resource Panel Settings Changed',
+  RESOURCE_PANEL_LANGUAGE_CHANGE: 'Resource Panel Language Change',
+  RESOURCE_PANEL_SETTINGS_CHANGE: 'Resource Panel Settings Change',
+
+  // IntroJS flows
+  INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
+  INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
+  INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
 
   // AI Teaching Assistant - Differentiation
+  // Just In Time Professional Learning
+  PERSONALIZATION_ANSWER_SUBMITTED:
+    'Answered Just In Time PL Personalization Question',
+  PERSONALIZATION_PERSONA_MATCHED: 'User gets a matched persona',
+
+  // Dance Party (Lab2)
+  DANCE_PARTY_SESSION_END: 'Dance Party Session End',
+  GENERATE_DANCER_CLICKED: 'Generate Dancer Clicked',
+  REGENERATE_DANCER_CLICKED: 'Regenerate Dancer Clicked',
+  GENERATE_DANCER_BACK_TO_PROMPT_CLICKED:
+    'Generate Dancer Back To Prompt Clicked',
+  DANCE_PARTY_GENERATE_CODE_CLICKED: 'Dance Party Generate Code Clicked',
+  DANCE_PARTY_REGENERATE_CODE_CLICKED: 'Dance Party Regenerate Code Clicked',
+  DANCE_PARTY_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
+    'Dance Party Generate Code Back To Prompt Clicked',
+  DANCE_PARTY_GENERATE_CODE_USE_CODE_CLICKED:
+    'Dance Party Generate Code Use Code Clicked',
+
+  // Music Lab
+  // Note that some Music Lab events are already sent through the Music Lab-specific {@link AnalyticsReporter.ts}.
+  // Reporting will be consolidated once Amplitude support has been removed.
+  MUSIC_LAB_GENERATE_CODE_CLICKED: 'Music Lab Generate Code Clicked',
+  MUSIC_LAB_REGENERATE_CODE_CLICKED: 'Music Lab Regenerate Code Clicked',
+  MUSIC_LAB_GENERATE_CODE_BACK_TO_PROMPT_CLICKED:
+    'Music Lab Generate Code Back To Prompt Clicked',
+  MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED:
+    'Music Lab Generate Code Use Code Clicked',
 };
 
 const EVENT_GROUP_NAMES = {
@@ -662,4 +716,10 @@ const EVENT_GROUPS = {
   [EVENTS.FINISH_BUTTON_CERTIFICATE]: EVENT_GROUP_NAMES.FINISH_PROJECT_SHARING,
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS};
+const EXPERIMENTS = {
+  SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION:
+    'select_grades_taught_on_account_creation',
+  ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
+};
+
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS, EXPERIMENTS};

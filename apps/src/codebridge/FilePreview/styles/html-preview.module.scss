@@ -1,0 +1,71 @@
+@use '@cdo/apps/mixins.scss' as mixins;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+}
+
+// Styles applied when in full screen view mode
+.fullScreenPanelContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: variables.$z-index-fullscreen;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-neutral-primary);
+
+  .fullScreenPreviewContainer {
+    position: absolute;
+    top: -50px; // Account for header height
+    background: var(--neutral-black-alpha-80);
+    padding: 1rem;
+
+    & > .previewWrapper {
+      border-radius: 0 0 0.25rem 0.25rem;
+      overflow: hidden;
+    }
+  }
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previewWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-neutral-secondary);
+
+  @include mixins.focus-styles($outline-offset: -2px);
+}
+
+.previewIframe {
+  border: none;
+  box-sizing: border-box;
+}
+
+.desktopPreviewIframe {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mobilePreviewIframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 375px;
+  width: 100%;
+  outline: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+}

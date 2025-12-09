@@ -12,16 +12,9 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Loops
 
-Standard: Identify portions of a song that could be created with loops and write an algorithm representing the song
+Skill: Design songs with sections that repeat using loop blocks
 
-Lesson: Loops - Synthesis
-
-Skill Progression: Create a background pattern of multiple sounds
-
-Pretest Modality: Given algorithm / intent / incorrect code, match with code
-
-Posttest Modality: Given algorithm / intent / incorrect code, match with code
-
+Appears in Lesson: Loops - Synthesis
 MARKDOWN
 
 markdown <<MARKDOWN

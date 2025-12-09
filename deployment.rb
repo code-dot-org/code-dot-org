@@ -60,12 +60,20 @@ def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
 end
 
+def dashboard_engines_dir(*dirs)
+  deploy_dir('dashboard', 'engines', *dirs)
+end
+
 def dashboard_legacy_dir(*dirs)
   deploy_dir('dashboard', 'legacy', *dirs)
 end
 
 def frontend_dir(*dirs)
   deploy_dir('frontend', *dirs)
+end
+
+def vite_dir(*dirs)
+  frontend_dir('apps', 'studio', *dirs)
 end
 
 def pegasus_dir(*paths)

@@ -1,0 +1,23 @@
+name 'test-ai-powered-threats-defenses-lesson8-level1c'
+
+display_name 'Amara T.'
+bubble_choice_description 'A gamer from El Paso who uses public Wi-Fi and plays online with friends. Her logs show logins from Houston in the middle of the night—does that match her habits?'
+thumbnail_url 'https://images.code.org/fd9ad3d069939f2b2982b4722f97a105-image-1753989295582.png'
+
+markdown <<MARKDOWN
+#Amara T.
+
+#### Read about Amara and investigate the audit logs. Can you find any evidence of fraud?
+
+**Your teacher** should provide you with an **activity guide** and **Amara's audit logs**. However, if you would like a digital version of the **activity guide, [click here](https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing)**. If you would like a digital version of **Amara's audit logs, [Click here](https://docs.google.com/document/d/1Wsw61alnuJW1EPdb93Z1s5qo5wNE4xWS-A6mqi4m2fU/edit?usp=sharing)**.
+
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <img src="https://images.code.org/3d932b1aaf49381360bbb4d72c812f10-image-1754594902600.png" 
+       style="width: 300px; border: 2px solid black;">
+  <img src="https://images.code.org/8b7e91a7b649e26ef63c3f2599959391-image-1754595237549.png" 
+       style="width: 300px; border: 2px solid black;">
+</div>
+
+
+MARKDOWN

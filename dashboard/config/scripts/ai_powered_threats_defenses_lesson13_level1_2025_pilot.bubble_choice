@@ -1,0 +1,9 @@
+name 'ai-powered-threats-defenses-lesson13-level1_2025-pilot'
+display_name 'Explore an App'
+description 'Check out one of these four real-world apps! Then get to know the users who rely on them.'
+
+sublevels
+level 'ai-powered-threats-defenses-lesson10-level1a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson10-level1b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson10-level1c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson10-level1d_2025-pilot'

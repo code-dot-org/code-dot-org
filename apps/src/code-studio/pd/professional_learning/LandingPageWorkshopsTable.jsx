@@ -1,8 +1,10 @@
+import Button from '@code-dot-org/component-library/button';
+import Modal from '@code-dot-org/component-library/modal';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactTooltip from 'react-tooltip';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
@@ -14,6 +16,14 @@ import {
   DATE_FORMAT,
   TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
+
+import moduleStyles from './landingPageWorkshopsTable.module.scss';
+
+const workshopsTableButtonCommonProps = {
+  size: 's',
+  type: 'secondary',
+  color: 'black',
+};
 
 export default class LandingPageWorkshopsTable extends React.Component {
   static propTypes = {
@@ -57,14 +67,13 @@ export default class LandingPageWorkshopsTable extends React.Component {
   renderPreWorkshopSurveyButton = workshop => {
     const preWorkshopSurveyButton = (
       <Button
+        {...workshopsTableButtonCommonProps}
         onClick={() => utils.windowOpen(workshop.pre_workshop_survey_url)}
-        style={styles.button}
         disabled={this.moreThanTenDaysUntilWorkshop(
           workshop.workshop_starting_date
         )}
-      >
-        Complete pre-workshop survey
-      </Button>
+        text="Complete pre-workshop survey"
+      />
     );
 
     const surveyWaitMessage = `
@@ -92,49 +101,46 @@ export default class LandingPageWorkshopsTable extends React.Component {
   renderWorkshopActionButtons(workshop) {
     if (!!this.props.participantView) {
       return (
-        <div>
+        <div className={moduleStyles.workshopsTableActions}>
           {workshop.state === 'Not Started' &&
             workshop.pre_workshop_survey_url &&
             this.renderPreWorkshopSurveyButton(workshop)}
           {workshop.state === 'Ended' && (
             <Button
+              {...workshopsTableButtonCommonProps}
               onClick={() => this.openCertificate(workshop)}
-              style={styles.button}
               disabled={!workshop.attended}
-            >
-              Print certificate
-            </Button>
+              text="Print certificate"
+            />
           )}
           <Button
+            {...workshopsTableButtonCommonProps}
             onClick={() =>
               utils.windowOpen(
-                `/pd/workshop_enrollment/${workshop.enrollment_code}`
+                `/professional-learning/workshops/${workshop.id}`
               )
             }
-            style={styles.button}
-          >
-            Workshop details
-          </Button>
+            text="Workshop details"
+          />
           {workshop.state === 'Not Started' && (
             <Button
+              {...workshopsTableButtonCommonProps}
               onClick={() => this.showCancelModal(workshop.enrollment_code)}
-              style={styles.button}
-            >
-              Cancel enrollment
-            </Button>
+              color="destructive"
+              text="Cancel enrollment"
+            />
           )}
         </div>
       );
     } else {
       return (
         <Button
+          {...workshopsTableButtonCommonProps}
           onClick={() =>
             utils.windowOpen(`/pd/workshop_dashboard/workshops/${workshop.id}`)
           }
-          style={styles.button}
-        >
-          Workshop Details
-        </Button>
+          text="Workshop Details"
+        />
       );
     }
   }
@@ -219,23 +225,22 @@ export default class LandingPageWorkshopsTable extends React.Component {
 
     return (
       <div>
-        <Modal
-          show={this.state.showCancelModal}
-          onHide={this.dismissCancelModal}
-          style={{width: 560}}
-        >
-          <Modal.Body>
-            Are you sure you want to cancel your enrollment in this course?
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.cancelEnrollment} bsStyle="primary">
-              Yes - cancel my enrollment
-            </Button>
-            <Button onClick={this.dismissCancelModal}>
-              No - stay enrolled in this class
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        {this.state.showCancelModal && (
+          <Modal
+            onClose={this.dismissCancelModal}
+            title="Cancel Enrollment"
+            description="Are you sure you want to cancel your enrollment in this course?"
+            primaryButtonProps={{
+              onClick: this.cancelEnrollment,
+              text: 'Yes - cancel my enrollment',
+              color: 'destructive',
+            }}
+            secondaryButtonProps={{
+              onClick: this.dismissCancelModal,
+              text: 'No - stay enrolled in this class',
+            }}
+          />
+        )}
         {this.props.workshops && (
           <section>
             {this.props.tableHeader && (
@@ -248,9 +253,3 @@ export default class LandingPageWorkshopsTable extends React.Component {
     );
   }
 }
-
-const styles = {
-  button: {
-    width: '100%',
-  },
-};

@@ -1,0 +1,98 @@
+name 'pl_sandbox_aif_2_U1-CSS-13'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing CSS 
+
+####  Now that we have the structure of a website, let’s add some style!
+
+## What is CSS?
+
+#### **CSS (Cascading Style Sheets)** is the language that controls the **look and feel** of a webpage.
+
+#### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
+
+<img src="https://images.code.org/f68c77c95058c8b47fa5edd30769402c-image-1761070407703.png" alt="Image CS Discoveries students" width="200px" style="border-radius:20px; float:right; margin: 0 50px 5px 10px;">
+
+## Key things CSS does
+
+- #### Changes colors, fonts, and text sizes
+- #### Controls spacing (margins, padding, alignment)
+- #### Adds borders, backgrounds, and styles
+- #### Defines layout (how sections of a page are arranged)
+
+<div style="clear:both;"></div>
+
+---
+
+# How it Works 
+#### The CSS file will connect to your HTML file using a line inside the `<head>` section: 
+
+<img src="https://images.code.org/25a94e1abb5764272bb756bd05e472bf-image-1763399640046.png" alt="link code to connect html to css file" width="450px" style="display: block;  float:left ;border-radius:10px; ">
+
+<div style="clear:both;"></div>
+
+#### That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
+
+#### Once that link is made, the browser looks at the CSS file and matches each selector (like body, header, or h1) to the same element in your HTML.
+
+## CSS Selectors and Properties
+
+<img src="https://images.code.org/d661e83194c3820b2be249901b728d9b-image-1763399381136.png" alt="sample css code with header, body, h1 and h2 selectors labeled" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: Arial, sans-serif; font-size: 14pt; margin: 20px 0;">
+
+  <!-- 🎯 Selectors Card -->
+  <div style="flex: 1 1 350px; background-color: #f7f8fa; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">🎯 <strong>Selectors</strong></h4>
+    <p style="margin-bottom: 12px;font-size: 14pt">
+      Selectors are the names of the HTML elements you want to style.
+      In this example:
+    </p>
+    <ul style="list-style-type: none; padding-left: 0; line-height: 1.5;">
+      <li style ="font-size: 14pt"><strong>header →</strong> Targets the &lt;header&gt; section of the HTML page.</li>
+      <li style ="font-size: 14pt"><strong>body →</strong> Styles the whole page.</li>
+      <li style ="font-size: 14pt"><strong>h1 →</strong> Styles the main heading inside the body.</li>
+      <li style ="font-size: 14pt"><strong>h2 →</strong> Styles subheadings inside the body.</li>
+    </ul>
+    <p style="margin-top: 12px;font-size: 14pt">
+      Each selector acts like a label — the browser looks for that tag in the HTML and applies the matching styles.
+    </p>
+  </div>
+
+  <!-- 🎨 Properties and Values Card -->
+  <div style="flex: 1 1 350px; background-color: #dlb9e3; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">🎨 <strong>Properties and Values</strong></h4>
+    <p style="margin-bottom: 12px;font-size: 14pt">
+      Inside each set of curly braces { }, you see properties and values.
+      Each property controls one visual or layout feature, and the value tells the browser how to display it.
+    </p>
+    <ul style="list-style-type: none; padding-left: 0; line-height: 1.5;">
+      <li style ="font-size: 14pt"><strong>background-color: lightblue; →</strong> fills the header background with light blue.</li>
+      <li style ="font-size: 14pt"><strong>text-align: center; →</strong> centers the text horizontally.</li>
+      <li style ="font-size: 14pt"><strong>font-family: Arial, sans-serif; →</strong> sets the font style for all text inside &lt;body&gt;.</li>
+      <li style ="font-size: 14pt"><strong>max-width: 800px; →</strong> limits how wide the content can stretch.</li>
+      <li style ="font-size: 14pt"><strong>color: #0056b3; →</strong> changes text color using a hex code.</li>
+      <li style ="font-size: 14pt"><strong>margin and padding →</strong> control spacing outside or inside an element.</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    <i> Selectors point to what you want to style. Properties describe how it should look. Values tell the browser exactly what to do.</i>
+</p>
+
+”
+
+
+
+## What's Next?
+
+#### Now, let’s add some style to your basic website by adding a CSS file.
+
+
+MARKDOWN

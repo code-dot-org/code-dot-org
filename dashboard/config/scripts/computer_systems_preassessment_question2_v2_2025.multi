@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question2_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 2'
+
+wrong 'Hard drive'
+right 'Central Processing Unit (CPU)'
+wrong 'Graphics card'
+wrong 'RAM'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which component processes and executes instructions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Hardware
+MARKDOWN

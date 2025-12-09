@@ -46,6 +46,12 @@ en:
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
             lockout_flow: "cannot be updated because you need parent or guardian permission first."
+        user/facilitator_info:
+          attributes:
+            bio:
+              has_profanity: contains profanity
+            user:
+              not_facilitator: must have the facilitator permission
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -85,7 +91,9 @@ en:
         user_type: 'Account Type'
         us_state: 'State'
         ai_rubrics_disabled: 'Disable AI Rubric Feature'
-
+      user/facilitator_info:
+        user: User
+        bio: Biography
   beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
@@ -302,6 +310,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  inactive_user_purge_mailer:
+    teacher_soft_delete_warning_subject: 'Action Required: Your Code.org Account Will Be Deleted Due to Inactivity'
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
@@ -1447,6 +1457,11 @@ en:
     project_type: "project type"
     button: "View alternative courses"
     projects_button: "Go to Projects"
+    course1_retired: We’re sorry! Course 1 has been retired. We recommend [Course A](%{coursea_url}) or [Pre-reader Express](%{pre_reader_express_url}) as a replacement.
+    course2_retired: We’re sorry! Course 2 has been retired. We recommend [Course C](%{coursec_url}) as a replacement, or [Course D](%{course_d_url}) for older/more experienced students.
+    course3_retired: We’re sorry! Course 3 has been retired. We recommend [Course E](%{course_e_url}) as a replacement, or [Course F](%{course_f_url}) for older/more experienced students.
+    course4_retired: We’re sorry! Course 4 has been retired. We recommend [Course F](%{course_f_url}) as a replacement.
+    accelerated_course_retired: We’re sorry! The Accelerated Course has been retired. We recommend [Express Course](%{express_course_url}) as a replacement.
   hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
   hoc_tutorial_email_content:
     dear_teacher: "Dear %{teacher_name},"
@@ -1476,6 +1491,7 @@ en:
       launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
+      linking_page_description_restricted: "Choose the sign-in method allowed by your school"
       sign_in_and_connect: "Sign in and connect"
       successfully_linked: "You have successfully linked your Code.org account!"
       successfully_unlinked: "You have successfully unlinked your Code.org account."

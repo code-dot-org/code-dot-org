@@ -168,6 +168,14 @@ $text-horizontal-padding: 2.6cqw;
         bottom: $text-offset-y;
         right: $text-offset-x;
       }
+
+      .ttsContainer {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        right: 7px;
+        bottom: 7px;
+      }
     }
   }
 

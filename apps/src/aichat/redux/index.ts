@@ -14,6 +14,7 @@ export {
   setStartingAiCustomizations,
   setStudentChatHistory,
   setUserHasAichatAccess,
+  setClientType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -21,5 +22,6 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
-  setSavedAiCustomizationProperty,
+  clearHasSetStartingCustomizations,
+  setChatWorkspaceSelectedTab,
 } from './slice';

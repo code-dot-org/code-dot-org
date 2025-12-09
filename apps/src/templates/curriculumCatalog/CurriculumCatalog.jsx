@@ -1,23 +1,20 @@
 // The following styles are imported in a very specific order to preserve UI consistency.
-// `HeaderBanner` imports `typography.scss`
 // `CurriculumCatalogCard` imports `2022-rebrand-update.scss`
 // `typography.scss` has conflicting styles with `2022-rebrand-update.scss` (specifically for `h4` and `p` elements)
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
-import HeaderBanner from '../HeaderBanner';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
-import {
-  Heading5,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import HeroBanner from '@code-dot-org/component-library/heroBanner';
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMathcingSearchResultsFound';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
@@ -27,7 +24,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.svg';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
 
 import {curriculumDataShape} from './curriculumCatalogConstants';
@@ -221,7 +218,6 @@ const CurriculumCatalog = ({
                 course_id,
                 course_offering_id,
                 script_id,
-                is_standalone_unit,
                 is_translated,
                 //Expanded Card Props
                 device_compatibility,
@@ -251,7 +247,6 @@ const CurriculumCatalog = ({
                   courseId={course_id}
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
-                  isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
                   deviceCompatibility={device_compatibility}
                   description={description}
@@ -278,23 +273,31 @@ const CurriculumCatalog = ({
       );
     } else {
       return (
-        <div className={style.catalogContentNoResults}>
-          <img src={CourseCatalogNoSearchResultPenguin} alt="" />
-          <Heading5>{i18n.noCurriculumSearchResultsHeader()}</Heading5>
-          <BodyTwoText>{i18n.noCurriculumSearchResultsBody()}</BodyTwoText>
-        </div>
+        <NoMatchingSearchResultsFound
+          illustrationImageProps={{
+            src: CourseCatalogNoSearchResultPenguin,
+            style: {width: '5em'},
+          }}
+          noResultsHeadingText={i18n.noCurriculumSearchResultsHeader()}
+          noResultsSubHeadingText={i18n.noCurriculumSearchResultsBody()}
+        />
       );
     }
   };
 
   return (
     <>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        backgroundUrl={CourseCatalogBannerBackground}
-        imageUrl={CourseCatalogIllustration01}
+      <HeroBanner
+        className={style.curriculumCatalogHeroBanner}
+        data-theme="Dark"
+        heading={i18n.curriculumCatalogHeaderTitle()}
+        subHeading={i18n.curriculumCatalogHeaderSubtitle()}
+        imageProps={{src: CourseCatalogIllustration01}}
+        backgroundImageUrl={CourseCatalogBannerBackground}
+        withWideText
+        hideImageOnSmallScreen
       />
+
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>

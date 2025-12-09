@@ -5,7 +5,7 @@ module Foorm
     self.use_transactional_test_case = true
 
     setup_all do
-      @levelbuilder = create :levelbuilder
+      @levelbuilder = create(:levelbuilder)
     end
 
     test_redirect_to_sign_in_for :editor
@@ -33,7 +33,7 @@ module Foorm
 
     test 'update succeeds on existing form' do
       sign_in @levelbuilder
-      existing_form = create :foorm_form
+      existing_form = create(:foorm_form)
       put :update_questions, params:  {
         id: existing_form.id,
         questions: {pages: [{elements: [{name: "test"}]}]}
@@ -43,7 +43,7 @@ module Foorm
 
     test 'create fails on existing form' do
       sign_in @levelbuilder
-      existing_form = create :foorm_form
+      existing_form = create(:foorm_form)
       post :create, params:  {
         name: existing_form.name,
         version: existing_form.version,
@@ -54,7 +54,7 @@ module Foorm
 
     test 'update fails if published state is changed from true to false' do
       sign_in @levelbuilder
-      existing_form = create :foorm_form, published: true
+      existing_form = create(:foorm_form, published: true)
       put :update_questions, params:  {
         id: existing_form.id,
         questions: {published: false, pages: [{elements: [{name: "test"}]}]}
@@ -75,7 +75,7 @@ module Foorm
 
     test 'can publish a draft form' do
       sign_in @levelbuilder
-      form = create :foorm_form, published: false
+      form = create(:foorm_form, published: false)
       put :publish, params: {id: form.id}
       assert_response :success
 

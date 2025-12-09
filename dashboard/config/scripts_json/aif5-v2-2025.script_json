@@ -1,0 +1,4217 @@
+{
+  "script": {
+    "name": "aif5-v2-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "2025",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-09-25 20:07:14 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "aif5-v2-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Lesson 1: Project - Innovation Simulation Part 1",
+      "name": "Lesson 1: Project - Innovation Simulation Part 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. \n\nOn the first two day, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. Then the second day is focused on researching three different computing innovations and discussing these innovations with team members. ",
+        "preparation": "* Prepare the role badges\n* Review the Innovation Simulation Planning Guide",
+        "student_overview": "The class begins a simulation which will continue on at different points throughout the unit. In this simulation, students take on the roles of different stakeholders in school communities converging at a convention where they eventually will deliver a proposal on the best computing innovation for the Future School. In this lesson, students explore what a computing innovation is, do a brainstorm activity, reflect on their character role, and finally learn how to research an innovation. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 2: Data Policies and Privacy",
+      "name": "Lesson 2: Data Policies and Privacy",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power.",
+        "preparation": "* Check a few popular websites with students in your school to make sure they'll be able to access those sites' data policies over your school network.",
+        "student_overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 3: The Value of Privacy",
+      "name": "Lesson 3: The Value of Privacy",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students develop their own opinions on the privacy tradeoffs inherent in many modern computing innovations. At the beginning of the lesson students watch a video on facial recognition technology that presents the tradeoffs between convenience and privacy and asks them to determine whether they think the tradeoff is worth it. Students respond to two videos that look at different tradeoffs between privacy, security, and convenience. Students then evaluate the website or app they investigated in the previous lesson to determine if they think the benefits of the service outweigh the privacy risks. At the end of the class students discuss whether they generally think convenience outweighs privacy concerns.",
+        "preparation": "* Review the videos to make sure you are prepared to lead the subsequent discussions\n* Make sure you have access to the activity guides students completed in the previous lesson",
+        "student_overview": "Students develop their own opinions on the privacy tradeoffs inherent in many modern computing innovations. At the beginning of the lesson students watch a video on facial recognition technology that presents the tradeoffs between convenience and privacy and asks them to determine whether they think the tradeoff is worth it. Students respond to two videos that look at different tradeoffs between privacy, security, and convenience. Students then evaluate the website or app they investigated in the previous lesson to determine if they think the benefits of the service outweigh the privacy risks. At the end of the class students discuss whether they generally think convenience outweighs privacy concerns."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 4: Project - Innovation Simulation Part 2",
+      "name": "Lesson 4: Project - Innovation Simulation Part 2",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "On Day 3 of the project, students make further progress on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose.",
+        "preparation": "* Ensure students have access to their project guides.",
+        "student_overview": "Students make further projects on their projects while also considering the unintended consequences their proposed innovations may have. First students watch a short video about the ways technology may have unintended consequences. Students then meet with their teams to review the different proposals for computing innovations that each team member is considering. Teams review the different ideas in character and help one another consider potential benefits and harms of each plan. Collectively they narrow down their proposals to a set that seem collectively most beneficial and present a coherent vision for the Future School. With whatever time is remaining students are able to work on one-pagers for the one innovation they chose."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 5: Security Risks Part 1",
+      "name": "Lesson 5: Security Risks Part 1",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. ",
+        "preparation": "* Read through the levels to familiarize yourself with the topics.\n* Think through the logistics of running the jigsaw activity.",
+        "student_overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 6: Security Risks Part 2",
+      "name": "Lesson 6: Security Risks Part 2",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "The lesson begins with a review of security risks by watching a video on Cybersecurity & Crime. Following this, the class does an investigation into the Equifax breach, and what went wrong. The class ends with a Kahoot quiz to review security risks. ",
+        "preparation": "* Listen to the podcast segments and practice starting and stopping at the marked places\n* Get the Kahoot quiz set up and ready to go for the Wrap Up",
+        "student_overview": "The lesson begins with a review of security risks by watching a video on Cybersecurity &amp; Crime. Following this, the class does an investigation into the Equifax breach, and what went wrong. The class ends with a Kahoot quiz to review security risks. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 7: Project - Innovation Simulation Part 3",
+      "name": "Lesson 7: Project - Innovation Simulation Part 3",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson is primarily a work day for students to complete their innovation 1-pagers. Students should work close to their teammates in case they want to discuss ways to make their proposals more aligned around a cohesive vision for the Future School. Otherwise students should have the entire class period to work independently.",
+        "preparation": "* Make sure students will have access to the 1-pagers they started in the last project lesson.",
+        "student_overview": "Complete your one pager for your computing innovation."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 8: Protecting Data Part 1",
+      "name": "Lesson 8: Protecting Data Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. ",
+        "preparation": "* Explore the encryption widgets\n* Watch the video",
+        "student_overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 9: Protecting Data Part 2",
+      "name": "Lesson 9: Protecting Data Part 2",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson is a guided tour of multifactor authentication and software updates that students can use to protect their data. Following these discussions, students are introduced to a stimulus question where they will apply their knowledge gained throughout the unit to answer questions about an innovations data, benefits and harms, effects, and security or privacy concerns. ",
+        "preparation": "* Preview the slides\n* Read through the stimulus question",
+        "student_overview": "This lesson is a guided tour of multifactor authentication and software updates that students can use to protect their data. Following these discussions, students are introduced to a stimulus question where they will apply their knowledge gained throughout the unit to answer questions about an innovations data, benefits and harms, effects, and security or privacy concerns. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "Lesson 10: Project - Innovation Simulation Part 4",
+      "name": "Lesson 10: Project - Innovation Simulation Part 4",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson covers the final three days of the Innovation Simulation Project.\n* On Day 5, students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. \n* On Day 6, students will get feedback on their group innovation proposal from one other group. They will then have the remainder of the class to finalize their group presentation and individual proposals which will be presented and submitted in the following class.\n* On Day 7, students present the group Innovation Proposal they have been working on throughout the units. After each group does a brief presentation students do a gallery walk of their classmates' projects, asking questions and reviewing any materials. Students then vote for the unified project and overall innovation they found most compelling. At the end of the lesson students will submit their projects for grading. ",
+        "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.",
+        "student_overview": "Students meet with their groups to develop a shared artifact or presentation that presents their collective vision for the Future School. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c3c34136-e4b6-44dc-90b9-e3539c54118b",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b",
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a",
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "32ae50c9-096f-4fc9-b819-1242c29e2edd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32ae50c9-096f-4fc9-b819-1242c29e2edd",
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "bed1065c-0ac2-476e-ad00-441b95adc424",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bed1065c-0ac2-476e-ad00-441b95adc424",
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "7d8c0361-9b0c-4ba0-b9a6-1a828266eb7a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d8c0361-9b0c-4ba0-b9a6-1a828266eb7a",
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "cb127d6e-7da4-4a1f-aaa3-d2fd052555c3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb127d6e-7da4-4a1f-aaa3-d2fd052555c3",
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "7b25abf4-4be2-464f-8002-9b92918dbf14",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b25abf4-4be2-464f-8002-9b92918dbf14",
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6",
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c",
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "4ebcaa1a-0a4e-4d45-87e7-0cff8b37ad15",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ebcaa1a-0a4e-4d45-87e7-0cff8b37ad15",
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "9b3c7082-1dfb-4eb3-9121-855ebf3bdea8",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b3c7082-1dfb-4eb3-9121-855ebf3bdea8",
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "8d83f703-3e42-4106-a2d0-07c7179e9cc7",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d83f703-3e42-4106-a2d0-07c7179e9cc7",
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "3ef39985-708b-470b-b287-be3cd868e781",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ef39985-708b-470b-b287-be3cd868e781",
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "42472f96-4870-4b93-9680-ca7a490d6c47",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47",
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "c97a055b-a2d8-485f-8428-6afdbca6ea54",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c97a055b-a2d8-485f-8428-6afdbca6ea54",
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "1e06e33b-24a6-40ed-bd72-78cd6fceab17",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e06e33b-24a6-40ed-bd72-78cd6fceab17",
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "40f776c8-8b16-4d82-b874-dc2278fb8220",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40f776c8-8b16-4d82-b874-dc2278fb8220",
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811",
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "99162546-0c67-4af4-99ac-9fb6ce95724e",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99162546-0c67-4af4-99ac-9fb6ce95724e",
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "00caba63-8ce2-4eda-950b-277bb2406ff4",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00caba63-8ce2-4eda-950b-277bb2406ff4",
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "2a252ee4-e689-4384-9ffd-a4a2b05e8d12",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2a252ee4-e689-4384-9ffd-a4a2b05e8d12",
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "c2fb21f6-d346-4135-95be-4a11549e641f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2fb21f6-d346-4135-95be-4a11549e641f",
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "125b027f-6c64-4aee-97a2-13e32e48f624",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "125b027f-6c64-4aee-97a2-13e32e48f624",
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "d7a8fb7e-855b-4891-8347-fb10644cc902",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902",
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "c900022c-a45e-4c7c-b3b9-c40ab723321b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c900022c-a45e-4c7c-b3b9-c40ab723321b",
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "cba4edb8-a2e8-4677-b278-4798a27dead4",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cba4edb8-a2e8-4677-b278-4798a27dead4",
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "df3d6ade-98fd-4d6a-9c8c-0588ae1f6126",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df3d6ade-98fd-4d6a-9c8c-0588ae1f6126",
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "d2899f9e-f48e-45ba-9a41-01664f8da820",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2899f9e-f48e-45ba-9a41-01664f8da820",
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "e7a1f7d7-ab06-4486-a568-068a9da36b95",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7a1f7d7-ab06-4486-a568-068a9da36b95",
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "03a1fada-6046-47c4-bd87-55ef2402e025",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03a1fada-6046-47c4-bd87-55ef2402e025",
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "f6b744c8-3241-4e66-8980-3acb050f4738",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 5"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738",
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 6"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d",
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 7"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a",
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "96d07c3b-eaa3-4491-b750-e4a085a6857b",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96d07c3b-eaa3-4491-b750-e4a085a6857b",
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "key": "6176f201-05b0-4db7-a77f-19a32139a461",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6176f201-05b0-4db7-a77f-19a32139a461",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d46246c0-1773-405d-ae03-df63cd5643f8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Welcome to the Future School Convention. You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on a the Future School. At the end of the convention, your team will pitch your best idea to a panel of judges.",
+        "name": "Start the Simulation",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d46246c0-1773-405d-ae03-df63cd5643f8",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "07ae98eb-2710-4b2e-bda7-33132a4c7f97",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Group:** Place students in groups of 5-6.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Small Classes:** If you have less than ten students, you can leave out the *PARENT* role and divide into groups of 4-5.\n\n**Large Classes:** More than one student can have the same character assignment, as long as they are not in the same group. You may also opt to use the blank badges and nameplates to create your own characters. Consider the school counselor or the bus driver. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "07ae98eb-2710-4b2e-bda7-33132a4c7f97",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "418ac749-dbda-4d54-a512-d1b8d667b141",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** Hand out a random role card to each group. Each group should have at least one *TEACHER*, *STUDENT*, *STAFF*, *PARENT*, and *ADMIN*. Students will need\n\n* A character bio from the Innovation Simulation Character Bios\n* A nameplate from the Innovation Simulation Nameplates\n* A badge from the Innovation Simulation Badges\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Each students should tape their badge to their shirt and place their nameplate on their desk after folding on the marked lines. When the nameplates and badges are out, students should be in simulation mode."
+      },
+      "seeding_key": {
+        "activity_section.key": "418ac749-dbda-4d54-a512-d1b8d667b141",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "8c9a7b59-8031-4ab4-b2d1-1aa70c50a283",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** The introductory activity sets the stage for the simulation project, which will run throughout the unit. Encourage students to stay in their roles and speak from their specific points of view.  For example, when talking students might say \"As the art teacher, I think... \" or \"As a parent, I know what is best for my student and that is... \""
+      },
+      "seeding_key": {
+        "activity_section.key": "8c9a7b59-8031-4ab4-b2d1-1aa70c50a283",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "bbb6652d-7a6d-4133-8368-dd891d68541d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read over your role sheet and introduce yourself to your group.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You role involves being the ultimate \"role keeper\". If you buy-in to the simulation, your students will have a greater chance of fully participating and keeping engagement high. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bbb6652d-7a6d-4133-8368-dd891d68541d",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "1c5b6fd6-1651-4668-b978-0cdb6b0588e9",
+      "position": 6,
+      "properties": {
+        "description": "Computing Innovations are created by people to solve problems. They include programs as part of how they function. They can be physical (e.g., self-driving car), non-physical computing software (e.g., picture editing software), or non-physical computing concepts (e.g., e-commerce). The way lives are lived has changed because of computing innovations. Let's rewatch a video to remind ourselves of this fact.",
+        "duration": "35",
+        "name": "Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c5b6fd6-1651-4668-b978-0cdb6b0588e9",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "f5215b55-cafb-4aef-bd13-3094b01e28f5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play the video *Computer Science is Changing Everything* (end at 4:40)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5215b55-cafb-4aef-bd13-3094b01e28f5",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "63863017-d91d-4a3b-bd58-8530d0b9f39f",
+      "position": 8,
+      "properties": {
+        "description": "#### Innovation Simulation Project\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \n\n**Distribute:** Give each student a copy of the Innovation Simulation Project Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "63863017-d91d-4a3b-bd58-8530d0b9f39f",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "acdc6105-bb9e-41db-8f91-4c88fab3ddd5",
+      "position": 9,
+      "properties": {
+        "description": "Before your teams get started investigating computing innovations for Future School, we want to make sure everyone understands how to conduct the necessary research. Let's examine an innovation that is not related to schools. Let's consider an innovation that would benefit long distance travel.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "acdc6105-bb9e-41db-8f91-4c88fab3ddd5",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "6cbacdb8-bbbb-4fc4-96c9-eb443742d339",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 2 - Research (10 mins):** Model doing a Google search with your students to determine a computing innovation related to long distance travel. You might directly Google the term, search out articles, or turn to Wikipedia. After you have found a computing innovation that is promising, model filling out the table in the Project Guide. You can project a copy of the Project Guide while doing this, flipping back and forth between the guide and the website you are using. You do not need to fill out the last section in the table, but you should discuss with your students how they will fill this section out. It is important to note that students will have the next lesson to conduct their own research.  Today, your goal is to only model how to approach this research and using the Project Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Doing this research may take some practice. We recommend trying a few different search terms a few times before class on your own, to assess where things may be tricky.  Some example terms to search might be general terms like \"New technologies for schools\" or \"Technologies to change schools\".  You could also model searching for technology related to specific roles such as searching for \"Technology for art teachers\".\r\n\r\nIt's important to model to students how to use search terms to narrow down to a computing innovation of interest. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6cbacdb8-bbbb-4fc4-96c9-eb443742d339",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "8ae7d109-af65-4090-acb0-2ef7aaded265",
+      "position": 11,
+      "properties": {
+        "description": "Thank you delegates for beginning the process of identifying computing innovations for The Future School. I'm looking forward to hearing your proposals soon. \r\n\r\nAs a team, you will need to work effectively together, evaluating and considering these computing innovations. Effective teams work on communication, consensus buildng, conflict resolution, and negotiation. You will address these skills throughout the project!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8ae7d109-af65-4090-acb0-2ef7aaded265",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "461392fe-496a-498f-92a8-3cc2763b9e17",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** End the day by instructing students to put away their badges and nameplates. You may want to collect them so they are not lost."
+      },
+      "seeding_key": {
+        "activity_section.key": "461392fe-496a-498f-92a8-3cc2763b9e17",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "3cf83332-e037-4bc9-a481-2313083a0787",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the purpose of a computing innovation?*\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3cf83332-e037-4bc9-a481-2313083a0787",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "27ae1bef-d3f5-4c9a-aa70-2c6a7c0ff6d4",
+      "position": 14,
+      "properties": {
+        "description": "**Journal:** (Click through animation to see definition). Students add to their journal the definition for computing innovation.    \r\n\r\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "27ae1bef-d3f5-4c9a-aa70-2c6a7c0ff6d4",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "c352e704-014b-4854-acfe-cbadfcd989d6",
+      "position": 15,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How has your life benefited from a computing innovation? **Note:** You are out of the simulation for this question! Speak from your own personal experiences.",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c352e704-014b-4854-acfe-cbadfcd989d6",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "ff2d21b5-bc6e-4045-82d6-8775c78c1f52",
+      "position": 16,
+      "properties": {
+        "progression_name": "Check For Understanding - Day 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff2d21b5-bc6e-4045-82d6-8775c78c1f52",
+        "lesson_activity.key": "c3c34136-e4b6-44dc-90b9-e3539c54118b"
+      }
+    },
+    {
+      "key": "2a99dd28-9180-4a9a-9af8-8da6e4b18f18",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \n\n**Group:** Instruct students to sit with their team from the previous lesson.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a99dd28-9180-4a9a-9af8-8da6e4b18f18",
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a"
+      }
+    },
+    {
+      "key": "854f2be7-06f7-410b-a360-1a6d29ad5481",
+      "position": 2,
+      "properties": {
+        "description": "Welcome back to day two of the Future School Convention. I hope you enjoyed your first day getting to know your fellow participants. Today the real work begins - you will be researching the computing innovations that you believe will benefit the Future School. I'm sure you have lots of ideas. Let's get started!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "854f2be7-06f7-410b-a360-1a6d29ad5481",
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a"
+      }
+    },
+    {
+      "key": "d0cfea67-3bd6-4070-967a-d21b4624f532",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?*\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   * help schools run more efficiently\n   * help certain groups gain a voice and be heard\n   * make learning more fun!\n   * save time and money\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0cfea67-3bd6-4070-967a-d21b4624f532",
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a"
+      }
+    },
+    {
+      "key": "988294ed-a0d7-41a0-8021-9075ef0c7b82",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:**  Students research three different innovations that they believe their character would recommend for the Future School. \n\nIn their Project Guides they mark down:\n\n* The name of the innovation\n* Sources\n* What data is being collected\n* Brief descriptions of the function and purpose of the innovation\n* Why their character would recommend it \n \nStudents should regularly check in with their group to make sure no one else is researching the same innovation. For each group, there should be a total of 15 (or three times the amount of group members) innovations researched.",
+        "duration": "35",
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "988294ed-a0d7-41a0-8021-9075ef0c7b82",
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a"
+      }
+    },
+    {
+      "key": "3807bb93-48f7-4957-af9e-8ccf46879274",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of your computing innovations would bring the most positive change to the school community? Share with your group.*\n\n---",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3807bb93-48f7-4957-af9e-8ccf46879274",
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a"
+      }
+    },
+    {
+      "key": "4252bc48-2411-4b91-a008-f4cfe847b573",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Considering your character's perspective, which computing ideas of your team members seem the best? Which ones are you concerned about?",
+        "progression_name": "Check For Understanding - Day 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "4252bc48-2411-4b91-a008-f4cfe847b573",
+        "lesson_activity.key": "e9e5fcaf-4f8b-469f-856e-e7b19fd7314a"
+      }
+    },
+    {
+      "key": "191962a4-1717-4f61-9629-24e80e04b3d3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which of the following pieces of information would you consider to be \"personal\", as in you wouldn't want it shared with just anyone.*",
+        "name": "What Information is Private?\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is closely tied with the one that follows. In today's lesson students focus primarily on understanding the kinds of data that are collected by modern apps, websites, and computing innovations, and the ways that this may sometimes lead to sharing private information. In the following lesson students will specifically discuss the pros and cons of sharing that information."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "191962a4-1717-4f61-9629-24e80e04b3d3",
+        "lesson_activity.key": "32ae50c9-096f-4fc9-b819-1242c29e2edd"
+      }
+    },
+    {
+      "key": "5be5f177-3845-4b59-9d7d-b61e3f578cf9",
+      "position": 2,
+      "properties": {
+        "description": "1. Your full name\n2. Your social security number\n3. Your favorite musician / band\n4. A picture of your face\n5. Your fingerprint\n6. Your birthdate\n7. Your address\n8. Where you go after school\n9. Your phone number\n10. Your medical information\n11. Who your best friends are\n12. Your racial / ethnic identity\n13. A list of everything you've bought this month\n14. A list of recordings of your voice\n15. Your IP address\n16. A video of you singing\n17. Your academic history / report card\n18. The town or city you live in\n\n\nHave students brainstorm silently at their tables, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion sets up the rest of the lesson where students will be exploring instances where many of the pieces of information on this list are used by the services they use every day. Aim to push students to think about what it means to say that something is \"personal\" or \"private\". This is a lens they should take into the lesson.\n\nAlso, point out to students the items on this list that are biometric data: a picture of your face, your fingerprint, and voice/video recordings. Are these considered any more private or personal than the other items? Why or why not? \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5be5f177-3845-4b59-9d7d-b61e3f578cf9",
+        "lesson_activity.key": "32ae50c9-096f-4fc9-b819-1242c29e2edd"
+      }
+    },
+    {
+      "key": "209bc008-36d0-4a5e-b39d-085385f23571",
+      "position": 3,
+      "properties": {
+        "description": "We know that computing innovations need data to run, but we don't always think about just how personal or private that information may be. We're about to kick off a two-part lesson. In today's lesson we're going to look at just how much personal data we share online. Tomorrow we'll debate the pros and cons of sharing all that data.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "209bc008-36d0-4a5e-b39d-085385f23571",
+        "lesson_activity.key": "32ae50c9-096f-4fc9-b819-1242c29e2edd"
+      }
+    },
+    {
+      "key": "3430debd-548d-4709-8c60-4300ad0e23b4",
+      "position": 1,
+      "properties": {
+        "description": "Most good websites and apps will have a privacy policy that explains the data that they collect and the way that it's used. We may have seen them before, but we've probably not read them.",
+        "duration": "5",
+        "name": "How to Read a Privacy Policy",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Profanity in Video:** Note this video briefly includes the written phrase \"How to read an f*$%ing privacy policy\" roughly 15 seconds in. Review the video and ensure you're comfortable sharing it in your class. If you need you can start the video later.\n\n**Dated Video:** This video is from 2018 but makes the point that students should check that privacy policies are recent. Be prepared to let students know that even though this video was shot in 2018, the same principles are important and apply.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3430debd-548d-4709-8c60-4300ad0e23b4",
+        "lesson_activity.key": "bed1065c-0ac2-476e-ad00-441b95adc424"
+      }
+    },
+    {
+      "key": "dadd7026-1e0d-4a11-a1c4-411be3f0ae51",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the [video](https://www.youtube.com/watch?v=zZkY3MLBGh8&feature=emb_logo) about how to read a data privacy policy.  Take note of the teaching tip about the date and content of the video to the right."
+      },
+      "seeding_key": {
+        "activity_section.key": "dadd7026-1e0d-4a11-a1c4-411be3f0ae51",
+        "lesson_activity.key": "bed1065c-0ac2-476e-ad00-441b95adc424"
+      }
+    },
+    {
+      "key": "4656f5c2-48e9-4e2c-b9bf-41a8c97b76a4",
+      "position": 3,
+      "properties": {
+        "description": "Today we're going to practice reading data policies to get a sense for what kinds of information is actually being collected by modern computing innovations like websites and apps. We're going to spend today filling out the front part of the activity guide. In the next lesson we'll think more deeply about whether we think the tradeoffs of privacy are worth it, but you don't need to worry about that side of the activity guide today.",
+        "duration": "25",
+        "name": "Data Policy Exploration",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4656f5c2-48e9-4e2c-b9bf-41a8c97b76a4",
+        "lesson_activity.key": "bed1065c-0ac2-476e-ad00-441b95adc424"
+      }
+    },
+    {
+      "key": "a95f5e62-6ae6-4ed2-815e-ae6aa8c9f90b",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** If students like they can work in pairs for today's activity when they will be reading the privacy policy. Each student, however, should be completing their own activity guide.\n\n**Distribute:** Give each student a copy of [r privacy_security_and_innovation/artificial-intelligence-foundations-v2/2025]\n\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Choose a Website and Find the Data Privacy Policy:** Have students pick a company / app to use. If students are having a hard time picking a specific website, many big technology companies have fairly robust data policy pages, like Facebook, Google, Twitter, Instagram, and so on.\n\n**What Is Their Data Policy?:** Students should spend 10-15 minutes reviewing the data policies and answering the questions there. \n\n**Share Findings:** Have groups meet with another group to share what they discovered."
+      },
+      "seeding_key": {
+        "activity_section.key": "a95f5e62-6ae6-4ed2-815e-ae6aa8c9f90b",
+        "lesson_activity.key": "bed1065c-0ac2-476e-ad00-441b95adc424"
+      }
+    },
+    {
+      "key": "499b167f-1530-45bc-ae96-24ac63dcb927",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways from the lesson and have students record the definition of Personally Identifiable Information in their journal."
+      },
+      "seeding_key": {
+        "activity_section.key": "499b167f-1530-45bc-ae96-24ac63dcb927",
+        "lesson_activity.key": "7d8c0361-9b0c-4ba0-b9a6-1a828266eb7a"
+      }
+    },
+    {
+      "key": "c1f5b6f9-4a2a-4b4a-880a-8b1b1252e1c9",
+      "position": 2,
+      "properties": {
+        "description": "Users can control the permission that programs have for collecting their information. As a thoughtful user of technology, don't forget to review the privacy policies of the various apps and programs you use to protect your privacy!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c1f5b6f9-4a2a-4b4a-880a-8b1b1252e1c9",
+        "lesson_activity.key": "7d8c0361-9b0c-4ba0-b9a6-1a828266eb7a"
+      }
+    },
+    {
+      "key": "d6eeb826-21d0-4440-93e0-fe385b621d89",
+      "position": 3,
+      "properties": {
+        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which of the following is NOT a reason that a company would typically collect personally identifiable information (PII)? \r\n    \r\n**Activity Guide:** Have students submit their activity guides from today's lesson but be prepared to hand them back out for the following lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "d6eeb826-21d0-4440-93e0-fe385b621d89",
+        "lesson_activity.key": "7d8c0361-9b0c-4ba0-b9a6-1a828266eb7a"
+      }
+    },
+    {
+      "key": "ed934355-38a5-4f94-a532-6a518ab1d5eb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed934355-38a5-4f94-a532-6a518ab1d5eb",
+        "lesson_activity.key": "cb127d6e-7da4-4a1f-aaa3-d2fd052555c3"
+      }
+    },
+    {
+      "key": "3746b302-c842-4209-b39e-eb0f3f09c8ac",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Move Quickly to the Main Activity:** An optional prompt is provided but otherwise move quickly into watching and reviewing the videos so that students will have enough time to complete their activity guides.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3746b302-c842-4209-b39e-eb0f3f09c8ac",
+        "lesson_activity.key": "7b25abf4-4be2-464f-8002-9b92918dbf14"
+      }
+    },
+    {
+      "key": "13ee946b-33c8-4ea6-90a3-35788f422625",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** As students walk in give them copies of their [r privacy_security_and_innovation/artificial-intelligence-foundations-v2/2025] which they began filling out in the previous lesson.\n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "13ee946b-33c8-4ea6-90a3-35788f422625",
+        "lesson_activity.key": "7b25abf4-4be2-464f-8002-9b92918dbf14"
+      }
+    },
+    {
+      "key": "3be01bf7-9fca-4913-8220-bdce42529beb",
+      "position": 3,
+      "properties": {
+        "description": "Review your activity guide from last class. Remind yourself what your privacy concerns were for the app / website you chose.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3be01bf7-9fca-4913-8220-bdce42529beb",
+        "lesson_activity.key": "7b25abf4-4be2-464f-8002-9b92918dbf14"
+      }
+    },
+    {
+      "key": "f7ae3270-f146-4c98-bf6a-4185af4dbead",
+      "position": 1,
+      "properties": {
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient/fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the benefits/convenience?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "duration": "10",
+        "name": "Convenience vs Privacy - Facial Recognition "
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ae3270-f146-4c98-bf6a-4185af4dbead",
+        "lesson_activity.key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6"
+      }
+    },
+    {
+      "key": "4bd4ff4e-2472-4b8a-a0b2-a577f39650b8",
+      "position": 2,
+      "properties": {
+        "description": "As we watch the following video on location data, take notes on the following:\n\n* What kind of data is being collected and shared?\n* Who is the “third party” in this situation? \n* Why is this a tradeoff between privacy and security?",
+        "duration": "10",
+        "name": "Security vs Privacy - Should the Government Need a Warrant?"
+      },
+      "seeding_key": {
+        "activity_section.key": "4bd4ff4e-2472-4b8a-a0b2-a577f39650b8",
+        "lesson_activity.key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6"
+      }
+    },
+    {
+      "key": "6f130a30-cacf-4291-abc5-d3f63249bed5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about location data.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question *\"Do you agree with the Supreme Court’s ruling? Do you think it should apply to other kinds of data?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this discussion to build off the theme's discussed after the previous video about facial recognition. Push students to think of other types of data that third-parties collect about them and how they think that data should be handled by those parties and the government."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f130a30-cacf-4291-abc5-d3f63249bed5",
+        "lesson_activity.key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6"
+      }
+    },
+    {
+      "key": "41ac75c0-fdfc-4e6e-9604-ed3805d368ff",
+      "position": 4,
+      "properties": {
+        "description": "Students are given a good chunk of class time to complete this activity. Ask students to reflect quietly but as individuals or groups finish they should begin discussing with one another. If most students finish early you could begin a full-class discussion.\n\nIndividually fill in the last page of your activity guide.",
+        "duration": "15",
+        "name": "Privacy Tradeoffs - Your Innovation",
+        "progression_name": "Privacy Tradeoffs"
+      },
+      "seeding_key": {
+        "activity_section.key": "41ac75c0-fdfc-4e6e-9604-ed3805d368ff",
+        "lesson_activity.key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6"
+      }
+    },
+    {
+      "key": "a3eedb45-0540-4361-bf91-965cb8e30678",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Developing an Informed Opinion:** This lesson has asked students to hold off on weighing in on the innovations they researched in the previous class to develop a more nuanced and informed opinion about the tradeoffs between innovation, privacy, and security. As students move to this last activity, remind them of the more nuanced opinion they've developed, and ask them to reflect on how the different examples they've seen impact their overall opinions on this tradeoff.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a3eedb45-0540-4361-bf91-965cb8e30678",
+        "lesson_activity.key": "18bb8679-e5d8-46e4-bf96-6051f8fb1dc6"
+      }
+    },
+    {
+      "key": "cfb79428-6c95-4b33-b183-6cfbb21cf651",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Based on the discussions we had today, which of the following best describes your overall feelings with sharing private data in order to power innovations or ensure security.*\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb79428-6c95-4b33-b183-6cfbb21cf651",
+        "lesson_activity.key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c"
+      }
+    },
+    {
+      "key": "6270ceed-b6c1-4bfa-8ec3-f9794a87f11e",
+      "position": 2,
+      "properties": {
+        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\nHave a few people from each end of the spectrum share their reasoning.\n\n**Discussion Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways at the end of the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "6270ceed-b6c1-4bfa-8ec3-f9794a87f11e",
+        "lesson_activity.key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c"
+      }
+    },
+    {
+      "key": "2b6df236-1fdd-45aa-9a16-32923869ab54",
+      "position": 3,
+      "properties": {
+        "description": "There will always be tradeoffs between privacy and new exciting technology. Think about when you use a social media site and are offered targeted advertising based on your browser history. This can be useful! You may be introduced to things you want to buy or information you want to know about. However, it can also be harmful. Targeted advertising can be used to gather data about a user or a group of useres for malicious reasons. In this case, this innovation is not being used as it was originally intended to be used. \r\n\r\nConsider this as you research the impacts of your computing innovations for the Innovation Simulation project.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b6df236-1fdd-45aa-9a16-32923869ab54",
+        "lesson_activity.key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c"
+      }
+    },
+    {
+      "key": "aa726d8b-6106-4340-842c-ace1d67ab087",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa726d8b-6106-4340-842c-ace1d67ab087",
+        "lesson_activity.key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c"
+      }
+    },
+    {
+      "key": "12850823-33d3-4751-b9eb-4f78674567b5",
+      "position": 5,
+      "properties": {
+        "description": "**Activity Guide:** Once again collect the activity guide about the app / computing innovation that students researched in the previous lesson. If students missed the previous lesson they should use information collected by a partner about an app. A rubric included on the bottom of the activity guide can be used for assessment.",
+        "name": "Assessment\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "12850823-33d3-4751-b9eb-4f78674567b5",
+        "lesson_activity.key": "8939263a-7ccd-420b-9ad8-b44c0c175b7c"
+      }
+    },
+    {
+      "key": "96b69366-7cfb-4a09-aee2-0f5ef4387226",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In previous lessons students have been considering the ways that computing innovations may risk their privacy. This lesson further builds on those questions by asking students to think more broadly about the ways computing innovations may have unintended consequences.\n\nThe next project lesson will be spent primarily working on one-pagers. That lesson and the second half of this one are the largest chunks of class time dedicated to students completing those individual projects."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "96b69366-7cfb-4a09-aee2-0f5ef4387226",
+        "lesson_activity.key": "4ebcaa1a-0a4e-4d45-87e7-0cff8b37ad15"
+      }
+    },
+    {
+      "key": "150765b0-74d8-45c1-abd4-3973bfb24c37",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their team from the previous lesson. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [the video](https://youtu.be/POTosC2q6Hs) embedded in the slides about unintended consequences of computing innovations (~6 minutes).  Show the following slide which summarizes some important key points."
+      },
+      "seeding_key": {
+        "activity_section.key": "150765b0-74d8-45c1-abd4-3973bfb24c37",
+        "lesson_activity.key": "4ebcaa1a-0a4e-4d45-87e7-0cff8b37ad15"
+      }
+    },
+    {
+      "key": "626fe2d8-637c-4222-b96c-a0ff1d3e924b",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Discussion:** Move around the room listening to the ways that different groups are discussing the pros and cons of their innovations. Encourage students to be comfortable disagreeing with one another while representing the needs of their character and thinking broadly about the potential consequences of the innovations they are considering.\n\n**Narrowing It Down to Fit the Theme:**  As groups focus their ideas on a single theme or vision, that will help students also narrow down which innovation they want to include.  For example, if their theme is a school that is focused on social justice, that may influence which of the three innovations a student researched is included in the group's final presentation.  Students may need help narrowing down their proposals - encourage them to keep the theme of the group in mind as they select the innovation they will create a one-pager on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "626fe2d8-637c-4222-b96c-a0ff1d3e924b",
+        "lesson_activity.key": "9b3c7082-1dfb-4eb3-9121-855ebf3bdea8"
+      }
+    },
+    {
+      "key": "b87611d6-1c0e-47e1-9ce0-3612da7f397d",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Ensure students have access to their copies of the Innovation Simulation Project Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Remind yourself of your character’s goals and motivations. What can your character’s perspectives and goals bring to the table? How can you help avoid some of the unintended consequences of your innovations?*",
+        "progression_name": "Innovation Simulation - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "b87611d6-1c0e-47e1-9ce0-3612da7f397d",
+        "lesson_activity.key": "9b3c7082-1dfb-4eb3-9121-855ebf3bdea8"
+      }
+    },
+    {
+      "key": "19aa70ff-430c-4626-aa7c-6cdf0a600160",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Review Proposed Innovations:** Students should meet with their groups to discuss the different proposed innovations they researched previously. Students will need to move quickly through their different ideas and offer potential pros and cons of each innovation in character. Record feedback in \"Step 3\" of the Activity Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "19aa70ff-430c-4626-aa7c-6cdf0a600160",
+        "lesson_activity.key": "9b3c7082-1dfb-4eb3-9121-855ebf3bdea8"
+      }
+    },
+    {
+      "key": "9959e34c-88c5-4a13-98e9-3ea2ed0f6d1b",
+      "position": 4,
+      "properties": {
+        "description": "This discussion should highlight the fact that a computing innovation, and even a single effect of a computing innovation can be viewed as both beneficial and harmful by the different people, or even by the same person. \r\n\r\nStudents should aim to spend roughly half their class time discussing their different ideas with the goal of settling on one innovation that they believe will bring the most overall benefit while also making sense with the broader vision of their team. \r\n\r\n\r\nStudents should brainstorm a unifying theme for their group's vision.  Each member of the team should determine which one of their three innovations will ultimately be included in their group's vision for the Future School. This innovation will be presented alongside the innovations selected by the other members in their group later in this project.\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Begin working on Innovation One-Pager:** Students should individually move to the next portion of their project guide where they will be working on their innovation one-pager. Students will need to do further research about their innovation in order to complete this guide. Students should be allowed to work on this activity for the remainder of the class period."
+      },
+      "seeding_key": {
+        "activity_section.key": "9959e34c-88c5-4a13-98e9-3ea2ed0f6d1b",
+        "lesson_activity.key": "9b3c7082-1dfb-4eb3-9121-855ebf3bdea8"
+      }
+    },
+    {
+      "key": "f77e3b86-2957-4a58-a3ca-0fa93225a952",
+      "position": 1,
+      "properties": {
+        "description": "Good work today delegates. Next time we meet you'll have more time to work on your one-pagers. Continue to discuss with your groups the ways that your proposals will work together to form a coherent vision for the Future School.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f77e3b86-2957-4a58-a3ca-0fa93225a952",
+        "lesson_activity.key": "8d83f703-3e42-4106-a2d0-07c7179e9cc7"
+      }
+    },
+    {
+      "key": "cea1f218-218b-46a2-8ac4-aa9ade826ff9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?*\n\n**Discussion Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cea1f218-218b-46a2-8ac4-aa9ade826ff9",
+        "lesson_activity.key": "3ef39985-708b-470b-b287-be3cd868e781"
+      }
+    },
+    {
+      "key": "62b7c3da-d19a-4f8a-a1fd-c8c3ac665997",
+      "position": 1,
+      "properties": {
+        "description": "There are many different ways that data can be stolen. Let's examine a few.",
+        "name": "Security Risks Jigsaw\r",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "62b7c3da-d19a-4f8a-a1fd-c8c3ac665997",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "8b728077-ad95-4042-a486-9e1aceb9e386",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Divide students into groups of two. Evenly divide the three topics among the groups:\n\n1. Keylogging\n\n\n",
+        "progression_name": "Keylogging"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b728077-ad95-4042-a486-9e1aceb9e386",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "60bf1534-c1da-4082-8083-c067a5a38e03",
+      "position": 3,
+      "properties": {
+        "description": "2. Phishing\n",
+        "progression_name": "Phishing"
+      },
+      "seeding_key": {
+        "activity_section.key": "60bf1534-c1da-4082-8083-c067a5a38e03",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "dab013c3-7c00-48a9-a420-5db3493e25f4",
+      "position": 4,
+      "properties": {
+        "description": "3. Malware",
+        "progression_name": "Malware"
+      },
+      "seeding_key": {
+        "activity_section.key": "dab013c3-7c00-48a9-a420-5db3493e25f4",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "51c816b5-3fa9-4ea5-aef8-207e8483f148",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (20 mins):** Students navigate to their assigned levels on Code Studio and examine their topic. After they have a good understanding of the content, students make a PSA (Public Service Announcement) slide covering the following things:\n\n* What is the security risk?\n* How are people targeted? \n* What are the warnings?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group (10 mins):** After students finish their slides, rearrange the class so there is a representative covering each topic in each group. Students share their slides with each other and give a voice over of the security risks."
+      },
+      "seeding_key": {
+        "activity_section.key": "51c816b5-3fa9-4ea5-aef8-207e8483f148",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "6ef4083a-7161-436d-b13f-5006af82de35",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss (5 mins):** *Bring the class back together and ask for a volunteer from each of the topics to share their slide with the class and give a one minute overview.*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It's ok if the student who presents information has some innacuracies in their reporting. Use this opportunity to correct misunderstandings and get everyone on the same page. \r\n\r\nOne thing that can come out of the discussion is the realization that Keylogging is a form of Malware. Malware is as broad category of malicious software that can collect information or exploit a system in many different ways. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6ef4083a-7161-436d-b13f-5006af82de35",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "b8f693d1-c698-47ef-8894-6f089f66a792",
+      "position": 7,
+      "properties": {
+        "description": "Another security risk that you may have heard about is a Rogue Access Point. How this works can get pretty complicated, but it's enough to know that a rogue access point is a wireless access point that gives unauthorized access to secure networks. This can be a physical device that is attached to a router - sometimes hidden from site! It can be detected in various ways, including looking for strange wireless signals.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b8f693d1-c698-47ef-8894-6f089f66a792",
+        "lesson_activity.key": "42472f96-4870-4b93-9680-ca7a490d6c47"
+      }
+    },
+    {
+      "key": "2848f195-afc3-47e6-b8dd-29a15339b78f",
+      "position": 1,
+      "properties": {
+        "description": "There are many different ways that you may be targeted to reveal sensitive information. We generally think of emails as being a safe way to communicated, but unsolicted emails, attachments, links and forms can all be used to compromise the safety and security of a computing system. These could come from people you don't know, or from your friends and family who's security has been compromised. \r\n\r\nIt can be alarming to realize that there are many ways you are being targeted to reveal sensitive information. However, knowledge of the facts can help us be wiser consumers of technology. Later on in this unit we will explore further how to protect ourselves from these security risks.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2848f195-afc3-47e6-b8dd-29a15339b78f",
+        "lesson_activity.key": "c97a055b-a2d8-485f-8428-6afdbca6ea54"
+      }
+    },
+    {
+      "key": "90214c43-c04b-4ee3-b16a-5c2d562acebf",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocabulary words: Phishing, Keylogging, Malware, Rogue Access Point. \n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "90214c43-c04b-4ee3-b16a-5c2d562acebf",
+        "lesson_activity.key": "c97a055b-a2d8-485f-8428-6afdbca6ea54"
+      }
+    },
+    {
+      "key": "fb4eacf4-b0fd-44c0-b6e4-9beb5b38ae12",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How would you explain these three security risks (phishing, keylogging, malware) to a family member? What would you say to help them understand the dangers?",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb4eacf4-b0fd-44c0-b6e4-9beb5b38ae12",
+        "lesson_activity.key": "c97a055b-a2d8-485f-8428-6afdbca6ea54"
+      }
+    },
+    {
+      "key": "fce7a5c9-8cfc-4355-b34b-4e5ac82cd935",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fce7a5c9-8cfc-4355-b34b-4e5ac82cd935",
+        "lesson_activity.key": "1e06e33b-24a6-40ed-bd72-78cd6fceab17"
+      }
+    },
+    {
+      "key": "cb7974f5-e8c0-4b30-a1c7-c933673828ca",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday we investigated a few security risks. Let's watch a video together to review some of those security risks.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb7974f5-e8c0-4b30-a1c7-c933673828ca",
+        "lesson_activity.key": "40f776c8-8b16-4d82-b874-dc2278fb8220"
+      }
+    },
+    {
+      "key": "351add4f-0e73-4c65-b0bd-9db415d20953",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** [The Internet: Cybersecurity & Crime](https://youtu.be/AuYNXgO_f3Y)"
+      },
+      "seeding_key": {
+        "activity_section.key": "351add4f-0e73-4c65-b0bd-9db415d20953",
+        "lesson_activity.key": "40f776c8-8b16-4d82-b874-dc2278fb8220"
+      }
+    },
+    {
+      "key": "71ce88b1-6d22-427f-90ff-c1bfd311466c",
+      "position": 1,
+      "properties": {
+        "description": "When we think about security, we often think about mistakes that we personally have made - like clicking on a link in a text message from someone we don't know. But what about companies? Security is a major concern for companies, and sometimes human errors can have massive consequences. \r\n\r\nToday we are going to take a look at the credit reporting bureau Equifax. In 2017, Equifax was hacked and the private information of around 145 million people was comprimised. But what is Equifax and what data was stolen? \r\n\r\nWe are going to listen to two segments of two different podcasts. In the first, we will hear the history of credit bureaus leading up to Equifax. In the second, we will hear how Equifax was hacked.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71ce88b1-6d22-427f-90ff-c1bfd311466c",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "28a31724-55ab-4e9c-be72-41e011ea324d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Click the audio symbol to play the podcast. Stop the podcast at 13:30.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Transcripts are provided in the Activity Guide for this lesson. You may want to have students follow along as they listen. \r\n\r\nIn this lesson, we only scratch the surface of the Equifax breach. You may want to listen further to the podcasts yourself, to be more informed of the issues. For example, after the breach was found and reported, Equifax tried to direct users to their own website to check if they had been affected. However, they ended up linking to a fake website! \r\n\r\nIf students don't understand how this applies to their own lives, you can make connections to their ability to buy a car in the future, or get a loan for an apartment. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "28a31724-55ab-4e9c-be72-41e011ea324d",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "c2fa1465-e4a0-4ca0-8a2f-8d66da102dad",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click the audio symbol to play the podcast. Start the podcast at 6:05 and end at 11:13. **Note:** There is a swear word that occurs around a minute after we are stopping the podcast, so please make sure to stop early."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2fa1465-e4a0-4ca0-8a2f-8d66da102dad",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "0fde1d14-8a40-414c-b1cc-ab9e6ea04b23",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What information does Equifax store? Why should I care?*\n\n**Discussion Goal:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high-interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fde1d14-8a40-414c-b1cc-ab9e6ea04b23",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "4460166a-4532-4d37-85fe-ea30bb67f6a3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *As a computing innovation what are the benefits of Equifax? What are the potential harms?* \n\n**Discussion Goal:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit-making these decisions. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the security risks?*\n\n**Discussion Goal:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
+      },
+      "seeding_key": {
+        "activity_section.key": "4460166a-4532-4d37-85fe-ea30bb67f6a3",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "b5f9f0ab-1313-4592-9bb2-dbb260db898a",
+      "position": 6,
+      "properties": {
+        "description": "Equifax was a real-world system which was compromised by a software error and a human error. In this case, the software update would have prevented the hack. \r\n\r\nOne of the issue brought up with the Equifax Breach is that private data was stored, but there were no terms of service that users signed allowing that data to be collected. Equifax's customers are businesses who want to use that data to make decisions about people. Private citizens' data was and is constantly being collected - and potentially hacked. To summarize, Equifax sells information about private data that individual consumers did not sign terms of service to allow.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b5f9f0ab-1313-4592-9bb2-dbb260db898a",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "dacac4dc-7ad5-4d5d-b8cb-1512612b12b0",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?*\n\n**Discussion Goal:** This discussion is open-ended. There is no right or wrong answer here - prompt students to be thoughtful in the types of change they would like to see in how companies like Equifax are regulated. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "dacac4dc-7ad5-4d5d-b8cb-1512612b12b0",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "1e90a4e9-bd36-455b-9147-42bf0e945774",
+      "position": 8,
+      "properties": {
+        "description": "As a citizen, you have the power to bring about change. As more and more private information is knowingly or unknowingly collected and security risks continue to be a factor it's important to think about protecting what's ours and speaking to those who are in authority to strengthen protections. And someday, you yourself may be the person making these decisions and putting new laws in place!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1e90a4e9-bd36-455b-9147-42bf0e945774",
+        "lesson_activity.key": "9f00cf0c-a3ac-4520-8fcc-cc107fe4a811"
+      }
+    },
+    {
+      "key": "308d9301-949b-4225-a7c3-cc7ad9bba008",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b) to review Security Risks. \n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "308d9301-949b-4225-a7c3-cc7ad9bba008",
+        "lesson_activity.key": "99162546-0c67-4af4-99ac-9fb6ce95724e"
+      }
+    },
+    {
+      "key": "8351a36c-c825-428f-a42c-9337e14981a8",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How does human error relate to security risks?",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8351a36c-c825-428f-a42c-9337e14981a8",
+        "lesson_activity.key": "99162546-0c67-4af4-99ac-9fb6ce95724e"
+      }
+    },
+    {
+      "key": "4a5f4b79-a7dc-4cf3-b8cb-b624c53991f2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project team."
+      },
+      "seeding_key": {
+        "activity_section.key": "4a5f4b79-a7dc-4cf3-b8cb-b624c53991f2",
+        "lesson_activity.key": "00caba63-8ce2-4eda-950b-277bb2406ff4"
+      }
+    },
+    {
+      "key": "600e4667-c4d5-4769-b286-1c46e6ef9c1f",
+      "position": 2,
+      "properties": {
+        "description": "Delegates today you will have time to work on your one-pagers. The only section of your one-pager you might not be 100% ready to fill in at this point is the \"Addressing Concerns\" section. Fill in as much as you can today and you'll have a little more time to fill in that section next time we meet.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "600e4667-c4d5-4769-b286-1c46e6ef9c1f",
+        "lesson_activity.key": "00caba63-8ce2-4eda-950b-277bb2406ff4"
+      }
+    },
+    {
+      "key": "25bc7745-da87-4a49-bf89-83e2036902c1",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give students back [r innovation_simulation_project_guide/artificial-intelligence-foundations-v2/2025] if they don't already have them on hand.\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers.",
+        "progression_name": "Innovation Simulation - Part 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "25bc7745-da87-4a49-bf89-83e2036902c1",
+        "lesson_activity.key": "2a252ee4-e689-4384-9ffd-a4a2b05e8d12"
+      }
+    },
+    {
+      "key": "f26241ff-aa50-475b-971d-32215084a619",
+      "position": 1,
+      "properties": {
+        "description": "Great work today everyone. Next time we meet you'll have a chance to start thinking more about how to turn your individual innovation one-pagers into a unified presentation for the convention.\r\n\r\n(Direct students to remove their simulation badges)\r\n\r\nTo end our time together, let's discuss what you've learned from researching computing innovations.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f26241ff-aa50-475b-971d-32215084a619",
+        "lesson_activity.key": "c2fb21f6-d346-4135-95be-4a11549e641f"
+      }
+    },
+    {
+      "key": "01ca3b4b-6d2f-480d-9c24-724631944e6b",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *Explain how a computing innovation can have an impact beyond its intended purpose. How can rapid sharing of a computing innovation affect these impacts?*\n\n**Discussion Goal:** Pull out these general ideas from the discussion:\n\n* Computing Innovations can have a harmful impact on society, economy or culture - even when the creator did not intend for this to happen.\n* Responsible creators of innovations should consider potential beneficial and harmful effects and how their innovations may be used in unintended ways, given that not all potential uses can be known ahead of time.\n* Sometimes computing innovations lead to benefits in other fields.\n* Rapid sharing of computing innovations can lead to a greater number of users which can in turn lead to more significant impacts. Consider a social media platform with thousands of users vs. millions. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "01ca3b4b-6d2f-480d-9c24-724631944e6b",
+        "lesson_activity.key": "c2fb21f6-d346-4135-95be-4a11549e641f"
+      }
+    },
+    {
+      "key": "80566fb2-9bb7-4d22-8e6b-184b57f57fde",
+      "position": 1,
+      "properties": {
+        "description": "We have explored how our data is collected and sometimes misused. In the next two lessons, we are going to dig into protecting our data. \r\n\r\nMany of the ideas we use to keep secrets in the digital age are far older than the Internet. The process of encoding a plain text message in some secret way is called Encryption\r\n\r\nFor example in Roman times Julius Caesar is reported to have encrypted messages to his soldiers and generals by using a simple alphabetic shift - every character was encrypted by substituting it with a character that was some fixed number of letters away in the alphabet.\r\n\r\nAs a result an alphabetic shift is often referred to as the Caesar Cipher.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "80566fb2-9bb7-4d22-8e6b-184b57f57fde",
+        "lesson_activity.key": "125b027f-6c64-4aee-97a2-13e32e48f624"
+      }
+    },
+    {
+      "key": "731a72a0-a628-464d-895f-0287c8647c31",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** This message was encrypted using a Caesar Cipher (an \"alphabetic shift\"). Let's see how long it takes you to decode this message (remember it's just a shifting of the alphabet).",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Give students around 3-5 minutes to work on cracking the message. Resist the urget to give students a tool or device to aid in cracking this message - that's coming in the next part of the lesson! Part of the point here is that it's possible without tools. With tools it becomes trivial, as we'll see next. \r\n\r\nIf students are struggling to start, here are a few strategy suggestions:\r\n\r\n* Find a small word and try alphabetic shifts until it's clear that it's an English word\r\n* Remember the letters aren't randomly substituted - the alphabet is just shifted\r\n* Once you have found the amount of shift the rest comes easy. \r\n\r\n**Answer:** \"free pizza in the cafeteria\"\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "731a72a0-a628-464d-895f-0287c8647c31",
+        "lesson_activity.key": "125b027f-6c64-4aee-97a2-13e32e48f624"
+      }
+    },
+    {
+      "key": "2ab03073-3caa-4c63-9ac5-ce068c3c9bdd",
+      "position": 3,
+      "properties": {
+        "description": "```\r\nserr cvmmn va gur pnsrgrevn\r\n```\r\n\r\n* Click through the animation to see the answer"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ab03073-3caa-4c63-9ac5-ce068c3c9bdd",
+        "lesson_activity.key": "125b027f-6c64-4aee-97a2-13e32e48f624"
+      }
+    },
+    {
+      "key": "5f0dac0f-fc4d-43f8-b77d-04ac4d0f95d2",
+      "position": 4,
+      "properties": {
+        "description": "With this simple encryption technique it only took a few minutes to decode a small message. What if the message were longer, BUT you had a computational tool to help you?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5f0dac0f-fc4d-43f8-b77d-04ac4d0f95d2",
+        "lesson_activity.key": "125b027f-6c64-4aee-97a2-13e32e48f624"
+      }
+    },
+    {
+      "key": "6d7fd285-9b07-4493-bba6-cd91ecc499fe",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (5 mins):** \n\n* Navigate to Code Studio, Level 1.\n* Experiment with the tool - click things, poke around, figure out what it's doing. \n* Choose one of the messages from the drop-down menu and try to crack it using the tool."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d7fd285-9b07-4493-bba6-cd91ecc499fe",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "3e018827-06d5-48d4-8508-bbe378342424",
+      "position": 2,
+      "properties": {
+        "description": "With the tool, cracking an alphabetic shift is easy. Once you've done one, it only takes a matter of seconds to do others.Let's review some terminology here. \r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Terms:\r\n\r\n* **Encryption:** a process of encoding messages to keep them secret, so only \"authorized\" parties can read it.\r\n* **Decryption:** a process that reverses encryption, taking a secret message and reproducing the original plain text\r\n* **Cipher:**  the generic term for a technique (or algorithm) that performs encryption\r\n* **Caesar's Cipher:** a technique for encryption that shifts the alphabet by some number of characters.\r\n* **Cracking encryption:** When you attempt to decode a secret message without knowing all the specifics of the cipher, you are trying to crack the encryption.\r\n\r\nWhat if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of th alphabet? This is called a random substitution cipher.\r\n\r\nLet's take a look at a new decryption challenge using a random substitution cipher.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students do not need to write down any vocabulary terms here. This is only a review of terms they may encounter in this lesson. Discuss the terms briefly as a class and then move on to the next activity.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e018827-06d5-48d4-8508-bbe378342424",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "3e958d5c-49cd-48b3-960d-aefa68061a41",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (3 mins):** \n\n* Navigate to Level 2\n* Explore the tool: how does it work?"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e958d5c-49cd-48b3-960d-aefa68061a41",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "50665179-638b-4f78-affa-d8afc2845016",
+      "position": 4,
+      "properties": {
+        "progression_name": "Encryption Widgets"
+      },
+      "seeding_key": {
+        "activity_section.key": "50665179-638b-4f78-affa-d8afc2845016",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "7389095a-79d9-48b3-80b4-895913ef92a8",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How does the widget work? What steps would you take to crack the code?*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this time to clear up any confusion around how the tool works. \r\n\r\nMove around the letters to make possible matches. The frequency meter may help you get started - especially in matching letters in short words. \r\n\r\nHere are some steps that may be helpful for students:\r\n\r\n* Find the short words and \"crack\" them first. How many one-letter words do you know? (\"a\"). A very common 3-letter word is \"the\".\r\n* Once you've done that, you have substitutes for some of the most common letters. You should be able to use intuition to look at other words with these partial substitutions and make good guesses.\r\n* After finding only a handful of hard-fought letters, the rest will tumble quickly.\r\n* Comparing the frequencies of letters gives good insight for making sensible guesses.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7389095a-79d9-48b3-80b4-895913ef92a8",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "f2c7eb85-2fde-41fe-8778-d4b4950969a4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (10 mins):** Take ten minutes to crack another message using the steps we just talked about."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2c7eb85-2fde-41fe-8778-d4b4950969a4",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "e4e6832f-2b13-4902-bdca-77458efbae3a",
+      "position": 7,
+      "properties": {
+        "description": "A random substitution cipher is very crackable by hand, though it might take some time. However, when aided by computational tools, a random substitution cipher can be cracked by a novice in a matter of minutes. \r\nSimple substitution ciphers give insight into encryption algorithms, but as we've seen fall way short when a potential adversary is aided with computational tools... our understanding must become more sophisticated. \r\n\r\nIf we are to create a secure Internet, we will need to develop tool and protocols which can resist the enormous computational power of modern computers.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e6832f-2b13-4902-bdca-77458efbae3a",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "70fc894a-6271-4cbc-936a-9d73485925c5",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch: [r encryption_and_public_keys/artificial-intelligence-foundations-v2/2025]"
+      },
+      "seeding_key": {
+        "activity_section.key": "70fc894a-6271-4cbc-936a-9d73485925c5",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "1ce1c75b-07d8-4a90-ba8f-639afbc6f24b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the difference between symmetric encryption and asymmetric (public key) encryption?*\n\n**Discussion Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ce1c75b-07d8-4a90-ba8f-639afbc6f24b",
+        "lesson_activity.key": "d7a8fb7e-855b-4891-8347-fb10644cc902"
+      }
+    },
+    {
+      "key": "0745008c-59ee-48ff-ab6f-da8bd76ffe9b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Students add the following words and definitions to their journals: encryption, decryption, symmetric key encryption, public key encryption",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There is no discussion in today's wrap up to give enough time for students to record vocabulary in their journal. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0745008c-59ee-48ff-ab6f-da8bd76ffe9b",
+        "lesson_activity.key": "c900022c-a45e-4c7c-b3b9-c40ab723321b"
+      }
+    },
+    {
+      "key": "b6a572c1-de84-47ad-a7de-b47afc95017e",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6a572c1-de84-47ad-a7de-b47afc95017e",
+        "lesson_activity.key": "c900022c-a45e-4c7c-b3b9-c40ab723321b"
+      }
+    },
+    {
+      "key": "e7caa1e7-eeae-44e7-8184-da16e78afffe",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How does asymmetric (public key) encryption keep data secure?",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7caa1e7-eeae-44e7-8184-da16e78afffe",
+        "lesson_activity.key": "c900022c-a45e-4c7c-b3b9-c40ab723321b"
+      }
+    },
+    {
+      "key": "ffdd4def-5299-4d40-97cd-b5ae27ed484f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffdd4def-5299-4d40-97cd-b5ae27ed484f",
+        "lesson_activity.key": "cba4edb8-a2e8-4677-b278-4798a27dead4"
+      }
+    },
+    {
+      "key": "fbcdb322-3b98-4141-a52e-ef045c60631a",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson we discussed how your data is protected through encryption. Today we are going to focus on what you can personally do to keep your data protected.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbcdb322-3b98-4141-a52e-ef045c60631a",
+        "lesson_activity.key": "df3d6ade-98fd-4d6a-9c8c-0588ae1f6126"
+      }
+    },
+    {
+      "key": "ac352506-d22d-44a5-841c-8f14221d03de",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies do you use when creating a good password?*\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac352506-d22d-44a5-841c-8f14221d03de",
+        "lesson_activity.key": "df3d6ade-98fd-4d6a-9c8c-0588ae1f6126"
+      }
+    },
+    {
+      "key": "d324a8f3-c4e1-4570-bd20-350a051c0b82",
+      "position": 3,
+      "properties": {
+        "description": "* **Note:** Make sure students don't reveal any of their current passwords in the discussion!"
+      },
+      "seeding_key": {
+        "activity_section.key": "d324a8f3-c4e1-4570-bd20-350a051c0b82",
+        "lesson_activity.key": "df3d6ade-98fd-4d6a-9c8c-0588ae1f6126"
+      }
+    },
+    {
+      "key": "15c9e4db-f3e3-4f34-a367-41c7bd318ff4",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A good password is easy to remember, but hard for someone else to guess based on knowledge they have about you.\r\n\r\nIf your password is your dog's name and your birthdate, that's all personal information that someone else might be able to guess!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "15c9e4db-f3e3-4f34-a367-41c7bd318ff4",
+        "lesson_activity.key": "df3d6ade-98fd-4d6a-9c8c-0588ae1f6126"
+      }
+    },
+    {
+      "key": "28466101-284d-45c4-bdaa-e93b20597b87",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Use the activity slides for this lesson to guide the discussion on Protecting Data\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts0.svg) |**Say:** There are things you can do to protect your data. The first one we are going to talk about is multifactor authentication.  |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts1.svg) |**Say:** When we discussed passwords in the Warm Up, this was an example of single factor authentication. There is one layer of protection, that is centered around something you know: your password. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts2.svg) |**Say:** Two factor authentication adds another layer. <br><br> **Prompt** What do you think is another way of protecting your data? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** In addition to something you know, another layer is something you possess like a phone. Have you ever been required to put a phone number in when getting a password authenticated? Sometimes a text will be sent to your phone with a code to enter in, proving that you are the person who has the phone. This layer means someone who just guesses your password can't get in to your account - they would also need access to your phone. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts3.svg) |**Prompt:** What are the problems with this system? How could it be hacked? <br><br> **Goal:** Guide the discussion towards the answer that a phone could be stolen or a sim card lost. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts4.svg) |**Prompt:** There's another layer that can be used to protect your data. Can anyone guess what it is? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** If you guessed something physical or perhaps \"biometrics\", you are correct! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> A fingerprint is an example of this. A retina scan of your eye is another example. These three options: something you know, something you possess, and something you are make up multifactor authentication, which involves at least two of these options and preferably all three. If someone tried to access your account, they would be required to know your password, have access to your phone and your fingerprint! |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts5.svg) |**Prompt:** Why is this better than Single Factor Authentication? What are the challenges with the system? Is it worth any of the risks? <br><br> **Note:** Allow students time to think through these prompts, perhaps in small groups before having a whole class discussion. Multifactor authentication can keep data more protected than single factor authentication, but it requires extra steps which add time and often money (the cost of a phone, etc.). There are also privacy concerns with having your fingerprints or retina scanned. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts6.svg) |**Say:** Another way to protect your data involves updating your software. | \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts7.svg) |**Say:** Let's review. What is a virus? <br><br> **Note:** Give students an opportunity to glance through the notes and review computer viruses from lesson 7. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts8.svg) |**Say:** Do you remember how to protect your device from a computer virus? <br><br> **Note:** Allow students to suggest different forms of protection before clicking through the animation. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Two things you can do: use virus scanning software and update system software. You could also say, keep all software updated! |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-10---Cybersecurity-and-Global-Impacts9.svg) |**Say:** Data protection is a moving target. It's not a one and done process. It's not enough to install virus protection software and never thing about it again! New viruses and threats are constantly being developed - you need to keep your software up to date and use the best authentication practices you can in order to keep your data safe! |",
+        "name": "Protecting Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "28466101-284d-45c4-bdaa-e93b20597b87",
+        "lesson_activity.key": "d2899f9e-f48e-45ba-9a41-01664f8da820"
+      }
+    },
+    {
+      "key": "624a8913-19bc-4d20-bf7a-9cc74c56cc7f",
+      "position": 1,
+      "properties": {
+        "description": "Today, we discussed protecting data. Let's review that.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "624a8913-19bc-4d20-bf7a-9cc74c56cc7f",
+        "lesson_activity.key": "e7a1f7d7-ab06-4486-a568-068a9da36b95"
+      }
+    },
+    {
+      "key": "60109918-bb8d-4b4e-b3a7-2e9043a61b48",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with a partner how you plan to protect your data.*\n\nIf students are struggling with answering this question, prompt them with more specific questions:\n\n* How will you decide on your next password?\n* Will you use two-factor or multifactor authentication when you have the opportunity?\n* How often do you update your software?\n* How up to date is the software on your devices?\n \n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "60109918-bb8d-4b4e-b3a7-2e9043a61b48",
+        "lesson_activity.key": "e7a1f7d7-ab06-4486-a568-068a9da36b95"
+      }
+    },
+    {
+      "key": "e37f2132-4aea-4a2d-9790-d8327d087674",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: multifactor authentication and computer virus scanning software. \r\n\r\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "e37f2132-4aea-4a2d-9790-d8327d087674",
+        "lesson_activity.key": "e7a1f7d7-ab06-4486-a568-068a9da36b95"
+      }
+    },
+    {
+      "key": "a4a3aed3-f53f-4765-a7b9-2c124d59acd2",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Reflection: What concerns do you have about multifactor authentication? Is it a good long term solution for data privacy?",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4a3aed3-f53f-4765-a7b9-2c124d59acd2",
+        "lesson_activity.key": "e7a1f7d7-ab06-4486-a568-068a9da36b95"
+      }
+    },
+    {
+      "key": "8c44aaf9-02bf-483d-a92e-4addcfa6a63e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c44aaf9-02bf-483d-a92e-4addcfa6a63e",
+        "lesson_activity.key": "03a1fada-6046-47c4-bd87-55ef2402e025"
+      }
+    },
+    {
+      "key": "6c450a44-a60b-48a5-8edb-449f34147197",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams",
+        "duration": "3",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c450a44-a60b-48a5-8edb-449f34147197",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "b0895fec-b181-4340-8aba-ce2522ad9d22",
+      "position": 2,
+      "properties": {
+        "description": "Delegates today you will have time to finish your one-pagers and work on your group presentation.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b0895fec-b181-4340-8aba-ce2522ad9d22",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "4cf18474-5186-46d4-b030-15ca40cc3cf5",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** Give students back the Innovation Simulation Project Guide if they don't already have them on hand.",
+        "duration": "37",
+        "name": "Activity",
+        "progression_name": "Innovation Simulation - Part 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "4cf18474-5186-46d4-b030-15ca40cc3cf5",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "8a2dd271-640e-4f3c-ae19-b4f40b515f41",
+      "position": 4,
+      "properties": {
+        "description": "Before you start preparing for your group presentation, take a few minutes to finish filling out the \"Addressing Concerns\" section in your One Pager. Once you're done, move on to Step 5.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8a2dd271-640e-4f3c-ae19-b4f40b515f41",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "afd806f8-f7f5-49fc-b37e-ccb4f4a9ce7a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 5 - Preparing Your Group Presentation - 5 mins:** As a class review the instructions in their project guides. Highlight the fact that they have a lot of freedom to choose their presentation format.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Time Expectations:** Make sure to set clear expectations with your students about how much time they'll have to present. This curriculum assumes roughly 20-30 minutes for all groups to present.\r\n\r\n**Encouraging Creative Presentations:** Depending on your students' interests and skills you may encourage a wide variety of presentation types. While students have clear expectations on making sure they present a unified theme and briefly mention all innovations in their proposal, \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "afd806f8-f7f5-49fc-b37e-ccb4f4a9ce7a",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "be7ac505-0cb5-4c1c-aab7-1380a5aba19c",
+      "position": 6,
+      "properties": {
+        "description": "Have groups fill out the two reflection questions on their project guides to lock down their unified theme and also find the connections between their theme and the innovation they chose.\r\n\r\n**Work Time - 35 minutes:** Groups should get 35 minutes to work on designing their presentation."
+      },
+      "seeding_key": {
+        "activity_section.key": "be7ac505-0cb5-4c1c-aab7-1380a5aba19c",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "9ce818c3-e66c-4d96-85c5-d400a1bca93e",
+      "position": 7,
+      "properties": {
+        "description": "Great work today delegates. Next time we meet you'll have a chance to get feedback on your draft presentations from another group. Then you'll have work time to finish your presentations and make any final edits to your one-pagers because after that it'll be time for the big convention!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9ce818c3-e66c-4d96-85c5-d400a1bca93e",
+        "lesson_activity.key": "f6b744c8-3241-4e66-8980-3acb050f4738"
+      }
+    },
+    {
+      "key": "0c929442-0633-4206-998a-4aec63848d24",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \n",
+        "duration": "3",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c929442-0633-4206-998a-4aec63848d24",
+        "lesson_activity.key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d"
+      }
+    },
+    {
+      "key": "e5ec52b5-b3ff-412d-9f8d-6c584d151d80",
+      "position": 2,
+      "properties": {
+        "description": "Delegates today is primarily a work day, but to begin you'll be meeting briefly with another group. You'll share the overall theme for your presentation, the way the different innovations tie into that theme, and the way you intend to present your vision for the Future School. You'll use the feedback you share with one another to make final changes to your project before presenting.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e5ec52b5-b3ff-412d-9f8d-6c584d151d80",
+        "lesson_activity.key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d"
+      }
+    },
+    {
+      "key": "a6f1d071-d620-44f4-b2d7-20a19c25ca19",
+      "position": 3,
+      "properties": {
+        "duration": "37",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Time Expectations:** Make sure to set clear expectations with your students about how much time they'll have to present. This curriculum assumes roughly 20-30 minutes for all groups to present.\n\n**Encouraging Creative Presentations:** Depending on your students' interests and skills you may encourage a wide variety of presentation types. While students have clear expectations on making sure they present a unified theme and briefly mention all innovations in their proposal, "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a6f1d071-d620-44f4-b2d7-20a19c25ca19",
+        "lesson_activity.key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d"
+      }
+    },
+    {
+      "key": "d4682e26-37b0-4066-992e-60233a7e0878",
+      "position": 4,
+      "properties": {
+        "description": "**Distribute:** Give students back the Innovation Simulation Project Guide if they don't already have them on hand.\n\n**Group:** Have 2 - 3 members of each project team meet with 2 - 3 members of another project team, forming groups of 4 - 6. Ideally groups will get feedback from multiple other groups but this may be difficult to guarantee.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Feedback - 10 Mins:** Groups should spend at most 10 minutes, 5 minutes on each project, sharing their project team's overall vision, the innovations they'll be presenting, and the high level format of their presentation. Members of the other group should provide critiques and suggestions, in particular any feedback from the perspective of their character about how they could benefit or be harmed by the proposed innovation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Work Time - 30 minutes:** Groups should get 30 minutes to work on finish designing their presentations and making any final edits to their one-pagers."
+      },
+      "seeding_key": {
+        "activity_section.key": "d4682e26-37b0-4066-992e-60233a7e0878",
+        "lesson_activity.key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d"
+      }
+    },
+    {
+      "key": "8b2331ce-b189-4ca0-88f1-d7fb4fac1ee8",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Thank you delegates for your hard work today. Next time we meet it will be for the actual presentations and to decide on the strongest overall presentations in our Future School Convention. I look forward to seeing you there!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing / Digital Access to One Pagers:** Make sure students print or are ready to digitally share 1-pagers for the next class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8b2331ce-b189-4ca0-88f1-d7fb4fac1ee8",
+        "lesson_activity.key": "d7817a0c-ffdd-449f-9f99-3cdb5031826d"
+      }
+    },
+    {
+      "key": "81a76ef8-274a-4c80-84f4-6b3ebe5022b3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \n\n**Group:** Instruct students to sit with their project teams",
+        "duration": "2",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "81a76ef8-274a-4c80-84f4-6b3ebe5022b3",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "4730676f-afe5-424f-ac63-2ba3717fb864",
+      "position": 2,
+      "properties": {
+        "description": "Delegates today it's time for the actual convention. Each group will have a couple minutes to present their overall vision for the Future School to the entire audience. Afterwards we'll leave their proposals around the room and you'll have time to review each of them to identify the group and individual innovation (outside your group) that you believe is best. Let's get to it!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4730676f-afe5-424f-ac63-2ba3717fb864",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "126b296a-a36a-4733-8bfa-eabf7bd1e2c6",
+      "position": 3,
+      "properties": {
+        "duration": "38",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Notes:** Encourage students to take notes on individual presentations they want to look at more closely during the gallery walk as well as their overall impression of each of the presentations. A good rule is that by the end of the presentations students should have written down at least three individual innovations they want to look at more closely because it would be of interest to their character.\n\n**Running the Gallery Walk:** Depending on your classroom setup you may want students to move around the room in an organized fashion, e.g. rotating through each project with their groups, or you might encourage students to move around the room as they wish."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "126b296a-a36a-4733-8bfa-eabf7bd1e2c6",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "58ed965c-926a-421f-a5dc-54ee27b52f87",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Presentations - 25 mins:** One by one have each group present to the class as a whole.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Gallery Walk - 15 mins:** Have groups leave their one-pagers and any presentation materials around the room, collected by team. Give students time to walk around the room, review the materials, and try to identify the overall group and individual innovation, other than their own, that they believe is best based on the perspective of their character."
+      },
+      "seeding_key": {
+        "activity_section.key": "58ed965c-926a-421f-a5dc-54ee27b52f87",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "b5d5a6c1-5a24-4969-b024-78d03fffae40",
+      "position": 5,
+      "properties": {
+        "description": "**Step 7 - Evaluate:** Ask students to record the best project and best individual innovation based on what the saw in the presentations and the gallery walk.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5d5a6c1-5a24-4969-b024-78d03fffae40",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "bae7d3f5-beb6-4a02-b370-2d9b38d1ddd2",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Thank you delegates for an amazing convention. We will be excited to share the results of our convention next time we meet. For now thank you for your incredibly hard work to help us improve schools for all. Give yourselves a round of applause!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bae7d3f5-beb6-4a02-b370-2d9b38d1ddd2",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "d397b0ad-74c1-4347-8b17-be9811213e50",
+      "position": 7,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "d397b0ad-74c1-4347-8b17-be9811213e50",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "25c38d2d-d809-4022-90b7-60c5624a07d7",
+      "position": 8,
+      "properties": {
+        "description": "#### Assessment\n\n**Collect:** Collect students' project guides, one-pagers, and any materials related to their presentations that can be collected.\n\n**Rubric:** Projects can be assessed using the provided rubric."
+      },
+      "seeding_key": {
+        "activity_section.key": "25c38d2d-d809-4022-90b7-60c5624a07d7",
+        "lesson_activity.key": "c3909e77-bb59-4e6d-bbb9-b8363402c58a"
+      }
+    },
+    {
+      "key": "3cf6e9d7-582f-4128-89e6-e126bb79b04d",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "3cf6e9d7-582f-4128-89e6-e126bb79b04d",
+        "lesson_activity.key": "96d07c3b-eaa3-4491-b750-e4a085a6857b"
+      }
+    },
+    {
+      "key": "0b601e2b-18fc-4be4-b747-122ba61225a7",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b601e2b-18fc-4be4-b747-122ba61225a7",
+        "lesson_activity.key": "6176f201-05b0-4db7-a77f-19a32139a461"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding - Day 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L01 CFU innovations_v2-2025"
+        ],
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "ff2d21b5-bc6e-4045-82d6-8775c78c1f52"
+      },
+      "level_keys": [
+        "U10 L01 CFU innovations_v2-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding - Day 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L02 CFU innovations part 2_v2-2025"
+        ],
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "4252bc48-2411-4b91-a008-f4cfe847b573"
+      },
+      "level_keys": [
+        "U10 L02 CFU innovations part 2_v2-2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10L3 CFU Why Collect PII2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "ed934355-38a5-4f94-a532-6a518ab1d5eb"
+      },
+      "level_keys": [
+        "U10L3 CFU Why Collect PII2022_v2-2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Privacy Tradeoffs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson3-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "41ac75c0-fdfc-4e6e-9604-ed3805d368ff"
+      },
+      "level_keys": [
+        "cybersecurity-global-impacts-lesson3-level1_v2-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Innovation Simulation - Part 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson4-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "b87611d6-1c0e-47e1-9ce0-3612da7f397d"
+      },
+      "level_keys": [
+        "cybersecurity-global-impacts-lesson4-level1_v2-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Keylogging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Keylogging2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "8b728077-ad95-4042-a486-9e1aceb9e386"
+      },
+      "level_keys": [
+        "CSP 20-21 Keylogging2022_v2-2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Phishing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Phishing2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "60bf1534-c1da-4082-8083-c067a5a38e03"
+      },
+      "level_keys": [
+        "CSP 20-21 Phishing2022_v2-2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Malware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Rogue Access Points2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "dab013c3-7c00-48a9-a420-5db3493e25f4"
+      },
+      "level_keys": [
+        "CSP 20-21 Rogue Access Points2022_v2-2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L07 CFU security risks_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "fce7a5c9-8cfc-4355-b34b-4e5ac82cd935"
+      },
+      "level_keys": [
+        "U10 L07 CFU security risks_v2-2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L08 CFU security risks_v2-2025"
+        ],
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "8351a36c-c825-428f-a42c-9337e14981a8"
+      },
+      "level_keys": [
+        "U10 L08 CFU security risks_v2-2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Innovation Simulation - Part 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson7-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "25bc7745-da87-4a49-bf89-83e2036902c1"
+      },
+      "level_keys": [
+        "cybersecurity-global-impacts-lesson7-level1_v2-2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Encryption Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher_v2-2025"
+        ],
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "50665179-638b-4f78-affa-d8afc2845016"
+      },
+      "level_keys": [
+        "Crack a Caesar Cipher_v2-2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Encryption Widgets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack Random Substitution_v2-2025"
+        ],
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "50665179-638b-4f78-affa-d8afc2845016"
+      },
+      "level_keys": [
+        "Crack Random Substitution_v2-2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10L9 CFU public key_v2-2025"
+        ],
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "ffdd4def-5299-4d40-97cd-b5ae27ed484f"
+      },
+      "level_keys": [
+        "U10L9 CFU public key_v2-2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10L10 CFU MFA_v2-2025"
+        ],
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "8c44aaf9-02bf-483d-a92e-4addcfa6a63e"
+      },
+      "level_keys": [
+        "U10L10 CFU MFA_v2-2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Innovation Simulation - Part 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson10-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "4cf18474-5186-46d4-b030-15ca40cc3cf5"
+      },
+      "level_keys": [
+        "cybersecurity-global-impacts-lesson10-level1_v2-2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_cybersecurity_v2-2025"
+        ],
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "3cf6e9d7-582f-4128-89e6-e126bb79b04d"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_cybersecurity_v2-2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-cyber_v2-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "0b601e2b-18fc-4be4-b747-122ba61225a7"
+      },
+      "level_keys": [
+        "student-eou-survey_-cyber_v2-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U10 L01 CFU innovations_v2-2025",
+        "script_level.level_keys": [
+          "U10 L01 CFU innovations_v2-2025"
+        ],
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "ff2d21b5-bc6e-4045-82d6-8775c78c1f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L02 CFU innovations part 2_v2-2025",
+        "script_level.level_keys": [
+          "U10 L02 CFU innovations part 2_v2-2025"
+        ],
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "4252bc48-2411-4b91-a008-f4cfe847b573"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10L3 CFU Why Collect PII2022_v2-2025",
+        "script_level.level_keys": [
+          "U10L3 CFU Why Collect PII2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "ed934355-38a5-4f94-a532-6a518ab1d5eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cybersecurity-global-impacts-lesson3-level1_v2-2025",
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson3-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "41ac75c0-fdfc-4e6e-9604-ed3805d368ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cybersecurity-global-impacts-lesson4-level1_v2-2025",
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson4-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "b87611d6-1c0e-47e1-9ce0-3612da7f397d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Keylogging2022_v2-2025",
+        "script_level.level_keys": [
+          "CSP 20-21 Keylogging2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "8b728077-ad95-4042-a486-9e1aceb9e386"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Phishing2022_v2-2025",
+        "script_level.level_keys": [
+          "CSP 20-21 Phishing2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "60bf1534-c1da-4082-8083-c067a5a38e03"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Rogue Access Points2022_v2-2025",
+        "script_level.level_keys": [
+          "CSP 20-21 Rogue Access Points2022_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "dab013c3-7c00-48a9-a420-5db3493e25f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L07 CFU security risks_v2-2025",
+        "script_level.level_keys": [
+          "U10 L07 CFU security risks_v2-2025"
+        ],
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "fce7a5c9-8cfc-4355-b34b-4e5ac82cd935"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L08 CFU security risks_v2-2025",
+        "script_level.level_keys": [
+          "U10 L08 CFU security risks_v2-2025"
+        ],
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "8351a36c-c825-428f-a42c-9337e14981a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cybersecurity-global-impacts-lesson7-level1_v2-2025",
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson7-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "25bc7745-da87-4a49-bf89-83e2036902c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack a Caesar Cipher_v2-2025",
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher_v2-2025"
+        ],
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "50665179-638b-4f78-affa-d8afc2845016"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack Random Substitution_v2-2025",
+        "script_level.level_keys": [
+          "Crack Random Substitution_v2-2025"
+        ],
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "50665179-638b-4f78-affa-d8afc2845016"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10L9 CFU public key_v2-2025",
+        "script_level.level_keys": [
+          "U10L9 CFU public key_v2-2025"
+        ],
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "ffdd4def-5299-4d40-97cd-b5ae27ed484f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10L10 CFU MFA_v2-2025",
+        "script_level.level_keys": [
+          "U10L10 CFU MFA_v2-2025"
+        ],
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "8c44aaf9-02bf-483d-a92e-4addcfa6a63e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cybersecurity-global-impacts-lesson10-level1_v2-2025",
+        "script_level.level_keys": [
+          "cybersecurity-global-impacts-lesson10-level1_v2-2025"
+        ],
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "4cf18474-5186-46d4-b030-15ca40cc3cf5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_cybersecurity_v2-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_cybersecurity_v2-2025"
+        ],
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "3cf6e9d7-582f-4128-89e6-e126bb79b04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-cyber_v2-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-cyber_v2-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v2-2025",
+        "activity_section.key": "0b601e2b-18fc-4be4-b747-122ba61225a7"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "All Resources",
+      "url": "/s/aif5-2025/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif5-2025/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif5-2025/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://youtu.be/QvyTEx1wyOY",
+      "key": "computer_science_is_changing_everything",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "name": "Cops Need A Warrant To Search Your Cell Phone’s Location History, Supreme Court Rules",
+      "url": "https://youtu.be/07YzpuDgvDM",
+      "key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules"
+      }
+    },
+    {
+      "name": "Data Policies and Privacy",
+      "url": "https://docs.google.com/presentation/d/1TUH2-fchOMWGG5EF9a0YBx2hHHIOkH0t0UDIPIS8mxI/edit?usp=sharing",
+      "key": "data_policies_and_privacy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_policies_and_privacy"
+      }
+    },
+    {
+      "name": "Encryption and Public Keys",
+      "url": "https://youtu.be/ZghMPWGXexs",
+      "key": "encryption_and_public_keys",
+      "properties": {
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "encryption_and_public_keys"
+      }
+    },
+    {
+      "name": "Equifax Data Breach: What Went Wrong (Podcast)",
+      "url": "https://open.spotify.com/episode/03El29KDDRqg7zH2Q2cg70?si=japjmpLzSBGYXehgggKsWw",
+      "key": "equifax_data_breach_what_went_wrong_podcast_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1gTMNZZM6DY8kT6v_Ve4iK6qm6YX4wqwu/view?usp=sharing",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
+      }
+    },
+    {
+      "name": "Innovation Simulation Badges",
+      "url": "https://drive.google.com/file/d/1tmfHc8XVZntg85BAiOaxjsZJnsP2x4f_/view?usp=drive_link",
+      "key": "innovation_simulation_badges",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "innovation_simulation_badges"
+      }
+    },
+    {
+      "name": "Innovation Simulation Character Bios",
+      "url": "https://docs.google.com/document/d/1wbiRiTX2k3ULNmCKIl5kQec7eFhZCWoFeVNrAA1RQXs/edit?usp=sharing",
+      "key": "innovation_simulation_character_bios",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "innovation_simulation_character_bios"
+      }
+    },
+    {
+      "name": "Innovation Simulation Nameplates",
+      "url": "https://drive.google.com/file/d/1R7IaTD4Cg8TJxAclAsdBMk_TPrVQ8GrV/view?usp=sharing",
+      "key": "innovation_simulation_nameplates",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "innovation_simulation_nameplates"
+      }
+    },
+    {
+      "name": "Innovation Simulation Project Guide",
+      "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/edit?usp=sharing",
+      "key": "innovation_simulation_project_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "innovation_simulation_project_guide"
+      }
+    },
+    {
+      "name": "Innovation Simulation Project Overview",
+      "url": "https://docs.google.com/document/d/1v3wdKIyI7Ro1iBGDokVPApA5NsMfil8SYP22Pa4pBIA/edit?usp=sharing",
+      "key": "innovation_simulation_project_overview",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "innovation_simulation_project_overview"
+      }
+    },
+    {
+      "name": "Is Facial Recognition Invading Your Privacy?",
+      "url": "https://youtu.be/f5qgOqNQ7zY",
+      "key": "is_facial_recognition_invading_your_privacy_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "is_facial_recognition_invading_your_privacy_"
+      }
+    },
+    {
+      "name": "Kahoot Quiz - Security Risks",
+      "url": "https://create.kahoot.it/share/unit-10-security-risks/f82a1515-b576-43a9-aedf-798238d7ba2b",
+      "key": "kahoot_quiz_-_security_risks",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "kahoot_quiz_-_security_risks"
+      }
+    },
+    {
+      "name": "Optional Podcast Transcripts",
+      "url": "https://docs.google.com/document/d/18W0jNKzq48XyUXwQ55jrvMPZOq_lFdweNAZhox0BfNc/edit?usp=drive_link",
+      "key": "optional_podcast_transcripts",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "optional_podcast_transcripts"
+      }
+    },
+    {
+      "name": "Planet Money: Bad Credit Bureau (Podcast)",
+      "url": "https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau",
+      "key": "planet_money_bad_credit_bureau_podcast_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "planet_money_bad_credit_bureau_podcast_"
+      }
+    },
+    {
+      "name": "Privacy, Security, and Innovation",
+      "url": "https://docs.google.com/document/d/1sFdE2uaHeSEvzVm9U9mZIACiFwOtFrtWdMNhUQxxifo/edit?usp=sharing",
+      "key": "privacy_security_and_innovation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "privacy_security_and_innovation"
+      }
+    },
+    {
+      "name": "Project: Innovation Simulation Part 1",
+      "url": "https://docs.google.com/presentation/d/1R1-JtPEV8YoZGdpfTn1UkR1gFnUn3qo5yW65fWGKu8Q/view",
+      "key": "project_innovation_simulation_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_innovation_simulation_part_1"
+      }
+    },
+    {
+      "name": "Project: Innovation Simulation Part 2",
+      "url": "https://docs.google.com/presentation/d/1iQ787EePXMOAiVy-3F1LMe23jsRK_i-gFOGmH25GnX0/view",
+      "key": "project_innovation_simulation_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_innovation_simulation_part_2"
+      }
+    },
+    {
+      "name": "Project: Innovation Simulation Part 3",
+      "url": "https://docs.google.com/presentation/d/10R9yfhuuyTA3ZBH-LUIfun_HEo7MFtu2__G71qcMVzA/view",
+      "key": "project_innovation_simulation_part_3",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_innovation_simulation_part_3"
+      }
+    },
+    {
+      "name": "Project: Innovation Simulation Part 4",
+      "url": "https://docs.google.com/presentation/d/1rzOStRgm5d1cyKMzt-f1j0OGSXvd9R3yE5tQMYNpjt8/view",
+      "key": "project_innovation_simulation_part_4",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_innovation_simulation_part_4"
+      }
+    },
+    {
+      "name": "Protecting Data Part 1",
+      "url": "https://docs.google.com/presentation/d/1VAeXyyR0r7aN-DlrNrVKabE6VRz0eBVFeOu7DNRKVUI/view",
+      "key": "protecting_data_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "protecting_data_part_1"
+      }
+    },
+    {
+      "name": "Protecting Data Part 2",
+      "url": "https://docs.google.com/presentation/d/1xwoH-GALbsiEY9KG11c_OhJK4WUYRv6KtjVZeO3sers/view",
+      "key": "protecting_data_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "protecting_data_part_2"
+      }
+    },
+    {
+      "name": "Security Risks Part 1",
+      "url": "https://docs.google.com/presentation/d/1_l0_mkVuSKgqhHrkIPxXlfNEbpPcCPqaovJlnurHxa0/view",
+      "key": "security_risks_part_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "security_risks_part_1"
+      }
+    },
+    {
+      "name": "Security Risks Part 2",
+      "url": "https://docs.google.com/presentation/d/1Fif5frkj1eTgeHk90oSXfQj2gJruXhKwtvDxSWNQkdM/view",
+      "key": "security_risks_part_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "security_risks_part_2"
+      }
+    },
+    {
+      "name": "The Internet: Cybersecurity and Crime",
+      "url": "https://youtu.be/AuYNXgO_f3Y",
+      "key": "the_internet_cybersecurity_and_crime",
+      "properties": {
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/csp/concept_cybercrime.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_cybersecurity_and_crime"
+      }
+    },
+    {
+      "name": "The Value of Privacy",
+      "url": "https://docs.google.com/presentation/d/1xnwoZJkBlQejH5EaWXfNGgybSye9m6e3Z3RLB33JC-4/view",
+      "key": "the_value_of_privacy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_value_of_privacy"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "resource.key": "innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "resource.key": "innovation_simulation_project_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "resource.key": "project_innovation_simulation_part_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "innovation_simulation_badges"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "innovation_simulation_character_bios"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "innovation_simulation_nameplates"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "innovation_simulation_project_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "resource.key": "project_innovation_simulation_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "resource.key": "data_policies_and_privacy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "resource.key": "privacy_security_and_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "resource.key": "cops_need_a_warrant_to_search_your_cell_phone_s_location_history_supreme_court_rules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "resource.key": "is_facial_recognition_invading_your_privacy_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "resource.key": "privacy_security_and_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "resource.key": "the_value_of_privacy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "resource.key": "innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "resource.key": "innovation_simulation_project_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "resource.key": "project_innovation_simulation_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "resource.key": "security_risks_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "resource.key": "kahoot_quiz_-_security_risks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "resource.key": "optional_podcast_transcripts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "resource.key": "planet_money_bad_credit_bureau_podcast_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "resource.key": "security_risks_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "resource.key": "the_internet_cybersecurity_and_crime"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "resource.key": "innovation_simulation_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "resource.key": "innovation_simulation_project_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "resource.key": "project_innovation_simulation_part_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "resource.key": "encryption_and_public_keys"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "resource.key": "protecting_data_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "resource.key": "protecting_data_part_2"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "aif5-v2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "aif5-v2-2025"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "computer_virus_scanning_software",
+      "word": "Computer Virus Scanning Software",
+      "definition": "protects a computing system against infection",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_virus_scanning_software"
+      }
+    },
+    {
+      "key": "computing_innovation",
+      "word": "Computing Innovation",
+      "definition": "includes a program as an integral part of its function. Can be physical (e.g. self-driving car), non-physical computing software (e.g. picture editing software), or non-physical computing concepts (e.g., e-commerce).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computing_innovation"
+      }
+    },
+    {
+      "key": "decryption",
+      "word": "Decryption",
+      "definition": "a process that reverses encryption, taking a secret message and reproducing the original plain text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "key": "encryption",
+      "word": "Encryption",
+      "definition": "a process of encoding messages to keep them secret, so only \"authorized\" parties can read it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "key": "keylogging",
+      "word": "Keylogging",
+      "definition": "the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "keylogging"
+      }
+    },
+    {
+      "key": "malware",
+      "word": "Malware",
+      "definition": "software intended to damage a computing system or to take partial control over its operation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "key": "multi_factor_authentication",
+      "word": "Multi-factor Authentication",
+      "definition": "a system that requires at least two steps to unlock protected information; each step adds a new layer of security that must be broken to gain unauthorized access",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "multi_factor_authentication"
+      }
+    },
+    {
+      "key": "personally_identifiable_information_pii_",
+      "word": "Personally Identifiable Information (PII)",
+      "definition": "information about an individual that identifies, links, relates, or describes them",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "personally_identifiable_information_pii_"
+      }
+    },
+    {
+      "key": "phishing",
+      "word": "Phishing",
+      "definition": "a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "key": "public_key_encryption",
+      "word": "Public Key Encryption",
+      "definition": "pairs a public key for encryption and a private key for decryption. The sender does not need the receiver’s private key to encrypt a message, but the receiver’s private key is required to decrypt the message",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "public_key_encryption"
+      }
+    },
+    {
+      "key": "rouge_access_point",
+      "word": "Rouge Access Point",
+      "definition": "a wireless access point that gives unauthorized access to secure networks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rouge_access_point"
+      }
+    },
+    {
+      "key": "symmetric_key_encryption",
+      "word": "Symmetric Key Encryption",
+      "definition": "involves one key for both encryption and decryption",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "symmetric_key_encryption"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "vocabulary.key": "computing_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "vocabulary.key": "personally_identifiable_information_pii_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "vocabulary.key": "keylogging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "vocabulary.key": "rouge_access_point"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "vocabulary.key": "public_key_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "vocabulary.key": "symmetric_key_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "vocabulary.key": "computer_virus_scanning_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "vocabulary.key": "multi_factor_authentication"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "04c3e9b0-7b22-415e-aed3-f147f2a5babe",
+      "properties": {
+        "description": "Explain how these common security risks target people"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "objective.key": "04c3e9b0-7b22-415e-aed3-f147f2a5babe"
+      }
+    },
+    {
+      "key": "20256f59-261f-4963-9c03-a0132a6a9349",
+      "properties": {
+        "description": "Confidently explain security risks and their impact on society"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "objective.key": "20256f59-261f-4963-9c03-a0132a6a9349"
+      }
+    },
+    {
+      "key": "392f89e3-200a-46a1-afe0-2a17718fa316",
+      "properties": {
+        "description": "Thoughtfully answer a stimulus question"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "objective.key": "392f89e3-200a-46a1-afe0-2a17718fa316"
+      }
+    },
+    {
+      "key": "3b9bce07-3d77-412d-bc12-fbbd297c07ef",
+      "properties": {
+        "description": "Identify commons security risks: phishing, keylogging, malware, rogue access points"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "objective.key": "3b9bce07-3d77-412d-bc12-fbbd297c07ef"
+      }
+    },
+    {
+      "key": "3dbae7f5-8812-4018-9960-429f138ef8b9",
+      "properties": {
+        "description": "Discuss the warning signals for these common security risks"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "objective.key": "3dbae7f5-8812-4018-9960-429f138ef8b9"
+      }
+    },
+    {
+      "key": "4240a6ee-f7c3-4d2f-aa52-ae39469a55dd",
+      "properties": {
+        "description": "Explain how disparate pieces of personal information can be combined to identify individuals or deduce other private information."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "objective.key": "4240a6ee-f7c3-4d2f-aa52-ae39469a55dd"
+      }
+    },
+    {
+      "key": "428cc133-c6de-49ed-872d-68a5cc4fac48",
+      "properties": {
+        "description": "Research computing innovations through the lens of one beneficiary"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "objective.key": "428cc133-c6de-49ed-872d-68a5cc4fac48"
+      }
+    },
+    {
+      "key": "4c6fdce9-45e5-4675-8289-f02988b6e48c",
+      "properties": {
+        "description": "Students will have completed the majority of the one-pager for their project."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "objective.key": "4c6fdce9-45e5-4675-8289-f02988b6e48c"
+      }
+    },
+    {
+      "key": "65da3ff9-f56c-4fe8-aec6-7f02ddd55555",
+      "properties": {
+        "description": "Explain the difference between asymmetrical and symmetrical encryption"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "objective.key": "65da3ff9-f56c-4fe8-aec6-7f02ddd55555"
+      }
+    },
+    {
+      "key": "66722994-ee45-4f56-a19f-bc03983ad3df",
+      "properties": {
+        "description": "Students will have started to design a group presentation or artifact that presents their innovations and aligns them to a single theme."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "objective.key": "66722994-ee45-4f56-a19f-bc03983ad3df"
+      }
+    },
+    {
+      "key": "698d4077-59d4-4f24-b9cb-bff3a3bd7d68",
+      "properties": {
+        "description": "Evaluate the benefits and harms that could potentially be caused by a computing innovation"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "objective.key": "698d4077-59d4-4f24-b9cb-bff3a3bd7d68"
+      }
+    },
+    {
+      "key": "72a5f5fd-27b9-4542-b962-4b6a84fbfbc4",
+      "properties": {
+        "description": "Explain how computing tools can be used for decryption"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "objective.key": "72a5f5fd-27b9-4542-b962-4b6a84fbfbc4"
+      }
+    },
+    {
+      "key": "75abed05-d85a-48a9-aa24-6f9b1e619ce3",
+      "properties": {
+        "description": "Assess a computing innovation to identify the specific privacy risks that could arise from the data it collects and stores."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "objective.key": "75abed05-d85a-48a9-aa24-6f9b1e619ce3"
+      }
+    },
+    {
+      "key": "78310229-6c38-4be3-a26f-90d4c6177634",
+      "properties": {
+        "description": "Describe the different types of data that are used and collected by modern computing innovations"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "objective.key": "78310229-6c38-4be3-a26f-90d4c6177634"
+      }
+    },
+    {
+      "key": "7bfbdade-f2df-4402-b0c0-3b151e1478c4",
+      "properties": {
+        "description": "Describe the role human error played in the Equifax breach"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "objective.key": "7bfbdade-f2df-4402-b0c0-3b151e1478c4"
+      }
+    },
+    {
+      "key": "861e6943-11d6-48a4-b12c-5e112e144926",
+      "properties": {
+        "description": "Evaluate whether the benefits to society from a given computing innovation outweigh the privacy risks it poses."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "objective.key": "861e6943-11d6-48a4-b12c-5e112e144926"
+      }
+    },
+    {
+      "key": "953aa63d-2c7b-46c3-aca7-e1ee1d6b1ce1",
+      "properties": {
+        "description": "Define Personally Identifiable Information as information about an individual that identifies, links, relates, or describes them."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "objective.key": "953aa63d-2c7b-46c3-aca7-e1ee1d6b1ce1"
+      }
+    },
+    {
+      "key": "aa0d0fd2-b7f3-4d17-872f-b27a00039bc4",
+      "properties": {
+        "description": "Explain how the benefits and harms of a computing innovation may be different in the eyes of different people"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "objective.key": "aa0d0fd2-b7f3-4d17-872f-b27a00039bc4"
+      }
+    },
+    {
+      "key": "b5f96188-7ee3-45cf-907d-9696156eb302",
+      "properties": {
+        "description": "Discuss the benefits of computer virus scanning software and the need for regular updates"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "objective.key": "b5f96188-7ee3-45cf-907d-9696156eb302"
+      }
+    },
+    {
+      "key": "c31280a2-8a22-4543-af30-f0d9b2fffd58",
+      "properties": {
+        "description": "Explain the risks to privacy that arise from using modern computing technology"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "objective.key": "c31280a2-8a22-4543-af30-f0d9b2fffd58"
+      }
+    },
+    {
+      "key": "d95ab067-782d-40f0-981e-6f5695d0d175",
+      "properties": {
+        "description": "Explain the benefits of multifactor authentication"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "objective.key": "d95ab067-782d-40f0-981e-6f5695d0d175"
+      }
+    },
+    {
+      "key": "e676a3ac-cbb2-4109-89b1-803c3fb62fa9",
+      "properties": {
+        "description": "Identify a computing innovation"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "objective.key": "e676a3ac-cbb2-4109-89b1-803c3fb62fa9"
+      }
+    },
+    {
+      "key": "faf2d0bf-e5b2-43a8-adef-b759a151f994",
+      "properties": {
+        "description": "Understand how to conduct research on a computing innovation"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "objective.key": "faf2d0bf-e5b2-43a8-adef-b759a151f994"
+      }
+    },
+    {
+      "key": "ffceed28-b42a-4962-a386-34b09de1a15a",
+      "properties": {
+        "description": "Identify why Caesar Cipher and Random Substitution Ciphers are not adequate for most encryption needs"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "objective.key": "ffceed28-b42a-4962-a386-34b09de1a15a"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Project - Innovation Simulation Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Data Policies and Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The Value of Privacy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Project - Innovation Simulation Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Security Risks Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Security Risks Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Protecting Data Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Protecting Data Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -49,8 +49,6 @@
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
                         "deletable": false,
-                        "movable": false,
-                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -62,8 +60,6 @@
                             "type": "play_sound_at_current_location_simple2",
                             "id": "g?.Wt;h[;suX(UtaXH37",
                             "deletable": false,
-                            "movable": false,
-                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -107,7 +103,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.802+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-template-parent\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-template-parent\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.802+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-template-parent\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-template-parent\"},{\"changed_at\":\"2025-07-18 22:29:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

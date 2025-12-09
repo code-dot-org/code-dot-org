@@ -1,0 +1,27 @@
+name 'computer-systems-preassessment_v2-2025'
+title 'AI and the Systems That Power It Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'computer-systems-preassessment-intro_v2-2025'
+level 'computer-systems-preassessment-question1_v2-2025'
+level 'computer-systems-preassessment-question2_v2-2025'
+level 'computer-systems-preassessment-question3_v2-2025'
+level 'computer-systems-preassessment-question4_v2-2025'
+level 'computer-systems-preassessment-question5_v2-2025'
+
+page
+level 'computer-systems-preassessment-question6_v2-2025'
+level 'computer-systems-preassessment-question7_v2-2025'
+level 'computer-systems-preassessment-question8_v2-2025'
+level 'computer-systems-preassessment-question9_v2-2025'
+level 'computer-systems-preassessment-question10_v2-2025'
+
+page
+level 'computer-systems-preassessment-question11_v2-2025'
+level 'computer-systems-preassessment-question12_v2-2025'
+level 'computer-systems-preassessment-question13_v2-2025'
+level 'computer-systems-preassessment-question14_v2-2025'
+level 'computer-systems-preassessment-question15_v2-2025'

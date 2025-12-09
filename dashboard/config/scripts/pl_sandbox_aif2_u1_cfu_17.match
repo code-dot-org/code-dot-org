@@ -1,0 +1,27 @@
+name 'pl-sandbox-aif2-U1-CFU-17'
+title 'Terminology Matching'
+
+height '75'
+
+question 'The code that gives a web page its structure.'
+answer 'HTML'
+question 'The code that gives a web page its style'
+answer 'CSS'
+question 'The idea that design should start with understanding the needs of the end-user.'
+answer 'Human Centered Design'
+question 'The overall experience a person has when interacting with a product, system, or service.'
+answer 'User Experience'
+question 'An interactive program that runs in a web browser.'
+answer 'Web App'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

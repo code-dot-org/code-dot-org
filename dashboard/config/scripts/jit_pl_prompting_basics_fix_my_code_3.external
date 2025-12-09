@@ -1,0 +1,30 @@
+name 'jit-pl-prompting-basics-fix-my-code-3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# "Fix my code" 
+
+
+#### It might feel natural to ask AI for a quick fix — after all, it can patch errors instantly. But it’s important to learn to use AI as a partner in **problem-solving**, not just as a tool that does the work without our understanding.
+
+
+#### On the left, notice the prompt and response and the auto-corrected code on the right. 
+
+<img src="https://images.code.org/23ee154c31dfe6e39e36d8561e79ed72-image-1756404369072.png" 
+     alt="ai prompt and response on the left fixing code by adding let. Corrected code sample on the right" 
+     width="650px" 
+     style="display: block; margin-left: auto; margin-right: auto; border: 3pt solid #8C52BA; border-radius: 12px;">
+
+#### With this prompt, the AI fixes the code and leaves a brief explanation about declaring the variable. The more complex the code or error, the less clear this will be. 
+
+#### It can also lead students to moving ahead with working code instead of critically thinking about the bug.
+
+
+
+
+
+<div style="clear:both;"></div>
+
+
+MARKDOWN

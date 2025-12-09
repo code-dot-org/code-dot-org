@@ -14,14 +14,16 @@ export const TEACHER_NAVIGATION_PATHS = {
   roster: 'roster',
   loginInfo: 'login_info',
   standardsReport: 'standards_report',
-  aiTutorChatMessages: 'ai_tutor',
   lessonMaterials: 'materials',
   calendar: 'calendar',
   courseOverview: 'courses/:courseVersionName?',
   nestedUnitOverview: 'courses/:courseVersionName/units/:unitPosition',
   unitOverview: 'unit/:unitName?',
   settings: 'settings',
+  aiChatSettings: 'ai_chat_settings',
   home: 'home',
+  skills: 'skills_in_dev',
+  studentSnapshot: 'student_snapshot',
 };
 
 const getAbsolutePath = (name: string) =>
@@ -101,13 +103,6 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     label: i18n.standardsReportHeader(),
     icon: null,
   },
-  aiTutorChatMessages: {
-    url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
-    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
-    // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: i18n.aiTutor(),
-    icon: 'messages',
-  },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.lessonMaterials),
@@ -143,5 +138,23 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.settings),
     label: i18n.settings(),
     icon: 'gear',
+  },
+  aiChatSettings: {
+    url: TEACHER_NAVIGATION_PATHS.aiChatSettings,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiChatSettings),
+    label: i18n.aiSettings(),
+    icon: 'ai-head-solid',
+  },
+  skills: {
+    url: TEACHER_NAVIGATION_PATHS.skills,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.skills),
+    label: 'Skills (In Development)',
+    icon: 'brain',
+  },
+  studentSnapshot: {
+    url: TEACHER_NAVIGATION_PATHS.studentSnapshot,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.studentSnapshot),
+    label: 'Student Snapshot',
+    icon: 'screen-users',
   },
 };

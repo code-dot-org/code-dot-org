@@ -28,6 +28,15 @@ class AiRubricConfig
       'CSD U3 collisions flyman bounceOff_2024' => 'csd3-2023-L24',
       'CSD games project review_2024' => 'csd3-2023-L28',
     },
+    'csd3-2025' => {
+      'CSD U3 L7 mini project_2025' => 'csd3-2023-L7',
+      'CSD U3 Sprites scene challenge_2025' => 'csd3-2023-L11',
+      'CSD web project animated review_2025' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2025' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2025' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2025' => 'csd3-2023-L24',
+      'CSD games project review_2025' => 'csd3-2023-L28',
+    },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },

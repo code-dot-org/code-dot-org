@@ -21,7 +21,7 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @module_practice_1 = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
     @module_practice_2 = create(:plc_learning_module, name: 'Not revealing your embarassing nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
 
-    @user = create :teacher
+    @user = create(:teacher)
     sign_in(@user)
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)

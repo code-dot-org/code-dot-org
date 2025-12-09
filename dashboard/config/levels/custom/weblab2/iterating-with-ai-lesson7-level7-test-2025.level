@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-24T18:16:47.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bake Sale Filter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <main>\n    <h1>Bake Sale Menu</h1>\n\n    <div class=\"controls\">\n      <button id=\"filterBtn\">Filter: Nut-Free</button>\n      <button id=\"resetBtn\" class=\"secondary\">Reset Data</button>\n    </div>\n\n    <div class=\"menu-container\">\n      <ul id=\"menuList\">\n        </ul>\n    </div>\n  </main>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  background-color: #fff4e6;\n  color: #4a4a4a;\n  margin: 0;\n  padding: 20px;\n  display: flex;\n  justify-content: center;\n}\n\nmain {\n  background: white;\n  padding: 2rem;\n  border-radius: 12px;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.05);\n  width: 100%;\n  max-width: 450px;\n}\n\nh1 {\n  color: #d35400;\n  margin-top: 0;\n  margin-bottom: 20px;\n}\n\n.controls {\n  display: flex;\n  gap: 10px;\n  margin-bottom: 20px;\n}\n\nbutton {\n  background-color: #d35400;\n  color: white;\n  border: none;\n  padding: 8px 16px;\n  border-radius: 4px;\n  cursor: pointer;\n  font-weight: bold;\n  font-size: 1rem;\n}\n\nbutton:hover {\n  background-color: #a04000;\n}\n\nbutton.secondary {\n  background-color: #95a5a6;\n}\n\nul {\n  list-style: none;\n  padding: 0;\n  border-top: 2px solid #eee;\n}\n\nli {\n  padding: 15px 10px;\n  border-bottom: 1px solid #eee;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.allergen-tag {\n  background-color: #ffeaa7;\n  padding: 4px 8px;\n  border-radius: 12px;\n  font-size: 0.85rem;\n  color: #d35400;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// 1. DOM Elements\nconst menuList = document.querySelector(\"#menuList\");\nconst filterBtn = document.querySelector(\"#filterBtn\");\nconst resetBtn = document.querySelector(\"#resetBtn\");\n\n// 2. Data: Array of objects\nlet bakedGoods = [\n  { name: \"Peanut Butter Cookies\", allergens: \"Nuts\" },\n  { name: \"Lemon Bars\", allergens: \"Dairy\" },\n  { name: \"Almond Croissant\", allergens: \"Nuts\" },\n  { name: \"Sugar Cookies\", allergens: \"Gluten\" },\n  { name: \"Pecan Pie\", allergens: \"Nuts\" }\n];\n\n// 3. Event Listeners\nfilterBtn.addEventListener(\"click\", () => {\n  filterNutFree();\n});\n\n// BUGGY CODE - This should show the original full list again but it doesn't!\nresetBtn.addEventListener(\"click\", () => {\n  renderMenu(bakedGoods);\n});\n\n// 4. Functions\n\n// BUGGY CODE - This shouldn't permanently change the original dataset but it does!\nfunction filterNutFree() {\n  let safeItems = [];\n  \n  for (let i = 0; i < bakedGoods.length; i++) {\n    if (bakedGoods[i].allergens !== \"Nuts\") {\n      safeItems.push(bakedGoods[i]);\n    }\n  }\n  \n  bakedGoods = safeItems;\n  \n  renderMenu(bakedGoods);\n}\n\n// Helper to display the list\nfunction renderMenu(list) {\n  menuList.innerHTML = \"\";\n  \n  for (let i = 0; i < list.length; i++) {\n    const item = list[i];\n    const li = document.createElement(\"li\");\n    \n    li.innerHTML = `\n      <span>${item.name}</span>\n      <span class=\"allergen-tag\">Contains: ${item.allergens}</span>\n    `;\n    \n    menuList.appendChild(li);\n  }\n}\n\n// Initial Render\nrenderMenu(bakedGoods);",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "encrypted": "false",
+    "long_instructions": "# Fixing Data Mutation\r\n\r\n\r\nRefactor for Purity: Update filterNutFree() so it returns the new filtered list instead of assigning it to the bakedGoods variable. Then, update the filterBtn event listener to capture that returned list and pass it to renderMenu().\r\n\r\nVerify: Test again. Clicking Reset Data should now correctly show the full menu because the global bakedGoods list was never changed.\r\n\r\n1. **Test the Bug:** Run the app. Click **Filter: Nut-Free**, then click **Reset Data**. Notice that the \"Nut\" items are lost forever because the global data was permanently overwritten by the filter function.\r\n\r\n2. **Refactor for Purity:** Update the `filterNutFree()` function so it returns the new filtered list instead of mutating existing lists. Then, update the button's event listener to capture that returned value and pass it to `renderMenu().`\r\n\r\n3. **Render:** Test out your updated code again. Clicking Reset Data should now correctly show the full menu because the global `bakedGoods` list was never changed.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-24 19:51:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 19:51:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 19:58:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 19:58:39 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:04:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:05:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:05:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:08:38 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:17:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 20:19:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

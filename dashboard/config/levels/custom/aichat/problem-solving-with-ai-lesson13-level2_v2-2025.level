@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:26.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Develop Your Product\r\n\r\nUse AI Chat as a collaborator to help you refine your final presentation.\r\n\r\nYou can share examples, add images or PDFs, and give feedback on AI’s responses to improve its output.\r\n\r\n### Do This:\r\n1. Use AI Chat to:\r\n    - Generate ideas, supporting text, dialogue, or other elements for your chosen format\r\n    - Improve the content, structure, or tone of your final product\r\n    - Make your presentation clearer and more engaging\r\n\r\n---\r\n\r\n**Tips for Better Results**\r\n- Be specific about your format and audience (e.g., “Write this for a 6th grade audience in the style of a speech”)\r\n- Ask AI to revise for clarity, tone, or voice\r\n- Don’t just accept AI’s first draft—revise and guide it to reflect your ideas\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are helping a student create a presentation that explains how they worked with AI to develop and refine a future prediction. This includes the steps they took, prompts they used, decisions they made, and what they learned about AI.\n\nDo not automatically generate long paragraphs or polished slides. Keep your responses concise unless asked for more detail. Let the student decide the tone, format, and audience for their presentation.\n\nIf the student’s prompt is unclear or missing context (e.g., what they changed or why), ask follow-up questions to help them clarify and reflect. Encourage them to explain their decisions, not just describe the steps.\n\nThe goal is for the student to take ownership of the story and ensure their voice, reasoning, and perspective are clearly present in their final product.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to do some market research for your product or app. ",
+    "display_name": "Marketing Research Chat",
+    "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:26.981+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson13-level2_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson13-level2_2025\"}]"
+}]]></config>
+</Aichat>

@@ -8,11 +8,9 @@
 #slack_bot_token: localoverride
 #pardot_private_key: localoverride
 #openai_student_learning_api_key: localoverride
-
-# Whether to prefix bundler commands with 'sudo'.
-# It may be useful to set this false when doing local development on Linux.
-#bundler_use_sudo: false
-
+#openai_measures_of_learning_api_key: localoverride
+#langfuse_secret_key: localoverride
+#langfuse_public_key: localoverride
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
 # single command.  This is preferred (and default) in development mode.
@@ -163,8 +161,15 @@ use_my_apps: true
 # active_job_backend_n_workers_to_start: 2
 # active_job_backend_rolling_restart_in_n_batches: 1
 
-# Contentful CMS variables. For local development, use the preview endpoint.
+# CDO Contentful engine configs for Marketing space. For local development, use the preview endpoint.
 # The preview key can be found in the Contentful UI under settings -> API keys -> Code.org Local Development.
 #contentful_space_id: "90t6bu6vlf76"
 #contentful_api_key: ""
 #contentful_hostname: "preview.contentful.com"
+
+# CDO Contentful engine configs for CSforALL space. For local development, use the preview endpoint.
+# The preview key can be found in the Contentful UI under settings -> API keys -> CSforAll Local Development.
+#contentful_cs_for_all_access_token:
+#contentful_cs_for_all_space: 27jkibac934d
+#contentful_cs_for_all_api_url: preview.contentful.com
+#contentful_cs_for_all_namespace: master

@@ -1,0 +1,27 @@
+name 'networks-postassessment_v2-2025'
+title 'The Fabric of the Internet and AI End-of-Unit Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'networks-postassessment-intro_v2-2025'
+level 'networks-postassessment-question1_v2-2025'
+level 'networks-postassessment-question2_v2-2025'
+level 'networks-postassessment-question3_v2-2025'
+level 'networks-postassessment-question4_v2-2025'
+level 'networks-postassessment-question5_v2-2025'
+
+page
+level 'networks-postassessment-question6_v2-2025'
+level 'networks-postassessment-question7_v2-2025'
+level 'networks-postassessment-question8_v2-2025'
+level 'networks-postassessment-question9_v2-2025'
+level 'networks-postassessment-question10_v2-2025'
+
+page
+level 'networks-postassessment-question11_v2-2025'
+level 'networks-postassessment-question12_v2-2025'
+level 'networks-postassessment-question13_v2-2025'
+level 'networks-postassessment-question14_v2-2025'
+level 'networks-postassessment-question15_v2-2025'

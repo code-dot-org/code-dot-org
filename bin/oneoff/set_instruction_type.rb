@@ -15,7 +15,7 @@ def set_instruction_type
   self_paced_units = ['self-paced-pl-csd5-2021', 'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021']
   Unit.all.each do |script|
     # scripts in unit_groups get their instruction type from their unit group
-    next if script.unit_group
+    next if script.get_original_unit_group
 
     script.instruction_type = if self_paced_units.include?(script.name)
                                 'self_paced'

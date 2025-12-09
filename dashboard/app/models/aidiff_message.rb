@@ -2,14 +2,19 @@
 #
 # Table name: aidiff_messages
 #
-#  id               :bigint           not null, primary key
-#  aidiff_thread_id :bigint           not null
-#  external_id      :text(65535)      not null
-#  role             :integer          not null
-#  content          :text(65535)      not null
-#  is_preset        :boolean          not null
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
+#  id                      :bigint           not null, primary key
+#  aidiff_thread_id        :bigint           not null
+#  external_id             :text(65535)      not null
+#  role                    :integer          not null
+#  content                 :text(65535)      not null
+#  is_preset               :boolean          not null
+#  created_at              :datetime         not null
+#  updated_at              :datetime         not null
+#  preset_chip_text        :text(65535)
+#  raw_content             :text(65535)
+#  source_links            :json
+#  is_artifact_candidate   :boolean          default(FALSE)
+#  artifact_candidate_type :string(255)
 #
 # Indexes
 #
@@ -23,4 +28,15 @@ class AidiffMessage < ApplicationRecord
     user: 1,
     assistant: 2,
   }
+
+  def summarize
+    {
+      id: id,
+      role: role,
+      content: content,
+      updated_at: updated_at,
+      is_preset: is_preset,
+      preset_chip_text: preset_chip_text,
+    }
+  end
 end

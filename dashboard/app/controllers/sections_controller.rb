@@ -24,8 +24,11 @@ class SectionsController < ApplicationController
 
   def log_in
     if user = User.authenticate_with_section(section: @section, params: params)
-      bypass_sign_in user
-      user.update_tracked_fields!(request)
+      unless user == current_user
+        bypass_sign_in user
+        user.update_tracked_fields!(request)
+      end
+
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
       redirect_to_section_script_or_course
     else
@@ -81,7 +84,7 @@ class SectionsController < ApplicationController
               script_lesson_path(unit, lesson)
             end
           {
-            text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name,
+            text: lesson.localized_title,
             value: path,
           }
         end
@@ -93,7 +96,8 @@ class SectionsController < ApplicationController
 
   private def redirect_to_section_script_or_course
     if @section.script
-      redirect_to script_path(@section.script)
+      unit_group_unit = Queries::Courses.unit_group_unit(@section.script, @section.unit_group)
+      redirect_to course_unit_path(@section.unit_group, unit_group_unit.position)
     elsif @section.unit_group
       redirect_to course_path(@section.unit_group)
     else

@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-party-horn\"></i> Celebration Sounds! \r\n1. Add a trigger event block. \r\n2. Add sounds under the event block.\r\n2. Press Run, then trigger the celebration when **you** decide.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id-left:triggered_at_simple2)\r\n",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-party-horn\"></i> Celebration Sounds! \r\n1. Add a when triggered event block. \r\n2. Add sounds under the event block.\r\n2. Press Run, then trigger the celebration when **you** decide.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id-left:triggered_at_simple2)\r\n",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -226,9 +226,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:27.891+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-functions_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-functions_launch\"},{\"changed_at\":\"2025-05-23 16:08:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:27.891+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-functions_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-functions_launch\"},{\"changed_at\":\"2025-05-23 16:08:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 18:42:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

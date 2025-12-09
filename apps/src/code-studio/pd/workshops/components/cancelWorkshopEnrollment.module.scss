@@ -1,0 +1,11 @@
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+.cancelWorkshopEnrollmentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .unenrollButton {
+    width: 100%;
+  }
+}

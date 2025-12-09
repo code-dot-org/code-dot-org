@@ -11,6 +11,10 @@
   margin-bottom: 0;
 }
 
+.instructionsContainer {
+  margin-bottom: 45px; // space for copyright footer
+}
+
 // This is adapted from customDropdown.module.scss in the component library.
 // The component library does not have a dropdown that comes from an icon-only button.
 .dropdownContainer {

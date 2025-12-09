@@ -1,3 +1,4 @@
+@use './components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import './common.scss';
 
@@ -51,7 +52,7 @@
   bottom: 0;
   pointer-events: none;
   opacity: 0;
-  z-index: 70;
+  z-index: variables.$z-index-overlay;
   background-color: var(--background-neutral-lab);
 
   &.noFadeLoading {

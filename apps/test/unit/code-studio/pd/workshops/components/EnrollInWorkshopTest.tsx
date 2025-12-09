@@ -2,31 +2,33 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/types';
 import EnrollInWorkshop from '@cdo/apps/code-studio/pd/workshops/components/EnrollInWorkshop';
 
 const baseUserInfo = {
-  is_student: false,
+  isStudent: false,
   id: 123,
   email: 'sample@google.com',
-  display_name: 'Mr. Doe',
-  first_name: 'John',
-  last_name: 'Doe',
-  school_info: {
-    school_id: 1,
+  displayName: 'Mr. Doe',
+  givenName: 'John',
+  familyName: 'Doe',
+  educatorRole: 'Homeschool Teacher',
+  schoolInfo: {
+    schoolId: 1,
     country: 'United States',
-    school_name: 'School Academy',
+    schoolName: 'School Academy',
     zip: '11111',
+    schoolType: undefined,
   },
 };
 
 const baseProps = {
   id: 1,
-  custom_registration_link: undefined,
-  num_enrollments: 0,
+  customRegistrationLink: undefined,
+  numEnrollments: 0,
   capacity: 10,
   userInfo: baseUserInfo,
-  regional_partner_name: 'Sample Partner',
+  regionalPartnerName: 'Sample Partner',
   course: 'CS Principles',
   name: 'Sample Workshop',
   format: 'hybrid' as const,
@@ -54,12 +56,33 @@ describe('EnrollInWorkshop', () => {
   });
 
   it('shows "Workshop is full" button if full', () => {
-    render(<EnrollInWorkshop {...baseProps} num_enrollments={10} />);
+    render(<EnrollInWorkshop {...baseProps} numEnrollments={10} />);
     const fullButton = screen.getByRole('button', {name: /Workshop is full/i});
     expect(fullButton).toBeDisabled();
   });
 
-  it('enroll button sends logged out users to logged out gate', () => {
+  it('enroll button is disabled if user information is missing', () => {
+    const missingFirstNameUserInfo = {...baseUserInfo, givenName: ''};
+    render(
+      <EnrollInWorkshop {...baseProps} userInfo={missingFirstNameUserInfo} />
+    );
+    const enrollButton = screen.getByRole('button', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(enrollButton).toBeInTheDocument();
+    expect(enrollButton).toBeDisabled();
+  });
+
+  it('enroll button is enabled if all user information is present', () => {
+    render(<EnrollInWorkshop {...baseProps} />);
+    const enrollButton = screen.getByRole('button', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(enrollButton).toBeInTheDocument();
+    expect(enrollButton).toBeEnabled();
+  });
+
+  it('enroll button sends logged out users to logged out gate if workshop has no customRegistrationLink', () => {
     render(<EnrollInWorkshop {...baseProps} userInfo={null} />);
     const linkButton = screen.getByRole('link', {
       name: /Sign-in to enroll/i,
@@ -72,11 +95,11 @@ describe('EnrollInWorkshop', () => {
     );
   });
 
-  it('enroll button sends students to update account type gate', () => {
+  it('enroll button sends students to update account type gate if workshop has no customRegistrationLink', () => {
     render(
       <EnrollInWorkshop
         {...baseProps}
-        userInfo={{...baseUserInfo, is_student: true}}
+        userInfo={{...baseUserInfo, isStudent: true}}
       />
     );
     const linkButton = screen.getByRole('link', {
@@ -90,14 +113,27 @@ describe('EnrollInWorkshop', () => {
     );
   });
 
-  it('shows partner registration link if custom_registration_link is present', () => {
+  it('shows internal enrollment button to teachers if workshop has no customRegistrationLink', () => {
+    render(<EnrollInWorkshop {...baseProps} />);
+    const enrollButton = screen.getByRole('button', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(enrollButton).toBeInTheDocument();
+    expect(enrollButton).toBeEnabled();
+  });
+
+  it('enroll button sends signed-out users to partner registration link if customRegistrationLink is present', () => {
     const customLink = 'https://partner.org/enroll';
     render(
-      <EnrollInWorkshop {...baseProps} custom_registration_link={customLink} />
+      <EnrollInWorkshop
+        {...baseProps}
+        userInfo={null}
+        customRegistrationLink={customLink}
+      />
     );
 
     expect(
-      screen.getByText(/This workshop’s registration is managed externally/i)
+      screen.getByText(/This workshop's registration is managed externally/i)
     ).toBeInTheDocument();
 
     const linkButton = screen.getByRole('link', {
@@ -106,13 +142,40 @@ describe('EnrollInWorkshop', () => {
     expect(linkButton).toHaveAttribute('href', customLink);
   });
 
-  it('shows internal enrollment button if user is signed in and not a student', () => {
-    render(<EnrollInWorkshop {...baseProps} />);
-    const enrollButton = screen.getByRole('button', {
-      name: /Enroll in this workshop/i,
+  it('enroll button sends student users to partner registration link if customRegistrationLink is present', () => {
+    const customLink = 'https://partner.org/enroll';
+    render(
+      <EnrollInWorkshop
+        {...baseProps}
+        userInfo={{...baseUserInfo, isStudent: true}}
+        customRegistrationLink={customLink}
+      />
+    );
+
+    expect(
+      screen.getByText(/This workshop's registration is managed externally/i)
+    ).toBeInTheDocument();
+
+    const linkButton = screen.getByRole('link', {
+      name: /Go to partner enrollment/i,
     });
-    expect(enrollButton).toBeInTheDocument();
-    expect(enrollButton).toBeEnabled();
+    expect(linkButton).toHaveAttribute('href', customLink);
+  });
+
+  it('enroll button sends teachers users to partner registration link if customRegistrationLink is present', () => {
+    const customLink = 'https://partner.org/enroll';
+    render(
+      <EnrollInWorkshop {...baseProps} customRegistrationLink={customLink} />
+    );
+
+    expect(
+      screen.getByText(/This workshop's registration is managed externally/i)
+    ).toBeInTheDocument();
+
+    const linkButton = screen.getByRole('link', {
+      name: /Go to partner enrollment/i,
+    });
+    expect(linkButton).toHaveAttribute('href', customLink);
   });
 
   it('always shows "Click to see data sharing notice" link', () => {

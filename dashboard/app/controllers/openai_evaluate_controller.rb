@@ -8,6 +8,7 @@ class OpenaiEvaluateController < ApplicationController
     level_id = evaluate_params[:level_id]
     student_work = evaluate_params[:student_work]
     evaluation_type = evaluate_params[:evaluation_type]
+    should_evaluate_skills = evaluate_params[:should_evaluate_skills] || false
 
     begin
       level = Level.find(level_id)
@@ -18,7 +19,8 @@ class OpenaiEvaluateController < ApplicationController
     response = OpenaiEvaluateHelper.evaluate(
       level,
       student_work: student_work,
-      evaluation_type: evaluation_type
+      evaluation_type: evaluation_type,
+      should_evaluate_skills: should_evaluate_skills
     )
 
     return render(status: response[:status], json: response[:json])
@@ -30,9 +32,9 @@ class OpenaiEvaluateController < ApplicationController
     authorize! :manage, section
 
     begin
-      unit = Unit.find(evaluate_section_params[:unit_id])
+      unit = Unit.find_by(name: evaluate_section_params[:unit_name])
     rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "Unit with id #{evaluate_section_params[:unit_id]}"
+      return render status: :not_found, json: "Unit with name #{evaluate_section_params[:unit_name]}"
     end
 
     OpenaiEvaluateHelper.evaluate_section(
@@ -44,10 +46,10 @@ class OpenaiEvaluateController < ApplicationController
   end
 
   private def evaluate_params
-    params.transform_keys(&:underscore).permit(:level_id, :unit_id, :student_work, :evaluation_type)
+    params.transform_keys(&:underscore).permit(:level_id, :unit_id, :student_work, :evaluation_type, :should_evaluate_skills)
   end
 
   private def evaluate_section_params
-    params.transform_keys(&:underscore).permit(:unit_id, :section_id)
+    params.transform_keys(&:underscore).permit(:unit_name, :section_id)
   end
 end

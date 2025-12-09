@@ -1,4 +1,8 @@
+import '@code-dot-org/component-library-styles/colors.scss';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
+
+injectFontAwesome();
 
 //Stub jquery fileupload library function
 $.fn.fileupload = () => {};

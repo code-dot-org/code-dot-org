@@ -11,7 +11,7 @@ def set_course_audiences
 
   Unit.all.each do |script|
     # scripts in unit_groups get their audiences from their unit group
-    next if script.unit_group
+    next if script.get_original_unit_group
 
     # rubocop:disable Style/WordArray
     # rubocop:disable Performance/CollectionLiteralInLoop

@@ -81,7 +81,7 @@
     "libraries_enabled": "false",
     "thumbnail_url": "https://images.code.org/c9ea20861045987d177e964f7eeb07ad-image-1585823491836.gif",
     "start_blocks": "//1) Run the program to see the bug.\r\n//2) Use the clues to try to find the bug.\r\n\r\nfunction draw() {\r\n  var blender = createSprite(200,200);\r\n  blender.setAnimation(\"blender\");\r\n\r\n  background(\"lightyellow\");\r\n  blender.x = 200 + randomNumber(-5,5);\r\n  blender.y = 200 + randomNumber(-5,5);\r\n  drawSprites();\r\n}",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"392458fc-1457-45dd-8c57-e466fecb7544\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"392458fc-1457-45dd-8c57-e466fecb7544\": {\r\n      \"name\": \"blender\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/RyJYRPyX336xINHfnjjje20ezyEHSsNV/category_generic_items/blender.png\",\r\n      \"frameSize\": {\r\n        \"x\": 89,\r\n        \"y\": 136\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RyJYRPyX336xINHfnjjje20ezyEHSsNV\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"392458fc-1457-45dd-8c57-e466fecb7544\"\n  ],\n  \"propsByKey\": {\n    \"392458fc-1457-45dd-8c57-e466fecb7544\": {\n      \"name\": \"blender\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/RyJYRPyX336xINHfnjjje20ezyEHSsNV/category_generic_items/blender.png\",\n      \"frameSize\": {\n        \"x\": 89,\n        \"y\": 136\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"RyJYRPyX336xINHfnjjje20ezyEHSsNV\"\n    }\n  }\n}",
     "validation_enabled": "false",
     "preload_asset_list": null
   },

@@ -2,7 +2,7 @@ module AichatOpenaiResponsesHelper
   class Client
     attr_accessor :api_key, :model
 
-    OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
+    OPEN_AI_URL = "https://api.openai.com/v1/responses"
     DEFAULT_TEMPERATURE = 0
 
     def initialize(api_key, model)
@@ -12,7 +12,7 @@ module AichatOpenaiResponsesHelper
 
     # Optional "options" parameter is included to provide generic coverage for additional OpenAI parameters.
     # Examples include "response_format" for JSON response formatting, and "tools" for function calling.
-    def request_chat_completion(messages, temperature = DEFAULT_TEMPERATURE, options: {})
+    def request_chat_completion(input, temperature = DEFAULT_TEMPERATURE, options: {})
       headers = {
         "Content-Type" => "application/json",
         "Authorization" => "Bearer #{api_key}"
@@ -21,7 +21,7 @@ module AichatOpenaiResponsesHelper
       data = {
         model: model,
         temperature: temperature,
-        messages: messages
+        input: input
       }.merge(options)
 
       HTTParty.post(

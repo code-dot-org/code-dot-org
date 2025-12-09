@@ -3,7 +3,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {evaluateFreeResponse} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
 import {fetchFreeResponseAnswers} from './StudentWorkSamplesApi';
 
@@ -68,7 +68,7 @@ const FreeResponseDatasetMaker: React.FC = () => {
   const evaluateStudentResponse = async (
     studentAnswer: StudentFreeResponseAnswer
   ) => {
-    const aiResponse = await evaluateStudentWork(
+    const aiResponse = await evaluateFreeResponse(
       studentAnswer,
       parseInt(levelId),
       parseInt(unitId)

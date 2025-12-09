@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-02 17:46:42 UTC",
+    "serialized_at": "2025-08-01 15:42:58 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4152,6 +4152,7 @@
       "key": "how_embeddings_are_made_version_b_",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {

@@ -95,4 +95,17 @@ describe('Image Component', () => {
     const img = screen.getByRole('img');
     expect(img).toHaveAttribute('loading', 'eager');
   });
+
+  it('renders with a custom ImageComponent if provided', () => {
+    // Simulate a custom ImageComponent prop
+    const CustomImg = (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+      <img alt="abc" data-testid="custom-img" {...props} />
+    );
+
+    render(
+      <Image src="test.jpg" altText="Custom" ImageComponent={CustomImg} />,
+    );
+    // If ImageComponent is supported, this should pass
+    expect(screen.getByTestId('custom-img')).toBeInTheDocument();
+  });
 });

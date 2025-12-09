@@ -3,9 +3,9 @@ require 'test_helper'
 class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup do
-    @user = create :user
-    @foorm_form = create :foorm_form
-    @simple_survey_form = create :foorm_simple_survey_form
+    @user = create(:user)
+    @foorm_form = create(:foorm_form)
+    @simple_survey_form = create(:foorm_simple_survey_form)
 
     @params = {
       answers: {

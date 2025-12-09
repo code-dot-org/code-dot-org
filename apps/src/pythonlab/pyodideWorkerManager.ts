@@ -8,7 +8,7 @@ import {
 } from '@codebridge/Console/MessageHelpers';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
   setHasError,
   setLoadedCodeEnvironment,
@@ -34,7 +34,8 @@ let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
-let isPyodideLoading = false;
+let directLogsToDevConsole = false;
+let loadedMessageHandlers = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -42,6 +43,7 @@ const getMessageHandlers = (
   outputToNeighborhood: boolean
 ) => {
   if (outputToNeighborhood && neighborhood) {
+    loadedMessageHandlers = true;
     return {
       writeConsoleMessage: (line: string) =>
         neighborhood.handleSignal({
@@ -55,12 +57,14 @@ const getMessageHandlers = (
         }),
     };
   } else if (consoleManager) {
+    loadedMessageHandlers = true;
     return {
       writeConsoleMessage:
         consoleManager.writeConsoleMessage.bind(consoleManager),
       writePartialLine: consoleManager.writePartialLine.bind(consoleManager),
     };
   } else {
+    loadedMessageHandlers = false;
     return {
       writeConsoleMessage: (message: string) => console.log(message),
       writePartialLine: (message: string) => console.log(message),
@@ -69,8 +73,8 @@ const getMessageHandlers = (
 };
 
 let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
-  null,
-  null,
+  CodebridgeRegistry.getInstance().getConsoleManager(),
+  CodebridgeRegistry.getInstance().getNeighborhood(),
   false
 );
 
@@ -92,13 +96,23 @@ const setUpPyodideWorker = () => {
     const onSuccess = callbacks[id];
 
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    if (!loadedMessageHandlers) {
+      const messageHandlers = getMessageHandlers(
+        CodebridgeRegistry.getInstance().getConsoleManager(),
+        neighborhood,
+        false
+      );
+      writeConsoleMessage = messageHandlers.writeConsoleMessage;
+      writePartialLine = messageHandlers.writePartialLine;
+    }
 
     switch (type) {
       case 'sysout':
       case 'syserr':
-        // Write messages to the dev console if we are still loading pyodide.
-        // These messages are confusing to students, as they are part of the pyodide loading process.
-        if (isPyodideLoading) {
+        // Write messages to the dev console if the flag is set.
+        // We set this flag if we are either loading pyodide or loading packages,
+        // to avoid showing students confusing loading messages.
+        if (directLogsToDevConsole) {
           console.log(message);
           break;
         }
@@ -144,11 +158,13 @@ const setUpPyodideWorker = () => {
           writeConsoleMessage(getErrorMessage(pythonlabI18n.inputFailed()));
           break;
         }
-        writeConsoleMessage(getErrorMessage(parseErrorMessage(message)));
+        writeConsoleMessage(getErrorMessage(parseErrorMessage(message, false)));
         break;
       case 'system_error':
         getStore().dispatch(setHasError(true));
-        writeConsoleMessage(getSystemError(message, appName));
+        writeConsoleMessage(
+          getSystemError(parseErrorMessage(message, true), appName)
+        );
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Python Lab System Code Error', undefined, {message});
@@ -162,20 +178,25 @@ const setUpPyodideWorker = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Failed to load packages', undefined, {message});
-        writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
-        isPyodideLoading = true;
+        directLogsToDevConsole = true;
         getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
-        isPyodideLoading = false;
+        directLogsToDevConsole = false;
         getStore().dispatch(setLoadedCodeEnvironment(true));
         if (message && parseInt(message)) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .reportLoadTime('PythonLab.PyodideLoadTime', parseInt(message));
         }
+        break;
+      case 'loading_packages':
+        directLogsToDevConsole = true;
+        break;
+      case 'loaded_packages':
+        directLogsToDevConsole = false;
         break;
       default:
         console.warn(

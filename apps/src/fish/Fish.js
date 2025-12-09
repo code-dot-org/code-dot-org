@@ -5,6 +5,9 @@ import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
+import localization from '@cdo/apps/localization';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {getStore} from '../redux';
 
@@ -57,6 +60,21 @@ Fish.prototype.init = function (config) {
 
   config.pinWorkspaceToBottom = true;
 
+  const reportActivityEvent = () => {
+    const {isProjectLevel} = getStore().getState().pageConstants;
+
+    analyticsReporter.sendEvent(
+      isProjectLevel ? EVENTS.PROJECT_ACTIVITY : EVENTS.LEVEL_ACTIVITY,
+      {
+        signedIn: config.isSignedIn,
+        unitName: config.scriptName,
+        levelId: config.serverLevelId,
+        levelName: config.level.name,
+      },
+      PLATFORMS.BOTH
+    );
+  };
+
   const onMount = () => {
     // NOTE: Other apps call studioApp.init(), except WebLab. Fish is imitating WebLab
     this.studioApp_.setConfigValues_(config);
@@ -80,6 +98,7 @@ Fish.prototype.init = function (config) {
     }
 
     this.initMLActivities();
+    reportActivityEvent();
   };
 
   // Push initial level properties into the Redux store
@@ -129,6 +148,12 @@ Fish.prototype.initMLActivities = function () {
 
   const {initAll} = require('@code-dot-org/ml-activities');
 
+  // Localize
+  const msg = Object.entries(fishMsg).reduce((acc, [key, msgFunction]) => {
+    acc[key] = (...args) => localization.translate(msgFunction(...args));
+    return acc;
+  }, {});
+
   // Set initial state for UI elements.
   initAll({
     canvas,
@@ -139,7 +164,7 @@ Fish.prototype.initMLActivities = function () {
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: fishMsg,
+    i18n: msg,
   });
 };
 

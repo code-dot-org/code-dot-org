@@ -1,6 +1,5 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import classNames from 'classnames';
 import React, {ChangeEvent, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -16,7 +15,6 @@ import {
   MAX_FILE_SIZE_MB,
   MAX_NUM_FILES,
 } from '../../constants';
-import {useLevelProperties} from '../../levelPropertiesContext';
 import aichatI18n from '../../locale';
 import {
   addStagedFile,
@@ -25,20 +23,28 @@ import {
   stagedFilesLimitExceeded,
   stagedFileUploadFinished,
 } from '../../redux';
-import {AssetSource} from '../../types';
+import {AssetSource, ChatAsset} from '../../types';
 
-import styles from './upload-button.module.scss';
+export interface UploadButtonProps {
+  isDisabled: boolean;
+  levelName: string;
+  buildAssetUrl: (asset: ChatAsset) => string;
+  hasStarterAssets?: boolean;
+  showLabel?: boolean;
+}
 
-const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
+const UploadButton: React.FC<UploadButtonProps> = ({
+  isDisabled,
+  levelName,
+  buildAssetUrl,
+  hasStarterAssets = false,
+  showLabel = true,
+}) => {
   const dispatch = useAppDispatch();
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
   const numStagedFiles = useAppSelector(
     state => state.aichat.stagedFiles.length
   );
   const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
-  const {name: levelName, starterAssets} = useLevelProperties();
-  const hasStarterAssets =
-    starterAssets && Object.keys(starterAssets).length > 0;
   const [showAssetManager, setShowAssetManager] = useState(false);
 
   const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -57,23 +63,23 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
 
     const allowedFiles = Array.from(files)
       .slice(0, numAllowedFiles)
-      .map<[string, string, File]>(file => [
+      .map<[string, ChatAsset, File]>(file => [
         // Create a unique key for each upload in case the same file is uploaded more than once.
         `${file.name}-${Date.now()}`,
-        file.name,
+        {filename: file.name, source: AssetSource.PROJECT},
         file,
       ]);
 
-    for (const [key, filename] of allowedFiles) {
-      dispatch(
-        addStagedFile({key, asset: {filename, source: AssetSource.PROJECT}})
-      );
+    for (const [key, asset] of allowedFiles) {
+      dispatch(addStagedFile({key, asset}));
     }
 
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
-    for (const [key, filename, file] of allowedFiles) {
+    let fileCountPdf = 0;
+    let fileCountImage = 0;
+    for (const [key, asset, file] of allowedFiles) {
       if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
         sizeLimitExceededCount += 1;
         dispatch(
@@ -85,11 +91,14 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         continue; // Skip uploading this file if it exceeds the size limit.
       }
 
+      if (file.name.endsWith('.pdf')) {
+        fileCountPdf += 1;
+      } else {
+        fileCountImage += 1;
+      }
+
       try {
-        await HttpClient.put(
-          `/v3/assets/${currentChannelId}/${encodeURIComponent(filename)}`,
-          file
-        );
+        await HttpClient.put(buildAssetUrl(asset), file);
         uploadSuccessCount += 1;
 
         dispatch(stagedFileUploadFinished({key, status: 'uploaded'}));
@@ -125,6 +134,8 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
         fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -142,11 +153,17 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         })
       );
     }
+    const fileCount = assets.length;
+    const fileCountPdf =
+      assets?.filter(asset => asset.filename.endsWith('.pdf')).length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
         source: AssetSource.LEVEL,
-        fileCountSuccess: assets.length,
+        fileCountSuccess: fileCount,
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -166,19 +183,24 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     );
   };
 
-  if (!currentChannelId) {
-    return null;
-  }
-
-  const buttonProps: ButtonProps = {
+  const buttonPropsCommon: ButtonProps = {
     type: 'secondary',
     color: 'gray',
-    iconLeft: {iconName: 'plus'},
+  };
+
+  const buttonPropsWithLabel: ButtonProps = {
+    ...buttonPropsCommon,
     text: aichatI18n.aichatAddFile(),
+    iconLeft: {iconName: 'plus'},
+  };
+
+  const buttonPropsIconOnly: ButtonProps = {
+    ...buttonPropsCommon,
+    icon: {iconName: 'plus', iconStyle: 'solid'},
   };
 
   const commonProps = {
-    size: 's',
+    size: 'xs',
     disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
   } as const;
 
@@ -187,8 +209,10 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       {...commonProps}
       name="uploadDropdown"
       labelText={aichatI18n.upload()}
-      triggerButtonProps={buttonProps}
-      className={classNames(styles.upload, styles.dropdown)}
+      triggerButtonProps={
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
+      }
+      menuVerticalPlacement="top"
       options={[
         {
           value: 'fromLibrary',
@@ -212,7 +236,11 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       ]}
     />
   ) : (
-    <Button {...buttonProps} {...commonProps} onClick={onDeviceUploadClick} />
+    <Button
+      {...(showLabel ? buttonPropsWithLabel : buttonPropsIconOnly)}
+      {...commonProps}
+      onClick={onDeviceUploadClick}
+    />
   );
 
   return (

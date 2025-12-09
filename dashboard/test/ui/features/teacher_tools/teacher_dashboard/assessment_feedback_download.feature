@@ -9,18 +9,18 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     When I sign in as "Teacher_Sally"
     Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/15"
     And I wait for the lab page to fully load
-    Then I am on "http://studio.code.org/home"
-    And I click selector ".ui-test-section-dropdown" once I see it
-    And I click selector ".edit-section-details-link"
+    Then I am on "http://studio.code.org/teacher_dashboard/home"
+    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
+    And I click selector "#ui-test-Section-settings" once I see it
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(High School)" is visible
     And I click selector "button:contains(High School)"
     And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('19-'20)" once I see it
+    And I click selector ".assignment-version-title:contains('25-'26)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
+    And I select the "Intro to App Design" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
 
     # Progress tab
@@ -36,8 +36,8 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Scenario: Assessments tab does not have feedback download
    # Assign a unit without feedback
     When I sign in as "Teacher_Sally" and go home
-    And I click selector ".ui-test-section-dropdown" once I see it
-    And I click selector ".edit-section-details-link" to load a new page
+    Then I click selector "#section-options-dropdown-dropdown-button" once I see it
+    And I click selector "#ui-test-Section-settings" once I see it
     Then I wait until element "#uitest-section-name-setup" is visible
     And I press keys "testingSection" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element

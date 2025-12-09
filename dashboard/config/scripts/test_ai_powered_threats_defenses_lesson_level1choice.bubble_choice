@@ -1,0 +1,10 @@
+name 'test-ai-powered-threats-defenses-lesson-level1choice'
+display_name 'Fraud Detection'
+description 'Choose a user persona and go through their audit logs to see if you can find any evidence of possible fraud.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson8-level1a-2'
+level 'test-ai-powered-threats-defenses-lesson8-level1b-2'
+level 'test-ai-powered-threats-defenses-lesson8-level1c'
+level 'test-ai-powered-threats-defenses-lesson8-level1d'
+

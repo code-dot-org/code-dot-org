@@ -1,0 +1,35 @@
+name 'codechella-csaif_pl_ai'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI as a Co-Creator
+
+#### You may have noticed that AI struggles with originality in tasks such as writing personal essays. However, AI can help enhance creativity and more and more music and movie producers, graphic designers, writers and other creatives are taking advantage of collaborative opportunities with AI.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Co-creating:</strong> when humans and AI work together, with humans providing creativity and direction, while AI assists by processing data, generating suggestions, or automating tasks.</p>
+</div>
+</div>
+
+#### During this activity, you will explore using AI as a co-creater further by working in groups to help launch a tech product. **Collaborate with your group and with AI to launch a brand-new product that will help adults work from home.**
+
+<div style="background-color:#F5F7F8; border-left: 6px solid #B7E0E5; padding: 10px; margin-top: 20px; font-family: sans-serif;">
+  <strong style="font-size: 16px;"><i class="fa-solid fa-user-graduate"></i> Career Journeys:</strong>
+  <span style="font-size: 14px;">This activity connects to real-world creative careers like marketing, design, and media production—showing how professionals collaborate with AI to bring ideas to life.</span>
+</div>
+
+#### Team members will choose one creative role in the product launch based on a real career:
+
+<p align="center">
+<img src="https://images.code.org/8df32dd7f26fe35c6bae0f06dcec2352-image-1758744440005.jpg" alt="four roles from the lesson plan: copywriter, graphic designer, video director, and sound designer" width="80%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### Each role will interact with a different level in AI Chat Lab to finalize their piece of the product launch.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 9 of Unit 1 of AI Foundations. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+
+MARKDOWN

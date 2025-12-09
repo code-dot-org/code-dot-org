@@ -3,8 +3,8 @@ require 'test_helper'
 class Foorm::SimpleSurveySubmissionTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @teacher = create :teacher
-    @foorm_form = create :foorm_form
+    @teacher = create(:teacher)
+    @foorm_form = create(:foorm_form)
   end
 
   test 'save simple survey submission' do

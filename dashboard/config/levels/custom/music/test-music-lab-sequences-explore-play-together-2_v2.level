@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Investigate\r\n\r\nNikki noticed some new blocks appeared in the toolbox. She wondered if we could add the next part of the song so it looked like this:\r\n\r\n![](https://images.code.org/32fea12cc5d0acfe6d9beea00eec9625-image-1743110887914.png)\r\n\r\nTry to recreate the code above on your own, or follow the step-by-step instructions below:\r\n\r\n1) Drag out a new <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block and connect it underneath your code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox---id:play_sounds_together).\r\n2) Drag four more <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> blocks into your code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox).\r\n3) Set the tracks to play a <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> track. Pick any that you want!\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear 4 sounds playing together twice!\r\n\r\n\r\n> Feeling stuck? You can try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints or listening to the example song!",
+    "long_instructions": "#### Investigate\r\n\r\nNikki wants to add the next part of the song so it looks like this:\r\n\r\n![](https://images.code.org/32fea12cc5d0acfe6d9beea00eec9625-image-1743110887914.png)\r\n\r\nTry to recreate the code above on your own, or follow the step-by-step instructions below:\r\n\r\n1) Drag out a new <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play together</code> block and connect it underneath your code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox---id:play_sounds_together).\r\n2) Drag four more <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play</code> blocks into your code [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox).\r\n3) Set the tracks to play a <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span>, and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> track. Pick any that you want!\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear 4 sounds playing together twice!\r\n\r\n\r\n> Feeling stuck? You can try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints or listening to the example song!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -146,8 +146,32 @@
     },
     "validations": [
       {
-        "key": "test-music-lab-sequences-explore-play-together-2_0846131f-4343-4714-b509-84df772e6527",
-        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: You did it!",
+        "key": "test-music-lab-sequences-explore-play-together-2_v2_f1b98a4b-91e3-45ae-a3b8-b72661e5a727",
+        "message": "You have too many `play together` blocks - you only need 2!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:3"
+          }
+        ],
+        "comment": ""
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-2_v2_6693a97e-4ca6-4dc8-b18e-79c4b0d89f28",
+        "message": "You have too many `play` blocks - you only need 8 total!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          }
+        ],
+        "comment": ""
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-2_v2_fef8ea19-5882-4271-81b6-833d7f3803f8",
+        "message": "",
         "next": true,
         "conditions": [
           {
@@ -159,13 +183,126 @@
             "value": "play_sounds_together:2"
           },
           {
+            "name": "played_different_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
             "name": "played_sounds",
-            "value": 5
+            "value": 8
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
           }
-        ]
+        ],
+        "comment": "all 8 tracks"
       },
       {
-        "key": "test-music-lab-sequences-explore-play-together-2_20b2f7cc-bad4-4395-831d-18d345cf3025",
+        "key": "test-music-lab-sequences-explore-play-together-2_v2_ef23c782-aba2-478e-a461-3b12a96b0280",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"Make sure the second play together has 4 tracks!\"",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:8"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          },
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
+            "name": "played_sounds",
+            "value": 5
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 2
+          }
+        ],
+        "comment": "doesn't have 8 tracks playing in second play together, so need to add"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-2_v2_1433669f-9cef-4375-ae29-2e8cadd11ca8",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:8"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          },
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
+            "name": "played_sounds",
+            "value": 5
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
+          }
+        ],
+        "comment": "Something is off with first part - go to exemplar"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-2_v2_1c5ef736-0db8-4e01-924f-700b06763947",
         "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: Your song sounds good so far…",
         "next": false,
         "conditions": [
@@ -176,8 +313,52 @@
           {
             "name": "block_count_by_type",
             "value": "play_sounds_together:2"
+          },
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          },
+          {
+            "name": "played_sounds",
+            "value": 4
+          },
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 1
           }
         ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-2_20b2f7cc-bad4-4395-831d-18d345cf3025",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:8"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          }
+        ],
+        "comment": "Something is off with first part, so go to exemplar validation"
       },
       {
         "key": "test-music-lab-sequences-explore-play-together-2_f0148e47-46d4-4f81-a6b6-83d8f5ad0558",
@@ -206,7 +387,7 @@
     "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:28.152+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-2\"},{\"changed_at\":\"2025-07-03 16:07:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:28.152+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-2\"},{\"changed_at\":\"2025-07-03 16:07:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-18 23:01:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 23:07:11 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 23:10:26 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
@@ -378,7 +377,6 @@ Javalab.prototype.onRun = function () {
     levelId: this.levelIdForAnalytics,
   });
   this.executeJavabuilder(ExecutionType.RUN);
-  getStore().dispatch(setShowSuggestedPrompts(true));
 };
 
 Javalab.prototype.onTest = function () {
@@ -394,7 +392,6 @@ Javalab.prototype.onTest = function () {
     validated: validated,
   });
   this.executeJavabuilder(ExecutionType.TEST);
-  getStore().dispatch(setShowSuggestedPrompts(true));
 };
 
 Javalab.prototype.executeJavabuilder = function (executionType) {

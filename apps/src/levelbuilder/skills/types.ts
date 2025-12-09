@@ -9,6 +9,7 @@ export interface Skill extends SkillIdentifier {
   concept: string;
   description: string;
   evaluationCriteria: string;
+  hasLevels?: boolean;
 }
 export interface Levels {
   levelId: number;

@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:16.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're debugging a movie review app that stores the title of a movie someone just watched. The program should print a review message, but something's not right!\r\n\r\n1. Look for **two** bugs.\r\n\r\n2. Fix both bugs so the program runs without errors and prints the message.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Movie Review",
+    "bubble_choice_description": "You're debugging a movie review app that stores the title of a movie someone just watched. The program should print a review message, but something's not right!",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program prints a movie review title\n\nmovie_title = The Farewell\nprint(\"You just watched:\", movi_title)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/6d1c68bed9c42c12748f3b55a892dac2-cinema.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nziY6iv/oxRSKjgBo04dJO4awMtW1CKWz\n1Zi+AMPM10C4x4rzLa7w/iyORNuRGSmaf3b6DZXT1EyYp4lNnU9AjISzeB8n\nKXHEESu4eqKXihcPGBei7iZqltZSUu5b+AcJCRGB5yngrX15LDBPXYfollMc\ni7Jy18kriFUDybdGpiLyZFc845Pw6jIMNU7oVQG0FC2m/ByFv0E1Y2o/WRnS\ngniSS93gImwL9PDAOwQk8OH3z6wuvcmYMXFKkQ0DAyeK2Q==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestMovieReviewPrint(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_movie_title_printed(self):\n        \"\"\"The correct movie title should be printed\"\"\"\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        self.assertTrue(\n            any(\"The Farewell\" in line for line in printed_lines),\n            \"Make sure you correctly assign and print the movie title 'The Farewell'!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:16.465+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level7d_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level7d_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

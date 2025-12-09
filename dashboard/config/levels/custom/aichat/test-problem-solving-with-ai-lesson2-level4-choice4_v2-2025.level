@@ -1,0 +1,69 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:38.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigative Journalism\r\n\r\nUse AI Chat to analyze an image from a news article alongside a PDF of the article.\r\n\r\n### Do This:\r\n\r\n1. Upload one of the **images** from the Library. **Copy and paste** the following prompt:\r\n\r\n> Analyze this image. Then write a catchy newspaper headline for the image. \r\n\r\n2. Look at the **PDFs** from the Library and choose the article that best matches the **image** you picked in Step 1. Upload that **same image** again along with the **matching article PDF**.\r\n\r\n> Analyze this image and article together. Write a catchy newspaper headline that fits with the image and article.\r\n\r\n3. Read AI Chat's response.\r\n4. **Experiment**: \r\n   - **Modify your prompt** by describing the image as well as uploading the image and PDF.\r\n   - **Change your input document or image** to see how AI’s response changes.\r\n\r\n**Try it out!**",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI assistant designed to generate news headlines and summaries based on multimodal inputs, including text, images, and PDFs. Your responses should prioritize clarity and relevance. If given an image, focus on the key visual elements that would influence a news story. If given a PDF, extract the most relevant details while maintaining factual accuracy. If the text prompt contradicts the image or PDF, note the inconsistency and generate a response that best aligns with the provided context. Do not fabricate sources, statistics, or quotes. Instead, acknowledge when information is unclear or missing.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Investigative Journalism",
+    "bubble_choice_description": " Use AI Chat to experiment with how headlines and summaries change based on text, images, and documents. Try different keywords, upload an image, and even include a related PDF to see how AI interprets different types of information.",
+    "thumbnail_url": "https://images.code.org/6ed825ef71c1393355f64d42725fa887-headline.png",
+    "starter_assets": {
+      "logging_1.jpg": "9d2d6667-ad9d-4cec-bcc0-4e2398631fe7.jpg",
+      "logging_3.jpg": "ae1239bb-0e17-4c13-90d8-97cac122f757.jpg",
+      "rideshare_1.jpg": "346ff1ef-1c5b-499d-be07-0019e825006d.jpg",
+      "fashion_1.jpg": "57a392e9-ba5c-4882-99b3-8f559109ef09.jpg",
+      "fashion_2.jpg": "4cae1b29-49d0-4a09-a839-162450f15998.jpg",
+      "fashion_3.jpg": "50c93b56-4e84-4d88-a0fa-03ea3a1b09da.jpg",
+      "fashion_4.jpg": "fb5c6eaf-f684-451c-b57f-771666c05d0f.jpg",
+      "Audience_1.jpg": "d888847b-3362-4549-80db-016ad45df26b.jpg",
+      "audience.pdf": "d9f34359-1ef1-4b8f-8db3-25c7b54bf6a4.pdf",
+      "logging.pdf": "00e2f8e4-a3d7-4078-9866-72a2f802b1da.pdf",
+      "fashion.pdf": "32d4cf38-2a69-4b4a-b266-0f3f602b8ee7.pdf",
+      "rideshare.pdf": "a2192700-fd25-4dd7-a300-0404811bd2a3.pdf"
+    },
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:38.300+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level4-choice4_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level4-choice4_2025\"}]"
+}]]></config>
+</Aichat>

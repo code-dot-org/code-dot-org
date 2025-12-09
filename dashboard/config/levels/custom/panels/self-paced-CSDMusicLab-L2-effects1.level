@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-04-14T21:47:56.000Z",
   "level_num": "custom",
@@ -33,7 +34,7 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Effects\n\nThere are three types of effects available in Music Lab: volume, filter, and delay.",
+        "text": "### Effects\n\nThere are three types of effects available in Music Lab: volume, filter, and delay.\n\n<i class=\"fa-solid fa-pencil\"></i> **Volume**: Changes the loudness of the function\n\n<i class=\"fa-solid fa-pencil\"></i> **Filter**: Changes the tone of the function, making the sounds muted or muffled\n\n<i class=\"fa-solid fa-pencil\"></i> **Delay**: Adds an echo to the sounds",
         "imageUrl": "https://images.code.org/98982b27525bcfa8b6a42d01ba55242a-Slide21.PNG",
         "key": "test-music-lab-sequences-synthesize-effects-panel-8a25ec76-0628-4559-969a-75bb36410c9c",
         "fadeInOverPrevious": true,
@@ -48,7 +49,6 @@
       }
     ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T21:47:56.264+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:47:56.264+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-panel\"},{\"changed_at\":\"2025-07-07 22:16:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Panels>

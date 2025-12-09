@@ -1,0 +1,17 @@
+name 'networks-postassessment-question12_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 12'
+
+right 'AI detects and blocks cyber threats in real-time'
+wrong 'AI speeds up Wi-Fi connections'
+wrong 'AI helps create new network protocols'
+wrong 'AI encrypts all online traffic automatically'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is a real-world example of how AI enhances network security?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Emerging Technologies
+MARKDOWN

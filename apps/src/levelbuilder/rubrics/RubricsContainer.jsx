@@ -137,7 +137,7 @@ export default function RubricsContainer({
   // TODO-AITT-168: Check that there is at least one submittable programming level here
   const initialLevelForAssessment = !!rubric
     ? rubric.levelId
-    : submittableLevels[0].id;
+    : submittableLevels[0]?.id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );

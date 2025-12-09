@@ -66,18 +66,7 @@ const JoinSectionSuccessNotification = ({
   joiningPlSection,
 }) => {
   let notificationMessage = null;
-  if (showingPlSections && !joiningPlSection) {
-    // Notify user if they are joining a non-PL section on the My PL page so they'll have to
-    // go to the Teacher Homepage if they want to view it.
-    notificationMessage = (
-      <SafeMarkdown
-        markdown={i18n.sectionsNotificationJoinSuccessForNonPlWrongPage({
-          sectionName: sectionName,
-          teacherHomepageUrl: studio('/home'),
-        })}
-      />
-    );
-  } else if (!showingPlSections && joiningPlSection) {
+  if (!showingPlSections && joiningPlSection) {
     // Notify user if they are joining a Professional Learning section not on the My PL page
     // so they'll have to go to the My PL page if they want to view it.
     notificationMessage = (

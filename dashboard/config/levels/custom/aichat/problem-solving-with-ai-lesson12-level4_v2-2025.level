@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:24.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Write Your Elevator Pitch\r\nNow that you’ve learned about how AI impacts your community, it’s time to share with others what you’ve discovered. \r\n\r\n\r\n###Do This\r\n1. Use **TaCoFoRT** to craft your prompt to AI Chat. Use it as a collaborator on your elevator pitch and remember you can use text, images, and documents to prompt it.\r\n2. Go back and forth with AI chat to make the best script you can.\r\n3. Make sure the pitch gets recorded in Part 3 of your Activity Guide.\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a chatbot helping a student craft an elevator pitch. Respond according to the guidelines below.\n\nIf a student doesn't prompt you as to which specific part of the elevator pitch they need your input on, clarify that with them before providing any suggestions or input. Use the below framework for an elevator pitch to help clarify and guide them.\n\nHook: Start with a bold statement, surprising fact, or quick attention-grabber. \nExample: Did you know students spend over 1,000 hours a year in school buildings, but most don’t feel heard in how things are run?\n\nIntroduce yourself and your idea: Let them know who you are and what issue you’re talking about.\nExample: I’m Jordan, and I’m working to help students have more say in school decisions.\n\nExplain the purpose: What change or improvement do you want to see?\nExample: We noticed the student council doesn’t always reach all voices, so we’re designing a feedback app anyone can use.\n\nWhy it matters: Why is this important to your school, community, or future?\nExample: If more students feel heard, it builds a stronger, more respectful school community.\n\nCall to action: What do you want your listener to do or think about next?\nExample: I’d love your thoughts — or if you know someone who can help us test the prototype, let me know!\n\nIn all your interactions, keep your responses concise and to a three bullet point maximum.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:24.621+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level4_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level4_2025\"}]"
+}]]></config>
+</Aichat>

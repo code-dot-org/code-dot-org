@@ -16,8 +16,6 @@ import i18n from '@cdo/locale';
 
 import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
 
-import {sessionCalendarShape} from './workshop_enroll';
-
 import style from '@cdo/apps/code-studio/pd/professional_learning/landingPage.module.scss';
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
@@ -413,6 +411,19 @@ export default function WorkshopEnrollmentCelebrationDialog({
 
 WorkshopEnrollmentCelebrationDialog.propTypes = {
   workshopTitle: PropTypes.string,
-  workshopSessionInfo: PropTypes.arrayOf(sessionCalendarShape),
+  workshopSessionInfo: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired,
+      is_local: PropTypes.bool.isRequired,
+      session_format: PropTypes.string.isRequired,
+      location_name: PropTypes.string,
+      location_address: PropTypes.string,
+      meeting_link: PropTypes.string,
+      description: PropTypes.string,
+      notes: PropTypes.string,
+    })
+  ),
   onClose: PropTypes.func,
 };

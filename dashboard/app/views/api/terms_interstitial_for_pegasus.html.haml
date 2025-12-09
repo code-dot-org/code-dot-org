@@ -29,7 +29,7 @@
           = form_for(current_user, as: :user, url: '/dashboardapi/users', html: {id: 'edit_user'}) do |f|
             .form-group
               = f.label :terms_of_service_version do
-                = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, current_user.latest_terms_version
+                = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, User.latest_terms_version
                 = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
             .form-group
               = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true

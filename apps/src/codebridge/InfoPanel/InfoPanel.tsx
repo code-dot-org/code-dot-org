@@ -1,44 +1,24 @@
-import Button from '@code-dot-org/component-library/button';
-import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
-import lab2I18n from '@cdo/apps/lab2/locale';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {
+  setIsValidating,
+  setHasValidated,
+} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
+import {sendLab2AnalyticsEvent} from '../../lab2/utils/analyticsReporterHelper';
 import {useCodebridgeContext} from '../codebridgeContext';
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
-
-import ForTeachersOnly from './ForTeachersOnly';
+import CodebridgeRegistry from '../CodebridgeRegistry';
+import {getSystemMessage} from '../Console/MessageHelpers';
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
 import moduleStyles from './styles/info-panel.module.scss';
-
-enum Panels {
-  Instructions = 'Instructions',
-  ForTeachersOnly = 'For Teachers Only',
-}
-
-const panelMap = {
-  [Panels.Instructions]: ValidatedInstructionsView,
-  [Panels.ForTeachersOnly]: ForTeachersOnly,
-};
-
-const panelProps = {
-  [Panels.Instructions]: {},
-  [Panels.ForTeachersOnly]: {},
-};
-
-const panelEventNames = {
-  [Panels.Instructions]: EVENTS.CODEBRIDGE_INSTRUCTIONS_TOGGLE,
-  [Panels.ForTeachersOnly]: EVENTS.CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE,
-};
-
-const panelNames = {
-  [Panels.Instructions]: lab2I18n.instructions(),
-  [Panels.ForTeachersOnly]: lab2I18n.forTeachersOnly(),
-};
-
 interface InfoPanelProps {
   style?: React.CSSProperties;
   className?: string;
@@ -48,112 +28,101 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
 }) => {
-  const {levelProperties} = useCodebridgeContext();
   const {
-    mapReference,
-    referenceLinks,
-    teacherMarkdown,
-    predictSettings,
-    appName,
-  } = levelProperties;
-  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
-  const [currentPanelName, setCurrentPanelName] = useState(
-    panelNames[Panels.Instructions]
+    levelProperties,
+    onRun,
+    onStop,
+    AiTutorResponseView,
+    hiddenContextCallback,
+    startSources,
+    aiTutorSystemPromptName,
+    aiTutorMultimodalEnabled,
+    aiTutorChatButtonData,
+    aiTutorResponseSchemaSettings,
+  } = useCodebridgeContext();
+
+  const dispatch = useAppDispatch();
+  const scriptId = useAppSelector(state => state.lab.scriptId);
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source
+  ) as MultiFileSource | undefined;
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.lab2System.loadedCodeEnvironment
   );
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [panelOptions, setPanelOptions] = useState<Panels[]>([
-    Panels.Instructions,
-  ]);
-  const hasPredictSolution = predictSettings?.solution;
 
-  useEffect(() => {
-    // For now, always include Instructions panel.
-    // TODO: support hiding this panel completely if there are no instructions.
-    const options = [Panels.Instructions];
-    if (isUserTeacher && (teacherMarkdown || hasPredictSolution)) {
-      options.push(Panels.ForTeachersOnly);
+  const {appName, id: levelId} = levelProperties;
+  const settings = useCodebridgeSettings();
+
+  const handleValidate = () => {
+    if (onRun) {
+      dispatch(setIsValidating(true));
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK);
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_validate,
+      });
+      onRun(true, dispatch, source).finally(() =>
+        dispatch(setIsValidating(false))
+      );
+      dispatch(setHasValidated(true));
+    } else {
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotTest(), appName)
+        );
     }
-    setPanelOptions(options);
-    // Close the dropdown if we change levels.
-    setIsDropdownOpen(false);
-  }, [
-    isUserTeacher,
-    mapReference,
-    referenceLinks,
-    teacherMarkdown,
-    hasPredictSolution,
-  ]);
-
-  useEffect(() => {
-    // If we change levels and were on a panel that no longer exists,
-    // switch to the first panel that does exist.
-    if (!panelOptions.includes(currentPanel)) {
-      const newPanel = panelOptions[0];
-      setCurrentPanel(newPanel);
-      setCurrentPanelName(panelNames[newPanel]);
-    }
-  }, [currentPanel, panelOptions]);
-
-  const renderHeaderButton = () => {
-    return panelOptions.length > 1 ? (
-      <div>
-        <Button
-          icon={{
-            iconStyle: 'solid',
-            iconName: isDropdownOpen ? 'caret-up' : 'caret-down',
-          }}
-          isIconOnly
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          ariaLabel={lab2I18n.informationPanelDropdown()}
-          aria-expanded={isDropdownOpen}
-          size={'xs'}
-          type={'tertiary'}
-          color={'black'}
-        />
-      </div>
-    ) : null;
   };
 
-  const changePanel = (panel: Panels) => {
-    if (panel !== currentPanel) {
-      setCurrentPanel(panel);
-      setCurrentPanelName(panelNames[panel]);
-      sendCodebridgeAnalyticsEvent(panelEventNames[panel], appName);
+  const handleStopValidation = () => {
+    if (onStop) {
+      onStop();
+      dispatch(setIsValidating(false));
+    } else {
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotStop(), appName)
+        );
+      dispatch(setIsValidating(false));
     }
-    setIsDropdownOpen(false);
   };
 
-  const CurrentPanelView = panelMap[currentPanel];
   return (
     <div style={style} className={className}>
-      <PanelContainer
-        id="codebridge-info-panel"
-        headerContent={currentPanelName}
-        rightHeaderContent={renderHeaderButton()}
-        className={moduleStyles.infoPanel}
+      <ResourcePanel
+        isRunning={isRunning}
+        hasRun={hasRun}
+        hasEdited={hasEdited}
+        validationSettings={{
+          onValidate: handleValidate,
+          onStopValidation: handleStopValidation,
+          isValidating,
+          isValidateDisabled: !hasLoadedEnvironment || isRunning,
+        }}
+        AiTutorResponseView={AiTutorResponseView}
+        className={moduleStyles.instructionsContainer}
         headerClassName={moduleStyles.infoPanelHeader}
-      >
-        {isDropdownOpen && (
-          <form className={moduleStyles.dropdownContainer}>
-            <ul>
-              {panelOptions.map(panel => (
-                <li key={panel}>
-                  <Button
-                    color={'white'}
-                    onClick={() => changePanel(panel)}
-                    ariaLabel={panelNames[panel]}
-                    size={'xs'}
-                    text={panelNames[panel]}
-                    className={moduleStyles.dropdownItem}
-                  />
-                </li>
-              ))}
-            </ul>
-          </form>
-        )}
-        <CurrentPanelView {...panelProps[currentPanel]} />
-      </PanelContainer>
+        levelProperties={levelProperties}
+        requireRun={appName === 'pythonlab'}
+        hiddenContextCallback={hiddenContextCallback}
+        settings={settings}
+        versionHistoryProps={{startSources}}
+        aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+        aiTutorChatButtonData={aiTutorChatButtonData}
+        isValidationTourEnabled={appName === 'pythonlab'}
+        isOnboardingTourEnabled={true}
+        aiTutorSystemPromptName={aiTutorSystemPromptName}
+        aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+        documentationUrl={
+          appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
+        }
+      />
     </div>
   );
 };

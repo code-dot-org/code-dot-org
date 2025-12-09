@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2021-08-30T20:48:27.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -37,17 +41,10 @@
     "callout_json": "[]",
     "parent_level_id": 29613,
     "video_key": "hoc_dance_properties",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"372ecd3e-3578-461c-a4ab-9af062247aa6\",\r\n    \"9cc0d00c-d219-439d-93f1-b6370f6b51da\",\r\n    \"fbc395e4-2c20-4ffc-9489-3183973f3ca9\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"372ecd3e-3578-461c-a4ab-9af062247aa6\": {\r\n      \"name\": \"birdside_03_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/hDbHMp1UmEHMCSm_l9dJNKAHs.0XokdT/category_animals/birdside_03.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 230\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"hDbHMp1UmEHMCSm_l9dJNKAHs.0XokdT\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"9cc0d00c-d219-439d-93f1-b6370f6b51da\": {\r\n      \"name\": \"axe_diamond_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/nZ_Xngk8sTvxc82hSPs7yl6jUuGMhjDh/category_tools/axe_diamond.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nZ_Xngk8sTvxc82hSPs7yl6jUuGMhjDh\",\r\n      \"categories\": [\r\n        \"tools\"\r\n      ]\r\n    },\r\n    \"fbc395e4-2c20-4ffc-9489-3183973f3ca9\": {\r\n      \"name\": \"gameplayfaces_04_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/ta1NIPkMvCFS7AFDDpwbOy61h3NStP0J/category_faces/gameplayfaces_04.png\",\r\n      \"frameSize\": {\r\n        \"x\": 391,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ta1NIPkMvCFS7AFDDpwbOy61h3NStP0J\",\r\n      \"categories\": [\r\n        \"faces\"\r\n      ]\r\n    }\r\n  }\r\n}"
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"372ecd3e-3578-461c-a4ab-9af062247aa6\",\n    \"9cc0d00c-d219-439d-93f1-b6370f6b51da\",\n    \"fbc395e4-2c20-4ffc-9489-3183973f3ca9\"\n  ],\n  \"propsByKey\": {\n    \"372ecd3e-3578-461c-a4ab-9af062247aa6\": {\n      \"name\": \"birdside_03_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/hDbHMp1UmEHMCSm_l9dJNKAHs.0XokdT/category_animals/birdside_03.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 230\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"hDbHMp1UmEHMCSm_l9dJNKAHs.0XokdT\",\n      \"categories\": [\n        \"animals\"\n      ]\n    },\n    \"9cc0d00c-d219-439d-93f1-b6370f6b51da\": {\n      \"name\": \"axe_diamond_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/nZ_Xngk8sTvxc82hSPs7yl6jUuGMhjDh/category_tools/axe_diamond.png\",\n      \"frameSize\": {\n        \"x\": 128,\n        \"y\": 128\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"nZ_Xngk8sTvxc82hSPs7yl6jUuGMhjDh\",\n      \"categories\": [\n        \"tools\"\n      ]\n    },\n    \"fbc395e4-2c20-4ffc-9489-3183973f3ca9\": {\n      \"name\": \"gameplayfaces_04_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/ta1NIPkMvCFS7AFDDpwbOy61h3NStP0J/category_faces/gameplayfaces_04.png\",\n      \"frameSize\": {\n        \"x\": 391,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"ta1NIPkMvCFS7AFDDpwbOy61h3NStP0J\",\n      \"categories\": [\n        \"faces\"\n      ]\n    }\n  }\n}",
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2021-08-30T20:48:27.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "audit_log": "[{\"changed_at\":\"2021-08-30T20:48:27.921+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addSprites\\\"\"],\"cloned_from\":\"poetryHoC_addSprites\"},{\"changed_at\":\"2021-08-30 20:50:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-30 20:51:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }

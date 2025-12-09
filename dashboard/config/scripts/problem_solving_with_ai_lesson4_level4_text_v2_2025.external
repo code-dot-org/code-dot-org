@@ -1,0 +1,17 @@
+name 'problem-solving-with-ai-lesson4-level4-text_v2-2025'
+title 'Free Response - Smart or Just Predictable'
+description 'description here'
+
+markdown <<MARKDOWN
+## Using AI in Careers
+
+**Choose a career from the list below or pick your own:**
+
+- Travel agent
+- Doctor
+- Lawyer
+- Science fiction author
+- Mathematician
+
+
+MARKDOWN

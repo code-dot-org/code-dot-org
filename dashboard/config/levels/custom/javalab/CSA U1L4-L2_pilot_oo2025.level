@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-12T23:23:11.000Z",
   "level_num": "custom",
@@ -349,12 +350,14 @@
         }
       ]
     ],
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Go to the **Documentation** tab ⬆️ and find the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> class. Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">move()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">turnLeft()</code> methods. What does these methods do? Is there a method to turn right?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Go to the **Documentation** tab ⬆️ and find the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> class. Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">move()</code> and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">turnLeft()</code> methods. What do these methods do? Is there a method to turn right?",
     "teacher_markdown": "The `move()` method moves a `Painter` object one space forward in the direction it is facing.\r\n\r\nThe `turnLeft()` method turns a `Painter` object to the left.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": true,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T23:23:11.222+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L4-L2_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T23:23:11.222+00:00\",\"changed\":[\"cloned from \\\"CSA U1L4-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L4-L2_pilot-2025\"},{\"changed_at\":\"2025-08-27 20:42:43 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

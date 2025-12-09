@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:22.000Z",
   "level_num": "custom",
@@ -119,7 +120,7 @@
         "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "### Partner Game\r\nFind out what others think of your songs! \r\n\r\n**Do This:**\r\n- Tell your partners who your three characters are and describe the character's personalities.\r\n- Play one of your Walk-Up songs without saying which character it belongs to.\r\n- Allow your partner to match the song to a character.\r\n- Ask them to explain their choice.\r\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\r\n- Repeat with new partners until someone guesses all three correctly!",
+    "long_instructions": "### Submit your Project!\r\n\r\nIt's time to submit your project!\r\n\r\n**Do This:**\r\n- Listen to your song one last time to make sure it sounds the way you want it to!\r\n- Look at the <i class=\"fa-clipboard-list fa-solid\"></i> Rubric and make sure your song meets all the requirements\r\n- Make sure your project guide is complete\r\n- Make any edits you need before submitting!\r\n\r\nWhen you're ready to submit, press the **Submit** button below! After you submit:\r\n- You won't be able to edit your code! If you need to make a change, you can press Unsubmit to make your edits and then submit again\r\n- Your teacher will be able to give you a score and feedback on your work",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
@@ -130,10 +131,12 @@
       "isPredictLevel": false
     },
     "name_suffix": "_v2",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "true",
+    "teacher_markdown": "**Rubrics & Feedback:** The rubric for this project is also available within the levels via the Rubric panel. Students can view the rubric at any time. Once they submit their project, you can use the TA icon to evaluate student work and provide feedback. [Learn more by watching this video overview of Rubrics and Projects](https://www.loom.com/share/e1d8f8361cbc4ae58566dacf81425c61).",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:22.192+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-4\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-4\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:22.192+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-4\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-4\"},{\"changed_at\":\"2025-10-02 23:42:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 02:56:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-10-03 04:01:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

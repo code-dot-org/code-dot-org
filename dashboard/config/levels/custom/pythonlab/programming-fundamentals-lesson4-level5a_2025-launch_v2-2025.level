@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're designing a fashion rewards app. Users earn style points for trying on outfits and for purchases. Your app needs to calculate their total points and compare different values.\r\n\r\n1. Two variables are already set up: `try_on_points` and `purchase_points`\r\n\r\n2. Use math operations to:\r\n\r\n   * Add the points\r\n   \r\n   * Subtract one from the other\r\n   \r\n   * Multiply the points\r\n   \r\n   * Divide one by the other\r\n\r\n3. Use `print()` statements to show each result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use `+`, `-`, `*`, and `/` to do math with numbers in Python — just like on a calculator!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Style Points",
+    "bubble_choice_description": "You're designing a fashion rewards app. Users earn style points for trying on outfits and for purchases. Your app needs to calculate their total points and compare different values.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program does math with fashion style points\n\ntry_on_points = 50\npurchase_points = 120\n\n# Add the points and print the result\n\n\n\n# Subtract the points and print the result\n\n\n\n# Multiply the points and print the result\n\n\n\n# Divide the points and print the result\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/6622926a497acaef3f04b44cc51214df-wardrobe.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzuoEeb2XFcxL2ktYoUmMp6Y0LZWH0fY9\nEsHDYlaaz7XuR5UgLtlrP1OgJ9mPXU5IpDdrNHL0qfUY8bsLjbiMi7pZZwQV\nGZLwGsSYCQwTEcxchgtbIsxGdH648sHgEfnf2isCWBpwaPT//4djv/Kw9rcm\n5dv3fWhvxYEZpmUaLCnmkDpbPHil+UnyhdDZRYO7gTV3T633CfpZyC104scX\nsCUMSr7+vFX20dpnDro07t1j9MqhHIqMTCUMB62gmBR02etbGH4rv3ZejdQh\nTsTubPM3Cr9GJiL7eg6vRL0NoflCoFCfB8wOOP++gEp2c46SfE5RRAUSlY1n\nTSaVPTxYlaHVbtM1XT7v+OwB/M5wUx/W9i3tBa2MoLtKbohoQQ7Y6f50Mqiz\nSk3BX5PNm74etiF7pCzjotF4zwswM6hdDST4D1Xkqu/YT25le12toEekh3wD\nX47RUR7odGABzAw9w8JadwicD8gM1zyLBhYAOP25TeX1L3pq7yCwIrYQciHQ\nd2U4YHUJRo3ykZbvztAC+F3fO1KK4Go1VJ5x5vrWrAVv4u0bqiHd49EL+YQ1\nJLbmy1wfe+69v57TcdzWVbVYVf4p9ZvuNDlZBNMNJvQfjt/ssg4LKIJ/F7nz\nrsm2MZQh9izDslS6Ol9QvnZphBTh9+Y=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestFashionPointsMath(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n        cls.parsed_outputs = []\n        for line in cls.log:\n            line = line.strip()\n            if line:\n                try:\n                    cls.parsed_outputs.append(float(line))\n                except ValueError:\n                    continue\n\n    def test_addition(self):\n        \"\"\"Addition result should be correct (50 + 120)\"\"\"\n        expected_addition = 170\n        self.assertIn(\n            expected_addition,\n            self.parsed_outputs,\n            \"Make sure you add 50 + 120 correctly and print the result!\"\n        )\n\n    def test_subtraction(self):\n        \"\"\"Subtraction result should be correct (50 - 120)\"\"\"\n        expected_subtraction = -70\n        self.assertIn(\n            expected_subtraction,\n            self.parsed_outputs,\n            \"Make sure you subtract 50 - 120 correctly and print the result!\"\n        )\n\n    def test_multiplication(self):\n        \"\"\"Multiplication result should be correct (50 * 120)\"\"\"\n        expected_multiplication = 6000\n        self.assertIn(\n            expected_multiplication,\n            self.parsed_outputs,\n            \"Make sure you multiply 50 * 120 correctly and print the result!\"\n        )\n\n    def test_division(self):\n        \"\"\"Division result should be approximately correct (50 / 120)\"\"\"\n        expected_division = 50 / 120  # ≈ 0.41666...\n        division_matches = any(abs(num - expected_division) < 0.01 for num in self.parsed_outputs)\n        self.assertTrue(\n            division_matches,\n            \"Make sure you divide 50 / 120 correctly and print the result! (Small rounding differences are okay.)\"\n        )\n\n    def test_number_of_outputs(self):\n        \"\"\"Exactly four outputs should be printed\"\"\"\n        self.assertEqual(\n            len(self.parsed_outputs),\n            4,\n            \"Make sure you print four results: addition, subtraction, multiplication, and division.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:13.130+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level5a_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level5a_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

@@ -3,12 +3,12 @@ Feature: After completing a CSF course, the student is directed to a congratulat
   Scenario: Course A 2017 uncustomized dashboard certificate pages
     Given I create a student named "Student1"
     And I sign in as "Student1"
-    And I complete unit coursea-2017
+    And I complete course "coursea-2017" unit 1
     And I am on "http://studio.code.org/congrats"
     Then I wait until element "#uitest-certificate" is visible
 
-    When I am on "http://code.org/congrats/coursea-2017"
-    And I wait until current URL contains "http://studio.code.org/congrats"
+    When I am on "http://studio.code.org/congrats/coursea-2017"
+    And I wait until current URL contains "http://studio.code.org/congrats?s=Y291cnNlYS0yMDE3"
     And I wait to see element with ID "uitest-certificate"
     Then the href of selector ".social-print-link" contains "/print_certificates/"
     And I wait to see an image "/certificate_images/"
@@ -24,12 +24,12 @@ Feature: After completing a CSF course, the student is directed to a congratulat
   @eyes
   Scenario: accelerated course certificates
     When I open my eyes to test "accelerated certificate pages"
-    And I am on "http://code.org/congrats/accelerated"
-    And I wait until current URL contains "http://studio.code.org/congrats"
+    And I am on "http://studio.code.org/congrats/accelerated"
+    And I wait until current URL contains "http://studio.code.org/congrats?s=YWNjZWxlcmF0ZWQ%3D"
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible
     And I wait for image "#uitest-certificate img" to load
-    And I wait until element ".fa-twitter" is visible
+    And I wait until element ".fa-x-twitter" is visible
     And the href of selector ".social-print-link" contains "/print_certificates/"
     And I wait for 5 seconds
     Then I see no difference for "uncustomized 20-hour certificate"
@@ -46,14 +46,14 @@ Feature: After completing a CSF course, the student is directed to a congratulat
     When I open my eyes to test "Course A certificate pages"
     And I create a student named "Student1"
     And I sign in as "Student1"
-    And I complete unit coursea-2017
+    And I complete course "coursea-2017" unit 1
 
-    When I am on "http://code.org/congrats/coursea-2017"
-    And I wait until current URL contains "http://studio.code.org/congrats"
+    When I am on "http://studio.code.org/congrats/coursea-2017"
+    And I wait until current URL contains "http://studio.code.org/congrats?s=Y291cnNlYS0yMDE3"
     And I wait to see element with ID "uitest-certificate"
     And element "#uitest-certificate" is visible
     And I wait for image "#uitest-certificate img" to load
-    And I wait until element ".fa-twitter" is visible
+    And I wait until element ".fa-x-twitter" is visible
     And the href of selector ".social-print-link" contains "/print_certificates/"
     And I wait for 5 seconds
     And I see no difference for "uncustomized Course A 2017 certificate"

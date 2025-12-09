@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-08-20T14:16:58.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### **Says**\r\n#### What might Jordan say out loud?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-20T14:16:58.689+00:00\",\"changed\":[\"cloned from \\\"genai-lesson3-activity-lv6b_2025\\\"\"],\"cloned_from\":\"genai-lesson3-activity-lv6b_2025\"},{\"changed_at\":\"2025-08-20 14:17:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

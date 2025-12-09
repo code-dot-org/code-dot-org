@@ -4,42 +4,38 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   setup do
-    @coursez_2017 = create :script, name: 'coursez-2017'
-    create :single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @coursez_2018 = create :script, name: 'coursez-2018'
-    create :single_unit_course, unit: @coursez_2018, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @coursez_2019 = create :script, name: 'coursez-2019'
-    create :single_unit_course, unit: @coursez_2019, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @coursez_2017 = create(:script, name: 'coursez-2017')
+    create(:single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @coursez_2018 = create(:script, name: 'coursez-2018')
+    create(:single_unit_course, unit: @coursez_2018, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @coursez_2019 = create(:script, name: 'coursez-2019')
+    create(:single_unit_course, unit: @coursez_2019, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
 
-    @partner_unit = create :script, editor_experiment: 'platformization-partners'
-    create :single_unit_course, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @partner_unit = create(:script, editor_experiment: 'platformization-partners')
+    create(:single_unit_course, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
 
-    @pl_coursez_2017 = create :script, name: 'pl-coursez-2017'
-    create :single_unit_course, :pl_course, unit: @pl_coursez_2017, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @pl_coursez_2018 = create :script, name: 'pl-coursez-2018'
-    create :single_unit_course, :pl_course, unit: @pl_coursez_2018, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @pl_coursez_2019 = create :script, name: 'pl-coursez-2019'
-    create :single_unit_course, :pl_course, unit: @pl_coursez_2019, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    @pl_coursez_2017 = create(:script, name: 'pl-coursez-2017')
+    create(:single_unit_course, :pl_course, unit: @pl_coursez_2017, name: 'pl-coursez-2017', family_name: 'pl-coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @pl_coursez_2018 = create(:script, name: 'pl-coursez-2018')
+    create(:single_unit_course, :pl_course, unit: @pl_coursez_2018, name: 'pl-coursez-2018', family_name: 'pl-coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @pl_coursez_2019 = create(:script, name: 'pl-coursez-2019')
+    create(:single_unit_course, :pl_course, unit: @pl_coursez_2019, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
 
     @migrated_unit = create(:script, :in_single_unit_course)
     @migrated_pl_unit = create(:single_unit_course, :pl_course).first_unit
-    @unmigrated_unit = create :script, :in_single_unit_course, is_migrated: false
+    @unmigrated_unit = create(:script, :in_single_unit_course, is_migrated: false)
 
-    @single_unit_course_offering = create :course_offering, key: 'single-unit-course', display_name: 'single-unit-course'
-    @single_unit_2023 = create :unit, name: 'single-unit-2023'
-    @single_unit_course_2023 = create :single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
-    create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2023, key: "2023", display_name: "2023"
-    @single_unit_2024 = create :unit, name: 'single-unit-2024'
-    @single_unit_course_2024 = create :single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
-    create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024"
-    @single_unit_2025 = create :unit, name: 'single-unit-2025'
-    @single_unit_course_2025 = create :single_unit_course, name: 'single-unit-course-2025', family_name: "single-unit-course", version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit: @single_unit_2025
-    create :course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2025, key: "2025", display_name: "2025"
+    @single_unit_course_offering = create(:course_offering, key: 'single-unit-course', display_name: 'single-unit-course')
+    @single_unit_2023 = create(:unit, name: 'single-unit-2023')
+    @single_unit_course_2023 = create(:single_unit_course, name: 'single-unit-course-2023', family_name: "single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023)
+    create(:course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2023, key: "2023", display_name: "2023")
+    @single_unit_2024 = create(:unit, name: 'single-unit-2024')
+    @single_unit_course_2024 = create(:single_unit_course, name: 'single-unit-course-2024', family_name: "single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024)
+    create(:course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2024, key: "2024", display_name: "2024")
+    @single_unit_2025 = create(:unit, name: 'single-unit-2025')
+    @single_unit_course_2025 = create(:single_unit_course, name: 'single-unit-course-2025', family_name: "single-unit-course", version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit: @single_unit_2025)
+    create(:course_version, course_offering: @single_unit_course_offering, content_root: @single_unit_course_2025, key: "2025", display_name: "2025")
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     File.stubs(:write)
@@ -56,8 +52,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should redirect when unit has a redirect_to property" do
-    unit = create :script, :in_single_unit_course
-    new_unit = create :script, :in_single_unit_course
+    unit = create(:script, :in_single_unit_course)
+    new_unit = create(:script, :in_single_unit_course)
     unit.update(redirect_to: new_unit.name)
 
     get :show, params: {course_course_name: unit.original_unit_group.name, position: 1}
@@ -83,32 +79,32 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'show includes correct SEO data' do
+    unit = create(:unit, name: 'allthelessonplans')
+    unit_group = create(:single_unit_course, unit: unit, published_state: PUBLISHED_STATE.stable)
     get :show, params: {
-      id: Unit::TWENTY_HOUR_NAME,
+      course_course_name: unit_group.name,
+      position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
-    assert_includes(@response.body, "<meta property=\"description\" content=\"This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!\" />")
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
   test 'canonical url is added if it is a single unit course' do
-    unit = create :script, family_name: 'my-script'
-    course = create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    sign_in create(:teacher)
+    course2024 = create(:single_unit_course, family_name: 'my-family', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    course2025 = create(:single_unit_course, family_name: 'my-family', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     get :show, params: {
-      course_course_name: course.name,
+      course_course_name: course2024.name,
       position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course.name}/units/1")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course2025.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do
-    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    unit = create :script, published_state: nil
-    create :unit_group_unit, unit_group: course, script: unit, position: 1
-    unit2 = create :script, published_state: nil
-    create :unit_group_unit, unit_group: course, script: unit2, position: 2
+    course = create(:unit_group, :with_units, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
     get :show, params: {
       course_course_name: course.name,
@@ -118,76 +114,42 @@ class ScriptsControllerTest < ActionController::TestCase
     refute_includes(@response.body, "<link rel=\"canonical\"")
   end
 
-  test "should get show of hoc" do
-    get :show, params: {id: Unit::HOC_NAME}
-    assert_response :success
-  end
-
-  test "should get show of k-8" do
-    get :show, params: {id: Unit::TWENTY_HOUR_NAME}
-    assert_response :success
-  end
-
-  test "should get show of custom unit" do
-    get :show, params: {id: 'course1'}
-    assert_response :success
-  end
-
-  test "should get show of ECSPD if signed in" do
+  test "should get show if login required and signed in" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {id: 'ECSPD'}
+    @migrated_unit.update!(login_required: true)
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
-  test "should get show of ECSPD if not signed in" do
-    get :show, params: {id: 'ECSPD'}
+  test "should get show if login required and not signed in" do
+    @migrated_unit.update!(login_required: true)
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
-  end
-
-  test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
-    sign_in create(:student)
-
-    get :show, params: {id: 'course1'}
-    assert_response :success
-    assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
-  end
-
-  test "should not show link to Overview of Courses 1, 2, and 3 if not logged in" do
-    get :show, params: {id: 'course1'}
-    assert_response :success
-    assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
-  end
-
-  test "should show link to Overview of Courses 1, 2, and 3 if logged in as a teacher" do
-    sign_in create(:teacher)
-
-    get :show, params: {id: 'course1'}
-    assert_response :success
-    assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
   test "show of hourofcode redirects to hoc" do
-    get :show, params: {id: 'hourofcode'}
+    create_hourofcode_unit_and_levels
+    get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end
 
   test "should get show if not signed in" do
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: @migrated_unit.get_original_unit_group.name, position: 1}
     assert_response :forbidden
   end
 
@@ -296,8 +258,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version to assigned version for student" do
-    student_coursez_2017 = create :student
-    section_coursez_2017 = create :section, script: @coursez_2017
+    student_coursez_2017 = create(:student)
+    section_coursez_2017 = create(:section, script: @coursez_2017)
     section_coursez_2017.add_student(student_coursez_2017)
 
     sign_in student_coursez_2017
@@ -306,8 +268,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version to assigned version for participant" do
-    participant_pl_coursez_2017 = create :teacher
-    section_pl_coursez_2017 = create :section, script: @pl_coursez_2017
+    participant_pl_coursez_2017 = create(:teacher)
+    section_pl_coursez_2017 = create(:section, script: @pl_coursez_2017)
     section_pl_coursez_2017.add_student(participant_pl_coursez_2017)
 
     sign_in participant_pl_coursez_2017
@@ -388,8 +350,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version of single-unit course to assigned version for student" do
-    student_single_unit_2023 = create :student
-    section_single_unit_2023 = create :section, unit_group: @single_unit_course_2023
+    student_single_unit_2023 = create(:student)
+    section_single_unit_2023 = create(:section, unit_group: @single_unit_course_2023)
     section_single_unit_2023.add_student(student_single_unit_2023)
 
     sign_in student_single_unit_2023
@@ -415,7 +377,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to correct course from course family name if single-unit course" do
-    another_course = create :single_unit_course, unit: @single_unit_2024, family_name: 'another-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    another_course = create(:single_unit_course, unit: @single_unit_2024, family_name: 'another-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(another_course)
 
     get :show, params: {id: another_course.family_name}
@@ -423,8 +385,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from older version to latest stable version of a modular single-unit course for student" do
-    modular_single_unit_course_2023 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
-    modular_single_unit_course_2024 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+    modular_single_unit_course_2023 = create(:single_unit_course, family_name: "modular-single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023)
+    modular_single_unit_course_2024 = create(:single_unit_course, family_name: "modular-single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024)
 
     sign_in create(:student)
     get :show, params: {
@@ -435,8 +397,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from older version to latest stable version of a modular single-unit course for logged out user" do
-    modular_single_unit_course_2023 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023
-    modular_single_unit_course_2024 = create :single_unit_course, family_name: "modular-single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024
+    modular_single_unit_course_2023 = create(:single_unit_course, family_name: "modular-single-unit-course", version_year: '2023', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2023)
+    modular_single_unit_course_2024 = create(:single_unit_course, family_name: "modular-single-unit-course", version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, unit: @single_unit_2024)
 
     get :show, params: {
       course_course_name: modular_single_unit_course_2023.name,
@@ -449,14 +411,14 @@ class ScriptsControllerTest < ActionController::TestCase
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :forbidden
   end
 
   test "should get edit on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :ok
   end
 
@@ -464,7 +426,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
     with_default_locale(:de) do
-      get :edit, params: {id: 'course1'}
+      get :edit, params: {id: @single_unit_2023.name}
     end
     assert_redirected_to "/"
   end
@@ -473,7 +435,7 @@ class ScriptsControllerTest < ActionController::TestCase
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :ok
   end
 
@@ -481,13 +443,13 @@ class ScriptsControllerTest < ActionController::TestCase
     CDO.stubs(:rack_env).returns(:staging)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
     assert_response :forbidden
   end
 
   test "should not get edit if not signed in" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    get :edit, params: {id: 'course1'}
+    get :edit, params: {id: @single_unit_2023.name}
 
     assert_redirected_to_sign_in
   end
@@ -498,7 +460,7 @@ class ScriptsControllerTest < ActionController::TestCase
     not_admin = create(:user)
     [not_admin, admin].each do |user|
       sign_in user
-      get :edit, params: {id: 'course1'}
+      get :edit, params: {id: @single_unit_2023.name}
 
       assert_response :forbidden
     end
@@ -508,7 +470,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
-    unit = Unit.find_by_name('course1')
+    unit = @single_unit_2023
     get :edit, params: {id: unit.name}
 
     assert_equal unit, assigns(:script)
@@ -604,39 +566,6 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = Unit.find_by_name(unit_name)
     assert_equal unit_name, unit.name
     assert unit.is_migrated
-    assert_equal unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-    assert_equal unit.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    assert_equal unit.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-    assert_equal unit.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
-  end
-
-  test 'create: sets course type if provided' do
-    unit_name = 'test-pl-unit-create'
-    @request.host = CDO.dashboard_hostname
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
-    end
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    post :create, params: {
-      script: {name: unit_name},
-      lesson_groups: '[]',
-      is_migrated: true,
-      instruction_type: 'self_paced',
-      instructor_audience: 'universal_instructor',
-      participant_audience: 'teacher'
-    }
-    assert_redirected_to edit_script_path id: unit_name
-
-    unit = Unit.find_by_name(unit_name)
-    assert_equal unit_name, unit.name
-    assert unit.is_migrated
-    assert_equal unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-    assert_equal unit.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
-    assert_equal unit.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
-    assert_equal unit.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
   end
 
   test 'cannot create legacy unit' do
@@ -674,7 +603,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit_to_delete = create :script
+    unit_to_delete = create(:script)
     delete :destroy, params: {id: unit_to_delete.name}
 
     assert_response :found
@@ -686,7 +615,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create(:script)
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
@@ -704,7 +633,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create(:script)
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -721,33 +650,12 @@ class ScriptsControllerTest < ActionController::TestCase
     assert unit.login_required
   end
 
-  test "update instruction_type" do
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    sign_in create(:levelbuilder)
-
-    unit = create :script, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
-    File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
-    end
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
-    }
-    assert_response :success
-    unit.reload
-    assert_equal unit.get_instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
-  end
-
   test "can update on test without modifying filesystem" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create(:script)
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
@@ -766,7 +674,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create(:script)
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
@@ -784,7 +692,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: false
+    unit = create(:script, is_migrated: false)
     stub_file_writes(unit.name)
 
     post :update, params: {
@@ -801,9 +709,9 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     Timecop.freeze do
-      unit = create :script, is_migrated: true
-      lesson_group = create :lesson_group, script: unit
-      create :lesson, script: unit, lesson_group: lesson_group
+      unit = create(:script, is_migrated: true)
+      lesson_group = create(:lesson_group, script: unit)
+      create(:lesson, script: unit, lesson_group: lesson_group)
       stub_file_writes(unit.name)
 
       unit.reload
@@ -829,9 +737,9 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group = create :lesson_group, script: unit
-    create :lesson, script: unit, lesson_group: lesson_group
+    unit = create(:script, is_migrated: true)
+    lesson_group = create(:lesson_group, script: unit)
+    create(:lesson, script: unit, lesson_group: lesson_group)
     stub_file_writes(unit.name)
 
     unit.reload
@@ -853,7 +761,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, :with_levels, name: 'migrated'
+    unit = create(:script, :with_levels, name: 'migrated')
 
     stub_file_writes(unit.name)
     unit.reload
@@ -874,9 +782,9 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: unit
-    lesson = create :lesson, script: unit, lesson_group: lesson_group, name: 'problem lesson'
+    unit = create(:script, name: 'migrated', is_migrated: true)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, name: 'problem lesson')
 
     # A legacy script level is one without an activity section.
     create(
@@ -908,10 +816,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
+    unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
     stub_file_writes(unit.name)
 
-    course_version = create :course_version, content_root: unit
+    course_version = create(:course_version, content_root: unit.original_unit_group)
     teacher_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version),
@@ -934,10 +842,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true
+    unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
     stub_file_writes(unit.name)
 
-    course_version = create :course_version, content_root: unit
+    course_version = create(:course_version, content_root: unit.original_unit_group)
     student_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version)
@@ -955,42 +863,17 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal(student_resources.map(&:key), Unit.find_by_name(unit.name).student_resources.pluck(:key))
   end
 
-  test 'updates pilot_experiment' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script
-    stub_file_writes(unit.name)
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      is_migrated: true,
-      lesson_groups: '[]',
-      pilot_experiment: 'pilot-experiment',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-    }
-
-    assert_response :success
-
-    assert_equal 'pilot-experiment', Unit.find_by_name(unit.name).pilot_experiment
-    # pilot units are always marked with the pilot published state
-    assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-  end
-
   test 'update: can update general_params' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script
+    unit = create(:script)
     stub_file_writes(unit.name)
 
     assert_nil unit.project_sharing
     assert_nil unit.curriculum_umbrella
     assert_nil unit.content_area
     assert_nil unit.topic_tags
-    assert_nil unit.family_name
-    assert_nil unit.version_year
 
     post :update, params: {
       id: unit.id,
@@ -1000,8 +883,6 @@ class ScriptsControllerTest < ActionController::TestCase
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       content_area: '6-12',
-      family_name: 'my-fam',
-      version_year: '2017',
       topic_tags: ['ai', 'maker']
     }
     unit.reload
@@ -1009,8 +890,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert unit.project_sharing
     assert_equal 'CSF', unit.curriculum_umbrella
     assert_equal '6-12', unit.content_area
-    assert_equal 'my-fam', unit.family_name
-    assert_equal '2017', unit.version_year
     assert_equal ['ai', 'maker'], unit.topic_tags
   end
 
@@ -1018,8 +897,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script
-    stub_file_writes(unit.name, family_name: 'fake-family-z')
+    unit = create(:script)
+    stub_file_writes(unit.name)
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -1030,18 +909,10 @@ class ScriptsControllerTest < ActionController::TestCase
       student_detail_progress_view: 'on',
       lesson_extras_available: 'on',
       has_verified_resources: 'on',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
-      instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-      participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       tts: 'on',
       project_sharing: 'on',
-      is_course: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
-      family_name: 'fake-family-z',
-      version_year: '2020',
-      pilot_experiment: 'fake-pilot-experiment',
       editor_experiment: 'fake-editor-experiment',
       curriculum_umbrella: 'CSF',
       content_area: 'k-5',
@@ -1075,8 +946,6 @@ class ScriptsControllerTest < ActionController::TestCase
       lesson_groups: '[]',
       curriculum_path: '',
       version_year: '',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta,
-      pilot_experiment: '',
       editor_experiment: '',
       curriculum_umbrella: '',
       content_area: '',
@@ -1096,7 +965,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     Unit.any_instance.stubs(:tts_update).once
 
-    unit = create :script
+    unit = create(:script)
     stub_file_writes(unit.name)
 
     assert_nil unit.tts
@@ -1120,7 +989,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     Unit.any_instance.stubs(:tts_update).never
 
-    unit = create :script, tts: true
+    unit = create(:script, tts: true)
     stub_file_writes(unit.name)
 
     assert_equal true, unit.tts
@@ -1142,7 +1011,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
+    unit = create(:script, is_migrated: true)
     stub_file_writes(unit.name)
 
     Unit.stubs(:merge_and_write_i18n).with do |i18n, name, _|
@@ -1187,7 +1056,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
+    unit = create(:script, is_migrated: true)
     stub_file_writes(unit.name)
 
     Unit.stubs(:merge_and_write_i18n).with do |i18n, name, _|
@@ -1236,9 +1105,9 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
-    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    unit = create(:script, is_migrated: true)
+    lesson_group = create(:lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1')
     stub_file_writes(unit.name)
 
     Unit.stubs(:merge_and_write_i18n).with do |i18n, _, _|
@@ -1288,9 +1157,9 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
-    lesson = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
+    unit = create(:script, is_migrated: true)
+    lesson_group = create(:lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1')
     stub_file_writes(unit.name)
 
     Unit.stubs(:merge_and_write_i18n).with do |i18n, _, _|
@@ -1333,11 +1202,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
-    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
-    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
-    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+    unit = create(:script, is_migrated: true)
+    lesson_group_1 = create(:lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true)
+    lesson_1 = create(:lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1')
+    lesson_group_2 = create(:lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true)
+    lesson_2 = create(:lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2')
 
     stub_file_writes(unit.name)
 
@@ -1383,11 +1252,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
-    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
-    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
-    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+    unit = create(:script, is_migrated: true)
+    lesson_group_1 = create(:lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true)
+    lesson_1 = create(:lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1')
+    lesson_group_2 = create(:lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true)
+    lesson_2 = create(:lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2')
 
     stub_file_writes(unit.name)
 
@@ -1433,11 +1302,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
-    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1'
-    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-2', name: 'lesson 2'
-    lesson_3 = create :lesson, script: unit, lesson_group: lesson_group, key: 'lesson-3', name: 'lesson 3'
+    unit = create(:script, is_migrated: true)
+    lesson_group = create(:lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true)
+    lesson_1 = create(:lesson, script: unit, lesson_group: lesson_group, key: 'lesson-1', name: 'lesson 1')
+    lesson_2 = create(:lesson, script: unit, lesson_group: lesson_group, key: 'lesson-2', name: 'lesson 2')
+    lesson_3 = create(:lesson, script: unit, lesson_group: lesson_group, key: 'lesson-3', name: 'lesson 3')
     unit.reload
     assert_equal ['lesson 1', 'lesson 2', 'lesson 3'], unit.lesson_groups[0].lessons.map(&:name)
 
@@ -1482,11 +1351,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_migrated: true
-    lesson_group_1 = create :lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true
-    lesson_1 = create :lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1'
-    lesson_group_2 = create :lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true
-    lesson_2 = create :lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2'
+    unit = create(:script, is_migrated: true)
+    lesson_group_1 = create(:lesson_group, script: unit, key: 'lesson-group-1', display_name: 'lesson group 1', user_facing: true)
+    lesson_1 = create(:lesson, script: unit, lesson_group: lesson_group_1, key: 'lesson-1', name: 'lesson 1')
+    lesson_group_2 = create(:lesson_group, script: unit, key: 'lesson-group-2', display_name: 'lesson group 2', user_facing: true)
+    lesson_2 = create(:lesson, script: unit, lesson_group: lesson_group_2, key: 'lesson-2', name: 'lesson 2')
 
     stub_file_writes(unit.name)
 
@@ -1532,21 +1401,19 @@ class ScriptsControllerTest < ActionController::TestCase
 
   class CoursePilotTests < ActionController::TestCase
     setup do
-      @pilot_section_owner = create :teacher, pilot_experiment: 'my-experiment'
-      @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-      @pilot_unit = create :script, pilot_experiment: 'my-experiment'
-      @pilot_course = create :single_unit_course, unit: @pilot_unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-      @pilot_section = create :section, user: @pilot_section_owner, script: @pilot_unit
-      create :section_instructor, instructor: @pilot_teacher, section: @pilot_section, status: :active
+      @pilot_section_owner = create(:teacher, pilot_experiment: 'my-experiment')
+      @pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
+      @pilot_course = create(:single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+      @pilot_section = create(:section, user: @pilot_section_owner, course_id: @pilot_course.id)
+      create(:section_instructor, instructor: @pilot_teacher, section: @pilot_section, status: :active)
       @pilot_student = create(:follower, section: @pilot_section).student_user
 
-      @pilot_pl_section_owner = create :teacher, pilot_experiment: 'my-pl-experiment'
-      @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-      @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment'
-      @pilot_pl_course = create :single_unit_course, :pl_course, unit: @pilot_pl_unit, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-      @pilot_pl_section = create :section, user: @pilot_pl_section_owner, script: @pilot_pl_unit
-      create :section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active
-      @pilot_pl_participant = create :facilitator
+      @pilot_pl_section_owner = create(:teacher, pilot_experiment: 'my-pl-experiment')
+      @pilot_instructor = create(:facilitator, pilot_experiment: 'my-pl-experiment')
+      @pilot_pl_course = create(:single_unit_course, :pl_course, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+      @pilot_pl_section = create(:section, user: @pilot_pl_section_owner, course_id: @pilot_pl_course.id)
+      create(:section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active)
+      @pilot_pl_participant = create(:facilitator)
       create(:follower, section: @pilot_pl_section, student_user: @pilot_pl_participant)
     end
 
@@ -1654,8 +1521,8 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1'
-    dogs1_course = create :single_unit_course, unit: dogs1, family_name: 'dogs', version_year: '1901'
+    dogs1 = create(:script, name: 'dogs1')
+    dogs1_course = create(:single_unit_course, unit: dogs1, family_name: 'dogs', version_year: '1901')
     CourseOffering.add_course_offering(dogs1_course)
 
     assert_raises ActiveRecord::RecordNotFound do
@@ -1666,14 +1533,14 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/courses/#{dogs1_course.name}/units/1"
 
-    dogs2 = create :script, name: 'dogs2'
-    dogs2_course = create :single_unit_course, unit: dogs2, family_name: 'dogs', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    dogs2 = create(:script, name: 'dogs2')
+    dogs2_course = create(:single_unit_course, unit: dogs2, family_name: 'dogs', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(dogs2_course)
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/courses/#{dogs2_course.name}/units/1"
 
-    dogs3 = create :script, name: 'dogs3'
-    dogs3_course = create :single_unit_course, unit: dogs3, family_name: 'dogs', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    dogs3 = create(:script, name: 'dogs3')
+    dogs3_course = create(:single_unit_course, unit: dogs3, family_name: 'dogs', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(dogs3_course)
     get :show, params: {id: 'dogs'}
     assert_redirected_to "/courses/#{dogs2_course.name}/units/1"
@@ -1682,8 +1549,8 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for participant without progress or assignment' do
     sign_in create(:teacher)
 
-    pl_dogs1 = create :script, name: 'pl-dogs1'
-    pl_dogs1_course = create :single_unit_course, :pl_course, unit: pl_dogs1, family_name: 'ui-test-versioned-pl-script', version_year: '1901'
+    pl_dogs1 = create(:script, name: 'pl-dogs1')
+    pl_dogs1_course = create(:single_unit_course, :pl_course, unit: pl_dogs1, family_name: 'ui-test-versioned-pl-script', version_year: '1901')
     CourseOffering.add_course_offering(pl_dogs1_course)
 
     assert_raises ActiveRecord::RecordNotFound do
@@ -1694,13 +1561,13 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/courses/#{pl_dogs1_course.name}/units/1"
 
-    pl_dogs2 = create :script, name: 'pl-dogs2'
-    pl_dogs2_course = create :single_unit_course, :pl_course, unit: pl_dogs2, family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    pl_dogs2 = create(:script, name: 'pl-dogs2')
+    pl_dogs2_course = create(:single_unit_course, :pl_course, unit: pl_dogs2, family_name: 'ui-test-versioned-pl-script', version_year: '1902', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/courses/#{pl_dogs2_course.name}/units/1"
 
-    pl_dogs3 = create :script, name: 'pl-dogs3'
-    create :single_unit_course, :pl_course, unit: pl_dogs3, family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    pl_dogs3 = create(:script, name: 'pl-dogs3')
+    create(:single_unit_course, :pl_course, unit: pl_dogs3, family_name: 'ui-test-versioned-pl-script', version_year: '1899', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {id: 'ui-test-versioned-pl-script'}
     assert_redirected_to "/courses/#{pl_dogs2_course.name}/units/1"
   end
@@ -1803,9 +1670,9 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
 
-    course_version = create :course_version, content_root: @migrated_unit.original_unit_group
-    lesson_group = create :lesson_group, script: @migrated_unit
-    lesson = create :lesson, lesson_group: lesson_group
+    course_version = create(:course_version, content_root: @migrated_unit.original_unit_group)
+    lesson_group = create(:lesson_group, script: @migrated_unit)
+    lesson = create(:lesson, lesson_group: lesson_group)
     lesson.programming_expressions = [create(:programming_expression)]
     lesson.resources = [create(:resource, course_version_id: course_version.id)]
     lesson.standards = [create(:standard)]
@@ -1822,9 +1689,9 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
 
-    course_version = create :course_version, content_root: @migrated_unit.original_unit_group
-    lesson_group = create :lesson_group, script: @migrated_unit
-    lesson = create :lesson, lesson_group: lesson_group
+    course_version = create(:course_version, content_root: @migrated_unit.original_unit_group)
+    lesson_group = create(:lesson_group, script: @migrated_unit)
+    lesson = create(:lesson, lesson_group: lesson_group)
     # Only add resources and standards, not programming expressions and vocab
     lesson.resources = [create(:resource, course_version_id: course_version.id)]
     lesson.standards = [create(:standard)]
@@ -1852,7 +1719,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "legacy path look up by id fails with not found" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(create(:levelbuilder))
-    legacy_path_validation_unit = create :script
+    legacy_path_validation_unit = create(:script)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :edit, params: {id: legacy_path_validation_unit.id}
@@ -1883,19 +1750,19 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  def stub_file_writes(unit_name, family_name: nil)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{family_name || unit_name}.json"]
+  def stub_file_writes(unit_name)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json",  "#{Rails.root}/config/course_offerings/#{unit_name}.json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.to_s.end_with?('scripts/en.yml')
     end
   end
 
   describe '#redirect_to_canonical_path' do
-    let!(:user) {create :teacher}
-    let(:course) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    let!(:user) {create(:teacher)}
+    let(:course) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit)}
     let(:unit_position) {1}
-    let!(:unit_group_unit) {create :unit_group_unit, unit_group: course, script: unit, position: unit_position}
+    let!(:unit_group_unit) {create(:unit_group_unit, unit_group: course, script: unit, position: unit_position)}
     let(:modularity_enabled) {false}
 
     before do
@@ -1940,11 +1807,11 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   describe 'authorizing modular courses' do
-    let(:original_course) {create :unit_group, :with_units, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:original_course) {create(:unit_group, :with_units, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)}
     let(:unit) {original_course.first_unit}
     let(:unit_position) {1}
-    let(:modular_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
-    let(:pilot_teacher) {create :teacher, pilot_experiment: 'my-experiment'}
+    let(:modular_course) {create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)}
+    let(:pilot_teacher) {create(:teacher, pilot_experiment: 'my-experiment')}
 
     let(:original_course_params) {{course_course_name: original_course.name, position: unit_position}}
     let(:modular_course_params)  {{course_course_name: modular_course.name, position: unit_position}}

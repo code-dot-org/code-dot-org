@@ -199,9 +199,12 @@
       "playerTitle": "Example"
     },
     "name_suffix": "_v2",
+    "teacher_markdown": "💡 **Teacher Tip**: When completed correctly, this level will have each of the blocks line up in 4 measures. Bringing in the math concepts of factors may help.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.911+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-summative\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-summative\"},{\"changed_at\":\"2025-06-26 19:56:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 22:22:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.911+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-summative\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-summative\"},{\"changed_at\":\"2025-06-26 19:56:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 22:22:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-09-02 17:49:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

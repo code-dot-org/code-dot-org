@@ -132,13 +132,13 @@ var PROP_INFO = {
     friendlyName: 'image',
     internalName: 'image',
     type: 'string',
-    defaultValue: '"https://code.org/images/logo.png"',
+    defaultValue: '"https://studio.code.org/blockly/media/logo.png"',
   },
   screenImage: {
     friendlyName: 'image',
     internalName: 'screen-image',
     type: 'string',
-    defaultValue: '"https://code.org/images/logo.png"',
+    defaultValue: '"https://studio.code.org/blockly/media/logo.png"',
   },
   // pictureImage and picture both map to 'picture' internally, but allow us to accept
   // either 'image' or 'picture' as the property name. picture is marked as an alias so
@@ -147,14 +147,14 @@ var PROP_INFO = {
     friendlyName: 'image',
     internalName: 'picture',
     type: 'string',
-    defaultValue: '"https://code.org/images/logo.png"',
+    defaultValue: '"https://studio.code.org/blockly/media/logo.png"',
   },
   picture: {
     friendlyName: 'picture',
     internalName: 'picture',
     type: 'string',
     alias: true,
-    defaultValue: '"https://code.org/images/logo.png"',
+    defaultValue: '"https://studio.code.org/blockly/media/logo.png"',
   },
   iconColor: {
     friendlyName: 'icon-color',

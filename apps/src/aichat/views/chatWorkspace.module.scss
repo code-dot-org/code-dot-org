@@ -1,3 +1,4 @@
+@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import 'color.scss';
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
@@ -14,6 +15,26 @@ $tabs-default-spacing: 4px;
   overflow: hidden;
 }
 
+.chatMessageOutline {
+  scroll-margin-top: 0.6rem;
+}
+
+.chatMessageOutline:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+// We should avoid using this unless necessary for accessibility,
+// as it renders its component out of frame at a size of 1 pixel.
+.accessibilityHidden {
+  position: absolute;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 %conversation-area,
 .conversationArea {
   flex-grow: 1;
@@ -25,10 +46,17 @@ $tabs-default-spacing: 4px;
   position: relative;
   width: 100%;
   height: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .scrollToBottomButton {
   border-radius: 50%;
+  pointer-events: auto;
 }
 
 .messageArea {
@@ -39,7 +67,7 @@ $tabs-default-spacing: 4px;
   width: 100%;
   overflow-y: auto;
   box-sizing: border-box;
-  padding: $default-spacing;
+  padding: 0.625rem;
 }
 
 .floatingScrollToBottomButtonContainer {
@@ -48,14 +76,32 @@ $tabs-default-spacing: 4px;
   display: flex;
   justify-content: center;
   width: 100%;
+  pointer-events: none;
+}
+
+.chatDisabledContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  p {
+    color: var(--text-neutral-quaternary);
+    text-align: center;
+  }
+
+  .chatDisabledIcon {
+    font-size: 2rem;
+  }
 }
 
 .tabsContainer {
-  background-color: #eaebeb;
+  background-color: var(--background-neutral-secondary);
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
 
   ul {
-    li > button[role="tab"] {
+    li > button[role='tab'] {
       max-width: 300px;
     }
   }
@@ -76,16 +122,21 @@ $tabs-default-spacing: 4px;
 
 .buttonRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 0 10px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 16px 6px;
-  border-top: 1px solid $light_gray_200;
+  gap: 0.5rem;
+  padding: 0.625rem;
+  border-top: variables.$default-border;
+  background: var(--background-neutral-secondary);
+
+  &:empty {
+    display: none;
+  }
 }
 
 .alertLink {
@@ -94,12 +145,15 @@ $tabs-default-spacing: 4px;
 
 .assetCol {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.375rem;
 }
 
 .imagePreview {
-  max-height: 120px;
+  max-height: 48px;
+  border-radius: variables.$default-border-radius;
   width: auto;
   height: auto;
   opacity: 1;
@@ -109,4 +163,8 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
+  border-radius: variables.$default-border-radius;
+  line-height: 1;
+
+  @include focus-styles;
 }

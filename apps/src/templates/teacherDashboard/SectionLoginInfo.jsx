@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -378,7 +377,7 @@ class LoginCard extends React.Component {
             {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={pegasus(`/images/${student.secretPicturePath}`)}
+              src={student.secretPictureUrl}
               alt={student.secretPictureName}
               style={styles.img}
             />

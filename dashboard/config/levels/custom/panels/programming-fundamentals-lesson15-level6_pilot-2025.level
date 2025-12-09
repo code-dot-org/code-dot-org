@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-10-14T18:48:05.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Making Our Code More Flexible with Parameters\n\nIn these next slides, you'll learn how to use parameters in functions to make your code more efficient. \n\n**Think about this:** What if you wanted  to plant garlic bulbs instead of beanstalks? How many places in your code would you have to change? 🤔\n\n👀 Let's look at the starter code and find out.",
+        "imageUrl": "https://images.code.org/a1b1341bd339eab00a5a6a41c68ed5ad-Screenshot 2025-02-20 at 10.42.52 AM.png",
+        "key": "python-intro-console-lesson7-slides-78579da0-28a0-4795-baac-b67903d385e2",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### The Problem with Hardcoded Values\n**Current Code Issue:**\nRight now, the planting function only works for one type of plant.\n\nIf we wanted to plant something else, we'd have to rewrite all these lines! That’s not very efficient.\n\n",
+        "imageUrl": "https://images.code.org/c55658fc70056fb66218ac70b36d2d8d-Screenshot 2025-02-20 at 10.42.52 AM.png",
+        "key": "python-intro-console-lesson7-slides-ef71793b-590e-4c82-8091-9cbfc3388112"
+      },
+      {
+        "text": "### Introducing Parameters\n\n**The Solution: A Function with a Parameter**: We can refactor the code using a function with a parameter.\n\n **What changed?**\n- Instead of \"beanstalk\", we use item, which is a parameter.\n- Now we can call the function with different arguments!",
+        "imageUrl": "https://images.code.org/64a6f7b0a1cfed0b7e98da3ecaa00ee7-Screenshot 2025-02-20 at 10.22.11 AM.png",
+        "key": "python-intro-console-lesson7-slides-f30d40e7-d52b-423b-9232-57b7e68808c9"
+      },
+      {
+        "text": "### How to Use a Parameter\n1. Defining a function with a parameter\n    - The parameter `item` acts as a placeholder in this line of code: `def plant_garden(item): `\n2. Using the parameter inside the function\n    - The function will print whatever argument we pass to item, like in this line of code: `print(\"Dash plants a \"+ item + \".\")`\n3. Calling the function with different arguments\n    - When you call the function by using `plant_garden(\"beanstalk\")` or `plant_garden(\"garlic bulb\")`, the word you put in the parentheses will now be updated each time that item is mentioned. \n\n\n",
+        "imageUrl": "https://images.code.org/aac280cbd5d17f4347045cd88ab083be-Screenshot 2025-02-20 at 10.30.21 AM.png",
+        "key": "python-intro-console-lesson7-slides-08ed105d-628c-4460-ace2-27e642d20160"
+      },
+      {
+        "text": "### Running your Program\nWhen you press \"Run\", your code will be read from top to bottom. The first argument said `beanstalk` and the second argument said `garlic bulb`. \n\nThe console printed everything in the `plant_garden(item)` function for beanstalk first, then for garlic bulb. This was a much faster way of printing all these statement without having to update every instance of each plant manually. What a powerful tool! \n\n**Now it's your turn to try it out.**",
+        "imageUrl": "https://images.code.org/19ee756db62dda3674ccb2e05448045a-Screenshot 2025-02-20 at 10.35.17 AM.png",
+        "key": "python-intro-console-lesson7-slides-23cf1a62-4132-452c-a787-8b5e599c09ff"
+      }
+    ],
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:48:05.542+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level6_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level6_2025\"}]"
+}]]></config>
+</Panels>

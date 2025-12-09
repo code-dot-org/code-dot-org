@@ -1,0 +1,87 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-09-23T12:57:47.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**project topic:** music streaming habits dashboard <br />\r\nallows users to explore and filter a dataset on songs based on criteria like genre, artist, and mood",
+    "teacher_markdown": "test teacher content",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!-- index.html -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>SongSurfer Dashboard</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"container\">\n        <!-- Main title for the application -->\n        <h1 class=\"app-title\">SongSurfer</h1>\n\n        <div class=\"filter-section\">\n            <!-- Artist Filter Dropdown -->\n            <div class=\"dropdown\">\n                <select id=\"artist-filter\" class=\"filter-dropdown\">\n                    <option value=\"\">All Artists</option>\n                    <option value=\"Ramones\">Ramones</option>\n                    <option value=\"The Runaways\">The Runaways</option>\n                    <option value=\"Lo-fi Fruits Music\">Lo-fi Fruits Music</option>\n                    <option value=\"Chillhop Music\">Chillhop Music</option>\n                </select>\n            </div>\n\n            <!-- Genre Filter Dropdown -->\n            <div class=\"dropdown\">\n                <select id=\"genre-filter\" class=\"filter-dropdown\">\n                    <option value=\"\">All Genres</option>\n                    <option value=\"Punk\">Punk</option>\n                    <option value=\"Lo-fi\">Lo-fi</option>\n                </select>\n            </div>\n\n            <!-- Mood Filter Dropdown -->\n            <div class=\"dropdown\">\n                <select id=\"mood-filter\" class=\"filter-dropdown\">\n                    <option value=\"\">All Moods</option>\n                    <option value=\"Energetic\">Energetic</option>\n                    <option value=\"Rebellious\">Rebellious</option>\n                    <option value=\"Relaxing\">Relaxing</option>\n                    <option value=\"Calm\">Calm</option>\n                </select>\n            </div>\n\n            <!-- Display for the number of songs -->\n            <span class=\"song-count\">6 songs</span>\n        </div>\n\n        <div class=\"song-display\">\n            <!-- Placeholder song cards -->\n            <div class=\"song-card\">\n                <p class=\"song-title\">song title</p>\n                <p class=\"artist-name\">artist name</p>\n                <p class=\"genre-mood\">genre | mood</p>\n            </div>\n            <div class=\"song-card\">\n                <p class=\"song-title\">song title</p>\n                <p class=\"artist-name\">artist name</p>\n                <p class=\"genre-mood\">genre | mood</p>\n            </div>\n            <div class=\"song-card\">\n                <p class=\"song-title\">song title</p>\n                <p class=\"artist-name\">artist name</p>\n                <p class=\"genre-mood\">genre | mood</p>\n            </div>\n            <div class=\"song-card\">\n                <p class=\"song-title\">song title</p>\n                <p class=\"artist-name\">artist name</p>\n                <p class=\"genre-mood\">genre | mood</p>\n            </div>\n            <div class=\"song-card\">\n                <p class=\"song-title\">song title</p>\n                <p class=\"artist-name\">artist name</p>\n                <p class=\"genre-mood\">genre | mood</p>\n            </div>\n            <div class=\"song-card\">\n                <p class=\"song-title\">song title</p>\n                <p class=\"artist-name\">artist name</p>\n                <p class=\"genre-mood\">genre | mood</p>\n            </div>\n        </div>\n    </div>\n    <!-- Link to your data file -->\n    <script src=\"music_data.js\"></script>\n    <!-- Link to your main script file -->\n    <script src=\"script.js\"></script>\n</body>\n</html>\n\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* style.css */\n\n/* General body styling for a dark arcade background */\nbody {\n    font-family: 'Press Start 2P', cursive; /* Retro arcade font */\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    min-height: 100vh;\n    margin: 0;\n    background-color: #1a1a2e; /* Dark blue-purple background */\n    padding: 20px;\n    color: #00ff00; /* Neon green text */\n    text-shadow: 0 0 5px #00ff00; /* Neon glow effect */\n}\n\n/* Main container for the dashboard */\n.container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    max-width: 960px;\n    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */\n    padding: 20px;\n    border-radius: 8px;\n    box-shadow: 0 0 15px #ff00ff; /* Neon pink shadow */\n    border: 2px solid #00ffff; /* Neon blue border */\n}\n\n/* Title of the application */\n.app-title {\n    font-family: 'Press Start 2P', cursive;\n    font-size: 3rem;\n    margin-bottom: 30px;\n    color: #ffea00; /* Neon yellow title */\n    text-shadow: 0 0 10px #ffea00, 0 0 20px #ffea00; /* Stronger neon glow */\n    text-align: center;\n}\n\n/* Section containing the filter dropdowns and song count */\n.filter-section {\n    display: flex;\n    align-items: center;\n    gap: 15px;\n    margin-bottom: 40px;\n    width: 100%;\n    justify-content: center;\n    flex-wrap: wrap;\n}\n\n/* Styling for the dropdown container */\n.dropdown {\n    position: relative;\n    display: inline-block;\n}\n\n/* Styling for the select element (the actual dropdown) */\n.filter-dropdown {\n    font-family: 'Press Start 2P', cursive;\n    padding: 10px 20px;\n    border: 2px solid #00ffff; /* Neon blue border */\n    border-radius: 5px; /* Slightly rounded corners for a pixelated look */\n    background-color: #333; /* Darker background for dropdown */\n    color: #00ff00; /* Neon green text */\n    font-size: 0.9rem;\n    cursor: pointer;\n    appearance: none;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2300FF00%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-12.3%203.2-16.1%208.1-3.8%204.9-4.9%2011.6-3.1%2017.9L139.6%20275.4a17.6%2017.6%200%200%200%2029.2%200L300.7%2090.8c1.8-6.3.7-13-3.1-17.9z%22%2F%3E%3C%2Fsvg%3E'); /* Custom neon green dropdown arrow */\n    background-repeat: no-repeat;\n    background-position: right 10px center;\n    background-size: 10px;\n    padding-right: 30px;\n    box-shadow: 0 0 8px #00ff00; /* Neon green shadow */\n}\n\n.filter-dropdown:hover {\n    background-color: #555; /* Slightly lighter on hover */\n    box-shadow: 0 0 12px #00ff00;\n}\n\n.filter-dropdown:focus {\n    outline: none;\n    border-color: #ff00ff; /* Neon pink focus border */\n    box-shadow: 0 0 15px #ff00ff;\n}\n\n/* Reduces motion for users who prefer it */\n@media (prefers-reduced-motion: reduce) {\n    .filter-dropdown {\n        transition: none;\n    }\n}\n\n/* Styling for the song count display */\n.song-count {\n    font-family: 'Press Start 2P', cursive;\n    font-size: 1rem;\n    color: #ff00ff; /* Neon pink for the count */\n    margin-left: 10px;\n    text-shadow: 0 0 5px #ff00ff;\n}\n\n/* Container for displaying the song cards */\n.song-display {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive columns */\n    gap: 30px;\n    width: 100%;\n    justify-items: center;\n}\n\n/* Styling for individual song cards */\n.song-card {\n    width: 180px;\n    height: 180px;\n    border: 2px solid #00ffff; /* Neon blue border */\n    border-radius: 50%;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    text-align: center;\n    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */\n    box-shadow: 0 0 10px #00ff00; /* Neon green shadow */\n    cursor: pointer;\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n    color: #00ff00; /* Neon green text */\n    text-shadow: 0 0 5px #00ff00;\n}\n\n.song-card:hover {\n    transform: scale(1.05);\n    box-shadow: 0 0 20px #ff00ff; /* Neon pink shadow on hover */\n}\n\n/* Reduces motion for users who prefer it */\n@media (prefers-reduced-motion: reduce) {\n    .song-card {\n        transition: none;\n    }\n}\n\n/* Styling for the song title within the card */\n.song-title {\n    font-family: 'Press Start 2P', cursive;\n    font-size: 1rem;\n    font-weight: bold;\n    margin: 0;\n    color: #ffea00; /* Neon yellow title */\n    text-shadow: 0 0 5px #ffea00;\n}\n\n/* Styling for the artist name within the card */\n.artist-name {\n    font-family: 'Press Start 2P', cursive;\n    font-size: 0.8rem;\n    color: #00ffff; /* Neon blue artist name */\n    margin: 5px 0 0;\n    text-shadow: 0 0 3px #00ffff;\n}\n\n/* Styling for the genre and mood within the card */\n.genre-mood {\n    font-family: 'Press Start 2P', cursive;\n    font-size: 0.7rem;\n    color: #ff00ff; /* Neon pink genre/mood */\n    margin: 5px 0 0;\n    text-shadow: 0 0 3px #ff00ff;\n}\n\n/* Media queries for responsiveness */\n@media (max-width: 768px) {\n    .app-title {\n        font-size: 2.5rem;\n    }\n\n    .filter-section {\n        flex-direction: column;\n        gap: 10px;\n    }\n\n    .filter-dropdown {\n        width: 100%; /* Full width dropdowns on smaller screens */\n    }\n\n    .song-display {\n        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller cards */\n        gap: 20px;\n    }\n\n    .song-card {\n        width: 150px;\n        height: 150px;\n    }\n}\n\n@media (max-width: 480px) {\n    .app-title {\n        font-size: 2rem;\n    }\n\n    .song-display {\n        grid-template-columns: 1fr; /* Single column on very small screens */\n    }\n\n    .song-card {\n        width: 100%; /* Full width cards */\n        height: auto;\n        min-height: 150px;\n        border-radius: 10px; /* More rectangular cards for readability */\n    }\n}\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Get a reference to the song display container\nconst songDisplay = document.querySelector('.song-display');\n// Get a reference to the song count display element\nconst songCountSpan = document.querySelector('.song-count');\n\n// Function to create an HTML song card using arrow notation\nconst createSongCard = (song) => {\n  const songCard = document.createElement('div');\n  songCard.classList.add('song-card'); // Add the song-card class for styling\n\n  // Set the inner HTML of the card using template literals\n  songCard.innerHTML = `\n    <p class=\"song-title\">${song.title}</p>\n    <p class=\"artist-name\">${song.artist}</p>\n    <p class=\"genre-mood\">${song.genre} | ${song.mood}</p>\n  `;\n\n  return songCard;\n};\n\n// Function to display all songs using arrow notation\nconst displaySongs = (songsToDisplay) => {\n  // Clear any existing song cards\n  songDisplay.innerHTML = '';\n\n  // Loop through the array of songs and add them to the display\n  songsToDisplay.forEach(song => {\n    const card = createSongCard(song);\n    songDisplay.appendChild(card);\n  });\n\n  // Update the song count display\n  songCountSpan.textContent = `${songsToDisplay.length} songs`;\n};\n\n// Function to filter songs by artist using arrow notation\nconst filterSongsByArtist = (songs, artistName) => {\n  if (artistName === \"\" || artistName === \"All Artists\") {\n    return songs; // If \"All Artists\" is selected, return all songs\n  } else {\n    // Use the .filter() method to create a new array with only matching songs\n    return songs.filter(song => song.artist === artistName);\n  }\n};\n\n// Get references to the filter dropdowns\nconst artistFilter = document.getElementById('artist-filter');\n// TODO: Get references for genre-filter and mood-filter as well\n\n// Function to handle filtering and displaying songs using arrow notation\nconst applyFilters = () => {\n  const selectedArtist = artistFilter.value; // Get the currently selected artist from the dropdown\n\n  // Apply the artist filter\n  const filteredByArtist = filterSongsByArtist(allSongs, selectedArtist);\n\n  // TODO: Apply genre and mood filters here\n\n  // Display the filtered songs and update the count\n  displaySongs(filteredByArtist);\n};\n\n// Add event listener to the artist filter dropdown\nartistFilter.addEventListener('change', applyFilters);\n\n// Initial display of all songs when the page loads\ndisplaySongs(allSongs);\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "music_dashboard_plan.md",
+          "language": "md",
+          "contents": "# Music Habits Dashboard\n\nMy idea is to create an interactive music dashboard. I want to build a tool that lets people filter songs by things like genre and mood. I think it would be cool to see how many songs match your filters. This is useful because it's like a simplified version of a real music app.\n\n## My Plan\n\n- Use a dataset of songs that includes things like artist, title, genre, and maybe a \"mood\" tag\n- Create a dashboard with dropdowns for the filters\n- Use loops to go through the song list and show only the ones that match the filters\n- Use a loop to count how many songs are left after the filters are applied\n\n## My Dataset\n\nMy data is an array of objects, and each object is a song. This is the raw data I will use to build my dashboard.\n\n- music_data.js\n\n## Fairness\n\nI think my filters could be unfair if a user is looking for a specific type of music that my dashboard doesn't have. For example, if I only include popular songs, it might make other genres seem less important. My default view that shows all songs is important because it doesn't hide anything right away.\n\n## Artifact Checklist\n\n- [x] music_dashboard_plan.md\n- [x] music_data.js\n- [x] wireframe sketches\n- [x] index.html\n- [x] style.css\n- [x] script.js\n- [ ] reflection on fairness\n- [ ] AI collaboration log\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "music_data.js",
+          "language": "js",
+          "contents": "const allSongs = [\n  {\n    title: \"Blitzkrieg Bop\",\n    artist: \"Ramones\",\n    genre: \"Punk\",\n    mood: \"Energetic\"\n  },\n  {\n    title: \"Cherry Bomb\",\n    artist: \"The Runaways\",\n    genre: \"Punk\",\n    mood: \"Rebellious\"\n  },\n  {\n    title: \"Lo-fi Study Beats\",\n    artist: \"Lo-fi Fruits Music\",\n    genre: \"Lo-fi\",\n    mood: \"Relaxing\"\n  },\n  {\n    title: \"Coffee Shop Jazz\",\n    artist: \"Chillhop Music\",\n    genre: \"Lo-fi\",\n    mood: \"Calm\"\n  }\n];\n\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "available_ai_tutor_modes": [
+      "suggest",
+      "outline",
+      "guide",
+      "produce"
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-23T12:57:47.715+00:00\",\"changed\":[\"cloned from \\\"jamila-test-aiflab-level\\\"\"],\"cloned_from\":\"jamila-test-aiflab-level\"},{\"changed_at\":\"2025-09-23 12:58:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-23 13:01:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-23 16:54:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

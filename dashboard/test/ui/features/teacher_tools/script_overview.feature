@@ -62,21 +62,13 @@ Feature: Unit overview page
   Scenario: Unit overview end-of-lesson
     Given I create a student named "Jean"
     # On last level of the lesson
-    And I am on "http://studio.code.org/courses/csp-2019/units/3/lessons/3/levels/1"
+    And I am on "http://studio.code.org/courses/csp-2025/units/1/lessons/7/levels/8"
     And I click selector ".submitButton"
-    And I wait until I am on "http://studio.code.org/courses/csp-2019/units/3"
+    And I wait until I am on "http://studio.code.org/courses/csp-2025/units/1"
     And I wait for jquery to load
-    And I wait until element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is visible
+    And I wait until element ".uitest-end-of-lesson-header:contains(You finished Lesson 7!)" is visible
     And I reload the page
-    And  element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is not visible
-
-  Scenario: Unit overview lesson plan
-    Given I create an authorized teacher-associated student named "Blake"
-    When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/csp-2019/units/3?no_redirect=true"
-    And I click selector "#uitest-lesson-plan" once I see it
-    When I switch tabs
-    And I wait until current URL contains "curriculum.code.org/csp-19/unit3/1/"
+    And  element ".uitest-end-of-lesson-header:contains(You finished Lesson 7!)" is not visible
 
   Scenario: Unit overview new lesson plan
     Given I create an authorized teacher-associated student named "Blake"

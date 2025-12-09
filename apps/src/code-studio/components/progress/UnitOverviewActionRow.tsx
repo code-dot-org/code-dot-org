@@ -42,7 +42,7 @@ interface UnitOverviewActionRowProps {
   showAssignButton: boolean;
   currentCourseId: number;
   courseOfferingId: number;
-  courseLink: string;
+  isSingleUnitCourse: boolean;
   participantAudience: string;
   isMigrated: boolean;
   scriptOverviewPdfUrl: string;
@@ -105,7 +105,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   showAssignButton,
   currentCourseId,
   courseOfferingId,
-  courseLink,
+  isSingleUnitCourse,
   participantAudience,
   isMigrated,
   scriptOverviewPdfUrl,
@@ -242,7 +242,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 assignmentName={unitTitle}
                 reassignConfirm={onReassignConfirm}
                 isAssigningCourseOnly={false}
-                isAssigningUnitOnly={courseLink === null}
+                isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
               />
             </div>

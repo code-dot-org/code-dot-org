@@ -20,6 +20,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     if @feedback.nil?
       head :no_content
     else
+      authorize! :get_feedback_from_teacher, @feedback
       render json: @feedback.summarize(true)
     end
   end
@@ -36,9 +37,13 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
       params.require(:student_id),
       params.require(:level_id),
       params.require(:script_id)
-    ).map {|feedback| feedback.summarize(true)}
+    )
 
-    render json: @level_feedbacks
+    @level_feedbacks.each do |feedback|
+      authorize! :get_feedbacks, feedback
+    end
+
+    render json: @level_feedbacks.map {|feedback| feedback.summarize(true)}
   end
 
   # Determine how many not yet seen feedback entries from any verified teacher
@@ -73,6 +78,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   # Records metrics for student viewing teacher feedback.
   def increment_visit_count
     feedback = TeacherFeedback.find(params[:id])
+    authorize! :increment_visit_count, feedback
     if feedback&.increment_visit_count
       head :no_content
     else

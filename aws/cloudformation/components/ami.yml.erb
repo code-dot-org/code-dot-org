@@ -24,6 +24,8 @@ frontend_policies ||= []
 
 # Array of properties to append to the frontend AutoScalingGroup resource.
 frontend_properties ||= {}
+frontend_subnets ||= raise('frontend_subnets is required')
+frontend_availability_zones ||= raise('frontend_availability_zones is required')
 
 image_id ||= {Ref: 'ImageId'}.to_json
 ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
@@ -48,16 +50,19 @@ frontend_device_name ||= '/dev/sda1'
                 Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
       ManagedPolicyArns: <%=frontend_policies.to_json%>
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref FrontendRole]}
-  # Signal when the instance is fully provisioned and ready for AMI creation.
+  
+    # Signal when the instance is fully provisioned and ready for AMI creation.
   AMICreate<%=commit_hash%>:
     Type: AWS::CloudFormation::WaitCondition
     CreationPolicy:
       ResourceSignal:
         Timeout: <%=ami_timeout%>
         Count: 1
+
   WebServerAMI:
     Type: AWS::EC2::Instance
     Properties:
@@ -65,12 +70,13 @@ frontend_device_name ||= '/dev/sda1'
       InstanceType: <%=instance_type%>
       IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
-      SubnetId: <%=subnets.first.to_json%>
+      SubnetId: <%=frontend_subnets.first.to_json%>
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: <%=frontend_device_name%>
           Ebs:
             VolumeSize: <%=frontend_volume_size%>
+            # TODO: change to gp3 next time we have to recreate the instance
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -97,7 +103,7 @@ frontend_device_name ||= '/dev/sda1'
     InstanceId: {Ref: "WebServerAMI" } %>
   FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{commit_hash}" }],
-    AvailabilityZones: AVAILABILITY_ZONES
+    AvailabilityZones: frontend_availability_zones
   %>
   ASGCount: <%= lambda_fn 'CountASG',
     Default: {
@@ -129,7 +135,7 @@ frontend_device_name ||= '/dev/sda1'
         WaitOnResourceSignals: true
     Properties:
       AutoScalingGroupName: !Sub "Frontends-${AWS::StackName}"
-      VPCZoneIdentifier: <%= subnets.to_json %>
+      VPCZoneIdentifier: <%= frontend_subnets.to_json %>
       LaunchTemplate:
         LaunchTemplateId: !Ref FrontendLaunchTemplate
         Version: !GetAtt FrontendLaunchTemplate.LatestVersionNumber
@@ -171,11 +177,13 @@ frontend_device_name ||= '/dev/sda1'
         SecurityGroupIds:
           - !ImportValue VPC-FrontendSecurityGroup
         KeyName: <%=ssh_key_name%>
+        Monitoring:
+          Enabled: <%=rack_env?(:production)%>
         BlockDeviceMappings:
           - DeviceName: <%=frontend_device_name%>
             Ebs:
               VolumeSize: <%=frontend_volume_size * 2%> # Double volume size to leave room for logs written to disk
-              VolumeType: gp2
+              VolumeType: gp3
         TagSpecifications:
           - ResourceType: instance
             Tags:
@@ -258,3 +266,44 @@ frontend_device_name ||= '/dev/sda1'
                 Action: 'sns:Publish'
                 Resource: !Ref WebServerHookTopicNew
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+  PredictiveScalingPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName: !Ref Frontends
+      PolicyType: PredictiveScaling
+      PredictiveScalingConfiguration:
+        Mode: ForecastOnly # Generate forecasts, but don't actually scale the Auto Scaling Group.
+        MetricSpecifications:
+          - TargetValue: 50
+            PredefinedMetricPairSpecification:
+              PredefinedMetricType: ASGCPUUtilization
+        # Warm up new instance 5 minutes before Predictive Scaling forecasts that it will be needed.
+        SchedulingBufferTime: 300
+        MaxCapacityBreachBehavior: IncreaseMaxCapacity
+        MaxCapacityBuffer: 4  # Usage increases 2-3X  from 5AM to 6:30AM PT
+
+  FrontendHighMemoryAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${AWS::StackName}_web_server_high_memory
+      AlarmDescription: |
+        Memory on a Frontend web server instance is too high. Investigate to
+        see which instance is reporting high memory. Replace the instance. This
+        alarm may be caused by a memory leak or issue on one specific instance,
+        or as a result of particularly high memory consuming traffic across all
+        instances. Further investigation is required to identify the cause.
+      ActionsEnabled: true
+      AlarmActions:
+          - !Ref <%=rack_env?(:production) ? "InfraUrgent" : "InfraWorkdayUrgent" %>
+      MetricName: mem_used_percent
+      Namespace: CWAgent
+      Statistic: Maximum
+      Dimensions:
+          - Name: AutoScalingGroupName
+            Value: !Ref Frontends
+      Period: 10
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      Threshold: 87
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: ignore

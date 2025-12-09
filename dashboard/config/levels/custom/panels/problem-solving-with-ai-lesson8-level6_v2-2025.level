@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:53:04.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "# 5 Key Elements of a Prompt\n\nAs you craft your AI Chat prompts, keep in mind the 5 key elements that could be added to refine a prompt:\n- **Task**\n- **Context**\n- **Format**\n- **Reference**\n- **Tone**\n\nLet's learn how to improve this prompt: \n>_\"Write a short story about two friends.\"_",
+        "imageUrl": "https://images.code.org/eabd83fef43bff3923b61b0f39c30f8b-Screenshot 2025-03-20 at 1.29.48 PM.png",
+        "key": "test-problem-solving-with-ai-lesson8-level1-panel-b86fcdec-923f-4405-a50c-6a7da3ef6dc1",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "# Task\nMake sure to give AI **specific and actionable instructions**.\n\n### Adding a Task:\n>_\"Write a short story about two friends. **Make sure to include the elements of narrative structure, specifically rising action, climax, and falling action.**\"_",
+        "imageUrl": "https://images.code.org/1159605d9c7f57fb1703caf2e5703c9a-Screenshot 2025-03-20 at 1.50.47 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "# Context\nMake sure to give AI **relevant background details**.\n\n#### Adding Context\n>_\"Write a short story **set in a futuristic city about an unlikely friendship between two very different characters**.\"_",
+        "imageUrl": "https://images.code.org/823e798f77d5c023505cf8f4e722cbad-Screenshot 2025-03-20 at 1.50.58 PM.png",
+        "key": "test-problem-solving-with-ai-lesson8-level1-panel-8e5a79cb-df51-4bc4-bd2d-7441c8ee1b45"
+      },
+      {
+        "text": "# Format\nMake sure to tell AI **how the response should be structured**.\n\n### Example Prompt with Task\n>_\"Write a short story **that is told primarily through dialogue between** two friends.\"_",
+        "imageUrl": "https://images.code.org/6ba802579541b76c303e2c08710a9644-Screenshot 2025-03-20 at 1.51.12 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Reference\nMake sure to give AI **additional examples or resources**.\n\n### Example Prompt with Task\n>_\"Write a short story about two friends, **inspired by Kermit and Miss Piggy**.\"_",
+        "imageUrl": "https://images.code.org/509f26c295948b10ac6d08ed560fedfc-Screenshot 2025-03-20 at 1.56.05 PM.png",
+        "key": "test-problem-solving-with-ai-lesson8-level1-panel-250d2def-1334-460b-9cf7-dbbdb0348e19",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Tone\nMake sure to give AI **a style in which to write the output**.\n\n### Example Prompt with Task\n>_\"Write a short story, **in the style of horror novelist Stephen King,** about two friends.\"_",
+        "imageUrl": "https://images.code.org/42a56c81e9184366dbfd5f7f7445ecd0-Screenshot 2025-03-20 at 1.51.15 PM.png",
+        "key": "test-problem-solving-with-ai-lesson8-level1-panel-6c3cabab-f5d0-428b-a14e-8d44a2c9e3e0",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#### How Do I Remember All 5?\n\nJust remember TaCoFoRT! \n\n**Ta**sk, **Co**ntext, **Fo**rmat, **R**eference, **T**one \n",
+        "imageUrl": "https://images.code.org/86014a470691d988fb98050dede01c87-Screenshot 2025-03-20 at 1.42.35 PM.png",
+        "key": "test-problem-solving-with-ai-lesson8-level1-panel-c0127f80-b86c-4907-a0ec-5876cd993cd4",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:04.918+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level6_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level6_2025\"}]"
+}]]></config>
+</Panels>

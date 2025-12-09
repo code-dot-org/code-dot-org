@@ -74,6 +74,8 @@ Scenario: Versions warning announcement on script overview page
 
   When I am on "http://studio.code.org/courses/ui-test-versioned-script-2019/units/1"
   And I wait until element "#script-title" is visible
+  # Make sure we did not get redirected to the 2017 version
+  And check that the URL contains "ui-test-versioned-script-2019"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   # Then element ".announcement-notification:contains(using the dropdown below)" is visible # not showing this message on script overview pages for single-unit courses
@@ -86,16 +88,6 @@ Scenario: Versions warning announcement on script overview page
   When I reload the page
   And I wait until element "#script-title" is visible
   And element "#uitest-version-selector" is visible
-  Then element ".announcement-notification:contains(newer version)" is not visible
-
-  # Generate progress in course 2
-  When I am on "http://studio.code.org/courses/course2/units/1/lessons/1/levels/1"
-  And I click selector ".next-lesson" once I see it
-  And I wait until current URL contains "/courses/course2/units/1/lessons/1/levels/2"
-
-  When I am on "http://studio.code.org/courses/course1/units/1"
-  And I wait until element "#script-title" is visible
-  And element "#uitest-version-selector" is not visible
   Then element ".announcement-notification:contains(newer version)" is not visible
 
 @as_student
@@ -124,10 +116,3 @@ Scenario: Switch versions using dropdown on script overview page
   And element ".assignment-version-title:contains(2018)" is not visible
   And I click selector ".assignment-version-title:contains(2017)" once I see it
   Then I wait until I am on "http://studio.code.org/courses/ui-test-versioned-script-2017/units/1"
-
-@as_student
-@no_mobile
-  #TODO: Figure out this?
-Scenario: Course unit family names redirect to 2019 version
-  When I am on "http://studio.code.org/s/csp3"
-  And I get redirected to "/courses/csp-2019/units/3" via "dashboard"

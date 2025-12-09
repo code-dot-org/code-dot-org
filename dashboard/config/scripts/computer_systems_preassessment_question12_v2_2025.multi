@@ -1,0 +1,19 @@
+name 'computer-systems-preassessment-question12_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 12'
+
+wrong 'They consume too much battery'
+right 'They may be hacked'
+wrong 'They require software updates'
+wrong 'They are difficult to set up'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a major risk of smart devices (IoT)?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: IoT and Emerging Technologies
+
+Lesson 12: Just Because We Can, Should We?
+MARKDOWN

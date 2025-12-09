@@ -1,0 +1,44 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:01:04.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "## Target 1.3\nEnsure vulnerable populations receive support through social protection systems.\n\n---\n\n* Social protection includes programs like healthcare, food assistance, and unemployment benefits.\n* Vulnerable groups include elderly individuals, people with disabilities, low-income families, and refugees.\n* Many people face barriers to accessing these services due to lack of awareness, technology access, or complex application processes.\n* Governments and organizations use digital platforms, data systems, and AI tools to improve access to social protection.\n* Innovations in mobile apps, automated assistance, and real-time tracking can help ensure support reaches those in need.\n",
+        "imageUrl": "https://images.code.org/d90774ef7d391b0776cfa2df68c16df4-Pasted Graphic 8.png",
+        "key": "undefined-0c1fb390-a121-4557-8293-598810105ff5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 1.5\nHelp communities prepare for and respond to disasters.\n\n---\n\n* Disasters include natural (earthquakes, hurricanes, floods) and human-made (fires, industrial accidents) events.\n* Vulnerable communities are often most affected due to lack of resources and preparedness.\n* Early warning systems, evacuation plans, and disaster relief coordination help reduce impacts.\n* Technology can improve disaster response through real-time monitoring, AI-driven predictions, and emergency communication networks.\n* Governments and organizations use satellites, IoT sensors, and mobile apps to track risks and send alerts.",
+        "imageUrl": "https://images.code.org/23aa1a4fcc50c25c06c28181a5146549-Pasted Graphic 7.png",
+        "key": "undefined-ca8e36c6-6a0a-4a28-8b84-9d8916597600",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 3.9\nMonitor and mitigate pollutants in air, water, and soil.\n\n---\n\n* Pollution from factories, vehicles, and waste can harm human health and the environment.\n* Efforts to reduce industrial waste, regulate emissions, and promote clean energy can help mitigate pollution’s impact.\n* Contaminated air, water, and soil contribute to respiratory diseases, waterborne illnesses, and food contamination.\n* Governments and organizations use real-time monitoring systems, AI-powered analysis, and satellite data to track pollution levels.\n* Technologies like IoT sensors, drones, and machine learning help detect and predict pollution trends.",
+        "imageUrl": "https://images.code.org/537eff6b34aad9daf47c16deb28ab37b-REDUCE ILLNESSES.png",
+        "key": "computer-systems-category-1-bb1d2416-8b0a-4842-a58a-8538eb9357db",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 3.d\nDevelop systems for early warning and emergency response.\n\n---\n\n* Early warning systems help detect and respond to health risks like pandemics, disease outbreaks, and natural disasters.\n* Governments and health organizations use real-time data, AI models, and digital alerts to track and predict emergencies.\n* Mobile alerts, automated reporting, and AI-powered diagnostics can help communities respond faster.\n* Data from hospitals, weather satellites, and public health records helps monitor global health threats.\n* Improved communication networks ensure faster response times for emergency personnel and affected communities.",
+        "imageUrl": "https://images.code.org/543d7b71236f81f645ddc2ecfcc822ce-Pasted Graphic 10.png",
+        "key": "computer-systems-category-1-95acf92d-4511-460e-8d55-3eb50c6fba19",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "Design computer systems to support vulnerable populations and help communities stay safe and prepared for challenges.",
+    "display_name": "Equity and Resilience",
+    "thumbnail_url": "https://images.code.org/52ef3204eda8b89d622f2a61e788e7af-Pasted Graphic 31.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:01:04.248+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level1a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level1a_2025\"}]"
+}]]></config>
+</Panels>

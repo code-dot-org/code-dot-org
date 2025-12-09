@@ -1,31 +1,39 @@
+import * as blockUtils from '@cdo/apps/block_utils';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
-import * as commonBlocks from '@cdo/apps/blocksCommon';
 import danceBlocks from '@cdo/apps/dance/blockly/blocks';
 
-const blockUtils = require('@cdo/apps/block_utils');
+import blockDefinitions from './blockDefinitions';
 
-// Install common blocks for Dance Party Lab2.
-export function installCommonBlocks(
-  skin: string | undefined,
-  isK1: boolean | undefined
-) {
-  const blockInstallOptions = {
-    skin,
-    isK1,
-  };
-  commonBlocks.install(Blockly, blockInstallOptions);
+let isBlocklyEnvironmentSetup = false;
+
+export function setupBlocklyEnvironment() {
+  if (isBlocklyEnvironmentSetup) {
+    return;
+  }
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  delete Blockly.Blocks.procedures_defreturn;
+  delete Blockly.Blocks.procedures_ifreturn;
   Blockly.setInfiniteLoopTrap();
+
+  for (const {definition, generator, extendedOptions} of blockDefinitions) {
+    Blockly.Blocks[definition.type] = {
+      init: function () {
+        this.jsonInit(definition);
+      },
+      ...extendedOptions,
+    };
+    Blockly.getGenerator().forBlock[definition.type] = generator;
+  }
+
+  isBlocklyEnvironmentSetup = true;
 }
 
-// Install custom blocks for Dance Party Lab2.
-export function installDanceBlocks(
-  sharedBlocks: BlockDefinition[] | undefined
-) {
-  danceBlocks.install(Blockly);
-  const blocksByCategory = blockUtils.installCustomBlocks({
+export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
+  [category: string]: string[];
+} {
+  return blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: sharedBlocks,
+    blockDefinitions: sharedBlocks || [],
     customInputTypes: danceBlocks.customInputTypes,
   });
-  return blocksByCategory; // TODO: use when implementing pathway for toolbox editing for levelbuilders
 }

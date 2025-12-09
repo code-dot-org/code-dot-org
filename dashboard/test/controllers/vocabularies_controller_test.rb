@@ -6,14 +6,14 @@ class VocabulariesControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.stubs(:write)
-    @levelbuilder = create :levelbuilder
+    @levelbuilder = create(:levelbuilder)
     # We don't want to actually write to the file system here
     Vocabulary.any_instance.stubs(:serialize_scripts)
   end
 
   test "can create vocabulary from params" do
     sign_in @levelbuilder
-    course_version = create :course_version
+    course_version = create(:course_version)
     assert_creates(Vocabulary) do
       post :create, params: {word: 'Algorithm', definition: 'definition of algorithm', courseVersionId: course_version.id}
       assert_response :success
@@ -24,8 +24,8 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can update from params" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    vocabulary = create :vocabulary, word: 'word', definition: 'draft definition', course_version: course_version
+    course_version = create(:course_version)
+    vocabulary = create(:vocabulary, word: 'word', definition: 'draft definition', course_version: course_version)
     post :update, params: {id: vocabulary.id, word: 'word', definition: 'updated definition', courseVersionId: course_version.id}
     assert_response :success
 
@@ -36,10 +36,10 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can update vocab from params" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    lesson = create :lesson
+    course_version = create(:course_version)
+    lesson = create(:lesson)
     Vocabulary.any_instance.expects(:serialize_scripts).once
-    vocabulary = create :vocabulary, word: 'word', definition: 'draft definition', course_version: course_version
+    vocabulary = create(:vocabulary, word: 'word', definition: 'draft definition', course_version: course_version)
     post :update, params: {id: vocabulary.id, word: 'word', definition: 'updated definition', courseVersionId: course_version.id, lessonIds: [lesson.id].to_json}
     assert_response :success
 
@@ -51,8 +51,8 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "creating vocabulary that already exists results in error" do
     sign_in @levelbuilder
-    course_version = create :course_version
-    vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
+    course_version = create(:course_version)
+    vocabulary = create(:vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version)
 
     post :create, params: {word: 'variable', definition: 'different definition', courseVersionId: course_version.id}
     assert_response :bad_request
@@ -64,9 +64,9 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can load vocab edit page of unit group course version" do
     sign_in @levelbuilder
-    unit_group = create :unit_group, name: 'fake-course-2021'
-    course_version = create :course_version, content_root: unit_group
-    vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
+    unit_group = create(:unit_group, name: 'fake-course-2021')
+    course_version = create(:course_version, content_root: unit_group)
+    vocabulary = create(:vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version)
 
     get :edit, params: {course_name: unit_group.name}
     assert_response :success
@@ -76,10 +76,10 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   test "can load vocab edit page of single unit course course version" do
     sign_in @levelbuilder
-    script = create :script, name: 'fake-single-unit-2021'
-    single_unit_course = create :single_unit_course, unit: script
-    course_version = create :course_version, content_root: single_unit_course
-    vocabulary = create :vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version
+    script = create(:script, name: 'fake-single-unit-2021')
+    single_unit_course = create(:single_unit_course, unit: script)
+    course_version = create(:course_version, content_root: single_unit_course)
+    vocabulary = create(:vocabulary, key: 'variable', word: 'variable', definition: 'definition', course_version: course_version)
 
     get :edit, params: {course_name: single_unit_course.name}
     assert_response :success
@@ -89,8 +89,8 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   class AuthTests < ActionController::TestCase
     setup do
-      course_version = create :course_version
-      @vocabulary = create :vocabulary, course_version: course_version
+      course_version = create(:course_version)
+      @vocabulary = create(:vocabulary, course_version: course_version)
       @new_params = {word: 'algorithm', definition: 'a list of steps', course_version_id: course_version.id}
       @update_params = {id: @vocabulary.id, word: @vocabulary.word, definition: 'an updated definition', course_version_id: course_version.id}
       Vocabulary.any_instance.stubs(:serialize_scripts)

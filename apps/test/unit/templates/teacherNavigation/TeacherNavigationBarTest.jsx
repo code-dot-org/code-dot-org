@@ -10,7 +10,6 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -38,6 +37,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
       json: () => Promise.resolve({}),
     })
   ),
+  fetchJson: jest.fn(() => Promise.resolve({})),
 }));
 
 const LocationElement = () => {
@@ -116,7 +116,8 @@ describe('TeacherNavigationBar', () => {
   const renderDefault = (
     selectedSectionId = 11,
     selectedRoute = null,
-    showAITutorTab = false
+    showAiChatSettings = false,
+    aiDiffEnabled = true
   ) => {
     store = getStore();
     registerReducers({
@@ -129,6 +130,7 @@ describe('TeacherNavigationBar', () => {
         id: 1,
         name: 'test_user',
         has_completed_ai_differentiation_welcome: true,
+        ai_differentiation_enabled: aiDiffEnabled,
       })
     );
 
@@ -151,7 +153,9 @@ describe('TeacherNavigationBar', () => {
                 path={TEACHER_NAVIGATION_SECTIONS_URL}
                 element={
                   <div>
-                    <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                    <TeacherNavigationBar
+                      showAiChatSettings={showAiChatSettings}
+                    />
                     <Outlet />
                   </div>
                 }
@@ -316,26 +320,40 @@ describe('TeacherNavigationBar', () => {
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 
-  test('AI Tutor tab diplayed when teacher has access, is in correct section, and DCDO flag is set', async () => {
-    DCDO.set('ai-tutor-teacher-nav-v2', true);
+  test('AI settings tab displayed when teacher has access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
-    screen.getByText('AI Tutor');
+    screen.getByText(i18n.aiSettings());
   });
 
-  test('AI Tutor tab not diplayed when DCDO flag is false', async () => {
-    DCDO.set('ai-tutor-teacher-nav-v2', false);
-    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+  test('AI settings tab not displayed when teacher does not have access', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, false);
     await screen.findByText('Course Content');
 
-    expect(screen.queryByText('AI Tutor')).toBeNull();
+    expect(screen.queryByText(i18n.aiSettings())).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
-    // mock experiment is enabled
+    // mock experiment is disabled
     experiments.isEnabled = jest.fn(() => false);
     renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    expect(
+      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
+    ).toBeNull();
+  });
+
+  test('does not render AiDiffFloatingActionButton component when user pref is not enabled', async () => {
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => true);
+    // mock user preference disabled
+    renderDefault(
+      13,
+      `/teacher_dashboard/sections/13/unit/csd3-2022`,
+      false,
+      false
+    );
 
     expect(
       screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})

@@ -1,0 +1,11 @@
+name 'programming-fundamentals-lesson7-level8_2025-launch_v2-2025'
+title 'Check Your Understanding'
+
+question 'Which of the following best explains the difference between a parameter and an argument?'
+
+wrong 'A parameter is the name of the function; an argument is the name of the variable inside the function.'
+wrong 'A parameter is a value passed into the function; an argument is the placeholder in the function definition.'
+right 'A parameter is the placeholder in the function definition; an argument is the actual value passed in when the function is called.'
+wrong 'A parameter and an argument are always the same thing and can be used interchangeably.'
+
+allow_multiple_attempts false

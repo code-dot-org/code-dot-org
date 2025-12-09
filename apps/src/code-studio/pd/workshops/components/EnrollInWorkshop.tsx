@@ -8,12 +8,14 @@ import {
 import React from 'react';
 
 import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
+  UserInfoForWorkshop,
+  UserWorkshopEnrollment,
+  WorkshopInfo,
 } from '@cdo/apps/code-studio/pd/workshops/types';
 
 import {useWorkshopEnrollment} from './../hooks/useWorkshopEnrollment';
-import UserPassport from './UserPassport';
+import CancelWorkshopEnrollment from './CancelWorkshopEnrollment';
+import UserPassport, {isMissingUserInfo} from './UserPassport';
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
 
@@ -21,38 +23,43 @@ const WORKSHOP_ENROLL_SOURCE_PAGE = 'workshop enroll';
 
 interface EnrollInWorkshopProps
   extends Pick<
-      GetWorkshopInfoScriptDataResponse,
-      | 'custom_registration_link'
-      | 'num_enrollments'
+      WorkshopInfo,
+      | 'customRegistrationLink'
+      | 'numEnrollments'
       | 'capacity'
       | 'id'
-      | 'regional_partner_name'
+      | 'regionalPartnerName'
       | 'course'
       | 'sessions'
       | 'name'
       | 'format'
       | 'subject'
     >,
-    GetUserInfoForWorkshopResponse {}
+    UserInfoForWorkshop {
+  isUserEnrolled?: boolean;
+  userEnrollment?: UserWorkshopEnrollment;
+}
 /** Component to display the enrollment information for a workshop. */
 const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   id,
-  custom_registration_link,
-  num_enrollments,
+  customRegistrationLink,
+  numEnrollments,
   capacity,
   sessions,
   userInfo,
-  regional_partner_name,
+  regionalPartnerName,
   course,
   format,
   name,
   subject,
+  userEnrollment,
+  isUserEnrolled,
 }) => {
   const {handleClick, isSubmitting, alertState, setAlertState} =
     useWorkshopEnrollment({
       workshopId: id,
-      userInfo,
-      regional_partner_name,
+      userId: userInfo?.id,
+      regionalPartnerName,
       course,
       format,
       name,
@@ -60,18 +67,18 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       sessions,
     });
 
-  const is_student = userInfo?.is_student || false;
-  const is_signed_out = !userInfo;
-  const isFull = num_enrollments >= capacity;
+  const isStudent = userInfo?.isStudent || false;
+  const isSignedOut = !userInfo;
+  const isFull = numEnrollments >= capacity;
 
   const buildEnrollButtonLink = (enrollLink: string) => {
-    if (is_signed_out) {
+    if (isSignedOut) {
       return `/logged_out?source_page=${encodeURIComponent(
         WORKSHOP_ENROLL_SOURCE_PAGE
       )}&return_to=${encodeURIComponent(enrollLink)}`;
     }
 
-    if (is_student) {
+    if (isStudent) {
       return `/teacher_account_required?source_page=${encodeURIComponent(
         WORKSHOP_ENROLL_SOURCE_PAGE
       )}&return_to=${encodeURIComponent(enrollLink)}`;
@@ -93,15 +100,16 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       );
     }
 
-    if (custom_registration_link) {
+    if (customRegistrationLink) {
       return (
         <>
           <BodyThreeText>
-            This workshop’s registration is managed externally by the regional
+            This workshop's registration is managed externally by the regional
             partner.
           </BodyThreeText>
           <LinkButton
-            href={buildEnrollButtonLink(custom_registration_link)}
+            href={customRegistrationLink}
+            target="_blank"
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"
@@ -112,34 +120,32 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       );
     }
 
-    if (is_student || is_signed_out) {
+    if (isStudent || isSignedOut) {
       return (
         <LinkButton
           className={moduleStyles.fullWidthButton}
           type="primary"
           size="m"
           href={buildEnrollButtonLink(`/professional-learning/workshops/${id}`)}
-          text={is_student ? 'Switch to teacher account' : 'Sign-in to enroll'}
+          text={isStudent ? 'Switch to teacher account' : 'Sign-in to enroll'}
           iconRight={{iconName: 'right-to-bracket'}}
         />
       );
     }
 
-    const isMissingRequiredUserField =
-      !userInfo.first_name ||
-      !userInfo.last_name ||
-      !userInfo.email ||
-      !userInfo.school_info?.school_name;
     return (
       <div className={moduleStyles.internalEnrollButton}>
         {userInfo && (
           <UserPassport
-            displayName={userInfo.display_name}
-            givenName={userInfo.first_name}
-            familyName={userInfo.last_name}
+            displayName={userInfo.displayName}
+            givenName={userInfo.givenName}
+            familyName={userInfo.familyName}
             email={userInfo.email}
-            schoolName={userInfo.school_info?.school_name}
+            educatorRole={userInfo.educatorRole}
+            schoolName={userInfo.schoolInfo?.schoolName}
+            schoolType={userInfo.schoolInfo?.schoolType}
             returnToHref={`/professional-learning/workshops/${id}`}
+            isUserEnrolled={isUserEnrolled}
             className={moduleStyles.userPassport}
           />
         )}
@@ -153,15 +159,19 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             }
           />
         )}
-        <Button
-          className={moduleStyles.fullWidthButton}
-          type="primary"
-          size="m"
-          isPending={isSubmitting}
-          onClick={handleClick}
-          text="Enroll in this workshop"
-          disabled={isMissingRequiredUserField}
-        />
+        {isUserEnrolled && userEnrollment?.code ? (
+          <CancelWorkshopEnrollment enrollmentCode={userEnrollment.code} />
+        ) : (
+          <Button
+            className={moduleStyles.fullWidthButton}
+            type="primary"
+            size="m"
+            isPending={isSubmitting}
+            onClick={handleClick}
+            text="Enroll in this workshop"
+            disabled={isMissingUserInfo(userInfo)}
+          />
+        )}
       </div>
     );
   };

@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
 
 import FormFieldWrapper, {FormFieldWrapperProps} from '..';
 
@@ -114,9 +114,9 @@ export const WithDisabledChildElement: Story = {
     ...component,
     children: <input type="text" disabled />,
   })),
-  parameters: {
+  globals: {
     backgrounds: {
-      default: 'dark',
+      value: 'dark',
     },
   },
   play: async ({canvasElement}) => {

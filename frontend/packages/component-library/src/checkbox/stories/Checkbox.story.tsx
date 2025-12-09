@@ -1,6 +1,7 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {useState, Dispatch, SetStateAction} from 'react';
 
-import {ComponentSizeXSToL} from '@/common/types';
+import Tags from '@/tags';
 
 import Checkbox, {CheckboxProps} from '../index';
 
@@ -12,34 +13,89 @@ export default {
 //
 // TEMPLATE
 //
-// This is needed to fix children type error (passing string instead of React.ReactNode type)
-const SingleTemplate: StoryFn<CheckboxProps> = args => <Checkbox {...args} />;
+const SingleTemplate: StoryFn<CheckboxProps> = args => {
+  const [lightChecked, setLightChecked] = useState(args.checked ?? false);
+  const [darkChecked, setDarkChecked] = useState(args.checked ?? false);
 
-const MultipleTemplate: StoryFn<{
-  components: CheckboxProps[];
-}> = args => (
-  <>
-    {args.components?.map(componentArg => (
-      <Checkbox key={componentArg.name} {...componentArg} />
-    ))}
-  </>
-);
+  const Single = (checked: boolean, onChange: (newVal: boolean) => void) => (
+    <Checkbox
+      {...args}
+      checked={checked}
+      onChange={e => {
+        onChange(e.target.checked);
+        args.onChange?.(e);
+      }}
+    />
+  );
+
+  return (
+    <>
+      <div data-theme="Light" style={{padding: 20}}>
+        <h3>Light Theme</h3>
+        {Single(lightChecked, setLightChecked)}
+      </div>
+      <div data-theme="Dark" style={{background: '#292F36', padding: 20}}>
+        <h3 style={{color: '#FFF'}}>Dark Theme</h3>
+        {Single(darkChecked, setDarkChecked)}
+      </div>
+    </>
+  );
+};
 
 export const DefaultCheckbox = SingleTemplate.bind({});
 DefaultCheckbox.args = {
   name: 'controlled_checkbox',
   label: 'Checkbox Label',
+  checked: false,
+  onChange: () => null,
 };
-//
+
+const MultipleTemplate: StoryFn<{components: CheckboxProps[]}> = args => {
+  const initial = Object.fromEntries(
+    args.components.map(c => [c.name, !!c.checked]),
+  );
+  const [lightState, setLightState] =
+    useState<Record<string, boolean>>(initial);
+  const [darkState, setDarkState] = useState<Record<string, boolean>>(initial);
+
+  const renderGroup = (
+    state: Record<string, boolean>,
+    setState: Dispatch<SetStateAction<Record<string, boolean>>>,
+  ) => (
+    <div>
+      {args.components.map(c => (
+        <Checkbox
+          key={c.name}
+          {...c}
+          checked={state[c.name]}
+          onChange={e => {
+            const next = {...state, [c.name]: e.target.checked};
+            setState(next);
+            c.onChange?.(e);
+          }}
+        />
+      ))}
+    </div>
+  );
+
+  return (
+    <>
+      <div data-theme="Light" style={{padding: 20}}>
+        <h3>Light Theme</h3>
+        {renderGroup(lightState, setLightState)}
+      </div>
+      <div data-theme="Dark" style={{background: '#292F36', padding: 20}}>
+        <h3 style={{color: '#FFF'}}>Dark Theme</h3>
+        {renderGroup(darkState, setDarkState)}
+      </div>
+    </>
+  );
+};
+
 export const GroupOfDefaultCheckboxes = MultipleTemplate.bind({});
 GroupOfDefaultCheckboxes.args = {
   components: [
-    {
-      name: 'test',
-      label: 'Label',
-      onChange: () => null,
-      checked: false,
-    },
+    {name: 'test', label: 'Label', checked: false, onChange: () => null},
     {
       name: 'test-checked',
       label: 'Label Checked',
@@ -50,6 +106,54 @@ GroupOfDefaultCheckboxes.args = {
       name: 'test-indeterminate',
       label: 'Label Indeterminate',
       indeterminate: true,
+      checked: false,
+      onChange: () => null,
+    },
+  ],
+};
+
+const CustomContentTemplate: StoryFn<{components: CheckboxProps[]}> = args => (
+  <div style={{padding: 20}}>
+    {args.components.map(c => (
+      <Checkbox key={c.name} {...c} />
+    ))}
+  </div>
+);
+
+export const CheckboxesWithCustomContent = CustomContentTemplate.bind({});
+CheckboxesWithCustomContent.args = {
+  components: [
+    {
+      name: 'test-custom-content-0',
+      label: '',
+      size: 'm',
+      checked: false,
+      onChange: () => null,
+      children: (
+        <>
+          <span>With Custom Content</span>
+          <button type="button">Custom content</button>
+        </>
+      ),
+    },
+    {
+      name: 'test-custom-content-1',
+      label: 'With Custom Content and Label',
+      size: 'm',
+      checked: false,
+      onChange: () => null,
+      children: (
+        <Tags
+          tagsList={[
+            {label: 'Tag1', tooltipContent: 'Tag tooltip', tooltipId: ''},
+          ]}
+        />
+      ),
+    },
+    {
+      name: 'test-custom-content-2',
+      label: 'Without Custom Content',
+      size: 'm',
       checked: false,
       onChange: () => null,
     },
@@ -77,8 +181,8 @@ GroupOfDisabledCheckboxes.args = {
       name: 'test-disabled-indeterminate',
       label: 'Label Indeterminate',
       indeterminate: true,
-      checked: false,
       disabled: true,
+      checked: false,
       onChange: () => null,
     },
   ],
@@ -109,8 +213,8 @@ GroupOfSizesOfCheckboxes.args = {
       onChange: () => null,
     },
     {
-      name: 'test-xl',
-      label: 'Label XL',
+      name: 'test-l',
+      label: 'Label L',
       size: 'l',
       checked: false,
       onChange: () => null,
@@ -118,264 +222,104 @@ GroupOfSizesOfCheckboxes.args = {
   ],
 };
 
-// -----------------------------------------------------------
-// Stories under this line are for Supernova Documentation only
-// -----------------------------------------------------------
-const SupernovaDefaultMultipleTemplate: StoryFn<{
-  components: CheckboxProps[];
-}> = () => (
-  <>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox',
-          onChange: () => null,
-          checked: false,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox',
-          checked: true,
-          onChange: () => null,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox',
-          indeterminate: true,
-          checked: false,
-          onChange: () => null,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
-      ))}
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox',
-          onChange: () => null,
-          checked: false,
-          disabled: true,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox',
-          checked: true,
-          disabled: true,
-          onChange: () => null,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox',
-          indeterminate: true,
-          checked: false,
-          disabled: true,
-          onChange: () => null,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
-      ))}
-    </div>
-  </>
-);
+export const LabelWeights = MultipleTemplate.bind({});
+LabelWeights.args = {
+  components: [
+    {
+      name: 'lw-thin',
+      label: 'Thin label',
+      textThickness: 'thin',
+      size: 'm',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'lw-thick',
+      label: 'Thick label',
+      textThickness: 'thick',
+      size: 'm',
+      checked: false,
+      onChange: () => null,
+    },
+  ],
+};
 
-export const SupernovaGroupOfDefaultCheckboxes =
-  SupernovaDefaultMultipleTemplate.bind({});
+const MultiLineTemplate: StoryFn<{components: CheckboxProps[]}> = args => {
+  const initial = Object.fromEntries(
+    args.components.map(c => [c.name, !!c.checked]),
+  );
+  const [lightState, setLightState] =
+    useState<Record<string, boolean>>(initial);
+  const [darkState, setDarkState] = useState<Record<string, boolean>>(initial);
 
-const SupernovaSizesMultipleTemplate: StoryFn<{
-  components: CheckboxProps[];
-}> = () => (
-  <>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox XS',
-          onChange: () => null,
-          checked: false,
-          size: 'xs' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox S',
-          checked: false,
-          onChange: () => null,
-          size: 's' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox M',
-          checked: false,
-          onChange: () => null,
-          size: 'm' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox L',
-          checked: false,
-          onChange: () => null,
-          size: 'l' as ComponentSizeXSToL,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
+  const renderGroup = (
+    state: Record<string, boolean>,
+    setState: Dispatch<SetStateAction<Record<string, boolean>>>,
+  ) => (
+    <div style={{maxWidth: 220}}>
+      {args.components.map(c => (
+        <Checkbox
+          key={c.name}
+          {...c}
+          checked={state[c.name]}
+          onChange={e => {
+            const next = {...state, [c.name]: e.target.checked};
+            setState(next);
+            c.onChange?.(e);
+          }}
+        />
       ))}
     </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox XS',
-          onChange: () => null,
-          checked: true,
-          size: 'xs' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox S',
-          checked: true,
-          onChange: () => null,
-          size: 's' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox M',
-          checked: true,
-          onChange: () => null,
-          size: 'm' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox L',
-          checked: true,
-          onChange: () => null,
-          size: 'l' as ComponentSizeXSToL,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
-      ))}
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox XS',
-          onChange: () => null,
-          checked: false,
-          indeterminate: true,
-          size: 'xs' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox S',
-          checked: false,
-          indeterminate: true,
-          onChange: () => null,
-          size: 's' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox M',
-          checked: false,
-          indeterminate: true,
-          onChange: () => null,
-          size: 'm' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox L',
-          checked: false,
-          indeterminate: true,
-          onChange: () => null,
-          size: 'l' as ComponentSizeXSToL,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
-      ))}
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox XS',
-          onChange: () => null,
-          checked: true,
-          disabled: true,
-          size: 'xs' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox S',
-          checked: true,
-          disabled: true,
-          onChange: () => null,
-          size: 's' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox M',
-          checked: true,
-          disabled: true,
-          onChange: () => null,
-          size: 'm' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox L',
-          checked: true,
-          disabled: true,
-          onChange: () => null,
-          size: 'l' as ComponentSizeXSToL,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
-      ))}
-    </div>
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-      {[
-        {
-          name: 'test',
-          label: 'Checkbox XS',
-          onChange: () => null,
-          checked: false,
-          indeterminate: true,
-          disabled: true,
-          size: 'xs' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-checked',
-          label: 'Checkbox S',
-          checked: false,
-          indeterminate: true,
-          disabled: true,
-          onChange: () => null,
-          size: 's' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox M',
-          checked: false,
-          indeterminate: true,
-          disabled: true,
-          onChange: () => null,
-          size: 'm' as ComponentSizeXSToL,
-        },
-        {
-          name: 'test-indeterminate',
-          label: 'Checkbox L',
-          checked: false,
-          indeterminate: true,
-          disabled: true,
-          onChange: () => null,
-          size: 'l' as ComponentSizeXSToL,
-        },
-      ]?.map(componentArg => (
-        <Checkbox key={componentArg.name} {...componentArg} />
-      ))}
-    </div>
-  </>
-);
+  );
 
-export const SupernovaGroupOfCheckboxesSizes =
-  SupernovaSizesMultipleTemplate.bind({});
+  return (
+    <>
+      <div data-theme="Light" style={{padding: 20}}>
+        <h3>Light Theme</h3>
+        {renderGroup(lightState, setLightState)}
+      </div>
+      <div data-theme="Dark" style={{background: '#292F36', padding: 20}}>
+        <h3 style={{color: '#FFF'}}>Dark Theme</h3>
+        {renderGroup(darkState, setDarkState)}
+      </div>
+    </>
+  );
+};
+
+export const MultiLineLabels = MultiLineTemplate.bind({});
+MultiLineLabels.args = {
+  components: [
+    {
+      name: 'wrap-xs',
+      size: 'xs',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'wrap-s',
+      size: 's',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'wrap-m',
+      size: 'm',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+    {
+      name: 'wrap-l',
+      size: 'l',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+      checked: false,
+      onChange: () => null,
+    },
+  ],
+};

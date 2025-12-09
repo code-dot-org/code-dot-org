@@ -2,10 +2,10 @@ require 'test_helper'
 
 class HintViewRequestTest < ActiveSupport::TestCase
   setup do
-    @student = create :student
-    @script = create :script, :in_single_unit_course
-    @level_one = create :level
-    @level_two = create :level
+    @student = create(:student)
+    @script = create(:script, :in_single_unit_course)
+    @level_one = create(:level)
+    @level_two = create(:level)
   end
 
   test "can retrieve feedback for milestone request" do

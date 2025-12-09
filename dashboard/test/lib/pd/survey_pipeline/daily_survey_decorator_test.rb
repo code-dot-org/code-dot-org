@@ -7,12 +7,12 @@ module Pd::SurveyPipeline
 
     self.use_transactional_test_case = true
     setup_all do
-      @facilitators = create_list :facilitator, 2
-      @workshop = build :csf_deep_dive_workshop, facilitators: @facilitators
+      @facilitators = create_list(:facilitator, 2)
+      @workshop = build(:csf_deep_dive_workshop, facilitators: @facilitators)
       @workshop.save(validate: false)
 
-      @program_manager = create :program_manager
-      @workshop_admin = create :workshop_admin
+      @program_manager = create(:program_manager)
+      @workshop_admin = create(:workshop_admin)
 
       @summary_data_permission_test = [
         {facilitator_id: @facilitators.first.id, reducer: 'avgerage', reducer_result: '1.1'},
@@ -216,8 +216,8 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of CSF survey submissions' do
-      facilitator = create :facilitator
-      workshop = build :csf_deep_dive_workshop, facilitators: [facilitator]
+      facilitator = create(:facilitator)
+      workshop = build(:csf_deep_dive_workshop, facilitators: [facilitator])
       workshop.save(validate: false)
       form_id = '1122334455'.to_i
 
@@ -237,7 +237,7 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of summer workshop survey submissions' do
-      workshop = create :csd_summer_workshop, num_sessions: 1
+      workshop = create(:csd_summer_workshop, num_sessions: 1)
       facilitator = workshop.facilitators.first
       form_id = '1122334455'.to_i
 
@@ -255,7 +255,7 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of academic year workshop survey submissions' do
-      workshop = create :csp_academic_year_workshop
+      workshop = create(:csp_academic_year_workshop)
       facilitator = workshop.facilitators.first
       daily_form_id = '1122334455'.to_i
       post_ws_form_id = '82115646319154'.to_i

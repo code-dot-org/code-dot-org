@@ -1,0 +1,85 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+
+.rowContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--border-radius-br-s, 4px);
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+  margin-block: 0 0.5rem;
+  margin-inline: 0.625rem;
+  position: relative;
+  z-index: 1;
+
+  &:has(.commitDescription) {
+    margin-block: 0.625rem;
+  }
+}
+
+.row {
+  margin-block: 0.5rem;
+}
+
+.initialVersionRow {
+  margin-block: 0.625rem 0;
+}
+
+.currentVersionRow {
+  margin-block: 0.625rem 1rem;
+}
+
+.aiSaveRow {
+  border: 1px solid var(--borders-brand-aqua-primary);
+  background: var(--background-brand-aqua-extra-light);
+}
+
+.aiSaveIcon {
+  color: var(--text-brand-aqua-primary);
+}
+
+.versionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.versionHeader {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  height: 38px;
+  padding-inline: 0.5rem 0.375rem;
+}
+
+.versionLabel {
+  min-width: 0;
+
+  span {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.commitDescription {
+  color: var(--text-neutral-secondary);
+  border-top: variables.$default-border;
+  padding: 0.5rem 0.75rem;
+}
+
+.restoreButton i {
+  html[dir='rtl'] & {
+    transform: scaleX(-1);
+  }
+}
+
+.autoSavedIcon {
+  color: var(--text-neutral-placeholder);
+  margin-inline-end: 0.125rem;
+}

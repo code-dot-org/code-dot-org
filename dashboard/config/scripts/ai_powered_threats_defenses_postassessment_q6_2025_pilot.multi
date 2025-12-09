@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q6_2025-pilot'
+
+question ‘Why do some cybersecurity defenses work even when users aren\’t aware of them?’
+
+wrong ‘They trick hackers into ignoring the system’
+wrong ‘They only activate after a threat succeeds’
+right ‘They run automatically in the background’
+wrong ‘They rely on people to turn them on’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Successful Cybersecurity Stories
+MARKDOWN

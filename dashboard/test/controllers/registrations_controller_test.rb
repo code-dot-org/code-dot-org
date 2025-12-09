@@ -84,7 +84,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user with a new password without current_password param" do
-    user = create :user, email: 'example@email.com', password: 'mypassword'
+    user = create(:user, email: 'example@email.com', password: 'mypassword')
     sign_in user
 
     put :update, params: {user: {password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -105,7 +105,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: teacher without a password can add a password" do
-    teacher = create :teacher, :with_google_authentication_option, encrypted_password: nil
+    teacher = create(:teacher, :with_google_authentication_option, encrypted_password: nil)
     teacher.update_attribute(:password, nil)
     sign_in teacher
 
@@ -116,7 +116,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: student without a password can add a password" do
-    student = create :student, :with_google_authentication_option, encrypted_password: nil
+    student = create(:student, :with_google_authentication_option, encrypted_password: nil)
     student.update_attribute(:password, nil)
     sign_in student
 
@@ -325,6 +325,22 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
   end
 
+  test "create as teacher allows chinese in given name" do
+    params_with_chinese_name = set_up_partial_registration(@default_params.update(user_type: 'teacher', given_name: '樊瑞'))
+
+    assert_creates(User) do
+      post :create, params: {user: params_with_chinese_name}
+    end
+  end
+
+  test "create as teacher allows chinese in family name" do
+    params_with_chinese_name = set_up_partial_registration(@default_params.update(user_type: 'teacher', family_name: '樊瑞'))
+
+    assert_creates(User) do
+      post :create, params: {user: params_with_chinese_name}
+    end
+  end
+
   test "create as teacher automatically sets age" do
     teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: true))
 
@@ -492,7 +508,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "the us_state and country_code attributes can be set and updated" do
-    user = create :student, us_state: "CO", country_code: "US"
+    user = create(:student, us_state: "CO", country_code: "US")
     assert_equal "CO", user.us_state
     assert_equal "US", user.country_code
     sign_in user
@@ -505,7 +521,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "student-entered gender is saved and properly sets the normalized gender value" do
-    student = create :student, gender_student_input: "female"
+    student = create(:student, gender_student_input: "female")
     assert_equal "female", student.gender_student_input
     assert_equal "f", student.gender
     sign_in student
@@ -537,6 +553,34 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assigns(:user).expects(:verify_teacher!).never
     refute assigns(:user).verified_teacher?
+  end
+
+  test 'adds LtiUserIdentity to LtiDeployment if LTI user' do
+    integration = create(:lti_integration, issuer: 'test', client_id: '123456')
+    deployment = create(:lti_deployment, deployment_id: '1234', lti_integration: integration)
+    assert_equal 0, deployment.lti_user_identities.count
+
+    lti_auth_id = "#{integration.issuer}|#{integration.client_id}|#{SecureRandom.uuid}"
+    auth_option = AuthenticationOption.new(
+      authentication_id: lti_auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: @default_params[:email],
+    )
+
+    session[:lti_deployment_id] = deployment.id
+
+    @user = User.new
+    lti_student_params = @default_params.update(provider: User::PROVIDER_MIGRATED, authentication_options: [auth_option])
+    @user.assign_attributes(lti_student_params)
+
+    PartialRegistration.persist_attributes(session, @user)
+
+    post :create, params: {user: lti_student_params}
+
+    student = User.last
+    assert student.lti_user_identities.any?, 'Expected LTI user identity to be created'
+    assert_equal 1, student.lti_user_identities.first.lti_deployments.count
+    assert_equal deployment.lti_user_identities.first, student.lti_user_identities.first
   end
 
   test 'redirects signed-in user to home if they attempt to access account_type url' do

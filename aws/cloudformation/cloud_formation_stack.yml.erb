@@ -49,6 +49,14 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for Hour Of Code site.
+  CodeprojectsBaseDomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'codeprojects.org' : "#{stack_name}.codeprojects.org" %>
+    Description: Base domain name for Codeprojects (i.e. codeprojects.org, staging.codeprojects.org).
+  CodeprojectsHostedZoneId:
+    Type: String
+    Default: <%=CDO.hostedzone_id('codeprojects.org') %>
+    Description: Route 53 Hosted Zone ID for Codeprojects base domain name.
   InstanceType:
     Type: String
     Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
@@ -62,10 +70,12 @@ Parameters:
     MaxLength: 16
   DBInstanceType:
     Type: String
-    Default: db.r5.2xlarge
+    # `t4g.large` is the largest `t` family database instance type that supports Aurora 3 / MySQL 8.
+    # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.SupportAurora.html
+    Default: <%= rack_env?(:adhoc) ? 'db.t4g.large' : 'db.r7i.xlarge' %>
   DBBackupRetention:
     Type: Number
-    Default: 5
+    Default: <%= rack_env?(:adhoc) ? 0 : 5 %>
 <% end -%>
 <% if frontends -%>
   DaemonInstanceType:
@@ -196,10 +206,46 @@ Resources:
               - 's3:RestoreObject'
             Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>/*'
           # General s3 access.
-          # TODO: Further restrict permissions to grant least privilege.
+          # TODO: Switch from `allow *` then `deny risky` to a proper least-privilege allow-list
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+          - Effect: Deny
+            Action:
+              - 's3:DeleteBucket'
+              - 's3:DeleteBucketPolicy'
+              - 's3:DeleteBucketWebsite'
+              - 's3:PutBucketAcl'
+              - 's3:PutBucketPolicy'
+              - 's3:PutBucketPublicAccessBlock'
+              - 's3:PutLifecycleConfiguration'
+
+              # S3 Batch Operations
+              - 's3:CreateJob'
+              - 's3:UpdateJobPriority'
+              - 's3:UpdateJobStatus'
+
+              # Management S3 APIs that Daemon and FrontEnds don't need.
+              - 's3:PutBucketVersioning'
+              - 's3:PutReplicationConfiguration'
+              - 's3:PutBucketCORS'
+              - 's3:PutBucketLogging'
+              - 's3:PutEncryptionConfiguration'
+              - 's3:BypassGovernanceRetention'
+              - 's3:DeleteObjectVersionTagging'
+              - 's3:PutObjectLegalHold'
+              - 's3:PutObjectRetention'
+            Resource: '*'
+          # Deny PutObjectAcl except for some test log / build / deployment buckets.
+          - Effect: Deny
+            Action:
+              - 's3:PutObjectAcl'
+            NotResource:
+              - 'arn:aws:s3:::cucumber-logs/*'
+              - 'arn:aws:s3:::cdo-build-package/*'
+              - 'arn:aws:s3:::cdo-dist/*'
+              - 'arn:aws:s3:::images.code.org/*'
+              - 'arn:aws:s3:::videos.code.org/*'
           # TODO: Move to dedicated policy for GenAI
           # GenAI Sagemaker access
           - Effect: Allow
@@ -244,11 +290,16 @@ Resources:
   # Frontend Servers
   # ---------------------------------------------
 
+<% frontend_availability_zones = AVAILABILITY_ZONES - ['us-east-1e'] # As of Nov 2025, us-east-1e doesn't support m7i instance types. 
+   frontend_subnet_suffixes = availability_zone_suffixes(frontend_availability_zones)
+-%>
+
 <% if frontends -%>
 <%=  component 'ami', commit_hash: (commit_hash = commit[0..4]),
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
-  subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
+  frontend_subnets: subnets(frontend_subnet_suffixes),
+  frontend_availability_zones: frontend_availability_zones,
   frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
@@ -283,7 +334,7 @@ Resources:
     Properties:
       Name: !Ref AWS::StackName
       SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
-      Subnets: <%= public_subnets.to_json %>
+      Subnets: <%= public_subnets(frontend_subnet_suffixes).to_json %>
       LoadBalancerAttributes:
         - Key: deletion_protection.enabled
           Value: <%=rack_env?(:adhoc) ? 'false' : 'true'%>
@@ -489,10 +540,16 @@ Resources:
 
 <% if frontends-%>
   # --------------------------------------------------------
-  # ElastiCache for Geocoder, Memcached, and Session Storage
+  # ElastiCache for Memcached
   # --------------------------------------------------------
-<%=  component 'cache'%>
-<%=  component 'session_store'%>
+<%=  component 'memcached'%>
+
+  # --------------------------------------------------------
+  # ElastiCache for our primary dashboard Redis instance,
+  # accessed as CDO.redis_url throughout the Dashboard
+  # --------------------------------------------------------
+<%=  component 'redis'%>
+
 <% end -%>
 
   # ---------------------------------------------
@@ -515,6 +572,17 @@ Resources:
                   - 'cloudfront:CreateInvalidation'
                   - 'cloudfront:GetInvalidation'
                 Resource: '*'
+<% if frontends -%>
+              # Permissions required to trigger an Autoscaling Group Instance Refresh, a sure-fire way to flush all instance caches
+              - Effect: Allow
+                Action:
+                  - 'autoscaling:DescribeAutoScalingGroups'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'autoscaling:StartInstanceRefresh'
+                Resource: !GetAtt Frontends.AutoScalingGroupARN
+<% end -%>
               # Lookup Route53 Hosted Zones to get Hosted Zone ID when rendering updated CloudFormation templates during ci_build process.
               - Effect: Allow
                 Action:
@@ -706,6 +774,7 @@ Resources:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: <%= volume_size_overrides.fetch(rack_env, default_volume_size) %>
+            # TODO: change to gp3 next time we have to recreate the instance
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -766,6 +835,7 @@ Resources:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
+          # TODO: change to gp3 next time we have to recreate the instance
           Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
@@ -810,11 +880,12 @@ Resources:
   # ---------------------------------------------
 <%=  component 'database'%>
 
+<% if cdn_enabled -%>
   # ---------------------------------------------
   # Codeprojects Resources
   # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
-
+<% end -%>
   # ---------------------------------------------
   # Custom Chef Configuration Secret
   #
@@ -837,6 +908,11 @@ Outputs:
   PegasusURL:
     Value: "https://<%=subdomain%>"
     Description: Pegasus URL
+<% if cdn_enabled -%>
+  PreviewCodeprojectsURL:
+    Description: Codeprojects URL
+    Value: !Sub preview.${CodeprojectsBaseDomainName}
+<% end -%>
 # display information about how to ssh to console if this is a single instance adhoc environment
 <% if rack_env?(:adhoc) && !frontends -%>
   SSHServerName:

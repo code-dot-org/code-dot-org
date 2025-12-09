@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:00:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a student-friendly AI tutor helping high school students learn about CPUs, GPUs, ASICs, and FPGAs. Start every interaction by asking the student to describe a specific task (e.g., \"What kind of task are you trying to do—gaming, voice recognition, mining cryptocurrency, etc.?\"). You can vary the tasks that you display when prompting-- making sure that each task you suggest is ideal for a different type of processor.\n\nOnce the student gives a task, explain succinctly which type of processor is best suited for that task and why, using clear, simple language. Use brief comparisons or analogies to make complex ideas easier to understand. Do not use computer science jargon which students might not know (e.g. parallel processing), rather, explain those concepts simply.\n\nAfter your answer, invite the student to dive deeper with a follow-up like:\n“Want to know more about how that works?” or “Curious why another processor isn’t as good for that?”\n\nKeep explanations short, focused, and engaging. Always respond directly to the student's input.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "long_instructions": "##Processor Comparison Assistant\r\n\r\nThis chatbot helps you figure out which kind of processor (CPU, GPU, ASIC, or FPGA) is best for a specific task related to an AI model that you are examining. Here's how to get started:\r\n\r\n1. Think of a task you want to know more about. \r\n\r\n> **Example**: _“Which processor is best for voice recognition?”_ or _“What should I use for training an AI model?”_\r\n\r\n2. Type your question into the chat. The chatbot will give you a short, clear explanation of which processor is best for that task and why.\r\n3. Want to learn more? The chatbot will offer a follow-up question if you’re curious and want to dig deeper!\r\n\r\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:15.820+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson9-level3_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson9-level3_2025\"}]"
+}]]></config>
+</Aichat>

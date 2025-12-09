@@ -1,6 +1,5 @@
 class ProgrammingClassesController < ApplicationController
   include Rails.application.routes.url_helpers
-  before_action :require_levelbuilder_mode_or_test_env
   before_action :require_levelbuilder_mode_or_test_env, only: [:new, :create, :edit, :update, :destroy, :get_filtered_results]
   load_and_authorize_resource
 
@@ -98,6 +97,13 @@ class ProgrammingClassesController < ApplicationController
     rescue
       render(status: :not_acceptable, plain: @programming_class.errors.full_messages.join('. '))
     end
+  end
+
+  def get_serialized
+    set_class_by_keys
+    return render :not_found unless @programming_class
+    return head :forbidden unless can?(:read, @programming_class)
+    render json: @programming_class.serialize.to_json
   end
 
   private def programming_class_params

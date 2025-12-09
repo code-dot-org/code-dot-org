@@ -12,11 +12,7 @@ import type {
 
 import {WorkshopFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-import type {
-  GetWorkshopInfoScriptDataResponse,
-  OrganizerInfo,
-  SessionInfo,
-} from './../types';
+import type {WorkshopInfo, OrganizerInfo, SessionInfo} from './../types';
 
 const EVENT_ATTENDANCE_MODES = {
   in_person: 'https://schema.org/OfflineEventAttendanceMode',
@@ -194,24 +190,24 @@ const getAudience = (grade_levels?: string[]) => {
     : undefined;
 };
 
-const WorkshopEventJsonLdData: React.FC<GetWorkshopInfoScriptDataResponse> = ({
+const WorkshopEventJsonLdData: React.FC<WorkshopInfo> = ({
   name,
   description,
   sessions,
   format,
-  location_name,
+  locationName,
   fee,
   capacity,
-  num_enrollments,
+  numEnrollments,
   organizer,
-  regional_partner_name,
-  grade_levels,
+  regionalPartnerName,
+  gradeLevels,
   course,
   subject,
-  course_offerings,
+  courseOfferings,
 }) => {
   const {startDate, endDate} = getWorkshopDates(sessions);
-  const {offer, priceNumber} = getOffer(fee, capacity, num_enrollments);
+  const {offer, priceNumber} = getOffer(fee, capacity, numEnrollments);
 
   return (
     <JsonLd<EducationEvent>
@@ -224,12 +220,12 @@ const WorkshopEventJsonLdData: React.FC<GetWorkshopInfoScriptDataResponse> = ({
         description,
         eventAttendanceMode: EVENT_ATTENDANCE_MODES[format],
         eventStatus: EVENT_STATUSES.Scheduled as EventStatusType,
-        location: getLocation(format, location_name, sessions),
-        organizer: getOrganizer(organizer, regional_partner_name),
+        location: getLocation(format, locationName, sessions),
+        organizer: getOrganizer(organizer, regionalPartnerName),
         offers: offer,
         isAccessibleForFree: priceNumber === 0 ? true : undefined,
-        audience: getAudience(grade_levels),
-        keywords: getKeywords(course, subject, course_offerings),
+        audience: getAudience(gradeLevels),
+        keywords: getKeywords(course, subject, courseOfferings),
         url: getPageUrl(),
       }}
     />

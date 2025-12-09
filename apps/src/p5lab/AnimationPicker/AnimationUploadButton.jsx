@@ -29,7 +29,7 @@ export function UnconnectedAnimationUploadButton({
   onUploadClick,
   shouldWarnOnAnimationUpload,
   isBackgroundsTab,
-  appType,
+  projectType,
   teacherHasConfirmedUploadWarning,
   inRestrictedShareMode,
   refreshInRestrictedShareMode,
@@ -71,10 +71,10 @@ export function UnconnectedAnimationUploadButton({
       showUploadModal();
     } else {
       onUploadClick();
-      if (appType) {
+      if (projectType) {
         analyticsReporter.sendEvent(
           EVENTS.UPLOAD_CUSTOM_IMAGE,
-          {LabType: appType},
+          {UploaderType: 'Animation Picker', ProjectType: projectType},
           PLATFORMS.STATSIG
         );
       }
@@ -126,7 +126,7 @@ UnconnectedAnimationUploadButton.propTypes = {
   onUploadClick: PropTypes.func.isRequired,
   shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
-  appType: PropTypes.string,
+  projectType: PropTypes.string,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
   teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,

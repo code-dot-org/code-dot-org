@@ -1,0 +1,88 @@
+import {
+  getIsStartMode,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
+import {
+  SketchlabProjectFile,
+  SketchlabExternalFiles,
+  ExcalidrawFilesWithOptionalData,
+} from '@cdo/apps/lab2/types';
+
+import {uploadBase64ToUrl} from './uploadBase64ToUrl';
+
+// TO DO: these are the upload types officially supported by Excalidraw,
+// not all of which we actually support uploading to S3.
+// Tracking error handling work here:
+// https://codedotorg.atlassian.net/browse/AFL-345
+const MIME_TO_EXT = {
+  'image/svg+xml': 'svg',
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/gif': 'gif',
+  'image/webp': 'webp',
+  'image/bmp': 'bmp',
+  'image/x-icon': 'ico',
+  'image/avif': 'avif',
+  'image/jfif': 'jfif',
+  'application/octet-stream': 'bin',
+};
+
+export const uploadExternalFiles = async (
+  savedFiles: SketchlabExternalFiles,
+  excalidrawFiles: ExcalidrawFilesWithOptionalData,
+  filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
+  channelId: string,
+  levelName: string
+) => {
+  const savedFileIds = Object.keys(savedFiles || {});
+  const excalidrawFileIds = Object.keys(excalidrawFiles || {});
+  const newFileIds = excalidrawFileIds.filter(
+    id => !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
+  );
+
+  const uploadedFiles: SketchlabExternalFiles = {};
+  if (newFileIds.length && excalidrawFiles) {
+    const fileUploadPromises = newFileIds.map(async fileId => {
+      filesBeingUploadedRef.current.add(fileId);
+
+      const newFile = excalidrawFiles[fileId];
+      const extension = MIME_TO_EXT[newFile.mimeType];
+      const filenameWithExtension = `${fileId}.${extension}`;
+      const isStarterAssetOrExemplar = !!(
+        getIsStartMode() || getAppOptionsEditingExemplar()
+      );
+      const externalUrl = isStarterAssetOrExemplar
+        ? `/level_starter_assets/${encodeURIComponent(
+            levelName
+          )}/uuid/${filenameWithExtension}`
+        : `/v3/assets/${channelId}/${filenameWithExtension}`;
+      const newExternalFile: SketchlabProjectFile = {
+        id: fileId,
+      };
+
+      try {
+        await uploadBase64ToUrl(
+          newFile.dataURL as string,
+          externalUrl,
+          newFile.mimeType,
+          isStarterAssetOrExemplar,
+          filenameWithExtension
+        );
+        newExternalFile.url = externalUrl;
+      } catch {
+        // If an upload fails, still add an entry to externalFiles
+        // so we don't reattempt the upload repeatedly.
+        // Longer term work to handle failed uploads tracked here:
+        // https://codedotorg.atlassian.net/browse/AFL-345
+        newExternalFile.uploadFailed = true;
+      }
+
+      uploadedFiles[fileId] = newExternalFile;
+      filesBeingUploadedRef.current.delete(fileId);
+    });
+
+    await Promise.allSettled(fileUploadPromises);
+  }
+
+  return uploadedFiles;
+};

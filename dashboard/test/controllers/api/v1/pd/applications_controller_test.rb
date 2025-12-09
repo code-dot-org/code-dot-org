@@ -9,13 +9,14 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
-      @workshop_admin = create :workshop_admin
-      @workshop_organizer = create :workshop_organizer
-      @program_manager = create :teacher
-      @regional_partner = create :regional_partner,
+      @workshop_admin = create(:workshop_admin)
+      @workshop_organizer = create(:workshop_organizer)
+      @program_manager = create(:teacher)
+      @regional_partner = create(:regional_partner,
         program_managers: [@workshop_organizer, @program_manager],
         cohort_capacity_csd: 25,
         cohort_capacity_csp: 50
+)
 
       @hash_csd_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csd, regional_partner_id: @regional_partner.id
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
@@ -39,7 +40,8 @@ module Api::V1::Pd
         role: 'csd_teachers'
       }
 
-      @serializing_teacher = create(:teacher,
+      @serializing_teacher = create(
+        :teacher,
         email: 'minerva@hogwarts.edu',
         school_info: create(
           :school_info,
@@ -119,7 +121,7 @@ module Api::V1::Pd
     test "quick view returns appropriate application type" do
       create TEACHER_APPLICATION_FACTORY, course: 'csp'
       create TEACHER_APPLICATION_FACTORY, course: 'csd'
-      user = create :workshop_admin
+      user = create(:workshop_admin)
       sign_in user
 
       get :quick_view, params: @test_quick_view_params
@@ -191,9 +193,9 @@ module Api::V1::Pd
 
     test 'enrollment count included in index' do
       sign_in @workshop_admin
-      workshop = create :pd_workshop, num_sessions: 1
+      workshop = create(:pd_workshop, num_sessions: 1)
       application = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', pd_workshop_id: workshop.id
-      create :pd_enrollment, application_id: application.id, user: application.user, workshop: workshop
+      create(:pd_enrollment, application_id: application.id, user: application.user, workshop: workshop)
       get :index
       assert_response :success
       data = JSON.parse(response.body)
@@ -202,10 +204,10 @@ module Api::V1::Pd
     end
 
     test 'enrollment only counts enrollments for that regional partner' do
-      regional_partner_2 = create :regional_partner
-      workshop = create :pd_workshop, num_sessions: 1
+      regional_partner_2 = create(:regional_partner)
+      workshop = create(:pd_workshop, num_sessions: 1)
       application_2 = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', regional_partner: regional_partner_2, pd_workshop_id: workshop.id
-      create :pd_enrollment, application_id: application_2.id, user: application_2.user, pd_workshop_id: workshop.id
+      create(:pd_enrollment, application_id: application_2.id, user: application_2.user, pd_workshop_id: workshop.id)
 
       sign_in @workshop_admin
 
@@ -345,9 +347,10 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
-      summer_workshop = create :summer_workshop,
+      summer_workshop = create(:summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
         session_location_address: 'Orchard Park NY'
+)
 
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
@@ -369,9 +372,10 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if summer workshop is not changed' do
-      summer_workshop = create :summer_workshop,
+      summer_workshop = create(:summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
         session_location_address: 'Orchard Park NY'
+)
 
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
@@ -489,38 +493,6 @@ module Api::V1::Pd
       assert_equal data['notes'], "Panda"
     end
 
-    test 'csv download for csd teacher returns expected columns' do
-      sign_in @workshop_admin
-
-      get :quick_view, format: 'csv', params: {role: 'csd_teachers'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      [:csp_which_grades, :csp_how_offer].each do |key|
-        column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        refute_includes(response_csv.first, column)
-      end
-
-      column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      assert_includes(response_csv.first, column)
-    end
-
-    test 'csv download for csp teacher returns expected columns' do
-      sign_in @workshop_admin
-
-      get :quick_view, format: 'csv', params: {role: 'csp_teachers'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      [:csp_which_grades, :csp_how_offer].each do |key|
-        column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        assert_includes(response_csv.first, column)
-      end
-
-      column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      refute_includes(response_csv.first, column)
-    end
-
     test 'cohort view returns teacher applications of correct statuses' do
       expected_applications = []
       teacher_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_CALCULATOR_STATUSES & TEACHER_APPLICATION_CLASS.statuses
@@ -543,9 +515,9 @@ module Api::V1::Pd
     end
 
     test 'cohort view shows enrolled as a status' do
-      workshop = create :pd_workshop, num_sessions: 1
+      workshop = create(:pd_workshop, num_sessions: 1)
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp', status: 'accepted', pd_workshop_id: workshop.id
-      create :pd_enrollment, application_id: application.id, user: application.user, pd_workshop_id: workshop.id
+      create(:pd_enrollment, application_id: application.id, user: application.user, pd_workshop_id: workshop.id)
 
       sign_in @workshop_admin
       get :cohort_view, params: {role: 'csp_teachers', regional_partner_value: 'none'}
@@ -561,10 +533,11 @@ module Api::V1::Pd
       time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :summer_workshop,
+        workshop = create(:summer_workshop,
           sessions_from: Date.new(2020, 1, 1),
           session_location_address: 'Orchard Park NY'
-        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
+)
+        create(:pd_enrollment, workshop: workshop, user: @serializing_teacher)
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
@@ -652,10 +625,11 @@ module Api::V1::Pd
       time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :summer_workshop,
+        workshop = create(:summer_workshop,
           sessions_from: Date.new(2020, 1, 1),
           session_location_address: 'Orchard Park NY'
-        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
+)
+        create(:pd_enrollment, workshop: workshop, user: @serializing_teacher)
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
@@ -738,106 +712,6 @@ module Api::V1::Pd
           }.stringify_keys, JSON.parse(@response.body).first
         )
       end
-    end
-
-    test 'cohort csv download returns expected columns for teachers' do
-      application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
-      create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
-      application.update(status: 'accepted')
-      sign_in @workshop_admin
-      get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
-      assert_response :success
-      response_csv = CSV.parse @response.body
-
-      expected_headers = [
-        "Date Applied",
-        "Date Accepted",
-        "Status",
-        "Meets minimum requirements?",
-        "Meets scholarship requirements?",
-        "Scholarship teacher?",
-        "General Notes",
-        "Notes 2",
-        "Notes 3",
-        "Notes 4",
-        "Notes 5",
-        "First name",
-        "Last name",
-        "Account email",
-        "Alternate email",
-        "School type",
-        "School name",
-        "School district",
-        "School address",
-        "School city",
-        "School state",
-        "School zip code",
-        "Assigned Workshop",
-        "Registered for workshop?",
-        "Regional Partner",
-        "Link to Application",
-        "Home or cell phone",
-        "Home zip code",
-        "Country",
-        "Administrator/School Leader's Role",
-        "Administrator/School Leader's first name",
-        "Administrator/School Leader's last name",
-        "Administrator/School Leader's email address",
-        "Confirm Administrator/School Leader's email address",
-        "Administrator/School Leader's phone number",
-        "Current role",
-        "Are you completing this application on behalf of someone else?",
-        "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
-        "Which professional learning program would you like to join for the #{APPLICATION_CURRENT_YEAR} school year?",
-        "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
-        "How will you offer CS Principles?",
-        "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        "Have you participated in previous yearlong Code.org Professional Learning Programs?",
-        "Are you committed to participating in the entire Professional Learning Program?",
-        "Please indicate which workshops you are able to attend.",
-        "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
-        "Teacher's gender identity",
-        "Teacher's race",
-        "How did you hear about this program? (Teacher's response)",
-        "Administrator/School Leader Approval Form URL",
-        "Home street address",
-        "Home city",
-        "Home state",
-        "Administrator/School Leader's title (provided by principal)",
-        "Administrator/School Leader's first name (provided by principal)",
-        "Administrator/School Leader's last name (provided by principal)",
-        "Administrator/School Leader's email address (provided by principal)",
-        "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)",
-        "School name (provided by principal)",
-        "School district (provided by principal)",
-        "Do you approve of this teacher participating in Code.org's #{APPLICATION_CURRENT_YEAR} Professional Learning Program?",
-        "Total student enrollment",
-        "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",
-        "Percent of students from underrepresented racial and ethnic groups (Principal's response)",
-        "Percent of student enrollment by race - White",
-        "Percent of student enrollment by race - Black or African American",
-        "Percent of student enrollment by race - Hispanic or Latino",
-        "Percent of student enrollment by race - Asian",
-        "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
-        "Percent of student enrollment by race - American Indian or Native Alaskan",
-        "Percent of student enrollment by race - Other",
-        "How will you implement CS Principles at your school?",
-        "Principal authorizes college board to send AP Scores",
-        "Title I status code (NCES data)",
-        "Rural Status",
-        "Total student enrollment (NCES data)",
-        "Percent of students who are eligible to receive free or reduced lunch (NCES data)",
-        "Percent of students from underrepresented racial and ethnic groups (NCES data)",
-        "Percent of student enrollment by race - White (NCES data)",
-        "Percent of student enrollment by race - Black or African American (NCES data)",
-        "Percent of student enrollment by race - Hispanic or Latino (NCES data)",
-        "Percent of student enrollment by race - Asian (NCES data)",
-        "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander (NCES data)",
-        "Percent of student enrollment by race - American Indian or Native Alaskan (NCES data)",
-        "Percent of student enrollment by race - Two or more races (NCES data)"
-      ]
-      assert_equal expected_headers, response_csv.first
-      assert_equal expected_headers.length, response_csv.second.length
     end
 
     test 'search finds applications by email for workshop admins' do

@@ -104,7 +104,7 @@ module BrowserHelpers
   def generate_generic_drag_code(from_selector, to_selector, target_dx, target_dy)
     "var drag_dx = $(\"#{to_selector}\").position().left - $(\"#{from_selector}\").position().left;" \
         "var drag_dy = $(\"#{to_selector}\").position().top  - $(\"#{from_selector}\").position().top;" \
-        "$(\"#{from_selector}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+        "$(\"#{from_selector}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 8});"
   end
 
   def install_js_error_recorder

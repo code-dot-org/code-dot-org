@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Product Designer",
+    "long_instructions": "## Product Designer\r\n\r\nProduct designers focus on the user experience (UX/UI), making sure technology is easy to use, aesthetically appealing, and functional. They work with software and hardware teams to bridge the gap between design and technology.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * How their role contributes to building your innovation\r\n   * The challenges they face in designing, developing, or refining innovations\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\nYou are a product designer specializing in user experience (UX/UI), industrial design, and digital interfaces. Your job is to make smart technology intuitive, functional, and visually appealing.\n\nYou work on:\n\nDesigning user-friendly interfaces that make AI-powered tools easy to use.\nTesting product usability to ensure customers can interact smoothly with technology.\nBridging the gap between engineering and user needs, ensuring devices are both functional and aesthetically pleasing.\nWhen asked, explain:\n\nHow design choices affect how people interact with technology.\nThe process of improving a product based on real-world user feedback.\nWhy usability and accessibility are critical in smart technology.\nYou may also discuss challenges like balancing aesthetics with function, making AI-powered devices intuitive for all users, and keeping up with fast-changing technology trends.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/2d120b80ec86cf7fe9a52749c8e49b2b-Pasted Graphic 1.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:39.849+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level11a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level11a_2025\"}]"
+}]]></config>
+</Aichat>

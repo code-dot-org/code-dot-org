@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import Tags from '@/tags';
 
@@ -114,5 +114,63 @@ SizesOfRadioButton.args = {
     {name: 'test-s', value: 'test-s', label: 'Label - S', size: 's'},
     {name: 'test-m', value: 'test-m', label: 'Label - M', size: 'm'},
     {name: 'test-l', value: 'test-l', label: 'Label - L', size: 'l'},
+  ],
+};
+
+export const LabelWeights = MultipleTemplate.bind({});
+LabelWeights.args = {
+  radioButtons: [
+    {
+      name: 'lw-thin',
+      value: 'lw-thin',
+      label: 'Thin label',
+      textThickness: 'thin',
+      size: 'm',
+    },
+    {
+      name: 'lw-thick',
+      value: 'lw-thick',
+      label: 'Thick label',
+      textThickness: 'thick',
+      size: 'm',
+    },
+  ],
+};
+
+export const MultiLineLabels: StoryFn<RadioButtonsGroupProps> = args => (
+  <div style={{maxWidth: 220}}>
+    <RadioButtonsGroup {...args} />
+  </div>
+);
+MultiLineLabels.args = {
+  radioButtons: [
+    {
+      name: 'wrap-xs',
+      value: 'wrap-xs',
+      size: 'xs',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-s',
+      value: 'wrap-s',
+      size: 's',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-m',
+      value: 'wrap-m',
+      size: 'm',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
+    {
+      name: 'wrap-l',
+      value: 'wrap-l',
+      size: 'l',
+      label:
+        'This is a quite long label intended to wrap onto multiple lines to demonstrate alignment.',
+    },
   ],
 };

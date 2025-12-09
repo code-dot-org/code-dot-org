@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-preassessment-q15_2025-pilot_2025'
+
+question ‘If an app sends sensitive user information without encryption, which CIA pillar is most compromised?’
+
+wrong ‘Integrity’
+wrong ‘Availability’
+wrong ‘Authentication’
+right ‘Confidentiality’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Layered Defenses
+MARKDOWN

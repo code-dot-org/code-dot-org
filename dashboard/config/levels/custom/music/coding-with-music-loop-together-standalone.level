@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-27T15:39:27.000Z",
   "level_num": "custom",
@@ -207,10 +208,11 @@
       "playerTitle": "Example"
     },
     "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8lL\nW/SyrxeYBOE22MW62zzXHuT+PQMDKVPj3prslrbHlF1O3H5+dCVG/HPE+vJn\nlbulhslzcVJrEAhnygkDOAJBSFFSrISMbQSZbj/J/rvTv0M2vefuIG4h8z64\nnjFE8r6c4lHdR6BxQyZW8n9WjBznmfQI1kETLb7QtGEPr5B4xy52p+18jk3K\nZuot+OzSDt2kl2gbt0kYBEBS+UWVU7ZnFwAAzOe1F2ygQeE5Kf0zq4RQMLhK\nXcUpOrP2zroIdDEmlocWjC7dyI+gE8cO5EE8i7FFDIE6XmiAbxBHHX7pRawH\n0x7MNOGfAKd+zbmC0wG7/Utms73iOMu6oygwHtYjvCpoCOrFMBZUwnnNWqN2\ntssIzDOTVEiIYzMjg/f5VfSJ+RdFNKeq1h6QxkHxvDTSM2V7Tfrdc4uHPLE7\nQGdtzWmoN+sg9KGkYJiyTsy9QopRHePVomDtmA7G0EOdJ156frXiKSVWwwrL\nHOT7NwGBBazNtkmIR/h8ZQ7/Zr4NGQp88JYYN1sK6+VwGbvN8+Iya8VFKr1h\npORcXvXe8zQ02lDeTVDaF5xbMitEoAJS4577N6EQDs5Mug54lTPOXOp2DPhU\nngUT36rTi6QLTgIu+JuQTFydmANby1e+phXNB+x+emilIznywFpXoyex/mKU\nDOGTBWfYxNXkWddknefrk0uszDh3aq+OTQ/CkJFqsP94ZaiW43D3ZOKsSM0j\niaPSB/GvE0GsVjkXC5mbAc3CDwnlYU7AyjuwQEZyYc80H0NINt7y+zmeUvim\nI/2FszrEwtxzdPxajU3cRKm+P/qwzQKpPPn46btOGRJIsBv5JyYD7HnQmwJv\nLUe9DjJ/p7RbY7WC4lafLuFLGcBgQuAumoCb8/huayrEQwpzYMGqz92d9Vaa\n/p/w1/1yTRNkCXDH+Hhj6PE4j3m5njGIhfnqf/V5+NVRJwv8iHJg/AjIN/8Z\nsMGOJTdqkJpw91ohAUAio7+89FM9vL0lEAPxOojmfjn8bbEzq0UTwmQrhss9\n76kpgaLAmqkRCgSI+E8G5KB6+xmE3IhCDvQ+XtqiBfR5yVyYoJmc9mDlsOUm\nji+KCqxeW8Dqm6lZBD4vbTFw/KGQvoP6dkQiVkvOrpGZZXK2guspCasAE7Tw\nCZ9aptIKe1pUqtEHpVsahpYSmKzLJFDu0X4eddosgN9CyViB2y2u6Li995pI\nkyvzFibO0/HJmDDYg96C1I/feEUDCX+CVLumRJE8onD5m0cNtBPlx4SN2A==\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-27T15:39:27.865+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-loop-beat_launch\\\"\"],\"cloned_from\":\"music-coding-intro-loop-beat_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-27T15:39:27.865+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-loop-beat_launch\\\"\"],\"cloned_from\":\"music-coding-intro-loop-beat_launch\"},{\"changed_at\":\"2025-08-05 13:13:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2025-08-05 13:15:13 +0000\",\"changed\":[\"predict_settings\",\"additional_ai_evaluation_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

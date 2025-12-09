@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';

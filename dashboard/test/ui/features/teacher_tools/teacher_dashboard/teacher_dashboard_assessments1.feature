@@ -7,17 +7,17 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    And I click selector ".ui-test-section-dropdown" once I see it
-    And I click selector ".edit-section-details-link"
+    And I click selector "#section-options-dropdown-dropdown-button" once I see it
+    And I click selector "#ui-test-Section-settings"
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(High School)" is visible
     And I click selector "button:contains(High School)"
     And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('17-'18)" once I see it
+    And I click selector ".assignment-version-title:contains('24-'25)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Student Post-Course Survey ('17-'18)" option in dropdown "uitest-secondary-assignment"
+    And I select the "CS Principles Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
 
     # Progress tab

@@ -47,6 +47,7 @@ class TeacherScore < ApplicationRecord
     script_id,
     score
   )
+    # TODO: TEACH-2144 - set unit_group_id on the UserLevel
     user_level = UserLevel.find_or_create_by(user_id: student_id, level_id: level_id, script_id: script_id)
 
     TeacherScore.create(

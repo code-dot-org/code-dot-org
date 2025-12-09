@@ -3,12 +3,12 @@ require 'test_helper'
 class PuzzleRatingsControllerTest < ActionController::TestCase
   setup do
     PuzzleRating.stubs(:enabled?).returns true
-    @student = create :student
-    @script = create :script, :in_single_unit_course
+    @student = create(:student)
+    @script = create(:script, :in_single_unit_course)
   end
 
   test 'creation requires script, level, and rating' do
-    level = create :level
+    level = create(:level)
 
     assert_does_not_create(PuzzleRating) do
       post :create, params: {}, format: :json
@@ -41,7 +41,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
   end
 
   test 'rating must be 0 or 1' do
-    level = create :level
+    level = create(:level)
 
     [nil, 0.5, 2, -1].each do |bad_rating|
       assert_does_not_create(PuzzleRating) do
@@ -69,7 +69,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
   test 'logged-in user can create uniquely only once' do
     sign_in @student
 
-    level = create :level
+    level = create(:level)
 
     params = {
       script_id: @script.id,
@@ -91,7 +91,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
   end
 
   test 'anonymous user can create many' do
-    level = create :level
+    level = create(:level)
 
     params = {
       script_id: @script.id,
@@ -115,7 +115,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
   test 'can be disabled' do
     PuzzleRating.stubs(:enabled?).returns false
 
-    level = create :level
+    level = create(:level)
 
     params = {
       script_id: @script.id,

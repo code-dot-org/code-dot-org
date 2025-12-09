@@ -18,7 +18,8 @@ type CallbackArgs = {
     initialSources: ProjectSources | undefined,
     abuseScore: number | undefined,
     isReadOnly: boolean | undefined,
-    projectSharingDisabled: boolean | undefined
+    projectSharingDisabled: boolean | undefined,
+    isTeacherOfProjectOwner: boolean | undefined
   ];
 };
 
@@ -55,7 +56,9 @@ class LifecycleNotifier {
   }
 
   notify<T extends LifecycleEvent>(event: T, ...args: CallbackArgs[T]) {
-    this.listeners[event]?.forEach(callback => callback(...args));
+    // Copy the listener list to avoid skipping listeners if the list is modified during iteration.
+    const staticListenerList = [...(this.listeners[event] || [])];
+    staticListenerList.forEach(callback => callback(...args));
   }
 }
 

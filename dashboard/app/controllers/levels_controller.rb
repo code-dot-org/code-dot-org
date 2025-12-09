@@ -50,6 +50,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
+    Sketchlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -306,7 +307,7 @@ class LevelsController < ApplicationController
                    edit_blocks_level_path(@level, :start_sources)
                  else
                    if reset
-                     params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                     params["redirect"] ? params["redirect"] + "?reset=true" : level_url(@level, show_callouts: 1, reset: reset)
                    else
                      params["redirect"] || level_url(@level, show_callouts: 1)
                    end
@@ -553,11 +554,11 @@ class LevelsController < ApplicationController
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
 
-        if [Javalab, Music, Pythonlab, Weblab2].include?(@level.class)
+        if [Javalab, Music, Pythonlab, Weblab2, Dancelab, Sketchlab].include?(@level.class)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
           links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
 
-          if [Music].include?(@level.class)
+          if [Music, Dancelab].include?(@level.class)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
         end
@@ -622,7 +623,7 @@ class LevelsController < ApplicationController
   end
 
   def add_skill
-    level_id = params[:levelId].to_i
+    level_id = params[:id].to_i
     skill_id  = params[:skillId].to_i
 
     begin
@@ -639,6 +640,7 @@ class LevelsController < ApplicationController
 
     unless @level.skills.include?(@skill)
       @level.skills << @skill
+      @level.add_skill_key(@skill.key)
     end
 
     if @level.save
@@ -649,7 +651,7 @@ class LevelsController < ApplicationController
   end
 
   def remove_skill
-    level_id = params[:levelId].to_i
+    level_id = params[:id].to_i
     skill_id  = params[:skillId].to_i
 
     begin
@@ -665,6 +667,7 @@ class LevelsController < ApplicationController
     end
 
     @level.skills.delete(@skill)
+    @level.remove_skill_key(@skill.key)
 
     if @level.save
       render json: {status: 'success', message: "Skill #{@skill.id} successfully removed from #{@level.id}"}, status: :ok
@@ -721,6 +724,9 @@ class LevelsController < ApplicationController
 
       # Dance Party-specific
       {song_selection: []},
+
+      # Web Lab 2-specific
+      {available_ai_tutor_modes: []}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -734,7 +740,8 @@ class LevelsController < ApplicationController
       :helper_libraries,
       :block_pools,
       :available_poems,
-      :song_selection
+      :song_selection,
+      :available_ai_tutor_modes
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array

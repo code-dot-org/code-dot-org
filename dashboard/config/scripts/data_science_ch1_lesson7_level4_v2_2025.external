@@ -1,0 +1,18 @@
+name 'data-science-ch1-lesson7-level4_v2-2025'
+title 'Bar Chart'
+
+
+markdown <<MARKDOWN
+#Pie Charts
+## Create a pie chart using data from a column of your choice.
+
+1. Navigate to your copy of the Pizza Party Survey Data.
+2. Go to the **Pie Chart Workspace** tab. 
+3. Practice creating and customizing a pie chart.
+
+![](https://images.code.org/84f5a9f5b5e2664f4d82a82eb7bae8f8-image-1744824268507.png)
+
+::: details [**Can't find your copy of the dataset? Click here**]
+Misplaced your copy of the Pizza Party Survey Data Google Sheet? **Click <a href="https://docs.google.com/spreadsheets/d/1-M2CvqfAqO3XB6LY4CaYuRFAx58MASvw25tIRoawSWk/edit?usp=drivesdk" target="_blank">HERE</a>.** to open the original and make yourself **a new copy**!
+:::
+MARKDOWN

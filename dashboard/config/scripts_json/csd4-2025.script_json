@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 22:39:45 UTC",
+    "serialized_at": "2025-10-22 18:55:30 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7883,11 +7883,11 @@
     },
     {
       "name": "Problem Solving Process with Empathy",
-      "url": "https://code.org/curriculum/docs/csd/PSPE.png",
+      "url": "https://studio.code.org/blockly/media/curriculum/docs/csd/PSPE.png",
       "key": "problem_solving_process_with_empathy",
       "properties": {
         "audience": "Student",
-        "type": "Image"
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_with_empathy"

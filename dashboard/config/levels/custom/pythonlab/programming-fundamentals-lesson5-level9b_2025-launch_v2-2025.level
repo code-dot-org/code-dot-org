@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nHelp the `Painter` navigate through The Neighborhood to reach the traffic cone!\r\n\r\n1. Create a `Painter` object.\r\n\r\n2. Use the `move()` and `turn_left()` methods to navigate through The Neighborhood to reach the traffic cone.\r\n\r\n![](https://images.code.org/982457a7e4c9e6efc992912c8266833f-U1L4-L4b.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nIs your code not working the way you expected? One helpful strategy finding the cause of an issue is to use `print()` to track where you're expecting the `Painter` to be and the direction they are facing. For example:\r\n\r\n```\r\nravi.move()\r\nravi.move()\r\nravi.move()\r\nprint(\"ravi is next to the traffic cone facing east\")\r\n\r\nravi.turn_left()\r\nravi.turn_left()\r\nravi.turn_left()\r\nprint(\"ravi is next to the traffic cone facing south\")\r\n```",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Reach the Traffic Cone",
+    "bubble_choice_description": "Help the `Painter` navigate through The Neighborhood to reach the traffic cone.",
+    "thumbnail_url": "https://images.code.org/982457a7e4c9e6efc992912c8266833f-U1L4-L4b.gif",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 83
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 87
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\n# TODO - Create a Painter object\n\n\n# TODO - Use move() and turn_left() to move the Painter to the traffic cone\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "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\n",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterMoveToTrafficCone(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter was created. Make sure you create a Painter!\")\n\n    def test_painter_ends_at_correct_position(self):\n        \"\"\"Painter should end at (5, 5)\"\"\"\n        final_x = self.painter.ending_position.x\n        final_y = self.painter.ending_position.y\n\n        self.assertEqual(\n            (final_x, final_y),\n            (5, 5),\n            \"The Painter should end at (5, 5) after navigating through The Neighborhood.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:25.439+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level9b_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level9b_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

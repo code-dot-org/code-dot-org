@@ -1,7 +1,10 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {
+  SimpleDropdown,
+  CheckboxDropdown,
+} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {
@@ -14,11 +17,17 @@ import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {
+  EVENTS,
+  PLATFORMS,
+  EXPERIMENTS,
+} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import GradeLevelChips from '@cdo/apps/templates/sectionsRefresh/GradeLevelChips';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
@@ -31,6 +40,8 @@ import locale from './locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  GIVEN_NAME_SESSION_KEY,
+  FAMILY_NAME_SESSION_KEY,
   OAUTH_LOGIN_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
@@ -40,7 +51,13 @@ import {
 
 import style from './signUpFlowStyles.module.scss';
 
-const roleItemGroups = [
+export const NAME_TYPES = {
+  GivenName: locale.first_name(),
+  FamilyName: locale.last_name(),
+  DisplayName: locale.display_name(),
+};
+
+export const roleItemGroups = [
   {
     label: '',
     groupItems: [{value: '', text: locale.select_a_role()}],
@@ -56,15 +73,37 @@ const roleItemGroups = [
   ).map(([label, groupItems]) => ({label, groupItems})),
 ];
 
+const SIGNUP_SOURCE_OPTIONS = {
+  search: locale.found_on_search(),
+  social_media: locale.found_on_social_media(),
+  recommended_by_friend_family: locale.recommended_by_friend_or_family(),
+  recommended_by_colleague_school: locale.recommended_by_colleague_or_school(),
+  recommended_by_professional_network:
+    locale.recommended_by_professional_network(),
+  school_or_district_adopted: locale.school_or_district_adopted(),
+  conference: locale.heard_at_conference(),
+  email: locale.heard_from_email(),
+  via_lms_or_tool: locale.heard_via_lms_or_tool(),
+  via_state_district_curriculum: locale.learned_via_state_district_curriculum(),
+  attended_pl: locale.attended_pl(),
+  dont_remember: locale.dont_remember(),
+  other: locale.other(),
+};
+
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
   redirectUrl?: string;
 }> = ({usIp, countryCode, redirectUrl}) => {
   const schoolInfo = useSchoolInfo({usIp});
-  const [name, setName] = useState('');
-  const [nameErrorMessage, setNameErrorMessage] = useState(null);
+  const [givenName, setGivenName] = useState('');
+  const [familyName, setFamilyName] = useState('');
+  const [displayName, setDisplayName] = useState('');
+  const [givenNameErrorMessage, setGivenNameErrorMessage] = useState('');
+  const [familyNameErrorMessage, setFamilyNameErrorMessage] = useState('');
+  const [displayNameErrorMessage, setDisplayNameErrorMessage] = useState('');
   const [educatorRole, setEducatorRole] = useState('');
+  const [signupSources, setSignupSources] = useState<string[]>([]);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
@@ -73,9 +112,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, setErrorCreatingAccountMessage] =
     useState('');
+  const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
 
   // Remove oauth user_type cookie if it exists
   cookies.remove(SIGN_UP_USER_TYPE);
+
+  const [isInGradeSelectionExperiment, setIsInGradeSelectionExperiment] =
+    useState(false);
 
   useEffect(() => {
     // If the user hasn't selected a user type or login type, redirect them back to the incomplete step of signup.
@@ -91,6 +134,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
         `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
       );
     }
+
+    // If their first and last names are known from their 3rd-party provider login choice, prepopulate their values.
+    const prepopulatedGivenName = sessionStorage.getItem(
+      GIVEN_NAME_SESSION_KEY
+    );
+    const prepopulatedFamilyName = sessionStorage.getItem(
+      FAMILY_NAME_SESSION_KEY
+    );
+    if (prepopulatedGivenName) setGivenName(prepopulatedGivenName);
+    if (prepopulatedFamilyName) setFamilyName(prepopulatedFamilyName);
 
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
@@ -124,6 +177,17 @@ const FinishTeacherAccount: React.FunctionComponent<{
     }
   }, [countryCode, usIp, redirectUrl]);
 
+  useEffect(() => {
+    (async () => {
+      const result = await statsigReporter.getIsInExperimentAsync(
+        EXPERIMENTS.SELECT_GRADES_TAUGHT_ON_ACCOUNT_CREATION,
+        EXPERIMENTS.ENABLE_SELECTING_GRADES,
+        false
+      );
+      setIsInGradeSelectionExperiment(result);
+    })();
+  }, []);
+
   // GDPR is valid if
   // 1. The fetch call has completed AND
   //   2. GDPR is showing AND checked OR
@@ -134,28 +198,97 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   const formDisabled = useMemo(
     () =>
-      name?.trim() === '' ||
-      name?.length > MAX_DISPLAY_NAME_LENGTH ||
+      givenName.trim() === '' ||
+      givenName.length > MAX_DISPLAY_NAME_LENGTH ||
+      familyName.trim() === '' ||
+      familyName.length > MAX_DISPLAY_NAME_LENGTH ||
+      displayName.trim() === '' ||
+      displayName.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
-      !educatorRole,
-    [gdprValid, name, schoolInfo, educatorRole]
+      !educatorRole ||
+      signupSources.length < 1 ||
+      (selectedGrades.length < 1 && isInGradeSelectionExperiment),
+    [
+      gdprValid,
+      givenName,
+      familyName,
+      displayName,
+      schoolInfo,
+      educatorRole,
+      signupSources,
+      selectedGrades,
+      isInGradeSelectionExperiment,
+    ]
   );
 
-  const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const setName = (nameType: string, newName: string) => {
+    switch (nameType) {
+      case NAME_TYPES.GivenName:
+        setGivenName(newName);
+        break;
+      case NAME_TYPES.FamilyName:
+        setFamilyName(newName);
+        break;
+      default:
+        setDisplayName(newName);
+        break;
+    }
+  };
+
+  const setNameError = (nameType: string, errorMessage: string) => {
+    switch (nameType) {
+      case NAME_TYPES.GivenName:
+        setGivenNameErrorMessage(errorMessage);
+        break;
+      case NAME_TYPES.FamilyName:
+        setFamilyNameErrorMessage(errorMessage);
+        break;
+      default:
+        setDisplayNameErrorMessage(errorMessage);
+        break;
+    }
+  };
+
+  const onNameChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    nameType: string
+  ): void => {
     const newName = e.target.value;
-    setName(newName);
+    setName(nameType, newName);
 
     if (newName.trim() === '') {
-      setNameErrorMessage(locale.display_name_error_message());
+      setNameError(
+        nameType,
+        locale.name_error_message({nameType: nameType.toLowerCase()})
+      );
     } else if (newName.length > MAX_DISPLAY_NAME_LENGTH) {
-      setNameErrorMessage(
-        locale.display_name_too_long_error_message({
+      setNameError(
+        nameType,
+        locale.name_too_long_error_message({
+          nameType: nameType,
           maxLength: MAX_DISPLAY_NAME_LENGTH,
         })
       );
     } else {
-      setNameErrorMessage(null);
+      setNameError(nameType, '');
+    }
+  };
+
+  const handleSelectSignupSource = (
+    sourceOption: string,
+    isChecked: boolean
+  ): void => {
+    const newSourceOptions = [...signupSources];
+    if (isChecked) {
+      // Add checked item into list of sources selected
+      newSourceOptions.push(sourceOption);
+      setSignupSources(newSourceOptions.sort());
+    } else {
+      // Remove unchecked item from list of sources selected
+      setSignupSources(
+        newSourceOptions.filter(source => source !== sourceOption)
+      );
     }
   };
 
@@ -171,7 +304,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
       user: {
         user_type: UserTypes.TEACHER,
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
-        name: name,
+        given_name: givenName,
+        family_name: familyName,
+        name: displayName,
         email_preference_opt_in: emailOptInChecked,
         school_info_attributes: buildSchoolData({
           schoolId: schoolInfo.schoolId,
@@ -181,6 +316,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         }),
         country_code: countryCode,
         educator_role: educatorRole || null,
+        signup_sources_tracking: signupSources,
       },
     };
     const authToken = await getAuthenticityToken();
@@ -230,7 +366,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'user type': 'teacher',
         'has school': hasSchool,
         'has marketing value selected': true,
-        'has display name': !nameErrorMessage,
+        'has display name': !displayNameErrorMessage,
         'educator role': educatorRole,
         country: countryCode,
       },
@@ -269,23 +405,62 @@ const FinishTeacherAccount: React.FunctionComponent<{
           </div>
         )}
         <fieldset className={style.inputContainer}>
+          <div className={style.firstAndLastNameContainer}>
+            <div className={style.firstAndLastNameField}>
+              <TextField
+                name="givenName"
+                id="uitest-given-name"
+                label={locale.first_name()}
+                value={givenName}
+                onChange={e => onNameChange(e, NAME_TYPES.GivenName)}
+                errorMessage={givenNameErrorMessage}
+              />
+            </div>
+            <div className={style.firstAndLastNameField}>
+              <TextField
+                name="familyName"
+                id="uitest-family-name"
+                label={locale.last_name()}
+                value={familyName}
+                onChange={e => onNameChange(e, NAME_TYPES.FamilyName)}
+                errorMessage={familyNameErrorMessage}
+              />
+            </div>
+          </div>
           <div>
             <TextField
               name="displayName"
               id="uitest-display-name"
               label={locale.what_do_you_want_to_be_called()}
-              value={name}
+              value={displayName}
               placeholder={locale.msCoder()}
-              onChange={onNameChange}
+              onChange={e => onNameChange(e, NAME_TYPES.DisplayName)}
+              errorMessage={displayNameErrorMessage}
             />
             <BodyThreeText className={style.displayNameSubtext}>
               {locale.this_is_what_your_students_will_see()}
             </BodyThreeText>
-            {nameErrorMessage && (
-              <BodyThreeText className={style.errorMessage}>
-                {nameErrorMessage}
-              </BodyThreeText>
-            )}
+          </div>
+          <div className={style.signupSourcesContainer}>
+            <BodyThreeText>{locale.how_did_you_hear_about_us()}</BodyThreeText>
+            <CheckboxDropdown
+              name="signupSources"
+              labelText={locale.select_all_that_apply()}
+              labelType="thin"
+              allOptions={Object.entries(SIGNUP_SOURCE_OPTIONS).map(
+                ([key, value]) => ({
+                  value: key,
+                  label: value,
+                })
+              )}
+              checkedOptions={signupSources}
+              hideControls
+              className={style.sourcesDropdown}
+              onChange={e =>
+                handleSelectSignupSource(e.target.value, e.target.checked)
+              }
+              size="m"
+            />
           </div>
           <SimpleDropdown
             id="uitest-educator-role"
@@ -299,6 +474,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
             itemGroups={roleItemGroups}
             dropdownTextThickness="thin"
           />
+          {isInGradeSelectionExperiment && (
+            <GradeLevelChips
+              inputLabel={locale.grades_taught()}
+              values={selectedGrades}
+              setValues={vals => setSelectedGrades(vals)}
+              className={style.gradeSelectChips}
+            />
+          )}
           <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>

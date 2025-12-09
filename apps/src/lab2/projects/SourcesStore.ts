@@ -71,8 +71,11 @@ export class SourcesStore {
     return response;
   }
 
-  async getVersionList(channelId: string) {
-    const response = await sourcesApi.getVersionList(channelId);
+  async getVersionList(channelId: string, includeComments: boolean = false) {
+    const response = await sourcesApi.getVersionList(
+      channelId,
+      includeComments
+    );
     return response.value || [];
   }
 
@@ -93,5 +96,9 @@ export class SourcesStore {
     // We should replace the existing version if the last new version was less than 15 minutes ago
     // (the last new version time plus the interval is greater than the current time).
     return this.lastNewVersionTime + this.newVersionInterval > Date.now();
+  }
+
+  getCurrentVersionId(): string | null {
+    return this.currentVersionId;
   }
 }

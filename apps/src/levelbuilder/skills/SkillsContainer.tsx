@@ -2,7 +2,7 @@ import React from 'react';
 
 import LevelsSkillsCreator from './LevelsSkillsCreator';
 import LevelsSkillsTable from './LevelsSkillsTable';
-import SkillsByConceptTable from './SkillsByConceptTable';
+import SkillsByConceptTable from './SkillsByConcept';
 import SkillsCreator from './SkillsCreator';
 import {SkillsByConcept, Levels} from './types';
 
@@ -24,8 +24,8 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({
         <h3>You need levelbuilder permissions to edit Skills.</h3>
       )}
       {canEditSkills && <SkillsCreator skills={skills} />}
-      <SkillsByConceptTable skills={skills} />
-      <LevelsSkillsCreator />
+      <SkillsByConceptTable skills={skills} canEditSkills={canEditSkills} />
+      {canEditSkills && <LevelsSkillsCreator />}
       <LevelsSkillsTable levels={levels} />
     </div>
   );

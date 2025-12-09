@@ -1,0 +1,26 @@
+name 'networks-internet-lesson11-level1c_v2-2025'
+title 'NovaTech Robotics'
+display_name 'NovaTech Robotics'
+bubble_choice_description 'NovaTech Robotics still uses default factory-set usernames and passwords, making them easy to compromise.'
+thumbnail_url 'https://images.code.org/0089ba64d923e3d314933f6514f88208-image-1740388484737.jpg'
+
+markdown <<MARKDOWN
+# NovaTech Robotics  
+
+## Scenario
+NovaTech Robotics is an innovative startup specializing in **automated warehouse systems** that use **AI-driven robots** to manage inventory, transport goods, and optimize supply chain logistics. Their cutting-edge robotics technology has attracted major clients, from e-commerce giants to global manufacturers. However, NovaTech's rapid growth has led to **security oversights**, making their network a prime target for cyberattacks.  
+
+Recently, security researchers discovered that many of NovaTech’s IoT-enabled robots and warehouse sensors still use **default factory-set usernames and passwords**, making them easy to compromise. Hackers can exploit these weak credentials to **take control of automated systems**, causing robots to misplace inventory, shut down operations, or even damage goods. The IT team has also detected **unusual network activity** but lacks real-time monitoring to identify threats before they escalate.  
+
+If these vulnerabilities are exploited, NovaTech’s **warehouse operations could be brought to a standstill**, leading to **financial losses and damaged client relationships**. Worse, a competitor or rogue actor could manipulate robots to **intentionally sabotage supply chains**, causing chaos in distribution networks.  
+
+## Key Facts
+- Some **warehouse robots and IoT devices** still use **default factory credentials**.  
+- Attackers could **manipulate robots**, disrupt operations, or shut down automated systems.  
+- Lack of **real-time network monitoring** makes it difficult to detect unusual activity.  
+- A major breach could **halt supply chain operations, damage goods, and cause financial losses**.  
+
+![](https://images.code.org/0089ba64d923e3d314933f6514f88208-image-1740388484737.jpg)
+
+
+MARKDOWN

@@ -2,6 +2,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
+  AiChatReadTimeouts,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
@@ -11,7 +12,7 @@ import {chatHistoryValidator} from './api/validators';
 import {
   AiCustomizations,
   AichatContext,
-  AichatModelCustomizations,
+  ModelParameters,
   ChatEvent,
   DetectToxicityResponse,
   FeedbackValue,
@@ -35,7 +36,6 @@ const paths = {
   FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
-const MAX_POLLING_TIME_MS = 45000;
 const MIN_POLLING_INTERVAL_MS = 1000;
 const DEFAULT_BACKOFF_RATE = 1;
 
@@ -43,34 +43,6 @@ interface UserHasAichatAccessResponse {
   userHasAccess: boolean;
 }
 
-/**
- * This function formats chat completion messages and aichatParameters, sends a POST request
- * to the aichat completion backend controller, then returns the status of the response
- * and assistant message if successful.
- */
-export async function postAichatCompletionMessage(
-  newMessage: PendingChatMessage,
-  storedMessages: CompletedChatMessage[],
-  aiCustomizations: AiCustomizations,
-  aichatContext: AichatContext,
-  // Configurable for testing.
-  maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<CompletedChatMessage[]> {
-  const aichatModelCustomizations: AichatModelCustomizations = {
-    selectedModelId: aiCustomizations.selectedModelId,
-    temperature: aiCustomizations.temperature,
-    retrievalContexts: aiCustomizations.retrievalContexts,
-    systemPrompt: aiCustomizations.systemPrompt,
-  };
-
-  return postChatCompletionAsyncPolling(
-    newMessage,
-    storedMessages,
-    aichatModelCustomizations,
-    aichatContext,
-    maxPollingTimeMs
-  );
-}
 /**
  * @param eventId
  * @param feedback
@@ -126,12 +98,14 @@ export async function postLogChatEvent(
 export async function getUserChatHistory(
   userId: number,
   levelId: number,
-  scriptId: number | null
+  scriptId: number | null,
+  channelId?: string
 ): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
     userId: userId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
+    channelId: channelId ?? '',
   };
   const response = await HttpClient.fetchJson<ServerChatEvent[]>(
     paths.CHAT_HISTORY_URL + '?' + new URLSearchParams(params),
@@ -177,21 +151,26 @@ export interface GetChatRequestResponse {
 }
 
 /**
- * Perform chat completion by initiating an asynchronous request and polling for the response.
+ * This function formats chat completion messages and aichatParameters, sends a POST request
+ * to the aichat completion backend controller, then returns the status of the response
+ * and assistant message if successful.
  */
-async function postChatCompletionAsyncPolling(
+export async function postAichatCompletionMessage(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
-  aichatModelCustomizations: AichatModelCustomizations,
+  modelParameters: ModelParameters,
   aichatContext: AichatContext,
-  maxPollingTimeMs = MAX_POLLING_TIME_MS
+  maxPollingTimeMs?: number
 ): Promise<CompletedChatMessage[]> {
   const payload = {
     newMessage,
     storedMessages,
-    aichatModelCustomizations,
+    modelParameters,
     aichatContext,
   };
+
+  maxPollingTimeMs =
+    maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
   const response = await HttpClient.post(
     paths.START_CHAT_COMPLETION_URL,

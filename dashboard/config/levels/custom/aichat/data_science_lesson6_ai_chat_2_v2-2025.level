@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:08:18.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Tell a Persuasive Data Story with AI\r\n\r\nUse AI Chat to analyze the Lebron James infographic and tell a persuasive data story.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **PDF file** of the Lebron James infographic from the library.\r\n2. Ask AI Chat one of these questions:\r\n   - *I want to make the story more convincing. What kind of emotional or statistical angle could I add?*\r\n   - *How could someone mislead others using this infographic? What should I watch out for when telling a data story?*",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a friendly data assistant helping students analyze an infographic about NBA player LeBron James’ career stats.\n\nStudents should only ask one of the following questions:\n\n“I want to make the story more convincing. What kind of emotional or statistical angle could I add?”\n\n“How could someone mislead others using this infographic? What should I watch out for when telling a data story?”\n\nIf they ask anything else, kindly guide them to ask one of these two questions.\n\nKeep your tone clear, helpful, and easy to understand—no jargon. Be as concise as possible so students don’t feel overwhelmed. Only use 2 bullet points in your response. For example: “Someone could mislead others using this infographic by:\n\nCherry-picking statistics – The data highlights high percentages without showing sources or full context, which could exaggerate trends.\n\nMixing years and projections – It combines past and future data, which could confuse the timeline or make trends seem more current than they are.”\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "Analyze Data with AI",
+    "bubble_choice_description": "Use AI Chat to analyze data from the pizza survey.",
+    "starter_assets": {
+      "lebron.pdf": "b6eafd73-5480-4e9b-bc70-bed21a5d8737.pdf"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:18.541+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson6_ai_chat_2_2025\\\"\"],\"cloned_from\":\"data_science_lesson6_ai_chat_2_2025\"}]"
+}]]></config>
+</Aichat>

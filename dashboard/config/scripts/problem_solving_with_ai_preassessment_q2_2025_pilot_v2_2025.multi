@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-preassessment-q2_2025-pilot_v2-2025'
+
+question 'How do multimodal AI models differ from traditional AI models?'
+
+right 'Multimodal AI models can analyze multiple types of inputs like text, images, and audio.'
+wrong 'Traditional AI models are always less accurate than multimodal AI models.'
+wrong 'Multimodal AI models rely only on text-based inputs.'
+wrong 'Traditional AI models cannot generate responses based on user prompts.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Beyond Words
+MARKDOWN

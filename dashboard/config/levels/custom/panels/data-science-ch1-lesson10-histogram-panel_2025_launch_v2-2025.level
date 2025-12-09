@@ -1,0 +1,67 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:08:33.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/62da2b403717a7e3923424b414dfd2af-Panel Levels Slide Deck.png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Choose Your Data\nSelect the **numerical** data you want to turn into a histogram.\n\nNote: You might have to **sort** your data first. In this example, the data has been sorted by \"Design\" to  measure the top speeds of sit down roller coasters.\n",
+        "imageUrl": "https://images.code.org/76ac0824c6a37ad4e1f7281b79795a93-sortandselect.gif",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Make a Chart\n- Highlight a column or data range\n- Click **Insert** -> **Chart** ",
+        "imageUrl": "https://images.code.org/e03fce2eb7dbbb6fc9f8782e33d16b25-insertchart.gif",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-bacd1c1d-cd37-4d2c-b166-94d0c6070205",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Create a Histogram\n- Click **Chart type**\n- Under **Other**, select **Histogram chart**",
+        "imageUrl": "https://images.code.org/1d105126a7a2849626f177b54ddce8f5-makehistogram.gif",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-52a7128c-1a97-41fe-8640-3833bd1948c7",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Add a Title\n\n- Click **Customize**\n- Open the toggle **Chart & axis titles**\n- Add your title in **Title text**",
+        "imageUrl": "https://images.code.org/7cf3be54132001b3469dfefdd3436251-title.gif",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-4150a755-c790-45ba-8b7f-33ceab36bbd3",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Visualize Individual Data Points\n\n- Click **Customize**\n- Open the toggle **Histogram**\n- Click **Show item dividers**",
+        "imageUrl": "https://images.code.org/8e991b6b53406dd41df7a2d4f015f5b8-showdividers.gif",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-fa2e7a18-309e-43e6-8c32-9e5d06ff0e37",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Change Bucket Size\n\n- Click **Customize**\n- Open the toggle **Histogram**\n- Play around with different sizes from the **Bucket size** dropdown until you find one that suits your dataset",
+        "imageUrl": "https://images.code.org/4d6c631ed47e72c5ab76564abc6395c7-adjustdividers.gif",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-6226dd2a-06d3-4d8a-8aad-60fc4f7ca9fc",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:33.737+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-histogram-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-histogram-panel_2025_launch\"}]"
+}]]></config>
+</Panels>

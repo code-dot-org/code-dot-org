@@ -123,10 +123,23 @@
           }
         ],
         "kind": "flyoutToolbox"
-      }
+      },
+      "validationTimeout": 1
     },
     "project_template_level_name": "test-music-lab-sequences-explore-play-template-parent_v2",
     "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-play-together-1_v2_29164d49-4cfd-4ea0-b376-7e723e6d65c2",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"It looks like you have too many `play` blocks. You only need 4!\"",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:5"
+          }
+        ],
+        "comment": "user has too many play blocks - guide to getting rid of one of them"
+      },
       {
         "key": "test-music-lab-sequences-explore-play-together-1_677a6641-8fdf-4f4d-9567-c5a659bac0d2",
         "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
@@ -135,12 +148,58 @@
           {
             "name": "played_sounds_together",
             "value": 4
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "played_different_sounds_together",
+            "value": 4
           }
         ]
       },
       {
+        "key": "test-music-lab-sequences-explore-play-together-1_v2_b26b75a4-61d7-4a92-98dd-c34382a8e9e7",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"It looks like some of your tracks are the same - make sure each track is a different sound!\"",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 4
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "played_different_sounds_together",
+            "value": 1
+          }
+        ],
+        "callout": "",
+        "comment": "user has 4 sounds, but they're not all different. Guide to making different sounds."
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-1_v2_631d2a6a-b50c-4c81-b83f-c6cba8186009",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot only hears 3 sounds playing together - make sure all 4 tracks are in the `play together` block! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:play_sounds_together)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          }
+        ],
+        "callout": "id-up-inside:play_sounds_together",
+        "comment": "user dragged out more blocks, but didn't put in play together"
+      },
+      {
         "key": "test-music-lab-sequences-explore-play-together-1_d49c2114-83f3-4c03-bc12-4d7f9d30b8d7",
-        "message": "Add a fourth sound and play together! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id-up-inside:play_sounds_together).",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot only hears 3 sounds playing together - you may need to drag out a fourth sound! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id-up-inside:play_sounds_together)",
         "next": false,
         "conditions": [
           {
@@ -152,11 +211,12 @@
             "value": "play_sound_at_current_location_simple2:3"
           }
         ],
-        "callout": "flyout-id:play_toolbox---id-up-inside:play_sounds_together"
+        "callout": "flyout-id:play_toolbox---id-up-inside:play_sounds_together",
+        "comment": "3 sounds are playing; get to make 4 sounds"
       },
       {
         "key": "test-music-lab-sequences-explore-play-together-1_10ebe92f-d7e0-4e94-838c-08201b2d7599",
-        "message": "Make sure all sounds play together! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:play_sounds_together).",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot only hears 2 sounds playing together - you need 4 sounds! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:play_sounds_together).",
         "next": false,
         "conditions": [
           {
@@ -165,7 +225,16 @@
           }
         ],
         "callout": "id-up-inside:play_sounds_together",
-        "comment": "Checks that all sounds play together "
+        "comment": "This is the starting condition - guide student to get at least 3 sounds in the play together"
+      },
+      {
+        "key": "test-music-lab-sequences-explore-play-together-1_v2_73b0d8b4-1014-412c-bb10-be15af571610",
+        "message": "Try to get 4 different sounds to play together!",
+        "next": false,
+        "conditions": [
+
+        ],
+        "comment": "if we made it here: we deleted some blocks we shouldn't have!"
       }
     ],
     "predict_settings": {
@@ -184,7 +253,7 @@
     "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.676+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-06-06 19:26:38 +0000\",\"changed\":[\"validations\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 16:11:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:27.676+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-play-together-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-play-together-1\"},{\"changed_at\":\"2025-06-06 19:26:38 +0000\",\"changed\":[\"validations\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 16:11:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-18 22:29:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 22:32:34 +0000\",\"changed\":[\"level_data\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 22:33:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

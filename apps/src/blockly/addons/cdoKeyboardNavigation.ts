@@ -1,91 +1,70 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
+import './shortcutMenuStyles.scss';
 
-export function initializeKeyboardNavigation(
-  workspace: GoogleBlockly.WorkspaceSvg,
-  theme: GoogleBlockly.Theme
-) {
-  unregisterShortcuts(['undo', 'redo']);
-  backupShortcuts(['copy', 'paste', 'cut']);
-  if (Blockly.KeyboardNavigation) {
-    unregisterShortcuts(['undo', 'redo']);
-    Blockly.KeyboardNavigation.dispose();
-    restoreShortcuts(['copy', 'paste', 'cut']);
-  }
+import {
+  overrideOptionWeight as overrideContextMenuOptionWeight,
+  unregisterCrossTabPluginOptions,
+  WeightOptions as ContextMenuWeightOptions,
+} from './contextMenu';
 
-  createShortcutsModalContainer();
-  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace);
-  patchShortcuts({
-    keyboard_nav_copy: Blockly.utils.KeyCodes.C,
-    keyboard_nav_paste: Blockly.utils.KeyCodes.V,
-    keyboard_nav_cut: Blockly.utils.KeyCodes.X,
-  });
-
-  enableShortcutModalEscape();
-  // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
-  workspace.setTheme(Blockly.cdoUtils.getUserTheme(theme));
+// This is a Monkey patch while Blockly fixes issue #713. Once merged and
+// bumped, we can replace this class and the manual registry of
+// NavigationDeferringToolbox below with one line function.
+export class NavigationDeferringToolbox extends GoogleBlockly.Toolbox {
+  protected override onKeyDown_(e: KeyboardEvent) {}
 }
 
-function unregisterShortcuts(shortcutNames: string[]) {
-  shortcutNames.forEach(name => {
-    if (Blockly.ShortcutRegistry.registry.getRegistry()[name]) {
-      Blockly.ShortcutRegistry.registry.unregister(name);
-    }
-  });
-}
-
-function patchShortcuts(shortcutNames: {[key: string]: number}) {
-  const shortcutRegistry = Blockly.ShortcutRegistry.registry;
-
-  (Object.entries(shortcutNames) as [string, number][]).forEach(
-    ([shortcutName, keyCode]) => {
-      const shortcut =
-        Blockly.ShortcutRegistry.registry.getRegistry()[shortcutName];
-      if (shortcut) {
-        shortcut.keyCodes = [
-          shortcutRegistry.createSerializedKey(keyCode, [
-            Blockly.utils.KeyCodes.CTRL,
-          ]),
-          shortcutRegistry.createSerializedKey(keyCode, [
-            Blockly.utils.KeyCodes.ALT,
-          ]),
-          shortcutRegistry.createSerializedKey(keyCode, [
-            Blockly.utils.KeyCodes.META,
-          ]),
-        ];
-        shortcutRegistry.unregister(shortcutName); // Unregister the existing shortcut
-        shortcutRegistry.register(shortcut); // Re-register the updated shortcut
-      }
-    }
+// Covers functions that need to be called prior to Blockly Inject. Because
+// we initialize and dispose here, we need to call these ourselves.
+export function preInjectRegistrations() {
+  KeyboardNavigation.registerKeyboardNavigationStyles();
+  GoogleBlockly.registry.register(
+    GoogleBlockly.registry.Type.TOOLBOX,
+    GoogleBlockly.registry.DEFAULT,
+    NavigationDeferringToolbox,
+    true
   );
 }
 
-function backupShortcuts(shortcutNames: string[]) {
-  if (!Blockly.shortcutBackups) {
-    Blockly.shortcutBackups = {};
+export function initializeKeyboardNavigation(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  isDarkTheme: boolean
+) {
+  if (Blockly.KeyboardNavigation) {
+    Blockly.KeyboardNavigation.dispose();
   }
-  shortcutNames.forEach(name => {
-    if (!Blockly.shortcutBackups[name]) {
-      Blockly.shortcutBackups[name] =
-        Blockly.ShortcutRegistry.registry.getRegistry()[name];
-    }
+  unregisterCrossTabPluginOptions();
+  createShortcutsModalContainer(isDarkTheme);
+  Blockly.KeyboardNavigation = new KeyboardNavigation(workspace, {
+    allowCrossWorkspacePaste: true,
   });
+  // Re-register context menu options with our custom weights.
+  reorderContextMenu();
+  enableShortcutModalEscape();
 }
 
-function restoreShortcuts(shortcutNames: string[]) {
-  shortcutNames.forEach(name => {
-    if (Blockly.shortcutBackups[name]) {
-      Blockly.ShortcutRegistry.registry.register(Blockly.shortcutBackups[name]);
-    }
-  });
+export function initializeAdditionalWorkspace(
+  workspace: GoogleBlockly.WorkspaceSvg
+) {
+  // Ensure that any additional workspace also has keyboard navigation
+  // initialized.
+  if (Blockly.KeyboardNavigation) {
+    Blockly.KeyboardNavigation.navigationController.addWorkspace(workspace);
+    Blockly.KeyboardNavigation.navigationController.enable(workspace);
+  }
 }
 
-function createShortcutsModalContainer() {
+function createShortcutsModalContainer(isDarkTheme: boolean) {
   // Add the shortcuts div prior to keyboard navigation initialization
   // so the dialog has a place to land.
   if (!document.getElementById('shortcuts')) {
     const shortcutDialog = document.createElement('div');
     shortcutDialog.id = 'shortcuts';
+    shortcutDialog.className = 'shortcut-dialog';
+    if (isDarkTheme) {
+      shortcutDialog.setAttribute('data-theme', 'Dark');
+    }
     document.body.appendChild(shortcutDialog);
   }
 }
@@ -107,5 +86,19 @@ function enableShortcutModalEscape() {
         }
       }
     });
+  }
+}
+
+function reorderContextMenu() {
+  const menuWeightMap: Record<string, ContextMenuWeightOptions> = {
+    blockCutFromContextMenu: ContextMenuWeightOptions.CUT,
+    blockCopyFromContextMenu: ContextMenuWeightOptions.COPY,
+    blockPasteFromContextMenu: ContextMenuWeightOptions.PASTE,
+    move: ContextMenuWeightOptions.MOVE,
+    edit: ContextMenuWeightOptions.EDIT,
+    move_comment: ContextMenuWeightOptions.MOVE_COMMENT,
+  };
+  for (const [option, weight] of Object.entries(menuWeightMap)) {
+    overrideContextMenuOptionWeight(option, weight);
   }
 }

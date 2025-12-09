@@ -3,20 +3,15 @@ import * as GoogleBlockly from 'blockly/core';
 
 import color from '@cdo/apps/util/color';
 
+import {
+  arrayToMap,
+  CustomMenuGenerator,
+  getUpdatedOptionsFromConfig,
+} from './cdoFieldDropdown';
+
 interface ButtonConfig {
   text: string;
   action: () => void;
-}
-
-/**
- * Definition of a human-readable image dropdown option.
- * TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
- */
-interface ImageProperties {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
 }
 
 // Note that this class *does not* inherit from CdoFieldDropdown
@@ -28,6 +23,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   private primaryColour_?: string;
   private borderColour_?: string;
   private focusColour_?: string;
+  private config: string | null | undefined;
 
   constructor(
     menuGenerator:
@@ -138,6 +134,84 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       });
     }
   }
+
+  /**
+   * Sets the field's state based on the given state value. Should only be
+   * called by the serialization system.
+   *
+   * @param state The state we want to apply to the field.
+   * @override because `state` is stored as either json or xml in our code base.
+   */
+  // Blockly uses any here
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  loadState(state: any) {
+    // Check if state is not stringified xml, i.e., value from json.
+    const fieldTagRegEx = /<field/;
+    if (!fieldTagRegEx.test(state)) {
+      if (this.isOptionListDynamic()) {
+        this.getOptions(false);
+      }
+      this.setValue(state);
+      return;
+    }
+    const field = GoogleBlockly.utils.xml.textToDom(state);
+    // Currently, we support the `config` attribute if `config` is stored in xml, but not in json.
+    // The config is handled by `fromXml`.
+    this.fromXml(field);
+  }
+
+  /**
+   * Converts xml element into dropdown field
+   * @param element xml
+   * @override
+   */
+  fromXml(element: Element) {
+    // If the field xml contains a `config`, then the dropdown options
+    // are determined by `config`.
+    // Suppose that `config` is assigned ""ITEM1", "ITEM2", "ITEMX""
+    // Then menu dropdown options would be: 'first item', 'second item', 'itemx'.
+    // See CDO implementation at https://github.com/code-dot-org/blockly/blob/main/core/ui/fields/field_dropdown.js#L305
+    this.config = element.getAttribute('config');
+    if (this.config) {
+      // If `menuGenerator_` is an array, it is an array of options with
+      // each option represented by an array containing 2 elements -
+      // a human-readable string and a language-neutral string. For example,
+      // [['first item', 'ITEM1'], ['second item', 'ITEM2'], ['third item', 'ITEM3']].
+      // Options are included in the block definition.
+      const optionsArray =
+        typeof this.menuGenerator_ === 'function'
+          ? this.menuGenerator_()
+          : this.menuGenerator_;
+      const existingOptionsMap = arrayToMap(
+        optionsArray as CustomMenuGenerator
+      );
+      this.menuGenerator_ = getUpdatedOptionsFromConfig(
+        this.config,
+        existingOptionsMap
+      );
+      if (this.menuGenerator_.length === 1) {
+        this.EDITABLE = false;
+        // No-op showing the dropdown editor since there is only one option.
+        this.showEditor_ = () => {};
+      }
+    }
+    // Call super so value is set.
+    super.fromXml(element);
+  }
+
+  /**
+   * Converts dropdown field options into xml element
+   * @param element xml
+   * @return element
+   * @override
+   */
+  toXml(element: Element) {
+    if (this.config) {
+      element.setAttribute('config', this.config);
+    }
+    super.toXml(element);
+    return element;
+  }
 }
 
 export function fixMenuGenerator(
@@ -167,6 +241,6 @@ export function fixMenuGenerator(
     return [
       {src: url, width: width, height: height, alt: code_id},
       code_id,
-    ] as [ImageProperties, string];
+    ] as [GoogleBlockly.ImageProperties, string];
   });
 }

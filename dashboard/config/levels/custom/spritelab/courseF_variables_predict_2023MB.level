@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-01-29T22:11:11.000Z",
   "level_num": "custom",
@@ -37,7 +36,7 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"565c2e6b-c1fc-410a-8bd8-7fac852cf1de\",\r\n    \"39d6e1db-e8c8-4e14-9bbe-41ed6eabf9b0\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"565c2e6b-c1fc-410a-8bd8-7fac852cf1de\": {\r\n      \"name\": \"blue_shirt_ball_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/to.BxxB_nG2Yh2OClpPzC6VZkmT1m7sQ/category_people/blue_shirt_ball.png\",\r\n      \"frameSize\": {\r\n        \"x\": 125,\r\n        \"y\": 398\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"to.BxxB_nG2Yh2OClpPzC6VZkmT1m7sQ\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"39d6e1db-e8c8-4e14-9bbe-41ed6eabf9b0\": {\r\n      \"name\": \"front_of_house_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/z3ET79WW37k.pBuHD2iYymrSx8eUmFAs/category_backgrounds/front_of_house.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"z3ET79WW37k.pBuHD2iYymrSx8eUmFAs\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"565c2e6b-c1fc-410a-8bd8-7fac852cf1de\",\n    \"39d6e1db-e8c8-4e14-9bbe-41ed6eabf9b0\"\n  ],\n  \"propsByKey\": {\n    \"565c2e6b-c1fc-410a-8bd8-7fac852cf1de\": {\n      \"name\": \"blue_shirt_ball_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/to.BxxB_nG2Yh2OClpPzC6VZkmT1m7sQ/category_people/blue_shirt_ball.png\",\n      \"frameSize\": {\n        \"x\": 125,\n        \"y\": 398\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"to.BxxB_nG2Yh2OClpPzC6VZkmT1m7sQ\",\n      \"categories\": [\n        \"people\"\n      ]\n    },\n    \"39d6e1db-e8c8-4e14-9bbe-41ed6eabf9b0\": {\n      \"name\": \"front_of_house_1\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/z3ET79WW37k.pBuHD2iYymrSx8eUmFAs/category_backgrounds/front_of_house.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"z3ET79WW37k.pBuHD2iYymrSx8eUmFAs\",\n      \"categories\": [\n        \"backgrounds\"\n      ]\n    }\n  }\n}",
     "hide_custom_blocks": "false",
     "short_instructions": "Make a prediction!",
     "authored_hints": "[]",
@@ -55,13 +54,11 @@
     "mini_toolbox": "false",
     "validation_code": "var spriteIds = getSpriteIdsInUse();\r\n// Fail right away if they don't have any sprites\r\nif (spriteIds.length < 1) {\r\n  levelFailure(3, 'noSprites');\r\n}\r\n\r\nif (!validationProps.successCriteria) {\r\n  validationProps.successCriteria = {\r\n    printedText: false\r\n  };\r\n}\r\n\r\nvar printLog = getPrintLog();\r\nconsole.log(printLog);\r\nif(!validationProps.successCriteria.printedText){\r\n  validationProps.successCriteria.printedText = printLog.length>=1;\r\n}\r\n\r\n// Check if this is the first frame that meets the success criteria\r\nif (!validationProps.successTime) {\r\n  if (\r\n    validationProps.successCriteria.printedText\r\n  ) {\r\n    validationProps.successTime = World.frameCount;\r\n    //console.log(validationProps.successTime);\r\n  }\r\n}\r\n\r\n\r\nvar waitTime = 100;\r\nif (World.frameCount - validationProps.successTime >= waitTime) {\r\n  console.log('Generic success');\r\n  levelFailure(0, 'genericSuccess');\r\n}\r\n\r\npush();\r\nif(validationProps.successTime){\r\n   fill(rgb(0,173,188));\r\n  rect(0,390,((World.frameCount-validationProps.successTime)*400/waitTime),10);\r\n}\r\npop();",
     "hide_pause_button": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "teacher_markdown": "This type of level is a prediction level. Prediction levels help students think logically about code by guessing what they think will happen after reading the code. \r\n\r\nTeacher tip: Prediction levels are a great place for class discussions. Allow students to share guesses. After running the code, debrief on why the code did what it did reinforcing understanding of the programming concepts. ",
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2024-01-29T22:11:11.065+00:00\",\"changed\":[\"cloned from \\\"courseF_variables_predict_2023\\\"\"],\"cloned_from\":\"courseF_variables_predict_2023\"},{\"changed_at\":\"2024-02-05 22:24:56 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {

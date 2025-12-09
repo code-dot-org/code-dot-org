@@ -46,14 +46,6 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Install dependencies required to sync content between our Code.org shared
-# Dropbox folder and our git repository only on the staging server. In the long
-# run, we'd like to have this happen in a separate environment independent of
-# any of our build pipeline servers; but for now, we default to staging.
-if node.chef_environment == 'staging'
-  include_recipe 'cdo-apps::dropbox_sync'
-end
-
 include_recipe 'cdo-python'
 
 # Debian-family packages for building Ruby C extensions
@@ -129,8 +121,8 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
 
-node.default['cdo-apps']['local_redis'] = !node['cdo-secrets']['redis_primary']
-include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
+# Only include a local redis server if no external redis_url was provided.
+include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url']
 
 # only the i18n server needs the i18n recipe
 include_recipe 'cdo-i18n' if node.name == 'i18n'

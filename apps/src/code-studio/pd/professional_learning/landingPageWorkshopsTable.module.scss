@@ -1,0 +1,9 @@
+.workshopsTableActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  button, a {
+    width: 100%;
+  }
+}

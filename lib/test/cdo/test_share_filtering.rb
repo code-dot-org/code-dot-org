@@ -265,29 +265,26 @@ class ShareFilteringTest < Minitest::Test
     json = generate_json_program
     texts = ShareFiltering.extract_text_blockly(json)
 
-    # should find the variable name
-    assert_includes texts, 'myVar'
-    # should find the comment text
-    assert_includes texts, 'nice comment'
     # should strip quotes around the TEXT fields
     assert_includes texts, 'some text'
     assert_includes texts, 'inner text'
     # no duplicates
     assert_equal texts.uniq, texts
-    # should have exactly four entries
-    assert_equal 4, texts.length
+    # should have exactly two entries
+    assert_equal 2, texts.length
   end
 
   def test_should_filter_program_check_project_type
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
     # 'gamelab' is not in FILTERED_PROJECT_TYPES
-    assert_equal false, ShareFiltering.should_filter_program('<xml/>', 'gamelab')
-    assert_equal true, ShareFiltering.should_filter_program('<xml/>', 'poetry')
+    json_program_with_indicator = generate_json_program
+    assert_equal false, ShareFiltering.should_filter_program(json_program_with_indicator, 'gamelab')
+    assert_equal true, ShareFiltering.should_filter_program(json_program_with_indicator, 'poetry')
   end
 
   def test_should_filter_program_playlab_only_with_indicator
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
-    indicator = ShareFiltering::USER_ENTERED_TEXT_INDICATORS.first
+    indicator = ShareFiltering::USER_ENTERED_TEXT_FIELDS.first
 
     # no indicator in program
     no_indicator = "<xml><block type=\"studio_showTitleScreen\"/></xml>"

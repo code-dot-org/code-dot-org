@@ -1,0 +1,28 @@
+name 'computer-systems-lesson3-level5c_v2-2025'
+title 'Robots in Space'
+description 'See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.'
+display_name 'Robots in Space'
+bubble_choice_description 'See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.'
+thumbnail_url 'https://images.code.org/3584d2ccc3b2523d3794a6548c3a1e90-robots.png'
+
+markdown <<MARKDOWN
+# Robots in Space
+
+See how engineers design and troubleshoot robotic systems for the unique challenges of space exploration.
+
+As you watch, be prepared to reflect on the following in the next activity:
+
+- What kind of hardware components are used by people in this career?  
+- What kind of troubleshooting might they need to do? Put another way, what kinds of bugs could they run into?  
+
+**Note**: This video opens in a new tab ⧉.  
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1IGiJi1HiD-pGHOvnEhdkCVR54ruFQH8PRqLQlkFT-WI/edit?slide=id.g34818ae2bc5_0_6#slide=id.g34818ae2bc5_0_6" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/3584d2ccc3b2523d3794a6548c3a1e90-robots.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+MARKDOWN

@@ -28,7 +28,7 @@
         = form_for(current_user, as: :user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
             = f.label :terms_of_service_version, {class: 'terms'} do
-              = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, current_user.latest_terms_version
+              = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, User.latest_terms_version
               %span
                 = t('terms_interstitial.accept_label_markdown', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
           .form-group

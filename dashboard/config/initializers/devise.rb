@@ -190,7 +190,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = CDO.dashboard_session_ttl_days.days
 
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
@@ -339,6 +339,10 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+    # statsig_stable_id is set in the application controller so it's available for
+    # all users, both signed-in and signed-out. When the user logs out, we remove
+    # this cookie because it is user-specific.
+    auth.cookies[:statsig_stable_id] = {value: "", expires: Time.at(0), domain: :all}
 
     # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
     # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user
@@ -371,9 +375,11 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 end
 
+require 'devise/models/custom_lockable'
+
 Rails.application.config.to_prepare do
   # See lib/devise/models/custom_lockable.rb
-  unless Devise::Models::CustomLockable <= Devise::Models::Lockable
+  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
     Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
   end
 end

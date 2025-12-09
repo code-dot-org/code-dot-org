@@ -212,7 +212,7 @@ export var blocks = [
     parent: api,
     category: 'UI controls',
     paletteParams: ['id', 'url'],
-    params: ['"id"', '"https://code.org/images/logo.png"'],
+    params: ['"id"', '"https://studio.code.org/blockly/media/logo.png"'],
     dropdown: {
       1: function () {
         return getAssetDropdown('image');
@@ -241,7 +241,7 @@ export var blocks = [
     parent: api,
     category: 'UI controls',
     paletteParams: ['id', 'url'],
-    params: ['"id"', '"https://code.org/images/logo.png"'],
+    params: ['"id"', '"https://studio.code.org/blockly/media/logo.png"'],
     dropdown: {
       0: idDropdownWithSelector('img'),
       1: () => {
@@ -443,7 +443,7 @@ export var blocks = [
     category: 'Canvas',
     paramButtons: {minArgs: 1, maxArgs: 6},
     paletteParams: ['url'],
-    params: ['"https://code.org/images/logo.png"'],
+    params: ['"https://studio.code.org/blockly/media/logo.png"'],
     allowFunctionDrop: {1: true, 5: true},
   },
   {

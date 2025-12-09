@@ -1,0 +1,9 @@
+name 'ai-powered-threats-defenses-lesson2-level5_2025-pilot'
+display_name 'Investigate a Cybersecurity Threat'
+description 'Viruses, DDoS attacks, misconfigured settings, and ransomware all show how technology can break down when systems aren\’t protected. Explore one of the four scenarios to understand how digital threats spread, disrupt, or expose information.'
+
+sublevels
+level 'ai-powered-threats-defenses-lesson2-level5a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson2-level5b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson2-level5c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson2-level5d_2025-pilot'

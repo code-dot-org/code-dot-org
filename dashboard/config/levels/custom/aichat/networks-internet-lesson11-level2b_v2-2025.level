@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Automated Incident Response  \r\n\r\nThis chatbot has been fine-tuned to provide insights into **Automated Incident Response** and its role in cybersecurity.  \r\n\r\n## Do This:\r\n\r\n### Explore AI in Security (Activity)\r\n- Interact with the chatbot to understand how **Automated Incident Response** works and how it helps prevent cyber threats.  \r\n- Use the **Conversation Starters** below to guide your exploration:  \r\n   - **Solution Overview:** *How does Automated Incident Response work?*  \r\n   - **Problem Addressed:** *What network vulnerabilities does it target?*  \r\n   - **Pros & Cons:** *What are the advantages and limitations of this solution?*  \r\n   - **Project Application:** *How could this be used to mitigate risks in my chosen company scenario?*  \r\n\r\n### Risk Assessment Application  \r\n- Use the chatbot’s responses to refine your **Network Security Risk Assessment** by identifying how Automated Incident Response could help **contain, neutralize, and recover** from security incidents.  \r\n\r\n### Tip:\r\n- If the chatbot’s response is unclear, try **rephrasing your question** with more details for a **more targeted answer**.  \r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Phishing Attacks in Healthcare (MediSure Health Systems)\n\nAutomatically locks compromised accounts when suspicious login activity is detected.\nUses AI to block malicious emails before they reach employees.",
+          "Social Engineering in Banking (FinTrust Banking Solutions)\n\nDetects fraudulent access attempts and initiates immediate account lockdowns.\nAutomatically revokes administrative privileges if unauthorized actions are detected.",
+          "IoT Security in Robotics (NovaTech Robotics)\n\nShuts down compromised robotic systems to prevent sabotage.\nDeploys security patches automatically to prevent further exploits.\n",
+          "Credential Stuffing in Streaming Services (StreamView Entertainment)\n\nBlocks mass login attempts from unauthorized locations.\nForces password resets for accounts that show unusual login behavior.",
+          "Examples of Good Responses:\nHow does Automated Incident Response work?\n\n\"Automated Incident Response uses AI to detect threats and take immediate action, such as blocking unauthorized access or quarantining a compromised device before damage spreads.\"\nWhat vulnerabilities does it address?\n\n\"It is especially effective against phishing, social engineering, and credential stuffing. If an attacker tries to use stolen credentials, the system can lock the account before any harm is done.\"\nHow can I apply this to my risk assessment?\n\n\"If your company scenario involves weak passwords, Automated Incident Response could immediately reset compromised accounts and notify affected users, reducing the risk of unauthorized access.\""
+        ],
+        "modelCardInfo": {
+          "botName": "Automated Incident Response Expert",
+          "description": "This chatbot helps students explore Automated Incident Response in cybersecurity. It explains how automation detects and responds to cyber threats, mitigates risks, and improves network security.",
+          "intendedUse": "Educational Purposes: Designed to help students understand Automated Incident Response and how it enhances cybersecurity defenses.\nProject Support: Assists students in applying AI-driven security solutions to their Network Security Risk Assessments.\nGuided Exploration: Encourages students to ask structured questions and think critically about cybersecurity automation.",
+          "limitationsAndWarnings": "Not a real cybersecurity tool: This chatbot provides educational insights only and should not be used for real-world security decisions.\nSimplified explanations: Responses are tailored for students and may not include all technical details used in professional cybersecurity.\nAutomation Limitations: While Automated Incident Response is powerful, it is not foolproof—students should consider false positives, automation errors, and human oversight when discussing its use.",
+          "testingAndEvaluation": "Tested for clarity and accuracy in explaining Automated Incident Response in an educational setting.\nEvaluated using real-world cybersecurity scenarios from the student project (healthcare, banking, robotics, and streaming services).\nReviewed for student accessibility, ensuring responses are clear, relevant, and encourage critical thinking.\n",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "System Prompt for the Automated Incident Response Chatbot\nYou are an AI security expert specializing in Automated Incident Response for network security. Your goal is to help users understand how automated response systems detect, contain, and neutralize security threats in real-time. You will provide insights into how automation enhances cybersecurity defenses, which vulnerabilities it addresses, and how it can be applied in cybersecurity risk assessments.\n\nYour Expertise & Role:\nExplain how Automated Incident Response works, including threat detection, automated containment, and rapid remediation.\nIdentify which network vulnerabilities (e.g., phishing, weak passwords, social engineering, default credentials) this solution can help mitigate.\nDiscuss advantages and limitations, focusing on automation’s speed, efficiency, and potential risks.\nProvide practical applications of Automated Incident Response in different cybersecurity scenarios.\n\nHow to Respond:\nUse concise, student-friendly explanations while maintaining technical accuracy.\nWhen a user asks about a specific vulnerability, connect it to how Automated Incident Response can mitigate it.\nIf asked about drawbacks, mention false positives, automation errors, and the need for human oversight.\nRelate responses to real-world cybersecurity threats without overwhelming technical jargon.\nEncourage users to think critically about how this solution could be integrated into their risk assessment projects.\n\nTone & Style:\nBe engaging, clear, and professional.\nKeep responses concise but informative.\nEncourage critical thinking and application.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Explore how Automated Incident Response helps detect threats in real-time. Learn how AI detects threats, contains threats, and applies remediation from phishing, hacking, and suspicious activity.",
+    "thumbnail_url": "https://images.code.org/93d9440e33f84a5206b3acd98e782f2b-response.png",
+    "display_name": "Automated Incident Response",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:29.482+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson11-level2b_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson11-level2b_2025\"}]"
+}]]></config>
+</Aichat>

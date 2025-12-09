@@ -1,0 +1,28 @@
+name 'computer-systems-lesson1-level10c_v2-2025'
+title 'Hardware Engineer'
+bubble_choice_description 'Explore how these engineers design and build the physical components of computers and other devices.'
+display_name 'Hardware Engineer'
+thumbnail_url 'https://images.code.org/2e18b79a9b212429ffc4f6ed9c425b49-Pasted%20Graphic.png'
+
+markdown <<MARKDOWN
+## Hardware Engineer
+
+Explore how these engineers design and build the physical components of computers and other devices.
+
+As you watch, answer the following questions in your activity guide:
+
+* What does this person do in their role?
+* What skills or tools do they use?
+* What challenges do you think they might face?
+
+**Note**: This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://docs.google.com/presentation/d/1l3XtOgsm9F71ChLFpYdCmm2VVrjGBVucAvsjLo6VjCc/edit?slide=id.g3477a048259_0_11#slide=id.g3477a048259_0_11" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/932fa24e68eaa62b4fe6f5f788fd8109-Computer Hardware Engineers Career Video.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+MARKDOWN

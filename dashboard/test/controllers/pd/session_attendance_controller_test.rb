@@ -5,11 +5,11 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup do
-    @workshop = create :workshop, num_sessions: 1
+    @workshop = create(:workshop, num_sessions: 1)
     @workshop.start!
     @session = @workshop.sessions.first
 
-    @teacher = create :teacher
+    @teacher = create(:teacher)
   end
 
   test_redirect_to_sign_in_for :attend, params: -> {{session_code: @session.code}}
@@ -26,7 +26,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   end
 
   test 'attend workshop I facilitated redirects with cant join message' do
-    facilitator = create :facilitator
+    facilitator = create(:facilitator)
     @workshop.facilitators << facilitator
     sign_in facilitator
 
@@ -68,7 +68,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'attend with a matching enrollment creates attendance and redirects to home' do
     sign_in @teacher
-    enrollment = create :pd_enrollment, :from_user, user: @teacher, workshop: @workshop
+    enrollment = create(:pd_enrollment, :from_user, user: @teacher, workshop: @workshop)
 
     assert_creates Pd::Attendance do
       get :attend, params: {session_code: @session.code}
@@ -81,7 +81,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   end
 
   test 'attend with a matching enrollment by email updates the enrollment.user' do
-    enrollment = create :pd_enrollment, workshop: @workshop, user: nil, email: @teacher.email
+    enrollment = create(:pd_enrollment, workshop: @workshop, user: nil, email: @teacher.email)
     sign_in @teacher
 
     assert_creates Pd::Attendance do
@@ -92,8 +92,8 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   end
 
   test 'attend with a matching enrollment by alternate email updates the enrollment.user' do
-    create :pd_teacher_application, user: @teacher, status: 'accepted'
-    enrollment = create :pd_enrollment, workshop: @workshop, user: nil, email: @teacher.alternate_email
+    create(:pd_teacher_application, user: @teacher, status: 'accepted')
+    enrollment = create(:pd_enrollment, workshop: @workshop, user: nil, email: @teacher.alternate_email)
     sign_in @teacher
 
     assert_creates Pd::Attendance do
@@ -107,7 +107,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'select_enrollment updates enrollment and creates attendance for selection' do
     sign_in @teacher
-    enrollment = create :pd_enrollment, :from_user, user: @teacher, workshop: @workshop
+    enrollment = create(:pd_enrollment, :from_user, user: @teacher, workshop: @workshop)
 
     assert_creates Pd::Attendance do
       post :select_enrollment, params: {session_code: @session.code, enrollment_code: enrollment.code}
@@ -120,8 +120,8 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   end
 
   test 'select_enrollment assigns enrollment.user for the selected enrollment' do
-    old_account = create :teacher
-    enrollment = create :pd_enrollment, :from_user, user: old_account, workshop: @workshop
+    old_account = create(:teacher)
+    enrollment = create(:pd_enrollment, :from_user, user: old_account, workshop: @workshop)
     sign_in @teacher
 
     assert_creates Pd::Attendance do
@@ -133,8 +133,8 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'select_enrollment redirects to attend if the selection has already been taken' do
     sign_in @teacher
-    enrollment = create :pd_enrollment, :from_user, user: @teacher, workshop: @workshop
-    create :pd_attendance, session: @session, teacher: @teacher, enrollment: enrollment
+    enrollment = create(:pd_enrollment, :from_user, user: @teacher, workshop: @workshop)
+    create(:pd_attendance, session: @session, teacher: @teacher, enrollment: enrollment)
 
     assert_does_not_create Pd::Attendance do
       post :select_enrollment, params: {session_code: @session.code, enrollment_code: enrollment.code}
@@ -146,7 +146,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   end
 
   test 'select_enrollment automatically upgrades accidental student accounts if the emails match' do
-    enrollment = create :pd_enrollment, :from_user, user: @teacher, workshop: @workshop
+    enrollment = create(:pd_enrollment, :from_user, user: @teacher, workshop: @workshop)
     @teacher.update!(user_type: User::TYPE_STUDENT)
     sign_in @teacher
 
@@ -159,8 +159,8 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   end
 
   test 'select_enrollment redirects to upgrade_account when accidental student account emails dont match' do
-    student = create :student
-    enrollment = create :pd_enrollment, user: student, workshop: @workshop
+    student = create(:student)
+    enrollment = create(:pd_enrollment, user: student, workshop: @workshop)
     sign_in student
 
     assert_creates Pd::Attendance do
@@ -172,7 +172,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
   test_redirect_to_sign_in_for :upgrade_account, params: -> {{session_code: @session.code}}
 
   test 'upgrade_account succeeds for students' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get :upgrade_account, params: {session_code: @session.code}
@@ -189,7 +189,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'confirm_upgrade_account upgrades the account if the emails match' do
     email = 'accidental_student@example.net'
-    student = create :student, email: email
+    student = create(:student, email: email)
     sign_in student
 
     post :confirm_upgrade_account, params: {session_code: @session.code, email: email}
@@ -200,7 +200,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
 
   test 'confirm_upgrade_account renders upgrade_account if the emails dont match' do
     email = 'mismatch@example.net'
-    student = create :student, email: 'accidental_student@example.net'
+    student = create(:student, email: 'accidental_student@example.net')
     sign_in student
 
     post :confirm_upgrade_account, params: {session_code: @session.code, email: email}

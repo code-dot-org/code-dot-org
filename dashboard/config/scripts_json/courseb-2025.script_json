@@ -16,12 +16,12 @@
       ],
       "project_widget_visible": true,
       "show_calendar": true,
-      "version_year": "2025",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-13 18:37:49 UTC",
+    "serialized_at": "2025-10-02 16:06:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1349,7 +1349,7 @@
       "key": "7e75d890-9542-4453-b5be-6f61f2c0194c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Debugging Worksheet\" slide\n\n**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://images.code.org/4ae475692eb39eb32cb158273834fe94-Screenshot 2024-04-11 at 4.51.33 PM.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working. You want to walk to your desk but your program has a bug. Can your students help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the desk\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk from the starting point to the desk\") and the **expected outcome** (\"Arrive at the desk\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
+        "description": "\n**Display:** Display the image below so that everyone can see it.\n\n![expandable](https://images.code.org/4ae475692eb39eb32cb158273834fe94-Screenshot 2024-04-11 at 4.51.33 PM.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working. You want to walk to your desk but your program has a bug. Can your students help you fix it?\n\nTake a moment to walk them through the rules:\n\n- Start at the compass rose\n- Follow the instructions step-by-step\n- End at the desk\n\n**Do This:** Before students give you any instructions, ask them to describe the **goal** of the program (\"Walk from the starting point to the desk\") and the **expected outcome** (\"Arrive at the desk\"). Remind students that it is good practice to articulate the goal and outcome of the programs they will create before beginning to write their algorithms.    \n\n(*Optional:*  Walk through your program using your fingers on top of the map, under the document camera.  Express frustration when your fingers end up off the map, instead of at the treasure.)\n\n**Think:** _My program says \"East, East, North\"._ *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "7e75d890-9542-4453-b5be-6f61f2c0194c",
@@ -1377,7 +1377,7 @@
       "key": "a5605813-9612-410a-944e-09e3d78ec872",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the ***Worksheet** and have students complete the task in pairs.  \n\n(*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.)\n\n**Transition:** _Now it's time to play the game!_"
+        "description": "**Display**: Show \"Debugging Worksheet\" slide\n\n**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the ***Worksheet** and have students complete the task in pairs.  \n\n(*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.)\n\n**Transition:** _Now it's time to play the game!_"
       },
       "seeding_key": {
         "activity_section.key": "a5605813-9612-410a-944e-09e3d78ec872",
@@ -2071,7 +2071,7 @@
       "key": "82ea5535-c3ae-4b51-8f65-987db651a1d0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party” slide\n\nIntroduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party” slide\n\nIntroduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](/blockly/media/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
           {
             "type": "teachingTip",
@@ -2843,7 +2843,7 @@
       "key": "6b0e20b6-e776-4296-8e02-50934c4e9c0a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Big Event” slide\n\n**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each set of actions down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Project the ***Controller Image** onto your classroom screen.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n**Directions:**\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Big Event” slide\n\n**Discuss**: Prepare students for today's activity by recalling previous work they have done. \n\n- Do you remember helping _Angry Bird_ find the pig?\n\t- In that exercise, you knew in advance exactly where you wanted Red to end up, so you could make a program that took the bird from start to finish without any interruptions.\n\t- In most real programs, we can't do that because we want to have options, depending on what the user needs.\n\t\t- I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone.\n\t\t- Putting my finger on the screen would then become an \"event\" that tells my character to move.\n\n**Say**: _In earlier lessons, we created algorithms that allowed us to control a friend or bird for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each set of actions down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Project the ***Controller Image** onto your classroom screen.\n\n ![](/blockly/media/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n**Directions:**\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the overhead and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6b0e20b6-e776-4296-8e02-50934c4e9c0a",
@@ -6838,7 +6838,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/courseb-2024/resources",
+      "url": "/s/courseb-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6849,7 +6849,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/courseb-2024/standards",
+      "url": "/s/courseb-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6860,7 +6860,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/courseb-2024/vocab",
+      "url": "/s/courseb-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6944,16 +6944,15 @@
       }
     },
     {
-      "name": "CSF Course Syllabus 2024-25",
-      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/",
-      "key": "csf_course_syllabus_2024-25",
+      "name": "CSF Course Syllabus 2025-26",
+      "url": "https://docs.google.com/document/d/1nRA2acwuTBPVTqNc3NU7r_ATJLwfYPpGa4TxWthUETk/template/preview",
+      "key": "csf_course_syllabus_2025-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus_2024-25"
+        "resource.key": "csf_course_syllabus_2025-26"
       }
     },
     {
@@ -7877,7 +7876,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus_2024-25",
+        "resource.key": "csf_course_syllabus_2025-26",
         "script.name": "courseb-2025"
       }
     },

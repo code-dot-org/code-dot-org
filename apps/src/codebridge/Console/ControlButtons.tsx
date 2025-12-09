@@ -3,13 +3,11 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
@@ -20,6 +18,7 @@ import {
   setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
@@ -34,11 +33,10 @@ import moduleStyles from './console.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const isPredictLevel = predictSettings?.isPredictLevel;
-  const levelPath =
-    useAppSelector(state => getCurrentLevel(state)?.path) || 'standalone';
 
   const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
@@ -58,7 +56,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
-  const miniApp = labConfig?.miniApp?.name;
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
 
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
@@ -73,9 +73,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName, {
-        levelPath,
-      });
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,
@@ -90,7 +88,7 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
-      dispatch(setShowSuggestedPrompts(true));
+      logLevelActivity();
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

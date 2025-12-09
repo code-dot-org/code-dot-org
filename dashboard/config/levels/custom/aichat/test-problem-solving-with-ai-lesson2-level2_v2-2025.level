@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Add an Image\r\n\r\nUse AI Chat to describe an image.\r\n\r\n### Do This:\r\n1. The image you just looked at in the Unit Guide can be found in the **Library** when you click the button labeled **Add**. Attach it to your prompt.\r\n2. Prompt AI Chat to describe the image and list as many things as possible. *Can't come up with your own prompt? That's ok! You can copy one from below the instructions.*\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and **compare** it to what **you listed** about the image **in your Unit Guide**.\r\n5. Complete the **\"What's in an image?\"** and **\"Privacy and Ethical Concerns\"** sections in your Unit Guide.\r\n\r\n---\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Describe this image. List as many things as you can notice in the image.\r\n:::\r\n\r\n\r\n\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "activity1.jpg": "b6752a3f-aabb-4fe4-9b20-4d8f872dd5e7.jpg"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:35.398+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson2-level2_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson2-level2_2025\"}]"
+}]]></config>
+</Aichat>

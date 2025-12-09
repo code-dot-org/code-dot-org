@@ -1042,6 +1042,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+// Hidden by default. Manually shown for Blockly labs only (loadApp.js)
+#settings-header {
+  display: none;
+}
+
 #versions-header {
   display: none;
 }

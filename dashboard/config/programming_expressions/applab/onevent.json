@@ -17,7 +17,7 @@
     {
       "name": "Shrink and Grow",
       "description": "Grow an image on mouseover, back to normal size on mouseout.",
-      "code": "```\n// Grow an image on mouseover,\r\n// back to normal size on mouseout.\r\n\r\nimage(\"logo\", \"https://code.org/images/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"logo\", \"mouseover\", function(event){\r\n  setSize(\"logo\", 48, 48);\r\n});\r\n\r\nonEvent(\"logo\", \"mouseout\", function(event){\r\n  setSize(\"logo\", 32, 32);\r\n});\n```",
+      "code": "```\n// Grow an image on mouseover,\r\n// back to normal size on mouseout.\r\n\r\nimage(\"logo\", \"https://studio.code.org/blockly/media/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"logo\", \"mouseover\", function(event){\r\n  setSize(\"logo\", 48, 48);\r\n});\r\n\r\nonEvent(\"logo\", \"mouseout\", function(event){\r\n  setSize(\"logo\", 32, 32);\r\n});\n```",
       "app": "https://studio.code.org/projects/applab/1b8adMcaLlyk1IyeD9jXow",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -53,7 +53,7 @@
     {
       "name": "Where do you want it?",
       "description": "Move an image to the coordinates specified in a textboxes. Note that we declare one function that we use as callback for two different event handlers.",
-      "code": "```\n// Move an image to the coordinates specified in a textboxes.\r\n// Note that we declare one function that we use as callback for two different event handlers.\r\n\r\ntextLabel(\"xLabel\", \"X coordinate:\");\r\ntextInput(\"xCoordinate\", 160);\r\ntextLabel(\"yLabel\", \"Y coordinate:\");\r\ntextInput(\"yCoordinate\", 240);\r\nimage(\"logo\", \"https://code.org/images/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"xCoordinate\", \"change\", moveFromText);\r\nonEvent(\"yCoordinate\", \"change\", moveFromText);\r\n\r\n// Define a funtion that moves the image based on the text box values\r\nfunction moveFromText() { \r\n  var x = getText(\"xCoordinate\");\r\n  var y = getText(\"yCoordinate\");\r\n  setPosition(\"logo\", x, y);\r\n}\n```",
+      "code": "```\n// Move an image to the coordinates specified in a textboxes.\r\n// Note that we declare one function that we use as callback for two different event handlers.\r\n\r\ntextLabel(\"xLabel\", \"X coordinate:\");\r\ntextInput(\"xCoordinate\", 160);\r\ntextLabel(\"yLabel\", \"Y coordinate:\");\r\ntextInput(\"yCoordinate\", 240);\r\nimage(\"logo\", \"https://studio.code.org/blockly/media/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"xCoordinate\", \"change\", moveFromText);\r\nonEvent(\"yCoordinate\", \"change\", moveFromText);\r\n\r\n// Define a funtion that moves the image based on the text box values\r\nfunction moveFromText() { \r\n  var x = getText(\"xCoordinate\");\r\n  var y = getText(\"yCoordinate\");\r\n  setPosition(\"logo\", x, y);\r\n}\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

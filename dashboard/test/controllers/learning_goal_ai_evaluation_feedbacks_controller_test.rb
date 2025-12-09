@@ -3,10 +3,10 @@ require 'testing/includes_metrics'
 
 class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCase
   setup do
-    @teacher = create :teacher
+    @teacher = create(:teacher)
     sign_in @teacher
-    @learning_goal_ai_evaluation = create :learning_goal_ai_evaluation
-    @learning_goal_ai_evaluation_feedback = create :learning_goal_ai_evaluation_feedback, teacher_id: @teacher.id, learning_goal_ai_evaluation_id: @learning_goal_ai_evaluation.id
+    @learning_goal_ai_evaluation = create(:learning_goal_ai_evaluation)
+    @learning_goal_ai_evaluation_feedback = create(:learning_goal_ai_evaluation_feedback, teacher_id: @teacher.id, learning_goal_ai_evaluation_id: @learning_goal_ai_evaluation.id)
   end
 
   test 'create learning goal ai evaluation feedback without approval' do

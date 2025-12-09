@@ -15,8 +15,8 @@ class LevelGroupTest < ActiveSupport::TestCase
   end
 
   def get_evaluation_multi_dsl(id)
-    lesson1 = create :lesson
-    lesson2 = create :lesson
+    lesson1 = create(:lesson)
+    lesson2 = create(:lesson)
 
     "
     name 'evaluation_multi_#{id}'
@@ -197,9 +197,9 @@ MARKDOWN
   end
 
   test "get_sublevel_last_attempt" do
-    script = create :script, :in_single_unit_course
-    level1 = create :multi
-    level2 = create :multi
+    script = create(:script, :in_single_unit_course)
+    level1 = create(:multi)
+    level2 = create(:multi)
     level_group_dsl = <<~DSL
       name 'level_group'
 
@@ -211,14 +211,14 @@ MARKDOWN
     DSL
     LevelGroup.create_from_level_builder({}, {name: 'level_group', dsl_text: level_group_dsl})
 
-    teacher = create :teacher
-    student = create :student
+    teacher = create(:teacher)
+    student = create(:student)
 
-    student_level_source = create :level_source, data: '1'
-    teacher_level_source = create :level_source, data: '2'
+    student_level_source = create(:level_source, data: '1')
+    teacher_level_source = create(:level_source, data: '2')
 
-    create :user_level, user: student, level: level1, script: script, level_source: student_level_source
-    create :user_level, user: teacher, level: level1, script: script, level_source: teacher_level_source
+    create(:user_level, user: student, level: level1, script: script, level_source: student_level_source)
+    create(:user_level, user: teacher, level: level1, script: script, level_source: teacher_level_source)
 
     # loads student's attempt when current_user and user are provided
     assert_equal '1', LevelGroup.get_sublevel_last_attempt(teacher, student, level1, script)
@@ -288,8 +288,8 @@ MARKDOWN
     DSL
 
     # Create the sublevels.
-    create :free_response, name: 'conflicting-level-2018'
-    create :free_response, name: 'conflicting-level-2019'
+    create(:free_response, name: 'conflicting-level-2018')
+    create(:free_response, name: 'conflicting-level-2019')
 
     # Create the level_group.
     level_group = LevelGroup.create_from_level_builder({}, {name: 'my_level_group', dsl_text: level_group_input_dsl})
@@ -455,14 +455,14 @@ level 'level1_copy2'"
     srand 1
 
     # Create script with an anonymous assessment.
-    script = create :script, :in_single_unit_course
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
-    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
-    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
-    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    sub_level1 = create(:text_match, name: 'level_free_response', type: 'TextMatch')
+    sub_level2 = create(:multi, name: 'level_multi_unsubmitted', type: 'Multi')
+    sub_level3 = create(:multi, name: 'level_multi_correct', type: 'Multi')
+    sub_level4 = create(:multi, name: 'level_multi_incorrect', type: 'Multi')
+    create(:multi, name: 'level_multi_unattempted', type: 'Multi')
 
     level_group_dsl = <<~DSL
       name 'LevelGroupLevel1'
@@ -478,7 +478,7 @@ level 'level1_copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level1], assessment: true, lesson: lesson)
 
     updated_at = Time.now
 
@@ -496,18 +496,23 @@ level 'level1_copy2'"
 
     # All students did the LevelGroup, and the free response part of the survey.
     students.each_with_index do |student, student_index|
-      create :user_level, user: student, script: script, level: level1,
+      create(:user_level, user: student, script: script, level: level1,
         level_source: create(:level_source, level: level1), best_result: 100,
         submitted: true, updated_at: updated_at
+)
 
-      create :user_level, user: student, script: script, level: sub_level1,
+      create(:user_level, user: student, script: script, level: sub_level1,
         level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}")
-      create :user_level, user: student, script: script, level: sub_level2,
+)
+      create(:user_level, user: student, script: script, level: sub_level2,
         level_source: create(:level_source, level: sub_level2, data: "-1")
-      create :user_level, user: student, script: script, level: sub_level3,
+)
+      create(:user_level, user: student, script: script, level: sub_level3,
         level_source: create(:level_source, level: sub_level3, data: "-1")
-      create :user_level, user: student, script: script, level: sub_level4,
+)
+      create(:user_level, user: student, script: script, level: sub_level4,
         level_source: create(:level_source, level: sub_level4, data: "-1")
+)
     end
 
     actual_survey_results = LevelGroup.get_summarized_survey_results(script, section)
@@ -570,12 +575,12 @@ level 'level1_copy2'"
 
   test 'get_summarized_survey_results returns no results when less than 5 responses' do
     # Create script with an anonymous assessment.
-    script = create :script, :in_single_unit_course
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    create :text_match, name: 'level_free_response', type: 'TextMatch'
-    create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:text_match, name: 'level_free_response', type: 'TextMatch')
+    create(:multi, name: 'level_multi_unsubmitted', type: 'Multi')
+    create(:multi, name: 'level_multi_unattempted', type: 'Multi')
 
     level_group_dsl = <<~DSL
       name 'LevelGroupLevel1'
@@ -589,7 +594,7 @@ level 'level1_copy2'"
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
+    script_level = create(:script_level, script: script, levels: [level1], assessment: true, lesson: lesson)
 
     # Create a section
     teacher = create(:teacher)
@@ -611,7 +616,7 @@ level 'level1_copy2'"
   end
 
   test 'level group cannot contain level group' do
-    create :level_group, name: 'level group'
+    create(:level_group, name: 'level group')
 
     dsl_text = <<~DSL
       name 'other level group'
@@ -626,7 +631,7 @@ level 'level1_copy2'"
   end
 
   test 'level group cannot contain bubble choice' do
-    create :bubble_choice_level, name: 'bubble choice'
+    create(:bubble_choice_level, name: 'bubble choice')
 
     dsl_text = <<~DSL
       name 'level group'

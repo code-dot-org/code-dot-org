@@ -10,7 +10,7 @@ const DEFAULT_SUBLEVEL = {
   display_name: 'Choice 1',
   description: 'Sublevel 1 is lots of fun',
   thumbnail_url: 'some-fake.url/kittens.png',
-  url: '/s/script/lessons/1/levels/2/sublevel/1',
+  url: '/courses/course/units/1/lessons/1/levels/2/sublevel/1',
   position: 1,
   letter: 'a',
   perfect: true,

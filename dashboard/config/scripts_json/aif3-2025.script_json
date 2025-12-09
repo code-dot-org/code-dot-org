@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-03 14:58:53 UTC",
+    "serialized_at": "2025-10-20 15:32:53 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1252,7 +1252,7 @@
       "key": "bc947f08-a6b2-4949-b6a6-a4a17a6b919a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at each image, guess what it is and then determine if it’s an input or output device. Once they know what the item is and whether it’s an input or output device, have them write it in the Venn diagram below in their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that speakers are an example of output, they produce sound that the hardware user can hear.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that a controller is example of output, they have buttons that the user can press to control different things.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Then have them fill out the Venn Diagram with any other input and output devices they can think of. Explain that a headset is an example of both input and out, they produce sound that the hardware user can hear and have a microphone to capture the user speaking.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at each image, guess what it is and then determine if it’s an input or output device. Once they know what the item is and whether it’s an input or output device, have them write it in the Venn diagram below in their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that speakers are an example of output, they produce sound that the hardware user can hear.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Explain that a controller is example of input, they have buttons that the user can press to control different things.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the zoomed in image on screen and give students 30 seconds to figure out what it is. Have students share out what they think the image is.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with their partner to decide if this is input, output, or both. Have them write down the item in the corresponding category in the Venn Diagram. Then have them fill out the Venn Diagram with any other input and output devices they can think of. Explain that a headset is an example of both input and output, they produce sound that the hardware user can hear and have a microphone to capture the user speaking.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "bc947f08-a6b2-4949-b6a6-a4a17a6b919a",
@@ -1517,7 +1517,7 @@
       "key": "177a8cfe-b68f-48d7-b467-8f458a63984a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *troubleshooting*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the SNOT troubleshooting strategy and the first step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the second step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the third step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the last step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting Hardware Issues activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students should navigate to Lesson 3, Level 1.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *troubleshooting*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the SNOT troubleshooting strategy and the first step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the second step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the third step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the last step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting Hardware Issues activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students should navigate to Lesson 3, Level 1.",
         "name": "Troubleshooting Hardware Issues",
         "progression_name": "Wearable Troubleshooting Scenario"
       },
@@ -2232,7 +2232,7 @@
       "key": "78982f15-5065-41d6-b337-605a823bab8a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of vehicles or pedestrians on the street\n- Audio Data - noise level, types of sounds (car horns, rain, footsteps, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature, rain intensity\n- Text Data - Street signs, billboards, shop names, or license plate numbers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Actions being performed (chopping, stirring, plating)\n- Audio Data - Type of sounds (alarms for timers, equipment hums, verbal orders)\n- Location Data - Movements of staff (areas of the kitchen frequently occupied, paths taken between stations)\n- Environmental Data - Kitchen temperature\n- Biometric Data - Stress indicators (heart rate, hurried movements)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different 10 second scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Number and types of trees, plants, or rocks visible\n- Audio Data - Birdsong frequency and species identification\n- Location Data - Pathways and trails mapped within the scene\n- Environmental Data - Air quality\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n* **Whip Around:** Ask a question with a short response, then go around the room quickly, having each student share one thought, idea, or answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, in the rainy city scenario, they might suggest that the number of vehicles on the street might help city planners identify peak traffic times and design better traffic flow solutions. In the restaurant kitchen scenario, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. In the nature scenario, the temperature or air quality could be tracked over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario. Videos will play a specific clip if viewed within Slides. Time stamps are as follows:\n* Thunderstorm – 47:06 to 47:19\n* Cooking – 7:45 to 7:55\n* Nature – 31:57 to 32:06\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of vehicles or pedestrians on the street\n- Audio Data - noise level, types of sounds (car horns, rain, footsteps, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature, rain intensity\n- Text Data - Street signs, billboards, shop names, or license plate numbers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Actions being performed (chopping, stirring, plating)\n- Audio Data - Type of sounds (alarms for timers, equipment hums, verbal orders)\n- Location Data - Movements of staff (areas of the kitchen frequently occupied, paths taken between stations)\n- Environmental Data - Kitchen temperature\n- Biometric Data - Stress indicators (heart rate, hurried movements)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different 10 second scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Number and types of trees, plants, or rocks visible\n- Audio Data - Birdsong frequency and species identification\n- Location Data - Pathways and trails mapped within the scene\n- Environmental Data - Air quality\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n* **Whip Around:** Ask a question with a short response, then go around the room quickly, having each student share one thought, idea, or answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, in the rainy city scenario, they might suggest that the number of vehicles on the street might help city planners identify peak traffic times and design better traffic flow solutions. In the restaurant kitchen scenario, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. In the nature scenario, the temperature or air quality could be tracked over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "78982f15-5065-41d6-b337-605a823bab8a",
@@ -5961,6 +5961,150 @@
       }
     },
     {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/edit?usp=sharing",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_10",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_10"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_11",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_11"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_3"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_4"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_5",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_5"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_6"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_7",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_7"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_8",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_8"
+      }
+    },
+    {
+      "name": "[KEY] AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1G2myZQmHiKXETfLn6E7iC7n-GEf-aQkWbszX7XpEdPI/",
+      "key": "_key_ai_and_the_systems_that_power_it_unit_guide_9",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_9"
+      }
+    },
+    {
       "name": "[KEY] Build a Computer System",
       "url": "https://docs.google.com/document/d/1XpFitGPWjTMiYedgzcU6QH-xTw0ODGGq9BE0aYLo0bk/edit?usp=drivesdk",
       "key": "_key_build_a_computer_system",
@@ -6106,12 +6250,48 @@
     },
     {
       "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=sharing",
+      "key": "ai_and_the_systems_hat_power_it_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_hat_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "AI and the Systems That Power It Unit Guide",
       "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=drivesdk",
       "key": "ai_and_the_systems_that_power_it_unit_guide",
       "properties": {
       },
       "seeding_key": {
         "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "AI and the Systems that Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
+      }
+    },
+    {
+      "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1XO4Z4l7dMaK4Y1r45wDUNibkpwUaAq7joHz5qVW0Au0/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
       }
     },
     {
@@ -6151,7 +6331,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csaif3-2025/resources",
+      "url": "/s/aif3-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6162,7 +6342,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csaif3-2025/standards",
+      "url": "/s/aif3-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6173,7 +6353,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csaif3-2025/vocab",
+      "url": "/s/aif3-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -6430,6 +6610,18 @@
       }
     },
     {
+      "name": "[KEY] Data in Computer Systems",
+      "url": "https://docs.google.com/document/d/1xQ3mKCtmyJ3KbtqnFbxeCxyaKATZh18UsbevhA7uYUQ",
+      "key": "key_data_in_computer_systems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_data_in_computer_systems"
+      }
+    },
+    {
       "name": "Library Books Dataset",
       "url": "https://docs.google.com/spreadsheets/d/1HDacvJjCHt-7rycng7DXbmmpvxEi2C50JATI7hP-UEc/edit?usp=sharing",
       "key": "library_books_dataset",
@@ -6615,6 +6807,18 @@
       }
     },
     {
+      "name": "[KEY] Troubleshooting Hardware Issues",
+      "url": "https://docs.google.com/document/d/1BQFjkBGlq8ABku-7JqbYQ8mOuzpp421OjuVBshoNmOc",
+      "key": "troubleshooting_and_optimizing_hardware_key",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "troubleshooting_and_optimizing_hardware_key"
+      }
+    },
+    {
       "name": "Troubleshooting and Optimizing Software",
       "url": "https://docs.google.com/presentation/d/1mqbKGSob1u05LPmptD4ZlHbHFtHgh29XxZAW9Oj3IjI/edit?usp=drivesdk",
       "key": "troubleshooting_and_optimizing_software",
@@ -6729,7 +6933,19 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Computer System",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Computer System",
         "resource.key": "_key_build_a_computer_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Computer System",
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_2"
       }
     },
     {
@@ -6753,6 +6969,12 @@
     {
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
         "resource.key": "computer_systems_and_devices_unit_guide"
       }
     },
@@ -6771,7 +6993,19 @@
     {
       "seeding_key": {
         "lesson.key": "Data in Computer Systems",
+        "resource.key": "key_data_in_computer_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data in Computer Systems",
         "resource.key": "station_activity_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hardware",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_1"
       }
     },
     {
@@ -6807,6 +7041,12 @@
     {
       "seeding_key": {
         "lesson.key": "How AI Uses Data",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How AI Uses Data",
         "resource.key": "_key_how_ai_uses_data"
       }
     },
@@ -6826,6 +7066,12 @@
       "seeding_key": {
         "lesson.key": "How AI Uses Data",
         "resource.key": "how_ai_uses_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Computer Systems",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide"
       }
     },
     {
@@ -6879,6 +7125,12 @@
     {
       "seeding_key": {
         "lesson.key": "IoT and Emerging Technologies",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IoT and Emerging Technologies",
         "resource.key": "_key_lesson_10_-_unit_guide"
       }
     },
@@ -6921,6 +7173,12 @@
     {
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Just Because We Can, Should We?",
         "resource.key": "ai_and_emerging_technology_slide_template"
       }
     },
@@ -6946,6 +7204,12 @@
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
         "resource.key": "technology_ethics_roleplaying_discussion_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_7"
       }
     },
     {
@@ -6987,7 +7251,19 @@
     {
       "seeding_key": {
         "lesson.key": "Software and Operating Systems",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Software and Operating Systems",
         "resource.key": "_key_scavenger_hunt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Software and Operating Systems",
+        "resource.key": "ai_and_the_systems_hat_power_it_unit_guide"
       }
     },
     {
@@ -7059,6 +7335,18 @@
     {
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
         "resource.key": "guess_who_device_edition"
       }
     },
@@ -7071,7 +7359,19 @@
     {
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Hardware",
+        "resource.key": "troubleshooting_and_optimizing_hardware_key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Hardware",
         "resource.key": "troubleshooting_hardware_issues"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Troubleshooting and Optimizing Software",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_4"
       }
     },
     {
@@ -7096,6 +7396,12 @@
       "seeding_key": {
         "lesson.key": "Troubleshooting and Optimizing Software",
         "resource.key": "troubleshooting_and_optimizing_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Testing",
+        "resource.key": "_key_ai_and_the_systems_that_power_it_unit_guide_10"
       }
     },
     {
@@ -7172,6 +7478,16 @@
   ],
   "vocabularies": [
     {
+      "key": "aggregate",
+      "word": "Aggregate",
+      "definition": "Combining data to show a summary, like totals or averages",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "aggregate"
+      }
+    },
+    {
       "key": "application_specific_integrated_circuit_asic_",
       "word": "Application-Specific Integrated Circuit (ASIC)",
       "definition": "a processor made for one specific task",
@@ -7204,7 +7520,7 @@
     {
       "key": "data",
       "word": "data",
-      "definition": "any form of organized information, such as words, numbers, pictures, etc.",
+      "definition": "Information that is collected, stored, and used to understand and solve problems",
       "properties": {
       },
       "seeding_key": {
@@ -7239,6 +7555,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "field_programmable_gate_array_fpga_"
+      }
+    },
+    {
+      "key": "filter",
+      "word": "filter",
+      "definition": "a tool or process used to select specific data points from a larger set based on certain criteria or conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "filter"
       }
     },
     {
@@ -7319,6 +7645,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "key": "sort",
+      "word": "Sort",
+      "definition": "Organizing data in a specific order, like A to Z or biggest to smallest",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sort"
       }
     },
     {
@@ -7441,6 +7777,24 @@
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
         "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "vocabulary.key": "aggregate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "vocabulary.key": "filter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing Data in a System",
+        "vocabulary.key": "sort"
       }
     },
     {

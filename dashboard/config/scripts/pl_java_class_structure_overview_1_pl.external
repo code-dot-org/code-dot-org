@@ -1,0 +1,28 @@
+name 'pl-java-class-structure-overview-1_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+
+## Lesson 3: Class Design and Structure
+
+#### This unit expands on the object-oriented programming principles and explores design principles as you develop classes with attributes and behaviors and work with primitive and object data. 
+
+<img src="https://images.code.org/18fe73340df9a28d69169f848c54c369-image-1747666534229.png" alt="icon of a blueprint with a building, pencil, and ruler" width="200px" style="border-radius:10px; float:right; margin: 40px 0 40px 40px;">
+
+### **After this lesson, you will be able to:**
+- #### Represent attributes of an object using instance variables
+- #### Write no-argument and parameterized constructors to set the state of an object
+- #### Write expressions using arithmetic operators and compound assignment operators with variables and object data
+- #### Write accessor and mutator methods to obtain and modify object data
+- #### Write `toString()` methods and use escape sequences to display and format information about an object to the console
+
+ 
+
+<hr>
+
+## Let's continue! 
+
+
+MARKDOWN

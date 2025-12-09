@@ -2,5 +2,5 @@
   "key": "conditionals_implement_if_else",
   "concept": "conditional",
   "description": "Implement if-else conditionals to control the flow of a program",
-  "evaluation_criteria": "Does the condftional have an effect on the program's output? Is the boolean statement structured in a manner consistent with the conditional's purpose?"
+  "evaluation_criteria": "Does the conditional have an effect on the program's output? Is the boolean statement structured in a manner consistent with the conditional's purpose?"
 }

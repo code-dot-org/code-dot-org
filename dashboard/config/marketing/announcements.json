@@ -1,11 +1,11 @@
 {
   "pages": {
     "/home": "",
-    "/student-home": ""
+    "/student-home": "mix-move-ai-launch-2025"
   },
   "banners": {
     "superhero": {
-      "image": "/images/marketing/superhero_teacherdash.png",
+      "image": "/blockly/media/marketing/superhero_teacherdash.png",
       "title": "Help your students become superheroes!",
       "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
       "buttonText": "Learn More",
@@ -28,6 +28,15 @@
       "buttonText": "Join our research community",
       "buttonUrl": "https://greatquestion.co/codedotorg/userresearch",
       "buttonId": "user-research-aug-2024"
+    },
+    "mix-move-ai-launch-2025": {
+      "dcdo": "hoai-2025-dec-launch",
+      "image": "/shared/images/banners/banner-mix-move-ai-launch-2025.png",
+      "title": "Introducing Mix & Move with AI",
+      "body": "Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.",
+      "buttonText": "Explore Mix & Move with AI",
+      "buttonUrl": "https://code.org/mix-move-ai",
+      "buttonId": "mix-move-ai-launch-2025"
     }
   }
 }

@@ -12,7 +12,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "career-journey-pilot-a",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "pilot_experiment": "career-journeys-elem-a",
     "version_year": "unversioned"
   },

@@ -58,6 +58,7 @@ class ActivitiesController < ApplicationController
       share_failure = nil
       # True if STUDIO game. The other open-ended 'game's geared for young users
       # are channel-backed and filtered in loadProjectBackedLevel_ in project.js.
+      # Note that STUDIO games also include Star Wars (droplet) which is not a Blockly lab.
       if @level.game.sharing_filtered?
         project_type = 'playlab'
         begin
@@ -156,13 +157,6 @@ class ActivitiesController < ApplicationController
       share_failure: share_failure,
       user_level: @user_level
     )
-
-    # log this at the end so that server errors (which might be caused by invalid input) prevent logging
-    log_milestone(@level_source, params)
-  end
-
-  private def milestone_logger
-    @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
   private def track_progress_for_user
@@ -183,7 +177,8 @@ class ActivitiesController < ApplicationController
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
         locale: locale,
-        time_spent: time_since_last_milestone
+        time_spent: time_since_last_milestone,
+        unit_group: @unit_group
       )
 
       is_sublevel = @script_level.levels.exclude?(@level)
@@ -203,7 +198,8 @@ class ActivitiesController < ApplicationController
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
           locale: locale,
-          time_spent: time_since_last_milestone
+          time_spent: time_since_last_milestone,
+          unit_group: @unit_group
         )
       end
 
@@ -234,21 +230,5 @@ class ActivitiesController < ApplicationController
 
       client_state.add_script(@script_level.script_id)
     end
-  end
-
-  private def log_milestone(level_source, params)
-    log_string = 'Milestone Report:'
-    log_string +=
-      if current_user || session.id
-        "\t#{current_user ? current_user.id.to_s : ('s:' + session.id.to_s)}"
-      else
-        "\tanon"
-      end
-    log_string += "\t#{request.remote_ip}\t#{params[:app]}\t#{params[:level]}\t#{params[:result]}" \
-                  "\t#{params[:testResult]}\t#{params[:time]}\t#{params[:attempt]}\t#{params[:lines]}"
-    log_string += level_source.try(:id) ? "\t#{level_source.id}" : "\t"
-    log_string += "\t#{request.user_agent}"
-
-    milestone_logger.info log_string
   end
 end

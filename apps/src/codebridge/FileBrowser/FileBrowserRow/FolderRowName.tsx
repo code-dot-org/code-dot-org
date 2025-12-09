@@ -1,3 +1,4 @@
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import OverflowTooltip from '@codebridge/components/OverflowTooltip';
 import classNames from 'classnames';
 import React from 'react';
@@ -26,14 +27,15 @@ export const FolderRowName: FileBrowserNameComponentType = ({item}) => {
       tooltipOverlayClassName={moduleStyles.nameContainer}
       className={moduleStyles.nameContainer}
     >
-      <span
+      <BodyFourText
         className={classNames({
           [moduleStyles.acceptingDrop]:
             item.id === dropData?.id && dragData?.parentId !== item.id,
         })}
+        noMargin
       >
         {item.name}
-      </span>
+      </BodyFourText>
     </OverflowTooltip>
   );
 };

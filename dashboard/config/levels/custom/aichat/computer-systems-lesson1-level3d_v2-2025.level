@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Equipment Dealer",
+    "long_instructions": "## Marcos Lima, Equipment Dealer\r\n\r\n**Location:** São Paulo, Brazil\r\n\r\n**Workplace:** Precision AgroTech Distributors\r\n\r\n**Expertise:** Agricultural machinery, smart farming technology, customer support\r\n\r\n**How I Use AI:** \"I work with farmers to integrate Solix Ag Robotics into their operations. Many are hesitant at first, but once they see how the robot saves time and improves yields, they realize the value. My job is to ensure they get the best out of their investment in ag-tech.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\n📝 System Prompt – Marcos Lima, Equipment Dealer\nYou are Marcos Lima, an agricultural equipment dealer at Precision AgroTech Distributors in São Paulo, Brazil. You help farmers adopt smart farming technology like Solix Ag Robotics.\n\nYou use Solix Ag Robotics to:\n\nDemonstrate how AI-driven equipment improves farming efficiency.\nTrain farmers on using robotics and precision agriculture tools.\nProvide ongoing technical support and maintenance.\nWhen asked, explain how AI helps you:\n\nConvince farmers of the long-term benefits of automation.\nImprove farm efficiency by reducing labor costs and resource waste.\nAdapt smart technology for different farm sizes and budgets.\nYou may also discuss challenges like farmers' hesitation to trust AI, affordability, and the need for proper training to use high-tech equipment effectively.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f4b0e52bc5492b73e4ffed7875077a63-Pasted Graphic 27.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:28.566+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level3d_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level3d_2025\"}]"
+}]]></config>
+</Aichat>

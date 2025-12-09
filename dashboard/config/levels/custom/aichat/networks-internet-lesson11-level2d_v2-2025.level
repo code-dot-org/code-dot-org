@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T20:05:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# AI-Driven Encryption  \r\n\r\nThis chatbot has been fine-tuned to provide insights into **AI-Driven Encryption** and its role in cybersecurity.  \r\n\r\n## **Do This:**  \r\n\r\n### Explore AI in Security (Activity)\r\n- Interact with the chatbot to understand how **AI-Driven Encryption** works and how it helps protect sensitive data.  \r\n- Use the **Conversation Starters** below to guide your exploration:  \r\n   - **Solution Overview:** *How does AI-Driven Encryption work?*  \r\n   - **Problem Addressed:** *What network vulnerabilities does it target?*  \r\n   - **Pros & Cons:** *What are the advantages and limitations of this solution?*  \r\n   - **Project Application:** *How could this be used to mitigate risks in my chosen company scenario?*  \r\n\r\n### Risk Assessment Application \r\n- Use the chatbot’s responses to refine your **Network Security Risk Assessment** by identifying how AI-Driven Encryption could help **secure, encode, and protect** sensitive data from cyber threats.  \r\n\r\n### Tip: \r\n- If the chatbot’s response is unclear, try **rephrasing your question** with more details for a **more targeted answer**.  \r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "Healthcare Data Security (MediSure Health Systems)\n\nEncrypts electronic health records to prevent patient data leaks.\nUses AI to detect unauthorized access attempts and re-encrypt data.\n",
+          "Banking & Financial Transactions (FinTrust Banking Solutions)\n\nProtects customer transactions and financial data with AI-enhanced encryption.\nUses AI to automatically rotate encryption keys to prevent breaches.",
+          "IoT Security in Robotics (NovaTech Robotics)\n\nEncrypts communication between IoT-connected robots to prevent tampering.\nUses AI to adjust encryption strength based on detected security threats.",
+          "User Data Protection in Streaming Services (StreamView Entertainment)\n\nSecures customer login credentials and payment details through AI-enforced encryption.\nDetects suspicious account activity and automatically re-encrypts compromised accounts.",
+          "Examples of Good Responses:\nHow does AI-Driven Encryption work?\n\n\"AI-Driven Encryption uses machine learning to automatically encrypt sensitive data and adjust encryption keys based on security risks. It ensures data stays protected, even if attackers breach a system.\"\nWhat vulnerabilities does it address?\n\n\"This method helps prevent data leaks, unauthorized access, and weak encryption keys by continuously monitoring threats and strengthening encryption when needed.\""
+        ],
+        "modelCardInfo": {
+          "botName": "AI-Driven Encryption Expert",
+          "description": "This chatbot helps students explore AI-Driven Encryption in cybersecurity. It explains how AI enhances encryption methods, protects sensitive data, and prevents unauthorized access.",
+          "intendedUse": "Educational Purposes: Designed to help students understand AI-Driven Encryption and how it secures digital information.\nProject Support: Assists students in applying AI-driven security solutions to their Network Security Risk Assessments.\nGuided Exploration: Encourages students to ask structured questions and think critically about encryption security.\n",
+          "limitationsAndWarnings": "Not a real cybersecurity tool: This chatbot provides educational insights only and should not be used for real-world encryption decisions.\nSimplified explanations: Responses are tailored for students and may not include all technical details used in professional encryption security.\nPotential Encryption Trade-offs: AI-driven encryption can be resource-intensive and may cause performance slowdowns—students should consider these factors in their assessments.",
+          "testingAndEvaluation": "Tested for clarity and accuracy in explaining AI-Driven Encryption in an educational setting.\nEvaluated using real-world cybersecurity scenarios from the student project (healthcare, banking, robotics, and streaming services).\nReviewed for student accessibility, ensuring responses are clear, relevant, and encourage critical thinking.",
+          "exampleTopics": [
+            "How does AI-Driven Encryption work?",
+            "What types of cyber threats does AI-Driven Encryption help prevent?",
+            "What are the benefits of AI-Driven Encryption?",
+            "How could a streaming service use AI encryption to prevent data leaks?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI security expert specializing in AI-Driven Encryption for network security. Your goal is to help users understand how AI enhances encryption methods to protect sensitive data from cyber threats. You will provide insights into how AI-driven encryption works, what vulnerabilities it mitigates, and how it can be applied to cybersecurity risk assessments.\nYour Expertise & Role:\nExplain how AI-Driven Encryption works, including real-time encryption, adaptive key management, and automated encryption policies.\nIdentify which network vulnerabilities (e.g., weak passwords, social engineering, data breaches) this solution can help mitigate.\nDiscuss advantages and limitations, including AI’s ability to strengthen encryption security but also the risks of AI-generated keys being targeted.\nProvide practical applications of AI-Driven Encryption in different cybersecurity scenarios.\nHow to Respond:\nUse concise, student-friendly explanations while maintaining technical accuracy.\nWhen a user asks about a specific vulnerability, connect it to how AI-Driven Encryption can mitigate it.\nIf asked about drawbacks, mention processing power requirements, potential decryption speed delays, and encryption key security.\nRelate responses to real-world cybersecurity threats without overwhelming technical jargon.\nEncourage users to think critically about how this solution could be integrated into their risk assessment projects.\nTone & Style:\nBe engaging, clear, and professional.\nKeep responses concise but informative.\nEncourage critical thinking and application.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Explore how AI-Driven Encryption helps enhance traditional encryption methods. Learn how AI applies real-time encryption, adaptive encryption keys, and encryption policies to protect from phishing, hacking, and suspicious activity.",
+    "display_name": "AI-Driven Encryption",
+    "thumbnail_url": "https://images.code.org/88666c1b73fe399910423aad6fb7c299-encrypted.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:05:29.903+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson11-level2d_2025\\\"\"],\"cloned_from\":\"networks-internet-lesson11-level2d_2025\"}]"
+}]]></config>
+</Aichat>

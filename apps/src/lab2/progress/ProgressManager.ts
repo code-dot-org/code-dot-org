@@ -12,7 +12,7 @@ export abstract class Validator {
   abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
   abstract conditionsMet(conditions: Condition[]): boolean;
-  abstract clear(): void;
+  abstract clear(isChangingLevels?: boolean): void;
   abstract getValidationResults(): ValidationResult[] | undefined;
   didPassExemplarValidation(): boolean {
     return false;
@@ -41,7 +41,8 @@ export type TestStatus =
   | 'SKIP'
   | 'ERROR'
   | 'EXPECTED_FAILURE'
-  | 'UNEXPECTED_SUCCESS';
+  | 'UNEXPECTED_SUCCESS'
+  | 'PENDING';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
@@ -74,7 +75,7 @@ export default class ProgressManager {
   ) {
     this.currentValidations = validations;
     this.exemplarSettings = exemplarSettings;
-    this.resetValidation();
+    this.resetValidation(true);
   }
 
   setValidator(validator: Validator) {
@@ -164,10 +165,10 @@ export default class ProgressManager {
     this.onProgressChange();
   }
 
-  resetValidation() {
+  resetValidation(isChangingLevels: boolean = false) {
     if (this.validator) {
       // Give the lab the chance to clear accumulated satisfied conditions.
-      this.validator.clear();
+      this.validator.clear(isChangingLevels);
     }
 
     const hasConditions =

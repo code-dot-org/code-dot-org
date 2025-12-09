@@ -20,13 +20,14 @@ import {
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
+import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -88,9 +89,11 @@ describe('TeacherHomepage', () => {
   let fetchSpy: jest.SpyInstance;
   let sendEventSpy: jest.SpyInstance;
   let jquerySpy: jest.SpyInstance;
+  let postSpy: jest.SpyInstance;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    postSpy = jest.spyOn(HttpClient, 'post');
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     jquerySpy = jest.spyOn($, 'getJSON');
     stubRedux();
@@ -104,8 +107,28 @@ describe('TeacherHomepage', () => {
         url === '/marketing/teacher/promotions/55R4y1NlZ0qJG9O0qgyq0Q'
       ) {
         return Promise.resolve({value: [], response: new Response()});
+      } else if (
+        url === '/teacher_dashboard/get_school_info_interstitial_data'
+      ) {
+        return Promise.resolve({
+          value: {
+            showSchoolInfoInterstitial: false,
+            showSchoolInfoConfirmation: false,
+            existingSchoolInfo: {},
+          },
+          response: new Response(),
+        });
       }
       return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    postSpy.mockImplementation((url: string) => {
+      if (url === '/aidiff_threads/curriculum_courses') {
+        return Promise.resolve({
+          json: () => Promise.resolve({courses: []}),
+        });
+      }
+      return Promise.resolve({json: () => Promise.resolve({})});
     });
 
     const mockDone = jest.fn();
@@ -160,7 +183,20 @@ describe('TeacherHomepage', () => {
     );
   }
 
-  it('sends analytics event when visiting the page', async () => {
+  it('sends analytics event when logging in', async () => {
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.TEACHER_LOGIN_EVENT,
+      {
+        'user id': 1,
+      },
+      PLATFORMS.BOTH
+    );
+  });
+
+  it('sends analytics event when visiting page after login', async () => {
+    trySetSessionStorage('logged_teacher_session', 'true');
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(

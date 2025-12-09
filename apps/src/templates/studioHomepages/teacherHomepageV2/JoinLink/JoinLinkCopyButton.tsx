@@ -4,7 +4,7 @@ import {
   TooltipOverlay,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
-import {OverlineOneText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -86,18 +86,18 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   return loginType &&
     (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
     hidden ? (
-      <OverlineOneText>
+      <Typography variant="overline1" gutterBottom>
         <span>{i18n.sectionCodeWithColon()}</span>{' '}
         <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
-      </OverlineOneText>
+      </Typography>
     ) : (
       <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
         {!showCopiedMsg && (
           <TooltipOverlay>
             <span className={styles.sectionCodeText}>
-              <OverlineOneText>
+              <Typography variant="overline1" gutterBottom>
                 <span>{i18n.sectionCodeWithColon()}</span>
-              </OverlineOneText>
+              </Typography>
               <WithTooltip
                 tooltipProps={{
                   tooltipId: 'section-code',
@@ -108,15 +108,16 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
                   iconLeft: {iconName: 'copy'},
                 }}
               >
-                <OverlineOneText>
+                <Typography variant="overline1" gutterBottom>
                   <button
+                    id={'ui-test-section-code-button'}
                     className={styles.sectionCode}
                     onClick={handleCopySectionCode}
                     type="button"
                   >
                     {sectionCode}
                   </button>
-                </OverlineOneText>
+                </Typography>
               </WithTooltip>
             </span>
           </TooltipOverlay>
@@ -130,7 +131,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
         className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
         id="uitest-no-section-code"
       >
-        <OverlineOneText>
+        <Typography variant="overline1" gutterBottom>
           {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`}
           <button
             onClick={() => showSectionCodeDialog()}
@@ -141,7 +142,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
           >
             <FontAwesomeV6Icon iconName="question-circle" iconStyle="regular" />
           </button>
-        </OverlineOneText>
+        </Typography>
       </div>
       {shouldShowDialog && (
         <Dialog

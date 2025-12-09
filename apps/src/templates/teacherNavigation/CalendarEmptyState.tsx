@@ -15,7 +15,9 @@ import {
 
 export const CalendarEmptyState: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
-  const versionYear = useAppSelector(state => state.calendar?.versionYear);
+  const versionYear = useAppSelector(state => {
+    return state.calendar?.versionYear;
+  });
   const isLegacyScript = versionYear ? versionYear < 2021 : false;
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
   const showNoCurriculumAssigned = !selectedSection.courseOfferingId;

@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:15.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -55,7 +59,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"787b2c88-f58d-4b6c-9dc6-7e911d55ddf1\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"787b2c88-f58d-4b6c-9dc6-7e911d55ddf1\": {\r\n      \"name\": \"cherry\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/nnWv_s.3aeXdu0uVYysrYRCzyPYya7DD/category_food/cherry.png\",\r\n      \"frameSize\": {\r\n        \"x\": 132,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nnWv_s.3aeXdu0uVYysrYRCzyPYya7DD\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"787b2c88-f58d-4b6c-9dc6-7e911d55ddf1\"\n  ],\n  \"propsByKey\": {\n    \"787b2c88-f58d-4b6c-9dc6-7e911d55ddf1\": {\n      \"name\": \"cherry\",\n      \"sourceUrl\": \"/api/v1/animation-library/nnWv_s.3aeXdu0uVYysrYRCzyPYya7DD/category_food/cherry.png\",\n      \"frameSize\": {\n        \"x\": 132,\n        \"y\": 300\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"nnWv_s.3aeXdu0uVYysrYRCzyPYya7DD\"\n    }\n  }\n}",
     "callout_json": "[]",
     "instructions_important": "false",
     "hide_animation_mode": "false",
@@ -91,10 +95,6 @@
     "encrypted_examples": "s5Dzdm7PSSjq/YyCYUwdqACPcTM5aecXH5dP3/9sYigPT+Nfm84iOLaWqyEt\nGo+HrVgVYA/MMFPr5/z2nveIlw==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:15.000Z",
-  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:15.186+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites name sprite_2021\\\"\"],\"cloned_from\":\"CSD U3 Sprites name sprite_2021\"}]"

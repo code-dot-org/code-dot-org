@@ -5,8 +5,8 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     Unit.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @script = create(:single_unit_course).first_unit
-    @lesson_group = create :lesson_group, script: @script
-    @lesson = create :lesson, script: @script, lesson_group: @lesson_group
+    @lesson_group = create(:lesson_group, script: @script)
+    @lesson = create(:lesson, script: @script, lesson_group: @lesson_group)
     @maze_data = {game_id: 25, user_id: 1, name: '__bob4', level_num: 'custom', skin: 'birds', short_instructions: 'sdfdfs'}
     @level = Maze.create(@maze_data)
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'

@@ -11,12 +11,18 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setAudioSummaryTranscript,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -118,6 +124,13 @@ const COURSES_WITH_PROGRESS = [
   },
 ];
 
+const LESSON_SUMMARY = {
+  learning_objective: 'Sample learning objective info.',
+  lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
+  misconceptions: ['Misconception 1', 'Misconception 2'],
+  tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+};
+
 describe('LessonMaterialsContainer', () => {
   let store: Store;
   let fetchSpy: jest.SpyInstance;
@@ -133,7 +146,7 @@ describe('LessonMaterialsContainer', () => {
         name: 'First lesson',
         id: 1,
         position: 1,
-        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
         lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
@@ -214,7 +227,7 @@ describe('LessonMaterialsContainer', () => {
         name: 'First lesson',
         id: 1,
         position: 1,
-        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
         lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
@@ -241,9 +254,10 @@ describe('LessonMaterialsContainer', () => {
 
   const renderDefault = async (
     showNoCurriculumAssigned = false,
-    lessonData: object = mockLessonData
+    lessonData: object = mockLessonData,
+    lessonSummary: object = LESSON_SUMMARY
   ) => {
-    mockSpy(lessonData);
+    mockSpy(lessonData, lessonSummary);
     await act(async () =>
       render(
         <Provider store={store}>
@@ -254,13 +268,16 @@ describe('LessonMaterialsContainer', () => {
       )
     );
   };
+  const realIsEnabled = experiments.isEnabled;
 
   beforeEach(() => {
+    experiments.isEnabled = jest.fn(() => true);
     stubRedux();
 
     registerReducers({
       unitSelection,
       teacherSections,
+      currentUser,
     });
 
     store = getStore();
@@ -269,16 +286,17 @@ describe('LessonMaterialsContainer', () => {
     store.dispatch(selectSection(1));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    mockSpy(mockLessonData);
+    mockSpy(mockLessonData, LESSON_SUMMARY);
   });
 
   afterEach(async () => {
     jest.resetAllMocks();
     restoreRedux();
     fetchSpy.mockReset();
+    experiments.isEnabled = realIsEnabled;
   });
 
-  const mockSpy = (lessonData: object) => {
+  const mockSpy = (lessonData: object, lessonSummary: object) => {
     fetchSpy.mockReset();
     fetchSpy.mockImplementation((path: string) => {
       if (path.includes('lesson_materials')) {
@@ -290,6 +308,12 @@ describe('LessonMaterialsContainer', () => {
       if (path.includes('section_courses')) {
         return Promise.resolve({
           value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      }
+      if (path.includes('ai_lesson_summaries')) {
+        return Promise.resolve({
+          value: {lesson_summary: JSON.stringify(lessonSummary)},
           response: new Response(),
         });
       }
@@ -495,7 +519,7 @@ describe('LessonMaterialsContainer', () => {
       await renderDefault();
       viewResource('Lesson Plan: First lesson', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
-        '/s/unit/lessons/1',
+        '/courses/course/units/1/lessons/1',
         '_blank',
         'noopener,noreferrer'
       );
@@ -604,6 +628,100 @@ describe('LessonMaterialsContainer', () => {
         'https://videos.code.org/video.mp4',
         '_self'
       );
+    });
+  });
+
+  describe('lesson summary', () => {
+    beforeEach(() => {
+      store.dispatch(setShowAITALessonSummary(true));
+    });
+
+    it('does not render lesson summary when showAITALessonSummary is false', async () => {
+      store.dispatch(setShowAITALessonSummary(false));
+
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('does not render lesson summary when lesson summary has not been generated', async () => {
+      await renderDefault(true, mockLessonData, {});
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(LESSON_SUMMARY.learning_objective)).toBe(null);
+      LESSON_SUMMARY.lesson_beats.forEach(beat =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      LESSON_SUMMARY.tips.forEach(tip =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('renders lesson summary when showAITALessonSummary is true and lesson summary has been generated', async () => {
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+      screen.getByText(LESSON_SUMMARY.learning_objective);
+      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        screen.getByText(misconception)
+      );
+      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
+    });
+
+    it('renders audio summary transcript dialog when transcript data is present', async () => {
+      const audioTranscript = [
+        {timeStamp: '0:00', text: 'First line of dialogue.'},
+        {timeStamp: '0:30', text: 'Second line of dialogue.'},
+        {timeStamp: '1:00', text: 'Third line of dialogue.'},
+      ];
+      store.dispatch(setAudioSummaryTranscript(audioTranscript));
+
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+
+      // Audio summary transcript dialog is present as well
+      fireEvent.click(screen.getByText(i18n.transcript()));
+      screen.getByText(i18n.audioTranscript());
+      audioTranscript.forEach(transcriptLine => {
+        screen.getByText(transcriptLine.timeStamp);
+        screen.getByText(transcriptLine.text);
+      });
+    });
+
+    it('does not render Personalization Quiz note if user has completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(true));
+
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.wantToSeeDifferentInformation())).toBe(
+        null
+      );
+    });
+
+    it('renders Personalization Quiz note if user has not completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(false));
+
+      await renderDefault();
+
+      screen.getByText(i18n.wantToSeeDifferentInformation());
     });
   });
 });

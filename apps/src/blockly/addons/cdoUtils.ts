@@ -7,6 +7,8 @@ import {
   processIndividualBlock,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import localization from '@cdo/apps/localization';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 
 import * as blockUtils from '../../block_utils';
@@ -21,6 +23,7 @@ import {
   ToolboxType,
 } from '../constants';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import cdoDark from '../themes/cdoDark';
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
@@ -393,37 +396,46 @@ export function getField(type: string) {
 }
 
 /**
- * Returns a theme object, based on the presence of an option in the browser's localStorage.
- * @param {?Theme} themeOption
- * @returns {?Blockly.Field}
+ * Returns a theme object, based on user preferences, localStorage, and the current theme.
+ *
+ * @param {Theme} currentTheme - A fallback theme provided by the caller.
+ * @returns {Promise<GoogleBlockly.Theme>} A resolved Blockly theme object.
  */
-export function getUserTheme(themeOption: GoogleBlockly.Theme | undefined) {
+export async function getUserTheme(
+  currentTheme: GoogleBlockly.Theme | undefined
+): Promise<GoogleBlockly.Theme> {
   if (Blockly.isJigsaw) {
     // Jigsaw uses its own custom theme with an extra large font size.
     // Blocks use hard-coded colors instead of styles, so switching
     // palettes is not possible.
     return Blockly.themes.jigsaw;
   }
-  // Today we only store the theme's base name in localStorage, which never includes 'dark'.
-  // Until March, 2024 we stored the full theme name, so we need to convert it now.
-  // getBaseName strips the 'dark' suffix from a theme name, if present.
-  const localStorageThemeBaseName = getBaseName(localStorage.blocklyTheme);
 
-  // For labs that use dark mode by default, ensure we are returning a dark theme.
-  if (themeOption?.name.endsWith(DARK_THEME_SUFFIX)) {
-    return localStorageThemeBaseName
-      ? Blockly.themes[
-          (localStorageThemeBaseName + DARK_THEME_SUFFIX) as Themes
-        ]
-      : themeOption;
-  } else {
-    // For all other labs, return a light mode theme.
-    return (
-      Blockly.themes[localStorageThemeBaseName as Themes] ||
-      themeOption ||
-      cdoTheme
-    );
+  const userPrefs = new UserPreferences();
+  const themePreference = await userPrefs.getBlocklyTheme(() =>
+    // Fallback to localStorage if user preferences are not available (e.g. signed-out users).
+    // Today we only store the theme's base name in localStorage, which never includes 'dark'.
+    // Until March, 2024 we stored the full theme name, so we need to convert it now.
+    // getBaseName strips the 'dark' suffix from a theme name, if present.
+    getBaseName(localStorage.blocklyTheme)
+  );
+
+  if (!themePreference) {
+    // The user has not indicated a preference, so we use the lab theme or a safe default.
+    return currentTheme || getDefaultTheme();
   }
+
+  // The base theme name is the name of the theme, always without the 'dark' suffix.
+  // If the user is in dark mode, we append the 'dark' suffix to the base theme name.
+  const fullThemeName =
+    themePreference + (Blockly.isDarkTheme ? DARK_THEME_SUFFIX : '');
+  const userTheme = Blockly.themes[fullThemeName as Themes];
+  return userTheme || currentTheme || getDefaultTheme();
+}
+
+// Returns the default theme based on Blockly.isDarkTheme.
+export function getDefaultTheme() {
+  return Blockly.isDarkTheme ? cdoDark : cdoTheme;
 }
 
 /**
@@ -641,7 +653,10 @@ export function getSimplifiedStateForFlyout(
 
   // Replace variable ids with names and simplify state for flyout.
   blocksCopy.blocks?.forEach(block => {
-    updateVariableFields(block, serializedVariableMap);
+    updateVariableFields(
+      block as {fields: SerializedFields},
+      serializedVariableMap
+    );
     blocksList.push(simplifyBlockState(block));
   });
 
@@ -675,14 +690,14 @@ function simplifyBlockState(block: JsonBlockConfig) {
   // Recursively check nested blocks.
   if (block.inputs?.block) {
     for (const inputKey in block.inputs) {
-      result.inputs[inputKey].block = simplifyBlockState(
+      result.inputs![inputKey].block = simplifyBlockState(
         block.inputs[inputKey].block
       );
     }
   }
   // Recursively check next block, if present.
   if (block.next?.block) {
-    result.next.block = simplifyBlockState(block.next.block);
+    result.next!.block = simplifyBlockState(block.next.block);
   }
   // Remove unnecessary properties
   delete result.id;
@@ -713,9 +728,7 @@ export function appendSharedFunctions(
 ) {
   let startBlocks;
   if (stringIsXml(startBlocksSource)) {
-    // TODO: define a type for blockUtils
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    startBlocks = (blockUtils as any).appendNewFunctions(
+    startBlocks = blockUtils.appendNewFunctions(
       startBlocksSource,
       functionsXml
     );
@@ -820,7 +833,7 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
 // This is used in order to merge XML toolbox blocks with the dynamically created
 // blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
 export function getCategoryBlocksJson(category: string) {
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks(category);
+  const levelToolboxBlocks = getLevelToolboxBlocks(category);
   if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
     return [];
   }
@@ -830,6 +843,31 @@ export function getCategoryBlocksJson(category: string) {
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );
+
+  // Localize the flyout variables
+  // These are sourced from the XML and are always in the source language
+  (blocksConvertedJson.variables || []).forEach(variable => {
+    Blockly.SourceVariables[variable.id] ||= variable.name;
+    const oldName = Blockly.SourceVariables[variable.id];
+    let newName: string = localization.translate(`[variable] ${oldName}`, [
+      'blockly-variable',
+      'blockly-block',
+    ]);
+    if (newName.startsWith('[variable] ')) {
+      newName = newName.substring(11);
+    } else {
+      console.error(
+        'Global variable translation does not have the [variable] tag (category block variable)',
+        oldName,
+        newName
+      );
+
+      // Reject the translation
+      newName = oldName;
+    }
+    variable.name = newName;
+  });
+
   const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
 
   return flyoutJson;

@@ -8,7 +8,7 @@
     {
       "name": "",
       "description": "",
-      "code": "```\n// Three sizes.\r\nimage(\"idSmall\", \"https://code.org/images/logo.png\");\r\nsetSize(\"idSmall\", 50, 50);\r\nimage(\"idMedium\", \"https://code.org/images/logo.png\");\r\nimage(\"idLarge\", \"https://code.org/images/logo.png\");\r\nsetSize(\"idLarge\", 200, 200);\n```",
+      "code": "```\n// Three sizes.\r\nimage(\"idSmall\", \"https://studio.code.org/blockly/media/logo.png\");\r\nsetSize(\"idSmall\", 50, 50);\r\nimage(\"idMedium\", \"https://studio.code.org/blockly/media/logo.png\");\r\nimage(\"idLarge\", \"https://studio.code.org/blockly/media/logo.png\");\r\nsetSize(\"idLarge\", 200, 200);\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

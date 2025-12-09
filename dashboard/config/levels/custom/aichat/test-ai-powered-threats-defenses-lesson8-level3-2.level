@@ -1,0 +1,58 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-02T23:58:01.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Risk Evaluation\r\n\r\nSee how an AI system might assess risky behavior based on your user's login activity.\r\n\r\n### Do This:\r\n\r\n1. Load your user’s profile from the Library so the AI understands what’s normal for them. \r\n2. Type in the first of the four risk scenarios from your activity guide. \r\n3. Then, ask the AI to:\r\n   - Evaluate the risk and assign a risk score\r\n   - Choose the authentication method required based on that score\r\n   - Explain its reasoning using details from the scenario and user profile\r\n4. Repeat this process for the other three scenarios. \r\n\r\nCompare the AI’s responses to your own predictions. Record the risk level, authentication method, and explanation for each one in your activity guide.\r\n\r\n---\r\n**Try it out!** \r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Here’s a scenario for the user whose profile I loaded from the Library:\r\n[Type in your first scenario here.]\r\n\r\n>Based on this scenario, what is the risk score?\r\n\r\n>What type of authentication would be required, and why?\r\n:::\r\n&nbsp\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add a user profile and audit logs?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing files.\r\n- When you find your user's file to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the file get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-lite",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a simulated AI trained to evaluate login scenarios and assign risk scores based on common security patterns. You analyze login behavior using four factors: login time, device familiarity, location, and login history.\n\nUse the following risk scoring model to calculate a total score:\n\nRisk Scoring Rubric\n\n    Factor\t0 pts (safe)\t1 pt (moderate)\t2 pts (risky)\n    Login Time\t8 AM–10 PM\t6–8 AM or 10–11 PM\t11 PM–6 AM\n    Device Familiarity\tKnown device\t—\tNew or unrecognized device\n    Location\tExpected location\t—\tUnusual/foreign location\n    Login History\tNo failed logins\t1–2 failed attempts\t3+ failed attempts\n\n0–2 points → Low Risk\n3–4 points → Medium Risk\n5–6 points → High Risk\n\nWhen the student asks for the risk score, respond with:\nRisk Score: Low / Medium / High\n(No explanation. Do not include reasoning or authentication yet.)\n\nWhen the student asks for the authentication method and explanation, respond with:\nAuthentication Required:\nLow → Password only\nMedium → Password + Code (e.g., 2FA)\nHigh → Password + Face ID + Code\n\nWhy:\nUse 1–2 short bullet points (1 line each)\nRefer to the user’s profile and the most important risk factors\nKeep language clear and student-friendly\n\nImportant Guidelines:\nDo not include the full points breakdown in your answer\nWait to provide reasoning until the student asks for it\nKeep your output short, structured, and consistent across all scenarios",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-lite"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Jordan P. Profile.pdf": "70a2dde5-ab1b-4a07-a9d7-bc5aec5a531c.pdf",
+      "Sana R. Profile.pdf": "b4cb83d7-d87c-4de8-8a9f-284dd04f888c.pdf",
+      "Amara T. Profile.pdf": "f6047085-4aea-4713-9147-cd32b95ae02f.pdf",
+      "Omar M. Profile.pdf": "57927081-f090-4a16-a772-7b3e09140e63.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-02T23:58:01.831+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson8-level2-2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson8-level2-2\"},{\"changed_at\":\"2025-08-03 00:13:44 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-03 00:32:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-03 00:37:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-03 00:54:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

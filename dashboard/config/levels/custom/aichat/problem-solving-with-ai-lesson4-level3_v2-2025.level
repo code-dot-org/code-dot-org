@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:44.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as a Technical Expert\r\n\r\nUse AI Chat to fact check a historical event, recite a quote, or verify a scientific concept.\r\n\r\n### Do This:\r\n1. Find the section in your **Unit Guide** labeled \"Providing historical or technical information\". \r\n2. Choose one of the questions below and rank how well you think a human would do.\r\n3. **Write** a prompt asking AI Chat to answer one of the questions or something similar. You may also choose to add a photo from the Library or one that you find on your own.\r\n4. Press **Send**.\r\n5. Then read **AI Chat's response**.  \r\n6. Rank how well AI did and complete the table in your **Unit Guide**.\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\nChoose one of the questions below. Click to expand:\r\n\r\n::: details [**Fact Check a Historical Event**] \r\n>Who was the first woman to fly solo across the Atlantic Ocean?\r\n\r\n(Add a photo from the Library)\r\n\r\nOR\r\n\r\n>When was the lightbulb invented, and by whom?\r\n\r\n(Add a photo from the Library)\r\n:::\r\n\r\n::: details [**Look Up a Famous Quote**]\r\n>Give me a motivational quote by Maya Angelou.\r\n\r\nOR\r\n\r\n>What is a famous quote from Albert Einstein?\r\n:::\r\n\r\n::: details [**Verify a Scientific Concept**]\r\n>Explain how photosynthesis works in one paragraph.\r\n\r\n(Add a picture from the Library)\r\n\r\nOR\r\n>What is the freezing point of mercury?\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Only respond to questions about history, science, famous quotes, famous people, or other technical knowledge. ",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Amelia Earhart.jpg": "313b1c3f-0af1-47bb-837e-26b423833870.jpg",
+      "Amelia Earhart Lockheed Electra.jpg": "8fab055d-1160-4440-b2e6-2eae6f044da4.jpg",
+      "Thomas Edison.jpg": "42e6a0ab-d017-4e9e-a075-df07b7a766c1.jpg",
+      "Edison Incandescent Light Bulb.jpg": "4687a572-afc9-4d37-b0ca-d7532fe5f556.jpg",
+      "Photosynthesis Diagram (1).png": "a5ff98cd-ae3c-400c-8ffe-b2661845e6c0.png",
+      "Photosynthesis Diagram.png": "b9da7cd2-90d7-4208-916e-aab35d4525af.png"
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:44.174+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level3_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level3_2025\"}]"
+}]]></config>
+</Aichat>

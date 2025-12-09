@@ -9,6 +9,11 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   }),
 }));
 
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  __esModule: true,
+  useAppDispatch: () => jest.fn(),
+}));
+
 jest.mock('@react-pdf/renderer', () => {
   return {
     PDFDownloadLink: () => null,
@@ -36,7 +41,6 @@ const DEFAULT_PROPS = {
   context: 'some-context',
   scriptId: 1,
   scriptName: 'Test Script',
-  unitDisplayName: 'Unit 1',
 };
 
 describe('AiDiffWelcome', () => {

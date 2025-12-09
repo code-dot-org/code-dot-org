@@ -1,0 +1,19 @@
+name 'networks-preassessment-question6_v2-2025'
+title 'Networks and the Internet Pre-Assessment: Question 6'
+
+wrong 'It allows devices to access the Internet for free'
+right 'It ensures data can still be transmitted if a connection fails'
+wrong 'It speeds up the processing power of individual computers'
+wrong 'It reduces the need for security protections'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is a benefit of redundancy in networks?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Routers and Redundancy
+
+Lesson 5: Packets
+MARKDOWN

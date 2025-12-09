@@ -10,28 +10,25 @@ module User::AiAccessible
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
+  # Chat apis trust the client to decide if it can access chat features
+  # This allows us the flexibility to do things like turn on the tutor UI
+  # with a url param, or experiment with new lab types with low friction.
+  def trust_chat_client?(client_type)
+    return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    return true if client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:FLOW_LAB]
+    false
+  end
+
+  # This was originally meant to be used to inform the UI of when to set Tutor to "sleeping"
+  # on a level that would otherwise show Tutor. It is currently unused while the
+  # permissions features for tutor and ai chat features in general are being shaped.
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
-  end
-
-  def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
-  end
-
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
+    in_ai_tutor_pilot? || in_ai_tutor_enabled_section_with_pilot_teacher?
   end
 
   def can_use_ai_iteration_tools?
-    ai_tutor_permission? && levelbuilder?
-  end
-
-  def can_view_student_ai_chat_messages?
-    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
-    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+    levelbuilder?
   end
 
   def teacher_can_access_ai_chat?
@@ -51,12 +48,12 @@ module User::AiAccessible
     DCDO.get('ai-tutor-disabled', false)
   end
 
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  private def in_ai_tutor_experiment_with_enabled_section?
+  private def in_ai_tutor_enabled_section_with_pilot_teacher?
     Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_EXPERIMENT_NAME) &&
       sections_as_student.any?(&:ai_tutor_enabled)
+  end
+
+  private def in_ai_tutor_pilot?
+    SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 end

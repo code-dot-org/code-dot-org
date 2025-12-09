@@ -1,8 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "beginCongregating",
-    "blockText": "monsters begin congregating",
-    "style": "behavior_blocks"
-  }
-}

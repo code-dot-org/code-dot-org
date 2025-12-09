@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q3_2025-pilot'
+
+question ‘How does AI make phishing attacks more dangerous?’
+
+wrong ‘It automatically blocks suspicious emails’
+wrong ‘It can detect and remove malware before it spreads’
+right ‘It can generate realistic, personalized scam messages at scale’
+wrong ‘It increases Wi-Fi speed to make scams seem more legitimate’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Phishing and Password Attacks
+MARKDOWN

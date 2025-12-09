@@ -1,5 +1,5 @@
 -# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
-- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher = (1..7).map{|x|"dimension#{x}"}
+- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher, inner_size = (1..8).map{|x|"dimension#{x}"}
 - dimensions = {}
 - dimensions[selected_language_dim] = language if accepted_languages.include?(language)
 - dimensions[env_dim] = Rails.env
@@ -16,6 +16,9 @@
   window.userAnalyticsDimensions = #{dimensions.to_json};
   if ('devicePixelRatio' in window) {
     window.userAnalyticsDimensions["#{pixel_ratio}"] = window.devicePixelRatio.toString();
+  }
+  if ('innerWidth' in window && 'innerHeight' in window) {
+    window.userAnalyticsDimensions["#{inner_size}"] = window.innerWidth.toString() + 'x' + window.innerHeight.toString();
   }
 
 / Google tag (gtag.js)

@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -38,6 +38,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.viewProgressButton()}
             icon={'chart-line'}
             sectionId={section.id}
+            sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.progress}
           />
         ) : section.studentCount > 0 && !section.courseId ? (
@@ -48,9 +49,9 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
                 iconName={'check-circle'}
                 iconStyle={'solid'}
               />
-              <BodyThreeText>
+              <Typography variant="body3" gutterBottom>
                 {i18n.studentsAdded({numStudents: section.studentCount})}
-              </BodyThreeText>
+              </Typography>
             </div>
           </div>
         ) : (
@@ -66,6 +67,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.viewLessonMaterialsButton()}
             icon={'folder-open'}
             sectionId={section.id}
+            sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
           />
         )}

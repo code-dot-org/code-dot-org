@@ -2,7 +2,7 @@ require 'test_helper'
 
 class JoinTest < ActionDispatch::IntegrationTest
   test 'signed out /join with code in query param shows link account view' do
-    section = create :section
+    section = create(:section)
 
     get "http://#{CDO.dashboard_hostname}/join?utf8=%E2%9C%93&section_code=#{section.code}&commit=Go"
 
@@ -11,7 +11,7 @@ class JoinTest < ActionDispatch::IntegrationTest
   end
 
   test 'signed out /join with code in url shows link account view' do
-    section = create :section
+    section = create(:section)
 
     get "http://#{CDO.dashboard_hostname}/join/#{section.code}"
 
@@ -28,7 +28,7 @@ class JoinTest < ActionDispatch::IntegrationTest
 
   test 'signed in /join with code in query param successfully loads join page' do
     sign_in create :student
-    section = create :section
+    section = create(:section)
 
     get "http://#{CDO.dashboard_hostname}/join?utf8=%E2%9C%93&section_code=#{section.code}&commit=Go"
 
@@ -37,7 +37,7 @@ class JoinTest < ActionDispatch::IntegrationTest
 
   test 'signed in /join with code in url successfully loads join page' do
     sign_in create :student
-    section = create :section
+    section = create(:section)
 
     get "http://#{CDO.dashboard_hostname}/join/#{section.code}"
 

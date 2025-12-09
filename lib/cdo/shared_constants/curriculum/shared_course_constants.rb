@@ -48,6 +48,7 @@ module Curriculum
         CSP: 'CSP',
         CSA: 'CSA',
         HOC: 'HOC',
+        HOAI: 'HOAI',
         foundations_of_cs: 'AIF',
         foundations_of_programming: 'Foundations of Programming',
         CSC_K_5: 'CSC K-5',
@@ -144,6 +145,7 @@ module Curriculum
     COURSE_OFFERING_MARKETING_INITIATIVES = OpenStruct.new(
       {
         hoc: 'HOC',
+        hoai: 'HOAI',
         csc: 'CSC',
         csf: 'CSF',
         csa: 'CSA',
@@ -162,7 +164,9 @@ module Curriculum
       data
       digital_literacy
       games_and_animations
+      hardware
       internet
+      music
       physical_computing
       web_design
       programming
@@ -201,6 +205,14 @@ module Curriculum
         student: ['student'],
         teacher: ['student', 'teacher'],
         facilitator: ['student', 'teacher', 'facilitator']
+      }
+    ).freeze
+
+    NUMBERED_UNITS_TYPE = OpenStruct.new(
+      {
+        none: nil,
+        auto: "auto",
+        custom: "custom"
       }
     ).freeze
   end

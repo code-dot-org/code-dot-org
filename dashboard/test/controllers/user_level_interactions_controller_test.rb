@@ -3,7 +3,7 @@ require 'test_helper'
 class UserLevelInteractionsControllerTest < ActionController::TestCase
   include LevelsHelper
   setup do
-    @student = create :student
+    @student = create(:student)
     sign_in @student
     @csp_2024_script = create(:csp_script, :with_levels)
     @csp_2024_course = create(:single_unit_course, unit: @csp_2024_script, name: 'csp-2024', family_name: 'csp', version_year: '2024')
@@ -20,7 +20,7 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
 
   test "create User Level Interaction for project level" do
     @lesson = create(:lesson, :with_lesson_group, script: @csp_2024_script)
-    @script_level = create :script_level, script: @csp_2024_script, lesson: @lesson, levels: [@csp_2024_level]
+    @script_level = create(:script_level, script: @csp_2024_script, lesson: @lesson, levels: [@csp_2024_level])
     @fake_ip = '127.0.0.1'
     @storage_id = create_storage_id_for_user(@student.id)
     channel_token = ChannelToken.find_or_create_channel_token(@csp_2024_level, @fake_ip, @storage_id, @csp_2024_script)

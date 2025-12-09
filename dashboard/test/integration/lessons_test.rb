@@ -7,9 +7,9 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true
+    @script = create(:script, name: 'unit-1', is_migrated: true)
     @course = create(:single_unit_course, unit: @script)
-    lesson_group = create :lesson_group, script: @script
+    lesson_group = create(:lesson_group, script: @script)
     @lesson = create(
       :lesson,
       script_id: @script.id,
@@ -23,9 +23,9 @@ class LessonsTest < ActionDispatch::IntegrationTest
         student_overview: 'student overview'
       }
     )
-    standard = create :standard, description: 'Standard Description'
+    standard = create(:standard, description: 'Standard Description')
     @lesson.standards = [standard]
-    standard = create :standard, description: 'Opportunity Standard Description'
+    standard = create(:standard, description: 'Opportunity Standard Description')
     @lesson.opportunity_standards = [standard]
 
     @lesson2 = create(
@@ -57,7 +57,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     )
     assert_equal @activity_section, @activity.activity_sections.first
 
-    @level = create :maze
+    @level = create(:maze)
     @script_level = create(
       :script_level,
       activity_section: @activity_section,
@@ -71,7 +71,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     )
     assert_equal @script_level, @activity_section.script_levels.first
 
-    @levelbuilder = create :levelbuilder
+    @levelbuilder = create(:levelbuilder)
   end
 
   test 'lesson show page contains expected data' do

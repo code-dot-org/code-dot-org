@@ -5,6 +5,13 @@
   // Specific typescript changes should be made in the consuming package
   "extends": "./tsconfig.node22.json",
   "compilerOptions": {
+    "lib": [
+      "es2024",
+      "DOM",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Iterator"
+    ],
     "module": "es2022",
     "moduleResolution": "bundler",
     "jsx": "react-jsx"

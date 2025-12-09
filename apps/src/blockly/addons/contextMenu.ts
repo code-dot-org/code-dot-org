@@ -4,20 +4,11 @@
 
 import * as GoogleBlockly from 'blockly/core';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
-import {
-  Themes,
-  MenuOptionStates,
-  BLOCKLY_THEME,
-  DARK_THEME_SUFFIX,
-  BLOCK_TYPES,
-} from '../constants';
+import {MenuOptionStates, BLOCK_TYPES} from '../constants';
 import {ExtendedBlockSvg} from '../types';
-import {getBaseName, isDarkTheme} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
@@ -402,82 +393,6 @@ const registerAllBlocksUnmovable = function (weight: number) {
   );
 };
 
-const themes = [
-  {
-    name: Themes.MODERN,
-    label: commonI18n.blocklyModernTheme(),
-  },
-  {
-    name: Themes.HIGH_CONTRAST,
-    label: commonI18n.blocklyHighContrastTheme(),
-  },
-  {
-    name: Themes.PROTANOPIA,
-    label: commonI18n.blocklyProtanopiaTheme(),
-  },
-  {
-    name: Themes.DEUTERANOPIA,
-    label: commonI18n.blocklyDeuteranopiaTheme(),
-  },
-  {
-    name: Themes.TRITANOPIA,
-    label: commonI18n.blocklyTritanopiaTheme(),
-  },
-];
-/**
- * Change workspace theme to specified theme
- */
-const registerTheme = function (name: Themes, label: string, weight: number) {
-  const themeOption = {
-    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      return (
-        (isCurrentTheme(name, scope.workspace)
-          ? '✓ '
-          : `${commonI18n.enable()} `) + label
-      );
-    },
-    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      if (Blockly.isJigsaw) {
-        // Jigsaw uses its own custom theme with an extra large font size.
-        // Blocks use hard-coded colors instead of styles, so switching
-        // palettes is not possible.
-        return MenuOptionStates.HIDDEN;
-      }
-      if (isCurrentTheme(name, scope.workspace)) {
-        return MenuOptionStates.DISABLED;
-      } else {
-        return MenuOptionStates.ENABLED;
-      }
-    },
-    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      localStorage.setItem(BLOCKLY_THEME, name);
-      const currentTheme = scope.workspace?.getTheme();
-      const themeName =
-        name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
-      setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
-      const analyticsData = Blockly.analyticsData;
-      analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
-        setting: EVENTS.BLOCKLY_SETTING_THEME,
-        value: name,
-        ...analyticsData,
-      });
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: name + 'ThemeOption',
-    weight,
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(themeOption);
-};
-
-function registerThemes(
-  weight: number,
-  themes: {name: Themes; label: string}[]
-) {
-  themes.forEach(theme => {
-    registerTheme(theme.name, theme.label, weight);
-  });
-}
-
 /**
  * Option to open help for a block.
  */
@@ -525,10 +440,59 @@ function registerHelp(weight: number) {
   GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
 }
 
+export enum WeightOptions {
+  CUT = 0,
+  COPY = 1,
+  PASTE = 2,
+  DELETE = 3,
+  DUPLICATE = 4,
+  DISABLE = 5,
+  MOVE = 6,
+  EDIT = 7,
+  MOVE_COMMENT = 8,
+  UNDO = 9,
+  REDO = 10,
+  COMMENT = 11,
+  HELP = 12,
+  CLEANUP = 13,
+  LEVELBUILDER = 14,
+}
+
 export const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
-  registerCustomBlockOptions();
-  registerCustomWorkspaceOptions();
+
+  const menuWeightMap: Record<string, WeightOptions> = {
+    blockCopyToStorage: WeightOptions.COPY,
+    blockPasteFromStorage: WeightOptions.PASTE,
+    blockDelete: WeightOptions.DELETE,
+    blockDuplicate: WeightOptions.DUPLICATE,
+    blockDisable: WeightOptions.DISABLE,
+    undoWorkspace: WeightOptions.UNDO,
+    redoWorkspace: WeightOptions.REDO,
+    blockComment: WeightOptions.COMMENT,
+    cleanWorkspace: WeightOptions.CLEANUP,
+  };
+  for (const [option, weight] of Object.entries(menuWeightMap)) {
+    overrideOptionWeight(option, weight);
+  }
+  registerHelp(WeightOptions.HELP); // Custom student-facing help option.
+
+  // Our levelbuilder options should all show below the registered default options.
+  let nextWeight = WeightOptions.LEVELBUILDER;
+
+  // Custom options for levelbuilder. We increment the weight for each so they are sorted
+  // in the order listed here. The ++ incrementation happens after the value is accessed.
+  registerDeletable(nextWeight++);
+  registerMovable(nextWeight++);
+  registerNextConnection(nextWeight++);
+  registerEditable(nextWeight++);
+  registerShadow(nextWeight++);
+  registerUnshadow(nextWeight++);
+  registerToggleShadowStack(nextWeight++);
+  registerOverrideBlockId(nextWeight++);
+  registerAllBlocksUndeletable(nextWeight++);
+  registerAllBlocksUneditable(nextWeight++);
+  registerAllBlocksUnmovable(nextWeight++);
 };
 
 function canBeShadow(block: GoogleBlockly.Block) {
@@ -566,36 +530,6 @@ function clearShadowState(block: GoogleBlockly.Block) {
   });
 }
 
-function isCurrentTheme(
-  theme: Themes,
-  workspace: GoogleBlockly.WorkspaceSvg | undefined
-) {
-  return (
-    getBaseName(workspace?.getTheme().name as Themes) === getBaseName(theme)
-  );
-}
-
-function setAllWorkspacesTheme(
-  newTheme: GoogleBlockly.Theme,
-  previousTheme: GoogleBlockly.Theme | undefined
-) {
-  Blockly.Workspace.getAll().forEach(baseWorkspace => {
-    // Headless workspaces do not have the ability to set the theme.
-    const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
-    if (typeof workspace.setTheme === 'function') {
-      workspace.setTheme(newTheme);
-      // Re-render blocks if the font size changed.
-      // Once https://github.com/google/blockly/issues/7782 is resolved,
-      // we should be able to remove this.
-      if (newTheme.fontStyle?.size !== previousTheme?.fontStyle?.size) {
-        workspace.getAllBlocks().map(block => {
-          block.markDirty();
-          block.render();
-        });
-      }
-    }
-  });
-}
 /**
  * Unregister some default options. We do this either because the options are needlessly
  * advanced for our target users or because the options have undesired impacts.
@@ -621,49 +555,24 @@ function unregisterDefaultOptions() {
   } catch (error) {}
 }
 
-function registerCustomBlockOptions() {
-  // Each option has a "weight": a number that determines the sort order of the option.
-  // Options with higher weights appear later in the context menu.
-
-  // Expected registered block options (from Core and plugins):
-  // 0: blockCopyToStorage
-  // 2: blockComment
-  // 5: blockDisable
-  // 6: blockDelete
-
-  // Our custom options should show below the registered default options.
-  let nextWeight = 7;
-
-  // Custom block options. We increment the weight for each so they are automatically
-  // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  registerOverrideBlockId(nextWeight++);
-  registerHelp(nextWeight++);
-  registerDeletable(nextWeight++);
-  registerMovable(nextWeight++);
-  registerNextConnection(nextWeight++);
-  registerEditable(nextWeight++);
-  registerShadow(nextWeight++);
-  registerUnshadow(nextWeight++);
-  registerToggleShadowStack(nextWeight++);
+/**
+ * Unregisters the cross-tab copy/paste options.
+ * These options are made redundant by the ones provided by @blockly/keyboard-navigation
+ */
+export function unregisterCrossTabPluginOptions() {
+  try {
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockCopyToStorage');
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(
+      'blockPasteFromStorage'
+    );
+  } catch (error) {}
 }
 
-function registerCustomWorkspaceOptions() {
-  // Each option has a "weight": a number that determines the sort order of the option.
-  // Options with higher weights appear later in the context menu.
-
-  // Expected registered workspace options (from Core and plugins):
-  // 0: blockPasteFromStorage
-  // 1: undoWorkspace
-  // 2: redoWorkspace
-  // 3: cleanWorkspace
-
-  // Our custom options should show below the registered default options.
-  let nextWeight = 3;
-
-  // Custom workspace options. We increment the weight for each so they are automatically
-  // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  registerThemes(nextWeight++, themes);
-  registerAllBlocksUndeletable(nextWeight++);
-  registerAllBlocksUneditable(nextWeight++);
-  registerAllBlocksUnmovable(nextWeight++);
+export function overrideOptionWeight(optionId: string, newWeight: number) {
+  const option = GoogleBlockly.ContextMenuRegistry.registry.getItem(optionId);
+  if (option) {
+    option.weight = newWeight;
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(optionId);
+    GoogleBlockly.ContextMenuRegistry.registry.register(option);
+  }
 }

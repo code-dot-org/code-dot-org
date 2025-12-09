@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:36.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Cats & Histograms",
+    "long_instructions": "####Cats and Histograms\r\nThis data is about 24 domesticated cats. Explore the data and answer the data questions:\r\n- Are older cats predominantly male or female?\r\n- What is the typical body length of a domesticated cat?\r\n\r\n[Google Sheets Link](https://docs.google.com/spreadsheets/d/1ANuZhH77nTzvx6DI5Pq5OnmVAno2dqef4OsihHwHD38/edit?gid=0#gid=0)\r\n\r\n**Do This**\r\n1. Add graphs to the workspace and the appropriate attributes you think might be helpful to answer the data question, “Are older cats predominantly male or female?”\r\n\r\n    :::details [**Show Me How**]\r\n    - Sort the data by the \"Sex\" column\r\n    - Make a histogram of the \"Age\" values for female\r\n    - Make a histogram of the \"Age\" values for male\r\n    - What do you notice?\r\n    - Are older cats predominantly male or female? How can you tell?\r\n    :::\r\n\r\n2. Add a new graph to the workspace and the appropriate attributes that you think might be helpful to answer the data question, “What is the typical body length of a domesticated cat?”\r\n\r\n    :::details [**Show Me How**]\r\n    - Make a histogram of the \"BodyLength\" values\r\n    - What do you notice?\r\n    - What is the typical body length of a domesticated cat? How can you tell?\r\n    :::\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Cats & Histograms",
+    "bubble_choice_description": "Can you create histograms to answer questions about cats?",
+    "thumbnail_url": "https://images.code.org/35ce6e7820fa5758b57292d29d4def14-cat.png",
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "57hymcaxRGKUlmM5f5N86b6qhj+pTTapcqbEJDsWRzZhxiLN6uwDzjJOrUgB\nisDoJRLKTR2eTnvq691+PDwGp7TjUcHg5qz0Dd2ujQXwA8gLzRuPjYnnOvBX\nvECuSgIeDrTTGvKIBJo/wn42yrlc2ljhruZRB4BnQgZDnEN+28Hj6Y5S+Zm+\nSDYTRQJOzeEGantUVNPmf5J0HGT6EIv+g/A9AmNYUCc3cWOqPCMXyus5aUd4\ntALmmfto3Y7fKJ10X6zuqiQwdFy8+HmTHA8SUsifQXUgT3SgH6rY+BHeOFV5\nI8POky4SSxEqw98f/aO0+6+u++57By9rsT2AJV5u0vokPdKaRvqm0X1sonXu\nhVJwlsYZpmL0bDgjdRz7LrhnHM5OXNrDMxahtb+SDkz1nXomqROU1lOj+RJV\ngbn/EAitJnEM4wLn5oyranf/rL58i2t6cmNWIMLaMgLh0vLAepRLNYufWZ55\nLpooLsEOqRhcewa+Pq/AwCL/Wnhk6ZKf5h2pBDEHbM+iEH3dAvErVmtYPCLO\nw1G2Tgo/gofYeX9Y+ZkDfQbsgbJS5MLgGkVK5hqf1M5GH/azsq/lU9QGR5/X\nCC2uW5R9TSZ9QjjNbBKzuxIL05rqpsiC4fkqz+2W/iVG7avAePacGAHRBKwS\nyj0yv8mZTdCp7amiCVVkzTNqmXVuCWKSvSVwAuGBQzrWRNhcry1dWjr/H6h4\nS372Cq8v6LR7nMJPEFBVtOGfP99jPwBh8TniyqWlNHGRJrLYL7HNMeZypBlV\njbBcPkZYbYHK941GRr/w0M0n4vpJ5GBFO8/UYcI9g5upGaMVrIMWpHfmf8cq\nTFmoeL/Fer7S/6yNzX6j9riI8GCBa2iE+RGkmeYBlISr8WKfKfuSgtAqnmej\nnG7WMfMtYByoxKWH2JwIuOCBlokcffVJC04aLC0SRmY5uycGjN1Z34u1bmPA\nsRFgYzQaAKXHA1oi1P+df7ALBiySDmqkgQDJ3ofiJ4Hl83fWCibnhIpE4ORF\n/d1N4eVtaIgsXdlGo8Hr+ptt0WB5CWAo84XHJdi3GqLtQOG2Q9g97JQBWPdv\n8MxQieZqrWlc3SXUNOx6pzgCzE9WmLEEMZAqSebsECC/axxbLFMXyMZzwhDj\nJoFzcWp1eh2htG2AKT+EzxRip1oerPXtScEQ5vClL5o2WY5+AUByu2wg3gSn\nKMIIxuhD8KE8zs6BMJCH8yiDUoiSjsYh7vrQNktcfWHypthMvl+Dvxvi3EfK\nTqPkqGxxv76YYYAF5hENYkhl5uo4+d/PJjA6YqrTAB6WJLEPieDbBPyuNaV3\nCaFBFCLphOztd11P+8hVGHUQat96HMJctwaNXyMIrn7tp68q19b4IqO3dxGq\ncHCKBjUsakbI/Ii8r4anszivaa96kK4nd9TK5v9ljBmFph29OcnStR4iCOqY\nsOuPV2THJdFtbqHRYIF9xs2fvmRb6ZyGxput9CQfMUAldcyttBt22Lmyc7kB\nMUSwoBa1OiGSFb+frJr9Kb5IwhEZPmwr9AfB\n",
+    "teacher_markdown": "\r\n![](https://images.code.org/11538113b108f0cd8f6e47924a710cc0-image-1721841014296.png)\r\n\r\n![](https://images.code.org/2ff2f092f7d819f507010e6121b5b8a5-image-1721841018821.png)\r\n\r\n![](https://images.code.org/905423bdc8a9ffc540d1db9cd20f0754-image-1721841020971.png)\r\n\r\nExample student responses:\r\n\r\n- Based on the histogram, it looks like older cats are predominately female.\r\n- I was able to tell that Wally might be Peebles twin or litter mate. Using the second histogram I made I can see that they are both 5 years old, both have green eyes, and while their fur isn’t exactly the same color, they are similar with Peebles having grey fur and Wally having black and white fur. The other cats that are 5 years old are orange or brown with stripes and have yellow eyes.\r\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:36.934+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level10b_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level10b_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

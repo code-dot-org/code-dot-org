@@ -1,0 +1,17 @@
+name 'networks-postassessment-question4_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 4'
+
+wrong 'Net neutrality'
+right 'The digital divide'
+wrong 'Network redundancy'
+wrong 'Cloud computing'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A town in a rural area struggles with slow Internet speeds and limited access to online resources. What is this an example of?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: The Internet's Hidden Barriers
+MARKDOWN

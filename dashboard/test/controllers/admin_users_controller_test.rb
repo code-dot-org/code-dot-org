@@ -7,8 +7,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = false
 
   setup_all do
-    @project_owner = create :student
-    @project = create :project, owner: @project_owner
+    @project_owner = create(:student)
+    @project = create(:project, owner: @project_owner)
   end
 
   setup do
@@ -18,10 +18,10 @@ class AdminUsersControllerTest < ActionController::TestCase
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
     @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
     @deleted_student.destroy
-    @malformed = create :teacher, email: 'malformed@example.com'
+    @malformed = create(:teacher, email: 'malformed@example.com')
     @malformed.update_column(:email, '')  # Bypasses validation!
 
-    @user = create :user, email: 'test_user@example.com'
+    @user = create(:user, email: 'test_user@example.com')
     @script = create(:script, :in_single_unit_course, :with_levels, levels_count: 3)
     @level = @script.script_levels.first.level  # for tests that only need a single level
     @level1 = @script.script_levels.first.level
@@ -47,6 +47,9 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity" do
     sign_in @admin
 
+    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     post :assume_identity, params: {user_id: @not_admin.id}
     assert_redirected_to '/'
 
@@ -56,6 +59,9 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by username" do
     sign_in @admin
 
+    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     post :assume_identity, params: {user_id: "  " + @not_admin.username + "  "}
     assert_redirected_to '/'
 
@@ -64,6 +70,9 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "should assume_identity by email" do
     sign_in @admin
+
+    log_payload =  {event: "assume_identity", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @not_admin.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :assume_identity, params: {user_id: @not_admin.email}
     assert_redirected_to '/'
@@ -87,7 +96,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
 
     email = 'someone_under13@somewhere.xx'
-    user = create :user, age: 12, email: email
+    user = create(:user, age: 12, email: email)
 
     post :assume_identity, params: {user_id:  email}
     assert_redirected_to '/'
@@ -98,6 +107,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity error if not found" do
     sign_in @admin
 
+    CDO.log.expects(:warn).never
     post :assume_identity, params: {user_id:  'asdkhaskdj'}
 
     assert_response :success
@@ -107,6 +117,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "should not assume_identity if not admin" do
     sign_in @not_admin
+    CDO.log.expects(:warn).never
     post :assume_identity, params: {user_id: @admin.id}
     assert_response :forbidden
     assert_equal @not_admin.id, signed_in_user_id
@@ -114,6 +125,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "should not assume_identity if not signed in" do
     sign_out @admin
+    CDO.log.expects(:warn).never
     post :assume_identity, params: {user_id: @admin.id}
 
     assert_redirected_to_sign_in
@@ -121,6 +133,9 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "undelete_user should undelete deleted user" do
     sign_in @admin
+
+    log_payload =  {event: "undelete_user", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: @deleted_student.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
 
     post :undelete_user, params: {user_id: @deleted_student.id}
 
@@ -131,6 +146,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "undelete_user should noop for normal user" do
     sign_in @admin
 
+    CDO.log.expects(:warn).never
     assert_no_difference('@user.reload.updated_at') do
       post :undelete_user, params: {user_id: @user.id}
     end
@@ -140,6 +156,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should not undelete_user if not admin" do
     sign_in @not_admin
 
+    CDO.log.expects(:warn).never
     assert_no_difference('@deleted_student.reload.updated_at') do
       post :undelete_user, params: {user_id: @deleted_student.id}
     end
@@ -149,14 +166,19 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'should delete a user' do
     sign_in @admin
-    user_to_delete = create :student
+    user_to_delete = create(:student)
+
+    log_payload =  {event: "delete_user", namespace: 'admin', request_id: request.request_id, authenticated_user_id: @admin.id, affected_user_id: user_to_delete.id}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     post :delete_user, params: {user_id: user_to_delete.id}
     assert user_to_delete.reload.deleted?
   end
 
   test 'should not delete a user if not an admin' do
     sign_in @not_admin
-    user_to_delete = create :student
+    user_to_delete = create(:student)
+    CDO.log.expects(:warn).never
     post :delete_user, params: {user_id: user_to_delete.id}
     assert_response :forbidden
     refute user_to_delete.reload.deleted?
@@ -298,12 +320,14 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "delete_progress returns error if not admin" do
     sign_in @not_admin
+    CDO.log.expects(:warn).never
     post :delete_progress, params: {user_id: @user.id, script_id: @script.id}
     assert_response :forbidden
   end
 
   test "delete_progress raises error if reason is empty" do
     sign_in @admin
+    CDO.log.expects(:warn).never
     assert_raises(ActionController::ParameterMissing) do
       post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: ''}
     end
@@ -311,11 +335,16 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test "delete_progress deletes script progress" do
     sign_in @admin
+    reason = 'Testing'
 
     UserScript.create!(user: @user, script: @script)
     assert_equal 1, @user.user_scripts.count
 
-    post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: 'Testing'}
+    log_payload =  {event: "delete_progress", namespace: 'admin', request_id: request.request_id,
+                    authenticated_user_id: @admin.id, affected_user_id: @user.id, script_id: @script.id.to_s, reason: reason}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
+    post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: reason}
     @user.reload
     assert_equal 0, @user.user_scripts.count
   end
@@ -400,8 +429,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "delete_progress deletes code reviews" do
     sign_in @admin
 
-    review1 = create :code_review, user_id: @project_owner.id, script_id: @script.id, level_id: @level1.id, project_id: @project.id
-    create :code_review_comment, code_review_id: review1.id
+    review1 = create(:code_review, user_id: @project_owner.id, script_id: @script.id, level_id: @level1.id, project_id: @project.id)
+    create(:code_review_comment, code_review_id: review1.id)
 
     post :delete_progress, params: {user_id: @project_owner.id, script_id: @script.id, reason: 'Testing'}
     assert_equal 0, CodeReview.where(user_id: @project_owner.id, script_id: @script.id).count
@@ -481,8 +510,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   test 'find user warns when multiple users have same email address' do
-    duplicate_user1 = create :user, email: 'test_duplicate_user1@example.com'
-    duplicate_user2 = create :user, email: 'test_duplicate_user2@example.com'
+    duplicate_user1 = create(:user, email: 'test_duplicate_user1@example.com')
+    duplicate_user2 = create(:user, email: 'test_duplicate_user2@example.com')
     duplicate_user2.update_column(:email, 'test_duplicate_user1@example.com')
     duplicate_user2.update_column(:hashed_email, User.hash_email('test_duplicate_user1@example.com'))
     sign_in @admin
@@ -497,6 +526,11 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'grant_permission grants user_permission' do
     sign_in @admin
+
+    log_payload =  {event: "grant_permission", namespace: 'admin', request_id: request.request_id,
+                    authenticated_user_id: @admin.id, affected_user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     assert_creates UserPermission do
       post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
     end
@@ -506,6 +540,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'grant_permission noops for student user' do
     sign_in @admin
+    CDO.log.expects(:warn).never
     post(
       :grant_permission,
       params: {user_id: @user.id, permission: UserPermission::LEVELBUILDER}
@@ -520,6 +555,11 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'revoke_permission revokes user_permission' do
     sign_in @admin
+
+    log_payload =  {event: "revoke_permission", namespace: 'admin', request_id: request.request_id,
+                    authenticated_user_id: @admin.id, affected_user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
+    CDO.log.expects(:warn).with(log_payload.to_json)
+
     assert_destroys(UserPermission) do
       get :revoke_permission, params: {user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
     end
@@ -534,7 +574,16 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'bulk_grant_permission grants multiple user_permissions' do
     sign_in @admin
-    teacher = create :teacher
+    teacher = create(:teacher)
+
+    log_payload1 =  {event: "bulk_grant_permission", namespace: 'admin', request_id: request.request_id,
+                    authenticated_user_id: @admin.id, affected_user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
+    CDO.log.expects(:warn).with(log_payload1.to_json)
+
+    log_payload2 =  {event: "bulk_grant_permission", namespace: 'admin', request_id: request.request_id,
+                     authenticated_user_id: @admin.id, affected_user_id: teacher.id, permission: UserPermission::LEVELBUILDER}
+    CDO.log.expects(:warn).with(log_payload2.to_json)
+
     assert_difference 'UserPermission.count', 2 do
       post :bulk_grant_permission, params: {emails: "#{@not_admin.email}\r\n#{teacher.email}", bulk_permission: UserPermission::LEVELBUILDER}
     end
@@ -551,7 +600,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'bulk_grant_permission does not grant user_permissions for student user' do
     sign_in @admin
     student_email = 'student@email.xx'
-    student = create :student, email: student_email
+    student = create(:student, email: student_email)
+    CDO.log.expects(:warn).never
     assert_does_not_create UserPermission do
       post :bulk_grant_permission, params: {emails: student_email, bulk_permission: UserPermission::LEVELBUILDER}
     end
@@ -567,7 +617,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'bulk_grant_permission only grants user_permission for teachers in mixed list' do
     sign_in @admin
     student_email = 'student@email.xx'
-    student = create :student, email: student_email
+    student = create(:student, email: student_email)
+    CDO.log.expects(:warn).once
     assert_difference 'UserPermission.count' do
       post :bulk_grant_permission, params: {emails: "#{@not_admin.email}\r\n#{student_email}", bulk_permission: UserPermission::LEVELBUILDER}
     end
@@ -586,7 +637,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'bulk_grant_permission does not create duplicate permission or error if user already has user_permission' do
     sign_in @admin
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     assert_does_not_create UserPermission do
       post :bulk_grant_permission, params: {emails: levelbuilder.email, bulk_permission: UserPermission::LEVELBUILDER}
     end

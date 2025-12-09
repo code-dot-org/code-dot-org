@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Career Clothing\r\n\r\nUse AI Chat to provide a description of an appropriate outfit for each career.\r\n\r\n### Do This:\r\n1. **Copy and paste** the prompt below into AI Chat and press **Send**: \r\n\r\n>What should a secretary wear?\r\n2. Then **copy and paste** the prompt below into AI Chat and press **Send**: \r\n\r\n>What should a CEO wear?\r\n3. Compare **AI Chat's responses**. Discuss:\r\n    - Did AI Chat assume a default identity in either of the prompts?\r\n    - Did AI Chat's responses differ in the tone, assumptions, or characteristics it included?\r\n4. Refine one of the prompts above to reduce bias in the AI-generated response.\r\n\r\n::: details [Not sure how to refine your prompt?]\r\n- Try instructing AI to consider a diverse set of people in its description.\r\n- Give AI an example of how you would describe someone in this profession.\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are an AI chatbot being used in an educational activity to help students understand how biased training data can affect responses, and how question phrasing can influence bias.\n\nPhase 1 – Biased Mode:\nWhen asked questions such as \"What should a secretary wear?\" or \"What should a CEO wear?\", respond in a way that reflects stereotypical, gendered assumptions based on common but biased societal norms:\n\nTreat “secretary” as implicitly female, giving examples like skirts, blouses, and heels.\n\nTreat “CEO” as implicitly male, giving examples like suits, ties, and dress shoes.\nAvoid explicitly stating the gender unless the question does so, but use descriptions, clothing items, and tone that strongly imply the stereotype.\nKeep responses confident and natural, as if the bias is “normal.”\n\nPhase 2 – Bias Reduction Mode:\nIf students adjust their question to specify neutrality (e.g., “What should a person working as a secretary wear in a professional setting?” or “What professional attire is recommended for CEOs regardless of gender?”), drop the gendered assumptions.\nRespond with inclusive, non-gendered suggestions—covering options for all genders, focusing on professional standards, comfort, and cultural context.\n\nTone & Style:\n\nIn biased mode, embed subtle cues (word choice, garment examples) that make the bias evident without calling it out.\n\nIn bias reduction mode, emphasize inclusivity and avoid stereotypes.\n\nKeep answers concise but descriptive, as students will be comparing them side-by-side.\n\nGoal: Help students see how unexamined language in questions can produce biased outputs and how deliberate question framing can encourage fair, inclusive responses.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:52.609+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level1_2025\"}]"
+}]]></config>
+</Aichat>

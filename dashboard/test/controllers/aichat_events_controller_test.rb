@@ -4,10 +4,12 @@ class AichatEventsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @authorized_teacher1 = create :authorized_teacher
-    @authorized_teacher2 = create :authorized_teacher
-    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
-    @section = create :section, user: @authorized_teacher1, unit_group: unit_group
+    @authorized_teacher1 = create(:authorized_teacher)
+    @authorized_teacher2 = create(:authorized_teacher)
+    @unauthorized_student = create(:student)
+    @unauthorized_teacher = create(:teacher)
+    unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
+    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
     @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)
@@ -24,7 +26,8 @@ class AichatEventsControllerTest < ActionController::TestCase
       aichatContext: {
         currentLevelId: @level.id,
         scriptId: @script.id,
-        channelId: "test"
+        channelId: "test",
+        clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
       }
     }
 
@@ -39,24 +42,34 @@ class AichatEventsControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
-  users = [:student, :teacher]
-  [
-    :log_chat_event,
-    :submit_teacher_feedback,
-    [:chat_history, :get]
-  ].each do |action, method = :post|
-    users.each do |user|
-      test_user_gets_response_for action,
-        name: "#{user}_no_access_#{action}_test",
-        user: user,
-        method: method,
-        response: :forbidden
-    end
-  end
-
   # *****
   # log_chat_event tests
   # *****
+
+  test 'log_chat_event returns forbidden if user is not signed in' do
+    post :log_chat_event, params: {}, as: :json
+    assert_response :forbidden
+  end
+
+  test 'teachers without access to log_chat_event get forbidden response' do
+    sign_in(@unauthorized_teacher)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :forbidden
+  end
+
+  test 'students without access to log_chat_event get forbidden response' do
+    sign_in(@unauthorized_student)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :forbidden
+  end
+
+  test 'unauthorized users can access log_chat_event from ai tutor levels' do
+    sign_in(@unauthorized_student)
+    ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
+    params_with_ai_tutor_client_type = @valid_params_log_chat_event.merge(aichatContext: @valid_params_log_chat_event[:aichatContext].merge(clientType: ai_tutor_client_type))
+    post :log_chat_event, params: params_with_ai_tutor_client_type, as: :json
+    assert_response :success
+  end
 
   test 'authorized teacher has access to log_chat_event' do
     sign_in(@authorized_teacher1)
@@ -93,7 +106,8 @@ class AichatEventsControllerTest < ActionController::TestCase
 
     # need a valid requestId for foreign key constraint
     model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
-    request = create(:aichat_request,
+    request = create(
+      :aichat_request,
       user_id: @authorized_student1.id,
       model_customizations: model_customizations.to_json,
       stored_messages: [].to_json,
@@ -116,9 +130,26 @@ class AichatEventsControllerTest < ActionController::TestCase
   # chat_history tests
   # *****
 
+  test 'chat_history returns forbidden if user is not signed in' do
+    get :chat_history, params: {}, as: :json
+    assert_response :forbidden
+  end
+
   test 'Bad request if required params are not included for chat_history' do
     sign_in(@authorized_teacher1)
-    get :chat_history, params: {studentId: @authorized_student1.id}, as: :json
+    get :chat_history, params: {userId: @authorized_student1.id}, as: :json
+    assert_response :bad_request
+  end
+
+  test 'Bad request if scriptId and channelId are both missing' do
+    sign_in(@authorized_teacher1)
+    get :chat_history, params: {userId: @authorized_student1.id, levelId: @level.id}, as: :json
+    assert_response :bad_request
+  end
+
+  test 'Bad request if scriptId is included without a levelId' do
+    sign_in(@authorized_teacher1)
+    get :chat_history, params: {userId: @authorized_student1.id, scriptId: @script.id}, as: :json
     assert_response :bad_request
   end
 
@@ -165,9 +196,61 @@ class AichatEventsControllerTest < ActionController::TestCase
     assert_equal chat_event2_response["chatMessageText"], chat_event2_stored["chatMessageText"]
   end
 
+  test 'chat_history filters by channelId (project_id) when scriptId is absent' do
+    sign_in(@authorized_teacher1)
+
+    matching_event = create(
+      :aichat_event,
+      user_id: @authorized_student1.id,
+      level_id: @level.id,
+      project_id: 456, # matches stubbed storage_decrypt_channel_id
+      aichat_event: {role: 'user', chatMessageText: 'project match', status: 'ok', timestamp: Time.now.to_i}
+    )
+    _non_matching_event = create(
+      :aichat_event,
+      user_id: @authorized_student1.id,
+      level_id: @level.id,
+      project_id: 999,
+      aichat_event: {role: 'user', chatMessageText: 'project no match', status: 'ok', timestamp: Time.now.to_i}
+    )
+
+    get :chat_history, params: {userId: @authorized_student1.id, levelId: @level.id, channelId: 'test'}, as: :json
+    assert_response :success
+    chat_events_array = json_response
+    assert_equal 1, chat_events_array.length
+    assert_equal matching_event.id, chat_events_array.first['id']
+  end
+
+  test 'chat_history prefers scriptId when both scriptId and channelId are provided' do
+    sign_in(@authorized_teacher1)
+
+    # create a project-specific event that should be ignored when scriptId is provided
+    _project_event = create(
+      :aichat_event,
+      user_id: @authorized_student1.id,
+      level_id: @level.id,
+      project_id: 456,
+      aichat_event: {role: 'user', chatMessageText: 'project event', status: 'ok', timestamp: Time.now.to_i}
+    )
+
+    get :chat_history, params: {userId: @authorized_student1.id, levelId: @level.id, scriptId: @script.id, channelId: 'test'}, as: :json
+    assert_response :success
+    chat_events_array = json_response
+    # should return only the two script-scoped events created in setup_all
+    assert_equal 2, chat_events_array.length
+    returned_ids = chat_events_array.map {|e| e['id']}.sort
+    expected_ids = [@student1_aichat_event1.id, @student1_aichat_event2.id].sort
+    assert_equal expected_ids, returned_ids
+  end
+
   # *****
   # submit_teacher_feedback tests
   # *****
+
+  test 'submit_teacher_feedback returns forbidden if user is not signed in' do
+    post :submit_teacher_feedback, params: {}, as: :json
+    assert_response :forbidden
+  end
 
   test 'submit_teacher_feedback returns bad request if eventId is missing' do
     sign_in(@authorized_teacher1)

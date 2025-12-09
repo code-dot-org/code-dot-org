@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import {
   StudentAnswer,
   StudentWorkEvaluation,
-  evaluateStudentWork,
+  evaluateFreeResponse,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {fetchMostRecentUserLevelEvaluation} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -73,7 +73,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             data =>
               data !== null &&
               !Array.isArray(data) &&
-              data.evaluation !== StudentWorkEvaluationStatus.NO_ATTEMPT
+              data.reasoning !== StudentWorkEvaluationStatus.NO_ATTEMPT
           )
           .map(({evaluation, reasoning, ...rest}) => ({
             ...rest,
@@ -138,7 +138,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
-    const aiResponse = await evaluateStudentWork(
+    const aiResponse = await evaluateFreeResponse(
       studentAnswer,
       levelData.levelId,
       levelData.unitId

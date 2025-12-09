@@ -25,9 +25,6 @@ $(() => {
           landingPageData['last_workshop_survey_course']
         }
         showDeeperLearning={landingPageData['show_deeper_learning']}
-        currentYearApplicationId={
-          landingPageData['current_year_application_id']
-        }
         hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
         plCoursesStarted={landingPageData['pl_courses_started']}
         userPermissions={landingPageData['user_permissions']}

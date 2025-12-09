@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q31_-compsys_v2-2025'
+type 'multi2'
+
+question 'What challenges did you face during this unit? (Choose top **two**.)'
+
+right 'Understanding the concepts'
+right 'Keeping up with assignments'
+right 'Working on group projects'
+right 'The topic was not interesting'
+right 'There wasn\'t enough time to finish'
+right 'No challenges'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

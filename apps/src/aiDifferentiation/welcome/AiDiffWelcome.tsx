@@ -14,8 +14,17 @@ import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
 
+import {
+  setInitialChatMessage,
+  setThreadMessages,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
@@ -23,29 +32,8 @@ import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
 import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
-import {
-  EXAMPLE_PROMPT,
-  EXPLAIN_CONCEPT_PROMPT,
-  EXTRA_PRACTICE_PROMPT,
-  FINISH_EARLY_PROMPT,
-  ADJUST_TIMING_PROMPT,
-  DEBUG_MISTAKES_PROMPT,
-  REAL_WORLD_PROMPT,
-  EXIT_TICKET_PROMPT,
-  MINI_LESSON_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGEST_CURRICULUM_PROMPT,
-  GET_STARTED_PROMPT,
-  PROFESSIONAL_LEARNING_PROMPT,
-  CREATE_SECTION_PROMPT,
-  ADDITIONAL_HELP_PROMPT,
-  APCSP_EXAM_PREPARATION_RESOURCES,
-  APCSP_EXAM_SAMPLE_QUESTIONS,
-  APCSP_EXAM_TIME_STRATEGIES,
-  APCSP_CREATE_PT_AI,
-  APCSP_CREATE_PT_PREPARATION,
-} from '../AiDiffPredefinedPrompts';
-import {ChatPrompt, Context} from '../types';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
+import {Context, SuggestPromptsType} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
@@ -65,55 +53,9 @@ interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
   firstState?: WelcomeState;
   curriculumCourses?: string[];
 }
-
-const SUGGESTED_PROMPTS_FOR_SELECTION: {
-  [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
-} = {
-  plan: {
-    initialMessage: `Let's iterate together! What would you like to change? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      EXPLAIN_CONCEPT_PROMPT,
-      EXAMPLE_PROMPT,
-      ADJUST_TIMING_PROMPT,
-      DEBUG_MISTAKES_PROMPT,
-      REAL_WORLD_PROMPT,
-    ],
-  },
-  create: {
-    initialMessage: `Let's work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      FINISH_EARLY_PROMPT,
-      EXTRA_PRACTICE_PROMPT,
-      EXIT_TICKET_PROMPT,
-      MINI_LESSON_PROMPT,
-      LESSON_HOOK_PROMPT,
-    ],
-  },
-  support: {
-    initialMessage: `Let's get started teaching on Code.org together! What would you like to do on the Code.org platform? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      SUGGEST_CURRICULUM_PROMPT,
-      GET_STARTED_PROMPT,
-      PROFESSIONAL_LEARNING_PROMPT,
-      CREATE_SECTION_PROMPT,
-      ADDITIONAL_HELP_PROMPT,
-    ],
-  },
-  apcsp: {
-    initialMessage: `Let's get started with AP prep! What would you like help with preparing for the AP exam? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      APCSP_EXAM_PREPARATION_RESOURCES,
-      APCSP_EXAM_SAMPLE_QUESTIONS,
-      APCSP_EXAM_TIME_STRATEGIES,
-      APCSP_CREATE_PT_AI,
-      APCSP_CREATE_PT_PREPARATION,
-    ],
-  },
-};
 
 const optionButton = (
   isSelected = false,
@@ -199,7 +141,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
-  unitDisplayName,
   // This should only be used for testing purposes
   firstState = 'get_started',
   curriculumCourses,
@@ -210,21 +151,21 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
 
-  const [selectedOption, setSelectedOption] = React.useState<
-    'plan' | 'create' | 'support' | 'apcsp' | null
-  >(null);
+  const [selectedOption, setSelectedOption] =
+    React.useState<SuggestPromptsType | null>(null);
 
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
+
+  const dispatch = useAppDispatch();
 
   const reportingContext = React.useMemo(() => {
     return {
       aiDiffChatContext: context,
       scriptName,
       selectedOption,
-      unitName: unitDisplayName,
       url: window.location.href,
     };
-  }, [context, scriptName, unitDisplayName, selectedOption]);
+  }, [context, scriptName, selectedOption]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -349,6 +290,24 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     }
   }, [currentWelcomeState]);
 
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
+  }, [selectedOption, dispatch]);
+
   const endPage = React.useCallback(() => {
     return (
       <div className={style.endPage}>
@@ -419,8 +378,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       setSelectedOption('plan');
       return null;
     }
-    const {initialMessage, suggestedPrompts} =
-      SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
 
     return (
       <div className={style.practicePage}>
@@ -430,10 +387,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             context={context}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-            unitDisplayName={unitDisplayName}
-            initialChatMessage={initialMessage}
-            suggestedPrompts={suggestedPrompts}
-            disableEndButtons={true}
+            hideChatHeader
           />
         </div>
         {continueAndSkipButtons(
@@ -446,7 +400,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     selectedOption,
     context,
     scriptName,
-    unitDisplayName,
     continueAndSkipButtons,
     chatContinueButtonDisabled,
   ]);

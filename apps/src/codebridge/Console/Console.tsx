@@ -1,7 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
+import RightButtons from '@codebridge/RightButtons/RightButtons';
 import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
@@ -11,6 +11,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {fetchAndSaveConsoleFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -21,7 +22,6 @@ import '@xterm/xterm/css/xterm.css';
 import ConsoleManager from './ConsoleManager';
 import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
-import RightButtons from './RightButtons';
 
 import moduleStyles from './console.module.scss';
 
@@ -32,9 +32,12 @@ const Console: React.FunctionComponent = () => {
   const [consoleManager, setConsoleManager] = useState<ConsoleManager | null>(
     null
   );
-  const {labConfig, sendConsoleInput, levelProperties} = useCodebridgeContext();
+  const {sendConsoleInput, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
-  const hasMiniApp = !!labConfig?.miniApp?.name;
+
+  const hasMiniApp = useAppSelector(
+    state => !!state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
   const fontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
   );
@@ -42,17 +45,12 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
 
-  const clearOutput = useCallback(
-    (sendAnalytics: boolean) => {
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.clearTerminalLines();
-      if (sendAnalytics) {
-        sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE, appName);
-      }
-    },
-    [appName]
-  );
+  const clearOutput = useCallback((sendAnalytics: boolean) => {
+    CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
+    if (sendAnalytics) {
+      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE);
+    }
+  }, []);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.

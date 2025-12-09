@@ -379,10 +379,10 @@ module I18n
               script_i18n_directory =
                 if script.in_initiative?('HOC')
                   File.join(I18N_SOURCE_DIR_PATH, 'Hour of Code')
-                elsif script.unversioned?
+                elsif script.get_course_version.blank? || script.get_course_version.key == CourseVersion::UNVERSIONED
                   File.join(I18N_SOURCE_DIR_PATH, 'other')
                 else
-                  File.join(I18N_SOURCE_DIR_PATH, script.version_year)
+                  File.join(I18N_SOURCE_DIR_PATH, script.get_course_version.key)
                 end
 
               source_file_path = File.join(script_i18n_directory, "#{script.name}.json")

@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q9_2025-pilot_v2-2025'
+
+question 'What is the BEST strategy to reduce the risk of AI hallucinations when asking for information?'
+
+wrong 'Ask open-ended questions so the AI has more freedom to generate creative responses.'
+right 'Be specific in your prompts, check responses for accuracy, and verify facts with external sources.'
+wrong 'Trust AI-generated content as long as it includes references, even if the references are not clickable.'
+wrong 'Use AI to summarize information from multiple sources, assuming it will filter out incorrect details.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7: AI's Wild Imagination
+MARKDOWN

@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:30.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -90,7 +94,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "callout_json": "[]",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"8c9bd614-9178-4a87-b0ee-3bb5d107c396\",\r\n    \"ad1a050b-5d48-46bd-88e4-523229176507\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"8c9bd614-9178-4a87-b0ee-3bb5d107c396\": {\r\n      \"name\": \"meadow\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/PBJke0OcZeBcSCZ4Jf1odHo4h3du1gOK/category_backgrounds/meadow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"PBJke0OcZeBcSCZ4Jf1odHo4h3du1gOK\"\r\n    },\r\n    \"ad1a050b-5d48-46bd-88e4-523229176507\": {\r\n      \"name\": \"ghost\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/tCw6E6_fbRCkfa0k_Elc0Pp5kcH67lVu/category_characters/ghost_standing.png\",\r\n      \"frameSize\": {\r\n        \"x\": 72,\r\n        \"y\": 158\r\n      },\r\n      \"frameCount\": 7,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"tCw6E6_fbRCkfa0k_Elc0Pp5kcH67lVu\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"8c9bd614-9178-4a87-b0ee-3bb5d107c396\",\n    \"ad1a050b-5d48-46bd-88e4-523229176507\"\n  ],\n  \"propsByKey\": {\n    \"8c9bd614-9178-4a87-b0ee-3bb5d107c396\": {\n      \"name\": \"meadow\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/PBJke0OcZeBcSCZ4Jf1odHo4h3du1gOK/category_backgrounds/meadow.png\",\n      \"frameSize\": {\n        \"x\": 400,\n        \"y\": 400\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"PBJke0OcZeBcSCZ4Jf1odHo4h3du1gOK\"\n    },\n    \"ad1a050b-5d48-46bd-88e4-523229176507\": {\n      \"name\": \"ghost\",\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/tCw6E6_fbRCkfa0k_Elc0Pp5kcH67lVu/category_characters/ghost_standing.png\",\n      \"frameSize\": {\n        \"x\": 72,\n        \"y\": 158\n      },\n      \"frameCount\": 7,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"tCw6E6_fbRCkfa0k_Elc0Pp5kcH67lVu\"\n    }\n  }\n}",
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
@@ -130,10 +134,6 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:30.000Z",
-  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:30.808+00:00\",\"changed\":[\"cloned from \\\"CSD games practice move with mouse_2021\\\"\"],\"cloned_from\":\"CSD games practice move with mouse_2021\"}]"

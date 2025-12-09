@@ -55,6 +55,10 @@ export function getAppOptionsEditBlocks(): string | undefined {
   }
 }
 
+export function getIsStartMode() {
+  return getAppOptionsEditBlocks() === START_SOURCES;
+}
+
 /**
  * Returns the value of isEditingExemplar provided by App Options, if available.
  * This can be used to tell if we are currently editing exemplars.
@@ -146,7 +150,10 @@ export function getActiveFileForSource(source: MultiFileSource) {
 
   // Get the first active file, if no active file then the first open file,
   // or undefined if no files are open.
-  return visibleFiles.find(f => f.active) || visibleFiles.find(f => f.open);
+  return (
+    visibleFiles.find(f => f.active) ||
+    visibleFiles.find(f => source.openFiles?.includes(f.id))
+  );
 }
 
 /**

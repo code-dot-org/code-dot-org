@@ -39,7 +39,10 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
       id={id}
       className={classnames(
         moduleStyles[visualAppearance],
-        noMargin && moduleStyles['no-margin'],
+        {
+          [moduleStyles['no-margin']]: noMargin,
+          [moduleStyles.wrapper]: semanticTag === 'div',
+        },
         className,
       )}
       style={style}

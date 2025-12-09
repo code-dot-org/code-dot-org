@@ -164,4 +164,25 @@ describe('Design System - Tabs', () => {
 
     expect(tooltip).toBeInTheDocument();
   });
+
+  it('hides tab panels when hidePanels is true', async () => {
+    renderTabs({
+      defaultSelectedTabValue: 'tab1',
+      tabs: [
+        {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
+        {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
+      ],
+      onChange: () => {},
+      name: 'test1',
+      hidePanels: true,
+    });
+
+    const tab1 = screen.getByText('tab1');
+    const tab2 = screen.getByText('tab2');
+
+    expect(tab1).toBeInTheDocument();
+    expect(tab2).toBeInTheDocument();
+    expect(screen.queryByText('tab1 content')).not.toBeInTheDocument();
+    expect(screen.queryByText('tab2 content')).not.toBeInTheDocument();
+  });
 });

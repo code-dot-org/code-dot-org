@@ -14,10 +14,10 @@
   "description": "After completing this professional learning experience, you'll be ready to get started teaching Code.org's CSD Unit 4 - AI and Machine Learning with your students.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
-  "self_paced_pl_course_offering_key": null,
+  "published_date": "2025-05-30 05:00:00 UTC",
+  "self_paced_pl_course_offering_key": "self-paced-pl-aiml",
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
-
+    "CS Discoveries"
   ]
 }

@@ -16,6 +16,7 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import localization from '@cdo/apps/localization';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -35,6 +36,7 @@ import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
+import * as BlocklyUtils from './blockly/utils';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
@@ -83,6 +85,7 @@ import {
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
 import ChallengeDialog from './templates/ChallengeDialog';
+import SettingsModal from './templates/Settings';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
 import KeyHandler from './util/KeyHandler';
@@ -536,6 +539,12 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
+    // Hook the blockly environment into the localization engine
+    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      localization.on('change', info => {
+        BlocklyUtils.updateLocale(info.rtl);
+      });
+    }
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });
@@ -582,28 +591,8 @@ StudioApp.prototype.init = function (config) {
     );
   }
 
+  this.initSettingsUI();
   this.initVersionHistoryUI(config);
-
-  if (this.isUsingBlockly() && Blockly.contractEditor) {
-    Blockly.contractEditor.registerTestsFailedOnCloseHandler(
-      function () {
-        this.feedback_.showSimpleDialog({
-          headerText: undefined,
-          bodyText: msg.examplesFailedOnClose(),
-          cancelText: msg.ignore(),
-          confirmText: msg.tryAgain(),
-          onConfirm: null,
-          onCancel: function () {
-            Blockly.contractEditor.hideIfOpen();
-          },
-        });
-
-        // return true to indicate to blockly-core that we'll own closing the
-        // contract editor
-        return true;
-      }.bind(this)
-    );
-  }
 
   if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
@@ -752,6 +741,19 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
   }
 };
 
+StudioApp.prototype.getSettingsHandler = function () {
+  return () => {
+    const contentDiv = document.createElement('div');
+    const dialog = this.createModalDialog({
+      contentDiv: contentDiv,
+      id: 'settings-modal',
+    });
+
+    ReactDOM.render(React.createElement(SettingsModal), contentDiv);
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
     var contentDiv = document.createElement('div');
@@ -781,6 +783,13 @@ StudioApp.prototype.initTimeSpent = function () {
     this.silentlyReport.bind(this),
     1000
   );
+};
+
+StudioApp.prototype.initSettingsUI = function () {
+  const settingsButton = document.getElementById('settings-header');
+  if (settingsButton) {
+    dom.addClickTouchEvent(settingsButton, this.getSettingsHandler());
+  }
 };
 
 StudioApp.prototype.initVersionHistoryUI = function (config) {
@@ -2178,7 +2187,12 @@ StudioApp.prototype.configureDom = function (config) {
     if (!runButtonWasClicked) {
       analyticsReporter.sendEvent(
         eventName,
-        {signedIn: config.isSignedIn, unitName: config.scriptName},
+        {
+          signedIn: config.isSignedIn,
+          unitName: config.scriptName,
+          levelId: config.serverLevelId,
+          levelName: config.level.name,
+        },
         PLATFORMS.BOTH
       );
       runButtonWasClicked = true;
@@ -2896,21 +2910,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.openFunctionDefinition_ = function (config) {
-  if (Blockly.contractEditor) {
-    Blockly.contractEditor.autoOpenWithLevelConfiguration({
-      autoOpenFunction: config.level.openFunctionDefinition,
-      contractCollapse: config.level.contractCollapse,
-      contractHighlight: config.level.contractHighlight,
-      examplesCollapse: config.level.examplesCollapse,
-      examplesHighlight: config.level.examplesHighlight,
-      definitionCollapse: config.level.definitionCollapse,
-      definitionHighlight: config.level.definitionHighlight,
-    });
-  } else {
-    Blockly.functionEditor.autoOpenFunction(
-      config.level.openFunctionDefinition
-    );
-  }
+  Blockly.functionEditor.autoOpenFunction(config.level.openFunctionDefinition);
 };
 
 /**

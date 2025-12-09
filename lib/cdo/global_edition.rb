@@ -2,7 +2,7 @@
 
 require 'request_store'
 require 'uri'
-require 'yaml'
+require 'cdo/yaml'
 require 'cdo/git_utils' # Necessary for 'test' environment to load test.erb.yml
 require 'cdo'
 require 'cdo/i18n'
@@ -58,7 +58,7 @@ module Cdo
     # Returns the parsed configuration for the given region.
     def self.load_config(region)
       return unless region_available?(region)
-      config = YAML.load_file(CDO.dir('config', 'global_editions', "#{region}.yml")) || {}
+      config = YAML.safe_load_file(CDO.dir('config', 'global_editions', "#{region}.yml"), aliases: true) || {}
       deep_freeze(config.deep_symbolize_keys)
     end
 

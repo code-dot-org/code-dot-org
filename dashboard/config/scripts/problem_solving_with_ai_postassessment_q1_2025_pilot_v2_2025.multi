@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q1_2025-pilot_v2-2025'
+
+question 'Which of the following is the best way to refine this prompt for a more useful AI response?'
+
+wrong 'Animals exist. Explain them to me.'
+wrong 'Tell me everything you know about every animal in the rainforest.'
+right 'Tell me three interesting facts about rainforest animals.'
+wrong 'Animals are cool. What do you think?'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Talking to Machines
+MARKDOWN

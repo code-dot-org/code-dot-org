@@ -28,8 +28,8 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa-validation-pilot",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "pilot_experiment": "csa-validation-pilot-2022",
     "version_year": "2022"
   },

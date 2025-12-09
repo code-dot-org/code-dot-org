@@ -91,7 +91,7 @@ describe('LessonEditor', () => {
       unitInfo: {
         allowMajorCurriculumChanges: true,
         courseVersionId: 1,
-        unitPath: '/s/my-script/',
+        unitPath: '/courses/my-course/units/1/',
         isProfessionalLearningCourse: false,
       },
       initialLessonData: {
@@ -359,7 +359,7 @@ describe('LessonEditor', () => {
     lessonEditor.update();
     // navigates to the script overview page
     expect(utils.navigateToHref).to.have.been.calledWith(
-      `/s/my-script/${window.location.search}`
+      `/courses/my-course/units/1/${window.location.search}`
     );
 
     server.restore();

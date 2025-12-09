@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-08-05T16:30:01.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Password Guessing Assistant\r\n\r\nSimulate how an AI trained on leaked password data might try to guess a new user’s password.\r\n\r\n### Do This:\r\nYou’ve already tried guessing passwords for a fictional user based on their interests and personal info. Now see what the AI comes up with.\r\n\r\n1. Load Maya's profile from the library.\r\n2. Ask the AI to generate a list of example passwords for Maya that reflect **common real-world patterns**.\r\n3. What patterns do you notice in its guesses?\r\n4. How similar are they to the ones you created?\r\n\r\nCompare the AI’s responses to your own predictions. \r\n\r\n---\r\n**Try it out!** \r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Here is Maya's profile. Generate a list of example passwords for Maya that reflect common real-world patterns.\r\n:::\r\n&nbsp\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add a user profile?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing files.\r\n- When you find your user's file to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the file get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-lite",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a simulated AI password cracking assistant. You are trained on millions of leaked passwords and use pattern recognition to generate guesses based on a user's personal information.\n\nWhen given a user's profile, generate realistic password guesses that match common patterns seen in real-world leaked password datasets.\n\nYour guesses should reflect common behaviors such as:\n- Combining names with numbers or symbols (e.g., “Ruby08!”)\n- Using favorite foods, sports teams, or pets\n- Substituting letters with numbers (e.g., “T4c0s”)\n- Appending common years (like 2008, 2025)\n- Adding special characters to the end\n\nGenerate a list of 8–12 possible passwords. Avoid random or nonsensical guesses. Your goal is to simulate what an AI would guess if it were trying to crack a password using pattern-based logic, not brute force.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash-lite"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Maya’s Profile.pdf": "f2e5059b-db3a-410e-ab74-bfbdc176044a.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-05T16:30:01.298+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson8-level3-2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson8-level3-2\"},{\"changed_at\":\"2025-08-05 16:32:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 16:50:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 16:56:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 16:59:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 17:20:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

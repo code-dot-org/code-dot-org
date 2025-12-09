@@ -1,17 +1,14 @@
-import Button from '@code-dot-org/component-library/button';
-import Tags from '@code-dot-org/component-library/tags';
-import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 import FocusLock from 'react-focus-lock';
 
-import i18n from '@cdo/locale';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-import AiDiffChat from './AiDiffChat';
+import AiDiffHeader from './AiDiffHeader';
+import AiDiffWorkSpace from './AiDiffWorkspace';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
@@ -19,28 +16,44 @@ import style from './ai-differentiation.module.scss';
 
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
-
-// TODO: Update to support i18n
-const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
-
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
-  open: boolean;
   scriptName?: string;
-  unitDisplayName?: string;
   curriculumCourses?: string[];
+  unreadNotificationCount: number;
 }
+
+const MIN_VISIBLE = 40;
+const boxWidth = parseInt(style.containerWidth);
+const originX = parseInt(style.fabOriginX);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
+const maxX = isNaN(originX)
+  ? 1000
+  : document.documentElement.clientWidth - originX - MIN_VISIBLE;
+
+const boxHeight = parseInt(style.containerHeight);
+const originY = parseInt(style.fabOriginY);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minY = isNaN(originY)
+  ? 0
+  : originY - document.documentElement.clientHeight + boxHeight;
+const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
+
+const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
-  open,
   scriptName,
-  unitDisplayName,
   curriculumCourses,
+  unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
@@ -53,10 +66,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
 
+  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
-      if (window.innerWidth < positionX + 100) {
-        setPositionX(window.innerWidth - 100);
+      if (positionX < minX) {
+        setPositionX(minX);
+      } else if (positionX > maxX) {
+        setPositionX(maxX);
       }
     };
     ensureDraggableIsVisible();
@@ -69,8 +86,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
-      if (positionY + window.innerHeight < 760) {
-        setPositionY(760 - window.innerHeight);
+      if (positionY < minY) {
+        setPositionY(minY);
+      } else if (positionY > maxY) {
+        setPositionY(maxY);
       }
     };
     ensureDraggableIsVisible();
@@ -91,50 +110,24 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       handle=".ai_diff_handle"
       position={{x: positionX, y: positionY}}
       onStop={onStopHandler}
+      cancel={`.${AI_DIFF_CLOSE_BUTTON_CLASSNAME}`}
     >
       <div
         // eslint-disable-next-line react/forbid-dom-props
         data-testid="draggable-test-id"
         id="draggable-id"
-        className={style.aiDiffContainer}
-        style={open ? undefined : {display: 'none'}}
+        className={
+          !hasCompletedAiDifferentiationWelcome && showWelcomeExperience //don't use wide container for welcome
+            ? style.aiDiffContainer
+            : style.aiDiffContainerWide
+        }
+        style={chatIsOpen ? undefined : {display: 'none'}}
       >
-        <FocusLock>
-          <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
-            <div className={style.aiDiffHeaderLeftSide}>
-              <div className={style.aiBotHeader}>
-                <img
-                  src={aiBotOutlineIcon}
-                  className={style.aiBotOutlineIcon}
-                  alt={AI_DIFF_HEADER_TEXT}
-                />
-                <div className={style.taOverlayHeader}>
-                  <span>{'TA'}</span>
-                </div>
-              </div>
-              <span className={style.aiDiffHeaderText}>
-                {AI_DIFF_HEADER_TEXT}
-              </span>
-              <span>
-                <Tags
-                  tagsList={[{label: i18n.experiment()}]}
-                  size="s"
-                  className={style.headerTag}
-                />
-              </span>
-            </div>
-            <div className={style.aiDiffHeaderRightSide}>
-              <Button
-                color="white"
-                icon={{iconName: 'times', iconStyle: 'solid'}}
-                type="tertiary"
-                isIconOnly={true}
-                onClick={closeTutor}
-                size="s"
-              />
-            </div>
-          </div>
-
+        <FocusLock disabled={!open}>
+          <AiDiffHeader
+            closeTutor={closeTutor}
+            closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
+          />
           <div className={style.fabBackground}>
             {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
               ? curriculumCourses && (
@@ -142,16 +135,16 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     setShowWelcomeExperience={setShowWelcomeExperience}
                     context={context}
                     scriptName={scriptName}
-                    unitDisplayName={unitDisplayName}
                     curriculumCourses={curriculumCourses}
                   />
                 )
               : curriculumCourses && (
-                  <AiDiffChat
+                  <AiDiffWorkSpace
                     context={context}
+                    personalizationData={personalizationData}
                     scriptName={scriptName}
-                    unitDisplayName={unitDisplayName}
                     curriculumCourses={curriculumCourses}
+                    unreadNotificationCount={unreadNotificationCount}
                   />
                 )}
           </div>

@@ -1,15 +1,19 @@
 import Breadcrumbs from '@code-dot-org/component-library/breadcrumbs';
 import {LinkWithText} from '@code-dot-org/component-library/link';
 import {Heading1} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect} from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
 import WorkshopDetails from './components/WorkshopDetails';
 import WorkshopEventJsonLdData from './components/WorkshopEventJsonLdData';
 import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
+  UserInfoForWorkshop,
+  UserWorkshopEnrollment,
+  WorkshopInfo,
 } from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
@@ -25,34 +29,47 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
   },
 ];
 
-interface WorkshopMarketingPageProps
-  extends GetWorkshopInfoScriptDataResponse,
-    GetUserInfoForWorkshopResponse {}
+interface WorkshopMarketingPageProps extends WorkshopInfo, UserInfoForWorkshop {
+  userEnrollment?: UserWorkshopEnrollment;
+}
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
 > = props => {
   const {
     id,
-    course_offerings,
+    courseOfferings,
     name,
     course,
     subject,
     format,
     capacity,
-    num_enrollments,
-    grade_levels,
+    numEnrollments,
+    gradeLevels,
     sessions,
     fee,
     prereq,
     description,
-    notes,
-    custom_registration_link,
-    regional_partner_name,
+    customRegistrationLink,
+    regionalPartnerName,
     organizer,
     facilitators,
     userInfo,
+    userEnrollment,
   } = props;
+
+  const isUserEnrolled = !!userEnrollment;
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(
+      isUserEnrolled
+        ? EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_BY_ENROLLED_USER_EVENT
+        : EVENTS.WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT,
+      {
+        'workshop id': id,
+      }
+    );
+  }, [id, isUserEnrolled]);
 
   return (
     <div className={moduleStyles.workshopMarketingPage}>
@@ -63,41 +80,46 @@ const WorkshopMarketingPage: React.FunctionComponent<
           showHomeIcon={true}
           homeIconHref="/my-professional-learning"
           breadcrumbs={workshopMarketingBreadcrumbs}
+          className={moduleStyles.headerBreadcrumbs}
         />
-        <Heading1>Register for a workshop</Heading1>
+        <Heading1>
+          {isUserEnrolled ? 'Workshop information' : 'Register for a workshop'}
+        </Heading1>
       </section>
       <div className={moduleStyles.bodyWrapper}>
         <div className={moduleStyles.bodyContainer}>
           <WorkshopDetails
+            isUserEnrolled={isUserEnrolled}
             name={name}
-            grade_levels={grade_levels}
+            gradeLevels={gradeLevels}
             sessions={sessions}
             fee={fee}
             prereq={prereq}
             description={description}
-            notes={notes}
-            course_offerings={course_offerings}
+            courseOfferings={courseOfferings}
             facilitators={facilitators}
           />
 
           <aside className={moduleStyles.sidebar}>
             <EnrollInWorkshop
               id={id}
-              custom_registration_link={custom_registration_link}
+              customRegistrationLink={customRegistrationLink}
               capacity={capacity}
-              num_enrollments={num_enrollments}
-              regional_partner_name={regional_partner_name}
+              numEnrollments={numEnrollments}
+              regionalPartnerName={regionalPartnerName}
               userInfo={userInfo}
               course={course}
               subject={subject}
               name={name}
               format={format}
               sessions={sessions}
+              isUserEnrolled={isUserEnrolled}
+              userEnrollment={userEnrollment}
             />
 
             <OrganizerInformation
               organizer={organizer}
-              regional_partner_name={regional_partner_name}
+              regionalPartnerName={regionalPartnerName}
             />
           </aside>
         </div>

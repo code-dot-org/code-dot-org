@@ -8,14 +8,14 @@
   "grade_levels": "9,10,11,12",
   "header": "self_paced",
   "image": "https://images.code.org/6fa2edf3030f7f9bba2f4b306ae3d885-aif2.jpg",
-  "cs_topic": "programming",
+  "cs_topic": "artificial_intelligence,programming",
   "school_subject": null,
   "device_compatibility": null,
   "description": "This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.\nThe Foundations of AI Programming unit is part of the AI Foundations curriculum but can also stand alone for grades 9-12. ",
   "professional_learning_program": null,
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": null,
+  "self_paced_pl_course_offering_key": "teaching-foundations-ai-programming",
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
 

@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:43.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as a Creative Writer\r\n\r\nUse AI Chat to respond to a creative or nonsensical question.\r\n\r\n### Do This:\r\n1. Find the section in your **Unit Guide** labeled \"Answering a creative question\". \r\n2. Choose one of the questions below and rank how well you think a human would do.\r\n3. **Write** a prompt asking AI Chat to answer one of the questions or something similar.\r\n4. Press **Send**.\r\n5. Then read **AI Chat's response**. \r\n6. Rank how well AI did and complete the table in your **Unit Guide**.\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\nChoose one of the questions below. Click to expand:\r\n\r\n::: details [**Common-Sense Question**] \r\n>Can a bicycle eat an apple? Why or why not?\r\n:::\r\n\r\n::: details [**Nonsense Question**]\r\n>What does the number 8 smell like?\r\n:::\r\n\r\n::: details [**Ambiguous Question**]\r\n>If you drop a book and a feather at the same time, which one hits the ground first?\r\n:::\r\n\r\n::: details [**Confusing Wordplay**]\r\n>If a rooster lays an egg on a slanted roof, which way does it roll?\r\n:::\r\n\r\n::: details [**Unrealistic Scenario**]\r\n>What would happen if you jumped into a pool filled with Jell-O?\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:43.978+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level2_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level2_2025\"}]"
+}]]></config>
+</Aichat>

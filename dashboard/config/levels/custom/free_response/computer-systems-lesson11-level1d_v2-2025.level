@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:00:19.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# **User Testing Results**\r\n<div markdown=\"1\" style=\"float: right; margin: 20px; width:150px;\">\r\n\r\n![](https://images.code.org/944defd9f54800a1b1cf6d2f99ba7aab-image2)\r\n\r\n</div>\r\n\r\n## Smart Study Assistant\r\n\r\n### **Observations from Testing**\r\n- **User 1:** The AI-generated summaries sometimes left out important details.\r\n- **User 2:** The voice-to-text feature struggled with background noise in busy environments.\r\n- **User 3:** The app interface was cluttered, making it difficult to navigate.\r\n- **User 4:** The reminder notifications were too frequent and distracting.\r\n- **User 5:** The app worked well for multiple subjects but struggled with handwritten notes.\r\n\r\n### **Survey Results**\r\n| Question                                   | User 1 | User 2 | User 3 | User 4 | User 5 | Avg. |\r\n|-------------------------------------------|--------|--------|--------|--------|--------|------|\r\n| The app made studying easier.             | 4      | 3      | 3      | 4      | 4      | 3.6  |\r\n| The AI summaries were accurate.           | 3      | 3      | 4      | 3      | 3      | 3.2  |\r\n| The voice-to-text feature worked well.    | 2      | 2      | 3      | 4      | 3      | 2.8  |\r\n| The app notifications were helpful.       | 3      | 3      | 2      | 2      | 4      | 2.8  |\r\n\r\n### **Quotes from User Interviews**\r\n- **User 1:** *\"I liked the summaries, but they weren’t always detailed enough for harder subjects.\"*\r\n- **User 2:** *\"If I was in a noisy place like the cafeteria, the voice-to-text didn’t pick up my voice well.\"*\r\n- **User 3:** *\"There are too many buttons—it took me a while to figure out how to find my notes.\"*\r\n- **User 4:** *\"I felt bombarded with notifications. I wish there were better customization options.\"*\r\n- **User 5:** *\"It was great for typed notes, but it couldn’t read my messy handwriting at all.\"*\r\n\r\n---\r\n\r\n\r\nBased on the results above, what are the top 3 pain points and/or themes about the product?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Smart Study Assistant",
+    "thumbnail_url": "https://images.code.org/944defd9f54800a1b1cf6d2f99ba7aab-image2",
+    "bubble_choice_description": "An AI-powered study app promises to help students take better notes and manage their workload, but testing shows mixed results in accuracy, ease of use, and notification settings.",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:19.883+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level1d_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level1d_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

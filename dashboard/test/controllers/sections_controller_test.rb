@@ -16,7 +16,7 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id, course_id: Unit.flappy_unit.original_unit_group_id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
@@ -57,30 +57,6 @@ class SectionsControllerTest < ActionController::TestCase
     get :show, params: {id: @word_section.code}
 
     assert_response :success
-  end
-
-  test "valid log_in with picture" do
-    assert_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are updated
-      post :log_in, params: {
-        id: @picture_section.code,
-        user_id: @picture_user_1.id,
-        secret_picture_id: @picture_user_1.secret_picture_id
-      }
-    end
-
-    assert_redirected_to '/'
-  end
-
-  test "invalid log_in with picture" do
-    assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
-      post :log_in, params: {
-        id: @picture_section.code,
-        user_id: @picture_user_1.id,
-        secret_picture_id: @picture_user_1.secret_picture_id + 1
-      }
-    end
-
-    assert_redirected_to section_path(id: @picture_section.code)
   end
 
   test "former picture section member cannot log in with picture" do
@@ -158,7 +134,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
   end
 
   test "login to section with a course redirects to course" do
@@ -171,6 +147,20 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@section_with_course.unit_group.name}"
   end
 
+  test "login to section with a modular script redirects to modular course" do
+    modular_course = create(:single_unit_course, unit: @script_in_course)
+    section_with_modular_script = create(:section, user: @teacher, login_type: 'word', course_id: modular_course.id, script_id: @script_in_course.id)
+    section_with_modular_script_user_1 = create(:follower, section: section_with_modular_script).student_user
+
+    post :log_in, params: {
+      id: section_with_modular_script.code,
+      user_id: section_with_modular_script_user_1.id,
+      secret_words: section_with_modular_script_user_1.secret_words
+    }
+
+    assert_redirected_to "/courses/#{modular_course.name}/units/1"
+  end
+
   test "login with show_pairing_dialog shows pairing dialog" do
     post :log_in, params: {
       id: @flappy_section.code,
@@ -179,7 +169,7 @@ class SectionsControllerTest < ActionController::TestCase
       show_pairing_dialog: '1'
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     assert session[:show_pairing_dialog]
   end
@@ -191,7 +181,7 @@ class SectionsControllerTest < ActionController::TestCase
       secret_words: @flappy_user_1.secret_words
     }
 
-    assert_redirected_to '/s/flappy'
+    assert_redirected_to '/courses/flappy/units/1'
 
     refute session[:show_pairing_dialog]
   end
@@ -214,7 +204,7 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
   test "new redirects to home if loginType and participantType are not present" do
-    user = create :admin
+    user = create(:admin)
     sign_in user
 
     get :new
@@ -239,7 +229,7 @@ class SectionsControllerTest < ActionController::TestCase
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
     sign_in @teacher
-    other_teacher_section = create :section
+    other_teacher_section = create(:section)
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
   end
@@ -262,7 +252,7 @@ class SectionsControllerTest < ActionController::TestCase
     section_owner = create(:teacher)
 
     coteacher_section = create(:section, user: section_owner, login_type: 'picture')
-    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+    create(:section_instructor, section: coteacher_section, instructor: @teacher, status: :active)
 
     post :archive_all
 
@@ -283,17 +273,17 @@ class SectionsControllerTest < ActionController::TestCase
     get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/s/flappy"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/s/flappy/lessons/1/levels/1"}]
+    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1"}, {"text"=>"Flappy Code", "value"=>"/courses/flappy/units/1/lessons/1/levels/1"}]
   end
 
   describe '#retrieve_lessons_for_dropdown' do
-    let(:teacher) {create :teacher}
-    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :unit, :with_levels}
+    let(:teacher) {create(:teacher)}
+    let(:unit_group) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let(:unit_position) {1}
-    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let!(:unit_group_unit) {create(:unit_group_unit, unit_group: unit_group, script: unit, position: unit_position)}
     let(:lesson) {unit.lessons.first}
-    let(:section) {create :section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email'}
+    let(:section) {create(:section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email')}
     let(:response) {JSON.parse(@response.body, symbolize_names: true)}
     let(:response_unit) {response.first}
     let(:response_lesson) {response.second}
@@ -321,11 +311,77 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     it 'returns lesson name' do
-      _(response_lesson[:text]).must_equal "Lesson #{lesson.relative_position}: #{lesson.localized_name}"
+      _(response_lesson[:text]).must_equal lesson.localized_title
     end
 
     it 'returns lesson path' do
       _(response_lesson[:value]).must_equal "/courses/#{unit_group.name}/units/#{unit_position}/lessons/1/levels/1"
+    end
+  end
+
+  describe 'POST /sections/:id/log_in' do
+    subject(:log_in_section) {post :log_in, params: {id: @picture_section.code, **section_params}}
+
+    shared_examples_for 'does not update user sign_in_count' do
+      it 'does not update user sign_in_count' do
+        _ {log_in_section}.wont_differ -> {user.reload.sign_in_count}
+      end
+    end
+
+    shared_examples_for 'redirects to root path' do
+      it 'redirects to root path' do
+        log_in_section
+        assert_redirected_to '/'
+      end
+    end
+
+    describe 'for picture user' do
+      let(:user) {@picture_user_1}
+      let(:section) {@picture_section}
+
+      let(:user_id) {user.id}
+      let(:secret_picture_id) {user.secret_picture_id}
+      let(:section_params) {{user_id:, secret_picture_id:}}
+
+      it_behaves_like 'redirects to root path'
+
+      it 'signs in user' do
+        _ {log_in_section}.must_change -> {warden.session_serializer.fetch(:user)}, from: nil, to: user
+      end
+
+      it 'updates user sign_in_count' do
+        _ {log_in_section}.must_differ -> {user.reload.sign_in_count}, 1
+      end
+
+      context 'when secret picture is invalid' do
+        let(:secret_picture_id) {user.secret_picture_id.next}
+
+        it_behaves_like 'does not update user sign_in_count'
+
+        it 'does not sign in user' do
+          _ {log_in_section}.wont_change -> {warden.session_serializer.fetch(:user)}
+          _(warden.session_serializer.fetch(:user)).must_be_nil
+        end
+
+        it 'redirects to section' do
+          log_in_section
+          assert_redirected_to section_path(id: @picture_section.code)
+        end
+      end
+
+      context 'when picture user is already signed in' do
+        before do
+          sign_in user
+        end
+
+        it_behaves_like 'does not update user sign_in_count'
+        it_behaves_like 'redirects to root path'
+
+        it 'does not resign in user' do
+          _ {log_in_section}.wont_change -> {warden.session_serializer.fetch(:user)}
+          _(warden.session_serializer.fetch(:user)).must_equal user
+        end
+      end
     end
   end
 end

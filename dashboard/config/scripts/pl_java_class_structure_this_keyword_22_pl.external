@@ -1,0 +1,34 @@
+name 'pl-java-class-structure-this-keyword-22_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The This Keyword
+
+#### In Java, `this` is a special keyword that refers to the **current object** - the object whose method or constructor is being called. 
+
+#### You can think of it as the object saying **"I'm talking about myself right now."**
+
+## Why do we need 'this'
+
+#### Sometimes, **variable names inside a method or constructor are the same as instance variables** (the variables that belong to the object). In those cases, Java can get confused about which one you're referring to. The `this` keyword clears that up!
+
+#### 🔍 This is a **scope** issue: the parameter and the instance variable share the same name, and this helps Java know which one you mean.
+
+<img src="https://images.code.org/bd3c38f66f28f4547f154685a58abd0a-image-1747844441246.png" alt="sample of java code using this in the constuctor" width="450px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+## What's happening here? 
+
+- #### `String name` is a parameter in the constructor.
+
+- #### `this.name` refers to the instance variable (the dog’s actual name).
+
+- #### `this.name = name;` assigns the value from the parameter to the instance variable.
+
+#### Without `this`, Java would just assign the parameter to itself — and the instance variable wouldn't change.
+
+## Let's practice!
+
+![]()
+MARKDOWN

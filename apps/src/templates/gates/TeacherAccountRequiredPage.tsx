@@ -6,12 +6,13 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
 
+import {processAccountUrlParams} from './processAccountUrlParams';
+
 import styles from './gate-pages.module.scss';
 
-const TeacherAccountRequiredPage: React.FunctionComponent<{
-  sourcePage: string;
-  editAccountLink: string;
-}> = ({sourcePage, editAccountLink}) => {
+const TeacherAccountRequiredPage: React.FunctionComponent = () => {
+  const {sourcePage, returnToUrlParam} = processAccountUrlParams();
+
   useEffect(() => {
     analyticsReporter.sendEvent(
       EVENTS.UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT,
@@ -45,7 +46,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent<{
             content={i18n.accountSwitchTeacherAccountCardContentGeneric()}
             buttonText={i18n.accountSwitchTeacherAccountCardButton()}
             buttonType="primary"
-            href={editAccountLink}
+            href={`/users/edit${returnToUrlParam}#change-user-type-modal-form`}
           />
         </div>
       </div>

@@ -14,10 +14,6 @@ class ScriptLevelsController < ApplicationController
   before_action :check_script_id_is_name, only: [:show, :lesson_extras]
   before_action :redirect_to_canonical_path, only: [:show, :lesson_extras]
 
-  # The TA scores alert will be shown at most once for each lesson. This
-  # is the maximum number of times it will be shown across all lessons.
-  MAX_SHOW_TA_SCORES_ALERT = 3
-
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
     unit_context = ScriptLevelsController.get_unit_context(request)
@@ -83,6 +79,7 @@ class ScriptLevelsController < ApplicationController
     # Check if the script or current level is deprecated
     level_is_deprecated = @script_level&.level_deprecated?
     if @script.is_deprecated || level_is_deprecated
+      @deprecated_curriculum_name = @script.name
       return render 'errors/deprecated_course'
     end
 
@@ -97,10 +94,6 @@ class ScriptLevelsController < ApplicationController
     if @script.redirect_to?
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
-
-      if Unit.family_names.include?(params[:script_id])
-        Unit.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
-      end
 
       # avoid a redirect loop if the string substitution failed
       # TODO: TEACH-2050 Modularity support for redirects. This redirects to the current script. Redirect to the new script's
@@ -156,11 +149,16 @@ class ScriptLevelsController < ApplicationController
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
-    elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
+      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, unit_group: @unit_group, locale: request.locale)
+    elsif !override_redirect && (redirect_info = get_redirect_info(@script_level&.script, request.locale, unit_group: @unit_group))
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
-      redirect_to script_path(redirect_script) + "?redirect_warning=true"
-      return
+      if redirect_info[:redirect_ugu]
+        redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
+        return
+      elsif redirect_info[:redirect_unit]
+        redirect_to script_path(redirect_info[:redirect_unit]) + "?redirect_warning=true"
+        return
+      end
     end
 
     canonical_path = build_script_level_path(@script_level, unit_group_unit: @unit_group_unit, **@extra_params)
@@ -212,11 +210,12 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    @rubric = @script_level.lesson.rubric
+    # Lab2 levels load rubric data asynchronously as they don't reload the page between levels.
+    @rubric = @script_level.lesson.rubric unless @level.uses_lab2?
     ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
-      @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?
+      @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?(@script_level.lesson)
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
@@ -393,20 +392,6 @@ class ScriptLevelsController < ApplicationController
     if params[:script_id]
       script_id = params[:script_id]
       script = Unit.get_from_cache(script_id, raise_exceptions: false)
-      if script.nil? && Unit.family_names.include?(script_id)
-        # Due to a programming error, we have been inadvertently passing user: nil
-        # to Unit.get_unit_family_redirect_for_user . Since end users may be
-        # depending on this incorrect behavior, and we are trying to deprecate this
-        # codepath anyway, the current plan is to not fix this bug.
-        script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
-        if script
-          # get_unit_family_redirect_for_user returns a fake Unit object,
-          # so we don't need to look up context like UnitGroup or UnitGroupUnit.
-          return {
-            unit: script,
-          }
-        end
-      end
       raise ActiveRecord::RecordNotFound unless script
       return Queries::Courses.get_course_context(script.id)
     end
@@ -633,14 +618,9 @@ class ScriptLevelsController < ApplicationController
 
     readonly_view_options if @level.channel_backed? && params[:version].present?
 
-    # Add video generation URL for only the last level of Dance
-    # If we eventually want to add video generation for other levels or level
-    # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
-
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
-      success: milestone_response(script_level: @script_level, level: @level, solved?: true),
+      success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
 
@@ -674,26 +654,22 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound if is_id
   end
 
-  # TODO: TEACH-1557 Modularity support for version redirects. Currently redirects to /s/... missing course context
-  private def redirect_script(script, locale)
-    return nil unless script
+  private def get_redirect_info(unit, locale, unit_group: nil)
+    return nil unless unit
 
-    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
-    # none are assigned.
-    redirect_script = Unit.latest_assigned_version(script.family_name, current_user)
-    redirect_script ||= Unit.latest_stable_version(script.family_name, locale: locale)
+    unit_group ||= unit.get_original_unit_group
 
-    # Do not redirect if we are already on the correct script.
-    return nil if redirect_script == script
+    if unit_group&.single_unit_course?
+      redirect_unit_group = UnitGroup.latest_assigned_version(unit_group.family_name, current_user)
+      redirect_unit_group ||= UnitGroup.latest_stable_version(unit_group.family_name, locale: locale)
+      redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
+    end
 
-    redirect_script
-  end
+    # Do not redirect if we are already on the correct unit.
+    return nil if redirect_unit == unit
 
-  private def can_show_ta_scores_alert?
-    return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
-    seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
-    return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
-    !seen_ta_scores_map[@script_level.lesson.id.to_s]
+    ugu = Queries::Courses.unit_group_unit(redirect_unit, redirect_unit_group)
+    {redirect_unit: redirect_unit, redirect_ugu: ugu}
   end
 
   private def redirect_to_canonical_path

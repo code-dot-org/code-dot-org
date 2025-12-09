@@ -3,7 +3,7 @@ require 'test_helper'
 module Pd::Summary
   class TeacherSummaryTest < ActiveSupport::TestCase
     setup do
-      @workshop = create :workshop, :ended, enrolled_and_attending_users: 1, enrolled_absent_users: 1, num_sessions: 2
+      @workshop = create(:workshop, :ended, enrolled_and_attending_users: 1, enrolled_absent_users: 1, num_sessions: 2)
       @enrollment = @workshop.enrollments.first
       @teacher_summary = TeacherSummary.new(enrollment: @enrollment)
     end
@@ -20,6 +20,14 @@ module Pd::Summary
     end
 
     test 'calculate_teacher_attendance returns correct days and hours' do
+      attendance = @teacher_summary.calculate_teacher_attendance
+      assert_kind_of TeacherSummary::TeacherAttendanceTotal, attendance
+      assert_equal attendance.days, 2
+      assert_equal attendance.hours, 12
+    end
+
+    test 'calculate_teacher_attendance returns correct days and hours for teachers without accounts' do
+      @enrollment.update(user_id: nil)
       attendance = @teacher_summary.calculate_teacher_attendance
       assert_kind_of TeacherSummary::TeacherAttendanceTotal, attendance
       assert_equal attendance.days, 2

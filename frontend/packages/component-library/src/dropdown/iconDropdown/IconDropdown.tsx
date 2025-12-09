@@ -10,7 +10,11 @@ import {
 } from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {
+  CustomDropdownMenuPlacement,
+  CustomDropdownMenuVerticalPlacement,
+  CustomDropdownOption,
+} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
@@ -45,6 +49,10 @@ export interface IconDropdownProps
   selectedOption: IconDropdownOption;
   /** IconDropdown onChange handler */
   onChange: (option: IconDropdownOption) => void;
+  /** IconDropdown Menu placement */
+  menuPlacement?: CustomDropdownMenuPlacement;
+  /** IconDropdown menu vertical placement */
+  menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
 }
 
 /**
@@ -76,6 +84,8 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   helperIcon,
   errorMessage,
   styleAsFormField = false,
+  menuPlacement = 'left',
+  menuVerticalPlacement = 'bottom',
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -105,6 +115,8 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       errorMessage={errorMessage}
       styleAsFormField={styleAsFormField}
       selectedValueText={selectedOption?.label}
+      menuPlacement={menuPlacement}
+      menuVerticalPlacement={menuVerticalPlacement}
       {...rest}
     >
       <ul>

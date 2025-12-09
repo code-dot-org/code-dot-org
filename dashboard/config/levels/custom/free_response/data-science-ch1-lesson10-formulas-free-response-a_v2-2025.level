@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:35.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**How many inversions do stand up coasters have in total?**\r\n\r\n**Do This:**\r\n\r\nTry solving it both ways:\r\n\r\n1. Add a `SUM` formula that specifies the range.\r\n\r\n2. Highlight the specified cells and use the **Sum** tally at the bottom right. \r\n\r\n*Hint: Consider sorting or filtering the dataset first to make it easier to calculate the sum.*",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "4OEUb6aAb5XZDEuWLU0g1A==\n",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:35.811+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-formulas-free-response-a_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-formulas-free-response-a_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

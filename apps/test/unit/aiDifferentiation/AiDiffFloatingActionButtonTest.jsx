@@ -2,11 +2,20 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {aichatReducer, setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -24,17 +33,27 @@ const DEFAULT_PROPS = {
     scriptId: 1,
   },
   scriptName: 'test_lesson',
-  unitDisplayName: 'test unit name',
 };
 
 const defaultCoursesResponse = {
   courses: ['dummy_course_2025', 'dummy_course'],
 };
 
+const defaultThreadListResponse = [
+  {
+    id: 1,
+    title: 'blah thread one',
+    updatedAt: Date(),
+    contextType: 'lesson',
+  },
+];
+
 describe('AIDiffFloatingActionButton', () => {
   let fetchStub;
+  let fetchJsonStub;
 
   beforeEach(() => {
+    stubRedux();
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
     localStorage.clear();
@@ -43,12 +62,19 @@ describe('AIDiffFloatingActionButton', () => {
       .mockResolvedValue(
         Promise.resolve(new Response(JSON.stringify(defaultCoursesResponse)))
       );
+    fetchJsonStub = jest.fn();
+    fetchJsonStub.mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
+    HttpClient.fetchJson = fetchJsonStub;
   });
 
   afterEach(() => {
     sessionStorage.clear();
     localStorage.clear();
     jest.restoreAllMocks();
+    restoreRedux();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -56,6 +82,8 @@ describe('AIDiffFloatingActionButton', () => {
 
     registerReducers({
       currentUser,
+      teacherSections,
+      aichat: aichatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -64,6 +92,8 @@ describe('AIDiffFloatingActionButton', () => {
         has_completed_ai_differentiation_welcome: true,
       })
     );
+    store.dispatch(setSections([]));
+    store.dispatch(setChatIsOpen(false));
 
     render(
       <Provider store={store}>
@@ -77,7 +107,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -95,7 +125,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -109,10 +139,10 @@ describe('AIDiffFloatingActionButton', () => {
   });
 
   it('begins open if no session or local storage and has not been opened before', async () => {
-    renderDefault({});
+    renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -130,7 +160,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -148,7 +178,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -170,7 +200,7 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault({});
       await waitFor(() => {
         expect(fetchStub).toHaveBeenCalledWith(
-          '/ai_diff/curriculum_courses',
+          '/aidiff_threads/curriculum_courses',
           JSON.stringify({
             context: DEFAULT_PROPS.context,
           }),
@@ -196,7 +226,7 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault();
       await waitFor(() => {
         expect(fetchStub).toHaveBeenCalledWith(
-          '/ai_diff/curriculum_courses',
+          '/aidiff_threads/curriculum_courses',
           JSON.stringify({
             context: DEFAULT_PROPS.context,
           }),

@@ -10,6 +10,7 @@ Feature: BubbleChoice
 
     # Complete the level
     And I wait until element ".submitButton" is visible
+    And I debug milestone callback
     And I click selector ".submitButton" to load a new page
 
     # Make sure you are taken back to the BubbleChoice activity page with progress
@@ -50,6 +51,7 @@ Feature: BubbleChoice
   # Mobile re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1752
   @no_mobile
   @no_firefox
+  @no_safari
   @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
@@ -89,6 +91,7 @@ Feature: BubbleChoice
     # View progress from BubbleChoice activity page
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8"
     And I wait until element ".teacher-panel" is visible
+    And I wait for jquery to load
     And I select the "New Section" option in dropdown with class "uitest-sectionselect"
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"

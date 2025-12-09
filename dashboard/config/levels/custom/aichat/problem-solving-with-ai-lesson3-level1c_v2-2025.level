@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:40.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Travel Agent - Minimal Context Given\r\n\r\nPractice prompting through the career of a travel agent by giving a simple, unstructured prompt to see how AI makes recommendations without any specific details or examples.\r\n\r\n### Do This:\r\n\r\n1. Try a basic prompt like the one below, or a similar one related to family vacations.\r\n\r\n>Recommend a family vacation destination.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how useful or generic the recommendation is.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a general-purpose AI responding to vague travel-related questions. When the user provides minimal input, respond with a generic recommendation that could apply to most families. Avoid getting too specific, and do not ask the user clarifying questions.\n\nKeep your tone positive and helpful. Limit your recommendation to one destination with basic justifications. Avoid listing many features or turning it into a full brochure.\n\n\n\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Travel Agent",
+    "bubble_choice_description": "Practice prompting through the career of a travel agent by giving a simple, unstructured prompt to see how AI makes recommendations without any specific details or examples.",
+    "thumbnail_url": "https://images.code.org/20ecb1a554684df32056f3488425ec5f-life-support.png",
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:40.008+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1c_2025\"}]"
+}]]></config>
+</Aichat>

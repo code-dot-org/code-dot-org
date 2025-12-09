@@ -15,7 +15,6 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I get debug info for the current user
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait to see "#ui-floatingActionButton"
-  And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
@@ -54,7 +53,7 @@ Scenario: Teacher views rubric product tour
   # Teacher signs in and navigates to assessment page
   Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I wait until element "#homepage-container" is visible
+  And I wait until element "#ui-test-section-list" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait for the lab page to fully load
@@ -144,7 +143,7 @@ Scenario: Teacher views rubric product tour
 Scenario: Teacher views Rubric and Settings tabs
   Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I wait until element "#homepage-container" is visible
+  And I wait until element "#ui-test-section-list" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait for the lab page to fully load
@@ -178,7 +177,7 @@ Scenario: Teacher views product tour
   # Teacher signs in and navigates to assessment page
   Given I create an authorized teacher-associated student named "Aiden"
   And I sign in as "Teacher_Aiden" and go home
-  And I wait until element "#homepage-container" is visible
+  And I wait until element "#ui-test-section-list" is visible
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48/levels/2"
   And I wait for the lab page to fully load

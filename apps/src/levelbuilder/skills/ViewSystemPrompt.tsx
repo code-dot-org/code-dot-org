@@ -16,7 +16,7 @@ const ViewSystemPrompt: React.FC<ViewSystemPromptProps> = ({systemPrompt}) => {
         aria-expanded={open}
         aria-controls="system-prompt-text"
       >
-        {open ? '▼' : '▶'} view full system prompt
+        {open ? '▼' : '▶'} View full system prompt
       </span>
       {open && (
         <div id="system-prompt-text" className="view-system-prompt__text">

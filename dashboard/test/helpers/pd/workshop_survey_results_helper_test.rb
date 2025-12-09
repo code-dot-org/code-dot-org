@@ -4,24 +4,24 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   include Pd::WorkshopSurveyResultsHelper
 
   test 'summarize summarizes teachercons as expected' do
-    enrollment_1 = create :pd_enrollment
+    enrollment_1 = create(:pd_enrollment)
     enrollment_1.workshop.facilitators << create(:facilitator, name: 'Facilitator Bob')
-    hash_1 = build :pd_teachercon_survey_hash
+    hash_1 = build(:pd_teachercon_survey_hash)
     hash_1[:whoFacilitated] = ['Facilitator Bob']
     hash_1[:thingsFacilitatorDidWell] = {'Facilitator Bob': 'Bob did well'}
     hash_1[:thingsFacilitatorCouldImprove] = {'Facilitator Bob': 'Bob could improve'}
-    create :pd_teachercon_survey, pd_enrollment: enrollment_1, form_data: hash_1.to_json
+    create(:pd_teachercon_survey, pd_enrollment: enrollment_1, form_data: hash_1.to_json)
 
-    enrollment_2 = create :pd_enrollment
+    enrollment_2 = create(:pd_enrollment)
     enrollment_2.workshop.facilitators << create(:facilitator, name: 'Facilitator Jane')
-    hash_2 = build :pd_teachercon_survey_hash
+    hash_2 = build(:pd_teachercon_survey_hash)
     hash_2[:receivedClearCommunication] = 'Strongly Disagree'
     hash_2[:venueFeedback] = 'more venue feedback'
     hash_2[:howCouldImprove] = 'so much'
     hash_2[:whoFacilitated] = ['Facilitator Jane']
     hash_2[:thingsFacilitatorDidWell] = {'Facilitator Jane': 'Jane did well'}
     hash_2[:thingsFacilitatorCouldImprove] = {'Facilitator Jane': 'Jane could improve'}
-    create :pd_teachercon_survey, form_data: hash_2.to_json, pd_enrollment: enrollment_2
+    create(:pd_teachercon_survey, form_data: hash_2.to_json, pd_enrollment: enrollment_2)
     workshops = [enrollment_1.workshop, enrollment_2.workshop]
     workshops.each {|w| w.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON)}
 

@@ -1,5 +1,5 @@
-import {Meta, StoryFn} from '@storybook/react';
-import React, {useState, useCallback} from 'react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {ChangeEvent, MouseEvent, useState, useCallback} from 'react';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from '../index';
 
@@ -16,7 +16,7 @@ export default {
 const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
   const [selectedValues, setValues] = useState(args.checkedOptions as string[]);
   const onChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLInputElement>) => {
       if (e.target.checked) {
         setValues([...selectedValues, e.target.value]);
       } else {
@@ -27,11 +27,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
     [args, selectedValues, setValues],
   );
   const onSelectAll = useCallback(
-    (
-      e:
-        | React.MouseEvent<HTMLButtonElement>
-        | React.MouseEvent<HTMLAnchorElement>,
-    ) => {
+    (e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>) => {
       setValues(args.allOptions.map(option => option.value));
       if (!args.hideControls) {
         args.onSelectAll(e);
@@ -40,11 +36,7 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
     [args],
   );
   const onClearAll = useCallback(
-    (
-      e:
-        | React.MouseEvent<HTMLButtonElement>
-        | React.MouseEvent<HTMLAnchorElement>,
-    ) => {
+    (e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>) => {
       setValues([]);
       if (!args.hideControls) {
         args.onClearAll(e);
@@ -97,7 +89,7 @@ const MultipleTemplate: StoryFn<{
             });
           }
 
-          const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+          const onChange = (e: ChangeEvent<HTMLInputElement>) => {
             if (e.target.checked) {
               setValues({
                 ...values,
@@ -117,9 +109,7 @@ const MultipleTemplate: StoryFn<{
             componentArg.onChange(e);
           };
           const onSelectAll = (
-            e:
-              | React.MouseEvent<HTMLButtonElement>
-              | React.MouseEvent<HTMLAnchorElement>,
+            e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>,
           ) => {
             setValues({
               ...values,
@@ -132,9 +122,7 @@ const MultipleTemplate: StoryFn<{
             }
           };
           const onClearAll = (
-            e:
-              | React.MouseEvent<HTMLButtonElement>
-              | React.MouseEvent<HTMLAnchorElement>,
+            e: MouseEvent<HTMLButtonElement> | MouseEvent<HTMLAnchorElement>,
           ) => {
             setValues({...values, [componentArg.name]: []});
             if (!componentArg.hideControls) {
@@ -485,6 +473,168 @@ GroupOfSizesOfCheckboxDropdown.args = {
       size: 'l',
       disabled: false,
       color: dropdownColors.black,
+    },
+  ],
+};
+
+export const GroupOfMenuPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-placement-left',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Placement Left',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuPlacement: 'left',
+    },
+    {
+      name: 'menu-placement-right',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Placement Right',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuPlacement: 'right',
+    },
+  ],
+};
+
+export const GroupOfMenuVerticalPlacementOptions = MultipleTemplate.bind({});
+GroupOfMenuVerticalPlacementOptions.args = {
+  components: [
+    {
+      name: 'menu-vertical-top',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Vertical Top',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuVerticalPlacement: 'top',
+    },
+    {
+      name: 'menu-vertical-bottom',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Vertical Bottom',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      disabled: false,
+      menuVerticalPlacement: 'bottom',
+    },
+  ],
+};
+
+export const GroupOfAllPlacements = MultipleTemplate.bind({});
+GroupOfAllPlacements.args = {
+  components: [
+    {
+      name: 'placement-left-bottom',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Left + Bottom',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'bottom',
+    },
+    {
+      name: 'placement-right-bottom',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Right + Bottom',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'bottom',
+    },
+    {
+      name: 'placement-left-top',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Left + Top',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'left',
+      menuVerticalPlacement: 'top',
+    },
+    {
+      name: 'placement-right-top',
+      allOptions: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      checkedOptions: ['option-1'],
+      labelText: 'Right + Top',
+      onChange: () => null,
+      onSelectAll: () => null,
+      onClearAll: () => null,
+      selectAllText: 'Select All',
+      clearAllText: 'Clear All',
+      size: 'm',
+      color: dropdownColors.black,
+      menuPlacement: 'right',
+      menuVerticalPlacement: 'top',
     },
   ],
 };

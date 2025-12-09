@@ -42,24 +42,16 @@ class Follower < ApplicationRecord
     errors.add(:student_user, 'cannot be admin') if student_user.admin?
   end
 
-  def pl_participant_cannot_have_family_name
-    return unless section && student_user
-    if section.pl_section? && student_user.family_name
-      errors.add(:student_user, 'cannot have family_name as a PL participant')
-    end
-  end
-
   validate :cannot_follow_yourself, unless: -> {deleted?}
   validate :teacher_must_be_teacher, unless: -> {deleted?}
   validate :student_cannot_be_admin
-  validate :pl_participant_cannot_have_family_name
 
   validates_presence_of :student_user, unless: -> {deleted?}
   validates_presence_of :section, unless: -> {deleted?}
 
   after_create :assign_script
   def assign_script
-    student_user.assign_script(section.script) if section.script
+    student_user.assign_script(section.script, section.unit_group) if section.script
   end
 
   after_destroy :remove_given_and_family_name

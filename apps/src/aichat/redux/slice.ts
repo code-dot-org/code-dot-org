@@ -1,5 +1,12 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {
+  DEFAULT_THREAD_TITLE,
+  ThreadTypeFields,
+  THREAD_TYPES,
+} from '@cdo/apps/aiDifferentiation/constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -22,6 +29,10 @@ import {
   isCompletedChatMessage,
   PendingChatMessage,
   ChatAsset,
+  SaveError,
+  AiChatClientType,
+  WorkspaceTeacherViewTab,
+  UserAddedSelectionContextItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -32,6 +43,16 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  chatIsOpen: false,
+  clientType: undefined,
+  threadId: 0,
+  threadTitle: DEFAULT_THREAD_TITLE,
+  threadType: THREAD_TYPES.default,
+  initialThreadPrompt: null,
+  selectedPrompt: null,
+  threadMessages: [],
+  threadKeyId: 0,
+  initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
   chatMessagePending: undefined,
@@ -49,12 +70,20 @@ const initialState: AichatState = {
   stagedFilesAlert: undefined,
   hasSentMessage: false,
   hasUpdatedCustomizations: false,
+  saveError: undefined,
+  showResetMessage: false,
+  hasSetStartingCustomizations: false,
+  chatWorkspaceSelectedTab: null,
+  userAddedSelectionContext: {},
 };
 
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
+    setChatIsOpen: (state, action: PayloadAction<boolean>) => {
+      state.chatIsOpen = action.payload;
+    },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
@@ -99,6 +128,33 @@ const aichatSlice = createSlice({
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
     },
+    setClientType(state, action: PayloadAction<AiChatClientType>) {
+      state.clientType = action.payload;
+    },
+    setThreadId(state, action: PayloadAction<number>) {
+      state.threadId = action.payload;
+    },
+    setThreadTitle(state, action: PayloadAction<string>) {
+      state.threadTitle = action.payload;
+    },
+    setThreadType(state, action: PayloadAction<ThreadTypeFields>) {
+      state.threadType = action.payload;
+    },
+    setInitialThreadPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.initialThreadPrompt = action.payload;
+    },
+    setSelectedPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.selectedPrompt = action.payload;
+    },
+    setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
+      state.threadMessages = action.payload;
+    },
+    addThreadMessage: (state, action: PayloadAction<ChatItem>) => {
+      state.threadMessages.push(action.payload);
+    },
+    setThreadKeyId(state, action: PayloadAction<number>) {
+      state.threadKeyId = action.payload;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -138,6 +194,9 @@ const aichatSlice = createSlice({
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
+    },
+    setInitialChatMessage(state, action: PayloadAction<string>) {
+      state.initialChatMessage = action.payload;
     },
     setShowModalType: (
       state,
@@ -195,6 +254,10 @@ const aichatSlice = createSlice({
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
+      state.hasSetStartingCustomizations = true;
+    },
+    clearHasSetStartingCustomizations: state => {
+      state.hasSetStartingCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -213,10 +276,10 @@ const aichatSlice = createSlice({
         ),
       };
 
-      state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+      state.showResetMessage = true;
     },
     setSavedAiCustomizations: (
       state,
@@ -238,20 +301,9 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations = updatedAiCustomizations;
-    },
-    setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
-      state: AichatState,
-      action: PayloadAction<{
-        property: T;
-        value: AiCustomizations[T];
-      }>
-    ) => {
-      const {property, value} = action.payload;
-      const updatedAiCustomizations = {
-        ...state.savedAiCustomizations,
-        [property]: value,
-      };
-      state.savedAiCustomizations = updatedAiCustomizations;
+      // Clear save error and reset message, if any.
+      state.saveError = undefined;
+      state.showResetMessage = false;
     },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
@@ -266,10 +318,13 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
+      state.showResetMessage = false;
     },
     startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
       state.currentSaveType = action.payload;
+      // Clear save error, if any.
+      state.saveError = undefined;
     },
     endSave(state) {
       state.saveInProgress = false;
@@ -319,6 +374,32 @@ const aichatSlice = createSlice({
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
     },
+    setSaveError(state, action: PayloadAction<SaveError | undefined>) {
+      state.saveError = action.payload;
+    },
+    setChatWorkspaceSelectedTab(
+      state,
+      action: PayloadAction<WorkspaceTeacherViewTab | null>
+    ) {
+      state.chatWorkspaceSelectedTab = action.payload;
+    },
+    addItemToUserAddedSelectionContext(
+      state,
+      action: PayloadAction<UserAddedSelectionContextItem>
+    ) {
+      state.userAddedSelectionContext[action.payload.displayName] =
+        action.payload;
+    },
+    removeItemFromUserAddedSelectionContext(
+      state,
+      action: PayloadAction<string>
+    ) {
+      state.userAddedSelectionContext[action.payload] &&
+        delete state.userAddedSelectionContext[action.payload];
+    },
+    clearUserAddedSelectionContext(state) {
+      state.userAddedSelectionContext = {};
+    },
   },
 });
 
@@ -348,7 +429,10 @@ const getUpdateMessageLocation = (removeId: number, state: AichatState) => {
 
 registerReducers({aichat: aichatSlice.reducer});
 
+export const aichatReducer = aichatSlice.reducer;
+
 export const {
+  setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
   setChatMessagePending,
@@ -360,14 +444,23 @@ export const {
   removeUpdateMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
-  setSavedAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
+  setInitialChatMessage,
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
+  setClientType,
+  setThreadId,
+  setThreadTitle,
+  setThreadType,
+  setInitialThreadPrompt,
+  setSelectedPrompt,
+  setThreadMessages,
+  addThreadMessage,
+  setThreadKeyId,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -375,4 +468,10 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
+  setSaveError,
+  clearHasSetStartingCustomizations,
+  setChatWorkspaceSelectedTab,
+  addItemToUserAddedSelectionContext,
+  removeItemFromUserAddedSelectionContext,
+  clearUserAddedSelectionContext,
 } = aichatSlice.actions;

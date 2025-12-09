@@ -41,6 +41,7 @@ If you are looking to update the FontAwesome files in the `injectFontAwesome` fu
 4. **Updated CORS configuration on `cdo-dsco` bucket**
    to allow fetching of these files across code.org, studio.code.org, and hourofcode.com.
    More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
+5. If you're modifying custom fontawesome icons (i.e. 'kit' icons), make sure the list in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` is up to date as well as the FontAwesome storybook `frontend/packages/component-library/src/fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx` If any are being removed, you might want to search the codebase for any usages of those icons to avoid regressions.
 
 At time of writing, these files were referenced in the following places:
 

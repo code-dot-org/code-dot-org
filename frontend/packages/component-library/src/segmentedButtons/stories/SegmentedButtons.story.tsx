@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 import {useState} from 'react';
 
 import SegmentedButtons, {SegmentedButtonsProps} from '../index';
@@ -61,8 +61,11 @@ const MultipleTemplate: StoryFn<{
   ) => (
     <div data-theme={theme} style={style}>
       <h3 style={titleStyle}>{theme} Theme</h3>
-      {args.components?.map(componentArg => (
-        <div key={`${theme}-${componentArg.size}`} style={{marginTop: 15}}>
+      {args.components?.map((componentArg, index) => (
+        <div
+          key={`${theme}-${componentArg.size}-${index}`}
+          style={{marginTop: 15}}
+        >
           <SegmentedButtons
             {...componentArg}
             selectedButtonValue={

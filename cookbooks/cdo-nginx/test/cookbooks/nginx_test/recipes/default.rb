@@ -47,6 +47,8 @@ end
 
 execute "bundle install" do
   cwd "/home/#{node[:current_user]}"
+  user node[:current_user]
+  group node[:current_user]
 end
 
 service 'nginx_test' do

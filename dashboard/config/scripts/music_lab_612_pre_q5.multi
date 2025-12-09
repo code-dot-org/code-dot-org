@@ -16,16 +16,9 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Functions
 
-Standard: Use a function multiple times in a song, such as repeating a chorus
+Skill: Use a function multiple times in a song, such as repeating a chorus
 
-Lesson: Functions - Explore
-
-Skill Progression: Define & Call a function by refactoring existing code (ie: code exists; drag out function and update it, then call the function)
-
-Pretest Modality: Given starting code / shadow blocks, refactor
-
-Posttest Modality: Given algorithm / intent / incorrect code, match with code
-
+Appears in Lesson: Functions - Explore
 MARKDOWN
 
 markdown <<MARKDOWN

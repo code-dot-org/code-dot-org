@@ -1,0 +1,10 @@
+name 'ai-powered-threats-defenses-lesson3-level1_2025-pilot'
+display_name 'User Profiles'
+description 'Choose a user persona and go through their social media posts to see what type of information they shared about themeslves.'
+
+sublevels
+level 'ai-powered-threats-defenses-lesson3-level1a_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level1b_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level1c_2025-pilot'
+level 'ai-powered-threats-defenses-lesson3-level1d_2025-pilot'
+

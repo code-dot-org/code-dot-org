@@ -1,0 +1,21 @@
+name 'test-computer-systems-lesson11-multi-L3_v2-2025'
+question 'Given this new information, what do you think we should do?'
+
+wrong '🟢Launch it anyway - no action needed!'
+wrong '🟡Launch the chatbot, but follow-up with a quick fix to address the issue'
+wrong '🟠Delay the launch until we until we do more testing and fix the issue'
+wrong '🔴Cancel the project altogether - this issue is too serious'
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+## Alice's Game Controller
+
+#### Alice designed a game controller for users with mobility issues. It allows users to lightly tap specific locations on the device instead of having to press a button down.
+
+#### In user testing, Alice noticed that users with mobility issues had better experiences than those who were used to pressing buttons. In fact, the users without mobility issues encountered a bug when pressing down too hard on the sensors.
+
+#### Now Alice needs to make a decision about what to do with this new information
+
+<hr />
+
+MARKDOWN

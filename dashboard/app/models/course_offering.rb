@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: course_offerings
@@ -32,39 +34,7 @@
 
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
-
-  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
-  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
-
-  has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
-
-  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
-  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
-  validate :grade_levels_format
-
-  KEY_CHAR_RE = /[a-z0-9\-]/
-  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates :key,
-    format: {with: KEY_RE,
-    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
-
-  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
-  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
-  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
-  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
-    'K5 Workshops': 'https://code.org/professional-development-workshops',
-    '6-12 Workshops': 'https://code.org/apply',
-  }
-  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
-
-  DURATION_LABEL_TO_MINUTES_CAP = {
-    lesson: 90,
-    week: 250,
-    month: 950,
-    quarter: 2500,
-    semester: 5000,
-    school_year: 525600,
-  }
+  include Localizable
 
   ACCEPTABLE_RESOURCE_TYPES = [
     'Answer Key',
@@ -74,24 +44,57 @@ class CourseOffering < ApplicationRecord
     'Slide Deck',
     'Rubric'
   ]
+  DURATION_LABEL_TO_MINUTES_CAP = {
+    lesson: 90,
+    week: 250,
+    month: 950,
+    quarter: 2_500,
+    semester: 5_000,
+    school_year: 525_600,
+  }
+  ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
+  HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  KEY_CHAR_RE = /[a-z0-9\-]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'https://code.org/professional-development-workshops',
+    '6-12 Workshops': 'https://code.org/apply',
+  }
+
+  has_many :course_versions
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
+
+  has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
+
+  validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
+  validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
+  validate :grade_levels_format
+
+  validates :key,
+    format: {with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
+
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
+
+  self.localizable_attributes = :display_name, :description
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
-  # potential content root, i.e. a Unit or UnitGroup.
+  # potential content root, i.e. a UnitGroup.
   #
   # Examples:
   #
-  # coursea-2019.script represents the content root for Course A, Version 2019.
-  # Therefore, it should contain "is_course true", which will cause this method to create the
-  # corresponding CourseOffering and CourseVersion objects.
-  #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
-  # Therefore, it does not contain "is_course true". so this method will not create any new objects.
+  # Therefore, this method will not create any new objects.
   #
   # This method will also delete CourseOfferings and/or CourseVersions that were previously associated with
   # the content_root, if appropriate. See CourseVersion#add_course_version for details.
   def self.add_course_offering(content_root)
-    if content_root.is_course?
-      raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
+    unless content_root.is_a?(UnitGroup)
+      raise "cannot create CourseOffering for content root #{content_root.name} that is not a UnitGroup"
+    end
 
+    if content_root.is_course?
       offering = CourseOffering.find_or_create_by!(key: content_root.family_name) do |co|
         co.display_name = content_root.family_name if co.display_name.nil_or_empty?
       end
@@ -116,7 +119,7 @@ class CourseOffering < ApplicationRecord
   def latest_published_version(locale_code = 'en-us')
     locale_str = locale_code&.to_s
     unless locale_str&.start_with?('en')
-      latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+      latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
       return latest_stable_version.course_version unless latest_stable_version.nil?
     end
 
@@ -136,17 +139,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def course_id
-    return unless latest_published_version&.content_root_type == 'UnitGroup'
-    latest_published_version.content_root.id
-  end
-
-  def script_id
-    return unless latest_published_version&.content_root_type == 'Unit'
-    latest_published_version.content_root.id
-  end
-
-  def standalone_unit?
-    latest_published_version&.content_root_type == 'Unit'
+    latest_published_version&.content_root&.id
   end
 
   def self.should_cache?
@@ -188,9 +181,21 @@ class CourseOffering < ApplicationRecord
 
   def self.all_course_offerings
     if should_cache?
-      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+      @@course_offerings ||= CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     else
-      CourseOffering.all.includes(course_versions: :content_root)
+      CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     end
   end
 
@@ -210,12 +215,12 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.professional_learning_and_self_paced_course_offerings
+  def self.self_paced_pl_course_offerings
     all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
   end
 
-  def self.professional_learning_and_self_paced_course_offerings_basic_info
-    professional_learning_and_self_paced_course_offerings.map do |co|
+  def self.self_paced_pl_course_offerings_basic_info
+    self_paced_pl_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
@@ -224,13 +229,25 @@ class CourseOffering < ApplicationRecord
     end
   end
 
-  def self.self_paced_course_offerings_for_catalog
+  def self.self_paced_course_offerings_for_catalog(user = nil, locale = 'en-us')
+    all_course_offerings.filter_map do |co|
+      if co.get_participant_audience == 'teacher' &&
+          co.instruction_type == 'self_paced' &&
+          co.assignable? &&
+          co.any_version_is_in_published_state?
+        co.summarize_for_catalog(locale, user)
+      end
+    end
+  end
+
+  def self.self_paced_pl_course_offerings_for_workshops
+    participant_audiences = ['teacher', 'facilitator']
     all_course_offerings.select do |co|
-      co.get_participant_audience == 'teacher' &&
+      participant_audiences.include?(co.get_participant_audience) &&
         co.instruction_type == 'self_paced' &&
-        co.assignable? &&
+        co.header.present? &&
         co.any_version_is_in_published_state?
-    end.map(&:summarize_for_catalog)
+    end&.map(&:summarize_self_paced_pl)
   end
 
   def summarize_for_unit_selector(unit_ids)
@@ -291,28 +308,40 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def localized_display_name
-    localized_name = I18n.t(
-      key,
-      scope: [:data, :course_offerings],
-      default: nil
-    )
-    localized_name || display_name
+  def duration_in_minutes
+    return nil unless latest_published_version
+    co_units = latest_published_version.units
+    co_units.sum(&:duration_in_minutes)
+  end
+
+  def duration_in_hours
+    return nil unless duration_in_minutes
+    duration_in_minutes > 60 ? duration_in_minutes / 60 : 1
   end
 
   def duration
-    return nil unless latest_published_version
-    co_units = latest_published_version.units
-    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
-    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+    return nil unless duration_in_minutes
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
   def translated?(locale_code = 'en-us')
     locale_str = locale_code&.to_s
     return true if locale_str&.start_with?('en')
 
-    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
     !latest_stable_version.nil?
+  end
+
+  def upcoming_facilitated_workshops(user = nil)
+    return [] if pd_workshops.blank?
+
+    facilitated_workshops = pd_workshops.select do |ws|
+      ws.sessions.any? &&
+        ws.sessions.first.start > Time.zone.now &&
+        ws.relevant_to_user?(user)
+    end
+
+    facilitated_workshops.sort_by {|ws| ws.sessions.first.start}
   end
 
   def summarize_for_edit
@@ -339,7 +368,7 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  def summarize_for_catalog(locale_code = 'en-us')
+  def summarize_for_catalog(locale_code = 'en-us', user = nil)
     {
       key: key,
       display_name: localized_display_name,
@@ -347,6 +376,7 @@ class CourseOffering < ApplicationRecord
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
+      duration_in_hours: duration_in_hours,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
@@ -355,16 +385,20 @@ class CourseOffering < ApplicationRecord
       course_version_id: latest_published_version(locale_code)&.id,
       course_id: course_id,
       course_offering_id: id,
-      script_id: script_id,
-      is_standalone_unit: standalone_unit?,
       is_translated: translated?(locale_code),
-      description: description,
+      description: localized_description,
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
-      available_resources: get_available_resources(locale_code)
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      available_resources: get_available_resources(locale_code),
+      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog)
     }
+  end
+
+  def self.students_course_offerings_for_catalog
+    assignable_published_for_students_course_offerings.map(&:summarize_for_catalog)
   end
 
   def serialize
@@ -433,16 +467,20 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
   end
 
-  def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
-  end
-
   def csd?
     key == 'csd'
   end
 
   def hoc?
     marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoc
+  end
+
+  def hoai?
+    marketing_initiative == Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.hoai
+  end
+
+  def hoc_or_hoai?
+    hoc? || hoai?
   end
 
   def pl_course?

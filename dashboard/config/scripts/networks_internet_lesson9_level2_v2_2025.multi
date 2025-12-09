@@ -1,0 +1,24 @@
+name 'networks-internet-lesson9-level2_v2-2025'
+title 'Check for Understanding'
+
+wrong 'Regular software updates'
+right 'Phishing awareness training'
+wrong 'Two-factor authentication'
+wrong 'Strong password policy'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A company has been targeted by phishing attacks. Which of the following is the most effective defense strategy?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Correct Answer: Phishing Awareness Training**
+
+Phishing attacks rely on human deception rather than technical vulnerabilities.
+Employee training helps individuals recognize phishing attempts, avoid clicking malicious links, and report suspicious emails.
+
+Incorrect Answers:
+- Regular Software Updates – Important for patching vulnerabilities but does not prevent users from falling for phishing scams.
+- Two-Factor Authentication – Adds an extra layer of security but does not stop employees from clicking malicious links or entering credentials on fake sites.
+- Strong Password Policy – Protects against brute-force attacks but does not prevent users from unknowingly giving their password away in a phishing attack.
+MARKDOWN

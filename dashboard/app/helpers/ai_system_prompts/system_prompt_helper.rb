@@ -1,7 +1,7 @@
 require 'cdo/shared_constants'
 
-# Helper methods for generating system prompts for AI shared across
-# AI Tutor v1 and Evaluate Student Learning.
+# Helper methods for generating system prompts for AI.
+# Used for Evaluate Student Learning.
 module AiSystemPrompts::SystemPromptHelper
   def self.get_basic_system_prompt(level)
     base_prompt =

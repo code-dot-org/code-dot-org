@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-01-12T21:32:42.000Z",
   "level_num": "custom",
@@ -44,7 +45,6 @@
     "expand_debugger": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "palette_category_at_start": "variables",
     "reference_links": [
       "/courses/csp-2024/guides/counter-patterns-with-event",
@@ -58,11 +58,11 @@
     "encrypted_examples": "1GHWvoGhSap/aBjWoFQVGMASWJi1dPi41bsI78MTA3cI9li8NghjZirkHQAw\n9+xqdW+1DOoSFZUmCJrb12I6qw==\n",
     "parent_level_id": 15812,
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "ai_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:32:42.298+00:00\",\"changed\":[\"cloned from \\\"U4 L02 Thermostat App v2_new2023\\\"\"],\"cloned_from\":\"U4 L02 Thermostat App v2_new2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:32:42.298+00:00\",\"changed\":[\"cloned from \\\"U4 L02 Thermostat App v2_new2023\\\"\"],\"cloned_from\":\"U4 L02 Thermostat App v2_new2023\"},{\"changed_at\":\"2025-08-05 15:32:13 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2025-08-05 15:33:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"additional_ai_evaluation_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

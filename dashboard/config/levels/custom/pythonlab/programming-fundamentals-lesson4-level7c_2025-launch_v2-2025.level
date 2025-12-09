@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:16.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're fixing a productivity app that stores the name of a person's first task of the day. The app should print the task, but there are bugs!\r\n\r\n1. Look for **two** bugs.\r\n\r\n2. Fix both bugs so the program runs without errors and prints the message.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Morning Routine",
+    "bubble_choice_description": "You're fixing a productivity app that stores the name of a person's first task of the day. The app should print the task, but there are bugs!",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program prints the first task of the day\n\nfirst_task = Brush teeth\nprint(\"First task:\", frist_task)\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/6aa61393f807c05caf1ac064af5e8b67-dawn.png",
+    "name_suffix": "_v2-2025",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzriVvVcyb5JhZ0D8oG8Ls1mLuwKjrp3b\nSnmabQutVoU8lA32a+O/Kk5LSV4C54tyk5S47reAU/orZbrQtCnslXA5aivr\nahk8XmJcd55QxWL6yViwwco6mcbfO3UZdNqvsr/ZWoyaz7ochYvdQpVCDs17\n+tWhNzF+vo9UXV6/1IrGDYr3P6fxdhmHzhu+RsIk03tkOn3ZzYe4JZRYwsAS\nGy6hK0HauaFKWnR5f329z0ZvmdhIH8pi8vtTYhNY1x6lkQ==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestFirstTaskPrint(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_first_task_printed(self):\n        \"\"\"The correct first task should be printed\"\"\"\n        printed_lines = [line.strip() for line in self.log if line.strip()]\n\n        self.assertTrue(\n            any(\"Brush teeth\" in line for line in printed_lines),\n            \"Make sure you correctly assign and print the first task 'Brush teeth'!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:16.270+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level7c_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level7c_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

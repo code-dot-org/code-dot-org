@@ -17,6 +17,7 @@ const defaultProps = {
   unitData: {csf: false, isCsp: true, isCsd: false},
   scriptId: 123,
   scriptName: 'csp1',
+  scriptPath: '/courses/test-course/units/1',
   unitTitle: 'CSP 1',
   deeperLearningCourse: false,
   viewAs: ViewType.Instructor,

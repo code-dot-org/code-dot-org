@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question3_v2-2025'
+title 'Programming Fundamentals Post-Assessment: Question 3'
+
+wrong 'A way to comment on object behavior'
+wrong 'A method for debugging errors in an object'
+wrong 'A way to store multiple objects in a list'
+right 'The syntax used to access an object\'s attributes and methods'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following best describes **dot notation** in Python?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Working with Objects
+MARKDOWN

@@ -6,8 +6,9 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
-  setScriptId,
-  getSelectedUnitName,
+  setUnit,
+  getSelectedCourseName,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
@@ -28,7 +29,13 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
+function TextResponses({
+  sectionId,
+  scriptId,
+  courseVersionName,
+  unitPosition,
+  setUnit,
+}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -76,8 +83,8 @@ function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
     [textResponsesByScript]
   );
 
-  const onChangeScript = scriptId => {
-    setScriptId(scriptId);
+  const onChangeScript = (scriptId, courseVersionId) => {
+    setUnit(scriptId, courseVersionId);
     setFilterByLessonName(null);
   };
 
@@ -125,7 +132,8 @@ function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
           responses={filteredResponses}
           sectionId={sectionId}
           isLoading={isLoadingResponses}
-          scriptName={scriptName}
+          courseVersionName={courseVersionName}
+          unitPosition={unitPosition}
         />
       </div>
     </div>
@@ -136,8 +144,9 @@ TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
   scriptId: PropTypes.number,
-  scriptName: PropTypes.string,
-  setScriptId: PropTypes.func.isRequired,
+  courseVersionName: PropTypes.string,
+  unitPosition: PropTypes.number,
+  setUnit: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -171,11 +180,13 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
-    scriptName: getSelectedUnitName(state),
+    courseVersionId: state.unitSelection.courseVersionId,
+    courseVersionName: getSelectedCourseName(state),
+    unitPosition: getSelectedUnitPosition(state),
   }),
   dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(scriptId, courseVersionId) {
+      dispatch(setUnit(scriptId, courseVersionId));
     },
   })
 )(TextResponses);

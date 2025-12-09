@@ -6,6 +6,7 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 import FocusLock from 'react-focus-lock';
@@ -34,6 +35,8 @@ import EaseIntoView from '../util/EaseIntoView';
 import {getInstruments} from './util';
 
 import styles from './styles.module.scss';
+
+const SHOWING = 'showing';
 
 interface Props {
   initialValue: InstrumentEventValue;
@@ -173,12 +176,21 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const ticks = integers(lengthMeasures * 16, 1);
 
+  const numRows = allNotes.length;
+  const numCols = ticks.length + 1; // +1 for the label button
+
+  // Because we need allNotes and ticks to be defined to create this grid
+  // of refs, this useRef is further down the component body than usual.
+  const focusableRefs = useRef<Array<Array<HTMLButtonElement | null>>>(
+    Array.from({length: numRows}, () => Array(numCols).fill(null))
+  );
+
   const interfaceMode =
     editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
   const getRowInfo = (name: string, note: number) => {
     if (interfaceMode === 'drums') {
-      return {style: styles.textLabel, label: name};
+      return {style: styles.textLabel, label: name, tabIndex: 0, showing: true};
     }
 
     const {textColor, keyColor, selectedColor} = getNoteColorInfo(
@@ -202,6 +214,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       keyColor,
       selectedColor,
       tabIndex,
+      showing,
     };
   };
 
@@ -223,6 +236,116 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       -(firstVisibleRow * cellHeightWithGap - parseInt(peekHeight)),
     ];
   }, [editorType, scaleMode]);
+
+  // Because the notes render hidden rows, we end up with empty rows in the
+  // 2D array of refs. This function is a helper to find the next non-empty
+  // row when a user is navigating with the up/down arrows.
+  function findNextNonEmptyRow(startRow: number, direction: number) {
+    const numRows = focusableRefs.current.length;
+    let row = startRow;
+    for (let i = 0; i < numRows; i++) {
+      row = (row + direction + numRows) % numRows;
+      if (
+        focusableRefs.current[row] &&
+        focusableRefs.current[row].some(Boolean)
+      ) {
+        return row;
+      }
+    }
+    return startRow; // fallback if all rows are empty
+  }
+
+  // This handles keyboard interactions for the cells. If an instrument is sent
+  // in, we are focused on the label, which means we play a preview of the note.
+  // Otherwise, we are focused on a selectable cell, which means we call the
+  // corresponding click event. Escape exits the grid, moving focus back to the
+  // parent container. StopPropagation is called on Tab events to keep the focus
+  // from moving beyond the parent container when focus is inside it. Arrows
+  // navigate between cells, wrapping within rows and columns.
+  const handleKeyDown = (
+    event: React.KeyboardEvent,
+    note: number,
+    tick?: number,
+    instrument?: string
+  ) => {
+    const {key} = event;
+
+    switch (key) {
+      case 'Enter': {
+        event.stopPropagation();
+        event.preventDefault();
+        if (tick !== undefined) {
+          onClickCell(note, tick);
+        } else if (instrument) {
+          MusicRegistry.player.previewNote(note, instrument);
+        }
+        break;
+      }
+      case 'Escape': {
+        event.stopPropagation();
+        event.preventDefault();
+        // Move focus back to the parent container
+        const parentContainer = event.currentTarget.closest('#instrument-grid');
+        (parentContainer as HTMLElement | null)?.focus();
+        break;
+      }
+      case 'Tab': {
+        event.stopPropagation();
+        break;
+      }
+      case 'ArrowLeft':
+      case 'ArrowRight':
+      case 'ArrowUp':
+      case 'ArrowDown': {
+        event.preventDefault();
+
+        // Find the current focus position
+        let currentRow = -1;
+        let currentCol = -1;
+        currentRow = focusableRefs.current.findIndex(row =>
+          row.includes(document.activeElement as HTMLButtonElement)
+        );
+        if (currentRow !== -1) {
+          currentCol = focusableRefs.current[currentRow].indexOf(
+            document.activeElement as HTMLButtonElement
+          );
+        }
+
+        // If we couldn't find the current position, do nothing.
+        if (currentRow === -1 || currentCol === -1) {
+          return;
+        }
+
+        const numCols = focusableRefs.current[0]?.length || 0;
+        let nextRow = currentRow;
+        let nextCol = currentCol;
+
+        if (key === 'ArrowLeft') {
+          nextCol = (currentCol - 1 + numCols) % numCols;
+        }
+        if (key === 'ArrowRight') {
+          nextCol = (currentCol + 1) % numCols;
+        }
+
+        // Notes render in the opposite up/down direction as drums
+        const upArrowDirection = editorType === 'notes' ? 1 : -1;
+        const downArrowDirection = editorType === 'notes' ? -1 : 1;
+
+        if (key === 'ArrowUp') {
+          nextRow = findNextNonEmptyRow(currentRow, upArrowDirection);
+        }
+        if (key === 'ArrowDown') {
+          nextRow = findNextNonEmptyRow(currentRow, downArrowDirection);
+        }
+
+        // Focus the next element if it exists and is not null
+        focusableRefs.current[nextRow][nextCol]?.focus();
+        break;
+      }
+      default:
+        break;
+    }
+  };
 
   return (
     <FocusLock>
@@ -280,13 +403,16 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           )}
         </div>
         <EaseIntoView
+          id="instrument-grid"
           doEase={editorType !== 'drums'}
           frames={50}
           scrollStart={scrollStart}
           scrollEnd={scrollEnd}
           className={classNames(styles[`sequence-editor-${interfaceMode}`])}
+          ariaLabel="Instrument Grid"
+          focusableChildren={focusableRefs.current.flat()}
         >
-          {allNotes.map(({note, name}) => {
+          {allNotes.map(({note, name}, rowIndex) => {
             const {
               pitchRowClass,
               style,
@@ -295,6 +421,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               keyColor,
               selectedColor,
               tabIndex,
+              showing,
             } = getRowInfo(name, note);
 
             return (
@@ -303,11 +430,26 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                 key={note}
               >
                 <button
+                  ref={element =>
+                    showing
+                      ? (focusableRefs.current[rowIndex][0] = element)
+                      : null
+                  }
                   type="button"
-                  className={styles['cell-outer']}
+                  className={`${styles['cell-outer']} ${
+                    showing ? SHOWING : ''
+                  }`}
                   onClick={() =>
                     MusicRegistry.player.previewNote(
                       note,
+                      currentValue.instrument
+                    )
+                  }
+                  onKeyDown={event =>
+                    handleKeyDown(
+                      event,
+                      note,
+                      undefined,
                       currentValue.instrument
                     )
                   }
@@ -322,14 +464,23 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                 </button>
 
                 <div className={styles.cellRow}>
-                  {ticks.map(tick => (
+                  {ticks.map((tick, colIndex) => (
                     <Fragment key={tick}>
                       <button
+                        ref={element =>
+                          showing
+                            ? (focusableRefs.current[rowIndex][colIndex + 1] =
+                                element)
+                            : null
+                        }
                         type="button"
-                        className={styles[`cell-outer-${interfaceMode}`]}
+                        className={`${styles[`cell-outer-${interfaceMode}`]} ${
+                          showing ? SHOWING : ''
+                        }`}
                         key={tick}
                         onClick={() => onClickCell(note, tick)}
                         tabIndex={tabIndex}
+                        onKeyDown={event => handleKeyDown(event, note, tick)}
                       >
                         <div
                           className={classNames(

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:02.000Z",
   "level_num": "custom",
@@ -195,10 +196,12 @@
     ],
     "thumbnail_url": "https://images.code.org/bbf634a3dbe045dfdd18cebb960b383c-levelbuilder.png",
     "name_suffix": "_v2",
+    "teacher_markdown": "💡 **Teacher Tip**: Have students listen to the example track to understand when different blocks come in over the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 5px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Guitar Acoustic </span> block. They should have <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 5px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> tracks come in after one, two, and three measures of rest, finishing with <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Big Fill </span>.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.069+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequencing-synthesis-formative\\\"\"],\"cloned_from\":\"test-music-lab-sequencing-synthesis-formative\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:02.069+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequencing-synthesis-formative\\\"\"],\"cloned_from\":\"test-music-lab-sequencing-synthesis-formative\"},{\"changed_at\":\"2025-09-02 17:48:09 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:37.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "What Do You Look For In A Granola Bar?",
+    "display_name": "Granola Bars & Formulas",
+    "long_instructions": "This data set has information from the United States Department of Agriculture's Branded Food Products Database about 33 granola bars sold in the U.S. in 2017. \r\n\r\nUse formulas to answer the following questions:\r\n\r\n- What is the total number of calories if you ate one of each granola bar?\r\n- What is the combined amount of fat from all bars that contain peanut butter? \r\n- How many bars contain nuts?\r\n- How many bars contain chocolate chips and are crunchy?\r\n- What is the average number of calories in a granola bar?\r\n- What is the average sugar content in crunchy vs. chewy bars?\r\n- **Bonus: Which type (chewy vs crunchy) tends to be more sugary on average?**\r\n\r\nCome up with some additional questions that you might be interested in yourself!\r\n\r\n[Google Sheets - Granola Bar Nutrition Link](https://docs.google.com/spreadsheets/d/1kMoulARTE-QQrUeIb-hWKe8XmjqcuYP1OjNt91WJwtk/edit?gid=500578523#gid=500578523)\r\n\r\n**Do This**\r\n\r\n1. Add labels and formulas to the workspace and the appropriate attributes that you think might be helpful to answer your data questions. If you need help\r\n\r\n    :::details [**Need Help with SUM?**]\r\n    - Use `=SUM(range)` to total up a column of numbers, like calories or fat\r\n    - Make sure your range only includes numeric cells (no headers or labels)\r\n    :::\r\n    \r\n    :::details [**Need Help with COUNTIF?**]\r\n    - Use this to count how many cells meet a condition, like `=COUNTIF(A2:A20, \"Nuts\")`.\r\n    - The criteria must be in quotes if it’s text (like \"Crunchy\")\r\n    - Be sure to match the text exactly as it appears in the sheet (case and spacing matter!)\r\n    :::\r\n    \r\n    :::details [**Need Help with AVERAGE?**]\r\n    - Use this to find the average of numbers in a column (like calories or sugar).\r\n    - If you’re getting an error, double-check that all the cells in the range are numeric.\r\n    :::\r\n",
+    "teacher_markdown": "Student response will vary since students are given the freedom to explore the questions that they have. ",
+    "bubble_choice_description": "Explore this dataset about granola bars and answer questions using formulas.",
+    "thumbnail_url": "https://images.code.org/5dba360c75fd2d388a26ef7de9a9d11e-1680535.png",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "DxQ7qSncvPO+AF1Pr9PtKbO2nwxKJZMKm7/enhsZtTHwEicpxs/hMKmIqY39\nIoZ3dThjbGQWztqP7e8nhugDMydLDApJAI+NQLBOx+UH9DO2+EEcBwIe21Ji\nAkWrdowmqcz8RKXl2q8CFRxKzlj8GagEHycXixZo6MUXKjZmL9B+136vUokx\nmYxv5Qvb7Alok0m9+hSnsMRsidv9ThQasJc5fALN4xbnjqw+IlaxeJFTA0DI\nP0IzIXNZiiNk9FwFCrqvSJhgvFEzdZ115gDivrhnlRQg53WNNNO5YhrEGxtR\nkg3onH8eqc3sLkGh1riAI8YjNNsirm8zmq8rkf8aQKUKo8iUccwZGbH6Tp0N\np7WHabn2Dr476kon62mK2cqTciIcRY0BCXj1Dn/ZCS/4oQJ4it2bQylERJnn\niWw9urjNxM4ECt9LgJ4PHSy1FP2V3YbWEOFadfS2tmaHi9O7HD0vEE+yOdrp\nlLiNuhBgw4VpZw+KRsFpFjZ/EHomgVZz8bPKfe74VXEqUXPc77wAzNguRusL\nM0B9hLwVjpFth/uirNJlYa6HqYSo/Na4eHwnFQUUbEwj7QqLXKor9UVBn5or\ndg3FUtTVyjdP5G3Hs2DWiDA/ilocp/+cNPqHuM7l\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:37.336+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level10e_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level10e_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

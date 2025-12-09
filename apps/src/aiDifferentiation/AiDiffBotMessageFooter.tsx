@@ -90,7 +90,7 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message, reportingData}) => {
   return (
     <div className={style.messageFeedbackContainer}>
       <div className={style.messageFeedbackLeft}>
-        <CopyButton copyText={message.chatMessageText} />
+        <CopyButton copyText={message.chatMessageText} usage={'ta-footer'} />
         <PDFDownloadLink
           document={<AiDiffPdf messages={[message]} />}
           fileName="ai_differentiation_message.pdf"
@@ -106,8 +106,8 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message, reportingData}) => {
             size="xs"
             isIconOnly
             icon={{
-              iconStyle: 'regular',
-              iconName: pdfTimeout ? 'check' : 'file-export',
+              iconStyle: 'solid',
+              iconName: pdfTimeout ? 'check' : 'download',
             }}
             type="primary"
             className={

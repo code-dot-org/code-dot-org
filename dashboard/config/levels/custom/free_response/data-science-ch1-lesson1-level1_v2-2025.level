@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-09-25T20:08:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Plan a Pizza Party",
+    "long_instructions": "<img src=\"https://images.code.org/fa50191ac64b4072e71210af83000541-pizza_party.jpg\" style=\"float: right; width: 150px; margin-left: 10px; margin-bottom: 10px;\">\r\n\r\nYou are planning a class pizza party and want to include music and activities.\r\n\r\nWhat information (data) would you want to collect to help make the party fun and successful?\r\n\r\n**Tip:** Think about food, drinks, supplies, music, number of people, or anything else that could help you plan.\r\n\r\n**Type your answer below.**\r\n",
+    "teacher_markdown": "This activity introduces students to the idea that data is any information that can help solve a problem or answer a question. In this case, students are imagining they are planning a class pizza party and identifying what information (data) they might need to collect to make the event fun and successful.\r\n\r\nThis is an intentional pre-assessment — students haven’t formally learned what data is yet, so their responses will give insight into how they naturally think about information and decision-making. Remind students that there are no wrong answers. If they’re stuck, you can prompt them with questions like:\r\n\r\n    “What would you want to know before the party?”\r\n\r\n    “What kind of things would you need to plan for food, drinks, or activities?”\r\n\r\nEncourage a range of responses: number of people attending, pizza preferences, drink options, dietary needs, supplies, or even music or activity ideas.\r\n**Assessment Opportunity: Pre-Assessment**\r\n\r\nLooking at what data the students collect here can help you understand what previous understanding they have of data and the the role of data in solving real-world problems.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2-2025",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:08:06.697+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson1-level1_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson1-level1_2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

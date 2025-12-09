@@ -175,7 +175,7 @@ export default function LearningGoals({
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoals && !productTour) {
+    if (studentLevelInfo?.user_id && learningGoals && !productTour) {
       // Set our current idea of the feedback immediately
       setDisplayFeedback(teacherFeedbacks.current[currentLearningGoal]);
       setLoaded(teacherFeedbacksLoaded.current[currentLearningGoal]);
@@ -224,7 +224,13 @@ export default function LearningGoals({
           .catch(error => console.error(error));
       });
     }
-  }, [studentLevelInfo, learningGoals, currentLearningGoal, open, productTour]);
+  }, [
+    studentLevelInfo?.user_id,
+    learningGoals,
+    currentLearningGoal,
+    open,
+    productTour,
+  ]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown, {once: true});

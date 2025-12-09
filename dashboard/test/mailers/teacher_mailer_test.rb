@@ -2,8 +2,8 @@ require 'test_helper'
 
 class TeacherMailerTest < ActionMailer::TestCase
   test 'delete teacher email' do
-    teacher = create :teacher, email: 'mickey@mouse.com', name: 'Mickey Mouse'
-    removed_students = create_list :student, 2
+    teacher = create(:teacher, email: 'mickey@mouse.com', name: 'Mickey Mouse')
+    removed_students = create_list(:student, 2)
     mail = TeacherMailer.delete_teacher_email(teacher, removed_students)
 
     assert_equal I18n.t('teacher_mailer.delete_teacher_subject'), mail.subject
@@ -16,8 +16,8 @@ class TeacherMailerTest < ActionMailer::TestCase
   end
 
   test 'delete teacher email with more than 1000 students' do
-    teacher = create :teacher, email: 'mickey@mouse.com', name: 'Mickey Mouse'
-    removed_students = create_list :student, 2
+    teacher = create(:teacher, email: 'mickey@mouse.com', name: 'Mickey Mouse')
+    removed_students = create_list(:student, 2)
     # Cheat to keep this test from taking 30+ seconds to run
     removed_students.stubs(:count).returns(1001).twice
     mail = TeacherMailer.delete_teacher_email(teacher, removed_students)
@@ -31,7 +31,7 @@ class TeacherMailerTest < ActionMailer::TestCase
   end
 
   test 'verified teacher email' do
-    teacher = build :teacher, email: 'test@example.com'
+    teacher = build(:teacher, email: 'test@example.com')
     mail = TeacherMailer.verified_teacher_email(teacher)
 
     assert_equal I18n.t('teacher_mailer.verified_teacher_subject'), mail.subject

@@ -21,6 +21,11 @@ interface UseInitialLabThemeProps {
     appName?: string;
   };
 }
+const LABS_WITH_THEME_PREFERENCE: (string | undefined)[] = [
+  'pythonlab',
+  'weblab2',
+  'sketchlab',
+];
 
 // Determine and set the theme for the lab that is currently being loaded.
 export const useInitialLabTheme = ({
@@ -33,12 +38,12 @@ export const useInitialLabTheme = ({
   const initialTheme = getAppOptionsTheme();
   const lesson = useAppSelector(state => getCurrentLesson(state));
 
-  // We only use the global user preference for theme if the current lesson has
-  // at least one python lab level or the current level is a python lab level.
   const useThemeUserPreference = useMemo(
     () =>
-      levelProperties?.appName === 'pythonlab' ||
-      lesson?.levels.some((level: Level) => level.app === 'pythonlab'),
+      LABS_WITH_THEME_PREFERENCE.includes(levelProperties?.appName) ||
+      lesson?.levels.some((level: Level) =>
+        LABS_WITH_THEME_PREFERENCE.includes(level.app)
+      ),
     [lesson?.levels, levelProperties?.appName]
   );
 

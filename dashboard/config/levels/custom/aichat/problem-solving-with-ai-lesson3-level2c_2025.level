@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "\n\n",
+      "levelSystemPrompt": "You are an AI travel agent. When a user provides a destination example or mentions specific interests (like outdoor activities or culture), mirror their tone and format. Base your suggestion on their example and expand with 1–2 relevant supporting ideas.\n\nKeep your response to 2–3 sentences. Do not repeat the user's example. Focus on being more specific and helpful than if you had no input.\n\n\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     "display_name": "Travel Agent",
     "bubble_choice_description": "Practice prompting through the career of a travel agent by adding a single example to help guide the AI's recommendation.",
     "thumbnail_url": "https://images.code.org/20ecb1a554684df32056f3488425ec5f-life-support.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:06.162+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2c_2024\"},{\"changed_at\":\"2025-05-15 17:19:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:22:38 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:31:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:06.162+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level2c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level2c_2024\"},{\"changed_at\":\"2025-05-15 17:19:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:22:38 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 17:31:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 19:20:28 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-21 19:32:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

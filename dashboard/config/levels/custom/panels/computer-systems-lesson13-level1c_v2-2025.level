@@ -1,0 +1,50 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T20:01:04.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "## Target 7.1\nEnsure equitable energy access by monitoring electricity and clean fuel usage.\n\n---\n\n* Access to reliable electricity is essential for education, healthcare, and economic development.\n* Many remote and low-income communities lack access to modern energy sources.\n* Clean energy solutions like solar, wind, and biogas reduce dependence on fossil fuels.\n* Smart grids and real-time monitoring help track energy distribution and efficiency.\n* Expanding affordable and sustainable energy improves quality of life worldwide.",
+        "imageUrl": "https://images.code.org/8cad6fc3a7d453e1810271fe3c82021e-Pasted Graphic 17.png",
+        "key": "undefined-0c1fb390-a121-4557-8293-598810105ff5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 7.2\nTrack and expand the share of renewable energy in the global energy mix.\n\n---\n\n* Renewable energy includes solar, wind, hydro, geothermal, and bioenergy.\n* Increasing the use of renewables reduces carbon emissions and dependence on fossil fuels.\n* Governments and businesses invest in smart grids and storage systems to improve efficiency.\n* AI and data analytics optimize energy production and consumption patterns.\n* Expanding renewable infrastructure creates jobs and supports sustainable growth.",
+        "imageUrl": "https://images.code.org/74d0fc97d9c5a14d38e044db4f575e14-Pasted Graphic 18.png",
+        "key": "undefined-ca8e36c6-6a0a-4a28-8b84-9d8916597600",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 7.3\nEnhance energy efficiency across sectors to reduce waste.\n\n---\n\n* Energy waste in homes, industries, and transportation contributes to environmental impacts.\n* Smart technology like LED lighting, efficient appliances, and automated systems reduces energy use.\n* AI-powered energy management systems optimize power consumption in buildings.\n* Electric vehicles (EVs) and public transportation help reduce fuel consumption.\n* Increasing efficiency lowers costs and decreases environmental impact.",
+        "imageUrl": "https://images.code.org/687c7397d4165d657172b3cc8a5f2085-Pasted Graphic 19.png",
+        "key": "computer-systems-category-1-bb1d2416-8b0a-4842-a58a-8538eb9357db",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 13.1\nUse early warning systems to reduce risks from climate-related hazards.\n\n---\n\n* Climate hazards include hurricanes, wildfires, floods, and extreme heat.\n* Real-time weather data, satellite imaging, and AI models help predict disasters.\n* Early warning systems provide alerts to at-risk communities before disasters strike.\n* IoT sensors and drones help monitor and assess climate-related damage.\n* Disaster resilience planning reduces loss of life and economic damage.",
+        "imageUrl": "https://images.code.org/52b146be63be6cf2d94f6c84e238fcaa-Pasted Graphic 20.png",
+        "key": "computer-systems-category-1-95acf92d-4511-460e-8d55-3eb50c6fba19",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Target 13.3\nRaise awareness and educate communities about climate mitigation and adaptation.\n\n---\n\n* Environmental impacts include rising temperatures, extreme weather, and sea-level rise.\n* Education programs help people understand ways to reduce their carbon footprint.\n* Sustainability-focused apps, VR experiences, and gamified learning engage users in sustainability action.\n* Social media campaigns and AI-driven tools spread awareness on a global scale.\n* Community-driven initiatives encourage climate-friendly behaviors and policies.",
+        "imageUrl": "https://images.code.org/885add704e8ed9c1433897c1aadc6cd2-Pasted Graphic 21.png",
+        "key": "computer-systems-category-1-a645bb31-bb05-4f65-9ac1-bb632f240484",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "Design computer systems to address climate change and expand access to affordable, sustainable energy solutions.",
+    "display_name": "Climate Action and Energy",
+    "thumbnail_url": "https://images.code.org/90dfc3065d5f4472b31a7587ccb7201b-Pasted Graphic 29.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:01:04.740+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level1c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level1c_2025\"}]"
+}]]></config>
+</Panels>

@@ -7,8 +7,8 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     File.stubs(:write)
     FileUtils.stubs(:mkdir_p)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    @levelbuilder = create :levelbuilder
-    @programming_environment = create :programming_environment
+    @levelbuilder = create(:levelbuilder)
+    @programming_environment = create(:programming_environment)
   end
 
   test 'can create programming class from params' do
@@ -33,8 +33,8 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     File.expects(:write).once
 
-    programming_class = create :programming_class, programming_environment: @programming_environment
-    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_class = create(:programming_class, programming_environment: @programming_environment)
+    category = create(:programming_environment_category, programming_environment: @programming_environment)
 
     post :update, params: {
       id: programming_class.id,
@@ -65,8 +65,8 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     File.expects(:write).once
 
-    programming_class = create :programming_class, programming_environment: @programming_environment
-    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_class = create(:programming_class, programming_environment: @programming_environment)
+    category = create(:programming_environment_category, programming_environment: @programming_environment)
 
     post :update, params: {
       id: programming_class.id,
@@ -88,10 +88,10 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     File.expects(:write).once
 
-    programming_class = create :programming_class, programming_environment: @programming_environment
-    category = create :programming_environment_category, programming_environment: @programming_environment
-    method_to_update = create :programming_method, programming_class: programming_class
-    method_to_destroy = create :programming_method, programming_class: programming_class
+    programming_class = create(:programming_class, programming_environment: @programming_environment)
+    category = create(:programming_environment_category, programming_environment: @programming_environment)
+    method_to_update = create(:programming_method, programming_class: programming_class)
+    method_to_destroy = create(:programming_method, programming_class: programming_class)
 
     post :update, params: {
       id: programming_class.id,
@@ -114,7 +114,7 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 
-    programming_class = create :programming_class, programming_environment: @programming_environment
+    programming_class = create(:programming_class, programming_environment: @programming_environment)
 
     get :edit, params: {id: programming_class.id}
     assert_response :ok
@@ -127,10 +127,10 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
   class ProgrammingClassesControllerAccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      @programming_environment = create :programming_environment
-      @programming_class = create :programming_class, programming_environment: @programming_environment
-      @unpublished_programming_environment = create :programming_environment, published: false
-      @unpublished_programming_class = create :programming_class, programming_environment: @unpublished_programming_environment
+      @programming_environment = create(:programming_environment)
+      @programming_class = create(:programming_class, programming_environment: @programming_environment)
+      @unpublished_programming_environment = create(:programming_environment, published: false)
+      @unpublished_programming_class = create(:programming_class, programming_environment: @unpublished_programming_environment)
 
       @update_params = {id: @programming_class.id, name: 'new name'}
     end
@@ -174,23 +174,33 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
     test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
     test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_by_keys_for_unpublished_class_should_receive_success'
+
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: nil, response: :success
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :student, response: :success
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: nil, response: :forbidden, name: 'test_signed_out_calling_get_get_serialized_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :student, response: :forbidden, name: 'test_student_calling_get_get_serialized_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_get_serialized_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :get_serialized, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_get_serialized_for_unpublished_class_should_receive_success'
   end
 
   class FilterTests < ActionController::TestCase
     setup do
       ProgrammingEnvironment.all.destroy_all
-      @programming_environment1 = create :programming_environment
-      @programming_environment2 = create :programming_environment
+      @programming_environment1 = create(:programming_environment)
+      @programming_environment2 = create(:programming_environment)
       [@programming_environment1, @programming_environment2].each do |programming_environment|
         3.times do
-          category = create :programming_environment_category, programming_environment: programming_environment
+          category = create(:programming_environment_category, programming_environment: programming_environment)
           4.times do
-            create :programming_class, programming_environment: programming_environment, programming_environment_category: category
+            create(:programming_class, programming_environment: programming_environment, programming_environment_category: category)
           end
         end
       end
 
-      @levelbuilder = create :levelbuilder
+      @levelbuilder = create(:levelbuilder)
     end
 
     test 'get_filtered_results returns not_acceptable if no page providewd' do

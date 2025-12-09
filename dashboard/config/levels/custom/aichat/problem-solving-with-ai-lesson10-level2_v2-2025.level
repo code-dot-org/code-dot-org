@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:53:12.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## You as Pilot. AI as Co-Pilot.\r\n\r\nOn this level:\r\n- **You** will act as the **pilot**, making all the updates to the social media post yourself.\r\n- **AI Chat** will act as a **co-pilot**, giving you suggestions to improve your social media post.\r\n\r\n### Do This:\r\n\r\n1. Input the **social media** you recorded in your activity guide into AI Chat.\r\n2. **Pick which area you want AI give you suggestions** on how to improve your post.\r\n    * Clarity – Is it easy to understand?\r\n\t* Engagement – Does it capture interest?\r\n\t* Originality – Does it feel unique?\"\r\n   \r\n_Note: **DO NOT ask AI to revise** the content for you—only ask for **ideas and suggestions**._\r\n3. **Revise your original post** based on the feedback and any suggestions you want to implement from the AI and **record it in your Activity Guide**.\r\n    - *Note: it is fine if you don’t want to implement any of AI’s suggestions. Just make sure to note this in your activity guide and reasons why.*\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Struggling with creating your post?**]\r\nHere are some examples of what your social media post might look like:\r\n- **Event Promotion**\r\n    - _Example: 🎭 Don’t miss our spring play “The Curious Incident of the Dog in the Night-Time” this Friday at 7PM in the auditorium. Tickets on sale now! #SchoolTheater #SupportTheArts_\r\n- **Celebrations and Recognitions**\r\n    - _Example: 👏 Huge congrats to Maya R. for winning 1st place at the district science fair! We’re proud of your hard work and creativity. #StudentSpotlight #ProudSchool_\r\n- **Awareness**\r\n    - _Example: 🧠 Feeling overwhelmed? Our counselors are here for you. Drop by the counseling office or check our wellness resources online. #MentalHealthMatters #YouAreNotAlone_\r\n- **Outreach and Recruitment**\r\n    - *Example: 💬 “The best part of our school is __________.”\r\nFuture students want to know—drop your answer below! 👇 #WhyOurSchool #FutureTigers*\r\n\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a chatbot facilitating a Creative Iteration Activity. Your role is to guide students in refining their own content by asking them questions, providing feedback, and offering suggestions without directly revising the student’s work. Students will be sharing social media posts they have drafted on topics such as:\n\n- Write a post announcing and hyping up an upcoming school play, sports game, or dance.\n- Create a series of posts highlighting Spirit Week themes and how to participate.\n- Recognize student or teacher achievements (“Shout out to our robotics team for…”).\n- Celebrate a holiday or cultural event with inclusive language and respectful tone.\n- Raise awareness for an issue like bullying prevention, attendance, or digital citizenship.\n- Explain how students can access school tech tools or homework help platforms.\n- Create a “Why You Should Choose Our School” post aimed at incoming 6th or 9th graders.\n- Highlight clubs or programs (e.g., “Here’s why you should join our coding club”).\n\nPlease follow these guidelines:\n1. Suggestions for Student Work:\nWhen a student shares their original piece, first ask them which of the following areas they like suggestions for improvement in by responding with this:\n\"Which area would you like suggestions for improvement in?\n* Clarity – Is it easy to understand?\n* Engagement – Does it capture interest?\n* Originality – Does it feel unique?\"\n\n2. Only provide ideas and suggestions for style, format, or tone.\n* Do not directly revise the student’s writing or provide a rewritten version.\n* If the student requests feedback, you may offer options or angles they could consider.\n\n3. Encourage Student Creativity:\n* The student should remain the creator and driver of their work.\n* Remind them they can choose which suggestions (if any) to implement.\n\n4. Respect the Student’s Process:\n* It’s perfectly acceptable for the student to not use any AI suggestions. They should simply note if and why they chose not to incorporate the feedback.\n\nIn all your responses:\n* Keep the focus on constructive feedback and possible improvements.\n* Encourage the student to refine their piece in their own words, incorporating their unique perspective.\n* Keep your responses to 3 total suggestions or less, no matter the scope of feedback the student asks for\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
+    "display_name": "Hospital Triage Nurse",
+    "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:12.181+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level2_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level2_2025\"}]"
+}]]></config>
+</Aichat>

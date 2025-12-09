@@ -22,7 +22,7 @@ class AdminSearchControllerTest < ActionController::TestCase
   #
 
   test 'find_students flashes warning if multiple teachers match' do
-    create_list :teacher, 2, name: 'multiple'
+    create_list(:teacher, 2, name: 'multiple')
 
     get :find_students, params: {teacherNameFilter: 'multiple'}
 
@@ -38,7 +38,7 @@ class AdminSearchControllerTest < ActionController::TestCase
   end
 
   test 'find_students flashes warning for deleted section' do
-    section = create :section
+    section = create(:section)
     section.destroy
 
     get :find_students, params: {sectionFilter: section.code}
@@ -76,7 +76,7 @@ class AdminSearchControllerTest < ActionController::TestCase
   end
 
   test "undelete_section should recursively undelete" do
-    follower = create :follower, section: @teacher_section
+    follower = create(:follower, section: @teacher_section)
     follower.destroy
     @teacher_section.destroy
 

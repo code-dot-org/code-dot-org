@@ -8,7 +8,9 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
-  setScriptId,
+  setUnit,
+  getSelectedCourseId,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -34,6 +36,8 @@ import StandardsReportHeader from './StandardsReportHeader';
 
 function StandardsReport({
   scriptId,
+  courseId,
+  unitPosition,
   sectionId,
   scriptFriendlyName,
   scriptData,
@@ -45,7 +49,7 @@ function StandardsReport({
   numLessonsCompleted,
   numLessonsInUnit,
   setTeacherCommentForReport,
-  setScriptId,
+  setUnit,
   lessonsByStandard,
 }) {
   React.useEffect(() => {
@@ -55,8 +59,19 @@ function StandardsReport({
       );
       const scriptIdFromTD =
         window.opener.teacherDashboardStoreInformation.scriptId;
-      setScriptId(scriptIdFromTD);
-      loadUnitProgress(scriptIdFromTD, sectionId);
+      const courseVersionIdFromTD =
+        window.opener.teacherDashboardStoreInformation.courseVersionId;
+      const courseIdFromTD =
+        window.opener.teacherDashboardStoreInformation.courseId;
+      const unitPositionFromTD =
+        window.opener.teacherDashboardStoreInformation.unitPosition;
+      setUnit(scriptIdFromTD, courseVersionIdFromTD);
+      loadUnitProgress(
+        scriptIdFromTD,
+        sectionId,
+        courseIdFromTD,
+        unitPositionFromTD
+      );
     } catch (e) {
       throw new Error(
         '/standards_report must be opened from the `generate PDF report` button of the Standards tab on the v1 progress page on a section assigned to curriculum that has standards (e.g. `Course C (2023)`).'
@@ -65,8 +80,10 @@ function StandardsReport({
   }, [
     sectionId,
     setTeacherCommentForReport,
-    setScriptId,
+    setUnit,
     numStudentsInSection,
+    courseId,
+    unitPosition,
   ]);
 
   const getLinkToOverview = () => {
@@ -182,6 +199,8 @@ function StandardsReport({
 StandardsReport.propTypes = {
   //redux
   scriptId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   sectionId: PropTypes.number.isRequired,
   scriptFriendlyName: PropTypes.string.isRequired,
   scriptData: unitDataPropType,
@@ -193,7 +212,7 @@ StandardsReport.propTypes = {
   numLessonsCompleted: PropTypes.number,
   numLessonsInUnit: PropTypes.number,
   setTeacherCommentForReport: PropTypes.func.isRequired,
-  setScriptId: PropTypes.func.isRequired,
+  setUnit: PropTypes.func.isRequired,
   lessonsByStandard: PropTypes.object,
 };
 
@@ -227,6 +246,8 @@ const styles = {
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     sectionId: state.teacherSections.selectedSectionId,
     scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),
@@ -243,8 +264,8 @@ export default connect(
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
     },
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(scriptId, courseVersionId) {
+      dispatch(setUnit(scriptId, courseVersionId));
     },
   })
 )(StandardsReport);

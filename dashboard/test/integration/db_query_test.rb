@@ -2,32 +2,31 @@ require 'test_helper'
 
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   def setup
+    @unit = create(:unit, :with_levels)
+    create(:single_unit_course, unit: @unit)
     setup_script_cache
   end
 
-  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "script level show" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    script = Unit.get_from_cache('allthethings')
+    script = @unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
-    create :user_level,
+    create(:user_level,
       user: student,
       script: script,
       level: level,
       level_source: create(:level_source, level: level)
+)
 
-    assert_cached_queries(10) do
-      get script_lesson_script_level_path(
-        script_id: script.name,
+    assert_cached_queries(18) do
+      get course_unit_lesson_script_level_path(
+        course_course_name: script.get_original_unit_group.name,
+        unit_position: 1,
         lesson_position: 1,
         id: 1
       )
@@ -36,18 +35,19 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "user progress" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    script = Unit.hoc_2014_unit
+    script = @unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
-    create :user_level,
+    create(:user_level,
       user: student,
       script: script,
       level: level,
       level_source: create(:level_source, level: level)
+)
 
     user_app_options_path = user_app_options_path(
       script: script.name,
@@ -56,7 +56,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level.id
     )
 
-    assert_cached_queries(4) do
+    assert_cached_queries(5) do
       get user_app_options_path,
         headers: {HTTP_USER_AGENT: 'test'}
       assert_response :success
@@ -64,7 +64,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone passing last level of progression" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = create(:script, :with_levels, levels_count: 3)
@@ -73,7 +73,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
-    assert_cached_queries(9) do
+    assert_cached_queries(10) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id,
@@ -84,7 +84,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone passing middle level of progression" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = create(:script, :with_levels, levels_count: 3)
@@ -93,7 +93,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     setup_script_cache
-    assert_cached_queries(7) do
+    assert_cached_queries(8) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id,
@@ -104,7 +104,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone not passing" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     script = create(:script, :with_levels, levels_count: 3)
@@ -112,7 +112,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sl = script.script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
-    assert_cached_queries(7) do
+    assert_cached_queries(8) do
       post milestone_path(
         user_id: student.id,
         script_level_id: sl.id,
@@ -131,14 +131,14 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
     CourseOffering.add_course_offering(course)
 
-    teacher = create :teacher
-    section = create :section, user: teacher
-    student = create :student
+    teacher = create(:teacher)
+    section = create(:section, user: teacher)
+    student = create(:student)
     section.students = [student]
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(10) do
+    assert_cached_queries(8) do
       get "/courses/#{course.name}/units/1/"
       assert_response :success
     end
@@ -146,12 +146,12 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # Simulate all the ajax requests which the unit overview page sends to the
     # server on page load.
 
-    assert_cached_queries(6) do
+    assert_cached_queries(7) do
       get "/api/user_progress/#{script.name}"
       assert_response :success
     end
 
-    assert_cached_queries(2) do
+    assert_cached_queries(3) do
       get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
       assert_response :success
     end
@@ -171,14 +171,14 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     level = unit.levels.first
 
-    teacher = create :teacher
-    section = create :section, user: teacher, script: unit
-    student = create :student
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, script: unit)
+    student = create(:student)
     section.students = [student]
     student.assign_script(unit)
     sign_in student
 
-    assert_cached_queries(19) do
+    assert_cached_queries(21) do
       get "/courses/#{course.name}/units/1/lessons/1/levels/1"
       assert_response :success
     end
@@ -186,12 +186,12 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # Simulate all the ajax requests which the level page sends to the
     # server on page load.
 
-    assert_cached_queries(2) do
+    assert_cached_queries(3) do
       get "/api/user_app_options/#{unit.name}/1/1/#{level.id}"
       assert_response :success
     end
 
-    assert_cached_queries(2) do
+    assert_cached_queries(3) do
       get "/levels/#{level.id}/get_rubric"
       assert_response :success
     end

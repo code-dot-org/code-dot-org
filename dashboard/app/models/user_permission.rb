@@ -44,7 +44,8 @@ class UserPermission < ApplicationRecord
     PROGRAM_MANAGER = 'program_manager'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
-    # Grants access to use AI Tutor which uses AI Chat API
+    # DEPRECATED. DO NOT USE.
+    # TODO: Clean up artifacts of this permission in all envs before removing it from the model.
     AI_TUTOR_ACCESS = 'ai_tutor_access'.freeze,
     #  Grants access to an internal tool to pull AI-evaluated samples of student work
     STUDENT_WORK_ACCESS = 'student_work_access'.freeze,

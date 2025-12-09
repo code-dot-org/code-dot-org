@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
+import dancePartyActivityAiEditionImg from '@cdo/static/dance/hoc/dance-party-activity-ai-edition.png';
 
 import TwoColumnActionBlock from './TwoColumnActionBlock';
 
@@ -20,9 +21,7 @@ export default class SpecialAnnouncement extends Component {
     const buttonId = 'student_homepage_announcement_special2020';
     const url = pegasus('/dance');
     const buttonText = i18n.learnMore();
-    const imageUrl = pegasus(
-      '/images/dance-hoc/dance-party-activity-ai-edition.png'
-    );
+    const imageUrl = dancePartyActivityAiEditionImg;
 
     return (
       <TwoColumnActionBlock

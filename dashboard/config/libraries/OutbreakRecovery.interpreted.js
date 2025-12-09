@@ -1,3 +1,5 @@
+// The Outbreak Simulator lesson in Course F relies upon this library.
+
 function contagionRecover(){
   recoveryTime = 200;
   addBehaviorSimple(({costume: "sick"}), new Behavior(contagionRecovering, []));

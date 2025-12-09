@@ -10,7 +10,7 @@ import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichat/views/modelCustomizatio
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {setModelCardProperty, startSave} from '../../slice';
+import {startSave} from '../../slice';
 
 import {dispatchSaveFailNotification} from './dispatchSaveFailNotification';
 import {handleToxicityRequestError} from './handleToxicityRequestError';
@@ -23,26 +23,6 @@ export const saveAiCustomization = async (
   dispatch: AppDispatch,
   levelId: number | null
 ) => {
-  // Remove any empty example topics on save
-  const trimmedExampleTopics =
-    currentAiCustomizations.modelCardInfo.exampleTopics.filter(
-      topic => topic.length
-    );
-  dispatch(
-    setModelCardProperty({
-      property: 'exampleTopics',
-      value: trimmedExampleTopics,
-    })
-  );
-
-  const trimmedCurrentAiCustomizations = {
-    ...currentAiCustomizations,
-    modelCardInfo: {
-      ...currentAiCustomizations.modelCardInfo,
-      exampleTopics: trimmedExampleTopics,
-    },
-  };
-
   // Notify the UI that a save is in progress.
   dispatch(startSave(saveType));
   Lab2Registry.getInstance()
@@ -53,7 +33,7 @@ export const saveAiCustomization = async (
   let toxicity: DetectToxicityResponse;
   try {
     toxicity = await detectToxicityInCustomizations(
-      trimmedCurrentAiCustomizations,
+      currentAiCustomizations,
       levelId
     );
   } catch (error) {
@@ -70,20 +50,24 @@ export const saveAiCustomization = async (
         message: 'Toxicity detected in AI customizations',
         flaggedFields: toxicity.flaggedFields,
         customizations: extractFieldsToCheckForToxicity(
-          trimmedCurrentAiCustomizations
+          currentAiCustomizations
         ),
       });
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('Aichat.SaveFailToxicityDetected');
     const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
-    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    dispatchSaveFailNotification(
+      dispatch as AppDispatch,
+      'toxicityError',
+      errorMessage
+    );
     return;
   }
 
   await Lab2Registry.getInstance()
     .getProjectManager()
-    ?.save({source: JSON.stringify(trimmedCurrentAiCustomizations)}, true);
+    ?.save({source: JSON.stringify(currentAiCustomizations)}, true);
 };
 
 const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-10-14T18:47:19.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Planning Your Project\r\n\r\nUse this chatbot to help you with **brainstorming** your pixel image, **decomposing** your image into parts, or **debugging** your code.\r\n\r\n### Do This:\r\n\r\n- Tell the chatbot what you want to accomplish. \r\n- Ask it to help you brainstorm, decompose, or debug, see examples below.\r\n\r\n**Example Prompts:**\r\n- **Brainstorm:** I want to create an image that represents me as a **musician**. Help me come up three images I could use to represent my identity.\r\n- **Debug:** My `turn_right` function isn't working. Help me debug it: \r\n```def turn_right():\r\n    turn_left()\r\n    turn_left()\r\n```\r\n\r\n**Tips**:\r\n- To get more ideas, simply ask the chatbot to **\"Come up with 3 more ideas\"**\r\n- If the chatbot's debugging advice is not useful, try prompting it to debug one line of code or code chunk at a time. ",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "You are an all purpose bot designed to help students with a coding project where they code a pixel image. They might ask you to help them brainstorm an idea for their image, break down the coding tasks into subtasks, or help debug their code.\n\nAt no point should you provide them with code. Instead, ask guiding questions to help them debug their code.\n",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Brainstorm Bot",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_pilot-2025",
+    "display_name": "Troubleshooting Bot",
+    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-14T18:47:19.099+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson13-level2_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson13-level2_2025\"}]"
+}]]></config>
+</Aichat>

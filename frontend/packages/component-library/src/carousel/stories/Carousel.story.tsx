@@ -4,8 +4,8 @@ import image3 from '@public/images/action-block-03.png';
 import image4 from '@public/images/action-block-04.png';
 import image5 from '@public/images/action-block-05.png';
 import image6 from '@public/images/action-block-06.png';
-import type {Meta, StoryFn} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
+import type {Meta, StoryFn} from '@storybook/react-webpack5';
+import {within, expect, userEvent} from 'storybook/test';
 
 import ActionBlock from '@/actionBlock';
 import {Heading2} from '@/typography';
@@ -532,43 +532,19 @@ ImageCarousel.args = {
   slides: [
     {
       id: 'image-slide-1',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
-          style={{width: '100%'}}
-          alt="Slide 1"
-        />
-      ),
+      slide: <img src={image1} style={{width: '100%'}} alt="Slide 1" />,
     },
     {
       id: 'image-slide-2',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide2_STEM_CS.png"
-          style={{width: '100%'}}
-          alt="Slide 2"
-        />
-      ),
+      slide: <img src={image2} style={{width: '100%'}} alt="Slide 2" />,
     },
     {
       id: 'image-slide-3',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide_Students_Like_CS.png"
-          style={{width: '100%'}}
-          alt="Slide 3"
-        />
-      ),
+      slide: <img src={image3} style={{width: '100%'}} alt="Slide 3" />,
     },
     {
       id: 'image-slide-4',
-      slide: (
-        <img
-          src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png"
-          style={{width: '100%'}}
-          alt="Slide 4"
-        />
-      ),
+      slide: <img src={image4} style={{width: '100%'}} alt="Slide 4" />,
     },
   ],
 };

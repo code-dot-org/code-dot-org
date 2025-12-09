@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:57:12.000Z",
   "level_num": "custom",
@@ -91,21 +92,20 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "long_instructions": "# Wrapping Text\r\n\r\nYou already know that the first two parameters to the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block indicate the *upper-left* corner of the text area. There are also two more optional parameters that are hidden by default. These last two parameters indicate the *width* and *height* of the text area. If all 5 parameters are used, Game Lab will try to fit the text inside the rectangle defined by these parameters.\r\n\r\n<img src=\"https://images.code.org/063fbcb347e5c935cd7d0aede7e2ac11-image-1607015001837.png\" width=\"400\">\r\n\r\n\r\n# Do This\r\n\r\n1) Read the code to see how it works.\r\n2) In Block Mode, use the arrow button on the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block to add the optional parameters.\r\n3) Enter values into the optional parameters that will make the text fit on the screen. \r\n   * **Hint:** Use values for *width* and *height* that are near the bottom right corner of the screen.\r\n\r\n",
+    "long_instructions": "# Wrapping Text\r\n\r\nYou already know that the first two parameters to the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block indicate the *bottom-left* corner of the text area. There are also two more optional parameters that are hidden by default. These last two parameters indicate the *width* and *height* of the text area. If all 5 parameters are used, Game Lab will try to fit the text inside the rectangle defined by these parameters.\r\n\r\n<img src=\"https://images.code.org/063fbcb347e5c935cd7d0aede7e2ac11-image-1607015001837.png\" width=\"400\">\r\n\r\n\r\n# Do This\r\n\r\n1) Read the code to see how it works.\r\n2) In Block Mode, use the arrow button on the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block to add the optional parameters.\r\n3) Enter values into the optional parameters that will make the text fit on the screen. \r\n   * **Hint:** Use values for *width* and *height* that are near the bottom right corner of the screen.\r\n\r\n",
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "start_blocks": "//1) Read the code to see how it works.\r\ntextSize(50);\r\nfill(\"black\");\r\n//2) In Block Mode, use the arrow button on the `text` block to add the optional parameters.\r\n//3) Enter values into the optional parameters that will make the text fit on the screen.\r\ntext(\"Four score and seven years ago...\", 30, 200);",
     "display_name": "Wrap Text",
     "bubble_choice_description": "Learn how to make big text fit inside a text box.",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\": {\r\n      \"name\": \"rainbow\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\": {\r\n      \"name\": \"rainbow\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd\"\r\n    }\r\n  }\r\n}",
     "thumbnail_url": "https://images.code.org/fa2ff3ab86764a3afd9f262c25c76d40-image-1592428480087.png",
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:57:12.068+00:00\",\"changed\":[\"cloned from \\\"CSD web challenge wrap text_2024\\\"\"],\"cloned_from\":\"CSD web challenge wrap text_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:57:12.068+00:00\",\"changed\":[\"cloned from \\\"CSD web challenge wrap text_2024\\\"\"],\"cloned_from\":\"CSD web challenge wrap text_2024\"},{\"changed_at\":\"2025-10-22 15:54:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

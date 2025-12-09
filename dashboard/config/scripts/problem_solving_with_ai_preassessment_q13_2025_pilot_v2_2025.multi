@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-preassessment-q13_2025-pilot_v2-2025'
+
+question 'Which of the following best describes why AI-generated content raises ethical concerns about ownership?'
+
+wrong 'AI always creates original work that cannot be traced back to any source.'
+right 'AI systems often generate content without revealing or crediting their sources.'
+wrong 'AI models are unable to access any human-created content during training.'
+wrong 'AI-generated content is always publicly available and free to use.'
+
+allow_multiple_attempts true

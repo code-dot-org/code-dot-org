@@ -16,12 +16,12 @@
       ],
       "project_widget_visible": true,
       "show_calendar": true,
-      "version_year": "2025",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-13 18:38:31 UTC",
+    "serialized_at": "2025-09-04 17:57:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3236,7 +3236,7 @@
       "key": "020939b4-ea90-4735-9a3b-9c1e74154d7b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](/blockly/media/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
       },
       "seeding_key": {
         "activity_section.key": "020939b4-ea90-4735-9a3b-9c1e74154d7b",
@@ -4154,7 +4154,7 @@
       "key": "752a3a58-19b7-4bc9-b5ba-78c8dae0dc0b",
       "position": 2,
       "properties": {
-        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Binary Bracelets” slide\n\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](https://code.org/curriculum/course2/14/key.png)"
+        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Binary Bracelets” slide\n\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](/blockly/media/curriculum/course2/14/key.png)"
       },
       "seeding_key": {
         "activity_section.key": "752a3a58-19b7-4bc9-b5ba-78c8dae0dc0b",
@@ -9470,7 +9470,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursec-2024/resources",
+      "url": "/s/coursec-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -9481,7 +9481,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursec-2024/standards",
+      "url": "/s/coursec-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -9492,7 +9492,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursec-2024/vocab",
+      "url": "/s/coursec-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9652,6 +9652,18 @@
       }
     },
     {
+      "name": "CSF Course Syllabus 205-26",
+      "url": "https://docs.google.com/document/d/1nRA2acwuTBPVTqNc3NU7r_ATJLwfYPpGa4TxWthUETk/template/preview",
+      "key": "csf_course_syllabus_205-26",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus_205-26"
+      }
+    },
+    {
       "name": "CSF State Standards for CS - Master Crosswalk List",
       "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
       "key": "csf_state_standards_for_cs_-_master_crosswalk_list",
@@ -9662,19 +9674,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_state_standards_for_cs_-_master_crosswalk_list"
-      }
-    },
-    {
-      "name": "CSF Syllabus 2024-25",
-      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preview",
-      "key": "csf_syllabus_2024-25",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -10469,13 +10468,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_state_standards_for_cs_-_master_crosswalk_list",
+        "resource.key": "csf_course_syllabus_205-26",
         "script.name": "coursec-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25",
+        "resource.key": "csf_state_standards_for_cs_-_master_crosswalk_list",
         "script.name": "coursec-2025"
       }
     },

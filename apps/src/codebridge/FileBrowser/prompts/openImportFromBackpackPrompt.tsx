@@ -7,7 +7,6 @@ import {
   getFileNameWithNumberSuffix,
   isDuplicateFileName,
   DuplicateFileError,
-  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import React from 'react';
 
@@ -31,6 +30,10 @@ type OpenImportFromBackpackPromptArgsType = {
   saveFile: SaveFileFunction;
   projectFiles: MultiFileSource['files'];
   validationFile?: ProjectFile;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openImportFromBackpackPrompt = async ({
@@ -40,6 +43,7 @@ export const openImportFromBackpackPrompt = async ({
   saveFile,
   projectFiles,
   validationFile,
+  sendLab2AnalyticsEvent,
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>
@@ -65,7 +69,10 @@ export const openImportFromBackpackPrompt = async ({
           codebridgeI18n.closeWindowTryAgain(),
         'Backpack file delete error'
       ),
-      () => sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
+      () =>
+        sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK, {
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+        })
     );
   };
 
@@ -95,7 +102,9 @@ export const openImportFromBackpackPrompt = async ({
           );
           if (fileId) saveFile(fileId, fileContent);
         }
-        sendCodebridgeAnalyticsEvent(successMetric);
+        sendLab2AnalyticsEvent(successMetric, {
+          fileType: newFileName?.split('.').pop()?.toLowerCase() || '',
+        });
       }
     );
   };

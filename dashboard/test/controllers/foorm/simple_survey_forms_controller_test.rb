@@ -3,12 +3,12 @@ require 'test_helper'
 module Foorm
   class SimpleSurveyFormsControllerTest < ActionDispatch::IntegrationTest
     setup do
-      @admin = create :admin
-      @teacher = create :teacher
-      @user = create :user
-      @foorm_form = create :foorm_form
-      @simple_survey_form = create :foorm_simple_survey_form, form_name: @foorm_form.name
-      @disabled_simple_survey_form = create :foorm_simple_survey_form, form_name: @foorm_form.name, path: 'disabled_path'
+      @admin = create(:admin)
+      @teacher = create(:teacher)
+      @user = create(:user)
+      @foorm_form = create(:foorm_form)
+      @simple_survey_form = create(:foorm_simple_survey_form, form_name: @foorm_form.name)
+      @disabled_simple_survey_form = create(:foorm_simple_survey_form, form_name: @foorm_form.name, path: 'disabled_path')
       @test_url_path = 'test_url_path'
 
       @base_success_params = {
@@ -30,9 +30,10 @@ module Foorm
     end
 
     test 'renders form if user is not signed in and form allows anonymous submissions' do
-      anonymous_form = create :foorm_simple_survey_form,
+      anonymous_form = create(:foorm_simple_survey_form,
         form_name: @foorm_form.name,
         properties: {allow_signed_out: true}
+)
 
       get "/form/#{anonymous_form.path}"
       assert_template :show
@@ -70,7 +71,7 @@ module Foorm
     end
 
     test 'renders thanks if teacher has already submitted' do
-      create :foorm_simple_survey_submission, simple_survey_form: @simple_survey_form, user: @teacher
+      create(:foorm_simple_survey_submission, simple_survey_form: @simple_survey_form, user: @teacher)
 
       sign_in @teacher
       get "/form/#{@simple_survey_form.path}"
@@ -79,10 +80,11 @@ module Foorm
     end
 
     test 'renders form if teacher has already submitted but form allows multiple submissions' do
-      multiple_submissions_form = create :foorm_simple_survey_form,
+      multiple_submissions_form = create(:foorm_simple_survey_form,
         form_name: @foorm_form.name,
         properties: {allow_multiple_submissions: true}
-      create :foorm_simple_survey_submission, simple_survey_form: multiple_submissions_form, user: @teacher
+)
+      create(:foorm_simple_survey_submission, simple_survey_form: multiple_submissions_form, user: @teacher)
 
       sign_in @teacher
       get "/form/#{multiple_submissions_form.path}"

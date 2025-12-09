@@ -33,7 +33,7 @@ Scenario: Resizing CSD and CSP Top Instructions
   When I open my eyes to test "resizing top instructions in CSP"
   Given I create an authorized teacher-associated student named "Sally"
   When I sign in as "Teacher_Sally" and go home
-  And I wait until element ".uitest-owned-sections" is visible
+  And I wait until element "#ui-test-section-list" is visible
   Then I save the section id from row 0 of the section table
 
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/1"

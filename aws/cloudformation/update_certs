@@ -35,7 +35,7 @@ def get_certificate_expiration(common_name)
   # Run the Acmesmith command using Ruby's system-level command execution and capture its output
   certificate_info = `acmesmith show-certificate #{common_name}`
   not_after_line = certificate_info.split("\n").find {|line| line.include?('Not After')}
-  not_after = Date.parse(not_after_line.split(': ').last)
+  not_after = DateTime.parse(not_after_line.split(': ').last)
   return not_after
 end
 
@@ -52,7 +52,7 @@ begin
 
   CDO.log.info "Existing certificate found, checking expiration..."
   expiration_date = get_certificate_expiration(common_name)
-  raise 'cert expired' if expiration_date < Date.today
+  raise 'cert expired' if expiration_date < DateTime.now
   CDO.log.info "Existing certificate for #{common_name} is valid until #{expiration_date}."
 rescue => exception
   case exception.message

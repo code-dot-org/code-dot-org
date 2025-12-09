@@ -253,8 +253,8 @@ class Lesson < ApplicationRecord
 
   def lesson_feedback_url
     url = "https://studio.code.org/form/teacher_lesson_feedback?survey_data[script_name]=#{script.name}&survey_data[lesson_number]=#{relative_position}&survey_data[lesson_name]=#{CGI.escape(localized_name)}"
-    url += if script.unit_group
-             "&survey_data[course_name]=#{CGI.escape(script.unit_group.localized_title)}&survey_data[unit_name]=#{CGI.escape(script.localized_title)}&survey_data[unit_number]=#{script.unit_group_units&.first&.position}"
+    url += if script.get_original_unit_group
+             "&survey_data[course_name]=#{CGI.escape(script.get_original_unit_group.localized_title)}&survey_data[unit_name]=#{CGI.escape(script.localized_title)}&survey_data[unit_number]=#{script.unit_group_units&.first&.position}"
            else
              "&survey_data[course_name]=#{CGI.escape(script.localized_title)}"
            end
@@ -315,6 +315,7 @@ class Lesson < ApplicationRecord
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
         background: background,
+        rubric: rubric,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -348,7 +349,7 @@ class Lesson < ApplicationRecord
         end
       end
 
-      if script.hoc?
+      if script.hoc_or_hoai?
         lesson_data[:finishLink] = script.hoc_finish_url
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
@@ -786,7 +787,6 @@ class Lesson < ApplicationRecord
     # that may be used in the sort block below.
     load_params = {
       script: [
-        :course_version,
         {
           unit_group_units: {
             unit_group: :course_version
@@ -813,7 +813,7 @@ class Lesson < ApplicationRecord
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
     # related_lessons.
-    lessons = Lesson.eager_load(script: :course_version).
+    lessons = Lesson.eager_load(:script).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
       # This SQL string is not at risk for injection vulnerabilites because
@@ -838,7 +838,8 @@ class Lesson < ApplicationRecord
   end
 
   def resources_for_lesson_plan(verified_teacher)
-    grouped_resources = resources.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    # Filter out resources marked as `embed_only` (i.e. not user-facing)
+    grouped_resources = resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
     if verified_teacher && grouped_resources.key?('Verified Teacher')
       grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
@@ -1001,14 +1002,13 @@ class Lesson < ApplicationRecord
   # and ai chat only supports light mode. Eventually, we would like all lab2 labs to support
   # both light and dark mode and a theme preference.
   def get_background_for_user(current_user)
-    # The recommended rubocop syntax does not work here.
-    has_python_levels = levels.any? {|level| level.is_a?(Pythonlab)} # rubocop:disable Performance/RedundantEqualityComparisonBlock
+    uses_theme_preference = levels.any?(&:uses_theme_preference?)
     theme_preference = nil
-    theme_default = has_python_levels ? 'dark' : nil
-    if has_python_levels && current_user
+    theme_default = uses_theme_preference ? 'dark' : nil
+    if uses_theme_preference && current_user
       user_theme = UserPreference.find_by(user_id: current_user.id)&.theme
       theme_preference = user_theme['global'] if user_theme
-    elsif !has_python_levels
+    elsif !uses_theme_preference
       music_count = levels.count {|level| level.is_a?(Music)}
       aichat_count = levels.count {|level| level.is_a?(Aichat)}
       if music_count > aichat_count

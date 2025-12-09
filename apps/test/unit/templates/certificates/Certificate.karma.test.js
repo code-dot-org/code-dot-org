@@ -6,7 +6,9 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
+import * as AuthTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -35,26 +37,30 @@ describe('Certificate', () => {
   });
 
   describe('personalized certificate', () => {
+    const authToken = 'fake-token';
+    const certificateId = 'sessionId';
     let server;
 
     beforeEach(() => {
+      sinon.stub(AuthTokenStore, 'getAuthenticityToken').resolves(authToken);
       server = sinon.fakeServer.create();
     });
 
     afterEach(() => {
+      sinon.restore();
       server.restore();
     });
 
-    it('renders code studio image urls', () => {
+    it('renders code studio image urls', async () => {
       const data = {
         certificate_sent: true,
         name: 'Student',
       };
-      server.respondWith('POST', `/v2/certificate`, [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify(data),
-      ]);
+      server.respondWith(
+        'PATCH',
+        studio(`/api/hour/certificates/${certificateId}`),
+        [200, {'Content-Type': 'application/json'}, JSON.stringify(data)]
+      );
 
       const wrapper = wrapperWithParams({
         certificateData: [
@@ -62,13 +68,13 @@ describe('Certificate', () => {
             courseName: 'dance',
           },
         ],
-        certificateId: 'sessionId',
+        certificateId: certificateId,
         isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.include('/certificate_images/');
 
-      const printLink = wrapper.find('.social-print-link');
+      const printLink = wrapper.find('a.social-print-link').first();
       expect(printLink.prop('href')).to.match(/^\/print_certificates/);
 
       // the share link is used in the image thumbnail as well as the facebook
@@ -83,6 +89,10 @@ describe('Certificate', () => {
         .find('button')
         .filterWhere(button => button.text() === 'Submit');
       submitButton.simulate('click');
+
+      // `personalizeHocCertificate` awaits the authenticity token before issuing the ajax request.
+      // Give the microtask queue a chance to flush so the request is created before responding with the fake server.
+      await new Promise(resolve => setTimeout(resolve));
       server.respond();
 
       wrapper.update();
@@ -118,11 +128,11 @@ describe('Certificate', () => {
       certificateData: [
         {
           courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
+          coursePath: '/courses/csd-2023/units/1',
         },
         {
           courseName: 'csd2-2023',
-          coursePath: '/s/csd2-2023',
+          coursePath: '/courses/csd-2023/units/2',
         },
       ],
       certificateId: 'sessionId',
@@ -132,7 +142,7 @@ describe('Certificate', () => {
     expect(wrapper.find('swiper-slide').length).to.equal(2);
 
     expect(wrapper.find('LargeChevronLink').props().link).to.equal(
-      '/s/csd1-2023'
+      '/courses/csd-2023/units/1'
     );
   });
 
@@ -141,7 +151,7 @@ describe('Certificate', () => {
       certificateData: [
         {
           courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
+          coursePath: '/courses/csd-2023/units/1',
         },
       ],
       certificateId: 'sessionId',

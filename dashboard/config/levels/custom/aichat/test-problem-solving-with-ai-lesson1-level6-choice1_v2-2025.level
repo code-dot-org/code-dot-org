@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:52:33.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI as a Presentation Coach\r\n\r\nUse AI Chat to help you coach you through an upcoming presentation. \r\n\r\n### Do This:\r\n\r\n1. Start by entering a **generic prompt** and read AI Chat's response. For example: \r\n\r\n>Help me prepare for my class presentation.\r\n2. *Revise your prompt* and add specific examples, like **what topics you plan to present** or **what emotions you might feel while presenting**. Press **Send** and read AI Chat's updated response.\r\n2. Finally, re-submit your previous prompt and **add some images**.\r\n3. Press **Send** and read AI Chat's response.\r\n\r\n**Try it out!**\r\n\r\n\r\n::: details [<i class=\"fa fa-file-image-o\" aria-hidden=\"true\"></i> **How do I add an image?**]\r\n- Click the button labeled **Add** below your chat input.\r\n- Choose **From Library**\r\n- Then browse the existing images.\r\n- When you have an image to upload, click the checkbox next to it to select it and then click **Attach**.\r\n- You should see the image get added to the message being sent to AI Chat.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a presentation coach chatbot. When given a prompt, answer with recommendations to help with an upcoming presentation.\n\nDo not answer any questions that are not related to a class presentation.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Use AI Chat to help you prepare for a class presentation. Come up with a prompt and select an image that matches.",
+    "display_name": "AI as a Coach",
+    "thumbnail_url": "https://images.code.org/838718e82d2e220168ad790c5e84e2cb-Screenshot 2025-06-04 at 1.19.41 PM.png",
+    "name_suffix": "_v2-2025",
+    "starter_assets": {
+      "artwork.jpg": "52a5bc20-2316-4b12-83de-de67279a8ad5.jpg",
+      "planning.jpg": "43ef578b-d8c7-458e-a93d-6c77a5396a00.jpg",
+      "presenter.jpg": "997daa23-4293-4731-8082-8347dbc15dd4.jpg",
+      "presenter2.jpg": "ac3bc566-cfd6-4438-857c-616b653aeb56.jpg",
+      "presenter3.jpg": "5874b2e9-1f9a-4be6-8359-7716049dce76.jpg"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:33.769+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice1_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice1_2025\"}]"
+}]]></config>
+</Aichat>

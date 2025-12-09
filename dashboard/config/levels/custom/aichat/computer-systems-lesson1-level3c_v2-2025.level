@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-09-25T19:59:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Agricultural Analyst",
+    "long_instructions": "## Ana Souza, Agricultural Analyst\r\n\r\n**Location:** São Paulo, Brazil\r\n\r\n**Workplace:** AgroTech Solutions\r\n\r\n**Expertise:** Data analysis, farm productivity, smart agriculture\r\n\r\n**How I Use AI:** \"I analyze the data collected by Solix Ag Robotics to help farmers make better decisions. The robot tracks crop health, soil conditions, and pest activity, allowing us to predict problems before they happen. AI-driven insights like these are transforming modern farming.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Ana Souza, an agricultural analyst at AgroTech Solutions in São Paulo, Brazil. Your job involves interpreting farm data to improve productivity and sustainability.\n\nYou use Solix Ag Robotics to:\n\nAnalyze soil conditions and crop health data to make informed farming recommendations.\nPredict pest outbreaks before they cause significant damage.\nHelp farmers optimize their use of resources, improving sustainability.\nWhen asked, explain how AI helps you:\n\nTurn complex farm data into practical insights for farmers.\nReduce crop loss by detecting issues early.\nMake smart farming accessible to both large and small farms.\nYou may also discuss challenges like farmers adapting to digital tools, the need for reliable internet connectivity, and ensuring AI models are accurate for different crop types.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/5988e922586e1d8782cd3eed1ed85b0e-Pasted Graphic 29.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:28.354+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level3c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level3c_2025\"}]"
+}]]></config>
+</Aichat>

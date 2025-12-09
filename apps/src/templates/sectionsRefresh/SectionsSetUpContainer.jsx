@@ -20,8 +20,12 @@ import Notification, {
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import experiments from '@cdo/apps/util/experiments';
 import {navigateToHref} from '@cdo/apps/utils';
-import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
+import {
+  CapLinks,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -88,7 +92,6 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
-  canEnableAITutor,
   userCountry,
   defaultRedirectUrl,
   setIsEditInProgress = value => {},
@@ -364,6 +367,7 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO-AITUTOR: can we allow this for any course that has a unit with Unit.has_ai_tutor_level?
   // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
   // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
   const aiTutorAllowedForCourse = section =>
@@ -374,7 +378,9 @@ export default function SectionsSetUpContainer({
 
   const renderAdvancedSettings = () => {
     const aiTutorAvailable =
-      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
+      experiments.isEnabledAllowingQueryString(
+        experiments.AI_CHAT_NEW_PERMISSIONS
+      ) && aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',
@@ -397,7 +403,7 @@ export default function SectionsSetUpContainer({
   const renderCoteacherSection = () => {
     const isCoTeacherManagementDisabled =
       sections[0].primaryInstructor?.ltiRosterSyncEnabled === true &&
-      sections[0].loginType === 'ltiV1';
+      sections[0].loginType === SectionLoginType.lti_v1;
 
     return renderExpandableSection(
       'uitest-expandable-coteacher',
@@ -539,7 +545,6 @@ export default function SectionsSetUpContainer({
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
-  canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
   defaultRedirectUrl: PropTypes.string.isRequired,
   setIsEditInProgress: PropTypes.func,

@@ -6,27 +6,29 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   setup do
     File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    @levelbuilder = create :levelbuilder
-    @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @levelbuilder = create(:levelbuilder)
+    @unit_group = create(:unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(@unit_group)
     # category
-    @reference_guide = create :reference_guide, course_version: @unit_group.course_version
+    @reference_guide = create(:reference_guide, course_version: @unit_group.course_version)
     # subcategory
-    @reference_guide_subcategory = create :reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: @reference_guide.key
+    @reference_guide_subcategory = create(:reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: @reference_guide.key)
 
-    @in_development_unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+    @in_development_unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
       family_name: 'indev-course', version_year: '2022', name: 'indev-course-2022'
+)
     CourseOffering.add_course_offering(@in_development_unit_group)
 
-    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
+    @pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
+    @pilot_unit_group = create(:unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
     family_name: 'pilot-course', version_year: '2022', name: 'pilot-course-2022'
+)
     CourseOffering.add_course_offering(@pilot_unit_group)
-    @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
+    @pilot_section = create(:section, user: @pilot_teacher, unit_group: @pilot_unit_group)
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
-    @reference_guide_indev = create :reference_guide, course_version: @in_development_unit_group.course_version
-    @reference_guide_pilot = create :reference_guide, course_version: @pilot_unit_group.course_version
+    @reference_guide_indev = create(:reference_guide, course_version: @in_development_unit_group.course_version)
+    @reference_guide_pilot = create(:reference_guide, course_version: @pilot_unit_group.course_version)
   end
 
   test 'data is passed to show page' do
@@ -57,7 +59,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   end
 
   test 'ref guide is updated through update route' do
-    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
+    editable_reference_guide = create(:reference_guide, course_version: @unit_group.course_version)
 
     sign_in @levelbuilder
 
@@ -76,7 +78,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   end
 
   test 'updating parent_reference_guide_key works' do
-    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: nil
+    editable_reference_guide = create(:reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: nil)
 
     sign_in @levelbuilder
 
@@ -98,7 +100,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   end
 
   test 'ref guide is deleted through destroy route' do
-    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
+    editable_reference_guide = create(:reference_guide, course_version: @unit_group.course_version)
 
     sign_in @levelbuilder
     File.expects(:delete).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once

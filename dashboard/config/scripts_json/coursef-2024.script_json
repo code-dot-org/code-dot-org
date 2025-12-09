@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:35 UTC",
+    "serialized_at": "2025-09-04 17:20:17 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3927,7 +3928,7 @@
       "key": "053ff19e-d5b3-40b1-8116-a650350e25da",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Student Materials slide\n\nTo play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](https://code.org/curriculum/course3/18/layout.png)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Student Materials slide\n\nTo play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](/blockly/media/curriculum/course3/18/layout.png)"
       },
       "seeding_key": {
         "activity_section.key": "053ff19e-d5b3-40b1-8116-a650350e25da",
@@ -4182,7 +4183,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "At the end of presentations, make time to celebrate students' hard work! You might choose to print out [certificates of completion](https://code.org/congrats/course1) for students or host an awards ceremony. If you choose to present awards to your students, focus on their skills and contributions as a classmate rather than on the complexity of their final project. For example, consider awards such as Most Improved Coder, Most Persistent Debugger, and Best Teammate. "
+            "markdown": "At the end of presentations, make time to celebrate students' hard work! You might choose to print out [certificates of completion](https://studio.code.org/congrats/course1) for students or host an awards ceremony. If you choose to present awards to your students, focus on their skills and contributions as a classmate rather than on the complexity of their final project. For example, consider awards such as Most Improved Coder, Most Persistent Debugger, and Best Teammate. "
           }
         ]
       },
@@ -8010,7 +8011,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursef-2024/resources",
+      "url": "/s/coursef-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8021,7 +8022,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursef-2024/standards",
+      "url": "/s/coursef-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8032,7 +8033,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursef-2024/vocab",
+      "url": "/s/coursef-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true

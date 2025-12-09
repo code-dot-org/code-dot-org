@@ -18,6 +18,7 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
@@ -51,7 +52,10 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
-import {initializeKeyboardNavigation} from './addons/cdoKeyboardNavigation';
+import {
+  initializeKeyboardNavigation,
+  preInjectRegistrations,
+} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -122,17 +126,19 @@ import {
   LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
+  initializeVariableLocalization,
   interpolateMsg,
   isDarkTheme,
+  setThemeAndRenderBlocks,
 } from './utils';
 
-const options = {
+const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
   shortcut: true,
 };
 
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
+const crossTabCopyPastePlugin = new CrossTabCopyPaste();
+crossTabCopyPastePlugin.init(options);
 
 const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
@@ -202,6 +208,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
+  preInjectRegistrations();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -528,6 +535,22 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
   };
 
+  const originalToCopyData = blocklyWrapper.BlockSvg.prototype.toCopyData;
+  extendedBlockSvg.toCopyData = function () {
+    const blockCopyData = originalToCopyData.call(this);
+    if (blockCopyData) {
+      blockCopyData.blockState = GoogleBlockly.serialization.blocks.save(this, {
+        addCoordinates: true,
+        addNextBlocks: false,
+        // We intentionally do not save IDs, because this can break student code
+        // on the hidden procedure definition workspace.
+        // https://github.com/google/blockly/issues/9226
+        saveIds: false,
+      })!;
+    }
+    return blockCopyData;
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
@@ -729,10 +752,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     xml,
     options = {}
   ) {
-    const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
+    const theme = options.theme || CdoTheme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
-      theme: theme,
+      theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
@@ -757,7 +780,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.style.display = 'inline-block';
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
-    workspace.setTheme(theme);
+
+    workspace.setTheme(theme as GoogleBlockly.Theme);
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
@@ -789,6 +813,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    // Ensure we do not translate content within the blockly workspace
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.add('notranslate');
+    }
+
     // Set the default value for hasLoadedBlocks to false.
     blocklyWrapper.hasLoadedBlocks = false;
     if (!opt_options) {
@@ -799,9 +828,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
-      theme: cdoUtils.getUserTheme(
-        optOptionsExtended.theme as GoogleBlockly.Theme
-      ),
+      theme: optOptionsExtended.theme || CdoTheme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -864,7 +891,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
-    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
+    blocklyWrapper.isDarkTheme = isDarkTheme(
+      options.theme as GoogleBlockly.Theme | undefined
+    );
 
     // Only allow toggling disabled blocks in start mode.
     // This is also important for ensuring that Blockly does not
@@ -875,7 +904,25 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
+    // Mark the blockly container as something we do not want translated
+    // and undo the container being marked as such
+    const div = workspace.getInjectionDiv();
+    if (div) {
+      div.classList.add('notranslate');
+    }
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.remove('notranslate');
+    }
 
+    Blockly.cdoUtils
+      .getUserTheme(workspace.getTheme())
+      .then((theme: GoogleBlockly.Theme) => {
+        setThemeAndRenderBlocks(
+          workspace,
+          theme,
+          options.theme as GoogleBlockly.Theme
+        );
+      });
     workspace.defs = Blockly.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
@@ -896,9 +943,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options.enableKeyboardNavigation ||
       experiments.isEnabledAllowingQueryString(
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      )
+      ) ||
+      DCDO.get('blockly-keyboard-navigation', false)
     ) {
-      initializeKeyboardNavigation(workspace, options.theme);
+      initializeKeyboardNavigation(
+        workspace,
+        blocklyWrapper.isDarkTheme || false
+      );
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an
@@ -1024,6 +1075,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
+
+    // Set up variable localization
+    initializeVariableLocalization(workspace);
+
     return workspace;
   };
 
@@ -1079,6 +1134,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     Blockly.Events.enable();
   };
 
+  // Initialize metadata houses for original English source strings for
+  // various Blockly metadata that gets installed. These are used by the
+  // updateLocale(), localizeVariables(), etc, functions to translate a
+  // variety of both custom and built-in Blockly content.
+  blocklyWrapper.SourceMsg = {};
+  blocklyWrapper.SourceVariables = {};
+  blocklyWrapper.SourceCustomBlocks = {
+    blockDefinitionsByName: {},
+    blockTexts: {},
+  };
+  blocklyWrapper.SourceCustomInputTypes = {};
+
+  // Keep track of the custom blocks that are used to initialize the
+  // Blockly environment.
   blocklyWrapper.customBlocks = customBlocks;
 
   initializeBlocklyXml(blocklyWrapper);

@@ -37,6 +37,8 @@ export interface TabsProps {
   tabPanelsContainerClassName?: string;
   /** Custom id for Tab Panels container */
   tabPanelsContainerId?: string;
+  /** hide the Tab Panels container */
+  hidePanels?: boolean;
 }
 
 /**
@@ -62,6 +64,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabsContainerClassName,
   tabPanelsContainerId,
   tabPanelsContainerClassName,
+  hidePanels,
   type = 'primary',
   mode = 'light',
   size = 'm',
@@ -123,26 +126,28 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
               onClick={handleChange}
               size={size}
               onClose={handleTabClose}
-              tabPanelId={`${nameStripped}-panel-${tab.value}`}
-              tabButtonId={`${nameStripped}-tab-${tab.value}`}
+              tabPanelId={`${nameStripped}-panel-${tab.value.replace(/\s+/g, '-')}`}
+              tabButtonId={`${nameStripped}-tab-${tab.value.replace(/\s+/g, '-')}`}
             />
           ))}
         </ul>
       </div>
-      <div
-        className={classnames(tabPanelsContainerClassName)}
-        id={tabPanelsContainerId}
-      >
-        {tabs.map(tab => (
-          <_TabPanel
-            key={tab.value}
-            content={tab.tabContent}
-            isActive={tab.value === selectedTabValue}
-            id={`${nameStripped}-panel-${tab.value}`}
-            labelledBy={`${nameStripped}-tab-${tab.value}`}
-          />
-        ))}
-      </div>
+      {!hidePanels && (
+        <div
+          className={classnames(tabPanelsContainerClassName)}
+          id={tabPanelsContainerId}
+        >
+          {tabs.map(tab => (
+            <_TabPanel
+              key={tab.value}
+              content={tab.tabContent}
+              isActive={tab.value === selectedTabValue}
+              id={`${nameStripped}-panel-${tab.value.replace(/\s+/g, '-')}`}
+              labelledBy={`${nameStripped}-tab-${tab.value.replace(/\s+/g, '-')}`}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 };

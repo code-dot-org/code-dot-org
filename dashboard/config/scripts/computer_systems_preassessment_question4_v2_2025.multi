@@ -1,0 +1,17 @@
+name 'computer-systems-preassessment-question4_v2-2025'
+title 'Computer Systems and Devices Pre-Assessment: Question 4'
+
+wrong 'Storing data permanently'
+right 'Managing hardware and software'
+wrong 'Displaying images on a monitor'
+wrong 'Controlling internet speed'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What is the **main role** of an operating system?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Software and Operating Systems
+MARKDOWN

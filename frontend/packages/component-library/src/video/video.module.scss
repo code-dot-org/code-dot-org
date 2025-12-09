@@ -130,7 +130,7 @@ $playButtonIconSize: 64px;
 
   .playButton {
     font-size: 2rem;
-    color: var(--text-brand-purple-primary-fixed);
+    color: var(--brand-purple-50);
     // Since the play button is the same in RTL, use margin-left
     // instead of margin-inline-start which changes based on direction.
     // This keeps the play button visually centered.

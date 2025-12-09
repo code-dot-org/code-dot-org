@@ -45,5 +45,5 @@
             %td
               %input{:hidden => true, :name => "user_id", :value => @user.id}
               .field
-                = select_tag :course, options_for_select(Pd::Workshop::ACTIVE_COURSES)
+                = select_tag :course, options_for_select(Pd::Workshop::ACTIVE_PERMISSION_COURSES)
             %td

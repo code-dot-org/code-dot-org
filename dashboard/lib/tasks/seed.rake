@@ -4,7 +4,6 @@ require 'action_view/helpers/date_helper'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
 require '../lib/cdo/hash_utils'
-require '../lib/cdo/data/csv_to_sql_table'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 # Enables timed_task to be used in place of task when defining rake tasks, which prints
@@ -86,7 +85,7 @@ namespace :seed do
     ui-test-single-unit-2025
     ui-test-single-unit-2026
     ui-test-unnumbered-lessons
-  ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
     algebra
@@ -122,24 +121,29 @@ namespace :seed do
     focus-on-creativity3-2024
     focus-on-coding3-2024
     customizing-llms-2024
-    csp1-2017
-    csp2-2017
-    csp3-2017
-    csp4-2017
-    csp5-2017
+    csd3-2025
     csp-ap
-    csp-explore-2017
-    csp-create-2017
-    csp-post-survey
-    csppostap-2017
-    csp1-2019
-    csp2-2019
-    csp3-2019
-    csp4-2019
-    csp5-2019
-    csp-explore-2019
-    csp-create-2019
-    csppostap-2019
+    csp1-2024
+    csp2-2024
+    csp3-2024
+    csp4-2024
+    csp5-2024
+    csp6-2024
+    csp7-2024
+    csp8-2024
+    csp9-2024
+    csp10-2024
+    csp-post-survey-2024
+    csp1-2025
+    csp2-2025
+    csp3-2025
+    csp4-2025
+    csp5-2025
+    csp6-2025
+    csp7-2025
+    csp8-2025
+    csp9-2025
+    csp10-2025
     dance
     events
     flappy
@@ -156,7 +160,7 @@ namespace :seed do
     oceans
     sports
     jigsaw
-  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
   # Each year we should update this list and :courses_adhoc
@@ -200,7 +204,7 @@ namespace :seed do
     csa8-2024
     csa9-2024
     csa-postap-se-and-computer-vision-2024
-  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
     algebra
     allthehiddenthings
@@ -226,7 +230,7 @@ namespace :seed do
     step
     oceans
     sports
-  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
+  ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = "#{CURRICULUM_CONTENT_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
@@ -322,8 +326,8 @@ namespace :seed do
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse
-       csp-2017
-       csp-2019
+       csp-2024
+       csp-2025
        20-hour
        algebra
        allthelessonplans
@@ -360,6 +364,7 @@ namespace :seed do
        mc
        minecraft
        original-allthelessonplans-course
+       original-allthethings-course
        original-alltheselfpacedplthings-course
        playlab
        starwars
@@ -368,11 +373,13 @@ namespace :seed do
        oceans
        jigsaw
        sports).each do |course_name|
-      UnitGroup.load_from_path("config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
     %w(
       ui-test-course-2017
       ui-test-course-2019
+      ui-test-original-course-2017
+      ui-test-original-course-2019
       ui-test-single-unit-course-2025
       ui-test-single-unit-course-2026
       ui-test-csa-family-script
@@ -383,14 +390,20 @@ namespace :seed do
       ui-test-versioned-script-2019
       ui-test-unnumbered-lessons
     ).each do |course_name|
-      UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/#{course_name}.course")
     end
   end
 
   timed_task_with_logging courses_adhoc: :environment do
     # seed those courses that are best to test on adhoc for the most current year
-    %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
-      UnitGroup.load_from_path("config/courses/#{course_name}.course")
+    %w(
+      allthethingscourse
+      csp-2024
+      csd-2024
+      csa-2024
+      original-allthethings-course
+    ).each do |course_name|
+      UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
   end
 
@@ -508,6 +521,7 @@ namespace :seed do
     %w(
       ui-test-course
       ui-test-csa-family-script
+      ui-test-original-course
       ui-test-teacher-pl-course
       ui-test-self-paced-pl
       ui-test-facilitator-pl-course
@@ -515,13 +529,13 @@ namespace :seed do
       ui-test-versioned-course
       ui-test-unnumbered-lessons
     ).each do |course_offering_name|
-      CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
+      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
 
   timed_task_with_logging course_offerings_adhoc: :environment do
     %w(csp csa csd coursea courseb coursec coursed coursee coursef).each do |course_offering_name|
-      CourseOffering.seed_record("config/course_offerings/#{course_offering_name}.json")
+      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/config/course_offerings/#{course_offering_name}.json")
     end
   end
 
@@ -562,10 +576,16 @@ namespace :seed do
   end
 
   timed_task_with_logging sample_data: :environment do
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
     SampleData.seed
   end
 
   timed_task_with_logging mega_section: :environment do
+    # Make sure we see a helpful error message if run in the wrong environment, since autoloading
+    # this class could result in a cryptic error about missing gems.
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
     MegaSection.seed
   end
 
@@ -642,16 +662,10 @@ namespace :seed do
     end
   end
 
-  timed_task_with_logging :import_pegasus_data do
-    db = DASHBOARD_DB
-    table_prefix = "google_sheets_shared_"
-    files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
-    files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
-  end
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
+  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
-  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
@@ -661,8 +675,8 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :foorms, :import_pegasus_data]
+  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :foorms]
 
   desc "seed only dashboard data required for tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
 end

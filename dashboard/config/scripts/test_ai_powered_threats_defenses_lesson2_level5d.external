@@ -1,0 +1,19 @@
+name 'test-ai-powered-threats-defenses-lesson2-level5d'
+title 'Scenario 4'
+bubble_choice_description 'Thousands of students are trying to submit their college applications on the day of the deadline. Suddenly, the application portal crashes.'
+display_name 'Scenario 4'
+thumbnail_url 'https://images.code.org/ba3466693b9d19ddc4e178e86f7f26ce-image-1752764911393.08.05 AM.png'
+
+markdown <<MARKDOWN
+## Scenario 4
+
+It's the last day to submit college applications to Northfield State, a major university with a large student population. 
+
+Thousands of students begin uploading their forms — but suddenly, the site slows to a crawl and eventually crashes.
+
+Students panic, unable to submit their applications.
+
+&nbsp;
+
+<img src="https://images.code.org/849e8656a1f40ce463976fc1021a494c-image-1752764919484.08.15 AM.png" alt="computer with message System Down on screen" width="300"/>
+MARKDOWN

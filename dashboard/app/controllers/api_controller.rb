@@ -292,7 +292,16 @@ class ApiController < ApplicationController
 
   def show_courses_with_progress
     section = load_section
-    render json: CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
+    unit_ids = section.participant_unit_ids
+    # Always include the Units assigned to the Section.
+    if section.course_id
+      unit_group = UnitGroup.get_from_cache(section.course_id)
+    elsif section.script_id
+      # Some older Sections only have a script_id defined.
+      unit_group = Unit.get_from_cache(section.script_id)&.get_original_unit_group
+    end
+    unit_ids.concat(unit_group.default_units.pluck(:id)).uniq! if unit_group
+    render json: CourseVersion.courses_for_unit_selector(unit_ids, current_user)
   end
 
   use_reader_connection_for_route(:section_level_progress)
@@ -488,7 +497,7 @@ class ApiController < ApplicationController
     end
     return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
 
-    redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, unit_group: unit_group, locale: request.locale)
 
     additional_script_data = {
       is_instructor: unit.can_be_instructor?(current_user),

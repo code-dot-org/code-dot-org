@@ -80,6 +80,8 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
     responses_by_student = {}
 
     script_id = @script.id
+    unit_group = CourseVersion.find_by_id(params[:course_version_id])&.content_root
+    unit_group_unit = Queries::Courses.unit_group_unit(@script, unit_group)
     assessment_script_levels = @script.get_assessment_script_levels
 
     @section.students.in_batches(of: 20).each do |student_batch|
@@ -96,7 +98,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
           student_progress = progress_data[script_level.id][student.id]
           next unless student_progress
 
-          level_group_id, assessment_response = summarize_assessment_response(student.id, script_level, student_progress)
+          level_group_id, assessment_response = summarize_assessment_response(student.id, script_level, student_progress, unit_group_unit: unit_group_unit)
           responses_by_level_group[level_group_id] = assessment_response unless assessment_response.nil?
         end
 
@@ -158,7 +160,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
   # Helper function that builds the part of the section_responses response
   # corresponding to a given user and assessment. The third parameter is expected
   # to be the array of UserLevel objects returned by get_assessment_progress_data.
-  private def summarize_assessment_response(student_id, script_level, student_progress)
+  private def summarize_assessment_response(student_id, script_level, student_progress, unit_group_unit: nil)
     # Find the UserLevel that represents overall progress of the LevelGroup.
     # This logic is analogous to User#last_attempt_for_any.
     # Note: we intentionally no longer use the aggregated answers stored on
@@ -193,12 +195,11 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
       level_results << level_result
     end
 
-    # TODO: TEACH-2041 pass in `unit_group_unit` to use the correct URL on the assessment page in the teacher dashboard
     assessment_response = {
       lesson: script_level.lesson.localized_title,
       puzzle: script_level.position,
       question: level_group.properties["title"],
-      url: build_script_level_url(script_level, section_id: @section.id, user_id: student_id),
+      url: build_script_level_url(script_level, unit_group_unit: unit_group_unit, section_id: @section.id, user_id: student_id),
       multi_correct: stats[:multi_count_correct],
       multi_count: stats[:multi_count],
       match_correct: stats[:match_count_correct],

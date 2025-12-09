@@ -1,21 +1,14 @@
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
-import SettingsButton from '@codebridge/Settings/SettingsButton';
-import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -23,10 +16,8 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import moduleStyles from './workspace.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSources, levelProperties, projectPickerSettings} =
-    useCodebridgeContext();
-  const {appName, enableMicroBit, skipUrl} = levelProperties;
-  const isWidgetView = levelProperties.widgetView;
+  const {levelProperties, projectPickerSettings} = useCodebridgeContext();
+  const {enableMicroBit, skipUrl} = levelProperties;
 
   const dialogControl = useDialogControl();
   const source = useAppSelector(
@@ -34,37 +25,19 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
 
-  const feedbackTooltipProps: TooltipProps = {
-    text: commonI18n.feedback(),
-    direction: 'onBottom',
-    tooltipId: 'feedback-tooltip',
-    size: 'xs',
-    hideTail: true,
-  };
-
-  const documentationTooltipProps: TooltipProps = {
-    text: commonI18n.documentation(),
-    direction: 'onBottom',
-    tooltipId: 'documentation-tooltip',
-    size: 'xs',
-    hideTail: true,
-  };
-
-  const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
-
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
+            sendLab2AnalyticsEvent(EVENTS.SKIP_TO_PROJECT);
             window.location.href = skipUrl;
           }
         },
       });
     }
-  }, [appName, dialogControl, skipUrl]);
+  }, [dialogControl, skipUrl]);
 
   const onClickFlash = async () => {
     let pythonCode = '';
@@ -96,7 +69,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      <SettingsButton />
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
@@ -106,38 +78,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           text={codebridgeI18n.sendToMicroBit()}
           color={'black'}
         />
-      )}
-      {!isWidgetView && (
-        <VersionHistoryButton startSources={startSources} appName={appName} />
-      )}
-      {appName === 'pythonlab' && (
-        <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <LinkButton
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
-            ariaLabel={commonI18n.feedback()}
-            size={'xs'}
-            type={'tertiary'}
-            color={'black'}
-            target="_blank"
-          />
-        </WithTooltip>
-      )}
-      {/* For now, only python lab supports documentation */}
-      {appName === 'pythonlab' && (
-        <WithTooltip tooltipProps={documentationTooltipProps}>
-          <LinkButton
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'book'}}
-            href={documentationUrl}
-            size={'xs'}
-            type={'tertiary'}
-            target="_blank"
-            color={'black'}
-            aria-label={commonI18n.documentation()}
-          />
-        </WithTooltip>
       )}
       {skipUrl && (
         <Button

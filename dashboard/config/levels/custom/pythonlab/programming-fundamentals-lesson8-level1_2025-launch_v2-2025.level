@@ -1,0 +1,391 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:48.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Replace the repeated `move()` commands with a `while` loop.\r\n\r\n2. Use `painter_name.can_move()` as the loop condition.\r\n\r\n<br/>\r\n\r\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `can_move()`.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can repeat actions until the `Painter` reaches a wall or obstacle using\r\n\r\n```\r\nwhile painter_name.can_move():\r\n   # CODE TO REPEAT\r\n```",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\nzoe = Painter()\n\n# TODO - Replace the repeated move() commands with a while loop\nzoe.move()\nzoe.move()\nzoe.move()",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestReplaceRepeatedMoves(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter was created. Make sure to create a Painter in your code.\")\n\n    def test_final_position(self):\n        \"\"\"Painter ends at (3, 0)\"\"\"\n        self.assertEqual(\n            (self.painter.ending_position.x, self.painter.ending_position.y),\n            (3, 0),\n            \"The Painter didn't stop at (3, 0). Make sure you're using a while loop that continues while can_move() is true.\"\n        )\n\n    def test_used_can_move(self):\n        \"\"\"Painter called can_move() at least once\"\"\"\n        self.assertGreaterEqual(\n            self.painter.action_count(\"CAN_MOVE\"),\n            1,\n            \"The Painter never checked can_move(). Make sure you're using a while loop with can_move() as the condition.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:48.464+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson8-level1_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson8-level1_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

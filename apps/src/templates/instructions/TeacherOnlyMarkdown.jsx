@@ -29,7 +29,7 @@ export default class TeacherOnlyMarkdown extends Component {
       return null;
     }
 
-    // CodeBridge does not use the teal container/header, so we just render the content.
+    // Hides the teal container/header (Lab2 does not use the container).
     if (hideContainer) {
       return this.renderMarkdownContent();
     }

@@ -1,0 +1,18 @@
+.emptyStateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+
+  &.large {
+    padding: 5rem 0;
+  }
+
+  .emptyStateImage {
+    width: auto;
+    height: 8.75rem;
+    margin-bottom: 1rem;
+  }
+}

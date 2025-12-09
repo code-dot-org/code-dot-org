@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:59:48.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/9ce9bb7a7d86103b49f175ef5a1f8ba5-scenario4_a.png",
+        "key": "computer-systems-lesson3-onlineresources-1-5c25ddab-c99a-4b94-8628-1e8d9bc30c38",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/e8c682fc5b3485f50dd2491748d86e4e-scenario4_b.png",
+        "key": "computer-systems-lesson3-onlineresources-1-c4575f2c-89c4-4fea-9958-6e355e5676f0"
+      },
+      {
+        "text": "**Manufacturer’s FAQ**\n\n**Title**: “*FAQ – VROne Headset*” \n\n**Excerpt**:\n“For the smoothest experience, use a 5 GHz Wi-Fi connection, not 2.4 GHz.”\n\n“Keep your headset battery above 40% to avoid mid‐session dropouts.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-6f520c00-abc2-4c6f-83cb-59fc2fee94bf",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "**Community Forum Post**\n\n**Subject**: “VR Stuttering on High Settings?” \n\n**Username**: VRGuruXL \n\n**Message**:\n“My GPU temps were skyrocketing in VR, causing stutters and black screens. Turned out my case fans were clogged with dust. After cleaning, the stutter disappeared!”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-cdf9bada-48d5-443f-8edb-b133acbf4dd2",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "**Social Media Tips**\n\n**Platform**: VRChat Subgroup \n\n**User**: @VirtualVista \n\n**Post**:\n“If your VR stream drops frames, check your router’s settings. Sometimes the router limits bandwidth for devices it doesn’t recognize. I had to manually prioritize my PC and headset traffic!”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-91f68b3a-8101-4f9c-861a-555ac85b7c47"
+      },
+      {
+        "text": "*Excerpt from “Advanced VR Setup Guide”*\n\n**Network Chapter**:\n\n“To minimize latency, place your router in the same room as your VR play area. Walls or metal surfaces can degrade signal and increase ping.”",
+        "imageUrl": "https://images.code.org/f579e64c0ffd1fd2f495781456a5c816-scenario1_c.png",
+        "key": "undefined-9989f337-5219-42f9-86d6-9204105e8673"
+      }
+    ],
+    "display_name": "VR Headset & Controllers",
+    "thumbnail_url": "https://images.code.org/1cde54752f0b99ddbeae8c351d7c1679-vr.png",
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:59:48.313+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson3-level3c_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson3-level3c_2025\"}]"
+}]]></config>
+</Panels>

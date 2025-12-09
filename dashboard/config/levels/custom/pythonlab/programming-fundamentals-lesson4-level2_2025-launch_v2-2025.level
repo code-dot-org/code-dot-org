@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Before we start writing more code, let's make sure your program has a **comment** -- a note written for humans to read, not the computer.\r\n\r\n## Do This:\r\n\r\n1. Add a **comment** at the top of the code that says what the program does.\r\n\r\n   **Hint:** Start the line with `#`. For example:\r\n   \r\n   ```\r\n   # This is a comment\r\n   print(\"Hello!\")\r\n   ```\r\n\r\n2. You can describe what the code does now or what you plan to make it say.\r\n\r\n3. Then run the program again and make sure your message still prints!\r\n\r\n   <i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the book icon above the workspace anytime you want to reference Python documentation.\r\n   \r\n   ![python documentation book icon](https://images.code.org/901506f120f08a705ac5c65077f31e2b-image-1746033222447.12.23 AM.png)\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nPython ignores anything that comes after a `#`.\r\n\r\nComments are a great way to explain your code -- to yourself and others!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "\nprint(\"Hello, Python!\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:09.795+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson4-level2_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson4-level2_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

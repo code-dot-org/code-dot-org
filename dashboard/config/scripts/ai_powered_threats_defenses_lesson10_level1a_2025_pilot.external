@@ -1,0 +1,19 @@
+name 'ai-powered-threats-defenses-lesson10-level1a_2025-pilot'
+title 'Pet Sitting App'
+bubble_choice_description 'Explore a Pet Sitting App and get to know its users!'
+display_name 'Pet Sitting App'
+thumbnail_url 'https://images.code.org/7791b1c1109520f1b5f9000bbe39dbe3-image-1754683170139.png'
+
+markdown <<MARKDOWN
+## Pet Sitting App
+
+Explore the <a href="https://docs.google.com/presentation/d/1bdkUHEBOwVsKXBGZY5pQLxAsvCgBi3Z0-_Bzu1LNM-o/edit?slide=id.g3737b46f751_0_17#slide=id.g3737b46f751_0_17" target="_blank"> Pet Sitting app</a> by familiarizing yourself with the app interface and the app users.
+
+**Note:** This slide deck opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+    <img src="https://images.code.org/7791b1c1109520f1b5f9000bbe39dbe3-image-1754683170139.png"
+         alt="Pet Sitting App screens" 
+         style="width: 80%; max-width: 100px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+</div>
+MARKDOWN

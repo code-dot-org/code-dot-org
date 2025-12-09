@@ -24,7 +24,7 @@ export const getOpenFiles = (source: MultiFileSource) => {
       .filter(f => shouldShowFile(source.files[f]))
       .map(fileId => source.files[fileId]);
   } else {
-    return sortFilesByName(source.files, {mustBeOpen: true}).filter(f =>
+    return sortFilesByName(source, {mustBeOpen: true}).filter(f =>
       shouldShowFile(f)
     );
   }

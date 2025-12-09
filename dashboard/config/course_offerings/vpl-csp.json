@@ -1,6 +1,6 @@
 {
   "key": "vpl-csp",
-  "display_name": "CS Principles Virtual Professional Learning 24-25",
+  "display_name": "CS Principles Virtual Professional Learning 25-26",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
@@ -17,5 +17,7 @@
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

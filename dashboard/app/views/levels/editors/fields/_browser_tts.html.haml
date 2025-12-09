@@ -3,5 +3,6 @@
 
 #browser_tts_area.in.collapse
   // Only available on lab2 labs currently.
+  %strong NOTE: If this level is used in a unit that has TTS enabled, this will be automatically enabled regardless of this setting.
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :offer_browser_tts, description: "Enable Browser Text-to-Speech"} if @level.uses_lab2?
 

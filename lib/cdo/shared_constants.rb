@@ -713,9 +713,6 @@ module SharedConstants
       SHAPE: 100,
     },
   }.freeze
-  CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
-  )
 
   CAP_LINKS = OpenStruct.new(
     PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
@@ -739,9 +736,9 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
-  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
@@ -760,6 +757,7 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
+  # TODO-AITUTOR: Remove these once ai_tutor_interaction model is removed.
   AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
 
   AI_TUTOR_TYPES = {
@@ -813,6 +811,11 @@ module SharedConstants
     STUDENT_PROFANITY: 'student_profanity',
     # PII detected in the student's work.
     STUDENT_PII: 'student_pii',
+    # Possible responses from AI when evaluating student work.
+    ALL_COMPLETE_CORRECT: 'all_complete_correct',
+    PARTIAL_COMPLETE_CORRECT: 'partial_complete_correct',
+    INCOMPLETE_INCORRECT: 'incomplete_incorrect',
+    NOT_EVALUATED: 'not_evaluated',
   }
 
   AI_CHAT_MODEL_IDS = {
@@ -825,7 +828,20 @@ module SharedConstants
     LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
+    GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
+  }
+
+  AI_CHAT_CLIENT_TYPES = {
+    AI_CHAT_LAB: "ai-chat-lab",
+    AI_TUTOR: "ai-tutor",
+    FLOW_LAB: "flow-lab",
+  }
+
+  AI_CHAT_READ_TIMEOUTS = {
+    AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
+    AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
+    AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
@@ -852,23 +868,37 @@ module SharedConstants
   }
 
   EDUCATOR_ROLES = [
-    {value: "classroom_teacher", category: 'educator'},
-    {value: "stem_tech_teacher", category: 'educator'},
-    {value: "subject_area_teacher", category: 'educator'},
-    {value: "librarian_media_specialist", category: 'educator'},
-    {value: "homeschool_teacher", category: 'educator'},
-    {value: "school_admin", category: "admin"},
-    {value: "district_admin", category: "admin"},
-    {value: "parent", category: 'other'},
-    {value: "other", category: 'other'}
+    {value: "classroom_teacher", label: "Classroom Teacher", category: 'educator'},
+    {value: "stem_tech_teacher", label: "STEM/Technology Teacher", category: 'educator'},
+    {value: "subject_area_teacher", label: "Subject Area Teacher", category: 'educator'},
+    {value: "librarian_media_specialist", label: "Librarian/Media Specialist", category: 'educator'},
+    {value: "homeschool_teacher", label: "Homeschool Teacher", category: 'educator'},
+    {value: "school_admin", label: "School Administrator", category: "admin"},
+    {value: "district_admin", label: "District Administrator", category: "admin"},
+    {value: "parent", label: "Parent", category: 'other'},
+    {value: "other", label: "Other", category: 'other'}
   ].freeze
+
+  RESOURCE_EMBEDDABILITY_OPTIONS = {
+    EMBED_AND_RESOURCE_DROPDOWN: {value: "embed_and_resource_dropdown", label: "AI TA knowledge base and resource dropdown"},
+    EMBED_ONLY: {value: "embed_only", label: "AI TA knowledge base only"},
+    RESOURCE_DROPDOWN_ONLY: {value: "resource_dropdown_only", label: "Resource dropdown only"}
+  }.freeze
 
   AI_DIFF_CONTEXT = {
     LESSON: "lesson",
     UNIT: "unit",
     COURSE: "course",
     GENERAL: "general",
-    LEVEL: "level"
+    LEVEL: "level",
+    PROGRESS: "progress"
+  }.freeze
+
+  AI_DIFF_ASSOCIATION = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    SECTION: "section"
   }.freeze
 
   DISALLOWED_ROUTES = [
@@ -885,4 +915,13 @@ module SharedConstants
     "/oauth_sign_out/",
     "/certificates/"
   ].freeze
+
+  BUBBLE_CHOICE_CUSTOM_MODES = {
+    MUSIC_DANCE_AI: 'music_dance_ai',
+  }.freeze
+
+  BUBBLE_CHOICE_NAVIGATION_TYPES = {
+    PARENT: 'parent',
+    NEXT_LEVEL: 'next_level',
+  }
 end

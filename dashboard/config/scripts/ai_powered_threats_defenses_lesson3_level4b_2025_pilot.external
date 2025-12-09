@@ -1,0 +1,68 @@
+name 'ai-powered-threats-defenses-lesson3-level4b_2025-pilot'
+title 'Marcus L. - User Profile'
+
+display_name 'Marcus Lee'
+bubble_choice_description 'Marcus is a 15 year old student from Terre Haute, IN'
+thumbnail_url 'https://images.code.org/e7e1fa149304e0c03c767c590c334fb4-image-1755184710786.png'
+
+markdown <<MARKDOWN
+#Marcus  
+
+A data breach is a security incident where sensitive, confidential, or private information is accessed, disclosed, or stolen by unauthorized individuals.
+
+Look through Marcus's breach report to try to determine what happened and what type of password attack your user was vulnerable to.
+
+<div style="font-family: sans-serif; font-size: 16px; line-height: 1.6;">
+
+  <h3 style="color: #00838f;">Breach Report</h3>
+  <p><strong>Service Breached:</strong> CourtCast Sports Streaming<br>
+     <strong>Login Location:</strong> Dallas, TX<br>
+     <strong>Time of Access:</strong> 11:42 p.m.<br>
+     <strong>AI Analysis:</strong> Time and device usage consistent with late-night mobile logins on previous dates.
+  </p>
+
+  <p>Account activity followed a sneaker promotion post by the service.<br>
+     The login was successful on the first attempt from an Android phone using mobile data.<br>
+     The password used was: <strong>FreshKicks23</strong>
+  </p>
+
+  <p><strong>AI Analysis:</strong> Password found in 2023 breach dataset associated with sneaker resale site.<br>
+     No password changes had been made since that breach.<br>
+     The attacker viewed saved payment settings but made no purchases.<br>
+     <strong>AI Analysis:</strong> User's account had not been updated with a profile photo or linked payment method since signup.
+  </p>
+
+  <br>
+
+  <h3 style="color: #00838f;">Password Attacks</h3>
+
+  <table style="width:100%; border-collapse:collapse; border:1px solid #ccc; font-size: 15px;">
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Credential stuffing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers use real usernames and passwords (often from past breaches) to break into other accounts.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password guessing attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When attackers try different passwords for one account, hoping to guess the right one.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Password spraying attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker tries one common password on many different accounts to avoid detection.
+      </td>
+    </tr>
+    <tr>
+      <td style="font-weight:bold; padding:10px; border:1px solid #ccc;">Brute force attack</td>
+      <td style="padding:10px; border:1px solid #ccc;">
+        When an attacker rapidly tries a large number of possible passwords on one account, using automated tools to find the correct one.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+MARKDOWN

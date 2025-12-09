@@ -30,6 +30,9 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   const {aichatSettings, setPropertyValue} = useContext(UpdateContext);
   const InputTag = inputType === 'textarea' ? 'textarea' : 'input';
   const {initialCustomizations, visibilities} = aichatSettings;
+  if (!fieldName) {
+    return null;
+  }
   return (
     <>
       {description && (
@@ -63,7 +66,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
           )}
         </div>
         <VisibilityDropdown
-          value={visibilities[fieldName]}
+          value={visibilities[fieldName]!}
           property={fieldName}
         />
       </div>

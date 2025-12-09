@@ -85,7 +85,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        getRollupsUrl="/s/coursea/get_rollup_resources"
+        getRollupsUrl="/courses/coursea/units/1/get_rollup_resources"
       />
     );
     const addRollupsButton = wrapper.find('button').at(1);
@@ -97,24 +97,24 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        getRollupsUrl="/s/coursea/get_rollup_resources"
+        getRollupsUrl="/courses/coursea/units/1/get_rollup_resources"
       />
     );
     const codeRollup = {
       id: 1,
       key: 'all-code',
       name: 'All Code',
-      url: '/s/coursea/code',
+      url: '/courses/coursea/units/1/code',
     };
     const vocabRollup = {
       id: 2,
       key: 'all-vocab',
       name: 'All Vocab',
-      url: '/s/coursea/vocab',
+      url: '/courses/coursea/units/1/vocab',
     };
 
     const server = sinon.fakeServer.create();
-    server.respondWith('GET', '/s/coursea/get_rollup_resources', [
+    server.respondWith('GET', '/courses/coursea/units/1/get_rollup_resources', [
       200,
       {'Content-Type': 'application/json'},
       JSON.stringify([codeRollup, vocabRollup]),

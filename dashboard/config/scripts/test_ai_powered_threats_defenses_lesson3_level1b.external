@@ -1,0 +1,79 @@
+name 'test-ai-powered-threats-defenses-lesson3-level1b'
+title 'Jordan P. - User Profile'
+
+display_name 'Marcus Lee'
+bubble_choice_description 'Marcus is a 15 year old student from Terre Haute, IN'
+thumbnail_url 'https://images.code.org/e7e1fa149304e0c03c767c590c334fb4-image-1755184710786.png'
+
+markdown <<MARKDOWN
+#Marcus Lee
+
+#### Look through Marcus's social media posts and record important information in your activity guide.
+
+<table style="width:100%; border-collapse:collapse; border:none;">
+  <!-- Row 1: Top image row -->
+  <tr>
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/bc043b3a865aba9136a78457159002cf-image-1755117278782.gif" alt="Social media image 1" style="width:100%; height:auto;">
+    </td>
+    <td style="width:4%;"></td> <!-- blank spacer column -->
+    <td style="width:48%; vertical-align:top;">
+      <img src="https://images.code.org/ca6eb435ba7b04f1fa6138cfc6d8f2dd-image-1755117283568.gif" alt="Social media image 2" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 2: Captions for first set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@MarcInMotion</h3>
+    These kicks aren’t just shoes… they’re art 
+    <br>
+	#SneakerDrop #AirJordan #FreshKicks #Sneakerhead
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@SneakAttack_Marc</h3>
+    Look out, world — permit level unlocked. Next stop: license boss battle
+    <br>
+    #FirstDrive #LearnersPermit #LevelUp #TeenDriver
+    </td>
+  </tr>
+
+  <!-- Row 3: Vertical spacer row -->
+  <tr>
+    <td style="height:24px;"></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- Row 4: Second image row -->
+  <tr>
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/c4a5ba27058be2022db29902f0b87a9c-image-1755117301634.gif" alt="Social media image 3" style="width:100%; height:auto;">
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="vertical-align:top;">
+      <img src="https://images.code.org/67e3c153e901667d0b7fcc88d873aff0-image-1755117307932.gif" alt="Social media image 4" style="width:100%; height:auto;">
+    </td>
+  </tr>
+
+  <!-- Row 5: Captions for second set -->
+  <tr>
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+     <h3>@GameOnMarc</h3> 
+     New kicks, same hustle. Court’s calling
+     <br>
+     #BallIsLife #CourtReady #DripCheck #SneakerCulture
+    </td>
+    <td></td> <!-- spacer -->
+    <td style="background-color:black; color:white; padding:8px; font-family:sans-serif; width: 220px; height: 100px; vertical-align: top;">
+    <h3>@MarcInMotion</h3>
+    Post-practice fuel. Burger Bliss never misses
+    <br>
+    #DenverEats #SneakerLife #BurgerGoal
+    </td>
+  </tr>
+</table>
+
+
+MARKDOWN

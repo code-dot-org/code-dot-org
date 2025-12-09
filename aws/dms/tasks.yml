@@ -90,6 +90,9 @@ cron:
     remove_column: [feedback]
 - dashboard.learning_goal_ai_evaluation_feedbacks:
     remove_column: [other_content]
+- dashboard.skills
+- dashboard.levels_skills
+- dashboard.student_work_evaluation_summaries
 - dashboard.rubrics
 - dashboard.rubric_ai_evaluations
 - dashboard.learning_goals

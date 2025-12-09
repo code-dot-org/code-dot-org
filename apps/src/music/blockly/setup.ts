@@ -1,3 +1,6 @@
+import localization from '@cdo/apps/localization';
+
+import {localizeBlockDefinition, updateLocale} from '../../blockly/utils';
 import {Triggers} from '../constants';
 import musicI18n from '../locale';
 
@@ -29,7 +32,7 @@ import FieldPatternAi from './FieldPatternAi';
 import FieldSounds from './FieldSounds';
 import FieldTune from './FieldTune';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import {BlockConfig} from './types';
+import {MusicBlockConfig} from './types';
 
 /**
  * Set up the global Blockly environment for Music Lab. This should
@@ -52,17 +55,30 @@ export function setUpBlocklyForMusicLab() {
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
   // after converting musicBlocks to TypeScript.
-  const typedMusicBlocks = MUSIC_BLOCKS as {[key: string]: BlockConfig};
-  for (const blockType of Object.keys(typedMusicBlocks)) {
-    const blockConfig = typedMusicBlocks[blockType] as BlockConfig;
-    Blockly.Blocks[blockType] = {
-      init: function () {
-        this.jsonInit(blockConfig.definition);
-      },
-    };
+  const typedMusicBlocks = MUSIC_BLOCKS as {[key: string]: MusicBlockConfig};
 
-    Blockly.JavaScript.forBlock[blockType] = blockConfig.generator;
-  }
+  const initializeBlocks = () => {
+    for (const blockType of Object.keys(typedMusicBlocks)) {
+      const blockConfig = typedMusicBlocks[blockType] as MusicBlockConfig;
+
+      // Localize the block and add it to the blocks list
+      const localized = localizeBlockDefinition(blockConfig.definition);
+      Blockly.Blocks[blockType] = {
+        init: function () {
+          this.jsonInit(localized);
+        },
+      };
+
+      Blockly.getGenerator().forBlock[blockType] = blockConfig.generator;
+    }
+  };
+
+  // Ensure that Blockly localizes when the locale changes
+  localization.on('change', info => {
+    initializeBlocks();
+    updateLocale(localization.rtl);
+  });
+  initializeBlocks();
 
   Blockly.JavaScript.addReservedWords(
     ['Sequencer', 'when_run', ...Triggers.map(trigger => trigger.id)].join(',')

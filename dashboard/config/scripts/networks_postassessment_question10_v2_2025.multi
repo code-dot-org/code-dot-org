@@ -1,0 +1,19 @@
+name 'networks-postassessment-question10_v2-2025'
+title 'Networks and the Internet Post-Assessment: Question 10'
+
+wrong 'Using stronger Wi-Fi signals'
+wrong 'Allowing only one employee to handle data'
+right 'Encrypting the data and using multi-factor authentication'
+wrong 'Changing passwords once a year'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A company is concerned about cybercriminals stealing customer data. What is the best way to protect sensitive information on their network?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Network Security
+
+Lesson 10: Emerging Technologies
+MARKDOWN

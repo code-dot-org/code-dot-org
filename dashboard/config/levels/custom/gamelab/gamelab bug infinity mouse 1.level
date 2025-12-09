@@ -201,12 +201,9 @@
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
     "start_blocks": "function draw() {\r\n  background(\"green\");\r\n  var mouse = createSprite(World.mouseX,World.mouseY);\r\n  mouse.setAnimation(\"mouse\");\r\n  mouse.scale = 0.3;\r\n  drawSprites();\r\n}\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"b41091cd-7d0c-440e-9740-435fdb48cc92\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"b41091cd-7d0c-440e-9740-435fdb48cc92\": {\r\n      \"name\": \"mouse\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS/category_animals/mouse_gray.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 296\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS\"\r\n    }\r\n  }\r\n}",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "# Example of bug in Game Lab\r\n\r\n\"There are so many mice!!\""
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"b41091cd-7d0c-440e-9740-435fdb48cc92\"\n  ],\n  \"propsByKey\": {\n    \"b41091cd-7d0c-440e-9740-435fdb48cc92\": {\n      \"name\": \"mouse\",\n      \"sourceUrl\": \"/api/v1/animation-library/rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS/category_animals/mouse_gray.png\",\n      \"frameSize\": {\n        \"x\": 300,\n        \"y\": 296\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"rOwb61WuhiSK9EgCr.ovabjFUHwgkcFS\"\n    }\n  }\n}",
+    "long_instructions": "# Example of bug in Game Lab\r\n\r\n\"There are so many mice!!\"",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

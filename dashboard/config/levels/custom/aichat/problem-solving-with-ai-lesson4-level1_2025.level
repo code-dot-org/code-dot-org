@@ -11,7 +11,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.7,
+        "temperature": 0.9,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -41,8 +41,9 @@
         "gpt-4o-mini"
       ]
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "submittable": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:20.386+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level1_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level1_2024\"},{\"changed_at\":\"2025-05-16 17:29:07 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:20.386+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level1_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level1_2024\"},{\"changed_at\":\"2025-05-16 17:29:07 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 20:29:12 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T22:04:06.000Z",
   "level_num": "custom",
@@ -14,12 +15,25 @@
     "display_name": "Planetary Orbital Speed S",
     "bubble_choice_description": "A student is simulating how fast different planets orbit their stars. Each planet returns a random orbital speed every time it's observed.",
     "thumbnail_url": "https://images.code.org/37bb8fd5568832ac1ad3743dba88b401-solar-system.png",
-    "encrypted_validation": "DgvMtSrmZhYH0YJiMBTCKyVHBYdp0v+xLLd1IcgjzMn//NAQOe38+YEFilza\n3pkfch+vd4ggZnrUFqZYuIIyJXjUWJp5/xJBI0+BRdPB+4dimhlnjAIcwqD2\nzHCqYrKGCXIwUY6b3xKBqy83rc193dtJQXTilh0aXiKLh5aWLUHt+t5g5JzT\npJOQcetgZAN38yngEVhC7m0g/O2c7Szebjn3HferL5bCDgE2J8u+dDCupusy\nPM9IqihcExfH4anYO225eTy6zmCBi19FK5zdyNfXrAaXjkLfoeZwphHOAssM\nwAkkUEJM8aPyWRTzzNHS4eld9Ora4JSUauRCl2ZchlSN9szdF7UHJ1S6Tjua\nHQMfNvnJI3mRDGb5GGJ7fd9G/RKfiu13mDmRXaxAb59s37cduro5y7T+OVdx\nElEuNwdWn+4+3uQUdwR5SE6IP5fNl0NUWBMOGv3pWWIYb8IsZ2BVlGRlqkW9\nB5u98J8Dwa1m/l0L0o3aOuqnHEj5M6tUmEqtcoAQRnmVlq3Cgrbq8cOSKiUV\nyV0Kx9diXPBjZBbmowthwKxrBbBI+VULDP7l7U7b6Ap3XfjO7pi+MQ3TKNVe\ncbtOwHBpX4G5JEIckp5gjFDMydFNYGHdgnuYgwlJRIK2Cas8EJo/SkLOOwa6\n61IYSBqRgJyKY6/iTCvxGBCyq5jxrv2RLRJXAbFiRISNFajp/B/zvUm7D+Hz\nCR2MtpHBeFURD0QOsayUpf8tmRYEk5QqcTLMFaRUdMb7Q2qUO2RqFJ/6LeNT\nq5Z1cTBS6J5FvzIsxR7No9nOeg6scv5gfvZREdi3+wuiq+fb2QXsL5DqN/vI\nsJCBLDG6eYaecR7xlGb5rv8mYu1r0Ke/x//bVjQJZ63j+14+vftMjJEAiGmn\nroJYvtJcoNwMsaS3AMMZ1peN4IRD1LJoY06nPOThsRHDu+FLRhRPyQZ0jB9d\niOL27RCZcJYz6+ResSnWdkTviINypOWTbBil2AOA3dT0XPRk1V+yHJtcjqJY\na16i42eRFymyqi+uOzrMF2tg8ay7UJliTzPJiri6ToI1sGt25cd0sUAXhDgV\nML2UUAcYW+maQPmUeLSrBwkkMJ/e8cKLLMcW0LCmfKnlaaDW/bIDRnA2wD2G\n2FXfaV9hgL7O+UauQL4kKQfPlFtOUtPEIApkXbon31lRjOSvBQr66oSjNnEB\nXfEwuqju4frRe9RmcHkKhZ3HpN0JaiLFz+BDE/OaEXVEf9K6ojOd9zR0cQtZ\nsFkV/3DgfZzRwDvZ3anlHj/UkOEFRtuGEGGGuPHh8aISJvFWeaXNDH+zJUCl\nJRbZMfVvIum6I13Hd/YVO82yKqFxNgkgoJY5sxFeV4FKRsWsuQT1ESZ57ocM\nrfvKojegs8G+TIM+NVE86wVQ9xrc0I25qhjHLkrtTDzYGjs9UiXGG3nWGx6K\nlztRBfnGGXNQusH6KUtp9BT04ga263OocrndN9PspXCQqTQ5OlnMuKTFNMaE\nh29TQfaxnozM39dm+/RIagQJ/tmaVRBxdwbVksURLz41syHgmUoZzgqrZ5hQ\ne35EARLA40LMlr0p6KEWwRDUiAFnCKkjBR6PrYD4XBv8D+nE/ieJSuksVeO3\nOztXv/n+Zv5qOG4av2wkc6ry8zNE0LsbC75ajs2GaY7JJNk/Yw+Dywtok31d\nJ8Mjg+Gq0385Mhk9cZGwcysp7fN6564Ojb3W+72AS3NuQROdD+kQoQNS24xT\ne0jykm4+OA==\n",
     "encrypted_exemplar_sources": "3urDeMXArxVVDl9lDWFAHzyxWY0LmteIBEXNVApiSmKVVpu/dbuAnAyEdPmm\nZ0LBWRUT0aIQOWLRN6pHx3yXeBTcdIZO8/6BPAkWGTgEyJ9Sgx8QAigvWihT\na2IB8B8MCdvMomRXD6hcRCMFYkY4nxmAh8pRbyQ5voK/kaxTqPvOV5ewOQ00\ndH46+kPMYUTU6cq+XCJqpsUQI3PRPPpDnW/wx8i2ox1OwIgEgWuoyg1wFFvk\nzED3qSLXCWW2X7anFC28pmS3SuPgyF67/fU7+ZOTjcDbKaXQurREyb53Aq4V\nI47cJkl0C1Ey5nPgyAeYOQnYrFXN1Xx44FNEKbDGzSLdpJhMZPSj6/eew+vm\ntJgzxvLwccmAa+qQwYLJ2bHMK3yVH9Xg38/aSJel2wdx7zhSDC3QAd8ES2Dy\nV75rXvqmBdRwSEAhH8Xc9GYS8rbagInnoeGodpxcs8Woexry5W1pOp4+j5G5\n7XJc9gm/nQVgnQ9+aQJnb27n8VJ8cXFOOcvxChr8jZvLyf/lSe8gveKNMnXi\n8rUehBH9ZuqPac/HUK3eBXgNBZlEY6VjZDK2PBPYKS8+QGZk4az+QQ2ixvtS\nwQdKxaUl+M91ZOFXa9NPYmnNLDBAxDsdfmC9OI7xhoUM3SN8kH7KkUy6LEoB\nhEDMVfWpDACnVeSFSEyMaavT4IP3zBB1E9bgenTFxgkY7IvYWMYYXf8jXD2U\nEYu/IS/JMJArZwmv/yaHnFtEXfwHR/xwH3WNND1V6xjILLHupzbe07wVN8Nw\nV1YZDfnMEWsCgxOuMmWTy6vHuvBGF/SapXcIMmxLj5EWKrzZMAMh6y/aFkIB\nEG6r5LjB4CQ9WeZkQvzPAzWnnqCPLlihmyz0WH7Qh1ehIAUEmUTg9dCHuJ//\n+E0LqIrb2iBTHs8ov6aed40oGSSNoZ5OK0jTzkDHfaEZNGScwtNgw5E6Q0mA\nWhmPC4r1feVdHFnyPS1sE+ogxvYXpkeroBN0IjjJ0v5FiEJBizxp7Bcvwp37\nS+vU0QagHgMHL2/OZpiMbSwJIQ==\n",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "start_sources": {
+      "GalaxyRunner.java": {
+        "text": "public class GalaxyRunner {\n  public static void main(String[] args) {\n\n\n\n    System.out.println(one.getName() + \" orbits at \" + one.getOrbitalSpeed() + \" km/s\");\n    System.out.println(two.getName() + \" orbits at \" + two.getOrbitalSpeed() + \" km/s\");\n  }\n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Planet.java": {
+        "text": "public class Planet {\n\n  private String name;\n\n  public Planet(String name) {\n    this.name = name;\n  }\n\n  public String getName() {\n    return name;\n  }\n\n  public int getOrbitalSpeed() {\n    // Replace with your code\n    return 0;\n  }\n\n\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:06.266+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L6a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L5-L6a_pilot-2025\"},{\"changed_at\":\"2025-05-24 03:04:17 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:06:12 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:06:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:07:04 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:06.266+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L6a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L5-L6a_pilot-2025\"},{\"changed_at\":\"2025-05-24 03:04:17 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:06:12 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:06:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 03:07:04 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-09-26 22:48:17 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-26 22:48:28 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-26 22:49:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-26 22:50:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-26 22:50:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

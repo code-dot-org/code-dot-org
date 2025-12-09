@@ -98,105 +98,32 @@ namespace :test do
     :ui_all
   ]
 
-  timed_task_with_logging :dashboard_ci do
+  # In each environment, we use the following databases by default:
+  #  - databases for web servers: dashboard_<env> and pegasus_<env>
+  #  - databases for unit tests: dashboard_test and pegasus_test
+  #
+  # On the chef-managed test system, where we run both unit and ui tests in the same environment,
+  # this leads to conflicting names for both pegasus and dashboard. We work around this as follows:
+  # - USE_PEGASUS_UNITTEST_DB=1 tells any unit tests to use pegasus_unittest instead of pegasus_test
+  # - PARALLEL_TEST_FIRST_IS_1=1 tells the parallel_tests gem (which uses multiple test databases
+  #   dashboard_test, dashboard_test2, etc. to run dashboard unit tests) to instead use
+  #   dashboard_test1, dashboard_test2, etc.
+  # - TEST_ENV_NUMBER=1 tells other ruby unit tests (not currently run in parallel) to use
+  #   dashboard_test1 as well.
+  #
+  # No such workaround is currently needed for CI, because Drone runs unit tests and UI tests in
+  # separate containers, so it is safe for both containers to use the default database names.
+  # However, We still set PARALLEL_TEST_FIRST_IS_1=1 in the unit pipeline in CI to simplify
+  # parallel database setup.
+
+  timed_task_with_logging :dashboard_qa do
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
         ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
-        ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
-        # Parallel tests don't seem to run more quickly over 16 processes.
-        ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
 
-        # Hash of all seed-data and -config content
-        #
-        # Data:
-        # - All fixture files
-        # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
-        #
-        # Config:
-        # - schema.rb
-        # - seed.rake
-        fixture_path = "#{dashboard_dir}/test/fixtures/"
-        fixture_hash = Digest::MD5.hexdigest(
-          Dir["#{fixture_path}/{**,*}/*.yml"].
-            push(dashboard_dir('db/schema.rb')).
-            push(dashboard_dir('config/videos.csv')).
-            push("#{fixture_path}/schools.tsv").
-            push(dashboard_dir('lib/tasks/seed.rake')).
-            select {|filename| File.file?(filename)}.
-            sort.
-            map {|filename| Digest::MD5.file(filename)}.
-            join
-        )
-        CDO.log.info "Fixture hash: #{fixture_hash}"
-
-        # Try to fetch seed data from S3
-        bucket_name = 'cdo-build-package'
-        s3_key = "test_db/#{fixture_hash}.gz"
-        s3_client = Aws::S3::Client.new
-        require 'zlib'
-        require 'stringio'
-
-        seed_data = begin
-          response = s3_client.get_object(bucket: bucket_name, key: s3_key)
-          Zlib::GzipReader.new(response.body).read
-        rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
-          CDO.log.info "Seed data not found on S3 at #{s3_key}"
-          nil
-        end
-
-        seed_file = Tempfile.new(['db_seed', '.sql'])
-        auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
-        writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost/dashboard_test')
-        database = writer.path[1..]
-        writer.path = ''
-        opts = MysqlConsoleHelper.options(writer)
-        mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
-
-        if seed_data
-          File.write(seed_file, seed_data)
-        else
-          # Generate new DB contents
-          ENV['TEST_ENV_NUMBER'] = '1'
-          RakeUtils.rake_stream_output 'db:create db:test:prepare'
-          ENV.delete 'TEST_ENV_NUMBER'
-          # Store new DB contents
-          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
-          gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
-
-          s3_client.put_object(
-            bucket: bucket_name,
-            key: s3_key,
-            body: gzip_data,
-            acl: 'public-read'
-          )
-          CDO.log.info "Uploaded seed data to #{s3_key}"
-        end
-
-        cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
-        if seed_data.equal?(cloned_data)
-          CDO.log.info 'Test data not modified'
-        else
-          seed_2_file = Tempfile.new(['db_seed', '.sql'])
-          File.write(seed_2_file, cloned_data)
-          puts "Diff:\n"
-          puts `diff #{seed_file.path} #{seed_2_file.path}`
-
-          # Clone single DB across all databases
-          require 'parallel_tests'
-          procs = ParallelTests.determine_number_of_processes(nil)
-          CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          databases = Array.new(procs) {|i| "#{database}#{i + 1}"}
-          databases.each do |db|
-            recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
-            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
-          end
-          pipes = databases.map {|db| ">(mysql #{opts} #{db})"}.join(' ')
-          RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
-        end
-
-        TestRunUtils.run_dashboard_tests(parallel: true)
+        TestRunUtils.run_dashboard_tests(parallel: true, upload_seed_data: true)
 
         ENV.delete 'UNIT_TEST'
         ENV.delete 'USE_PEGASUS_UNITTEST_DB'
@@ -204,7 +131,7 @@ namespace :test do
     end
   end
 
-  timed_task_with_logging :dashboard_legacy_ci do
+  timed_task_with_logging :dashboard_legacy_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -213,7 +140,25 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :shared_ci do
+  timed_task_with_logging :dashboard_hoc_legacy_engine_qa do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :dashboard_cdo_contentful_engine_qa do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :shared_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -222,7 +167,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :pegasus_ci do
+  timed_task_with_logging :pegasus_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -231,7 +176,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :lib_ci do
+  timed_task_with_logging :lib_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -240,7 +185,7 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :bin_ci do
+  timed_task_with_logging :bin_qa do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
@@ -249,24 +194,40 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging ci: [
-    :shared_ci,
-    :pegasus_ci,
-    :dashboard_ci,
-    :dashboard_legacy_ci,
-    :lib_ci,
-    :bin_ci,
+  desc 'Runs full QA test pass (to be run on the chef-managed test system)'
+  timed_task_with_logging qa: [
+    :shared_qa,
+    :pegasus_qa,
+    :dashboard_qa,
+    :dashboard_legacy_qa,
+    :dashboard_hoc_legacy_engine_qa,
+    :dashboard_cdo_contentful_engine_qa,
+    :lib_qa,
+    :bin_qa,
     :ui_live
   ]
 
   desc 'Runs dashboard tests.'
   timed_task_with_logging :dashboard do
-    TestRunUtils.run_dashboard_tests
+    # This task can be run locally or in CI (the chef-managed test system uses dashboard_qa).
+    # By default, we only want to run in parallel in CI to avoid overloading local machines.
+    parallel = CI::Utils.ci_job_unit_tests?
+    TestRunUtils.run_dashboard_tests(parallel: parallel)
   end
 
   desc 'Runs dashboard legacy tests.'
   timed_task_with_logging :dashboard_legacy do
     TestRunUtils.run_dashboard_legacy_tests
+  end
+
+  desc 'Runs dashboard cdo_contentful engine tests.'
+  timed_task_with_logging :dashboard_cdo_contentful_engine do
+    TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+  end
+
+  desc 'Runs dashboard hoc_legacy engine tests.'
+  timed_task_with_logging :dashboard_hoc_legacy_engine do
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
   end
 
   desc 'Runs pegasus tests.'
@@ -332,7 +293,10 @@ namespace :test do
         ],
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
-        TestRunUtils.run_dashboard_tests
+        # This task is typically only run in CI, so gate on CI just as a safeguard
+        # in case a developer tries to run it locally.
+        parallel = CI::Utils.ci_job_unit_tests?
+        TestRunUtils.run_dashboard_tests(parallel: parallel)
       end
     end
 
@@ -351,6 +315,34 @@ namespace :test do
         ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_legacy_tests
+      end
+    end
+
+    desc 'Runs dashboard cdo_contentful engine tests'
+    timed_task_with_logging :dashboard_cdo_contentful_engine do
+      run_tests_if_changed(
+        'dashboard cdo_contentful engine',
+        %w[Gemfile Gemfile.lock dashboard/engines/cdo_contentful/**/*],
+      ) do
+        TestRunUtils.run_dashboard_cdo_contentful_engine_tests
+      end
+    end
+
+    desc 'Runs dashboard hoc_legacy engine tests if dashboard might have changed from staging.'
+    timed_task_with_logging :dashboard_hoc_legacy_engine do
+      run_tests_if_changed(
+        'dashboard hoc_legacy engine',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_hoc_legacy_engine_tests
       end
     end
 
@@ -425,7 +417,17 @@ namespace :test do
 
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :bin do
-      run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
+      run_tests_if_changed(
+        'bin',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'bin/**/*',
+          # i18n tests depend on curriculum models
+          'dashboard/app/models/**/*'
+        ]
+      ) do
         TestRunUtils.run_bin_tests
       end
     end
@@ -437,6 +439,8 @@ namespace :test do
       # :interpreter,
       :dashboard,
       :dashboard_legacy,
+      :dashboard_cdo_contentful_engine,
+      :dashboard_hoc_legacy_engine,
       :pegasus,
       :shared,
       :lib,
@@ -451,7 +455,18 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:frontend, :apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
+  timed_task_with_logging all: [
+    :frontend,
+    :apps,
+    :dashboard,
+    :dashboard_legacy,
+    :dashboard_cdo_contentful_engine,
+    :dashboard_hoc_legacy_engine,
+    :pegasus,
+    :shared,
+    :lib,
+    :bin,
+  ]
 end
 timed_task_with_logging test: ['test:changed']
 

@@ -12,16 +12,9 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Computational Thinking
 
-Standard: Decomposition
+Skill: Decomposition
 
-Lesson: Loops - Practice, Functions - Practice
-
-Skill Progression: All
-
-Pretest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
-
-Posttest Modality: Given a snippet of how someone approached a problem, identify the CT skill it is (similar to PL question)
-
+Appears in Lesson: Throughout the Curriculum
 MARKDOWN
 
 markdown <<MARKDOWN

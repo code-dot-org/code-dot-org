@@ -1,0 +1,23 @@
+name 'test-ai-powered-threats-defenses-lesson8-level1b-2'
+
+display_name 'Sana R.'
+bubble_choice_description 'A bilingual teen from Dearborn who splits time between school and family trips to Windsor. Someone used her account at 3 AM from another city—was it her, or someone else?'
+thumbnail_url 'https://images.code.org/f3d77fe12133795a062ec89d1458e9e8-image-1753988431724.png'
+
+markdown <<MARKDOWN
+#Sana R.
+
+#### Read about Sana and investigate the audit logs. Can you find any evidence of fraud?
+
+**Your teacher** should provide you with an **activity guide** and **Sana's audit logs**. However, if you would like a digital version of the **activity guide, [click here](https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing)**. If you would like a digital version of **Sana's audit logs, [Click here](https://docs.google.com/document/d/1PWv-Ml0uWkXhHpiXJpRBscK_lFK4iOvAYeDboSVcG-M/edit?usp=sharing)**.
+
+
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <img src="https://images.code.org/3d932b1aaf49381360bbb4d72c812f10-image-1754594902600.png" 
+       style="width: 300px; border: 2px solid black;">
+  <img src="https://images.code.org/c65ee39431c1c8db05fae2029edb54ee-image-1754595092937.png" 
+       style="width: 300px; border: 2px solid black;">
+</div>
+
+![]()
+MARKDOWN

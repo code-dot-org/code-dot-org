@@ -1,0 +1,14 @@
+name 'problem-solving-with-ai-postassessment-q11_2025-pilot_v2-2025'
+
+question 'What is one reason humans are still essential in creative work with AI?'
+
+wrong 'AI can only be used to generate code, not creative content.'
+wrong 'AI does not understand user input without being explicitly programmed.'
+right 'AI-generated content often lacks personal insight, emotion, and originality.'
+wrong 'AI is always wrong when generating creative ideas.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 9: AI as a Co-Creator
+MARKDOWN

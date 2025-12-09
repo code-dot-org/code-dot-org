@@ -60,7 +60,7 @@ module LevelsHelper
         puzzle_page_course_unit_lockable_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
       end
     elsif params[:sublevel_position]
-      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position], params)
       # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
       # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
@@ -422,6 +422,7 @@ module LevelsHelper
 
     # Sets video and additional reference options for this level
     if @app_options[:level]
+      @app_options[:level][:name] = @level.try(:name)
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
@@ -458,6 +459,7 @@ module LevelsHelper
       @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
+      @app_options[:isSignedIn] = current_user.present?
     end
 
     @app_options
@@ -756,7 +758,8 @@ module LevelsHelper
 
   def lab2_options
     raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
-    app_options = {channel: view_options[:channel], level_id: @level.id}
+    app_options = {level_id: @level.id}
+    app_options[:channel] = view_options[:channel] if @level.try(:is_project_level)
     level_options = level_view_options(@level.id)
     # Add edit_blocks to app_options if it exists in level_options
     if level_options[:edit_blocks]
@@ -771,7 +774,7 @@ module LevelsHelper
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
-    elsif @level.is_a?(Pythonlab) && current_user
+    elsif @level.uses_theme_preference? && current_user
       theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
       app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
     end
@@ -1077,7 +1080,20 @@ module LevelsHelper
         Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
-      student_code = body ? JSON.parse(body)['source'] : nil
+      student_code = nil
+      if body
+        parsed = JSON.parse(body)
+        source = parsed['source']
+        if source.is_a?(Hash) && source['files']
+          # Transform files hash into {filename => contents}
+          student_code = {}
+          source['files'].each do |_, file_obj|
+            student_code[file_obj['name']] = file_obj['contents']
+          end
+        else
+          student_code = source
+        end
+      end
     end
     {
       project_id: channel_id,

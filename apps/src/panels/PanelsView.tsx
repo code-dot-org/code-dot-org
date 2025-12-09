@@ -1,7 +1,14 @@
 import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  MutableRefObject,
+} from 'react';
 import Typist from 'react-typist';
 
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
@@ -71,7 +78,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
+  const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
   const lastPanelStartTime = useRef<number>(Date.now());
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -159,6 +169,18 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }, [currentPanelIndex, setTypingDone]);
 
   const panel = panels[currentPanelIndex];
+  const showTyping =
+    panel?.typing || queryParams('panels-show-typing') === 'true';
+
+  // When typing, only show the button when the typing is done.
+  const showButton = !showTyping || typingDone;
+
+  useEffect(() => {
+    if (showButton) {
+      nextButtonRef.current?.focus();
+    }
+  }, [showButton, currentPanelIndex]);
+
   if (!panel) {
     return null;
   }
@@ -191,12 +213,6 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const plainText = markdownToTxt(panel.text);
 
-  const showTyping =
-    panel.typing || queryParams('panels-show-typing') === 'true';
-
-  // When typing, only show the button when the typing is done.
-  const showButton = !showTyping || typingDone;
-
   return (
     <div
       id="panels-container"
@@ -228,13 +244,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         )}
         {panel.text && (
           <div
+            ref={contentRef}
             className={classNames(
               styles.text,
               panel.dark && styles.textDark,
               textLayoutClass
             )}
           >
-            {offerBrowserTts && <TextToSpeech text={panel.text} />}
+            {offerBrowserTts && (
+              // Override the theme since the text container is always white.
+              <div className={styles.ttsContainer} data-theme="Light">
+                <TextToSpeech contentRef={contentRef} />
+              </div>
+            )}
             {showTyping ? (
               <div>
                 <div className={styles.invisiblePlaceholder}>{plainText}</div>
@@ -263,6 +285,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       >
         {showButton && (
           <Button
+            ref={nextButtonRef}
             key={`button-${currentPanelIndex}`}
             id="panels-button"
             onClick={handleButtonClick}
@@ -289,6 +312,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                   )}
                   title={undefined}
                   icon="circle"
+                  tabIndex={0}
+                  aria-label={
+                    commonI18n.panel() +
+                    (index + 1) +
+                    (index === currentPanelIndex ? commonI18n.selected() : '')
+                  }
+                  onKeyDown={(event: React.KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      handleBubbleClick(index);
+                      event.preventDefault();
+                    }
+                  }}
+                  role="button"
                   onClick={() => handleBubbleClick(index)}
                 />
               );

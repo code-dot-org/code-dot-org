@@ -1,0 +1,232 @@
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@use '@cdo/apps/mixins.scss' as mixins;
+
+.resourcePanel {
+  display: flex;
+  background-color: var(--background-neutral-primary);
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .topSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collapseButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+
+    html[dir='rtl'] & {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .tabs {
+    width: 3.5rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: variables.$default-border;
+  }
+
+  // Doubling class name to increase specificity and override default button styles.
+  .tabButton.tabButton {
+    height: 3.5rem;
+    width: 3.5rem;
+    min-width: 2rem;
+    border-bottom: variables.$default-border;
+    border-top: 0;
+    border-inline: 0;
+    border-radius: 0;
+    background-color: var(--background-neutral-secondary);
+
+    &.teachersOnlyTab {
+      background-color: var(--background-info-extra-light);
+
+      i {
+        color: var(--text-info-primary-fixed);
+      }
+    }
+
+    &.selected {
+      background-color: var(--background-neutral-primary);
+      position: relative;
+      z-index: 2;
+
+      i {
+        color: var(--text-brand-teal-primary);
+      }
+
+      // Extend the background to cover the border between selected tab and resource panel.
+      &::after {
+        content: '';
+        position: absolute;
+        inset-inline-end: -1px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: var(--background-neutral-primary);
+      }
+
+      // Add a border to the start of the selected tab.
+      &::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 0;
+        top: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--borders-brand-teal-primary);
+      }
+
+      &.teachersOnlyTab {
+        i {
+          color: var(--text-info-primary-fixed);
+        }
+
+        &::before {
+          background-color: var(--text-info-primary-fixed);
+        }
+      }
+    }
+
+    i {
+      color: var(--text-neutral-quaternary);
+      font-size: 1.25rem;
+      width: auto;
+    }
+
+    &:hover:not(.selected) {
+      background-color: var(--background-neutral-primary);
+
+      i {
+        color: var(--text-neutral-tertiary);
+      }
+
+      &.teachersOnlyTab i {
+        color: var(--text-info-primary-fixed);
+      }
+    }
+
+    // Override default active state borders to prevent jumping when clicking a tab
+    &:active {
+      border-bottom: variables.$default-border !important;
+      border-top: none !important;
+      border-inline: none !important;
+    }
+
+    @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
+  }
+
+  // Styles applied when the sidebar is collapsed
+  &.collapsed .tabButton.tabButton {
+    background-color: var(--background-neutral-primary);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--background-neutral-secondary);
+    }
+
+    &.selected {
+      // Adding this border to match the border on non-selected tabs when collapsed
+      border-inline-end: variables.$default-border;
+
+      i {
+        color: var(--text-neutral-quaternary);
+      }
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .bottomTabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+
+    // Adding this to remove extra space between elements
+    // from the empty div this creates in the DOM. This
+    // is added by the CopyrightDialog component.
+    & > div[data-theme='Light'] {
+      margin-bottom: -0.4rem;
+    }
+  }
+
+  // Doubling class name to increase specificity and override default button styles.
+  .resourcePanelButton.resourcePanelButton {
+    height: 2rem;
+    width: 2rem;
+    min-width: 2rem;
+
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.panels {
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  border-inline-start: variables.$default-border;
+}
+
+.panelContent {
+  background-color: var(--background-neutral-primary);
+  height: 100%;
+}
+
+.tabContentContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .tabContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &Hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.navigationFooter {
+  padding: 10px;
+  background-color: var(--background-neutral-secondary);
+  border-top: variables.$default-border;
+}
+
+.floatingSettingsPanelContainer {
+  position: fixed;
+  width: 260px;
+  border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.07), 0 4px 7px 0 rgb(0 0 0 / 0.07);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.hiddenFooter {
+  display: none;
+}

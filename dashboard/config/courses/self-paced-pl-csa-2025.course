@@ -12,7 +12,7 @@
     "self-paced-pl-csa4-2025",
     "self-paced-pl-csa3-2025"
   ],
-  "published_state": "stable",
+  "published_state": "deprecated",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

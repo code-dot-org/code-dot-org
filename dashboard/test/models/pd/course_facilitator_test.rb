@@ -5,18 +5,18 @@ class Pd::CourseFacilitatorTest < ActiveSupport::TestCase
     @csf = Pd::Workshop::COURSE_CSF
     @csd = Pd::Workshop::COURSE_CSD
     @aif = Pd::Workshop::COURSE_AIF
-    @facilitator1 = create :facilitator, name: 'Facilitator 1'
-    @facilitator2 = create :facilitator, name: 'Facilitator 2'
-    @facilitator3 = create :facilitator, name: 'Facilitator 3'
+    @facilitator1 = create(:facilitator, name: 'Facilitator 1')
+    @facilitator2 = create(:facilitator, name: 'Facilitator 2')
+    @facilitator3 = create(:facilitator, name: 'Facilitator 3')
     @all_facilitators = [@facilitator1, @facilitator2, @facilitator3]
   end
 
   def create_course_facilitator(facilitator, course)
-    create :pd_course_facilitator, facilitator: facilitator, course: course
+    create(:pd_course_facilitator, facilitator: facilitator, course: course)
   end
 
   def create_offering(permissions)
-    create :course_offering, facilitator_course_permissions: permissions
+    create(:course_offering, facilitator_course_permissions: permissions)
   end
 
   test 'facilitators_for_course' do
@@ -76,16 +76,16 @@ class Pd::CourseFacilitatorTest < ActiveSupport::TestCase
   end
 
   test 'duplicates are not allowed' do
-    facilitator = create :facilitator
-    create :pd_course_facilitator, facilitator: facilitator, course: @csf
+    facilitator = create(:facilitator)
+    create(:pd_course_facilitator, facilitator: facilitator, course: @csf)
 
-    duplicate = build :pd_course_facilitator, facilitator: facilitator, course: @csf
+    duplicate = build(:pd_course_facilitator, facilitator: facilitator, course: @csf)
     refute duplicate.valid?
 
-    different_course = build :pd_course_facilitator, facilitator: facilitator, course: Pd::Workshop::COURSE_CSP
+    different_course = build(:pd_course_facilitator, facilitator: facilitator, course: Pd::Workshop::COURSE_CSP)
     assert different_course.valid?, different_course.errors.full_messages
 
-    different_facilitator = build :pd_course_facilitator, course: @csf
+    different_facilitator = build(:pd_course_facilitator, course: @csf)
     assert different_facilitator.valid?, different_course.errors.full_messages
   end
 end

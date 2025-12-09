@@ -1,7 +1,10 @@
 import $ from 'jquery';
 
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
+import {
+  throwIfDisallowedAnimationSourceUrl,
+  throwIfSerializedAnimationListIsInvalid,
+} from '@cdo/apps/p5lab/shapes';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -17,6 +20,7 @@ $(document).ready(function () {
       if (json.length > 0) {
         const animationList = JSON.parse(json);
         throwIfSerializedAnimationListIsInvalid(animationList);
+        throwIfDisallowedAnimationSourceUrl(animationList);
       }
       levelStartAnimationsValidationDiv.text('Animations JSON appears valid.');
       levelStartAnimationsValidationDiv.css('color', VALID_COLOR);

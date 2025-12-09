@@ -1,4 +1,4 @@
-import React from 'react';
+import {FunctionComponent} from 'react';
 
 import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
 import Typography from './Typography';
@@ -81,11 +81,6 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
     defaultVisualAppearance: 'strong',
   },
   {
-    displayName: 'ExtraStrongText',
-    semanticTag: 'strong',
-    defaultVisualAppearance: 'extra-strong',
-  },
-  {
     displayName: 'Figcaption',
     semanticTag: 'figcaption',
     defaultVisualAppearance: 'figcaption',
@@ -95,12 +90,12 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
 // Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
 const generateComponents = (
   componentsToGenerate: TypographyElementToGenerateTemplate[],
-): {[key: string]: React.FunctionComponent<TypographyElementProps>} =>
+): {[key: string]: FunctionComponent<TypographyElementProps>} =>
   componentsToGenerate.reduce((acc, componentTemplateData) => {
     const {displayName, semanticTag, defaultVisualAppearance} =
       componentTemplateData;
 
-    const TypographyElement: React.FunctionComponent<
+    const TypographyElement: FunctionComponent<
       TypographyElementProps
     > = componentProps => {
       const {visualAppearance, children, className, style, id, noMargin} =
@@ -139,6 +134,5 @@ export const {
   OverlineThreeText,
   EmText,
   StrongText,
-  ExtraStrongText,
   Figcaption,
 } = generateComponents(typographyElementsToGenerate);

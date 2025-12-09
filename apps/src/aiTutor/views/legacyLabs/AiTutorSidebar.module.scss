@@ -1,0 +1,77 @@
+.ai-tutor-sidebar {
+  width: 45px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: var(--background-brand-aqua-primary);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+
+    .bot-icon {
+      width: 1.875rem;
+      height: 1.875rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.ai-tutor-sidebar-content {
+  > button {
+    height: 30px;
+    i {
+      color: var(--background-neutral-octonary);
+    }
+  }
+}
+
+// AiTutorSidebarSuggestedPrompts styles
+.ai-tutor-suggested-prompt-item {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 0;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+
+  .icon-code {
+    color: var(--text-success-primary-fixed);
+  }
+
+  .icon-lightbulb {
+    color: var(--text-warning-primary-fixed);
+  }
+
+  .icon-book {
+    color: var(--text-info-primary-fixed);
+  }
+
+  .icon-brain {
+    color: var(--text-brand-purple-primary-fixed);
+  }
+
+  .icon-bug {
+    color: var(--text-error-primary-fixed);
+  }
+
+  .icon-star {
+    color: var(--text-warning-primary-fixed);
+  }
+}
+
+.ai-tutor-suggested-prompts-list {
+  .ai-tutor-suggested-prompt-item:last-of-type {
+    border: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}

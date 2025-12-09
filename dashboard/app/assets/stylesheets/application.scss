@@ -2611,6 +2611,15 @@ a.download-video {
     background-color: $white;
     border-color: $lighter_cyan;
   }
+  .answer:focus {
+    outline: 2px solid $dark_charcoal;
+  }
+  .answer.selected {
+    background-color: $teal;
+  }
+  .slot:focus {
+    outline: 2px solid $lighter_cyan;
+  }
   .answer.ui-draggable:hover {
     border-color: $light_green;
     cursor: move;
@@ -4327,6 +4336,12 @@ a {
 
 .cm-scroller {
   overflow: auto;
+
+  &:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: -2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .cm-wrap {

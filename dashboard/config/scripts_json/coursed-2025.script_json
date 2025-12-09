@@ -11,12 +11,12 @@
       "is_migrated": true,
       "lesson_extras_available": true,
       "show_calendar": true,
-      "version_year": "2025",
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-13 18:40:32 UTC",
+    "serialized_at": "2025-09-04 18:03:23 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -203,7 +203,7 @@
       "relative_position": 5,
       "properties": {
         "background": "dark",
-        "overview": "In this lesson, students will be exploring the foundational concepts of sequencing and loops in programming as they step into the role of a songwriter using Music Lab. They will learn that computers only follow the instructions given to them in the order specified, emphasizing the importance of clear and logical step-by-step directions. Students will discover how to identify repeating patterns in their code and use loops to make it more efficient. By layering musical sounds and breaking down complex tasks, students will develop problem-solving skills while also gaining insight into how technology is used in music careers to bring creative ideas to life."
+        "overview": "In this context-setting/skill-building lesson, students will explore sequencing and loops as they take on the role of a songwriter in Music Lab, layering sounds and identifying patterns to write efficient code and bring musical ideas to life."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
@@ -220,7 +220,7 @@
       "relative_position": 6,
       "properties": {
         "background": "dark",
-        "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
+        "overview": "In this context-setting, students will become sound designers using Music Lab to create interactive soundtracks with events and effects that enhance storytelling and engagement."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
@@ -1698,7 +1698,7 @@
       "key": "6d1995e1-82f4-417b-8510-f88e24c6c66c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #1” slide\n\nDisplay both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time. When the direction “fill in square with color” is given, drag one of the two squares on the slide onto the grid to represent a square filled in with color.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #1” slide\n\nDisplay both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time. When the direction “fill in square with color” is given, drag one of the two squares on the slide onto the grid to represent a square filled in with color.\n\n![](/blockly/media/curriculum/docs/csf/c2_GraphPaper1.png)"
       },
       "seeding_key": {
         "activity_section.key": "6d1995e1-82f4-417b-8510-f88e24c6c66c",
@@ -1721,7 +1721,7 @@
       "key": "31a7df6b-b5a7-472e-a5a2-b2913e25da55",
       "position": 5,
       "properties": {
-        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?_\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #2” slide\n\nShow the students a more complicated image, like the one below. Feel free to use the \"List of steps\" table in the slide to write down the steps students suggest.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\nShow the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
+        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?_\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graph Paper Programming - Puzzle #2” slide\n\nShow the students a more complicated image, like the one below. Feel free to use the \"List of steps\" table in the slide to write down the steps students suggest.\n\n![](/blockly/media/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\nShow the students this list of symbols.\n\n![](/blockly/media/curriculum/docs/csf/c2_GraphPaper3.png)"
       },
       "seeding_key": {
         "activity_section.key": "31a7df6b-b5a7-472e-a5a2-b2913e25da55",
@@ -1771,7 +1771,7 @@
       "key": "17c43129-a4e9-4758-9c68-8e443481fcdc",
       "position": 9,
       "properties": {
-        "description": "The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Solution” slide\n\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper4.png)\n\n\n---"
+        "description": "The classroom may be buzzing with suggestions by this point. If the class gets the gist of the exercise, this is a good place to discuss alternate ways of filling out the same grid. If there is still confusion, save that piece for another day and work with another example.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Solution” slide\n\n\n![](/blockly/media/curriculum/docs/csf/c2_GraphPaper4.png)\n\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "17c43129-a4e9-4758-9c68-8e443481fcdc",
@@ -1782,7 +1782,7 @@
       "key": "fda185bc-97d7-4a31-970d-519be991c63b",
       "position": 10,
       "properties": {
-        "description": "\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Turn!” slide.\n\n\n&nbsp\n\n\n###The Students' Turn\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Activity Sheet” slide\n\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
+        "description": "\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Turn!” slide.\n\n\n&nbsp\n\n\n###The Students' Turn\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Activity Sheet” slide\n\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](/blockly/media/curriculum/docs/csf/c2_GraphPaper7.png)"
       },
       "seeding_key": {
         "activity_section.key": "fda185bc-97d7-4a31-970d-519be991c63b",
@@ -1869,7 +1869,7 @@
       "key": "7b485062-a372-48d5-81a4-08b5979ac62b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\nPull up a puzzle from the lesson. We recommend puzzle 6 for this activity. Break up the students into groups of three or four. Have them \"program\" Red, the angry bird, to get to the pig using arrows from \"Graph Paper Programming.\"\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)\n\nThe class will not need to use the last arrow.\n\nOnce all the groups have an answer, discuss the path as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\nPull up a puzzle from the lesson. We recommend puzzle 6 for this activity. Break up the students into groups of three or four. Have them \"program\" Red, the angry bird, to get to the pig using arrows from \"Graph Paper Programming.\"\n\n![](/blockly/media/curriculum/docs/csf/c2_GraphPaper3.png)\n\nThe class will not need to use the last arrow.\n\nOnce all the groups have an answer, discuss the path as a class.",
         "name": "Preview of Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -11391,7 +11391,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursed-2024/resources",
+      "url": "/s/coursed-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -11402,7 +11402,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursed-2024/standards",
+      "url": "/s/coursed-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -11413,7 +11413,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursed-2024/vocab",
+      "url": "/s/coursed-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -11523,19 +11523,6 @@
       }
     },
     {
-      "name": "CSF - Course D - Slides",
-      "url": "https://docs.google.com/presentation/d/1nBPAUS9ojdR8U22bik6etgmxPGVaWQ-hdNI_oE6HRyY/template/preview",
-      "key": "csf_-_course_d_-_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1nBPAUS9ojdR8U22bik6etgmxPGVaWQ-hdNI_oE6HRyY/export/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csf_-_course_d_-_slides"
-      }
-    },
-    {
       "name": "CSF Change Log 2025-26",
       "url": "https://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
       "key": "csf_change_log_2025-26",
@@ -11561,6 +11548,19 @@
       }
     },
     {
+      "name": "CSF Course D Slides 2025-26",
+      "url": "https://docs.google.com/presentation/d/1C6Fr9_v4A8mXEZEnFpMVuedxUcXHRbD3vVCmPNES18k/template/preview",
+      "key": "csf_course_d_slides_2025-26",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1C6Fr9_v4A8mXEZEnFpMVuedxUcXHRbD3vVCmPNES18k/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_d_slides_2025-26"
+      }
+    },
+    {
       "name": "CSF State Standards for CS - Master Crosswalk List",
       "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
       "key": "csf_state_standards_for_cs_-_master_crosswalk_list",
@@ -11571,16 +11571,15 @@
       }
     },
     {
-      "name": "CSF Syllabus 2024-25",
-      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
-      "key": "csf_syllabus_2024-25",
+      "name": "CSF Syllabus 2025-26",
+      "url": "https://docs.google.com/document/d/1nRA2acwuTBPVTqNc3NU7r_ATJLwfYPpGa4TxWthUETk/template/preview",
+      "key": "csf_syllabus_2025-26_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25"
+        "resource.key": "csf_syllabus_2025-26_1"
       }
     },
     {
@@ -11758,19 +11757,6 @@
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
-      }
-    },
-    {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
-      "key": "lesson_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides"
       }
     },
     {
@@ -12033,7 +12019,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12093,13 +12079,13 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12129,7 +12115,7 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12147,13 +12133,7 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Shapes with Loops",
-        "resource.key": "csf_-_course_d_-_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12164,8 +12144,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_course_d_slides_2025-26"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Bounce",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12183,7 +12169,7 @@
     {
       "seeding_key": {
         "lesson.key": "Graph Paper Programming",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12225,7 +12211,7 @@
     {
       "seeding_key": {
         "lesson.key": "Hardware and Software Skits",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12243,7 +12229,7 @@
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12255,7 +12241,7 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12267,13 +12253,13 @@
     {
       "seeding_key": {
         "lesson.key": "Looking Ahead with Minecraft",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12297,7 +12283,7 @@
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12345,7 +12331,7 @@
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12357,7 +12343,7 @@
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12369,7 +12355,7 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12381,7 +12367,7 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     }
   ],
@@ -12430,7 +12416,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25",
+        "resource.key": "csf_syllabus_2025-26_1",
         "script.name": "coursed-2025"
       }
     },

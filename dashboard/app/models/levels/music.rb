@@ -37,6 +37,7 @@ class Music < Blockly
     hide_share_and_remix
     is_project_level
     submittable
+    disable_edit_run_for_submission
     background
     level_data
     predict_settings

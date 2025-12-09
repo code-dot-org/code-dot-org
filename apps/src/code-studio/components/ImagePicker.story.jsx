@@ -2,6 +2,15 @@ import React from 'react';
 
 import ImagePicker from './ImagePicker';
 
+global.appOptions = {
+  app: 'applab',
+  level: {
+    projectType: 'applab',
+    name: 'storybook-level',
+    isProjectLevel: true,
+  },
+};
+
 export default {
   component: ImagePicker,
 };

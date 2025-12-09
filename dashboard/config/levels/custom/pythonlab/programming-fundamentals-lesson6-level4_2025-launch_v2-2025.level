@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:28.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're trying to write a reminder app in Python that prints a message to drink water, but something's not quite right. You defined the function, but it's not working the way it should. Can you spot the mistake and fix it?\r\n\r\n1. Look closely at the function definition. Something is missing!\r\n\r\n2. Fix the function so that it runs without errors.\r\n\r\n3. Then, call the function to print the reminder.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery function definition in Python needs:\r\n\r\n* The `def` keyword\r\n\r\n* A name followed by **parentheses**\r\n\r\n* A **colon** at the end of the first line\r\n\r\n* Indented code underneath",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def remind_to_hydrate\n  # Print a reminder to drink water\n  print(\"Don't forget to drink water!\")\n\nremind_to_hydrate()\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzhDW4CkI26MuCFpcBnbxP2M8pnm3fW/O\n9KmY0C7r1zudp9drGynRNgRIqzQoiVixlmTdClivuK6t2TbCJ8U3tLCeiuon\nKs9pdttyJfCgZlS4BwwD7IyFVUCzl33tEe5VRX+sKaN5pZCEEt8BuI5mWaba\n1kLRG6t28GlIJsWENAu+uS9PHFb6OEpHZey71BImrT1ozi9AKDYNZrqDwyVd\nC6FPLOVwVVhLnBhCFtiae1QXSLSxFyhtZ1xg36cWfI+rEuB+HBL//HQuTTe1\nu1tDoFE=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestRemindToHydrateFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_reminder_message_printed(self):\n        \"\"\"remind_to_hydrate() should print a reminder message\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            1,\n            \"Make sure your remind_to_hydrate() function prints a reminder message!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:28.834+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level4_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level4_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

@@ -119,6 +119,130 @@ describe('AccountInformation', () => {
     ).toBeInTheDocument();
   });
 
+  it('only passes available student fields into update call for students', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(
+      <AccountInformation
+        {...defaultProps}
+        userDisplayName="Student Name"
+        userType="student"
+        isStudent={true}
+        userUsername="StudentUsername"
+        showGenderInput={true}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText(/age/i), {
+      target: {value: '14'},
+    });
+    fireEvent.change(screen.getByLabelText(/state/i), {
+      target: {value: 'CA'},
+    });
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Student Name',
+        username: 'StudentUsername',
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '14',
+        gender_student_input: '',
+        us_state: 'CA',
+      },
+    });
+  });
+
+  it('only passes available teacher fields into update call for teachers', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(<AccountInformation {...defaultProps} />);
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Mr. Doe',
+        username: 'johndoe',
+        given_name: '',
+        family_name: '',
+        educator_role: undefined,
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '21+',
+      },
+    });
+  });
+
+  it('only passes available facilitator fields into update call for facilitators', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    const userFacilitatorBio =
+      'This is a facilitator bio with a long enough description.';
+    render(
+      <AccountInformation
+        {...defaultProps}
+        isFacilitator={true}
+        userFacilitatorBio={userFacilitatorBio}
+      />
+    );
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Mr. Doe',
+        username: 'johndoe',
+        given_name: '',
+        family_name: '',
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '21+',
+        facilitator_info_attributes: {bio: userFacilitatorBio},
+      },
+    });
+  });
+
   it('submits form with updated information and displays success alert', async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,
@@ -137,6 +261,9 @@ describe('AccountInformation', () => {
     });
     fireEvent.change(screen.getByLabelText(/last name/i), {
       target: {value: 'Doe'},
+    });
+    fireEvent.change(screen.getByLabelText(/what is your primary role/i), {
+      target: {value: 'classroom_teacher'},
     });
     fireEvent.change(screen.getByLabelText(/^password$/i), {
       target: {value: 'newpassword'},
@@ -166,6 +293,7 @@ describe('AccountInformation', () => {
         username: 'janedoe',
         given_name: 'Jane',
         family_name: 'Doe',
+        educator_role: 'classroom_teacher',
         password: 'newpassword',
         password_confirmation: 'newpassword',
         current_password: 'currentpassword',
@@ -294,5 +422,96 @@ describe('AccountInformation', () => {
     expect(
       screen.getByText(/account information successfully updated/i)
     ).toBeInTheDocument();
+  });
+
+  it('renders no facilitator info fields when user is not facilitator', () => {
+    render(<AccountInformation {...defaultProps} isFacilitator={false} />);
+
+    expect(
+      screen.queryByRole('textbox', {name: /Facilitator biography/i})
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders facilitator info fields when user is facilitator', () => {
+    const userFacilitatorBio = 'This is a facilitator bio';
+
+    render(
+      <AccountInformation
+        {...defaultProps}
+        isFacilitator={true}
+        userFacilitatorBio={userFacilitatorBio}
+      />
+    );
+
+    const facilitatorBioTextarea = screen.getByRole('textbox', {
+      name: /Facilitator biography/i,
+    });
+    expect(facilitatorBioTextarea).toBeInTheDocument();
+    expect(facilitatorBioTextarea.value).toBe(userFacilitatorBio);
+  });
+
+  it('does not block updates if user never had an educator_role', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(<AccountInformation {...defaultProps} />);
+
+    fireEvent.change(screen.getByLabelText(/username/i), {
+      target: {value: 'coder1'},
+    });
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Mr. Doe',
+        username: 'coder1',
+        given_name: '',
+        family_name: '',
+        educator_role: undefined,
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '21+',
+        gender_student_input: undefined,
+        us_state: undefined,
+        country_code: undefined,
+      },
+    });
+  });
+
+  it('does not allow removing educator_role after it is set', () => {
+    render(<AccountInformation {...defaultProps} />);
+
+    fireEvent.change(screen.getByLabelText(/what is your primary role/i), {
+      target: {value: 'classroom_teacher'},
+    });
+
+    const roleErrorText = 'Educator role cannot be removed.';
+
+    expect(screen.queryByText(roleErrorText)).not.toBeInTheDocument();
+
+    // attempt to clear educator_role value
+    fireEvent.change(screen.getByLabelText(/what is your primary role/i), {
+      target: {value: ''},
+    });
+
+    expect(screen.getByText(roleErrorText)).toBeInTheDocument();
+
+    // educator_role cannot be cleared once it is set
+    expect(screen.getByLabelText(/what is your primary role/i).value).toBe(
+      'classroom_teacher'
+    );
   });
 });

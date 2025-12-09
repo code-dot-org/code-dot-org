@@ -11,6 +11,8 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import msg from '@cdo/locale';
 
 import getScriptData from '../../util/getScriptData';
@@ -75,6 +77,10 @@ export function setupApp(appOptions) {
           },
           PLATFORMS.BOTH
         );
+      }
+
+      if (appSupportsSettings(appOptions.app, appOptions.droplet)) {
+        $('#settings-header').show();
       }
 
       if (
@@ -237,6 +243,28 @@ export function setupApp(appOptions) {
 }
 
 /**
+ * Checks if the given app name supports settings.
+ * Currently this is just Blockly labs that support changing the Blockly theme.
+ * @param {string} appName
+ * @param {boolean} droplet
+ * @returns {boolean}
+ */
+function appSupportsSettings(appName, droplet) {
+  const supportedApps = [
+    'bounce',
+    'craft',
+    'dance',
+    'flappy',
+    'poetry',
+    'spritelab',
+    'studio',
+    'turtle',
+  ];
+  // Star Wars Edit Code is considered 'studio' but does not use Blockly.
+  return supportedApps.includes(appName) && !droplet;
+}
+
+/**
  * Store a share image preview to S3.
  * Used for artist projects, since they don't post to a milestone like other
  * artist levels do.
@@ -258,10 +286,11 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
- * Loads project and checks to see if it is abusive or if sharing is disabled
- * for the owner.
+ * Loads project and checks to see if sharing is disabled for the owner.
+ * If the project is flagged for abuse or privacy/profanity, 'not found' is returned and caught
+ * for users who are not the owner nor the owner's teacher. See can_view_flagged_assets in files_api.rb.
  * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
- * not abusive. Never resolves if abusive.
+ * not flagged. Never resolves if flagged.
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
@@ -494,20 +523,48 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        const getSourceAsJson = true;
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
-          ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
-        resolve(source);
+        try {
+          const getSourceAsJson = true;
+          // If we're readOnly, source hasn't changed at all
+          source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
+            ? currentLevelSource
+            : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from Blockly in getLevelSource',
+            error: repackageError(err),
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-        resolve(source);
+        try {
+          source = appOptions.getCode();
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from getCode in getLevelSource',
+            error: repackageError(err),
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCodeAsync) {
         appOptions
           .getCodeAsync()
           .then(source => resolve(source))
-          .catch(err => reject(err));
+          .catch(err => {
+            MetricsReporter.logError({
+              event: 'Error from getCodeAsync in getLevelSource',
+              error: repackageError(err),
+              appType: appOptions.app,
+              levelId: appOptions.level?.id,
+            });
+            reject(err);
+          });
       }
     });
   },

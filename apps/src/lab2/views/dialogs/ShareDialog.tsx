@@ -1,26 +1,27 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button, LinkButton} from '@code-dot-org/component-library/button';
-import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProjectType} from '@cdo/apps/lab2/types';
+import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {commonI18n as i18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
-import i18n from '@cdo/locale';
+
+import {CopyToClipboardButton} from './CopyToClipboardButton';
+import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
 import moduleStyles from './share-dialog.module.scss';
 
@@ -28,44 +29,6 @@ const TEACHER_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
 const STUDENT_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
-
-const CopyToClipboardButton: React.FunctionComponent<{
-  shareUrl: string;
-  projectType: ProjectType;
-  channelId: string | undefined;
-}> = ({shareUrl, projectType, channelId}) => {
-  const [copiedToClipboard, setCopiedToClipboard] = useState(false);
-
-  const handleCopyToClipboard = useCallback(() => {
-    copyToClipboard(shareUrl, () => {
-      setCopiedToClipboard(true);
-    });
-    trackEvent('share', 'share_copy_url', {value: projectType});
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_LINK_COPY,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
-  }, [shareUrl, projectType, channelId]);
-
-  return (
-    <Button
-      iconLeft={{
-        iconName: copiedToClipboard ? 'clipboard-check' : 'clipboard',
-      }}
-      ariaLabel={i18n.copyLinkToProject()}
-      text={i18n.copyLinkToProject()}
-      type="secondary"
-      color="black"
-      size="m"
-      onClick={handleCopyToClipboard}
-      className={moduleStyles.shareDialogButton}
-    />
-  );
-};
 
 const AfeCareerTourBlock: React.FunctionComponent = () => {
   const careersUrl =
@@ -142,7 +105,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
  */
 
 const ShareDialog: React.FunctionComponent<{
-  dialogId?: string;
+  dialogId?: ShareDialogId;
   shareUrl: string;
   finishUrl?: string;
   projectType: ProjectType;
@@ -189,16 +152,30 @@ const ShareDialog: React.FunctionComponent<{
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
 
+  if (finishUrl && dialogId === 'hoai2025') {
+    return (
+      <HoaiCongrats
+        handleClose={handleClose}
+        finishUrl={finishUrl}
+        shareUrl={shareUrl}
+        projectType={projectType}
+        channelId={channelId}
+        theme={theme}
+      />
+    );
+  }
+
   return sharingDisabled() ? (
-    <Dialog
-      title={i18n.sharingDisabledTitle()}
-      description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
-      mode={theme === 'Light' ? 'light' : 'dark'}
-      primaryButtonProps={{
-        onClick: () => dispatch(hideShareDialog()),
-        text: i18n.ok(),
-      }}
-    />
+    <div data-theme={theme}>
+      <Modal
+        title={i18n.sharingDisabledTitle()}
+        description={i18n.sharingBlockedByTeacherOpenEndedProjects()}
+        primaryButtonProps={{
+          onClick: () => dispatch(hideShareDialog()),
+          text: i18n.ok(),
+        }}
+      />
+    </div>
   ) : (
     <FocusLock>
       <div className={moduleStyles.dialogContainer} data-theme={theme}>

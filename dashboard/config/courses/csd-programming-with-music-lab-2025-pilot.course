@@ -12,8 +12,8 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd-programming-with-music-lab-2025-pilot",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "pilot_experiment": "csd-programming-with-music-lab-2025-pilot",
     "version_year": "unversioned"
   },

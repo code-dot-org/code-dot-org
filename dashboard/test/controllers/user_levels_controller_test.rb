@@ -2,11 +2,11 @@ require 'test_helper'
 
 class UserLevelsControllerTest < ActionController::TestCase
   test "student's teacher can unsubmit user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
     teacher = follower.user
 
-    user_level = create :user_level, user: student, submitted: true
+    user_level = create(:user_level, user: student, submitted: true)
 
     sign_in teacher
 
@@ -19,10 +19,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "student can unsubmit own user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
 
-    user_level = create :user_level, user: student, submitted: true
+    user_level = create(:user_level, user: student, submitted: true)
 
     sign_in student
 
@@ -35,10 +35,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot unsubmit random user level" do
-    follower = create :follower
+    follower = create(:follower)
     teacher = follower.user
 
-    user_level = create :user_level, user: create(:user), submitted: true
+    user_level = create(:user_level, user: create(:user), submitted: true)
 
     sign_in teacher
 
@@ -51,11 +51,11 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "students teacher can clear response for user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
     teacher = follower.user
 
-    user_level = create :user_level, user: student
+    user_level = create(:user_level, user: student)
 
     sign_in teacher
 
@@ -66,10 +66,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "student cannot clear response for own user level" do
-    follower = create :follower
+    follower = create(:follower)
     student = follower.student_user
 
-    user_level = create :user_level, user: student
+    user_level = create(:user_level, user: student)
 
     sign_in student
 
@@ -80,10 +80,10 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot clear response for random user level" do
-    follower = create :follower
+    follower = create(:follower)
     teacher = follower.user
 
-    user_level = create :user_level, user: create(:user)
+    user_level = create(:user_level, user: create(:user))
 
     sign_in teacher
 
@@ -95,11 +95,11 @@ class UserLevelsControllerTest < ActionController::TestCase
 
   [Multi, FreeResponse].each do |level_type|
     test "teacher can delete own progress on #{level_type} level" do
-      user = create :teacher
+      user = create(:teacher)
       sign_in user
       script = create(:unit, :in_single_unit_course)
-      level = create :level, type: level_type
-      create :user_level, user: user, script: script, level: level
+      level = create(:level, type: level_type)
+      create(:user_level, user: user, script: script, level: level)
 
       assert_destroys(UserLevel) do
         post :delete_predict_level_progress, params: {
@@ -111,12 +111,12 @@ class UserLevelsControllerTest < ActionController::TestCase
     end
 
     test "teacher only deletes their progress on #{level_type} level" do
-      user = create :teacher
-      other_user = create :teacher
+      user = create(:teacher)
+      other_user = create(:teacher)
       sign_in user
       script = create(:unit, :in_single_unit_course)
-      level = create :level, type: level_type
-      create :user_level, user: other_user, script: script, level: level
+      level = create(:level, type: level_type)
+      create(:user_level, user: other_user, script: script, level: level)
 
       assert_does_not_destroy(UserLevel) do
         post :delete_predict_level_progress, params: {
@@ -128,11 +128,11 @@ class UserLevelsControllerTest < ActionController::TestCase
     end
 
     test "student cannot delete their own progress on #{level_type} level" do
-      user = create :student
+      user = create(:student)
       sign_in user
       script = create(:unit, :in_single_unit_course)
-      level = create :level, type: level_type
-      create :user_level, user: user, script: script, level: level
+      level = create(:level, type: level_type)
+      create(:user_level, user: user, script: script, level: level)
 
       assert_does_not_destroy(UserLevel) do
         post :delete_predict_level_progress, params: {
@@ -145,11 +145,11 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher can delete own progress on a Python Lab predict level" do
-    user = create :teacher
+    user = create(:teacher)
     sign_in user
     script = create(:unit, :in_single_unit_course)
-    level = create :level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}}
-    create :user_level, user: user, script: script, level: level
+    level = create(:level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}})
+    create(:user_level, user: user, script: script, level: level)
 
     assert_destroys(UserLevel) do
       post :delete_predict_level_progress, params: {
@@ -161,11 +161,11 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot delete own progress on a regular Python Lab level" do
-    user = create :teacher
+    user = create(:teacher)
     sign_in user
     script = create(:unit, :in_single_unit_course)
-    level = create :level, type: "Pythonlab"
-    create :user_level, user: user, script: script, level: level
+    level = create(:level, type: "Pythonlab")
+    create(:user_level, user: user, script: script, level: level)
 
     assert_does_not_destroy(UserLevel) do
       post :delete_predict_level_progress, params: {
@@ -177,11 +177,11 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot delete own progress on an unsupported level" do
-    user = create :teacher
+    user = create(:teacher)
     sign_in user
     script = create(:unit, :in_single_unit_course)
-    level = create :level, type: 'Blockly'
-    create :user_level, user: user, script: script, level: level
+    level = create(:level, type: 'Blockly')
+    create(:user_level, user: user, script: script, level: level)
 
     assert_does_not_destroy(UserLevel) do
       post :delete_predict_level_progress, params: {
@@ -193,15 +193,16 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "user can get their level source data" do
-    user = create :user
+    user = create(:user)
     sign_in user
 
     script = create(:unit, :in_single_unit_course)
-    level = create :level
+    level = create(:level)
     level_source_data = 'my level source'
-    level_source = create :level_source, level: @level, data: level_source_data
-    create :user_level, user: user, best_result: 100, script: script,
+    level_source = create(:level_source, level: @level, data: level_source_data)
+    create(:user_level, user: user, best_result: 100, script: script,
       level: level, level_source: level_source
+)
 
     get :get_level_source, params: {script_id: script.id, level_id: level.id}
     assert_response :success
@@ -210,14 +211,15 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "signed out user cannot get level source data" do
-    other_user = create :user
+    other_user = create(:user)
     script = create(:unit, :in_single_unit_course)
-    level = create :level
+    level = create(:level)
 
     level_source_data = 'my level source'
-    level_source = create :level_source, level: @level, data: level_source_data
-    create :user_level, user: other_user, best_result: 100, script: script,
+    level_source = create(:level_source, level: @level, data: level_source_data)
+    create(:user_level, user: other_user, best_result: 100, script: script,
       level: level, level_source: level_source
+)
 
     @request.headers["Accept"] = "*/*"
     get :get_level_source, params: {script_id: script.id, level_id: level.id}
@@ -225,11 +227,11 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "user without level source gets nil data for level source" do
-    user = create :user
+    user = create(:user)
     sign_in user
 
     script = create(:unit, :in_single_unit_course)
-    level = create :level
+    level = create(:level)
 
     get :get_level_source, params: {script_id: script.id, level_id: level.id}
     assert_response :success
@@ -238,17 +240,17 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher can get their section respose summary" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
-    section = create :section, user: teacher
-    student = create :student
+    section = create(:section, user: teacher)
+    student = create(:student)
     section.students << student
-    student2 = create :student
+    student2 = create(:student)
     section.students << student2
-    level = create :level
+    level = create(:level)
 
-    create :user_level, user: student, level: level
+    create(:user_level, user: student, level: level)
 
     get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
     assert_response :success
@@ -258,25 +260,25 @@ class UserLevelsControllerTest < ActionController::TestCase
   end
 
   test "student cannot get section response summary" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    section = create :section
+    section = create(:section)
     section.students << student
-    level = create :level
+    level = create(:level)
 
     get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
     assert_response :forbidden
   end
 
   test "teacher cannot get section response summary for section they don't own" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
-    section = create :section
-    student = create :student
+    section = create(:section)
+    student = create(:student)
     section.students << student
-    level = create :level
+    level = create(:level)
 
     get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
     assert_response :forbidden

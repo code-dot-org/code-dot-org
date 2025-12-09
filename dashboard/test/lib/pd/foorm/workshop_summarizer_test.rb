@@ -4,9 +4,9 @@ module Pd::Foorm
   class WorkshopSummarizerTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      @daily_survey_day_0 = create :foorm_form_summer_pre_survey
-      @daily_survey_day_5 = create :foorm_form_summer_post_survey
-      @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
+      @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)
+      @daily_survey_day_5 = create(:foorm_form_summer_post_survey)
+      @csf_intro_post_survey = create(:foorm_form_csf_intro_post_survey)
       @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
     end
 
@@ -17,9 +17,9 @@ module Pd::Foorm
     end
 
     test 'summarizes survey results without error' do
-      workshop = create :csp_summer_workshop
-      create :day_0_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id
-      create :day_0_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id
+      workshop = create(:csp_summer_workshop)
+      create(:day_0_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id)
+      create(:day_0_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
@@ -76,16 +76,18 @@ module Pd::Foorm
     end
 
     test 'summarizes facilitator results' do
-      workshop = create :workshop
-      facilitator = create :facilitator
-      create :csf_intro_post_facilitator_workshop_submission,
+      workshop = create(:workshop)
+      facilitator = create(:facilitator)
+      create(:csf_intro_post_facilitator_workshop_submission,
         :answers_low,
         pd_workshop_id: workshop.id,
         facilitator_id: facilitator.id
-      create :csf_intro_post_facilitator_workshop_submission,
+)
+      create(:csf_intro_post_facilitator_workshop_submission,
         :answers_high,
         pd_workshop_id: workshop.id,
         facilitator_id: facilitator.id
+)
 
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
@@ -112,18 +114,20 @@ module Pd::Foorm
     end
 
     test 'summarizes facilitator results for multiple facilitators' do
-      workshop = create :workshop
-      facilitator1 = create :facilitator
-      facilitator2 = create :facilitator
-      create :csf_intro_post_facilitator_workshop_submission,
+      workshop = create(:workshop)
+      facilitator1 = create(:facilitator)
+      facilitator2 = create(:facilitator)
+      create(:csf_intro_post_facilitator_workshop_submission,
         :answers_high,
         pd_workshop_id: workshop.id,
         facilitator_id: facilitator1.id
-      create_list :csf_intro_post_facilitator_workshop_submission,
+)
+      create_list(:csf_intro_post_facilitator_workshop_submission,
         3,
         :answers_low,
         pd_workshop_id: workshop.id,
         facilitator_id: facilitator2.id
+)
 
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)

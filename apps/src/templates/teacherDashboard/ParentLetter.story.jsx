@@ -15,13 +15,13 @@ const sampleStudents = [
   {
     id: 100,
     name: 'Neville',
-    secret_picture_path: wizardPng,
+    secret_picture_url: wizardPng,
     secret_words: 'wizarding world',
   },
   {
     id: 101,
     name: 'Hermione',
-    secret_picture_path: wizardPng,
+    secret_picture_url: wizardPng,
     secret_words: 'wizarding world',
   },
 ];

@@ -1,0 +1,290 @@
+{
+  "script": {
+    "name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-09-23 21:23:16 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "AI Modes Exploration",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "3927b983-9284-4fef-b97d-b4fb34a76fe3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3927b983-9284-4fef-b97d-b4fb34a76fe3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "04a0e029-4eed-4bfe-a005-c25e9754526c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Suggest Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "04a0e029-4eed-4bfe-a005-c25e9754526c",
+        "lesson_activity.key": "3927b983-9284-4fef-b97d-b4fb34a76fe3"
+      }
+    },
+    {
+      "key": "f8f0973a-e410-49e1-b98a-df44aade7d7c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Outline Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8f0973a-e410-49e1-b98a-df44aade7d7c",
+        "lesson_activity.key": "3927b983-9284-4fef-b97d-b4fb34a76fe3"
+      }
+    },
+    {
+      "key": "231e691f-deeb-4f46-9408-d6303689649f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Guide Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "231e691f-deeb-4f46-9408-d6303689649f",
+        "lesson_activity.key": "3927b983-9284-4fef-b97d-b4fb34a76fe3"
+      }
+    },
+    {
+      "key": "3da3b2cf-ece7-4926-b34a-04f3a192f56f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Produce Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "3da3b2cf-ece7-4926-b34a-04f3a192f56f",
+        "lesson_activity.key": "3927b983-9284-4fef-b97d-b4fb34a76fe3"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Suggest Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "04a0e029-4eed-4bfe-a005-c25e9754526c"
+      },
+      "level_keys": [
+        "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Outline Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "f8f0973a-e410-49e1-b98a-df44aade7d7c"
+      },
+      "level_keys": [
+        "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Guide Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "231e691f-deeb-4f46-9408-d6303689649f"
+      },
+      "level_keys": [
+        "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Produce Mode"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "3da3b2cf-ece7-4926-b34a-04f3a192f56f"
+      },
+      "level_keys": [
+        "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-4"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-1",
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "04a0e029-4eed-4bfe-a005-c25e9754526c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-2",
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "f8f0973a-e410-49e1-b98a-df44aade7d7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-3",
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "231e691f-deeb-4f46-9408-d6303689649f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-4",
+        "script_level.level_keys": [
+          "ctrl-alt-retreat-2025-teaching-learning-gallery-walk-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ctrl-alt-retreat-2025-teaching-learning-gallery-walk",
+        "activity_section.key": "3da3b2cf-ece7-4926-b34a-04f3a192f56f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

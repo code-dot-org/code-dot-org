@@ -1,0 +1,14 @@
+name 'ai-powered-threats-defenses-postassessment-q12_2025-pilot'
+
+question ‘Which scenario best illustrates symmetric encryption?’
+
+wrong ‘Sending your credit card information securely to an online store for payment’
+right ‘Encrypting files saved on your personal USB drive’
+wrong ‘Browsing a website using HTTPS’
+wrong ‘Securely exchanging keys for private messaging’
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 10: AI in Encryption
+MARKDOWN

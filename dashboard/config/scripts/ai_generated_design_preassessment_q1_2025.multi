@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q1_2025'
+
+question 'A popular food-delivery app recently moved its "Order Again" button to a hidden menu and users complain it takes longer to reorder their favorite meals. What design mistake did the app make?'
+
+wrong 'It used too many bright colors'
+right 'It ignored users\' main goals and needs.'
+wrong 'It made the app load too slowly.'
+wrong 'It added too many security features.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 7
+MARKDOWN

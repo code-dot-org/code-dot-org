@@ -1,0 +1,9 @@
+name 'pl-java-class-design-toPrint-practice-37_pl'
+display_name 'Skill Building: The toString() Method'
+description 'Write a `toString()` method in a class to display information about the state of an object.'
+
+sublevels
+level 'CSA U2L10-L5a_pilot_pl'
+level 'CSA U2L10-L5b_pilot_pl'
+level 'CSA U2L10-L5c_pilot_pl'
+level 'CSA U2L10-L5d_pilot_pl'

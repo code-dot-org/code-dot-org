@@ -1,0 +1,54 @@
+name 'data-science-ch1-lesson7-level6_v2-2025'
+title 'Applying Filters'
+description 'description here'
+
+markdown <<MARKDOWN
+#Applying Filters
+
+## Create filters to help analyze the data.
+
+1. Navigate to your copy of the Pizza Party Survey Data.
+2. Go to the **Filtering Data Workspace** tab. 
+3. Practice creating filters and visualizations to help you analyze the data for two questions:
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th style="border: 1px solid #d3d3d3; background-color: #caa8d4ff; padding: 10px; text-align: center; color: black;">
+       <strong>What songs should we play based on the grades that attend the party?</strong>
+    </th>
+    <th style="border: 1px solid #d3d3d3; background-color: #caa8d4ff; padding: 10px; text-align: center; color: black;">
+       <strong>What kind of pizza do the different party personalities like best?</strong>
+    </th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #d3d3d3; padding: 10px; vertical-align: top;">
+      <strong>Prompts for analysis:</strong>
+      <ul>
+        <li>What songs are most popular in 7th grade?</li>
+        <li>Now change the filter to 8th grade, 9th grade, etc. How does the chart change?</li>
+        <li>Do middle schoolers and high schoolers like the same music, or do preferences shift?</li>
+        <li>What might explain the differences?</li>
+      </ul>
+    </td>
+    <td style="border: 1px solid #d3d3d3; padding: 10px; vertical-align: top;">
+      <strong>Prompts for analysis:</strong>
+      <ul>
+        <li>What do you notice about the pizza preferences for this party personality?</li>
+        <li>Now change the filter to a different personality (e.g., Social Butterfly or Performer). How does the pizza chart change?</li>
+        <li>Do different personalities prefer different kinds of pizza?</li>
+        <li>What could you learn from this if you were in charge of ordering pizza for the party?</li>
+        <li>Is there one kind of pizza that seems to make everyone happy?</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+::: details [**Can't find your copy of the dataset? Click here**]
+Misplaced your copy of the Pizza Party Survey Data Google Sheet? **Click <a href="https://docs.google.com/spreadsheets/d/1-M2CvqfAqO3XB6LY4CaYuRFAx58MASvw25tIRoawSWk/edit?usp=drivesdk" target="_blank">HERE</a>.** to open the original and make yourself **a new copy**!
+:::
+MARKDOWN

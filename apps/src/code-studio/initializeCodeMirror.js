@@ -20,8 +20,7 @@ import {JSHINT} from 'jshint';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPreview';
-import InstructionsPanel from '../lab2/views/components/InstructionsPanel';
+import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
 window.JSHINT = JSHINT;
@@ -89,12 +88,9 @@ function initializeCodeMirror(target, mode, options = {}) {
           );
         } else if (game === 'Aichat' || game === 'Music') {
           ReactDOM.render(
-            React.createElement(InstructionsPanel, {
-              text: editor.getValue(),
-              theme: game === 'Music' ? 'Dark' : 'Light',
-              noTextAnimation: true,
-              setPredictResponse: () => {},
-              predictAnswerLocked: false,
+            React.createElement(MainInstructionsPreview, {
+              instructionsText: editor.getValue(),
+              theme: 'Light',
             }),
             previewElement
           );
@@ -131,6 +127,7 @@ function initializeCodeMirror(target, mode, options = {}) {
 
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,
+    autofocus: false,
     backdrop: backdrop,
     htmlMode: htmlMode,
     viewportMargin: Infinity,

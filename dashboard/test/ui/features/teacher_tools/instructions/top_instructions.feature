@@ -4,11 +4,11 @@ Feature: Eyes Tests for Top Instructions
 
 Scenario: CSF Top Instructions
   When I open my eyes to test "top instructions in CSF"
-  And I am on "http://studio.code.org/courses/course1/units/1/lessons/4/levels/11?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
   Then I see no difference for "maze short instructions"
 
-  And I am on "http://studio.code.org/courses/course4/units/1/lessons/3/levels/5?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/5/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "artist long instructions"
 
@@ -18,6 +18,16 @@ Scenario: CSF Top Instructions
 
   Then I press "ani-gif-preview"
   And I see no difference for "maze ani gif dialog"
+
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/1/levels/1?noautoplay=true"
+  And I wait for the lab page to fully load
+  And I see no difference for "Jigsaw with anigif"
+
+  And execute JavaScript expression "window.localStorage.clear()"
+  And I close my eyes
+
+Scenario: CSF hint top instructions
+  When I open my eyes to test "top instructions in CSF with hints"
 
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
@@ -42,26 +52,6 @@ Scenario: CSF Top Instructions
   Then I press "lightbulb"
   And I press ".csf-top-instructions button:contains('Yes')" using jQuery
   And I see no difference for "farmer with video hint"
-
-  Then I am on "http://studio.code.org/courses/course4/units/1/lessons/19/levels/3?noautoplay=true"
-  And I wait for the lab page to fully load
-  And I see no difference for "Bee with starting hints"
-
-  Then I am on "http://studio.code.org/courses/course1/units/1/lessons/3/levels/1?noautoplay=true"
-  And I wait for the lab page to fully load
-  And I see no difference for "Jigsaw with anigif"
-
-  Then I am on "http://studio.code.org/courses/mc/units/1/lessons/1/levels/4?noautoplay=true"
-  And I wait for the lab page to fully load
-  And I see no difference for "minecraft top instructions" using stitch mode "none"
-
-  Then I am on "http://studio.code.org/courses/starwars/units/1/lessons/1/levels/15?noautoplay=true"
-  And I wait for the lab page to fully load
-  And I see no difference for "starwars top instructions"
-
-  Then I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/5?noautoplay=true"
-  And I wait for the lab page to fully load
-  And I see no difference for "frozen top instructions"
 
   And execute JavaScript expression "window.localStorage.clear()"
   And I close my eyes

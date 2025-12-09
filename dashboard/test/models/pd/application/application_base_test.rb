@@ -61,23 +61,23 @@ module Pd::Application
     end
 
     test 'regional partner name' do
-      partner = build :regional_partner
+      partner = build(:regional_partner)
       application = build TEACHER_APPLICATION_FACTORY, regional_partner: partner
 
       assert_equal partner.name, application.regional_partner_name
     end
 
     test 'school name' do
-      school_info = build :school_info
-      teacher = build :teacher, school_info: school_info
+      school_info = build(:school_info)
+      teacher = build(:teacher, school_info: school_info)
       application = build TEACHER_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_name.titleize, application.school_name
     end
 
     test 'district name' do
-      school_info = create :school_info
-      teacher = build :teacher, school_info: school_info
+      school_info = create(:school_info)
+      teacher = build(:teacher, school_info: school_info)
       application = build TEACHER_APPLICATION_FACTORY, user: teacher
 
       assert_equal school_info.effective_school_district_name.titleize, application.district_name
@@ -219,7 +219,7 @@ module Pd::Application
 
     %w[unreviewed awaiting_admin_approval].each do |status|
       test "applied_at and date_applied fields get set once they are submitted with status #{status}" do
-        application = create :pd_teacher_application, status: 'incomplete'
+        application = create(:pd_teacher_application, status: 'incomplete')
         assert_nil application.applied_at
 
         tomorrow = Time.zone.tomorrow.to_time
@@ -283,7 +283,7 @@ module Pd::Application
 
     test 'record status change with user' do
       application = create TEACHER_APPLICATION_FACTORY
-      workshop_admin = create :workshop_admin
+      workshop_admin = create(:workshop_admin)
 
       application.update(status: 'pending')
       application.update_status_timestamp_change_log(workshop_admin)
@@ -326,9 +326,9 @@ module Pd::Application
     end
 
     test 'formatted_partner_contact_email' do
-      application = create :pd_teacher_application
+      application = create(:pd_teacher_application)
 
-      partner = create :regional_partner
+      partner = create(:regional_partner)
 
       # no partner
       assert_nil application.formatted_partner_contact_email
@@ -346,7 +346,7 @@ module Pd::Application
       assert_nil application.formatted_partner_contact_email
 
       # program manager but no contact_name or contact_email
-      program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
+      program_manager = (create(:regional_partner_program_manager, regional_partner: partner)).program_manager
       assert_includes application.formatted_partner_contact_email, program_manager.name
       assert_includes application.formatted_partner_contact_email, program_manager.email
 
@@ -357,7 +357,7 @@ module Pd::Application
     end
 
     test 'formatted_applicant_email uses user account email' do
-      application = create :pd_teacher_application
+      application = create(:pd_teacher_application)
 
       assert application.user.email.present?
 
@@ -366,11 +366,11 @@ module Pd::Application
     end
 
     test 'formatted_applicant_email raises error if no user email' do
-      teacher_without_email = create :teacher, :with_school_info, :demigrated
+      teacher_without_email = create(:teacher, :with_school_info, :demigrated)
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher_application_hash
-      application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
+      application_hash_without_email = build(:pd_teacher_application_hash)
+      application_without_email = create(:pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json)
 
       assert teacher_without_email.email.blank?
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do

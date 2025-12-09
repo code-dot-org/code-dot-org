@@ -31,7 +31,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"b0ed228e-73a7-4f5a-a1e6-175204bf3759\",\r\n    \"495e75b8-c381-49e0-b94b-90be68fbee6e\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"b0ed228e-73a7-4f5a-a1e6-175204bf3759\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/_IMhWD27hnBKo26NJNTbQSZwQLs1wl34/category_food/red_apple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 272,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_IMhWD27hnBKo26NJNTbQSZwQLs1wl34\"\r\n    },\r\n    \"495e75b8-c381-49e0-b94b-90be68fbee6e\": {\r\n      \"name\": \"pear\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/7qPb2wgmklzngCYEO14ZolD48Fkjoymv/category_food/pear.png\",\r\n      \"frameSize\": {\r\n        \"x\": 206,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"7qPb2wgmklzngCYEO14ZolD48Fkjoymv\"\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\n  \"orderedKeys\": [\n    \"b0ed228e-73a7-4f5a-a1e6-175204bf3759\",\n    \"495e75b8-c381-49e0-b94b-90be68fbee6e\"\n  ],\n  \"propsByKey\": {\n    \"b0ed228e-73a7-4f5a-a1e6-175204bf3759\": {\n      \"name\": \"apple\",\n      \"sourceUrl\": \"/api/v1/animation-library/_IMhWD27hnBKo26NJNTbQSZwQLs1wl34/category_food/red_apple.png\",\n      \"frameSize\": {\n        \"x\": 272,\n        \"y\": 300\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"_IMhWD27hnBKo26NJNTbQSZwQLs1wl34\"\n    },\n    \"495e75b8-c381-49e0-b94b-90be68fbee6e\": {\n      \"name\": \"pear\",\n      \"sourceUrl\": \"/api/v1/animation-library/7qPb2wgmklzngCYEO14ZolD48Fkjoymv/category_food/pear.png\",\n      \"frameSize\": {\n        \"x\": 206,\n        \"y\": 300\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 2,\n      \"version\": \"7qPb2wgmklzngCYEO14ZolD48Fkjoymv\"\n    }\n  }\n}",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -45,7 +45,7 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

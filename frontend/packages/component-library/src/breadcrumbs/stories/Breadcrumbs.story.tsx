@@ -1,5 +1,5 @@
-import {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 

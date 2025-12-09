@@ -1,0 +1,391 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-09-25T19:56:56.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Read the existing code to see what the `Painter` currently does.\r\n\r\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\r\n\r\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\r\n\r\n4. Run the program to check your result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse this format for writing an `if` statement:\r\n\r\n```\r\nif condition:\r\n   do_something()\r\n```\r\n\r\nFor this problem, your condition will be `is_facing_west()`\r\n\r\n<br/>",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2-2025",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 2,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\nangie = Painter()\n\nangie.move()\nangie.take_paint()\nangie.take_paint()\nangie.move()\n\n# TODO - Add an if statement and move this paint command inside it\nangie.paint(\"blue\")\n\nangie.turn_left()\nangie.turn_left()\nangie.turn_left()\nangie.move()\nangie.turn_left()\nangie.turn_left()\nangie.turn_left()\n\nangie.paint(\"green\")",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n4eqU9nZO0M491tMX\n",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestConditionalPaint(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter was created. Make sure to create a Painter in your code.\")\n\n    def test_only_one_tile_is_painted(self):\n        \"\"\"Only one tile is painted (no blue)\"\"\"\n        painted_count = sum(\n            1 for row in self.log.final_output for cell in row if cell is not None\n        )\n        self.assertEqual(\n            painted_count,\n            1,\n            \"Only one space should be painted. Make sure the blue paint only runs if the Painter is facing west.\"\n        )\n\n    def test_correct_tile_is_painted(self):\n        \"\"\"Only (2, 1) is painted\"\"\"\n        final = self.log.final_output\n        grid_size = len(final)\n\n        # Create an expected output grid with only (2, 1) painted green\n        expected_output = [[None for _ in range(grid_size)] for _ in range(grid_size)]\n        expected_output[1][2] = \"Green\"  # (2, 1) coordinates\n\n        self.assertTrue(\n            self.log.final_output_matches(expected_output),\n            \"The space (2, 1) should be painted green, and no other spaces should be painted. Make sure the Painter correctly checks the direction before painting.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:56:56.236+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson9-level1_2025-launch_2025\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson9-level1_2025-launch_2025\"}]"
+}]]></config>
+</Pythonlab>

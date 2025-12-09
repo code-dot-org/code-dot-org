@@ -67,6 +67,7 @@ export interface Level {
   status?: string;
   sublevels?: Level[];
   usesLab2: boolean;
+  parentLevelId?: string;
 }
 
 export interface LevelWithProgress extends Level {
@@ -140,6 +141,7 @@ export interface InitProgressPayload {
   peerReviewLessonInfo: PeerReviewLessonInfo | null;
   isFullProgress: boolean;
   currentPageNumber: number;
+  courseName: string | null;
 }
 
 // LevelResults is a map of levelId -> TestResult. TestResult is a number.

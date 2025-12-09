@@ -1,11 +1,11 @@
 import Link from '@code-dot-org/component-library/link';
 import React from 'react';
-import * as Table from 'reactabular-table';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
 import AccuracyCheck from './AccuracyCheck';
-import {columns} from './SkillsByConceptTable';
+import SkillsTable from './SkillsTable';
+import SystemPromptModificationField from './SystemPromptModificationField';
 import {Skill} from './types';
 import ViewSystemPrompt from './ViewSystemPrompt';
 
@@ -13,12 +13,17 @@ interface Props {
   skills: Skill[];
   levelId: number;
   systemPrompt: string;
+  levelType?: string;
+  additionalAiEvaluationInstructions?: string;
+  updateAdditionalAiEvaluationInstructions: (value: string) => void;
 }
 
 const SkillEvaluationSettings: React.FC<Props> = ({
   skills,
   levelId,
   systemPrompt,
+  additionalAiEvaluationInstructions,
+  updateAdditionalAiEvaluationInstructions,
 }) => {
   return (
     <div className="skill-evaluation-settings">
@@ -27,18 +32,7 @@ const SkillEvaluationSettings: React.FC<Props> = ({
         <h3>There are no skills associated with this level.</h3>
       )}
       {skills.length > 0 && (
-        <Table.Provider columns={columns} className="skills-table">
-          <Table.Header />
-          <Table.Body
-            rows={skills.map((skill: Skill) => ({
-              id: skill.id,
-              key: skill.key,
-              description: skill.description,
-              evaluationCriteria: skill.evaluationCriteria,
-            }))}
-            rowKey="key"
-          />
-        </Table.Provider>
+        <SkillsTable skills={skills} canModifySkill={false} />
       )}
       <br />
       <p>
@@ -50,9 +44,14 @@ const SkillEvaluationSettings: React.FC<Props> = ({
           size="s"
         />
       </p>
-      <AccuracyCheck levelId={levelId} />
+      <AccuracyCheck levelId={levelId} hasSkills={skills.length > 0} />
       <br />
       <ViewSystemPrompt systemPrompt={systemPrompt} />
+      <br />
+      <SystemPromptModificationField
+        initialValue={additionalAiEvaluationInstructions}
+        onChange={updateAdditionalAiEvaluationInstructions}
+      />
       <br />
       <br />
     </div>

@@ -171,6 +171,34 @@ describe('Design System - Dropdown Select Component', () => {
     expect(selectElement).toHaveValue('option-1');
   });
 
+  it("doesn't change value when item is disabled", async () => {
+    const user = userEvent.setup();
+    const spyOnChange = jest.fn();
+
+    renderDropdown({
+      name: 'test3-dropdown',
+      items: [
+        {value: 'option-1', text: 'option1'},
+        {value: 'option-2', text: 'option2', disabled: true},
+        {value: 'option-3', text: 'option3'},
+      ],
+      labelText: 'Dropdown3 label',
+      onChange: spyOnChange,
+    });
+
+    const selectElement = screen.getByRole('combobox') as HTMLSelectElement;
+    const secondOption = selectElement.options[1];
+    expect(secondOption).toBeDisabled();
+
+    await user.selectOptions(selectElement, 'option-2');
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(selectElement).toHaveValue('option-1');
+
+    await user.selectOptions(selectElement, 'option-3');
+    expect(spyOnChange).toHaveBeenCalled();
+    expect(selectElement).toHaveValue('option-3');
+  });
+
   it('renders grouped items with correct structure', () => {
     renderDropdown({
       name: 'test4-dropdown',

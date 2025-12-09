@@ -1,8 +1,8 @@
 import {useEffect} from 'react';
 
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -15,7 +15,8 @@ import AnalyticsReporter from '../../analytics/AnalyticsReporter';
  */
 function useUpdateAnalytics(
   analyticsReporter: AnalyticsReporter,
-  isProjectLevel: boolean
+  isProjectLevel: boolean,
+  channelId?: string
 ) {
   /**
    * Effect that runs on initial mount
@@ -98,7 +99,6 @@ function useUpdateAnalytics(
       analyticsReporter.setUserProperties(userId, userType, signInState);
   }, [analyticsReporter, sessionInProgress, userId, userType, signInState]);
 
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   useEffect(() => {
     sessionInProgress &&
       analyticsReporter.setProjectProperty('channelId', channelId);

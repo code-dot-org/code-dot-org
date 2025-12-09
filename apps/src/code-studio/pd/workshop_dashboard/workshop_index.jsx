@@ -86,14 +86,12 @@ export class WorkshopIndex extends React.Component {
     const canDelete = this.props.permission.hasAny(
       WorkshopAdmin,
       Organizer,
-      ProgramManager,
-      CsfFacilitator
+      ProgramManager
     );
     const canCreate = this.props.permission.hasAny(
       WorkshopAdmin,
       Organizer,
-      ProgramManager,
-      CsfFacilitator
+      ProgramManager
     );
     const canSeeAttendanceReports = this.props.permission.hasAny(
       WorkshopAdmin,

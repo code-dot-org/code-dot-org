@@ -1,0 +1,307 @@
+import {Steps} from 'intro.js-react';
+import React, {useState, useEffect} from 'react';
+
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
+import {
+  VALIDATION_TOUR_SEEN,
+  RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+  resourcePanelTabValidationElementId,
+  resourcePanelValidateButtonElementId,
+} from './constants';
+import {Tabs} from './types';
+import {VALIDATION_TOUR_STEPS} from './validationTourHelpers';
+
+// Check if tour should be disabled (e.g., during UI tests) before any rendering.
+// This runs when the module is first imported so localStorage is set early.
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('noIntrojs') === 'true') {
+  trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+}
+const VALIDATION_FLOW_NAME = 'Resource Panel Validation';
+
+interface ValidationTourStepsProps {
+  hasValidationConditions: boolean;
+  validationSettings: ValidationSettings | undefined;
+  setCurrentTab: (tab: Tabs) => void;
+  onValidate: (() => void) | undefined;
+}
+
+// This introjs flow is currently only used for Python Lab, but other labs can opt in to use it if they also
+// have a validation system similar to Python Lab.
+const ValidationTourSteps: React.FC<ValidationTourStepsProps> = ({
+  hasValidationConditions,
+  validationSettings,
+  setCurrentTab,
+  onValidate,
+}) => {
+  const [validationTourEnabled, setValidationTourEnabled] = useState(false);
+  const [validationTourStep, setValidationTourStep] = useState(0);
+  const validationTabEnum = Tabs.Validation;
+  const validationTourSeen = tryGetLocalStorage(VALIDATION_TOUR_SEEN, 'no');
+  const onboardingTourSeen = tryGetLocalStorage(
+    RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+    'no'
+  );
+
+  const returnFocusToTourPanel = () => {
+    setTimeout(() => {
+      const nextButton = document.querySelector(
+        '.introjs-nextbutton'
+      ) as HTMLButtonElement;
+      if (nextButton) {
+        nextButton.focus();
+      }
+    }, 100);
+  };
+
+  // The Done button on the third step (index 2) is always enabled.
+  // The Next button on the first two steps (indexes 0 and 1) is disabled until the user completes an action.
+  const [validationTourStepsEnabled, setValidationTourStepsEnabled] = useState([
+    false,
+    false,
+    true,
+  ]);
+
+  useEffect(() => {
+    const shouldShowValidationTour =
+      validationSettings &&
+      hasValidationConditions &&
+      validationTourSeen !== 'yes' &&
+      onboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
+    if (shouldShowValidationTour) {
+      setValidationTourEnabled(true);
+    }
+  }, [
+    validationSettings,
+    hasValidationConditions,
+    validationTourSeen,
+    onboardingTourSeen,
+  ]);
+
+  // Add event listeners for validation tour progression.
+  useEffect(() => {
+    if (!validationTourEnabled) return;
+
+    const handleValidationTabActivation = () => {
+      if (validationTourStep === 0) {
+        setCurrentTab(validationTabEnum);
+        // Enable 'Next' button on first step (index 0).
+        setValidationTourStepsEnabled(prev => [true, false, true]);
+
+        // Return focus to the tour panel for keyboard users.
+        returnFocusToTourPanel();
+      }
+    };
+
+    const handleValidateButtonActivation = () => {
+      if (validationTourStep === 1) {
+        // Enable 'Next' button on second step (index 1).
+        setValidationTourStepsEnabled(prev => [true, true, true]);
+        // Return focus to the tour panel for keyboard users.
+        returnFocusToTourPanel();
+      }
+    };
+
+    const validationTabElement = document.getElementById(
+      resourcePanelTabValidationElementId
+    );
+    const validateButtonElement = document.getElementById(
+      resourcePanelValidateButtonElementId
+    );
+
+    // Document-level click handler to forward clicks from IntroJS overlay to actual elements.
+    const documentClickHandler = (event: Event) => {
+      const target = event.target as HTMLElement;
+
+      // If user clicked on IntroJS overlay/helper layer, forward the click to the appropriate element.
+      if (
+        target.classList.contains('introjs-helperLayer') ||
+        target.classList.contains('introjs-tooltipReferenceLayer')
+      ) {
+        if (validationTourStep === 0 && validationTabElement) {
+          validationTabElement.click();
+        } else if (validationTourStep === 1 && validateButtonElement) {
+          validateButtonElement.click();
+        }
+      }
+    };
+
+    // Document-level keyboard handler to forward keyboard activation from IntroJS overlay or actual elements.
+    const documentKeydownHandler = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Handle both Enter and Space key activation.
+      if (event.key === 'Enter' || event.key === ' ') {
+        // Check if user pressed key on validation tab element during step 0.
+        if (
+          validationTourStep === 0 &&
+          validationTabElement &&
+          validationTabElement.contains(target)
+        ) {
+          event.preventDefault();
+          // Find the button within the tab element and click it.
+          const buttonElement = validationTabElement.querySelector('button');
+          if (buttonElement) {
+            buttonElement.click();
+          }
+        }
+        // Check if user pressed key on validate button element during step 1.
+        else if (
+          validationTourStep === 1 &&
+          validateButtonElement &&
+          validateButtonElement.contains(target)
+        ) {
+          event.preventDefault();
+          validateButtonElement.click();
+        }
+      }
+    };
+
+    // Handler to trigger onValidate when button is clicked.
+    const validateButtonClickHandler = () => {
+      if (validationTourStep === 1 && onValidate) {
+        onValidate();
+      }
+    };
+
+    // Add document-level listeners to capture clicks on the overlay.
+    document.addEventListener('click', documentClickHandler, {capture: true});
+    document.addEventListener('keydown', documentKeydownHandler, {
+      capture: true,
+    });
+
+    // Element-specific listeners for direct clicks.
+    if (validationTabElement) {
+      validationTabElement.addEventListener(
+        'click',
+        handleValidationTabActivation
+      );
+    }
+    if (validateButtonElement) {
+      validateButtonElement.addEventListener(
+        'click',
+        handleValidateButtonActivation
+      );
+      validateButtonElement.addEventListener(
+        'click',
+        validateButtonClickHandler
+      );
+    }
+
+    return () => {
+      document.removeEventListener('click', documentClickHandler, {
+        capture: true,
+      });
+      document.removeEventListener('keydown', documentKeydownHandler, {
+        capture: true,
+      });
+      if (validationTabElement) {
+        validationTabElement.removeEventListener(
+          'click',
+          handleValidationTabActivation
+        );
+      }
+      if (validateButtonElement) {
+        validateButtonElement.removeEventListener(
+          'click',
+          handleValidateButtonActivation
+        );
+        validateButtonElement.removeEventListener(
+          'click',
+          validateButtonClickHandler
+        );
+      }
+    };
+  }, [
+    validationTourEnabled,
+    validationTourStep,
+    validationTabEnum,
+    setCurrentTab,
+    onValidate,
+  ]);
+
+  // Update button disabled state based on step and requirements.
+  useEffect(() => {
+    if (!validationTourEnabled) return;
+
+    const updateButtonState = () => {
+      const nextButton = document.querySelector(
+        '.introjs-nextbutton'
+      ) as HTMLButtonElement;
+      if (nextButton) {
+        if (validationTourStep === 0 && !validationTourStepsEnabled[0]) {
+          nextButton.setAttribute('disabled', 'true');
+        } else if (validationTourStep === 1 && !validationTourStepsEnabled[1]) {
+          nextButton.setAttribute('disabled', 'true');
+        } else {
+          nextButton.removeAttribute('disabled');
+        }
+      }
+    };
+
+    // Update once after DOM is ready.
+    const timeoutId = setTimeout(updateButtonState, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [validationTourEnabled, validationTourStep, validationTourStepsEnabled]);
+
+  return (
+    <Steps
+      enabled={validationTourEnabled}
+      initialStep={validationTourStep}
+      steps={VALIDATION_TOUR_STEPS}
+      onExit={() => {
+        setValidationTourEnabled(false);
+        trySetLocalStorage(VALIDATION_TOUR_SEEN, 'yes');
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
+          flowName: VALIDATION_FLOW_NAME,
+          step: validationTourStep.toString(),
+        });
+      }}
+      onStart={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
+          flowName: VALIDATION_FLOW_NAME,
+        });
+      }}
+      onChange={nextStepIndex => {
+        setValidationTourStep(nextStepIndex);
+      }}
+      onBeforeChange={nextStepIndex => {
+        // Control step progression based on user interactions.
+        if (nextStepIndex === 1 && !validationTourStepsEnabled[0]) {
+          return false; // Prevent going to second step (at index 1) until validation tab is clicked.
+        }
+        if (nextStepIndex === 2 && !validationTourStepsEnabled[1]) {
+          return false; // Prevent going to third step (at index 2) until validate button is clicked.
+        }
+        // Return void (undefined) to allow progression.
+      }}
+      onComplete={() => {
+        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
+          flowName: VALIDATION_FLOW_NAME,
+        });
+      }}
+      options={{
+        scrollToElement: false,
+        exitOnOverlayClick: false,
+        hidePrev: validationTourStep === 0, // Hide back button only on first step.
+        hideNext: false,
+        nextLabel: commonI18n.next(),
+        prevLabel: commonI18n.back(),
+        doneLabel: commonI18n.done(),
+        showBullets: false,
+        showStepNumbers: true,
+        disableInteraction: false, // Allow interaction with page elements.
+      }}
+    />
+  );
+};
+
+export default ValidationTourSteps;

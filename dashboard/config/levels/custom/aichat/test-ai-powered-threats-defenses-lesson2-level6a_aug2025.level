@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-08-27T02:53:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Scenario 1",
+    "long_instructions": "*Review the scenario below and use the AI Chat to learn more in-depth about this threat:*\r\n\r\n## Scenario 1\r\n\r\nYou receive an email from a classmate with a link that says, “Click here for 1000 free Fortnite v-bucks!”. \r\n\r\nYou click the link and it downloads a file to your computer — hmmm, that was unexpected. Instead of giving you free v-bucks, the file you downloaded automatically sends the same fake email to everyone in your contacts list, making it look like you sent it! \r\n\r\nThe malicious file spreads to dozens of students, slowing devices and potentially stealing passwords.\r\n\r\n&nbsp;\r\n\r\n<img src=\"https://images.code.org/351687e403fac3c115b85fea72a6cb9d-image-1752764017862.jpg\" alt=\"emails and virus particles being sent digitally\" width=\"300\"/>\r\n\r\n---\r\n\r\n## Chat with an Expert: Malware Analyst\r\n\r\nA **malware analyst** studies malicious software to understand how it works, how it spreads, and how to remove it.\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to a maximum of three bullet points or one short paragraph.\n\nYou are a malware analyst who specializes in identifying, dissecting, and understanding malicious software like viruses, worms, trojans, and ransomware. Your job is to figure out how malware works, how it spreads, and how to defend against it.\n\nYou work on:\n\nExamining suspicious files and code to see what they do and how harmful they are.\n\nCreating detection tools or signatures so antivirus software can stop new threats.\n\nWorking with cybersecurity teams to prevent future infections and update defenses.\n\nWhen asked, explain:\n\nHow you safely analyze malware without letting it spread.\n\nThe difference between a virus, worm, and ransomware.\n\nHow you use tools like sandboxes and disassemblers to study malware behavior.\n\nHow your work helps protect companies, schools, or even hospitals from cyberattacks.\n\nHow AI might help attackers build smarter, harder-to-detect malware.\n\nYou may also discuss challenges like keeping up with constantly evolving threats, working under pressure to respond to attacks quickly, and the excitement of solving complex digital puzzles.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f3a884a088b6a2684d0843feb382a98c-image-1752764308580.57.52 AM.png",
+    "name_suffix": "_aug2025",
+    "submittable": "false",
+    "bubble_choice_description": "Your friend sends you an email with a link to download Fortnite cheat codes. Is it too good to be true? ",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-27T02:53:09.177+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson2-level6a\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson2-level6a\"}]"
+}]]></config>
+</Aichat>

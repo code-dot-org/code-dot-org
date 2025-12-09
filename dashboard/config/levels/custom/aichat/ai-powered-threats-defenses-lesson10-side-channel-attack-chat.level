@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-30T20:01:17.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI trained to analyze side-channel data and guess PIN codes. You're given a log of 4-digit PIN guesses along with their response times.\n\nThe goal is to identify which guesses are likely closer to the correct PIN based on how long the system took to respond. Longer response times typically mean more correct digits at the beginning of the guess (especially in order).\n\nYour task:\n1. Analyze the pattern in the guesses and response times.\n2. Identify which digits are likely correct based on timing.\n3. Suggest a next best guess.\n4. Explain your reasoning clearly — why do you think your guess is closer?\n\nAvoid just repeating the guesses. Look for trends and make a logical next guess based on the timing patterns. Focus especially on the order of digits (e.g. if early digits match, timing usually increases).\n\nExample structure:\n- “I noticed that when the first digit was 4, response time increased.”\n- “So I think the PIN starts with 4. I’ll try 4012 next to test the second digit.”\n\nOnly suggest one guess at a time. Wait for feedback before continuing.\n\nLet’s begin.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "long_instructions": "## Can AI Crack the PIN?\r\n\r\nIn the last level, you tried to guess a 4-digit PIN using *response time clues* — a technique called a **side-channel attack**. Now, you're working **with an AI system** trained to recognize patterns in those clues.\r\n\r\n---\r\n\r\n## How to Use This Chat\r\n\r\n1. Start by saying hello or introducing the task.\r\n2. Paste a few PIN guesses and their response times.\r\n3. Ask the AI to **analyze the pattern** and **suggest a new guess**.\r\n4. Use that guess in the simulator (previous level), get the new time, and come back to the AI.\r\n5. Repeat until the AI narrows down the correct PIN!\r\n\r\n---\r\n\r\n## 💡 Tips\r\n\r\n- Response times usually increase when **early digits are correct**.\r\n- Help the AI focus: try changing just **one digit at a time**.\r\n- If the time jumps from 0.10s to 0.25s, that’s a strong clue!"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-31 01:53:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-07-31 01:56:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

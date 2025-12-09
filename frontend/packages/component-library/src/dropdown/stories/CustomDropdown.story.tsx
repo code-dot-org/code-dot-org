@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import {Button} from '@/button';
 import Link from '@/link/Link';
@@ -115,5 +115,14 @@ WithDSCOButtonTriggerCustomDropdown.args = {
     color: 'purple',
     type: 'primary',
   },
+  size: 'm',
+};
+
+export const WithMenuPlacementCustomDropdown = SingleTemplate.bind({});
+WithMenuPlacementCustomDropdown.args = {
+  name: 'with-menu-placement-dropdown',
+  labelText: 'Dropdown with Menu Placement',
+  menuPlacement: 'right',
+  menuVerticalPlacement: 'bottom',
   size: 'm',
 };

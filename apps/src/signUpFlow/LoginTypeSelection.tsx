@@ -23,20 +23,7 @@ import {isEmail} from '@cdo/apps/util/formatValidation';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import statsigReporter from '../metrics/StatsigReporter';
 import {navigateToHref} from '../utils';
-
-const hideCleverOption = statsigReporter.getIsInExperiment(
-  'removing_clever_from_sign_up',
-  'hide_clever_option',
-  false
-);
-
-const showMoreOptions = statsigReporter.getIsInExperiment(
-  'removing_clever_from_sign_up',
-  'show_more_options',
-  false
-);
 
 import {
   ACCOUNT_TYPE_SESSION_KEY,
@@ -78,8 +65,6 @@ const LoginTypeSelection: React.FunctionComponent<{
   const [authToken, setAuthToken] = useState('');
   const [createAccountButtonDisabled, setCreateAccountButtonDisabled] =
     useState(true);
-
-  const [revealClever, setRevealClever] = useState(false);
 
   const isTeacher = userType === UserTypes.TEACHER;
   const finishAccountUrl = isTeacher
@@ -202,10 +187,18 @@ const LoginTypeSelection: React.FunctionComponent<{
         },
         body: JSON.stringify(submitLoginTypeParams),
       });
-      // We are currently only intentionally surfacing errors for duplicate emails
       if (!response.ok) {
-        setEmailErrorMessage(i18n.duplicate_email_error_message());
-        setShowEmailError(true);
+        // Handle disallowed email domains. We return a 403 status code from the server
+        // in this case.
+        if (response.status === 403) {
+          const res = await response.json();
+          setEmailErrorMessage(res.error);
+          setShowEmailError(true);
+        } else {
+          // We are currently only intentionally surfacing errors for duplicate emails
+          setEmailErrorMessage(i18n.duplicate_email_error_message());
+          setShowEmailError(true);
+        }
         return;
       }
       navigateToHref(finishAccountUrl);
@@ -287,38 +280,14 @@ const LoginTypeSelection: React.FunctionComponent<{
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <form action="/users/auth/clever" method="POST">
-            {showMoreOptions && !revealClever && (
-              <Button
-                text="Show more options"
-                onClick={() => {
-                  analyticsReporter.sendEvent(
-                    EVENTS.SIGN_UP_SSO_SHOW_MORE_OPTIONS,
-                    {},
-                    PLATFORMS.BOTH
-                  );
-                  setRevealClever(true);
-                }}
-                type="secondary"
-                color="gray"
-                iconRight={{iconName: 'caret-down'}}
-              />
-            )}
-            {(!hideCleverOption || revealClever) && (
-              <>
-                <Button
-                  text={locale.sign_up_clever()}
-                  onClick={() => selectOauthLoginType('clever')}
-                  iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
-                  className={style.cleverButton}
-                  buttonTagTypeAttribute="submit"
-                />
-                <input
-                  type="hidden"
-                  name="authenticity_token"
-                  value={authToken}
-                />
-              </>
-            )}
+            <Button
+              text={locale.sign_up_clever()}
+              onClick={() => selectOauthLoginType('clever')}
+              iconLeft={{iconName: 'kit fa-clever', iconStyle: 'solid'}}
+              className={style.cleverButton}
+              buttonTagTypeAttribute="submit"
+            />
+            <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
           <div className={style.greyTextbox}>
             {!isTeacher && (

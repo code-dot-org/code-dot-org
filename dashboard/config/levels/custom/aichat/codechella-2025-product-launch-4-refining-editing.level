@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Refining and Editing Chat\r\n\r\nUse AI Chat to revise and improve the content you generated earlier.\r\n\r\nFocus on making your final product clearer, catchier, or more creative—based on your assigned role.\r\n\r\n### Do This:\r\n1. Use AI Chat to revise or upgrade the draft you created in the last stage.\r\n    - Ask AI to make it shorter, stronger, funnier, more persuasive, or more student-friendly.\r\n    - Tell AI what you like or want to change.\r\n2. In your Activity Guide under Stage 3: Generating Content, write:\r\n\t- The question or prompt you gave to AI\r\n\t- A summary of what the AI told you\r\n3. Want better results? Give AI feedback on what didn’t work in the first version and ask for a new take.",
+    "long_instructions": "## Refining and Editing Chat\r\n\r\nUse AI Chat to polish and improve the content you generated earlier.\r\n\r\nYour goal is to make your final product clearer, catchier, or more creative—based on your role.\r\n\r\n### Do This:\r\n1. Use AI Chat to revise or enhance the draft you created in the last stage. You might ask:\r\n    - Can you make this shorter, stronger, or more persuasive?\r\n    - Can you make it funnier, more professional, or more inspiring?\r\n    - Here’s what I like—can you keep that but adjust the parts that don’t land?\r\n2. As you refine, update your group slide deck with the stronger version of your content (name + slogan, visuals, script, or jingle).\r\n3. Want better results? Give AI feedback on what didn’t work in the first version and ask for a new take until it feels presentation-ready. ",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "You are helping a creative team refine and improve content for a product launch aimed at adults working from home. Suggest revisions that make the content shorter, stronger, catchier, or more professional, depending on the request.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -44,8 +44,11 @@
     },
     "bubble_choice_description": "Use AI Chat to revise and improve the content you generated earlier.",
     "display_name": "Refining and Editing Chat",
-    "thumbnail_url": "https://images.code.org/c6edf3d4c4597cd87585ae6612cc85f2-film-editing.png"
+    "thumbnail_url": "https://images.code.org/c6edf3d4c4597cd87585ae6612cc85f2-film-editing.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:56.815+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1d_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1d_2024\"},{\"changed_at\":\"2025-05-08 15:54:04 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T15:53:56.815+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson9-level1d_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson9-level1d_2024\"},{\"changed_at\":\"2025-05-08 15:54:04 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:38:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-09-22 20:42:37 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

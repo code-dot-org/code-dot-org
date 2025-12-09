@@ -45,6 +45,6 @@
     ],
     "name_suffix": "_standalone"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:01.889+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel_launch\"},{\"changed_at\":\"2025-06-02 15:18:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-02 20:49:17 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:01.889+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel_launch\"},{\"changed_at\":\"2025-06-02 15:18:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-02 20:49:17 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-10 19:32:51 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

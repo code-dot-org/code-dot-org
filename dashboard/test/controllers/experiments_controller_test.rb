@@ -2,15 +2,15 @@ require 'test_helper'
 
 class ExperimentsControllerTest < ActionController::TestCase
   setup_all do
-    @pilot = create :pilot, allow_joining_via_url: true
+    @pilot = create(:pilot, allow_joining_via_url: true)
     @pilot_name = @pilot.name
   end
 
   setup do
-    @teacher = create :teacher
-    unit_group = create :unit_group, name: 'my-course'
+    @teacher = create(:teacher)
+    unit_group = create(:unit_group, name: 'my-course')
     default_script = create(:script, name: 'default-script')
-    create :unit_group_unit, unit_group: unit_group, script: default_script, position: 2
+    create(:unit_group_unit, unit_group: unit_group, script: default_script, position: 2)
   end
 
   test_redirect_to_sign_in_for(
@@ -65,7 +65,7 @@ class ExperimentsControllerTest < ActionController::TestCase
   end
 
   test 'user can disable an experiment user is in' do
-    student = create :user
+    student = create(:user)
     sign_in(student)
     SingleUserExperiment.create(min_user_id: student.id, name: @pilot_name)
 

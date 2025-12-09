@@ -4,7 +4,7 @@ class FollowerTest < ActiveSupport::TestCase
   setup do
     @laurel = create(:teacher)
     @laurel_section = create(:section, user: @laurel)
-    @follower = create :follower
+    @follower = create(:follower)
   end
 
   test 'student_user is required' do
@@ -22,7 +22,7 @@ class FollowerTest < ActiveSupport::TestCase
   test 'admins cannot be student followers' do
     assert_does_not_create(Follower) do
       assert_raises do
-        create :follower, student_user: (create :admin)
+        create(:follower, student_user: (create(:admin)))
       end
     end
   end
@@ -31,7 +31,7 @@ class FollowerTest < ActiveSupport::TestCase
   # validated for non-deleted followers. As this situation cannot happen without manipulating the DB
   # (dependent callbacks), we do not worry about testing it.
   test 'student_user and section not required for deleted followers' do
-    follower = create :follower
+    follower = create(:follower)
     follower.destroy
     follower.student_user = nil
     follower.section = nil
@@ -69,8 +69,8 @@ class FollowerTest < ActiveSupport::TestCase
   end
 
   test 'deleting a follower deletes the associated code review group member' do
-    code_review_group = create :code_review_group, section: @laurel_section
-    create :code_review_group_member, follower: @follower, code_review_group: code_review_group
+    code_review_group = create(:code_review_group, section: @laurel_section)
+    create(:code_review_group_member, follower: @follower, code_review_group: code_review_group)
     @follower.destroy
     refute CodeReviewGroupMember.exists?(follower_id: @follower.id, code_review_group_id: code_review_group.id)
   end
@@ -108,16 +108,30 @@ class FollowerTest < ActiveSupport::TestCase
     assert_equal 'test', student.family_name
   end
 
-  test 'cannot create a follower for a PL section and a user with a family name' do
-    teacher = create(:teacher)
-    pl_section = create :section, :teacher_participants, user_id: teacher.id
+  test 'creating a follower assigns the section script to the student' do
+    student = create(:student)
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    @laurel_section.update!(script: unit, unit_group: unit_group)
 
-    pl_participant = create(:user)
-    pl_participant.family_name = 'TestFamName'
-    pl_participant.save!
+    create(:follower, section: @laurel_section, student_user: student)
 
-    assert_raises(ActiveRecord::RecordInvalid) do
-      create :follower, section: pl_section, student_user: pl_participant
-    end
+    user_script = student.user_scripts.find_by(script: @laurel_section.script)
+    assert user_script
+    assert_equal unit_group, user_script.unit_group
+  end
+
+  test 'creating a follower assigns the section script with modular course to the student' do
+    student = create(:student)
+    unit_group = create(:single_unit_course, :stable)
+    unit = unit_group.first_unit
+    other_unit_group = create(:single_unit_course, :stable, unit: unit)
+    @laurel_section.update!(script: unit, unit_group: other_unit_group)
+
+    create(:follower, section: @laurel_section, student_user: student)
+
+    user_script = student.user_scripts.find_by(script: @laurel_section.script)
+    assert user_script
+    assert_equal other_unit_group, user_script.unit_group
   end
 end

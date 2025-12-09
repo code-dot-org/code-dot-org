@@ -1,0 +1,35 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-09-25T19:53:00.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "# Careful Prompting\nAI responses improve with specific and well-structured prompts. The more details included, the less likely AI is to make assumptions or hallucinate.\n\n### Okay Prompt:\n_\"What's the driving age here?\"_\n\n### Better Prompt:\n_\"At what age can drivers get their learner's permit in the state of New Jersey?\"_",
+        "imageUrl": "https://images.code.org/f18812091960832ca2414c9c99eb3d98-Screenshot 2025-03-19 112031.png",
+        "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "# Be Skeptical of AI Responses\nAI can confidently provide incorrect information. Be cautious, especially with proper nouns, numbers, links, and quotes.\n\n### Scenario:\n**A student asks AI:** _\"What is the tallest mountain in the world?\"_\n\n**AI responds:** _\"Mount Kilimanjaro, at 8,848 meters, is the tallest mountain.\"_\n\n### Reality Check:\nMount Everest is the tallest mountain, not Kilimanjaro!",
+        "imageUrl": "https://images.code.org/d10835fe1681fc17b480751b5b52035d-Screenshot 2025-03-19 120944.png",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Fact-Check with Search Engines\nAI doesn’t verify facts before responding. Always search for key claims using trusted sources.\n\n### Scenario:\n**A user asks AI:** _“What is the penalty for jaywalking in Los Angeles?”_\n\n**AI responds:** _\"In Los Angeles, the penalty for jaywalking is a $500 fine and three points on your license.\"_\n\n### Fact-Check:\nSearching official city websites reveals that jaywalking fines are typically much lower and don’t impact licenses.",
+        "imageUrl": "https://images.code.org/a662ee5dc6d502fe4e877a52276d6681-Screenshot 2025-03-19 121526.png",
+        "key": "test-problem-solving-with-ai-lesson7-level3-2057d534-9113-4b3d-b50c-b5e87cf001ca",
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_v2-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:00.207+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson7-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson7-level1_2025\"}]"
+}]]></config>
+</Panels>

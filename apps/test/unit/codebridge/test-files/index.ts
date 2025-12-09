@@ -12,6 +12,7 @@ const predictLevelProperties: CodebridgeLevelProperties = require('./predictLeve
 const testProject: MultiFileSource = require('./project.json');
 const smallProject: MultiFileSource = require('./smallProject.json');
 const smallProjectSources: ProjectSources = require('./smallProjectSources.json');
+const smallProjectWithOutdatedFormat: MultiFileSource = require('./smallProjectWithOutdatedFormat.json');
 const starterFile: ProjectFile = require('./starterFile.json');
 const submittableLevelProperties: CodebridgeLevelProperties = require('./submittableLevelProperties.json');
 const supportFile: ProjectFile = require('./supportFile.json');
@@ -30,6 +31,7 @@ export {
   testProject,
   smallProject,
   smallProjectSources,
+  smallProjectWithOutdatedFormat,
   starterFile,
   submittableLevelProperties,
   supportFile,

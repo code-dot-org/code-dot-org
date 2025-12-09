@@ -72,11 +72,24 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should raise error if plc course is being launched' do
+    unit_group = create(:unit_group, family_name: 'plc')
+    unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
+    unit_group.save!
+
+    error = assert_raises do
+      unit_group.published_state = 'stable'
+      unit_group.save!
+    end
+
+    assert_includes error.message, 'Validation failed: Published state can never be pilot, preview or stable for a plc course.'
+  end
+
   test "should serialize to json" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
 
     serialization = unit_group.serialize
 
@@ -90,11 +103,11 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "should serialize resources to json" do
-    course_version = create :course_version
+    course_version = create(:course_version)
     unit_group = create(:unit_group, name: 'my-unit-group', course_version: course_version, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
@@ -110,9 +123,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
   test "can seed unit group from hash" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
-    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
 
     serialization = unit_group.serialize
     unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
@@ -242,8 +255,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
 
-    resource_to_update = create :resource, course_version: course_version
-    resource_to_delete = create :resource, course_version: course_version
+    resource_to_update = create(:resource, course_version: course_version)
+    resource_to_delete = create(:resource, course_version: course_version)
     unit_group.student_resources = [resource_to_update, resource_to_delete]
 
     serialization = unit_group.serialize
@@ -261,7 +274,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "stable?: true if unit_group has plc_course" do
-    unit_group = create :unit_group, family_name: 'plc'
+    unit_group = create(:unit_group, family_name: 'plc')
     unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
     unit_group.save
 
@@ -269,12 +282,12 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "stable?: true if unit_group has published_state of stable" do
-    unit_group = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit_group = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     assert unit_group.stable?
   end
 
   test "stable?: defaults to false if unit_group does not have published_state of stable" do
-    unit_group = create :unit_group
+    unit_group = create(:unit_group)
     refute unit_group.stable?
   end
 
@@ -284,7 +297,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "update original scripts" do
-      unit_group = create :unit_group
+      unit_group = create(:unit_group)
 
       unit1 = create(:script, name: 'unit1')
       unit2 = create(:script, name: 'unit2')
@@ -301,7 +314,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove original scripts" do
-      unit_group = create :unit_group
+      unit_group = create(:unit_group)
 
       create(:script, name: 'unit1')
       create(:script, name: 'unit2')
@@ -318,7 +331,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "change original unit group if a unit already has a unit group" do
-      unit_group1 = create :unit_group
+      unit_group1 = create(:unit_group)
 
       unit1 = create(:script, name: 'unit1')
       create(:script, name: 'unit2')
@@ -328,7 +341,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       unit1.reload
       assert_equal 2, unit_group1.original_units.length
 
-      unit_group2 = create :unit_group
+      unit_group2 = create(:unit_group)
       unit_group2.update_original_scripts(['unit1'])
       unit_group2.reload
       unit1.reload
@@ -343,7 +356,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "add UnitGroupUnits" do
-      unit_group = create :unit_group
+      unit_group = create(:unit_group)
 
       create(:script, name: 'unit1')
       create(:script, name: 'unit2')
@@ -360,7 +373,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test "add original unit if unit does not have original unit" do
       # Original unit group = the first unit group the unit was assigned
-      unit_group = create :unit_group
+      unit_group = create(:unit_group)
 
       unit1 = create(:script, name: 'unit1')
       unit2 = create(:script, name: 'unit2')
@@ -382,7 +395,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "do not add original unit group if a unit already has an original unit group" do
-      unit_group1 = create :unit_group
+      unit_group1 = create(:unit_group)
 
       unit1 = create(:script, name: 'unit1')
 
@@ -393,7 +406,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group1.original_units.length
       assert_equal unit_group1, unit1.original_unit_group
 
-      unit_group2 = create :unit_group
+      unit_group2 = create(:unit_group)
       unit_group2.update_scripts(['unit1'])
 
       unit_group2.reload
@@ -404,100 +417,18 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal unit_group1, unit1.original_unit_group
     end
 
-    test "set pilot experiment to nil for new UnitGroupUnits" do
-      unit_group = create :unit_group
-
-      unit1 = create(:script, name: 'unit1', published_state: 'pilot', pilot_experiment: 'unit-going-to-unit-group-pilot')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      assert_nil unit1.published_state
-      assert_nil unit1.pilot_experiment
-    end
-
-    test "set published state to nil for new UnitGroupUnits" do
-      unit_group = create :unit_group
-
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.published_state
-
-      unit1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-      unit2.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-      unit2.reload
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, unit1.published_state
-      assert_nil unit2.published_state
-    end
-
-    test "set instructor and participant audience to nil for new UnitGroupUnits" do
-      unit_group = create :unit_group
-
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-
-      unit2.update!(instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-    end
-
-    test "set instruction type to nil for new UnitGroupUnits" do
-      unit_group = create :unit_group
-
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instruction_type
-
-      unit2.update!(instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-      unit2.reload
-      assert_nil unit1.instruction_type
-      assert_nil unit2.instruction_type
-    end
-
     test "cannot remove UnitGroupUnits from their original course that cannot change course version" do
-      course_version = create :course_version
-      unit_group = create :unit_group, course_version: course_version
+      course_version = create(:course_version)
+      unit_group = create(:unit_group, course_version: course_version)
 
-      unit1 = create :script, name: 'unit1'
-      create :script, name: 'unit2'
+      unit1 = create(:script, name: 'unit1')
+      create(:script, name: 'unit2')
       unit_group.update_scripts(['unit1', 'unit2'])
 
-      lesson = create :lesson
-      resource = create :resource, course_version: course_version
+      lesson = create(:lesson)
+      resource = create(:resource, course_version: course_version)
       lesson.resources = [resource]
-      lesson_group = create :lesson_group, lessons: [lesson]
+      lesson_group = create(:lesson_group, lessons: [lesson])
       unit1.lesson_groups = [lesson_group]
 
       unit_group.reload
@@ -518,24 +449,11 @@ class UnitGroupTest < ActiveSupport::TestCase
         instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
         participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       )
-      unit1 = create(
-        :script,
-        name: 'unit1',
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-        instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      )
+      unit1 = create(:script, name: 'unit1')
       create(:script, name: 'unit2')
 
       unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit1.reload
-
-      assert_nil unit1.published_state
-      assert_nil unit1.instruction_type
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
+      assert_equal 2, unit_group.default_unit_group_units.length
 
       unit_group.update_scripts(['unit2'])
 
@@ -545,15 +463,12 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group.default_unit_group_units.length
       assert_equal 1, unit_group.default_unit_group_units[0].position
       assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
-      assert_equal unit1.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-      assert_equal unit1.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
-      assert_equal unit1.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
-      assert_equal unit1.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      assert_empty unit1.unit_groups
     end
 
     test "remove UnitGroupUnits from original unit group" do
-      original_unit_group = create :unit_group
-      new_unit_group = create :unit_group
+      original_unit_group = create(:unit_group)
+      new_unit_group = create(:unit_group)
       unit1 = create(:script, name: 'unit1')
       unit2 = create(:script, name: 'unit2')
 
@@ -586,18 +501,18 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove UnitGroupUnits that cannot change course version from secondary unit groups" do
-      course_version = create :course_version
-      original_unit_group = create :unit_group, course_version: course_version
-      new_unit_group = create :unit_group
+      course_version = create(:course_version)
+      original_unit_group = create(:unit_group, course_version: course_version)
+      new_unit_group = create(:unit_group)
 
-      unit1 = create :script, name: 'unit1'
+      unit1 = create(:script, name: 'unit1')
       original_unit_group.update_scripts(['unit1'])
       new_unit_group.update_scripts(['unit1'])
 
-      lesson = create :lesson
-      resource = create :resource, course_version: course_version
+      lesson = create(:lesson)
+      resource = create(:resource, course_version: course_version)
       lesson.resources = [resource]
-      lesson_group = create :lesson_group, lessons: [lesson]
+      lesson_group = create(:lesson_group, lessons: [lesson])
       unit1.lesson_groups = [lesson_group]
 
       original_unit_group.reload
@@ -607,93 +522,10 @@ class UnitGroupTest < ActiveSupport::TestCase
       new_unit_group.update_scripts([])
       assert_equal 0, new_unit_group.default_unit_group_units.length
     end
-
-    test "removed units have their published state instruction type participant audience and instructor audience reset" do
-      unit_group = create :unit_group
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit_group.reload
-      unit1.reload
-      unit2.reload
-
-      assert_nil unit1.published_state
-      assert_nil unit1.instruction_type
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-
-      assert_nil unit2.published_state
-      assert_nil unit2.instruction_type
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-
-      unit_group.update_scripts(['unit2'])
-
-      unit_group.reload
-      unit1.reload
-      unit2.reload
-
-      assert_equal unit_group.published_state, unit1.published_state
-      refute_nil unit1.published_state
-      assert_equal unit_group.instruction_type, unit1.instruction_type
-      refute_nil unit1.instruction_type
-      assert_equal unit_group.instructor_audience, unit1.instructor_audience
-      refute_nil unit1.instructor_audience
-      assert_equal unit_group.participant_audience, unit1.participant_audience
-      refute_nil unit1.participant_audience
-
-      assert_nil unit2.published_state
-      assert_nil unit2.instruction_type
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-    end
-
-    test "units with published state set independent of the unit group maintain that published state when removed" do
-      unit_group = create :unit_group
-      unit1 = create(:script, name: 'unit1')
-      unit2 = create(:script, name: 'unit2')
-
-      unit_group.update_scripts(['unit1', 'unit2'])
-
-      unit_group.reload
-      unit1.reload
-      unit2.reload
-
-      assert_nil unit1.published_state
-      assert_nil unit1.instruction_type
-      assert_nil unit1.instructor_audience
-      assert_nil unit1.participant_audience
-
-      assert_nil unit2.published_state
-      assert_nil unit2.instruction_type
-      assert_nil unit2.instructor_audience
-      assert_nil unit2.participant_audience
-
-      unit2.published_state = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
-      unit2.save!
-
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
-
-      unit_group.update_scripts(['unit1'])
-
-      unit_group.reload
-      unit2.reload
-
-      refute_equal unit_group.published_state, unit2.published_state
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
-      assert_equal unit_group.instruction_type, unit2.instruction_type
-      refute_nil unit2.instruction_type
-      assert_equal unit_group.instructor_audience, unit2.instructor_audience
-      refute_nil unit2.instructor_audience
-      assert_equal unit_group.participant_audience, unit2.participant_audience
-      refute_nil unit2.participant_audience
-    end
   end
 
   test "summarize" do
-    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit_group = create(:unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(unit_group)
 
     test_locale = :'te-ST'
@@ -732,7 +564,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources,
-                  :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :course_versions, :show_assign_button,
+                  :student_resources, :is_migrated, :has_verified_resources, :numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
@@ -754,11 +586,11 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'summarize with numbered units' do
-    unit_group = create :unit_group, name: 'my-unit-group'
+    unit_group = create(:unit_group, name: 'my-unit-group')
     unit1 = create(:script, name: 'unit1')
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit1)
+    ugu1 = create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit1)
     unit2 = create(:script, name: 'unit2')
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit2)
+    ugu2 = create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit2)
     unit1.reload
     unit2.reload
 
@@ -794,7 +626,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'unit2-title', unit_group.summarize[:scripts].last[:title]
     assert_equal 'unit2-title', unit2.summarize[:title]
 
-    unit_group.has_numbered_units = true
+    unit_group.numbered_units = 'auto'
     unit_group.save!
     unit_group.reload
 
@@ -803,23 +635,50 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert_equal 'Unit 2 - unit2-title', unit_group.summarize[:scripts].last[:title]
     assert_equal 'Unit 2 - unit2-title', unit2.summarize[:title]
+
+    unit_group.numbered_units = 'custom'
+    unit_group.save!
+    ugu1.update!(unit_prefix: '1a')
+    ugu2.update!(unit_prefix: '1b')
+    unit_group.reload
+    unit1.reload
+    unit2.reload
+
+    assert_equal 'Unit 1a - unit1-title', unit_group.summarize[:scripts].first[:title]
+    assert_equal 'Unit 1a - unit1-title', unit1.summarize[:title]
+
+    assert_equal 'Unit 1b - unit2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'Unit 1b - unit2-title', unit2.summarize[:title]
   end
 
   test 'summarize preprocesses markdown' do
-    course_offering = create :course_offering
-    course_version = create :course_version, course_offering: course_offering
-    resource = create :resource, course_version: course_version
-    vocab = create :vocabulary, course_version: course_version
+    course_offering = create(:course_offering)
+    course_version = create(:course_version, course_offering: course_offering)
+    resource = create(:resource, course_version: course_version)
+    vocab = create(:vocabulary, course_version: course_version)
 
     source = "We support [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource)}] resource links and [v #{Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}] vocabulary definitions"
     I18n.stubs(:t).returns(source)
 
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
-    unit_group = create :unit_group
+    unit_group = create(:unit_group)
     summary = unit_group.summarize
 
     assert_equal(expected, summary[:description_student])
     assert_equal(expected, summary[:description_teacher])
+  end
+
+  test 'summarize filters out embed_only resources' do
+    embed_only_resource = create(:resource, name: 'Embed Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    resource_dropdown_only_resource = create(:resource, name: 'Resource Dropdown Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value])
+    course_version = create(:course_version)
+    unit_group = create(:unit_group, name: 'my-unit-group', course_version: course_version, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    unit_group.resources = [embed_only_resource, resource_dropdown_only_resource]
+
+    summary = unit_group.summarize
+    assert_equal 1, summary[:teacher_resources].count
+    assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
   end
 
   test 'summarize_course_versions' do
@@ -864,21 +723,21 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       @unit_group = create(:unit_group, name: 'my-unit-group')
 
-      @course_teacher = create :teacher
-      @course_section = create :section, user: @course_teacher, unit_group: @unit_group
-      @other_teacher = create :teacher
-      @other_section = create :section, user: @other_teacher
-      @student = create :student
+      @course_teacher = create(:teacher)
+      @course_section = create(:section, user: @course_teacher, unit_group: @unit_group)
+      @other_teacher = create(:teacher)
+      @other_section = create(:section, user: @other_teacher)
+      @student = create(:student)
 
       @unit1 = create(:script, name: 'unit1')
       @unit2 = create(:script, name: 'unit2')
       @unit3 = create(:script, name: 'unit3')
 
-      create :unit_group_unit, unit_group: @unit_group, script: @unit1, position: 1
+      create(:unit_group_unit, unit_group: @unit_group, script: @unit1, position: 1)
 
-      @unit_group_unit = create :unit_group_unit, unit_group: @unit_group, script: @unit2, position: 2
+      @unit_group_unit = create(:unit_group_unit, unit_group: @unit_group, script: @unit2, position: 2)
 
-      create :unit_group_unit, unit_group: @unit_group, script: @unit3, position: 3
+      create(:unit_group_unit, unit_group: @unit_group, script: @unit3, position: 3)
     end
 
     test 'unit group unit test data is properly initialized' do
@@ -899,29 +758,29 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'returns nil for teacher' do
-      teacher = create :teacher
+      teacher = create(:teacher)
       assert_nil @csp_2017.redirect_to_course_url(teacher)
     end
 
     test 'returns nil for student assigned to this unit_group' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
-      section = create :section, unit_group: @csp_2017
-      student = create :student
+      section = create(:section, unit_group: @csp_2017)
+      student = create(:student)
       section.students << student
       assert_nil @csp_2017.redirect_to_course_url(student)
     end
 
     test 'returns nil for student not assigned to any unit_group' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
-      student = create :student
+      student = create(:student)
       assert_nil @csp_2017.redirect_to_course_url(student)
     end
 
     test 'returns link to latest assigned unit_group for student assigned to a unit_group in this family' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-      section = create :section, unit_group: csp_2018
-      student = create :student
+      section = create(:section, unit_group: csp_2018)
+      student = create(:student)
       section.students << student
       assert_equal csp_2018.link, @csp_2017.redirect_to_course_url(student)
     end
@@ -929,8 +788,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'returns nil if latest assigned unit_group is an older version than the current unit_group' do
       UnitGroup.any_instance.stubs(:can_view_version?).returns(true)
       csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
-      section = create :section, unit_group: @csp_2017
-      student = create :student
+      section = create(:section, unit_group: @csp_2017)
+      student = create(:student)
       section.students << student
       assert_nil csp_2018.redirect_to_course_url(student)
     end
@@ -940,22 +799,22 @@ class UnitGroupTest < ActiveSupport::TestCase
     setup do
       File.stubs(:write)
 
-      @student = create :student
-      @teacher = create :teacher
-      @facilitator = create :facilitator
-      @plc_reviewer = create :plc_reviewer
+      @student = create(:student)
+      @teacher = create(:teacher)
+      @facilitator = create(:facilitator)
+      @plc_reviewer = create(:plc_reviewer)
 
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       @csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['en-US', 'es-MX'])
-      create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
+      create(:unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1)
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       @csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['en-US'])
-      create :unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1
+      create(:unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1)
       create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019')
 
       @pl_csp_2017 = create(:unit_group, name: 'pl-csp-2017', family_name: 'pl-csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_csp1_2017 = create(:script, name: 'pl-csp1-2017')
-      create :unit_group_unit, unit_group: @pl_csp_2017, script: @pl_csp1_2017, position: 1
+      create(:unit_group_unit, unit_group: @pl_csp_2017, script: @pl_csp1_2017, position: 1)
       @pl_csp_2018 = create(:unit_group, name: 'pl-csp-2018', family_name: 'pl-csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @pl_csp_2019 = create(:unit_group, name: 'pl-csp-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
     end
@@ -1005,15 +864,15 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'student can view version if it is assigned to them' do
-      create :follower, section: create(:section, unit_group: @csp_2018), student_user: @student
-      create :follower, section: create(:section, unit_group: @csp_2017), student_user: @student
+      create(:follower, section: create(:section, unit_group: @csp_2018), student_user: @student)
+      create(:follower, section: create(:section, unit_group: @csp_2017), student_user: @student)
 
       assert @csp_2018.can_view_version?(@student)
       assert @csp_2017.can_view_version?(@student)
     end
 
     test 'student can view version if they have progress in it' do
-      create :user_script, user: @student, script: @csp1_2017
+      create(:user_script, user: @student, script: @csp1_2017)
       assert @csp_2017.can_view_version?(@student)
     end
   end
@@ -1023,21 +882,21 @@ class UnitGroupTest < ActiveSupport::TestCase
       File.stubs(:write)
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['fake-locale'])
-      create :unit_group_unit, unit_group: @csp_2017, script: csp1_2017, position: 1
+      create(:unit_group_unit, unit_group: @csp_2017, script: csp1_2017, position: 1)
       csp2_2017 = create(:script, name: 'csp2-2017', supported_locales: ['fake-locale'])
-      create :unit_group_unit, unit_group: @csp_2017, script: csp2_2017, position: 1
+      create(:unit_group_unit, unit_group: @csp_2017, script: csp2_2017, position: 1)
 
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
       csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['fake-locale'])
-      create :unit_group_unit, unit_group: @csp_2018, script: csp1_2018, position: 1
+      create(:unit_group_unit, unit_group: @csp_2018, script: csp1_2018, position: 1)
       csp2_2018 = create(:script, name: 'csp2-2018', supported_locales: [])
-      create :unit_group_unit, unit_group: @csp_2018, script: csp2_2018, position: 1
+      create(:unit_group_unit, unit_group: @csp_2018, script: csp2_2018, position: 1)
 
       @csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
       csp1_2019 = create(:script, name: 'csp1-2019', supported_locales: ['fake-locale'])
-      create :unit_group_unit, unit_group: @csp_2019, script: csp1_2019, position: 1
+      create(:unit_group_unit, unit_group: @csp_2019, script: csp1_2019, position: 1)
 
-      @student = create :student
+      @student = create(:student)
     end
 
     test 'latest_stable_version returns nil if course family does not exist' do
@@ -1057,7 +916,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'latest_assigned_version returns latest version in family assigned to student' do
-      create :follower, section: create(:section, unit_group: @csp_2017), student_user: @student
+      create(:follower, section: create(:section, unit_group: @csp_2017), student_user: @student)
       latest_assigned_version = UnitGroup.latest_assigned_version('csp', @student)
       assert_equal @csp_2017, latest_assigned_version
     end
@@ -1069,20 +928,20 @@ class UnitGroupTest < ActiveSupport::TestCase
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
       @csp2_2017 = create(:script, name: 'csp2-2017')
-      create :unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1
-      create :unit_group_unit, unit_group: @csp_2017, script: @csp2_2017, position: 1
+      create(:unit_group_unit, unit_group: @csp_2017, script: @csp1_2017, position: 1)
+      create(:unit_group_unit, unit_group: @csp_2017, script: @csp2_2017, position: 1)
 
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
       @csp1_2018 = create(:script, name: 'csp1-2018')
       @csp2_2018 = create(:script, name: 'csp2-2018')
-      create :unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1
-      create :unit_group_unit, unit_group: @csp_2018, script: @csp2_2018, position: 1
+      create(:unit_group_unit, unit_group: @csp_2018, script: @csp1_2018, position: 1)
+      create(:unit_group_unit, unit_group: @csp_2018, script: @csp2_2018, position: 1)
 
       @csd = create(:unit_group, name: 'csd')
       @csd1 = create(:script, name: 'csd1')
-      create :unit_group_unit, unit_group: @csd, script: @csd1, position: 1
+      create(:unit_group_unit, unit_group: @csd, script: @csd1, position: 1)
 
-      @student = create :student
+      @student = create(:student)
     end
 
     test 'validate test data' do
@@ -1097,7 +956,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'student with progress in unit_group has progress' do
-      create :user_script, user: @student, script: @csp1_2017
+      create(:user_script, user: @student, script: @csp1_2017)
 
       assert @csp_2017.has_progress?(@student)
       refute @csp_2018.has_progress?(@student)
@@ -1109,22 +968,22 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'student with progress in older course version has older version progress' do
-      create :user_script, user: @student, script: @csp1_2017
+      create(:user_script, user: @student, script: @csp1_2017)
 
       refute @csp_2017.has_older_version_progress?(@student)
       assert @csp_2018.has_older_version_progress?(@student)
     end
 
     test 'student with progress in both course versions has older version progress' do
-      create :user_script, user: @student, script: @csp1_2017
-      create :user_script, user: @student, script: @csp2_2018
+      create(:user_script, user: @student, script: @csp1_2017)
+      create(:user_script, user: @student, script: @csp2_2018)
 
       refute @csp_2017.has_older_version_progress?(@student)
       assert @csp_2018.has_older_version_progress?(@student)
     end
 
     test 'student with progress in other course family does not have older version progress' do
-      create :user_script, user: @student, script: @csd1
+      create(:user_script, user: @student, script: @csd1)
 
       refute @csp_2017.has_older_version_progress?(@student)
       refute @csp_2018.has_older_version_progress?(@student)
@@ -1132,35 +991,35 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'has pilot access' do
-    unit_group = create :unit_group
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment'
-    unit_in_pilot_unit_group = create :script
-    create :unit_group_unit, unit_group: pilot_unit_group, script: unit_in_pilot_unit_group, position: 1
+    unit_group = create(:unit_group)
+    pilot_unit_group = create(:unit_group, pilot_experiment: 'my-experiment')
+    unit_in_pilot_unit_group = create(:script)
+    create(:unit_group_unit, unit_group: pilot_unit_group, script: unit_in_pilot_unit_group, position: 1)
 
-    student = create :student
-    teacher = create :teacher
+    student = create(:student)
+    teacher = create(:teacher)
 
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
 
     # student in a pilot teacher's section which is assigned to a pilot unit group
-    pilot_section = create :section, user: pilot_teacher, unit_group: pilot_unit_group
+    pilot_section = create(:section, user: pilot_teacher, unit_group: pilot_unit_group)
     assigned_pilot_student = create(:follower, section: pilot_section).student_user
 
     # teacher in a pilot teacher's section, assigned to the unit group
-    teacher_in_section = create :teacher
+    teacher_in_section = create(:teacher)
     create(:follower, section: pilot_section, student_user: teacher_in_section)
 
     # student who has progress in a pilot unit group, but is not currently assigned to it
-    other_section = create :section, user: pilot_teacher, unit_group: pilot_unit_group
-    pilot_student_with_progress = create :student
+    other_section = create(:section, user: pilot_teacher, unit_group: pilot_unit_group)
+    pilot_student_with_progress = create(:student)
     create(:follower, section: other_section, student_user: pilot_student_with_progress)
-    create :user_script, user: pilot_student_with_progress, script: unit_in_pilot_unit_group
+    create(:user_script, user: pilot_student_with_progress, script: unit_in_pilot_unit_group)
 
     # student of pilot teacher, without assignment or progress
-    non_pilot_section = create :section, user: pilot_teacher
+    non_pilot_section = create(:section, user: pilot_teacher)
     student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
 
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
 
     refute unit_group.pilot?
     refute unit_group.has_pilot_access?
@@ -1186,11 +1045,11 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'has any pilot access' do
-    student = create :student
-    teacher = create :teacher
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    create :unit_group, pilot_experiment: 'my-experiment'
-    levelbuilder = create :levelbuilder
+    student = create(:student)
+    teacher = create(:teacher)
+    pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
+    create(:unit_group, pilot_experiment: 'my-experiment')
+    levelbuilder = create(:levelbuilder)
 
     refute UnitGroup.has_any_pilot_access?
     refute UnitGroup.has_any_pilot_access?(student)
@@ -1200,8 +1059,8 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'units_for_user' do
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
+    teacher = create(:teacher)
+    levelbuilder = create(:levelbuilder)
 
     csx = create(:unit_group, name: 'csx-2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     csx1 = create(:script, name: 'csx1')
@@ -1217,7 +1076,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
 
     csx1.update!(hide_within_course: true)
-    csx2.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     csx.reload
 
     assert_equal ['csx2', 'csx3'], csx.units_for_user(nil).map(&:name)
@@ -1250,26 +1108,26 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'single_unit_course' do
-    single_unit_course = create :single_unit_course
+    single_unit_course = create(:single_unit_course)
 
-    multi_unit_course = create :unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    multi_unit1 = create :script, name: 'multi-unit1'
-    multi_unit2 = create :script, name: 'multi-unit2'
-    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit1, position: 1
-    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit2, position: 2
+    multi_unit_course = create(:unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    multi_unit1 = create(:script, name: 'multi-unit1')
+    multi_unit2 = create(:script, name: 'multi-unit2')
+    create(:unit_group_unit, unit_group: multi_unit_course, script: multi_unit1, position: 1)
+    create(:unit_group_unit, unit_group: multi_unit_course, script: multi_unit2, position: 2)
 
     assert single_unit_course.single_unit_course?
     refute multi_unit_course.single_unit_course?
   end
 
   test 'first_unit' do
-    single_unit_course = create :single_unit_course
+    single_unit_course = create(:single_unit_course)
 
-    multi_unit_course = create :unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    multi_unit1 = create :script, name: 'multi-unit1'
-    multi_unit2 = create :script, name: 'multi-unit2'
-    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit1, position: 1
-    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit2, position: 2
+    multi_unit_course = create(:unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    multi_unit1 = create(:script, name: 'multi-unit1')
+    multi_unit2 = create(:script, name: 'multi-unit2')
+    create(:unit_group_unit, unit_group: multi_unit_course, script: multi_unit1, position: 1)
+    create(:unit_group_unit, unit_group: multi_unit_course, script: multi_unit2, position: 2)
 
     assert_equal single_unit_course.default_units.first, single_unit_course.first_unit
     assert_equal multi_unit_course.default_units.first, multi_unit_course.first_unit

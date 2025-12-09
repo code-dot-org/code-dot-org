@@ -17,7 +17,7 @@ type OpenNewFilePromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   newFolder: NewFolderFunction;
   projectFolders: MultiFileSource['folders'];
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openNewFolderPrompt = async ({
@@ -25,7 +25,7 @@ export const openNewFolderPrompt = async ({
   dialogControl,
   newFolder,
   projectFolders,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
@@ -44,5 +44,5 @@ export const openNewFolderPrompt = async ({
     parentId === DEFAULT_FOLDER_ID
       ? EVENTS.CODEBRIDGE_NEW_FOLDER
       : EVENTS.CODEBRIDGE_NEW_SUBFOLDER;
-  sendCodebridgeAnalyticsEvent(eventName);
+  sendLab2AnalyticsEvent(eventName);
 };

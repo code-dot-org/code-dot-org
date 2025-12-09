@@ -1,0 +1,18 @@
+name 'problem-solving-with-ai-lesson12-level1b_v2-2025'
+title 'AI in Medical Diagnosis'
+display_name 'AI In Medical Diagnosis'
+thumbnail_url 'https://images.code.org/afa58913c4b8c18bb94449e3ffaab06c-diagnosis.png'
+
+markdown <<MARKDOWN
+##AI In Medical Diagnosis
+Examine the following news articles, crafted by Code.org, but modeled after real world events.
+
+[Article 1](https://drive.google.com/file/d/1wfNLbxrRbXbB7Jo_bfJBnK9aEr7Of2o2/view?usp=sharing)
+
+[Article 2](https://drive.google.com/file/d/1svdYB9y4mZUHS6FLG4kWUsxXtoTLXRB2/view?usp=sharing)
+
+[Article 3](https://drive.google.com/file/d/1_bXIzllB-PSyOWvmNm58XI5mNdF8dzfu/view?usp=sharing)
+
+[Article 4](https://drive.google.com/file/d/17AXVN0GTpiVO08SAWDdIgltjfngiUJYS/view?usp=sharing)
+
+MARKDOWN

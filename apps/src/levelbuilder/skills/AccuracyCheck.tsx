@@ -1,13 +1,20 @@
 import Button from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
+import './skills.css';
 
 import {
   evaluationFromOpenAI,
   SkillBasedAIResponse,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
-import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiEvaluationTypes,
+  StudentWorkEvaluationStatus,
+} from '@cdo/generated-scripts/sharedConstants';
+
+import AccuracyDetails from './AccuracyDetails';
 
 type AIEvaluation = {
   aiEvaluation: string;
@@ -26,9 +33,13 @@ type EvaluatedExample = ExampleAnswer &
 
 type ExampleAnswer = {
   studentWork: string;
+  humanEvaluation?: string;
 };
 
-const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
+const AccuracyCheck: React.FC<{
+  levelId: number;
+  hasSkills: boolean;
+}> = ({levelId, hasSkills}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [studentAnswers, setStudentAnswers] = useState<ExampleAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -39,9 +50,37 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
   const datasetName = csvFile
     ? `${csvFile.name}-ai-evaluations.csv`
     : 'ai-evaluations.csv';
+  const [evaluateSkills, setEvaluateSkills] = useState<boolean>(false);
+
+  function renderStudentWorkEvaluationStatusCodes() {
+    return (
+      <span>
+        {Object.values(StudentWorkEvaluationStatus).map((status, idx) => (
+          <React.Fragment key={status}>
+            <code>{status}</code>
+            {idx < Object.values(StudentWorkEvaluationStatus).length - 1
+              ? ', '
+              : ''}
+          </React.Fragment>
+        ))}
+      </span>
+    );
+  }
 
   const downloadCSV = () => {
-    const csv = Papa.unparse(aiEvaluatedAnswers);
+    // Add humanEvaluation and evaluationsMatch to each row
+    const csvRows = aiEvaluatedAnswers.map(row => {
+      const humanEval = row.humanEvaluation || '';
+      const aiEval = row.aiEvaluation || '';
+      const evaluationsMatch =
+        humanEval && aiEval ? String(humanEval === aiEval) : '';
+      return {
+        ...row,
+        humanEvaluation: humanEval,
+        evaluationsMatch: evaluationsMatch,
+      };
+    });
+    const csv = Papa.unparse(csvRows);
     const csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');
@@ -63,7 +102,8 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
     const aiResponse = await evaluationFromOpenAI(
       example.studentWork,
       levelId,
-      AiEvaluationTypes.SINGLE_STUDENT
+      AiEvaluationTypes.SINGLE_STUDENT,
+      evaluateSkills
     );
     const parsedResponse = JSON.parse(aiResponse?.content || '{}');
     const evaluation: EvaluatedExample = {
@@ -71,6 +111,7 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
       aiEvaluation: parsedResponse?.aiEvaluation,
       aiReasoning: parsedResponse?.aiReasoning,
       evaluationCriteria: parsedResponse?.evaluationCriteria,
+      humanEvaluation: example.humanEvaluation,
     };
     if (parsedResponse?.skillEvaluations) {
       for (let i = 0; i < parsedResponse.skillEvaluations.length; i++) {
@@ -101,7 +142,9 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
     }
   };
 
-  const updateData = (result: {data: {studentWork: string}[]}) => {
+  const updateData = (result: {
+    data: {studentWork: string; humanEvaluation?: string}[];
+  }) => {
     if (result.data.length === 0) {
       alert('No data found in the CSV file.');
       return;
@@ -130,10 +173,24 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
       <h2>Check AI Evaluations</h2>
       <p>
         Upload a CSV of sample student solutions. The CSV should have a column
-        named `studentWork`. The AI will evaluate each student work sample, and
-        then you can download the results as a CSV file. Review the evaluations
-        and reasoning provided by the AI for each sample to see if they match
-        your expectations.
+        named <code>studentWork</code>. The AI will evaluate each student work
+        sample, and then you can download the results as a CSV file. Review the
+        evaluations and reasoning provided by the AI for each sample to see if
+        they match your expectations.
+        <br />
+        <br />
+        You can also add a column named <code>humanEvaluation</code> to provide
+        evaluations for the student work samples. Please use the rating system
+        that includes any of the following:{' '}
+        {renderStudentWorkEvaluationStatusCodes()}. The AI's evaluation will be
+        compared against the human evaluation, and you can see if they match in
+        the downloaded CSV.{' '}
+        <Link
+          text="Use this template to get started."
+          href="https://docs.google.com/spreadsheets/d/19UFD6mnsz_Lj7WcTgSzf5BEuDbIeo1qZvbzvADUlUbA/edit?usp=sharing"
+          openInNewTab={true}
+          size="s"
+        />
       </p>
       <p>
         If you find discrepancies, you can iterate by: editing evaluation
@@ -169,13 +226,32 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
         />
       </div>
       <br />
+      {hasSkills && (
+        <Checkbox
+          label={
+            'Evaluate skills (if not checked, you will get an overall evaluation based on completeness of the level instructions)'
+          }
+          name={'evaluateSkills'}
+          checked={evaluateSkills}
+          size="s"
+          onChange={e => setEvaluateSkills(e.target.checked)}
+        />
+      )}
+      <br />
+      <br />
       <div>
         <Button
           text="Download CSV"
           onClick={downloadCSV}
-          disabled={aiEvaluatedAnswers.length === 0}
+          disabled={aiEvaluatedAnswers.length === 0 || evaluationPending}
         />
       </div>
+      {aiEvaluatedAnswers.length > 0 && !evaluationPending && (
+        <div className="evaluation-complete-notification">
+          🎉 Evaluation complete
+          <AccuracyDetails evaluations={aiEvaluatedAnswers} />
+        </div>
+      )}
     </div>
   );
 };

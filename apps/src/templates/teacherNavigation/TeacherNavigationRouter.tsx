@@ -14,10 +14,12 @@ import {
   ScrollRestoration,
 } from 'react-router-dom';
 
-import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import AITutorAccessControls from '@cdo/apps/aiTutor/views/teacherDashboard/AITutorAccessControls';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
+import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -26,8 +28,10 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
 import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
+import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
   sectionProviderName,
@@ -74,7 +78,6 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  showAITutorTab: boolean;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -83,7 +86,6 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  showAITutorTab,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -95,13 +97,17 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
-  const sectionHasAITutor = React.useMemo(
-    () =>
-      selectedSection
-        ? selectedSection.courseVersionName?.includes('csa') ||
-          selectedSection.courseVersionName?.includes('aitutor')
-        : false,
-    [selectedSection]
+  // TODO-AICHAT-PERMISSIONS: Update `!!selectedSection` to be whether there are any ai chat tools
+  // (essential or optional) in the curriculum assigned to the section.
+  const curriculumUsesAiChatTools = !!selectedSection;
+  const aiChatPermissionsExperimentActive =
+    experiments.isEnabledAllowingQueryString(
+      experiments.AI_CHAT_NEW_PERMISSIONS
+    );
+
+  const showAiChatSettings = React.useMemo(
+    () => aiChatPermissionsExperimentActive && curriculumUsesAiChatTools,
+    [aiChatPermissionsExperimentActive, curriculumUsesAiChatTools]
   );
 
   const studentCount = useAppSelector(
@@ -141,7 +147,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div className={styles.pageAndSidebar}>
-                <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                <TeacherNavigationBar showAiChatSettings={showAiChatSettings} />
                 <ScrollRestoration />
                 <Outlet />
               </div>
@@ -225,9 +231,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     <GlobalEditionWrapper
                       component={SectionProgressSelector}
                       componentId="SectionProgressSelector"
-                      props={{
-                        isInV1Navigaton: false,
-                      }}
+                      props={{}}
                     />
                   }
                 />
@@ -295,6 +299,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
+            {experiments.isEnabled('student_snapshot') && (
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
+                element={<StudentSnapshot />}
+              />
+            )}
             <Route
               path={TEACHER_NAVIGATION_PATHS.settings}
               element={
@@ -320,15 +330,15 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               }
             />
             <Route
-              path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+              path={TEACHER_NAVIGATION_PATHS.aiChatSettings}
               element={
-                showAITutorTab && sectionHasAITutor ? (
+                showAiChatSettings ? (
                   <ElementOrEmptyPage
                     showNoStudents={studentCount === 0}
                     showNoCurriculumAssigned={false}
-                    element={applyV1TeacherDashboardWidth(
-                      <TutorTab sectionId={sectionId || 0} />
-                    )}
+                    element={
+                      <AITutorAccessControls sectionId={sectionId || 0} />
+                    }
                   />
                 ) : (
                   <Navigate
@@ -338,6 +348,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 )
               }
             />
+            {DCDO.get('skills-dashboard', false) && (
+              <Route
+                path={TEACHER_NAVIGATION_PATHS.skills}
+                element={<SkillsDashboard />}
+              />
+            )}
           </Route>
         </Route>
       </Route>
@@ -348,10 +364,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       studentCount,
       providerName,
       anyStudentHasProgress,
-      showAITutorTab,
+      showAiChatSettings,
       selectedSection,
       studioUrlPrefix,
-      sectionHasAITutor,
     ]
   );
 

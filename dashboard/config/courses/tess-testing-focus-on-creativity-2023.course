@@ -14,7 +14,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "tess-testing-focus-on-creativity",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2023"
   },
   "resources": [

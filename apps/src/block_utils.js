@@ -482,7 +482,7 @@ const determineInputs = function (text, args, strictTypes = []) {
       }
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
-      if (arg.options) {
+      if (arg.options && !arg.customInput) {
         mode = DROPDOWN_INPUT;
       } else if (arg.field) {
         mode = FIELD_INPUT;
@@ -1112,6 +1112,12 @@ exports.installCustomBlocks = function ({
   blockDefinitions,
   customInputTypes,
 }) {
+  // Retain information about custom blocks and input types
+  blockly.SourceCustomInputTypes = {
+    ...(blockly.SourceCustomInputTypes || {}),
+    ...(customInputTypes || {}),
+  };
+
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
     [
@@ -1125,11 +1131,11 @@ exports.installCustomBlocks = function ({
   );
 
   const blocksByCategory = {};
-  blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
+  blockDefinitions.forEach(info => {
+    const {name, pool, category, config, helperCode} = info;
     const blockName = createJsWrapperBlock(config, helperCode, pool);
-    if (!blocksByCategory[category]) {
-      blocksByCategory[category] = [];
-    }
+    blockly.SourceCustomBlocks.blockDefinitionsByName[blockName] = info;
+    blocksByCategory[category] ||= [];
     blocksByCategory[category].push(blockName);
     if (name && blockName !== name) {
       console.error(
