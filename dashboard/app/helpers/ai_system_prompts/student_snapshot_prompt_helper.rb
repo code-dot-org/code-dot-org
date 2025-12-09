@@ -15,7 +15,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     #{general_prompt}"
   end
 
-  private def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
+  def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
     lesson_info = "Lesson Name: ___
     Lesson Overview: ___
     Learning Objectives: ___
