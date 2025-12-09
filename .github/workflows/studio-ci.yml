@@ -24,4 +24,4 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: Dryrun Release
-        run: yarn release:dryrun --filter @code-dot-org/studio
+        run: pnpm --filter @code-dot-org/studio release:dryrun
