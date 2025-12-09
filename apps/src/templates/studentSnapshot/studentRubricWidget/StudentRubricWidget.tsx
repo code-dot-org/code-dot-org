@@ -162,6 +162,7 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
       widgetName="Rubric"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
+      scrollable
     >
       <LearningGoals
         productTour={false}

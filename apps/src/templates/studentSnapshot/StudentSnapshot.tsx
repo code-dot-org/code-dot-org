@@ -71,7 +71,7 @@ const StudentSnapshot: React.FC = () => {
       <div className={styles.widgetGrid}>
         {selectedLessonId && (
           <StudentRubricWidget
-            gridWidth={3}
+            gridWidth={2}
             gridHeight={2}
             lessonId={selectedLessonId}
             studentId={HARDCODED_STUDENT_ID}
