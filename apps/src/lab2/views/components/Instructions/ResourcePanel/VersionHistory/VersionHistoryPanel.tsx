@@ -178,7 +178,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     previewViewAsUserId.current = viewAsUserId;
   }, [loadVersionList, levelId, viewAsUserId]);
 
-  // Reload version history list when tab becomes active and list is stale.
+  // Reload version history list when tab becomes active.
   useEffect(() => {
     if (isOpen) {
       loadVersionList(true);
