@@ -94,7 +94,7 @@ export const openImportFromBackpackPrompt = async ({
           ' ' +
           codebridgeI18n.closeWindowTryAgain(),
         'Backpack file fetch error'
-      );
+      )(response instanceof Error ? response : undefined);
       return;
     }
     let fileContent = '';
@@ -115,7 +115,7 @@ export const openImportFromBackpackPrompt = async ({
             ' ' +
             codebridgeI18n.closeWindowTryAgain(),
           'Backpack could not upload image file to assets channel'
-        );
+        )(error as Error);
         return;
       }
       url = uploadUrl;
