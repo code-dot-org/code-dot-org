@@ -14,7 +14,7 @@ module Brakeman
       def run_check
         # Find all exists? calls using the same API as CheckSQL
         calls = tracker.find_call(:methods => [:exists?], :nested => true)
-        
+
         calls.each do |result|
           process_result(result)
         end
@@ -22,17 +22,17 @@ module Brakeman
 
       def process_result(result)
         return if duplicate?(result)
-        
+
         call = result[:call]
         return unless call
-        
+
         # Get the first argument
         first_arg = call.first_arg
         return unless first_arg
-        
+
         # Skip if it's a hash (safe pattern: exists?(id: params[:id]))
         return if hash?(first_arg)
-        
+
         # Check if argument is params access
         if params_access?(first_arg)
           warn_unsafe_exists(result, call)
@@ -41,7 +41,7 @@ module Brakeman
 
       def params_access?(exp)
         return false unless exp.is_a?(Sexp)
-        
+
         case exp.node_type
         when :call
           # Check if this is a sanitization method (safe)
@@ -51,31 +51,31 @@ module Brakeman
             # This is a sanitization call - it's safe, return false
             return false
           end
-          
+
           # Check if this is a call on params
           # params[:key] = s(:call, s(:params), :[], s(:lit, :key))
           # The target is s(:params) which has node_type == :params
           target = exp.target
-          
+
           # Check if target is params (s(:params) has node_type :params)
-          if target && target.is_a?(Sexp) && target.node_type == :params
+          if target&.is_a?(Sexp) && target.node_type == :params
             return true
           end
-          
+
           # Also check for params variable (lvar: s(:lvar, :params))
-          if target && target.is_a?(Sexp) && target.node_type == :lvar && target.value == :params
+          if target&.is_a?(Sexp) && target.node_type == :lvar && target.value == :params
             return true
           end
-          
+
           # Check for chained calls (but sanitization methods already handled above)
-          if target && target.is_a?(Sexp)
+          if target&.is_a?(Sexp)
             return params_access?(target)
           end
         when :lvar
           # Direct params variable reference
           return true if exp.value == :params
         end
-        
+
         false
       end
 
