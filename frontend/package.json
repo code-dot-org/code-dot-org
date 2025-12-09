@@ -21,6 +21,7 @@
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",
+    "clean:deps": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "dev": "turbo watch dev --filter @code-dot-org/studio",
     "format": "prettier --check *",
     "format:fix": "prettier --write .",
