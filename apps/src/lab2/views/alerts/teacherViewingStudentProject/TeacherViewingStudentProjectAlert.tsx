@@ -7,14 +7,10 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './teacherViewingStudentProjectAlert.module.scss';
 
-type TeacherViewingStudentProjectAlertProps = {
-  /** Student ID being viewed by the teacher */
-  viewAsUserId: number | null;
-};
+const TeacherViewingStudentProjectAlert: React.FC = () => {
+  // Get the user ID of the student whose project is being viewed.
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
-const TeacherViewingStudentProjectAlert: React.FC<
-  TeacherViewingStudentProjectAlertProps
-> = ({viewAsUserId}) => {
   // Get the list of students in the selected section.
   const studentsInSection = useAppSelector(
     state => state.teacherSections.selectedStudents
