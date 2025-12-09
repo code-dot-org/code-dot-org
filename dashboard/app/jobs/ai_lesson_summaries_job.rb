@@ -12,19 +12,19 @@ class AiLessonSummariesJob < ApplicationJob
     user = User.find_by(id: user_id)
     next unless user
 
-    # Just using first section, probably need to find the section with the unit.
-    section = user.sections.first
+    unit_id = request[:unit_id]
+    section = user.sections.where(script_id: unit_id).first || user.sections.first
 
     TeacherNotification.create!(
       user_id: user_id,
       title: 'AI Lesson Summaries ready to view',
       description: "The lesson summaries for #{lesson_ids.size} lessons have been generated and are now available.",
-      icon_name: 'book-open',
+      icon_name: 'solid-flask-sparkle',
       icon_color: 'Aqua',
       href_links: [{text: 'View lesson materials',
                    url: "/teacher_dashboard/sections/#{section.id}/lesson_materials"}],
     )
-    puts 'lfm notification created'
+    puts 'lfm notification created', section.name
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly.

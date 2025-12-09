@@ -25,7 +25,8 @@ class AiLessonSummariesController < ApplicationController
     end
     request = {
       user_id: current_user.id,
-      lesson_ids: lesson_ids
+      lesson_ids: lesson_ids,
+      unit_id: unit.id
     }
     AiLessonSummariesJob.perform_later(request: request)
   end
@@ -35,7 +36,8 @@ class AiLessonSummariesController < ApplicationController
     if lesson.has_lesson_plan
       request = {
         user_id: current_user.id,
-        lesson_ids: [lesson.id]
+        lesson_ids: [lesson.id],
+        unit_id: params[:unit_id]
       }
       AiLessonSummariesJob.perform_later(request: request)
     end
