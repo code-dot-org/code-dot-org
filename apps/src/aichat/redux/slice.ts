@@ -189,6 +189,9 @@ const aichatSlice = createSlice({
       if (!event) return;
       Object.assign(event, action.payload);
     },
+    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
+      state.hasSentMessage = action.payload;
+    },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
@@ -434,6 +437,7 @@ export const {
   addEventToChatEventsCurrent,
   startSave,
   updateChatMessage,
+  setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
