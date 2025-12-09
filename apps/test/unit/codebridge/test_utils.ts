@@ -103,6 +103,16 @@ export const getBackpackAPIMock = (
     fetchFile: jest.fn((filename, onError, onSuccess) => {
       onSuccess(`Mock contents of backpack file ${filename}`);
     }),
+    fetchFileResponse: jest.fn(async (filename: string) => {
+      return Promise.resolve({
+        headers: {
+          get: jest.fn().mockReturnValue('text/plain'),
+        },
+        text: async () => {
+          return Promise.resolve(`Mock contents of backpack file ${filename}`);
+        },
+      });
+    }),
     getFileList: jest.fn((onError, onSuccess) => {
       onSuccess(fileList);
     }),
