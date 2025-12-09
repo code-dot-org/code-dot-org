@@ -24,19 +24,19 @@ jobs:
               working-directory: ./frontend/apps/design-system-storybook
 
             - name: Build
-              run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+              run: pnpm build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: Lint
-              run: yarn lint --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+              run: pnpm lint --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: Unit Tests
-              run: yarn test --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+              run: pnpm test --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: UI Tests
-              run: yarn test:ui:ci --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
+              run: pnpm test:ui:ci --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: Upload static files as pages artifact
@@ -66,13 +66,13 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: Build
-        run: yarn build --filter @code-dot-org/design-system-storybook
+        run: pnpm build --filter @code-dot-org/design-system-storybook
         working-directory: ./frontend
 
       - name: Eyes Tests
         id: eyes
         run: |
-          EYES_REPORT=$(COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn eyes-storybook)
+          EYES_REPORT=$(COREPACK_ENABLE_DOWNLOAD_PROMPT=0 pnpm eyes-storybook)
           echo "$EYES_REPORT"
           # Send multiline report to environment var
           echo "EYES_REPORT<<EOF" >> $GITHUB_OUTPUT

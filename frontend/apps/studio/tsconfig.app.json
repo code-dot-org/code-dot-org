@@ -1,6 +1,7 @@
 {
   "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
   "compilerOptions": {
+    "types": ["vite/client"],
     "baseUrl": "."
   },
   "include": ["src", "entrypoints"]

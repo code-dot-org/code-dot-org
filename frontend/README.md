@@ -1,70 +1,73 @@
-# Code.org Learning Platform Frontend
+# Code.org
 
-This directory contains packages and applications that power Code.org sites.
+Welcome! You've found the source code for [the Code.org website](https://code.org/) and [the Code Studio platform](https://studio.code.org/). Code.org is a non-profit dedicated to expanding access to computer science education. You can read more about our efforts at [code.org/about](https://code.org/about).
 
-**Note**: Most of Code.org's Studio product (student experience, curriculum, teacher tools, etc.) is built in the
-top-level `apps` package and is not currently located in this directory. For the marketing sites application, go to the [code-dot-org/marketing-sites repo](https://github.com/code-dot-org/marketing-sites).
+## Quick start
 
-## What's inside?
+1. Follow our [setup guide](./SETUP.md) to configure your workstation.
+2. `rake build` to build the application if you have not done so already
+3. `bin/dashboard-server` to launch the development server.
+4. Open your browser to [http://localhost-studio.code.org:3000/](http://localhost-studio.code.org:3000/).
 
-This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and uses the following package structure:
+To see a list of all build commands, run `rake` from the repository root.
 
-- `apps`: Applications or services (Contentful CMS, Storybook, etc.)
-- `packages`: Libraries, build tools, configurations (Shared linter configs, component library, etc.)
+## How to help
 
-### Apps
+Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md).
 
-Open source Code.org applications:
+## What's in this repo?
+Here's a quick overview of the major landmarks:
 
-- [@code-dot-org/studio](apps/studio): An experimental Vite-based shell application for the learning platform.
-- [@code-dot-org/design-system-storybook](apps/design-system-storybook): A [Storybook](https://storybook.js.org/)
-  instance for the Code.org design system (`@code-dot-org/component-library`). Publicly available at
-  [https://code-dot-org.github.io/code-dot-org/component-library-storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook).
+### Documentation
 
-### Packages
+* [ARCHITECTURE](./ARCHITECTURE.md): in particular please review and adhere to our [Architectural Tenets](ARCHITECTURE.md#architectural-tenets).
+* [SETUP](./SETUP.md): Instructions to get everything up and running.
+* [TESTING](./TESTING.md): How to be sure nothing broke.
+* [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
+* Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
+* There are many more topical guides in the [docs](./docs) folder.
+* In addition, several sections of the repository have their own documentation:
+  * [apps/README](./apps/README.md)
+  * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
 
-Publicly available packages:
+### [dashboard](./dashboard)
 
-- [@code-dot-org/component-library](packages/component-library): The Code.org Design System React component library.
-- [@code-dot-org/component-library-styles](packages/component-library-styles): Common Styles
-  (`variables`, `colors`, `mixins`, `typography styles`, etc) of Code.org Design System
-  ([@code-dot-org/component-library](packages/component-library)). Based on [Figma](https://www.figma.com/design/NIVcvUgU3WmXpAmp9U2vVy/DSCO-Variables?node-id=2925-33951&m=dev).
-  Used by [@code-dot-org/component-library](packages/component-library), should also be used as
-  a standalone package for styling components with Code.org's Design System styles.
-- [@code-dot-org/lint-config](packages/lint-config): Shared linters configuration for Code.org projects
-  (includes `eslint`, `lint-staged,` `prettier`, `stylelint`, `typescript` configs).
-- [@code-dot-org/fonts](packages/fonts): Code.org's Design System fonts package.
-- [@code-dot-org/changelogs](packages/changelogs): [Release-it](https://github.com/release-it/release-it)
-  configuration for changelogs automatic generation, package versioning, and publishing.
+The server for our [**Code Studio** learning platform](https://studio.code.org/), a [Ruby on Rails](http://rubyonrails.org/) application responsible for:
 
-## Getting Started
+* Our courses, tutorials, and puzzle configurations
+* User accounts
+* Student progress and projects
+* The "levelbuilder" content creation tools
 
-_(!!!)_ If you're unable to find some information in this README.md, please refer to the documentation of package/app
-that you're working on. (e.g. go to [packages/component-library/README.md](packages/component-library/README.md),
-[apps/studio/README.md](apps/studio/README.md), etc)
+### [pegasus](./pegasus)
 
-### Prerequisites
+The server for [the **Code.org** website](https://code.org/), a [Sinatra](http://www.sinatrarb.com/) application responsible for:
 
-Ensure that [corepack](https://nodejs.org/api/corepack.html) is enabled.
+* [code.org](https://code.org)
+* [hourofcode.com](https://hourofcode.com)
+* [csedweek.org](https://csedweek.org)
 
-```bash
-corepack enable
-```
+### [apps](./apps)
 
-Initialize the frontend package:
+The JavaScript 'engine' for all of our tutorials, puzzle types and online tools.  It gets built into a static package that we serve through dashboard. Though there are currently some exceptions, the goal is that all JS code ultimately lives here, so that it gets the benefit of linting/JSX/ES6/etc.
+Start here if you are looking for:
+* The Hour of Code tutorials: [Star Wars](https://code.org/starwars), [Minecraft](https://studio.code.org/api/hour/begin/mc), [Frozen](https://studio.code.org/s/frozen) and [Classic Maze](http://studio.code.org/hoc/1)
+* Tools like [Artist](https://studio.code.org/projects/artist), [Play Lab](https://studio.code.org/projects/playlab) and [App Lab](https://code.org/educate/applab)
+* Other core puzzle types: Maze, Farmer, Bee, Bounce, Calc, Eval
+* Other JS code consumed by dashboard and pegasus.
 
-```bash
-yarn install
-```
+### Everything else
 
-### Build
-
-Turborepo will automatically detect changed sub-directories and appropriately cache to avoid duplicate work.
+* **aws**: Configuration and scripts that manage our deployments.
+* **bin**: Developer utilities.
+* **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
+* **shared**: Source and assets used by many parts of our application.
+* **tools**: Git commit hooks.
 
 To build all apps and packages, run the following command:
 
 ```bash
-yarn build
+pnpm build
 ```
 
 ### Develop
@@ -72,7 +75,7 @@ yarn build
 To develop on the **studio** application, run in the `frontend` directory
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Changing any monorepo managed dependencies (such as labs) will automatically trigger a rebuild and be made
@@ -83,17 +86,13 @@ available to the persistent dev server using Turborepo's watch feature.
 To format all files in all packages and apps, run the following command:
 
 ```bash
-yarn lint:fix
+pnpm lint:fix
 ```
 
-You can also run this command for some specific package or app using yarn workspace:
+You can also run this command for some specific package or app:
 
 ```bash
-yarn lint:fix --filter @code-dot-org/component-library
-
-OR
-
-yarn workspace @code-dot-org/component-library lint:fix
+pnpm --filter @code-dot-org/component-library lint:fix 
 ```
 
 ### Pre-release Testing
@@ -101,7 +100,7 @@ yarn workspace @code-dot-org/component-library lint:fix
 To run all tests that the pull-request quality checks do:
 
 ```bash
-yarn release:dryrun
+pnpm release:dryrun
 ```
 
 This command executes all lint, test, and build commands.
@@ -120,7 +119,7 @@ copy it from `frontend/.env.example`)
 To run the visual tests:
 
 ```bash
-yarn workspace @code-dot-org/design-system-storybook eyes-storybook
+pnpm --filter @code-dot-org/design-system-storybook eyes-storybook
 ```
 
 If differences are detected, follow the [baseline update](https://applitools.com/docs/topics/overview/overview-reviewing-test-results.html) guide to resolve.
@@ -130,5 +129,11 @@ If differences are detected, follow the [baseline update](https://applitools.com
 To remove build artifacts, use the following commmand:
 
 ```bash
-yarn clean
+pnpm clean
+```
+
+To remove all installed `node_modules`, use the following command:
+
+```bash
+pnpm clean:deps
 ```

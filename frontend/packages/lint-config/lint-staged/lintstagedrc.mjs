@@ -1,4 +1,5 @@
-export const DEFAULT_EXTENSIONS_GLOB = '*.{js,cjs,mjs,ts,jsx,tsx,json,md}';
+export const DEFAULT_EXTENSIONS_GLOB = '*.{js,cjs,mjs,ts,jsx,tsx}';
+export const PRETTIER_EXTENSIONS_GLOB = '*.{json,md}';
 
 function prettierFix(files) {
   return `prettier --write ${files}`;
@@ -13,12 +14,21 @@ function stylelintFix(files) {
 }
 
 /**
- * Auto-fix JS, JSON, and Markdown
+ * Auto-fix JS
  */
 export function defaultLintFix(stagedFiles) {
   const files = stagedFiles.join(' ');
 
   return [eslintFix(files), prettierFix(files)];
+}
+
+/**
+ * Auto-fix JSON and Markdown
+ */
+export function prettierLintFix(stagedFiles) {
+  const files = stagedFiles.join(' ');
+
+  return [prettierFix(files)];
 }
 
 /**
@@ -35,5 +45,6 @@ export function cssLintFix(stagedFiles) {
  */
 export default {
   [`**/${DEFAULT_EXTENSIONS_GLOB}`]: defaultLintFix,
+  [`**/${PRETTIER_EXTENSIONS_GLOB}`]: prettierLintFix,
   '**/*.{css,sass,scss}': cssLintFix,
 };

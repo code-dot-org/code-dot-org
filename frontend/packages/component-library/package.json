@@ -15,7 +15,9 @@
     "directory": "frontend/packages/component-library"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./accordion": {
@@ -107,6 +109,103 @@
       },
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
+    },
+    "./cms/editorialCard": {
+      "types": {
+        "import": "./dist/esm/cms/editorialCard/index.d.ts",
+        "require": "./dist/cjs/cms/editorialCard/index.d.ts"
+      },
+      "import": "./dist/esm/cms/editorialCard/index.mjs",
+      "require": "./dist/cjs/cms/editorialCard/index.js"
+    },
+    "./cms/footer": {
+      "types": {
+        "import": "./dist/esm/cms/footer/index.d.ts",
+        "require": "./dist/cjs/cms/footer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/footer/index.mjs",
+      "require": "./dist/cjs/cms/footer/index.js"
+    },
+    "./cms/header": {
+      "types": {
+        "import": "./dist/esm/cms/header/index.d.ts",
+        "require": "./dist/cjs/cms/header/index.d.ts"
+      },
+      "import": "./dist/esm/cms/header/index.mjs",
+      "require": "./dist/cjs/cms/header/index.js"
+    },
+    "./cms/heroBanner": {
+      "types": {
+        "import": "./dist/esm/cms/heroBanner/index.d.ts",
+        "require": "./dist/cjs/cms/heroBanner/index.d.ts"
+      },
+      "import": "./dist/esm/cms/heroBanner/index.mjs",
+      "require": "./dist/cjs/cms/heroBanner/index.js"
+    },
+    "./cms/iconHighlight": {
+      "types": {
+        "import": "./dist/esm/cms/iconHighlight/index.d.ts",
+        "require": "./dist/cjs/cms/iconHighlight/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iconHighlight/index.mjs",
+      "require": "./dist/cjs/cms/iconHighlight/index.js"
+    },
+    "./cms/iframe": {
+      "types": {
+        "import": "./dist/esm/cms/iframe/index.d.ts",
+        "require": "./dist/cjs/cms/iframe/index.d.ts"
+      },
+      "import": "./dist/esm/cms/iframe/index.mjs",
+      "require": "./dist/cjs/cms/iframe/index.js"
+    },
+    "./cms/section": {
+      "types": {
+        "import": "./dist/esm/cms/section/index.d.ts",
+        "require": "./dist/cjs/cms/section/index.d.ts"
+      },
+      "import": "./dist/esm/cms/section/index.mjs",
+      "require": "./dist/cjs/cms/section/index.js"
+    },
+    "./cms/section/index.css": "./dist/esm/cms/section/index.css",
+    "./cms/skinnyBanner": {
+      "types": {
+        "import": "./dist/esm/cms/skinnyBanner/index.d.ts",
+        "require": "./dist/cjs/cms/skinnyBanner/index.d.ts"
+      },
+      "import": "./dist/esm/cms/skinnyBanner/index.mjs",
+      "require": "./dist/cjs/cms/skinnyBanner/index.js"
+    },
+    "./cms/snapshot": {
+      "types": {
+        "import": "./dist/esm/cms/snapshot/index.d.ts",
+        "require": "./dist/cjs/cms/snapshot/index.d.ts"
+      },
+      "import": "./dist/esm/cms/snapshot/index.mjs",
+      "require": "./dist/cjs/cms/snapshot/index.js"
+    },
+    "./cms/spacer": {
+      "types": {
+        "import": "./dist/esm/cms/spacer/index.d.ts",
+        "require": "./dist/cjs/cms/spacer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/spacer/index.mjs",
+      "require": "./dist/cjs/cms/spacer/index.js"
+    },
+    "./cms/tabGroup": {
+      "types": {
+        "import": "./dist/esm/cms/tabGroup/index.d.ts",
+        "require": "./dist/cjs/cms/tabGroup/index.d.ts"
+      },
+      "import": "./dist/esm/cms/tabGroup/index.mjs",
+      "require": "./dist/cjs/cms/tabGroup/index.js"
+    },
+    "./cms/testimonial": {
+      "types": {
+        "import": "./dist/esm/cms/testimonial/index.d.ts",
+        "require": "./dist/cjs/cms/testimonial/index.d.ts"
+      },
+      "import": "./dist/esm/cms/testimonial/index.mjs",
+      "require": "./dist/cjs/cms/testimonial/index.js"
     },
     "./common/constants": {
       "types": {
@@ -392,9 +491,9 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
-    "start": "yarn dev",
+    "start": "pnpm dev",
     "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
+    "stylelint:fix": "pnpm run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
@@ -414,11 +513,13 @@
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@release-it/conventional-changelog": "^10.0.0",
+    "@storybook/react-webpack5": "^9.0.18",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.6.1",
     "@types/identity-obj-proxy": "^3",
     "@types/jest": "^29.5.14",
     "@types/lodash": "^4",
@@ -443,6 +544,7 @@
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",
     "shadow-dom-testing-library": "^1.13.1",
+    "storybook": "^9.0.18",
     "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsc-alias": "^1.8.11",
