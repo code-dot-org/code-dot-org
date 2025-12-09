@@ -1,7 +1,7 @@
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 // Overrides styles for the Alert component to
-// make it fit better in the Workspace area
+// make it fit better in the workspace area
 .alertBanner {
   border-bottom: variables.$default-border;
   border-radius: 0;

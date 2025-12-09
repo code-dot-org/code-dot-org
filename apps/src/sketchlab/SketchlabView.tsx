@@ -206,7 +206,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  // Determine if a teacher is viewing a student's project in read-only mode.
+  // Get whether a teacher is viewing a student's project in read-only mode.
+  // Used to render the TeacherViewingStudentProjectAlert.
   const {viewAsUserId, teacherViewingStudent} = useTeacherViewingStudent();
 
   return (

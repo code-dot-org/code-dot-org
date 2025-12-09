@@ -8,6 +8,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import moduleStyles from './teacherViewingStudentProjectAlert.module.scss';
 
 type TeacherViewingStudentProjectAlertProps = {
+  /** Student ID being viewed by the teacher */
   viewAsUserId: number | null;
 };
 
