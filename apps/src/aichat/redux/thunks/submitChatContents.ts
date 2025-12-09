@@ -4,6 +4,7 @@ import {
   addEventToChatEventsCurrent,
   clearStagedFiles,
   clearUserAddedSelectionContext,
+  setChatMessageSent,
   updateChatMessage,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -164,6 +165,9 @@ export const submitChatContents = createAsyncThunk(
         modelParameters,
         aichatContext
       );
+
+      dispatch(setChatMessageSent(true));
+
       // In milliseconds
       const responseTime = Date.now() - startTime;
       dispatch(
