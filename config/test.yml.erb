@@ -99,7 +99,8 @@ use_geolocation_override: true
 <% if ENV['CI'] -%>
 
 # Config shared by ui and unit pipelines. Drone cannot access secrets directly,
-# so we pass them through environment variables.
+# so we pass them through environment variables. Secret variables are set
+# via the drone UI and some non-secret variabels are set in prepare_ci_env.sh.
 
 build_apps: true
 build_dashboard: true
