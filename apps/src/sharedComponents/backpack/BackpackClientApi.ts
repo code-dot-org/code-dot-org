@@ -51,6 +51,7 @@ export default class BackpackClientApi {
     });
   }
 
+  // Fetch a file from the backpack, and return the file contents via callback (or call onError on failure).
   async fetchFile(
     filename: string,
     onError: ErrorCallback,
