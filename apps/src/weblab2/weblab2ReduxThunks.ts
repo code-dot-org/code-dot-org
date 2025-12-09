@@ -119,7 +119,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
         'Content-Type': 'application/json; charset=UTF-8',
       });
       // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
-      projectManager.setCurrentVersionHasComment(true);
+      projectManager.setForceNewVersion(true);
     } catch (error) {
       console.error('Failed to save commit comment:', error);
     }
