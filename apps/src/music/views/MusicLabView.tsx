@@ -427,7 +427,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   id="viewingOldVersionBanner"
                   className={moduleStyles.warningBanner}
                 >
-                  {musicI18n.viewingOldVersion()}
+                  {WARNING_BANNER_MESSAGES.VIEWING_VERSION}
                 </div>
               )}
               {isStartMode && (
