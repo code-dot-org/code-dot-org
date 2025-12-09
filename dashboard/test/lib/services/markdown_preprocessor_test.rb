@@ -34,11 +34,11 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
       course_version: course_version
     )
 
-    setup_script_cache
+    setup_rails_cache
   end
 
   teardown do
-    teardown_script_cache
+    teardown_rails_cache
   end
 
   test 'process method invokes both resource and vocab substitutions' do

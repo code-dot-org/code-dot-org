@@ -10,7 +10,7 @@ module Pd::Application
     freeze_time
 
     teardown do
-      teardown_script_cache
+      teardown_rails_cache
     end
 
     test 'application guid is generated on create' do
@@ -379,7 +379,7 @@ module Pd::Application
     end
 
     test 'school cache' do
-      setup_script_cache
+      setup_rails_cache
       school = create(:school)
       form_data_hash = build(:pd_teacher_application_hash, school: school)
       application = create(:pd_teacher_application, form_data_hash: form_data_hash)
@@ -398,7 +398,7 @@ module Pd::Application
     end
 
     test 'cache prefetch' do
-      setup_script_cache
+      setup_rails_cache
       school = create(:school)
       workshop = create(:workshop)
       form_data_hash = build(:pd_teacher_application_hash, school: school)
@@ -1035,7 +1035,7 @@ module Pd::Application
     end
 
     test 'associated models cache prefetch' do
-      setup_script_cache
+      setup_rails_cache
       workshop = create(:workshop)
       application = create(:pd_teacher_application, pd_workshop_id: workshop.id)
       # Workshops, Sessions, Enrollments, Schools, School districts

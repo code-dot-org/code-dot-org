@@ -7,7 +7,7 @@ module Pd::Application
 
     self.use_transactional_test_case = true
     setup_all do
-      setup_script_cache
+      setup_rails_cache
       @workshop = create(:workshop)
       @application = create TEACHER_APPLICATION_FACTORY, pd_workshop_id: @workshop.id
 
@@ -15,7 +15,7 @@ module Pd::Application
       @user = @application.user
     end
     teardown_all do
-      teardown_script_cache
+      teardown_rails_cache
     end
     setup do
       @application.reload

@@ -406,9 +406,7 @@ class ActiveSupport::TestCase
     ActiveRecord::Base.stubs(:connection).raises 'Database disconnected'
   end
 
-  def setup_script_cache
-    Unit.stubs(:should_cache?).returns true
-    Unit.clear_cache
+  def setup_rails_cache
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Rails.application.config.action_controller.perform_caching = true
     # Actually replace the cache instance, not just the config
@@ -416,10 +414,20 @@ class ActiveSupport::TestCase
     Rails.cache.clear
   end
 
-  def teardown_script_cache
+  def teardown_rails_cache
     Rails.cache.clear
     # Actually replace the cache instance back to null_store
     Rails.cache = ActiveSupport::Cache.lookup_store(:null_store)
+  end
+
+  def setup_script_cache
+    Unit.stubs(:should_cache?).returns true
+    Unit.clear_cache
+    setup_rails_cache
+  end
+
+  def teardown_script_cache
+    teardown_rails_cache
   end
 end
 
