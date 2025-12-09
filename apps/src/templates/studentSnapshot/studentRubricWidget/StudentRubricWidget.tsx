@@ -17,7 +17,7 @@ type AiEvaluation = InferProps<typeof aiEvaluationShape>['isRequired'];
 interface StudentRubricWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
-  lessonId: number;
+  lessonId: number | null;
   studentId: number;
   levelId?: number; // Optional - if not provided, uses lesson.rubric (first rubric for lesson)
   // These map directly to LearningGoals props so we can reuse it as-is.
@@ -69,8 +69,9 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
 
   useEffect(() => {
     if (!lessonId) {
-      setError('No lesson ID provided');
-      setIsLoading(false);
+      // Show loading/skeleton state when no lesson is provided
+      setIsLoading(true);
+      setError(null);
       return;
     }
 
