@@ -6,7 +6,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
   before do
-    allow(DCDO).to receive(:get).and_call_original
     allow(CDO).to receive(:default_scheme).and_return('https:')
   end
 
@@ -91,6 +90,21 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
       end
     end
+
+    context 'when tracking is disabled' do
+      before do
+        allow(CDO).to receive(:hoc_tracking_enabled).and_return(false)
+      end
+
+      it 'returns error 404' do
+        begin_tutorial_request
+
+        must_respond_with :not_found
+        must_select 'h1', '404: Page Not Found'
+
+        expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
+      end
+    end
   end
 
   describe 'GET /api/hour/begin_:code.png' do
@@ -133,6 +147,27 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         expect(HocLegacy::TutorialPixelLauncher).not_to have_received(:call)
       end
     end
+
+    context 'when tracking is disabled' do
+      before do
+        allow(CDO).to receive(:hoc_tracking_enabled).and_return(false)
+      end
+
+      it 'doe not launch tutorial pixel' do
+        begin_tutorial_pixel_request
+        expect(HocLegacy::TutorialPixelLauncher).not_to have_received(:call).with(controller:, tutorial:)
+      end
+
+      it 'sends pixel png file' do
+        begin_tutorial_pixel_request
+
+        must_respond_with :success
+
+        _(response.content_type).must_equal 'image/png'
+        _(response.headers['Content-Disposition']).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
+        _(response.body.bytesize).must_equal 110 # Size of 1x1.png
+      end
+    end
   end
 
   describe 'GET /api/hour/finish' do
@@ -168,6 +203,22 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         expect(HocLegacy::TutorialCompleter).to receive(:call).
           with(controller: instance_of(described_class)).
           and_return(session_row)
+
+        finish_current_tutorial_request
+
+        must_respond_with :found
+        must_redirect_to 'https://test-studio.code.org/congrats'
+      end
+    end
+
+    context 'when tracking is disabled' do
+      before do
+        allow(CDO).to receive(:hoc_tracking_enabled).and_return(false)
+      end
+
+      it 'does not finishes current tutorial and redirects to congrats page without any params' do
+        expect(HocLegacy::TutorialCompleter).not_to receive(:call).
+          with(controller: instance_of(described_class))
 
         finish_current_tutorial_request
 
@@ -215,7 +266,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     context 'when no tutorial is launched' do
       let(:session_row) {nil}
 
-      it 'finishes current tutorial and redirects to congrats page without tutorial code only' do
+      it 'finishes current tutorial and redirects to congrats page with tutorial code only' do
         expect(HocLegacy::TutorialCompleter).to receive(:call).
           with(controller: instance_of(described_class), tutorial:).
           and_return(session_row)
@@ -237,6 +288,22 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         must_select 'h1', '404: Page Not Found'
 
         expect(HocLegacy::TutorialCompleter).not_to have_received(:call)
+      end
+    end
+
+    context 'when tracking is disabled' do
+      before do
+        allow(CDO).to receive(:hoc_tracking_enabled).and_return(false)
+      end
+
+      it 'does not finish current tutorial and redirects to congrats page without any params' do
+        expect(HocLegacy::TutorialCompleter).not_to receive(:call).
+          with(controller: instance_of(described_class), tutorial:)
+
+        finish_tutorial_request
+
+        must_respond_with :found
+        must_redirect_to "https://test-studio.code.org/congrats"
       end
     end
   end
@@ -279,6 +346,27 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_pixel_request
         must_respond_with :not_found
         expect(HocLegacy::TutorialPixelCompleter).not_to have_received(:call)
+      end
+    end
+
+    context 'when tracking is disabled' do
+      before do
+        allow(CDO).to receive(:hoc_tracking_enabled).and_return(false)
+      end
+
+      it 'does not launch tutorial pixel' do
+        finish_tutorial_pixel_request
+        expect(HocLegacy::TutorialPixelCompleter).not_to have_received(:call).with(controller:, tutorial:)
+      end
+
+      it 'sends pixel png file' do
+        finish_tutorial_pixel_request
+
+        must_respond_with :success
+
+        _(response.content_type).must_equal 'image/png'
+        _(response.headers['Content-Disposition']).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
+        _(response.body.bytesize).must_equal 110 # Size of 1x1.png
       end
     end
   end

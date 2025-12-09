@@ -569,7 +569,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :vocabularies, only: [:create, :update] do
+    resources :vocabularies, only: [:create, :update, :destroy] do
       collection do
         get :search
       end
@@ -1174,6 +1174,13 @@ Dashboard::Application.routes.draw do
         get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
         get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
         get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
+      end
+    end
+
+    # Routes used for the Student Snapshot page on the teacher dashboard
+    resources :student_snapshots, only: [] do
+      collection do
+        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
       end
     end
 

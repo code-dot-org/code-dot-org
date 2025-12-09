@@ -47,7 +47,11 @@ export const useAiTutorResponseSchemaSettings = (
             jsonResponse.answer
           );
           const answerType = formattedResponse.answerType;
-          if (answerType !== 'Build HTML' && answerType !== 'Build CSS') {
+          if (
+            !['Build HTML', 'Build CSS', 'Build JavaScript'].includes(
+              answerType
+            )
+          ) {
             return formatCopyPasteResponse(jsonResponse.answer);
           }
           dispatch(setViewingAiTutorVersion(true));
@@ -87,7 +91,9 @@ export const useAiTutorResponseSchemaSettings = (
               folderPath === ''
                 ? firstHtmlFile.name
                 : folderPath + '/' + firstHtmlFile.name;
-            dispatch(setAiFilePathToPreview(filePath));
+            dispatch(
+              setAiFilePathToPreview({path: filePath, timestamp: Date.now()})
+            );
           }
           return formattedResponse.explanation;
         },

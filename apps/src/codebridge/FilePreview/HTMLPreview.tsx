@@ -85,8 +85,8 @@ export const HTMLPreview: React.FC = () => {
 
   useEffect(() => {
     if (aiFilePathToPreview) {
-      setCurrentFile(aiFilePathToPreview);
-      setInputValue(aiFilePathToPreview);
+      setCurrentFile(aiFilePathToPreview.path);
+      setInputValue(aiFilePathToPreview.path);
     } else {
       setCurrentFile(DEFAULT_START_HTML_FILE);
       setInputValue(DEFAULT_START_HTML_FILE);

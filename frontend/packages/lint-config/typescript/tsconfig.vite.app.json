@@ -1,0 +1,15 @@
+{
+  // Use Typescript recommended defaults with Code.org customizations
+  // See: https://www.npmjs.com/package/@tsconfig/vite-react
+  // Only add global typescript configuration changes that will apply to all packages
+  // Specific typescript changes should be made in the consuming package
+  "extends": "@tsconfig/vite-react/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["vite/client"],
+    // For Code.org applications, the `@/*` path alias refers to the `src` directory
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

@@ -75,6 +75,7 @@ class HttpCache
   CACHED_UNITS_MAP = %w(
     aquatic
     dance-ai-2023
+    oceans
     mc
     music-jam-2024
     mix-move-ai-2025
