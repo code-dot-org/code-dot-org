@@ -16,33 +16,28 @@ const createProjectFile = (
   id: string,
   name: string,
   contents: string,
-  folderId: string = '0'
+  folderId: string = '0',
+  active: boolean = false
 ): ProjectFile => ({
   id,
   name,
   language: name.split('.').pop() || '',
   contents,
   folderId,
+  active,
 });
 
 // Helper to create an AI code file.
-const createAiCodeFile = (
-  id: string,
-  name: string,
-  contents: string,
-  folderId: string = '0'
-) => ({
-  id,
+const createAiCodeFile = (name: string, contents: string) => ({
   name,
   contents,
-  folderId,
 });
 
 describe('getMergedAiTutorCodeWithSource', () => {
-  describe('creating new files (id="new")', () => {
+  describe('creating new files', () => {
     it('adds a new file to an empty source', () => {
       const source = createSource();
-      const aiCode = [createAiCodeFile('new', 'index.html', '<html></html>')];
+      const aiCode = [createAiCodeFile('index.html', '<html></html>')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -56,7 +51,7 @@ describe('getMergedAiTutorCodeWithSource', () => {
       expect(result.files['1'].name).toBe('index.html');
       expect(result.files['1'].contents).toBe('<html></html>');
       expect(result.files['1'].isAiTutorVersionCreated).toBe(true);
-      expect(result.files['1'].isAiTutorVersionUpdated).toBe(false);
+      expect(result.files['1'].isAiTutorVersionUpdated).toBeUndefined();
       expect(aiTutorVersionFiles).toHaveLength(1);
     });
 
@@ -64,7 +59,7 @@ describe('getMergedAiTutorCodeWithSource', () => {
       const source = createSource({
         '1': createProjectFile('1', 'existing.html', 'existing content'),
       });
-      const aiCode = [createAiCodeFile('new', 'style.css', 'body {}')];
+      const aiCode = [createAiCodeFile('style.css', 'body {}')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -81,9 +76,9 @@ describe('getMergedAiTutorCodeWithSource', () => {
     it('creates multiple new files with correct IDs', () => {
       const source = createSource();
       const aiCode = [
-        createAiCodeFile('new', 'index.html', '<html></html>'),
-        createAiCodeFile('new', 'style.css', 'body {}'),
-        createAiCodeFile('new', 'script.js', 'console.log("hi")'),
+        createAiCodeFile('index.html', '<html></html>'),
+        createAiCodeFile('style.css', 'body {}'),
+        createAiCodeFile('script.js', 'console.log("hi")'),
       ];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
@@ -100,14 +95,12 @@ describe('getMergedAiTutorCodeWithSource', () => {
     });
   });
 
-  describe('updating existing files (name matches)', () => {
-    it('updates an existing file with matching id and name', () => {
+  describe('updating existing files by name', () => {
+    it('updates an existing file with matching name', () => {
       const source = createSource({
         '1': createProjectFile('1', 'index.html', 'old content'),
       });
-      const aiCode = [
-        createAiCodeFile('1', 'index.html', 'new content from AI'),
-      ];
+      const aiCode = [createAiCodeFile('index.html', 'new content from AI')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -119,15 +112,33 @@ describe('getMergedAiTutorCodeWithSource', () => {
       expect(Object.keys(result.files)).toHaveLength(1);
       expect(result.files['1'].contents).toBe('new content from AI');
       expect(result.files['1'].isAiTutorVersionUpdated).toBe(true);
-      expect(result.files['1'].isAiTutorVersionCreated).toBe(false);
+      expect(result.files['1'].isAiTutorVersionCreated).toBeUndefined();
+    });
+
+    it('updates active file when name matches', () => {
+      const source = createSource({
+        '1': createProjectFile('1', 'index.html', 'content', '0', true),
+        '2': createProjectFile('2', 'style.css', 'styles'),
+      });
+      const aiCode = [createAiCodeFile('index.html', 'updated content')];
+      const aiTutorVersionFiles: ProjectFile[] = [];
+
+      const result = getMergedAiTutorCodeWithSource(
+        aiCode,
+        source,
+        aiTutorVersionFiles
+      );
+
+      expect(result.files['1'].contents).toBe('updated content');
+      expect(result.files['1'].isAiTutorVersionUpdated).toBe(true);
     });
 
     it('sets all original files to inactive', () => {
       const source = createSource({
-        '1': createProjectFile('1', 'index.html', 'content'),
+        '1': createProjectFile('1', 'index.html', 'content', '0', true),
         '2': createProjectFile('2', 'style.css', 'styles'),
       });
-      const aiCode = [createAiCodeFile('1', 'index.html', 'updated content')];
+      const aiCode = [createAiCodeFile('index.html', 'updated content')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -136,99 +147,34 @@ describe('getMergedAiTutorCodeWithSource', () => {
         aiTutorVersionFiles
       );
 
+      // File '2' should be inactive since all files are set inactive before processing
       expect(result.files['2'].active).toBe(false);
     });
   });
 
-  describe('name mismatch scenarios', () => {
-    it('creates a new file when id exists but name differs', () => {
-      const source = createSource({
-        '1': createProjectFile('1', 'index.html', 'original content'),
-      });
-      const aiCode = [
-        createAiCodeFile('1', 'different.html', 'AI generated content'),
-      ];
-      const aiTutorVersionFiles: ProjectFile[] = [];
-
-      const result = getMergedAiTutorCodeWithSource(
-        aiCode,
-        source,
-        aiTutorVersionFiles
-      );
-
-      // Should have both the original and the new file
-      expect(Object.keys(result.files)).toHaveLength(2);
-      // Original should still exist
-      expect(result.files['1'].name).toBe('index.html');
-      // New file should be created with next ID
-      expect(result.files['2'].name).toBe('different.html');
-      expect(result.files['2'].contents).toBe('AI generated content');
-    });
-  });
-
-  describe('duplicate file name handling', () => {
-    it('adds numeric suffix when file name already exists', () => {
-      const source = createSource({
-        '1': createProjectFile('1', 'index.html', 'original'),
-      });
-      // AI tries to create a file with a name that already exists (different id, same name)
-      const aiCode = [createAiCodeFile('2', 'index.html', 'duplicate attempt')];
-      const aiTutorVersionFiles: ProjectFile[] = [];
-
-      const result = getMergedAiTutorCodeWithSource(
-        aiCode,
-        source,
-        aiTutorVersionFiles
-      );
-
-      expect(Object.keys(result.files)).toHaveLength(2);
-      // Original file should be unchanged
-      expect(result.files['1'].name).toBe('index.html');
-      // New file should have a numeric suffix (getNextFileId returns '2' since max existing id is '1')
-      expect(result.files['2'].name).toBe('index_1.html');
-    });
-
-    it('increments suffix until a valid name is found', () => {
-      const source = createSource({
-        '1': createProjectFile('1', 'file.html', 'original'),
-        '2': createProjectFile('2', 'file_1.html', 'first copy'),
-        '3': createProjectFile('3', 'file_2.html', 'second copy'),
-      });
-      // AI tries to create a file with a name that already exists
-      const aiCode = [createAiCodeFile('4', 'file.html', 'AI content')];
-      const aiTutorVersionFiles: ProjectFile[] = [];
-
-      const result = getMergedAiTutorCodeWithSource(
-        aiCode,
-        source,
-        aiTutorVersionFiles
-      );
-
-      expect(Object.keys(result.files)).toHaveLength(4);
-      // Should find file_3.html as the first available name (getNextFileId returns '4' since max existing id is '3')
-      expect(result.files['4'].name).toBe('file_3.html');
-    });
-
-    it('moves file to root folder before adding suffix if in subfolder', () => {
+  describe('multiple files with same name handling', () => {
+    it('creates new file when multiple files have the same name in subfolders', () => {
       const source = createSource(
         {
-          // File '1' has a different name than what AI will provide (triggers name mismatch).
-          '1': createProjectFile('1', 'original.html', 'content', 'folder1'),
-          // File '2' has the name AI wants, causing a duplicate in folder1.
-          '2': createProjectFile('2', 'test.html', 'content', 'folder1'),
-          // File '3' has the same name in root, so suffix is needed after moving.
-          '3': createProjectFile('3', 'test.html', 'content'),
+          '1': createProjectFile(
+            '1',
+            'index.html',
+            'content in folder1',
+            'folder1'
+          ),
+          '2': createProjectFile(
+            '2',
+            'index.html',
+            'content in folder2',
+            'folder2'
+          ),
         },
         {
-          folder1: {id: 'folder1', name: 'subfolder', parentId: '0'},
+          folder1: {id: 'folder1', name: 'folder1', parentId: '0'},
+          folder2: {id: 'folder2', name: 'folder2', parentId: '0'},
         }
       );
-      // AI provides id '1' but with a different name 'test.html' (triggers name mismatch branch).
-      // 'test.html' already exists in folder1 (file '2'), so it moves to root.
-      // 'test.html' also exists in root (file '3'), so a suffix is added.
-      const aiCode = [
-        createAiCodeFile('1', 'test.html', 'AI content', 'folder1'),
-      ];
+      const aiCode = [createAiCodeFile('index.html', 'AI content')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -237,10 +183,50 @@ describe('getMergedAiTutorCodeWithSource', () => {
         aiTutorVersionFiles
       );
 
-      // getNextFileId returns '4' (max existing id is '3')
-      // Should have moved to root folder (folderId: '0') with numeric suffix
+      // Should create a new file since multiple files have the same name.
+      // No suffix needed since there's no index.html in the root folder.
+      expect(Object.keys(result.files)).toHaveLength(3);
+      expect(result.files['3'].folderId).toBe('0');
+      expect(result.files['3'].name).toBe('index.html');
+      expect(result.files['3'].isAiTutorVersionCreated).toBe(true);
+    });
+
+    it('adds numeric suffix when new file name conflicts with existing in root', () => {
+      const source = createSource(
+        {
+          '1': createProjectFile(
+            '1',
+            'file.html',
+            'content in folder1',
+            'folder1'
+          ),
+          '2': createProjectFile(
+            '2',
+            'file.html',
+            'content in folder2',
+            'folder2'
+          ),
+          '3': createProjectFile('3', 'file.html', 'content in root', '0'),
+        },
+        {
+          folder1: {id: 'folder1', name: 'folder1', parentId: '0'},
+          folder2: {id: 'folder2', name: 'folder2', parentId: '0'},
+        }
+      );
+      const aiCode = [createAiCodeFile('file.html', 'AI content')];
+      const aiTutorVersionFiles: ProjectFile[] = [];
+
+      const result = getMergedAiTutorCodeWithSource(
+        aiCode,
+        source,
+        aiTutorVersionFiles
+      );
+
+      // Multiple files named file.html exist, so a new file is created.
+      // file.html exists in root, so suffix is added.
+      expect(Object.keys(result.files)).toHaveLength(4);
+      expect(result.files['4'].name).toBe('file_1.html');
       expect(result.files['4'].folderId).toBe('0');
-      expect(result.files['4'].name).toBe('test_1.html');
     });
   });
 
@@ -250,8 +236,8 @@ describe('getMergedAiTutorCodeWithSource', () => {
         '1': createProjectFile('1', 'index.html', 'original'),
       });
       const aiCode = [
-        createAiCodeFile('1', 'index.html', 'updated content'),
-        createAiCodeFile('new', 'style.css', 'new styles'),
+        createAiCodeFile('index.html', 'updated content'),
+        createAiCodeFile('style.css', 'new styles'),
       ];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
@@ -263,9 +249,9 @@ describe('getMergedAiTutorCodeWithSource', () => {
     it('sorts aiTutorVersionFiles alphabetically by name', () => {
       const source = createSource();
       const aiCode = [
-        createAiCodeFile('new', 'zebra.html', 'z content'),
-        createAiCodeFile('new', 'alpha.css', 'a content'),
-        createAiCodeFile('new', 'middle.js', 'm content'),
+        createAiCodeFile('zebra.html', 'z content'),
+        createAiCodeFile('alpha.css', 'a content'),
+        createAiCodeFile('middle.js', 'm content'),
       ];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
@@ -283,7 +269,7 @@ describe('getMergedAiTutorCodeWithSource', () => {
         '1': createProjectFile('1', 'index.html', 'original content'),
       };
       const source = createSource(originalFiles);
-      const aiCode = [createAiCodeFile('1', 'index.html', 'new content')];
+      const aiCode = [createAiCodeFile('index.html', 'new content')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       getMergedAiTutorCodeWithSource(aiCode, source, aiTutorVersionFiles);
@@ -298,7 +284,7 @@ describe('getMergedAiTutorCodeWithSource', () => {
         folders: {},
         openFiles: ['1'],
       };
-      const aiCode = [createAiCodeFile('new', 'style.css', 'styles')];
+      const aiCode = [createAiCodeFile('style.css', 'styles')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -316,9 +302,9 @@ describe('getMergedAiTutorCodeWithSource', () => {
     it('puts first HTML file first in openFiles and sets it active', () => {
       const source = createSource();
       const aiCode = [
-        createAiCodeFile('new', 'style.css', 'body {}'),
-        createAiCodeFile('new', 'index.html', '<html></html>'),
-        createAiCodeFile('new', 'script.js', 'console.log()'),
+        createAiCodeFile('style.css', 'body {}'),
+        createAiCodeFile('index.html', '<html></html>'),
+        createAiCodeFile('script.js', 'console.log()'),
       ];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
@@ -339,8 +325,8 @@ describe('getMergedAiTutorCodeWithSource', () => {
     it('uses first AI file if no HTML file exists', () => {
       const source = createSource();
       const aiCode = [
-        createAiCodeFile('new', 'style.css', 'body {}'),
-        createAiCodeFile('new', 'script.js', 'console.log()'),
+        createAiCodeFile('style.css', 'body {}'),
+        createAiCodeFile('script.js', 'console.log()'),
       ];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
@@ -366,7 +352,7 @@ describe('getMergedAiTutorCodeWithSource', () => {
         openFiles: ['1', '2'],
       };
       // Update file '1'.
-      const aiCode = [createAiCodeFile('1', 'index.html', 'new content')];
+      const aiCode = [createAiCodeFile('index.html', 'new content')];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
       const result = getMergedAiTutorCodeWithSource(
@@ -403,9 +389,9 @@ describe('getMergedAiTutorCodeWithSource', () => {
     it('sets language based on file extension', () => {
       const source = createSource();
       const aiCode = [
-        createAiCodeFile('new', 'index.html', '<html></html>'),
-        createAiCodeFile('new', 'style.css', 'body {}'),
-        createAiCodeFile('new', 'script.js', 'console.log()'),
+        createAiCodeFile('index.html', '<html></html>'),
+        createAiCodeFile('style.css', 'body {}'),
+        createAiCodeFile('script.js', 'console.log()'),
       ];
       const aiTutorVersionFiles: ProjectFile[] = [];
 
