@@ -98,37 +98,51 @@ use_geolocation_override: true
 # CI-specific settings
 <% if ENV['CI'] -%>
 
-# Config shared by ui and unit pipelines. Drone cannot access secrets directly,
-# so we pass them through environment variables. Secret variables are set
-# via the drone UI and some non-secret variabels are set in prepare_ci_env.sh.
+# Config shared by ui and unit pipelines.
 
+# customize build steps in CI
 build_apps: true
+use_my_apps: true
+skip_seed_all: true
+build_i18n: true
+
+# Pass in secrets via env vars, since Drone cannot access secrets directly.
 cloudfront_key_pair_id: <%= ENV['CLOUDFRONT_KEY_PAIR_ID'] %>
 cloudfront_private_key: "<%= ENV['CLOUDFRONT_PRIVATE_KEY'] %>"
 contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
+saucelabs_authkey: <%= ENV['SAUCE_AUTHKEY'] %>
+saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
+properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
+
+# customize rails server to run on localhost
 dashboard_enable_pegasus: true
-dashboard_workers: 5
-disable_all_eyes_running: true
-use_my_apps: true
-skip_seed_all: true
 override_dashboard: localhost-studio.code.org
 override_pegasus: localhost.code.org
 dashboard_port: 3000
 pegasus_port: 3000
-build_i18n: true
+no_https_store: true
+
+# custom redis config for CI
+redis_url: 'redis://ci-tests-redis:6379/0'
+netsim_redis_groups:
+- master: redis://ci-tests-redis:6379
+
+# CI-specific S3 settings, to avoid collisions between concurrent CI jobs
 animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>
 assets_s3_directory: <%= "assets_circle/#{ENV['CI_BUILD_NUMBER']}" %>
 files_s3_directory: <%= "files_circle/#{ENV['CI_BUILD_NUMBER']}" %>
 libraries_s3_directory: <%= "libraries_circle/#{ENV['CI_BUILD_NUMBER']}" %>
 sources_s3_directory: <%= "sources_circle/#{ENV['CI_BUILD_NUMBER']}" %>
-redis_url: 'redis://ci-tests-redis:6379/0'
-no_https_store: true
-netsim_redis_groups:
-- master: redis://ci-tests-redis:6379
-saucelabs_authkey: <%= ENV['SAUCE_AUTHKEY'] %>
-saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
+
+# custom tunnel name to avoid collisions between concurrent CI jobs
 saucelabs_tunnel_name: cdo-tunnel-<%= ENV['CI_BUILD_NUMBER'] %>
-properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
+
+# we run eyes features in CI, but skip comparing visual diffs
+disable_all_eyes_running: true
+
+# The number of puma workers in CI has been optimized to minimize ui test time
+# for drone workers running on m7i.4xlarge instances.
+dashboard_workers: 5
 
 # CI Unit Test Optimizations
 <% if ENV['CI_JOB'] == 'unit_tests' -%>
