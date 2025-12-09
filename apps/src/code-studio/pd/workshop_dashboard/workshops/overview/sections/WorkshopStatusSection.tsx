@@ -6,6 +6,7 @@ import Tags from '@code-dot-org/component-library/tags';
 import {Card, CardContent, CardHeader, Box, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -68,6 +69,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   const inProgress = workshop.state === 'In Progress';
   const ended = workshop.state === 'Ended';
   const cannotEndWorkshop = !workshop.readyToClose;
+  const navigate = useNavigate();
 
   const handleClick = (stateKey: WorkshopActions) => {
     setError(null);
@@ -216,6 +218,11 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                       size="xs"
                       aria-label="Open attendance link"
                       href={`/pd/workshop_dashboard/workshops/${workshop.id}/attendance`}
+                      onClick={e => {
+                        // preventing native link behavior to navigate client side using react-router
+                        e.preventDefault();
+                        navigate(`/workshops/${workshop.id}/attendance`);
+                      }}
                     >
                       attendance tab
                     </Link>
