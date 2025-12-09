@@ -4,8 +4,10 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Header from './header';
 import WidgetTemplate from './widgetTemplate';
@@ -15,6 +17,16 @@ import styles from './studentSnapshot.module.scss';
 interface LessonsData {
   lessons: LessonOption[];
   hasUnnumberedLessons: boolean;
+}
+
+interface UserProgressInLessonData {
+  [userId: number]: {
+    incompletePercent?: number;
+    imperfectPercent?: number;
+    completedPercent?: number;
+    timeSpent?: number;
+    lastTimestamp?: number;
+  };
 }
 
 const getLessons = (unitId: number) =>
@@ -31,7 +43,42 @@ const StudentSnapshot: React.FC = () => {
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
 
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
+  );
+  const sectionCourseId = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          .courseId
+      : null
+  );
   const selectedUnitId = useSelector(getSelectedUnitId);
+  const selectedUnitPosition = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          .unitPosition
+      : null
+  );
+  const lessonProgressByUnit = useAppSelector(
+    state => state.sectionProgress?.studentLessonProgressByUnit
+  );
+  const userProgressInSelectedLesson = React.useMemo(() => {
+    const progressByUser: UserProgressInLessonData = {};
+    if (
+      selectedLessonId &&
+      lessonProgressByUnit &&
+      lessonProgressByUnit[selectedUnitId]
+    ) {
+      Object.keys(lessonProgressByUnit[selectedUnitId]).forEach(
+        (userId: string) => {
+          progressByUser[+userId] =
+            lessonProgressByUnit[selectedUnitId][+userId][selectedLessonId];
+        }
+      );
+    }
+    return progressByUser;
+  }, [selectedUnitId, selectedLessonId, lessonProgressByUnit]);
+
   React.useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
@@ -43,8 +90,14 @@ const StudentSnapshot: React.FC = () => {
         .finally(() => {
           setIsLessonsLoading(false);
         });
+      loadUnitProgress(
+        selectedUnitId,
+        sectionId,
+        sectionCourseId,
+        selectedUnitPosition
+      );
     }
-  }, [selectedUnitId]);
+  }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
   return (
     <div className={styles.snapshotContainer}>
