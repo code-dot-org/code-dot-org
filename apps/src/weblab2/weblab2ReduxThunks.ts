@@ -118,6 +118,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
       await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
         'Content-Type': 'application/json; charset=UTF-8',
       });
+      projectManager.setCurrentVersionHasComment(true);
     } catch (error) {
       console.error('Failed to save commit comment:', error);
     }
