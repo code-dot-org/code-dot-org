@@ -106,7 +106,18 @@ export const openImportFromBackpackPrompt = async ({
       const uuid = createUuid();
       const fileType = selectedFileName.split('.').pop();
       const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
-      await HttpClient.put(uploadUrl, blob);
+      try {
+        await HttpClient.put(uploadUrl, blob);
+      } catch (error) {
+        handleError(
+          codebridgeI18n.importFromBackpackTitle(),
+          codebridgeI18n.getBackpackFileError({selectedFileName}) +
+            ' ' +
+            codebridgeI18n.closeWindowTryAgain(),
+          'Backpack could not upload image file to assets channel'
+        );
+        return;
+      }
       url = uploadUrl;
     } else {
       fileContent = await response.text();

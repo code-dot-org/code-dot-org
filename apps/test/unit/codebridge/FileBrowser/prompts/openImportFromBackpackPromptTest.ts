@@ -4,6 +4,7 @@ import {openImportFromBackpackPrompt} from '@cdo/apps/codebridge/FileBrowser/pro
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {extractUserInput} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {getBackpackAPIMock} from '../../test_utils';
 
@@ -16,6 +17,10 @@ jest.mock('@cdo/apps/lab2/views/dialogs', () => ({
     GenericDropdown: 'GenericDropdown',
     PendingDialog: 'PendingDialog',
   },
+}));
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  put: jest.fn(() => Promise.resolve({})),
 }));
 
 describe('openImportFromBackpackPrompt', () => {
@@ -73,7 +78,7 @@ describe('openImportFromBackpackPrompt', () => {
     );
   });
 
-  it('imports a backpack file when user confirms', async () => {
+  it('imports a text backpack file when user confirms', async () => {
     mockBackpackApi = getBackpackAPIMock(['backpack_file.py']); // getFileList returns ['backpack_file.py'].
     (extractUserInput as jest.Mock).mockReturnValue('backpack_file.py');
     // Mock the dialog responses
@@ -92,6 +97,56 @@ describe('openImportFromBackpackPrompt', () => {
         contents: 'Mock contents of backpack file backpack_file.py',
         fileName: 'backpack_file.py',
       });
+    });
+  });
+
+  it('imports an image backpack file when user confirms', async () => {
+    // getFileList returns ['backpack_file.jpg'] and returns a jpeg image type.
+    mockBackpackApi = getBackpackAPIMock(['backpack_file.jpg'], 'image/jpeg');
+    (extractUserInput as jest.Mock).mockReturnValue('backpack_file.jpg');
+    // Mock the dialog responses
+    dialogControl.showDialog
+      .mockResolvedValueOnce({}) // Pending dialog.
+      .mockResolvedValueOnce({type: 'confirm'}); // User confirms import.
+
+    await runImportFromBackpackPrompt();
+
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(mockBackpackApi.fetchFileResponse).toHaveBeenCalledWith(
+        'backpack_file.jpg'
+      );
+      expect(HttpClient.put).toHaveBeenCalledTimes(1);
+      expect(newFileFunction).toHaveBeenCalledWith({
+        contents: '',
+        url: expect.stringContaining('v3/assets'),
+        fileName: 'backpack_file.jpg',
+      });
+    });
+  });
+
+  it('does not import an image backpack file when upload fails', async () => {
+    // getFileList returns ['backpack_file.jpg'] and returns a jpeg image type.
+    mockBackpackApi = getBackpackAPIMock(['backpack_file.jpg'], 'image/jpeg');
+    (extractUserInput as jest.Mock).mockReturnValue('backpack_file.jpg');
+    // Mock a failed upload
+    (HttpClient.put as jest.Mock).mockImplementationOnce(() =>
+      Promise.reject(new Error('fail'))
+    );
+    // Mock the dialog responses
+    dialogControl.showDialog
+      .mockResolvedValueOnce({}) // Pending dialog.
+      .mockResolvedValueOnce({type: 'confirm'}); // User confirms import.
+
+    await runImportFromBackpackPrompt();
+
+    await waitFor(() => {
+      expect(mockBackpackApi.getFileList).toHaveBeenCalled();
+      expect(mockBackpackApi.fetchFileResponse).toHaveBeenCalledWith(
+        'backpack_file.jpg'
+      );
+      expect(HttpClient.put).toHaveBeenCalledTimes(1);
+      expect(newFileFunction).not.toHaveBeenCalled();
     });
   });
 

@@ -95,7 +95,8 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
 };
 
 export const getBackpackAPIMock = (
-  fileList: string[] = []
+  fileList: string[] = [],
+  headerValue: string = 'text/plain'
 ): BackpackClientApi => {
   return {
     hasBackpack: jest.fn(() => true),
@@ -106,10 +107,15 @@ export const getBackpackAPIMock = (
     fetchFileResponse: jest.fn(async (filename: string) => {
       return Promise.resolve({
         headers: {
-          get: jest.fn().mockReturnValue('text/plain'),
+          get: jest.fn().mockReturnValue(headerValue),
         },
         text: async () => {
           return Promise.resolve(`Mock contents of backpack file ${filename}`);
+        },
+        blob: async () => {
+          return new Blob([`Mock contents of backpack file ${filename}`], {
+            type: headerValue,
+          });
         },
       });
     }),
