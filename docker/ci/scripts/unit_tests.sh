@@ -17,9 +17,25 @@ bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
 # Run Brakeman security scanner
 # Fail the build if any security warnings are found
+echo "=============================================="
+echo "=== BRAKEMAN SECURITY SCAN ==="
+echo "=============================================="
 cd dashboard
-bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --exit-on-warn || exit 1
+if ! bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --exit-on-warn; then
+  echo ""
+  echo "=============================================="
+  echo "=== BRAKEMAN SECURITY SCAN FAILED ==="
+  echo "=============================================="
+  echo "Security vulnerabilities detected! Build stopped."
+  echo "Fix the issues above before proceeding."
+  echo "=============================================="
+  exit 1
+fi
 cd ..
+echo "=============================================="
+echo "=== BRAKEMAN SECURITY SCAN PASSED ==="
+echo "=============================================="
+echo ""
 
 bundle exec rake build
 bundle exec rake ci:run_unit_tests

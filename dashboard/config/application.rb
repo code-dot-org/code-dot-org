@@ -203,6 +203,7 @@ module Dashboard
       Rails.root.join("lib", "tasks"),
       Rails.root.join("lib", "assets"),
       Rails.root.join("lib", "clever"),
+      Rails.root.join("lib", "brakeman"),  # Brakeman checks should not be eager loaded (Brakeman isn't available during boot)
     )
 
     # Tools which are designed for development / test environments should not be eager-loaded
