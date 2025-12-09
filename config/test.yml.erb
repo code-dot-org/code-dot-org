@@ -103,8 +103,6 @@ use_geolocation_override: true
 # via the drone UI and some non-secret variabels are set in prepare_ci_env.sh.
 
 build_apps: true
-build_dashboard: true
-build_pegasus: true
 cloudfront_key_pair_id: <%= ENV['CLOUDFRONT_KEY_PAIR_ID'] %>
 cloudfront_private_key: "<%= ENV['CLOUDFRONT_PRIVATE_KEY'] %>"
 contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
