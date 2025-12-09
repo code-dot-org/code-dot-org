@@ -15,5 +15,11 @@ bundle exec rake install
 bundle exec rake lint:zeitwerk
 bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
+# Run Brakeman security scanner
+# Fail the build if any security warnings are found
+cd dashboard
+bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --exit-on-warn || exit 1
+cd ..
+
 bundle exec rake build
 bundle exec rake ci:run_unit_tests
