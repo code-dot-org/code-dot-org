@@ -129,7 +129,6 @@ saucelabs_authkey: <%= ENV['SAUCE_AUTHKEY'] %>
 saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
 saucelabs_tunnel_name: cdo-tunnel-<%= ENV['CI_BUILD_NUMBER'] %>
 properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
-aiproxy_api_key: 'fake_key'
 
 # CI Unit Test Optimizations
 <% if ENV['CI_JOB'] == 'unit_tests' -%>
