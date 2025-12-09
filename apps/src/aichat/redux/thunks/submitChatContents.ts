@@ -215,8 +215,10 @@ async function handleChatCompletionError(
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
   }
+  const userMessageWithError = {...newUserMessage, status: Status.ERROR};
 
-  dispatch(updateChatMessage({...newUserMessage, status: Status.ERROR}));
+  dispatch(updateChatMessage(userMessageWithError));
+  dispatch(logChatEvent(userMessageWithError));
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
