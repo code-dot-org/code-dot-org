@@ -27,18 +27,23 @@ const TeacherViewingStudentProjectAlert: React.FC<
 
   // Get the name of the student being viewed to use in the alert text.
   const selectedStudentName = useMemo(() => {
+    if (viewAsUserId === null) {
+      return undefined;
+    }
+
     const student = studentsInSection?.find(s => s.id === viewAsUserId);
     return student?.name;
   }, [viewAsUserId, studentsInSection]);
 
   const alertText = levelNotStarted ? (
     <>
-      <strong>{selectedStudentName}</strong> has not started the level.
+      <strong>{selectedStudentName ?? 'This student'}</strong> has not started
+      the level.
     </>
   ) : (
     <>
-      You are viewing <strong>{selectedStudentName}'s</strong> project in read
-      only mode.
+      You are viewing <strong>{selectedStudentName ?? 'this student'}'s</strong>{' '}
+      project in read only mode.
     </>
   );
 
