@@ -59,6 +59,7 @@ describe('UserChatMessageEditor', () => {
     mockSubmitChatContents.mockReset();
     mockState = {
       aichat: {
+        chatEventsCurrent: [],
         saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
