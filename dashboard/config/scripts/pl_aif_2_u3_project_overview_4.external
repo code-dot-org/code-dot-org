@@ -1,0 +1,44 @@
+name 'pl-aif-2-U3-project-overview-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Final Project Overview
+
+## Value Explorer
+#### In the Value Explorer project, students act as product designers and data stewards, creating a web app that helps users explore a curated set of items or opportunities—such as side hustles, volunteer roles, or clubs—based on what they value. 
+
+#### Students define their own dataset, design a simple schema, and build features that let users sort and filter the collection through different “value lenses,” such as profit, time, or social impact. By making their ranking rules transparent, students learn that data design and algorithms always involve choices.
+
+ 
+
+---
+
+### **When Project Begins:** Final lesson of the unit
+
+### The project extends over three class periods. Beginning in Lesson 11.
+
+## Sample
+
+#### 
+
+
+
+---
+
+
+
+## What success looks like
+- #### Loads a small, curated dataset of items or opportunities that conforms to a student-defined schema.
+- #### Allows a user to apply at least two different “value lenses” to rank the data.
+- #### Displays the results as a transparent ranking and includes a plain-language explanation of the sorting rule currently being applied.
+- #### Is guided by a Project Charter that includes the app’s mission, its ethical principles, and a reflection on the data choices and trade-offs made during development.
+
+---
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+
+## Now, let’s see how we get here! 
+
+#### Arrays are up next! 
+MARKDOWN

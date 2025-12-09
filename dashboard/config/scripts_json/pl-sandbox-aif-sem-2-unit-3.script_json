@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-01 17:14:44 UTC",
+    "serialized_at": "2025-12-08 15:23:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -19,22 +19,196 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Teaching Data-Driven Systems",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "082b0372-7391-4474-8ae9-b7fa368f983a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "082b0372-7391-4474-8ae9-b7fa368f983a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800",
+        "lesson_activity.key": "082b0372-7391-4474-8ae9-b7fa368f983a"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-Intro-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-Intro-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif-2-U3-curriculum-overview-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      },
+      "level_keys": [
+        "pl=aif-2-U3-curriculum-overview-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-instructional-commitments-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-instructional-commitments-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-project-overview-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-project-overview-4"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-Intro-1",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-Intro-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif-2-U3-curriculum-overview-2",
+        "script_level.level_keys": [
+          "pl=aif-2-U3-curriculum-overview-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-instructional-commitments-3",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-instructional-commitments-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-project-overview-4",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-project-overview-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "8248aebd-b5e1-45dc-9a70-e41dd41ca800"
+      }
+    }
   ],
   "resources": [
 

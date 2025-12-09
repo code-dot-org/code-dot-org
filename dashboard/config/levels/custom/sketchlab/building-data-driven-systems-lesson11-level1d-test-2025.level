@@ -3794,9 +3794,11 @@
       }
     },
     "project_template_level_name": "building-data-driven-systems-lesson11-template-sketchlab-test-2025",
-    "display_name": "Schema Sketch Lab"
+    "display_name": "Schema Sketch Lab",
+    "thumbnail_url": "https://images.code.org/8e0dc1455f8a6adf88d1768e4ab82b2b-diagram.png",
+    "bubble_choice_description": "Sketch a simple plan for your data by mapping out your schema fields and how they might appear on a card in your app ***(supports Milestone 1)***."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-05T23:54:31.858+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-12-05 23:54:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:56:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-05T23:54:31.858+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level3-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level3-test-2025\"},{\"changed_at\":\"2025-12-05 23:54:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:56:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:08:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:13:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:35:33 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:50:43 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:50:58 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

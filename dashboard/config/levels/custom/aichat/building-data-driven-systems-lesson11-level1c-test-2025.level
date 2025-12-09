@@ -44,11 +44,11 @@
       ],
       "multimodalEnabled": true
     },
-    "bubble_choice_description": "Chat with AI about designing your schema.",
+    "bubble_choice_description": "Chat with AI about designing your schema ***(supports Milestone 1)***.",
     "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
-    "display_name": "AI Chat"
+    "display_name": "Schema Chat"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-05T23:44:20.925+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3b-test-2025\"},{\"changed_at\":\"2025-12-05 23:44:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:57:09 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-05T23:44:20.925+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3b-test-2025\"},{\"changed_at\":\"2025-12-05 23:44:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:57:09 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 19:28:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:51:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

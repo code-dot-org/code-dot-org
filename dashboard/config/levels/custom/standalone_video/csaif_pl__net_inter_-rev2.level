@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-12-08T19:38:55.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csp_concept_what_is_internet",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_-rev",
+    "encrypted": "false",
+    "long_instructions": "#### We've all used the Internet, but what really is it?\r\n\r\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"><strong>Teacher Tip:</strong> A common misconception is that the Internet is the same as the World Wide Web. The <i>Internet</i> is the physical and structural system behind online communication, while the <i>Web</i> is just one of many services that run on it.\r\n</p>\r\n</div>\r\n\r\n## 📝 To Do\r\n\r\n#### Watch this video clip to hear Vint Cerf, one of the \"fathers of the internet\" explain the history of how the net and how no one person or organization is really in charge of it.  "
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-12-08T19:38:55.295+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_02_03b_-rev\\\"\"],\"cloned_from\":\"csaif_pl_ai_02_03b_-rev\"},{\"changed_at\":\"2025-12-08 19:43:45 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

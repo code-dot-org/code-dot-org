@@ -26190,8 +26190,16 @@ en:
           description: ''
           student_description: ''
         pl-sandbox-aif-sem-2-unit-3:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Teaching Data-Driven Systems
           lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-3
+          title: 'Teaching Unit 3: Data-Driven Systems'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-sandbox-aif-sem-2-unit-4:
           lessons: {}
           lesson_groups: {}
@@ -26214,7 +26222,7 @@ en:
               display_name: End of Unit Project
             lessonGroup-5:
               display_name: End of Unit Assessment and Survey
-          title: "[PILOT] AI-Powered Threats and Defenses"
+          title: AI-Powered Threats and Defenses
           description: |-
             Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, students take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. Students analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. They also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication. Throughout the unit, students use computational thinking practices to analyze threats, evaluate system behavior, and reason through design tradeoffs. They apply human-centered design principles to propose security features that consider user needs and system constraints. Students examine real-world decisions made by cybersecurity professionals, including how they balance protection with usability, anticipate unintended consequences, and build trust in systems. Through case analysis, collaborative design challenges, and reflection routines, students gain insight into cybersecurity as a sociotechnical system. They also explore career pathways in cybersecurity and AI, learning how professionals contribute to safer, more ethical, and more inclusive computing systems.
 
@@ -26241,3 +26249,5 @@ en:
             :::
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: aif5-v3

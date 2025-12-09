@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-12-09T05:53:03.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Scenario 1",
+    "long_instructions": "*Review the scenario below and use the AI Chat to learn more in-depth about this threat:*\r\n\r\n## Scenario 1\r\n\r\nYou receive an email from a classmate with a link that says, “Click here for 1000 free Fortnite v-bucks!”. \r\n\r\nYou click the link and it downloads a file to your computer — hmmm, that was unexpected. Instead of giving you free v-bucks, the file you downloaded automatically sends the same fake email to everyone in your contacts list, making it look like you sent it! \r\n\r\nThe malicious file spreads to dozens of students, slowing devices and potentially stealing passwords.\r\n\r\n---\r\n\r\n## Chat with an Expert: Malware Analyst\r\n\r\nA **malware analyst** studies malicious software to understand how it works, how it spreads, and how to remove it.\r\n\r\n**Not sure what to ask?**  \r\nSelect the type of malware below and open the section to see sample prompts you can use with the malware analyst AI Chat.\r\n\r\n::: details [**Worm**]\r\nTry asking:\r\n\r\n- *How do worms spread and infect systems?*  \r\n- *What kind of damage can they cause?*  \r\n- *How could AI be used to create smarter or harder-to-detect worms?*  \r\n- *How can AI help stop worms before they spread?*  \r\n- *What’s the best way to prevent this kind of attack?*\r\n:::\r\n\r\n::: details [**Ransomware**]\r\nTry asking:\r\n\r\n- *How do ransomware attacks typically happen?*  \r\n- *Why are they so disruptive or convincing?*  \r\n- *How might AI make ransomware more targeted or effective?*  \r\n- *How can AI help detect or block ransomware early?*  \r\n- *What’s the best way to protect important files or data?*\r\n:::\r\n\r\n::: details [**Misconfiguration**]\r\nTry asking:\r\n\r\n- *What is a misconfiguration and how does it happen?*  \r\n- *What systems or people are most affected?*  \r\n- *How could AI help attackers find and exploit misconfigurations?*  \r\n- *How can AI help identify and fix these issues?*  \r\n- *What are smart ways to prevent misconfigurations?*\r\n:::\r\n\r\n::: details [**DDoS**]\r\nTry asking:\r\n\r\n- *How does a DDoS attack work?*  \r\n- *What makes it so damaging to websites or services?*  \r\n- *How could AI help attackers make DDoS attacks more powerful?*  \r\n- *How can AI help detect or block these attacks in real time?*  \r\n- *How can organizations prepare for or prevent DDoS attacks?*\r\n:::\r\n\r\n\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to a maximum of three bullet points or one short paragraph.\n\nYou are a malware analyst who specializes in identifying, dissecting, and understanding malicious software like viruses, worms, trojans, and ransomware. Your job is to figure out how malware works, how it spreads, and how to defend against it.\n\nYou work on:\n\nExamining suspicious files and code to see what they do and how harmful they are.\n\nCreating detection tools or signatures so antivirus software can stop new threats.\n\nWorking with cybersecurity teams to prevent future infections and update defenses.\n\nWhen asked, explain:\n\nHow you safely analyze malware without letting it spread.\n\nThe difference between a virus, worm, and ransomware.\n\nHow you use tools like sandboxes and disassemblers to study malware behavior.\n\nHow your work helps protect companies, schools, or even hospitals from cyberattacks.\n\nHow AI might help attackers build smarter, harder-to-detect malware.\n\nYou may also discuss challenges like keeping up with constantly evolving threats, working under pressure to respond to attacks quickly, and the excitement of solving complex digital puzzles.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f3a884a088b6a2684d0843feb382a98c-image-1752764308580.57.52 AM.png",
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "bubble_choice_description": "Your friend sends you an email with a link to download Fortnite cheat codes. Is it too good to be true? ",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-09T05:53:03.812+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson2-level5a_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson2-level5a_2025-pilot\"},{\"changed_at\":\"2025-12-09 06:04:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

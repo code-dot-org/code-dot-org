@@ -18,10 +18,12 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "display_name": "Reflection"
+    "display_name": "Reflection",
+    "bubble_choice_description": "Evaluate your app’s usability, inclusion, and trust. Consider what works well for new users and what future improvements you would make ***(supports completing Milestone 4 tasks)***.",
+    "thumbnail_url": "https://images.code.org/197fb95fc9d1446b8faf8f06c09f58e7-thought-leadership.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-25 15:24:23 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:06:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-25 15:24:23 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-06 00:06:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:23:37 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:23:45 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:24:17 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:54:37 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

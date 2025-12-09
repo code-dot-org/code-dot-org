@@ -14,7 +14,11 @@ markdown <<MARKDOWN
 
 #### The message could also take a different path from **1.1 ➡️ Router 8 ➡️ Router 6 ➡️ Router 2 ➡️ 2.12**
 
-#### Imagine one router fails. Because of the **redundancy** in the system, the message can take an alternative route to it's final destination. *Trace out a few alternative paths and reflect on how redundant paths prevents a complete network failure.*
+#### This flexibility is possible because the network is designed with **redundancy**. Multiple routers are connected in ways that allow information to reach its destination even if one pathway becomes unavailable.
+
+#### Imagine one router fails. Because of the **redundancy** in the system, the message can take an alternative route to it's final destination. 
+
+#### *Trace out a few alternative paths and reflect on how redundant paths prevents a complete network failure.*
 
 <br>
 <br>
