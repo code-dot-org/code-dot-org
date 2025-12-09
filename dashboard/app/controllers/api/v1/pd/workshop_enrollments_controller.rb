@@ -38,7 +38,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     if @workshop.nil?
       return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
         status: :not_found
-    elsif params[:user_id].nil? || !User.exists?(foo: params[:user_id])
+    elsif params[:user_id].nil? || !User.exists?(params[:user_id])
       return render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'User cannot be found.'}
     end
 
