@@ -489,7 +489,7 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion || this.getForceNewVersion() // Force new version if the last saved version has a comment and sources have changed.
+          forceNewVersion || this.getForceNewVersion()
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -507,9 +507,7 @@ export default class ProjectManager {
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
 
-      // If we created a new version (not replacing existing), then we reset the new version to not yet have a comment.
-      // If the user manually saves the version, then the comment is added after the project is saved.
-      // See SaveVersionPanel.tsx.
+      // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
       if (forceNewVersion || this.getForceNewVersion()) {
         this.setForceNewVersion(false);
       }
