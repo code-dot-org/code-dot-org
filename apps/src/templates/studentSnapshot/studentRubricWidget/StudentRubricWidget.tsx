@@ -1,3 +1,4 @@
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import type {InferProps} from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -117,53 +118,23 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
     fetchData();
   }, [lessonId, levelId, studentId, studentLevelInfo]);
 
-  // Loading state
+  // Determine widget content based on state
+  let widgetContent: React.ReactNode;
+  let scrollable = false;
+
   if (isLoading) {
-    return (
-      <WidgetTemplate
-        widgetName="Rubric"
-        gridWidth={gridWidth}
-        gridHeight={gridHeight}
-        loading={true}
-      >
-        <div>Loading rubric...</div>
-      </WidgetTemplate>
-    );
-  }
-
-  // Error state
-  if (error) {
-    return (
-      <WidgetTemplate
-        widgetName="Rubric"
-        gridWidth={gridWidth}
-        gridHeight={gridHeight}
-      >
-        <div style={{padding: '16px', color: '#d32f2f'}}>{error}</div>
-      </WidgetTemplate>
-    );
-  }
-
-  // No rubric data
-  if (!rubric || !rubric.learningGoals || rubric.learningGoals.length === 0) {
-    return (
-      <WidgetTemplate
-        widgetName="Rubric"
-        gridWidth={gridWidth}
-        gridHeight={gridHeight}
-      >
-        <div>No rubric data available.</div>
-      </WidgetTemplate>
-    );
-  }
-
-  return (
-    <WidgetTemplate
-      widgetName="Rubric"
-      gridWidth={gridWidth}
-      gridHeight={gridHeight}
-      scrollable
-    >
+    widgetContent = <BodyThreeText>Loading rubric...</BodyThreeText>;
+  } else if (error) {
+    widgetContent = <BodyThreeText>{error}</BodyThreeText>;
+  } else if (
+    !rubric ||
+    !rubric.learningGoals ||
+    rubric.learningGoals.length === 0
+  ) {
+    widgetContent = <BodyThreeText>No rubric data available.</BodyThreeText>;
+  } else {
+    scrollable = true;
+    widgetContent = (
       <LearningGoals
         productTour={false}
         open={true}
@@ -178,6 +149,18 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
         setFeedbackAdded={setFeedbackAdded}
         aiEvaluations={aiEvaluations}
       />
+    );
+  }
+
+  return (
+    <WidgetTemplate
+      widgetName="Rubric"
+      gridWidth={gridWidth}
+      gridHeight={gridHeight}
+      loading={isLoading}
+      scrollable={scrollable}
+    >
+      {widgetContent}
     </WidgetTemplate>
   );
 };
