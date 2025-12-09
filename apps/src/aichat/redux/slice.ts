@@ -183,11 +183,11 @@ const aichatSlice = createSlice({
       state.chatEventsCurrent = [];
     },
     updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      let event = state.chatEventsCurrent.find(
+      const event = state.chatEventsCurrent.find(
         event => event.timestamp === action.payload.timestamp
       );
       if (!event) return;
-      event = action.payload;
+      Object.assign(event, action.payload);
     },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
