@@ -65,6 +65,7 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
               'Content-Type': 'application/json; charset=UTF-8',
             }
           );
+          // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
           projectManager.setCurrentVersionHasComment(true);
           setCommitDescription('');
         } catch (error) {
