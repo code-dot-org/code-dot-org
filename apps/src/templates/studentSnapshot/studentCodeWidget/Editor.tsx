@@ -1,5 +1,6 @@
 import {Compartment, EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
+import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
@@ -10,12 +11,12 @@ import {
 
 import styles from './studentCodeWidget.module.scss';
 
-interface CodeDisplayProps {
+interface EditorProps {
   code: string;
   theme: 'Light' | 'Dark';
 }
 
-const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
+const Editor: React.FC<EditorProps> = ({code, theme}) => {
   const editorRef = useRef<HTMLDivElement>(null);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
 
@@ -49,7 +50,6 @@ const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
     );
   }, [editorRef, code, editorView, theme, themeCompartment]);
 
-  // When theme changes, reconfigure the editor
   useEffect(() => {
     if (editorView) {
       editorView.dispatch({
@@ -62,18 +62,23 @@ const Editor: React.FC<CodeDisplayProps> = ({code, theme}) => {
     }
   }, [theme, editorView, themeCompartment]);
 
-  if (code === '') {
-    return (
-      <div className={styles.codeDisplay}>
-        <div className={styles.noCode}>No code to display</div>
-      </div>
-    );
-  }
+  useEffect(() => {
+    if (editorView && editorView.state.doc.toString() !== code) {
+      editorView.dispatch({
+        changes: {
+          from: 0,
+          to: editorView.state.doc.length,
+          insert: code,
+        },
+      });
+    }
+  }, [code, editorView]);
 
   return (
-    <div className={styles.codeDisplay}>
-      <div ref={editorRef} className={styles.codeEditorContainer} />
-    </div>
+    <div
+      ref={editorRef}
+      className={classNames('codemirror-container', styles.codeEditorContainer)}
+    />
   );
 };
 

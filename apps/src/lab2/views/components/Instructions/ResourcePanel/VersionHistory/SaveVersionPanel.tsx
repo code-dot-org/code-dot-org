@@ -65,7 +65,8 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
               'Content-Type': 'application/json; charset=UTF-8',
             }
           );
-          projectManager.setCurrentVersionHasComment(true);
+          // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
+          projectManager.setForceNewVersion(true);
           setCommitDescription('');
         } catch (error) {
           console.error('Failed to save commit comment:', error);

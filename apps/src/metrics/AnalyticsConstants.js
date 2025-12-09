@@ -457,7 +457,10 @@ const EVENTS = {
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
-  // Curriculumm Recommender
+  // Import project
+  APPLAB_IMPORT_PROJECT: 'User Imports Another App Lab Project',
+
+  // Curriculum Recommender
   RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
@@ -514,6 +517,11 @@ const EVENTS = {
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+
+  // AI chat response copied. Shared across features; check event properties for usage and clientType
+  // to determine feature.
+  CHAT_COPIED: 'User copied an AI chat response',
+  CODE_COPIED: 'User copied AI-generated code snippet',
 
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:

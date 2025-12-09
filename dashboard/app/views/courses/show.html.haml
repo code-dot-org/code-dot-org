@@ -17,6 +17,7 @@
 - data[:user_type] = @current_user.try(:user_type)
 
 - content_for(:head) do
+  %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
   %script{ src: webpack_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview

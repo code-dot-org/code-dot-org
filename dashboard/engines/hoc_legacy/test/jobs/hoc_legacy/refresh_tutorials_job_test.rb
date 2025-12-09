@@ -47,5 +47,19 @@ class HocLegacy::RefreshTutorialsJobTest < ActiveJob::TestCase
         end
       end
     end
+
+    context 'when tracking is disabled' do
+      before do
+        CDO.stubs(:hoc_tracking_enabled).returns(false)
+      end
+
+      it 'doe not refresh Tutorials' do
+        perform_enqueued_jobs do
+          HocLegacy::Tutorials.expects(:refresh).never
+          perform_later
+          assert_performed_jobs 1
+        end
+      end
+    end
   end
 end

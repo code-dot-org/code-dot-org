@@ -31,8 +31,12 @@ const FileTab = ({file}: FileTabProps) => {
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand ? 'fa-brands' : undefined;
   const isActive = file.active || file === activeFile;
+  const isAiTutorVersion =
+    file.isAiTutorVersionUpdated || file.isAiTutorVersionCreated || false;
   const className = classNames(moduleStyles.fileTab, {
-    [moduleStyles.active]: isActive,
+    [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersion,
+    [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersion,
+    [moduleStyles.active]: isActive && !isAiTutorVersion,
   });
   const tabRef = useRef<HTMLDivElement>(null);
 
