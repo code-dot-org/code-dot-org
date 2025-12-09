@@ -148,24 +148,36 @@ const meta: Meta<typeof StudentRubricWidget> = {
     docs: {
       description: {
         component:
-          'Teacher-style rubric widget that fetches and displays rubric data. The widget handles its own loading, error, and empty states.',
+          'Teacher-style rubric widget that fetches and displays rubric data by lesson ID. The widget handles its own loading, error, and empty states.',
       },
     },
   },
   tags: ['autodocs'],
   decorators: [
     Story => {
-      // Mock HttpClient.fetchJson to return mock rubric data
+      // Mock HttpClient.fetchJson to return mock rubric data from /rubrics/find endpoint
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (HttpClient as any).fetchJson = async () => ({
-        value: {
-          rubric: mockRubric,
-        },
-        response: new Response(JSON.stringify({rubric: mockRubric}), {
-          status: 200,
-          statusText: 'OK',
-        }),
-      });
+      (HttpClient as any).fetchJson = async (url: string) => {
+        // Return the new format: {rubricId, rubric, levelId}
+        return {
+          value: {
+            rubricId: 1,
+            rubric: mockRubric,
+            levelId: 10000,
+          },
+          response: new Response(
+            JSON.stringify({
+              rubricId: 1,
+              rubric: mockRubric,
+              levelId: 10000,
+            }),
+            {
+              status: 200,
+              statusText: 'OK',
+            }
+          ),
+        };
+      };
 
       return (
         <Provider store={mockStore}>
@@ -193,8 +205,23 @@ export const Default: Story = {
   args: {
     gridWidth: 2,
     gridHeight: 2,
-    rubricId: 1, // Mock rubric ID
+    lessonId: 11, // Mock lesson ID
     studentId: 1, // Mock student ID
+    studentLevelInfo: mockStudentLevelInfo,
+    teacherHasEnabledAi: true,
+    canProvideFeedback: true,
+    reportingData: mockReportingData,
+    aiEvaluations: mockAiEvaluations,
+  },
+};
+
+export const WithLevelId: Story = {
+  args: {
+    gridWidth: 2,
+    gridHeight: 2,
+    lessonId: 11,
+    levelId: 10000, // Optional: specify level ID for specific rubric
+    studentId: 1,
     studentLevelInfo: mockStudentLevelInfo,
     teacherHasEnabledAi: true,
     canProvideFeedback: true,
