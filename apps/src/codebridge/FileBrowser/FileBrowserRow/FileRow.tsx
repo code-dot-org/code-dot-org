@@ -36,8 +36,13 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
   const dispatch = useAppDispatch();
   const dropdownOptions = useFileRowOptions(item, hasValidationFile);
   const isActive = item.active || false;
+  const isAiTutorVersion =
+    item.isAiTutorVersionUpdated || item.isAiTutorVersionCreated || false;
   const className = useMemo(() => {
     const classes = [];
+    if (isAiTutorVersion) {
+      classes.push(moduleStyles.aiTutorVersion);
+    }
     if (isActive) {
       classes.push(moduleStyles.activeFile);
     }
@@ -45,7 +50,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       classes.push(moduleStyles.dragging);
     }
     return classNames(...classes);
-  }, [isActive, isDragging]);
+  }, [isActive, isDragging, isAiTutorVersion]);
 
   return (
     <ItemRow

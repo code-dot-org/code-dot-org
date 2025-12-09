@@ -38,9 +38,9 @@ interface VersionHistoryPanelProps {
   startSources: ProjectSources;
   selectedVersion: string;
   setSelectedVersion: (version: string) => void;
-  appName: string;
   levelId: number;
   disabled?: boolean;
+  isOpen?: boolean;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -58,9 +58,9 @@ const VersionHistoryPanel: React.FunctionComponent<
   selectedVersion,
   setSelectedVersion,
   startSources,
-  appName,
   levelId,
   disabled = false,
+  isOpen = false,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -177,6 +177,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     previousLevelId.current = levelId;
     previewViewAsUserId.current = viewAsUserId;
   }, [loadVersionList, levelId, viewAsUserId]);
+
+  // Reload version history list when tab becomes active.
+  useEffect(() => {
+    if (isOpen) {
+      loadVersionList(true);
+    }
+  }, [isOpen, loadVersionList, dispatch]);
 
   useEffect(() => {
     if (selectedVersion === '') {

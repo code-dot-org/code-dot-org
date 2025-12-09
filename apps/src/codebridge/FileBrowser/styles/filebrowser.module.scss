@@ -25,6 +25,16 @@
   padding-block: 0.125rem;
   transition: all 0.2s ease-in-out;
 
+  &.aiTutorVersion {
+    border-radius: var(--border-radius-br-s, 4px);
+    border: 1px solid var(--borders-brand-aqua-primary);
+    background: var(--background-brand-aqua-extra-light);
+
+    &:hover:not(.dragging) {
+      background-color: var(--background-brand-aqua-light);
+    }
+  }
+
   &:hover:not(.dragging) {
     background-color: var(--background-neutral-tertiary);
     border-radius: variables.$default-border-radius;

@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {getFolderPath} from '@codebridge/utils';
 import classNames from 'classnames';
 import React from 'react';
@@ -63,16 +64,26 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
       </div>
       <span className={moduleStyles.fileName}>{file.name}</span>
       {isHtmlFile && isInReview && (
-        <Button
-          onClick={handlePreviewClick}
-          aria-label={`Preview ${file.name}`}
-          size="xs"
-          type="tertiary"
-          color="gray"
-          isIconOnly={true}
-          icon={{iconName: 'eye', iconStyle: 'solid'}}
-          className={moduleStyles.previewButton}
-        />
+        <span className={moduleStyles.previewButtonWrapper}>
+          <WithTooltip
+            tooltipProps={{
+              text: 'Open in preview',
+              size: 's',
+              tooltipId: `${file.name}-preview-tooltip`,
+              direction: 'onTop',
+            }}
+          >
+            <Button
+              onClick={handlePreviewClick}
+              aria-label={`Preview ${file.name}`}
+              size="xs"
+              type="tertiary"
+              color="gray"
+              isIconOnly={true}
+              icon={{iconName: 'eye', iconStyle: 'solid'}}
+            />
+          </WithTooltip>
+        </span>
       )}
       {!isInReview && isAccepted && (
         <FontAwesomeV6Icon
