@@ -24,6 +24,7 @@ interface VersionHistoryRowProps {
   children?: React.ReactNode;
   showRestoreButton: boolean;
   className?: string;
+  alwaysShowAutoSaves?: boolean;
 }
 
 interface RestoreVersionButtonProps {
@@ -48,6 +49,7 @@ const VersionHistoryRow: React.FunctionComponent<
   restoreDisabled = false,
   restoreLoading = false,
   className,
+  alwaysShowAutoSaves = false,
 }) => {
   if (isLatest) {
     label = commonI18n.currentVersion();
@@ -76,7 +78,8 @@ const VersionHistoryRow: React.FunctionComponent<
     ariaLabel = 'AI Version Save';
   }
 
-  const showAutoSavedIcon = ariaLabel === lab2I18n.autosavedVersion();
+  const showAutoSavedIcon =
+    !alwaysShowAutoSaves && ariaLabel === lab2I18n.autosavedVersion();
 
   return (
     <div
