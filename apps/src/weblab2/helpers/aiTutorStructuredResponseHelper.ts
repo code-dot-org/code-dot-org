@@ -1,10 +1,12 @@
+import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
+
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-const getAnswerJsonSchema = (): JsonObjectSchema => {
+const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
@@ -130,7 +132,10 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. ' +
+          'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
+          'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
+          'Code should be formatted with appropriate newlines and indentation.',
       },
       explanation: {
         type: 'string',
@@ -167,7 +172,7 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
 export const copyCodeJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    answer: getAnswerJsonSchema(),
+    answer: getAnswerJsonSchemaCopyPaste(),
   },
   required: ['answer'],
   additionalProperties: false,
@@ -184,7 +189,7 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
 
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const formatExplanationResponse = (response: any): string => {
+export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';
   if (response.assumptions) {
     formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
@@ -225,8 +230,18 @@ export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
+  let formattedExplanation = '';
+  if (response.explanation) {
+    formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
+  }
+  if (response.nextSteps) {
+    formattedExplanation += `**Next Steps**\n\n${response.nextSteps}\n\n`;
+  }
+  if (response.questions) {
+    formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
+  }
   return {
-    explanation: response.explanation || '',
+    explanation: formattedExplanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.filename,
@@ -241,14 +256,6 @@ export const getMergedAiTutorCodeWithSource = (
   source: MultiFileSource,
   aiTutorVersionFiles: ProjectFile[]
 ): MultiFileSource => {
-  // Helper function to get folder depth (distance from root)
-  const getFolderDepth = (folderId: string): number => {
-    if (folderId === '0') return 0; // Root folder
-    const folder = source.folders[folderId];
-    if (!folder) return 0;
-    return 1 + getFolderDepth(folder.parentId);
-  };
-
   // Create copy of the source.
   const updatedSource: MultiFileSource = {
     ...source,
@@ -264,7 +271,8 @@ export const getMergedAiTutorCodeWithSource = (
     };
   });
 
-  // For each AI code file, find and replace the matching file if there is a matching file.
+  // For each AI code file, find and replace the updated file if the file already exists in student code.
+  // If the AI code file is a new file, add it to updatedSource.
   code.forEach((aiFile: AiTutorCodeFile) => {
     // First check active file is the same as the AI code file.
     const activeFile = getActiveFileForSource(source);
@@ -275,19 +283,44 @@ export const getMergedAiTutorCodeWithSource = (
         contents: aiFile.contents,
         isAiTutorVersionUpdated: true,
       };
-      updatedSource.files[activeFile.id] = aiTutorVersionFile;
       aiTutorVersionFiles.push(aiTutorVersionFile);
+      updatedSource.files[activeFile.id] = aiTutorVersionFile;
       return;
     }
-    // Find all files with matching name
+    // Find all files with matching name, if any.
     const matchingFiles = Object.values(updatedSource.files).filter(
-      file => file.name === aiFile.name
+      f => f.name === aiFile.name
     );
-
-    if (matchingFiles.length === 0) {
-      // No matching file found, add a new file to updatedSource.
+    if (matchingFiles.length === 1) {
+      // One matching file found, replace it.
+      updatedSource.files[matchingFiles[0].id] = {
+        ...matchingFiles[0],
+        contents: aiFile.contents,
+        isAiTutorVersionUpdated: true,
+      };
+      aiTutorVersionFiles.push(updatedSource.files[matchingFiles[0].id]);
+      return;
+    } else {
+      // No matching files found OR multiple matching files found.
+      // For both of these cases, add a new file to updatedSource in the root folder to avoid overwriting the wrong file.
       const newFileId = getNextFileId(Object.values(updatedSource.files));
-      updatedSource.files[newFileId] = {
+      if (matchingFiles.length > 0) {
+        // Validate the file name of the AI code file.
+        let validateFileNameError;
+        do {
+          const validateFileNameError = validateFileName({
+            fileName: aiFile.name,
+            folderId: DEFAULT_FOLDER_ID,
+            projectFiles: updatedSource.files,
+            isStartMode: false,
+            validationFile: undefined,
+          });
+          if (validateFileNameError) {
+            aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
+          }
+        } while (validateFileNameError);
+      }
+      const aiTutorVersionFile: ProjectFile = {
         id: newFileId,
         name: aiFile.name,
         contents: aiFile.contents,
@@ -295,25 +328,38 @@ export const getMergedAiTutorCodeWithSource = (
         language: aiFile.name.split('.').pop() || '',
         isAiTutorVersionCreated: true,
       };
-      aiTutorVersionFiles.push(updatedSource.files[newFileId]);
+      updatedSource.files[newFileId] = aiTutorVersionFile;
+      aiTutorVersionFiles.push(aiTutorVersionFile);
       return;
     }
-
-    // Find the file closest to root (smallest folder depth).
-    const closestFile = matchingFiles.reduce((closest, current) => {
-      const closestDepth = getFolderDepth(closest.folderId);
-      const currentDepth = getFolderDepth(current.folderId);
-      return currentDepth < closestDepth ? current : closest;
-    });
-    const aiTutorVersionFile: ProjectFile = {
-      ...closestFile,
-      contents: aiFile.contents,
-      isAiTutorVersionUpdated: true,
-    };
-    updatedSource.files[closestFile.id] = aiTutorVersionFile;
-    aiTutorVersionFiles.push(aiTutorVersionFile);
   });
+
   // Sort AI-updated files by name alphabetically.
   aiTutorVersionFiles.sort((a, b) => a.name.localeCompare(b.name));
+
+  // Update openFiles to prioritize AI files: active file first, then other AI files, then existing.
+  if (aiTutorVersionFiles.length > 0) {
+    const firstHtmlFile = aiTutorVersionFiles.find(f => f.language === 'html');
+    const fileToActivate = firstHtmlFile || aiTutorVersionFiles[0];
+
+    updatedSource.files[fileToActivate.id] = {
+      ...updatedSource.files[fileToActivate.id],
+      active: true,
+    };
+
+    const aiFileIds = aiTutorVersionFiles.map(f => f.id);
+    const aiFileIdSet = new Set(aiFileIds);
+    const existingOpenFilesFiltered = (updatedSource.openFiles || []).filter(
+      id => !aiFileIdSet.has(id)
+    );
+
+    const otherAiFileIds = aiFileIds.filter(id => id !== fileToActivate.id);
+    updatedSource.openFiles = [
+      fileToActivate.id,
+      ...otherAiFileIds,
+      ...existingOpenFilesFiltered,
+    ];
+  }
+
   return updatedSource;
 };

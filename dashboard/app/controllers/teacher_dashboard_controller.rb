@@ -29,6 +29,7 @@ class TeacherDashboardController < ApplicationController
     end
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
+    @flash = flash
     view_options(full_width: true, no_padding_container: true)
   end
 

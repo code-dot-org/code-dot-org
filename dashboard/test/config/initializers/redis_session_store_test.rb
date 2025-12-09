@@ -3,7 +3,7 @@
 require 'test_helper'
 require 'fakeredis'
 
-class Middlewares::RedisSessionStoreTest < ActiveSupport::TestCase
+class RedisSessionStoreTest < ActiveSupport::TestCase
   let(:redis_session_store) {described_class.new(app)}
 
   let(:app) {->(_env) {[200, {}, 'success']}}

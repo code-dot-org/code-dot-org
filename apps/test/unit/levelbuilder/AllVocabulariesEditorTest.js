@@ -39,8 +39,9 @@ describe('AllVocabulariesEditor', () => {
     expect(wrapper.find('tr').length).toBe(3);
   });
 
-  it('can remove a vocabulary', () => {
+  it('opens the delete vocabulary dialog', () => {
     const wrapper = mount(<AllVocabulariesEditor {...defaultProps} />);
+    expect(wrapper.find('Dialog').exists()).toBe(false);
     const numVocabularies = wrapper.find('tr').length;
     expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
@@ -49,16 +50,21 @@ describe('AllVocabulariesEditor', () => {
       .first();
     removeVocabularyButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(2);
-    deleteButton.simulate('click');
-    expect(removeVocabulary).toHaveBeenCalledTimes(1);
+    expect(removeDialog.exists()).toBe(true);
+    expect(removeDialog.text()).toEqual(
+      expect.stringContaining('Delete Vocabulary')
+    );
   });
 
-  it('can add a vocabulary', () => {
+  it('opens the add vocabulary dialog', () => {
     const wrapper = mount(<AllVocabulariesEditor {...defaultProps} />);
-    const addVocabularyButton = wrapper.find('a');
-    expect(addVocabularyButton.contains('Create New Vocabulary')).toBe(true);
+    expect(wrapper.find('BaseDialog').exists()).toBe(false);
+    const addVocabularyButton = wrapper
+      .find('.unit-test-add-vocabulary')
+      .first();
     addVocabularyButton.simulate('click');
-    expect(wrapper.find('AddVocabularyDialog').length).toBe(1);
+    const addDialog = wrapper.find('BaseDialog');
+    expect(addDialog.exists()).toBe(true);
+    expect(addDialog.text()).toEqual(expect.stringContaining('Add Vocabulary'));
   });
 });

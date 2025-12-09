@@ -223,9 +223,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           selectedVersion={selectedVersion}
           setSelectedVersion={setSelectedVersion}
           startSources={versionHistoryProps.startSources}
-          appName={levelProperties.appName}
           levelId={levelId}
           disabled={isTemporarilyReadOnly && !isViewingOldVersion}
+          isOpen={currentTab === Tabs.VersionHistory}
         />
       );
     }
@@ -273,6 +273,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isTemporarilyReadOnly,
     isViewingOldVersion,
     isReadOnlyPredict,
+    currentTab,
   ]);
 
   const hasTabs = useMemo(() => {

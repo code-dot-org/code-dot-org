@@ -76,6 +76,8 @@ require 'parallel_tests/test/runtime_logger'
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
+  class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/fixtures/vcr_cassettes').to_s
+
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
@@ -108,6 +110,9 @@ class ActiveSupport::TestCase
     # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
+
+    # Test class specific VCR configs
+    VCR.configuration.cassette_library_dir = vcr_cassette_library_dir
   end
 
   teardown do

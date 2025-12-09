@@ -9,6 +9,7 @@ import React from 'react';
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
 import moduleStyles from './version-history-row.module.scss';
 
@@ -52,21 +53,27 @@ const VersionHistoryRow: React.FunctionComponent<
     label = commonI18n.currentVersion();
   }
 
-  let rowMarginStyle, ariaLabel;
+  let ariaLabel;
   let isBoldtype = true;
+  const isAiSaveComment = comment && comment === AI_SAVED_COMMENT;
+  const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
-    rowMarginStyle = moduleStyles.initialVersionRow;
+    classes.push(moduleStyles.initialVersionRow);
   } else if (isLatest) {
     // Note that the latest or most current version can also include a comment.
     // This styling adds the appropriate margin to a given row.
-    rowMarginStyle = moduleStyles.currentVersionRow;
-  } else if (comment) {
-    rowMarginStyle = moduleStyles.commentRow;
+    classes.push(moduleStyles.currentVersionRow);
+  } else if (comment && !isAiSaveComment) {
+    classes.push(moduleStyles.commentRow);
     ariaLabel = lab2I18n.committedVersion();
   } else {
-    rowMarginStyle = moduleStyles.row;
+    classes.push(moduleStyles.row);
     ariaLabel = lab2I18n.autosavedVersion();
     isBoldtype = false;
+  }
+  if (isAiSaveComment) {
+    classes.push(moduleStyles.aiSaveRow);
+    ariaLabel = 'AI Version Save';
   }
 
   const showAutoSavedIcon = ariaLabel === lab2I18n.autosavedVersion();
@@ -74,11 +81,7 @@ const VersionHistoryRow: React.FunctionComponent<
   return (
     <div
       id={versionId}
-      className={classNames(
-        moduleStyles.rowContainer,
-        rowMarginStyle,
-        className
-      )}
+      className={classNames(classes, moduleStyles.rowContainer, className)}
     >
       <div className={moduleStyles.versionContent}>
         <div className={moduleStyles.versionHeader}>
@@ -110,12 +113,28 @@ const VersionHistoryRow: React.FunctionComponent<
               disabled={restoreDisabled}
             />
           )}
+          {isAiSaveComment && !showRestoreButton && (
+            <WithTooltip
+              tooltipProps={{
+                text: 'AI Version Save',
+                size: 's',
+                tooltipId: `${versionId}-ai-saved-tooltip`,
+                direction: 'onBottom',
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconFamily="kit"
+                iconName="ai-head-solid"
+                className={moduleStyles.aiSaveIcon}
+              />
+            </WithTooltip>
+          )}
           {showAutoSavedIcon && !showRestoreButton && (
             <WithTooltip
               tooltipProps={{
                 text: lab2I18n.autosavedVersion(),
                 size: 's',
-                tooltipId: `${versionId}-tooltip`,
+                tooltipId: `${versionId}-autosaved-tooltip`,
                 direction: 'onBottom',
               }}
             >
@@ -127,7 +146,7 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
         </div>
         {children}
-        {comment && (
+        {comment && !isAiSaveComment && (
           <BodyFourText className={moduleStyles.commitDescription} noMargin>
             {comment}
           </BodyFourText>

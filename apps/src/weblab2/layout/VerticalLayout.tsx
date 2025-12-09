@@ -8,6 +8,7 @@ import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
+import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -39,6 +40,14 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2.aiTutorVersionFiles
+  );
+
   const dispatch = useAppDispatch();
 
   const infoPanelInitialWidth = isStandaloneCollapsed
@@ -169,32 +178,45 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             }
             rightHeaderContent={<HeaderButtons />}
           />
-          <div className={weblab2Styles.editorAndPreviewContainer}>
-            {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
-              <>
-                <Workspace
-                  style={{width: middlePanelWidth}}
+          <div className={weblab2Styles.workspaceContainer}>
+            {isAiTutorVersion && (
+              <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
+            )}
+            <div
+              className={classNames(
+                weblab2Styles.editorAndPreviewContainer,
+                isAiTutorVersion && weblab2Styles.aiTutorVersionContainer
+              )}
+            >
+              {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
+                <>
+                  <Workspace
+                    style={{width: middlePanelWidth}}
+                    className={classNames(
+                      lab2Styles.shrinkAndGrow,
+                      panelClassName
+                    )}
+                    hideHeaders
+                  />
+                  <ResizeBar
+                    isVertical={true}
+                    separatorProps={rightPanelSeparatorProps}
+                    isDragging={rightPanelDragging}
+                  />
+                </>
+              )}
+              {viewMode !== ViewMode.CODE && (
+                <div
+                  style={{width: rightPanelWidth}}
                   className={classNames(
                     lab2Styles.shrinkAndGrow,
                     panelClassName
                   )}
-                  hideHeaders
-                />
-                <ResizeBar
-                  isVertical={true}
-                  separatorProps={rightPanelSeparatorProps}
-                  isDragging={rightPanelDragging}
-                />
-              </>
-            )}
-            {viewMode !== ViewMode.CODE && (
-              <div
-                style={{width: rightPanelWidth}}
-                className={classNames(lab2Styles.shrinkAndGrow, panelClassName)}
-              >
-                <HTMLPreview />
-              </div>
-            )}
+                >
+                  <HTMLPreview />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

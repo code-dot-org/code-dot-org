@@ -8,9 +8,8 @@ import {LinkButton} from '@code-dot-org/component-library/button';
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
-import Bootstrap from './modules/bootstrap';
-
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
+import Bootstrap from '@/modules/bootstrap';
 
 const SIGNED_OUT_MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
