@@ -41,6 +41,7 @@ interface VersionHistoryPanelProps {
   levelId: number;
   disabled?: boolean;
   isOpen?: boolean;
+  alwaysShowAutoSaves?: boolean;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -52,6 +53,12 @@ type VersionSegment =
       groupIndex: number;
     };
 
+// The Regex here removes the space before AM/PM to match mocks and make more compact.
+const AM_PM_SPACE_REGEX = /\s(AM|PM)$/i;
+function stripSpaceBeforeAmPm(value: string): string {
+  return value.replace(AM_PM_SPACE_REGEX, '$1');
+}
+
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
 > = ({
@@ -61,6 +68,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   levelId,
   disabled = false,
   isOpen = false,
+  alwaysShowAutoSaves = false,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -105,10 +113,22 @@ const VersionHistoryPanel: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
+  // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
       day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+  }, [locale]);
+
+  // Ex: "Jun 5, 2022, 3:30 PM"
+  const dateFormatterWithYear = useMemo(() => {
+    return new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
     });
@@ -309,11 +329,17 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   const parseDate = useCallback(
     (date: string) => {
-      const dateObject = new Date(date);
-      // The Regex here removes the space before AM/PM to match mocks and make more compact.
-      return dateFormatter.format(dateObject).replace(/\s(AM|PM)/gi, '$1');
+      const versionDate = new Date(date);
+      const now = new Date();
+
+      // Within the current year, show month and day only.
+      if (now.getFullYear() === versionDate.getFullYear()) {
+        return stripSpaceBeforeAmPm(dateFormatter.format(versionDate));
+      }
+      // Older than a year, show month, day, and year.
+      return stripSpaceBeforeAmPm(dateFormatterWithYear.format(versionDate));
     },
-    [dateFormatter]
+    [dateFormatter, dateFormatterWithYear]
   );
 
   const onVersionChange = useCallback(
@@ -388,14 +414,19 @@ const VersionHistoryPanel: React.FunctionComponent<
     return segments;
   }, [versionList]);
 
-  // Initialize collapsed state for all groups (all collapsed by default)
+  // Initialize collapsed state for all groups
+  // All groups collapsed by default, unless alwaysShowAutoSaves is true
   useEffect(() => {
+    if (alwaysShowAutoSaves) {
+      setCollapsedGroups(new Set());
+      return;
+    }
     const allGroupIndices = versionSegments
       .filter(segment => segment.type === 'autoSaveGroup')
       .map(segment => (segment as {groupIndex: number}).groupIndex);
 
     setCollapsedGroups(new Set(allGroupIndices));
-  }, [versionSegments]);
+  }, [versionSegments, alwaysShowAutoSaves]);
 
   const toggleGroupCollapsed = useCallback((groupIndex: number) => {
     setCollapsedGroups(prev => {
@@ -438,6 +469,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           restoreOnClick={restoreSelectedVersion}
           restoreLoading={versionLoading}
           restoreDisabled={disabled || versionLoading}
+          alwaysShowAutoSaves={alwaysShowAutoSaves}
         >
           {isLatest && hasEdited && !viewAsUserId && (
             <SaveVersionPanel
@@ -460,6 +492,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       hasEdited,
       projectSources,
       handleSaveVersionSuccess,
+      alwaysShowAutoSaves,
     ]
   );
 
@@ -533,7 +566,7 @@ const VersionHistoryPanel: React.FunctionComponent<
 
                 return (
                   <React.Fragment key={`group-${groupIndex}`}>
-                    {hasMultipleVersions && (
+                    {hasMultipleVersions && !alwaysShowAutoSaves && (
                       <Button
                         className={moduleStyles.collapseButton}
                         text={
