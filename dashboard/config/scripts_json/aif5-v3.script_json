@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-08 19:47:40 UTC",
+    "serialized_at": "2025-12-09 09:15:05 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4835,9 +4835,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-powered-threats-defenses-lesson2-level2_2025-pilot"
-        ],
         "progression": "Cybersecurity Attacks Demos"
       },
       "bonus": false,
@@ -4910,15 +4907,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-powered-threats-defenses-lesson2-level5_2025-pilot"
-        ],
         "progression": "Chat with a Cyber Expert"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson2-level5_2025-pilot"
+          "ai-powered-threats-defenses-lesson2-level5_2025-v2"
         ],
         "lesson.key": "Lesson 2: Cybersecurity Threats",
         "lesson_group.key": "lessonGroup-3",
@@ -4926,7 +4920,7 @@
         "activity_section.key": "4fdc8566-04a6-42ab-abe4-132dd0f8c7dd"
       },
       "level_keys": [
-        "ai-powered-threats-defenses-lesson2-level5_2025-pilot"
+        "ai-powered-threats-defenses-lesson2-level5_2025-v2"
       ]
     },
     {
@@ -5160,15 +5154,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
-        ],
         "progression": "Create a Deep Fake Script"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+          "ai-powered-threats-defenses-lesson4-level4_2025-pilot_v2"
         ],
         "lesson.key": "Lesson 4: Phishing with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -5176,7 +5167,7 @@
         "activity_section.key": "db865e3c-2705-412b-b016-149a0451e892"
       },
       "level_keys": [
-        "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+        "ai-powered-threats-defenses-lesson4-level4_2025-pilot_v2"
       ]
     },
     {
@@ -5335,15 +5326,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-powered-threats-defenses-lesson6-level2_2025-pilot"
-        ],
         "progression": "AI Chat: Investigate a CIA Scenario"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson6-level2_2025-pilot"
+          "ai-powered-threats-defenses-lesson6-level2_2025-pilot_v2"
         ],
         "lesson.key": "Lesson 6: Confidentiality, Integrity, and Availability",
         "lesson_group.key": "lessonGroup-3",
@@ -5351,7 +5339,7 @@
         "activity_section.key": "a0f1fc17-eaa8-4a02-8b46-45d6d7e2984a"
       },
       "level_keys": [
-        "ai-powered-threats-defenses-lesson6-level2_2025-pilot"
+        "ai-powered-threats-defenses-lesson6-level2_2025-pilot_v2"
       ]
     },
     {
@@ -5510,15 +5498,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
-        ],
         "progression": "Human vs AI Detection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+          "ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2"
         ],
         "lesson.key": "Lesson 8: AAA and AI",
         "lesson_group.key": "lessonGroup-3",
@@ -5526,7 +5511,7 @@
         "activity_section.key": "84dec716-0c3a-4730-aab8-d2b9d5c53cc5"
       },
       "level_keys": [
-        "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+        "ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2"
       ]
     },
     {
@@ -5535,9 +5520,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-powered-threats-defenses-lesson8-level3-2_2025-pilot"
-        ],
         "progression": "Adaptive Security"
       },
       "bonus": false,
@@ -6092,9 +6074,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-powered-threats-defenses-lesson2-level5_2025-pilot",
+        "level.key": "ai-powered-threats-defenses-lesson2-level5_2025-v2",
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson2-level5_2025-pilot"
+          "ai-powered-threats-defenses-lesson2-level5_2025-v2"
         ],
         "lesson.key": "Lesson 2: Cybersecurity Threats",
         "lesson_group.key": "lessonGroup-3",
@@ -6212,9 +6194,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-powered-threats-defenses-lesson4-level4_2025-pilot",
+        "level.key": "ai-powered-threats-defenses-lesson4-level4_2025-pilot_v2",
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson4-level4_2025-pilot"
+          "ai-powered-threats-defenses-lesson4-level4_2025-pilot_v2"
         ],
         "lesson.key": "Lesson 4: Phishing with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -6296,9 +6278,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-powered-threats-defenses-lesson6-level2_2025-pilot",
+        "level.key": "ai-powered-threats-defenses-lesson6-level2_2025-pilot_v2",
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson6-level2_2025-pilot"
+          "ai-powered-threats-defenses-lesson6-level2_2025-pilot_v2"
         ],
         "lesson.key": "Lesson 6: Confidentiality, Integrity, and Availability",
         "lesson_group.key": "lessonGroup-3",
@@ -6380,9 +6362,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-powered-threats-defenses-lesson8-level2_2025-pilot",
+        "level.key": "ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2",
         "script_level.level_keys": [
-          "ai-powered-threats-defenses-lesson8-level2_2025-pilot"
+          "ai-powered-threats-defenses-lesson8-level2_2025-pilot_v2"
         ],
         "lesson.key": "Lesson 8: AAA and AI",
         "lesson_group.key": "lessonGroup-3",
