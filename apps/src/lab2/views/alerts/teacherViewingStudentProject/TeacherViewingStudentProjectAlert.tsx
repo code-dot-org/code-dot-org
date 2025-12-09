@@ -7,9 +7,13 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './teacherViewingStudentProjectAlert.module.scss';
 
-const TeacherViewingStudentProjectAlert: React.FC = () => {
-  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+type TeacherViewingStudentProjectAlertProps = {
+  viewAsUserId: number | null;
+};
 
+const TeacherViewingStudentProjectAlert: React.FC<
+  TeacherViewingStudentProjectAlertProps
+> = ({viewAsUserId}) => {
   // Get the list of students in the selected section.
   const studentsInSection = useAppSelector(
     state => state.teacherSections.selectedStudents
@@ -26,13 +30,7 @@ const TeacherViewingStudentProjectAlert: React.FC = () => {
     return student?.name;
   }, [viewAsUserId, studentsInSection]);
 
-  const alertText = !selectedStudentName ? (
-    levelNotStarted ? (
-      <>This student has not started the level.</>
-    ) : (
-      <>You are viewing this student's project in read only mode.</>
-    )
-  ) : levelNotStarted ? (
+  const alertText = levelNotStarted ? (
     <>
       <strong>{selectedStudentName}</strong> has not started the level.
     </>

@@ -7,15 +7,13 @@ import {FileBrowser} from '@codebridge/FileBrowser/FileBrowser';
 import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserHeaderPopUpButton';
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
+import {useTeacherViewingStudent} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {
-  isReadOnlyWorkspace,
-  isProjectTemplateLevel,
-} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
@@ -41,10 +39,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-  const [isTeacherViewingStudent, setIsTeacherViewingStudent] = useState(false);
+  const {viewAsUserId, teacherViewingStudent} = useTeacherViewingStudent();
 
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
@@ -61,18 +58,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const versionDetails = useAppSelector(
     state => state.lab2Project.versionDetails
   );
-  const isTeacherOfProjectOwner = useAppSelector(
-    state => state.lab.isTeacherOfProjectOwner
-  );
-
-  // Determine if the teacher is viewing a student's project in read-only mode.
-  useEffect(() => {
-    if (isTeacherOfProjectOwner && isReadOnly) {
-      setIsTeacherViewingStudent(true);
-    } else if (!isTeacherOfProjectOwner && !isReadOnly) {
-      setIsTeacherViewingStudent(false);
-    }
-  }, [isTeacherOfProjectOwner, isReadOnly]);
 
   const locale = currentLocale();
   const versionDate = useMemo(() => {
@@ -110,7 +95,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
-        {isTeacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+        {teacherViewingStudent && (
+          <TeacherViewingStudentProjectAlert viewAsUserId={viewAsUserId} />
+        )}
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.previousVersionBanner}
@@ -138,7 +125,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               </BodyFourText>
             )}
             <div className={moduleStyles.fileBrowserHeaderButtons}>
-              {showFileBrowser && !isReadOnly && (
+              {showFileBrowser && !teacherViewingStudent && (
                 <FileBrowserHeaderPopUpButton />
               )}
               <ToggleFileBrowserButton />
