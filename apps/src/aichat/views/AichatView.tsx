@@ -13,9 +13,13 @@ import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isProjectTemplateLevel,
+  isTeacherViewingStudent,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -67,6 +71,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const teacherViewingStudent = useAppSelector(isTeacherViewingStudent);
 
   const {
     name: levelName,
@@ -317,6 +322,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             <SegmentedButtons {...viewModeButtonsProps} />
           </div>
         )}
+        {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
         <div className={moduleStyles.labCoreContainer}>
           {viewMode === ViewMode.EDIT && (
             <>
