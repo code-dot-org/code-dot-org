@@ -58,7 +58,7 @@ contentful_cs_for_all_access_token: $CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_workers: 5
-disable_all_eyes_running: true
+disable_all_eyes_running: false
 ignore_eyes_mismatches: true
 localize_apps: true
 use_my_apps: true
