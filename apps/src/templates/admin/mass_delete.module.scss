@@ -1,0 +1,133 @@
+.teacherSection {
+  margin-bottom: 20px;
+}
+
+.teacherInput {
+  margin: 10px 0;
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.helperText {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.fileInput {
+  margin: 10px 0;
+}
+
+.errorMessage {
+  color: red;
+  margin: 10px 0;
+}
+
+.warningMessage {
+  color: orange;
+  font-weight: bold;
+}
+
+.successMessage {
+  color: green;
+}
+
+.convertButton {
+  margin-top: 10px;
+  background-color: #007bff;
+
+  &.converting {
+    background-color: #ccc;
+  }
+}
+
+.conversionError {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.formatInfo {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.buttonSection {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.disabledInfo {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.dataPreview {
+  margin-top: 30px;
+}
+
+.previewInfo {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.tableHeader {
+  background-color: #f5f5f5;
+}
+
+.tableHeaderCell {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+}
+
+.tableRow {
+  border-bottom: 1px solid #eee;
+
+  &:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  &:nth-child(odd) {
+    background-color: #fff;
+  }
+}
+
+.tableCell {
+  padding: 10px 12px;
+  border-right: 1px solid #eee;
+}
+
+.indexCell {
+  padding: 10px 12px;
+  border-right: 1px solid #eee;
+  color: #666;
+}
+
+.lastCell {
+  padding: 10px 12px;
+}
+
+.tableNote {
+  color: #666;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
