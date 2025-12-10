@@ -36,6 +36,7 @@ interface BaseChatMessage extends BaseChatEvent {
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
+  updateId?: string;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */

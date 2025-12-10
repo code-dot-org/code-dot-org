@@ -1,6 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   DEFAULT_THREAD_TITLE,
   ThreadTypeFields,
@@ -17,7 +16,6 @@ import {
 import {
   AiCustomizations,
   ChatEvent,
-  CompletedChatMessage,
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
@@ -26,16 +24,16 @@ import {
   isModelUpdate,
   isNotification,
   isUserActionEvent,
-  isChatMessage,
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
-  PendingChatMessage,
   ChatAsset,
   SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
+  ChatMessage,
+  isChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -58,7 +56,6 @@ const initialState: AichatState = {
   initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
-  chatMessagePending: undefined,
   studentChatHistory: [],
   showModalType: undefined,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -89,39 +86,6 @@ const aichatSlice = createSlice({
     },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
-    },
-    updateChatEvent: (
-      state,
-      action: PayloadAction<{
-        requestId: number;
-        role: Role;
-        status?: CompletedChatMessage['status'];
-        text?: string;
-      }>
-    ) => {
-      const {requestId, status, text, role} = action.payload;
-      let event;
-
-      for (let i = state.chatEventsCurrent.length - 1; i >= 0; i--) {
-        const chatEvent = state.chatEventsCurrent[i];
-        if (
-          isChatMessage(chatEvent) &&
-          (chatEvent as CompletedChatMessage).requestId === requestId &&
-          (chatEvent as CompletedChatMessage).role === role
-        ) {
-          event = chatEvent;
-        }
-      }
-
-      if (!event) {
-        return;
-      }
-      if (status !== undefined) {
-        event.status = status;
-      }
-      if (text !== undefined) {
-        event.chatMessageText = text;
-      }
     },
     setStudentChatHistory: (
       state,
@@ -219,14 +183,18 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    setChatMessagePending: (
-      state,
-      action: PayloadAction<PendingChatMessage>
-    ) => {
-      state.chatMessagePending = action.payload;
-      state.hasSentMessage = true;
+    updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+      const event = state.chatEventsCurrent.find(
+        event =>
+          isChatMessage(event) && event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      // merge payload event properties into event
+      Object.assign(event, action.payload);
     },
-    clearChatMessagePending: state => (state.chatMessagePending = undefined),
+    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
+      state.hasSentMessage = action.payload;
+    },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
@@ -470,10 +438,9 @@ export const aichatReducer = aichatSlice.reducer;
 export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
-  updateChatEvent,
   startSave,
-  setChatMessagePending,
-  clearChatMessagePending,
+  updateChatMessage,
+  setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
