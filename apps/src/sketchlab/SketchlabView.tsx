@@ -19,7 +19,7 @@ import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -183,14 +183,25 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  useEffect(() => {
-    setReinitializationHandler(() => {
+  // Does this need dependency array?
+  const reinitializationHandler = useCallback(
+    (sources?: ProjectSources) => {
+      console.log('Reinitializing Excalidraw workspace');
+
+      if (sources) {
+        updateSources(sources as SketchlabSources); // remove forced type? move this so other uses of handler don't need arg?
+      }
       setExcalidrawMountKey(key => key + 1);
 
       // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
       downloadedFilesDataRef.current = {};
-    });
-  }, [setReinitializationHandler]);
+    },
+    [updateSources]
+  );
+
+  useEffect(() => {
+    setReinitializationHandler(reinitializationHandler);
+  }, [setReinitializationHandler, reinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -204,6 +215,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  console.log(currentSources.source);
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <SketchlabTourSteps />
@@ -214,6 +226,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           hasRun={hasRun}
           hasEdited={false}
           settings={[useThemeSetting('sketchlab')]}
+          versionHistoryProps={{
+            startSources: levelProperties?.startSources as ProjectSources, // Fix this
+            onRestore: reinitializationHandler,
+          }}
         />
       </div>
       <ResizeBar

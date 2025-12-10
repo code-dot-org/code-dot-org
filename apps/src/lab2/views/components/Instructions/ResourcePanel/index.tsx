@@ -63,6 +63,7 @@ export interface Setting {
 interface VersionHistoryProps {
   startSources: ProjectSources;
   alwaysShowAutoSaves?: boolean;
+  onRestore?: (sources: ProjectSources) => void;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -229,6 +230,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           disabled={isTemporarilyReadOnly && !isViewingOldVersion}
           isOpen={currentTab === Tabs.VersionHistory}
           alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
+          onRestore={versionHistoryProps.onRestore}
         />
       );
     }

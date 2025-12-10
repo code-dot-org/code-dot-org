@@ -42,6 +42,7 @@ interface VersionHistoryPanelProps {
   disabled?: boolean;
   isOpen?: boolean;
   alwaysShowAutoSaves?: boolean;
+  onRestore?: (sources: ProjectSources) => void;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -69,6 +70,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   disabled = false,
   isOpen = false,
   alwaysShowAutoSaves = false,
+  onRestore,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -268,6 +270,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         /* forceNewVersion */ true
       )
     );
+    // fix here
     successfulProjectResetCleanUp();
   }, [dispatch, startSources, successfulProjectResetCleanUp]);
 
@@ -296,6 +299,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
+            if (onRestore) onRestore(sources);
             successfulProjectResetCleanUp();
           } else {
             setVersionLoadError(true);
@@ -312,6 +316,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
+    onRestore,
   ]);
 
   const isLatestVersion = useCallback(
@@ -371,6 +376,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     });
     dispatch(setHasEdited(false));
     successfulProjectResetCleanUp(true);
+    // Needs to go in here?
     setVersionSaved(true);
   }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
 
