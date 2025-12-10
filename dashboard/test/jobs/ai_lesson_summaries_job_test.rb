@@ -3,13 +3,17 @@ require 'test_helper'
 class AiLessonSummariesJobTest < ActiveJob::TestCase
   setup do
     @user = create(:teacher)
-    @lesson1 = create(:lesson)
-    @lesson2 = create(:lesson)
-    @lesson3 = create(:lesson)
+    @unit = create(:unit)
+    @course = create(:single_unit_course, unit: @unit)
+    lesson_group = create(:lesson_group, script: @unit)
+    @lesson1 = create(:lesson, lesson_group: lesson_group)
+    @lesson2 = create(:lesson, lesson_group: lesson_group)
+    @lesson3 = create(:lesson, lesson_group: lesson_group)
     @request = {
       user_id: @user.id,
       lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id]
     }
+    @section = create(:section, user: @user, script_id: @unit.id, course_id: @course.id)
 
     # Mock rack environment
     CDO.stubs(:rack_env).returns('test')
@@ -37,7 +41,8 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'perform works with single lesson_id' do
     single_request = {
       user_id: @user.id,
-      lesson_ids: [@lesson1.id]
+      lesson_ids: [@lesson1.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
@@ -49,7 +54,8 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'perform works with empty lesson_ids array' do
     empty_request = {
       user_id: @user.id,
-      lesson_ids: []
+      lesson_ids: [],
+      unit_id: @unit.id
     }
 
     # Should not call the helper at all
@@ -128,7 +134,8 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'job handles request with string lesson_ids' do
     string_request = {
       user_id: @user.id.to_s,
-      lesson_ids: [@lesson1.id.to_s, @lesson2.id.to_s]
+      lesson_ids: [@lesson1.id.to_s, @lesson2.id.to_s],
+      unit_id: @unit.id
     }
 
     # Should convert strings to integers when calling helper
@@ -143,7 +150,8 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'job handles malformed request gracefully' do
     malformed_request = {
       user_id: @user.id,
-      lesson_ids: nil
+      lesson_ids: nil,
+      unit_id: nil
     }
 
     # Should raise an error when trying to iterate over nil
@@ -154,7 +162,8 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
 
   test 'job handles missing user_id in request' do
     request_without_user = {
-      lesson_ids: [@lesson1.id]
+      lesson_ids: [@lesson1.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).

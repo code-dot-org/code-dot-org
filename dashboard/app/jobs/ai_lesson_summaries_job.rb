@@ -16,15 +16,17 @@ class AiLessonSummariesJob < ApplicationJob
     section = unit_id.present? ? user.sections.where(script_id: unit_id).first : nil
     section ||= user.sections.first
 
-    TeacherNotification.create!(
-      user_id: user_id,
-      title: 'AI Lesson Summaries ready to view',
-      description: "The lesson summaries for #{lesson_ids.size} lessons have been generated and are now available.",
-      icon_name: 'solid-flask-sparkle',
-      icon_color: 'Aqua',
-      href_links: [{text: 'View lesson materials',
-                   url: "/teacher_dashboard/sections/#{section.id}/lesson_materials"}],
-    )
+    if section
+      TeacherNotification.create!(
+        user_id: user_id,
+        title: 'AI Lesson Summaries ready to view',
+        description: "The lesson summaries for #{lesson_ids.size} lessons have been generated and are now available.",
+        icon_name: 'solid-flask-sparkle',
+        icon_color: 'Aqua',
+        href_links: [{text: 'View lesson materials',
+                     url: "/teacher_dashboard/sections/#{section.id}/lesson_materials"}],
+      )
+    end
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
