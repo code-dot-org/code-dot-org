@@ -307,7 +307,7 @@ class LevelsController < ApplicationController
                    edit_blocks_level_path(@level, :start_sources)
                  else
                    if reset
-                     params["redirect"] || level_url(@level, show_callouts: 1, reset: reset)
+                     params["redirect"] ? params["redirect"] + "?reset=true" : level_url(@level, show_callouts: 1, reset: reset)
                    else
                      params["redirect"] || level_url(@level, show_callouts: 1)
                    end

@@ -22,7 +22,7 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {AIF_UNITS} from '../teacherNavigation/lessonMaterials/LessonSummaryConstants';
+import {AIF_UNIT_IDS} from '../teacherNavigation/lessonMaterials/LessonSummaryConstants';
 
 import {
   getFilteredSectionOrderIds,
@@ -1027,10 +1027,11 @@ export const assignToSection = (
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     if (
+      unitId &&
+      section.unitId !== unitId &&
       (DCDO.get('show-aita-lesson-summaries', false) ||
         experiments.isEnabled('ai_lesson_summaries') ||
-        (section.unitName && AIF_UNITS.includes(section.unitName))) &&
-      !!unitId
+        AIF_UNIT_IDS.includes(unitId))
     ) {
       HttpClient.get(
         `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`

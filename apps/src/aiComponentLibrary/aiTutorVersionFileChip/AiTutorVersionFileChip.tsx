@@ -1,0 +1,125 @@
+import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {getFolderPath} from '@codebridge/utils';
+import classNames from 'classnames';
+import React from 'react';
+
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
+
+import moduleStyles from './ai-tutor-version-file-chip.module.scss';
+
+interface AiTutorVersionFileChipProps {
+  /** The project file to display */
+  file: ProjectFile;
+  isInReview?: boolean;
+  isAccepted?: boolean;
+}
+
+/**
+ * A chip component for displaying AI Tutor version files.
+ * Shows the file name with a status indicator:
+ * - Green with plus icon for new files
+ * - Gray with checkmark for updated files
+ * If the file is in review, includes an eye icon button for preview for HTML files.
+ * If the file is not in review and accepted, then includes a checkmark icon.
+ * If the file is not in review and rejected, then includes an X mark icon.
+ */
+const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
+  file,
+  isInReview = true,
+  isAccepted = true,
+}) => {
+  const isNewFile = file.isAiTutorVersionCreated;
+  const isUpdatedFile = file.isAiTutorVersionUpdated;
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
+  const isHtmlFile =
+    file.language === 'html' || file.name.toLowerCase().endsWith('.html');
+  const dispatch = useAppDispatch();
+  const handlePreviewClick = () => {
+    const folderPath = getFolderPath(file.folderId, source.folders).substring(
+      1
+    );
+    const filePath =
+      folderPath === '' ? file.name : folderPath + '/' + file.name;
+    dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+  };
+
+  const statusText = isNewFile
+    ? 'New file created by AI Tutor'
+    : 'File updated by AI Tutor';
+  const acceptanceText = !isInReview
+    ? isAccepted
+      ? ', accepted'
+      : ', rejected'
+    : '';
+  const accessibleLabel = `${statusText}: ${file.name}${acceptanceText}`;
+
+  const hasPreviewButton = isHtmlFile && isInReview;
+
+  return (
+    <div
+      className={classNames(moduleStyles.chip, {
+        [moduleStyles.newFile]: isNewFile,
+        [moduleStyles.updatedFile]: isUpdatedFile,
+      })}
+    >
+      <div
+        className={moduleStyles.fileInfo}
+        role="status"
+        aria-label={accessibleLabel}
+      >
+        <div className={moduleStyles.statusIndicator}>
+          <FontAwesomeV6Icon
+            iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
+            iconStyle="solid"
+          />
+        </div>
+        <span className={moduleStyles.fileName}>{file.name}</span>
+        {!isInReview && isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="check"
+            iconStyle="solid"
+            className={moduleStyles.acceptedIcon}
+          />
+        )}
+        {!isInReview && !isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="xmark"
+            iconStyle="solid"
+            className={moduleStyles.rejectedIcon}
+          />
+        )}
+      </div>
+      {/* Preview button - outside role="img" so it remains accessible */}
+      {hasPreviewButton && (
+        <span className={moduleStyles.previewButtonWrapper}>
+          <WithTooltip
+            tooltipProps={{
+              text: 'Open in preview',
+              size: 's',
+              tooltipId: `${file.name}-preview-tooltip`,
+              direction: 'onTop',
+            }}
+          >
+            <Button
+              onClick={handlePreviewClick}
+              aria-label={`Preview ${file.name}`}
+              size="xs"
+              type="tertiary"
+              color="gray"
+              isIconOnly={true}
+              icon={{iconName: 'eye', iconStyle: 'solid'}}
+            />
+          </WithTooltip>
+        </span>
+      )}
+    </div>
+  );
+};
+
+export default AiTutorVersionFileChip;

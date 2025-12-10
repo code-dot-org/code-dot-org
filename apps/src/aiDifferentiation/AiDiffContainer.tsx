@@ -19,7 +19,6 @@ const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
-  open: boolean;
   scriptName?: string;
   curriculumCourses?: string[];
   unreadNotificationCount: number;
@@ -49,7 +48,6 @@ const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
-  open,
   scriptName,
   curriculumCourses,
   unreadNotificationCount,
@@ -67,6 +65,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
+
+  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
@@ -121,7 +121,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             ? style.aiDiffContainer
             : style.aiDiffContainerWide
         }
-        style={open ? undefined : {display: 'none'}}
+        style={chatIsOpen ? undefined : {display: 'none'}}
       >
         <FocusLock disabled={!open}>
           <AiDiffHeader

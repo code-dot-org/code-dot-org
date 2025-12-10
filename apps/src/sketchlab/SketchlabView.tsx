@@ -17,10 +17,13 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isReadOnlyWorkspace,
+  isTeacherViewingStudent,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -154,18 +157,13 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        // TO DO: figure out how to update to support starter assets.
-        // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
-        // In start mode, we manage saving explicitly via the button in the header.
-        let uploadedFiles;
-        if (!getIsStartMode()) {
-          uploadedFiles = await uploadExternalFiles(
-            currentSources.source.externalFiles || {},
-            serializedData.files,
-            filesBeingUploadedRef,
-            channelId
-          );
-        }
+        const uploadedFiles = await uploadExternalFiles(
+          currentSources.source.externalFiles || {},
+          serializedData.files,
+          filesBeingUploadedRef,
+          channelId,
+          levelProperties.name
+        );
 
         updateSources({
           source: {
@@ -178,7 +176,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         });
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, channelId, currentSources.source]
+    [updateSources, channelId, currentSources.source, levelProperties.name]
   );
 
   useEffect(() => {
@@ -209,6 +207,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       dispatch(setHasRun(false));
     };
   }, [dispatch]);
+
+  const teacherViewingStudent = useAppSelector(isTeacherViewingStudent);
 
   return (
     <div className={moduleStyles.sketchlabContainer}>
@@ -246,6 +246,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             )
           }
         >
+          {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
           <Excalidraw
             initialData={
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)

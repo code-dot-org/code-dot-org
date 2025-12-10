@@ -20,6 +20,11 @@ module HocLegacy
         cache.write(CACHE_KEY, fetch_all)
       end
 
+      # @return [Boolean] true if the store was cleared
+      def clear
+        cache.delete(CACHE_KEY)
+      end
+
       # @return [Hash{String => Contentful::Entry}] a hash mapping tutorial codes to their Tutorial entries
       private def store
         cache.fetch(CACHE_KEY, force: CDO.rack_env?(:development)) {fetch_all} || {}

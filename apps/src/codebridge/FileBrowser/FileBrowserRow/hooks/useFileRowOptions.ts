@@ -10,7 +10,11 @@ import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {
+  addItemToUserAddedSelectionContext,
+  addStagedFile,
+} from '@cdo/apps/aichat/redux/slice';
+import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -116,7 +120,7 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
-        condition: enableUserAddedSelectionContext(appName, file.url),
+        condition: enableUserAddedSelectionContext(appName),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -132,13 +136,33 @@ export const useFileRowOptions = (
                 fullFilename?.split('.').pop()?.toLowerCase() || '',
             })
           );
-          dispatch(
-            addItemToUserAddedSelectionContext({
-              displayName: fullFilename,
-              sourceCode: file.contents,
-              filename: fullFilename,
-            })
-          );
+
+          // Files with URLs are non-text files.
+          if (file.url) {
+            // Files with a type are provided by a levelbuilder.
+            const assetSource = file.type
+              ? AssetSource.LEVEL_UUID
+              : AssetSource.PROJECT;
+            const stagedFilename = file.url.split('/').slice(-1)[0];
+            dispatch(
+              addStagedFile({
+                key: `${stagedFilename}-${Date.now()}`,
+                asset: {
+                  filename: stagedFilename,
+                  source: assetSource,
+                },
+                loaded: true,
+              })
+            );
+          } else {
+            dispatch(
+              addItemToUserAddedSelectionContext({
+                displayName: fullFilename,
+                filename: fullFilename,
+                sourceCode: file.contents,
+              })
+            );
+          }
         },
       },
       {

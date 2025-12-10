@@ -18,6 +18,7 @@ interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
 }
 
 /**
@@ -27,6 +28,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
   buildAssetUrl,
+  isAiTutorVersion,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -176,31 +178,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         moduleStyles.scrollToBottomContainer
       )}
     >
-      <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {chatDisabled ? (
-          <ChatDisabled message={chatDisabledMessage} />
-        ) : (
-          <>
-            {events.map((event, index) => (
-              <ChatEventView
-                event={event}
-                key={event.timestamp}
-                isTeacherView={isTeacherView}
-                buildAssetUrl={buildAssetUrl}
-                ref={index === events.length - 1 ? finalEventRef : undefined}
-                tabIndex={isInChatNavigationMode ? 0 : -1}
-                onKeyDown={e => {
-                  if (e.key === 'Escape' && e.target === e.currentTarget) {
-                    setIsInChatNavigationMode(false);
-                    parentRef.current?.focus();
-                  }
-                }}
-              />
-            ))}
-            <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
-          </>
-        )}
-      </div>
       {showScrollToBottom && (
         <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
           <Button
@@ -211,9 +188,41 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             type="secondary"
             onClick={() => scrollToLastMessage()}
             className={moduleStyles.scrollToBottomButton}
+            ariaLabel="Scroll to bottom of messages"
+            aria-controls="chat-workspace-conversation"
           />
         </div>
       )}
+      <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
+        {chatDisabled ? (
+          <ChatDisabled message={chatDisabledMessage} />
+        ) : (
+          <>
+            {events.map((event, index) => {
+              const isLastMessage = index === events.length - 1;
+              return (
+                <ChatEventView
+                  event={event}
+                  key={event.timestamp}
+                  isTeacherView={isTeacherView}
+                  buildAssetUrl={buildAssetUrl}
+                  isAiTutorVersion={isAiTutorVersion}
+                  isLastMessage={isLastMessage}
+                  ref={isLastMessage ? finalEventRef : undefined}
+                  tabIndex={isInChatNavigationMode ? 0 : -1}
+                  onKeyDown={e => {
+                    if (e.key === 'Escape' && e.target === e.currentTarget) {
+                      setIsInChatNavigationMode(false);
+                      parentRef.current?.focus();
+                    }
+                  }}
+                />
+              );
+            })}
+            <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+          </>
+        )}
+      </div>
     </div>
   );
 };
