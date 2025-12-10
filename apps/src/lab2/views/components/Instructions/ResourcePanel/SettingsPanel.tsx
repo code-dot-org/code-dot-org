@@ -1,11 +1,11 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import Typography from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import localization, {useLocalization} from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -25,7 +25,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
 }) => {
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
-  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
+  const dropdownColor = theme === 'Dark' ? 'white' : 'gray';
   const locale = useLocalization();
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
@@ -72,20 +72,18 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   };
 
   return (
-    <div className={styles.settingsPanel}>
-      <div className={styles.header}>
-        <Typography
-          semanticTag="h2"
-          visualAppearance="overline-two"
-          className={styles.headerText}
-        >
-          {commonI18n.settings()}
-        </Typography>
+    <PanelContainer
+      id="settings-panel"
+      headerContent="Settings"
+      className={styles.settingsPanel}
+      headerClassName={styles.settingsHeader}
+      rightHeaderContent={
         <CloseButton
           onClick={closePanel}
           aria-label={commonI18n.closeSettings()}
         />
-      </div>
+      }
+    >
       <div className={styles.settingsList}>
         <form
           action={'/locale'}
@@ -129,7 +127,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
           />
         ))}
       </div>
-    </div>
+    </PanelContainer>
   );
 };
 
