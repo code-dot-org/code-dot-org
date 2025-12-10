@@ -58,5 +58,25 @@ class Services::Clever::V3AuthOptionBuilderTest < ActiveSupport::TestCase
         _(result).must_be_nil
       end
     end
+
+    context 'when v3 auth option already exists' do
+      let(:user) {create(:student, :with_clever_authentication_option)}
+      let(:original_auth) do
+        user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+      end
+      let(:clever_v2_id) {original_auth.authentication_id}
+
+      before do
+        create(
+          :authentication_option,
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: clever_v3_id
+        )
+      end
+
+      it 'returns nil' do
+        _(result).must_be_nil
+      end
+    end
   end
 end

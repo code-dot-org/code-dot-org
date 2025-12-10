@@ -1,5 +1,6 @@
 # Creates a new v3.1 Clever AuthenticationOption by duplicating an existing v2 Clever
 # AuthenticationOption.
+# Returns nil if the v2 auth option doesn't exist or if a v3 auth option already exists.
 # Returns the new AuthenticationOption without persisting it.
 module Services
   module Clever
@@ -18,6 +19,13 @@ module Services
         )
 
         return nil unless clever_auth_option
+
+        v3_already_exists = AuthenticationOption.exists?(
+          credential_type: AuthenticationOption::CLEVER,
+          authentication_id: clever_v3_id
+        )
+
+        return nil if v3_already_exists
 
         new_auth_option = clever_auth_option.dup
         new_auth_option.authentication_id = clever_v3_id
