@@ -13,9 +13,10 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
-  isReadOnlyWorkspace,
   isProjectTemplateLevel,
+  isTeacherViewingStudent,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import currentLocale from '@cdo/apps/util/currentLocale';
@@ -40,9 +41,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const teacherViewingStudent = useAppSelector(isTeacherViewingStudent);
 
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
@@ -96,6 +97,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
+        {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.previousVersionBanner}
@@ -123,7 +125,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               </BodyFourText>
             )}
             <div className={moduleStyles.fileBrowserHeaderButtons}>
-              {showFileBrowser && !isReadOnly && (
+              {showFileBrowser && !teacherViewingStudent && (
                 <FileBrowserHeaderPopUpButton />
               )}
               <ToggleFileBrowserButton />
