@@ -386,7 +386,7 @@ export const levelCount = state => {
  * Returns the number of lessons in the current progression.
  */
 export const getLessonCount = state =>
-  state.progress.lessons[0]?.num_script_lessons || 1;
+  state.progress.lessons?.[0]?.num_script_lessons || 1;
 
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled
