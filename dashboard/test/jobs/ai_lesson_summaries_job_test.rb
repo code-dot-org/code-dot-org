@@ -249,4 +249,110 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
   test 'job inheritance from ApplicationJob' do
     assert_equal ApplicationJob, AiLessonSummariesJob.superclass
   end
+
+  test 'after_perform creates teacher notification with correct values when user has section' do
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_with_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal @user.id, notification.user_id
+    assert_equal 'AI Lesson Summaries ready to view', notification.title
+    assert_equal 'The lesson summaries for 3 lessons have been generated and are now available.', notification.description
+    assert_equal 'solid-flask-sparkle', notification.icon_name
+    assert_equal 'Aqua', notification.icon_color
+    assert_equal 1, notification.href_links.size
+    assert_equal 'View lesson materials', notification.href_links.first['text']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+  end
+
+  test 'after_perform creates notification with correct lesson count for single lesson' do
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_with_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal 'The lesson summaries for 1 lessons have been generated and are now available.', notification.description
+  end
+
+  test 'after_perform uses first section when unit_id not provided' do
+    request_without_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id]
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_without_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+  end
+
+  test 'after_perform uses first section when unit_id provided but no matching section exists' do
+    other_unit = create(:unit)
+    request_with_nonmatching_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id],
+      unit_id: other_unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_with_nonmatching_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+  end
+
+  test 'after_perform does not create notification when user has no sections' do
+    user_without_sections = create(:teacher)
+    request_for_user_without_sections = {
+      user_id: user_without_sections.id,
+      lesson_ids: [@lesson1.id, @lesson2.id]
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_no_difference 'TeacherNotification.count' do
+      AiLessonSummariesJob.perform_now(request: request_for_user_without_sections)
+    end
+  end
+
+  test 'after_perform does not create notification when job fails during perform' do
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
+      raises(StandardError.new('Helper failed'))
+
+    assert_no_difference 'TeacherNotification.count' do
+      assert_raises(StandardError) do
+        AiLessonSummariesJob.perform_now(request: request_with_unit)
+      end
+    end
+  end
 end
