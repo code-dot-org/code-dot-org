@@ -4,6 +4,7 @@ import React, {useEffect, useState, useMemo, useRef} from 'react';
 
 import {
   getCurrentLevel,
+  getLessonCount,
   getNextLevel,
   getParentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -91,6 +92,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const hasNextLevel = useAppSelector(
     state => getNextLevel(state)?.id !== undefined
   );
+  // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
+  // only has one lesson. It's just 'Finish'!
+  const lessonCount = useAppSelector(state => getLessonCount(state));
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
   const isAiTutorVersion = useAppSelector(
@@ -141,7 +145,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     let resizeObserver: ResizeObserver | undefined;
     if (container) {
       resizeObserver = new ResizeObserver(() => {
-        setSmall(container.clientWidth < 215);
+        setSmall(container.clientWidth < 210);
       });
       resizeObserver.observe(container);
     }
@@ -246,11 +250,15 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     ? currentLevel !== continueToLevel
       ? commonI18n.continueToLevel({level: continueToLevel})
       : commonI18n.continue()
-    : commonI18n.finishLesson();
+    : lessonCount > 1
+    ? commonI18n.finishLesson()
+    : commonI18n.finish();
 
   const smallText = hasNextLevel
     ? commonI18n.continue()
-    : commonI18n.finishLesson();
+    : lessonCount > 1
+    ? commonI18n.finishLesson()
+    : commonI18n.finish();
 
   return (
     <div
