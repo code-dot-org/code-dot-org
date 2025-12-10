@@ -270,9 +270,9 @@ const VersionHistoryPanel: React.FunctionComponent<
         /* forceNewVersion */ true
       )
     );
-    // fix here
+    if (onRestore) onRestore(startSources);
     successfulProjectResetCleanUp();
-  }, [dispatch, startSources, successfulProjectResetCleanUp]);
+  }, [dispatch, startSources, successfulProjectResetCleanUp, onRestore]);
 
   const confirmStartOver = useCallback(() => {
     dialogControl?.showDialog({
@@ -360,14 +360,23 @@ const VersionHistoryPanel: React.FunctionComponent<
         });
       }
       if (viewingInitialVersion) {
+        // Should onRestore be passed as an arg?
         dispatch(previewStartSources({startSources}));
+        if (onRestore) onRestore(startSources);
       } else if (isLatest) {
-        dispatch(resetToCurrentVersion());
+        if (onRestore) dispatch(resetToCurrentVersion({onRestore}));
       } else {
-        dispatch(loadVersion({startSources, version}));
+        dispatch(loadVersion({startSources, version, onRestore}));
       }
     },
-    [dispatch, isLatestVersion, setSelectedVersion, startSources, versionList]
+    [
+      dispatch,
+      isLatestVersion,
+      setSelectedVersion,
+      startSources,
+      versionList,
+      onRestore,
+    ]
   );
 
   const handleSaveVersionSuccess = useCallback(() => {
