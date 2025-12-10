@@ -7,10 +7,10 @@ markdown <<MARKDOWN
 
 ## Project Description
 
+#### This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.
+
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;"><i class="fa-solid fa-user-graduate"></i> Career Journeys
 </p>
-
-#### This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.
 
 ## Project Calendar
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
@@ -21,7 +21,7 @@ markdown <<MARKDOWN
     </p>
     
     <p style="font-size: 14px">
-	Students choose a company scenario.
+	Students choose a company scenario. <br> <br> They identify and categorize possible vulnerabilities, analyze the impacts of each vulnerability, and propose one or more mitigation strategies. 
     </p>
     
 </div>
@@ -32,7 +32,7 @@ markdown <<MARKDOWN
     </p>
     
     <p style="font-size: 14px">
-	Students to begin drafting their Network Security Risk Assessment.
+	Students explore AI-driven solutions for the vulnerabilities they’ve identified by designing a new AI-powered security tool that protects their company.<br><br>They also develop a first-draft of their risk assessment.
     </p>
     
 </div>
@@ -43,7 +43,7 @@ markdown <<MARKDOWN
     </p>
     
     <p style="font-size: 14px">
-	Students conduct peer reviews and complete their final drafts.
+	Students make revisions to their risk assessment after a peer review. <br><br> They then prepare and present a 30-second version of their risk assessment.
     </p>
 
 </div>

@@ -5,15 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # HTTP and DNS
 
+<p align="center">
+<img src="https://images.code.org/2185bca2c74eefddb4fdfc07f81f8d9a-Screenshot 2025-12-09 at 12.02.11 PM.png" alt="Internet Simulator join lobby with 6 different routers" width="80%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+#### DNS works a lot like a phone book that matches names to phone numbers. When a user types a website like www.example.com into their browser, the computer needs to translate that human-friendly name into the numerical IP address where the website actually lives. This translation is essential because computers use IP addresses, not words, to find and communicate with each other on the Internet.
+
+#### To make this happen, the browser sends a request to the **Domain Name System (DNS)**. DNS is made up of many specialized servers that work together to locate the correct IP address. These servers share the workload so no single server gets overloaded. To make lookups faster, DNS also uses caching, which stores the IP addresses of recently visited websites so your device doesn’t have to search the entire DNS system again.
+
+#### Once DNS returns the correct IP address (for example, 93.184.216.34) the browser can move on to the next step shown in the image: using **HTTP** to request the webpage from that server. HTTP defines how your computer asks for web content and how the server responds with the correct files, such as text, images, or videos. This makes it possible for your browser and the web server to communicate smoothly.
+
+#### After the server responds, your browser can load and display www.example.com, completing the process shown in the diagram.
+
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Domain Name System (DNS):</strong> translates human-friendly website names (like www.example.com) into numerical IP addresses (and vice versa).</p>
 </div>
-
-#### DNS translates easy-to-remember domain names (like www.example.com) into machine-readable IP addresses—similar to how a phone book matches names to phone numbers. This translation is essential because computers use IP addresses to locate and communicate with each other on the Internet.
-
-#### To do this, DNS relies on a network of specialized servers that work together to find the correct IP address. Each server has a specific role, and they share the workload to avoid overloading any single server. To speed things up, DNS also uses **caching** to store the IP addresses of recently visited websites so your device doesn't have to go through the entire lookup process every time.
-
-#### Once DNS finds the correct IP address, HTTP takes over. HTTP is the system used by computers to request and deliver web content—like when your browser asks a website to send a page, image, or video. It defines how messages are formatted and transmitted, making it possible for your device and the web server to communicate smoothly.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>HyperText Transfer Protocol (HTTP):</strong> Allows computers to request and share web content, like web page text, images, and videos.</p>
@@ -21,7 +27,7 @@ markdown <<MARKDOWN
 
 ## 📝 To Do
 
-#### Try out the <a href='https://docs.google.com/presentation/d/1ki13_JAxL2vcyozYA6v8QMSGaRyMOYbyI1-I9PwWVU4/edit?slide=id.g337c18634ef_0_0#slide=id.g337c18634ef_0_0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Scavenger Hunt Activity</a> to explore how your browser requests and receives files from a website. Take the time to work through the four tasks, and document your own findings in a *copy* of the Activity Guide if you desire. 
+#### Try out the <a href='hthttps://docs.google.com/presentation/d/107m3gk38hVJcXKtHxQemYg1Se3uNFRVU5gnUWaj2-7U/edit?slide=id.g337c18634ef_0_0#slide=id.g337c18634ef_0_0/copy' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Scavenger Hunt Activity</a> to explore how your browser requests and receives files from a website. Take the time to work through the four tasks, and document your own findings in a *copy* of the Activity Guide if you desire. 
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 

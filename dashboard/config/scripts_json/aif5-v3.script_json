@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-09 09:15:05 UTC",
+    "serialized_at": "2025-12-09 10:06:40 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6627,6 +6627,20 @@
       }
     },
     {
+      "name": "[KEY] Access Control Scenario Cards",
+      "url": "https://docs.google.com/presentation/d/1THv43NXWTNcYplcwW95q-DQVAhojxibLQrciC6bM3DE/edit?usp=sharing",
+      "key": "_key_access_control_scenario_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_access_control_scenario_cards"
+      }
+    },
+    {
       "name": "[KEY] AI in Encryption",
       "url": "https://docs.google.com/document/d/1dnUeMY5d8R4iVypzkDw-nVnP7qB8ZKVLGq7r5wvRJpA/edit?usp=sharing",
       "key": "_key_ai_in_encryption",
@@ -6676,14 +6690,16 @@
     },
     {
       "name": "[KEY] Layered Defenses",
-      "url": "https://docs.google.com/document/d/14W2D2_x1rD20Mf-6oLdnjKL71DO1xl1jNkbhIylcx2Y/edit?tab=t.0",
-      "key": "_key_layered_defenses",
+      "url": "https://docs.google.com/document/d/1I6_VdqZusgg8mMSWfjm_a3ht0p-YNeIqnce6ubQqj24/edit?usp=sharing",
+      "key": "_key_layered_defenses_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_layered_defenses"
+        "resource.key": "_key_layered_defenses_1"
       }
     },
     {
@@ -7078,15 +7094,16 @@
     },
     {
       "name": "Layered Defenses",
-      "url": "https://docs.google.com/document/d/1yry7DR84dCW9uX6PkeoAX1oxJ0mo4WsgtPdrF6q7AYo/edit?tab=t.0",
-      "key": "layered_defenses_1",
+      "url": "https://docs.google.com/document/d/1A20Ct1B4DdbddiDFSVDbcec7-aXbX_ZKNVT90Zgv2wc/edit?usp=sharing",
+      "key": "layered_defenses_2",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "layered_defenses_1"
+        "resource.key": "layered_defenses_2"
       }
     },
     {
@@ -7285,7 +7302,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: Layered Defenses",
-        "resource.key": "_key_layered_defenses"
+        "resource.key": "_key_layered_defenses_1"
       }
     },
     {
@@ -7303,7 +7320,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: Layered Defenses",
-        "resource.key": "layered_defenses_1"
+        "resource.key": "layered_defenses_2"
       }
     },
     {
@@ -7460,6 +7477,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: Confidentiality, Integrity, and Availability",
         "resource.key": "investigate_a_cia_scenario_attacker_defender"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Authentication, Authorization, and Accounting",
+        "resource.key": "_key_access_control_scenario_cards"
       }
     },
     {
