@@ -129,7 +129,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # Mock the job to verify it gets called with correct parameters
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id]
+      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -144,7 +145,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id]
+      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -163,7 +165,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: []
+      lesson_ids: [],
+      unit_id: unit_without_plans.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -190,7 +193,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -224,7 +228,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -294,7 +299,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # the job should be enqueued with current_user.id
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
