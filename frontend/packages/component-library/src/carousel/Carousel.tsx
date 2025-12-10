@@ -5,11 +5,6 @@ import {HTMLAttributes, ReactNode, useId} from 'react';
 import {Navigation, Pagination, A11y} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 import moduleStyles from './carousel.module.scss';
