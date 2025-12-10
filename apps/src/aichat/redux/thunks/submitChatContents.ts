@@ -112,6 +112,8 @@ export const submitChatContents = createAsyncThunk(
       updateId: createUuid(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
+    dispatch(setChatMessageSent(true));
+
     if (logLevelActivity) {
       logLevelActivity();
     }
@@ -167,8 +169,6 @@ export const submitChatContents = createAsyncThunk(
         modelParameters,
         aichatContext
       );
-
-      dispatch(setChatMessageSent(true));
 
       // In milliseconds
       const responseTime = Date.now() - startTime;
