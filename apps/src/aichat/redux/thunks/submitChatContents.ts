@@ -5,7 +5,7 @@ import {
   clearStagedFiles,
   clearUserAddedSelectionContext,
   setChatMessageSent,
-  updateChatMessage,
+  updateChatMessageStatus,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -208,7 +208,12 @@ export const submitChatContents = createAsyncThunk(
         dispatch(addChatEvent(message));
       }
       if (message.role === Role.USER) {
-        dispatch(updateChatMessage(message));
+        dispatch(
+          updateChatMessageStatus({
+            updateId: message.updateId,
+            status: message.status,
+          })
+        );
         logChatEvent(message, state.progress.viewAsUserId);
       }
     });
@@ -227,10 +232,14 @@ async function handleChatCompletionError(
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
   }
-  const userMessageWithError = {...newUserMessage, status: Status.ERROR};
 
-  dispatch(updateChatMessage(userMessageWithError));
-  logChatEvent(userMessageWithError, viewAsUserId);
+  dispatch(
+    updateChatMessageStatus({
+      updateId: newUserMessage.updateId,
+      status: Status.ERROR,
+    })
+  );
+  logChatEvent({...newUserMessage, status: Status.ERROR}, viewAsUserId);
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.

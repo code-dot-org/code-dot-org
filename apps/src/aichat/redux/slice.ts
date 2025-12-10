@@ -33,7 +33,7 @@ import {
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
   ChatMessage,
-  isChatMessage,
+  isPendingOrCompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -183,14 +183,17 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+    updateChatMessageStatus: (
+      state,
+      action: PayloadAction<{updateId: string; status: ChatMessage['status']}>
+    ) => {
       const event = state.chatEventsCurrent.find(
-        event =>
-          isChatMessage(event) && event.updateId === action.payload.updateId
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
       );
       if (!event) return;
-      // merge payload event properties into event
-      Object.assign(event, action.payload);
+      event.status = action.payload.status;
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
       state.hasSentMessage = action.payload;
@@ -439,7 +442,7 @@ export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  updateChatMessage,
+  updateChatMessageStatus,
   setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,

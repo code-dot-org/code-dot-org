@@ -53,8 +53,7 @@ export const selectIsWaitingForChatResponse = (state: RootState) => {
 
 export const selectAllVisibleMessages = (state: RootState) => {
   const {chatEventsPast, chatEventsCurrent} = state.aichat;
-  const messages = [...chatEventsPast, ...chatEventsCurrent];
-  return messages;
+  return [...chatEventsPast, ...chatEventsCurrent];
 };
 
 export const selectHavePropertiesChanged = (state: RootState) =>
