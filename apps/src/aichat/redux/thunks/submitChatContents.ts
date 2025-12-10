@@ -108,6 +108,7 @@ export const submitChatContents = createAsyncThunk(
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
+      updateId: crypto.randomUUID(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
     if (logLevelActivity) {

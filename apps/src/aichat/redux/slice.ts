@@ -33,6 +33,7 @@ import {
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
   ChatMessage,
+  isChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -184,9 +185,11 @@ const aichatSlice = createSlice({
     },
     updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
       const event = state.chatEventsCurrent.find(
-        event => event.timestamp === action.payload.timestamp
+        event =>
+          isChatMessage(event) && event.updateId === action.payload.updateId
       );
       if (!event) return;
+      // merge payload event properties into event
       Object.assign(event, action.payload);
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
