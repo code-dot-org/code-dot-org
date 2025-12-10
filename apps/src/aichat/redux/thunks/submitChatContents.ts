@@ -16,6 +16,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
@@ -108,7 +109,7 @@ export const submitChatContents = createAsyncThunk(
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
-      updateId: crypto.randomUUID(),
+      updateId: createUuid(),
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
     if (logLevelActivity) {
