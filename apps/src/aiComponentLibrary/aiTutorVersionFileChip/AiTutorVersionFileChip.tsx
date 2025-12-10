@@ -49,6 +49,18 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
   };
 
+  const statusText = isNewFile
+    ? 'New file created by AI Tutor'
+    : 'File updated by AI Tutor';
+  const acceptanceText = !isInReview
+    ? isAccepted
+      ? ', accepted'
+      : ', rejected'
+    : '';
+  const accessibleLabel = `${statusText}: ${file.name}${acceptanceText}`;
+
+  const hasPreviewButton = isHtmlFile && isInReview;
+
   return (
     <div
       className={classNames(moduleStyles.chip, {
@@ -56,14 +68,35 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
         [moduleStyles.updatedFile]: isUpdatedFile,
       })}
     >
-      <div className={moduleStyles.statusIndicator}>
-        <FontAwesomeV6Icon
-          iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
-          iconStyle="solid"
-        />
+      <div
+        className={moduleStyles.fileInfo}
+        role="status"
+        aria-label={accessibleLabel}
+      >
+        <div className={moduleStyles.statusIndicator}>
+          <FontAwesomeV6Icon
+            iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
+            iconStyle="solid"
+          />
+        </div>
+        <span className={moduleStyles.fileName}>{file.name}</span>
+        {!isInReview && isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="check"
+            iconStyle="solid"
+            className={moduleStyles.acceptedIcon}
+          />
+        )}
+        {!isInReview && !isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="xmark"
+            iconStyle="solid"
+            className={moduleStyles.rejectedIcon}
+          />
+        )}
       </div>
-      <span className={moduleStyles.fileName}>{file.name}</span>
-      {isHtmlFile && isInReview && (
+      {/* Preview button - outside role="img" so it remains accessible */}
+      {hasPreviewButton && (
         <span className={moduleStyles.previewButtonWrapper}>
           <WithTooltip
             tooltipProps={{
@@ -84,20 +117,6 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
             />
           </WithTooltip>
         </span>
-      )}
-      {!isInReview && isAccepted && (
-        <FontAwesomeV6Icon
-          iconName="check"
-          iconStyle="solid"
-          className={moduleStyles.acceptedIcon}
-        />
-      )}
-      {!isInReview && !isAccepted && (
-        <FontAwesomeV6Icon
-          iconName="xmark"
-          iconStyle="solid"
-          className={moduleStyles.rejectedIcon}
-        />
       )}
     </div>
   );
