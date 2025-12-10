@@ -1,4 +1,3 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState} from 'react';
@@ -39,7 +38,6 @@ const StudentSnapshot: React.FC = () => {
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
 
-  const unitId = useSelector(getSelectedUnitId);
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
 
   const selectedStudent = React.useMemo(
@@ -96,16 +94,6 @@ const StudentSnapshot: React.FC = () => {
           gridWidth={1}
           gridHeight={1}
         >
-          <Button
-            onClick={() => {
-              HttpClient.get(
-                `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-              ).catch(error => {
-                console.error(error);
-              });
-            }}
-            text="Generate Lesson Summaries"
-          />
           <div>small content 1</div>
         </WidgetTemplate>
         <WidgetTemplate

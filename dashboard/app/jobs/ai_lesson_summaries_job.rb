@@ -13,7 +13,8 @@ class AiLessonSummariesJob < ApplicationJob
     next unless user
 
     unit_id = request[:unit_id]
-    section = user.sections.where(script_id: unit_id).first || user.sections.first
+    section = unit_id.present? ? user.sections.where(script_id: unit_id).first : nil
+    section ||= user.sections.first
 
     TeacherNotification.create!(
       user_id: user_id,
@@ -24,7 +25,6 @@ class AiLessonSummariesJob < ApplicationJob
       href_links: [{text: 'View lesson materials',
                    url: "/teacher_dashboard/sections/#{section.id}/lesson_materials"}],
     )
-    puts 'lfm notification created', section.name
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
@@ -42,7 +42,6 @@ class AiLessonSummariesJob < ApplicationJob
   end
 
   def perform(request:)
-    puts 'lfm before here'
     request[:lesson_ids].each do |lesson_id|
       AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     end
