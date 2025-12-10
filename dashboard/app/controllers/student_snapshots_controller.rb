@@ -5,7 +5,8 @@ class StudentSnapshotsController < ApplicationController
 
   # GET /student_snapshots/lessons
   def lessons
-    unit = find_unit
+    unit_id = params[:unit_id]
+    unit = find_unit(unit_id)
     return render json: {error: "Can't find Unit id=#{unit_id}"}, status: :bad_request unless unit
 
     lessons_data = build_lessons_data(unit)
@@ -13,8 +14,7 @@ class StudentSnapshotsController < ApplicationController
     render json: {lessons: lessons_data, hasUnnumberedLessons: unit.has_unnumbered_lessons?}
   end
 
-  private def find_unit
-    unit_id = params[:unit_id]
+  private def find_unit(unit_id)
     context = Queries::Courses.get_course_context(unit_id)
     context[:unit]
   end
