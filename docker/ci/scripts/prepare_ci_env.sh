@@ -60,6 +60,7 @@ dashboard_enable_pegasus: true
 dashboard_workers: 5
 disable_all_eyes_running: false
 ignore_eyes_mismatches: true
+applitools_eyes_api_key: $APPLITOOLS_EYES_API_KEY
 localize_apps: true
 use_my_apps: true
 skip_seed_all: true
