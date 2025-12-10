@@ -352,22 +352,37 @@ class LtiV1Controller < ApplicationController
     had_changes = false
     total_sections = 0
     total_students = 0
-    ActiveRecord::Base.transaction do
-      lti_course ||= Queries::Lti.find_or_create_lti_course(
-        lti_integration_id: lti_integration.id,
-        context_id: context_id,
-        deployment_id: deployment_id,
-        nrps_url: nrps_url,
-        resource_link_id: resource_link_id
-      )
 
-      result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
-      had_changes ||= !result[:changed].empty?
+    # Retry deadlocks since concurrent roster syncs may contend on the same user rows.
+    deadlock_retries = 0
+    retry_max = 2
+    begin
+      ActiveRecord::Base.transaction do
+        lti_course ||= Queries::Lti.find_or_create_lti_course(
+          lti_integration_id: lti_integration.id,
+          context_id: context_id,
+          deployment_id: deployment_id,
+          nrps_url: nrps_url,
+          resource_link_id: resource_link_id
+        )
 
-      result[:changed].each_value do |section|
-        total_sections += 1
-        total_students += section[:size]
+        result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
+        had_changes ||= !result[:changed].empty?
+
+        result[:changed].each_value do |section|
+          total_sections += 1
+          total_students += section[:size]
+        end
       end
+    rescue ActiveRecord::Deadlocked => exception
+      deadlock_retries += 1
+      raise if deadlock_retries > retry_max
+
+      Clients::LtiLogger.log_event(
+        'Retrying roster sync after deadlock',
+        {lti_integration_id: lti_integration.id, deployment_id: deployment_id, deadlock_retries: deadlock_retries, exception: exception}
+      )
+      retry
     end
     metadata = {
       'number_of_sections' => total_sections,
