@@ -80,7 +80,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => state.lab.validationState?.satisfied
   );
   // Get the level number of the next level (in the progression)
-  const continueToLevel = useAppSelector(
+  const nextLevelNumber = useAppSelector(
     state => getNextLevel(state)?.levelNumber
   );
   // Get the current main level (parent if it is a sublevel)
@@ -247,8 +247,8 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
   // For when we are already at the end of a lesson, say 'Finish Lesson'
   const text = hasNextLevel
-    ? currentLevel !== continueToLevel
-      ? commonI18n.continueToLevel({level: continueToLevel})
+    ? currentLevel !== nextLevelNumber
+      ? commonI18n.continueToLevel({level: nextLevelNumber})
       : commonI18n.continue()
     : lessonCount > 1
     ? commonI18n.finishLesson()
