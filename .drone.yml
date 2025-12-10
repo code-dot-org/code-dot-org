@@ -87,6 +87,8 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
+      # ensure no stale locals.yml from cache
+      - rm -f locals.yml
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
@@ -209,6 +211,8 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
+      # ensure no stale locals.yml from cache
+      - rm -f locals.yml
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -344,6 +348,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 011dab537ecaf4d9d18f58ca1fecf20d8395346f4b2f205182cc927875ba3716
+hmac: a0b28e1ccb79d0198894e1935566ea0c52c02281584d410e77adb181c8fffc40
 
 ...
