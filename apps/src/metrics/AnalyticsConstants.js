@@ -669,6 +669,10 @@ const EVENTS = {
     'Music Lab Generate Code Back To Prompt Clicked',
   MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED:
     'Music Lab Generate Code Use Code Clicked',
+
+  // AI Tutor accept-reject flow
+  AI_TUTOR_VERSION_ACCEPTED: 'AI Tutor Version Accepted',
+  AI_TUTOR_VERSION_REJECTED: 'AI Tutor Version Rejected',
 };
 
 const EVENT_GROUP_NAMES = {

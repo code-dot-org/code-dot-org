@@ -15,6 +15,8 @@ import {
   ProjectFile,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -45,8 +47,11 @@ export const acceptAiTutorVersion = createAsyncThunk<
   const sources = state.lab2Project.projectSources;
   const channelId = state.lab.channel?.id;
   if (!channelId || !sources) {
-    console.error('Channel ID or project sources not available');
-    // TODO: add error handling.
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(
+        'Channel ID or project sources not available when accepting AI Tutor version'
+      );
     return;
   }
   const sourcesBeforeAiTutorVersion = {
@@ -63,6 +68,10 @@ export const acceptAiTutorVersion = createAsyncThunk<
     files: files,
   };
   thunkAPI.dispatch(addChatEvent(notification));
+  sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_ACCEPTED, {
+    numFiles: files.length.toString(),
+    fileTypes: files[0].language || '',
+  });
   resetAiTutorVersionState(thunkAPI.dispatch);
 
   // Update current source so that isAiTutorVersionUpdated and isAiTutorVersionCreated are set to false.
@@ -101,7 +110,11 @@ export const acceptAiTutorVersion = createAsyncThunk<
   );
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   if (!projectManager) {
-    console.error('Project manager not available');
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(
+        'Project manager not available when accepting AI Tutor version'
+      );
     return;
   }
   const newVersionId = projectManager.getCurrentVersionId();
@@ -121,7 +134,9 @@ export const acceptAiTutorVersion = createAsyncThunk<
       // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
       projectManager.setForceNewVersion(true);
     } catch (error) {
-      console.error('Failed to save commit comment:', error);
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Failure to save commit comment', error as Error);
     }
   }
 });
@@ -149,6 +164,10 @@ export const rejectAiTutorVersion = createAsyncThunk<
     files: files,
   };
   thunkAPI.dispatch(addChatEvent(notification));
+  sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_REJECTED, {
+    numFiles: files.length.toString(),
+    fileTypes: files[0].language || '',
+  });
 
   // Revert to previous source.
   thunkAPI.dispatch(setSource(prevSource || source));
