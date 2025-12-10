@@ -5,7 +5,8 @@ import {
   clearStagedFiles,
   clearUserAddedSelectionContext,
   setChatMessageSent,
-  updateChatMessage,
+  updateChatMessageStatus,
+  updateChatMessageText,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -21,6 +22,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
@@ -37,7 +39,6 @@ import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
-import {logChatEvent} from './logChatEvent';
 import {sendAnalytics} from './sendAnalytics';
 
 // This thunk's callback function submits a user's chat content and AI customizations to
@@ -102,8 +103,8 @@ export const submitChatContents = createAsyncThunk(
       chatMessageDisplayText = text;
     }
 
-    // Create the new user ChatMessage and add to chatMessages.
-    const newUserMessage: PendingChatMessage = {
+    // Create the new user ChatMessage and add to chatEventsCurrent.
+    const newUserMessage: PendingChatMessage & {updateId: string} = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText,
@@ -118,7 +119,7 @@ export const submitChatContents = createAsyncThunk(
     dispatch(setChatMessageSent(true));
 
     // Create the placeholder assistant ChatMessage used when streaming
-    const newAssistantMessage: PendingChatMessage = {
+    const newAssistantMessage: PendingChatMessage & {updateId: string} = {
       role: Role.ASSISTANT,
       status: Status.UNKNOWN,
       chatMessageText: '',
@@ -188,14 +189,20 @@ export const submitChatContents = createAsyncThunk(
           ? {
               onDelta: delta => {
                 streamingText += delta;
-                const updatedMessage = {
-                  ...newAssistantMessage,
-                  chatMessageText: streamingText,
-                };
                 if (hasAddedAssistantMessage) {
-                  dispatch(updateChatMessage(updatedMessage));
+                  dispatch(
+                    updateChatMessageText({
+                      updateId: newAssistantMessage.updateId,
+                      chatMessageText: streamingText,
+                    })
+                  );
                 } else {
-                  dispatch(addEventToChatEventsCurrent(updatedMessage));
+                  dispatch(
+                    addEventToChatEventsCurrent({
+                      ...newAssistantMessage,
+                      chatMessageText: streamingText,
+                    })
+                  );
                 }
                 hasAddedAssistantMessage = true;
               },
@@ -203,7 +210,12 @@ export const submitChatContents = createAsyncThunk(
           : undefined
       );
     } catch (error) {
-      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      await handleChatCompletionError(
+        error as Error,
+        newUserMessage,
+        dispatch,
+        state.progress.viewAsUserId
+      );
       return;
     }
 
@@ -235,19 +247,24 @@ export const submitChatContents = createAsyncThunk(
 
         if (isStreaming) {
           dispatch(
-            updateChatMessage({
-              ...message,
+            updateChatMessageStatus({
               updateId: newAssistantMessage.updateId,
+              status: message.status,
             })
           );
-          dispatch(logChatEvent(message));
+          logChatEvent(message, state.progress.viewAsUserId);
         } else {
           dispatch(addChatEvent(message));
         }
       }
       if (message.role === Role.USER) {
-        dispatch(updateChatMessage(message));
-        dispatch(logChatEvent(message));
+        dispatch(
+          updateChatMessageStatus({
+            updateId: newUserMessage.updateId,
+            status: message.status,
+          })
+        );
+        logChatEvent(message, state.progress.viewAsUserId);
       }
     });
   }
@@ -255,8 +272,9 @@ export const submitChatContents = createAsyncThunk(
 
 async function handleChatCompletionError(
   error: Error,
-  newUserMessage: PendingChatMessage,
-  dispatch: AppDispatch
+  newUserMessage: PendingChatMessage & {updateId: string},
+  dispatch: AppDispatch,
+  viewAsUserId: number | null
 ) {
   // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
@@ -264,10 +282,14 @@ async function handleChatCompletionError(
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
   }
-  const userMessageWithError = {...newUserMessage, status: Status.ERROR};
 
-  dispatch(updateChatMessage(userMessageWithError));
-  dispatch(logChatEvent(userMessageWithError));
+  dispatch(
+    updateChatMessageStatus({
+      updateId: newUserMessage.updateId,
+      status: Status.ERROR,
+    })
+  );
+  logChatEvent({...newUserMessage, status: Status.ERROR}, viewAsUserId);
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.

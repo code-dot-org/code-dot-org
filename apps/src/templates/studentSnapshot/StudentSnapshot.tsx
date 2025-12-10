@@ -11,6 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
@@ -60,6 +61,10 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedUnitId]);
 
+  // TODO: replace with actual values from URL/Redux later
+  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
+  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
+
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -83,6 +88,15 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
+        <StudentRubricWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={HARDCODED_STUDENT_ID}
+          studentName={HARDCODED_STUDENT_NAME}
+          teacherHasEnabledAi={false}
+          canProvideFeedback={true}
+        />
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>
