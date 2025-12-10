@@ -6,6 +6,7 @@
 :collapse_mass_assignment: false
 :skip_files:
 - config/initializers/refresh_activemodel_cached_attributes.rb
+- config/initializers/active_model_serializers.rb
 :output_files:
 - brakeman_security_report.htm
 :output_format: :to_html

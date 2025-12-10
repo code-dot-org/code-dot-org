@@ -100,7 +100,7 @@ group :development, :test do
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
-  gem 'brakeman'
+  gem 'brakeman', '~> 6.0'
   gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof', '>= 1.7.0'

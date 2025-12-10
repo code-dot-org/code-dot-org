@@ -15,6 +15,9 @@ module Brakeman
         # Find all exists? calls using the same API as CheckSQL
         calls = tracker.find_call(:methods => [:exists?], :nested => true)
 
+        # Debug: Check if we're finding any calls
+        # puts "DEBUG: Found #{calls.length} exists? calls"
+
         calls.each do |result|
           process_result(result)
         end
@@ -23,7 +26,8 @@ module Brakeman
       def process_result(result)
         return if duplicate?(result)
 
-        call = result[:call]
+        # In Brakeman 6.x, result might be a Call object directly
+        call = result.is_a?(Hash) ? result[:call] : result
         return unless call
 
         # Get the first argument

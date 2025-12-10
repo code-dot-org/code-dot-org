@@ -22,7 +22,7 @@ echo "=== BRAKEMAN SECURITY SCAN ==="
 echo "=============================================="
 cd dashboard
 # Run Brakeman security scanner
-# The problematic initializer is skipped via brakeman.yml config file
+# Fail the build if any security warnings are found
 if ! bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --exit-on-warn; then
   echo ""
   echo "=============================================="
