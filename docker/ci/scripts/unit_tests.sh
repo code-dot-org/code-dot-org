@@ -28,7 +28,7 @@ cd dashboard
 # --output /dev/stdout: Output warnings to stdout (overrides config's file output)
 # --quiet: Suppress informational messages (check list, etc.)
 # --exit-on-warn: Fail build if warnings found
-if ! bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --no-progress --quiet --output /dev/stdout --exit-on-warn; then
+if ! bundle exec brakeman --add-checks-path lib/brakeman/checks --format plain --no-pager --no-progress --quiet --output /dev/stdout --exit-on-warn 2>&1; then
   echo ""
   echo "=============================================="
   echo "=== BRAKEMAN SECURITY SCAN FAILED ==="
