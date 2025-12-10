@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import React, {useState} from 'react';
+import * as Table from 'reactabular-table';
 
 import styles from './mass_delete.module.scss';
 
@@ -283,23 +284,49 @@ const MassDeleteContainer: React.FC = () => {
     }
   };
 
+  const openingDirections = (
+    <div>
+      <h1>Mass Delete Student Progress</h1>
+      <p className={styles.strongWarning}>
+        Warning:Using this tool will permanently delete student progress. Use
+        with caution.
+      </p>
+      To delete student progress in bulk, please enter the{' '}
+      <strong>teacher ID</strong> of the teacher associated with the student
+      data and upload a <strong>CSV file</strong> using one of the following
+      supported formats.
+      <div className={styles.formatInfo}>
+        <strong>Supported formats:</strong>
+        <ul>
+          <li>
+            <strong>With student IDs:</strong> CSV with columns "student_id" and
+            "unit_name"
+          </li>
+          <li>
+            <strong>With usernames:</strong> CSV with columns "student_username"
+            and "unit_name" (will be converted automatically)
+          </li>
+        </ul>
+      </div>
+      <hr />
+    </div>
+  );
+
   return (
     <div className={styles.massDeleteContainer}>
-      <h1>Mass Delete Student Progress</h1>
-
+      {openingDirections}
       <div className={styles.teacherSection}>
-        <label htmlFor="teacher-id">Teacher ID or Email:</label>
-        <input
-          id="teacher-id"
-          type="text"
-          value={teacherId}
-          onChange={e => setTeacherId(e.target.value)}
-          placeholder="Enter teacher ID"
-          className={styles.teacherInput}
-        />
-        <p className={styles.helperText}>
-          Required: The teacher whose students' progress will be deleted
-        </p>
+        <div className={styles.inputRow}>
+          <label htmlFor="teacher-id">Teacher ID:</label>
+          <input
+            id="teacher-id"
+            type="text"
+            value={teacherId}
+            onChange={e => setTeacherId(e.target.value)}
+            placeholder="Enter teacher ID"
+            className={styles.teacherInput}
+          />
+        </div>
       </div>
 
       <div className={styles.uploadSection}>
@@ -348,34 +375,18 @@ const MassDeleteContainer: React.FC = () => {
             )}
           </div>
         )}
-        <div className={styles.formatInfo}>
-          <p>
-            <strong>Supported formats:</strong>
-          </p>
-          <ul>
-            <li>
-              <strong>With student IDs:</strong> CSV with columns "student_id"
-              and "unit_name"
-            </li>
-            <li>
-              <strong>With usernames:</strong> CSV with columns
-              "student_username" and "unit_name" (will be converted
-              automatically)
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div className={styles.buttonSection}>
         <Button
           text="Test delete"
           onClick={() => deleteProgress(true)}
-          disabled={!csvData || !teacherId.trim()}
+          disabled={!csvData || !teacherId.trim() || hasUsernames}
         />
         <Button
           text="Delete for real"
           onClick={() => deleteProgress(false)}
-          disabled={!csvData || !teacherId.trim()}
+          disabled={!csvData || !teacherId.trim() || hasUsernames}
         />
         {(!csvData || !teacherId.trim()) && (
           <p className={styles.disabledInfo}>
@@ -388,7 +399,6 @@ const MassDeleteContainer: React.FC = () => {
         )}
       </div>
 
-      {/* Data Preview Table */}
       {csvData && csvData.length > 0 && (
         <div className={styles.dataPreview}>
           <h3>Uploaded Data Preview</h3>
@@ -397,38 +407,40 @@ const MassDeleteContainer: React.FC = () => {
           </p>
 
           <div className={styles.tableContainer}>
-            <table className={styles.dataTable}>
-              <thead>
-                <tr className={styles.tableHeader}>
-                  <th className={styles.tableHeaderCell}>#</th>
-                  {hasUsernames ? (
-                    <th className={styles.tableHeaderCell}>Student Username</th>
-                  ) : (
-                    <th className={styles.tableHeaderCell}>Student ID</th>
-                  )}
-                  <th className={styles.tableHeaderCell}>Unit Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                {csvData.map((row, index) => (
-                  <tr key={index} className={styles.tableRow}>
-                    <td className={styles.indexCell}>{index + 1}</td>
-                    <td className={styles.tableCell}>
-                      {hasUsernames ? row.student_username : row.student_id}
-                    </td>
-                    <td className={styles.lastCell}>{row.unit_name}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <Table.Provider
+              className="table table-striped"
+              columns={[
+                {
+                  property: 'index',
+                  header: {
+                    label: '#',
+                  },
+                },
+                {
+                  property: hasUsernames ? 'student_username' : 'student_id',
+                  header: {
+                    label: hasUsernames ? 'Student Username' : 'Student ID',
+                  },
+                },
+                {
+                  property: 'unit_name',
+                  header: {
+                    label: 'Unit Name',
+                  },
+                },
+              ]}
+            >
+              <Table.Header />
+              <Table.Body
+                rows={csvData.map((row, index) => ({
+                  ...row,
+                  index: index + 1,
+                  id: index,
+                }))}
+                rowKey="id"
+              />
+            </Table.Provider>
           </div>
-
-          {csvData.length > 10 && (
-            <p className={styles.tableNote}>
-              Note: All {csvData.length} records will be processed during
-              deletion.
-            </p>
-          )}
         </div>
       )}
     </div>
