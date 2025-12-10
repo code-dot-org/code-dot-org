@@ -20,6 +20,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
@@ -36,7 +37,6 @@ import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
-import {logChatEvent} from './logChatEvent';
 import {sendAnalytics} from './sendAnalytics';
 
 // This thunk's callback function submits a user's chat content and AI customizations to
@@ -187,7 +187,12 @@ export const submitChatContents = createAsyncThunk(
           },
         ]);
     } catch (error) {
-      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      await handleChatCompletionError(
+        error as Error,
+        newUserMessage,
+        dispatch,
+        state.progress.viewAsUserId
+      );
       return;
     }
 
@@ -204,7 +209,7 @@ export const submitChatContents = createAsyncThunk(
       }
       if (message.role === Role.USER) {
         dispatch(updateChatMessage(message));
-        dispatch(logChatEvent(message));
+        logChatEvent(message, state.progress.viewAsUserId);
       }
     });
   }
@@ -213,7 +218,8 @@ export const submitChatContents = createAsyncThunk(
 async function handleChatCompletionError(
   error: Error,
   newUserMessage: PendingChatMessage,
-  dispatch: AppDispatch
+  dispatch: AppDispatch,
+  viewAsUserId: number | null
 ) {
   // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
@@ -224,7 +230,7 @@ async function handleChatCompletionError(
   const userMessageWithError = {...newUserMessage, status: Status.ERROR};
 
   dispatch(updateChatMessage(userMessageWithError));
-  dispatch(logChatEvent(userMessageWithError));
+  logChatEvent(userMessageWithError, viewAsUserId);
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.

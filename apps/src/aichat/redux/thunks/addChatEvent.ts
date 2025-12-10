@@ -1,10 +1,9 @@
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import {logChatEvent} from '../../helpers/logChatEvent';
 import {ChatEvent, isUserActionEvent} from '../../types';
 import {addEventToChatEventsCurrent} from '../slice';
-
-import {logChatEvent} from './logChatEvent';
 
 // This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible.
 // Then it logs the event to the backend for all chat events except notifications with includeInHistory != true.
@@ -18,5 +17,5 @@ export const addChatEvent =
       dispatch(addEventToChatEventsCurrent(chatEvent));
     }
 
-    dispatch(logChatEvent(chatEvent));
+    logChatEvent(chatEvent, getState().progress.viewAsUserId);
   };
