@@ -41,8 +41,6 @@ csv_data.each do |row|
   if auth_option
     auth_option.save! unless do_dry_run
     migrated_count += 1
-  else
-    puts "No existing v2 AuthenticationOption found for legacy_id #{legacy_id}. Skipping."
   end
 end
 puts "Total v3 AuthenticationOptions created: #{migrated_count}"
