@@ -1,10 +1,17 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import Toggle from '@code-dot-org/component-library/toggle';
+import {
+  Heading4,
+  BodyThreeText,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import React, {useState, useEffect} from 'react';
 
+import InfoTooltipIcon from '@cdo/apps/aichat/views/InfoTooltipIcon';
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -52,17 +59,35 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
 
   return (
     <div>
-      <div className={style.toolTipContainer}>
+      <Heading4 noMargin={true}>
+        {i18n.aiSettingsClassSectionSettings()}
+      </Heading4>
+      <BodyThreeText className={style.subHeader}>
+        {i18n.aiSettingsClassSectionSubtitle()}
+      </BodyThreeText>
+      <div className={classNames(style.rowContainer, style.withBorderTop)}>
+        <BodyTwoText noMargin className={style.semiBold}>
+          {i18n.aiSettingsAiChatTools()}
+        </BodyTwoText>
+        {!aiTutorEnabled && (
+          <div className={style.toolTipContainer}>
+            <Checkbox
+              label={i18n.aiSettingsAllowEssentialOnly()}
+              name="section_essential_ai_checkbox"
+              onChange={() => {}}
+              checked={false}
+            />
+            <InfoTooltipIcon
+              id={'section-essential-ai-checkbox-info'}
+              tooltipText={i18n.aiSettingsAllowEssentialOnlyTooltip()}
+            />
+          </div>
+        )}
         <Toggle
-          id={'uitest-ai-tutor-toggle'}
-          name="aiTutorSectionAccessToggle"
+          id={'uitest-ai-chat-tools-section-access-toggle'}
+          name="aiChatToolsSectionAccessToggle"
           checked={aiTutorEnabled}
           onChange={handleAITutorEnabledToggle}
-          label={i18n.enableAITutor()}
-        />
-        <InfoHelpTip
-          id={'ai-tutor-toggle-info'}
-          content={i18n.enableAITutorTooltip()}
         />
       </div>
     </div>

@@ -124,7 +124,7 @@ const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
   ];
 
   return (
-    <div>
+    <div className={style.container}>
       {globalErrorMessage && (
         <div className={style.alert}>{globalErrorMessage}</div>
       )}
