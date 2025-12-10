@@ -102,7 +102,7 @@ export const submitChatContents = createAsyncThunk(
       chatMessageDisplayText = text;
     }
 
-    // Create the new user ChatCompleteMessage and add to chatMessages.
+    // Create the new user ChatMessage and add to chatMessages.
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
@@ -116,6 +116,15 @@ export const submitChatContents = createAsyncThunk(
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
     dispatch(setChatMessageSent(true));
+
+    // Create the placeholder assistant ChatMessage used when streaming
+    const newAssistantMessage: PendingChatMessage = {
+      role: Role.ASSISTANT,
+      status: Status.UNKNOWN,
+      chatMessageText: '',
+      timestamp: Date.now(),
+      updateId: createUuid(),
+    };
 
     if (logLevelActivity) {
       logLevelActivity();
@@ -157,22 +166,18 @@ export const submitChatContents = createAsyncThunk(
       ...analyticsProperties,
     };
 
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionRequestInitiated');
-    dispatch(sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData));
-
-    let streamingText = '';
-
-    const newAssistantMessage: PendingChatMessage = {
-      role: Role.ASSISTANT,
-      status: Status.UNKNOWN,
-      chatMessageText: '',
-      timestamp: Date.now(),
-      updateId: createUuid(),
-    };
-
     try {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
+      );
+
+      let streamingText = '';
+      let hasAddedAssistantMessage = false;
+
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
@@ -181,17 +186,18 @@ export const submitChatContents = createAsyncThunk(
         undefined,
         isStreaming
           ? {
-              onStart: () => {
-                dispatch(addEventToChatEventsCurrent(newAssistantMessage));
-              },
               onDelta: delta => {
                 streamingText += delta;
-                dispatch(
-                  updateChatMessage({
-                    ...newAssistantMessage,
-                    chatMessageText: streamingText,
-                  })
-                );
+                const updatedMessage = {
+                  ...newAssistantMessage,
+                  chatMessageText: streamingText,
+                };
+                if (hasAddedAssistantMessage) {
+                  dispatch(updateChatMessage(updatedMessage));
+                } else {
+                  dispatch(addEventToChatEventsCurrent(updatedMessage));
+                }
+                hasAddedAssistantMessage = true;
               },
             }
           : undefined
@@ -228,7 +234,12 @@ export const submitChatContents = createAsyncThunk(
           message.chatMessageText;
 
         if (isStreaming) {
-          dispatch(updateChatMessage(message));
+          dispatch(
+            updateChatMessage({
+              ...message,
+              updateId: newAssistantMessage.updateId,
+            })
+          );
           dispatch(logChatEvent(message));
         } else {
           dispatch(addChatEvent(message));

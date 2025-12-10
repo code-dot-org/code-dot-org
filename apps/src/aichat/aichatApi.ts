@@ -1,4 +1,3 @@
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiRequestExecutionStatus,
@@ -172,7 +171,7 @@ export async function postAichatCompletionMessage(
   maxPollingTimeMs =
     maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
-  if (experiments.isEnabledAllowingQueryString('ai-chat-stream')) {
+  if (streamCallbacks) {
     return streamAichatCompletionMessage(
       newMessage,
       storedMessages,
