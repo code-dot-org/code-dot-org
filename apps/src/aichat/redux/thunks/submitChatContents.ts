@@ -252,57 +252,49 @@ export const submitChatContents = createAsyncThunk(
       );
     };
 
-    const pollingFlow = async () => {
-      try {
-        messages = await postAichatCompletionMessage(
-          newUserMessage,
-          chatEventsCurrent.filter(isCompletedChatMessage),
-          modelParameters,
-          aichatContext
-        );
-      } catch (error) {
-        await handleChatCompletionError(
-          error as Error,
-          newUserMessage,
-          dispatch
-        );
-        return;
-      }
-
-      const responseTime = Date.now() - startTime;
-      dispatch(
-        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          ...eventData,
-          responseTime,
-        })
-      );
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .reportLoadTime('AichatModelResponseTime', responseTime, [
-          {
-            name: 'ModelId',
-            value: modelParameters.selectedModelId,
-          },
-        ]);
-
-      dispatch(clearChatMessagePending());
-      // Send a report that the user has started the aichat level after successfully sending
-      // a chat message and then receiving a response from the chatbot.
-      // A teacher will view that the level is now in progress.
-      dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
-      messages.forEach(message => {
-        if (responseCallback && message.role === Role.ASSISTANT) {
-          message.chatMessageText = responseCallback(message.chatMessageText);
-        }
-        dispatch(addChatEvent(message));
-      });
-    };
-
     if (experiments.isEnabledAllowingQueryString('ai-chat-stream')) {
-      await streamFlow();
-    } else {
-      await pollingFlow();
+      return streamFlow();
     }
+
+    try {
+      messages = await postAichatCompletionMessage(
+        newUserMessage,
+        chatEventsCurrent.filter(isCompletedChatMessage),
+        modelParameters,
+        aichatContext
+      );
+    } catch (error) {
+      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      return;
+    }
+
+    const responseTime = Date.now() - startTime;
+    dispatch(
+      sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
+        ...eventData,
+        responseTime,
+      })
+    );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .reportLoadTime('AichatModelResponseTime', responseTime, [
+        {
+          name: 'ModelId',
+          value: modelParameters.selectedModelId,
+        },
+      ]);
+
+    dispatch(clearChatMessagePending());
+    // Send a report that the user has started the aichat level after successfully sending
+    // a chat message and then receiving a response from the chatbot.
+    // A teacher will view that the level is now in progress.
+    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+    messages.forEach(message => {
+      if (responseCallback && message.role === Role.ASSISTANT) {
+        message.chatMessageText = responseCallback(message.chatMessageText);
+      }
+      dispatch(addChatEvent(message));
+    });
   }
 );
 
