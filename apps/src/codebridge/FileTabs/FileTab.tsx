@@ -67,19 +67,16 @@ const FileTab = ({file}: FileTabProps) => {
   const handleOnClick = (id: string) => {
     dispatch(setActiveFileThunk(file.id));
     if (isAiTutorVersion) {
-      sendLab2AnalyticsEvent(
-        EVENTS.AI_TUTOR_VERSION_FILE_TAB_CLICKED_IN_TABS_BAR,
-        {
-          fileName: file.name,
-          fileType: file.language,
-          aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
-            ? 'true'
-            : 'false',
-          aiTutorVersionFileCreated: file.isAiTutorVersionCreated
-            ? 'true'
-            : 'false',
-        }
-      );
+      sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
+        fileName: file.name,
+        fileType: file.language,
+        aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
+          ? 'true'
+          : 'false',
+        aiTutorVersionFileCreated: file.isAiTutorVersionCreated
+          ? 'true'
+          : 'false',
+      });
     }
   };
   return (

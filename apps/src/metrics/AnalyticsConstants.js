@@ -674,10 +674,8 @@ const EVENTS = {
   AI_TUTOR_VERSION_ACCEPTED: 'AI Tutor Version Accepted',
   AI_TUTOR_VERSION_REJECTED: 'AI Tutor Version Rejected',
   AI_TUTOR_GENERATED_CODE: 'AI Tutor Generated Code',
-  AI_TUTOR_VERSION_FILE_TAB_CLICKED_IN_TABS_BAR:
-    'File Tab Clicked in File Tabs Bar in AI Tutor Version View',
-  AI_TUTOR_VERSION_FILE_BROWSER_TAB_CLICKED_IN_FILE_BROWSER:
-    'File Browser Tab Clicked in File Browser in AI Tutor Version View',
+  AI_TUTOR_VERSION_VIEW_FILE_CLICKED:
+    'File Tab Clicked in AI Tutor Version View',
   AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED:
     'AI Tutor Version File Preview Button Clicked',
   AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR:

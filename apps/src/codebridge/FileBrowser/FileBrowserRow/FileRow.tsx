@@ -60,19 +60,16 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
   const onOpenFunction = (id: string) => {
     dispatch(setActiveFileThunk(id));
     if (isAiTutorVersion) {
-      sendLab2AnalyticsEvent(
-        EVENTS.AI_TUTOR_VERSION_FILE_BROWSER_TAB_CLICKED_IN_FILE_BROWSER,
-        {
-          fileName: item.name,
-          fileType: item.language,
-          aiTutorVersionFileUpdated: item.isAiTutorVersionUpdated
-            ? 'true'
-            : 'false',
-          aiTutorVersionFileCreated: item.isAiTutorVersionCreated
-            ? 'true'
-            : 'false',
-        }
-      );
+      sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
+        fileName: item.name,
+        fileType: item.language,
+        aiTutorVersionFileUpdated: item.isAiTutorVersionUpdated
+          ? 'true'
+          : 'false',
+        aiTutorVersionFileCreated: item.isAiTutorVersionCreated
+          ? 'true'
+          : 'false',
+      });
     }
   };
 
