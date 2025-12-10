@@ -4,10 +4,10 @@
   border-top: variables.$default-border;
   background: var(--background-neutral-secondary);
   flex: 1;
-}
 
-.settingsHeader.settingsHeader {
-  background-color: var(--background-neutral-secondary);
+  .settingsHeader {
+    background-color: var(--background-neutral-secondary);
+  }
 }
 
 .settingsList {
