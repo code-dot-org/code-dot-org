@@ -32,7 +32,7 @@ puts "Starting Clever v3 migration. Dry run mode: #{do_dry_run}"
 migrated_count = 0
 csv_data.each do |row|
   legacy_id = row['legacy_id']
-  v3_user_id = row['v3_user_id']
+  v3_user_id = row['v3_user_id'] # TODO: Update to match CSV header
   next if legacy_id.nil? || v3_user_id.nil?
   auth_option = V3AuthOptionBuilder.new(
     clever_v2_id: legacy_id,
