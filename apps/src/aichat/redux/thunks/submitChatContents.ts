@@ -196,10 +196,10 @@ export const submitChatContents = createAsyncThunk(
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
-      if (responseCallback && message.role === Role.ASSISTANT) {
-        message.chatMessageText = responseCallback(message.chatMessageText);
-      }
       if (message.role === Role.ASSISTANT) {
+        message.chatMessageText =
+          responseCallback?.(message.chatMessageText) ??
+          message.chatMessageText;
         dispatch(addChatEvent(message));
       }
       if (message.role === Role.USER) {
