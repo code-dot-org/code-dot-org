@@ -246,7 +246,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             )
           }
         >
-          {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+          {teacherViewingStudent && (
+            <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+          )}
           <Excalidraw
             initialData={
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)

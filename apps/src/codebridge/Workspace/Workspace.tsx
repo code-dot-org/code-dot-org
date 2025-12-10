@@ -97,7 +97,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
-        {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+        {teacherViewingStudent && (
+          <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+        )}
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.previousVersionBanner}

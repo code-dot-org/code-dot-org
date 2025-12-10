@@ -1,4 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -7,7 +8,16 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './teacherViewingStudentProjectAlert.module.scss';
 
-const TeacherViewingStudentProjectAlert: React.FC = () => {
+type TeacherViewingStudentProjectAlertProps = {
+  /** Is alert displayed within the workspace area */
+  inWorkspaceContainer?: boolean;
+  /** Optional custom className */
+  className?: string;
+};
+
+const TeacherViewingStudentProjectAlert: React.FC<
+  TeacherViewingStudentProjectAlertProps
+> = ({inWorkspaceContainer, className}) => {
   // Get the user ID of the student whose project is being viewed.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
@@ -45,7 +55,10 @@ const TeacherViewingStudentProjectAlert: React.FC = () => {
 
   return (
     <Alert
-      className={moduleStyles.alertBanner}
+      className={classNames(
+        inWorkspaceContainer && moduleStyles.inWorkspaceContainer,
+        className
+      )}
       text={alertText}
       type="info"
       size="xs"
