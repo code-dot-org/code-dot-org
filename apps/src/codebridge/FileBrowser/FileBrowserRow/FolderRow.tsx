@@ -63,6 +63,7 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
   const onOpenFunction = (id: string) => {
     dispatch(toggleOpenFolderThunk(id));
     if (isAiTutorVersion) {
+      console.log('isAiTutorVersion', isAiTutorVersion);
       sendLab2AnalyticsEvent(
         EVENTS.AI_TUTOR_VERSION_FILE_BROWSER_TAB_CLICKED_IN_FILE_BROWSER,
         {

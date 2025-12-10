@@ -5,7 +5,7 @@ import React, {useMemo} from 'react';
 import {setActiveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FileRowIcon} from './FileRowIcon';
 import {FileRowName} from './FileRowName';
@@ -38,11 +38,14 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
   const dispatch = useAppDispatch();
   const dropdownOptions = useFileRowOptions(item, hasValidationFile);
   const isActive = item.active || false;
-  const isAiTutorVersion =
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+  const isAiTutorVersionFile =
     item.isAiTutorVersionUpdated || item.isAiTutorVersionCreated || false;
   const className = useMemo(() => {
     const classes = [];
-    if (isAiTutorVersion) {
+    if (isAiTutorVersionFile) {
       classes.push(moduleStyles.aiTutorVersion);
     }
     if (isActive) {
@@ -52,7 +55,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       classes.push(moduleStyles.dragging);
     }
     return classNames(...classes);
-  }, [isActive, isDragging, isAiTutorVersion]);
+  }, [isActive, isDragging, isAiTutorVersionFile]);
 
   const onOpenFunction = (id: string) => {
     dispatch(setActiveFileThunk(id));
