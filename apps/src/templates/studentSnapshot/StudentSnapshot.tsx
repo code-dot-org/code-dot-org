@@ -1,9 +1,10 @@
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
+import CodeWidget from '@cdo/apps/templates/studentSnapshot/CodeWidget';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -46,6 +47,14 @@ const StudentSnapshot: React.FC = () => {
   );
 
   const selectedUnitId = useSelector(getSelectedUnitId);
+
+  const selectedLessonData = useMemo(() => {
+    if (!selectedLessonId || !lessons.length) return null;
+    return lessons.find(lesson => lesson.id === selectedLessonId);
+  }, [selectedLessonId, lessons]);
+
+  const exemplarCode = selectedLessonData?.levelData?.exemplarSources;
+
   React.useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
@@ -86,9 +95,11 @@ const StudentSnapshot: React.FC = () => {
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>
-        <WidgetTemplate widgetName="Big Widget" gridWidth={2} gridHeight={2}>
-          <div>big content</div>
-        </WidgetTemplate>
+        <CodeWidget
+          codeData={exemplarCode}
+          widgetName="Exemplar Code"
+          gridWidth={1}
+        />
         <WidgetTemplate
           widgetName="Small Widget 1"
           gridWidth={1}

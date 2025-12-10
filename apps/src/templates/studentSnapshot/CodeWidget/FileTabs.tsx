@@ -3,7 +3,7 @@ import React from 'react';
 
 import FileTab from './FileTab';
 
-import styles from './studentCodeWidget.module.scss';
+import styles from './CodeWidget.module.scss';
 
 interface FileTabsProps {
   files: ProjectFile[];

@@ -1,20 +1,26 @@
-import {ProjectFile} from '@codebridge/types';
 import React, {useMemo, useState} from 'react';
 
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 
 import Workspace from './Workspace';
 
-import styles from './studentCodeWidget.module.scss';
+import styles from './CodeWidget.module.scss';
 
-interface StudentCodeWidgetProps {
-  studentCode?: Record<string, string>;
+interface CodeWidgetProps {
+  codeData?: MultiFileSource;
+  widgetName?: string;
   gridWidth?: number;
   gridHeight?: number;
 }
 
-const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
-  studentCode = {},
+const CodeWidget: React.FC<CodeWidgetProps> = ({
+  codeData,
+  widgetName = 'Code',
   gridWidth = 2,
   gridHeight = 2,
 }) => {
@@ -22,17 +28,11 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
 
   // Convert student code to ProjectFile objects
   const projectFiles = useMemo<ProjectFile[]>(() => {
-    if (!studentCode || typeof studentCode !== 'object') {
-      return [];
-    }
-    return Object.entries(studentCode).map(([fileName, contents]) => ({
-      id: fileName,
-      name: fileName,
-      language: '',
-      contents: contents,
-      folderId: '',
-    }));
-  }, [studentCode]);
+    if (!codeData?.files) return [];
+    return Object.values(codeData.files).filter(
+      file => file.type !== ProjectFileType.SYSTEM_SUPPORT
+    );
+  }, [codeData]);
 
   const [selectedFileId, setSelectedFileId] = useState<string>('');
 
@@ -61,7 +61,7 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="Student Code"
+      widgetName={widgetName}
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       scrollable={true}
@@ -79,4 +79,4 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
   );
 };
 
-export default StudentCodeWidget;
+export default CodeWidget;

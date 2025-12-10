@@ -2,6 +2,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import React, {useMemo, useCallback, useEffect} from 'react';
 
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -37,12 +38,20 @@ const skeletonDropdown = () => (
   />
 );
 
+export interface LevelData {
+  id: number;
+  name: string;
+  type: string;
+  exemplarSources?: MultiFileSource;
+}
+
 export interface LessonOption {
   id: number;
   name: string;
   hasLessonPlan: boolean;
   isLockable: boolean;
   position: number;
+  levelData?: LevelData;
 }
 
 interface LessonSelectorProps {
