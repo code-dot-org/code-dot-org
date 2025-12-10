@@ -35,14 +35,19 @@ export const selectSavedCustomizationsMatchInitial = createSelector(
 );
 
 export const selectIsWaitingForChatResponse = (state: RootState) => {
-  const lastChatMessage =
-    state.aichat.chatEventsCurrent[state.aichat.chatEventsCurrent.length - 1];
-  if (!lastChatMessage) return false;
+  let lastChatEvent;
+  for (let i = state.aichat.chatEventsCurrent.length - 1; i >= 0; i--) {
+    const event = state.aichat.chatEventsCurrent[i];
+    if (isChatMessage(event)) {
+      lastChatEvent = event;
+      break;
+    }
+  }
 
   return (
-    isChatMessage(lastChatMessage) &&
-    lastChatMessage.role === Role.USER &&
-    lastChatMessage.status === AiInteractionStatus.UNKNOWN
+    lastChatEvent &&
+    lastChatEvent.role === Role.USER &&
+    lastChatEvent.status === AiInteractionStatus.UNKNOWN
   );
 };
 
