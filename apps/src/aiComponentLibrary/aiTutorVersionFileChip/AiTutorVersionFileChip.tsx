@@ -68,10 +68,9 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
         [moduleStyles.updatedFile]: isUpdatedFile,
       })}
     >
-      {/* File info - accessible as a single image element */}
       <div
         className={moduleStyles.fileInfo}
-        role="img"
+        role="status"
         aria-label={accessibleLabel}
       >
         <div className={moduleStyles.statusIndicator}>
