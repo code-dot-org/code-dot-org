@@ -45,7 +45,7 @@ export const selectIsWaitingForChatResponse = (state: RootState) => {
   }
 
   return (
-    lastChatEvent &&
+    !!lastChatEvent &&
     lastChatEvent.role === Role.USER &&
     lastChatEvent.status === AiInteractionStatus.UNKNOWN
   );
