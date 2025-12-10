@@ -17,31 +17,23 @@ bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 
 # Run Brakeman security scanner
 # Fail the build if any security warnings are found
-echo "=============================================="
-echo "=== BRAKEMAN SECURITY SCAN ==="
-echo "=============================================="
-cd dashboard
-# Run Brakeman security scanner
-# Override config file to output plain text warnings to stdout (not HTML file)
-# --no-progress: Suppress verbose file-by-file progress output (no "236/481 files processed")
-# --format plain: Output plain text format (overrides config's HTML format)
-# --output /dev/stdout: Output warnings to stdout (overrides config's file output)
-# --quiet: Suppress informational messages (check list, etc.)
-# --exit-on-warn: Fail build if warnings found
-if ! bundle exec brakeman --format plain --no-pager --no-progress --quiet --output /dev/stdout --exit-on-warn 2>&1; then
-  echo ""
-  echo "=============================================="
-  echo "=== BRAKEMAN SECURITY SCAN FAILED ==="
-  echo "=============================================="
-  echo "Security vulnerabilities detected! Build stopped."
-  echo "Fix the issues above before proceeding."
-  echo "=============================================="
-  exit 1
-fi
-cd ..
-echo "=============================================="
-echo "=== BRAKEMAN SECURITY SCAN PASSED ==="
-echo "=============================================="
+(
+  cd dashboard
+  # Run Brakeman security scanner
+  # Override config file to output plain text warnings to stdout (not HTML file)
+  # --no-progress: Suppress verbose file-by-file progress output (no "236/481 files processed")
+  # --format plain: Output plain text format (overrides config's HTML format)
+  # --output /dev/stdout: Output warnings to stdout (overrides config's file output)
+  # --quiet: Suppress informational messages (check list, etc.)
+  # --exit-on-warn: Fail build if warnings found
+  if ! bundle exec brakeman --format plain --no-pager --no-progress --quiet --output /dev/stdout --exit-on-warn 2>&1; then
+    set +x  # Disable command tracing for error message
+    echo "Security vulnerabilities detected! Build stopped."
+    echo "Fix the issues above before proceeding."
+    set -x  # Re-enable command tracing
+    exit 1
+  fi
+)
 echo ""
 
 bundle exec rake build
