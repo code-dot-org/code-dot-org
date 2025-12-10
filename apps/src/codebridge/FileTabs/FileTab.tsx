@@ -14,6 +14,8 @@ import {
   setActiveFileThunk,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/fileTabs.module.scss';
@@ -59,11 +61,29 @@ const FileTab = ({file}: FileTabProps) => {
       window.removeEventListener('resize', throttledScrollTabIntoView);
   }, [isActive, throttledScrollTabIntoView]);
 
+  const handleOnClick = (id: string) => {
+    dispatch(setActiveFileThunk(file.id));
+    if (isAiTutorVersion) {
+      sendLab2AnalyticsEvent(
+        EVENTS.AI_TUTOR_VERSION_FILE_TAB_CLICKED_IN_TABS_BAR,
+        {
+          fileName: file.name,
+          fileType: file.language,
+          aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
+            ? 'true'
+            : 'false',
+          aiTutorVersionFileCreated: file.isAiTutorVersionCreated
+            ? 'true'
+            : 'false',
+        }
+      );
+    }
+  };
   return (
     <div className={className} key={file.id}>
       <div
         className={moduleStyles.label}
-        onClick={() => dispatch(setActiveFileThunk(file.id))}
+        onClick={() => handleOnClick(file.id)}
         ref={tabRef}
       >
         <FontAwesomeV6Icon
