@@ -36,13 +36,13 @@ interface BaseChatMessage extends BaseChatEvent {
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
+  /** Necessary to update a pending message to completed or to update chatMessageText */
+  updateId?: string;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */
 export interface PendingChatMessage extends BaseChatMessage {
   status: 'unknown';
-  /** Pending chat messages can be updated */
-  updateId: string;
 }
 
 /** Chat message that could not be completed due to a server error. Does not have a request ID. */
@@ -62,8 +62,6 @@ export interface CompletedChatMessage extends BaseChatMessage {
    * (i.e. downstream AI service error).
    */
   status: Exclude<ValueOf<typeof AiInteractionStatus>, 'unknown'>;
-  /** Completed chat messages can be updated */
-  updateId: string;
 }
 
 /** All chat messages must be one of these types */

@@ -99,8 +99,8 @@ export const submitChatContents = createAsyncThunk(
       chatMessageDisplayText = text;
     }
 
-    // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newUserMessage: PendingChatMessage = {
+    // Create the new user ChatMessage and add to chatEventsCurrent.
+    const newUserMessage: PendingChatMessage & {updateId: string} = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText,
@@ -210,7 +210,7 @@ export const submitChatContents = createAsyncThunk(
       if (message.role === Role.USER) {
         dispatch(
           updateChatMessageStatus({
-            updateId: message.updateId,
+            updateId: newUserMessage.updateId,
             status: message.status,
           })
         );
@@ -222,7 +222,7 @@ export const submitChatContents = createAsyncThunk(
 
 async function handleChatCompletionError(
   error: Error,
-  newUserMessage: PendingChatMessage,
+  newUserMessage: PendingChatMessage & {updateId: string},
   dispatch: AppDispatch,
   viewAsUserId: number | null
 ) {
