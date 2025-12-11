@@ -19,6 +19,7 @@ import aiFabWithIconTag from '@cdo/static/ai-bot-ta-tag-cyan.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
+import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffContainer from './AiDiffContainer';
@@ -73,6 +74,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
+  React.useEffect(() => {
+    console.log('lfm testing - current count', unreadNotificationCount);
+  }, [unreadNotificationCount]);
+
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
 
   const dispatch = useAppDispatch();
@@ -114,6 +119,22 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   React.useEffect(() => {
     updateUnreadNotificationCount();
+  }, [updateUnreadNotificationCount]);
+
+  // WebSocket subscription for real-time notification count updates
+  React.useEffect(() => {
+    const unsubscribe = createTeacherNotificationSubscription({
+      onNewNotification: () =>
+        setUnreadNotificationCount(prevCount =>
+          prevCount === 'loading' ? prevCount : prevCount + 1
+        ),
+      onConnected: () =>
+        console.log(
+          'Connected to TeacherNotificationChannel for badge updates'
+        ),
+    });
+
+    return unsubscribe || undefined;
   }, [updateUnreadNotificationCount]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();

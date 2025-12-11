@@ -15,6 +15,9 @@ class NotificationsController < ApplicationController
   end
 
   def mark_as_read
+    n1 = TeacherNotification.last
+    pp 'lfm created notification broadcast on mark_as_read', n1.id
+    TeacherNotificationChannel.send_notification(current_user.id, n1)
     external_notification_ids = (params[:external_notification_ids] || []).compact_blank
     teacher_notification_ids = (params[:teacher_notification_ids] || []).compact_blank
 
@@ -40,12 +43,12 @@ class NotificationsController < ApplicationController
       total_marked += found_ids.count + notifications_to_create.count
     end
 
-    # Handle teacher notifications (new logic)
-    if teacher_notification_ids.any?
-      teacher_notifications = current_user.teacher_notifications.where(id: teacher_notification_ids, read_at: nil)
-      marked_teacher_count = teacher_notifications.update_all(read_at: Time.current)
-      total_marked += marked_teacher_count
-    end
+    # # Handle teacher notifications (new logic)
+    # if teacher_notification_ids.any?
+    #   teacher_notifications = current_user.teacher_notifications.where(id: teacher_notification_ids, read_at: nil)
+    #   marked_teacher_count = teacher_notifications.update_all(read_at: Time.current)
+    #   total_marked += marked_teacher_count
+    # end
 
     response_data = {
       status: 'success',

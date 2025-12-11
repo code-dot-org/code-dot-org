@@ -33,6 +33,9 @@ class TeacherNotification < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
 
+  # Broadcast notification to WebSocket subscribers after creation
+  after_create :broadcast_notification
+
   def read?
     read_at.present?
   end
@@ -47,5 +50,10 @@ class TeacherNotification < ApplicationRecord
 
   def mark_as_read!
     update!(read_at: Time.current) unless read?
+  end
+
+  private def broadcast_notification
+    pp 'lfm created notification broadcast'
+    TeacherNotificationChannel.send_notification(user_id, self)
   end
 end
