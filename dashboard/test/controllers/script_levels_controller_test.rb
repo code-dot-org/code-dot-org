@@ -717,7 +717,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
@@ -726,7 +726,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
