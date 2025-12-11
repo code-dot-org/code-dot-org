@@ -61,8 +61,8 @@ class CertificateImagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'can show accelerated course' do
-    data = {name: 'student', course: 'accelerated'}
+  test 'can show CSF course' do
+    data = {name: 'student', course: 'coursea-2025'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :success
