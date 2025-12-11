@@ -38,17 +38,33 @@ const Header: React.FC<HeaderProps> = ({
   const selectedLesson =
     lessons?.find(lesson => lesson.id === selectedLessonId) || null;
 
+  // Find next and previous lessons based on position
+  const currentLessonIndex = selectedLesson
+    ? lessons.findIndex(lesson => lesson.id === selectedLesson.id)
+    : -1;
+
+  const previousLesson =
+    currentLessonIndex > 0 ? lessons[currentLessonIndex - 1] : null;
+  const nextLesson =
+    currentLessonIndex >= 0 && currentLessonIndex < lessons.length - 1
+      ? lessons[currentLessonIndex + 1]
+      : null;
+
   const showStudentsByOptions = [
     {value: 'lastName', text: 'Last Name'},
     {value: 'firstName', text: 'First Name'},
   ];
 
   const handlePreviousLesson = () => {
-    alert('Previous lesson clicked!');
+    if (previousLesson) {
+      setSelectedLessonId(previousLesson.id);
+    }
   };
 
   const handleNextLesson = () => {
-    alert('Next lesson clicked!');
+    if (nextLesson) {
+      setSelectedLessonId(nextLesson.id);
+    }
   };
 
   const handlePreviousStudent = () => {
@@ -102,6 +118,9 @@ const Header: React.FC<HeaderProps> = ({
             onClick={handlePreviousLesson}
             color="gray"
             type="secondary"
+            disabled={
+              !previousLesson || lessons.length === 0 || isLessonsLoading
+            }
           />
           <Button
             className={styles.button}
@@ -109,6 +128,7 @@ const Header: React.FC<HeaderProps> = ({
             onClick={handleNextLesson}
             color="gray"
             type="secondary"
+            disabled={!nextLesson || lessons.length === 0 || isLessonsLoading}
           />
         </div>
       </div>
