@@ -37,9 +37,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'counts puzzle position and total in lesson' do
-    # default script
-    sl = Unit.hoc_2014_unit.script_levels[1]
-    assert_equal 1, sl.position
+    # Create a test script with known structure
+    test_unit = create(:unit, :with_levels, lessons_count: 1, levels_count: 20)
+    sl = test_unit.script_levels[1]
+    assert_equal 2, sl.position
     assert_equal 20, sl.lesson_total
 
     # new script
