@@ -157,12 +157,6 @@ module ScriptConstants
       HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
       AI_ETHICS_2023_NAME = 'ai-ethics-2023'.freeze,
     ],
-    csf_international: [
-      COURSE1_NAME = 'course1'.freeze,
-      COURSE2_NAME = 'course2'.freeze,
-      COURSE3_NAME = 'course3'.freeze,
-      COURSE4_NAME = 'course4'.freeze,
-    ],
     csd_2023: [
       CSD1_2023_NAME = 'csd1-2023'.freeze,
       CSD2_2023_NAME = 'csd2-2023'.freeze,
@@ -223,9 +217,6 @@ module ScriptConstants
       CSD4_NAME = 'csd4-2017'.freeze,
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
-    ],
-    twenty_hour: [
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
     ],
     flappy: [FLAPPY_NAME],
     minecraft: [
@@ -356,10 +347,8 @@ module ScriptConstants
     *CATEGORIES[:csf_2021],
     *CATEGORIES[:csf_2022],
     *CATEGORIES[:csf_2023],
-    *CATEGORIES[:csf_international],
 
     *CATEGORIES[:hoc],
-    *CATEGORIES[:twenty_hour],
     *ADDITIONAL_I18N_UNITS,
     *TRANSLATEABLE_CSC_UNITS,
     *TRANSLATABLE_PD_PL_UNITS,
@@ -367,17 +356,6 @@ module ScriptConstants
   ].freeze
 
   def self.csf_next_course_recommendation(course_name)
-    # These course names without years in them should be mapped statically to their recommendation.
-    static_mapping = {
-      "course1" => "course2",
-      "course2" => "course3",
-      "course3" => "course4",
-      "accelerated" => "course4",
-      "course4" => "applab-intro"
-    }
-
-    return static_mapping[course_name] if static_mapping.include?(course_name)
-
     # For CSF courses with years in their name, separate into prefix and year. Determine the recommended
     # next prefix based on constant mapping, then add the year to the recommended prefix.
     # Example: coursea-2019 becomes prefix: coursea, year: 2019.
