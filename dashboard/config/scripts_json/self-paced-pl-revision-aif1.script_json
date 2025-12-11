@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-05 21:37:10 UTC",
+    "serialized_at": "2025-12-10 16:45:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -114,7 +114,7 @@
       "key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5",
       "position": 5,
       "properties": {
-        "progression_name": "Final Project"
+        "progression_name": "Preparing for the Project"
       },
       "seeding_key": {
         "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5",
@@ -768,7 +768,7 @@
         "level_keys": [
           "csaif_pl_ai_04_01_-rev"
         ],
-        "progression": "Final Project"
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -793,7 +793,7 @@
         "level_keys": [
           "csaif_pl_ai_04_02_-rev"
         ],
-        "progression": "Final Project"
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -818,7 +818,7 @@
         "level_keys": [
           "csaif_pl_ai_04_03_-rev"
         ],
-        "progression": "Final Project"
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -843,7 +843,7 @@
         "level_keys": [
           "csaif_pl_ai_04_04_-rev"
         ],
-        "progression": "Final Project"
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {

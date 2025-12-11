@@ -27,7 +27,7 @@
         "layout": "text-bottom-left"
       },
       {
-        "text": "## Getting Element IDs and Indexes\n- #### First, find the HTML element by its id.\n- #### Then, set the text to the matching array item.",
+        "text": "## Getting Element IDs and Indexes\n- #### First, find the HTML element by its id.\n- #### Then, set the text to the matching array item using the index.",
         "imageUrl": "https://images.code.org/02115696c06f86480060c705c21f1317-44Panel Levels AIF U3.png",
         "key": "pl-aif-2-U3-array-syntax-panel-2-7a441f84-3f92-4528-bf01-04db6f27c62f",
         "layout": "text-bottom-right"
@@ -45,13 +45,13 @@
         "layout": "text-bottom-left"
       },
       {
-        "text": "## Now Try!\n#### In the next level, use AI to help create a favorites app with an array. ",
+        "text": "## Now Try!\n#### In the next level, use AI to help create a favorites app with an array. \n#### Use the prompting suggestions to help guide you through and remember, you can refer back to this level if you  need more support.",
         "imageUrl": "https://images.code.org/f97cc396091b1968bd4c24ddb6bf8ab4-8Panel Levels AIF U3.png",
         "key": "pl-aif-2-U3-array-syntax-panel-2-8bcc340c-f718-43f8-a3b6-e5b533883ec3",
         "layout": "text-top-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-12-09T16:49:04.760+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level5a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level5a-test-2025\"},{\"changed_at\":\"2025-12-09 18:33:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:39:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:44:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-09T16:49:04.760+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level5a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level5a-test-2025\"},{\"changed_at\":\"2025-12-09 18:33:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:39:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-09 19:44:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-10 16:42:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-10 16:44:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

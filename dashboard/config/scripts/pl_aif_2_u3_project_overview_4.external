@@ -3,7 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Final Project Overview
+# Begin with the End in Mind: Final Project Overview
+
+#### Unit 3: Building Data-Driven Systems culminates with a final **Value Explorer** project. 
 
 ## Value Explorer
 #### In the Value Explorer project, students act as product designers and data stewards, creating a web app that helps users explore a curated set of items or opportunities—such as side hustles, volunteer roles, or clubs—based on what they value. 

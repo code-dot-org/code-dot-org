@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-10T17:38:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Think about the page you just built in Web Lab.\r\n\r\nAnswer **one** of the reflection questions below:\r\n\r\n* What choices did you make about **which fields to show** and how to lay them out on the screen?\r\n* How do those choices help make the display **clear and accessible** for users? (You might mention labels, order, grouping, or readability.)\r\n* How did you protect users’ **privacy or safety** when deciding what **not** to show?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Safe and Clear Displays",
+    "teacher_markdown": "Students should articulate how their schema-based display choices support clarity and accessibility while protecting privacy, showing they understand the implications of rendering decisions.",
+    "height": "100",
+    "placeholder": "enter response here..."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-10T17:38:04.362+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level4-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level4-test-2025\"}]"
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,10 @@
+name 'pl-aif-2-U3-schema-practice-6'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# This is the level that practices schema for the allergy app 
+
+
+
+MARKDOWN
