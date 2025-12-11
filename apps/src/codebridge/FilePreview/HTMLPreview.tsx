@@ -8,8 +8,9 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -39,6 +40,10 @@ export const HTMLPreview: React.FC = () => {
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
+
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
 
   // The new preview is currently behind an experiment flag. We pass this flag
   // through to the inner iframe via a query string so it knows whether or not to use the new preview.
@@ -112,6 +117,15 @@ export const HTMLPreview: React.FC = () => {
       navigationHistoryIndex,
       navigationHistory
     );
+    if (isAiTutorVersion) {
+      sendLab2AnalyticsEvent(
+        EVENTS.AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR,
+        {
+          fileName: newInputValue,
+          fileType: newInputValue.split('.').pop() || '',
+        }
+      );
+    }
   };
 
   const onNavigateBack = () => {

@@ -14,6 +14,8 @@ import {
   setActiveFileThunk,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './styles/fileTabs.module.scss';
@@ -31,12 +33,15 @@ const FileTab = ({file}: FileTabProps) => {
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand ? 'fa-brands' : undefined;
   const isActive = file.active || file === activeFile;
-  const isAiTutorVersion =
+  const isAiTutorVersionFile =
     file.isAiTutorVersionUpdated || file.isAiTutorVersionCreated || false;
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
   const className = classNames(moduleStyles.fileTab, {
-    [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersion,
-    [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersion,
-    [moduleStyles.active]: isActive && !isAiTutorVersion,
+    [moduleStyles.aiTutorVersionActive]: isActive && isAiTutorVersionFile,
+    [moduleStyles.aiTutorVersionInactive]: !isActive && isAiTutorVersionFile,
+    [moduleStyles.active]: isActive && !isAiTutorVersionFile,
   });
   const tabRef = useRef<HTMLDivElement>(null);
 
@@ -59,11 +64,26 @@ const FileTab = ({file}: FileTabProps) => {
       window.removeEventListener('resize', throttledScrollTabIntoView);
   }, [isActive, throttledScrollTabIntoView]);
 
+  const handleOnClick = (id: string) => {
+    dispatch(setActiveFileThunk(file.id));
+    if (isAiTutorVersion) {
+      sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_VIEW_FILE_CLICKED, {
+        fileName: file.name,
+        fileType: file.language,
+        aiTutorVersionFileUpdated: file.isAiTutorVersionUpdated
+          ? 'true'
+          : 'false',
+        aiTutorVersionFileCreated: file.isAiTutorVersionCreated
+          ? 'true'
+          : 'false',
+      });
+    }
+  };
   return (
     <div className={className} key={file.id}>
       <div
         className={moduleStyles.label}
-        onClick={() => dispatch(setActiveFileThunk(file.id))}
+        onClick={() => handleOnClick(file.id)}
         ref={tabRef}
       >
         <FontAwesomeV6Icon
