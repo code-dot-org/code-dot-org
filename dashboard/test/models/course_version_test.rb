@@ -2,6 +2,7 @@ require 'test_helper'
 
 class CourseVersionTest < ActiveSupport::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @student = create(:student)
     @teacher = create(:teacher)
     @facilitator = create(:facilitator)

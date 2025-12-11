@@ -2,6 +2,7 @@ require 'test_helper'
 
 class AssignableCourseTests < ActiveSupport::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @teacher = create(:teacher)
     @levelbuilder = create(:levelbuilder)
   end

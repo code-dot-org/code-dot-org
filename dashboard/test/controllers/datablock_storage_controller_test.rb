@@ -2,6 +2,7 @@ require "test_helper"
 
 class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   setup_all do
+    create(:level, name: 'collision')
     @student = create(:student)
 
     project = create(:project, owner: @student)

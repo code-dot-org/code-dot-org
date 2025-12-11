@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Services::I18n::CurriculumSyncUtils::RenderTranslationsTest < ActiveSupport::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @lesson = create(:lesson, overview: "This is the english overview")
     @activity_section = create(:activity_section, name: "English name", description: "English description")
     @test_locale = :'te-ST'

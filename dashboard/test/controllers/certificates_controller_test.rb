@@ -3,6 +3,7 @@ require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @teacher = create(:teacher)
     @teacher.freeze
   end

@@ -6,6 +6,7 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
   include LtiAccessToken
 
   setup_all do
+    create(:level, name: 'collision')
     @lti_integration = create(:lti_integration)
     fake_response_hash = {
       access_token: 'fake_access_token',

@@ -9,6 +9,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
   end
 
   setup_all do
+    create(:level, name: 'collision')
     @user_with_two_incomplete_apps = create(:teacher)
     @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete'
     create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete', application_year: '2018-2019'

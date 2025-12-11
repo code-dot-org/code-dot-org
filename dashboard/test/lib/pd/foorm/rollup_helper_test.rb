@@ -3,6 +3,7 @@ require 'test_helper'
 module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
     setup_all do
+      create(:level, name: 'collision')
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)
       @daily_survey_day_5 = create(:foorm_form_summer_post_survey)

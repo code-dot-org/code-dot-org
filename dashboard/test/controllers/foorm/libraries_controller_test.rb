@@ -3,6 +3,7 @@ require 'test_helper'
 module Foorm
   class LibrariesControllerTest < ActionController::TestCase
     setup_all do
+      create(:level, name: 'collision')
       @levelbuilder = create(:levelbuilder)
     end
 

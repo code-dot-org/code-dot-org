@@ -2,6 +2,7 @@ require 'test_helper'
 
 class WidgetTest < ActiveSupport::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @level = Widget.create!(
       name: 'Test Widget',
       long_instructions: 'These are the **markdown** instructions for the test widget.',

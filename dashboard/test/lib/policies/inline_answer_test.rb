@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Policies::InlineAnswerTest < ActiveSupport::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @authorized_teacher = create(:authorized_teacher)
     @teacher = create(:teacher)
     @student = create(:student)

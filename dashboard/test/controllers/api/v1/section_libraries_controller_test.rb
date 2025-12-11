@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Api::V1::SectionLibrariesControllerTest < ActionController::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @teacher = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user

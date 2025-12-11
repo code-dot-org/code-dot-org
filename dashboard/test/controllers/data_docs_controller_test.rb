@@ -4,6 +4,7 @@ class DataDocsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup_all do
+    create(:level, name: 'collision')
     @levelbuilder = create(:levelbuilder)
 
     @test_params = {

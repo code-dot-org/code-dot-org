@@ -10,6 +10,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup_all do
+    create(:level, name: 'collision')
     @integration = create(:lti_integration)
     @deployment_id = SecureRandom.uuid
     @key = SecureRandom.alphanumeric 10

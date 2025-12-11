@@ -3,6 +3,7 @@ require 'test_helper'
 module Pd::Application
   class PrincipalApprovalApplicationTest < ActiveSupport::TestCase
     setup_all do
+      create(:level, name: 'collision')
       Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
     end
 

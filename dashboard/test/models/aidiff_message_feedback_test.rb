@@ -2,6 +2,7 @@ require "test_helper"
 
 class AidiffMessageFeedbackTest < ActiveSupport::TestCase
   setup_all do
+    create(:level, name: 'collision')
     @user = create(:user)
   end
 
