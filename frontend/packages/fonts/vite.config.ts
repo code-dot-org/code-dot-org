@@ -21,15 +21,6 @@ const brandEntryPoints = glob.sync('./src/brands/**/index.scss', {
 });
 
 /**
- * Changes .module.css/.scss files to index.css under each component folder
- * This is to indicate that upstream bundlers should not re-modularize the CSS.
- * @returns Asset file name
- */
-function getAssetFileNames() {
-  return '[name]/[name].[ext]';
-}
-
-/**
  * Get Rollup output configuration.
  * @param format es or cjs
  * @returns Rollup output configuration
@@ -41,7 +32,6 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
     preserveModules: true,
     preserveModulesRoot: 'src',
-    assetFileNames: getAssetFileNames,
   };
 }
 
