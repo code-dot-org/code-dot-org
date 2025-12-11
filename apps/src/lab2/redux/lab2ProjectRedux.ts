@@ -99,6 +99,7 @@ const projectSlice = createSlice({
         fileName: string;
         folderId?: FolderId;
         contents?: string;
+        url?: string;
       }>
     ) {
       if (state.projectSources?.source) {
@@ -109,6 +110,7 @@ const projectSlice = createSlice({
             fileName: action.payload.fileName,
             folderId: action.payload.folderId,
             contents: action.payload.contents,
+            url: action.payload.url,
           }),
         };
         state.hasEdited = true;
@@ -170,15 +172,19 @@ const projectSlice = createSlice({
         state.hasEdited = true;
       }
     },
-    saveFile(state, action: PayloadAction<{fileId: FileId; contents: string}>) {
+    saveFile(
+      state,
+      action: PayloadAction<{fileId: FileId; contents: string; url?: string}>
+    ) {
       if (state.projectSources?.source) {
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.files[action.payload.fileId] ||
-          source.files[action.payload.fileId]?.contents ===
-            action.payload.contents
+          (source.files[action.payload.fileId]?.contents ===
+            action.payload.contents &&
+            source.files[action.payload.fileId]?.url === action.payload.url)
         ) {
-          // No-op if the contents are the same or the file does not exist.
+          // No-op if the contents and url are the same or the file does not exist.
           return;
         }
         state.projectSources = {
@@ -190,6 +196,7 @@ const projectSlice = createSlice({
               [action.payload.fileId]: {
                 ...source.files[action.payload.fileId],
                 contents: action.payload.contents,
+                url: action.payload.url,
               },
             },
           },

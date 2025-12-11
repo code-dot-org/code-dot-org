@@ -10,7 +10,10 @@ import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSel
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {getFullName} from '../manageStudents/utils';
+
 import Header from './header';
+import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
@@ -51,7 +54,9 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [selectedStudent, setSelectedStudent] = useState<string>('');
+  const [selectedStudentId, setSelectedStudentId] = React.useState<
+    number | null
+  >(null);
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -72,7 +77,7 @@ const StudentSnapshot: React.FC = () => {
   const lessonProgressByUnit = useAppSelector(
     state => state.sectionProgress?.studentLessonProgressByUnit
   );
-  const userProgressInSelectedLesson = React.useMemo(() => {
+  const userProgressBySelectedLesson = React.useMemo(() => {
     const progressByUser: UserProgressInLessonData = {};
     if (
       selectedLessonId &&
@@ -102,6 +107,12 @@ const StudentSnapshot: React.FC = () => {
     return progressByUser;
   }, [selectedUnitId, selectedLessonId, lessonProgressByUnit]);
 
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+  const selectedStudent = React.useMemo(
+    () => selectedStudents.find(student => student.id === selectedStudentId),
+    [selectedStudentId, selectedStudents]
+  );
+
   React.useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
@@ -122,6 +133,10 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
+  // TODO: replace with actual values from URL/Redux later
+  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
+  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
+
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -129,20 +144,31 @@ const StudentSnapshot: React.FC = () => {
         selectedLessonId={selectedLessonId}
         setSelectedLessonId={setSelectedLessonId}
         isLessonsLoading={isLessonsLoading}
-        hasUnnumberedLessons={hasUnnumberedLessons}
         selectedStudent={selectedStudent}
-        setSelectedStudent={setSelectedStudent}
+        setSelectedStudentId={setSelectedStudentId}
+        hasUnnumberedLessons={hasUnnumberedLessons}
       />
 
-      <Typography
-        variant="h4"
-        className={styles.studentNameHeader}
-        gutterBottom
-      >
-        <Typography variant="strong">{'<Student name>'}</Typography>
-      </Typography>
+      {selectedStudent && (
+        <Typography
+          variant="h4"
+          className={styles.studentNameHeader}
+          gutterBottom
+        >
+          {selectedStudent ? getFullName(selectedStudent) : 'Unknown student'}
+        </Typography>
+      )}
 
       <div className={styles.widgetGrid}>
+        <StudentRubricWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={HARDCODED_STUDENT_ID}
+          studentName={HARDCODED_STUDENT_NAME}
+          teacherHasEnabledAi={false}
+          canProvideFeedback={true}
+        />
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>

@@ -2,10 +2,14 @@ import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState} from 'react';
 
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import LessonSelector, {
   LessonOption,
 } from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {Student} from '../../progress/progressTypes';
 
 import styles from './header.module.scss';
 
@@ -14,9 +18,9 @@ interface HeaderProps {
   selectedLessonId: number | null;
   setSelectedLessonId: (lessonId: number | null) => void;
   isLessonsLoading: boolean;
+  selectedStudent: Student | undefined;
+  setSelectedStudentId: (id: number) => void;
   hasUnnumberedLessons?: boolean;
-  selectedStudent: string;
-  setSelectedStudent: (studentName: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -24,22 +28,15 @@ const Header: React.FC<HeaderProps> = ({
   selectedLessonId,
   setSelectedLessonId,
   isLessonsLoading,
-  hasUnnumberedLessons = false,
   selectedStudent,
-  setSelectedStudent,
+  setSelectedStudentId,
+  hasUnnumberedLessons = false,
 }) => {
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
     useState<string>('');
 
   const selectedLesson =
     lessons?.find(lesson => lesson.id === selectedLessonId) || null;
-
-  const studentOptions = [
-    {value: 'student1', text: 'Student 1'},
-    {value: 'student2', text: 'Student 2'},
-    {value: 'student3', text: 'Student 3'},
-    {value: 'student4', text: 'Student 4'},
-  ];
 
   const showStudentsByOptions = [
     {value: 'lastName', text: 'Last Name'},
@@ -61,6 +58,22 @@ const Header: React.FC<HeaderProps> = ({
   const handleNextStudent = () => {
     alert('Next student clicked!');
   };
+
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  React.useEffect(() => {
+    if (selectedStudents.length > 0 && selectedStudent === undefined) {
+      setSelectedStudentId(selectedStudents[0].id);
+    }
+  }, [selectedStudents, selectedStudent, setSelectedStudentId]);
+
+  const studentOptions = React.useMemo(() => {
+    return selectedStudents.map(student => ({
+      value: student.id.toString(),
+      text: getFullName(student),
+    }));
+  }, [selectedStudents]);
+
   return (
     <div className={styles.header}>
       <div className={styles.headerColumn}>
@@ -114,8 +127,8 @@ const Header: React.FC<HeaderProps> = ({
           labelText="Student"
           name="student"
           items={studentOptions}
-          selectedValue={selectedStudent}
-          onChange={event => setSelectedStudent(event.target.value)}
+          selectedValue={selectedStudent?.id.toString() || ''}
+          onChange={event => setSelectedStudentId(Number(event.target.value))}
           placeholder="Select a student"
           className={styles.dropdown}
         />

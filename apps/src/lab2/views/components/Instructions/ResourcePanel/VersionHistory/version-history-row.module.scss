@@ -30,6 +30,15 @@
   margin-block: 0.625rem 1rem;
 }
 
+.aiSaveRow {
+  border: 1px solid var(--borders-brand-aqua-primary);
+  background: var(--background-brand-aqua-extra-light);
+}
+
+.aiSaveIcon {
+  color: var(--text-brand-aqua-primary);
+}
+
 .versionContent {
   display: flex;
   flex-direction: column;
