@@ -1,4 +1,6 @@
 @import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors';
+@import '@code-dot-org/component-library-styles/variables.scss';
 
 .snapshotContainer {
   min-width: 700px;
@@ -10,4 +12,57 @@
   grid-auto-rows: 200px;
   gap: 12px;
   width: 100%;
+}
+
+.lessonDetailsWidget {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  .lessonDetails {
+    min-height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    .lessonDetail {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 0%;
+      flex-grow: 1;
+      align-items: center;
+      padding: 0.5rem;
+      background-color: var(--background-neutral-primary);
+      border-radius: $regular-border-radius;
+      border-color: var(--borders-neutral-primary);
+
+      i {
+        font-size: 30px;
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
+      }
+
+      .lessonDetailLabelAndInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          color: var(--text-neutral-tertiary);
+        }
+      }
+    }
+  }
+
+  .failedTestReasoning {
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--background-neutral-primary);
+    border-radius: $regular-border-radius;
+    border-color: var(--borders-neutral-primary);
+  }
 }

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState} from 'react';
@@ -21,11 +22,8 @@ interface LessonsData {
 
 interface UserProgressInLessonData {
   [userId: number]: {
-    incompletePercent?: number;
-    imperfectPercent?: number;
-    completedPercent?: number;
-    timeSpent?: number;
-    lastTimestamp?: number;
+    progress: number | null;
+    timeSpent: string | null;
   };
 }
 
@@ -35,6 +33,17 @@ const getLessons = (unitId: number) =>
   ).then(response => response?.value);
 
 const lessonsCachedLoader = _.memoize(getLessons);
+
+const ZERO_TIME_SPENT = '00:00:00';
+
+const formatTimeSpent = (secondsSpent: number) => {
+  if (!secondsSpent) return ZERO_TIME_SPENT;
+
+  const hours = Math.floor(secondsSpent / 3600);
+  const minutes = Math.floor((secondsSpent % 3600) / 60);
+  const seconds = secondsSpent % 60;
+  return `${hours}:${minutes}:${seconds}`;
+};
 
 const StudentSnapshot: React.FC = () => {
   const [lessons, setLessons] = useState<LessonOption[]>([]);
@@ -71,8 +80,21 @@ const StudentSnapshot: React.FC = () => {
     ) {
       Object.keys(lessonProgressByUnit[selectedUnitId]).forEach(
         (userId: string) => {
-          progressByUser[+userId] =
+          const lessonProgressByUnitForUser =
             lessonProgressByUnit[selectedUnitId][+userId][selectedLessonId];
+          progressByUser[+userId] = lessonProgressByUnitForUser
+            ? {
+                progress: Math.floor(
+                  lessonProgressByUnitForUser['completedPercent']
+                ),
+                timeSpent: formatTimeSpent(
+                  lessonProgressByUnitForUser['timeSpent']
+                ),
+              }
+            : {
+                progress: 0,
+                timeSpent: ZERO_TIME_SPENT,
+              };
         }
       );
     }
@@ -152,6 +174,48 @@ const StudentSnapshot: React.FC = () => {
           loading={true}
         >
           <div>Should not be displayed</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Lesson Details"
+          gridWidth={3}
+          gridHeight={1}
+        >
+          <div className={styles.lessonDetailsWidget}>
+            <div className={styles.lessonDetails}>
+              <div className={styles.lessonDetail}>
+                <FontAwesomeV6Icon
+                  iconName={'chart-line'}
+                  iconStyle={'regular'}
+                />
+                <div className={styles.lessonDetailLabelAndInfo}>
+                  <Typography variant="overline3">Progress</Typography>
+                  <Typography variant="h4">94% complete</Typography>
+                </div>
+              </div>
+              <div className={styles.lessonDetail}>
+                <FontAwesomeV6Icon
+                  iconName={'clipboard-check'}
+                  iconStyle={'regular'}
+                />
+                <div className={styles.lessonDetailLabelAndInfo}>
+                  <Typography variant="overline3">Validation tests</Typography>
+                  <Typography variant="h4">9 of 12 passed</Typography>
+                </div>
+              </div>
+              <div className={styles.lessonDetail}>
+                <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
+                <div className={styles.lessonDetailLabelAndInfo}>
+                  <Typography variant="overline3">Time spent</Typography>
+                  <Typography variant="h4">{'00:00:00'}</Typography>
+                </div>
+              </div>
+            </div>
+            <div className={styles.failedTestReasoning}>
+              <Typography variant="body4">
+                There were no failed tests in this lesson.
+              </Typography>
+            </div>
+          </div>
         </WidgetTemplate>
       </div>
     </div>
