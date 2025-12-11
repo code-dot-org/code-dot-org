@@ -170,6 +170,9 @@ export const submitChatContents = createAsyncThunk(
       ...analyticsProperties,
     };
 
+    let streamingText = '';
+    let hasAddedAssistantMessage = false;
+
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -178,9 +181,6 @@ export const submitChatContents = createAsyncThunk(
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
-
-      let streamingText = '';
-      let hasAddedAssistantMessage = false;
 
       const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
 
@@ -201,6 +201,7 @@ export const submitChatContents = createAsyncThunk(
                     })
                   );
                 } else {
+                  hasAddedAssistantMessage = true;
                   dispatch(
                     addEventToChatEventsCurrent({
                       ...newAssistantMessage,
@@ -208,7 +209,6 @@ export const submitChatContents = createAsyncThunk(
                     })
                   );
                 }
-                hasAddedAssistantMessage = true;
               },
             }
           : undefined,
@@ -250,7 +250,7 @@ export const submitChatContents = createAsyncThunk(
           responseCallback?.(message.chatMessageText) ??
           message.chatMessageText;
 
-        if (isStreaming) {
+        if (hasAddedAssistantMessage) {
           dispatch(
             updateChatMessageStatus({
               updateId: newAssistantMessage.updateId,
