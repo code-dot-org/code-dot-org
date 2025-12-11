@@ -49,7 +49,7 @@ The generator is an async OpenAI client that:
 
 ## 3. Generation Handler (Ruby orchestrator)
 
-The generation handler (e.g., `bin/oneoff/hoai_2025/hoai_image_handler.rb`) is the **primary entrypoint** for running the HoAI image pipeline end to end. It is responsible for:
+The generation handler (e.g., `bin/oneoff/hoai_2025/hoai_2025_images.rb`) is the **primary entrypoint** for running the HoAI image pipeline end to end. It is responsible for:
 
 - Validating that an OpenAI key is available:
   - `OPENAI_API_KEY` environment variable, or
@@ -94,25 +94,25 @@ Uses `animals.txt`, `attires.txt`, and `adjectives.txt` from the Python folder. 
 Dry run (no upload):
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb
 ```
 
 Actual upload to `cdo-curriculum-devel`:
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb --no-dry-run
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb --no-dry-run
 ```
 
 #### 3.3.2 Full generation to production
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb   --no-dry-run   --production
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb   --no-dry-run   --production
 ```
 
 #### 3.3.3 Restrict to specific animals / attires / adjectives
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb   --no-dry-run   -n "fox"   -n "tiger"   -a "top hat"   -a "hoodie"   -j "happy"   -j "mischievous"
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb   --no-dry-run   -n "fox"   -n "tiger"   -a "top hat"   -a "hoodie"   -j "happy"   -j "mischievous"
 ```
 
 This:
@@ -126,13 +126,13 @@ This:
 Use `--redo-only` to re-run a targeted subset and upload the refreshed outputs:
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb   --no-dry-run   --redo-only fox_hoodie_00   --redo-only tiger-top_hat-happy_02
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb   --no-dry-run   --redo-only fox_hoodie_00   --redo-only tiger-top_hat-happy_02
 ```
 
 or:
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb   --no-dry-run   --redo-only "fox_hoodie_00,tiger-top_hat-happy_02"
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb   --no-dry-run   --redo-only "fox_hoodie_00,tiger-top_hat-happy_02"
 ```
 
 #### 3.3.5 Just upload existing outputs
@@ -140,7 +140,7 @@ ruby bin/oneoff/hoai_2025/hoai_image_handler.rb   --no-dry-run   --redo-only "fo
 If generation has already been run, you can re-upload without re-invoking the generator:
 
 ```bash
-ruby bin/oneoff/hoai_2025/hoai_image_handler.rb   --no-dry-run   --just-upload
+ruby bin/oneoff/hoai_2025/hoai_2025_images.rb   --no-dry-run   --just-upload
 ```
 
 This is useful if you changed only metadata, fixed files manually, or want to re-sync output to S3
