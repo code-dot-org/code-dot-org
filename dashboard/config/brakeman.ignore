@@ -19,8 +19,46 @@
       "user_input": "current_user.regional_partners.map",
       "confidence": "High",
       "note": "Bind variable is used on previous line (https://github.com/code-dot-org/code-dot-org/blob/fa81c9dee24f3b7ab2f6c5eb9d1155ee56e2570f/dashboard/app/controllers/api/v1/pd/workshops_controller.rb#L98) and cities array comes from the database, not user input."
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "8d6718",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped parameter value",
+      "file": "app/views/plc/user_course_enrollments/_form.html.haml",
+      "line": 3,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting/",
+      "code": "params[:notice]",
+      "render_path": null,
+      "location": {
+        "type": "template",
+        "template": "plc/user_course_enrollments/_form"
+      },
+      "user_input": "params[:notice]",
+      "confidence": "High",
+      "note": "Admin-only access - low priority, not worth fixing. Requires admin account to exploit."
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "abef11",
+      "check_name": "CrossSiteScripting",
+      "message": "Unescaped parameter value",
+      "file": "app/views/plc/course_units/launch.html.haml",
+      "line": 8,
+      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting/",
+      "code": "params[:notice]",
+      "render_path": null,
+      "location": {
+        "type": "template",
+        "template": "plc/course_units/launch"
+      },
+      "user_input": "params[:notice]",
+      "confidence": "High",
+      "note": "Admin-only access - low priority, not worth fixing. Requires admin account to exploit."
     }
   ],
-  "updated": "2019-05-08 12:48:33 -0700",
+  "updated": "2025-12-10 23:00:00 -0800",
   "brakeman_version": "4.5.0"
 }
