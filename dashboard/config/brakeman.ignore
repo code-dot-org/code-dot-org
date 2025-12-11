@@ -115,8 +115,84 @@
         1104
       ],
       "note": "Infrastructure dependency EOL - being handled as part of infrastructure maintenance. Major upgrade task, not a security fix."
+    },
+    {
+      "warning_type": "Missing Encryption",
+      "warning_code": 109,
+      "fingerprint": "6a26086cd2400fbbfb831b2f8d7291e320bcc2b36984d2abc359e41b3b63212b",
+      "check_name": "ForceSSL",
+      "message": "The application does not force use of HTTPS: `config.force_ssl` is not enabled",
+      "file": "config/environments/production.rb",
+      "line": 1,
+      "link": "https://brakemanscanner.org/docs/warning_types/missing_encryption/",
+      "code": null,
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "High",
+      "cwe_id": [
+        311
+      ],
+      "note": "WONTFIX - SSL termination happens at load balancer/CDN level (CloudFront). This is an industry-standard architecture pattern where HTTPS is enforced at infrastructure level, not application level. All external traffic is encrypted. Enabling config.force_ssl would be redundant and could cause issues with proxy setup."
+    },
+    {
+      "warning_type": "Cross-Site Scripting",
+      "warning_code": 4,
+      "fingerprint": "59f7fe96c58acd4a8692b85cd4d4f582e33541b29691cb807984c768375e95bb",
+      "check_name": "LinkToHref",
+      "message": "Unsafe parameter value in `link_to` href",
+      "file": "app/views/reference_guides/show.html.haml",
+      "line": 16,
+      "link": "https://brakemanscanner.org/docs/warning_types/link_to_href",
+      "code": "link_to(\"Edit\", \"#{\"/courses/#{params[:course_course_name]}/guides\".to_s}/#{ReferenceGuide.find_by_course_version_id_and_key(CurriculumHelper.find_matching_course_version(params[:course_course_name]).id, params[:key]).key}/edit\")",
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "ReferenceGuidesController",
+          "method": "show",
+          "line": 17,
+          "file": "app/controllers/reference_guides_controller.rb",
+          "rendered": {
+            "name": "reference_guides/show",
+            "file": "app/views/reference_guides/show.html.haml"
+          }
+        }
+      ],
+      "location": {
+        "type": "template",
+        "template": "reference_guides/show"
+      },
+      "user_input": "params[:course_course_name]",
+      "confidence": "High",
+      "cwe_id": [
+        79
+      ],
+      "note": "Levelbuilder-only access - low priority, not worth fixing. Requires levelbuilder permission and levelbuilder_mode to be enabled. Fix patch available in analysis folder."
+    },
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "913bcc50db27c7fdd84d700178b5da9603ec37b6bc72292351cb96dec2c016d6",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/levels_controller.rb",
+      "line": 439,
+      "link": "https://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to((params[:redirect] or levels_url))",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "LevelsController",
+        "method": "destroy"
+      },
+      "user_input": "params[:redirect]",
+      "confidence": "High",
+      "cwe_id": [
+        601
+      ],
+      "note": "Levelbuilder-only access - low priority, not worth fixing. Requires levelbuilder permission and levelbuilder_mode to be enabled. Open redirect in destroy method. Fix patch available in analysis folder."
     }
   ],
-  "updated": "2025-12-10 16:43:43 -0800",
+  "updated": "2025-12-10 18:00:00 -0800",
   "brakeman_version": "6.2.2"
 }
