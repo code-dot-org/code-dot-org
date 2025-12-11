@@ -1,11 +1,10 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {PendingChatMessage} from './types';
+import {ExecutionStatus, PendingChatMessage} from './types';
 
 /**
  * Get the updated user and assistant message based on the status of the chat completion request.
@@ -14,7 +13,7 @@ import {PendingChatMessage} from './types';
 export function getUpdatedMessages(
   userMessage: PendingChatMessage,
   modelResponse: string,
-  executionStatus: ValueOf<typeof AiRequestExecutionStatus>
+  executionStatus: ExecutionStatus
 ) {
   switch (executionStatus) {
     case AiRequestExecutionStatus.SUCCESS:

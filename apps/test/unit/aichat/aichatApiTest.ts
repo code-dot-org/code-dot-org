@@ -7,9 +7,9 @@ import {
   ModelParameters,
   CompletedChatMessage,
   PendingChatMessage,
+  ExecutionStatus,
 } from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {ValueOf} from '@cdo/apps/types/utils';
 import {
   default as HttpClient,
   type GetResponse,
@@ -118,10 +118,7 @@ describe('aichatApi', () => {
       });
     }
 
-    function createResponse(
-      status: ValueOf<typeof AiRequestExecutionStatus>,
-      response: string
-    ) {
+    function createResponse(status: ExecutionStatus, response: string) {
       return {
         value: {
           executionStatus: status,
@@ -239,7 +236,7 @@ describe('aichatApi', () => {
     });
 
     it('throws an error if an unknown status is returned', async () => {
-      const status = 123456 as ValueOf<typeof AiRequestExecutionStatus>;
+      const status = 123456 as ExecutionStatus;
       fetchJson.mockResolvedValue(createResponse(status, 'Unknown status'));
 
       expect(callApiGetMessages()).rejects.toThrow(

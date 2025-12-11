@@ -4,8 +4,6 @@ import {
   AiChatReadTimeouts,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {ValueOf} from '../types/utils';
-
 import {chatHistoryValidator} from './api/validators';
 import {getUpdatedMessages} from './getUpdatedMessages';
 import {streamAichatCompletionMessage} from './helpers/aiChatStream';
@@ -19,6 +17,7 @@ import {
   PendingChatMessage,
   ServerChatEvent,
   CompletedChatMessage,
+  ExecutionStatus,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
@@ -146,7 +145,7 @@ interface StartChatCompletionResponse {
 }
 
 export interface GetChatRequestResponse {
-  executionStatus: ValueOf<typeof AiRequestExecutionStatus>;
+  executionStatus: ExecutionStatus;
   response: string;
 }
 
@@ -172,7 +171,7 @@ export async function postAichatCompletionMessage({
     onStart?: (requestId: number) => void;
     onDelta?: (delta: string) => void;
     onComplete?: (fullText: string) => void;
-    onError?: (code?: string, details?: string) => void;
+    onError?: (code: ExecutionStatus, details?: string) => void;
   };
 }): Promise<CompletedChatMessage[]> {
   maxPollingTimeMs =
@@ -214,8 +213,7 @@ export async function postAichatCompletionMessage({
   const startTime = Date.now();
   const backoffRate = serverBackoffRate || DEFAULT_BACKOFF_RATE;
 
-  let executionStatus: ValueOf<typeof AiRequestExecutionStatus> =
-    AiRequestExecutionStatus.NOT_STARTED;
+  let executionStatus: ExecutionStatus = AiRequestExecutionStatus.NOT_STARTED;
   let currentInterval = Math.max(pollingIntervalMs, MIN_POLLING_INTERVAL_MS);
   let modelResponse: string = '';
 
