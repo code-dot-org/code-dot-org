@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
@@ -74,10 +75,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
-  React.useEffect(() => {
-    console.log('lfm testing - current count', unreadNotificationCount);
-  }, [unreadNotificationCount]);
-
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
 
   const dispatch = useAppDispatch();
@@ -123,18 +120,20 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   // WebSocket subscription for real-time notification count updates
   React.useEffect(() => {
-    const unsubscribe = createTeacherNotificationSubscription({
-      onNewNotification: () =>
-        setUnreadNotificationCount(prevCount =>
-          prevCount === 'loading' ? prevCount : prevCount + 1
-        ),
-      onConnected: () =>
-        console.log(
-          'Connected to TeacherNotificationChannel for badge updates'
-        ),
-    });
+    if (DCDO.get('ai-lesson-summaries-notifications-enabled', false)) {
+      const unsubscribe = createTeacherNotificationSubscription({
+        onNewNotification: () =>
+          setUnreadNotificationCount(prevCount =>
+            prevCount === 'loading' ? prevCount : prevCount + 1
+          ),
+        onConnected: () =>
+          console.log(
+            'Connected to TeacherNotificationChannel for badge updates'
+          ),
+      });
 
-    return unsubscribe || undefined;
+      return unsubscribe || undefined;
+    }
   }, [updateUnreadNotificationCount]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
