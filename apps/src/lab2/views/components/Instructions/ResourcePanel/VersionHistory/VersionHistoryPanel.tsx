@@ -360,11 +360,9 @@ const VersionHistoryPanel: React.FunctionComponent<
         });
       }
       if (viewingInitialVersion) {
-        // Should onRestore be passed as an arg?
-        dispatch(previewStartSources({startSources}));
-        if (onRestore) onRestore(startSources);
+        dispatch(previewStartSources({startSources, onRestore}));
       } else if (isLatest) {
-        if (onRestore) dispatch(resetToCurrentVersion({onRestore}));
+        dispatch(resetToCurrentVersion({onRestore}));
       } else {
         dispatch(loadVersion({startSources, version, onRestore}));
       }
