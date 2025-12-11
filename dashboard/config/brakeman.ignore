@@ -1,29 +1,6 @@
 {
   "ignored_warnings": [
     {
-      "warning_type": "Remote Code Execution",
-      "warning_code": 25,
-      "fingerprint": "485cef2c16ee926a4aeca564aef8dff55ed96b961a9a538ae3fe3c2208cc97e8",
-      "check_name": "Deserialize",
-      "message": "`Oj.load` called with parameter value",
-      "file": "app/controllers/dcdo_controller.rb",
-      "line": 37,
-      "link": "https://brakemanscanner.org/docs/warning_types/unsafe_deserialization",
-      "code": "Oj.load(params[:value])",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "DcdoController",
-        "method": "update"
-      },
-      "user_input": "params[:value]",
-      "confidence": "High",
-      "cwe_id": [
-        502
-      ],
-      "note": ""
-    },
-    {
       "warning_type": "Cross-Site Scripting",
       "warning_code": 2,
       "fingerprint": "e2a8cd817eab2bd1403604742971ede3846b7a1e022152cad59f9c1a165a241e",
