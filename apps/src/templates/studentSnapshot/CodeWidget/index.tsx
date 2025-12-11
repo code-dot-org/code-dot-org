@@ -26,7 +26,6 @@ const CodeWidget: React.FC<CodeWidgetProps> = ({
 }) => {
   const [theme, setTheme] = useState<'Light' | 'Dark'>('Light');
 
-  // Convert student code to ProjectFile objects
   const projectFiles = useMemo<ProjectFile[]>(() => {
     if (!codeData?.files) return [];
     return Object.values(codeData.files).filter(
