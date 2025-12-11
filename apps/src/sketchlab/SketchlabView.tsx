@@ -153,26 +153,35 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        const uploadedFiles = await uploadExternalFiles(
-          currentSources.source.externalFiles || {},
-          serializedData.files,
-          filesBeingUploadedRef,
-          channelId,
-          levelProperties.name
-        );
+        let uploadedFiles = {};
+        if (!readonlyWorkspace) {
+          uploadedFiles = await uploadExternalFiles(
+            currentSources.source.externalFiles || {},
+            serializedData.files,
+            filesBeingUploadedRef,
+            channelId,
+            levelProperties.name
+          );
+        }
 
         updateSources({
           source: {
             ...serializedData,
             externalFiles: {
               ...currentSources.source.externalFiles,
-              ...(uploadedFiles || {}),
+              ...uploadedFiles,
             },
           },
         });
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, channelId, currentSources.source, levelProperties.name]
+    [
+      updateSources,
+      channelId,
+      currentSources.source,
+      levelProperties.name,
+      readonlyWorkspace,
+    ]
   );
 
   useEffect(() => {
