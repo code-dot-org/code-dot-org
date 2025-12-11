@@ -1,3 +1,16 @@
 packages:
-  - './apps/*'
-  - './packages/*'
+  - ./apps/*
+  - ./packages/*
+
+catalog:
+  # MUI / Emotion
+  '@emotion/react': ^11.14.0
+  '@emotion/styled': ^11.14.1
+  '@mui/material': ^7.3.4
+  # React
+  '@types/react': ^18.3.12
+  '@types/react-dom': ^18.3.1
+  react: ^18.3.1
+  react-dom: ^18.3.1
+
+catalogMode: strict
