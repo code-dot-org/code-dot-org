@@ -1,9 +1,7 @@
 require 'test_helper'
 
 class BackpacksControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
-  setup_all do
+  setup do
     create(:level, name: 'collision')
     @user = create(:user)
     @storage_id = fake_storage_id_for_user_id(@user.id)
