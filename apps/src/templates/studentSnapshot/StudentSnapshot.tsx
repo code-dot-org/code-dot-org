@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
@@ -217,7 +218,13 @@ const StudentSnapshot: React.FC = () => {
                     iconName={'chart-line'}
                     iconStyle={'regular'}
                   />
-                  <div className={styles.lessonDetailLabelAndInfo}>
+                  <div
+                    className={classNames(
+                      styles.lessonDetailLabelAndInfo,
+                      userProgressBySelectedLesson[selectedStudentId]
+                        ?.progress === 100 && styles.greenCompletedText
+                    )}
+                  >
                     <Typography variant="overline3">Progress</Typography>
                     <Typography variant="h4">{`${
                       userProgressBySelectedLesson[selectedStudentId]
