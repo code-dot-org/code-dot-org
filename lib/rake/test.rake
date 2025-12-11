@@ -475,6 +475,8 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   lib/rake/test.rake
 )
 
+# Force test everything
+
 def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base
   max_identifier_length = 12
