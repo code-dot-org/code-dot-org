@@ -31,7 +31,6 @@ class StudentFilterDropdown extends Component {
           </p>
         </span>
         <SimpleDropdown
-          labelText={commonMsg.filterByStudent()}
           isLabelVisible={false}
           aria-label={commonMsg.filterByStudent()}
           dropdownTextThickness="thin"
