@@ -25,19 +25,26 @@ function getConsumer() {
   return consumer;
 }
 
-export function streamAichatCompletionMessage(
-  newMessage: PendingChatMessage,
-  storedMessages: CompletedChatMessage[],
-  modelParameters: ModelParameters,
-  aichatContext: AichatContext,
-  maxStreamTimeMs: number = 45000,
-  callbacks?: {
+export function streamAichatCompletionMessage({
+  newMessage,
+  storedMessages,
+  modelParameters,
+  aichatContext,
+  maxStreamTimeMs,
+  streamCallbacks,
+}: {
+  newMessage: PendingChatMessage;
+  storedMessages: CompletedChatMessage[];
+  modelParameters: ModelParameters;
+  aichatContext: AichatContext;
+  maxStreamTimeMs: number;
+  streamCallbacks: {
     onStart?: (requestId: number) => void;
-    onDelta?: (delta: string, requestId?: number) => void;
-    onComplete?: (fullText: string, requestId?: number) => void;
-    onError?: (code?: string, details?: string, requestId?: number) => void;
-  }
-): Promise<CompletedChatMessage[]> {
+    onDelta?: (delta: string) => void;
+    onComplete?: (fullText: string) => void;
+    onError?: (code?: string, details?: string) => void;
+  };
+}): Promise<CompletedChatMessage[]> {
   return new Promise((resolve, reject) => {
     const payload = {
       newMessage,
@@ -75,20 +82,20 @@ export function streamAichatCompletionMessage(
           switch (eventType) {
             case 'start':
               requestId = data.request_id;
-              callbacks?.onStart?.(data.request_id);
+              streamCallbacks?.onStart?.(data.request_id);
               return;
 
             case 'delta': {
               const deltaText = data.text || '';
               accumulated += deltaText;
-              callbacks?.onDelta?.(deltaText, requestId);
+              streamCallbacks?.onDelta?.(deltaText);
               return;
             }
 
             case 'complete': {
               cleanup();
               const finalRequestId = requestId || Date.now();
-              callbacks?.onComplete?.(accumulated, finalRequestId);
+              streamCallbacks?.onComplete?.(accumulated);
               resolve(
                 getUpdatedMessages(
                   newMessage,
@@ -101,7 +108,7 @@ export function streamAichatCompletionMessage(
 
             case 'error': {
               cleanup();
-              callbacks?.onError?.(data.code, data.details, requestId);
+              streamCallbacks?.onError?.(data.code, data.details);
               reject(new Error(data.details || data.code || 'error'));
               return;
             }

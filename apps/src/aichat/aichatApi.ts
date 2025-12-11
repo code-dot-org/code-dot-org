@@ -155,31 +155,38 @@ export interface GetChatRequestResponse {
  * to the aichat completion backend controller, then returns the status of the response
  * and assistant message if successful.
  */
-export async function postAichatCompletionMessage(
-  newMessage: PendingChatMessage,
-  storedMessages: CompletedChatMessage[],
-  modelParameters: ModelParameters,
-  aichatContext: AichatContext,
-  maxPollingTimeMs?: number,
+export async function postAichatCompletionMessage({
+  newMessage,
+  storedMessages,
+  modelParameters,
+  aichatContext,
+  maxPollingTimeMs,
+  streamCallbacks,
+}: {
+  newMessage: PendingChatMessage;
+  storedMessages: CompletedChatMessage[];
+  modelParameters: ModelParameters;
+  aichatContext: AichatContext;
+  maxPollingTimeMs?: number;
   streamCallbacks?: {
     onStart?: (requestId: number) => void;
     onDelta?: (delta: string) => void;
     onComplete?: (fullText: string) => void;
     onError?: (code?: string, details?: string) => void;
-  }
-): Promise<CompletedChatMessage[]> {
+  };
+}): Promise<CompletedChatMessage[]> {
   maxPollingTimeMs =
     maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
 
   if (streamCallbacks) {
-    return streamAichatCompletionMessage(
+    return streamAichatCompletionMessage({
       newMessage,
       storedMessages,
       modelParameters,
       aichatContext,
-      maxPollingTimeMs,
-      streamCallbacks
-    );
+      maxStreamTimeMs: maxPollingTimeMs,
+      streamCallbacks,
+    });
   }
 
   const payload = {

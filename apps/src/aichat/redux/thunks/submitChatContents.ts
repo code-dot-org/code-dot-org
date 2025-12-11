@@ -182,13 +182,14 @@ export const submitChatContents = createAsyncThunk(
       let streamingText = '';
       let hasAddedAssistantMessage = false;
 
-      messages = await postAichatCompletionMessage(
-        newUserMessage,
-        chatEventsCurrent.filter(isCompletedChatMessage),
+      const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
+
+      messages = await postAichatCompletionMessage({
+        newMessage: newUserMessage,
+        storedMessages,
         modelParameters,
         aichatContext,
-        undefined,
-        isStreaming
+        streamCallbacks: isStreaming
           ? {
               onDelta: delta => {
                 streamingText += delta;
@@ -210,8 +211,8 @@ export const submitChatContents = createAsyncThunk(
                 hasAddedAssistantMessage = true;
               },
             }
-          : undefined
-      );
+          : undefined,
+      });
 
       // In milliseconds
       const responseTime = Date.now() - startTime;

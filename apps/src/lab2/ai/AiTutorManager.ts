@@ -67,12 +67,12 @@ export default class AiTutorManager {
       systemPrompt: systemPrompts[type],
     };
 
-    const messages = await postAichatCompletionMessage(
-      newUserMessage,
-      [],
-      aiCustomizations,
-      aichatContext
-    );
+    const messages = await postAichatCompletionMessage({
+      newMessage: newUserMessage,
+      storedMessages: [],
+      modelParameters: aiCustomizations,
+      aichatContext,
+    });
 
     const feedbackData: FeedbackData = {
       aiInteractionType: 'AichatRequest',

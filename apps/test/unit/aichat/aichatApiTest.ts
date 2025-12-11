@@ -108,14 +108,14 @@ describe('aichatApi', () => {
       waitingResponse = createResponse(AiRequestExecutionStatus.RUNNING, '');
     });
 
-    async function callApiGetMessages(maxPollingTime?: number) {
-      return await postAichatCompletionMessage(
-        chatMessage,
+    async function callApiGetMessages(maxPollingTimeMs?: number) {
+      return await postAichatCompletionMessage({
+        newMessage: chatMessage,
         storedMessages,
         modelParameters,
         aichatContext,
-        maxPollingTime
-      );
+        maxPollingTimeMs,
+      });
     }
 
     function createResponse(
