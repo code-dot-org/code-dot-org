@@ -190,7 +190,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500.
-  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |error|
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |_job, error|
     agent = 'none'
     if error.message.downcase.include?('openai')
       agent = 'openai'
@@ -202,7 +202,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out.
-  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |error|
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |_job, error|
     agent = 'none'
     if error.message.downcase.include?('openai')
       agent = 'openai'

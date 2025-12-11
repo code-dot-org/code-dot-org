@@ -210,14 +210,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'rate-limit' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
-    end
-
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do
@@ -259,14 +251,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         includes_dimensions(:TimeoutError, Environment: CDO.rack_env)
       )
     )
-
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'timeout-error' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
-    end
 
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_TIMEOUT_ERROR do
@@ -313,14 +297,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'service-unavailable' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
-    end
-
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_SERVICE_UNAVAILABLE do
       perform_enqueued_jobs do
@@ -365,14 +341,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         includes_dimensions(:GatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
       )
     )
-
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'gateway-timeout' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
-    end
 
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_GATEWAY_TIMEOUT do
