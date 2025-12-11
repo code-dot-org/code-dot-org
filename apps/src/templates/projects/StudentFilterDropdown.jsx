@@ -26,7 +26,7 @@ class StudentFilterDropdown extends Component {
     return (
       <span className={styles.filterWrapper} style={this.props.style}>
         <span className={styles.filterLabel}>
-          <p className={classNames(styles.filterLabelText)}>
+          <p className={styles.filterLabelText}>
             {commonMsg.filterByStudent()}
           </p>
         </span>
