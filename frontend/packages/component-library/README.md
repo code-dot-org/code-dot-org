@@ -56,14 +56,6 @@ To run the code in development mode (build + watch):
 pnpm run dev
 ```
 
-This mode also generates the TypeScript declaration files, which generally take upwards of 20 seconds but is necessary
-for cross-project development. To skip TypeScript declaration generation (for example, when locally developing
-components without the need to cross-reference):
-
-```bash
-pnpm run dev:fast
-```
-
 ## Usage
 
 Here are some **basic** examples of how to use the component library in your project. Since these examples are basic,
