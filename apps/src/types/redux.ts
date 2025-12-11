@@ -101,59 +101,17 @@ interface ManageStudentsState {
 }
 
 interface SectionProgressState {
-  section: object;
-  currentView?: string;
-  unitDataByUnit?: {
-    [unitId: number]: {
-      id: number;
-      csf: boolean;
-      isCsd: boolean;
-      isCsp: boolean;
-      hasStandards: boolean;
-      title?: string;
-      path?: string;
-      lessons?: object;
-    };
-  };
-  studentLevelProgressByUnit?: {
-    [unitId: number]: {
-      [userId: number]: {
-        [levelId: number]: {
-          status?: string;
-          result?: number;
-          locked?: boolean;
-          paired?: boolean;
-          timeSpent?: number;
-          teacherFeedbackNow?: boolean;
-          teacherFeedbackCommented?: boolean;
-          lastTimestamp?: number;
-          pages?: unknown;
-        };
-      };
-    };
-  };
   studentLessonProgressByUnit?: {
     [unitId: number]: {
       [userId: number]: {
         [lessonId: number]: {
-          incompletePercent?: number;
-          imperfectPercent?: number;
-          completedPercent?: number;
-          timeSpent?: number;
-          lastTimestamp?: number;
+          incompletePercent: number;
+          imperfectPercent: number;
+          completedPercent: number;
+          timeSpent: number;
+          lastTimestamp: number;
         };
       };
     };
-  };
-  studentLastUpdateByUnit: {
-    [unitId: number]: {
-      [userId: number]: number;
-    };
-    lessonOfInterest: number;
-    isLoadingProgress: boolean;
-    isRefreshingProgress: boolean;
-    expandedLessonIds: object;
-    expandedChoiceLevelIds: number[];
-    expandedMetadataStudentIds: number[];
   };
 }
