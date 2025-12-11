@@ -1,100 +1,145 @@
 {
   "ignored_warnings": [
     {
-      "warning_type": "SQL Injection",
-      "warning_code": 0,
-      "fingerprint": "4c70264964f5a73d9d96e3642705fba07d423acca57660112dd3093cc5a80d3d",
-      "check_name": "SQL",
-      "message": "Possible SQL injection",
-      "file": "app/controllers/api/v1/pd/workshops_controller.rb",
-      "line": 99,
-      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
-      "code": "Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).where(:subject => (Pd::Workshop::SUBJECT_TEACHER_CON)).where(:course => params[:course]).where(\"#{current_user.regional_partners.map do\n get_matching_teachercon(partner)\n end.compact.to_set.pluck(:city).map do\n \"%#{city}%\"\n end.length} OR location_address like ?\", *current_user.regional_partners.map do\n get_matching_teachercon(partner)\n end.compact.to_set.pluck(:city).map do\n \"%#{city}%\"\n end)",
+      "warning_type": "Remote Code Execution",
+      "warning_code": 25,
+      "fingerprint": "485cef2c16ee926a4aeca564aef8dff55ed96b961a9a538ae3fe3c2208cc97e8",
+      "check_name": "Deserialize",
+      "message": "`Oj.load` called with parameter value",
+      "file": "app/controllers/dcdo_controller.rb",
+      "line": 37,
+      "link": "https://brakemanscanner.org/docs/warning_types/unsafe_deserialization",
+      "code": "Oj.load(params[:value])",
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "Api::V1::Pd::WorkshopsController",
-        "method": "upcoming_teachercons"
+        "class": "DcdoController",
+        "method": "update"
       },
-      "user_input": "current_user.regional_partners.map",
+      "user_input": "params[:value]",
       "confidence": "High",
-      "note": "Bind variable is used on previous line (https://github.com/code-dot-org/code-dot-org/blob/fa81c9dee24f3b7ab2f6c5eb9d1155ee56e2570f/dashboard/app/controllers/api/v1/pd/workshops_controller.rb#L98) and cities array comes from the database, not user input."
+      "cwe_id": [
+        502
+      ],
+      "note": ""
     },
     {
       "warning_type": "Cross-Site Scripting",
-      "warning_code": 4,
-      "fingerprint": "8d6718",
+      "warning_code": 2,
+      "fingerprint": "e2a8cd817eab2bd1403604742971ede3846b7a1e022152cad59f9c1a165a241e",
       "check_name": "CrossSiteScripting",
       "message": "Unescaped parameter value",
       "file": "app/views/plc/user_course_enrollments/_form.html.haml",
       "line": 3,
-      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting/",
+      "link": "https://brakemanscanner.org/docs/warning_types/cross-site_scripting/",
       "code": "params[:notice]",
-      "render_path": null,
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "Plc::UserCourseEnrollmentsController",
+          "method": "new",
+          "line": 29,
+          "file": "app/controllers/plc/user_course_enrollments_controller.rb",
+          "rendered": {
+            "name": "plc/user_course_enrollments/new",
+            "file": "app/views/plc/user_course_enrollments/new.html.haml"
+          }
+        },
+        {
+          "type": "template",
+          "name": "plc/user_course_enrollments/new",
+          "line": 3,
+          "file": "app/views/plc/user_course_enrollments/new.html.haml",
+          "rendered": {
+            "name": "plc/user_course_enrollments/_form",
+            "file": "app/views/plc/user_course_enrollments/_form.html.haml"
+          }
+        }
+      ],
       "location": {
         "type": "template",
         "template": "plc/user_course_enrollments/_form"
       },
-      "user_input": "params[:notice]",
+      "user_input": null,
       "confidence": "High",
+      "cwe_id": [
+        79
+      ],
       "note": "Admin-only access - low priority, not worth fixing. Requires admin account to exploit."
     },
     {
       "warning_type": "Cross-Site Scripting",
-      "warning_code": 4,
-      "fingerprint": "abef11",
+      "warning_code": 2,
+      "fingerprint": "0ca242fd678e14f575a8ffea8e48c653b969e04d8cd940d3ccb89fb73e84df86",
       "check_name": "CrossSiteScripting",
       "message": "Unescaped parameter value",
       "file": "app/views/plc/course_units/launch.html.haml",
       "line": 8,
-      "link": "https://brakemanscanner.org/docs/warning_types/cross_site_scripting/",
+      "link": "https://brakemanscanner.org/docs/warning_types/cross-site_scripting/",
       "code": "params[:notice]",
-      "render_path": null,
+      "render_path": [
+        {
+          "type": "controller",
+          "class": "Plc::CourseUnitsController",
+          "method": "launch",
+          "line": 6,
+          "file": "app/controllers/plc/course_units_controller.rb",
+          "rendered": {
+            "name": "plc/course_units/launch",
+            "file": "app/views/plc/course_units/launch.html.haml"
+          }
+        }
+      ],
       "location": {
         "type": "template",
         "template": "plc/course_units/launch"
       },
-      "user_input": "params[:notice]",
+      "user_input": null,
       "confidence": "High",
+      "cwe_id": [
+        79
+      ],
       "note": "Admin-only access - low priority, not worth fixing. Requires admin account to exploit."
     },
     {
       "warning_type": "Unmaintained Dependency",
-      "warning_code": 0,
-      "fingerprint": "6757cc",
+      "warning_code": 120,
+      "fingerprint": "d84924377155b41e094acae7404ec2e521629d86f97b0ff628e3d1b263f8101c",
       "check_name": "EOLRails",
       "message": "Support for Rails 6.1.7.7 ended on 2024-10-01",
       "file": "Gemfile.lock",
       "line": 727,
       "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
-      "code": "(no code snippet)",
+      "code": null,
       "render_path": null,
-      "location": {
-        "type": "dependency"
-      },
+      "location": null,
       "user_input": null,
       "confidence": "High",
+      "cwe_id": [
+        1104
+      ],
       "note": "Infrastructure dependency EOL - being handled as part of infrastructure maintenance. Major upgrade task, not a security fix."
     },
     {
       "warning_type": "Unmaintained Dependency",
-      "warning_code": 0,
-      "fingerprint": "9f7a68",
+      "warning_code": 121,
+      "fingerprint": "9a3951031616a07c8e02c86652f537e92c08685da97f5ec2b12d5d3602b55bb8",
       "check_name": "EOLRuby",
       "message": "Support for Ruby 3.1.7 ended on 2025-03-31",
       "file": "Gemfile.lock",
       "line": 1203,
       "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
-      "code": "(no code snippet)",
+      "code": null,
       "render_path": null,
-      "location": {
-        "type": "dependency"
-      },
+      "location": null,
       "user_input": null,
       "confidence": "High",
+      "cwe_id": [
+        1104
+      ],
       "note": "Infrastructure dependency EOL - being handled as part of infrastructure maintenance. Major upgrade task, not a security fix."
     }
   ],
-  "updated": "2025-12-10 23:00:00 -0800",
-  "brakeman_version": "4.5.0"
+  "updated": "2025-12-10 16:43:43 -0800",
+  "brakeman_version": "6.2.2"
 }
