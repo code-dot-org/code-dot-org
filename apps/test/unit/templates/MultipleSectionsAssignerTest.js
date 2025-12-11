@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -46,7 +47,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that an assigned section is checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
@@ -55,7 +56,7 @@ describe('MultipleSectionsAssigner', () => {
     // Checks that a section assiged the course but not the unit is NOT checked
     expect(
       wrapper
-        .find('Checkbox')
+        .find(Checkbox)
         .filterWhere(n => n.props().name === assignedCourseButNOTUnitSection.id)
         .first()
         .props().checked
