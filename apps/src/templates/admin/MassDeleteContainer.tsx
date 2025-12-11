@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import Papa from 'papaparse';
 import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
 
@@ -19,96 +20,77 @@ interface ProcessedData {
 // Utility functions
 const parseCsv = (file: File): Promise<OriginalData[]> => {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = e => {
-      try {
-        const text = e.target?.result as string;
-        const lines = text.split('\n').filter(line => line.trim());
-
-        if (lines.length < 2) {
-          throw new Error(
-            'CSV must have at least a header row and one data row'
-          );
-        }
-
-        // Parse header row
-        const headers = lines[0]
-          .split(',')
-          .map(header => header.trim().toLowerCase());
-
-        // Check for student identifier column (either student_id or student_username)
-        const hasStudentId = headers.includes('student_id');
-        const hasStudentUsername = headers.includes('student_username');
-
-        if (!hasStudentId && !hasStudentUsername) {
-          throw new Error(
-            'CSV must have a column named "student_id" or "student_username"'
-          );
-        }
-
-        if (!headers.includes('unit_name')) {
-          throw new Error('CSV must have a column named "unit_name"');
-        }
-
-        // Find column indices
-        const studentIdIndex = hasStudentId
-          ? headers.indexOf('student_id')
-          : -1;
-        const studentUsernameIndex = hasStudentUsername
-          ? headers.indexOf('student_username')
-          : -1;
-        const unitNameIndex = headers.indexOf('unit_name');
-
-        // Parse data rows
-        const parsedData: OriginalData[] = [];
-
-        for (let i = 1; i < lines.length; i++) {
-          const cells = lines[i].split(',').map(cell => cell.trim());
-
-          const maxIndex = Math.max(
-            studentIdIndex,
-            studentUsernameIndex,
-            unitNameIndex
-          );
-
-          if (cells.length < maxIndex + 1) {
-            throw new Error(`Row ${i + 1} has insufficient columns`);
-          }
-
-          const studentId =
-            studentIdIndex >= 0 ? cells[studentIdIndex] : undefined;
-          const studentUsername =
-            studentUsernameIndex >= 0 ? cells[studentUsernameIndex] : undefined;
-          const unitName = cells[unitNameIndex];
-
-          if ((!studentId && !studentUsername) || !unitName) {
+    Papa.parse<Record<string, string>>(file, {
+      header: true,
+      skipEmptyLines: true,
+      transformHeader: (header: string) => header.trim().toLowerCase(),
+      complete: results => {
+        try {
+          if (results.errors.length > 0) {
             throw new Error(
-              `Row ${i + 1} has missing student identifier or unit_name`
+              `CSV parsing errors: ${results.errors
+                .map(e => e.message)
+                .join(', ')}`
             );
           }
 
-          const rowData: OriginalData = {
-            unit_name: unitName,
-          };
-
-          if (studentId) {
-            rowData.student_id = studentId;
+          if (!results.data || results.data.length === 0) {
+            throw new Error('CSV must have at least one data row');
           }
 
-          if (studentUsername) {
-            rowData.student_username = studentUsername;
+          // Get the headers from the first row keys
+          const headers = Object.keys(results.data[0]);
+
+          // Check for student identifier column (either student_id or student_username)
+          const hasStudentId = headers.includes('student_id');
+          const hasStudentUsername = headers.includes('student_username');
+
+          if (!hasStudentId && !hasStudentUsername) {
+            throw new Error(
+              'CSV must have a column named "student_id" or "student_username"'
+            );
           }
 
-          parsedData.push(rowData);
+          if (!headers.includes('unit_name')) {
+            throw new Error('CSV must have a column named "unit_name"');
+          }
+
+          // Process the data
+          const parsedData: OriginalData[] = results.data.map((row, index) => {
+            const studentId = row.student_id?.trim();
+            const studentUsername = row.student_username?.trim();
+            const unitName = row.unit_name?.trim();
+
+            if ((!studentId && !studentUsername) || !unitName) {
+              throw new Error(
+                `Row ${index + 2} has missing student identifier or unit_name`
+              );
+            }
+
+            const rowData: OriginalData = {
+              unit_name: unitName,
+            };
+
+            if (studentId) {
+              rowData.student_id = studentId;
+            }
+
+            if (studentUsername) {
+              rowData.student_username = studentUsername;
+            }
+
+            return rowData;
+          });
+
+          resolve(parsedData);
+        } catch (error) {
+          reject(error);
         }
-
-        resolve(parsedData);
-      } catch (error) {
-        reject(error);
-      }
-    };
-    reader.onerror = () => reject(new Error('Failed to read file'));
-    reader.readAsText(file);
+      },
+      error: error => {
+        reject(new Error(`Failed to parse CSV: ${error.message}`));
+      },
+    });
   });
 };
 
@@ -291,7 +273,15 @@ const MassDeleteContainer: React.FC = () => {
         Warning:Using this tool will permanently delete student progress. Use
         with caution.
       </p>
-      To delete student progress in bulk, please enter the{' '}
+      <p>
+        This tool is intended to only be used when deleting student progress by
+        unit. For teacher requests needing all data to be deleted for students,
+        please follow the process oulined in{' '}
+        <a href="https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit?tab=t.0#heading=h.k909psfgxiwj">
+          our Process Doc.
+        </a>
+      </p>
+      To delete student progress for multiple students by unit, please enter the{' '}
       <strong>teacher ID</strong> of the teacher associated with the student
       data and upload a <strong>CSV file</strong> using one of the following
       supported formats.
