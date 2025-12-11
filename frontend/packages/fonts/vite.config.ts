@@ -1,11 +1,12 @@
+import libAssetsPlugin from '@laynezh/vite-plugin-lib-assets';
 import react from '@vitejs/plugin-react';
 import {glob} from 'glob';
 import path from 'node:path';
-import type {OutputOptions, PreRenderedAsset} from 'rollup';
+import type {OutputOptions} from 'rollup';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
-import libAssetsPlugin from '@laynezh/vite-plugin-lib-assets';
+
 import {LOCALES_WITH_INTERNATIONAL_FONTS} from './src/constants';
 
 /**
@@ -15,13 +16,16 @@ const localizedEntryPoints = glob.sync('./src/locales/**/index.module.scss', {
   posix: true,
 });
 
+const brandEntryPoints = glob.sync('./src/brands/**/index.scss', {
+  posix: true,
+});
+
 /**
  * Changes .module.css/.scss files to index.css under each component folder
  * This is to indicate that upstream bundlers should not re-modularize the CSS.
- * @param assetInfo Vite config asset info
  * @returns Asset file name
  */
-function getAssetFileNames(assetInfo: PreRenderedAsset) {
+function getAssetFileNames() {
   return '[name]/[name].[ext]';
 }
 
@@ -84,6 +88,7 @@ export default defineConfig({
     lib: {
       entry: [
         ...localizedEntryPoints,
+        ...brandEntryPoints,
         './src/index.ts',
         './src/loader/index.ts',
         './src/react/FontLoader/index.tsx',
