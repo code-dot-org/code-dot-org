@@ -35,6 +35,7 @@ class AichatChannel < ApplicationCable::Channel
       project_id: project_id,
       execution_status: STATUS[:RUNNING]
     )
+    request_id = request.id
 
     user_toxicity = AichatSafetyHelper.find_toxicity(user_text, level_id, 'User')
     if user_toxicity
@@ -42,10 +43,8 @@ class AichatChannel < ApplicationCable::Channel
         response: user_toxicity.to_json,
         execution_status: STATUS[:USER_PROFANITY]
       )
-      return broadcast_error(STATUS[:USER_PROFANITY], request.id)
+      return broadcast_error(STATUS[:USER_PROFANITY], request_id)
     end
-
-    request_id = request.id
 
     AichatChannel.broadcast_to(current_user, {event: 'start', request_id: request_id})
 
@@ -57,6 +56,15 @@ class AichatChannel < ApplicationCable::Channel
       project_id,
       current_user.id
     ) {|delta, raw_event| handle_stream_delta(delta, raw_event, request_id)}
+
+    model_toxicity = AichatSafetyHelper.find_toxicity(full_response, level_id, 'Assistant')
+    if model_toxicity
+      request.update!(
+        response: model_toxicity.to_json,
+        execution_status: STATUS[:MODEL_PROFANITY]
+      )
+      return broadcast_error(STATUS[:MODEL_PROFANITY], request_id)
+    end
 
     request.update!(
       response: full_response,
