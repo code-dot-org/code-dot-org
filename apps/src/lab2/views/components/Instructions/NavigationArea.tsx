@@ -147,8 +147,32 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
 
     let resizeObserver: ResizeObserver | undefined;
     if (container) {
+      const checkSize = () => {
+        // Verify the ref still points to the same element and it's connected to the DOM
+        const currentContainer = buttonContainerRef.current;
+        if (
+          currentContainer &&
+          currentContainer === container &&
+          currentContainer.isConnected
+        ) {
+          const width = currentContainer.clientWidth;
+          // Ignore measurements when element hasn't been laid out yet (width is 0)
+          if (width > 0) {
+            setSmall(width < 210);
+          }
+        }
+      };
+
+      // Check initial size after layout is complete
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          // Double RAF ensures layout is complete
+          checkSize();
+        });
+      });
+
       resizeObserver = new ResizeObserver(() => {
-        setSmall(container.clientWidth < 210);
+        checkSize();
       });
       resizeObserver.observe(container);
     }
@@ -156,7 +180,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return () => {
       resizeObserver?.disconnect();
     };
-  }, [setSmall]);
+  }, [id, hasNextLevel, currentLevel, nextLevelNumber]);
 
   useEffect(() => {
     // Focus on the feedback message when it first becomes present and the program is not running.
