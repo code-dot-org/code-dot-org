@@ -42,9 +42,9 @@ const ZERO_TIME_SPENT = '00:00:00';
 const formatTimeSpent = (secondsSpent: number) => {
   if (!secondsSpent) return ZERO_TIME_SPENT;
 
-  const hours = Math.floor(secondsSpent / 3600);
-  const minutes = Math.floor((secondsSpent % 3600) / 60);
-  const seconds = secondsSpent % 60;
+  const hours = `${Math.floor(secondsSpent / 3600)}`.padStart(2, '0');
+  const minutes = `${Math.floor((secondsSpent % 3600) / 60)}`.padStart(2, '0');
+  const seconds = `${secondsSpent % 60}`.padStart(2, '0');
   return `${hours}:${minutes}:${seconds}`;
 };
 
@@ -204,48 +204,58 @@ const StudentSnapshot: React.FC = () => {
         >
           <div>Should not be displayed</div>
         </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Lesson Details"
-          gridWidth={3}
-          gridHeight={1}
-        >
-          <div className={styles.lessonDetailsWidget}>
-            <div className={styles.lessonDetails}>
-              <div className={styles.lessonDetail}>
-                <FontAwesomeV6Icon
-                  iconName={'chart-line'}
-                  iconStyle={'regular'}
-                />
-                <div className={styles.lessonDetailLabelAndInfo}>
-                  <Typography variant="overline3">Progress</Typography>
-                  <Typography variant="h4">94% complete</Typography>
+        {selectedStudentId && (
+          <WidgetTemplate
+            widgetName="Lesson Details"
+            gridWidth={3}
+            gridHeight={1}
+          >
+            <div className={styles.lessonDetailsWidget}>
+              <div className={styles.lessonDetails}>
+                <div className={styles.lessonDetail}>
+                  <FontAwesomeV6Icon
+                    iconName={'chart-line'}
+                    iconStyle={'regular'}
+                  />
+                  <div className={styles.lessonDetailLabelAndInfo}>
+                    <Typography variant="overline3">Progress</Typography>
+                    <Typography variant="h4">{`${
+                      userProgressBySelectedLesson[selectedStudentId]
+                        ?.progress ?? '0'
+                    }% complete`}</Typography>
+                  </div>
+                </div>
+                <div className={styles.lessonDetail}>
+                  <FontAwesomeV6Icon
+                    iconName={'clipboard-check'}
+                    iconStyle={'regular'}
+                  />
+                  <div className={styles.lessonDetailLabelAndInfo}>
+                    <Typography variant="overline3">
+                      Validation tests
+                    </Typography>
+                    <Typography variant="h4">9 of 12 passed</Typography>
+                  </div>
+                </div>
+                <div className={styles.lessonDetail}>
+                  <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
+                  <div className={styles.lessonDetailLabelAndInfo}>
+                    <Typography variant="overline3">Time spent</Typography>
+                    <Typography variant="h4">
+                      {userProgressBySelectedLesson[selectedStudentId]
+                        ?.timeSpent ?? ZERO_TIME_SPENT}
+                    </Typography>
+                  </div>
                 </div>
               </div>
-              <div className={styles.lessonDetail}>
-                <FontAwesomeV6Icon
-                  iconName={'clipboard-check'}
-                  iconStyle={'regular'}
-                />
-                <div className={styles.lessonDetailLabelAndInfo}>
-                  <Typography variant="overline3">Validation tests</Typography>
-                  <Typography variant="h4">9 of 12 passed</Typography>
-                </div>
-              </div>
-              <div className={styles.lessonDetail}>
-                <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
-                <div className={styles.lessonDetailLabelAndInfo}>
-                  <Typography variant="overline3">Time spent</Typography>
-                  <Typography variant="h4">{'00:00:00'}</Typography>
-                </div>
+              <div className={styles.failedTestReasoning}>
+                <Typography variant="body4">
+                  There were no failed tests in this lesson.
+                </Typography>
               </div>
             </div>
-            <div className={styles.failedTestReasoning}>
-              <Typography variant="body4">
-                There were no failed tests in this lesson.
-              </Typography>
-            </div>
-          </div>
-        </WidgetTemplate>
+          </WidgetTemplate>
+        )}
       </div>
     </div>
   );
