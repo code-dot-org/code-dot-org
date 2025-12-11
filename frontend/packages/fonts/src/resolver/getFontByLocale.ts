@@ -1,3 +1,4 @@
+/* eslint-disable import-x/no-unresolved */
 import {
   FALLBACK_FONT_FAMILIES_BY_LOCALE,
   InternationalFontLocale,

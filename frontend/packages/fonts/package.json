@@ -14,29 +14,29 @@
   "exports": {
     ".": {
       "types": {
-        "import": "./dist/esm/index.d.mts",
-        "require": "./dist/cjs/index.d.ts"
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.ts"
       },
-      "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./brands/*": "./dist/brands/*",
     "./locales/*": "./dist/locales/*",
     "./FontLoader": {
       "types": {
-        "import": "./dist/esm/react/FontLoader/index.d.mts",
-        "require": "./dist/cjs/react/FontLoader/index.d.ts"
+        "import": "./dist/react/FontLoader/index.d.ts",
+        "require": "./dist/react/FontLoader/index.d.ts"
       },
-      "import": "./dist/esm/react/FontLoader/index.mjs",
-      "require": "./dist/cjs/react/FontLoader/index.js"
+      "import": "./dist/react/FontLoader/index.mjs",
+      "require": "./dist/react/FontLoader/index.js"
     },
     "./loader": {
       "types": {
-        "import": "./dist/esm/loader/index.d.mts",
-        "require": "./dist/cjs/loader/index.d.ts"
+        "import": "./dist/loader/index.d.ts",
+        "require": "./dist/loader/index.d.ts"
       },
-      "import": "./dist/esm/loader/index.mjs",
-      "require": "./dist/cjs/loader/index.js"
+      "import": "./dist/loader/index.mjs",
+      "require": "./dist/loader/index.js"
     }
   },
   "files": [
