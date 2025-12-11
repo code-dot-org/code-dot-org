@@ -364,7 +364,6 @@ class AdminUsersController < ApplicationController
 
   # POST /admin/convert_usernames_to_ids
   def convert_usernames_to_ids
-    # Validate input parameters
     csv_data = params[:csv_data]
     if csv_data.blank?
       render json: {success: false, error: 'CSV data is required'}, status: :bad_request
@@ -385,8 +384,6 @@ class AdminUsersController < ApplicationController
     Rails.logger.info "Created temp input file: #{temp_input.path}"
     Rails.logger.info "Expected output file: #{temp_output}"
 
-    # Instead of running the external script, implement the conversion logic directly
-    # This avoids issues with environment loading and paths
     converted_data = []
     error_message = nil
 
@@ -421,7 +418,6 @@ class AdminUsersController < ApplicationController
 
     Rails.logger.info "Successfully converted #{converted_data.length} records"
 
-    # Cleanup temp files
     temp_input.unlink
 
     render json: {success: true, converted_data: converted_data}
@@ -433,7 +429,6 @@ class AdminUsersController < ApplicationController
 
   # POST /admin/delete_user_progress
   def delete_user_progress
-    # Endpoint for deleting user progress using the Ruby script
     unless request.post?
       render json: {error: 'Only POST requests are allowed'}, status: :method_not_allowed
       return
@@ -462,14 +457,11 @@ class AdminUsersController < ApplicationController
       repo_root = File.expand_path('..', Rails.root)
       script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', 'delete_user_progress_by_unit.rb')
 
-      # Determine commit flag
       commit_flag = dry_run == true ? '' : 'for-real'
 
-      # Run the Ruby script with the temporary file
       output = `cd #{repo_root} && ruby #{script_path} #{teacher_id} #{temp_file.path} #{commit_flag} 2>&1`
       exit_status = $?.exitstatus
 
-      # Clean up the temporary file
       temp_file.unlink
 
       if exit_status != 0
