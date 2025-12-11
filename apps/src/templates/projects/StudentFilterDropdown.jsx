@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 import commonMsg from '@cdo/locale';
 
 import styles from './StudentFilterDropdown.module.scss';
+import classNames from 'classnames';
 
 export const ALL_STUDENTS = '_all_students';
 
@@ -24,9 +25,16 @@ class StudentFilterDropdown extends Component {
   render() {
     return (
       <span className={styles.filterWrapper} style={this.props.style}>
+        <span className={styles.filterLabel}>
+          <p className={classNames(styles.filterLabelText)}>
+            {commonMsg.filterByStudent()}
+          </p>
+        </span>
         <SimpleDropdown
           labelText={commonMsg.filterByStudent()}
+          isLabelVisible={false}
           aria-label={commonMsg.filterByStudent()}
+          dropdownTextThickness="thin"
           selectedValue={this.props.selectedStudent}
           onChange={this.onChange.bind(this)}
           size="s"
