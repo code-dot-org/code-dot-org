@@ -37,22 +37,32 @@ const TeacherViewingStudentProjectAlert: React.FC<
   // Track loading state when switching between students.
   // Progress data (levelNotStarted) may lag behind viewAsUserId updates.
   const previousViewAsUserIdRef = useRef<number | null | undefined>(undefined);
+  const previousUnitProgressRef = useRef<typeof unitProgress | undefined>(
+    undefined
+  );
   const [isLoadingLevelProgress, setIsLoadingLevelProgress] = useState(true);
 
-  // When viewAsUserId changes, mark as loading until progress catches up.
   useEffect(() => {
     if (previousViewAsUserIdRef.current !== viewAsUserId) {
       setIsLoadingLevelProgress(true);
       previousViewAsUserIdRef.current = viewAsUserId;
+      // Reset the unitProgress ref to detect when new progress arrives
+      previousUnitProgressRef.current = unitProgress;
     }
-  }, [viewAsUserId]);
+  }, [viewAsUserId]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // When unitProgress updates, progress has loaded for the new student.
+  // When unitProgress updates after a viewAsUserId change,
+  // progress has loaded for the new student.
   useEffect(() => {
-    if (isLoadingLevelProgress) {
+    if (
+      isLoadingLevelProgress &&
+      previousUnitProgressRef.current !== undefined &&
+      previousUnitProgressRef.current !== unitProgress
+    ) {
       setIsLoadingLevelProgress(false);
+      previousUnitProgressRef.current = unitProgress;
     }
-  }, [unitProgress]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [unitProgress, isLoadingLevelProgress]);
 
   // Get the name of the student being viewed to use in the alert text.
   const selectedStudentName = useMemo(() => {
