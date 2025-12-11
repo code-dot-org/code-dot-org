@@ -634,10 +634,6 @@ class Unit < ApplicationRecord
     name == 'flappy'
   end
 
-  def csf_international?
-    ScriptConstants::CATEGORIES[:csf_international].include?(name)
-  end
-
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
@@ -784,7 +780,6 @@ class Unit < ApplicationRecord
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return true if csf_international?
     return false if csf?
 
     [
