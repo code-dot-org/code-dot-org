@@ -6,6 +6,7 @@ import {getUpdatedMessages} from '../getUpdatedMessages';
 import {
   AichatContext,
   CompletedChatMessage,
+  ExecutionStatus,
   ModelParameters,
   PendingChatMessage,
 } from '../types';
@@ -14,7 +15,12 @@ type StreamEvent =
   | {event: 'start'; request_id: number}
   | {event: 'delta'; text: string; request_id: number}
   | {event: 'complete'; request_id: number}
-  | {event: 'error'; code?: string; details?: string; request_id?: number};
+  | {
+      event: 'error';
+      code: ExecutionStatus;
+      details?: string;
+      request_id: number;
+    };
 
 let consumer: Consumer | null = null;
 
@@ -42,7 +48,7 @@ export function streamAichatCompletionMessage({
     onStart?: (requestId: number) => void;
     onDelta?: (delta: string) => void;
     onComplete?: (fullText: string) => void;
-    onError?: (code?: string, details?: string) => void;
+    onError?: (code: ExecutionStatus, details?: string) => void;
   };
 }): Promise<CompletedChatMessage[]> {
   return new Promise((resolve, reject) => {
@@ -56,7 +62,6 @@ export function streamAichatCompletionMessage({
     const consumerInstance = getConsumer();
     let accumulated = '';
     let settled = false;
-    let requestId: number | undefined;
 
     const timeoutId = window.setTimeout(() => {
       cleanup();
@@ -81,7 +86,6 @@ export function streamAichatCompletionMessage({
 
           switch (eventType) {
             case 'start':
-              requestId = data.request_id;
               streamCallbacks?.onStart?.(data.request_id);
               return;
 
@@ -94,14 +98,13 @@ export function streamAichatCompletionMessage({
 
             case 'complete': {
               cleanup();
-              const finalRequestId = requestId || Date.now();
               streamCallbacks?.onComplete?.(accumulated);
               resolve(
                 getUpdatedMessages(
                   newMessage,
                   accumulated,
                   AiRequestExecutionStatus.SUCCESS
-                ).map(message => ({...message, requestId: finalRequestId}))
+                ).map(message => ({...message, requestId: data.request_id}))
               );
               return;
             }
@@ -109,9 +112,16 @@ export function streamAichatCompletionMessage({
             case 'error': {
               cleanup();
               streamCallbacks?.onError?.(data.code, data.details);
-              reject(new Error(data.details || data.code || 'error'));
+              resolve(
+                getUpdatedMessages(newMessage, accumulated, data.code).map(
+                  message => ({...message, requestId: data.request_id})
+                )
+              );
               return;
             }
+
+            default:
+              reject(new Error('Event type not valid'));
           }
         },
         connected() {
