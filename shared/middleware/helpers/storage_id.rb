@@ -54,7 +54,7 @@ def get_storage_id_and_project_id(encrypted)
     raise ArgumentError, "No project found with uuid #{encrypted}" unless project
     [project[:storage_id], project[:id]]
   else
-    get_storage_id_and_project_id(encrypted)
+    storage_decrypt_channel_id(encrypted)
   end
 end
 
@@ -109,7 +109,7 @@ def get_project_channel_id(storage_id, project_id)
   return project[:uuid] if project && project[:uuid]
 
   # otherwise, continue to use the old encryption method
-  get_project_channel_id(storage_id, project_id)
+  storage_encrypt_channel_id(storage_id, project_id)
 end
 
 def storage_encrypt_channel_id(storage_id, project_id)
