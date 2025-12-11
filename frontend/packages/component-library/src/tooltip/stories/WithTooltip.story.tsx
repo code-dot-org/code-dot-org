@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {Meta, StoryFn} from '@storybook/react-vite';
 import {useRef} from 'react';
 
 import {Button} from '@/button';

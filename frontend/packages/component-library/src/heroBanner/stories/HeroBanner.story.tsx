@@ -1,7 +1,7 @@
 import codeOrgLogo from '@public/images/code-org-logo.png';
 import customBackgroundImage from '@public/images/hero-banner-custom-bg-example.png';
 import imageFile from '@public/images/image-component.png';
-import {Meta, StoryObj} from '@storybook/react-webpack5';
+import {Meta, StoryObj} from '@storybook/react-vite';
 import {within, expect} from 'storybook/test';
 import {MINIMAL_VIEWPORTS} from 'storybook/viewport';
 

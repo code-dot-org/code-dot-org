@@ -1,10 +1,7 @@
 {
-  "extends": "@code-dot-org/lint-config/typescript/tsconfig.react.json",
-  "include": [".storybook/**/*"],
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["../../packages/component-library/src/*"],
-      "@public/*": ["./public/*"]
-    }
-  }
+  "files": [],
+  "references": [
+    {"path": "./tsconfig.app.json"},
+    {"path": "./tsconfig.node.json"}
+  ]
 }

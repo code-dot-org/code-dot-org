@@ -1,5 +1,5 @@
 import logoImage from '@public/images/cdo-logo-inverse.svg';
-import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {Meta, StoryFn} from '@storybook/react-vite';
 
 import Header, {HeaderProps} from '../Header';
 

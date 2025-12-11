@@ -1,5 +1,5 @@
 import image from '@public/images/action-block-01.png';
-import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import type {Meta, StoryObj} from '@storybook/react-vite';
 import {within, expect} from 'storybook/test';
 
 import Video from '@/video';

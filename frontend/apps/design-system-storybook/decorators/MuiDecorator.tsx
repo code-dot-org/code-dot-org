@@ -1,6 +1,6 @@
 import {CssBaseline, ThemeProvider} from '@mui/material';
 import {withThemeFromJSXProvider} from '@storybook/addon-themes';
-import {Decorator, StoryContext} from '@storybook/react-webpack5';
+import {Decorator, StoryContext} from '@storybook/react-vite';
 
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
