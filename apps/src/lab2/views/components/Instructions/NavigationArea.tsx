@@ -39,6 +39,8 @@ interface NavigationAreaProps {
   styleAsBubble?: boolean;
   /** Optional on continue/finish callback. */
   onContinue?: () => void;
+  /** Whether or not to keep the text 'simple' */
+  variant?: 'small';
 }
 
 /**
@@ -57,6 +59,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   overrideTheme,
   styleAsBubble = false,
   onContinue,
+  variant,
 }) => {
   const {
     id,
@@ -114,7 +117,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
 
-  const [small, setSmall] = useState<boolean>(false);
+  const [small, setSmall] = useState<boolean>(variant === 'small');
 
   // The secondary finish button avoids a reappearance animation by not using
   // the unique index.
@@ -302,7 +305,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               type={type}
               color={color}
               iconRight={iconRight}
-              text={small ? smallText : text}
+              text={variant === 'small' || small ? smallText : text}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}

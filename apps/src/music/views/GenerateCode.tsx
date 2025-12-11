@@ -477,6 +477,7 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 className={styles.buttonWide}
                 // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
                 onContinue={sublevelOnContinue}
+                variant={'small'}
               />
             )}
           </div>
