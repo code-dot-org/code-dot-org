@@ -56,6 +56,12 @@ export default defineConfig({
       rollupTypes: false, // Disable rolling up types to a single file
       entryRoot: 'src',
       insertTypesEntry: false, // Prevent inserting a single types entry
+      exclude: [
+        '**/__tests__/**',
+        '**/stories/**',
+        '**/*.story.tsx',
+        '**/*.test.tsx',
+      ],
     }),
     // Automatically inject CSS imports for each component entrypoint
     // This allows consumers to import components without needing to separately import CSS files.
