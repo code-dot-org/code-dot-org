@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
 
@@ -47,7 +49,28 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     const filePath =
       folderPath === '' ? file.name : folderPath + '/' + file.name;
     dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+    sendLab2AnalyticsEvent(
+      EVENTS.AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED,
+      {
+        fileName: file.name,
+        fileType: file.language,
+        aiTutorVersionFileUpdated: isUpdatedFile ? 'true' : 'false',
+        aiTutorVersionFileCreated: isNewFile ? 'true' : 'false',
+      }
+    );
   };
+
+  const statusText = isNewFile
+    ? 'New file created by AI Tutor'
+    : 'File updated by AI Tutor';
+  const acceptanceText = !isInReview
+    ? isAccepted
+      ? ', accepted'
+      : ', rejected'
+    : '';
+  const accessibleLabel = `${statusText}: ${file.name}${acceptanceText}`;
+
+  const hasPreviewButton = isHtmlFile && isInReview;
 
   return (
     <div
@@ -56,14 +79,35 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
         [moduleStyles.updatedFile]: isUpdatedFile,
       })}
     >
-      <div className={moduleStyles.statusIndicator}>
-        <FontAwesomeV6Icon
-          iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
-          iconStyle="solid"
-        />
+      <div
+        className={moduleStyles.fileInfo}
+        role="status"
+        aria-label={accessibleLabel}
+      >
+        <div className={moduleStyles.statusIndicator}>
+          <FontAwesomeV6Icon
+            iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
+            iconStyle="solid"
+          />
+        </div>
+        <span className={moduleStyles.fileName}>{file.name}</span>
+        {!isInReview && isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="check"
+            iconStyle="solid"
+            className={moduleStyles.acceptedIcon}
+          />
+        )}
+        {!isInReview && !isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="xmark"
+            iconStyle="solid"
+            className={moduleStyles.rejectedIcon}
+          />
+        )}
       </div>
-      <span className={moduleStyles.fileName}>{file.name}</span>
-      {isHtmlFile && isInReview && (
+      {/* Preview button - outside role="img" so it remains accessible */}
+      {hasPreviewButton && (
         <span className={moduleStyles.previewButtonWrapper}>
           <WithTooltip
             tooltipProps={{
@@ -84,20 +128,6 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
             />
           </WithTooltip>
         </span>
-      )}
-      {!isInReview && isAccepted && (
-        <FontAwesomeV6Icon
-          iconName="check"
-          iconStyle="solid"
-          className={moduleStyles.acceptedIcon}
-        />
-      )}
-      {!isInReview && !isAccepted && (
-        <FontAwesomeV6Icon
-          iconName="xmark"
-          iconStyle="solid"
-          className={moduleStyles.rejectedIcon}
-        />
       )}
     </div>
   );

@@ -1284,6 +1284,9 @@ Dashboard::Application.routes.draw do
     resources :code_review_comments, only: [:create, :update, :destroy]
 
     resources :rubrics, only: [:create, :edit, :new, :update, :show] do
+      collection do
+        get 'find' # GET /rubrics/find?lesson_id=X&level_id=Y
+      end
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
