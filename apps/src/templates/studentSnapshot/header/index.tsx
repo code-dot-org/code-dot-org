@@ -15,6 +15,8 @@ interface HeaderProps {
   setSelectedLessonId: (lessonId: number | null) => void;
   isLessonsLoading: boolean;
   hasUnnumberedLessons?: boolean;
+  selectedStudent: string;
+  setSelectedStudent: (studentName: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -23,8 +25,9 @@ const Header: React.FC<HeaderProps> = ({
   setSelectedLessonId,
   isLessonsLoading,
   hasUnnumberedLessons = false,
+  selectedStudent,
+  setSelectedStudent,
 }) => {
-  const [selectedStudent, setSelectedStudent] = useState<string>('');
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
     useState<string>('');
 

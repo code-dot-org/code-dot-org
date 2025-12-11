@@ -51,6 +51,7 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
+  const [selectedStudent, setSelectedStudent] = useState<string>('');
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -129,6 +130,8 @@ const StudentSnapshot: React.FC = () => {
         setSelectedLessonId={setSelectedLessonId}
         isLessonsLoading={isLessonsLoading}
         hasUnnumberedLessons={hasUnnumberedLessons}
+        selectedStudent={selectedStudent}
+        setSelectedStudent={setSelectedStudent}
       />
 
       <Typography
