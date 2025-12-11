@@ -1,5 +1,5 @@
 @use '@code-dot-org/component-library-styles/mixins';
-@import '@cdo/apps/lab2/views/components/layout/variables.scss';
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .prompts {
   display: flex;
@@ -10,7 +10,7 @@
     // Base chip styles (from component library chip.module.scss)
     display: inline-block;
     background-color: var(--neutral-base-white);
-    border: $default-border;
+    border: variables.$default-border;
     color: var(--neutral-base-black);
     min-width: 30px;
     text-align: center;
