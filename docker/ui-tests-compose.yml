@@ -30,7 +30,11 @@ services:
       - yarncache:/home/ci/.cache
       - gcloud_config:/home/ci/.config/gcloud
     environment:
+      CI: 1
       CI_JOB: 'ui_tests'
+      RAILS_ENV: 'test'
+      RACK_ENV: 'test'
+      DISABLE_SPRING: 1
       FIXUID: ${FIXUID:-}
     env_file:
       - env.list
