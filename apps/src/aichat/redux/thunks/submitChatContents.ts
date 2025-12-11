@@ -6,6 +6,7 @@ import {
   clearUserAddedSelectionContext,
   setChatMessageSent,
   updateChatMessageStatus,
+  updateChatMessageText,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -14,6 +15,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -29,9 +31,9 @@ import {
   CompletedChatMessage,
   ChatAsset,
   ModelParameters,
-  AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
+  AiChatClientType,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -73,6 +75,11 @@ export const submitChatContents = createAsyncThunk(
       logLevelActivity,
     } = newUserMessageInput;
 
+    const isStreaming =
+      experiments.isEnabledAllowingQueryString('ai-chat-stream') &&
+      (modelParameters.selectedModelId.startsWith('gemini') ||
+        modelParameters.selectedModelId.startsWith('gpt'));
+
     // Clear any staged files if present (used with multimodal models)
     dispatch(clearStagedFiles());
     // Clear any user added context if present.
@@ -113,6 +120,15 @@ export const submitChatContents = createAsyncThunk(
     };
     dispatch(addEventToChatEventsCurrent(newUserMessage));
     dispatch(setChatMessageSent(true));
+
+    // Create the placeholder assistant ChatMessage used when streaming
+    const newAssistantMessage: PendingChatMessage & {updateId: string} = {
+      role: Role.ASSISTANT,
+      status: Status.UNKNOWN,
+      chatMessageText: '',
+      timestamp: Date.now(),
+      updateId: createUuid(),
+    };
 
     if (logLevelActivity) {
       logLevelActivity();
@@ -163,11 +179,38 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
+      let streamingText = '';
+      let hasAddedAssistantMessage = false;
+
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
         modelParameters,
-        aichatContext
+        aichatContext,
+        undefined,
+        isStreaming
+          ? {
+              onDelta: delta => {
+                streamingText += delta;
+                if (hasAddedAssistantMessage) {
+                  dispatch(
+                    updateChatMessageText({
+                      updateId: newAssistantMessage.updateId,
+                      chatMessageText: streamingText,
+                    })
+                  );
+                } else {
+                  dispatch(
+                    addEventToChatEventsCurrent({
+                      ...newAssistantMessage,
+                      chatMessageText: streamingText,
+                    })
+                  );
+                }
+                hasAddedAssistantMessage = true;
+              },
+            }
+          : undefined
       );
 
       // In milliseconds
@@ -205,7 +248,18 @@ export const submitChatContents = createAsyncThunk(
         message.chatMessageText =
           responseCallback?.(message.chatMessageText) ??
           message.chatMessageText;
-        dispatch(addChatEvent(message));
+
+        if (isStreaming) {
+          dispatch(
+            updateChatMessageStatus({
+              updateId: newAssistantMessage.updateId,
+              status: message.status,
+            })
+          );
+          logChatEvent(message, state.progress.viewAsUserId);
+        } else {
+          dispatch(addChatEvent(message));
+        }
       }
       if (message.role === Role.USER) {
         dispatch(

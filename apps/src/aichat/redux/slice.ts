@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   DEFAULT_THREAD_TITLE,
   ThreadTypeFields,
@@ -16,6 +17,7 @@ import {
 import {
   AiCustomizations,
   ChatEvent,
+  CompletedChatMessage,
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
@@ -24,6 +26,7 @@ import {
   isModelUpdate,
   isNotification,
   isUserActionEvent,
+  isChatMessage,
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
@@ -86,6 +89,39 @@ const aichatSlice = createSlice({
     },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
+    },
+    updateChatEvent: (
+      state,
+      action: PayloadAction<{
+        requestId: number;
+        role: Role;
+        status?: CompletedChatMessage['status'];
+        text?: string;
+      }>
+    ) => {
+      const {requestId, status, text, role} = action.payload;
+      let event;
+
+      for (let i = state.chatEventsCurrent.length - 1; i >= 0; i--) {
+        const chatEvent = state.chatEventsCurrent[i];
+        if (
+          isChatMessage(chatEvent) &&
+          (chatEvent as CompletedChatMessage).requestId === requestId &&
+          (chatEvent as CompletedChatMessage).role === role
+        ) {
+          event = chatEvent;
+        }
+      }
+
+      if (!event) {
+        return;
+      }
+      if (status !== undefined) {
+        event.status = status;
+      }
+      if (text !== undefined) {
+        event.chatMessageText = text;
+      }
     },
     setStudentChatHistory: (
       state,
@@ -194,6 +230,21 @@ const aichatSlice = createSlice({
       );
       if (!event) return;
       event.status = action.payload.status;
+    },
+    updateChatMessageText: (
+      state,
+      action: PayloadAction<{
+        updateId: string;
+        chatMessageText: ChatMessage['chatMessageText'];
+      }>
+    ) => {
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      event.chatMessageText = action.payload.chatMessageText;
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
       state.hasSentMessage = action.payload;
@@ -441,8 +492,10 @@ export const aichatReducer = aichatSlice.reducer;
 export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
+  updateChatEvent,
   startSave,
   updateChatMessageStatus,
+  updateChatMessageText,
   setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
