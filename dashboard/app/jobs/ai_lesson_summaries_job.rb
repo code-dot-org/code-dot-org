@@ -4,6 +4,8 @@ class AiLessonSummariesJob < ApplicationJob
   queue_as :default
 
   after_perform do |job|
+    next unless DCDO.get('ai-lesson-summaries-notifications-enabled', false)
+
     request = job.arguments.first[:request]
 
     lesson_ids = request[:lesson_ids]

@@ -20,6 +20,13 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
 
     # Mock Honeybadger to avoid actual notifications in tests
     Honeybadger.stubs(:notify)
+    DCDO.stubs(:get).with('ai-lesson-summaries-notifications-enabled', false).returns(true)
+    DCDO.stubs(:get).with('modularity', true).returns(true)
+    DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
+  end
+
+  teardown do
+    DCDO.unstub(:get)
   end
 
   # *****
@@ -353,6 +360,22 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
       assert_raises(StandardError) do
         AiLessonSummariesJob.perform_now(request: request_with_unit)
       end
+    end
+  end
+
+  test 'after_perform does not create notification when DCDO flag is disabled' do
+    DCDO.stubs(:get).with('ai-lesson-summaries-notifications-enabled', false).returns(false)
+
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_no_difference 'TeacherNotification.count' do
+      AiLessonSummariesJob.perform_now(request: request_with_unit)
     end
   end
 end
