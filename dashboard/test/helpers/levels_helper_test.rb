@@ -278,45 +278,6 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal blockly_level_options, level.blockly_level_options
   end
 
-  # ai_tutor_enabled_for_pilot? tests
-
-  def enable_pilot_for(user)
-    create(:single_user_experiment, min_user_id: user.id, name: LevelsHelper::AI_TUTOR_PILOT_NAME)
-  end
-
-  test 'ai_tutor_enabled_for_pilot? returns true for pilot teacher' do
-    teacher = create(:teacher)
-    sign_in teacher
-
-    enable_pilot_for(teacher)
-    assert ai_tutor_enabled_for_pilot?(teacher), 'Pilot teacher should be enabled'
-  end
-
-  test 'ai_tutor_enabled_for_pilot? returns false for non-pilot teacher' do
-    teacher = create(:teacher)
-    sign_in teacher
-
-    refute ai_tutor_enabled_for_pilot?(teacher), 'Non-pilot teacher should not be enabled'
-  end
-
-  test 'ai_tutor_enabled_for_pilot? returns true for student with pilot teacher' do
-    student = create(:student)
-    sign_in student
-
-    # stub teacher-enabled experiments to include the pilot for this student
-    Queries::User::TeacherEnabledExperiments.stubs(:call).with(student).returns([LevelsHelper::AI_TUTOR_PILOT_NAME])
-
-    assert ai_tutor_enabled_for_pilot?(student), 'Student with pilot teacher should be enabled'
-  end
-
-  test 'ai_tutor_enabled_for_pilot? returns false for student without pilot teacher' do
-    student = create(:student)
-    sign_in student
-    Queries::User::TeacherEnabledExperiments.stubs(:call).with(student).returns([])
-
-    refute ai_tutor_enabled_for_pilot?(student), 'Student without pilot teacher should not be enabled'
-  end
-
   test 'app_options sets a channel if the level is not cached for a channel-backed level' do
     @public_caching = false
 

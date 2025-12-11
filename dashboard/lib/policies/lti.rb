@@ -158,7 +158,7 @@ class Policies::Lti
     }
   }.freeze
 
-  MAX_COURSE_MEMBERSHIP = 650
+  MAX_COURSE_MEMBERSHIP = 1000
 
   def self.get_account_type(roles)
     # ClassLink includes a non-standard role as a string instead of an array of strings

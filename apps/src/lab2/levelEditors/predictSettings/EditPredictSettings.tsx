@@ -23,7 +23,6 @@ const EditPredictSettings: React.FunctionComponent<
     isPredictLevel: false,
     solution: '',
     questionType: PredictQuestionType.FreeResponse,
-    allowMultipleAttempts: false,
     placeholderText: '',
     multipleChoiceOptions: [''],
     freeResponseHeight: PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
@@ -109,17 +108,6 @@ const EditPredictSettings: React.FunctionComponent<
           ) : (
             renderMultipleChoiceOptions()
           )}
-          <Checkbox
-            label="Allow multiple tries"
-            checked={predictSettings.allowMultipleAttempts || false}
-            onChange={e =>
-              setPredictSettings({
-                ...predictSettings,
-                allowMultipleAttempts: e.target.checked,
-              })
-            }
-            name="allow_multiple_tries"
-          />
           <Checkbox
             label="Allow user to edit code after submitting a response"
             checked={predictSettings.codeEditableAfterSubmit || false}

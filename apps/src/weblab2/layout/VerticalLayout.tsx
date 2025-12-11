@@ -8,6 +8,7 @@ import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
+import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -16,8 +17,8 @@ import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import {setViewMode} from '../redux';
 import {ViewMode} from '../types';
+import {setViewMode} from '../weblab2Redux';
 
 import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
@@ -39,6 +40,14 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2.aiTutorVersionFiles
+  );
+
   const dispatch = useAppDispatch();
 
   const infoPanelInitialWidth = isStandaloneCollapsed
@@ -87,6 +96,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     buttons: [
       {
         label: weblab2I18n.code(),
+        ariaLabel: 'View code editor only',
         value: ViewMode.CODE,
         iconLeft: {
           iconName: 'code',
@@ -95,6 +105,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.preview(),
+        ariaLabel: 'View web preview only',
         value: ViewMode.PREVIEW,
         iconLeft: {
           iconName: 'eye',
@@ -103,6 +114,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.splitView(),
+        ariaLabel: 'View code and web preview side by side',
         value: ViewMode.SPLIT,
         iconLeft: {
           iconName: 'table-columns',
@@ -113,6 +125,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     size: 'xs',
     selectedButtonValue: viewMode,
     onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
+    className: weblab2Styles.truncateButtonText,
   };
 
   useEffect(() => {
@@ -165,32 +178,45 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
             }
             rightHeaderContent={<HeaderButtons />}
           />
-          <div className={weblab2Styles.editorAndPreviewContainer}>
-            {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
-              <>
-                <Workspace
-                  style={{width: middlePanelWidth}}
+          <div className={weblab2Styles.workspaceContainer}>
+            {isAiTutorVersion && (
+              <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
+            )}
+            <div
+              className={classNames(
+                weblab2Styles.editorAndPreviewContainer,
+                isAiTutorVersion && weblab2Styles.aiTutorVersionContainer
+              )}
+            >
+              {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
+                <>
+                  <Workspace
+                    style={{width: middlePanelWidth}}
+                    className={classNames(
+                      lab2Styles.shrinkAndGrow,
+                      panelClassName
+                    )}
+                    hideHeaders
+                  />
+                  <ResizeBar
+                    isVertical={true}
+                    separatorProps={rightPanelSeparatorProps}
+                    isDragging={rightPanelDragging}
+                  />
+                </>
+              )}
+              {viewMode !== ViewMode.CODE && (
+                <div
+                  style={{width: rightPanelWidth}}
                   className={classNames(
                     lab2Styles.shrinkAndGrow,
                     panelClassName
                   )}
-                  hideHeaders
-                />
-                <ResizeBar
-                  isVertical={true}
-                  separatorProps={rightPanelSeparatorProps}
-                  isDragging={rightPanelDragging}
-                />
-              </>
-            )}
-            {viewMode !== ViewMode.CODE && (
-              <div
-                style={{width: rightPanelWidth}}
-                className={classNames(lab2Styles.shrinkAndGrow, panelClassName)}
-              >
-                <HTMLPreview />
-              </div>
-            )}
+                >
+                  <HTMLPreview />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

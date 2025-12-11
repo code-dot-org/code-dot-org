@@ -42,8 +42,10 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-experiments.AI_TUTOR_ACCESS = 'ai-tutor';
+// Experiment for enabling the AI-TA differentiation artifacts
+experiments.AI_ARTIFACT = 'ai-artifact';
+// Experiment for showing the ai chat new permissions page and enabling permissions to take effect
+experiments.AI_CHAT_NEW_PERMISSIONS = 'ai-chat-new-permissions';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
@@ -68,8 +70,12 @@ experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use v2 of Web Lab 2 preview
 experiments.WEBLAB2_PREVIEW_V2 = 'weblab2-preview-v2';
+// Use AI Tutor system prompts from Langfuse
+experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
 // Enable AI lesson summaries
 experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
+// Enable AI lesson podcasts
+experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

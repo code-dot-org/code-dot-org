@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-26T15:26:58.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-template-test-2025",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "# Interactive Data App\r\n\r\n1.  **Create Interactive Filters:** Write functions to filter and sort your data. \r\n\r\n    - **Note:** Create a new list inside your function (\"copy, don't mutate\") rather than changing the original dataset.\r\n2.  **Add User Controls:** Add a \"Reset\" button to reload the original data and a label that updates dynamically (e.g., \"Showing 5 results\") whenever the list changes. Add an \"Undo\" button that removes the last filter applied.\r\n3.  **Consult AI:** Use AI to debug your logic. You might ask:\r\n      * *Why does my filtered list return zero results?*\r\n      * *How do I sort an array of objects alphabetically by a specific property?*\r\n4. **Test Your Code:** Try out the different filters and the Reset and Undo buttons. Make any revisions to your code as needed."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-26 15:46:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:55:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:02:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -19,6 +19,12 @@ const csf_prefixes = [
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
   '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
 ];
 
 const donor_prefixes = [
@@ -155,7 +161,7 @@ function loadLocalize() {
     };
 
     // When the site loads, ensure the language selector has the correct value
-    document.addEventListener('DOMContentLoaded', () => {
+    const onDOMLoad = () => {
       const localeSelect =
         document.querySelector('#locale') ||
         document.querySelector("select[name='locale']");
@@ -174,7 +180,14 @@ function loadLocalize() {
         localeSelect.addEventListener('change', handleChange);
       }
       ensureSelector(cdoLanguage);
-    });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onDOMLoad);
+    } else {
+      // 'interactive' or 'complete' — DOMContentLoaded has already fired
+      onDOMLoad();
+    }
 
     // Translate everything in the Blockly message pool
     ensureSelector(cdoLanguage);

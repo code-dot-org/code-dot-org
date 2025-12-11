@@ -60,7 +60,7 @@ module LevelsHelper
         puzzle_page_course_unit_lockable_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
       end
     elsif params[:sublevel_position]
-      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      sublevel_course_unit_lesson_script_level_path(unit_group, unit_position, script_level.lesson, script_level, params[:sublevel_position], params)
       # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
       # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
@@ -455,7 +455,6 @@ module LevelsHelper
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, script: @script).pluck(:name)
-      @app_options[:aiTutorEnabledForPilot] = ai_tutor_enabled_for_pilot?
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
       @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
@@ -544,22 +543,6 @@ module LevelsHelper
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
     level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
-  end
-
-  AI_TUTOR_PILOT_NAME = 'ai-tutor-pilot'.freeze
-
-  # Teachers: enabled if they are in the pilot single user experiment
-  # Students: enabled if any of their teachers are in the pilot
-  def ai_tutor_enabled_for_pilot?(user = current_user)
-    if user.teacher?
-      Experiment.enabled?(user: user, experiment_name: AI_TUTOR_PILOT_NAME)
-    else
-      # students inherit pilot if any section teacher is in the pilot
-      Queries::User::TeacherEnabledExperiments.call(user).include?(AI_TUTOR_PILOT_NAME)
-    end
-  rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error computing aiTutorEnabledForPilot')
-    false
   end
 
   # Options hash for non-blockly puzzle apps

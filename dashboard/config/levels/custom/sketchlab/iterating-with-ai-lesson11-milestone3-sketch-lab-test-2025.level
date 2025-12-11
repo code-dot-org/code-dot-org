@@ -1,0 +1,15 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2025-11-26T15:51:23.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-sketchlab-template-test-2025",
+    "long_instructions": "# **Filter Logic Flowchart**\r\n\r\n**Goal:** Visually plan data flow and filter interactions before coding\r\n  1. Diagram data flow: original dataset → filtered copy → display\r\n  2. Sketch logic for each filter and how they combine (AND/OR logic)\r\n  3. Plan \"Reset/Undo\" functionality showing how it reverts to original data\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-26 19:45:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:56:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,110 +1,137 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Typography} from '@mui/material';
+import _ from 'lodash';
 import React, {useState} from 'react';
+import {useSelector} from 'react-redux';
+
+import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
+import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {getFullName} from '../manageStudents/utils';
+
+import Header from './header';
+import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
+import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
 
-const StudentSnapshot: React.FC = () => {
-  const [selectedOption, setSelectedOption] = useState<string>('');
+interface LessonsData {
+  lessons: LessonOption[];
+  hasUnnumberedLessons: boolean;
+}
 
-  const dropdownOptions = [
-    {value: 'option1', text: 'Option 1'},
-    {value: 'option2', text: 'Option 2'},
-    {value: 'option3', text: 'Option 3'},
-  ];
+const getLessons = (unitId: number) =>
+  HttpClient.fetchJson<LessonsData>(
+    `/student_snapshots/lessons/${unitId}`
+  ).then(response => response?.value);
+
+const lessonsCachedLoader = _.memoize(getLessons);
+
+const StudentSnapshot: React.FC = () => {
+  const [selectedStudentId, setSelectedStudentId] = React.useState<
+    number | null
+  >(null);
+
+  const [lessons, setLessons] = useState<LessonOption[]>([]);
+  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
+  const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
+  const [hasUnnumberedLessons, setHasUnnumberedLessons] =
+    useState<boolean>(false);
+
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  const selectedStudent = React.useMemo(
+    () => selectedStudents.find(student => student.id === selectedStudentId),
+    [selectedStudentId, selectedStudents]
+  );
+
+  const selectedUnitId = useSelector(getSelectedUnitId);
+  React.useEffect(() => {
+    if (selectedUnitId) {
+      setIsLessonsLoading(true);
+      lessonsCachedLoader(selectedUnitId)
+        .then(lessonsData => {
+          setLessons(lessonsData.lessons);
+          setHasUnnumberedLessons(lessonsData.hasUnnumberedLessons);
+        })
+        .finally(() => {
+          setIsLessonsLoading(false);
+        });
+    }
+  }, [selectedUnitId]);
+
+  // TODO: replace with actual values from URL/Redux later
+  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
+  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
   return (
-    <div>
-      <div className={styles.header}>
-        <div className={styles.headerColumn}>
-          <SimpleDropdown
-            labelText="Unit"
-            name="test"
-            items={dropdownOptions}
-            selectedValue={selectedOption}
-            onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
-            className={styles.dropdown}
-          />
-          <SimpleDropdown
-            labelText="Lesson"
-            name="test"
-            items={dropdownOptions}
-            selectedValue={selectedOption}
-            onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
-            className={styles.dropdown}
-          />
-          <div className={styles.buttonGroup}>
-            <Button
-              className={styles.button}
-              text="< Previous lesson"
-              onClick={() => alert('Button clicked!')}
-              color="gray"
-              type="secondary"
-            />
-            <Button
-              className={styles.button}
-              text="Next lesson >"
-              onClick={() => alert('Button clicked!')}
-              color="gray"
-              type="secondary"
-            />
-          </div>
-        </div>
+    <div className={styles.snapshotContainer}>
+      <Header
+        lessons={lessons}
+        selectedLessonId={selectedLessonId}
+        setSelectedLessonId={setSelectedLessonId}
+        isLessonsLoading={isLessonsLoading}
+        selectedStudent={selectedStudent}
+        setSelectedStudentId={setSelectedStudentId}
+        hasUnnumberedLessons={hasUnnumberedLessons}
+      />
 
-        <div className={styles.headerColumn}>
-          <SimpleDropdown
-            labelText="Show students by"
-            name="test"
-            items={dropdownOptions}
-            selectedValue={selectedOption}
-            onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
-            className={styles.dropdown}
-          />
-          <SimpleDropdown
-            labelText="Student"
-            name="test"
-            items={dropdownOptions}
-            selectedValue={selectedOption}
-            onChange={event => setSelectedOption(event.target.value)}
-            placeholder="Select an option"
-            className={styles.dropdown}
-          />
-          <div className={styles.buttonGroup}>
-            <Button
-              className={styles.button}
-              text="< Previous student"
-              onClick={() => alert('Button clicked!')}
-              color="gray"
-              type="secondary"
-            />
-            <Button
-              className={styles.button}
-              text="Next student >"
-              onClick={() => alert('Button clicked!')}
-            />
-          </div>
-        </div>
-      </div>
+      {selectedStudent && (
+        <Typography
+          variant="h4"
+          className={styles.studentNameHeader}
+          gutterBottom
+        >
+          {selectedStudent ? getFullName(selectedStudent) : 'Unknown student'}
+        </Typography>
+      )}
 
-      <Typography variant="h2" className={styles.studentNameHeader}>
-        <Typography variant="strong">{'<Student name>'}</Typography>
-      </Typography>
-
-      <div className={styles.widgetRow}>
-        <div className={styles.longWidget} />
-      </div>
-      <div className={styles.widgetRow}>
-        <div className={styles.bigWidget} />
-        <div className={styles.smallWidget} />
-      </div>
-      <div className={styles.widgetRow}>
-        <div className={styles.smallWidget} />
-        <div className={styles.smallWidget} />
-        <div className={styles.smallWidget} />
+      <div className={styles.widgetGrid}>
+        <StudentRubricWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={HARDCODED_STUDENT_ID}
+          studentName={HARDCODED_STUDENT_NAME}
+          teacherHasEnabledAi={false}
+          canProvideFeedback={true}
+        />
+        <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
+          <div>content</div>
+        </WidgetTemplate>
+        <WidgetTemplate widgetName="Big Widget" gridWidth={2} gridHeight={2}>
+          <div>big content</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 1"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 1</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 2"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 2</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Small Widget 3"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <div>small content 3</div>
+        </WidgetTemplate>
+        <WidgetTemplate
+          widgetName="Loading widget"
+          gridWidth={1}
+          gridHeight={1}
+          loading={true}
+        >
+          <div>Should not be displayed</div>
+        </WidgetTemplate>
       </div>
     </div>
   );

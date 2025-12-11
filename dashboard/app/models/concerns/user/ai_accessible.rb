@@ -27,12 +27,6 @@ module User::AiAccessible
     in_ai_tutor_pilot? || in_ai_tutor_enabled_section_with_pilot_teacher?
   end
 
-  def can_enable_ai_tutor?
-    return false
-    # todo-aitutor: re-enable when the redesigned permissions page is functional
-    # !ai_tutor_feature_globally_disabled? && in_ai_tutor_pilot?
-  end
-
   def can_use_ai_iteration_tools?
     levelbuilder?
   end

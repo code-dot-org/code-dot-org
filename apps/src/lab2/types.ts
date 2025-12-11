@@ -111,7 +111,7 @@ type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
   dataURL?: DataURL;
 };
 
-type ExcalidrawFilesWithOptionalData = Record<
+export type ExcalidrawFilesWithOptionalData = Record<
   ExcalidrawElement['id'],
   ExcalidrawFileWithOptionalData
 >;
@@ -158,6 +158,8 @@ export interface ProjectFile {
   type?: ProjectFileType;
   url?: string;
   flagged?: boolean;
+  isAiTutorVersionUpdated?: boolean;
+  isAiTutorVersionCreated?: boolean;
 }
 
 /**
@@ -253,6 +255,7 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+  hideVersionHistory?: boolean;
 }
 
 export interface BlocklyLevelProperties extends LevelProperties {

@@ -25,6 +25,10 @@
     animation: gradient-animation 2s ease infinite;
   }
 
+  &Hidden {
+    display: none;
+  }
+
   .adlibInner {
     width: 100%;
     height: 100%;

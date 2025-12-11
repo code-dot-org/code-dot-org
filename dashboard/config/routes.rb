@@ -569,7 +569,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :vocabularies, only: [:create, :update] do
+    resources :vocabularies, only: [:create, :update, :destroy] do
       collection do
         get :search
       end
@@ -1118,6 +1118,10 @@ Dashboard::Application.routes.draw do
         get 'projects/personal', to: 'projects/personal_projects#index', defaults: {format: 'json'}
         resources :section_libraries, only: [:index], defaults: {format: 'json'}
 
+        # Routes used by personalization alert
+        post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
+        get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
+
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
         get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
@@ -1167,8 +1171,16 @@ Dashboard::Application.routes.draw do
     resources :ai_lesson_summaries, only: [:show] do
       collection do
         get :show # GET /ai_lesson_summaries/show?lesson_id=2
+        get :ai_lesson_summary_podcast_script, controller: :ai_lesson_summaries, action: :ai_lesson_summary_podcast_script # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
         get :perform_ai_lesson_summaries_by_unit, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summaries_by_unit # GET ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=1
         get :perform_ai_lesson_summary_by_lesson, controller: :ai_lesson_summaries, action: :perform_ai_lesson_summary_by_lesson # GET ai_lesson_summaries/perform_ai_lesson_summary_by_lesson?lesson_id=1
+      end
+    end
+
+    # Routes used for the Student Snapshot page on the teacher dashboard
+    resources :student_snapshots, only: [] do
+      collection do
+        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
       end
     end
 
@@ -1272,6 +1284,9 @@ Dashboard::Application.routes.draw do
     resources :code_review_comments, only: [:create, :update, :destroy]
 
     resources :rubrics, only: [:create, :edit, :new, :update, :show] do
+      collection do
+        get 'find' # GET /rubrics/find?lesson_id=X&level_id=Y
+      end
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
@@ -1314,6 +1329,8 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
+    get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
@@ -1335,6 +1352,11 @@ Dashboard::Application.routes.draw do
         post :chat_completion
       end
     end
+
+    resources :aidiff_artifacts, only: [:index]
+
+    resources :aidiff_exit_tickets, only: [:index, :update, :create]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
 
     resources :aidiff_messages, only: [] do
       member do

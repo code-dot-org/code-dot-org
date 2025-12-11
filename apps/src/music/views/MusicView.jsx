@@ -141,6 +141,8 @@ class UnconnectedMusicView extends React.Component {
     setAiGenerateState: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
     logLevelActivity: PropTypes.func,
+    projectSources: PropTypes.object,
+    viewingOldVersion: PropTypes.bool,
   };
 
   constructor(props) {
@@ -284,6 +286,23 @@ class UnconnectedMusicView extends React.Component {
       this.props.clearCodeToLoad();
       // Reset the hasEdited state since we just loaded code.
       this.setState({hasEdited: false});
+    }
+
+    const prevProjectSource = prevProps.projectSources?.source;
+    const currProjectSource = this.props.projectSources?.source;
+    if (currProjectSource && currProjectSource !== prevProjectSource) {
+      try {
+        this.stopSong();
+        const restoredPackId =
+          this.props.projectSources.labConfig?.music?.packId || null;
+        this.library.setCurrentPackId(restoredPackId);
+        this.props.setPackId(restoredPackId);
+        const workspaceCode = JSON.parse(currProjectSource);
+        this.loadCode(workspaceCode);
+        this.setState({hasEdited: false});
+      } catch (e) {
+        console.error('Error loading blocks from project sources', e);
+      }
     }
   }
 
@@ -997,6 +1016,8 @@ class UnconnectedMusicView extends React.Component {
           levelProperties={this.props.levelProperties}
           channel={this.props.channel}
           overrideProjectManager={this.props.projectManager}
+          startSources={{source: JSON.stringify(this.getStartSources())}}
+          viewingOldVersion={this.props.viewingOldVersion}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -1034,6 +1055,8 @@ const MusicView = connect(
     codeToLoad: state.music.codeToLoad,
     scriptName: state.progress.scriptName,
     isFirstAttempt: getCurrentLevel(state)?.status === LevelStatus.not_tried,
+    projectSources: state.lab2Project.projectSources,
+    viewingOldVersion: state.lab2Project.viewingOldVersion,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),

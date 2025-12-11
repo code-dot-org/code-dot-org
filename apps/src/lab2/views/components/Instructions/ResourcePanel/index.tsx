@@ -7,11 +7,9 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {getAiTutorEnabledForPilot} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -64,6 +62,7 @@ export interface Setting {
 
 interface VersionHistoryProps {
   startSources: ProjectSources;
+  alwaysShowAutoSaves?: boolean;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -171,14 +170,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
-  const aiTutorVisible =
-    shouldShowAiTutor({
-      appName,
-      tutorPilot: getAiTutorEnabledForPilot(),
-      tutorLevel: levelProperties.aiTutorAvailable,
-    }) ||
-    queryParams('show-ai-tutor2') === 'true' ||
-    queryParams('show-ai-tutor') === 'true';
+  const aiTutorVisible = shouldShowAiTutor(
+    appName,
+    levelProperties.aiTutorAvailable
+  );
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -222,16 +217,18 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const versionHistoryHidden =
       (isPermanentlyReadOnly && !viewAsUserId) ||
       isWidgetView ||
-      isReadOnlyPredict;
+      isReadOnlyPredict ||
+      levelProperties.hideVersionHistory;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
           selectedVersion={selectedVersion}
           setSelectedVersion={setSelectedVersion}
           startSources={versionHistoryProps.startSources}
-          appName={levelProperties.appName}
           levelId={levelId}
           disabled={isTemporarilyReadOnly && !isViewingOldVersion}
+          isOpen={currentTab === Tabs.VersionHistory}
+          alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
         />
       );
     }
@@ -279,6 +276,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isTemporarilyReadOnly,
     isViewingOldVersion,
     isReadOnlyPredict,
+    currentTab,
   ]);
 
   const hasTabs = useMemo(() => {
