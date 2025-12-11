@@ -57,6 +57,42 @@
       "user_input": "params[:notice]",
       "confidence": "High",
       "note": "Admin-only access - low priority, not worth fixing. Requires admin account to exploit."
+    },
+    {
+      "warning_type": "Unmaintained Dependency",
+      "warning_code": 0,
+      "fingerprint": "6757cc",
+      "check_name": "EOLRails",
+      "message": "Support for Rails 6.1.7.7 ended on 2024-10-01",
+      "file": "Gemfile.lock",
+      "line": 727,
+      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
+      "code": "(no code snippet)",
+      "render_path": null,
+      "location": {
+        "type": "dependency"
+      },
+      "user_input": null,
+      "confidence": "High",
+      "note": "Infrastructure dependency EOL - being handled as part of infrastructure maintenance. Major upgrade task, not a security fix."
+    },
+    {
+      "warning_type": "Unmaintained Dependency",
+      "warning_code": 0,
+      "fingerprint": "9f7a68",
+      "check_name": "EOLRuby",
+      "message": "Support for Ruby 3.1.7 ended on 2025-03-31",
+      "file": "Gemfile.lock",
+      "line": 1203,
+      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
+      "code": "(no code snippet)",
+      "render_path": null,
+      "location": {
+        "type": "dependency"
+      },
+      "user_input": null,
+      "confidence": "High",
+      "note": "Infrastructure dependency EOL - being handled as part of infrastructure maintenance. Major upgrade task, not a security fix."
     }
   ],
   "updated": "2025-12-10 23:00:00 -0800",
