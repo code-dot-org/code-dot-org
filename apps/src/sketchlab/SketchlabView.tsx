@@ -192,20 +192,21 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  // Does this need dependency array?
-  const reinitializationHandler = useCallback(
-    (sources?: ProjectSources) => {
-      console.log('Reinitializing Excalidraw workspace');
+  const reinitializationHandler = useCallback(() => {
+    setExcalidrawMountKey(key => key + 1);
 
+    // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
+    downloadedFilesDataRef.current = {};
+  }, []);
+
+  const onRestoreVersion = useCallback(
+    (sources: ProjectSources) => {
       if (sources) {
         updateSources(sources as SketchlabSources); // remove forced type? move this so other uses of handler don't need arg?
       }
-      setExcalidrawMountKey(key => key + 1);
-
-      // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
-      downloadedFilesDataRef.current = {};
+      reinitializationHandler();
     },
-    [updateSources]
+    [updateSources, reinitializationHandler]
   );
 
   useEffect(() => {
@@ -224,7 +225,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  console.log(currentSources.source);
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <SketchlabTourSteps />
@@ -236,8 +236,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           hasEdited={false}
           settings={[useThemeSetting('sketchlab')]}
           versionHistoryProps={{
-            startSources: levelProperties?.startSources as ProjectSources, // Fix this
-            onRestore: reinitializationHandler,
+            startSources: levelProperties?.startSources as ProjectSources,
+            onRestore: onRestoreVersion,
           }}
         />
       </div>
