@@ -37,7 +37,7 @@ function getAssetFileNames(assetInfo: PreRenderedAsset) {
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
-    exports: 'named',
+    exports: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
     preserveModules: true,
     preserveModulesRoot: 'src',
