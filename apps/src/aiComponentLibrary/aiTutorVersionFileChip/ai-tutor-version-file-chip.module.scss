@@ -12,6 +12,14 @@
   position: relative;
   box-sizing: border-box;
 
+  .fileInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0; // Allow text truncation
+  }
+
   .statusIndicator {
     position: absolute;
     top: -1px;

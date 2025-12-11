@@ -4,7 +4,7 @@ import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext'
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {submitChatContents} from '../redux';
+import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
 import {
   AiChatClientType,
   ChatButtonAndKey,
@@ -57,7 +57,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   const [userMessage, setUserMessage] = useState<string>('');
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
-    state => !!state.aichat.chatMessagePending
+    selectIsWaitingForChatResponse
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);

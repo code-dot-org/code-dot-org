@@ -5,7 +5,6 @@ _env:       <%=env == 'production' ? '' : "_#{env}"%>
 _test_env_num: <%=env == 'test' ? ENV['TEST_ENV_NUMBER'] : '' %>
 unit_test:  <%=!!ENV['UNIT_TEST']%>
 ci:         <%=!!ENV['CI']%>
-ci_test:    <%=unit_test || ci%>
 root_dir:   <%=__dir__%>
 name:       <%=`hostname`.strip%>
 rack_env:   :<%=env%>
@@ -151,6 +150,7 @@ pegasus_honeybadger_api_key:   !Secret
 zendesk_dev_token: !Secret
 
 # Webpurify
+webpurify_api_endpoint: https://api1.webpurify.com/services/rest
 webpurify_key: !Secret
 
 # Github
@@ -500,7 +500,7 @@ disable_s3_image_uploads: false
 channels_api_secret: !Secret
 
 daemon: <%=name == 'production-daemon'%>
-image_optim: <%=chef_managed && !ci_test%>
+image_optim: <%=chef_managed && running_web_application?%>
 
 # Used to export data on professional learning to gsheets
 enrollments_summer_2020_gsheet_key:
