@@ -37,6 +37,7 @@ class StudentFilterDropdown extends Component {
           selectedValue={this.props.selectedStudent}
           onChange={this.onChange.bind(this)}
           size="s"
+          color="gray"
           name="students"
           items={[
             {
