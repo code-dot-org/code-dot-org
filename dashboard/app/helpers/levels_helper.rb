@@ -128,7 +128,7 @@ module LevelsHelper
     channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     return result unless channel_token
 
-    _owner_id, result[:project_id] = storage_decrypt_channel_id(channel_token.channel)
+    _owner_id, result[:project_id] = get_storage_id_and_project_id(channel_token.channel)
     source_data = SourceBucket.new.get(channel_token.channel, "main.json")
 
     if source_data[:status] == 'FOUND'
@@ -1070,7 +1070,7 @@ module LevelsHelper
     channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
     if channel_token
       storage_app_id = channel_token.storage_app_id
-      channel_id = storage_encrypt_channel_id(storage_id, storage_app_id)
+      channel_id = get_project_channel_id(storage_id, storage_app_id)
       s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
       s3_args = {bucket: bucket, key: s3_filename}
       s3_args[:version_id] = code_version if code_version

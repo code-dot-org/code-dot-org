@@ -8,7 +8,7 @@ module ProjectsTestUtils
   def with_channel_for(owner)
     with_storage_id_for owner do |storage_id|
       encrypted_channel_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
-      _, project_id = storage_decrypt_channel_id encrypted_channel_id
+      _, project_id = get_storage_id_and_project_id encrypted_channel_id
       yield project_id, storage_id
     ensure
       projects_table.where(id: project_id).delete if project_id

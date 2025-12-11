@@ -252,7 +252,7 @@ class ProjectsController < ApplicationController
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
-      channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      channel = get_project_channel_id(project_details[:storage_id], project_details[:id])
       status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],
@@ -496,7 +496,7 @@ class ProjectsController < ApplicationController
     end
 
     begin
-      _, project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+      _, project_id = get_storage_id_and_project_id(params[:channel_id]) if params[:channel_id]
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       # continue as normal, as we only use this value for stats.
     end
@@ -560,7 +560,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/:project_type/:channel_id/submission_status
   def submission_status
-    _, project_id = storage_decrypt_channel_id(params[:channel_id])
+    _, project_id = get_storage_id_and_project_id(params[:channel_id])
     project = Project.find_by(id: project_id)
     begin
       authorize! :submission_status, project
@@ -577,7 +577,7 @@ class ProjectsController < ApplicationController
     channel_id = params[:channel_id]
     project_type = params[:project_type]
     return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
-    _, project_id = storage_decrypt_channel_id(channel_id)
+    _, project_id = get_storage_id_and_project_id(channel_id)
     project = Project.find_by(id: project_id)
     begin
       authorize! :submit, project
@@ -592,7 +592,7 @@ class ProjectsController < ApplicationController
     end
     # Publish the project, i.e., make it public.
     begin
-      storage_id, _ = storage_decrypt_channel_id(channel_id)
+      storage_id, _ = get_storage_id_and_project_id(channel_id)
       Projects.new(storage_id).publish(channel_id, project_type, current_user)
     end
     # Send ZenDesk ticket with user/project info and submission description.
@@ -618,7 +618,7 @@ class ProjectsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(@level)
     src_channel_id = params[:channel_id]
     begin
-      _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+      _, remix_parent_id = get_storage_id_and_project_id(src_channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
@@ -667,7 +667,7 @@ class ProjectsController < ApplicationController
     end
     project_info = {}
     owner_info = {}
-    owner_info['storage_id'], project_info['id'] = storage_decrypt_channel_id(src_channel_id)
+    owner_info['storage_id'], project_info['id'] = get_storage_id_and_project_id(src_channel_id)
     project_info['sources_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
     # For legacy labs, other links are displayed.
     # App Lab includes assets, Gamelab includes animations, and Weblab includes files.
@@ -823,7 +823,7 @@ class ProjectsController < ApplicationController
 
   # Creates a remix of the given project. Creates a new channel and copies over all project data.
   private def remix_project(src_channel_id, project_type, is_subproject: false)
-    _, remix_parent_id = storage_decrypt_channel_id(src_channel_id)
+    _, remix_parent_id = get_storage_id_and_project_id(src_channel_id)
     project = Projects.new(get_storage_id)
     new_channel_id = ChannelToken.create_channel(
       request.ip,

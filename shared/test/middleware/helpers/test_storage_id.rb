@@ -133,14 +133,14 @@ class StorageIdTest < Minitest::Test
     assert_nil storage_id_from_cookie
   end
 
-  def test_storage_encrypt_channel_id
+  def test_get_project_channel_id
     # Test with project without UUID - should encrypt
     storage_id = 123
     project_id = 456
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: nil)
     Project.stubs(:find_by).with(id: project_id).returns(mock_project)
 
-    encrypted = storage_encrypt_channel_id(storage_id, project_id)
+    encrypted = get_project_channel_id(storage_id, project_id)
     assert encrypted.is_a?(String)
     assert encrypted != storage_id.to_s && encrypted != project_id.to_s
 
@@ -154,11 +154,11 @@ class StorageIdTest < Minitest::Test
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
     Project.stubs(:find_by).with(id: project_id).returns(mock_project)
 
-    result = storage_encrypt_channel_id(storage_id, project_id)
+    result = get_project_channel_id(storage_id, project_id)
     assert_equal uuid, result
   end
 
-  def test_storage_decrypt_channel_id
+  def test_get_storage_id_and_project_id
     project_id = 789
     storage_id = 456
     uuid = SecureRandom.uuid
@@ -167,13 +167,13 @@ class StorageIdTest < Minitest::Test
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
     Project.stubs(:find_by).with(uuid: uuid).returns(mock_project)
 
-    storage_id_out, project_id_out = storage_decrypt_channel_id(uuid)
+    storage_id_out, project_id_out = get_storage_id_and_project_id(uuid)
     assert_equal storage_id, storage_id_out
     assert_equal project_id, project_id_out
 
     # legacy token decryption
     channel_token = Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
-    storage_id_out, project_id_out = storage_decrypt_channel_id(channel_token)
+    storage_id_out, project_id_out = get_storage_id_and_project_id(channel_token)
     assert_equal storage_id, storage_id_out
     assert_equal project_id, project_id_out
   end
