@@ -9,6 +9,8 @@ require 'clients/lti_dynamic_registration_client'
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
+  self.use_transactional_test_case = true
+
   setup_all do
     create(:level, name: 'collision')
     @integration = create(:lti_integration)

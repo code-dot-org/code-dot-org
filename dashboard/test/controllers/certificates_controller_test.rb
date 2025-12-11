@@ -2,6 +2,8 @@ require 'test_helper'
 require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     create(:level, name: 'collision')
     @teacher = create(:teacher)

@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
+    self.use_transactional_test_case = true
+
     setup_all do
       create(:level, name: 'collision')
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)

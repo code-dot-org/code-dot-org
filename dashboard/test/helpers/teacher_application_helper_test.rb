@@ -8,6 +8,8 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     stubs(:current_user).returns user
   end
 
+  self.use_transactional_test_case = true
+
   setup_all do
     create(:level, name: 'collision')
     @user_with_two_incomplete_apps = create(:teacher)
