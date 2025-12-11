@@ -38,10 +38,8 @@ const parseCsv = (file: File): Promise<OriginalData[]> => {
             throw new Error('CSV must have at least one data row');
           }
 
-          // Get the headers from the first row keys
           const headers = Object.keys(results.data[0]);
 
-          // Check for student identifier column (either student_id or student_username)
           const hasStudentId = headers.includes('student_id');
           const hasStudentUsername = headers.includes('student_username');
 
