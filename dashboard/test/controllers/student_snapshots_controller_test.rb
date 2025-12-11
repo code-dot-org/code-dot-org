@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class StudentSnapshotsControllerTest < ActionController::TestCase
-  include MiniTest::RSpecMocks
-
   let(:teacher) {create(:teacher)}
   let!(:unit) {create(:unit, name: 'test-unit')}
   let!(:lesson_group) {create(:lesson_group, script: unit)}
