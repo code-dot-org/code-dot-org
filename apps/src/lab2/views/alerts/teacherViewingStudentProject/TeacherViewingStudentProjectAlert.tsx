@@ -36,14 +36,14 @@ const TeacherViewingStudentProjectAlert: React.FC<
 
   // Track loading state when switching between students.
   // Progress data (levelNotStarted) may lag behind viewAsUserId updates.
-  const prevViewAsUserIdRef = useRef(viewAsUserId);
-  const [isLoadingLevelProgress, setIsLoadingLevelProgress] = useState(false);
+  const previousViewAsUserIdRef = useRef<number | null | undefined>(undefined);
+  const [isLoadingLevelProgress, setIsLoadingLevelProgress] = useState(true);
 
   // When viewAsUserId changes, mark as loading until progress catches up.
   useEffect(() => {
-    if (prevViewAsUserIdRef.current !== viewAsUserId) {
+    if (previousViewAsUserIdRef.current !== viewAsUserId) {
       setIsLoadingLevelProgress(true);
-      prevViewAsUserIdRef.current = viewAsUserId;
+      previousViewAsUserIdRef.current = viewAsUserId;
     }
   }, [viewAsUserId]);
 
