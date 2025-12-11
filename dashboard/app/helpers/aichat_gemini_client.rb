@@ -28,12 +28,7 @@ class AichatGeminiClient < AichatAiClient
         sanitized_chunk.encode!('UTF-8', invalid: :replace, undef: :replace, replace: '')
         buffer << sanitized_chunk
         begin
-          parsed = JSON.parse(buffer)
-          if parsed.is_a?(Array)
-            parsed.each {|item| block&.call(item)}
-          else
-            block&.call(parsed)
-          end
+          parse_and_yield(buffer, &block)
           buffer.clear
         rescue JSON::ParserError
           # Keep buffering until we have a full JSON payload.
@@ -42,12 +37,7 @@ class AichatGeminiClient < AichatAiClient
       end
       unless buffer.empty?
         begin
-          parsed = JSON.parse(buffer)
-          if parsed.is_a?(Array)
-            parsed.each {|item| block&.call(item)}
-          else
-            block&.call(parsed)
-          end
+          parse_and_yield(buffer, &block)
         rescue JSON::ParserError
           # ignore trailing partials
         end
@@ -55,6 +45,15 @@ class AichatGeminiClient < AichatAiClient
     end
   rescue Net::ReadTimeout
     raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
+  end
+
+  private def parse_and_yield(buffer, &block)
+    parsed = JSON.parse(buffer)
+    if parsed.is_a?(Array)
+      parsed.each {|item| block&.call(item)}
+    else
+      block&.call(parsed)
+    end
   end
 
   # The url to send with the post request.

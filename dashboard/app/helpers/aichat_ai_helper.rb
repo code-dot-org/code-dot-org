@@ -237,7 +237,7 @@ module AichatAiHelper
       text_delta = extract_stream_text_delta(event)
       next unless text_delta
       full_text << text_delta
-      on_delta&.call(text_delta, event)
+      on_delta&.call(full_text, event)
     end
 
     full_text

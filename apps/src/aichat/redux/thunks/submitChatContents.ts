@@ -170,8 +170,8 @@ export const submitChatContents = createAsyncThunk(
       ...analyticsProperties,
     };
 
-    let streamingText = '';
     let hasAddedAssistantMessage = false;
+    let assistantResponseLength = 0;
 
     try {
       Lab2Registry.getInstance()
@@ -192,12 +192,15 @@ export const submitChatContents = createAsyncThunk(
         streamCallbacks: isStreaming
           ? {
               onDelta: delta => {
-                streamingText += delta;
+                if (delta.length < assistantResponseLength) {
+                  return;
+                }
+                assistantResponseLength = delta.length;
                 if (hasAddedAssistantMessage) {
                   dispatch(
                     updateChatMessageText({
                       updateId: newAssistantMessage.updateId,
-                      chatMessageText: streamingText,
+                      chatMessageText: delta,
                     })
                   );
                 } else {
@@ -205,7 +208,7 @@ export const submitChatContents = createAsyncThunk(
                   dispatch(
                     addEventToChatEventsCurrent({
                       ...newAssistantMessage,
-                      chatMessageText: streamingText,
+                      chatMessageText: delta,
                     })
                   );
                 }
