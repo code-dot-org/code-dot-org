@@ -8,3 +8,9 @@
   border: none;
   box-sizing: border-box;
 }
+
+// Set styles for the PageNotFound and PreviewEmptyState components
+.placeholderContainer {
+  height: 100vh;
+  background-color: white;
+}
