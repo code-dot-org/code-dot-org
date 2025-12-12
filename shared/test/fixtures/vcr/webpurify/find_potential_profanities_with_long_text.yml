@@ -2,7 +2,7 @@
 http_interactions:
   - request:
       method: post
-      uri: http://api1.webpurify.com/services/rest
+      uri: https://api1.webpurify.com/services/rest
       body:
         encoding: US-ASCII
         string: ""
@@ -31,7 +31,7 @@ http_interactions:
     recorded_at: Wed, 22 Mar 2023 20:59:51 GMT
   - request:
       method: post
-      uri: http://api1.webpurify.com/services/rest
+      uri: https://api1.webpurify.com/services/rest
       body:
         encoding: US-ASCII
         string: ""
