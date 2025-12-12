@@ -10,6 +10,13 @@ module ScriptConstants
   ALGEBRA_NAME = 'algebra'.freeze
   AIML_2021_NAME = 'aiml-2021'.freeze
 
+  # Deprecated course constants (kept for deprecated course page rendering)
+  COURSE1_NAME = 'course1'.freeze
+  COURSE2_NAME = 'course2'.freeze
+  COURSE3_NAME = 'course3'.freeze
+  COURSE4_NAME = 'course4'.freeze
+  TWENTY_HOUR_NAME = '20-hour'.freeze
+
   CSP_UNIT1_NAME = 'cspunit1'.freeze
   CSP_UNIT2_NAME = 'cspunit2'.freeze
   CSP_UNIT3_NAME = 'cspunit3'.freeze
