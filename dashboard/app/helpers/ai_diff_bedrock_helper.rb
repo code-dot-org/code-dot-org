@@ -16,7 +16,7 @@ module AiDiffBedrockHelper
   end
 
   def create_bedrock_client
-    if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:test].include?(rack_env)
+    if (Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services) || [:development, :test].include?(rack_env)
       client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
       client.stub_responses(
         :retrieve_and_generate, {
