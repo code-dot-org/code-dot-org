@@ -383,7 +383,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     });
     dispatch(setHasEdited(false));
     successfulProjectResetCleanUp(true);
-    // Needs to go in here?
     setVersionSaved(true);
   }, [dispatch, selectedVersion, successfulProjectResetCleanUp]);
 

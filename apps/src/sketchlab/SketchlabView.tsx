@@ -203,7 +203,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const onRestoreVersion = useCallback(
     (sources: ProjectSources) => {
       if (sources) {
-        updateSources(sources as SketchlabSources); // remove forced type? move this so other uses of handler don't need arg?
+        updateSources(sources as SketchlabSources);
       }
       reinitializationHandler();
     },
