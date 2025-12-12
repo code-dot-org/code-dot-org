@@ -28,7 +28,7 @@ module Cdo::CloudFormation
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
     # Use AMI for Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517)
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84'
+    IMAGE_ID = ENV['IMAGE_ID'] || rack_env?(:adhoc) ? 'resolve:ssm:/aws/service/canonical/ubuntu/server/22.04/stable/current/amd64/hvm/ebs-gp2/ami-id' : 'ami-0261755bbcb8c4a84'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '17.6.18'
     DOMAIN = 'cdn-code.org'
