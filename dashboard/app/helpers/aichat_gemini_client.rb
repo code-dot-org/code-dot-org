@@ -24,36 +24,24 @@ class AichatGeminiClient < AichatAiClient
     buffer.force_encoding('UTF-8')
     http.request(req) do |response|
       response.read_body do |chunk|
-        sanitized_chunk = chunk.dup.force_encoding('UTF-8')
-        sanitized_chunk.encode!('UTF-8', invalid: :replace, undef: :replace, replace: '')
-        buffer << sanitized_chunk
-        begin
-          parse_and_yield(buffer, &block)
-          buffer.clear
-        rescue JSON::ParserError
-          # Keep buffering until we have a full JSON payload.
-          next
-        end
-      end
-      unless buffer.empty?
-        begin
-          parse_and_yield(buffer, &block)
-        rescue JSON::ParserError
-          # ignore trailing partials
+        chunk.each_line do |line|
+          next unless line.start_with?("data:")
+          data = line.delete_prefix("data:").strip
+          next if data.empty?
+
+          begin
+            parsed = JSON.parse(data)
+            text_delta = parsed.dig('candidates', 0, 'content', 'parts', 0, 'text')
+
+            block&.call(text_delta) if text_delta
+          rescue JSON::ParserError
+            next
+          end
         end
       end
     end
   rescue Net::ReadTimeout
     raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
-  end
-
-  private def parse_and_yield(buffer, &block)
-    parsed = JSON.parse(buffer)
-    if parsed.is_a?(Array)
-      parsed.each {|item| block&.call(item)}
-    else
-      block&.call(parsed)
-    end
   end
 
   # The url to send with the post request.
@@ -62,7 +50,7 @@ class AichatGeminiClient < AichatAiClient
   end
 
   private def stream_url
-    "https://generativelanguage.googleapis.com/v1beta/models/#{model}:streamGenerateContent?key=#{api_key}"
+    "https://generativelanguage.googleapis.com/v1beta/models/#{model}:streamGenerateContent?key=#{api_key}&alt=sse"
   end
 
   # Take response_body and raise any errors if appropriate.
