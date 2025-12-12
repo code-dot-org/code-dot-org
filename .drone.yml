@@ -99,8 +99,6 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -224,8 +222,6 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -299,8 +295,6 @@ steps:
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
