@@ -2,12 +2,18 @@ class AichatChannel < ApplicationCable::Channel
   STATUS = SharedConstants::AI_REQUEST_EXECUTION_STATUS
   def subscribed
     reject unless current_user
-    stream_for current_user
+
+    if params[:stream_id].present?
+      stream_from "aichat_stream:#{current_user.id}:#{params[:stream_id]}"
+    else
+      reject
+    end
   end
 
   # Expects payload similar to AichatRequestsController#start_chat_completion
   # but streams the response over ActionCable instead of enqueuing a job.
   def request_completion(data)
+    stream_id = params[:stream_id]
     payload = data.deep_stringify_keys
     new_message = payload['newMessage'] || {}
     stored_messages = Array(payload['storedMessages']).select do |message|
@@ -46,7 +52,9 @@ class AichatChannel < ApplicationCable::Channel
       return broadcast_error(STATUS[:USER_PROFANITY], request_id, user_toxicity)
     end
 
-    AichatChannel.broadcast_to(current_user, {event: 'start', request_id: request_id})
+    broadcast_to_stream(stream_id, {event: 'start', request_id: request_id})
+
+    current_seq_id = 0
 
     full_response = AichatAiHelper.stream_assistant_response(
       model_customizations,
@@ -55,7 +63,10 @@ class AichatChannel < ApplicationCable::Channel
       level_id,
       project_id,
       current_user.id
-    ) {|delta, raw_event| handle_stream_delta(delta, raw_event, request_id)}
+    ) do |delta, raw_event|
+      current_seq_id += 1
+      handle_stream_delta(stream_id, delta, raw_event, request_id, current_seq_id)
+    end
 
     model_toxicity = AichatSafetyHelper.find_toxicity(full_response, level_id, 'Assistant')
     if model_toxicity
@@ -63,7 +74,7 @@ class AichatChannel < ApplicationCable::Channel
         response: model_toxicity.to_json,
         execution_status: STATUS[:MODEL_PROFANITY]
       )
-      return broadcast_error(STATUS[:MODEL_PROFANITY], request_id, model_toxicity)
+      return broadcast_error(stream_id, STATUS[:MODEL_PROFANITY], request_id, model_toxicity)
     end
 
     request.update!(
@@ -71,19 +82,19 @@ class AichatChannel < ApplicationCable::Channel
       execution_status: STATUS[:SUCCESS]
     )
 
-    AichatChannel.broadcast_to(current_user, {event: 'complete', text: full_response, request_id: request_id})
+    broadcast_to_stream(stream_id, {event: 'complete', text: full_response, request_id: request_id})
   rescue OpenaiUserInputResponseTimeout => exception
     request&.update!(
       response: exception.message,
       execution_status: STATUS[:MODEL_TIMEOUT]
     )
-    broadcast_error(STATUS[:MODEL_TIMEOUT], request_id, exception.message)
+    broadcast_error(stream_id, STATUS[:MODEL_TIMEOUT], request_id, exception.message)
   rescue ArgumentError => exception
     request&.update!(
       response: exception.message,
       execution_status: STATUS[:FAILURE]
     )
-    broadcast_error(STATUS[:FAILURE], request_id, exception.message)
+    broadcast_error(stream_id, STATUS[:FAILURE], request_id, exception.message)
   rescue StandardError => exception
     request&.update!(
       response: exception.message,
@@ -96,16 +107,23 @@ class AichatChannel < ApplicationCable::Channel
         locale: locale
       }
     )
-    broadcast_error(STATUS[:FAILURE], request_id, exception.message)
+    broadcast_error(stream_id, STATUS[:FAILURE], request_id, exception.message)
   end
 
-  private def broadcast_error(code, request_id = nil, details = nil)
+  private def broadcast_to_stream(stream_id, payload)
+    ActionCable.server.broadcast(
+      "aichat_stream:#{current_user.id}:#{stream_id}",
+      payload
+    )
+  end
+
+  private def broadcast_error(stream_id, code, request_id = nil, details = nil)
     AichatChannel.broadcast_to(current_user, {event: 'error', code: code, details: details, request_id: request_id})
   end
 
-  private def handle_stream_delta(delta, raw_event, request_id)
-    return if delta.blank?
-    AichatChannel.broadcast_to(current_user, {event: 'delta', text: delta, raw_event: raw_event, request_id: request_id})
+  private def handle_stream_delta(stream_id, delta, raw_event, request_id, seq_id)
+    return if delta.nil?
+    broadcast_to_stream(stream_id, {event: 'delta', text: delta, raw_event: raw_event, request_id: request_id, seq: seq_id})
   end
 
   private def project_id_from_context(context)
