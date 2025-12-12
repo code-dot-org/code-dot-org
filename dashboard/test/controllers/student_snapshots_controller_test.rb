@@ -66,10 +66,8 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     regular_level = create(:level, name: 'Regular Level', type: 'Multi')
 
     # Create script levels with progression attribute
-    cfu_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding')
-    cfu_script_level.levels << cfu_level
-    regular_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Practice')
-    regular_script_level.levels << regular_level
+    cfu_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Practice', levels: [regular_level])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -93,10 +91,8 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     cfu_level1 = create(:level, name: 'CFU Level 1', type: 'Multi')
     cfu_level2 = create(:level, name: 'CFU Level 2', type: 'Multi')
 
-    script_level1 = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding')
-    script_level1.levels << cfu_level1
-    script_level2 = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check For Understanding')
-    script_level2.levels << cfu_level2
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level1])
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check For Understanding', levels: [cfu_level2])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -112,8 +108,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
   test "cfu_levels endpoint returns empty array when no CFU levels exist" do
     regular_level = create(:level, name: 'Regular Level', type: 'Multi')
-    script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Practice')
-    script_level.levels << regular_level
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Practice', levels: [regular_level])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -124,8 +119,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
   test "cfu_levels endpoint returns empty array when script_level has no progression" do
     regular_level = create(:level, name: 'Regular Level', type: 'Multi')
-    script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: nil)
-    script_level.levels << regular_level
+    create(:script_level, script: @unit, lesson: @lesson1, progression: nil, levels: [regular_level])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -147,9 +141,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     cfu_level1 = create(:level, name: 'CFU Level 1', type: 'Multi')
     cfu_level2 = create(:level, name: 'CFU Level 2', type: 'Multi')
 
-    script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding')
-    script_level.levels << cfu_level1
-    script_level.levels << cfu_level2
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level1, cfu_level2])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -165,8 +157,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
   test "cfu_levels endpoint includes all required fields" do
     cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: 'CFU Display Name')
-    script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding')
-    script_level.levels << cfu_level
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -186,8 +177,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
 
   test "cfu_levels endpoint uses level name as display_name when display_name is nil" do
     cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: nil)
-    script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding')
-    script_level.levels << cfu_level
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
