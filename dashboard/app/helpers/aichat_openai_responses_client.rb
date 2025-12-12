@@ -21,21 +21,9 @@ class AichatOpenaiResponsesClient < AichatAiClient
     req = Net::HTTP::Post.new(uri, request_headers)
     req.body = body.to_json
 
-    http.request(req) do |response|
-      response.read_body do |chunk|
-        chunk.each_line do |line|
-          next unless line.start_with?("data:")
-          data = line.delete_prefix("data:").strip
-          next if data.empty? || data == "[DONE]"
-          begin
-            parsed = JSON.parse(data)
-            text_delta = extract_text_from_event(parsed)
-            block&.call(text_delta) if text_delta.present?
-          rescue JSON::ParserError
-            next
-          end
-        end
-      end
+    process_sse_stream(http, req) do |parsed_event|
+      text_delta = extract_text_from_event(parsed_event)
+      block&.call(text_delta) if text_delta
     end
   rescue Net::ReadTimeout
     raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")

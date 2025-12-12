@@ -20,25 +20,9 @@ class AichatGeminiClient < AichatAiClient
     req = Net::HTTP::Post.new(uri, headers.merge({'Accept' => 'application/json'}))
     req.body = body.to_json
 
-    buffer = +""
-    buffer.force_encoding('UTF-8')
-    http.request(req) do |response|
-      response.read_body do |chunk|
-        chunk.each_line do |line|
-          next unless line.start_with?("data:")
-          data = line.delete_prefix("data:").strip
-          next if data.empty?
-
-          begin
-            parsed = JSON.parse(data)
-            text_delta = parsed.dig('candidates', 0, 'content', 'parts', 0, 'text')
-
-            block&.call(text_delta) if text_delta
-          rescue JSON::ParserError
-            next
-          end
-        end
-      end
+    process_sse_stream(http, req) do |parsed_event|
+      text_delta = parsed_event.dig('candidates', 0, 'content', 'parts', 0, 'text')
+      block&.call(text_delta) if text_delta
     end
   rescue Net::ReadTimeout
     raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
