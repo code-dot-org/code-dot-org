@@ -8,14 +8,28 @@ markdown <<MARKDOWN
 
 #### In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**.
 
->#### They will: 
->- #### Demonstrate how hardware, software, and communication combine to create a computer system
->- #### Design a prototype of a device that solves a real-world issue
->- #### Evaluate the ethical implications of design decisions
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
-<div style="clear:both;"></div>
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Demonstrate how hardware, software, and communication combine to create a computer system
+</li> <br>
+    <li>Design a prototype of a device that solves a real-world issue
+</li><br>
+        <li>Evaluate the ethical implications of design decisions
+</li><br>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
+         alt="Icon of clipboard and pen" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
 
-## Project Requirements:
+
+## Project Requirements
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">

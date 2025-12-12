@@ -3,49 +3,166 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit Project: AI Time Capsule
+# AI Time Capsule Project Overview
 
 #### In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.
 
-## Project Calendar
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
-<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
-	<p style="text-align: center; font-weight: bold; font-size: 18px">
-    	Day 1
-    </p>
-    
-    <p style="font-size: 14px">
-	Students begin working with AI to explore possible futures. <br><br> Students start by writing their own prediction and then use AI Chat to refine and iterate on it.
-    </p>
-    
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Develop an AI-assisted future prediction by integrating research on past and present trends with AI-generated insights
+</li> <br>
+    <li>Evaluate AI-generated predictions for feasibility, inclusivity, and accuracy by identifying bias, missing perspectives, and real-world constraints
+</li><br>
+        <li>Refine AI-generated predictions by iterating on prompts and applying human reasoning to improve clarity and alignment with real-world trends
+</li><br>
+		<li>Work iteratively with AI to refine their final product to improve clarity, coherence, and engagement</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
+         alt="Icon of clipboard and pen" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
 </div>
 
-<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
-	<p style="text-align: center; font-weight: bold; font-size: 18px">
-    	Day 2
-    </p>
-    
-    <p style="font-size: 14px">
-	Students create a presentation that documents their own process of working with AI.<br><br> Examples include: infographic, slide presentation, podcast, or poster.
-    </p>
-    
-</div>
-
-<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
-	<p style="text-align: center; font-weight: bold; font-size: 18px">
-    	Day 3
-    </p>
-    
-    <p style="font-size: 14px">
-	Students finalize and present their predictions in groups of three or four. <br><br> Time is allocated for peer feedback.
-    </p>
-
-</div>
-</div>
+## Project Requirements
 
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 Evaluating AI-Generated Predictions
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Student accurately identifies unrealistic, incorrect, or hallucinated elements in AI outputs and refines them using evidence and reasoning.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Multimodal Input Exploration</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Student uses multiple input types (e.g., text, image, PDF) and explains how each one contributes to the AI output or product.
+- #### The use of inputs is clearly documented and connected to decisions made during the process.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🤖 Prompt Iteration and Refinement </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Student revises prompts multiple times, with changes that result in clearly improved or more targeted AI responses. 
+- #### Revisions show increasing control over the content or quality of AI output.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💜 Bias & Ethical Awareness</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Student identifies bias, missing perspectives, or potential harms in AI outputs and makes specific changes to improve fairness, representation, or ethical responsibility.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💭 Reflection and Process Awareness
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Student describes multiple decisions made while working with AI and explains how those decisions affected their prediction or presentation. 
+- #### Reflection includes what they learned about AI’s strengths and limitations. 
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Presentation and Synthesis
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Final product explains the steps the student took to create and refine their prediction using AI.
+- ####  The presentation includes specific examples of prompt changes, decisions made, and how the student shaped or revised the output.
+- ####  The student clearly revises AI-generated content and presents it in their own voice.
+
+</p></div>
+</details>
+
+---
+## Daily Overview
+
+<div style="clear:both;"></div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/51d8d9887e70f4231a245da5e7796e8b-image-1741706991947.png" alt="icon showing a sequence" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>Day 1: Iterating on Predictions</b></h3>
+          <ul>
+    <li style="font-size: 14pt;">Choose a focus area and gather artifacts.</li><br>
+    <li style="font-size: 14pt;">Predicting the future: 1) Make an initial prediction about the future 2) Use AI to generate a prediction, then refine its prediction.</li><br>
+       <li style="font-size: 14pt;">Exchange feedback with a peer.
+      </li><br>
+      <li style="font-size: 14pt;">Choose your audience and creative format for your final product.
+      </li>
+</ul>
+           </div>
+    </div>
 <br>
+
+
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/df003ffe6a552ea91152205a6180485b-image-1741792827404.png" alt="feedback icon" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Day 2: Presentation of Process</b></h3>
+            <ul>
+    <li style="font-size: 14pt;">Analyze AI's prediction for accuracy and bias.</li><br>
+    <li style="font-size: 14pt;">Develop and refine your final product with the help of AI.
+</li><br>
+<li style="font-size: 14pt;">Get peer feedback on your product.
+</li>
+</ul>
+        </div>
+    </div>
+<br>
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/3716fb3f3a7de43bba135a454ce46fff-image-1741792948624.png" alt="iteration icon" style="width: 20%; max-width: 100px; height: auto;">
+        <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Day 3: Finalize Project </b></h3>
+            <ul>
+    <li style="font-size: 14pt;">Finalize your product.</li><br>
+    <li style="font-size: 14pt;">Present your prediction in a Gallery Walk.</li><br>
+    <li style="font-size: 14pt;">Discuss and respond to feedback from your peers.</li><br>
+    <li style="font-size: 14pt;">Complete the End of Project Reflection.</li>
+    </ul>
+        </div>
+    </div>
+
+
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ If you have time, check out the full <a href='https://studio.code.org/s/aif1-2025/lessons/13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.

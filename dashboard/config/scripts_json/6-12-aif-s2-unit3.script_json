@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-10 19:06:05 UTC",
+    "serialized_at": "2025-12-11 18:54:59 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -543,8 +543,19 @@
       }
     },
     {
-      "key": "f3a10ca0-9714-4271-a2dc-11c4181f245e",
+      "key": "3c61063f-8ed4-4673-911c-ccb2e2d2ee6a",
       "position": 4,
+      "properties": {
+        "progression_name": "Vocab: Property"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c61063f-8ed4-4673-911c-ccb2e2d2ee6a",
+        "lesson_activity.key": "64297f51-e6ba-4b02-9e6c-0496b759a5fb"
+      }
+    },
+    {
+      "key": "f3a10ca0-9714-4271-a2dc-11c4181f245e",
+      "position": 5,
       "properties": {
         "progression_name": "Object from Arrays"
       },
@@ -555,7 +566,7 @@
     },
     {
       "key": "3206de24-031a-4179-afe0-d72b9d444317",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Update and Evolve Objects"
       },
@@ -1471,6 +1482,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Vocab: Property"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level5-property-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "3c61063f-8ed4-4673-911c-ccb2e2d2ee6a"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson4-level5-property-test-2025"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Property"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level6-property-frq-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "3c61063f-8ed4-4673-911c-ccb2e2d2ee6a"
+      },
+      "level_keys": [
+        "building-data-driven-systems-lesson4-level6-property-frq-test-2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "building-data-driven-systems-lesson4-level5-test-2025"
         ],
@@ -1491,8 +1546,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 6,
+      "chapter": 29,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1516,8 +1571,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 7,
+      "chapter": 30,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1541,7 +1596,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1566,7 +1621,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1591,7 +1646,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1616,7 +1671,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1641,7 +1696,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1666,7 +1721,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1691,7 +1746,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1716,7 +1771,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1741,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1766,7 +1821,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1791,7 +1846,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1816,7 +1871,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1841,7 +1896,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1866,7 +1921,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1891,7 +1946,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1916,7 +1971,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1938,7 +1993,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1960,7 +2015,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1985,7 +2040,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2010,7 +2065,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2035,7 +2090,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2060,7 +2115,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2085,7 +2140,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2110,7 +2165,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2135,7 +2190,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2160,7 +2215,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2185,7 +2240,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2210,7 +2265,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2235,7 +2290,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2260,7 +2315,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2285,7 +2340,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2310,7 +2365,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2335,7 +2390,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2360,7 +2415,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2684,6 +2739,30 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit3",
         "activity_section.key": "6c07c54e-acdf-4ff4-b595-56aac8ef3894"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson4-level5-property-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level5-property-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "3c61063f-8ed4-4673-911c-ccb2e2d2ee6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-lesson4-level6-property-frq-test-2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-lesson4-level6-property-frq-test-2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit3",
+        "activity_section.key": "3c61063f-8ed4-4673-911c-ccb2e2d2ee6a"
       }
     },
     {

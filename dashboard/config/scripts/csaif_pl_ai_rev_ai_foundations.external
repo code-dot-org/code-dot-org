@@ -50,7 +50,7 @@ markdown <<MARKDOWN
 
    
 <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/a0284e93dd3041da5a3c4a9e7933f81b-Screenshot 2025-12-08 at 2.53.07 PM.png" alt="Icon of arrows and code segments" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <img src="https://images.code.org/cb30e66a15e83dfaed89254733dde7fc-Screenshot 2025-12-11 at 12.55.01 PM.png" alt="Icon of arrows and code segments" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #007683; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3 style="color: white; margin: 0;"> <b>Unit 4 - The Fabric of the Internet and AI</b></h3>
             <p style = "font-size: 14pt;color: white; margin-top: 10px;">This unit explores the Internet's function (data transmission, addressing, security, protocols), its societal/ethical impacts (like the digital divide), and how AI is used in cybersecurity, preparing students to propose solutions for access and security.<br><br> </p>
@@ -58,7 +58,7 @@ markdown <<MARKDOWN
     </div>
     
         <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/ab85472a58f630a1c8252b42cb5fd5d2-image-1759252734796.png" alt="Icon of a computer screen with divided display and html tags" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <img src="https://images.code.org/a0284e93dd3041da5a3c4a9e7933f81b-Screenshot 2025-12-08 at 2.53.07 PM.png" alt="Icon of a computer screen with divided display and html tags" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #005862; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
             <h3 style="color: white; margin: 0;"><b>Unit 5 - AI-Powered Threats and Defenses</b></h3>
         
@@ -69,7 +69,7 @@ markdown <<MARKDOWN
 
    
 <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/0c587f1d0aed3dcf3b6f5d1311104442-image-1759253471005.png" alt="Icon of a computer and phone with a web app displayed" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <img src="https://images.code.org/c6713bb8ea71d5e084935818882027ce-Screenshot 2025-12-11 at 1.21.22 PM.png" alt="Icon of a computer and phone with a web app displayed" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #003b42; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3 style="color: white; margin: 0;"> <b>Unit 6 - Insights from Data and AI</b></h3>
             <p style = "font-size: 14pt;color: white; margin-top: 10px;">This unit introduces students to data science concepts, guiding them through developing data questions, using spreadsheets for analysis, practicing ethical data management, and communicating their findings using visualization to tell a compelling data story.<br><br> </p>

@@ -10,13 +10,13 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Object\n\nAn **object** is a bundle of related information in JavaScript, stored as name-value pairs called *properties*. \n\nIt lets you represent a real-world thing (like a backpack or dessert) in code.\n\nFor example, a backback object might have properties such as `name: \"backpack\"`, `color: \"blue\"`, and `size: 30`.",
-        "imageUrl": "https://images.code.org/8c97c99ecb855562580bfedcf8cb7a29-object.png",
+        "text": "# Object\n\nAn **object** is a set of related information grouped under one name.\n\nIt lets you represent a real-world thing (like a backpack or dessert) in code.\n\nFor example, a backpack object includes information such as its type, color, and size.",
+        "imageUrl": "https://images.code.org/c40729bd3ad2b6c625b9234ade4b6fa4-Screenshot 2025-12-11 105000.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
         "layout": "text-top-right"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-20T03:29:39.843+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level16-unshift-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level16-unshift-test-2025\"},{\"changed_at\":\"2025-11-20 03:43:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:34:18 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-20T03:29:39.843+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level16-unshift-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level16-unshift-test-2025\"},{\"changed_at\":\"2025-11-20 03:43:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:34:18 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-12-11 18:19:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-11 18:32:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-11 18:43:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-11 18:45:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-11 18:50:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

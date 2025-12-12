@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Preparing for the Final Project
+# Designing Secure Systems Project Overview
  
 #### This project focuses on analyzing a real-world app to identify **two security or usability issues** that affect different users. 
 
@@ -21,10 +21,16 @@ markdown <<MARKDOWN
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Identify security and usability issues in a digital system by analyzing user needs and risks
 </li> <br>
-    <li> Design secure system improvements that balance protection with usability, using trade-off reasoning
+    <li> Analyze how different users experience a system and what risks they face
 </li><br>
-        <li>  Explain how solutions work and how they help real users
-</li><br>
+        <li>Identify and explain security and usability issues in a real-world system
+        </li><br>
+        <li>Design an improvement that enhances security while maintaining or improving usability 
+        </li><br>
+        <li>Explain how your changes prevent specific cyber vulnerabilities or human errors 
+        </li><br>
+        <li>Use creative visuals and clear writing to communicate your thinking
+        </li>
     </ul>
   </div>
   <div>
@@ -33,6 +39,78 @@ markdown <<MARKDOWN
          style="border-radius: 10px; width: 300px; height: auto;">
   </div>
 </div>
+
+
+## Project Requirements
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 User-Centered Analysis
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Clearly identifies security shortcomings based on a specific user's needs and concerns.
+- #### Reasoning is thoughtful and specific.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔒 Security Solutions</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Security features effectively address the issues raised in user empathy maps.
+- #### Feature explanations include discussion of any tradeoffs made between security and usability.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ "Before" Artifact </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Artifact clearly shows at least two different types of security issues present in the current app design.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 "After" Artifact</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Artifact presents two different personified security solutions, demonstrating how they reduce risk, protect users, and/or prevent human error.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💬 Communication and Creativity
+
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Overall, the project communicates ideas clearly through different media. 
+- #### Artifacts are creative, thoughtful, and support understanding of issues and solutions.
+
+
+</p></div>
+</details>
+
 
 ## Sample "Before" Artifact
 

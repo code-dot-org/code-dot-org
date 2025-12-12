@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-10 20:20:27 UTC",
+    "serialized_at": "2025-12-11 16:40:48 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -254,18 +254,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3f05b847-600a-4378-b556-7d2f4baff52b",
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit4"
-      }
-    },
-    {
-      "key": "af48601a-e203-428d-bc7d-29e2a51f020e",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "af48601a-e203-428d-bc7d-29e2a51f020e",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4"
@@ -531,20 +519,10 @@
       }
     },
     {
-      "key": "3f041f3c-8238-4d19-9f4b-59ddd24bb79f",
+      "key": "ff186467-99d8-4851-8816-f0bbe81b36e0",
       "position": 7,
       "properties": {
         "progression_name": "Loops in Pseudocode"
-      },
-      "seeding_key": {
-        "activity_section.key": "3f041f3c-8238-4d19-9f4b-59ddd24bb79f",
-        "lesson_activity.key": "ac49600a-c7b6-4a7a-b000-2b2dc87751c6"
-      }
-    },
-    {
-      "key": "ff186467-99d8-4851-8816-f0bbe81b36e0",
-      "position": 8,
-      "properties": {
       },
       "seeding_key": {
         "activity_section.key": "ff186467-99d8-4851-8816-f0bbe81b36e0",
@@ -593,17 +571,6 @@
       "seeding_key": {
         "activity_section.key": "c5da7ab9-ad39-4b9e-be8c-edecbe53956b",
         "lesson_activity.key": "3f05b847-600a-4378-b556-7d2f4baff52b"
-      }
-    },
-    {
-      "key": "3f26b6a3-5575-4218-81fb-9104e0d7676e",
-      "position": 1,
-      "properties": {
-        "progression_name": "Vocab: Start, Stop, and Step Values"
-      },
-      "seeding_key": {
-        "activity_section.key": "3f26b6a3-5575-4218-81fb-9104e0d7676e",
-        "lesson_activity.key": "af48601a-e203-428d-bc7d-29e2a51f020e"
       }
     },
     {
@@ -1243,23 +1210,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson1-level9-test-2025"
-        ],
         "progression": "Loops in Pseudocode"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "iterating-with-ai-lesson1-level9-test-2025"
+          "iterating-with-ai-lesson1-ai-chat-test-2025"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "3f041f3c-8238-4d19-9f4b-59ddd24bb79f"
+        "activity_section.key": "ff186467-99d8-4851-8816-f0bbe81b36e0"
       },
       "level_keys": [
-        "iterating-with-ai-lesson1-level9-test-2025"
+        "iterating-with-ai-lesson1-ai-chat-test-2025"
       ]
     },
     {
@@ -1414,56 +1378,6 @@
     },
     {
       "chapter": 16,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson2-start-stop-step-test-2025"
-        ],
-        "progression": "Vocab: Start, Stop, and Step Values"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson2-start-stop-step-test-2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "3f26b6a3-5575-4218-81fb-9104e0d7676e"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson2-start-stop-step-test-2025"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson2-vocab-frq-start-stop-step-test-2025"
-        ],
-        "progression": "Vocab: Start, Stop, and Step Values"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson2-vocab-frq-start-stop-step-test-2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "3f26b6a3-5575-4218-81fb-9104e0d7676e"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson2-vocab-frq-start-stop-step-test-2025"
-      ]
-    },
-    {
-      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1488,7 +1402,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1513,7 +1427,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1538,7 +1452,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1563,7 +1477,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1588,7 +1502,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1613,7 +1527,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1638,7 +1552,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1663,7 +1577,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1688,7 +1602,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1713,7 +1627,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1738,7 +1652,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1763,7 +1677,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1788,7 +1702,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1813,7 +1727,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1838,7 +1752,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1863,7 +1777,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1888,7 +1802,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1913,7 +1827,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1938,7 +1852,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1963,7 +1877,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1988,7 +1902,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2013,7 +1927,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2038,7 +1952,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2063,7 +1977,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -2088,7 +2002,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2113,7 +2027,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2138,7 +2052,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2163,7 +2077,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2188,7 +2102,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2213,7 +2127,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2238,7 +2152,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2263,7 +2177,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2288,7 +2202,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2313,7 +2227,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2338,7 +2252,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2363,7 +2277,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2388,7 +2302,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2413,7 +2327,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2438,7 +2352,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2463,7 +2377,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2488,7 +2402,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2513,7 +2427,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2538,7 +2452,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2563,7 +2477,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2588,7 +2502,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2613,7 +2527,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2635,7 +2549,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2657,7 +2571,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2679,7 +2593,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2800,14 +2714,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "iterating-with-ai-lesson1-level9-test-2025",
+        "level.key": "iterating-with-ai-lesson1-ai-chat-test-2025",
         "script_level.level_keys": [
-          "iterating-with-ai-lesson1-level9-test-2025"
+          "iterating-with-ai-lesson1-ai-chat-test-2025"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "3f041f3c-8238-4d19-9f4b-59ddd24bb79f"
+        "activity_section.key": "ff186467-99d8-4851-8816-f0bbe81b36e0"
       }
     },
     {
@@ -2880,30 +2794,6 @@
         "lesson_group.key": "",
         "script.name": "6-12-aif-s2-unit4",
         "activity_section.key": "c5da7ab9-ad39-4b9e-be8c-edecbe53956b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson2-start-stop-step-test-2025",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson2-start-stop-step-test-2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "3f26b6a3-5575-4218-81fb-9104e0d7676e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson2-vocab-frq-start-stop-step-test-2025",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson2-vocab-frq-start-stop-step-test-2025"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-aif-s2-unit4",
-        "activity_section.key": "3f26b6a3-5575-4218-81fb-9104e0d7676e"
       }
     },
     {

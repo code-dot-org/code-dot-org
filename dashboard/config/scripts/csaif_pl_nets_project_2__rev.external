@@ -3,14 +3,87 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Network Security Risk Assessment Project
+# Network Security Risk Assessment Project Overview
 
-## Project Description
-
-#### This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.
+#### This project guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;"><i class="fa-solid fa-user-graduate"></i> Career Journeys
 </p>
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Identify and categorize network vulnerabilities—technical, human, and systemic.
+</li> <br>
+    <li>Analyze the societal and ethical implications of security risks.
+</li><br>
+        <li>Propose actionable mitigation strategies, including innovative AI-driven solutions.
+</li><br>
+<li>Construct a cohesive risk assessment report supported by evidence and thoughtful analysis.
+</li><br>
+<li>Reflect on your assessment process, considering ethical dimensions at every step.
+</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
+         alt="Icon of clipboard and pen" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+## Project Requirements
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 Identification of Vulnerabilities
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Clearly identifies and explains multiple specific vulnerabilities in the network, referencing relevant technical components and risks.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💜 Ethical and Societal Analysis</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Provides a thorough and insightful analysis of privacy, equity, and societal implications of network vulnerabilities with specific examples.	
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Mitigation Strategies </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Proposes actionable and feasible mitigation strategies, including both traditional and AI-driven approaches. 
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧩 Clarity and Organization</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### The report is exceptionally clear, well-organized, and uses professional language appropriate for the audience.
+
+</p></div>
+</details>
+
 
 ## Project Calendar
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
