@@ -502,7 +502,7 @@ export default class ProjectManager {
         } else {
           errorToReport = new Error('Unknown error occurred');
         }
-        this.onSaveFail('Error saving sources', errorToReport);
+        this.onSaveFail('Error saving sources', errorToReport, 'sources');
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
@@ -549,7 +549,7 @@ export default class ProjectManager {
       try {
         channelResponse = await this.channelsStore.save(this.channelToSave);
       } catch (error) {
-        this.onSaveFail('Error saving channel', error as Error);
+        this.onSaveFail('Error saving channel', error as Error, 'channel');
         return;
       }
       const channelSaveResponse = await channelResponse.json();
@@ -561,9 +561,10 @@ export default class ProjectManager {
     this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
+    this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
   }
 
-  private onSaveFail(errorMessage: string, error: Error) {
+  private onSaveFail(errorMessage: string, error: Error, type: string) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
     if (error.message.includes('409') || error.message.includes('401')) {
@@ -583,6 +584,12 @@ export default class ProjectManager {
       this.metricsReporter.logError(errorMessage, error, {
         message: error.message,
       });
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailure',
+        1,
+        'Count',
+        [{name: 'SaveType', value: type}]
+      );
     }
   }
 
