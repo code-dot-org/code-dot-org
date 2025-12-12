@@ -1,6 +1,6 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React, {useEffect, useState, useMemo, useRef} from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
 
 import {
   getCurrentLevel,
@@ -117,8 +117,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
 
-  const [small, setSmall] = useState<boolean>(variant === 'small');
-
   // The secondary finish button avoids a reappearance animation by not using
   // the unique index.
   const useMessageIndex = showSecondaryFinishButton
@@ -139,24 +137,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   );
 
   const feedbackRef = useRef<HTMLDivElement>(null);
-  const buttonContainerRef = useRef<HTMLDivElement>(null);
   const {theme: defaultTheme} = useTheme();
-
-  useEffect(() => {
-    const container = buttonContainerRef.current;
-
-    let resizeObserver: ResizeObserver | undefined;
-    if (container) {
-      resizeObserver = new ResizeObserver(() => {
-        setSmall(container.clientWidth < 210);
-      });
-      resizeObserver.observe(container);
-    }
-
-    return () => {
-      resizeObserver?.disconnect();
-    };
-  }, [setSmall]);
 
   useEffect(() => {
     // Focus on the feedback message when it first becomes present and the program is not running.
@@ -257,11 +238,8 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     ? commonI18n.finishLesson()
     : commonI18n.finish();
 
-  const smallText = hasNextLevel
-    ? commonI18n.continue()
-    : lessonCount > 1
-    ? commonI18n.finishLesson()
-    : commonI18n.finish();
+  // This supplies "simpler" text for the 'small' variant of the buttons
+  const smallText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
   return (
     <div
@@ -273,7 +251,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       )}
     >
       <div
-        ref={buttonContainerRef}
         id="instructions-feedback-message"
         className={classNames(styleAsBubble && moduleStyles.bubble)}
         data-theme={overrideTheme || defaultTheme}
@@ -305,7 +282,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               type={type}
               color={color}
               iconRight={iconRight}
-              text={variant === 'small' || small ? smallText : text}
+              text={variant === 'small' ? smallText : text}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}

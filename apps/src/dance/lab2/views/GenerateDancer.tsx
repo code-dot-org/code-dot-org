@@ -550,6 +550,7 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     className={moduleStyles.buttonWide}
                     // If on a Music Dance AI sublevel, make sure we report success for this specific sublevel so that progress is correctly updated.
                     onContinue={sublevelOnContinue}
+                    variant={'small'}
                   />
                 )}
               </div>
