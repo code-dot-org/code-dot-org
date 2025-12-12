@@ -3,8 +3,9 @@ class AichatChannel < ApplicationCable::Channel
   def subscribed
     reject unless current_user
 
-    if params[:stream_id].present?
-      stream_from "aichat_stream:#{current_user.id}:#{params[:stream_id]}"
+    stream_id = params[:stream_id]
+    if stream_id.present?
+      stream_from stream_name(stream_id)
     else
       reject
     end
@@ -49,7 +50,7 @@ class AichatChannel < ApplicationCable::Channel
         response: user_toxicity.to_json,
         execution_status: STATUS[:USER_PROFANITY]
       )
-      return broadcast_error(STATUS[:USER_PROFANITY], request_id, user_toxicity)
+      return broadcast_error(stream_id, STATUS[:USER_PROFANITY], request_id, user_toxicity)
     end
 
     broadcast_to_stream(stream_id, {event: 'start', request_id: request_id})
@@ -112,18 +113,28 @@ class AichatChannel < ApplicationCable::Channel
 
   private def broadcast_to_stream(stream_id, payload)
     ActionCable.server.broadcast(
-      "aichat_stream:#{current_user.id}:#{stream_id}",
+      stream_name(stream_id),
       payload
     )
   end
 
   private def broadcast_error(stream_id, code, request_id = nil, details = nil)
-    AichatChannel.broadcast_to(current_user, {event: 'error', code: code, details: details, request_id: request_id})
+    payload = {event: 'error', code: code, details: details, request_id: request_id}
+
+    if stream_id.present?
+      broadcast_to_stream(stream_id, payload)
+    else
+      AichatChannel.broadcast_to(current_user, payload)
+    end
   end
 
   private def handle_stream_delta(stream_id, delta, raw_event, request_id, seq_id)
     return if delta.nil?
     broadcast_to_stream(stream_id, {event: 'delta', text: delta, raw_event: raw_event, request_id: request_id, seq: seq_id})
+  end
+
+  private def stream_name(stream_id)
+    "aichat_stream:#{current_user.id}:#{stream_id}"
   end
 
   private def project_id_from_context(context)

@@ -4,9 +4,10 @@ class AichatChannelTest < ActionCable::Channel::TestCase
   STATUS = SharedConstants::AI_REQUEST_EXECUTION_STATUS
 
   setup do
+    @stream_id = 'test-stream'
     @user = create(:student)
     stub_connection current_user: @user
-    subscribe
+    subscribe(stream_id: @stream_id)
     assert subscription.confirmed?
   end
 
@@ -22,14 +23,14 @@ class AichatChannelTest < ActionCable::Channel::TestCase
       multiple_yields(["Hello", {"raw" => 1}], [" world", {"raw" => 2}]).
       returns("Hello world")
 
-    stream = AichatChannel.broadcasting_for(@user)
+    stream = stream_name
     perform :request_completion, streaming_payload
 
     assert_equal(
       [
         {event: 'start', request_id: 123},
-        {event: 'delta', text: 'Hello', raw_event: {raw: 1}, request_id: 123},
-        {event: 'delta', text: ' world', raw_event: {raw: 2}, request_id: 123},
+        {event: 'delta', text: 'Hello', raw_event: {raw: 1}, request_id: 123, seq: 1},
+        {event: 'delta', text: ' world', raw_event: {raw: 2}, request_id: 123, seq: 2},
         {event: 'complete', text: 'Hello world', request_id: 123},
       ],
       parsed_broadcasts(stream)
@@ -45,7 +46,7 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     request.stubs(:update!)
     AichatRequest.stubs(:create!).returns(request)
 
-    stream = AichatChannel.broadcasting_for(@user)
+    stream = stream_name
     perform :request_completion, streaming_payload
 
     assert_equal [{event: 'error', code: STATUS[:USER_PROFANITY], details: toxicity, request_id: 456}], parsed_broadcasts(stream)
@@ -64,12 +65,12 @@ class AichatChannelTest < ActionCable::Channel::TestCase
       multiple_yields(["Hello", {"raw" => 1}], [" world", {"raw" => 2}]).
       returns("Hello world")
 
-    stream = AichatChannel.broadcasting_for(@user)
+    stream = stream_name
     perform :request_completion, streaming_payload
 
     assert_equal [{event: 'start', request_id: 789},
-                  {event: 'delta', text: 'Hello', raw_event: {raw: 1}, request_id: 789},
-                  {event: 'delta', text: ' world', raw_event: {raw: 2}, request_id: 789},
+                  {event: 'delta', text: 'Hello', raw_event: {raw: 1}, request_id: 789, seq: 1},
+                  {event: 'delta', text: ' world', raw_event: {raw: 2}, request_id: 789, seq: 2},
                   {event: 'error', code: STATUS[:MODEL_PROFANITY], details: toxicity, request_id: 789}], parsed_broadcasts(stream)
   end
 
@@ -81,7 +82,7 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     request.stubs(:update!)
     AichatRequest.stubs(:create!).returns(request)
 
-    stream = AichatChannel.broadcasting_for(@user)
+    stream = stream_name
     perform :request_completion, streaming_payload
 
     assert_equal(
@@ -113,5 +114,9 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     broadcasts(stream).map do |payload|
       JSON.parse(payload).deep_symbolize_keys
     end
+  end
+
+  private def stream_name
+    "aichat_stream:#{@user.id}:#{@stream_id}"
   end
 end
