@@ -171,7 +171,7 @@ export const submitChatContents = createAsyncThunk(
     };
 
     let hasAddedAssistantMessage = false;
-    let assistantResponseLength = 0;
+    let fullText = '';
 
     try {
       Lab2Registry.getInstance()
@@ -192,15 +192,12 @@ export const submitChatContents = createAsyncThunk(
         streamCallbacks: isStreaming
           ? {
               onDelta: delta => {
-                if (delta.length < assistantResponseLength) {
-                  return;
-                }
-                assistantResponseLength = delta.length;
+                fullText += delta;
                 if (hasAddedAssistantMessage) {
                   dispatch(
                     updateChatMessageText({
                       updateId: newAssistantMessage.updateId,
-                      chatMessageText: delta,
+                      chatMessageText: fullText,
                     })
                   );
                 } else {
@@ -208,7 +205,7 @@ export const submitChatContents = createAsyncThunk(
                   dispatch(
                     addEventToChatEventsCurrent({
                       ...newAssistantMessage,
-                      chatMessageText: delta,
+                      chatMessageText: fullText,
                     })
                   );
                 }
@@ -258,6 +255,12 @@ export const submitChatContents = createAsyncThunk(
             updateChatMessageStatus({
               updateId: newAssistantMessage.updateId,
               status: message.status,
+            })
+          );
+          dispatch(
+            updateChatMessageText({
+              updateId: newAssistantMessage.updateId,
+              chatMessageText: message.chatMessageText,
             })
           );
           logChatEvent(message, state.progress.viewAsUserId);
