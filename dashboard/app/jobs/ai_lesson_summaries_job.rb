@@ -15,14 +15,17 @@ class AiLessonSummariesJob < ApplicationJob
     next unless user
 
     unit_id = request[:unit_id]
+    unit = Unit.find_by(id: unit_id)
     section = unit_id.present? ? user.sections.where(script_id: unit_id).first : nil
     section ||= user.sections.first
+
+    unit_text = unit ? "for #{unit.title_for_display}" : ''
 
     if section
       TeacherNotification.create!(
         user_id: user_id,
         title: 'AI Lesson Summaries ready to view',
-        description: "The lesson summaries for #{lesson_ids.size} lessons have been generated and are now available.",
+        description: "Your personalized lesson summaries for #{lesson_ids.length} lessons #{unit_text} are live — prepare for your next class in minutes!",
         icon_name: 'solid-flask-sparkle',
         icon_color: 'Aqua',
         href_links: [{text: 'View lesson materials',
