@@ -1181,6 +1181,7 @@ Dashboard::Application.routes.draw do
     resources :student_snapshots, only: [] do
       collection do
         get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
       end
     end
 
