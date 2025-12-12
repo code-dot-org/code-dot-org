@@ -13,6 +13,39 @@ import {Student} from '../../progress/progressTypes';
 
 import styles from './header.module.scss';
 
+/**
+ * Helper function to find the previous and next items in an array based
+ * on the selected item.
+ * @param items - Array of items to search through
+ * @param selectedItem - The currently selected item
+ * @param getId - Function to extract the ID from an item for comparison
+ * @returns Object containing currentIndex, previous, and next items
+ */
+function findNavigationItems<T>(
+  items: T[] | null | undefined,
+  selectedItem: T | null | undefined,
+  getId: (item: T) => number | string
+): {
+  currentIndex: number;
+  previous: T | null;
+  next: T | null;
+} {
+  let currentIndex = -1;
+  let previous: T | null = null;
+  let next: T | null = null;
+
+  if (items && Array.isArray(items) && selectedItem) {
+    currentIndex = items.findIndex(item => getId(item) === getId(selectedItem));
+    previous = currentIndex > 0 ? items[currentIndex - 1] : null;
+    next =
+      currentIndex >= 0 && currentIndex < items.length - 1
+        ? items[currentIndex + 1]
+        : null;
+  }
+
+  return {currentIndex, previous, next};
+}
+
 interface HeaderProps {
   lessons: LessonOption[];
   selectedLessonId: number | null;
@@ -39,20 +72,11 @@ const Header: React.FC<HeaderProps> = ({
     lessons?.find(lesson => lesson.id === selectedLessonId) || null;
 
   // Find next and previous lessons based on position
-  let currentLessonIndex = -1;
-  let previousLesson = null;
-  let nextLesson = null;
-  if (lessons && Array.isArray(lessons) && selectedLesson) {
-    currentLessonIndex = lessons.findIndex(
-      lesson => lesson.id === selectedLesson.id
-    );
-    previousLesson =
-      currentLessonIndex > 0 ? lessons[currentLessonIndex - 1] : null;
-    nextLesson =
-      currentLessonIndex >= 0 && currentLessonIndex < lessons.length - 1
-        ? lessons[currentLessonIndex + 1]
-        : null;
-  }
+  const {previous: previousLesson, next: nextLesson} = findNavigationItems(
+    lessons,
+    selectedLesson,
+    lesson => lesson.id
+  );
 
   const showStudentsByOptions = [
     {value: 'lastName', text: 'Last Name'},
@@ -74,23 +98,11 @@ const Header: React.FC<HeaderProps> = ({
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
 
   // Find next and previous students based on position
-  let currentStudentIndex = -1;
-  let previousStudent = null;
-  let nextStudent = null;
-  if (selectedStudents && Array.isArray(selectedStudents) && selectedStudent) {
-    currentStudentIndex = selectedStudents.findIndex(
-      student => student.id === selectedStudent.id
-    );
-    previousStudent =
-      currentStudentIndex > 0
-        ? selectedStudents[currentStudentIndex - 1]
-        : null;
-    nextStudent =
-      currentStudentIndex >= 0 &&
-      currentStudentIndex < selectedStudents.length - 1
-        ? selectedStudents[currentStudentIndex + 1]
-        : null;
-  }
+  const {previous: previousStudent, next: nextStudent} = findNavigationItems(
+    selectedStudents,
+    selectedStudent,
+    student => student.id
+  );
 
   const handlePreviousStudent = () => {
     if (previousStudent) {
