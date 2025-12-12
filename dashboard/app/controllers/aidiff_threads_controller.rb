@@ -109,7 +109,7 @@ class AidiffThreadsController < ApplicationController
     end
 
     get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, context[:sectionId], @aidiff_thread.context_type)
-    response_body = get_response_body(session_id, @aidiff_thread.context_type, input)
+    response_body = get_response_body(session_id, @aidiff_thread.context_type, input, @aidiff_thread.aidiff_messages.last)
 
     # Log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
@@ -164,7 +164,7 @@ class AidiffThreadsController < ApplicationController
     max_score > 0.9
   end
 
-  private def get_response_body(session_id, context_type, input)
+  private def get_response_body(session_id, context_type, input, previous_message = nil)
     if contains_pii?
       return {
         role: "assistant",
@@ -172,7 +172,9 @@ class AidiffThreadsController < ApplicationController
         chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
         raw_content: 'Sorry, I cannot accept messages that contain personal information.',
         links: nil,
-        session_id: session_id
+        session_id: session_id,
+        is_artifact_candidate: false,
+        artifact_type: nil,
       }
     end
 
@@ -188,7 +190,7 @@ class AidiffThreadsController < ApplicationController
     unit_display_name = @unit&.title_for_display(unit_group_unit: @unit&.unit_group_units&.first)
     student_code = get_student_code(params[:viewAsUserId] || current_user.id, @level, @unit.id) if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
 
-    prompt = get_prompt_for_context(
+    prompt = AidiffPromptHelper.get_prompt_for_context(
       context_type,
       course_display_name,
       unit_display_name,
@@ -197,21 +199,22 @@ class AidiffThreadsController < ApplicationController
       @section_contexts,
       @level&.long_instructions,
       student_code,
-      true,
+      params[:artifactType],
+      previous_message
     )
 
-    puts prompt
-
-    response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
+    response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type), params[:artifactType])
     #TODO: check for profanity/PII in model response
 
     {
       role: "assistant",
-      status: SharedConstants::AI_INTERACTION_STATUS[:OK],
+      status: response[:status],
       chat_message_text: response[:content],
       session_id: response[:session_id],
       raw_content: response[:raw_content],
       links: response[:links],
+      is_artifact_candidate: response[:is_artifact_candidate],
+      artifact_type: response[:artifact_type]
     }
   end
 
@@ -325,6 +328,8 @@ class AidiffThreadsController < ApplicationController
       raw_content: response_body[:raw_content],
       source_links: response_body[:links],
       is_preset: params[:isPreset],
+      is_artifact_candidate: response_body[:is_artifact_candidate],
+      artifact_candidate_type: response_body[:artifact_type]
     )
   end
 
