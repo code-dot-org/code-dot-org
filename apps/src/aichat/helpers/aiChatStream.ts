@@ -1,5 +1,6 @@
 import {createConsumer, Consumer, Subscription} from '@rails/actioncable';
 
+import {createUuid} from '@cdo/apps/utils';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getUpdatedMessages} from '../getUpdatedMessages';
@@ -13,8 +14,8 @@ import {
 
 type StreamEvent =
   | {event: 'start'; request_id: number}
-  | {event: 'delta'; text: string; request_id: number}
-  | {event: 'complete'; request_id: number}
+  | {event: 'delta'; text: string; request_id: number; seq: number}
+  | {event: 'complete'; text: string; request_id: number}
   | {
       event: 'error';
       code: ExecutionStatus;
@@ -60,7 +61,6 @@ export function streamAichatCompletionMessage({
     };
 
     const consumerInstance = getConsumer();
-    let accumulated = '';
     let settled = false;
 
     const timeoutId = window.setTimeout(() => {
@@ -68,8 +68,12 @@ export function streamAichatCompletionMessage({
       reject(new Error('Chat completion stream timed out'));
     }, maxStreamTimeMs);
 
+    const streamId = createUuid();
+    let nextExpectedSeq = 1;
+    const messageBuffer = new Map<number, string>();
+
     const subscription: Subscription = consumerInstance.subscriptions.create(
-      {channel: 'AichatChannel'},
+      {channel: 'AichatChannel', stream_id: streamId},
       {
         received: raw => {
           let data: StreamEvent;
@@ -91,18 +95,27 @@ export function streamAichatCompletionMessage({
 
             case 'delta': {
               const deltaText = data.text || '';
-              accumulated += deltaText;
-              streamCallbacks?.onDelta?.(deltaText);
+              messageBuffer.set(data.seq, deltaText);
+
+              while (messageBuffer.has(nextExpectedSeq)) {
+                const textToDisplay = messageBuffer.get(nextExpectedSeq)!;
+
+                streamCallbacks?.onDelta?.(textToDisplay);
+
+                messageBuffer.delete(nextExpectedSeq);
+                nextExpectedSeq++;
+              }
+
               return;
             }
 
             case 'complete': {
               cleanup();
-              streamCallbacks?.onComplete?.(accumulated);
+              streamCallbacks?.onComplete?.(data.text);
               resolve(
                 getUpdatedMessages(
                   newMessage,
-                  accumulated,
+                  data.text,
                   AiRequestExecutionStatus.SUCCESS
                 ).map(message => ({...message, requestId: data.request_id}))
               );
@@ -113,9 +126,10 @@ export function streamAichatCompletionMessage({
               cleanup();
               streamCallbacks?.onError?.(data.code, data.details);
               resolve(
-                getUpdatedMessages(newMessage, accumulated, data.code).map(
-                  message => ({...message, requestId: data.request_id})
-                )
+                getUpdatedMessages(newMessage, '', data.code).map(message => ({
+                  ...message,
+                  requestId: data.request_id,
+                }))
               );
               return;
             }
