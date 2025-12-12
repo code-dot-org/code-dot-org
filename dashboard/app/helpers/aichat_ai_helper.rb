@@ -232,23 +232,16 @@ module AichatAiHelper
     )
 
     full_text = +""
-    client.stream_response(config, request, context) do |event|
-      next unless event
-      text_delta = extract_stream_text_delta(event)
-      next unless text_delta
+
+    client.stream_response(config, request, context) do |text_delta|
+      next if text_delta.blank?
+
       full_text << text_delta
-      on_delta&.call(full_text, event)
+
+      on_delta&.call(text_delta, nil)
     end
 
     full_text
-  end
-
-  def self.extract_stream_text_delta(event)
-    event.dig('output_text', 0, 'content', 0, 'text') ||
-      event.dig('delta', 'content')&.map {|content| content['text']}&.join ||
-      event.dig('content', 0, 'text') ||
-      event.dig('candidates', 0, 'content', 'parts', 0, 'text') ||
-      event['text']
   end
 
   def self.token_throttling_key(model_id, user_id)
