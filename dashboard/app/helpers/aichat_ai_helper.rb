@@ -234,7 +234,7 @@ module AichatAiHelper
     full_text = +""
 
     client.stream_response(config, request, context) do |text_delta|
-      next if text_delta.blank?
+      next if text_delta.nil? || text_delta == ''
 
       full_text << text_delta
 
