@@ -195,9 +195,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   const reinitializationHandler = useCallback(() => {
     setExcalidrawMountKey(key => key + 1);
-
-    // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
-    downloadedFilesDataRef.current = {};
   }, []);
 
   const onRestoreVersion = useCallback(
