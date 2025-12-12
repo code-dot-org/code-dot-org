@@ -15,7 +15,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
       createdAt: '2017-01-24T16:41:08.000-08:00',
       updatedAt: '2017-01-25T17:48:12.358-08:00'
     }.to_json
-    student_project = {id: 22, value: student_project_value}
+    student_project = {id: 22, storage_id: STUDENT_STORAGE_ID, value: student_project_value, uuid: SecureRandom.uuid}
 
     hidden_project_value = {
       name: 'Hidden App',
@@ -24,7 +24,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
       updatedAt: '2017-01-01T00:00:00.000-08:00',
       hidden: true
     }.to_json
-    hidden_project = {id: 33, value: hidden_project_value}
+    hidden_project = {id: 33, storage_id: STUDENT_STORAGE_ID, value: hidden_project_value, uuid: SecureRandom.uuid}
 
     other_student_project_value = {
       name: 'Bobs Other App',
@@ -34,10 +34,19 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
       createdAt: '2017-01-02T00:00:00.000-08:00',
       updatedAt: '2017-01-02T00:00:00.000-08:00',
     }.to_json
-    other_student_project = {id: 44, value: other_student_project_value}
+    other_student_project = {id: 44, storage_id: STUDENT_STORAGE_ID, value: other_student_project_value, uuid: SecureRandom.uuid}
 
     ProjectsList.stubs(:get_storage_ids_by_user_ids).returns({@student.id => STUDENT_STORAGE_ID})
     Projects.any_instance.stubs(:get_active_projects).returns([student_project, hidden_project, other_student_project])
+
+    projects_table = mock
+    Projects.stubs(:table).returns(projects_table)
+    projects_table.stubs(:where).with(id: 22).returns([student_project])
+    projects_table.stubs(:where).with(id: 33).returns([hidden_project])
+    projects_table.stubs(:where).with(id: 44).returns([other_student_project])
+    projects_table.stubs(:where).with(uuid: student_project[:uuid]).returns([student_project])
+    projects_table.stubs(:where).with(uuid: hidden_project[:uuid]).returns([hidden_project])
+    projects_table.stubs(:where).with(uuid: other_student_project[:uuid]).returns([other_student_project])
   end
 
   test_user_gets_response_for(
