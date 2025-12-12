@@ -75,6 +75,7 @@ const initialState: AichatState = {
   hasSetStartingCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
+  artifactType: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -154,6 +155,9 @@ const aichatSlice = createSlice({
     },
     setThreadKeyId(state, action: PayloadAction<number>) {
       state.threadKeyId = action.payload;
+    },
+    setArtifactType(state, action: PayloadAction<string | undefined>) {
+      state.artifactType = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -461,6 +465,7 @@ export const {
   setThreadMessages,
   addThreadMessage,
   setThreadKeyId,
+  setArtifactType,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
