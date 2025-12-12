@@ -26,6 +26,7 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import '@cdo/apps/lab2/introjs.scss';
 
@@ -313,17 +314,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
 
-  // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard
+  // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {
     if (currentTab === Tabs.AiTutor || currentTab === Tabs.VersionHistory) {
       const panelContent = tabContentRefs.current[currentTab];
       if (panelContent) {
-        // Use setTimeout to ensure the panel is rendered and visible before focusing
+        // Use setTimeout to ensure the panel is rendered and visible before focusing.
         const timeoutId = setTimeout(() => {
-          // Find the first focusable element in the panel
-          const focusableElement = panelContent.querySelector<HTMLElement>(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-          );
+          // Find the first focusable element in the panel.
+          const focusableElement = findFirstFocusableElement(panelContent);
           if (focusableElement) {
             focusableElement.focus();
           } else {
@@ -559,7 +558,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ref={el => {
                       if (el) {
                         el.inert = tab !== currentTab;
-                        // Store ref for AI Tutor and Version History tabs
+                        // Store ref for AI Tutor and Version History tabs.
                         if (
                           tab === Tabs.AiTutor ||
                           tab === Tabs.VersionHistory
@@ -567,7 +566,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                           tabContentRefs.current[tab] = el;
                         }
                       } else {
-                        // Clear ref when element is removed
+                        // Clear ref when element is removed.
                         if (
                           tab === Tabs.AiTutor ||
                           tab === Tabs.VersionHistory
