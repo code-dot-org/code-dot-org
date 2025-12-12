@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class AichatChannelTest < ActionCable::Channel::TestCase
+  STATUS = SharedConstants::AI_REQUEST_EXECUTION_STATUS
+
   setup do
     @user = create(:student)
     stub_connection current_user: @user
@@ -9,7 +11,7 @@ class AichatChannelTest < ActionCable::Channel::TestCase
   end
 
   test 'streams start, deltas, and complete for gemini model' do
-    AichatSafetyHelper.expects(:find_toxicity).returns(nil)
+    AichatSafetyHelper.expects(:find_toxicity).twice.returns(nil)
     request = mock
     request.stubs(:id).returns(123)
     request.stubs(:update!)
@@ -34,7 +36,7 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     )
   end
 
-  test 'broadcasts error when user input is profane' do
+  test 'broadcasts error when user input is toxic' do
     toxicity = {text: 'bad words', blocked_by: 'openai'}
     AichatSafetyHelper.expects(:find_toxicity).returns(toxicity)
     AichatAiHelper.expects(:stream_assistant_response).never
@@ -46,10 +48,32 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     stream = AichatChannel.broadcasting_for(@user)
     perform :request_completion, streaming_payload
 
-    assert_equal [{event: 'error', code: 'USER_PROFANITY', details: toxicity, request_id: 456}], parsed_broadcasts(stream)
+    assert_equal [{event: 'error', code: STATUS[:USER_PROFANITY], details: toxicity, request_id: 456}], parsed_broadcasts(stream)
   end
 
-  test 'handles streaming unsupported errors' do
+  test 'broadcasts error when model output is toxic' do
+    toxicity = {text: 'bad words', blocked_by: 'openai'}
+    AichatSafetyHelper.expects(:find_toxicity).twice.returns(nil, toxicity)
+    request = mock
+    request.stubs(:id).returns(789)
+    request.stubs(:update!)
+    AichatRequest.stubs(:create!).returns(request)
+
+    AichatAiHelper.expects(:stream_assistant_response).
+      with(any_parameters).
+      multiple_yields(["Hello", {"raw" => 1}], [" world", {"raw" => 2}]).
+      returns("Hello world")
+
+    stream = AichatChannel.broadcasting_for(@user)
+    perform :request_completion, streaming_payload
+
+    assert_equal [{event: 'start', request_id: 789},
+                  {event: 'delta', text: 'Hello', raw_event: {raw: 1}, request_id: 789},
+                  {event: 'delta', text: ' world', raw_event: {raw: 2}, request_id: 789},
+                  {event: 'error', code: STATUS[:MODEL_PROFANITY], details: toxicity, request_id: 789}], parsed_broadcasts(stream)
+  end
+
+  test 'handles errors' do
     AichatSafetyHelper.expects(:find_toxicity).returns(nil)
     AichatAiHelper.expects(:stream_assistant_response).raises(ArgumentError.new('Streaming not supported'))
     request = mock
@@ -63,7 +87,7 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     assert_equal(
       [
         {event: 'start', request_id: 789},
-        {event: 'error', code: 'STREAMING_UNSUPPORTED', details: 'Streaming not supported', request_id: 789}
+        {event: 'error', code: STATUS[:FAILURE], details: 'Streaming not supported', request_id: 789}
       ],
       parsed_broadcasts(stream)
     )

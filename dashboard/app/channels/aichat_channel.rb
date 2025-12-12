@@ -43,7 +43,7 @@ class AichatChannel < ApplicationCable::Channel
         response: user_toxicity.to_json,
         execution_status: STATUS[:USER_PROFANITY]
       )
-      return broadcast_error(STATUS[:USER_PROFANITY], request_id)
+      return broadcast_error(STATUS[:USER_PROFANITY], request_id, user_toxicity)
     end
 
     AichatChannel.broadcast_to(current_user, {event: 'start', request_id: request_id})
@@ -63,7 +63,7 @@ class AichatChannel < ApplicationCable::Channel
         response: model_toxicity.to_json,
         execution_status: STATUS[:MODEL_PROFANITY]
       )
-      return broadcast_error(STATUS[:MODEL_PROFANITY], request_id)
+      return broadcast_error(STATUS[:MODEL_PROFANITY], request_id, model_toxicity)
     end
 
     request.update!(
