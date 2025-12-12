@@ -4,14 +4,17 @@ import {
   setThreadId,
   addThreadMessage,
   setThreadTitle,
+  setArtifactType,
 } from '@cdo/apps/aichat/redux/slice';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
   AiDiffContext,
+  AiDiffArtifactType,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
@@ -23,7 +26,11 @@ import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
-import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
+import {
+  EXIT_TICKET_PROMPT,
+  LESSON_HOOK_PROMPT,
+  SUGGESTED_PROMPTS_FOR_SELECTION,
+} from './predefinedPrompts';
 import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -72,6 +79,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     state => state.aichat.initialThreadPrompt
   );
   const threadMessages = useAppSelector(state => state.aichat.threadMessages);
+  const artifactType = useAppSelector(state => state.aichat.artifactType);
 
   const dispatch = useAppDispatch();
 
@@ -113,6 +121,11 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         presetChipText,
         ...(threadId === 0 ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
+        ...(artifactType &&
+        experiments.isEnabled(experiments.AI_ARTIFACT) &&
+        !isPreset
+          ? {artifactType}
+          : {}),
       });
 
       HttpClient.post(endpoint, body, true, {
@@ -162,6 +175,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       dispatch,
       threadFetchCallback,
       chatResponseCallback,
+      artifactType,
     ]
   );
 
@@ -209,6 +223,12 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       }
       if (!prompt.followUpPrompts && !prompt.response) {
         getAIResponse(prompt.prompt, true, prompt.label);
+      }
+      if (prompt === EXIT_TICKET_PROMPT) {
+        dispatch(setArtifactType(AiDiffArtifactType.EXIT_TICKET));
+      }
+      if (prompt === LESSON_HOOK_PROMPT) {
+        dispatch(setArtifactType(AiDiffArtifactType.LESSON_HOOK));
       }
     },
     [dispatch, getAIResponse, threadTitle]
