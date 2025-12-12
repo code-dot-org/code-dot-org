@@ -44,6 +44,8 @@ class AichatChannel < ApplicationCable::Channel
     )
     request_id = request.id
 
+    broadcast_to_stream(stream_id, {event: 'start', request_id: request_id})
+
     user_toxicity = AichatSafetyHelper.find_toxicity(user_text, level_id, 'User')
     if user_toxicity
       request.update!(
@@ -52,8 +54,6 @@ class AichatChannel < ApplicationCable::Channel
       )
       return broadcast_error(stream_id, STATUS[:USER_PROFANITY], request_id, user_toxicity)
     end
-
-    broadcast_to_stream(stream_id, {event: 'start', request_id: request_id})
 
     current_seq_id = 0
 
@@ -121,15 +121,11 @@ class AichatChannel < ApplicationCable::Channel
   private def broadcast_error(stream_id, code, request_id = nil, details = nil)
     payload = {event: 'error', code: code, details: details, request_id: request_id}
 
-    if stream_id.present?
-      broadcast_to_stream(stream_id, payload)
-    else
-      AichatChannel.broadcast_to(current_user, payload)
-    end
+    broadcast_to_stream(stream_id, payload)
   end
 
   private def handle_stream_delta(stream_id, delta, raw_event, request_id, seq_id)
-    return if delta.nil?
+    return if delta.nil? || delta == ''
     broadcast_to_stream(stream_id, {event: 'delta', text: delta, raw_event: raw_event, request_id: request_id, seq: seq_id})
   end
 

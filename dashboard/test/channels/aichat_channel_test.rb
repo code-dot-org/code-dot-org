@@ -49,7 +49,10 @@ class AichatChannelTest < ActionCable::Channel::TestCase
     stream = stream_name
     perform :request_completion, streaming_payload
 
-    assert_equal [{event: 'error', code: STATUS[:USER_PROFANITY], details: toxicity, request_id: 456}], parsed_broadcasts(stream)
+    assert_equal [
+      {event: 'start', request_id: 456},
+      {event: 'error', code: STATUS[:USER_PROFANITY], details: toxicity, request_id: 456}
+    ], parsed_broadcasts(stream)
   end
 
   test 'broadcasts error when model output is toxic' do
