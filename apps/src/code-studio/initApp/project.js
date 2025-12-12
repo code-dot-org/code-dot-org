@@ -1144,6 +1144,10 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+                {name: 'AppName', value: this.getStandaloneApp()},
+                {name: 'SaveType', value: 'sources'},
+              ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
@@ -1175,6 +1179,9 @@ var projects = (module.exports = {
           currentSourceVersionId = response.versionId;
           replaceCurrentSourceVersion = !forceNewVersion;
           current.migratedToS3 = true;
+          MetricsReporter.incrementCounter('LegacyLab.ProjectSaveSuccess', [
+            {name: 'AppName', value: this.getStandaloneApp()},
+          ]);
 
           // Normally, reduceChannelUpdates is false and we update the channel
           // metadata every time source code is saved. When in emergency mode,
