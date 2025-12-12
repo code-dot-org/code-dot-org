@@ -73,7 +73,9 @@ describe('Slider Component', () => {
     renderComponent({isRtl: true});
 
     const slider = screen.getByRole('slider');
-    expect(slider).toHaveStyle('background: linear-gradient(to left,');
+    expect(slider).toHaveStyle({
+      background: expect.stringContaining('linear-gradient(to left'),
+    });
   });
 
   it('buttons increment and decrement value correctly', async () => {
@@ -110,7 +112,9 @@ describe('Slider Component', () => {
     renderComponent({color: 'brand'});
 
     const slider = screen.getByRole('slider');
-    expect(slider).toHaveStyle('background: linear-gradient(to right,');
+    expect(slider).toHaveStyle({
+      background: expect.stringContaining('linear-gradient(to right'),
+    });
   });
 
   it('supports custom minValue and maxValue', () => {

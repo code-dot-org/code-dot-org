@@ -42,12 +42,12 @@ This package is meant to prevent style fragmentation, encourage consistency, and
 
 ## Installation
 
-This package is currently available only within the Code.org monorepo. You cannot install it from npm or yarn.
+This package is currently available only within the Code.org monorepo. You cannot install it from npm, pnpm, or yarn.
 
 To link the package in development:
 
 ```bash
-yarn link @code-dot-org/component-library-styles
+pnpm link @code-dot-org/component-library-styles
 ```
 
 To use it in your project:
@@ -60,12 +60,12 @@ To use it in your project:
 
 ## Development
 
-The easiest way to develop and see changes live quickly is to run `yarn dev` command from `/frontend` directory.
+The easiest way to develop and see changes live quickly is to run `pnpm dev` command from `/frontend` directory.
 This will start the component-library and its Storybook and allow you to see changes in real-time.
 
 ```bash
 #from /frontend directory
-yarn dev
+pnpm dev
 ```
 
 ## Usage
@@ -642,11 +642,11 @@ themes on the fly and access the current theme in your components.
 Run linting:
 
 ```bash
-yarn lint
+pnpm lint
 
-yarn lint:fix
+pnpm lint:fix
 
-yarn prettier:fix
+pnpm prettier:fix
 ```
 
 ## Contributing

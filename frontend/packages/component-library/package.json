@@ -15,7 +15,9 @@
     "directory": "frontend/packages/component-library"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./accordion": {
@@ -392,9 +394,9 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
-    "start": "yarn dev",
+    "start": "pnpm dev",
     "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
+    "stylelint:fix": "pnpm run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
@@ -423,8 +425,8 @@
     "@types/jest": "^29.5.14",
     "@types/lodash": "^4",
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "classnames": "^2.5.1",
     "clean-package": "^2.2.0",
     "esbuild-sass-plugin": "^3.3.1",
@@ -437,8 +439,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.49",
     "postcss-modules": "^6.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",

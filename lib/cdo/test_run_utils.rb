@@ -218,7 +218,7 @@ module TestRunUtils
     Dir.chdir(frontend_dir) do
       ChatClient.wrap('frontend tests') do
         # Only run frontend tests that are relevant to `code-dot-org/apps`
-        RakeUtils.system_stream_output 'yarn test --filter @code-dot-org/component-library'
+        RakeUtils.system_stream_output 'pnpm test --filter @code-dot-org/component-library'
       end
     end
   end
