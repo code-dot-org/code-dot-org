@@ -2,7 +2,6 @@ import {createConsumer} from '@rails/actioncable';
 
 import {AiDiffNotification} from '@cdo/apps/aiDifferentiation/notifications/types';
 
-// ActionCable types for WebSocket notifications
 interface TeacherNotificationMessage {
   type: string;
   notification: AiDiffNotification;
@@ -10,8 +9,7 @@ interface TeacherNotificationMessage {
 
 export interface WebSocketOptions {
   onNewNotification?: () => void;
-  onConnected?: () => void;
-  onDisconnected?: () => void;
+  timeoutMs?: number;
 }
 
 /**
@@ -23,13 +21,8 @@ export function createTeacherNotificationSubscription(
   options: WebSocketOptions = {}
 ): (() => void) | null {
   try {
-    const {
-      onNewNotification,
-      onConnected = () =>
-        console.log('Connected to TeacherNotificationChannel'),
-      onDisconnected = () =>
-        console.log('Disconnected from TeacherNotificationChannel'),
-    } = options;
+    // Default to 30 min timeout, so we don't clog resources with stale connections
+    const {onNewNotification, timeoutMs = 30 * 60 * 1000} = options;
 
     const consumer = createConsumer();
 
@@ -37,21 +30,13 @@ export function createTeacherNotificationSubscription(
       'TeacherNotificationChannel',
       {
         connected() {
-          onConnected();
-        },
-
-        disconnected() {
-          onDisconnected();
+          setTimeout(() => {
+            this.unsubscribe();
+          }, timeoutMs);
         },
 
         received(data: TeacherNotificationMessage) {
-          console.log(
-            'Received teacher notification from TeacherNotificationChannel:',
-            data
-          );
-
           if (data.type === 'new_notification' && onNewNotification) {
-            console.log('New notification received via WebSocket');
             onNewNotification();
           }
         },

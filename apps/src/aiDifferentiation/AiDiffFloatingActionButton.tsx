@@ -126,10 +126,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           setUnreadNotificationCount(prevCount =>
             prevCount === 'loading' ? prevCount : prevCount + 1
           ),
-        onConnected: () =>
-          console.log(
-            'Connected to TeacherNotificationChannel for badge updates'
-          ),
       });
 
       return unsubscribe || undefined;
