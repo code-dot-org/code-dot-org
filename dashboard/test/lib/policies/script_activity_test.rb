@@ -4,7 +4,6 @@ class Policies::ScriptActivityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    create(:level, name: 'collision')
     @user = create(:user)
     @script = create(:script, :in_single_unit_course)
     @lesson_group = create(:lesson_group, script: @script)

@@ -5,7 +5,6 @@ module Pd::Foorm
     self.use_transactional_test_case = true
 
     setup_all do
-      create(:level, name: 'collision')
       @form = create(:foorm_form_csf_intro_post_survey)
     end
     teardown_all {@form.delete}

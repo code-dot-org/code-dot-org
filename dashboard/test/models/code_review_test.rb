@@ -4,7 +4,6 @@ class CodeReviewTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    create(:level, name: 'collision')
     @project_owner = create(:student)
     @project = create(:project, owner: @project_owner)
     @channel_id = @project.channel_id

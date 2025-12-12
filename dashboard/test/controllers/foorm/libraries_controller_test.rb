@@ -5,7 +5,6 @@ module Foorm
     self.use_transactional_test_case = true
 
     setup_all do
-      create(:level, name: 'collision')
       @levelbuilder = create(:levelbuilder)
     end
 

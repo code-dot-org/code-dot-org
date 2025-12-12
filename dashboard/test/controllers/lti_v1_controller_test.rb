@@ -12,7 +12,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   self.use_transactional_test_case = true
 
   setup_all do
-    create(:level, name: 'collision')
     @integration = create(:lti_integration)
     @deployment_id = SecureRandom.uuid
     @key = SecureRandom.alphanumeric 10

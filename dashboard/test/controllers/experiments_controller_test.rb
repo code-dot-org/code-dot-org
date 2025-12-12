@@ -4,7 +4,6 @@ class ExperimentsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    create(:level, name: 'collision')
     @pilot = create(:pilot, allow_joining_via_url: true)
     @pilot_name = @pilot.name
   end

@@ -7,7 +7,6 @@ module Pd::SurveyPipeline
     self.use_transactional_test_case = true
 
     setup_all do
-      create(:level, name: 'collision')
       # All combinations of (a, b, c) which each value could be 0 or 1.
       @data = [
         {a: 0, b: 0, c: 0},

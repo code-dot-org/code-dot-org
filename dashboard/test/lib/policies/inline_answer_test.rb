@@ -4,7 +4,6 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    create(:level, name: 'collision')
     @authorized_teacher = create(:authorized_teacher)
     @teacher = create(:teacher)
     @student = create(:student)
