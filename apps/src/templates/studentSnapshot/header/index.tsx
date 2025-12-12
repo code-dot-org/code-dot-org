@@ -71,15 +71,38 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  // Find next and previous students based on position
+  let currentStudentIndex = -1;
+  let previousStudent = null;
+  let nextStudent = null;
+  if (selectedStudents && Array.isArray(selectedStudents) && selectedStudent) {
+    currentStudentIndex = selectedStudents.findIndex(
+      student => student.id === selectedStudent.id
+    );
+    previousStudent =
+      currentStudentIndex > 0
+        ? selectedStudents[currentStudentIndex - 1]
+        : null;
+    nextStudent =
+      currentStudentIndex >= 0 &&
+      currentStudentIndex < selectedStudents.length - 1
+        ? selectedStudents[currentStudentIndex + 1]
+        : null;
+  }
+
   const handlePreviousStudent = () => {
-    alert('Previous student clicked!');
+    if (previousStudent) {
+      setSelectedStudentId(previousStudent.id);
+    }
   };
 
   const handleNextStudent = () => {
-    alert('Next student clicked!');
+    if (nextStudent) {
+      setSelectedStudentId(nextStudent.id);
+    }
   };
-
-  const {selectedStudents} = useAppSelector(state => state.teacherSections);
 
   React.useEffect(() => {
     if (selectedStudents.length > 0 && selectedStudent === undefined) {
@@ -161,11 +184,13 @@ const Header: React.FC<HeaderProps> = ({
             onClick={handlePreviousStudent}
             color="gray"
             type="secondary"
+            disabled={!previousStudent || !selectedStudents?.length}
           />
           <Button
             className={styles.button}
             text="Next student >"
             onClick={handleNextStudent}
+            disabled={!nextStudent || !selectedStudents?.length}
           />
         </div>
       </div>
