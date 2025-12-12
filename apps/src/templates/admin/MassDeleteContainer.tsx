@@ -266,7 +266,7 @@ const MassDeleteContainer: React.FC = () => {
 
   const openingDirections = (
     <div>
-      <h1>Mass Delete Student Progress</h1>
+      <h1>Mass Delete Student Progress - NOT READY FOR USE YET</h1>
       <p className={styles.strongWarning}>
         Warning:Using this tool will permanently delete student progress. Use
         with caution.
