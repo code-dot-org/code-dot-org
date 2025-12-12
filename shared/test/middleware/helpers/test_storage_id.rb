@@ -138,7 +138,14 @@ class StorageIdTest < Minitest::Test
     storage_id = 123
     project_id = 456
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: nil)
-    Project.stubs(:find_by).with(id: project_id).returns(mock_project)
+
+    # Create mock constants without defining classes
+    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
+
+    # Stub Projects.table.where(...)
+    projects_table = mock
+    Projects.stubs(:table).returns(projects_table)
+    projects_table.stubs(:where).with(id: project_id).returns([mock_project])
 
     encrypted = get_project_channel_id(storage_id, project_id)
     assert encrypted.is_a?(String)
@@ -152,7 +159,7 @@ class StorageIdTest < Minitest::Test
     # Test with project with UUID - should return UUID directly
     uuid = SecureRandom.uuid
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
-    Project.stubs(:find_by).with(id: project_id).returns(mock_project)
+    projects_table.stubs(:where).with(id: project_id).returns([mock_project])
 
     result = get_project_channel_id(storage_id, project_id)
     assert_equal uuid, result
@@ -165,7 +172,14 @@ class StorageIdTest < Minitest::Test
 
     # uuid-based decryption
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
-    Project.stubs(:find_by).with(uuid: uuid).returns(mock_project)
+
+    # Create mock constants without defining classes
+    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
+
+    # Stub Projects.table.where(...)
+    projects_table = mock
+    Projects.stubs(:table).returns(projects_table)
+    projects_table.stubs(:where).with(uuid: uuid).returns([mock_project])
 
     storage_id_out, project_id_out = get_storage_id_and_project_id(uuid)
     assert_equal storage_id, storage_id_out
