@@ -5,7 +5,6 @@ import React, {Component} from 'react';
 import commonMsg from '@cdo/locale';
 
 import styles from './StudentFilterDropdown.module.scss';
-import classNames from 'classnames';
 
 export const ALL_STUDENTS = '_all_students';
 
