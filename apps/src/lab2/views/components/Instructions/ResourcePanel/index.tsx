@@ -321,8 +321,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       if (panelContent) {
         // Use setTimeout to ensure the panel is rendered and visible before focusing.
         const timeoutId = setTimeout(() => {
-          // Find the first focusable element in the panel.
-          const focusableElement = findFirstFocusableElement(panelContent);
+          const focusableElement =
+            currentTab === Tabs.AiTutor
+              ? panelContent.querySelector<HTMLTextAreaElement>(
+                  '#uitest-chat-textarea'
+                )
+              : findFirstFocusableElement(panelContent);
           if (focusableElement) {
             focusableElement.focus();
           } else {
