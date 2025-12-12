@@ -3,7 +3,6 @@ class AichatOpenaiResponsesClient < AichatAiClient
   require 'net/http'
 
   # Stream an ai response, yielding each parsed event to the provided block.
-  # UNTESTED, needs manual testing
   def stream_response(config, request, context = [], &block)
     AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
     AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
@@ -30,7 +29,8 @@ class AichatOpenaiResponsesClient < AichatAiClient
           next if data.empty? || data == "[DONE]"
           begin
             parsed = JSON.parse(data)
-            block&.call(parsed)
+            text_delta = extract_text_from_event(parsed)
+            block&.call(text_delta) if text_delta.present?
           rescue JSON::ParserError
             next
           end
@@ -40,6 +40,21 @@ class AichatOpenaiResponsesClient < AichatAiClient
   rescue Net::ReadTimeout
     raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
   end
+
+  private def extract_text_from_event(event)
+    case event['type']
+    when 'response.output_text.delta'
+      return event['delta'] if event['delta'].is_a?(String)
+      return event.dig('delta', 'content') if event['delta'].is_a?(Hash)
+    end
+
+    if event.key?('choices')
+      return event.dig('choices', 0, 'delta', 'content')
+    end
+
+    nil
+  end
+
   # The url to send with the post request
   private def url
     "https://api.openai.com/v1/responses"
