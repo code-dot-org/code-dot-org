@@ -11,7 +11,7 @@ const PageNotFound = () => {
       <CodebridgeEmptyState
         imageProps={{src: pageNotFoundImage}}
         title="Page not found"
-        description="The file you're trying to preview doesn't exist. Check the file name or open a different page."
+        description="The page you're trying to preview doesn't exist."
       />
     </div>
   );
