@@ -18,7 +18,7 @@ export default class WorkspaceAlert extends React.Component {
     var toolbarWidth;
     if (isBlockly) {
       // use the toolbox header's width to get the width of the actual toolbox.
-      toolbarWidth = $('#toolbox-header').width();
+      toolbarWidth = document.getElementById('toolbox-header').offsetWidth;
     } else {
       toolbarWidth =
         $('.droplet-palette-element').width() + $('.droplet-gutter').width();
