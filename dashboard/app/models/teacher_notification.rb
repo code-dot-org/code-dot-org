@@ -53,7 +53,6 @@ class TeacherNotification < ApplicationRecord
   end
 
   private def broadcast_notification
-    pp 'lfm created notification broadcast'
     if DCDO.get('ai-lesson-summaries-notifications-enabled', false)
       TeacherNotificationChannel.send_notification(user_id, self)
     end
