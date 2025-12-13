@@ -13,7 +13,6 @@ import {
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
 import PageNotFound from './PageNotFound';
-import PreviewEmptyState from './PreviewEmptyState';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 const NOT_FOUND_FILE = 'NOT_FOUND';
@@ -173,11 +172,9 @@ const InnerHTMLPreview = () => {
     }
   }, [parentOrigin, source]);
 
-  const projectHasFiles = Object.keys(filesToBlobs).length > 0;
-
   const getPreview = useCallback(() => {
     if (blobUrl === NOT_FOUND_FILE) {
-      return projectHasFiles ? <PageNotFound /> : <PreviewEmptyState />;
+      return <PageNotFound />;
     } else if (blobUrl) {
       return (
         <iframe
@@ -198,7 +195,7 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [blobUrl, allowScripts, projectHasFiles]);
+  }, [blobUrl, allowScripts]);
 
   return getPreview();
 };
