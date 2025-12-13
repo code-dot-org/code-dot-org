@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useState, useEffect} from 'react';
 
 import {
   MultiFileSource,
@@ -16,6 +16,7 @@ interface CodeWidgetProps {
   widgetName?: string;
   gridWidth?: number;
   gridHeight?: number;
+  loading?: boolean;
 }
 
 const CodeWidget: React.FC<CodeWidgetProps> = ({
@@ -23,6 +24,7 @@ const CodeWidget: React.FC<CodeWidgetProps> = ({
   widgetName = 'Code',
   gridWidth = 2,
   gridHeight = 2,
+  loading,
 }) => {
   const [theme, setTheme] = useState<'Light' | 'Dark'>('Light');
 
@@ -35,11 +37,13 @@ const CodeWidget: React.FC<CodeWidgetProps> = ({
 
   const [selectedFileId, setSelectedFileId] = useState<string>('');
 
-  React.useEffect(() => {
-    if (projectFiles.length > 0 && !selectedFileId) {
+  useEffect(() => {
+    if (projectFiles.length > 0) {
       setSelectedFileId(projectFiles[0].id);
+    } else {
+      setSelectedFileId('');
     }
-  }, [projectFiles, selectedFileId]);
+  }, [projectFiles]);
 
   const themeOptions = [
     {
@@ -65,6 +69,7 @@ const CodeWidget: React.FC<CodeWidgetProps> = ({
       gridHeight={gridHeight}
       scrollable={true}
       settingsOptions={themeOptions}
+      loading={loading}
     >
       <div data-theme={theme} className={styles.workspaceContainer}>
         <Workspace

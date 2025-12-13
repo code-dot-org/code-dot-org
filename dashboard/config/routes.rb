@@ -1180,7 +1180,8 @@ Dashboard::Application.routes.draw do
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do
-        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get 'units/:unit_id/lessons', action: :lessons # GET /student_snapshots/unit/{unit_id}/lessons
+        get 'lessons/:lesson_id/data', action: :lesson_data # GET /student_snapshots/lessons/{lesson_id}/data
       end
     end
 
