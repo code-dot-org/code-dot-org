@@ -18,44 +18,63 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     DCDO.stubs(:get).with('openai_http_open_timeout', 5).returns(5)
     DCDO.stubs(:get).with('openai_http_read_timeout', 30).returns(30)
 
-    @successful_openai_response = {
+    @system_prompt = "Test system prompt for lesson #{@lesson.id}"
+    @lesson_summary = {
+      learning_objective: "Students will learn variables",
+      lesson_beats: ["Introduction, practice, assessment"],
+      misconceptions: ["Variables are boxes"],
+      tips: ["Use concrete examples"]
+    }.to_json
+    @podcast_script = "Test podcast script."
+
+    @brief_text_successful_openai_response = {
+      choices: [{
+        message: {
+          content: @lesson_summary
+        }
+      }]
+    }.to_json
+    @podcast_script_successful_openai_response = {
       choices: [{
         message: {
           content: {
-            learning_objective: "Students will learn variables",
-            lesson_beats: ["Introduction, practice, assessment"],
-            misconceptions: ["Variables are boxes"],
-            tips: ["Use concrete examples"]
+            podcast_script: @podcast_script
           }.to_json
         }
       }]
     }.to_json
-
-    @system_prompt = "Test system prompt for lesson #{@lesson.id}"
 
     # Mock the system prompt helper
     AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
       with(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
     AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
       with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
+    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
+      with(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).returns(@system_prompt)
+    AiSystemPrompts::LessonSummariesSystemPromptHelper.stubs(:get_system_prompt).
+      with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).returns(@system_prompt)
+  end
+
+  teardown do
+    AiLessonSummary.where(user_id: @user.id).destroy_all
   end
 
   # *****
-  # get_ai_lesson_summary tests
+  # generate_lesson_summary tests
   # *****
 
-  test "get_ai_lesson_summary returns successful response when API call succeeds" do
+  test "generate_lesson_summary returns successful response when API call succeeds" do
     # Mock successful HTTP response
     mock_response = mock('response')
     mock_response.stubs(:code).returns(200)
-    mock_response.stubs(:body).returns(@successful_openai_response)
+    mock_response.stubs(:body).returns(@brief_text_successful_openai_response)
 
     # Mock the Client class
     mock_client = mock('client')
     mock_client.expects(:request_lesson_summary).with(@system_prompt, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(mock_response)
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
-    result = AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    result = AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
 
     expected_content = {
       learning_objective: "Students will learn variables",
@@ -68,7 +87,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     assert_equal expected_content, result[:json]
   end
 
-  test "get_ai_lesson_summary returns error status when API call fails" do
+  test "generate_lesson_summary returns error status when API call fails" do
     # Mock failed HTTP response
     error_response = {error: "API limit exceeded"}.to_json
     mock_response = mock('response')
@@ -81,15 +100,15 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     AiLessonSummariesHelper::Client.expects(:new).returns(mock_client)
 
     assert_raises(StandardError) do
-      AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
     end
   end
 
-  test "get_ai_lesson_summary gets system prompt from helper" do
+  test "generate_lesson_summary gets system prompt from helper" do
     # Mock HTTP response
     mock_response = mock('response')
     mock_response.stubs(:code).returns(200)
-    mock_response.stubs(:body).returns(@successful_openai_response)
+    mock_response.stubs(:body).returns(@brief_text_successful_openai_response)
 
     # Mock the Client class
     mock_client = mock('client')
@@ -99,16 +118,16 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     AiSystemPrompts::LessonSummariesSystemPromptHelper.expects(:get_system_prompt).
       with(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).returns(@system_prompt)
 
-    AiLessonSummariesHelper.get_ai_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    AiLessonSummariesHelper.generate_lesson_summary(@lesson.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
   end
 
   # *****
   # retrieve_and_save_ai_lesson_summary tests
   # *****
 
-  test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds" do
+  test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds for brief text summary response" do
     # Mock successful API response
-    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
       returns({status: 200, json: "Generated lesson summary"})
 
     assert_difference 'AiLessonSummary.count', 1 do
@@ -121,9 +140,9 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     assert_equal "Generated lesson summary", created_summary.lesson_summary
   end
 
-  test "retrieve_and_save_ai_lesson_summary does not create AiLessonSummary when API call fails" do
+  test "retrieve_and_save_ai_lesson_summary does not create AiLessonSummary when API call fails for brief text summary response" do
     # Mock failed API response
-    AiLessonSummariesHelper.expects(:get_ai_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY]).
       returns({status: 500, json: "Internal server error"})
 
     assert_no_difference 'AiLessonSummary.count' do
@@ -131,11 +150,11 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     end
   end
 
-  test "Retrieve_and_save creates record with actual API response structure" do
+  test "retrieve_and_save_ai_lesson_summary creates record with actual API response structure for brief text summary response" do
     # Mock the full chain
     mock_response = mock('response')
     mock_response.stubs(:code).returns(200)
-    mock_response.stubs(:body).returns(@successful_openai_response)
+    mock_response.stubs(:body).returns(@brief_text_successful_openai_response)
 
     HTTParty.stubs(:post).returns(mock_response)
 
@@ -150,6 +169,123 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     assert_equal ["Introduction, practice, assessment"], summary_data['lesson_beats']
     assert_equal ["Variables are boxes"], summary_data['misconceptions']
     assert_equal ["Use concrete examples"], summary_data['tips']
+  end
+
+  test "retrieve_and_save_ai_lesson_summary creates AiLessonSummary when API call succeeds for podcast script response" do
+    # Mock the full chain
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns(@podcast_script_successful_openai_response)
+
+    HTTParty.stubs(:post).returns(mock_response)
+
+    assert_difference 'AiLessonSummary.count', 1 do
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    end
+
+    created_summary = AiLessonSummary.last
+    assert_equal @user.id, created_summary.user_id
+    assert_equal @lesson.id, created_summary.lesson_id
+    assert_equal @podcast_script, created_summary.script
+  end
+
+  test "retrieve_and_save_ai_lesson_summary does not create AiLessonSummary when API call fails for podcast script response" do
+    # Mock failed API response
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).with(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]).
+      returns({status: 500, json: "Internal server error"})
+
+    assert_no_difference 'AiLessonSummary.count' do
+      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    end
+  end
+
+  test "retrieve_and_save_ai_lesson_summary returns existing AiLessonSummary with brief text summary for request of brief text summary response" do
+    AiLessonSummary.create!(user_id: @user.id, lesson_id: @lesson.id, lesson_summary: @lesson_summary)
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).never
+
+    brief_text_lesson_summary = nil
+    assert_no_difference 'AiLessonSummary.count' do
+      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    end
+
+    assert_equal @user.id, brief_text_lesson_summary.user_id
+    assert_equal @lesson.id, brief_text_lesson_summary.lesson_id
+    assert_equal @lesson_summary, brief_text_lesson_summary.lesson_summary
+  end
+
+  test "retrieve_and_save_ai_lesson_summary returns existing AiLessonSummary with podcast script for request of podcast script response" do
+    AiLessonSummary.create!(user_id: @user.id, lesson_id: @lesson.id, script: @podcast_script)
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).never
+
+    podcast_script_lesson_summary = nil
+    assert_no_difference 'AiLessonSummary.count' do
+      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    end
+
+    assert_equal @user.id, podcast_script_lesson_summary.user_id
+    assert_equal @lesson.id, podcast_script_lesson_summary.lesson_id
+    assert_equal @podcast_script, podcast_script_lesson_summary.script
+  end
+
+  test "retrieve_and_save_ai_lesson_summary returns existing AiLessonSummary with both brief text summary and podcast script for request of either" do
+    AiLessonSummary.create!(user_id: @user.id, lesson_id: @lesson.id, lesson_summary: @lesson_summary, script: @podcast_script)
+    AiLessonSummariesHelper.expects(:generate_lesson_summary).never
+
+    brief_text_lesson_summary = nil
+    podcast_script_lesson_summary = nil
+    assert_no_difference 'AiLessonSummary.count' do
+      brief_text_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      podcast_script_lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    end
+
+    assert_equal @user.id, brief_text_lesson_summary.user_id
+    assert_equal @lesson.id, brief_text_lesson_summary.lesson_id
+    assert_equal @lesson_summary, brief_text_lesson_summary.lesson_summary
+    assert_equal @user.id, podcast_script_lesson_summary.user_id
+    assert_equal @lesson.id, podcast_script_lesson_summary.lesson_id
+    assert_equal @podcast_script, podcast_script_lesson_summary.script
+  end
+
+  test "retrieve_and_save_ai_lesson_summary updates existing AiLessonSummary with brief text summary for request of podcast script response" do
+    # Mock the full chain
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns(@podcast_script_successful_openai_response)
+
+    HTTParty.stubs(:post).returns(mock_response)
+
+    AiLessonSummary.create!(user_id: @user.id, lesson_id: @lesson.id, lesson_summary: @lesson_summary)
+
+    lesson_summary = nil
+    assert_no_difference 'AiLessonSummary.count' do
+      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    end
+
+    assert_equal @user.id, lesson_summary.user_id
+    assert_equal @lesson.id, lesson_summary.lesson_id
+    assert_equal @lesson_summary, lesson_summary.lesson_summary
+    assert_equal @podcast_script, lesson_summary.script
+  end
+
+  test "retrieve_and_save_ai_lesson_summary updates existing AiLessonSummary with podcast script for request of brief text summary response" do
+    # Mock the full chain
+    mock_response = mock('response')
+    mock_response.stubs(:code).returns(200)
+    mock_response.stubs(:body).returns(@brief_text_successful_openai_response)
+
+    HTTParty.stubs(:post).returns(mock_response)
+
+    AiLessonSummary.create!(user_id: @user.id, lesson_id: @lesson.id, script: @podcast_script)
+
+    lesson_summary = nil
+    assert_no_difference 'AiLessonSummary.count' do
+      lesson_summary = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(@lesson.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    end
+
+    assert_equal @user.id, lesson_summary.user_id
+    assert_equal @lesson.id, lesson_summary.lesson_id
+    assert_equal @lesson_summary, lesson_summary.lesson_summary
+    assert_equal @podcast_script, lesson_summary.script
   end
 
   # *****

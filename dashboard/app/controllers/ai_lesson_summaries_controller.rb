@@ -3,32 +3,35 @@ class AiLessonSummariesController < ApplicationController
 
   # GET /ai_lesson_summaries/show?lesson_id=2
   def show
-    @ai_lesson_summary = AiLessonSummary.find_by(
+    @ai_lesson_summary = AiLessonSummary.where(
       user_id: current_user.id,
       lesson_id: params[:lesson_id]
-    )
+    ).where.not(lesson_summary: nil)&.first
 
     if @ai_lesson_summary
       render json: @ai_lesson_summary.as_json(include: :lesson)
     else
-      render json: {error: 'AI lesson summary not found'}, status: :not_found
+      render json: {error: 'AI brief text lesson summary not found'}, status: :not_found
     end
   end
 
   # GET /ai_lesson_summaries/ai_lesson_summary_podcast_script?lesson_id=2
   def ai_lesson_summary_podcast_script
-    podcast_script_json = AiLessonSummariesHelper.get_ai_lesson_summary(params[:lesson_id], current_user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])
+    podcast_script_json = AiLessonSummary.where(
+      user_id: current_user.id,
+      lesson_id: params[:lesson_id]
+    ).where.not(script: nil)&.first
 
     if podcast_script_json
       begin
-        pre_processed_script = JSON.parse(podcast_script_json[:json])['podcast_script']
-        processed_podcast_script = clean_up_podcast_script_response(pre_processed_script)
+        # Replace quotes and apostrophes with single tick quotes, and replace all newlines and double spaces with a single space
+        processed_podcast_script = podcast_script_json.script&.gsub(/\"|\’/, "'")&.squish
         render json: {podcast_script: processed_podcast_script}
       rescue => exception
         render json: {error: "Error parsing podcast script response: #{exception}"}, status: :internal_server_error
       end
     else
-      render json: {error: 'Failure to generate transcript'}, status: :internal_server_error
+      render json: {error: 'AI lesson summary podcast script not found'}, status: :not_found
     end
   end
 
@@ -60,10 +63,5 @@ class AiLessonSummariesController < ApplicationController
 
   private def ai_lesson_summary_params
     params.transform_keys(&:underscore).permit(:lesson_id, :unit_id, :lesson_summary)
-  end
-
-  private def clean_up_podcast_script_response(podcast_script_response)
-    replaced_newlines = podcast_script_response.gsub("\n\n", " ")
-    replaced_newlines.gsub(/\"|\’/, "'").squish
   end
 end

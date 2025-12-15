@@ -1,6 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
+import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
@@ -32,15 +33,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   }, [dispatch, files]);
 
   return (
-    <>
-      <ul className={moduleStyles.fileList}>
+    <div className={moduleStyles.container}>
+      <div className={moduleStyles.fileList}>
         {files.map(file => (
-          <li key={file.id} className={moduleStyles.fileItem}>
-            {file.name}{' '}
-            {file.isAiTutorVersionUpdated ? '(File update)' : '(New file)'}
-          </li>
+          <AiTutorVersionFileChip key={file.id} file={file} />
         ))}
-      </ul>
+      </div>
       <div className={moduleStyles.buttonContainer}>
         <Button
           text="Reject"
@@ -53,6 +51,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             title: 'Reject',
           }}
           onClick={handleReject}
+          className={moduleStyles.actionButton}
         />
         <Button
           text="Accept"
@@ -65,9 +64,10 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             title: 'Accept',
           }}
           onClick={handleAccept}
+          className={moduleStyles.actionButton}
         />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext'
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {selectIsWaitingForChatResponse} from '../redux';
 import {ChatAsset, ChatEvent, isChatMessage} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
@@ -35,7 +36,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
-    state => !!state.aichat.chatMessagePending
+    selectIsWaitingForChatResponse
   );
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
@@ -178,6 +179,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         moduleStyles.scrollToBottomContainer
       )}
     >
+      {showScrollToBottom && (
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
+          <Button
+            isIconOnly
+            icon={{iconName: 'arrow-down'}}
+            size="xs"
+            color="black"
+            type="secondary"
+            onClick={() => scrollToLastMessage()}
+            className={moduleStyles.scrollToBottomButton}
+            ariaLabel="Scroll to bottom of messages"
+            aria-controls="chat-workspace-conversation"
+          />
+        </div>
+      )}
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {chatDisabled ? (
           <ChatDisabled message={chatDisabledMessage} />
@@ -208,19 +224,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           </>
         )}
       </div>
-      {showScrollToBottom && (
-        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
-          <Button
-            isIconOnly
-            icon={{iconName: 'arrow-down'}}
-            size="xs"
-            color="black"
-            type="secondary"
-            onClick={() => scrollToLastMessage()}
-            className={moduleStyles.scrollToBottomButton}
-          />
-        </div>
-      )}
     </div>
   );
 };

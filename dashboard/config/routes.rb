@@ -569,7 +569,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :vocabularies, only: [:create, :update] do
+    resources :vocabularies, only: [:create, :update, :destroy] do
       collection do
         get :search
       end
@@ -1177,6 +1177,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Routes used for the Student Snapshot page on the teacher dashboard
+    resources :student_snapshots, only: [] do
+      collection do
+        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+      end
+    end
+
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
@@ -1277,6 +1285,9 @@ Dashboard::Application.routes.draw do
     resources :code_review_comments, only: [:create, :update, :destroy]
 
     resources :rubrics, only: [:create, :edit, :new, :update, :show] do
+      collection do
+        get 'find' # GET /rubrics/find?lesson_id=X&level_id=Y
+      end
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
@@ -1319,6 +1330,8 @@ Dashboard::Application.routes.draw do
     post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
+    get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
@@ -1340,6 +1353,11 @@ Dashboard::Application.routes.draw do
         post :chat_completion
       end
     end
+
+    resources :aidiff_artifacts, only: [:index]
+
+    resources :aidiff_exit_tickets, only: [:index, :update, :create]
+    resources :aidiff_lesson_hooks, only: [:index, :update, :create]
 
     resources :aidiff_messages, only: [] do
       member do

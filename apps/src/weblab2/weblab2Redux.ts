@@ -6,9 +6,14 @@ import {ProjectFile} from '../lab2/types';
 
 import {ViewMode} from './types';
 
+export type AiFilePathToPreview = {
+  path: string;
+  timestamp: number;
+};
+
 export type Weblab2State = {
   viewMode: ViewMode;
-  aiFilePathToPreview: string | undefined;
+  aiFilePathToPreview: AiFilePathToPreview | undefined;
   aiTutorVersionFiles: ProjectFile[] | undefined;
 };
 
@@ -27,7 +32,7 @@ const weblab2Slice = createSlice({
     },
     setAiFilePathToPreview: (
       state,
-      action: PayloadAction<string | undefined>
+      action: PayloadAction<AiFilePathToPreview | undefined>
     ) => {
       state.aiFilePathToPreview = action.payload;
     },
