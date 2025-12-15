@@ -3,15 +3,16 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState} from 'react';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
+import {Student} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import LessonSelector, {
   LessonOption,
 } from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {Student} from '../../progress/progressTypes';
-
 import styles from './header.module.scss';
+
+type StudentSortKey = 'lastName' | 'firstName';
 
 interface HeaderProps {
   lessons: LessonOption[];
@@ -33,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({
   hasUnnumberedLessons = false,
 }) => {
   const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
-    useState<string>('');
+    useState<StudentSortKey>('lastName');
 
   const selectedLesson =
     lessons?.find(lesson => lesson.id === selectedLessonId) || null;
@@ -81,18 +82,34 @@ const Header: React.FC<HeaderProps> = ({
 
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
 
-  React.useEffect(() => {
-    if (selectedStudents.length > 0 && selectedStudent === undefined) {
-      setSelectedStudentId(selectedStudents[0].id);
+  const sortedStudents = React.useMemo(() => {
+    const studentsCopy = [...selectedStudents];
+
+    if (selectedShowStudentsBy === 'firstName') {
+      return studentsCopy.sort((a, b) => a.name.localeCompare(b.name));
     }
-  }, [selectedStudents, selectedStudent, setSelectedStudentId]);
+
+    // Default to sorting by last name; if familyName is not present, fall
+    // back to the student's display name.
+    return studentsCopy.sort((a, b) => {
+      const aLast = a.familyName || a.name;
+      const bLast = b.familyName || b.name;
+      return aLast.localeCompare(bLast);
+    });
+  }, [selectedStudents, selectedShowStudentsBy]);
+
+  React.useEffect(() => {
+    if (sortedStudents.length > 0 && selectedStudent === undefined) {
+      setSelectedStudentId(sortedStudents[0].id);
+    }
+  }, [sortedStudents, selectedStudent, setSelectedStudentId]);
 
   const studentOptions = React.useMemo(() => {
-    return selectedStudents.map(student => ({
+    return sortedStudents.map(student => ({
       value: student.id.toString(),
       text: getFullName(student),
     }));
-  }, [selectedStudents]);
+  }, [sortedStudents]);
 
   return (
     <div className={styles.header}>
@@ -141,7 +158,12 @@ const Header: React.FC<HeaderProps> = ({
           name="showStudentsBy"
           items={showStudentsByOptions}
           selectedValue={selectedShowStudentsBy}
-          onChange={event => setSelectedShowStudentsBy(event.target.value)}
+          onChange={event => {
+            const {value} = event.target;
+            if (value === 'lastName' || value === 'firstName') {
+              setSelectedShowStudentsBy(value);
+            }
+          }}
           placeholder="Select an option"
           className={styles.dropdown}
         />
