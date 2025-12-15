@@ -1,3 +1,6 @@
+# Any secrets set here will only be set on the chef-managed test-system.
+# In other test environments, we clear all secrets below.
+
 github_webhook_secret: !Secret
 slack_set_last_dtt_green_token: !Secret
 slack_start_build_token: !Secret
@@ -12,9 +15,9 @@ imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
 # This saves 30 seconds each time the rails environment is loaded.
 lazy_load_i18n: <%= !(running_web_application? || unit_test) %>
 
-# Disable Secrets for CI, unit-test runs,
-# and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
-<% if ci_test || !chef_managed -%>
+# Disable Secrets unless we are running the web application on the chef-managed
+# test system.
+<% unless managed_test_server? -%>
 <%= clear_secrets %>
 
 dashboard_honeybadger_api_key: '00000000'
@@ -65,7 +68,7 @@ active_job_queue_adapter: :test
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true
-use_pusher: <%=!ci_test%>
+use_pusher: <%= managed_test_server? %>
 
 # Install i18n dependencies for i18n tests
 build_i18n: true
@@ -90,7 +93,7 @@ openai_evaluate_rubric_api_key: 'stub-api-key'
 # The only type of test environment we enable Statsig is the managed test server
 # (`test.code.org / test-studio.code.org`) and only in Ruby code executing within
 # the web application server.
-<% if running_web_application? && test_system? -%>
+<% if managed_test_server? -%>
 statsig_server_secret_key: !Secret
 statsig_api_client_key: !Secret
 statsig_api_client_key_session_replay: !Secret

@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
 
@@ -47,6 +49,15 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     const filePath =
       folderPath === '' ? file.name : folderPath + '/' + file.name;
     dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+    sendLab2AnalyticsEvent(
+      EVENTS.AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED,
+      {
+        fileName: file.name,
+        fileType: file.language,
+        aiTutorVersionFileUpdated: isUpdatedFile ? 'true' : 'false',
+        aiTutorVersionFileCreated: isNewFile ? 'true' : 'false',
+      }
+    );
   };
 
   const statusText = isNewFile

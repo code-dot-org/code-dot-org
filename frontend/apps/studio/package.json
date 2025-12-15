@@ -20,14 +20,18 @@
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/music-lab": "workspace:*",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.4",
+    "@tanstack/react-router": "^1.139.14",
+    "@tanstack/react-router-devtools": "^1.139.14",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@tanstack/router-plugin": "^1.139.14",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",

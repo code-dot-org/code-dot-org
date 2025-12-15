@@ -2,9 +2,10 @@
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/colors.scss';
 
-import {ThemeProvider, Typography} from '@mui/material';
+import {ThemeProvider} from '@mui/material';
+import {createRootRoute, Outlet} from '@tanstack/react-router';
+import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 
-import {LinkButton} from '@code-dot-org/component-library/button';
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
@@ -21,7 +22,7 @@ const SIGNED_OUT_MENU_ITEMS = [
   {label: 'About', href: '/about'},
 ];
 
-function App() {
+function RootLayout() {
   return (
     <ThemeProvider theme={CdoTheme}>
       <Bootstrap locale="en-US" />
@@ -30,12 +31,11 @@ function App() {
         brandName="Code.org"
         menuItems={SIGNED_OUT_MENU_ITEMS}
       />
-      <Typography variant="body1" gutterBottom>
-        Anybody can learn!
-      </Typography>
-      <LinkButton href="https://code.org" text="Go to Code.org" />
+
+      <Outlet />
+      <TanStackRouterDevtools />
     </ThemeProvider>
   );
 }
 
-export default App;
+export const Route = createRootRoute({component: RootLayout});
