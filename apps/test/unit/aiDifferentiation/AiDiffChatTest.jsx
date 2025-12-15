@@ -1,10 +1,4 @@
-import {
-  render,
-  screen,
-  fireEvent,
-  waitFor,
-  within,
-} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -181,25 +175,20 @@ describe('AiDiffChat', () => {
     expect(message).toHaveTextContent(
       SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
     );
-    // Suggested prompts
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      5
-    );
-    screen.getByRole('button', {name: 'Give me an example'});
-    screen.getByRole('button', {name: 'Explain a concept'});
-    screen.getByRole('button', {name: 'Debug common mistakes'});
-    screen.getByRole('button', {name: 'Generate a mini lesson'});
-    screen.getByRole('button', {name: 'Write an exit ticket'});
+    //suggested prompts
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    screen.getByRole('checkbox', {name: 'Give me an example'});
+    screen.getByRole('checkbox', {name: 'Explain a concept'});
+    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
+    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
+    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
   });
 
   it('Selecting a suggested prompt gives response', async () => {
     renderDefault();
 
-    // Click a suggested prompt
-    const prompt = screen.getByRole('button', {name: 'Explain a concept'});
+    //click a suggested prompt
+    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
     fireEvent.click(prompt);
 
     const responseEventData = {
@@ -227,7 +216,7 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
 
-    // Sends the api call then logs the suggested prompt and the bot message
+    //sends the api call then logs the suggested prompt and the bot message
     await waitFor(() => {
       expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
@@ -257,7 +246,7 @@ describe('AiDiffChat', () => {
       );
     });
 
-    // Bot message should show in the chat
+    //bot message should show in the chat
     const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
     expect(message).toHaveTextContent("Beep boop I'm a bot");
   });
@@ -274,46 +263,34 @@ describe('AiDiffChat', () => {
     ];
     renderDefault(0, overrideThreadMessages);
 
-    // Click a suggested prompt
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      7
-    );
-    const prompt = screen.getByRole('button', {name: 'Create task support'});
+    //click a suggested prompt
+    expect(screen.getAllByRole('checkbox')).toHaveLength(7);
+    const prompt = screen.getByRole('checkbox', {name: 'Create task support'});
     fireEvent.click(prompt);
 
-    // Bot message should show in the chat
+    //bot message should show in the chat
     const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
     expect(message).toHaveTextContent(
       'Let’s chat about the Create Task! Here are some ideas you can ask me, or type your question below'
     );
 
-    // Second set of suggested prompts
-    // Count buttons across all groups after new prompts are added
-    const allGroups = screen.getAllByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    const totalButtons = allGroups.flatMap(group =>
-      within(group).getAllByRole('button')
-    );
-    expect(totalButtons).toHaveLength(13);
-    screen.getByRole('button', {name: 'Create Performance Task samples'});
-    screen.getByRole('button', {
+    //second set of suggested prompts
+    expect(screen.getAllByRole('checkbox')).toHaveLength(13);
+    screen.getByRole('checkbox', {name: 'Create Performance Task samples'});
+    screen.getByRole('checkbox', {
       name: 'Can teachers review student submissions?',
     });
-    screen.getByRole('button', {
+    screen.getByRole('checkbox', {
       name: 'Student collaboration on the Create Task',
     });
-    screen.getByRole('button', {name: 'AI Tools on the Create Task'});
-    screen.getByRole('button', {name: 'Can I grade the Create Task'});
-    screen.getByRole('button', {
+    screen.getByRole('checkbox', {name: 'AI Tools on the Create Task'});
+    screen.getByRole('checkbox', {name: 'Can I grade the Create Task'});
+    screen.getByRole('checkbox', {
       name: 'Resources to prepare for written responses',
     });
 
-    // Click a second step suggested prompt
-    const prompt2 = screen.getByRole('button', {
+    //click a second step suggested prompt
+    const prompt2 = screen.getByRole('checkbox', {
       name: 'Can I grade the Create Task',
     });
     fireEvent.click(prompt2);
@@ -343,7 +320,7 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
 
-    // Sends the api call then logs the suggested prompt and the bot message
+    //sends the api call then logs the suggested prompt and the bot message
     await waitFor(() => {
       expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
@@ -377,15 +354,15 @@ describe('AiDiffChat', () => {
   it('Feedback on initial message has no API call, Feedback on actual assistant messages does', async () => {
     renderDefault();
 
-    // Clicking feedback on the inital dummy message doesn't log or call api
+    //clicking feedback on the inital dummy message doesn't log or call api
     const thumbsUpBtn = screen.getByRole('button', {
       name: i18n.aiDifferentiationThumbsUp(),
     });
     fireEvent.click(thumbsUpBtn);
     expect(postStub).not.toHaveBeenCalled();
 
-    // Click a suggested prompt
-    const prompt = screen.getByRole('button', {name: 'Explain a concept'});
+    //click a suggested prompt
+    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
     fireEvent.click(prompt);
 
     const responseEventData = {
@@ -425,7 +402,7 @@ describe('AiDiffChat', () => {
       messageId: 42,
     };
 
-    // Sends the api call then logs the suggested prompt and the bot message
+    //sends the api call then logs the suggested prompt and the bot message
     await waitFor(() => {
       expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
@@ -457,11 +434,11 @@ describe('AiDiffChat', () => {
 
     jest.clearAllMocks();
 
-    // Bot message should show in the chat
+    //bot message should show in the chat
     const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
     expect(message).toHaveTextContent("Beep boop I'm a bot");
 
-    // Click thumbs up for actual chat message
+    //click thumbs up for actual chat message
     const thumbsUpBtn2 = screen.getAllByRole('button', {
       name: i18n.aiDifferentiationThumbsUp(),
     })[1];
@@ -494,13 +471,13 @@ describe('AiDiffChat', () => {
     const textbox = screen.getByRole('textbox');
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
 
-    // Submit button not enabled until there is user text
+    //submit button not enabled until there is user text
     expect(submit_btn).not.toBeEnabled();
     fireEvent.change(textbox, {target: {value: userMessage}});
     expect(submit_btn).toBeEnabled();
     fireEvent.click(submit_btn);
 
-    // After click, but before server response, user message editor should be disabled
+    //After click, but before server response, user message editor should be disabled
     expect(submit_btn).not.toBeEnabled();
     expect(textbox).not.toBeEnabled();
 
@@ -529,7 +506,7 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
 
-    // Sends the api call then logs the user message and the bot message
+    //sends the api call then logs the user message and the bot message
     await waitFor(() => {
       expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
@@ -558,16 +535,16 @@ describe('AiDiffChat', () => {
         PLATFORMS.STATSIG
       );
     });
-    // One user message
+    //one user message
     expect(screen.getByLabelText(i18n.aiChatMessageUser())).toHaveTextContent(
       userMessage
     );
-    // Second bot message has the response
+    //second bot message has the response
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
 
-    // User message editor should be enabled once we have a server response
+    //User message editor should be enabled once we have a server response
     expect(submit_btn).not.toBeEnabled();
   });
 
@@ -592,8 +569,8 @@ describe('AiDiffChat', () => {
     const textbox = screen.getByRole('textbox');
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
 
-    // Should display only the provided messages, not the default initial msg and prompts
-    expect(screen.queryByRole('group', {name: 'Suggested Prompts'})).toBeNull();
+    //should display only the provided messages, not the default initial msg and prompts
+    expect(screen.queryByRole('checkbox')).toBeNull();
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
     expect(bot_messages).toHaveLength(1);
     expect(bot_messages[0]).toHaveTextContent('beep boop');
@@ -601,13 +578,13 @@ describe('AiDiffChat', () => {
     expect(user_messages).toHaveLength(1);
     expect(user_messages[0]).toHaveTextContent('hello help please');
 
-    // Submit button not enabled until there is user text
+    //submit button not enabled until there is user text
     expect(submit_btn).not.toBeEnabled();
     fireEvent.change(textbox, {target: {value: userMessage}});
     expect(submit_btn).toBeEnabled();
     fireEvent.click(submit_btn);
 
-    // After click, but before server response, user message editor should be disabled
+    //After click, but before server response, user message editor should be disabled
     expect(submit_btn).not.toBeEnabled();
     expect(textbox).not.toBeEnabled();
 
@@ -636,7 +613,7 @@ describe('AiDiffChat', () => {
       url: window.location.href,
     };
 
-    // Sends the api call then logs the user message and the bot message
+    //sends the api call then logs the user message and the bot message
     await waitFor(() => {
       expect(postStub).toHaveBeenCalledWith(
         `/aidiff_threads/${threadId}/chat_completion`,
@@ -661,16 +638,16 @@ describe('AiDiffChat', () => {
         PLATFORMS.STATSIG
       );
     });
-    // Two user message
+    //two user message
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageUser())[1]
     ).toHaveTextContent(userMessage);
-    // Second bot message has the response
+    //second bot message has the response
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
 
-    // User message editor should not be enabled once we have a server response
+    //User message editor should not be enabled once we have a server response
     expect(submit_btn).not.toBeEnabled();
   });
 
@@ -679,7 +656,7 @@ describe('AiDiffChat', () => {
     const userMessage = 'Hello this is a user message';
     const textbox = screen.getByRole('textbox');
     const submit_btn = screen.getByRole('button', {name: i18n.submit()});
-    // Submit button not enabled until there is user text
+    //submit button not enabled until there is user text
     expect(submit_btn).not.toBeEnabled();
     fireEvent.change(textbox, {target: {value: userMessage}});
     expect(submit_btn).toBeEnabled();
@@ -737,18 +714,18 @@ describe('AiDiffChat', () => {
         PLATFORMS.STATSIG
       );
     });
-    // One user message
+    //one user message
     expect(screen.getByLabelText(i18n.aiChatMessageUser())).toHaveTextContent(
       userMessage
     );
-    // Second bot message has the response
+    //second bot message has the response
     expect(
       screen.getAllByLabelText(i18n.aiChatMessageBot())[1]
     ).toHaveTextContent("Beep boop I'm a bot");
 
-    // Try to click an old suggested prompt
-    const prompt = screen.getByRole('button', {name: 'Explain a concept'});
-    // Reset spies so we can check it hasn't been called again
+    //Try to click an old suggested prompt
+    const prompt = screen.getByRole('checkbox', {name: 'Explain a concept'});
+    //reset spies so we can check it hasn't been called again
     jest.clearAllMocks();
     fireEvent.click(prompt);
     expect(postStub).not.toHaveBeenCalled();
@@ -757,12 +734,7 @@ describe('AiDiffChat', () => {
 
   it('Suggest prompt button is present and works', () => {
     renderDefault();
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      5
-    );
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
     const suggest_prompt = screen.getByRole('button', {
       name: i18n.aiDifferentiation_suggest_prompt(),
     });
@@ -771,31 +743,19 @@ describe('AiDiffChat', () => {
       name: /Get Started/i,
     });
     fireEvent.click(getStartedButton);
-
-    // Count buttons across all groups after new prompts are added
-    const allGroups1 = screen.getAllByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    const totalButtons1 = allGroups1.flatMap(group =>
-      within(group).getAllByRole('button')
-    );
-    expect(totalButtons1).toHaveLength(10);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(10);
     // Check the last new prompt is from the second set.
-    expect(totalButtons1.pop()).toHaveAccessibleName('Get help using Code.org');
-
-    fireEvent.click(suggest_prompt);
-    const createButtons = screen.getAllByRole('button', {name: /Create/i});
-    fireEvent.click(createButtons[0]);
-
-    // Count buttons across all groups after more prompts are added
-    const allGroups2 = screen.getAllByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    const totalButtons2 = allGroups2.flatMap(group =>
-      within(group).getAllByRole('button')
+    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+      'Get help using Code.org'
     );
-    expect(totalButtons2).toHaveLength(15);
+    fireEvent.click(suggest_prompt);
+    const createButton = screen.getByRole('button', {name: /Create/i});
+    fireEvent.click(createButton);
+
+    expect(screen.getAllByRole('checkbox')).toHaveLength(15);
     // Check the last new prompt is from the first set.
-    expect(totalButtons2.pop()).toHaveAccessibleName('Write a lesson hook');
+    expect(screen.getAllByRole('checkbox').pop()).toHaveAccessibleName(
+      'Write a lesson hook'
+    );
   });
 });

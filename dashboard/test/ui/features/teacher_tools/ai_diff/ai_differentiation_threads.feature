@@ -42,7 +42,7 @@ Feature: Read and create AI diff threads
     # Click the "new thread" button in the sidebar, type new message
     And I click selector "button:contains(New Chat)"
     And I wait until element "p:contains(Hi! I'm your AI Teaching Assistant)" is visible
-    Then element "button:contains(Give me an example)" is visible
+    Then element "input[value='Give me an example']" is visible
     And element "[aria-label='User chat message']" is not visible
     Then I see no difference for "ai diff threads new thread from button"
     And I click selector "#uitest-chat-textarea" once I see it
@@ -64,7 +64,7 @@ Feature: Read and create AI diff threads
     # Clicking "suggest prompts" gives another set of prompts
     And I click selector "button:contains(Suggest prompts)"
     And I click selector "button:contains(Create)"
-    And I click selector "button:contains(Write a lesson hook)" once I see it
+    And I click selector "input[value='Write a lesson hook']" once I see it
     And I wait until I see 2 of jquery selector p:contains(Lorem ipsum)
     Then I see no difference for "ai diff threads continue old thread"
     Then I close my eyes

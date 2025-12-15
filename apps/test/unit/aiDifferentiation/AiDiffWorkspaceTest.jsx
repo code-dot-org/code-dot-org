@@ -1,10 +1,4 @@
-import {
-  render,
-  screen,
-  fireEvent,
-  waitFor,
-  within,
-} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -236,17 +230,12 @@ describe('AiDiffWorkspace', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      5
-    );
-    screen.getByRole('button', {name: 'Give me an example'});
-    screen.getByRole('button', {name: 'Explain a concept'});
-    screen.getByRole('button', {name: 'Debug common mistakes'});
-    screen.getByRole('button', {name: 'Generate a mini lesson'});
-    screen.getByRole('button', {name: 'Write an exit ticket'});
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    screen.getByRole('checkbox', {name: 'Give me an example'});
+    screen.getByRole('checkbox', {name: 'Explain a concept'});
+    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
+    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
+    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
   });
 
   it('Click on thread shows thread messages', async () => {
@@ -281,17 +270,12 @@ describe('AiDiffWorkspace', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      5
-    );
-    screen.getByRole('button', {name: 'Give me an example'});
-    screen.getByRole('button', {name: 'Explain a concept'});
-    screen.getByRole('button', {name: 'Debug common mistakes'});
-    screen.getByRole('button', {name: 'Generate a mini lesson'});
-    screen.getByRole('button', {name: 'Write an exit ticket'});
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
+    screen.getByRole('checkbox', {name: 'Give me an example'});
+    screen.getByRole('checkbox', {name: 'Explain a concept'});
+    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
+    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
+    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
 
     fireEvent.click(thread);
 
@@ -304,8 +288,8 @@ describe('AiDiffWorkspace', () => {
       );
     });
 
-    //no prompt buttons, now shows thread messages
-    expect(screen.queryByRole('group', {name: 'Suggested Prompts'})).toBeNull();
+    //no prompt checkboxes, now shows thread messages
+    expect(screen.queryByRole('checkbox')).toBeNull();
 
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
     expect(bot_messages).toHaveLength(2);
@@ -427,7 +411,7 @@ describe('AiDiffWorkspace', () => {
       );
     });
 
-    expect(screen.queryByRole('group', {name: 'Suggested Prompts'})).toBeNull();
+    expect(screen.queryByRole('checkbox')).toBeNull();
 
     const bot_messages = screen.getAllByLabelText(i18n.aiChatMessageBot());
     expect(bot_messages).toHaveLength(2);
@@ -451,12 +435,7 @@ describe('AiDiffWorkspace', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      5
-    );
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
 
     fetchJsonStub.mockClear();
     fetchJsonStub.mockResolvedValue({
@@ -531,12 +510,7 @@ describe('AiDiffWorkspace', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    const suggestedPromptsGroup = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
-      5
-    );
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
 
     fetchJsonStub.mockClear();
 
@@ -591,12 +565,7 @@ describe('AiDiffWorkspace', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    const suggestedPromptsGroup2 = screen.getByRole('group', {
-      name: 'Suggested Prompts',
-    });
-    expect(within(suggestedPromptsGroup2).getAllByRole('button')).toHaveLength(
-      5
-    );
+    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
     //should have 0 user messages because it's a new thread
     expect(screen.queryByLabelText(i18n.aiChatMessageUser())).toBeNull();
 

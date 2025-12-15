@@ -1,56 +1,38 @@
-@use '@code-dot-org/component-library-styles/mixins';
-@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
+@import "color.scss";
+@import "font.scss";
+@import "@code-dot-org/component-library-styles/typography.module";
 
 .prompts {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  column-gap: 0.5em;
 
   .prompt {
-    // Base chip styles (from component library chip.module.scss)
-    display: inline-block;
-    background-color: var(--neutral-base-white);
-    border: variables.$default-border;
-    color: var(--neutral-base-black);
-    min-width: 30px;
-    text-align: center;
-    border-radius: 100px;
-    white-space: nowrap;
-    margin: 0 0 0.5rem 0;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    color: $neutral-dark;
+    padding: 2px 12px;
+    background-color: $brand_primary_light;
+    border-radius: 6.25rem;;
+    max-width: 18em;
 
-    // Size: small, thickness: thick (chips-s + chip-thick)
-    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
-
-    @include mixins.button-three-text;
-
-    &:hover:not(:disabled) {
-      background-color: var(--neutral-gray-10);
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    &:focus-visible {
-      @include mixins.focus-styles;
+    i {
+      display: flex;
+      justify-content: center;
     }
 
-    &.selected {
-      background-color: var(--brand-teal-50);
-      color: white;
-      border-color: var(--brand-teal-50);
-
-      &:hover {
-        background-color: var(--brand-teal-70);
-      }
+    &:has(i:first-child) {
+      padding-inline-start: 8px;
     }
 
-    &.disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-
-      &:hover {
-        background-color: var(--neutral-base-white);
-      }
+    &:has(i:not(:first-child)) {
+      padding-inline-end: 8px;
     }
   }
 }
