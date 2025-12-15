@@ -101,6 +101,33 @@ interface ManageStudentsState {
 }
 
 interface SectionProgressState {
+  unitDataByUnit?: {
+    [unitId: number]: {
+      id: number;
+      lessons: {
+        [index: number]: {
+          id: number;
+          script_id: number;
+          relative_position: number;
+          levels: {
+            [index: number]: {
+              id: string;
+              isValidated: boolean;
+            };
+          };
+        };
+      };
+      [userId: number]: {
+        [lessonId: number]: {
+          incompletePercent: number;
+          imperfectPercent: number;
+          completedPercent: number;
+          timeSpent: number;
+          lastTimestamp: number;
+        };
+      };
+    };
+  };
   studentLessonProgressByUnit?: {
     [unitId: number]: {
       [userId: number]: {

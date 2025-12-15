@@ -24,6 +24,14 @@ interface LessonsData {
   hasUnnumberedLessons: boolean;
 }
 
+interface LevelValidationMapEntry {
+  [levelId: string]: boolean;
+}
+
+interface LessonToLevelValidationMapData {
+  [lessonId: number]: LevelValidationMapEntry;
+}
+
 interface UserProgressInLessonData {
   [userId: number]: {
     progress: number | null;
@@ -107,6 +115,32 @@ const StudentSnapshot: React.FC = () => {
     }
     return progressByUser;
   }, [selectedUnitId, selectedLessonId, lessonProgressByUnit]);
+
+
+
+
+
+
+  const unitDataByUnit = useAppSelector(
+    state => state.sectionProgress?.unitDataByUnit
+  );
+
+  if (unitDataByUnit) {
+    const lessons = unitDataByUnit[selectedUnitId]?.lessons;
+    const lessonsToLevelValidationMap: LessonToLevelValidationMapData = {};
+    Object.values(lessons).forEach(lesson => {
+      const currLessonLevelValidation: LevelValidationMapEntry = {};
+      Object.values(lesson.levels).forEach(level => {
+        currLessonLevelValidation[level.id] = level.isValidated;
+      });
+      lessonsToLevelValidationMap[lesson.id] = currLessonLevelValidation;
+    });
+  }
+
+
+
+
+  
 
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
   const selectedStudent = React.useMemo(
