@@ -212,53 +212,44 @@ const StudentSnapshot: React.FC = () => {
             gridHeight={1}
           >
             <div className={styles.lessonDetailsWidget}>
-              <div className={styles.lessonDetails}>
-                <div className={styles.lessonDetail}>
-                  <FontAwesomeV6Icon
-                    iconName={'chart-line'}
-                    iconStyle={'regular'}
-                  />
-                  <div
-                    className={classNames(
-                      styles.lessonDetailLabelAndInfo,
-                      userProgressBySelectedLesson[selectedStudentId]
-                        ?.progress === 100 && styles.greenCompletedText
-                    )}
-                  >
-                    <Typography variant="overline3">Progress</Typography>
-                    <Typography variant="h4">{`${
-                      userProgressBySelectedLesson[selectedStudentId]
-                        ?.progress ?? '0'
-                    }% complete`}</Typography>
-                  </div>
-                </div>
-                <div className={styles.lessonDetail}>
-                  <FontAwesomeV6Icon
-                    iconName={'clipboard-check'}
-                    iconStyle={'regular'}
-                  />
-                  <div className={styles.lessonDetailLabelAndInfo}>
-                    <Typography variant="overline3">
-                      Validation tests
-                    </Typography>
-                    <Typography variant="h4">9 of 12 passed</Typography>
-                  </div>
-                </div>
-                <div className={styles.lessonDetail}>
-                  <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
-                  <div className={styles.lessonDetailLabelAndInfo}>
-                    <Typography variant="overline3">Time spent</Typography>
-                    <Typography variant="h4">
-                      {userProgressBySelectedLesson[selectedStudentId]
-                        ?.timeSpent ?? ZERO_TIME_SPENT}
-                    </Typography>
-                  </div>
+              <div className={styles.lessonDetail}>
+                <FontAwesomeV6Icon
+                  iconName={'chart-line'}
+                  iconStyle={'regular'}
+                />
+                <div
+                  className={classNames(
+                    styles.lessonDetailLabelAndInfo,
+                    userProgressBySelectedLesson[selectedStudentId]
+                      ?.progress === 100 && styles.greenCompletedText
+                  )}
+                >
+                  <Typography variant="overline3">Progress</Typography>
+                  <Typography variant="h4">{`${
+                    userProgressBySelectedLesson[selectedStudentId]?.progress ??
+                    '0'
+                  }% complete`}</Typography>
                 </div>
               </div>
-              <div className={styles.failedTestReasoning}>
-                <Typography variant="body4">
-                  There were no failed tests in this lesson.
-                </Typography>
+              <div className={styles.lessonDetail}>
+                <FontAwesomeV6Icon
+                  iconName={'clipboard-check'}
+                  iconStyle={'regular'}
+                />
+                <div className={styles.lessonDetailLabelAndInfo}>
+                  <Typography variant="overline3">Validation tests</Typography>
+                  <Typography variant="h4">9 of 12 passed</Typography>
+                </div>
+              </div>
+              <div className={styles.lessonDetail}>
+                <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
+                <div className={styles.lessonDetailLabelAndInfo}>
+                  <Typography variant="overline3">Time spent</Typography>
+                  <Typography variant="h4">
+                    {userProgressBySelectedLesson[selectedStudentId]
+                      ?.timeSpent ?? ZERO_TIME_SPENT}
+                  </Typography>
+                </div>
               </div>
             </div>
           </WidgetTemplate>
