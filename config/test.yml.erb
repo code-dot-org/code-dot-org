@@ -1,10 +1,10 @@
 ##
-## Secrets and any other config specific to the web server on the chef-managed
-## test system. This is the only test environment that will have access to
-## secrets via AWS Secrets Manager.
+## Secrets and any other config specific to the web server and non-test rake
+## tasks on the chef-managed test system. These secrets will not be available
+## in unit tests or on other chef-managed servers running with RAILS_ENV=test.
 ##
 
-<% if managed_test_server? -%>
+<% if test_system? && !unit_test -%>
 github_webhook_secret: !Secret
 slack_set_last_dtt_green_token: !Secret
 slack_start_build_token: !Secret
