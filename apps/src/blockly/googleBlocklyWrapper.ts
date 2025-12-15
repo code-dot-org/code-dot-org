@@ -679,6 +679,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedWorkspaceSvg.setEnableToolbox = function () {};
   extendedWorkspaceSvg.traceOn = function () {};
 
+  extendedWorkspaceSvg.getBlockCount = function () {
+    return this.getAllBlocks().length;
+  };
+
   const extendedVariableMap = blocklyWrapper.VariableMap
     .prototype as ExtendedVariableMap;
 

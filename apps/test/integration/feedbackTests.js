@@ -186,10 +186,10 @@ describe('getUserBlocks_', function () {
       '</xml>',
     ];
 
-    var readOnly = Blockly.readOnly;
-    Blockly.readOnly = true;
+    var readOnly = Blockly.mainBlockSpace.readOnly;
+    Blockly.mainBlockSpace.readOnly = true;
     validateNumUserBlocks(testBlockXml.join(''), 3);
-    Blockly.readOnly = readOnly;
+    Blockly.mainBlockSpace.readOnly = readOnly;
   });
 });
 

@@ -333,8 +333,8 @@ export function bindBrowserEvent(
   return Blockly.browserEvents.bind(element, name, thisObject, func);
 }
 
-export function isWorkspaceReadOnly() {
-  return false; // TODO - used for feedback
+export function isWorkspaceReadOnly(workspace: GoogleBlockly.Workspace) {
+  return workspace.isReadOnly();
 }
 /**
  * Checks if any block type's usage count exceeds its defined limit and returns

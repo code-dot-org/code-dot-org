@@ -1415,7 +1415,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function () {
  */
 FeedbackUtils.blockShouldBeCounted_ = function (block) {
   // disabled blocks are not counted
-  if (block.disabled) {
+  if (!block.isEnabled()) {
     return false;
   }
 
@@ -1498,7 +1498,8 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
       for (var testId = 0; testId < block.length; testId++) {
         var test = block[testId].test;
         if (typeof test === 'string') {
-          code = code || Blockly.Generator.blockSpaceToCode('JavaScript');
+          code =
+            code || Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedBlock = true;
