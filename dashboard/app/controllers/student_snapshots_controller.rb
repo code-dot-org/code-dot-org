@@ -79,4 +79,34 @@ class StudentSnapshotsController < ApplicationController
       exemplarSources: level.exemplar_sources
     }
   end
+
+  # GET /student_snapshots/lessons/:lesson_id/cfu_levels
+  # Returns all CFU levels from the specified lesson
+  # CFU levels are identified by progression: "Check Your Understanding"
+  def cfu_levels
+    lesson_id = params[:lesson_id]
+    lesson = Lesson.find_by(id: lesson_id)
+    return render json: {error: "Can't find Lesson id=#{lesson_id}"}, status: :bad_request unless lesson
+
+    cfu_levels_data = []
+    lesson.script_levels.each do |script_level|
+      # Check if this script_level has progression: "Check Your Understanding" or "Check For Understanding"
+      if script_level.progression&.match?(/^Check\s+(Your|For)\s+Understanding$/i)
+        script_level.levels.each do |level|
+          cfu_levels_data << {
+            id: level.id,
+            name: level.name,
+            display_name: level.display_name || level.name,
+            type: level.type,
+            key: level.try(:key),
+            script_level_id: script_level.id,
+            progression: script_level.progression,
+            progression_display_name: script_level.progression ? I18n.t(script_level.progression, scope: %i[data progressions], default: script_level.progression) : nil
+          }
+        end
+      end
+    end
+
+    render json: {cfu_levels: cfu_levels_data}
+  end
 end

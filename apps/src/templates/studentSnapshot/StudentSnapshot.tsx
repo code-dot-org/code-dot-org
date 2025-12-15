@@ -13,6 +13,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
@@ -31,6 +32,21 @@ interface PythonlabLevel {
 interface LessonData {
   pythonlabLevel?: PythonlabLevel | null;
   cfuLevels?: Array<{id: number; name: string}>;
+}
+
+interface CFULevel {
+  id: number;
+  name: string;
+  display_name: string;
+  type: string;
+  key?: string;
+  script_level_id: number;
+  progression?: string;
+  progression_display_name?: string;
+}
+
+interface CFULevelsData {
+  cfu_levels: CFULevel[];
 }
 
 const getUnitLessons = (unitId: number) =>
@@ -54,6 +70,12 @@ const getLessonData = (lessonId: number, includeParams: string[]) => {
 
 const unitLessonsCachedLoader = _.memoize(getUnitLessons);
 
+const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
+  return HttpClient.fetchJson<CFULevelsData>(
+    `/student_snapshots/lessons/${lessonId}/cfu_levels`
+  ).then(response => response?.value?.cfu_levels || []);
+};
+
 const StudentSnapshot: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = useState<number | null>(
     null
@@ -63,6 +85,8 @@ const StudentSnapshot: React.FC = () => {
     useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
+  const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
+  const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
 
   const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
   const [lessonData, setLessonData] = useState<LessonData | null>(null);
@@ -94,6 +118,7 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedUnitId]);
 
+  // fetch last PythonLab exemplar code
   useEffect(() => {
     if (selectedLessonId) {
       setIsLessonDataLoading(true);
@@ -109,6 +134,33 @@ const StudentSnapshot: React.FC = () => {
       setLessonData(null);
     }
   }, [selectedLessonId]);
+
+  // Fetch CFU levels when lesson changes
+  useEffect(() => {
+    if (selectedLessonId) {
+      setIsCfuLevelsLoading(true);
+      getCFULevels(selectedLessonId)
+        .then(levels => {
+          setCfuLevels(levels);
+        })
+        .catch(error => {
+          console.error('Error fetching CFU levels:', error);
+          setCfuLevels([]);
+        })
+        .finally(() => {
+          setIsCfuLevelsLoading(false);
+        });
+    } else {
+      setCfuLevels([]);
+    }
+  }, [selectedLessonId]);
+
+  // TODO: Use this in CFU widget
+  console.log(cfuLevels, isCfuLevelsLoading);
+
+  // TODO: replace with actual values from URL/Redux later
+  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
+  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
   return (
     <div className={styles.snapshotContainer}>
@@ -133,6 +185,15 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
+        <StudentRubricWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={HARDCODED_STUDENT_ID}
+          studentName={HARDCODED_STUDENT_NAME}
+          teacherHasEnabledAi={false}
+          canProvideFeedback={true}
+        />
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>

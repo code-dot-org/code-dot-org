@@ -13,7 +13,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "packages/labs/*"
   ],
   "scripts": {
     "build": "turbo build",
