@@ -957,8 +957,7 @@ em.aiFeedbackReceived {
   border-radius: 4px;
   border: 1px solid $neutral_dark20;
   background: $neutral_light;
-  width: 100%;
-  min-width: 100%;
+  width: auto;
 }
 
 .learningGoalRing {
@@ -1116,6 +1115,7 @@ p.evidenceLevelHeaderText {
 .evidenceLevelSetHorizontalV2 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   gap: 8px;
 

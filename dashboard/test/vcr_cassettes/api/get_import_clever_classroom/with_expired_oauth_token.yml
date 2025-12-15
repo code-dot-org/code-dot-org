@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v2.1/sections/expected_course_id/students
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 10 Dec 2025 18:36:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '60'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      Access-Control-Allow-Methods:
+      - GET,PATCH,POST,DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-store
+      Etag:
+      - W/"3c-V4GXa0spRV57QuvBv+SIMQ"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Www-Authenticate:
+      - Bearer
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Bucket:
+      - bearer
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '1199'
+      X-Ratelimit-Reset:
+      - '1765391876'
+      X-Request-Id:
+      - 74d90ca6-4a4b-45e7-8003-66d198029b46
+    body:
+      encoding: UTF-8
+      string: '{"code":103,"error":"Unrecognized token string","data":null}'
+  recorded_at: Wed, 10 Dec 2025 18:36:56 GMT
+recorded_with: VCR 6.2.0

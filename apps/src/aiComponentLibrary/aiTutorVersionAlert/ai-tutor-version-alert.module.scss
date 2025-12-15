@@ -1,0 +1,46 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+.alert {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--borders-brand-aqua-primary);
+  border-right: none;
+  padding: 0.625rem 0.875rem;
+  background-color: var(--background-brand-aqua-extra-light);
+
+  .alertContent {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+
+  .alertText {
+    @include typography.body-three;
+    color: var(--text-neutral-primary);
+    flex: 1;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  flex: 1;
+  min-width: 24px;
+}
+
+

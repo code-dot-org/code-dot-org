@@ -106,6 +106,10 @@ External contributors can supply alternate placeholder values for secrets normal
 slack_bot_token: localoverride
 pardot_private_key: localoverride
 properties_encryption_key: ''
+openai_student_learning_api_key: localoverride
+openai_measures_of_learning_api_key: localoverride
+langfuse_secret_key: localoverride
+langfuse_public_key: localoverride
 ```
 
 ## OS-specific prerequisites

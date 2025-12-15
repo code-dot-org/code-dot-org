@@ -1,5 +1,6 @@
-import FontLoader from '@code-dot-org/fonts/FontLoader';
 import {CssBaseline} from '@mui/material';
+
+import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 interface BootstrapProps {
   locale: string;

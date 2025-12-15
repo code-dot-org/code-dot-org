@@ -82,6 +82,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   );
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
   const showSecondaryFinishButton =
     useSecondaryFinishButton ||
     (queryParams('use-secondary-finish-button') === 'true' && !hasNextLevel);
@@ -159,7 +162,12 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     if (submittable) {
       return [false, undefined] as const;
     }
-    let action: 'Validate' | 'SubmitPrediction' | 'Run' | undefined;
+    let action:
+      | 'Validate'
+      | 'SubmitPrediction'
+      | 'Run'
+      | 'AiTutorVersion'
+      | undefined;
     let canContinue: boolean = true;
     if (isPredictLevel) {
       action = 'SubmitPrediction';
@@ -167,6 +175,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     } else if (hasValidationConditions) {
       action = 'Validate';
       canContinue = validationSatisfied;
+    } else if (isAiTutorVersion) {
+      action = 'AiTutorVersion';
+      canContinue = false;
     } else if (requireRun) {
       action = 'Run';
       canContinue = hasRun;
@@ -184,6 +195,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     validationSatisfied,
     requireRun,
     hasRun,
+    isAiTutorVersion,
   ]);
 
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.

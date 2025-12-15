@@ -61,6 +61,7 @@ export const getDefaultCodebridgeContext = () => {
     config: {
       defaultTheme: undefined,
       editableFileTypes: [],
+      supportedFileTypes: [],
       PreviewComponents: undefined,
       languageMapping: {},
       activeLayout: undefined,
@@ -94,13 +95,29 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
 };
 
 export const getBackpackAPIMock = (
-  fileList: string[] = []
+  fileList: string[] = [],
+  headerValue: string = 'text/plain'
 ): BackpackClientApi => {
   return {
     hasBackpack: jest.fn(() => true),
     fetchChannelId: jest.fn(callback => callback()),
     fetchFile: jest.fn((filename, onError, onSuccess) => {
       onSuccess(`Mock contents of backpack file ${filename}`);
+    }),
+    fetchFileResponse: jest.fn(async (filename: string) => {
+      return Promise.resolve({
+        headers: {
+          get: jest.fn().mockReturnValue(headerValue),
+        },
+        text: async () => {
+          return Promise.resolve(`Mock contents of backpack file ${filename}`);
+        },
+        blob: async () => {
+          return new Blob([`Mock contents of backpack file ${filename}`], {
+            type: headerValue,
+          });
+        },
+      });
     }),
     getFileList: jest.fn((onError, onSuccess) => {
       onSuccess(fileList);
