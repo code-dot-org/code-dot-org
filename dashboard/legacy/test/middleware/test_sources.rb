@@ -327,13 +327,13 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    CDO.log.expects(:info).with do |stream, data|
-      data_json_data = JSON.parse(data[:data_json])
-      data[:study] == 'project-data-integrity' &&
-        data[:event] == 'reject-comparing-older-main-json' &&
-        data[:project_id] == @channel &&
-        data_json_data['currentVersionId'] == version1 &&
-        stream == :analysis
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data_json_data = data['data_json']
+      data['study'] == 'project-data-integrity' &&
+        data['event'] == 'reject-comparing-older-main-json' &&
+        data['project_id'] == @channel &&
+        data_json_data['currentVersionId'] == version1
     end
 
     file_data = '{"source":"version 3"}'
