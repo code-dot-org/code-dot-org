@@ -5,8 +5,6 @@ require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'policies/child_account'
 
-# Temporary comment to trigger unit test run
-
 class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
