@@ -11,7 +11,7 @@ interface Props {
 }
 
 const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
-  return message.artifactSuggestion ? (
+  return message.isArtifactCandidate ? (
     <div className={style.artifactButtons}>
       <Button
         color="gray"

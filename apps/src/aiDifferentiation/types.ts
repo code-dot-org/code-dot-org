@@ -1,17 +1,21 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AiDiffContext,
+  AiDiffArtifactType,
   AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../util/HttpClient';
+
+import {EXIT_TICKET_PROMPT, LESSON_HOOK_PROMPT} from './predefinedPrompts';
 
 export type ChatTextMessage = {
   role: Role;
   chatMessageText: string;
   status: string;
   id?: number;
-  artifactSuggestion?: string;
+  isArtifactCandidate?: boolean;
+  artifactCandidateType?: (typeof AiDiffArtifactType)[keyof typeof AiDiffArtifactType];
 };
 
 export type ChatPrompt = {
@@ -41,7 +45,8 @@ type ServerChatMessage = {
   updated_at: Date;
   is_preset: boolean;
   preset_chip_text: string;
-  artifact_suggestion?: string;
+  is_artifact_candidate: boolean;
+  artifact_candidate_type: string;
 };
 
 export type ChatThread = {
@@ -82,6 +87,14 @@ function messageValidatorHelper(
     throw new Error('Source response should be an object (received array).');
   }
   const serverMsg = response as ServerChatMessage;
+  let inferredArtifactType = undefined;
+  if (serverMsg.role === Role.USER && serverMsg.is_preset) {
+    if (serverMsg.preset_chip_text === EXIT_TICKET_PROMPT.label) {
+      inferredArtifactType = AiDiffArtifactType.EXIT_TICKET;
+    } else if (serverMsg.preset_chip_text === LESSON_HOOK_PROMPT.label) {
+      inferredArtifactType = AiDiffArtifactType.LESSON_HOOK;
+    }
+  }
   return {
     role: serverMsg.role,
     chatMessageText:
@@ -90,7 +103,9 @@ function messageValidatorHelper(
         : serverMsg.content,
     status: AiInteractionStatus.OK,
     id: serverMsg.id,
-    artifactSuggestion: serverMsg.artifact_suggestion,
+    isArtifactCandidate: serverMsg.is_artifact_candidate,
+    artifactCandidateType:
+      serverMsg.artifact_candidate_type || inferredArtifactType,
   } as ChatTextMessage;
 }
 
