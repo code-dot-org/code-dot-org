@@ -1706,12 +1706,6 @@ class ApiControllerTest < ActionController::TestCase
     get :clever_classrooms
   end
 
-  test 'import_clever_classroom is Forbidden when not signed in' do
-    sign_out :user
-    get :import_clever_classroom
-    assert_response :forbidden
-  end
-
   test 'google_classrooms is Forbidden when not signed in' do
     sign_out :user
     get :google_classrooms
@@ -2080,6 +2074,47 @@ class ApiControllerTest < ActionController::TestCase
         it 'returns the outside_unit_group' do
           _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
         end
+      end
+    end
+  end
+
+  describe 'GET /api/import_clever_classroom' do
+    subject(:get_import_clever_classroom) do
+      get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+    end
+
+    let(:course_id) {'expected_course_id'}
+    let(:course_name) {'expected_course_name'}
+
+    let!(:teacher) {create(:teacher, :with_clever_authentication_option)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when teacher is not signed in' do
+      before do
+        sign_out teacher
+      end
+
+      it 'forbids request' do
+        get_import_clever_classroom
+        assert_response :forbidden
+      end
+    end
+
+    context 'when provider oauth_token has expired' do
+      around do |test|
+        VCR.use_cassette('api/get_import_clever_classroom/with_expired_oauth_token') {test.call}
+      end
+
+      it 'renders error message instructing to re-login using provider type' do
+        get_import_clever_classroom
+        assert_response :unauthorized
+        _(response.body).must_equal(
+          'Your sign-in with Clever has expired. ' \
+          "Please sign out of Code.org and sign back in using your Clever account to continue.\n"
+        )
       end
     end
   end
