@@ -76,6 +76,9 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
 
+  // When we use this value to decide whether to save sources or not,
+  // we want to make sure that we have the most up-to-date version of the readonly state of the workspace.
+  // In order to achieve this, we re-fetch the current value and save it to a ref on each render.
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
   const readonlyWorkspaceRef = useRef(readonlyWorkspace);
   readonlyWorkspaceRef.current = readonlyWorkspace;
