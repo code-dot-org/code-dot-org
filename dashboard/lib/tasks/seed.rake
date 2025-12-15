@@ -667,10 +667,10 @@ namespace :seed do
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
-  timed_task_with_logging default: ADHOC_SEED_TASKS
+  timed_task_with_logging default: DEFAULT_SEED_TASKS
   desc "seed all dashboard data"
-  timed_task_with_logging all: ADHOC_SEED_TASKS
-  timed_task_with_logging ui_test: ADHOC_SEED_TASKS
+  timed_task_with_logging all: FULL_SEED_TASKS
+  timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
   timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :foorms]
