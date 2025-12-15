@@ -76,7 +76,7 @@ require 'parallel_tests/test/runtime_logger'
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
-  class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/fixtures/vcr_cassettes').to_s
+  class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/vcr_cassettes').to_s
 
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
