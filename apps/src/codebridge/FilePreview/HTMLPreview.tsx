@@ -31,7 +31,9 @@ const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
   const normalizedChannelId = useAppSelector(
-    state => state.lab.channel?.id?.toLowerCase() || ''
+    // Make channel id all lower case and remove underscores, as underscores are not valid in domain names,
+    // and domain names are case-insensitive.
+    state => state.lab.channel?.id?.toLowerCase().replace('_', '') || ''
   );
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
