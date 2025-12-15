@@ -27,13 +27,12 @@ import {
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
+  PendingChatMessage,
   ChatAsset,
   SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
-  ChatMessage,
-  isPendingOrCompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -56,6 +55,7 @@ const initialState: AichatState = {
   initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
+  chatMessagePending: undefined,
   studentChatHistory: [],
   showModalType: undefined,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -183,21 +183,14 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    updateChatMessageStatus: (
+    setChatMessagePending: (
       state,
-      action: PayloadAction<{updateId: string; status: ChatMessage['status']}>
+      action: PayloadAction<PendingChatMessage>
     ) => {
-      const event = state.chatEventsCurrent.find(
-        (event): event is ChatMessage =>
-          isPendingOrCompletedChatMessage(event) &&
-          event.updateId === action.payload.updateId
-      );
-      if (!event) return;
-      event.status = action.payload.status;
+      state.chatMessagePending = action.payload;
+      state.hasSentMessage = true;
     },
-    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
-      state.hasSentMessage = action.payload;
-    },
+    clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
@@ -442,8 +435,8 @@ export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  updateChatMessageStatus,
-  setChatMessageSent,
+  setChatMessagePending,
+  clearChatMessagePending,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,

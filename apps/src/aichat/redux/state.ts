@@ -7,6 +7,7 @@ import {
   ChatAsset,
   ChatEvent,
   FieldVisibilities,
+  PendingChatMessage,
   SaveError,
   SaveType,
   ServerChatEvent,
@@ -45,6 +46,8 @@ export interface AichatState {
   chatEventsPast: ChatEvent[];
   // Items in the current chat session that we want to provide as history to the model.
   chatEventsCurrent: ChatEvent[];
+  // The user message currently awaiting response from the model (if any).
+  chatMessagePending?: PendingChatMessage;
   // Student events viewed by a teacher user in chat workspace. Always fetched from the server.
   studentChatHistory: ServerChatEvent[];
   // Denotes whether we should show the warning or teacher onboarding modal

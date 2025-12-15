@@ -36,8 +36,6 @@ interface BaseChatMessage extends BaseChatEvent {
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
-  /** Necessary to update a pending message to completed or to update chatMessageText */
-  updateId?: string;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */
@@ -123,14 +121,6 @@ export function isCompletedChatMessage(
   event: ChatEvent
 ): event is CompletedChatMessage {
   return (event as CompletedChatMessage).requestId !== undefined;
-}
-
-export function isPendingOrCompletedChatMessage(
-  event: ChatEvent
-): event is CompletedChatMessage | PendingChatMessage {
-  return (
-    (event as CompletedChatMessage | PendingChatMessage).updateId !== undefined
-  );
 }
 
 export function isModelUpdate(event: ChatEvent): event is ModelUpdate {

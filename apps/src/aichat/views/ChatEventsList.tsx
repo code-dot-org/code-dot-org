@@ -6,7 +6,6 @@ import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext'
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {selectIsWaitingForChatResponse} from '../redux';
 import {ChatAsset, ChatEvent, isChatMessage} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
@@ -36,7 +35,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const isWaitingForChatResponse = useAppSelector(
-    selectIsWaitingForChatResponse
+    state => !!state.aichat.chatMessagePending
   );
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
