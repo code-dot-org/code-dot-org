@@ -312,7 +312,9 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 gem 'validate_url', '~> 1.0.15'
 
-gem 'composite_primary_keys', '~> 14.0'
+# TODO: target a mainline version of this gem once one is released which includes
+# https://github.com/composite-primary-keys/composite_primary_keys/pull/624
+gem 'composite_primary_keys', github: 'composite-primary-keys/composite_primary_keys', ref: 'ec2e404'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy

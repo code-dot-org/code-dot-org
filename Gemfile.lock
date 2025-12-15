@@ -69,6 +69,14 @@ GIT
       rack (> 1, < 3)
 
 GIT
+  remote: https://github.com/composite-primary-keys/composite_primary_keys.git
+  revision: ec2e4047c42e600a4a0543186c816f9fa246e037
+  ref: ec2e404
+  specs:
+    composite_primary_keys (14.0.10)
+      activerecord (~> 7.0.2)
+
+GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -316,8 +324,6 @@ GEM
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.3)
     colorize (1.1.0)
-    composite_primary_keys (14.0.10)
-      activerecord (~> 7.0.2)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     console (1.24.0)
@@ -1045,7 +1051,7 @@ DEPENDENCIES
   chronic (~> 0.10.2)
   cld
   colorize
-  composite_primary_keys (~> 14.0)
+  composite_primary_keys!
   crowdin-api (~> 1.10.0)
   csv
   cucumber
