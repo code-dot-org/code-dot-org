@@ -31,7 +31,7 @@ export function createTeacherNotificationSubscription(
       {
         connected() {
           setTimeout(() => {
-            this.unsubscribe();
+            subscription.unsubscribe();
           }, timeoutMs);
         },
 
