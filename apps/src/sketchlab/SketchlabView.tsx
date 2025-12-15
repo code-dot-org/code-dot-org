@@ -197,7 +197,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     setExcalidrawMountKey(key => key + 1);
   }, []);
 
-  const onRestoreVersion = useCallback(
+  const onLoadVersion = useCallback(
     (sources: ProjectSources) => {
       if (sources) {
         updateSources(sources as SketchlabSources);
@@ -239,7 +239,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           settings={[useThemeSetting('sketchlab')]}
           versionHistoryProps={{
             startSources: levelProperties?.startSources as ProjectSources,
-            onRestore: onRestoreVersion,
+            onLoadVersion: onLoadVersion,
           }}
         />
       </div>

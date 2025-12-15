@@ -95,7 +95,7 @@ export const loadVersion = createAsyncThunk(
     payload: {
       startSources: ProjectSources;
       version?: ProjectVersion;
-      onRestore?: (sources: ProjectSources) => void;
+      onLoadVersion?: (sources: ProjectSources) => void;
     },
     thunkAPI
   ) => {
@@ -113,7 +113,7 @@ export const loadVersion = createAsyncThunk(
           version: payload.version,
         })
       );
-      if (payload.onRestore) payload.onRestore(sources);
+      if (payload.onLoadVersion) payload.onLoadVersion(sources);
     }
   }
 );
@@ -124,7 +124,7 @@ export const previewStartSources = createAsyncThunk(
   async (
     payload: {
       startSources: ProjectSources;
-      onRestore?: (sources: ProjectSources) => void;
+      onLoadVersion?: (sources: ProjectSources) => void;
     },
     thunkAPI
   ) => {
@@ -135,7 +135,7 @@ export const previewStartSources = createAsyncThunk(
       thunkAPI.dispatch(
         setPreviousVersionSource({sources: payload.startSources})
       );
-      if (payload.onRestore) payload.onRestore(payload.startSources);
+      if (payload.onLoadVersion) payload.onLoadVersion(payload.startSources);
     }
   }
 );
@@ -144,7 +144,7 @@ export const previewStartSources = createAsyncThunk(
 export const resetToCurrentVersion = createAsyncThunk(
   'lab2Project/resetToActiveVersion',
   async (
-    payload: {onRestore?: (sources: ProjectSources) => void},
+    payload: {onLoadVersion?: (sources: ProjectSources) => void},
     thunkAPI
   ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -152,7 +152,7 @@ export const resetToCurrentVersion = createAsyncThunk(
       const sources = await projectManager.loadSources();
       thunkAPI.dispatch(setProjectSource(sources));
       thunkAPI.dispatch(setViewingOldVersion(false));
-      if (sources && payload.onRestore) payload.onRestore(sources);
+      if (sources && payload.onLoadVersion) payload.onLoadVersion(sources);
     }
   }
 );
