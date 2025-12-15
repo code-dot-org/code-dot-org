@@ -174,6 +174,7 @@ namespace :seed do
     csd1-2025
     csd2-2025
     csd3-2025
+    programming-with-music-lab-2025
     csd4-2025
     csd5-2025
     csd6a-2025
