@@ -289,7 +289,7 @@ steps:
       # DRONE_REPO_OWNER = organization name (e.g., "code-dot-org")
       # DRONE_REPO_NAME = repository name (e.g., "code-dot-org")
       - AUTHENTICATED_GITHUB_URL="https://$GITHUB_TOKEN@github.com/$DRONE_REPO_OWNER/$DRONE_REPO_NAME.git"
-      - git clone --branch $DRONE_BRANCH $AUTHENTICATED_GITHUB_URL .
+      - git clone --branch $DRONE_SOURCE_BRANCH $AUTHENTICATED_GITHUB_URL .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of the fully-built project and resulting database, but don't
@@ -314,20 +314,20 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  - name: cache-staging-ci-build
-    image: plugins/s3-cache
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
-    settings:
-      filename: cache-staging-ci-build.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
-        - .
-        - /var/lib/mysql
+  # - name: cache-staging-ci-build
+  #   image: plugins/s3-cache
+  #   volumes:
+  #     - name: mysql
+  #       path: /var/lib/mysql
+  #   settings:
+  #     filename: cache-staging-ci-build.tar.gz
+  #     endpoint: s3://cdo-drone
+  #     rebuild: true
+  #     debug: true
+  #     pull: true
+  #     mount:
+  #       - .
+  #       - /var/lib/mysql
 
 volumes:
   - name: mysql
@@ -339,9 +339,10 @@ trigger:
     - "staging-next"
   event:
     - push
+    - pull_request
 
 ---
 kind: signature
-hmac: 8380ec279dc40128beca1b341a9fff3212255c2a343d9fed59c9c839ab095669
+hmac: 046561424000528e1adfbb27711bfd27d26965c43b1f41bca3beff6d033103b4
 
 ...
