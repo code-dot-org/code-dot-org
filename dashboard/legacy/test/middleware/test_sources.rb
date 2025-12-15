@@ -2,7 +2,6 @@ require_relative 'files_api_test_base' # Must be required first to establish loa
 require_relative 'files_api_test_helper'
 require 'cdo/share_filtering'
 require 'timecop'
-require 'cdo/firehose'
 
 MAIN_JSON = 'main.json'
 COMMENT_BLOCK_SOURCES = File.join(__dir__, '..', 'fixtures', 'comment-block-sources.json')
@@ -276,7 +275,7 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
-    FirehoseClient.instance.expects(:put_record).never
+    CDO.expects(:log).never
 
     # Upload a source file.
     filename = MAIN_JSON
@@ -328,7 +327,7 @@ class SourcesTest < FilesApiTestBase
     Timecop.travel 1
 
     # log when replacing non-current version.
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
+    CDO.log.expects(:info).with do |stream, data|
       data_json_data = JSON.parse(data[:data_json])
       data[:study] == 'project-data-integrity' &&
         data[:event] == 'reject-comparing-older-main-json' &&
