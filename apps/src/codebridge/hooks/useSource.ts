@@ -9,7 +9,10 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {setProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {
+  setProjectSource,
+  setProjectSourceLevelId,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -102,13 +105,14 @@ export const useSource = (
           .getProjectManager()
           ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
+        dispatch(setProjectSourceLevelId(levelId));
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
       previousInitialSources.current = initialSources;
     }
-  }, [initialSources, levelId, setSourceHelper]);
+  }, [dispatch, initialSources, levelId, setSourceHelper]);
 
   return {
     startSources,
