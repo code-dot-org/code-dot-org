@@ -43,13 +43,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
   });
-  console.log({editorFile: file});
   const dispatch = useAppDispatch();
 
   const onChange = useCallback(
     (value: string) => {
       if (file?.id) {
-        console.log('calling save file thunk from editor onchange');
         dispatch(saveFileThunk({fileId: file.id, contents: value}));
       }
     },

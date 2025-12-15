@@ -108,7 +108,6 @@ const projectSlice = createSlice({
       }>
     ) {
       if (state.projectSources?.source) {
-        console.log('create new file', {...action.payload});
         state.projectSources = {
           ...state.projectSources,
           source: createNewFileHelper({
@@ -154,7 +153,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{fileId: FileId; newName: string}>
     ) {
       if (state.projectSources?.source) {
-        console.log('rename file', {...action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.files[action.payload.fileId] ||
@@ -184,7 +182,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{fileId: FileId; contents: string; url?: string}>
     ) {
       if (state.projectSources?.source) {
-        console.log('save file', {...action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.files[action.payload.fileId] ||
@@ -217,7 +214,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{fileId: FileId; type: ProjectFileType}>
     ) {
       if (state.projectSources?.source) {
-        console.log('set file type', {...action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.files[action.payload.fileId] ||
@@ -244,7 +240,6 @@ const projectSlice = createSlice({
     },
     activateFile(state, action: PayloadAction<FileId>) {
       if (state.projectSources?.source) {
-        console.log('activate file', {fileId: action.payload});
         // We don't count activating a file as an edit,
         // as it doesn't meaningfully change the project state.
         state.projectSources = {
@@ -258,7 +253,6 @@ const projectSlice = createSlice({
     },
     closeFile(state, action: PayloadAction<FileId>) {
       if (state.projectSources?.source) {
-        console.log('close file', {fileId: action.payload});
         // We don't count closing a file as an edit,
         // as it doesn't meaningfully change the project state.
         state.projectSources = {
@@ -275,7 +269,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{fileId: FileId; isBlockedAbuse?: boolean}>
     ) {
       if (state.projectSources?.source) {
-        console.log('delete file', {...action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (!source.files[action.payload.fileId]) {
           // No-op if the file does not exist.
@@ -297,7 +290,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{fileId: FileId; folderId: FolderId}>
     ) {
       if (state.projectSources?.source) {
-        console.log('move file', {...action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.files[action.payload.fileId] ||
@@ -328,7 +320,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{folderId: FolderId; parentId: FolderId}>
     ) {
       if (state.projectSources?.source) {
-        console.log('move folder', {...action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.folders[action.payload.folderId] ||
@@ -359,7 +350,6 @@ const projectSlice = createSlice({
       action: PayloadAction<{folderName: string; parentId?: FolderId}>
     ) {
       if (state.projectSources?.source) {
-        console.log('create new folder', {...action.payload});
         state.projectSources = {
           ...state.projectSources,
           source: createNewFolderHelper(
@@ -373,7 +363,6 @@ const projectSlice = createSlice({
     },
     toggleOpenFolder(state, action: PayloadAction<FolderId>) {
       if (state.projectSources?.source) {
-        console.log('toggle open folder', {folderId: action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (!source.folders[action.payload]) {
           // No-op if the folder does not exist.
@@ -398,7 +387,6 @@ const projectSlice = createSlice({
     },
     deleteFolder(state, action: PayloadAction<FolderId>) {
       if (state.projectSources?.source) {
-        console.log('delete folder', {folderId: action.payload});
         const source = state.projectSources.source as MultiFileSource;
         if (!source.folders[action.payload]) {
           // No-op if the folder does not exist.
@@ -420,7 +408,6 @@ const projectSlice = createSlice({
       state,
       action: PayloadAction<{folderId: FolderId; newName: string}>
     ) {
-      console.log('rename folder', {...action.payload});
       if (state.projectSources?.source) {
         const source = state.projectSources.source as MultiFileSource;
         if (
@@ -449,7 +436,6 @@ const projectSlice = createSlice({
     },
     rearrangeFiles(state, action: PayloadAction<FileId[]>) {
       if (state.projectSources?.source) {
-        console.log('rearrage files', {...action.payload});
         // We don't count rearranging files as an edit, as it doesn't
         // meaningfully change the project state.
         const source = state.projectSources.source as MultiFileSource;

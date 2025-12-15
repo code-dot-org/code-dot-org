@@ -147,7 +147,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   useEffect(() => {
     return () => {
       if (editorView) {
-        console.log('destroying editorView on unmount');
         editorView.destroy();
         setDidInit(false);
       }
@@ -160,7 +159,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     }
 
     if (editorView) {
-      console.log('destroying existing editorView');
       editorView.destroy();
     }
 
@@ -168,9 +166,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       (update: ViewUpdate) => {
         if (update.docChanged) {
           onCodeChange(update.state.doc.toString());
-        } else {
-          console.log('skipping onCodeChange, doc not changed');
-          console.log({update});
         }
       }
     );
@@ -256,7 +251,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // A new channelId means we are loading a new project, and we need to reset the editor.
   useEffect(() => {
     if (editorView && editorView.state.doc.toString() !== startCode) {
-      console.log(`new code, resetting editor`);
       editorView.dispatch({
         changes: {
           from: 0,
