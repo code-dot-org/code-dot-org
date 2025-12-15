@@ -48,7 +48,6 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       _(lesson_data['hasLessonPlan']).must_equal true
       _(lesson_data['isLockable']).must_equal false
       _(lesson_data['position']).must_equal 1
-      _(lesson_data['levelData']).must_be_nil
     end
 
     context 'with invalid unit_id' do
@@ -73,43 +72,70 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
         _(response_data['hasUnnumberedLessons']).must_equal false
       end
     end
+  end
 
-    context 'when lesson has Pythonlab level' do
-      let!(:pythonlab_level) {create(:pythonlab, name: 'Test Pythonlab')}
+  describe 'GET #lesson_data' do
+    subject(:get_lesson_data) {get :lesson_data, params: params}
 
-      before do
-        create(:script_level, script: unit, lesson: lesson1, levels: [pythonlab_level])
-      end
+    let(:params) {{lesson_id: lesson1.id}}
+    let(:response_data) {JSON.parse(response.body)}
 
-      it 'includes levelData' do
-        get_lessons
+    context 'without any include parameters' do
+      it 'returns empty response' do
+        get_lesson_data
 
         _(response).must_be :ok?
-
-        lesson_data = lessons_data.first
-        _(lesson_data['levelData']).wont_be_nil
-        _(lesson_data['levelData']['id']).must_equal pythonlab_level.id
-        _(lesson_data['levelData']['name']).must_equal 'Test Pythonlab'
+        _(response_data).must_equal({})
       end
     end
 
-    context 'when lesson has multiple Pythonlab levels' do
-      let!(:pythonlab_level1) {create(:pythonlab, name: 'First Pythonlab')}
-      let!(:pythonlab_level2) {create(:pythonlab, name: 'Last Pythonlab')}
+    context 'with include_pythonlab parameter' do
+      let(:params) {{lesson_id: lesson1.id, include_pythonlab: true}}
 
-      before do
-        create(:script_level, script: unit, lesson: lesson1, levels: [pythonlab_level1])
-        create(:script_level, script: unit, lesson: lesson1, levels: [pythonlab_level2])
+      context 'when lesson has no Pythonlab level' do
+        it 'returns nil for pythonlabLevel' do
+          get_lesson_data
+
+          _(response).must_be :ok?
+          _(response_data['pythonlabLevel']).must_be_nil
+        end
       end
 
-      it 'uses last Pythonlab level' do
-        get_lessons
+      context 'when lesson has Pythonlab level' do
+        let!(:pythonlab_level) {create(:pythonlab, name: 'Test Pythonlab')}
 
-        _(response).must_be :ok?
+        before do
+          create(:script_level, script: unit, lesson: lesson1, levels: [pythonlab_level])
+        end
 
-        lesson_data = lessons_data.first
-        _(lesson_data['levelData']['id']).must_equal pythonlab_level2.id
-        _(lesson_data['levelData']['name']).must_equal 'Last Pythonlab'
+        it 'includes levelData' do
+          get_lesson_data
+
+          _(response).must_be :ok?
+
+          _(response_data['pythonlabLevel']).wont_be_nil
+          _(response_data['pythonlabLevel']['id']).must_equal pythonlab_level.id
+          _(response_data['pythonlabLevel']['name']).must_equal 'Test Pythonlab'
+        end
+      end
+
+      context 'when lesson has multiple Pythonlab levels' do
+        let!(:pythonlab_level1) {create(:pythonlab, name: 'First Pythonlab')}
+        let!(:pythonlab_level2) {create(:pythonlab, name: 'Last Pythonlab')}
+
+        before do
+          create(:script_level, script: unit, lesson: lesson1, levels: [pythonlab_level1])
+          create(:script_level, script: unit, lesson: lesson1, levels: [pythonlab_level2])
+        end
+
+        it 'uses last Pythonlab level' do
+          get_lesson_data
+
+          _(response).must_be :ok?
+
+          _(response_data['pythonlabLevel']['id']).must_equal pythonlab_level2.id
+          _(response_data['pythonlabLevel']['name']).must_equal 'Last Pythonlab'
+        end
       end
     end
   end
