@@ -844,6 +844,13 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
   }
 
+  # Level of access for AI chat tools within a section or for an individual student.
+  AI_CHAT_ACCESS_LEVELS = {
+    ENABLED: 'enabled',
+    DISABLED: 'disabled',
+    ESSENTIAL_ONLY: 'essential_only',
+  }.freeze
+
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   AI_CHAT_TEACHER_FEEDBACK = {
