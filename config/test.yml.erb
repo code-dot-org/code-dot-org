@@ -12,13 +12,6 @@ azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 
-# The only type of test environment we enable Statsig is the managed test server
-# (`test.code.org / test-studio.code.org`) and only in Ruby code executing within
-# the web application server.
-statsig_server_secret_key: !Secret
-statsig_api_client_key: !Secret
-statsig_api_client_key_session_replay: !Secret
-
 <% else %>
 
 ##
@@ -38,8 +31,6 @@ channels_api_secret: not a real secret
 dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
 google_maps_api_key: boguskey
-statsig_server_secret_key: 'secret-fake-key'
-statsig_api_client_key: 'client-fake-key'
 
 db_cluster_id: localhost
 db_endpoint_writer: localhost
@@ -91,6 +82,19 @@ disable_s3_image_uploads: true
 ai_proxy_origin:
 
 openai_evaluate_rubric_api_key: 'stub-api-key'
+
+# Statsig API keys
+# The only type of test environment we enable Statsig is the managed test server
+# (`test.code.org / test-studio.code.org`) and only in Ruby code executing within
+# the web application server.
+<% if managed_test_server? -%>
+statsig_server_secret_key: !Secret
+statsig_api_client_key: !Secret
+statsig_api_client_key_session_replay: !Secret
+<% else %>
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+<% end -%>
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true
