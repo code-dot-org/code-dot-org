@@ -63,7 +63,7 @@ export const HTMLPreview: React.FC = () => {
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
 
-  const emptyProject =
+  const isEmptyProject =
     !source ||
     (Object.keys(source.files).length === 0 &&
       Object.keys(source.folders).length === 0);
@@ -366,7 +366,7 @@ export const HTMLPreview: React.FC = () => {
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
         />
-        {emptyProject ? (
+        {isEmptyProject ? (
           <PreviewEmptyState />
         ) : isStopped ? (
           <PreviewStopped onReload={onReloadPreview} />
