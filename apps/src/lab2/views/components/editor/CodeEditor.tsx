@@ -145,21 +145,8 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, []);
 
   useEffect(() => {
-    return () => {
-      if (editorView) {
-        editorView.destroy();
-        setDidInit(false);
-      }
-    };
-  }, [editorView]);
-
-  useEffect(() => {
     if (!editorFontSizeLoaded || editorRef.current === null || didInit) {
       return;
-    }
-
-    if (editorView) {
-      editorView.destroy();
     }
 
     const onEditorUpdate = EditorView.updateListener.of(
@@ -218,7 +205,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorFontSizeKey,
     editorFontSizeLoaded,
     themeCompartment,
-    editorView,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
