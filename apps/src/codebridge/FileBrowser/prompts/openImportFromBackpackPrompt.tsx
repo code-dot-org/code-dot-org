@@ -22,6 +22,8 @@ import {
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -34,6 +36,7 @@ type OpenImportFromBackpackPromptArgsType = {
     eventName: string,
     payload?: Record<string, string>
   ) => void;
+  channelId: string;
 };
 
 export const openImportFromBackpackPrompt = async ({
@@ -44,6 +47,7 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
   sendLab2AnalyticsEvent,
+  channelId,
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>
@@ -77,36 +81,60 @@ export const openImportFromBackpackPrompt = async ({
   };
 
   // Fetch file content from backpack and then update or create a project file.
-  const fetchFileContentAndProcess = (
+  const fetchFileContentAndProcess = async (
     selectedFileName: string,
     successMetric: string,
     newFileName?: string
   ) => {
-    backpackApi.fetchFile(
-      selectedFileName,
+    const response = await backpackApi.fetchFileResponse(selectedFileName);
+    if (!response || response instanceof Error) {
       handleError(
         codebridgeI18n.importFromBackpackTitle(),
         codebridgeI18n.getBackpackFileError({selectedFileName}) +
           ' ' +
           codebridgeI18n.closeWindowTryAgain(),
         'Backpack file fetch error'
-      ),
-      (fileContent: string) => {
-        if (newFileName) {
-          newFile({fileName: newFileName, contents: fileContent});
-        } else {
-          const fileId = Object.keys(projectFiles).find(
-            id =>
-              projectFiles[id].name === selectedFileName &&
-              projectFiles[id].folderId === DEFAULT_FOLDER_ID
-          );
-          if (fileId) saveFile(fileId, fileContent);
-        }
-        sendLab2AnalyticsEvent(successMetric, {
-          fileType: newFileName?.split('.').pop()?.toLowerCase() || '',
-        });
+      )(response instanceof Error ? response : undefined);
+      return;
+    }
+    let fileContent = '';
+    let url: string | undefined = undefined;
+    if (response?.headers.get('Content-Type')?.startsWith('image/')) {
+      // Handle image file content as a blob, and upload as an asset.
+      // Store the url as the new file contents.
+      const blob = await response.blob();
+      const uuid = createUuid();
+      const fileType = selectedFileName.split('.').pop();
+      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
+      try {
+        await HttpClient.put(uploadUrl, blob);
+      } catch (error) {
+        handleError(
+          codebridgeI18n.importFromBackpackTitle(),
+          codebridgeI18n.getBackpackFileError({selectedFileName}) +
+            ' ' +
+            codebridgeI18n.closeWindowTryAgain(),
+          'Backpack could not upload image file to assets channel'
+        )(error as Error);
+        return;
       }
-    );
+      url = uploadUrl;
+    } else {
+      fileContent = await response.text();
+    }
+    if (newFileName) {
+      newFile({fileName: newFileName, contents: fileContent, url});
+    } else {
+      const fileId = Object.keys(projectFiles).find(
+        id =>
+          projectFiles[id].name === selectedFileName &&
+          projectFiles[id].folderId === DEFAULT_FOLDER_ID
+      );
+      if (fileId) saveFile(fileId, fileContent, url);
+    }
+    sendLab2AnalyticsEvent(successMetric, {
+      fileType: newFileName?.split('.').pop()?.toLowerCase() || '',
+    });
   };
 
   dialogControl?.showDialog({
@@ -180,7 +208,7 @@ export const openImportFromBackpackPrompt = async ({
               confirmText: codebridgeI18n.importAsNewName({newFileName}),
             });
             if (results.type === 'confirm') {
-              fetchFileContentAndProcess(
+              await fetchFileContentAndProcess(
                 selectedBackpackFileName,
                 EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
                 newFileName
@@ -202,12 +230,12 @@ export const openImportFromBackpackPrompt = async ({
               neutralText: codebridgeI18n.importAsNewName({newFileName}),
             });
             if (results.type === 'confirm') {
-              fetchFileContentAndProcess(
+              await fetchFileContentAndProcess(
                 selectedBackpackFileName,
                 EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
               ); // Update existing project file.
             } else if (results.type === 'neutral') {
-              fetchFileContentAndProcess(
+              await fetchFileContentAndProcess(
                 selectedBackpackFileName,
                 EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
                 newFileName
@@ -215,7 +243,7 @@ export const openImportFromBackpackPrompt = async ({
             }
           } else {
             // Fetch backpack file content and import new file to project - not a duplicate file name.
-            fetchFileContentAndProcess(
+            await fetchFileContentAndProcess(
               selectedBackpackFileName,
               EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW,
               selectedBackpackFileName

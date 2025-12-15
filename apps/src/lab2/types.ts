@@ -255,6 +255,7 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+  hideVersionHistory?: boolean;
 }
 
 export interface BlocklyLevelProperties extends LevelProperties {

@@ -98,18 +98,29 @@ export const openSaveToBackpackPrompt = async ({
           fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
         });
 
-      backpackApi.saveCodebridgeFile(
-        selectedFileName,
-        file.contents,
-        handleError(
-          codebridgeI18n.saveToBackpackTitle(),
-          codebridgeI18n.saveToBackpackError({selectedFileName}) +
-            ' ' +
-            codebridgeI18n.closeWindowTryAgain(),
-          'Save to backpack error'
-        ),
-        successCallback
+      const errorCallback = handleError(
+        codebridgeI18n.saveToBackpackTitle(),
+        codebridgeI18n.saveToBackpackError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain(),
+        'Save to backpack error'
       );
+
+      if (file.url) {
+        backpackApi.saveCodebridgeFileFromUrl(
+          selectedFileName,
+          file.url,
+          errorCallback,
+          successCallback
+        );
+      } else {
+        backpackApi.saveCodebridgeFile(
+          selectedFileName,
+          file.contents,
+          errorCallback,
+          successCallback
+        );
+      }
     }
   );
 };
