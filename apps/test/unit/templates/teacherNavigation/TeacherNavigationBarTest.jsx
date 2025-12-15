@@ -116,7 +116,7 @@ describe('TeacherNavigationBar', () => {
   const renderDefault = (
     selectedSectionId = 11,
     selectedRoute = null,
-    showAITutorTab = false,
+    showAiChatSettings = false,
     aiDiffEnabled = true
   ) => {
     store = getStore();
@@ -153,7 +153,9 @@ describe('TeacherNavigationBar', () => {
                 path={TEACHER_NAVIGATION_SECTIONS_URL}
                 element={
                   <div>
-                    <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                    <TeacherNavigationBar
+                      showAiChatSettings={showAiChatSettings}
+                    />
                     <Outlet />
                   </div>
                 }
@@ -318,18 +320,18 @@ describe('TeacherNavigationBar', () => {
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 
-  test('AI Tutor tab diplayed when teacher has access', async () => {
+  test('AI settings tab displayed when teacher has access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
-    screen.getByText('AI Tutor');
+    screen.getByText(i18n.aiSettings());
   });
 
-  test('AI Tutor tab not diplayed when teacher does not have access', async () => {
+  test('AI settings tab not displayed when teacher does not have access', async () => {
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, false);
     await screen.findByText('Course Content');
 
-    expect(screen.queryByText('AI Tutor')).toBeNull();
+    expect(screen.queryByText(i18n.aiSettings())).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {

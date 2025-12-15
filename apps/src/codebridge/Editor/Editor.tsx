@@ -58,7 +58,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     const extensions: Extension[] = [];
     if (
       file?.name &&
-      enableUserAddedSelectionContext(levelProperties.appName, file?.url)
+      enableUserAddedSelectionContext(levelProperties.appName)
     ) {
       const addToAiTutorField = getAddToAiTutorField(file.name, dispatch);
       extensions.push(addToAiTutorField);
@@ -96,7 +96,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     dispatch,
     file?.language,
     file?.name,
-    file?.url,
     langMapping,
     levelProperties.appName,
   ]);

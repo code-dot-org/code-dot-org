@@ -79,6 +79,7 @@ class Blockly < Level
     skip_autosave
     skip_run_save
     goal_override
+    hide_version_history
   )
 
   before_save :update_ideal_level_source

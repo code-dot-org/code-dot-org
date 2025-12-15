@@ -158,6 +158,8 @@ export interface ProjectFile {
   type?: ProjectFileType;
   url?: string;
   flagged?: boolean;
+  isAiTutorVersionUpdated?: boolean;
+  isAiTutorVersionCreated?: boolean;
 }
 
 /**
@@ -253,6 +255,7 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+  hideVersionHistory?: boolean;
 }
 
 export interface BlocklyLevelProperties extends LevelProperties {

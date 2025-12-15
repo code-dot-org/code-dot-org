@@ -1,0 +1,22 @@
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actionButton {
+  flex: 1;
+  min-width: 107px; // Triggers wrapping when container is narrow.
+}

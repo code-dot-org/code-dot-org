@@ -38,9 +38,10 @@ interface VersionHistoryPanelProps {
   startSources: ProjectSources;
   selectedVersion: string;
   setSelectedVersion: (version: string) => void;
-  appName: string;
   levelId: number;
   disabled?: boolean;
+  isOpen?: boolean;
+  alwaysShowAutoSaves?: boolean;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -52,15 +53,22 @@ type VersionSegment =
       groupIndex: number;
     };
 
+// The Regex here removes the space before AM/PM to match mocks and make more compact.
+const AM_PM_SPACE_REGEX = /\s(AM|PM)$/i;
+function stripSpaceBeforeAmPm(value: string): string {
+  return value.replace(AM_PM_SPACE_REGEX, '$1');
+}
+
 const VersionHistoryPanel: React.FunctionComponent<
   VersionHistoryPanelProps
 > = ({
   selectedVersion,
   setSelectedVersion,
   startSources,
-  appName,
   levelId,
   disabled = false,
+  isOpen = false,
+  alwaysShowAutoSaves = false,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -70,6 +78,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const [listLoaded, setListLoaded] = useState(false);
   const [listLoading, setListLoading] = useState(false);
   const [listLoadError, setListLoadError] = useState(false);
+  const [customLoadError, setCustomLoadError] = useState<string | null>(null);
   const [versionSaved, setVersionSaved] = useState(false);
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
@@ -104,10 +113,22 @@ const VersionHistoryPanel: React.FunctionComponent<
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
   const dialogControl = useDialogControl();
 
+  // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
       month: 'short',
       day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+  }, [locale]);
+
+  // Ex: "Jun 5, 2022, 3:30 PM"
+  const dateFormatterWithYear = useMemo(() => {
+    return new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
     });
@@ -120,6 +141,14 @@ const VersionHistoryPanel: React.FunctionComponent<
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (!projectManager) {
         setListLoadError(true);
+        if (viewAsUserId) {
+          // If a teacher is viewing a student who has not started, we will have no project manager.
+          setCustomLoadError('This student has not started yet.');
+        } else {
+          setCustomLoadError(
+            'No version history found. Have you started your project?'
+          );
+        }
         return;
       }
       setListLoading(true);
@@ -133,13 +162,16 @@ const VersionHistoryPanel: React.FunctionComponent<
             setSelectedVersion('');
             setFocusSelectedVersion(true);
           }
+          setListLoadError(false);
+          setCustomLoadError(null);
         })
         .catch(() => {
           setListLoadError(true);
+          setCustomLoadError(null);
           setListLoading(false);
         });
     },
-    [setSelectedVersion]
+    [setSelectedVersion, viewAsUserId]
   );
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -165,6 +197,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     previousLevelId.current = levelId;
     previewViewAsUserId.current = viewAsUserId;
   }, [loadVersionList, levelId, viewAsUserId]);
+
+  // Reload version history list when tab becomes active.
+  useEffect(() => {
+    if (isOpen) {
+      loadVersionList(true);
+    }
+  }, [isOpen, loadVersionList, dispatch]);
 
   useEffect(() => {
     if (selectedVersion === '') {
@@ -290,10 +329,17 @@ const VersionHistoryPanel: React.FunctionComponent<
 
   const parseDate = useCallback(
     (date: string) => {
-      const dateObject = new Date(date);
-      return dateFormatter.format(dateObject);
+      const versionDate = new Date(date);
+      const now = new Date();
+
+      // Within the current year, show month and day only.
+      if (now.getFullYear() === versionDate.getFullYear()) {
+        return stripSpaceBeforeAmPm(dateFormatter.format(versionDate));
+      }
+      // Older than a year, show month, day, and year.
+      return stripSpaceBeforeAmPm(dateFormatterWithYear.format(versionDate));
     },
-    [dateFormatter]
+    [dateFormatter, dateFormatterWithYear]
   );
 
   const onVersionChange = useCallback(
@@ -301,6 +347,8 @@ const VersionHistoryPanel: React.FunctionComponent<
       setSelectedVersion(e.target.value);
       const viewingInitialVersion = e.target.value === INITIAL_VERSION_ID;
       const isLatest = isLatestVersion(e.target.value);
+      // Find the version object to pass prop details to the loadVersion thunk.
+      const version = versionList.find(v => v.versionId === e.target.value);
       if (!isLatest) {
         sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_VIEWED, {
           isInitialVersion: viewingInitialVersion.toString(),
@@ -311,10 +359,10 @@ const VersionHistoryPanel: React.FunctionComponent<
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
-        dispatch(loadVersion({versionId: e.target.value, startSources}));
+        dispatch(loadVersion({startSources, version}));
       }
     },
-    [dispatch, isLatestVersion, setSelectedVersion, startSources]
+    [dispatch, isLatestVersion, setSelectedVersion, startSources, versionList]
   );
 
   const handleSaveVersionSuccess = useCallback(() => {
@@ -366,14 +414,19 @@ const VersionHistoryPanel: React.FunctionComponent<
     return segments;
   }, [versionList]);
 
-  // Initialize collapsed state for all groups (all collapsed by default)
+  // Initialize collapsed state for all groups
+  // All groups collapsed by default, unless alwaysShowAutoSaves is true
   useEffect(() => {
+    if (alwaysShowAutoSaves) {
+      setCollapsedGroups(new Set());
+      return;
+    }
     const allGroupIndices = versionSegments
       .filter(segment => segment.type === 'autoSaveGroup')
       .map(segment => (segment as {groupIndex: number}).groupIndex);
 
     setCollapsedGroups(new Set(allGroupIndices));
-  }, [versionSegments]);
+  }, [versionSegments, alwaysShowAutoSaves]);
 
   const toggleGroupCollapsed = useCallback((groupIndex: number) => {
     setCollapsedGroups(prev => {
@@ -416,6 +469,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           restoreOnClick={restoreSelectedVersion}
           restoreLoading={versionLoading}
           restoreDisabled={disabled || versionLoading}
+          alwaysShowAutoSaves={alwaysShowAutoSaves}
         >
           {isLatest && hasEdited && !viewAsUserId && (
             <SaveVersionPanel
@@ -438,6 +492,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       hasEdited,
       projectSources,
       handleSaveVersionSuccess,
+      alwaysShowAutoSaves,
     ]
   );
 
@@ -483,7 +538,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         <Alert
           className={moduleStyles.message}
           type="danger"
-          text={lab2I18n.versionHistoryLoadFailure()}
+          text={customLoadError || lab2I18n.versionHistoryLoadFailure()}
           size="xs"
         />
       )}
@@ -511,7 +566,7 @@ const VersionHistoryPanel: React.FunctionComponent<
 
                 return (
                   <React.Fragment key={`group-${groupIndex}`}>
-                    {hasMultipleVersions && (
+                    {hasMultipleVersions && !alwaysShowAutoSaves && (
                       <Button
                         className={moduleStyles.collapseButton}
                         text={

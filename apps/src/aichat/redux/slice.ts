@@ -1,5 +1,12 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {
+  DEFAULT_THREAD_TITLE,
+  ThreadTypeFields,
+  THREAD_TYPES,
+} from '@cdo/apps/aiDifferentiation/constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
 
 import {
@@ -20,12 +27,13 @@ import {
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
-  PendingChatMessage,
   ChatAsset,
   SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
+  ChatMessage,
+  isPendingOrCompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -36,10 +44,18 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  chatIsOpen: false,
   clientType: undefined,
+  threadId: 0,
+  threadTitle: DEFAULT_THREAD_TITLE,
+  threadType: THREAD_TYPES.default,
+  initialThreadPrompt: null,
+  selectedPrompt: null,
+  threadMessages: [],
+  threadKeyId: 0,
+  initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
-  chatMessagePending: undefined,
   studentChatHistory: [],
   showModalType: undefined,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -65,6 +81,9 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
+    setChatIsOpen: (state, action: PayloadAction<boolean>) => {
+      state.chatIsOpen = action.payload;
+    },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
@@ -109,9 +128,32 @@ const aichatSlice = createSlice({
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
       state.userHasAichatAccess = action.payload;
     },
-
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
+    },
+    setThreadId(state, action: PayloadAction<number>) {
+      state.threadId = action.payload;
+    },
+    setThreadTitle(state, action: PayloadAction<string>) {
+      state.threadTitle = action.payload;
+    },
+    setThreadType(state, action: PayloadAction<ThreadTypeFields>) {
+      state.threadType = action.payload;
+    },
+    setInitialThreadPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.initialThreadPrompt = action.payload;
+    },
+    setSelectedPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.selectedPrompt = action.payload;
+    },
+    setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
+      state.threadMessages = action.payload;
+    },
+    addThreadMessage: (state, action: PayloadAction<ChatItem>) => {
+      state.threadMessages.push(action.payload);
+    },
+    setThreadKeyId(state, action: PayloadAction<number>) {
+      state.threadKeyId = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -141,17 +183,27 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    setChatMessagePending: (
+    updateChatMessageStatus: (
       state,
-      action: PayloadAction<PendingChatMessage>
+      action: PayloadAction<{updateId: string; status: ChatMessage['status']}>
     ) => {
-      state.chatMessagePending = action.payload;
-      state.hasSentMessage = true;
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      event.status = action.payload.status;
     },
-    clearChatMessagePending: state => (state.chatMessagePending = undefined),
+    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
+      state.hasSentMessage = action.payload;
+    },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
+    },
+    setInitialChatMessage(state, action: PayloadAction<string>) {
+      state.initialChatMessage = action.payload;
     },
     setShowModalType: (
       state,
@@ -384,11 +436,14 @@ const getUpdateMessageLocation = (removeId: number, state: AichatState) => {
 
 registerReducers({aichat: aichatSlice.reducer});
 
+export const aichatReducer = aichatSlice.reducer;
+
 export const {
+  setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  setChatMessagePending,
-  clearChatMessagePending,
+  updateChatMessageStatus,
+  setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
@@ -398,12 +453,21 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
+  setInitialChatMessage,
   setShowModalType,
   setStartingAiCustomizations,
   setStudentChatHistory,
   setOwnChatHistory,
   setUserHasAichatAccess,
   setClientType,
+  setThreadId,
+  setThreadTitle,
+  setThreadType,
+  setInitialThreadPrompt,
+  setSelectedPrompt,
+  setThreadMessages,
+  addThreadMessage,
+  setThreadKeyId,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,

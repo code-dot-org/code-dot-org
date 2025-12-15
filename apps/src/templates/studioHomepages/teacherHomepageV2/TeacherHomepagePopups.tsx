@@ -92,13 +92,13 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
         setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
         setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
         setAFEDrawerOpen(data.value.afeEligible);
-        setNPSDrawerOpen(data.value.showNps);
         if (data.value.showNps) {
           HttpClient.fetchJson<{props: string}>(
             '/form/nps_survey/configuration'
           )
             .then(result => {
               if (result.value?.props) {
+                setNPSDrawerOpen(data.value.showNps);
                 setNPSProps(result.value.props);
               }
             })
