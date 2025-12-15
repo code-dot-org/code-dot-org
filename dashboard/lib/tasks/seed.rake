@@ -165,45 +165,45 @@ namespace :seed do
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
   # Each year we should update this list and :courses_adhoc
   MOST_RECENT_ADHOC_SCRIPTS = %w(
-    coursea-2024
-    courseb-2024
-    coursec-2024
-    coursed-2024
-    coursee-2024
-    coursef-2024
-    csd1-2024
-    csd2-2024
-    csd3-2024
-    csd4-2024
-    csd5-2024
-    csd6a-2024
-    csd6b-2024
-    csd7-2024
-    csd-post-survey-2024
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
-    csp1-2024
-    csp2-2024
-    csp3-2024
-    csp4-2024
-    csp5-2024
-    csp6-2024
-    csp7-2024
-    csp8-2024
-    csp9-2024
-    csp10-2024
-    csp-post-survey-2024
-    csa1-2024
-    csa2-2024
-    csa3-2024
-    csa4-2024
-    csa5-2024
-    csa6-2024
-    csa7-2024
-    csa8-2024
-    csa9-2024
-    csa-postap-se-and-computer-vision-2024
+    coursea-2025
+    courseb-2025
+    coursec-2025
+    coursed-2025
+    coursee-2025
+    coursef-2025
+    csd1-2025
+    csd2-2025
+    csd3-2025
+    csd4-2025
+    csd5-2025
+    csd6a-2025
+    csd6b-2025
+    csd7-2025
+    csd-post-survey-2025
+    interactive-games-animations-2025
+    focus-on-creativity3-2025
+    focus-on-coding3-2025
+    csp1-2025
+    csp2-2025
+    csp3-2025
+    csp4-2025
+    csp5-2025
+    csp6-2025
+    csp7-2025
+    csp8-2025
+    csp9-2025
+    csp10-2025
+    csp-post-survey-2025
+    csa1-2025
+    csa2-2025
+    csa3-2025
+    csa4-2025
+    csa5-2025
+    csa6-2025
+    csa7-2025
+    csa8-2025
+    csa9-2025
+    csa-postap-se-and-computer-vision-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
     algebra
@@ -398,9 +398,9 @@ namespace :seed do
     # seed those courses that are best to test on adhoc for the most current year
     %w(
       allthethingscourse
-      csp-2024
-      csd-2024
-      csa-2024
+      csp-2025
+      csd-2025
+      csa-2025
       original-allthethings-course
     ).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
