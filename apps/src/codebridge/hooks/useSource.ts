@@ -29,6 +29,7 @@ export const useSource = (
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
+  console.log({source});
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const {
@@ -91,6 +92,7 @@ export const useSource = (
       initialSources !== previousInitialSources.current
     ) {
       if (initialSources) {
+        console.log(`Setting source for level ${levelId}`, initialSources);
         // Set the last source in project manager to initial sources.
         // This prevents us from immediately saving the source on load,
         // as we only want to save when the user makes a change.
