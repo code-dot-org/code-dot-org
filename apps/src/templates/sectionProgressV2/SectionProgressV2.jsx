@@ -18,7 +18,7 @@ import {
   getCurrentUnitData,
   loadExpandedLessonsFromLocalStorage,
 } from '../sectionProgress/sectionProgressRedux';
-import UnitSelectorV2 from '../UnitSelectorV2';
+import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';
 import IconKey from './IconKey';

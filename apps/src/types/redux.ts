@@ -22,7 +22,7 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Weblab2State} from '@cdo/apps/weblab2/redux';
+import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';
 
 import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';

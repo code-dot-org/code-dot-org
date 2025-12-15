@@ -457,17 +457,17 @@ describe('ProjectManager', () => {
     await projectManager.load();
 
     // Verify initial comment state is set correctly
-    assert.isTrue(projectManager.getCurrentVersionHasComment());
+    assert.isTrue(projectManager.getForceNewVersion());
 
     // First save should force new version due to comment (autosave)
     await projectManager.save(UPDATED_SOURCE);
 
     // After autosave, comment state should be reset since new version was created
-    assert.isFalse(projectManager.getCurrentVersionHasComment());
+    assert.isFalse(projectManager.getForceNewVersion());
 
     // Second save should not force new version (comment state reset)
     await projectManager.save(UPDATED_SOURCE_2);
-    assert.isFalse(projectManager.getCurrentVersionHasComment());
+    assert.isFalse(projectManager.getForceNewVersion());
   });
 });
 

@@ -119,6 +119,9 @@
 
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
+
+      # Scrub PII from expired deleted accounts nightly at 8:00 AM UTC.
+      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob"
     end
 
     # 'daemons' in all environments.
@@ -140,15 +143,11 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
       cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
       cronjob at:'0 4 * * 0', do:deploy_dir('bin', 'cron', 'update_project_count')
-
-      # Scrub PII from expired deleted accounts nightly at 8:00 AM UTC.
-      cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob"
     end
   end
 
   # cronjobs that run on all instances in all environments go here:
 
-  cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 %>
 #
 # node: <%= node.name %>

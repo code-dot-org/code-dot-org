@@ -28,6 +28,7 @@
 
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref RedisSubnetGroup
+      PreferredMaintenanceWindow: sat:05:00-sat:06:00
   # CloudWatch Alarms for Redis
   #
   # Based on:

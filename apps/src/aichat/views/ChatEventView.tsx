@@ -2,6 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {forwardRef, memo} from 'react';
 
+import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -38,6 +39,8 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
+  isLastMessage?: boolean;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -72,7 +75,18 @@ function formatModelUpdateText(update: ModelUpdate): string {
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
 const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
-  ({event, isTeacherView, buildAssetUrl, tabIndex, onKeyDown}, ref) => {
+  (
+    {
+      event,
+      isTeacherView,
+      buildAssetUrl,
+      tabIndex,
+      onKeyDown,
+      isAiTutorVersion,
+      isLastMessage,
+    },
+    ref
+  ) => {
     const dispatch = useAppDispatch();
 
     const chatEventDescriptions = isTeacherView
@@ -98,13 +112,39 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             chatMessage={event}
             isChatHistoryView={isTeacherView || false}
             buildAssetUrl={buildAssetUrl}
+            isAiTutorVersion={isAiTutorVersion}
+            isLastMessage={isLastMessage}
           />
         </div>
       );
     }
 
     if (isNotification(event)) {
-      const {removeId, text, notificationType, timestamp} = event;
+      const {removeId, text, notificationType, files, timestamp} = event;
+
+      // Use special notification component for AI tutor version actions
+      if (
+        notificationType === 'aiTutorVersionActionAccept' ||
+        notificationType === 'aiTutorVersionActionReject'
+      ) {
+        return (
+          <AiTutorVersionActionNotification
+            text={text}
+            type={
+              notificationType === 'aiTutorVersionActionAccept'
+                ? 'accept'
+                : 'reject'
+            }
+            ref={ref}
+            tabIndex={tabIndex}
+            onKeyDown={onKeyDown}
+            aria-label={`Notification: ${text}`}
+            className={styles.chatMessageOutline}
+            files={files}
+          />
+        );
+      }
+
       return (
         <Alert
           text={`${text} ${timestampToLocalTime(timestamp)}`}

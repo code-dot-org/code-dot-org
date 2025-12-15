@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_11_19_161129) do
+ActiveRecord::Schema.define(version: 2025_12_03_202435) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -134,6 +134,32 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.index ["user_id", "level_id", "script_id"], name: "index_acs_user_level_script"
   end
 
+  create_table "aidiff_artifact_associations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "association_type", null: false
+    t.bigint "aidiff_artifact_id", null: false
+    t.bigint "section_id"
+    t.bigint "lesson_id"
+    t.bigint "unit_id"
+    t.bigint "unit_group_id"
+    t.index ["aidiff_artifact_id"], name: "index_aidiff_artifact_associations_on_aidiff_artifact_id"
+    t.index ["lesson_id"], name: "index_aidiff_artifact_associations_on_lesson_id"
+    t.index ["section_id"], name: "index_aidiff_artifact_associations_on_section_id"
+    t.index ["unit_group_id"], name: "index_aidiff_artifact_associations_on_unit_group_id"
+    t.index ["unit_id"], name: "index_aidiff_artifact_associations_on_unit_id"
+  end
+
+  create_table "aidiff_artifacts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "type"
+    t.json "content"
+    t.string "title"
+    t.bigint "aidiff_thread_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["aidiff_thread_id"], name: "index_aidiff_artifacts_on_aidiff_thread_id"
+    t.index ["user_id"], name: "index_aidiff_artifacts_on_user_id"
+  end
+
   create_table "aidiff_message_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "aidiff_message_id", null: false
     t.bigint "teacher_id", null: false
@@ -155,6 +181,8 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.text "preset_chip_text"
     t.text "raw_content"
     t.json "source_links"
+    t.boolean "is_artifact_candidate", default: false
+    t.string "artifact_candidate_type"
     t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
   end
 
@@ -2312,6 +2340,25 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
 
+  create_table "teacher_notifications", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "title", null: false
+    t.text "description", null: false
+    t.string "icon_name"
+    t.string "icon_color"
+    t.json "href_links"
+    t.json "ai_prompts"
+    t.integer "priority", default: 0
+    t.datetime "expires_at"
+    t.datetime "read_at"
+    t.boolean "is_dismissed", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_teacher_notifications_on_user_id_and_created_at"
+    t.index ["user_id", "is_dismissed"], name: "index_teacher_notifications_on_user_id_and_is_dismissed"
+    t.index ["user_id", "read_at"], name: "index_teacher_notifications_on_user_id_and_read_at"
+  end
+
   create_table "teacher_profiles", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "studio_person_id"
     t.datetime "created_at", null: false
@@ -2720,6 +2767,7 @@ ActiveRecord::Schema.define(version: 2025_11_19_161129) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations"
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
+  add_foreign_key "teacher_notifications", "users"
   add_foreign_key "teaching_profile_data", "users"
   add_foreign_key "user_data_retention_statuses", "users"
   add_foreign_key "user_facilitator_infos", "users"
