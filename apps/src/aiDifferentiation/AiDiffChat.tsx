@@ -21,6 +21,7 @@ import HttpClient from '../util/HttpClient';
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffChatHeader from './AiDiffChatHeader';
+import AiDiffCreateArtifactButtons from './AiDiffCreateArtifactButtons';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {DEFAULT_THREAD_TITLE} from './constants';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from './predefinedPrompts';
@@ -125,6 +126,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             chatMessageText: json.chat_message_text,
             status: json.status,
             id: json.message_id,
+            artifactSuggestion: json.artifact_suggestion,
           };
 
           // logging here because on the first user message the threadID is 0
@@ -265,6 +267,13 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           ) : (
             <ChatMessage
               text={item.chatMessageText}
+              postText={
+                item.artifactSuggestion && (
+                  <AiDiffCreateArtifactButtons 
+                    message={item}
+                  />
+                )
+              }
               role={item.role}
               customStyles={style}
               key={id}

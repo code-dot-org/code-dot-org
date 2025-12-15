@@ -20,6 +20,7 @@ interface AiDiffWorkSpaceProps {
   curriculumCourses?: string[];
   unreadNotificationCount: number;
   personalizationData?: PersonalizationData;
+  setArtifactMessageId?: (id: number) => void;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({

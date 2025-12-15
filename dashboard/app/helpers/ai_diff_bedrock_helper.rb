@@ -22,7 +22,7 @@ module AiDiffBedrockHelper
                     end: 55,
                     start: 0
                   },
-                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                  text: '{key: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"}'
                 }
               },
               retrieved_references: [
@@ -44,7 +44,7 @@ module AiDiffBedrockHelper
             }
           ],
           output: {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            text: '{"key": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}'
           },
           session_id: "fake_session_id"
         }
@@ -282,11 +282,24 @@ module AiDiffBedrockHelper
       config
     )
 
+    puts 'ai response:'
+    puts response.output.text
+
     format_rag_response(response)
   end
 
   def format_rag_response(response)
     text = response.output.text.dup
+
+    json = begin
+      puts 'parsing json'
+      JSON.parse(text)
+    rescue JSON::ParserError
+      puts 'not valid json'
+      nil
+    end
+
+    puts json
 
     # Remove useless references such as '(Sources 1 and 7)' from the response
     text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
@@ -309,6 +322,7 @@ module AiDiffBedrockHelper
       raw_content: response.output.text,
       links: reference_urls.any? ? reference_urls : nil,
       session_id: response.session_id,
+      artifact_suggestion: json.nil? ? nil : 'exit_ticket'
     }
   end
 

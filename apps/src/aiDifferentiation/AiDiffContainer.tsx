@@ -7,6 +7,7 @@ import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeach
 import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
+import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
 import AiDiffHeader from './AiDiffHeader';
 import AiDiffWorkSpace from './AiDiffWorkspace';
 import {Context} from './types';
@@ -53,6 +54,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+  const [artifactMessageId, setArtifactMessageId] = useState(0);
   const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
@@ -105,6 +107,33 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     setPositionY(data.y);
   };
 
+  let content;
+  if (artifactMessageId) {
+    content = <AiDiffArtifactSavePage messageId={artifactMessageId} />;
+  } else if (curriculumCourses) {
+    if (!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) {
+      content = (
+        <AiDiffWelcome
+          setShowWelcomeExperience={setShowWelcomeExperience}
+          context={context}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+        />
+      );
+    } else {
+      content = (
+        <AiDiffWorkSpace
+          context={context}
+          personalizationData={personalizationData}
+          scriptName={scriptName}
+          curriculumCourses={curriculumCourses}
+          unreadNotificationCount={unreadNotificationCount}
+          setArtifactMessageId={setArtifactMessageId}
+        />
+      );
+    }
+  }
+
   return (
     <Draggable
       handle=".ai_diff_handle"
@@ -128,26 +157,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             closeTutor={closeTutor}
             closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
           />
-          <div className={style.fabBackground}>
-            {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
-              ? curriculumCourses && (
-                  <AiDiffWelcome
-                    setShowWelcomeExperience={setShowWelcomeExperience}
-                    context={context}
-                    scriptName={scriptName}
-                    curriculumCourses={curriculumCourses}
-                  />
-                )
-              : curriculumCourses && (
-                  <AiDiffWorkSpace
-                    context={context}
-                    personalizationData={personalizationData}
-                    scriptName={scriptName}
-                    curriculumCourses={curriculumCourses}
-                    unreadNotificationCount={unreadNotificationCount}
-                  />
-                )}
-          </div>
+          <div className={style.fabBackground}>{content}</div>
         </FocusLock>
       </div>
     </Draggable>

@@ -11,6 +11,7 @@ export type ChatTextMessage = {
   chatMessageText: string;
   status: string;
   id?: number;
+  artifactSuggestion?: string;
 };
 
 export type ChatPrompt = {
@@ -40,6 +41,7 @@ type ServerChatMessage = {
   updated_at: Date;
   is_preset: boolean;
   preset_chip_text: string;
+  artifact_suggestion?: string;
 };
 
 export type ChatThread = {
@@ -88,6 +90,7 @@ function messageValidatorHelper(
         : serverMsg.content,
     status: AiInteractionStatus.OK,
     id: serverMsg.id,
+    artifactSuggestion: serverMsg.artifact_suggestion,
   } as ChatTextMessage;
 }
 

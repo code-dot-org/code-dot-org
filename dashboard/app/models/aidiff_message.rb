@@ -30,6 +30,7 @@ class AidiffMessage < ApplicationRecord
   }
 
   def summarize
+    puts inspect
     {
       id: id,
       role: role,
@@ -37,6 +38,7 @@ class AidiffMessage < ApplicationRecord
       updated_at: updated_at,
       is_preset: is_preset,
       preset_chip_text: preset_chip_text,
+      artifact_suggestion: artifact_candidate_type
     }
   end
 end

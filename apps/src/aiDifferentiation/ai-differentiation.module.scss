@@ -520,3 +520,16 @@ html body .sidebarActionTooltip {
     line-height: var(--font-line-height-body-xxs, 17.6px);
   }
 }
+
+.artifactButtons {
+  button {
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--text-neutral-tertiary);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}

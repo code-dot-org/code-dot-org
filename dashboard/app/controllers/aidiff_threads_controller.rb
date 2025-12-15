@@ -51,7 +51,7 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :artifact_suggestion)
 
     render(json: return_body)
   end
@@ -126,7 +126,7 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id, :artifact_suggestion)
 
     render(json: return_body)
   end
@@ -172,7 +172,8 @@ class AidiffThreadsController < ApplicationController
         chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
         raw_content: 'Sorry, I cannot accept messages that contain personal information.',
         links: nil,
-        session_id: session_id
+        session_id: session_id,
+        artifact_suggestion: nil
       }
     end
 
@@ -202,6 +203,8 @@ class AidiffThreadsController < ApplicationController
     response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type))
     #TODO: check for profanity/PII in model response
 
+    puts response.inspect
+
     {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
@@ -209,6 +212,7 @@ class AidiffThreadsController < ApplicationController
       session_id: response[:session_id],
       raw_content: response[:raw_content],
       links: response[:links],
+      artifact_suggestion: response[:artifact_suggestion]
     }
   end
 
@@ -322,6 +326,8 @@ class AidiffThreadsController < ApplicationController
       raw_content: response_body[:raw_content],
       source_links: response_body[:links],
       is_preset: params[:isPreset],
+      is_artifact_candidate: response_body[:artifact_suggestion].present?,
+      artifact_candidate_type: response_body[:artifact_suggestion]
     )
   end
 

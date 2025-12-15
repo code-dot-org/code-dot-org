@@ -17,6 +17,7 @@ import {Role} from './types';
 import moduleStyles from './chat-message.module.scss';
 interface ChatMessageProps {
   text: string;
+  postText?: React.ReactNode;
   role: Role;
   customStyles?: {[label: string]: string};
   header?: React.ReactNode;
@@ -44,6 +45,7 @@ const nonTaRehypeMap = {
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
+  postText,
   role,
   customStyles,
   header,
@@ -115,6 +117,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   aiTutorVersionFiles.length > 0 && (
                     <AiTutorVersionActions files={aiTutorVersionFiles} />
                   )}
+                {postText}
               </div>
             ) : (
               <p>{text}</p>
