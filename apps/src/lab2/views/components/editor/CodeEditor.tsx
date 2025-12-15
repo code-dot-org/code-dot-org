@@ -145,13 +145,33 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, []);
 
   useEffect(() => {
+    return () => {
+      if (editorView) {
+        console.log('destroying editorView on unmount');
+        editorView.destroy();
+        setDidInit(false);
+      }
+    };
+  }, [editorView]);
+
+  useEffect(() => {
     if (!editorFontSizeLoaded || editorRef.current === null || didInit) {
       return;
     }
 
+    if (editorView) {
+      console.log('destroying existing editorView');
+      editorView.destroy();
+    }
+
     const onEditorUpdate = EditorView.updateListener.of(
       (update: ViewUpdate) => {
-        onCodeChange(update.state.doc.toString());
+        if (update.docChanged) {
+          onCodeChange(update.state.doc.toString());
+        } else {
+          console.log('skipping onCodeChange, doc not changed');
+          console.log({update});
+        }
       }
     );
 
@@ -203,6 +223,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorFontSizeKey,
     editorFontSizeLoaded,
     themeCompartment,
+    editorView,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
