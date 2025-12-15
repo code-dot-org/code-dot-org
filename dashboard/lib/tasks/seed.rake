@@ -180,9 +180,6 @@ namespace :seed do
     csd6b-2025
     csd7-2025
     csd-post-survey-2025
-    interactive-games-animations-2025
-    focus-on-creativity3-2025
-    focus-on-coding3-2025
     csp1-2025
     csp2-2025
     csp3-2025
