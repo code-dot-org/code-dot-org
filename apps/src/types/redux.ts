@@ -141,4 +141,13 @@ interface SectionProgressState {
       };
     };
   };
+  studentLevelProgressByUnit?: {
+    [lessonId: string]: {
+      [userId: string]: {
+        [levelId: string]: {
+          status: string;
+        };
+      };
+    };
+  };
 }

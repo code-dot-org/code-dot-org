@@ -10,6 +10,7 @@ import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgr
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getFullName} from '../manageStudents/utils';
 
@@ -24,14 +25,6 @@ interface LessonsData {
   hasUnnumberedLessons: boolean;
 }
 
-interface LevelValidationMapEntry {
-  [levelId: string]: boolean;
-}
-
-interface LessonToLevelValidationMapData {
-  [lessonId: number]: LevelValidationMapEntry;
-}
-
 interface UserProgressInLessonData {
   [userId: number]: {
     progress: number | null;
@@ -39,13 +32,22 @@ interface UserProgressInLessonData {
   };
 }
 
-const getLessons = (unitId: number) =>
-  HttpClient.fetchJson<LessonsData>(
-    `/student_snapshots/lessons/${unitId}`
-  ).then(response => response?.value);
+interface UserValidationProgressByLessonData {
+  [lessonId: string]: {
+    [userId: string]: number;
+  };
+}
 
-const lessonsCachedLoader = _.memoize(getLessons);
+const COMPLETED_STATUSES: string[] = [
+  LevelStatus.completed_assessment,
+  LevelStatus.free_play_complete,
+  LevelStatus.passed,
+  LevelStatus.perfect,
+  LevelStatus.review_accepted,
+  LevelStatus.submitted,
+];
 
+const COMPLETE_PERCENT_STRING = '100% complete';
 const ZERO_TIME_SPENT = '00:00:00';
 
 const formatTimeSpent = (secondsSpent: number) => {
@@ -56,6 +58,13 @@ const formatTimeSpent = (secondsSpent: number) => {
   const seconds = `${secondsSpent % 60}`.padStart(2, '0');
   return `${hours}:${minutes}:${seconds}`;
 };
+
+const getLessons = (unitId: number) =>
+  HttpClient.fetchJson<LessonsData>(
+    `/student_snapshots/lessons/${unitId}`
+  ).then(response => response?.value);
+
+const lessonsCachedLoader = _.memoize(getLessons);
 
 const StudentSnapshot: React.FC = () => {
   const [lessons, setLessons] = useState<LessonOption[]>([]);
@@ -86,6 +95,18 @@ const StudentSnapshot: React.FC = () => {
   const lessonProgressByUnit = useAppSelector(
     state => state.sectionProgress?.studentLessonProgressByUnit
   );
+  const unitDataByUnit = useAppSelector(
+    state => state.sectionProgress?.unitDataByUnit
+  );
+  const studentLevelProgressByUnit = useAppSelector(
+    state => state.sectionProgress?.studentLevelProgressByUnit
+  );
+  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+  const selectedStudent = React.useMemo(
+    () => selectedStudents.find(student => student.id === selectedStudentId),
+    [selectedStudentId, selectedStudents]
+  );
+
   const userProgressBySelectedLesson = React.useMemo(() => {
     const progressByUser: UserProgressInLessonData = {};
     if (
@@ -116,37 +137,71 @@ const StudentSnapshot: React.FC = () => {
     return progressByUser;
   }, [selectedUnitId, selectedLessonId, lessonProgressByUnit]);
 
-
-
-
-
-
-  const unitDataByUnit = useAppSelector(
-    state => state.sectionProgress?.unitDataByUnit
-  );
-
-  if (unitDataByUnit) {
-    const lessons = unitDataByUnit[selectedUnitId]?.lessons;
-    const lessonsToLevelValidationMap: LessonToLevelValidationMapData = {};
-    Object.values(lessons).forEach(lesson => {
-      const currLessonLevelValidation: LevelValidationMapEntry = {};
-      Object.values(lesson.levels).forEach(level => {
-        currLessonLevelValidation[level.id] = level.isValidated;
+  // Map each lesson to the number of validated levels it has
+  const lessonsToNumValidationLevels = React.useMemo(() => {
+    const lessonsToNumValidationLevelsMap: {[lessonId: number]: number[]} = {};
+    if (unitDataByUnit) {
+      const lessons = unitDataByUnit[selectedUnitId]?.lessons;
+      Object.values(lessons).forEach(lesson => {
+        const currLessonValidationLevels: number[] = [];
+        Object.values(lesson.levels).forEach(level => {
+          if (level.isValidated) {
+            currLessonValidationLevels.push(+level.id);
+          }
+        });
+        lessonsToNumValidationLevelsMap[lesson.id] = currLessonValidationLevels;
       });
-      lessonsToLevelValidationMap[lesson.id] = currLessonLevelValidation;
-    });
-  }
+    }
+    return lessonsToNumValidationLevelsMap;
+  }, [unitDataByUnit, selectedUnitId]);
 
+  // Map each lesson to the amount of validation levels each student has completed
+  const userValidationProgressByLesson = React.useMemo(() => {
+    const userValidationProgressByLessonMap: UserValidationProgressByLessonData =
+      {};
+    if (studentLevelProgressByUnit) {
+      Object.entries(studentLevelProgressByUnit).forEach(
+        ([lessonId, classProgressInLesson]) => {
+          const levelProgressByUser: {[userId: string]: number} = {};
+          Object.entries(classProgressInLesson).forEach(
+            ([userId, userProgress]) => {
+              levelProgressByUser[userId] = Object.values(userProgress).filter(
+                progress => COMPLETED_STATUSES.includes(progress.status)
+              ).length;
+            }
+          );
+          userValidationProgressByLessonMap[lessonId] = levelProgressByUser;
+        }
+      );
+      return userValidationProgressByLessonMap;
+    }
+  }, [studentLevelProgressByUnit]);
 
+  const numValidationLevelsCompleteString = React.useMemo(() => {
+    if (
+      !selectedUnitId ||
+      !selectedLessonId ||
+      !selectedStudentId ||
+      !lessonsToNumValidationLevels ||
+      !userValidationProgressByLesson
+    ) {
+      return '';
+    }
 
-
-  
-
-  const {selectedStudents} = useAppSelector(state => state.teacherSections);
-  const selectedStudent = React.useMemo(
-    () => selectedStudents.find(student => student.id === selectedStudentId),
-    [selectedStudentId, selectedStudents]
-  );
+    const numValidationLevelsUserCompleted =
+      userValidationProgressByLesson[selectedLessonId][selectedStudentId];
+    const totalValidationLevels =
+      lessonsToNumValidationLevels[selectedLessonId];
+    return numValidationLevelsUserCompleted === totalValidationLevels.length
+      ? COMPLETE_PERCENT_STRING
+      : `${numValidationLevelsUserCompleted} of ${totalValidationLevels} passed`;
+  }, [
+    selectedUnitId,
+    selectedLessonId,
+    selectedStudentId,
+    lessonsToNumValidationLevels,
+    userValidationProgressByLesson,
+  ]);
 
   React.useEffect(() => {
     if (selectedUnitId) {
@@ -270,9 +325,17 @@ const StudentSnapshot: React.FC = () => {
                   iconName={'clipboard-check'}
                   iconStyle={'regular'}
                 />
-                <div className={styles.lessonDetailLabelAndInfo}>
+                <div
+                  className={classNames(
+                    styles.lessonDetailLabelAndInfo,
+                    numValidationLevelsCompleteString ===
+                      COMPLETE_PERCENT_STRING && styles.greenCompletedText
+                  )}
+                >
                   <Typography variant="overline3">Validation tests</Typography>
-                  <Typography variant="h4">9 of 12 passed</Typography>
+                  <Typography variant="h4">
+                    {numValidationLevelsCompleteString}
+                  </Typography>
                 </div>
               </div>
               <div className={styles.lessonDetail}>
