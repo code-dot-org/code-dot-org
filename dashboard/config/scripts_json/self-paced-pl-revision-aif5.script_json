@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-11 18:14:37 UTC",
+    "serialized_at": "2025-12-12 19:09:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -140,6 +140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_00-new"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -162,6 +165,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_05_02-new"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -184,6 +190,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_overview_aug2025_-rev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -206,6 +215,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_impact_aug2025_-rev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -228,6 +240,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_for_understanding_aug2025_-rev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -250,6 +265,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_answer_aug2025_-rev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -798,31 +816,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif_pl_project-description-L2-cyber_aug2025_-rev"
-        ],
-        "progression": "Preparing for the Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_project-description-L2-cyber_aug2025_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif5",
-        "activity_section.key": "e73561bc-c36a-4b38-9eb4-dd298865393a"
-      },
-      "level_keys": [
-        "csaif_pl_project-description-L2-cyber_aug2025_-rev"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csaif_pl_3-day-project-L3-cyber_aug2025_-rev"
         ],
         "progression": "Preparing for the Project"
@@ -842,9 +835,9 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 4,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -867,9 +860,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 5,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -892,9 +885,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
-      "activity_section_position": 6,
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -917,9 +910,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
-      "activity_section_position": 7,
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -942,11 +935,14 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-cyber-rev2"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -1282,18 +1278,6 @@
         "level.key": "csaif_pl_lesson_overview_endofUnit_L1_cyber_aug2025_-rev",
         "script_level.level_keys": [
           "csaif_pl_lesson_overview_endofUnit_L1_cyber_aug2025_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif5",
-        "activity_section.key": "e73561bc-c36a-4b38-9eb4-dd298865393a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_project-description-L2-cyber_aug2025_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_project-description-L2-cyber_aug2025_-rev"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",

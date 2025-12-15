@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-06 19:27:12 UTC",
+    "serialized_at": "2025-12-12 10:28:13 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6944,15 +6944,16 @@
     },
     {
       "name": "Defense in Action",
-      "url": "https://docs.google.com/document/d/1mIwIJA8cEIcximlVt56nb5VWN50TF-8Xyt8-jK--TfY/edit?usp=sharing",
-      "key": "defense_in_action",
+      "url": "https://docs.google.com/document/d/1nB3kN-2P7_O4LoIEaCLpYlaGsZe3KWo5dDRGuXnasDg/edit?tab=t.0#heading=h.9lfzz4uecn6l",
+      "key": "defense_in_action_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "defense_in_action"
+        "resource.key": "defense_in_action_1"
       }
     },
     {
@@ -7046,15 +7047,16 @@
     },
     {
       "name": "Hackable Human",
-      "url": "https://docs.google.com/document/d/1owIfysW2x4L7v-2BMGz1NkkrSwuU3XhrsjyXXyLhKmg/edit?usp=sharing",
-      "key": "hackable_human",
+      "url": "https://docs.google.com/document/d/1HUBHOabDskDqqqHK62pS-1zga-2s7IWSpESak2FeQyE/edit?tab=t.0#heading=h.t9d5k8gvspcl",
+      "key": "hackable_human_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "hackable_human"
+        "resource.key": "hackable_human_1"
       }
     },
     {
@@ -7507,7 +7509,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "hackable_human"
+        "resource.key": "hackable_human_1"
       }
     },
     {
@@ -7549,7 +7551,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "defense_in_action"
+        "resource.key": "defense_in_action_1"
       }
     },
     {

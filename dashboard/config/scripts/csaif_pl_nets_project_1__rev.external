@@ -100,61 +100,11 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
----
-
-## Project Calendar
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
-
-<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
-	<p style="text-align: center; font-weight: bold; font-size: 18px">
-    	Day 1
-    </p>
-    
-    <p style="font-size: 14px">
-	In order to start developing an advocacy campaign, students explore challenges in Internet access and identify key issues/affected communities using case studies and real-world examples. <br><br> Students form teams and take on roles including: manager, summarizer, recorder, and time keeper.
-    </p>
-    
-</div>
-
-<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
-	<p style="text-align: center; font-weight: bold; font-size: 18px">
-    	Day 2
-    </p>
-    
-    <p style="font-size: 14px">
-	Students clarify their campaign’s focus, audience, and key message. <br><br>Students develop a persuasive pitch that highlights the issue, solutions, and supporting evidence.
-    </p>
-    
-</div>
-
-<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
-	<p style="text-align: center; font-weight: bold; font-size: 18px">
-    	Day 3
-    </p>
-    
-    <p style="font-size: 14px">
-	Students polish and refine their campaign, incorporating final revisions based on peer feedback and reflection.
-    <br><br> Students present their advocacy campaign and engage in meaningful discussion around their pitches.
-    </p>
-    
-</div>
-</div>
 
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ If you have time, check out the full <a href='https://studio.code.org/s/aif4-2025/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ Check out the <a href="https://docs.google.com/document/d/1A6MfgiFK4T66KDu4w9Qg-L9DwtqzZEub-8q0uE1SSB8/edit?tab=t.0#heading=h.xe9cnc3216z0" target="blank" rel="noopener noreferrer">Exemplar</a> to see how these concepts come to life in the classroom.
 </p>
-
-
-## 📝 To Do
-
-#### Before you move on take a minute to learn about barriers in Internet access.
-
-* #### Learn more about challenges in Internet access by exploring <a href='https://levelbuilder-studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4/lessons/7/levels/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>data from the Pew Research Center</a>. Click continue as you read through the levels learn about Internet use over time, home broadband use by income, Internet use by age, and more. This content is covered in Lesson 7: The Internet's Hidden Barriers.
-
-* #### Learn more communities affected by Internet access by exploring the <a href='https://docs.google.com/document/d/1yn_Z-uroLVk7Lo5-wp9BjonpRRjnnliIUmGpoRv_2Ls/edit?tab=t.0#heading=h.5ychaexmv4p8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Persona Fact Sheets</a> from Day 1 of the Internet Access Advocacy Campaign Project. You can also interact with each of these personas using an <a href='https://levelbuilder-studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4/lessons/7/levels/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Chatbot</a> from Lesson 7: The Internet's Hidden Barriers.
-
-<br>
 
 MARKDOWN

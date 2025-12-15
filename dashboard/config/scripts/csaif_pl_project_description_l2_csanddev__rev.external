@@ -6,7 +6,12 @@ markdown <<MARKDOWN
 # Sustainable Systems Project Overview
 
 
-#### In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**.
+#### In this project, students propose and design an **AI-infused computer system** and demonstrate how it would contribute to achieving one of the **United Nations Sustainable Development Goals**. The UN Sustainable Development Goals is the specific framework that students will be using to pick a focus for their project.
+
+#### This structured approach ensures students think critically, iterate on their work, and develop independence while also learning how to give and apply feedback effectively.
+
+<img src="https://images.code.org/7db28bc9b3ce8d905ef520e44bb2c503-image-1742581125951.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
+
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
@@ -107,16 +112,10 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
----
-
-#### Check out the <a href="https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">Exemplar</a> lesson plan to see how these concepts come to life in the classroom.
-
 <br>
- 
- <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 13. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/3/lessons/13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Check out the <a href="https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">Exemplar</a> to see how these concepts come to life in the classroom.
 </p>
-
-
 
 MARKDOWN

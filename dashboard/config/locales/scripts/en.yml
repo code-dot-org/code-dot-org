@@ -26278,3 +26278,129 @@ en:
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
           student_description: Learn to customize chatbots using AI Chat Lab
+        teaching-ps-with-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-ps-with-ai-v2-2025
+          title: Teaching Problem-Solving with AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-foundations-ai-programming-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-foundations-ai-programming-v2-2025
+          title: Teaching Foundations of AI Programming (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-ai-systems-that-power-it-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-ai-systems-that-power-it-v2-2025
+          title: Teaching AI and the Systems that Power It (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-fabric-of-internet-and-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-fabric-of-internet-and-ai-v2-2025
+          title: Teaching the Fabric of the Internet and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-insights-from-data-and-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-insights-from-data-and-ai-v2-2025
+          title: Teaching Insights from Data and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-ai-powered-threats-defenses-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-ai-powered-threats-defenses-v2-2025
+          title: Teaching AI-Powered Threats and Defenses (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-aif-s1-overview-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-aif-s1-overview-2025
+          title: Introduction to Teaching AI Foundations S1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-aif-s1-overview-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aif-s1-overview-2025
+          title: Introduction to Teaching AI Foundations S1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-powered-threats-defenses-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-defenses-v2-2025
+          title: Teaching AI-Powered Threats and Defenses (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-insights-from-data-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-insights-from-data-ai-v2-2025
+          title: Teaching Insights from Data and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-fabric-of-internet-and-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-fabric-of-internet-and-ai-v2-2025
+          title: Teaching the Fabric of the Internet and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-systems-that-power-it-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-systems-that-power-it-v2-2025
+          title: Teaching AI and the Systems that Power It (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-foundations-ai-programming-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-foundations-ai-programming-v2-2025
+          title: Teaching Foundations of AI Programming (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ps-with-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ps-with-ai-v2-2025
+          title: Teaching Problem-Solving with AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

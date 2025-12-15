@@ -4,12 +4,13 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Designing Secure Systems Project Overview
- 
-#### This project focuses on analyzing a real-world app to identify **two security or usability issues** that affect different users. 
 
-#### The final product includes a **before-and-after artifact** that shows a redesigned solution, along with a personified security feature that explains how it helps.
- 
+#### In the final project, students analyze a real-world digital system from multiple user perspectives to identify two key issues, such as weak input validation or insecure data storage.
 
+#### They propose defense mechanism solutions, creating “Before” artifacts to show the problems and “After” artifacts to illustrate the fixes—featuring a personified defense mechanism.
+
+
+#### Students also explain how each fix works, its trade-offs, and how it protects users.
 
 
 
@@ -112,9 +113,16 @@ markdown <<MARKDOWN
 </details>
 
 
-## Sample "Before" Artifact
 
-<img src="https://images.code.org/fe1eba356fd109ee663bbff4e376cab7-image-1755268159411.png" alt="example comic of person struggling with ride share app. This is an example of the before artifact" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### In this example, the character is expressing their concerns with the ride share app. 
+## Exemplar Project Artifact
+
+<img src="https://images.code.org/fa1b730d7a258ed991e06fd1fc48fb22-Screenshot 2025-12-12 at 2.11.21 PM.png" alt="comic showing one row with the character frustrated with privacy issues. The second row shows ways the issues will be addressed" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### This project example suggests privacy fixes for the ride share app. 
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Check out the full <a href="https://docs.google.com/document/d/1T3wQ5pdFj8ou59eEiK4UZXWla6t7Ejc-_mOA8RWeb_E/edit?tab=t.0#heading=h.xe9cnc3216z0">Exemplar Project Planning Guide</a>.
+</p>
+
 MARKDOWN

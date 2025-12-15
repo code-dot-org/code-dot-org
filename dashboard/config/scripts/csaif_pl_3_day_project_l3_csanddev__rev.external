@@ -3,16 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Final Project: 3-Day Process Overview  
-
-
-#### In this project, students will create  a project centered around designing a computer system that helps make the world a better place. Introduce the UN Sustainable Development Goals as the specific framework that students will be using to pick a focus for their project.
-
-#### Over three days, they will plan, develop, review, and refine their work, with structured support through a  <a href = "https://docs.google.com/document/d/140knzapQRCeyvLojN24lOFr9mBo1e-LbQKj8uFrz2qM/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Planning Guide</a>.
-
-
-
-## Daily Overview
+# Project Timeline  
 
 <div style="clear:both;"></div>
 
@@ -60,11 +51,11 @@ markdown <<MARKDOWN
         </div>
     </div>
 
----
 
+<br>
 
-#### This structured approach ensures students think critically, iterate on their work, and develop independence while also learning how to give and apply feedback effectively.
-
-<img src="https://images.code.org/7db28bc9b3ce8d905ef520e44bb2c503-image-1742581125951.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If you have time, check out the full <a href='https://studio.code.org/s/aif3-2025/lessons/13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
 
 MARKDOWN

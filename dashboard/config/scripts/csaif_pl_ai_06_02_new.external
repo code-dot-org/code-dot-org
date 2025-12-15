@@ -21,7 +21,7 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li><strong>Understand the fundamental concepts</strong> of data science</li>
+      <li>Understand the fundamental concepts of data science</li>
       <li>Engage in hands-on activities that involve data analysis, data manipulation, and data visualizations</li>
       <li>Explore and discuss the ethical implications and responsibilities associated with data science</li>
     </ul>

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-10 16:45:11 UTC",
+    "serialized_at": "2025-12-12 18:28:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -790,6 +790,28 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_01B_-rev"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_01B_-rev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csaif_pl_ai_04_02_-rev"
         ],
@@ -810,9 +832,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 3,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -835,9 +857,9 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 4,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -860,8 +882,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -885,8 +907,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1216,6 +1238,18 @@
         "level.key": "csaif_pl_ai_04_01_-rev",
         "script_level.level_keys": [
           "csaif_pl_ai_04_01_-rev"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_01B_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_01B_-rev"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
