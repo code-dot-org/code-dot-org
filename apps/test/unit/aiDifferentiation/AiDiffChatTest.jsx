@@ -12,7 +12,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiDiffChat from '@cdo/apps/aiDifferentiation/AiDiffChat';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore, registerReducers, restoreRedux} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -72,7 +72,6 @@ describe('AiDiffChat', () => {
   afterEach(() => {
     sessionStorage.clear();
     jest.restoreAllMocks();
-    restoreRedux();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -128,14 +127,13 @@ describe('AiDiffChat', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    expect(screen.getAllByRole('checkbox')).toHaveLength(7);
-    screen.getByRole('checkbox', {name: 'Give me an example'});
-    screen.getByRole('checkbox', {name: 'Explain a concept'});
-    screen.getByRole('checkbox', {name: 'Debug common mistakes'});
-    screen.getByRole('checkbox', {name: 'Generate a mini lesson'});
-    screen.getByRole('checkbox', {name: 'Write an exit ticket'});
-    screen.getByRole('checkbox', {name: 'Create task support'});
-    screen.getByRole('checkbox', {name: 'AP exam support'});
+    screen.getByRole('button', {name: 'Give me an example'});
+    screen.getByRole('button', {name: 'Explain a concept'});
+    screen.getByRole('button', {name: 'Debug common mistakes'});
+    screen.getByRole('button', {name: 'Generate a mini lesson'});
+    screen.getByRole('button', {name: 'Write an exit ticket'});
+    screen.getByRole('button', {name: 'Create task support'});
+    screen.getByRole('button', {name: 'AP exam support'});
   });
 
   it('initial message and suggested prompts are rendered for general context', () => {
@@ -149,12 +147,11 @@ describe('AiDiffChat', () => {
       "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me."
     );
     //suggested prompts
-    expect(screen.getAllByRole('checkbox')).toHaveLength(5);
-    screen.getByRole('checkbox', {name: 'Suggest a curriculum'});
-    screen.getByRole('checkbox', {name: 'Get started with Code.org'});
-    screen.getByRole('checkbox', {name: 'Learn about Professional Learning'});
-    screen.getByRole('checkbox', {name: 'How to create a section?'});
-    screen.getByRole('checkbox', {name: 'Get help using Code.org'});
+    screen.getByRole('button', {name: 'Suggest a curriculum'});
+    screen.getByRole('button', {name: 'Get started with Code.org'});
+    screen.getByRole('button', {name: 'Learn about Professional Learning'});
+    screen.getByRole('button', {name: 'How to create a section?'});
+    screen.getByRole('button', {name: 'Get help using Code.org'});
   });
 
   it('Selecting a suggested prompt gives response', async () => {
