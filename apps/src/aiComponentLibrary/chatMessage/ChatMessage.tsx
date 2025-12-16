@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -59,6 +59,26 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     state => state.weblab2?.aiTutorVersionFiles || []
   );
 
+  // Show browser warning when there are pending AI Tutor version changes
+  const showAiTutorVersionActions =
+    isAiTutorVersion && isLastMessage && aiTutorVersionFiles.length > 0;
+
+  useEffect(() => {
+    if (showAiTutorVersionActions) {
+      const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+        event.preventDefault();
+        // Chrome requires returnValue to be set.
+        event.returnValue = '';
+      };
+
+      window.addEventListener('beforeunload', handleBeforeUnload);
+
+      return () => {
+        window.removeEventListener('beforeunload', handleBeforeUnload);
+      };
+    }
+  }, [showAiTutorVersionActions]);
+
   return (
     <div
       className={classNames(
@@ -110,11 +130,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   rehypeMap={rehypeMap}
                   openExternalLinksInNewTab
                 />
-                {isAiTutorVersion &&
-                  isLastMessage &&
-                  aiTutorVersionFiles.length > 0 && (
-                    <AiTutorVersionActions files={aiTutorVersionFiles} />
-                  )}
+                {showAiTutorVersionActions && (
+                  <AiTutorVersionActions files={aiTutorVersionFiles} />
+                )}
               </div>
             ) : (
               <p>{text}</p>
