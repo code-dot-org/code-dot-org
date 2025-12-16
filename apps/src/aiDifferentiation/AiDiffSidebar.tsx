@@ -107,17 +107,14 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   const todayChats = threads.filter(thread => {
     return thread.updatedAt > yesterday;
   });
-
   const past7DaysChats = threads.filter(thread => {
     return thread.updatedAt >= sevenDaysAgo && thread.updatedAt <= yesterday;
   });
-
   const past30DaysChats = threads.filter(thread => {
     return (
       thread.updatedAt >= thirtyDaysAgo && thread.updatedAt <= sevenDaysAgo
     );
   });
-
   const oldChats = threads.filter(thread => {
     return thread.updatedAt < thirtyDaysAgo;
   });

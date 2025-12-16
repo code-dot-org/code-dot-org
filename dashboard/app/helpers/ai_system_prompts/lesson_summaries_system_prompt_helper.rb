@@ -74,7 +74,22 @@ Ways AI Can Help:
 }
 
 module AiSystemPrompts::LessonSummariesSystemPromptHelper
-  def self.get_system_prompt(lesson_id, user_id = nil)
+  RESPONSE_FORMATS = {
+    BRIEF_SUMMARY: "Your summary should be returned in JSON format and should be composed as follows:
+    {learning_objective: this should be a brief, one paragraph summary of the lesson, focusing on each of the Learning Objectives and how they will be achieved,
+    lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
+    misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
+    tips: additional strategies or ideas to help with teaching the lesson}",
+    PODCAST_SCRIPT: "Your summary should be the script of a podcast returned as a string. It should be written in the 2nd person directed at the listener and organized as follows:
+    - First, start with the opening sentence: You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class
+    - Second, give a one sentence overview that lists the lesson name and describes what its about
+    - Third, describe what materials are needed for the lesson
+    - Fourth, summarize the lesson's Learning Objectives, give an overview of what the lesson entails, describe the activities and new vocabulary terms, and describe how this lesson connects to the Goals and Big Questions in the Unit Overview
+    - Fifth, provide step by step instructions using the Teacher Tips and Misconceptions in the lesson plan to show the teacher how to run the lesson
+    - Sixth, end with a closing remark that repeats the name of the lesson and thanks them for listening.",
+  }
+
+  def self.get_system_prompt(lesson_id, user_id = nil, response_format = RESPONSE_FORMATS[:BRIEF_SUMMARY])
     lesson_plan = get_lesson_materials(lesson_id)
     intro = "You are an expert teaching assistant in a computer science classroom who has been asked to summarize the upcoming lesson to help the teacher prepare for class."
     personalization = if user_id
@@ -97,21 +112,18 @@ Standards: #{lesson_plan[:standards].to_json}
 Activities: #{lesson_plan[:activities].to_json}
 Preparation: #{lesson_plan[:preparation]}
 Vocabulary: #{lesson_plan[:vocabularies].to_json}
+Unit overview: #{lesson_plan[:unit_overview].to_json}
 
-Your summary should be returned in JSON format and should be composed as follows:
-{learning_objective: this should be a brief, one paragraph summary of the lesson, focusing on each of the Learning Objectives and how they will be achieved,
-lesson_beats: an ordered list of the main parts of the lesson, including activities and new vocabulary terms,
-misconceptions: an unordered list including 2 - 3 misconceptions students might have about the material being covered,
-tips: additional strategies or ideas to help with teaching the lesson}"
+#{response_format}"
     prompt
   end
 
   def self.get_personalization(user_id)
     profile = TeachingProfileData.find_by(user_id: user_id)
     unless profile
-      return nil
+      return ''
     end
-    personalization_string = "Use the following information about the teacher to personalize your summary:"
+    personalization_string = ""
     if profile.individual_data["yearsTeaching"]
       personalization_string << "\nThe teacher has #{profile.individual_data["yearsTeaching"]} years of experience in the classroom."
     end
@@ -147,7 +159,8 @@ tips: additional strategies or ideas to help with teaching the lesson}"
                 end
       personalization_string << "\nThey were matched with the following teaching persona as part of a personalization quiz:\n#{persona}\n\n"
     end
-    personalization_string
+
+    personalization_string.empty? ? "" : "Use the following information about the teacher to personalize your summary:" + personalization_string
   end
 
   def self.get_lesson_materials(lesson_id)
@@ -194,6 +207,8 @@ tips: additional strategies or ideas to help with teaching the lesson}"
     lesson_materials[:vocabularies].each do |v|
       @lesson_plan[:vocabularies] << {word: v[:word], definition: v[:definition]}
     end
+    localized_desc = Unit.find(lesson.script_id)&.localized_description
+    @lesson_plan[:unit_overview] = localized_desc ? Services::MarkdownPreprocessor.process(localized_desc) : nil
     @lesson_plan
   end
 end

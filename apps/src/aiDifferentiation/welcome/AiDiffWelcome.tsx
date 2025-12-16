@@ -349,6 +349,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       setSelectedOption('plan');
       return null;
     }
+
     const {initialMessage, suggestedPrompts} =
       SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
 
