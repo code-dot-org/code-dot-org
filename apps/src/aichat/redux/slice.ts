@@ -183,23 +183,12 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    updateChatMessageStatus: (
-      state,
-      action: PayloadAction<{updateId: string; status: ChatMessage['status']}>
-    ) => {
-      const event = state.chatEventsCurrent.find(
-        (event): event is ChatMessage =>
-          isPendingOrCompletedChatMessage(event) &&
-          event.updateId === action.payload.updateId
-      );
-      if (!event) return;
-      event.status = action.payload.status;
-    },
-    updateChatMessageText: (
+    updateChatMessage: (
       state,
       action: PayloadAction<{
         updateId: string;
-        chatMessageText: ChatMessage['chatMessageText'];
+        chatMessageText?: ChatMessage['chatMessageText'];
+        status?: ChatMessage['status'];
       }>
     ) => {
       const event = state.chatEventsCurrent.find(
@@ -208,7 +197,12 @@ const aichatSlice = createSlice({
           event.updateId === action.payload.updateId
       );
       if (!event) return;
-      event.chatMessageText = action.payload.chatMessageText;
+      if (action.payload.chatMessageText !== undefined) {
+        event.chatMessageText = action.payload.chatMessageText;
+      }
+      if (action.payload.status !== undefined) {
+        event.status = action.payload.status;
+      }
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {
       state.hasSentMessage = action.payload;
@@ -457,8 +451,7 @@ export const {
   setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  updateChatMessageStatus,
-  updateChatMessageText,
+  updateChatMessage,
   setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,

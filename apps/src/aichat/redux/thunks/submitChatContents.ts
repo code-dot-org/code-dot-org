@@ -5,8 +5,7 @@ import {
   clearStagedFiles,
   clearUserAddedSelectionContext,
   setChatMessageSent,
-  updateChatMessageStatus,
-  updateChatMessageText,
+  updateChatMessage,
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
@@ -195,7 +194,7 @@ export const submitChatContents = createAsyncThunk(
                 fullText += delta;
                 if (hasAddedAssistantMessage) {
                   dispatch(
-                    updateChatMessageText({
+                    updateChatMessage({
                       updateId: newAssistantMessage.updateId,
                       chatMessageText: fullText,
                     })
@@ -252,14 +251,9 @@ export const submitChatContents = createAsyncThunk(
 
         if (hasAddedAssistantMessage) {
           dispatch(
-            updateChatMessageStatus({
+            updateChatMessage({
               updateId: newAssistantMessage.updateId,
               status: message.status,
-            })
-          );
-          dispatch(
-            updateChatMessageText({
-              updateId: newAssistantMessage.updateId,
               chatMessageText: message.chatMessageText,
             })
           );
@@ -270,7 +264,7 @@ export const submitChatContents = createAsyncThunk(
       }
       if (message.role === Role.USER) {
         dispatch(
-          updateChatMessageStatus({
+          updateChatMessage({
             updateId: newUserMessage.updateId,
             status: message.status,
           })
@@ -295,7 +289,7 @@ async function handleChatCompletionError(
   }
 
   dispatch(
-    updateChatMessageStatus({
+    updateChatMessage({
       updateId: newUserMessage.updateId,
       status: Status.ERROR,
     })
