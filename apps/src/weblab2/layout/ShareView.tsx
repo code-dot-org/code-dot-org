@@ -46,7 +46,7 @@ const ShareView: React.FunctionComponent = () => {
           type="tertiary"
           color="black"
           size="xs"
-          iconLeft={{iconStyle: 'regular', iconName: 'circle-exclamation'}}
+          iconLeft={{iconStyle: 'regular', iconName: 'message-exclamation'}}
           onClick={onReportAbuse}
         />
       </div>
