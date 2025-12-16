@@ -28,6 +28,11 @@ const ShareView: React.FunctionComponent = () => {
   const onRemix = () => {
     projectManager?.redirectToRemix();
   };
+
+  const onReportAbuse = () => {
+    console.log('Report abuse');
+  };
+
   const [consoleVisible, setConsoleVisible] = useState(false);
 
   const showPreview = hasPreview(miniApp);
@@ -83,6 +88,14 @@ const ShareView: React.FunctionComponent = () => {
           size="xs"
           iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
           onClick={onRemix}
+        />
+        <Button
+          text="Report abuse"
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconLeft={{iconStyle: 'regular', iconName: ''}}
+          onClick={onReportAbuse}
         />
       </div>
       <div

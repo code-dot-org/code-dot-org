@@ -17,6 +17,11 @@ const ShareView: React.FunctionComponent = () => {
     projectManager?.redirectToRemix();
   };
 
+  const onReportAbuse = () => {
+    console.log('Report abuse');
+    window.open('/report_abuse', '_blank');
+  };
+
   return (
     <div className={moduleStyles.shareContainer}>
       <div className={moduleStyles.sidebar}>
@@ -35,6 +40,14 @@ const ShareView: React.FunctionComponent = () => {
           size="xs"
           iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
           onClick={onRemix}
+        />
+        <Button
+          text="Report abuse"
+          type="tertiary"
+          color="black"
+          size="xs"
+          iconLeft={{iconStyle: 'regular', iconName: 'circle-exclamation'}}
+          onClick={onReportAbuse}
         />
       </div>
       <div className={moduleStyles.previewContainer}>
