@@ -42,6 +42,7 @@ interface VersionHistoryPanelProps {
   disabled?: boolean;
   isOpen?: boolean;
   alwaysShowAutoSaves?: boolean;
+  onLoadVersion?: (sources: ProjectSources) => void;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -69,6 +70,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   disabled = false,
   isOpen = false,
   alwaysShowAutoSaves = false,
+  onLoadVersion,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -268,8 +270,9 @@ const VersionHistoryPanel: React.FunctionComponent<
         /* forceNewVersion */ true
       )
     );
+    if (onLoadVersion) onLoadVersion(startSources);
     successfulProjectResetCleanUp();
-  }, [dispatch, startSources, successfulProjectResetCleanUp]);
+  }, [dispatch, startSources, successfulProjectResetCleanUp, onLoadVersion]);
 
   const confirmStartOver = useCallback(() => {
     dialogControl?.showDialog({
@@ -296,6 +299,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
+            if (onLoadVersion) onLoadVersion(sources);
             successfulProjectResetCleanUp();
           } else {
             setVersionLoadError(true);
@@ -312,6 +316,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
+    onLoadVersion,
   ]);
 
   const isLatestVersion = useCallback(
@@ -355,14 +360,21 @@ const VersionHistoryPanel: React.FunctionComponent<
         });
       }
       if (viewingInitialVersion) {
-        dispatch(previewStartSources({startSources}));
+        dispatch(previewStartSources({startSources, onLoadVersion}));
       } else if (isLatest) {
-        dispatch(resetToCurrentVersion());
+        dispatch(resetToCurrentVersion({onLoadVersion}));
       } else {
-        dispatch(loadVersion({startSources, version}));
+        dispatch(loadVersion({startSources, version, onLoadVersion}));
       }
     },
-    [dispatch, isLatestVersion, setSelectedVersion, startSources, versionList]
+    [
+      dispatch,
+      isLatestVersion,
+      setSelectedVersion,
+      startSources,
+      versionList,
+      onLoadVersion,
+    ]
   );
 
   const handleSaveVersionSuccess = useCallback(() => {
