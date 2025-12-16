@@ -11,6 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import StudentCFUWidget from './studentCFUWidget/StudentCFUWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
@@ -104,9 +105,6 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedLessonId]);
 
-  // TODO: Use this in CFU widget
-  console.log(cfuLevels, isCfuLevelsLoading);
-
   // TODO: replace with actual values from URL/Redux later
   const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
   const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
@@ -142,6 +140,12 @@ const StudentSnapshot: React.FC = () => {
           studentName={HARDCODED_STUDENT_NAME}
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
+        />
+        <StudentCFUWidget
+          gridWidth={1}
+          gridHeight={2}
+          cfuLevels={cfuLevels}
+          isLoading={isCfuLevelsLoading}
         />
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
