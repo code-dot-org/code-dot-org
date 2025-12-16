@@ -63,6 +63,11 @@ const Notification: React.FC<NotificationProps> = ({
     <li className={styles.notification}>
       <FontAwesomeV6Icon
         iconName={notificationOrPlaceholder.iconName}
+        iconFamily={
+          notificationOrPlaceholder.iconName === 'solid-flask-sparkle'
+            ? 'kit'
+            : undefined
+        }
         iconStyle="solid"
         className={classNames(
           styles.icon,
