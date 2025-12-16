@@ -23,7 +23,7 @@ type StreamEvent =
       request_id: number;
     };
 
-let consumer: Consumer | null = null;
+let consumer: Consumer;
 
 function getConsumer() {
   if (!consumer) {
@@ -90,7 +90,7 @@ export function streamAichatCompletionMessage({
 
           switch (eventType) {
             case 'start':
-              streamCallbacks?.onStart?.(data.request_id);
+              streamCallbacks.onStart?.(data.request_id);
               return;
 
             case 'delta': {
@@ -100,7 +100,7 @@ export function streamAichatCompletionMessage({
               while (messageBuffer.has(nextExpectedSeq)) {
                 const textToDisplay = messageBuffer.get(nextExpectedSeq)!;
 
-                streamCallbacks?.onDelta?.(textToDisplay);
+                streamCallbacks.onDelta?.(textToDisplay);
 
                 messageBuffer.delete(nextExpectedSeq);
                 nextExpectedSeq++;
@@ -111,7 +111,7 @@ export function streamAichatCompletionMessage({
 
             case 'complete': {
               cleanup();
-              streamCallbacks?.onComplete?.(data.text);
+              streamCallbacks.onComplete?.(data.text);
               resolve(
                 getUpdatedMessages(
                   newMessage,
@@ -124,7 +124,7 @@ export function streamAichatCompletionMessage({
 
             case 'error': {
               cleanup();
-              streamCallbacks?.onError?.(data.code, data.details);
+              streamCallbacks.onError?.(data.code, data.details);
               resolve(
                 getUpdatedMessages(newMessage, '', data.code).map(message => ({
                   ...message,
