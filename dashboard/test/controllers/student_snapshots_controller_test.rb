@@ -173,6 +173,9 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     refute_nil cfu_data['progression']
     refute_nil cfu_data['progression_display_name']
     assert_equal 'CFU Display Name', cfu_data['display_name']
+    # New optional fields for question content
+    assert_includes cfu_data.keys, 'question_text'
+    assert_includes cfu_data.keys, 'answers'
   end
 
   test "cfu_levels endpoint uses level name as display_name when display_name is nil" do
@@ -186,5 +189,47 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     cfu_data = response_data['cfu_levels'].first
 
     assert_equal 'CFU Level', cfu_data['display_name']
+  end
+
+  test "cfu_responses endpoint returns error for invalid lesson_id" do
+    get :cfu_responses, params: {lesson_id: 99999, student_id: 1}
+
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data['error'], "Can't find Lesson id=99999"
+  end
+
+  test "cfu_responses endpoint returns error for invalid student_id" do
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: 99999}
+
+    assert_response :bad_request
+    response_data = JSON.parse(response.body)
+    assert_includes response_data['error'], "Can't find Student id=99999"
+  end
+
+  test "cfu_responses endpoint returns responses for CFU levels" do
+    # Create a CFU level and associated script_level
+    cfu_level = create(:multi, name: 'CFU Level 1')
+    cfu_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+
+    # Create a student and a UserLevel with a LevelSource (student answer)
+    student = create(:student)
+    script = @unit
+    level_source = create(:level_source, data: '1')
+    create(:user_level, user: student, script: script, level: cfu_level, level_source: level_source, submitted: true)
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    responses = response_data['cfu_responses']
+
+    assert_equal 1, responses.length
+    response_entry = responses.first
+    assert_equal cfu_level.id, response_entry['level_id']
+    assert_equal cfu_script_level.id, response_entry['script_level_id']
+    refute_nil response_entry['response']
+    assert_equal true, response_entry['submitted']
+    refute_nil response_entry['timestamp']
   end
 end

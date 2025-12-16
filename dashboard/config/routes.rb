@@ -1182,6 +1182,7 @@ Dashboard::Application.routes.draw do
       collection do
         get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
         get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get '/cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
       end
     end
 
