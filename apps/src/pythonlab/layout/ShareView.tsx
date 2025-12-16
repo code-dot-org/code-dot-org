@@ -1,4 +1,4 @@
-import {LinkButton, Button} from '@code-dot-org/component-library/button';
+import Button from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
 import React, {useEffect, useState} from 'react';
 
@@ -28,15 +28,6 @@ const ShareView: React.FunctionComponent = () => {
   const onRemix = () => {
     projectManager?.redirectToRemix();
   };
-
-  const channelId = projectManager?.getChannelId();
-  const projectUrl = channelId
-    ? `${window.location.origin}/projects/pythonlab/${channelId}`
-    : '';
-
-  const reportAbuseUrl = projectUrl
-    ? `/report_abuse?projectUrl=${encodeURIComponent(projectUrl)}`
-    : '/report_abuse';
 
   const [consoleVisible, setConsoleVisible] = useState(false);
 
@@ -94,14 +85,13 @@ const ShareView: React.FunctionComponent = () => {
           iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
           onClick={onRemix}
         />
-        <LinkButton
+        <Button
           text="Report abuse"
           type="tertiary"
           color="black"
           size="xs"
           iconLeft={{iconStyle: 'regular', iconName: 'message-exclamation'}}
-          href={reportAbuseUrl}
-          target="_blank"
+          onClick={() => window.open('/report_abuse', '_blank')}
         />
       </div>
       <div

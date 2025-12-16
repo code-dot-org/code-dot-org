@@ -7,25 +7,16 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const props = getScriptData('abuse');
-  const urlParams = new URLSearchParams(window.location.search);
-
+  const weblabUrl = window.location.href;
   /*
-   Support multiple ways of passing the abuse URL:
-   1. projectUrl parameter - for lab2 projects (weblab2, pythonlab)
-   2. channelId parameter - for web lab codeprojects footer
-   3. document.referrer - fallback when no parameters are provided
- */
-  if (urlParams.has('projectUrl')) {
-    // New lab2 projects pass the full project URL
-    props.abuseUrl = decodeURIComponent(urlParams.get('projectUrl'));
-  } else if (urlParams.has('channelId')) {
-    // Web Lab: channelId from codeprojects footer, keep original URL for parsing
-    props.abuseUrl = window.location.href;
-  } else {
-    // Fallback to referrer
-    props.abuseUrl = document.referrer;
-  }
-
+    If the channelId is in the url, we have appended it there from the weblab
+    codeprojects footer. Leave appended url as-is, and let getChannelIdFromUrl
+    in reportAbuse.js parse out the channel id. Otherwise, we can retrieve the
+    project url directly from document.referrer.
+  */
+  props.abuseUrl = weblabUrl.includes('channelId')
+    ? weblabUrl
+    : document.referrer;
   ReactDOM.render(
     <ReportAbuseForm {...props} />,
     document.getElementById('report-abuse-form')
