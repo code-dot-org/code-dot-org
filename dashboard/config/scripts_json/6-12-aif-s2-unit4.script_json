@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-04 16:08:22 UTC",
+    "serialized_at": "2025-11-26 18:19:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2618,9 +2618,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-level1-test-2025"
-        ],
         "progression": "Milestone 1 - Create Your Schema"
       },
       "bonus": false,
@@ -2643,9 +2640,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-level2-test-2025"
-        ],
         "progression": "Milestone 1 - Create Your Schema"
       },
       "bonus": false,
@@ -2668,9 +2662,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone1-test-2025"
-        ],
         "progression": "Milestone 1 - Create Your Schema"
       },
       "bonus": false,
@@ -2693,9 +2684,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone1-frq-test-2025"
-        ],
         "progression": "Milestone 1 - Create Your Schema"
       },
       "bonus": false,
@@ -2718,9 +2706,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-level3-test-2025"
-        ],
         "progression": "Milestone 2 - Wireframe Your Dashboard"
       },
       "bonus": false,
@@ -2743,9 +2728,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone2-test-2025"
-        ],
         "progression": "Milestone 2 - Wireframe Your Dashboard"
       },
       "bonus": false,
@@ -2768,9 +2750,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone2-frq-test-2025"
-        ],
         "progression": "Milestone 2 - Wireframe Your Dashboard"
       },
       "bonus": false,
@@ -2793,9 +2772,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone3-sketch-lab-test-2025"
-        ],
         "progression": "Milestone 3 - Project Level"
       },
       "bonus": false,
@@ -2818,9 +2794,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-level4-test-2025"
-        ],
         "progression": "Milestone 3 - Project Level"
       },
       "bonus": false,
@@ -2843,9 +2816,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone3-frq-test-2025"
-        ],
         "progression": "Milestone 3 - Project Level"
       },
       "bonus": false,
@@ -2868,9 +2838,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-milestone4-test-2025"
-        ],
         "progression": "Milestone 4 - Reflection"
       },
       "bonus": false,
@@ -2893,9 +2860,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "iterating-with-ai-lesson11-level5-test-2025"
-        ],
         "progression": "Milestone 4 - Reflection"
       },
       "bonus": false,
