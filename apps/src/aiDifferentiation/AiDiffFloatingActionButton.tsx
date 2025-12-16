@@ -228,8 +228,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         )}
       </button>
       <AiDiffContainer
-        open={isOpen}
         context={context}
+        open={isOpen}
         closeTutor={handleClick}
         scriptName={scriptName}
         curriculumCourses={curriculumCourses}

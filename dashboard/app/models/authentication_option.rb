@@ -82,6 +82,12 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ].freeze
 
+  module Clever
+    VERSION = {
+      v3_1: 'v3.1'
+    }.freeze
+  end
+
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 
   def google?

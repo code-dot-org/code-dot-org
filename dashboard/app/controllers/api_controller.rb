@@ -687,7 +687,11 @@ class ApiController < ApplicationController
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
       yield JSON.parse(response)['data']
     rescue RestClient::ExceptionWithResponse => exception
-      render status: exception.response.code, json: {error: exception.response.body}
+      if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
+        render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
+      else
+        render status: exception.response.code, json: {error: exception.response.body}
+      end
     end
   end
 

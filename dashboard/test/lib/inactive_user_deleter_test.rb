@@ -8,7 +8,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
 
   let(:dry_run) {false}
   let(:inactive_since) {described_class::INACTIVE_USER_TTL.ago}
-  let(:limit) {described_class::ACCOUNT_DELETION_LIMIT}
+  let(:limit) {nil}
 
   let(:email) {Faker::Internet.unique.email}
   let!(:student) {create(:student, current_sign_in_at: inactive_since - 1.day)}
@@ -74,7 +74,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       _(active_user.deleted?).must_equal false
     end
 
-    it 'increments num_accounts_scrubbed' do
+    it 'increments num_accounts_deleted' do
       delete_inactive_users
       _(described_instance.send(:num_accounts_deleted)).must_equal 2
     end
@@ -82,6 +82,22 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
     it 'uploads metrics' do
       expect_event_logging.once
       delete_inactive_users
+    end
+
+    context 'when limit is provided' do
+      let(:limit) {1}
+      it 'limits the inactive users query to the specified limit' do
+        delete_inactive_users
+        _(described_instance.limit).must_equal 1
+        _(described_instance.send(:num_accounts_deleted)).must_equal 1
+      end
+    end
+
+    context 'when no limit is provided' do
+      let(:limit) {nil}
+      it 'defaults to the ACCOUNT_DELETION_LIMIT' do
+        _(described_instance.limit).must_equal described_class::ACCOUNT_DELETION_LIMIT
+      end
     end
 
     context 'when dry run' do
