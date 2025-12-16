@@ -18,9 +18,12 @@ const ShareView: React.FunctionComponent = () => {
   };
 
   const channelId = projectManager?.getChannelId();
+  const projectUrl = channelId
+    ? `${window.location.origin}/projects/weblab2/${channelId}`
+    : '';
 
-  const reportAbuseUrl = channelId
-    ? `/report_abuse?channelId=${channelId}`
+  const reportAbuseUrl = projectUrl
+    ? `/report_abuse?projectUrl=${encodeURIComponent(projectUrl)}`
     : '/report_abuse';
 
   return (
