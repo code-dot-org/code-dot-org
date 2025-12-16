@@ -84,10 +84,13 @@ class InactiveUserDeleter
 
   def inactive_users
     ActiveRecord::Base.connected_to(role: :reporting) do
-      Queries::User::Inactive.
-      call(inactive_since: inactive_since).
-      where.not(id: processed_user_ids).
-      limit(BATCH_SIZE)
+      result = Queries::User::Inactive.
+        call(inactive_since: inactive_since).
+        where.not(id: processed_user_ids).
+        left_outer_joins(:user_data_retention_status)
+      users = result.where(user_type: User::TYPE_STUDENT).
+      or(result.where(user_type: User::TYPE_TEACHER).where.not(user_data_retention_status: {deletion_warning_email_sent_at: nil}))
+      users.limit(BATCH_SIZE)
     end
   end
 
