@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 07:11:02 UTC",
+    "serialized_at": "2025-12-16 07:34:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1660,8 +1660,40 @@
       }
     },
     {
-      "key": "466afa6e-cf22-4718-ac19-0e13822662b7",
+      "key": "a0d8894e-5ce6-4cb3-bb3b-78c4670d534b",
       "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 4 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Display students’ anonymous responses and ask: What do you notice? What do you wonder? Have students discuss with a partner before inviting a couple volunteers to share.\n\n",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students rely heavily on grammar or formatting as the main phishing clue, ask: What was the sender trying to get the user to do quickly? What emotion or behavior was the message trying to trigger?"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\n- If students demonstrate strong understanding, their explanations should note that phishing is defined by manipulation and intent, not by surface features like grammar or formatting. They should also identify what the attacker is trying to get the user to do.\n- If students describe phishing only in terms of appearance (logos, grammar, formatting), revisit examples from Levels 1–2 and highlight common manipulation tactics like urgency, fear, or excitement.\n- If students explain grammar as a clue but miss the underlying behavior being exploited, prompt them to connect the message to emotions (trust, urgency, curiosity) that attackers use.\n- If students identify the emotional tactic but not the attacker’s goal (getting credentials, money, or access), ask: “What action was the attacker trying to make the user take?”\n- If students suggest that messages with good grammar are “safe”, revisit the idea that phishing is defined by manipulation and motive, not writing quality"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a0d8894e-5ce6-4cb3-bb3b-78c4670d534b",
+        "lesson_activity.key": "00c82a5b-10cf-4b80-b77a-34ca1a5a0d75"
+      }
+    },
+    {
+      "key": "a383dbb4-0d22-4e50-bbf5-73be6c96b1c4",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a383dbb4-0d22-4e50-bbf5-73be6c96b1c4",
+        "lesson_activity.key": "00c82a5b-10cf-4b80-b77a-34ca1a5a0d75"
+      }
+    },
+    {
+      "key": "466afa6e-cf22-4718-ac19-0e13822662b7",
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students investigate a simulated account breach and analyze how predictable human behavior — like password reuse or oversharing — can make people vulnerable to identity-based attacks like guessing or credential stuffing.",
         "duration": "20",
@@ -1674,7 +1706,7 @@
     },
     {
       "key": "b88db6f0-55c2-451c-9f06-7a209271bf1c",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "Imagine your user's account from earlier actually got hacked. You're now on the security response team. Your job is to figure out what happened and how the attacker might have broken in.",
         "remarks": true
@@ -1686,9 +1718,9 @@
     },
     {
       "key": "45d5e7f4-22c4-4415-81b5-b7f391d37c43",
-      "position": 9,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 4 to act as security response team members and try to figure out which password attack was used on their fictional persona.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 5 to act as security response team members and try to figure out which password attack was used on their fictional persona.",
         "progression_name": "Breach Reports"
       },
       "seeding_key": {
@@ -1698,7 +1730,7 @@
     },
     {
       "key": "274154ae-dcaf-4405-8d97-495549af3ee0",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what clues from the breach report helped them identify the attack. Look for connections to weak or reused passwords, predictable personal info, or signs of automation. Encourage students to use evidence to explain their reasoning.\n",
         "tips": [
@@ -1719,7 +1751,7 @@
     },
     {
       "key": "c093f104-d08a-442e-a0cd-00f2c637a0be",
-      "position": 11,
+      "position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -1729,7 +1761,7 @@
     },
     {
       "key": "a0569a26-d639-41a6-8581-79bbf48453ad",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the blue play icon to start the Give One, Get One activity. Prompt students to find a partner and share what password attack was used on their fictional user — and how the attacker got in. After both students share, they should find a new partner and repeat the process. After the activity, invite students to revise their activity guide if they learned something new from a peer.",
         "tips": [
@@ -1746,7 +1778,7 @@
     },
     {
       "key": "3167b45b-dcea-400f-b39f-dd49673a4748",
-      "position": 13,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -1756,7 +1788,7 @@
     },
     {
       "key": "bb6daf9d-5477-4b60-870f-82b229dde518",
-      "position": 14,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did all the password attacks have in common and what made them different?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that while the tactics varied (guessing, spraying, stuffing, brute force), the root causes often involved predictable human behavior — weak passwords, personal info, and password reuse. This reflection prepares them to reflect on the Question of the Day by helping them identify shared patterns across all four types of attacks and how human behavior plays a role.",
         "tips": [
@@ -1775,7 +1807,7 @@
       "key": "0ac3b618-1424-4d2e-854e-c486b5f17fa1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Think-Write-Share around the Question of the Day: \"How do cyber attacks exploit human vulnerabilities, i.e. trust, emotion, and predictable behavior?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Think-Write-Share around the Question of the Day: \"How do cyber attacks exploit human vulnerabilities, i.e. trust, emotion, and predictable behavior?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 6 to complete the End of Lesson Survey."
       },
       "seeding_key": {
         "activity_section.key": "0ac3b618-1424-4d2e-854e-c486b5f17fa1",
@@ -3024,7 +3056,7 @@
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 for a quick check of their anomaly-detection reasoning before comparing their findings with the AI.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses and ask: What do you notice? What do you wonder? Have partners discuss why they chose their answer before selecting one or two volunteers to share.",
-        "progression_name": "Check Your Understanding",
+        "progression_name": "Check For Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3701,7 +3733,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 for a quick check before they explore how AI generates password guesses.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses and ask: What do you notice? What do you wonder? Have partners discuss their reasoning before inviting one or two volunteers to share.",
-        "progression_name": "Check Your Understanding",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -5362,6 +5394,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson3-level4_2025-v2"
+        ],
+        "lesson.key": "Lesson 3: Phishing and Password Attacks",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v3",
+        "activity_section.key": "a0d8894e-5ce6-4cb3-bb3b-78c4670d534b"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson3-level4_2025-v2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ai-powered-threats-defenses-lesson3-level4_2025-pilot"
         ],
@@ -5382,8 +5436,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 5,
+      "chapter": 17,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5407,7 +5461,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5432,7 +5486,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5457,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5482,7 +5536,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5507,7 +5561,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5532,7 +5586,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5557,7 +5611,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5582,7 +5636,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5607,7 +5661,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5632,7 +5686,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5657,7 +5711,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5682,7 +5736,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5707,7 +5761,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5732,7 +5786,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -5757,7 +5811,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5782,7 +5836,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5807,7 +5861,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5832,7 +5886,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5857,7 +5911,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5865,7 +5919,7 @@
         "level_keys": [
           "ai-powered-threats-defenses-lesson8-level2_2025-pilot_v3"
         ],
-        "progression": "Check Your Understanding"
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5882,7 +5936,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5907,7 +5961,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5932,7 +5986,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
@@ -5957,7 +6011,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5982,7 +6036,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6007,7 +6061,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6032,7 +6086,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6040,7 +6094,7 @@
         "level_keys": [
           "ai-powered-threats-defenses-lesson10-level1_2025-pilot_v3"
         ],
-        "progression": "Check Your Understanding"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -6057,7 +6111,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6082,7 +6136,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6107,7 +6161,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6132,7 +6186,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6157,7 +6211,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6182,7 +6236,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6207,7 +6261,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6232,7 +6286,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6257,7 +6311,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6282,7 +6336,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6307,7 +6361,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6332,7 +6386,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6357,7 +6411,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6382,7 +6436,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6407,7 +6461,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6432,7 +6486,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6624,6 +6678,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif5-v3",
         "activity_section.key": "34973b1d-90fa-4607-84bd-3b593f15ace1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson3-level4_2025-v2",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson3-level4_2025-v2"
+        ],
+        "lesson.key": "Lesson 3: Phishing and Password Attacks",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v3",
+        "activity_section.key": "a0d8894e-5ce6-4cb3-bb3b-78c4670d534b"
       }
     },
     {
@@ -7703,15 +7769,17 @@
       }
     },
     {
-      "name": "Phishing and Password Guessing",
-      "url": "https://docs.google.com/presentation/d/14rsiUtVsXv_rnpjJtFmtLDynADcDBGAymiszXX8OMaM/edit?usp=sharing",
-      "key": "phishing_and_password_guessing",
+      "name": "Phishing and Password Attacks",
+      "url": "https://docs.google.com/presentation/d/1IpgPbqY7nHeBZfqh-YF-aRb-rYecfHDPjPb7_HdIKrs/edit?usp=sharing",
+      "key": "phishing_and_password_attacks",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "phishing_and_password_guessing"
+        "resource.key": "phishing_and_password_attacks"
       }
     },
     {
@@ -8000,7 +8068,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: Phishing and Password Attacks",
-        "resource.key": "phishing_and_password_guessing"
+        "resource.key": "phishing_and_password_attacks"
       }
     },
     {
