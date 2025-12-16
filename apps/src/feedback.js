@@ -1314,7 +1314,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
  * @return {Blockly.Block} an empty container block, or null if none exist.
  */
 FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
-  var blocks = Blockly.mainBlockSpace.getAllUsedBlocks();
+  var blocks = getAllBlocks();
   return Blockly.findEmptyContainerBlock(blocks);
 };
 
@@ -1338,7 +1338,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function () {
       block.type === emptyBlockInfo.callType &&
       block.getFieldValue('NAME') === emptyBlockInfo.name;
 
-    if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
+    if (getAllBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
     } else {
       return TestResults.ALL_PASS;
@@ -1751,7 +1751,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
  * Check for '???' instead of a value in block fields.
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
+  return getAllBlocks().some(function (block) {
     return Blockly.cdoUtils.getBlockFields(block).some(function (field) {
       return field.value_ === '???' || field.text_ === '???';
     });
@@ -1764,9 +1764,14 @@ FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
  */
 FeedbackUtils.prototype.hasUnusedParam_ = function () {
   var self = this;
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
-    var params = userBlock.parameterNames_;
-    // Only search procedure definitions
+  return getAllBlocks().some(function (userBlock) {
+    var params =
+      // Only search procedure definitions
+      /^procedures_def/.test(userBlock.type) &&
+      userBlock
+        .getProcedureModel?.()
+        .getParameters()
+        .map(param => param.variable.name);
     return (
       params &&
       params.some(function (paramName) {
@@ -1775,7 +1780,11 @@ FeedbackUtils.prototype.hasUnusedParam_ = function () {
           return (
             (block.type === 'parameters_get' ||
               block.type === 'variables_get') &&
-            block.getFieldValue('VAR') === paramName
+            block.workspace
+              .getVariableMap()
+              .getAllVariables()
+              // Field values point to variable IDs, not names
+              .find(variable => variable.id === block.getFieldValue('VAR'))
           );
         });
       })
@@ -1787,7 +1796,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function () {
  * Ensure that all procedure calls have each parameter input connected.
  */
 FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
+  return getAllBlocks().some(function (userBlock) {
     // Only check procedure_call* blocks
     if (!/^procedures_call/.test(userBlock.type)) {
       return false;
@@ -1809,7 +1818,7 @@ FeedbackUtils.prototype.hasParamInputUnattached_ = function () {
 FeedbackUtils.prototype.hasUnusedFunction_ = function () {
   var userDefs = [];
   var callBlocks = {};
-  Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function (block) {
+  getAllBlocks().forEach(function (block) {
     var name = block.getFieldValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
@@ -1828,9 +1837,12 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function () {
  */
 FeedbackUtils.prototype.hasIncompleteBlockInFunction_ = function () {
   var self = this;
-  return Blockly.mainBlockSpace.getAllUsedBlocks().some(function (userBlock) {
+  return getAllBlocks().some(function (userBlock) {
     // Only search procedure definitions
-    if (!userBlock.parameterNames_) {
+    if (
+      !/^procedures_def/.test(userBlock.type) ||
+      !userBlock.getProcedureModel?.().getParameters()
+    ) {
       return false;
     }
     return self.hasMatchingDescendant_(userBlock, function (block) {
