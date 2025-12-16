@@ -1,10 +1,9 @@
 module AiSystemPrompts::StudentSnapshotPromptHelper
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id)
-    intro = "This is where the insight system prompt intro goes."
+    intro = "This is where the insight system prompt intro goes.\n"
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
 
-    "#{intro}
-    #{general_prompt}"
+    puts "#{intro}\n#{general_prompt}"
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id)
@@ -16,9 +15,12 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   end
 
   def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
-    lesson_info = "Lesson Name: ___
-    Lesson Overview: ___
-    Learning Objectives: ___
+    lesson = Lesson.find(lesson_id)
+    objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
+
+    lesson_info = "Lesson Name: #{lesson.name}
+    Lesson Overview: #{lesson.render_property(:overview)}
+    Learning Objectives: #{objectives}
     Standards: ___
     Unit Name: ___
     Unit Overview: ___"
@@ -41,7 +43,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       Rubrics?: ___ (do we want to include this?)"
     end
 
-    "Use the following lesson info to generate your summary: #{lesson_info}
+    "Use the following lesson info to generate your summary:\n#{lesson_info}
     Levels: [{#{level_info.join('}, {')}}]"
   end
 end
