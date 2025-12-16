@@ -1,6 +1,8 @@
 require "test_helper"
 
 class AidiffLessonHookTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @user = create(:user)
   end
