@@ -17,6 +17,7 @@ module ActiveSupport
         class_attribute :use_transactional_test_case, instance_writer: false, default: false
 
         DatabaseCleaner.strategy = :transaction
+        DatabaseCleaner.allow_remote_database_url = true
 
         setup_all do
           DatabaseCleaner.start if use_transactional_test_case?
