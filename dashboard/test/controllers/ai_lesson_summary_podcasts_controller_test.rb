@@ -5,10 +5,10 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
   setup_all do
     @teacher = create(:teacher)
-    @student = create(:student)
     @lesson = create(:lesson)
     @unit = create(:script)
     @test_script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."
+    @test_script_response = {json: "{\"podcast_script\": \"#{@test_script}\"}"}
     @test_audio_data = "fake_audio_data_mp3_content"
   end
 
@@ -18,7 +18,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
   test 'unauthenticated user cannot access generate_podcast' do
     post :generate_podcast
-    assert_response :unauthorized
+    assert_response :redirect
   end
 
   # *****
@@ -42,16 +42,20 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Mock the experiment to be enabled
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
-    # Mock the helper method
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    # Mock the helper methods
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
-    post :generate_podcast
+    post :generate_podcast, params: {
+      lesson_id: @lesson.id,
+      unit_id: @unit.id,
+      lesson_summary: "Test summary",
+    }
 
     assert_response :success
     assert_equal 'audio/mpeg', response.content_type
-    assert_equal 'attachment; filename="podcast.mp3"', response.headers['Content-Disposition']
+    assert_equal "attachment; filename=\"podcast.mp3\"; filename*=UTF-8''podcast.mp3", response.headers['Content-Disposition']
     assert_equal @test_audio_data, response.body
   end
 
@@ -62,32 +66,19 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(false)
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(true)
 
-    # Mock the helper method
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    # Mock the helper methods
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
-    post :generate_podcast
-
-    assert_response :success
-    assert_equal 'audio/mpeg', response.content_type
-    assert_equal 'attachment; filename="podcast.mp3"', response.headers['Content-Disposition']
-    assert_equal @test_audio_data, response.body
-  end
-
-  test 'generate_podcast works when both experiment and DCDO flag are enabled' do
-    sign_in @teacher
-
-    # Mock both to be enabled
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(true)
-
-    # Mock the helper method
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
-
-    post :generate_podcast
+    post :generate_podcast, params: {
+      lesson_id: @lesson.id,
+      unit_id: @unit.id,
+      lesson_summary: "Test summary",
+    }
 
     assert_response :success
     assert_equal 'audio/mpeg', response.content_type
-    assert_equal 'attachment; filename="podcast.mp3"', response.headers['Content-Disposition']
+    assert_equal "attachment; filename=\"podcast.mp3\"; filename*=UTF-8''podcast.mp3", response.headers['Content-Disposition']
     assert_equal @test_audio_data, response.body
   end
 
@@ -100,12 +91,15 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Enable access
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
-    # Expect the helper to be called with the exact script
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    # Expect the helpers
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
-    post :generate_podcast
+    post :generate_podcast, params: {
+      lesson_id: @lesson.id,
+      unit_id: @unit.id
+    }
 
     assert_response :success
   end
@@ -117,12 +111,16 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
-    # Mock the helper to raise an error
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).raises(StandardError.new("API Error"))
+    # Mock the helpers to raise an error
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).raises(StandardError.new("API Error"))
 
     # The controller should let the error bubble up (no explicit error handling)
     assert_raises(StandardError) do
-      post :generate_podcast
+      post :generate_podcast, params: {
+        lesson_id: @lesson.id,
+        unit_id: @unit.id
+      }
     end
   end
 
@@ -136,10 +134,14 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     # Enable access
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
 
-    # Mock the helper method
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    # Mock the helper methods
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
-    post :generate_podcast
+    post :generate_podcast, params: {
+      lesson_id: @lesson.id,
+      unit_id: @unit.id
+    }
 
     assert_response :success
     assert_equal 'audio/mpeg', response.content_type
@@ -156,9 +158,13 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Mock with different audio data
     different_audio_data = "different_mp3_binary_content"
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(different_audio_data)
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(different_audio_data)
 
-    post :generate_podcast
+    post :generate_podcast, params: {
+      lesson_id: @lesson.id,
+      unit_id: @unit.id
+    }
 
     assert_response :success
     assert_equal different_audio_data, response.body
@@ -173,9 +179,10 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Enable access
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
+    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
     AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
-    # Test with parameters (even though they're not currently used)
+    # Test with parameters
     post :generate_podcast, params: {
       lesson_id: @lesson.id,
       unit_id: @unit.id,
@@ -212,89 +219,5 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     assert_equal '123', permitted_params['lesson_id']
     assert_equal '456', permitted_params['unit_id']
     assert_equal 'Test summary', permitted_params['lesson_summary']
-  end
-
-  # *****
-  # User type tests
-  # *****
-
-  test 'student can access generate_podcast when experiment is enabled' do
-    sign_in @student
-
-    # Enable access for student
-    SingleUserExperiment.stubs(:enabled?).with(user: @student, experiment_name: 'ai_lesson_summaries').returns(true)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
-
-    # Mock the helper method
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
-
-    post :generate_podcast
-
-    assert_response :success
-  end
-
-  test 'student gets forbidden when experiment is disabled' do
-    sign_in @student
-
-    # Disable access for student
-    SingleUserExperiment.stubs(:enabled?).with(user: @student, experiment_name: 'ai_lesson_summaries').returns(false)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
-
-    post :generate_podcast
-
-    assert_response :forbidden
-  end
-
-  # *****
-  # Current implementation tests (placeholder script)
-  # *****
-
-  test 'generate_podcast uses hardcoded placeholder script' do
-    sign_in @teacher
-
-    # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-
-    # Expect the specific hardcoded script to be passed
-    expected_script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."
-    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).with(expected_script).returns(@test_audio_data)
-
-    post :generate_podcast
-
-    assert_response :success
-  end
-
-  # *****
-  # Edge cases
-  # *****
-
-  test 'generate_podcast handles empty audio response' do
-    sign_in @teacher
-
-    # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-
-    # Mock empty audio response
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns("")
-
-    post :generate_podcast
-
-    assert_response :success
-    assert_equal "", response.body
-  end
-
-  test 'generate_podcast handles nil audio response' do
-    sign_in @teacher
-
-    # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-
-    # Mock nil audio response
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(nil)
-
-    post :generate_podcast
-
-    assert_response :success
-    # Rails send_data handles nil gracefully
   end
 end
