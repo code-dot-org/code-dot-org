@@ -45,7 +45,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
     # Mock the helper method
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -63,7 +63,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(true)
 
     # Mock the helper method
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -81,7 +81,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(true)
 
     # Mock the helper method
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -103,7 +103,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
     # Expect the helper to be called with the exact script
-    AiLessonSummariesPodcastHelper.expects(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -118,7 +118,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
     # Mock the helper to raise an error
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).raises(StandardError.new("API Error"))
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).raises(StandardError.new("API Error"))
 
     # The controller should let the error bubble up (no explicit error handling)
     assert_raises(StandardError) do
@@ -137,7 +137,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
 
     # Mock the helper method
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -156,7 +156,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Mock with different audio data
     different_audio_data = "different_mp3_binary_content"
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(different_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(different_audio_data)
 
     post :generate_podcast
 
@@ -173,7 +173,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Enable access
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
     # Test with parameters (even though they're not currently used)
     post :generate_podcast, params: {
@@ -226,7 +226,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
 
     # Mock the helper method
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -257,7 +257,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Expect the specific hardcoded script to be passed
     expected_script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."
-    AiLessonSummariesPodcastHelper.expects(:get_podcast_from_script).with(expected_script).returns(@test_audio_data)
+    AiLessonSummaryPodcastsHelper.expects(:get_podcast_from_script).with(expected_script).returns(@test_audio_data)
 
     post :generate_podcast
 
@@ -275,7 +275,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
 
     # Mock empty audio response
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns("")
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns("")
 
     post :generate_podcast
 
@@ -290,7 +290,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
 
     # Mock nil audio response
-    AiLessonSummariesPodcastHelper.stubs(:get_podcast_from_script).with(@test_script).returns(nil)
+    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).with(@test_script).returns(nil)
 
     post :generate_podcast
 

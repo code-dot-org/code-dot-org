@@ -1,4 +1,4 @@
-module AiLessonSummariesPodcastHelper
+module AiLessonSummaryPodcastsHelper
   API_KEY = CDO.elevenlabs_api_key
   MODEL = "eleven_v3"
 

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'webmock/minitest'
 
-class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
+class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
   setup do
     @api_key = 'test-elevenlabs-api-key'
     @model = 'eleven_v3'
@@ -28,8 +28,8 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   # *****
 
   test "module constants are correctly defined" do
-    assert_equal 'eleven_v3', AiLessonSummariesPodcastHelper::MODEL
-    assert_equal @api_key, AiLessonSummariesPodcastHelper::API_KEY
+    assert_equal 'eleven_v3', AiLessonSummaryPodcastsHelper::MODEL
+    assert_equal @api_key, AiLessonSummaryPodcastsHelper::API_KEY
   end
 
   # *****
@@ -45,9 +45,9 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
     # Mock the Client class
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(@test_script).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
-    result = AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+    result = AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
 
     assert_equal @test_audio_data, result
   end
@@ -61,9 +61,9 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
     # Mock the Client class with specific parameter expectations
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(@test_script).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
-    AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+    AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
   end
 
   # *****
@@ -79,10 +79,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
     # Mock the Client class
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(@test_script).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_includes error.message, "Error processing AI lesson summary podcast: status code 401"
@@ -93,10 +93,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
     # Mock the Client class to raise ReadTimeout
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(@test_script).raises(Net::ReadTimeout)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_equal "Timeout waiting for AI client to return lesson summary podcast", error.message
@@ -108,10 +108,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
     # Mock the Client class to raise StandardError
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(@test_script).raises(StandardError.new(original_error_message))
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_equal "Error processing AI lesson summary podcast: #{original_error_message}", error.message
@@ -122,16 +122,16 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   # *****
 
   test "Client initializes with correct attributes" do
-    client = AiLessonSummariesPodcastHelper::Client.new(@api_key, @model)
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
 
     assert_equal @api_key, client.api_key
     assert_equal @model, client.model
   end
 
   test "Client has correct constants" do
-    assert_equal "Fc5CaIGWKvLHapoOSM2K", AiLessonSummariesPodcastHelper::Client::VOICE_ID
+    assert_equal "Fc5CaIGWKvLHapoOSM2K", AiLessonSummaryPodcastsHelper::Client::VOICE_ID
     assert_equal "https://api.elevenlabs.io/v1/text-to-speech/Fc5CaIGWKvLHapoOSM2K?output_format=mp3_44100_128",
-                 AiLessonSummariesPodcastHelper::Client::ELEVENLABS_URL
+                 AiLessonSummaryPodcastsHelper::Client::ELEVENLABS_URL
   end
 
   # *****
@@ -139,7 +139,7 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   # *****
 
   test "Client request_podcast makes HTTParty POST with correct parameters" do
-    client = AiLessonSummariesPodcastHelper::Client.new(@api_key, @model)
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
 
     # Mock HTTParty response
     mock_response = mock('response')
@@ -159,7 +159,7 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   end
 
   test "Client request_podcast formats headers correctly" do
-    client = AiLessonSummariesPodcastHelper::Client.new(@api_key, @model)
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
 
     mock_response = mock('response')
     HTTParty.stubs(:post).returns(mock_response)
@@ -176,7 +176,7 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   end
 
   test "Client request_podcast formats body correctly" do
-    client = AiLessonSummariesPodcastHelper::Client.new(@api_key, @model)
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
 
     mock_response = mock('response')
     HTTParty.stubs(:post).returns(mock_response)
@@ -193,7 +193,7 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   end
 
   test "Client request_podcast uses correct URL" do
-    client = AiLessonSummariesPodcastHelper::Client.new(@api_key, @model)
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
 
     mock_response = mock('response')
 
@@ -219,7 +219,7 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
       body: @expected_body
     ).returns(mock_response)
 
-    result = AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+    result = AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
 
     assert_equal @test_audio_data, result
   end
@@ -229,7 +229,7 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
     HTTParty.stubs(:post).raises(StandardError.new("Network error"))
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_equal "Error processing AI lesson summary podcast: Network error", error.message
@@ -248,9 +248,9 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
 
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(empty_script).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
-    result = AiLessonSummariesPodcastHelper.get_podcast_from_script(empty_script)
+    result = AiLessonSummaryPodcastsHelper.get_podcast_from_script(empty_script)
 
     assert_equal @test_audio_data, result
   end
@@ -264,9 +264,9 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
 
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(nil_script).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
-    result = AiLessonSummariesPodcastHelper.get_podcast_from_script(nil_script)
+    result = AiLessonSummaryPodcastsHelper.get_podcast_from_script(nil_script)
 
     assert_equal @test_audio_data, result
   end
@@ -280,16 +280,16 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
 
     mock_client = mock('client')
     mock_client.expects(:request_podcast).with(long_script).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).with(@api_key, @model).returns(mock_client)
 
-    result = AiLessonSummariesPodcastHelper.get_podcast_from_script(long_script)
+    result = AiLessonSummaryPodcastsHelper.get_podcast_from_script(long_script)
 
     assert_equal @test_audio_data, result
   end
 
   test "Client request_podcast handles special characters in script" do
     special_script = "Hello! This has émojis 🎵 and spéciàl chärs & symbols @#$%"
-    client = AiLessonSummariesPodcastHelper::Client.new(@api_key, @model)
+    client = AiLessonSummaryPodcastsHelper::Client.new(@api_key, @model)
 
     mock_response = mock('response')
     HTTParty.stubs(:post).returns(mock_response)
@@ -320,10 +320,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
 
     mock_client = mock('client')
     mock_client.expects(:request_podcast).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_includes error.message, "status code 404"
@@ -333,10 +333,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
   test "timeout error has specific message" do
     mock_client = mock('client')
     mock_client.expects(:request_podcast).raises(Net::ReadTimeout.new)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_equal "Timeout waiting for AI client to return lesson summary podcast", error.message
@@ -353,10 +353,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
 
     mock_client = mock('client')
     mock_client.expects(:request_podcast).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_includes error.message, "status code 400"
@@ -369,10 +369,10 @@ class AiLessonSummariesPodcastHelperTest < ActionView::TestCase
 
     mock_client = mock('client')
     mock_client.expects(:request_podcast).returns(mock_response)
-    AiLessonSummariesPodcastHelper::Client.expects(:new).returns(mock_client)
+    AiLessonSummaryPodcastsHelper::Client.expects(:new).returns(mock_client)
 
     error = assert_raises(StandardError) do
-      AiLessonSummariesPodcastHelper.get_podcast_from_script(@test_script)
+      AiLessonSummaryPodcastsHelper.get_podcast_from_script(@test_script)
     end
 
     assert_includes error.message, "status code 500"
