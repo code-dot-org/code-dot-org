@@ -47,6 +47,7 @@ import {
   Triggers,
 } from '../constants';
 import {AnalyticsContext} from '../context';
+import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -503,7 +504,16 @@ class UnconnectedMusicView extends React.Component {
     const imageAttributions = this.library.getImageAttributions();
     if (imageAttributions.length > 0) {
       setExtraCopyrightContent(
-        <ImageAttributions attributions={this.library.getImageAttributions()} />
+        <>
+          <ImageAttributions
+            attributions={this.library.getImageAttributions()}
+          />
+          {this.library.getExtraCredit() && (
+            <p>
+              {musicI18n.extraCredit({credit: this.library.getExtraCredit()})}
+            </p>
+          )}
+        </>
       );
     }
   };

@@ -25,6 +25,7 @@ jest.mock('@react-pdf/renderer', () => {
 
 const DEFAULT_PROPS = {
   closeTutor: () => {},
+  open: true,
   context: {
     type: AiDiffContext.LESSON,
     lessonId: 2,
@@ -87,7 +88,7 @@ describe('AiDiffContainer', () => {
   it('visible when open', async () => {
     renderDefault();
     await waitFor(() => {
-      screen.getByText('AI Teaching Assistant');
+      expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
       screen.getByText('Experiment');
     });
   });
