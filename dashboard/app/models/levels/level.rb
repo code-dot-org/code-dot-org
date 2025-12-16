@@ -520,7 +520,7 @@ class Level < ApplicationRecord
   end
 
   def ai_tutor_available?
-    properties["ai_tutor_available"] == "true"
+    properties["ai_tutor_available"] == "true" || properties["ai_tutor_available"] == true
   end
 
   def summarize

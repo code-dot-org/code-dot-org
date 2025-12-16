@@ -1,0 +1,83 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.25rem 0.25rem calc(32px + 8px);
+  border-radius: var(--border-radius-br-s, 4px);
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
+  position: relative;
+  box-sizing: border-box;
+
+  .fileInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0; // Allow text truncation
+  }
+
+  .statusIndicator {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    width: 32px;
+    border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-right: none;
+    box-sizing: border-box;
+    i {
+      font-size: 14px;
+      color: var(--text-neutral-white-fixed);
+    }
+  }
+
+  .fileName {
+    @include typography.body-three;
+    color: var(--text-neutral-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .previewButtonWrapper {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+
+.newFile {
+  .statusIndicator {
+    background-color: var(--background-success-primary);
+    border-color: var(--background-success-primary);
+  }
+}
+
+.updatedFile {
+  .statusIndicator {
+    background-color: var(--background-neutral-senary);
+    border-color: var(--background-neutral-senary);
+  }
+}
+
+.acceptedIcon {
+  margin-left: auto;
+  margin-right: 0.25rem;
+  color: var(--text-success-primary);
+}
+
+.rejectedIcon {
+  margin-left: auto;
+  margin-right: 0.25rem;
+  color: var(--text-error-primary);
+}

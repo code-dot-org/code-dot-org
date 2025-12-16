@@ -42,7 +42,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [keyId, setKeyId] = useState<number>(0);
   const [initialThreadPrompt, setInitialThreadPrompt] =
     useState<ChatPrompt | null>(null);
-
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   async function asyncFetchThreads(): Promise<ChatThread[]> {

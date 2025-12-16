@@ -11,7 +11,6 @@ import moduleStyles from './sections.module.scss';
 
 $(document).ready(() => {
   const isUsersFirstSection = getScriptData('isUsersFirstSection');
-  const canEnableAITutor = getScriptData('canEnableAITutor');
   const userCountry = getScriptData('userCountry');
 
   const defaultRedirectUrl = '/teacher_dashboard/home';
@@ -21,7 +20,6 @@ $(document).ready(() => {
       <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
       <SectionsSetUpContainer
         isUsersFirstSection={isUsersFirstSection}
-        canEnableAITutor={canEnableAITutor}
         userCountry={userCountry}
         defaultRedirectUrl={defaultRedirectUrl}
       />

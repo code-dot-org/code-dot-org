@@ -6,16 +6,8 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  PYTHONLAB_EDITABLE_FILE_TYPES,
-  PYTHONLAB_SUPPORTED_FILE_TYPES,
-} from '@cdo/apps/pythonlab/constants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  WEBLAB2_EDITABLE_FILE_TYPES,
-  WEBLAB2_SUPPORTED_FILE_TYPES,
-} from '@cdo/apps/weblab2/constants';
 
 import {
   useFileUploader,
@@ -28,15 +20,11 @@ export const FileBrowserHeaderPopUpButton = () => {
   const {openNewFilePrompt, openNewFolderPrompt, openImportFromBackpackPrompt} =
     usePrompts();
   const {
-    config: {validMimeTypes},
+    config: {validMimeTypes, supportedFileTypes, editableFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {appName, validationFile} = levelProperties;
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
-  const editableFileTypes =
-    appName === 'weblab2'
-      ? WEBLAB2_EDITABLE_FILE_TYPES
-      : PYTHONLAB_EDITABLE_FILE_TYPES;
   const openNewFilePromptArgs = {
     folderId: DEFAULT_FOLDER_ID,
     validFileTypes: editableFileTypes,
@@ -44,14 +32,12 @@ export const FileBrowserHeaderPopUpButton = () => {
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(files);
 
-  const supportedFileTypes =
-    appName === 'weblab2'
-      ? WEBLAB2_SUPPORTED_FILE_TYPES
-      : PYTHONLAB_SUPPORTED_FILE_TYPES;
   const {startFileUpload, FileUploaderComponent} = useFileUploader(
     {
       appName,
@@ -100,6 +86,7 @@ export const FileBrowserHeaderPopUpButton = () => {
               backpackApi: backpackApi,
               projectFiles: files,
               validationFile: validationFile,
+              channelId,
             })
           }
         />

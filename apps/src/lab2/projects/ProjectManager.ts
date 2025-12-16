@@ -57,7 +57,7 @@ export default class ProjectManager {
   private isShareView: boolean | undefined;
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
-  private currentVersionHasComment: boolean = false;
+  private forceNewVersion: boolean = false;
 
   constructor({
     sourcesStore,
@@ -105,7 +105,7 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
-    await this.initializeCurrentVersionCommentState();
+    await this.initializeForceNewVersionState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
@@ -363,31 +363,24 @@ export default class ProjectManager {
     return this.sourcesStore.getCurrentVersionId();
   }
 
-  /**
-   * Check if the current version has a comment associated with it.
-   * This is used to determine if we should force a new version during autosave
-   * to prevent overwriting a version that has a comment.
-   * @returns boolean true if current version has a comment
-   */
-  getCurrentVersionHasComment(): boolean {
-    return this.currentVersionHasComment;
+  getForceNewVersion(): boolean {
+    return this.forceNewVersion;
+  }
+
+  setForceNewVersion(value: boolean): void {
+    this.forceNewVersion = value;
   }
 
   /**
-   * Set whether the current version has a comment.
-   * @param hasComment whether the current version has a comment
+   * Initialize the forceNewVersion value by checking if the current version has a comment.
+   * If the current version has a comment, we set forceNewVersion to true.
+   * This is used to prevent overwriting a version that has a comment.
+   * @returns void
    */
-  setCurrentVersionHasComment(hasComment: boolean): void {
-    this.currentVersionHasComment = hasComment;
-  }
-
-  /**
-   * Initialize the comment state by checking if the current version has a comment.
-   */
-  private async initializeCurrentVersionCommentState(): Promise<void> {
+  private async initializeForceNewVersionState(): Promise<void> {
     const currentVersionId = this.getCurrentVersionId();
     if (!currentVersionId) {
-      this.setCurrentVersionHasComment(false);
+      this.setForceNewVersion(false);
       return;
     }
 
@@ -397,13 +390,13 @@ export default class ProjectManager {
         v => v.versionId === currentVersionId
       );
       const hasComment = !!currentVersion?.comment?.trim();
-      this.setCurrentVersionHasComment(hasComment);
+      this.setForceNewVersion(hasComment);
     } catch (error) {
       // If we can't fetch version list, assume no comment.
       this.metricsReporter.logWarning(
         `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
       );
-      this.setCurrentVersionHasComment(false);
+      this.setForceNewVersion(false);
     }
   }
 
@@ -496,7 +489,7 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion || this.getCurrentVersionHasComment() // Force new version if the last saved version has a comment and sources have changed.
+          forceNewVersion || this.getForceNewVersion()
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -509,16 +502,14 @@ export default class ProjectManager {
         } else {
           errorToReport = new Error('Unknown error occurred');
         }
-        this.onSaveFail('Error saving sources', errorToReport);
+        this.onSaveFail('Error saving sources', errorToReport, 'sources');
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
 
-      // If we created a new version (not replacing existing), then we reset the new version to not yet have a comment.
-      // If the user manually saves the version, then the comment is added after the project is saved.
-      // See SaveVersionPanel.tsx.
-      if (forceNewVersion || this.getCurrentVersionHasComment()) {
-        this.setCurrentVersionHasComment(false);
+      // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
+      if (forceNewVersion || this.getForceNewVersion()) {
+        this.setForceNewVersion(false);
       }
     }
 
@@ -558,7 +549,7 @@ export default class ProjectManager {
       try {
         channelResponse = await this.channelsStore.save(this.channelToSave);
       } catch (error) {
-        this.onSaveFail('Error saving channel', error as Error);
+        this.onSaveFail('Error saving channel', error as Error, 'channel');
         return;
       }
       const channelSaveResponse = await channelResponse.json();
@@ -570,9 +561,10 @@ export default class ProjectManager {
     this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
+    this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
   }
 
-  private onSaveFail(errorMessage: string, error: Error) {
+  private onSaveFail(errorMessage: string, error: Error, type: string) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
     if (error.message.includes('409') || error.message.includes('401')) {
@@ -592,6 +584,12 @@ export default class ProjectManager {
       this.metricsReporter.logError(errorMessage, error, {
         message: error.message,
       });
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailure',
+        1,
+        'Count',
+        [{name: 'SaveType', value: type}]
+      );
     }
   }
 
