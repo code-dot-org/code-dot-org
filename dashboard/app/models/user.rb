@@ -356,11 +356,17 @@ class User < ApplicationRecord
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
     if user.primary_contact_info && !user.primary_contact_info.valid?
-      user.errors.merge!(user.primary_contact_info.errors)
+      user.primary_contact_info.errors.each do |error|
+        user.errors.add(error.attribute, error.message)
+      end
     end
 
     user.authentication_options.each do |ao|
-      user.errors.merge!(ao.errors) unless ao.valid?
+      unless ao.valid?
+        ao.errors.each do |error|
+          user.errors.add(error.attribute, error.message)
+        end
+      end
     end
   end
 
