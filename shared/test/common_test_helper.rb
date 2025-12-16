@@ -2,6 +2,8 @@
 ENV['RACK_ENV'] = 'test'
 ENV['UNIT_TEST'] = '1'
 
+# Force most ruby unit tests to run
+
 require 'fakefs/safe'
 require 'minitest/autorun'
 require 'rack/test'
