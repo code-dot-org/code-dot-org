@@ -425,24 +425,22 @@ export function setThemeAndRenderBlocks(
   }
 }
 
-export function setWorkspaceTheme(
-  workspace: GoogleBlockly.WorkspaceSvg,
-  name: string
-) {
+export function setWorkspaceTheme(name: string) {
   // Save the theme to user preferences, falling back to localStorage for signed-out users.
   new UserPreferences().setBlocklyTheme(name, () =>
     localStorage.setItem(BLOCKLY_THEME, name)
   );
 
-  const currentTheme = workspace.getTheme();
-  const themeName = name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
-  setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
   const analyticsData = Blockly.analyticsData;
   analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
     setting: EVENTS.BLOCKLY_SETTING_THEME,
     value: name,
     ...analyticsData,
   });
+
+  const currentTheme = Blockly.getMainWorkspace().getTheme();
+  const themeName = name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
+  setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
 }
 
 export function setAllWorkspacesTheme(

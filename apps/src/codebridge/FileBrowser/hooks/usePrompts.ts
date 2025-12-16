@@ -79,12 +79,14 @@ export const usePrompts = () => {
     fileName: string;
     folderId?: FolderId;
     contents?: string;
+    url?: string;
   }) =>
     dispatch(
       createNewFileThunk({
         fileName: arg.fileName,
         folderId: arg.folderId,
         contents: arg.contents,
+        url: arg.url,
       })
     );
   const moveFile = (fileId: string, folderId: FolderId) =>
@@ -95,8 +97,8 @@ export const usePrompts = () => {
     dispatch(renameFileThunk({fileId, newName}));
   const renameFolder = (folderId: FolderId, newName: string) =>
     dispatch(renameFolderThunk({folderId, newName}));
-  const saveFile = (fileId: string, contents: string) =>
-    dispatch(saveFileThunk({fileId, contents}));
+  const saveFile = (fileId: string, contents: string, url?: string) =>
+    dispatch(saveFileThunk({fileId, contents, url}));
 
   const openConfirmDeleteFile = usePartialApply(globalOpenConfirmDeleteFile, {
     dialogControl,

@@ -12,6 +12,11 @@
   height: 100%;
   background-color: var(--background-neutral-secondary);
   border-inline-end: variables.$default-border;
+
+  // Override the background color of any child divs
+  & > div {
+    background-color: var(--background-neutral-secondary);
+  }
 }
 
 .row {
@@ -24,6 +29,16 @@
   margin-inline: 0.375rem;
   padding-block: 0.125rem;
   transition: all 0.2s ease-in-out;
+
+  &.aiTutorVersion {
+    border-radius: var(--border-radius-br-s, 4px);
+    border: 1px solid var(--borders-brand-aqua-primary);
+    background: var(--background-brand-aqua-extra-light);
+
+    &:hover:not(.dragging) {
+      background-color: var(--background-brand-aqua-light);
+    }
+  }
 
   &:hover:not(.dragging) {
     background-color: var(--background-neutral-tertiary);

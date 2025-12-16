@@ -1,9 +1,7 @@
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classnames from 'classnames';
-import React, {HTMLAttributes, useMemo, forwardRef} from 'react';
+import React, {HTMLAttributes, forwardRef} from 'react';
 
+import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 
 import moduleStyles from './ai-tutor-version-action-notification.module.scss';
@@ -20,17 +18,6 @@ export interface AiTutorVersionActionNotificationProps
   files?: ProjectFile[];
 }
 
-const getIconFromType = (
-  type: NotificationType
-): FontAwesomeV6IconProps | undefined => {
-  const iconMap: Record<NotificationType, FontAwesomeV6IconProps> = {
-    accept: {iconName: 'check-circle'},
-    reject: {iconName: 'circle-xmark'},
-  };
-
-  return iconMap[type];
-};
-
 /**
  * Notification component for AI Tutor version actions (accept/reject).
  * Renders markdown content without close button or timestamp.
@@ -39,8 +26,6 @@ const AiTutorVersionActionNotification = forwardRef<
   HTMLDivElement,
   AiTutorVersionActionNotificationProps
 >(({text, type, files, className, ...htmlAttributes}, ref) => {
-  const icon = useMemo(() => getIconFromType(type), [type]);
-
   return (
     <div
       ref={ref}
@@ -53,22 +38,19 @@ const AiTutorVersionActionNotification = forwardRef<
       {...htmlAttributes}
     >
       <div className={moduleStyles.notificationContent}>
-        {icon && <FontAwesomeV6Icon {...icon} />}
-        <div className={moduleStyles.notificationText}>
-          {text}
-          {files && (
-            <ul>
-              {files.map(file => (
-                <li key={file.id}>
-                  {file.name}{' '}
-                  {file.isAiTutorVersionUpdated
-                    ? '(File update)'
-                    : '(New file)'}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        <div className={moduleStyles.notificationText}>{text}</div>
+        {files && (
+          <div className={moduleStyles.fileList}>
+            {files.map(file => (
+              <AiTutorVersionFileChip
+                key={file.id}
+                file={file}
+                isInReview={false}
+                isAccepted={type === 'accept' ? true : false}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
