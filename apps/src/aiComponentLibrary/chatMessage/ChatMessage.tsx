@@ -59,10 +59,10 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     state => state.weblab2?.aiTutorVersionFiles || []
   );
 
-  // Show browser warning when there are pending AI Tutor version changes
   const showAiTutorVersionActions =
     isAiTutorVersion && isLastMessage && aiTutorVersionFiles.length > 0;
 
+  // Show browser warning when user attempts to reload the page before accepting or rejecting AI Tutor's proposed updates.
   useEffect(() => {
     if (showAiTutorVersionActions) {
       const handleBeforeUnload = (event: BeforeUnloadEvent) => {
