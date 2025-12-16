@@ -7,7 +7,7 @@
   "development": {
     "host": "0.0.0.0",
     "autoBuild": true,
-    "publicOutputDir": "vite-dev",
+    "publicOutputDir": "app",
     "port": 3036
   }
 }

@@ -8,6 +8,8 @@ import {
   setViewingAiTutorVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -54,6 +56,9 @@ export const useAiTutorResponseSchemaSettings = (
           ) {
             return formatCopyPasteResponse(jsonResponse.answer);
           }
+          sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
+            answerType,
+          });
           dispatch(setViewingAiTutorVersion(true));
           // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
           // Workspace will be read-only until user clicks "accept" or "reject".

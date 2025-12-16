@@ -8,8 +8,9 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -21,6 +22,7 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewEmptyState from './PreviewEmptyState';
 import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
@@ -40,6 +42,10 @@ export const HTMLPreview: React.FC = () => {
     return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
 
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+
   // The new preview is currently behind an experiment flag. We pass this flag
   // through to the inner iframe via a query string so it knows whether or not to use the new preview.
   const previewQueryString = useMemo(() => {
@@ -56,6 +62,11 @@ export const HTMLPreview: React.FC = () => {
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+
+  const isEmptyProject =
+    !source ||
+    (Object.keys(source.files).length === 0 &&
+      Object.keys(source.folders).length === 0);
 
   const aiFilePathToPreview = useAppSelector(
     state => state.weblab2.aiFilePathToPreview
@@ -112,6 +123,15 @@ export const HTMLPreview: React.FC = () => {
       navigationHistoryIndex,
       navigationHistory
     );
+    if (isAiTutorVersion) {
+      sendLab2AnalyticsEvent(
+        EVENTS.AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR,
+        {
+          fileName: newInputValue,
+          fileType: newInputValue.split('.').pop() || '',
+        }
+      );
+    }
   };
 
   const onNavigateBack = () => {
@@ -208,6 +228,13 @@ export const HTMLPreview: React.FC = () => {
       }
       if (event.data.type === IframeMessageType.IFRAME_READY) {
         setIsIframeLoaded(true);
+        // Send the source immediately when iframe is ready
+        if (debouncedSource) {
+          iframeRef.current?.contentWindow?.postMessage(
+            {type: IframeMessageType.SET_SOURCE, source: debouncedSource},
+            previewUrl
+          );
+        }
         iframeRef.current?.contentWindow?.postMessage(
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
@@ -228,7 +255,13 @@ export const HTMLPreview: React.FC = () => {
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
+  }, [
+    previewUrl,
+    currentFile,
+    navigationHistory,
+    navigationHistoryIndex,
+    debouncedSource,
+  ]);
 
   useEffect(() => {
     iframeRef.current?.contentWindow?.postMessage(
@@ -333,7 +366,9 @@ export const HTMLPreview: React.FC = () => {
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
         />
-        {isStopped ? (
+        {isEmptyProject ? (
+          <PreviewEmptyState />
+        ) : isStopped ? (
           <PreviewStopped onReload={onReloadPreview} />
         ) : (
           /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually

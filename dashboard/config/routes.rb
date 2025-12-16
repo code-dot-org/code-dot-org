@@ -1181,6 +1181,7 @@ Dashboard::Application.routes.draw do
     resources :student_snapshots, only: [] do
       collection do
         get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
       end
     end
 
@@ -1284,6 +1285,9 @@ Dashboard::Application.routes.draw do
     resources :code_review_comments, only: [:create, :update, :destroy]
 
     resources :rubrics, only: [:create, :edit, :new, :update, :show] do
+      collection do
+        get 'find' # GET /rubrics/find?lesson_id=X&level_id=Y
+      end
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'

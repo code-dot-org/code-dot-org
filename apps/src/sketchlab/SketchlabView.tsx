@@ -20,6 +20,7 @@ import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -204,6 +205,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  const teacherViewingStudent = Boolean(
+    useAppSelector(state => state.progress.viewAsUserId)
+  );
+
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <SketchlabTourSteps />
@@ -240,6 +245,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             )
           }
         >
+          {teacherViewingStudent && (
+            <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+          )}
           <Excalidraw
             initialData={
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)

@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import {defineConfig, searchForWorkspaceRoot} from 'vite';
 import ViteRails from 'vite-plugin-rails';
 import path from 'node:path';
+import {tanstackRouter} from '@tanstack/router-plugin/vite';
 
 // https://vite.dev/config/
 export default defineConfig(({mode}) => {
@@ -22,6 +23,11 @@ export default defineConfig(({mode}) => {
     },
     plugins: [
       ViteRails(),
+      // https://tanstack.com/router/latest/docs/framework/react/installation/with-vite
+      tanstackRouter({
+        target: 'react',
+        autoCodeSplitting: true,
+      }),
       react({
         babel: {
           plugins: [['babel-plugin-react-compiler']],
