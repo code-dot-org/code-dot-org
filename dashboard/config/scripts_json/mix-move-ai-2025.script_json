@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-04 16:08:41 UTC",
+    "serialized_at": "2025-11-20 21:08:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -825,10 +825,66 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Educator’s Guide",
+      "url": "https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view?usp=sharing",
+      "key": "educator_s_guide",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
+      "name": "Mix & Move Slides",
+      "url": "https://docs.google.com/presentation/d/1q8aIlobDfMj6gcrqLqv2sQma_rKYw4jVMLIPJ8CJI0w/template/preview",
+      "key": "mix_move_slides",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mix_move_slides"
+      }
+    },
+    {
+      "name": "Teacher Prep Video ",
+      "url": "https://www.youtube.com/watch?v=yZRBxIZrVSk",
+      "key": "teacher_prep_video",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_prep_video"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "educator_s_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "mix_move_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "teacher_prep_video"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -837,10 +893,72 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "artificial_intelligence_ai_",
+      "word": "Artificial Intelligence (AI)",
+      "definition": "A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "A set of instructions that tells a computer what to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "generate",
+      "word": "Generate",
+      "definition": "To make or create something",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "generate"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "The instruction or question you give to AI that tell it what to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "generate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "prompt"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
