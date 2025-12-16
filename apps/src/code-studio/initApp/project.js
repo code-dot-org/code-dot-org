@@ -1144,6 +1144,10 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+                {name: 'AppName', value: this.getStandaloneApp()},
+                {name: 'SaveType', value: 'sources'},
+              ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
               }
@@ -1443,6 +1447,10 @@ var projects = (module.exports = {
       if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
         header.showTryAgainDialog();
       }
+      MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
+        {name: 'AppName', value: this.getStandaloneApp()},
+        {name: 'SaveType', value: 'channel'},
+      ]);
       return;
     } else if (saveChannelErrorCount) {
       // If the previous errors occurred due to network problems, we may not
@@ -1471,6 +1479,9 @@ var projects = (module.exports = {
 
     current = current || {};
     Object.assign(current, data);
+    MetricsReporter.incrementCounter('LegacyLab.ProjectSaveSuccess', [
+      {name: 'AppName', value: this.getStandaloneApp()},
+    ]);
 
     if (shouldNavigate) {
       // If we are at a /projects/<appname> link, we can display the project

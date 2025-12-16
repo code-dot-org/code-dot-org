@@ -12,10 +12,11 @@
 
 .buttonContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
 .actionButton {
   flex: 1;
+  min-width: 107px; // Triggers wrapping when container is narrow.
 }
-

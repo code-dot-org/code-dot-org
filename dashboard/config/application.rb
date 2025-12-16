@@ -241,6 +241,13 @@ module Dashboard
       require 'newrelic_rpm'
     end
 
+    # Webpack handles js compression for us, so don't compress by default.
+    # config.assets.js_compressor = :uglifier
+    # config.assets.css_compressor = :sass
+
+    # Version of your assets, change this if you want to expire all your assets.
+    config.assets.version = '1.0'
+
     config.assets.image_optim = false unless CDO.image_optim
 
     config.experiment_cache_time_seconds = 60
