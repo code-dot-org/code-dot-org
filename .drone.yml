@@ -320,7 +320,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build.tar.gz
+      filename: cache-staging-ci-build-PR-70052.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -339,6 +339,7 @@ trigger:
     - "staging-next"
   event:
     - push
+    - pull_request
 
 ---
 kind: signature
