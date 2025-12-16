@@ -15,15 +15,18 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   end
 
   def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
+    unit = Unit.find(unit_id)
+    unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description) : nil
+
     lesson = Lesson.find(lesson_id)
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
     lesson_info = "Lesson Name: #{lesson.name}
     Lesson Overview: #{lesson.render_property(:overview)}
     Learning Objectives: #{objectives}
-    Standards: ___
-    Unit Name: ___
-    Unit Overview: ___"
+    Standards: #{lesson.standards.map(&:summarize_for_lesson_show).to_json}
+    Unit Name: #{unit.name}
+    Unit Overview: #{unit_description}"
 
     levels = []
     # Special cases to think about:
