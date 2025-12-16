@@ -5,22 +5,19 @@ class AichatChannel < ApplicationCable::Channel
 
     stream_id = params[:stream_id]
     if stream_id.present?
-      stream_from stream_name(stream_id)
+      @stream_name = "aichat_stream:#{current_user.id}:#{stream_id}"
+      stream_from @stream_name
     else
       reject
     end
   end
 
   # Expects payload similar to AichatRequestsController#start_chat_completion
-  # but streams the response over ActionCable instead of enqueuing a job.
+  # but streams the response over ActionCable via an ActiveJob
   def request_completion(data)
-    stream_id = params[:stream_id]
     payload = data.deep_stringify_keys
     new_message = payload['newMessage'] || {}
-    stored_messages = Array(payload['storedMessages']).select do |message|
-      message['status'] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
-        message['chatMessageText'].present?
-    end
+    stored_messages = successful_stored_chat_messages(payload['storedMessages'])
     model_customizations = (payload['modelParameters'] || {})
     context = payload['aichatContext'] || {}
     locale = payload['locale'] || 'en'
@@ -29,8 +26,6 @@ class AichatChannel < ApplicationCable::Channel
 
     level_id = context['currentLevelId']
     project_id = project_id_from_context(context)
-
-    user_text = new_message['chatMessageText']
 
     request = AichatRequest.create!(
       user_id: current_user.id,
@@ -42,95 +37,28 @@ class AichatChannel < ApplicationCable::Channel
       project_id: project_id,
       execution_status: STATUS[:RUNNING]
     )
-    request_id = request.id
 
-    broadcast_to_stream(stream_id, {event: 'start', request_id: request_id})
-
-    user_toxicity = AichatSafetyHelper.find_toxicity(user_text, level_id, 'User')
-    if user_toxicity
-      request.update!(
-        response: user_toxicity.to_json,
-        execution_status: STATUS[:USER_PROFANITY]
-      )
-      return broadcast_error(stream_id, STATUS[:USER_PROFANITY], request_id, user_toxicity)
-    end
-
-    current_seq_id = 0
-
-    full_response = AichatAiHelper.stream_assistant_response(
-      model_customizations,
-      stored_messages,
-      new_message,
-      level_id,
-      project_id,
-      current_user.id
-    ) do |delta, raw_event|
-      current_seq_id += 1
-      handle_stream_delta(stream_id, delta, raw_event, request_id, current_seq_id)
-    end
-
-    model_toxicity = AichatSafetyHelper.find_toxicity(full_response, level_id, 'Assistant')
-    if model_toxicity
-      request.update!(
-        response: model_toxicity.to_json,
-        execution_status: STATUS[:MODEL_PROFANITY]
-      )
-      return broadcast_error(stream_id, STATUS[:MODEL_PROFANITY], request_id, model_toxicity)
-    end
-
-    request.update!(
-      response: full_response,
-      execution_status: STATUS[:SUCCESS]
+    AichatRequestStreamJob.perform_later(
+      request_id: request.id,
+      stream_name: @stream_name,
+      locale: locale
     )
-
-    broadcast_to_stream(stream_id, {event: 'complete', text: full_response, request_id: request_id})
-  rescue OpenaiUserInputResponseTimeout => exception
-    request&.update!(
-      response: exception.message,
-      execution_status: STATUS[:MODEL_TIMEOUT]
-    )
-    broadcast_error(stream_id, STATUS[:MODEL_TIMEOUT], request_id, exception.message)
-  rescue ArgumentError => exception
-    request&.update!(
-      response: exception.message,
-      execution_status: STATUS[:FAILURE]
-    )
-    broadcast_error(stream_id, STATUS[:FAILURE], request_id, exception.message)
   rescue StandardError => exception
-    request&.update!(
-      response: exception.message,
-      execution_status: STATUS[:FAILURE]
-    )
-    Honeybadger.notify(
-      "AichatChannel streaming failed: #{exception.message}",
+    request&.update!(response: exception.message, execution_status: STATUS[:FAILURE])
+    Honeybadger.notify("AichatChannel streaming failed: #{exception.message}",
       context: {
         user_id: current_user&.id,
         locale: locale
       }
     )
-    broadcast_error(stream_id, STATUS[:FAILURE], request_id, exception.message)
+    AichatAiHelper.broadcast_error(@stream_name, STATUS[:FAILURE], request&.id, exception.message)
   end
 
-  private def broadcast_to_stream(stream_id, payload)
-    ActionCable.server.broadcast(
-      stream_name(stream_id),
-      payload
-    )
-  end
-
-  private def broadcast_error(stream_id, code, request_id = nil, details = nil)
-    payload = {event: 'error', code: code, details: details, request_id: request_id}
-
-    broadcast_to_stream(stream_id, payload)
-  end
-
-  private def handle_stream_delta(stream_id, delta, raw_event, request_id, seq_id)
-    return if delta.nil? || delta == ''
-    broadcast_to_stream(stream_id, {event: 'delta', text: delta, raw_event: raw_event, request_id: request_id, seq: seq_id})
-  end
-
-  private def stream_name(stream_id)
-    "aichat_stream:#{current_user.id}:#{stream_id}"
+  private def successful_stored_chat_messages(stored_messages)
+    Array(stored_messages).select do |message|
+      message['status'] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        message['chatMessageText'].present?
+    end
   end
 
   private def project_id_from_context(context)

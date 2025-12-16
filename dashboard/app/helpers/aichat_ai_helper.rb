@@ -244,6 +244,16 @@ module AichatAiHelper
     full_text
   end
 
+  def self.broadcast_error(stream_name, code, request_id = nil, details = nil)
+    payload = {event: 'error', code: code, details: details, request_id: request_id}
+
+    broadcast_to_stream(stream_name, payload)
+  end
+
+  def self.broadcast_to_stream(stream_name, payload)
+    ActionCable.server.broadcast(stream_name, payload)
+  end
+
   def self.token_throttling_key(model_id, user_id)
     # "/user/" included to leave space for potential throttling at the classroom/teacher level.
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
