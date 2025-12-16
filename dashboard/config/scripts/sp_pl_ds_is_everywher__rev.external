@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data</strong> is any form of organized information. This could be words, numbers or pictures.</p>
 
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Data Science </strong> is the process of making meaning from that data..</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Data Science </strong> is the process of making meaning from that data.</p>
 
 </div>
 

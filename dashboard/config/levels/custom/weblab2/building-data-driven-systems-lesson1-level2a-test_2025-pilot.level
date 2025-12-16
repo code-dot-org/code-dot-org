@@ -1,0 +1,107 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:06:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Music Magazine\r\n\r\n###Do This:\r\n\r\n1. Fill your Arrays: Create 2 arrays (`headlines`, `taglines`) with 3 items each. Ensure index 0 in all lists matches the same story.\r\n\r\n2. Pick Index: Create a variable `let index = 0;` to track the current cover.\r\n\r\n3. Update Page: Use document.querySelector and your index variable to:\r\n\t* Set `#headline` text to `headlines[index]`.\r\n    * Set `#coverImage` src to `images[index]`.\r\n    * Set `#tagline` text to `taglines[index]`.\r\n\r\n4. Show Count: Update `#count` text to display the total number of covers using `.length.`\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Music Magazine Cover</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <main class=\"magazine-container\">\n    <header class=\"masthead\">\n      <h1 id=\"magTitle\">Top Tracks Weekly</h1>\n      <p class=\"issue-date\">Volume 42 • Special Edition</p>\n    </header>\n\n    <div class=\"cover-content\">\n      <img id=\"coverImage\" src=\"/images/cover1a.png\" alt=\"Magazine Cover Image\">\n      \n      <div class=\"text-overlay\">\n        <h2 id=\"headline\"></h2>\n        <p id=\"tagline\"></p>\n      </div>\n    </div>\n\n    <footer class=\"stats\">\n      <p id=\"count\"></p>\n    </footer>\n  </main>\n\n</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// MUSIC MAGAZINE: Parallel Arrays\n\n// Data Arrays\nconst coverImages = [\n  \"/images/cover1a.png\",\n  \"/images/cover2a.png\",\n  \"/images/cover3a.png\"\n];\nconst headlines = [];\nconst taglines = [];\n\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: 'Arial', sans-serif;\n  background-color: #333;\n  color: white;\n  display: flex;\n  justify-content: center;\n  padding: 20px;\n}\n\n.magazine-container {\n  background-color: #1a1a1a; /* Dark theme for Music Mag */\n  width: 350px;\n  padding: 20px;\n  border: 2px solid #fff;\n  text-align: center;\n  box-shadow: 0 0 20px rgba(0,0,0,0.5);\n}\n\n.masthead h1 {\n  font-family: 'Georgia', serif;\n  font-size: 2.5rem;\n  margin-bottom: 5px;\n  color: #e91e63; /* Vibrant accent color */\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.issue-date {\n  border-top: 1px solid #555;\n  border-bottom: 1px solid #555;\n  padding: 5px;\n  font-size: 0.8rem;\n  color: #ccc;\n  margin-bottom: 20px;\n}\n\n#coverImage {\n  width: 100%;\n  height: auto;\n  border: 4px solid #fff;\n  margin-bottom: 15px;\n}\n\n#headline {\n  font-size: 1.8rem;\n  color: #ffeb3b; /* Yellow for high impact */\n  margin: 10px 0;\n  line-height: 1.1;\n}\n\n#tagline {\n  font-size: 1.1rem;\n  font-style: italic;\n  color: #fff;\n}\n\n.stats {\n  margin-top: 30px;\n  font-size: 0.9rem;\n  color: #888;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cover2a.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2a-test-2025/uuid/39561a4a-bc94-4611-ac3b-987ae5283518.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "cover1a.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2a-test-2025/uuid/9889b0b8-6d72-49a3-b4e8-5144dda74019.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "cover3a.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson1-level2a-test-2025/uuid/38351021-d9ae-49ac-8ddd-0284f3f91404.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nMD30/7DxlTPbegKSVQ==\n",
+    "display_name": "Music Magazine Cover",
+    "bubble_choice_description": "Create the cover for a music magazine using 3 parallel arrays to change the style quickly",
+    "thumbnail_url": "https://images.code.org/5abc3d52516c4665486844983f539f5d-cover1a.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:23.448+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level2a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level2a-test-2025\"}]"
+}]]></config>
+</Weblab2>

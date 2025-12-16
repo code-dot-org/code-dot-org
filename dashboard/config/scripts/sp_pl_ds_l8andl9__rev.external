@@ -45,17 +45,24 @@ markdown <<MARKDOWN
 </div>
 
 
-<div style="clear:both;"></div>
-<br>
 
-> #### **Key Concepts:**
-> - #### **data cleaning** - the process of making data useful by deleting doubles or blanks, creating categories, and editing spelling errors
-> - #### **measures of center** - represent the central point or typical value of a data set
-> - #### **shape of distribution** - how data values are spread out and how they form a pattern when visualized on a graph
-> - #### **skewed distribution** - occurs when the data stretches out more on one side than the other
-> - #### **outlier** - a data point that significantly differs from other data points
-> - #### **pattern** - a consistent or recurring sequence that can be observed and predicted
-> - #### **trend** - the general direction in which data points are heading over a period of time
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data clearning</strong> the process of making data useful by deleting doubles or blanks, creating categories, and editing spelling errors.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Measures of Center </strong> represent the central point or typical value of a data set.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Shape of Distribution </strong> how data values are spread out and how they form a pattern when visualized on a graph.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Skewed Distribution </strong> occurs when the data stretches out more on one side than the other.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Outlier </strong> a data point that significantly differs from other data points.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Pattern </strong> a consistent or recurring sequence that can be observed and predicted.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Trend </strong> the general direction in which data points are heading over a period of time.</p>
+
+</div>
+
 
 ## Cleaning and Interpreting Data in the Classroom 
 #### In the classroom, students explore how messy data becomes meaningful through cleaning and visualization. They practice interpreting patterns, discussing their implications, and making thoughtful decisions about how to present findings clearly and ethically.

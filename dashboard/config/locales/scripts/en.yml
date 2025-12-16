@@ -10289,6 +10289,26 @@ en:
               name: AI-Powered Threats and Defenses Removed Levels
             lesson-12:
               name: AI Tutor - Python Lab
+            lesson-13:
+              name: U5 L1
+            lesson-14:
+              name: U5 L2
+            lesson-15:
+              name: U5 L3
+            lesson-16:
+              name: U5 L4
+            lesson-17:
+              name: U5 L5
+            lesson-18:
+              name: U5 L6
+            lesson-19:
+              name: U5 L7
+            lesson-20:
+              name: U5 L8
+            lesson-21:
+              name: U5 L9
+            lesson-22:
+              name: U5 L10
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10304,6 +10324,8 @@ en:
               display_name: Python
             lessonGroup-8:
               display_name: AI Tutor
+            lessonGroup-9:
+              display_name: Web Dev - AIF Sem 2
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -25910,6 +25932,8 @@ en:
               name: Unit 3 Prototypes
             lesson-4:
               name: Unit 4 Prototypes
+            lesson-5:
+              name: Unit 5 Code Examples
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -26400,6 +26424,21 @@ en:
           lesson_groups: {}
           name: self-paced-pl-teaching-ps-with-ai-v2-2025
           title: Teaching Problem-Solving with AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd2-web-lab-update-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-Page Websites'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          name: csd2-web-lab-update-2025
+          title: CSD Unit 2 (with Web Lab 2)
           description_audience: ''
           description_short: ''
           description: ''

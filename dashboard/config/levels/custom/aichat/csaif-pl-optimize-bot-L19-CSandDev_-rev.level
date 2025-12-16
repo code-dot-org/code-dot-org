@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-11-25T22:23:12.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Optimization Helper\r\n\r\nThis chatbot is meant to help you understand and pick from the options presented on your [Optimization activity guide](https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing)\r\n\r\nChoose one of the four scenarios presented in the guide and then use the chatbot to help guide you.\r\n\r\n**Prompts to Try on This Level**\r\n- What does [specific action] mean, and how could it impact the system in this situation?\r\n- Would [specific action] help in this scenario, or could it create other problems?\r\n- What are the potential trade-offs or downsides of [specific action]?\r\n- Why might [specific action] work better than other actions in this scenario?\r\n- How does [specific action] relate to optimizing performance for the task described?",
+    "long_instructions": "##  🔍Teacher Notes\r\n\r\nFollow along with the <a href=\"https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Activity Guide</a> as you work with the the AI Chatbot.\r\n\r\nThe chatbot will help explore ways to enhance system performance based on different scenarios.\r\n\r\nExperiment with different inputs to see how optimization strategies impact performance.\r\n\r\n<p style=\"font-size: 14px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">\r\n    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/3/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n## Optimization Helper\r\n\r\nThis chatbot is meant to help you understand and pick from the options presented on your [Optimization activity guide](https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing)\r\n\r\nChoose one of the four scenarios presented in the guide and then use the chatbot to help guide you.\r\n\r\n**Prompts to Try on This Level**\r\n- What does [specific action] mean, and how could it impact the system in this situation?\r\n- Would [specific action] help in this scenario, or could it create other problems?\r\n- What are the potential trade-offs or downsides of [specific action]?\r\n- Why might [specific action] work better than other actions in this scenario?\r\n- How does [specific action] relate to optimizing performance for the task described?",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -40,9 +41,11 @@
         "gpt-4o-mini"
       ]
     },
-    "name_suffix": "_-rev"
+    "name_suffix": "_-rev",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:12.282+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-optimize-bot-L19-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-optimize-bot-L19-CSandDev_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:12.282+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-optimize-bot-L19-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-optimize-bot-L19-CSandDev_2025\"},{\"changed_at\":\"2025-12-15 21:45:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

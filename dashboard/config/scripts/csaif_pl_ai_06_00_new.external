@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 <div style="position: relative; text-align: center; color: white; margin-top: 20px;">
-    <img src="https://images.code.org/02541784d21716a1c0d94c8834cea8ed-Screenshot 2025-12-04 at 1.30.05 PM.png" alt="Banner image that says, Welcome to Teaching Problem Solving with AI" style="width: 100%; border-radius: 10px;">
+    <img src="https://images.code.org/50d00c287726410efacfe6225f2297ae-Screenshot 2025-12-15 at 3.03.25 PM.png" alt="Banner image that says, Welcome to Teaching Insights from Data and AI" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
     </div>
 </div>
@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach **Problem Solving with AI**—a unit which teaches students to move beyond passive use of AI by critically evaluating, refining, and responsibly applying AI-generated content through hands-on experimentation, analysis, and human oversight to improve problem-solving.
+#### This professional learning module prepares you to teach **Insights from Data and AI**—a unit which teaches students to move beyond passive use of AI by critically evaluating, refining, and responsibly applying AI-generated content through hands-on experimentation, analysis, and human oversight to improve problem-solving.
 
 ___
 

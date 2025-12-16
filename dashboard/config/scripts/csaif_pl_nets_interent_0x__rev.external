@@ -19,11 +19,9 @@ markdown <<MARKDOWN
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Domain Name System (DNS):</strong> translates human-friendly website names (like www.example.com) into numerical IP addresses (and vice versa).</p>
-</div>
-
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>HyperText Transfer Protocol (HTTP):</strong> Allows computers to request and share web content, like web page text, images, and videos.</p>
 </div>
+
 
 ## 📝 To Do
 

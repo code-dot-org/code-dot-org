@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 02:25:04 UTC",
+    "serialized_at": "2025-12-15 18:49:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3437,6 +3437,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3659,6 +3662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level1_2025"
+        ],
         "progression": "Button Response"
       },
       "bonus": false,
@@ -3681,6 +3687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level2_2025"
+        ],
         "progression": "Fixing Broken Features"
       },
       "bonus": false,
@@ -3703,6 +3712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3_2025"
+        ],
         "progression": "First Click!"
       },
       "bonus": false,
@@ -3725,6 +3737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4_2025"
+        ],
         "progression": "Mini App Build"
       },
       "bonus": false,
@@ -3747,6 +3762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level5_2025"
+        ],
         "progression": "Vocab: Document Object Model (DOM)"
       },
       "bonus": false,
@@ -3769,6 +3787,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level6_2025"
+        ],
         "progression": "Vocab: Document Object Model (DOM)"
       },
       "bonus": false,
@@ -3791,6 +3812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level7_2025"
+        ],
         "progression": "Vocab: Event Handler"
       },
       "bonus": false,
@@ -3813,6 +3837,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level8_2025"
+        ],
         "progression": "Vocab: Event Handler"
       },
       "bonus": false,
@@ -3835,6 +3862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level9_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4582,6 +4612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level1_2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -4604,6 +4637,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level2_2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -4626,6 +4662,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level3_2025"
+        ],
         "progression": "Exploring Functions with Parameters"
       },
       "bonus": false,
@@ -4648,6 +4687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4_2025"
+        ],
         "progression": "Writing Functions with Parameters"
       },
       "bonus": false,
@@ -4670,6 +4712,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4692,6 +4737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level6_2025"
+        ],
         "progression": "Vocab: Parameter"
       },
       "bonus": false,
@@ -4714,6 +4762,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level7_2025"
+        ],
         "progression": "Vocab: Parameter"
       },
       "bonus": false,
@@ -4736,6 +4787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level8_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5483,6 +5537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson11-level2_2025"
+        ],
         "progression": "Milestone 2"
       },
       "bonus": false,
@@ -5505,6 +5562,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson11-level3_2025"
+        ],
         "progression": "Milestone 3"
       },
       "bonus": false,
@@ -5527,6 +5587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-lesson11-level4_2025"
+        ],
         "progression": "Milestone 4"
       },
       "bonus": false,
@@ -5574,6 +5637,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-and-algorithmic-decisions-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -6690,6 +6756,32 @@
       }
     },
     {
+      "name": "[KEY] Combining Conditions with AND/OR",
+      "url": "https://docs.google.com/document/d/10Vm6yqY3KD-mDXuSLXfYLOFnj_aFI2qGtkiAc9AtBls/edit?tab=t.0#heading=h.xc9e0gftf9l3",
+      "key": "_key_combining_conditions_with_and_or",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_combining_conditions_with_and_or"
+      }
+    },
+    {
+      "name": "[KEY] Creating a Multi-Decision Flowchart (Optional)",
+      "url": "https://docs.google.com/document/d/1EdAuRI7oBxQwMwz1efo4hBUR3U8bzqc5USV_w7y36Zc/edit?usp=sharing",
+      "key": "_key_creating_a_multi-decision_flowchart_optional_",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_creating_a_multi-decision_flowchart_optional_"
+      }
+    },
+    {
       "name": "[KEY] Interactivity in Web Apps",
       "url": "https://docs.google.com/document/d/16O1ke2bCz_H1Otn5cF8oz36PGvMPEe3irn3CciJI3RY/edit?usp=sharing",
       "key": "_key_interactivity_in_web_apps",
@@ -6787,6 +6879,45 @@
       },
       "seeding_key": {
         "resource.key": "building_more_dynamic_pages_1"
+      }
+    },
+    {
+      "name": "Combining Conditions with AND/OR",
+      "url": "https://docs.google.com/presentation/d/1q1VSd6nZAZCayYX56y8lWC5dcF4DfqG4wZ7A_yNvPnQ/edit?usp=sharing",
+      "key": "combining_conditions_with_and_or",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "combining_conditions_with_and_or"
+      }
+    },
+    {
+      "name": "Combining Conditions with AND/OR",
+      "url": "https://docs.google.com/document/d/1qwytXIC8GudykRmyXvltR1LfRWABXqVOEsExeeEJtcA/edit?usp=sharing",
+      "key": "combining_conditions_with_and_or_1",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "combining_conditions_with_and_or_1"
+      }
+    },
+    {
+      "name": "Creating a Multi-Decision Flowchart (Optional)",
+      "url": "https://docs.google.com/document/d/1h0s35ER5Vn3lJDoJOaKih7RYEKO2CnjKTdY_WJq0Ae4/edit?usp=sharing",
+      "key": "creating_a_multi-decision_flowchart_optional_",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_multi-decision_flowchart_optional_"
       }
     },
     {
@@ -6995,6 +7126,36 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "nested_conditionals_for_complex_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_combining_conditions_with_and_or"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_creating_a_multi-decision_flowchart_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "combining_conditions_with_and_or"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "combining_conditions_with_and_or_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "creating_a_multi-decision_flowchart_optional_"
       }
     },
     {

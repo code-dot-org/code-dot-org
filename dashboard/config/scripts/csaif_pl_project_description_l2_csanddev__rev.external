@@ -44,10 +44,7 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### The diagram clearly shows how the system works, including user interactions, data flow, and processing.
-- #### Includes a problem statement to explain what the system is solving.
-- #### All parts of our diagram are clear and well-labeled.
-.
+- #### Provides a clear system diagram detailing user interactions, data flow, processing and a defined problem statement.
 
 
 </p></div>
@@ -59,9 +56,7 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Lists all the hardware used in my system (e.g., sensors, processors).
-- #### Explains how each hardware component interacts with other parts of the system.
-- #### Explanation includes how the hardware helps the system function.
+- #### Clearly identifies hardware used within the system. Describes how hardware interacts with other system layers.
 
 
 
@@ -74,9 +69,8 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Describes the software used in the system and how it processes data.
-- #### Explains how the software interacts with the hardware.
-- #### Includes features such as automation, AI, or interactive elements if applicable.
+- #### Describes how software enables key system functions and processes data. 
+- #### May include automation, AI, or interactive features.
 
 
 
@@ -89,9 +83,7 @@ markdown <<MARKDOWN
     <p>
 
 
-- #### Explains how data moves through the system.
-- #### Describes how different components connect and exchange information (e.g., Wi-Fi, Bluetooth, cloud).
-- #### Explanation makes it clear how the system transmits and retrieves data.
+- #### Provides a detailed explanation of how the system transmits and retrieves data across devices, networks, or cloud platforms.
 
 
 
@@ -100,14 +92,12 @@ markdown <<MARKDOWN
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🤖 AI Integration</summary>
+    <summary style="font-size: 1.5em; font-weight: bold;">💜 Ethical Considerations</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-- #### Use AI tools for brainstorming, debugging, or refining code.
-- #### Reflect on AI’s role in the project and discuss its ethical implications.
-
+- #### Critically reflects on potential ethical issues within the system and proposes strategies for future development.
 
 </p></div>
 </details>
@@ -115,7 +105,7 @@ markdown <<MARKDOWN
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Check out the <a href="https://docs.google.com/document/d/1fO7sBLDcIMY2HUYUd_XtDmKA6xMZElFCikCLNeBZW7Y/edit?usp=sharing" target="blank" rel="noopener noreferrer">Exemplar</a> to see how these concepts come to life in the classroom.
+    ➡️ Check out the <a href="https://docs.google.com/document/d/1B564B7VVxuGwiYfi1YQBLMzoS6eqT8d8DvixrwaqBTs/edit?tab=t.0#heading=h.xe9cnc3216z0" target="blank" rel="noopener noreferrer">Exemplar</a> to see how these concepts come to life in the classroom.
 </p>
 
 MARKDOWN

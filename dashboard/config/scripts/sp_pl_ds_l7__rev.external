@@ -28,17 +28,16 @@ markdown <<MARKDOWN
 
 #### When students explore data in Google Sheets, they practice using these visual tools to ask and answer questions. By creating their own charts and filtering data, they learn how visualization can bring clarity, insight, and storytelling power to a dataset.
 
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data Visualization</strong> a graphical representation of information and data.</p>
 
-> #### **Key Concepts:**
-> - #### **data visualization:** a graphical representation of information and data
-> - #### **bar chart:** a graph that uses rectangular bars to represent frequency or count
-> - #### A **pie chart** is great for showing parts of a whole.
-> - #### **filter:** a tool or process used to select specific data points from a larger set based on certain criteria or conditions
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Bar Chart </strong> a graph that uses rectangular bars to represent frequency or count.</p>
 
-<br>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Pie Chart </strong> circular chart that is great for showing parts of a whole.</p>
 
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Filter </strong> a tool or process used to select specific data points from a larger set based on certain criteria or conditions.</p>
 
-
+</div>
 
 ## Let’s practice visualizing Data in **Google Sheets**! 
 

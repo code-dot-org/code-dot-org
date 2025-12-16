@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-12 10:28:13 UTC",
+    "serialized_at": "2025-12-16 06:38:28 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6766,14 +6766,16 @@
     },
     {
       "name": "AAA and AI",
-      "url": "https://docs.google.com/presentation/d/1MXb_DuDodfBb6qXi_pKPF205rG5496TxXxFiEPRdXyg/edit?usp=sharing",
-      "key": "aaa_and_ai",
+      "url": "https://docs.google.com/presentation/d/1gtjg3TyBdRwjwA4NOLQEjwtG1WNlx505HicRtzkQTYk/edit?usp=sharing",
+      "key": "aaa_and_ai_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "aaa_and_ai"
+        "resource.key": "aaa_and_ai_1"
       }
     },
     {
@@ -7305,7 +7307,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "aaa_and_ai"
+        "resource.key": "aaa_and_ai_1"
       }
     },
     {

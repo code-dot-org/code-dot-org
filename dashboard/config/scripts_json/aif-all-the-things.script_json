@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-14 15:39:00 UTC",
+    "serialized_at": "2025-12-15 19:01:46 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -88,6 +88,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Unit 5 Code Examples",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -256,6 +271,30 @@
       "seeding_key": {
         "lesson_activity.key": "1d58bf74-feeb-4d0f-a595-646fc0eebcff",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "da8ec995-636c-4285-b70d-d8a6ea938001",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da8ec995-636c-4285-b70d-d8a6ea938001",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "355cdc71-4ed0-43f9-b2bf-bc8f1dac2527",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "355cdc71-4ed0-43f9-b2bf-bc8f1dac2527",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -630,6 +669,27 @@
       "seeding_key": {
         "activity_section.key": "a7cab60d-8a9a-4c26-b0fb-419f9b1f68d8",
         "lesson_activity.key": "1d58bf74-feeb-4d0f-a595-646fc0eebcff"
+      }
+    },
+    {
+      "key": "cb8c4fa4-278e-4d7b-9da8-e2f75b5e5d82",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1 Code Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb8c4fa4-278e-4d7b-9da8-e2f75b5e5d82",
+        "lesson_activity.key": "da8ec995-636c-4285-b70d-d8a6ea938001"
+      }
+    },
+    {
+      "key": "924f477c-3845-4d9c-8e90-d1034cd36cce",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "924f477c-3845-4d9c-8e90-d1034cd36cce",
+        "lesson_activity.key": "355cdc71-4ed0-43f9-b2bf-bc8f1dac2527"
       }
     }
   ],
@@ -1390,6 +1450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unit4-lesson10-weblab-prototype"
+        ],
         "progression": "Lesson 10: Web Lab"
       },
       "bonus": false,
@@ -1404,6 +1467,28 @@
       },
       "level_keys": [
         "unit4-lesson10-weblab-prototype"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 1 Code Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-s2-u5-l1-example1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "cb8c4fa4-278e-4d7b-9da8-e2f75b5e5d82"
+      },
+      "level_keys": [
+        "aif-s2-u5-l1-example1"
       ]
     }
   ],
@@ -1778,6 +1863,18 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "a7cab60d-8a9a-4c26-b0fb-419f9b1f68d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-s2-u5-l1-example1",
+        "script_level.level_keys": [
+          "aif-s2-u5-l1-example1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "cb8c4fa4-278e-4d7b-9da8-e2f75b5e5d82"
       }
     }
   ],

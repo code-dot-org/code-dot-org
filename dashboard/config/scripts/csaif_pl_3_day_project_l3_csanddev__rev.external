@@ -12,9 +12,9 @@ markdown <<MARKDOWN
         <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3> <b>Day 1: Explore, Select, Research</b></h3>
           <ul>
-    <li style="font-size: 14pt;">Explore different Sustainable Development Goals and select one that interests them </li><br>
-    <li style="font-size: 14pt;">Using the <a href = "https://docs.google.com/document/d/140knzapQRCeyvLojN24lOFr9mBo1e-LbQKj8uFrz2qM/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Planning Guide</a>, they plan their idea.</li><br>
-       <li style="font-size: 14pt;">By the end of Day 1, students should have a clear plan for the problem their computer system will solve.</li>
+    <li style="font-size: 14pt;">Explore different Sustainable Development Goals (SDG) and select one.</li><br>
+    <li style="font-size: 14pt;">Use AI Chat to research your selected SDG target.</li><br>
+       <li style="font-size: 14pt;">Complete a Rapid Prototype of the project.</li>
 </ul>
            </div>
     </div>
@@ -25,8 +25,9 @@ markdown <<MARKDOWN
         <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             <h3><b>Day 2: Develop & Refine Ideas to Solve Problem</b></h3>
             <ul>
-    <li style="font-size: 14pt;">Students consider the data flow of their systems.</li><br>
-    <li style="font-size: 14pt;"> Students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.</li>
+    <li style="font-size: 14pt;">Write a problem statement.
+</li><br>
+    <li style="font-size: 14pt;">Begin creating your computer system diagram.</li>
 
    
 </ul>
@@ -39,13 +40,13 @@ markdown <<MARKDOWN
         <div style="flex: 1; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             <h3><b>Day 3: Finalize, Showcase & Reflect </b></h3>
             <ul>
-    <li style="font-size: 14pt;">Students finalize their project, making last improvements.</li><br>
-    <li style="font-size: 14pt;">They showcase their work in a gallery walk or short presentations.</li><br>
-    <li style="font-size: 14pt;">A reflection activity helps them think about their process:</li>
+    <li style="font-size: 14pt;">Finalize your project.</li><br>
+    <li style="font-size: 14pt;">Showcase your work in a gallery walk or short presentations.</li><br>
+    <li style="font-size: 14pt;">Complete a reflection activity on their process:</li>
     <ul>
         <li style="font-size: 14pt;">What went well?</li>
-        <li style="font-size: 14pt;">What challenges did they overcome?</li>
-        <li style="font-size: 14pt;">How did feedback shape their final product?</li>
+        <li style="font-size: 14pt;">What challenges did you overcome?</li>
+        <li style="font-size: 14pt;">How did feedback shape your final product?</li>
     </ul>
 </ul>
         </div>

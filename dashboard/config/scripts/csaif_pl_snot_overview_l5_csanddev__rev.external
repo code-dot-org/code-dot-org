@@ -22,29 +22,28 @@ markdown <<MARKDOWN
 #### The SNOT Strategy provides a structured approach for troubleshooting problems, helping students develop independence and critical thinking skills when faced with challenges.
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 1:Self</b></h3>
   <p style = "font-size:14pt;">
-    Restate the problem and make your best guesses about possible solutions. 
+    <b>Step 1: Self</b> <br><br> Restate the problem and make your best guesses about possible solutions. 
 </p>
 </div>
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 2: Neighbor</b></h3>
   <p style = "font-size:14pt;">
+    <b>Step 2: Neighbor</b> <br><br>
     Talk through the problem with someone to share viewpoints and narrow down possibilities.
 </p>
 </div>
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 3: Online Resources</b></h3>
   <p style = "font-size:14pt;">
+    <b>Step 3: Online Resources</b> <br><br>
     Search message boards, technical manuals, FAQs and other online resources to further narrow down possible solutions.
 </p>
 </div>
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h3><b>Step 4: Technical Expert</b></h3>
   <p style = "font-size:14pt;">
+    <b>Step 4: Technical Expert</b> <br><br>
     Ask a technical or subject-matter expert that can provide guidance.
 
 </p>

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-14 23:47:58 UTC",
+    "serialized_at": "2025-12-16 07:11:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1072,8 +1072,18 @@
       "key": "ff8e58d0-31d8-4b1e-82a4-75df39c5bcbc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Part 1 is designed to help students recognize how digital system failures impact their daily lives, both practically and emotionally, and begin practicing empathy and root cause analysis. Part 2 is designed to give students an introduction to user-centered design by having them put themselves in the shoes of a hypothetical person. Part 3 is designed to give students examples of cybersecurity professionals. It should show students how in their daily digital lives they might assistance from these professionals.",
-        "name": "The Day Everything Broke"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete the formative assessment.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses. Ask them: What do you notice? What do you wonder? Have students discuss with a partner before asking a couple volunteers to share.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If many students focus only on hackers, revisit the earlier definition and ask guiding questions such as: Can a system fail even when no one is attacking it? What other kinds of problems does cybersecurity help prevent?\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\n- If students demonstrate strong understanding, their explanations should note that cybersecurity protects systems and data from being stolen, altered, or disrupted, not just from hackers, and should reference system failures or risks beyond attacks.\n- If students describe cybersecurity only as “blocking hackers,” revisit the vocabulary slide and emphasize that cybersecurity protects systems and data from being stolen, changed, or damaged.\n- If students struggle to justify their reasoning, prompt them to connect their answer to the earlier warm-up examples about system failures and their impacts."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ff8e58d0-31d8-4b1e-82a4-75df39c5bcbc",
@@ -1081,8 +1091,30 @@
       }
     },
     {
-      "key": "b3db27a9-8c51-4efb-80c8-3709525edfd1",
+      "key": "73e01ed6-6bd8-4d2f-bcb5-ec19fce377de",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "73e01ed6-6bd8-4d2f-bcb5-ec19fce377de",
+        "lesson_activity.key": "33bc27cd-7b34-4c6b-9b39-801a09d5bbe0"
+      }
+    },
+    {
+      "key": "65764445-c005-4a86-a9d3-f470f5823911",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Part 1 is designed to help students recognize how digital system failures impact their daily lives, both practically and emotionally, and begin practicing empathy and root cause analysis. Part 2 is designed to give students an introduction to user-centered design by having them put themselves in the shoes of a hypothetical person. Part 3 is designed to give students examples of cybersecurity professionals. It should show students how in their daily digital lives they might assistance from these professionals.",
+        "name": "The Day Everything Broke"
+      },
+      "seeding_key": {
+        "activity_section.key": "65764445-c005-4a86-a9d3-f470f5823911",
+        "lesson_activity.key": "33bc27cd-7b34-4c6b-9b39-801a09d5bbe0"
+      }
+    },
+    {
+      "key": "b3db27a9-8c51-4efb-80c8-3709525edfd1",
+      "position": 4,
       "properties": {
         "description": "Now that we've talked about how frustrating tech failures can be, let's explore what actually goes wrong when systems break and how it affects people.",
         "remarks": true
@@ -1094,7 +1126,7 @@
     },
     {
       "key": "3a22d33d-fa56-4ea4-a2ab-0b83d7c83d9e",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of The Day Everything Broke activity guide.",
         "progression_name": "The Day Everything Broke Activity Guide"
@@ -1106,7 +1138,7 @@
     },
     {
       "key": "c03a972c-c606-4faf-a449-dcc913280f77",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "In this activity, you will follow Jordan, a student whose day goes very, very wrong. You will help figure out what went wrong, how it impacted Jordan, and what type of cybersecurity expert could help.",
         "remarks": true
@@ -1118,7 +1150,7 @@
     },
     {
       "key": "15a832ba-f81a-4840-9995-b0bfc4649e80",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read through the comic with their partner.",
         "tips": [
@@ -1135,7 +1167,7 @@
     },
     {
       "key": "2e90631b-5391-4dbf-8f45-3a7ea61bc051",
-      "position": 6,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -1145,7 +1177,7 @@
     },
     {
       "key": "965633a2-6cae-42ba-8182-3ae6b3a23a33",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** In pairs, have students choose two of the four scenarios to explore in depth. Then have them compare their ideas with another pair who chose one of the same scenarios:\n- Did you choose the same cause or causes?\n- What led you to choose those causes?\n",
         "tips": [
@@ -1162,7 +1194,7 @@
     },
     {
       "key": "643c08cf-1c23-4053-8e52-0f6608cc9bfe",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "You've just put on your detective hat to investigate what might have gone wrong behind the scenes. Now it's time to switch lenses and think about what this was like for the person experiencing the failure.",
         "remarks": true
@@ -1174,7 +1206,7 @@
     },
     {
       "key": "73d81e9b-e56a-4a5e-975a-2630ffa58c47",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students move on to complete Part 2 of their activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In the scenario you chose, what might Jordan think or feel?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal is for students to place themselves in Jordan's shoes to understand how he might be feeling and how he might express that. If students have a hard time answering the question, ask them to think about what emotion he might be feeling. For example: frustrated, angry, happy, confused, etc.\n"
       },
@@ -1185,7 +1217,7 @@
     },
     {
       "key": "366d193c-9cf6-4d72-a1e0-b0032d230c40",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "REMARK\nNow that we've looked at how the failure made Jordan feel, let's think about who could’ve helped. There are experts whose job it is to make sure these kinds of problems don't happen.",
         "remarks": true
@@ -1197,7 +1229,7 @@
     },
     {
       "key": "deb7c7a2-8a78-4e9a-b479-b662cd42ecc3",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students move on to complete Part 3 of their activity guide.",
         "tips": [
@@ -1214,7 +1246,7 @@
     },
     {
       "key": "51da49f7-94cb-4865-9cb5-ceaa8a0c61b3",
-      "position": 12,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1224,7 +1256,7 @@
     },
     {
       "key": "7b8257f7-2b67-4ffa-83ae-fcbd4d346f6f",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "You've each had a chance to investigate what broke, who was affected, and who could fix it. Now let's look for patterns.",
         "remarks": true
@@ -1236,7 +1268,7 @@
     },
     {
       "key": "533160a1-d01a-464d-8b7e-f8480df4ff62",
-      "position": 14,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did any of the failures feel unfair or avoidable?*\n- *Were the causes mostly human mistakes, system design issues, or technology malfunctions?*\n- *Which career professionals would we want on our side today?*",
         "tips": [
@@ -1290,7 +1322,7 @@
       "key": "e2360d16-7366-4ee6-bf64-8bdbd5312c24",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to complete the End of Lesson Survey.",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -3049,11 +3081,11 @@
       "key": "22edaa72-179e-4c13-98a5-23faed756657",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Part 2 of their activity guide. In this section, they read four login scenarios based on their user persona and predict the A'’s risk score and required authentication method for each one. They record their predictions and reasoning, focusing on what an AI system might flag based on patterns—not just what seems risky to them personally.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, check that students are using the user profile context to inform their predictions.  Prompt deeper reasoning by asking:\n- Why do you think the AI would treat this as high risk?\n- What part of this behavior feels normal for your user?\n- What combination of factors are you noticing?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Part 2 of their activity guide. In this section, they read four login scenarios based on their user persona and predict the A'’s risk score and required authentication method for each one. They record their predictions and reasoning, focusing on what an AI system might flag based on patterns—not just what seems risky to them personally. Then, they choose two scenarios and write a general “fraud rule” that an AI could be trained to follow. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, check that students are using the user profile context to inform their predictions.  Prompt deeper reasoning by asking:\n- Why do you think the AI would treat this as high risk?\n- What part of this behavior feels normal for your user?\n- What combination of factors are you noticing?\n\nAs students write their fraud rules, check whether their patterns include more than one factor (e.g., time + location + device). Ask students: \"What behavior is the AI supposed to watch for?\" and  \"Would this rule work for anyone, or is it specific to your user?\" Encourage students to revise their rule if it's too general or only tied to one isolated event.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Some students may struggle with middle-ground cases. Encourage them to justify their predictions, even if they aren't sure.\n If time allows, invite early finishers to compare predictions with another group who had a different persona and ask: \"Would your AI react the same way to this scenario?\""
+            "markdown": "Some students may struggle with middle-ground cases. Encourage them to justify their predictions, even if they aren't sure.\n If time allows, invite early finishers to compare predictions with another group who had a different persona and ask: \"Would your AI react the same way to this scenario?\"\n\nIf students are stuck writing their fraud rule, invite them to revisit one of their four scenarios and ask, \"What would I want the AI to do if this happened again?\" That can help them build a fraud rule based on a specific example instead of abstracting from scratch."
           }
         ]
       },
@@ -3076,7 +3108,7 @@
       "key": "6e579e21-2b8f-4403-bd1d-dd7026f89d21",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 4 and 5.\n- Level 4: Students attach their user’s scenarios and compare their predictions and authentication methods to the AI’s results.\n- Level 5: Students complete a check for understanding\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students compare their predictions to the AI's decisions, ask: \"Why do you think the AI flagged this as high risk?\" and \"What factors do you think mattered most in the AI's decision?\" These questions support the goal of helping students understand how AI systems make real-time, pattern-based security decisions.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 4 and 5.\n- Level 4: Students attach their user’s scenarios and compare their predictions, authentication methods, and fraud rules to the AI’s results.\n- Level 5: Students complete a check for understanding\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students compare their predictions to the AI's decisions, ask: \"Why do you think the AI flagged this as high risk?\" and \"What factors do you think mattered most in the AI's decision?\" These questions support the goal of helping students understand how AI systems make real-time, pattern-based security decisions.",
         "progression_name": "Adaptive Security",
         "tips": [
           {
@@ -3112,27 +3144,8 @@
       }
     },
     {
-      "key": "7a31f56a-be89-45d3-9d72-912df0b4b7b5",
-      "position": 18,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to look for any patterns in their user's four scenarios and create a general \"fraud rule\" in their activity guide that an AI could be trained to follow. This can be a simple if-then statement the AI could follow if it were trained on the user persona and data artifacts that the students examined in Part One\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write their fraud rules, check whether their patterns include more than one factor (e.g., time + location + device). Ask students: \"What behavior is the AI supposed to watch for?\" and  \"Would this rule work for anyone, or is it specific to your user?\" Encourage students to revise their rule if it's too general or only tied to one isolated event.",
-        "duration": "10",
-        "name": "Adaptive Access Controls",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students are stuck, invite them to revisit one of their four scenarios and ask, \"What would I want the AI to do if this happened again?\" That can help them build a fraud rule based on a specific example instead of abstracting from scratch."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7a31f56a-be89-45d3-9d72-912df0b4b7b5",
-        "lesson_activity.key": "2fe39e0f-a004-4f70-b41a-5e62f0c72997"
-      }
-    },
-    {
       "key": "2d0beef8-796a-46a4-a375-437f11aaa13b",
-      "position": 19,
+      "position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -3142,7 +3155,7 @@
     },
     {
       "key": "7140b68b-d4fe-4914-8e09-2718770ecbe4",
-      "position": 20,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite a few students to share their fraud rules and how their user's background or behavior influenced their decisions. Highlight that different users lead to different ideas of what' \"normal\" or \"suspicious.\" Emphasize that AI trained on limited data may misjudge people from different communities, lifestyles, or tech habits.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns did the AI seem to follow when assigning risk?*\n- *How were those patterns similar to or different from the fraud rule you wrote?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal is to help students synthesize what they've learned about how AI detects threats by recognizing patterns in behavior, and how that leads to adaptive authentication decisions. This discussion also gives students a chance to reflect on the relationship between the fraud rule they created and the kinds of reasoning AI systems use. The goal is to deepen understanding of how AI supports security features like fraud detection, anomaly detection, and adaptive access control.\n",
         "tips": [
@@ -5025,6 +5038,28 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson1-level1_2025-v2"
+        ],
+        "lesson.key": "Lesson 1: Introduction to Cybersecurity",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v3",
+        "activity_section.key": "ff8e58d0-31d8-4b1e-82a4-75df39c5bcbc"
+      },
+      "level_keys": [
+        "ai-powered-threats-defenses-lesson1-level1_2025-v2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5047,8 +5082,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 2,
+      "chapter": 4,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5072,7 +5107,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5097,7 +5132,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5122,7 +5157,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5147,7 +5182,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5172,11 +5207,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson2-level5_2025-pilot_v2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5194,7 +5232,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5219,7 +5257,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5244,7 +5282,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5269,7 +5307,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5294,7 +5332,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5319,7 +5357,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5344,7 +5382,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5369,7 +5407,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5394,7 +5432,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5419,7 +5457,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5444,11 +5482,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson4-level4_2025-pilot_v3"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5466,7 +5507,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5491,7 +5532,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5516,7 +5557,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5541,7 +5582,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5566,7 +5607,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5591,7 +5632,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5616,7 +5657,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5641,7 +5682,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5666,7 +5707,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5691,7 +5732,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -5716,7 +5757,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5741,7 +5782,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5766,7 +5807,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5791,7 +5832,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5816,11 +5857,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson8-level2_2025-pilot_v3"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5838,7 +5882,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5863,7 +5907,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5888,7 +5932,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
@@ -5913,7 +5957,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5938,7 +5982,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5963,7 +6007,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5988,11 +6032,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson10-level1_2025-pilot_v3"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6010,7 +6057,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6035,7 +6082,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6060,7 +6107,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6085,7 +6132,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6110,11 +6157,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson11-level1_2025-v2"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -6132,7 +6182,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6157,7 +6207,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6182,7 +6232,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6207,11 +6257,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson12-level2_2025-v3"
+        ],
         "progression": "Checking for Understanding"
       },
       "bonus": false,
@@ -6229,7 +6282,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6254,7 +6307,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6279,7 +6332,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6304,7 +6357,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6329,7 +6382,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6354,7 +6407,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6379,7 +6432,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6415,6 +6468,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-v3",
         "activity_section.key": "e019169f-59a5-444b-a41e-b3c7cad65954"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-powered-threats-defenses-lesson1-level1_2025-v2",
+        "script_level.level_keys": [
+          "ai-powered-threats-defenses-lesson1-level1_2025-v2"
+        ],
+        "lesson.key": "Lesson 1: Introduction to Cybersecurity",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-v3",
+        "activity_section.key": "ff8e58d0-31d8-4b1e-82a4-75df39c5bcbc"
       }
     },
     {
@@ -7543,6 +7608,20 @@
       }
     },
     {
+      "name": "Fraud Detection Investigation",
+      "url": "https://docs.google.com/document/d/1Qvbw8JRyfFlhEYVjhy-IF58Cjk1rqZfB-WlXOORNQs4/edit?usp=sharing",
+      "key": "fraud_detection_investigation_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "fraud_detection_investigation_1"
+      }
+    },
+    {
       "name": "Hackable Human",
       "url": "https://docs.google.com/document/d/1owIfysW2x4L7v-2BMGz1NkkrSwuU3XhrsjyXXyLhKmg/edit?usp=sharing",
       "key": "hackable_human",
@@ -7557,14 +7636,16 @@
     },
     {
       "name": "Introduction to Cybersecurity",
-      "url": "https://docs.google.com/presentation/d/1-Q9ABq6Bjl2T7ePja26FwhsZa0MIydksxhDxcqgKaRw/edit?usp=sharing",
-      "key": "introduction_to_cybersecurity",
+      "url": "https://docs.google.com/presentation/d/1DkMq_Xm98Q97pJudUIuHLCFQILMdJLcPWX1eIW1_-6A/edit?usp=sharing",
+      "key": "introduction_to_cybersecurity_1",
       "properties": {
         "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "introduction_to_cybersecurity"
+        "resource.key": "introduction_to_cybersecurity_1"
       }
     },
     {
@@ -7871,7 +7952,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Cybersecurity",
-        "resource.key": "introduction_to_cybersecurity"
+        "resource.key": "introduction_to_cybersecurity_1"
       }
     },
     {
@@ -8058,6 +8139,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 8: AAA and AI",
         "resource.key": "fraud_detection_investigation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: AAA and AI",
+        "resource.key": "fraud_detection_investigation_1"
       }
     },
     {

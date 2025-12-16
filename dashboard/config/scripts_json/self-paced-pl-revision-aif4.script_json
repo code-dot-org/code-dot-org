@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-12 18:37:31 UTC",
+    "serialized_at": "2025-12-15 16:50:06 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -676,6 +676,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_1B_-rev"
+        ],
         "progression": "Internet Access Advocacy Campaign Project"
       },
       "bonus": false,
@@ -849,31 +852,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif_pl_inter_wrap-up_02_-rev"
-        ],
-        "progression": "Network Security"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_inter_wrap-up_02_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif4",
-        "activity_section.key": "5084a5c1-1d31-46c5-a930-e930e7fcc07d"
-      },
-      "level_keys": [
-        "csaif_pl_inter_wrap-up_02_-rev"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csaif_pl_nets_project_2_-rev"
         ],
         "progression": "Network Security"
@@ -893,11 +871,14 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 8,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_2B_-rev"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -915,9 +896,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
-      "activity_section_position": 9,
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -940,9 +921,31 @@
       ]
     },
     {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_wrap-up"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif4",
+        "activity_section.key": "688f85ad-1e80-480c-905b-c53fe8d3e7b5"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_wrap-up"
+      ]
+    },
+    {
       "chapter": 33,
       "position": 33,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1304,18 +1307,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_inter_wrap-up_02_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_inter_wrap-up_02_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif4",
-        "activity_section.key": "5084a5c1-1d31-46c5-a930-e930e7fcc07d"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csaif_pl_nets_project_2_-rev",
         "script_level.level_keys": [
           "csaif_pl_nets_project_2_-rev"
@@ -1348,6 +1339,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif4",
         "activity_section.key": "5084a5c1-1d31-46c5-a930-e930e7fcc07d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_wrap-up",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_wrap-up"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif4",
+        "activity_section.key": "688f85ad-1e80-480c-905b-c53fe8d3e7b5"
       }
     },
     {

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-10 17:23:32 UTC",
+    "serialized_at": "2025-12-15 18:30:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -151,6 +151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_00-new"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -173,6 +176,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_02-new"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -195,6 +201,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -217,6 +226,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -489,6 +501,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+        ],
         "progression": "Software"
       },
       "bonus": false,
@@ -511,6 +526,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+        ],
         "progression": "Software"
       },
       "bonus": false,
@@ -533,6 +551,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+        ],
         "progression": "Software"
       },
       "bonus": false,
@@ -655,28 +676,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Data in Computer Systems"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl-_datareflect_L3_CSandDev_-rev"
+        "level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev"
         ],
-        "lesson.key": "Hardware and Software",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif3",
-        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
-      },
-      "level_keys": [
-        "csaif-pl-_datareflect_L3_CSandDev_-rev"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 23,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -694,11 +696,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
-      "activity_section_position": 3,
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -716,11 +721,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
-      "activity_section_position": 4,
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -738,9 +746,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 5,
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Data in Computer Systems"
@@ -748,7 +756,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-librarydata-L6-CSandDev_-rev"
+          "computer-systems-lesson8-level2_v3-PL-2025"
         ],
         "lesson.key": "Hardware and Software",
         "lesson_group.key": "",
@@ -756,15 +764,18 @@
         "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
       },
       "level_keys": [
-        "csaif-pl-librarydata-L6-CSandDev_-rev"
+        "computer-systems-lesson8-level2_v3-PL-2025"
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
-      "activity_section_position": 6,
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -782,11 +793,14 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 7,
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -804,11 +818,14 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 8,
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev_-rev"
+        ],
         "progression": "Data in Computer Systems"
       },
       "bonus": false,
@@ -826,11 +843,14 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -848,11 +868,14 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -870,11 +893,14 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -892,11 +918,36 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_)wrap-up"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_)wrap-up"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-systems-rev2"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -1169,18 +1220,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-_datareflect_L3_CSandDev_-rev",
-        "script_level.level_keys": [
-          "csaif-pl-_datareflect_L3_CSandDev_-rev"
-        ],
-        "lesson.key": "Hardware and Software",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif3",
-        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csaif_pl-everyday-data-L2-CSandDev_-rev",
         "script_level.level_keys": [
           "csaif_pl-everyday-data-L2-CSandDev_-rev"
@@ -1217,9 +1256,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-librarydata-L6-CSandDev_-rev",
+        "level.key": "computer-systems-lesson8-level2_v3-PL-2025",
         "script_level.level_keys": [
-          "csaif-pl-librarydata-L6-CSandDev_-rev"
+          "computer-systems-lesson8-level2_v3-PL-2025"
         ],
         "lesson.key": "Hardware and Software",
         "lesson_group.key": "",
@@ -1297,6 +1336,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif3",
         "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_)wrap-up",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_)wrap-up"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e"
       }
     },
     {

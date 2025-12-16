@@ -32,10 +32,15 @@ markdown <<MARKDOWN
 
 #### In the classroom, students practice forming and refining data questions, and explore how stories built from data can inform or persuade. By analyzing real examples, they learn how to structure their own stories in ways that are clear, ethical, and engaging.
 
-> #### **Key Concepts:**
-> - #### **data storytelling** - presenting visualizations and narratives to a specific audience for an expository or persuasive purpose
-> - #### **expository data story** - tells a story about a person, place, thing, or event using data
-> - #### **persuasive data story** - attempts to convince the audience of a stance based on evidence from data and visualizations
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data Storytelling</strong> presenting visualizations and narratives to a specific audience for an expository or persuasive purpose.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Expository Data Story </strong> tells a story about a person, place, thing, or event using data.</p>
+
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Persuasive Data Story </strong> attempts to convince the audience of a stance based on evidence from data and visualizations.</p>
+
+</div>
 
 ## What's Next?
 ####Let’s take a look at the building effective data questions.

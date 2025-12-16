@@ -28,15 +28,6 @@ markdown <<MARKDOWN
 #### When students begin learning about data science, they start by recognizing data in everyday situations. From there, they learn how to read and interpret real datasets, ask questions, and make decisions based on what they find. These early experiences help them build a foundation for thinking critically with data.
 
 
-
-
-<div style="clear:both;"></div>
-<br><br>
-
-> #### **Key Concepts:** 
-> - #### **data** - any form of organized information, such as words, numbers, pictures, etc.
-> - #### **data science** - making meaning from data
-
 ## Up Next 
 
 #### Let's explore an activity from **Lesson 2** where students analyze a spreadsheet using the **Three Reads** routine to explore a dataset on pizza choices, then use it to answer questions for planning a school event.
