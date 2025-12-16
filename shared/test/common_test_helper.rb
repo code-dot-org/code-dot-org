@@ -18,6 +18,7 @@ require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
 require 'cdo/ci_utils'
+require 'database_cleaner-sequel'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
@@ -103,8 +104,8 @@ module SetupTest
       DASHBOARD_DB.extension(:connection_validator)
       DASHBOARD_DB.pool.connection_validation_timeout = -1
 
-      PEGASUS_DB.transaction(rollback: :always) do
-        DASHBOARD_DB.transaction(rollback: :always) do
+      DatabaseCleaner[:sequel, db: DASHBOARD_DB].cleaning do
+        DatabaseCleaner[:sequel, db: PEGASUS_DB].cleaning do
           # Use Minitest#stub here even though we generally prefer Mocha#stubs.
           # Mocha keeps its stubbing logic simple in an attempt to avoid
           # overcomplicating tests, but in this case we specifically do need a
