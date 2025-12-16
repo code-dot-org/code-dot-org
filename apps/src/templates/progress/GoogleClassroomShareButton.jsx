@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 // used to give each instance a unique id to use for callback names
@@ -28,10 +27,6 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
 
   constructor(props) {
     super(props);
-
-    this.onShareStart = this.onShareStart.bind(this);
-    this.onShareComplete = this.onShareComplete.bind(this);
-    this.logEvent = this.logEvent.bind(this);
   }
 
   instanceId = componentCount++;
@@ -43,44 +38,12 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   componentDidMount() {
     this.renderButton();
     this.setState({buttonMounted: true});
-
-    // Use unique callback names since we're adding to the global namespace
-    window[this.onShareStartName()] = this.onShareStart;
-    window[this.onShareCompleteName()] = this.onShareComplete;
   }
 
   componentDidUpdate(prevProps) {
     if (!_.isEqual(this.props, prevProps)) {
       this.renderButton();
     }
-  }
-
-  onShareStartName() {
-    return 'onShareStart_' + this.instanceId;
-  }
-
-  onShareCompleteName() {
-    return 'onShareComplete_' + this.instanceId;
-  }
-
-  onShareStart() {
-    this.logEvent('share_started');
-  }
-
-  onShareComplete() {
-    this.logEvent('share_completed');
-  }
-
-  logEvent(event) {
-    firehoseClient.putRecord(
-      {
-        study: 'google-classroom-share-button',
-        study_group: 'v0',
-        event: event,
-        data_json: this.props.analyticsData,
-      },
-      {includeUserId: true}
-    );
   }
 
   // https://developers.google.com/classroom/guides/sharebutton

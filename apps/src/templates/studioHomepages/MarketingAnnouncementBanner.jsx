@@ -3,7 +3,6 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import color from '../../util/color';
@@ -61,23 +60,6 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     const bannerKey = getLocalStorageBannerKey();
     trySetLocalStorage(bannerKey, false);
     setDisplayBanner(false);
-    logEvent('close_button_clicked');
-  };
-
-  const logEvent = eventLabel => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_signedin_homepage',
-        study_group: 'homepage_banner',
-        event: eventLabel,
-        data_json: JSON.stringify({
-          banner_title: bannerRef.current.querySelector(
-            '.two-column-action-block--sub-heading'
-          ).innerText,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   // Set displayBanner value if the function to get the storage banner key
@@ -98,7 +80,6 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       : 'marketing-announcement-banner-btn',
     url: announcement.buttonUrl,
     text: announcement.buttonText,
-    onClick: () => logEvent('cta_button_clicked'),
   };
 
   return (

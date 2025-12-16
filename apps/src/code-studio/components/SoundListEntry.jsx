@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
-
 import * as color from '../../util/color';
 
 /**
@@ -45,15 +43,6 @@ class SoundListEntry extends React.Component {
       this.setState({isPlaying: false});
     } else {
       this.setState({isPlaying: true});
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog-2',
-          study_group: 'library-tab',
-          event: 'play-library-sound',
-          data_json: this.props.soundMetadata.sourceUrl,
-        },
-        {includeUserId: true}
-      );
       this.props.soundsRegistry.unmuteURLs();
       this.props.soundsRegistry.playURL(this.props.soundMetadata.sourceUrl, {
         onEnded: () => {
