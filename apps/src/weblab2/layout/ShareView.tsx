@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import {LinkButton, Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
@@ -17,10 +17,11 @@ const ShareView: React.FunctionComponent = () => {
     projectManager?.redirectToRemix();
   };
 
-  const onReportAbuse = () => {
-    console.log('Report abuse');
-    window.open('/report_abuse', '_blank');
-  };
+  const channelId = projectManager?.getChannelId();
+
+  const reportAbuseUrl = channelId
+    ? `/report_abuse?channelId=${channelId}`
+    : '/report_abuse';
 
   return (
     <div className={moduleStyles.shareContainer}>
@@ -41,13 +42,14 @@ const ShareView: React.FunctionComponent = () => {
           iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
           onClick={onRemix}
         />
-        <Button
+        <LinkButton
           text="Report abuse"
           type="tertiary"
           color="black"
           size="xs"
           iconLeft={{iconStyle: 'regular', iconName: 'message-exclamation'}}
-          onClick={onReportAbuse}
+          href={reportAbuseUrl}
+          target="_blank"
         />
       </div>
       <div className={moduleStyles.previewContainer}>

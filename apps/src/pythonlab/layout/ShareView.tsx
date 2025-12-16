@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import {LinkButton, Button} from '@code-dot-org/component-library/button';
 import Toggle from '@code-dot-org/component-library/toggle';
 import React, {useEffect, useState} from 'react';
 
@@ -29,9 +29,11 @@ const ShareView: React.FunctionComponent = () => {
     projectManager?.redirectToRemix();
   };
 
-  const onReportAbuse = () => {
-    console.log('Report abuse');
-  };
+  const channelId = projectManager?.getChannelId();
+
+  const reportAbuseUrl = channelId
+    ? `/report_abuse?channelId=${channelId}`
+    : '/report_abuse';
 
   const [consoleVisible, setConsoleVisible] = useState(false);
 
@@ -89,13 +91,14 @@ const ShareView: React.FunctionComponent = () => {
           iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
           onClick={onRemix}
         />
-        <Button
+        <LinkButton
           text="Report abuse"
           type="tertiary"
           color="black"
           size="xs"
-          iconLeft={{iconStyle: 'regular', iconName: ''}}
-          onClick={onReportAbuse}
+          iconLeft={{iconStyle: 'regular', iconName: 'message-exclamation'}}
+          href={reportAbuseUrl}
+          target="_blank"
         />
       </div>
       <div
