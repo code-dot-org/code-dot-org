@@ -102,6 +102,7 @@ group :development, :test do
   gem 'better_errors', '>= 2.7.0'
   gem 'brakeman'
   gem 'database_cleaner-active_record', '~> 2.1.0'
+  gem 'database_cleaner-sequel', '~> 2.0.2'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof', '>= 1.7.0'
   gem 'vcr', require: false
