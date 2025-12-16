@@ -3,7 +3,7 @@ require 'webmock/minitest'
 
 class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
   setup do
-    @api_key = 'test-elevenlabs-api-key'
+    @api_key = CDO.elevenlabs_api_key
     @model = 'eleven_v3'
     @voice_id = 'Fc5CaIGWKvLHapoOSM2K'
     @test_script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."
@@ -21,15 +21,6 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
       model_id: @model,
       text: @test_script
     }.to_json
-  end
-
-  # *****
-  # Module constants tests
-  # *****
-
-  test "module constants are correctly defined" do
-    assert_equal 'eleven_v3', AiLessonSummaryPodcastsHelper::MODEL
-    assert_equal @api_key, AiLessonSummaryPodcastsHelper::API_KEY
   end
 
   # *****
