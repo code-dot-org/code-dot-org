@@ -179,18 +179,20 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
-  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do
+  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     AiRubricMetrics.log_metric(metric_name: :RateLimit)
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'rate-limit')
   end
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do |job, error|
     AiRubricMetrics.log_metric(metric_name: :TimeoutError)
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'timeout-error')
   end
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500.
-  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |_job, error|
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = 'none'
     if error.message.downcase.include?('openai')
       agent = 'openai'
@@ -198,11 +200,12 @@ class EvaluateRubricJob < ApplicationJob
       agent = 'bedrock'
     end
     AiRubricMetrics.log_metric(metric_name: :ServiceUnavailable, agent: agent)
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'service-unavailable', agent: agent)
   end
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out.
-  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |_job, error|
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
     agent = 'none'
     if error.message.downcase.include?('openai')
       agent = 'openai'
@@ -210,6 +213,7 @@ class EvaluateRubricJob < ApplicationJob
       agent = 'bedrock'
     end
     AiRubricMetrics.log_metric(metric_name: :GatewayTimeout, agent: agent)
+    AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
   end
 
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
