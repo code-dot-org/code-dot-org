@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Final Project Overview
+# Begin with the End in Mind -Final Project Overview
 
 ## Multi-page web application
 #### In the final project, students take on the role of web designers to create a multi-page digital magazine for a fictional user or community.
@@ -20,8 +20,7 @@ markdown <<MARKDOWN
 
 #### In this example, the student designed a web app to showcase local events and activities in their town.
 
-
-<img src="https://images.code.org/09e512de4a9aabe1d639227212addd72-image-1760984659003.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://images.code.org/0fa53a5cbf5480e4c10f9f2bc406506f-image-1765910932701.png" alt="Sample student project of a website giving informaiton about events happening locally in their community" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
 ---
 

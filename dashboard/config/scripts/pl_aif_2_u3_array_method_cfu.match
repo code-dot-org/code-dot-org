@@ -1,18 +1,16 @@
 name 'pl-aif-2-U3-array-method-CFU'
-title 'Terminology Matching'
+title 'Array Method Matching'
 
 height '75'
 
-question 'The code that gives a web page its structure.'
-answer 'HTML'
-question 'The code that gives a web page its style'
-answer 'CSS'
-question 'The idea that design should start with understanding the needs of the end-user.'
-answer 'Human Centered Design'
-question 'The overall experience a person has when interacting with a product, system, or service.'
-answer 'User Experience'
-question 'An interactive program that runs in a web browser.'
-answer 'Web App'
+question 'Adds an item to the end of the array.'
+answer '**push()**'
+question 'Adds an item to the front of an array.'
+answer '**unshift()**'
+question 'Removes the last item from the array.'
+answer '**pop()**'
+question 'Removes the first item from an array.'
+answer '**shift()**'
 
 
 markdown <<MARKDOWN

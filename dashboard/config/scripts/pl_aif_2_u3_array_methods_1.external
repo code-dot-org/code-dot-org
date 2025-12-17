@@ -64,13 +64,15 @@ Think: Shift everything up by removing this first item.
     </div>
 
 ---
+
 ## Teaching Array Methods 
 
 #### In lesson 3, these array methods are not explicitly taught to the students. Instead, they explore sample code and work with AI tutor to understand these four methods. 
 
-#### If your class needs a more hands-on way to understand these methods, try the **Push-Pop Line Game** from the [teacher resources].
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If your class needs a more hands-on way to understand these methods, try the <b>PushPush-Pop Line Game</b> from the <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>[teacher resources]</a>.
+</p>
 
 ## Next up
-
 #### Explore the code in the next level to see how these array methods work in JavaScript. 
 MARKDOWN

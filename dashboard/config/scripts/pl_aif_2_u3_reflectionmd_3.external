@@ -3,61 +3,50 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# From Arrays to Structured Data 
-#### Now that you’ve explored how arrays can store lists of values in JavaScript, we can take things a step further. Real apps rarely keep track of just one list.
+# Social Media Scheduler (Lesson Overview)
 
-#### A music app, for example, doesn’t just store song titles. It also needs artists, song lengths, whether a song is a favorite, and more. To manage this kind of information, we introduce schemas:
+#### In the upcoming activity from **Lesson 3**, students will choose from three small-business scenarios and take on the role of a web designer. Their task will be to update a social media scheduler for their business using core JavaScript array methods.
+
+#### Students will choose one of the professions below and update their scheduler based on unique events in the scenario. Throughout the activity, they will use the array methods `pop()`, `push()`, `shift()`, and `unshift()` to modify the schedule as new posts are added or old posts are removed.
+
+<img src="https://images.code.org/85c308f969450b64115d728268b084cd-image-1765898566109.png" alt="choice level preview- hairdresser, baker, and gamer" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Schema-</strong> a plan or blueprint for our data
-</p>
+#### Students work through a series of levels, each requiring them to update parts of the website based on their business scenario. In this professional learning module, you will practice only the first level so you can experience the student perspective before teaching it.
 
-</div>
+--- 
 
-#### Together, these help students move from “I can store a list” to “I can organize real-world data for a web app.”
----
-## What is a Schema?
+## Choice Levels 
+#### This activity is a **choice level**, a feature used throughout the curriculum to support differentiation. Choice levels allow students to select from multiple scenarios or pathways based on their interests and skill levels.
 
-#### A **schema** is a simple description of what data your app will store and how it will be organized.
+#### Students are only required to complete one of the available options. This flexibility helps maintain engagement while also giving teachers room to support learners at different readiness levels.
 
-#### You can think of it as a blueprint or a table header:
 
-- #### What pieces of information do we need?
-
-- #### What will we call each piece?
-
-- #### What kind of value is it (number, string, boolean, etc.)?
 
 <br>
 
-#### **Example:**
-
-<div style="float:left; margin: 20px 40px 40px 20px; text-align:center;">
+<div style="float:right; margin: 0px 40px 40px 0px;">
   <img 
-    src="https://images.code.org/72c84be37ebc52609cc513d05469c84b-image-1765392323102.png"
-    alt="phone open to a song playing on spotify app"
-    width="350px"
+    src="https://images.code.org/f146eafffe640c645f33bf898000e269-image-1765900717899.png"
+    alt="lightbulb icon"
+    width="225px"
     style="border-radius:10px;"
   >
-  <div style="font-size: 12px; color: #555; margin-top: 4px;">
-    Ty Pendlebury/CNET
   </div>
-</div>
 
 
+## Reflection
 
-#### For a music app, a schema for a song might look like this:
+#### In the next level, you will notice a new file type: `reflection.md.`
 
-- #### **title** – the name of the song (string)
+#### These files give students space to reflect on their learning. 
 
-- #### **artist** – who performs the song (string)
+#### Reflection supports deeper understanding by prompting students to synthesize their thinking, describe their decisions, and make connections between the activity and the broader concepts.
 
-- #### **lengthInSeconds** – how long the song is (number)
+<div style="clear:both;"></div>
 
-- #### **isFavorite** – whether the user has marked it as a favorite (boolean)
+## PAIR Framework: Prompt – Analyze – Integrate – Reflect
 
-#### This schema doesn’t write any code yet. It just gives a shared language: “Each song in our app has these four pieces of data.”
-
+#### As you work, remember to use the PAIR framework. The Reflect step is especially important in AI-supported learning. Use the `reflection.md` file to complete the R – Reflect portion of the process. Encourage students to do the same during classroom instruction.
 
 MARKDOWN

@@ -25,30 +25,7 @@ markdown <<MARKDOWN
   </ul>
 </div>
 
----
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-<h2>Introducing AI Chat Lab</h2>
-
-<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
-
-<p style = "font-size:14pt;">Code.org has created <strong>AI Chat Lab</strong>, a safe and student-friendly chatbot built directly into the curriculum. This allows students to explore generative AI in an authentic and secure way without leaving the platform.</p>
-
-<p style = "font-size:14pt;">AI Chat Lab is designed specifically for education, so we’ve added guardrails to keep the experience safe and appropriate.</p>
-
-<ul style = "font-size:14pt;">
-	<li>The chatbot supports learning in a guided, structured environment that encourages students to think critically as they work through problems.</li><br>
-    <li>Content is monitored to ensure it remains appropriate and productive, making AI Chat Lab a safe space for exploration and discovery.</li>
-</ul>
-
-<p style = "font-size:14pt;">You'll get a chance to try out AI Chat Lab on the next level.</p>
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ Want to know more about how AI Chat Lab works? Check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank" rel="noopener noreferrer"> FAQ Support Article</a>.
-</p>
-
-</div>
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">  ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/3/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">  ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
 

@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-12-15T15:24:56.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "display_name": "Sweet Bytes Bakery",
     "project_template_level_name": "building-data-driven-systems-lesson3-templateB-test-2025",
-    "long_instructions": "You are the owner of **Sweet Bytes Bakery**. To keep your hungry customers updated on what's fresh out of the oven, you use a Social Media Scheduler.\r\n\r\nBased on the updates that you receive over the next four levels, use **PAIR Programming with AI** to  help manage your postings:\r\n\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n\r\n* **Integrate:** Implement and test in the display.\r\n\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\n---\r\n\r\n### 🍩 Surprise Pop-up!\r\n**Status:** New Event Added\r\n\r\n**Details:** You decided to host a \"Donut Pop-up\" this Friday to celebrate the weekend!\r\n\r\n**Action Required:** Add this special event to the end of your schedule.\r\n\r\n* **Title:** \"Donut Friday\"\r\n* **Content:** \"Hot glazed donuts until sold out!\"\r\n* **Image:** \"donut.jpg\"",
+    "long_instructions": "You are the owner of **Sweet Bytes Bakery**. To keep your hungry customers updated on what's fresh out of the oven, you use a Social Media Scheduler.\r\n\r\nBased on the updates that you receive over the next four levels, use **PAIR Programming with AI** to  help manage your postings:\r\n\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n\r\n* **Integrate:** Implement and test in the display.\r\n\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\n---\r\n\r\n### 🍩 Surprise Pop-up!\r\n**Status:** New Event Added\r\n\r\n**Details:** You decided to host a \"Donut Pop-up\" this Friday to celebrate the weekend!\r\n\r\n**Action Required:** Add this special event to the end of your schedule by writing a helper function that will push() the event to the end of the schedule.\r\n\r\n* **Title:** \"Donut Friday\"\r\n* **Content:** \"Hot glazed donuts until sold out!\"\r\n* **Image:** \"donut.jpg\"\r\n\r\n---\r\n\r\n::: details [**🔎 Hint**]\r\n- Helper functions will need to be added to the `JS` file to `push()` each element of the new event (title, content, and image.)\r\n\r\n- The `HTML` file will need to be updated to include new elements to hold the new event. \r\n\r\n- Ask AI to help you with each one separately. \r\n:::\r\n",
     "bubble_choice_description": "Surprise Pop-up! You decided to host a \"Donut Pop-up\" this Friday to celebrate the weekend.",
     "thumbnail_url": "https://images.code.org/3fe52237c8ffbc1cbad46d9f78e09ffa-baker.jpg",
     "submittable": "false",
@@ -21,17 +22,16 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "level_system_prompt": "In this level, students will be using the PAIR Programming with AI framework--\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n* **Integrate:** Implement and test in the display.\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\nTherefore, you should propose two different methods to create the code that the user prompts you for so that they can compare, contrast, and test."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-15T15:24:56.093+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level4b-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level4b-test-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-15T15:24:56.093+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level4b-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level4b-test-2025\"},{\"changed_at\":\"2025-12-16 16:19:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-16 16:39:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-16 16:40:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-12-16 16:43:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

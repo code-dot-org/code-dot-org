@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="code.org AI robot character" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="code.org AI robot character" style="border-radius:10px; float: right; ; height: 100px; margin: 20px 20px 0px 10px; ">
 
 # Working with AI
 

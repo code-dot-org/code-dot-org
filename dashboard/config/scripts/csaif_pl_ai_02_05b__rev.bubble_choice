@@ -1,6 +1,6 @@
 name 'csaif_pl_ai_02_05b_-rev'
 display_name 'Minimal Context Given'
-description 'AI predictions get better when given more context. In this level you will test that idea by providing AI different types of prompts—starting with no example, then adding one, and finally, adding multiple examples. Try to notice how the responses change at each level.
+description 'AI predictions get better when given more context. In this level you will test that idea by providing AI with different types of prompts—starting with no example, then adding one, and finally, adding multiple examples. Try to notice how the responses change at each level.
 
 Choose one career to explore how providing minimal context affects AI responses.'
 
@@ -8,4 +8,5 @@ sublevels
 level 'PL-problem-solving-with-ai-lesson3-level1a_-rev'
 level 'PL-problem-solving-with-ai-lesson3-level1b_-rev'
 level 'PL-problem-solving-with-ai-lesson3-level1c_-rev'
+
 uses_lab2

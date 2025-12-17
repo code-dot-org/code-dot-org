@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "## Processing Library Data\n\nIn this activity from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/3/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8</a>, you’ll step into the shoes of a librarian who uses computational thinking to quickly analyze a large book dataset.\n\nYou'll work with a \n<a href=\"https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?gid=1933359472#gid=1933359472\" target=\"blank\" rel=\"noopener noreferrer\">Library Books Dataset</a> to uncover patterns and make data-driven decisions, just like a computer system would.",
+        "text": "## Processing Library Data\n\nIn this activity from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8</a>, you’ll step into the shoes of a librarian who uses computational thinking to quickly analyze a large book dataset.\n\nYou'll work with a \n<a href=\"https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?gid=1933359472#gid=1933359472\" target=\"blank\" rel=\"noopener noreferrer\">Library Books Dataset</a> to uncover patterns and make data-driven decisions, just like a computer system would.",
         "imageUrl": "https://images.code.org/4072d52c0063ca4b76c11d6ed962a2ba-Screenshot 2025-12-15 at 1.21.23 PM.png",
         "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
         "layout": "text-top-center",
@@ -48,6 +48,6 @@
     ],
     "name_suffix": "_-rev"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:22.936+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-data-library-panels-L5-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-data-library-panels-L5-CSandDev_2025\"},{\"changed_at\":\"2025-12-15 18:28:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:22.936+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-data-library-panels-L5-CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-data-library-panels-L5-CSandDev_2025\"},{\"changed_at\":\"2025-12-15 18:28:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 20:54:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

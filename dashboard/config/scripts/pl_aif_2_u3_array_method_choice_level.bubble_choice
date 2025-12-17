@@ -1,7 +1,6 @@
 name 'pl-aif-2-U3-array-method-choice-level'
-display_name 'Social Media Scheduler, Part 1'
-description 'Choose one of the professions below and assist with updating their social media scheduler based on unique events that occur. Note: choose the same profession throughout the level sequence. The code you create will carry forward as you progress'
-
+display_name 'Social Media Scheduler'
+description '#### Choose one of the professions below and assist with updating their social media scheduler based on unique events that occur.'
 sublevels
 level 'pl-aif-2-U3-array-method-choice-A'
 level 'pl-aif-2-U3-array-method-choice-B'

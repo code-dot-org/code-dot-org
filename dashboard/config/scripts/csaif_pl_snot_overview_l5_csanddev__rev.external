@@ -5,19 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # The SNOT Troubleshooting Strategy
 
-
-<img src="https://images.code.org/52df44bc304a4f077d318253d2b49bdd-image-1742233885762.png" alt="laptop with screwdiver symbolizing troubleshooting" style="border-radius:10px; float: right; ; height: 100px; margin: 20px 20px 0px 10px; ">
-
-## Troubleshooting
-
-#### Troubleshooting is a form of problem-solving that involves using a logical and systematic search for the source of a problem.
-
-
-<div style="clear:both;"></div>
-
----
-
-## Steps for SNOT
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Troubleshooting</strong> is a form of problem-solving that involves using a logical and systematic search for the source of a problem.</p>
+</div>
 
 #### The SNOT Strategy provides a structured approach for troubleshooting problems, helping students develop independence and critical thinking skills when faced with challenges.
 
@@ -49,19 +39,11 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/3/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
-
-
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Having a clear troubleshooting strategy like SNOT encourages students to become problem-solvers instead of immediately seeking help. It builds resilience, promotes collaboration, and teaches them how to find and evaluate reliable resources—an essential skill for coding, data science, and beyond.    
 </p>
 </div>
-
-
 
 
 ## Let's try a troubleshooting activity

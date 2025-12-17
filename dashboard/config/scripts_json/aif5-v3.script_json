@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 07:34:35 UTC",
+    "serialized_at": "2025-12-17 03:59:40 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5072,6 +5072,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson1-level1_2025-v2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5394,6 +5397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-powered-threats-defenses-lesson3-level4_2025-v2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7386,15 +7392,16 @@
     },
     {
       "name": "Access Control Scenario Cards",
-      "url": "https://docs.google.com/presentation/d/15LGd19V5t8D7AqQbaumUrqOcAa4IJOZr1n6Q0Wwi0tg/edit?usp=sharing",
-      "key": "access_control_scenario_cards",
+      "url": "https://docs.google.com/presentation/d/1RjZcXpwEtnKeVmfLhuRJMyIu7FDdFrSzi7bbrLmMj7E/edit?usp=sharing",
+      "key": "access_control_scenario_cards_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "access_control_scenario_cards"
+        "resource.key": "access_control_scenario_cards_1"
       }
     },
     {
@@ -8146,7 +8153,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Authentication, Authorization, and Accounting",
-        "resource.key": "access_control_scenario_cards"
+        "resource.key": "access_control_scenario_cards_1"
       }
     },
     {

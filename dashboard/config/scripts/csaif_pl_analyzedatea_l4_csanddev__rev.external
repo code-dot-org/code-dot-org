@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Validating and Analyzing Data
 
-#### Before working with data, it's good practice to validate it.
+#### Before working with data, it's important to validate it. Data that hasn’t been checked can contain errors that lead to wrong conclusions.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Validating Data</strong> means to check for misleading or fabricated data (e.g. duplicate entries, mismatched authors, or impossible dates).</p>
 </div>
 
-#### Analyzing data is a crucial step in making sense of information and drawing meaningful insights. Computers use various techniques to organize and interpret data efficiently. 
+#### Validating data ensures you’re working with accurate information. Once the data is trustworthy, the next step is to analyze it. Analyzing data helps us recognize patterns, answer questions, and draw meaningful insights. Computers use different techniques to organize and interpret data efficiently.
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
 <p style = "font-size:14pt;"><strong>Ways to Analyze Data:</strong></p>

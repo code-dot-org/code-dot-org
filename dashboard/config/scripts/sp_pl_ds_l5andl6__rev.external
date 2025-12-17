@@ -3,9 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Data Questions and Stories
-
-## Effective Data Questions
+# Effective Data Questions
 
 <img src="https://images.code.org/f37f3e02d208df56ab9ee693170e03e4-image-1724342677390.png" alt="judicial scale icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
@@ -13,37 +11,50 @@ markdown <<MARKDOWN
 
 #### But crafting strong questions isn’t just a technical skill—it also involves thinking about ethics. For example, a question might be measurable and clear, but if it invades privacy or makes assumptions about certain groups, it may not be appropriate to ask. 
 
-<div style="clear:both;"></div>
+#### In <a href='https://studio.code.org/s/aif6-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5 plan</a>, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
+
+## RSAIR Criteria 
+<br>
+<table border="0" style="width: 100%;">
+    <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/0a3eb5a1b4c4cf6d280431c9595173ab-image-1731084728105.png" alt="check mark icon" width="75%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Relevant</b> </p><p style= "font-size:14pt">
+        Make sure your question <b>matches what the data is about</b> and <b>addresses something useful.</b>
+        </p></td>
+    </tr>
+    <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/cdf51217adeabfbdd5aadc0f3393ac9a-image-1731084397828.png" alt="target icon" width="75%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Specific</b> </p><p style= "font-size:14pt">
+        Your questions should be <b>clear and to the point</b> pinpointing exaclty what you want to find out.
+        </p></td>
+    </tr>
+        <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/32a1961b596263b05b84d2079f843bfa-image-1731085078361.png" alt="clapperboard icon" width="75%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Actionable</b> </p><p style= "font-size:14pt">
+        The answer to your question should <b>lead to actions or decisions</b> that can make things better or provide new insights. 
+        </p></td>
+    </tr>
+            <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/2f44723c96786dbbbbbc8ce0ef81841e-image-1731092742839.png" alt="magnifying glass icon" width="75%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Investigative</b> </p><p style= "font-size:14pt">
+        Your question should be <b>framed in a way that lets you use tools, graphs, or calculations</b> to figure out the answer. 
+        </p></td>
+    </tr>
+                <tr>
+        <td style="width: 20%;"><img src="https://images.code.org/478f278a7577ee301ce75920dfb8c5e3-image-1731093078697.png" alt="shaking hands icon" width="75%"></td>
+        <td style="width: 80%;"><p style = "font-size:18pt" ><b>Respectful</b> </p><p style= "font-size:14pt">
+        Your question should <b>respect people's privacy and feelings</b>. You should avoid asking anything that could make someone uncomfortable.
+        </p></td>
+    </tr>
+
+</table>
+
 <br>
 
-## Data Storytelling
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<img src="https://images.code.org/009ab39825563cff628bf976699c3e10-image-1724342741218.png" alt="scale icon" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
-
-#### Once we have good questions, the next step is communicating what we find. A data story combines visuals (like charts or graphs) with words to explain something in a way that others can understand. 
-
-#### Some stories are **expository** —describing trends or telling what the data shows. Others are **persuasive**, aiming to convince the audience to take a stance or support an idea using evidence from data.
-
-<div style="clear:both;"></div>
-<br>
-
----
-## Students and Data Stories
-
-#### In the classroom, students practice forming and refining data questions, and explore how stories built from data can inform or persuade. By analyzing real examples, they learn how to structure their own stories in ways that are clear, ethical, and engaging.
-
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data Storytelling</strong> presenting visualizations and narratives to a specific audience for an expository or persuasive purpose.</p>
-
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Expository Data Story </strong> tells a story about a person, place, thing, or event using data.</p>
-
-
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Persuasive Data Story </strong> attempts to convince the audience of a stance based on evidence from data and visualizations.</p>
-
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Use the criteria to guide your students' questions about a dataset, ensuring they are clear, directly connected to the available data, answerable, and respectful. This approach will help them craft strong data questions that lead to meaningful and responsible insights.
+</p>
 </div>
-
-## What's Next?
-####Let’s take a look at the building effective data questions.
-
 
 MARKDOWN

@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 > #### **Reflect:** Look at the pizza party in this picture: Can you identify where data might be hiding?  How do these everyday details turn into data that tells a story?
 
-<img src="https://images.code.org/7b4efe41391189f72375b8f15ba9a7e6-image-1724252501466.png" alt="design process graph of the cycle" width="350px" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://images.code.org/7b4efe41391189f72375b8f15ba9a7e6-image-1724252501466.png" alt="design process graph of the cycle" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
 
 <br>
 
@@ -23,14 +23,9 @@ markdown <<MARKDOWN
 - #### Types of pizzas
 - #### Set at a school
 
-
-<br>
-
 #### There might have been data you chose to ignore, like: 
 - #### Number of post-it notes 
 - #### Number of blue shirts
-
-<br>
 
 #### You may have come to the conclusion that there is a pizza party at a school celebrating something. 
 
