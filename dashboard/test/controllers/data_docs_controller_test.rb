@@ -3,6 +3,8 @@ require 'test_helper'
 class DataDocsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  self.use_transactional_test_case = true
+
   setup_all do
     @levelbuilder = create(:levelbuilder)
 
