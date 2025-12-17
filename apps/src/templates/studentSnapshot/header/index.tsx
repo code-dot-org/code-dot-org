@@ -1,18 +1,18 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import React, {useState} from 'react';
+import React from 'react';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {Student} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import LessonSelector, {
   LessonOption,
 } from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 import styles from './header.module.scss';
-
-type StudentSortKey = 'lastName' | 'firstName';
 
 interface HeaderProps {
   lessons: LessonOption[];
@@ -33,9 +33,6 @@ const Header: React.FC<HeaderProps> = ({
   setSelectedStudentId,
   hasUnnumberedLessons = false,
 }) => {
-  const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
-    useState<StudentSortKey>('lastName');
-
   const selectedLesson =
     lessons?.find(lesson => lesson.id === selectedLessonId) || null;
 
@@ -54,11 +51,6 @@ const Header: React.FC<HeaderProps> = ({
         ? lessons[currentLessonIndex + 1]
         : null;
   }
-
-  const showStudentsByOptions = [
-    {value: 'lastName', text: 'Last Name'},
-    {value: 'firstName', text: 'First Name'},
-  ];
 
   const handlePreviousLesson = () => {
     if (previousLesson) {
@@ -80,23 +72,17 @@ const Header: React.FC<HeaderProps> = ({
     alert('Next student clicked!');
   };
 
-  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+  const {selectedStudents, selectedSectionId, selectedSectionUnitName} =
+    useAppSelector(state => state.teacherSections);
+  const isSortedByFamilyName = useAppSelector(
+    state => state.currentUser.isSortedByFamilyName
+  );
 
   const sortedStudents = React.useMemo(() => {
-    const studentsCopy = [...selectedStudents];
-
-    if (selectedShowStudentsBy === 'firstName') {
-      return studentsCopy.sort((a, b) => a.name.localeCompare(b.name));
-    }
-
-    // Default to sorting by last name; if familyName is not present, fall
-    // back to the student's display name.
-    return studentsCopy.sort((a, b) => {
-      const aLast = a.familyName || a.name;
-      const bLast = b.familyName || b.name;
-      return aLast.localeCompare(bLast);
-    });
-  }, [selectedStudents, selectedShowStudentsBy]);
+    return isSortedByFamilyName
+      ? [...selectedStudents].sort(stringKeyComparator(['familyName', 'name']))
+      : [...selectedStudents].sort(stringKeyComparator(['name', 'familyName']));
+  }, [selectedStudents, isSortedByFamilyName]);
 
   React.useEffect(() => {
     if (sortedStudents.length > 0 && selectedStudent === undefined) {
@@ -153,18 +139,10 @@ const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div className={styles.headerColumn}>
-        <SimpleDropdown
-          labelText="Show students by"
-          name="showStudentsBy"
-          items={showStudentsByOptions}
-          selectedValue={selectedShowStudentsBy}
-          onChange={event => {
-            const {value} = event.target;
-            if (value === 'lastName' || value === 'firstName') {
-              setSelectedShowStudentsBy(value);
-            }
-          }}
-          placeholder="Select an option"
+        <SortByNameDropdown
+          sectionId={selectedSectionId ?? undefined}
+          unitName={selectedSectionUnitName || undefined}
+          source="STUDENT_SNAPSHOT"
           className={styles.dropdown}
         />
         <SimpleDropdown
@@ -175,6 +153,8 @@ const Header: React.FC<HeaderProps> = ({
           onChange={event => setSelectedStudentId(Number(event.target.value))}
           placeholder="Select a student"
           className={styles.dropdown}
+          size="s"
+          color="gray"
         />
         <div className={styles.buttonGroup}>
           <Button
