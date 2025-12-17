@@ -44,18 +44,17 @@ export const HTMLPreview: React.FC = () => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-    const useLocalPrefixOverride = experiments.isEnabledAllowingQueryString(
-      experiments.LOCAL_WEBLAB2_PREVIEW
+    const useFullUrlOnLocal = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_FULL_URLS
     );
     const isLocalhost = 'localhost' === environmentKey;
-    // When testing on localhost, it can be convenient to have a fixed subdomain
+    // When testing on localhost, it is convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
-    // Use the flag ?local-weblab2-preview=true or ?enableExperiments=local-weblab2-preview
-    // to enable the fixed prefix locally.
+    // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
+    // to use the true channel id based url on localhost (this makes it so having multiple tabs with different projects
+    // open at the same time works correctly).
     const prefix =
-      useLocalPrefixOverride && isLocalhost
-        ? 'localtesting'
-        : normalizedChannelId;
+      !useFullUrlOnLocal && isLocalhost ? 'localtesting' : normalizedChannelId;
     const port = isLocalhost && location.port ? `:${location.port}` : '';
     return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
   }, [normalizedChannelId]);
