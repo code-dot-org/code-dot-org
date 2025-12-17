@@ -138,35 +138,41 @@ const StudentSnapshot: React.FC = () => {
   }, [selectedUnitId, selectedLessonId, lessonProgressByUnit]);
 
   // Map each lesson to the number of validated levels it has
-  const lessonsToNumValidationLevels = React.useMemo(() => {
-    const lessonsToNumValidationLevelsMap: {[lessonId: number]: number[]} = {};
+  const lessonsToValidationLevels = React.useMemo(() => {
+    const lessonsToValidationLevelsMap: {[lessonId: number]: string[]} = {};
     if (unitDataByUnit) {
       const lessons = unitDataByUnit[selectedUnitId]?.lessons;
-      Object.values(lessons).forEach(lesson => {
-        const currLessonValidationLevels: number[] = [];
-        Object.values(lesson.levels).forEach(level => {
-          if (level.isValidated) {
-            currLessonValidationLevels.push(+level.id);
-          }
+      if (lessons) {
+        Object.values(lessons).forEach(lesson => {
+          const currLessonValidationLevels: string[] = [];
+          Object.values(lesson.levels).forEach(level => {
+            if (level.isValidated) {
+              currLessonValidationLevels.push(level.id);
+            }
+          });
+          lessonsToValidationLevelsMap[lesson.id] = currLessonValidationLevels;
         });
-        lessonsToNumValidationLevelsMap[lesson.id] = currLessonValidationLevels;
-      });
+      }
     }
-    return lessonsToNumValidationLevelsMap;
+    return lessonsToValidationLevelsMap;
   }, [unitDataByUnit, selectedUnitId]);
 
   // Map each lesson to the amount of validation levels each student has completed
   const userValidationProgressByLesson = React.useMemo(() => {
     const userValidationProgressByLessonMap: UserValidationProgressByLessonData =
       {};
-    if (studentLevelProgressByUnit) {
-      Object.entries(studentLevelProgressByUnit).forEach(
-        ([lessonId, classProgressInLesson]) => {
+    if (lessonsToValidationLevels && studentLevelProgressByUnit) {
+      Object.entries(lessonsToValidationLevels).forEach(
+        ([lessonId, validationLevelIds]) => {
           const levelProgressByUser: {[userId: string]: number} = {};
-          Object.entries(classProgressInLesson).forEach(
-            ([userId, userProgress]) => {
-              levelProgressByUser[userId] = Object.values(userProgress).filter(
-                progress => COMPLETED_STATUSES.includes(progress.status)
+          Object.entries(studentLevelProgressByUnit[selectedUnitId]).forEach(
+            ([userId, levelProgress]) => {
+              levelProgressByUser[userId] = Object.entries(
+                levelProgress
+              ).filter(
+                ([levelId, progress]) =>
+                  validationLevelIds.includes(levelId) &&
+                  COMPLETED_STATUSES.includes(progress.status)
               ).length;
             }
           );
@@ -175,31 +181,31 @@ const StudentSnapshot: React.FC = () => {
       );
       return userValidationProgressByLessonMap;
     }
-  }, [studentLevelProgressByUnit]);
+  }, [selectedUnitId, lessonsToValidationLevels, studentLevelProgressByUnit]);
 
   const numValidationLevelsCompleteString = React.useMemo(() => {
     if (
       !selectedUnitId ||
       !selectedLessonId ||
       !selectedStudentId ||
-      !lessonsToNumValidationLevels ||
-      !userValidationProgressByLesson
+      !lessonsToValidationLevels ||
+      !userValidationProgressByLesson ||
+      !userValidationProgressByLesson[selectedLessonId]
     ) {
       return '';
     }
 
     const numValidationLevelsUserCompleted =
-      userValidationProgressByLesson[selectedLessonId][selectedStudentId];
-    const totalValidationLevels =
-      lessonsToNumValidationLevels[selectedLessonId];
+      userValidationProgressByLesson[selectedLessonId][`${selectedStudentId}`];
+    const totalValidationLevels = lessonsToValidationLevels[selectedLessonId];
     return numValidationLevelsUserCompleted === totalValidationLevels.length
       ? COMPLETE_PERCENT_STRING
-      : `${numValidationLevelsUserCompleted} of ${totalValidationLevels} passed`;
+      : `${numValidationLevelsUserCompleted} of ${totalValidationLevels.length} passed`;
   }, [
     selectedUnitId,
     selectedLessonId,
     selectedStudentId,
-    lessonsToNumValidationLevels,
+    lessonsToValidationLevels,
     userValidationProgressByLesson,
   ]);
 
