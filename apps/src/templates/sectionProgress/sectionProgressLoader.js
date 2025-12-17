@@ -41,7 +41,7 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
     if (state.isRefreshingProgress) {
       return Promise.resolve();
     }
-    // // Data already exists, just return resolved promise
+    // Data already exists, just return resolved promise
     return Promise.resolve();
   } else {
     getStore().dispatch(startLoadingProgress());
