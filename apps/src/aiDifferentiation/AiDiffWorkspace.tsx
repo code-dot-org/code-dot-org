@@ -1,6 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {setInitialThreadPrompt} from '@cdo/apps/aichat/redux/slice';
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import experiments from '@cdo/apps/util/experiments';
@@ -61,12 +60,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const aiPromptOutsideChatClicked = useCallback(
     (label: string, prompt: string) => {
       setShowNotifications(false);
-      dispatch(
-        setInitialThreadPrompt({
-          label: label,
-          prompt: prompt,
-        })
-      );
       dispatch(
         fetchThreadMessages({
           thread: 0,
