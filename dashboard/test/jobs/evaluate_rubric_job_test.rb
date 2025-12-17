@@ -210,6 +210,14 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'rate-limit' &&
+        data['data_json']['agent'].nil?
+    end
+
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_RATE_LIMIT do
       perform_enqueued_jobs do
@@ -251,6 +259,14 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         includes_dimensions(:TimeoutError, Environment: CDO.rack_env)
       )
     )
+
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'timeout-error' &&
+        data['data_json']['agent'].nil?
+    end
 
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_TIMEOUT_ERROR do
@@ -297,6 +313,14 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'service-unavailable' &&
+        data['data_json']['agent'] == 'openai'
+    end
+
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_SERVICE_UNAVAILABLE do
       perform_enqueued_jobs do
@@ -341,6 +365,14 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         includes_dimensions(:GatewayTimeout, Environment: CDO.rack_env, Agent: 'openai')
       )
     )
+
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'gateway-timeout' &&
+        data['data_json']['agent'] == 'openai'
+    end
 
     # Run the job (and track attempts)
     assert_performed_jobs EvaluateRubricJob::ATTEMPTS_ON_GATEWAY_TIMEOUT do
