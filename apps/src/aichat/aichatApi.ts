@@ -5,7 +5,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {chatHistoryValidator} from './api/validators';
-import {getUpdatedMessages} from './getUpdatedMessages';
+import {getUpdatedMessages} from './helpers/getUpdatedMessages';
 import {streamAichatCompletionMessage} from './helpers/streamAichatCompletionMessage';
 import {
   AiCustomizations,

@@ -4,7 +4,7 @@ import {
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {ExecutionStatus, PendingChatMessage} from './types';
+import {ExecutionStatus, PendingChatMessage} from '../types';
 
 /**
  * Get the updated user and assistant message based on the status of the chat completion request.

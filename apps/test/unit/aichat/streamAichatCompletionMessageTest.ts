@@ -1,6 +1,6 @@
 import {createConsumer, Subscription} from '@rails/actioncable';
 
-import {getUpdatedMessages} from '@cdo/apps/aichat/getUpdatedMessages';
+import {getUpdatedMessages} from '@cdo/apps/aichat/helpers/getUpdatedMessages';
 import {streamAichatCompletionMessage} from '@cdo/apps/aichat/helpers/streamAichatCompletionMessage';
 import {
   AichatContext,

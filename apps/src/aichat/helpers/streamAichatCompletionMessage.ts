@@ -3,7 +3,6 @@ import {createConsumer, Consumer, Subscription} from '@rails/actioncable';
 import {createUuid} from '@cdo/apps/utils';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {getUpdatedMessages} from '../getUpdatedMessages';
 import {
   AichatContext,
   CompletedChatMessage,
@@ -11,6 +10,8 @@ import {
   ModelParameters,
   PendingChatMessage,
 } from '../types';
+
+import {getUpdatedMessages} from './getUpdatedMessages';
 
 type StreamEvent =
   | {event: 'start'; request_id: number}
