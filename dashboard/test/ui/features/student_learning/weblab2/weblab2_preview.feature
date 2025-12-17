@@ -5,9 +5,12 @@ Feature: Web Lab 2 Preview
 @no_safari
 @no_mobile
 
+# The preview doesn't load on UI tests run via localhost or drone, so this test only runs on real environments.
+# weblab2_general covers that the rest of the page loads.
+@no_ci
 Scenario: Web Lab 2 Preview loads
   Given I create a student named "Penelope"
-  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11?weblab2-preview-v2=true"
+  When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11"
   And I wait until element "#preview" is visible
   And I switch to the iframe "#preview"
   And I wait until element "#codeprojects-preview-container" is visible
