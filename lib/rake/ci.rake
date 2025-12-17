@@ -186,6 +186,12 @@ namespace :ci do
     end
   end
 
+  timed_task_with_logging :force_seed_ui_test do
+    Dir.chdir('dashboard') do
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
   timed_task_with_logging :sparse_checkout do
     if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
       cmd = 'bin/sparse-checkout no-pegasus-content'
