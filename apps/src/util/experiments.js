@@ -76,6 +76,8 @@ experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
 experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 // Enable AI lesson podcasts
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
+// Enable Localhost workaround for weblab 2 preview
+experiments.LOCAL_WEBLAB2_PREVIEW = 'local-weblab2-preview';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
