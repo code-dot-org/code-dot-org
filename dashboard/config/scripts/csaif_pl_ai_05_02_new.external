@@ -1,0 +1,68 @@
+name 'csaif_pl_ai_05_02-new'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Curriculum Overview
+
+## What is AI-Powered Threats and Defenses about?
+ 
+#### Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, students take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. Students analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. They also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication. 
+
+
+#### Throughout the unit, students use computational thinking practices to analyze threats, evaluate system behavior, and reason through design tradeoffs. They apply human-centered design principles to propose security features that consider user needs and system constraints. Students examine real-world decisions made by cybersecurity professionals, including how they balance protection with usability, anticipate unintended consequences, and build trust in systems. Through case analysis, collaborative design challenges, and reflection routines, students gain insight into cybersecurity as a sociotechnical system. They also explore career pathways in cybersecurity and AI, learning how professionals contribute to safer, more ethical, and more inclusive computing systems.
+
+
+#### **This is the fifth unit in the six unit <a href='https://code.org/en-US/curriculum/artificial-intelligence-foundations' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Foundations</a> semester 1 course. This professional learning module prepares you to teach it!**
+
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Figtree, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Explain how different types of cybersecurity attacks work.</li>
+      <li>Describe how AI is used in cybersecurity tools.</li>
+      <li>Analyze cybersecurity scenarios.</li>
+      <li>Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.</li>
+      <li>Evaluate tradeoffs between usability and security in the design of digital systems.</li>
+      <li>Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+</li>
+<li>Describe cybersecurity career roles and how professionals use AI tools in their work.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/cb30e66a15e83dfaed89254733dde7fc-Screenshot 2025-12-11 at 12.55.01 PM.png" 
+         alt="Computer icon" 
+         style="width: 300px; height: auto; border-radius: 10px;margin: 10px">
+  </div>
+</div>
+
+
+
+## Classroom Context
+
+#### This content has been developed for high school students with little or no coding experience who are comfortable with technology and curious about AI and computer science.
+
+#### This unit can be implemented on it's own or part of the AI Foundations Semester or year-long course.
+
+#### All lessons within the unit are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Learn more about the AI Foundations Curriculum by taking the <a href='google.com' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Introductory Module</a>.
+</p>
+
+
+## Unit Length and Format
+
+
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Twelve 45-minute lessons and one 3-day culminating project
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit 5: AI-Powered Threats and Defenses</a>.
+</p>
+
+
+MARKDOWN
