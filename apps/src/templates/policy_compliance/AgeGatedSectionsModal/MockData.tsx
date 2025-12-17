@@ -1,5 +1,6 @@
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 export const MockAgeGatedSections: Section[] = [
   {
@@ -14,7 +15,7 @@ export const MockAgeGatedSections: Section[] = [
     atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     atRiskAgeGatedUsState: 'CO',
     grades: ['3', '4', '5'],
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     courseDisplayName: null,
     lessonExtras: false,
     pairingAllowed: false,
@@ -36,7 +37,7 @@ export const MockAgeGatedSections: Section[] = [
     atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     atRiskAgeGatedUsState: 'CO',
     grades: [],
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     courseDisplayName: null,
     lessonExtras: false,
     pairingAllowed: false,
@@ -58,7 +59,7 @@ export const MockAgeGatedSections: Section[] = [
     atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     atRiskAgeGatedUsState: 'CO',
     grades: [],
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     courseDisplayName: null,
     lessonExtras: false,
     pairingAllowed: false,
@@ -80,7 +81,7 @@ export const MockAgeGatedSections: Section[] = [
     atRiskAgeGatedDate: new Date('2025-01-01T00:00:00-05:00'),
     atRiskAgeGatedUsState: 'CO',
     grades: ['1', '2', '3'],
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     courseDisplayName: null,
     lessonExtras: false,
     pairingAllowed: false,

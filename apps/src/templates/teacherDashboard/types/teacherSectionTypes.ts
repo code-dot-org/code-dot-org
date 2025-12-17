@@ -1,4 +1,5 @@
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {AiChatAccessLevel} from '@cdo/apps/aiTutor/types';
 import {
   SectionLoginType,
   UserTypes,
@@ -10,7 +11,7 @@ import {
 // typescript we can deprecate the PropTypes definitions and use these instead.
 
 export interface Section {
-  aiTutorEnabled: boolean;
+  aiChatAccessLevel: AiChatAccessLevel | undefined;
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
@@ -57,7 +58,7 @@ type Course = {
 };
 
 export interface UserEditableSection {
-  aiTutorEnabled?: boolean;
+  aiChatAccessLevel?: AiChatAccessLevel;
   codeReviewExpiresAt?: number | null;
   courseId?: number | null;
   courseOfferingId?: number | null;
@@ -78,7 +79,7 @@ export type OAuthSectionTypeName = keyof typeof OAuthSectionTypes;
 export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 
 export interface ServerSection {
-  ai_tutor_enabled?: boolean;
+  ai_chat_access_level?: AiChatAccessLevel;
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
   code: string;

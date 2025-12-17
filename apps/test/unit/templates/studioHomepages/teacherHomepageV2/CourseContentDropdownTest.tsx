@@ -16,6 +16,7 @@ import {CourseContentDropdown} from '@cdo/apps/templates/studioHomepages/teacher
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 describe('CourseContentDropdown', () => {
@@ -26,7 +27,7 @@ describe('CourseContentDropdown', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -63,7 +64,7 @@ describe('CourseContentDropdown', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,

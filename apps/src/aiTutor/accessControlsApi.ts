@@ -2,7 +2,7 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
-import {StudentServerData} from './types';
+import {AiChatAccessLevel, StudentServerData} from './types';
 
 const formatServerData = (student: StudentServerData) => ({
   id: student.id,
@@ -36,20 +36,20 @@ export const handleUpdateAITutorAccess = async (
   }
 };
 
-export const handleUpdateSectionAITutorEnabled = async (
+export const handleUpdateSectionAiChatAccessLevel = async (
   sectionId: number,
-  newEnabled: boolean
+  newAccessLevel: AiChatAccessLevel
 ) => {
   try {
     const response = await fetch(
-      `/api/v1/sections/${sectionId}/ai_tutor_enabled`,
+      `/api/v1/sections/${sectionId}/ai_chat_access_level`,
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'X-CSRF-Token': await getAuthenticityToken(),
         },
-        body: JSON.stringify({ai_tutor_enabled: newEnabled}),
+        body: JSON.stringify({ai_chat_access_level: newAccessLevel}),
       }
     );
     if (!response.ok) {
@@ -57,7 +57,7 @@ export const handleUpdateSectionAITutorEnabled = async (
     }
   } catch (error) {
     MetricsReporter.logError({
-      event: MetricEvent.AI_TUTOR_UPDATE_SECTION_ACCESS_FAIL,
+      event: MetricEvent.AI_SETTINGS_UPDATE_SECTION_ACCESS_FAIL,
       errorMessage: JSON.stringify(error),
     });
     // We need to rethrow the error so that the toggle can revert to its original state.

@@ -9,6 +9,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {AiChatAccessLevel} from '@cdo/apps/aiTutor/types';
 import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -369,16 +370,16 @@ const sectionSlice = createSlice({
     setRosterProviderName(state, action: PayloadAction<string>) {
       state.rosterProviderName = action.payload;
     },
-    updateSectionAiTutorEnabled(
+    updateSectionAiChatAccessLevel(
       state,
       action: PayloadAction<{
         sectionId: number;
-        aiTutorEnabled: boolean;
+        aiChatAccessLevel: AiChatAccessLevel;
       }>
     ) {
-      const {sectionId, aiTutorEnabled} = action.payload;
+      const {sectionId, aiChatAccessLevel} = action.payload;
 
-      state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
+      state.sections[sectionId].aiChatAccessLevel = aiChatAccessLevel;
     },
     setCourseOfferings(
       state,
@@ -1271,7 +1272,7 @@ export const {
   setStudentsForCurrentSection,
   setAvailableParticipantTypes,
   startLoadingSectionData,
-  updateSectionAiTutorEnabled,
+  updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,

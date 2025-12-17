@@ -66,7 +66,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
-        ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
+        ai_chat_access_level: params[:ai_chat_access_level].nil? ? SharedConstants::AI_CHAT_ACCESS_LEVELS[:DISABLED] : params[:ai_chat_access_level],
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
         avatar_color: params[:avatar_color].nil? ? 0 : params[:avatar_color],
         avatar_emoji: params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji],
@@ -119,7 +119,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
-    fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
+    fields[:ai_chat_access_level] = params[:ai_chat_access_level] unless params[:ai_chat_access_level].nil?
     fields[:avatar_color] = params[:avatar_color].nil? ? 0 : params[:avatar_color]
     fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
 
@@ -293,9 +293,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success', expiration: @section.code_review_expires_at}
   end
 
-  # POST /api/v1/sections/<id>/ai_tutor_enabled
-  def set_ai_tutor_enabled
-    @section.update!(ai_tutor_enabled: params[:ai_tutor_enabled])
+  # POST /api/v1/sections/<id>/ai_chat_access_level
+  def set_ai_chat_access_level
+    @section.update!(
+      ai_chat_access_level: params[:ai_chat_access_level]
+    )
     render json: {result: 'success'}
   end
 

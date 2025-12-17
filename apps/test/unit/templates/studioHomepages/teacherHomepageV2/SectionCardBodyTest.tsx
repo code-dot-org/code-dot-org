@@ -21,6 +21,7 @@ import {
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 const LocationElement = () => {
   const location = useLocation();
@@ -35,7 +36,7 @@ describe('SectionCardBody', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -72,7 +73,7 @@ describe('SectionCardBody', () => {
     courseVersionName: '',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -109,7 +110,7 @@ describe('SectionCardBody', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,

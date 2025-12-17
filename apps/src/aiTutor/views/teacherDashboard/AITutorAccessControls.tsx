@@ -6,6 +6,7 @@ import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import SectionAccessToggle from './SectionAccessToggle';
 import StudentAccessToggle from './StudentAccessToggle';
@@ -43,8 +44,8 @@ const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
     null
   );
 
-  const aiTutorEnabledForSection = useAppSelector(
-    state => state.teacherSections.sections[sectionId].aiTutorEnabled
+  const aiChatAccessLevelForSection = useAppSelector(
+    state => state.teacherSections.sections[sectionId].aiChatAccessLevel
   );
 
   const displayGlobalError = (error: string) => {
@@ -132,7 +133,9 @@ const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
         <SectionAccessToggle sectionId={sectionId} />
       </div>
       <div className={style.interactionsElement}>
-        {aiTutorEnabledForSection ? (
+        {aiChatAccessLevelForSection === AiChatAccessLevels.ENABLED ? (
+          // TODO-AICHAT-PERMISSIONS: re-enable the student list after implementing the new access levels
+
           isLoading ? (
             <Spinner />
           ) : (

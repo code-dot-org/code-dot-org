@@ -17,6 +17,7 @@ import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/util/copyToClipboard');
 
@@ -28,7 +29,7 @@ describe('SectionCard', () => {
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,

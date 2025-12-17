@@ -49,6 +49,7 @@ import {
   sortSectionsList,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -471,7 +472,7 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
+        aiChatAccessLevel: AiChatAccessLevels.DISABLED,
       });
     });
 
@@ -506,7 +507,7 @@ describe('teacherSectionsRedux', () => {
         unitId: unitId,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
+        aiChatAccessLevel: AiChatAccessLevels.DISABLED,
       });
     });
   });
@@ -536,7 +537,7 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         restrictSection: false,
-        aiTutorEnabled: false,
+        aiChatAccessLevel: AiChatAccessLevels.DISABLED,
       });
     });
 
@@ -600,7 +601,7 @@ describe('teacherSectionsRedux', () => {
           ltiRosterSyncEnabled: false,
         },
         syncEnabled: undefined,
-        aiTutorEnabled: undefined,
+        aiChatAccessLevel: AiChatAccessLevels.DISABLED,
         anyStudentHasProgress: undefined,
         atRiskAgeGatedDate: null,
         atRiskAgeGatedUsState: undefined,
@@ -958,7 +959,7 @@ describe('teacherSectionsRedux', () => {
             ltiRosterSyncEnabled: false,
           },
           syncEnabled: undefined,
-          aiTutorEnabled: false,
+          aiChatAccessLevel: AiChatAccessLevels.DISABLED,
           anyStudentHasProgress: undefined,
           atRiskAgeGatedDate: null,
           atRiskAgeGatedUsState: undefined,

@@ -6,6 +6,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/sectionOrderUtils';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 const SECTION: Section = {
   id: 11,
@@ -14,7 +15,7 @@ const SECTION: Section = {
   courseVersionName: 'csd-2024',
   unitName: null,
   unitPosition: null,
-  aiTutorEnabled: false,
+  aiChatAccessLevel: AiChatAccessLevels.DISABLED,
   atRiskAgeGatedDate: new Date(),
   atRiskAgeGatedUsState: 'xyz',
   anyStudentHasProgress: false,

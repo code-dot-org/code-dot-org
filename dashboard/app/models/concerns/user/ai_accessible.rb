@@ -19,14 +19,6 @@ module User::AiAccessible
     false
   end
 
-  # This was originally meant to be used to inform the UI of when to set Tutor to "sleeping"
-  # on a level that would otherwise show Tutor. It is currently unused while the
-  # permissions features for tutor and ai chat features in general are being shaped.
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    in_ai_tutor_pilot? || in_ai_tutor_enabled_section_with_pilot_teacher?
-  end
-
   def can_use_ai_iteration_tools?
     levelbuilder?
   end
@@ -46,11 +38,6 @@ module User::AiAccessible
 
   private def ai_tutor_feature_globally_disabled?
     DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def in_ai_tutor_enabled_section_with_pilot_teacher?
-    Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   private def in_ai_tutor_pilot?

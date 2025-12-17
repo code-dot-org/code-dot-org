@@ -464,7 +464,11 @@ FactoryBot.define do
         after(:create) do |user|
           teacher = create(:teacher)
           create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: true, user: teacher)
+          section = create(
+            :section,
+            ai_chat_access_level: SharedConstants.ai_chat_access_level[:ENABLED],
+            user: teacher
+          )
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -474,7 +478,11 @@ FactoryBot.define do
         after(:create) do |user|
           teacher = create(:teacher)
           create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: false, user: teacher)
+          section = create(
+            :section,
+            ai_chat_access_level: SharedConstants.ai_chat_access_level[:DISABLED],
+            user: teacher
+          )
           create(:follower, student_user: user, section: section)
           user.reload
         end

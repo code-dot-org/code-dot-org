@@ -210,7 +210,7 @@ Dashboard::Application.routes.draw do
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
-          post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
+          post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
         end
         collection do
           get 'membership'

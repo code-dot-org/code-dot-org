@@ -56,18 +56,4 @@ describe('AdvancedSettingToggles', () => {
     const ttsToggle = screen.getByLabelText(i18n.enableTtsAutoplayToggle());
     expect(ttsToggle).not.toHaveAttribute('checked');
   });
-
-  it('renders enable AI Tutor toggle when available, enabled', () => {
-    render(
-      <AdvancedSettingToggles
-        updateSection={() => {}}
-        section={{
-          aiTutorEnabled: true,
-        }}
-        aiTutorAvailable={true}
-      />
-    );
-    const aiTutorToggle = screen.getByLabelText(i18n.enableAITutor());
-    expect(aiTutorToggle).toHaveAttribute('checked');
-  });
 });

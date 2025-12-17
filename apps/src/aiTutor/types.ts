@@ -1,3 +1,7 @@
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import {ValueOf} from '../types/utils';
+
 export interface StudentServerData {
   id: number;
   name: string;
@@ -33,3 +37,5 @@ export interface AnalyticsData {
 }
 
 export type MaybePromise<T> = T | Promise<T>;
+
+export type AiChatAccessLevel = ValueOf<typeof AiChatAccessLevels>;

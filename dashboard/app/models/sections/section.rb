@@ -25,6 +25,7 @@
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
 #  ai_tutor_enabled     :boolean          default(FALSE)
+#  ai_chat_access_level :string(255)   default("disabled")
 #  avatar_color         :integer
 #  avatar_emoji         :integer
 #
@@ -112,6 +113,7 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+  validates :ai_chat_access_level, inclusion: {in: SharedConstants::AI_CHAT_ACCESS_LEVELS.values}
 
   scope :visible, -> {where(hidden: false)}
 
@@ -212,6 +214,10 @@ class Section < ApplicationRecord
   def self.valid_grades?(grades)
     return false if grades.empty?
     (grades - VALID_GRADES).empty?
+  end
+
+  def self.valid_ai_chat_access_level?(level)
+    SharedConstants::AI_CHAT_ACCESS_LEVELS.value? level
   end
 
   # Override default script accessor to use our cache
@@ -430,7 +436,7 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-        ai_tutor_enabled: ai_tutor_enabled,
+        ai_chat_access_level: ai_chat_access_level,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
@@ -561,7 +567,7 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          ai_tutor_enabled: ai_tutor_enabled,
+          ai_chat_access_level: ai_chat_access_level,
           at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,

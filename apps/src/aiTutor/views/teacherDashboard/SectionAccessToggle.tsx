@@ -9,14 +9,45 @@ import classNames from 'classnames';
 import React, {useState, useEffect} from 'react';
 
 import InfoTooltipIcon from '@cdo/apps/aichat/views/InfoTooltipIcon';
-import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
+import {handleUpdateSectionAiChatAccessLevel} from '@cdo/apps/aiTutor/accessControlsApi';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {AiChatAccessLevel} from '../../types';
+
 import style from '@cdo/apps/aiTutor/views/teacherDashboard/ai-tutor-access-controls.module.scss';
+
+// TODO-AICHAT-PERMISSIONS: the default should be based on the curriculum assigned to the section.
+const defaultAccessLevel = AiChatAccessLevels.DISABLED;
+
+const calculateAccessLevel = (
+  accessToggle: boolean,
+  essentialOnlyCheckbox: boolean
+): AiChatAccessLevel => {
+  if (accessToggle) {
+    return AiChatAccessLevels.ENABLED;
+  }
+  if (essentialOnlyCheckbox) {
+    return AiChatAccessLevels.ESSENTIAL_ONLY;
+  }
+  return AiChatAccessLevels.DISABLED;
+};
+
+const essentialOnlyCheckboxState = (
+  accessLevel: AiChatAccessLevel | undefined
+): boolean => {
+  return accessLevel !== AiChatAccessLevels.DISABLED;
+};
+
+const accessToggleState = (
+  accessLevel: AiChatAccessLevel | undefined
+): boolean => {
+  return accessLevel === AiChatAccessLevels.ENABLED;
+};
 
 interface SectionAccessToggleProps {
   sectionId: number;
@@ -27,34 +58,57 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
 }) => {
   const sectionList = useAppSelector(state => state.teacherSections.sections);
 
-  const [aiTutorEnabled, setAiTutorEnabled] = useState(
-    sectionList[sectionId].aiTutorEnabled
+  const [accessToggle, setAccessToggle] = useState(
+    accessToggleState(sectionList[sectionId].aiChatAccessLevel)
+  );
+  const [essentialOnlyCheckbox, setEssentialOnlyCheckbox] = useState(
+    essentialOnlyCheckboxState(sectionList[sectionId].aiChatAccessLevel)
   );
 
   const dispatch = useAppDispatch();
 
-  const handleAITutorEnabledToggle = () => {
-    const newValue = !aiTutorEnabled;
-    handleUpdateSectionAITutorEnabled(sectionId, newValue);
-    setAiTutorEnabled(newValue);
-    const event = aiTutorEnabled
-      ? EVENTS.AI_TUTOR_DISABLED
-      : EVENTS.AI_TUTOR_ENABLED;
-    analyticsReporter.sendEvent(event, {
-      sectionId: sectionId,
-      uiLocation: 'aiTutorTeacherDashboardTab',
-    });
+  const updateAccessLevel = (newAccessLevel: AiChatAccessLevel) => {
+    handleUpdateSectionAiChatAccessLevel(sectionId, newAccessLevel);
+    analyticsReporter.sendEvent(
+      EVENTS.AI_CHAT_TOOLS_SECTION_ACCESS_LEVEL_UPDATED,
+      {
+        sectionId: sectionId,
+        newAccessLevel: newAccessLevel,
+        uiLocation: 'aiSettingsTeacherDashboardTab',
+      }
+    );
     if (sectionList[sectionId]) {
       dispatch(
-        updateSectionAiTutorEnabled({sectionId, aiTutorEnabled: newValue})
+        updateSectionAiChatAccessLevel({
+          sectionId,
+          aiChatAccessLevel: newAccessLevel,
+        })
       );
     } else {
       throw new Error('Section does not exist');
     }
   };
 
+  const handleAccessToggle = () => {
+    const newValue = !accessToggle;
+    setAccessToggle(newValue);
+    setEssentialOnlyCheckbox(true);
+    const newAccessLevel = calculateAccessLevel(newValue, true);
+    updateAccessLevel(newAccessLevel);
+  };
+
+  const handleEssentialOnlyToggle = () => {
+    const newValue = !essentialOnlyCheckbox;
+    setEssentialOnlyCheckbox(newValue);
+    const newAccessLevel = calculateAccessLevel(accessToggle, newValue);
+    updateAccessLevel(newAccessLevel);
+  };
+
   useEffect(() => {
-    setAiTutorEnabled(sectionList[sectionId].aiTutorEnabled);
+    const accessLevel =
+      sectionList[sectionId].aiChatAccessLevel || defaultAccessLevel;
+    setEssentialOnlyCheckbox(essentialOnlyCheckboxState(accessLevel));
+    setAccessToggle(accessToggleState(accessLevel));
   }, [sectionList, sectionId]);
 
   return (
@@ -69,25 +123,25 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
         <BodyTwoText noMargin className={style.semiBold}>
           {i18n.aiSettingsAiChatTools()}
         </BodyTwoText>
-        {!aiTutorEnabled && (
+        {!accessToggle && (
           <div className={style.toolTipContainer}>
             <Checkbox
-              label={i18n.aiSettingsAllowEssentialOnly()}
+              label={i18n.aiSettingsEssentialOnly()}
               name="section_essential_ai_checkbox"
-              onChange={() => {}}
-              checked={false}
+              onChange={handleEssentialOnlyToggle}
+              checked={essentialOnlyCheckbox}
             />
             <InfoTooltipIcon
               id={'section-essential-ai-checkbox-info'}
-              tooltipText={i18n.aiSettingsAllowEssentialOnlyTooltip()}
+              tooltipText={i18n.aiSettingsEssentialOnlyTooltip()}
             />
           </div>
         )}
         <Toggle
           id={'uitest-ai-chat-tools-section-access-toggle'}
           name="aiChatToolsSectionAccessToggle"
-          checked={aiTutorEnabled}
-          onChange={handleAITutorEnabledToggle}
+          checked={accessToggle}
+          onChange={handleAccessToggle}
         />
       </div>
     </div>

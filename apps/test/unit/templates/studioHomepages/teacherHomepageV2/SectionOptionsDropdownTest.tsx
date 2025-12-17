@@ -27,6 +27,7 @@ import {
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {Student} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 const LocationElement = () => {
@@ -42,7 +43,7 @@ const SECTIONS: Section[] = [
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,
@@ -78,7 +79,7 @@ const SECTIONS: Section[] = [
     courseVersionName: 'csd-2024',
     unitName: null,
     unitPosition: null,
-    aiTutorEnabled: false,
+    aiChatAccessLevel: AiChatAccessLevels.DISABLED,
     atRiskAgeGatedDate: new Date(),
     atRiskAgeGatedUsState: 'xyz',
     anyStudentHasProgress: false,

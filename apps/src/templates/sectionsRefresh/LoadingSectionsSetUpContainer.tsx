@@ -21,7 +21,7 @@ const LoadingSectionsSetUpContainer: React.FC<
     restrictSection: false,
     ttsAutoplayEnabled: false,
     lessonExtras: true,
-    aiTutorEnabled: false,
+    // todo: do we need to set a default value for aiChatAccessLevel here?
     sharing_disabled: false,
     sharingDisabled: false,
     primaryInstructor: {

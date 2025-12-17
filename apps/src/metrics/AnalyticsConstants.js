@@ -335,6 +335,10 @@ const EVENTS = {
     'AI Tutor Code Snippet Added to Context',
   AI_TUTOR_FILE_ADDED_TO_CONTEXT: 'AI Tutor File Added to Context',
 
+  // AI Chat Tools Settings
+  AI_CHAT_TOOLS_SECTION_ACCESS_LEVEL_UPDATED:
+    'AI Chat Tools access level updated for section',
+
   // Javalab
   JAVALAB_RUN_BUTTON_CLICK: 'Javalab Run Button Clicked',
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
