@@ -6,7 +6,7 @@ import {
 
 import {chatHistoryValidator} from './api/validators';
 import {getUpdatedMessages} from './getUpdatedMessages';
-import {streamAichatCompletionMessage} from './helpers/aiChatStream';
+import {streamAichatCompletionMessage} from './helpers/streamAichatCompletionMessage';
 import {
   AiCustomizations,
   AichatContext,
