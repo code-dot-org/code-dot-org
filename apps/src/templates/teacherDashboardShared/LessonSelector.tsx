@@ -36,6 +36,7 @@ const skeletonDropdown = () => (
     )}
   />
 );
+
 export interface LessonOption {
   id: number;
   name: string;
