@@ -92,3 +92,9 @@ $max-cell-width: 350px;
   border-radius: 5px;
   padding: 4px 6px;
 }
+
+.buttonText {
+  & span {
+    font-weight: 400 !important;
+  }
+}

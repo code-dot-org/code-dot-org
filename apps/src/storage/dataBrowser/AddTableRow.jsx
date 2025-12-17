@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,7 +6,6 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import PendingButton from '../../legacySharedComponents/PendingButton';
 import {storageBackend} from '../storage';
 
 import {castValue} from './dataUtils';
@@ -88,12 +88,16 @@ class AddTableRow extends React.Component {
         <td className={dataStyles.cell} />
 
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <PendingButton
-            isPending={this.state.isAdding}
-            onClick={this.handleAdd}
-            pendingText={msg.addingToTable()}
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
+          <Button
             text={msg.addRowToTable()}
+            onClick={this.handleAdd}
+            disabled={this.state.isAdding}
+            isPending={this.state.isAdding}
+            ariaLabel={msg.addRowToTable()}
+            className={classNames(dataStyles.buttonText)}
+            size="s"
+            type="secondary"
+            color="gray"
           />
         </td>
       </tr>
