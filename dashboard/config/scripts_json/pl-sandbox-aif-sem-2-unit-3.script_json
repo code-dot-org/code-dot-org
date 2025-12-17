@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 17:44:17 UTC",
+    "serialized_at": "2025-12-17 22:01:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -565,6 +565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-CFU-check-6"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -587,6 +590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-first-object-weblab-2"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -609,6 +615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-object-syntax-3"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -631,6 +640,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-array-to-object-weblab-4"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -653,6 +665,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-lists-of-objects-5"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -675,6 +690,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-list-of-objects-weblab-6"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -689,6 +707,138 @@
       },
       "level_keys": [
         "pl-aif-list-of-objects-weblab-6"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-datasets-with-arrays-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-datasets-with-arrays-7"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-render-DOM-9"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-render-DOM-9"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-DOM-syntax-panel-10"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-DOM-syntax-panel-10"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-2-U3-map-with-objects-weblab-10"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "aif-2-U3-map-with-objects-weblab-10"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CHAT-12"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-CHAT-12"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CFU-map-13"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-CFU-map-13"
       ]
     }
   ],
@@ -974,6 +1124,78 @@
         "level.key": "pl-aif-list-of-objects-weblab-6",
         "script_level.level_keys": [
           "pl-aif-list-of-objects-weblab-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-datasets-with-arrays-7",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-datasets-with-arrays-7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-render-DOM-9",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-render-DOM-9"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-DOM-syntax-panel-10",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-DOM-syntax-panel-10"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-2-U3-map-with-objects-weblab-10",
+        "script_level.level_keys": [
+          "aif-2-U3-map-with-objects-weblab-10"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-CHAT-12",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CHAT-12"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-CFU-map-13",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CFU-map-13"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

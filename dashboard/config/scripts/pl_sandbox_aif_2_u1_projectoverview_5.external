@@ -25,25 +25,51 @@ markdown <<MARKDOWN
 ---
 
 ## Primary Concepts Practiced
-- #### User-centered design
-- #### Wireframing and decomposition
-- #### Brand identity
-- #### Accessibility and responsiveness
-- #### Prompt engineering and evaluating AI output
+####✅ User-centered design
+####✅ Wireframing and decomposition
+####✅ Brand identity
+####✅ Accessibility and responsiveness
+#### ✅Prompt engineering and evaluating AI output
 
 
 ## Project criteria used for evaluation
-- #### Addresses real community issue
-- #### Documents AI workflow
-- #### Open-ended and flexible to student interests
-- #### Requires students to customize style and branding
-- #### Requires students to make the page responsive to mobile and web layouts
-
----
 
 #### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
 
-##Now, let’s see how we get here! 
+<div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+
+  <div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:140px; font-size:14pt;">
+    <span style="display:block; font-size:28pt; margin-bottom:8px;">🏙️</span>
+    Real community issue
+  </div>
+
+  <div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:140px; font-size:14pt;">
+    <span style="display:block; font-size:28pt; margin-bottom:8px;">🤖</span>
+    Documented AI workflow
+  </div>
+
+  <div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:140px; font-size:14pt;">
+    <span style="display:block; font-size:28pt; margin-bottom:8px;">🎯</span>
+   Student focused
+  </div>
+
+  <div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:140px; font-size:14pt;">
+    <span style="display:block; font-size:28pt; margin-bottom:8px;">🎨</span>
+    Custom style &amp; branding
+  </div>
+
+  <div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:140px; font-size:14pt;">
+    <span style="display:block; font-size:28pt; margin-bottom:8px;">📱</span>
+    Responsive: mobile &amp; web
+  </div>
+
+</div>
+
+
+---
+
+
+## Now, let’s see how we get here! 
 
 
 MARKDOWN
