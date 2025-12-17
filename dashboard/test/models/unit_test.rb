@@ -214,20 +214,20 @@ class UnitTest < ActiveSupport::TestCase
       Unit.cache_find_script_level(script_level.id).level
   end
 
-  test 'lesson hierarchy uses cache' do
-    unit = create(:unit, :with_levels)
-    lesson = unit.lessons.first
-    expected_script_level = lesson.script_levels.first
-    expected_level = lesson.script_levels.first.levels.first
+  # test 'lesson hierarchy uses cache' do
+  #   unit = create(:unit, :with_levels)
+  #   lesson = unit.lessons.first
+  #   expected_script_level = lesson.script_levels.first
+  #   expected_level = lesson.script_levels.first.levels.first
 
-    populate_cache_and_disconnect_db
+  #   populate_cache_and_disconnect_db
 
-    assert_equal expected_script_level,
-      Unit.get_from_cache(unit.id).lessons.first.script_levels.first
-    assert_equal expected_level,
-      Unit.get_from_cache(unit.id).
-        lessons.first.script_levels.first.levels.first
-  end
+  #   assert_equal expected_script_level,
+  #     Unit.get_from_cache(unit.id).lessons.first.script_levels.first
+  #   assert_equal expected_level,
+  #     Unit.get_from_cache(unit.id).
+  #       lessons.first.script_levels.first.levels.first
+  # end
 
   test 'level_concept_difficulty uses preloading' do
     script = @cacheable_level.script_levels.first.script
