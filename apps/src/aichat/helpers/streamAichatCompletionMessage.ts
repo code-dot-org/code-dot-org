@@ -70,19 +70,16 @@ export function streamAichatCompletionMessage({
     }, maxStreamTimeMs);
 
     const streamId = createUuid();
-    let nextExpectedSeq = 1;
-    const deltaBuffer = new Map<number, string>();
+    let nextSeq = 1;
+    const deltaBuffer = new Map<string, string>();
 
     const subscription: Subscription = consumerInstance.subscriptions.create(
       {channel: 'AichatChannel', stream_id: streamId},
       {
-        received: raw => {
+        received: (raw: StreamEvent | string) => {
           let data: StreamEvent;
           try {
-            data =
-              typeof raw === 'string'
-                ? (JSON.parse(raw) as StreamEvent)
-                : (raw as StreamEvent);
+            data = typeof raw === 'string' ? JSON.parse(raw) : raw;
           } catch (_error) {
             return;
           }
@@ -95,16 +92,20 @@ export function streamAichatCompletionMessage({
               return;
 
             case 'delta': {
-              const deltaText = data.text || '';
-              deltaBuffer.set(data.seq, deltaText);
+              const {seq, request_id: reqId, text = ''} = data;
 
-              while (deltaBuffer.has(nextExpectedSeq)) {
-                const textToDisplay = deltaBuffer.get(nextExpectedSeq)!;
+              // store the incoming text using its seq and request_id
+              deltaBuffer.set(`${seq}_${reqId}`, text);
 
-                streamCallbacks.onDelta?.(textToDisplay);
+              // check the buffer for the next expected seq
+              while (deltaBuffer.has(`${nextSeq}_${reqId}`)) {
+                const deltaText = deltaBuffer.get(`${nextSeq}_${reqId}`)!;
 
-                deltaBuffer.delete(nextExpectedSeq);
-                nextExpectedSeq++;
+                streamCallbacks.onDelta?.(deltaText);
+
+                // cleanup
+                deltaBuffer.delete(`${nextSeq}_${reqId}`);
+                nextSeq++;
               }
               return;
             }

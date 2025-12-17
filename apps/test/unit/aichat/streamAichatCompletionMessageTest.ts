@@ -18,7 +18,7 @@ import {
 jest.mock('@rails/actioncable', () => ({
   createConsumer: jest.fn(),
 }));
-jest.mock('@cdo/apps/aichat/getUpdatedMessages', () => ({
+jest.mock('@cdo/apps/aichat/helpers/getUpdatedMessages', () => ({
   getUpdatedMessages: jest.fn(),
 }));
 jest.mock('@cdo/apps/utils', () => ({
