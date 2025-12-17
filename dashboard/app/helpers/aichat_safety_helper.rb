@@ -155,6 +155,7 @@ module AichatSafetyHelper
     end
 
     private def report_openai_safety_check(metric_name, num_attempts = 1, output_type = nil, role = nil)
+      return unless CDO.rack_env
       safety_dimensions = [
         {name: 'Environment', value: CDO.rack_env},
         {name: 'PromptVersion', value: get_safety_system_prompt_version},
@@ -178,6 +179,7 @@ module AichatSafetyHelper
     end
 
     private def report_openai_safety_latency(latency, num_attempts)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
@@ -196,6 +198,7 @@ module AichatSafetyHelper
     end
 
     private def report_detailed_latency(latency, output_type, role)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
@@ -214,6 +217,7 @@ module AichatSafetyHelper
     end
 
     private def report_token_usage(count, output_type, role)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
@@ -232,6 +236,7 @@ module AichatSafetyHelper
     end
 
     private def report_toxicity_detected(output_type, role)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
