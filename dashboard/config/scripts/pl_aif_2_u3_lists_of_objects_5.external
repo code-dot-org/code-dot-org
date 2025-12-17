@@ -3,34 +3,38 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Arrays 
+# List of Objects
 
-#### When you build web apps, you often need to keep track of multiple related pieces of information, like a list of items, scores, or usernames. Instead of creating a separate variable for each item, we can create an **array.**
+#### To get comfortable working with data in JavaScript, it helps to understand how information is organized when we store multiple related items. This is done with an **array of objects**.
 
+#### In the example below, **supplies is an array**, meaning it’s a list that holds multiple items.
 
-
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 An <strong>Array</strong> is a special kind of variable that stores an ordered list of related values (such as numbers, words, or images).
-</p>
-</div>
-
+#### Each of those items is an **object**, and every object represents one record. In this case, one classroom supply.
 ---
 
-<img src="https://images.code.org/54347b8b347d0bc1c0ef7c83776a81bc-image-1765299269132.png" alt="example arrays" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<img src="https://images.code.org/c5a7e0009b56ddb7354fac9fdbf65bf8-image-1766003842988.png" alt="example array of objects" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
-#### Think of it like a container that holds multiple items in a specific order.
+## How to interpret this structure:
 
+- #### The array (`supplies`) is the entire dataset — a list of all supply records.
 
-- #### Each item has a position number called an **index**.
-- #### Index numbering begins with 0.
+- #### Each object inside the array represents a single supply item.
+
+- #### The object’s properties (`id`, `name`, `location`) describe different pieces of information about that item.
+
+- #### For example,
+
+	- #### `{ id: 103, name: "Stapler", location: "Desk 1" }`
+tells us that the item with ID 3 is a Stapler, stored in Desk 1.
+
+#### This structure is extremely common in real-world data: a dataset (the array) made up of many individual records (the objects), each with fields that describe them.
 
 
 ---
 
 ## Next up
 
-#### Let's see what this looks like in code! 
-
+#### Let's use AI to generate a array with 5 objects and practice updating an app. 
 
 
 
