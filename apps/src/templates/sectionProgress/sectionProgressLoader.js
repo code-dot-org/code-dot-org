@@ -18,7 +18,6 @@ import {
   setCurrentView,
   finishLoadingProgress,
   addDataByUnit,
-  startRefreshingProgress,
   finishRefreshingProgress,
 } from './sectionProgressRedux';
 
@@ -40,10 +39,10 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
     state.currentView !== ViewType.STANDARDS
   ) {
     if (state.isRefreshingProgress) {
-      return;
+      return Promise.resolve();
     }
-    // Continue displaying the UI while updating the data
-    getStore().dispatch(startRefreshingProgress());
+    // // Data already exists, just return resolved promise
+    return Promise.resolve();
   } else {
     getStore().dispatch(startLoadingProgress());
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
@@ -109,30 +108,40 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
 
   // Combine and transform the data
   requests.push(scriptRequest);
-  return Promise.all(requests).then(() => {
-    logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
-      sectionId,
-      scriptId,
-      progressLatencyMs,
-      structureLatencyMs,
+  return Promise.all(requests)
+    .then(() => {
+      logToCloud.addPageAction(
+        logToCloud.PageAction.LoadScriptProgressFinished,
+        {
+          sectionId,
+          scriptId,
+          progressLatencyMs,
+          structureLatencyMs,
+        }
+      );
+
+      sectionProgress.studentLessonProgressByUnit = {
+        ...sectionProgress.studentLessonProgressByUnit,
+        [scriptId]: lessonProgressForSection(
+          sectionProgress.studentLevelProgressByUnit[scriptId] || [],
+          sectionProgress.unitDataByUnit[scriptId].lessons
+        ),
+      };
+      getStore().dispatch(addDataByUnit(sectionProgress));
+      getStore().dispatch(finishLoadingProgress());
+      getStore().dispatch(finishRefreshingProgress());
+
+      if (sectionProgress.unitDataByUnit[scriptId].hasStandards) {
+        getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
+        getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
+      }
+    })
+    .catch(error => {
+      console.error('Error loading unit progress:', error);
+      getStore().dispatch(finishLoadingProgress());
+      getStore().dispatch(finishRefreshingProgress());
+      throw error;
     });
-
-    sectionProgress.studentLessonProgressByUnit = {
-      ...sectionProgress.studentLessonProgressByUnit,
-      [scriptId]: lessonProgressForSection(
-        sectionProgress.studentLevelProgressByUnit[scriptId] || [],
-        sectionProgress.unitDataByUnit[scriptId].lessons
-      ),
-    };
-    getStore().dispatch(addDataByUnit(sectionProgress));
-    getStore().dispatch(finishLoadingProgress());
-    getStore().dispatch(finishRefreshingProgress());
-
-    if (sectionProgress.unitDataByUnit[scriptId].hasStandards) {
-      getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
-      getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
-    }
-  });
 }
 
 function postProcessDataByScript(scriptData, includeBonusLevels) {

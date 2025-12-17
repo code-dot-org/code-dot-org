@@ -92,8 +92,8 @@ function SectionProgressV2({
     unitData,
     isLoadingProgress,
     isRefreshingProgress,
-    loadedData,
-    setLoadedData,
+    loadedData.scriptId,
+    loadedData.sectionId,
   ]);
 
   const isViewingValidatedLevel = React.useMemo(() => {
