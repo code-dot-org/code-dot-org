@@ -140,131 +140,161 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     end
   end
 
-  test "cfu_levels endpoint returns CFU levels from lesson" do
-    # Create levels
-    cfu_level = create(:level, name: 'CFU Level 1', type: 'Multi')
-    regular_level = create(:level, name: 'Regular Level', type: 'Multi')
+  describe 'GET #cfu_levels' do
+    subject(:get_cfu_levels) {get :cfu_levels, params: {lesson_id: lesson_id}}
 
-    # Create script levels with progression attribute
-    cfu_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Practice', levels: [regular_level])
+    let(:lesson_id) {lesson1.id}
+    let(:response_data) {JSON.parse(response.body)}
+    let(:cfu_levels_data) {response_data['cfu_levels']}
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+    context 'with invalid lesson_id' do
+      let(:lesson_id) {99999}
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    cfu_levels = response_data['cfu_levels']
+      it 'returns error' do
+        get_cfu_levels
 
-    assert_equal 1, cfu_levels.length
-    cfu_data = cfu_levels.first
-    assert_equal cfu_level.id, cfu_data['id']
-    assert_equal 'CFU Level 1', cfu_data['name']
-    assert_equal 'CFU Level 1', cfu_data['display_name']
-    assert_equal 'Multi', cfu_data['type']
-    assert_equal cfu_script_level.id, cfu_data['script_level_id']
-    assert_equal 'Check Your Understanding', cfu_data['progression']
-    refute_nil cfu_data['progression_display_name']
-  end
+        _(response).must_be :bad_request?
+        _(response_data['error']).must_include "Can't find Lesson id=99999"
+      end
+    end
 
-  test "cfu_levels endpoint matches both Check Your Understanding and Check For Understanding" do
-    # Test both progression variants
-    cfu_level1 = create(:level, name: 'CFU Level 1', type: 'Multi')
-    cfu_level2 = create(:level, name: 'CFU Level 2', type: 'Multi')
+    context 'when no CFU levels exist' do
+      let!(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
 
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level1])
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check For Understanding', levels: [cfu_level2])
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Practice', levels: [regular_level])
+      end
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+      it 'returns empty array' do
+        get_cfu_levels
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    cfu_levels = response_data['cfu_levels']
+        _(response).must_be :ok?
+        _(cfu_levels_data).must_equal []
+      end
+    end
 
-    assert_equal 2, cfu_levels.length
-    cfu_ids = cfu_levels.map {|l| l['id']}
-    assert_includes cfu_ids, cfu_level1.id
-    assert_includes cfu_ids, cfu_level2.id
-  end
+    context 'when script_level has no progression' do
+      let!(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
 
-  test "cfu_levels endpoint returns empty array when no CFU levels exist" do
-    regular_level = create(:level, name: 'Regular Level', type: 'Multi')
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Practice', levels: [regular_level])
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: nil, levels: [regular_level])
+      end
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+      it 'returns empty array' do
+        get_cfu_levels
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    assert_equal [], response_data['cfu_levels']
-  end
+        _(response).must_be :ok?
+        _(cfu_levels_data).must_equal []
+      end
+    end
 
-  test "cfu_levels endpoint returns empty array when script_level has no progression" do
-    regular_level = create(:level, name: 'Regular Level', type: 'Multi')
-    create(:script_level, script: @unit, lesson: @lesson1, progression: nil, levels: [regular_level])
+    context 'when lesson has CFU levels' do
+      let!(:cfu_level) {create(:level, name: 'CFU Level 1', type: 'Multi')}
+      let!(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
+      let!(:cfu_script_level) do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+      end
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Practice', levels: [regular_level])
+      end
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    assert_equal [], response_data['cfu_levels']
-  end
+      it 'returns only CFU levels' do
+        get_cfu_levels
 
-  test "cfu_levels endpoint returns error for invalid lesson_id" do
-    get :cfu_levels, params: {lesson_id: 99999}
+        _(response).must_be :ok?
+        _(cfu_levels_data.length).must_equal 1
 
-    assert_response :bad_request
-    response_data = JSON.parse(response.body)
-    assert_includes response_data['error'], "Can't find Lesson id=99999"
-  end
+        cfu_data = cfu_levels_data.first
+        _(cfu_data['id']).must_equal cfu_level.id
+        _(cfu_data['name']).must_equal 'CFU Level 1'
+        _(cfu_data['display_name']).must_equal 'CFU Level 1'
+        _(cfu_data['type']).must_equal 'Multi'
+        _(cfu_data['script_level_id']).must_equal cfu_script_level.id
+        _(cfu_data['progression']).must_equal 'Check Your Understanding'
+        _(cfu_data['progression_display_name']).wont_be_nil
+      end
+    end
 
-  test "cfu_levels endpoint handles multiple levels in a script_level" do
-    # Create multiple levels for the same script_level
-    cfu_level1 = create(:level, name: 'CFU Level 1', type: 'Multi')
-    cfu_level2 = create(:level, name: 'CFU Level 2', type: 'Multi')
+    context 'when lesson has both progression variants' do
+      let!(:cfu_level1) {create(:level, name: 'CFU Level 1', type: 'Multi')}
+      let!(:cfu_level2) {create(:level, name: 'CFU Level 2', type: 'Multi')}
 
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level1, cfu_level2])
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level1])
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check For Understanding', levels: [cfu_level2])
+      end
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+      it 'returns both Check Your Understanding and Check For Understanding' do
+        get_cfu_levels
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    cfu_levels = response_data['cfu_levels']
+        _(response).must_be :ok?
+        _(cfu_levels_data.length).must_equal 2
 
-    assert_equal 2, cfu_levels.length
-    cfu_ids = cfu_levels.map {|l| l['id']}
-    assert_includes cfu_ids, cfu_level1.id
-    assert_includes cfu_ids, cfu_level2.id
-  end
+        cfu_ids = cfu_levels_data.map {|l| l['id']}
+        _(cfu_ids).must_include cfu_level1.id
+        _(cfu_ids).must_include cfu_level2.id
+      end
+    end
 
-  test "cfu_levels endpoint includes all required fields" do
-    cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: 'CFU Display Name')
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+    context 'when script_level has multiple levels' do
+      let!(:cfu_level1) {create(:level, name: 'CFU Level 1', type: 'Multi')}
+      let!(:cfu_level2) {create(:level, name: 'CFU Level 2', type: 'Multi')}
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level1, cfu_level2])
+      end
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    cfu_data = response_data['cfu_levels'].first
+      it 'returns all levels in script_level' do
+        get_cfu_levels
 
-    refute_nil cfu_data['id']
-    refute_nil cfu_data['name']
-    refute_nil cfu_data['display_name']
-    refute_nil cfu_data['type']
-    refute_nil cfu_data['script_level_id']
-    refute_nil cfu_data['progression']
-    refute_nil cfu_data['progression_display_name']
-    assert_equal 'CFU Display Name', cfu_data['display_name']
-  end
+        _(response).must_be :ok?
+        _(cfu_levels_data.length).must_equal 2
 
-  test "cfu_levels endpoint uses level name as display_name when display_name is nil" do
-    cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: nil)
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+        cfu_ids = cfu_levels_data.map {|l| l['id']}
+        _(cfu_ids).must_include cfu_level1.id
+        _(cfu_ids).must_include cfu_level2.id
+      end
+    end
 
-    get :cfu_levels, params: {lesson_id: @lesson1.id}
+    context 'when level has display_name' do
+      let!(:cfu_level) {create(:level, name: 'CFU Level', type: 'Multi', display_name: 'CFU Display Name')}
 
-    assert_response :ok
-    response_data = JSON.parse(response.body)
-    cfu_data = response_data['cfu_levels'].first
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+      end
 
-    assert_equal 'CFU Level', cfu_data['display_name']
+      it 'includes all required fields' do
+        get_cfu_levels
+
+        _(response).must_be :ok?
+        cfu_data = cfu_levels_data.first
+
+        _(cfu_data['id']).wont_be_nil
+        _(cfu_data['name']).wont_be_nil
+        _(cfu_data['display_name']).must_equal 'CFU Display Name'
+        _(cfu_data['type']).wont_be_nil
+        _(cfu_data['script_level_id']).wont_be_nil
+        _(cfu_data['progression']).wont_be_nil
+        _(cfu_data['progression_display_name']).wont_be_nil
+      end
+    end
+
+    context 'when level has no display_name' do
+      let!(:cfu_level) {create(:level, name: 'CFU Level', type: 'Multi', display_name: nil)}
+
+      before do
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+      end
+
+      it 'uses level name as display_name' do
+        get_cfu_levels
+
+        _(response).must_be :ok?
+        cfu_data = cfu_levels_data.first
+
+        _(cfu_data['display_name']).must_equal 'CFU Level'
+      end
+    end
   end
 end
