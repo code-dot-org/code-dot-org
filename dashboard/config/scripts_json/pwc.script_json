@@ -4,13 +4,26 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "41c81e54-67fc-4663-87f3-bbf35731cb3e",
+          "notice": "This course is going away soon",
+          "details": "This course will be removed from Code.org on January 1, 2026. Visit our curriculum catalog to find recommended alternatives.",
+          "link": "https://studio.code.org/catalog",
+          "type": "failure",
+          "visibility": "Teacher and student",
+          "dismissible": true,
+          "buttonText": "View curriculum catalog"
+        }
+      ],
       "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:52 UTC",
+    "serialized_at": "2025-12-11 20:34:03 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -66,11 +66,7 @@ markdown <<MARKDOWN
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Define the top and bottom sections of a page.</td>
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;footer&gt;© 2025 My Site&lt;/footer&gt;</code></td>
     </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;section&gt;</code> / <code>&lt;article&gt;</code></td>
-      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Group related or self-contained content (like posts).</td>
-      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;section&gt;About Us&lt;/section&gt;</code></td>
-    </tr>
+    
     <tr>
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;strong&gt;</code> / <code>&lt;em&gt;</code></td>
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Emphasize or italicize important text.</td>
