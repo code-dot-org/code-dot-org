@@ -48,7 +48,7 @@ module Cdo
           metric_data: events
         )
       rescue => exception
-        Honeybadger.notify(exception)
+        Honeybadger.notify(exception, context: events)
       end
 
       def size(events)
