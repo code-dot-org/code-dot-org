@@ -5,10 +5,6 @@
 !pegasus/sites.v3/*
 !pegasus/sites.v3/**/*
 
-# placeholder image used by pegasus hoc and poste routes
-# TODO: use existing dashboard/app/assets/images/1x1.png instead
-pegasus/sites.v3/code.org/public/images/1x1.png
-
 # TODO: move pegasus/test/test_optimize.rb to lib/test or dashboard/test
 pegasus/sites.v3/code.org/public/images/animated-examples/flappy-game-space.gif
 pegasus/sites.v3/code.org/public/images/logo.png
