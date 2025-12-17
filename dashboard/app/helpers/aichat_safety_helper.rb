@@ -41,7 +41,7 @@ module AichatSafetyHelper
       raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
       body = JSON.parse(response.body)
-      token_count = body.dig('usage', 'completion_tokens') || 0
+      token_count = body.dig('usage', 'output_tokens') || 0
       report_token_usage(token_count, output_type, role)
 
       evaluation = body.dig("output", 0, "content", 0, "text")
@@ -62,7 +62,7 @@ module AichatSafetyHelper
         raise "OpenAI structured request failed with status #{response.code}: #{response.body}" unless response.success?
 
         body = JSON.parse(response.body)
-        token_count = body.dig('usage', 'completion_tokens') || 0
+        token_count = body.dig('usage', 'output_tokens') || 0
         report_token_usage(token_count, output_type, role)
 
         raw_content = body.dig("output", 0, "content", 0, "text")
