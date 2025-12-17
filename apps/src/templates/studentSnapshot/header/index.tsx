@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import React from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
@@ -94,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({
     state => state.currentUser.isSortedByFamilyName
   );
 
-  const sortedStudents = React.useMemo(() => {
+  const sortedStudents = useMemo(() => {
     return isSortedByFamilyName
       ? [...selectedStudents].sort(stringKeyComparator(['familyName', 'name']))
       : [...selectedStudents].sort(stringKeyComparator(['name', 'familyName']));
@@ -106,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({
     }
   }, [sortedStudents, selectedStudent, setSelectedStudentId]);
 
-  const studentOptions = React.useMemo(() => {
+  const studentOptions = useMemo(() => {
     return sortedStudents.map(student => ({
       value: student.id.toString(),
       text: getFullName(student),
@@ -114,23 +114,22 @@ const Header: React.FC<HeaderProps> = ({
   }, [sortedStudents]);
 
   // Find next and previous students based on position
-  const {previous: previousStudent, next: nextStudent} = findNavigationItems(
-    sortedStudents,
-    selectedStudent,
-    student => student.id
+  const {previous: previousStudent, next: nextStudent} = useMemo(
+    () => findNavigationItems(sortedStudents, selectedStudent, s => s.id),
+    [sortedStudents, selectedStudent]
   );
 
-  const handlePreviousStudent = () => {
+  const handlePreviousStudent = useCallback(() => {
     if (previousStudent) {
       setSelectedStudentId(previousStudent.id);
     }
-  };
+  }, [previousStudent, setSelectedStudentId]);
 
-  const handleNextStudent = () => {
+  const handleNextStudent = useCallback(() => {
     if (nextStudent) {
       setSelectedStudentId(nextStudent.id);
     }
-  };
+  }, [nextStudent, setSelectedStudentId]);
 
   return (
     <div className={styles.header}>
