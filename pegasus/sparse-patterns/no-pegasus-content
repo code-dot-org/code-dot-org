@@ -9,10 +9,6 @@
 # TODO: use existing dashboard/app/assets/images/1x1.png instead
 pegasus/sites.v3/code.org/public/images/1x1.png
 
-# used by pegasus-specific dcdo_mocking.feature UI test
-# TODO: remove once we no longer use DCDO flags in pegasus
-pegasus/sites.v3/code.org/public/test_dcdo.haml
-
 # TODO: move pegasus/test/test_optimize.rb to lib/test or dashboard/test
 pegasus/sites.v3/code.org/public/images/animated-examples/flappy-game-space.gif
 pegasus/sites.v3/code.org/public/images/logo.png
