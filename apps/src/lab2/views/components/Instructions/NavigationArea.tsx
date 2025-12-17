@@ -40,12 +40,12 @@ interface NavigationAreaProps {
   /** Optional on continue/finish callback. */
   onContinue?: () => void;
   /**
-   * How to render this navigation area. By default we render it with
-   * the 'full' text. So, 'Continue to Level 3', etc.
+   * How to render the text of this navigation area. By default we render it
+   * with the 'full' text. So, 'Continue to Level 3', etc.
    *
-   * 'simpleText': Renders with 'simpler' text (Continue, Finish, etc)
+   * 'simple': Renders with 'simpler' text (Continue, Finish, etc)
    */
-  variant?: 'simpleText';
+  textVariant?: 'simple';
 }
 
 /**
@@ -64,7 +64,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   overrideTheme,
   styleAsBubble = false,
   onContinue,
-  variant,
+  textVariant,
 }) => {
   const {
     id,
@@ -115,7 +115,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       : commonI18n.finish();
   });
 
-  // This supplies "simpler" text for the 'simpleText' variant of the buttons
+  // This supplies "simpler" text for the 'simple' text variant of the buttons
   const simpleText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
   // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
@@ -290,7 +290,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               type={type}
               color={color}
               iconRight={iconRight}
-              text={variant === 'simpleText' ? simpleText : text}
+              text={textVariant === 'simple' ? simpleText : text}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}
