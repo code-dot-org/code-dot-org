@@ -147,6 +147,10 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     let(:response_data) {JSON.parse(response.body)}
     let(:cfu_levels_data) {response_data['cfu_levels']}
 
+    let(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
+    let(:cfu_level1) {create(:level, name: 'CFU Level 1', type: 'Multi')}
+    let(:cfu_level2) {create(:level, name: 'CFU Level 2', type: 'Multi')}
+
     context 'with invalid lesson_id' do
       let(:lesson_id) {99999}
 
@@ -158,29 +162,17 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when no CFU levels exist' do
-      let!(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
-
-      before do
+    context 'when no CFU levels should be returned' do
+      it 'returns empty array for non-CFU progression' do
         create(:script_level, script: unit, lesson: lesson1, progression: 'Practice', levels: [regular_level])
-      end
-
-      it 'returns empty array' do
         get_cfu_levels
 
         _(response).must_be :ok?
         _(cfu_levels_data).must_equal []
       end
-    end
 
-    context 'when script_level has no progression' do
-      let!(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
-
-      before do
+      it 'returns empty array when progression is nil' do
         create(:script_level, script: unit, lesson: lesson1, progression: nil, levels: [regular_level])
-      end
-
-      it 'returns empty array' do
         get_cfu_levels
 
         _(response).must_be :ok?
@@ -189,24 +181,22 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     end
 
     context 'when lesson has CFU levels' do
-      let!(:cfu_level) {create(:level, name: 'CFU Level 1', type: 'Multi')}
-      let!(:regular_level) {create(:level, name: 'Regular Level', type: 'Multi')}
       let!(:cfu_script_level) do
-        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+        create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level1])
       end
 
       before do
         create(:script_level, script: unit, lesson: lesson1, progression: 'Practice', levels: [regular_level])
       end
 
-      it 'returns only CFU levels' do
+      it 'returns only CFU levels with correct data' do
         get_cfu_levels
 
         _(response).must_be :ok?
         _(cfu_levels_data.length).must_equal 1
 
         cfu_data = cfu_levels_data.first
-        _(cfu_data['id']).must_equal cfu_level.id
+        _(cfu_data['id']).must_equal cfu_level1.id
         _(cfu_data['name']).must_equal 'CFU Level 1'
         _(cfu_data['display_name']).must_equal 'CFU Level 1'
         _(cfu_data['type']).must_equal 'Multi'
@@ -216,16 +206,11 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when lesson has both progression variants' do
-      let!(:cfu_level1) {create(:level, name: 'CFU Level 1', type: 'Multi')}
-      let!(:cfu_level2) {create(:level, name: 'CFU Level 2', type: 'Multi')}
-
-      before do
+    context 'with multiple CFU levels' do
+      it 'returns both progression variants' do
         create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level1])
         create(:script_level, script: unit, lesson: lesson1, progression: 'Check For Understanding', levels: [cfu_level2])
-      end
 
-      it 'returns both Check Your Understanding and Check For Understanding' do
         get_cfu_levels
 
         _(response).must_be :ok?
@@ -235,17 +220,10 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
         _(cfu_ids).must_include cfu_level1.id
         _(cfu_ids).must_include cfu_level2.id
       end
-    end
 
-    context 'when script_level has multiple levels' do
-      let!(:cfu_level1) {create(:level, name: 'CFU Level 1', type: 'Multi')}
-      let!(:cfu_level2) {create(:level, name: 'CFU Level 2', type: 'Multi')}
-
-      before do
+      it 'returns all levels in a single script_level' do
         create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level1, cfu_level2])
-      end
 
-      it 'returns all levels in script_level' do
         get_cfu_levels
 
         _(response).must_be :ok?
@@ -257,43 +235,25 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       end
     end
 
-    context 'when level has display_name' do
-      let!(:cfu_level) {create(:level, name: 'CFU Level', type: 'Multi', display_name: 'CFU Display Name')}
-
-      before do
+    context 'with display_name handling' do
+      it 'uses display_name when present' do
+        cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: 'CFU Display Name')
         create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
-      end
 
-      it 'includes all required fields' do
         get_cfu_levels
 
         _(response).must_be :ok?
-        cfu_data = cfu_levels_data.first
-
-        _(cfu_data['id']).wont_be_nil
-        _(cfu_data['name']).wont_be_nil
-        _(cfu_data['display_name']).must_equal 'CFU Display Name'
-        _(cfu_data['type']).wont_be_nil
-        _(cfu_data['script_level_id']).wont_be_nil
-        _(cfu_data['progression']).wont_be_nil
-        _(cfu_data['progression_display_name']).wont_be_nil
+        _(cfu_levels_data.first['display_name']).must_equal 'CFU Display Name'
       end
-    end
 
-    context 'when level has no display_name' do
-      let!(:cfu_level) {create(:level, name: 'CFU Level', type: 'Multi', display_name: nil)}
-
-      before do
+      it 'falls back to name when display_name is nil' do
+        cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: nil)
         create(:script_level, script: unit, lesson: lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
-      end
 
-      it 'uses level name as display_name' do
         get_cfu_levels
 
         _(response).must_be :ok?
-        cfu_data = cfu_levels_data.first
-
-        _(cfu_data['display_name']).must_equal 'CFU Level'
+        _(cfu_levels_data.first['display_name']).must_equal 'CFU Level'
       end
     end
   end
