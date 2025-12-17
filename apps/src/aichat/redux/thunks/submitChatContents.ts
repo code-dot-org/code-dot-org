@@ -63,9 +63,12 @@ export const submitChatContents = createAsyncThunk(
   ) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const chatEventsCurrent = state.aichat.chatEventsCurrent;
+    const {
+      progress: {currentLevelId, scriptId, viewAsUserId},
+      lab: {channel},
+      aichat: {chatEventsCurrent},
+    } = state;
     const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
-
     const {
       text,
       hiddenContext,
@@ -94,9 +97,9 @@ export const submitChatContents = createAsyncThunk(
 
     const aichatContext: AichatContext = {
       clientType,
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
+      scriptId,
+      currentLevelId: parseInt(currentLevelId || ''),
+      channelId: channel?.id,
     };
 
     // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
@@ -234,7 +237,7 @@ export const submitChatContents = createAsyncThunk(
                 chatMessageText: message.chatMessageText,
               })
             );
-            logChatEvent(message, state.progress.viewAsUserId);
+            logChatEvent(message, viewAsUserId);
           } else {
             dispatch(addChatEvent(message));
           }
@@ -245,7 +248,7 @@ export const submitChatContents = createAsyncThunk(
               status: message.status,
             })
           );
-          logChatEvent(message, state.progress.viewAsUserId);
+          logChatEvent(message, viewAsUserId);
         }
       });
     } catch (error) {
@@ -253,7 +256,7 @@ export const submitChatContents = createAsyncThunk(
         error as Error,
         newUserMessage,
         dispatch,
-        state.progress.viewAsUserId
+        viewAsUserId
       );
     }
   }
