@@ -23,7 +23,7 @@ import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
 import AiDiffChatHeader from './AiDiffChatHeader';
 import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {defaultThreadTitle} from './constants';
+import {DEFAULT_THREAD_TITLE} from './constants';
 import {
   contextPrompts,
   APCSP_DUMMY_CREATE,
@@ -96,7 +96,7 @@ interface AiDiffChatProps {
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
   threadMessages = [],
-  threadTitle = defaultThreadTitle,
+  threadTitle = DEFAULT_THREAD_TITLE,
   setThreadTitle,
   scriptName,
   chatResponseCallback = () => {},
@@ -274,7 +274,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
       if (
         setThreadTitle &&
-        (!threadTitle || threadTitle === defaultThreadTitle)
+        (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
       ) {
         setThreadTitle(message.slice(0, 100));
       }
@@ -290,7 +290,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     (prompt: ChatPrompt) => {
       if (
         setThreadTitle &&
-        (!threadTitle || threadTitle === defaultThreadTitle)
+        (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
       ) {
         setThreadTitle(prompt.label);
       }

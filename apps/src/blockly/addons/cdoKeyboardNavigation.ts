@@ -2,11 +2,17 @@ import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import './shortcutMenuStyles.scss';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
 import {
   overrideOptionWeight as overrideContextMenuOptionWeight,
   unregisterCrossTabPluginOptions,
   WeightOptions as ContextMenuWeightOptions,
 } from './contextMenu';
+
+// Store the keyboard listener reference for cleanup
+let slashKeyListener: ((event: KeyboardEvent) => void) | null = null;
 
 let stylesRegistered = false;
 
@@ -37,6 +43,7 @@ export function initializeKeyboardNavigation(
   isDarkTheme: boolean
 ) {
   if (Blockly.KeyboardNavigation) {
+    disableSlashKeyListener();
     Blockly.KeyboardNavigation.dispose();
   }
   unregisterCrossTabPluginOptions();
@@ -47,6 +54,7 @@ export function initializeKeyboardNavigation(
   // Re-register context menu options with our custom weights.
   reorderContextMenu();
   enableShortcutModalEscape();
+  enableSlashKeyListener();
 }
 
 export function initializeAdditionalWorkspace(
@@ -105,5 +113,52 @@ function reorderContextMenu() {
   };
   for (const [option, weight] of Object.entries(menuWeightMap)) {
     overrideContextMenuOptionWeight(option, weight);
+  }
+}
+
+/**
+ * Handles the '/' key press event and sends analytics.
+ */
+function handleSlashKeyPress(event: KeyboardEvent) {
+  if (event.key === '/') {
+    analyticsReporter.sendEvent(
+      EVENTS.BLOCKLY_SLASH_KEY_PRESSED,
+      {},
+      PLATFORMS.STATSIG
+    );
+  }
+}
+
+/**
+ * Enables the '/' key listener on the blockly-div element.
+ * Removes any existing listener before adding a new one.
+ */
+function enableSlashKeyListener() {
+  const blocklyDiv = document.getElementById('blockly-div');
+  if (!blocklyDiv) {
+    return;
+  }
+
+  // Remove existing listener if present
+  if (slashKeyListener) {
+    blocklyDiv.removeEventListener('keydown', slashKeyListener);
+  }
+
+  // Create and store new listener
+  slashKeyListener = handleSlashKeyPress;
+  blocklyDiv.addEventListener('keydown', slashKeyListener);
+}
+
+/**
+ * Removes the '/' key listener from the blockly-div element.
+ * This is automatically called when re-initializing keyboard navigation,
+ * but can also be called manually if needed during cleanup (e.g., when
+ * unmounting a component or disabling keyboard navigation features).
+ */
+export function disableSlashKeyListener() {
+  const blocklyDiv = document.getElementById('blockly-div');
+  if (blocklyDiv && slashKeyListener) {
+    blocklyDiv.removeEventListener('keydown', slashKeyListener);
+    slashKeyListener = null;
   }
 }

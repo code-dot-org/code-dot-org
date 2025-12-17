@@ -571,6 +571,7 @@ const EVENTS = {
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
+  BLOCKLY_SLASH_KEY_PRESSED: 'Blockly Slash Key Pressed',
 
   // Teacher Navigation V2
   NAVIGATE_TO_SECTION: 'Local Nav Class Section Selected',

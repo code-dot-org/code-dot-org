@@ -1,17 +1,51 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import React, {useState} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import {Student} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import LessonSelector, {
   LessonOption,
 } from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '@cdo/apps/templates/teacherDashboardShared/UnitSelectorV2';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {Student} from '../../progress/progressTypes';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 import styles from './header.module.scss';
+
+/**
+ * Helper function to find the previous and next items in an array based
+ * on the selected item.
+ * @param items - Array of items to search through
+ * @param selectedItem - The currently selected item
+ * @param getId - Function to extract the ID from an item for comparison
+ * @returns Object containing currentIndex, previous, and next items
+ */
+function findNavigationItems<T>(
+  items: T[] | null | undefined,
+  selectedItem: T | null | undefined,
+  getId: (item: T) => number | string
+): {
+  currentIndex: number;
+  previous: T | null;
+  next: T | null;
+} {
+  let currentIndex = -1;
+  let previous: T | null = null;
+  let next: T | null = null;
+
+  if (items && Array.isArray(items) && selectedItem) {
+    currentIndex = items.findIndex(item => getId(item) === getId(selectedItem));
+    previous = currentIndex > 0 ? items[currentIndex - 1] : null;
+    next =
+      currentIndex >= 0 && currentIndex < items.length - 1
+        ? items[currentIndex + 1]
+        : null;
+  }
+
+  return {currentIndex, previous, next};
+}
 
 interface HeaderProps {
   lessons: LessonOption[];
@@ -32,32 +66,15 @@ const Header: React.FC<HeaderProps> = ({
   setSelectedStudentId,
   hasUnnumberedLessons = false,
 }) => {
-  const [selectedShowStudentsBy, setSelectedShowStudentsBy] =
-    useState<string>('');
-
   const selectedLesson =
     lessons?.find(lesson => lesson.id === selectedLessonId) || null;
 
   // Find next and previous lessons based on position
-  let currentLessonIndex = -1;
-  let previousLesson = null;
-  let nextLesson = null;
-  if (lessons && Array.isArray(lessons) && selectedLesson) {
-    currentLessonIndex = lessons.findIndex(
-      lesson => lesson.id === selectedLesson.id
-    );
-    previousLesson =
-      currentLessonIndex > 0 ? lessons[currentLessonIndex - 1] : null;
-    nextLesson =
-      currentLessonIndex >= 0 && currentLessonIndex < lessons.length - 1
-        ? lessons[currentLessonIndex + 1]
-        : null;
-  }
-
-  const showStudentsByOptions = [
-    {value: 'lastName', text: 'Last Name'},
-    {value: 'firstName', text: 'First Name'},
-  ];
+  const {previous: previousLesson, next: nextLesson} = findNavigationItems(
+    lessons,
+    selectedLesson,
+    lesson => lesson.id
+  );
 
   const handlePreviousLesson = () => {
     if (previousLesson) {
@@ -71,28 +88,48 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
-  const handlePreviousStudent = () => {
-    alert('Previous student clicked!');
-  };
+  const {selectedStudents, selectedSectionId, selectedSectionUnitName} =
+    useAppSelector(state => state.teacherSections);
+  const isSortedByFamilyName = useAppSelector(
+    state => state.currentUser.isSortedByFamilyName
+  );
 
-  const handleNextStudent = () => {
-    alert('Next student clicked!');
-  };
-
-  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+  const sortedStudents = useMemo(() => {
+    return isSortedByFamilyName
+      ? [...selectedStudents].sort(stringKeyComparator(['familyName', 'name']))
+      : [...selectedStudents].sort(stringKeyComparator(['name', 'familyName']));
+  }, [selectedStudents, isSortedByFamilyName]);
 
   React.useEffect(() => {
-    if (selectedStudents.length > 0 && selectedStudent === undefined) {
-      setSelectedStudentId(selectedStudents[0].id);
+    if (sortedStudents.length > 0 && selectedStudent === undefined) {
+      setSelectedStudentId(sortedStudents[0].id);
     }
-  }, [selectedStudents, selectedStudent, setSelectedStudentId]);
+  }, [sortedStudents, selectedStudent, setSelectedStudentId]);
 
-  const studentOptions = React.useMemo(() => {
-    return selectedStudents.map(student => ({
+  const studentOptions = useMemo(() => {
+    return sortedStudents.map(student => ({
       value: student.id.toString(),
       text: getFullName(student),
     }));
-  }, [selectedStudents]);
+  }, [sortedStudents]);
+
+  // Find next and previous students based on position
+  const {previous: previousStudent, next: nextStudent} = useMemo(
+    () => findNavigationItems(sortedStudents, selectedStudent, s => s.id),
+    [sortedStudents, selectedStudent]
+  );
+
+  const handlePreviousStudent = useCallback(() => {
+    if (previousStudent) {
+      setSelectedStudentId(previousStudent.id);
+    }
+  }, [previousStudent, setSelectedStudentId]);
+
+  const handleNextStudent = useCallback(() => {
+    if (nextStudent) {
+      setSelectedStudentId(nextStudent.id);
+    }
+  }, [nextStudent, setSelectedStudentId]);
 
   return (
     <div className={styles.header}>
@@ -136,13 +173,10 @@ const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div className={styles.headerColumn}>
-        <SimpleDropdown
-          labelText="Show students by"
-          name="showStudentsBy"
-          items={showStudentsByOptions}
-          selectedValue={selectedShowStudentsBy}
-          onChange={event => setSelectedShowStudentsBy(event.target.value)}
-          placeholder="Select an option"
+        <SortByNameDropdown
+          sectionId={selectedSectionId ?? undefined}
+          unitName={selectedSectionUnitName || undefined}
+          source="STUDENT_SNAPSHOT"
           className={styles.dropdown}
         />
         <SimpleDropdown
@@ -153,6 +187,8 @@ const Header: React.FC<HeaderProps> = ({
           onChange={event => setSelectedStudentId(Number(event.target.value))}
           placeholder="Select a student"
           className={styles.dropdown}
+          size="s"
+          color="gray"
         />
         <div className={styles.buttonGroup}>
           <Button
@@ -161,11 +197,13 @@ const Header: React.FC<HeaderProps> = ({
             onClick={handlePreviousStudent}
             color="gray"
             type="secondary"
+            disabled={!previousStudent || !selectedStudents?.length}
           />
           <Button
             className={styles.button}
             text="Next student >"
             onClick={handleNextStudent}
+            disabled={!nextStudent || !selectedStudents?.length}
           />
         </div>
       </div>
