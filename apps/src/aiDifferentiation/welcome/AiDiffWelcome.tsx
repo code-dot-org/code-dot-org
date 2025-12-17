@@ -12,6 +12,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
+
 import Confetti from 'react-dom-confetti';
 
 import {
