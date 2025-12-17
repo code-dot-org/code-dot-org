@@ -3,36 +3,39 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Arrays 
+# Arrays in Objects
 
-#### When you build web apps, you often need to keep track of multiple related pieces of information, like a list of items, scores, or usernames. Instead of creating a separate variable for each item, we can create an **array.**
+#### Now that you’ve looked at how objects group related information under a single name, it can be useful to examine how that same information can be organized using parallel arrays.
+
+#### This provides a clear contrast between managing multiple separate data lists and the cleaner structure that objects offer.
+
+---
+
+<img src="https://images.code.org/8199feaed9f8c4f10129474b22065366-image-1765990868244.png" alt="example arrays" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
+## Example
+
+#### With parallel arrays, each array represents one property, and the values at the same index correspond to the same real-world item.
+
+#### In the example above, index 0 in a **names** array, a **goals** array, and a **wcWin** array each provide a different detail about the same object.
 
 
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 An <strong>Array</strong> is a special kind of variable that stores an ordered list of related values (such as numbers, words, or images).
-</p>
+  <div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #efe7f8; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #3b0066;">
+      Instead of keeping track of several arrays and ensuring their indexes stay synchronized, an object allows all related properties to live together in one place.
+    </p>
+  </div>
+
 </div>
 
----
-
-<img src="https://images.code.org/54347b8b347d0bc1c0ef7c83776a81bc-image-1765299269132.png" alt="example arrays" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
-
-#### Think of it like a container that holds multiple items in a specific order.
-
-
-- #### Each item has a position number called an **index**.
-- #### Index numbering begins with 0.
-
-
----
 
 ## Next up
 
-#### Let's see what this looks like in code! 
-
-
-
-
+#### In the next level, you will practice creating an object out of three parallel arrays. 
 
 MARKDOWN
