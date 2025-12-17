@@ -12911,7 +12911,17 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
             this.jsSocketAndMark(indentDepth, node.update, depth + 1, 10, null, ['for-statement-update']);
           }
         }
-        return this.mark(indentDepth, node.body, depth + 1);
+        if (node.body.type === 'BlockStatement') {
+          return this.mark(indentDepth, node.body, depth + 1);
+        } else {
+          this.addIndent({
+            bounds: this.getBounds(node.body),
+            depth: depth + 1,
+            prefix: this.getIndentPrefix(this.getBounds(node.body), indentDepth)
+          });
+          return this.mark(indentDepth + DEFAULT_INDENT_DEPTH.length, node.body, depth + 1);
+        }
+        break;
       case 'BlockStatement':
         prefix = this.getIndentPrefix(this.getBounds(node), indentDepth);
         indentDepth += prefix.length;
