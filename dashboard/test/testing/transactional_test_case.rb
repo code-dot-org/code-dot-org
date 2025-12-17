@@ -2,7 +2,6 @@
 require "active_support/concern"
 require "active_support/callbacks"
 
-require 'database_cleaner/active_record'
 require 'testing/setup_all_and_teardown_all'
 
 module ActiveSupport
@@ -16,25 +15,37 @@ module ActiveSupport
       included do
         class_attribute :use_transactional_test_case, instance_writer: false, default: false
 
-        DatabaseCleaner.strategy = :transaction
-        DatabaseCleaner.allow_remote_database_url = true
-
         setup_all do
-          DatabaseCleaner.start if use_transactional_test_case?
+          begin_transaction if use_transactional_test_case?
         end
 
         teardown_all do
-          DatabaseCleaner.clean if use_transactional_test_case?
+          rollback_transaction if use_transactional_test_case?
         end
+      end
 
-        def before_setup
-          DatabaseCleaner.start
-          super
-        end
+      def before_setup
+        begin_transaction
+        super
+      end
 
-        def after_teardown
-          super
-          DatabaseCleaner.clean
+      def after_teardown
+        super
+        rollback_transaction
+      end
+
+      # @see https://github.com/DatabaseCleaner/database_cleaner-active_record/blob/v2.1.0/lib/database_cleaner/active_record/transaction.rb#L6-L11
+      private def begin_transaction
+        # Hack to make sure that the connection is properly set up before cleaning
+        ActiveRecord::Base.connection.transaction {}
+
+        ActiveRecord::Base.connection.begin_transaction(joinable: false)
+      end
+
+      # @see https://github.com/DatabaseCleaner/database_cleaner-active_record/blob/v2.1.0/lib/database_cleaner/active_record/transaction.rb#L14-L19
+      private def rollback_transaction
+        ActiveRecord::Base.connection_pool.connections.each do |connection|
+          connection.rollback_transaction if connection.open_transactions > 0
         end
       end
     end
