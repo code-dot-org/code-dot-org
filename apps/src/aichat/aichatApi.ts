@@ -176,26 +176,23 @@ export async function postAichatCompletionMessage({
   maxPollingTimeMs?: number;
   streamCallbacks?: StreamCallbacks;
 }): Promise<CompletedChatMessage[]> {
-  maxPollingTimeMs =
-    maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
-
-  if (streamCallbacks) {
-    return streamAichatCompletionMessage({
-      newMessage,
-      storedMessages,
-      modelParameters,
-      aichatContext,
-      maxStreamTimeMs: maxPollingTimeMs,
-      streamCallbacks,
-    });
-  }
-
   const payload = {
     newMessage,
     storedMessages,
     modelParameters,
     aichatContext,
   };
+
+  maxPollingTimeMs =
+    maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;
+
+  if (streamCallbacks) {
+    return streamAichatCompletionMessage({
+      ...payload,
+      maxStreamTimeMs: maxPollingTimeMs,
+      streamCallbacks,
+    });
+  }
 
   const response = await HttpClient.post(
     paths.START_CHAT_COMPLETION_URL,
