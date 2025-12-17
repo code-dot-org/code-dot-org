@@ -9,4 +9,3 @@ export {sendAnalytics} from './sendAnalytics';
 export {submitChatContents} from './submitChatContents';
 export {submitTeacherFeedback} from './submitTeacherFeedback';
 export {updateAiCustomization} from './updateAiCustomization';
-export {fetchThreadMessages} from './fetchThreadMessages';
