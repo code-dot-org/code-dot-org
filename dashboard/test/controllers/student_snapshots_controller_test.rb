@@ -232,4 +232,46 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal true, response_entry['submitted']
     refute_nil response_entry['timestamp']
   end
+
+  test "cfu_responses endpoint returns sublevel responses for LevelGroup CFUs" do
+    # Create a LevelGroup CFU with a text-input sublevel.
+    sublevel = create(:free_response, name: 'CFU Text Sublevel')
+    level_group_dsl = <<~DSL
+      name 'CFU LevelGroup'
+      title 'CFU LevelGroup'
+      submittable 'true'
+
+      page
+      level '#{sublevel.name}'
+    DSL
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'cfu_level_group', dsl_text: level_group_dsl})
+
+    cfu_script_level = create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [level_group])
+
+    student = create(:student)
+    script = @unit
+
+    # Student submitted the LevelGroup and answered the sublevel.
+    create(:user_level, user: student, script: script, level: level_group, submitted: false)
+    create(:user_level, user: student, script: script, level: sublevel, level_source: create(:level_source, data: 'hello world'))
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    responses = response_data['cfu_responses']
+
+    assert_equal 1, responses.length
+    response_entry = responses.first
+    assert_equal level_group.id, response_entry['level_id']
+    assert_equal cfu_script_level.id, response_entry['script_level_id']
+
+    assert_equal 'LevelGroup', response_entry['response']['type']
+    assert_equal 1, response_entry['response']['level_results'].length
+
+    sublevel_result = response_entry['response']['level_results'].first
+    assert_equal sublevel.id, sublevel_result['level_id']
+    assert_equal 'FreeResponse', sublevel_result['type']
+    assert_equal 'hello world', sublevel_result['student_result']
+  end
 end

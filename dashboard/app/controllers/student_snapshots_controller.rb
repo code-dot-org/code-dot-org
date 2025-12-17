@@ -79,19 +79,25 @@ class StudentSnapshotsController < ApplicationController
 
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
-        user_level = UserLevel.where(user: student, script: script, level: level).
-          order(updated_at: :desc).first
-        student_answer = user_level&.level_source&.data
+        # CFUs can be a LevelGroup (collection of sublevels). In that case, the
+        # student's responses live on the sublevels, not on the parent itself.
+        if level.is_a?(LevelGroup)
+          cfu_responses_data << build_cfu_level_group_response(level, script_level, student, script)
+        else
+          user_level = UserLevel.where(user: student, script: script, level: level).
+            order(updated_at: :desc).first
+          student_answer = user_level&.level_source&.data
 
-        response_summary = summarize_cfu_level_result(level, student_answer)
+          response_summary = summarize_cfu_level_result(level, student_answer)
 
-        cfu_responses_data << {
-          level_id: level.id,
-          script_level_id: script_level.id,
-          response: response_summary,
-          submitted: user_level&.submitted,
-          timestamp: user_level&.updated_at
-        }
+          cfu_responses_data << {
+            level_id: level.id,
+            script_level_id: script_level.id,
+            response: response_summary,
+            submitted: user_level&.submitted,
+            timestamp: user_level&.updated_at
+          }
+        end
       end
     end
 
@@ -109,16 +115,21 @@ class StudentSnapshotsController < ApplicationController
   # This mirrors summarize_level_result from Api::V1::AssessmentsController
   # but without aggregated stats.
   private def summarize_cfu_level_result(level, student_answer)
-    level_result = {}
-
-    case level
-    when TextMatch, FreeResponse
-      level_result[:type] = "FreeResponse"
-    when Multi
-      level_result[:type] = "Multi"
-    when Match
-      level_result[:type] = "Match"
-    end
+    level_result = {
+      type: (
+        case level
+        when TextMatch, FreeResponse
+          "FreeResponse"
+        when Multi
+          "Multi"
+        when Match
+          "Match"
+        else
+          # For any unexpected level types, still return a stable shape.
+          level.type
+        end
+      )
+    }
 
     if student_answer
       case level
@@ -156,5 +167,39 @@ class StudentSnapshotsController < ApplicationController
     end
 
     level_result
+  end
+
+  # Builds a response object for a LevelGroup CFU by summarizing each sublevel.
+  private def build_cfu_level_group_response(level_group, script_level, student, script)
+    sublevels = level_group.levels
+    level_ids = ([level_group.id] + sublevels.map(&:id)).uniq
+
+    # Fetch latest UserLevels for the parent + all sublevels in one query.
+    user_levels = UserLevel.where(user: student, script: script, level_id: level_ids).
+      order(level_id: :asc, updated_at: :desc).to_a
+
+    latest_by_level_id = {}
+    user_levels.each do |ul|
+      latest_by_level_id[ul.level_id] ||= ul
+    end
+
+    parent_ul = latest_by_level_id[level_group.id]
+
+    sublevel_results = sublevels.map do |sublevel|
+      ul = latest_by_level_id[sublevel.id]
+      student_answer = ul&.level_source&.data
+      summarize_cfu_level_result(sublevel, student_answer).merge(level_id: sublevel.id)
+    end
+
+    {
+      level_id: level_group.id,
+      script_level_id: script_level.id,
+      response: {
+        type: "LevelGroup",
+        level_results: sublevel_results
+      },
+      submitted: parent_ul&.submitted,
+      timestamp: parent_ul&.updated_at
+    }
   end
 end
