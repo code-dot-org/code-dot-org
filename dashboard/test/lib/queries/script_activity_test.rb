@@ -151,22 +151,6 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal s1.script, Queries::ScriptActivity.primary_pl_unit(teacher)
   end
 
-  test 'user should prefer working on 20hour instead of hoc' do
-    # TODO figure out if we still need this test
-    skip
-
-    create_hourofcode_unit_and_levels
-    twenty_hour = Unit.twenty_hour_unit
-    hoc = Unit.find_by(name: 'hourofcode')
-
-    # do a level that is both in script 1 and hoc
-    [twenty_hour, hoc].each do |script|
-      UserScript.create! user: @user, script: script
-    end
-
-    assert_equal [twenty_hour, hoc], Queries::ScriptActivity.working_on_units(@user)
-  end
-
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
     real_script = Unit.starwars_unit
     fake_script = create(:script)
