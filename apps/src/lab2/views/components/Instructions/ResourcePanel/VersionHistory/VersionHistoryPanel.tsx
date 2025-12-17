@@ -111,7 +111,6 @@ const VersionHistoryPanel: React.FunctionComponent<
   const projectSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
-  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
@@ -474,7 +473,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           restoreDisabled={disabled || versionLoading}
           alwaysShowAutoSaves={alwaysShowAutoSaves}
         >
-          {isLatest && hasEdited && !viewAsUserId && (
+          {isLatest && !viewingOldVersion && !viewAsUserId && (
             <SaveVersionPanel
               projectSources={projectSources}
               onSuccess={handleSaveVersionSuccess}
@@ -492,10 +491,10 @@ const VersionHistoryPanel: React.FunctionComponent<
       viewAsUserId,
       restoreSelectedVersion,
       versionLoading,
-      hasEdited,
       projectSources,
       handleSaveVersionSuccess,
       alwaysShowAutoSaves,
+      viewingOldVersion,
     ]
   );
 
