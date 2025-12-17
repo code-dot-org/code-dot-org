@@ -64,15 +64,6 @@ export const HTMLPreview: React.FC = () => {
     state => state.lab2Project.viewingAiTutorVersion
   );
 
-  // The new preview is currently behind an experiment flag. We pass this flag
-  // through to the inner iframe via a query string so it knows whether or not to use the new preview.
-  const previewQueryString = useMemo(() => {
-    const useV2Preview = experiments.isEnabledAllowingQueryString(
-      experiments.WEBLAB2_PREVIEW_V2
-    );
-    return useV2Preview ? `?${experiments.WEBLAB2_PREVIEW_V2}=true` : '';
-  }, []);
-
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
@@ -415,7 +406,7 @@ export const HTMLPreview: React.FC = () => {
                   ? moduleStyles.desktopPreviewIframe
                   : moduleStyles.mobilePreviewIframe
               )}
-              src={`${previewUrl}${previewQueryString}`}
+              src={previewUrl}
             />
           </div>
         )}
