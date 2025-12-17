@@ -30,7 +30,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   personalizationData,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
-
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   const dispatch = useAppDispatch();
