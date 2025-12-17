@@ -39,8 +39,13 @@ interface NavigationAreaProps {
   styleAsBubble?: boolean;
   /** Optional on continue/finish callback. */
   onContinue?: () => void;
-  /** Whether or not to keep the text 'simple' */
-  variant?: 'small';
+  /**
+   * How to render this navigation area. By default we render it with
+   * the 'full' text. So, 'Continue to Level 3', etc.
+   *
+   * 'simpleText': Renders with 'simpler' text (Continue, Finish, etc)
+   */
+  variant?: 'simpleText';
 }
 
 /**
@@ -82,19 +87,37 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const validationSatisfied = useAppSelector(
     state => state.lab.validationState?.satisfied
   );
-  // Get the level number of the next level (in the progression)
-  const nextLevelNumber = useAppSelector(
-    state => getNextLevel(state)?.levelNumber
-  );
-  // Get the current main level (parent if it is a sublevel)
-  const currentLevel = useAppSelector(
-    state =>
-      getParentLevel(state)?.levelNumber || getCurrentLevel(state)?.levelNumber
-  );
   // Determine what level is next in the progression
   const hasNextLevel = useAppSelector(
     state => getNextLevel(state)?.id !== undefined
   );
+
+  // Construct the button text.
+  // For when we would go to another level, say 'Continue to Level {x}'
+  // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
+  // For when we are already at the end of a lesson, say 'Finish Lesson'
+  const text = useAppSelector(state => {
+    const currentLevelNumber =
+      getParentLevel(state)?.levelNumber || getCurrentLevel(state)?.levelNumber;
+    const nextLevelNumber = getNextLevel(state)?.levelNumber;
+
+    return hasNextLevel
+      ? // Determine if the next level is not the same as the current level so
+        // as to craft the 'Continue to Level X' button text
+        // Otherise we're going to the parent perhaps, so we just say 'Continue'
+        currentLevelNumber !== nextLevelNumber
+        ? commonI18n.continueToLevel({level: nextLevelNumber})
+        : commonI18n.continue()
+      : lessonCount > 1
+      ? // If there's no level after this one, print 'Finish Lesson' or 'Finish'
+        // depending on if there is another lesson in the unit
+        commonI18n.finishLesson()
+      : commonI18n.finish();
+  });
+
+  // This supplies "simpler" text for the 'simpleText' variant of the buttons
+  const simpleText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
+
   // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
   // only has one lesson. It's just 'Finish'!
   const lessonCount = useAppSelector(state => getLessonCount(state));
@@ -226,21 +249,6 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     return null;
   }
 
-  // Construct the button text.
-  // For when we would go to another level, say 'Continue to Level {x}'
-  // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
-  // For when we are already at the end of a lesson, say 'Finish Lesson'
-  const text = hasNextLevel
-    ? currentLevel !== nextLevelNumber
-      ? commonI18n.continueToLevel({level: nextLevelNumber})
-      : commonI18n.continue()
-    : lessonCount > 1
-    ? commonI18n.finishLesson()
-    : commonI18n.finish();
-
-  // This supplies "simpler" text for the 'small' variant of the buttons
-  const smallText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
-
   return (
     <div
       key={useMessageIndex + ' - ' + feedbackMessage}
@@ -282,7 +290,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               type={type}
               color={color}
               iconRight={iconRight}
-              text={variant === 'small' ? smallText : text}
+              text={variant === 'simpleText' ? simpleText : text}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}

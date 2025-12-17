@@ -50,7 +50,7 @@ const GuideInstructions: React.FunctionComponent<GuideInstructionsProps> = ({
         hasRun={hasRun}
         hasEdited={hasEdited}
         hideContinueIfDisabled={true}
-        variant={'small'}
+        variant={'simpleText'}
       />
     </Guide>
   );
