@@ -7,7 +7,7 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
-import {defaultThreadTitle} from './constants';
+import {DEFAULT_THREAD_TITLE} from './constants';
 import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {
   ChatItem,
@@ -38,7 +38,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
-  const [threadTitle, setThreadTitle] = useState<string>(defaultThreadTitle);
+  const [threadTitle, setThreadTitle] = useState<string>(DEFAULT_THREAD_TITLE);
   const [keyId, setKeyId] = useState<number>(0);
   const [initialThreadPrompt, setInitialThreadPrompt] =
     useState<ChatPrompt | null>(null);
@@ -81,7 +81,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       if (thread === 0) {
         setThreadMessages([]);
         setThreadId(thread);
-        setThreadTitle(defaultThreadTitle);
+        setThreadTitle(DEFAULT_THREAD_TITLE);
         // changing the keyId resets the component state.
         // if key is already 0 (i.e. starting a new thread from a new thread)
         // then we need to alternate to a different key value to reset state
