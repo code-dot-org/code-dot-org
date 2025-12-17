@@ -40,6 +40,8 @@ import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
 
+type PendingChatMessageWithUpdateId = PendingChatMessage & {updateId: string};
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -62,6 +64,8 @@ export const submitChatContents = createAsyncThunk(
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const chatEventsCurrent = state.aichat.chatEventsCurrent;
+    const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
+
     const {
       text,
       hiddenContext,
@@ -73,6 +77,10 @@ export const submitChatContents = createAsyncThunk(
       responseCallback,
       logLevelActivity,
     } = newUserMessageInput;
+
+    if (logLevelActivity) {
+      logLevelActivity();
+    }
 
     const isStreaming =
       experiments.isEnabledAllowingQueryString('ai-chat-stream') &&
@@ -106,7 +114,7 @@ export const submitChatContents = createAsyncThunk(
     }
 
     // Create the new user ChatMessage and add to chatEventsCurrent.
-    const newUserMessage: PendingChatMessage & {updateId: string} = {
+    const newUserMessage: PendingChatMessageWithUpdateId = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText,
@@ -117,11 +125,9 @@ export const submitChatContents = createAsyncThunk(
       timestamp: Date.now(),
       updateId: createUuid(),
     };
-    dispatch(addEventToChatEventsCurrent(newUserMessage));
-    dispatch(setChatMessageSent(true));
 
     // Create the placeholder assistant ChatMessage used when streaming
-    const newAssistantMessage: PendingChatMessage & {updateId: string} = {
+    const newAssistantMessage: PendingChatMessageWithUpdateId = {
       role: Role.ASSISTANT,
       status: Status.UNKNOWN,
       chatMessageText: '',
@@ -129,16 +135,41 @@ export const submitChatContents = createAsyncThunk(
       updateId: createUuid(),
     };
 
-    if (logLevelActivity) {
-      logLevelActivity();
-    }
-
-    const startTime = Date.now();
-
     let messages: CompletedChatMessage[] = [];
 
     let hasAddedAssistantMessage = false;
+
     let fullText = '';
+
+    let streamCallbacks: StreamCallbacks | undefined;
+    if (isStreaming) {
+      streamCallbacks = {
+        onDelta: delta => {
+          fullText += delta;
+          if (hasAddedAssistantMessage) {
+            dispatch(
+              updateChatMessage({
+                updateId: newAssistantMessage.updateId,
+                chatMessageText: fullText,
+              })
+            );
+          } else {
+            hasAddedAssistantMessage = true;
+            dispatch(
+              addEventToChatEventsCurrent({
+                ...newAssistantMessage,
+                timestamp: Date.now(), // update timestamp
+                chatMessageText: fullText,
+              })
+            );
+          }
+        },
+      };
+    }
+
+    dispatch(addEventToChatEventsCurrent(newUserMessage));
+
+    dispatch(setChatMessageSent(true));
 
     try {
       const eventData = getAnalyticsEventData({
@@ -155,32 +186,7 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
-
-      let streamCallbacks: StreamCallbacks | undefined;
-      if (isStreaming) {
-        streamCallbacks = {
-          onDelta: delta => {
-            fullText += delta;
-            if (hasAddedAssistantMessage) {
-              dispatch(
-                updateChatMessage({
-                  updateId: newAssistantMessage.updateId,
-                  chatMessageText: fullText,
-                })
-              );
-            } else {
-              hasAddedAssistantMessage = true;
-              dispatch(
-                addEventToChatEventsCurrent({
-                  ...newAssistantMessage,
-                  chatMessageText: fullText,
-                })
-              );
-            }
-          },
-        };
-      }
+      const startTime = Date.now();
 
       // Post user content and messages to backend and retrieve assistant response.
       messages = await postAichatCompletionMessage({
