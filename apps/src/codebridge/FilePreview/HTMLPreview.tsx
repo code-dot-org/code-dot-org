@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -22,6 +23,7 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewEmptyState from './PreviewEmptyState';
 import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
@@ -29,6 +31,11 @@ import moduleStyles from './styles/html-preview.module.scss';
 const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
+  const normalizedChannelId = useAppSelector(
+    // Make channel id all lower case and remove underscores, as underscores are not valid in domain names,
+    // and domain names are case-insensitive.
+    state => state.lab.channel?.id?.toLowerCase().replace('_', '') || ''
+  );
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -37,9 +44,21 @@ export const HTMLPreview: React.FC = () => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-    const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-    return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
-  }, []);
+    const useLocalPrefixOverride = experiments.isEnabledAllowingQueryString(
+      experiments.LOCAL_WEBLAB2_PREVIEW
+    );
+    const isLocalhost = 'localhost' === environmentKey;
+    // When testing on localhost, it can be convenient to have a fixed subdomain
+    // to avoid having to give permissions to every channel id version of the preview url.
+    // Use the flag ?local-weblab2-preview=true or ?enableExperiments=local-weblab2-preview
+    // to enable the fixed prefix locally.
+    const prefix =
+      useLocalPrefixOverride && isLocalhost
+        ? 'localtesting'
+        : normalizedChannelId;
+    const port = isLocalhost && location.port ? `:${location.port}` : '';
+    return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
+  }, [normalizedChannelId]);
 
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
@@ -61,6 +80,11 @@ export const HTMLPreview: React.FC = () => {
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+
+  const isEmptyProject =
+    !source ||
+    (Object.keys(source.files).length === 0 &&
+      Object.keys(source.folders).length === 0);
 
   const aiFilePathToPreview = useAppSelector(
     state => state.weblab2.aiFilePathToPreview
@@ -201,9 +225,10 @@ export const HTMLPreview: React.FC = () => {
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
-    // When we switch levels, reset stopped state.
+    // When we switch levels, reset stopped state and iframe state.
     setIsStopped(false);
     setIsLevelLoading(true);
+    setIsIframeLoaded(false);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -222,6 +247,13 @@ export const HTMLPreview: React.FC = () => {
       }
       if (event.data.type === IframeMessageType.IFRAME_READY) {
         setIsIframeLoaded(true);
+        // Send the source immediately when iframe is ready
+        if (debouncedSource) {
+          iframeRef.current?.contentWindow?.postMessage(
+            {type: IframeMessageType.SET_SOURCE, source: debouncedSource},
+            previewUrl
+          );
+        }
         iframeRef.current?.contentWindow?.postMessage(
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
@@ -242,7 +274,13 @@ export const HTMLPreview: React.FC = () => {
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
+  }, [
+    previewUrl,
+    currentFile,
+    navigationHistory,
+    navigationHistoryIndex,
+    debouncedSource,
+  ]);
 
   useEffect(() => {
     iframeRef.current?.contentWindow?.postMessage(
@@ -347,8 +385,12 @@ export const HTMLPreview: React.FC = () => {
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
         />
-        {isStopped ? (
+        {isEmptyProject ? (
+          <PreviewEmptyState />
+        ) : isStopped ? (
           <PreviewStopped onReload={onReloadPreview} />
+        ) : isLevelLoading ? (
+          <CodebridgeEmptyState title="Loading..." />
         ) : (
           /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */
