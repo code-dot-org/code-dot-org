@@ -55,7 +55,46 @@ const SAMPLE_CFU_RESPONSES = [
   },
 ];
 
+const SAMPLE_LEVEL_GROUP_CFU_LEVELS = [
+  {
+    id: 80107,
+    name: 'programming-fundamentals-lesson3-level7_2025',
+    display_name: 'programming-fundamentals-lesson3-level7_2025',
+    type: 'LevelGroup',
+    key: 'programming-fundamentals-lesson3-level7_2025',
+    script_level_id: 1927,
+    progression: 'Check for Understanding',
+    progression_display_name: 'Check for Understanding',
+    question_text: null,
+    answers: null,
+  },
+];
+
+const SAMPLE_LEVEL_GROUP_CFU_RESPONSES = [
+  {
+    level_id: 80107,
+    script_level_id: 1927,
+    response: {
+      type: 'LevelGroup',
+      level_results: [
+        {
+          level_id: 90001,
+          type: 'FreeResponse',
+          student_result: 'hello world',
+          status: '',
+        },
+      ],
+    },
+    submitted: false,
+    timestamp: '2025-12-17T17:51:12.000Z',
+  },
+];
+
 describe('StudentCFUWidget', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('shows loading state when isLoading is true', () => {
     render(<StudentCFUWidget isLoading={true} gridWidth={2} gridHeight={2} />);
 
@@ -64,9 +103,20 @@ describe('StudentCFUWidget', () => {
   });
 
   it('shows empty state when there is no CFU data', async () => {
-    HttpClient.fetchJson.mockResolvedValue({
-      value: {cfu_levels: []},
-      response: new Response(),
+    HttpClient.fetchJson.mockImplementation((url: string) => {
+      if (url.startsWith('/student_snapshots/cfu_levels/')) {
+        return Promise.resolve({
+          value: {cfu_levels: []},
+          response: new Response(),
+        });
+      }
+      if (url.startsWith('/student_snapshots/cfu_responses/')) {
+        return Promise.resolve({
+          value: {cfu_responses: []},
+          response: new Response(),
+        });
+      }
+      return Promise.resolve({value: {}, response: new Response()});
     });
 
     render(
@@ -123,6 +173,43 @@ describe('StudentCFUWidget', () => {
       expect(
         screen.getByText(/programming-fundamentals-lesson5-vocab_2025/)
       ).toBeInTheDocument();
+    });
+  });
+
+  it('renders raw CFU JSON for LevelGroup text-input CFUs', async () => {
+    HttpClient.fetchJson.mockImplementation((url: string) => {
+      if (url.startsWith('/student_snapshots/cfu_levels/')) {
+        return Promise.resolve({
+          value: {cfu_levels: SAMPLE_LEVEL_GROUP_CFU_LEVELS},
+          response: new Response(),
+        });
+      }
+
+      if (url.startsWith('/student_snapshots/cfu_responses/')) {
+        return Promise.resolve({
+          value: {cfu_responses: SAMPLE_LEVEL_GROUP_CFU_RESPONSES},
+          response: new Response(),
+        });
+      }
+
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    render(
+      <StudentCFUWidget
+        lessonId={1}
+        studentId={1}
+        gridWidth={2}
+        gridHeight={2}
+      />
+    );
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/programming-fundamentals-lesson3-level7_2025/)
+      ).toBeInTheDocument();
+      expect(screen.getByText(/LevelGroup/)).toBeInTheDocument();
+      expect(screen.getByText(/hello world/)).toBeInTheDocument();
     });
   });
 });

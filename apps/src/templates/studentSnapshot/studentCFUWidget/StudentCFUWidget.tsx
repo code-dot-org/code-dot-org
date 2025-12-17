@@ -128,6 +128,95 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
   const loading =
     isLoading || isCfuLevelsLoading || isCfuResponsesLoading || false;
 
+  const responsesByLevelId = React.useMemo(() => {
+    const map = new Map<number, CFULevelResponse>();
+    fetchedCfuResponses.forEach(r => map.set(r.level_id, r));
+    return map;
+  }, [fetchedCfuResponses]);
+
+  type StatusBucket =
+    | 'correct'
+    | 'partially_correct'
+    | 'incorrect'
+    | 'incomplete';
+
+  const bucketForLevel = React.useCallback(
+    (levelId: number): StatusBucket => {
+      const response = responsesByLevelId.get(levelId)?.response;
+      if (!response) {
+        return 'incomplete';
+      }
+
+      // LevelGroup: compute a coarse status from its sublevel statuses.
+      if (
+        response.type === 'LevelGroup' &&
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        Array.isArray((response as any).level_results)
+      ) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const levelResults = (response as any).level_results as any[];
+        const buckets = levelResults.map(lr => {
+          const status = lr?.status;
+          if (status === 'correct') return 'correct';
+          if (status === 'incorrect') return 'incorrect';
+          if (status === 'unsubmitted') return 'incomplete';
+          if (Array.isArray(status))
+            return status.includes('unsubmitted')
+              ? 'incomplete'
+              : 'partially_correct';
+          // Free response uses empty string status; treat as completed.
+          return lr?.student_result ? 'partially_correct' : 'incomplete';
+        });
+        if (buckets.length === 0) return 'incomplete';
+        if (buckets.every(b => b === 'correct')) return 'correct';
+        if (buckets.some(b => b === 'incorrect')) return 'incorrect';
+        if (buckets.some(b => b === 'incomplete')) return 'incomplete';
+        return 'partially_correct';
+      }
+
+      // Multi: status is correct/incorrect/unsubmitted
+      // Match: status is array of submitted/unsubmitted
+      // Free response: status is "" and student_result contains the text
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const status = (response as any).status;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const studentResult = (response as any).student_result;
+
+      if (status === 'correct') return 'correct';
+      if (status === 'incorrect') return 'incorrect';
+      if (status === 'unsubmitted') return 'incomplete';
+      if (Array.isArray(status))
+        return status.includes('unsubmitted')
+          ? 'incomplete'
+          : 'partially_correct';
+      if (studentResult !== undefined && studentResult !== null)
+        return 'partially_correct';
+      return 'incomplete';
+    },
+    [responsesByLevelId]
+  );
+
+  const summary = React.useMemo(() => {
+    const total = fetchedCfuLevels.length;
+    const buckets = fetchedCfuLevels.map(level => bucketForLevel(level.id));
+    const counts = buckets.reduce(
+      (acc, b) => {
+        acc[b] += 1;
+        return acc;
+      },
+      {
+        correct: 0,
+        partially_correct: 0,
+        incorrect: 0,
+        incomplete: 0,
+      } as Record<StatusBucket, number>
+    );
+    const completed = total - counts.incomplete;
+    const accuracy =
+      total === 0 ? 0 : Math.round((counts.correct / total) * 100);
+    return {total, completed, accuracy, counts};
+  }, [fetchedCfuLevels, bucketForLevel]);
+
   let content: React.ReactNode;
   let scrollable = false;
 
@@ -140,24 +229,64 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
   } else {
     scrollable = true;
     content = (
-      <pre
-        style={{
-          whiteSpace: 'pre-wrap',
-          wordBreak: 'break-word',
-          fontFamily: 'monospace',
-          fontSize: 12,
-          margin: 0,
-        }}
-      >
-        {JSON.stringify(
-          {
-            levels: fetchedCfuLevels,
-            responses: fetchedCfuResponses || [],
-          },
-          null,
-          2
-        )}
-      </pre>
+      <div>
+        <BodyThreeText>
+          <strong>Check For Understanding Questions</strong>
+        </BodyThreeText>
+        <div style={{marginTop: 8, marginBottom: 12}}>
+          <BodyThreeText>
+            <strong>Summary</strong>
+          </BodyThreeText>
+          <BodyThreeText>
+            {summary.completed} of {summary.total} completed •{' '}
+            {summary.accuracy}% accuracy
+          </BodyThreeText>
+          <BodyThreeText>
+            Correct: {summary.counts.correct} • Partially correct:{' '}
+            {summary.counts.partially_correct} • Incorrect:{' '}
+            {summary.counts.incorrect} • Incomplete: {summary.counts.incomplete}
+          </BodyThreeText>
+        </div>
+        <div style={{marginBottom: 12}}>
+          <BodyThreeText>
+            <strong>Level Details</strong>
+          </BodyThreeText>
+          <ul style={{margin: '8px 0 0 18px', padding: 0}}>
+            {fetchedCfuLevels.map(level => {
+              const bucket = bucketForLevel(level.id);
+              return (
+                <li key={level.id} style={{marginBottom: 6}}>
+                  <BodyThreeText>
+                    {level.display_name} — {level.type} —{' '}
+                    <strong>{bucket}</strong>
+                  </BodyThreeText>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <BodyThreeText>
+          <strong>Raw data</strong>
+        </BodyThreeText>
+        <pre
+          style={{
+            whiteSpace: 'pre-wrap',
+            wordBreak: 'break-word',
+            fontFamily: 'monospace',
+            fontSize: 12,
+            margin: 0,
+          }}
+        >
+          {JSON.stringify(
+            {
+              levels: fetchedCfuLevels,
+              responses: fetchedCfuResponses || [],
+            },
+            null,
+            2
+          )}
+        </pre>
+      </div>
     );
   }
 
