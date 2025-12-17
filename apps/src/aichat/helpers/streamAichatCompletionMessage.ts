@@ -71,7 +71,7 @@ export function streamAichatCompletionMessage({
 
     const streamId = createUuid();
     let nextExpectedSeq = 1;
-    const messageBuffer = new Map<number, string>();
+    const deltaBuffer = new Map<number, string>();
 
     const subscription: Subscription = consumerInstance.subscriptions.create(
       {channel: 'AichatChannel', stream_id: streamId},
@@ -96,17 +96,16 @@ export function streamAichatCompletionMessage({
 
             case 'delta': {
               const deltaText = data.text || '';
-              messageBuffer.set(data.seq, deltaText);
+              deltaBuffer.set(data.seq, deltaText);
 
-              while (messageBuffer.has(nextExpectedSeq)) {
-                const textToDisplay = messageBuffer.get(nextExpectedSeq)!;
+              while (deltaBuffer.has(nextExpectedSeq)) {
+                const textToDisplay = deltaBuffer.get(nextExpectedSeq)!;
 
                 streamCallbacks.onDelta?.(textToDisplay);
 
-                messageBuffer.delete(nextExpectedSeq);
+                deltaBuffer.delete(nextExpectedSeq);
                 nextExpectedSeq++;
               }
-
               return;
             }
 
