@@ -1,4 +1,24 @@
 module AiSystemPrompts::StudentSnapshotPromptHelper
+  LEVEL_TYPE_PROMPTS =
+    {
+      "LevelGroup" => "Level Group: students interact with a group of levels that all display on a single page",
+      "Aichat" => "AI chat level: students interact with an AI-powered chat interface.",
+      "BubbleChoice" => "Bubble choice level: students select a sublevel to complete from multiple options.",
+      "Multi" => "Multi: students respond to a multiple-choice question with a description and answer choices",
+      "FreeResponse" => "Free Response: students respond to a question with a short text answer",
+      "Pythonlab" => "Python Lab: students interact with a Python IDE to solve a coding problem",
+      'Match' => 'Matching level: students match items from one column to another.',
+      "External" => "External: students are shown a hyperlink with an external activity",
+      "Panels" => "Panels: students view a set of slides with text",
+      "Music" => "Music: students interact with a blockly-based music programming environment to solve a given problem",
+      "ExternalLink" => "External Link: students are shown a hyperlink with an external activity",
+      "Applab" => "Applab: students interact with a javascript app-design programming environment to solve a given problem",
+      "StandaloneVideo" => "Standalone Video: students watch an instructional video",
+      "NetSim" => "Net Simulator: students interact with an internet simulator widget",
+      "Weblab2" => "Web Lab: students interact with a web IDE using HTML, CS, and JS to solve a given problem",
+      "Sketchlab" => "Sketch Lab: students interact with a whiteboarding tool to create visual designs",
+    }.freeze
+
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id)
     intro = "This is where the insight system prompt intro goes.\n"
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
@@ -22,31 +42,38 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
     lesson_info = "Lesson Name: #{lesson.name}
-    Lesson Overview: #{lesson.render_property(:overview)}
-    Learning Objectives: #{objectives}
-    Standards: #{lesson.standards.map(&:summarize_for_lesson_show).to_json}
-    Unit Name: #{unit.name}
-    Unit Overview: #{unit_description}"
+Lesson Overview: #{lesson.render_property(:overview)}
+Learning Objectives: #{objectives}
+Standards: #{lesson.standards.map(&:summarize_for_lesson_show).to_json}
+Unit Name: #{unit.title_for_display}
+Unit Overview: \"#{unit_description}\""
 
-    levels = []
+    levels = lesson.levels.order(:position)
     # Special cases to think about:
     # - Choice levels (probably skip in v0)
     # - Survey levels/lessons (Don't ever need?)
     # - Unplugged levels (skip)
     # - Videos (skip)
     # - teacher feedback - not in AIF, skip
-    level_info = levels.map do |_level|
-      "Level Name: ___
-      Level Type: ___
-      Level Instructions: ___
-      Student Response: (either student code or CFU response)
-      Validation Status: ___
-      Time spent: ___
-      Exemplar code?: ___
-      Rubrics?: ___ (do we want to include this?)"
-    end
+    level_info = levels.map {|level| get_level_prompt_info(level)}
 
-    "Use the following lesson info to generate your summary:\n#{lesson_info}
-    Levels: [{#{level_info.join('}, {')}}]"
+    "Use the following lesson info to generate your summary:\n#{lesson_info}\n
+Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
+  end
+
+  def self.get_level_prompt_info(level)
+    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
+    sublevel_info = sublevels&.any? ? "Sublevels: [#{sublevels.map {|sublevel| get_level_prompt_info(sublevel)}.join(", ")}]" : ""
+
+    "  Level Name: #{level.name}
+  Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
+  Level Long Instructions: {#{level.long_instructions}}\n
+  Level Short Instructions: #{level.short_instructions}
+  Student Response: (either student code or CFU response)
+  Validation Status: ___
+  Time spent: ___
+  Exemplar code?: ___
+  Rubrics?: ___ (do we want to include this?)
+  #{sublevel_info}"
   end
 end
