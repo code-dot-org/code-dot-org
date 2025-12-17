@@ -324,7 +324,7 @@ export const getParentLevel = state => {
  */
 export const getNextLevel = state => {
   if (getProgressLevelType(state) !== ProgressLevelType.SCRIPT_LEVEL) {
-    return undefined;
+    return;
   }
 
   const levels = levelsForLessonId(
@@ -334,7 +334,7 @@ export const getNextLevel = state => {
   const currentLevel = getCurrentLevel(state);
 
   if (!currentLevel) {
-    return undefined;
+    return;
   }
 
   let currentLevelNumber = currentLevel.levelNumber;
@@ -355,7 +355,15 @@ export const getNextLevel = state => {
     }
   }
 
-  return levels.find(level => level.levelNumber === currentLevelNumber + 1);
+  const currentLevelIndex = levels.findIndex(
+    level => level.levelNumber === currentLevelNumber
+  );
+
+  if (currentLevelIndex === levels.length - 1) {
+    return;
+  }
+
+  return levels[currentLevelIndex + 1];
 };
 
 /**
