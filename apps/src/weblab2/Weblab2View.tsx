@@ -84,6 +84,9 @@ const Weblab2View: React.FC<
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+  const sourceLevel = useAppSelector(
+    state => state.lab2Project.projectSourceLevelId
+  );
 
   const {startSources} = useSource(
     defaultProject,
@@ -139,7 +142,7 @@ const Weblab2View: React.FC<
 
   return (
     <div className={moduleStyles.weblab2Container}>
-      {hasSource && (
+      {hasSource && sourceLevel === levelProperties.id && (
         <Codebridge
           config={config}
           setConfig={setConfig}

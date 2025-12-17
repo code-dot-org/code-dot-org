@@ -14,7 +14,7 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And element "#sign_in_or_user" contains text "Stilgar"
     # Close the FAB
-    And I wait until element "#ui-floatingActionButton" is visible
+    And I wait until element "button:contains(Get Started)" is visible
     When I click selector "#ui-floatingActionButton"
     And I wait until element "button:contains(Get Started)" is not visible
 
