@@ -133,46 +133,20 @@ export const submitChatContents = createAsyncThunk(
       logLevelActivity();
     }
 
-    // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
     let messages: CompletedChatMessage[] = [];
-    const projectFileCount =
-      newUserMessage.userAddedSelectionContext?.length || 0;
-    const projectFileCountHtml =
-      newUserMessage.userAddedSelectionContext?.filter(file =>
-        file.filename.endsWith('.html')
-      ).length || 0;
-    const projectFileCountJs =
-      newUserMessage.userAddedSelectionContext?.filter(file =>
-        file.filename.endsWith('.js')
-      ).length || 0;
-    const projectFileCountCss =
-      newUserMessage.userAddedSelectionContext?.filter(file =>
-        file.filename.endsWith('.css')
-      ).length || 0;
-    const fileCount = newUserMessage.assets?.length || 0;
-    const fileCountPdf =
-      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
-        .length || 0;
-    const fileCountImage = fileCount - fileCountPdf;
-
-    const eventData = {
-      fileCount,
-      fileCountImage,
-      fileCountPdf,
-      projectFileCount,
-      projectFileCountHtml,
-      projectFileCountJs,
-      projectFileCountCss,
-      clientType,
-      ...analyticsProperties,
-    };
 
     let hasAddedAssistantMessage = false;
     let fullText = '';
 
     try {
+      const eventData = getAnalyticsEventData({
+        newUserMessage,
+        clientType,
+        analyticsProperties,
+      });
+
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
@@ -234,6 +208,40 @@ export const submitChatContents = createAsyncThunk(
             value: modelParameters.selectedModelId,
           },
         ]);
+
+      // Send a report that the user has started the aichat level after successfully sending
+      // a chat message and then receiving a response from the chatbot.
+      // A teacher will view that the level is now in progress.
+      dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
+
+      messages.forEach(message => {
+        if (message.role === Role.ASSISTANT && responseCallback) {
+          message.chatMessageText = responseCallback(message.chatMessageText);
+        }
+
+        if (message.role === Role.ASSISTANT) {
+          if (hasAddedAssistantMessage) {
+            dispatch(
+              updateChatMessage({
+                updateId: newAssistantMessage.updateId,
+                status: message.status,
+                chatMessageText: message.chatMessageText,
+              })
+            );
+            logChatEvent(message, state.progress.viewAsUserId);
+          } else {
+            dispatch(addChatEvent(message));
+          }
+        } else if (message.role === Role.USER) {
+          dispatch(
+            updateChatMessage({
+              updateId: newUserMessage.updateId,
+              status: message.status,
+            })
+          );
+          logChatEvent(message, state.progress.viewAsUserId);
+        }
+      });
     } catch (error) {
       await handleChatCompletionError(
         error as Error,
@@ -241,44 +249,51 @@ export const submitChatContents = createAsyncThunk(
         dispatch,
         state.progress.viewAsUserId
       );
-      return;
     }
-
-    // Send a report that the user has started the aichat level after successfully sending
-    // a chat message and then receiving a response from the chatbot.
-    // A teacher will view that the level is now in progress.
-    dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
-    messages.forEach(message => {
-      if (message.role === Role.ASSISTANT) {
-        message.chatMessageText =
-          responseCallback?.(message.chatMessageText) ??
-          message.chatMessageText;
-
-        if (hasAddedAssistantMessage) {
-          dispatch(
-            updateChatMessage({
-              updateId: newAssistantMessage.updateId,
-              status: message.status,
-              chatMessageText: message.chatMessageText,
-            })
-          );
-          logChatEvent(message, state.progress.viewAsUserId);
-        } else {
-          dispatch(addChatEvent(message));
-        }
-      }
-      if (message.role === Role.USER) {
-        dispatch(
-          updateChatMessage({
-            updateId: newUserMessage.updateId,
-            status: message.status,
-          })
-        );
-        logChatEvent(message, state.progress.viewAsUserId);
-      }
-    });
   }
 );
+
+function getAnalyticsEventData({
+  newUserMessage,
+  clientType,
+  analyticsProperties = {},
+}: {
+  newUserMessage: PendingChatMessage;
+  clientType: AiChatClientType;
+  analyticsProperties?: AnalyticsProperties;
+}) {
+  const projectFileCount =
+    newUserMessage.userAddedSelectionContext?.length || 0;
+  const projectFileCountHtml =
+    newUserMessage.userAddedSelectionContext?.filter(file =>
+      file.filename.endsWith('.html')
+    ).length || 0;
+  const projectFileCountJs =
+    newUserMessage.userAddedSelectionContext?.filter(file =>
+      file.filename.endsWith('.js')
+    ).length || 0;
+  const projectFileCountCss =
+    newUserMessage.userAddedSelectionContext?.filter(file =>
+      file.filename.endsWith('.css')
+    ).length || 0;
+  const fileCount = newUserMessage.assets?.length || 0;
+  const fileCountPdf =
+    newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+      .length || 0;
+  const fileCountImage = fileCount - fileCountPdf;
+
+  return {
+    fileCount,
+    fileCountImage,
+    fileCountPdf,
+    projectFileCount,
+    projectFileCountHtml,
+    projectFileCountJs,
+    projectFileCountCss,
+    clientType,
+    ...analyticsProperties,
+  };
+}
 
 async function handleChatCompletionError(
   error: Error,
