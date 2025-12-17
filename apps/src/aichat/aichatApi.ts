@@ -149,6 +149,13 @@ export interface GetChatRequestResponse {
   response: string;
 }
 
+export interface StreamCallbacks {
+  onStart?: (requestId: number) => void;
+  onDelta?: (delta: string) => void;
+  onComplete?: (fullText: string) => void;
+  onError?: (code: ExecutionStatus, details?: string) => void;
+}
+
 /**
  * This function formats chat completion messages and aichatParameters, sends a POST request
  * to the aichat completion backend controller, then returns the status of the response
@@ -167,12 +174,7 @@ export async function postAichatCompletionMessage({
   modelParameters: ModelParameters;
   aichatContext: AichatContext;
   maxPollingTimeMs?: number;
-  streamCallbacks?: {
-    onStart?: (requestId: number) => void;
-    onDelta?: (delta: string) => void;
-    onComplete?: (fullText: string) => void;
-    onError?: (code: ExecutionStatus, details?: string) => void;
-  };
+  streamCallbacks?: StreamCallbacks;
 }): Promise<CompletedChatMessage[]> {
   maxPollingTimeMs =
     maxPollingTimeMs || AiChatReadTimeouts[aichatContext.clientType] * 1500;

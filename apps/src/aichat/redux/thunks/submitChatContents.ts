@@ -20,7 +20,7 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../../aichatApi';
+import {postAichatCompletionMessage, StreamCallbacks} from '../../aichatApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -183,34 +183,38 @@ export const submitChatContents = createAsyncThunk(
 
       const storedMessages = chatEventsCurrent.filter(isCompletedChatMessage);
 
+      let streamCallbacks: StreamCallbacks | undefined;
+      if (isStreaming) {
+        streamCallbacks = {
+          onDelta: delta => {
+            fullText += delta;
+            if (hasAddedAssistantMessage) {
+              dispatch(
+                updateChatMessage({
+                  updateId: newAssistantMessage.updateId,
+                  chatMessageText: fullText,
+                })
+              );
+            } else {
+              hasAddedAssistantMessage = true;
+              dispatch(
+                addEventToChatEventsCurrent({
+                  ...newAssistantMessage,
+                  chatMessageText: fullText,
+                })
+              );
+            }
+          },
+        };
+      }
+
+      // Post user content and messages to backend and retrieve assistant response.
       messages = await postAichatCompletionMessage({
         newMessage: newUserMessage,
         storedMessages,
         modelParameters,
         aichatContext,
-        streamCallbacks: isStreaming
-          ? {
-              onDelta: delta => {
-                fullText += delta;
-                if (hasAddedAssistantMessage) {
-                  dispatch(
-                    updateChatMessage({
-                      updateId: newAssistantMessage.updateId,
-                      chatMessageText: fullText,
-                    })
-                  );
-                } else {
-                  hasAddedAssistantMessage = true;
-                  dispatch(
-                    addEventToChatEventsCurrent({
-                      ...newAssistantMessage,
-                      chatMessageText: fullText,
-                    })
-                  );
-                }
-              },
-            }
-          : undefined,
+        streamCallbacks,
       });
 
       // In milliseconds
@@ -221,6 +225,7 @@ export const submitChatContents = createAsyncThunk(
           responseTime,
         })
       );
+
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .reportLoadTime('AichatModelResponseTime', responseTime, [
