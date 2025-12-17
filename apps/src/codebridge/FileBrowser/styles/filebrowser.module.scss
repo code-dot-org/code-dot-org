@@ -12,6 +12,11 @@
   height: 100%;
   background-color: var(--background-neutral-secondary);
   border-inline-end: variables.$default-border;
+
+  // Override the background color of any child divs
+  & > div {
+    background-color: var(--background-neutral-secondary);
+  }
 }
 
 .row {

@@ -22,6 +22,7 @@ import {
   DEFAULT_START_HTML_FILE,
 } from './constants';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
+import PreviewEmptyState from './PreviewEmptyState';
 import PreviewStopped from './PreviewStopped';
 
 import moduleStyles from './styles/html-preview.module.scss';
@@ -61,6 +62,11 @@ export const HTMLPreview: React.FC = () => {
     state =>
       state.lab2Project.projectSources?.source as MultiFileSource | undefined
   );
+
+  const isEmptyProject =
+    !source ||
+    (Object.keys(source.files).length === 0 &&
+      Object.keys(source.folders).length === 0);
 
   const aiFilePathToPreview = useAppSelector(
     state => state.weblab2.aiFilePathToPreview
@@ -222,6 +228,13 @@ export const HTMLPreview: React.FC = () => {
       }
       if (event.data.type === IframeMessageType.IFRAME_READY) {
         setIsIframeLoaded(true);
+        // Send the source immediately when iframe is ready
+        if (debouncedSource) {
+          iframeRef.current?.contentWindow?.postMessage(
+            {type: IframeMessageType.SET_SOURCE, source: debouncedSource},
+            previewUrl
+          );
+        }
         iframeRef.current?.contentWindow?.postMessage(
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
@@ -242,7 +255,13 @@ export const HTMLPreview: React.FC = () => {
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile, navigationHistory, navigationHistoryIndex]);
+  }, [
+    previewUrl,
+    currentFile,
+    navigationHistory,
+    navigationHistoryIndex,
+    debouncedSource,
+  ]);
 
   useEffect(() => {
     iframeRef.current?.contentWindow?.postMessage(
@@ -347,7 +366,9 @@ export const HTMLPreview: React.FC = () => {
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
         />
-        {isStopped ? (
+        {isEmptyProject ? (
+          <PreviewEmptyState />
+        ) : isStopped ? (
           <PreviewStopped onReload={onReloadPreview} />
         ) : (
           /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
