@@ -12,8 +12,6 @@ var checkEntryPoints = require('./script/checkEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 
-// force apps build
-
 // Review every couple of years to see if an increase improves test performance
 const MEM_PER_TEST_PROCESS_MB = 4300;
 
