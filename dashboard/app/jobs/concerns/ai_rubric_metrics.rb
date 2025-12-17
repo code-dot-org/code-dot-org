@@ -2,8 +2,8 @@ class AiRubricMetrics
   # The CloudWatch metric namespace
   AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
 
-  # The firehose study name
-  AI_RUBRICS_FIREHOSE_STUDY = 'ai-rubrics'.freeze
+  # The cloudwatch study name
+  AI_RUBRICS_STUDY = 'ai-rubrics'.freeze
 
   # Write out metrics reflected in the response to CloudWatch
   #
@@ -68,7 +68,7 @@ class AiRubricMetrics
 
     data =
       {
-        study: AI_RUBRICS_FIREHOSE_STUDY,
+        study: AI_RUBRICS_STUDY,
         study_group: 'v0',
         event: event_name,
         data_string: "#{error.class.name}: #{error.message}",
