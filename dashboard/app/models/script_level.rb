@@ -399,7 +399,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       if bubble_choice?
-        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
+        summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end
 
       if for_edit

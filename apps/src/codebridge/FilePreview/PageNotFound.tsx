@@ -1,17 +1,17 @@
 import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import React from 'react';
 
-import emptyPreviewPlaceholderImage from '@cdo/apps/codebridge/images/empty-preview-placeholder.svg';
+import pageNotFoundImage from '@cdo/apps/codebridge/images/page-not-found.png';
 
-import moduleStyles from './styles/page-not-found.module.scss';
+import moduleStyles from './styles/inner-html-preview.module.scss';
 
 const PageNotFound = () => {
   return (
     <div className={moduleStyles.placeholderContainer}>
       <CodebridgeEmptyState
-        imageProps={{src: emptyPreviewPlaceholderImage}}
-        title="Nothing to preview"
-        description="Your project preview will appear here once you've created or opened a page with content."
+        imageProps={{src: pageNotFoundImage}}
+        title="Page not found"
+        description="The page you're trying to preview doesn't exist."
       />
     </div>
   );
