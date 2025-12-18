@@ -64,16 +64,16 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
   def self.get_level_prompt_info(level)
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
     sublevel_info = sublevels&.any? ? "Sublevels: [#{sublevels.map {|sublevel| get_level_prompt_info(sublevel)}.join(", ")}]" : ""
-
+    rubric_summary = level.rubrics.present? ? {learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)} : 'N/A'
     "  Level Name: #{level.name}
-  Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
-  Level Long Instructions: {#{level.long_instructions}}\n
-  Level Short Instructions: #{level.short_instructions}
-  Student Response: (either student code or CFU response)
-  Validation Status: ___
-  Time spent: ___
-  Exemplar code?: ___
-  Rubrics?: ___ (do we want to include this?)
-  #{sublevel_info}"
+    Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
+    Level Long Instructions: {#{level.long_instructions}}\n
+    Level Short Instructions: #{level.short_instructions}
+    Student Response: (either student code or CFU response)
+    Validation Status: ___
+    Time spent: ___
+    Exemplar code?: ___
+    Rubrics: #{rubric_summary}
+    #{sublevel_info}"
   end
 end
