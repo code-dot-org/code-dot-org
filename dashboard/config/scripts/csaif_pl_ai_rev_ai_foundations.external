@@ -9,11 +9,20 @@ markdown <<MARKDOWN
 
 #### AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
 
+## Implementation
+
+#### AI Foundations Semester 1 consists of **six units**. Each unit follows approximately the same format:
+- #### Total Duration: 3 weeks
+- #### Structure: Twelve 45-minute lessons and one 3-day culminating project
+
+#### Implementation is designed to be flexible. Teachers can run it as:
+- #### A **full-year course**,
+- #### A **semester-long course**, or
+- #### A set of **standalone units** that plug into existing CS or STEM instruction.
+
+#### You can adapt pacing, depth, and materials based on your students’ experience and classroom needs. 
+
 ## Course Units
-
-#### This curriculum has a **flexible implementation** and can be taught in different configurations based on the needs of each classroom.  Whether implementing AIF as a full-year course, a semester-long offering, or selecting individual units, teachers have the freedom to customize their instruction to best support their students' learning needs and interests.
-
-#### Check out the <a href="https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?tab=t.0#heading=h.37l5qcpukrn2" target="blank" rel="noopener noreferrer">AIF Implementation Guide</a> for more information.
 
 <br>
 
@@ -32,7 +41,7 @@ markdown <<MARKDOWN
 
    
 <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/bd8061687ede2e74160e09ab56dcaf8d-image-1759252837935.png" alt="Icon of flowchart" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <img src="https://images.code.org/c9ef17b0eed0db0e23be62631eb1da16-Screenshot 2025-12-17 at 11.11.50 AM.png" alt="Icon of flowchart" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
         <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3> <b>Unit 2 - Foundations of AI Programming</b></h3>
             <p style = "font-size: 14pt";>This unit introduces students to programming fundamentals using Python (sequence, selection, iteration, functions), algorithms, and ethical computing, emphasizing human-centered design for inclusive, real-world problem-solving.<br><br> </p>
@@ -78,4 +87,5 @@ markdown <<MARKDOWN
     
     </div>
 
+## Let's preview the projects in each unit.
 MARKDOWN

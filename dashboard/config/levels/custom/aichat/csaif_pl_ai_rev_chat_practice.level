@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Welcome to AI Chat Lab\r\n\r\nTry out using AI Chat Lab! This chatbot has been set-up to provide more information about...\r\n\r\n### Do This:\r\n1. Ask the chatbot what \r\n2. **Copy and paste** the following prompt: \r\n\r\n>Complete this sentence with a single word: The dog barked at the...\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n",
+    "long_instructions": "## Welcome to AI Chat Lab\r\n\r\n**Take a moment to explore using AI Chat Lab!**\r\n\r\nYou can ask whatever you'd like, but here are some ideas if you're feeling stuck:\r\n>- Tell me a story about a dog, a child, and a red balloon.<br>\r\n>- What is AI Literacy? Why is it important for high school students to learn?<br>\r\n>- How is AI impacting careers of the future?\r\n\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a learning assistant for helping a teacher learn more about AI. Respond with helpful information about AI only. Do not respond to questions that do not relate to what AI is or how it works. Keep responses brief and encourage further questions from the user.",
+      "levelSystemPrompt": "",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -46,6 +46,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-12-02T22:30:54.132+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_01_02_-rev\\\"\"],\"cloned_from\":\"csaif_pl_ai_01_02_-rev\"},{\"changed_at\":\"2025-12-02 22:35:55 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-02 22:38:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-02 22:39:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-04 15:08:01 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-04 15:24:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-02T22:30:54.132+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_01_02_-rev\\\"\"],\"cloned_from\":\"csaif_pl_ai_01_02_-rev\"},{\"changed_at\":\"2025-12-02 22:35:55 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-02 22:38:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-02 22:39:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-04 15:08:01 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-04 15:24:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-17 18:23:46 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>
