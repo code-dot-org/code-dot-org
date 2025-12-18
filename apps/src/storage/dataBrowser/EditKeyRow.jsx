@@ -114,6 +114,7 @@ class EditKeyRow extends React.Component {
           {!this.state.isDeleting &&
             (this.state.isEditing ? (
               <Button
+                id="saveKeyValueButton"
                 text={msg.save()}
                 onClick={this.handleSave}
                 disabled={this.state.isSaving}
@@ -130,6 +131,7 @@ class EditKeyRow extends React.Component {
               />
             ) : (
               <Button
+                id="editKeyValueButton"
                 text={msg.edit()}
                 onClick={this.handleEdit}
                 disabled={this.state.isSaving}
@@ -147,6 +149,7 @@ class EditKeyRow extends React.Component {
 
           {!this.state.isSaving && (
             <Button
+              id="deleteKeyValueButton"
               text={msg.delete()}
               onClick={this.handleDelete}
               disabled={this.state.isDeleting}

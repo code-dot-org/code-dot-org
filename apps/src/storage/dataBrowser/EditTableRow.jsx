@@ -133,6 +133,7 @@ class EditTableRow extends React.Component {
             {!this.state.isDeleting &&
               (this.state.isEditing ? (
                 <Button
+                  id="saveTableRowButton"
                   text={msg.save()}
                   onClick={this.handleSave}
                   disabled={this.state.isSaving}
@@ -149,6 +150,7 @@ class EditTableRow extends React.Component {
                 />
               ) : (
                 <Button
+                  id="editTableRowButton"
                   text={msg.edit()}
                   onClick={this.handleEdit}
                   disabled={this.state.isSaving}
@@ -165,6 +167,7 @@ class EditTableRow extends React.Component {
               ))}
             {!this.state.isSaving && (
               <Button
+                id="deleteTableRowButton"
                 text={msg.delete()}
                 onClick={this.handleDelete}
                 disabled={this.state.isDeleting}

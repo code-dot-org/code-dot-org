@@ -81,6 +81,7 @@ class ConfirmImportButton extends React.Component {
           title={msg.confirmImportOverwriteTitle()}
         />
         <Button
+          id="confirmImportButton"
           text={msg.importCSV()}
           onClick={() => this.importFileInput.click()}
           disabled={this.state.isImporting}

@@ -103,6 +103,7 @@ class AddKeyRow extends React.Component {
         </td>
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
           <Button
+            id="addKeyValuePairButton"
             text={msg.addPairToTable()}
             onClick={this.handleAdd}
             disabled={this.state.isAdding}

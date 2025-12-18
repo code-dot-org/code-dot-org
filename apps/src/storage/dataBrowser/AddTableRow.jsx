@@ -89,6 +89,7 @@ class AddTableRow extends React.Component {
 
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
           <Button
+            id="addTableRowButton"
             text={msg.addRowToTable()}
             onClick={this.handleAdd}
             disabled={this.state.isAdding}
