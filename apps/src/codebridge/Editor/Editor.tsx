@@ -101,12 +101,8 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   ]);
 
   if (file?.url && viewableImageFileType(file.language)) {
-    return (
-      <div>
-        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        <img src={file.url} alt={file.name} tabIndex={0} />
-      </div>
-    );
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+    return <img src={file.url} alt={file.name} tabIndex={0} />;
   }
 
   if (file && !editableFileType(file.language, editableFileTypes)) {
