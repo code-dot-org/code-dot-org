@@ -61,12 +61,12 @@ end
 
 old_client_id = options[:old_client_id]
 new_client_id = options[:new_client_id]
-old_integration_id = options[:old_integration_id]
+options[:old_integration_id]
 new_integration_id = options[:new_integration_id]
 
-old_auth_options = AuthenticationOption
-  .where("authentication_id LIKE ?","https://canvas.instructure.com|#{old_client_id}%")
-  .where(credential_type: "lti_v1")
+old_auth_options = AuthenticationOption.
+  where("authentication_id LIKE ?", "https://canvas.instructure.com|#{old_client_id}%").
+  where(credential_type: "lti_v1")
 
 total_size = old_auth_options.size
 CDO.log.info "Found #{total_size} old authentication options to rewire"
@@ -83,14 +83,14 @@ old_auth_options.find_each do |old_auth_option|
     authentication_id: old_auth_option.authentication_id.sub(old_client_id, new_client_id),
     credential_type: "lti_v1"
   )
-  
+
   # If both auth options are attached to the same user, we don't need to do anything.
   if auth_option_from_new_integration.present? && auth_option_from_new_integration.user_id == old_user.id
     CDO.log.info "Skipping rewiring of auth option #{old_auth_option.id} because both auth options are already attached to the same user #{old_user.id}"
     skip_count += 1
     next
   end
-  
+
   ActiveRecord::Base.transaction do
     # If the new auth option already exists and is attached to a different user, we rewire it to point to the old user
     if auth_option_from_new_integration.present?
