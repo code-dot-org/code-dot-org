@@ -1,7 +1,3 @@
-@import 'color.scss';
-@import '@code-dot-org/component-library-styles/colors';
-@import '@code-dot-org/component-library-styles/variables.scss';
-
 .snapshotContainer {
   min-width: 700px;
   padding-bottom: 3rem;
@@ -13,47 +9,4 @@
   grid-auto-rows: 200px;
   gap: 12px;
   width: 100%;
-}
-
-.lessonDetailsWidget {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 0.5rem;
-  width: 100%;
-
-  .lessonDetail {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 0%;
-    flex-grow: 1;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: var(--background-neutral-primary);
-    border-radius: $regular-border-radius;
-    border-color: var(--borders-neutral-primary);
-
-    i {
-      font-size: 30px;
-      padding-left: 0.25rem;
-      padding-right: 0.75rem;
-    }
-
-    .lessonDetailLabelAndInfo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      p {
-        color: var(--text-neutral-tertiary);
-      }
-    }
-  }
-}
-
-.greenCompletedText {
-  h4 {
-    color: var(--text-success-primary);
-  }
 }
