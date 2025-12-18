@@ -19,6 +19,7 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
   end
 
   test "create User Level Interaction for project level" do
+    # TODO: re-enable after addressing Sequel timeouts. See PR #70106
     skip 'flaky due to frequent Sequel timeouts'
     @lesson = create(:lesson, :with_lesson_group, script: @csp_2024_script)
     @script_level = create(:script_level, script: @csp_2024_script, lesson: @lesson, levels: [@csp_2024_level])
