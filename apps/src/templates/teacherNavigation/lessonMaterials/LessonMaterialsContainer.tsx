@@ -10,7 +10,9 @@ import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {EXT_COMPONENT_OPEN_FAB_EVENT} from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
+import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -64,13 +66,6 @@ const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
   ).then(response => response?.value);
-
-const handleLessonSummaryAskAITAClick = () => {
-  const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
-    bubbles: true,
-  });
-  document.dispatchEvent(openAITAEvent);
-};
 
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
@@ -219,6 +214,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         });
     }
   }, [userId, selectedLesson]);
+
+  const handleLessonSummaryAskAITAClick = () => {
+    dispatch(
+      fetchThreadMessages({
+        thread: 0,
+        threadType: THREAD_TYPES.lessonSummaryHelp,
+      })
+    );
+    dispatch(setChatIsOpen(true));
+  };
 
   const renderHeader = () => {
     return (
