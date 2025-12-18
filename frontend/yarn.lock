@@ -1364,7 +1364,7 @@ __metadata:
     globals: "npm:^15.13.0"
     http-server: "npm:^14.1.1"
     sass-loader: "npm:^16.0.3"
-    storybook: "npm:^9.0.18"
+    storybook: "npm:^9.1.17"
     storybook-addon-rtl: "npm:^2.0.0"
     stylelint: "npm:^16.14.1"
     tsx: "npm:^4.19.2"
@@ -6552,6 +6552,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vitest/mocker@npm:3.2.4":
+  version: 3.2.4
+  resolution: "@vitest/mocker@npm:3.2.4"
+  dependencies:
+    "@vitest/spy": "npm:3.2.4"
+    estree-walker: "npm:^3.0.3"
+    magic-string: "npm:^0.30.17"
+  peerDependencies:
+    msw: ^2.4.9
+    vite: ^5.0.0 || ^6.0.0 || ^7.0.0-0
+  peerDependenciesMeta:
+    msw:
+      optional: true
+    vite:
+      optional: true
+  checksum: 10c0/f7a4aea19bbbf8f15905847ee9143b6298b2c110f8b64789224cb0ffdc2e96f9802876aa2ca83f1ec1b6e1ff45e822abb34f0054c24d57b29ab18add06536ccd
+  languageName: node
+  linkType: hard
+
 "@vitest/pretty-format@npm:3.2.4":
   version: 3.2.4
   resolution: "@vitest/pretty-format@npm:3.2.4"
@@ -10648,6 +10667,15 @@ __metadata:
   version: 2.0.2
   resolution: "estree-walker@npm:2.0.2"
   checksum: 10c0/53a6c54e2019b8c914dc395890153ffdc2322781acf4bd7d1a32d7aedc1710807bdcd866ac133903d5629ec601fbb50abe8c2e5553c7f5a0afdd9b6af6c945af
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "estree-walker@npm:3.0.3"
+  dependencies:
+    "@types/estree": "npm:^1.0.0"
+  checksum: 10c0/c12e3c2b2642d2bcae7d5aa495c60fa2f299160946535763969a1c83fc74518ffa9c2cd3a8b69ac56aea547df6a8aac25f729a342992ef0bbac5f1c73e78995d
   languageName: node
   linkType: hard
 
@@ -17980,14 +18008,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^9.0.18":
-  version: 9.0.18
-  resolution: "storybook@npm:9.0.18"
+"storybook@npm:^9.1.17":
+  version: 9.1.17
+  resolution: "storybook@npm:9.1.17"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/user-event": "npm:^14.6.1"
     "@vitest/expect": "npm:3.2.4"
+    "@vitest/mocker": "npm:3.2.4"
     "@vitest/spy": "npm:3.2.4"
     better-opn: "npm:^3.0.2"
     esbuild: "npm:^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0"
@@ -18002,7 +18031,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./bin/index.cjs
-  checksum: 10c0/6db67e2c51a445d5aeee900cf553214f7b33834d395b1c12d40b28d6d35d6271826dcaa6e84d11aceadd0f69b38e447f82a4b215d1a92faeadca559d81df5e9a
+  checksum: 10c0/8590eaff08714565f19658b16676005960cada649fd0809171d8e8917f38592c52a795a68662c92abb90aae9d5794f0e60f08a2523d9d2524f7f826af0ddd66e
   languageName: node
   linkType: hard
 
