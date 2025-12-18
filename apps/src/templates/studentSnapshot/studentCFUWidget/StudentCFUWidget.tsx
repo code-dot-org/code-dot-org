@@ -4,6 +4,8 @@ import React, {useEffect, useState} from 'react';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import StudentCFUWidgetHeader from './StudentCFUWidgetHeader';
+
 interface CFULevel {
   id: number;
   name: string;
@@ -230,23 +232,12 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     scrollable = true;
     content = (
       <div>
-        <BodyThreeText>
-          <strong>Check For Understanding Questions</strong>
-        </BodyThreeText>
-        <div style={{marginTop: 8, marginBottom: 12}}>
-          <BodyThreeText>
-            <strong>Summary</strong>
-          </BodyThreeText>
-          <BodyThreeText>
-            {summary.completed} of {summary.total} completed •{' '}
-            {summary.accuracy}% accuracy
-          </BodyThreeText>
-          <BodyThreeText>
-            Correct: {summary.counts.correct} • Partially correct:{' '}
-            {summary.counts.partially_correct} • Incorrect:{' '}
-            {summary.counts.incorrect} • Incomplete: {summary.counts.incomplete}
-          </BodyThreeText>
-        </div>
+        <StudentCFUWidgetHeader
+          completed={summary.completed}
+          total={summary.total}
+          accuracy={summary.accuracy}
+          counts={summary.counts}
+        />
         <div style={{marginBottom: 12}}>
           <BodyThreeText>
             <strong>Level Details</strong>
