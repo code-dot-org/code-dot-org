@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-12-14T09:08:30.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Here is a student explanation about the auto-logout security feature on their device: \r\n>Auto-logout works well because it protects users. If a feature increases security, that means it works for everyone.\r\n\r\nIs this explanation accurate or inaccurate? If inaccurate, briefly explain what the student may have overlooked.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "**Assessment Opportunity**\r\n\r\nThis level can be used to confirm students understand how a security feature’s intended purpose can conflict with usability.\r\n\r\n- If students respond that the explanation is accurate, pause to revisit the case studies and highlight usability barriers such as frustration, accessibility issues, or task disruption.\r\n- If students say the explanation is incomplete but cannot articulate why, prompt them to consider user-specific needs and unintended consequences.\r\n- If students demonstrate strong understanding, move on to Level 1 where they will analyze a persona’s interactions with security features.",
+    "title": "Check for Understanding"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-14T09:08:30.754+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson4-level5_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson4-level5_2025-pilot\"},{\"changed_at\":\"2025-12-14 09:10:13 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

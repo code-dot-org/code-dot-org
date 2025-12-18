@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-25 22:21:07 UTC",
+    "serialized_at": "2025-12-15 16:37:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -33,29 +33,12 @@
   ],
   "lessons": [
     {
-      "key": "Teaching Problem Solving with AI",
+      "key": "Lesson Exploration",
       "name": "Teaching Problem Solving with AI",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
-      "properties": {
-        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the Problem Solving with AI curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
-        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the Problem Solving with AI curriculum and resources.\n\n**Suggested Time:** 10 minutes "
-      },
-      "seeding_key": {
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1"
-      }
-    },
-    {
-      "key": "Lesson Exploration",
-      "name": "Lesson Exploration",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 2,
       "properties": {
         "overview": "**In this lesson,  you will:** \n\n- Understand core AI concepts, including the iterative cycle of testing, analyzing, and improving AI-generated outputs.\n- Preview activities in the lessons.\n- Explore best practices for teaching AI.\n\n**Suggested Time:** 50 minutes ",
         "student_overview": "**In this lesson,  you will:** \n\n- Understand core AI concepts, including the iterative cycle of testing, analyzing, and improving AI-generated outputs.\n- Preview activities in the lessons.\n- Explore best practices for teaching AI.\n\n**Suggested Time:** 50 minutes "
@@ -68,18 +51,6 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "bd33d671-24ef-4da3-a97d-a3c924c8173a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bd33d671-24ef-4da3-a97d-a3c924c8173a",
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1"
-      }
-    },
     {
       "key": "89ccda4b-7e57-4892-bbec-dbf412f69c52",
       "position": 1,
@@ -96,30 +67,19 @@
   ],
   "activity_sections": [
     {
-      "key": "a9d2e2ed-abb0-490e-a23f-253facba69ca",
+      "key": "83cf727c-77e0-432e-bdc3-404e1e6f3275",
       "position": 1,
       "properties": {
-        "progression_name": "Course Overview"
+        "progression_name": "Introduction"
       },
       "seeding_key": {
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca",
-        "lesson_activity.key": "bd33d671-24ef-4da3-a97d-a3c924c8173a"
-      }
-    },
-    {
-      "key": "d36352ec-aca2-4fcf-9249-f469e419a71b",
-      "position": 2,
-      "properties": {
-        "progression_name": "Intro to AI"
-      },
-      "seeding_key": {
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b",
-        "lesson_activity.key": "bd33d671-24ef-4da3-a97d-a3c924c8173a"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275",
+        "lesson_activity.key": "89ccda4b-7e57-4892-bbec-dbf412f69c52"
       }
     },
     {
       "key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0",
-      "position": 1,
+      "position": 2,
       "properties": {
         "progression_name": "Getting Started with AI Chat"
       },
@@ -130,7 +90,7 @@
     },
     {
       "key": "037d4bf7-acea-4dd4-a76a-e61b0e249cbd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Prompting in AI Chat"
       },
@@ -141,7 +101,7 @@
     },
     {
       "key": "7d949282-7551-43df-a651-b8167997e9dd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Using AI"
       },
@@ -152,12 +112,23 @@
     },
     {
       "key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "progression_name": "Final Project and Wrap-Up"
+        "progression_name": "Preparing for the Project"
       },
       "seeding_key": {
         "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5",
+        "lesson_activity.key": "89ccda4b-7e57-4892-bbec-dbf412f69c52"
+      }
+    },
+    {
+      "key": "9f0b64bd-fe60-44f8-becf-a5c23c47eec4",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f0b64bd-fe60-44f8-becf-a5c23c47eec4",
         "lesson_activity.key": "89ccda4b-7e57-4892-bbec-dbf412f69c52"
       }
     }
@@ -169,20 +140,23 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Course Overview"
+        "level_keys": [
+          "csaif_pl_ai_01_00-new"
+        ],
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_01_00_-rev"
+          "csaif_pl_ai_01_00-new"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275"
       },
       "level_keys": [
-        "csaif_pl_ai_01_00_-rev"
+        "csaif_pl_ai_01_00-new"
       ]
     },
     {
@@ -191,20 +165,23 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Course Overview"
+        "level_keys": [
+          "csaif_pl_ai_01_02-new"
+        ],
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_01_01_-rev"
+          "csaif_pl_ai_01_02-new"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275"
       },
       "level_keys": [
-        "csaif_pl_ai_01_01_-rev"
+        "csaif_pl_ai_01_02-new"
       ]
     },
     {
@@ -213,248 +190,34 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Course Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_03_-rev"
+        "level_keys": [
+          "csaif_pl_ai_02_03b_-rev"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_03_-rev"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Course Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_04_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_04_-rev"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Course Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_05_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_05_-rev"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "Course Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_06_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_06_-rev"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Course Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_nets_career_AI_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      },
-      "level_keys": [
-        "csaif_pl_nets_career_AI_-rev"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "progression": "Course Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_AI_chatbot_overview_ai_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      },
-      "level_keys": [
-        "csaif_pl_AI_chatbot_overview_ai_-rev"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to AI"
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csaif_pl_ai_02_03b_-rev"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275"
       },
       "level_keys": [
         "csaif_pl_ai_02_03b_-rev"
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_09_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_09_-rev"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_08b_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_08b_-rev"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Intro to AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_12_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      },
-      "level_keys": [
-        "csaif_pl_ai_into_12_-rev"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 1,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Getting Started with AI Chat"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_00b_-rev"
+        "level_keys": [
+          "csaif_pl_ai_01_-rev"
         ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0"
-      },
-      "level_keys": [
-        "csaif_pl_ai_00b_-rev"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -472,11 +235,14 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_02_-rev"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -494,11 +260,14 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_04_-rev"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -516,11 +285,14 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_05_-rev"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -538,11 +310,14 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01_07b_-rev"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -560,55 +335,39 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Getting Started with AI Chat"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_01_08b_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0"
-      },
-      "level_keys": [
-        "csaif_pl_ai_01_08b_-rev"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "progression": "Getting Started with AI Chat"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_01_09_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0"
-      },
-      "level_keys": [
-        "csaif_pl_ai_01_09_-rev"
-      ]
-    },
-    {
-      "chapter": 21,
+      "chapter": 9,
       "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01-rev-01"
+        ],
+        "progression": "Getting Started with AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01-rev-01"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01-rev-01"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_-rev"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -626,11 +385,14 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 10,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02b_-rev"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -648,11 +410,14 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 11,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_05b_-rev"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -670,11 +435,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 12,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_06b_-rev"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -692,11 +460,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 13,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_07_-rev"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -714,11 +485,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 14,
+      "chapter": 15,
+      "position": 15,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02_08_-rev"
+        ],
         "progression": "Prompting in AI Chat"
       },
       "bonus": false,
@@ -736,11 +510,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 15,
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03c_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -758,11 +535,14 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 16,
+      "chapter": 17,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_02b_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -780,11 +560,14 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 17,
+      "chapter": 18,
+      "position": 18,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_03d_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -802,33 +585,14 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 18,
+      "chapter": 19,
+      "position": 19,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Using AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_ai_03_04b_-rev"
+        "level_keys": [
+          "csaif_pl_ai_03_05_-rev"
         ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "7d949282-7551-43df-a651-b8167997e9dd"
-      },
-      "level_keys": [
-        "csaif_pl_ai_03_04b_-rev"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 19,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
         "progression": "Using AI"
       },
       "bonus": false,
@@ -846,11 +610,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 20,
       "position": 20,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_06_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -868,11 +635,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 21,
       "position": 21,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_08b_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -890,11 +660,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 22,
       "position": 22,
-      "activity_section_position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_09b_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -912,11 +685,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 23,
       "position": 23,
-      "activity_section_position": 9,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_10b_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
@@ -934,17 +710,20 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 24,
       "position": 24,
-      "activity_section_position": 10,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_11x_-rev"
+        ],
         "progression": "Using AI"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_03_11_-rev"
+          "csaif_pl_ai_03_11x_-rev"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
@@ -952,16 +731,44 @@
         "activity_section.key": "7d949282-7551-43df-a651-b8167997e9dd"
       },
       "level_keys": [
-        "csaif_pl_ai_03_11_-rev"
+        "csaif_pl_ai_03_11x_-rev"
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 25,
       "position": 25,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_01-rev-02"
+        ],
+        "progression": "Using AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_01-rev-02"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "7d949282-7551-43df-a651-b8167997e9dd"
+      },
+      "level_keys": [
+        "csaif_pl_ai_01-rev-02"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Final Project and Wrap-Up"
+        "level_keys": [
+          "csaif_pl_ai_04_01_-rev"
+        ],
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -978,12 +785,40 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 26,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Final Project and Wrap-Up"
+        "level_keys": [
+          "csaif_pl_ai_04_01B_-rev"
+        ],
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_01B_-rev"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+      },
+      "level_keys": [
+        "csaif_pl_ai_04_01B_-rev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_02_-rev"
+        ],
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1000,12 +835,15 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 27,
-      "activity_section_position": 3,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Final Project and Wrap-Up"
+        "level_keys": [
+          "csaif_pl_ai_04_03_-rev"
+        ],
+        "progression": "Preparing for the Project"
       },
       "bonus": false,
       "seeding_key": {
@@ -1022,145 +860,79 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 28,
-      "activity_section_position": 4,
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Final Project and Wrap-Up"
+        "level_keys": [
+          "csaif_pl_ai_wrap-up"
+        ],
+        "progression": "Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_04_04_-rev"
+          "csaif_pl_ai_wrap-up"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+        "activity_section.key": "9f0b64bd-fe60-44f8-becf-a5c23c47eec4"
       },
       "level_keys": [
-        "csaif_pl_ai_04_04_-rev"
+        "csaif_pl_ai_wrap-up"
       ]
     },
     {
-      "chapter": 41,
-      "position": 29,
-      "activity_section_position": 5,
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Final Project and Wrap-Up"
+        "level_keys": [
+          "pl-sandbox-aif1-01-Closing"
+        ],
+        "progression": "Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_04_05_-rev"
+          "pl-sandbox-aif1-01-Closing"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+        "activity_section.key": "9f0b64bd-fe60-44f8-becf-a5c23c47eec4"
       },
       "level_keys": [
-        "csaif_pl_ai_04_05_-rev"
+        "pl-sandbox-aif1-01-Closing"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_01_00_-rev",
+        "level.key": "csaif_pl_ai_01_00-new",
         "script_level.level_keys": [
-          "csaif_pl_ai_01_00_-rev"
+          "csaif_pl_ai_01_00-new"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_01_01_-rev",
+        "level.key": "csaif_pl_ai_01_02-new",
         "script_level.level_keys": [
-          "csaif_pl_ai_01_01_-rev"
+          "csaif_pl_ai_01_02-new"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
+        "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_03_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_03_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_04_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_04_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_05_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_05_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_06_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_06_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_nets_career_AI_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_nets_career_AI_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_AI_chatbot_overview_ai_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_AI_chatbot_overview_ai_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "a9d2e2ed-abb0-490e-a23f-253facba69ca"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275"
       }
     },
     {
@@ -1169,58 +941,10 @@
         "script_level.level_keys": [
           "csaif_pl_ai_02_03b_-rev"
         ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_09_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_09_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_08b_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_08b_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_into_12_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_into_12_-rev"
-        ],
-        "lesson.key": "Teaching Problem Solving with AI",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "d36352ec-aca2-4fcf-9249-f469e419a71b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_00b_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_00b_-rev"
-        ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0"
+        "activity_section.key": "83cf727c-77e0-432e-bdc3-404e1e6f3275"
       }
     },
     {
@@ -1285,21 +1009,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_01_08b_-rev",
+        "level.key": "csaif_pl_ai_01-rev-01",
         "script_level.level_keys": [
-          "csaif_pl_ai_01_08b_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "185df7d9-0b44-4a97-b7c3-ef917ecfa4d0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif_pl_ai_01_09_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_01_09_-rev"
+          "csaif_pl_ai_01-rev-01"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
@@ -1417,18 +1129,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_03_04b_-rev",
-        "script_level.level_keys": [
-          "csaif_pl_ai_03_04b_-rev"
-        ],
-        "lesson.key": "Lesson Exploration",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "7d949282-7551-43df-a651-b8167997e9dd"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csaif_pl_ai_03_05_-rev",
         "script_level.level_keys": [
           "csaif_pl_ai_03_05_-rev"
@@ -1489,9 +1189,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_03_11_-rev",
+        "level.key": "csaif_pl_ai_03_11x_-rev",
         "script_level.level_keys": [
-          "csaif_pl_ai_03_11_-rev"
+          "csaif_pl_ai_03_11x_-rev"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "7d949282-7551-43df-a651-b8167997e9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_01-rev-02",
+        "script_level.level_keys": [
+          "csaif_pl_ai_01-rev-02"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
@@ -1504,6 +1216,18 @@
         "level.key": "csaif_pl_ai_04_01_-rev",
         "script_level.level_keys": [
           "csaif_pl_ai_04_01_-rev"
+        ],
+        "lesson.key": "Lesson Exploration",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif1",
+        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_04_01B_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_04_01B_-rev"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
@@ -1537,26 +1261,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_04_04_-rev",
+        "level.key": "csaif_pl_ai_wrap-up",
         "script_level.level_keys": [
-          "csaif_pl_ai_04_04_-rev"
+          "csaif_pl_ai_wrap-up"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+        "activity_section.key": "9f0b64bd-fe60-44f8-becf-a5c23c47eec4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_04_05_-rev",
+        "level.key": "pl-sandbox-aif1-01-Closing",
         "script_level.level_keys": [
-          "csaif_pl_ai_04_05_-rev"
+          "pl-sandbox-aif1-01-Closing"
         ],
         "lesson.key": "Lesson Exploration",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-revision-aif1",
-        "activity_section.key": "8e42bbfb-568a-4dec-9ef2-f71110de23d5"
+        "activity_section.key": "9f0b64bd-fe60-44f8-becf-a5c23c47eec4"
       }
     }
   ],

@@ -1,0 +1,52 @@
+name 'pl-aif-2-U3-reflectionmd-3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Social Media Scheduler (Lesson Overview)
+
+#### In the upcoming activity from **Lesson 3**, students will choose from three small-business scenarios and take on the role of a web designer. Their task will be to update a social media scheduler for their business using core JavaScript array methods.
+
+#### Students will choose one of the professions below and update their scheduler based on unique events in the scenario. Throughout the activity, they will use the array methods `pop()`, `push()`, `shift()`, and `unshift()` to modify the schedule as new posts are added or old posts are removed.
+
+<img src="https://images.code.org/85c308f969450b64115d728268b084cd-image-1765898566109.png" alt="choice level preview- hairdresser, baker, and gamer" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+
+#### Students work through a series of levels, each requiring them to update parts of the website based on their business scenario. In this professional learning module, you will practice only the first level so you can experience the student perspective before teaching it.
+
+--- 
+
+## Choice Levels 
+#### This activity is a **choice level**, a feature used throughout the curriculum to support differentiation. Choice levels allow students to select from multiple scenarios or pathways based on their interests and skill levels.
+
+#### Students are only required to complete one of the available options. This flexibility helps maintain engagement while also giving teachers room to support learners at different readiness levels.
+
+
+
+<br>
+
+<div style="float:right; margin: 0px 40px 40px 0px;">
+  <img 
+    src="https://images.code.org/f146eafffe640c645f33bf898000e269-image-1765900717899.png"
+    alt="lightbulb icon"
+    width="225px"
+    style="border-radius:10px;"
+  >
+  </div>
+
+
+## Reflection
+
+#### In the next level, you will notice a new file type: `reflection.md.`
+
+#### These files give students space to reflect on their learning. 
+
+#### Reflection supports deeper understanding by prompting students to synthesize their thinking, describe their decisions, and make connections between the activity and the broader concepts.
+
+<div style="clear:both;"></div>
+
+## PAIR Framework: Prompt – Analyze – Integrate – Reflect
+
+#### As you work, remember to use the PAIR framework. The Reflect step is especially important in AI-supported learning. Use the `reflection.md` file to complete the R – Reflect portion of the process. Encourage students to do the same during classroom instruction.
+
+MARKDOWN

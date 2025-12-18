@@ -1,0 +1,74 @@
+name 'csaif_pl_ai_rev_lesson'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Resources 
+
+#### Everything you need to deliver engaging and effective classes is included with each **lesson plan** to help make your teaching experience as seamless as possible.
+
+<img src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="55%" style="border-radius:10px; float:right; margin: 0 0 0 40px; border: 3px solid black;">
+
+
+
+## Each Lesson Includes: 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Statements outline the specific knowledge and skills students will gain by the end of each lesson.
+        </p>
+   </div>
+</details>
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>2. </b>Detailed teaching guides</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Step-by-step guides walks you through each lesson, including teacher tips to ensure smooth delivery and maximize student learning.
+         <br><br>
+         Guidance can also be found in the Speaker Notes section of the slides.
+        </p>
+   </div>
+</details>
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"> <b>3. </b>Exemplars and answer keys</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         All Activity Guides, Unit Guides, and Projects have exemplars or answers keys.
+        </p>
+   </div>
+</details>
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"> <b>4. </b>Engaging slides</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Visually appealing presentations keep students focused and provide a clear structure for the lesson.
+         <br><br>
+   </div>
+</details>
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>5. </b>Interactive student handouts</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. 
+        </p>
+   </div>
+</details>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ You may want to take a minute to explore these features in <a href='https://studio.code.org/s/aif1-2025/lessons/1' target='_blank' rel='noopener noreferrer'>Unit 1, Lesson 1</a> to familiarize yourself with the lesson plan format.
+</p>
+MARKDOWN
