@@ -1129,11 +1129,14 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               ).finally(() => utils.reload());
-              MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
-                {name: 'AppName', value: this.getStandaloneApp()},
-                {name: 'SaveType', value: 'sources'},
-                {name: 'ErrorType', value: 'unauthorized'},
-              ]);
+              MetricsReporter.incrementCounter(
+                'LegacyLab.ProjectSaveFailureClient',
+                [
+                  {name: 'AppName', value: this.getStandaloneApp()},
+                  {name: 'SaveType', value: 'sources'},
+                  {name: 'ErrorType', value: 'unauthorized'},
+                ]
+              );
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
               this.logError_(
@@ -1141,11 +1144,14 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               ).finally(() => utils.reload());
-              MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
-                {name: 'AppName', value: this.getStandaloneApp()},
-                {name: 'SaveType', value: 'sources'},
-                {name: 'ErrorType', value: 'conflict'},
-              ]);
+              MetricsReporter.incrementCounter(
+                'LegacyLab.ProjectSaveFailureClient',
+                [
+                  {name: 'AppName', value: this.getStandaloneApp()},
+                  {name: 'SaveType', value: 'sources'},
+                  {name: 'ErrorType', value: 'conflict'},
+                ]
+              );
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_();

@@ -574,11 +574,32 @@ export default class ProjectManager {
       // showing the user a dialog before reload.
       this.forceReloading = true;
       this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
+      const errorType = error.message.includes('409')
+        ? 'conflict'
+        : 'unauthorized';
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailureClient',
+        1,
+        'Count',
+        [
+          {name: 'SaveType', value: type},
+          {name: 'ErrorType', value: errorType},
+        ]
+      );
       reload();
     } else if (error.message.includes('413')) {
       // Log 413s as warnings. The save fail listener should handle these errors and labs should
       // show a reasonable error message to the user.
       this.metricsReporter.logWarning('Project too large to save');
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailureClient',
+        1,
+        'Count',
+        [
+          {name: 'SaveType', value: type},
+          {name: 'ErrorType', value: 'size'},
+        ]
+      );
     } else {
       // Otherwise, we log the error, including the message as details.
       this.metricsReporter.logError(errorMessage, error, {
