@@ -12,7 +12,9 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
 
   let(:email) {Faker::Internet.unique.email}
   let!(:student) {create(:student, current_sign_in_at: inactive_since - 1.day)}
-  let!(:teacher) {create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: 42.months.ago))}
+  let!(:teacher) {create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: user_data_retention_status)}
+  let!(:user_data_retention_status) {create(:user_data_retention_status, deletion_warning_email_sent_at: deletion_warning_email_sent_at)}
+  let(:deletion_warning_email_sent_at) {42.days.ago}
 
   let(:expect_event_logging) do
     Metrics::Events.expects(:log_event).with(
@@ -81,6 +83,13 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       _(teacher_no_warning.deleted?).must_equal false
     end
 
+    it 'does not delete inactive teachers who have been sent deletion warning email less than 30 days ago' do
+      teacher_recent_warning = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: 29.days.ago))
+      delete_inactive_users
+      teacher_recent_warning.reload
+      _(teacher_recent_warning.deleted?).must_equal false
+    end
+
     it 'increments num_accounts_deleted' do
       delete_inactive_users
       _(described_instance.send(:num_accounts_deleted)).must_equal 2
@@ -146,15 +155,6 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       it 'does not include accounts from processed_user_ids' do
         described_instance.processed_user_ids << student.id
         _(inactive_users).wont_include student
-      end
-
-      it 'includes inactive teachers who have been sent deletion warning email more than 40 months ago' do
-        _(inactive_users).must_include teacher
-      end
-
-      it 'does not include inactive teachers who have not been sent deletion warning email' do
-        teacher_no_warning = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: nil))
-        _(inactive_users).wont_include teacher_no_warning
       end
     end
   end

@@ -59,8 +59,8 @@ class InactiveUserDeleter
       account_batch = inactive_users
       account_batch.each do |user|
         break if num_accounts_deleted >= limit
-        delete_user(user)
-        self.num_accounts_deleted += 1
+        # Only delete student accounts or teacher accounts where a deletion warning email has been sent over 30 days ago
+        delete_user(user) if user.student? || user.user_data_retention_status.deletion_warning_email_sent_at < 30.days.ago
       rescue StandardError => exception
         self.num_errors += 1
         Honeybadger.notify(exception, context: {user_id: user.id})
@@ -84,13 +84,10 @@ class InactiveUserDeleter
 
   def inactive_users
     ActiveRecord::Base.connected_to(role: :reporting) do
-      result = Queries::User::Inactive.
-        call(inactive_since: inactive_since).
-        where.not(id: processed_user_ids).
-        left_outer_joins(:user_data_retention_status)
-      users = result.where(user_type: User::TYPE_STUDENT).
-      or(result.where(user_type: User::TYPE_TEACHER).where.not(user_data_retention_status: {deletion_warning_email_sent_at: nil}))
-      users.limit(BATCH_SIZE)
+      Queries::User::Inactive.
+      call(inactive_since: inactive_since).
+      where.not(id: processed_user_ids).
+      limit(BATCH_SIZE)
     end
   end
 
@@ -111,6 +108,7 @@ class InactiveUserDeleter
       log_message("Deleting inactive user (id=#{user.id})")
       user.destroy!
     end
+    self.num_accounts_deleted += 1
   end
 
   private def upload_metrics
