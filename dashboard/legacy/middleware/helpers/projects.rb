@@ -43,7 +43,11 @@ class Projects
     }
     row[:id] = @table.insert(row)
 
-    row[:uuid]
+    if DCDO.get('project-uuid-in-url', false)
+      row[:uuid]
+    else
+      storage_encrypt_channel_id(row[:storage_id], row[:id])
+    end
   end
 
   def delete(channel_id)

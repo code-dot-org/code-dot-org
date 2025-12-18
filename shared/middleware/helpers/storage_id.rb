@@ -49,7 +49,7 @@ end
 def get_storage_id_and_project_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
 
-  if uuid?(encrypted)
+  if uuid?(encrypted) && DCDO.get('project-uuid-in-url', false)
     project = Projects.table.where(uuid: encrypted).first || Project.find_by(uuid: encrypted)
     raise ArgumentError, "No project found with uuid #{encrypted}" unless project
     [project[:storage_id], project[:id]]
@@ -106,7 +106,7 @@ def get_project_channel_id(storage_id, project_id)
   project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
 
   # return uuid if it exists
-  return project[:uuid] if project && project[:uuid]
+  return project[:uuid] if DCDO.get('project-uuid-in-url', false) && project && project[:uuid]
 
   # otherwise, continue to use the old encryption method
   storage_encrypt_channel_id(storage_id, project_id)

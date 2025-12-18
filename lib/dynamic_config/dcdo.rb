@@ -70,7 +70,8 @@ class DCDOBase < DynamicConfigBase
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
       'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
-      'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false)
+      'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
+      'project-uuid-in-url': DCDO.get('project-uuid-in-url', false)
     }
   end
 end
