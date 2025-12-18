@@ -5,7 +5,6 @@ import {
   OPEN_ENDED_PROJECTS_YOUNG_AGE,
 } from '@cdo/apps/constants';
 import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -1409,10 +1408,6 @@ var projects = (module.exports = {
     header.showProjectSaveError();
   },
   logError_: function (errorType, errorCount, errorText) {
-    // Share URLs only make sense for standalone app types.
-    // This includes most app types, but excludes pixelation.
-    const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
-
     MetricsReporter.logError({
       event: errorType,
       errorMessage: errorText,
@@ -1420,29 +1415,6 @@ var projects = (module.exports = {
       appType: this.getStandaloneAppForMetrics(),
       channelId: this.getCurrentId(),
     });
-
-    return firehoseClient.putRecord(
-      {
-        study: 'project-data-integrity',
-        study_group: 'v4',
-        event: errorType,
-        data_int: errorCount,
-        project_id: current && current.id + '',
-        data_string: errorText,
-        // Some fields in the data_json are repeated in separate fields above, so
-        // that they can be easily searched on as separate fields, and also have
-        // appropriately descriptive names in the data_json.
-        data_json: JSON.stringify({
-          errorCount: errorCount,
-          errorText: errorText,
-          isOwner: this.isOwner(),
-          currentUrl: window.location.href,
-          shareUrl: shareUrl,
-          currentSourceVersionId: currentSourceVersionId,
-        }),
-      },
-      {includeUserId: true}
-    );
   },
   updateCurrentData_(err, data, options = {}) {
     const {shouldNavigate} = options;
