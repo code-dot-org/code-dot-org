@@ -1,0 +1,111 @@
+@import 'color';
+@import '@code-dot-org/component-library-styles/font';
+
+.listItem {
+  padding: 8px;
+  margin: 2px;
+  color: $dark_charcoal;
+  text-align: left;
+  display: flex;
+  border-bottom: 1px solid $lightest_gray;
+  line-height: 1.5;
+}
+
+.overflowEllipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.titleSection {
+  margin-right: 25px;
+}
+
+.libraryTitle {
+  @include main-font-semi-bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: $link_color;
+  text-decoration: underline;
+
+  &:hover {
+    color: $link_color;
+  }
+}
+
+.author {
+  @include main-font-regular;
+}
+
+.description {
+  margin-right: 25px;
+  flex-shrink: 2;
+}
+
+.actions {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.actionBtn {
+  padding: 8px;
+  font-size: 18px;
+  background-color: $white;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.iconPadding {
+  padding: 0 2px;
+}
+
+.updateIcon {
+  padding: 0 1px;
+}
+
+.addBtn {
+  color: $link_color;
+  border-color: $link_color;
+
+  &:hover {
+    color: $white;
+    background-color: $link_color;
+  }
+}
+
+.updateBtn {
+  color: $orange;
+  border-color: $orange;
+
+  &:hover {
+    color: $white;
+    background-color: $orange;
+  }
+}
+
+.updateText {
+  @include main-font-semi-bold;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+.removeBtn {
+  color: $dark_red;
+  border-color: $dark_red;
+
+  &:hover {
+    color: $white;
+    background-color: $dark_red;
+  }
+
+  &:disabled {
+    color: $light_gray;
+    border-color: $light_gray;
+    background-color: $lightest_gray;
+    cursor: default;
+  }
+}

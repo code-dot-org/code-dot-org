@@ -1,6 +1,6 @@
 import $ from 'jquery';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
@@ -9,12 +9,10 @@ import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryV
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import libraryParser from './libraryParser';
-
-const DEFAULT_MARGIN = 7;
+import styles from './library-manager-dialog.module.scss';
 
 // Map userName from class libraries to project libraries so the author is displayed in the UI.
 // We only want users to see the author name for libraries from their classmates.
@@ -205,7 +203,7 @@ export class LibraryManagerDialog extends React.Component {
   displayProjectLibraries = () => {
     const {projectLibraries, updatedLibraryChannels} = this.state;
     if (!Array.isArray(projectLibraries) || !projectLibraries.length) {
-      return <div style={styles.message}>{i18n.noLibrariesInProject()}</div>;
+      return <div className={styles.message}>{i18n.noLibrariesInProject()}</div>;
     }
 
     const onUpdate = channelId => {
@@ -236,10 +234,10 @@ export class LibraryManagerDialog extends React.Component {
   displayClassLibraries = () => {
     const {classLibraries, errorMessages, sectionFilter} = this.state;
     if (errorMessages.loadClassLibraries) {
-      return <div style={styles.error}>{errorMessages.loadClassLibraries}</div>;
+      return <div className={styles.error}>{errorMessages.loadClassLibraries}</div>;
     }
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
-      return <div style={styles.message}>{i18n.noLibrariesInClass()}</div>;
+      return <div className={styles.message}>{i18n.noLibrariesInClass()}</div>;
     }
 
     const filteredLibraries = sectionFilter
@@ -318,7 +316,7 @@ export class LibraryManagerDialog extends React.Component {
             onClose={onClose}
             sourceCode={displayLibrary.source}
             buttons={
-              <div style={styles.updateButtons}>
+              <div className={styles.updateButtons}>
                 <Button
                   text={i18n.cancel()}
                   color={Button.ButtonColor.gray}
@@ -360,14 +358,18 @@ export class LibraryManagerDialog extends React.Component {
         <BaseDialog
           isOpen
           handleClose={this.closeLibraryManager}
-          style={{...styles.dialog, ...(displayLibrary ? styles.hidden : {})}}
+          className={classNames(styles.dialog, {
+            [styles.hidden]: displayLibrary,
+          })}
           useUpdatedStyles
         >
-          <h1 style={styles.header}>{i18n.libraryManage()}</h1>
-          <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <h2 style={styles.subHeader}>{i18n.libraryClassImport()}</h2>
+          <h1 className={styles.header}>{i18n.libraryManage()}</h1>
+          <div className={styles.libraryList}>
+            {this.displayProjectLibraries()}
+          </div>
+          <h2 className={styles.subHeader}>{i18n.libraryClassImport()}</h2>
           <div style={{textAlign: 'left'}}>
-            <label style={{...styles.message, display: 'inline'}}>
+            <label className={styles.messageInline}>
               {i18n.showingLibrariesFromSection()}
             </label>
             <select
@@ -383,17 +385,19 @@ export class LibraryManagerDialog extends React.Component {
               ))}
             </select>
           </div>
-          <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <h2 style={styles.subHeader}>{i18n.libraryIdImport()}</h2>
-          <div style={styles.inputParent} id="ui-test-import-library">
+          <div className={styles.libraryList}>
+            {this.displayClassLibraries()}
+          </div>
+          <h2 className={styles.subHeader}>{i18n.libraryIdImport()}</h2>
+          <div className={styles.inputParent} id="ui-test-import-library">
             <input
-              style={styles.linkBox}
+              className={styles.linkBox}
               type="text"
               value={importLibraryId}
               onChange={this.setLibraryToImport}
             />
             <button
-              style={styles.add}
+              className={styles.addButton}
               onClick={() => {
                 this.setState({isLoading: true});
                 this.fetchLatestLibrary(
@@ -409,80 +413,11 @@ export class LibraryManagerDialog extends React.Component {
               {!isLoading && i18n.add()}
             </button>
           </div>
-          <div style={styles.error}>{errorMessages.importFromId}</div>
+          <div className={styles.error}>{errorMessages.importFromId}</div>
         </BaseDialog>
         {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );
   }
 }
-
-const styles = {
-  dialog: {
-    padding: '0 15px',
-    cursor: 'default',
-  },
-  linkBox: {
-    cursor: 'auto',
-    height: '22px',
-    marginBottom: 0,
-    flex: 1,
-    maxWidth: 400,
-  },
-  header: {
-    textAlign: 'left',
-    fontSize: 24,
-    marginTop: 20,
-  },
-  subHeader: {
-    textAlign: 'left',
-    fontSize: 18,
-    margin: DEFAULT_MARGIN,
-  },
-  libraryList: {
-    maxHeight: '200px',
-    overflowY: 'auto',
-    borderBottom: `2px solid ${color.purple}`,
-  },
-  message: {
-    color: color.dark_charcoal,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    overflow: 'hidden',
-    lineHeight: '15px',
-    whiteSpace: 'pre-wrap',
-  },
-  inputParent: {
-    display: 'flex',
-    alignItems: 'baseline',
-  },
-  add: {
-    margin: DEFAULT_MARGIN,
-    fontSize: 16,
-    padding: DEFAULT_MARGIN,
-    color: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    ':disabled': {
-      color: color.light_gray,
-      borderColor: color.light_gray,
-      backgroundColor: color.lightest_gray,
-    },
-  },
-  hidden: {
-    visibility: 'hidden',
-  },
-  error: {
-    color: color.red,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    minHeight: 18,
-    whiteSpace: 'pre-wrap',
-    lineHeight: 1,
-  },
-  updateButtons: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-};
-
-export default Radium(LibraryManagerDialog);
+export default LibraryManagerDialog;
