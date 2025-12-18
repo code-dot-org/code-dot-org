@@ -64,6 +64,7 @@ class InactiveUserDeleter
         deletion_warning_email_sent_at = user_data_retention_status&.deletion_warning_email_sent_at
         if user.student? || (deletion_warning_email_sent_at && deletion_warning_email_sent_at < 30.days.ago)
           delete_user(user)
+          self.num_accounts_deleted += 1
         end
       rescue StandardError => exception
         self.num_errors += 1
@@ -112,7 +113,6 @@ class InactiveUserDeleter
       log_message("Deleting inactive user (id=#{user.id})")
       user.destroy!
     end
-    self.num_accounts_deleted += 1
   end
 
   private def upload_metrics
