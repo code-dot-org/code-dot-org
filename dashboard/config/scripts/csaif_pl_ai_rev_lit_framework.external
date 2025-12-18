@@ -14,28 +14,28 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em"><strong>Engaging with AI:</strong> Recognize AI is interpreting their input.</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>Engaging with AI in daily life involves using AI as a tool to access new content, information, or recommendations. These situations require learners to first recognize AI's presence, then evaluate the accuracy and relevance of AI outputs. Learners must develop a fundamental understanding of AI's technical foundations in order to critically analyze its capabilities and limitations.
+    <p style="font-size: 16px">Engaging with AI in daily life involves using AI as a tool to access new content, information, or recommendations. These situations require learners to first recognize AI's presence, then evaluate the accuracy and relevance of AI outputs. Learners must develop a fundamental understanding of AI's technical foundations in order to critically analyze its capabilities and limitations.
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em"><strong>Creating with AI:</strong> Use prompts to collaborate and refine.</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>Creating with AI consists of collaborating with an AI system in a creative or problem-solving process. It involves guiding and refining AI output through prompts and feedback, while ensuring the content remains fair and appropriate. It also involves ethical considerations related to content ownership, attribution, and the responsible use of existing materials.
+    <p style="font-size: 16px">Creating with AI consists of collaborating with an AI system in a creative or problem-solving process. It involves guiding and refining AI output through prompts and feedback, while ensuring the content remains fair and appropriate. It also involves ethical considerations related to content ownership, attribution, and the responsible use of existing materials.
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em"><strong>Managing AI:</strong> Decide when to accept, reject, or remix.</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>Managing AI requires intentionally choosing how AI can support and enhance human work. This includes assigning structured tasks to AI, such as organizing information, so humans can focus on areas requiring creativity, empathy, and judgment. AI systems can simulate a variety of roles, acting as an analyst, debate partner, or career guide. Learners who manage AI's actions learn to delegate tasks thoughtfully, guide AI outputs with clear instructions, and assess whether AI's involvement aligns with their goals and values. This domain helps learners build agency, ensuring that AI works for them and that its use remains ethical and human-centered.
+    <p style="font-size: 16px">Managing AI requires intentionally choosing how AI can support and enhance human work. This includes assigning structured tasks to AI, such as organizing information, so humans can focus on areas requiring creativity, empathy, and judgment. AI systems can simulate a variety of roles, acting as an analyst, debate partner, or career guide. Learners who manage AI's actions learn to delegate tasks thoughtfully, guide AI outputs with clear instructions, and assess whether AI's involvement aligns with their goals and values. This domain helps learners build agency, ensuring that AI works for them and that its use remains ethical and human-centered.
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em"><strong>Designing AI:</strong> Spark curiosity about how AI is trained on patterns and data.</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>Designing AI empowers learners to understand AI's social and ethical impacts and how AI works by shaping how AI systems function. Through hands-on exploration in an education context, students examine how data, design choices, and model behavior influence the fairness, usefulness, and impact of AI systems. The goal is not to develop commercial products or put them into service, but to build the confidence and capacity to shape AI for human good by understanding the principles underpinning the design and behavior of AI from an early age.
+    <p style="font-size: 16px">Designing AI empowers learners to understand AI's social and ethical impacts and how AI works by shaping how AI systems function. Through hands-on exploration in an education context, students examine how data, design choices, and model behavior influence the fairness, usefulness, and impact of AI systems. The goal is not to develop commercial products or put them into service, but to build the confidence and capacity to shape AI for human good by understanding the principles underpinning the design and behavior of AI from an early age.
 </p></div>
 </details>
 

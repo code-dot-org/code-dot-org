@@ -8709,6 +8709,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/rails__actioncable@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "@types/rails__actioncable@npm:8.0.3"
+  checksum: 10/3d46a88d0cf0ba92368111ba67f15c816ac1c300b56b7d96ac90a3befff7aa51638a9b155296bf162b17e73bc90fe1c1c81f9c9803d76f80a931c01ec7a8847f
+  languageName: node
+  linkType: hard
+
 "@types/range-parser@npm:*":
   version: 1.2.7
   resolution: "@types/range-parser@npm:1.2.7"
@@ -11228,6 +11235,7 @@ __metadata:
     "@types/mocha": "npm:^10.0.1"
     "@types/papaparse": "npm:^5.3.14"
     "@types/qrcode.react": "npm:^1.0.5"
+    "@types/rails__actioncable": "npm:^8.0.3"
     "@types/react": "npm:^18.0.28"
     "@types/react-bootstrap": "npm:^0.32.36"
     "@types/react-csv": "npm:^1.1.10"
