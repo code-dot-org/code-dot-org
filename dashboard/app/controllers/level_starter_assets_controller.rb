@@ -39,15 +39,15 @@ class LevelStarterAssetsController < ApplicationController
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
 
     preview_host = CDO.preview_codeprojects_hostname
-    preview_regex = nil
     # Allow any subdomain of codeprojects preview (with optional port) to fetch level starter assets.
     if preview_host.present?
       preview_regex = %r{\Ahttps?://[^/]+\.#{Regexp.escape(preview_host)}(:\d+)?\z}
+      # If the request's origin matches the preview host, set CORS header to allow it.
+      if request.origin&.match?(preview_regex)
+        response.headers['Access-Control-Allow-Origin'] = request.origin
+      end
     end
-    # If the request's origin matches the preview host, set CORS header to allow it.
-    if preview_regex && (request.origin =~ preview_regex)
-      response.headers['Access-Control-Allow-Origin'] = request.origin
-    end
+
     get_file_and_send(uuid_name)
   end
 
