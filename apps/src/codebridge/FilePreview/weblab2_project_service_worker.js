@@ -24,7 +24,7 @@ function main() {
   const broadcastChannel = new BroadcastChannel(
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
-  const originForUrls = getOriginForUrls();
+  const codeDotOrgOrigin = getCodeDotOrgOrigin();
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -82,8 +82,8 @@ function main() {
     return requestedFile;
   }
 
-  // If a url starts with `/`, we want to fetch it from the code.org origin for this environment.
-  function getOriginForUrls() {
+  // Code.org origin for this environment.
+  function getCodeDotOrgOrigin() {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
@@ -105,12 +105,9 @@ function main() {
       if (url) {
         let fetchUrl = url;
         if (url.startsWith('/level_starter_assets/')) {
-          // Prepend the origin for level starter assets requests.
-          fetchUrl = originForUrls + url;
+          // We fetch level starter assets from the code.org origin for this environment.
+          fetchUrl = codeDotOrgOrigin + url;
         }
-        console.log(
-          `Service worker fetching external URL for ${requestedFile}: ${fetchUrl}`
-        );
         return await fetch(fetchUrl);
       }
       return new Response(content, {
