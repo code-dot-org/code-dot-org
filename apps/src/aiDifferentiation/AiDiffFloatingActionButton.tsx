@@ -41,7 +41,6 @@ interface AiDiffFloatingActionButtonProps {
   canStartOpen?: boolean;
   canDefaultOpen?: boolean;
 }
-
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
 const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
 const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
