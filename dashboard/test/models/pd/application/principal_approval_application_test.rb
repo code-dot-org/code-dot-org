@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Pd::Application
   class PrincipalApprovalApplicationTest < ActiveSupport::TestCase
-    self.use_transactional_test_case = true
-
     setup_all do
       Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
     end
