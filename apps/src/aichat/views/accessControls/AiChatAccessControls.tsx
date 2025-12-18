@@ -12,7 +12,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
-import i18n from '@cdo/locale';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {AiChatAccessLevel} from '../../types';
@@ -132,32 +131,30 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
   return (
     <div className={style.container}>
       <div className={style.interactionsElement}>
-        <Heading4 noMargin={true}>
-          {i18n.aiSettingsClassSectionSettings()}
-        </Heading4>
+        <Heading4 noMargin={true}>Class Section Settings</Heading4>
         <BodyThreeText className={style.subHeader}>
-          {i18n.aiSettingsClassSectionSubtitle()}
+          Control access to AI features and tools for the entire class section.
         </BodyThreeText>
         <div className={classNames(style.rowContainer, style.withBorderTop)}>
           <BodyTwoText noMargin className={style.semiBold}>
-            {i18n.aiSettingsAiChatTools()}
+            AI Chat Tools
           </BodyTwoText>
           {!accessToggle && (
             <div className={style.toolTipContainer}>
               <Checkbox
-                label={i18n.aiSettingsEssentialOnly()}
+                label="Allow essential AI features only"
                 name="section_essential_ai_checkbox"
                 onChange={handleEssentialOnlyToggle}
                 checked={essentialOnlyCheckbox}
               />
               <InfoTooltipIcon
-                id={'section-essential-ai-checkbox-info'}
-                tooltipText={i18n.aiSettingsEssentialOnlyTooltip()}
+                id="section-essential-ai-checkbox-info"
+                tooltipText="The assigned course requires the use of AI tools. This option will give students access to only the AI tools needed to complete the assigned course."
               />
             </div>
           )}
           <Toggle
-            id={'uitest-ai-chat-section-access-toggle'}
+            id="uitest-ai-chat-section-access-toggle"
             name="aiChatSectionAccessToggle"
             checked={accessToggle}
             onChange={handleAccessToggle}
