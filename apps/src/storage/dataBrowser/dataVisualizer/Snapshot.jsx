@@ -161,8 +161,8 @@ class Snapshot extends React.Component {
           <Button
             isPending={this.state.isCopyPending}
             onClick={this.copy}
-            text="Copy"
-            ariaLabel="Copy"
+            text={msg.copy()}
+            ariaLabel={msg.copy()}
             className={classNames(
               dataStyles.button,
               dataStyles.buttonText,
@@ -175,8 +175,8 @@ class Snapshot extends React.Component {
           <Button
             isPending={this.state.isSavePending}
             onClick={this.save}
-            text="Save"
-            ariaLabel="Save"
+            text={msg.save()}
+            ariaLabel={msg.save()}
             className={classNames(
               dataStyles.button,
               dataStyles.buttonText,
