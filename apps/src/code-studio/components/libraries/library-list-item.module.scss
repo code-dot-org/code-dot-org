@@ -22,13 +22,13 @@
 
 .libraryTitle {
   @include main-font-semi-bold;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   color: $link_color;
-  text-decoration: underline;
 
   &:hover {
     color: $link_color;
+    text-decoration: underline;
   }
 }
 

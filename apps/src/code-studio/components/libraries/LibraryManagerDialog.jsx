@@ -1,5 +1,5 @@
-import $ from 'jquery';
 import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -12,6 +12,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 
 import libraryParser from './libraryParser';
+
 import styles from './library-manager-dialog.module.scss';
 
 // Map userName from class libraries to project libraries so the author is displayed in the UI.
@@ -203,7 +204,9 @@ export class LibraryManagerDialog extends React.Component {
   displayProjectLibraries = () => {
     const {projectLibraries, updatedLibraryChannels} = this.state;
     if (!Array.isArray(projectLibraries) || !projectLibraries.length) {
-      return <div className={styles.message}>{i18n.noLibrariesInProject()}</div>;
+      return (
+        <div className={styles.message}>{i18n.noLibrariesInProject()}</div>
+      );
     }
 
     const onUpdate = channelId => {
@@ -234,7 +237,9 @@ export class LibraryManagerDialog extends React.Component {
   displayClassLibraries = () => {
     const {classLibraries, errorMessages, sectionFilter} = this.state;
     if (errorMessages.loadClassLibraries) {
-      return <div className={styles.error}>{errorMessages.loadClassLibraries}</div>;
+      return (
+        <div className={styles.error}>{errorMessages.loadClassLibraries}</div>
+      );
     }
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
       return <div className={styles.message}>{i18n.noLibrariesInClass()}</div>;
@@ -363,57 +368,61 @@ export class LibraryManagerDialog extends React.Component {
           })}
           useUpdatedStyles
         >
-          <h1 className={styles.header}>{i18n.libraryManage()}</h1>
-          <div className={styles.libraryList}>
-            {this.displayProjectLibraries()}
+          <div className={styles.marginSides}>
+            <h1 className={styles.header}>{i18n.libraryManage()}</h1>
+            <div className={styles.libraryList}>
+              {this.displayProjectLibraries()}
+            </div>
+            <h2 className={styles.subHeader}>{i18n.libraryClassImport()}</h2>
+            <div style={{textAlign: 'left'}}>
+              <label className={styles.messageInline}>
+                {i18n.showingLibrariesFromSection()}
+              </label>
+              <select
+                onChange={event =>
+                  this.setState({sectionFilter: event.target.value})
+                }
+              >
+                <option value="">{i18n.all()}</option>
+                {sections.map(section => (
+                  <option key={section} value={section}>
+                    {section}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.libraryList}>
+              {this.displayClassLibraries()}
+            </div>
+            <h2 className={styles.subHeader}>{i18n.libraryIdImport()}</h2>
+            <div className={styles.inputParent} id="ui-test-import-library">
+              <input
+                className={styles.linkBox}
+                type="text"
+                value={importLibraryId}
+                onChange={this.setLibraryToImport}
+              />
+              <button
+                className={styles.addButton}
+                onClick={() => {
+                  this.setState({isLoading: true});
+                  this.fetchLatestLibrary(
+                    importLibraryId,
+                    this.addLibraryById,
+                    'import' /* event */
+                  );
+                }}
+                type="button"
+                disabled={!importLibraryId}
+              >
+                {isLoading && (
+                  <FontAwesome icon="spinner" className="fa-spin" />
+                )}
+                {!isLoading && i18n.add()}
+              </button>
+            </div>
+            <div className={styles.error}>{errorMessages.importFromId}</div>
           </div>
-          <h2 className={styles.subHeader}>{i18n.libraryClassImport()}</h2>
-          <div style={{textAlign: 'left'}}>
-            <label className={styles.messageInline}>
-              {i18n.showingLibrariesFromSection()}
-            </label>
-            <select
-              onChange={event =>
-                this.setState({sectionFilter: event.target.value})
-              }
-            >
-              <option value="">{i18n.all()}</option>
-              {sections.map(section => (
-                <option key={section} value={section}>
-                  {section}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.libraryList}>
-            {this.displayClassLibraries()}
-          </div>
-          <h2 className={styles.subHeader}>{i18n.libraryIdImport()}</h2>
-          <div className={styles.inputParent} id="ui-test-import-library">
-            <input
-              className={styles.linkBox}
-              type="text"
-              value={importLibraryId}
-              onChange={this.setLibraryToImport}
-            />
-            <button
-              className={styles.addButton}
-              onClick={() => {
-                this.setState({isLoading: true});
-                this.fetchLatestLibrary(
-                  importLibraryId,
-                  this.addLibraryById,
-                  'import' /* event */
-                );
-              }}
-              type="button"
-              disabled={!importLibraryId}
-            >
-              {isLoading && <FontAwesome icon="spinner" className="fa-spin" />}
-              {!isLoading && i18n.add()}
-            </button>
-          </div>
-          <div className={styles.error}>{errorMessages.importFromId}</div>
         </BaseDialog>
         {displayLibrary && this.renderDisplayLibrary()}
       </div>
