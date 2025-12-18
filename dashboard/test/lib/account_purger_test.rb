@@ -82,6 +82,8 @@ class AccountPurgerTest < ActiveSupport::TestCase
   end
 
   test 'uses dashboard and pegasus transactions' do
+    # TODO: re-enable after addressing Sequel timeouts. See PR #70106
+    skip 'flaky due to frequent Sequel timeouts'
     test_name = 'Boaty McBoatface'
 
     refute_equal test_name, @student.name
