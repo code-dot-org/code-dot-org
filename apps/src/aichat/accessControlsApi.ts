@@ -2,6 +2,8 @@ import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 // import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {repackageError} from '../metrics/analyticsUtils';
+
 import {AiChatAccessLevel} from './types';
 
 export const handleUpdateSectionAiChatAccessLevel = async (
@@ -21,7 +23,7 @@ export const handleUpdateSectionAiChatAccessLevel = async (
   } catch (error) {
     MetricsReporter.logError({
       event: MetricEvent.AI_SETTINGS_UPDATE_SECTION_ACCESS_FAIL,
-      errorMessage: JSON.stringify(error),
+      errorMessage: repackageError(error),
     });
     // We need to rethrow the error so that the toggle can revert to its original state.
     throw error;
