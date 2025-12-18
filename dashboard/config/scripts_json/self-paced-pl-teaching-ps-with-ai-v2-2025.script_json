@@ -2,10 +2,11 @@
   "script": {
     "name": "self-paced-pl-teaching-ps-with-ai-v2-2025",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "Self-paced PL - AIF",
+      "has_verified_resources": true,
       "is_migrated": true,
       "topic_tags": [
         "ai"
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-12 15:41:24 UTC",
+    "serialized_at": "2025-12-18 05:55:24 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
