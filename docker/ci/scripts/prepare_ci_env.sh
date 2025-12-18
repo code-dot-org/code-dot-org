@@ -16,7 +16,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 
 # Number of parallel processes for dashboard ruby unit tests,
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
-export PARALLEL_TEST_PROCESSORS=4
+export PARALLEL_TEST_PROCESSORS=6
 
 # Apps build parallelization settings for CI
 # optimized for drone m7i.4xlarge workers with 16 vCPUs and 64 GB RAM.
