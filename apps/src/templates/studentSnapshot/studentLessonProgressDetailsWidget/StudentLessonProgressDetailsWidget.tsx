@@ -148,15 +148,17 @@ const StudentLessonProgressDetailsWidget: React.FC<
       !userValidationProgressByLesson ||
       !userValidationProgressByLesson[selectedLessonId]
     ) {
-      return '';
+      return '0 of 0 passed';
     }
 
     const numValidationLevelsUserCompleted =
       userValidationProgressByLesson[selectedLessonId][`${selectedStudentId}`];
     const totalValidationLevels = lessonsToValidationLevels[selectedLessonId];
-    return numValidationLevelsUserCompleted === totalValidationLevels.length
+    return numValidationLevelsUserCompleted === totalValidationLevels?.length
       ? COMPLETE_PERCENT_STRING
-      : `${numValidationLevelsUserCompleted} of ${totalValidationLevels.length} passed`;
+      : `${numValidationLevelsUserCompleted ?? 0} of ${
+          totalValidationLevels?.length ?? 0
+        } passed`;
   }, [
     selectedUnitId,
     selectedLessonId,
