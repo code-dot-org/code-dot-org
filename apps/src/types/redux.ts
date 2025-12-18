@@ -132,17 +132,14 @@ interface SectionProgressState {
     [unitId: number]: {
       [userId: number]: {
         [lessonId: number]: {
-          incompletePercent: number;
-          imperfectPercent: number;
           completedPercent: number;
           timeSpent: number;
-          lastTimestamp: number;
         };
       };
     };
   };
   studentLevelProgressByUnit?: {
-    [lessonId: string]: {
+    [unitId: string]: {
       [userId: string]: {
         [levelId: string]: {
           status: string;
