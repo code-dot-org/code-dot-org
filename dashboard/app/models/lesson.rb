@@ -21,6 +21,8 @@
 #  index_stages_on_script_id_and_key        (script_id,key) UNIQUE
 #
 
+# temp comment to trigger dashboard unit tests
+
 require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a unit
