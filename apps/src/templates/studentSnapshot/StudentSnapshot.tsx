@@ -67,14 +67,14 @@ const getLessons = (unitId: number) =>
 const lessonsCachedLoader = _.memoize(getLessons);
 
 const StudentSnapshot: React.FC = () => {
+  const [selectedStudentId, setSelectedStudentId] = React.useState<
+    number | null
+  >(null);
   const [lessons, setLessons] = useState<LessonOption[]>([]);
   const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [selectedStudentId, setSelectedStudentId] = React.useState<
-    number | null
-  >(null);
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
