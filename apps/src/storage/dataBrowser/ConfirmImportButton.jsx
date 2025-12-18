@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -5,7 +6,6 @@ import React from 'react';
 import msg from '@cdo/locale';
 
 import Dialog from '../../legacySharedComponents/Dialog';
-import PendingButton from '../../legacySharedComponents/PendingButton';
 
 import dataStyles from './data-styles.module.scss';
 
@@ -80,12 +80,20 @@ class ConfirmImportButton extends React.Component {
           onConfirm={this.handleConfirm}
           title={msg.confirmImportOverwriteTitle()}
         />
-        <PendingButton
-          isPending={this.state.isImporting}
-          onClick={() => this.importFileInput.click()}
-          pendingText={msg.importingWithEllipsis()}
-          className={classNames(dataStyles.button, dataStyles.buttonWhite)}
+        <Button
           text={msg.importCSV()}
+          onClick={() => this.importFileInput.click()}
+          disabled={this.state.isImporting}
+          isPending={this.state.isImporting}
+          ariaLabel={msg.importCSV()}
+          className={classNames(
+            dataStyles.button,
+            dataStyles.buttonText,
+            dataStyles.buttonRightMargin
+          )}
+          size="s"
+          type="secondary"
+          color="gray"
         />
       </span>
     );

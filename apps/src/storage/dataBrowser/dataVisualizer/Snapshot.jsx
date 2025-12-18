@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -5,7 +6,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import * as imageUtils from '@cdo/apps/imageUtils';
-import PendingButton from '@cdo/apps/legacySharedComponents/PendingButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import msg from '@cdo/locale';
@@ -158,19 +158,33 @@ class Snapshot extends React.Component {
             </p>
             <p>{this.props.selectedOptions}</p>
           </div>
-          <PendingButton
+          <Button
             isPending={this.state.isCopyPending}
             onClick={this.copy}
-            pendingText="Please Wait"
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
             text="Copy"
+            ariaLabel="Copy"
+            className={classNames(
+              dataStyles.button,
+              dataStyles.buttonText,
+              dataStyles.buttonRightMargin
+            )}
+            size="s"
+            type="secondary"
+            color="gray"
           />
-          <PendingButton
+          <Button
             isPending={this.state.isSavePending}
             onClick={this.save}
-            pendingText="Please Wait"
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
             text="Save"
+            ariaLabel="Save"
+            className={classNames(
+              dataStyles.button,
+              dataStyles.buttonText,
+              dataStyles.buttonRightMargin
+            )}
+            size="s"
+            type="secondary"
+            color="gray"
           />
         </BaseDialog>
       </div>
