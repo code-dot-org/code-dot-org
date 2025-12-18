@@ -36,7 +36,20 @@ class LevelStarterAssetsController < ApplicationController
   # and the level's start_sources manages the mapping between friendly names
   # and UUIDs.
   def file_by_uuid
+    puts "hi from file_by_uuid"
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
+
+    preview_host = CDO.preview_codeprojects_hostname
+    preview_regex = nil
+    # Allow any subdomain of the preview host (with optional port)
+    if preview_host.present?
+      preview_regex = %r{\Ahttps?://[^/]*\.#{Regexp.escape(preview_host)}(:\d+)?\z}
+    end
+    puts "preview regex is " + preview_regex
+    if preview_regex && (request.referer =~ preview_regex)
+      puts "setting CORS header for #{request.referer}"
+      request.headers['Access-Control-Allow-Origin'] = request.referer
+    end
     get_file_and_send(uuid_name)
   end
 
