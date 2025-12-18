@@ -99,7 +99,7 @@ const StudentSnapshot: React.FC = () => {
           canProvideFeedback={true}
         />
         <StudentCFUWidget
-          gridWidth={1}
+          gridWidth={2}
           gridHeight={2}
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
