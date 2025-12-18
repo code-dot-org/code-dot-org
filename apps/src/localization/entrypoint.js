@@ -47,7 +47,12 @@ const aif_prefixes = [
   '/courses/how-ai-works-2023',
 ];
 
-const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
+const dashboard_prefixes = [
+  '/home',
+  '/users',
+  '/sections',
+  '/teacher_dashboard',
+];
 
 const prefixes = {
   MlKri360o3v2T: csd_prefixes,
