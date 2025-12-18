@@ -59,16 +59,14 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
-      # Pausing during Hour of AI code freeze
-      # cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
+      cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
 
       # This should be run after the commit_content job that happens on both the levelbuilder
       # and staging environments
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
-      # Pausing during Hour of AI code freeze
-      # cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
+      cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
 
 
       # This should be run after the commit_content job that happens on the levelbuilder

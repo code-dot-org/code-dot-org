@@ -24,7 +24,6 @@ import {
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
-import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -113,7 +112,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.projectSources
   );
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
-  const dialogControl = useDialogControl();
 
   // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
@@ -274,20 +272,13 @@ const VersionHistoryPanel: React.FunctionComponent<
     successfulProjectResetCleanUp();
   }, [dispatch, startSources, successfulProjectResetCleanUp, onLoadVersion]);
 
-  const confirmStartOver = useCallback(() => {
-    dialogControl?.showDialog({
-      type: DialogType.StartOver,
-      handleConfirm: startOver,
-    });
-  }, [dialogControl, startOver]);
-
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (selectedVersion === INITIAL_VERSION_ID) {
       sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'true',
       });
-      confirmStartOver();
+      startOver();
     } else if (projectManager && selectedVersion) {
       sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'false',
@@ -313,10 +304,10 @@ const VersionHistoryPanel: React.FunctionComponent<
     }
   }, [
     selectedVersion,
-    confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
     onLoadVersion,
+    startOver,
   ]);
 
   const isLatestVersion = useCallback(
