@@ -78,13 +78,6 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   );
 };
 
-// Determine if a teacher is viewing a student's project in read-only mode.
-export const isTeacherViewingStudent = (state: RootState): boolean => {
-  const viewAsUserId = state.progress.viewAsUserId;
-  const isReadOnly = isReadOnlyWorkspace(state);
-  return Boolean(viewAsUserId && isReadOnly);
-};
-
 // Helper functions
 
 // Returns if the current state represents a predict level that should be read only.

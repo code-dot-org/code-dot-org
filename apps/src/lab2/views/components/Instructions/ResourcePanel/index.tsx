@@ -26,6 +26,7 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import '@cdo/apps/lab2/introjs.scss';
 
@@ -63,6 +64,7 @@ export interface Setting {
 interface VersionHistoryProps {
   startSources: ProjectSources;
   alwaysShowAutoSaves?: boolean;
+  onLoadVersion?: (sources: ProjectSources) => void;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -139,6 +141,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasAutoCollapsedNoTabs = useRef(false);
   const settingsButtonRef = useRef<HTMLDivElement | null>(null);
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
+  const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -229,6 +232,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           disabled={isTemporarilyReadOnly && !isViewingOldVersion}
           isOpen={currentTab === Tabs.VersionHistory}
           alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
+          onLoadVersion={versionHistoryProps.onLoadVersion}
         />
       );
     }
@@ -311,6 +315,32 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
+
+  // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
+  useEffect(() => {
+    if (currentTab === Tabs.AiTutor || currentTab === Tabs.VersionHistory) {
+      const panelContent = tabContentRefs.current[currentTab];
+      if (panelContent) {
+        // Use setTimeout to ensure the panel is rendered and visible before focusing.
+        const timeoutId = setTimeout(() => {
+          const focusableElement =
+            currentTab === Tabs.AiTutor
+              ? panelContent.querySelector<HTMLTextAreaElement>(
+                  '#uitest-chat-textarea'
+                )
+              : findFirstFocusableElement(panelContent);
+          if (focusableElement) {
+            focusableElement.focus();
+          } else {
+            // If no focusable element exists, make the panel content focusable and focus it
+            panelContent.setAttribute('tabindex', '-1');
+            panelContent.focus();
+          }
+        }, 0);
+        return () => clearTimeout(timeoutId);
+      }
+    }
+  }, [currentTab]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
@@ -534,6 +564,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ref={el => {
                       if (el) {
                         el.inert = tab !== currentTab;
+                        // Store ref for AI Tutor and Version History tabs.
+                        if (
+                          tab === Tabs.AiTutor ||
+                          tab === Tabs.VersionHistory
+                        ) {
+                          tabContentRefs.current[tab] = el;
+                        }
+                      } else {
+                        // Clear ref when element is removed.
+                        if (
+                          tab === Tabs.AiTutor ||
+                          tab === Tabs.VersionHistory
+                        ) {
+                          tabContentRefs.current[tab] = null;
+                        }
                       }
                     }}
                   >

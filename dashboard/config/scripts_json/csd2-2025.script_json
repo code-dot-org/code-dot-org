@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-31 16:36:43 UTC",
+    "serialized_at": "2025-12-11 17:14:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11339,6 +11339,7 @@
       "key": "headings_and_lists",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

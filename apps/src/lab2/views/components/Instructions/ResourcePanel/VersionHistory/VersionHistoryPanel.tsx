@@ -24,7 +24,6 @@ import {
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
-import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -42,6 +41,7 @@ interface VersionHistoryPanelProps {
   disabled?: boolean;
   isOpen?: boolean;
   alwaysShowAutoSaves?: boolean;
+  onLoadVersion?: (sources: ProjectSources) => void;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -69,6 +69,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   disabled = false,
   isOpen = false,
   alwaysShowAutoSaves = false,
+  onLoadVersion,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -111,7 +112,6 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.projectSources
   );
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
-  const dialogControl = useDialogControl();
 
   // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
@@ -268,15 +268,9 @@ const VersionHistoryPanel: React.FunctionComponent<
         /* forceNewVersion */ true
       )
     );
+    if (onLoadVersion) onLoadVersion(startSources);
     successfulProjectResetCleanUp();
-  }, [dispatch, startSources, successfulProjectResetCleanUp]);
-
-  const confirmStartOver = useCallback(() => {
-    dialogControl?.showDialog({
-      type: DialogType.StartOver,
-      handleConfirm: startOver,
-    });
-  }, [dialogControl, startOver]);
+  }, [dispatch, startSources, successfulProjectResetCleanUp, onLoadVersion]);
 
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -284,7 +278,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'true',
       });
-      confirmStartOver();
+      startOver();
     } else if (projectManager && selectedVersion) {
       sendLab2AnalyticsEvent(EVENTS.LAB2_VERSION_RESTORED, {
         isInitialVersion: 'false',
@@ -296,6 +290,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
+            if (onLoadVersion) onLoadVersion(sources);
             successfulProjectResetCleanUp();
           } else {
             setVersionLoadError(true);
@@ -309,9 +304,10 @@ const VersionHistoryPanel: React.FunctionComponent<
     }
   }, [
     selectedVersion,
-    confirmStartOver,
     dispatch,
     successfulProjectResetCleanUp,
+    onLoadVersion,
+    startOver,
   ]);
 
   const isLatestVersion = useCallback(
@@ -355,14 +351,21 @@ const VersionHistoryPanel: React.FunctionComponent<
         });
       }
       if (viewingInitialVersion) {
-        dispatch(previewStartSources({startSources}));
+        dispatch(previewStartSources({startSources, onLoadVersion}));
       } else if (isLatest) {
-        dispatch(resetToCurrentVersion());
+        dispatch(resetToCurrentVersion({onLoadVersion}));
       } else {
-        dispatch(loadVersion({startSources, version}));
+        dispatch(loadVersion({startSources, version, onLoadVersion}));
       }
     },
-    [dispatch, isLatestVersion, setSelectedVersion, startSources, versionList]
+    [
+      dispatch,
+      isLatestVersion,
+      setSelectedVersion,
+      startSources,
+      versionList,
+      onLoadVersion,
+    ]
   );
 
   const handleSaveVersionSuccess = useCallback(() => {

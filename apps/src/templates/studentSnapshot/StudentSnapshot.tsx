@@ -30,6 +30,27 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
+interface CFULevel {
+  id: number;
+  name: string;
+  display_name: string;
+  type: string;
+  key?: string;
+  script_level_id: number;
+  progression?: string;
+  progression_display_name?: string;
+}
+
+interface CFULevelsData {
+  cfu_levels: CFULevel[];
+}
+
+const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
+  return HttpClient.fetchJson<CFULevelsData>(
+    `/student_snapshots/cfu_levels/${lessonId}`
+  ).then(response => response?.value?.cfu_levels || []);
+};
+
 const StudentSnapshot: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = React.useState<
     number | null
@@ -39,6 +60,8 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
+  const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
+  const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -81,6 +104,29 @@ const StudentSnapshot: React.FC = () => {
       );
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
+
+  // Fetch CFU levels when lesson changes
+  React.useEffect(() => {
+    if (selectedLessonId) {
+      setIsCfuLevelsLoading(true);
+      getCFULevels(selectedLessonId)
+        .then(levels => {
+          setCfuLevels(levels);
+        })
+        .catch(error => {
+          console.error('Error fetching CFU levels:', error);
+          setCfuLevels([]);
+        })
+        .finally(() => {
+          setIsCfuLevelsLoading(false);
+        });
+    } else {
+      setCfuLevels([]);
+    }
+  }, [selectedLessonId]);
+
+  // TODO: Use this in CFU widget
+  console.log(cfuLevels, isCfuLevelsLoading);
 
   // TODO: replace with actual values from URL/Redux later
   const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID

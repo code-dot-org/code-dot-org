@@ -12,19 +12,21 @@ markdown <<MARKDOWN
 ## 📝 To Do
 
 #### Read through the two versions of the AI chat below. As you review, try to identify
-* #### Contradiction found
+* #### Where the contradiction occurs
 * #### Why this might have happened
-* #### Potential real-world consequences of contradictions
+* #### Potential real-world consequences of the contradiction
 
 <p align="center">
 <img src="https://images.code.org/9f1ddd6c70ad0f77379007d318c03294-Screenshot 2025-05-22 at 1.45.58 PM.png" alt="lesson plan diagram" width="85%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
-#### AI models do not have deep expertise like medical professionals. AI relies on broad datasets that may contain conflicting or outdated information, which leads to contradictions.
+#### AI models do not have the deep, specialized expertise that trained medical professionals have. They rely on broad datasets, which sometimes include conflicting, incomplete, or outdated information. When the AI tries to make predictions based on those patterns, it may produce answers that sound reasonable but directly contradict each other.
 
-#### Medical professionals have deep knowledge on specific subjects with information on current methods and research.
+#### In contrast, medical professionals rely on up-to-date research, training, and clinical experience to guide their recommendations.
 
-#### Fact-checking ensures accuracy by verifying AI-generated information against trusted sources. Refining prompts by doing things like specifying a reliable source or adding context helps AI produce clearer and more relevant responses.
+#### Because of this, it is essential to fact-check AI-generated responses—especially when the topic involves health, safety, or other high-stakes situations. Verifying information against trusted sources helps ensure accuracy.
+
+#### You can also reduce contradictions by refining your prompt. Adding details such as the specific situation, trusted sources, or the type of guidance you're looking for can help the AI generate clearer and more consistent responses.
 
 #### *Optional:* Fact-check claims made by the AI by doing a Google search or using one of the following sources.
 * #### <a href='https://my.clevelandclinic.org/health/symptoms/21209-chest-pain' target='_blank' rel='noopener noreferrer'>Cleveland Clinc</a>
@@ -34,6 +36,6 @@ markdown <<MARKDOWN
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 5. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
 MARKDOWN

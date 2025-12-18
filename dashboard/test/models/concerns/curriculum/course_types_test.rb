@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CourseTypesTests < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @student = create(:student)
     @teacher = create(:teacher)
