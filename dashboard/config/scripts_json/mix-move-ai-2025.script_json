@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-20 21:08:34 UTC",
+    "serialized_at": "2025-12-12 21:05:57 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -264,7 +264,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "The images and code in Mix & Move with AI were pre-generated using OpenAI’s GPT Image 1 and Google’s Gemini Flash 2.5 models respectively, then reviewed by the Code.org team to ensure they’re safe and appropriate for students. The tutorial uses pre-saved (pre-cached) images and code snippets rather than generating new ones live to simulate AI generation safely. Learn more about the process [here](link tbd)"
+            "markdown": "The images and code in Mix & Move with AI were pre-generated using OpenAI’s GPT Image 1 and Google’s Gemini Flash 2.5 models, respectively, then reviewed by the Code.org team to ensure they’re safe and appropriate for students. The tutorial uses pre-saved (pre-cached) images and code snippets rather than generating new ones live to simulate AI generation safely. Learn more about the process [on pages 7-8 of the Educator's Guide.](https://drive.google.com/file/d/1aS4cwFjks_Pd12a_aZDusj49QfdaHlTx/view)"
           }
         ]
       },

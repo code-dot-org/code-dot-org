@@ -184,7 +184,6 @@
     "level_data": {
       "validationTimeout": 6,
       "library": "launch2024",
-      "danceMove": "rest",
       "packId": "default",
       "guideMode": "instructions",
       "startSources": {
@@ -236,9 +235,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-02T22:51:01.462+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_code_sound\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_code_sound\"},{\"changed_at\":\"2025-11-03 17:30:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:11:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:09:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:28:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 08:58:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:00:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-02T22:51:01.462+00:00\",\"changed\":[\"cloned from \\\"HoAI_pilot_6_music_code_sound\\\"\"],\"cloned_from\":\"HoAI_pilot_6_music_code_sound\"},{\"changed_at\":\"2025-11-03 17:30:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-03 20:11:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:09:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-04 19:28:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 08:58:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-11-05 09:00:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2025-12-16 23:11:27 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
