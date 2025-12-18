@@ -2,7 +2,6 @@ import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
@@ -55,9 +54,6 @@ export default class QuickActionsCell extends Component {
     this.updateMenuLocation();
     window.addEventListener('resize', throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
-    if (this.props.experimentDetails) {
-      firehoseClient.putRecord(this.props.experimentDetails);
-    }
   };
 
   // Menu closed

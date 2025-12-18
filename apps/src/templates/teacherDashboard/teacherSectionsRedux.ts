@@ -13,7 +13,6 @@ import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {RootState} from '@cdo/apps/types/redux';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -585,22 +584,6 @@ const sectionSlice = createSlice({
         )
         .map(section => section.id);
 
-      if (section.loginType !== state.initialLoginType) {
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'edit-section-details',
-            event: 'change-login-type',
-            data_json: JSON.stringify({
-              sectionId: section.id,
-              initialLoginType: state.initialLoginType,
-              updatedLoginType: section.loginType,
-            }),
-          },
-          {includeUserId: true}
-        );
-      }
-
       const assignmentData: AssignmentData = {
         section_id: section.id,
         section_creation_timestamp: section.createdAt,
@@ -620,18 +603,6 @@ const sectionSlice = createSlice({
       }
       if (section.unitName !== state.initialUnitName) {
         assignmentData.unitName = section.unitName;
-      }
-      // If either of these has been set, assignment changed and should be logged
-      if (assignmentData.unit_id || assignmentData.course_id) {
-        firehoseClient.putRecord(
-          {
-            study: 'assignment',
-            study_group: 'v1',
-            event: isNewSection ? 'create_section' : 'edit_section_details',
-            data_json: JSON.stringify(assignmentData),
-          },
-          {includeUserId: true}
-        );
       }
 
       state.sectionBeingEdited = null;
@@ -767,15 +738,6 @@ export const toggleSectionHidden =
     const currentlyHidden = state.sections[sectionId].hidden;
     dispatch(editSectionProperties({hidden: !currentlyHidden}));
 
-    // Track archive/restore section action
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: 'toggleSectionHidden',
-      event: currentlyHidden ? 'restoreSection' : 'archiveSection',
-      data_json: JSON.stringify({
-        section_id: sectionId,
-      }),
-    });
     return dispatch(finishEditingSection());
   };
 
@@ -1007,23 +969,6 @@ export const assignToSection = (
   unitId: number,
   pageType: string
 ): SectionThunkAction => {
-  firehoseClient.putRecord(
-    {
-      study: 'assignment',
-      event: 'course-assigned-to-section',
-      data_json: JSON.stringify(
-        {
-          sectionId,
-          unitId,
-          courseId,
-          date: new Date(),
-        },
-        removeNullValues
-      ),
-    },
-    {includeUserId: true}
-  );
-
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     if (
@@ -1081,10 +1026,9 @@ export const assignToSection = (
  * @param {number} sectionId
  */
 export const unassignSection =
-  (sectionId: number, location: string): SectionThunkAction =>
+  (sectionId: number): SectionThunkAction =>
   (dispatch, getState) => {
     dispatch(beginEditingSection(sectionId, true));
-    const {initialCourseId, initialUnitId} = getState().teacherSections;
 
     dispatch(
       editSectionProperties({
@@ -1094,35 +1038,8 @@ export const unassignSection =
         unitId: null,
       })
     );
-    firehoseClient.putRecord(
-      {
-        study: 'assignment',
-        event: 'course-unassigned-from-section',
-        data_json: JSON.stringify(
-          {
-            sectionId,
-            scriptId: initialUnitId,
-            courseId: initialCourseId,
-            location: location,
-            date: new Date(),
-          },
-          removeNullValues
-        ),
-      },
-      {includeUserId: true}
-    );
     return dispatch(finishEditingSection());
   };
-
-/**
- * Removes null values from stringified object before sending firehose record
- */
-function removeNullValues(key: string, val?: string | number | null) {
-  if (val === null || typeof val === 'undefined') {
-    return undefined;
-  }
-  return val;
-}
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider: {[key: string]: string} = {
