@@ -238,7 +238,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           hasEdited={false}
           settings={[useThemeSetting('sketchlab')]}
           versionHistoryProps={{
-            startSources: levelProperties?.startSources as ProjectSources,
+            startSources:
+              (levelProperties?.startSources as ProjectSources) ||
+              DEFAULT_SOURCES,
             onLoadVersion: onLoadVersion,
           }}
         />

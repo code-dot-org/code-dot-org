@@ -22,7 +22,7 @@
         "tabOrder": 0
       },
       "Calculator.java": {
-        "text": "import java.util.Scanner;\n\n/*\n * Represents a calculator that performs calculations\n */\npublic class Calculator {\n\n  public static String calcExponent(double firstNumber, double secondNumber) {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Calculate the result of the parameter firstNumber raised to the power of\n     * the parameter secondNumber, then return a String containing the text\n     * \"{firstNumber} raised to the power of {secondNumber} is {result}.\"\n     * -----------------------------------------------------------------------------\n     */\n\n\n    return \"\";\n  }\n\n  /*\n   * Prompts a user for a number and returns the number entered\n   */\n  public static double promptUser() {\n    Scanner input = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    double number = input.nextDouble();\n    input.close();\n    return number;\n  }\n  \n}",
+        "text": "import java.util.Scanner;\n\n/*\n * Represents a calculator that performs calculations\n */\npublic class Calculator {\n\n  public static String calcExponent(double firstNumber, double secondNumber) {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Calculate the result of the parameter firstNumber raised to the power of\n     * the parameter secondNumber, then return a String containing the text\n     * \"{firstNumber} raised to the power of {secondNumber} is {result}\"\n     * -----------------------------------------------------------------------------\n     */\n\n\n    return \"\";\n  }\n\n  /*\n   * Prompts a user for a number and returns the number entered\n   */\n  public static double promptUser() {\n    Scanner input = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    double number = input.nextDouble();\n    input.close();\n    return number;\n  }\n  \n}",
         "isVisible": true,
         "tabOrder": 1
       }
@@ -32,6 +32,6 @@
     "ai_tutor_available": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:28:28.842+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L5a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L3-L5a_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:28:28.842+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L5a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L3-L5a_pilot-2025\"},{\"changed_at\":\"2025-12-12 04:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>
