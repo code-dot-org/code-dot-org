@@ -141,14 +141,19 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   // This checks to see if the AI lesson summaries experiment or DCDO key are set
   // or if the section has AIF assigned in order to enable AI Lesson Summaries
   React.useEffect(() => {
-    HttpClient.fetchJson<AifInfo>(
-      `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
-    ).then(response => {
-      const aif =
-        (response.value.aif || showAITALessonSummary) &&
-        !!aiTALessonSummaryInfo;
-      setCanShowLessonSummaries(aif);
-    });
+    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
+      if (!showAITALessonSummary) {
+        HttpClient.fetchJson<AifInfo>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
+        ).then(response => {
+          setCanShowLessonSummaries(response.value.aif);
+        });
+      } else {
+        setCanShowLessonSummaries(showAITALessonSummary);
+      }
+    } else {
+      setCanShowLessonSummaries(false);
+    }
   }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
 
   React.useEffect(() => {
