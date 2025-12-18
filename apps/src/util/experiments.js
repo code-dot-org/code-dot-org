@@ -68,8 +68,6 @@ experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
-// Use v2 of Web Lab 2 preview
-experiments.WEBLAB2_PREVIEW_V2 = 'weblab2-preview-v2';
 // Use AI Tutor system prompts from Langfuse
 experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
 // Enable AI lesson summaries
