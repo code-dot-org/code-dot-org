@@ -75,7 +75,7 @@ export const HTMLPreview: React.FC = () => {
         prefix = `start-mode-${levelId}`;
       } else {
         // Unknown channel, not in exemplar or start mode, use generic preview prefix.
-        prefix = 'weblab2-project';
+        prefix = `weblab2-${levelId}`;
       }
     }
 
