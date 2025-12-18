@@ -1,0 +1,8 @@
+name 'building-data-driven-systems-lesson9-level2-test_2025-pilot'
+display_name 'Co-Build a Search'
+description 'Build a working search [1], fix a defect if found [2], and prove it with edge-case tests [3].'
+
+sublevels
+level 'building-data-driven-systems-lesson9-level2a-test_2025-pilot'
+level 'building-data-driven-systems-lesson9-level2b-test_2025-pilot'
+level 'building-data-driven-systems-lesson9-level2c-test_2025-pilot'

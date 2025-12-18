@@ -66,11 +66,7 @@ markdown <<MARKDOWN
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Define the top and bottom sections of a page.</td>
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;footer&gt;© 2025 My Site&lt;/footer&gt;</code></td>
     </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;section&gt;</code> / <code>&lt;article&gt;</code></td>
-      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Group related or self-contained content (like posts).</td>
-      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;section&gt;About Us&lt;/section&gt;</code></td>
-    </tr>
+    
     <tr>
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;strong&gt;</code> / <code>&lt;em&gt;</code></td>
       <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Emphasize or italicize important text.</td>
@@ -78,6 +74,30 @@ markdown <<MARKDOWN
     </tr>
   </tbody>
 </table>
+
+
+<div style="clear:both;"></div>
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <p style="margin: 12px; font-size: 16px;">
+    <strong>Do you recognize any of the tags from the previous level?</strong>
+  </p>
+</div>
 
 ## Opening and Closing Tags 
 

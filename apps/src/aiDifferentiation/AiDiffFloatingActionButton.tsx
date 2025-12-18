@@ -2,6 +2,7 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import {
   tryGetSessionStorage,
@@ -16,6 +17,7 @@ import aiFabWithIconTag from '@cdo/static/ai-bot-ta-tag-cyan.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
+import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffContainer from './AiDiffContainer';
@@ -108,6 +110,23 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   React.useEffect(() => {
     updateUnreadNotificationCount();
+  }, [updateUnreadNotificationCount]);
+
+  // WebSocket subscription for real-time notification count updates
+  React.useEffect(() => {
+    if (
+      DCDO.get('ai-lesson-summaries-notifications-enabled', false) ||
+      experiments.isEnabled('teacher-notifications-ws')
+    ) {
+      const unsubscribe = createTeacherNotificationSubscription({
+        onNewNotification: () =>
+          setUnreadNotificationCount(prevCount =>
+            prevCount === 'loading' ? prevCount : prevCount + 1
+          ),
+      });
+
+      return unsubscribe || undefined;
+    }
   }, [updateUnreadNotificationCount]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
