@@ -2799,7 +2799,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'undestroy restores recently soft-deleted projects' do
-    skip 'flaky due to frequent Sequel timeouts'
     Timecop.freeze do
       student = create(:student)
       with_channel_for student do |channel_id_a|
@@ -3992,7 +3991,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'find_channel_owner finds channel owner' do
-    skip 'flaky due to frequent Sequel timeouts'
     student = create(:student)
     with_channel_for student do |project_id, storage_id|
       encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
