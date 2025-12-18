@@ -2161,6 +2161,8 @@ en:
           description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
           lesson_groups: {}
           student_description: At PwC, we believe that all students have the potential to be tomorrow’s leaders and tech-driven workforce. Access Your Potential is our commitment to help close the opportunity gap by equipping young people, especially those from disadvantaged communities, with the financial, technology and career-selection skills they need to change the trajectory of their lives. As part of our commitment, we’re excited to launch our Access Your Potential middle school technology and careers curriculum.
+          lessons: {}
+          name: pwc
         allthesurveys:
           title: All the surveys
           description_audience: ''
@@ -10287,6 +10289,28 @@ en:
               name: AI-Powered Threats and Defenses Removed Levels
             lesson-12:
               name: AI Tutor - Python Lab
+            lesson-13:
+              name: U5 L1
+            lesson-14:
+              name: U5 L2
+            lesson-15:
+              name: U5 L3
+            lesson-16:
+              name: U5 L4
+            lesson-17:
+              name: U5 L5
+            lesson-18:
+              name: U5 L6
+            lesson-19:
+              name: U5 L7
+            lesson-20:
+              name: U5 L8
+            lesson-21:
+              name: U5 L9
+            lesson-22:
+              name: U5 L10
+            lesson-23:
+              name: U5 Project
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10302,6 +10326,8 @@ en:
               display_name: Python
             lessonGroup-8:
               display_name: AI Tutor
+            lessonGroup-9:
+              display_name: Web Dev - AIF Sem 2
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -25807,13 +25833,47 @@ en:
             - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
         building-data-driven-systems-with-ai-pilot-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: building-data-driven-systems-with-ai-pilot-2025
           title: Building Data-Driven Systems with AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            In this unit, students shift from building single interactions to designing full, data-driven web apps. Students learn how to organize information using arrays and objects, define a clear data schema before coding, and build features like sorting and filtering that operate on collections of data. Throughout the unit, students see how data structure choices directly shape both program behavior and the user experience, helping them understand why real-world apps rely so heavily on well-designed data systems.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Apply abstraction to model real-world information as structured data using JavaScript arrays and objects.
+            - Define a schema for a dataset by identifying its fields, types, and constraints, and use it as the foundation for building UI and program logic.
+            - Use arrays and objects to organize, access, and update collections of information in a program.
+            - Apply decomposition and algorithmic reasoning to design procedures that operate on datasets, such as searching, sorting, or filtering.
+            - Analyze AI-generated code scaffolds, complete missing logic, and evaluate AI outputs for clarity and correctness.
+            - Explain criteria for selecting creative modes, including when to adapt existing code, debug errors, or generate new structures.
+            - Identify examples of bias or missing context in datasets and explain how they can lead to unfair or misleading user experiences.
+            - Analyze and revise datasets or AI-generated scaffolds to address ethical concerns and improve fairness, usability, and trustworthiness.
+            - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
+          student_description: |-
+            In this unit, you move beyond simple interactions and start building web apps that work with real collections of information. You learn how to organize data using arrays and objects, plan your data with a clear structure before coding, and create features like sorting and filtering that help users explore information in meaningful ways. Along the way, you see how the way data is set up directly affects what an app can do and how it feels to use.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Apply abstraction to model real-world information as structured data using JavaScript arrays and objects.
+            - Define a schema for a dataset by identifying its fields, types, and constraints, and use it as the foundation for building UI and program logic.
+            - Use arrays and objects to organize, access, and update collections of information in a program.
+            - Apply decomposition and algorithmic reasoning to design procedures that operate on datasets, such as searching, sorting, or filtering.
+            - Analyze AI-generated code scaffolds, complete missing logic, and evaluate AI outputs for clarity and correctness.
+            - Explain criteria for selecting creative modes, including when to adapt existing code, debug errors, or generate new structures.
+            - Identify examples of bias or missing context in datasets and explain how they can lead to unfair or misleading user experiences.
+            - Analyze and revise datasets or AI-generated scaffolds to address ethical concerns and improve fairness, usability, and trustworthiness.
+            - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
         iterating-with-ai-pilot-2025:
           lessons: {}
           lesson_groups: {}
@@ -25908,6 +25968,8 @@ en:
               name: Unit 3 Prototypes
             lesson-4:
               name: Unit 4 Prototypes
+            lesson-5:
+              name: Unit 5 Code Examples
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -26134,7 +26196,9 @@ en:
           description: ''
           student_description: ''
         self-paced-pl-revision-aif0:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Overview
           lesson_groups: {}
           name: self-paced-pl-revision-aif0
           title: Teaching AI Foundations (Introductory Module)
@@ -26173,16 +26237,244 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-revision-aif5
-          title: Teaching Cybersecurity and Global Impacts
+          title: Teaching AI-Powered Threats and Defenses
           description_audience: ''
           description_short: ''
           description: ''
-          student_description: ''
+          student_description: "\n"
         self-paced-pl-revision-aif6:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-revision-aif6
           title: Teaching Insights from Data and AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-sem-2-unit-3:
+          lessons:
+            lesson-1:
+              name: Teaching Data-Driven Systems
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-3
+          title: 'Teaching Unit 3: Data-Driven Systems'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-sandbox-aif-sem-2-unit-4:
+          lessons: {}
+          lesson_groups: {}
+        miniexpress1:
+          lessons: {}
+          lesson_groups: {}
+          name: miniexpress1
+          title: 'Mini Express Unit '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif5-v3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: AI-Powered Threats and Defenses
+          description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, students take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. Students analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. They also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication. Throughout the unit, students use computational thinking practices to analyze threats, evaluate system behavior, and reason through design tradeoffs. They apply human-centered design principles to propose security features that consider user needs and system constraints. Students examine real-world decisions made by cybersecurity professionals, including how they balance protection with usability, anticipate unintended consequences, and build trust in systems. Through case analysis, collaborative design challenges, and reflection routines, students gain insight into cybersecurity as a sociotechnical system. They also explore career pathways in cybersecurity and AI, learning how professionals contribute to safer, more ethical, and more inclusive computing systems.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            - Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            - Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            - Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            - Evaluate tradeoffs between usability and security in the design of digital systems.
+            - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            - Describe cybersecurity career roles and how professionals use AI tools in their work.
+            :::
+          student_description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, you take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. You analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. You also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            - Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            - Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            - Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            - Evaluate tradeoffs between usability and security in the design of digital systems.
+            - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            - Describe cybersecurity career roles and how professionals use AI tools in their work.
+            :::
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          name: aif5-v3
+        customizing-llms-latm-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: "(Optional) Introduction to Generative AI"
+            lessonGroup-3:
+              display_name: Customizing Language Models
+            lessonGroup-4:
+              display_name: User-Centered Design
+          name: customizing-llms-latm-2025
+          title: Customizing Language Models (LATM)
+          description_audience: ''
+          description_short: Learn to customize chatbots using AI Chat Lab
+          description: |-
+            This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: Learn to customize chatbots using AI Chat Lab
+        teaching-ps-with-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-ps-with-ai-v2-2025
+          title: Teaching Problem-Solving with AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-foundations-ai-programming-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-foundations-ai-programming-v2-2025
+          title: Teaching Foundations of AI Programming (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-ai-systems-that-power-it-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-ai-systems-that-power-it-v2-2025
+          title: Teaching AI and the Systems that Power It (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-fabric-of-internet-and-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-fabric-of-internet-and-ai-v2-2025
+          title: Teaching the Fabric of the Internet and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-insights-from-data-and-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-insights-from-data-and-ai-v2-2025
+          title: Teaching Insights from Data and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-ai-powered-threats-defenses-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-ai-powered-threats-defenses-v2-2025
+          title: Teaching AI-Powered Threats and Defenses (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        teaching-aif-s1-overview-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-aif-s1-overview-2025
+          title: Introduction to Teaching AI Foundations S1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-aif-s1-overview-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aif-s1-overview-2025
+          title: Introduction to Teaching AI Foundations S1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-powered-threats-defenses-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-defenses-v2-2025
+          title: Teaching AI-Powered Threats and Defenses (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-insights-from-data-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-insights-from-data-ai-v2-2025
+          title: Teaching Insights from Data and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-fabric-of-internet-and-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-fabric-of-internet-and-ai-v2-2025
+          title: Teaching the Fabric of the Internet and AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ai-systems-that-power-it-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-systems-that-power-it-v2-2025
+          title: Teaching AI and the Systems that Power It (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-foundations-ai-programming-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-foundations-ai-programming-v2-2025
+          title: Teaching Foundations of AI Programming (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-ps-with-ai-v2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ps-with-ai-v2-2025
+          title: Teaching Problem-Solving with AI (v2)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd2-web-lab-update-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-Page Websites'
+            lessonGroup-4:
+              display_name: End of Unit Survey
+          name: csd2-web-lab-update-2025
+          title: CSD Unit 2 (with Web Lab 2)
           description_audience: ''
           description_short: ''
           description: ''

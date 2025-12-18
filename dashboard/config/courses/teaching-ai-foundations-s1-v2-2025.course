@@ -1,0 +1,35 @@
+{
+  "name": "teaching-ai-foundations-s1-v2-2025",
+  "script_names": [
+    "self-paced-pl-teaching-aif-s1-overview-2025",
+    "self-paced-pl-teaching-ps-with-ai-v2-2025",
+    "self-paced-pl-teaching-foundations-ai-programming-v2-2025",
+    "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+    "self-paced-pl-teaching-fabric-of-internet-and-ai-v2-2025",
+    "self-paced-pl-teaching-ai-powered-threats-defenses-v2-2025",
+    "self-paced-pl-teaching-insights-from-data-ai-v2-2025"
+  ],
+  "original_script_names": [
+    "self-paced-pl-teaching-aif-s1-overview-2025",
+    "self-paced-pl-teaching-ai-powered-threats-defenses-v2-2025",
+    "self-paced-pl-teaching-insights-from-data-ai-v2-2025",
+    "self-paced-pl-teaching-fabric-of-internet-and-ai-v2-2025",
+    "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+    "self-paced-pl-teaching-foundations-ai-programming-v2-2025",
+    "self-paced-pl-teaching-ps-with-ai-v2-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-ai-foundations-s1-v2",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

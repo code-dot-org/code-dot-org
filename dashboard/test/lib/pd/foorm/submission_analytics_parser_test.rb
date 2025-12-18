@@ -2,7 +2,11 @@ require 'test_helper'
 
 module Pd::Foorm
   class SubmissionAnalyticsParserTest < ActiveSupport::TestCase
-    setup_all {@form = create(:foorm_form_csf_intro_post_survey)}
+    self.use_transactional_test_case = true
+
+    setup_all do
+      @form = create(:foorm_form_csf_intro_post_survey)
+    end
     teardown_all {@form.delete}
 
     test 'reshape_submission formats matrix question response as expected' do

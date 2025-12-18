@@ -98,6 +98,7 @@
   top: -10%;
   transition: opacity 0.2s ease;
   opacity: 1;
+  pointer-events: none;
 
   &Hidden {
     opacity: 0;

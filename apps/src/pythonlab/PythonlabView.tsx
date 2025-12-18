@@ -84,6 +84,9 @@ const PythonlabView: React.FunctionComponent<
     levelProperties,
     initialSources
   );
+  const sourceLevelId = useAppSelector(
+    state => state.lab2Project.projectSourceLevelId
+  );
   const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
@@ -246,7 +249,7 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {hasSource && (
+      {hasSource && sourceLevelId === levelProperties.id && (
         <Codebridge
           config={config}
           setConfig={setConfig}
