@@ -3,7 +3,6 @@ require 'active_support/core_ext/object/try'
 require 'active_support/core_ext/module/attribute_accessors'
 require 'cdo/aws/s3'
 require 'honeybadger/ruby'
-require 'cdo/firehose'
 
 #
 # BucketHelper
@@ -194,7 +193,7 @@ class BucketHelper
   # When updating s3://cdo-v3-sources/.../main.json, checks that the
   # current_version from the client is the latest version on the server. If a
   # different client more recently wrote to this project, logs an event to
-  # firehose and halts with 409 Conflict.
+  # cloudwatch and halts with 409 Conflict.
   #
   # In some cases, S3 replication lag could cause the current_version not to
   # even appear in the version list. In this case, do not log or halt.
@@ -250,28 +249,27 @@ class BucketHelper
         'reject-comparing-older-main-json'
       end
 
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'project-data-integrity',
-        study_group: 'v4',
-        event: error_type,
+    log_payload = {
+      study: 'project-data-integrity',
+      study_group: 'v4',
+      event: error_type,
 
-        project_id: encrypted_channel_id,
-        user_id: user_id,
+      project_id: encrypted_channel_id,
+      user_id: user_id,
 
-        data_json: {
-          currentVersionId: current_version,
-          tabId: tab_id,
-          key: key,
+      data_json: {
+        currentVersionId: current_version,
+        tabId: tab_id,
+        key: key,
 
-          # Server timestamp indicating when the first version of main.json was saved by the browser
-          # tab making this request. This is for diagnosing problems with writes from multiple browser
-          # tabs.
-          firstSaveTimestamp: timestamp,
-        }.to_json
+        # Server timestamp indicating when the first version of main.json was saved by the browser
+        # tab making this request. This is for diagnosing problems with writes from multiple browser
+        # tabs.
+        firstSaveTimestamp: timestamp,
       }
-    )
+    }
+
+    CDO.log.info log_payload.to_json
 
     return false
   end
@@ -424,8 +422,7 @@ class BucketHelper
           }
         )
         version_restored = true
-        FirehoseClient.instance.put_record(
-          :analysis,
+        log_payload =
           {
             study: 'bucket-warning',
             study_group: self.class.name,
@@ -433,16 +430,15 @@ class BucketHelper
             data_string: 'Restore at Specified Version Failed. Restored most recent.',
             data_json: {
               source: "#{@bucket}/#{key}?versionId=#{version_id}"
-            }.to_json
+            }
           }
-        )
+        CDO.log.info log_payload.to_json
       else
         # Couldn't restore specific version and didn't find a latest version either.
         # It is probably deleted.
         # In this case, we want to do nothing.
         response = {status: 'NOT_MODIFIED'}
-        FirehoseClient.instance.put_record(
-          :analysis,
+        log_payload =
           {
             study: 'bucket-warning',
             study_group: self.class.name,
@@ -450,9 +446,9 @@ class BucketHelper
             data_string: 'Restore at Specified Version Failed on deleted object. No action taken.',
             data_json: {
               source: "#{@bucket}/#{key}?versionId=#{version_id}"
-            }.to_json
+            }
           }
-        )
+        CDO.log.info log_payload.to_json
       end
     end
 
@@ -493,8 +489,7 @@ class BucketHelper
   protected def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)
     owner_id, storage_app_id = get_storage_id_and_project_id(project_id)
     key = s3_path owner_id, storage_app_id, filename
-    FirehoseClient.instance.put_record(
-      :analysis,
+    log_payload =
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -511,9 +506,9 @@ class BucketHelper
           bucket: @bucket,
           key: key,
           filename: filename,
-        }.to_json
+        }
       }
-    )
+    CDO.log.info log_payload.to_json
   end
 
   protected def object_exists?(key)

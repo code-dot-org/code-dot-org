@@ -1,0 +1,102 @@
+name 'pl-aif-2-U3-CHAT-12'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Common Pitfalls and Pro tips for Web Lab
+
+#### Now that you’ve had a chance to explore Web Lab, let’s look at some common challenges teachers (and students!) run into and how to handle them smoothly.
+
+ 
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <!-- Using the AI -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/65cc70df044c06a2e9750d1a48bf87f1-image-1761073828457.png" alt="AI Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Using the AI</b></h3>
+      <p style="font-size: 14pt;">The AI can be a great partner for debugging and creating. Encourage students to ask it for help finding problems in their code or brainstorming ways to improve their project.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        ➡️ Click on the AI icon on the top left of the workspace to access the AI bot.
+      </p>
+    </div>
+  </div>
+
+  <!-- Prompt Engineering -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/fe34dbc344639aa52100c39a6221fccb-image-1761075817469.png" alt="Prompt Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Prompt Engineering</b></h3>
+      <p style="font-size: 14pt;">Good prompts = better results! Be specific about what you want the AI to do.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        💡 Example: Instead of “make it look better,” try “center the box and change the text color to blue.”
+      </p> 
+      
+    </div>
+  </div>
+
+  <!-- Using the Code -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/69c5d8e9385c45b8947ab591a1f4dd68-image-1761075768469.png" alt="Code Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Using the Code</b></h3>
+      <p style="font-size: 14pt;">Make sure code goes in the right place! HTML = structure, CSS = style, JavaScript = interaction.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🧠 Quick tip: Double check what file you are on before editing text. 
+      </p>
+    </div>
+  </div>
+
+  <!-- Version History -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/99fe165565cd4611f279861a1e081d18-image-1761074831537.png" alt="Version Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Version History</b></h3>
+      <p style="font-size: 14pt;">Mistakes happen! Get into the habit of saving the version history to roll back to an earlier version if something breaks.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔁 Click the Version History icon, describe your changes, and save. This lets students experiment and easily return to an earlier version if something doesn’t work out.
+      </p>
+    </div>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/67eaece7c88bf7bfb8d2add1266b10e7-image-1761075565221.png" alt="Bug Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Troubleshooting</b></h3>
+      <p style="font-size: 14pt;">Something not working? Slow down and look for tiny details. Are there missing tags, typos, or misplaced brackets?</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        🔍 Debugging is detective work, not guessing!Use the AI to help! 
+      </p>
+    </div>
+  </div>
+
+  <!-- Lag Time -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/f1e674936257f5bc2097fe0a436fb295-image-1761075706724.png" alt="Clock Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Lag Time / Patience with Results</b></h3>
+      <p style="font-size: 14pt;">Sometimes Web Lab or the AI takes a few seconds to load. Remind students to pause and wait before refreshing or clicking again.</p>
+      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+        ⏳ A little patience keeps things running smoothly!
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+---
+## Up Next
+
+#### Let's do a quick vocabulary check before moving on to creating a website.
+
+
+MARKDOWN

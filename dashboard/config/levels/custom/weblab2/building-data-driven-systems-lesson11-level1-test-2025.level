@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2025-11-25T15:20:39.000Z",
   "level_num": "custom",
@@ -61,8 +60,12 @@
         "3"
       ]
     },
-    "project_template_level_name": "building-data-driven-systems-lesson11-template-test-2025"
+    "project_template_level_name": "building-data-driven-systems-lesson11-template-test-2025",
+    "display_name": "Build Schema & Mock Dataset",
+    "thumbnail_url": "https://images.code.org/ba2b8431c524d5db87fbdecfe0aaf95f-laptop2.jpg",
+    "bubble_choice_description": "Create your schema in code and generate a first version of your dataset, then refine it so it reflects your chosen value ***(supports completing Milestone 1 tasks)***."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-25T15:20:39.584+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-25 15:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:28:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:39:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:46:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:51:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-25T15:20:39.584+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-25 15:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:28:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:39:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:46:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-25 15:51:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-05 23:56:49 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:12:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:14:07 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:35:45 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 18:56:09 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:52:11 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-08 21:52:39 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

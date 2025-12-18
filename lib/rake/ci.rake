@@ -193,7 +193,9 @@ namespace :ci do
   end
 
   timed_task_with_logging :sparse_checkout do
-    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
+    # never do sparse checkout in prepare_cacheable_build CI job, or it will
+    # cause later unit and ui jobs to fail.
+    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT) && ['unit_tests', 'ui_tests'].include?(ENV.fetch('CI_JOB', nil))
       cmd = 'bin/sparse-checkout no-pegasus-content'
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
       RakeUtils.system_stream_output "git status --porcelain"
