@@ -76,6 +76,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   >('loading');
 
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
 
   const dispatch = useAppDispatch();
 
@@ -137,6 +138,19 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
+  React.useEffect(() => {
+    if (!threadMessages || threadMessages.length === 0) {
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     const body = JSON.stringify({
       context: context,
@@ -176,7 +190,13 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
     dispatch(setChatIsOpen(!chatIsOpen));
-    dispatch(fetchThreadMessages({thread: 0}));
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
     trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };

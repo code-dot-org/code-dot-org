@@ -62,15 +62,17 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       setShowNotifications(false);
       dispatch(
         fetchThreadMessages({
+          contextType: context.type,
           thread: 0,
           initialThreadPrompt: {
             label: label,
             prompt: prompt,
           },
+          curriculumCourses: curriculumCourses,
         })
       );
     },
-    [dispatch]
+    [dispatch, context, curriculumCourses]
   );
 
   return (
