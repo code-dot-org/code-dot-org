@@ -1,9 +1,8 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {
-  AiEvaluationTypes,
-  AiInteractionStatus,
-} from '@cdo/generated-scripts/sharedConstants';
+import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {EventStatus} from '../aichat/types';
 
 import {
   logUserLevelEvaluation,
@@ -132,7 +131,7 @@ enum ShareFilterStatus {
   Profanity = 'profanity',
 }
 type OpenaiChatCompletionMessage = {
-  status?: ValueOf<typeof AiInteractionStatus>;
+  status?: EventStatus;
   role: Role;
   content: string;
   // Only used in case of PII or profanity violation
