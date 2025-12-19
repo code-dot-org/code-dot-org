@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 21:40:59 UTC",
+    "serialized_at": "2025-12-18 21:29:25 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -540,6 +540,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L5andL6_-rev"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -562,6 +565,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-datastory-L7_-rev"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -584,6 +590,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chk-dataStory-Vocab_-rev"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -756,28 +765,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Data Visualizations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sp-pl-DS_L7B_-rev"
-        ],
-        "lesson.key": "Introduction to Data Science ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif6",
-        "activity_section.key": "de604131-4c63-497c-bb20-a42cea8984a4"
-      },
-      "level_keys": [
-        "sp-pl-DS_L7B_-rev"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 27,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
         "level_keys": [
           "aif-PL-sortData-panel-L30-DS_-rev"
         ],
@@ -798,9 +785,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 9,
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -823,9 +810,9 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 10,
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -848,8 +835,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -873,8 +860,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -898,8 +885,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -923,8 +910,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -948,8 +935,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -973,8 +960,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 34,
+      "position": 34,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -998,8 +985,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
+      "chapter": 35,
+      "position": 35,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1023,8 +1010,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
+      "chapter": 36,
+      "position": 36,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1048,8 +1035,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 38,
+      "chapter": 37,
+      "position": 37,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1367,18 +1354,6 @@
         "level.key": "sp-pl-DS-DotPlots_-rev",
         "script_level.level_keys": [
           "sp-pl-DS-DotPlots_-rev"
-        ],
-        "lesson.key": "Introduction to Data Science ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif6",
-        "activity_section.key": "de604131-4c63-497c-bb20-a42cea8984a4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "sp-pl-DS_L7B_-rev",
-        "script_level.level_keys": [
-          "sp-pl-DS_L7B_-rev"
         ],
         "lesson.key": "Introduction to Data Science ",
         "lesson_group.key": "",
