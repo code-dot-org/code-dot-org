@@ -2,50 +2,54 @@
 require "active_support/concern"
 require "active_support/callbacks"
 
-require 'testing/setup_all_and_teardown_all'
-
 module ActiveSupport
   module Testing
     # Wraps the entire test case in a transaction.
     module TransactionalTestCase
       extend ActiveSupport::Concern
 
-      include ActiveSupport::Testing::SetupAllAndTeardownAll
-
       included do
-        class_attribute :use_transactional_test_case, instance_writer: false, default: false
+        class_attribute :use_transactional_test_case
+        self.use_transactional_test_case = false
+
+        setup do
+          pools = ActiveRecord::Base.connection_handler.connection_pool_list
+          all_connections = pools.map(&:connections).flatten
+          if all_connections.many?
+            warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
+            CDO.log.warn warning
+            puts warning
+          end
+        end
 
         setup_all do
-          begin_transaction if use_transactional_test_case?
+          # Global fixture-setup happens once, and must persist outside any transaction.
+          setup_fixtures
+          if use_transactional_test_case?
+            @test_case_connections = enlist_transaction_connections
+            @test_case_connections.each do |connection|
+              connection.begin_transaction joinable: false, _lazy: false
+              connection.pool.lock_thread = true
+            end
+          end
         end
 
         teardown_all do
-          rollback_transaction if use_transactional_test_case?
+          if use_transactional_test_case && @test_case_connections
+            @test_case_connections.each do |connection|
+              connection.rollback_transaction if connection.transaction_open?
+              connection.pool.lock_thread = false
+            end
+          end
         end
-      end
 
-      def before_setup
-        begin_transaction
-        super
-      end
-
-      def after_teardown
-        super
-        rollback_transaction
-      end
-
-      # @see https://github.com/DatabaseCleaner/database_cleaner-active_record/blob/v2.1.0/lib/database_cleaner/active_record/transaction.rb#L6-L11
-      private def begin_transaction
-        # Hack to make sure that the connection is properly set up before cleaning
-        ActiveRecord::Base.connection.transaction {}
-
-        ActiveRecord::Base.connection.begin_transaction(joinable: false)
-      end
-
-      # @see https://github.com/DatabaseCleaner/database_cleaner-active_record/blob/v2.1.0/lib/database_cleaner/active_record/transaction.rb#L14-L19
-      private def rollback_transaction
-        ActiveRecord::Base.connection_pool.connections.each do |connection|
-          connection.rollback_transaction if connection.open_transactions > 0
+        # Only select connections that support savepoints,
+        # because individual test transactions will be nested
+        # within the outer test case transaction.
+        private def enlist_transaction_connections
+          ActiveRecord::Base.connection_handler.connection_pool_list.
+            map(&:connection).
+            select(&:supports_savepoints?)
         end
       end
     end
