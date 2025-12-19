@@ -49,7 +49,7 @@ end
 def get_storage_id_and_project_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
 
-  if uuid?(encrypted) && DCDO.get('project-uuid-in-url', false)
+  if uuid?(encrypted)
     project = Projects.table.where(uuid: encrypted).first || Project.find_by(uuid: encrypted)
     raise ArgumentError, "No project found with uuid #{encrypted}" unless project
     [project[:storage_id], project[:id]]

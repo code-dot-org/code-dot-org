@@ -156,11 +156,18 @@ class StorageIdTest < Minitest::Test
     assert_equal storage_id, decrypted_storage_id
     assert_equal project_id, decrypted_project_id
 
-    # Test with project with UUID - should return UUID directly
+    # Test with project with UUID and DCDO off - should encrypt
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(false)
     uuid = SecureRandom.uuid
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
     projects_table.stubs(:where).with(id: project_id).returns([mock_project])
 
+    # Should still return the same encryption as before
+    uuid_encrypted = get_project_channel_id(storage_id, project_id)
+    assert_equal encrypted, uuid_encrypted
+
+    # Test with project with UUID and DCDO on - should return UUID
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
     result = get_project_channel_id(storage_id, project_id)
     assert_equal uuid, result
   end
@@ -170,7 +177,6 @@ class StorageIdTest < Minitest::Test
     storage_id = 456
     uuid = SecureRandom.uuid
 
-    # uuid-based decryption
     mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
 
     # Create mock constants without defining classes
