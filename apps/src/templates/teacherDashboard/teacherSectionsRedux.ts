@@ -1029,22 +1029,33 @@ export const assignToSection = (
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
     if (unitId && section.unitId !== unitId) {
-      HttpClient.fetchJson<AifInfo>(
-        `/teacher_dashboard/unit_in_aif?unit_id=${unitId}`
-      ).then(response => {
-        const aif = response.value.aif;
-        if (
-          DCDO.get('show-aita-lesson-summaries', false) ||
-          experiments.isEnabled('ai_lesson_summaries') ||
-          aif
-        ) {
-          HttpClient.get(
-            `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-          ).catch(error => {
-            console.error(error);
-          });
-        }
-      });
+      if (
+        DCDO.get('show-aita-lesson-summaries', false) ||
+        experiments.isEnabled('ai_lesson_summaries')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      } else {
+        HttpClient.fetchJson<AifInfo>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${unitId}`
+        ).then(response => {
+          const aif = response.value.aif;
+          if (
+            DCDO.get('show-aita-lesson-summaries', false) ||
+            experiments.isEnabled('ai_lesson_summaries') ||
+            aif
+          ) {
+            HttpClient.get(
+              `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+            ).catch(error => {
+              console.error(error);
+            });
+          }
+        });
+      }
     }
     // Only log if the assignment is changing.
     if (
