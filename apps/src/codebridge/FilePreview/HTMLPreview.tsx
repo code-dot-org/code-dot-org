@@ -7,6 +7,11 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
+import {
+  getAppOptionsViewingExemplar,
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -36,8 +41,13 @@ export const HTMLPreview: React.FC = () => {
     // and domain names are case-insensitive.
     state => state.lab.channel?.id?.toLowerCase().replace('_', '') || ''
   );
+
+  const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
+  const levelId = levelProperties.id;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -53,11 +63,29 @@ export const HTMLPreview: React.FC = () => {
     // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
     // to use the true channel id based url on localhost (this makes it so having multiple tabs with different projects
     // open at the same time works correctly).
-    const prefix =
+    let prefix =
       !useFullUrlOnLocal && isLocalhost ? 'localtesting' : normalizedChannelId;
+    // In some cases we have no channel id, so we fall back to other prefixes.
+    if (!prefix) {
+      if (isViewingExemplar || isEditingExemplar) {
+        prefix = `exemplar-${levelId}`;
+      } else if (isStartMode) {
+        prefix = `start-mode-${levelId}`;
+      } else {
+        // Unknown channel, not in exemplar or start mode, use generic preview prefix.
+        prefix = `weblab2-${levelId}`;
+      }
+    }
+
     const port = isLocalhost && location.port ? `:${location.port}` : '';
     return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
-  }, [normalizedChannelId]);
+  }, [
+    isEditingExemplar,
+    isStartMode,
+    isViewingExemplar,
+    levelId,
+    normalizedChannelId,
+  ]);
 
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion

@@ -1,0 +1,42 @@
+name 'pl-aif-2-U3-lists-of-objects-5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# List of Objects
+
+#### To get comfortable working with data in JavaScript, it helps to understand how information is organized when we store multiple related items. This is done with an **array of objects**.
+
+#### In the example below, **supplies is an array**, meaning it’s a list that holds multiple items.
+
+#### Each of those items is an **object**, and every object represents one record. In this case, one classroom supply.
+---
+
+<img src="https://images.code.org/c5a7e0009b56ddb7354fac9fdbf65bf8-image-1766003842988.png" alt="example array of objects" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+## How to interpret this structure:
+
+- #### The array (`supplies`) is the entire dataset — a list of all supply records.
+
+- #### Each object inside the array represents a single supply item.
+
+- #### The object’s properties (`id`, `name`, `location`) describe different pieces of information about that item.
+
+- #### For example,
+
+	- #### `{ id: 103, name: "Stapler", location: "Desk 1" }`
+tells us that the item with ID 3 is a Stapler, stored in Desk 1.
+
+#### This structure is extremely common in real-world data: a dataset (the array) made up of many individual records (the objects), each with fields that describe them.
+
+
+---
+
+## Next up
+
+#### Let's use AI to generate a array with 5 objects and practice updating an app. 
+
+
+
+
+MARKDOWN
