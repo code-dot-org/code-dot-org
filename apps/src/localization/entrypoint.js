@@ -63,7 +63,6 @@ const prefixes = {
 };
 
 const live = [
-  '/courses/self-paced-pl-csd-2024',
   '/courses/k5-unplugged',
   '/courses/express-2024',
   '/courses/pre-express-2024',
