@@ -1893,6 +1893,14 @@ class Unit < ApplicationRecord
     levels&.any?(&:ai_tutor_available?)
   end
 
+  def has_ai_chat_tools?
+    levels&.any?(&:has_ai_chat_tools?)
+  end
+
+  def requires_ai_chat_tools?
+    levels&.any?(&:requires_ai_chat_tools?)
+  end
+
   private def teacher_feedback_enabled?
     initiative = get_course_version&.course_offering&.marketing_initiative
     TEACHER_FEEDBACK_INITIATIVES.include? initiative

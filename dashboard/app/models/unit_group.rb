@@ -680,4 +680,12 @@ class UnitGroup < ApplicationRecord
   def duration_in_minutes
     default_units.sum(&:duration_in_minutes)
   end
+
+  def has_ai_chat_tools?
+    default_units.any?(&:has_ai_chat_tools?)
+  end
+
+  def requires_ai_chat_tools?
+    default_units.any?(&:requires_ai_chat_tools?)
+  end
 end
