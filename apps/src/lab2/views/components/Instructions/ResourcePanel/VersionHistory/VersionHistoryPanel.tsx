@@ -42,7 +42,8 @@ interface VersionHistoryPanelProps {
   isOpen?: boolean;
   alwaysShowAutoSaves?: boolean;
   onLoadVersion?: (sources: ProjectSources) => void;
-  projectSources?: ProjectSources;
+  // Doesn't strictly need to be sources from the SourcesContainer, but that's the origin of sources in the Sketch Lab use case for this prop.
+  sourcesContainerSources?: ProjectSources;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -71,7 +72,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   isOpen = false,
   alwaysShowAutoSaves = false,
   onLoadVersion,
-  projectSources,
+  sourcesContainerSources,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -114,7 +115,7 @@ const VersionHistoryPanel: React.FunctionComponent<
     state => state.lab2Project.projectSources
   );
 
-  const currentSources = projectSources || reduxSources;
+  const currentSources = sourcesContainerSources || reduxSources;
 
   // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
