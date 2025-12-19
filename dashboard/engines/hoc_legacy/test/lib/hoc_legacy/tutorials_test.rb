@@ -5,7 +5,7 @@ require 'test_helper'
 class HocLegacy::TutorialsTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/fixtures/vcr_cassettes')
+  self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/vcr_cassettes')
 
   let(:tutorial_code) {'mc'}
 
