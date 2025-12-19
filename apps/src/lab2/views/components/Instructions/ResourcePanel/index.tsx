@@ -65,7 +65,7 @@ interface VersionHistoryProps {
   startSources: ProjectSources;
   alwaysShowAutoSaves?: boolean;
   onLoadVersion?: (sources: ProjectSources) => void;
-  projectSources?: ProjectSources;
+  sourcesContainerSources?: ProjectSources;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -234,7 +234,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           isOpen={currentTab === Tabs.VersionHistory}
           alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
           onLoadVersion={versionHistoryProps.onLoadVersion}
-          projectSources={versionHistoryProps.projectSources}
+          sourcesContainerSources={versionHistoryProps.sourcesContainerSources}
         />
       );
     }

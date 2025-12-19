@@ -242,7 +242,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               (levelProperties?.startSources as ProjectSources) ||
               DEFAULT_SOURCES,
             onLoadVersion: onLoadVersion,
-            projectSources: currentSources,
+            sourcesContainerSources: currentSources,
           }}
         />
       </div>
