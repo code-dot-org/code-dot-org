@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q9_2025'
+
+question 'A developer is building a weather app. How should they structure the data to store a 7-day forecast where each day has a high temperature, low temperature, and condition?'
+
+wrong 'Seven separate variables named `day1`, `day2`, etc.'
+wrong 'A single string containing all the numbers for the week.'
+right 'An array of 7 objects, where each object contains the high, low, and condition'
+wrong 'An object containing 7 different arrays of numbers.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+
+An array of objects is the standard way to store a list (the 7 days) of complex items (the specific forecast details for each day).
+MARKDOWN

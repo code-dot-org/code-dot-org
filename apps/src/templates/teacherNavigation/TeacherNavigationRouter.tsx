@@ -14,7 +14,7 @@ import {
   ScrollRestoration,
 } from 'react-router-dom';
 
-import AITutorAccessControls from '@cdo/apps/aiTutor/views/teacherDashboard/AITutorAccessControls';
+import AiChatAccessControls from '@cdo/apps/aichat/views/accessControls/AiChatAccessControls';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -337,7 +337,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     showNoStudents={studentCount === 0}
                     showNoCurriculumAssigned={false}
                     element={
-                      <AITutorAccessControls sectionId={sectionId || 0} />
+                      <AiChatAccessControls sectionId={sectionId || 0} />
                     }
                   />
                 ) : (

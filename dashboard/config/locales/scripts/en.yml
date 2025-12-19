@@ -25832,7 +25832,11 @@ en:
             - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
             - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
         building-data-driven-systems-with-ai-pilot-2025:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: End of Unit Assessment
           lesson_groups:
             lessonGroup-3:
               display_name: Pre-Assessment

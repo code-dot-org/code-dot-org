@@ -856,6 +856,13 @@ module SharedConstants
     PROFANITY_DISAGREE: 'profanity_disagree',
   }
 
+  # Level of access to AI chat features for students in a section.
+  AI_CHAT_ACCESS_LEVELS = {
+    ENABLED: 'enabled',
+    DISABLED: 'disabled',
+    ESSENTIAL_ONLY: 'essential_only',
+  }.freeze
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
   PROJECT_SUBMISSION_STATUS = {

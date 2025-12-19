@@ -523,6 +523,9 @@ const EVENTS = {
   CHAT_COPIED: 'User copied an AI chat response',
   CODE_COPIED: 'User copied AI-generated code snippet',
 
+  // AI Chat Access Control Settings
+  AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED: 'AI Chat section access level updated',
+
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
     'Teacher gave feedback on AIs summary of student work',
