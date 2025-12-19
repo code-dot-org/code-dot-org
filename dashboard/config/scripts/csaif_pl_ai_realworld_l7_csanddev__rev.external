@@ -7,14 +7,13 @@ markdown <<MARKDOWN
 
 ## 📝 To Do 
 
-#### AI systems use data to make decisions in real-world applications. 
-#### Let’s explore how different AI models function and what data they rely on.
+#### AI systems use data to make decisions in real-world applications. Let’s explore how different AI models function and what data they rely on.
 
->#### Choose one of the scenarios below and consider:
->- #### What is the AI model doing in this scenario?
->- #### What type of data is being input?
->- #### What does this AI system do with the data?
->- #### Why does this task require speed and scale?
+#### Choose one of the scenarios below and explore:
+- #### *What is the AI model doing in this scenario?*
+- #### *What type of data is being input?*
+- #### *What does this AI system do with the data?*
+- #### *Why does this task require speed and scale?*
 
 <div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
 

@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q13_2025'
+
+question 'When building a search function, why should you "refine" AI-generated test cases?'
+
+right 'AI-generated tests always focus on the easiest possible scenarios and might miss complex "edge cases" or "inclusivity" gaps.'
+wrong 'AI-generated tests are usually written in a different version of JavaScript.'
+wrong ' You should never refine them; the AI knows better than the human developer.'
+wrong 'Refining them is the only way to make the tests run faster.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+
+AI often generates "happy path" tests (standard inputs). Humans must refine those tests to cover edge cases and ensure the search logic doesn't unfairly exclude certain terms or groups.
+MARKDOWN
