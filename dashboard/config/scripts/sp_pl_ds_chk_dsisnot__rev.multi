@@ -2,7 +2,7 @@ name 'sp-pl-DS-chk_DSisNot_-rev'
 editor_experiment ''
 title 'Check for Understanding: Data Science or NOT Data Science'
 type 'multi2'
-question 'Select the scenarios that are examples of Data Science.'
+question 'Select the scenarios that are NOT examples of Data Science.'
 
 
 
