@@ -324,7 +324,7 @@ class ApiController < ApplicationController
     # occur when we get the progress for the student twice.  We saw two issues that were caused by
     # having duplicate students in a section AND the number of students being a multiple of the page amount
     # Deduplicating students ensures all data for all students is pulled.
-    deduplicated_students = section.students.distinct
+    deduplicated_students = section.students.distinct.order(:id)
     paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should

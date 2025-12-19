@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q5_2025'
+
+question 'A developer wants to create a "Undo" feature that removes the most recently added item from a list. Which array method is most appropriate?'
+
+right '`.pop()`'
+wrong '`.push()`'
+wrong '`.shift()`'
+wrong '`.unshift()`'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+
+`.pop()` removes the last element from an array, which corresponds to the "most recent" item added via `.push()`
+MARKDOWN

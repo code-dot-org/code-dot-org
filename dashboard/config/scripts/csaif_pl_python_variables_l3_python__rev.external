@@ -5,17 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # Variables
 
-#### In the previous level, we observed how computers sort and store data. Let's take a look at how we can declare and define variables in Python.
+#### Unlike humans, computers need to store and process data differently.
 
-<img src="https://images.code.org/051f1d57020960bc5c4374e4691379d2-image-1727203669873.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
+#### A computer organizes these into different types because it processes them differently.
 
-## Variables
-#### A **variable** is a container that stores a value in memory. 
-#### A variable can only hold **one value** at a time. 
+## Introducing Variable Types 
 
+#### In Python, we store data in **variables**. But depending on the type of data, we choose different variable types:
 
+>#### A **variable** is a container that stores a value in memory. 
+>#### A variable can only hold **one value** at a time. 
 
 ## Data Type
+
+#### Different variable types allow Python to handle data properly. Integers can be used for math, strings store text, booleans hold True/False values, and floats handle decimal numbers.
+
 #### A **data type** is the format of the data that can be stored in a variable.
 
 <img src="https://images.code.org/83801bad4dc34715b6cfd9ada97d5313-image-1727203773189.png" alt="variable types: int, float, string, boolean" width="650px" style="display: block; margin-left: auto; margin-right: auto;">

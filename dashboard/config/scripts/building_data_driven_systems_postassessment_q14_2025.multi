@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q14_2025'
+
+question 'A developer uses the following pipeline: `data.filter(isAvailable).sort(byPrice).map(renderCard)`. What happens if no items are "available"?'
+
+wrong 'The app will crash during the `.sort()` step.'
+wrong 'The `.map()` function will generate error messages on the screen.'
+right 'The filter returns an empty array, and the subsequent sort and map operations simply do nothing, resulting in an empty display.'
+wrong 'The AI will automatically add more items so the pipeline can finish.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+
+Chaining is "fail-safe" in this regard; if an early step (like filtering) returns an empty list, the later steps (sorting and mapping) just process that empty list, resulting in no items rendered.
+MARKDOWN
