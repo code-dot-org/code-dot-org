@@ -7,7 +7,8 @@ VCR.configure do |config|
   config.allow_http_connections_when_no_cassette = true
 
   config.default_cassette_options = {
-    record: :once,
+    # Fail on empty/missing cassette in CI or during DTT.
+    record: ENV['CI'] || CDO.chef_managed ? :none : :once,
   }
 
   config.before_record do |interaction|

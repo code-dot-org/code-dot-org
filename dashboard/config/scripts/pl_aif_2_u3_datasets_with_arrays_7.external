@@ -1,0 +1,38 @@
+name 'pl-aif-2-U3-datasets-with-arrays-7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing Arrays 
+
+#### When you build web apps, you often need to keep track of multiple related pieces of information, like a list of items, scores, or usernames. Instead of creating a separate variable for each item, we can create an **array.**
+
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 An <strong>Array</strong> is a special kind of variable that stores an ordered list of related values (such as numbers, words, or images).
+</p>
+</div>
+
+---
+
+<img src="https://images.code.org/54347b8b347d0bc1c0ef7c83776a81bc-image-1765299269132.png" alt="example arrays" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+#### Think of it like a container that holds multiple items in a specific order.
+
+
+- #### Each item has a position number called an **index**.
+- #### Index numbering begins with 0.
+
+
+---
+
+## Next up
+
+#### Let's see what this looks like in code! 
+
+
+
+
+
+MARKDOWN

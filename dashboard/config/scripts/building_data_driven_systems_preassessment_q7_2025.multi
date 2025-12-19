@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q7_2025'
+
+question 'Which piece of code correctly defines a JavaScript object representing a car?'
+
+wrong '`let car = ["Toyota", "Camry", 2022];`'
+right '`let car = { brand: "Toyota", model: "Camry", year: 2022 };`'
+wrong '`let car = "brand: Toyota, model: Camry, year: 2022";`'
+wrong '`let car = brand("Toyota") + model("Camry");`'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+
+Objects use curly braces {} and key-value pairs separated by colons. Option A is an array, and Option C is a string.
+MARKDOWN

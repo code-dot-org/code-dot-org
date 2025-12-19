@@ -1,0 +1,23 @@
+{
+  "key": "teaching-ai-foundations-s1-v2",
+  "display_name": "Teaching AI Foundations Semester 1 (2026)",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": null,
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": null,
+  "image": "https://images.code.org/74aaa5f8d7ca09c6ccf17b1b7eaaff52-AIF_S1.avif",
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null,
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}
