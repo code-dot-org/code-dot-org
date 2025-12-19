@@ -1138,7 +1138,7 @@ var projects = (module.exports = {
               MetricsReporter.incrementCounter(
                 'LegacyLab.ProjectSaveFailureClient',
                 [
-                  {name: 'AppName', value: this.getStandaloneApp()},
+                  {name: 'AppName', value: this.getStandaloneAppForMetrics()},
                   {name: 'SaveType', value: 'sources'},
                   {name: 'ErrorType', value: 'unauthorized'},
                 ]
@@ -1153,7 +1153,7 @@ var projects = (module.exports = {
               MetricsReporter.incrementCounter(
                 'LegacyLab.ProjectSaveFailureClient',
                 [
-                  {name: 'AppName', value: this.getStandaloneApp()},
+                  {name: 'AppName', value: this.getStandaloneAppForMetrics()},
                   {name: 'SaveType', value: 'sources'},
                   {name: 'ErrorType', value: 'conflict'},
                 ]
