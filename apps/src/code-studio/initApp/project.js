@@ -1169,7 +1169,6 @@ var projects = (module.exports = {
               MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
                 {name: 'AppName', value: this.getStandaloneAppForMetrics()},
                 {name: 'SaveType', value: 'sources'},
-                {name: 'ErrorType', value: 'unknown'},
               ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
                 header.showTryAgainDialog();
