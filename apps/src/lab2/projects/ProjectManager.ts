@@ -600,7 +600,10 @@ export default class ProjectManager {
         'Lab2.ProjectSaveFailure',
         1,
         'Count',
-        [{name: 'SaveType', value: type}]
+        [
+          {name: 'SaveType', value: type},
+          {name: 'ErrorType', value: 'unknown'},
+        ]
       );
     }
   }
