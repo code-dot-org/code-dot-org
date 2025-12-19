@@ -42,6 +42,7 @@ interface VersionHistoryPanelProps {
   isOpen?: boolean;
   alwaysShowAutoSaves?: boolean;
   onLoadVersion?: (sources: ProjectSources) => void;
+  projectSources?: ProjectSources;
 }
 
 // Define version segments to support collapsing auto-save groups
@@ -70,6 +71,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   isOpen = false,
   alwaysShowAutoSaves = false,
   onLoadVersion,
+  projectSources,
 }) => {
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   // Track collapsed state for each group of auto-saves by group index
@@ -108,9 +110,11 @@ const VersionHistoryPanel: React.FunctionComponent<
     dispatch(setRestoredOldVersion(false));
   };
 
-  const projectSources = useAppSelector(
+  const reduxSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
+
+  const currentSources = projectSources || reduxSources;
 
   // Ex: "Jun 5, 3:30 PM"
   const dateFormatter = useMemo(() => {
@@ -475,7 +479,7 @@ const VersionHistoryPanel: React.FunctionComponent<
         >
           {isLatest && !viewingOldVersion && !viewAsUserId && (
             <SaveVersionPanel
-              projectSources={projectSources}
+              projectSources={currentSources}
               onSuccess={handleSaveVersionSuccess}
               disabled={disabled || versionLoading}
               buttonLabel={saveButtonLabel || lab2I18n.saveCurrentVersion()}
@@ -491,7 +495,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       viewAsUserId,
       restoreSelectedVersion,
       versionLoading,
-      projectSources,
+      currentSources,
       handleSaveVersionSuccess,
       alwaysShowAutoSaves,
       viewingOldVersion,

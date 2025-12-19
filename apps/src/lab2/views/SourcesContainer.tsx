@@ -14,6 +14,7 @@ import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setHasEdited} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
   BlocklyLevelProperties,
@@ -23,7 +24,7 @@ import {
 import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ProjectManager from '../projects/ProjectManager';
 import getInitialSources from '../utils/getInitialSources';
@@ -83,6 +84,8 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   const readonlyWorkspaceRef = useRef(readonlyWorkspace);
   readonlyWorkspaceRef.current = readonlyWorkspace;
 
+  const dispatch = useAppDispatch();
+
   const [startOverProps, setStartOverProps] = useState<{
     type: MessageType;
     message?: string;
@@ -95,6 +98,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources, save: boolean = false) => {
+      dispatch(setHasEdited(false));
       setCurrentSources(sources);
       if (save && !readonlyWorkspaceRef.current) {
         (
@@ -106,7 +110,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
         reinitializationHandler.current();
       }
     },
-    [projectManager, setCurrentSources, reinitializationHandler]
+    [projectManager, setCurrentSources, reinitializationHandler, dispatch]
   );
 
   useEffect(() => {
@@ -141,12 +145,13 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
       });
 
       if (!readonlyWorkspaceRef.current) {
+        dispatch(setHasEdited(true));
         (
           projectManager || Lab2Registry.getInstance().getProjectManager()
         )?.save(newSources, forceSave);
       }
     },
-    [setCurrentSources, projectManager]
+    [setCurrentSources, projectManager, dispatch]
   );
 
   const onStartOver = useCallback(() => {
