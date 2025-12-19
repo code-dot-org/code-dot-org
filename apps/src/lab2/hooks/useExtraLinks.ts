@@ -86,7 +86,6 @@ export const useExtraLinks = (levelId: number) => {
         }
       })
       .catch(e => {
-        setIsLoading(false);
         if (e.name === 'AbortError') {
           // Ignore abort errors
           return;
@@ -96,6 +95,7 @@ export const useExtraLinks = (levelId: number) => {
           .logError('Error fetching extra links data', e as Error, {
             message: e.message,
           });
+        setIsLoading(false);
       });
 
     return () => abortController.abort();
