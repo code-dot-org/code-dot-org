@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:07:14.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Update and Evolve an Object\r\n1. **Update the Object:** In the \"Update\" section, use dot notation or bracket notation to set update the object properties.\r\n2. **Add a Feature:** Create a new property on the object for an extra feature \r\n3. **Update the Screen:** Use AI to assist with creating a new HTML element to display your new property inside the `render()` function.\r\n4. **Test:** Run the code to verify the card shows the proper updates\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Backpack Upgrade</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <div class=\"card\">\n    <h2>My Gear</h2>\n    <div class=\"stats\">\n      <p>Color: <span id=\"display-color\"></span></p>\n      <p>Size: <span id=\"display-capacity\"></span>L</p>\n      <p>Laptop Pocket: <span id=\"display-laptop\"></span></p>\n    </div>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Object\nconst backpack = {\n  color: \"blue\",\n  capacityLiters: 20,\n  hasLaptopPocket: false\n};\n\n// Update\n\n\n\n// Render function\nfunction render() {\n  document.getElementById(\"display-color\").textContent = backpack.color;\n  document.getElementById(\"display-capacity\").textContent = backpack.capacityLiters; \n  if (backpack.hasLaptopPocket) {\n    document.getElementById(\"display-laptop\").textContent = \"Yes\";\n  } else {\n    document.getElementById(\"display-laptop\").textContent = \"No\";\n  }\n\n}\n\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: 'Roboto', sans-serif;\n  background-color: #2c3e50;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.card {\n  background-color: #ecf0f1;\n  width: 280px;\n  padding: 20px;\n  border-radius: 8px;\n  border-left: 10px solid #e67e22; /* Orange accent for \"gear\" look */\n  box-shadow: 0 10px 20px rgba(0,0,0,0.3);\n}\n\nh2 {\n  margin-top: 0;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  color: #2c3e50;\n  border-bottom: 2px solid #bdc3c7;\n  padding-bottom: 10px;\n}\n\n.stats p {\n  background: white;\n  padding: 10px;\n  margin: 8px 0;\n  border-radius: 4px;\n  display: flex;\n  justify-content: space-between;\n  font-weight: 500;\n}\n\nspan {\n  color: #e67e22;\n  font-weight: bold;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nyXzqWxCEflKdOpTmMvHr99dVn8o=\n",
+    "display_name": "Backpack",
+    "bubble_choice_description": "Explore and update what might constitute a `backpack` object",
+    "thumbnail_url": "https://images.code.org/cf166f9ef32b4afe63426ed9e4c47902-bag.jpg",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:07:14.625+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level7b-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level7b-test-2025\"}]"
+}]]></config>
+</Weblab2>

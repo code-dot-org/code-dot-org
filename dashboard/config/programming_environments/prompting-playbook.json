@@ -1,0 +1,20 @@
+{
+  "name": "prompting-playbook",
+  "published": true,
+  "editor_language": "html/css",
+  "title": "Prompting Playbook",
+  "categories": [
+    {
+      "key": "strategies",
+      "name": "Strategies",
+      "color": null,
+      "position": 0
+    },
+    {
+      "key": "prompt_library",
+      "name": "Prompt Library",
+      "color": null,
+      "position": 1
+    }
+  ]
+}

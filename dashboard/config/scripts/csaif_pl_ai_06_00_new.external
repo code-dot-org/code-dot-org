@@ -1,0 +1,57 @@
+name 'csaif_pl_ai_06_00-new'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/50d00c287726410efacfe6225f2297ae-Screenshot 2025-12-15 at 3.03.25 PM.png" alt="Banner image that says, Welcome to Teaching Insights from Data and AI" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+#### This professional learning module prepares you to teach **Insights from Data and AI**—a unit which teaches students to move beyond passive use of AI by critically evaluating, refining, and responsibly applying AI-generated content through hands-on experimentation, analysis, and human oversight to improve problem-solving.
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/7f813b0aec7d472e470f94eb91471aa1-image-1760466945803.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddb463a06ccc88f5d7390a1f841a0f31-image-1760467013014.png" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+
+#### **By the end of this professional learning module, you will be able to:**
+
+* #### Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.
+
+* #### Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.
+
+* #### Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.
+
+
+* #### Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.
+
+
+
+## Take Our Pre-Survey
+
+#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="google.com" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+</div>
+
+### **Suggested total time for this module:** 60 minutes
+
+
+
+
+ 
+
+
+MARKDOWN
