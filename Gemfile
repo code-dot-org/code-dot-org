@@ -176,6 +176,7 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
+gem 'omniauth-classlink', '~> 0.3.1'
 gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
 gem 'omniauth-facebook', '~> 10.0.0'
 gem 'omniauth-google-oauth2', '~> 1.1.3'

@@ -301,6 +301,8 @@ Devise.setup do |config|
   # with a log in with facebook button)
   config.omniauth :clever, CDO.dashboard_clever_key, CDO.dashboard_clever_secret, provider_ignores_state: true
 
+  config.omniauth :classlink, CDO.dashboard_classlink_key, CDO.dashboard_classlink_secret, strategy_class: OmniAuth::Strategies::ClassLink
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

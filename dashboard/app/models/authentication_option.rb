@@ -47,6 +47,7 @@ class AuthenticationOption < ApplicationRecord
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
     TWITTER = 'twitter',
     MICROSOFT = 'microsoft_v2_auth',
+    CLASSLINK = 'classlink'
   ].freeze
 
   CREDENTIAL_TYPES = [

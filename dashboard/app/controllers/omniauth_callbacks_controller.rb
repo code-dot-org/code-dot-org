@@ -18,8 +18,21 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     AuthenticationOption::GOOGLE,
     AuthenticationOption::FACEBOOK,
     AuthenticationOption::MICROSOFT,
+    AuthenticationOption::CLASSLINK
   ]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
+
+  # GET /users/auth/class_link/callback
+  def classlink
+    return connect_provider if should_connect_provider?
+
+    user = find_user_by_credential
+    if user
+      sign_in_classlink user
+    else
+      sign_up_classlink
+    end
+  end
 
   # GET /users/auth/clever/callback
   def clever
@@ -170,6 +183,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       auth_hash = inject_clever_data(auth_hash)
     end
 
+    if provider == AuthenticationOption::CLASSLINK
+      auth_hash = inject_classlink_data(auth_hash)
+    end
+
     params = auth_params.presence || {}
     params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
     user = User.from_omniauth(auth_hash, params, request)
@@ -228,6 +245,40 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       register_new_user(user, AuthenticationOption::GOOGLE)
     end
+  end
+
+  private def sign_up_classlink
+    session[:sign_up_type] = AuthenticationOption::CLASSLINK
+
+    auth_hash = inject_classlink_data(auth_hash())
+
+    email = auth_hash.info&.email
+    if email.present?
+      email_already_exists = User.find_by_email_or_hashed_email(email).present?
+      return redirect_to users_existing_account_path({provider: auth_hash.provider, email: email}) if email_already_exists
+    end
+
+    params = auth_params.presence || {}
+    user_type = auth_hash.info&.user_type&.downcase
+    cookies['sign_up_user_type'] = user_type unless params[:user_type]
+    us_state = auth_hash.info&.state_name if user_type == 'student'
+    user = User.new.tap do |u|
+      User.initialize_new_oauth_user(u, auth_hash, params)
+      u.oauth_token = auth_hash.credentials&.token
+      u.oauth_token_expiration = auth_hash.credentials&.expires_at
+      u.oauth_refresh_token = auth_hash.credentials&.refresh_token
+      u.user_type = user_type
+      u.us_state = get_us_state_abbr_from_name(us_state) if us_state.present?
+      prepare_locale_cookie u
+    end
+
+    register_new_user(user, AuthenticationOption::CLASSLINK)
+  end
+
+  private def sign_in_classlink(user)
+    prepare_locale_cookie user
+    user.update_oauth_credential_tokens auth_hash
+    sign_in_user user
   end
 
   private def sign_in_clever(user)
@@ -310,7 +361,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       email: user.email,
       given_name: user.given_name,
       family_name: user.family_name,
-      provider: provider
+      name: user.name,
+      provider: provider,
+      account_type: user.user_type,
+      us_state: user.us_state,
     }
     sign_up_url = determine_sign_up_url(user)
     render 'omniauth/redirect', layout: false, locals: {sign_up_url: sign_up_url}
@@ -348,6 +402,24 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     gender = auth[:gender] || auth.dig(:extra, :raw_info, :canonical, :data, :gender)
     clever_data = OmniAuth::AuthHash.new(dob: dob, gender: gender)
     auth.info&.merge!(clever_data)
+    auth
+  end
+
+  # Moves non-standard attributes from the extra Classlink OAuth data and puts it in the location we
+  # expect it to be in the AuthHash.
+  private def inject_classlink_data(auth)
+    return if auth.nil?
+    classlink_data = OmniAuth::AuthHash.new(
+      email: auth.dig(:extra, :raw_info, :email),
+      name: auth.dig(:extra, :raw_info, :display_name),
+      given_name: auth.dig(:extra, :raw_info, :first_name),
+      family_name: auth.dig(:extra, :raw_info, :last_name),
+      username: auth.dig(:extra, :raw_info, :display_name),
+      user_type: auth.dig(:extra, :raw_info, :role).downcase,
+      state_name: auth.dig(:extra, :raw_info, :state_name),
+    )
+
+    auth.info&.merge!(classlink_data)
     auth
   end
 
