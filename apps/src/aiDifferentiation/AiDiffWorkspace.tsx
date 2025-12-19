@@ -17,7 +17,6 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffWorkSpaceProps {
   context: Context;
   scriptName?: string;
-  curriculumCourses?: string[];
   unreadNotificationCount: number;
   personalizationData?: PersonalizationData;
 }
@@ -25,7 +24,6 @@ interface AiDiffWorkSpaceProps {
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
   scriptName,
-  curriculumCourses,
   unreadNotificationCount,
   personalizationData,
 }) => {
@@ -62,6 +60,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       setShowNotifications(false);
       dispatch(
         fetchThreadMessages({
+          context,
           thread: 0,
           initialThreadPrompt: {
             label: label,
@@ -70,7 +69,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         })
       );
     },
-    [dispatch]
+    [dispatch, context]
   );
 
   return (
@@ -81,7 +80,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         setShowNotifications={setShowNotifications}
         showNotifications={showNotifications}
         unreadNotificationCount={unreadNotificationCount}
-        curriculumCourses={curriculumCourses}
       />
       {showNotifications && experiments.isEnabled('teacher-notifications') ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />

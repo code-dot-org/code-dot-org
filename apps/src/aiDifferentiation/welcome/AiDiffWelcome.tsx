@@ -20,7 +20,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
   AiDiffContext,
@@ -54,7 +54,6 @@ interface AiDiffWelcomeProps {
   context: Context;
   scriptName?: string;
   firstState?: WelcomeState;
-  curriculumCourses?: string[];
 }
 
 const optionButton = (
@@ -143,18 +142,18 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   scriptName,
   // This should only be used for testing purposes
   firstState = 'get_started',
-  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
-
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
-
   const [selectedOption, setSelectedOption] =
     React.useState<SuggestPromptsType | null>(null);
-
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
+
+  const curriculumCourses = useAppSelector(
+    state => state.aichat.curriculumCourses
+  );
 
   const dispatch = useAppDispatch();
 

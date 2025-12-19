@@ -20,7 +20,6 @@ interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
   scriptName?: string;
-  curriculumCourses?: string[];
   unreadNotificationCount: number;
 }
 
@@ -49,7 +48,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
   scriptName,
-  curriculumCourses,
   unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
@@ -66,6 +64,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+  const curriculumCourses = useAppSelector(
+    state => state.aichat.curriculumCourses
+  );
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
@@ -134,7 +135,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     setShowWelcomeExperience={setShowWelcomeExperience}
                     context={context}
                     scriptName={scriptName}
-                    curriculumCourses={curriculumCourses}
                   />
                 )
               : curriculumCourses && (
@@ -142,7 +142,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     context={context}
                     personalizationData={personalizationData}
                     scriptName={scriptName}
-                    curriculumCourses={curriculumCourses}
                     unreadNotificationCount={unreadNotificationCount}
                   />
                 )}

@@ -75,6 +75,7 @@ const initialState: AichatState = {
   hasSetStartingCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
+  curriculumCourses: undefined,
 };
 
 const aichatSlice = createSlice({
@@ -407,6 +408,9 @@ const aichatSlice = createSlice({
     clearUserAddedSelectionContext(state) {
       state.userAddedSelectionContext = {};
     },
+    setCurriculumCourses(state, action: PayloadAction<string[] | undefined>) {
+      state.curriculumCourses = action.payload;
+    },
   },
 });
 
@@ -481,4 +485,5 @@ export const {
   addItemToUserAddedSelectionContext,
   removeItemFromUserAddedSelectionContext,
   clearUserAddedSelectionContext,
+  setCurriculumCourses,
 } = aichatSlice.actions;

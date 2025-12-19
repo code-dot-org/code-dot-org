@@ -3,7 +3,10 @@ import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
-import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import {
+  setChatIsOpen,
+  setCurriculumCourses,
+} from '@cdo/apps/aichat/redux/slice';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -76,6 +79,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   >('loading');
 
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
 
   const dispatch = useAppDispatch();
 
@@ -100,6 +104,12 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       );
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+
+  React.useEffect(() => {
+    if (!threadMessages || threadMessages.length === 0) {
+      dispatch(fetchThreadMessages({context, thread: 0}));
+    }
+  });
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
@@ -135,8 +145,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     }
   }, [updateUnreadNotificationCount]);
 
-  const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
-
   useEffect(() => {
     const body = JSON.stringify({
       context: context,
@@ -146,13 +154,13 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     })
       .then(response => response.json())
       .then(json => {
-        setCurriculumCourses(json.courses);
+        dispatch(setCurriculumCourses(json.courses));
       })
       .catch(error => {
         console.log(error);
-        setCurriculumCourses([]);
+        dispatch(setCurriculumCourses([]));
       });
-  }, [context]);
+  }, [context, dispatch]);
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
@@ -176,7 +184,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
     dispatch(setChatIsOpen(!chatIsOpen));
-    dispatch(fetchThreadMessages({thread: 0}));
     trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };
@@ -254,7 +261,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         context={context}
         closeTutor={handleClick}
         scriptName={scriptName}
-        curriculumCourses={curriculumCourses}
         unreadNotificationCount={
           unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
         }

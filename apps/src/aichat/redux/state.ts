@@ -84,4 +84,6 @@ export interface AichatState {
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
   userAddedSelectionContext: UserAddedSelectionContext;
+  // List of curriculum course family names of courses in the current chat context
+  curriculumCourses: string[] | undefined;
 }

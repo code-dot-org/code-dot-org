@@ -24,6 +24,7 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 
@@ -218,6 +219,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
       fetchThreadMessages({
+        context: {type: AiDiffContext.LESSON},
         thread: 0,
         threadType: THREAD_TYPES.lessonSummaryHelp,
       })
