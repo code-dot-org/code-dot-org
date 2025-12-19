@@ -15,6 +15,30 @@ markdown <<MARKDOWN
 
 #### *Notice how each section has an opening tag and a closing tag with a back slash.This tells the computer where each section begins and ends, so it knows how to organize and display the content correctly.*
 
+<div style="clear:both;"></div>
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <p style="margin: 12px; font-size: 16px;">
+    <strong>Look at the tags. Can you guess what any of them do?</strong>
+  </p>
+</div>
+
+
 ## The Structure of an HTML Page
 
 - #### **The `<head>` Section** -The head holds information about the page, not what’s shown on the page itself.

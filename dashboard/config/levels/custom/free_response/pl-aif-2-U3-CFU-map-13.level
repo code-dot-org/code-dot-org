@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-17T21:59:44.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Evolving Websites \r\n\r\n#### Before we jump in on building web apps, let's take a look to reflect on how websites have evolved over time and why. \r\n\r\n#### Take a look at the two versions of the Amazon website. One is from around 2000 and one from today.\r\n\r\n#### Spend a moment comparing the overall look and feel of the two sites.\r\n\r\n<div style=\"display: flex; gap: 20px; justify-content: center; align-items: flex-start; max-width: 1000px; margin: auto;\">\r\n    \r\n    <!-- Left image takes 2/3 width -->\r\n    <img src=\"https://images.code.org/8c869d377c257134a9ca9522bb22102d-image-1760991916716.png\" \r\n         alt=\"amazon website in 2000\"\r\n         style=\"flex: 2; max-width: 50%; height: auto; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);\">\r\n    \r\n    <!-- Right image takes 1/3 width -->\r\n    <img src=\"https://images.code.org/582df09f74b0f4858ad96c0b75d045f0-image-1760992309979.png\" \r\n         alt=\"amazon website 2025\"\r\n         style=\"flex: 1; max-width: 50%; height: auto; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);\">\r\n  \r\n</div>\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n>- #### What do you notice about how the website has changed over time?\r\n>- #### Which version would you rather use, and why?\r\n>- #### What do these changes tell you about how websites are designed with users in mind?\r\n\r\n\r\n#### As you reflect, think about how the design choices you see — layout, images, colors, navigation — all relate to user-centered design, the idea that websites are built to meet the needs of the people who use them.\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-12-17T21:59:44.391+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2- U1-evolving-web_6\\\"\"],\"cloned_from\":\"pl-sandbox-aif2- U1-evolving-web_6\"}]"
+}]]></config>
+</FreeResponse>

@@ -65,8 +65,8 @@ module SetupTest
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
     cassette_name = "#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}"
-    # Fail on empty/missing cassette in CI environments
-    record_mode = ENV['CI'] ? :none : :once
+    # Fail on empty/missing cassette in CI or during DTT.
+    record_mode = ENV['CI'] || CDO.chef_managed ? :none : :once
     credentials = VCR::Cassette.new(cassette_name).recording? ?
       # Load AWS credentials before VCR recording starts.
       Aws::CredentialProviderChain.new.resolve :

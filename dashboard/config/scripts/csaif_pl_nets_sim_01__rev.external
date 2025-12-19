@@ -12,7 +12,13 @@ markdown <<MARKDOWN
 * #### Lesson 5: Packets
 * #### Lesson 6: HTTP and DNS
 
-#### Students must be part of a class Section to use the Internet Simulator. In the next few levels we’ll preview some key features of the Internet Simulator so you have a chance to see how they work.
+#### Students must be part of a **class section** to use the Internet Simulator. In the next few levels we’ll preview some key features of the Internet Simulator so you have a chance to see how they work.
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Need help creating a class section? Check out the <a href='https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Class-Section' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Support Article</a>.
+</p>
+
 
 <br>
 

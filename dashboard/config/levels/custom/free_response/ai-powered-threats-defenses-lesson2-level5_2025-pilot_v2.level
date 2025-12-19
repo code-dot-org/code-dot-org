@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-12-03T18:22:42.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Choose one of the threats you explored (DDoS, misconfiguration, worm, or ransomware). In 2–3 sentences, explain what the threat does and what effect it has on a system.\r\n\r\nWhen writing your response, consider:\r\n\r\n- What causes this threat?\r\n- What happens to the system when this threat occurs?\r\n- Who or what is impacted?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "**Assessment Opportunity**\r\n\r\nLook for evidence that students:\r\n\r\n- Clearly describe what their chosen threat does (overwhelming a system, leaving files open, replicating automatically, or encrypting and locking access).\r\n- Accurately explain the effect on the system (unavailable service, unauthorized edits, spreading damage, or loss of file access).\r\n- Distinguish between related ideas (for example, not confusing misconfiguration with malware, or mixing up worm behavior with ransomware).\r\n\r\n**If students struggle:**\r\n\r\n- Revisit one of the demos from Levels 1–4 and highlight the visible effects students observed.\r\n- Model a strong explanation, emphasizing both cause and effect.\r\n- Have students revise their response using one of the guiding questions from the prompt.\r\n\r\n**Optional extension if time:**\r\n\r\n- Assign groups of students to different threats to ensure full coverage across the class and surface patterns in how the threats impact system availability and security.\r\n",
+    "title": "Check for Understanding"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-03T18:22:42.334+00:00\",\"changed\":[\"cloned from \\\"ai-powered-threats-defenses-lesson4-level5_2025-pilot\\\"\"],\"cloned_from\":\"ai-powered-threats-defenses-lesson4-level5_2025-pilot\"},{\"changed_at\":\"2025-12-03 18:34:27 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

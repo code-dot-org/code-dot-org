@@ -1,0 +1,62 @@
+name 'csaif_pl__net_curriculum_-rev2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Curriculum Overview
+
+## What is The Fabric of the Internet and AI about?
+ 
+#### This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, students analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity
+
+#### Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+#### **This is the fourth unit in the six unit <a href='https://code.org/en-US/curriculum/artificial-intelligence-foundations' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Foundations</a> semester 1 course. This professional learning module prepares you to teach it!**
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      	<li>Describe how data is transmitted over the Internet.</li>
+		<li>Assess the implications of the digital divide and propose strategies to promote equitable Internet access.</li>
+        <li>Analyze the role of AI in enhancing network security.</li>
+        <li>Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/a0284e93dd3041da5a3c4a9e7933f81b-Screenshot 2025-12-08 at 2.53.07 PM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+
+
+## Classroom Context
+
+#### This content has been developed for high school students with little or no coding experience who are comfortable with technology and curious about AI and computer science.
+
+#### This unit can be implemented on it's own or part of the AI Foundations Semester or year-long course.
+
+#### All lessons within the unit are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Learn more about the AI Foundations Curriculum by taking the <a href='google.com' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Introductory Module</a>.
+</p>
+
+
+## Unit Length and Format
+
+
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Twelve 45-minute lessons and one 3-day culminating project
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview <a href='https://studio.code.org/teacher_dashboard/sections/5963300/courses/artificial-intelligence-foundations-v2-2025/units/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit 4 - The Fabric of the Internet and AI</a>.
+</p>
+
+
+MARKDOWN
