@@ -52,6 +52,39 @@ class AichatAiClient
     @usage_reporter = usage_reporter
   end
 
+  protected def process_sse_stream(http, req, &block)
+    http.request(req) do |response|
+      unless response.is_a?(Net::HTTPSuccess)
+        raise StandardError.new("AI API Error: #{response.code} - #{response.body}")
+      end
+
+      buffer = +""
+
+      response.read_body do |chunk|
+        buffer << chunk
+
+        # extract complete lines
+        while (newline_index = buffer.index("\n"))
+          line = buffer.slice!(0, newline_index + 1)
+
+          if line.start_with?("data:")
+            # remove 'data:' and optional space (per SSE spec)
+            data = line.sub(/^data: ?/, "")
+
+            next if data.empty? || data == "[DONE]"
+
+            begin
+              parsed = JSON.parse(data)
+              block&.call(parsed)
+            rescue JSON::ParserError
+              next
+            end
+          end
+        end
+      end
+    end
+  end
+
   # The following methods MUST be Implemented By Derived class.
   # ------------------------------------------------------------
   # Raise NotImplementedError if these aren't implemented.
