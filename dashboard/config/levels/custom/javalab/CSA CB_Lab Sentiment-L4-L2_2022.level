@@ -12,7 +12,7 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-12T14:05:28.132+00:00\",\"changed\":[\"cloned from \\\"CSA CB_Lab Sentiment-L4-L1_2022\\\"\"],\"cloned_from\":\"CSA CB_Lab Sentiment-L4-L1_2022\"},{\"changed_at\":\"2022-08-12 14:07:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"

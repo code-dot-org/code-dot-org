@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "This is the level for a basic Web Lab 2 UI Test.\r\nPlease do not change the start code for this level without changing the UI test!",
     "hide_share_and_remix": "false",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "true",
     "available_ai_tutor_modes": [
       "produce"
     ],

@@ -96,6 +96,7 @@
       "cuteanimals_dog.png": "7661d8a1-91bb-434d-9453-58f50039e12b.png",
       "cuteanimals_tortoise.png": "0a31586a-3a5a-49d0-9d6d-580d3777212e.png"
     },
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

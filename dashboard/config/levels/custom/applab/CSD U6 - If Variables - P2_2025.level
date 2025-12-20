@@ -72,6 +72,7 @@
     ],
     "teacher_markdown": "Students should notice that both if-statements use the value 315, and some students might use their mouse cursor to hover over the app and notice that 315 is close to the horizon created by the hills and trees. Students should also notice that the background changes between two different colors - orange and gray. Connecting these two observations together, students might predict that this will change when the \"sun sets\" behind the horizon, changing colors between day (orange) and night (gray).",
     "video_key": "csd_u6_if_statements",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

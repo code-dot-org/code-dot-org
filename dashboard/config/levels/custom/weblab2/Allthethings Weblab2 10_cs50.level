@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "Add **html** pages and preview them in the right pane.\r\n\r\nAdd **css** pages (and link them to your html).\r\n\r\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)\r\n\r\nThis level uses all of AI Tutor modes. For now, it is the last level of the progression. ",
     "hide_share_and_remix": "false",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "true",
     "available_ai_tutor_modes": [
       "suggest",
       "outline",

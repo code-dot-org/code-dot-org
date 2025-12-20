@@ -26,7 +26,7 @@
       "books.jpg": "f8310ad8-93eb-45c5-9951-b260f155f1c3.jpg"
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:55.422+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-Image Filters PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L6-Image Filters PBT_pilot-2025\"}]"

@@ -548,7 +548,7 @@
     "bubble_choice_description": "Navigate and paint the path to the traffic cone.",
     "thumbnail_url": "https://images.code.org/4ffd25748b106dd8a6503d2b34023ace-image-1646323386135.gif",
     "name_suffix": "_pilot-2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:51.472+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4d_2022\\\"\"],\"cloned_from\":\"CSA U1L12-L4d_2022\"}]"

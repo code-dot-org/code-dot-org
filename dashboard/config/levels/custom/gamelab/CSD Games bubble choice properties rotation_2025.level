@@ -95,6 +95,7 @@
     "thumbnail_url": "https://images.code.org/90bb6cb660f77100a378532d42d8e9a2-image-1592417215602.png",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
