@@ -25533,14 +25533,12 @@ en:
             lessonGroup-3:
               display_name: End of Unit Survey
           title: Cybersecurity and Global Impacts
-          description: |-
-            In this unit, students learn how computing innovations have impacted the world in beneficial and harmful ways. Students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, they participate in a "school of the future" conference in which they make a proposal for how best to improve school life with computing innovations.
-
-            ## Finished Teaching This Unit?
-            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_5) to let the Code.org curriculum team know how the unit went.
-          student_description: In this unit, you will learn how computing innovations have impacted our world in beneficial and harmful ways. You'll explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, you will participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+          description: ''
+          student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: aif5-v2-2025
         aif6-v2-2025:
           lesson_groups:
             lessonGroup-2:
@@ -26301,6 +26299,9 @@ en:
             - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
             - Describe cybersecurity career roles and how professionals use AI tools in their work.
             :::
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_5) to let the Code.org curriculum team know how the unit went.
           student_description: |-
             Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, you take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. You analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. You also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication.
 
@@ -26315,7 +26316,9 @@ en:
             :::
           description_short: ''
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-2:
+              name: End of Unit Survey
           name: aif5-v3
         customizing-llms-latm-2025:
           lessons: {}

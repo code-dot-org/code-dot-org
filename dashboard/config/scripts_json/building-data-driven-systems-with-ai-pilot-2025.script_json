@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-19 00:45:06 UTC",
+    "serialized_at": "2025-12-20 02:01:58 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -100,7 +100,7 @@
     },
     {
       "key": "Intro to Data Structures",
-      "name": "Intro to Data Structures",
+      "name": "Lesson 1: Intro to Data Structures",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -117,7 +117,7 @@
     },
     {
       "key": "Turning Data Into Displays",
-      "name": "Turning Data Into Displays",
+      "name": "Lesson 2: Turning Data Into Displays",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -134,7 +134,7 @@
     },
     {
       "key": "Basic Array Methods",
-      "name": "Basic Array Methods",
+      "name": "Lesson 3: Basic Array Methods",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -151,7 +151,7 @@
     },
     {
       "key": "Objects for Real-World Data",
-      "name": "Objects for Real-World Data",
+      "name": "Lesson 4: Objects for Real-World Data",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -168,7 +168,7 @@
     },
     {
       "key": "Lists of Objects",
-      "name": "Lists of Objects",
+      "name": "Lesson 5: Lists of Objects",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -185,7 +185,7 @@
     },
     {
       "key": "Rendering Lists of Objects",
-      "name": "Rendering Lists of Objects",
+      "name": "Lesson 6: Rendering Lists of Objects",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -202,7 +202,7 @@
     },
     {
       "key": "Evaluating Fairness and Accessibility",
-      "name": "Evaluating Fairness and Accessibility",
+      "name": "Lesson 7: Evaluating Fairness and Accessibility",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -220,7 +220,7 @@
     },
     {
       "key": "Filtering",
-      "name": "Filtering",
+      "name": "Lesson 8: Filtering",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -238,7 +238,7 @@
     },
     {
       "key": "Searching",
-      "name": "Searching",
+      "name": "Lesson 9: Searching",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -255,7 +255,7 @@
     },
     {
       "key": "Sorting and Chaining",
-      "name": "Sorting and Chaining",
+      "name": "Lesson 10: Sorting and Chaining",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -272,7 +272,7 @@
     },
     {
       "key": "Value Explorer Project",
-      "name": "Value Explorer Project",
+      "name": "Lesson 11: Value Explorer Project",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -3483,6 +3483,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -5380,6 +5383,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,

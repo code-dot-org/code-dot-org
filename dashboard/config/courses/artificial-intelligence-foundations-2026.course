@@ -1,29 +1,24 @@
 {
-  "name": "artificial-intelligence-foundations-2025",
+  "name": "artificial-intelligence-foundations-2026",
   "script_names": [
-    "aif1-2025",
-    "aif2-2025",
-    "aif3-2025",
-    "aif4-2025",
-    "aif5-2025",
-    "aif6-2025"
+    "aif1-v2-2025",
+    "aif2-v2-2025",
+    "aif3-v2-2025",
+    "aif4-v2-2025",
+    "aif5-v3",
+    "aif6-v2-2025"
   ],
   "original_script_names": [
-    "aif1-2025",
-    "aif2-2025",
-    "aif3-2025",
-    "aif4-2025",
-    "aif5-2025",
-    "aif6-2025"
+
   ],
-  "published_state": "stable",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "announcements": [
       {
-        "key": "15ca0d49-e1e7-4eaf-8a12-5e26ab7c4ccf",
+        "key": "fc284d01-9d4a-471c-881f-bb62d50bca8a",
         "notice": "AI Foundations Professional Development",
         "details": "Before starting this course, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
         "link": "https://studio.code.org/courses/teaching-ai-foundations-2025/",
@@ -31,22 +26,12 @@
         "visibility": "Teacher-only",
         "dismissible": true,
         "buttonText": "Let's Go!"
-      },
-      {
-        "key": "3dca719a-c09a-4274-89af-687712bf4176",
-        "notice": "New Version Available!",
-        "details": "A new version of this curriculum is now available! Select Spring 2026 from the dropdown below to access the latest updates.",
-        "link": "https://levelbuilder-studio.code.org/courses/artificial-intelligence-foundations-2026",
-        "type": "bullhorn_yellow",
-        "visibility": "Teacher-only",
-        "dismissible": true,
-        "buttonText": "Use the 2026 Version Now!"
       }
     ],
     "family_name": "artificial-intelligence-foundations",
     "has_verified_resources": true,
     "numbered_units": "auto",
-    "version_year": "2025"
+    "version_year": "2026"
   },
   "resources": [
     {
@@ -54,6 +39,7 @@
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_faq",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "ai_chat_faq"
@@ -64,6 +50,7 @@
       "url": "https://docs.google.com/document/d/1QyiVt5G6riTcO82XkcM3uJF4cvyvCuDzCYDNnvXHOiQ/edit?usp=sharing",
       "key": "aif_and_csd_what_s_the_difference_",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "aif_and_csd_what_s_the_difference_"
@@ -74,6 +61,7 @@
       "url": "https://docs.google.com/document/d/15vzVtbfX3HsGjQzsR6tOLixeLF82D8lIthY6uAM9kFM/edit?usp=sharing",
       "key": "aif_and_csp_what_s_the_difference_",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "aif_and_csp_what_s_the_difference_"
@@ -84,7 +72,7 @@
       "url": "https://forum.code.org/c/aif/487",
       "key": "aif_teacher_forum",
       "properties": {
-        "audience": "Teacher"
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "aif_teacher_forum"
@@ -92,35 +80,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-2025/resources",
-      "key": "all_resources_5",
+      "url": "/courses/artificial-intelligence-foundations-2026/resources",
+      "key": "all_resources",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_5"
+        "resource.key": "all_resources"
       }
     },
     {
       "name": "All Standards",
-      "url": "/courses/artificial-intelligence-foundations-2025/standards",
-      "key": "all_standards_5",
+      "url": "/courses/artificial-intelligence-foundations-2026/standards",
+      "key": "all_standards",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_5"
+        "resource.key": "all_standards"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-2025/vocab",
-      "key": "all_vocabulary_5",
+      "url": "/courses/artificial-intelligence-foundations-2026/vocab",
+      "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_5"
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -128,6 +116,7 @@
       "url": "https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing",
       "key": "implementation_guide",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
@@ -135,9 +124,10 @@
     },
     {
       "name": "Syllabus",
-      "url": "https://docs.google.com/document/d/1axNOABDheboTJtKPL63UPOK_i5lj80FDr4uz37pyD4s/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1vd_s6hfIMd-NpmtHrsIEhKN9uO-yB6F_YQlzqh-IOmM/edit?usp=sharing",
       "key": "syllabus",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
         "resource.key": "syllabus"
@@ -145,12 +135,13 @@
     },
     {
       "name": "Viewing Student AI Chat History as a Teacher",
-      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
-      "key": "viewing_student_ai_chat_history_as_a_teacher_1",
+      "url": "\thttps://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
       },
       "seeding_key": {
-        "resource.key": "viewing_student_ai_chat_history_as_a_teacher_1"
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     }
   ],
