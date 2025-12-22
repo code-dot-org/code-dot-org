@@ -62,6 +62,7 @@
     "hide_share_and_remix": "false",
     "start_in_animation_tab": "false",
     "expand_debugger": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

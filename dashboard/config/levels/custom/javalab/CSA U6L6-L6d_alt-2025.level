@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T22:08:51.000Z",
   "level_num": "custom",
@@ -18,7 +17,7 @@
     "encrypted_validation": "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\nQpTBzygqrnfL\n",
     "encrypted_exemplar_sources": "vOO8vdQ16etLk2Qdxj2VzS8/oGVu6gjeysS8GJN/6Tf/Q7x5Tm4XUzMkWA6v\nmIjQSUB946ayFut/malC3l7qePBZ/znFH9cBxDxQIUpHUZBKwY9lCkXqXt3A\nTaNDsZlu4F+iRrGpxXz+yFjt7JgP2g02hbOtL4zpMOV+6aQwy16t+9coAu1Q\n/iMp00m4B/ozKMD2pbLUqK+gz0G9p5DDnqENpO+aOolhODskgKL9HT1h8Hlb\n86v6f8g50PCEIQzIEJ7Yy15Sttzj8gDU1FruqmV5A/Cmu8SGkuzXIZbmsFMf\nkGxLEv/2DW0obIDekUWb/y6M2o2cUpG/N1KLjRCK2HIOpj7wceLph16TWrNY\ntQwQqk4N5ZfLbxc1oMvdw444t/Z0ziAp1bhyIepCYqfxDOlmi5KruGTzSLXj\nirZdrI+fHDUgdXlttZGJ5aL0krVKKZ+V6necWomvCs5YWXQDd99bJXYvcmB7\nHusuTdi50apjTDk/iT/e6F8s+7qdX22p0/oRSSYKy6+6DOy5NRgqkxvALiLj\ni3rQs7cBmlHLqyDFzDQU7i+ZCed2+R3rxn+srcsZhXdYOt4WQWYcEQXkMXGj\nEYYbmkl0eJTpYlYuZ0WbsOQqBrggoqEhyw6G8IwBOD0g3q8r1fcz6nEBkCdD\n2fzBqyB/jSMpjurlfy36bogFW/tNM+8ydAebJubiZn2acAhuQ5f9Npnn8ry+\n2PrYhnS8zK9CZGoUq/2AeF6Mdwsz48axmCtyUiz/nygBTV4FTitdRPKaYHlg\nwF6uwpIY5gQuDWisy/B+CyXiCyKIlqWSGOFx5RbhFicYTpuvP+50j7VFXweU\nfTeu70Mn0al6LjPq82p3qm37y5SvksgAoKvIjrYyzzu8rsqcqOWMODBEg/2F\nQS1UxNXqH6e3advSIlRa+TIT3B4H5b2ct6GOwxav1maLhSALq2BF6T4+Z9qs\nzS/vCRn5IbVk9XdfyTfpIJTlJ7WjAOJkieggRONt8oMJfeiIzlNGRyaCoeDx\nNHiZXoQZLVclNn0WI1OwkNxoNc/kpfeSVzpsrFc9k46H6EW2m2BL2sEq4BiD\nhk0/HLTWLnYgcsKlShuC253pA6xLKA2YBEk7+zITVZ00pmTsdo94OwxwzUOF\nj85p/bisfDhaDr+qFTZwNPTkj6LF3MYWXg3fY3ucKiZlRmCGtjw5w8VArwly\nslHU1c8q7hrqCna/t2sAFS8FhtAPmjxHw4KNIpvrWSCOe9On9k7zramVakdp\njwVbCCfmNtj6xSLm76WRQ6mR+ujPhzq5dleEQAgFcoC+TQV2xb8TFUSMutKR\ni2mnMEWA1Is3VLj2zKK0fqsEv0S3zSoohQ+l1jvNUUtnoLhMB+xGGsvP2pSF\nt7PvlSEX+UfW9L1JeMC/ugR1yCDj\n",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true",
+    "ai_tutor_available": "false",
     "start_sources": {
       "LibraryRunner.java": {
         "text": "public class LibraryRunner {\n  public static void main(String[] args) {\n\n    // Creates a Library object with two songs\n    Library music = new Library(\"Bohemian Rhapsody\", \"Stairway to Heaven\");\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the compareSongs() method and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n    \n  }\n}\n",
@@ -30,11 +29,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:08:51.376+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L6d_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L6-L6d_pilot-2025\"},{\"changed_at\":\"2025-05-24 19:27:11 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 19:27:59 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 19:28:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 19:28:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 19:28:25 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 19:28:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

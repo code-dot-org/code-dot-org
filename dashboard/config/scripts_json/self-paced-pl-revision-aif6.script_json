@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-18 21:29:25 UTC",
+    "serialized_at": "2025-12-19 17:27:43 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,8 +40,6 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "   **In  this lesson, you will:**\n\n-  Review the content from Insights from Data and AI.\n  - Preview activities in the lessons.\n  - Explore the foundational concepts of data science.\n  - Develop and refine data questions to guide investigations and analysis.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "   **In  this lesson, you will:**\n\n-  Review the content from Insights from Data and AI.\n  - Preview activities in the lessons.\n  - Explore the foundational concepts of data science.\n  - Develop and refine data questions to guide investigations and analysis.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data Science ",

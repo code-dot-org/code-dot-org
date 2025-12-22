@@ -100,6 +100,7 @@
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:32:37.000Z",
   "level_num": "custom",
@@ -64,11 +63,9 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true,
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:32:37.417+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5d_pilot-2024\\\"\"],\"cloned_from\":\"CSA U4L7-L5d_pilot-2024\"},{\"changed_at\":\"2025-12-03 22:31:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 22:31:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 22:32:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-03 22:32:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

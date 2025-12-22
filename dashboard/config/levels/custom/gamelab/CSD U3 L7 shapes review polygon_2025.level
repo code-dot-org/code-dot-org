@@ -75,6 +75,7 @@
     ],
     "bubble_choice_description": "Review how to create polygons with any number of sides. How can you use this block with your robot face?",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

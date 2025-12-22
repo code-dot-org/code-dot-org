@@ -107,6 +107,7 @@
     "bubble_choice_description": "Use functions to finish this paddle game!",
     "thumbnail_url": "https://images.code.org/91e5f2e222782232b1bba635316a2181-paddle.gif",
     "encrypted_examples": "3icTstGWCHhbQvnzUUArwi6GnVKP7scO4SAotbqb29G9tfBrWnCH9gYHkYjS\nuVNIq2VXXmQep1D3Y0RyKSQl7g==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
