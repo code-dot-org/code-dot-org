@@ -12,7 +12,7 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "project_template_level_name": "CSA Magpie Lab L3 PBT",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-12T13:22:37.359+00:00\",\"changed\":[\"cloned from \\\"CSA Magpie Lab L3-L3\\\"\"],\"cloned_from\":\"CSA Magpie Lab L3-L3\"},{\"changed_at\":\"2022-09-12 13:23:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-12 14:43:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

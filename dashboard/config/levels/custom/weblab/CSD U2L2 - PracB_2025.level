@@ -19,7 +19,8 @@
     "validation_enabled": "true",
     "display_name": "Alternating Stories",
     "bubble_choice_description": "Work with your neighbor to tell a Fortunately / Unfortunately story using paragraph tags",
-    "thumbnail_url": "https://images.code.org/48802311f2971492861763e3b59d4603-fortunately.png"
+    "thumbnail_url": "https://images.code.org/48802311f2971492861763e3b59d4603-fortunately.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

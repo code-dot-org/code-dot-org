@@ -32,7 +32,7 @@
         "isVisible": true
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-12T15:49:42.462+00:00\",\"changed\":[\"cloned from \\\"CSA U6 Neighborhood Lit Fest Project Template\\\"\"],\"cloned_from\":\"CSA U6 Neighborhood Lit Fest Project Template\"},{\"changed_at\":\"2021-12-12 15:49:53 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:26:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:27:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

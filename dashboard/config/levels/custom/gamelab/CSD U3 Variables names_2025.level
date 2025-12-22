@@ -68,6 +68,7 @@
     ],
     "map_reference": "/courses/csd-2022/guides/naming-variables",
     "validation_enabled": "true",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

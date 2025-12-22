@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-17 22:01:26 UTC",
+    "serialized_at": "2025-12-19 16:34:08 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -715,6 +715,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-datasets-with-arrays-7"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -742,6 +745,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-aif-2-U3-debugging-data-weblab-26"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-debugging-data-weblab-26"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-render-DOM-9"
+        ],
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-aif-2-U3-render-DOM-9"
         ],
         "lesson.key": "lesson-1",
@@ -754,33 +782,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "progression": "Objects"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif-2-U3-DOM-syntax-panel-10"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-3",
-        "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
-      },
-      "level_keys": [
-        "pl-aif-2-U3-DOM-syntax-panel-10"
-      ]
-    },
-    {
       "chapter": 28,
       "position": 28,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-2-U3-map-with-objects-weblab-10"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -803,6 +812,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-CHAT-12"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -825,6 +837,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-CFU-map-13"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -1145,9 +1160,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U3-render-DOM-9",
+        "level.key": "pl-aif-2-U3-debugging-data-weblab-26",
         "script_level.level_keys": [
-          "pl-aif-2-U3-render-DOM-9"
+          "pl-aif-2-U3-debugging-data-weblab-26"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1157,9 +1172,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U3-DOM-syntax-panel-10",
+        "level.key": "pl-aif-2-U3-render-DOM-9",
         "script_level.level_keys": [
-          "pl-aif-2-U3-DOM-syntax-panel-10"
+          "pl-aif-2-U3-render-DOM-9"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

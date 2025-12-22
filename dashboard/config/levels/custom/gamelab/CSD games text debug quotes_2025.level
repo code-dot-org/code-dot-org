@@ -89,6 +89,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Fix the bug so that the text appears.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
