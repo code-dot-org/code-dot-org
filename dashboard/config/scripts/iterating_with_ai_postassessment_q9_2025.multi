@@ -1,0 +1,14 @@
+name 'iterating-with-ai-postassessment-q9_2025'
+
+question 'question'
+
+wrong 'answer'
+wrong 'answer'
+right 'answer'
+wrong 'answer'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson x
+MARKDOWN
