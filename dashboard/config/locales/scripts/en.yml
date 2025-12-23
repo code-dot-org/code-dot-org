@@ -25865,7 +25865,7 @@ en:
           student_description: |-
             In this unit, you move beyond simple interactions and start building web apps that work with real collections of information. You learn how to organize data using arrays and objects, plan your data with a clear structure before coding, and create features like sorting and filtering that help users explore information in meaningful ways. Along the way, you see how the way data is set up directly affects what an app can do and how it feels to use.
 
-            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
 
             - Apply abstraction to model real-world information as structured data using JavaScript arrays and objects.
             - Define a schema for a dataset by identifying its fields, types, and constraints, and use it as the foundation for building UI and program logic.
@@ -25877,14 +25877,46 @@ en:
             - Analyze and revise datasets or AI-generated scaffolds to address ethical concerns and improve fairness, usability, and trustworthiness.
             - Describe how working with structured data relates to professional roles such as UX Researcher, Product Manager, and entry-level data-focused roles.
         iterating-with-ai-pilot-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: End of Unit Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: iterating-with-ai-pilot-2025
           title: Iterating with AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            In this unit, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views. Building on their earlier work with arrays and objects, they design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust. AI supports their work by scaffolding repetitive code and suggesting solutions, but students are expected to make informed choices about when to adapt AI-generated logic and when to write it themselves, reinforcing both technical fluency and accountability for the systems they create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Explain how iteration and loops work by describing how repeated logic enables programs to process entire collections of data rather than single items.
+            - Implement loops in JavaScript to create interactive features such as filters, searches, and views that allow users to explore and control information.
+            - Apply decomposition by breaking a complex, loop-driven feature (e.g., filtering a dataset) into smaller, testable procedures such as input handling, data transformation, and rendering results.
+            - Debug repeated logic by tracing iteration step-by-step, identifying common issues (e.g., off-by-one errors, infinite loops), and applying targeted fixes.
+            - Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
+            - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
+          student_description: |-
+            In this unit, you learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and views. Building on your earlier work with arrays and objects, you design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust. AI supports your work by scaffolding repetitive code and suggesting solutions, but you are expected to make informed choices about when to adapt AI-generated logic and when to write it themselves, reinforcing both technical fluency and accountability for the systems you create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Explain how iteration and loops work by describing how repeated logic enables programs to process entire collections of data rather than single items.
+            - Implement loops in JavaScript to create interactive features such as filters, searches, and views that allow users to explore and control information.
+            - Apply decomposition by breaking a complex, loop-driven feature (e.g., filtering a dataset) into smaller, testable procedures such as input handling, data transformation, and rendering results.
+            - Debug repeated logic by tracing iteration step-by-step, identifying common issues (e.g., off-by-one errors, infinite loops), and applying targeted fixes.
+            - Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
+            - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
         designing-reliable-apps-with-ai-and-apis-pilot-2025:
           lessons: {}
           lesson_groups: {}
