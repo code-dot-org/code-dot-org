@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "**Battle simulation!** \r\n\r\n## Do This: \r\n- Change the battle result (e.g., \"You take damage but defeat the villain.\").\r\n- Add a new choice, like \"Use Magic\" to defeat the villain.    ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

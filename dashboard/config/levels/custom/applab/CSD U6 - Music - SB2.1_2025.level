@@ -69,6 +69,7 @@
     ],
     "teacher_markdown": "This level formally introduces students to arrays, which are like lists. Students have already been using arrays without realizing it - the [`colorLeds`(#f78183)](/docs/applab/colorLeds/) are an array of lights on the Circuit Playground. The array in this level works similar to the colorLeds. Help students notice the following:\r\n- Both arrays use square brackets `[]` with numbers inside to represent the position in the array\r\n- Both arrays seem to start with 0\r\n- The `notes` array is defined at the top of the code with a `var` block, but `colorLEDs` aren't defined anyway\r\n\r\nStudents will learn more about arrays in the video in the next lesson",
     "video_key": "csd_applab_arrays",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

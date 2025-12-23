@@ -37,7 +37,8 @@
     ],
     "map_reference": "/courses/csd-2022/guides/pseudo-classes",
     "encrypted_examples": "6HBDecONKk14CGVeIGBE5nHkLgjJVlbtB6jrQflFC3R7kTlw/nMkZ+cv47Xo\nwcDPOD3OGosNUagIEvmMDP2l9Q==\n",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:55:19.587+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18 chall_1\\\"\"],\"cloned_from\":\"CSD U2L18 chall_1\"}]"

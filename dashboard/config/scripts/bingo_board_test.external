@@ -1,0 +1,101 @@
+name 'Bingo Board Test'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+### 🧠 Internet Misconceptions Bingo
+
+Check any statements you've heard from students, colleagues, or adults in your life.  
+(You’re not marking what *you* believe — just what you’ve heard!)
+
+<table>
+  <tr>
+    <td>
+      <label>
+        <input type="checkbox">
+        WiFi and the Internet are the same thing.
+      </label>
+    </td>
+    <td>
+      <label>
+        <input type="checkbox">
+        The Internet is one big computer that everyone connects to.
+      </label>
+    </td>
+    <td>
+      <label>
+        <input type="checkbox">
+        The Web *is* the Internet (they’re just different names).
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>
+        <input type="checkbox">
+        Data travels in a straight line from my device to the website.
+      </label>
+    </td>
+    <td>
+      <label>
+        <input type="checkbox">
+        Once a message is sent, it can’t be broken into smaller pieces.
+      </label>
+    </td>
+    <td>
+      <label>
+        <input type="checkbox">
+        If one router fails, the whole Internet goes down.
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>
+        <input type="checkbox">
+        An IP address is just a username, like an email handle.
+      </label>
+    </td>
+    <td>
+      <label>
+        <input type="checkbox">
+        DNS is where all websites are stored.
+      </label>
+    </td>
+    <td>
+      <label>
+        <input type="checkbox">
+        HTTP is only used when you submit a form, not when loading pages.
+      </label>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+::: details [💡 Reveal: What’s actually going on?]
+
+**These are all misconceptions**, and many of them will show up in student thinking during this unit.
+
+A few quick clarifications you can keep in your back pocket:
+
+- **WiFi vs. Internet vs. Web**
+  - WiFi = local wireless connection.
+  - Internet = global network infrastructure (wires, routers, protocols).
+  - Web = one service that runs on the Internet.
+
+- **How data travels**
+  - Data is broken into **packets** that can take **multiple paths** through **multiple routers**, and then get reassembled.
+
+- **Redundancy**
+  - If one router or path fails, other paths can still move data — that’s redundancy.
+
+- **IP, DNS, HTTP**
+  - **IP address** = numeric address for devices.
+  - **DNS** = directory that maps names (like `example.com`) to IPs.
+  - **HTTP** = the rules for how browsers and servers request and send web content.
+
+As you teach the unit, you can listen for which of these boxes your students would “check” — and use activities and questions in Lessons 1–6 to help them revise those mental models.
+
+:::
+MARKDOWN

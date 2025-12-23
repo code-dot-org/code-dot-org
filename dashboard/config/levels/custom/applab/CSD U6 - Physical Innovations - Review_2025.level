@@ -70,6 +70,7 @@
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Prototype Innovation Template_2025",
     "teacher_markdown": "**Exemplars:** See the lesson plan for links to sample rubrics and exemplar projects",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

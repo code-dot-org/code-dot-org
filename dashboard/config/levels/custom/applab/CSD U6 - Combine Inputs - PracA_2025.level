@@ -104,6 +104,7 @@
     "bubble_choice_description": "Use a dropdown to control the left or right side of the LEDs",
     "thumbnail_url": "https://images.code.org/5bc81566d1adf0c9df9d590180139e00-image-1649457404319.png",
     "encrypted_examples": "coCy4XiwD7eTAfDfebJKShYj7eTJiD0HadIpvXfVsDoadGBRcka8JabdkMRf\n0+K3rnO430NjZ/b4vu4KL/on4A==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

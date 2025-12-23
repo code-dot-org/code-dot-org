@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U6L2-Substring PBT_pilot_oo2025",
     "teacher_markdown": "When we change the parameter for the `aSubstring` to `30`, the value that is printed to the console is `\" the lazy dog.\"` This is because the `substring()` method is returning a `Strin`g composed from the characters from index `30` (inclusive) until the end of the original `String`.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:49:14.682+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L2-L3_pilot-2025\"}]"

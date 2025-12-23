@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-12-17T21:59:44.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Evolving Websites \r\n\r\n#### Before we jump in on building web apps, let's take a look to reflect on how websites have evolved over time and why. \r\n\r\n#### Take a look at the two versions of the Amazon website. One is from around 2000 and one from today.\r\n\r\n#### Spend a moment comparing the overall look and feel of the two sites.\r\n\r\n<div style=\"display: flex; gap: 20px; justify-content: center; align-items: flex-start; max-width: 1000px; margin: auto;\">\r\n    \r\n    <!-- Left image takes 2/3 width -->\r\n    <img src=\"https://images.code.org/8c869d377c257134a9ca9522bb22102d-image-1760991916716.png\" \r\n         alt=\"amazon website in 2000\"\r\n         style=\"flex: 2; max-width: 50%; height: auto; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);\">\r\n    \r\n    <!-- Right image takes 1/3 width -->\r\n    <img src=\"https://images.code.org/582df09f74b0f4858ad96c0b75d045f0-image-1760992309979.png\" \r\n         alt=\"amazon website 2025\"\r\n         style=\"flex: 1; max-width: 50%; height: auto; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.25);\">\r\n  \r\n</div>\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n>- #### What do you notice about how the website has changed over time?\r\n>- #### Which version would you rather use, and why?\r\n>- #### What do these changes tell you about how websites are designed with users in mind?\r\n\r\n\r\n#### As you reflect, think about how the design choices you see — layout, images, colors, navigation — all relate to user-centered design, the idea that websites are built to meet the needs of the people who use them.\r\n\r\n",
+    "long_instructions": "# Bias in Data \r\n\r\n#### Bias happens when some people, ideas, or situations are represented more than others in a way that is unfair.\r\n\r\n#### In data and AI, bias often comes from who is missing or who is overrepresented in a dataset. If one group appears much more often than others, the results can reflect an uneven or incomplete view of the world.\r\n\r\n---\r\n\r\n<img src=\"https://images.code.org/aa466cc4ed48dcdf28bb18b34243afec-image-1766178239978.png\" alt=\"choice level with animal adoption, community fair, and metro expansion\" width=\"750px\" style=\"display: block; margin-left: auto; margin-right: auto;border-radius:10px; \">\r\n\r\n\r\n## Connecting to Learning\r\n\r\n#### In lesson 5, students will explore how data can shape fairness in real-world systems by choosing between animal adoption, community events, or metro expansion scenarios. \r\n\r\n#### In each case, the way data was collected and used affected which groups or outcomes were prioritized.\r\n\r\n#### Similarly, when we use `.map()` to create a new dataset, we make decisions about what information to keep and what to leave out.\r\n\r\n---\r\n\r\n> #### **Reflect on one of the following:**\r\n> - #### If a dataset mostly includes some categories and leaves others out, how could that lead to bias when we use that data?\r\n>- #### How can examples like this help students understand that bias can come from data choices, not just from the technology itself?\r\n> - #### Where might similar data choices affect fairness in the real world (for example, in transportation, school programs, or community resources)?\r\n\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19018,
@@ -19,8 +20,9 @@
     "allow_multiple_attempts": "true",
     "stay_on_level_after_submit": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-12-17T21:59:44.391+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2- U1-evolving-web_6\\\"\"],\"cloned_from\":\"pl-sandbox-aif2- U1-evolving-web_6\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-17T21:59:44.391+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2- U1-evolving-web_6\\\"\"],\"cloned_from\":\"pl-sandbox-aif2- U1-evolving-web_6\"},{\"changed_at\":\"2025-12-19 21:11:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q5_2025'
+
+question 'You want to add a new user to the very end of a "Waiting List" array. Which method is designed for this task?'
+
+wrong '`.pop()`'
+right '`.push()`'
+wrong '`.shift()`'
+wrong '`.unshift()`'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+
+`.push()` adds elements to the end of an array. `.unshift()` adds to the beginning, `.pop()` removes from the end, and `.shift()` removes from the beginning.
+MARKDOWN

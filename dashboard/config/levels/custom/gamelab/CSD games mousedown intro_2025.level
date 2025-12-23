@@ -137,6 +137,7 @@
     "rubric_performance_level_4": "There is no else clause.",
     "libraries_enabled": "false",
     "teacher_markdown": "This is the first time that students have seen mouse input.  Athough they have not seen the block before, they may be able to predict from Line 13 that the gears will spin when the mouse is pressed.  This level is almost exactly the same as the previous level, so you may also use it as a review of the if/else construct.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

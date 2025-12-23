@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Do This: \r\nThere is a bug in this code. Can you debug it? \r\n\r\n- This function uses a parameter called `name`.\r\n- Identify the missing parameter in the `greet_user()` call. \r\n- Add the correct parameter (e.g. `\"Ava\"`) so the program works. ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
