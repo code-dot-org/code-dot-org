@@ -74,9 +74,11 @@ const CfuWidgetHeader: React.FC<CfuWidgetHeaderProps> = ({
         </div>
 
         <div className={styles.summaryCards}>
-          <LargeCard value={`${completed} of ${total}`} label="completed" />
-          <LargeCard value={accuracy} label="Accuracy" />
-          <div className={styles.smallCardsContainer}>
+          <div className={styles.metricsContainer}>
+            <LargeCard value={`${completed} of ${total}`} label="completed" />
+            <LargeCard value={accuracy} label="Accuracy" />
+          </div>
+          <div className={styles.correctnessContainer}>
             <div className={styles.smallCardsRow}>
               <SmallCard
                 count={counts.correct}
