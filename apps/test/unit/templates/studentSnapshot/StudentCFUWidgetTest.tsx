@@ -166,13 +166,14 @@ describe('StudentCFUWidget', () => {
     // Check for a couple of key strings from the sample data to ensure JSON is rendered
     await waitFor(() => {
       expect(
-        screen.getByText(
+        screen.getAllByText(
           /programming-fundamentals-lesson5-level6_2025-launch_2025/
-        )
-      ).toBeInTheDocument();
+        ).length
+      ).toBeGreaterThan(0);
       expect(
-        screen.getByText(/programming-fundamentals-lesson5-vocab_2025/)
-      ).toBeInTheDocument();
+        screen.getAllByText(/programming-fundamentals-lesson5-vocab_2025/)
+          .length
+      ).toBeGreaterThan(0);
     });
   });
 
@@ -206,10 +207,11 @@ describe('StudentCFUWidget', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(/programming-fundamentals-lesson3-level7_2025/)
-      ).toBeInTheDocument();
-      expect(screen.getByText(/LevelGroup/)).toBeInTheDocument();
-      expect(screen.getByText(/hello world/)).toBeInTheDocument();
+        screen.getAllByText(/programming-fundamentals-lesson3-level7_2025/)
+          .length
+      ).toBeGreaterThan(0);
+      expect(screen.getAllByText(/LevelGroup/).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/hello world/).length).toBeGreaterThan(0);
     });
   });
 });
