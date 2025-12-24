@@ -1,14 +1,16 @@
 name 'iterating-with-ai-preassessment-q10_2025'
 
-question 'question'
+question 'In programming, what does it mean to "mutate" data?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'To create a copy of the data and change the copy.'
+wrong 'To delete the data from the computer\'s memory.'
+wrong 'To translate the data into a different programming language.'
+right 'To change the original data structure directly.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 8
+
+Mutation involves changing the original value or structure. In many apps, mutation is avoided (in favor of copying) to prevent unintended bugs in other parts of the program.
 MARKDOWN

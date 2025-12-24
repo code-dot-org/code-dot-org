@@ -1,14 +1,16 @@
 name 'iterating-with-ai-postassessment-q9_2025'
 
-question 'question'
+question 'Which of these is a side effect that a pure function should avoid?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'Returning a new array of filtered items.'
+wrong 'Performing a calculation and returning the result.'
+right 'Updating a global variable that tracks the "Total Users" outside the function.'
+wrong 'Accepting two numbers as inputs.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 7
+
+Pure functions should only interact with their own inputs and outputs. Changing a variable outside the function is a side effect that can lead to unpredictable bugs.
 MARKDOWN
