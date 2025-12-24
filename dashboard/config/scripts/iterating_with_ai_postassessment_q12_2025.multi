@@ -1,14 +1,16 @@
 name 'iterating-with-ai-postassessment-q12_2025'
 
-question 'question'
+question 'In a schema, why is it risky to name a field `val1` instead of `product_price`?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'The AI will charge more for processing shorter names.'
+wrong '`val1` is a reserved word in JavaScript that will cause a crash.'
+right 'The AI may misinterpret `val1` as a name or date, generating incorrect filtering logic.'
+wrong 'Field names must be at least 10 characters long to be secure.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 10
+
+Clear, semantic field names help AI tools "reason" about the data, leading to more accurate code suggestions and reducing logic errors.
 MARKDOWN
