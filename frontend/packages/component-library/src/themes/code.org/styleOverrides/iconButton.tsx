@@ -1,4 +1,3 @@
-import {IconButtonProps} from '@mui/material';
 import {Components, Theme} from '@mui/material/styles';
 
 /**
@@ -8,12 +7,10 @@ import {Components, Theme} from '@mui/material/styles';
  */
 
 // Type for variant props that includes data attributes
-type IconButtonVariantProps = Partial<IconButtonProps> & {
-  'data-type'?: 'primary' | 'secondary' | 'tertiary';
-  'data-color'?: 'purple' | 'black' | 'gray' | 'white' | 'destructive';
-  'data-size'?: 'xs' | 's' | 'm' | 'l';
-  'data-force-hover'?: boolean;
-};
+// Using Record<string, unknown> to be compatible with MUI's variant system
+// MUI's variant props accept any object for matching, and Record<string, unknown>
+// is the type-safe way to represent this without using 'any'
+type IconButtonVariantProps = Record<string, unknown>;
 
 // Size specifications for icon-only buttons matching genericButton.module.scss
 const ICON_BUTTON_SIZE_SPECS = {
