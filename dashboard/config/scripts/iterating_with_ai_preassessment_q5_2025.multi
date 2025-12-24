@@ -1,14 +1,16 @@
 name 'iterating-with-ai-preassessment-q5_2025'
 
-question 'question'
+question 'When is a `while` loop more appropriate than a `for` loop?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'When you want the code to run as fast as possible.'
+right 'When you need to repeat an action based on a condition that might change at any time (e.g., until a user clicks "Stop").'
+wrong 'When you are working with an array of a fixed size.'
+wrong 'When you want to ensure the loop only runs exactly five times.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 3
+
+`while` loops (condition-controlled) are used when the number of repetitions isn't known beforehand and depends on a dynamic state or condition.
 MARKDOWN

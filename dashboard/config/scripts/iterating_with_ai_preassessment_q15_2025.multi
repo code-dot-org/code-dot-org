@@ -1,14 +1,16 @@
 name 'iterating-with-ai-preassessment-q15_2025'
 
-question 'question'
+question 'What is findability in the context of user design?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'The ability for the AI to find errors in your code automatically.'
+wrong 'A tool that finds where the developer saved their files on the computer.'
+right 'How easily a user can locate the specific information they need within a web app.'
+wrong 'A type of loop that searches for the largest number in an array.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 11
+
+Findability is a key part of human-centered design. Using filters, search, and clear labels helps ensure users don't get lost in large datasets.
 MARKDOWN

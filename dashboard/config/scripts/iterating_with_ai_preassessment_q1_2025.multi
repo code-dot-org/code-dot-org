@@ -1,14 +1,16 @@
 name 'iterating-with-ai-preassessment-q1_2025'
 
-question 'question'
+question 'In programming, what is the primary purpose of "iteration"?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'To create a single variable that stores multiple values.wer'
+right 'To repeat a block of code multiple times until a specific condition is met.'
+wrong 'To permanently delete data that the user no longer needs.'
+wrong 'To change the color and layout of a web application.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 1
+
+Iteration (loops) allows developers to automate repetitive tasks, like processing every item in a list or repeating an action until a "stopping condition" is reached.
 MARKDOWN

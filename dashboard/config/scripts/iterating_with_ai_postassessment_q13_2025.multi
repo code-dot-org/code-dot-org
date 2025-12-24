@@ -1,14 +1,16 @@
 name 'iterating-with-ai-postassessment-q13_2025'
 
-question 'question'
+question 'Which of the following is an edge case test for a loop that processes a list of student grades?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'A list with 5 students who all have the same grade.'
+wrong 'A list where students are sorted alphabetically.'
+wrong 'A list containing 25 students with average grades.'
+right 'A list that is completely empty (0 students).'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 10
+
+Edge cases involve testing the boundaries of logic, such as an empty list or a list with only one item, to ensure the app doesn't crash in unusual situations.
 MARKDOWN

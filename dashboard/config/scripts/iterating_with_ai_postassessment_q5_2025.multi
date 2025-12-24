@@ -1,14 +1,16 @@
 name 'iterating-with-ai-postassessment-q5_2025'
 
-question 'question'
+question 'In a "Read → Transform → Render" pipeline, what happens during the "Transform" step?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'The raw data is displayed directly onto the screen.'
+wrong 'The developer manually types in new values for every item.'
+right 'The data is modified or filtered (e.g., converted to uppercase or narrowed down) before it is turned into UI elements.'
+wrong 'The array is deleted to save memory.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 4
+
+The transform step is where logic is applied to the data to prepare it for the user's view, such as filtering, sorting, or formatting.
 MARKDOWN
