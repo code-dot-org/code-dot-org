@@ -97,7 +97,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
         ...(forceHover &&
           ({'data-force-hover': true} as Record<string, boolean>)),
         ...rest,
-      },
+      } as Partial<MuiIconButtonProps>,
     };
   }
 
