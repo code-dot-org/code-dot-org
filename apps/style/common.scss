@@ -1,5 +1,6 @@
 @use "sass:math";
 @import "color.scss";
+@import '@code-dot-org/component-library-styles/fontVariables.scss';
 @import '@code-dot-org/component-library-styles/font';
 @import "curriculum/markdown";
 @import "responsive-visualization";
@@ -1594,7 +1595,6 @@ $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-$tooltip-font: $main-font;
 $function-name-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 $see-examples-thick-underline-color: $yellow;
 
@@ -1645,8 +1645,8 @@ $see-examples-thick-underline-color: $yellow;
 }
 
 .droplet-block-tooltipster .tooltipster-content {
-  font-family: $tooltip-font;
-  font-weight: $regular-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-regular);
   font-size: 12px;
   line-height: 16px;
   padding: 8px 10px;
