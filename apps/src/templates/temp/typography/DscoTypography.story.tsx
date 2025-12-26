@@ -20,7 +20,8 @@ import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
 
 // fetch global component styles  needed to display the component correctly into storybook
-import '@code-dot-org/component-library-styles/colors.scss';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 
 export default {
   title: 'DesignSystem/Typography', // eslint-disable-line storybook/no-title-property-in-meta

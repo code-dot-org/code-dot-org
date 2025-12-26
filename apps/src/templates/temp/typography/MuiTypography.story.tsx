@@ -5,7 +5,8 @@ import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
 
 // global styles so typography tokens apply
-import '@code-dot-org/component-library-styles/colors.scss';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 
 export default {
   title: 'DesignSystem/MUITypography', // eslint-disable-line storybook/no-title-property-in-meta

@@ -1,7 +1,8 @@
-// Ensure critical fonts are loaded very early.
+// Ensure critical fonts and colors are loaded very early.
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/fontVariables.css';
-import '@code-dot-org/component-library-styles/colors.scss';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 
 import {ThemeProvider} from '@mui/material';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
