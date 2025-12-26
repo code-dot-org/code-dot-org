@@ -25,10 +25,17 @@ $semi-bold-font-weight: 600;
 $bold-font-weight: 700;
 $extra-bold-font-weight: 800;
 $black-font-weight: 900;
+$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold',
+  $noto-sans-fonts, sans-serif;
+$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', $noto-sans-fonts,
+  sans-serif;
+
+// Note: CSS variables are defined in fontVariables.css and should be imported
+// in your main SCSS entry point to ensure they're available globally.
 
 @mixin main-font-thin {
-  font-family: $main-font;
-  font-weight: $thin-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-thin);
   font-style: normal;
 }
 
@@ -38,8 +45,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-extra-light {
-  font-family: $main-font;
-  font-weight: $extra-light-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-extra-light);
   font-style: normal;
 }
 
@@ -49,8 +56,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-light {
-  font-family: $main-font;
-  font-weight: $light-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-light);
   font-style: normal;
 }
 
@@ -60,8 +67,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-regular {
-  font-family: $main-font;
-  font-weight: $regular-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-regular);
   font-style: normal;
 }
 
@@ -71,8 +78,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-medium {
-  font-family: $main-font;
-  font-weight: $medium-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-medium);
   font-style: normal;
 }
 
@@ -82,8 +89,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-semi-bold {
-  font-family: $main-font;
-  font-weight: $semi-bold-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-semi-bold);
   font-style: normal;
 }
 
@@ -93,8 +100,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-bold {
-  font-family: $main-font;
-  font-weight: $bold-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-bold);
   font-style: normal;
 }
 
@@ -104,8 +111,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-extra-bold {
-  font-family: $main-font;
-  font-weight: $extra-bold-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-extra-bold);
   font-style: normal;
 }
 
@@ -115,8 +122,8 @@ $black-font-weight: 900;
 }
 
 @mixin main-font-black {
-  font-family: $main-font;
-  font-weight: $black-font-weight;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-black);
   font-style: normal;
 }
 
@@ -124,11 +131,6 @@ $black-font-weight: 900;
   @include main-font-black;
   font-style: italic;
 }
-
-$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold',
-  $noto-sans-fonts, sans-serif;
-$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', $noto-sans-fonts,
-  sans-serif;
 
 /*
    Font Awesome S3 Bucket URLs
