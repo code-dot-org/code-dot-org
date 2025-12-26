@@ -1,0 +1,42 @@
+/* Font CSS Variables
+ * This file defines CSS variables for fonts to reduce duplication in compiled CSS.
+ * 
+ * Import this file in your main SCSS entry point:
+ * @import '@code-dot-org/component-library-styles/fontVariables.css';
+ * 
+ * Or import it directly in your application root:
+ * import '@code-dot-org/component-library-styles/fontVariables.css';
+ */
+
+:root {
+  --font-family-main: 'Figtree', 'Noto Sans', 'Noto Sans Math',
+    'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali',
+    'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
+    'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+    'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
+    'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
+    'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+  --font-family-barlow-semi-condensed-semibold: 'Barlow Semi Condensed Semibold',
+    'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', 'Noto Sans Armenian',
+    'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
+    'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+    'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
+    'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
+    'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+  --font-family-barlow-semi-condensed-medium: 'Barlow Semi Condensed Medium',
+    'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic', 'Noto Sans Armenian',
+    'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
+    'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+    'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
+    'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
+    'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+}
