@@ -61,6 +61,8 @@ module ActiveSupport
         # @param block [Proc] The block that defines the subject
         # @return [void]
         def subject(name = :subject, &block)
+          subject(:subject, &block) unless name == :subject
+
           already_initialized = respond_to?(name)
 
           let name, &block
@@ -104,7 +106,7 @@ module ActiveSupport
         # @param desc [String, Symbol] The description of the shared example group to execute.
         # @return [void]
         def it_behaves_like(desc)
-          describe_block = superclass
+          describe_block = self
 
           while describe_block.respond_to?(:shared_examples)
             block = describe_block.shared_examples[desc]

@@ -3066,6 +3066,7 @@
   "submitProjectGallery_submitDescribeProject": "You can submit your project to be considered for our Featured Projects gallery. If you're interested, please describe the project: ",
   "submitProjectGallery_thanksForSubmission": "Thanks for your submission.",
   "submitProjectGallery_tryAgain": "The project could not be submitted. Please try again later.",
+  "syncAllLoginTypeSections": "Sync all {loginType} sections",
   "syncClever": "Sync students from Clever",
   "syncGoogleClassroom": "Sync students from Google Classroom",
   "syncingYourStudents": "Syncing Your Students",

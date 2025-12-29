@@ -180,6 +180,7 @@ class Ability
       can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
+        can :access, :teacher_only
         can :manage, Section do |s|
           s.instructors.include?(user)
         end

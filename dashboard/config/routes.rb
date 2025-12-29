@@ -4,6 +4,7 @@ Dashboard::Application.routes.draw do
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
+  draw :api
   draw :marketing
 
   get "app", to: "app#index"

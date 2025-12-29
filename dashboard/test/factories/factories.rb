@@ -819,6 +819,11 @@ FactoryBot.define do
       end
     end
 
+    trait :from_clever do
+      login_type {Section::LOGIN_TYPE_CLEVER}
+      code {"#{CleverSection::CODE_PREFIX}#{Faker::Alphanumeric.unique.alphanumeric(number: 24)}"}
+    end
+
     trait :teacher_participants do
       participant_type {'teacher'}
       login_type {'email'}
