@@ -7,10 +7,6 @@
    Updating styles in this file will require a manual sync of the that file.
 */
 
-html {
-  font-size: 100%;
-}
-
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
@@ -70,13 +66,6 @@ html {
       h3 { @include heading-sm }
     }
 */
-
-:root {
-  --font-size-body-xs: 0.813rem;
-  --font-size-body-sm: 0.875rem;
-  --font-size-body-md: 1rem;
-  --font-size-body-lg: 1.25rem;
-}
 
 @mixin heading-common {
   color: var(--text-neutral-primary);

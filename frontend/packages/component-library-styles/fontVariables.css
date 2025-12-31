@@ -39,4 +39,12 @@
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
+  --font-size-body-xs: 0.813rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-md: 1rem;
+  --font-size-body-lg: 1.25rem;
+
+  html {
+    font-size: 100%;
+  }
 }
