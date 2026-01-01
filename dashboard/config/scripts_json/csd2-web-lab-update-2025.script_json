@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-15 23:37:46 UTC",
+    "serialized_at": "2026-01-01 01:52:18 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6328,8 +6328,253 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sample Web Pages"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L1-L1-2025"
+        ],
+        "lesson.key": "Lesson 1: Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "ca1737bc-f1e7-4447-beb1-a0601d7f1c4d"
+      },
+      "level_keys": [
+        "CSD U2L1-L1-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd2_2025"
+        ],
+        "lesson.key": "Lesson 1: Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "acb0b92e-bd66-483a-a840-9fa9c791f134"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd2_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L1-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "040b5c01-c00d-4409-a7cb-9f258f2ec0c7"
+      },
+      "level_keys": [
+        "CSD U2L2-L1-2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L2-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "438703b3-5243-41f7-973e-b16fef62f12e"
+      },
+      "level_keys": [
+        "CSD U2L2-L2-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L3-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f3b50f88-1088-496a-9a83-18153aab6f5f"
+      },
+      "level_keys": [
+        "CSD U2L2-L3-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L4-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f3b50f88-1088-496a-9a83-18153aab6f5f"
+      },
+      "level_keys": [
+        "CSD U2L2-L4-2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L5-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f3b50f88-1088-496a-9a83-18153aab6f5f"
+      },
+      "level_keys": [
+        "CSD U2L2-L5-2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L6-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "9fc45e4f-e152-4f20-8321-3aa59e61c887"
+      },
+      "level_keys": [
+        "CSD U2L2-L6-2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L7-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "33217c5d-881b-46c2-a25f-a39cbaaf6180"
+      },
+      "level_keys": [
+        "CSD U2L2-L7-2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD L2 Assess FR_2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "33217c5d-881b-46c2-a25f-a39cbaaf6180"
+      },
+      "level_keys": [
+        "CSD L2 Assess FR_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L2-L9-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "10362ae3-57e4-4867-8dc8-575ad246f595"
+      },
+      "level_keys": [
+        "CSD U2L2-L9-2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD Web Development Post-Project Test_pilot_2026-weblab2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6346,11 +6591,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csd2survey_2026-weblab2"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -6369,6 +6617,138 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L1-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L1-L1-2025"
+        ],
+        "lesson.key": "Lesson 1: Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "ca1737bc-f1e7-4447-beb1-a0601d7f1c4d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd2_2025",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd2_2025"
+        ],
+        "lesson.key": "Lesson 1: Exploring Web Pages",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "acb0b92e-bd66-483a-a840-9fa9c791f134"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L1-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "040b5c01-c00d-4409-a7cb-9f258f2ec0c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L2-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "438703b3-5243-41f7-973e-b16fef62f12e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L3-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f3b50f88-1088-496a-9a83-18153aab6f5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L4-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f3b50f88-1088-496a-9a83-18153aab6f5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L5-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "f3b50f88-1088-496a-9a83-18153aab6f5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L6-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "9fc45e4f-e152-4f20-8321-3aa59e61c887"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L7-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "33217c5d-881b-46c2-a25f-a39cbaaf6180"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD L2 Assess FR_2025",
+        "script_level.level_keys": [
+          "CSD L2 Assess FR_2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "33217c5d-881b-46c2-a25f-a39cbaaf6180"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L2-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L2-L9-2025"
+        ],
+        "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "10362ae3-57e4-4867-8dc8-575ad246f595"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD Web Development Post-Project Test_pilot_2026-weblab2",
