@@ -705,7 +705,7 @@ GEM
     pusher-signature (0.1.8)
     pycall (1.5.2)
     racc (1.8.1)
-    rack (2.2.9)
+    rack (2.2.21)
     rack-cache (1.13.0)
       rack (>= 0.4)
     rack-cors (2.0.1)
