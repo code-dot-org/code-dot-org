@@ -510,7 +510,8 @@ GEM
     http-cookie (1.0.6)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    httparty (0.21.0)
+    httparty (0.24.0)
+      csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
@@ -1072,7 +1073,7 @@ DEPENDENCIES
   hoc_legacy!
   honeybadger (>= 4.5.6)
   http (~> 5.3.1)
-  httparty
+  httparty (~> 0.24)
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails (~> 0.4.0)
