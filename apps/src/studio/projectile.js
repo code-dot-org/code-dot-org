@@ -131,6 +131,7 @@ export default class Projectile extends Collidable {
       Object.assign({}, options, {
         spriteSheet: this.spriteSheet_,
         animationFrameDuration: this.getAnimationFrameDuration(),
+        disableAnimations: options.disableAnimations || false, // Toggle to disable animations
       })
     );
   }

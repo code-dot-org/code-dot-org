@@ -2803,6 +2803,7 @@ Studio.reset = function (first) {
       displayDir: spriteStart.direction || Direction.NONE,
       emotion: spriteStart.emotion || level.defaultEmotion || Emotions.NORMAL,
       renderOffset: renderOffset,
+      disableAnimations: false, // Set to true to disable animations (use static frame 0)
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
