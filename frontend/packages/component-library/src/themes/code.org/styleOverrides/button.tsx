@@ -211,6 +211,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           textDecoration: 'none',
         },
 
+        // Remove margins from startIcon and endIcon - use gap instead (matching genericButton.module.scss)
+        '& .MuiButton-startIcon': {
+          marginLeft: 0,
+          marginRight: 0,
+        },
+        '& .MuiButton-endIcon': {
+          marginLeft: 0,
+          marginRight: 0,
+        },
+
         // Pending state with hidden text - center the spinner
         '&.buttonPendingWithHiddenText': {
           position: 'relative',
