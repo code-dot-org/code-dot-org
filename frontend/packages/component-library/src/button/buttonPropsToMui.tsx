@@ -18,6 +18,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
   isIconButton: boolean;
   buttonProps: Partial<MuiButtonProps>;
   iconButtonProps: Partial<MuiIconButtonProps>;
+  isPending?: boolean;
 } {
   const {
     type = 'primary',
@@ -83,7 +84,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
       iconButtonProps: {
         color: muiColor,
         size: muiSize,
-        disabled: disabled || isPending,
+        disabled: disabled,
         className: forceHover
           ? `${className || ''} force-hover`.trim()
           : className,
@@ -98,6 +99,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
           ({'data-force-hover': true} as Record<string, boolean>)),
         ...rest,
       } as Partial<MuiIconButtonProps>,
+      isPending,
     };
   }
 
@@ -106,7 +108,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
     variant,
     color: muiColor,
     size: muiSize,
-    disabled: disabled || isPending,
+    disabled: disabled,
     // Note: loading prop may require LoadingButton from @mui/lab
     // For now, we'll use disabled state when pending
     // loading: isPending, // Uncomment when using LoadingButton
@@ -135,12 +137,38 @@ export function buttonPropsToMui(props: GenericButtonProps): {
     ...rest,
   };
 
-  // Handle icons
-  if (iconLeft) {
-    muiProps.startIcon = <FontAwesomeV6Icon {...iconLeft} />;
-  }
-  if (iconRight) {
-    muiProps.endIcon = <FontAwesomeV6Icon {...iconRight} />;
+  // Handle pending state with spinner icon
+  // Spinner logic matches original Button component:
+  // - If there's only text - spinner on the left
+  // - If there's text and iconLeft or both iconLeft and iconRight -> spinner on the left + text + iconRight
+  // - If there's text and iconRight (but no iconLeft) -> spinner on the right
+  const spinnerIcon = {
+    iconName: 'spinner' as const,
+    iconStyle: 'solid' as const,
+    animationType: 'spin' as const,
+  };
+  const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
+
+  // Handle icons (hide iconLeft when pending, show iconRight only if not pending or if both icons exist)
+  if (isPending) {
+    // When pending, show spinner instead of iconLeft
+    if (spinnerPosition === 'left') {
+      muiProps.startIcon = <FontAwesomeV6Icon {...spinnerIcon} />;
+    }
+    // Show iconRight only if both iconLeft and iconRight exist (per original logic)
+    if (iconRight && iconLeft) {
+      muiProps.endIcon = <FontAwesomeV6Icon {...iconRight} />;
+    } else if (spinnerPosition === 'right') {
+      muiProps.endIcon = <FontAwesomeV6Icon {...spinnerIcon} />;
+    }
+  } else {
+    // Normal state: show icons as usual
+    if (iconLeft) {
+      muiProps.startIcon = <FontAwesomeV6Icon {...iconLeft} />;
+    }
+    if (iconRight) {
+      muiProps.endIcon = <FontAwesomeV6Icon {...iconRight} />;
+    }
   }
 
   // Handle children (text content)
@@ -152,5 +180,6 @@ export function buttonPropsToMui(props: GenericButtonProps): {
     isIconButton: false,
     buttonProps: muiProps,
     iconButtonProps: {},
+    isPending,
   };
 }
