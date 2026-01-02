@@ -108,6 +108,24 @@ const config: StorybookConfig = {
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      // Include props from node_modules (like MUI) for better documentation
+      propFilter: prop => {
+        // Include all props from MUI components
+        if (prop.parent?.fileName?.includes('@mui/material')) {
+          return true;
+        }
+        // Exclude props from React internals
+        if (prop.parent?.fileName?.includes('node_modules')) {
+          return false;
+        }
+        return true;
+      },
+      // Include default values
+      shouldExtractLiteralValuesFromEnum: true,
+      // Include JSDoc comments
+      shouldRemoveUndefinedFromOptional: true,
+    },
   },
 };
 export default config;
