@@ -17,35 +17,46 @@ const ICON_BUTTON_SIZE_SPECS = {
   xs: {
     padding: '0.25rem',
     minWidth: '1.5rem',
+    minHeight: '1.5rem',
     iconSize: '0.8125rem',
+    iconWidth: '1rem',
   },
   s: {
     padding: '0.4375rem',
     minWidth: '2rem',
+    minHeight: '2rem',
     iconSize: '0.875rem',
+    iconWidth: '1.125rem',
   },
   m: {
     padding: '0.625rem',
     minWidth: '2.5rem',
+    minHeight: '2.5rem',
     iconSize: '1rem',
+    iconWidth: '1.25rem',
   },
   l: {
     padding: '0.75rem',
     minWidth: '3rem',
+    minHeight: '3rem',
     iconSize: '1.1875rem',
+    iconWidth: '1.5rem',
   },
 };
 
 export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
   variants: [
-    // Size variants
+    // Size variants - matching genericButton.module.scss icon-only styles
     {
       props: {size: 'extraSmall'},
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.xs.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.xs.minWidth,
+        minHeight: ICON_BUTTON_SIZE_SPECS.xs.minHeight,
         '& svg, & i': {
           fontSize: ICON_BUTTON_SIZE_SPECS.xs.iconSize,
+          // lineHeight: '125%',
+          width: ICON_BUTTON_SIZE_SPECS.xs.iconWidth,
         },
       },
     },
@@ -54,8 +65,11 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.s.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.s.minWidth,
+        minHeight: ICON_BUTTON_SIZE_SPECS.s.minHeight,
         '& svg, & i': {
           fontSize: ICON_BUTTON_SIZE_SPECS.s.iconSize,
+          lineHeight: '125%',
+          width: ICON_BUTTON_SIZE_SPECS.s.iconWidth,
         },
       },
     },
@@ -64,8 +78,11 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.m.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.m.minWidth,
+        minHeight: ICON_BUTTON_SIZE_SPECS.m.minHeight,
         '& svg, & i': {
           fontSize: ICON_BUTTON_SIZE_SPECS.m.iconSize,
+          lineHeight: '125%',
+          width: ICON_BUTTON_SIZE_SPECS.m.iconWidth,
         },
       },
     },
@@ -74,8 +91,11 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.l.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.l.minWidth,
+        minHeight: ICON_BUTTON_SIZE_SPECS.l.minHeight,
         '& svg, & i': {
           fontSize: ICON_BUTTON_SIZE_SPECS.l.iconSize,
+          lineHeight: '125%',
+          width: ICON_BUTTON_SIZE_SPECS.l.iconWidth,
         },
       },
     },
