@@ -1,0 +1,95 @@
+import {
+  AppName,
+  ProjectType,
+} from '@code-dot-org/api/projects';
+import {
+  ProjectSources,
+  SaveSourceOptions,
+  UpdateSourceOptions,
+} from '@code-dot-org/api/sources';
+import * as sourcesApi from '@code-dot-org/api/sources';
+import {getTabId} from '@code-dot-org/user';
+
+/**
+ * A SourcesStore manages the loading and saving of sources to the appropriate location.
+ */
+export class SourcesStore {
+  private readonly newVersionInterval: number = 15 * 60 * 1000; // 15 minutes
+  private currentVersionId: string | null = null;
+  private firstSaveTime: string | null = null;
+  private lastNewVersionTime: number | null = null;
+
+  async load(appName: AppName, channelId: string, versionId?: string) {
+    const {response, value} = await sourcesApi.get(appName, channelId, versionId);
+
+    if (response.ok && !versionId) {
+      // Only store the current version id if we are loading the latest version.
+      this.currentVersionId = response.headers.get('S3-Version-Id');
+    }
+
+    return value;
+  }
+
+  async save(
+    channelId: string,
+    sources: ProjectSources,
+    projectType?: ProjectType,
+    forceNewVersion = false
+  ) {
+    let options: SaveSourceOptions = {projectType};
+    if (this.currentVersionId) {
+      // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
+      // a new version). Otherwise we check if we should replace the existing version based on the last new
+      // version saved in this session.
+      const replaceExistingVersion =
+        !forceNewVersion && this.shouldReplaceExistingVersion();
+      if (!replaceExistingVersion) {
+        // If we're are creating a new version, update the last new version time.
+        this.lastNewVersionTime = Date.now();
+      }
+      options = {
+        ...options,
+        currentVersion: this.currentVersionId,
+        replace: replaceExistingVersion,
+        firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
+        tabId: getTabId(),
+      } as UpdateSourceOptions;
+    }
+    const response = await sourcesApi.update(channelId, sources, options);
+
+    if (response.ok) {
+      const {timestamp, versionId} = await response.json();
+      this.firstSaveTime = this.firstSaveTime || timestamp;
+      this.currentVersionId = versionId;
+    } else {
+      throw new Error(
+        response.status + ' ' + response.statusText,
+      );
+    }
+    return response;
+  }
+
+  async getVersionList(channelId: string) {
+    const response = await sourcesApi.getVersionList(channelId);
+    return response.value || [];
+  }
+
+  async restore(channelId: string, versionId: string) {
+    const response = await sourcesApi.restore(channelId, versionId);
+    const body = await response.json();
+    if (body?.version_id) {
+      this.currentVersionId = body.version_id;
+    }
+    this.lastNewVersionTime = Date.now();
+  }
+
+  shouldReplaceExistingVersion(): boolean {
+    if (!this.lastNewVersionTime) {
+      return false;
+    }
+
+    // We should replace the existing version if the last new version was less than 15 minutes ago
+    // (the last new version time plus the interval is greater than the current time).
+    return this.lastNewVersionTime + this.newVersionInterval > Date.now();
+  }
+}

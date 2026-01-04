@@ -1,0 +1,250 @@
+{
+  "name": "@code-dot-org/api",
+  "version": "0.1.0",
+  "description": "All interfaces and API routing logic to pull and validate data from the code-dot-org backend server.",
+  "keywords": [
+    "platform",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/api/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/api"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    },
+    "./channels": {
+      "types": "./dist/types/channels/index.d.ts",
+      "import": "./dist/esm/channels/index.mjs",
+      "require": "./dist/cjs/channels/index.js"
+    },
+    "./files": {
+      "types": "./dist/types/files/index.d.ts",
+      "import": "./dist/esm/files/index.mjs",
+      "require": "./dist/cjs/files/index.js"
+    },
+    "./projects": {
+      "types": "./dist/types/projects/index.d.ts",
+      "import": "./dist/esm/projects/index.mjs",
+      "require": "./dist/cjs/projects/index.js"
+    },
+    "./sources": {
+      "types": "./dist/types/sources/index.d.ts",
+      "import": "./dist/esm/sources/index.mjs",
+      "require": "./dist/cjs/sources/index.js"
+    },
+    "./userLevels": {
+      "types": "./dist/types/userLevels/index.d.ts",
+      "import": "./dist/esm/userLevels/index.mjs",
+      "require": "./dist/cjs/userLevels/index.js"
+    },
+    "./models/activitySections": {
+      "types": "./dist/types/models/activitySections/index.d.ts",
+      "import": "./dist/esm/models/activitySections/index.mjs",
+      "require": "./dist/cjs/models/activitySections/index.js"
+    },
+    "./models/learningGoalEvidenceLevels": {
+      "types": "./dist/types/models/learningGoalEvidenceLevels/index.d.ts",
+      "import": "./dist/esm/models/learningGoalEvidenceLevels/index.mjs",
+      "require": "./dist/cjs/models/learningGoalEvidenceLevels/index.js"
+    },
+    "./models/learningGoals": {
+      "types": "./dist/types/models/learningGoals/index.d.ts",
+      "import": "./dist/esm/models/learningGoals/index.mjs",
+      "require": "./dist/cjs/models/learningGoals/index.js"
+    },
+    "./models/lessonActivities": {
+      "types": "./dist/types/models/lessonActivities/index.d.ts",
+      "import": "./dist/esm/models/lessonActivities/index.mjs",
+      "require": "./dist/cjs/models/lessonActivities/index.js"
+    },
+    "./models/lessonGroups": {
+      "types": "./dist/types/models/lessonGroups/index.d.ts",
+      "import": "./dist/esm/models/lessonGroups/index.mjs",
+      "require": "./dist/cjs/models/lessonGroups/index.js"
+    },
+    "./models/lessonLevels": {
+      "types": "./dist/types/models/lessonLevels/index.d.ts",
+      "import": "./dist/esm/models/lessonLevels/index.mjs",
+      "require": "./dist/cjs/models/lessonLevels/index.js"
+    },
+    "./models/lessons": {
+      "types": "./dist/types/models/lessons/index.d.ts",
+      "import": "./dist/esm/models/lessons/index.mjs",
+      "require": "./dist/cjs/models/lessons/index.js"
+    },
+    "./models/lessonsOpportunityStandards": {
+      "types": "./dist/types/models/lessonsOpportunityStandards/index.d.ts",
+      "import": "./dist/esm/models/lessonsOpportunityStandards/index.mjs",
+      "require": "./dist/cjs/models/lessonsOpportunityStandards/index.js"
+    },
+    "./models/lessonsProgrammingExpressions": {
+      "types": "./dist/types/models/lessonsProgrammingExpressions/index.d.ts",
+      "import": "./dist/esm/models/lessonsProgrammingExpressions/index.mjs",
+      "require": "./dist/cjs/models/lessonsProgrammingExpressions/index.js"
+    },
+    "./models/lessonsResources": {
+      "types": "./dist/types/models/lessonsResources/index.d.ts",
+      "import": "./dist/esm/models/lessonsResources/index.mjs",
+      "require": "./dist/cjs/models/lessonsResources/index.js"
+    },
+    "./models/lessonsStandards": {
+      "types": "./dist/types/models/lessonsStandards/index.d.ts",
+      "import": "./dist/esm/models/lessonsStandards/index.mjs",
+      "require": "./dist/cjs/models/lessonsStandards/index.js"
+    },
+    "./models/lessonsVocabularies": {
+      "types": "./dist/types/models/lessonsVocabularies/index.d.ts",
+      "import": "./dist/esm/models/lessonsVocabularies/index.mjs",
+      "require": "./dist/cjs/models/lessonsVocabularies/index.js"
+    },
+    "./models/levelScriptLevels": {
+      "types": "./dist/types/models/levelScriptLevels/index.d.ts",
+      "import": "./dist/esm/models/levelScriptLevels/index.mjs",
+      "require": "./dist/cjs/models/levelScriptLevels/index.js"
+    },
+    "./models/levels": {
+      "types": "./dist/types/models/levels/index.d.ts",
+      "import": "./dist/esm/models/levels/index.mjs",
+      "require": "./dist/cjs/models/levels/index.js"
+    },
+    "./models/objectives": {
+      "types": "./dist/types/models/objectives/index.d.ts",
+      "import": "./dist/esm/models/objectives/index.mjs",
+      "require": "./dist/cjs/models/objectives/index.js"
+    },
+    "./models/resources": {
+      "types": "./dist/types/models/resources/index.d.ts",
+      "import": "./dist/esm/models/resources/index.mjs",
+      "require": "./dist/cjs/models/resources/index.js"
+    },
+    "./models/rubrics": {
+      "types": "./dist/types/models/rubrics/index.d.ts",
+      "import": "./dist/esm/models/rubrics/index.mjs",
+      "require": "./dist/cjs/models/rubrics/index.js"
+    },
+    "./models/scriptLevels": {
+      "types": "./dist/types/models/scriptLevels/index.d.ts",
+      "import": "./dist/esm/models/scriptLevels/index.mjs",
+      "require": "./dist/cjs/models/scriptLevels/index.js"
+    },
+    "./models/scriptsResources": {
+      "types": "./dist/types/models/scriptsResources/index.d.ts",
+      "import": "./dist/esm/models/scriptsResources/index.mjs",
+      "require": "./dist/cjs/models/scriptsResources/index.js"
+    },
+    "./models/sections": {
+      "types": "./dist/types/models/sections/index.d.ts",
+      "import": "./dist/esm/models/sections/index.mjs",
+      "require": "./dist/cjs/models/sections/index.js"
+    },
+    "./models/units": {
+      "types": "./dist/types/models/units/index.d.ts",
+      "import": "./dist/esm/models/units/index.mjs",
+      "require": "./dist/cjs/models/units/index.js"
+    },
+    "./models/vocabularies": {
+      "types": "./dist/types/models/vocabularies/index.d.ts",
+      "import": "./dist/esm/models/vocabularies/index.mjs",
+      "require": "./dist/cjs/models/vocabularies/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup --clean",
+    "clean": "rimraf dist .turbo",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "release": "release-it --preRelease=alpha",
+    "start": "yarn dev",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "devDependencies": {
+    "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@eslint/js": "^9.15.0",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@swc/core": "^1.9.3",
+    "@swc/jest": "^0.2.37",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@types/identity-obj-proxy": "^3",
+    "@types/jest": "^29.5.14",
+    "@types/js-cookie": "^3",
+    "@types/lodash": "^4",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "axe-playwright": "^2.0.3",
+    "classnames": "^2.5.1",
+    "clean-package": "^2.2.0",
+    "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-jest": "^28.9.0",
+    "eslint-plugin-react": "^7.37.2",
+    "glob": "^11.0.0",
+    "globals": "^15.12.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss": "^8.4.49",
+    "postcss-modules": "^6.0.1",
+    "prettier": "3.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "release-it": "^18.1.2",
+    "rimraf": "^6.0.1",
+    "schema-dts": "^1.1.5",
+    "stylelint": "^16.14.1",
+    "swiper": "^11.0.5",
+    "tsc-alias": "^1.8.11",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "query-string": "^9.2.2"
+  },
+  "peerDependencies": {
+    "classnames": "^2.5.1",
+    "react": ">=16",
+    "react-dom": ">=16",
+    "swiper": "^11.0.5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "clean-package": "./clean-package.config.cjs"
+}

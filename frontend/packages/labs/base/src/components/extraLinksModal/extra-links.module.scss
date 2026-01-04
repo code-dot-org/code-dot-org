@@ -1,0 +1,26 @@
+// Using button to increase specificity of this class
+// (this allows it to take precedence over the component library button styles)
+button.extraLinksButton {
+  bottom: 44px; // just above small footer
+  left: 0;
+  margin-left: 14px;
+  position: fixed;
+  z-index: 1000;
+}
+
+button.buttonRightOfFooter {
+  bottom: 10px;
+  left: 160px;
+  position: fixed;
+}
+
+.errorMessage {
+  color: var(--sentiment-error-50);
+}
+
+// Using button to increase specificity of this class
+// (this allows it to take precedence over the component library button styles)
+button.bottomButton {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}

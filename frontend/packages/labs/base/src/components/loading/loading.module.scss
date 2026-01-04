@@ -1,0 +1,102 @@
+@import '../common.scss';
+
+// We actually fade out the block to reveal the lab underneath.
+// We will do it over 1s, and then leave it invisible.
+@keyframes fade-out-block {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+// We will fade in the spinner container for 1s after a 2s delay, then leave it showing.
+@keyframes fade-in-spinner-container {
+  0% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// We will fade in the spinner text for 1s after a 10s delay, then leave it showing.
+@keyframes fade-in-spinner-text {
+  0% {
+    opacity: 0;
+  }
+
+  91% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.solidBlock {
+  align-items: center;
+  background-color: var(--background-neutral-lab);
+  bottom: 0;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: $top-spacing;
+  width: 100%;
+  z-index: 70;
+
+  &.noFadeLoading {
+    opacity: 0;
+    pointer-events: initial;
+  }
+
+  &.noFadeLoaded {
+    opacity: 0;
+  }
+
+  &.fadeLoading {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  &.fadeLoaded {
+    animation: fade-out-block .5s;
+  }
+
+  .slowLoadContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .spinnerContainer {
+      animation: fade-in-spinner-container 3s;
+      color: var(--neutral-gray-40);
+      text-align: center;
+    }
+
+    .spinnerText {
+      animation: fade-in-spinner-text 11s;
+      color: var(--neutral-gray-60);
+      margin-top: .5rem;
+    }
+  }
+}
+
+// In share view, there is no header so we want the overlay to be at the top of the screen.
+.shareViewOverlay {
+  top: 0;
+}
