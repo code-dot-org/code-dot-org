@@ -18,7 +18,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: ['src/App.tsx'],
-      name: 'music-lab',
+      name: 'standalone-video-lab',
       formats: ['es', 'cjs'],
     },
   },
