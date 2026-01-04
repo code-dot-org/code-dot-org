@@ -1,0 +1,136 @@
+@import '../../components/common.scss';
+
+%dialog {
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  border-radius: 5px;
+  padding: 20px 32px;
+  width: 600px;
+}
+
+.dialogContainer {
+  @extend %full-container-overlay;
+
+  .shareDialog {
+    @extend %dialog;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+    justify-content: space-between;
+    font-size: 14px;
+
+    .heading {
+      color: var(--text-neutral-primary);
+      margin-bottom: 0;
+    }
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      justify-content: space-between;
+
+      .column {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+    }
+
+    .block {
+      background-color: var(--background-neutral-tertiary);
+      padding: 20px;
+      border-radius: 10px;
+      color: var(--text-neutral-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap: 20px;
+      height: 100%;
+
+      &Afe {
+        background-color: #2E4486;
+        color: var(--text-neutral-white-fixed);
+
+        img {
+          border-radius: 4px;
+        }
+
+        .heading {
+          color: var(--text-neutral-white-fixed);
+        }
+      }
+    }
+
+    .QRCodeContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      height: 125px;
+      width: 125px;
+
+      .QRCodeBorder {
+        background-color: var(--background-neutral-white-fixed);
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 4px;
+      }
+    }
+
+    .closeButton {
+      background-color: initial;
+      box-shadow: initial;
+      border: none !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: var(--text-neutral-quaternary);
+
+      &Icon {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+
+    .feedbackLink {
+      display: flex;
+      color: var(--text-neutral-primary);
+      text-decoration: underline;
+    }
+
+    .buttonGroup {
+      display: flex;
+      gap: 14px;
+      margin-inline-start: auto;
+    }
+  }
+}
+
+.contents {
+  display: contents;
+}
+
+.shareDialogButton, .afeText {
+  width: 100%;
+  margin-top: auto;
+}
+
+.alert {
+  width: 90%;
+  text-align: center;
+}
+
+.fullWidth {
+  width: 100%;
+}

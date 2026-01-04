@@ -1,0 +1,12 @@
+@import '../../components/common.scss';
+
+.dialogContainer {
+  @extend %full-container-overlay;
+}
+
+%dialog {
+  background-color: var(--background-neutral-primary);
+  border-radius: 5px;
+  padding: 36px 56px 40px;
+  width: 600px;
+}
