@@ -1767,6 +1767,77 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/markdown@workspace:packages/markdown":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/markdown@workspace:packages/markdown"
+  dependencies:
+    "@code-dot-org/changelogs": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@eslint/js": "npm:^9.15.0"
+    "@release-it/conventional-changelog": "npm:^10.0.0"
+    "@storybook/addon-a11y": "npm:^8.6.9"
+    "@storybook/addon-essentials": "npm:^8.6.9"
+    "@storybook/addon-interactions": "npm:^8.6.9"
+    "@storybook/addon-storysource": "npm:^8.6.9"
+    "@storybook/addon-styling-webpack": "npm:^1.0.1"
+    "@storybook/addon-webpack5-compiler-swc": "npm:^3.0.0"
+    "@storybook/blocks": "npm:^8.6.9"
+    "@storybook/react": "npm:^8.6.9"
+    "@storybook/react-webpack5": "npm:^8.6.9"
+    "@storybook/test": "npm:^8.6.9"
+    "@storybook/test-runner": "npm:^0.22.0"
+    "@swc/core": "npm:^1.9.3"
+    "@swc/jest": "npm:^0.2.37"
+    "@testing-library/dom": "npm:^10.4.0"
+    "@testing-library/jest-dom": "npm:^6.6.3"
+    "@testing-library/react": "npm:^16.0.1"
+    "@types/identity-obj-proxy": "npm:^3"
+    "@types/jest": "npm:^29.5.14"
+    "@types/lodash": "npm:^4"
+    "@types/node": "npm:^22.9.0"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    axe-playwright: "npm:^2.0.3"
+    classnames: "npm:^2.5.1"
+    clean-package: "npm:^2.2.0"
+    esbuild-sass-plugin: "npm:^3.3.1"
+    eslint: "npm:^9.15.0"
+    eslint-plugin-jest: "npm:^28.9.0"
+    eslint-plugin-react: "npm:^7.37.2"
+    eslint-plugin-storybook: "npm:^0.11.1"
+    glob: "npm:^11.0.0"
+    globals: "npm:^15.12.0"
+    identity-obj-proxy: "npm:^3.0.0"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    markdown-to-jsx: "npm:^7.4.7"
+    markdown-to-txt: "npm:^2.0.1"
+    postcss: "npm:^8.4.49"
+    postcss-modules: "npm:^6.0.1"
+    prettier: "npm:3.4.2"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    release-it: "npm:^18.1.2"
+    rimraf: "npm:^6.0.1"
+    schema-dts: "npm:^1.1.5"
+    storybook: "npm:^8.6.9"
+    storybook-addon-rtl: "npm:^1.0.1"
+    stylelint: "npm:^16.14.1"
+    swiper: "npm:^11.0.5"
+    tsc-alias: "npm:^1.8.11"
+    tsup: "npm:^8.3.5"
+    typescript: "npm:^5.7.3"
+    typescript-eslint: "npm:^8.15.0"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
+    swiper: ^11.0.5
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/music-lab@workspace:*, @code-dot-org/music-lab@workspace:packages/labs/music":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/music-lab@workspace:packages/labs/music"
@@ -17523,6 +17594,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.escape@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.escape@npm:4.0.1"
+  checksum: 10c0/90ade409cec05b6869090476952fdfb84d4d87b1ff4a0e03ebd590f980d9a1248d93ba14579f10d80c6429e4d6af13ba137c28db64cae6dadb71442e54a3ad2b
+  languageName: node
+  linkType: hard
+
 "lodash.escaperegexp@npm:^4.1.2":
   version: 4.1.2
   resolution: "lodash.escaperegexp@npm:4.1.2"
@@ -17569,6 +17647,13 @@ __metadata:
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
   checksum: 10c0/4e870d54e8a6c86c8687e057cec4069d2e941446ccab7f40b4d9555fa5872d917d0b6aa73bece7765500a3123f1723bcdba9ae881b679ef120bba9e1a0b0ed70
+  languageName: node
+  linkType: hard
+
+"lodash.unescape@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.unescape@npm:4.0.1"
+  checksum: 10c0/b050d4e71a1459a397e615833ea296dd679e851ae13f7b2c91d6c2a5cd9a07e9a5be070a1cac3e27ee1c0dd0433d13bc8d3eda426c205cb5c2704a7c077f062a
   languageName: node
   linkType: hard
 
@@ -17825,6 +17910,38 @@ __metadata:
   version: 1.5.0
   resolution: "map-or-similar@npm:1.5.0"
   checksum: 10c0/33c6ccfdc272992e33e4e99a69541a3e7faed9de3ac5bc732feb2500a9ee71d3f9d098980a70b7746e7eeb7f859ff7dfb8aa9b5ecc4e34170a32ab78cfb18def
+  languageName: node
+  linkType: hard
+
+"markdown-to-jsx@npm:^7.4.7":
+  version: 7.7.17
+  resolution: "markdown-to-jsx@npm:7.7.17"
+  peerDependencies:
+    react: ">= 0.14.0"
+  peerDependenciesMeta:
+    react:
+      optional: true
+  checksum: 10c0/581c5ee1b3c79445f9f8369dc2882d0289507e702b2fcf2bc276b163a984cdcca2d8463a609c9bf310a31dcbf10c3210721c42c9173d4f12da675d3b56243736
+  languageName: node
+  linkType: hard
+
+"markdown-to-txt@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "markdown-to-txt@npm:2.0.1"
+  dependencies:
+    lodash.escape: "npm:^4.0.1"
+    lodash.unescape: "npm:^4.0.1"
+    marked: "npm:^4.0.14"
+  checksum: 10c0/af5b9c80b0f234123a73652faeb7b3cf74830f297370d4816c957724b206e9f31010a2541a359a19e272db21492e647a81a8a873858b49190f19fe4b66a55902
+  languageName: node
+  linkType: hard
+
+"marked@npm:^4.0.14":
+  version: 4.3.0
+  resolution: "marked@npm:4.3.0"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/0013463855e31b9c88d8bb2891a611d10ef1dc79f2e3cbff1bf71ba389e04c5971298c886af0be799d7fa9aa4593b086a136062d59f1210b0480b026a8c5dc47
   languageName: node
   linkType: hard
 
