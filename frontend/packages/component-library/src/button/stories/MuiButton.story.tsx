@@ -190,6 +190,8 @@ export const DisabledButton = SingleTemplate.bind({});
 DisabledButton.args = {
   children: 'Button',
   onClick: () => null,
+  variant: 'contained',
+  color: 'primary',
   disabled: true,
   size: 'medium',
 };
@@ -199,8 +201,9 @@ PendingButton.args = {
   children: 'Button',
   'aria-label': 'Button',
   onClick: () => null,
-  disabled: true,
   size: 'medium',
+  variant: 'contained',
+  color: 'primary',
   startIcon: (
     <FontAwesomeV6Icon
       iconName="spinner"
@@ -214,6 +217,8 @@ export const ButtonWithIcons = SingleTemplate.bind({});
 ButtonWithIcons.args = {
   children: 'Button',
   onClick: () => null,
+  variant: 'contained',
+  color: 'primary',
   startIcon: <FontAwesomeV6Icon iconName="house" iconStyle="solid" />,
   endIcon: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
   size: 'medium',
@@ -436,26 +441,36 @@ GroupOfSizesOfButtons.args = {
     {
       children: 'Button xs',
       size: 'extraSmall',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
       children: 'Button s',
       size: 'small',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
       children: 'Button m',
       size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
       children: 'Button l',
       size: 'large',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       size: 'extraSmall',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only xs',
       'data-size': 'xs',
@@ -463,6 +478,8 @@ GroupOfSizesOfButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       size: 'small',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only s',
       'data-size': 's',
@@ -470,6 +487,8 @@ GroupOfSizesOfButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       size: 'medium',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only m',
       'data-size': 'm',
@@ -477,6 +496,8 @@ GroupOfSizesOfButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       size: 'large',
+      variant: 'contained',
+      color: 'primary',
       onClick: () => null,
       'aria-label': 'Icon only l',
       'data-size': 'l',
