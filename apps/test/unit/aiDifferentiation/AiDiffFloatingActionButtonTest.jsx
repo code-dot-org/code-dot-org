@@ -2,14 +2,8 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aichatReducer, setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -53,7 +47,6 @@ describe('AIDiffFloatingActionButton', () => {
   let fetchJsonStub;
 
   beforeEach(() => {
-    stubRedux();
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
     localStorage.clear();
@@ -74,7 +67,6 @@ describe('AIDiffFloatingActionButton', () => {
     sessionStorage.clear();
     localStorage.clear();
     jest.restoreAllMocks();
-    restoreRedux();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -83,7 +75,6 @@ describe('AIDiffFloatingActionButton', () => {
     registerReducers({
       currentUser,
       teacherSections,
-      aichat: aichatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -93,7 +84,6 @@ describe('AIDiffFloatingActionButton', () => {
       })
     );
     store.dispatch(setSections([]));
-    store.dispatch(setChatIsOpen(false));
 
     render(
       <Provider store={store}>
@@ -215,7 +205,9 @@ describe('AIDiffFloatingActionButton', () => {
       });
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
 
-      const fabImage = screen.getByRole('img', {name: 'AI bot'});
+      const fabImage = screen.getByRole('img', {
+        name: 'AI bot - unread notifications',
+      });
       fireEvent.load(fabImage);
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
     });
@@ -236,7 +228,9 @@ describe('AIDiffFloatingActionButton', () => {
           }
         );
       });
-      const image = screen.getByRole('img', {name: 'AI bot'});
+      const image = screen.getByRole('img', {
+        name: 'AI bot - unread notifications',
+      });
       fireEvent.load(image);
       const fab = screen.getByRole('button', {
         name: i18n.openOrCloseTeachingAssistant(),

@@ -91,6 +91,7 @@
     "encrypted": "false",
     "libraries_enabled": "false",
     "teacher_markdown": "# Inside versus outside the draw loop\r\n\r\nThis is a good time to remind students that code **outside** the draw loop is used to set up the program.  It is for how you want your program to **start**.  Code **inside** the draw loop is for things that are changing as the program is running, user interaction.  \r\n\r\nThere may be some confusion that the new blocks are animation (changing position) and yet have gone outside the draw loop up until this point.  That is because up until this point, the velocity has been set at the beginning of the program and not changed.  When students want the velocity to change during the program, it will need to go inside the draw loop.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "Predict the outcome of this simple if-else statement. \r\n\r\n## Do This: \r\n- Read the code. \r\n- Make a prediction: What will the program print if the dice roll is: \r\n    - 6\r\n    - 2\r\n- Run: Test your prediction by running the program. ",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

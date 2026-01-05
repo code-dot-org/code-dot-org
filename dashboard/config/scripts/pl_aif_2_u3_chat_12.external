@@ -3,9 +3,8 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Common Pitfalls and Pro tips for Web Lab
-
-#### Now that you’ve had a chance to explore Web Lab, let’s look at some common challenges teachers (and students!) run into and how to handle them smoothly.
+# CHAT Framework
+#### The CHAT framework gives you a clear, repeatable way to plan, improve, test, and reuse code while working with AI.
 
  
 
@@ -13,90 +12,69 @@ markdown <<MARKDOWN
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
-  <!-- Using the AI -->
+  <!-- c -->
   <div style="display: flex; align-items: center; gap: 15px;">
-    <img src="https://images.code.org/65cc70df044c06a2e9750d1a48bf87f1-image-1761073828457.png" alt="AI Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <img src="https://images.code.org/96e429722e4a63feae5fd5ce6e9c0324-image-1766176537283.png" alt="c" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
     <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-      <h3><b>Using the AI</b></h3>
-      <p style="font-size: 14pt;">The AI can be a great partner for debugging and creating. Encourage students to ask it for help finding problems in their code or brainstorming ways to improve their project.</p>
+      <h3><b>Clarify</b></h3>
+      <p style="font-size: 14pt;">Clearly state what you want to build, name the inputs and outputs, and use AI to restate the plan and provide starter code so the goal and success check are explicit.</p>
       <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-        ➡️ Click on the AI icon on the top left of the workspace to access the AI bot.
+        ➡️ “I want to build a feature that shows information from a data set when a button is clicked.”
       </p>
     </div>
   </div>
 
-  <!-- Prompt Engineering -->
+  <!-- H -->
   <div style="display: flex; align-items: center; gap: 15px;">
-    <img src="https://images.code.org/fe34dbc344639aa52100c39a6221fccb-image-1761075817469.png" alt="Prompt Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <img src="https://images.code.org/b86b54fc92932e1f8d7620d3fb6b9de5-image-1766176588734.png" alt="Letter H" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
     <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-      <h3><b>Prompt Engineering</b></h3>
-      <p style="font-size: 14pt;">Good prompts = better results! Be specific about what you want the AI to do.</p>
+      <h3><b>Hone</b></h3>
+      <p style="font-size: 14pt;">Improve one specific thing at a time and ask AI to update only that part of the code, focusing on small, intentional changes and why they matter.</p>
       <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-        💡 Example: Instead of “make it look better,” try “center the box and change the text color to blue.”
+        💡 “Make one change: update the text so it shows a different property from the object.”
       </p> 
       
     </div>
   </div>
 
-  <!-- Using the Code -->
+  <!-- A -->
   <div style="display: flex; align-items: center; gap: 15px;">
-    <img src="https://images.code.org/69c5d8e9385c45b8947ab591a1f4dd68-image-1761075768469.png" alt="Code Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <img src="https://images.code.org/baa332c705603c0a171c629788704353-image-1766176628410.png" alt="Code Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
     <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-      <h3><b>Using the Code</b></h3>
-      <p style="font-size: 14pt;">Make sure code goes in the right place! HTML = structure, CSS = style, JavaScript = interaction.</p>
+      <h3><b>Apply</b></h3>
+      <p style="font-size: 14pt;">Run the code to verify the change, confirm the correct behavior updated, and use AI to identify and fix errors with the smallest possible edit.</p>
       <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-        🧠 Quick tip: Double check what file you are on before editing text. 
+        🧠 “When I click the button, nothing shows up. Here’s my code—what’s the smallest fix?”
       </p>
     </div>
   </div>
 
-  <!-- Version History -->
+  <!-- T -->
   <div style="display: flex; align-items: center; gap: 15px;">
-    <img src="https://images.code.org/99fe165565cd4611f279861a1e081d18-image-1761074831537.png" alt="Version Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+    <img src="https://images.code.org/7bf70dabc658e118603d8f6b8d966278-image-1766176671629.png" alt="Version Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
     <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-      <h3><b>Version History</b></h3>
-      <p style="font-size: 14pt;">Mistakes happen! Get into the habit of saving the version history to roll back to an earlier version if something breaks.</p>
+      <h3><b>Transfer</b></h3>
+      <p style="font-size: 14pt;">Turn the finished solution into a reusable template with placeholders and notes, using AI to clean and generalize the code for future use.</p>
       <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-        🔁 Click the Version History icon, describe your changes, and save. This lets students experiment and easily return to an earlier version if something doesn’t work out.
+        🔁“Rewrite this code as a template that works with any data set.”
       </p>
     </div>
   </div>
 
-  <!-- Troubleshooting -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-    <img src="https://images.code.org/67eaece7c88bf7bfb8d2add1266b10e7-image-1761075565221.png" alt="Bug Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
-    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-      <h3><b>Troubleshooting</b></h3>
-      <p style="font-size: 14pt;">Something not working? Slow down and look for tiny details. Are there missing tags, typos, or misplaced brackets?</p>
-      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-        🔍 Debugging is detective work, not guessing!Use the AI to help! 
-      </p>
-    </div>
-  </div>
 
-  <!-- Lag Time -->
-  <div style="display: flex; align-items: center; gap: 15px;">
-    <img src="https://images.code.org/f1e674936257f5bc2097fe0a436fb295-image-1761075706724.png" alt="Clock Icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
-    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-      <h3><b>Lag Time / Patience with Results</b></h3>
-      <p style="font-size: 14pt;">Sometimes Web Lab or the AI takes a few seconds to load. Remind students to pause and wait before refreshing or clicking again.</p>
-      <p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-        ⏳ A little patience keeps things running smoothly!
-      </p>
-    </div>
-  </div>
+## Applying the CHAT Framework 
 
-</div>
+#### After learning about objects and data sets, students will build a web app step by step in Lesson 6 using the CHAT framework. 
+
+#### This process helps students keep track of what they’re trying to build, document prompts that worked well, and make intentional changes to your code instead of guessing. 
+
+#### As apps and code become more advanced, having a structured way to plan, test, and refine how you work with AI will help you use it efficiently and stay in control of your ideas.
 
 
 
 
 
 
----
-## Up Next
-
-#### Let's do a quick vocabulary check before moving on to creating a website.
 
 
 MARKDOWN

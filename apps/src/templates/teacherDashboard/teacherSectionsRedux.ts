@@ -21,8 +21,6 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {AIF_UNIT_IDS} from '../teacherNavigation/lessonMaterials/LessonSummaryConstants';
-
 import {
   getFilteredSectionOrderIds,
   saveSectionOrder,
@@ -62,6 +60,10 @@ type AssignmentData = {
   course_offering_id?: number | null;
   unitName?: string | null;
 };
+
+interface AifInfo {
+  aif: boolean;
+}
 
 export interface TeacherSectionState {
   nextTempId: number;
@@ -971,18 +973,34 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
-    if (
-      unitId &&
-      section.unitId !== unitId &&
-      (DCDO.get('show-aita-lesson-summaries', false) ||
-        experiments.isEnabled('ai_lesson_summaries') ||
-        AIF_UNIT_IDS.includes(unitId))
-    ) {
-      HttpClient.get(
-        `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
-      ).catch(error => {
-        console.error(error);
-      });
+    if (unitId && section.unitId !== unitId) {
+      if (
+        DCDO.get('show-aita-lesson-summaries', false) ||
+        experiments.isEnabled('ai_lesson_summaries')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      } else {
+        HttpClient.fetchJson<AifInfo>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${unitId}`
+        ).then(response => {
+          const aif = response.value.aif;
+          if (
+            DCDO.get('show-aita-lesson-summaries', false) ||
+            experiments.isEnabled('ai_lesson_summaries') ||
+            aif
+          ) {
+            HttpClient.get(
+              `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+            ).catch(error => {
+              console.error(error);
+            });
+          }
+        });
+      }
     }
     // Only log if the assignment is changing.
     if (

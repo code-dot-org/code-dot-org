@@ -20,7 +20,8 @@
     "display_name": "ASCII Art",
     "bubble_choice_description": "ASCII Art is a type of artwork that just uses keyboard characters to create images. Each image is just a combination of letters or symbols or piece of punctuation from the keyboard.",
     "thumbnail_url": "https://images.code.org/5392b99f7b64b32b7eec26473a87410a-image-1665180946859.png",
-    "encrypted_examples": "RmVCaEMoqFUcJ6lLmZ1VWi8vSjAVUDy5QdR+gFjEpOHysM4KN7sMHhZZ/uGT\nilQz+40tLFRo6HZqn2pA2Cwbtw==\n"
+    "encrypted_examples": "RmVCaEMoqFUcJ6lLmZ1VWi8vSjAVUDy5QdR+gFjEpOHysM4KN7sMHhZZ/uGT\nilQz+40tLFRo6HZqn2pA2Cwbtw==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q14_2025'
+
+question 'A developer is building an interactive dashboard. What is the first step they should take before writing any code?'
+
+wrong 'Ask an AI to write the entire application.'
+right 'Design a wireframe and specify a data schema that supports the planned features.'
+wrong 'Pick the colors and fonts for the final product.'
+wrong 'Write a `while` loop that prints "Hello World."'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 11
+
+Planning the visual layout (wireframe) and the data structure (schema) ensures that the code you write later will actually work with the data you have.
+MARKDOWN

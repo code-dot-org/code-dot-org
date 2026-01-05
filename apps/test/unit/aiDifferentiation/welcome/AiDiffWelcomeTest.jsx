@@ -9,11 +9,6 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   }),
 }));
 
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  __esModule: true,
-  useAppDispatch: () => jest.fn(),
-}));
-
 jest.mock('@react-pdf/renderer', () => {
   return {
     PDFDownloadLink: () => null,

@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U4L10-MultiSelection PBT_alt-2025",
     "teacher_markdown": "Students now see that the shipping cost for the `microbits` object is `5.0`. Students should realize that they can use nested one-way or two-way selection statements inside other branches, including `else-if` branches.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:17:22.582+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L10-L4_pilot-2025\"}]"

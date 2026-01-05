@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:40:44.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Filter Bubble\n\nA **filter bubble** is a situation where algorithms mostly show you content that matches what you already like or agree with, and hide other viewpoints or topics, often without you noticing.\n\n**Example:** When a site keeps recommending similar videos, posts, or news stories based on your past behavior, you can end up in a bubble where you rarely see different ideas or types of content.",
+        "imageUrl": "https://images.code.org/fadadbf024a246cfb5c2c54dc3997351-filter bubble.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:40:44.390+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson6-vocab-filter-bubble-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson6-vocab-filter-bubble-test-2025\"}]"
+}]]></config>
+</Panels>

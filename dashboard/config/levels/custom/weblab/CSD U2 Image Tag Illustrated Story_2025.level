@@ -29,7 +29,8 @@
     "display_name": "Challenge: Make an Illustrated Story",
     "bubble_choice_description": "Use your new skills to create an illustrated story. ",
     "thumbnail_url": "https://images.code.org/6cfd43c4371332aeb3f43ddd356d8ac0-image-1586398832382.jpeg",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

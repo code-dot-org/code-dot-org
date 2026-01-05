@@ -138,6 +138,7 @@
     "start_animations": "{\n  \"orderedKeys\": [\n    \"01ffccac-0a04-4947-80b9-b2050e81d7c1\"\n  ],\n  \"propsByKey\": {\n    \"01ffccac-0a04-4947-80b9-b2050e81d7c1\": {\n      \"name\": \"heart\",\n      \"sourceUrl\": \"/api/v1/animation-library/level_animations/ovpFZ_KKTERQMCzo5Gb6mj1GT.GT2o8X/levelbuilder-image-44.png\",\n      \"frameSize\": {\n        \"x\": 100,\n        \"y\": 93\n      },\n      \"frameCount\": 1,\n      \"looping\": true,\n      \"frameDelay\": 12,\n      \"version\": \"UffOXNNc_n2cSbe0xdrm4lpwYWRHkzH5\",\n      \"categories\": [\n        \"emoji\"\n      ]\n    }\n  }\n}",
     "thumbnail_url": "https://images.code.org/cc4ce213d376bdee8b891b8769e5fc4e-heart.gif",
     "encrypted_examples": "6fx4BRo9wgSp9XV6acKvoQMHxnpHpCOJ3zpTXC1DzjhmtSU335anJea7BnGo\nDo51JiipqIICskOjWd6a1RFkLtNSL0PeB4JSy0JdXzKJF0AoX1lLzVlmY+9o\nQzD5gqfc9B8Q8IGQ/vqCmCyAiivh6g==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

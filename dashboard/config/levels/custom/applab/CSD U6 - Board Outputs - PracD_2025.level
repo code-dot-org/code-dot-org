@@ -76,6 +76,7 @@
     "bubble_choice_description": "Add code to make each button play a certain frequency",
     "thumbnail_url": "https://images.code.org/264ab837447f57acc4870c24ec05d8c8-image-1650058433087.png",
     "encrypted_examples": "/ErCMOYEGqpGHO/g1tWFtn0EM3rWqeOEpNRy256kXWnh6cM0XhX16gwW5p/T\nulp20NBMSr7C3y7buP80SyFF6g==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

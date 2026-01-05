@@ -91,6 +91,7 @@
     "bubble_choice_description": "Create an app that uses 3 external buttons to change the background color of the screen.",
     "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "encrypted_examples": "2mP4M4QFZKtdG86cG3JZgzB/nWJKI+o2Lp9dpiIPjC2W9bNcQFkhfV4pwHT6\nQbTYJX0crlaQYppjVu5aay/CMw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,0 +1,22 @@
+name 'PS U3 Assessment1 new_cs50'
+title 'Test Assessment 1'
+submittable 'true'
+
+page
+text 'csp_unit_assessment_overview_cs50'
+level 'PS U3 Q1-1_cs50'
+level 'PS U3 Q1-2_cs50'
+level 'PS U3 Q1-3_cs50'
+level 'PS U3 Q1-4_cs50'
+level 'PS U3 Q1-5_cs50'
+
+page
+level 'PS U3 Q1-6_cs50'
+text 'sample external 1_cs50'
+level 'PS U3 Q1-7_cs50'
+text 'sample external 2_copy1_cs50'
+level 'ECSPD your goals_cs50'
+
+page
+level 'PS U3 Q1-8_cs50'
+level 'PS U3 Q1-9_cs50'

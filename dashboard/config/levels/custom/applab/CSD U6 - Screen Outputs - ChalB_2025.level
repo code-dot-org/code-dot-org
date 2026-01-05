@@ -76,6 +76,7 @@
     "rubric_performance_level_2": "The finished app is similar to the description, but has at most one element that is incomplete (for example, not updating the text or not updating the icon color)",
     "rubric_performance_level_3": "The finished app may have some elements that look correct, but most elements do not update correctly or the app is only partially completed.\r\n",
     "rubric_performance_level_4": "The app has not been updated to match the description",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -4,10 +4,7 @@ class CertificateImageTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    create_csf_unit 'course1'
-    create_csf_unit 'course2'
-    create_csf_unit 'course3'
-    create_csf_unit 'course4'
+    create_csf_unit 'coursea-2025'
   end
 
   def test_special_template_courses
@@ -16,30 +13,19 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.prefilled_title_course?('frozen')
     assert CertificateImage.prefilled_title_course?('starwars')
     assert CertificateImage.prefilled_title_course?('mc')
-    assert CertificateImage.prefilled_title_course?('20-hour')
-    assert CertificateImage.prefilled_title_course?('accelerated')
     assert CertificateImage.prefilled_title_course?('mee')
     assert CertificateImage.prefilled_title_course?('mee_empathy')
     assert CertificateImage.prefilled_title_course?('mee_timecraft')
     assert CertificateImage.prefilled_title_course?('mee_estate')
-    refute CertificateImage.prefilled_title_course?('course1')
-    refute CertificateImage.prefilled_title_course?('course2')
-    refute CertificateImage.prefilled_title_course?('course3')
-    refute CertificateImage.prefilled_title_course?('course4')
   end
 
   def test_course_templates
     assert_equal 'MC_Hour_Of_Code_Certificate.png', CertificateImage.certificate_template_for('mc')
-    assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('20-hour')
-    assert_equal '20hours_certificate.jpg', CertificateImage.certificate_template_for('accelerated')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('frozen')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('starwars')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('flappy')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('playlab')
-    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course1')
-    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course2')
-    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course3')
-    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course4')
+    assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('coursea-2025')
   end
 
   def test_pl_course_template
@@ -67,32 +53,29 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image hoc_certificate_image_with_too_long_name, 1754, 1235, 'PNG'
     unspecified_course_image = CertificateImage.create_course_certificate_image('Robot Tester', nil)
     assert_image unspecified_course_image, 1754, 1235, 'PNG'
-    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
+    blank_named_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'coursea-2025', 'Course A')
     assert_image blank_named_certificate_image, 1754, 1240, 'PNG'
-    twenty_hour_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', '20-hour')
-    assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
-    accelerated_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'accelerated')
-    assert_image accelerated_certificate_image, 1754, 1240, 'JPEG'
 
     # Create course certificates with nil and empty values
-    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', 'Course 1')
+    nil_sponsor_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'coursea-2025', 'Course A')
     assert_image nil_sponsor_course_certificate_image, 1754, 1240, 'PNG'
-    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'course1', 'Course 1')
+    empty_name_course_certificate_image = CertificateImage.create_course_certificate_image('', 'coursea-2025', 'Course A')
     assert_image empty_name_course_certificate_image, 1754, 1240, 'PNG'
-    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'course1', '')
+    empty_title_course_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'coursea-2025', '')
     assert_image empty_title_course_certificate_image, 1754, 1240, 'PNG'
 
-    # Entered name "à Test Namé" on /congrats/course1
+    # Test ISO-8859-1 encoded names are handled correctly
+    # Entered name "à Test Namé" on /congrats
     # JS btoa(JSON.stringified(config)) becomes:
-    #   "eyJuYW1lIjoi4CBUZXN0IE5hbekiLCJjb3Vyc2UiOiJDb3Vyc2UgMSJ9"
+    #   "eyJuYW1lIjoi4CBUZXN0IE5hbekiLCJjb3Vyc2UiOiJDb3Vyc2UgQSJ9"
     # Ruby JSON.parse(Base64.urlsafe_decode64(encoded_config) becomes:
-    #   { name: "à Test Namé", course: "Course 1"}
+    #   { name: "à Test Namé", course: "Course A"}
     #   ^ but the name is encoded in ISO-8859-1. This used to throw when gsub
     #     would get called on the string with a regex. Now we call
     #     force_8859_to_utf8 on the string, and the chars now render OK.
     iso_8859_name = 'An ISO-8859 Tester \xE0' # Includes an à in ISO-8859-1
-    twenty_hour_certificate_image = CertificateImage.create_course_certificate_image(iso_8859_name, '20-hour')
-    assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
+    coursea_certificate_image = CertificateImage.create_course_certificate_image(iso_8859_name, 'coursea-2025')
+    assert_image coursea_certificate_image, 1754, 1240, 'PNG'
   end
 
   def test_pl_certificate_image_generation
@@ -145,7 +128,6 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.hoc_course?('kodable')
     assert CertificateImage.hoc_course?('hello')
 
-    refute CertificateImage.hoc_course?('course1')
     refute CertificateImage.hoc_course?('coursea-2021')
     refute CertificateImage.hoc_course?('csp-2021')
     refute CertificateImage.hoc_course?('other')
