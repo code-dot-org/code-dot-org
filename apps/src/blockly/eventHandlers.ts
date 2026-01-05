@@ -192,9 +192,7 @@ export function updateBlockLimits(event: GoogleBlockly.Events.Abstract) {
     return;
   }
 
-  const blockLimitMap = Blockly.blockLimitMap;
-
-  if (!event.workspaceId || !blockLimitMap || !(blockLimitMap?.size > 0)) {
+  if (!event.workspaceId) {
     return;
   }
   const eventWorkspace = Blockly.Workspace.getById(
@@ -203,7 +201,15 @@ export function updateBlockLimits(event: GoogleBlockly.Events.Abstract) {
   if (!eventWorkspace) {
     return;
   }
-  const allWorkspaceBlocks = eventWorkspace.getAllBlocks();
+  return updateBlockCountMap(eventWorkspace);
+}
+
+export function updateBlockCountMap(workspace: ExtendedWorkspaceSvg) {
+  const blockLimitMap = Blockly.blockLimitMap;
+  if (!blockLimitMap || !(blockLimitMap.size > 0)) {
+    return;
+  }
+  const allWorkspaceBlocks = workspace.getAllBlocks();
 
   // Define a Map to store block counts for each type
   const blockCountMap = new Map<string, number>();
@@ -220,7 +226,7 @@ export function updateBlockLimits(event: GoogleBlockly.Events.Abstract) {
     }
   });
 
-  const flyout = eventWorkspace.getFlyout();
+  const flyout = workspace.getFlyout();
   if (!flyout) {
     return;
   }
