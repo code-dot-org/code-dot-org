@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- **Investigate**: Run the program and note any error messages. Use the error messages to understand what the issue might be.\r\n- **Modify**: Fix the function call so that the program runs successfully.\r\n- **Document Results**: Write down how the error message helped you identify the issue and what changes you made.\r\n\r\nHints: \r\n- Look at how the function is called at the end.\r\n- Does the function name include parentheses when it is called?",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Functions with Parameters\r\n\r\nCreate a function with a parameter to streamline repetitive actions. In this example, the character is planting beanstalks to grow a magical garden. \r\n\r\n###Do This: \r\nTurn the existing code into a function called plant_garden(item).\r\n- Use `item` as a parameter inside the function.\r\n- Change the code so it says `print(\"Dash plants \"+ item +\".\")` every time Dash plants something.\r\n- Call the function with at least two different plant names (\"garlic bulb\", \"beanstalk\", etc.).\r\n",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

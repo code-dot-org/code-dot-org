@@ -97,6 +97,7 @@
     "project_template_level_name": "CSD U3 abstraction sidescroll template_2025",
     "libraries_enabled": "false",
     "validation_enabled": "true",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -70,6 +70,7 @@
     "rubric_performance_level_2": "Several of the buttons in the prototype link to the appropriate screen.",
     "rubric_performance_level_3": "There is at least one event in the prototype that can be trigged to produce some sort of response.",
     "rubric_performance_level_4": "There are no events in the prototype.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

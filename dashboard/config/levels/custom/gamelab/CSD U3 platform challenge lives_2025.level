@@ -70,6 +70,7 @@
     "bubble_choice_description": "Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.",
     "thumbnail_url": "https://images.code.org/22ca23b360d6d97a4e33394516faca2a-image-1589998441607.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

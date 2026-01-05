@@ -115,6 +115,7 @@
       "tempSensor.F": null,
       "tempSensor.C": null
     },
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

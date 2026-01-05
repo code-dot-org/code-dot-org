@@ -85,14 +85,56 @@ This curriculum doesn’t just introduce students to AI—it helps them think cr
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Topic Title
+	AI Prompting Framework
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;"> Watch this video on...to learn more about...
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: Debugging and Refining Outputs</a> to practice AI prompting.
 </p>
 
-<a href="https://example.com/additional-practice-1" 
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/8/levels/1?no_redirect=1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Ethics and AI
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;"> Watch this video on Ethics and AI: Equal Access and Algorithmic Bias.
+</p>
+
+<a href="https://www.youtube.com/watch?v=tJQSyzBUAew" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown  -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	AI's Role in Society
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;"> Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: AI's Role in Society</a> to learn more about about how should AI be used in solving real-world problems.
+</p>
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/12/levels/1" 
          target="blank" 
          rel="noopener noreferrer" 
          style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice

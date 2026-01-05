@@ -7,8 +7,7 @@ markdown <<MARKDOWN
 
 #### Everything you need to deliver engaging and effective classes is included with each **lesson plan** to help make your teaching experience as seamless as possible.
 
-<img src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="55%" style="border-radius:10px; float:right; margin: 0 0 0 40px; border: 3px solid black;">
-
+<img src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="55%" style="border-radius:10px; float:right; margin: 0 0 10px 40px; border: 3px solid black;">
 
 
 ## Each Lesson Includes: 
@@ -63,11 +62,9 @@ markdown <<MARKDOWN
         </p>
    </div>
 </details>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ You may want to take a minute to explore these features in <a href='https://studio.code.org/s/aif1-2025/lessons/1' target='_blank' rel='noopener noreferrer'>Unit 1, Lesson 1</a> to familiarize yourself with the lesson plan format.
 </p>

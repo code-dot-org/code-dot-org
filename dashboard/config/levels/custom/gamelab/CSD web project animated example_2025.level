@@ -223,6 +223,7 @@
     "libraries_enabled": "false",
     "encrypted_examples": "FxPKYwk8vGuADnX0WvmgSDB6tNA2cWn05o0E7+45KDjq6fLNLxHzYNvKUaqW\n6el+GwXFg/v7FVocJ+Oo6un4Gg==\n",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -76,6 +76,7 @@
     "bubble_choice_description": "Create an alarm clock!",
     "thumbnail_url": "https://images.code.org/68af898377f6945797d4a9fc08118885-image-1650058356115.png",
     "encrypted_examples": "bES29uuebdMZfLBWEDhSE/RB7ORuzhdVC2Tl1mSh4GtCdwo2O1kTb4bFsf8z\nPDxXrozo0JPaYBo3hF/t/CO3Tg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

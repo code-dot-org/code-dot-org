@@ -84,9 +84,9 @@ export const useAiTutorResponseSchemaSettings = (
           dispatch(setSource(mergedSourceVersion));
 
           // Set the preview path to the first AI-updated HTML file, if it exists.
-          const firstHtmlFile = aiTutorVersionFiles.find(
-            file => file.language === 'html'
-          );
+          const firstHtmlFile = aiTutorVersionFiles.find(file => {
+            return file.name.endsWith('.html');
+          });
           if (firstHtmlFile) {
             const folderPath = getFolderPath(
               firstHtmlFile.folderId,
