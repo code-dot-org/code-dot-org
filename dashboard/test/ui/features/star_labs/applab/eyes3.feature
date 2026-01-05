@@ -48,7 +48,7 @@ Scenario: Data Browser
   When I press keys "1" for element "#uitest-addKeyValuePairRow :nth-child(1) input"
   And I press keys "2" for element "#uitest-addKeyValuePairRow :nth-child(2) input"
   And I click selector "#addKeyValuePairButton"
-  And I wait until element "#editKeyValuePairButton" is visible
+  And I wait until element "#editKeyValueButton" is visible
   Then I see no difference for "data properties with one row"
 
   And I close my eyes
