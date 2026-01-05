@@ -11,7 +11,7 @@ const rootUrl = '/v3/channels';
 
 export async function get(channelId: string): Promise<Channel> {
   const {value} = await HttpClient.fetchJson<Channel>(
-    `${rootUrl}/${channelId}`
+    `${rootUrl}/${channelId}`,
   );
   return value;
 }
@@ -23,7 +23,7 @@ export async function update(channel: Channel): Promise<Response> {
     false,
     {
       'Content-Type': 'application/json; charset=UTF-8',
-    }
+    },
   );
 }
 
@@ -31,7 +31,7 @@ export async function publish(channel: Channel): Promise<Response> {
   return HttpClient.post(
     `${rootUrl}/${channel.id}/publish/${channel.projectType}`,
     '',
-    false
+    false,
   );
 }
 
@@ -41,16 +41,16 @@ export async function unpublish(channel: Channel): Promise<Response> {
 
 export async function fetchAbuseScore(channelId: string): Promise<number> {
   const {value} = await HttpClient.fetchJson<{abuse_score: number}>(
-    `${rootUrl}/${channelId}/abuse`
+    `${rootUrl}/${channelId}/abuse`,
   );
   return value.abuse_score;
 }
 
 export async function fetchSharingDisabled(
-  channelId: string
+  channelId: string,
 ): Promise<boolean> {
   const {value} = await HttpClient.fetchJson<{sharing_disabled: boolean}>(
-    `${rootUrl}/${channelId}/sharing_disabled`
+    `${rootUrl}/${channelId}/sharing_disabled`,
   );
   return value.sharing_disabled;
 }

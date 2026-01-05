@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import type {FunctionComponent} from 'react';
+import {useEffect, useState} from 'react';
 
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Dialog from '@code-dot-org/component-library/dialog';
@@ -28,7 +29,7 @@ export interface ExtraLinksModalProps {
   levelId: number;
 }
 
-const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
+const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
   levelLinkData,
   projectLinkData,
   isOpen,
@@ -44,11 +45,12 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     string | undefined
   >(projectLinkData?.project_info?.featured_status);
   const [abuseScore, setAbuseScore] = useState<number | undefined>(
-    projectLinkData?.project_info?.abuse_score
+    projectLinkData?.project_info?.abuse_score,
   );
 
   const channelId: string | undefined = useApp().lab?.channel?.id;
-  const isStandaloneProject: boolean = !!useApp().lab?.levelProperties?.isProjectLevel;
+  const isStandaloneProject: boolean =
+    !!useApp().lab?.levelProperties?.isProjectLevel;
 
   useEffect(() => {
     setClonedLevelName(levelLinkData.level_name);
@@ -85,11 +87,13 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
             method: 'POST',
             headers: {
               'Content-Type': 'application/json;charset=UTF-8',
-              ...(token ? {
-                'X-CSRF-TOKEN': token,
-              } : {}),
+              ...(token
+                ? {
+                    'X-CSRF-TOKEN': token,
+                  }
+                : {}),
             },
-          }
+          },
         );
         if (!response.ok) {
           const responseText = await response.text();
@@ -112,9 +116,11 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
         method: 'DELETE',
         headers: {
           Accept: 'application/json',
-          ...(token ? {
-            'X-CSRF-TOKEN': token,
-          } : {}),
+          ...(token
+            ? {
+                'X-CSRF-TOKEN': token,
+              }
+            : {}),
         },
       });
 
@@ -134,17 +140,17 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
 
   const onBookmark = async () => {
     try {
-      await fetch(
-        `/featured_projects/${channelId}/bookmark`,
-        {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8',
-            ...(token ? {
-              'X-CSRF-TOKEN': token,
-            } : {}),
-          },
-        });
+      await fetch(`/featured_projects/${channelId}/bookmark`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8',
+          ...(token
+            ? {
+                'X-CSRF-TOKEN': token,
+              }
+            : {}),
+        },
+      });
       setFeaturedProjectStatus(FeaturedProjectStatus.bookmarked);
     } catch (e) {
       console.log('Error bookmarking project', e);
@@ -153,18 +159,18 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
 
   const onResetAbuseScore = async () => {
     try {
-      await fetch(
-        `/v3/channels/${channelId}/abuse/delete`,
-        {
-          method: 'POST',
-          body: '',
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8',
-            ...(token ? {
-              'X-CSRF-TOKEN': token,
-            } : {}),
-          },
-        });
+      await fetch(`/v3/channels/${channelId}/abuse/delete`, {
+        method: 'POST',
+        body: '',
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8',
+          ...(token
+            ? {
+                'X-CSRF-TOKEN': token,
+              }
+            : {}),
+        },
+      });
       setAbuseScore(0);
     } catch (_) {
       // Set abuse score to number < 0 so that error message will be displayed to the admin user.
@@ -173,7 +179,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   };
 
   return isOpen ? (
-    <Dialog onClose={onClose}
+    <Dialog
+      onClose={onClose}
       data-theme="Light"
       title="Extra links"
       customContent={
@@ -258,7 +265,7 @@ interface CloneLevelButtonProps {
   cloneError: string;
 }
 
-const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
+const CloneLevelButton: FunctionComponent<CloneLevelButtonProps> = ({
   canClone,
   isStandaloneProject,
   setShowCloneField,
@@ -304,7 +311,7 @@ interface DeleteLevelButtonProps {
   handleDelete: () => void;
   deleteError: string;
 }
-const DeleteLevelButton: React.FunctionComponent<DeleteLevelButtonProps> = ({
+const DeleteLevelButton: FunctionComponent<DeleteLevelButtonProps> = ({
   canDelete,
   isStandaloneProject,
   showDeleteConfirm,
@@ -341,9 +348,10 @@ interface FeaturedProjectStatusProps {
   onBookmark: () => void;
 }
 
-const FeaturedProjectInfo: React.FunctionComponent<
-  FeaturedProjectStatusProps
-> = ({featuredProjectStatus, onBookmark}) => {
+const FeaturedProjectInfo: FunctionComponent<FeaturedProjectStatusProps> = ({
+  featuredProjectStatus,
+  onBookmark,
+}) => {
   if (featuredProjectStatus === 'n/a') {
     return (
       <>
@@ -355,7 +363,7 @@ const FeaturedProjectInfo: React.FunctionComponent<
   return <div>Featured project status: {featuredProjectStatus}</div>;
 };
 
-const RemixAncestry: React.FunctionComponent<{
+const RemixAncestry: FunctionComponent<{
   remixList: string[];
 }> = ({remixList}) => {
   if (remixList.length === 0) {
@@ -372,7 +380,7 @@ const RemixAncestry: React.FunctionComponent<{
   );
 };
 
-const AbuseScoreInfo: React.FunctionComponent<{
+const AbuseScoreInfo: FunctionComponent<{
   abuseScore: number;
   onResetAbuseScore: () => void;
 }> = ({abuseScore, onResetAbuseScore}) => {
@@ -424,7 +432,7 @@ interface ProjectLinkDataProps {
   abuseScore?: number;
 }
 
-const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
+const ProjectLinkData: FunctionComponent<ProjectLinkDataProps> = ({
   projectLinkData,
   isStandaloneProject,
   featuredProjectStatus,
@@ -484,9 +492,9 @@ interface ScriptLevelPathLinksProps {
   scriptLevelPathLinks?: ScriptLevelPathLink[];
 }
 
-const ScriptLevelPathLinks: React.FunctionComponent<
-  ScriptLevelPathLinksProps
-> = ({scriptLevelPathLinks}) => {
+const ScriptLevelPathLinks: FunctionComponent<ScriptLevelPathLinksProps> = ({
+  scriptLevelPathLinks,
+}) => {
   if (!scriptLevelPathLinks) {
     return null;
   }
@@ -511,9 +519,9 @@ interface ParentLevelPathLinksProps {
   parentLevelPathLinks?: ParentLevelPathLink[];
 }
 
-const ParentLevelPathLinks: React.FunctionComponent<
-  ParentLevelPathLinksProps
-> = ({parentLevelPathLinks}) => {
+const ParentLevelPathLinks: FunctionComponent<ParentLevelPathLinksProps> = ({
+  parentLevelPathLinks,
+}) => {
   if (!parentLevelPathLinks) {
     return null;
   }

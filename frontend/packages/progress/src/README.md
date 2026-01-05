@@ -1,8 +1,8 @@
 ## Progress
 
-This contains a new progress system that can be used by any **Lab2** lab.  It allows for a level to define a variety of conditions, some of which give the user feedback, and some of which allow the user to continue to the next level.
+This contains a new progress system that can be used by any **Lab2** lab. It allows for a level to define a variety of conditions, some of which give the user feedback, and some of which allow the user to continue to the next level.
 
-It was first introduced by Music Lab in https://github.com/code-dot-org/code-dot-org/pull/50596.  Adapted from that PR's description, here are some key features:
+It was first introduced by Music Lab in https://github.com/code-dot-org/code-dot-org/pull/50596. Adapted from that PR's description, here are some key features:
 
 - Each level has a set of validation conditions.
 - The level designer writes these in JSON, rather than JavaScript, so we have a clean separation between per-level validation conditions and the lab's internal implementation.
@@ -17,7 +17,7 @@ And here are some architectural details:
 - `ConditionsChecker` is a helper class which accumulates satisfied conditions for the current execution of user code, and is used by the lab-specific validator implementation. Other labs might benefit from it, though there are alternate techniques to validate code, such as direct code examination, which don't really need to accumulate satisfied conditions over a period of time.
 - For now, the lab loads the progression data and passes it into `ProgressManager` when it instantiates that class. The lab also instantiates the lab-specific validator and gives it access to the components it needs to examine progress.
 
-There is a user-friendly levelbuilder UI for building these validations in a level.  Details in https://github.com/code-dot-org/code-dot-org/pull/53142.
+There is a user-friendly levelbuilder UI for building these validations in a level. Details in https://github.com/code-dot-org/code-dot-org/pull/53142.
 
 Sample level data from **Music Lab**:
 https://github.com/code-dot-org/code-dot-org/blob/1226e19496b69da1e3e9066756979220608ba272/dashboard/config/levels/custom/music/Music%20Level%202.level#L20-L37

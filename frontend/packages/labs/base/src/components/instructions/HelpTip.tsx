@@ -1,11 +1,11 @@
-import React, {PropsWithChildren} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import moduleStyles from './helpTip.module.scss';
 
-const HelpTip: React.FunctionComponent<PropsWithChildren> = ({children}) => {
+const HelpTip: FunctionComponent<PropsWithChildren> = ({children}) => {
   const id = `helptip-${Math.floor(Math.random() * 10000)}`;
 
   return (

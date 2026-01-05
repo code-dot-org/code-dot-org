@@ -6,11 +6,11 @@ enum Environments {
   adhoc = 'adhoc',
   development = 'development',
   unknown = 'unknown',
-};
+}
 
 export const currentLocation = () => {
   return typeof window !== 'undefined' ? window.location : undefined;
-}
+};
 
 export const getEnvironment: () => Environments = () => {
   const hostname = currentLocation()?.hostname || '';
@@ -38,24 +38,24 @@ export const getEnvironment: () => Environments = () => {
     return Environments.production;
   }
   return Environments.unknown;
-}
+};
 
 export const isDevelopmentEnvironment = () => {
   return getEnvironment() === Environments.development;
-}
+};
 
 export const isStagingEnvironment = () => {
   return getEnvironment() === Environments.staging;
-}
+};
 
 export const isTestEnvironment = () => {
   return getEnvironment() === Environments.test;
-}
+};
 
 export const isLevelbuilderEnvironment = () => {
   return getEnvironment() === Environments.levelbuilder;
-}
+};
 
 export const isProductionEnvironment = () => {
   return getEnvironment() === Environments.production;
-}
+};

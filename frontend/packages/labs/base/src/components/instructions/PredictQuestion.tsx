@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import type {ChangeEvent, FunctionComponent} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
@@ -20,11 +20,11 @@ interface PredictQuestionProps {
   className?: string;
 }
 
-const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
+const PredictQuestion: FunctionComponent<PredictQuestionProps> = ({
   className,
 }) => {
   const predictSettings = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings
+    state => state.lab.levelProperties?.predictSettings,
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
@@ -34,7 +34,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     return null;
   }
 
-  const handleSelectionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSelectionChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     if (predictSettings.isMultiSelect) {
       const selections = predictResponse ? predictResponse.split(',') : [];
@@ -51,7 +51,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
 
   const disabledAndNotSelected = (index: number) =>
     predictAnswerLocked &&
-    !(predictResponse?.split(',').includes(index.toString()));
+    !predictResponse?.split(',').includes(index.toString());
 
   return (
     <div className={className}>
@@ -70,68 +70,70 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
             readOnly={predictAnswerLocked}
           />
         ) : (
-          predictSettings.multipleChoiceOptions?.map((option: string, index: number) => {
-            // Add a capital letter to the beginning of each option, starting with A.
-            const letterForOption = String.fromCharCode(index + 65) + '.';
-            return (
-              <label
-                key={`multiple-choice-${index}`}
-                className={moduleStyles.multipleChoiceContainer}
-              >
-                {predictSettings.isMultiSelect ? (
-                  <Checkbox
-                    size="s"
-                    name={option}
-                    value={index.toString()}
-                    key={index}
-                    disabled={predictAnswerLocked}
-                    checked={Boolean(
-                      predictResponse?.split(',').includes(index.toString())
-                    )}
-                    onChange={handleSelectionChange}
-                  />
-                ) : (
-                  <RadioButton
-                    size="xs"
-                    name={option}
-                    value={index.toString()}
-                    key={index}
-                    disabled={predictAnswerLocked}
-                    onChange={handleSelectionChange}
-                    checked={Boolean(
-                      predictResponse?.split(',').includes(index.toString())
-                    )}
-                  />
-                )}
-                <span
-                  className={classNames(
-                    moduleStyles.multipleChoiceLetter,
-                    {
-                      [moduleStyles.disabledNotSelectedLabel]:
-                        disabledAndNotSelected(index),
-                    },
-                    {[moduleStyles.disabled]: predictAnswerLocked}
-                  )}
+          predictSettings.multipleChoiceOptions?.map(
+            (option: string, index: number) => {
+              // Add a capital letter to the beginning of each option, starting with A.
+              const letterForOption = String.fromCharCode(index + 65) + '.';
+              return (
+                <label
+                  key={`multiple-choice-${index}`}
+                  className={moduleStyles.multipleChoiceContainer}
                 >
-                  {letterForOption}
-                </span>
-                <span
-                  className={classNames(
-                    moduleStyles.multipleChoiceText,
-                    {
-                      [moduleStyles.disabledNotSelectedLabel]:
-                        disabledAndNotSelected(index),
-                    },
-                    {
-                      [moduleStyles.disabled]: predictAnswerLocked,
-                    }
+                  {predictSettings.isMultiSelect ? (
+                    <Checkbox
+                      size="s"
+                      name={option}
+                      value={index.toString()}
+                      key={index}
+                      disabled={predictAnswerLocked}
+                      checked={Boolean(
+                        predictResponse?.split(',').includes(index.toString()),
+                      )}
+                      onChange={handleSelectionChange}
+                    />
+                  ) : (
+                    <RadioButton
+                      size="xs"
+                      name={option}
+                      value={index.toString()}
+                      key={index}
+                      disabled={predictAnswerLocked}
+                      onChange={handleSelectionChange}
+                      checked={Boolean(
+                        predictResponse?.split(',').includes(index.toString()),
+                      )}
+                    />
                   )}
-                >
-                  {option}
-                </span>
-              </label>
-            );
-          })
+                  <span
+                    className={classNames(
+                      moduleStyles.multipleChoiceLetter,
+                      {
+                        [moduleStyles.disabledNotSelectedLabel]:
+                          disabledAndNotSelected(index),
+                      },
+                      {[moduleStyles.disabled]: predictAnswerLocked},
+                    )}
+                  >
+                    {letterForOption}
+                  </span>
+                  <span
+                    className={classNames(
+                      moduleStyles.multipleChoiceText,
+                      {
+                        [moduleStyles.disabledNotSelectedLabel]:
+                          disabledAndNotSelected(index),
+                      },
+                      {
+                        [moduleStyles.disabled]: predictAnswerLocked,
+                      },
+                    )}
+                  >
+                    {option}
+                  </span>
+                </label>
+              );
+            },
+          )
         )}
       </div>
       <PredictResetButton />

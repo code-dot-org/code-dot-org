@@ -1,2 +1,1 @@
-export const EVENTS = {
-};
+export const EVENTS = {};

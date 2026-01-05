@@ -5,9 +5,11 @@ import queryString from 'query-string';
  * @param name Optionally pull a specific param.
  * @return Hash of params, or param string if `name` is specified.
  */
-export function queryParams(name?: string): string | {
-  [key: string]: string;
-} {
+export function queryParams(name?: string):
+  | string
+  | {
+      [key: string]: string;
+    } {
   const parsed = queryString.parse(window.location.search);
   if (name) {
     const result = parsed[name];
@@ -30,7 +32,11 @@ export function queryParams(name?: string): string | {
  * @param useReplaceState - optional param if you wish to use replaceState
  *   instead of pushState
  */
-export function updateQueryParam(param: string, value?: string, useReplaceState: boolean = false) {
+export function updateQueryParam(
+  param: string,
+  value?: string,
+  useReplaceState: boolean = false,
+) {
   const newString = queryString.stringify({
     ...queryString.parse(window.location.search),
     [param]: value,

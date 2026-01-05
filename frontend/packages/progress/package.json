@@ -18,10 +18,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "main": "src/index.ts",
-  "files": [
-    "dist"
-  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -38,6 +34,10 @@
       "types": "./dist/types/redux/progressSlice.d.ts"
     }
   },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --clean",
     "clean": "rimraf dist .turbo",
@@ -50,14 +50,20 @@
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
     "start": "yarn dev",
-    "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/api": "workspace:*",
+    "@code-dot-org/projects": "workspace:*",
+    "@reduxjs/toolkit": "^2.8.2",
+    "lodash": "^4.17.21",
+    "query-string": "^9.2.2",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
@@ -115,13 +121,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "clean-package": "./clean-package.config.cjs",
-  "dependencies": {
-    "@code-dot-org/api": "workspace:*",
-    "@code-dot-org/projects": "workspace:*",
-    "@reduxjs/toolkit": "^2.8.2",
-    "lodash": "^4.17.21",
-    "query-string": "^9.2.2",
-    "react-redux": "^9.2.0"
-  }
+  "clean-package": "./clean-package.config.cjs"
 }

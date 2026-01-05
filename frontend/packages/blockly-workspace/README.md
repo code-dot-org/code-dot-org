@@ -15,9 +15,9 @@ the Blockly space.
 Here are a few considerations that are usually a challenge in Blockly that
 are solved in some way with this package:
 
-* **Block definitions are very loose** - There are a variety of ways to define blocks and supplying fields, extensions, etc is cumbersome to manage since they are defined in the block by name but registered elsewhere. This package maintains a [comprehensive extension](#defining-blocks) to the JSON block specification to address this. It also provides a means of organizing [block extensions and mixins](#block-extensions-and-mixins).
-* **Global data is difficult to wrangle** - Sometimes blocks need to know (or mutate) some global state during events or generation. Having block functions reference global data makes the codespace very gnarly, however this package introduces a [typed Environment block](#environments) that is available to all blocks, fields, and their extensions.
-* **Plugins are loosely supported** - Blockly plugins for various tasks are only loosely supported officially via their registry. Supplying them is challenging due to having to register them, ideally, just-in-time as blocks that use them are registered. In many cases, it is difficult to know if a field plugin, for instance, is actually needed until you see the defined blocks. This package provides a wide range of [plugin interfaces](#plugins) beyond the official ones that can be supplied together yet registered at just the appropriate times (and unregistered after the workspace lifetime).
+- **Block definitions are very loose** - There are a variety of ways to define blocks and supplying fields, extensions, etc is cumbersome to manage since they are defined in the block by name but registered elsewhere. This package maintains a [comprehensive extension](#defining-blocks) to the JSON block specification to address this. It also provides a means of organizing [block extensions and mixins](#block-extensions-and-mixins).
+- **Global data is difficult to wrangle** - Sometimes blocks need to know (or mutate) some global state during events or generation. Having block functions reference global data makes the codespace very gnarly, however this package introduces a [typed Environment block](#environments) that is available to all blocks, fields, and their extensions.
+- **Plugins are loosely supported** - Blockly plugins for various tasks are only loosely supported officially via their registry. Supplying them is challenging due to having to register them, ideally, just-in-time as blocks that use them are registered. In many cases, it is difficult to know if a field plugin, for instance, is actually needed until you see the defined blocks. This package provides a wide range of [plugin interfaces](#plugins) beyond the official ones that can be supplied together yet registered at just the appropriate times (and unregistered after the workspace lifetime).
 
 ## Defining a workspace
 
@@ -246,10 +246,10 @@ TBD
 To facilitate extending the Blockly ecosystem, there are a series of plugin types
 that alter different aspects of the environment. They are summarized as follows:
 
-* `FieldPlugin` - These add new interactive fields to blocks.
-* `InputPlugin` - These add new visual indications of block types via altering the 'nubs' of blocks.
-* `GlobalPlugin` - These will be registered before the workspace is injected.
-* `InjectPlugin` - These are registered after the workspace is injected.
+- `FieldPlugin` - These add new interactive fields to blocks.
+- `InputPlugin` - These add new visual indications of block types via altering the 'nubs' of blocks.
+- `GlobalPlugin` - These will be registered before the workspace is injected.
+- `InjectPlugin` - These are registered after the workspace is injected.
 
 You can supply these in bulk via the `plugins` property of the `BlocklyWorkspace`
 component. However, they are often more conveniently supplied alongside block
@@ -366,9 +366,9 @@ field plugins to know more about how that is done.
 
 There are a few stock plugins available for use:
 
-* `RoundInputPlugin` - A semicircle nub.
-* `TriangleInputPlugin` - A triangular nub.
-* `RectangularInputPlugin` - A squared nub.
+- `RoundInputPlugin` - A semicircle nub.
+- `TriangleInputPlugin` - A triangular nub.
+- `RectangularInputPlugin` - A squared nub.
 
 ## Block Extensions and Mixins
 

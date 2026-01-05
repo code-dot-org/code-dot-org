@@ -108,7 +108,10 @@ export interface Mixin {
  * Blockly doesn't expose its own BlockGenerator for some reason. This is more
  * or less a copy of that which can be used to type code generator functions.
  */
-export type BlockGenerator<T extends Omit<Blockly.CodeGenerator, 'forBlock'>, U extends Environment = Environment> = (
+export type BlockGenerator<
+  T extends Omit<Blockly.CodeGenerator, 'forBlock'>,
+  U extends Environment = Environment,
+> = (
   block: Blockly.Block,
   generator: T,
   environment?: U,

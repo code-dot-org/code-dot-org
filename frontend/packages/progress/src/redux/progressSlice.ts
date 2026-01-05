@@ -1,5 +1,10 @@
-import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-import type {PayloadAction, ThunkAction, AnyAction, Slice} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import type {
+  PayloadAction,
+  ThunkAction,
+  AnyAction,
+  Slice,
+} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
 import type {Lesson} from '@code-dot-org/api/models/lessons';
@@ -11,8 +16,26 @@ type Store = MockStore<[typeof progressSlice]>;
 type RootState = StateFor<Store>;
 type AppDispatch = AppDispatchFor<Store>;
 
-import {PUZZLE_PAGE_NONE, LevelStatus, TestResults, MINIMUM_PASS_RESULT, MINIMUM_OPTIMAL_RESULT} from '../constants';
-import {LevelResults, PeerReviewLevelInfo, ProgressState, UnitProgress, UnitProgressDefinition, InitProgressPayload, ViewType, MilestoneReport, OptionalMilestoneData, ProgressLevelType, NumberedLevel} from '../types';
+import {
+  PUZZLE_PAGE_NONE,
+  LevelStatus,
+  TestResults,
+  MINIMUM_PASS_RESULT,
+  MINIMUM_OPTIMAL_RESULT,
+} from '../constants';
+import {
+  LevelResults,
+  PeerReviewLevelInfo,
+  ProgressState,
+  UnitProgress,
+  UnitProgressDefinition,
+  InitProgressPayload,
+  ViewType,
+  MilestoneReport,
+  OptionalMilestoneData,
+  ProgressLevelType,
+  NumberedLevel,
+} from '../types';
 
 /**
  * Returns the "best" of the two results, as defined in apps/src/constants.js.
@@ -20,7 +43,10 @@ import {LevelResults, PeerReviewLevelInfo, ProgressState, UnitProgress, UnitProg
  * just take the maximum.
  * @returns The better result.
  */
-export const mergeActivityResult: (a: TestResults, b: TestResults) => TestResults = (a, b) => {
+export const mergeActivityResult: (
+  a: TestResults,
+  b: TestResults,
+) => TestResults = (a, b) => {
   a = a || 0;
   b = b || 0;
   if (a === 0) {
@@ -32,7 +58,9 @@ export const mergeActivityResult: (a: TestResults, b: TestResults) => TestResult
   return Math.max(a, b);
 };
 
-export const activityCssClass: (result: TestResults) => LevelStatus = result => {
+export const activityCssClass: (
+  result: TestResults,
+) => LevelStatus = result => {
   if (!result || result === TestResults.NO_TESTS_RUN) {
     return LevelStatus.not_tried;
   }
@@ -58,7 +86,9 @@ export const activityCssClass: (result: TestResults) => LevelStatus = result => 
  * Inverse of the above function.
  * Given a status string, returns a result value.
  */
-export const resultFromStatus: (status: LevelStatus) => TestResults = status => {
+export const resultFromStatus: (
+  status: LevelStatus,
+) => TestResults = status => {
   if (status === LevelStatus.review_accepted) {
     return TestResults.REVIEW_ACCEPTED_RESULT;
   }
@@ -80,7 +110,9 @@ export const resultFromStatus: (status: LevelStatus) => TestResults = status => 
   return TestResults.NO_TESTS_RUN;
 };
 
-export const getLevelResult: (serverProgress: UnitProgressDefinition) => TestResults = serverProgress => {
+export const getLevelResult: (
+  serverProgress: UnitProgressDefinition,
+) => TestResults = serverProgress => {
   return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
@@ -89,7 +121,9 @@ export const getLevelResult: (serverProgress: UnitProgressDefinition) => TestRes
  * This is used to merge progress data from session storage which only includes
  * a result value into our data model that uses studentLevelProgressType objects.
  */
-export const levelProgressFromResult: (result: TestResults) => UnitProgress = result => {
+export const levelProgressFromResult: (
+  result: TestResults,
+) => UnitProgress = result => {
   return levelProgressFromStatus(activityCssClass(result));
 };
 
@@ -101,7 +135,9 @@ export const levelProgressFromResult: (result: TestResults) => UnitProgress = re
  * need to create a `studentLevelProgressType` object from the results then
  * set the `locked` value from the parent progress.
  */
-const getPagesProgress: (serverProgress: UnitProgressDefinition) => UnitProgress[] | undefined = serverProgress => {
+const getPagesProgress: (
+  serverProgress: UnitProgressDefinition,
+) => UnitProgress[] | undefined = serverProgress => {
   if ((serverProgress.pages_completed?.length || 0) > 1) {
     return serverProgress.pages_completed?.map((pageResult: TestResults) => {
       const pageProgress =
@@ -120,7 +156,9 @@ const getPagesProgress: (serverProgress: UnitProgressDefinition) => UnitProgress
  * @param serverProgress - A progress object from the server
  * @returns Our canonical progress shape
  */
-export const levelProgressFromServer: (serverProgress: UnitProgressDefinition) => UnitProgress = serverProgress => {
+export const levelProgressFromServer: (
+  serverProgress: UnitProgressDefinition,
+) => UnitProgress = serverProgress => {
   return {
     status: serverProgress.status || LevelStatus.not_tried,
     result: getLevelResult(serverProgress),
@@ -139,7 +177,9 @@ export const levelProgressFromServer: (serverProgress: UnitProgressDefinition) =
 /**
  * Create a studentLevelProgressType object with the provided status string
  */
-export const levelProgressFromStatus: (status: LevelStatus) => UnitProgress = status => levelProgressFromServer({status: status});
+export const levelProgressFromStatus: (
+  status: LevelStatus,
+) => UnitProgress = status => levelProgressFromServer({status: status});
 
 /**
  * Given an object from the server with student progress data keyed by level ID,
@@ -153,7 +193,7 @@ export const processServerStudentProgress: (serverStudentProgress: {
   [levelId: number]: UnitProgress;
 } = serverStudentProgress => {
   return _.mapValues(serverStudentProgress, progress =>
-    levelProgressFromServer(progress)
+    levelProgressFromServer(progress),
   );
 };
 
@@ -211,8 +251,8 @@ const initialState: ProgressState = {
   unitHasUnnumberedLessons: false,
 };
 
-const progressSlice: Slice<ProgressState> = createSlice({
-  name: "progress",
+const _progressSlice = createSlice({
+  name: 'progress',
   initialState,
   reducers: {
     initProgress(state, action: PayloadAction<InitProgressPayload>) {
@@ -227,7 +267,7 @@ const progressSlice: Slice<ProgressState> = createSlice({
         action.payload.saveAnswersBeforeNavigation;
       state.lessons = processedLessons(
         lessons,
-        action.payload.deeperLearningCourse
+        action.payload.deeperLearningCourse,
       );
       state.lessonGroups = action.payload.lessonGroups;
       state.peerReviewLessonInfo = action.payload.peerReviewLessonInfo;
@@ -252,7 +292,7 @@ const progressSlice: Slice<ProgressState> = createSlice({
       state,
       action: PayloadAction<{
         [levelId: number]: UnitProgress;
-      }>
+      }>,
     ) {
       state.unitProgress = processServerStudentProgress(action.payload);
       state.unitProgressHasLoaded = true;
@@ -273,7 +313,7 @@ const progressSlice: Slice<ProgressState> = createSlice({
         const levelId = parseInt(key);
         newLevelResults[levelId] = mergeActivityResult(
           state.levelResults[levelId],
-          action.payload[levelId]
+          action.payload[levelId],
         );
       });
       state.levelResults = newLevelResults;
@@ -283,7 +323,7 @@ const progressSlice: Slice<ProgressState> = createSlice({
     },
     mergePeerReviewProgress(
       state,
-      action: PayloadAction<PeerReviewLevelInfo[]>
+      action: PayloadAction<PeerReviewLevelInfo[]>,
     ) {
       if (state.peerReviewLessonInfo) {
         state.peerReviewLessonInfo = {
@@ -301,7 +341,7 @@ const progressSlice: Slice<ProgressState> = createSlice({
         action: PayloadAction<{
           changeFocusAreaPath: string;
           focusAreaLessonIds: number[];
-        }>
+        }>,
       ) {
         state.changeFocusAreaPath = action.payload.changeFocusAreaPath;
         state.focusAreaLessonIds = action.payload.focusAreaLessonIds;
@@ -349,17 +389,22 @@ const progressSlice: Slice<ProgressState> = createSlice({
     },
     setViewType(state, action: PayloadAction<keyof typeof ViewType>) {
       state.isSummaryView =
-        action.payload === ViewType.Participant && state.studentDefaultsSummaryView;
+        action.payload === ViewType.Participant &&
+        state.studentDefaultsSummaryView;
     },
   },
 });
+
+const progressSlice: Slice<ProgressState> = _progressSlice;
 
 /**
  * Get the script level ID of the current level. If the current level is a sublevel,
  * (and therefore not a script level) return the parent script level ID.
  * Returns undefined if there is no current level.
  */
-export const getCurrentScriptLevelId: (state: RootState) => number | undefined = state => {
+export const getCurrentScriptLevelId: (
+  state: RootState,
+) => number | undefined = state => {
   const currentLevel = getCurrentLevel(state);
   if (!currentLevel) {
     return;
@@ -369,7 +414,7 @@ export const getCurrentScriptLevelId: (state: RootState) => number | undefined =
     return levelById(
       state.progress,
       state.progress.currentLessonId,
-      currentLevel.parentLevelId
+      currentLevel.parentLevelId,
     )?.scriptLevelId;
   } else {
     return currentLevel.scriptLevelId;
@@ -379,7 +424,11 @@ export const getCurrentScriptLevelId: (state: RootState) => number | undefined =
 /**
  * Given a lesson ID, and a level ID, returns the requested level.
  */
-export const levelById: (state: RootState['progress'], lessonId: number | undefined, levelId: number) => Level | undefined = (state, lessonId, levelId) => {
+export const levelById: (
+  state: RootState['progress'],
+  lessonId: number | undefined,
+  levelId: number,
+) => Level | undefined = (state, lessonId, levelId) => {
   return levelsForLessonId(state, lessonId)
     ?.flatMap(level => [level, ...(level?.sublevels || [])])
     ?.find(level => level.id === levelId);
@@ -393,7 +442,7 @@ function sendReportHelper(
   result: number,
   dispatch: AppDispatch,
   getState: () => RootState,
-  extraData?: OptionalMilestoneData
+  extraData?: OptionalMilestoneData,
 ) {
   const state = getState().progress;
   const levelId = state.currentLevelId;
@@ -447,7 +496,9 @@ type AsyncProgressThunkAction = ThunkAction<
   AnyAction
 >;
 
-export const getProgressLevelType: (state: RootState) => ProgressLevelType | undefined  = state => {
+export const getProgressLevelType: (
+  state: RootState,
+) => ProgressLevelType | undefined = state => {
   if (state.progress.lessons) {
     return ProgressLevelType.SCRIPT_LEVEL;
   } else if (state.progress.currentLevelId) {
@@ -467,7 +518,7 @@ export const nextLevelId: (state: RootState) => number | undefined = state => {
 
   const levels = levelsForLessonId(
     state.progress,
-    state.progress.currentLessonId
+    state.progress.currentLessonId,
   );
   const currentLevel = getCurrentLevel(state);
   // If we are on a sublevel, navigate back to the parent level.
@@ -499,7 +550,10 @@ export function navigateToNextLevel(): ProgressThunkAction {
  * been attempted
  * @param progressData - Mapping from level id to progress result
  */
-export const bestResultLevelId: (levelIds: number[], progressData: Record<number, TestResults>) => number = (levelIds, progressData) => {
+export const bestResultLevelId: (
+  levelIds: number[],
+  progressData: Record<number, TestResults>,
+) => number = (levelIds, progressData) => {
   // The usual case
   if (levelIds.length === 1) {
     return levelIds[0];
@@ -521,7 +575,7 @@ export const bestResultLevelId: (levelIds: number[], progressData: Record<number
     }
   });
   return bestId;
-}
+};
 
 /**
  * The level object passed down to use via the server (and stored in lesson.lessons.levels)
@@ -529,11 +583,18 @@ export const bestResultLevelId: (levelIds: number[], progressData: Record<number
  * about and (b) determines current status based on the current state of
  * state.levelResults
  */
-const levelWithProgress: (state: Pick<RootState['progress'], 'unitProgress' | 'levelResults' | 'currentLevelId'> & {
-  levelPairing?: {
-    [key: string]: boolean;
-  };
-}, level: NumberedLevel, isLockable: boolean) => NumberedLevel = (
+const levelWithProgress: (
+  state: Pick<
+    RootState['progress'],
+    'unitProgress' | 'levelResults' | 'currentLevelId'
+  > & {
+    levelPairing?: {
+      [key: string]: boolean;
+    };
+  },
+  level: NumberedLevel,
+  isLockable: boolean,
+) => NumberedLevel = (
   {levelResults, unitProgress, levelPairing = {}, currentLevelId},
   level,
   isLockable,
@@ -588,7 +649,7 @@ const levelWithProgress: (state: Pick<RootState['progress'], 'unitProgress' | 'l
           isCurrentLevel: false,
         },
         isLockable,
-      )
+      ),
     ),
   };
 };
@@ -596,35 +657,48 @@ const levelWithProgress: (state: Pick<RootState['progress'], 'unitProgress' | 'l
 /**
  * Get data for a particular lesson
  */
-export const levelsForLessonId: (state: RootState['progress'], lessonId: number | undefined) => NumberedLevel[] = (state, lessonId) => {
+export const levelsForLessonId: (
+  state: RootState['progress'],
+  lessonId: number | undefined,
+) => NumberedLevel[] = (state, lessonId) => {
   const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
-  return (lesson?.levels || []).map((lessonLevel, i) => (
-    levelWithProgress(state, {
-      ids: [lessonLevel.data?.id || 0],
-      activeId: -1,
-      sublevels: (lessonLevel.data?.sublevels || []).map((sublevel: Level, j: number) => ({
-        ids: [sublevel.id || 0],
+  return (lesson?.levels || []).map((lessonLevel, i) =>
+    levelWithProgress(
+      state,
+      {
+        ids: [lessonLevel.data?.id || 0],
         activeId: -1,
-        ...(sublevel || {
+        sublevels: (lessonLevel.data?.sublevels || []).map(
+          (sublevel: Level, j: number) => ({
+            ids: [sublevel.id || 0],
+            activeId: -1,
+            ...(sublevel || {
+              key: '',
+            }),
+            levelNumber: j,
+            isCurrentLevel: false,
+          }),
+        ) as NumberedLevel[],
+        ...(lessonLevel.data || {
           key: '',
         }),
-        levelNumber: j,
+        levelNumber: i,
         isCurrentLevel: false,
-      })) as NumberedLevel[],
-      ...(lessonLevel.data || {
-        key: '',
-      }),
-      levelNumber: i,
-      isCurrentLevel: false,
-    } as NumberedLevel, lesson?.lockable || false)
-  ));
+      } as NumberedLevel,
+      lesson?.lockable || false,
+    ),
+  );
 };
 
-export const getCurrentLevels: (state: RootState) => NumberedLevel[] = state => {
+export const getCurrentLevels: (
+  state: RootState,
+) => NumberedLevel[] = state => {
   return levelsForLessonId(state.progress, state.progress.currentLessonId);
 };
 
-export const getCurrentLevel: (state: RootState) => NumberedLevel | undefined = state => {
+export const getCurrentLevel: (
+  state: RootState,
+) => NumberedLevel | undefined = state => {
   return getCurrentLevels(state)
     ?.flatMap(level => [level, ...(level?.sublevels || [])])
     ?.find(level => level.isCurrentLevel);
@@ -632,14 +706,19 @@ export const getCurrentLevel: (state: RootState) => NumberedLevel | undefined = 
 
 // If we are on a new level without doing a page reload, then we should set the title
 // to match what levels_helper.rb's level_title function would have done.
-export const setWindowTitle: (progressStoreState: RootState['progress'], newLevelId: number) => void = (progressStoreState, newLevelId) => {
+export const setWindowTitle: (
+  progressStoreState: RootState['progress'],
+  newLevelId: number,
+) => void = (progressStoreState, newLevelId) => {
   const lesson = progressStoreState.lessons?.find(
-    lesson => lesson.id === progressStoreState.currentLessonId
+    lesson => lesson.id === progressStoreState.currentLessonId,
   );
   const numLessons = lesson?.levels?.length || 0;
   const lessonName = lesson?.title || 'Lesson';
   const lessonIndex =
-    (lesson?.levels || []).findIndex(lessonLevel => lessonLevel.position === newLevelId) + 1;
+    (lesson?.levels || []).findIndex(
+      lessonLevel => lessonLevel.position === newLevelId,
+    ) + 1;
   const scriptDisplayName = progressStoreState.scriptDisplayName;
 
   document.title =
@@ -653,12 +732,8 @@ export const setWindowTitle: (progressStoreState: RootState['progress'], newLeve
 export const updateBrowserForLevelNavigation: (
   progressStoreState: RootState['progress'],
   levelPath: string,
-  levelId: number
-) => void = (
-  progressStoreState,
-  levelPath,
-  levelId
-) => {
+  levelId: number,
+) => void = (progressStoreState, levelPath, levelId) => {
   window.history.pushState({levelId}, '', levelPath + window.location.search);
   setWindowTitle(progressStoreState, levelId);
 };
@@ -710,7 +785,7 @@ export const sendPredictLevelReport = createAsyncThunk<
     TestResults.CONTAINED_LEVEL_RESULT,
     thunkAPI.dispatch,
     thunkAPI.getState,
-    extraPayload
+    extraPayload,
   );
 });
 
@@ -722,7 +797,7 @@ const userProgressFromServer = (
   state: ProgressState,
   dispatch: AppDispatch,
   userId: string | null = null,
-  mergeProgress: boolean
+  mergeProgress: boolean,
 ) => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
@@ -732,7 +807,7 @@ const userProgressFromServer = (
   // If we have a userId, we can clear any progress in redux and request all progress
   // from the server.
   if (userId) {
-    dispatch(clearResults(state));
+    dispatch(clearResults());
   }
 
   return new Promise((resolve, reject) => {
@@ -771,12 +846,12 @@ const userProgressFromServer = (
 
       if (data.focusAreaLessonIds) {
         dispatch(
-          updateFocusArea(data.changeFocusAreaPath, data.focusAreaLessonIds)
+          updateFocusArea(data.changeFocusAreaPath, data.focusAreaLessonIds),
         );
       }
 
       if (data.completed) {
-        dispatch(setScriptCompleted(state));
+        dispatch(setScriptCompleted());
       }
 
       // Merge progress from server
@@ -788,7 +863,10 @@ const userProgressFromServer = (
           // a map containing just level results. This is the legacy code path and
           // the goal is to eventually update all code paths to use unitProgress
           // instead of levelResults.
-          const levelResults: LevelResults = _.mapValues(data.progress, getLevelResult) as unknown as LevelResults;
+          const levelResults: LevelResults = _.mapValues(
+            data.progress,
+            getLevelResult,
+          ) as unknown as LevelResults;
           dispatch(mergeResults(levelResults));
         }
 
@@ -831,5 +909,5 @@ export const {
   setLessonExtrasEnabled,
   setViewAsUserId,
   setViewType,
-} = progressSlice.actions;
+} = _progressSlice.actions;
 export default progressSlice;

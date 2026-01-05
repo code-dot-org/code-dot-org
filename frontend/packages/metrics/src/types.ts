@@ -1,12 +1,17 @@
 export type LogLevel = 'INFO' | 'WARNING' | 'SEVERE';
 
 export type GoogleTagManagerEvent =
-  {
-    'gtm.start': number;
-    event: string;
-  } | [string, string, {
-    [key: string]: string | number;
-  }];
+  | {
+      'gtm.start': number;
+      event: string;
+    }
+  | [
+      string,
+      string,
+      {
+        [key: string]: string | number;
+      },
+    ];
 
 export interface MetricDatum {
   name: string;

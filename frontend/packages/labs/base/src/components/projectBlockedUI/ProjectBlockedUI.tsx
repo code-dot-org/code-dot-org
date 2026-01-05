@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import type {FunctionComponent} from 'react';
+import {useState} from 'react';
 
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Markdown from '@code-dot-org/markdown';
@@ -15,7 +16,10 @@ export interface ProjectBlockedUIProps {
   isProjectValidator: boolean;
 }
 
-const ProjectBlockedUI: React.FunctionComponent<ProjectBlockedUIProps> = ({blockedType, isProjectValidator}) => {
+const ProjectBlockedUI: FunctionComponent<ProjectBlockedUIProps> = ({
+  blockedType,
+  isProjectValidator,
+}) => {
   const [showAlert, setShowAlert] = useState(true);
   const projectManager = LabRegistry.projectManager;
   const shareUrl = projectManager ? projectManager.getShareUrl() : null;
@@ -27,16 +31,17 @@ const ProjectBlockedUI: React.FunctionComponent<ProjectBlockedUIProps> = ({block
         ? {
             tos: "This project has been reported for violating Code.org's [Terms of Service](http://code.org/tos) and cannot be shared with others.",
             contact_us: `If you believe this to be an error, please [contact us](https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
-                `Abuse error for project at url: ${shareUrl}`
-              )}).`,
-            edit_project: "Edit Project",
-            go_to_code_studio: "Go to Code Studio",
+              `Abuse error for project at url: ${shareUrl}`,
+            )}).`,
+            edit_project: 'Edit Project',
+            go_to_code_studio: 'Go to Code Studio',
           }
         : {
-            tos: "Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please [sign in](https://studio.code.org/users/sign_in) to your account to view the project.",
-            contact_us: 'If you believe this to be an error, please [contact us](https://support.code.org/hc/en-us/requests/new).',
-            edit_project: "Edit Project",
-            go_to_code_studio: "Go to Code Studio",
+            tos: 'Sorry, this project is not available for sharing. If this is your project or the project of one of your students, please [sign in](https://studio.code.org/users/sign_in) to your account to view the project.',
+            contact_us:
+              'If you believe this to be an error, please [contact us](https://support.code.org/hc/en-us/requests/new).',
+            edit_project: 'Edit Project',
+            go_to_code_studio: 'Go to Code Studio',
           },
   };
 
@@ -67,7 +72,11 @@ const ProjectBlockedUI: React.FunctionComponent<ProjectBlockedUIProps> = ({block
       {showAlert && (
         <Alert
           text={
-            <Markdown>{abuseExclamationProps.i18n.tos + '\n\n' + abuseExclamationProps.i18n.contact_us}</Markdown>
+            <Markdown>
+              {abuseExclamationProps.i18n.tos +
+                '\n\n' +
+                abuseExclamationProps.i18n.contact_us}
+            </Markdown>
           }
           type={alertTypes.danger}
           onClose={() => setShowAlert(false)}

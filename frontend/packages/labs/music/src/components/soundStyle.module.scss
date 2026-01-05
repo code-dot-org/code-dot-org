@@ -1,0 +1,41 @@
+$light_cyan: var(--brand-aqua-40);
+
+@mixin sound-type-style($type, $color, $fill, $background, $border) {
+  &#{$type} {
+    &Color {
+      color: $color;
+    }
+    &Fill {
+      fill: $fill;
+    }
+    &Background {
+      background: $background;
+    }
+    &Border {
+      border-color: $border;
+    }
+  }
+}
+
+.sound {
+  @include sound-type-style(Beat, #f46ff6, #f46ff6, #89308a, #f46ff6);
+  @include sound-type-style(Bass, #00c0ff, #00c0ff, #03789e, #00c0ff);
+  @include sound-type-style(Lead, #23c347, #23c347, #14742a, #23c347);
+  @include sound-type-style(Fx, #e3cb0c, #e3cb0c, #928308, #e3cb0c);
+  @include sound-type-style(Vocal, #ff8c00, #ff8c00, #a35a02, #ff8c00);
+  @include sound-type-style(
+    Pattern,
+    black,
+    black,
+    black,
+    var(--neutral-gray-5)
+  );
+  @include sound-type-style(
+    Chord,
+    $light_cyan,
+    $light_cyan,
+    $light_cyan,
+    #4289a3
+  );
+  @include sound-type-style(Tune, #68d1f7, #68d1f7, #68d1f7, #48a3c4);
+}

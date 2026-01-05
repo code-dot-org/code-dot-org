@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
 export interface ReduxState {
   /** The number of reducers currently loaded */
@@ -13,18 +13,15 @@ const reduxSlice = createSlice({
   name: 'redux',
   initialState,
   reducers: {
-    incrementCount: (state) => {
+    incrementCount: state => {
       state.reducerCount++;
     },
-    resetCount: (state) => {
+    resetCount: state => {
       state.reducerCount = 0;
     },
   },
 });
 
-export const {
-  incrementCount,
-  resetCount,
-} = reduxSlice.actions;
+export const {incrementCount, resetCount} = reduxSlice.actions;
 
 export default reduxSlice;

@@ -15,7 +15,7 @@ class ConditionsChecker {
     conditionNames: string[],
     private readonly logChanges = queryString.parse(window.location.search)[
       'log-validator-condition-changes'
-    ] === 'true'
+    ] === 'true',
   ) {
     this.currentSatisfiedConditions = [];
     this.conditionNames = conditionNames;
@@ -37,7 +37,7 @@ class ConditionsChecker {
         console.log(
           'ConditionsChecker condition added:',
           condition.name,
-          condition.value
+          condition.value,
         );
       }
 
@@ -48,7 +48,7 @@ class ConditionsChecker {
   // Determines whether we already know that a condition has been satisfied.
   private hasCondition(condition: Condition) {
     return this.currentSatisfiedConditions.some(currentSatisfiedCondition =>
-      _.isEqual(currentSatisfiedCondition, condition)
+      _.isEqual(currentSatisfiedCondition, condition),
     );
   }
 

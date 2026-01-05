@@ -7,7 +7,11 @@ import {
 import {AnyAction} from 'redux';
 
 import type {AppName} from '@code-dot-org/api/projects';
-import {LabConfig, MultiFileSource, ProjectSources} from '@code-dot-org/api/sources';
+import {
+  LabConfig,
+  MultiFileSource,
+  ProjectSources,
+} from '@code-dot-org/api/sources';
 
 import LabRegistry from '../LabRegistry';
 import type {AppDispatch, RootState} from '../redux/store';
@@ -37,15 +41,19 @@ const initialState: LabProjectState = {
 export const setAndSaveProjectSources = (
   projectSources: ProjectSources,
   forceSave: boolean = false,
-  forceNewVersion: boolean = false
+  forceNewVersion: boolean = false,
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
     dispatch(projectSlice.actions.setProjectSource(projectSources));
     dispatch(
-      projectSlice.actions.setLastSavedLabConfig(projectSources.labConfig)
+      projectSlice.actions.setLastSavedLabConfig(projectSources.labConfig),
     );
     if (LabRegistry.projectManager) {
-      LabRegistry.projectManager?.save(projectSources, forceSave, forceNewVersion);
+      LabRegistry.projectManager?.save(
+        projectSources,
+        forceSave,
+        forceNewVersion,
+      );
     }
   };
 };
@@ -53,13 +61,17 @@ export const setAndSaveProjectSources = (
 export const setAndSaveSource = (
   source: MultiFileSource,
   forceSave: boolean = false,
-  forceNewVersion: boolean = false
+  forceNewVersion: boolean = false,
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(setSource(source));
     const projectSources = getState().labProject.projectSources;
     if (LabRegistry.projectManager && projectSources) {
-      LabRegistry.projectManager?.save(projectSources, forceSave, forceNewVersion);
+      LabRegistry.projectManager?.save(
+        projectSources,
+        forceSave,
+        forceNewVersion,
+      );
     }
   };
 };
@@ -67,8 +79,12 @@ export const setAndSaveSource = (
 export const loadVersion = createAsyncThunk(
   'labProject/loadVersion',
   async (
-    payload: {appName: AppName, versionId: string; startSources: ProjectSources},
-    thunkAPI
+    payload: {
+      appName: AppName;
+      versionId: string;
+      startSources: ProjectSources;
+    },
+    thunkAPI,
   ) => {
     const projectManager = LabRegistry.projectManager;
     if (projectManager) {
@@ -76,11 +92,13 @@ export const loadVersion = createAsyncThunk(
       await projectManager.flushSave();
       // Fall back to start source if we can't load the version.
       const sources =
-        (await projectManager.loadSources(payload.appName, payload.versionId)) ||
-        payload.startSources;
+        (await projectManager.loadSources(
+          payload.appName,
+          payload.versionId,
+        )) || payload.startSources;
       thunkAPI.dispatch(setPreviousVersionSource(sources));
     }
-  }
+  },
 );
 
 export const previewStartSources = createAsyncThunk(
@@ -92,7 +110,7 @@ export const previewStartSources = createAsyncThunk(
       await projectManager.flushSave();
       thunkAPI.dispatch(setPreviousVersionSource(payload.startSources));
     }
-  }
+  },
 );
 
 export const resetToCurrentVersion = createAsyncThunk(
@@ -104,7 +122,7 @@ export const resetToCurrentVersion = createAsyncThunk(
       thunkAPI.dispatch(setProjectSource(sources));
       thunkAPI.dispatch(setViewingOldVersion(false));
     }
-  }
+  },
 );
 
 export const changeProjectType = createAsyncThunk<
@@ -121,9 +139,15 @@ export const changeProjectType = createAsyncThunk<
     if (projectManager) {
       // We need to ensure we save the existing project before loading a new one.
       await projectManager.flushSave();
-      thunkAPI.dispatch(setAndSaveProjectSources(payload.newSources, true, true) as unknown as AnyAction);
+      thunkAPI.dispatch(
+        setAndSaveProjectSources(
+          payload.newSources,
+          true,
+          true,
+        ) as unknown as AnyAction,
+      );
     }
-  }
+  },
 );
 
 // SLICE
@@ -143,7 +167,7 @@ const projectSlice = createSlice({
     },
     setPreviousVersionSource(
       state,
-      action: PayloadAction<ProjectSources | undefined>
+      action: PayloadAction<ProjectSources | undefined>,
     ) {
       state.projectSources = action.payload;
       state.viewingOldVersion = true;

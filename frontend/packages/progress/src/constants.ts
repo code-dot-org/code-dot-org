@@ -110,14 +110,14 @@ export const MINIMUM_OPTIMAL_RESULT: number = 30;
  * performed on a given level.
  */
 export enum LevelStatus {
-  not_tried = "not_tried",
-  submitted = "submitted",
-  perfect = "perfect",
-  passed = "passed",
-  attempted = "attempted",
-  review_accepted = "review_accepted",
-  review_rejected = "review_rejected",
-  dots_disabled = "dots_disabled",
-  free_play_complete = "free_play_complete",
+  not_tried = 'not_tried',
+  submitted = 'submitted',
+  perfect = 'perfect',
+  passed = 'passed',
+  attempted = 'attempted',
+  review_accepted = 'review_accepted',
+  review_rejected = 'review_rejected',
+  dots_disabled = 'dots_disabled',
+  free_play_complete = 'free_play_complete',
   completed_assessment = 'completed_assessment',
-};
+}

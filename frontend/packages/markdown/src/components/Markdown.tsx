@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import ReactMarkdown, {MarkdownToJSX} from 'markdown-to-jsx';
-import React from 'react';
+import * as React from 'react';
 
 import Link from '@code-dot-org/component-library/link';
 import {

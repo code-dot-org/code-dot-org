@@ -3,7 +3,12 @@
 
 import {getAppOptionsEditingExemplar} from '@code-dot-org/api';
 
-import {ExemplarSettings, Validation, Validator, ValidationState} from './types';
+import {
+  ExemplarSettings,
+  Validation,
+  Validator,
+  ValidationState,
+} from './types';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
@@ -32,7 +37,7 @@ export default class ProgressManager {
    */
   onLevelChange(
     validations?: Validation[],
-    exemplarSettings?: ExemplarSettings
+    exemplarSettings?: ExemplarSettings,
   ) {
     this.currentValidations = validations;
     this.exemplarSettings = exemplarSettings;
@@ -110,7 +115,7 @@ export default class ProgressManager {
               if (shouldValidateExemplar) {
                 this.setValidationStateWithExemplar(
                   passedExemplar,
-                  exemplarMessage
+                  exemplarMessage,
                 );
               }
             }
@@ -153,7 +158,7 @@ export default class ProgressManager {
   // Set exemplar validation status using precomputed exemplar values.
   private setValidationStateWithExemplar(
     passedExemplar: boolean,
-    exemplarMessage: string
+    exemplarMessage: string,
   ): void {
     this.currentValidationState = {
       ...this.currentValidationState,

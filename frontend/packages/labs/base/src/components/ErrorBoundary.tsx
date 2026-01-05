@@ -1,8 +1,9 @@
-import React, {ErrorInfo} from 'react';
+import type {ReactNode} from 'react';
+import {Component, ErrorInfo} from 'react';
 
 interface ErrorBoundaryProps {
-  fallback: React.ReactNode;
-  children: React.ReactNode;
+  fallback: ReactNode;
+  children: ReactNode;
   onError: (error: Error, componentStack: string) => void;
 }
 
@@ -17,7 +18,7 @@ interface ErrorBoundaryState {
  *
  * Note that this will not catch errors thrown inside async functions/Promises
  */
-export default class ErrorBoundary extends React.Component<
+export default class ErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryState
 > {

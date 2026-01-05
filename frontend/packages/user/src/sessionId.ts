@@ -11,7 +11,13 @@
  * @param defaultValue - Returned if no such value is in session storage.
  * @returns The value from session storage or the given default.
  */
-const tryGetSessionStorage: <T = string | number | boolean>(key: string, defaultValue: T) => string | T = <T = string | number | boolean>(key: string, defaultValue: T) => {
+const tryGetSessionStorage: <T = string | number | boolean>(
+  key: string,
+  defaultValue: T,
+) => string | T = <T = string | number | boolean>(
+  key: string,
+  defaultValue: T,
+) => {
   let returnValue: string | T | null = defaultValue;
   try {
     returnValue = sessionStorage.getItem(key);
@@ -29,7 +35,10 @@ const tryGetSessionStorage: <T = string | number | boolean>(key: string, default
  * @param value - The value to store.
  * @return True if we set successfully
  */
-const trySetSessionStorage: (key: string, value: string) => boolean = (key, value) => {
+const trySetSessionStorage: (key: string, value: string) => boolean = (
+  key,
+  value,
+) => {
   try {
     sessionStorage.setItem(key, value);
     return true;

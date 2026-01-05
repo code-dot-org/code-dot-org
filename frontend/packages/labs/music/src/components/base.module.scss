@@ -1,0 +1,123 @@
+// Constants
+$timeline-area-height: 200px;
+$work-area-min-height: 50%;
+$default-border-radius: 0;
+$default-spacing: 2px;
+
+.musicLab {
+  position: relative;
+  background-color: var(--neutral-gray-99);
+  width: 100%;
+  height: 100%;
+  padding: 2px 0;
+  box-sizing: border-box;
+  border-radius: $default-border-radius;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: $default-spacing;
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.workArea {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-height: $work-area-min-height;
+  gap: $default-spacing;
+  overflow: hidden;
+  &.toolboxMode {
+    max-height: 100%; // Allow the work area to take full height
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.playArea {
+  width: 100%;
+  flex: 0 1 $timeline-area-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: $default-spacing;
+
+  .controlsArea {
+    width: 220px;
+    height: 100%;
+  }
+
+  .timelineArea {
+    width: calc(100% - 220px);
+    height: 100%;
+  }
+}
+
+.instructionsArea {
+  display: flex;
+  color: var(--neutral-gray-5);
+  background-color: var(--neutral-gray-99);
+  border-radius: $default-border-radius;
+  padding: 0;
+  box-sizing: border-box;
+
+  &.instructionsTop {
+    flex-direction: row;
+    height: 90px;
+    width: 100%;
+  }
+
+  &.instructionsSide {
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+  }
+}
+
+.shareArea {
+  &.shareTop {
+    margin-left: $default-spacing * 2;
+  }
+}
+
+.blocklyArea {
+  border-radius: $default-border-radius;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+
+.panelContainerHeader {
+  margin-bottom: 2px;
+}
+
+.advancedControlsContainer {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+
+.warningBanner {
+  display: flex;
+  z-index: 99;
+  background-color: var(--sentiment-warning-20);
+  padding: 5px;
+  color: var(--neutral-base-true-black);
+}
+
+.centerHeaderContent {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  overflow: hidden;
+
+  &Text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

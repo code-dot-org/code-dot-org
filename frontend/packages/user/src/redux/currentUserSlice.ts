@@ -1,5 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
-import type {PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
+import type {PayloadAction} from '@reduxjs/toolkit';
 
 import {analyticsReporter, experiments} from '@code-dot-org/metrics';
 
@@ -92,16 +92,24 @@ const currentUserSlice = createSlice({
     setCurrentUserName: (state, action: PayloadAction<string>) => {
       state.userName = action.payload;
     },
-    setCurrentUserHasSeenStandardsReportInfo: (state, action: PayloadAction<boolean>) => {
+    setCurrentUserHasSeenStandardsReportInfo: (
+      state,
+      action: PayloadAction<boolean>,
+    ) => {
       state.hasSeenStandardsReportInfo = action.payload;
     },
     setUserSignedIn: (state, action: PayloadAction<boolean>) => {
-      state.signInState = action.payload ? SignInState.SignedIn : SignInState.SignedOut;
+      state.signInState = action.payload
+        ? SignInState.SignedIn
+        : SignInState.SignedOut;
     },
-    setUserType: (state, action: PayloadAction<{
-      userType: UserType;
-      under13: boolean;
-    }>) => {
+    setUserType: (
+      state,
+      action: PayloadAction<{
+        userType: UserType;
+        under13: boolean;
+      }>,
+    ) => {
       state.userType = action.payload.userType;
       state.under13 = action.payload.under13;
     },
@@ -153,7 +161,7 @@ const currentUserSlice = createSlice({
       state.uuid = uuid;
       state.userName = username;
       state.userType = user_type;
-      state.displayName = display_name; 
+      state.displayName = display_name;
       state.isBackgroundMusicMuted = mute_music;
       state.under13 = under_13;
       state.over21 = over_21;
@@ -165,9 +173,11 @@ const currentUserSlice = createSlice({
       state.isLti = is_lti;
       state.isTeacher = user_type === UserType.Teacher;
       state.inUSA = ['US', 'RD'].includes(country_code || '');
-      state.dateProgressTableInvitationDelayed = date_progress_table_invitation_last_delayed;
+      state.dateProgressTableInvitationDelayed =
+        date_progress_table_invitation_last_delayed;
       state.hasSeenProgressTableInvite = has_seen_progress_table_v2_invitation;
-      state.hasCompletedAiDifferentiationWelcome = has_completed_ai_differentiation_welcome;
+      state.hasCompletedAiDifferentiationWelcome =
+        has_completed_ai_differentiation_welcome;
       state.childAccountComplianceState = child_account_compliance_state;
       state.countryCode = country_code;
       state.usStateCode = us_state_code;
@@ -188,7 +198,10 @@ const currentUserSlice = createSlice({
     setProgressTableV2ClosedBeta: (state, action: PayloadAction<boolean>) => {
       state.progressTableV2ClosedBeta = action.payload;
     },
-    setDateProgressTableInvitationDelayed: (state, action: PayloadAction<number>) => {
+    setDateProgressTableInvitationDelayed: (
+      state,
+      action: PayloadAction<number>,
+    ) => {
       state.dateProgressTableInvitationDelayed = action.payload;
     },
     setSeenProgressTableInvitation: (state, action: PayloadAction<boolean>) => {
@@ -225,7 +238,9 @@ export const {
   setUserRoleInCourse,
 } = currentUserSlice.actions;
 
-export const isSignedIn: (currentUserState: CurrentUserState) => boolean = currentUserState => {
+export const isSignedIn: (
+  currentUserState: CurrentUserState,
+) => boolean = currentUserState => {
   return currentUserState.signInState === SignInState.SignedIn;
 };
 

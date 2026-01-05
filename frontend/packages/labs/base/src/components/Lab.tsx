@@ -1,4 +1,5 @@
-import React, {Suspense, PropsWithChildren} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
+import {Suspense} from 'react';
 
 import type {Level} from '@code-dot-org/api/models/levels';
 
@@ -10,8 +11,8 @@ export interface LabProps extends PropsWithChildren {
     levelData: Level<any>;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
-  }>,
-  level?: Level,
+  }>;
+  level?: Level;
 }
 
 /**
@@ -20,14 +21,12 @@ export interface LabProps extends PropsWithChildren {
  * The `labView` can be a `React.lazy` loaded lab or a Next.js `dynamic` import.
  * While the content loads, the `<Loading/>` component will be visible.
  */
-const Lab: React.FunctionComponent<LabProps> = ({labView, level}) => {
+const Lab: FunctionComponent<LabProps> = ({labView, level}) => {
   const LabView = labView;
 
   return (
     <Suspense fallback={<Loading isLoading={true} />}>
-      {(LabView && level) && (
-        <LabView levelData={level} />
-      )}
+      {LabView && level && <LabView levelData={level} />}
     </Suspense>
   );
 };

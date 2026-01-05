@@ -30,7 +30,9 @@ const ALWAYS_SEND = false;
 export class MetricsReporter {
   private lastCheckCanReportTime: number = 0;
 
-  constructor(private readonly metricsApi: MetricsApi = new DashboardMetricsApi()) {
+  constructor(
+    private readonly metricsApi: MetricsApi = new DashboardMetricsApi(),
+  ) {
     this.metricsApi = metricsApi;
     if (typeof window !== 'undefined') {
       this.lastCheckCanReportTime =
@@ -89,7 +91,7 @@ export class MetricsReporter {
     name: string,
     value: number,
     unit: MetricUnit,
-    dimensions: MetricDimension[] = []
+    dimensions: MetricDimension[] = [],
   ) {
     const metric = {
       name,
@@ -189,7 +191,7 @@ export class MetricsReporter {
     if (isDevelopmentEnvironment()) {
       console.log(
         'Client-side reporting disabled. Attempted to report: ' +
-          JSON.stringify(payload)
+          JSON.stringify(payload),
       );
     }
   }
@@ -205,7 +207,7 @@ export class MetricsReporter {
     if (typeof window !== 'undefined') {
       localStorage.setItem(
         LOCAL_STORAGE_KEY_NAME,
-        this.lastCheckCanReportTime.toString()
+        this.lastCheckCanReportTime.toString(),
       );
     }
   }

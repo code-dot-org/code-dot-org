@@ -1,5 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
-import type {PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
+import type {PayloadAction} from '@reduxjs/toolkit';
 
 export const workspaceAlertTypes = {
   error: 'error',
@@ -63,7 +63,7 @@ const projectReduxSlice = createSlice({
       prepare(
         type: keyof typeof workspaceAlertTypes,
         message: string,
-        displayBottom?: boolean
+        displayBottom?: boolean,
       ) {
         return {payload: {type, message, displayBottom}};
       },
@@ -97,8 +97,7 @@ const projectReduxSlice = createSlice({
       state.inRestrictedShareMode = false;
     },
     refreshTeacherHasConfirmedUploadWarning: state => {
-      state.teacherHasConfirmedUploadWarning =
-        false;
+      state.teacherHasConfirmedUploadWarning = false;
     },
   },
 });

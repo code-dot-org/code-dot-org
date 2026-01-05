@@ -41,9 +41,17 @@ export const initialize = (w: Window, d: Document, i: string = GTM_ID) => {
  * trackEvent is provided by _analytics.html.haml in most cases.
  * In those where it isn't, we want this call to be a simple no-op.
  */
-export const trackEvent = (categoryValue: string, actionName: string, parameters: object = {}) => {
-  window.dataLayer?.push(['event', actionName, {
-    eventCategory: categoryValue,
-    ...parameters,
-  }]);
-}
+export const trackEvent = (
+  categoryValue: string,
+  actionName: string,
+  parameters: object = {},
+) => {
+  window.dataLayer?.push([
+    'event',
+    actionName,
+    {
+      eventCategory: categoryValue,
+      ...parameters,
+    },
+  ]);
+};

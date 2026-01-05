@@ -21,7 +21,7 @@ export enum DialogType {
 export type DialogCloseActionType = 'cancel' | 'neutral' | 'confirm';
 export type DialogCloseFunctionType = (
   type: DialogCloseActionType,
-  args?: unknown
+  args?: unknown,
 ) => void;
 
 export type DialogClosePromiseReturnType = {

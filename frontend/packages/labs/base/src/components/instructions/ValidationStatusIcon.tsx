@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import type {FunctionComponent} from 'react';
+import {useMemo} from 'react';
 
 import moduleStyles from './validation-status-icon.module.scss';
 
@@ -11,7 +12,7 @@ interface ValidationIconProps {
 // Component that extracts out the logic for rendering a validation status icon.
 // For any but the 'pending' icon, we use a duotone icon with a white x/check/minus/exclamation mark
 // and a colored circle background. For the 'pending' icon, we use a regular (unfilled) circle icon.
-const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
+const ValidationStatusIcon: FunctionComponent<ValidationIconProps> = ({
   status,
   className,
 }) => {

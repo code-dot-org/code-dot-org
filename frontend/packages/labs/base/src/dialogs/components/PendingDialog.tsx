@@ -1,4 +1,4 @@
-import React from 'react';
+import type {FunctionComponent, ReactNode} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -10,7 +10,7 @@ import {
 type PendingDialogTitleProps =
   | {
       title?: never;
-      titleComponent?: React.ReactNode;
+      titleComponent?: ReactNode;
     }
   | {
       title?: string;
@@ -20,7 +20,7 @@ type PendingDialogTitleProps =
 type PendingDialogBodyProps =
   | {
       message?: never;
-      bodyComponent?: React.ReactNode;
+      bodyComponent?: ReactNode;
     }
   | {
       message?: string;
@@ -36,7 +36,7 @@ import moduleStyles from './generic-dialog.module.scss';
  * Pending dialog UI used in Lab2 labs.
  */
 
-const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
+const PendingDialog: FunctionComponent<PendingDialogProps> = ({
   title,
   titleComponent,
   message,

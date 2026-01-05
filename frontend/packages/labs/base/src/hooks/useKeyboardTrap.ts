@@ -12,7 +12,7 @@ type keyboardTrapCallback = () => void;
 
 export const useKeyboardTrap = (
   key: string,
-  callback: keyboardTrapCallback
+  callback: keyboardTrapCallback,
 ) => {
   useEffect(() => {
     const callbackRelay = (e: KeyboardEvent) => {

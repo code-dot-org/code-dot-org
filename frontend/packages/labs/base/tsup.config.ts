@@ -55,7 +55,7 @@ function createConfig(format: 'cjs' | 'esm'): Options {
             tscAlias.stdout.toString(),
             tscAlias.stderr.toString(),
           );
-          throw new Error("Types failed to build");
+          throw new Error('Types failed to build');
         }
       }
     },

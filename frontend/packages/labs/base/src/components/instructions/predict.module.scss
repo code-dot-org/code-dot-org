@@ -14,7 +14,7 @@
 
 .disabledNotSelectedLabel {
   color: var(--text-neutral-placeholder);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .multipleChoiceText {
@@ -90,7 +90,7 @@
 .runPromptContainer {
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-secondary);
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .runPrompt {

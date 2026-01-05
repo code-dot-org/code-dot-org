@@ -1,4 +1,5 @@
-import React, {PropsWithChildren, useCallback, useState, createContext, useContext} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
+import {useCallback, useState, createContext, useContext} from 'react';
 
 /**
  * Describes the state of the share dialog.
@@ -19,9 +20,9 @@ export interface ShareContent {
  */
 const ShareContext = createContext<ShareContent>({
   isOpen: false,
-  setIsOpen: (_) => {},
+  setIsOpen: _ => {},
   libraryDialogIsOpen: false,
-  setLibraryDialogIsOpen: (_) => {},
+  setLibraryDialogIsOpen: _ => {},
   showShareDialog: () => {},
   hideShareDialog: () => {},
   showLibraryCreationDialog: () => {},
@@ -38,11 +39,12 @@ export const useShare = () => {
 /**
  * Holds the share state.
  */
-export const ShareProvider: React.FunctionComponent<PropsWithChildren> = ({
+export const ShareProvider: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [libraryDialogIsOpen, setLibraryDialogIsOpen] = useState<boolean>(false);
+  const [libraryDialogIsOpen, setLibraryDialogIsOpen] =
+    useState<boolean>(false);
 
   const showShareDialog = useCallback(() => {
     setIsOpen(true);
@@ -61,16 +63,18 @@ export const ShareProvider: React.FunctionComponent<PropsWithChildren> = ({
   }, [setLibraryDialogIsOpen]);
 
   return (
-    <ShareContext.Provider value={{
-      isOpen,
-      setIsOpen,
-      libraryDialogIsOpen,
-      setLibraryDialogIsOpen,
-      showShareDialog,
-      hideShareDialog,
-      showLibraryCreationDialog,
-      hideLibraryCreationDialog,
-    }}>
+    <ShareContext.Provider
+      value={{
+        isOpen,
+        setIsOpen,
+        libraryDialogIsOpen,
+        setLibraryDialogIsOpen,
+        showShareDialog,
+        hideShareDialog,
+        showLibraryCreationDialog,
+        hideLibraryCreationDialog,
+      }}
+    >
       {children}
     </ShareContext.Provider>
   );

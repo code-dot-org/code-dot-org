@@ -2,7 +2,9 @@
  * Provides clients to AWS Firehose, whose data is imported into AWS Redshift.
  */
 
-import AWS, {AWSError} from 'aws-sdk';
+// eslint-disable-next-line import-x/default
+import AWS from 'aws-sdk';
+import type {AWSError} from 'aws-sdk';
 import Firehose, {PutRecordOutput} from 'aws-sdk/clients/firehose';
 
 import localization from '@code-dot-org/localization';
@@ -40,14 +42,17 @@ const createUuid: () => string = () => {
       v = c === 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
   });
-}
+};
 
 /**
  * Simple wrapper around localStorage.getItem that catches any exceptions (for
  * example when we call getItem in Safari's private mode)
  * @return Returns the value of the key in localStorage, `null` if not set or the defaultValue if there is an error
  */
-const tryGetLocalStorage: (key: string, defaultValue: string | null) => string | null = (key, defaultValue) => {
+const tryGetLocalStorage: (
+  key: string,
+  defaultValue: string | null,
+) => string | null = (key, defaultValue) => {
   let returnValue = defaultValue;
   try {
     returnValue = localStorage.getItem(key);
@@ -62,7 +67,10 @@ const tryGetLocalStorage: (key: string, defaultValue: string | null) => string |
  * example when we call setItem in Safari's private mode)
  * @return 'true' if we set successfully
  */
-const trySetLocalStorage: (item: string, value: string) => boolean = (item, value) => {
+const trySetLocalStorage: (item: string, value: string) => boolean = (
+  item,
+  value,
+) => {
   try {
     localStorage.setItem(item, value);
     return true;
@@ -236,7 +244,7 @@ class FirehoseClient {
       }),
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
-      }
+      },
     });
   }
 
@@ -252,14 +260,9 @@ class FirehoseClient {
    * the manually set user_id.
    * @option options [function(err, data)] callback Invoked upon completion with error or data
    */
-  putRecord(
-    data: RecordData,
-    options: PutRecordOptions = {}
-  ) {
+  putRecord(data: RecordData, options: PutRecordOptions = {}) {
     const {userId, scriptId, levelId} = options;
-    data = this.addCommonValues(
-      data,
-    );
+    data = this.addCommonValues(data);
     if (userId !== undefined) {
       data.user_id = userId;
     }
@@ -299,7 +302,7 @@ class FirehoseClient {
         } else if (err) {
           this.handleError(err, data);
         }
-      }
+      },
     );
   }
 
@@ -311,15 +314,10 @@ class FirehoseClient {
    * @option options [boolean] alwaysPut Forces the record to be sent.
    * @option options [boolean] includeUserId Include userId in records, if signed in
    */
-  putRecordBatch(
-    data: RecordData[],
-    options: PutRecordOptions = {}
-  ) {
-    data.map((record) => {
+  putRecordBatch(data: RecordData[], options: PutRecordOptions = {}) {
+    data.map(record => {
       const {userId, scriptId, levelId} = options;
-      record = this.addCommonValues(
-        record,
-      );
+      record = this.addCommonValues(record);
       if (userId !== undefined) {
         record.user_id = userId;
       }
@@ -334,7 +332,7 @@ class FirehoseClient {
 
     if (!this.shouldPutRecord(!!options.alwaysPut)) {
       console.groupCollapsed(
-        'Skipped sending record batch to ' + deliveryStreamName
+        'Skipped sending record batch to ' + deliveryStreamName,
       );
       /*
       data.map(function (record) {
@@ -358,7 +356,7 @@ class FirehoseClient {
         DeliveryStreamName: deliveryStreamName,
         Records: batch,
       },
-      (_err, _data) => {}
+      (_err, _data) => {},
     );
   }
 }
@@ -384,16 +382,16 @@ function createNewFirehose(): Firehose {
   const _0xr0t13: (message: string) => string = (message: string) => {
     return message.replace(/[a-z]/gi, letter =>
       String.fromCharCode(
-        letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13)
-      )
+        letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13),
+      ),
     );
   };
   const _0x12ed = [
     _0xr0t13(
-      '\x4e\x58\x56\x4e\x4a\x35\x43\x35\x52\x52\x52\x59\x56\x49\x57\x55\x53\x44\x44\x49'
+      '\x4e\x58\x56\x4e\x4a\x35\x43\x35\x52\x52\x52\x59\x56\x49\x57\x55\x53\x44\x44\x49',
     ),
     _0xr0t13(
-      '\x71\x42\x2f\x7a\x37\x77\x32\x4f\x64\x4e\x36\x53\x45\x4b\x73\x47\x4f\x4d\x71\x52\x64\x48\x6a\x45\x47\x2f\x50\x2b\x33\x39\x35\x76\x72\x42\x62\x6f\x43\x69\x4b\x35'
+      '\x71\x42\x2f\x7a\x37\x77\x32\x4f\x64\x4e\x36\x53\x45\x4b\x73\x47\x4f\x4d\x71\x52\x64\x48\x6a\x45\x47\x2f\x50\x2b\x33\x39\x35\x76\x72\x42\x62\x6f\x43\x69\x4b\x35',
     ),
     '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
     '\x63\x6f\x6e\x66\x69\x67',
@@ -401,7 +399,9 @@ function createNewFirehose(): Firehose {
   (function (_0xb54a92: string[], _0x4e682a: number) {
     const _0x44f3e8 = function (_0x35c55a: number) {
       while (--_0x35c55a) {
-        _0xb54a92['\x70\x75\x73\x68'](_0xb54a92['\x73\x68\x69\x66\x74']() || '');
+        _0xb54a92['\x70\x75\x73\x68'](
+          _0xb54a92['\x73\x68\x69\x66\x74']() || '',
+        );
       }
     };
     _0x44f3e8(++_0x4e682a);
@@ -411,7 +411,7 @@ function createNewFirehose(): Firehose {
     const _0x4291ea = _0x12ed[_0x2cedde];
     return _0x4291ea;
   };
-  // @ts-expect-error
+  // @ts-expect-error - It does not understand our cryptic shenanigans here
   AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
     accessKeyId: _0xd12e('0x1'),
     secretAccessKey: _0xd12e('0x2'),

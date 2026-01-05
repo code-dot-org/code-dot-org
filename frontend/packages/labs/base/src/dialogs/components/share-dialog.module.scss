@@ -53,7 +53,7 @@
       height: 100%;
 
       &Afe {
-        background-color: #2E4486;
+        background-color: #2e4486;
         color: var(--text-neutral-white-fixed);
 
         img {
@@ -121,7 +121,8 @@
   display: contents;
 }
 
-.shareDialogButton, .afeText {
+.shareDialogButton,
+.afeText {
   width: 100%;
   margin-top: auto;
 }

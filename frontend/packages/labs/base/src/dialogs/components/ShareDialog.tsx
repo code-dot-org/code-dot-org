@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import {QRCodeSVG} from 'qrcode.react';
-import React, {useCallback, useState} from 'react';
+import {useCallback, useState} from 'react';
+import type {FunctionComponent} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import Alert from '@code-dot-org/component-library/alert';
@@ -9,10 +10,19 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
-import {GoogleAnalytics, analyticsReporter, EVENTS, DCDO} from '@code-dot-org/metrics';
+import {
+  GoogleAnalytics,
+  analyticsReporter,
+  EVENTS,
+  DCDO,
+} from '@code-dot-org/metrics';
 import type {ProjectType} from '@code-dot-org/projects';
 
-import {TEACHER_FEEDBACK_LINK, STUDENT_FEEDBACK_LINK, ProjectSubmissionStatus} from '@lab-base/constants';
+import {
+  TEACHER_FEEDBACK_LINK,
+  STUDENT_FEEDBACK_LINK,
+  ProjectSubmissionStatus,
+} from '@lab-base/constants';
 import {useShare} from '@lab-base/contexts';
 
 import {useAppSelector} from '../../redux/store';
@@ -22,7 +32,7 @@ import moduleStyles from './share-dialog.module.scss';
 type ValueOf<T> = T[keyof T];
 type SubmissionStatusType = ValueOf<typeof ProjectSubmissionStatus>;
 
-const CopyToClipboardButton: React.FunctionComponent<{
+const CopyToClipboardButton: FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
   channelId?: string;
@@ -34,15 +44,14 @@ const CopyToClipboardButton: React.FunctionComponent<{
       setCopiedToClipboard(true);
     });
     GoogleAnalytics.trackEvent('share', 'share_copy_url', {value: projectType});
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_LINK_COPY,
-      {
-        lab_type: projectType,
-        ...(channelId ? {
-          channel_id: channelId,
-        } : {}),
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_LINK_COPY, {
+      lab_type: projectType,
+      ...(channelId
+        ? {
+            channel_id: channelId,
+          }
+        : {}),
+    });
   }, [shareUrl, projectType, channelId]);
 
   return (
@@ -75,7 +84,9 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
         Take a career tour
       </Typography>
       <img alt="" src="/shared/images/afe/afe-career-tours-0.jpg" />
-      <div className={moduleStyles.afeText}>Explore more careers in tech and music with Amazon.</div>
+      <div className={moduleStyles.afeText}>
+        Explore more careers in tech and music with Amazon.
+      </div>
       <LinkButton
         ariaLabel="Take a tour"
         href={careersUrl}
@@ -100,7 +111,7 @@ const SubmitButtonInfo: React.FunctionComponent<{
 }> = ({submissionStatus, onSubmitClick}) => {
   const lab2SubmitProjectEnabled = DCDO.get(
     'lab2-submit-project-enabled',
-    true
+    true,
   ) as boolean;
   if (!lab2SubmitProjectEnabled) {
     return null;
@@ -161,20 +172,16 @@ const ShareDialog: React.FunctionComponent<ShareDialogProps> = ({
 
   const handleClose = useCallback(() => {
     hideShareDialog();
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_CLOSE_ESCAPE,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      }
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_CLOSE_ESCAPE, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
   }, [channelId, hideShareDialog, projectType]);
 
   const userType = useAppSelector(state => state.currentUser.userType);
 
-  const feedbackLink = userType === 'teacher'
-      ? TEACHER_FEEDBACK_LINK
-      : STUDENT_FEEDBACK_LINK;
+  const feedbackLink =
+    userType === 'teacher' ? TEACHER_FEEDBACK_LINK : STUDENT_FEEDBACK_LINK;
 
   const {theme} = useTheme();
 
@@ -185,7 +192,7 @@ const ShareDialog: React.FunctionComponent<ShareDialogProps> = ({
       mode={theme === 'Light' ? 'light' : 'dark'}
       primaryButtonProps={{
         onClick: () => hideShareDialog(),
-        text: "OK",
+        text: 'OK',
       }}
     />
   ) : (
@@ -197,11 +204,12 @@ const ShareDialog: React.FunctionComponent<ShareDialogProps> = ({
             visualAppearance="heading-lg"
             className={moduleStyles.heading}
           >
-            {dialogId === 'hoc2024'
-              ? "Congratulations!"
-              : "Share your project"}
+            {dialogId === 'hoc2024' ? 'Congratulations!' : 'Share your project'}
           </Typography>
-          <div>{dialogId === 'hoc2024' && "You finished this Hour of Code activity. What's next?"}</div>
+          <div>
+            {dialogId === 'hoc2024' &&
+              "You finished this Hour of Code activity. What's next?"}
+          </div>
           <div className={moduleStyles.columns}>
             <div className={moduleStyles.column}>
               <div className={moduleStyles.block}>

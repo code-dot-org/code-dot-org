@@ -13,7 +13,9 @@ export default {
         jsc: {
           baseUrl: '.',
           paths: {
-            [`@${packageName}/*`]: [`${dirname(fileURLToPath(import.meta.url))}/src/*`],
+            [`@${packageName}/*`]: [
+              `${dirname(fileURLToPath(import.meta.url))}/src/*`,
+            ],
           },
           transform: {
             react: {

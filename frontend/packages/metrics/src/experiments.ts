@@ -27,7 +27,10 @@ declare global {
  * example when we call setItem in Safari's private mode)
  * @return 'true' if we set successfully
  */
-const trySetLocalStorage: (item: string, value: string) => boolean = (item, value) => {
+const trySetLocalStorage: (item: string, value: string) => boolean = (
+  item,
+  value,
+) => {
   try {
     localStorage.setItem(item, value);
     return true;
@@ -42,13 +45,10 @@ const trySetLocalStorage: (item: string, value: string) => boolean = (item, valu
  */
 export enum Experiment {
   REDUX_LOGGING = 'reduxLogging',
-  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
-    'schoolAutocompleteDropdownNewSearch',
+  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch',
   SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables',
-  TEACHER_DASHBOARD_SECTION_BUTTONS =
-    'teacher-dashboard-section-buttons',
-  TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
-    'teacher-dashboard-section-buttons-alternate-text',
+  TEACHER_DASHBOARD_SECTION_BUTTONS = 'teacher-dashboard-section-buttons',
+  TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT = 'teacher-dashboard-section-buttons-alternate-text',
   FINISH_DIALOG_METRICS = 'finish-dialog-metrics',
   I18N_TRACKING = 'frontend-i18n-tracking',
   TIME_SPENT = 'time-spent',
@@ -96,7 +96,8 @@ export enum Experiment {
 const STORAGE_KEY = 'experimentsList';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
-const getQueryString = () => (typeof window !== 'undefined' ? window.location.search : '');
+const getQueryString = () =>
+  typeof window !== 'undefined' ? window.location.search : '';
 
 export interface ExperimentData {
   key: string;
@@ -115,7 +116,9 @@ export const getStoredExperiments: () => ExperimentData[] = () => {
   // Get experiments stored in local storage.
   try {
     const jsonList = localStorage.getItem(STORAGE_KEY);
-    const storedExperiments: ExperimentData[] = jsonList ? JSON.parse(jsonList) : [];
+    const storedExperiments: ExperimentData[] = jsonList
+      ? JSON.parse(jsonList)
+      : [];
     const now = Date.now();
     const enabledExperiments = storedExperiments.filter(experiment => {
       return (
@@ -137,10 +140,14 @@ export const getEnabledExperiments = () => {
   return getStoredExperiments().map(experiment => experiment.key);
 };
 
-export const setEnabled = (key: Experiment, shouldEnable: boolean, expiration?: number) => {
+export const setEnabled = (
+  key: Experiment,
+  shouldEnable: boolean,
+  expiration?: number,
+) => {
   const allEnabled = getStoredExperiments();
   const experimentIndex = allEnabled.findIndex(
-    experiment => experiment.key === key
+    experiment => experiment.key === key,
   );
   if (shouldEnable) {
     if (experimentIndex < 0) {
@@ -163,7 +170,9 @@ export const setEnabled = (key: Experiment, shouldEnable: boolean, expiration?: 
  * specified in the current URL.
  * @param key - Name of experiment in question
  */
-export const isEnabledAllowingQueryString: (key: Experiment) => boolean = (key) => {
+export const isEnabledAllowingQueryString: (
+  key: Experiment,
+) => boolean = key => {
   const query = queryString.parse(getQueryString());
 
   // Look for ?my_experiment=1 style experiment keys
@@ -180,7 +189,7 @@ export const isEnabledAllowingQueryString: (key: Experiment) => boolean = (key) 
  * Checks whether provided experiment is enabled or not.
  * @param key - Name of experiment in question
  */
-export const isEnabled: (key: Experiment) => boolean = (key) => {
+export const isEnabled: (key: Experiment) => boolean = key => {
   const storedExperiments = getStoredExperiments();
   let enabled =
     storedExperiments.some(experiment => experiment.key === key) ||
@@ -192,7 +201,9 @@ export const isEnabled: (key: Experiment) => boolean = (key) => {
   const tempEnableQuery = query['tempEnableExperiments'];
 
   if (enableQuery) {
-    const experimentsToEnable = Array.isArray(enableQuery) ? enableQuery : enableQuery.split(',');
+    const experimentsToEnable = Array.isArray(enableQuery)
+      ? enableQuery
+      : enableQuery.split(',');
     if (experimentsToEnable.indexOf(key) >= 0) {
       enabled = true;
       setEnabled(key, true);
@@ -200,7 +211,9 @@ export const isEnabled: (key: Experiment) => boolean = (key) => {
   }
 
   if (disableQuery) {
-    const experimentsToDisable = Array.isArray(disableQuery) ? disableQuery : disableQuery.split(',');
+    const experimentsToDisable = Array.isArray(disableQuery)
+      ? disableQuery
+      : disableQuery.split(',');
     if (experimentsToDisable.indexOf(key) >= 0) {
       enabled = false;
       setEnabled(key, false);
@@ -210,11 +223,13 @@ export const isEnabled: (key: Experiment) => boolean = (key) => {
   if (tempEnableQuery) {
     const expirationDate = new Date();
     expirationDate.setHours(
-      expirationDate.getHours() + EXPERIMENT_LIFESPAN_HOURS
+      expirationDate.getHours() + EXPERIMENT_LIFESPAN_HOURS,
     );
     const expiration = expirationDate.getTime();
 
-    const experimentsToEnable = Array.isArray(tempEnableQuery) ? tempEnableQuery : tempEnableQuery.split(',');
+    const experimentsToEnable = Array.isArray(tempEnableQuery)
+      ? tempEnableQuery
+      : tempEnableQuery.split(',');
     if (experimentsToEnable.indexOf(key) >= 0) {
       enabled = true;
       setEnabled(key, true, expiration);

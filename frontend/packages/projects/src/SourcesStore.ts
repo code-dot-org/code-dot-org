@@ -1,7 +1,4 @@
-import {
-  AppName,
-  ProjectType,
-} from '@code-dot-org/api/projects';
+import {AppName, ProjectType} from '@code-dot-org/api/projects';
 import {
   ProjectSources,
   SaveSourceOptions,
@@ -20,7 +17,11 @@ export class SourcesStore {
   private lastNewVersionTime: number | null = null;
 
   async load(appName: AppName, channelId: string, versionId?: string) {
-    const {response, value} = await sourcesApi.get(appName, channelId, versionId);
+    const {response, value} = await sourcesApi.get(
+      appName,
+      channelId,
+      versionId,
+    );
 
     if (response.ok && !versionId) {
       // Only store the current version id if we are loading the latest version.
@@ -34,7 +35,7 @@ export class SourcesStore {
     channelId: string,
     sources: ProjectSources,
     projectType?: ProjectType,
-    forceNewVersion = false
+    forceNewVersion = false,
   ) {
     let options: SaveSourceOptions = {projectType};
     if (this.currentVersionId) {
@@ -62,9 +63,7 @@ export class SourcesStore {
       this.firstSaveTime = this.firstSaveTime || timestamp;
       this.currentVersionId = versionId;
     } else {
-      throw new Error(
-        response.status + ' ' + response.statusText,
-      );
+      throw new Error(response.status + ' ' + response.statusText);
     }
     return response;
   }

@@ -3,11 +3,7 @@ import type {ResponseValidator} from '../types';
 import ValidationError from '../ValidationError';
 
 import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
-import {
-  BlocklySource,
-  MultiFileSource,
-  ProjectSources,
-} from './types';
+import {BlocklySource, MultiFileSource, ProjectSources} from './types';
 
 function missingFieldError(fieldName: string) {
   return new ValidationError('Missing required field: ' + fieldName);
@@ -15,7 +11,7 @@ function missingFieldError(fieldName: string) {
 
 function sourceValidatorHelper(
   response: Record<string, unknown> | unknown[],
-  appSpecificValidator: (response: Record<string, unknown>) => void
+  appSpecificValidator: (response: Record<string, unknown>) => void,
 ): ProjectSources {
   if (Array.isArray(response)) {
     throw new Error('Source response should be an object (received array).');
@@ -36,7 +32,7 @@ const BlocklySourceResponseValidator: ResponseValidator<
     let blocklySource;
     try {
       blocklySource = JSON.parse(
-        responseToValidate.source as string
+        responseToValidate.source as string,
       ) as BlocklySource;
     } catch (e) {
       throw new ValidationError('Error parsing JSON: ' + e);
@@ -87,9 +83,9 @@ const DefaultSourceResponseValidator: ResponseValidator<
   return sourceValidatorHelper(response, () => {});
 };
 
-export const SourceResponseValidator: (appName: AppName) => ResponseValidator<
-  ProjectSources
-> = appName => (response => {
+export const SourceResponseValidator: (
+  appName: AppName,
+) => ResponseValidator<ProjectSources> = appName => response => {
   if (appName === 'pythonlab' || appName === 'weblab2') {
     return CodebridgeSourceResponseValidator(response);
   } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
@@ -101,4 +97,4 @@ export const SourceResponseValidator: (appName: AppName) => ResponseValidator<
     // Everything else uses the default validator
     return DefaultSourceResponseValidator(response);
   }
-});
+};

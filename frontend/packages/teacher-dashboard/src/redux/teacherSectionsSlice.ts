@@ -8,12 +8,12 @@ import {
 import _ from 'lodash';
 
 import {HttpClient} from '@code-dot-org/api';
-import {analyticsReporter, firehoseClient, EVENTS} from '@code-dot-org/metrics';
 import {
   Section,
   SectionInstructor,
   SectionLoginType,
 } from '@code-dot-org/api/models/sections';
+import {analyticsReporter, firehoseClient, EVENTS} from '@code-dot-org/metrics';
 import {OAuthSectionType} from '@code-dot-org/user';
 
 import {
@@ -172,7 +172,9 @@ const initialState: TeacherSectionState = {
 
 // Maps authentication provider to OAuthSectionType for ease of comparison
 // (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
-const mapProviderToSectionType: (provider: ServerOAuthSectionType) => OAuthSectionType = provider => {
+const mapProviderToSectionType: (
+  provider: ServerOAuthSectionType,
+) => OAuthSectionType = provider => {
   switch (provider) {
     case 'google_oauth2':
       return OAuthSectionType.GoogleClassroom;
@@ -181,7 +183,9 @@ const mapProviderToSectionType: (provider: ServerOAuthSectionType) => OAuthSecti
   }
 };
 
-const mapServerSectionInstructor: (instructor: ServerSectionInstructor) => SectionInstructor = instructor => ({
+const mapServerSectionInstructor: (
+  instructor: ServerSectionInstructor,
+) => SectionInstructor = instructor => ({
   id: instructor.id,
   status: instructor.status,
   instructorEmail: instructor.instructor_email,
@@ -208,7 +212,9 @@ const sectionSlice = createSlice({
       // since this action is triggered on every section load.
       if (
         action.payload &&
-        (Object.values(OAuthSectionType).includes(action.payload as OAuthSectionType) ||
+        (Object.values(OAuthSectionType).includes(
+          action.payload as OAuthSectionType,
+        ) ||
           action.payload === SectionLoginType.LtiV1)
       ) {
         state.rosterProvider = action.payload;
@@ -249,7 +255,7 @@ const sectionSlice = createSlice({
           autoSelectOnlySection: boolean;
           sectionOrder: number[] | null;
           destructive: boolean | null;
-        }>
+        }>,
       ) {
         const sections = action.payload.sections.map(sectionFromServerSection);
 
@@ -275,7 +281,7 @@ const sectionSlice = createSlice({
                 !action.payload.destructive
               ) {
                 throw new Error(
-                  'SET_SECTIONS called multiple times in a way that would remove data'
+                  'SET_SECTIONS called multiple times in a way that would remove data',
                 );
               }
             });
@@ -283,17 +289,17 @@ const sectionSlice = createSlice({
         });
 
         const sectionIds = _.uniq(
-          state.sectionIds.concat(sections.map(section => section.id))
+          state.sectionIds.concat(sections.map(section => section.id)),
         );
 
         const studentSectionIds = sections
           .filter(
-            section => section.participantType === ParticipantAudience.Student
+            section => section.participantType === ParticipantAudience.Student,
           )
           .map(section => section.id);
         const plSectionIds = sections
           .filter(
-            section => section.participantType !== ParticipantAudience.Student
+            section => section.participantType !== ParticipantAudience.Student,
           )
           .map(section => section.id);
 
@@ -305,7 +311,7 @@ const sectionSlice = createSlice({
 
         state.sectionOrder = getFilteredSectionOrderIds(
           sections,
-          action.payload.sectionOrder || state.sectionOrder
+          action.payload.sectionOrder || state.sectionOrder,
         );
         state.sections = {
           ...state.sections,
@@ -316,7 +322,7 @@ const sectionSlice = createSlice({
         sections,
         autoSelectOnlySection = true,
         sectionOrder = null,
-        destructive = null
+        destructive = null,
       ) {
         return {
           payload: {
@@ -346,15 +352,15 @@ const sectionSlice = createSlice({
         action: PayloadAction<{
           sectionId: number;
           students: ServerStudent[];
-        }>
+        }>,
       ) {
         const students = action.payload.students || [];
         const selectedStudents = students.map(
           student =>
             studentFromServerStudent(
               student,
-              action.payload.sectionId
-            ) as Student
+              action.payload.sectionId,
+            ) as Student,
         );
 
         state.selectedStudents = selectedStudents;
@@ -376,7 +382,7 @@ const sectionSlice = createSlice({
       action: PayloadAction<{
         sectionId: number;
         aiTutorEnabled: boolean;
-      }>
+      }>,
     ) {
       const {sectionId, aiTutorEnabled} = action.payload;
 
@@ -384,7 +390,7 @@ const sectionSlice = createSlice({
     },
     setCourseOfferings(
       state,
-      action: PayloadAction<AssignmentCourseOffering[]>
+      action: PayloadAction<AssignmentCourseOffering[]>,
     ) {
       state.courseOfferings = action.payload;
       state.courseOfferingsAreLoaded = true;
@@ -398,7 +404,7 @@ const sectionSlice = createSlice({
         action: PayloadAction<{
           sectionId: number;
           codeReviewExpiresAt: string;
-        }>
+        }>,
       ) {
         const section = state.sections[action.payload.sectionId];
         if (!section) {
@@ -435,10 +441,10 @@ const sectionSlice = createSlice({
           courseVersionId?: number;
           unitId?: number;
           participantType?: string;
-        }>
+        }>,
       ) {
         const initialSectionData = newSectionData(
-          action.payload.participantType
+          action.payload.participantType,
         ) as Section;
         if (action.payload.courseOfferingId) {
           initialSectionData.courseOfferingId = action.payload.courseOfferingId;
@@ -461,7 +467,7 @@ const sectionSlice = createSlice({
         courseOfferingId?: number,
         courseVersionId?: number,
         unitId?: number,
-        participantType?: string
+        participantType?: string,
       ) {
         return {
           payload: {
@@ -476,7 +482,7 @@ const sectionSlice = createSlice({
     beginEditingSection: {
       reducer(
         state,
-        action: PayloadAction<{sectionId?: number; silent: boolean}>
+        action: PayloadAction<{sectionId?: number; silent: boolean}>,
       ) {
         const silent = !!action.payload.silent;
         const initialParticipantType =
@@ -507,7 +513,7 @@ const sectionSlice = createSlice({
       if (!state.sectionBeingEdited) {
         throw new Error(
           'Cannot edit section properties; no section is' +
-            ' currently being edited.'
+            ' currently being edited.',
         );
       }
 
@@ -540,10 +546,24 @@ const sectionSlice = createSlice({
       state.sectionBeingEdited = {
         ...state.sectionBeingEdited,
         ...action.payload,
-        courseId: action.payload.courseId === null ? undefined : action.payload.courseId || state.sectionBeingEdited.courseId,
-        courseOfferingId: action.payload.courseOfferingId === null ? undefined : action.payload.courseOfferingId || state.sectionBeingEdited.courseOfferingId,
-        courseVersionId: action.payload.courseVersionId === null ? undefined : action.payload.courseVersionId || state.sectionBeingEdited.courseVersionId,
-        unitId: action.payload.unitId === null ? undefined : action.payload.unitId || state.sectionBeingEdited.unitId,
+        courseId:
+          action.payload.courseId === null
+            ? undefined
+            : action.payload.courseId || state.sectionBeingEdited.courseId,
+        courseOfferingId:
+          action.payload.courseOfferingId === null
+            ? undefined
+            : action.payload.courseOfferingId ||
+              state.sectionBeingEdited.courseOfferingId,
+        courseVersionId:
+          action.payload.courseVersionId === null
+            ? undefined
+            : action.payload.courseVersionId ||
+              state.sectionBeingEdited.courseVersionId,
+        unitId:
+          action.payload.unitId === null
+            ? undefined
+            : action.payload.unitId || state.sectionBeingEdited.unitId,
       };
     },
     startSaveRequest(state) {
@@ -555,7 +575,7 @@ const sectionSlice = createSlice({
         userId?: number;
         sectionId: number;
         serverSection: ServerSection;
-      }>
+      }>,
     ) {
       // When updating a persisted section, oldSectionId will be identical to
       // section.id. However, if this is a newly persisted section, oldSectionId
@@ -568,7 +588,7 @@ const sectionSlice = createSlice({
       if (isNewSection) {
         if (state.sectionIds.includes(oldSectionId)) {
           state.sectionIds = state.sectionIds.map(id =>
-            id === oldSectionId ? section.id : id
+            id === oldSectionId ? section.id : id,
           );
         } else {
           state.sectionIds = [section.id, ...state.sectionIds];
@@ -580,12 +600,12 @@ const sectionSlice = createSlice({
 
       state.studentSectionIds = Object.values(state.sections)
         .filter(
-          section => section.participantType === ParticipantAudience.Student
+          section => section.participantType === ParticipantAudience.Student,
         )
         .map(section => section.id);
       state.plSectionIds = Object.values(state.sections)
         .filter(
-          section => section.participantType !== ParticipantAudience.Student
+          section => section.participantType !== ParticipantAudience.Student,
         )
         .map(section => section.id);
 
@@ -601,7 +621,7 @@ const sectionSlice = createSlice({
               updatedLoginType: section.loginType,
             }),
           },
-          {userId: action.payload.userId}
+          {userId: action.payload.userId},
         );
       }
 
@@ -634,7 +654,7 @@ const sectionSlice = createSlice({
             event: isNewSection ? 'create_section' : 'edit_section_details',
             data_json: JSON.stringify(assignmentData),
           },
-          {userId: action.payload.userId}
+          {userId: action.payload.userId},
         );
       }
 
@@ -655,13 +675,13 @@ const sectionSlice = createSlice({
     },
     setCoteacherInvite(
       state,
-      action: PayloadAction<SectionInstructor | undefined>
+      action: PayloadAction<SectionInstructor | undefined>,
     ) {
       state.coteacherInvite = action.payload;
     },
     setCoteacherInviteForPl(
       state,
-      action: PayloadAction<SectionInstructor | undefined>
+      action: PayloadAction<SectionInstructor | undefined>,
     ) {
       state.coteacherInviteForPl = action.payload;
     },
@@ -679,7 +699,7 @@ const sectionSlice = createSlice({
     },
     rosterImportFailed(
       state,
-      action: PayloadAction<{status: number; message: string}>
+      action: PayloadAction<{status: number; message: string}>,
     ) {
       state.loadError = {
         status: action.payload.status,
@@ -718,11 +738,11 @@ const sectionSlice = createSlice({
     setSectionOrder: {
       reducer(
         state,
-        action: PayloadAction<{sectionOrder: number[]; save: boolean}>
+        action: PayloadAction<{sectionOrder: number[]; save: boolean}>,
       ) {
         const result = getFilteredSectionOrderIds(
           Object.values(state.sections),
-          action.payload.sectionOrder
+          action.payload.sectionOrder,
         );
         if (
           action.payload.save &&
@@ -789,7 +809,7 @@ const submitEditingSection = (
     undefined,
     AnyAction
   >,
-  getState: () => RootState
+  getState: () => RootState,
 ) => {
   dispatch(startSaveRequest());
   const state = getState().teacherSections;
@@ -800,29 +820,31 @@ const submitEditingSection = (
   }
 
   return new Promise<ServerSection>((resolve, reject) => {
-    (isAddingSection(state) ?
-      fetch('/dashboardapi/sections', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=UTF-8',
-        },
-        body: JSON.stringify(serverSectionFromSection(section)),
+    (isAddingSection(state)
+      ? fetch('/dashboardapi/sections', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+          },
+          body: JSON.stringify(serverSectionFromSection(section)),
+        })
+      : fetch(`/dashboardapi/sections/${section.id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+          },
+          body: JSON.stringify(serverSectionFromSection(section)),
+        })
+    )
+      .then(response => {
+        return response.json();
       })
-      : 
-      fetch(`/dashboardapi/sections/${section.id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json;charset=UTF-8',
-        },
-        body: JSON.stringify(serverSectionFromSection(section)),
+      .then(json => {
+        resolve(json as ServerSection);
       })
-    ).then(response => {
-      return response.json();
-    }).then(json => {
-      resolve(json as ServerSection);
-    }).catch(err => {
-      reject(err);
-    });
+      .catch(err => {
+        reject(err);
+      });
   });
 };
 
@@ -848,7 +870,7 @@ export const finishEditingSection =
               userId,
               sectionId: section.id,
               serverSection: result,
-            })
+            }),
           );
           resolve(result);
         })
@@ -884,10 +906,10 @@ export const asyncLoadTeacherHomepageSectionData =
 
     const promises: Promise<object>[] = [
       HttpClient.fetchJson<AssignmentCourseOffering[]>(
-        '/dashboardapi/sections/valid_course_offerings'
+        '/dashboardapi/sections/valid_course_offerings',
       ).then(response => dispatch(setCourseOfferings(response.value))),
       HttpClient.fetchJson<ParticipantTypesResponse>(
-        '/dashboardapi/sections/available_participant_types'
+        '/dashboardapi/sections/available_participant_types',
       ).then(response => {
         if (
           response.value.availableParticipantTypes.length === 1 &&
@@ -897,11 +919,13 @@ export const asyncLoadTeacherHomepageSectionData =
           dispatch(
             editSectionProperties({
               participantType: response.value.availableParticipantTypes[0],
-            })
+            }),
           );
         }
         return dispatch(
-          setAvailableParticipantTypes(response.value.availableParticipantTypes)
+          setAvailableParticipantTypes(
+            response.value.availableParticipantTypes,
+          ),
         );
       }),
     ];
@@ -923,21 +947,21 @@ export const asyncLoadSectionData =
     const promises: Promise<object>[] = [
       fetchJSON('/dashboardapi/sections').then(sections =>
         dispatch(
-          setSections(sections as ServerSection[], false, null, destructive)
-        )
+          setSections(sections as ServerSection[], false, null, destructive),
+        ),
       ),
       fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
         offerings =>
-          dispatch(setCourseOfferings(offerings as AssignmentCourseOffering[]))
+          dispatch(setCourseOfferings(offerings as AssignmentCourseOffering[])),
       ),
       fetchJSON('/dashboardapi/sections/available_participant_types').then(
         participantTypes =>
           dispatch(
             setAvailableParticipantTypes(
               (participantTypes as ParticipantTypesResponse)
-                .availableParticipantTypes
-            )
-          )
+                .availableParticipantTypes,
+            ),
+          ),
       ),
     ];
 
@@ -946,9 +970,9 @@ export const asyncLoadSectionData =
       promises.push(
         fetchJSON(`/dashboardapi/sections/${id}/students`).then(students =>
           dispatch(
-            setStudentsForCurrentSection(id, students as ServerStudent[])
-          )
-        )
+            setStudentsForCurrentSection(id, students as ServerStudent[]),
+          ),
+        ),
       );
     }
 
@@ -963,12 +987,15 @@ export const asyncLoadSectionData =
 
 function fetchJSON(url: string, params?: Record<string, string>) {
   return new Promise((resolve, reject) => {
-    fetch(`url${params ? `?${(new URLSearchParams(params)).toString()}` : ''}`, {
+    fetch(`url${params ? `?${new URLSearchParams(params).toString()}` : ''}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
       },
-    }).then(response => response.json()).then(resolve).catch(reject);
+    })
+      .then(response => response.json())
+      .then(resolve)
+      .catch(reject);
   });
 }
 
@@ -988,11 +1015,23 @@ export const asyncLoadCoteacherInvite = (): SectionThunkAction => dispatch => {
             instructorInvite.status === 'invited' &&
             instructorInvite.participant_type === 'student'
           );
-        }
+        },
       );
 
-      dispatch(setCoteacherInvite(coteacherInviteForClassrooms ? mapServerSectionInstructor(coteacherInviteForClassrooms) : undefined));
-      dispatch(setCoteacherInviteForPl(coteacherInviteForPl ? mapServerSectionInstructor(coteacherInviteForPl) : undefined));
+      dispatch(
+        setCoteacherInvite(
+          coteacherInviteForClassrooms
+            ? mapServerSectionInstructor(coteacherInviteForClassrooms)
+            : undefined,
+        ),
+      );
+      dispatch(
+        setCoteacherInviteForPl(
+          coteacherInviteForPl
+            ? mapServerSectionInstructor(coteacherInviteForPl)
+            : undefined,
+        ),
+      );
     })
     .catch(err => {
       console.error(err.message);
@@ -1015,7 +1054,7 @@ export const assignToSection = (
   courseOfferingId: number,
   courseVersionId: number,
   unitId: number,
-  _pageType: string
+  _pageType: string,
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const {userId} = getState().currentUser;
@@ -1030,10 +1069,10 @@ export const assignToSection = (
             courseId,
             date: new Date(),
           },
-          removeNullValues
+          removeNullValues,
         ),
       },
-      {userId}
+      {userId},
     );
 
     const section = getState().teacherSections.sections[sectionId];
@@ -1044,20 +1083,25 @@ export const assignToSection = (
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId: sectionId.toString(),
-          sectionLoginType: section.loginType !== undefined ? section.loginType : '',
-          previousUnitId: section.unitId !== undefined ? section.unitId.toString() : '',
-          previousCourseId: section.courseOfferingId !== undefined ? section.courseOfferingId.toString() : '',
-          previousCourseVersionId: section.courseVersionId !== undefined ? section.courseVersionId.toString() : '',
-          newUnitId: unitId.toString(),
-          newCourseId: courseOfferingId.toString(),
-          newCourseVersionId: courseVersionId.toString(),
-        },
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId: sectionId.toString(),
+        sectionLoginType:
+          section.loginType !== undefined ? section.loginType : '',
+        previousUnitId:
+          section.unitId !== undefined ? section.unitId.toString() : '',
+        previousCourseId:
+          section.courseOfferingId !== undefined
+            ? section.courseOfferingId.toString()
+            : '',
+        previousCourseVersionId:
+          section.courseVersionId !== undefined
+            ? section.courseVersionId.toString()
+            : '',
+        newUnitId: unitId.toString(),
+        newCourseId: courseOfferingId.toString(),
+        newCourseVersionId: courseVersionId.toString(),
+      });
     }
 
     dispatch(beginEditingSection(sectionId, true));
@@ -1067,7 +1111,7 @@ export const assignToSection = (
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
         unitId: unitId,
-      })
+      }),
     );
     return dispatch(finishEditingSection());
   };
@@ -1091,7 +1135,7 @@ export const unassignSection =
         courseOfferingId: null,
         courseVersionId: null,
         unitId: null,
-      })
+      }),
     );
 
     firehoseClient.putRecord(
@@ -1106,10 +1150,10 @@ export const unassignSection =
             location: location,
             date: new Date(),
           },
-          removeNullValues
+          removeNullValues,
         ),
       },
-      {userId}
+      {userId},
     );
 
     return dispatch(finishEditingSection());
@@ -1142,7 +1186,7 @@ export const beginImportRosterFlow =
     const provider = state.rosterProvider;
     if (!provider || !Object.keys(urlByProvider).includes(provider)) {
       return Promise.reject(
-        new Error('Unable to begin import roster flow without a provider')
+        new Error('Unable to begin import roster flow without a provider'),
       );
     }
 
@@ -1153,19 +1197,20 @@ export const beginImportRosterFlow =
     dispatch(sectionSlice.actions.beginImportRosterFlow());
     return new Promise<void>((resolve, reject) => {
       const url = urlByProvider[provider] as string;
-      fetch(url).then(response => {
-        response.json().then(data => {
-          dispatch(importRosterFlowListLoaded(data.courses || []));
-          resolve();
+      fetch(url)
+        .then(response => {
+          response.json().then(data => {
+            dispatch(importRosterFlowListLoaded(data.courses || []));
+            resolve();
+          });
+        })
+        .catch(result => {
+          const message = result.responseJSON
+            ? result.responseJSON.error
+            : 'Unknown error.';
+          dispatch(rosterImportFailed({status: result.status, message}));
+          reject(new Error(message));
         });
-      })
-      .catch(result => {
-        const message = result.responseJSON
-          ? result.responseJSON.error
-          : 'Unknown error.';
-        dispatch(rosterImportFailed({status: result.status, message}));
-        reject(new Error(message));
-      });
     });
   };
 

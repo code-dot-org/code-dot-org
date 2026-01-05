@@ -48,7 +48,7 @@ export default class ProjectManagerFactory {
     userId?: number,
     scriptId?: number,
     scriptLevelId?: string,
-    metricsReporter: MetricsReporter = metricsReporterSingleton 
+    metricsReporter: MetricsReporter = metricsReporterSingleton,
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
     let channelId: string | undefined = undefined;
@@ -57,7 +57,7 @@ export default class ProjectManagerFactory {
       levelId,
       scriptId,
       scriptLevelId,
-      userId
+      userId,
     );
     if (response.ok) {
       const responseBody = await response.json();

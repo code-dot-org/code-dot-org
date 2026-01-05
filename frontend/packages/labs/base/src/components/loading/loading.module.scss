@@ -73,7 +73,7 @@
   }
 
   &.fadeLoaded {
-    animation: fade-out-block .5s;
+    animation: fade-out-block 0.5s;
   }
 
   .slowLoadContainer {
@@ -91,7 +91,7 @@
     .spinnerText {
       animation: fade-in-spinner-text 11s;
       color: var(--neutral-gray-60);
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
   }
 }

@@ -11,7 +11,7 @@ import {MultiFileSource, ProjectFile, ProjectFileType} from './types';
  */
 export function getFileByName(
   files: Record<string, ProjectFile>,
-  name: string
+  name: string,
 ) {
   for (const fileId in files) {
     if (files[fileId].name === name) {
@@ -37,7 +37,7 @@ export function getActiveFileForSource(source: MultiFileSource) {
       (isStartMode && f.type !== ProjectFileType.SYSTEM_SUPPORT) ||
       !f.type ||
       f.type === ProjectFileType.STARTER ||
-      f.type === ProjectFileType.LOCKED_STARTER
+      f.type === ProjectFileType.LOCKED_STARTER,
   );
 
   // Get the first active file, if no active file then the first open file,

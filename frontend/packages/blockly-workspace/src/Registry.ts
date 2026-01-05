@@ -124,29 +124,29 @@ class Registry<T extends Environment & object> {
     }
 
     // Register fields if we have never seen it before
-    (['args0', 'args1', 'args2', 'args3'] as (keyof FullBlockDefinition)[]).forEach(
-      key => {
-        if (key in blockDefinition) {
-          (
-            blockDefinition as unknown as {
-              [key: string]: BlockArgDefinition[];
-            }
-          )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
-            if (
-              typeof arg.type !== 'string' &&
-              (arg.type as FieldPlugin).type === PluginType.Field
-            ) {
-              arg = {...arg};
-              const fieldPlugin = arg.type as FieldPlugin;
-              this.register(fieldPlugin);
-              arg.type = fieldPlugin.name;
-              plugins.push(fieldPlugin);
-            }
-            return arg;
-          });
-        }
-      },
-    );
+    (
+      ['args0', 'args1', 'args2', 'args3'] as (keyof FullBlockDefinition)[]
+    ).forEach(key => {
+      if (key in blockDefinition) {
+        (
+          blockDefinition as unknown as {
+            [key: string]: BlockArgDefinition[];
+          }
+        )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
+          if (
+            typeof arg.type !== 'string' &&
+            (arg.type as FieldPlugin).type === PluginType.Field
+          ) {
+            arg = {...arg};
+            const fieldPlugin = arg.type as FieldPlugin;
+            this.register(fieldPlugin);
+            arg.type = fieldPlugin.name;
+            plugins.push(fieldPlugin);
+          }
+          return arg;
+        });
+      }
+    });
 
     // Register mutator if we have never seen it before and it exists
     if (blockDefinition.mutator) {
@@ -158,19 +158,21 @@ class Registry<T extends Environment & object> {
     }
 
     // Register extensions if we have never seen it before and it exists
-    blockDefinition.extensions = [...(blockDefinition.extensions || [])].map(extension => {
-      if (typeof extension !== 'string' && 'extension' in extension) {
-        this.registerExtension(extension as Extension);
-        return extension.name;
-      }
+    blockDefinition.extensions = [...(blockDefinition.extensions || [])].map(
+      extension => {
+        if (typeof extension !== 'string' && 'extension' in extension) {
+          this.registerExtension(extension as Extension);
+          return extension.name;
+        }
 
-      if (typeof extension !== 'string' && 'mixin' in extension) {
-        this.registerMixin(extension as Mixin);
-        return extension.name;
-      }
+        if (typeof extension !== 'string' && 'mixin' in extension) {
+          this.registerMixin(extension as Mixin);
+          return extension.name;
+        }
 
-      return extension;
-    });
+        return extension;
+      },
+    );
 
     return plugins;
   }

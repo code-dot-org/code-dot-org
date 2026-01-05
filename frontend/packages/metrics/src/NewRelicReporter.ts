@@ -37,7 +37,11 @@ export enum PageAction {
 const MAX_FIELD_LENGTH = 4095;
 const REPORT_PAGE_SIZE: boolean = Math.random() < 0.01;
 
-export const addPageAction = (actionName: string, value: {[key: string]: boolean | string | number | object}, sampleRate: number = 1.0) => {
+export const addPageAction = (
+  actionName: string,
+  value: {[key: string]: boolean | string | number | object},
+  sampleRate: number = 1.0,
+) => {
   if (!window.newrelic) {
     return;
   }
@@ -68,7 +72,10 @@ export const addPageAction = (actionName: string, value: {[key: string]: boolean
     }
   }
 
-  window.newrelic.addPageAction(actionName, value as unknown as {[key: string]: string | number});
+  window.newrelic.addPageAction(
+    actionName,
+    value as unknown as {[key: string]: string | number},
+  );
 };
 
 export const setCustomAttribute = (key: string, value: string | number) => {
@@ -101,7 +108,9 @@ export const reportPageSize = () => {
   }
 
   try {
-    const resources: PerformanceResourceTiming[] = (performance?.getEntriesByType('resource') || []) as unknown as PerformanceResourceTiming[];
+    const resources: PerformanceResourceTiming[] =
+      (performance?.getEntriesByType('resource') ||
+        []) as unknown as PerformanceResourceTiming[];
     let totalDownloadSize = 0;
     let jsDownloadSize = 0;
     const jsFileRegex = /\.js$/;
@@ -121,10 +130,7 @@ export const reportPageSize = () => {
     if (!window.newrelic) {
       return;
     }
-    window.newrelic.setCustomAttribute(
-      'totalDownloadSize',
-      totalDownloadSize
-    );
+    window.newrelic.setCustomAttribute('totalDownloadSize', totalDownloadSize);
     window.newrelic.setCustomAttribute('jsDownloadSize', jsDownloadSize);
   } catch (error) {
     if (error instanceof Error) {

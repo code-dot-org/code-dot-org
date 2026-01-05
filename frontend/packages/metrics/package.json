@@ -18,8 +18,8 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "types": "./dist/types/index.d.ts",
   "main": "src/index.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -35,14 +35,24 @@
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
     "start": "yarn dev",
-    "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/api": "workspace:*",
+    "@code-dot-org/localization": "workspace:*",
+    "@newrelic/browser-agent": "^1.294.0",
+    "@statsig/js-client": "^3.20.2",
+    "@statsig/session-replay": "^3.20.2",
+    "@statsig/web-analytics": "^3.20.2",
+    "@types/new-relic-browser": "^1.230.5",
+    "aws-sdk": "^2.1692.0",
+    "js-cookie": "^3.0.5",
+    "query-string": "^9.2.2"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
@@ -101,17 +111,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "clean-package": "./clean-package.config.cjs",
-  "dependencies": {
-    "@code-dot-org/api": "workspace:*",
-    "@code-dot-org/localization": "workspace:*",
-    "@newrelic/browser-agent": "^1.294.0",
-    "@statsig/js-client": "^3.20.2",
-    "@statsig/session-replay": "^3.20.2",
-    "@statsig/web-analytics": "^3.20.2",
-    "@types/new-relic-browser": "^1.230.5",
-    "aws-sdk": "^2.1692.0",
-    "js-cookie": "^3.0.5",
-    "query-string": "^9.2.2"
-  }
+  "clean-package": "./clean-package.config.cjs"
 }

@@ -9,7 +9,7 @@ import {ParticipantAudience} from './constants';
 // If the results are different from the ordered section IDs, it updates the order in the backend.
 export const getOrderedSectionIds = (
   filteredSectionIds: number[],
-  orderedSectionIds: number[]
+  orderedSectionIds: number[],
 ): number[] => {
   if (orderedSectionIds.length === 0) {
     return filteredSectionIds;
@@ -23,7 +23,7 @@ export const getOrderedSectionIds = (
 
   const orderedSectionsFiltered = _.intersection(
     orderedSectionIds,
-    filteredSectionIds
+    filteredSectionIds,
   );
 
   return [...sectionsToPrepend, ...orderedSectionsFiltered];
@@ -33,7 +33,7 @@ export const getOrderedSectionIds = (
 // all sections that are not hidden and have a participantType of student prepended.
 export const getFilteredSectionOrderIds = (
   sections: Section[],
-  orderedSectionIds: number[]
+  orderedSectionIds: number[],
 ): number[] => {
   const filteredSectionIds = sections
     .filter(section => section.participantType === ParticipantAudience.student)
@@ -50,6 +50,6 @@ export const saveSectionOrder = (orderedSectionIds: number[]) => {
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
-    }
+    },
   );
 };
