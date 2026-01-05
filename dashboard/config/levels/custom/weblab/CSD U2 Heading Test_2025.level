@@ -26,7 +26,8 @@
     "rubric_performance_level_1": "All content is contained in tags, uses paragraph tags, multiple sized headings, and at least one list in a logically consistent way. Comments are used to define sections of code.",
     "rubric_performance_level_2": "All content is contained in tags, uses paragraph, heading tags, and a list in a reasonable way.",
     "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
-    "rubric_performance_level_4": "Little or no content is contained in tags."
+    "rubric_performance_level_4": "Little or no content is contained in tags.",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

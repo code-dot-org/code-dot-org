@@ -31,7 +31,7 @@
       }
     },
     "name_suffix": "_-csa-alt-unit1_2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-20T02:57:53.622+00:00\",\"changed\":[\"cloned from \\\"CSA U2L2-L2-3_pilot_alt-2025\\\"\"],\"cloned_from\":\"CSA U2L2-L2-3_pilot_alt-2025\"}]"

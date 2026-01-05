@@ -66,6 +66,7 @@
     "rubric_performance_level_3": "The cloud's height, width, or position has been changed, but it may not be wider than it is tall, or it may be moved to somewhere else on the screen.",
     "rubric_performance_level_4": "No changes have been made to the code, or the changes are unrelated to the instructions.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,0 +1,24 @@
+name 'building-data-driven-systems-preassessment-q2_2025'
+
+right '`playlist[0]`'
+wrong '`playlist[1]`'
+wrong '`playlist["Song A"]`'
+wrong '`playlist.first()`'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+JavaScript arrays are zero-indexed, meaning the first element is always at index 0.
+MARKDOWN
+
+markdown <<MARKDOWN
+Consider the following code.
+
+```
+let playlist = ["Song A", "Song B", "Song C"];
+```
+
+How would you retrieve "Song A"?
+MARKDOWN

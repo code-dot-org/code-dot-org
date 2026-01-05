@@ -15,7 +15,7 @@
     "display_name": "Negative Image",
     "bubble_choice_description": "Create a filter that converts an image to a negative image.",
     "thumbnail_url": "https://images.code.org/663017682ecff87d65e04655dc146acb-image-1651259452691.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:31:49.346+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4d CR_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L4d CR_2022\"},{\"changed_at\":\"2022-04-12 19:31:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:02:52 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 18:10:53 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:11:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:06:35 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

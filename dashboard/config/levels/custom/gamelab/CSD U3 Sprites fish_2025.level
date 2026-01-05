@@ -93,6 +93,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Get creative and make a fish scene.",
     "encrypted_examples": "8hdhs6AFPJznwlyGhO2+ruC4MCEtW45/fVfMPdAKlz6D9jGbjbgKu+8V0j3e\nOld8wgMFcuf+fo0Ro03VcX/sqQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

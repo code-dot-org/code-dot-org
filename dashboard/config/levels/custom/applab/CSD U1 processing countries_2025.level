@@ -221,6 +221,7 @@
     "parent_level_id": 23134,
     "teacher_markdown": "[key]\r\n\r\nThis app uses searching/find a match and counting.\r\n\r\n* The app searches the list of countries for ones that meet the requirement.\r\n* The app counts the number of matches that it has found.\r\n\r\nAlthough this explanation leaves out much of the detail of how this sort of processing works, the main point of the execise is that searching/finding a match and counting are two of the main types of processing that students will need to be familiar with in this course.\r\n\r\n[/key]",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

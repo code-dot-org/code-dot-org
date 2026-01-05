@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Climbing the Staircase\r\nBased on this flowchart logic, add to the start code to complete the program. \r\n- If the player enters \"up\", they climb the staircase.\r\n- Otherwise, they stay where they are.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

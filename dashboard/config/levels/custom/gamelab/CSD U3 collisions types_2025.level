@@ -77,6 +77,7 @@
     "thumbnail_url": "https://images.code.org/e630570932bba8f4417ed87d3b79d229-image-1592925484868.2020-06-23 11_15_56.gif",
     "libraries_enabled": "false",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

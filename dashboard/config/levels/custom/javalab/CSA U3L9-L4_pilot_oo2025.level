@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U3L9-Nested PBT_pilot_oo2025",
     "teacher_markdown": "When students run the program, they should see the following printed to the console:\r\n\r\n```\r\nOuter: 2, Inner: 4\r\nOuter: 2, Inner: 6\r\nOuter: 2, Inner: 8\r\n \r\nOuter: 4, Inner: 6\r\nOuter: 4, Inner: 8\r\n \r\nOuter: 6, Inner: 8\r\n```\r\n\r\nStudents should have some ideas of how they might use nested loops with 1D arrays, such as searching for duplicate values.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:11:19.396+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L9-L4_pilot-2025\"}]"
