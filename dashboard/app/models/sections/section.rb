@@ -785,10 +785,10 @@ class Section < ApplicationRecord
   def enable_sharing_for_followers(follower_ids)
     return if follower_ids.empty?
 
-    followers.where(id: follower_ids).each do |follower|
-      student = follower.student_user
-      student.update!(sharing_disabled: false) if student.sharing_disabled?
-    end
+    student_ids = followers.where(id: follower_ids).pluck(:student_user_id)
+    return if student_ids.empty?
+
+    User.where(id: student_ids, sharing_disabled: true).update_all(sharing_disabled: false)
   end
 
   def update_code_review_expiration(enable_code_review)
