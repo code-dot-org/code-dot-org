@@ -6,7 +6,7 @@ declare module '@rails/actioncable' {
 
   export interface Subscriptions {
     create(
-      params: Record<string, unknown>,
+      params: string | Record<string, unknown>,
       callbacks: Partial<{
         connected(this: Subscription): void;
         disconnected(this: Subscription): void;

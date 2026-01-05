@@ -50,7 +50,7 @@ class AichatRequestStreamJob < ApplicationJob
     Honeybadger.notify(
       "AichatRequestStreamJob failed: #{exception.message}",
       context: {
-        user_id: user_id,
+        user_id: request.user_id,
         locale: locale,
         request_id: request_id
       }
