@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U5L2-2D Arrays PBT_alt-2025",
     "teacher_markdown": "The `weeklyGrades[row][col]` access the value in row `row` and column `col`. For example, if `row` is `1` and `col` is `1`, this would access the value at row 1 column 1.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:53:03.745+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L2_pilot-2025\"}]"

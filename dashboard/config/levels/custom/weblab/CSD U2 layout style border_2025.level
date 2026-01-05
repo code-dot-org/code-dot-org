@@ -30,7 +30,8 @@
     "mini_rubric": "false",
     "bubble_choice_description": "Create borders around the elements on your page.",
     "thumbnail_url": "https://images.code.org/2dc42da0de3eec242c9bc38ba5a5deca-image-1565669528582.11.45 PM.png",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

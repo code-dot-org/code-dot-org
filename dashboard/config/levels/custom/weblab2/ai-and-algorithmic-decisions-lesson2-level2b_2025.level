@@ -15,18 +15,18 @@
     "widget_view": "false",
     "initial_view_mode": "split",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "thumbnail_url": "https://images.code.org/f0b7783829870334d02984e8a7fdca36-ChatGPT Image Oct 16, 2025, 09_12_45 PM.png",
     "start_sources": {
@@ -76,6 +76,6 @@
     },
     "encrypted_exemplar_sources": "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\nYj4dnfmqbHrN6IsVhkFEfTXSZyJdzOb0nKs4eA==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T11:55:03.705+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level3-choiceb-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level3-choiceb-test-2025\"},{\"changed_at\":\"2025-11-13 12:08:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:55:03.705+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level3-choiceb-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level3-choiceb-test-2025\"},{\"changed_at\":\"2025-11-13 12:08:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:29:58 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

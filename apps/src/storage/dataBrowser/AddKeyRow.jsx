@@ -1,11 +1,11 @@
 /** @overview Component for adding a key/value pair row. */
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import msg from '@cdo/locale';
 
-import PendingButton from '../../legacySharedComponents/PendingButton';
 import {WarningType} from '../constants';
 import {storageBackend} from '../storage';
 
@@ -102,12 +102,17 @@ class AddKeyRow extends React.Component {
           />
         </td>
         <td className={classNames(dataStyles.cell, dataStyles.addButton)}>
-          <PendingButton
-            isPending={this.state.isAdding}
-            onClick={this.handleAdd}
-            pendingText={msg.addingToTable()}
-            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
+          <Button
+            id="addKeyValuePairButton"
             text={msg.addPairToTable()}
+            onClick={this.handleAdd}
+            disabled={this.state.isAdding}
+            isPending={this.state.isAdding}
+            ariaLabel={msg.addPairToTable()}
+            className={classNames(dataStyles.buttonText)}
+            size="s"
+            type="secondary"
+            color="gray"
           />
         </td>
       </tr>

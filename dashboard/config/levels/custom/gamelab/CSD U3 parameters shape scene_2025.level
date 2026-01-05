@@ -71,6 +71,7 @@
     "bubble_choice_description": "Now that you have some new blocks, decide what you'd like to draw with them.",
     "thumbnail_url": "https://images.code.org/3cb9633d3a1ec7c35440ec2a08291014-image-1593529043865.2020-06-30 10_57_17.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

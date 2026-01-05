@@ -80,6 +80,7 @@
     "bubble_choice_description": "Use the buttons on the circuit playground to move an image randomly on the screen",
     "start_blocks": "//1) When the left button is pressed, move to a random x coordinate\r\n\r\n//2) When the right button is pressed, move to a random y coordinate",
     "encrypted_examples": "koadyB9cvjFEt3n9mJgfjjcR9UE+MIE2/F1/cnIPPAXxJkJ0BwqMWaDTroM5\nbZjoTcEyyFophlLtRrjV/w/ymA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

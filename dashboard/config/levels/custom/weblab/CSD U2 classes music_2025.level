@@ -33,7 +33,8 @@
     "bubble_choice_description": "Learn how to use the id attribute to give  a style to a single element.",
     "thumbnail_url": "https://images.code.org/5764ef0f778d593ed0f70d1f1be98604-image-1588247056327.43.51 AM.png",
     "encrypted_examples": "fYa9bHiX9DFfhlEUZBs2GCI6Excvbl2fVL1Ktv7y6gBF9KogzWjBECAKTVAD\nMLS4uh0Td7Zb+HJFMbMWZHPT8w==\n",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
