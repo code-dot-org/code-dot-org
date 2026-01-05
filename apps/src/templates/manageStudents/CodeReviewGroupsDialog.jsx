@@ -126,9 +126,20 @@ export default function CodeReviewGroupsDialog({
     setSubmitStatus(SUBMIT_STATES.SUBMITTING);
     dataApi
       .setCodeReviewGroups(groups)
-      .done(() => {
+      .done(response => {
         setGroupsHaveChanged(false);
         setSubmitStatus(SUBMIT_STATES.SUCCESS);
+
+        // Show alert if this caused any students to have sharing automatically enabled
+        if (response.students_with_sharing_enabled?.length > 0) {
+          const studentNames =
+            response.students_with_sharing_enabled.join(', ');
+          const message =
+            response.students_with_sharing_enabled.length === 1
+              ? `Sharing was automatically enabled for ${studentNames} because they were assigned to a code review group.`
+              : `Sharing was automatically enabled for the following students because they were assigned to code review groups: ${studentNames}`;
+          alert(message);
+        }
       })
       .fail(() => {
         setSubmitStatus(SUBMIT_STATES.ERROR);

@@ -762,6 +762,7 @@ class Section < ApplicationRecord
   end
 
   def reset_code_review_groups(new_groups)
+    students_with_sharing_enabled = []
     ActiveRecord::Base.transaction do
       code_review_groups.destroy_all
       assigned_follower_ids = []
@@ -776,19 +777,31 @@ class Section < ApplicationRecord
         end
       end
       # Enable sharing for all students assigned to code review groups
-      enable_sharing_for_followers(assigned_follower_ids)
+      students_with_sharing_enabled = enable_sharing_for_followers(assigned_follower_ids)
     end
+    students_with_sharing_enabled
   end
 
   # Enable sharing for students in code review groups
   # Students need sharing enabled to participate in code review
+  # Returns array of student names who had sharing enabled
   def enable_sharing_for_followers(follower_ids)
-    return if follower_ids.empty?
+    return [] if follower_ids.empty?
 
-    student_ids = followers.where(id: follower_ids).pluck(:student_user_id)
-    return if student_ids.empty?
+    # Get all students for the followers
+    students_to_check = followers.where(id: follower_ids).includes(:student_user).map(&:student_user)
 
-    User.where(id: student_ids, sharing_disabled: true).update_all(sharing_disabled: false)
+    # Filter to only those with sharing disabled
+    students_needing_sharing = students_to_check.select(&:sharing_disabled?)
+    return [] if students_needing_sharing.empty?
+
+    student_names = []
+    students_needing_sharing.each do |student|
+      student.update!(sharing_disabled: false)
+      student_names << student.name
+    end
+
+    student_names
   end
 
   def update_code_review_expiration(enable_code_review)

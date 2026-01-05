@@ -1434,13 +1434,37 @@ class SectionTest < ActiveSupport::TestCase
       {unassigned: true, members: [{follower_id: followers[2].id}]}
     ]
 
-    code_review_group_section.reset_code_review_groups(new_groups)
+    students_with_sharing_enabled = code_review_group_section.reset_code_review_groups(new_groups)
 
     # Students 0 and 1 should now have sharing enabled
     refute followers[0].student_user.reload.sharing_disabled?
     refute followers[1].student_user.reload.sharing_disabled?
     # Student 2 should still have sharing disabled (unassigned)
     assert followers[2].student_user.reload.sharing_disabled?
+
+    # Should return the names of students who had sharing enabled
+    assert_equal 2, students_with_sharing_enabled.length
+    assert_includes students_with_sharing_enabled, 'student_0'
+    assert_includes students_with_sharing_enabled, 'student_1'
+  end
+
+  test 'reset_code_review_groups returns empty array when no students need sharing enabled' do
+    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 2 students with sharing already enabled
+    followers = []
+    2.times do |i|
+      student = create(:student, name: "student_#{i}", sharing_disabled: false)
+      followers << create(:follower, section: code_review_group_section, student_user: student)
+    end
+
+    new_groups = [
+      {name: 'test_group', members: [{follower_id: followers[0].id}, {follower_id: followers[1].id}]}
+    ]
+
+    students_with_sharing_enabled = code_review_group_section.reset_code_review_groups(new_groups)
+
+    # Should return empty array since no students needed sharing enabled
+    assert_equal [], students_with_sharing_enabled
   end
 
   test 'update_code_review_expiration resets expiration time when enabling code review' do
