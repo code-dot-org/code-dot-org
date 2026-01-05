@@ -115,6 +115,7 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "Learn how to make a sprite appear and disappear using the visible property",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

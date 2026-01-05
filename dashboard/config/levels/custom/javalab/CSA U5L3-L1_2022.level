@@ -19,7 +19,7 @@
     "contained_level_names": [
       "CSA U5L3-L1 Contained_2022"
     ],
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T18:59:04.684+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L2_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L2_2022\"},{\"changed_at\":\"2022-04-12 18:59:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 13:40:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 13:45:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

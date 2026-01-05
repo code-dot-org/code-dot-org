@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
+import Lab2Registry from '../Lab2Registry';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
 
 interface ExtraLinksData {
@@ -76,12 +77,25 @@ export const useExtraLinks = (levelId: number) => {
       scriptLevelId,
       channelId,
       abortController.signal
-    ).then(data => {
-      if (!abortController.signal.aborted) {
-        setExtraLinksData(data);
+    )
+      .then(data => {
+        if (!abortController.signal.aborted) {
+          setExtraLinksData(data);
+          setIsLoading(false);
+        }
+      })
+      .catch(e => {
+        if (e.name === 'AbortError') {
+          // Ignore abort errors
+          return;
+        }
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching extra links data', e as Error, {
+            message: e.message,
+          });
         setIsLoading(false);
-      }
-    });
+      });
 
     return () => abortController.abort();
   }, [permissions, levelId, scriptLevelId, channelId]);

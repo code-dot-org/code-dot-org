@@ -108,6 +108,7 @@
     "bubble_choice_description": "Adjust the sprite's transparency with alpha.",
     "validation_enabled": "false",
     "start_blocks": "//1) Using either the sprite already created for you or with any other sprites of your choosing, \r\n//play around with the transparency and \r\n//see how it works and how it changes on different sprites!\r\nvar house = createSprite(200, 200);\r\nhouse.setAnimation(\"front_of_house_1\");\r\nvar ghost = createSprite(200, 200);\r\nghost.setAnimation(\"ghost_1\");\r\nghost.scale = 2;\r\ndrawSprites();",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

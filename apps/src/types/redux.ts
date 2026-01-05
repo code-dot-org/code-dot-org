@@ -58,6 +58,7 @@ export interface RootState {
   pageConstants: LegacyLabsState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  sectionProgress: SectionProgressState;
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
@@ -97,4 +98,53 @@ export interface Student {
 interface ManageStudentsState {
   studentData: Student[];
   isLoadingStudents: boolean;
+}
+
+interface SectionProgressState {
+  unitDataByUnit?: {
+    [unitId: number]: {
+      id: number;
+      lessons: {
+        [index: number]: {
+          id: number;
+          script_id: number;
+          relative_position: number;
+          levels: {
+            [index: number]: {
+              id: string;
+              isValidated: boolean;
+            };
+          };
+        };
+      };
+      [userId: number]: {
+        [lessonId: number]: {
+          incompletePercent: number;
+          imperfectPercent: number;
+          completedPercent: number;
+          timeSpent: number;
+          lastTimestamp: number;
+        };
+      };
+    };
+  };
+  studentLessonProgressByUnit?: {
+    [unitId: number]: {
+      [userId: number]: {
+        [lessonId: number]: {
+          completedPercent: number;
+          timeSpent: number;
+        };
+      };
+    };
+  };
+  studentLevelProgressByUnit?: {
+    [unitId: string]: {
+      [userId: string]: {
+        [levelId: string]: {
+          status: string;
+        };
+      };
+    };
+  };
 }

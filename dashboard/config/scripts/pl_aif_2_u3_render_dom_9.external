@@ -1,0 +1,165 @@
+name 'pl-aif-2-U3-render-DOM-9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Rendering Lists of Objects
+
+#### Before we start rendering content on the page, we need a way to transform data into something we can display.
+
+#### JavaScript gives us a powerful tool for this: `.map()`.
+
+#### We’ll start with a simple list, use `.map()` to transform it, and then connect that idea to rendering data into the DOM.
+
+
+
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <div style="font-size: 14px;">
+    <strong>
+      Look at the code and output below. What happens when <code>.map()</code> is used?
+    </strong>
+
+<ul style="margin-top: 14px;">
+      <li><i>What happens to each item in the list?</i></li>
+      <li><i>What does the final output look like compared to the original array?</i></li>
+    </ul>
+  </div>
+</div>
+
+<div style="clear:both;"></div>
+
+---
+
+<div
+  style="
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin: 16px 0;
+  "
+>
+  <!-- Left Image (2/3 width) -->
+  <div style="flex: 2;">
+    <img
+      src="https://images.code.org/dae0489222e38eb2a881af02131d3282-image-1766160668323.png"
+      alt="Left image"
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      "
+    >
+  </div>
+
+<!-- Right Image (1/3 width) -->
+  <div style="flex: 1;">
+    <img
+      src="https://images.code.org/41f10a19d643dfb7d338fe299db54df6-image-1766160707719.png"
+      alt="Right image"
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      "
+    >
+  </div>
+</div>
+
+---
+## Rendering Data into the DOM with .map()
+
+#### When we render data on a web page, we often start with an array of objects. EX: users, products, or messages.
+#### `.map()` allows us to loop through that data and turn each object into a piece of HTML, which we can then display on the page.
+
+#### **In other words:**
+
+- #### Each item in the data becomes one visual element
+
+- #### `.map()` helps us create those elements consistently and efficiently
+
+- #### This pattern shows up constantly in real-world web development.
+
+<div
+  style="
+    display: flex;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  "
+>
+  <!-- Card 1 -->
+  <div
+    style="
+      flex: 1;
+      background: #f7f8fa;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+    "
+  >
+    <h2 style="margin-top: 0;">✅ What <code>.map()</code> Does</h2>
+
+<p style="font-size: 14pt;">
+      <code>.map()</code> is a built-in JavaScript array method that:
+    </p>
+
+<ul style="font-size: 14pt;">
+      <li>Loops through every item in an array</li>
+      <li>Applies a function to each item</li>
+      <li>Returns a new array with the results</li>
+      <li>Does <strong>not</strong> change the original array</li>
+    </ul>
+
+<p style="font-size: 14pt; margin-bottom: 0;">
+      Think of <code>.map()</code> as:<br>
+      👉 <em>“Take each element, do something to it, and give me a new list.”</em>
+    </p>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    style="
+      flex: 1;
+      background: #f7f8fa;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      min-width: 280px;
+    "
+  >
+    <h2 style="margin-top: 0;">🧠 Why <code>.map()</code> Is Useful</h2>
+
+<p style="font-size: 14pt;">
+      <code>.map()</code> makes it easy to transform data, which is essential when working with the DOM.
+    </p>
+
+<p style="font-size: 14pt;">It’s especially useful for:</p>
+
+<ul style="font-size: 14pt;">
+      <li>Doubling or modifying numbers</li>
+      <li>Converting or formatting data</li>
+      <li>Pulling specific properties from objects</li>
+      <li>Turning data into HTML elements for display</li>
+    </ul>
+  </div>
+</div>
+MARKDOWN

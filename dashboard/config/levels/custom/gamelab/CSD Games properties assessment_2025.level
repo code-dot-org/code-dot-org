@@ -96,6 +96,7 @@
     "rubric_performance_level_2": "The sprites have been resized to fit inside the circle. There may be some slight differences between the student's work and the provided example.",
     "rubric_performance_level_3": "The sprites have been resized, but are still too large to fit inside the circle.",
     "rubric_performance_level_4": "The code is either the same or has been changed in ways unrelated the assignment.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -17,7 +17,8 @@
     "hide_encoding_controls": "true",
     "v1_hide_sliders": "false",
     "parent_level_id": 20317,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

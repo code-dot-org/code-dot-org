@@ -136,6 +136,7 @@
     "rubric_performance_level_3": "There is an else clause used, but there are major errors in the program that keep the program from running properly.",
     "rubric_performance_level_4": "There is no else clause.",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

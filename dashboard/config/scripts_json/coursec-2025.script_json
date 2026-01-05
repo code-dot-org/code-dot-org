@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-04 17:57:50 UTC",
+    "serialized_at": "2025-12-03 22:02:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -399,7 +399,7 @@
       "relative_position": 15,
       "properties": {
         "overview": "In this unplugged lesson, students will practice storing, searching, retrieving, modifying and deleting the pattern blocks to simulate what computers do with data. ",
-        "preparation": "The data analogy can be made with various objects. Select an alternate from the list below if you don’t have pattern blocks:\n- Toy cars\n- Toy animals\n- Letter tiles\n- Counting bears\n- Unifix cubes\n- Buttons or beads\n- Other small items with sortable attributes\n\n",
+        "preparation": "Print the Graphing Data Activity Guide\n\nBoxes or baskets to sort items into\n\nThe data analogy can be made with various objects. Select an alternate from the list below if you don’t have pattern blocks:\n- Toy cars\n- Toy animals\n- Letter tiles\n- Counting bears\n- Unifix cubes\n- Buttons or beads\n- Other small items with sortable attributes\n\n",
         "purpose": "In this Unplugged lesson, students will use pattern blocks inside a box as an analogy for data inside a computer. Students will practice storing, searching, retrieving, modifying and deleting the (data) pattern blocks. At the end of the lesson, students will create various bar graphs based on the attributes of their (data) pattern blocks. \n",
         "unplugged": true
       },
@@ -3816,7 +3816,7 @@
       "key": "4ae0d6d7-2d51-4344-b6bb-b29b06e58f82",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Students will be working in groups of about four. Pass out “computers” and “data” to each group. Define each of the items in this way. The computer is a box. The data is pattern blocks. Each group should have around 20 pattern blocks, make sure there is a random assortment of shapes for each group. As you pass out the materials, prompt students to store the data in their computer. "
+        "description": "**Do This:** Students will be working in groups of about four. Pass out “computers” (boxes or baskets) and “data” (pattern blocks or other items to sort) to each group. Define each of the items in this way: The computer is a box/basket. The data is pattern blocks. Each group should have around 20 pattern blocks, make sure there is a random assortment of shapes for each group. As you pass out the materials, prompt students to store the data in their computer. "
       },
       "seeding_key": {
         "activity_section.key": "4ae0d6d7-2d51-4344-b6bb-b29b06e58f82",
@@ -9725,6 +9725,21 @@
       }
     },
     {
+      "name": "Graphing Data Student Activity",
+      "url": "https://docs.google.com/document/d/1Yp6JUjXvD_OSzTkAIwpmxjPj0oJRSVy5Y_gCDPt4mM0/edit?usp=sharing",
+      "key": "graphing_data_student_activity",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "graphing_data_student_activity"
+      }
+    },
+    {
       "name": "Implementation Guide",
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
@@ -10354,6 +10369,12 @@
       "seeding_key": {
         "lesson.key": "Pattern Block Data",
         "resource.key": "csf_-_course_c_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Pattern Block Data",
+        "resource.key": "graphing_data_student_activity"
       }
     },
     {

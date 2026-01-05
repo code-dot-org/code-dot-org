@@ -203,6 +203,7 @@
     "libraries_enabled": "false",
     "long_instructions": "# Example Game\r\n\r\nWith a partner, brainstorm some different ideas for your game. You can think about the games you've already seen, or look at some more sample games to give you ideas.\r\n\r\nOnce you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game. You'll spend the next few levels creating your game.",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
