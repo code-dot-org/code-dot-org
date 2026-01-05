@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q1_2025'
+
+question 'A developer needs to process a list of 1,000 transactions to find any that are over $500. Which concept allows them to check every transaction without writing 1,000 lines of code?'
+
+wrong 'Data mutation.'
+wrong 'Schema constraints.'
+right 'Iteration.'
+wrong 'Variable declaration.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+Iteration allows a single block of code (a loop) to repeat for every item in a collection, making it the only efficient way to handle large datasets.
+MARKDOWN

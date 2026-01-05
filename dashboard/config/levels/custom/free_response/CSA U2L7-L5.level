@@ -17,7 +17,7 @@
     "teacher_markdown": "Answer:\r\n```public ElectricCar(String model, int topSpeed, int chargeLevel)```",
     "encrypted_solution": "2IXrQW2q7p1VU1iXMH6zOycDpxLz5yACza7zUsrB/oCwjVezhvuCy9etKyKI\nEDyqVLQCMoOH+0brMke2BZXeKrYI/ilaMbo0Nc9Dpq/5sOjEkP8oD5HJGnKq\nbgx8G/5h\n",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-10-08 16:41:42 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-10-08 17:01:18 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-10-08 17:28:16 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-11-09 23:47:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",

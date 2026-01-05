@@ -28,7 +28,7 @@ markdown <<MARKDOWN
 
 ## Tips from Teachers
 
-#### Here are some insights into teaching the **Problem Solving with AI** unit. 
+#### Here are some insights into teaching the **Fabric of the Internet and AI** unit. 
 
 <!-- Flexbox Section 1 -->
 <div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      Once students realized how AI skills connect to real-world careers—from design to data analysis—they became much more invested
+      The lesson tools and simulators made complex concepts like data transmission and network security feel accessible and fun to teach.
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -56,7 +56,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      The unit’s structure made it easy to guide students through complex ideas like prompting and AI bias. The hands-on activities and built-in tools saved me a ton of prep time.
+      This unit does an amazing job blending technical knowledge with real-world relevance. Students not only learn how the Internet works but also think critically about digital equity, ethics, and AI's role in cybersecurity.
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -72,7 +72,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-This curriculum doesn’t just introduce students to AI—it helps them think critically about it. From hallucinations to ethical debates, students learned to question, refine, and really understand what’s happening under the hood.
+At first, some students weren't sure what to make of the AI chatbot, but as they interacted with it more, it really got them thinking critically about AI and the Internet.
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -81,22 +81,38 @@ This curriculum doesn’t just introduce students to AI—it helps them think cr
 ## Additional Practice
 
 #### Need some additional practice? Try out the following optional activities.
+
   <!-- Dropdown 1 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	Topic Title
+	How the Internet Works
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;"> Watch this video on...to learn more about...
-</p>
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">If you have time, watching all of the videos in the <a href="https://www.youtube.com/watch?v=ZhEf7e4kopM&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=2&pp=iAQB0gcJCY0JAYcqIYzv" target="_blank" rel="noopener noreferrer">How the Internet Works Youtube Series</a> will help you to build your knowledge of the Internet; however, the following are featured specifically in this unit.
 
-<a href="https://example.com/additional-practice-1" 
-         target="blank" 
-         rel="noopener noreferrer" 
-         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
-</a>
+- <a href="https://www.youtube.com/watch?v=ZhEf7e4kopM&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=2&pp=iAQB0gcJCY0JAYcqIYzv" target="_blank" rel="noopener noreferrer">Wires, Cables, and WiFi</a>, Lesson 2
+- <a href="https://www.youtube.com/watch?v=5o8CwafCxnU&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=3&pp=iAQB" target="_blank" rel="noopener noreferrer">IP Addresses and DNS</a>, Lesson 3
+- <a href="https://www.youtube.com/watch?v=AYdF7b3nMto&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=4&pp=iAQB" target="_blank" rel="noopener noreferrer">Packets, Routing, and Reliability</a>, Lesson 5
+</p>
+</div>
+
+</details>
+
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Internet Simulator
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">While originally made for the AP Computer Science Principles curriculum, these videos on the Interent Simulator still provide a valuable insight into how to use it.
+
+- <a href="https://www.youtube.com/watch?v=Kn6Fd5uwZno" target="_blank" rel="noopener noreferrer">Internet Simulator - Part 1</a>
+- <a href="https://www.youtube.com/watch?v=cIk2R0QuXkI" target="_blank" rel="noopener noreferrer">Internet Simulator - Part 2</a>
+</p>
 </div>
 
 </details>

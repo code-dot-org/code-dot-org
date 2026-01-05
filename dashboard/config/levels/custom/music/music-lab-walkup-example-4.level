@@ -555,6 +555,7 @@
     "thumbnail_url": "https://images.code.org/c914822935bdbd55e085e5bf6d0783f8-trophy.png",
     "display_name": "Famous athletes",
     "bubble_choice_description": "Explore Walk-Up songs for a few famous athletes",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

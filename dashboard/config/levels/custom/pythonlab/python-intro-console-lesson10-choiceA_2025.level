@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "You can ask users which potion they'd like to use. \r\n\r\n## Do This: \r\n- The first condition for the `blue_potion()` is written for you. \r\n- Write conditions for two different potion functions: \r\n    - `red_potion()` \r\n    - `yellow_potion()` \r\n- Write a conditional statement that will execute each of these functions based on what the user chooses.     \r\n\r\n**Hint**: \r\n\r\n\telif potion == \"red\":\r\n    \tred_potion()",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -22,7 +22,7 @@
     ],
     "project_template_level_name": "CSA U5L7-IndexOf PBT_pilot_oo2025",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:42:15.046+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L7-L1_pilot-2025\"}]"

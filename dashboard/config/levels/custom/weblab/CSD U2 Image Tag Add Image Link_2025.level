@@ -30,7 +30,8 @@
     "display_name": "Add image link",
     "bubble_choice_description": "Add an image link to make the image appear in the web page.",
     "thumbnail_url": "https://images.code.org/35e3560f1c74500ef1c310007bf524e4-image-1564421741446.gif",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
