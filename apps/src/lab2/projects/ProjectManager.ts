@@ -10,6 +10,7 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
+import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   currentLocation,
@@ -21,7 +22,6 @@ import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
 import {ValidationError} from '../responseValidators';
 import {Channel, ProjectAndSources, ProjectSources} from '../types';
-import {convertProjectTypeToDisplayName} from '../utils/convertProjectTypeToDisplayName';
 
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
@@ -744,6 +744,13 @@ export default class ProjectManager {
     return sources;
   }
 
+  /**
+   * Set the title of the page based on the channel name. We only do this for standalone project levels.
+   * The title format is:
+   * {channel.name} - {project type display name} - Code.org [{environment}]. If we are on production,
+   * we omit the environment suffix, and if we don't have a project type display name, we omit that as well.
+   * @param channel
+   */
   private setTitleFromChannel(channel: Channel) {
     if (channel.name && this.isStandaloneProjectLevel) {
       const currentEnvironment = getEnvironment();
@@ -755,8 +762,7 @@ export default class ProjectManager {
       const projectString = projectName ? `${projectName} - ` : '';
       document.title = `${channel.name} - ${projectString}Code.org${environmentSuffix}`;
     }
-    // no-op if the channel does not have a name or this is not a standalone level.
-    // We will use the default document title from the server.
+    // Otherwise, we will use the default document title from the server.
   }
 
   // LISTENERS
