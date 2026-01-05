@@ -134,10 +134,7 @@ export default function CodeReviewGroupsDialog({
         if (response.students_with_sharing_enabled?.length > 0) {
           const studentNames =
             response.students_with_sharing_enabled.join(', ');
-          const message =
-            response.students_with_sharing_enabled.length === 1
-              ? `Sharing was automatically enabled for ${studentNames} because they were assigned to a code review group.`
-              : `Sharing was automatically enabled for the following students because they were assigned to code review groups: ${studentNames}`;
+          const message = `Project sharing (required for code reviews) has been enabled for the following students: ${studentNames}`;
           alert(message);
         }
       })
