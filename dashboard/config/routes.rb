@@ -369,8 +369,7 @@ Dashboard::Application.routes.draw do
     # can include script_id to get or create a project for the level and script.
     # Optionally, the request can include user_id to get a project for another user,
     # like a teacher viewing a student's work.
-    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
-    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
+    get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 

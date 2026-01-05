@@ -5,7 +5,6 @@ import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
 
 import {
   getCurrentLesson,
-  getCurrentScriptLevelId,
   levelById,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {GENERATED_DANCER_STORAGE_KEY} from '@cdo/apps/dance/ai/constants';
@@ -99,7 +98,6 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
   const [tabDataMap, setTabDataMap] = useState<{[tab in Tab]?: LabData}>();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
   const dispatch = useAppDispatch();
 
   const levelPropertiesPathPrefix = useAppSelector(state => {
@@ -191,8 +189,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
           userId || undefined,
-          scriptId || undefined,
-          scriptLevelId || undefined
+          scriptId || undefined
         );
       }
 
@@ -221,7 +218,6 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     channel.subprojects,
     userId,
     scriptId,
-    scriptLevelId,
     getLevelPropertiesPath,
     dispatch,
     tabDataMap,
