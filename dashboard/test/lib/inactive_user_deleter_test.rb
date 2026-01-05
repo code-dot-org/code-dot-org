@@ -14,7 +14,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
   let!(:student) {create(:student, current_sign_in_at: inactive_since - 1.day)}
   let!(:teacher) {create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: user_data_retention_status)}
   let!(:user_data_retention_status) {create(:user_data_retention_status, deletion_warning_email_sent_at: deletion_warning_email_sent_at)}
-  let(:deletion_warning_email_sent_at) {42.days.ago}
+  let(:deletion_warning_email_sent_at) {described_class::DELETION_WARNING_GRACE_PERIOD.ago - 1.day}
 
   let(:expect_event_logging) do
     Metrics::Events.expects(:log_event).with(
@@ -84,7 +84,7 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
     end
 
     it 'does not delete inactive teachers who have been sent deletion warning email less than 30 days ago' do
-      teacher_recent_warning = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: 29.days.ago))
+      teacher_recent_warning = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: described_class::DELETION_WARNING_GRACE_PERIOD.ago + 1.day))
       delete_inactive_users
       teacher_recent_warning.reload
       _(teacher_recent_warning.deleted?).must_equal false
