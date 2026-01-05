@@ -95,6 +95,7 @@ namespace :seed do
     alltheselfpacedplthings
     allthethings
     allthettsthings
+    artist
     coursea-2017
     courseb-2017
     coursec-2017
@@ -327,6 +328,7 @@ namespace :seed do
        allthelessonplans
        alltheselfpacedplthings
        allthettsthings
+       artist
        coursea-2017
        courseb-2017
        coursec-2017
