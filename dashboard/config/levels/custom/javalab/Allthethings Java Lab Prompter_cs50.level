@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2025-12-19T16:12:50.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "## Sample Prompter Level\r\nThis level shows an example of the prompter in the theater.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 28644,
+    "start_sources": {
+      "MyPrompter.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class MyPrompter {\n  public static void main(String[] args) {\n    Image image = Theater.prompter.getImage(\"Upload a photo!\");\n    Scene scene = new Scene();\n    scene.drawImage(image, 0, 0, 400, 400, 0);\n    Theater.playScenes(scene);\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "submittable": "false",
+    "ai_tutor_available": "true",
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:12:50.725+00:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab Prompter\\\"\"],\"cloned_from\":\"Allthethings Java Lab Prompter\"}]"
+}]]></config>
+</Javalab>

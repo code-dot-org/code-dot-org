@@ -55,6 +55,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_AI_L11_weather\",\r\n  \"callout_text\": \"This is the weather feature\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"weather\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"addPair(data, \\\"Weather\\\"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "encrypted_examples": "iL3Y079OVv/Z4rNRLCxwJvJWpkpLdSZxyzfzs4UglUyX0iax+tvGOSWY6vKI\nzxW/kJRUhuJx7F07Ix/VMWhKkw==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

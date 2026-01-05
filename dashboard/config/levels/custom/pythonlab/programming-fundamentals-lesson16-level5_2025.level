@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Do This: \r\nWrite a function that asks for the user’s name and favorite animal, then prints a message.\r\n\r\n- Run the program to test it.\r\n- Modify the program to ask for a favorite color and include it in the message.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

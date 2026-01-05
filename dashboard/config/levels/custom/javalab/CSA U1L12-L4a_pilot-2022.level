@@ -548,7 +548,7 @@
     "bubble_choice_description": "Paint a square in The Neighborhood to mark off a safe play area for the children.",
     "thumbnail_url": "https://images.code.org/0f224e7a0a6eb55bf21217b90a79fbf4-image-1646323032410.gif",
     "name_suffix": "_pilot-2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:50.916+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4a_2022\\\"\"],\"cloned_from\":\"CSA U1L12-L4a_2022\"}]"

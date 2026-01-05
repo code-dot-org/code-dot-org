@@ -58,6 +58,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_AI_L11_top\",\r\n  \"callout_text\": \"Put block above this line\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"top\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"var data\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "thumbnail_url": "https://images.code.org/62b3adb0b8fabccc13fae0743787f767-image-1617980813132.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

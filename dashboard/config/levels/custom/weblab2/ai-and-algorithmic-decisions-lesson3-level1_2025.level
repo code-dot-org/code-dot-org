@@ -47,21 +47,21 @@
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",
     "initial_view_mode": "preview",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "engineer",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": true,
       "placeholderText": "Type response here ",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": true
+      "codeEditableAfterSubmit": true,
+      "allowMultipleAttempts": true
     },
     "long_instructions": "## Change the Score\r\n\r\nPlay with this website by clicking the up and down arrow buttons (or by pressing up and down arrow keys). \r\n\r\nWith a partner, discuss how you think the code is working behind the scenes."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-12T20:19:41.176+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level1-test-2025\"},{\"changed_at\":\"2025-11-12 20:23:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:19:41.176+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level1-test-2025\"},{\"changed_at\":\"2025-11-12 20:23:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:32:07 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

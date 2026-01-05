@@ -1,6 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:58:35.000Z",
   "level_num": "custom",
@@ -96,9 +95,10 @@
     "thumbnail_url": "https://images.code.org/c7b3601b5a145dcf19a362e28739c937-image-1585695569212.png",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "preload_asset_list": null,
-    "ai_tutor_available": "false"
+    "ai_tutor_available": "true",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:58:35.628+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction velocityY control_2024\\\"\"],\"cloned_from\":\"CSD U3 abstraction velocityY control_2024\"},{\"changed_at\":\"2025-12-12 21:41:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>

@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U6L5-ArrayLists PBT_pilot_oo2025",
     "teacher_markdown": "The `get()` retrieves the element that at the index that is passed as an argument.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:50:24.539+00:00\",\"changed\":[\"cloned from \\\"CSA U6L5-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L5-L3_pilot-2025\"}]"

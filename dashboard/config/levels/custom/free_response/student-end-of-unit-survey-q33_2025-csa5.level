@@ -15,7 +15,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025-csa5"
+    "name_suffix": "_2025-csa5",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-14T00:43:10.932+00:00\",\"changed\":[\"cloned from \\\"student-end-of-unit-survey-q33\\\"\"],\"cloned_from\":\"student-end-of-unit-survey-q33\"}]",
