@@ -289,16 +289,6 @@ const LoginTypeSelection: React.FunctionComponent<{
             />
             <input type="hidden" name="authenticity_token" value={authToken} />
           </form>
-          <form action="/users/auth/classlink" method="POST">
-            <Button
-              text={locale.sign_up_classlink()}
-              onClick={() => selectOauthLoginType('classlink')}
-              iconLeft={{iconName: 'kit fa-classlink', iconStyle: 'solid'}}
-              className={style.classlinkButton}
-              buttonTagTypeAttribute="submit"
-            />
-            <input type="hidden" name="authenticity_token" value={authToken} />
-          </form>
           <div className={style.greyTextbox}>
             {!isTeacher && (
               <div className={style.iconContainer}>

@@ -22,7 +22,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   ]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
-  # GET /users/auth/class_link/callback
+  # GET /users/auth/classlink/callback
   def classlink
     return connect_provider if should_connect_provider?
 
