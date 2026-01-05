@@ -351,7 +351,6 @@ namespace :seed do
        hourofcode
        infinity
        mc
-       minecraft
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course
