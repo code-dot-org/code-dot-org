@@ -22,7 +22,7 @@
     ],
     "project_template_level_name": "CSA U4L2-Static PBT_alt_2025-cb-alt",
     "name_suffix": "_2025-cb-alt",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-23T21:24:50.600+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L1_alt-2025\\\"\"],\"cloned_from\":\"CSA U4L2-L1_alt-2025\"}]"

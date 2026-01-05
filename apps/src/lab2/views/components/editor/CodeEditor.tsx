@@ -151,7 +151,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     const onEditorUpdate = EditorView.updateListener.of(
       (update: ViewUpdate) => {
-        onCodeChange(update.state.doc.toString());
+        if (update.docChanged) {
+          onCodeChange(update.state.doc.toString());
+        }
       }
     );
 

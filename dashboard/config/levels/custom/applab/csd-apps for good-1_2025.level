@@ -60,6 +60,7 @@
     "display_name": "Do More Durham",
     "thumbnail_url": "https://images.code.org/da27787ee80857a0e75f0d898fabe36f-Screenshot 2024-05-05 at 5.25.22 PM.png",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

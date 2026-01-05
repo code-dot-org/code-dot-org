@@ -11,8 +11,8 @@ markdown <<MARKDOWN
 <div style="text-align: center; margin: 40px 0; padding: 10px;">
 
   <!-- Quote Highlight Box -->
-  <div style="display: inline-block; background-color: #f0f8ff; border: 2px solid #007acc; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #003366;">
+  <div style="display: inline-block; background-color: #e5d8f2; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #3b0066;">
       Just like an architect sketches a blueprint before building, designers use wireframes to plan a website’s structure before coding.
     </p>
   </div>

@@ -1,0 +1,7 @@
+name 'iterating-with-ai-lesson3-level6-test_2025-pilot'
+display_name 'Debugging While Loops'
+description 'Choose one of the options below. Identify and fix the code for the buggy while loop.'
+
+sublevels
+level 'iterating-with-ai-lesson3-level7a-test_2025-pilot'
+level 'iterating-with-ai-lesson3-level6b-test_2025-pilot'

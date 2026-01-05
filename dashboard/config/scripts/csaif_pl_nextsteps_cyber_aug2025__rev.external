@@ -3,75 +3,148 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<br>
-<br>
+# Wrap-Up
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    
-<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
-<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
-<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
-You have completed the AI-Powered Threats and Defenses Module!
-    </p>
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned how to:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Prepare to teach how AI generates responses by modeling the iterative cycle of prompting, testing, analyzing, and refining AI-generated outputs.</li><br>
+      <li>Guide students in developing strong prompting and evaluation skills to critically assess and improve AI-generated content.</li><br>
+      <li>Support students in exploring AI’s role in creativity, forecasting, and decision-making through hands-on activities and real-world examples.</li><br>
+      <li>Lead students in designing and testing AI-assisted solutions to authentic challenges, emphasizing responsible use and effective problem-solving practices.</li><br>
+      <li>Lead students in designing and testing AI-assisted solutions to authentic challenges, emphasizing responsible use and effective problem-solving practices.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
 </div>
 
-# Next Steps
+#### Below is some additional information, resources, and practice which you may choose to explore before continuing.
 
-<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-    <h2 style="text-align: center">Help Us Improve by Completing the Professional Learning Pilot Survey!</h2>
-    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Your feedback shapes future learning experiences. Please take our short end-of-module professional learning pilot survey.</p>
-    <p style="text-align: center;">
-<a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeEc9U4yMxPPH0H55dAE_3y-F0v41f3NFH65oVLMC4ETSKNVg/viewform?usp=dialog" target="blank" rel="noopener noreferrer">Take the Survey</a>
+## Tips from Teachers
+
+#### Here are some insights into teaching the **AI-Powered Threats and Defenses** unit. 
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      What I love about this unit is how it connects real-world issues with student learning. The curriculum doesn't just teach concepts—it helps students see why cybersecurity matters in their daily lives.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The built-in resources made teaching cybersecurity easy [...] everything from lesson plans to videos was clear, organized, and ready to go.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+My students were so engaged, especially during the projects. They took ownership of their ideas and really took the role of a cybersecurity expert.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+## Additional Practice
+
+#### Need some additional practice? Try out the following optional activities.
+
+
+  <!-- Dropdown 1 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Career Connection
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Click through these panel levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6: Confidentiality, Integrity, and Availability</a> to learn about cybersecurity careers.
 </p>
 
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/6/levels/3" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
 </div>
 
-<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-    <h2 style="text-align: center">Start Teaching</h2>
-    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Go to the <a href="https://studio.code.org/home" target="blank" rel="noopener noreferrer">teacher homepage</a> to make a section for your students and start teaching this course. Complete the Getting Started Module to learn more.</p>
-   <p style="text-align: center;">
-        <a class="btn btn-large btn-primary" 
-           href="https://studio.code.org/courses/getting-started-2025/" 
-           target="_blank" rel="noopener noreferrer" 
-           style="display: inline-block; background: #048899; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-            Getting Started with Code.org
-        </a>
-    </p>
+</details>
 
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Fraud Detection
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: AAA and AI</a> to practice fraud detection with and without the support of AI.
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/8/levels/1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
 </div>
 
+</details>
 
-<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-    
-    <h2 style="text-align: center;">Learn More About AI Foundations</h2>
-    
-    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt;">
-        The AI Foundations curriculum introduces students to the core principles and real-world applications 
-        of computer science. Designed for high school students with or without prior experience, this course empowers learners 
-        with essential skills for a digital world.
-    </p>
+  <!-- Dropdown 3 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
-    
-   <p style="text-align: center;">
-        <a class="btn btn-large btn-primary" 
-           href="https://courseinfo.code.org/csaif/" 
-           target="_blank" rel="noopener noreferrer" 
-           style="display: inline-block; background: #048899; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-            Explore Curriculum
-        </a>
-    </p>
+<summary style="font-size: 16px; font-weight: bold">
+	Putting it All Together
+</summary>
 
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: Layered Defenses</a> to practice analyzing how several small defenses, stacked together, keep an everyday app safe and usable.
+
+<strong style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">You'll need to also open the <a href='https://docs.google.com/document/d/1A20Ct1B4DdbddiDFSVDbcec7-aXbX_ZKNVT90Zgv2wc/edit?tab=t.0#heading=h.xe9cnc3216z0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Activity Guide</a> for this Lesson.</strong>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/12/levels/1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
 </div>
 
-
-<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-    <h2 style="text-align: center">Stay Connected</h2>
-    <p style="padding-left: 20px; font-size: 14pt">
-    Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>.</p>
-    
-    <p style="padding-left: 20px; font-size: 14pt"> Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.</p>
-    
-    <p style="padding-left: 20px; font-size: 14pt">Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>.</p>
-</div>
+</details>
 MARKDOWN

@@ -31,7 +31,8 @@
     "rubric_performance_level_2": "The image displays properly and is being used according to its copyright license description.",
     "rubric_performance_level_3": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly.  The image may not be available for legal use on the web page.",
     "rubric_performance_level_4": "The `img` tag is not used or no source address is given for the image.",
-    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"aboutme.css\\\">\\n</head>\\n <body>\\n   <!-- info about me -->\\n   <h1> All About Me! </h1> \\n \\n   <!-- 1) Add an image to the page -->\\n   <h3>Cool Picture</h3> \\n   \\n   \\n  </body> \\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"aboutme.css\",\r\n      \"data\": \"p {\\n\\n}\\nh1 {\\n\\n}\"\r\n    }\r\n  ]\r\n}\r\n            "
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n  <link rel=\\\"stylesheet\\\" href=\\\"aboutme.css\\\">\\n</head>\\n <body>\\n   <!-- info about me -->\\n   <h1> All About Me! </h1> \\n \\n   <!-- 1) Add an image to the page -->\\n   <h3>Cool Picture</h3> \\n   \\n   \\n  </body> \\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"aboutme.css\",\r\n      \"data\": \"p {\\n\\n}\\nh1 {\\n\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

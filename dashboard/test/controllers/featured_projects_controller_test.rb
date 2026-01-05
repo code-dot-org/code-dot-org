@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class FeaturedProjectsControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @project_validator = create(:project_validator)
     @teacher = create(:teacher)

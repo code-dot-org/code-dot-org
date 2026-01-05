@@ -17,7 +17,7 @@
     "encrypted_solution": "WZAHilC9M6crRMjVB1gs+1JrDSck9wEvqo6iyuR8JcI8yyHL7rcGyp6e+AxA\ngWNh1FWun29/8vJeszrtxW3CWSpW3RyANDFR2wa6w/2nbWgUJDnBGDTbAmtA\nUpHNbSIwcRgK23g7fpFvITY/t+44+bPU7Qn2NPqWBPbJwMLdjdy9rEOc1fU+\noJqr+bD2r717CyaNvPXgU3l93IIl3kIHqA==\n",
     "name_suffix": "_pilot-2022",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:49.927+00:00\",\"changed\":[\"cloned from \\\"CSA U7L8-L4v2_2022\\\"\"],\"cloned_from\":\"CSA U7L8-L4v2_2022\"}]",

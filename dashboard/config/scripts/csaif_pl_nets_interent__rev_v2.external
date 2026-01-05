@@ -1,0 +1,56 @@
+name 'csaif_pl_nets_interent_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Network Components
+
+#### Physical components like routers, switches, and servers work together with both wired and wireless connections to move data across networks.
+
+#### These devices help direct, store, and manage information as it travels from one place to another. By coordinating how data packets are sent and received, network components make it possible for information to be transmitted quickly and reliably across the Internet - locally, nationally, and around the world.
+
+<p align="center">
+<img src="https://images.code.org/856b98a1b20b3c544923bc1736b8d759-Screenshot 2025-12-08 at 3.16.15 PM.png" alt="bits can be represented as 1 or 0" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+## 📝 To Do
+
+#### Print the <a href='https://docs.google.com/document/d/1Lpw6E7-sh3it0ErJ9vcBdz7LiNpt4VQvOl73VPa55hI/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Networks Chat Activity Guide</a> or *make a copy* of the <a href='https://docs.google.com/presentation/d/1Q_TrOdI4yxGxOHlFstDs7nZIVDnbN9-Vqs_KIsPjQb8/copy' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Digital Version</a>.
+
+#### As you interact with the AI Chatbot on the next level, fill in the network diagram by: 
+- #### Writing the function of each component in the network.
+- #### Using arrows to illustrate the flow of data
+	- #### Use dotted arrows for wireless communication
+	- #### Use solid arrows for wired communication
+
+#### There are some suggested chat prompts in the activity guide.
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 1. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+---
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<h2>Introducing AI Chat Lab</h2>
+
+<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
+
+<p style = "font-size:14pt;">Code.org has created <strong>AI Chat Lab</strong>, a safe and student-friendly chatbot built directly into the curriculum. This allows students to explore generative AI in an authentic and secure way without leaving the platform.</p>
+
+<p style = "font-size:14pt;">AI Chat Lab is designed specifically for education, so we’ve added guardrails to keep the experience safe and appropriate.</p>
+
+<ul style = "font-size:14pt;">
+	<li>The chatbot supports learning in a guided, structured environment that encourages students to think critically as they work through problems.</li><br>
+    <li>Content is monitored to ensure it remains appropriate and productive, making AI Chat Lab a safe space for exploration and discovery.</li>
+</ul>
+
+<p style = "font-size:14pt;">You'll get a chance to try out AI Chat Lab on the next level.</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ Want to know more about how AI Chat Lab works? Check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank" rel="noopener noreferrer"> FAQ Support Article</a>.
+</p>
+
+</div>
+MARKDOWN

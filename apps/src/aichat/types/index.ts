@@ -1,3 +1,4 @@
+export * from './accessControls';
 export * from './analytics';
 export * from './assets';
 export * from './chatComponents';

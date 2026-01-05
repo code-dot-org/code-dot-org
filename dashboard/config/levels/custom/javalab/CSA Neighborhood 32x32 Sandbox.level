@@ -5200,7 +5200,7 @@
     "submittable": "false",
     "display_name": "32x32 Neighborhood",
     "thumbnail_url": "https://images.code.org/cbdd267c8eccef4d90a4a60a126434e3-image-1628005187017.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-09-23T17:46:10.744+00:00\",\"changed\":[\"cloned from \\\"Neighborhood 32x32 Practice Level\\\"\"],\"cloned_from\":\"Neighborhood 32x32 Practice Level\"},{\"changed_at\":\"2021-09-23 17:46:58 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-23 17:50:43 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

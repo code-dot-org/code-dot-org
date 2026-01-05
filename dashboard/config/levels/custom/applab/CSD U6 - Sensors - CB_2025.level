@@ -106,6 +106,7 @@
     "start_blocks": "lightSensor.setScale(0, 255);\r\n//1) Set the soundSensor scale to a range of values between 0 and 255\r\n\r\nonBoardEvent(lightSensor, \"data\", function() {\r\n  var lightVal = lightSensor.value;\r\n  //2) Create a variable for the soundSensor value\r\n  //3) Create a variable for the tempSensor value\r\n\r\n  //4) Update the background color of the screen\r\n  setProperty(\"screen1\", \"background-color\", rgb(lightVal, 255, 255));\r\n});\r\n\r\n\r\n",
     "bubble_choice_description": "Create an app where the background color reacts to the light, sound, and temperature sensors",
     "encrypted_examples": "kmDaWesv+fkHj4rWVobgKUMjr+Hw6E5ohr1dLrd+pigy31NykB1QSs41FMdK\nQVwz1uD6lAtq27RDvG8RuYjyuw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

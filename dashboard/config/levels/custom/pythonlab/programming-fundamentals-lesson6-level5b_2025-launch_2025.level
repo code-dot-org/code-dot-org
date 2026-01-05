@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're writing a birthday message generator for your friends. Right now, the function only says \"Happy Birthday!\", but you want to personalize it a little more. Add a second message to make it extra special.\r\n\r\n1. Look at the `birthday_message()` function. It prints a basic birthday greeting.\r\n\r\n2. Add another `print()` line with something fun or thoughtful, like a wish, emoji, or a message of celebration.\r\n\r\n3. Run the function to make sure it prints both lines.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2025-11-26T15:51:23.000Z",
   "level_num": "custom",
@@ -8,8 +7,12 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "iterating-with-ai-lesson11-sketchlab-template-test-2025",
-    "long_instructions": "# **Filter Logic Flowchart**\r\n\r\n**Goal:** Visually plan data flow and filter interactions before coding\r\n  1. Diagram data flow: original dataset → filtered copy → display\r\n  2. Sketch logic for each filter and how they combine (AND/OR logic)\r\n  3. Plan \"Reset/Undo\" functionality showing how it reverts to original data\r\n"
+    "long_instructions": "# **Filter Logic Flowchart**\r\n\r\n**Goal:** Visually plan data flow and filter interactions before coding\r\n  1. Diagram data flow: original dataset → filtered copy → display\r\n  2. Sketch logic for each filter and how they combine (AND/OR logic)\r\n  3. Plan \"Reset/Undo\" functionality showing how it reverts to original data\r\n",
+    "bubble_choice_description": "Diagram how your filters, sorting, and Reset/Undo will work. Use this level to map out data flow and plan clear, reliable filtering logic ***(supports completing Milestone 3 tasks)***.",
+    "display_name": "Filter Logic Flowchart",
+    "thumbnail_url": "https://images.code.org/2502a2f5f6a54f67fd5776ebedbc9898-planning.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-26 19:45:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:56:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-26 19:45:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:56:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:44:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:44:31 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:44:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:45:00 +0000\",\"changed\":[\"thumbnail_url\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:46:19 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:56:23 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 22:23:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

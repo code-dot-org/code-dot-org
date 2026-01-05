@@ -18,6 +18,7 @@
     outline: var(--borders-brand-teal-primary) solid 2px;
     outline-offset: 2px;
     border-radius: variables.$default-border-radius;
+    z-index: 10; // Ensure outline is visible above outline in aiTutorVersionActive
   }
 }
 
@@ -66,6 +67,7 @@
 
 .aiTutorVersionActive {
   background-color: var(--background-brand-aqua-primary);
+  outline: 1px solid transparent;
 
   p,
   i {
@@ -75,7 +77,8 @@
 
 .aiTutorVersionInactive {
   background-color: var(--background-brand-aqua-extra-light);
-  border: 1px solid var(--borders-brand-aqua-primary);
+  outline: 1px solid var(--borders-brand-aqua-primary);
+  outline-offset: -1px;
 
   p,
   i {

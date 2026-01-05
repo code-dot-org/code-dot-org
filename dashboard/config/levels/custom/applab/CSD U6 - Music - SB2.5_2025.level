@@ -73,6 +73,7 @@
     "ai_enabled": "false",
     "callout_json": "[]",
     "encrypted_examples": "Ngcmh91kPCENi0UoAItwkVi2lz65DqV8J9SK3D5WiXqSj6bdWSDV2JkDy0SD\nMFQHW7Z2cV9vEB+ZOUmn50mKrA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

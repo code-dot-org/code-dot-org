@@ -64,18 +64,6 @@ describe('ConfirmImportButton', () => {
       expect(dialog.prop('title')).toContain('i18n-ct');
     });
 
-    it('should render a localized string while importing', () => {
-      jest
-        .spyOn(commonI18n, 'importingWithEllipsis')
-        .mockClear()
-        .mockReturnValue('i18n-importing');
-
-      const wrapper = createConfirmImportButton();
-
-      let button = wrapper.find('PendingButton').at(0);
-      expect(button.prop('pendingText')).toContain('i18n-importing');
-    });
-
     it('should render a localized string for the import button', () => {
       jest
         .spyOn(commonI18n, 'importCSV')
@@ -84,7 +72,7 @@ describe('ConfirmImportButton', () => {
 
       const wrapper = createConfirmImportButton();
 
-      let button = wrapper.find('PendingButton').at(0);
+      let button = wrapper.find('[id="confirmImportButton"]').at(0);
       expect(button.prop('text')).toContain('i18n-import');
     });
   });
