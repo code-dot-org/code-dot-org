@@ -65,13 +65,13 @@ export function buttonPropsToMui(props: GenericButtonProps): {
   };
   const muiSize = sizeMap[size] || 'medium';
 
-  // Map color (for now, use data attribute - will be extended via theme later)
-  // MUI colors: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'inherit'
+  // Map color to MUI color prop
+  // MUI colors: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'inherit' | 'white' | 'tertiary'
   const colorMap: Record<ButtonColor, MuiButtonProps['color']> = {
     purple: 'primary',
-    black: 'secondary', // Will be custom color
-    gray: 'tertiary', // Will be custom color
-    white: 'white', // Will be custom color
+    black: 'secondary',
+    gray: 'tertiary',
+    white: 'white',
     destructive: 'error',
   };
   const muiColor = colorMap[color] || 'primary';
@@ -82,6 +82,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
       isIconButton: true,
       buttonProps: {},
       iconButtonProps: {
+        variant,
         color: muiColor,
         size: muiSize,
         disabled: disabled,
@@ -91,10 +92,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
         id,
         onClick: analyticsCallback || onClick,
         'aria-label': ariaLabel || rest['aria-label'],
-        // Set data attributes for theme overrides
-        ...({'data-color': color} as Record<string, string>),
-        ...({'data-type': type} as Record<string, string>), // Pass type for icon buttons
-        ...(size && ({['data-size']: size} as Record<string, string>)),
+        // Keep data-force-hover for backwards compatibility
         ...(forceHover &&
           ({'data-force-hover': true} as Record<string, boolean>)),
         ...rest,
@@ -116,10 +114,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
     id,
     onClick: analyticsCallback || onClick,
     'aria-label': ariaLabel || rest['aria-label'],
-    // Set data-color for all colors to enable theme overrides
-    // Purple and destructive use MUI's primary/error, but we still set data-color for consistency
-    ...({'data-color': color} as Record<string, string>),
-    ...(size && ({['data-size']: size} as Record<string, string>)),
+    // Keep data-force-hover for backwards compatibility
     ...(forceHover && ({'data-force-hover': true} as Record<string, boolean>)),
     // Link behavior
     ...(useAsLink &&

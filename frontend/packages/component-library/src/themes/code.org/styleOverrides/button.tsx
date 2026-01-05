@@ -158,6 +158,258 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         };
       },
     },
+
+    // Contained (primary) variant × color combinations
+    {
+      props: {variant: 'contained', color: 'primary'},
+      style: {
+        backgroundColor: 'var(--background-brand-purple-primary)',
+        color: 'var(--text-neutral-white-fixed)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-brand-purple-strong)',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: 'var(--background-neutral-disabled)',
+          color: 'var(--text-neutral-disabled-inverse)',
+        },
+      },
+    },
+    {
+      props: {variant: 'contained', color: 'secondary'},
+      style: {
+        backgroundColor: 'var(--background-neutral-primary-inverse)',
+        color: 'var(--text-neutral-inverse)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-neutral-octonary)',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: 'var(--background-neutral-disabled)',
+          color: 'var(--text-neutral-disabled-inverse)',
+        },
+      },
+    },
+    {
+      props: {variant: 'contained', color: 'white'},
+      style: {
+        backgroundColor: 'var(--background-neutral-white-fixed)',
+        color: 'var(--text-neutral-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-neutral-quaternary)',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: 'var(--background-neutral-octonary)',
+          color: 'var(--text-neutral-primary)',
+        },
+      },
+    },
+    {
+      props: {variant: 'contained', color: 'error'},
+      style: {
+        backgroundColor: 'var(--background-error-primary)',
+        color: 'var(--text-neutral-white-fixed)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-error-strong)',
+        },
+        '&.Mui-disabled': {
+          backgroundColor: 'var(--background-neutral-disabled)',
+          color: 'var(--text-neutral-disabled-inverse)',
+        },
+      },
+    },
+
+    // Outlined (secondary) variant × color combinations
+    {
+      props: {variant: 'outlined', color: 'primary'},
+      style: {
+        border: '1px solid var(--borders-brand-purple-primary)',
+        color: 'var(--text-brand-purple-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-brand-purple-hover)',
+          border: '1px solid var(--borders-brand-purple-primary)',
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&:active': {
+          border: '1px solid var(--borders-brand-purple-primary) !important',
+        },
+        '&.Mui-disabled': {
+          borderColor: 'var(--borders-neutral-disabled) !important',
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'var(--background-neutral-primary)',
+        },
+      },
+    },
+    {
+      props: {variant: 'outlined', color: 'secondary'},
+      style: {
+        border: '1px solid var(--borders-neutral-solid)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'var(--text-neutral-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-neutral-tertiary)',
+          border: '1px solid var(--borders-neutral-solid)',
+        },
+        '&:active': {
+          border: '1px solid var(--borders-neutral-solid) !important',
+        },
+        '&.Mui-disabled': {
+          borderColor: 'var(--borders-neutral-disabled) !important',
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'var(--background-neutral-primary)',
+        },
+      },
+    },
+    {
+      props: {variant: 'outlined', color: 'tertiary'},
+      style: {
+        border: '1px solid var(--borders-neutral-strong)',
+        backgroundColor: 'var(--background-neutral-primary)',
+        color: 'var(--text-neutral-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-neutral-tertiary)',
+          border: '1px solid var(--borders-neutral-strong)',
+        },
+        '&:active': {
+          border: '1px solid var(--borders-neutral-strong) !important',
+        },
+        '&.Mui-disabled': {
+          borderColor: 'var(--borders-neutral-disabled) !important',
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'var(--background-neutral-primary)',
+        },
+      },
+    },
+    {
+      props: {variant: 'outlined', color: 'white'},
+      style: {
+        border: '1px solid var(--neutral-base-white)',
+        backgroundColor: 'var(--neutral-base-black)',
+        color: 'var(--neutral-base-white)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--neutral-gray-80)',
+          border: '1px solid var(--neutral-base-white)',
+        },
+        '&:active': {
+          border: '1px solid var(--neutral-base-white) !important',
+        },
+        '&.Mui-disabled': {
+          borderColor: 'var(--neutral-gray-80) !important',
+          color: 'var(--neutral-gray-80)',
+          backgroundColor: 'unset',
+        },
+      },
+    },
+    {
+      props: {variant: 'outlined', color: 'error'},
+      style: {
+        backgroundColor: 'var(--background-neutral-primary)',
+        border: '1px solid var(--borders-error-primary)',
+        color: 'var(--text-error-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-error-light)',
+          border: '1px solid var(--borders-error-primary)',
+        },
+        '&:active': {
+          border: '1px solid var(--borders-error-primary) !important',
+        },
+        '&.Mui-disabled': {
+          borderColor: 'var(--borders-neutral-disabled) !important',
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'var(--background-neutral-primary)',
+        },
+      },
+    },
+
+    // Text (tertiary) variant × color combinations
+    {
+      props: {variant: 'text', color: 'primary'},
+      style: {
+        color: 'var(--text-brand-purple-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-brand-purple-hover)',
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&:active': {
+          backgroundColor: 'var(--background-brand-purple-hover)',
+          color: 'var(--text-brand-purple-secondary)',
+        },
+        '&.Mui-disabled': {
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'unset',
+        },
+      },
+    },
+    {
+      props: {variant: 'text', color: 'secondary'},
+      style: {
+        color: 'var(--text-neutral-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-neutral-quaternary)',
+          color: 'var(--text-neutral-primary)',
+        },
+        '&:active': {
+          backgroundColor: 'var(--background-neutral-quaternary)',
+          color: 'var(--text-neutral-tertiary)',
+        },
+        '&.Mui-disabled': {
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'unset',
+        },
+      },
+    },
+    {
+      props: {variant: 'text', color: 'tertiary'},
+      style: {
+        color: 'var(--text-neutral-quaternary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-neutral-quaternary)',
+          color: 'var(--text-neutral-quaternary)',
+        },
+        '&:active': {
+          backgroundColor: 'var(--background-neutral-quaternary)',
+          color: 'var(--text-neutral-tertiary)',
+        },
+        '&.Mui-disabled': {
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'unset',
+        },
+      },
+    },
+    {
+      props: {variant: 'text', color: 'white'},
+      style: {
+        color: 'var(--text-neutral-inverse)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--neutral-white-alpha-30)',
+          color: 'var(--text-neutral-inverse)',
+        },
+        '&:active': {
+          backgroundColor: 'var(--neutral-white-alpha-30)',
+          color: 'var(--neutral-gray-20)',
+        },
+        '&.Mui-disabled': {
+          color: 'var(--text-neutral-tertiary)',
+          backgroundColor: 'unset',
+        },
+      },
+    },
+    {
+      props: {variant: 'text', color: 'error'},
+      style: {
+        color: 'var(--text-error-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-error-light)',
+          color: 'var(--text-error-primary)',
+        },
+        '&:active': {
+          backgroundColor: 'var(--background-error-light)',
+          color: 'var(--text-error-secondary)',
+        },
+        '&.Mui-disabled': {
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'unset',
+        },
+      },
+    },
   ],
   styleOverrides: {
     root: () => {
@@ -239,232 +491,9 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
 
       return baseStyles;
     },
-    // Handle custom colors for contained variant (primary type)
-    contained: () => {
-      return {
-        // Primary Purple (default) - can use MUI primary or data-color
-        '&.MuiButton-colorPrimary, &[data-color="purple"]': {
-          backgroundColor: 'var(--background-brand-purple-primary)',
-          color: 'var(--text-neutral-white-fixed)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-brand-purple-strong)',
-          },
-          '&.Mui-disabled': {
-            backgroundColor: 'var(--background-neutral-disabled)',
-            color: 'var(--text-neutral-disabled-inverse)',
-          },
-        },
-        // Custom colors via data attributes
-        '&[data-color="black"]': {
-          backgroundColor: 'var(--background-neutral-primary-inverse)',
-          color: 'var(--text-neutral-inverse)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-octonary)',
-          },
-          '&.Mui-disabled': {
-            backgroundColor: 'var(--background-neutral-disabled)',
-            color: 'var(--text-neutral-disabled-inverse)',
-          },
-        },
-        '&[data-color="white"]': {
-          backgroundColor: 'var(--background-neutral-white-fixed)',
-          color: 'var(--text-neutral-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-quaternary)',
-          },
-          '&.Mui-disabled': {
-            backgroundColor: 'var(--background-neutral-octonary)',
-            color: 'var(--text-neutral-primary)',
-          },
-        },
-        // Destructive (error color) - can use MUI error or data-color
-        '&.MuiButton-colorError, &[data-color="destructive"]': {
-          backgroundColor: 'var(--background-error-primary)',
-          color: 'var(--text-neutral-white-fixed)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-error-strong)',
-          },
-          '&.Mui-disabled': {
-            backgroundColor: 'var(--background-neutral-disabled)',
-            color: 'var(--text-neutral-disabled-inverse)',
-          },
-        },
-      };
-    },
-    // Handle custom colors for outlined variant (secondary type)
-    outlined: () => {
-      return {
-        // Secondary Purple (deprecated) - via data-color
-        '&[data-color="purple"]': {
-          border: '1px solid var(--borders-brand-purple-primary)',
-          color: 'var(--text-brand-purple-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-brand-purple-hover)',
-            border: '1px solid var(--borders-brand-purple-primary)',
-            color: 'var(--text-brand-purple-primary)',
-          },
-          '&:active': {
-            border: '1px solid var(--borders-brand-purple-primary) !important',
-          },
-          '&.Mui-disabled': {
-            borderColor: 'var(--borders-neutral-disabled) !important',
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'var(--background-neutral-primary)',
-          },
-        },
-        // Secondary Black (default secondary)
-        '&.MuiButton-colorSecondary, &[data-color="black"]': {
-          border: '1px solid var(--borders-neutral-solid)',
-          backgroundColor: 'var(--background-neutral-primary)',
-          color: 'var(--text-neutral-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-tertiary)',
-            border: '1px solid var(--borders-neutral-solid)',
-          },
-          '&:active': {
-            border: '1px solid var(--borders-neutral-solid) !important',
-          },
-          '&.Mui-disabled': {
-            borderColor: 'var(--borders-neutral-disabled) !important',
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'var(--background-neutral-primary)',
-          },
-        },
-        '&[data-color="gray"]': {
-          border: '1px solid var(--borders-neutral-strong)',
-          backgroundColor: 'var(--background-neutral-primary)',
-          color: 'var(--text-neutral-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-tertiary)',
-            border: '1px solid var(--borders-neutral-strong)',
-          },
-          '&:active': {
-            border: '1px solid var(--borders-neutral-strong) !important',
-          },
-          '&.Mui-disabled': {
-            borderColor: 'var(--borders-neutral-disabled) !important',
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'var(--background-neutral-primary)',
-          },
-        },
-        '&[data-color="white"]': {
-          border: '1px solid var(--neutral-base-white)',
-          backgroundColor: 'var(--neutral-base-black)',
-          color: 'var(--neutral-base-white)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--neutral-gray-80)',
-            border: '1px solid var(--neutral-base-white)',
-          },
-          '&:active': {
-            border: '1px solid var(--neutral-base-white) !important',
-          },
-          '&.Mui-disabled': {
-            borderColor: 'var(--neutral-gray-80) !important',
-            color: 'var(--neutral-gray-80)',
-            backgroundColor: 'unset',
-          },
-        },
-        // Destructive (error color) - can use MUI error or data-color
-        '&.MuiButton-colorError, &[data-color="destructive"]': {
-          backgroundColor: 'var(--background-neutral-primary)',
-          border: '1px solid var(--borders-error-primary)',
-          color: 'var(--text-error-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-error-light)',
-            border: '1px solid var(--borders-error-primary)',
-          },
-          '&:active': {
-            border: '1px solid var(--borders-error-primary) !important',
-          },
-          '&.Mui-disabled': {
-            borderColor: 'var(--borders-neutral-disabled) !important',
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'var(--background-neutral-primary)',
-          },
-        },
-      };
-    },
-    // Handle custom colors for text variant (tertiary type)
-    text: () => {
-      return {
-        // Tertiary Purple (default primary) - can use MUI primary or data-color
-        '&.MuiButton-colorPrimary, &[data-color="purple"]': {
-          color: 'var(--text-brand-purple-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-brand-purple-hover)',
-            color: 'var(--text-brand-purple-primary)',
-          },
-          '&:active': {
-            backgroundColor: 'var(--background-brand-purple-hover)',
-            color: 'var(--text-brand-purple-secondary)',
-          },
-          '&.Mui-disabled': {
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'unset',
-          },
-        },
-        '&[data-color="black"]': {
-          color: 'var(--text-neutral-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-quaternary)',
-            color: 'var(--text-neutral-primary)',
-          },
-          '&:active': {
-            backgroundColor: 'var(--background-neutral-quaternary)',
-            color: 'var(--text-neutral-tertiary)',
-          },
-          '&.Mui-disabled': {
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'unset',
-          },
-        },
-        '&[data-color="white"]': {
-          color: 'var(--text-neutral-inverse)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--neutral-white-alpha-30)',
-            color: 'var(--text-neutral-inverse)',
-          },
-          '&:active': {
-            backgroundColor: 'var(--neutral-white-alpha-30)',
-            color: 'var(--neutral-gray-20)',
-          },
-          '&.Mui-disabled': {
-            color: 'var(--text-neutral-tertiary)',
-            backgroundColor: 'unset',
-          },
-        },
-        '&[data-color="gray"]': {
-          color: 'var(--text-neutral-quaternary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-quaternary)',
-            color: 'var(--text-neutral-quaternary)',
-          },
-          '&:active': {
-            backgroundColor: 'var(--background-neutral-quaternary)',
-            color: 'var(--text-neutral-tertiary)',
-          },
-          '&.Mui-disabled': {
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'unset',
-          },
-        },
-        // Destructive (error color) - can use MUI error or data-color
-        '&.MuiButton-colorError, &[data-color="destructive"]': {
-          color: 'var(--text-error-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-error-light)',
-            color: 'var(--text-error-primary)',
-          },
-          '&:active': {
-            backgroundColor: 'var(--background-error-light)',
-            color: 'var(--text-error-secondary)',
-          },
-          '&.Mui-disabled': {
-            color: 'var(--text-neutral-disabled)',
-            backgroundColor: 'unset',
-          },
-        },
-      };
-    },
+    // Color styling is now handled via variants above
+    contained: () => ({}),
+    outlined: () => ({}),
+    text: () => ({}),
   },
 };

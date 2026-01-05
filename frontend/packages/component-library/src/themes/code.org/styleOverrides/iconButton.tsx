@@ -6,12 +6,6 @@ import {Components, Theme} from '@mui/material/styles';
  * Uses variants pattern similar to Button (primary/contained, secondary/outlined, tertiary/text)
  */
 
-// Type for variant props that includes data attributes
-// Using Record<string, unknown> to be compatible with MUI's variant system
-// MUI's variant props accept any object for matching, and Record<string, unknown>
-// is the type-safe way to represent this without using 'any'
-type IconButtonVariantProps = Record<string, unknown>;
-
 // Size specifications for icon-only buttons matching genericButton.module.scss
 const ICON_BUTTON_SIZE_SPECS = {
   xs: {
@@ -48,7 +42,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
   variants: [
     // Size variants - matching genericButton.module.scss icon-only styles
     {
-      props: {size: 'extraSmall'},
+      props: {size: 'extraSmall'} as Record<string, unknown>,
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.xs.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.xs.minWidth,
@@ -61,7 +55,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {size: 'small'},
+      props: {size: 'small'} as Record<string, unknown>,
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.s.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.s.minWidth,
@@ -74,7 +68,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {size: 'medium'},
+      props: {size: 'medium'} as Record<string, unknown>,
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.m.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.m.minWidth,
@@ -87,7 +81,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {size: 'large'},
+      props: {size: 'large'} as Record<string, unknown>,
       style: {
         padding: ICON_BUTTON_SIZE_SPECS.l.padding,
         minWidth: ICON_BUTTON_SIZE_SPECS.l.minWidth,
@@ -100,12 +94,12 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
 
-    // Primary (contained) type variants - solid backgrounds
+    // Contained variant × color combinations
     {
-      props: {
-        'data-type': 'primary',
-        'data-color': 'purple',
-      } as IconButtonVariantProps,
+      props: {variant: 'contained', color: 'primary'} as Record<
+        string,
+        unknown
+      >,
       style: {
         backgroundColor: 'var(--background-brand-purple-primary)',
         color: 'var(--text-neutral-white-fixed)',
@@ -119,13 +113,13 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'primary',
-        'data-color': 'black',
-      } as IconButtonVariantProps,
+      props: {variant: 'contained', color: 'secondary'} as Record<
+        string,
+        unknown
+      >,
       style: {
         backgroundColor: 'var(--background-neutral-primary-inverse)',
-        color: 'var(--text-neutral-white-fixed)',
+        color: 'var(--text-neutral-inverse)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-octonary)',
         },
@@ -136,10 +130,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'primary',
-        'data-color': 'white',
-      } as IconButtonVariantProps,
+      props: {variant: 'contained', color: 'white'} as Record<string, unknown>,
       style: {
         backgroundColor: 'var(--background-neutral-white-fixed)',
         color: 'var(--text-neutral-primary)',
@@ -153,10 +144,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'primary',
-        'data-color': 'destructive',
-      } as IconButtonVariantProps,
+      props: {variant: 'contained', color: 'error'} as Record<string, unknown>,
       style: {
         backgroundColor: 'var(--background-error-primary)',
         color: 'var(--text-neutral-white-fixed)',
@@ -170,12 +158,33 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
 
-    // Secondary (outlined) type variants - borders with backgrounds
+    // Outlined variant × color combinations
     {
-      props: {
-        'data-type': 'secondary',
-        'data-color': 'black',
-      } as IconButtonVariantProps,
+      props: {variant: 'outlined', color: 'primary'} as Record<string, unknown>,
+      style: {
+        border: '1px solid var(--borders-brand-purple-primary)',
+        backgroundColor: 'transparent',
+        color: 'var(--text-brand-purple-primary)',
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: 'var(--background-brand-purple-hover)',
+          border: '1px solid var(--borders-brand-purple-primary)',
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&:active': {
+          border: '1px solid var(--borders-brand-purple-primary) !important',
+        },
+        '&.Mui-disabled': {
+          borderColor: 'var(--borders-neutral-disabled) !important',
+          color: 'var(--text-neutral-disabled)',
+          backgroundColor: 'var(--background-neutral-primary)',
+        },
+      },
+    },
+    {
+      props: {variant: 'outlined', color: 'secondary'} as Record<
+        string,
+        unknown
+      >,
       style: {
         border: '1px solid var(--borders-neutral-solid)',
         backgroundColor: 'var(--background-neutral-primary)',
@@ -195,10 +204,10 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'secondary',
-        'data-color': 'gray',
-      } as IconButtonVariantProps,
+      props: {variant: 'outlined', color: 'tertiary'} as Record<
+        string,
+        unknown
+      >,
       style: {
         border: '1px solid var(--borders-neutral-strong)',
         backgroundColor: 'var(--background-neutral-primary)',
@@ -218,16 +227,13 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'secondary',
-        'data-color': 'white',
-      } as IconButtonVariantProps,
+      props: {variant: 'outlined', color: 'white'} as Record<string, unknown>,
       style: {
         border: '1px solid var(--neutral-base-white)',
-        backgroundColor: 'var(--background-neutral-primary-inverse)',
-        color: 'var(--text-neutral-white-fixed)',
+        backgroundColor: 'var(--neutral-base-black)',
+        color: 'var(--neutral-base-white)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-octonary)',
+          backgroundColor: 'var(--neutral-gray-80)',
           border: '1px solid var(--neutral-base-white)',
         },
         '&:active': {
@@ -241,10 +247,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'secondary',
-        'data-color': 'destructive',
-      } as IconButtonVariantProps,
+      props: {variant: 'outlined', color: 'error'} as Record<string, unknown>,
       style: {
         border: '1px solid var(--borders-error-primary)',
         backgroundColor: 'var(--background-neutral-primary)',
@@ -264,12 +267,9 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
 
-    // Tertiary (text) type variants - transparent backgrounds
+    // Text variant × color combinations
     {
-      props: {
-        'data-type': 'tertiary',
-        'data-color': 'purple',
-      } as IconButtonVariantProps,
+      props: {variant: 'text', color: 'primary'} as Record<string, unknown>,
       style: {
         backgroundColor: 'transparent',
         color: 'var(--text-brand-purple-primary)',
@@ -288,10 +288,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'tertiary',
-        'data-color': 'black',
-      } as IconButtonVariantProps,
+      props: {variant: 'text', color: 'secondary'} as Record<string, unknown>,
       style: {
         backgroundColor: 'transparent',
         color: 'var(--text-neutral-primary)',
@@ -310,16 +307,13 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'tertiary',
-        'data-color': 'gray',
-      } as IconButtonVariantProps,
+      props: {variant: 'text', color: 'tertiary'} as Record<string, unknown>,
       style: {
         backgroundColor: 'transparent',
-        color: 'var(--text-neutral-secondary)',
+        color: 'var(--text-neutral-quaternary)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-quaternary)',
-          color: 'var(--text-neutral-secondary)',
+          color: 'var(--text-neutral-quaternary)',
         },
         '&:active': {
           backgroundColor: 'var(--background-neutral-quaternary)',
@@ -332,32 +326,26 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
       },
     },
     {
-      props: {
-        'data-type': 'tertiary',
-        'data-color': 'white',
-      } as IconButtonVariantProps,
+      props: {variant: 'text', color: 'white'} as Record<string, unknown>,
       style: {
         backgroundColor: 'transparent',
         color: 'var(--text-neutral-inverse)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-octonary)',
+          backgroundColor: 'var(--neutral-white-alpha-30)',
           color: 'var(--text-neutral-inverse)',
         },
         '&:active': {
-          backgroundColor: 'var(--background-neutral-octonary)',
-          color: 'var(--text-neutral-tertiary)',
+          backgroundColor: 'var(--neutral-white-alpha-30)',
+          color: 'var(--neutral-gray-20)',
         },
         '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
+          color: 'var(--text-neutral-tertiary)',
           backgroundColor: 'transparent',
         },
       },
     },
     {
-      props: {
-        'data-type': 'tertiary',
-        'data-color': 'destructive',
-      } as IconButtonVariantProps,
+      props: {variant: 'text', color: 'error'} as Record<string, unknown>,
       style: {
         backgroundColor: 'transparent',
         color: 'var(--text-error-primary)',
@@ -407,59 +395,10 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
           boxShadow: 'none', // Remove shadow when disabled
         },
 
-        // Force hover state
+        // Force hover state (still supports data attribute for backwards compatibility)
         '&.force-hover, &[data-force-hover="true"]': {
           boxShadow: 'none',
         },
-
-        // Default: If no data-type is set, treat as primary (contained)
-        // This handles backwards compatibility and MUI default color props
-        '&.MuiIconButton-colorPrimary, &[data-color="purple"]:not([data-type])':
-          {
-            backgroundColor: 'var(--background-brand-purple-primary)',
-            color: 'var(--text-neutral-white-fixed)',
-            '&:hover, &.force-hover, &[data-force-hover="true"]': {
-              backgroundColor: 'var(--background-brand-purple-strong)',
-            },
-            '&.Mui-disabled': {
-              backgroundColor: 'var(--background-neutral-disabled)',
-              color: 'var(--text-neutral-disabled-inverse)',
-            },
-          },
-        '&[data-color="black"]:not([data-type])': {
-          backgroundColor: 'var(--background-neutral-primary-inverse)',
-          color: 'var(--text-neutral-white-fixed)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-octonary)',
-          },
-          '&.Mui-disabled': {
-            backgroundColor: 'var(--background-neutral-disabled)',
-            color: 'var(--text-neutral-disabled-inverse)',
-          },
-        },
-        '&[data-color="white"]:not([data-type])': {
-          backgroundColor: 'var(--background-neutral-white-fixed)',
-          color: 'var(--text-neutral-primary)',
-          '&:hover, &.force-hover, &[data-force-hover="true"]': {
-            backgroundColor: 'var(--background-neutral-quaternary)',
-          },
-          '&.Mui-disabled': {
-            backgroundColor: 'var(--background-neutral-octonary)',
-            color: 'var(--text-neutral-primary)',
-          },
-        },
-        '&.MuiIconButton-colorError, &[data-color="destructive"]:not([data-type])':
-          {
-            backgroundColor: 'var(--background-error-primary)',
-            color: 'var(--text-neutral-white-fixed)',
-            '&:hover, &.force-hover, &[data-force-hover="true"]': {
-              backgroundColor: 'var(--background-error-strong)',
-            },
-            '&.Mui-disabled': {
-              backgroundColor: 'var(--background-neutral-disabled)',
-              color: 'var(--text-neutral-disabled-inverse)',
-            },
-          },
       };
     },
   },

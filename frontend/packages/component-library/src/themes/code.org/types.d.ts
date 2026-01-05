@@ -30,14 +30,15 @@ declare module '@mui/material/IconButton' {
     white: true;
     tertiary: true;
   }
-}
 
-// Extend IconButton props to allow data attributes for variant matching
-declare module '@mui/material' {
+  interface IconButtonPropsVariantOverrides {
+    contained: true;
+    outlined: true;
+    text: true;
+  }
+
+  // Extend IconButtonProps to include variant prop
   interface IconButtonProps {
-    'data-type'?: 'primary' | 'secondary' | 'tertiary';
-    'data-color'?: 'purple' | 'black' | 'gray' | 'white' | 'destructive';
-    'data-size'?: 'xs' | 's' | 'm' | 'l';
-    'data-force-hover'?: boolean;
+    variant?: 'contained' | 'outlined' | 'text';
   }
 }
