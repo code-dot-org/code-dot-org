@@ -52,9 +52,16 @@ class AdminUsersController < ApplicationController
 
     if user
       log_admin_action("assume_identity", user.id)
+
+      admin = current_user
+
+      # Ensures a clean new session for the assumed identity
+      sign_out admin
+      reset_session
+
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
-      session[:admin_id] = current_user.id
+      session[:admin_id] = admin.id
 
       bypass_sign_in user
       redirect_to '/'
