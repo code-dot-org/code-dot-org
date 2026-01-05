@@ -534,6 +534,7 @@
     "thumbnail_url": "https://images.code.org/11f954c433fe840b93cf0c4b633862da-Group 87 (4).png",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

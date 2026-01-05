@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class AssignableCourseTests < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @teacher = create(:teacher)
     @levelbuilder = create(:levelbuilder)

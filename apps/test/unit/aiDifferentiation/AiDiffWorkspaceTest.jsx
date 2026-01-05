@@ -14,7 +14,12 @@ import {
   chatThreadMessagesValidator,
   chatThreadValidator,
 } from '@cdo/apps/aiDifferentiation/types';
-import {getStore, registerReducers, stubRedux} from '@cdo/apps/redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -134,6 +139,7 @@ describe('AiDiffWorkspace', () => {
   afterEach(() => {
     sessionStorage.clear();
     jest.restoreAllMocks();
+    restoreRedux();
   });
 
   function renderDefault(propOverrides = {}) {

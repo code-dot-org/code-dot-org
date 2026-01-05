@@ -70,6 +70,7 @@
     "bubble_choice_description": "Give your game a custom theme by giving your sprites new animations.",
     "thumbnail_url": "https://images.code.org/4fc032f817fc395e40467f92bb363049-image-1589990942128.gif",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

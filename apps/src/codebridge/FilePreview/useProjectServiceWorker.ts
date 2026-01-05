@@ -13,6 +13,9 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
   );
+  const [serviceWorkerRegistration, setServiceWorkerRegistration] = useState<
+    ServiceWorkerRegistration | undefined
+  >(undefined);
 
   useEffect(() => {
     let serviceWorkerRegistration: ServiceWorkerRegistration | undefined =
@@ -37,6 +40,7 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
             }
           });
           serviceWorkerRegistration = registration;
+          setServiceWorkerRegistration(registration);
         });
     } else {
       console.error('Service workers are not supported in this browser.');
@@ -125,6 +129,8 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
     const fullPath = folderPath + '/' + fileName;
     return {fullFileName: fullPath.substring(1), folder: folderPath}; // remove leading slash
   }
+
+  return {serviceWorkerRegistration};
 }
 
 export default useProjectServiceWorker;

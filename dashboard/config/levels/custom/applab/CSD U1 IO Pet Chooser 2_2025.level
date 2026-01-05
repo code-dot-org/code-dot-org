@@ -220,6 +220,7 @@
     "parent_level_id": 22986,
     "display_name": "Improved Pet Chooser App",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

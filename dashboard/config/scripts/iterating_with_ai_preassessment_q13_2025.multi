@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q13_2025'
+
+question 'How does the choice of field names in a schema affect AI-generated code?'
+
+wrong 'It has no effect; the AI ignores the names and only looks at the data.'
+wrong 'Field names must be written in a secret code to prevent the AI from understanding them.'
+wrong 'AI tools prefer field names that are only one letter long.'
+right 'Clear, descriptive field names help the AI "reason" about the data and generate more accurate logic.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+
+AI uses the context of names (like `user_age` vs `val1`) to understand the purpose of the data. Clear names reduce the risk of the AI "misinterpreting" the data and generating buggy code.
+MARKDOWN

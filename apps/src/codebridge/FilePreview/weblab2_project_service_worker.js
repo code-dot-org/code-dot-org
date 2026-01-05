@@ -24,6 +24,7 @@ function main() {
   const broadcastChannel = new BroadcastChannel(
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
+  const codeDotOrgOrigin = getCodeDotOrgOrigin();
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -81,6 +82,17 @@ function main() {
     return requestedFile;
   }
 
+  // Code.org origin for this environment.
+  function getCodeDotOrgOrigin() {
+    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
+    const match = location.hostname.match(regex);
+    const environment = match && match[1] ? `${match[1]}-` : '';
+    const port =
+      'localhost-' === environment && location.port ? `:${location.port}` : '';
+    const cdn = environment.includes('adhoc') ? 'cdn-' : '';
+    return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
+  }
+
   async function handleProjectRequest(requestedFile, fileData) {
     try {
       const {content, mimeType, url} = fileData;
@@ -91,7 +103,12 @@ function main() {
         });
       }
       if (url) {
-        return await fetch(url);
+        let fetchUrl = url;
+        if (url.startsWith('/level_starter_assets/')) {
+          // We fetch level starter assets from the code.org origin for this environment.
+          fetchUrl = codeDotOrgOrigin + url;
+        }
+        return await fetch(fetchUrl);
       }
       return new Response(content, {
         status: 200,

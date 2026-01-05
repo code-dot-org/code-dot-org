@@ -23,7 +23,8 @@
     "display_name": "Create ordered list",
     "bubble_choice_description": "Use the <ol> tag to create a numbered list",
     "thumbnail_url": "https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

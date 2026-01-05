@@ -76,6 +76,7 @@
     "bubble_choice_description": "Make the LED blink at different speeds",
     "thumbnail_url": "https://images.code.org/35d9718c9b7514c0ba3d35cd18959528-image-1650058484479.png",
     "encrypted_examples": "rQxksGlShZnOacsXscGZCZ1oE/l9XwhOBtWGrgnHXDpHnF4nst18dlUw3NS5\n2D0twW9gOqKp7tMJpt9SRp5iQg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

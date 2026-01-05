@@ -70,6 +70,7 @@
     "teacher_markdown": "**1) Turning on the LED** - Students need to update the `\"Blink\"` if-statement to be lowercase instead of uppercase\r\n\r\n**2) Turning off the LED** - Students need to update the `onBoardEvent` to use the `closed` event instead of the `change` event\r\n\r\n**3) Controlling the Buzzer** - Students need to switch the sliders that the variables are using so they match correctly (ie: the `duration` variable's `getProperty` also uses the `duration` slider)",
     "bubble_choice_description": "This program is supposed to control the LED and buzzer, but it has some problems. See if you can debug the code to make it work correctly!",
     "thumbnail_url": "https://images.code.org/68eddc0b61b1969d88521e5a4ca7ec15-image-1650648032590.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

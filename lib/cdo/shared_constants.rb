@@ -830,6 +830,7 @@ module SharedConstants
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
+    GEMINI_3_PRO_PREVIEW: "gemini-3-pro-preview",
   }
 
   AI_CHAT_CLIENT_TYPES = {
@@ -854,6 +855,13 @@ module SharedConstants
     # The teacher disagreed with our system's flagging of a message as inappropriate.
     PROFANITY_DISAGREE: 'profanity_disagree',
   }
+
+  # Level of access to AI chat features for students in a section.
+  AI_CHAT_ACCESS_LEVELS = {
+    ENABLED: 'enabled',
+    DISABLED: 'disabled',
+    ESSENTIAL_ONLY: 'essential_only',
+  }.freeze
 
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 

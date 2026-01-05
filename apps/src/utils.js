@@ -993,10 +993,11 @@ export function getAlphanumericId() {
  * @returns {Set<string>} - A set of explicitly set 'id' attributes found in the XML.
  */
 export function findExplicitlySetBlockIds(appOptions = null) {
-  if (!appOptions || !appOptions.level) {
-    return [];
-  }
   const explicitlySetIds = new Set();
+
+  if (!appOptions || !appOptions.level) {
+    return explicitlySetIds;
+  }
 
   const blockSources = ['startBlocks', 'toolbox'];
   for (const levelProperty of blockSources) {

@@ -16,6 +16,11 @@
     max-height: 8.5rem;
     height: auto;
     margin-bottom: 1rem;
+
+    // Prevent image from getting cut off in Safari
+    img {
+      object-fit: contain;
+    }
   }
 
   .textContainer {

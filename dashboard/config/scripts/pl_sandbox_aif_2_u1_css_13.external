@@ -82,17 +82,28 @@ markdown <<MARKDOWN
 
 
 
-<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    <i> Selectors point to what you want to style. Properties describe how it should look. Values tell the browser exactly what to do.</i>
-</p>
+<div style="text-align: center;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    <i>
+      <b>Selectors</b> point to what you want to style. <br><br>
+      <b>Properties</b> describe how it should look.<br><br>
+      <b>Values</b> tell the browser exactly what to do.
+    </i>
+  </p>
+</div>
 
-”
 
 
 
 ## What's Next?
 
-#### Now, let’s add some style to your basic website by adding a CSS file.
-
+#### Let's take a look at some common CSS tags and see what they do. 
 
 MARKDOWN

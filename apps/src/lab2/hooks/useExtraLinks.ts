@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
+import Lab2Registry from '../Lab2Registry';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
 
 interface ExtraLinksData {
@@ -16,7 +17,8 @@ async function fetchExtraLinksData(
   permissions: string[],
   levelId: number,
   scriptLevelId?: string,
-  channelId?: string
+  channelId?: string,
+  abortSignal?: AbortSignal
 ): Promise<ExtraLinksData> {
   // Fetch level link data.
   let levelLinkData: ExtraLinksLevelData | undefined;
@@ -39,7 +41,8 @@ async function fetchExtraLinksData(
   if (permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
     const levelProjectDataResponse =
       await HttpClient.fetchJson<ExtraLinksProjectData>(
-        `/projects/${channelId}/extra_links`
+        `/projects/${channelId}/extra_links`,
+        {signal: abortSignal}
       );
     projectLinkData = levelProjectDataResponse.value;
   }
@@ -67,12 +70,34 @@ export const useExtraLinks = (levelId: number) => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetchExtraLinksData(permissions, levelId, scriptLevelId, channelId).then(
-      data => {
-        setExtraLinksData(data);
+    const abortController = new AbortController();
+    fetchExtraLinksData(
+      permissions,
+      levelId,
+      scriptLevelId,
+      channelId,
+      abortController.signal
+    )
+      .then(data => {
+        if (!abortController.signal.aborted) {
+          setExtraLinksData(data);
+          setIsLoading(false);
+        }
+      })
+      .catch(e => {
+        if (e.name === 'AbortError') {
+          // Ignore abort errors
+          return;
+        }
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching extra links data', e as Error, {
+            message: e.message,
+          });
         setIsLoading(false);
-      }
-    );
+      });
+
+    return () => abortController.abort();
   }, [permissions, levelId, scriptLevelId, channelId]);
   const {levelLinkData, projectLinkData} = extraLinksData || {};
 

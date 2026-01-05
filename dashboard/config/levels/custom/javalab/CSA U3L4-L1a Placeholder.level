@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-29T14:10:37.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "display_name": "Edge Case #1",
@@ -352,15 +356,9 @@
       }
     },
     "parent_level_id": 28788,
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-07-29T14:10:37.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-07-29T14:10:37.305+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L1a\\\"\"],\"cloned_from\":\"CSA U3L4-L1a\"},{\"changed_at\":\"2021-07-29 14:10:40 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

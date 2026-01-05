@@ -35,7 +35,7 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: CDO.preview_codeprojects_hostname do
+  constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
     get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
@@ -44,11 +44,12 @@ Dashboard::Application.routes.draw do
   end
 
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
+      get :unit_in_aif, controller: :teacher_dashboard, action: :unit_in_aif
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -736,6 +737,9 @@ Dashboard::Application.routes.draw do
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
+        post :convert_usernames_to_ids
+        post :delete_user_progress
       end
 
       get :styleguide, to: redirect('/styleguide/'), as: 'admin_styleguide'
