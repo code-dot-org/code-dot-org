@@ -551,9 +551,9 @@ describe('StudioApp', () => {
       studioApp().setupChangeHandlers();
 
       studioApp().addChangeHandler(() => (changed = true));
-      Blockly.mainBlockSpace
-        .getCanvas()
-        .dispatchEvent(new Event('blocklyBlockSpaceChange'));
+      Blockly.getMainWorkspace().fireChangeListener(
+        new Blockly.Events.BlockChange()
+      );
 
       expect(changed).to.be.true;
     });
@@ -595,9 +595,9 @@ describe('StudioApp', () => {
 
       studioApp().addChangeHandler(() => (changed1 = true));
       studioApp().addChangeHandler(() => (changed2 = true));
-      Blockly.mainBlockSpace
-        .getCanvas()
-        .dispatchEvent(new Event('blocklyBlockSpaceChange'));
+      Blockly.getMainWorkspace().fireChangeListener(
+        new Blockly.Events.BlockChange()
+      );
 
       expect(changed1).to.be.true;
       expect(changed2).to.be.true;
