@@ -278,6 +278,12 @@ export var blocks = [
     dropdown: ID_DROPDOWN_PARAM_0,
   },
   {
+    func: 'getElementIds',
+    parent: api,
+    category: 'UI controls',
+    type: 'value',
+  },
+  {
     func: 'setPosition',
     parent: api,
     category: 'UI controls',

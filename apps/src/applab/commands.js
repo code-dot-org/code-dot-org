@@ -2111,6 +2111,10 @@ applabCommands.getUserId = function (opts) {
   return Applab.user.labUserId;
 };
 
+applabCommands.getElementIds = function (opts) {
+  return Applab.getIdDropdownForCurrentScreen();
+};
+
 /**
  * How to execute the 'drawChart' function.
  * Delegates most work to ChartApi.drawChart, but a few things are

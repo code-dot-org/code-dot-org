@@ -1,6 +1,13 @@
 import $ from 'jquery';
 
-import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
+import Applab from '@cdo/apps/applab/applab';
+import {
+  rgb,
+  setSelectionRange,
+  openUrl,
+  getElementIds,
+} from '@cdo/apps/applab/commands';
+import * as constants from '@cdo/apps/applab/constants';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
 describe('rgb command', () => {
@@ -174,5 +181,56 @@ describe('openUrl', () => {
     expect($.ajax).toHaveBeenCalledTimes(1);
     openUrl({url: 'code.org.otherdomain.com'});
     expect($.ajax).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe('getElementIds', () => {
+  let testDivApplab, designModeViz, screen, button, label;
+
+  beforeEach(() => {
+    // Set up the DOM structure that App Lab uses
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    designModeViz = document.createElement('div');
+    designModeViz.setAttribute('id', 'designModeViz');
+    testDivApplab.appendChild(designModeViz);
+
+    screen = document.createElement('div');
+    screen.setAttribute('class', 'screen');
+    screen.setAttribute('id', constants.DESIGN_ELEMENT_ID_PREFIX + 'screen1');
+    screen.style.display = 'block'; // Make it the active screen
+    designModeViz.appendChild(screen);
+
+    button = document.createElement('button');
+    button.setAttribute('id', constants.DESIGN_ELEMENT_ID_PREFIX + 'button1');
+    screen.appendChild(button);
+
+    label = document.createElement('label');
+    label.setAttribute('id', constants.DESIGN_ELEMENT_ID_PREFIX + 'label1');
+    screen.appendChild(label);
+
+    // Mock the Applab object with the method we need
+    window.Applab = Applab;
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+  });
+
+  it('returns an array of element IDs on the current screen', () => {
+    const result = getElementIds({});
+    expect(Array.isArray(result)).toBe(true);
+    expect(result).toContain('screen1');
+    expect(result).toContain('button1');
+    expect(result).toContain('label1');
+  });
+
+  it('returns element IDs without the design_ prefix', () => {
+    const result = getElementIds({});
+    result.forEach(id => {
+      expect(id).not.toContain('design_');
+    });
   });
 });

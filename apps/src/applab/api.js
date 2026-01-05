@@ -34,6 +34,10 @@ export function setScreen(screenId) {
   return Applab.executeCmd(null, 'setScreen', {screenId: screenId});
 }
 
+export function getElementIds() {
+  return Applab.executeCmd(null, 'getElementIds', {});
+}
+
 export function button(elementId, text) {
   return Applab.executeCmd(null, 'button', {elementId: elementId, text: text});
 }
