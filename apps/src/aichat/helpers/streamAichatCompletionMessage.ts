@@ -15,7 +15,13 @@ import {getUpdatedMessages} from './getUpdatedMessages';
 
 type StreamEvent =
   | {event: 'start'; request_id: number}
-  | {event: 'delta'; text: string; request_id: number; seq: number}
+  | {
+      event: 'delta';
+      text?: string;
+      thought?: boolean;
+      request_id: number;
+      seq: number;
+    }
   | {event: 'complete'; text: string; request_id: number}
   | {
       event: 'error';
@@ -48,7 +54,7 @@ export function streamAichatCompletionMessage({
   maxStreamTimeMs: number;
   streamCallbacks: {
     onStart?: (requestId: number) => void;
-    onDelta?: (delta: string) => void;
+    onDelta?: (delta: string, thought: boolean) => void;
     onComplete?: (fullText: string) => void;
     onError?: (code: ExecutionStatus, details?: string) => void;
   };
@@ -92,7 +98,7 @@ export function streamAichatCompletionMessage({
               return;
 
             case 'delta': {
-              const {seq, request_id: reqId, text = ''} = data;
+              const {seq, request_id: reqId, text = '', thought = false} = data;
 
               // store the incoming text using its seq and request_id
               deltaBuffer.set(`${seq}_${reqId}`, text);
@@ -101,7 +107,7 @@ export function streamAichatCompletionMessage({
               while (deltaBuffer.has(`${nextSeq}_${reqId}`)) {
                 const deltaText = deltaBuffer.get(`${nextSeq}_${reqId}`)!;
 
-                streamCallbacks.onDelta?.(deltaText);
+                streamCallbacks.onDelta?.(deltaText, thought);
 
                 // cleanup
                 deltaBuffer.delete(`${nextSeq}_${reqId}`);

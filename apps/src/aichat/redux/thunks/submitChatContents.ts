@@ -141,30 +141,66 @@ export const submitChatContents = createAsyncThunk(
     let messages: CompletedChatMessage[] = [];
 
     let hasAddedAssistantMessage = false;
+    let assistantThoughtUpdateId: string | undefined;
 
     let fullText = '';
+    let fullThought = '';
 
     let streamCallbacks: StreamCallbacks | undefined;
     if (isStreaming) {
       streamCallbacks = {
-        onDelta: delta => {
-          fullText += delta;
-          if (hasAddedAssistantMessage) {
-            dispatch(
-              updateChatMessage({
-                updateId: newAssistantMessage.updateId,
-                chatMessageText: fullText,
-              })
-            );
+        onDelta: (delta, thought) => {
+          if (thought) {
+            fullThought += delta;
+            const thoughtHeader = delta.split('**')[1];
+            if (assistantThoughtUpdateId) {
+              dispatch(
+                updateChatMessage({
+                  updateId: assistantThoughtUpdateId,
+                  chatMessageText: thoughtHeader,
+                  thoughtText: fullThought,
+                })
+              );
+            } else {
+              assistantThoughtUpdateId = createUuid();
+              dispatch(
+                addEventToChatEventsCurrent({
+                  role: Role.ASSISTANT,
+                  status: Status.UNKNOWN,
+                  timestamp: Date.now(), // update timestamp
+                  chatMessageText: thoughtHeader,
+                  thoughtText: fullThought,
+                  updateId: assistantThoughtUpdateId,
+                })
+              );
+            }
           } else {
-            hasAddedAssistantMessage = true;
-            dispatch(
-              addEventToChatEventsCurrent({
-                ...newAssistantMessage,
-                timestamp: Date.now(), // update timestamp
-                chatMessageText: fullText,
-              })
-            );
+            if (assistantThoughtUpdateId) {
+              dispatch(
+                updateChatMessage({
+                  updateId: assistantThoughtUpdateId,
+                  chatMessageText: 'Show thinking',
+                })
+              );
+            }
+            fullText += delta;
+            if (hasAddedAssistantMessage) {
+              dispatch(
+                updateChatMessage({
+                  updateId: newAssistantMessage.updateId,
+                  chatMessageText: fullText,
+                })
+              );
+            } else {
+              hasAddedAssistantMessage = true;
+              dispatch(
+                addEventToChatEventsCurrent({
+                  ...newAssistantMessage,
+                  timestamp: Date.now(), // update timestamp
+                  chatMessageText: fullText,
+                })
+              );
+            }
           }
         },
       };

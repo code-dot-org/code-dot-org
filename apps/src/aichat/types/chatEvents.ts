@@ -44,6 +44,7 @@ interface BaseChatMessage extends BaseChatEvent {
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
   /** Necessary to update a pending message to completed or to update chatMessageText */
   updateId?: string;
+  thoughtText?: string;
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */

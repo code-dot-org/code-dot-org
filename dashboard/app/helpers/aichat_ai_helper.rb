@@ -233,12 +233,12 @@ module AichatAiHelper
 
     full_text = +""
 
-    client.stream_response(config, request, context) do |text_delta|
-      next if text_delta.nil? || text_delta == ''
+    client.stream_response(config, request, context) do |event|
+      next if event[:text].nil? || event[:text] == ''
 
-      full_text << text_delta
+      full_text << event[:text] unless event[:thought]
 
-      on_delta&.call(text_delta, nil)
+      on_delta&.call(event)
     end
 
     full_text

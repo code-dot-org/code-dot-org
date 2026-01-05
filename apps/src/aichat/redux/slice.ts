@@ -188,6 +188,7 @@ const aichatSlice = createSlice({
       action: PayloadAction<{
         updateId: string;
         chatMessageText?: ChatMessage['chatMessageText'];
+        thoughtText?: ChatMessage['thoughtText'];
         status?: ChatMessage['status'];
       }>
     ) => {
@@ -202,6 +203,9 @@ const aichatSlice = createSlice({
       }
       if (action.payload.status !== undefined) {
         event.status = action.payload.status;
+      }
+      if (action.payload.thoughtText !== undefined) {
+        event.thoughtText = action.payload.thoughtText;
       }
     },
     setChatMessageSent: (state, action: PayloadAction<boolean>) => {

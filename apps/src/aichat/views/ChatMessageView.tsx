@@ -41,6 +41,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     status,
     role,
     chatMessageText,
+    thoughtText,
     chatMessageDisplayText,
     assets,
     userAddedSelectionContext,
@@ -108,6 +109,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       ) : null;
   }
 
+  if (thoughtText) {
+    footer = null;
+  }
+
   let header;
   if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
     header = (
@@ -153,6 +158,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       isAiTutorVersion={isAiTutorVersion}
       isLastMessage={isLastMessage}
       text={displayText}
+      thoughtText={thoughtText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       header={header}

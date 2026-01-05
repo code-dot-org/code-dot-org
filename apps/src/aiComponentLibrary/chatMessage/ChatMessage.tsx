@@ -1,5 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -17,6 +18,7 @@ import {Role} from './types';
 import moduleStyles from './chat-message.module.scss';
 interface ChatMessageProps {
   text: string;
+  thoughtText?: string;
   role: Role;
   customStyles?: {[label: string]: string};
   header?: React.ReactNode;
@@ -44,6 +46,7 @@ const nonTaRehypeMap = {
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
+  thoughtText,
   role,
   customStyles,
   header,
@@ -53,6 +56,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   isAiTutorVersion = false,
   isLastMessage = false,
 }) => {
+  const [showThinking, setShowThinking] = useState(false);
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
 
   const aiTutorVersionFiles = useAppSelector(
@@ -125,11 +129,37 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           >
             {role === Role.ASSISTANT ? (
               <div className={moduleStyles.assistantMessageContent}>
-                <SafeMarkdown
-                  markdown={text}
-                  rehypeMap={rehypeMap}
-                  openExternalLinksInNewTab
-                />
+                {thoughtText ? (
+                  <>
+                    <button
+                      className={moduleStyles.showThoughtsButton}
+                      type="button"
+                      onClick={() => setShowThinking(!showThinking)}
+                    >
+                      <SafeMarkdown
+                        markdown={text}
+                        rehypeMap={rehypeMap}
+                        openExternalLinksInNewTab
+                      />
+                      <FontAwesomeV6Icon
+                        iconName={showThinking ? 'caret-up' : 'caret-down'}
+                      />
+                    </button>
+                    {showThinking && (
+                      <SafeMarkdown
+                        markdown={thoughtText}
+                        rehypeMap={rehypeMap}
+                        openExternalLinksInNewTab
+                      />
+                    )}
+                  </>
+                ) : (
+                  <SafeMarkdown
+                    markdown={text}
+                    rehypeMap={rehypeMap}
+                    openExternalLinksInNewTab
+                  />
+                )}
                 {showAiTutorVersionActions && (
                   <AiTutorVersionActions files={aiTutorVersionFiles} />
                 )}

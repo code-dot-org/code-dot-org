@@ -203,3 +203,19 @@ $icon-overlay-padding-right: 8px;
   flex-direction: column;
   width: 100%;
 }
+
+.showThoughtsButton {
+  border: unset;
+  background: unset;
+  font-size: unset;
+  margin: unset;
+  padding: unset;
+  color: unset;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-left: 0.5rem;
+  }
+}

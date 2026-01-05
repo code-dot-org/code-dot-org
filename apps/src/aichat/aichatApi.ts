@@ -151,7 +151,7 @@ export interface GetChatRequestResponse {
 
 export interface StreamCallbacks {
   onStart?: (requestId: number) => void;
-  onDelta?: (delta: string) => void;
+  onDelta?: (delta: string, thought?: boolean) => void;
   onComplete?: (fullText: string) => void;
   onError?: (code: ExecutionStatus, details?: string) => void;
 }

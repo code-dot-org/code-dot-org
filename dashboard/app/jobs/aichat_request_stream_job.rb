@@ -26,10 +26,10 @@ class AichatRequestStreamJob < ApplicationJob
       level_id,
       request.project_id,
       request.user_id
-    ) do |delta, raw_event|
-      next if delta.nil? || delta == ''
+    ) do |event|
+      next if event[:text].nil? || event[:text] == ''
       current_seq_id += 1
-      broadcast({event: 'delta', text: delta, raw_event: raw_event, request_id: request.id, seq: current_seq_id})
+      broadcast({event: 'delta', text: event[:text], thought: event[:thought], request_id: request.id, seq: current_seq_id})
     end
 
     model_toxicity = AichatSafetyHelper.find_toxicity(full_response, level_id, 'Assistant')

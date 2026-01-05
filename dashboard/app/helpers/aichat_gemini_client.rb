@@ -22,7 +22,8 @@ class AichatGeminiClient < AichatAiClient
 
     process_sse_stream(http, req) do |parsed_event|
       text_delta = parsed_event.dig('candidates', 0, 'content', 'parts', 0, 'text')
-      block&.call(text_delta) if text_delta
+      is_thought = parsed_event.dig('candidates', 0, 'content', 'parts', 0, 'thought') || false
+      block&.call({text: text_delta, thought: is_thought}) if text_delta
     end
   rescue Net::ReadTimeout
     raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
@@ -82,6 +83,7 @@ class AichatGeminiClient < AichatAiClient
         # Thinking budget documentation: https://ai.google.dev/gemini-api/docs/thinking#set-budget
         # Set to 2000 to give it some thinking tokens but still keep requests from timing out.
         thinkingConfig: {
+          includeThoughts: true,
           thinkingBudget: 2000
         }
       }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
