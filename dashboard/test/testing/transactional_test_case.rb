@@ -16,7 +16,10 @@ module ActiveSupport
         class_attribute :use_transactional_test_case, instance_writer: false, default: false
 
         setup_all do
-          begin_transaction if use_transactional_test_case?
+          if use_transactional_test_case?
+            setup_fixtures
+            begin_transaction
+          end
         end
 
         teardown_all do
