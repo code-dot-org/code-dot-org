@@ -130,7 +130,7 @@ interface MuiButtonProps {
   // Variant (similar to our "type")
   variant?: 'text' | 'outlined' | 'contained';
 
-  // Color (can be extended with custom colors via theme)
+  // Color (extended with custom colors via theme)
   color?:
     | 'primary'
     | 'secondary'
@@ -139,14 +139,11 @@ interface MuiButtonProps {
     | 'success'
     | 'warning'
     | 'inherit'
-    | 'purple'
-    | 'black'
-    | 'gray'
-    | 'white'
-    | 'destructive';
+    | 'white' // Custom color
+    | 'tertiary'; // Custom color (maps to gray)
 
-  // Size (can be extended with custom sizes via theme)
-  size?: 'small' | 'medium' | 'large' | 'xs' | 's' | 'm' | 'l';
+  // Size (extended with custom sizes via theme)
+  size?: 'extraSmall' | 'small' | 'medium' | 'large';
 
   // Content
   children?: ReactNode;
@@ -171,7 +168,10 @@ interface MuiButtonProps {
 
 ```typescript
 interface MuiIconButtonProps {
-  // Similar to Button but optimized for icons
+  // Variant (extended to support contained/outlined/text)
+  variant?: 'contained' | 'outlined' | 'text';
+
+  // Color (extended with custom colors via theme)
   color?:
     | 'default'
     | 'primary'
@@ -179,8 +179,13 @@ interface MuiIconButtonProps {
     | 'error'
     | 'info'
     | 'success'
-    | 'warning';
-  size?: 'small' | 'medium' | 'large';
+    | 'warning'
+    | 'white' // Custom color
+    | 'tertiary'; // Custom color (maps to gray)
+
+  // Size (extended with custom sizes via theme)
+  size?: 'extraSmall' | 'small' | 'medium' | 'large';
+
   disabled?: boolean;
   children?: ReactNode; // Icon goes here
   // ... other ButtonBase props
@@ -189,10 +194,10 @@ interface MuiIconButtonProps {
 
 ### MUI Button Capabilities & Considerations
 
-1. **Loading state** - ✅ MUI Button has `loading` prop (or use `LoadingButton` from `@mui/lab`)
-2. **Icon-only mode** - ✅ Use MUI's `IconButton` component for icon-only buttons
-3. **Custom colors** - ✅ Can be added via theme extensions (see [Custom Colors](#custom-colors))
-4. **Custom sizes** - ✅ Can be added via theme extensions (see [Custom Sizes](#custom-sizes))
+1. **Loading state** - ⚠️ MUI Button doesn't have built-in `loading` prop (requires `LoadingButton` from `@mui/lab`). Currently using custom implementation with spinner icon.
+2. **Icon-only mode** - ✅ Use MUI's `IconButton` component for icon-only buttons (with `variant` prop support)
+3. **Custom colors** - ✅ Added via theme extensions: `white` and `tertiary` (see [Custom Colors](#custom-colors))
+4. **Custom sizes** - ✅ Added via theme extensions: `extraSmall` (see [Custom Sizes](#custom-sizes))
 5. **ForceHover** - ⚠️ No built-in prop, but can be handled with custom className + style overrides
 6. **Link behavior** - ✅ Works automatically when `href` prop is provided
 
@@ -221,35 +226,27 @@ interface MuiIconButtonProps {
 
 ### Size Mapping
 
-**Option 1: Extend MUI Theme with Custom Sizes** (Recommended)
+**Implemented**: Extended MUI Theme with Custom Sizes
 
-- Add `xs`, `s`, `m`, `l` as custom sizes via theme configuration
-- MUI supports extending the size system through theme overrides
+- Added `extraSmall` as custom size via theme configuration
+- Mapping: `xs` → `extraSmall`, `s` → `small`, `m` → `medium`, `l` → `large`
+- All sizes are handled via theme variants
 - See [Custom Sizes](#custom-sizes) section below
-
-**Option 2: Map to Existing MUI Sizes + Overrides**
-
-- Map `xs`/`s` → `small` with custom overrides
-- Map `m` → `medium` with custom overrides
-- Map `l` → `large` with custom overrides
-
-**Recommended**: Option 1 - Add custom sizes to theme for cleaner implementation.
 
 ### Color Mapping Strategy
 
-**Option 1: Extend MUI Theme with Custom Colors** (Recommended)
+**Implemented**: Extended MUI Theme with Custom Colors + Native Props
 
-- Add `purple`, `black`, `gray`, `white`, `destructive` as custom colors via theme
-- MUI supports extending the color palette through theme configuration
+- Added `white` and `tertiary` as custom colors via theme extensions
+- Color mapping:
+  - `purple` → `color="primary"`
+  - `black` → `color="secondary"`
+  - `gray` → `color="tertiary"`
+  - `white` → `color="white"`
+  - `destructive` → `color="error"`
+- All colors are handled via `variant × color` combinations in theme variants
+- Uses native MUI `variant` and `color` props (no data attributes)
 - See [Custom Colors](#custom-colors) section below
-
-**Option 2: Use Data Attributes + Overrides**
-
-- Use `data-color` attribute with style overrides
-- Always use `color="primary"` (or `color="inherit"`)
-- Handle all colors via style overrides
-
-**Recommended**: Option 1 - Extend theme with custom colors for better type safety and cleaner API.
 
 ### Icon Mapping
 
@@ -263,13 +260,13 @@ interface MuiIconButtonProps {
 
 ### Special Props That Need Custom Implementation
 
-| Current Prop             | MUI Equivalent | Implementation Strategy                                                 |
-| ------------------------ | -------------- | ----------------------------------------------------------------------- |
-| `isPending`              | `loading`      | ✅ Use MUI Button's `loading` prop (or `LoadingButton` from `@mui/lab`) |
-| `forceHover`             | ❌ None        | Custom className + style override                                       |
-| `useAsLink`              | `href` prop    | ✅ Automatic when `href` is provided                                    |
-| `buttonTagTypeAttribute` | `type`         | Direct mapping when not link                                            |
-| `analyticsCallback`      | ❌ None        | Custom onClick wrapper                                                  |
+| Current Prop             | MUI Equivalent | Implementation Strategy                                                                      |
+| ------------------------ | -------------- | -------------------------------------------------------------------------------------------- |
+| `isPending`              | Custom         | ⚠️ Custom implementation with spinner icon (MUI Button doesn't have built-in `loading` prop) |
+| `forceHover`             | ❌ None        | Custom className + style override                                                            |
+| `useAsLink`              | `href` prop    | ✅ Automatic when `href` is provided                                                         |
+| `buttonTagTypeAttribute` | `type`         | Direct mapping when not link                                                                 |
+| `analyticsCallback`      | ❌ None        | Custom onClick wrapper                                                                       |
 
 ---
 
@@ -277,102 +274,97 @@ interface MuiIconButtonProps {
 
 ### Custom Colors
 
-MUI allows extending the color palette via theme configuration. Add custom colors in `src/themes/code.org/index.ts`:
+**Implemented**: Custom colors are handled via theme variants using `variant × color` combinations.
+
+Custom colors are added via TypeScript type extensions in `src/themes/code.org/types.d.ts`:
 
 ```typescript
-import {createTheme} from '@mui/material';
-
-const theme = createTheme({
-  // ... existing theme config
-  components: {
-    MuiButton: {
-      variants: [
-        {
-          props: {color: 'purple'},
-          style: {
-            // Custom purple color styles
-          },
-        },
-        {
-          props: {color: 'black'},
-          style: {
-            // Custom black color styles
-          },
-        },
-        // ... other custom colors
-      ],
-    },
-  },
-});
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    white: true;
+    tertiary: true;
+  }
+}
 ```
 
-Or extend the palette directly:
+All color combinations are handled via theme variants in `src/themes/code.org/styleOverrides/button.tsx`:
 
 ```typescript
-const theme = createTheme({
-  palette: {
-    purple: {
-      main: 'var(--background-brand-purple-primary)',
-      dark: 'var(--background-brand-purple-strong)',
-      contrastText: 'var(--text-neutral-white-fixed)',
-    },
-    black: {
-      main: 'var(--background-neutral-primary-inverse)',
-      dark: 'var(--background-neutral-octonary)',
-      contrastText: 'var(--text-neutral-inverse)',
-    },
-    // ... other colors
-  },
-});
+// Example: Contained variant × color combinations
+{
+  props: {variant: 'contained', color: 'primary'},  // purple
+  style: { /* styles */ },
+},
+{
+  props: {variant: 'contained', color: 'secondary'},  // black
+  style: { /* styles */ },
+},
+{
+  props: {variant: 'contained', color: 'white'},
+  style: { /* styles */ },
+},
+{
+  props: {variant: 'contained', color: 'error'},  // destructive
+  style: { /* styles */ },
+},
+// ... similar for outlined and text variants
 ```
+
+**Color Mapping:**
+
+- `purple` → `color="primary"`
+- `black` → `color="secondary"`
+- `gray` → `color="tertiary"`
+- `white` → `color="white"`
+- `destructive` → `color="error"`
 
 ### Custom Sizes
 
-MUI allows extending the size system via theme configuration:
+**Implemented**: Custom sizes are added via theme variants.
+
+Custom sizes are added via TypeScript type extensions in `src/themes/code.org/types.d.ts`:
 
 ```typescript
-const theme = createTheme({
-  components: {
-    MuiButton: {
-      variants: [
-        {
-          props: {size: 'xs'},
-          style: {
-            padding: '0.125rem 0.5rem',
-            gap: '0.25rem',
-            fontSize: '...',
-            // ... xs size styles
-          },
-        },
-        {
-          props: {size: 's'},
-          style: {
-            padding: '0.3125rem 1rem',
-            gap: '0.5rem',
-            // ... s size styles
-          },
-        },
-        {
-          props: {size: 'm'},
-          style: {
-            padding: '0.5rem 1rem',
-            gap: '0.5rem',
-            // ... m size styles
-          },
-        },
-        {
-          props: {size: 'l'},
-          style: {
-            padding: '0.625rem 1rem',
-            gap: '0.5rem',
-            // ... l size styles
-          },
-        },
-      ],
-    },
-  },
-});
+declare module '@mui/material/Button' {
+  interface ButtonPropsSizeOverrides {
+    extraSmall: true;
+    small: true;
+    medium: true;
+    large: true;
+  }
+}
 ```
+
+Size variants are implemented in `src/themes/code.org/styleOverrides/button.tsx`:
+
+```typescript
+{
+  props: {size: 'extraSmall'},  // xs
+  style: {
+    padding: '0.125rem 0.5rem',
+    gap: '0.25rem',
+    fontSize: '0.75rem',
+    // ... xs size styles
+  },
+},
+{
+  props: {size: 'small'},  // s
+  style: {
+    padding: '0.3125rem 1rem',
+    gap: '0.5rem',
+    fontSize: '0.875rem',
+    // ... s size styles
+  },
+},
+// ... similar for medium and large
+```
+
+**Size Mapping:**
+
+- `xs` → `size="extraSmall"`
+- `s` → `size="small"`
+- `m` → `size="medium"`
+- `l` → `size="large"`
 
 ---
 
@@ -444,10 +436,12 @@ const SIZE_OVERRIDES = {
 
 ### Type × Color Override Structure
 
-For each combination, we need:
+**Implemented**: All type × color combinations are handled via theme variants using native MUI props.
+
+For each combination, we define:
 
 - Default state colors
-- Hover state colors
+- Hover state colors (including `forceHover` support)
 - Active/pressed state colors
 - Disabled state colors
 - Focus state outline
@@ -455,12 +449,13 @@ For each combination, we need:
 Example structure:
 
 ```typescript
-// Primary Purple
-'&.MuiButton-contained': {
-  '&[data-color="purple"]': {
+// Contained (primary) variant × color combinations
+{
+  props: {variant: 'contained', color: 'primary'},  // purple
+  style: {
     backgroundColor: 'var(--background-brand-purple-primary)',
     color: 'var(--text-neutral-white-fixed)',
-    '&:hover': {
+    '&:hover, &.force-hover, &[data-force-hover="true"]': {
       backgroundColor: 'var(--background-brand-purple-strong)',
     },
     '&.Mui-disabled': {
@@ -468,8 +463,19 @@ Example structure:
       color: 'var(--text-neutral-disabled-inverse)',
     },
   },
-}
+},
+{
+  props: {variant: 'contained', color: 'secondary'},  // black
+  style: {
+    backgroundColor: 'var(--background-neutral-primary-inverse)',
+    color: 'var(--text-neutral-inverse)',
+    // ... hover, disabled states
+  },
+},
+// ... similar for all variant × color combinations
 ```
+
+**Note**: All styling is done via theme variants using native `variant` and `color` props. No data attributes are used.
 
 ---
 
@@ -502,8 +508,10 @@ Create `ButtonMui.tsx` that:
 2. **Icon-Only Mode**
 
    - Use MUI's `IconButton` component instead of regular `Button`
+   - IconButton supports `variant` prop (contained/outlined/text) matching Button
    - Apply custom size/color via theme extensions
    - Handle icon-only padding via style overrides
+   - Uses same `variant × color` combinations as Button
 
 3. **Force Hover**
 
@@ -551,8 +559,8 @@ Create `ButtonMui.tsx` that:
 ```tsx
 <Button
   variant="contained"
-  size="medium"
-  data-color="purple" // Custom prop for color override
+  color="primary" // purple maps to primary
+  size="medium" // m maps to medium
   onClick={handleClick}
 >
   Click Me
@@ -580,10 +588,10 @@ Create `ButtonMui.tsx` that:
 ```tsx
 <Button
   variant="outlined"
-  size="large"
-  data-color="black"
-  startIcon={<MuiIconAdapter iconName="save" iconStyle="solid" />}
-  endIcon={<MuiIconAdapter iconName="arrow-right" iconStyle="solid" />}
+  color="secondary" // black maps to secondary
+  size="large" // l maps to large
+  startIcon={<FontAwesomeV6Icon iconName="save" iconStyle="solid" />}
+  endIcon={<FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />}
   onClick={handleSave}
 >
   Save
@@ -609,12 +617,13 @@ Create `ButtonMui.tsx` that:
 
 ```tsx
 <IconButton
-  color="black" // Custom color via theme
-  size="m" // Custom size via theme
+  variant="text" // tertiary maps to text
+  color="secondary" // black maps to secondary
+  size="medium" // m maps to medium
   onClick={handleClose}
   aria-label="Close"
 >
-  <MuiIconAdapter iconName="close" iconStyle="solid" />
+  <FontAwesomeV6Icon iconName="close" iconStyle="solid" />
 </IconButton>
 ```
 
@@ -633,29 +642,38 @@ Create `ButtonMui.tsx` that:
 />
 ```
 
-**MUI Equivalent (using loading prop):**
+**MUI Equivalent (custom implementation):**
 
 ```tsx
 <Button
   variant="contained"
-  color="purple" // Custom color via theme
-  size="m" // Custom size via theme
-  loading={isPending}
+  color="primary" // purple maps to primary
+  size="medium" // m maps to medium
+  disabled={isPending} // Disable when pending
+  startIcon={
+    isPending ? (
+      <FontAwesomeV6Icon
+        iconName="spinner"
+        iconStyle="solid"
+        animationType="spin"
+      />
+    ) : undefined
+  }
   onClick={handleSubmit}
 >
   Submit
 </Button>
 ```
 
-**Or using LoadingButton from @mui/lab:**
+**Note**: MUI Button doesn't have a built-in `loading` prop. The current implementation uses a custom spinner icon and disabled state. To use MUI's `LoadingButton`, you would need to install `@mui/lab`:
 
 ```tsx
 import {LoadingButton} from '@mui/lab';
 
 <LoadingButton
   variant="contained"
-  color="purple"
-  size="m"
+  color="primary"
+  size="medium"
   loading={isPending}
   onClick={handleSubmit}
 >
@@ -684,8 +702,8 @@ import {LoadingButton} from '@mui/lab';
 ```tsx
 <Button
   variant="contained"
-  color="purple" // Custom color via theme
-  size="m" // Custom size via theme
+  color="primary" // purple maps to primary
+  size="medium" // m maps to medium
   href="/learn"
   target="_blank"
   rel="noopener noreferrer"
@@ -703,51 +721,55 @@ import {LoadingButton} from '@mui/lab';
 
 ### Theme Extensions
 
-- [ ] Add custom colors to theme (purple, black, gray, white, destructive)
-- [ ] Add custom sizes to theme via variants (xs, s, m, l)
-- [ ] Configure IconButton custom colors and sizes
+- [x] Add custom colors to theme (`white` and `tertiary` via type extensions)
+- [x] Add custom sizes to theme via variants (`extraSmall` for xs)
+- [x] Configure IconButton custom colors and sizes
+- [x] Add `variant` prop support for IconButton (contained/outlined/text)
+- [x] Implement all `variant × color` combinations via theme variants
 
-### Style Overrides (`button.ts`)
+### Style Overrides (`button.tsx` and `iconButton.tsx`)
 
-- [ ] Implement primary × color combinations (purple, black, white, destructive)
-- [ ] Implement secondary × color combinations (purple, black, gray, white, destructive)
-- [ ] Implement tertiary × color combinations (purple, black, white, gray, destructive)
-- [ ] Add hover states for all combinations
-- [ ] Add active/pressed states
-- [ ] Add focus-visible states
-- [ ] Add disabled states
-- [ ] Handle icon-only mode padding (for IconButton)
-- [ ] Handle icon sizing
-- [ ] Handle forceHover className
-- [ ] Configure loading spinner appearance
+- [x] Implement primary × color combinations (purple, black, white, destructive) via variants
+- [x] Implement secondary × color combinations (purple, black, gray, white, destructive) via variants
+- [x] Implement tertiary × color combinations (purple, black, white, gray, destructive) via variants
+- [x] Add hover states for all combinations (including `forceHover` support)
+- [x] Add active/pressed states
+- [x] Add focus-visible states
+- [x] Add disabled states
+- [x] Handle icon-only mode padding (for IconButton)
+- [x] Handle icon sizing
+- [x] Handle forceHover className
+- [x] Configure loading spinner appearance (custom implementation)
+- [x] Remove all data attribute selectors (using native MUI props only)
 
-### Wrapper Component (`ButtonMui.tsx`)
+### Prop Mapping Function (`buttonPropsToMui.tsx`)
 
-- [ ] Map `type` → `variant`
-- [ ] Map `size` → custom size (xs, s, m, l) via theme
-- [ ] Map `color` → custom color (purple, black, etc.) via theme
-- [ ] Map `iconLeft` → `startIcon`
-- [ ] Map `iconRight` → `endIcon`
-- [ ] Handle `isIconOnly` → use `IconButton` component
-- [ ] Handle `isPending` → `loading` prop
-- [ ] Handle `forceHover` prop
-- [ ] Handle `useAsLink` → just pass `href` (MUI handles automatically)
-- [ ] Handle `buttonTagTypeAttribute` → `type`
-- [ ] Handle `analyticsCallback` in onClick wrapper
-- [ ] Preserve all other props
+- [x] Map `type` → `variant` (primary→contained, secondary→outlined, tertiary→text)
+- [x] Map `size` → custom size (xs→extraSmall, s→small, m→medium, l→large)
+- [x] Map `color` → MUI color (purple→primary, black→secondary, gray→tertiary, white→white, destructive→error)
+- [x] Map `iconLeft` → `startIcon`
+- [x] Map `iconRight` → `endIcon`
+- [x] Handle `isIconOnly` → use `IconButton` component with `variant` prop
+- [x] Handle `isPending` → custom spinner icon implementation
+- [x] Handle `forceHover` prop (via className)
+- [x] Handle `useAsLink` → just pass `href` (MUI handles automatically)
+- [x] Handle `buttonTagTypeAttribute` → `type`
+- [x] Handle `analyticsCallback` in onClick wrapper
+- [x] Preserve all other props
+- [x] Use native MUI props (no data attributes)
 
 ### Testing
 
-- [ ] All type × color combinations render correctly
-- [ ] All sizes (xs, s, m, l) render correctly
-- [ ] Icons render with correct sizing
-- [ ] Icon-only mode works
-- [ ] Pending state works
-- [ ] Hover states work
-- [ ] Focus states work
-- [ ] Active states work
-- [ ] Disabled states work
-- [ ] Link behavior works
+- [x] All type × color combinations render correctly
+- [x] All sizes (xs, s, m, l) render correctly
+- [x] Icons render with correct sizing
+- [x] Icon-only mode works
+- [x] Pending state works
+- [x] Hover states work
+- [x] Focus states work
+- [x] Active states work
+- [x] Disabled states work
+- [x] Link behavior works
 - [ ] Analytics callback works
 - [ ] Force hover works
 
@@ -755,17 +777,19 @@ import {LoadingButton} from '@mui/lab';
 
 ## Notes
 
-1. **Color System**: Since MUI's color system doesn't match ours, we'll use `data-color` attributes and style overrides to handle all color combinations.
+1. **Color System**: ✅ **Implemented** - Custom colors are handled via theme extensions (`white` and `tertiary`) and native MUI `color` prop. All color combinations are styled via `variant × color` theme variants. No data attributes are used.
 
-2. **Size System**: MUI only has 3 sizes, but we have 4. We'll use style overrides with custom data attributes to handle all 4 sizes.
+2. **Size System**: ✅ **Implemented** - Custom size `extraSmall` is added via theme extension. All sizes (xs→extraSmall, s→small, m→medium, l→large) are handled via theme variants. No data attributes are used.
 
-3. **Pending State**: MUI doesn't have built-in loading state. We'll need to implement this with a custom spinner and disabled state.
+3. **Pending State**: ⚠️ **Custom Implementation** - MUI Button doesn't have a built-in `loading` prop. Currently using a custom implementation with spinner icon and disabled state. Can optionally use `LoadingButton` from `@mui/lab` if needed.
 
-4. **Icon Integration**: Use `MuiIconAdapter` or similar to bridge FontAwesome icons with MUI's icon system.
+4. **Icon Integration**: ✅ **Implemented** - Directly using `FontAwesomeV6Icon` component for `startIcon` and `endIcon`. No adapter needed.
 
-5. **Backward Compatibility**: The wrapper component should maintain the exact same API as the current Button, so existing code doesn't need to change.
+5. **IconButton Variant Support**: ✅ **Implemented** - IconButton now supports `variant` prop (contained/outlined/text) matching Button, allowing consistent styling between Button and IconButton.
 
-6. **Deprecation**: Secondary purple button is deprecated in current implementation - consider removing or marking clearly in migration.
+6. **Native MUI Props**: ✅ **Implemented** - All styling uses native MUI `variant` and `color` props. No data attributes (`data-color`, `data-type`, `data-size`) are used.
+
+7. **Deprecation**: Secondary purple button is deprecated in current implementation - still supported via `variant="outlined"` + `color="primary"` but marked as deprecated in SCSS.
 
 ---
 
