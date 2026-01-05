@@ -94,6 +94,7 @@ export const HTMLPreview: React.FC = () => {
   // The legacy preview is behind an experiment flag. We pass this flag
   // through to the inner iframe via a query string so it knows whether or not to use the legacy preview.
   // TODO: remove this and use the new preview by default once the new preview has been out for a few days.
+  // https://codedotorg.atlassian.net/browse/AFL-406
   const previewQueryString = useMemo(() => {
     const useLegacyPreview = experiments.isEnabledAllowingQueryString(
       experiments.WEBLAB2_LEGACY_PREVIEW
