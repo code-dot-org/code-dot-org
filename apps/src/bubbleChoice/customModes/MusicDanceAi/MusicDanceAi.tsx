@@ -194,7 +194,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
-          levelProperties.isProjectLevel || false,
+          false, // isStandaloneProjectLevel is always false here.
           userId || undefined,
           scriptId || undefined,
           scriptLevelId || undefined
