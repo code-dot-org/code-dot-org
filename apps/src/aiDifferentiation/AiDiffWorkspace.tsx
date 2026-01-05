@@ -46,7 +46,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const fetchThreads = useCallback(() => {
     asyncFetchThreads().then(response => {
       setThreads(
-        response.sort((a, b) => {
+        response?.sort((a, b) => {
           return a.updatedAt > b.updatedAt ? -1 : 1;
         })
       );
