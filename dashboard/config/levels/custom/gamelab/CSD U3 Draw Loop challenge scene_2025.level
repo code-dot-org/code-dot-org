@@ -104,6 +104,7 @@
     "thumbnail_url": "https://images.code.org/38d08a85b02208914a77f7419609dbb3-jumping animals.gif",
     "validation_enabled": "false",
     "start_blocks": "// Setting Frame Rate\r\nWorld.frameRate = 5;\r\n\r\n//1) Create your sprite for the background\r\n\r\n//2) Create your sprites for the cow, elephant, and pig and set the x and y location for each.\r\n\r\n//3) Set the animation for each sprite.\r\n\r\n//4) Resize your animals.\r\n\r\n//5) Update the appropriate sprite property in the draw loop to \r\n//make the animals appear like they are jumping on the couch like the image\r\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

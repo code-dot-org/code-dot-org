@@ -37,9 +37,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'counts puzzle position and total in lesson' do
-    # default script
-    sl = Unit.twenty_hour_unit.script_levels[1]
-    assert_equal 1, sl.position
+    # Create a test script with known structure
+    test_unit = create(:unit, :with_levels, lessons_count: 1, levels_count: 20)
+    sl = test_unit.script_levels[1]
+    assert_equal 2, sl.position
     assert_equal 20, sl.lesson_total
 
     # new script
@@ -822,8 +823,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    script_level = ScriptLevel.cache_find(Unit.twenty_hour_unit.script_levels[0].id)
-    assert_equal(Unit.twenty_hour_unit.script_levels[0], script_level)
+    script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
+    assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
 
     multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
     script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)

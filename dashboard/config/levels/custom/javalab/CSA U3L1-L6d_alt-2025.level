@@ -370,7 +370,8 @@
       }
     },
     "video_key": "csa_one_dimensional_arrays",
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:47:50.980+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L6d_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L1-L6d_pilot-2025\"}]"

@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U4L7-Nested If PBT_2023",
     "teacher_markdown": "When `16` is passed as the argument to the `checkAge()` method, `\"Teenager\"` is printed to the console. The first `if` statement checks if `age` is less than or equal to `18`. The second nested `if-else` statement checks if `age` is less than or equal to `13`. Since it is not, the `else` condition is executed.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-02-17T18:50:57.927+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L2_2023\\\"\"],\"cloned_from\":\"CSA U4L7-L2_2023\"},{\"changed_at\":\"2023-02-17 18:50:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 19:17:55 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-07 19:29:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

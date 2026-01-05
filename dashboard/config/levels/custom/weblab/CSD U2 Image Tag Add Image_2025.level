@@ -25,7 +25,8 @@
     "display_name": "Add new image",
     "bubble_choice_description": "Add an image to this recipe.",
     "thumbnail_url": "https://images.code.org/75eabeb2e4d16ed2e284ce49341d30b7-image-1564091283732.jpg",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

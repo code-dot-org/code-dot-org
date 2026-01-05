@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q14_2025'
+
+question 'What is the result of "chaining" a `.filter()` and a `.map()` method together?'
+
+right 'The data is first narrowed down, and then only that smaller subset is transformed into HTML'
+wrong 'The original array is deleted, and two new arrays are created in its place.'
+wrong 'The code will fail because JavaScript can only handle one array method at a time.'
+wrong 'The `.map()` method will run first, followed by the `.filter()` method.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 10
+
+Chaining allows data to flow through a "pipeline." The first method (filter) passes its result to the second method (map), allowing for complex operations in a single line of code.
+MARKDOWN

@@ -781,7 +781,7 @@
     "thumbnail_url": "https://images.code.org/c62aba06beefcd33f43cdf0d079bad45-U1L12-L4a.gif",
     "video_key": "csa_two_way_selection_and_not",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T23:27:09.930+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12-L4a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L12-L4a_pilot-2025\"}]"

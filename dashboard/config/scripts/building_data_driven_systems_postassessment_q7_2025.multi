@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q7_2025'
+
+question 'Which of the following best represents "Object Properties" being used to address a specific user need?'
+
+wrong 'Using an array to store a list of names.'
+right 'Adding a `low_vision_mode: true` property to a user\'s settings object to trigger high-contrast styles.'
+wrong 'Using a variable to store the total number of users.'
+wrong 'Naming a function `calculateTotal()` to show the price of a cart.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+
+Object properties are used to model specific attributes of an entity. Adding a property like `low_vision_mode` directly serves a specific user accessibility need.
+MARKDOWN

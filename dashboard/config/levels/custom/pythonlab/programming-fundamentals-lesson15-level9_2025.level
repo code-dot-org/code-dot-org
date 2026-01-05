@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Combine Multiple Functions\r\n\r\n### Plan your game setup\r\n- Think about your game's story\r\n\t- Who is the main character? \r\n\t- Who is their sidekick? \r\n    - What is the story's setting? \r\n    - What task or action do they perform to win? \r\n\r\n### Write your program\r\n- Use at least three functions.\r\n- Call each function more than once to create a story that introduces the main character, sidekick, and world.\r\n\r\n---\r\n\r\n**TAG Feedback**\r\n\r\nSwap programs with a partner and provide TAG feedback on a sticky note\r\n   - T (Tell): Tell something you liked about their program\r\n   - A (Ask): Ask a question about their program\r\n   - G (Give): Give a suggestion for improvement.\r\n\r\n::: details [**See TAG Feedback Example Here**]\r\n   - T: *I liked how you alternated the colors red and blue.*\r\n   - A: *Why did you decide to move forward twice before turning right?*\r\n   - G: *You could try adding another color to your pattern.*\r\n:::",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

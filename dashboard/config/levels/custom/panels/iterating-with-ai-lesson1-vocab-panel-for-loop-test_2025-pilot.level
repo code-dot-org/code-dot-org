@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-22T17:39:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# For Loop\n\nA **for loop** repeats a set of steps a specific number of times. \n\nFor example, this **for loop** prints out the numbers 1-10:\n\n```\nfor (let i = 1; i <= 10; i += 1) {\n  console.log(i)\n}\n```",
+        "imageUrl": "https://images.code.org/8fe92e0edf5b388555f4d21cd0c0f4e4-forloop.gif",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:39:29.036+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-vocab-panel-for-loop-test-2025\"}]"
+}]]></config>
+</Panels>

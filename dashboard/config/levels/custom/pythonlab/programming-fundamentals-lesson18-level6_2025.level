@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "You can create a condition based on the user's input. \r\n\r\n## Do This: \r\n- Run the code and test it with different inputs.\r\n- **Modify**: Add a new ingredient (flower) and a message for it.\r\n\r\n\r\n**Hint**: \r\nRemember to add a `flower` option to the choices the user can ask for. \r\n\r\n    elif ingredient == \"flower\":\r\n        flower_choice()",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
