@@ -7,7 +7,7 @@ import {Callback, LifecycleEvent} from '../LifecycleNotifier';
 // and remove it when the component unmounts.
 export default function useLifecycleNotifier<T extends LifecycleEvent>(
   event: T,
-  callback: Callback<T>
+  callback: Callback<T>,
 ) {
   useEffect(() => {
     LabRegistry.lifecycleNotifier.addListener(event, callback);

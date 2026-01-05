@@ -1,4 +1,4 @@
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import GenericDialog, {
   GenericDialogProps,
@@ -14,7 +14,7 @@ export type GenericAlertDialogProps = Pick<GenericDialogProps, 'title'> &
  * A body component or message
  * A confirm "OK" button
  */
-const GenericAlertDialog: React.FunctionComponent<GenericAlertDialogProps> = ({
+const GenericAlertDialog: FunctionComponent<GenericAlertDialogProps> = ({
   title,
   message,
   bodyComponent,

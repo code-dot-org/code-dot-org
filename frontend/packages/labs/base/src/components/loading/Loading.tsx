@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -11,17 +11,20 @@ export interface LoadingProps {
   isLoading: boolean;
 }
 
-const Loading: React.FunctionComponent<LoadingProps> = ({
+const Loading: FunctionComponent<LoadingProps> = ({
   isLoading,
 }: LoadingProps) => {
-  const noFade = (typeof window !== 'undefined' ? window.location.href.includes('lab2-no-fade') : false);
+  const noFade =
+    typeof window !== 'undefined'
+      ? window.location.href.includes('lab2-no-fade')
+      : false;
   const overlayStyle: string = noFade
     ? isLoading
       ? moduleStyles.noFadeLoading
       : moduleStyles.noFadeLoaded
     : isLoading
-    ? moduleStyles.fadeLoading
-    : moduleStyles.fadeLoaded;
+      ? moduleStyles.fadeLoading
+      : moduleStyles.fadeLoaded;
 
   const isShare = !!useApp().lab?.isShareView;
 
@@ -31,13 +34,11 @@ const Loading: React.FunctionComponent<LoadingProps> = ({
       className={classNames(
         moduleStyles.solidBlock,
         overlayStyle,
-        isShare && moduleStyles.shareViewOverlay
+        isShare && moduleStyles.shareViewOverlay,
       )}
     >
       {isLoading && (
-        <div
-          className={moduleStyles.slowLoadContainer}
-        >
+        <div className={moduleStyles.slowLoadContainer}>
           <div className={moduleStyles.spinnerContainer}>
             <FontAwesomeV6Icon
               iconName="spinner"

@@ -1,8 +1,9 @@
+import type {FunctionComponent} from 'react';
+
 import {
   BodyThreeText,
   Heading1,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
 
 import {
   LevelPredictSettings,
@@ -17,7 +18,7 @@ interface PredictSolutionProps {
   predictSettings: LevelPredictSettings | undefined;
 }
 
-export const PredictSolution: React.FunctionComponent<PredictSolutionProps> = ({
+export const PredictSolution: FunctionComponent<PredictSolutionProps> = ({
   predictSettings,
 }) => {
   if (!predictSettings?.solution) {

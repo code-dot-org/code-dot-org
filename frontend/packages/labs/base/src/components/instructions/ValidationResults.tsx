@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import {
   BodyFourText,
@@ -38,25 +38,25 @@ function getStatusForResult(result: ValidationResult) {
 function getTranslatedResult(result: ValidationResult) {
   switch (result.result) {
     case 'PASS':
-      return "Pass";
+      return 'Pass';
     case 'FAIL':
-      return "Fail";
+      return 'Fail';
     case 'SKIP':
-      return "Skip";
+      return 'Skip';
     case 'EXPECTED_FAILURE':
-      return "Expected failure";
+      return 'Expected failure';
     case 'UNEXPECTED_SUCCESS':
-      return "Unexpected success";
+      return 'Unexpected success';
     case 'ERROR':
-      return "Error";
+      return 'Error';
   }
 }
 
-const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
+const ValidationResults: FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {
   const {validationResults} = useAppSelector(
-    state => state.lab.validationState
+    state => state.lab.validationState,
   );
 
   if (!validationResults) {
@@ -65,7 +65,7 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
 
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
-      <Heading4>{"Validation Results"}</Heading4>
+      <Heading4>{'Validation Results'}</Heading4>
       <div>
         <table className={moduleStyles.validationResultsTable}>
           <thead>

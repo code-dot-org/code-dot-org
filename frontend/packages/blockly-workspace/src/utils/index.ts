@@ -50,7 +50,10 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
   return code;
 }
 
-export function updateBlockEnabled(block: Blockly.Block, reason: string = Blockly.constants.MANUALLY_DISABLED) {
+export function updateBlockEnabled(
+  block: Blockly.Block,
+  reason: string = Blockly.constants.MANUALLY_DISABLED,
+) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
@@ -64,7 +67,7 @@ export function updateBlockEnabled(block: Blockly.Block, reason: string = Blockl
     } else if (block.outputConnection || block.previousConnection) {
       let currentBlock: Blockly.Block | null = block;
       do {
-        currentBlock.setDisabledReason(true, reason)
+        currentBlock.setDisabledReason(true, reason);
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }

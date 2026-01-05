@@ -1,4 +1,4 @@
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
@@ -18,7 +18,7 @@ export type GenericConfirmationDialogProps = Required<
  * The title, message, and confirm button text can be customized.
  * If no confirm button text is provided, the default text is "OK" (translatable).
  */
-const GenericConfirmationDialog: React.FunctionComponent<
+const GenericConfirmationDialog: FunctionComponent<
   GenericConfirmationDialogProps
 > = ({
   title,

@@ -19,7 +19,7 @@ async function getAuthenticityToken(): Promise<string> {
 async function retrieveToken(): Promise<string> {
   // Retrieve token from DOM if present
   const tokenContainer = document.querySelector<HTMLMetaElement>(
-    'meta[name="csrf-token"]'
+    'meta[name="csrf-token"]',
   );
 
   if (tokenContainer && tokenContainer.content) {

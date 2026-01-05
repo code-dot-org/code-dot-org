@@ -1,5 +1,6 @@
 import {FocusTrap} from 'focus-trap-react';
-import React, {useMemo} from 'react';
+import type {FunctionComponent, ReactNode} from 'react';
+import {useMemo} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
@@ -9,10 +10,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 
 import {useDialogControl} from '@lab-base/contexts';
-import {
-  useEnterKeyboardTrap,
-  useEscapeKeyboardTrap,
-} from '@lab-base/hooks';
+import {useEnterKeyboardTrap, useEscapeKeyboardTrap} from '@lab-base/hooks';
 
 import {DialogCloseFunctionType, DialogCloseActionType} from '../types';
 
@@ -23,7 +21,7 @@ export type dialogCallback = (args?: unknown) => void;
 type GenericDialogTitleProps =
   | {
       title?: never;
-      titleComponent?: React.ReactNode;
+      titleComponent?: ReactNode;
     }
   | {
       title?: string;
@@ -33,7 +31,7 @@ type GenericDialogTitleProps =
 export type GenericDialogBodyProps =
   | {
       message?: never;
-      bodyComponent?: React.ReactNode;
+      bodyComponent?: ReactNode;
     }
   | {
       message?: string;
@@ -96,10 +94,10 @@ const useButtonCallback = ({
 }) =>
   useMemo(
     () => getButtonCallback({closeDialog, closeType, callback, disabled}),
-    [closeDialog, closeType, callback, disabled, getButtonCallback]
+    [closeDialog, closeType, callback, disabled, getButtonCallback],
   );
 
-const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
+const GenericDialog: FunctionComponent<GenericDialogProps> = ({
   buttons,
   title,
   titleComponent,
@@ -170,7 +168,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 type="secondary"
                 disabled={buttons.cancel.disabled}
                 color={theme === 'Dark' ? 'white' : 'gray'}
-                text={buttons.cancel.text || "Cancel"}
+                text={buttons.cancel.text || 'Cancel'}
               />
             ) : (
               <div />
@@ -192,7 +190,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 disabled={buttons?.confirm?.disabled}
                 type="primary"
                 color={buttons?.confirm?.destructive ? 'destructive' : 'purple'}
-                text={buttons?.confirm?.text || "OK"}
+                text={buttons?.confirm?.text || 'OK'}
                 id="uitest-generic-dialog-ok"
               />
             </div>

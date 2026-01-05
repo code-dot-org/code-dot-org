@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import Alert from '@code-dot-org/component-library/alert';
 import Markdown from '@code-dot-org/markdown';
@@ -12,7 +12,7 @@ import moduleStyles from './predict.module.scss';
 /**
  * A simple prompt reminding users to click the Run button
  */
-const PredictQuestionRunPrompt: React.FunctionComponent = () => {
+const PredictQuestionRunPrompt: FunctionComponent = () => {
   const hasSelected = useAppSelector(state => !!state.predictLevel.response);
   const isLocked = useAppSelector(isPredictAnswerLocked);
   if (hasSelected && !isLocked) {
@@ -20,7 +20,7 @@ const PredictQuestionRunPrompt: React.FunctionComponent = () => {
       <div
         className={classNames(
           moduleStyles.predictQuestionContainer,
-          moduleStyles.runPromptContainer
+          moduleStyles.runPromptContainer,
         )}
       >
         <Markdown

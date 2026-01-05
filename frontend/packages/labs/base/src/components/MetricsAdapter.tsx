@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+import type {FunctionComponent} from 'react';
+import {useEffect} from 'react';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import LabRegistry from '../LabRegistry';
@@ -10,14 +11,14 @@ import {useAppSelector} from '../redux/store';
  * Reports errors whenever the pageError state is updated, and reports a LevelLoad
  * metric when a new level is loaded.
  */
-const MetricsAdapter: React.FunctionComponent = () => {
+const MetricsAdapter: FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const currentLevelId = useAppSelector(
-    state => state.progress.currentLevelId || undefined
+    state => state.progress.currentLevelId || undefined,
   );
   const scriptId = useAppSelector(
-    state => state.progress.scriptId || undefined
+    state => state.progress.scriptId || undefined,
   );
   const pageError = useAppSelector(state => state.lab.pageError);
 
@@ -44,7 +45,11 @@ const MetricsAdapter: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (pageError) {
-      LabRegistry.metricsReporter.logError(pageError.errorMessage, pageError.error, pageError.details);
+      LabRegistry.metricsReporter.logError(
+        pageError.errorMessage,
+        pageError.error,
+        pageError.details,
+      );
     }
   }, [pageError]);
 
@@ -53,18 +58,18 @@ const MetricsAdapter: React.FunctionComponent = () => {
     levelProperties,
     _channel,
     _initialSources,
-    isReadOnly
+    isReadOnly,
   ) => {
     LabRegistry.metricsReporter.incrementCounter('LevelLoad', [
-        {
-          name: 'Type',
-          value: levelProperties?.isProjectLevel ? 'Project' : 'Level',
-        },
-        {
-          name: 'Mode',
-          value: isShareView ? 'Share' : isReadOnly ? 'View' : 'Edit',
-        },
-      ]);
+      {
+        name: 'Type',
+        value: levelProperties?.isProjectLevel ? 'Project' : 'Level',
+      },
+      {
+        name: 'Mode',
+        value: isShareView ? 'Share' : isReadOnly ? 'View' : 'Edit',
+      },
+    ]);
   };
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, logLoadMetric);
 

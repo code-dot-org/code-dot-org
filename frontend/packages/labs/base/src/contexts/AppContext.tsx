@@ -1,4 +1,5 @@
-import React, {PropsWithChildren, useState, createContext, useContext, useMemo} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
+import {useState, createContext, useContext} from 'react';
 
 import type {ProjectSources, ProjectManager} from '@code-dot-org/projects';
 
@@ -9,7 +10,7 @@ import type {LabProps, LevelProperties} from '@lab-base/types';
  */
 export interface AppContent<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources
+  U extends ProjectSources = ProjectSources,
 > {
   lab?: LabProps<T, U>;
   setLab: (value?: LabProps<T, U>) => void;
@@ -21,8 +22,8 @@ export interface AppContent<
  * The current lab application metadata.
  */
 const AppContext = createContext<AppContent>({
-  setLab: (_) => {},
-  setProjectManager: (_) => {},
+  setLab: _ => {},
+  setProjectManager: _ => {},
 });
 
 /**
@@ -30,25 +31,29 @@ const AppContext = createContext<AppContent>({
  */
 export const useApp = <
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources
+  U extends ProjectSources = ProjectSources,
 >() => useContext(AppContext) as unknown as AppContent<T, U>;
 
 /**
  * Holds the lab application state.
  */
-export const AppProvider: React.FunctionComponent<PropsWithChildren> = ({
+export const AppProvider: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
   const [lab, setLab] = useState<LabProps | undefined>(undefined);
-  const [projectManager, setProjectManager] = useState<ProjectManager | undefined>(undefined);
+  const [projectManager, setProjectManager] = useState<
+    ProjectManager | undefined
+  >(undefined);
 
   return (
-    <AppContext.Provider value={{
-      lab,
-      setLab,
-      projectManager,
-      setProjectManager,
-    }}>
+    <AppContext.Provider
+      value={{
+        lab,
+        setLab,
+        projectManager,
+        setProjectManager,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

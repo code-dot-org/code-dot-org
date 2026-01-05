@@ -8,7 +8,9 @@ function currentLocale(): string {
 
 function getScriptData(name: string): object {
   name = name.toLowerCase();
-  const script = document.querySelector<HTMLScriptElement>(`script[data-${name}]`);
+  const script = document.querySelector<HTMLScriptElement>(
+    `script[data-${name}]`,
+  );
   try {
     return JSON.parse(script?.dataset?.[name] || '{}');
   } catch (e) {
@@ -128,7 +130,9 @@ export function getCurrentLocale(): string {
  * @param params - Object to stringify.
  * @return A query parameter string.
  */
-export const stringifyQueryParams: (params?: Record<string, string>) => string = params => {
+export const stringifyQueryParams: (
+  params?: Record<string, string>,
+) => string = params => {
   if (!params) {
     return '';
   }
@@ -137,4 +141,4 @@ export const stringifyQueryParams: (params?: Record<string, string>) => string =
     return '';
   }
   return '?' + keys.map(key => `${key}=${params[key]}`).join('&');
-}
+};

@@ -65,9 +65,9 @@ the relevant string using:
 ```typescript
 import localization from '@code-dot-org/localization';
 
-localization.on('change', (info) => {
-  console.log("updating the language to", info.locale, "rtl?", info.rtl);
-  const myLocalizedString: string = localization.translate("my english string");
+localization.on('change', info => {
+  console.log('updating the language to', info.locale, 'rtl?', info.rtl);
+  const myLocalizedString: string = localization.translate('my english string');
 });
 ```
 

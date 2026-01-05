@@ -7,6 +7,6 @@ export default async function fetchPermissions(): Promise<string[]> {
   });
   const json: {
     permissions: string[];
-  } = await response.json(); 
+  } = await response.json();
   return json.permissions;
 }

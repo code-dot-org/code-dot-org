@@ -36,11 +36,13 @@ export const resetPredictProgress = createAsyncThunk<
   try {
     const response = await userLevelsApi.resetPredictLevelProgress(
       payload.currentLevelId,
-      payload.scriptId
+      payload.scriptId,
     );
     if (response.ok) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      thunkAPI.dispatch<any>(progressActions.queryUserProgress(payload.userId.toString()));
+      thunkAPI.dispatch<any>(
+        progressActions.queryUserProgress(payload.userId.toString()),
+      );
     }
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -52,7 +54,7 @@ export const submitPredictResponse =
   (dispatch: AppDispatch, getState: () => RootState) => {
     const state = getState();
     const isPredictLevel = Boolean(
-      state.lab.levelProperties?.predictSettings?.isPredictLevel
+      state.lab.levelProperties?.predictSettings?.isPredictLevel,
     );
     const predictAnswerLocked = isPredictAnswerLocked(state);
 
@@ -63,7 +65,7 @@ export const submitPredictResponse =
         progressActions.sendPredictLevelReport({
           appType,
           predictResponse,
-        })
+        }),
       );
     }
   };
@@ -82,7 +84,7 @@ export const isPredictAnswerLocked = createSelector(
   ],
   (allowMultipleAttempts, hasSubmittedResponse) => {
     return !allowMultipleAttempts && hasSubmittedResponse;
-  }
+  },
 );
 
 // REDUCER

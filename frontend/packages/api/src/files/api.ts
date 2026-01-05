@@ -12,7 +12,7 @@ export function getProjectThumbnailUrl(channelId: string) {
 
 export async function updateProjectThumbnail(
   channelId: string,
-  file: Blob
+  file: Blob,
 ): Promise<Response> {
   const url = `${rootUrl(channelId)}.metadata/thumbnail.png`;
   return HttpClient.put(
@@ -21,6 +21,6 @@ export async function updateProjectThumbnail(
     true, // useAuthenticityToken
     {
       'Content-Type': 'image/png',
-    }
+    },
   );
 }

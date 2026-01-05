@@ -1,5 +1,5 @@
-import {createSlice, createAction, createAsyncThunk} from "@reduxjs/toolkit";
-import type {PayloadAction, AnyAction, Slice} from "@reduxjs/toolkit";
+import {createSlice, createAction, createAsyncThunk} from '@reduxjs/toolkit';
+import type {PayloadAction, AnyAction, Slice} from '@reduxjs/toolkit';
 
 import {
   HttpClient,
@@ -7,7 +7,7 @@ import {
   getPublicCaching,
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
-  getAppOptionsViewingExemplar
+  getAppOptionsViewingExemplar,
 } from '@code-dot-org/api';
 import type {AppName} from '@code-dot-org/api/projects';
 import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@code-dot-org/api/projects';
@@ -88,7 +88,7 @@ const initialState: LabState = {
 // Slice
 
 const slice: Slice<LabState> = createSlice({
-  name: "lab",
+  name: 'lab',
   initialState,
   reducers: {
     setIsLoading(state, action: PayloadAction<boolean>) {
@@ -103,7 +103,7 @@ const slice: Slice<LabState> = createSlice({
         errorMessage: string;
         error?: Error;
         details?: object;
-      }>
+      }>,
     ) {
       state.pageError = action.payload;
     },
@@ -129,7 +129,7 @@ const slice: Slice<LabState> = createSlice({
         initialSources?: ProjectSources;
         abuseScore?: number;
         sharingDisabled?: boolean;
-      }>
+      }>,
     ) {
       const levelProperties = action.payload.levelProperties;
       state.channel = action.payload.channel;
@@ -147,7 +147,7 @@ const slice: Slice<LabState> = createSlice({
     },
     setOverrideValidations(
       state,
-      action: PayloadAction<Validation[] | undefined>
+      action: PayloadAction<Validation[] | undefined>,
     ) {
       state.overrideValidations = action.payload;
     },
@@ -167,7 +167,7 @@ const slice: Slice<LabState> = createSlice({
         state.isLoadingProjectOrLevel = false;
         state.pageError = getErrorFromThunkAction(
           action,
-          'setUpWithLevel failed'
+          'setUpWithLevel failed',
         );
       }
     });
@@ -197,7 +197,10 @@ export const setUpWithLevel = createAsyncThunk<
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
-  LabRegistry.lifecycleNotifier.notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
+  LabRegistry.lifecycleNotifier.notify(
+    LifecycleEvent.LevelLoadStarted,
+    payload.levelId,
+  );
   try {
     // Update properties for reporting as early as possible in case of errors.
     LabRegistry.metricsReporter.updateProperties({
@@ -212,7 +215,7 @@ export const setUpWithLevel = createAsyncThunk<
 
     // Load level properties if we have a levelPropertiesPath.
     const levelProperties = await loadLevelProperties(
-      payload.levelPropertiesPath
+      payload.levelPropertiesPath,
     );
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
@@ -221,7 +224,9 @@ export const setUpWithLevel = createAsyncThunk<
     //const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
     //thunkAPI.dispatch(setLevel(aiTutorLevel));
 
-    LabRegistry.metricsReporter.updateProperties({appName: levelProperties.appName});
+    LabRegistry.metricsReporter.updateProperties({
+      appName: levelProperties.appName,
+    });
 
     const {isProjectLevel, usesProjects} = levelProperties;
 
@@ -235,7 +240,9 @@ export const setUpWithLevel = createAsyncThunk<
       if (payload.userAppOptionsPath) {
         loadUserAppOptions(payload.userAppOptionsPath).then(result => {
           if (result.isInstructor) {
-            thunkAPI.dispatch(currentUserActions.setUserRoleInCourse(CourseRoles.Instructor));
+            thunkAPI.dispatch(
+              currentUserActions.setUserRoleInCourse(CourseRoles.Instructor),
+            );
           }
         });
       }
@@ -247,7 +254,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState
+        thunkAPI.getState,
       );
       return;
     }
@@ -261,7 +268,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState
+        thunkAPI.getState,
       );
       return;
     }
@@ -285,13 +292,13 @@ export const setUpWithLevel = createAsyncThunk<
       payload.channelId && isProjectLevel
         ? ProjectManagerFactory.getProjectManager(
             payload.channelId,
-            thunkAPI.getState().lab.isShareView
+            thunkAPI.getState().lab.isShareView,
           )
         : await ProjectManagerFactory.getProjectManagerForLevel(
             payload.levelId,
             payload.userId,
             payload.scriptId,
-            payload.scriptLevelId
+            payload.scriptLevelId,
           );
 
     // Only set the project manager and initiate load
@@ -308,7 +315,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState
+        thunkAPI.getState,
       );
       return;
     }
@@ -322,7 +329,11 @@ export const setUpWithLevel = createAsyncThunk<
 
     // Load channel and source.
     const {sources, channel, abuseScore, sharingDisabled} =
-      await setUpAndLoadProject(LabRegistry.appName, projectManager, thunkAPI.dispatch);
+      await setUpAndLoadProject(
+        LabRegistry.appName,
+        projectManager,
+        thunkAPI.dispatch,
+      );
     setProjectAndLevelData(
       {
         initialSources: sources,
@@ -333,7 +344,7 @@ export const setUpWithLevel = createAsyncThunk<
       },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
-      thunkAPI.getState
+      thunkAPI.getState,
     );
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -343,7 +354,7 @@ export const setUpWithLevel = createAsyncThunk<
 // Retrieve error details from a thunk action payload.
 function getErrorFromThunkAction(
   action: AnyAction,
-  defaultErrorMessage: string
+  defaultErrorMessage: string,
 ): PageError {
   let errorMessage, error, details;
 
@@ -389,7 +400,7 @@ async function setUpAndLoadProject(
   dispatch: AppDispatch,
 ) {
   projectManager.addSaveStartListener(() =>
-    dispatch(projectActions.setProjectUpdatedSaving())
+    dispatch(projectActions.setProjectUpdatedSaving()),
   );
   projectManager.addSaveSuccessListener(channel => {
     dispatch(projectActions.setProjectUpdatedAt(channel.updatedAt));
@@ -490,7 +501,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const isOwner = state.lab.channel?.isOwner;
   const isFrozen = !!state.lab.channel?.frozen;
   const readonlyPredictLevel = isReadonlyPredictLevel(state);
-  const hasSubmitted = progressActions.getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const hasSubmitted =
+    progressActions.getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isViewingOldVersion = state.labProject.viewingOldVersion;
   const isRunningAndReadonly =
     (state.labSystem.isRunning || state.labSystem.isValidating) &&
@@ -522,7 +534,7 @@ function setProjectAndLevelData(
   },
   aborted: boolean,
   dispatch: AppDispatch,
-  getState: () => RootState
+  getState: () => RootState,
 ) {
   // Only set channel and sources if the request has not been cancelled.
   if (aborted) {
@@ -538,27 +550,26 @@ function setProjectAndLevelData(
     data.initialSources,
     data.abuseScore,
     isReadOnlyWorkspace(getState()),
-    data.sharingDisabled
+    data.sharingDisabled,
   );
 }
 
 async function loadLevelProperties(
-  levelPropertiesPath: string
+  levelPropertiesPath: string,
 ): Promise<LevelProperties> {
   const response = await HttpClient.fetchJson<LevelProperties>(
     levelPropertiesPath,
     {},
-    LevelPropertiesValidator
+    LevelPropertiesValidator,
   );
   return response.value;
 }
 
 async function loadUserAppOptions(
-  userAppOptionsPath: string
+  userAppOptionsPath: string,
 ): Promise<PartialUserAppOptions> {
-  const response = await HttpClient.fetchJson<PartialUserAppOptions>(
-    userAppOptionsPath
-  );
+  const response =
+    await HttpClient.fetchJson<PartialUserAppOptions>(userAppOptionsPath);
   return response.value;
 }
 
@@ -573,7 +584,7 @@ async function cleanUpProjectManager() {
 
 // This is an action that other reducers (specifically predictLevelRedux) can respond to.
 export const setLoadedPredictResponse = createAction<string>(
-  'lab/setLoadedPredictResponse'
+  'lab/setLoadedPredictResponse',
 );
 
 export const {

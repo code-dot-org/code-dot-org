@@ -10,7 +10,7 @@ export type DCDOConfigurationValue = string | boolean;
  */
 export interface DCDOConfigurations {
   [key: string]: DCDOConfigurationValue;
-};
+}
 
 class DCDO {
   private configs: DCDOConfigurations = {};
@@ -22,7 +22,11 @@ class DCDO {
     if (configs) {
       this.configs = configs;
     } else {
-      const script = (typeof document !== 'undefined' ? document.querySelector('script[data-dcdo]') : undefined) as (HTMLScriptElement | undefined);
+      const script = (
+        typeof document !== 'undefined'
+          ? document.querySelector('script[data-dcdo]')
+          : undefined
+      ) as HTMLScriptElement | undefined;
       if (script) {
         this.configs = JSON.parse(script.getAttribute('data-dcdo') || '{}');
       }
@@ -37,7 +41,10 @@ class DCDO {
    * @param defaultValue - The value to return if the given key is not defined in DCDO.
    * @return boolean - The value for the given key. Uses the defaultValue if no key found.
    */
-  get(key: string, defaultValue: DCDOConfigurationValue): DCDOConfigurationValue {
+  get(
+    key: string,
+    defaultValue: DCDOConfigurationValue,
+  ): DCDOConfigurationValue {
     if (key in this.configs) {
       return this.configs[key];
     }

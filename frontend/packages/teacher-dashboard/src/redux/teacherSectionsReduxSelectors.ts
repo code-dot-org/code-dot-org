@@ -107,7 +107,9 @@ export function isSaveInProgress(state: RootState) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedCourseOffering(state: RootState): AssignmentCourseOffering | undefined {
+export function assignedCourseOffering(
+  state: RootState,
+): AssignmentCourseOffering | undefined {
   const {sectionBeingEdited, courseOfferings} = getRoot(state);
 
   const id = sectionBeingEdited?.courseOfferingId;
@@ -158,14 +160,19 @@ export function getAssignmentName(state: RootState, sectionId: number) {
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-export const sectionFromServerSection: (serverSection: ServerSection) => Section = (serverSection: ServerSection) => ({
+export const sectionFromServerSection: (
+  serverSection: ServerSection,
+) => Section = (serverSection: ServerSection) => ({
   id: serverSection.id,
   name: serverSection.name,
   courseVersionName: serverSection.courseVersionName,
   unitName: serverSection.is_assigned_single_unit_course
     ? serverSection.script?.name
     : serverSection.unitName,
-  unitPosition: serverSection.unitPosition === null ? undefined : serverSection.unitPosition,
+  unitPosition:
+    serverSection.unitPosition === null
+      ? undefined
+      : serverSection.unitPosition,
   isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
@@ -230,7 +237,10 @@ export const sectionFromServerSection: (serverSection: ServerSection) => Section
  * Maps from the data we get back from the server for a student, to the format
  * we want to have in our store.
  */
-export const studentFromServerStudent = (serverStudent: ServerStudent, sectionId: number) => ({
+export const studentFromServerStudent = (
+  serverStudent: ServerStudent,
+  sectionId: number,
+) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
@@ -256,13 +266,16 @@ export function serverSectionFromSection(section: Section): ServerSection {
   // the server for now) hoping this can eventually become a pass-through.
   return {
     ...section,
-    course: section.course !== undefined ? {
-      course_offering_id: section.course.courseOfferingId || null,
-      version_id: section.course.versionId || null,
-      unit_id: section.course.unitId || null,
-      lesson_extras_available: section.course.lessonExtrasAvailable,
-      text_to_speech_enabled: section.course.textToSpeechEnabled,
-    } : undefined,
+    course:
+      section.course !== undefined
+        ? {
+            course_offering_id: section.course.courseOfferingId || null,
+            version_id: section.course.versionId || null,
+            unit_id: section.course.unitId || null,
+            lesson_extras_available: section.course.lessonExtrasAvailable,
+            text_to_speech_enabled: section.course.textToSpeechEnabled,
+          }
+        : undefined,
     sectionInstructors: section.sectionInstructors?.map(instructor => ({
       id: instructor?.id,
       status: instructor?.status,
@@ -312,8 +325,12 @@ export function newSectionData(participantType?: string): Section {
   };
 }
 
-const assignmentsForSection = (courseOfferings: AssignmentCourseOffering[], section: Section) => {
-  const assignments: (AssignmentCourseVersionUnit | AssignmentCourseVersion)[] = [];
+const assignmentsForSection = (
+  courseOfferings: AssignmentCourseOffering[],
+  section: Section,
+) => {
+  const assignments: (AssignmentCourseVersionUnit | AssignmentCourseVersion)[] =
+    [];
   if (section.courseOfferingId && section.courseVersionId) {
     const courseVersion =
       courseOfferings[section.courseOfferingId]?.courseVersions[
@@ -335,7 +352,10 @@ const assignmentsForSection = (courseOfferings: AssignmentCourseOffering[], sect
 /**
  * Get the name of the course/unit assigned to the given section
  */
-export const assignmentNames = (courseOfferings: AssignmentCourseOffering[], section: Section) => {
+export const assignmentNames = (
+  courseOfferings: AssignmentCourseOffering[],
+  section: Section,
+) => {
   const assignments = assignmentsForSection(courseOfferings, section);
   // we might not have an assignment object if we have a section that was somehow
   // assigned to a hidden unit (and we dont have permissions to see hidden units)
@@ -345,7 +365,10 @@ export const assignmentNames = (courseOfferings: AssignmentCourseOffering[], sec
 /**
  * Get the path of the course/unit assigned to the given section
  */
-export const assignmentPaths = (courseOfferings: AssignmentCourseOffering[], section: Section) => {
+export const assignmentPaths = (
+  courseOfferings: AssignmentCourseOffering[],
+  section: Section,
+) => {
   const assignments = assignmentsForSection(courseOfferings, section);
   return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
@@ -370,7 +393,7 @@ export function sectionsNameAndId(state: RootState['teacherSections']): {
     state.sectionIds.map(id => ({
       id,
       name: state.sections[id].name,
-    }))
+    })),
   );
 }
 
@@ -381,7 +404,7 @@ export function sectionsForDropdown(
   state: RootState['teacherSections'],
   courseOfferingId: number,
   courseVersionId: number,
-  unitId: number
+  unitId: number,
 ) {
   return sortedSectionsList(state.sections)
     .filter(section => !section.hidden)
@@ -401,7 +424,7 @@ export function sectionsForDropdown(
  * Converts an unordered dictionary of sections into a sorted array
  */
 export const sortedSectionsList: (sectionsObject: {
-  [id: string]: Section
+  [id: string]: Section;
 }) => Section[] = sectionsObject =>
   sortSectionsList(Object.values(sectionsObject));
 
@@ -409,7 +432,9 @@ export const sortedSectionsList: (sectionsObject: {
  * @param sectionsList - an array of section objects
  * Sorts an array of sections by descending id
  */
-export const sortSectionsList: <T extends Pick<Section, 'id' | 'name'>>(sectionsList: T[]) => T[] = <T extends Pick<Section, 'id' | 'name'>>(sectionsList: T[]) =>
+export const sortSectionsList: <T extends Pick<Section, 'id' | 'name'>>(
+  sectionsList: T[],
+) => T[] = <T extends Pick<Section, 'id' | 'name'>>(sectionsList: T[]) =>
   sectionsList.sort((a, b) => b.id - a.id);
 
 /**
@@ -428,7 +453,7 @@ export function hiddenStudentSectionIds(state: RootState) {
   return innerState.sectionIds.filter(
     id =>
       innerState.sections[id].hidden &&
-      innerState.sections[id].participantType === ParticipantAudience.Student
+      innerState.sections[id].participantType === ParticipantAudience.Student,
   );
 }
 
@@ -440,7 +465,7 @@ export function hiddenPlSectionIds(state: RootState) {
   return innerState.sectionIds.filter(
     id =>
       innerState.sections[id].hidden &&
-      innerState.sections[id].participantType !== ParticipantAudience.Student
+      innerState.sections[id].participantType !== ParticipantAudience.Student,
   );
 }
 
@@ -456,6 +481,6 @@ export function atRiskAgeGatedSections(state: RootState) {
   // Only non-archived sections can be at risk.
   // Select only the sections which have students at risk.
   return sections.filter(
-    section => !section.hidden && section.atRiskAgeGatedDate
+    section => !section.hidden && section.atRiskAgeGatedDate,
   );
 }

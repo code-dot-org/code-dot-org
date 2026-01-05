@@ -33,6 +33,9 @@
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "resolutions": {
+    "esbuild": "^0.25.0"
+  },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
     "@eslint/js": "catalog:",

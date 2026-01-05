@@ -1,4 +1,4 @@
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import {AppName} from '@code-dot-org/projects';
 
@@ -11,7 +11,8 @@ import GenericDialog, {GenericDialogProps} from './GenericDialog';
  * Lab-specific messages for starting over.
  */
 const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
-  aichat: "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
+  aichat:
+    'This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.',
 };
 
 export type StartOverDialogProps = GenericDialogProps & {
@@ -24,7 +25,7 @@ export type StartOverDialogProps = GenericDialogProps & {
 /**
  * Start Over dialog used in Lab2 labs.
  */
-const StartOverDialog: React.FunctionComponent<StartOverDialogProps> = ({
+const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
   handleConfirm,
   handleCancel = () => {},
 }) => {
@@ -46,7 +47,7 @@ const StartOverDialog: React.FunctionComponent<StartOverDialogProps> = ({
       buttons={{
         confirm: {
           callback: handleConfirm,
-          text: "Start Over",
+          text: 'Start Over',
         },
         cancel: {
           callback: handleCancel,

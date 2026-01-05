@@ -19,10 +19,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "main": "src/index.ts",
-  "files": [
-    "dist"
-  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -166,6 +162,10 @@
       "require": "./dist/cjs/models/vocabularies/index.js"
     }
   },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --clean",
     "clean": "rimraf dist .turbo",
@@ -178,14 +178,15 @@
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
     "start": "yarn dev",
-    "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "query-string": "^9.2.2"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
@@ -230,9 +231,6 @@
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.15.0"
-  },
-  "dependencies": {
-    "query-string": "^9.2.2"
   },
   "peerDependencies": {
     "classnames": "^2.5.1",

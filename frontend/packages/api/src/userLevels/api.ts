@@ -2,12 +2,12 @@ import HttpClient, {NetworkError} from '../HttpClient';
 
 export async function getPredictResponse(
   levelId: number,
-  scriptId: number
+  scriptId: number,
 ): Promise<string | null> {
   try {
     const response = await HttpClient.fetchJson<{data: string}>(
       `/user_levels/level_source/${scriptId}/${levelId}`,
-      {}
+      {},
     );
     // The program is the predict response.
     return response.value?.data;
@@ -24,7 +24,7 @@ export async function getPredictResponse(
 
 export async function resetPredictLevelProgress(
   currentLevelId?: number,
-  scriptId?: number
+  scriptId?: number,
 ) {
   return await HttpClient.post(
     '/delete_predict_level_progress',
@@ -33,7 +33,7 @@ export async function resetPredictLevelProgress(
       level_id: currentLevelId !== undefined ? currentLevelId.toString() : null,
     }),
     true,
-    {'Content-Type': 'application/json'}
+    {'Content-Type': 'application/json'},
   );
 }
 

@@ -65,15 +65,20 @@ export class StatsigReporter {
     }
     this.user = user;
 
-    const apiElement = (typeof document !== 'undefined' ? document.querySelector(
-      'script[data-statsig-api-client-key]'
-    ) : undefined) as (HTMLElement | undefined);
+    const apiElement = (
+      typeof document !== 'undefined'
+        ? document.querySelector('script[data-statsig-api-client-key]')
+        : undefined
+    ) as HTMLElement | undefined;
     this.apiKey = apiElement?.dataset?.statsigApiClientKey || '';
 
-    const managedTestEnvironmentElement = (typeof document !== 'undefined' ? document.querySelector(
-      'script[data-managed-test-server]'
-    ) : undefined) as HTMLElement | undefined;
-    const managedTestEnvironment = managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
+    const managedTestEnvironmentElement = (
+      typeof document !== 'undefined'
+        ? document.querySelector('script[data-managed-test-server]')
+        : undefined
+    ) as HTMLElement | undefined;
+    const managedTestEnvironment =
+      managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
     this.localMode = !(
       isProductionEnvironment() ||
       managedTestEnvironment ||
@@ -88,7 +93,11 @@ export class StatsigReporter {
 
   // This user object will potentially update via a setUserProperties call
   // (below) from current user redux
-  async initialize(apiKey: string, user?: StatsigPayload, options?: AnyStatsigOptions): Promise<void> {
+  async initialize(
+    apiKey: string,
+    user?: StatsigPayload,
+    options?: AnyStatsigOptions,
+  ): Promise<void> {
     user ||= this.user;
     options ||= this.options;
 
@@ -118,7 +127,7 @@ export class StatsigReporter {
     };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
-        `User properties: userId: ${formattedUserId}, userType: ${userType}, isVerifiedInstructor: ${isVerifiedInstructor}, signInState: ${!!userId}`
+        `User properties: userId: ${formattedUserId}, userType: ${userType}, isVerifiedInstructor: ${isVerifiedInstructor}, signInState: ${!!userId}`,
       );
     } else {
       await this.statsigClient?.updateUserAsync(user);
@@ -132,7 +141,7 @@ export class StatsigReporter {
           NewRelicReporter.PageAction.NoValidStatsigEventNameError,
           {
             payload,
-          }
+          },
         );
         this.statsigClient?.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
       } else {
@@ -146,7 +155,7 @@ export class StatsigReporter {
       this.log(
         `${eventName}. Payload: ${JSON.stringify({
           payload,
-        })}`
+        })}`,
       );
     }
   }

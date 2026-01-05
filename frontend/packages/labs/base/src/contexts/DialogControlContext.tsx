@@ -1,4 +1,10 @@
-import {createContext, useState, useCallback, useContext, PropsWithChildren} from 'react';
+import {
+  createContext,
+  useState,
+  useCallback,
+  useContext,
+  PropsWithChildren,
+} from 'react';
 
 import type {
   TypedDialogProps,
@@ -6,10 +12,7 @@ import type {
   DialogCloseFunctionType,
   DialogClosePromiseReturnType,
 } from '@lab-base/dialogs';
-import {
-  getDeferredPromise,
-  DeferredPromiseObject,
-} from '@lab-base/utils';
+import {getDeferredPromise, DeferredPromiseObject} from '@lab-base/utils';
 
 import {DialogType, AnyDialogType} from '../dialogs/types';
 
@@ -23,15 +26,13 @@ export interface DialogControlInterface {
   setPromiseArgs: (args: unknown) => void;
 }
 
-const DialogControlContext = createContext<DialogControlInterface>(
-  {
-    closeDialog: () => {},
-    showDialog: () => Promise.resolve({type: 'cancel'}),
-    deferredPromiseObject: getDeferredPromise(),
-    promiseArgs: undefined,
-    setPromiseArgs: () => {},
-  }
-);
+const DialogControlContext = createContext<DialogControlInterface>({
+  closeDialog: () => {},
+  showDialog: () => Promise.resolve({type: 'cancel'}),
+  deferredPromiseObject: getDeferredPromise(),
+  promiseArgs: undefined,
+  setPromiseArgs: () => {},
+});
 export const useDialogControl = () => useContext(DialogControlContext);
 
 export interface DialogControlProviderProps extends PropsWithChildren {
@@ -43,17 +44,19 @@ export interface DialogControlProviderProps extends PropsWithChildren {
 /**
  * Displays the lab dialog and manages dialog state.
  */
-export const DialogControlProvider: React.FunctionComponent<DialogControlProviderProps> = ({
-  dialogViews,
-  children,
-}) => {
+export const DialogControlProvider: React.FunctionComponent<
+  DialogControlProviderProps
+> = ({dialogViews, children}) => {
   const [shouldThrowOnCancel, setShouldThrowOnCancel] =
     useState<boolean>(false);
   const [promiseArgs, setPromiseArgs] = useState<unknown>();
-  const [activeDialog, setActiveDialog] = useState<{
-    type?: DialogType;
-    dialogArgs?: AnyDialogType;
-  } | undefined>(undefined);
+  const [activeDialog, setActiveDialog] = useState<
+    | {
+        type?: DialogType;
+        dialogArgs?: AnyDialogType;
+      }
+    | undefined
+  >(undefined);
   const [deferredPromiseObject, setDeferredPromiseObject] =
     useState<DeferredPromiseObject>(getDeferredPromise());
 
@@ -67,7 +70,7 @@ export const DialogControlProvider: React.FunctionComponent<DialogControlProvide
 
       return newDeferredPromise.deferred as Promise<DialogClosePromiseReturnType>;
     },
-    [setActiveDialog]
+    [setActiveDialog],
   );
 
   const closeDialog = useCallback(
@@ -79,7 +82,7 @@ export const DialogControlProvider: React.FunctionComponent<DialogControlProvide
           : deferredPromiseObject.resolve;
       resolver?.({type: closeType, args: promiseArgs});
     },
-    [setActiveDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs]
+    [setActiveDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs],
   );
 
   // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.

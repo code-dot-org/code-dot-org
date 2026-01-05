@@ -1,4 +1,4 @@
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import {Button} from '@code-dot-org/component-library/button';
 
@@ -8,7 +8,7 @@ export interface ErrorUIProps {
   message?: string;
 }
 
-export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
+export const ErrorUI: FunctionComponent<ErrorUIProps> = ({message}) => (
   <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
     <div data-theme="Light" id="page-error" className={moduleStyles.pageError}>
       <img
@@ -33,7 +33,9 @@ export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
 
 export type ErrorFallbackPageProps = ErrorUIProps;
 
-const ErrorFallbackPage: React.FunctionComponent<ErrorFallbackPageProps> = ({message}) => (
+const ErrorFallbackPage: FunctionComponent<ErrorFallbackPageProps> = ({
+  message,
+}) => (
   <div id="lab-container" className={moduleStyles.labContainer}>
     <ErrorUI message={message} />
   </div>

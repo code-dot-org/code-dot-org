@@ -18,10 +18,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "main": "src/index.ts",
-  "files": [
-    "dist"
-  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -43,6 +39,10 @@
       "types": "./dist/types/redux/currentUserSlice.d.ts"
     }
   },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --clean",
     "clean": "rimraf dist .turbo",
@@ -55,8 +55,6 @@
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
     "start": "yarn dev",
-    "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },

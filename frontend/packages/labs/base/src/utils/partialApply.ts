@@ -3,12 +3,12 @@ export type StringRecordType = Record<string, unknown>;
 
 // the function we will partially apply to must accept a single argument, with unknown return.
 type PartialApplicationFunctionType<T extends StringRecordType, U> = (
-  arg: T
+  arg: T,
 ) => U;
 
 // if you wanna get really fancy, you can use this utility to ensure that your partial args match the function.
 export type PAFunctionArgs<
-  F extends PartialApplicationFunctionType<any, ReturnType<F>> // eslint-disable-line
+  F extends PartialApplicationFunctionType<any, ReturnType<F>>, // eslint-disable-line
 > = Partial<Parameters<F>[0]>;
 
 // Here's where the magic is.
@@ -31,15 +31,16 @@ export type PAFunctionArgs<
 export function partialApply<
   T extends StringRecordType,
   U extends Partial<T>,
-  R
+  R,
 >(f: (args: T) => R, initArgs: U) {
   // take a union type of the keys of our initialization object
-  const keys = Object.keys(initArgs)[0] as keyof U;
   // use that list of keys to build a new partial type for those keys, typed the same way as we were given
-  type InitArgsType = Partial<{[K in typeof keys]: (typeof initArgs)[K]}>;
+  type InitArgsType = Partial<{
+    [K in keyof typeof initArgs]: (typeof initArgs)[K];
+  }>;
   // and then take our original function's object argument type and remove the keys from our init object,
   // then intersect it with our new type that's allowing optional use of those keys.
-  type PartialArgsType = Omit<T, typeof keys> & InitArgsType;
+  type PartialArgsType = Omit<T, keyof typeof initArgs> & InitArgsType;
 
   return (args: PartialArgsType) => f({...initArgs, ...args} as T);
 }

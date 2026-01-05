@@ -18,21 +18,28 @@ const rootUrl = (channelId: string) =>
 export async function get(
   appName: AppName,
   channelId: string,
-  versionId?: string
+  versionId?: string,
 ): Promise<GetResponse<ProjectSources>> {
   let url = rootUrl(channelId);
   if (versionId) {
     url += `?version=${versionId}`;
   }
-  return HttpClient.fetchJson<ProjectSources>(url, {}, SourceResponseValidator(appName));
+  return HttpClient.fetchJson<ProjectSources>(
+    url,
+    {},
+    SourceResponseValidator(appName),
+  );
 }
 
 export async function update(
   channelId: string,
   sources: ProjectSources,
-  options?: SaveSourceOptions
+  options?: SaveSourceOptions,
 ): Promise<Response> {
-  const url = rootUrl(channelId) + options ? stringifyQueryParams(options as Record<string, string>) : '';
+  const url =
+    rootUrl(channelId) + options
+      ? stringifyQueryParams(options as Record<string, string>)
+      : '';
   return fetch(url, {
     method: 'PUT',
     body: JSON.stringify(sources),
@@ -40,7 +47,7 @@ export async function update(
 }
 
 export async function getVersionList(
-  channelId: string
+  channelId: string,
 ): Promise<GetResponse<ProjectVersion[]>> {
   const requestUrl = rootUrl(channelId) + '/versions';
   return HttpClient.fetchJson<ProjectVersion[]>(requestUrl);

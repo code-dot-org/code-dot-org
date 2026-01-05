@@ -4,19 +4,58 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "import": "./dist/App.js",
       "require": "./dist/App.cjs"
+    },
+    "./components": {
+      "types": "./dist/types/components/index.d.ts",
+      "import": "./dist/esm/components/index.mjs",
+      "require": "./dist/cjs/components/index.js"
+    },
+    "./parser": {
+      "types": "./dist/types/parser/index.d.ts",
+      "import": "./dist/esm/parser/index.mjs",
+      "require": "./dist/cjs/parser/index.js"
+    },
+    "./player": {
+      "types": "./dist/types/player/index.d.ts",
+      "import": "./dist/esm/player/index.mjs",
+      "require": "./dist/cjs/player/index.js"
+    },
+    "./redux": {
+      "types": "./dist/types/redux/index.d.ts",
+      "import": "./dist/esm/redux/index.mjs",
+      "require": "./dist/cjs/redux/index.js"
     }
   },
   "scripts": {
     "build": "vite build && tsc --noEmit",
     "dev": "vite",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "preview": "vite preview"
   },
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
-    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/blockly-workspace": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/lab": "workspace:*",
+    "@code-dot-org/localization": "workspace:*",
+    "@code-dot-org/markdown": "workspace:*",
+    "@code-dot-org/metrics": "workspace:*",
+    "@react-hook/resize-observer": "^2.0.2",
+    "@rexxars/react-split-pane": "^1.0.0",
+    "lodash": "^4.17.21",
+    "react-focus-lock": "^2.13.6",
+    "tone": "15.1.22"
   },
   "devDependencies": {
     "@eslint/js": "catalog:",
@@ -28,8 +67,10 @@
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
     "globals": "catalog:",
+    "prettier": "3.4.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "stylelint": "^16.14.1",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "vite": "catalog:",

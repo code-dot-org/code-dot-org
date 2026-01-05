@@ -6,14 +6,13 @@ import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 import classNames from 'classnames';
-import React, {
-  createElement,
-  useEffect,
-  useRef,
-  MutableRefObject,
-} from 'react';
+import {createElement, useEffect, useRef} from 'react';
+import type {ReactElement, MutableRefObject} from 'react';
 
-import {disableOrphans, grayOutUndeletableBlocks} from '@blockly-workspace/events';
+import {
+  disableOrphans,
+  grayOutUndeletableBlocks,
+} from '@blockly-workspace/events';
 import FunctionBlockMixin from '@blockly-workspace/mixins/functionBlockMixin';
 import {PluginType} from '@blockly-workspace/plugins';
 import type {Plugin} from '@blockly-workspace/plugins';
@@ -89,7 +88,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   plugins,
   environment,
   workspaceRef,
-}: BlocklyWorkspaceProps<T>): React.ReactElement {
+}: BlocklyWorkspaceProps<T>): ReactElement {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
   const workspace = useRef<Blockly.WorkspaceSvg | null>(null);
   theme ||= DefaultTheme;
@@ -131,7 +130,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         _generator: JavascriptGenerator,
       ) {
         return (
-          blockDefinition.generator?.javascript?.(block, javascriptGenerator, environment) || ''
+          blockDefinition.generator?.javascript?.(
+            block,
+            javascriptGenerator,
+            environment,
+          ) || ''
         );
       };
     });
@@ -207,8 +210,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     if (!inline && environment) {
       if (hidden) {
         environment.hiddenWorkspace = workspace.current || undefined;
-      }
-      else {
+      } else {
         environment.mainWorkspace = workspace.current || undefined;
       }
     }

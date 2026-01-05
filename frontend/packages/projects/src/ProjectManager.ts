@@ -12,7 +12,10 @@
  */
 import {ValidationError} from '@code-dot-org/api';
 import type {Channel, ProjectAndSources} from '@code-dot-org/api/channels';
-import {getProjectThumbnailUrl, updateProjectThumbnail} from '@code-dot-org/api/files';
+import {
+  getProjectThumbnailUrl,
+  updateProjectThumbnail,
+} from '@code-dot-org/api/files';
 import type {AppName} from '@code-dot-org/api/projects';
 import type {ProjectSources} from '@code-dot-org/api/sources';
 import {MetricsReporter} from '@code-dot-org/metrics';
@@ -86,11 +89,16 @@ export default class ProjectManager {
   // Load the project from the sources and channels store.
   // If resetSource is true we return undefined for sources, otherwise we load the sources.
   // The lab itself handles undefined sources, generally by using the start sources instead.
-  async load(appName: AppName, resetSource?: boolean): Promise<ProjectAndSources> {
+  async load(
+    appName: AppName,
+    resetSource?: boolean,
+  ): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = resetSource ? undefined : await this.loadAndStoreSources(appName);
+    const sources = resetSource
+      ? undefined
+      : await this.loadAndStoreSources(appName);
 
     let channel: Channel;
     try {
@@ -101,15 +109,17 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
-    const sharingDisabled = await this.channelsStore.getSharingDisabled(
-      channel
-    );
+    const sharingDisabled =
+      await this.channelsStore.getSharingDisabled(channel);
     return {sources, channel, abuseScore, sharingDisabled};
   }
 
   // Restore the given version of the project. This will call restore on the sources store
   // and then load and return the updated sources.
-  async restoreSources(appName: AppName, versionId: string): Promise<ProjectSources | undefined> {
+  async restoreSources(
+    appName: AppName,
+    versionId: string,
+  ): Promise<ProjectSources | undefined> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('restore');
     }
@@ -136,7 +146,11 @@ export default class ProjectManager {
   async loadSources(appName: AppName, versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(appName, this.channelId, versionId);
+      sources = await this.sourcesStore.load(
+        appName,
+        this.channelId,
+        versionId,
+      );
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),
       // we still want to load the channel. In the case of a validation error,
@@ -144,7 +158,7 @@ export default class ProjectManager {
       // is new. If neither of these cases, throw the error.
       if (error instanceof ValidationError) {
         this.metricsReporter.logWarning(
-          `Error validating sources (${error.message}). Defaulting to empty sources.`
+          `Error validating sources (${error.message}). Defaulting to empty sources.`,
         );
       } else {
         throw new Error('Error loading sources', {cause: error});
@@ -184,7 +198,7 @@ export default class ProjectManager {
   async save(
     sources: ProjectSources,
     forceSave = false,
-    forceNewVersion = false
+    forceNewVersion = false,
   ) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
@@ -209,7 +223,7 @@ export default class ProjectManager {
     }
     return await this.enqueueSaveOrSave(
       /* forceSave */ true,
-      /* forceNewVersion */ false
+      /* forceNewVersion */ false,
     );
   }
 
@@ -229,7 +243,7 @@ export default class ProjectManager {
     }
     if (!this.channelToSave) {
       this.channelToSave = JSON.parse(
-        JSON.stringify(this.lastChannel)
+        JSON.stringify(this.lastChannel),
       ) as Channel;
     }
     this.channelToSave.name = name;
@@ -400,7 +414,7 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion
+          forceNewVersion,
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -513,7 +527,7 @@ export default class ProjectManager {
   // return a noop response.
   private async enqueueSaveOrSave(
     forceSave: boolean,
-    forceNewVersion: boolean
+    forceNewVersion: boolean,
   ) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
@@ -523,7 +537,9 @@ export default class ProjectManager {
           () => {
             this.saveHelper(forceNewVersion);
           },
-          this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
+          this.nextSaveTime
+            ? this.nextSaveTime - Date.now()
+            : this.saveInterval,
         );
       }
       return this.getNoopResponseAndSendSaveNoopEvent();
@@ -574,7 +590,7 @@ export default class ProjectManager {
   private throwErrorIfDestroyed(actionName: string) {
     if (this.destroyed) {
       this.logAndThrowError(
-        `Tried to ${actionName}, but the Project Manager was destroyed.`
+        `Tried to ${actionName}, but the Project Manager was destroyed.`,
       );
     }
   }

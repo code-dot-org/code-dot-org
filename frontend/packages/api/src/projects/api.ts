@@ -8,7 +8,7 @@ export async function getChannelForLevel(
   levelId: number,
   scriptId?: number,
   scriptLevelId?: string,
-  userId?: number
+  userId?: number,
 ): Promise<Response> {
   let requestString = rootUrl;
   if (scriptId !== undefined) {
@@ -26,14 +26,14 @@ export async function getChannelForLevel(
 
 export async function redirectToRemix(
   channelId: string,
-  projectType: ProjectType
+  projectType: ProjectType,
 ) {
   window.location.href = `${rootUrl}${projectType}/${channelId}/remix`;
 }
 
 export async function redirectToView(
   channelId: string,
-  projectType: ProjectType
+  projectType: ProjectType,
 ) {
   window.location.href = `${rootUrl}${projectType}/${channelId}/view`;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
@@ -7,7 +7,7 @@ export type SkipDialogProps = GenericDialogProps & {
   handleCancel?: () => void;
 };
 
-const SkipDialog: React.FunctionComponent<SkipDialogProps> = ({
+const SkipDialog: FunctionComponent<SkipDialogProps> = ({
   handleConfirm,
   handleCancel,
 }) => (
@@ -17,7 +17,7 @@ const SkipDialog: React.FunctionComponent<SkipDialogProps> = ({
     buttons={{
       confirm: {
         callback: handleConfirm,
-        text: "Skip to project",
+        text: 'Skip to project',
       },
       cancel: {
         callback: handleCancel,

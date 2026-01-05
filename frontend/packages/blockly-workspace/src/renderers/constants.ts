@@ -4,10 +4,11 @@ import type {InputPlugin} from '../plugins';
 import {isDarkTheme} from '../themes';
 
 type PuzzleTab = Blockly.blockRendering.PuzzleTab;
-type Shape = Blockly.blockRendering.BaseShape | Blockly.blockRendering.DynamicShape;
+type Shape =
+  | Blockly.blockRendering.BaseShape
+  | Blockly.blockRendering.DynamicShape;
 
-class CdoConstantsProvider extends Blockly.blockRendering
-  .ConstantProvider {
+class CdoConstantsProvider extends Blockly.blockRendering.ConstantProvider {
   private __shapeMap: {
     [key: string]: PuzzleTab;
   };

@@ -1,4 +1,5 @@
-import React, {PropsWithChildren, useState, createContext} from 'react';
+import {useState, createContext} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
 
 import type {Plugin} from '@blockly-workspace/plugins';
 import type {
@@ -30,7 +31,7 @@ export interface BlocklyProviderProps extends PropsWithChildren {
   renderer?: Renderer;
 }
 
-export const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
+export const BlocklyProvider: FunctionComponent<BlocklyProviderProps> = ({
   blocks,
   environment,
   theme,

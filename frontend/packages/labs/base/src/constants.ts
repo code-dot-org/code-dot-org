@@ -50,13 +50,13 @@ export enum FontSize {
 }
 
 export const ProjectSubmissionStatus = {
-  CAN_SUBMIT: "can_submit",
-  ALREADY_SUBMITTED: "already_submitted",
-  PROJECT_TYPE_NOT_ALLOWED: "project_type_not_allowed",
-  RESTRICTED_SHARE_MODE: "restricted_share_mode",
-  SHARING_DISABLED: "sharing_disabled",
-  OWNER_TOO_NEW: "owner_too_new",
-  PROJECT_TOO_NEW: "project_too_new"
+  CAN_SUBMIT: 'can_submit',
+  ALREADY_SUBMITTED: 'already_submitted',
+  PROJECT_TYPE_NOT_ALLOWED: 'project_type_not_allowed',
+  RESTRICTED_SHARE_MODE: 'restricted_share_mode',
+  SHARING_DISABLED: 'sharing_disabled',
+  OWNER_TOO_NEW: 'owner_too_new',
+  PROJECT_TOO_NEW: 'project_too_new',
 } as const;
 
 export const FeaturedProjectStatus = {

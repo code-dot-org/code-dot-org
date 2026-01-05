@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import type {FunctionComponent} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 
@@ -14,14 +14,14 @@ interface ValidationButtonProps {
   isValidateDisabled: boolean;
 }
 
-const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
+const ValidationButton: FunctionComponent<ValidationButtonProps> = ({
   onValidate,
   onStopValidation,
   isValidating,
   isValidateDisabled = false,
 }) => {
   const hasConditions = useAppSelector(
-    state => state.lab.validationState?.hasConditions
+    state => state.lab.validationState?.hasConditions,
   );
   if (!hasConditions) {
     return null;
@@ -35,7 +35,7 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
       iconLeft={{iconStyle: 'solid', iconName: 'square'}}
       className={classNames(
         moduleStyles.buttonInstruction,
-        moduleStyles.validationButton
+        moduleStyles.validationButton,
       )}
       size={'s'}
     />
@@ -48,7 +48,7 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
       iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
       className={classNames(
         moduleStyles.buttonInstruction,
-        moduleStyles.validationButton
+        moduleStyles.validationButton,
       )}
       color={'black'}
       size={'s'}

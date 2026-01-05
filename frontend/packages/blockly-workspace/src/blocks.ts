@@ -44,15 +44,19 @@ const blocks: {
     },
   },
   // Other common blocks and their generators
-  ...(Object.fromEntries(Object.entries(Blocks).map(([type, value]) => ([type, {
-    type,
-    init: (value as {init: () => void;}).init,
-    generator: {
-      javascript: (block: Blockly.Block) => (
-        javascriptGenerator.forBlock[type](block, javascriptGenerator)
-      ),
-    },
-  } as BlockDefinition])))),
+  ...Object.fromEntries(
+    Object.entries(Blocks).map(([type, value]) => [
+      type,
+      {
+        type,
+        init: (value as {init: () => void}).init,
+        generator: {
+          javascript: (block: Blockly.Block) =>
+            javascriptGenerator.forBlock[type](block, javascriptGenerator),
+        },
+      } as BlockDefinition,
+    ]),
+  ),
 };
 
 export default blocks;

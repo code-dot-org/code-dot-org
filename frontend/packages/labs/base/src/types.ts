@@ -12,7 +12,14 @@ import type {ComponentType, LazyExoticComponent} from 'react';
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {ExemplarSettings} from '@code-dot-org/progress';
-import type {AppName, MultiFileSource, Source, ProjectFile, ProjectSources, Channel} from '@code-dot-org/projects';
+import type {
+  AppName,
+  MultiFileSource,
+  Source,
+  ProjectFile,
+  ProjectSources,
+  Channel,
+} from '@code-dot-org/projects';
 
 import type {LevelPredictSettings} from '@lab-base/levelEditors';
 
@@ -154,7 +161,6 @@ export type LevelData =
   | VideoLevelData
   | BubbleChoiceLevelData;
 
-
 export type StandaloneAppName =
   | 'spritelab'
   | 'story'
@@ -236,7 +242,7 @@ export interface ParentLevelPathLink {
 
 export interface LabProps<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources
+  U extends ProjectSources = ProjectSources,
 > {
   levelProperties: T;
   initialSources?: U;

@@ -11,7 +11,7 @@ export enum LifecycleEvent {
 type CallbackArgs = {
   [LifecycleEvent.LevelChangeRequested]: [
     previousLevelId: string | null,
-    nextLevelId: string
+    nextLevelId: string,
   ];
   [LifecycleEvent.LevelLoadStarted]: [levelId: number];
   [LifecycleEvent.LevelLoadCompleted]: [
@@ -20,7 +20,7 @@ type CallbackArgs = {
     initialSources: ProjectSources | undefined,
     abuseScore: number | undefined,
     isReadOnly: boolean | undefined,
-    projectSharingDisabled: boolean | undefined
+    projectSharingDisabled: boolean | undefined,
   ];
 };
 

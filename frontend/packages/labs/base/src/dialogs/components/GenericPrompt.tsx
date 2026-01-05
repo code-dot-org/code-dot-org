@@ -1,5 +1,6 @@
 import debounce from 'lodash/debounce';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import type {FunctionComponent} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
@@ -38,7 +39,7 @@ type GenericPromptBodyProps = {
   errorMessage?: string;
 };
 
-const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
+const GenericPromptBody: FunctionComponent<GenericPromptBodyProps> = ({
   message,
   placeholder,
   prompt,
@@ -60,7 +61,7 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   );
 };
 
-const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
+const GenericPrompt: FunctionComponent<GenericPromptProps> = ({
   title,
   message,
   handleConfirm,
@@ -73,7 +74,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
   const [errorMessage, setErrorMessage] = useState<string | undefined>(
-    undefined
+    undefined,
   );
 
   const debouncedErrorHandler = useMemo(() => {
@@ -103,7 +104,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       setPromiseArgs,
       setErrorMessage,
       debouncedErrorHandler,
-    ]
+    ],
   );
 
   // fire the handleInputChange callback once upon loading. This'll populate the given prompt into the promiseArgs

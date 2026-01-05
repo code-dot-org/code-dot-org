@@ -5,7 +5,7 @@ import {DialogClosePromiseReturnType} from '@lab-base/dialogs';
 // Note that if the user did not press the `confirm` button, then an empty string will be returned instead.
 export const extractUserInput = (
   promiseResults: DialogClosePromiseReturnType,
-  includeNeutral?: boolean
+  includeNeutral?: boolean,
 ): string => {
   const {type, args} = promiseResults;
   if (type === 'confirm') {

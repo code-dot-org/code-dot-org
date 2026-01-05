@@ -1,4 +1,4 @@
-export type AppName = 
+export type AppName =
   | 'unknown'
   | 'applab'
   | 'gamelab'

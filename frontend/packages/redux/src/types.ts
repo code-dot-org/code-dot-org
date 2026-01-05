@@ -1,4 +1,4 @@
-import type {Slice} from  '@reduxjs/toolkit'
+import type {Slice} from '@reduxjs/toolkit';
 import type {Store, ReducersMapObject} from 'redux';
 
 /**
@@ -6,7 +6,9 @@ import type {Store, ReducersMapObject} from 'redux';
  */
 type UnionToIntersection<U> =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never;
+  (U extends any ? (k: U) => void : never) extends (k: infer I) => void
+    ? I
+    : never;
 
 /**
  * Pulls out a Slice's name and state.
@@ -15,7 +17,7 @@ type UnionToIntersection<U> =
 type SliceStateEntry<S extends Slice<any, any, string>> =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   S extends Slice<infer State, any, infer Name extends string>
-    ? { [K in Name]: State }
+    ? {[K in Name]: State}
     : never;
 
 /**
@@ -35,8 +37,9 @@ export type StateFromStore<TStore> =
 /**
  * Augments an existing store definition to include the given redux state.
  */
-export type StoreWithState<TStore, TState> =
-  Omit<TStore, 'getState'> & { getState(): TState };
+export type StoreWithState<TStore, TState> = Omit<TStore, 'getState'> & {
+  getState(): TState;
+};
 
 /**
  * The augmented store definition to include the embedded asyncReducers list.

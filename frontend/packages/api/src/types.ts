@@ -9,7 +9,7 @@ export type GetResponse<ResponseType> = {
  * When a validation fails, it throws a ValidationError.
  */
 export type ResponseValidator<ResponseType> = (
-  bodyJson: Record<string, unknown> | unknown[]
+  bodyJson: Record<string, unknown> | unknown[],
 ) => ResponseType;
 
 // Partial definition of the App Options structure, only defining the

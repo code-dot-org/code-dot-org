@@ -4,7 +4,7 @@
  * A ChannelsStore manages the loading and saving of channels.
  */
 
-import * as channelsApi from '@code-dot-org/api/channels'
+import * as channelsApi from '@code-dot-org/api/channels';
 import * as projectsApi from '@code-dot-org/api/projects';
 
 import type {Channel, DefaultChannel} from './types';
@@ -16,13 +16,13 @@ export class ChannelsStore {
     levelId: number,
     scriptId?: number,
     scriptLevelId?: string,
-    userId?: number
+    userId?: number,
   ) {
     return projectsApi.getChannelForLevel(
       levelId,
       scriptId,
       scriptLevelId,
-      userId
+      userId,
     );
   }
 

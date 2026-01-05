@@ -1,4 +1,5 @@
-import React, {useCallback, useEffect} from 'react';
+import {useCallback, useEffect} from 'react';
+import type {FunctionComponent} from 'react';
 
 import {
   SimpleDropdown,
@@ -31,9 +32,13 @@ type GenericDropdownBodyProps = {
   handleInputChange: (newInput: string) => void;
 };
 
-const GenericDropdownBody: React.FunctionComponent<
-  GenericDropdownBodyProps
-> = ({message, dropdownLabel, handleInputChange, items, selectedValue}) => {
+const GenericDropdownBody: FunctionComponent<GenericDropdownBodyProps> = ({
+  message,
+  dropdownLabel,
+  handleInputChange,
+  items,
+  selectedValue,
+}) => {
   return (
     <>
       {message && <BodyTwoText>{message}</BodyTwoText>}
@@ -50,7 +55,7 @@ const GenericDropdownBody: React.FunctionComponent<
   );
 };
 
-const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
+const GenericDropdown: FunctionComponent<GenericDropdownProps> = ({
   title,
   message,
   handleConfirm,
@@ -69,12 +74,12 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
     (newInput: string | undefined) => {
       setPromiseArgs(newInput);
     },
-    [setPromiseArgs]
+    [setPromiseArgs],
   );
 
   useEffect(
     () => handleInputChange(selectedValue),
-    [handleInputChange, selectedValue]
+    [handleInputChange, selectedValue],
   );
 
   const buttons = {

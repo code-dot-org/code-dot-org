@@ -52,7 +52,7 @@ class LabMetricsReporter extends MetricsReporter {
   public reportLoadTime(
     metricName: string,
     loadTimeMs: number,
-    dimensions: MetricDimension[] = []
+    dimensions: MetricDimension[] = [],
   ) {
     super.publishMetric(metricName, loadTimeMs, 'Milliseconds', [
       ...dimensions,
@@ -64,7 +64,7 @@ class LabMetricsReporter extends MetricsReporter {
     name: string,
     value: number,
     unit: MetricUnit,
-    dimensions: MetricDimension[] = []
+    dimensions: MetricDimension[] = [],
   ) {
     super.publishMetric(name, value, unit, [
       ...dimensions,
@@ -74,7 +74,7 @@ class LabMetricsReporter extends MetricsReporter {
 
   public incrementCounter(
     metricName: string,
-    dimensions: MetricDimension[] = []
+    dimensions: MetricDimension[] = [],
   ) {
     super.incrementCounter(metricName, [
       ...dimensions,

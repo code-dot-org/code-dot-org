@@ -18,10 +18,6 @@
   "sideEffects": [
     "**/*.css"
   ],
-  "main": "src/index.ts",
-  "files": [
-    "dist"
-  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -38,11 +34,12 @@
       "types": "./dist/types/redux/teacherSectionsSlice.d.ts"
     }
   },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --clean",
-    "storybook:build": "storybook build -o dist/storybook",
-    "storybook:dev": "yarn run storybook",
-    "storybook": "storybook dev -p 6006",
     "clean": "rimraf dist .turbo",
     "dev": "tsup --watch",
     "lint": "eslint .",
@@ -53,8 +50,9 @@
     "prettier:fix": "prettier --write .",
     "release": "release-it --preRelease=alpha",
     "start": "yarn dev",
-    "stylelint": "stylelint src/**/*.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build -o dist/storybook",
+    "storybook:dev": "yarn run storybook",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },

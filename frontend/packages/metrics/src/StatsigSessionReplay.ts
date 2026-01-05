@@ -60,8 +60,8 @@ class StatsigSessionReplay {
     }
     this.user = user;
     const apiElement = document.querySelector(
-      'script[data-statsig-api-client-key-session-replay]'
-    ) as (HTMLElement | undefined);
+      'script[data-statsig-api-client-key-session-replay]',
+    ) as HTMLElement | undefined;
 
     this.apiKey = apiElement?.dataset?.statsigApiClientKeySessionReplay || '';
   }
@@ -73,17 +73,14 @@ class StatsigSessionReplay {
     }
 
     const managedTestEnvironmentElement = document.querySelector(
-      'script[data-managed-test-server]'
-    ) as (HTMLElement | undefined);
-    const managedTestEnvironment = managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
+      'script[data-managed-test-server]',
+    ) as HTMLElement | undefined;
+    const managedTestEnvironment =
+      managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
 
     // Only proceed with recording if in production environment, managed test
     // environment, or local mode is enabled
-    if (
-      !isProductionEnvironment() &&
-      !managedTestEnvironment &&
-      !LOCAL_MODE
-    ) {
+    if (!isProductionEnvironment() && !managedTestEnvironment && !LOCAL_MODE) {
       return;
     }
 

@@ -1,4 +1,11 @@
-import React, {PropsWithChildren, useEffect, useCallback, useState, createContext, useContext} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
+import {
+  useEffect,
+  useCallback,
+  useState,
+  createContext,
+  useContext,
+} from 'react';
 
 import {retrieveToken, refreshToken} from '@code-dot-org/api';
 
@@ -27,26 +34,34 @@ export const useCSRF = () => {
 /**
  * Holds the user state.
  */
-export const CSRFProvider: React.FunctionComponent<PropsWithChildren> = ({
+export const CSRFProvider: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
   const [token, setToken] = useState<string | undefined>(undefined);
 
-  const internalRefreshToken = useCallback(() => (async () => {
-    // Get a new token
-    setToken(await refreshToken());
-  })(), [setToken]);
+  const internalRefreshToken = useCallback(
+    () =>
+      (async () => {
+        // Get a new token
+        setToken(await refreshToken());
+      })(),
+    [setToken],
+  );
 
-  useEffect(() => {(async () => {
-    // Get initial token
-    setToken(await retrieveToken());
-  })()}, [setToken]);
+  useEffect(() => {
+    (async () => {
+      // Get initial token
+      setToken(await retrieveToken());
+    })();
+  }, [setToken]);
 
   return (
-    <CSRFContext.Provider value={{
-      token,
-      refreshToken: internalRefreshToken,
-    }}>
+    <CSRFContext.Provider
+      value={{
+        token,
+        refreshToken: internalRefreshToken,
+      }}
+    >
       {children}
     </CSRFContext.Provider>
   );

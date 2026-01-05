@@ -1,2 +1,2 @@
 export * from './useKeyboardTrap';
-export * from './useLifecycleNotifier';
+export {default as useLifecycleNotifier} from './useLifecycleNotifier';

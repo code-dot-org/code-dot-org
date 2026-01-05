@@ -14,7 +14,10 @@ export function isNetworkError(error: unknown): error is NetworkError {
  * reference to the response object.
  */
 export class NetworkError extends Error {
-  constructor(message: string, public response: Response) {
+  constructor(
+    message: string,
+    public response: Response,
+  ) {
     super(message);
     this.name = 'NetworkError';
 
@@ -47,13 +50,13 @@ export class NetworkError extends Error {
 async function fetchJson<ResponseType>(
   endpoint: string,
   init?: RequestInit,
-  validator?: ResponseValidator<ResponseType>
+  validator?: ResponseValidator<ResponseType>,
 ): Promise<GetResponse<ResponseType>> {
   const response = await fetch(endpoint, init);
   if (!response.ok) {
     throw new NetworkError(
       response.status + ' ' + response.statusText,
-      response
+      response,
     );
   }
 
@@ -79,7 +82,7 @@ async function sendRequest(
   endpoint: string,
   body?: BodyInit,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
 ): Promise<Response> {
   if (useAuthenticityToken) {
     const token = await getAuthenticityToken();
@@ -93,7 +96,7 @@ async function sendRequest(
   if (!response.ok) {
     throw new NetworkError(
       response.status + ' ' + response.statusText,
-      response
+      response,
     );
   }
 
@@ -107,7 +110,7 @@ async function sendRequest(
 async function get(
   endpoint: string,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
 ): Promise<Response> {
   return sendRequest('GET', endpoint, undefined, useAuthenticityToken, headers);
 }
@@ -116,7 +119,7 @@ async function put(
   endpoint: string,
   body?: BodyInit,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
 ): Promise<Response> {
   return sendRequest('PUT', endpoint, body, useAuthenticityToken, headers);
 }
@@ -125,7 +128,7 @@ async function post(
   endpoint: string,
   body?: BodyInit,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
 ): Promise<Response> {
   return sendRequest('POST', endpoint, body, useAuthenticityToken, headers);
 }
@@ -133,14 +136,14 @@ async function post(
 async function deleteRequest(
   endpoint: string,
   useAuthenticityToken = false,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {},
 ): Promise<Response> {
   return sendRequest(
     'DELETE',
     endpoint,
     undefined,
     useAuthenticityToken,
-    headers
+    headers,
   );
 }
 

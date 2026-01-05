@@ -1,0 +1,118 @@
+import React, {useCallback, useContext, useEffect} from 'react';
+import {useDispatch} from 'react-redux';
+
+import {Triggers} from '../../constants';
+import {AnalyticsContext} from '../../contexts';
+import {
+  advanceInstructionsPosition,
+  toggleHeaders,
+  toggleInstructions,
+  toggleTimelinePosition,
+  moveStartPlayheadPositionBackward,
+  moveStartPlayheadPositionForward,
+} from '../../redux/musicSlice';
+
+export interface KeyHandlerProps {
+  togglePlaying: () => void;
+  playTrigger: (triggerId: string) => void;
+  uiShortcutsEnabled: boolean;
+  disabled?: boolean;
+}
+
+/**
+ * Utility component for handling key presses in Music Lab that map to
+ * specific UI actions.
+ */
+const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
+  togglePlaying,
+  playTrigger,
+  uiShortcutsEnabled,
+  disabled,
+}) => {
+  const analyticsReporter = useContext(AnalyticsContext);
+  const dispatch = useDispatch();
+
+  const reportKeyPress = useCallback(
+    (eventName: string, properties?: object) => {
+      if (analyticsReporter === null) {
+        return;
+      }
+
+      analyticsReporter.onKeyPressed(eventName, properties);
+    },
+    [analyticsReporter],
+  );
+
+  const handleKeyUp = useCallback(
+    (event: KeyboardEvent) => {
+      // Don't handle a keyboard shortcut if the active element is an
+      // input field or textarea, since the user is probably trying to type something.
+      if (
+        disabled ||
+        (document.activeElement &&
+          ['input', 'textarea'].includes(
+            document.activeElement.tagName.toLowerCase(),
+          ))
+      ) {
+        return;
+      }
+
+      // When assigning new keyboard shortcuts, be aware that the following
+      // keys are used for Blockly keyboard navigation: A, D, I, S, T, W, X
+      // https://developers.google.com/blockly/guides/configure/web/keyboard-nav
+      // Also avoid C and V that may be used in copy/paste shortcuts.
+      if (uiShortcutsEnabled) {
+        if (event.key === 'u') {
+          reportKeyPress('toggle-timeline-position');
+          dispatch(toggleTimelinePosition());
+        }
+        if (event.key === 'j') {
+          reportKeyPress('toggle-instructions');
+          dispatch(toggleInstructions());
+        }
+        if (event.key === 'n') {
+          reportKeyPress('advance-instructions-position');
+          dispatch(advanceInstructionsPosition());
+        }
+        if (event.key === 'h') {
+          reportKeyPress('toggle-headers');
+          dispatch(toggleHeaders());
+        }
+      }
+      if (event.key === ',') {
+        dispatch(moveStartPlayheadPositionBackward());
+      }
+      if (event.key === '.') {
+        dispatch(moveStartPlayheadPositionForward());
+      }
+      Triggers.map(trigger => {
+        if (event.key === trigger.keyboardKey) {
+          playTrigger(trigger.id);
+        }
+      });
+      if (event.code === 'Space') {
+        reportKeyPress('spacebar-toggle-playing');
+        togglePlaying();
+      }
+    },
+    [
+      togglePlaying,
+      playTrigger,
+      reportKeyPress,
+      dispatch,
+      uiShortcutsEnabled,
+      disabled,
+    ],
+  );
+
+  useEffect(() => {
+    document.body.addEventListener('keyup', handleKeyUp);
+    return () => {
+      document.body.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [handleKeyUp]);
+
+  return null;
+};
+
+export default KeyHandler;

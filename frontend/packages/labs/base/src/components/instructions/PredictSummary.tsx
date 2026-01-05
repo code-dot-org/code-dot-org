@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import type {FunctionComponent} from 'react';
+import {useEffect, useState} from 'react';
 
 import {getSectionSummary} from '@code-dot-org/api/userLevels';
 import {LinkButton} from '@code-dot-org/component-library/button';
@@ -10,16 +11,16 @@ import moduleStyles from './predict-summary.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
-const PredictSummary: React.FunctionComponent = () => {
+const PredictSummary: FunctionComponent = () => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
   const params = document.location.search.replace(
     `viewAs=${ViewType.Participant}`,
-    `viewAs=${ViewType.Instructor}`
+    `viewAs=${ViewType.Instructor}`,
   );
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
   const currentSectionId = useAppSelector(
-    state => state.teacherSections.selectedSectionId
+    state => state.teacherSections.selectedSectionId,
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const [responseCount, setResponseCount] = useState<number | null>(null);
@@ -36,7 +37,7 @@ const PredictSummary: React.FunctionComponent = () => {
             resetSummary();
           }
         });
-      } catch (e) {
+      } catch {
         resetSummary();
       }
     } else {

@@ -1,10 +1,10 @@
 export enum SectionLoginType {
-  Word = "word",
-  Picture = "picture",
-  Email = "email",
-  GoogleClassroom = "google_classroom",
-  Clever = "clever",
-  LtiV1 = "lti_v1",
+  Word = 'word',
+  Picture = 'picture',
+  Email = 'email',
+  GoogleClassroom = 'google_classroom',
+  Clever = 'clever',
+  LtiV1 = 'lti_v1',
 }
 
 /** Describes the course attached to a Section */
