@@ -11,9 +11,7 @@ import {
   trySetLocalStorage,
 } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import aiFabWithIconBase from '@cdo/static/ai-bot-ta-base.png';
 import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
-import aiFabWithIconTag from '@cdo/static/ai-bot-ta-tag-cyan.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
@@ -186,65 +184,49 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         onClick={handleClick}
         type="button"
       >
-        {experiments.isEnabled('teacher-notifications') ? (
-          <Badge
-            badgeContent={
-              unreadNotificationCount === 'loading'
-                ? 0
-                : unreadNotificationCount > 0
-                ? unreadNotificationCount
-                : 'TA'
-            }
-            color="error"
-            overlap="circular"
-            aria-label={
-              unreadNotificationCount &&
-              i18n.unreadNotificationsCount({
-                unreadCount: unreadNotificationCount,
-              })
-            }
-            sx={{
-              height: '48px',
-              width: '48px',
-              '& .MuiBadge-badge': {
-                backgroundColor:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--background-error-primary)'
-                    : '#3CFFF8',
-                color:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--text-neutral-white-fixed)'
-                    : 'var(--text-neutral-black-fixed)',
-                top: '5%',
-                right: '5%',
-              },
-            }}
-            className={style.badge}
-          >
-            <img
-              alt="AI bot - unread notifications"
-              src={aiFabWithoutText}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-              className={style.fabImageWithBadge}
-            />
-          </Badge>
-        ) : (
-          <div>
-            <img
-              alt="AI bot"
-              src={aiFabWithIconBase}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-            />
-            <img
-              alt="TA tag"
-              src={aiFabWithIconTag}
-              className={style.floatingActionButtonTag}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-            />
-          </div>
-        )}
+        <Badge
+          badgeContent={
+            unreadNotificationCount === 'loading'
+              ? 0
+              : unreadNotificationCount > 0
+              ? unreadNotificationCount
+              : 'TA'
+          }
+          color="error"
+          overlap="circular"
+          aria-label={
+            unreadNotificationCount &&
+            i18n.unreadNotificationsCount({
+              unreadCount: unreadNotificationCount,
+            })
+          }
+          sx={{
+            height: '48px',
+            width: '48px',
+            '& .MuiBadge-badge': {
+              backgroundColor:
+                unreadNotificationCount === 'loading' ||
+                unreadNotificationCount > 0
+                  ? 'var(--background-error-primary)'
+                  : '#3CFFF8',
+              color:
+                unreadNotificationCount === 'loading' ||
+                unreadNotificationCount > 0
+                  ? 'var(--text-neutral-white-fixed)'
+                  : 'var(--text-neutral-black-fixed)',
+              top: '5%',
+              right: '5%',
+            },
+          }}
+          className={style.badge}
+        >
+          <img
+            alt="AI bot - unread notifications"
+            src={aiFabWithoutText}
+            onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+            className={style.fabImageWithBadge}
+          />
+        </Badge>
       </button>
       <AiDiffContainer
         context={context}
