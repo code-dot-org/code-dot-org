@@ -12,7 +12,7 @@
     "link_title": "WeatherWise App",
     "url": "https://github.com/code-dot-org/csa-se-lesson3d",
     "thumbnail_url": "https://images.code.org/cb3a25e289b60b6948019203a50245e6-weatherwise.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02T16:28:53.880+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L3-L1c\\\"\"],\"cloned_from\":\"CSA-SE-L3-L1c\"},{\"changed_at\":\"2023-08-02 16:30:05 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"link_title\",\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 18:05:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

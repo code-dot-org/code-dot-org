@@ -102,6 +102,7 @@
     "display_name": "Conductive Materials",
     "bubble_choice_description": "Explore what other materials can be used to create buttons, like paper clips or aluminum foil",
     "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

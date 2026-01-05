@@ -1,0 +1,39 @@
+name 'csaif_pl_ai_rev_lessonP2_-launch'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit and Activity Guides
+
+#### Lessons in AIF Semester 1 use two main types of resource documents, both are available from the lesson plan.
+
+<img src="https://images.code.org/2d8fc15d162614c7c9fb25404aaa202e-Screenshot 2025-12-17 at 1.55.26 PM.png" alt="sample unit guide" width="40%" style="border-radius:10px; float:right; margin: 0 0 0 40px; border: 3px solid black;">
+
+## Unit Guide
+
+#### The **Unit Guide** is a central document for students to record key learning throughout the unit.
+* #### Serves as a personal, long-term reference tool.
+* #### Students record essential information like vocabulary definitions, answers to each lesson's Question of the Day, and reflections from activities.
+* #### Teachers should print and distribute the Unit Guide at the start of the unit. Students should keep these pages together for easy reference while completing the course.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview the <a href='https://docs.google.com/document/d/1a57BJiBmJaU_gTddB_IyAbjiU_8HDfcK3hGluNkuDXg/edit?tab=t.0#heading=h.9yddb8q06vj1' target='_blank' rel='noopener noreferrer'>Unit 1, Unit Guide</a>
+</p>
+
+<br><br><br><br>
+
+<img src="https://images.code.org/c1465f96e1419f5f1eef3f94dea0acd0-Screenshot 2025-12-17 at 1.58.00 PM.png" alt="sample activity guide" width="40%" style="border-radius:10px; float:right; margin: 0 0 0 40px; border: 3px solid black;">
+
+## Activity Guides
+
+
+#### **Activity Guides** are provided for lesson activities that require significant writing or recording.
+* #### Serves as worksheets for specific assignments.
+* #### Contains space for more detailed responses and records from hands-on activities.
+* #### Teachers can collect Activity Guides for informal review or formal grading. Unlike the Unit Guide, these are not intended for long-term reference.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview an <a href='https://docs.google.com/document/d/168FsA22aT-Tup4H9OHIvffToo6N2PDSL8u07AgdJgec/edit?tab=t.0#heading=h.bfop92qafrad' target='_blank' rel='noopener noreferrer'>Activity Guide</a>
+</p>
+
+MARKDOWN

@@ -52,6 +52,7 @@
     "display_name": "Template B",
     "bubble_choice_description": "Interactive item catch game template.",
     "thumbnail_url": "https://images.code.org/44e4bf28cfb1bef7725c0f8eebce9ec5-template2.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

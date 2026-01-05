@@ -33,7 +33,7 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:27:51.297+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L8c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L2-L8c_pilot-2025\"},{\"changed_at\":\"2025-11-21 15:17:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-21 15:18:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-11-21 15:19:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-12 03:57:55 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"

@@ -12,7 +12,7 @@
     "csa_view_mode": "console",
     "project_template_level_name": "CSA U2L10 Template",
     "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NMOfnNRl9In8cL1grc\neED/zBeS7t+lG6OdO8Dx7y7faoXSnl/X/p604xTaZgYiQds=\n",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-06-23 15:08:56 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 16:35:48 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:22:14 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:50:27 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"

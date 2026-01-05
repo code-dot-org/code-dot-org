@@ -85,7 +85,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         unreadNotificationCount={unreadNotificationCount}
         curriculumCourses={curriculumCourses}
       />
-      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
+      {showNotifications ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (
         <AiDiffChat
