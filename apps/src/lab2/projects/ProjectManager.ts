@@ -261,6 +261,7 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
+    this.setTitleFromChannel(this.channelToSave);
     return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
