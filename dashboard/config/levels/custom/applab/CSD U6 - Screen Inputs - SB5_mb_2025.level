@@ -58,6 +58,7 @@
     "encrypted_examples": "NXMfdFMFf+bKh+XByGYmE/943fe5iy2GzQSC6xhWcP+Zx6F5U51U2slolheB\nKS40e3qdyivuoLcdf0fgjHYhmg==\n",
     "start_blocks": "onEvent(\"updateButton\", \"click\", function() {\r\n  //Changes the width of the emoji\r\n  var widthValue = getProperty(\"widthSlider\", \"value\");\r\n  setProperty(\"emoji\", \"width\", widthValue);\r\n  //Changes the height of the emoji\r\n  var heightvalue = getProperty(\"heightSlider\", \"value\");\r\n  setProperty(\"emoji\", \"height\", heightValue);\r\n  \r\n});\r\n\r\n//Add code to create a new onEvent() block for widthSlider and set the event type as input\r\n//Copy all of the code from the updateButton event into this new event\r\n\r\n\r\n\r\n//Add code to create a new onEvent() block for heightSlider and set the event type as input\r\n//Copy all of the code from the updateButton event into this new event\r\n\r\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -19,6 +19,7 @@
     },
     "long_instructions": "# THIS IS A TEMPLATE LEVEL FOR SKILL DEVELOPMENT IN THE \"LOOPS: SYNTHESIZE\" LESSON",
     "name_suffix": "_v2",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

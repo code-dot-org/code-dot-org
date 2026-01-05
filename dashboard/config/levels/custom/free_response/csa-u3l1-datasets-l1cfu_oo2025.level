@@ -16,7 +16,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "title": "Check for Understanding",
-    "name_suffix": "_oo2025"
+    "name_suffix": "_oo2025",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:04:49.551+00:00\",\"changed\":[\"cloned from \\\"csa-u3l1-datasets-l1cfu_2024\\\"\"],\"cloned_from\":\"csa-u3l1-datasets-l1cfu_2024\"}]",

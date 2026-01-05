@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're building a simple morning routine tracker. The function starts by printing one morning task, but you realize it's missing something important. Add a second task to complete the routine.\r\n\r\n1. Look at the function `morning_routine()`. It prints one step of a morning routine.\r\n\r\n2. Add a second `print()` statement inside the function with another morning routine (e.g., \"Brush teeth\", \"Eat breakfast\", etc.).\r\n\r\n   Don't forget to keep your new line indented!\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

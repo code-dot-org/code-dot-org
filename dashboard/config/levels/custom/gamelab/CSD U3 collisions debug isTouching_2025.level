@@ -80,6 +80,7 @@
     "encrypted": "false",
     "teacher_markdown": "This level does not ask students to fix the bug in the program, which must be done in the animation tab.  In order to make the collision work properly, students will need to crop the empty space around the visible part of the picture.  The easiest way to do this is to click once on the \"crop\" icon in the animation tab, which will tightly crop to the smallest rectangle around the visible parts of the picture.  Students may also use the rectangular select tool to specify what should be cropped away. ",
     "libraries_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

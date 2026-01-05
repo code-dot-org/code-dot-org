@@ -113,6 +113,7 @@
     "bubble_choice_description": "Learn to use the threshold block with the sound sensor",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

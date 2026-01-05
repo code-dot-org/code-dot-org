@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-14T15:44:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Evaluate and test this program using the guiding questions and prompts on the **Secure Coding Practices** activity guide.",
@@ -23,12 +27,9 @@
         "text": "import java.util.ArrayList;\n\npublic class Teacher {\n\n  /**\n   * the first and last name of the teacher\n   */\n  private String name;\n\n  /**\n   * the list of students in the class\n   */\n  private ArrayList<Student> studentRoster;\n\n  /**\n   * Creates a Teacher\n   * @param name the name of the teacher\n   * @param studentRoster the list of students\n   */\n  public Teacher(String name, ArrayList<Student> studentRoster) {\n    this.name = name;\n    this.studentRoster = studentRoster;\n  }\n\n  /**\n   * Gets the information of all students in the list\n   * @return a String containing the information of all\n   *         students in the list\n   */\n  public String toString() {\n    String allStudents = \"\";\n    \n    for (int index = 0; index < studentRoster.size(); index++) {\n      allStudents = allStudents + studentRoster.get(index) + \"\\n\";\n    }\n\n    return allStudents;\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
-  "created_at": "2021-12-14T15:44:13.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-14T15:44:13.418+00:00\",\"changed\":[\"cloned from \\\"CSA U8L10-L1b\\\"\"],\"cloned_from\":\"CSA U8L10-L1b\"},{\"changed_at\":\"2021-12-14 15:44:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 14:03:34 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 16:53:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 17:29:12 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 22:24:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

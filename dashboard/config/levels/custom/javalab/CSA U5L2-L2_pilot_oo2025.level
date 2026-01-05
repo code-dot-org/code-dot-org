@@ -26,7 +26,7 @@
     "project_template_level_name": "CSA U5L2-2D Arrays PBT_pilot_oo2025",
     "teacher_markdown": "The `weeklyGrades[row][col]` access the value in row `row` and column `col`. For example, if `row` is `1` and `col` is `1`, this would access the value at row 1 column 1.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:37.762+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L2_pilot-2025\"},{\"changed_at\":\"2025-11-04 19:46:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:46:43 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:47:18 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:51 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:51 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:52 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:54 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:55 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-11-04 19:48:56 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
