@@ -115,7 +115,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   // WebSocket subscription for real-time notification count updates
   React.useEffect(() => {
     if (
-      DCDO.get('ai-lesson-summaries-notifications-enabled', false) ||
+      (DCDO.get('ai-lesson-summaries-notifications-enabled', false) &&
+        experiments.isEnabled('ai_lesson_summaries')) ||
       experiments.isEnabled('teacher-notifications-ws')
     ) {
       const unsubscribe = createTeacherNotificationSubscription({
