@@ -764,6 +764,7 @@ class Section < ApplicationRecord
   def reset_code_review_groups(new_groups)
     ActiveRecord::Base.transaction do
       code_review_groups.destroy_all
+      assigned_follower_ids = []
       new_groups.each do |group|
         # skip any unassigned members
         next if group[:unassigned]
@@ -771,8 +772,22 @@ class Section < ApplicationRecord
         next unless group[:members]
         group[:members].each do |member|
           CodeReviewGroupMember.create!(follower_id: member[:follower_id], code_review_group_id: new_group.id)
+          assigned_follower_ids << member[:follower_id]
         end
       end
+      # Enable sharing for all students assigned to code review groups
+      enable_sharing_for_followers(assigned_follower_ids)
+    end
+  end
+
+  # Enable sharing for students in code review groups
+  # Students need sharing enabled to participate in code review
+  def enable_sharing_for_followers(follower_ids)
+    return if follower_ids.empty?
+
+    followers.where(id: follower_ids).each do |follower|
+      student = follower.student_user
+      student.update!(sharing_disabled: false) if student.sharing_disabled?
     end
   end
 
