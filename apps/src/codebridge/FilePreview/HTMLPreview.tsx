@@ -91,6 +91,18 @@ export const HTMLPreview: React.FC = () => {
     state => state.lab2Project.viewingAiTutorVersion
   );
 
+  // The legacy preview is behind an experiment flag. We pass this flag
+  // through to the inner iframe via a query string so it knows whether or not to use the legacy preview.
+  // TODO: remove this and use the new preview by default once the new preview has been out for a few days.
+  const previewQueryString = useMemo(() => {
+    const useLegacyPreview = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_LEGACY_PREVIEW
+    );
+    return useLegacyPreview
+      ? `?${experiments.WEBLAB2_LEGACY_PREVIEW}=true`
+      : '';
+  }, []);
+
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
 
@@ -433,7 +445,7 @@ export const HTMLPreview: React.FC = () => {
                   ? moduleStyles.desktopPreviewIframe
                   : moduleStyles.mobilePreviewIframe
               )}
-              src={previewUrl}
+              src={`${previewUrl}${previewQueryString}`}
             />
           </div>
         )}
