@@ -24,6 +24,7 @@ class InactiveUserDeleter
   ACCOUNT_DELETION_LIMIT = 8_000
   BATCH_SIZE = 1_000
   INACTIVE_USER_TTL = 42.months
+  DELETION_WARNING_GRACE_PERIOD = 30.days
 
   # @param dry_run [Boolean] If true, no accounts will actually be deleted.
   # @param inactive_since [Time] The time before which accounts are considered inactive
@@ -62,7 +63,7 @@ class InactiveUserDeleter
         # Only delete student accounts or teacher accounts where a deletion warning email has been sent over 30 days ago
         user_data_retention_status = user.user_data_retention_status
         deletion_warning_email_sent_at = user_data_retention_status&.deletion_warning_email_sent_at
-        if user.student? || (deletion_warning_email_sent_at && deletion_warning_email_sent_at < 30.days.ago)
+        if user.student? || (deletion_warning_email_sent_at && deletion_warning_email_sent_at < DELETION_WARNING_GRACE_PERIOD.ago)
           delete_user(user)
           self.num_accounts_deleted += 1
         end
