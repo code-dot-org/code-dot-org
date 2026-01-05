@@ -1,10 +1,19 @@
-import {Components, Theme} from '@mui/material/styles';
+import type {IconButtonProps} from '@mui/material/IconButton';
 
 /**
  * MUI IconButton style overrides to match icon-only button design.
  * Extends MUI's size system to support custom sizes: xs, s, m, l
  * Uses variants pattern similar to Button (primary/contained, secondary/outlined, tertiary/text)
  */
+
+// Helper type for variant props that includes our extended types
+type ExtendedIconButtonProps = Partial<
+  IconButtonProps & {
+    size: 'extraSmall' | 'small' | 'medium' | 'large';
+    variant: 'contained' | 'outlined' | 'text';
+    color: 'primary' | 'secondary' | 'error' | 'white' | 'tertiary';
+  }
+>;
 
 // Size specifications for icon-only buttons matching genericButton.module.scss
 const ICON_BUTTON_SIZE_SPECS = {
@@ -38,332 +47,327 @@ const ICON_BUTTON_SIZE_SPECS = {
   },
 };
 
-export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
-  variants: [
-    // Size variants - matching genericButton.module.scss icon-only styles
-    {
-      props: {size: 'extraSmall'} as Record<string, unknown>,
-      style: {
-        padding: ICON_BUTTON_SIZE_SPECS.xs.padding,
-        minWidth: ICON_BUTTON_SIZE_SPECS.xs.minWidth,
-        minHeight: ICON_BUTTON_SIZE_SPECS.xs.minHeight,
-        '& svg, & i': {
-          fontSize: ICON_BUTTON_SIZE_SPECS.xs.iconSize,
-          // lineHeight: '125%',
-          width: ICON_BUTTON_SIZE_SPECS.xs.iconWidth,
-        },
+// Create variants with proper typing
+// Using satisfies to validate structure without type assertions
+const iconButtonVariants = [
+  // Size variants - matching genericButton.module.scss icon-only styles
+  {
+    props: {size: 'extraSmall'},
+    style: {
+      padding: ICON_BUTTON_SIZE_SPECS.xs.padding,
+      minWidth: ICON_BUTTON_SIZE_SPECS.xs.minWidth,
+      minHeight: ICON_BUTTON_SIZE_SPECS.xs.minHeight,
+      '& svg, & i': {
+        fontSize: ICON_BUTTON_SIZE_SPECS.xs.iconSize,
+        // lineHeight: '125%',
+        width: ICON_BUTTON_SIZE_SPECS.xs.iconWidth,
       },
     },
-    {
-      props: {size: 'small'} as Record<string, unknown>,
-      style: {
-        padding: ICON_BUTTON_SIZE_SPECS.s.padding,
-        minWidth: ICON_BUTTON_SIZE_SPECS.s.minWidth,
-        minHeight: ICON_BUTTON_SIZE_SPECS.s.minHeight,
-        '& svg, & i': {
-          fontSize: ICON_BUTTON_SIZE_SPECS.s.iconSize,
-          lineHeight: '125%',
-          width: ICON_BUTTON_SIZE_SPECS.s.iconWidth,
-        },
+  },
+  {
+    props: {size: 'small'},
+    style: {
+      padding: ICON_BUTTON_SIZE_SPECS.s.padding,
+      minWidth: ICON_BUTTON_SIZE_SPECS.s.minWidth,
+      minHeight: ICON_BUTTON_SIZE_SPECS.s.minHeight,
+      '& svg, & i': {
+        fontSize: ICON_BUTTON_SIZE_SPECS.s.iconSize,
+        lineHeight: '125%',
+        width: ICON_BUTTON_SIZE_SPECS.s.iconWidth,
       },
     },
-    {
-      props: {size: 'medium'} as Record<string, unknown>,
-      style: {
-        padding: ICON_BUTTON_SIZE_SPECS.m.padding,
-        minWidth: ICON_BUTTON_SIZE_SPECS.m.minWidth,
-        minHeight: ICON_BUTTON_SIZE_SPECS.m.minHeight,
-        '& svg, & i': {
-          fontSize: ICON_BUTTON_SIZE_SPECS.m.iconSize,
-          lineHeight: '125%',
-          width: ICON_BUTTON_SIZE_SPECS.m.iconWidth,
-        },
+  },
+  {
+    props: {size: 'medium'},
+    style: {
+      padding: ICON_BUTTON_SIZE_SPECS.m.padding,
+      minWidth: ICON_BUTTON_SIZE_SPECS.m.minWidth,
+      minHeight: ICON_BUTTON_SIZE_SPECS.m.minHeight,
+      '& svg, & i': {
+        fontSize: ICON_BUTTON_SIZE_SPECS.m.iconSize,
+        lineHeight: '125%',
+        width: ICON_BUTTON_SIZE_SPECS.m.iconWidth,
       },
     },
-    {
-      props: {size: 'large'} as Record<string, unknown>,
-      style: {
-        padding: ICON_BUTTON_SIZE_SPECS.l.padding,
-        minWidth: ICON_BUTTON_SIZE_SPECS.l.minWidth,
-        minHeight: ICON_BUTTON_SIZE_SPECS.l.minHeight,
-        '& svg, & i': {
-          fontSize: ICON_BUTTON_SIZE_SPECS.l.iconSize,
-          lineHeight: '125%',
-          width: ICON_BUTTON_SIZE_SPECS.l.iconWidth,
-        },
+  },
+  {
+    props: {size: 'large'},
+    style: {
+      padding: ICON_BUTTON_SIZE_SPECS.l.padding,
+      minWidth: ICON_BUTTON_SIZE_SPECS.l.minWidth,
+      minHeight: ICON_BUTTON_SIZE_SPECS.l.minHeight,
+      '& svg, & i': {
+        fontSize: ICON_BUTTON_SIZE_SPECS.l.iconSize,
+        lineHeight: '125%',
+        width: ICON_BUTTON_SIZE_SPECS.l.iconWidth,
       },
     },
+  },
 
-    // Contained variant × color combinations
-    {
-      props: {variant: 'contained', color: 'primary'} as Record<
-        string,
-        unknown
-      >,
-      style: {
-        backgroundColor: 'var(--background-brand-purple-primary)',
-        color: 'var(--text-neutral-white-fixed)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-purple-strong)',
-        },
-        '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-disabled)',
-          color: 'var(--text-neutral-disabled-inverse)',
-        },
+  // Contained variant × color combinations
+  {
+    props: {variant: 'contained', color: 'primary'},
+    style: {
+      backgroundColor: 'var(--background-brand-purple-primary)',
+      color: 'var(--text-neutral-white-fixed)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-brand-purple-strong)',
+      },
+      '&.Mui-disabled': {
+        backgroundColor: 'var(--background-neutral-disabled)',
+        color: 'var(--text-neutral-disabled-inverse)',
       },
     },
-    {
-      props: {variant: 'contained', color: 'secondary'} as Record<
-        string,
-        unknown
-      >,
-      style: {
-        backgroundColor: 'var(--background-neutral-primary-inverse)',
-        color: 'var(--text-neutral-inverse)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-octonary)',
-        },
-        '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-disabled)',
-          color: 'var(--text-neutral-disabled-inverse)',
-        },
+  },
+  {
+    props: {variant: 'contained', color: 'secondary'},
+    style: {
+      backgroundColor: 'var(--background-neutral-primary-inverse)',
+      color: 'var(--text-neutral-inverse)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-neutral-octonary)',
+      },
+      '&.Mui-disabled': {
+        backgroundColor: 'var(--background-neutral-disabled)',
+        color: 'var(--text-neutral-disabled-inverse)',
       },
     },
-    {
-      props: {variant: 'contained', color: 'white'} as Record<string, unknown>,
-      style: {
-        backgroundColor: 'var(--background-neutral-white-fixed)',
+  },
+  {
+    props: {variant: 'contained', color: 'white'},
+    style: {
+      backgroundColor: 'var(--background-neutral-white-fixed)',
+      color: 'var(--text-neutral-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-neutral-quaternary)',
+      },
+      '&.Mui-disabled': {
+        backgroundColor: 'var(--background-neutral-octonary)',
         color: 'var(--text-neutral-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-quaternary)',
-        },
-        '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-octonary)',
-          color: 'var(--text-neutral-primary)',
-        },
       },
     },
-    {
-      props: {variant: 'contained', color: 'error'} as Record<string, unknown>,
-      style: {
-        backgroundColor: 'var(--background-error-primary)',
-        color: 'var(--text-neutral-white-fixed)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-error-strong)',
-        },
-        '&.Mui-disabled': {
-          backgroundColor: 'var(--background-neutral-disabled)',
-          color: 'var(--text-neutral-disabled-inverse)',
-        },
+  },
+  {
+    props: {variant: 'contained', color: 'error'},
+    style: {
+      backgroundColor: 'var(--background-error-primary)',
+      color: 'var(--text-neutral-white-fixed)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-error-strong)',
+      },
+      '&.Mui-disabled': {
+        backgroundColor: 'var(--background-neutral-disabled)',
+        color: 'var(--text-neutral-disabled-inverse)',
       },
     },
+  },
 
-    // Outlined variant × color combinations
-    {
-      props: {variant: 'outlined', color: 'primary'} as Record<string, unknown>,
-      style: {
+  // Outlined variant × color combinations
+  {
+    props: {variant: 'outlined', color: 'primary'},
+    style: {
+      border: '1px solid var(--borders-brand-purple-primary)',
+      backgroundColor: 'transparent',
+      color: 'var(--text-brand-purple-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-brand-purple-hover)',
         border: '1px solid var(--borders-brand-purple-primary)',
-        backgroundColor: 'transparent',
         color: 'var(--text-brand-purple-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-purple-hover)',
-          border: '1px solid var(--borders-brand-purple-primary)',
-          color: 'var(--text-brand-purple-primary)',
-        },
-        '&:active': {
-          border: '1px solid var(--borders-brand-purple-primary) !important',
-        },
-        '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled) !important',
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'var(--background-neutral-primary)',
-        },
+      },
+      '&:active': {
+        border: '1px solid var(--borders-brand-purple-primary) !important',
+      },
+      '&.Mui-disabled': {
+        borderColor: 'var(--borders-neutral-disabled) !important',
+        color: 'var(--text-neutral-disabled)',
+        backgroundColor: 'var(--background-neutral-primary)',
       },
     },
-    {
-      props: {variant: 'outlined', color: 'secondary'} as Record<
-        string,
-        unknown
-      >,
-      style: {
+  },
+  {
+    props: {variant: 'outlined', color: 'secondary'},
+    style: {
+      border: '1px solid var(--borders-neutral-solid)',
+      backgroundColor: 'var(--background-neutral-primary)',
+      color: 'var(--text-neutral-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-neutral-tertiary)',
         border: '1px solid var(--borders-neutral-solid)',
+      },
+      '&:active': {
+        border: '1px solid var(--borders-neutral-solid) !important',
+      },
+      '&.Mui-disabled': {
+        borderColor: 'var(--borders-neutral-disabled)',
+        color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
-        color: 'var(--text-neutral-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-tertiary)',
-          border: '1px solid var(--borders-neutral-solid)',
-        },
-        '&:active': {
-          border: '1px solid var(--borders-neutral-solid) !important',
-        },
-        '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled)',
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'var(--background-neutral-primary)',
-        },
       },
     },
-    {
-      props: {variant: 'outlined', color: 'tertiary'} as Record<
-        string,
-        unknown
-      >,
-      style: {
+  },
+  {
+    props: {variant: 'outlined', color: 'tertiary'},
+    style: {
+      border: '1px solid var(--borders-neutral-strong)',
+      backgroundColor: 'var(--background-neutral-primary)',
+      color: 'var(--text-neutral-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-neutral-tertiary)',
         border: '1px solid var(--borders-neutral-strong)',
+      },
+      '&:active': {
+        border: '1px solid var(--borders-neutral-strong) !important',
+      },
+      '&.Mui-disabled': {
+        borderColor: 'var(--borders-neutral-disabled)',
+        color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
-        color: 'var(--text-neutral-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-tertiary)',
-          border: '1px solid var(--borders-neutral-strong)',
-        },
-        '&:active': {
-          border: '1px solid var(--borders-neutral-strong) !important',
-        },
-        '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled)',
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'var(--background-neutral-primary)',
-        },
       },
     },
-    {
-      props: {variant: 'outlined', color: 'white'} as Record<string, unknown>,
-      style: {
+  },
+  {
+    props: {variant: 'outlined', color: 'white'},
+    style: {
+      border: '1px solid var(--neutral-base-white)',
+      backgroundColor: 'var(--neutral-base-black)',
+      color: 'var(--neutral-base-white)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--neutral-gray-80)',
         border: '1px solid var(--neutral-base-white)',
-        backgroundColor: 'var(--neutral-base-black)',
-        color: 'var(--neutral-base-white)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--neutral-gray-80)',
-          border: '1px solid var(--neutral-base-white)',
-        },
-        '&:active': {
-          border: '1px solid var(--neutral-base-white) !important',
-        },
-        '&.Mui-disabled': {
-          borderColor: 'var(--neutral-gray-80)',
-          color: 'var(--neutral-gray-80)',
-          backgroundColor: 'unset',
-        },
+      },
+      '&:active': {
+        border: '1px solid var(--neutral-base-white) !important',
+      },
+      '&.Mui-disabled': {
+        borderColor: 'var(--neutral-gray-80)',
+        color: 'var(--neutral-gray-80)',
+        backgroundColor: 'unset',
       },
     },
-    {
-      props: {variant: 'outlined', color: 'error'} as Record<string, unknown>,
-      style: {
+  },
+  {
+    props: {variant: 'outlined', color: 'error'},
+    style: {
+      border: '1px solid var(--borders-error-primary)',
+      backgroundColor: 'var(--background-neutral-primary)',
+      color: 'var(--text-error-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-error-light)',
         border: '1px solid var(--borders-error-primary)',
+      },
+      '&:active': {
+        border: '1px solid var(--borders-error-primary) !important',
+      },
+      '&.Mui-disabled': {
+        borderColor: 'var(--borders-neutral-disabled)',
+        color: 'var(--text-neutral-disabled)',
         backgroundColor: 'var(--background-neutral-primary)',
-        color: 'var(--text-error-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-error-light)',
-          border: '1px solid var(--borders-error-primary)',
-        },
-        '&:active': {
-          border: '1px solid var(--borders-error-primary) !important',
-        },
-        '&.Mui-disabled': {
-          borderColor: 'var(--borders-neutral-disabled)',
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'var(--background-neutral-primary)',
-        },
       },
     },
+  },
 
-    // Text variant × color combinations
-    {
-      props: {variant: 'text', color: 'primary'} as Record<string, unknown>,
-      style: {
-        backgroundColor: 'transparent',
+  // Text variant × color combinations
+  {
+    props: {variant: 'text', color: 'primary'},
+    style: {
+      backgroundColor: 'transparent',
+      color: 'var(--text-brand-purple-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-brand-purple-hover)',
         color: 'var(--text-brand-purple-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-brand-purple-hover)',
-          color: 'var(--text-brand-purple-primary)',
-        },
-        '&:active': {
-          backgroundColor: 'var(--background-brand-purple-hover)',
-          color: 'var(--text-brand-purple-secondary)',
-        },
-        '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'transparent',
-        },
+      },
+      '&:active': {
+        backgroundColor: 'var(--background-brand-purple-hover)',
+        color: 'var(--text-brand-purple-secondary)',
+      },
+      '&.Mui-disabled': {
+        color: 'var(--text-neutral-disabled)',
+        backgroundColor: 'transparent',
       },
     },
-    {
-      props: {variant: 'text', color: 'secondary'} as Record<string, unknown>,
-      style: {
-        backgroundColor: 'transparent',
+  },
+  {
+    props: {variant: 'text', color: 'secondary'},
+    style: {
+      backgroundColor: 'transparent',
+      color: 'var(--text-neutral-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-neutral-quaternary)',
         color: 'var(--text-neutral-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-quaternary)',
-          color: 'var(--text-neutral-primary)',
-        },
-        '&:active': {
-          backgroundColor: 'var(--background-neutral-quaternary)',
-          color: 'var(--text-neutral-tertiary)',
-        },
-        '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'transparent',
-        },
+      },
+      '&:active': {
+        backgroundColor: 'var(--background-neutral-quaternary)',
+        color: 'var(--text-neutral-tertiary)',
+      },
+      '&.Mui-disabled': {
+        color: 'var(--text-neutral-disabled)',
+        backgroundColor: 'transparent',
       },
     },
-    {
-      props: {variant: 'text', color: 'tertiary'} as Record<string, unknown>,
-      style: {
-        backgroundColor: 'transparent',
+  },
+  {
+    props: {variant: 'text', color: 'tertiary'},
+    style: {
+      backgroundColor: 'transparent',
+      color: 'var(--text-neutral-quaternary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-neutral-quaternary)',
         color: 'var(--text-neutral-quaternary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-neutral-quaternary)',
-          color: 'var(--text-neutral-quaternary)',
-        },
-        '&:active': {
-          backgroundColor: 'var(--background-neutral-quaternary)',
-          color: 'var(--text-neutral-tertiary)',
-        },
-        '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'transparent',
-        },
+      },
+      '&:active': {
+        backgroundColor: 'var(--background-neutral-quaternary)',
+        color: 'var(--text-neutral-tertiary)',
+      },
+      '&.Mui-disabled': {
+        color: 'var(--text-neutral-disabled)',
+        backgroundColor: 'transparent',
       },
     },
-    {
-      props: {variant: 'text', color: 'white'} as Record<string, unknown>,
-      style: {
-        backgroundColor: 'transparent',
+  },
+  {
+    props: {variant: 'text', color: 'white'},
+    style: {
+      backgroundColor: 'transparent',
+      color: 'var(--text-neutral-inverse)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--neutral-white-alpha-30)',
         color: 'var(--text-neutral-inverse)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--neutral-white-alpha-30)',
-          color: 'var(--text-neutral-inverse)',
-        },
-        '&:active': {
-          backgroundColor: 'var(--neutral-white-alpha-30)',
-          color: 'var(--neutral-gray-20)',
-        },
-        '&.Mui-disabled': {
-          color: 'var(--text-neutral-tertiary)',
-          backgroundColor: 'transparent',
-        },
       },
-    },
-    {
-      props: {variant: 'text', color: 'error'} as Record<string, unknown>,
-      style: {
+      '&:active': {
+        backgroundColor: 'var(--neutral-white-alpha-30)',
+        color: 'var(--neutral-gray-20)',
+      },
+      '&.Mui-disabled': {
+        color: 'var(--text-neutral-tertiary)',
         backgroundColor: 'transparent',
-        color: 'var(--text-error-primary)',
-        '&:hover, &.force-hover, &[data-force-hover="true"]': {
-          backgroundColor: 'var(--background-error-light)',
-          color: 'var(--text-error-primary)',
-        },
-        '&:active': {
-          backgroundColor: 'var(--background-error-light)',
-          color: 'var(--text-error-secondary)',
-        },
-        '&.Mui-disabled': {
-          color: 'var(--text-neutral-disabled)',
-          backgroundColor: 'transparent',
-        },
       },
     },
-  ],
+  },
+  {
+    props: {variant: 'text', color: 'error'},
+    style: {
+      backgroundColor: 'transparent',
+      color: 'var(--text-error-primary)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--background-error-light)',
+        color: 'var(--text-error-primary)',
+      },
+      '&:active': {
+        backgroundColor: 'var(--background-error-light)',
+        color: 'var(--text-error-secondary)',
+      },
+      '&.Mui-disabled': {
+        color: 'var(--text-neutral-disabled)',
+        backgroundColor: 'transparent',
+      },
+    },
+  },
+] satisfies Array<{
+  props: ExtendedIconButtonProps;
+  style: unknown;
+}>;
+
+export const ICON_BUTTON_OVERRIDES = {
+  variants: iconButtonVariants,
   styleOverrides: {
     root: () => {
       return {
