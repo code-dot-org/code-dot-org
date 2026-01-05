@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nThe `Painter` has been asked to help repaint the street outside the school. You planned ahead by storing helper functions in `custom.py` -- one to take paint and one to paint the street - but something isn't working.\r\n\r\n1. Look at the bottom of `main.py`. You'll see a call to `paint_spaces()` . . . but that function doesn't exist in `custom.py`!\r\n\r\n2. Right now, the function paints twice before moving — that's not what we want! Change the order so the `Painter` paints, moves, paints again, and repeats until three spaces are painted.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/78cf07363ea224785d4b59690a4cc85e-image-1744815714223.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

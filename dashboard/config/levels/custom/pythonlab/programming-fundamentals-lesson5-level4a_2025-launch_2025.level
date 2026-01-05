@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nModify the program so the `Painter` goes the other way to get around the food trucks.\r\n\r\n![](https://images.code.org/ebf7ee568c28d07b194a9b50a7bf6f5a-choiceA.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -1,6 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 58,
   "created_at": "2025-03-12T20:55:18.000Z",
   "level_num": "custom",
@@ -40,11 +39,9 @@
     ],
     "map_reference": "/courses/csd-2024/guides/pseudo-classes",
     "name_suffix": "_2025",
-    "encrypted_examples": [
-
-    ],
-    "ai_tutor_available": "false"
+    "ai_tutor_available": "true"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:55:18.894+00:00\",\"changed\":[\"cloned from \\\"CSD U2L18 assessment\\\"\"],\"cloned_from\":\"CSD U2L18 assessment\"},{\"changed_at\":\"2025-12-04 21:11:30 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

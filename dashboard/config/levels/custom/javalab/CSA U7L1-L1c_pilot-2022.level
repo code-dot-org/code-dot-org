@@ -79,7 +79,7 @@
     },
     "thumbnail_url": "https://images.code.org/69cc695dcbdf567edb05fafe213bb549-U7_project3.gif",
     "name_suffix": "_pilot-2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:31.470+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1c_2022\\\"\"],\"cloned_from\":\"CSA U7L1-L1c_2022\"}]"

@@ -251,7 +251,7 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
       // create empty "dictionary" to store per-lesson progress for student
       const studentLessonProgress = {};
       // for each lesson, summarize student's progress based on level progress
-      lessons.forEach(lesson => {
+      lessons?.forEach(lesson => {
         studentLessonProgress[lesson.id] = lessonProgressForStudent(
           studentLevelProgress,
           lesson.levels
