@@ -3,7 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import StudentLessonProgressDetailsWidget from './StudentLessonProgressDetailsWidget';
+import StudentLessonProgressDetailsWidget from './index';
 
 // --- Mock data for lesson + student progress so Storybook can show real UI ----
 const mockUnitDataByUnit = {

@@ -3,7 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
-import StudentLessonProgressDetailsWidget from '@cdo/apps/templates/studentSnapshot/studentLessonProgressDetailsWidget/StudentLessonProgressDetailsWidget';
+import StudentLessonProgressDetailsWidget from '@cdo/apps/templates/studentSnapshot/studentLessonProgressDetailsWidget';
 
 const mockUnitDataByUnit = {
   // unitId: unit info
