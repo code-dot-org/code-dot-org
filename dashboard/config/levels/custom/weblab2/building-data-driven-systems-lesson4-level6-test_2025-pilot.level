@@ -1,0 +1,34 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:07:13.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "building-data-driven-systems-lesson4-level5_6_template-test_2025-pilot",
+    "long_instructions": "# Update Objects using Dot and Bracket Notation\r\n\r\n1. **Prompt**\r\n   Ask AI how to update object properties using dot notation and bracket notation.\r\n\r\n2. **Analyze**\r\n   Examine the AI’s examples, noting the similarities and differences between the two methods.\r\n\r\n3. **Integrate**\r\n   Try both methods to change property values in your object by writing the following functions:\r\n   * `renameDessert`: Change `dessert.name` to `\"Cookie Sundae\"` (use dot notation).\r\n   * `toggleFrozen`: Write an if/else statement to flip the `isFrozen` boolean.\r\n   * `recategorizeFlavor`: Create a variable `key = \"flavor\"` and use bracket notation to change the value to `\"Peanut Butter\"`.\r\n   * **Important**: After writing your 3 functions, wire them to the matching buttons (`#rename`, `#toggle-frozen`, `#recategorize`) so they run when clicked. Don't forget to call `render()` inside each function.\r\n\r\n4. **Reflect**\r\n   Which syntax feels easier or clearer? When might you need bracket notation instead?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:07:13.840+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level6-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level6-test-2025\"}]"
+}]]></config>
+</Weblab2>

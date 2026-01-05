@@ -86,6 +86,7 @@
     "thumbnail_url": "https://images.code.org/3f22e7f485a4d3cc931865d8fae68f26-image-1592414129100.png",
     "libraries_enabled": "false",
     "bubble_choice_description": "Upload an image from another website to complete a kite scene.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-11-25T22:25:02.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##  🔍Teacher Tip\r\n\r\nUse this chatbot to explore one scenario from the <a href='https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?tab=t.0#heading=h.10sosi3gwomj' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Threat Detected! Cards</a>.\r\n\r\n---\r\n\r\n## AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n### Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. While you're investigating think about: *How did AI detect this threat? What mitigation strategy does AI recommend? How would this threat have been handled without AI?*",
+    "long_instructions": "##  🔍Teacher Notes\r\n\r\nUse this chatbot to explore one scenario from the <a href='https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?tab=t.0#heading=h.10sosi3gwomj' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Threat Detected! Cards</a>.\r\n\r\nYou'll record what you learn in a Reflection Box on the next level.\r\n\r\n---\r\n\r\n## AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n### Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -44,9 +45,11 @@
         "gpt-4o-mini"
       ]
     },
-    "name_suffix": "_-rev"
+    "name_suffix": "_-rev",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-25T22:25:02.921+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_nets_project_2_C_2025\\\"\"],\"cloned_from\":\"csaif_pl_nets_project_2_C_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:25:02.921+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_nets_project_2_C_2025\\\"\"],\"cloned_from\":\"csaif_pl_nets_project_2_C_2025\"},{\"changed_at\":\"2025-12-09 18:40:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-09 18:41:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

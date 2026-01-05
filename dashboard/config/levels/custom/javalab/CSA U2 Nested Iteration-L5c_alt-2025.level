@@ -11,10 +11,10 @@
     ],
     "video_key": "csa_nested_loops",
     "display_name": "Hollow Square",
-    "long_instructions": "Move, turn, and paint in a square around the ____________.\r\n\r\n✅ **TO DO:** Use nested loops to have a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> object move, turn, and paint in a square around the ______________.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">nested</code> loops.\r\n</div>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n",
+    "long_instructions": "Move, turn, and paint in a square around the ____________.\r\n\r\n✅ **TO DO:** Use nested loops to have a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> object move, turn, and paint in a square around the planter.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">nested</code> loops.\r\n</div>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n",
     "mini_rubric": "false",
     "bubble_choice_description": "Paint a hollow square around ______________. ",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "serialized_maze": [
@@ -374,6 +374,6 @@
     "name_suffix": "_alt-2025"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-19T20:20:32.091+00:00\",\"changed\":[\"cloned from \\\"CSA U2 Nested Iteration-L5c_2025\\\"\"],\"cloned_from\":\"CSA U2 Nested Iteration-L5c_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T20:20:32.091+00:00\",\"changed\":[\"cloned from \\\"CSA U2 Nested Iteration-L5c_2025\\\"\"],\"cloned_from\":\"CSA U2 Nested Iteration-L5c_2025\"},{\"changed_at\":\"2025-12-12 04:13:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Javalab>

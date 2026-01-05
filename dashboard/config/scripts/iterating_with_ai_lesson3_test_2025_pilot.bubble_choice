@@ -1,0 +1,7 @@
+name 'iterating-with-ai-lesson3-test_2025-pilot'
+display_name 'Adding Transparency'
+description 'Enhance a list view with clear feedback cues so users understand how many results they are seeing, which filters are active, and what happens when nothing matches.'
+
+sublevels
+level 'iterating-with-ai-lesson4-level3a-test_2025-pilot'
+level 'iterating-with-ai-lesson4-level3b-test_2025-pilot'

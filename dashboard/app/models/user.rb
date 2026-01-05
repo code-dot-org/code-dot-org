@@ -1706,7 +1706,7 @@ class User < ApplicationRecord
       end
 
       script = Unit.get_from_cache(script_id)
-      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
+      script_valid = script.csf?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
           new_result >= ActivityConstants::BEST_PASS_RESULT &&
           script_valid &&

@@ -226,6 +226,7 @@
     "display_name": "Outfit Picker",
     "parent_level_id": 21732,
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -18,7 +18,7 @@ class CodeprojectsPreviewController < ApplicationController
 
   def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
-    preview_url = CDO.preview_codeprojects_hostname
+    preview_url = "*.#{CDO.preview_codeprojects_hostname}"
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
     prefix = 'http://'
@@ -34,7 +34,7 @@ class CodeprojectsPreviewController < ApplicationController
 
       # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
       # both on ports 9000 and 3000.
-      allowed_connect_src += " ws://preview.localhost.codeprojects.org:9000/ws"
+      allowed_connect_src += " ws://#{preview_url}:9000/ws"
       # preview_url does not have a port by default.
       preview_url = "#{preview_url}:3000 #{preview_url}:9000"
     end
