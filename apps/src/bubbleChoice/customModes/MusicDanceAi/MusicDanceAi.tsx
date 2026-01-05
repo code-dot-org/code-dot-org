@@ -186,10 +186,15 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
           continue;
         }
 
-        projectManager = ProjectManagerFactory.getProjectManager(channelId);
+        projectManager = ProjectManagerFactory.getProjectManager(
+          channelId,
+          // isStandaloneProjectLevel can always be false for subprojects, as it is only relevant for setting the page title.
+          false
+        );
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
+          false, // isStandaloneProjectLevel is always false here.
           userId || undefined,
           scriptId || undefined,
           scriptLevelId || undefined
