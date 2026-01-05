@@ -95,6 +95,12 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       _(described_instance.send(:num_accounts_deleted)).must_equal 2
     end
 
+    it 'correctly increments num_accounts_deleted when deleting inactive teachers with mixed retention statuses' do
+      create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: described_class::DELETION_WARNING_GRACE_PERIOD.ago + 1.day))
+      delete_inactive_users
+      _(described_instance.send(:num_accounts_deleted)).must_equal 2
+    end
+
     it 'uploads metrics' do
       expect_event_logging.once
       delete_inactive_users
