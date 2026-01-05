@@ -19,6 +19,7 @@ const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
   unreadNotificationCount: number;
 }
@@ -47,6 +48,7 @@ const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
+  curriculumCourses,
   scriptName,
   unreadNotificationCount,
 }) => {
@@ -64,9 +66,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
-  const curriculumCourses = useAppSelector(
-    state => state.aichat.curriculumCourses
-  );
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
@@ -129,22 +128,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
           />
           <div className={style.fabBackground}>
-            {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience
-              ? curriculumCourses && (
-                  <AiDiffWelcome
-                    setShowWelcomeExperience={setShowWelcomeExperience}
-                    context={context}
-                    scriptName={scriptName}
-                  />
-                )
-              : curriculumCourses && (
-                  <AiDiffWorkSpace
-                    context={context}
-                    personalizationData={personalizationData}
-                    scriptName={scriptName}
-                    unreadNotificationCount={unreadNotificationCount}
-                  />
-                )}
+            {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience ? (
+              <AiDiffWelcome
+                setShowWelcomeExperience={setShowWelcomeExperience}
+                context={context}
+                curriculumCourses={curriculumCourses}
+                scriptName={scriptName}
+              />
+            ) : (
+              <AiDiffWorkSpace
+                context={context}
+                personalizationData={personalizationData}
+                curriculumCourses={curriculumCourses}
+                scriptName={scriptName}
+                unreadNotificationCount={unreadNotificationCount}
+              />
+            )}
           </div>
         </FocusLock>
       </div>

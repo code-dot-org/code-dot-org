@@ -2,10 +2,7 @@ import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {
-  setCurriculumCourses,
-  aichatReducer,
-} from '@cdo/apps/aichat/redux/slice';
+import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import AiDiffWelcome from '@cdo/apps/aiDifferentiation/welcome/AiDiffWelcome';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
@@ -40,6 +37,7 @@ jest.mock('react-dom-confetti', () => () => <div>confetti</div>);
 const DEFAULT_PROPS = {
   setShowWelcomeExperience: () => {},
   context: 'some-context',
+  curriculumCourses: [],
   scriptId: 1,
   scriptName: 'Test Script',
 };
@@ -53,8 +51,6 @@ describe('AiDiffWelcome', () => {
     const store = getStore();
 
     registerReducers({aichat: aichatReducer});
-
-    store.dispatch(setCurriculumCourses([]));
 
     render(
       <Provider store={store}>

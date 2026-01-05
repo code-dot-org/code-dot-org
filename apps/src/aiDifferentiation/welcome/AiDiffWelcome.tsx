@@ -20,7 +20,7 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
   AiDiffContext,
@@ -52,6 +52,7 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
   firstState?: WelcomeState;
 }
@@ -140,6 +141,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
+  curriculumCourses,
   // This should only be used for testing purposes
   firstState = 'get_started',
 }) => {
@@ -150,10 +152,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [selectedOption, setSelectedOption] =
     React.useState<SuggestPromptsType | null>(null);
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
-
-  const curriculumCourses = useAppSelector(
-    state => state.aichat.curriculumCourses
-  );
 
   const dispatch = useAppDispatch();
 
@@ -281,8 +279,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
-            {curriculumCourses &&
-              curriculumCourses.includes('csp') &&
+            {curriculumCourses.includes('csp') &&
               optionButton(
                 selectedOption === 'apcsp',
                 () => setSelectedOption('apcsp'),

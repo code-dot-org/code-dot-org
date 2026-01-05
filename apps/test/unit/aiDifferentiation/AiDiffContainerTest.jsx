@@ -3,10 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {
-  setCurriculumCourses,
-  aichatReducer,
-} from '@cdo/apps/aichat/redux/slice';
+import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import AiDiffContainer from '@cdo/apps/aiDifferentiation/AiDiffContainer';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
@@ -33,6 +30,7 @@ const DEFAULT_PROPS = {
     type: AiDiffContext.LESSON,
     lessonId: 2,
   },
+  curriculumCourses: [],
   scriptName: 'test_lesson',
 };
 
@@ -80,7 +78,6 @@ describe('AiDiffContainer', () => {
       })
     );
     store.dispatch(setSections([]));
-    store.dispatch(setCurriculumCourses([]));
 
     render(
       <Provider store={store}>

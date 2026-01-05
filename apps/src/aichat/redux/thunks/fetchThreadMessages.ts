@@ -25,7 +25,6 @@ import {
   ChatPrompt,
   ChatThread,
   chatThreadMessagesValidator,
-  Context,
 } from '@cdo/apps/aiDifferentiation/types';
 import {RootState} from '@cdo/apps/types/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -46,10 +45,11 @@ import {
 } from '../slice';
 
 interface FetchThreadMessagesParams {
-  context: Context;
+  contextType: string;
   thread: number;
   threadType?: ThreadTypeFields;
   initialThreadPrompt?: ChatPrompt;
+  curriculumCourses: string[] | undefined;
 }
 
 const APCSP_PROMPTS = [APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM];
@@ -63,12 +63,12 @@ const SUGGESTED_PROMPTS = [
 ];
 
 const getDefaultSuggestedPrompts = (
-  context: Context,
+  contextType: string,
   teacherHasSections: boolean,
   teacherHasSectionWithCurriculum: boolean,
   teacherHasSectionWithStudents: boolean
 ) =>
-  context.type === AiDiffContext.GENERAL
+  contextType === AiDiffContext.GENERAL
     ? SUGGESTED_PROMPTS_FOR_SELECTION['support'].suggestedPrompts.filter(
         ({label}) => {
           // Hide some new thread default prompts based on teacher's sections
@@ -107,18 +107,19 @@ export const fetchThreadMessages = createAsyncThunk(
   'aichat/fetchThreadMessages',
   async (
     {
-      context,
+      contextType,
       thread,
       threadType = THREAD_TYPES.default,
       initialThreadPrompt,
+      curriculumCourses = [] as string[],
     }: FetchThreadMessagesParams,
     thunkAPI
   ) => {
     const state = thunkAPI.getState() as RootState;
-    const curriculumCourses = state.aichat.curriculumCourses;
-    const teacherSections = Object.values(
-      state.teacherSections?.sections ?? {}
-    );
+    const teacherSectionData = state.teacherSections?.sections;
+    const teacherSections = teacherSectionData
+      ? Object.values(teacherSectionData)
+      : [];
     const teacherHasSections = teacherSections.length > 0;
     const teacherHasSectionWithCurriculum = !!teacherSections.find(
       section => section.courseId !== null
@@ -127,7 +128,7 @@ export const fetchThreadMessages = createAsyncThunk(
       section => section.studentCount > 0
     );
     const defaultSuggestedPrompts = getDefaultSuggestedPrompts(
-      context,
+      contextType,
       teacherHasSections,
       teacherHasSectionWithCurriculum,
       teacherHasSectionWithStudents
@@ -136,7 +137,7 @@ export const fetchThreadMessages = createAsyncThunk(
     if (curriculumCourses?.includes('csp')) {
       additionalPrompts.push(...APCSP_PROMPTS);
     }
-    if (context.type === AiDiffContext.LEVEL) {
+    if (contextType === AiDiffContext.LEVEL) {
       additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
     }
     const suggestedPrompts = defaultSuggestedPrompts.concat(additionalPrompts);
@@ -171,7 +172,7 @@ export const fetchThreadMessages = createAsyncThunk(
           setThreadMessages(
             suggestedPrompts && threadType.showSuggestedPrompts
               ? [initialAIMessage, suggestedPrompts]
-              : [initialAIMessage]
+              : [initialAIMessage, SUGGESTED_PROMPTS]
           )
         );
       }

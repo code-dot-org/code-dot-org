@@ -219,9 +219,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
       fetchThreadMessages({
-        context: {type: AiDiffContext.LESSON},
+        contextType: AiDiffContext.LESSON,
         thread: 0,
         threadType: THREAD_TYPES.lessonSummaryHelp,
+        curriculumCourses: [],
       })
     );
     dispatch(setChatIsOpen(true));

@@ -24,6 +24,7 @@ interface AiDiffSidebarProps {
   setShowNotifications: (show: boolean) => void;
   showNotifications: boolean;
   unreadNotificationCount: number;
+  curriculumCourses: string[] | undefined;
 }
 
 const now = new Date();
@@ -70,6 +71,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   setShowNotifications,
   showNotifications,
   unreadNotificationCount,
+  curriculumCourses,
 }) => {
   const selectedThreadId = useAppSelector(state => state.aichat.threadId);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -102,7 +104,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
     setShowDailyBytes(false);
-    dispatch(fetchThreadMessages({context, thread: chatId}));
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: chatId,
+        curriculumCourses: curriculumCourses,
+      })
+    );
   };
 
   const todayChats = threads.filter(thread => {
@@ -123,8 +131,20 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   const onNewChatButtonClick = useCallback(() => {
     setShowNotifications(false);
     setShowDailyBytes(false);
-    dispatch(fetchThreadMessages({context, thread: 0}));
-  }, [setShowNotifications, dispatch, context]);
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+  }, [
+    setShowNotifications,
+    setShowDailyBytes,
+    curriculumCourses,
+    context,
+    dispatch,
+  ]);
 
   return (
     <aside
