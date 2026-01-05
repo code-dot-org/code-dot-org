@@ -12,7 +12,7 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "project_template_level_name": "CSA Consumer Review Lab PBT",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-14T12:59:11.976+00:00\",\"changed\":[\"cloned from \\\"CSA Consumer Review Lab L1-L4\\\"\"],\"cloned_from\":\"CSA Consumer Review Lab L1-L4\"},{\"changed_at\":\"2022-09-14 12:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-14 14:24:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

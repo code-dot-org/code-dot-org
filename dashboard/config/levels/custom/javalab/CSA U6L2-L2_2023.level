@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U6L2-Substring PBT_2023",
     "teacher_markdown": "These are two different ways of calling the `substring()` method. In the first, for `aSubstring`, the method will return the characters in the `String` from index `4` until the end of the `String`. For `anotherSubstring`, we see two arguments: these indicate that a `String` will be returned starting at index `4` (inclusive) to `8` (exclusive).",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T13:45:20.780+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-04-03 13:45:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 15:28:31 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

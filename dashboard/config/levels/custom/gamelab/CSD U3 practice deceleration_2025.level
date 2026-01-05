@@ -91,6 +91,7 @@
     "thumbnail_url": "https://images.code.org/6851c208594b84d47dd15401a8d4ae8c-image-1592923375590.2020-06-23 10_42_38.gif",
     "encrypted_examples": "+DF2WfZX98GxyTjnnBNy9DM9rgQkXr+bWldtzT40hrDfpjgfg489l+ZCemI+\nIfRaglYiZ/L6G6jlwgQrAFsRTQ==\n",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:47.000Z",
   "level_num": "custom",
@@ -175,8 +174,10 @@
       "isPredictLevel": false
     },
     "name_suffix": "_v2",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.106+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-offbeat-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-offbeat-2\"},{\"changed_at\":\"2025-06-26 18:14:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 18:27:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>

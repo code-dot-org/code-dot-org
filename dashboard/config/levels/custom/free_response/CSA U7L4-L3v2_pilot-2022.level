@@ -17,7 +17,7 @@
     "encrypted_solution": "frbo0Qu1Fcr9bDZ5M2wPopMl0NE25LLizyXEyWVAEFNkb25TIgPRXVcel29A\nBTwEwBk8DoEuNbXLwQPfCOzvEiHf1g33k4Iaih/iyGE/UvSAypGWeFLYTpgq\nhxId4KlRCIwJwe9zWoBrMhF4z32+cs1maChl+v4Xalfu7dVMsaftvZl9tXhf\npCHW5oPFtsnoLCsA2KPqr92pnq3385tbtxn89P3R7y++YiUMHAyF/C1/uBND\nrsRl+qkV8Y0QsixazT5Y7cVO9YVETV6z3xtJaqxUduJ6m9pj/VwaiHKrPgyi\nmsSGhvsKlq3e74wD6EYe\n",
     "name_suffix": "_pilot-2022",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:39.947+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L3v2_2022\\\"\"],\"cloned_from\":\"CSA U7L4-L3v2_2022\"}]",

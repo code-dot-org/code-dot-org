@@ -25,7 +25,7 @@
     },
     "project_template_level_name": "CSA U8L3-Binary Search PBT_2024",
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:08:28.984+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-L2_2023\\\"\"],\"cloned_from\":\"CSA U8L3-L2_2023\"},{\"changed_at\":\"2025-04-04 21:39:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-04 21:39:06 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-04 21:39:07 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-04 21:39:33 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-04 21:39:39 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"

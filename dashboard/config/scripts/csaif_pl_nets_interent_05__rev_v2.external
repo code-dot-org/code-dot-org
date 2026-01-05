@@ -1,0 +1,64 @@
+name 'csaif_pl_nets_interent_05_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# IP Addresses
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>IP Address:</strong> A unique number assigned to each device on a network.</p>
+</div>
+</div>
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+<tr style="vertical-align: middle;">
+<td style="width: 50%; padding: 10px; border: none;">
+<p style="font-size: 14pt">
+Much like the mail system uses a street address to route mail to a specific place,
+an IP address is used to send digital information to the correct device. 
+Every device on a network needs a unique IP address so data knows exactly where to go.
+</p>
+</td>
+<td style="width: 50%; padding: 10px; border: none; text-align: center;">
+<img src="https://images.code.org/a309d4a77c2e696cf32bc6f0b8807a03-Screenshot 2025-04-15 at 12.44.01 PM.png" alt="IP address and street address" width="60%" style="border-radius:10px; border: 2px solid black;">
+</td>
+</tr>
+
+<tr style="vertical-align: middle;">
+<td style="padding: 10px; border: none;">
+<p style="font-size: 14pt">
+If Sally were trying to send an image of her cat from her smartphone 
+(IP address 192.168.2.2) to her mom’s desktop PC (IP address 192.168.4.5), 
+the data could take the pathway shown in the diagram below. 
+<br><br>The routers in the network help direct each packet to its destination.
+</p>
+</td>
+<td style="padding: 10px; border: none; text-align: center;">
+<img src="https://images.code.org/3c99a063990ce63ede7768e8aa055600-Screenshot 2025-04-15 at 12.29.32 PM.png" alt="routing from Smartphone to Desktop PC through Router C" width="60%" style="border-radius:10px; border: 2px solid black;">
+</td>
+</tr>
+
+<tr style="vertical-align: middle;">
+<td style="padding: 10px; border: none;">
+<p style="font-size: 14pt">
+If Sally were trying to send the same image to her friend Jorge’s laptop 
+(IP address 192.168.1.1), the data might need to travel through multiple routers 
+and take a longer route across the network before reaching the correct device. 
+<br><br>This is similar to how mail sometimes passes through several distribution centers 
+before arriving at its final address.
+</p>
+</td>
+<td style="padding: 10px; border: none; text-align: center;">
+<img src="https://images.code.org/b91298b8e5aacf039fb6e7cc5db834a7-Screenshot 2025-04-15 at 12.56.48 PM.png" alt="routing from Smartphone to Laptop PC through Router C and Router A" width="60%" style="border-radius:10px; border: 2px solid black;">
+</td>
+</tr>
+</table>
+
+## AI-Assisted Routing
+
+#### AI-driven network management systems can detect conflicting IP addresses in real time and automatically reassign unique addresses using dynamic IP addressing (DHCP). By analyzing patterns across the network, AI can also predict and prevent IP conflicts before they occur, helping devices communicate smoothly.
+
+#### AI continuously monitors real-time traffic patterns and identifies when parts of the network are becoming congested. When a slowdown or bottleneck is likely, AI can reroute data through a faster or less busy pathway, keeping network performance stable and efficient.
+
+#### AI can also recognize when packets are lost or delayed. It predicts where disruptions may occur and automatically resends missing packets to ensure a smooth viewing or browsing experience. In addition, AI-powered error-correction techniques can reduce buffering, improve video quality, and enhance the reliability of data transmission across the network.
+MARKDOWN
