@@ -188,7 +188,8 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
 
         projectManager = ProjectManagerFactory.getProjectManager(
           channelId,
-          levelProperties.isProjectLevel || false
+          // isStandaloneProjectLevel can always be false for subprojects, as it is only relevant for setting the page title.
+          false
         );
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
