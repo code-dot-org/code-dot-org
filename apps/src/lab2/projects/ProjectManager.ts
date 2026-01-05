@@ -11,12 +11,17 @@
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
 import {NetworkError} from '@cdo/apps/util/HttpClient';
-import {currentLocation} from '@cdo/apps/utils';
+import {
+  currentLocation,
+  getEnvironment,
+  isProductionEnvironment,
+} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
 import {ValidationError} from '../responseValidators';
 import {Channel, ProjectAndSources, ProjectSources} from '../types';
+import {convertProjectTypeToDisplayName} from '../utils/convertProjectTypeToDisplayName';
 
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
@@ -58,12 +63,14 @@ export default class ProjectManager {
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
   private forceNewVersion: boolean = false;
+  private isStandaloneProjectLevel: boolean = false;
 
   constructor({
     sourcesStore,
     channelsStore,
     channelId,
     reduceChannelUpdates,
+    isStandaloneProjectLevel,
     isShareView = false,
     metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
   }: {
@@ -71,6 +78,7 @@ export default class ProjectManager {
     channelsStore: ChannelsStore;
     channelId: string;
     reduceChannelUpdates: boolean;
+    isStandaloneProjectLevel: boolean;
     isShareView?: boolean;
     metricsReporter?: LabMetricsReporter;
   }) {
@@ -82,6 +90,7 @@ export default class ProjectManager {
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
     this.isShareView = isShareView;
+    this.isStandaloneProjectLevel = isStandaloneProjectLevel;
   }
 
   getChannelId(): string {
@@ -112,6 +121,7 @@ export default class ProjectManager {
     );
     const isTeacherOfProjectOwner =
       await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    this.setTitleFromChannel(channel);
     return {
       sources,
       channel,
@@ -731,6 +741,21 @@ export default class ProjectManager {
     const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
     return sources;
+  }
+
+  private setTitleFromChannel(channel: Channel) {
+    if (channel.name && this.isStandaloneProjectLevel) {
+      const currentEnvironment = getEnvironment();
+      const environmentSuffix =
+        isProductionEnvironment() || !currentEnvironment
+          ? ''
+          : ` [${currentEnvironment}]`;
+      const projectName = convertProjectTypeToDisplayName(channel.projectType);
+      const projectString = projectName ? `${projectName} - ` : '';
+      document.title = `${channel.name} - ${projectString}Code.org${environmentSuffix}`;
+    }
+    // no-op if the channel does not have a name or this is not a standalone level.
+    // We will use the default document title from the server.
   }
 
   // LISTENERS

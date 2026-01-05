@@ -186,10 +186,14 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
           continue;
         }
 
-        projectManager = ProjectManagerFactory.getProjectManager(channelId);
+        projectManager = ProjectManagerFactory.getProjectManager(
+          channelId,
+          levelProperties.isProjectLevel || false
+        );
       } else {
         projectManager = await ProjectManagerFactory.getProjectManagerForLevel(
           parseInt(sublevel.level_id),
+          levelProperties.isProjectLevel || false,
           userId || undefined,
           scriptId || undefined,
           scriptLevelId || undefined
