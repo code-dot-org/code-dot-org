@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-01 01:52:18 UTC",
+    "serialized_at": "2026-01-05 07:22:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2385,7 +2385,7 @@
       "position": 3,
       "properties": {
         "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H1 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
-        "progression_name": "Explore"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "e3e85d19-904a-4b9f-94d3-0b18f9933136",
@@ -2396,7 +2396,7 @@
       "key": "cb3dd93a-3490-4e56-9ab0-c7fff8b8d65c",
       "position": 4,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Quick Check"
       },
       "seeding_key": {
         "activity_section.key": "cb3dd93a-3490-4e56-9ab0-c7fff8b8d65c",
@@ -6570,6 +6570,270 @@
       "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L1-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "98836560-4fb1-4343-9265-2919aacec2de"
+      },
+      "level_keys": [
+        "CSD U2L3-L1-2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L2-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "e3e85d19-904a-4b9f-94d3-0b18f9933136"
+      },
+      "level_keys": [
+        "CSD U2L3-L2-2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L3-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "e3e85d19-904a-4b9f-94d3-0b18f9933136"
+      },
+      "level_keys": [
+        "CSD U2L3-L3-2025"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Quick Check"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "cb3dd93a-3490-4e56-9ab0-c7fff8b8d65c"
+      },
+      "level_keys": [
+        "CSD Header Size MC_2018_2019_pilot_2025"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L5-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "650e1c0c-4176-444f-be79-ec4834de57ac"
+      },
+      "level_keys": [
+        "CSD U2L3-L5-2025"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L6-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "650e1c0c-4176-444f-be79-ec4834de57ac"
+      },
+      "level_keys": [
+        "CSD U2L3-L6-2025"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L7-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "650e1c0c-4176-444f-be79-ec4834de57ac"
+      },
+      "level_keys": [
+        "CSD U2L3-L7-2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L8-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "021e3159-9a87-495b-bdc2-d9222d1552eb"
+      },
+      "level_keys": [
+        "CSD U2L3-L8-2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L9-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "d66d6880-91d2-4d39-8df1-1ea4203b5f6d"
+      },
+      "level_keys": [
+        "CSD U2L3-L9-2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD L3 Assess FR_2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "d66d6880-91d2-4d39-8df1-1ea4203b5f6d"
+      },
+      "level_keys": [
+        "CSD L3 Assess FR_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L3-L11-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "d0dcb325-d897-458e-b9dc-495bd33040d5"
+      },
+      "level_keys": [
+        "CSD U2L3-L11-2025"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Social Sleuth"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Social Sleuth_2018_2019_pilot_2025"
+        ],
+        "lesson.key": "Lesson 4: Digital Footprint",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c38ed937-7a12-470d-a9c1-50300bd0774d"
+      },
+      "level_keys": [
+        "Social Sleuth_2018_2019_pilot_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -6591,7 +6855,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6747,6 +7011,150 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025",
         "activity_section.key": "10362ae3-57e4-4867-8dc8-575ad246f595"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L1-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "98836560-4fb1-4343-9265-2919aacec2de"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L2-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "e3e85d19-904a-4b9f-94d3-0b18f9933136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L3-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "e3e85d19-904a-4b9f-94d3-0b18f9933136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Header Size MC_2018_2019_pilot_2025",
+        "script_level.level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "cb3dd93a-3490-4e56-9ab0-c7fff8b8d65c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L5-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "650e1c0c-4176-444f-be79-ec4834de57ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L6-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "650e1c0c-4176-444f-be79-ec4834de57ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L7-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "650e1c0c-4176-444f-be79-ec4834de57ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L8-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "021e3159-9a87-495b-bdc2-d9222d1552eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L9-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "d66d6880-91d2-4d39-8df1-1ea4203b5f6d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD L3 Assess FR_2025",
+        "script_level.level_keys": [
+          "CSD L3 Assess FR_2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "d66d6880-91d2-4d39-8df1-1ea4203b5f6d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L3-L11-2025",
+        "script_level.level_keys": [
+          "CSD U2L3-L11-2025"
+        ],
+        "lesson.key": "Lesson 3: Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "d0dcb325-d897-458e-b9dc-495bd33040d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Social Sleuth_2018_2019_pilot_2025",
+        "script_level.level_keys": [
+          "Social Sleuth_2018_2019_pilot_2025"
+        ],
+        "lesson.key": "Lesson 4: Digital Footprint",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "c38ed937-7a12-470d-a9c1-50300bd0774d"
       }
     },
     {
