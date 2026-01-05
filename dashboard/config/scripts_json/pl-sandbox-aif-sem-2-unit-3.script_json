@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-19 16:34:08 UTC",
+    "serialized_at": "2026-01-05 19:11:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -104,6 +104,17 @@
       },
       "seeding_key": {
         "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c",
+        "lesson_activity.key": "082b0372-7391-4474-8ae9-b7fa368f983a"
+      }
+    },
+    {
+      "key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905",
+      "position": 5,
+      "properties": {
+        "progression_name": "Filter, Search, and Sort"
+      },
+      "seeding_key": {
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905",
         "lesson_activity.key": "082b0372-7391-4474-8ae9-b7fa368f983a"
       }
     }
@@ -740,6 +751,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-debugging-data-weblab-26"
+        ],
         "progression": "Objects"
       },
       "bonus": false,
@@ -854,6 +868,160 @@
       },
       "level_keys": [
         "pl-aif-2-U3-CFU-map-13"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-function-1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-function-1-2"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-serching-function-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-serching-function-2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-sorting-function-2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-pipeline-4"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-weblab-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-weblab-5"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filt-seach-sort-CFU-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filt-seach-sort-CFU-6"
       ]
     }
   ],
@@ -1216,6 +1384,90 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-3",
         "activity_section.key": "0bde05e8-dfe4-4e24-b8a1-133f764cca7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-function-1",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-function-1-2",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-serching-function-2",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-serching-function-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-sorting-function-2",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-pipeline-4",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-weblab-5",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-weblab-5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filt-seach-sort-CFU-6",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filt-seach-sort-CFU-6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
       }
     }
   ],

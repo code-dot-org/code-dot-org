@@ -1,0 +1,40 @@
+name 'pl-aif-2-U3-filter-function-1-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Filtering in Java Script
+
+#### Before diving into the details, take a moment to look over the code sample as a whole.
+
+<br>
+
+
+<div style="background-color:#f2f2f2; padding:16px; border-radius:8px; margin:20px 0;">
+  <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+       alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." 
+       width="40px" 
+       style="border-radius:10px; float:left; margin:0 12px 10px 0;">
+
+  <h4><strong>Think about:</strong></h4><br>
+
+  <ul>
+    <li style = "font-size: 14pt;">Where do you see the rule that decides which songs are included?</li>
+    <li style = "font-size: 14pt;">Which part of the code is responsible for creating the new list of songs?</li>
+    <li style = "font-size: 14pt;">If you wanted a “Top 5” playlist instead, what is the one place you would change?</li>
+  </ul>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+<img src="https://images.code.org/56fe0b2f27b93e2c89457ffa809bcb3a-image-1767640225831.png" alt="JavaScript code sample with a filtering function for a top ten playlist" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+
+
+---
+
+
+
+
+MARKDOWN
