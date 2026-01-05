@@ -1,0 +1,27 @@
+name 'iterating-with-ai-preassessment_2025'
+title 'Iterating with AI Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'iterating-with-ai-preassessment-intro_2025'
+level 'iterating-with-ai-preassessment-q1_2025'
+level 'iterating-with-ai-preassessment-q2_2025'
+level 'iterating-with-ai-preassessment-q3_2025'
+level 'iterating-with-ai-preassessment-q4_2025'
+level 'iterating-with-ai-preassessment-q5_2025'
+
+page
+level 'iterating-with-ai-preassessment-q6_2025'
+level 'iterating-with-ai-preassessment-q7_2025'
+level 'iterating-with-ai-preassessment-q8_2025'
+level 'iterating-with-ai-preassessment-q9_2025'
+level 'iterating-with-ai-preassessment-q10_2025'
+
+page
+level 'iterating-with-ai-preassessment-q11_2025'
+level 'iterating-with-ai-preassessment-q12_2025'
+level 'iterating-with-ai-preassessment-q13_2025'
+level 'iterating-with-ai-preassessment-q14_2025'
+level 'iterating-with-ai-preassessment-q15_2025'

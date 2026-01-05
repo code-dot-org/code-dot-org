@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:35.000Z",
   "level_num": "custom",
@@ -8,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're working on a digital assistant that reminds users to think critically when using AI tools. Every time the assistant starts up, it prints a two-line reminder message. Right now, the same block is repeated over and over. Your task is to clean up the code using a function.\r\n\r\n1. Read the block of repeated code.\r\n\r\n2. Create a function called `ai_reminder()` that prints both lines.\r\n\r\n3. Replace the repeated block by calling your new function three times.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYour function can include more than one line of code -- just make sure each line is indented the same amount under the `def` statement.\r\n\r\nUse the UMPIRE strategy:\r\n\r\n* **U**nderstand: What message are you repeating?\r\n\r\n* **M**ake a plan: What should your function do?\r\n\r\n* **P**roduce: Define the function and replace the repetition.\r\n\r\n* **I**nspect: Does it still print the message three times?\r\n\r\n* **E**xplain: Why is using a function better in this case?",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -50,6 +49,7 @@
       "type": "validation"
     }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.656+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8c_2025-launch\"},{\"changed_at\":\"2025-04-15 14:39:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:42:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:43:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:46:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:06:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-29 18:18:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 18:18:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:04:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:04:56 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

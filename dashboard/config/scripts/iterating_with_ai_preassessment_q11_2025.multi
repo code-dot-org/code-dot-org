@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q11_2025'
+
+question 'Why is a "Reset" or "Undo" button important in a data-driven dashboard?'
+
+right 'It allows the user to recover the original dataset after applying filters or making edits.'
+wrong 'It is the only way to close the web application.'
+wrong 'It automatically sends a report of all user actions to the developer.'
+wrong 'It changes the schema of the data to make it simpler.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 8
+
+Providing a way to restore the original state (copy-not-mutate strategy) gives the user more control and confidence when exploring or editing data.
+MARKDOWN

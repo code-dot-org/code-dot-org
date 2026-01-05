@@ -121,6 +121,7 @@
     "libraries_enabled": "false",
     "project_template_level_name": "CSD U3 Movement Fish_2020_template_2025",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

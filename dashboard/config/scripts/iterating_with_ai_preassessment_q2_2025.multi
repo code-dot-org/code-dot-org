@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q2_2025'
+
+question 'When writing pseudocode for a loop, what is a "stopping condition"?'
+
+wrong 'The first line of code that starts the loop.'
+right 'The rule that determines when the loop should end so it doesn\'t run forever.'
+wrong 'A comment that explains what the loop does to other developers.'
+wrong 'The part of the code that displays the final result on the screen.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+Without a clear stopping condition, a loop could become an "infinite loop," causing the program to crash or freeze.
+MARKDOWN

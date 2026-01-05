@@ -28,7 +28,8 @@
     "thumbnail_url": "https://images.code.org/9d5b22bb42dc5edf583ee8bf9e22c727-image-1585678306609.png",
     "encrypted_examples": "eYBRbetGh2RISKH/Zd0grXie7+PlAJ/AGIXbLReq9R5stxcw5UmGps9V8Tgm\nxVivHs4l5Qef8gAmkFzj1cSKlw==\n",
     "name_suffix": "_2025",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
