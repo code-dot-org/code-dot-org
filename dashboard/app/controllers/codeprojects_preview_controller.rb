@@ -1,5 +1,5 @@
 class CodeprojectsPreviewController < ApplicationController
-  include AllowedHostnameHelper
+  include SharedConstants
   # Public preview page, static content for now.
   def show
     set_content_security_policy
