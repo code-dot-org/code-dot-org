@@ -60,7 +60,7 @@
     -# which we only use when optimizing our webpack build (ie, non-development environments).
     - if CDO.optimize_webpack_assets
       %script{src: webpack_asset_path('js/code-studio-common.js'), 'data-ot-ignore' => ''}
-    - if request.ge_region || StatsigAnalyticsHelper.load_web_analytics?(request)
+    - if load_web_analytics?(request)
       %script{src: webpack_asset_path('js/statsigWebAnalytics.js'), 'data-ot-ignore' => ''}
     = csrf_meta_tags
     = yield :head
