@@ -1,13 +1,14 @@
 require 'test_helper'
 
 class CodeReviewsControllerTest < ActionController::TestCase
-  setup_all do
+  setup do
     @project_owner = create(:student)
+    # May cause unexpected database locking issues,
+    # potentially due to writes to the projects table
+    # coming from a different connection via Sequel.
     @project = create(:project, owner: @project_owner)
     @channel_id = @project.channel_id
-  end
 
-  setup do
     sign_in @project_owner
   end
 
