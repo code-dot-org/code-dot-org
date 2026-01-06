@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-06 14:34:19 UTC",
+    "serialized_at": "2026-01-06 15:08:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6730,7 +6730,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2L3-L8-2025"
+          "CSD U2L3-L8_weblab2_2025"
         ],
         "lesson.key": "Lesson 3: Headings and Lists",
         "lesson_group.key": "lessonGroup-2",
@@ -6738,7 +6738,7 @@
         "activity_section.key": "021e3159-9a87-495b-bdc2-d9222d1552eb"
       },
       "level_keys": [
-        "CSD U2L3-L8-2025"
+        "CSD U2L3-L8_weblab2_2025"
       ]
     },
     {
@@ -7098,9 +7098,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2L3-L8-2025",
+        "level.key": "CSD U2L3-L8_weblab2_2025",
         "script_level.level_keys": [
-          "CSD U2L3-L8-2025"
+          "CSD U2L3-L8_weblab2_2025"
         ],
         "lesson.key": "Lesson 3: Headings and Lists",
         "lesson_group.key": "lessonGroup-2",
