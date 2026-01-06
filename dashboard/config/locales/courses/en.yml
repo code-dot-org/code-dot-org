@@ -6624,3 +6624,9 @@ en:
 
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: Spring 2026
+        ui-test-artist:
+          title: UI Test Artist Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

@@ -1,0 +1,781 @@
+{
+  "script": {
+    "name": "ui-test-artist",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOC",
+      "is_migrated": true,
+      "show_calendar": true,
+      "supported_locales": [
+        "ar-SA",
+        "az-AZ",
+        "bg-BG",
+        "cs-CZ",
+        "da-DK",
+        "de-DE",
+        "el-GR",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fi-FI",
+        "fr-FR",
+        "he-IL",
+        "hu-HU",
+        "id-ID",
+        "is-IS",
+        "it-IT",
+        "ja-JP",
+        "ka-GE",
+        "ko-KR",
+        "km-KH",
+        "kn-IN",
+        "lt-LT",
+        "mn-MN",
+        "mr-IN",
+        "ms-MY",
+        "nl-NL",
+        "no-NO",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "se-FI",
+        "si-LK",
+        "sk-SK",
+        "sr-SP",
+        "sv-SE",
+        "ta-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "uz-UZ",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-01-06 22:44:24 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ui-test-artist"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Artist",
+      "name": "Artist",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using programming blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\n- Review and complete the online tutorial yourself: [Artist](https://studio.code.org/s/artist/lessons/1/levels/1) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n- Each student who completes the activity should receive a [certificate](https://studio.code.org/certificates/batch). Print one for each student in advance to make this easier at the end of your Hour of Code.\n\n \n - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one **Turns & Angles - Student Handout** for each student.",
+        "purpose": "This lesson will work to inspire more creativity with coding. The purpose of this lesson is to increase knowledge on sequencing by introducing programming blocks and goals. In this case, students learn about pixels and angles using the programming blocks, while incorporating sequencing skills. Also, students will be able to visualize new goals such as coding the Artist to draw a square.",
+        "student_overview": "Create beautiful images by programming the Artist."
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "cff170bb-80f7-4b92-9b98-fa07c0e4a655",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cff170bb-80f7-4b92-9b98-fa07c0e4a655",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist"
+      }
+    },
+    {
+      "key": "4ef9dfce-8e8e-4846-91d8-dbaf6eedea93",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ef9dfce-8e8e-4846-91d8-dbaf6eedea93",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist"
+      }
+    },
+    {
+      "key": "9176f871-5344-453a-b439-a71c08b78c36",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9176f871-5344-453a-b439-a71c08b78c36",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist"
+      }
+    },
+    {
+      "key": "933aab2c-6493-4809-a747-239de97fa17f",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "933aab2c-6493-4809-a747-239de97fa17f",
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "dc7168c1-50d0-4388-aa12-3a7f693ddc91",
+      "position": 1,
+      "properties": {
+        "description": "####Setting the Stage\nWelcome students to class and very briefly introduce the day’s activity.\n\n**Say:** *Today we’re going to spend one hour learning to code. Has anyone here heard the term “code” before? What does it mean?*\n\nStudents might mention that a “code” is like a secret message, or that it’s related to computers in some way.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of our [inspirational videos](https://hourofcode.com/us/resources#videos). Choose one you think your students will find inspiring, and share it now. For young learners, we suggest [The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc7168c1-50d0-4388-aa12-3a7f693ddc91",
+        "lesson_activity.key": "cff170bb-80f7-4b92-9b98-fa07c0e4a655"
+      }
+    },
+    {
+      "key": "555e4e20-18f0-4a2e-b0aa-89e9f1fe69f6",
+      "position": 2,
+      "properties": {
+        "description": "Explain that in computer science, “code” means a set of instructions that a computer can understand. Let students know that today, they are going to practice “coding,” “programming.” “events” and “debugging”.\n\nDefine:\n* Coding means to write code, or to write instructions for a computer.\n* Programming, similarly, means to write code or instructions. Today, you will program with blocks on the computer (if you’re using an online tutorial) or with pen and paper (if you’re using an unplugged activity).\n* Debugging means to check code for mistakes and try to fix errors.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You’ll want to spend very little time front-loading or introducing your Hour of Code. Especially with young learners, it’s best to jump in as quickly as possible. Too much explanation or lecture at the beginning tends to spoil the fun, and fun is the whole point!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "555e4e20-18f0-4a2e-b0aa-89e9f1fe69f6",
+        "lesson_activity.key": "cff170bb-80f7-4b92-9b98-fa07c0e4a655"
+      }
+    },
+    {
+      "key": "fbc4ff5a-b46b-4d8b-824b-83a0cb7b15ae",
+      "position": 3,
+      "properties": {
+        "description": "Show the students one or both of the following videos as an introduction to angles:\n\n**Artist Introduction - Student Video** (1.5 minutes long)\n\n**Turns & Angles - Student Video** (2 minutes long)\n\nUse **Turns & Angles - Student Handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n\n\nDiscuss the square and triangle shapes from the document.\n\n - How would you code a computer to draw that shape?\n - What order do the instructions need to be in?\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbc4ff5a-b46b-4d8b-824b-83a0cb7b15ae",
+        "lesson_activity.key": "cff170bb-80f7-4b92-9b98-fa07c0e4a655"
+      }
+    },
+    {
+      "key": "1580645e-0b52-4258-a1d1-cab7e019b82a",
+      "position": 1,
+      "properties": {
+        "description": "In this set of puzzles, the artist will not be constrained to 90 degree angles. Having physical protractors available can help students better visualize the angles they need. Otherwise, the stage provides images of the angles as the student selects which angle to use. (Please note: Angle choices are limited to two inside of the dropdown menu, reducing the number of options students have to work through.)\n\nBefore sending the students to the computers to work on the puzzles, it might be beneficial to give a brief presentation of how to use the tools in this level. We recommend puzzle 5 as a good puzzle to show how to use the protractor online.",
+        "name": "Artist"
+      },
+      "seeding_key": {
+        "activity_section.key": "1580645e-0b52-4258-a1d1-cab7e019b82a",
+        "lesson_activity.key": "4ef9dfce-8e8e-4846-91d8-dbaf6eedea93"
+      }
+    },
+    {
+      "key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228",
+      "position": 2,
+      "properties": {
+        "description": "Challenge your students to complete this [Artist](https://studio.code.org/s/artist/lessons/1/levels/1)  activity.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://code.org/starwars) tutorials.\n- For older or adult learners, the [Artist](https://studio.code.org/s/artist/lessons/1/levels/1)  tutorial works extremely well either as an independent challenge or a pair programming activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228",
+        "lesson_activity.key": "4ef9dfce-8e8e-4846-91d8-dbaf6eedea93"
+      }
+    },
+    {
+      "key": "19765245-05eb-472b-a295-28e141e13aaf",
+      "position": 3,
+      "properties": {
+        "description": "If a group or individual finishes early, they can attempt another tutorial by visiting [code.org/learn]()."
+      },
+      "seeding_key": {
+        "activity_section.key": "19765245-05eb-472b-a295-28e141e13aaf",
+        "lesson_activity.key": "4ef9dfce-8e8e-4846-91d8-dbaf6eedea93"
+      }
+    },
+    {
+      "key": "c3d00d82-82fc-4acb-a5dd-b3c4dfa4ac3d",
+      "position": 1,
+      "properties": {
+        "description": "####Debrief\nAsk students to reflect on the day’s activities. What did they learn about coding? Programming? Debugging?\n  - What are the interior angles that make up a square. What about for a triangle?\n - Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape? \n\nHow do they feel about computer science and coding after spending one hour exploring?\n\n####Celebrate\nExplain that you are spending one hour coding today, because this week is CS Education Week, and millions of other students across the globe have also been participating in one Hour of Code this week. Congratulate students on being part of this world wide movement.\n\nGive each student a [certificate](https://studio.code.org/certificates/batch) with his or her name on it.\n\n####Next Steps\nLet students know that if they enjoyed today’s activity, they have many options for continuing to code. Encourage students to visit code.org/learn for a list of options, or, if you’re planning any of the extension activities that follow, tell students what’s coming next in your classroom.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3d00d82-82fc-4acb-a5dd-b3c4dfa4ac3d",
+        "lesson_activity.key": "9176f871-5344-453a-b439-a71c08b78c36"
+      }
+    },
+    {
+      "key": "c628c35a-259c-405e-a327-f107d870f684",
+      "position": 1,
+      "properties": {
+        "description": "####Beyond the Hour of Code\n\nAfter your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\n\n- **Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses**. These six courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning coming alive. Code.org offers free professional development for these courses, online or in-person.\n- **Visit [You can Teach Computer Science](https://code.org/teach)** for more course suggestions.\n- **Invite a computer science expert to talk to your class about his or her work**. Don’t know any local computer scientists? Reach out to a volunteer on our [volunteer map](https://code.org/volunteer/local)\n\n\nUse the following activity to enhance student learning. It can be used as outside of class activities or other enrichment.\n\n**The Copy Machine**\n\n- Give students two pieces of paper\n- On one sheet draw a simple image, using straight lines only.\n- On the second sheet draw instructions for recreating that image commands to move straight and turn at various angles.\n- Trade instruction sheets and attempt to recreate the image using only the provided instructions."
+      },
+      "seeding_key": {
+        "activity_section.key": "c628c35a-259c-405e-a327-f107d870f684",
+        "lesson_activity.key": "933aab2c-6493-4809-a747-239de97fa17f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_1"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_2"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_3"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_4"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_5"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_5.5"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_5.5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_6"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_6"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_7"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_7"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_8"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_8"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_9"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      },
+      "level_keys": [
+        "Standalone_Artist_9"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_1",
+        "script_level.level_keys": [
+          "Standalone_Artist_1"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_2",
+        "script_level.level_keys": [
+          "Standalone_Artist_2"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_3",
+        "script_level.level_keys": [
+          "Standalone_Artist_3"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_4",
+        "script_level.level_keys": [
+          "Standalone_Artist_4"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_5",
+        "script_level.level_keys": [
+          "Standalone_Artist_5"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_5.5",
+        "script_level.level_keys": [
+          "Standalone_Artist_5.5"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_6",
+        "script_level.level_keys": [
+          "Standalone_Artist_6"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_7",
+        "script_level.level_keys": [
+          "Standalone_Artist_7"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_8",
+        "script_level.level_keys": [
+          "Standalone_Artist_8"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_9",
+        "script_level.level_keys": [
+          "Standalone_Artist_9"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "ui-test-artist",
+        "activity_section.key": "5b7d470f-a9dd-4a8a-b966-8a3dc6a77228"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Artist Introduction",
+      "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+      "key": "artist_introduction",
+      "properties": {
+        "audience": "Student",
+        "type": "Student Video"
+      },
+      "seeding_key": {
+        "resource.key": "artist_introduction"
+      }
+    },
+    {
+      "name": "Turns & Angles",
+      "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+      "key": "turns_angles",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Student Handout"
+      },
+      "seeding_key": {
+        "resource.key": "turns_angles"
+      }
+    },
+    {
+      "name": "Turns & Angles",
+      "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+      "key": "turns_angles_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Student Video"
+      },
+      "seeding_key": {
+        "resource.key": "turns_angles_1"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "resource.key": "artist_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "resource.key": "turns_angles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "resource.key": "turns_angles_1"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "vocabulary.key": "program"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "50dbdab1-d18d-4919-84a3-3ea13baf86b5",
+      "properties": {
+        "description": "Create a program to complete an image using sequential steps."
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "objective.key": "50dbdab1-d18d-4919-84a3-3ea13baf86b5"
+      }
+    },
+    {
+      "key": "73ed9247-f65c-4eee-833c-3f1b3b835f25",
+      "properties": {
+        "description": "Break complex shapes into simple parts."
+      },
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "objective.key": "73ed9247-f65c-4eee-833c-3f1b3b835f25"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-artist",
+  "script_names": [
+    "ui-test-artist"
+  ],
+  "original_script_names": [
+    "ui-test-artist"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-artist",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
