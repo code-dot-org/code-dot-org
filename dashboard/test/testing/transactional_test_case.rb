@@ -19,6 +19,8 @@ module ActiveSupport
 
       class_methods do
         # Ensures any database changes made in setup_all are rolled back after all tests in the class.
+        # @warning This keeps a transaction open for the whole test class.
+        #          Writes from other connections, for example Sequel, can wait on locks or hit a MySQL deadlock.
         private def setup_all(*args, &block)
           self.db_connection = ActiveRecord::Base.connection
 
