@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 import color from '@cdo/apps/util/color';
@@ -9,7 +9,7 @@ import {frameSizes} from './cdoConstants';
  * Represents an SVG frame element, used for Blockly block elements.
  */
 export default class SvgFrame {
-  protected element_: GoogleBlockly.BlockSvg | GoogleBlockly.WorkspaceSvg;
+  protected element_: BlocklyCore.BlockSvg | BlocklyCore.WorkspaceSvg;
   protected text: string;
   protected className: string;
   protected getColor: () => string;
@@ -34,7 +34,7 @@ export default class SvgFrame {
    * @param {number} [fontSize] - An optional override for the size of the header text.
    */
   constructor(
-    element: GoogleBlockly.BlockSvg | GoogleBlockly.WorkspaceSvg,
+    element: BlocklyCore.BlockSvg | BlocklyCore.WorkspaceSvg,
     text: string | undefined,
     className: string | undefined,
     getColor: () => string,

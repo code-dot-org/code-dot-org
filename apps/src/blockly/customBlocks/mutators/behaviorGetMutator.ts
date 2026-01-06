@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
@@ -21,7 +21,7 @@ export const behaviorGetMutator = {
   // We shouldn't ever need to save behaviors as XML because Sprite Lab also saves to JSON.
   // However, this function would create the appropriate mutation if did.
   mutationToDom: function (this: ProcedureBlock) {
-    const container = GoogleBlockly.utils.xml.createElement('mutation');
+    const container = BlocklyCore.utils.xml.createElement('mutation');
     if (this.behaviorId !== undefined && this.behaviorId !== null) {
       container.setAttribute('behaviorId', this.behaviorId);
     }

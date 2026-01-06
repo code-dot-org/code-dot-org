@@ -14,7 +14,7 @@ import {
   ObservableParameterModel,
   isProcedureBlock,
 } from '@blockly/block-shareable-procedures';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
@@ -229,7 +229,7 @@ export const procedureDefMutator = {
    */
   deleteParamsFromModel_: function (
     this: ProcedureBlock,
-    containerBlock: GoogleBlockly.Block
+    containerBlock: BlocklyCore.Block
   ) {
     const ids = new Set(
       containerBlock.getDescendants(/*ordered*/ false).map(b => b.id)
@@ -250,7 +250,7 @@ export const procedureDefMutator = {
    */
   renameParamsInModel_: function (
     this: ProcedureBlock,
-    containerBlock: GoogleBlockly.Block
+    containerBlock: BlocklyCore.Block
   ) {
     const model = this.getProcedureModel();
 
@@ -278,7 +278,7 @@ export const procedureDefMutator = {
    */
   addParamsToModel_: function (
     this: ProcedureBlock,
-    containerBlock: GoogleBlockly.Block
+    containerBlock: BlocklyCore.Block
   ) {
     const model = this.getProcedureModel();
 

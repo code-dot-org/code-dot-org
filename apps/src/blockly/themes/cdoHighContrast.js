@@ -1,5 +1,5 @@
 import HighContrastTheme from '@blockly/theme-highcontrast';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
@@ -83,7 +83,7 @@ export const cdoHighContrastBlockStyles = {
   ...cdoCustomHighContrastStyles,
 };
 
-export default GoogleBlockly.Theme.defineTheme(Themes.HIGH_CONTRAST, {
+export default BlocklyCore.Theme.defineTheme(Themes.HIGH_CONTRAST, {
   base: HighContrastTheme,
   blockStyles: cdoHighContrastBlockStyles,
   categoryStyles: {},

@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
@@ -16,7 +16,7 @@ const USER_CREATED_XML_ATTRIBUTE = 'usercreated';
 export default function initializeBlocklyXml(
   blocklyWrapper: BlocklyWrapperType
 ) {
-  // Clear xml namespace. This property is readonly in Google Blockly.
+  // Clear xml namespace. This property is readonly in Blockly.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (blocklyWrapper.utils.xml as any).NAME_SPACE = '';
 
@@ -26,7 +26,7 @@ export default function initializeBlocklyXml(
   // Override domToBlock so that we can gracefully handle unknown blocks.
   blocklyWrapper.Xml.domToBlock = function (
     xmlBlock: Element,
-    workspace: GoogleBlockly.Workspace
+    workspace: BlocklyCore.Workspace
   ) {
     let block;
     try {
@@ -91,7 +91,7 @@ export default function initializeBlocklyXml(
  * @returns {string} The XML representation of the project.
  *
  */
-export function getProjectXml(workspace: GoogleBlockly.WorkspaceSvg) {
+export function getProjectXml(workspace: BlocklyCore.WorkspaceSvg) {
   // Start by getting the XML for all blocks on the workspace.
   const workspaceXml = Blockly.Xml.blockSpaceToDom(workspace);
 
@@ -382,7 +382,7 @@ function addMutationToTextJoinBlock(blockElement: Element) {
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
 
   // We need to keep track of the expected number of inputs in order to create them all.
-  // Google Blockly expects this kind of extra state to be in a mutator.
+  // Blockly expects this kind of extra state to be in a mutator.
   const inputCount =
     mutationElement.getAttribute('items') ||
     blockElement.getAttribute('inputcount');

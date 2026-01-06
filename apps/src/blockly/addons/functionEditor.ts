@@ -7,11 +7,11 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
-import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
-import {flyoutCategory as variablesFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/variableBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
+import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from '@cdo/apps/blockly/customBlocks/variableBlocks';
 import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
@@ -45,7 +45,7 @@ import WorkspaceSvgFrame from './workspaceSvgFrame';
 export default class FunctionEditor {
   private isReadOnly: boolean;
   private dom: HTMLElement | undefined;
-  private primaryWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
+  private primaryWorkspace: BlocklyCore.WorkspaceSvg | undefined;
   private editorWorkspace: EditorWorkspaceSvg | undefined;
   private block: ProcedureBlock | undefined;
 
@@ -54,7 +54,7 @@ export default class FunctionEditor {
   }
 
   init(options: ExtendedBlocklyOptions) {
-    const defaultTheme = (options.theme || CdoTheme) as GoogleBlockly.Theme;
+    const defaultTheme = (options.theme || CdoTheme) as BlocklyCore.Theme;
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
     if (!modalEditor) {
@@ -71,7 +71,7 @@ export default class FunctionEditor {
     // trying to create blocks with ids that are already used in other definitions.
     const toolbox = Blockly.cdoUtils.toolboxWithoutIds(options.toolbox);
     this.primaryWorkspace =
-      Blockly.getMainWorkspace() as GoogleBlockly.WorkspaceSvg;
+      Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
@@ -99,7 +99,7 @@ export default class FunctionEditor {
     }) as EditorWorkspaceSvg;
     Blockly.cdoUtils
       .getUserTheme(this.editorWorkspace.getTheme())
-      .then((theme: GoogleBlockly.Theme) => {
+      .then((theme: BlocklyCore.Theme) => {
         setThemeAndRenderBlocks(this.editorWorkspace!, theme, defaultTheme);
       });
     this.editorWorkspace.registerToolboxCategoryCallback(
@@ -232,8 +232,8 @@ export default class FunctionEditor {
   }
 
   showForFunctionHelper(
-    existingProcedureBlock: GoogleBlockly.Block | null,
-    newProcedure?: GoogleBlockly.Procedures.IProcedureModel,
+    existingProcedureBlock: BlocklyCore.Block | null,
+    newProcedure?: BlocklyCore.Procedures.IProcedureModel,
     procedureType?: ProcedureType
   ) {
     if (
@@ -543,7 +543,7 @@ export default class FunctionEditor {
    * @returns Block configuration with x and y coordinates
    */
   addEditorWorkspaceBlockConfig(
-    blockConfig: GoogleBlockly.serialization.blocks.State
+    blockConfig: BlocklyCore.serialization.blocks.State
   ) {
     // Position the blocks within the workspace svg frame.
     const x = frameSizes.MARGIN_SIDE + 5;
@@ -584,8 +584,8 @@ export default class FunctionEditor {
   }
 
   createProcedureModelForWorkspace(
-    workspace: GoogleBlockly.WorkspaceSvg,
-    procedure: GoogleBlockly.Procedures.IProcedureModel
+    workspace: BlocklyCore.WorkspaceSvg,
+    procedure: BlocklyCore.Procedures.IProcedureModel
   ) {
     const newProcedure = new ObservableProcedureModel(
       workspace,
