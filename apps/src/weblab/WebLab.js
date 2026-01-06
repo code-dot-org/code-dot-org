@@ -644,6 +644,9 @@ WebLab.prototype.addPageAction = function (...args) {
   logToCloud.addPageAction(...args);
 };
 
+// Leave an empty function to avoid issues with CdoBramble
+WebLab.prototype.tempLog = function () {};
+
 WebLab.prototype.syncBrambleFiles = function (callback = () => {}) {
   this.brambleHost?.syncFiles(
     this.getCurrentFileEntries(),
@@ -703,6 +706,7 @@ WebLab.prototype.brambleApi = function () {
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
     renameProjectFile: this.renameProjectFile.bind(this),
+    tempLog: this.tempLog.bind(this),
   };
 };
 
