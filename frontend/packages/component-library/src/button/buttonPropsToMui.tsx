@@ -76,6 +76,18 @@ export function buttonPropsToMui(props: GenericButtonProps): {
   };
   const muiColor = colorMap[color] || 'primary';
 
+  // Create onClick handler that calls both analyticsCallback and onClick
+  const handleClick = analyticsCallback
+    ? (
+        event:
+          | React.MouseEvent<HTMLButtonElement>
+          | React.MouseEvent<HTMLAnchorElement>,
+      ) => {
+        analyticsCallback();
+        onClick?.(event);
+      }
+    : onClick;
+
   // Handle icon-only buttons with IconButton
   if (isIconOnly && icon) {
     return {
@@ -90,7 +102,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
           ? `${className || ''} force-hover`.trim()
           : className,
         id,
-        onClick: analyticsCallback || onClick,
+        onClick: handleClick,
         'aria-label': ariaLabel || rest['aria-label'],
         // Keep data-force-hover for backwards compatibility
         ...(forceHover &&
@@ -112,7 +124,7 @@ export function buttonPropsToMui(props: GenericButtonProps): {
     // loading: isPending, // Uncomment when using LoadingButton
     className: forceHover ? `${className || ''} force-hover`.trim() : className,
     id,
-    onClick: analyticsCallback || onClick,
+    onClick: handleClick,
     'aria-label': ariaLabel || rest['aria-label'],
     // Keep data-force-hover for backwards compatibility
     ...(forceHover && ({'data-force-hover': true} as Record<string, boolean>)),
