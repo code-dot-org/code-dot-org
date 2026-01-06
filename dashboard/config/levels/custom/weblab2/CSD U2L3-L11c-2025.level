@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-05T06:39:41.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Special Character \"&\"",
+    "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot;`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n1) Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing pink code with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n",
+    "bubble_choice_description": "Learn the code for the special character \"&\" and practice using it. ",
+    "thumbnail_url": "https://images.code.org/7e4aa1111c203fac07279162a8a9432c-c.jpg",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    \n    <!-- 2) Replace the ampersand that is causing pink code with the special code for the symbol -->\n    <h2>This &amp; That</h2>\n    <p>Favorite store: H&amp;M</p>\n    <p>Favorite TV Show: Locke & Key</p>\n    \n    <!-- 3) Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol! -->\n    <p>Favorite candy: </p>\n    <p>Favorite food combination:</p>\n    <p>School colors: </p>\n    <p>Favorite movie:</p>\n    <p></p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjaIDix3nzow\nYmHDg1k4LlcZDR4eiErDV4p20xgC4PPIEJXHaOJECpDS6ansoMOwXU5+T7uf\nNdmqK3smuRjZd2rfZL4z/o6dyVDi4Udn2apoKoFJOyguUJ9pIVw0DfAudvqT\nrXastNgYmJHNGLvi4TOS20LZKw/HHrIS3sggE5lKc5WU4CE75B4CDlwla8hi\nPxW2VkwdddAHzzNrkKZ7wd5t64eTn7nggg93JvT5ZyjbSjiNe81Yt7xHsws5\n7S5JauE+4u3ui0WaB7NhETq+0mWb/uOm0eOiw/zGQN/U85k4All7gzmdkHSI\nfotd2hrIzTE/UK7qiC9xwvIVB+TshMOItM6ejYTQkMr4OodN/xGRcy7X34p+\nCRlzzB+V20cRJXB0JFIvqwpecw9ZQHtT8V31xfYEqPoQLDeCgjVbKYgNKNxK\nf49bY7taZfV9fRlGXOSIzEfh4VurA3908K4YO2gva6sZ8oRFidg3qZJqG4PR\naeSKDfQ9Pnpq1VdXX0gb8dVfqlOkpTmXK+yHg+8liOFpA4cf7sAqGYDP+Ta/\n0LjZ7lKKMKO00CYMKW7n9EBW+AXkRulUv0QK8smARZZP9f7DRUL6G/OU5DQS\nLxtmDJvVnSo18z0Q2Crv5U6/ZX1Vut+KLqCxo7NladFKVAm0rK0cCGXAuQ0a\nqscFp5hhH8HdHZkVDwMdIfkGRiUnzKqp8AistlxEWFeIsoR+/onkT6G/eBil\nIV6QQZqdze4Wg188RtiqTEuZE+LSXX5hi1rPPr8dvNCGZbM2JLPFKYZl5c4v\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-05 06:40:04 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-05 06:40:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

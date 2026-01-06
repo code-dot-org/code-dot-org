@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-04T07:51:17.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Debug: Pink Tags\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n![](https://images.code.org/d661035ebb4ff85cb7199e3dca3ba70a-image-1767512963412.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug.",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html>\n  <head>\n  </head>\n  <body>\n    <!-- Page Title -->\n    <h1>The Life Cycle of a Frog</h1>\n    <!-- Information about the four stages of life for a frog -->\n    <p>This page will explain the different life stages of a frog.</p>\n    <h3>Eggs</h3>\n    <p>Frogs start off in eggs that float on the water in one big cluster that will soon hatch. </p>\n    <h3>Tadpole</h3>\n    <p>After hatching from the eggs, baby frogs, or tadpoles, have no legs and have a tail. They can only stay in the water. It is during this time they eat, grow, and develop lungs to go out of water.</p>\n    <h3>Froglet</h2>\n    <p>At this point, the tail is almost gone and the frog can go onto the water. It has developed two legs to move on land but it is still quite small.</p>\n    <h3>Adult</h2>\n    <p>The tail is completely gone and the frog is done growing. It can now eat insects rather than water plants The adult females will lay eggs to start the cycle all over again.</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjavVk/jds3X\nIaDb613HrZTNmYhBAW/FJQtiBgShzvvxGTrSGqyqUx2EY9m6ENAPczehr6KY\nnEqyL9sokjXjmB6Oa8tlu6LpqqZlgxBv/BZPRBTtiqavD+umkHwAPWhGf6i5\n+4K+u9Cbhj51AU4dezgSo6C92G1SnyajY9CUFPdQMh9CxHHeryMzXDONdlv1\nxKRI+LWsFS7YlFRSvE7hhpFEDx274CTZDLCLTlEcD9dsw3Zd8JOV78pXP2qp\nZyiiKdxcF215lNXthO7RyoCgD7NKkr3ujMpXX45BzhNMnxYqbXuCyl4dR7N8\nUdMfiWf9SxwnDiV4DHK3TTbkv1a5V06KKl2kCvrc8IG4mIVN+4cB8Uj2khjI\np86znMI242fVJtB9A/tYqHHwmFFKfEIVex+Pwe4YTLWIBDWDWz5CjnOvPbTS\npr6YNzCNCSZvdtRcfMtXbGufGlX6HNx/qxR5XoFWfjntCmV9mM9f7Znc6AFY\nvowJo+nWzEYOPAurauSimlk1rOcqnPzg8gV4vGLsy55FGafiNkeAjAO0kqTJ\n2k/qjbPGUs0dqMHF4OMjSNl5cmM03N4+fBDnIkbcOyER15y2kzFRUYbxoLmj\nWZclyY5TTQ1U6lchuJvYryKO9Dhcrw+lSc8Lk1I8bkhj7fQzHWu4LeZBUeMx\nmgeCj4Q5VBq74sGDZxG3dM4TOEM1Wbm3F+OY8RfjYw9T/ux5xK/0VR3UqUaL\nKGO6bJdGhNWO/kYkX4Wa82eLBh0cfD80KuiMl6g0e8vP8BugYDxyEMnVYKWx\nhMebmAzSGlsBTOOTjqr+IQeZAdLMqnZdi2+tLeI+ZVpy9a7/BVm0SeLELy16\nvjfNcfxJ4+jK49TknyvHPLYJu+qXGlD6bgRwRh5/+Qau6fuMaGjoh6JQyJRr\ny2l7w9jCA8QrMHN+iq9GimMDospUYyDB4N98rO770Qe1HtTXkA3cMj7efu1F\n0ix6aB6Mp4KOFZoxs7/bq4RYr8giF7wGgusw6mWgqjR3s7rKzpEemHySkD5P\nWiKyAuOUQs1IIscpcuv5AKxSyOyJ11IenLvDujH4/zy3kdiDpnmw7P6KIKGw\nRxgcr16/kKaDuwNg2hxaG30jXCAhF28nnw8qK6MMEVUp1WHpeG0u/A1DoyeW\npsoQ137wd5vs6mrINoztI3U7RG0+IcpB69FktZs292vRVb87t7nTwxqYZOM4\nb++cai3ougL4s/4AgdGLDd++Y1ssmjZr+yvg7KpWoc+EnheGnXNjBocMANTn\n0qldbgcPuB80VYHZ1N9sX4YoJ4So3jqUoD1FBNwPrVNcYeAuCDA/FICrq70y\nYSBcFrnDAgYOyq9+XBOPjksXB1Jvs1VEmnVyY2ehO8EZD7KT5645S9YJM3zC\nWuWo6+9gM2MAs27hLY1pPLnHK8BZA8wcpnlrrIHt+QQMcNikmzZKKbLe9P8h\n5sU3FJPiAyc7Mk2IWBziL8r4RkmP3SEcCRIUjP3o6EIYwZmPObYcIRO29AT+\nwoRvd1yTPuK3pqOxoDAvEFwpRBi8G/coQMQZ67Xk+9zwrUbN4yDDJrJaM49F\ndW9Wvi5ct4kg0BVOWG27wDOzgctlQyxx9e4HMqKcgGWitAtPoSO6Fek429sS\ncoMoOIQrk+T/zO66fdIi6+9AfxzSUzkohIEh8DZcJV4MCmeJRaopPw/aIFh7\nwQBckJjJMlzagffKdAf/bWhJVGBR3QlYBTGpdy0UDrUH8o6BJ68sN6Ou1taD\n",
+    "display_name": "Debug the Subheadings",
+    "bubble_choice_description": "Use your debugging skills to figure out why some subheadings are smaller than others.",
+    "thumbnail_url": "https://images.code.org/b55333a96c5e07cf0fa0e1465b88b90f-8c.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-04 07:51:25 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:25 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:51:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:53:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 07:53:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 08:25:14 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
