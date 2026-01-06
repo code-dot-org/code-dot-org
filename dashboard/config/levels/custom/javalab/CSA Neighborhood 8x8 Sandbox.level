@@ -351,7 +351,7 @@
     "submittable": "false",
     "display_name": "8x8 Neighborhood",
     "thumbnail_url": "https://images.code.org/4a88a1d4ef251298a4bd53336d9f6167-image-1628004801480.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-09-23T17:45:40.649+00:00\",\"changed\":[\"cloned from \\\"Neighborhood 8x8 Practice Level\\\"\"],\"cloned_from\":\"Neighborhood 8x8 Practice Level\"},{\"changed_at\":\"2021-09-23 17:46:45 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-23 17:50:04 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

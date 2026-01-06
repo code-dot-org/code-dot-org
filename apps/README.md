@@ -170,11 +170,6 @@ We use Storybook to generate a UI component style guide that you can use
 to discover what components are available to reuse as you build new
 features. See more in the [apps/.storybook README](./.storybook/README.md).
 
-### Full build with blockly changes
-
-1. Check out a local copy of [blockly](https://github.com/code-dot-org/blockly/)
-1. Follow the directions in [Building with apps](https://github.com/code-dot-org/blockly#building-with-apps)
-
 ### Analyzing bundle sizes
 
 ![code-studio-common bundle](https://user-images.githubusercontent.com/1070243/44691985-abe8dc80-aa15-11e8-95a3-0835ca3529df.png)

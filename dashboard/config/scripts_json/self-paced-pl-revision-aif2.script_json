@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-18 17:45:32 UTC",
+    "serialized_at": "2025-12-19 19:09:57 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,8 +40,6 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**In this lesson, you will:**\n\n- Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.\n- Explore how students apply computational thinking while learning to code.\n- Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.\n\n**Suggested Time:** 20 minutes \n",
-        "student_overview": "**In this lesson, you will:**\n\n- Understand core computational thinking concepts, including abstraction, decomposition, pattern recognition, and algorithms.\n- Explore how students apply computational thinking while learning to code.\n- Learn unplugged pedagogy strategies to make computational thinking more accessible and engaging.\n\n**Suggested Time:** 20 minutes "
       },
       "seeding_key": {
         "lesson.key": "Computational Thinking",
@@ -57,8 +55,6 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 25 minutes",
-        "student_overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "Algorithms with Python",
@@ -72,7 +68,7 @@
       "key": "5a270856-f9a8-4be6-af2a-f55844e5ba16",
       "position": 1,
       "properties": {
-        "duration": 20
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "5a270856-f9a8-4be6-af2a-f55844e5ba16",
@@ -85,7 +81,7 @@
       "key": "9474cf16-c0ef-4397-a86a-54332f66bfad",
       "position": 1,
       "properties": {
-        "duration": 30
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "9474cf16-c0ef-4397-a86a-54332f66bfad",
@@ -923,6 +919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-custommodule-L27-python_-rev"
+        ],
         "progression": "Working with Functions"
       },
       "bonus": false,
@@ -945,6 +944,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-function-trn-rght-L17-Python_-rev"
+        ],
         "progression": "Working with Functions"
       },
       "bonus": false,
@@ -967,6 +969,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_custompy-L17-2_Python_-rev"
+        ],
         "progression": "Working with Functions"
       },
       "bonus": false,
@@ -989,6 +994,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_backpack-L18_Python_-rev"
+        ],
         "progression": "Working with Functions"
       },
       "bonus": false,
@@ -1011,6 +1019,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-functions-mult-choice-L21-Python_-rev"
+        ],
         "progression": "Working with Functions"
       },
       "bonus": false,
@@ -1033,6 +1044,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python_-rev"
+        ],
         "progression": "Working with Functions"
       },
       "bonus": false,
@@ -1652,31 +1666,6 @@
     {
       "chapter": 58,
       "position": 25,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csaif-pl-_projectmanage_forum_L5_python_-rev"
-        ],
-        "progression": "Preparing for the Final Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl-_projectmanage_forum_L5_python_-rev"
-        ],
-        "lesson.key": "Algorithms with Python",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif2",
-        "activity_section.key": "50786620-cd35-4ab0-837f-aacb42be5033"
-      },
-      "level_keys": [
-        "csaif-pl-_projectmanage_forum_L5_python_-rev"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 26,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1700,8 +1689,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 27,
+      "chapter": 59,
+      "position": 26,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -2403,18 +2392,6 @@
         "level.key": "csaif_pl_collaboration-L4_python_-rev",
         "script_level.level_keys": [
           "csaif_pl_collaboration-L4_python_-rev"
-        ],
-        "lesson.key": "Algorithms with Python",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-revision-aif2",
-        "activity_section.key": "50786620-cd35-4ab0-837f-aacb42be5033"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csaif-pl-_projectmanage_forum_L5_python_-rev",
-        "script_level.level_keys": [
-          "csaif-pl-_projectmanage_forum_L5_python_-rev"
         ],
         "lesson.key": "Algorithms with Python",
         "lesson_group.key": "",

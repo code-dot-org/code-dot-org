@@ -1,0 +1,47 @@
+name 'csaif_pl_ai_03_08b_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI as a Co-Creator
+
+## 📝 To Do
+#### Read the following AI-created essay and reflect on the following:
+* #### *What does the essay do well?*
+* #### *What is it lacking?*
+* #### *How could a human collaborating with AI improve this draft?*
+
+<div style="background-color: #F5F7F8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">Ever since I was young, I have faced many challenges that have helped shape who I am today. Life is full of ups and downs, and each experience teaches us something important. One particular moment taught me the value of hard work and determination. It was not easy, but I learned that staying positive can make a big difference. This experience showed me how to overcome obstacles and become a stronger person.
+</div>
+
+#### You may notice that AI struggles with originality in tasks such as writing personal essays. Because AI predicts what is statistically likely to sound good, it often produces writing that is generic, vague, or missing specific details from a writer’s real experiences.
+
+#### However, AI can still be a powerful creative partner. Many writers, designers, musicians, and filmmakers now use AI to brainstorm ideas, explore different styles, revise drafts, or automate small parts of the creative process. Humans bring personal insight, emotion, and lived experience, while AI can help with speed, organization, and generating possibilities.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Co-creating:</strong> when humans and AI work together, with humans providing creativity and direction, while AI assists by processing data, generating suggestions, or automating tasks.</p>
+</div>
+</div>
+
+## Lesson 9: AI as a Co-Creator
+
+#### In <a href='https://studio.code.org/s/aif1-2025/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 9</a> Students will explore using AI as a co-creater further by working in groups to help launch a student-focused tech product.
+
+#### Students will collaborate with their group and with AI to launch a brand-new product that will help students thrive in school. Team members will take on a creative role in the product launch based on a real career, and collaborate with AI to complete their part. 
+
+#### Each student in the group will choose a role they'll take on:
+
+<p align="center">
+<img src="https://images.code.org/91cf573638107d3cfee6a3def612c573-Screenshot 2025-05-23 at 10.56.38 AM.png" alt="four roles from the lesson plan: copywriter, graphic designer, video director, and sound designer" width="80%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### Then, students will interact with a different level in AI Chat Lab to finalize their piece of the product launch.
+
+#### *Optional:* Check out the <a href='https://docs.google.com/document/d/1w8AjUDBWmtzol9YpTG-fOMew3RZBXe8h7KF8hchSzno/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>exemplar</a> for the AI as a Co-Creator Activity Guide to get a better idea of what students will be doing in this lesson.
+
+<div style="background-color:#F5F7F8; border-left: 6px solid #B7E0E5; padding: 10px; margin-top: 20px; font-family: sans-serif;">
+  <strong style="font-size: 16px;"><i class="fa-solid fa-user-graduate"></i> Career Journeys:</strong>
+  <span style="font-size: 14px;">This activity connects to real-world creative careers like marketing, design, and media production—showing how professionals collaborate with AI to bring ideas to life.</span>
+</div>
+MARKDOWN

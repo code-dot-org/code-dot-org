@@ -208,6 +208,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "When the button on the screen is clicked, the code will turn on a small red LED near the USB plug of the circuit playground. Students may have expected one of the larger LED lights to turn on, so they may not immediately notice the smaller red LED. ",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

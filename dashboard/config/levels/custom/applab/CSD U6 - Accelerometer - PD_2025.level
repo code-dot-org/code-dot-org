@@ -109,6 +109,7 @@
     "bubble_choice_description": "Use the accelerometer to move the car and avoid the obstacles",
     "thumbnail_url": "https://images.code.org/6d1ff7cb27dca4485542b622711b9508-image-1648865314630.png",
     "encrypted_examples": "4wfHY+KhWx+zuNzGKCaryI3vs9UHT7n+Got2lTVspJIddR4fwD10EpvBhrhz\nj5S1Dz+rX8FiGuTzW/cKNhU/1g==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

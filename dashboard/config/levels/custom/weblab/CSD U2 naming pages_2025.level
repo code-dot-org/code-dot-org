@@ -35,7 +35,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "encrypted_examples": "nu6ESad9i64H9WnnsTkpZpIeNyWfioD1TZLUUqhKCTuwqZ7cuE5kkhMOikC/\ni0vKcpkldlVusNfLYQl4BTIB7w==\n",
-    "validation_enabled": "true"
+    "validation_enabled": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
