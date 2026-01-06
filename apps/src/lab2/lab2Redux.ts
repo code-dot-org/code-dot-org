@@ -220,10 +220,12 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           payload.channelId,
+          levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.levelId,
+          levelProperties.isProjectLevel || false,
           payload.userId,
           payload.scriptId
         );
