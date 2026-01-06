@@ -137,11 +137,9 @@ module AllowedHostnameHelper
   ].freeze
 
   # Allowed hostnames for external image sources in student projects.
-  # NOTE: This list is mirrored in apps/src/codebridge/FilePreview/constants.ts
-  # for Web Lab 2 CSP enforcement. Keep both lists in sync when making changes.
-  ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-    'picsum.photos' # Placeholder images - Public API
-  ].freeze
+  # This references the shared constant defined in lib/cdo/shared_constants.rb
+  # which is also available to JavaScript via generated shared constants.
+  ALLOWED_IMAGE_HOSTNAME_SUFFIXES = SharedConstants::ALLOWED_IMAGE_HOSTNAME_SUFFIXES
 
   ALLOWED_FONT_HOSTNAMES = [
     # These hostnames are used to load google fonts. Public API.

@@ -932,4 +932,11 @@ module SharedConstants
     PARENT: 'parent',
     NEXT_LEVEL: 'next_level',
   }
+
+  # Allowed hostnames for external image sources in Web Lab 2 projects.
+  # These domains are allowlisted in the Content Security Policy for the preview iframe.
+  # Only public, well-documented APIs should be added to this list.
+  ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
+    'picsum.photos', # Placeholder images - Public API
+  ].freeze
 end

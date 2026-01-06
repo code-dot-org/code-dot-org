@@ -1,3 +1,5 @@
+import {AllowedImageHostnameSuffixes} from '@cdo/generated-scripts/sharedConstants';
+
 export enum IframeMessageType {
   IFRAME_READY = 'IFRAME_READY',
   CHANGE_FILE_HREF = 'CHANGE_FILE_HREF',
@@ -25,18 +27,12 @@ export enum ProjectServiceWorkerMessageType {
   KEEP_ALIVE = 'KEEP_ALIVE',
 }
 
-// Allowed hostnames for external image sources in Web Lab 2 projects.
-// This mirrors ALLOWED_IMAGE_HOSTNAME_SUFFIXES from dashboard/app/helpers/allowed_hostname_helper.rb
-// Note: Keep this list in sync with the backend definition.
-export const ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-  'picsum.photos', // Placeholder images - Public API
-];
-
 // Generate Content Security Policy (CSP) img-src policy string from allowed hostnames.
+// Uses the shared constant ALLOWED_IMAGE_HOSTNAME_SUFFIXES defined in lib/cdo/shared_constants.rb
 export function generateImageSrcCSPPolicy(): string {
   // For each hostname, allow both http://hostname and http://*.hostname
   // The protocol prefix 'http://' also allows https:// per CSP spec
-  const policies = ALLOWED_IMAGE_HOSTNAME_SUFFIXES.flatMap(hostname => [
+  const policies = AllowedImageHostnameSuffixes.flatMap(hostname => [
     `http://${hostname}`,
     `http://*.${hostname}`,
   ]);
