@@ -1,7 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
-import experiments from '@cdo/apps/util/experiments';
 
 import HttpClient from '../util/HttpClient';
 
@@ -125,7 +124,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         showNotifications={showNotifications}
         unreadNotificationCount={unreadNotificationCount}
       />
-      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
+      {showNotifications ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (
         <AiDiffChat

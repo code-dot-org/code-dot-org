@@ -6,15 +6,13 @@
     "aif3-v2-2025",
     "aif4-v2-2025",
     "aif5-v3",
-    "aif6-v2-2025",
-    "aif5-v2-2025"
+    "aif6-v2-2025"
   ],
   "original_script_names": [
     "aif1-v2-2025",
     "aif2-v2-2025",
     "aif3-v2-2025",
     "aif4-v2-2025",
-    "aif5-v2-2025",
     "aif6-v2-2025",
     "aif5-v3"
   ],
@@ -49,6 +47,20 @@
       },
       "seeding_key": {
         "resource.key": "ai_chat_faq"
+      }
+    },
+    {
+      "name": "AI Foundations Changelog",
+      "url": "https://docs.google.com/document/d/1dhkmFRrxMF8Ach510fq3QyfKCAflJY6eAccVvc-PJZk/edit?usp=sharing",
+      "key": "ai_foundations_changelog",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_changelog"
       }
     },
     {
