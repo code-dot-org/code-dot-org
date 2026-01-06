@@ -98,6 +98,7 @@
     "start_blocks": "var redY = 105;\r\nvar blueY = 105;\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  //1) When the left button is pressed, move the red emoji down the screen\r\n\t\r\n  //2) If the red emoji is at the bottom of the screen, show the `redWinner` screen\r\n  \r\n});\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  //3) When the right button is pressed, move the blue emoji down the screen\r\n\t\r\n  //4) If the blue emoji is at the bottom of the screen, show the `blueWinner` screen\r\n  \r\n});\r\n",
     "bubble_choice_description": "Create a game that uses the left and right buttons to move characters down the screen. The first person to reach the bottom of the screen is the winner!",
     "encrypted_examples": "D+NpsjQjCRiiJM3YWMXcbMiaDl+SSmoSysZWiEM25vYb1kXVN7mb2ji7i2FG\n8jNFWLejPHvTwrkvPT7z7oTkWA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

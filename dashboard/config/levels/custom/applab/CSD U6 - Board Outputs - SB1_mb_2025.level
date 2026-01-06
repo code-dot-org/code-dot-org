@@ -66,6 +66,7 @@
     "ai_enabled": "false",
     "encrypted_examples": "NUC9zRSwTdhKxJ0SrYb5E734KGYsFceMbcQXGTGiXdNax3pSnW9Rrr8UaMdE\npa8rr+6jjjlFb115LXWVJTcOkw==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

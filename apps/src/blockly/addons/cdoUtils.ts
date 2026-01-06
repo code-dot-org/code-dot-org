@@ -23,11 +23,13 @@ import {
   ToolboxType,
 } from '../constants';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {updateBlockCountMap} from '../eventHandlers';
 import cdoDark from '../themes/cdoDark';
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
   ExtendedBlock,
+  ExtendedWorkspaceSvg,
   JsonBlockConfig,
   SerializedFields,
   WorkspaceSerialization,
@@ -76,6 +78,10 @@ export function loadBlocksToWorkspace(
   // Levels will include: "top_level_procedure_autopopulate": "true"
   if (Blockly.topLevelProcedureAutopopulate) {
     addProcedureCallBlocksToFlyout(workspace, mainSource);
+  }
+
+  if (Blockly.blockLimitMap && Blockly.blockLimitMap.size > 0) {
+    updateBlockCountMap(workspace as ExtendedWorkspaceSvg);
   }
 }
 
@@ -333,8 +339,8 @@ export function bindBrowserEvent(
   return Blockly.browserEvents.bind(element, name, thisObject, func);
 }
 
-export function isWorkspaceReadOnly() {
-  return false; // TODO - used for feedback
+export function isWorkspaceReadOnly(workspace: GoogleBlockly.Workspace) {
+  return workspace.isReadOnly();
 }
 /**
  * Checks if any block type's usage count exceeds its defined limit and returns

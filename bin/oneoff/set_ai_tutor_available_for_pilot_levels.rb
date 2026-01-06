@@ -13,7 +13,7 @@
 # (specifically LevelFiles.write_custom_level_file)
 
 require_relative '../../dashboard/config/environment'
-require src_dir 'database'
+require 'cdo/db'
 
 dry_run = ARGV.include?('--dry-run')
 

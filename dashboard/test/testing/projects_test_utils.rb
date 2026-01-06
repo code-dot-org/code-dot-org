@@ -17,18 +17,11 @@ module ProjectsTestUtils
 
   # @param [User] user - may be nil for anonymous storage id
   def with_storage_id_for(user)
-    owns_storage_id = false
     user_id = user&.id
 
-    storage_id = storage_id_for_user_id(user_id)
-    unless storage_id
-      storage_id = create_storage_id_for_user(user_id)
-      owns_storage_id = true
+    user_storage_ids_table.db.transaction(joinable: false, rollback: :always) do
+      yield storage_id_for_user_id(user_id) || create_storage_id_for_user(user_id)
     end
-
-    yield storage_id
-  ensure
-    delete_storage_id_for_user(user_id) if owns_storage_id
   end
 
   def with_anonymous_channel(&block)

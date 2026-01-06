@@ -352,32 +352,6 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'use_google_blockly is true if not set' do
-    @level = build(:level)
-    assert use_google_blockly
-  end
-
-  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
-    view_options(blocklyVersion: 'google')
-    @level = build(:level)
-    assert use_google_blockly
-    reset_view_options
-  end
-
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
-    view_options(blocklyVersion: 'cdo')
-    @level = build(:level)
-    refute use_google_blockly
-    reset_view_options
-  end
-
-  test 'use_google_blockly is true if blocklyVersion is not set to cdo in view_options' do
-    view_options(blocklyVersion: nil)
-    @level = build(:level)
-    assert use_google_blockly
-    reset_view_options
-  end
-
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do
     # two different users
     @user = create(:user)

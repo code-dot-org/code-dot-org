@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q4_2025'
+
+question 'A developer writes a loop to print the numbers 1 through 10, but the program only prints 1 through 9. This is a common example of:'
+
+wrong 'An infinite loop.'
+wrong 'A syntax error.'
+right 'An off-by-one error.'
+wrong 'A data mutation error.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+Off-by-one errors occur when a loop starts or stops one iteration too early or too late, often due to confusion between `<` and `<=` or array indexing.
+MARKDOWN

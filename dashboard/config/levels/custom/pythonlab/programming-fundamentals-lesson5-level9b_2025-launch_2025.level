@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:29.000Z",
   "level_num": "custom",
@@ -8,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nHelp the `Painter` navigate through The Neighborhood to reach the traffic cone!\r\n\r\n1. Create a `Painter` object.\r\n\r\n2. Use the `move()` and `turn_left()` methods to navigate through The Neighborhood to reach the traffic cone.\r\n\r\n![](https://images.code.org/982457a7e4c9e6efc992912c8266833f-U1L4-L4b.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nIs your code not working the way you expected? One helpful strategy finding the cause of an issue is to use `print()` to track where you're expecting the `Painter` to be and the direction they are facing. For example:\r\n\r\n```\r\nravi.move()\r\nravi.move()\r\nravi.move()\r\nprint(\"ravi is next to the traffic cone facing east\")\r\n\r\nravi.turn_left()\r\nravi.turn_left()\r\nravi.turn_left()\r\nprint(\"ravi is next to the traffic cone facing south\")\r\n```",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -389,6 +388,7 @@
       "type": "validation"
     }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:28.995+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level9b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level9b_2025-launch\"},{\"changed_at\":\"2025-04-15 00:44:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 00:45:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-27 02:23:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-29 17:37:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 17:43:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 17:46:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 16:57:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 16:58:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

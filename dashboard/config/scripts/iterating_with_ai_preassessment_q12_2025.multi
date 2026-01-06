@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q12_2025'
+
+question 'When evaluating a filter\'s inclusivity, a developer should look for:'
+
+wrong 'Whether the filter makes the app run faster.'
+wrong 'If the filter labels are written in all capital letters.'
+right 'Whether the filter categories or thresholds accidentally exclude or sideline certain groups of people.'
+wrong 'If the AI can guess what the user wants to filter before they type it.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+
+Inclusive design involves analyzing if your algorithmic choices (like filtering for only "Standard" families) unintentionally marginalize or ignore specific stakeholders.
+MARKDOWN

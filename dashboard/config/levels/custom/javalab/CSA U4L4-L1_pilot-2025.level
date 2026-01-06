@@ -19,7 +19,7 @@
       }
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T16:53:45.085+00:00\",\"changed\":[\"cloned from \\\"CSA U4L4-L1_2025\\\"\"],\"cloned_from\":\"CSA U4L4-L1_2025\"}]"

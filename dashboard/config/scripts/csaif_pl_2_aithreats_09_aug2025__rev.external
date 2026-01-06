@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/ef882e1529a24edab278b762dea5189b-Screenshot 2025-08-20 at 11.20.04 AM.png" alt="activity guide Investigate a CIA Scenario" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
-#### During <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/1/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6 - Confidentiality, Integrity, and Availability</a>, students take turns roleplaying attackers and defenders to analyze system failures and apply the CIA Triad. They propose simple fixes and think through tradeoffs, practicing how cybersecurity pros protect people.
+#### During <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6 - Confidentiality, Integrity, and Availability</a>, students take turns roleplaying attackers and defenders to analyze system failures and apply the CIA Triad. They propose simple fixes and think through tradeoffs, practicing how cybersecurity pros protect people.
 
 
 ## How the Activity Works
@@ -52,15 +52,10 @@ They log in quickly and the app doesn't ask for any extra info to prove it’s r
 
 
 <br>
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🧐 Is there an Answer Key?
-</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p style="font-size: 18px"> Yes! The lesson plans include answer keys for all activities in this Unit, including this one. Check out the <a href='https://docs.google.com/document/d/174vQaj9skmfFjPv99lPHpeizUHwvg1JA1UcDBVJbQrk/edit?tab=t.0#heading=h.hj9mx4qf72mr' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Key</a>.
-</p></div>
-</details>
-
-<br>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Lesson plans include answer keys for all activities in this Unit, including this one. Check out the <a href='https://docs.google.com/document/d/174vQaj9skmfFjPv99lPHpeizUHwvg1JA1UcDBVJbQrk/edit?tab=t.0#heading=h.hj9mx4qf72mr' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Key</a> if you'd like before moving on.
+</p>
+</div>
 
 MARKDOWN

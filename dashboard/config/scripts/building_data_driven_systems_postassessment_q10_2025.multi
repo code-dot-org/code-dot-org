@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q10_2025'
+
+question 'You notice that on a mobile device, a rendered list of data is overflowing the screen horizontally. Which step in the "Data-to-Display" process likely needs revision?'
+
+wrong 'The schema needs more fields.'
+wrong 'The `.map()` method is not running fast enough.'
+right 'The visual rendering (CSS/HTML) needs to be adjusted for responsive design and clarity.'
+wrong 'The original array should be converted into a single string.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+
+Evaluation of a rendered list involves checking for accessibility and readability. Horizontal overflow is a common UI/UX issue that requires adjusting the display logic or styles. 
+MARKDOWN

@@ -57,7 +57,7 @@ markdown <<MARKDOWN
                style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_csd_post?survey_data[module]=3" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
+            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_pd_teaching_aif_cybersecurity_post_survey" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
           </p>
         </div>
       </div>
@@ -72,7 +72,7 @@ markdown <<MARKDOWN
                style="width: 25%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Get Started with Students</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Ready to teach? <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">Create a section</a> and assign the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/5" target="blank" rel="noopener noreferrer">AI-Powered Threats and Defenses</a> unit.
+            Ready to teach? <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">Create a section</a> and assign the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5" target="blank" rel="noopener noreferrer">AI-Powered Threats and Defenses</a> unit.
           </p>
         </div>
       </div>

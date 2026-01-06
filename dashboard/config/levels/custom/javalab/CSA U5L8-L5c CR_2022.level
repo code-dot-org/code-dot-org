@@ -15,7 +15,7 @@
     "display_name": "Blue Image",
     "bubble_choice_description": "Create a filter that modifies the blue values of each pixel if they are over a specified amount.",
     "thumbnail_url": "https://images.code.org/8f25403dff5e4218730941be7c74ed52-image-1651260320447.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:32:12.538+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L5b CR_2022\\\"\"],\"cloned_from\":\"CSA U5L8-L5b CR_2022\"},{\"changed_at\":\"2022-04-12 19:32:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 16:03:29 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 18:11:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 19:25:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:06:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

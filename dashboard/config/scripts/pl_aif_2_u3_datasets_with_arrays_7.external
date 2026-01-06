@@ -3,36 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Arrays 
+# Structured Datasets
 
-#### When you build web apps, you often need to keep track of multiple related pieces of information, like a list of items, scores, or usernames. Instead of creating a separate variable for each item, we can create an **array.**
+#### Arrays and objects work together to create structured datasets. An array stores the full collection of data, while each object represents one record with related information stored as key-value pairs. This mirrors how data is organized in spreadsheets, databases, and APIs.
 
-
-
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 An <strong>Array</strong> is a special kind of variable that stores an ordered list of related values (such as numbers, words, or images).
-</p>
-</div>
-
----
-
-<img src="https://images.code.org/54347b8b347d0bc1c0ef7c83776a81bc-image-1765299269132.png" alt="example arrays" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
-
-#### Think of it like a container that holds multiple items in a specific order.
+<img src="https://images.code.org/d6df6b77273f9067ddc00b6dbddf5c07-image-1766165351780.png" alt="javascript code for a helper function to get index" width="500px" style="border-radius:10px; float:right; margin: 40px 0 20px 20px;">
 
 
-- #### Each item has a position number called an **index**.
-- #### Index numbering begins with 0.
+## Clean vs. Messy Data
 
+#### Using helper functions like `getItemByIndex` or `getItemById` helps clarify whether the data is clean or messy because they force you to define what “valid” data access looks like. 
+
+#### These functions make it easier to catch issues early, such as:
+
+- #### Invalid indexes or missing IDs
+
+- #### Unexpected input values
+
+#### When a helper function returns null, it signals that something doesn’t match expectations, making it easier to debug and improve data reliability before problems spread through the program.
 
 ---
 
 ## Next up
 
-#### Let's see what this looks like in code! 
-
-
-
-
-
+#### Practice cleaning up a dataset! 
 MARKDOWN

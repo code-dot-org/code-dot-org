@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 #### A **web app (web application)** is a program that runs in a web browser—like Chrome, Safari, or Edge—instead of being installed on your computer or phone. It combines web technologies such as HTML, CSS, and JavaScript to create an interactive experience for users.
 
 
-#### Whereas a **website** usually displays static information (like an online brochure or article), a web app lets users do something—such as submit a form, play a game, generate text with AI, or draw on a canvas.
+#### Whereas a **website** usually displays static information (like an online brochure or article), a web app lets users do something like submit a form, play a game, generate text with AI, or draw on a canvas.
 
 ___
 
@@ -45,5 +45,5 @@ ___
 
 #### Let's take a look at the final project the students will create in this unit. 
 
-![]()
+
 MARKDOWN

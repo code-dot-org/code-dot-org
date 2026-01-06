@@ -32,7 +32,7 @@
         "isVisible": true
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:46:06.858+00:00\",\"changed\":[\"cloned from \\\"CSA U6L10-L2 PBT_2022\\\"\"],\"cloned_from\":\"CSA U6L10-L2 PBT_2022\"},{\"changed_at\":\"2022-04-14 19:46:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 16:38:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 12:50:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
