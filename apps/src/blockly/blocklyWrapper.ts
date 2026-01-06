@@ -13,7 +13,6 @@ import {javascriptGenerator} from 'blockly/javascript';
 
 import {
   BlockColors,
-  BlocklyVersion,
   READ_ONLY_PROPERTIES,
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
@@ -155,7 +154,6 @@ const BlocklyWrapper = function (
   this: BlocklyWrapperType,
   blocklyInstance: BlocklyCoreInstance
 ) {
-  this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
   this.mainWorkspace = undefined;
   this.embeddedWorkspaces = [];

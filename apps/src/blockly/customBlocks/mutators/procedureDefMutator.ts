@@ -94,7 +94,7 @@ export const procedureDefMutator = {
     );
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
     if (!this.description) {
-      // Google Blockly projects store descriptions in a separate field.
+      // New Blockly projects store descriptions in a separate field.
       setBlockDescription(this, this.getFieldValue('DESCRIPTION'));
     }
   },

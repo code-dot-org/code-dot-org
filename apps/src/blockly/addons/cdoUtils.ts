@@ -499,8 +499,8 @@ export function soundField(
   transformText?: (text: string) => string,
   icon?: SVGElement
 ) {
-  // Handle 'play sound' block with default param from CDO blockly.
-  // TODO: Remove when sprite lab is migrated to Google blockly.
+  // Handle legacy or malformed serialized sound values by falling back
+  // to the default sound.
   const validator = (newValue: string) => {
     if (typeof newValue !== 'string') {
       return null;
@@ -748,7 +748,7 @@ export function appendSharedFunctions(
 }
 /**
  * Update the XML string representing toolbox data for compatibility with
- * Google Blockly.
+ * modern Blockly.
  * This function potentially modifies each <block> element in the XML
  * if there are unsupported attributes, missing mutators, etc.
  * We also process block xml during domToBlockSpace, which is called to

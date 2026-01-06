@@ -23,13 +23,7 @@ import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import WorkspaceSvgFrame from './addons/workspaceSvgFrame';
-import {
-  BLOCK_TYPES,
-  BlocklyVersion,
-  BlockStyles,
-  Themes,
-  WORKSPACE_EVENTS,
-} from './constants';
+import {BLOCK_TYPES, BlockStyles, Themes, WORKSPACE_EVENTS} from './constants';
 
 export interface BlockDefinition {
   category: string;
@@ -112,7 +106,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  version: BlocklyVersion;
   blockly_: typeof BlocklyCore;
   mainWorkspace: BlocklyCore.WorkspaceSvg | undefined;
   embeddedWorkspaces: string[];

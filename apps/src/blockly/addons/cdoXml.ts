@@ -212,7 +212,7 @@ function addMutationToBehaviorBlocks(blockElement: Element) {
   // We need to keep track of whether the user created the behavior or not.
   // If not, it needs a static behavior id in order to be translatable
   // (e.g. shared behaviors).
-  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // In legacy projects, the 'usercreated' flag was set on the block. Today Blockly
   // expects this kind of extra state in a mutator.
   const userCreated = readBooleanAttribute(
     blockElement,
@@ -221,7 +221,7 @@ function addMutationToBehaviorBlocks(blockElement: Element) {
   );
   mutationElement.setAttribute('userCreated', `${userCreated}`);
 
-  // In CDO Blockly, behavior ids were stored on the field. Google Blockly
+  // In legacy projects, behavior ids were stored on the field. Today Blockly
   // expects this kind of extra state in a mutator.
   const nameField =
     getFieldOrTitle(blockElement, 'VAR') ||
@@ -252,7 +252,7 @@ function addMutationToProcedureDefBlocks(blockElement: Element) {
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
 
   // We need to keep track of whether the user created the procedure definition.
-  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // In legacy projects, the 'usercreated' flag was set on the block. Today Blockly
   // expects this kind of extra state in a mutator.
   const userCreated = readBooleanAttribute(
     blockElement,
@@ -337,9 +337,9 @@ function addMissingBehaviorId(blockElement: Element) {
   const blockType = blockElement.getAttribute('type');
   if (blockType === BLOCK_TYPES.behaviorGet) {
     const behaviorNameField =
-      // CDO Blockly projects used a VAR field to store the behavior name.
+      // Legacy projects used a VAR field to store the behavior name.
       getFieldOrTitle(blockElement, 'VAR') ||
-      // Google Blockly projects use a NAME field to store the behavior name.
+      // Today Blockly uses a NAME field to store the behavior name.
       getFieldOrTitle(blockElement, 'NAME');
     setIdFromTextContent(behaviorNameField);
   } else if (blockType === BLOCK_TYPES.behaviorDefinition) {

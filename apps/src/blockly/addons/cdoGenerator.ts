@@ -23,8 +23,6 @@ export default function initializeGenerator(
     return varName;
   };
 
-  // This function was a custom addition in CDO Blockly, so we need to add it here
-  // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.xmlToBlocks = function (
     _name: string,
     xml: Element
@@ -34,8 +32,6 @@ export default function initializeGenerator(
     return workspace.getTopBlocks(true);
   };
 
-  // This function was a custom addition in CDO Blockly, so we need to add it here
-  // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function (
     name: string,
     opt_typeFilter?: string | string[]

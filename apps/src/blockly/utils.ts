@@ -151,8 +151,8 @@ export function shouldSkipHiddenWorkspace(workspace: BlocklyCore.WorkspaceSvg) {
 }
 
 /**
- * Handle a failure to get workspace code by either CDO or Google Blockly
- * by updating the redux store and logging the error.
+ * Handle a failure to get workspace code by Blockly by updating the
+ * redux store and logging the error.
  * We only want to log the error once per failure since getWorkspaceCode
  * gets called many times and the error will be the same every time.
  * @param {MetricEvent} eventName Event name to log

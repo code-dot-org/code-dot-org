@@ -18,7 +18,7 @@ for (const key in HighContrastTheme.blockStyles) {
 const variableColor =
   HighContrastTheme.blockStyles.variable_blocks.colourPrimary;
 
-// Intentionally overriden styles from Google Blockly.
+// Intentionally overriden styles from Blockly.
 // We do not override list, math, or text blocks.
 const coreBlocklyOverrides = {
   logic_blocks: {

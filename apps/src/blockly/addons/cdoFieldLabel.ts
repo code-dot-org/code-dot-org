@@ -17,7 +17,7 @@ export default class CdoFieldLabel extends BlocklyCore.FieldLabel {
       fixedSize?: {width: number; height: number};
     }
   ) {
-    // Google Blockly also supports optional textClass and config parameters,
+    // Blockly also supports optional textClass and config parameters,
     // but these are unused.
     super(value);
 

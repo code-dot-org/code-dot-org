@@ -268,9 +268,8 @@ function attributesEquivalent(expected, given) {
  */
 function childrenEquivalent(expected, given, ignoreChildBlocks) {
   const filterFn = function (node) {
-    // CDO Blockly returns tag names in all caps
     const tagName = node.tagName && node.tagName.toLowerCase();
-    // Google Blockly sometimes adds a mutation where CDO Blockly would not.
+    // Ignore mutation nodes to tolerate legacy/version differences in serialized XML.
     const isMutation = tagName === 'mutation';
     const isIgnorableChild =
       ignoreChildBlocks && (tagName === 'next' || tagName === 'statement');

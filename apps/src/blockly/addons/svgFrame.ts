@@ -68,7 +68,7 @@ export default class SvgFrame {
   }
 
   initChildren(frameX: number, frameY: number) {
-    // Google Blockly's block ids are randomly generated and can
+    // Blockly's block ids are randomly generated and can
     // include invalid characters for element ids. Remove everything
     // except alphanumeric characters and whitespace, then collapse
     // multiple adjacent whitespace to single spaces.
