@@ -35,6 +35,11 @@
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
     },
+    "./hooks": {
+      "types": "./dist/types/hooks/index.d.ts",
+      "import": "./dist/esm/hooks/index.mjs",
+      "require": "./dist/cjs/hooks/index.js"
+    },
     "./redux": {
       "types": "./dist/types/redux/index.d.ts",
       "import": "./dist/esm/redux/index.mjs",

@@ -31,16 +31,41 @@ export type BlockOptionsList = [
   string,
 ][];
 
-/**
- * The definition of an argument (arg0, etc)
- */
-export interface BlockArgDefinition {
-  /** The registered field type */
-  type: string | FieldPlugin;
+export interface BlockBaseArgDefinition {
   /** The internal name for the field which is referenced by a generator */
   name: string;
+}
+
+export interface BlockFieldPluginArgDefinition extends BlockBaseArgDefinition {
+  /** The registered field type */
+  type: FieldPlugin;
+}
+
+export interface BlockImageArgDefinition {
+  /** Explictly an image field */
+  type: 'field_image';
+  /** The internal name for the field which is referenced by a generator */
+  name?: string;
+  /** The source of the image */
+  src: string;
+  /** The width of the image */
+  width: number;
+  /** The height of the image */
+  height: number;
+  /** Alt text for the image */
+  alt: string;
+}
+
+export interface BlockDropdownArgDefinition extends BlockBaseArgDefinition {
+  /** Explictly a dropdown field */
+  type: 'field_dropdown';
   /** The options for dropdowns or lists */
-  options?: BlockOptionsList;
+  options: BlockOptionsList;
+}
+
+export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
+  /** Explictly a dropdown field */
+  type: 'field_input';
   /** The type to explicitly force connecting blocks to output */
   check?: string;
   /** The initial value of the field */
@@ -51,6 +76,16 @@ export interface BlockArgDefinition {
   spellcheck?: boolean;
   variable?: string;
 }
+
+/**
+ * The definition of an argument (arg0, etc)
+ */
+export type BlockArgDefinition = BlockFieldPluginArgDefinition | BlockImageArgDefinition | BlockDropdownArgDefinition | BlockInputArgDefinition;
+
+/**
+ * The definition of an argument that Blockly understands (no special features)
+ */
+export type BlockFlatArgDefinition = Omit<BlockArgDefinition, 'type'> & {type: string};
 
 /**
  * Our encapsulation of block mutators.
@@ -139,6 +174,8 @@ export interface FullBlockDefinition {
   helpUrl?: string;
   /** The style group to apply, e.g. 'math_blocks' */
   style?: string;
+  /** Whether or not the inputs should attempt to be inlined */
+  inputsInline?: boolean;
   /** The function that generates code for this block. */
   generator: {
     javascript: JavascriptBlockGenerator;

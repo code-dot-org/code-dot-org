@@ -17,6 +17,8 @@ import {useAppSelector} from '../../redux/store';
 
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
+import TimelineElement from './TimelineElement';
+import type {TimelineElementProps} from './TimelineElement';
 
 import moduleStyles from './timeline.module.scss';
 
@@ -307,5 +309,8 @@ const LoopMarkers: React.FunctionComponent<{
     </>
   );
 };
+
+export {TimelineElement};
+export type {TimelineElementProps};
 
 export default memo(Timeline);

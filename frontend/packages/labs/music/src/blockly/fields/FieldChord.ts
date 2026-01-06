@@ -1,13 +1,13 @@
 import * as Blockly from 'blockly/core';
-import React from 'react';
+import * as React from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
 import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
 import {experiments} from '@code-dot-org/metrics';
 
-import ChordPanel from '../../components/chordPanel';
-import type {ChordPanelProps} from '../../components/chordPanel';
+import ChordPanel from '../../components/ChordPanel';
+import type {ChordPanelProps} from '../../components/ChordPanel';
 import type {ChordEventValue} from '../../player/interfaces/ChordEvent';
 import type {ChordGraphNote} from '../../utils/Chords';
 import {generateGraphDataFromChord} from '../../utils/Chords';
@@ -23,7 +23,7 @@ const getCSSVariable: (name: string) => string = name =>
     ? window.getComputedStyle(document.body).getPropertyValue(`--${name}`) || ''
     : '';
 
-interface FieldChordOptions {
+export interface FieldChordOptions {
   currentValue: ChordEventValue;
 }
 

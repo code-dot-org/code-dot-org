@@ -22,6 +22,7 @@ import type {
   Environment,
   BlockArgDefinition,
   BlockDefinition,
+  BlockFlatArgDefinition,
   FullBlockDefinition,
   Renderer,
   Theme,
@@ -130,20 +131,23 @@ class Registry<T extends Environment & object> {
       if (key in blockDefinition) {
         (
           blockDefinition as unknown as {
-            [key: string]: BlockArgDefinition[];
+            [key: string]: BlockFlatArgDefinition[];
           }
         )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
           if (
             typeof arg.type !== 'string' &&
             (arg.type as FieldPlugin).type === PluginType.Field
           ) {
-            arg = {...arg};
             const fieldPlugin = arg.type as FieldPlugin;
+            const formedArg: BlockFlatArgDefinition = {
+              ...arg,
+              type: fieldPlugin.name,
+	    };
             this.register(fieldPlugin);
-            arg.type = fieldPlugin.name;
             plugins.push(fieldPlugin);
+	    return formedArg;
           }
-          return arg;
+          return arg as BlockFlatArgDefinition;
         });
       }
     });

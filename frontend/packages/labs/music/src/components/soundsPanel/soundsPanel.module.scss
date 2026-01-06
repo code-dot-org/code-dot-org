@@ -1,0 +1,189 @@
+.soundsPanel {
+  user-select: none;
+  width: 600px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+
+  &Top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    gap: 8px;
+
+    .segmentedButtons {
+      span {
+        user-select: none;
+      }
+    }
+  }
+
+  &Body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex: 1;
+    gap: 5px;
+
+    .leftColumn {
+      background-color: var(--neutral-base-black);
+      flex: 1;
+      overflow-y: scroll;
+      scroll-padding: 1px 0;
+    }
+
+    .rightColumn {
+      background-color: var(--neutral-base-black);
+      flex: 1;
+      overflow-y: scroll;
+      scroll-padding: 1px 0;
+    }
+  }
+
+  .folderRow {
+    padding: 6px 0;
+    margin: 1px 1px 6px 1px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--neutral-gray-90);
+    }
+
+    &:focus-visible {
+      outline: var(--neutral-gray-5) solid 1px;
+    }
+
+    &Selected {
+      background-color: var(--neutral-gray-80);
+    }
+
+    &:first-child {
+      margin-top: 1px;
+    }
+
+    &Left {
+      width: 55px;
+      height: 55px;
+      margin: 0 6px 0 4px;
+      float: left;
+    }
+
+    &Middle {
+      width: calc(100% - 75px - 58px);
+      float: left;
+
+      &Name {
+        font-size: 16px;
+      }
+
+      &SubTitle {
+        font-size: 11px;
+        line-height: 2em;
+      }
+    }
+
+    &Right {
+      float: right;
+      width: 43px;
+      margin-right: 15px;
+    }
+  }
+
+  .soundRow {
+    overflow: hidden;
+    font-size: 14px;
+    margin: 1px;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--neutral-gray-90);
+
+      .lengthNoMarginRight {
+        color: var(--neutral-gray-30);
+      }
+    }
+
+    &:focus-visible {
+      outline: var(--neutral-gray-5) solid 1px;
+    }
+
+    &Selected {
+      background-color: var(--neutral-gray-80);
+    }
+
+    &Left {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 30px);
+
+      .typeIcon {
+        margin-right: 6px;
+        margin-left: 4px;
+        width: 24px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .name {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &Vocal {
+          font-style: italic;
+        }
+      }
+    }
+
+    &Middle {
+      font-size: 11px;
+      min-width: 240px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &Right {
+      display: flex;
+      margin-right: 15px;
+    }
+  }
+
+  .length {
+    display: inline-block;
+    font-size: 13px;
+    width: 15px;
+    margin-right: 10px;
+    color: var(--neutral-gray-50);
+    text-align: right;
+
+    &NoMarginRight {
+      margin-right: 0;
+
+      &Selected {
+        color: var(--neutral-gray-20);
+      }
+    }
+  }
+
+  .previewContainer {
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .preview {
+    color: var(--neutral-gray-40);
+
+    &Playing {
+      color: var(--neutral-gray-70);
+      cursor: default;
+    }
+  }
+}
