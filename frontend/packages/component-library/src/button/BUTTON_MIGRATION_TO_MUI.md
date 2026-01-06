@@ -770,8 +770,8 @@ import {LoadingButton} from '@mui/lab';
 - [x] Active states work
 - [x] Disabled states work
 - [x] Link behavior works
-- [ ] Analytics callback works
-- [ ] Force hover works
+- [x] Analytics callback works
+- [x] Force hover works
 
 ---
 
