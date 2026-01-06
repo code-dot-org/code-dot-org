@@ -17,6 +17,7 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectId: string,
+    isStandaloneProjectLevel: boolean,
     isShareView: boolean = false
   ): ProjectManager {
     return new ProjectManager({
@@ -25,6 +26,7 @@ export default class ProjectManagerFactory {
       channelId: projectId,
       reduceChannelUpdates: false,
       isShareView,
+      isStandaloneProjectLevel,
     });
   }
 
@@ -40,6 +42,7 @@ export default class ProjectManagerFactory {
    */
   static async getProjectManagerForLevel(
     levelId: number,
+    isStandaloneProjectLevel: boolean,
     userId?: number,
     scriptId?: number,
     scriptLevelId?: string
@@ -71,6 +74,7 @@ export default class ProjectManagerFactory {
       channelsStore,
       channelId,
       reduceChannelUpdates,
+      isStandaloneProjectLevel,
     });
   }
 }

@@ -47,7 +47,7 @@ const registerOverrideBlockId = function (weight: number) {
     id: 'overrideBlockId',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(overrideIdOption);
+  safeRegisterOption(overrideIdOption);
 };
 
 const registerDeletable = function (weight: number) {
@@ -74,7 +74,7 @@ const registerDeletable = function (weight: number) {
     id: 'blockDeletable',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(deletableOption);
+  safeRegisterOption(deletableOption);
 };
 
 const registerMovable = function (weight: number) {
@@ -109,7 +109,7 @@ const registerMovable = function (weight: number) {
     id: 'blockMovable',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(movableOption);
+  safeRegisterOption(movableOption);
 };
 
 const registerNextConnection = function (weight: number) {
@@ -145,7 +145,7 @@ const registerNextConnection = function (weight: number) {
     id: 'nextConnection',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(nextConnectionOption);
+  safeRegisterOption(nextConnectionOption);
 };
 
 const registerEditable = function (weight: number) {
@@ -172,7 +172,7 @@ const registerEditable = function (weight: number) {
     id: 'blockEditable',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(editableOption);
+  safeRegisterOption(editableOption);
 };
 
 const registerShadow = function (weight: number) {
@@ -197,7 +197,7 @@ const registerShadow = function (weight: number) {
     id: 'blockToShadow',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(shadowOption);
+  safeRegisterOption(shadowOption);
 };
 
 const registerUnshadow = function (weight: number) {
@@ -239,7 +239,7 @@ const registerUnshadow = function (weight: number) {
     id: 'childUnshadow',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(unshadowOption);
+  safeRegisterOption(unshadowOption);
 };
 
 const registerToggleShadowStack = function (weight: number) {
@@ -287,7 +287,7 @@ const registerToggleShadowStack = function (weight: number) {
     id: 'stackToggleShadow',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(toggleShadowStackOption);
+  safeRegisterOption(toggleShadowStackOption);
 };
 
 const registerAllBlocksUndeletable = function (weight: number) {
@@ -317,9 +317,7 @@ const registerAllBlocksUndeletable = function (weight: number) {
     id: 'workspaceBlocksUndeletable',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(
-    workspaceBlocksUndeletableOption
-  );
+  safeRegisterOption(workspaceBlocksUndeletableOption);
 };
 
 const registerAllBlocksUneditable = function (weight: number) {
@@ -356,9 +354,7 @@ const registerAllBlocksUneditable = function (weight: number) {
     id: 'workspaceBlocksUneditable',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(
-    workspaceBlocksUneditableOption
-  );
+  safeRegisterOption(workspaceBlocksUneditableOption);
 };
 
 const registerAllBlocksUnmovable = function (weight: number) {
@@ -388,9 +384,7 @@ const registerAllBlocksUnmovable = function (weight: number) {
     id: 'workspaceBlocksUnMovable',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(
-    workspaceBlocksUnmovableOption
-  );
+  safeRegisterOption(workspaceBlocksUnmovableOption);
 };
 
 /**
@@ -437,7 +431,7 @@ function registerHelp(weight: number) {
     id: 'blockHelp',
     weight,
   };
-  GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
+  safeRegisterOption(helpOption);
 }
 
 export enum WeightOptions {
@@ -575,4 +569,15 @@ export function overrideOptionWeight(optionId: string, newWeight: number) {
     GoogleBlockly.ContextMenuRegistry.registry.unregister(optionId);
     GoogleBlockly.ContextMenuRegistry.registry.register(option);
   }
+}
+
+// Registers a context menu option, first unregistering any existing option with the same id.
+// This prevents "already registered" errors, especially in tests.
+function safeRegisterOption(
+  option: GoogleBlockly.ContextMenuRegistry.RegistryItem
+) {
+  if (GoogleBlockly.ContextMenuRegistry.registry.getItem(option.id)) {
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(option.id);
+  }
+  GoogleBlockly.ContextMenuRegistry.registry.register(option);
 }
