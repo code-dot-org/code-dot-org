@@ -55,8 +55,6 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
       title: this.props.title,
       size: this.props.height,
       courseid: this.props.courseid,
-      onsharestart: `${this.onShareStartName()}`,
-      onsharecomplete: `${this.onShareCompleteName()}`,
     });
   }
 
