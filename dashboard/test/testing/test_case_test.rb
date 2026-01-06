@@ -4,6 +4,8 @@ require 'testing/transactional_test_case'
 
 class SetupAllAndTeardownAllTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::SetupAllAndTeardownAll
+  include ActiveSupport::Testing::TransactionalTestCase
+
   self.test_order = :sorted
 
   setup_all :reset_callback_record, :foo
@@ -44,6 +46,7 @@ class TransactionTest < ActiveSupport::TestCase
     runnables.delete self
 
     include ActiveSupport::Testing::SetupAllAndTeardownAll
+    include ActiveSupport::Testing::TransactionalTestCase
     fixtures :callout
 
     def test_create_fixture

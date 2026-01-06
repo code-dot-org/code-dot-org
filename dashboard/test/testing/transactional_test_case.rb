@@ -28,7 +28,7 @@ module ActiveSupport
 
           super(*args) do
             db_connection.begin_transaction(joinable: false)
-            instance_exec(&block)
+            instance_exec(&block) if block
           end
 
           teardown_all do
