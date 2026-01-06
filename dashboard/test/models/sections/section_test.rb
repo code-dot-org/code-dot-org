@@ -1419,7 +1419,9 @@ class SectionTest < ActiveSupport::TestCase
     # Create 3 students with sharing disabled
     followers = []
     3.times do |i|
-      student = create(:student, name: "student_#{i}", sharing_disabled: true)
+      student = create(:student, name: "student_#{i}")
+      student.sharing_disabled = true
+      student.save!
       followers << create(:follower, section: code_review_group_section, student_user: student)
     end
 
@@ -1453,7 +1455,9 @@ class SectionTest < ActiveSupport::TestCase
     # Create 2 students with sharing already enabled
     followers = []
     2.times do |i|
-      student = create(:student, name: "student_#{i}", sharing_disabled: false)
+      student = create(:student, name: "student_#{i}")
+      student.sharing_disabled = false
+      student.save!
       followers << create(:follower, section: code_review_group_section, student_user: student)
     end
 
