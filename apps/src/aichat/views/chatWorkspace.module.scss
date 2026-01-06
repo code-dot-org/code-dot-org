@@ -79,6 +79,11 @@ $tabs-default-spacing: 4px;
   pointer-events: none;
 }
 
+.scrollSpacer {
+  flex-shrink: 0;
+  width: 100%;
+}
+
 .chatDisabledContainer {
   margin: auto;
   display: flex;
