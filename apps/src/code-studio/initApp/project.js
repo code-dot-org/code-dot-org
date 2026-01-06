@@ -1443,7 +1443,7 @@ var projects = (module.exports = {
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    // Log to CloudWatch via MetricsReporter
+    // Log to CloudWatch via MetricsReporter. This is the primary logging system for project saving.
     const metricsPromise = Promise.resolve(
       MetricsReporter.logError({
         event: errorType,
@@ -1454,7 +1454,8 @@ var projects = (module.exports = {
       })
     );
 
-    // Log to Firehose (will be removed in the future)
+    // Although Firehose is being deprecated, we continue to log for project data integrity errors so that
+    // we can still search for project saving errors over multiple years and compare with MetricsReporter.
     const firehosePromise = firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
@@ -1478,10 +1479,13 @@ var projects = (module.exports = {
       {includeUserId: true}
     );
 
-    // Wait for both logging systems to complete before allowing page reload
+    // Wait for both logging systems to complete before allowing page reload.
     return Promise.all([metricsPromise, firehosePromise]).catch(err => {
-      // Log the error but don't throw - we don't want to break the user flow
-      console.error('Error logging to metrics systems:', err);
+      // Log the error but don't throw - we don't want to break the user flow.
+      MetricsReporter.logError({
+        event: 'Error logging to metrics and/or firehose systems',
+        error: repackageError(err),
+      });
     });
   },
   updateCurrentData_(err, data, options = {}) {
