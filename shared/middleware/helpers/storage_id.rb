@@ -63,6 +63,7 @@ end
 # OpenSSL::Cipher::CipherError if the base64-decoded value is not properly
 # encrypted or was encrypted using a different key (e.g. on localhost vs prod).
 def storage_decrypt_channel_id(encrypted)
+  raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
   # pad to a multiple of 4 characters to make a valid base64 string.
   encrypted += '=' * ((4 - (encrypted.length % 4)) % 4)
   storage_id, project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
