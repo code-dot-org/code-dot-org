@@ -21,6 +21,7 @@ const UPDATE_FILES = 'UPDATE_FILES';
 
 function main() {
   let filesData = {};
+  let cspImageSrcPolicy = '';
   const broadcastChannel = new BroadcastChannel(
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
@@ -38,9 +39,10 @@ function main() {
 
   // Listen for messages from the main thread
   addEventListener('message', event => {
-    const {type, files} = event.data;
+    const {type, files, cspImageSrc} = event.data;
     if (type === UPDATE_FILES && event.origin === location.origin) {
       filesData = files || {};
+      cspImageSrcPolicy = cspImageSrc || '';
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
     }
   });
@@ -110,14 +112,21 @@ function main() {
         }
         return await fetch(fetchUrl);
       }
+      const headers = {
+        'Content-Type': mimeType,
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        Pragma: 'no-cache',
+        Expires: '0',
+      };
+      // Apply CSP to HTML files to restrict image sources
+      if (mimeType === 'text/html' && cspImageSrcPolicy) {
+        headers[
+          'Content-Security-Policy'
+        ] = `img-src 'self' data: blob: ${cspImageSrcPolicy}`;
+      }
       return new Response(content, {
         status: 200,
-        headers: {
-          'Content-Type': mimeType,
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          Pragma: 'no-cache',
-          Expires: '0',
-        },
+        headers: headers,
       });
     } catch (error) {
       console.error('Service worker error:', error);

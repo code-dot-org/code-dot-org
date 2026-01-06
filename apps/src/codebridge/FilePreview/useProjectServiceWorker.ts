@@ -5,7 +5,10 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {getFolderPath} from '../utils';
 
-import {ProjectServiceWorkerMessageType} from './constants';
+import {
+  ProjectServiceWorkerMessageType,
+  generateImageSrcCSPPolicy,
+} from './constants';
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 // Hook that handles registering and communicating with the project service worker.
@@ -92,10 +95,11 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
         filesData[fullFileName] = {content, mimeType, url};
       });
 
-      // Send files data to service worker
+      // Send files data to service worker along with Content Security Policy (CSP) policy for image sources.
       serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.UPDATE_FILES,
         files: filesData,
+        cspImageSrc: generateImageSrcCSPPolicy(),
       });
     }
   }, [serviceWorker, source]);

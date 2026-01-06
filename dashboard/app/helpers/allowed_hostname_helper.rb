@@ -136,6 +136,9 @@ module AllowedHostnameHelper
     # REMOVED: 'theunitedstates.io' - HIGH RISK: DNS resolves but no HTTP/HTTPS service available
   ].freeze
 
+  # Allowed hostnames for external image sources in student projects.
+  # NOTE: This list is mirrored in apps/src/codebridge/FilePreview/constants.ts
+  # for Web Lab 2 CSP enforcement. Keep both lists in sync when making changes.
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
     'picsum.photos' # Placeholder images - Public API
   ].freeze
