@@ -998,11 +998,11 @@ Applab.isRunning = function () {
  */
 Applab.toggleDivApplab = function (isVisible) {
   if (isVisible) {
-    $('#divApplab').show();
-    $('#designModeViz').hide();
+    $('#divApplab').css('display', 'block');
+    $('#designModeViz').css('display', 'none');
   } else {
-    $('#divApplab').hide();
-    $('#designModeViz').show();
+    $('#divApplab').css('display', 'none');
+    $('#designModeViz').css('display', 'block');
   }
 };
 

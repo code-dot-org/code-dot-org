@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-05T06:35:43.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Horizontal Rule",
+    "long_instructions": "# Extra Code: Horizontal Rule\r\n\r\nIn some situations, you'll want to insert a horizontal line, or rule, to break up themes in your page. You can use the horizontal rule `<hr>` tag for this.\r\n\r\n# Do This\r\n1) Read the HTML and look for where the `<hr>` code is used to add a horizontal rule in the web page.\r\n2) Add more horizontal rules to break up the page by theme.\r\n\r\n",
+    "bubble_choice_description": "Learn the code for making a horizontal rule and practice using it.",
+    "thumbnail_url": "https://images.code.org/76c1f98115d2d8bd417f9f21e9bcc711-b.jpg",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    \n    <!-- title and information about biomes and animals in them -->\n    <h1>This Amazing Place Called Earth</h1>\n    <p>We live on an awesome planet! And we're not alone - there are animals everywhere who live in unique places.</p>\n    <hr>\n    \n    <!-- 2) Add more horizontal rules to break up the page by theme -->\n    <h2>Deserts</h2>\n    <p>The desert is the driest biome, and deserts receive less than 10 inches (25 centimeters) of rain per year. Desert animals learn to survive in harsh environments with very little water and large temperature changes.</p>\n    <h4>Some species: fennec fox, desert tortoise, camel</h4>\n    <h2>Grasslands</h2>\n    <p>Every continent except Antarctica has grasslands, but they can have different names in each place. For example, in Africa they are called savannas, and in South America they are called pampas.</p>\n    <h4>Some species: zebra, bison, kangaroo</h4>\n    <h2>Ocean</h2>\n    <p>Over 70 percent of Earth's surface is covered by oceans! Even though all the water is connected, scientists divide them into 5 different sections. Oceans help animals survive on Earth because they keep places from getting too hot or cold.</p>\n    <h4>Some species: whale, sea otter, blobfish</h4>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-05 06:35:58 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-05 06:36:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

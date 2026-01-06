@@ -104,6 +104,7 @@
     "bubble_choice_description": "Use what you've learned so far to create an animated scene of a quote or a saying with moving sprites",
     "libraries_enabled": "false",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

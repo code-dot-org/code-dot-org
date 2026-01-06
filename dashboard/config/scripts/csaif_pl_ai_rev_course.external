@@ -34,8 +34,14 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-
 #### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
+
+#### **For example,** in <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/4" target="blank" rel="noopener noreferrer">Unit 1, Lesson 4: Smart or Just Predictable?</a> students think about AI's reliability and how much human involvement they would still want in a task that can now be done by AI. They do this by thinking about different scenarios and voting on the level of AI involvement you'd prefer or be comfortable with.
+
+#### Students explore scenarios such as diagnosing medical issues, grading essays, and driving a school bus.
+
+<img src="https://images.code.org/8d9d196731346a8ecb7e940b571c8af9-Screenshot 2025-12-17 at 1.48.05 PM.png" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
 </p></div>
 </details>
 
@@ -46,6 +52,11 @@ markdown <<MARKDOWN
 
 
 #### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
+
+#### **For example,** in <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/6/lessons/7" target="blank" rel="noopener noreferrer">Unit 6, Lesson 7: Introduction to Data Visualization</a> students create charts in a spreadsheet editor to practice building basic data visualizations – bar charts and pie charts. As they practice building each sort of data visualization, they also discuss when and where each type of visualization might be useful.
+
+<img src="https://images.code.org/dae9f5f3268b88e5f3be9586f7448130-Screenshot 2025-12-17 at 1.48.31 PM.png" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
 </p></div>
 </details>
 
@@ -55,27 +66,44 @@ markdown <<MARKDOWN
     <p>
 
 
-#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
+#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts.
+
+#### The wrap-up will always include reviewing the **Lesson Objectives** and reflecting on the **Question of the Day**. 
+
+<img src="https://images.code.org/c1dbdf051eb8751ceefcc13b5f04f8cf-Screenshot 2025-12-17 at 1.51.32 PM.png" alt="chatbot lab level" width="70%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 70%;">
+
+#### Some lessons have additional wrap-up tasks. **For example**, during <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/9" target="blank" rel="noopener noreferrer">Unit 3, Lesson 9: How AI Uses Data</a> students form small groups and share an AI system they designed during the lesson, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.
+
 </p></div>
 </details>
 
 ### **Lesson Types**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Most lessons in AIF Semester 1 include a mix of online, non-programming, activities guided by an activity sheet. They include opportunities for group collaboration, discussion, and individual reflection, and exploration of online tools such as AI Chat.
+
+#### **For example**, during <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5/lessons/2" target="blank" rel="noopener noreferrer">Unit 5, Lesson 2: Cybersecurity Threats</a> students work in pairs to analyze a scenario that involves one of the four threats (worm/virus, ransomware, misconfigurations, DDoS) and understand how it works. They “chat” (using AI Chat) with an expert to understand how these threats occur, who is affected, how AI might make things worse, and how they can be prevented.
+
+#### Students record their learning in the <a href="https://docs.google.com/document/d/18AW6pInMb-E3-JYvM-RC4oEtlLjewgY_BfZ3MfCu0rI/edit?tab=t.0" target="blank" rel="noopener noreferrer">Cybersecurity Threats Activity Guide</a>
+
+</p></div>
+</details>
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">💻 Programming Lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 #### Programming lessons teach new concepts and skills through computer-based activities. Students often work in groups or as a class, with teachers actively facilitating sense-making and formative assessments. 
-</p></div>
-</details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Unplugged Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+#### <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2" target="blank" rel="noopener noreferrer">Unit 2 - Foundations of AI Programming</a> is the only unit in AIF Semester 1 that includes programming lessons.
 
-
-#### Unplugged lessons emphasize process skills and computing concepts, mostly through offline activities guided by an activity sheet. They include opportunities for group collaboration, discussion, and individual reflection, with some online components.
+#### All programming in this semester is done in Python.
 </p></div>
 </details>
 
@@ -83,11 +111,14 @@ markdown <<MARKDOWN
     <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
+    
 
 
-#### ***Mini-projects*** let students apply their learning in an open-ended way, practicing new skills. These flexible projects appear throughout the unit and can be adjusted based on available class time.
+#### Projects are multi-day, open-ended lessons at the end of each unit, where students use learned skills to plan, create, and reflect.
 
-#### ***Projects*** are multi-day, open-ended lessons at the end of each unit, where students use learned skills to plan, create, and reflect.
+#### **For example**, during the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/13" target="blank" rel="noopener noreferrer">Unit 3 Sustainable Systems Project</a> students propose and design an AI-infused computer system and demonstrate how it would contribute to achieving one of the United Nations Sustainable Development Goals.
+
+#### <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/13" target="blank" rel="noopener noreferrer">Unit 4 - The Fabric of the Internet and AI</a> has two projects - one mid-unit and one at the end of the unit.
 </p></div>
 </details>
 

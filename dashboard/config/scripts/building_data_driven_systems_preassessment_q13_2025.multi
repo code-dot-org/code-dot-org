@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q13_2025'
+
+question 'Which of the following is an example of an "edge case" for a search bar?'
+
+wrong 'A user typing the exact name of a product that exists.'
+wrong 'A user typing a very common word like "the".'
+right 'A user leaving the search bar empty and clicking "Submit."'
+wrong 'A user clicking a link to the "Home" page.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+
+Edge cases are inputs that occur at the "edges" of expected use, such as empty strings, very long strings, or special symbols that might cause a function to fail if not handled properly.
+MARKDOWN

@@ -75,6 +75,7 @@
     "map_reference": "/courses/csd-2022/guides/random-numbers",
     "bubble_choice_description": "Randomize all the properties of these lines.",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

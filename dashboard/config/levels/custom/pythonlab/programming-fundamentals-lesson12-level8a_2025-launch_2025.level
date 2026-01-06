@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Import your `custom.py` into your project.\r\n\r\n2. In `custom.py`, write the `paint_or_turn(this_painter, color)` function. Inside your function:\r\n\r\n   * Write a `while` loop that runs while the `Painter` `is_facing_east()`\r\n   \r\n   * If the `Painter` `has_paint()`, paint the space and then move forward\r\n   \r\n   * Else, call your `turn_right(this_painter)` function\r\n\r\n3. Save `custom.py` to your Backpack.\r\n\r\n4. In `main.py`, import the functions you need and collect the paint and paint in The Neighborhood.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/6d30c7e89f38fcd0e3b926e7ae6d71ac-choiceA.gif)",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

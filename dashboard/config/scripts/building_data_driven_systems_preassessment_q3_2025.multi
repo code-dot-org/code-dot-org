@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q3_2025'
+
+question 'Which of the following defines a "schema" for a user profile in a web app?'
+
+wrong 'The visual CSS styles used to make the profile page look modern.'
+right 'The specific rule that a profile must have a `username` (string) and an `age` (number).'
+wrong ' The algorithm that recommends new friends to the user based on their interests.'
+wrong 'The `.map()` function used to display the user\'s list of friends.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+A schema is a structural blueprint. It defines the required fields (keys) and the types of data (values) that those fields must contain.
+MARKDOWN

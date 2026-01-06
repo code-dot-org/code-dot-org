@@ -7,11 +7,10 @@ markdown <<MARKDOWN
 
 #### Everything you need to deliver engaging and effective classes is included with each **lesson plan** to help make your teaching experience as seamless as possible.
 
-<img src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="60%" style="border-radius:10px; float:right; margin: 0 0 0 40px; border: 3px solid black;">
+<img src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="55%" style="border-radius:10px; float:right; margin: 0 0 10px 40px; border: 3px solid black;">
 
 
-
-## Each lesson includes: 
+## Each Lesson Includes: 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>
@@ -21,6 +20,8 @@ markdown <<MARKDOWN
         </p>
    </div>
 </details>
+<br>
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 16pt; font-weight: bold;"><b>2. </b>Detailed teaching guides</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
@@ -31,6 +32,8 @@ markdown <<MARKDOWN
         </p>
    </div>
 </details>
+<br>
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 16pt; font-weight: bold;"> <b>3. </b>Exemplars and answer keys</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
@@ -39,6 +42,8 @@ markdown <<MARKDOWN
         </p>
    </div>
 </details>
+<br>
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 16pt; font-weight: bold;"> <b>4. </b>Engaging slides</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
@@ -47,6 +52,8 @@ markdown <<MARKDOWN
          <br><br>
    </div>
 </details>
+<br>
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 16pt; font-weight: bold;"><b>5. </b>Interactive student handouts</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
@@ -56,21 +63,9 @@ markdown <<MARKDOWN
    </div>
 </details>
 
-## Unit and Activity Guides
 
-#### Each unit in the AI Foundations course uses two main resource documents, both available in the Links section of the **Lesson Plan**:
 
-#### 1. The **Unit Guide** is a central document for students to record key learning throughout the unit.
-* #### Purpose: To serve as a personal, long-term reference tool.
-* #### Content: Students record essential information like vocabulary definitions, answers to each lesson's Question of the Day, and reflections from activities.
-* #### Recommendation: Teachers should print and distribute the Unit Guide at the start of the unit. Students should keep these pages together for easy reference while completing the course.
-
-#### 2. **Activity Guides** are provided for lesson activities that require significant writing or recording.
-* #### Purpose: To serve as worksheets for specific assignments.
-* #### Content: Contains space for more detailed responses and records from hands-on activities.
-* #### Use: Teachers can collect Activity Guides for informal review or formal grading. Unlike the Unit Guide, these are not intended for long-term reference.
-
---- 
-
-#### *Optional*: Take a minute to explore these features in <a href='https://studio.code.org/s/aif1-2025/lessons/1' target='_blank' rel='noopener noreferrer'>Unit 1, Lesson 1</a> if you'd like to familiarize yourself with the lesson plan format.
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ You may want to take a minute to explore these features in <a href='https://studio.code.org/s/aif1-2025/lessons/1' target='_blank' rel='noopener noreferrer'>Unit 1, Lesson 1</a> to familiarize yourself with the lesson plan format.
+</p>
 MARKDOWN

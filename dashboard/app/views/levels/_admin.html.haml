@@ -84,9 +84,8 @@
       %br
       %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
-      - unless params[:blocklyVersion] == 'cdo'
-        %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
-          Undo
+      %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
+        Undo
       %hr
     This level is in #{@level.script_levels.count} scripts:
     %ul

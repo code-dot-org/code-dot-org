@@ -12,7 +12,7 @@
     "display_name": "SocialSense",
     "bubble_choice_description": "Dive into the world of public opinion with SocialSense! Ever wonder what the Internet is really saying about your favorite movie, song, or celebrity? Let SocialSense decode the mood of the masses, and explore the good, the bad, and the neutral with just one click!",
     "thumbnail_url": "https://images.code.org/d15dc09184a2bb5d6e9c8fd2d45cf3df-socialsense.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02T16:10:54.784+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2a\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2a\"},{\"changed_at\":\"2023-08-02 16:11:24 +0000\",\"changed\":[\"link_title\",\"url\",\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-02 16:13:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-16 17:03:18 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 16:45:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -9,7 +9,9 @@ markdown <<MARKDOWN
   <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 100%; border-radius: 5px;">
 </div>
 
-#### This professional learning module centers on curriculum content. You may find that you need additional support navigating the Code.org platform **in addition to** the curriculum content - tasks like creating classroom sections, assigning lessons, or reviewing student work.
+#### **This professional learning module centered on curriculum content.**
+
+#### You may find that you need additional support navigating the Code.org platform - tasks like creating classroom sections, assigning lessons, or reviewing student work.
 
 #### Our Getting Started with Code.org Module contains all the information you need to get up and running with our platform!
 
@@ -60,8 +62,4 @@ markdown <<MARKDOWN
 * #### Find & use lesson plans and teacher resources.
 * #### Connect with other educators on the Teacher Forum.
 * #### Access ongoing support while teaching Code.org curricula.
-
-## Next Steps
-
-#### Access the module at the button above to begin! Click "Continue" when you're ready to continue learning about the curriculum content in this module.
 MARKDOWN

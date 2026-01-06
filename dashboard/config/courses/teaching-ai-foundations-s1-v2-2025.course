@@ -18,12 +18,13 @@
     "self-paced-pl-teaching-foundations-ai-programming-v2-2025",
     "self-paced-pl-teaching-ps-with-ai-v2-2025"
   ],
-  "published_state": "in_development",
+  "published_state": "preview",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-ai-foundations-s1-v2",
+    "has_verified_resources": true,
     "version_year": "2025"
   },
   "resources": [

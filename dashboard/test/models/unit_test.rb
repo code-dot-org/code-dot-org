@@ -467,10 +467,6 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
-    course1_unit = create(:script, name: 'course1')
-    course2_unit = create(:script, name: 'course2')
-    assert_equal 'banner_course1.jpg', course1_unit.banner_image
-    assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
   end
 

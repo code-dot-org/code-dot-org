@@ -906,6 +906,12 @@ var projects = (module.exports = {
     }
   },
 
+  // Metrics logging requires a non-null value, so we return 'unknown' if
+  // there is no known standalone app for this project.
+  getStandaloneAppForMetrics() {
+    return this.getStandaloneApp() || 'unknown';
+  },
+
   isWebLab() {
     return this.getStandaloneApp() === 'weblab';
   },
@@ -1129,6 +1135,14 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               ).finally(() => utils.reload());
+              MetricsReporter.incrementCounter(
+                'LegacyLab.ProjectSaveFailureClient',
+                [
+                  {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+                  {name: 'SaveType', value: 'sources'},
+                  {name: 'ErrorType', value: 'unauthorized'},
+                ]
+              );
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
               this.logError_(
@@ -1136,6 +1150,14 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               ).finally(() => utils.reload());
+              MetricsReporter.incrementCounter(
+                'LegacyLab.ProjectSaveFailureClient',
+                [
+                  {name: 'AppName', value: this.getStandaloneAppForMetrics()},
+                  {name: 'SaveType', value: 'sources'},
+                  {name: 'ErrorType', value: 'conflict'},
+                ]
+              );
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_();
@@ -1145,7 +1167,7 @@ var projects = (module.exports = {
                 err.message
               );
               MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
-                {name: 'AppName', value: this.getStandaloneApp()},
+                {name: 'AppName', value: this.getStandaloneAppForMetrics()},
                 {name: 'SaveType', value: 'sources'},
               ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
@@ -1326,7 +1348,7 @@ var projects = (module.exports = {
           MetricsReporter.logError({
             event: 'Error in getUpdatedSourceAndHtml_',
             error: repackageError(error),
-            appType: this.getStandaloneApp(),
+            appType: this.getStandaloneAppForMetrics(),
             channelId: this.getCurrentId(),
           });
           callback({error});
@@ -1411,7 +1433,7 @@ var projects = (module.exports = {
       event: errorType,
       errorMessage: errorText,
       errorCount: errorCount,
-      appType: this.getStandaloneApp(),
+      appType: this.getStandaloneAppForMetrics(),
       channelId: this.getCurrentId(),
     });
 
@@ -1448,7 +1470,7 @@ var projects = (module.exports = {
         header.showTryAgainDialog();
       }
       MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
-        {name: 'AppName', value: this.getStandaloneApp()},
+        {name: 'AppName', value: this.getStandaloneAppForMetrics()},
         {name: 'SaveType', value: 'channel'},
       ]);
       return;
@@ -1480,7 +1502,7 @@ var projects = (module.exports = {
     current = current || {};
     Object.assign(current, data);
     MetricsReporter.incrementCounter('LegacyLab.ProjectSaveSuccess', [
-      {name: 'AppName', value: this.getStandaloneApp()},
+      {name: 'AppName', value: this.getStandaloneAppForMetrics()},
     ]);
 
     if (shouldNavigate) {

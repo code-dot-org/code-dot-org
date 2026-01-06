@@ -42,13 +42,12 @@ const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
         items: {
           type: 'object',
           properties: {
-            language: {type: 'string'},
             sourceCode: {
               type: 'string',
             },
             filename: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'filename'],
+          required: ['sourceCode', 'filename'],
           additionalProperties: false,
         },
         description:
@@ -122,13 +121,12 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
         items: {
           type: 'object',
           properties: {
-            language: {type: 'string'},
             sourceCode: {
               type: 'string',
             },
             filename: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'filename'],
+          required: ['sourceCode', 'filename'],
           additionalProperties: false,
         },
         description:

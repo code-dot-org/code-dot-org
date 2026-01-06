@@ -27,7 +27,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
-    "teacher_markdown": "Because of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites."
+    "teacher_markdown": "Because of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites.",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
