@@ -1,11 +1,6 @@
 require 'test_helper'
 
 class CodeReviewsControllerTest < ActionController::TestCase
-  # Setting this to true causes some weird db locking issue, possibly due to
-  # some writes to the projects table coming from a different connection via
-  # sequel.
-  self.use_transactional_test_case = false
-
   setup_all do
     @project_owner = create(:student)
     @project = create(:project, owner: @project_owner)

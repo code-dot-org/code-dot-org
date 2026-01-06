@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Lti::V1::FeedbackControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @user = create(:teacher)
   end

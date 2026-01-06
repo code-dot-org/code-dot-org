@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Services::I18n::CurriculumSyncUtils::RenderTranslationsTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @lesson = create(:lesson, overview: "This is the english overview")
     @activity_section = create(:activity_section, name: "English name", description: "English description")

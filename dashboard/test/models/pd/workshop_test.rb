@@ -7,7 +7,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   freeze_time
 
-  self.use_transactional_test_case = true
   setup_all do
     @organizer = create(:program_manager)
     @workshop = create(:workshop, organizer: @organizer)

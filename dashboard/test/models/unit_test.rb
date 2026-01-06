@@ -5,8 +5,6 @@ class UnitTest < ActiveSupport::TestCase
   include SharedConstants
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)

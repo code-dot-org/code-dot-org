@@ -57,8 +57,6 @@ class TransactionTest < ActiveSupport::TestCase
     include ActiveSupport::Testing::SetupAllAndTeardownAll
     include ActiveSupport::Testing::TransactionalTestCase
 
-    self.use_transactional_test_case = true
-
     fixtures :callout
 
     def test_fixture_created

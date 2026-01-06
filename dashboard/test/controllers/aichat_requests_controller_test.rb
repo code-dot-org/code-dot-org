@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class AichatRequestsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher1 = create(:authorized_teacher)
     unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
