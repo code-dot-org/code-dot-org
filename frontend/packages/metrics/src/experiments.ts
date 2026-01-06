@@ -43,55 +43,55 @@ const trySetLocalStorage: (item: string, value: string) => boolean = (
 /**
  * Keeps track of active experiments.
  */
-export enum Experiment {
-  REDUX_LOGGING = 'reduxLogging',
-  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH = 'schoolAutocompleteDropdownNewSearch',
-  SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables',
-  TEACHER_DASHBOARD_SECTION_BUTTONS = 'teacher-dashboard-section-buttons',
-  TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT = 'teacher-dashboard-section-buttons-alternate-text',
-  FINISH_DIALOG_METRICS = 'finish-dialog-metrics',
-  I18N_TRACKING = 'frontend-i18n-tracking',
-  TIME_SPENT = 'time-spent',
-  BYPASS_DIALOG_POPUP = 'bypass-dialog-popup',
-  SPECIAL_TOPIC = 'special-topic',
+export const Experiment = {
+  REDUX_LOGGING: 'reduxLogging',
+  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH: 'schoolAutocompleteDropdownNewSearch',
+  SHOW_UNPUBLISHED_DATASET_TABLES: 'showUnpublishedDatasetTables',
+  TEACHER_DASHBOARD_SECTION_BUTTONS: 'teacher-dashboard-section-buttons',
+  TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT: 'teacher-dashboard-section-buttons-alternate-text',
+  FINISH_DIALOG_METRICS: 'finish-dialog-metrics',
+  I18N_TRACKING: 'frontend-i18n-tracking',
+  TIME_SPENT: 'time-spent',
+  BYPASS_DIALOG_POPUP: 'bypass-dialog-popup',
+  SPECIAL_TOPIC: 'special-topic',
   // Experiment for showing a backgrounds tab and enabling student upload
   // for Sprite Lab animations
-  BACKGROUNDS_AND_UPLOAD = 'backgroundsTab',
-  SECTION_SETUP_REFRESH = 'sectionSetupRefresh',
+  BACKGROUNDS_AND_UPLOAD: 'backgroundsTab',
+  SECTION_SETUP_REFRESH: 'sectionSetupRefresh',
   // Experiment for showing the gender field
-  GENDER_FEATURE_ENABLED = 'gender',
+  GENDER_FEATURE_ENABLED: 'gender',
   // Experiment for enabling the AI-TA differentiation chat
-  AI_DIFFERENTIATION = 'ai-differentiation',
+  AI_DIFFERENTIATION: 'ai-differentiation',
   // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-  AI_TUTOR_ACCESS = 'ai-tutor',
+  AI_TUTOR_ACCESS: 'ai-tutor',
   // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
-  BLOCKLY_DOCS = 'blockly_docs',
+  BLOCKLY_DOCS: 'blockly_docs',
   // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
-  SECTION_PROGRESS_V2 = 'section_progress_v2',
+  SECTION_PROGRESS_V2: 'section_progress_v2',
   // Allows the playspace to be dragged to take up a larger portion of the screen
-  BIG_PLAYSPACE = 'bigPlayspace',
+  BIG_PLAYSPACE: 'bigPlayspace',
   // Allows user to view the new version of the teacher navigation
-  TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2',
+  TEACHER_LOCAL_NAV_V2: 'teacher-local-nav-v2',
   // Allows users to view the new version of the teacher homepage
-  TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2',
+  TEACHER_HOMEPAGE_V2: 'teacher-homepage-v2',
   // Use glow effect for Blockly block highlighting
-  BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight',
+  BLOCKLY_GLOW_HIGHLIGHT: 'blockly-glow-highlight',
   // Turn on Blockly Keyboard Navigation
-  BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation',
+  BLOCKLY_KEYBOARD_NAVIGATION: 'blockly-keyboard-navigation',
   // Use nested course URLs like /courses/csd-2024/units/1/...
-  MODULARITY = 'modularity',
+  MODULARITY: 'modularity',
   // LocalizeJS
-  LOCALIZEJS = 'localizejs',
+  LOCALIZEJS: 'localizejs',
   // Use the new lab2 instructions panel
-  LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2',
+  LAB2_INSTRUCTIONS_V2: 'lab2-instructions-v2',
   /**
    * This was a gamified version of the finish dialog, built in 2018,
    * but never fully shipped.
    * See github.com/code-dot-org/code-dot-org/pull/19557
    */
-  BUBBLE_DIALOG = 'bubbleDialog',
-  ZELOS = 'zelos',
-}
+  BUBBLE_DIALOG: 'bubbleDialog',
+  ZELOS: 'zelos',
+} as const;
 
 const STORAGE_KEY = 'experimentsList';
 const EXPERIMENT_LIFESPAN_HOURS = 12;

@@ -1,4 +1,5 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';
+import type {FunctionComponent} from 'react';
+import {useState, useEffect, useCallback, useMemo} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import MusicRegistry from '../../MusicRegistry';
@@ -9,9 +10,9 @@ import type {
 import MusicLibrary from '../../player/MusicLibrary';
 import type {ChordGraphNote} from '../../utils/Chords';
 import {generateGraphDataFromChord} from '../../utils/Chords';
-import Keybed from '../keybed';
-import LoadingOverlay from '../loadingOverlay';
-import PreviewControls from '../previewControls';
+import Keybed from '../Keybed';
+import LoadingOverlay from '../LoadingOverlay';
+import PreviewControls from '../PreviewControls';
 
 import moduleStyles from './chordPanel.module.scss';
 
@@ -31,7 +32,7 @@ export interface ChordPanelProps {
   onChange: (value: ChordEventValue) => void;
 }
 
-const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
+const ChordPanel: FunctionComponent<ChordPanelProps> = ({
   initValue,
   onChange,
 }) => {
@@ -199,7 +200,7 @@ interface NoteGridProps {
   instrument: string;
 }
 
-const NoteGrid: React.FunctionComponent<NoteGridProps> = ({
+const NoteGrid: FunctionComponent<NoteGridProps> = ({
   numOctaves,
   startOctave,
   selectedNotes,
