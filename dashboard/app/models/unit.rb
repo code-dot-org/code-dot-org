@@ -181,6 +181,7 @@ class Unit < ApplicationRecord
   end
 
   UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+  UI_TEST_JSON_DIRECTORY = "#{Rails.root}/test/ui/config/scripts_json".freeze
 
   def self.unit_json_directory
     UNIT_JSON_DIRECTORY
@@ -1859,8 +1860,15 @@ class Unit < ApplicationRecord
     Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
   end
 
+  # Returns the filepath for a unit's script JSON file.
+  # UI test scripts (those with names starting with 'ui-test-') are stored in
+  # test/ui/config/scripts_json/, while normal scripts are stored in config/scripts_json/.
+  #
+  # @param [String] unit_name - the name of the unit
+  # @return [String] - the absolute filepath to the .script_json file
   def self.script_json_filepath(unit_name)
-    "#{unit_json_directory}/#{unit_name}.script_json"
+    directory = unit_name.start_with?('ui-test-') ? UI_TEST_JSON_DIRECTORY : unit_json_directory
+    "#{directory}/#{unit_name}.script_json"
   end
 
   def get_unit_overview_pdf_url
