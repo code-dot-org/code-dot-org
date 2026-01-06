@@ -1129,12 +1129,10 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
-              Promise.resolve(
-                this.logError_(
-                  'unauthorized-save-sources-reload',
-                  saveSourcesErrorCount,
-                  err.message
-                )
+              this.logError_(
+                'unauthorized-save-sources-reload',
+                saveSourcesErrorCount,
+                err.message
               ).finally(() => utils.reload());
               MetricsReporter.incrementCounter(
                 'LegacyLab.ProjectSaveFailureClient',
@@ -1146,12 +1144,10 @@ var projects = (module.exports = {
               );
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
-              Promise.resolve(
-                this.logError_(
-                  'conflict-save-sources-reload',
-                  saveSourcesErrorCount,
-                  err.message
-                )
+              this.logError_(
+                'conflict-save-sources-reload',
+                saveSourcesErrorCount,
+                err.message
               ).finally(() => utils.reload());
               MetricsReporter.incrementCounter(
                 'LegacyLab.ProjectSaveFailureClient',
@@ -1428,13 +1424,19 @@ var projects = (module.exports = {
     header.showProjectSaveError();
   },
   logError_: function (errorType, errorCount, errorText) {
-    MetricsReporter.logError({
-      event: errorType,
-      errorMessage: errorText,
-      errorCount: errorCount,
-      appType: this.getStandaloneAppForMetrics(),
-      channelId: this.getCurrentId(),
-    });
+    try {
+      return Promise.resolve(
+        MetricsReporter.logError({
+          event: errorType,
+          errorMessage: errorText,
+          errorCount: errorCount,
+          appType: this.getStandaloneAppForMetrics(),
+          channelId: this.getCurrentId(),
+        })
+      );
+    } catch (e) {
+      return Promise.resolve();
+    }
   },
   updateCurrentData_(err, data, options = {}) {
     const {shouldNavigate} = options;
