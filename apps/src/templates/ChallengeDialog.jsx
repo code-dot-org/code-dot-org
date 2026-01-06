@@ -60,7 +60,8 @@ class ChallengeDialog extends React.Component {
   }
 
   render() {
-    const isRtl = getStore().getState().isRtl;
+    // const isRtl = getStore().getState().isRtl;
+    const isRtl = false;
     const bannerStyle = {
       ...styles.banner,
       ...(this.props.complete ? styles.bannerComplete : {}),
