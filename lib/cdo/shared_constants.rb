@@ -959,7 +959,7 @@ module SharedConstants
     'api.scryfall.com',           # Magic: The Gathering cards - Public API
     'api.sportsdata.io',          # Sports data feeds - API key required 🔑
     'ch.tetr.io',                 # Tetris game data - Public API
-    # 'deckofcardsapi.com',         # Deck of cards - Public API
+    'deckofcardsapi.com',         # Deck of cards - Public API
     'openlibrary.org',            # Open Library APIs - Public API
     'opentdb.com',                # Trivia questions - Public API
     'pokeapi.co',                 # Pokémon data - Public API

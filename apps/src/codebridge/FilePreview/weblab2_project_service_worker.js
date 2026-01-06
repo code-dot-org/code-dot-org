@@ -25,6 +25,7 @@ function main() {
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
   const codeDotOrgOrigin = getCodeDotOrgOrigin();
+  let contentSecurityPolicyValue = null;
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -38,10 +39,11 @@ function main() {
 
   // Listen for messages from the main thread
   addEventListener('message', event => {
-    const {type, files} = event.data;
+    const {type, files, contentSecurityPolicy} = event.data;
     if (type === UPDATE_FILES && event.origin === location.origin) {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
+      contentSecurityPolicyValue = contentSecurityPolicy;
     }
   });
 
@@ -117,6 +119,7 @@ function main() {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           Pragma: 'no-cache',
           Expires: '0',
+          'Content-Security-Policy': contentSecurityPolicyValue || '',
         },
       });
     } catch (error) {
