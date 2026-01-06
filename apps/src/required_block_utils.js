@@ -194,9 +194,8 @@ export function elementsEquivalent(expected, given, ignoreChildBlocks) {
       (expectedTagName === 'field' && givenTagName === 'title')
     ) {
       // titles were renamed to fields in Blockly in 2013. As of Dec 2021, all
-      // blockly code on our platform (both CdoBlockly and Google Blockly)
-      // serializes using <field> tags, but we should still treat <title> tags
-      // as equivalent for backwards compatibility.
+      // blockly code on our platform serializes using <field> tags, but we
+      // should still treat <title> tags as equivalent for backwards compatibility.
       // Test code and validation code still use <title> tags.
     } else {
       return false;
