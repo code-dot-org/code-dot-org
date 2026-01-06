@@ -608,6 +608,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 20, @workshop.num_scheduled_session_hours
   end
 
+  test 'num_scheduled_session_hours returns 0 if no sessions present' do
+    workshop = create(:workshop, num_sessions: 0)
+    assert_equal 0, workshop.num_scheduled_session_hours
+  end
+
   test 'time constraint lookup' do
     workshop_bad_course = build(:workshop, course: 'nonexistent')
     workshop_bad_subject = build(:workshop, course: Pd::Workshop::COURSE_CSP, subject: 'nonexistent')

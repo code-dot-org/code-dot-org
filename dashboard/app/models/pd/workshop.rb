@@ -670,7 +670,7 @@ class Pd::Workshop < ApplicationRecord
 
   # @return [Integer] number of scheduled pd session hours
   def num_scheduled_session_hours
-    sessions.sum(&:hours)
+    sessions&.sum(&:hours)&.presence || 0
   end
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
