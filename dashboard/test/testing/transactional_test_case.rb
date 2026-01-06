@@ -15,10 +15,6 @@ module ActiveSupport
         # @note Enabled by default, but set explicitly to make this behavior clear and ensure it stays enabled.
         # @see https://github.com/rails/rails/blob/v6.1.7.7/activerecord/lib/active_record/test_fixtures.rb
         self.use_transactional_tests = true
-
-        # Skips per-test fixture loading to reduce database setup overhead.
-        # @note Fixtures are already loaded during test database seeding.
-        self.pre_loaded_fixtures = true
       end
 
       class_methods do
