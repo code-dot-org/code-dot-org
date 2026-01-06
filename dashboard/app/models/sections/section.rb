@@ -695,8 +695,12 @@ class Section < ApplicationRecord
     unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
   end
 
-  def assigned_essential_ai_chat_features?
+  def assigned_essential_ai_chat?
     script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
+  end
+
+  def assigned_any_ai_chat?
+    script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,
