@@ -2,6 +2,9 @@ import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
+import {setPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
 import {ChatTextMessage} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -11,13 +14,15 @@ interface Props {
 }
 
 const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
+  const dispatch = useAppDispatch();
+
   return message.isArtifactCandidate ? (
     <div className={style.artifactButtons}>
       <Button
         color="gray"
         size="s"
         type="secondary"
-        onClick={() => {}}
+        onClick={() => dispatch(setPendingArtifactMessage(message))}
         aria-label={'fnord'}
         iconLeft={{iconName: 'shapes'}}
         text="Create artifact"

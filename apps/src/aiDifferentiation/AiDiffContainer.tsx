@@ -54,7 +54,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
-  const [artifactMessageId, setArtifactMessageId] = useState(0);
   const {personalizationData} = useTeachingProfileData();
 
   const [positionX, setPositionX] = useState(
@@ -66,6 +65,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
+  );
+
+  const pendingArtifactMessage = useAppSelector(
+    state => state.aichat.pendingArtifactMessage
   );
 
   const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
@@ -108,8 +111,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   };
 
   let content;
-  if (artifactMessageId) {
-    content = <AiDiffArtifactSavePage messageId={artifactMessageId} />;
+  if (pendingArtifactMessage) {
+    content = <AiDiffArtifactSavePage message={pendingArtifactMessage} />;
   } else if (curriculumCourses) {
     if (!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) {
       content = (
@@ -128,7 +131,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           scriptName={scriptName}
           curriculumCourses={curriculumCourses}
           unreadNotificationCount={unreadNotificationCount}
-          setArtifactMessageId={setArtifactMessageId}
         />
       );
     }

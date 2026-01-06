@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -56,6 +57,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
 
   useEffect(() => {
     fetchThreads();
+    asyncLoadSectionData();
   }, [fetchThreads]);
 
   const aiPromptOutsideChatClicked = useCallback(

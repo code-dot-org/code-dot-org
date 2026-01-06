@@ -71,7 +71,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
 
   const viewAsUserId = useAppSelector(
-    state => state.progress?.viewAsUserId || undefined
+    state => {
+      console.log(state);
+      return state.progress?.viewAsUserId || undefined;
+    }
   );
 
   const threadId = useAppSelector(state => state.aichat.threadId);

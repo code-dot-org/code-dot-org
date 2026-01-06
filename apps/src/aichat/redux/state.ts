@@ -1,5 +1,9 @@
 import {ThreadTypeFields} from '@cdo/apps/aiDifferentiation/constants';
-import {ChatItem, ChatPrompt} from '@cdo/apps/aiDifferentiation/types';
+import {
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 
 import {ModalTypes} from '../constants';
 import {
@@ -87,4 +91,7 @@ export interface AichatState {
   // The thread's artifact state- undefined if not in the artifact creation flow,
   // otherwise a string representing the artifact type
   artifactType: string | undefined;
+  // If the user is viewing the artifact save screen, this will contain the
+  // message they want to create an artifact from. Undefined otherwise.
+  pendingArtifactMessage?: ChatTextMessage;
 }
