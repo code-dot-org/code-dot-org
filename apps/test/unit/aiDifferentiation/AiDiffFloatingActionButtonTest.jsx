@@ -205,7 +205,9 @@ describe('AIDiffFloatingActionButton', () => {
       });
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
 
-      const fabImage = screen.getByRole('img', {name: 'AI bot'});
+      const fabImage = screen.getByRole('img', {
+        name: 'AI bot - unread notifications',
+      });
       fireEvent.load(fabImage);
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
     });
@@ -226,7 +228,9 @@ describe('AIDiffFloatingActionButton', () => {
           }
         );
       });
-      const image = screen.getByRole('img', {name: 'AI bot'});
+      const image = screen.getByRole('img', {
+        name: 'AI bot - unread notifications',
+      });
       fireEvent.load(image);
       const fab = screen.getByRole('button', {
         name: i18n.openOrCloseTeachingAssistant(),

@@ -41,7 +41,7 @@ module AichatSafetyHelper
       raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
       body = JSON.parse(response.body)
-      token_count = body.dig('usage', 'completion_tokens') || 0
+      token_count = body.dig('usage', 'output_tokens') || 0
       report_token_usage(token_count, output_type, role)
 
       evaluation = body.dig("output", 0, "content", 0, "text")
@@ -62,7 +62,7 @@ module AichatSafetyHelper
         raise "OpenAI structured request failed with status #{response.code}: #{response.body}" unless response.success?
 
         body = JSON.parse(response.body)
-        token_count = body.dig('usage', 'completion_tokens') || 0
+        token_count = body.dig('usage', 'output_tokens') || 0
         report_token_usage(token_count, output_type, role)
 
         raw_content = body.dig("output", 0, "content", 0, "text")
@@ -155,6 +155,7 @@ module AichatSafetyHelper
     end
 
     private def report_openai_safety_check(metric_name, num_attempts = 1, output_type = nil, role = nil)
+      return unless CDO.rack_env
       safety_dimensions = [
         {name: 'Environment', value: CDO.rack_env},
         {name: 'PromptVersion', value: get_safety_system_prompt_version},
@@ -178,6 +179,7 @@ module AichatSafetyHelper
     end
 
     private def report_openai_safety_latency(latency, num_attempts)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
@@ -196,6 +198,7 @@ module AichatSafetyHelper
     end
 
     private def report_detailed_latency(latency, output_type, role)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
@@ -214,6 +217,7 @@ module AichatSafetyHelper
     end
 
     private def report_token_usage(count, output_type, role)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {
@@ -232,6 +236,7 @@ module AichatSafetyHelper
     end
 
     private def report_toxicity_detected(output_type, role)
+      return unless CDO.rack_env
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
         [
           {

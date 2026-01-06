@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -12,6 +13,7 @@ import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
 import StudentCodeWidget from './studentCodeWidget';
+import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
@@ -68,7 +70,6 @@ const StudentSnapshot: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = React.useState<
     number | null
   >(null);
-
   const [lessons, setLessons] = useState<LessonOption[]>([]);
   const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
@@ -80,14 +81,28 @@ const StudentSnapshot: React.FC = () => {
     useState<boolean>(false);
   const [studentCode, setStudentCode] = useState<Record<string, string>>({});
 
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
+  );
+  const sectionCourseId = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          .courseId
+      : null
+  );
+  const selectedUnitId = useSelector(getSelectedUnitId);
+  const selectedUnitPosition = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          .unitPosition
+      : null
+  );
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
-
   const selectedStudent = React.useMemo(
     () => selectedStudents.find(student => student.id === selectedStudentId),
     [selectedStudentId, selectedStudents]
   );
 
-  const selectedUnitId = useSelector(getSelectedUnitId);
   React.useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
@@ -99,8 +114,14 @@ const StudentSnapshot: React.FC = () => {
         .finally(() => {
           setIsLessonsLoading(false);
         });
+      loadUnitProgress(
+        selectedUnitId,
+        sectionId,
+        sectionCourseId,
+        selectedUnitPosition
+      );
     }
-  }, [selectedUnitId]);
+  }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
   // Fetch CFU levels when lesson changes
   React.useEffect(() => {
@@ -216,6 +237,13 @@ const StudentSnapshot: React.FC = () => {
         >
           <div>Should not be displayed</div>
         </WidgetTemplate>
+        {selectedLessonId && selectedStudentId && (
+          <StudentLessonProgressDetailsWidget
+            selectedUnitId={selectedUnitId}
+            selectedLessonId={selectedLessonId}
+            selectedStudentId={selectedStudentId}
+          />
+        )}
       </div>
     </div>
   );

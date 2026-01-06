@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-16T20:55:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 1: Accessing and Mapping**\r\n\r\nThis example simulates receiving a complex array of objects and then uses `.map()` to simplify it.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = 'https://restcountries.com/v3.1/all?fields=name,population';\nconst statusElement = document.getElementById('app-status');\nconst outputElement = document.getElementById('data-output');\nconst fetchButton = document.getElementById('fetch-button');\n\n// Helper function to update the status message (simplified for L5 focus)\nconst setStatus = (message, statusType) => {\n    statusElement.textContent = message;\n    statusElement.className = `output-box status-${statusType}`; \n};\n\n// Declare async function\nconst fetchCountries = async () => {\n\n    // L6 Setup: Clear output and disable button (simplified loading state)\n    outputElement.innerHTML = '';\n\n    setStatus('Status: Sending request...', 'ready');\n    \n    // ... (omitted try/catch and initial fetch error checks for L5 focus) ...\n\n    const response = await fetch(apiEndpoint);\n\n    if (!response.ok) {\n        setStatus(`Status: HTTP Error ${response.status}. Cannot process.`, 'failure');\n        fetchButton.disabled = false;\n        return; \n    }\n    \n    setStatus(`Status: Response received (${response.status}). Parsing JSON.`, 'ready');\n\n    const rawCountries = await response.json();\n\n    // --- START L5: ACCESSING & MAPPING (The Core Focus) ---\n\n    // 3. Mapping: Use .map() to create a NEW array with only clean, transformed data.\n    const cleanCountries = rawCountries.map(country => {\n        // We return a simple object optimized for the UI\n        return {\n            // Accessing nested name and renaming key\n            name: country.name.common,\n            // Accessing population and transforming the value for display\n            population: country.population.toLocaleString('en-US') \n        };\n    });\n    \n    // The cleanCountries array now contains objects like: \n    // { name: \"Canada\", population: \"38,000,000\" }\n    // which is much simpler than the raw API object.\n    \n    // --- END L5: ACCESSING & MAPPING ---\n\n    // 4. Rendering: Use a loop on the clean array (This step leads directly to L6)\n    let htmlList = `\n        <h3>🌍 Populations for ${cleanCountries.length} Countries (Mapped)</h3>\n        <ul>\n    `;\n\n    // L5/L6 Transition: We now iterate over the CLEAN array, not the raw one.\n    cleanCountries.forEach(country => {\n        // Clean access: no more country.name.common, just country.name\n        htmlList += `<li>${country.name}: ${country.population}</li>`;\n    });\n\n    htmlList += '</ul>';\n\n    // 5. Update the DOM\n    outputElement.innerHTML = htmlList;\n    setStatus(`Status: Success! Data mapped and displayed.`, 'success');\n\n    fetchButton.disabled = false;\n};\n\n// Run async function on button click\ndocument.getElementById('fetch-button').addEventListener('click', fetchCountries);\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n  </head>\n  <body>\n    \n    <div id=\"app-status\" style=\"font-weight: bold; margin-top: 10px;\">Status: Ready</div>\n    \n    <div id=\"data-output\" style=\"border: 1px dashed #444; padding: 10px; margin-top: 10px;\">\n    </div>\n\n    <button id=\"fetch-button\">▶ Get Population Data</button> \n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-16T20:55:41.216+00:00\",\"changed\":[\"cloned from \\\"aif-s2-u5-l4-example1\\\"\"],\"cloned_from\":\"aif-s2-u5-l4-example1\"},{\"changed_at\":\"2025-12-16 20:56:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 21:01:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 21:06:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 21:38:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

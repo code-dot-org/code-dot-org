@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-13 19:58:15 UTC",
+    "serialized_at": "2026-01-05 21:35:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6700,10 +6700,11 @@
     },
     {
       "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1It3QM-Ji8Yfz782pcBZAM3lb6fZBmqlSRfxhOxqg7w8/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1-6K-naoslwsVFXmkZ6mHVZdky8r0yJoh-tETk-tE1hc/edit?usp=drive_link",
       "key": "cleaning_data",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6712,10 +6713,11 @@
     },
     {
       "name": "Crafting Stories with Data Project",
-      "url": "https://docs.google.com/presentation/d/1GZLjmW5SsR9TzUAka208QpABs-3zSoK8Z58CqYcDupo/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1FWavLks1hNcMKOGR8vgAhSS2NDP51BpL4RR_7VUHJpY/edit?usp=drive_link",
       "key": "crafting_stories_with_data_project",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6724,10 +6726,11 @@
     },
     {
       "name": "Crafting Stories with Data Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1JSShLxB5I7LzttGOn375gzDWGF3MEvRB87jC9eiK0Kw/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1NpJ6bp6kJRzVUBgkoH5gSZVQR-mkHLdxJNkyrLeWDqw/edit?usp=sharing",
       "key": "crafting_stories_with_data_project_planning_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -6837,10 +6840,11 @@
     },
     {
       "name": "Effective Data Questions",
-      "url": "https://docs.google.com/presentation/d/14QcGIQEK2tu4yqurjXU5dSCpdwFdKS7Sfv2s3VMbJqU/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1Q6WTd7rz1FdchrLwUIrJ9xH_-rbALdxU_CBqjXoG5zA/edit?usp=drive_link",
       "key": "effective_data_questions",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6894,10 +6898,11 @@
     },
     {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1pQYxYQZlE9Kl7H_a8yxVp7Y2H3W5gDAETPWR7PGa1u4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1WeJHU2Bf42ZLw7OmBUyBk5X4mQG_46drhNgAYulPpwU/edit?usp=drive_link",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

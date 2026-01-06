@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U6L6-CompareTo PBT_alt-2025",
     "teacher_markdown": "Encourage students to change the values for the `String` variables as well. What happens when we compare `\"New York\"` to `\"New Haven\"`?",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:08:50.008+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L6-L4_pilot-2025\"}]"

@@ -24,7 +24,7 @@
       }
     },
     "teacher_markdown": "Students should notice that the outer `for` loop is controlling how many times `Countdown \"` and `I love CS!` are printed, while the inner `for` loop is printing the numbers 1-10.",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "name_suffix": "_alt-2025"
   },
   "published": true,

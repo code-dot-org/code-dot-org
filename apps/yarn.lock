@@ -3869,13 +3869,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/blockly@npm:4.0.14":
-  version: 4.0.14
-  resolution: "@code-dot-org/blockly@npm:4.0.14"
-  checksum: 10/4f1e76f03dafbf2a92159ee48b7fd223caabf619b3dbcb45340808d20865e085522852215804a48654755c4dc60b94494956fc041270546f8892149628c683f8
-  languageName: node
-  linkType: hard
-
 "@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A."
@@ -8709,6 +8702,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/rails__actioncable@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "@types/rails__actioncable@npm:8.0.3"
+  checksum: 10/3d46a88d0cf0ba92368111ba67f15c816ac1c300b56b7d96ac90a3befff7aa51638a9b155296bf162b17e73bc90fe1c1c81f9c9803d76f80a931c01ec7a8847f
+  languageName: node
+  linkType: hard
+
 "@types/range-parser@npm:*":
   version: 1.2.7
   resolution: "@types/range-parser@npm:1.2.7"
@@ -11153,7 +11153,6 @@ __metadata:
     "@blockly/theme-highcontrast": "npm:^7.0.0"
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": "npm:0.2.1"
-    "@code-dot-org/blockly": "npm:4.0.14"
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": "npm:0.2.2"
@@ -11228,6 +11227,7 @@ __metadata:
     "@types/mocha": "npm:^10.0.1"
     "@types/papaparse": "npm:^5.3.14"
     "@types/qrcode.react": "npm:^1.0.5"
+    "@types/rails__actioncable": "npm:^8.0.3"
     "@types/react": "npm:^18.0.28"
     "@types/react-bootstrap": "npm:^0.32.36"
     "@types/react-csv": "npm:^1.1.10"
@@ -11360,7 +11360,6 @@ __metadata:
     papaparse: "npm:^5.4.1"
     path-browserify: "npm:^1.0.1"
     pdf-lib: "npm:^1.17.1"
-    pepjs: "npm:^0.4.3"
     pixelmatch: "npm:^5.2.0"
     playground-io: "code-dot-org/playground-io#v0.6.0-cdo.2"
     prettier: "npm:2.8.7"
@@ -24153,13 +24152,6 @@ canvg@gabelerner/canvg:
     duplexify: "npm:^3.5.0"
     through2: "npm:^2.0.3"
   checksum: 10/a0e09d6d1a8a01158a3334f20d6b1cdd91747eba24eb06a1d742eefb620385593121a76d4378cc81f77cdce6a66df0575a41041b1189c510254aec91878afc99
-  languageName: node
-  linkType: hard
-
-"pepjs@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "pepjs@npm:0.4.3"
-  checksum: 10/9889d6dc0ba1298366c2f05f28913a9a1d4143f743a010103c089aa22d05a2e224c5504968c9fb8fa454d6bd910ba9969bc442fd15c62e05115d6247fa7f3f51
   languageName: node
   linkType: hard
 

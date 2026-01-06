@@ -35,7 +35,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
-    "encrypted_examples": "KHdSP8/OVLlyRjy10J3cm2rh/Wbh4vNj4fELcZ5DfwzqPHr/oCR7cKCaAQKb\nNbMVGNhItMRrQzyKmCzlttRUAA==\n"
+    "encrypted_examples": "KHdSP8/OVLlyRjy10J3cm2rh/Wbh4vNj4fELcZ5DfwzqPHr/oCR7cKCaAQKb\nNbMVGNhItMRrQzyKmCzlttRUAA==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

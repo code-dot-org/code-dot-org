@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U4L6-Aliases PBT_pilot_oo2025",
     "teacher_markdown": "`secondEvent` is an object reference variable that points to the same object as `firstEvent`. Therefore, this statement will also evaluate to `false`.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:31:46.844+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L6-L3_pilot-2025\"}]"
