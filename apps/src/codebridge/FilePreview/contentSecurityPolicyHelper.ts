@@ -6,11 +6,10 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 // This is copied from codeprojects_preview_controller.rb to enable setting a content security policy
-// on the frontend. Explanation of the policy can be found there.
+// on the frontend. Explanation of the policy can be found there. Any changes here should be mirrored there.
+// We don't include the websocket URL here as it's not needed when serving student code in the iframe.
 export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
   const previewUrl = location.origin;
-  // Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
-  // Therefore we explicitly set the prefix to 'http', which will also allow https.
   const prefix = 'http://';
   const allowedConnectSrc = AllowedHostnameSuffixes.map(
     hostname => `${prefix}${hostname} ${prefix}*.${hostname}`

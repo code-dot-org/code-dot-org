@@ -16,6 +16,11 @@ class CodeprojectsPreviewController < ApplicationController
     render 'page_not_found', layout: false, status: :not_found
   end
 
+  # This is mostly copied over to apps/src/codebridge/FilePreview/contentSecurityPolicyHelper.ts
+  # to generate the same Content Security Policy on the frontend. If you make changes here,
+  # please make sure to update the frontend version as well. The only differences between the two are we
+  # don't need to add the websocket URL in the frontend version, and we get the preview and code.org urls
+  # differently (and don't need to account for multiple ports in development, since we know what port we are using).
   def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
     preview_url = "*.#{CDO.preview_codeprojects_hostname}"
