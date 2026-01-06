@@ -1,0 +1,9 @@
+name 'CSD U2L3-L8-2025'
+display_name 'HTML Headings'
+description 'Try out what you\'ve learned on one or more of the following activities.'
+uses_lab2
+sublevels
+level 'CSD U2L3-L8a-2025'
+level 'CSD U2L3-L8b-2025'
+level 'CSD U2L3-L8c-2025'
+level 'CSD U2L3-L8d-2025'

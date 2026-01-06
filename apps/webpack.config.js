@@ -612,7 +612,6 @@ function createWebpackConfig({
                     'immutable',
                     'lodash',
                     'moment',
-                    'pepjs',
                     'radium',
                     'react',
                     'react-dom',
