@@ -95,6 +95,141 @@ function main() {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }
 
+  // Inject a script into HTML that handles blocked images and displays a helpful message.
+  function injectImageErrorHandler(htmlContent) {
+    const script = `
+<script data-cdo-injected="image-error-handler">
+(function() {
+  'use strict';
+  
+  // Style for the blocked image placeholder
+  const style = document.createElement('style');
+  style.textContent = \`
+    img.cdo-blocked-image {
+      display: inline-block;
+      background: #f5f5f5;
+      border: 2px dashed #999;
+      border-radius: 4px;
+      position: relative;
+      min-width: 240px;
+      min-height: 140px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      color: #333;
+      text-align: center;
+      vertical-align: middle;
+    }
+    img.cdo-blocked-image::after {
+      content: attr(data-blocked-message);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      background: white;
+      padding: 15px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      white-space: pre-line;
+      overflow: auto;
+      line-height: 1.4;
+    }
+  \`;
+  document.head.appendChild(style);
+  
+  // Check if a URL is external (not same-origin, not data/blob)
+  function isExternalUrl(url) {
+    if (!url) return false;
+    if (url.startsWith('data:') || url.startsWith('blob:')) return false;
+    try {
+      const urlObj = new URL(url, window.location.href);
+      return urlObj.origin !== window.location.origin;
+    } catch (e) {
+      return false;
+    }
+  }
+  
+  // Handle image error events
+  function handleImageError(img) {
+    const src = img.src || img.getAttribute('src');
+    
+    // Only handle external image errors (likely CSP violations)
+    if (isExternalUrl(src)) {
+      img.classList.add('cdo-blocked-image');
+      img.setAttribute('data-blocked-message', '🚫 External Image Blocked\\n\\nOnly images from approved sources are allowed or upload your own!');
+      img.removeAttribute('src'); // Prevent further attempts to load
+    }
+  }
+  
+  // Listen for errors on existing images
+  document.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG') {
+      handleImageError(e.target);
+    }
+  }, true);
+  
+  // Monitor for dynamically added images
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.tagName === 'IMG') {
+          node.addEventListener('error', function() {
+            handleImageError(node);
+          });
+        }
+        // Handle images in added subtrees
+        if (node.querySelectorAll) {
+          node.querySelectorAll('img').forEach(function(img) {
+            img.addEventListener('error', function() {
+              handleImageError(img);
+            });
+          });
+        }
+      });
+    });
+  });
+  
+  // Start observing
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+  
+  // Handle images already in the document
+  window.addEventListener('load', function() {
+    document.querySelectorAll('img').forEach(function(img) {
+      img.addEventListener('error', function() {
+        handleImageError(img);
+      });
+    });
+  });
+})();
+</script>`;
+    // Inject before closing </body> or </html> tag, whichever comes first
+    const bodyCloseIndex = htmlContent.toLowerCase().lastIndexOf('</body>');
+    const htmlCloseIndex = htmlContent.toLowerCase().lastIndexOf('</html>');
+    if (bodyCloseIndex !== -1) {
+      return (
+        htmlContent.slice(0, bodyCloseIndex) +
+        script +
+        htmlContent.slice(bodyCloseIndex)
+      );
+    } else if (htmlCloseIndex !== -1) {
+      return (
+        htmlContent.slice(0, htmlCloseIndex) +
+        script +
+        htmlContent.slice(htmlCloseIndex)
+      );
+    } else {
+      // No closing tags found, append to end
+      return htmlContent + script;
+    }
+  }
+
   async function handleProjectRequest(requestedFile, fileData) {
     try {
       const {content, mimeType, url} = fileData;
@@ -118,13 +253,19 @@ function main() {
         Pragma: 'no-cache',
         Expires: '0',
       };
+
+      let responseContent = content;
+
       // Apply CSP to HTML files to restrict image sources
       if (mimeType === 'text/html' && cspImageSrcPolicy) {
         headers[
           'Content-Security-Policy'
         ] = `img-src 'self' data: blob: ${cspImageSrcPolicy}`;
+        // Inject script to handle blocked images with a user-friendly message
+        responseContent = injectImageErrorHandler(content);
       }
-      return new Response(content, {
+
+      return new Response(responseContent, {
         status: 200,
         headers: headers,
       });
