@@ -8,6 +8,7 @@ import {
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
 
@@ -18,6 +19,7 @@ const BackpackPanel: React.FC = () => {
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const loadBackpackFiles = useCallback(() => {
     if (backpackApi) {
@@ -40,9 +42,30 @@ const BackpackPanel: React.FC = () => {
     loadBackpackFiles();
   }, [loadBackpackFiles, backpackApi]);
 
-  // todo: prettier
   if (!backpackApi) {
-    return <div>Backpack is unavailable.</div>;
+    let titleMessage = 'Backpack is unavailable';
+    let detailMessage = 'Please reload the page to try again.';
+    if (!currentUserId) {
+      titleMessage = "You're signed out";
+      detailMessage = 'Please sign in to access your Backpack.';
+    }
+    return (
+      <div className={moduleStyles.backpackPanelWithMessage}>
+        <div className={moduleStyles.neutralIconContainer}>
+          <FontAwesomeV6Icon
+            iconName="lock"
+            iconStyle="solid"
+            className={moduleStyles.icon}
+          />
+        </div>
+        <div className={moduleStyles.backpackMessageText}>
+          <BodyTwoText>
+            <StrongText>{titleMessage}</StrongText>
+          </BodyTwoText>
+          <BodyFourText>{detailMessage}</BodyFourText>
+        </div>
+      </div>
+    );
   }
 
   if (isLoading) {

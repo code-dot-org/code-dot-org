@@ -71,6 +71,7 @@ export const Codebridge = React.memo(
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
+    const currentUserId = useAppSelector(state => state.currentUser.userId);
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -150,10 +151,12 @@ export const Codebridge = React.memo(
       isWidgetView,
     ]);
 
-    const backpackApi = useMemo(
-      () => new BackpackClientApi(appName, null),
-      [appName]
-    );
+    const backpackApi = useMemo(() => {
+      if (currentUserId) {
+        return new BackpackClientApi(appName, null);
+      }
+      return null;
+    }, [appName, currentUserId]);
 
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
