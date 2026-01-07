@@ -1,7 +1,7 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 /** Type of a block that has LOGIC_COMPARE_ONCHANGE_MIXIN */
-type CompareBlock = GoogleBlockly.Block & {
+type CompareBlock = BlocklyCore.Block & {
   onchange: (this: CompareBlock) => void;
 };
 
@@ -28,8 +28,8 @@ const LOGIC_COMPARE_EXTENSION = function (this: CompareBlock) {
   this.mixin(LOGIC_COMPARE_ONCHANGE_MIXIN);
 };
 export default function registerMutator() {
-  if (GoogleBlockly.Extensions.isRegistered('logic_compare')) {
-    GoogleBlockly.Extensions.unregister('logic_compare');
+  if (BlocklyCore.Extensions.isRegistered('logic_compare')) {
+    BlocklyCore.Extensions.unregister('logic_compare');
   }
-  GoogleBlockly.Extensions.register('logic_compare', LOGIC_COMPARE_EXTENSION);
+  BlocklyCore.Extensions.register('logic_compare', LOGIC_COMPARE_EXTENSION);
 }

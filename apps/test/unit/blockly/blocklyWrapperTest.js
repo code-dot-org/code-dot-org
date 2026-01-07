@@ -1,25 +1,25 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import initializeBlocklyWrapper from '@cdo/apps/blockly/blocklyWrapper';
 import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
-import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-describe('Google Blockly Wrapper', () => {
-  const cdoBlockly = Blockly;
+describe('Blockly Wrapper', () => {
+  const globalBlockly = Blockly;
   beforeEach(() => {
-    if (GoogleBlockly.JavaScript) {
-      sinon.stub(GoogleBlockly, 'JavaScript');
+    if (BlocklyCore.JavaScript) {
+      sinon.stub(BlocklyCore, 'JavaScript');
     }
-    Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
+    Blockly = initializeBlocklyWrapper(BlocklyCore); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
     // Reset Blockly for other tests.
-    Blockly = cdoBlockly; // eslint-disable-line no-global-assign
+    Blockly = globalBlockly; // eslint-disable-line no-global-assign
     // Reset context menu for other tests.
-    GoogleBlockly.ContextMenuRegistry.registry.reset();
+    BlocklyCore.ContextMenuRegistry.registry.reset();
   });
 
   it('readOnly properties cannot be set', () => {

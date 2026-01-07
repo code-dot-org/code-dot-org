@@ -1,4 +1,4 @@
-import type * as GoogleBlockly from 'blockly/core';
+import type * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES} from '../../constants';
 import {JsonBlockConfig} from '../../types';
@@ -12,7 +12,7 @@ import {DEFAULT_CATEGORY_NAME} from './workspaceToToolboxDefinition';
  * TODO: Consolidate
  */
 export default function (
-  toolbox: GoogleBlockly.utils.toolbox.ToolboxInfo | undefined
+  toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined
 ) {
   if (!toolbox) {
     return {};
@@ -22,13 +22,13 @@ export default function (
 }
 
 function contentsToBlocks(
-  contents: GoogleBlockly.utils.toolbox.ToolboxItemInfo[]
+  contents: BlocklyCore.utils.toolbox.ToolboxItemInfo[]
 ) {
   const blocks: Partial<JsonBlockConfig>[] = [];
   for (const item of contents) {
     if (item.kind === 'block') {
       // Add toolbox blocks directly to the workspace.
-      const blockInfo = item as GoogleBlockly.utils.toolbox.BlockInfo;
+      const blockInfo = item as BlocklyCore.utils.toolbox.BlockInfo;
       if (!blockInfo.type) {
         console.warn('Missing block type: ', item);
       } else {
@@ -37,7 +37,7 @@ function contentsToBlocks(
     } else if (item.kind === 'category' && 'custom' in item) {
       // For dynamic categories, create a custom category block..
       const dynamicCategoryName = (
-        item as GoogleBlockly.utils.toolbox.DynamicCategoryInfo
+        item as BlocklyCore.utils.toolbox.DynamicCategoryInfo
       ).id;
       if (!dynamicCategoryName) {
         console.warn('Missing dynamic category name: ', item);
@@ -50,8 +50,7 @@ function contentsToBlocks(
         });
       }
     } else if (item.kind === 'category') {
-      const categoryInfo =
-        item as GoogleBlockly.utils.toolbox.StaticCategoryInfo;
+      const categoryInfo = item as BlocklyCore.utils.toolbox.StaticCategoryInfo;
       // For a localized category, like "Sounds", get the category type, like "Play".
       const categoryName = categoryInfo.id;
       // 'DEFAULT' categories are intentionally skipped.

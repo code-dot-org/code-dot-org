@@ -2,7 +2,7 @@
  * Defines block generators useful in Play Lab
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import {Order} from 'blockly/javascript';
 
 import {
@@ -17,7 +17,7 @@ export const blocks = {
     // A custom generator for a "for loop" where variable names should be part
     // of the Globals namespace (e.g. Globals.counter).
     Blockly.JavaScript.forBlock.controls_for = function (
-      block: GoogleBlockly.Block,
+      block: BlocklyCore.Block,
       generator: JavascriptGeneratorType
     ) {
       // Customization: use translateVarName instead of getVariableName
@@ -128,7 +128,7 @@ export const blocks = {
   },
   overrideMathChangeGenerator() {
     Blockly.JavaScript.forBlock.math_change = function (
-      block: GoogleBlockly.Block,
+      block: BlocklyCore.Block,
       generator: JavascriptGeneratorType
     ) {
       // Add to a variable in place.
@@ -159,7 +159,7 @@ export const blocks = {
     // A custom generator for function call where function names should be part
     // of the Globals namespace (e.g. Globals.jump()).
     Blockly.JavaScript.forBlock.procedures_callnoreturn = function (
-      block: GoogleBlockly.Block,
+      block: BlocklyCore.Block,
       generator: JavascriptGeneratorType
     ) {
       // Call a procedure with no return value.
@@ -182,7 +182,7 @@ export const blocks = {
     // A custom generator for function call where function names should be part
     // of the Globals namespace (e.g. Globals.jump = function()).
     Blockly.JavaScript.forBlock.procedures_defnoreturn = function (
-      block: GoogleBlockly.Block,
+      block: BlocklyCore.Block,
       generator: JavascriptGeneratorType
     ) {
       // Define a procedure with a return value.
