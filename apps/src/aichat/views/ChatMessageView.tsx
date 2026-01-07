@@ -20,6 +20,8 @@ import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
 import styles from './chatWorkspace.module.scss';
+import FlagResponseButton from './FlagResponseButton';
+import experiments from '@cdo/apps/util/experiments';
 
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
@@ -101,10 +103,18 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   } else {
     footer =
       messageVisible && isAssistant ? (
-        <CopyButton
-          copyText={chatMessage.chatMessageText}
-          usage={'ai-chat-msg-footer'}
-        />
+        <div className={styles.buttonRow}>
+          <CopyButton
+            copyText={chatMessage.chatMessageText}
+            usage={'ai-chat-msg-footer'}
+          />
+          {experiments.isEnabledAllowingQueryString(
+            experiments.LOG_TO_LANGFUSE
+            // Pass  id: chatMessage.id, and chatMessageText: chatMessage.chatMessageText as props
+            // then in the button pull off the other analytics props from useAppSelector to log to Langfuse
+            // Finish the implementation of saving to Langfuse dataset in FlagResponseButton.tsx & API
+          ) && <FlagResponseButton />}
+        </div>
       ) : null;
   }
 

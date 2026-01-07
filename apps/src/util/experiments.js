@@ -72,6 +72,8 @@ experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 experiments.WEBLAB2_PREVIEW_V2 = 'weblab2-preview-v2';
 // Use AI Tutor system prompts from Langfuse
 experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
+// Enable flagging of AI responses to Langfuse
+experiments.LOG_TO_LANGFUSE = 'log-to-langfuse';
 // Enable AI lesson summaries
 experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 // Enable AI lesson podcasts

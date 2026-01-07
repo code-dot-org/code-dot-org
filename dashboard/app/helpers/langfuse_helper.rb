@@ -14,6 +14,16 @@ module LangfuseHelper
     end
   end
 
+  def self.add_dataset_item(dataset_item)
+    response = client.add_dataset_item(dataset_item)
+
+    if response.code == 200
+      {status: :ok, json: JSON.parse(response.body)}
+    else
+      {status: response.code, json: {error: response.body}}
+    end
+  end
+
   def self.client
     LangfuseClientHelper::Client.new(LANGFUSE_SECRET_KEY, LANGFUSE_PUBLIC_KEY)
   end
