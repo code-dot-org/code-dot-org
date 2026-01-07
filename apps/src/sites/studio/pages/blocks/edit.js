@@ -3,7 +3,6 @@ import jsonic from 'jsonic';
 
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
@@ -153,12 +152,8 @@ function validateTextFieldNames(json) {
   }
 }
 
-// Only apply this validation to pools being rendered in Google Blockly,
-// as those are the pools where we have UI tests and want to prevent
-// levelbuilder changes from causing them to fail
 function validateBlockRenders() {
   if (
-    Blockly.version === BlocklyVersion.GOOGLE &&
     Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
   ) {
     throw 'Blockly is unable to render a block with the given configuration.';

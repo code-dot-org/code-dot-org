@@ -12,8 +12,6 @@ import {
 } from '@cdo/apps/lib/util/javascriptMode';
 import experiments from '@cdo/apps/util/experiments';
 
-import {TOOLBOX_EDIT_MODE} from '../constants';
-
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
@@ -912,31 +910,7 @@ export default class P5Lab {
       this.message = null;
     } else {
       let textBlocks;
-      if (Blockly.version === 'Google') {
-        textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
-      } else {
-        // We're using CDO Blockly, report the program as xml
-        var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-
-        // When SharedFunctions (aka shared behavior_definitions) are enabled, they
-        // are always appended to startBlocks on page load.
-        // See StudioApp -> setStartBlocks_
-        // Because of this, we need to remove the SharedFunctions when we are in
-        // toolbox edit mode. Otherwise, they end up in a student's toolbox.
-        if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
-          var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
-          var toRemove = allBlocks.filter(element => {
-            return (
-              element.getAttribute('type') === 'behavior_definition' &&
-              element.getAttribute('usercreated') !== 'true'
-            );
-          });
-          toRemove.forEach(element => {
-            xml.removeChild(element);
-          });
-        }
-        textBlocks = Blockly.Xml.domToText(xml);
-      }
+      textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
       program = encodeURIComponent(textBlocks);
     }
 

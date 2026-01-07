@@ -361,7 +361,6 @@ class ProjectsController < ApplicationController
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
-    script_level_id = params[:script_level_id]
     level = Level.find(params[:level_id])
     user_id = params[:user_id]
 
@@ -370,17 +369,8 @@ class ProjectsController < ApplicationController
 
     # If viewing another user's work, ensure that we have permission.
     if user_id
-      # If a script level ID was provided, ensure it matches the level ID.
-      if script_level_id
-        script_level = ScriptLevel.cache_find(script_level_id.to_i)
-        same_level = script_level.oldest_active_level.id == level.id
-        is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level.id, parent_level_id: script_level.oldest_active_level.id)
-        return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
-      else
-        script_level = level.script_levels.find_by_script_id(script_id)
-      end
       user = User.find(user_id)
-      unless can?(:view_as_user, script_level, user)
+      unless user&.student_of?(current_user)
         return render(status: :forbidden, json: {error: "Access denied."})
       end
 
@@ -472,8 +462,7 @@ class ProjectsController < ApplicationController
       game_display_name: data_t("game.name", @game.name),
       app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      disallowed_html_tags: disallowed_html_tags,
-      blocklyVersion: params[:blocklyVersion]
+      disallowed_html_tags: disallowed_html_tags
     )
 
     @body_classes = @level.properties['background']

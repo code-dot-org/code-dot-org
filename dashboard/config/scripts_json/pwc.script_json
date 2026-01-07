@@ -18,7 +18,8 @@
       ],
       "content_area": "hoc",
       "curriculum_umbrella": "HOC",
-      "is_migrated": true
+      "is_migrated": true,
+      "is_deprecated": true
     },
     "new_name": null,
     "family_name": null,

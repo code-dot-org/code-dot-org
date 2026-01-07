@@ -14,7 +14,7 @@
  * @fileoverview Changes the text_join block to use a +/- mutator UI.
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {createMinusField} from './field_minus';
 import {createPlusField} from './field_plus';
@@ -32,10 +32,10 @@ const textJoinMutator = {
   /**
    * Creates XML to represent number of inputs.
    * @returns {!Element} XML storage element.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   mutationToDom: function () {
-    const container = GoogleBlockly.utils.xml.createElement('mutation');
+    const container = BlocklyCore.utils.xml.createElement('mutation');
     container.setAttribute('items', this.itemCount_);
     return container;
   },
@@ -43,7 +43,7 @@ const textJoinMutator = {
   /**
    * Parses XML to restore the inputs.
    * @param {!Element} xmlElement XML storage element.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   domToMutation: function (xmlElement) {
     const targetCount = parseInt(xmlElement.getAttribute('items'), 10);
@@ -71,7 +71,7 @@ const textJoinMutator = {
   /**
    * Adds inputs to the block until the block reaches the target input count.
    * @param {number} targetCount The number of inputs the block should have.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   updateShape_: function (targetCount) {
@@ -88,7 +88,7 @@ const textJoinMutator = {
   /**
    * Callback for the plus image. Adds an input to the block and updates the
    * state of the minus.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   plus: function () {
     this.addPart_();
@@ -98,7 +98,7 @@ const textJoinMutator = {
   /**
    * Callback for the minus image. Removes the input at the end of the block and
    * updates the state of the minus.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   minus: function () {
     if (this.itemCount_ <= MINIMUM_INPUTS) {
@@ -111,7 +111,7 @@ const textJoinMutator = {
   /**
    * Adds an input to the end of the block. If the block currently has no
    * inputs it updates the top 'EMPTY' input to receive a block.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   addPart_: function () {
@@ -136,7 +136,7 @@ const textJoinMutator = {
   /**
    * Removes an input from the end of the block. If we are removing the last
    * input this updates the block to have an 'EMPTY' top input.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   removePart_: function () {
@@ -182,19 +182,19 @@ const textJoinMutator = {
 /**
  * Adds the quotes mixin to the block. Also updates the shape so that if no
  * mutator is provided the minimum number of inputs are added.
- * @this {GoogleBlockly.Block}
+ * @this {BlocklyCore.Block}
  */
 const textJoinHelper = function () {
   if (MINIMUM_INPUTS === 0) {
-    GoogleBlockly.Extensions.apply('text_quotes', this, false);
+    BlocklyCore.Extensions.apply('text_quotes', this, false);
   }
   this.updateShape_(MINIMUM_INPUTS);
 };
 export default function registerMutator() {
-  if (GoogleBlockly.Extensions.isRegistered('text_join_mutator')) {
-    GoogleBlockly.Extensions.unregister('text_join_mutator');
+  if (BlocklyCore.Extensions.isRegistered('text_join_mutator')) {
+    BlocklyCore.Extensions.unregister('text_join_mutator');
   }
-  GoogleBlockly.Extensions.registerMutator(
+  BlocklyCore.Extensions.registerMutator(
     'text_join_mutator',
     textJoinMutator,
     textJoinHelper

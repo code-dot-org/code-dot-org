@@ -1,11 +1,10 @@
 import {FieldBitmap} from '@blockly/field-bitmap';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
 // Use our translations for "Clear" button text.
-GoogleBlockly.Msg['BUTTON_LABEL_CLEAR'] =
-  commonI18n?.blocklyClear?.() || 'Clear';
+BlocklyCore.Msg['BUTTON_LABEL_CLEAR'] = commonI18n?.blocklyClear?.() || 'Clear';
 
 /**
  * Custom FieldBitmap class with additional hooks for XML serialization.
