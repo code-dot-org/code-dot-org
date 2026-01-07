@@ -1929,40 +1929,41 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'does allow major changes to unit within in_development course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    unit = unit_group.first_unit
+    assert unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to unit within pilot course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+    unit = unit_group.first_unit
+    assert unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within beta course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    unit = unit_group.first_unit
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to in_development unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    unit.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to hidden unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.update!(hide_within_course: true)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    unit.update!(hide_within_course: true)
+    assert unit.allow_major_curriculum_changes?
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase

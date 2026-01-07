@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {EMPTY_OPTION} from '../constants';
 import {
@@ -9,7 +9,7 @@ import {
 
 import CdoAngleHelper from './cdoAngleHelper';
 
-export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
+export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
   private config: string | null | undefined;
   angleHelper: CdoAngleHelper | null;
   direction: string | undefined;
@@ -39,8 +39,8 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
     min?: string | number | null,
     max?: string | number | null,
     precision?: string | number | null,
-    validator?: GoogleBlockly.FieldNumberValidator | null,
-    config?: GoogleBlockly.FieldNumberConfig
+    validator?: BlocklyCore.FieldNumberValidator | null,
+    config?: BlocklyCore.FieldNumberConfig
   ) {
     super(value, min, max, precision, validator, config);
     this.angleHelper = null;
