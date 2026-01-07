@@ -35,6 +35,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
@@ -85,6 +86,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.TeachersOnly]: {
     title: commonI18n.teachingTips(),
     icon: 'chalkboard-teacher',
+  },
+  [Tabs.Backpack]: {
+    title: 'Backpack',
+    icon: 'backpack',
   },
 };
 
@@ -177,6 +182,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     appName,
     levelProperties.aiTutorAvailable
   );
+  // TODO: also check for readonly/viewing other user's project??
+  const showBackpack =
+    !isPermanentlyReadOnly &&
+    (appName === 'pythonlab' || appName === 'weblab2');
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -241,6 +250,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
+    if (showBackpack) {
+      tabMap[Tabs.Backpack] = <BackpackPanel />;
+    }
+
     if (
       isUserTeacher &&
       (levelProperties.teacherMarkdown ||
@@ -265,9 +278,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isPermanentlyReadOnly,
     viewAsUserId,
     isWidgetView,
+    isReadOnlyPredict,
     versionHistoryProps,
     showRubric,
     isUserTeacher,
+    showBackpack,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
@@ -279,7 +294,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelId,
     isTemporarilyReadOnly,
     isViewingOldVersion,
-    isReadOnlyPredict,
     currentTab,
   ]);
 
