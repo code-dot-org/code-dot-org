@@ -108,7 +108,9 @@ function main() {
         let fetchUrl = url;
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
-          fetchUrl = codeDotOrgOrigin + url;
+          // Adding a temporary cache bust query parameter to avoid some caching issues with level starter assets.
+          const temporaryCacheBust = '?temp-cache-bust=1';
+          fetchUrl = codeDotOrgOrigin + url + temporaryCacheBust;
         }
         return await fetch(fetchUrl);
       }
