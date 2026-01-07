@@ -385,6 +385,7 @@ const marketingPaths = {
   "/about/2021": true,
   "/about/2022": true,
   "/about/2023": true,
+  "/about/ai-use-policy": true,
   "/about/donation-policy": true,
   "/about/donors": true,
   "/about/education-leadership-council": true,
@@ -792,7 +793,6 @@ const marketingPaths = {
   "/districts/program": true,
   "/mix-move-ai": true,
   "/promote/stats": true,
-  "/about/ai-use-policy": true,
 }
 
 const pathPatterns = [
