@@ -52,7 +52,7 @@ import moduleStyles from './generic-dialog.module.scss';
  * Generic dialog component for Lab2 labs, built on the DSCO Modal component.
  *
  * Supports:
- * - A title string or custom title component
+ * - A title string
  * - A message string or custom body component
  * - Up to three buttons: confirm, cancel, and neutral
  *
