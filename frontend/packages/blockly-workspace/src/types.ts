@@ -14,7 +14,7 @@ export interface BlocklySerialization {
 /**
  * The content defining a list or dropdown field.
  */
-export type BlockOptionsList = [
+export type BlockOptionsList = readonly (readonly [
   (
     | string
     | {
@@ -29,7 +29,7 @@ export type BlockOptionsList = [
       }
   ),
   string,
-][];
+])[];
 
 export interface BlockBaseArgDefinition {
   /** The internal name for the field which is referenced by a generator */
@@ -77,15 +77,45 @@ export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
   variable?: string;
 }
 
+export interface BlockDummyArgDefinition extends BlockBaseArgDefinition {
+  /** Explictly a blank field */
+  type: 'input_dummy';
+}
+
+export interface BlockStatementArgDefinition extends BlockBaseArgDefinition {
+  /** Explictly a statement section */
+  type: 'input_statement';
+}
+
+export interface BlockNumberArgDefinition extends BlockBaseArgDefinition {
+  /** Explictly a numerical input */
+  type: 'field_number';
+  /** The initial value */
+  value: number;
+  /** The minimum value */
+  min?: number;
+  /** The maximum value */
+  max?: number;
+}
+
 /**
  * The definition of an argument (arg0, etc)
  */
-export type BlockArgDefinition = BlockFieldPluginArgDefinition | BlockImageArgDefinition | BlockDropdownArgDefinition | BlockInputArgDefinition;
+export type BlockArgDefinition =
+  | BlockFieldPluginArgDefinition
+  | BlockDummyArgDefinition
+  | BlockStatementArgDefinition
+  | BlockImageArgDefinition
+  | BlockNumberArgDefinition
+  | BlockDropdownArgDefinition
+  | BlockInputArgDefinition;
 
 /**
  * The definition of an argument that Blockly understands (no special features)
  */
-export type BlockFlatArgDefinition = Omit<BlockArgDefinition, 'type'> & {type: string};
+export type BlockFlatArgDefinition = Omit<BlockArgDefinition, 'type'> & {
+  type: string;
+};
 
 /**
  * Our encapsulation of block mutators.
@@ -319,6 +349,30 @@ export interface Environment {
   mainWorkspace?: Blockly.Workspace;
   /** The hidden workspace reference, when provided. */
   hiddenWorkspace?: Blockly.Workspace;
+  /** Whether or not the main workspace is inline */
+  inline: boolean;
+  /**
+   * Whether or not the workspace is considered embedded.
+   *
+   * An embedded workspace is one that is not meant to be modified, but rather
+   * shown as an example or preview.
+   */
+  embedded: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
+}
+
+/**
+ * Our blocks also have the environment extension, so they are loaded with a
+ * function that can retrieve the workspace environment for the session they
+ * are within.
+ */
+export interface BlockSvg<T extends Environment = Environment>
+  extends Blockly.BlockSvg {
+  environment: T;
+  getEnvironment(): T;
+  isWithinInlineWorkspace(): boolean;
+  isWithinEmbeddedWorkspace(): boolean;
+  isWithinMainWorkspace(): boolean;
+  isWithinHiddenWorkspace(): boolean;
 }

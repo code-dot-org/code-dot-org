@@ -20,6 +20,7 @@ import type {
 import DefaultTheme from './themes/default';
 import type {
   Environment,
+  BlockSvg,
   BlockArgDefinition,
   BlockDefinition,
   BlockFlatArgDefinition,
@@ -142,10 +143,10 @@ class Registry<T extends Environment & object> {
             const formedArg: BlockFlatArgDefinition = {
               ...arg,
               type: fieldPlugin.name,
-	    };
+            };
             this.register(fieldPlugin);
             plugins.push(fieldPlugin);
-	    return formedArg;
+            return formedArg;
           }
           return arg as BlockFlatArgDefinition;
         });
@@ -159,6 +160,13 @@ class Registry<T extends Environment & object> {
         this.registerMutator(blockDefinition.mutator);
         blockDefinition.mutator = name;
       }
+    } else {
+      // Ensure it gets the environment mutator
+      const blankMutator: Mutator = {
+        name: 'blank',
+      };
+      this.registerMutator(blankMutator);
+      blockDefinition.mutator = 'blank';
     }
 
     // Register extensions if we have never seen it before and it exists
@@ -222,24 +230,36 @@ class Registry<T extends Environment & object> {
       // Maintain the old mutator data and copy it so we don't
       // corrupt it in the future.
       const oldMutator: Mutator = mutator;
+      const environment: Environment = this.environment || {
+        inline: false,
+        embedded: true,
+      };
       mutator = {
         ...mutator,
       };
 
       // Add the 'environment' to the mutator so the mutators that
       // use this feature can access workspace data.
-      if ('environment' in mutator) {
-        type EnvironmentBlock = Blockly.Block & {
-          environment: Environment & object;
-        };
-        mutator.loadExtraState = function (
-          this: EnvironmentBlock,
-          state: object,
-        ) {
-          this.environment = environment || {};
-          oldMutator.loadExtraState?.bind(this)(state);
-        };
-      }
+      mutator.loadExtraState = function (this: BlockSvg, state: object) {
+        this.environment = environment || {inline: false, embedded: true};
+        oldMutator.loadExtraState?.bind(this)(state);
+      };
+      mutator.getEnvironment = function (this: BlockSvg) {
+        return environment;
+      };
+      mutator.isWithinInlineWorkspace = function (this: BlockSvg) {
+        return this.isWithinMainWorkspace() && environment.inline;
+      };
+      mutator.isWithinEmbeddedWorkspace = function (this: BlockSvg) {
+        return this.isWithinMainWorkspace() && environment.embedded;
+      };
+      mutator.isWithinHiddenWorkspace = function (this: BlockSvg) {
+        return environment.hiddenWorkspace === this.workspace;
+      };
+      mutator.isWithinMainWorkspace = function (this: BlockSvg) {
+        return environment.mainWorkspace === this.workspace;
+      };
+
       Blockly.Extensions.registerMutator(name, mutator);
     }
   }
@@ -249,7 +269,7 @@ class Registry<T extends Environment & object> {
    */
   private registerExtension(extension: Extension) {
     const name = extension.name;
-    const environment = this.environment || {};
+    const environment = this.environment || {inline: false, embedded: true};
     if (!Blockly.Extensions.isRegistered(name)) {
       Blockly.Extensions.register(name, function (this: ProcedureBlock) {
         return extension.extension.bind(this, environment)();

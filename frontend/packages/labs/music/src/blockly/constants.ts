@@ -66,7 +66,7 @@ export const FIELD_EFFECT_NAME_OPTIONS = [
   ['Volume', 'volume'],
   ['Filter', 'filter'],
   ['Delay', 'delay'],
-];
+] as const;
 
 // Even though these strings don't necessarily match the labels, they must
 // stay the same to avoid breaking existing projects saved with these values.
@@ -90,4 +90,4 @@ export const FIELD_EFFECTS_VALUE_OPTIONS = {
     ['High', MEDIUM_EFFECT_VALUE],
     ['Low', LOW_EFFECT_VALUE],
   ],
-};
+} as const;
