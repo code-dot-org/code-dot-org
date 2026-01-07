@@ -14,7 +14,7 @@ require 'cdo/shared_constants'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
-  include AllowedHostnameHelper
+  include SharedConstants
 
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
