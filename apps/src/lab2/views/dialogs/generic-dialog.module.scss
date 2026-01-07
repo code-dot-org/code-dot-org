@@ -1,5 +1,11 @@
 .genericDialog {
   font-size: 1rem;
+
+  // Add padding around labels inside the dialog so the focus
+  // state styles are not cut off when elements are focused.
+  label {
+    padding: 0.25rem;
+  }
 }
 
 .spinnerContainer {
@@ -11,5 +17,5 @@
 
 .spinnerIcon {
   font-size: 36px;
-  color: var(--neutral-base-white);
+  color: var(--text-neutral-primary);
 }
