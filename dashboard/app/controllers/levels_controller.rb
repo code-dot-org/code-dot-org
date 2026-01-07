@@ -137,8 +137,7 @@ class LevelsController < ApplicationController
       full_width: true,
       no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
-      has_i18n: @game.has_i18n?,
-      blocklyVersion: params[:blocklyVersion]
+      has_i18n: @game.has_i18n?
     )
   end
 
