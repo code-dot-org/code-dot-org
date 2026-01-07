@@ -5,7 +5,7 @@
  */
 
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import {Order} from 'blockly/javascript';
 
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
@@ -64,8 +64,8 @@ export const blocks = {
     generator: ExtendedJavascriptGenerator,
     type: string,
     generatorFunction: (
-      block: GoogleBlockly.Block,
-      generator: GoogleBlockly.CodeGenerator
+      block: BlocklyCore.Block,
+      generator: BlocklyCore.CodeGenerator
     ) => [string, number] | string | null
   ) {
     generator.forBlock[type] = generatorFunction;
@@ -117,7 +117,7 @@ export const blocks = {
     }
   },
   // Global function to handle serialization hooks
-  addSerializationHooksToBlock(block: GoogleBlockly.Block) {
+  addSerializationHooksToBlock(block: BlocklyCore.Block) {
     if (!block.mutationToDom) {
       block.mutationToDom = this.mutationToDom;
     }
@@ -137,7 +137,7 @@ export const blocks = {
   // legacy function name from CDO Blockly. Other custom blocks in pools
   // depend on the original name..
   mathRandomIntGenerator(
-    block: GoogleBlockly.Block,
+    block: BlocklyCore.Block,
     generator: ExtendedJavascriptGenerator
   ) {
     // Random integer between [X] and [Y].
@@ -185,7 +185,7 @@ export const blocks = {
     renderToolboxBeforeStack = false
   ) {
     // Function to create the flyout
-    const createFlyoutField = function (block: GoogleBlockly.Block) {
+    const createFlyoutField = function (block: BlocklyCore.Block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout('', {
         flyoutKey: flyoutKey,
@@ -252,7 +252,7 @@ export const blocks = {
 
   // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(
-    this: GoogleBlockly.Block,
+    this: BlocklyCore.Block,
     miniToolboxBlocks: string[],
     flyoutToggleButton: CdoFieldToggle,
     renderingInFunctionEditor = false
@@ -285,13 +285,13 @@ export const blocks = {
 
     if (this.workspace.rendered) {
       (
-        this.workspace as GoogleBlockly.WorkspaceSvg
+        this.workspace as BlocklyCore.WorkspaceSvg
       ).registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
         () => {
-          const blocks: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
+          const blocks: BlocklyCore.utils.toolbox.FlyoutItemInfoArray = [];
           miniToolboxBlocks.forEach(blockType => {
-            const block: GoogleBlockly.utils.toolbox.BlockInfo = {
+            const block: BlocklyCore.utils.toolbox.BlockInfo = {
               kind: 'block',
               type: blockType,
             };
@@ -304,7 +304,7 @@ export const blocks = {
             if (blockType === BLOCK_TYPES.parametersGet) {
               // Set up the "new parameter" button in the mini-toolbox
               const newParamButton = getAddParameterButtonWithCallback(
-                this.workspace as GoogleBlockly.WorkspaceSvg,
+                this.workspace as BlocklyCore.WorkspaceSvg,
                 (
                   this as ProcedureBlock
                 ).getProcedureModel() as ObservableProcedureModel

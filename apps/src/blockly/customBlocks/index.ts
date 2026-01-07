@@ -1,4 +1,4 @@
-// This file exports customized blocks for Google Blockly labs.
+// This file exports customized blocks for Blockly labs.
 
 import {blocks as commonBlocks} from './commonBlocks';
 import {blocks as playlabBlocks} from './playlabBlocks';
