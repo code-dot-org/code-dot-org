@@ -49,6 +49,13 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   theme?: Theme;
   /** Whether or not to render this workspace as inline, useful for documentation */
   inline?: boolean;
+  /**
+   * Whether or not the workspace is considered embedded.
+   *
+   * An embedded workspace is one that is not meant to be modified, but rather
+   * shown as an example or preview.
+   */
+  embedded?: boolean;
   /** Whether or not this is a hidden workspace. */
   hidden?: boolean;
   /** A callback when the Blockly environment is loaded into the container */
@@ -82,6 +89,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   renderer,
   theme,
   inline,
+  embedded,
   hidden,
   onInject,
   onChange,
@@ -212,7 +220,10 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         environment.hiddenWorkspace = workspace.current || undefined;
       } else {
         environment.mainWorkspace = workspace.current || undefined;
+        environment.embedded = !!embedded;
       }
+    } else if (inline && environment && !hidden) {
+      environment.inline = true;
     }
 
     // Level implementation callback for custom behaviors per-level type
