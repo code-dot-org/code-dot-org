@@ -975,9 +975,9 @@ module SharedConstants
     'api.census.gov',             # US Census data - Public API
     'api.energidataservice.dk',   # Danish energy data - Public API
     'api.fda.gov',                # FDA data - Public API
-    'api-v3.mbta.com',            # Boston transit data
     'api.nal.usda.gov',           # USDA data
     'api.si.edu',                 # Smithsonian data - API key required 🔑
+    'api-v3.mbta.com',            # Boston transit data
     'data.austintexas.gov',       # Austin city data
     'data.cityofchicago.org',     # Chicago city data
     'data.gv.at',                 # Austrian government data
