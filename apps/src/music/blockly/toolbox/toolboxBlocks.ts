@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {BlockTypes} from '../blockTypes';
 import {
@@ -12,7 +12,7 @@ import {
 } from '../constants';
 
 // Blockly's BlockInfo type with an additional 'levelbuilderText' field used for levelbuilder-facing English block text.
-type BlockInfoWithText = GoogleBlockly.utils.toolbox.BlockInfo & {
+type BlockInfoWithText = BlocklyCore.utils.toolbox.BlockInfo & {
   levelbuilderText: string;
 };
 

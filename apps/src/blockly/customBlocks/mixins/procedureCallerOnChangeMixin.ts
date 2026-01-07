@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
@@ -16,7 +16,7 @@ const procedureCallerOnChangeMixin = {
    */
   onchange: function (
     this: ProcedureBlock,
-    event: GoogleBlockly.Events.Abstract
+    event: BlocklyCore.Events.Abstract
   ) {
     // If the block is in an embedded workspace, we don't create a procedure definition.
     // An embedded workspace does not need any procedure definitions, and trying to add them
@@ -68,12 +68,12 @@ const procedureCallerOnChangeMixin = {
    */
   eventIsCreatingThisBlockDuringPaste_(
     this: ProcedureBlock,
-    event: GoogleBlockly.Events.Abstract
+    event: BlocklyCore.Events.Abstract
   ): boolean {
     return (
       event.type === Blockly.Events.BLOCK_CREATE &&
-      ((event as GoogleBlockly.Events.BlockCreate).blockId === this.id ||
-        (event as GoogleBlockly.Events.BlockCreate).ids?.indexOf(this.id) !==
+      ((event as BlocklyCore.Events.BlockCreate).blockId === this.id ||
+        (event as BlocklyCore.Events.BlockCreate).ids?.indexOf(this.id) !==
           -1) &&
       // Record undo makes sure this is during paste.
       event.recordUndo

@@ -1,8 +1,7 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-import DCDO from '@cdo/apps/dcdo';
 import localization from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -34,7 +33,7 @@ type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
 type InputCallback = () => void;
 type InputArgs = [...(InputTuple | InputCallback)[], number];
-type BlockList = Array<GoogleBlockly.Block | GoogleBlockly.BlockSvg>;
+type BlockList = Array<BlocklyCore.Block | BlocklyCore.BlockSvg>;
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -143,9 +142,7 @@ export function numberListToString(numberList: number[]) {
  * @param {Blockly.WorkspaceSvg} workspace - The workspace to be checked for serialization as hidden.
  * @returns {boolean} Returns `true` if the hidden workspace should be skipped, otherwise `false`.
  */
-export function shouldSkipHiddenWorkspace(
-  workspace: GoogleBlockly.WorkspaceSvg
-) {
+export function shouldSkipHiddenWorkspace(workspace: BlocklyCore.WorkspaceSvg) {
   return (
     !Blockly.getHiddenDefinitionWorkspace ||
     Blockly.getMainWorkspace().id !== workspace.id ||
@@ -154,8 +151,8 @@ export function shouldSkipHiddenWorkspace(
 }
 
 /**
- * Handle a failure to get workspace code by either CDO or Google Blockly
- * by updating the redux store and logging the error.
+ * Handle a failure to get workspace code by Blockly by updating the
+ * redux store and logging the error.
  * We only want to log the error once per failure since getWorkspaceCode
  * gets called many times and the error will be the same every time.
  * @param {MetricEvent} eventName Event name to log
@@ -175,18 +172,6 @@ export function handleCodeGenerationFailure(
     });
   }
 }
-/**
- * Report usage of CDO Blockly, once all Blockly labs are purported to
- * on mainline Google Blockly.
- * @param {MetricEvent} eventName Event name to log
- */
-export function reportCdoBlocklyUsage(eventName: MetricEvent) {
-  if (DCDO.get('cdo-blockly-usage', false)) {
-    MetricsReporter.logInfo({
-      event: eventName,
-    });
-  }
-}
 
 // Returns the current theme name without the 'dark' suffix, if present.
 export function getBaseName(themeName: Themes) {
@@ -195,7 +180,7 @@ export function getBaseName(themeName: Themes) {
   }
 }
 
-export function isDarkTheme(theme: GoogleBlockly.Theme | undefined) {
+export function isDarkTheme(theme: BlocklyCore.Theme | undefined) {
   return theme?.name.includes(DARK_THEME_SUFFIX);
 }
 
@@ -319,7 +304,7 @@ export function getCodeBlocks(): BlockList {
   let hiddenBlocks: BlockList = [];
   const mainBlocks = Blockly.mainBlockSpace.getTopBlocks(true) as BlockList;
 
-  // The hidden workspace is only present in Google Blockly labs where the modal
+  // The hidden workspace is only present in Blockly labs where the modal
   // function editor is enabled.
   if (Blockly.getHiddenDefinitionWorkspace()) {
     hiddenBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks(
@@ -350,7 +335,7 @@ export function getAllBlocks(): BlockList {
   ];
 }
 
-export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
+export function disableOrphanBlocks(eventWorkspace: BlocklyCore.Workspace) {
   // When a function definition is moved, we should not suddenly enable
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
@@ -361,7 +346,7 @@ export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
   });
 }
 
-export function updateBlockEnabled(block: GoogleBlockly.Block) {
+export function updateBlockEnabled(block: BlocklyCore.Block) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
@@ -373,7 +358,7 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
         child.setDisabledReason(false, 'ORPHANED');
       }
     } else if (block.outputConnection || block.previousConnection) {
-      let currentBlock: GoogleBlockly.Block | null = block;
+      let currentBlock: BlocklyCore.Block | null = block;
       do {
         currentBlock.setDisabledReason(true, 'ORPHANED');
         currentBlock = currentBlock.getNextBlock();
@@ -387,13 +372,13 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
 /**
  * Sets the theme for the workspace and re-renders blocks if the font size changed.
  *
- * @param {GoogleBlockly.Workspace} workspace - The Blockly workspace to set the theme for.
- * @param {GoogleBlockly.Theme} theme - The theme to apply to the workspace.
+ * @param {BlocklyCore.Workspace} workspace - The Blockly workspace to set the theme for.
+ * @param {BlocklyCore.Theme} theme - The theme to apply to the workspace.
  */
 export function setThemeAndRenderBlocks(
-  workspace: GoogleBlockly.WorkspaceSvg,
-  theme: GoogleBlockly.Theme,
-  previousTheme?: GoogleBlockly.Theme
+  workspace: BlocklyCore.WorkspaceSvg,
+  theme: BlocklyCore.Theme,
+  previousTheme?: BlocklyCore.Theme
 ) {
   if (theme && workspace?.rendered) {
     // Update the main workspace's flyout if it exists.
@@ -444,12 +429,12 @@ export function setWorkspaceTheme(name: string) {
 }
 
 export function setAllWorkspacesTheme(
-  newTheme: GoogleBlockly.Theme,
-  previousTheme: GoogleBlockly.Theme | undefined
+  newTheme: BlocklyCore.Theme,
+  previousTheme: BlocklyCore.Theme | undefined
 ) {
   Blockly.Workspace.getAll().forEach(baseWorkspace => {
     // Headless workspaces do not have the ability to set the theme.
-    const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
+    const workspace = baseWorkspace as BlocklyCore.WorkspaceSvg;
     setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
   });
 }
@@ -459,14 +444,14 @@ export function setAllWorkspacesTheme(
  * except when there are no categories at all. If warnings are ignored, we will
  * still save the blocks into a "DEFAULT" category.
  */
-export function validateBlockCategories(workspace: GoogleBlockly.WorkspaceSvg) {
+export function validateBlockCategories(workspace: BlocklyCore.WorkspaceSvg) {
   const topBlocks = workspace.getTopBlocks(true);
 
   const noCategoryBlocks =
     !workspace.getBlocksByType(BLOCK_TYPES.category).length &&
     !workspace.getBlocksByType(BLOCK_TYPES.categoryDynamic).length;
 
-  let currentCategoryBlock: GoogleBlockly.BlockSvg | null = null;
+  let currentCategoryBlock: BlocklyCore.BlockSvg | null = null;
   let warningText = 'This block is not positioned under a category.';
 
   topBlocks.forEach(block => {
@@ -592,7 +577,7 @@ export function initializeVariableLocalization(
         for (const input of block?.inputList || []) {
           for (const field of input?.fieldRow || []) {
             if (field?.referencesVariables()) {
-              const varField = field as GoogleBlockly.FieldVariable;
+              const varField = field as BlocklyCore.FieldVariable;
               const variable = varField?.getVariable();
               if (variable) {
                 const id = variable.getId();
@@ -656,7 +641,7 @@ export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
       }
 
       for (const node of languageTree?.contents || []) {
-        const blockNode = node as GoogleBlockly.utils.toolbox.BlockInfo;
+        const blockNode = node as BlocklyCore.utils.toolbox.BlockInfo;
         const xml = blockNode.blockxml;
         if (xml !== undefined && typeof xml !== 'string') {
           const node = xml as HTMLElement;

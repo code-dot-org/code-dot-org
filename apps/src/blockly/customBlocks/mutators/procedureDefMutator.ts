@@ -1,19 +1,20 @@
 /**
- * Most of this logic is copied from `procedureDefMutator` from @blockly/block-shareable-procedures.
- * As in our local copy of `procedureDefMutator`, the compose() and decompose() methods
- * have been removed to avoid rendering a gear icon that we do not want. In addition,
- * the domToMutation(), saveExtraState(), and loadExtraState() methods have been customized
- * to handle the behaviorId attribute. A future version of the shareable-procedures plugin will
- * export the `procedureDefMutator` (and other extensions), but using it will require bumping to Blockly v10.
- * TODO: Once we are on Blockly v10, we can remove our local `procedureDefMutator`, but our
- * `behaviorDefMutator` file might need to stick around.
+ * This is a modified version of `procedureDefMutator` from @blockly/block-shareable-procedures.
+ * We removed compose() and decompose() methods. These methods automatically
+ * add a gear icon UI that we do not want. A future version of the plugin will
+ * export this mutator (and other extensions), but this will require bumping to
+ * Blockly v10. We also updated the mutation and extra state methods to save the function's
+ * description.
+ * TODO: Once we are on Blockly v10, we can simplify this by importing `procedureDefMutator`
+ * from @blockly/block-shareable-procedures and calling the duplicated methods inside our versions of them.
+ * This will allow us to get rid of duplicated code.
  */
 
 import {
   ObservableParameterModel,
   isProcedureBlock,
 } from '@blockly/block-shareable-procedures';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
@@ -23,7 +24,7 @@ import {
   setBlockDescription,
 } from './functionMutatorHelpers';
 
-export const behaviorDefMutator = {
+export const procedureDefMutator = {
   hasStatements_: true,
 
   /**
@@ -44,74 +45,101 @@ export const behaviorDefMutator = {
       container.appendChild(parameter);
     }
 
-    if (this.behaviorId) {
-      container.setAttribute('behaviorId', this.behaviorId);
-    }
     // Save whether the statement input is visible.
     if (!this.hasStatements_) {
       container.setAttribute('statements', 'false');
+    }
+    if (this.invisible) {
+      container.setAttribute('invisible', 'true');
     }
     return container;
   },
 
   /**
-   * Parse XML to set static behavior id, used for shared behaviors.
+   * Parse XML to restore the argument inputs.
+   * Backwards compatible serialization implementation.
    * @param xmlElement XML storage element.
    * @this {Blockly.Block}
    */
   domToMutation: function (this: ProcedureBlock, xmlElement: Element) {
-    // We do not copy parameters because behavior parameters are a special case.
-    // We manually create the "this sprite" parameter for each behavior,
-    // (and don't want to treat it as a Blockly parameter).
-    // We also know all behaviors have the same single parameter,
-    // so we don't need to copy the parameter over.
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
       const nodeName = node.nodeName.toLowerCase();
-      if (nodeName === 'description') {
+      if (nodeName === 'arg') {
+        const varId = (node as Element).getAttribute('varid');
+        this.getProcedureModel().insertParameter(
+          new ObservableParameterModel(
+            this.workspace,
+            (node as Element).getAttribute('name') || '',
+            undefined,
+            varId || ''
+          ),
+          i
+        );
+      } else if (nodeName === 'description') {
         // CDO Blockly projects stored descriptions in a separate tag within the mutation.
         this.description = node.textContent;
       }
     }
-    this.behaviorId =
-      xmlElement.getAttribute('behaviorId') ||
-      xmlElement.nextElementSibling?.getAttribute('id');
+
     this.userCreated = readBooleanAttribute(
       xmlElement,
       'userCreated',
       FALSEY_DEFAULT
     );
+    this.invisible = readBooleanAttribute(
+      xmlElement,
+      'invisible',
+      FALSEY_DEFAULT
+    );
+    this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
     if (!this.description) {
-      // Google Blockly projects store descriptions in a separate field.
+      // New Blockly projects store descriptions in a separate field.
       setBlockDescription(this, this.getFieldValue('DESCRIPTION'));
     }
   },
 
   /**
    * Returns the state of this block as a JSON serializable object.
-   * @returns The state of this block, eg the parameters and statements.
+   *
+   * @param doFullSerialization  Tells the block if it should serialize
+   *     its entire state (including data stored in the backing procedure
+   *     model). Used for copy-paste.
+   * @returns The state of this block, e.g. the parameters and statements.
    */
-  saveExtraState: function (this: ProcedureBlock) {
+  saveExtraState: function (
+    this: ProcedureBlock,
+    doFullSerialization: boolean
+  ) {
     const state = Object.create(null);
-    state['procedureId'] = this.getProcedureModel().getId();
-    state['behaviorId'] = this.behaviorId;
-    state['userCreated'] = this.userCreated;
     state['description'] = getBlockDescription(this);
+    state['procedureId'] = this.getProcedureModel().getId();
+    state['initialDeleteConfig'] = this.isOwnDeletable();
+    state['initialEditConfig'] = this.isOwnEditable();
+    state['initialMoveConfig'] = this.isOwnMovable();
+    state['userCreated'] = this.userCreated;
+    state['invisible'] = this.invisible;
 
-    const params =
-      this.getProcedureModel().getParameters() as ObservableParameterModel[];
-    if (!params.length && this.hasStatements_) return state;
+    if (doFullSerialization) {
+      // If fullSerialization is not true, the system will reuse an existing procedure model by ID.
+      // This is necessary for the modal function editor.
+      // If fullSerialization is true, it will instead use the model created at block instantiation.
+      // This is necessary for single-workspace labs so that multiple functions do not share the same model.
+      state['fullSerialization'] = !Blockly.useModalFunctionEditor;
+      const params =
+        this.getProcedureModel().getParameters() as ObservableParameterModel[];
 
-    if (params.length) {
-      state['params'] = params.map(p => {
-        return {
-          name: p.getName(),
-          id: p.getVariableModel().getId(),
-          // Ideally this would be id, and the other would be varId,
-          // but backwards compatibility :/
-          paramId: p.getId(),
-        };
-      });
+      if (params.length) {
+        state['params'] = params.map(p => {
+          return {
+            name: p.getName(),
+            id: p.getVariableModel().getId(),
+            // Ideally this would be id, and the other would be varId,
+            // but backwards compatibility :/
+            paramId: p.getId(),
+          };
+        });
+      }
     }
     if (!this.hasStatements_) {
       state['hasStatements'] = false;
@@ -120,43 +148,58 @@ export const behaviorDefMutator = {
   },
 
   /**
-   * Applies the given state to this block.
-   * @param state The state to apply to this block, eg the parameters and
-   *     statements.
+   * Accepts a JSON serializable state value and applies it to the block.
+   * Overridden to support initial block states for the modal function editor,
+   * and legacy state for user-created functions and invisible blocks.
+   * @param state The state to apply to this block (see saveExtraState above).
    */
-  // TODO: define a better type for state.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
-    this.behaviorId = state['behaviorId'];
-    this.userCreated = state['userCreated'];
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
-    const procedureFromMap = map.get(procedureId);
-    if (
-      procedureId &&
-      procedureId !== this.model_.getId() &&
-      procedureFromMap &&
-      (this.isInsertionMarker() || this.noBlockHasClaimedModel_(procedureId))
-    ) {
+    if (map.has(procedureId) && !state['fullSerialization']) {
       if (map.has(this.model_.getId())) {
         map.delete(this.model_.getId());
       }
-      this.model_ = procedureFromMap;
+      this.model_ = map.get(procedureId)!;
     }
 
-    if (state['params'] && !this.getProcedureModel().getParameters().length) {
-      for (let i = 0; i < state['params'].length; i++) {
-        const {name, id, paramId} = state['params'][i];
-        this.getProcedureModel().insertParameter(
-          new ObservableParameterModel(this.workspace, name, paramId, id),
-          i
-        );
+    const model = this.getProcedureModel();
+    const newParams: {name: string; id: string}[] = state['params'] ?? [];
+    const newIds = new Set(newParams.map(p => p.id));
+    const currParams = model.getParameters();
+    if (state['fullSerialization']) {
+      for (let i = currParams.length - 1; i >= 0; i--) {
+        if (!newIds.has(currParams[i].getId())) {
+          model.deleteParameter(i);
+        }
       }
     }
+    for (let i = 0; i < newParams.length; i++) {
+      const {name, id, paramId} = state['params'][i];
+      this.getProcedureModel().insertParameter(
+        new ObservableParameterModel(this.workspace, name, paramId, id),
+        i
+      );
+    }
 
+    // Customization: Sets the description field of the block.
     setBlockDescription(this, state['description']);
+
     this.doProcedureUpdate();
+
+    // Customization: Sets the initial delete/edit/move configuration of the block.
+    if (!Blockly.useModalFunctionEditor) {
+      this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
+      this.setEditable(state['initialEditConfig'] === false ? false : true);
+      this.setMovable(state['initialMoveConfig'] === false ? false : true);
+    }
+
     this.setStatements_(state['hasStatements'] === false ? false : true);
+
+    // Customization: Handles the legacy state for user-created functions and invisible blocks.
+    this.userCreated = state['userCreated'];
+    this.invisible = state['invisible'];
   },
 
   /**
@@ -186,7 +229,7 @@ export const behaviorDefMutator = {
    */
   deleteParamsFromModel_: function (
     this: ProcedureBlock,
-    containerBlock: GoogleBlockly.Block
+    containerBlock: BlocklyCore.Block
   ) {
     const ids = new Set(
       containerBlock.getDescendants(/*ordered*/ false).map(b => b.id)
@@ -207,7 +250,7 @@ export const behaviorDefMutator = {
    */
   renameParamsInModel_: function (
     this: ProcedureBlock,
-    containerBlock: GoogleBlockly.Block
+    containerBlock: BlocklyCore.Block
   ) {
     const model = this.getProcedureModel();
 
@@ -235,7 +278,7 @@ export const behaviorDefMutator = {
    */
   addParamsToModel_: function (
     this: ProcedureBlock,
-    containerBlock: GoogleBlockly.Block
+    containerBlock: BlocklyCore.Block
   ) {
     const model = this.getProcedureModel();
 

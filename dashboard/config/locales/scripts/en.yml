@@ -26582,3 +26582,43 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        6-12-aif-s2-unit5:
+          lessons:
+            lesson-1:
+              name: Where Data Comes From
+            lesson-2:
+              name: Why Apps Wait
+            lesson-3:
+              name: Getting Data Online
+            lesson-4:
+              name: Making Steps Clear
+            lesson-5:
+              name: Making Sense of Data
+            lesson-6:
+              name: Showing Data on the Page
+            lesson-7:
+              name: When Things Break
+            lesson-8:
+              name: Catching Problems
+            lesson-9:
+              name: Keeping Users Informed
+            lesson-10:
+              name: Local vs Live Data
+            lesson-11:
+              name: Explore-Style App Project
+          lesson_groups: {}
+          name: 6-12-aif-s2-unit5
+          title: "[DEV] AIF S2 Unit 5"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-aif-s2-unit6:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-aif-s2-unit6
+          title: "[DEV] AIF S2 Unit 6"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

@@ -1,6 +1,6 @@
 @no_mobile
 @eyes
-Feature: Google Blockly Sprite Lab Eyes
+Feature: Blockly Sprite Lab Eyes
 
 Background:
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/36/levels/4?noautoplay=true"
