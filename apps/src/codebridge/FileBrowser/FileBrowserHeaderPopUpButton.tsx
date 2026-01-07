@@ -73,10 +73,6 @@ export const FileBrowserHeaderPopUpButton = () => {
           labelText={codebridgeI18n.uploadFile()}
           clickHandler={() => startFileUpload()}
         />
-        <PopUpButtonOption
-          iconName="backpack"
-          labelText={codebridgeI18n.importFromBackpackTitle()}
-        />
       </PopUpButton>
     </>
   );

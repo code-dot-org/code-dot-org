@@ -85,6 +85,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
             type: 'tertiary',
             size: 'xs',
           }}
+          menuPlacement="right"
         />
       </div>
     </div>
