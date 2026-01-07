@@ -104,7 +104,7 @@ module ActiveSupport
         # @param desc [String, Symbol] The description of the shared example group to execute.
         # @return [void]
         def it_behaves_like(desc)
-          describe_block = superclass
+          describe_block = self
 
           while describe_block.respond_to?(:shared_examples)
             block = describe_block.shared_examples[desc]
