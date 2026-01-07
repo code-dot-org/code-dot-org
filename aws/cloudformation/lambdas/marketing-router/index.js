@@ -792,6 +792,7 @@ const marketingPaths = {
   "/districts/program": true,
   "/mix-move-ai": true,
   "/promote/stats": true,
+  "/about/ai-use-policy": true,
 }
 
 const pathPatterns = [
