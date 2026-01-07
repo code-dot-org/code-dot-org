@@ -36,7 +36,7 @@ table.selfPacedProgressTable {
   border-radius: 1rem;
   width: fit-content;
   padding: 0.45rem 1rem;
-  font-weight: var(--font-weight-medium);
+  font-weight: $medium-font-weight;
   line-height: 1;
   text-transform: uppercase;
   display: flex;

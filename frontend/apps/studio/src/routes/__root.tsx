@@ -1,6 +1,5 @@
 // Ensure critical fonts are loaded very early.
 import '@code-dot-org/fonts/brands/code.org/index.css';
-import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/colors.scss';
 
 import {ThemeProvider} from '@mui/material';
