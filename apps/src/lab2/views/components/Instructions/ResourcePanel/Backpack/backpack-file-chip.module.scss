@@ -36,10 +36,18 @@
   gap: -2px;
   flex: 1 0 0;
   align-self: stretch;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .infoText {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  min-width: 0; 
 }
 
 .fileActions {

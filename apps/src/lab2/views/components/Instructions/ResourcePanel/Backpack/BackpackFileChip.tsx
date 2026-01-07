@@ -47,7 +47,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
           iconFamily={fileIcon.isBrand ? 'brands' : undefined}
         />
       </div>
-      <div className={moduleStyles.fileInfo}>
+      <div className={moduleStyles.fileInfo} title={filename}>
         <BodyThreeText
           visualAppearance={'strong'}
           className={moduleStyles.infoText}
