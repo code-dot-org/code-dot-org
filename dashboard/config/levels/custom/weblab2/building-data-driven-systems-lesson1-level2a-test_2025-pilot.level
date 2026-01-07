@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2025-12-15T17:06:23.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Music Magazine\r\n\r\n###Do This:\r\n\r\n1. Fill your Arrays: Create 2 arrays (`headlines`, `taglines`) with 3 items each. Ensure index 0 in all lists matches the same story.\r\n\r\n2. Pick Index: Create a variable `let index = 0;` to track the current cover.\r\n\r\n3. Update Page: Use document.querySelector and your index variable to:\r\n\t* Set `#headline` text to `headlines[index]`.\r\n    * Set `#coverImage` src to `images[index]`.\r\n    * Set `#tagline` text to `taglines[index]`.\r\n\r\n4. Show Count: Update `#count` text to display the total number of covers using `.length.`\r\n",
+    "long_instructions": "#Music Magazine\r\n\r\n###Do This: \r\n\r\n1. Fill your Arrays: Create 2 arrays (`headlines`, `taglines`) with 3 items each. Ensure index 0 in all lists matches the same story.\r\n\r\n2. Pick Index: Create a variable `let index = 0;` to track the current cover.\r\n\r\n3. Update Page: Use document.querySelector and your index variable to:\r\n\t* Set `#headline` text to `headlines[index]`.\r\n    * Set `#coverImage` src to `images[index]`.\r\n    * Set `#tagline` text to `taglines[index]`.\r\n\r\n4. Show Count: Update `#count` text to display the total number of covers using `.length.`\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -17,13 +18,13 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
@@ -101,7 +102,6 @@
     "thumbnail_url": "https://images.code.org/5abc3d52516c4665486844983f539f5d-cover1a.png",
     "name_suffix": "_2025-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:23.448+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level2a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level2a-test-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:23.448+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson1-level2a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson1-level2a-test-2025\"},{\"changed_at\":\"2026-01-06 18:20:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
