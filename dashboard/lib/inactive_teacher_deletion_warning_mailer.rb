@@ -32,6 +32,7 @@ class InactiveTeacherDeletionWarningMailer
         break if accounts_batch.empty? || num_teachers_warned >= @limit
         accounts_batch.each do |teacher|
           next if teacher.email.blank?
+          next if teacher.email.end_with?('@code.org') # skip internal accounts
           send_warning_email(teacher)
           # Set email sent at field
           mark_warning_email_sent(teacher.id) unless @dry_run

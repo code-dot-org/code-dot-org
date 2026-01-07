@@ -1,6 +1,6 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-export default class CdoPathObjectGeras extends GoogleBlockly.geras.PathObject {
+export default class CdoPathObjectGeras extends BlocklyCore.geras.PathObject {
   // The built-in function also adds a cross-hatch fill pattern to disabled blocks, which we don't want.
   // Overrriding the function here so we can just set the class but not add the fill pattern.
   updateDisabled_(disabled: boolean) {
