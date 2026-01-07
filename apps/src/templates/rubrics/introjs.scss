@@ -167,7 +167,7 @@ tr.introjs-showElement > th {
   user-select: none;
 }
 .introjs-tooltip-title {
-  font-family: var(--font-family-barlow-semi-condensed-semibold);
+  font-family: $barlowSemiCondensed-semibold;
   color: $light_black;
   font-size: 1rem;
   width: 90%;

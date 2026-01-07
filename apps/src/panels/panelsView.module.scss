@@ -99,7 +99,7 @@ $text-horizontal-padding: 2.6cqw;
         line-height: 1.2em;
 
         &, em, strong {
-          font-family: var(--font-family-barlow-semi-condensed-semibold);
+          font-family: $barlowSemiCondensed-semibold;
         }
       }
 
