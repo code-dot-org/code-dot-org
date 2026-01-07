@@ -21,7 +21,7 @@ module AiLessonSummariesHelper
       evaluation =  {status: response.code, json: response_body}
       return {status: evaluation[:status], json: evaluation[:json]}
     else
-      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson summary")
+      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson summary: #{response.body}")
     end
   end
 
