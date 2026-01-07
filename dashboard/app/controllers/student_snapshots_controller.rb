@@ -65,7 +65,6 @@ class StudentSnapshotsController < ApplicationController
 
     if level
       student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
-      puts student_code_data[:student_code]
       render json: {studentCode: student_code_data[:student_code]}
     else
       render json: {studentCode: nil}
