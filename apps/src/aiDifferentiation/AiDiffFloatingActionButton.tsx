@@ -2,11 +2,8 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
-import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
@@ -40,6 +37,7 @@ interface AiDiffFloatingActionButtonProps {
   canDefaultOpen?: boolean;
 }
 
+export const EXT_COMPONENT_OPEN_FAB_EVENT = 'ExternalComponentOpensFabEvent';
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
 const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
 const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
@@ -73,10 +71,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
-  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
-  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
-
-  const dispatch = useAppDispatch();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.
@@ -90,15 +85,13 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       // Keeps FAB open/closed on new pages in the same tab or window
       // New tab or window is default closed if they have previously opened/closed the FAB
       // Default open if they have never opened/closed the fab before (i.e. first time on the site)
-      dispatch(
-        setChatIsOpen(
-          canStartOpen &&
-            ((isFirstSession && canDefaultOpen) ||
-              JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
-        )
+      setIsOpen(
+        canStartOpen &&
+          ((isFirstSession && canDefaultOpen) ||
+            JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
       );
     }
-  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
@@ -136,19 +129,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
-  React.useEffect(() => {
-    if (!threadMessages || threadMessages.length === 0) {
-      dispatch(
-        fetchThreadMessages({
-          contextType: context.type,
-          thread: 0,
-          curriculumCourses: curriculumCourses,
-        })
-      );
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   useEffect(() => {
     const body = JSON.stringify({
       context: context,
@@ -164,7 +144,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         console.log(error);
         setCurriculumCourses([]);
       });
-  }, [context, dispatch]);
+  }, [context]);
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
@@ -178,7 +158,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       aiDiffChatContext: context,
       scriptName,
     };
-    const eventName = chatIsOpen
+    const eventName = isOpen
       ? EVENTS.AI_DIFF_CHAT_CLOSED
       : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
@@ -187,17 +167,13 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
-    dispatch(setChatIsOpen(!chatIsOpen));
-    dispatch(
-      fetchThreadMessages({
-        contextType: context.type,
-        thread: 0,
-        curriculumCourses: curriculumCourses,
-      })
-    );
-    trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
+    setIsOpen(!isOpen);
+    trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
     updateUnreadNotificationCount();
   };
+
+  // Add listener to open the FAB if an external component sends event to open it
+  document.addEventListener(EXT_COMPONENT_OPEN_FAB_EVENT, handleClick);
 
   return (
     <div id="fab-contained">
@@ -254,9 +230,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       </button>
       <AiDiffContainer
         context={context}
+        open={isOpen}
         closeTutor={handleClick}
-        curriculumCourses={curriculumCourses || ([] as string[])}
         scriptName={scriptName}
+        curriculumCourses={curriculumCourses}
         unreadNotificationCount={
           unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
         }
