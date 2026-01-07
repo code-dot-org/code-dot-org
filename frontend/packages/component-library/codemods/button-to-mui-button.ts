@@ -64,54 +64,10 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     }
   });
 
-  // Add MUI imports if Button or LinkButton was found
-  if (hasButton || hasLinkButton) {
-    const existingMuiImport = root.find(j.ImportDeclaration, {
-      source: {value: '@mui/material'},
-    });
-
-    if (existingMuiImport.length === 0) {
-      const muiImports = j.importDeclaration(
-        [
-          j.importSpecifier(j.identifier('Button'), j.identifier('MuiButton')),
-          j.importSpecifier(
-            j.identifier('IconButton'),
-            j.identifier('MuiIconButton'),
-          ),
-        ],
-        j.literal('@mui/material'),
-      );
-
-      const allImports = root.find(j.ImportDeclaration);
-      if (allImports.length > 0) {
-        allImports.at(-1).get().insertAfter(muiImports);
-      } else {
-        root.get().node.program.body.unshift(muiImports);
-      }
-    }
-  }
-
-  // Add FontAwesomeV6Icon import if needed for icons
-  const needsIconImport = hasButton || hasLinkButton;
-  if (needsIconImport) {
-    const existingIconImport = root.find(j.ImportDeclaration, {
-      source: {value: '@code-dot-org/component-library/fontAwesomeV6Icon'},
-    });
-
-    if (existingIconImport.length === 0) {
-      const iconImport = j.importDeclaration(
-        [j.importDefaultSpecifier(j.identifier('FontAwesomeV6Icon'))],
-        j.literal('@code-dot-org/component-library/fontAwesomeV6Icon'),
-      );
-
-      const allImports = root.find(j.ImportDeclaration);
-      if (allImports.length > 0) {
-        allImports.at(-1).get().insertAfter(iconImport);
-      } else {
-        root.get().node.program.body.unshift(iconImport);
-      }
-    }
-  }
+  // Track which imports we need to add (will add them at the end, at the beginning of the file)
+  let needsMuiButton = false;
+  let needsMuiIconButton = false;
+  let needsIconImport = false;
 
   // Helper to extract prop value from JSX attribute
   const getPropValue = (attr: any) => {
@@ -181,56 +137,89 @@ function transformer(file: FileInfo, api: API, _options: Options) {
   };
 
   // Helper to create FontAwesomeV6Icon JSX element
+  // Handles both AST ObjectExpression nodes (from original code) and plain objects
+  // Creates individual JSX attributes instead of using spread syntax
   const createIconElement = (
     iconProps:
       | {
           iconName?: string;
           iconStyle?: string;
+          iconFamily?: string;
           animationType?: string;
+          title?: any;
+          [key: string]: any;
         }
+      | {type?: string; properties?: any[]}
       | null
       | undefined,
   ) => {
     if (!iconProps) return null;
 
-    const iconObjectProps: {
-      type: string;
-      key: any;
-      value: any;
-      kind: 'init';
-    }[] = [];
-    if (iconProps.iconName !== undefined) {
-      iconObjectProps.push(
-        j.property(
-          'init',
-          j.identifier('iconName'),
-          j.literal(iconProps.iconName),
-        ),
-      );
+    const jsxAttributes: any[] = [];
+
+    // If it's an AST ObjectExpression node, extract each property
+    if (iconProps.type === 'ObjectExpression' && iconProps.properties) {
+      (iconProps as any).properties.forEach((prop: any) => {
+        if (!prop.key) return;
+        const key = prop.key.name || prop.key.value;
+        if (!key) return;
+
+        const value = prop.value;
+        let attrValue: any;
+
+        // Handle different value types
+        if (
+          value.type === 'Literal' ||
+          value.type === 'StringLiteral' ||
+          value.type === 'BooleanLiteral'
+        ) {
+          // Literal values: use directly
+          attrValue = j.literal(value.value);
+        } else {
+          // Complex expressions (function calls, etc.): wrap in JSXExpressionContainer
+          attrValue = j.jsxExpressionContainer(value);
+        }
+
+        jsxAttributes.push(j.jsxAttribute(j.jsxIdentifier(key), attrValue));
+      });
+    } else {
+      // Otherwise, treat it as a plain object and build individual attributes
+      const plainObj = iconProps as Record<string, unknown>;
+
+      Object.keys(plainObj).forEach(key => {
+        const value = plainObj[key];
+        if (value === undefined || value === null) return;
+
+        let attrValue: any;
+
+        if (
+          typeof value === 'string' ||
+          typeof value === 'number' ||
+          typeof value === 'boolean'
+        ) {
+          // Primitive values: use literal
+          attrValue = j.literal(value);
+        } else if (value && typeof value === 'object' && 'type' in value) {
+          // AST node: wrap in JSXExpressionContainer
+          attrValue = j.jsxExpressionContainer(value as any);
+        } else {
+          // Other complex values: skip (can't convert to AST)
+          return;
+        }
+
+        jsxAttributes.push(j.jsxAttribute(j.jsxIdentifier(key), attrValue));
+      });
     }
-    if (iconProps.iconStyle !== undefined) {
-      iconObjectProps.push(
-        j.property(
-          'init',
-          j.identifier('iconStyle'),
-          j.literal(iconProps.iconStyle),
-        ),
-      );
-    }
-    if (iconProps.animationType !== undefined) {
-      iconObjectProps.push(
-        j.property(
-          'init',
-          j.identifier('animationType'),
-          j.literal(iconProps.animationType),
-        ),
-      );
+
+    // Only create icon if we have at least one property
+    if (jsxAttributes.length === 0) {
+      return null;
     }
 
     return j.jsxElement(
       j.jsxOpeningElement(
         j.jsxIdentifier('FontAwesomeV6Icon'),
-        [j.jsxSpreadAttribute(j.objectExpression(iconObjectProps))],
+        jsxAttributes,
         true,
       ),
       null,
@@ -283,7 +272,7 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       propsObj.useAsLink = true;
     }
 
-    const core = transformButtonPropsCore(props as any);
+    const core = transformButtonPropsCore(propsObj as any);
 
     const isIconButton = !!(
       (propsObj as any).isIconOnly && (propsObj as any).icon
@@ -380,10 +369,21 @@ function transformer(file: FileInfo, api: API, _options: Options) {
         j.jsxAttribute(j.jsxIdentifier('size'), j.literal(muiProps.size)),
       );
     }
-    if (muiProps.disabled) {
-      jsxAttributes.push(
-        j.jsxAttribute(j.jsxIdentifier('disabled'), j.literal(true)),
-      );
+    // disabled prop - check both muiProps and original props
+    const disabledAttr = originalProps.find(p => p.name?.name === 'disabled');
+    if (muiProps.disabled || disabledAttr) {
+      const isDisabled =
+        muiProps.disabled ||
+        (disabledAttr &&
+          (disabledAttr.value === null ||
+            (disabledAttr.value &&
+              disabledAttr.value.type === 'Literal' &&
+              disabledAttr.value.value === true)));
+      if (isDisabled) {
+        jsxAttributes.push(
+          j.jsxAttribute(j.jsxIdentifier('disabled'), j.literal(true)),
+        );
+      }
     }
 
     // className + force-hover + pending class
@@ -457,6 +457,7 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       p => p.name?.name === 'analyticsCallback',
     );
     if (analyticsCallbackAttr && onClickAttr) {
+      // Both analyticsCallback and onClick: call analytics first, then onClick
       const analyticsCallbackExpr = getPropValue(analyticsCallbackAttr);
       const onClickExpr = getPropValue(onClickAttr);
       const arrowFunc = j.arrowFunctionExpression(
@@ -480,7 +481,19 @@ function transformer(file: FileInfo, api: API, _options: Options) {
           j.jsxExpressionContainer(arrowFunc),
         ),
       );
+    } else if (analyticsCallbackAttr) {
+      // Only analyticsCallback: use it directly as onClick handler
+      // The analyticsCallback is already a function (e => onShare(e, 'linkedin'))
+      // so we can use it directly without wrapping
+      const analyticsCallbackExpr = getPropValue(analyticsCallbackAttr);
+      jsxAttributes.push(
+        j.jsxAttribute(
+          j.jsxIdentifier('onClick'),
+          createJSXAttributeValue(analyticsCallbackExpr),
+        ),
+      );
     } else if (onClickAttr) {
+      // Only onClick: use it directly
       jsxAttributes.push(
         j.jsxAttribute(
           j.jsxIdentifier('onClick'),
@@ -509,6 +522,17 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       );
     }
 
+    // style prop - preserve custom styles
+    const styleAttr = originalProps.find(p => p.name?.name === 'style');
+    if (styleAttr) {
+      jsxAttributes.push(
+        j.jsxAttribute(
+          j.jsxIdentifier('style'),
+          createJSXAttributeValue(getPropValue(styleAttr)),
+        ),
+      );
+    }
+
     // link props (href/target/download/title/rel)
     const hrefAttr = originalProps.find(p => p.name?.name === 'href');
     if (hrefAttr) {
@@ -529,16 +553,15 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       }
     }
 
-    if (muiProps.target !== undefined) {
-      const targetAttr = originalProps.find(p => p.name?.name === 'target');
-      if (targetAttr) {
-        jsxAttributes.push(
-          j.jsxAttribute(
-            j.jsxIdentifier('target'),
-            createJSXAttributeValue(getPropValue(targetAttr)),
-          ),
-        );
-      }
+    // target prop - check original props directly
+    const targetAttr = originalProps.find(p => p.name?.name === 'target');
+    if (targetAttr) {
+      jsxAttributes.push(
+        j.jsxAttribute(
+          j.jsxIdentifier('target'),
+          createJSXAttributeValue(getPropValue(targetAttr)),
+        ),
+      );
     }
 
     if (muiProps.download !== undefined) {
@@ -710,6 +733,7 @@ function transformer(file: FileInfo, api: API, _options: Options) {
 
     // Icon-only buttons: render icon as child
     if (isIconButton && iconOnlyIcon) {
+      needsIconImport = true;
       const iconAttr = props.find((p: any) => p.name?.name === 'icon');
       if (iconAttr) {
         const iconValue = getPropValue(iconAttr);
@@ -717,6 +741,20 @@ function transformer(file: FileInfo, api: API, _options: Options) {
         if (iconElement) {
           muiChildren.push(iconElement);
         }
+      }
+    }
+
+    // Track which components are used
+    if (isIconButton) {
+      needsMuiIconButton = true;
+      needsIconImport = true; // Icon buttons always have icons
+    } else {
+      needsMuiButton = true;
+      // Check if regular button has icons
+      const hasIconLeft = props.some((p: any) => p.name?.name === 'iconLeft');
+      const hasIconRight = props.some((p: any) => p.name?.name === 'iconRight');
+      if (hasIconLeft || hasIconRight) {
+        needsIconImport = true;
       }
     }
 
@@ -759,8 +797,101 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     })
     .replaceWith(transformButton);
 
+  // Step 3: Add imports at the beginning of the file in the correct order
+  const allImports = root.find(j.ImportDeclaration);
+  const programBody = root.get().node.program.body;
+
+  // Helper to find insertion point (beginning of imports section)
+  const getInsertionIndex = () => {
+    const firstNonImportIndex = programBody.findIndex(
+      (node: any) => node.type !== 'ImportDeclaration',
+    );
+    return firstNonImportIndex >= 0 ? firstNonImportIndex : programBody.length;
+  };
+
+  // Add FontAwesomeV6Icon import first (if needed)
+  if (needsIconImport) {
+    const existingIconImport = root.find(j.ImportDeclaration, {
+      source: {value: '@code-dot-org/component-library/fontAwesomeV6Icon'},
+    });
+
+    if (existingIconImport.length === 0) {
+      const iconImport = j.importDeclaration(
+        [j.importDefaultSpecifier(j.identifier('FontAwesomeV6Icon'))],
+        j.literal('@code-dot-org/component-library/fontAwesomeV6Icon'),
+      );
+
+      const insertIndex = getInsertionIndex();
+      programBody.splice(insertIndex, 0, iconImport);
+    }
+  }
+
+  // Add MUI imports second (if needed)
+  if (needsMuiButton || needsMuiIconButton) {
+    const existingMuiImport = root.find(j.ImportDeclaration, {
+      source: {value: '@mui/material'},
+    });
+
+    if (existingMuiImport.length === 0) {
+      const muiSpecifiers: any[] = [];
+      if (needsMuiButton) {
+        muiSpecifiers.push(
+          j.importSpecifier(j.identifier('Button'), j.identifier('MuiButton')),
+        );
+      }
+      if (needsMuiIconButton) {
+        muiSpecifiers.push(
+          j.importSpecifier(
+            j.identifier('IconButton'),
+            j.identifier('MuiIconButton'),
+          ),
+        );
+      }
+
+      if (muiSpecifiers.length > 0) {
+        const muiImports = j.importDeclaration(
+          muiSpecifiers,
+          j.literal('@mui/material'),
+        );
+
+        // Insert after FontAwesomeV6Icon if it was added, otherwise at the beginning
+        const insertIndex = getInsertionIndex();
+        programBody.splice(insertIndex, 0, muiImports);
+      }
+    } else {
+      // MUI import exists, check if we need to add missing specifiers
+      const existingMuiImportPath = existingMuiImport.paths()[0];
+      if (existingMuiImportPath && existingMuiImportPath.value) {
+        const existingSpecifiers = existingMuiImportPath.value.specifiers || [];
+        const hasMuiButton = existingSpecifiers.some(
+          (s: any) => s.imported?.name === 'Button',
+        );
+        const hasMuiIconButton = existingSpecifiers.some(
+          (s: any) => s.imported?.name === 'IconButton',
+        );
+
+        if (needsMuiButton && !hasMuiButton) {
+          existingSpecifiers.push(
+            j.importSpecifier(
+              j.identifier('Button'),
+              j.identifier('MuiButton'),
+            ),
+          );
+        }
+        if (needsMuiIconButton && !hasMuiIconButton) {
+          existingSpecifiers.push(
+            j.importSpecifier(
+              j.identifier('IconButton'),
+              j.identifier('MuiIconButton'),
+            ),
+          );
+        }
+      }
+    }
+  }
+
   return root.toSource({
-    quote: 'single',
+    quote: 'double',
     trailingComma: true,
     lineTerminator: '\n',
   });
