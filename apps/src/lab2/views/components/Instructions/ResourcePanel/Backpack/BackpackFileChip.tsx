@@ -4,6 +4,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {
   BodyFourText,
   BodyThreeText,
+  StrongText,
 } from '@code-dot-org/component-library/typography';
 import React, {useMemo} from 'react';
 
@@ -48,10 +49,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
         />
       </div>
       <div className={moduleStyles.fileInfo} title={filename}>
-        <BodyThreeText
-          visualAppearance={'strong'}
-          className={moduleStyles.infoText}
-        >
+        <BodyThreeText className={moduleStyles.infoText}>
+          <StrongText>{filename}</StrongText>
           {filename}
         </BodyThreeText>
         <BodyFourText className={moduleStyles.infoText}>

@@ -6,4 +6,41 @@
   gap: 8px;
   flex: 1 0 0;
   align-self: stretch;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.backpackPanelWithMessage {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+  height: 100%;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.emptyBackpackIconContainer {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  background: var(--background-neutral-septenary);
+}
+
+.emptyBackpackIcon {
+  color: var(--background-neutral-primary);
+  font-size: 24px;
 }

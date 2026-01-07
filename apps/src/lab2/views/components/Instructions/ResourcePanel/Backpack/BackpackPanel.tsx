@@ -1,3 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  BodyFourText,
+  BodyTwoText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -23,7 +29,7 @@ const BackpackPanel: React.FC = () => {
 
   // todo: prettier
   if (!backpackApi || !backpackApi.hasBackpack()) {
-    return <div>Backpack is not available.</div>;
+    <div>Backpack is unavailable.</div>;
   }
 
   if (!fileList && !loadError) {
@@ -35,7 +41,23 @@ const BackpackPanel: React.FC = () => {
   }
 
   if (fileList && fileList.length === 0) {
-    return <div>Your backpack is empty.</div>;
+    return (
+      <div className={moduleStyles.backpackPanelWithMessage}>
+        <div className={moduleStyles.emptyBackpackIconContainer}>
+          <FontAwesomeV6Icon
+            iconName="backpack"
+            iconStyle="solid"
+            className={moduleStyles.emptyBackpackIcon}
+          />
+        </div>
+        <BodyTwoText>
+          <StrongText>Your backpack is empty</StrongText>
+        </BodyTwoText>
+        <BodyFourText>
+          Files you save to your backpack will appear here.
+        </BodyFourText>
+      </div>
+    );
   }
 
   return (
