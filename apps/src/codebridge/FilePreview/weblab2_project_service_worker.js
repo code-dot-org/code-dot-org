@@ -25,6 +25,7 @@ function main() {
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
   const codeDotOrgOrigin = getCodeDotOrgOrigin();
+  let contentSecurityPolicyValue = null;
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -38,10 +39,11 @@ function main() {
 
   // Listen for messages from the main thread
   addEventListener('message', event => {
-    const {type, files} = event.data;
+    const {type, files, contentSecurityPolicy} = event.data;
     if (type === UPDATE_FILES && event.origin === location.origin) {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
+      contentSecurityPolicyValue = contentSecurityPolicy;
     }
   });
 
@@ -106,7 +108,9 @@ function main() {
         let fetchUrl = url;
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
-          fetchUrl = codeDotOrgOrigin + url;
+          // Adding a temporary cache bust query parameter to avoid some caching issues with level starter assets.
+          const temporaryCacheBust = '?temp-cache-bust=1';
+          fetchUrl = codeDotOrgOrigin + url + temporaryCacheBust;
         }
         return await fetch(fetchUrl);
       }
@@ -117,6 +121,7 @@ function main() {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           Pragma: 'no-cache',
           Expires: '0',
+          'Content-Security-Policy': contentSecurityPolicyValue || '',
         },
       });
     } catch (error) {
