@@ -161,6 +161,10 @@ $icon-overlay-padding-right: 8px;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
 }
 
 .botOverlay {

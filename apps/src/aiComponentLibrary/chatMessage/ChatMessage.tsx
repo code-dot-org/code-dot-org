@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import React, {memo, useEffect} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -90,26 +90,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       <div className={moduleStyles.messageWithChildren}>
         {header && <div>{header}</div>}
         <div className={moduleStyles[`container-${role}`]}>
-          {role === Role.ASSISTANT && (
-            <div
-              className={classNames(
-                isTA && moduleStyles.botIconContainerWithOverlay
-              )}
-            >
-              <div className={classNames(moduleStyles.botIconContainer)}>
-                <img
-                  src={aiBotOutlineIcon}
-                  alt={commonI18n.aiChatBotIconAlt()}
-                  className={moduleStyles.botIcon}
-                />
-              </div>
-              {isTA && (
-                <div className={moduleStyles.botOverlay}>
-                  <span>{'TA'}</span>
-                </div>
-              )}
-            </div>
-          )}
+          {role === Role.ASSISTANT && <BotIcon isTA={isTA} />}
           <div
             className={classNames(
               moduleStyles[`message-${role}`],
@@ -154,3 +135,23 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
 };
 
 export default ChatMessage;
+
+const BotIcon = memo<{isTA?: boolean}>(({isTA}) => (
+  <div className={classNames(isTA && moduleStyles.botIconContainerWithOverlay)}>
+    <div className={moduleStyles.botIconContainer}>
+      <div
+        className={moduleStyles.botIcon}
+        role="img"
+        aria-label={commonI18n.aiChatBotIconAlt()}
+        style={{
+          backgroundImage: `url(${aiBotOutlineIcon})`,
+        }}
+      />
+    </div>
+    {isTA && (
+      <div className={moduleStyles.botOverlay}>
+        <span>{'TA'}</span>
+      </div>
+    )}
+  </div>
+));
