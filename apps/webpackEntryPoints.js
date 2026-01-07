@@ -284,7 +284,6 @@ const SHARED_ENTRIES = {
 const OTHER_ENTRIES = {
   // The blockly dependency is huge, so we currently control when it is
   // loaded explicitly via script tags rather than via normal imports.
-  blockly: './src/sites/studio/pages/blockly.js',
   googleblockly: './src/sites/studio/pages/googleblockly.js',
 
   // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies

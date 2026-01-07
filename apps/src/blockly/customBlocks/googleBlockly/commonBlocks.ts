@@ -46,7 +46,7 @@ export const blocks = {
       blockly.common.createBlockDefinitionsFromJsonArray([
         {
           type: BLOCK_TYPES.colourRandom,
-          message0: i18n.colourRandom(),
+          message0: i18n?.colourRandom?.() || 'random color',
           output: 'Colour',
           style: 'colour_blocks',
         },

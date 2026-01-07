@@ -37,7 +37,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: commonI18n.withThisSprite(),
+        text: commonI18n?.withThisSprite?.() || 'with: this sprite',
       },
       {
         type: 'field_label',
@@ -112,7 +112,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         type: 'field_label',
         name: 'VAR',
         variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
-        text: commonI18n.thisSprite(),
+        text: commonI18n?.thisSprite?.() || 'this sprite',
       },
     ],
     output: 'Sprite',
@@ -144,7 +144,7 @@ GoogleBlockly.Extensions.register(
       };
       this.functionalSvg_ = new BlockSvgFrame(
         this,
-        commonI18n.behaviorEditorHeader(),
+        commonI18n?.behaviorEditorHeader?.() || 'Behavior',
         'blocklyFunctionalFrame',
         getColor
       );
@@ -296,7 +296,7 @@ const getNewBehaviorButtonWithCallback = (
 
   return {
     kind: 'button',
-    text: commonI18n.createBlocklyBehavior(),
+    text: commonI18n?.createBlocklyBehavior?.() || 'Create a Behavior',
     callbackkey,
   };
 };
