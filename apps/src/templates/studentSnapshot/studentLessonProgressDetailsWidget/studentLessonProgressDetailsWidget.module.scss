@@ -35,6 +35,26 @@
       p {
         color: var(--text-neutral-tertiary);
       }
+
+      .classAvgInfo {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25rem;
+        align-items: center;
+
+        i {
+          padding-top: 2px;
+          font-size: 12.5px;
+        }
+      }
+
+      .aboveClassAvg > i {
+        color: var(--sentiment-success-50);
+      }
+
+      .belowClassAvg > i {
+        color: var(--sentiment-error-50);
+      }
     }
   }
 }

@@ -16,10 +16,19 @@ interface StudentLessonProgressDetailsWidgetProps {
   selectedStudentId: number;
 }
 
-interface UserProgressInLessonData {
-  [userId: number]: {
-    progress: number | null;
-    timeSpent: string | null;
+interface UserProgressByLessonData {
+  [lessonId: string]: {
+    [userId: number]: {
+      progress: number | null;
+      timeSpent: string | null;
+    };
+  };
+}
+
+interface ProgressAveragesByLessonData {
+  [lessonId: string]: {
+    progressAverage: number;
+    timeSpentAverage: string;
   };
 }
 
@@ -27,6 +36,10 @@ interface UserValidationProgressByLessonData {
   [lessonId: string]: {
     [userId: string]: number;
   };
+}
+
+interface ClassAvgValidationProgressByLessonData {
+  [lessonId: string]: number;
 }
 
 const COMPLETED_STATUSES: string[] = [
@@ -62,36 +75,73 @@ const StudentLessonProgressDetailsWidget: React.FC<
   const studentLevelProgressByUnit = useAppSelector(
     state => state.sectionProgress?.studentLevelProgressByUnit
   );
+  const studentIds = useAppSelector(state =>
+    state.teacherSections?.selectedStudents?.map(student => student.id)
+  );
 
-  const userProgressBySelectedLesson = React.useMemo(() => {
-    const progressByUser: UserProgressInLessonData = {};
+  // Map each lesson to both individual student progress + time spent in the given lesson and
+  // the class's averages of both
+  const {userProgressByLesson, progressAveragesByLesson} = React.useMemo(() => {
+    const progressByUser: UserProgressByLessonData = {};
+    const progressAverages: ProgressAveragesByLessonData = {};
     if (
-      selectedLessonId &&
+      unitDataByUnit &&
+      studentIds &&
+      studentIds.length > 0 &&
       lessonProgressByUnit &&
       lessonProgressByUnit[selectedUnitId]
     ) {
-      Object.keys(lessonProgressByUnit[selectedUnitId]).forEach(
-        (userId: string) => {
-          const lessonProgressByUnitForUser =
-            lessonProgressByUnit[selectedUnitId][+userId][selectedLessonId];
-          progressByUser[+userId] = lessonProgressByUnitForUser
-            ? {
-                progress: Math.floor(
-                  lessonProgressByUnitForUser['completedPercent']
-                ),
-                timeSpent: formatTimeSpent(
-                  lessonProgressByUnitForUser['timeSpent']
-                ),
-              }
-            : {
+      const lessons = unitDataByUnit[selectedUnitId]?.lessons;
+      if (lessons) {
+        // Iterate through lessons in this unit
+        Object.values(lessons).forEach(lesson => {
+          progressByUser[lesson.id] = {};
+          let currLessonProgressTotal = 0;
+          let currLessonTimeSpentTotal = 0;
+
+          // Iterate through students in this section
+          studentIds.forEach(userId => {
+            const unitProgressForUser =
+              lessonProgressByUnit[selectedUnitId][userId];
+            const lessonProgressForUser = unitProgressForUser
+              ? unitProgressForUser[lesson.id]
+              : null;
+
+            // Only bother adding stats to averages if user has made progress in this lesson
+            if (lessonProgressForUser) {
+              progressByUser[lesson.id][userId] = {
+                progress: Math.floor(lessonProgressForUser['completedPercent']),
+                timeSpent: formatTimeSpent(lessonProgressForUser['timeSpent']),
+              };
+              currLessonProgressTotal +=
+                lessonProgressForUser['completedPercent'];
+              currLessonTimeSpentTotal += lessonProgressForUser['timeSpent'];
+            } else {
+              progressByUser[lesson.id][userId] = {
                 progress: 0,
                 timeSpent: ZERO_TIME_SPENT,
               };
-        }
-      );
+            }
+          });
+
+          // Store averages for the lesson
+          progressAverages[lesson.id] = {
+            progressAverage: Math.floor(
+              currLessonProgressTotal / studentIds.length
+            ),
+            timeSpentAverage: formatTimeSpent(
+              Math.floor(currLessonTimeSpentTotal / studentIds.length)
+            ),
+          };
+        });
+      }
     }
-    return progressByUser;
-  }, [selectedUnitId, selectedLessonId, lessonProgressByUnit]);
+
+    return {
+      userProgressByLesson: progressByUser,
+      progressAveragesByLesson: progressAverages,
+    };
+  }, [unitDataByUnit, lessonProgressByUnit, studentIds, selectedUnitId]);
 
   // Map each lesson to the number of validated levels it has
   const lessonsToValidationLevels = React.useMemo(() => {
@@ -113,59 +163,89 @@ const StudentLessonProgressDetailsWidget: React.FC<
     return lessonsToValidationLevelsMap;
   }, [unitDataByUnit, selectedUnitId]);
 
-  // Map each lesson to the amount of validation levels each student has completed
-  const userValidationProgressByLesson = React.useMemo(() => {
-    const userValidationProgressByLessonMap: UserValidationProgressByLessonData =
-      {};
-    if (lessonsToValidationLevels && studentLevelProgressByUnit) {
-      Object.entries(lessonsToValidationLevels).forEach(
-        ([lessonId, validationLevelIds]) => {
-          const levelProgressByUser: {[userId: string]: number} = {};
-          Object.entries(studentLevelProgressByUnit[selectedUnitId]).forEach(
-            ([userId, levelProgress]) => {
-              levelProgressByUser[userId] = Object.entries(
-                levelProgress
-              ).filter(
-                ([levelId, progress]) =>
-                  validationLevelIds.includes(levelId) &&
-                  COMPLETED_STATUSES.includes(progress.status)
-              ).length;
-            }
-          );
-          userValidationProgressByLessonMap[lessonId] = levelProgressByUser;
-        }
-      );
-      return userValidationProgressByLessonMap;
-    }
-  }, [selectedUnitId, lessonsToValidationLevels, studentLevelProgressByUnit]);
+  // Map each lesson to both the amount of validation levels each student has completed and
+  // the class average of it
+  const {userValidationProgressByLesson, classAvgValidationProgressByLesson} =
+    React.useMemo(() => {
+      const userValidationProgressByLessonMap: UserValidationProgressByLessonData =
+        {};
+      const classAvgValidationProgressByLessonMap: ClassAvgValidationProgressByLessonData =
+        {};
 
-  const numValidationLevelsCompleteString = React.useMemo(() => {
-    if (
-      !selectedUnitId ||
-      !selectedLessonId ||
-      !selectedStudentId ||
-      !lessonsToValidationLevels ||
-      !userValidationProgressByLesson ||
-      !userValidationProgressByLesson[selectedLessonId]
-    ) {
+      if (lessonsToValidationLevels && studentLevelProgressByUnit) {
+        Object.entries(lessonsToValidationLevels).forEach(
+          ([lessonId, validationLevelIds]) => {
+            const levelProgressByUser: {[userId: string]: number} = {};
+            let classValidationProgressTotal = 0;
+            Object.entries(studentLevelProgressByUnit[selectedUnitId]).forEach(
+              ([userId, levelProgress]) => {
+                const numCompletedValidationLevels = Object.entries(
+                  levelProgress
+                ).filter(
+                  ([levelId, progress]) =>
+                    validationLevelIds.includes(levelId) &&
+                    COMPLETED_STATUSES.includes(progress.status)
+                ).length;
+                levelProgressByUser[userId] = numCompletedValidationLevels;
+                classValidationProgressTotal += numCompletedValidationLevels;
+              }
+            );
+            userValidationProgressByLessonMap[lessonId] = levelProgressByUser;
+            classAvgValidationProgressByLessonMap[lessonId] = Math.floor(
+              classValidationProgressTotal / studentIds.length
+            );
+          }
+        );
+      }
+      return {
+        userValidationProgressByLesson: userValidationProgressByLessonMap,
+        classAvgValidationProgressByLesson:
+          classAvgValidationProgressByLessonMap,
+      };
+    }, [
+      selectedUnitId,
+      lessonsToValidationLevels,
+      studentIds,
+      studentLevelProgressByUnit,
+    ]);
+
+  const selectedStudentLessonProgressInfo = React.useMemo(() => {
+    return userProgressByLesson[selectedLessonId]
+      ? userProgressByLesson[selectedLessonId][selectedStudentId]
+      : null;
+  }, [userProgressByLesson, selectedLessonId, selectedStudentId]);
+
+  const numValidationLevelsUserCompleted = React.useMemo(() => {
+    return userValidationProgressByLesson[selectedLessonId]
+      ? userValidationProgressByLesson[selectedLessonId][`${selectedStudentId}`]
+      : 0;
+  }, [userValidationProgressByLesson, selectedLessonId, selectedStudentId]);
+
+  const numValidationLevelsCompleteString = (
+    numValidationLevelsComplete: number
+  ) => {
+    if (!selectedLessonId || !lessonsToValidationLevels) {
       return '0 of 0 passed';
     }
 
-    const numValidationLevelsUserCompleted =
-      userValidationProgressByLesson[selectedLessonId][`${selectedStudentId}`];
-    const totalValidationLevels = lessonsToValidationLevels[selectedLessonId];
-    return numValidationLevelsUserCompleted === totalValidationLevels?.length
+    const totalValidationLevels =
+      lessonsToValidationLevels[selectedLessonId]?.length ?? 0;
+    return numValidationLevelsComplete === totalValidationLevels
       ? COMPLETE_PERCENT_STRING
-      : `${numValidationLevelsUserCompleted ?? 0} of ${
-          totalValidationLevels?.length ?? 0
-        } passed`;
-  }, [
-    selectedUnitId,
-    selectedLessonId,
-    selectedStudentId,
-    lessonsToValidationLevels,
-    userValidationProgressByLesson,
-  ]);
+      : `${numValidationLevelsComplete} of ${totalValidationLevels} passed`;
+  };
+
+  const selectedStudentLessonProgress =
+    selectedStudentLessonProgressInfo?.progress ?? 0;
+  const selectedStudentLessonTimeSpent =
+    selectedStudentLessonProgressInfo?.timeSpent ?? ZERO_TIME_SPENT;
+  const classAvgLessonProgress =
+    progressAveragesByLesson[selectedLessonId]?.progressAverage ?? 0;
+  const classAvgNumValidationLevelsCompleted =
+    classAvgValidationProgressByLesson[selectedLessonId] ?? 0;
+  const classAvgLessonTimeSpent =
+    progressAveragesByLesson[selectedLessonId]?.timeSpentAverage ??
+    ZERO_TIME_SPENT;
 
   return (
     <WidgetTemplate widgetName="Lesson Details" gridWidth={3} gridHeight={1}>
@@ -175,14 +255,31 @@ const StudentLessonProgressDetailsWidget: React.FC<
           <div
             className={classNames(
               styles.lessonDetailLabelAndInfo,
-              userProgressBySelectedLesson[selectedStudentId]?.progress ===
-                100 && styles.greenCompletedText
+              selectedStudentLessonProgress === 100 && styles.greenCompletedText
             )}
           >
             <Typography variant="overline3">Progress</Typography>
-            <Typography variant="h4">{`${
-              userProgressBySelectedLesson[selectedStudentId]?.progress ?? '0'
-            }% complete`}</Typography>
+            <Typography variant="h4">{`${selectedStudentLessonProgress}% complete`}</Typography>
+            <div
+              className={classNames(
+                styles.classAvgInfo,
+                selectedStudentLessonProgress > classAvgLessonProgress
+                  ? styles.aboveClassAvg
+                  : styles.belowClassAvg
+              )}
+            >
+              <Typography variant="body4">{`Class Avg: ${classAvgLessonProgress}%`}</Typography>
+              {selectedStudentLessonProgress !== classAvgLessonProgress && (
+                <FontAwesomeV6Icon
+                  iconName={
+                    selectedStudentLessonProgress > classAvgLessonProgress
+                      ? 'arrow-up'
+                      : 'arrow-down'
+                  }
+                  iconStyle={'regular'}
+                />
+              )}
+            </div>
           </div>
         </div>
         <div className={styles.lessonDetail}>
@@ -193,14 +290,42 @@ const StudentLessonProgressDetailsWidget: React.FC<
           <div
             className={classNames(
               styles.lessonDetailLabelAndInfo,
-              numValidationLevelsCompleteString === COMPLETE_PERCENT_STRING &&
-                styles.greenCompletedText
+              numValidationLevelsCompleteString(
+                numValidationLevelsUserCompleted
+              ) === COMPLETE_PERCENT_STRING && styles.greenCompletedText
             )}
           >
             <Typography variant="overline3">Validation tests</Typography>
             <Typography variant="h4">
-              {numValidationLevelsCompleteString}
+              {numValidationLevelsCompleteString(
+                numValidationLevelsUserCompleted
+              )}
             </Typography>
+            <div
+              className={classNames(
+                styles.classAvgInfo,
+                numValidationLevelsUserCompleted >
+                  classAvgNumValidationLevelsCompleted
+                  ? styles.aboveClassAvg
+                  : styles.belowClassAvg
+              )}
+            >
+              <Typography variant="body4">{`Class Avg: ${numValidationLevelsCompleteString(
+                classAvgNumValidationLevelsCompleted
+              )}%`}</Typography>
+              {numValidationLevelsUserCompleted !==
+                classAvgNumValidationLevelsCompleted && (
+                <FontAwesomeV6Icon
+                  iconName={
+                    numValidationLevelsUserCompleted >
+                    classAvgNumValidationLevelsCompleted
+                      ? 'arrow-up'
+                      : 'arrow-down'
+                  }
+                  iconStyle={'regular'}
+                />
+              )}
+            </div>
           </div>
         </div>
         <div className={styles.lessonDetail}>
@@ -208,9 +333,28 @@ const StudentLessonProgressDetailsWidget: React.FC<
           <div className={styles.lessonDetailLabelAndInfo}>
             <Typography variant="overline3">Time spent</Typography>
             <Typography variant="h4">
-              {userProgressBySelectedLesson[selectedStudentId]?.timeSpent ??
-                ZERO_TIME_SPENT}
+              {selectedStudentLessonTimeSpent}
             </Typography>
+            <div
+              className={classNames(
+                styles.classAvgInfo,
+                selectedStudentLessonProgress > classAvgLessonProgress
+                  ? styles.aboveClassAvg
+                  : styles.belowClassAvg
+              )}
+            >
+              <Typography variant="body4">{`Class Avg: ${classAvgLessonTimeSpent}%`}</Typography>
+              {selectedStudentLessonTimeSpent !== classAvgLessonTimeSpent && (
+                <FontAwesomeV6Icon
+                  iconName={
+                    selectedStudentLessonTimeSpent > classAvgLessonTimeSpent
+                      ? 'arrow-up'
+                      : 'arrow-down'
+                  }
+                  iconStyle={'regular'}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
