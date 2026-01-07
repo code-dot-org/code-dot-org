@@ -13,8 +13,6 @@ import FeedbackTextbox from './FeedbackTextbox';
 import styles from './lessonFeeedback.module.scss';
 
 interface LessonFeedbackWidgetProps {
-  gridWidth?: number;
-  gridHeight?: number;
   lessonId: number | null;
   studentId: number;
   teacherHasEnabledAi: boolean;
@@ -27,8 +25,6 @@ interface LessonFeedbackWidgetProps {
  */
 
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
-  gridWidth = 2,
-  gridHeight = 2,
   lessonId,
   studentId,
   teacherHasEnabledAi = false,
@@ -89,8 +85,8 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   return (
     <WidgetTemplate
       widgetName="Lesson Feedback"
-      gridWidth={gridWidth}
-      gridHeight={gridHeight}
+      gridWidth={2}
+      gridHeight={2}
       loading={isLoading}
       scrollable={scrollable}
     >

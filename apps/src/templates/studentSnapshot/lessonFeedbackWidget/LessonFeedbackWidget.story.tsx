@@ -9,14 +9,6 @@ const meta: Meta<typeof LessonFeedbackWidget> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    gridWidth: {
-      control: {type: 'number', min: 1, max: 4},
-      description: 'Grid width for the widget',
-    },
-    gridHeight: {
-      control: {type: 'number', min: 1, max: 4},
-      description: 'Grid height for the widget',
-    },
     lessonId: {
       control: {type: 'number'},
       description: 'ID of the lesson, null if no lesson selected',
@@ -38,8 +30,6 @@ type Story = StoryObj<typeof meta>;
 // Default state with valid lesson and AI enabled
 export const Default: Story = {
   args: {
-    gridWidth: 2,
-    gridHeight: 2,
     lessonId: 123,
     studentId: 456,
     teacherHasEnabledAi: true,
@@ -49,8 +39,6 @@ export const Default: Story = {
 // Loading state when no lesson is selected
 export const LoadingState: Story = {
   args: {
-    gridWidth: 2,
-    gridHeight: 2,
     lessonId: null,
     studentId: 456,
     teacherHasEnabledAi: true,
@@ -60,8 +48,6 @@ export const LoadingState: Story = {
 // Error state when AI is disabled
 export const AiDisabledError: Story = {
   args: {
-    gridWidth: 2,
-    gridHeight: 2,
     lessonId: 123,
     studentId: 456,
     teacherHasEnabledAi: false,
