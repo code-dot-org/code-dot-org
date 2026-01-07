@@ -4,6 +4,8 @@ import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/Backpac
 
 import BackpackFileChip from './BackpackFileChip';
 
+import moduleStyles from './backpack-panel.module.scss';
+
 const BackpackPanel: React.FC = () => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
@@ -37,7 +39,7 @@ const BackpackPanel: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={moduleStyles.backpackPanelWithFiles}>
       {fileList?.map(filename => (
         <BackpackFileChip key={filename} filename={filename} />
       ))}

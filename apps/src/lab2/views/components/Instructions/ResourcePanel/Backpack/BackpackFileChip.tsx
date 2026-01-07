@@ -1,6 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  BodyFourText,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
@@ -12,7 +16,7 @@ interface BackpackFileChipProps {
 }
 
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
-  const fileExtension = filename.split('.').pop()?.toLowerCase();
+  const fileExtension = filename.split('.').pop()?.toUpperCase();
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -35,15 +39,24 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
 
   return (
     <div className={moduleStyles.backpackFileChip}>
-      <div className={moduleStyles.fileIcon}>
+      <div className={moduleStyles.fileIconContainer}>
         <FontAwesomeV6Icon
           iconName={fileIcon.iconName}
           iconStyle={fileIcon.iconStyle}
+          className={moduleStyles.fileIcon}
+          iconFamily={fileIcon.isBrand ? 'brands' : undefined}
         />
       </div>
       <div className={moduleStyles.fileInfo}>
-        <div>{filename}</div>
-        <div>{fileExtension}</div>
+        <BodyThreeText
+          visualAppearance={'strong'}
+          className={moduleStyles.infoText}
+        >
+          {filename}
+        </BodyThreeText>
+        <BodyFourText className={moduleStyles.infoText}>
+          {fileExtension}
+        </BodyFourText>
       </div>
       <div className={moduleStyles.fileActions}>
         <Button
