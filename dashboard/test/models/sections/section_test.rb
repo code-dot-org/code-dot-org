@@ -1420,9 +1420,11 @@ class SectionTest < ActiveSupport::TestCase
     followers = []
     3.times do |i|
       student = create(:student, name: "student_#{i}")
+      follower = create(:follower, section: code_review_group_section, student_user: student)
+      # Set sharing disabled after adding to section to prevent before_validation callback from overriding
       student.sharing_disabled = true
       student.save!
-      followers << create(:follower, section: code_review_group_section, student_user: student)
+      followers << follower
     end
 
     # Verify all students have sharing disabled initially
@@ -1456,9 +1458,11 @@ class SectionTest < ActiveSupport::TestCase
     followers = []
     2.times do |i|
       student = create(:student, name: "student_#{i}")
+      follower = create(:follower, section: code_review_group_section, student_user: student)
+      # Sharing is enabled by default for students over 13, but set explicitly to be clear
       student.sharing_disabled = false
       student.save!
-      followers << create(:follower, section: code_review_group_section, student_user: student)
+      followers << follower
     end
 
     new_groups = [
