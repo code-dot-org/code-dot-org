@@ -51,7 +51,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
       <div className={moduleStyles.fileInfo} title={filename}>
         <BodyThreeText className={moduleStyles.infoText}>
           <StrongText>{filename}</StrongText>
-          {filename}
         </BodyThreeText>
         <BodyFourText className={moduleStyles.infoText}>
           {fileExtension}
