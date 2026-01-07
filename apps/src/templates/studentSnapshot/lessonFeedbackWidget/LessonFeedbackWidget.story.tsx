@@ -3,7 +3,6 @@ import type {Meta, StoryObj} from '@storybook/react';
 import LessonFeedbackWidget from './LessonFeedbackWidget';
 
 const meta: Meta<typeof LessonFeedbackWidget> = {
-  title: 'StudentSnapshot/LessonFeedbackWidget',
   component: LessonFeedbackWidget,
   parameters: {
     layout: 'centered',
