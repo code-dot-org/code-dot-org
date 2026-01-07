@@ -162,8 +162,6 @@ const StudentSnapshot: React.FC = () => {
 
       <div className={styles.widgetGrid}>
         <LessonFeedbackWidget
-          gridWidth={2}
-          gridHeight={2}
           lessonId={selectedLessonId}
           studentId={HARDCODED_STUDENT_ID}
           teacherHasEnabledAi={aiTaEnabled}
