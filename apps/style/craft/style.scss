@@ -548,7 +548,7 @@ $height-to-width: math.div(434, 477);
     @include mc-text-shadow;
     @include main-font-semi-bold;
 
-    font-family: var(--font-family-main) !important;
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
@@ -655,7 +655,7 @@ $height-to-width: math.div(434, 477);
     @include mc-text-shadow;
     @include main-font-semi-bold;
 
-    font-family: var(--font-family-main) !important;
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
@@ -819,7 +819,7 @@ $height-to-width: math.div(434, 477);
     @include mc-text-shadow;
     @include main-font-semi-bold;
 
-    font-family: var(--font-family-main) !important;
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
@@ -862,7 +862,7 @@ $height-to-width: math.div(434, 477);
     @include mc-text-shadow;
     @include main-font-semi-bold;
 
-    font-family: var(--font-family-main) !important;
+    font-family: $main-font !important;
     color: $button-text-white !important;
     font-size: 26px;
     line-height: 26px;
@@ -1107,7 +1107,7 @@ $height-to-width: math.div(434, 477);
   @include mc-text-shadow;
   @include main-font-semi-bold;
 
-  font-family: var(--font-family-main) !important;
+  font-family: $main-font !important;
   color: $button-text-white !important;
   font-size: 26px;
 
