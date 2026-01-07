@@ -22,8 +22,6 @@ import {
   DialogClosePromiseReturnType,
 } from './types';
 
-import moduleStyles from './dialog-manager.module.scss';
-
 /**
  * Manages displaying common dialogs for Lab2.
  */
@@ -105,11 +103,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
         setPromiseArgs,
       }}
     >
-      {DialogView && (
-        <div className={moduleStyles.dialogContainer}>
-          <DialogView {...activeDialog?.dialogArgs} />
-        </div>
-      )}
+      {DialogView && <DialogView {...activeDialog?.dialogArgs} />}
       {children}
     </DialogControlContext.Provider>
   );

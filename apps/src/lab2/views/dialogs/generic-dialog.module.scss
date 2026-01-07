@@ -1,43 +1,16 @@
-@import './dialog-manager.module.scss';
-
-%generic-dialog {
-  @extend %dialog;
+// Copied from component-library Dialog
+// to match DSCO design system styles
+.genericDialog {
+  position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.genericDialog-Dark {
-  @extend %generic-dialog;
-  background-color: $light_gray_950;
-
-  // override any foreground text in the dialog that might be
-  // passed in for the title or body of the dialog
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  strong {
-    color: var(--text-neutral-primary);
-  }
-  p {
-    color: var(--text-neutral-secondary);
-  }
-}
-
-.genericDialog-Light {
-  @extend %generic-dialog;
-}
-
-.title {
-  padding: 0;
-  margin-bottom: 8px;
-}
-
-.bodyText {
-  padding-top: 12px;
-  padding-bottom: 8px;
+  align-items: center;
+  min-width: 39.375rem;
+  max-width: 50rem;
+  padding: 2.25rem 3.5rem 2.5rem 3.5rem;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px 0 rgba(0 0 0 / 30%);
 }
 
 .bodyComponent {
@@ -45,19 +18,10 @@
 }
 
 .buttonContainer {
-  .outerButtonContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 16px;
-
-    .innerButtonContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 10px;
-    }
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .spinnerContainer {

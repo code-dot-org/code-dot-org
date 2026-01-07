@@ -1,16 +1,13 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {
   BodyTwoText,
-  Heading3,
+  Heading2,
 } from '@code-dot-org/component-library/typography';
-import FocusTrap from 'focus-trap-react';
 import React, {useMemo} from 'react';
 
-import {
-  useEnterKeyboardTrap,
-  useEscapeKeyboardTrap,
-} from '@cdo/apps/lab2/hooks';
+import {useEnterKeyboardTrap} from '@cdo/apps/lab2/hooks';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -102,7 +99,6 @@ const useButtonCallback = ({
 const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   buttons,
   title,
-  titleComponent,
   message,
   bodyComponent,
   getButtonCallback = defaultGetButtonCallback,
@@ -135,71 +131,49 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
     getButtonCallback,
   });
 
-  useEscapeKeyboardTrap(cancelCallback);
   useEnterKeyboardTrap(confirmCallback);
 
-  const hasBodyComponent = !!bodyComponent;
-
   return (
-    <FocusTrap>
-      <div className={moduleStyles['genericDialog-' + theme]}>
-        {titleComponent ? (
-          titleComponent
-        ) : title ? (
-          <Heading3 className={moduleStyles.title}>{title}</Heading3>
-        ) : null}
-        <div
-          className={
-            hasBodyComponent
-              ? moduleStyles.bodyComponent
-              : moduleStyles.bodyText
-          }
-        >
-          {hasBodyComponent ? (
-            bodyComponent
-          ) : (
-            <BodyTwoText>{message}</BodyTwoText>
-          )}
-        </div>
-        <div className={moduleStyles.buttonContainer}>
-          <div className={moduleStyles.outerButtonContainer}>
-            {buttons?.cancel ? (
-              <Button
-                onClick={cancelCallback}
-                className={moduleStyles.cancel}
-                type="secondary"
-                disabled={buttons.cancel.disabled}
-                color={theme === 'Dark' ? 'white' : 'gray'}
-                text={buttons.cancel.text || commonI18n.cancel()}
-              />
-            ) : (
-              <div />
-            )}
-            <div className={moduleStyles.innerButtonContainer}>
-              {buttons?.neutral && (
-                <Button
-                  onClick={neutralCallback}
-                  type="secondary"
-                  disabled={buttons.neutral.disabled}
-                  color={
-                    buttons?.neutral?.destructive ? 'destructive' : 'white'
-                  }
-                  text={buttons.neutral.text}
-                />
-              )}
-              <Button
-                onClick={confirmCallback}
-                disabled={buttons?.confirm?.disabled}
-                type="primary"
-                color={buttons?.confirm?.destructive ? 'destructive' : 'purple'}
-                text={buttons?.confirm?.text || commonI18n.dialogOK()}
-                id="uitest-generic-dialog-ok"
-              />
-            </div>
-          </div>
-        </div>
+    <CustomDialog
+      mode={theme === 'Dark' ? 'dark' : 'light'}
+      onClose={buttons?.cancel ? cancelCallback : undefined}
+      aria-label={title}
+      className={moduleStyles.genericDialog}
+    >
+      {title && <Heading2 noMargin>{title}</Heading2>}
+      <div id="dsco-dialog-description">
+        {bodyComponent || <BodyTwoText noMargin>{message}</BodyTwoText>}
       </div>
-    </FocusTrap>
+      <div className={moduleStyles.buttonContainer}>
+        {buttons?.cancel && (
+          <Button
+            onClick={cancelCallback}
+            className={moduleStyles.cancel}
+            type="secondary"
+            disabled={buttons.cancel.disabled}
+            color={theme === 'Dark' ? 'white' : 'gray'}
+            text={buttons.cancel.text || commonI18n.cancel()}
+          />
+        )}
+        {buttons?.neutral && (
+          <Button
+            onClick={neutralCallback}
+            type="secondary"
+            disabled={buttons.neutral.disabled}
+            color={buttons.neutral.destructive ? 'destructive' : 'white'}
+            text={buttons.neutral.text}
+          />
+        )}
+        <Button
+          onClick={confirmCallback}
+          disabled={buttons?.confirm?.disabled}
+          type="primary"
+          color={buttons?.confirm?.destructive ? 'destructive' : 'purple'}
+          text={buttons?.confirm?.text || commonI18n.dialogOK()}
+          id="uitest-generic-dialog-ok"
+        />
+      </div>
+    </CustomDialog>
   );
 };
 
