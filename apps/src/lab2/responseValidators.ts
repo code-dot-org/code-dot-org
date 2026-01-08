@@ -4,7 +4,7 @@ import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   BlocklySource,
-  LevelProperties,
+  LevelPropertiesMap,
   MultiFileSource,
   ProjectSources,
 } from './types';
@@ -86,27 +86,42 @@ export const SourceResponseValidator: ResponseValidator<
   }
 };
 
-export const LevelPropertiesValidator: ResponseValidator<
-  LevelProperties
+// TODO TEST
+export const LevelPropertiesMapValidator: ResponseValidator<
+  LevelPropertiesMap
 > = response => {
   if (Array.isArray(response)) {
-    throw new Error('Level properties should be an object (received array).');
-  }
-  if (!response.appName) {
-    throw missingFieldError('appName');
-  }
-
-  // Convert stringified booleans to actual booleans.
-  for (const key of Object.keys(response)) {
-    if (response[key] === 'true') {
-      response[key] = true;
-    }
-    if (response[key] === 'false') {
-      response[key] = false;
-    }
+    throw new Error(
+      'Level properties map should be an object (received array).'
+    );
   }
 
-  return response as unknown as LevelProperties;
+  for (const levelId of Object.keys(response)) {
+    const properties = response[levelId] as Record<string, unknown>;
+    if (typeof properties !== 'object' || properties === null) {
+      throw new Error(
+        `Level properties should be an object (received ${typeof properties}).`
+      );
+    }
+    if (Array.isArray(properties)) {
+      throw new Error('Level properties should be an object (received array).');
+    }
+    if (!properties.appName) {
+      throw missingFieldError('appName');
+    }
+
+    // Convert stringified booleans to actual booleans.
+    for (const key of Object.keys(properties)) {
+      if (properties[key] === 'true') {
+        properties[key] = true;
+      }
+      if (properties[key] === 'false') {
+        properties[key] = false;
+      }
+    }
+  }
+
+  return response as unknown as LevelPropertiesMap;
 };
 
 export class ValidationError extends Error {
