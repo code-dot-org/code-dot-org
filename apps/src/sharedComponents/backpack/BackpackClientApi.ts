@@ -18,6 +18,11 @@ type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
+enum BackpackEvent {
+  FileAdded = 'fileAdded',
+  FileDeleted = 'fileDeleted',
+}
+type BackpackEventListener = (event: BackpackEvent) => void;
 
 export default class BackpackClientApi {
   appType: string;
@@ -27,6 +32,7 @@ export default class BackpackClientApi {
   fileUploadsFailed: string[];
   fileDeletesInProgress: string[];
   fileDeletesFailed: string[];
+  eventListeners: BackpackEventListener[];
 
   constructor(appType: string, channelId: string | null) {
     this.appType = appType;
@@ -36,6 +42,7 @@ export default class BackpackClientApi {
     this.fileUploadsFailed = [];
     this.fileDeletesInProgress = [];
     this.fileDeletesFailed = [];
+    this.eventListeners = [];
   }
 
   hasBackpack() {
@@ -297,7 +304,8 @@ export default class BackpackClientApi {
         this.fileUploadsInProgress,
         this.fileUploadsFailed,
         onError,
-        onSuccess
+        onSuccess,
+        BackpackEvent.FileAdded
       );
     } catch (error) {
       if (retryCount > 0) {
@@ -317,6 +325,7 @@ export default class BackpackClientApi {
           this.fileUploadsFailed,
           onError,
           onSuccess,
+          BackpackEvent.FileAdded,
           error as Error
         );
       }
@@ -354,7 +363,8 @@ export default class BackpackClientApi {
         this.fileDeletesInProgress,
         this.fileDeletesFailed,
         onError,
-        onSuccess
+        onSuccess,
+        BackpackEvent.FileDeleted
       );
     } catch (error) {
       if (retryCount > 0) {
@@ -373,6 +383,7 @@ export default class BackpackClientApi {
           this.fileDeletesFailed,
           onError,
           onSuccess,
+          BackpackEvent.FileDeleted,
           error as Error
         );
       }
@@ -388,6 +399,7 @@ export default class BackpackClientApi {
     failedFileList: string[],
     onError: ErrorCallback,
     onSuccess: () => void,
+    requestType: BackpackEvent,
     error?: Error
   ) {
     const filenameIndex = filesInRequest.indexOf(filename);
@@ -395,9 +407,14 @@ export default class BackpackClientApi {
       filesInRequest.splice(filenameIndex, 1);
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
+      this.eventListeners.forEach(listener => listener(requestType));
       onSuccess();
     } else if (filesInRequest.length === 0) {
       onError(error, failedFileList);
     }
+  }
+
+  addEventListener(listener: BackpackEventListener) {
+    this.eventListeners.push(listener);
   }
 }

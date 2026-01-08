@@ -31,25 +31,38 @@ const BackpackPanel: React.FC<BackpackProps> = ({
     {type: 'success' | 'danger'; message: string}[]
   >([]);
 
-  const loadBackpackFiles = useCallback(() => {
-    if (backpackApi) {
-      setIsLoading(true);
-      backpackApi.getFileList(
-        () => {
-          setIsLoading(false);
-          setLoadError('Failed to load backpack files');
-        },
-        (fileList: string[]) => {
-          setFileList(fileList);
-          setIsLoading(false);
+  const loadBackpackFiles = useCallback(
+    (showLoading: boolean) => {
+      console.log(`loading backpack files, showLoading: ${showLoading}`);
+      if (backpackApi) {
+        if (showLoading) {
+          setIsLoading(true);
         }
-      );
-    }
-  }, [backpackApi]);
+        setLoadError(null);
+        backpackApi.getFileList(
+          () => {
+            setIsLoading(false);
+            setLoadError('Failed to load backpack files');
+          },
+          (fileList: string[]) => {
+            setFileList(fileList);
+            setIsLoading(false);
+          }
+        );
+      }
+    },
+    [backpackApi]
+  );
 
-  // todo: also fetch based on some refresh signal
   useEffect(() => {
-    loadBackpackFiles();
+    // Show the load screen on initial load.
+    loadBackpackFiles(true);
+    // Subscribe to backpack changes. Always reload when notified, as we get notified for file
+    // adds or deletes.
+    backpackApi?.addEventListener(() => {
+      // We don't show the load view here to avoid the screen flickering when the backpack updates.
+      loadBackpackFiles(false);
+    });
   }, [loadBackpackFiles, backpackApi]);
 
   if (!backpackApi) {
@@ -122,7 +135,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
         <Button
           iconLeft={{iconName: 'refresh'}}
           text="Retry"
-          onClick={loadBackpackFiles}
+          onClick={() => loadBackpackFiles(true)}
           size="s"
           type="secondary"
           color="gray"
@@ -180,7 +193,6 @@ const BackpackPanel: React.FC<BackpackProps> = ({
           saveFile={saveFile}
           createNewFile={createNewFile}
           findIdForFileName={findIdForFileName}
-          refreshFileList={loadBackpackFiles}
         />
       ))}
     </div>

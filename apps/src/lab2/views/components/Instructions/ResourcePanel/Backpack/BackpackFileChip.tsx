@@ -22,7 +22,6 @@ interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
-  refreshFileList: () => void;
 }
 
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -33,7 +32,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   saveFile,
   createNewFile,
   findIdForFileName,
-  refreshFileList,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toUpperCase();
   const fileIcon = useMemo(
@@ -162,7 +160,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           // todo: log error to cloudwatch
         },
         () => {
-          refreshFileList();
           // log to statsig
         }
       );
