@@ -17,13 +17,6 @@ export default class QuickActionsCell extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
     type: PropTypes.oneOf(Object.keys(QuickActionsCellType)),
-    experimentDetails: PropTypes.shape({
-      study: PropTypes.string,
-      study_group: PropTypes.string,
-      event: PropTypes.string,
-      user_id: PropTypes.number,
-      data_json: PropTypes.string,
-    }),
   };
 
   static defaultProps = {
