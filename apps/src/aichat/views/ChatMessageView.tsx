@@ -6,6 +6,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
@@ -20,12 +21,11 @@ import {
 } from '../types';
 
 import FilePreview from './assets/FilePreview';
+import FlagResponseButton from './FlagResponseButton';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
 import styles from './chatWorkspace.module.scss';
-import FlagResponseButton from './FlagResponseButton';
-import experiments from '@cdo/apps/util/experiments';
 
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
@@ -119,7 +119,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
           {experiments.isEnabledAllowingQueryString(
             experiments.LOG_TO_LANGFUSE
           ) &&
-            clientType == AiChatClientTypes.AI_TUTOR && (
+            clientType === AiChatClientTypes.AI_TUTOR && (
               <FlagResponseButton
                 chatMessageId={chatMessage.updateId ?? ''}
                 chatMessageText={chatMessage.chatMessageText}

@@ -1,13 +1,11 @@
 import Button from '@code-dot-org/component-library/button';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-
 import React, {useState} from 'react';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import style from './flag-response-button.module.scss';
-
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 const FlagResponseButton: React.FC<{
   chatMessageId: string;
