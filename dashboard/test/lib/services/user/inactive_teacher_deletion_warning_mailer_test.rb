@@ -122,6 +122,27 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
         send_warning_emails
       end
     end
+
+    describe 'when limit is provided' do
+      context 'when limit is zero' do
+        let(:limit) {0}
+        it 'limits the inactive teachers query to the specified limit' do
+          expect_teacher_warning_to_be_sent.never
+          send_warning_emails
+          _(described_instance.send(:num_teachers_warned)).must_equal 0
+        end
+      end
+
+      context 'when limit is greater than zero' do
+        let(:limit) {1}
+        let(:teacher2) {create(:teacher, email: "test" + teacher_email, name: teacher_name, current_sign_in_at: 48.months.ago, user_data_retention_status: create(:user_data_retention_status))}
+        it 'sends emails up to the specified limit' do
+          expect_teacher_warning_to_be_sent.times(1)
+          send_warning_emails
+          _(described_instance.send(:num_teachers_warned)).must_equal 1
+        end
+      end
+    end
   end
 
   describe '#inactive_teachers' do

@@ -29,8 +29,9 @@ class InactiveTeacherDeletionWarningMailer
     ActiveRecord::Base.connected_to(role: :reporting) do
       loop do
         accounts_batch = inactive_teachers
-        break if accounts_batch.empty? || num_teachers_warned >= @limit
+        break if accounts_batch.empty?
         accounts_batch.each do |teacher|
+          break if num_teachers_warned >= @limit
           next if teacher.email.blank?
           next if teacher.email.end_with?('@code.org') # skip internal accounts
           send_warning_email(teacher)
