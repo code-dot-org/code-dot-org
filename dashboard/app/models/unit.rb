@@ -71,34 +71,26 @@ class Unit < ApplicationRecord
   scope(
     :with_associated_models, lambda do
       includes(
-        [
+        :lesson_groups,
+        :resources,
+        :student_resources,
+        script_levels: [
           {
-            script_levels: [
-              {
-                levels: [
-                  :concepts,
-                  :game,
-                  :level_concept_difficulty,
-                  :levels_child_levels
-                ]
-              },
-              :lesson,
-              :callouts
+            levels: [
+              :concepts,
+              :game,
+              :level_concept_difficulty,
+              :levels_child_levels
             ]
           },
-          :lesson_groups,
-          :resources,
-          :student_resources,
-          {
-            lessons: [
-              :lesson_activities,
-              {script_levels: [:levels]}
-            ]
-          },
-          {
-            unit_group_units: :unit_group
-          }
-        ]
+          :lesson,
+          :callouts
+        ],
+        lessons: [
+          :lesson_activities,
+          {script_levels: [:levels]}
+        ],
+        unit_group_units: :unit_group
       )
     end
   )
@@ -107,29 +99,23 @@ class Unit < ApplicationRecord
   scope(
     :with_seed_models, lambda do
       includes(
-        [
-          {
-            unit_group_units: {
-              unit_group: :course_version
-            }
-          },
-          :lesson_groups,
-          {
-            lessons: [
-              {lesson_activities: :activity_sections},
-              :resources,
-              :vocabularies,
-              :programming_expressions,
-              :objectives,
-              {rubric: {learning_goals: :learning_goal_evidence_levels}},
-              :standards,
-              :opportunity_standards
-            ]
-          },
-          :script_levels,
-          :levels,
+        :lesson_groups,
+        :script_levels,
+        :levels,
+        :resources,
+        :student_resources,
+        unit_group_units: {
+          unit_group: :course_version
+        },
+        lessons: [
+          {lesson_activities: :activity_sections},
           :resources,
-          :student_resources
+          :vocabularies,
+          :programming_expressions,
+          :objectives,
+          {rubric: {learning_goals: :learning_goal_evidence_levels}},
+          :standards,
+          :opportunity_standards
         ]
       )
     end
