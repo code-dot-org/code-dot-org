@@ -555,9 +555,7 @@ Artist.prototype.afterInject_ = function (config) {
   visualization.appendChild(this.visualization.displayCanvas);
 
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
-    // Google Blockly uses forBlock, CDO Blockly does not.
-    const blockGeneratorFunctionDictionary =
-      Blockly.JavaScript.forBlock || Blockly.JavaScript;
+    const blockGeneratorFunctionDictionary = Blockly.JavaScript.forBlock;
     // Override colour_random to only generate random colors from within our frozen
     // palette
     blockGeneratorFunctionDictionary.colour_random = function () {

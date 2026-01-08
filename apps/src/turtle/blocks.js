@@ -743,9 +743,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTitleValue(counter, 'VAR');
     },
   };
-  // Google Blockly uses forBlock, CDO Blockly does not.
-  generator.controls_for_counter =
-    generator.controls_for || generator.forBlock.controls_for;
+  generator.controls_for_counter = generator.forBlock.controls_for;
 
   // Delete these standard blocks.
   delete blockly.Blocks.procedures_defreturn;
@@ -1457,7 +1455,14 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockColors.LOGIC,
         BlockStyles.LOGIC
       );
-      const colourField = Blockly.customBlocks.getColourDropdownField(colours);
+      // 3-column colour field with an increased height/width for menu options and the field itself.
+      const colourField = new Blockly.FieldColour(
+        colours[0],
+        undefined,
+        {colourOptions: colours, columns: 3},
+        true
+      );
+
       this.appendDummyInput()
         .appendField(msg.setColour())
         .appendField(colourField, 'COLOUR');

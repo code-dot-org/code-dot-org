@@ -8,6 +8,8 @@ import {ExtendedWorkspaceSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
 
+import {initializeMiniToolbox} from '../utils';
+
 import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
 import procedureCallerMutator from './mutators/procedureCallerMutator';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
@@ -174,9 +176,7 @@ BlocklyCore.Extensions.register(
     }
 
     const renderToolboxBeforeStack = true;
-    const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
-      this
-    )(undefined, renderToolboxBeforeStack);
+    const flyoutToggleButton = initializeMiniToolbox(renderToolboxBeforeStack);
     const renderingInFunctionEditor = true;
     Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
       miniToolboxBlocks,
