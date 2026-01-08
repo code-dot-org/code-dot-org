@@ -16,7 +16,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test 'execution status is set to QUEUED before perform' do
     request = create(:aichat_request, user_id: @student.id)
-    AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+    AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: 'en')
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED], request.reload.execution_status
   end
 
@@ -26,7 +26,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     AichatSafetyHelper.expects(:find_toxicity).with(user_message, request.level_id, anything).returns(@toxic_response)
 
     perform_enqueued_jobs do
-      AichatRequestChatCompletionJob.perform_later(request: request, locale: @locale)
+      AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: @locale)
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], request.reload.execution_status
@@ -41,7 +41,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     request = create(:aichat_request, user_id: @student.id)
 
     perform_enqueued_jobs do
-      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+      AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: 'en')
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], request.reload.execution_status
@@ -54,7 +54,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
     request = create(:aichat_request, user_id: @student.id)
     perform_enqueued_jobs do
-      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+      AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: 'en')
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], request.reload.execution_status
@@ -68,7 +68,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
     request = create(:aichat_request, user_id: @student.id, model_customizations: chatgpt_model_customizations)
     perform_enqueued_jobs do
-      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+      AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: 'en')
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], request.reload.execution_status
@@ -81,7 +81,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
     request = create(:aichat_request, user_id: @student.id)
     exception = assert_raises(StandardError) do
-      AichatRequestChatCompletionJob.perform_now(request: request, locale: 'en')
+      AichatRequestChatCompletionJob.perform_now(request: request, hidden_context: nil, locale: 'en')
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE], request.reload.execution_status
@@ -98,7 +98,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
       request = create(:aichat_request, user_id: @student.id)
       perform_enqueued_jobs do
-        AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+        AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: 'en')
       end
 
       assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], request.reload.execution_status
@@ -122,7 +122,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns('response')
 
     perform_enqueued_jobs do
-      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+      AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: nil, locale: 'en')
     end
 
     # Verify two calls to Cdo::Metrics.push

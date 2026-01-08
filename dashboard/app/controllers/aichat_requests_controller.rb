@@ -48,14 +48,14 @@ class AichatRequestsController < ApplicationController
 
     # Create the request object.
     begin
-      request = create_request
+      request, hidden_context = create_request
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
 
     # Start the job.
     locale = params[:locale] || "en"
-    AichatRequestChatCompletionJob.perform_later(request: request, locale: locale)
+    AichatRequestChatCompletionJob.perform_later(request: request, hidden_context: hidden_context, locale: locale)
 
     # Return the request ID, polling interval, and backoff rate.
     response_body = {
@@ -90,9 +90,14 @@ class AichatRequestsController < ApplicationController
     # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
     request_params = params.permit!.to_h.deep_symbolize_keys
 
+    # Extract and remove hiddenContext before building attributes
+    hidden_context = request_params.dig(:newMessage, :hiddenContext)
+    request_params[:newMessage]&.delete(:hiddenContext)
+
     attributes = AichatAiHelper.build_request_attributes(current_user.id, request_params)
 
-    AichatRequest.new(attributes).tap(&:save!)
+    request = AichatRequest.new(attributes).tap(&:save!)
+    [request, hidden_context]
   end
 
   private def can_access_ai_tutor_chat_completion?(client_type)

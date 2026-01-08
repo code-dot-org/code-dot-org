@@ -36,8 +36,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     raise exception
   end
 
-  def perform(request:, locale:)
-    status, response = get_execution_status_and_response(request, locale)
+  def perform(request:, hidden_context:, locale:)
+    status, response = get_execution_status_and_response(request, hidden_context, locale)
     request.update!(response: response, execution_status: status)
   end
 
@@ -54,24 +54,26 @@ class AichatRequestChatCompletionJob < ApplicationJob
     ].include? model_id
   end
 
-  private def get_execution_status_and_response(request, locale)
+  private def get_execution_status_and_response(request, hidden_context, locale)
+    new_message = hidden_context ? request.new_message.merge('hiddenContext' => hidden_context) : request.new_message
+
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
+    user_toxicity = AichatSafetyHelper.find_toxicity(new_message['chatMessageText'], request.level_id, 'User')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
-    user_pii = find_pii(request.new_message['chatMessageText'], locale)
+    user_pii = find_pii(new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
     if openai_or_gemini?(request.model_customizations['selectedModelId'])
       begin
-        response = make_openai_request(request)
+        response = make_openai_request(request, new_message)
       rescue OpenaiUserInputResponseTimeout => exception
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
       end
     else
       begin
-        response = make_sagemaker_request(request)
+        response = make_sagemaker_request(request, new_message)
       rescue Aws::SageMakerRuntime::Errors::ModelError => exception
         # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
         if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")
@@ -92,22 +94,22 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
-  private def make_openai_request(request)
+  private def make_openai_request(request, new_message)
     AichatAiHelper.get_openai_assistant_response(
       request.model_customizations,
       request.stored_messages,
-      request.new_message,
+      new_message,
       request.level_id,
       request.project_id,
       request.user_id
     )
   end
 
-  private def make_sagemaker_request(request)
+  private def make_sagemaker_request(request, new_message)
     AichatSagemakerHelper.get_sagemaker_assistant_response(
       request.model_customizations,
       request.stored_messages,
-      request.new_message,
+      new_message,
       request.level_id
     )
   end
