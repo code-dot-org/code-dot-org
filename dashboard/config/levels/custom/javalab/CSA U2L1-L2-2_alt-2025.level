@@ -36,7 +36,7 @@
     },
     "teacher_markdown": "Making the `year` variable `public` instead of `private` allows the `ContentRunner` class to access and print the value assigned to `year`. When attempting to print the `title` variable, students will see the error about the variable being `private`.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:22:03.975+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L2-2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L1-L2-2_pilot-2025\"}]"

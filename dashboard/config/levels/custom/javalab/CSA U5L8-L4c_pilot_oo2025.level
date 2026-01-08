@@ -55,7 +55,7 @@
     },
     "thumbnail_url": "https://images.code.org/db0fa9d0976a4a9d13613ec5a2d1869a-optionC.gif",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:42:36.424+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L4c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L8-L4c_pilot-2025\"}]"

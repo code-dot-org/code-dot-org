@@ -99,6 +99,7 @@
     ],
     "video_key": "csd_u6_call_define_functions",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

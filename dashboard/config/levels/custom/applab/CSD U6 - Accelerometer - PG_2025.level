@@ -113,6 +113,7 @@
     "bubble_choice_description": "Tilt the Circuit Playground to select one of four possible animals",
     "thumbnail_url": "https://images.code.org/83e8dcaea5a284a09419f58e65a25c52-image-1648867468404.png",
     "encrypted_examples": "O5tmUfNzQ7uGTWZlxmdqFUy71lhhkrHk+AHflElwX2XLvjg95ZFKJHjxLl4L\nORp0vHsbAZ4hgntIFXI7QO66ww==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

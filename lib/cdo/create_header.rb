@@ -69,7 +69,13 @@ class CreateHeader
       %w(artist dance) :
       %w(pythonlab artist dance)
 
-    if options[:project_type] && !(entries.include? options[:project_type])
+    if options[:project_type] &&
+        !entries.include?(options[:project_type]) &&
+        renderable_project_type?(
+          options[:project_type],
+          loc_prefix: options[:loc_prefix],
+          ge_region: options[:ge_region]
+        )
       entries.unshift(options[:project_type])
     end
 
@@ -77,5 +83,10 @@ class CreateHeader
     entries &= available_entries if available_entries
 
     entries.map {|entry| get_project_info(entry, ge_region: options[:ge_region])}
+  end
+
+  def self.renderable_project_type?(key, loc_prefix:, ge_region: nil)
+    info = get_project_info(key, ge_region: ge_region)
+    I18n.exists?("#{loc_prefix}#{info[:title]}")
   end
 end

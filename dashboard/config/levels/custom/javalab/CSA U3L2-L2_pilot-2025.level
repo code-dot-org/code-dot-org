@@ -543,7 +543,7 @@
     ],
     "teacher_markdown": "Students should notice that the first paint color in the 1D array is now `\"green\"`, so the `DashPainter` object paints with the new color instead of the original color.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T15:10:01.116+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L2_2025\\\"\"],\"cloned_from\":\"CSA U3L2-L2_2025\"}]"

@@ -27,7 +27,8 @@
     "display_name": "Using RGB Colors",
     "bubble_choice_description": "Add RGB colors to a website.",
     "thumbnail_url": "https://images.code.org/3bac6caac33a537914df55d840e8b345-image-1588269048057.44.47 AM.png",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -495,6 +495,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       onVersionChange,
       disabled,
       viewAsUserId,
+      viewingOldVersion,
       restoreSelectedVersion,
       versionLoading,
       currentSources,

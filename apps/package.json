@@ -40,7 +40,8 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "ua-parser-js": "^0.7.40",
-    "@amplitude/ua-parser-js": "^0.7.33"
+    "@amplitude/ua-parser-js": "^0.7.33",
+    "serialport": "^13.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -200,7 +201,6 @@
     "@blockly/theme-highcontrast": "^7.0.0",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "4.0.14",
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/",
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/",
     "@code-dot-org/craft": "0.2.2",
@@ -255,6 +255,7 @@
     "@types/htmlhint": "^1.1.5",
     "@types/papaparse": "^5.3.14",
     "@types/qrcode.react": "^1.0.5",
+    "@types/rails__actioncable": "^8.0.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-typist": "^2.0.6",
@@ -312,7 +313,6 @@
     "papaparse": "^5.4.1",
     "path-browserify": "^1.0.1",
     "pdf-lib": "^1.17.1",
-    "pepjs": "^0.4.3",
     "pixelmatch": "^5.2.0",
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.2",
     "prop-types": "^15.6.2",

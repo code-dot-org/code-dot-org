@@ -1,0 +1,52 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-01T00:41:46.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debugging: Fix Paragraphs",
+    "long_instructions": "\r\n# Do This\r\n\r\n1) Fix the broken code so that the web page displays correctly with each sentence on its own line.",
+    "bubble_choice_description": "This simple web page has some issues which are preventing the content from being displayed correctly. Identify and fix the issues.",
+    "thumbnail_url": "https://images.code.org/ad84c1993d33ea4669f5db415aa36389-debugging.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n\t<head>\n\t</head>\n\t<body>\n\t\t<p>This sentence should be on its own line.\n\t\tSo should this one.</p>\n\t\t<p/>What's wrong with this sentence?<p>\n\t</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjbz0ppS35vs\nrU6ZgI0wprBbSNrb2mo8lzJvsLTJ9rUWR2sjwgRxFZWtBg5dTETYPAcebecv\ney5Jzq+inB7pqTWtoJ6V540Nf1/8oq0fsHeKVg2UcKZUDLzQ+iAcmaFEtvAe\nKE8UsLF7oU5hMSnHXZjnzuHsTeaecmS3M6dGGqtLYm6zqZR7n92du3SC9jC1\nmUVbucU4GGK0gaTjxkwGopZ7v1t5/8JAS8/ew6FGafJRp7JilSQ467J+OgIi\nclMqmqHKAwf/udZ9j2jghD1Weg96yJO+xyogY8HgjOLYurS8Hz+DWxz6/LGG\nFlxxCjDp6NvW0HhQBdCWawc3A2NjBpFohPVHmM95CMZZJUbsgWpgmqVJ7eg/\nHgWvbLlO/fq/g1fq/Bso7HsZMaaI6itnhn9mlEZZi/KpO7HTA34ifEhtV3h1\ntjv4dpv8XGijCfvUFFnx9SesmpnC1dXIXJfHTWiYWBx4rbfIl96QaXQRizlk\ny+HMRsAQf8LA3/k0639Lb6s=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-01 00:42:21 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-01 00:42:31 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

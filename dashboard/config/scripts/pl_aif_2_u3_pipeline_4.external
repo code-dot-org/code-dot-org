@@ -1,0 +1,95 @@
+name 'pl-aif-2-U3-pipeline-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Putting It All Together: Pipelines in JavaScript
+
+#### Once you understand **searching**, **filtering**, and **sorting** on their own, the real computational thinking comes from deciding **which tool to use — and in what order — to meet the needs of an app.**
+
+<br>
+
+<img src="https://images.code.org/deddc7c635ac7943dfbede2357acd6c1-image-1767807594173.png" alt="visual diagram showing a data pipeline with filter, sort, and map steps" width="200px" style="border-radius:10px; float:left; margin: 0 20px 10px 40px;">
+
+#### Most real apps don’t use just one algorithm.  
+#### They use a **pipeline**, or a sequence of steps that transform data bit by bit.
+
+<div style="clear:both;"></div>
+
+---
+
+## What is a pipeline?
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">🔗 <strong>Pipeline</strong> is a series of steps that run in order, where the output from one step becomes the input to the next.</p>
+</div>
+
+#### In programming, pipelines help manage complex tasks by breaking them into **clear, logical stages**.
+
+---
+
+## Why pipelines matter
+
+#### Each function solves a different kind of problem:
+
+- #### **Search** answers: *What matches what the user asked for?*
+- #### **Filter** answers: *What should be included or excluded based on rules?*
+- #### **Sort** answers: *What order should the results appear in?*
+
+#### A pipeline lets you combine these answers into one smooth process.
+
+---
+
+## Example: A video website pipeline
+
+<img src="https://images.code.org/9a5c317fbbd6adc78797529f76a1890f-image-1767808999144.png" alt="visual diagram showing a data pipeline with filter, sort, and map steps" width="400px" style="border-radius:10px; float:right; margin: 0 10px 10px 20px;">
+
+#### Imagine a video website deciding what to show on its homepage.
+
+1. #### **Filter** out videos that are too old  
+2. #### **Sort** the remaining videos by score or popularity  
+3. #### **Map** the top three videos into cards for display  
+
+#### Each step depends on the one before it.
+#### The app doesn’t jump straight to the final result — it builds it step by step.
+
+<div style="clear:both;"></div>
+
+---
+
+## Thinking like a programmer
+
+#### Designing a pipeline is less about writing code first and more about asking the right questions:
+
+- #### What problem am I trying to solve for the user?
+- #### Which step needs to happen **first**?
+- #### What data should move on to the next step?
+- #### What should the final output look like?
+
+#### Two apps can use the **same data** but different pipelines — and get very different results.
+
+---
+
+## A key idea to remember
+
+<br>
+
+<div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #efe7f8; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem;  margin: 0; line-height: 1.5; color: #3b0066;">
+      Strong programs aren’t built from one function — <br>
+      they’re built from <b>thoughtful pipelines</b>.
+    </p>
+  </div>
+
+</div>
+
+---
+
+## What's next?
+
+#### Next, you’ll practice creating a pipeline for an app with the help of AI.  
+
+![]()
+MARKDOWN

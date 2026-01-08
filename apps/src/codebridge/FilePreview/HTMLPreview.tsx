@@ -7,6 +7,11 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
+import {
+  getAppOptionsViewingExemplar,
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -36,41 +41,67 @@ export const HTMLPreview: React.FC = () => {
     // and domain names are case-insensitive.
     state => state.lab.channel?.id?.toLowerCase().replace('_', '') || ''
   );
+
+  const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
+  const levelId = levelProperties.id;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-    const useLocalPrefixOverride = experiments.isEnabledAllowingQueryString(
-      experiments.LOCAL_WEBLAB2_PREVIEW
+    const useFullUrlOnLocal = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_FULL_URLS
     );
     const isLocalhost = 'localhost' === environmentKey;
-    // When testing on localhost, it can be convenient to have a fixed subdomain
+    // When testing on localhost, it is convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
-    // Use the flag ?local-weblab2-preview=true or ?enableExperiments=local-weblab2-preview
-    // to enable the fixed prefix locally.
-    const prefix =
-      useLocalPrefixOverride && isLocalhost
-        ? 'localtesting'
-        : normalizedChannelId;
+    // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
+    // to use the true channel id based url on localhost (this makes it so having multiple tabs with different projects
+    // open at the same time works correctly).
+    let prefix =
+      !useFullUrlOnLocal && isLocalhost ? 'localtesting' : normalizedChannelId;
+    // In some cases we have no channel id, so we fall back to other prefixes.
+    if (!prefix) {
+      if (isViewingExemplar || isEditingExemplar) {
+        prefix = `exemplar-${levelId}`;
+      } else if (isStartMode) {
+        prefix = `start-mode-${levelId}`;
+      } else {
+        // Unknown channel, not in exemplar or start mode, use generic preview prefix.
+        prefix = `weblab2-${levelId}`;
+      }
+    }
+
     const port = isLocalhost && location.port ? `:${location.port}` : '';
     return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
-  }, [normalizedChannelId]);
+  }, [
+    isEditingExemplar,
+    isStartMode,
+    isViewingExemplar,
+    levelId,
+    normalizedChannelId,
+  ]);
 
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
 
-  // The new preview is currently behind an experiment flag. We pass this flag
-  // through to the inner iframe via a query string so it knows whether or not to use the new preview.
+  // The legacy preview is behind an experiment flag. We pass this flag
+  // through to the inner iframe via a query string so it knows whether or not to use the legacy preview.
+  // TODO: remove this and use the new preview by default once the new preview has been out for a few days.
+  // https://codedotorg.atlassian.net/browse/AFL-406
   const previewQueryString = useMemo(() => {
-    const useV2Preview = experiments.isEnabledAllowingQueryString(
-      experiments.WEBLAB2_PREVIEW_V2
+    const useLegacyPreview = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_LEGACY_PREVIEW
     );
-    return useV2Preview ? `?${experiments.WEBLAB2_PREVIEW_V2}=true` : '';
+    return useLegacyPreview
+      ? `?${experiments.WEBLAB2_LEGACY_PREVIEW}=true`
+      : '';
   }, []);
 
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);

@@ -104,6 +104,7 @@
     "start_blocks": "onEvent(\"checkButton\", \"click\", function() {\r\n  \r\n});\r\n",
     "bubble_choice_description": "Create an app that asks the user a trivia question, then uses the circuit playground to celebrate when they get the answer correct",
     "encrypted_examples": "o8QokOys8leCfc6dAa5G4EKp7dbvWpacRyGRbGUTIehHGoeblHl+RiKljstY\nyV+WufU+3Hk+FF9uDlCRRE+vtg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

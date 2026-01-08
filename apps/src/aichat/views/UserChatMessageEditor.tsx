@@ -137,7 +137,7 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   return (
     <>
-      {chatButtons && !chatDisabled && (
+      {chatButtons && chatButtons.length > 0 && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
             <ChatButton key={key} onClick={handleSubmit} />
