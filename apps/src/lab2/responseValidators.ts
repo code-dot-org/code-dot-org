@@ -86,7 +86,6 @@ export const SourceResponseValidator: ResponseValidator<
   }
 };
 
-// TODO TEST
 export const LevelPropertiesMapValidator: ResponseValidator<
   LevelPropertiesMap
 > = response => {
