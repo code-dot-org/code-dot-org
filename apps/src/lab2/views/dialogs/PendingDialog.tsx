@@ -56,10 +56,7 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
       title={title}
       customContent={customContent}
       className={moduleStyles.genericDialog}
-      // The Modal component requires primaryButtonProps, but
-      // this modal doesn't need a button. Adding filler props
-      // as a workaround to satisfy the type requirement.
-      primaryButtonProps={{text: 'Loading', onClick: () => {}}}
+      primaryButtonProps={{isPending: true, text: 'Loading', onClick: () => {}}}
     />
   );
 };
