@@ -230,3 +230,11 @@ export const dragAndDropKeyboardCodes = {
   cancel: ['Escape'],
   end: ['KeyM', 'Enter', 'Space'],
 };
+
+// Helper function to get the name of a file by its ID
+export const getFileNameById = (
+  fileId: string,
+  files: Record<string, {name: string}>
+): string => {
+  return files[fileId]?.name || fileId;
+};
