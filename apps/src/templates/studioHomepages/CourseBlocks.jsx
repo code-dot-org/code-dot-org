@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {NotificationResponsive} from '@cdo/apps/sharedComponents/Notification';
 import {
   InternationalGradeBandCards,
   ToolsCards,
@@ -71,66 +70,6 @@ class CoursesAToF extends Component {
             tiles={['#coursec', '#coursed', '#coursee', '#coursef']}
           />
         </ContentContainer>
-      </div>
-    );
-  }
-}
-
-const LegacyCSFNotification = () => (
-  <NotificationResponsive
-    type="bullhorn_yellow"
-    notice={i18n.courseBlocksLegacyNotificationSupportEndedHeading()}
-    details={i18n.courseBlocksLegacyNotificationSupportEndedBody()}
-    detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
-    detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
-    detailsLinkNewWindow={true}
-    dismissible={false}
-    buttons={[
-      {
-        text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
-        link: pegasus('/educate/curriculum/elementary-school'),
-        newWindow: true,
-      },
-      {
-        text: i18n.courseBlocksLegacyNotificationButtonCoursesAccelerated(),
-        link: '/s/20-hour',
-        newWindow: true,
-      },
-    ]}
-  />
-);
-
-class Courses1To4 extends Component {
-  render() {
-    return (
-      <ContentContainer
-        heading={i18n.csf()}
-        description={i18n.csfDescription()}
-        link={'/home/#recent-courses'}
-        linkText={i18n.viewMyRecentCourses()}
-      >
-        <CourseBlocks
-          tiles={['#course1', '#course2', '#course3', '#course4']}
-        />
-      </ContentContainer>
-    );
-  }
-}
-
-class AcceleratedAndUnplugged extends Component {
-  componentDidMount() {
-    $('#20-hour').appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour)).show();
-    $('#unplugged').appendTo(ReactDOM.findDOMNode(this.refs.unplugged)).show();
-  }
-
-  render() {
-    return (
-      <div className="tutorial-row">
-        <ProtectedStatefulDiv
-          className="tutorial-block-wide"
-          ref="twenty_hour"
-        />
-        <ProtectedStatefulDiv className="tutorial-block-wide" ref="unplugged" />
       </div>
     );
   }
@@ -213,7 +152,6 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksIntl extends Component {
   static propTypes = {
     isTeacher: PropTypes.bool,
-    showModernElementaryCourses: PropTypes.bool.isRequired,
     specialAnnouncement: shapes.specialAnnouncement,
   };
 
@@ -224,16 +162,10 @@ export class CourseBlocksIntl extends Component {
   }
 
   render() {
-    const {showModernElementaryCourses: modernCsf, specialAnnouncement} =
-      this.props;
-    const AcceleratedCourses = () => (
-      <ContentContainer>
-        <AcceleratedAndUnplugged />
-      </ContentContainer>
-    );
+    const {specialAnnouncement} = this.props;
     return (
       <div>
-        {modernCsf ? <ModernCsfCourses /> : <AcceleratedCourses />}
+        <ModernCsfCourses />
 
         <CourseBlocksHoc isInternational />
 
@@ -244,9 +176,7 @@ export class CourseBlocksIntl extends Component {
           />
         )}
 
-        {modernCsf ? <CoursesAToF /> : <Courses1To4 />}
-
-        {modernCsf && <LegacyCSFNotification />}
+        <CoursesAToF />
 
         <CourseBlocksWrapper
           heading={i18n.courseBlocksInternationalGradeBandsContainerHeading()}

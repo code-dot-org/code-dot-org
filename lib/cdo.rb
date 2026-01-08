@@ -353,6 +353,7 @@ module Cdo
       @@log = log
     end
 
+    # See docs/log-formats.md - Rails Application Logs - Useful Queries/Patterns for log query patterns.
     def log
       require 'logger'
       @@log ||= Logger.new($stdout).tap do |l|

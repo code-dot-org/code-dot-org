@@ -286,18 +286,12 @@ class CertificateImage
     image
   end
 
-  def self.accelerated_course?(course)
-    [ScriptConstants::ACCELERATED_NAME, ScriptConstants::TWENTY_HOUR_NAME].include?(course)
-  end
-
   # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course_name)
     course_type(course_name) == CERTIFICATE_COURSE_TYPES[:HOC]
   end
 
   def self.course_type(course_name)
-    return CERTIFICATE_COURSE_TYPES[:ACCELERATED] if accelerated_course?(course_name)
-
     unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
     course_version = unit_or_unit_group&.get_course_version
     return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc_or_hoai?
@@ -342,10 +336,6 @@ class CertificateImage
       'music_hoc_certificate.png'
     elsif course == ScriptConstants::OCEANS_NAME
       'oceans_hoc_certificate.png'
-    elsif accelerated_course?(course)
-      # The 20-hour course is referred to as "accelerated" throughout the
-      # congrats and certificate pages (see csf_finish_url).
-      '20hours_certificate.jpg'
     elsif course_type == 'hoc'
       'hour_of_ai_certificate.png'
     elsif course_type == 'pl'

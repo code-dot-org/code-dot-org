@@ -463,8 +463,8 @@ FactoryBot.define do
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: true, user: teacher)
+          create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::AI_TUTOR_PILOT_NAME)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -473,8 +473,7 @@ FactoryBot.define do
       factory :student_without_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: false, user: teacher)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end

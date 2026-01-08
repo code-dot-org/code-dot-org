@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "### Sketch Lab\nWelcome to Sketch Lab our built-in visual design tool. Like Canva or Figma, it allows students to create their designs right on the platform—no extra tools needed!\n\nSketch Lab has 2 key areas:\n- **Instruction Panel** \n- **Workspace:** \n\nYou create by adding elements to the workspace.\n",
+        "text": "### Sketch Lab\nWelcome to Sketch Lab our built-in visual design tool. Like Canva or Figma, it allows students to create their designs right on the platform—no extra tools needed!\n\nSketch Lab has 2 key areas:\n- **Instruction Panel** \n- **Workspace** \n\nYou create by adding elements to the workspace.\n",
         "imageUrl": "https://images.code.org/d69619208f073df56d3bac758b2c2227-Sketch Lab.png",
         "key": "test-music-lab-sequences-practice-play-sequential-panel-77c61549-a2c5-4165-a211-283d47d9b82a",
         "fadeInOverPrevious": false,
@@ -73,6 +73,12 @@
         "imageUrl": "https://images.code.org/a39744c3ffc7e8983a87c613f474c261-Sketch Lab (9).png",
         "key": "pl_sandbox_aif_2_sketchlab_panels-6d3d77ae-afc7-44a2-9f77-b625b12c0ac3",
         "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Up Next\nIn the next level, you will practice using Sketch Lab to build a wireframe. ",
+        "imageUrl": "https://images.code.org/2faa1230b53075d4ea4a0ccf1ccc4d7b-Graphics in PL AIF2.jpg",
+        "key": "pl_sandbox_aif_2_sketchlab_panels-0a8f7bbf-0b67-49b1-a3b3-d3fe272b65d3",
+        "layout": "text-bottom-right"
       }
     ],
     "bubble_choice_description": "Review how to use Play Sequential when creating songs",
@@ -80,6 +86,6 @@
     "name_suffix": "_v2",
     "thumbnail_url": "https://images.code.org/7b4d46640230aa16863cc2819604d75e-Screenshot 2025-04-02 at 7.41.41 AM.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-22T18:12:26.948+00:00\",\"changed\":[\"cloned from \\\"pl_sandbox_aif_2_weblab_panels_14\\\"\"],\"cloned_from\":\"pl_sandbox_aif_2_weblab_panels_14\"},{\"changed_at\":\"2025-10-22 22:02:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-22 22:03:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-22T18:12:26.948+00:00\",\"changed\":[\"cloned from \\\"pl_sandbox_aif_2_weblab_panels_14\\\"\"],\"cloned_from\":\"pl_sandbox_aif_2_weblab_panels_14\"},{\"changed_at\":\"2025-10-22 22:02:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-22 22:03:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 22:27:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 22:34:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

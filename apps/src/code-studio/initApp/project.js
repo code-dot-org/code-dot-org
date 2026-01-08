@@ -1130,34 +1130,48 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
-              this.logError_(
-                'unauthorized-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
-              MetricsReporter.incrementCounter(
-                'LegacyLab.ProjectSaveFailureClient',
-                [
-                  {name: 'AppName', value: this.getStandaloneAppForMetrics()},
-                  {name: 'SaveType', value: 'sources'},
-                  {name: 'ErrorType', value: 'unauthorized'},
-                ]
-              );
+              Promise.all([
+                this.logError_(
+                  'unauthorized-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'unauthorized'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
-              this.logError_(
-                'conflict-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
-              MetricsReporter.incrementCounter(
-                'LegacyLab.ProjectSaveFailureClient',
-                [
-                  {name: 'AppName', value: this.getStandaloneAppForMetrics()},
-                  {name: 'SaveType', value: 'sources'},
-                  {name: 'ErrorType', value: 'conflict'},
-                ]
-              );
+              Promise.all([
+                this.logError_(
+                  'conflict-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'conflict'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_();
@@ -1429,15 +1443,20 @@ var projects = (module.exports = {
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    MetricsReporter.logError({
-      event: errorType,
-      errorMessage: errorText,
-      errorCount: errorCount,
-      appType: this.getStandaloneAppForMetrics(),
-      channelId: this.getCurrentId(),
-    });
+    // Log to CloudWatch via MetricsReporter. This is the primary logging system for project saving.
+    const metricsPromise = Promise.resolve(
+      MetricsReporter.logError({
+        event: errorType,
+        errorMessage: errorText,
+        errorCount: errorCount,
+        appType: this.getStandaloneAppForMetrics(),
+        channelId: this.getCurrentId(),
+      })
+    );
 
-    return firehoseClient.putRecord(
+    // Although Firehose is being deprecated, we continue to log for project data integrity errors so that
+    // we can still search for project saving errors over multiple years and compare with MetricsReporter.
+    const firehosePromise = firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -1459,6 +1478,15 @@ var projects = (module.exports = {
       },
       {includeUserId: true}
     );
+
+    // Wait for both logging systems to complete before allowing page reload.
+    return Promise.all([metricsPromise, firehosePromise]).catch(err => {
+      // Log the error but don't throw - we don't want to break the user flow.
+      MetricsReporter.logError({
+        event: 'Error logging to metrics and/or firehose systems',
+        error: repackageError(err),
+      });
+    });
   },
   updateCurrentData_(err, data, options = {}) {
     const {shouldNavigate} = options;

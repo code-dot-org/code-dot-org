@@ -26,7 +26,8 @@
     options = {
       ge_region: ge_region,
       limit_project_types: limit_project_types,
-      project_type: (request.path_info.include? '/projects/') && params && params[:key]
+      project_type: (request.path_info.include? '/projects/') && params && params[:key],
+      loc_prefix: loc_prefix,
     }
     create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
   end

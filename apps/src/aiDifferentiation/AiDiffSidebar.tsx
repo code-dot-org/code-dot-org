@@ -198,31 +198,29 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         </Box>
         {isCollapsed ? (
           <Box className={styles.sidebarActions}>
-            {experiments.isEnabled('teacher-notifications') && (
-              <WithTooltip
-                tooltipProps={{
-                  tooltipId: 'notifications-button-tooltip',
-                  direction: 'onRight',
-                  text: commonI18n.notifications(),
-                  className: styles.sidebarActionTooltip,
-                  hideTail: true,
-                  size: 's',
-                }}
-              >
-                <Button
-                  isIconOnly
-                  onClick={onNotificationsButtonClick}
-                  className={classNames(
-                    unreadNotificationCount > 0 && styles.buttonWithUnreadDot
-                  )}
-                  color="black"
-                  type="tertiary"
-                  size="s"
-                  icon={{iconName: 'bell'}}
-                  aria-label={commonI18n.notifications()}
-                />
-              </WithTooltip>
-            )}
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'notifications-button-tooltip',
+                direction: 'onRight',
+                text: commonI18n.notifications(),
+                className: styles.sidebarActionTooltip,
+                hideTail: true,
+                size: 's',
+              }}
+            >
+              <Button
+                isIconOnly
+                onClick={onNotificationsButtonClick}
+                className={classNames(
+                  unreadNotificationCount > 0 && styles.buttonWithUnreadDot
+                )}
+                color="black"
+                type="tertiary"
+                size="s"
+                icon={{iconName: 'bell'}}
+                aria-label={commonI18n.notifications()}
+              />
+            </WithTooltip>
             {experiments.isEnabled('daily-bytes') && (
               <WithTooltip
                 tooltipProps={{
@@ -248,27 +246,25 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           </Box>
         ) : (
           <Box className={styles.sidebarCategories}>
-            {experiments.isEnabled('teacher-notifications') && (
-              <button
-                onClick={onNotificationsButtonClick}
-                className={classNames(styles.categoryActionButton, {
-                  [styles.selected]: showNotifications,
-                })}
-                id="ui-notificationsButton"
-                type="button"
-              >
-                <FontAwesomeV6Icon iconName="bell" />
-                <span>{commonI18n.notifications()}</span>
-                {unreadNotificationCount > 0 && (
-                  <FontAwesomeV6Icon
-                    iconName="circle"
-                    iconStyle="solid"
-                    className={styles.readAt}
-                    aria-label={i18n.unread()}
-                  />
-                )}
-              </button>
-            )}
+            <button
+              onClick={onNotificationsButtonClick}
+              className={classNames(styles.categoryActionButton, {
+                [styles.selected]: showNotifications,
+              })}
+              id="ui-notificationsButton"
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="bell" />
+              <span>{commonI18n.notifications()}</span>
+              {unreadNotificationCount > 0 && (
+                <FontAwesomeV6Icon
+                  iconName="circle"
+                  iconStyle="solid"
+                  className={styles.readAt}
+                  aria-label={i18n.unread()}
+                />
+              )}
+            </button>
             {experiments.isEnabled('daily-bytes') && (
               <button
                 onClick={onDailyBytesButtonClick}

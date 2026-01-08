@@ -29,7 +29,7 @@ class AiLessonSummariesJob < ApplicationJob
         icon_name: 'solid-flask-sparkle',
         icon_color: 'Aqua',
         href_links: [{text: 'View lesson materials',
-                     url: "/teacher_dashboard/sections/#{section.id}/lesson_materials"}],
+                     url: "/teacher_dashboard/sections/#{section.id}/materials"}],
       )
     end
   end

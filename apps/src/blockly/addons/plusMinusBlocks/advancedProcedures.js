@@ -16,7 +16,7 @@
  * button.
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES} from '../../constants';
 import {
@@ -29,11 +29,11 @@ import {createPlusField} from './field_plus';
 
 // Delete original blocks because there's no way to unregister them:
 // https://github.com/google/blockly-samples/issues/768#issuecomment-885663394
-delete GoogleBlockly.Blocks['procedures_defnoreturn'];
-delete GoogleBlockly.Blocks['procedures_defreturn'];
+delete BlocklyCore.Blocks['procedures_defnoreturn'];
+delete BlocklyCore.Blocks['procedures_defreturn'];
 
 export const advancedProceduresBlocks =
-  GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
+  BlocklyCore.common.createBlockDefinitionsFromJsonArray([
     {
       type: 'procedures_defnoreturn',
       message0: '%1 %2',
@@ -140,7 +140,7 @@ const getDefNoReturn = {
   /**
    * Returns info about this block to be used by the Blockly.Procedures.
    * @returns {Array} An array of info.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   getProcedureDef: function () {
     const argNames = this.argData_.map(elem => elem.model.name);
@@ -154,7 +154,7 @@ const getDefNoReturn = {
   callType_: 'procedures_callnoreturn',
 };
 
-GoogleBlockly.Extensions.registerMixin(
+BlocklyCore.Extensions.registerMixin(
   'get_procedure_def_no_return',
   getDefNoReturn
 );
@@ -168,7 +168,7 @@ const getDefReturn = {
   /**
    * Returns info about this block to be used by the Blockly.Procedures.
    * @returns {Array} An array of info.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   getProcedureDef: function () {
     const argNames = this.argData_.map(elem => elem.model.name);
@@ -181,15 +181,12 @@ const getDefReturn = {
   callType_: 'procedures_callreturn',
 };
 
-GoogleBlockly.Extensions.registerMixin(
-  'get_procedure_def_return',
-  getDefReturn
-);
+BlocklyCore.Extensions.registerMixin('get_procedure_def_return', getDefReturn);
 
 const procedureContextMenu = {
   /**
    * Adds an option to create a caller block.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @param {!Array} options The current options for the context menu.
    */
   customContextMenu: function (options) {
@@ -199,12 +196,12 @@ const procedureContextMenu = {
 
     // Add option to create caller.
     const name = this.getFieldValue('NAME');
-    const text = GoogleBlockly.Msg['PROCEDURES_CREATE_DO'].replace('%1', name);
+    const text = BlocklyCore.Msg['PROCEDURES_CREATE_DO'].replace('%1', name);
 
-    const xml = GoogleBlockly.utils.xml.createElement('block');
+    const xml = BlocklyCore.utils.xml.createElement('block');
     xml.setAttribute('type', this.callType_);
     xml.appendChild(this.mutationToDom(true));
-    const callback = GoogleBlockly.ContextMenu.callbackFactory(this, xml);
+    const callback = BlocklyCore.ContextMenu.callbackFactory(this, xml);
 
     options.push({
       enabled: true,
@@ -218,7 +215,7 @@ const procedureContextMenu = {
   },
 };
 
-GoogleBlockly.Extensions.registerMixin(
+BlocklyCore.Extensions.registerMixin(
   'procedure_context_menu',
   procedureContextMenu
 );
@@ -230,15 +227,15 @@ const procedureDefMutator = {
    *     argument IDs. Used by Blockly.Procedures.mutateCallers for
    *     reconnection.
    * @returns {!Element} XML storage element.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   mutationToDom: function (isForCaller = false) {
-    const container = GoogleBlockly.utils.xml.createElement('mutation');
+    const container = BlocklyCore.utils.xml.createElement('mutation');
     if (isForCaller) {
       container.setAttribute('name', this.getFieldValue('NAME'));
     }
     this.argData_.forEach(element => {
-      const argument = GoogleBlockly.utils.xml.createElement('arg');
+      const argument = BlocklyCore.utils.xml.createElement('arg');
       const argModel = element.model;
       argument.setAttribute('name', argModel.name);
       argument.setAttribute('varid', argModel.getId());
@@ -261,7 +258,7 @@ const procedureDefMutator = {
   /**
    * Parse XML to restore the argument inputs.
    * @param {!Element} xmlElement XML storage element.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   domToMutation: function (xmlElement) {
     // We have to handle this so that the user doesn't add blocks to the stack,
@@ -349,7 +346,7 @@ const procedureDefMutator = {
    *     those names.
    * @param {!Array<?string>} argIds An array of argument IDs associated with
    *     those names.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   updateShape_: function (names, varIds, argIds) {
@@ -370,7 +367,7 @@ const procedureDefMutator = {
     for (let i = 0; i < length; i++) {
       this.addArg_(names[i], varIds[i], argIds[i]);
     }
-    GoogleBlockly.Procedures.mutateCallers(this);
+    BlocklyCore.Procedures.mutateCallers(this);
   },
 
   /**
@@ -379,21 +376,21 @@ const procedureDefMutator = {
    */
   plus: function () {
     this.addArg_();
-    GoogleBlockly.Procedures.mutateCallers(this);
+    BlocklyCore.Procedures.mutateCallers(this);
   },
 
   /**
    * Callback for the minus image. Removes the argument associated with the
    * given argument ID and mutates the callers to match.
    * @param {string} argId The argId of the argument to remove.
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    */
   minus: function (argId) {
     if (!this.argData_.length) {
       return;
     }
     this.removeArg_(argId);
-    GoogleBlockly.Procedures.mutateCallers(this);
+    BlocklyCore.Procedures.mutateCallers(this);
   },
 
   /**
@@ -403,13 +400,13 @@ const procedureDefMutator = {
    * @param {?string=} varId An optional variable ID for the argument.
    * @param {?string=} argId An optional argument ID for the argument
    *     (used to identify the argument across variable merges).
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   addArg_: function (name = null, varId = null, argId = null) {
     if (!this.argData_.length) {
-      const withField = new GoogleBlockly.FieldLabel(
-        GoogleBlockly.Msg['PROCEDURES_BEFORE_PARAMS']
+      const withField = new BlocklyCore.FieldLabel(
+        BlocklyCore.Msg['PROCEDURES_BEFORE_PARAMS']
       );
       this.getInput('TOP').appendField(withField, 'WITH');
     }
@@ -417,17 +414,17 @@ const procedureDefMutator = {
     const argNames = this.argData_.map(elem => elem.model.name);
     name =
       name ||
-      GoogleBlockly.Variables.generateUniqueNameFromOptions(
-        GoogleBlockly.Procedures.DEFAULT_ARG,
+      BlocklyCore.Variables.generateUniqueNameFromOptions(
+        BlocklyCore.Procedures.DEFAULT_ARG,
         argNames
       );
-    const variable = GoogleBlockly.Variables.getOrCreateVariablePackage(
+    const variable = BlocklyCore.Variables.getOrCreateVariablePackage(
       this.workspace,
       varId,
       name,
       ''
     );
-    argId = argId || GoogleBlockly.utils.idGenerator.genUid();
+    argId = argId || BlocklyCore.utils.idGenerator.genUid();
 
     this.addVarInput_(name, argId, variable);
     if (this.getInput('STACK')) {
@@ -481,16 +478,16 @@ const procedureDefMutator = {
    * @param {string} name The name of the argument.
    * @param {string} argId The UUID of the argument (different from var ID).
    * @param {Blockly.VariableModel} variableModel The variable model for the parameter
-   * @this {GoogleBlockly.Block}
+   * @this {BlocklyCore.Block}
    * @private
    */
   addVarInput_: function (name, argId, variableModel) {
     this.appendValueInput(argId)
-      .setAlign(GoogleBlockly.inputs.RIGHT)
+      .setAlign(BlocklyCore.inputs.RIGHT)
       .appendField(createMinusField(argId));
 
     // Create a new argument reporter block and connect it to the input.
-    const argBlock = GoogleBlockly.serialization.blocks.append(
+    const argBlock = BlocklyCore.serialization.blocks.append(
       {type: 'argument_reporter', fields: {VAR: name}},
       this.workspace
     );
@@ -525,21 +522,21 @@ const argumentReporterMutator = {
   },
 };
 
-GoogleBlockly.Extensions.registerMixin(
+BlocklyCore.Extensions.registerMixin(
   'argument_reporter_mutator',
   argumentReporterMutator
 );
 
 /**
  * Initializes some private variables for procedure blocks.
- * @this {GoogleBlockly.Block}
+ * @this {BlocklyCore.Block}
  */
 const procedureDefHelper = function () {
   /**
    * An array of objects containing data about the args belonging to the
    * procedure definition.
    * @type {!Array<{
-   *          model:GoogleBlockly.VariableModel,
+   *          model:BlocklyCore.VariableModel,
    *          argId: string
    *       }>}
    * @private
@@ -554,8 +551,8 @@ const procedureDefHelper = function () {
 
   this.getInput('TOP').insertFieldAt(0, createPlusField(), 'PLUS');
 };
-GoogleBlockly.Extensions.unregister('advanced_procedure_def_mutator');
-GoogleBlockly.Extensions.registerMutator(
+BlocklyCore.Extensions.unregister('advanced_procedure_def_mutator');
+BlocklyCore.Extensions.registerMutator(
   'advanced_procedure_def_mutator',
   procedureDefMutator,
   procedureDefHelper
@@ -563,17 +560,17 @@ GoogleBlockly.Extensions.registerMutator(
 
 /**
  * Sets the validator for the procedure's name field.
- * @this {GoogleBlockly.Block}
+ * @this {BlocklyCore.Block}
  */
 const procedureRename = function () {
-  this.getField('NAME').setValidator(GoogleBlockly.Procedures.rename);
+  this.getField('NAME').setValidator(BlocklyCore.Procedures.rename);
 };
 
-GoogleBlockly.Extensions.register('procedure_rename', procedureRename);
+BlocklyCore.Extensions.register('procedure_rename', procedureRename);
 
 /**
  * Defines functions for dealing with variables and renaming variables.
- * @this {GoogleBlockly.Block}
+ * @this {BlocklyCore.Block}
  */
 const procedureVars = function () {
   // This is a hack to get around the don't-override-builtins check.
@@ -581,7 +578,7 @@ const procedureVars = function () {
     /**
      * Return all variables referenced by this block.
      * @returns {!Array.<string>} List of variable names.
-     * @this {GoogleBlockly.Block}
+     * @this {BlocklyCore.Block}
      */
     getVars: function () {
       return this.argData_.map(elem => elem.model.name);
@@ -589,8 +586,8 @@ const procedureVars = function () {
 
     /**
      * Return all variables referenced by this block.
-     * @returns {!Array.<!GoogleBlockly.VariableModel>} List of variable models.
-     * @this {GoogleBlockly.Block}
+     * @returns {!Array.<!BlocklyCore.VariableModel>} List of variable models.
+     * @this {BlocklyCore.Block}
      */
     getVarModels: function () {
       return this.argData_.map(elem => elem.model);
@@ -618,16 +615,16 @@ const procedureVars = function () {
       this.moveInputBefore(newId, oldId);
       this.removeInput(oldId);
       argData.model = newVar;
-      GoogleBlockly.Procedures.mutateCallers(this);
+      BlocklyCore.Procedures.mutateCallers(this);
     },
 
     /**
      * Notification that a variable is renaming but keeping the same ID.  If the
      * variable is in use on this block, rerender to show the new name.
-     * @param {!GoogleBlockly.VariableModel} variable The variable being renamed.
+     * @param {!BlocklyCore.VariableModel} variable The variable being renamed.
      * @package
      * @override
-     * @this {GoogleBlockly.Block}
+     * @this {BlocklyCore.Block}
      */
     updateVarName: function (variable) {
       const id = variable.getId();
@@ -658,13 +655,13 @@ const procedureVars = function () {
   this.mixin(mixin, true);
 };
 
-GoogleBlockly.Extensions.register('procedure_vars', procedureVars);
+BlocklyCore.Extensions.register('procedure_vars', procedureVars);
 
 /**
  * Validates text entered into the argument name field.
  * @param {string} newValue The new text entered into the field.
  * @returns {?string} The field's new value.
- * @this {GoogleBlockly.FieldTextInput}
+ * @this {BlocklyCore.FieldTextInput}
  */
 function argumentReporterValidator(newValue) {
   const sourceArgBlock = this.getSourceBlock();
@@ -705,10 +702,10 @@ function argumentReporterValidator(newValue) {
   return newValue;
 }
 
-GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
+BlocklyCore.Extensions.register('argument_reporter_validator', function () {
   this.getField('VAR').setValidator(argumentReporterValidator);
   this.onchange = event => {
-    const workspace = GoogleBlockly.Workspace.getById(event.workspaceId);
+    const workspace = BlocklyCore.Workspace.getById(event.workspaceId);
     const eventBlock = workspace.getBlockById(event.blockId);
     const eventBlockIsArgumentReporter =
       eventBlock?.type === BLOCK_TYPES.argumentReporter;
@@ -717,7 +714,7 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
       BLOCK_TYPES.procedureCallReturn,
     ].includes(eventBlock?.type);
     if (eventBlockIsArgumentReporter) {
-      if (event.type === GoogleBlockly.Events.BLOCK_CHANGE) {
+      if (event.type === BlocklyCore.Events.BLOCK_CHANGE) {
         // For field value change events, we update other matching blocks within
         // the same stack.
         const otherArgBlocksInStack = workspace
@@ -751,14 +748,14 @@ GoogleBlockly.Extensions.register('argument_reporter_validator', function () {
     // or when the workspace first finishes loading.
     if (
       [
-        GoogleBlockly.Events.FINISHED_LOADING,
-        GoogleBlockly.Events.BLOCK_CHANGE,
-        GoogleBlockly.Events.BLOCK_MOVE,
+        BlocklyCore.Events.FINISHED_LOADING,
+        BlocklyCore.Events.BLOCK_CHANGE,
+        BlocklyCore.Events.BLOCK_MOVE,
       ].includes(event.type) &&
       // Avoid showing a warning when a call block's inputs are mutated.
       (!eventBlock || !eventBlockIsFunctionCall)
     ) {
-      const argReporterBlocks = GoogleBlockly.getMainWorkspace()
+      const argReporterBlocks = BlocklyCore.getMainWorkspace()
         .getAllBlocks()
         .filter(block => block.type === BLOCK_TYPES.argumentReporter);
       argReporterBlocks.forEach(updateArgReporterWarningText);
@@ -789,7 +786,7 @@ function updateArgReporterWarningText(block) {
 /**
  * Removes any unused vars that were created as a result of editing.
  * @param {string} finalName The final value of the field.
- * @this {GoogleBlockly.FieldTextInput}
+ * @this {BlocklyCore.FieldTextInput}
  */
 function finishEditing_(finalName) {
   const sourceArgBlock = this.getSourceBlock();
@@ -809,7 +806,7 @@ function finishEditing_(finalName) {
   updateArgReporterWarningText(sourceArgBlock);
 }
 
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'argument_reporter_finish_editing',
   function () {
     const varField = this.getField('VAR');
@@ -818,32 +815,29 @@ GoogleBlockly.Extensions.register(
   }
 );
 
-GoogleBlockly.Extensions.register(
-  'argument_report_get_var_models',
-  function () {
-    this.getVarModels = () => {
-      if (this.model) {
-        return [this.model];
-      }
-      if (this.isShadow()) {
-        return [
-          this.getRootBlock().argData_.find(
-            argDatum =>
-              argDatum.argId ===
-              this.outputConnection.targetConnection.getParentInput().name
-          ).model,
-        ];
-      }
-      // If we don't have a model yet, fall back on finding one based on the name.
-      const foundModel = this.workspace.getVariable(this.getFieldValue('VAR'));
-      if (foundModel) {
-        return [foundModel];
-      }
-      console.error(`No model found for argument_reporter block`);
-      return [];
-    };
-  }
-);
+BlocklyCore.Extensions.register('argument_report_get_var_models', function () {
+  this.getVarModels = () => {
+    if (this.model) {
+      return [this.model];
+    }
+    if (this.isShadow()) {
+      return [
+        this.getRootBlock().argData_.find(
+          argDatum =>
+            argDatum.argId ===
+            this.outputConnection.targetConnection.getParentInput().name
+        ).model,
+      ];
+    }
+    // If we don't have a model yet, fall back on finding one based on the name.
+    const foundModel = this.workspace.getVariable(this.getFieldValue('VAR'));
+    if (foundModel) {
+      return [foundModel];
+    }
+    console.error(`No model found for argument_reporter block`);
+    return [];
+  };
+});
 
 export function filterFunctionArgVariables(workspace, flyoutContents) {
   if (!workspace) {
@@ -908,7 +902,7 @@ function updateDefinition(block, model) {
       );
       if (argDatum) {
         argDatum.model = model;
-        GoogleBlockly.Procedures.mutateCallers(defBlock);
+        BlocklyCore.Procedures.mutateCallers(defBlock);
       }
     }
   }

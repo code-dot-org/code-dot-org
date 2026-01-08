@@ -1,0 +1,72 @@
+name 'pl-aif-2-U3-serching-function-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Searching
+
+#### Imagine opening a school website and typing **“calendar”** into the search bar. Instantly, a short list of pages appears even though the site contains hundreds of documents.
+
+<br>
+
+<img src="https://images.code.org/09f3b6ac8f017d7cae84610b797af6ad-image-1767801900953.png" alt="example of a search bar with results" width="300px" style="border-radius:10px; float:right; margin: 0 40px 10px 20px;">
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
+
+#### **Pause & Reflect**
+
+- #### How does the website decide which pages match your search?
+- #### What happens if a page *almost* matches your word, but not exactly?
+- #### Who might be helped, or left out, by how search results are ordered?
+
+<br>
+
+> #### You may have thought about things like: keywords matter, spelling matters, some results appear first, and some content may never show up at all.
+
+#### 👉 The results were created using a **searching algorithm**.
+---
+
+## What is a searching algorithm?
+
+#### A **searching algorithm** is a rule a program uses to look through data to find items that match a specific value or keyword.
+
+#### In JavaScript, searching is often used to scan arrays or strings to find matching data — like locating a student name, a message, or a product based on what a user types.
+
+---
+
+## What is a query?
+
+#### When you use a search feature, you are asking the computer a question — even if it doesn’t feel like one.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">🔍 <strong>Query</strong> is the question or request you send to a computer to get specific information back from a larger set of data.</p>
+</div>
+
+#### A query might be:
+- #### A word you type into a search bar  
+- #### A phrase like a student name or title  
+- #### A value the program is trying to find inside a list  
+
+#### The searching algorithm uses the query to decide **what counts as a match** and what does not.
+
+<br>
+
+<div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #efe7f8; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem;  margin: 0; line-height: 1.5; color: #3b0066;">
+      Every search starts with a <b>query</b>. <br>
+      Every query depends on <b>how</b> the program decides something is a match.
+    </p>
+  </div>
+
+</div>
+
+---
+
+## Next up
+
+#### Let’s take a look at how searching works in JavaScript and what “matching” really means behind the scenes.
+
+
+MARKDOWN
