@@ -8,6 +8,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -33,16 +34,18 @@ const BackpackPanel: React.FC<BackpackProps> = ({
 
   const loadBackpackFiles = useCallback(
     (showLoading: boolean) => {
-      console.log(`loading backpack files, showLoading: ${showLoading}`);
       if (backpackApi) {
         if (showLoading) {
           setIsLoading(true);
         }
         setLoadError(null);
         backpackApi.getFileList(
-          () => {
+          error => {
             setIsLoading(false);
             setLoadError('Failed to load backpack files');
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError('Backpack file list fetch error', error);
           },
           (fileList: string[]) => {
             setFileList(fileList);

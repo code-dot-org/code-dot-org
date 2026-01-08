@@ -9,6 +9,7 @@ import {
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -100,7 +101,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     } has been added to your project.`;
     const response = await backpackApi.fetchFileResponse(fileName);
     if (!response || response instanceof Error) {
-      console.error('Error fetching backpack file:', response);
+      const responseError = response instanceof Error ? response : undefined;
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Backpack file fetch error', responseError);
       addAlert('danger', errorMessage);
       return;
     }
@@ -116,6 +120,12 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       try {
         await HttpClient.put(uploadUrl, blob);
       } catch (error) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError(
+            'Backpack could not upload image file to assets channel',
+            error as Error
+          );
         addAlert('danger', errorMessage);
         return;
       }
@@ -132,11 +142,12 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         saveFile(fileId, fileContent, url);
         addAlert('success', successMessage);
       } else {
-        // todo: should we just create a new file if we can't find an existing one?
-        console.error(
-          'Could not find file ID for file name:',
-          selectedFileName
-        );
+        // If for some reason we can't find the file to replace, show an error.
+        // This should not happen, but could theoretically happen if the project was updated while
+        // we were importing the backpack file.
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Backpack could not find file to replace in project');
         addAlert('danger', errorMessage);
         return;
       }
@@ -157,7 +168,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         [fileName],
         error => {
           addAlert('danger', `Failed to delete ${fileName} from Backpack.`);
-          // todo: log error to cloudwatch
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError('Backpack file delete error', error);
         },
         () => {
           // log to statsig
