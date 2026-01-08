@@ -1,4 +1,8 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import {
   BodyTwoText,
@@ -6,7 +10,6 @@ import {
   Heading4,
 } from '@code-dot-org/component-library/typography';
 import {TextLink} from '@dsco_/link';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
@@ -266,58 +269,53 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.buttonsContainer}>
                 {isTeacherOrSignedOut ? (
                   <>
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      size="medium"
+                    <LinkButton
+                      color={buttonColors.black}
+                      type="secondary"
+                      href={pathToCourse}
+                      text={i18n.seeCurriculumDetails()}
                       className={centererStyle.buttonFlex}
-                      aria-label={i18n.quickViewDescription({
+                      ariaLabel={i18n.quickViewDescription({
                         course_name: courseDisplayName,
                       })}
-                      href={pathToCourse}
-                    >
-                      {i18n.seeCurriculumDetails()}
-                    </MuiButton>
-                    <MuiButton
-                      variant="contained"
-                      color="primary"
-                      size="medium"
-                      className={centererStyle.buttonFlex}
+                    />
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
                       onClick={() => assignButtonOnClick('expanded-card')}
-                      aria-label={assignButtonDescription}
-                      type="button"
-                    >
-                      {i18n.assignToClassSections()}
-                    </MuiButton>
+                      ariaLabel={assignButtonDescription}
+                      text={i18n.assignToClassSections()}
+                      className={centererStyle.buttonFlex}
+                    />
                   </>
                 ) : (
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    size="medium"
-                    className={centererStyle.buttonFlex}
-                    aria-label={i18n.tryCourseNow({
+                  <LinkButton
+                    color={buttonColors.purple}
+                    type="primary"
+                    href={pathToCourse}
+                    ariaLabel={i18n.tryCourseNow({
                       course_name: courseDisplayName,
                     })}
-                    href={pathToCourse}
-                  >
-                    {i18n.tryNow()}
-                  </MuiButton>
+                    text={i18n.tryNow()}
+                    className={centererStyle.buttonFlex}
+                  />
                 )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
               <div className={style.closeButtonContainer}>
-                <MuiIconButton
+                <Button
                   onClick={onClose}
-                  variant="text"
-                  color="secondary"
-                  size="medium"
+                  icon={{
+                    iconName: 'xmark',
+                    iconStyle: 'solid',
+                  }}
+                  ariaLabel="Close Button"
+                  isIconOnly
+                  type="tertiary"
+                  color={buttonColors.black}
                   className={style.closeButton}
-                  aria-label="Close Button"
-                >
-                  <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
-                </MuiIconButton>
+                />
               </div>
               {recommendedSimilarCurriculum && (
                 <div className={style.relatedContainer}>

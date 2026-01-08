@@ -1,8 +1,12 @@
 import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@code-dot-org/component-library/button';
+import {
   BodyThreeText,
   Heading4,
 } from '@code-dot-org/component-library/typography';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
@@ -345,58 +349,48 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               {onQuickViewClick && (
-                <MuiButton
+                <Button
                   onClick={onQuickViewClick}
-                  variant="outlined"
-                  color="secondary"
-                  size="medium"
+                  ariaLabel={quickViewButtonDescription}
+                  text={i18n.quickView()}
                   className={`${style.buttonFlex} ${style.quickViewButton}`}
-                  aria-label={quickViewButtonDescription}
-                  type="button"
-                >
-                  {i18n.quickView()}
-                </MuiButton>
+                  type="secondary"
+                  color={buttonColors.black}
+                />
               )}
               {isTeacherOrSignedOut && (
                 <>
-                  <MuiButton
-                    variant="outlined"
-                    color="secondary"
-                    size="medium"
-                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
-                    aria-label={i18n.learnMoreDescription({
+                  <LinkButton
+                    color={buttonColors.black}
+                    type="secondary"
+                    href={pathToCourse}
+                    ariaLabel={i18n.learnMoreDescription({
                       course_name: courseDisplayName,
                     })}
-                    href={pathToCourse}
-                  >
-                    {i18n.learnMore()}
-                  </MuiButton>
-                  <MuiButton
-                    variant="contained"
-                    color="primary"
-                    size="medium"
-                    className={style.buttonFlex}
+                    text={i18n.learnMore()}
+                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                  />
+                  <Button
+                    color={buttonColors.purple}
+                    type="primary"
                     onClick={() => handleClickAssign('top-card')}
-                    aria-label={assignButtonDescription}
-                    type="button"
-                  >
-                    {assignButtonText}
-                  </MuiButton>
+                    ariaLabel={assignButtonDescription}
+                    text={assignButtonText}
+                    className={style.buttonFlex}
+                  />
                 </>
               )}
               {!isTeacherOrSignedOut && (
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  size="medium"
-                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
-                  aria-label={i18n.tryCourseNow({
+                <LinkButton
+                  color={buttonColors.purple}
+                  type="primary"
+                  href={pathToCourse}
+                  ariaLabel={i18n.tryCourseNow({
                     course_name: courseDisplayName,
                   })}
-                  href={pathToCourse}
-                >
-                  {i18n.tryNow()}
-                </MuiButton>
+                  text={i18n.tryNow()}
+                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+                />
               )}
             </div>
           </div>
