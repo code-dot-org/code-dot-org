@@ -25,6 +25,7 @@ interface BackpackFileChipProps extends BackpackProps {
   addAlert: (type: 'success' | 'danger', message: string) => void;
 }
 
+// TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   fileName,
   backpackApi,
@@ -81,7 +82,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         title: 'A file with this name already exists',
-        message: `Would you like to replace the current file with this file or import this file as ${newFileName}?`,
+        message: `Would you like to replace the existing file with this file or import this file as ${newFileName}?`,
         confirmText: 'Replace existing file',
         neutralText: `Import as ${newFileName}`,
       });
@@ -130,7 +131,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericConfirmation,
       title: 'Are you sure?',
-      message: `You are about to delete ${fileName} from your backpack.`,
+      message: `You are about to delete ${fileName} from your Backpack.`,
       confirmText: 'Delete',
       destructive: true,
     });
@@ -138,13 +139,16 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       backpackApi.deleteFiles(
         [fileName],
         error => {
-          addAlert('danger', `Failed to delete ${fileName} from Backpack.`);
+          addAlert(
+            'danger',
+            `Failed to delete ${fileName} from your Backpack.`
+          );
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Backpack file delete error', error);
         },
         () => {
-          // log to statsig
+          // TODO: log to statsig
         }
       );
     }

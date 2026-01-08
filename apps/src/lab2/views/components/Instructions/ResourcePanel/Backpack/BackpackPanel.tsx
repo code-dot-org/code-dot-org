@@ -25,7 +25,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
 }) => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
-  const [loadError, setLoadError] = useState<string | null>(null);
+  const [loadError, setLoadError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const [alertList, setAlertList] = useState<
@@ -38,11 +38,11 @@ const BackpackPanel: React.FC<BackpackProps> = ({
         if (showLoading) {
           setIsLoading(true);
         }
-        setLoadError(null);
+        setLoadError(false);
         backpackApi.getFileList(
           error => {
             setIsLoading(false);
-            setLoadError('Failed to load backpack files');
+            setLoadError(true);
             Lab2Registry.getInstance()
               .getMetricsReporter()
               .logError('Backpack file list fetch error', error);
@@ -69,7 +69,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
   }, [loadBackpackFiles, backpackApi]);
 
   if (!backpackApi) {
-    let titleMessage = 'Backpack is unavailable';
+    let titleMessage = 'Your Backpack is unavailable';
     let detailMessage = 'Please reload the page to try again.';
     if (!currentUserId) {
       titleMessage = "You're signed out";
@@ -107,10 +107,10 @@ const BackpackPanel: React.FC<BackpackProps> = ({
         </div>
         <div className={moduleStyles.backpackMessageText}>
           <BodyTwoText>
-            <StrongText>Backpack is loading</StrongText>
+            <StrongText>Your Backpack is loading</StrongText>
           </BodyTwoText>
           <BodyFourText>
-            Files in your backpack will appear here shortly
+            Files in your Backpack will appear here shortly
           </BodyFourText>
         </div>
       </div>
@@ -132,7 +132,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
             <StrongText>An error occurred</StrongText>
           </BodyTwoText>
           <BodyFourText>
-            The backpack failed to load, please try again.
+            Your Backpack failed to load, please try again.
           </BodyFourText>
         </div>
         <Button
@@ -159,10 +159,10 @@ const BackpackPanel: React.FC<BackpackProps> = ({
         </div>
         <div className={moduleStyles.backpackMessageText}>
           <BodyTwoText>
-            <StrongText>Your backpack is empty</StrongText>
+            <StrongText>Your Backpack is empty</StrongText>
           </BodyTwoText>
           <BodyFourText>
-            Files you save to your backpack will appear here.
+            Files you save to your Backpack will appear here.
           </BodyFourText>
         </div>
       </div>
