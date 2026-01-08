@@ -101,6 +101,20 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
       end
     end
 
+    context 'when teacher email is internal' do
+      let(:teacher) {create(:teacher, email: 'teacher@code.org', name: teacher_name)}
+
+      it 'does not warn teacher' do
+        expect_teacher_warning_to_be_sent.never
+        send_warning_emails
+      end
+
+      it 'does not increment num_teachers_warned' do
+        send_warning_emails
+        _(described_instance.send(:num_teachers_warned)).must_equal 0
+      end
+    end
+
     context 'when dry run' do
       let(:dry_run) {true}
       it 'does not send emails in dry run mode' do

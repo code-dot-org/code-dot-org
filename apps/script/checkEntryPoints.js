@@ -91,7 +91,6 @@ const SILENCED = [
 
   // other entry points
   'blockly',
-  'googleblockly',
   'brambleHost',
   'levelbuilder',
 

@@ -1,6 +1,6 @@
 - content_for(:head) do
   - @pool = @blocks && @blocks[0] ? @blocks[0][:pool] : ''
-  %script{src: webpack_asset_path('js/googleblockly.js')}
+  %script{src: webpack_asset_path('js/blockly.js')}
   %script{src: webpack_asset_path('js/blocks/index.js')}
 
 %h1= 'Blocks'

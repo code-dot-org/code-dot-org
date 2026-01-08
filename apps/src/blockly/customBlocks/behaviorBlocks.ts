@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
@@ -16,7 +16,7 @@ import {behaviorGetMutator} from './mutators/behaviorGetMutator';
  * Replaces blocks that are part of core Blockly.
  * @type {!Object<string, Object>}
  */
-export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
+export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a behavior (a type of procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
@@ -124,14 +124,14 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 ]);
 
 // Mutators and Extensions
-GoogleBlockly.Extensions.registerMutator(
+BlocklyCore.Extensions.registerMutator(
   'behavior_def_mutator',
   behaviorDefMutator
 );
 
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'behaviors_block_frame',
   function (this: ExtendedBlockSvg) {
     if (
@@ -159,12 +159,12 @@ GoogleBlockly.Extensions.register(
 );
 
 // This extension is used to update the block's behaviorId when a behavior is renamed in start mode.
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'behaviors_name_validator',
   function (this: ExtendedBlockSvg) {
     const nameField = this.getField('NAME');
     nameField?.setValidator(function (
-      this: GoogleBlockly.Field<string>,
+      this: BlocklyCore.Field<string>,
       newValue
     ) {
       // The default validator provided by mainline Blockly. Strips whitespace.
@@ -183,7 +183,7 @@ GoogleBlockly.Extensions.register(
   }
 );
 
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'on_behavior_def_change',
   function (this: ExtendedBlockSvg) {
     this.workspace.addChangeListener(event => {
@@ -192,18 +192,18 @@ GoogleBlockly.Extensions.register(
   }
 );
 
-GoogleBlockly.Extensions.registerMutator(
+BlocklyCore.Extensions.registerMutator(
   'behavior_get_mutator',
   behaviorGetMutator
 );
 
 // Using register instead of registerMixin to avoid triggering warnings about
 // overriding built-ins.
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'behavior_caller_get_def_mixin',
   behaviorCallerGetDefMixin
 );
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'behavior_create_def_mixin',
   behaviorCreateDefMixin
 );
@@ -214,7 +214,7 @@ const behaviorCallerGetDefBlockMixin = {
   hasReturn_: false,
   defType_: BLOCK_TYPES.behaviorDefinition,
 };
-GoogleBlockly.Extensions.registerMixin(
+BlocklyCore.Extensions.registerMixin(
   'behavior_caller_get_def_block_mixin',
   behaviorCallerGetDefBlockMixin
 );
@@ -228,10 +228,10 @@ GoogleBlockly.Extensions.registerMixin(
  * @returns {import('blockly/core/utils/toolbox').FlyoutDefinition} an array of XML block elements
  */
 export function flyoutCategory(
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   functionEditorOpen = false
 ) {
-  const blockList: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
+  const blockList: BlocklyCore.utils.toolbox.FlyoutItemInfoArray = [];
 
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
@@ -286,7 +286,7 @@ export function flyoutCategory(
 }
 
 const getNewBehaviorButtonWithCallback = (
-  workspace: GoogleBlockly.WorkspaceSvg
+  workspace: BlocklyCore.WorkspaceSvg
 ) => {
   const callbackkey = 'newBehaviorCallback';
   workspace.registerButtonCallback(callbackkey, () => {
@@ -304,13 +304,13 @@ const getNewBehaviorButtonWithCallback = (
 // Added as a change listener. If a behavior name changes, we need to update any
 // behavior picker blocks that have the old name currently selected.
 function onBehaviorDefChange(
-  event: GoogleBlockly.Events.Abstract,
+  event: BlocklyCore.Events.Abstract,
   block: ExtendedBlockSvg
 ) {
   if (event.type !== Blockly.Events.CHANGE) {
     return;
   }
-  const changeEvent = event as GoogleBlockly.Events.BlockChange;
+  const changeEvent = event as BlocklyCore.Events.BlockChange;
   if (
     block.id === changeEvent.blockId &&
     // Excludes changes to the description field.
@@ -353,7 +353,7 @@ function updateBehaviorPickerBlocks(oldValue: string, newValue: string) {
 }
 
 const findAllBlocksOfType = (type: string) => {
-  const blocks: GoogleBlockly.Block[] = [];
+  const blocks: BlocklyCore.Block[] = [];
   Blockly.Workspace.getAll().forEach(workspace =>
     blocks.push(
       ...workspace.getAllBlocks().filter(block => block.type === type)

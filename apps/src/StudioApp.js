@@ -1277,7 +1277,7 @@ StudioApp.prototype.inject = function (div, options) {
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_),
   };
 
-  // Allows Google Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
+  // Allows Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
   if (experiments.isEnabled('zelos')) {
     options.renderer = Renderers.ZELOS;
   } else if (experiments.isEnabled('geras')) {
@@ -2933,9 +2933,9 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
   // behavior. We want a way to specify no toolbox, which is <xml></xml>.
-  // Google Blockly may also add a xmlns attribute to this xml.
+  // Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
-    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // Update legacy Blockly XML so it is compatible with mainline Blockly
     // (Nothing is changed if we are using CDO Blockly.)
     config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
       config.level.toolbox

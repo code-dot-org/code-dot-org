@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
@@ -271,17 +271,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, mode, calculateMinMax]);
 
   const labels = useMemo(() => {
-    const tempWorkspace = new GoogleBlockly.Workspace();
+    const tempWorkspace = new BlocklyCore.Workspace();
     const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
     const foregroundLabels = getLabelMap(
-      blocksSvg[0].getField('EFFECT') as GoogleBlockly.FieldDropdown
+      blocksSvg[0].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const backgroundLabels = getLabelMap(
-      blocksSvg[1].getField('EFFECT') as GoogleBlockly.FieldDropdown
+      blocksSvg[1].getField('EFFECT') as BlocklyCore.FieldDropdown
     );
     const paletteLabels = getLabelMap(
-      blocksSvg[1].getField('PALETTE') as GoogleBlockly.FieldDropdown
+      blocksSvg[1].getField('PALETTE') as BlocklyCore.FieldDropdown
     );
 
     tempWorkspace.dispose();
