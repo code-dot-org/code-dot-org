@@ -240,6 +240,15 @@ Dance.prototype.initSongs = async function (config) {
     initSongs({
       useRestrictedSongs: config.useRestrictedSongs,
       selectSongOptions: config.level,
+      onAuthError: () => {
+        analyticsReporter.sendEvent(
+          EVENTS.DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR,
+          {
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }
+        );
+      },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
 
