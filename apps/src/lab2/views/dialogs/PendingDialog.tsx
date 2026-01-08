@@ -5,15 +5,9 @@ import React from 'react';
 
 export type dialogCallback = (args?: unknown) => void;
 
-type PendingDialogTitleProps =
-  | {
-      title?: never;
-      titleComponent?: React.ReactNode;
-    }
-  | {
-      title?: string;
-      titleComponent?: never;
-    };
+type PendingDialogTitleProps = {
+  title?: string;
+};
 
 type PendingDialogBodyProps =
   | {

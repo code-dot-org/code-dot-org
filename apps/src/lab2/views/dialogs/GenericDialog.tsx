@@ -13,15 +13,9 @@ export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
 export type dialogCallback = (args?: unknown) => void;
 
-type GenericDialogTitleProps =
-  | {
-      title?: never;
-      titleComponent?: React.ReactNode;
-    }
-  | {
-      title?: string;
-      titleComponent?: never;
-    };
+type GenericDialogTitleProps = {
+  title?: string;
+};
 
 export type GenericDialogBodyProps =
   | {
