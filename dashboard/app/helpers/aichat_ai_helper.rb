@@ -207,4 +207,52 @@ module AichatAiHelper
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
     TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
   end
+
+  def self.handle_error(source, exception, request, locale)
+    if rack_env?(:development)
+      puts "#{source} Error: #{exception.full_message}"
+    end
+
+    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    Honeybadger.notify(
+      "#{source} failed with unexpected error: #{exception.message}",
+      context: {
+        request: request.to_json,
+        user_id: request.user_id,
+        locale: locale
+      }
+    )
+  end
+
+  def self.build_request_attributes(user_id, data)
+    context = data[:aichatContext] || {}
+    model_customizations = data[:modelParameters] || {}
+
+    # Add client type to model parameters.
+    model_customizations[:clientType] ||= context[:clientType]
+
+    {
+      user_id:              user_id,
+      model_customizations: model_customizations,
+      stored_messages:      successful_stored_chat_messages(data[:storedMessages]),
+      new_message:          data[:newMessage] || {},
+      level_id:             context[:currentLevelId],
+      script_id:            context[:scriptId],
+      project_id:           project_id_from_channel_id(context),
+    }
+  end
+
+  def self.successful_stored_chat_messages(stored_messages)
+    # Filter out non-OK messages (e.g. errors).
+    Array(stored_messages).select do |message|
+      message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        message[:chatMessageText].present?
+    end
+  end
+
+  def self.project_id_from_channel_id(context)
+    return unless context[:channelId]
+    _, project_id = storage_decrypt_channel_id(context[:channelId])
+    project_id
+  end
 end
