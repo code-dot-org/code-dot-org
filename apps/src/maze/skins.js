@@ -45,6 +45,8 @@ var CONFIGS = {
     idlePegmanAnimation: 'idle_avatar.gif',
     wallPegmanAnimation: 'wall_avatar.png',
     movePegmanAnimation: 'move_avatar.png',
+    movePegmanCol: 4, // 4 columns in the sprite sheet
+    movePegmanRow: 36, // 1800px / 50px = 36 rows
     hittingWallAnimation: 'wall.gif',
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
@@ -142,9 +144,14 @@ var CONFIGS = {
 
     obstacleScale: 1.2,
     additionalSound: true,
+    avatar: 'avatar.png', // This is the PNG file used by displayPegman at the end
     idlePegmanAnimation: 'avatar.png',
+    idlePegmanCol: 4,
+    idlePegmanRow: 1,
     wallPegmanAnimation: 'avatar.png',
     movePegmanAnimation: 'avatar.png',
+    movePegmanCol: 1,
+    movePegmanRow: 1,
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
     // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
@@ -152,8 +159,8 @@ var CONFIGS = {
     hittingWallAnimation: 'wall.gif',
     approachingGoalAnimation: 'close_goal.png',
     background: 'background.png',
-    pegmanHeight: 68,
-    pegmanWidth: 51,
+    pegmanHeight: 60,
+    pegmanWidth: 60,
     pegmanYOffset: -14,
     turnAfterVictory: true,
   },
@@ -166,9 +173,10 @@ var CONFIGS = {
     largerObstacleAnimationTiles: 'tiles-broken.png',
 
     additionalSound: true,
-    idlePegmanAnimation: 'idle_avatar_sheet.png',
+    avatar: 'avatar.png', // This is the PNG file used by displayPegman at the end
+    idlePegmanAnimation: 'avatar.png',
     idlePegmanAnimationSpeedScale: 1.5,
-    idlePegmanCol: 1, // CHANGED FROM 4 TO 1
+    idlePegmanCol: 4, // 4 columns for direction sprites
     // GLOBAL ANIMATION DISABLE: Force idle animation to 1 frame
     idlePegmanRow: 1,
 
@@ -186,14 +194,16 @@ var CONFIGS = {
     celebratePegmanRow: 1,
 
     movePegmanAnimation: 'move_avatar.png',
+    movePegmanCol: 1,
+    movePegmanRow: 1,
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
     // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
     movePegmanAnimationFrameNumber: 1,
 
     approachingGoalAnimation: 'close_goal.png',
-    pegmanHeight: 107,
-    pegmanWidth: 80,
+    pegmanHeight: 90,
+    pegmanWidth: 90,
     pegmanXOffset: -12,
     pegmanYOffset: -30,
     turnAfterVictory: true,

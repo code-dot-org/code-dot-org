@@ -69,6 +69,8 @@ module.exports = class Maze {
 
     const skin = config.skin;
     const level = config.level;
+    // Store skinId to check for bird/scrat levels
+    this.skinId = config.skinId;
 
     // Override scalars.
     for (var key in level.scale) {
