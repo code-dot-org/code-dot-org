@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import Dialog from '@code-dot-org/component-library/dialog';
 import Modal from '@code-dot-org/component-library/modal';
 import React, {useMemo} from 'react';
 
@@ -38,6 +39,8 @@ export type GenericDialogProps = GenericDialogTitleProps &
       };
     };
     getButtonCallback?: typeof defaultGetButtonCallback;
+    /** Use the Modal component instead of Dialog. Defaults to false (Dialog). */
+    useModal?: boolean;
   };
 
 import moduleStyles from './generic-dialog.module.scss';
@@ -94,6 +97,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   message,
   bodyComponent,
   getButtonCallback = defaultGetButtonCallback,
+  useModal = false,
 }) => {
   const dialogControl = useDialogControl();
 
@@ -125,8 +129,10 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
 
   useEnterKeyboardTrap(confirmCallback);
 
+  const DialogComponent = useModal ? Modal : Dialog;
+
   return (
-    <Modal
+    <DialogComponent
       title={title}
       customContent={bodyComponent || message}
       customBottomContent={
