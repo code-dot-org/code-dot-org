@@ -38,6 +38,7 @@ module LangfuseClientHelper
           password: @secret_key
         },
         headers: headers,
+        body: dataset_item.to_json
       )
       response
     end

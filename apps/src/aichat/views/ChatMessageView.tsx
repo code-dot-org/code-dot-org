@@ -6,13 +6,17 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ChatAsset,
   type ChatMessage as ChatMessageType,
   isCompletedChatMessage,
   isServerChatEvent,
+  ModelParameters,
 } from '../types';
 
 import FilePreview from './assets/FilePreview';
@@ -29,6 +33,8 @@ interface ChatMessageViewProps {
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
   isLastMessage?: boolean;
+  clientType?: string;
+  modelParameters?: ModelParameters;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
@@ -37,6 +43,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   buildAssetUrl,
   isAiTutorVersion,
   isLastMessage,
+  clientType,
+  modelParameters,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {
@@ -110,10 +118,14 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
           />
           {experiments.isEnabledAllowingQueryString(
             experiments.LOG_TO_LANGFUSE
-            // Pass  id: chatMessage.id, and chatMessageText: chatMessage.chatMessageText as props
-            // then in the button pull off the other analytics props from useAppSelector to log to Langfuse
-            // Finish the implementation of saving to Langfuse dataset in FlagResponseButton.tsx & API
-          ) && <FlagResponseButton />}
+          ) &&
+            clientType == AiChatClientTypes.AI_TUTOR && (
+              <FlagResponseButton
+                chatMessageId={chatMessage.updateId ?? ''}
+                chatMessageText={chatMessage.chatMessageText}
+                modelParameters={modelParameters}
+              />
+            )}
         </div>
       ) : null;
   }

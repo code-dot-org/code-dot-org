@@ -3,20 +3,53 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import React, {useState} from 'react';
 
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import style from './flag-response-button.module.scss';
 
-const FlagResponseButton: React.FC = ({}) => {
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+const FlagResponseButton: React.FC<{
+  chatMessageId: string;
+  chatMessageText: string;
+  modelParameters?: Record<string, unknown>;
+}> = ({chatMessageId, chatMessageText, modelParameters}) => {
   const [showInput, setShowInput] = useState(false);
   const [flagReason, setFlagReason] = useState('');
 
-  const dispatch = useAppDispatch();
+  const aichat = useAppSelector(state => state.aichat);
+  const analyticsData = useAppSelector(state => state.pageConstants);
 
-  const state = useAppSelector(state => state);
+  // console.log('current state:', state);
 
-  console.log('current state:', state);
+  const saveResponseToLangfuse = async (
+    chatMessageId: string,
+    chatMessageText: string,
+    flagReason: string,
+    modelId: string,
+    systemPrompt: string
+  ) => {
+    const url = `/langfuse/add_dataset_item`;
+    const payload = {
+      datasetName: 'raw-wonky-ai-responses',
+      input: {text: chatMessageText},
+      metadata: {
+        messageId: chatMessageId,
+        reason: flagReason,
+        conversation: aichat.chatEventsCurrent,
+        appType: analyticsData.appType,
+        scriptId: analyticsData.serverScriptId,
+        levelId: analyticsData.serverLevelId,
+        userId: analyticsData.userId,
+        modelId: modelId,
+        systemPromptName: systemPrompt,
+      },
+    };
+    const response = await HttpClient.post(url, JSON.stringify(payload), true, {
+      'Content-Type': 'application/json; charset=UTF-8',
+    });
+    return response.ok;
+  };
 
   return (
     <div className={style.flagWrapper}>
@@ -54,7 +87,13 @@ const FlagResponseButton: React.FC = ({}) => {
           <Button
             onClick={() => {
               setFlagReason('');
-              console.log('save flag to langfuse dataset!');
+              saveResponseToLangfuse(
+                chatMessageId,
+                chatMessageText,
+                flagReason,
+                modelParameters?.selectedModelId as string,
+                modelParameters?.systemPromptName as string
+              );
             }}
             color="purple"
             size="xs"

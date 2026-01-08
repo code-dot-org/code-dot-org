@@ -47,6 +47,8 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
   });
 
+  console.log('modelParameters:', modelParameters);
+
   const chatButtons = useMemo(() => {
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({

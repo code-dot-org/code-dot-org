@@ -1335,6 +1335,7 @@ Dashboard::Application.routes.draw do
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     get '/langfuse/get_prompt', to: 'langfuse#get_prompt'
+    post '/langfuse/add_dataset_item', to: 'langfuse#add_dataset_item'
 
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'

@@ -7,7 +7,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
-import {ChatAsset, ChatEvent, isChatMessage} from '../types';
+import {ChatAsset, ChatEvent, isChatMessage, ModelParameters} from '../types';
 
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
@@ -16,6 +16,8 @@ import WaitingAnimation from './WaitingAnimation';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatEventsListProps {
+  clientType?: string;
+  modelParameters?: ModelParameters;
   events: ChatEvent[];
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
@@ -26,6 +28,8 @@ interface ChatEventsListProps {
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
+  clientType,
+  modelParameters,
   events,
   isTeacherView,
   buildAssetUrl,
@@ -208,6 +212,8 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                   isTeacherView={isTeacherView}
                   buildAssetUrl={buildAssetUrl}
                   isAiTutorVersion={isAiTutorVersion}
+                  clientType={clientType}
+                  modelParameters={modelParameters}
                   isLastMessage={isLastMessage}
                   ref={isLastMessage ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
