@@ -13,9 +13,9 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {createUuid} from '@cdo/apps/utils';
+
+import {fetchAndSaveFile} from './saveToBackpackHelper';
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
@@ -50,7 +50,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
 
-  // TODO: log errors to cloudwatch
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
@@ -63,7 +62,16 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         confirmText: `Import as ${newFileName}`,
       });
       if (results.type === 'confirm') {
-        await fetchAndSaveFile(fileName, newFileName);
+        await fetchAndSaveFile(
+          backpackApi,
+          channelId,
+          addAlert,
+          saveFile,
+          createNewFile,
+          findIdForFileName,
+          fileName,
+          newFileName
+        );
       }
       return;
     }
@@ -79,78 +87,41 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       });
       if (results.type === 'confirm') {
         // Import as replacement
-        await fetchAndSaveFile(fileName);
+        await fetchAndSaveFile(
+          backpackApi,
+          channelId,
+          addAlert,
+          saveFile,
+          createNewFile,
+          findIdForFileName,
+          fileName
+        );
       } else if (results.type === 'neutral') {
         // Import as new file
-        await fetchAndSaveFile(fileName, newFileName);
+        await fetchAndSaveFile(
+          backpackApi,
+          channelId,
+          addAlert,
+          saveFile,
+          createNewFile,
+          findIdForFileName,
+          fileName,
+          newFileName
+        );
       }
       return;
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
-      await fetchAndSaveFile(fileName, fileName);
-    }
-  };
-
-  const fetchAndSaveFile = async (
-    selectedFileName: string,
-    newFileName?: string
-  ) => {
-    const errorMessage = `An error occurred while adding ${fileName} to your project, please try again.`;
-    const successMessage = `${
-      newFileName || selectedFileName
-    } has been added to your project.`;
-    const response = await backpackApi.fetchFileResponse(fileName);
-    if (!response || response instanceof Error) {
-      const responseError = response instanceof Error ? response : undefined;
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Backpack file fetch error', responseError);
-      addAlert('danger', errorMessage);
-      return;
-    }
-    let fileContent = '';
-    let url: string | undefined = undefined;
-    if (response?.headers.get('Content-Type')?.startsWith('image/')) {
-      // Handle image file content as a blob, and upload as an asset.
-      // Store the url as the new file contents.
-      const blob = await response.blob();
-      const uuid = createUuid();
-      const fileType = fileName.split('.').pop();
-      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
-      try {
-        await HttpClient.put(uploadUrl, blob);
-      } catch (error) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError(
-            'Backpack could not upload image file to assets channel',
-            error as Error
-          );
-        addAlert('danger', errorMessage);
-        return;
-      }
-      url = uploadUrl;
-    } else {
-      fileContent = await response.text();
-    }
-    if (newFileName) {
-      createNewFile(newFileName, fileContent, url);
-      addAlert('success', successMessage);
-    } else {
-      const fileId = findIdForFileName(selectedFileName);
-      if (fileId) {
-        saveFile(fileId, fileContent, url);
-        addAlert('success', successMessage);
-      } else {
-        // If for some reason we can't find the file to replace, show an error.
-        // This should not happen, but could theoretically happen if the project was updated while
-        // we were importing the backpack file.
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError('Backpack could not find file to replace in project');
-        addAlert('danger', errorMessage);
-        return;
-      }
+      await fetchAndSaveFile(
+        backpackApi,
+        channelId,
+        addAlert,
+        saveFile,
+        createNewFile,
+        findIdForFileName,
+        fileName,
+        fileName
+      );
     }
   };
 
