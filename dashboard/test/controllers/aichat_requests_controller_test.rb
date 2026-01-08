@@ -16,7 +16,6 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @default_aichat_context = {
       currentLevelId: @level.id,
       scriptId: @script.id,
-      channelId: 'test',
       clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
     }
 
