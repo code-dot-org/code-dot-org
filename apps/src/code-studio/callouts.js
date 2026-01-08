@@ -175,7 +175,7 @@ export function addCallouts(callouts) {
     }
 
     // If the callout is in #codeWorkspace and is not currently visible,
-    // we don't want to show it on page load. This is because Google Blockly
+    // we don't want to show it on page load. This is becauses Blockly
     // labs can have a hidden (on start) function editor workspace that we don't
     // want to show callouts for.
     const container = $('#codeWorkspace');

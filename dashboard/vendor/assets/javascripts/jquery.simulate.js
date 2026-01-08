@@ -364,7 +364,6 @@
     simulateDrag: function() {
       if (
         window.Blockly &&
-        Blockly.version === "Google" &&
         window["PointerEvent"]
       ) {
         touchMappings = {
