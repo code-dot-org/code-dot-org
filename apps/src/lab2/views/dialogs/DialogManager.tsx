@@ -104,7 +104,9 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
       }}
     >
       {DialogView && <DialogView {...activeDialog?.dialogArgs} />}
-      {children}
+      {/* Adding inert attribute to disable interaction with underlying content
+          when a dialog is open so keyboard navigation works as expected */}
+      <div {...(DialogView ? {inert: ''} : {})}>{children}</div>
     </DialogControlContext.Provider>
   );
 };
