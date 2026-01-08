@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-05 21:24:31 UTC",
+    "serialized_at": "2026-01-07 17:23:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -876,6 +876,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filter-function-1"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -898,6 +901,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filter-function-1-2"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -920,6 +926,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-serching-function-2"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -947,6 +956,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-aif-2-U3-search-function-2-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-search-function-2-2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-sorting-function-2"
+        ],
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-aif-2-U3-sorting-function-2"
         ],
         "lesson.key": "lesson-1",
@@ -959,11 +993,36 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
-      "activity_section_position": 5,
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-sorting-function-2-2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-pipeline-4"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -981,11 +1040,14 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
-      "activity_section_position": 6,
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filter-weblab-5"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -1003,11 +1065,14 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
-      "activity_section_position": 7,
+      "chapter": 39,
+      "position": 39,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U3-filt-seach-sort-CFU-6"
+        ],
         "progression": "Filter, Search, and Sort"
       },
       "bonus": false,
@@ -1424,9 +1489,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U3-search-function-2-2",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-search-function-2-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-2-U3-sorting-function-2",
         "script_level.level_keys": [
           "pl-aif-2-U3-sorting-function-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "447eb608-3fa8-4b1a-a5e0-d6425eef1905"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-sorting-function-2-2",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
