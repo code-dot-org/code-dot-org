@@ -1,7 +1,7 @@
 %h1 Deep Linking
 - if @deep_linking_settings.present?
   = @deep_linking_settings.to_s
-  = form_with do |f|
+  = form_with url: submit_lti_v1_deep_linking_path, method: :post do |f|
     f.hidden_field :deep_linking_settings, value: @deep_linking_settings.to_json
     = f.submit "Submit Selected Items"
 - else
