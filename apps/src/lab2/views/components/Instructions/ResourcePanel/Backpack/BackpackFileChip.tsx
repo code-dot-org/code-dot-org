@@ -22,6 +22,7 @@ interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
+  refreshFileList: () => void;
 }
 
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -32,6 +33,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   saveFile,
   createNewFile,
   findIdForFileName,
+  refreshFileList,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toUpperCase();
   const fileIcon = useMemo(
@@ -50,10 +52,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const dialogControl = useDialogControl();
 
   // TODO: log errors to cloudwatch
-  // TODO: chain of modals to handle duplicates
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
-    console.log({fileName, isSupportFileName, newFileName});
     if (isSupportFileName) {
       // The user wants to import a file that has the same name as a hidden support file.
       // Give the user a choice to import with a new name or cancel the import.
@@ -145,8 +145,28 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     }
   };
 
-  const handleDelete = () => {
-    console.log('deleting file from backpack:', fileName);
+  const handleDelete = async () => {
+    // Show confirmation modal
+    const results = await dialogControl?.showDialog({
+      type: DialogType.GenericConfirmation,
+      title: 'Are you sure?',
+      message: `You are about to delete ${fileName} from your backpack.`,
+      confirmText: 'Delete',
+      destructive: true,
+    });
+    if (results.type === 'confirm') {
+      backpackApi.deleteFiles(
+        [fileName],
+        error => {
+          addAlert('danger', `Failed to delete ${fileName} from Backpack.`);
+          // todo: log error to cloudwatch
+        },
+        () => {
+          refreshFileList();
+          // log to statsig
+        }
+      );
+    }
   };
 
   return (

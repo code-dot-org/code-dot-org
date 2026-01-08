@@ -180,6 +180,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
           saveFile={saveFile}
           createNewFile={createNewFile}
           findIdForFileName={findIdForFileName}
+          refreshFileList={loadBackpackFiles}
         />
       ))}
     </div>
