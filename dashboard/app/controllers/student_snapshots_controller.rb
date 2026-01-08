@@ -1,4 +1,6 @@
 class StudentSnapshotsController < ApplicationController
+  include LevelsHelper
+
   before_action :authenticate_user!
 
   layout false
@@ -51,5 +53,21 @@ class StudentSnapshotsController < ApplicationController
     end
 
     render json: {cfu_levels: cfu_levels_data}
+  end
+
+  # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+  def student_code
+    lesson = Lesson.find_by(id: params[:lesson_id])
+    return render json: {error: "Can't find Lesson id=#{params[:lesson_id]}"}, status: :bad_request unless lesson
+
+    # Get the last Pythonlab level for this lesson
+    level = lesson.levels.where(type: 'Pythonlab').last
+
+    if level
+      student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
+      render json: {studentCode: student_code_data[:student_code]}
+    else
+      render json: {studentCode: nil}
+    end
   end
 end
