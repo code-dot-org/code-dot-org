@@ -470,10 +470,6 @@ FactoryBot/FactoryClassName:
 FactoryBot/FactoryAssociationWithStrategy: # new in 2.23
   Enabled: false
 
-# Offense count: 111
-FactoryBot/AssociationStyle: # new in 2.23
-  Enabled: false
-
 # Offense count: 6
 FactoryBot/RedundantFactoryOption: # new in 2.23
   Enabled: false

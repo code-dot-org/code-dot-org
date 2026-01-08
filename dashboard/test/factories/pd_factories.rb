@@ -58,7 +58,7 @@ FactoryBot.define do
     transient do
       duration_hours {6}
     end
-    association :workshop, factory: :workshop
+    workshop factory: %i[workshop]
     start {Time.zone.today + 9.hours}
     self.end {start + duration_hours.hours}
     session_format {Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.first[:value]}
@@ -69,7 +69,7 @@ FactoryBot.define do
   end
 
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
-    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+    pd_enrollment factory: %i[pd_enrollment], strategy: :create
 
     after(:build) do |survey, _|
       if survey.form_data.presence.nil?
@@ -152,17 +152,17 @@ FactoryBot.define do
   end
 
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
-    association :user, factory: :facilitator, strategy: :create
+    user factory: %i[facilitator], strategy: :create
     tc1_arrive {Date.new(2017, 8, 23)}
     tc1_depart {Date.new(2017, 8, 29)}
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
-    association :workshop
+    workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name {'Codeberg'}
     email {"participant_#{SecureRandom.hex(10)}@example.com.xx"}
-    association :school_info
+    school_info
     code {SecureRandom.hex(10)}
 
     trait :from_user do
@@ -179,7 +179,7 @@ FactoryBot.define do
   end
 
   factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
-    association :user, factory: :teacher
+    user factory: %i[teacher]
 
     course {Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]}
     application_year {Pd::SharedApplicationConstants::YEAR_19_20}
@@ -187,13 +187,13 @@ FactoryBot.define do
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
-    association :session, factory: :pd_session
-    association :teacher
+    session factory: %i[pd_session]
+    teacher
   end
 
   factory :pd_attendance_no_account, class: 'Pd::Attendance' do
-    association :session, factory: :pd_session
-    association :enrollment, factory: :pd_enrollment
+    session factory: %i[pd_session]
+    enrollment factory: %i[pd_enrollment]
   end
 
   # Creates a teacher optionally enrolled in a workshop,
@@ -233,14 +233,18 @@ FactoryBot.define do
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
-    association :facilitator
+    facilitator
     course {Pd::Workshop::COURSES.first}
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
     # Always create (never build) the associated Enrollment to guarantee that
-    # the through association to workshops will work
+    # the through association to workshops will work.
+    # rubocop:disable FactoryBot/AssociationStyle
+    # The `strategy` option necessitates an explicit `association`; see
+    # https://github.com/thoughtbot/factory_bot/blob/v6.2.1/GETTING_STARTED.md#build-strategies-1
     association :pd_enrollment, strategy: :create
+    # rubocop:enable FactoryBot/AssociationStyle
   end
 
   factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
@@ -310,7 +314,7 @@ FactoryBot.define do
   end
 
   factory :pd_regional_partner_mapping, class: 'Pd::RegionalPartnerMapping' do
-    association :regional_partner
+    regional_partner
     state {'WA'}
   end
 
@@ -413,7 +417,7 @@ FactoryBot.define do
   end
 
   factory :pd_teacher_application, class: 'Pd::Application::TeacherApplication' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    user factory: %i[teacher with_school_info], strategy: :create
     course {'csp'}
     transient do
       form_data_hash {build(:pd_teacher_application_hash_common, course.to_sym)}
@@ -472,7 +476,7 @@ FactoryBot.define do
   end
 
   factory :pd_principal_approval_application, class: 'Pd::Application::PrincipalApprovalApplication' do
-    association :teacher_application, factory: :pd_teacher_application
+    teacher_application factory: %i[pd_teacher_application]
     course {'csp'}
     transient do
       approved {'Yes'}
@@ -492,18 +496,18 @@ FactoryBot.define do
   factory :pd_workshop_daily_survey, class: 'Pd::WorkshopDailySurvey' do
     form_id {12345}
     submission_id {(Pd::WorkshopDailySurvey.maximum(:submission_id) || 0) + 1}
-    association :pd_workshop
-    association :user
+    pd_workshop
+    user
     day {5}
   end
 
   factory :pd_workshop_facilitator_daily_survey, class: 'Pd::WorkshopFacilitatorDailySurvey' do
     form_id {12345}
     submission_id {(Pd::WorkshopFacilitatorDailySurvey.maximum(:submission_id) || 0) + 1}
-    association :pd_session
+    pd_session
     pd_workshop {pd_session.workshop}
-    association :user
-    association :facilitator
+    user
+    facilitator
     day {5}
   end
 
@@ -513,7 +517,7 @@ FactoryBot.define do
   end
 
   factory :pd_application_email, class: 'Pd::Application::Email' do
-    association :application, factory: :pd_teacher_application
+    application factory: %i[pd_teacher_application]
     email_type {'confirmation'}
     application_status {'confirmation'}
     to {application.user.email}

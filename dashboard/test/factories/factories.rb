@@ -37,19 +37,19 @@ FactoryBot.define do
   factory :course_version do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
-    association :course_offering
+    course_offering
     with_unit_group
 
     trait :with_unit_group do
-      association(:content_root, factory: :unit_group)
+      content_root factory: %i[unit_group]
     end
 
     trait :with_single_unit_course do
-      association(:content_root, factory: :single_unit_course)
+      content_root factory: %i[single_unit_course]
     end
 
     trait :with_csp_unit_group do
-      association(:content_root, factory: :csp_course)
+      content_root factory: %i[csp_course]
     end
   end
 
@@ -769,12 +769,12 @@ FactoryBot.define do
   end
 
   factory :user_facilitator_info, class: User::FacilitatorInfo do
-    association :user, factory: :facilitator
+    user factory: %i[facilitator]
     bio {Faker::Lorem.paragraph(sentence_count: 5).truncate(User::FacilitatorInfo::BIO_MAX_LENGTH)}
   end
 
   factory :authentication_option do
-    association :user
+    user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type {AuthenticationOption::EMAIL}
     authentication_id {SecureRandom.uuid}
@@ -1156,8 +1156,8 @@ FactoryBot.define do
   end
 
   factory :levels_skill do
-    association :level
-    association :skill
+    level
+    skill
   end
 
   factory :unit, aliases: [:script] do
@@ -1418,7 +1418,7 @@ FactoryBot.define do
   end
 
   factory :resource do
-    association :course_version
+    course_version
     url {'fake.url'}
     name {'fake name'}
   end
@@ -1429,7 +1429,7 @@ FactoryBot.define do
   end
 
   factory :vocabulary do
-    association :course_version
+    course_version
     sequence(:key, 'a') {|char| "vocab_#{char}"}
     word {'word'}
     definition {'definition'}
@@ -1447,19 +1447,19 @@ FactoryBot.define do
   end
 
   factory :programming_expression do
-    association :programming_environment
+    programming_environment
     sequence(:name) {|n| "programming expression #{n}"}
     sequence(:key) {|n| "programming-expression-#{n}"}
   end
 
   factory :programming_class do
-    association :programming_environment
+    programming_environment
     sequence(:name) {|n| "programming class #{n}"}
     sequence(:key) {|n| "programming-class-#{n}"}
   end
 
   factory :programming_method do
-    association :programming_class
+    programming_class
     sequence(:name) {|n| "programming method #{n}"}
     sequence(:key) {|n| "programming-method-#{n}"}
   end
@@ -1529,7 +1529,7 @@ FactoryBot.define do
   end
 
   factory :follower do
-    association :student_user, factory: %i[student sponsored]
+    student_user factory: %i[student sponsored]
 
     transient do
       section {nil}
@@ -1565,7 +1565,7 @@ FactoryBot.define do
     user {create(:teacher)}
     start_date {DateTime.now}
     last_confirmation_date {DateTime.now}
-    association :school_info
+    school_info
   end
 
   factory :peer_review do
@@ -1679,7 +1679,7 @@ FactoryBot.define do
   factory :school_info_without_country, class: SchoolInfo do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     state {'WA'}
-    association :school_district
+    school_district
   end
 
   factory :school_info_non_us, class: SchoolInfo do
@@ -1703,7 +1703,7 @@ FactoryBot.define do
     country {'US'}
 
     trait :with_district do
-      association :school_district
+      school_district
     end
 
     trait :with_school do
@@ -1731,15 +1731,15 @@ FactoryBot.define do
   end
 
   factory :school_info_with_public_school_only, class: SchoolInfo do
-    association :school, factory: :public_school
+    school factory: %i[public_school]
   end
 
   factory :school_info_with_private_school_only, class: SchoolInfo do
-    association :school, factory: :private_school
+    school factory: %i[private_school]
   end
 
   factory :school_info_with_charter_school_only, class: SchoolInfo do
-    association :school, factory: :charter_school
+    school factory: %i[charter_school]
   end
 
   factory :school_info_us_public, parent: :school_info_us do
@@ -1831,7 +1831,7 @@ FactoryBot.define do
     zip {"98122"}
 
     trait :with_district do
-      association :school_district
+      school_district
     end
 
     trait :is_high_school do
@@ -1919,8 +1919,8 @@ FactoryBot.define do
   end
 
   factory :regional_partners_school_district do
-    association :school_district
-    association :regional_partner
+    school_district
+    regional_partner
   end
 
   factory :channel_token do
@@ -1928,7 +1928,7 @@ FactoryBot.define do
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id {1}
-    association :level
+    level
     storage_id {storage_user.try(:id) || 2}
   end
 
@@ -1970,10 +1970,10 @@ FactoryBot.define do
   end
 
   factory :teacher_feedback do
-    association :student
-    association :teacher
-    association :level
-    association :script
+    student
+    teacher
+    level
+    script
 
     trait :with_script_level do
       after(:build) do |tf|
@@ -1993,8 +1993,8 @@ FactoryBot.define do
   end
 
   factory :code_review_comment do
-    association :commenter, factory: :student
-    association :code_review
+    commenter factory: %i[student]
+    code_review
 
     is_resolved {false}
     comment {'a note about the project'}
@@ -2002,12 +2002,12 @@ FactoryBot.define do
 
   factory :code_review_group do
     sequence(:name) {|n| "group_name_#{n}"}
-    association :section
+    section
   end
 
   factory :code_review_group_member do
-    association :follower
-    association :code_review_group
+    follower
+    code_review_group
   end
 
   factory :project_commit do
@@ -2017,8 +2017,8 @@ FactoryBot.define do
   end
 
   factory :teacher_score do
-    association :user_level
-    association :teacher
+    user_level
+    teacher
   end
 
   factory :contact_rollups_raw do
@@ -2055,7 +2055,7 @@ FactoryBot.define do
   end
 
   factory :lti_feedback, class: 'Lti::Feedback' do
-    association :user, factory: :teacher
+    user factory: %i[teacher]
 
     locale {I18n.locale.to_s}
     satisfied {true}
@@ -2124,7 +2124,7 @@ FactoryBot.define do
   end
 
   factory :new_feature_feedback do
-    association :user, factory: :teacher
+    user factory: %i[teacher]
 
     form_key {'progress_v2'}
     satisfied {true}
@@ -2148,8 +2148,8 @@ FactoryBot.define do
   end
 
   factory :rubric do
-    association :lesson
-    association :level
+    lesson
+    level
 
     trait :with_learning_goals do
       transient do
@@ -2187,7 +2187,7 @@ FactoryBot.define do
   end
 
   factory :learning_goal do
-    association :rubric
+    rubric
     position {0}
     learning_goal {"Test Learning Goal"}
     ai_enabled {false}
@@ -2213,15 +2213,15 @@ FactoryBot.define do
   end
 
   factory :learning_goal_evidence_level do
-    association :learning_goal
+    learning_goal
     understanding {0}
     teacher_description {"Description for teacher"}
   end
 
   factory :learning_goal_teacher_evaluation do
-    association :learning_goal
-    association :teacher, factory: :teacher
-    association :user, factory: :student
+    learning_goal
+    teacher factory: %i[teacher]
+    user factory: %i[student]
     understanding {0}
   end
 
@@ -2232,21 +2232,21 @@ FactoryBot.define do
 
     user {student}
     project_id {789}
-    association :requester, factory: :teacher
-    association :rubric
+    requester factory: %i[teacher]
+    rubric
     status {1}
     project_version {"1"}
   end
 
   factory :learning_goal_ai_evaluation do
-    association :learning_goal
-    association :rubric_ai_evaluation
+    learning_goal
+    rubric_ai_evaluation
     understanding {0}
     ai_confidence {1}
   end
 
   factory :learning_goal_ai_evaluation_feedback do
-    association :learning_goal_ai_evaluation
+    learning_goal_ai_evaluation
     teacher_id {0}
     ai_feedback_approval {false}
     false_positive {false}
@@ -2262,9 +2262,9 @@ FactoryBot.define do
   end
 
   factory :user_level_skill_evaluation do
-    association :student, factory: :student
-    association :level
-    association :unit
+    student factory: %i[student]
+    level
+    unit
     evaluator {"AI"}
     evaluation {"Great"}
     evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
@@ -2272,9 +2272,9 @@ FactoryBot.define do
   end
 
   factory :user_level_evaluation do
-    association :student, factory: :student
-    association :level
-    association :unit
+    student factory: %i[student]
+    level
+    unit
     code_version {"4s&7ya"}
     evaluator {"AI"}
     evaluation {"Ok"}
@@ -2283,18 +2283,18 @@ FactoryBot.define do
   end
 
   factory :potential_teacher do
-    association :script
+    script
     name {"foosbars"}
     email {"foobar@example.com"}
     receives_marketing {true}
   end
 
   factory :aichat_event do
-    association :user
+    user
   end
 
   factory :aichat_request do
-    association :user
+    user
     model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}}
     new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}}
     stored_messages {[]}
@@ -2304,14 +2304,14 @@ FactoryBot.define do
   end
 
   factory :aidiff_thread do
-    association :user
+    user
     external_id {"1234"}
     llm_version {"dummy_llm"}
     context_type {"general"}
   end
 
   factory :aidiff_message do
-    association :aidiff_thread, factory: :aidiff_thread
+    aidiff_thread factory: %i[aidiff_thread]
     external_id {"1234"}
     role {:assistant}
     content {"Lorem ipsum"}
@@ -2367,13 +2367,13 @@ FactoryBot.define do
   end
 
   factory :sign_in do
-    association :user
+    user
     sign_in_at {Time.now.utc}
     sign_in_count {1}
   end
 
   factory :user_data_retention_status, class: 'User::DataRetentionStatus' do
-    association :user
+    user
   end
 
   factory :foorm_submission, class: 'Foorm::Submission' do
@@ -2389,12 +2389,12 @@ FactoryBot.define do
   end
 
   factory :simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
-    association :user
-    association :simple_survey_form
+    user
+    simple_survey_form
   end
 
   factory :misc_survey, class: 'Pd::MiscSurvey' do
-    association :user
+    user
     form_id {1}
   end
 

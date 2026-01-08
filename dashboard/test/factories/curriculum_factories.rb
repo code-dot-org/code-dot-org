@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :reference_guide do
-    association :course_version
+    course_version
 
     sequence(:key) {|n| "bogus-reference-guide-#{n}"}
     display_name {"Sample Reference Guide"}

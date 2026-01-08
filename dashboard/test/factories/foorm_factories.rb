@@ -103,22 +103,22 @@ FactoryBot.define do
   end
 
   factory :pd_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
-    association :foorm_submission, factory: :basic_foorm_submission
+    pd_workshop factory: %i[csd_summer_workshop]
+    user factory: %i[teacher]
+    foorm_submission factory: %i[basic_foorm_submission]
   end
 
   factory :day_5_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
+    pd_workshop factory: %i[csd_summer_workshop]
+    user factory: %i[teacher]
     day {5}
 
     trait :answers_low do
-      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_low]
+      foorm_submission factory: %i[daily_workshop_day_5_foorm_submission answers_low]
     end
 
     trait :answers_high do
-      association :foorm_submission, factory: [:daily_workshop_day_5_foorm_submission, :answers_high]
+      foorm_submission factory: %i[daily_workshop_day_5_foorm_submission answers_high]
     end
   end
 
@@ -207,11 +207,11 @@ FactoryBot.define do
   end
 
   factory :pd_pre_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
+    pd_workshop factory: %i[csd_summer_workshop]
+    user factory: %i[teacher]
     day {0}
 
-    association :foorm_submission, factory: :pre_workshop_foorm_submission
+    foorm_submission factory: %i[pre_workshop_foorm_submission]
   end
 
   # this factory uses the real summer workshop pre survey.
@@ -231,16 +231,16 @@ FactoryBot.define do
   end
 
   factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
+    pd_workshop factory: %i[csd_summer_workshop]
+    user factory: %i[teacher]
     day {0}
 
     trait :answers_low do
-      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_low]
+      foorm_submission factory: %i[daily_workshop_day_0_foorm_submission answers_low]
     end
 
     trait :answers_high do
-      association :foorm_submission, factory: [:daily_workshop_day_0_foorm_submission, :answers_high]
+      foorm_submission factory: %i[daily_workshop_day_0_foorm_submission answers_high]
     end
   end
 
@@ -301,20 +301,20 @@ FactoryBot.define do
   end
 
   factory :csf_intro_post_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :user, factory: :teacher
-    association :pd_workshop, factory: :csf_101_workshop
+    user factory: %i[teacher]
+    pd_workshop factory: %i[csf_101_workshop]
 
     trait :answers_low do
-      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_low]
+      foorm_submission factory: %i[csf_intro_post_foorm_submission answers_low]
     end
 
     trait :answers_high do
-      association :foorm_submission, factory: [:csf_intro_post_foorm_submission, :answers_high]
+      foorm_submission factory: %i[csf_intro_post_foorm_submission answers_high]
     end
   end
 
   factory :facilitator_post_survey_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :foorm_submission, factory: :facilitator_post_survey_foorm_submission
+    foorm_submission factory: %i[facilitator_post_survey_foorm_submission]
   end
 
   factory :facilitator_post_survey_foorm_submission, class: 'Foorm::Submission' do
@@ -374,15 +374,15 @@ FactoryBot.define do
 
   factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     facilitator_id {1}
-    association :pd_workshop, factory: :csf_101_workshop
-    association :user, factory: :teacher
+    pd_workshop factory: %i[csf_101_workshop]
+    user factory: %i[teacher]
 
     trait :answers_low do
-      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_low]
+      foorm_submission factory: %i[csf_intro_post_facilitator_foorm_submission answers_low]
     end
 
     trait :answers_high do
-      association :foorm_submission, factory: [:csf_intro_post_facilitator_foorm_submission, :answers_high]
+      foorm_submission factory: %i[csf_intro_post_facilitator_foorm_submission answers_high]
     end
   end
 
@@ -1254,21 +1254,21 @@ FactoryBot.define do
   end
 
   factory :foorm_simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
-    association :foorm_submission, factory: :basic_foorm_submission
-    association :simple_survey_form, factory: :foorm_simple_survey_form
+    foorm_submission factory: %i[basic_foorm_submission]
+    simple_survey_form factory: %i[foorm_simple_survey_form]
   end
 
   # Build Your Own Workshop survey submission factory
   factory :build_your_own_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
-    association :pd_workshop, factory: :csd_summer_workshop
-    association :user, factory: :teacher
+    pd_workshop factory: %i[csd_summer_workshop]
+    user factory: %i[teacher]
 
     trait :answers_low do
-      association :foorm_submission, factory: [:build_your_own_workshop_post_foorm_submission, :answers_low]
+      foorm_submission factory: %i[build_your_own_workshop_post_foorm_submission answers_low]
     end
 
     trait :answers_high do
-      association :foorm_submission, factory: [:build_your_own_workshop_post_foorm_submission, :answers_high]
+      foorm_submission factory: %i[build_your_own_workshop_post_foorm_submission answers_high]
     end
   end
 
