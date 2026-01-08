@@ -37,8 +37,8 @@ declare module '@mui/material/IconButton' {
     text: true;
   }
 
-  // Extend IconButtonProps to include variant prop
-  interface IconButtonProps {
+  // Extend IconButtonOwnProps to include variant prop
+  interface IconButtonOwnProps {
     variant?: 'contained' | 'outlined' | 'text';
   }
 }
