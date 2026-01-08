@@ -1,6 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:57:32.000Z",
   "level_num": "custom",
@@ -234,11 +233,10 @@
     "map_reference": "/courses/csd-2024/guides/the-counter-pattern-2",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "true",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:57:32.075+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprite Movement Predict_2024\\\"\"],\"cloned_from\":\"CSD U3 Sprite Movement Predict_2024\"},{\"changed_at\":\"2025-09-24 20:17:19 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>

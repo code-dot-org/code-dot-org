@@ -1,0 +1,36 @@
+name 'aif-PL-applyingFilters-L32-DS_-rev_v2'
+title 'Applying Filters'
+description 'description here'
+
+markdown <<MARKDOWN
+# Applying Filters
+
+## 📝 To Do
+
+#### Practice filtering and sorting data in Google Sheets:
+
+#### 1. Navigate to your copy of the <a href="https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/edit?usp=sharing" target="blank" rel="noopener noreferrer">School Party Survey Data</a>.
+#### 2. Go to the **Filtering Data Workspace** tab. 
+
+#### Analyze the data for at least one of the two following questions. If you have time and want to explore, try answering both.
+
+---
+
+## Question 1  
+#### **What songs should we play based on the grades that attend the party?**
+- #### What songs are most popular in 7th grade?  
+- #### Now change the filter to 8th grade, 9th grade, etc. How does the chart change?  
+- #### Do middle schoolers and high schoolers like the same music, or do preferences shift?  
+- #### What might explain the differences?  
+
+---
+
+## Question 2  
+#### **What kind of pizza do the different party personalities like best?**
+- #### What do you notice about the pizza preferences for this party personality?  
+- #### Now change the filter to a different personality (e.g., Social Butterfly or Performer). How does the pizza chart change?  
+- #### Do different personalities prefer different kinds of pizza?  
+- #### What could you learn from this if you were in charge of ordering pizza for the party?  
+- #### Is there one kind of pizza that seems to make everyone happy?  
+
+MARKDOWN

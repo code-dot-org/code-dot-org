@@ -24,6 +24,8 @@ function main() {
   const broadcastChannel = new BroadcastChannel(
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
+  const codeDotOrgOrigin = getCodeDotOrgOrigin();
+  let contentSecurityPolicyValue = null;
 
   addEventListener('install', () => {
     // Ensure this service worker is activated immediately.
@@ -37,10 +39,11 @@ function main() {
 
   // Listen for messages from the main thread
   addEventListener('message', event => {
-    const {type, files} = event.data;
+    const {type, files, contentSecurityPolicy} = event.data;
     if (type === UPDATE_FILES && event.origin === location.origin) {
       filesData = files || {};
       broadcastChannel.postMessage({type: RECEIVED_SOURCE});
+      contentSecurityPolicyValue = contentSecurityPolicy;
     }
   });
 
@@ -81,6 +84,17 @@ function main() {
     return requestedFile;
   }
 
+  // Code.org origin for this environment.
+  function getCodeDotOrgOrigin() {
+    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
+    const match = location.hostname.match(regex);
+    const environment = match && match[1] ? `${match[1]}-` : '';
+    const port =
+      'localhost-' === environment && location.port ? `:${location.port}` : '';
+    const cdn = environment.includes('adhoc') ? 'cdn-' : '';
+    return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
+  }
+
   async function handleProjectRequest(requestedFile, fileData) {
     try {
       const {content, mimeType, url} = fileData;
@@ -91,7 +105,14 @@ function main() {
         });
       }
       if (url) {
-        return await fetch(url);
+        let fetchUrl = url;
+        if (url.startsWith('/level_starter_assets/')) {
+          // We fetch level starter assets from the code.org origin for this environment.
+          // Adding a temporary cache bust query parameter to avoid some caching issues with level starter assets.
+          const temporaryCacheBust = '?temp-cache-bust=1';
+          fetchUrl = codeDotOrgOrigin + url + temporaryCacheBust;
+        }
+        return await fetch(fetchUrl);
       }
       return new Response(content, {
         status: 200,
@@ -100,6 +121,7 @@ function main() {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           Pragma: 'no-cache',
           Expires: '0',
+          'Content-Security-Policy': contentSecurityPolicyValue || '',
         },
       });
     } catch (error) {

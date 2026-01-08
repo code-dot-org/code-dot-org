@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-06 18:13:16 UTC",
+    "serialized_at": "2026-01-05 21:51:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7475,10 +7475,11 @@
     },
     {
       "name": "[KEY] Collaborate on a Product Launch",
-      "url": "https://docs.google.com/document/d/1w8AjUDBWmtzol9YpTG-fOMew3RZBXe8h7KF8hchSzno/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/18YzrwjTx_RgEEsiGDQ7OdMjJLjKG0eaXO9Ut8ESDxxA/edit?usp=drive_link",
       "key": "_key_collaborate_on_a_product_launch",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -7523,10 +7524,11 @@
     },
     {
       "name": "AI as a Co-Creator",
-      "url": "https://docs.google.com/presentation/d/10agRiA6i7RcSop4R4VmbYDng7vjTq65uvCin7Z6WJ6g/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1MA0vjQjQ4Zt_d7guVgg7czccfiX8iuxVS6r-Qp0xVZE/edit?usp=drive_link",
       "key": "ai_as_a_co-creator",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7620,10 +7622,11 @@
     },
     {
       "name": "AI's Wild Imagination",
-      "url": "https://docs.google.com/presentation/d/1NjVZ0PEzHAhEe0ax0KfmpdpuLjyGr6TskogX4kSOoJE/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1tKxRI-XuS2Rxtv6PdqaKci171_VBuQOsoJ1GgYOqTms/edit?usp=drive_link",
       "key": "ai_s_wild_imagination",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7690,10 +7693,11 @@
     },
     {
       "name": "Beyond Words",
-      "url": "https://docs.google.com/presentation/d/1940eqXqTCaIKFBLeQiDlLdygyFOGZLHsh2lD_vxeYx0/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1gyURTFdK9kO7Txo1SJN6I4zsGx8Yq4Mp5xB2cHl5T48/edit?usp=drive_link",
       "key": "beyond_words",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7702,10 +7706,11 @@
     },
     {
       "name": "Collaborate on a Product Launch",
-      "url": "https://docs.google.com/document/d/16HZ12NM5c0hh8Q5Gm5xSMud4n7QTezq_06iM624q1Io/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1DVcGVVtJlZkDlP2v-JGoFNcGLcCqvEh7RTpjRGmfDjU/edit?usp=drive_link",
       "key": "collaborate_on_a_product_launch",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -7925,10 +7930,11 @@
     },
     {
       "name": "The AI's Brain",
-      "url": "https://docs.google.com/presentation/d/17_DT0lpyXVay-tZvSz1qwo7y6t5KoDO9SPyWr0rFL7U/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1EPF_2RbK2-Xu3Wm0AtonWjlt5egSrmiVQm1XlkQ18KE/edit?usp=drive_link",
       "key": "the_ai_s_brain",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7949,10 +7955,11 @@
     },
     {
       "name": "Understanding Bias",
-      "url": "https://docs.google.com/presentation/d/1dM1X0mmM2wDAKklFmGTYZrdaeHVfdcqQCLnfzdvFZoc/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1ANcnbmp1suC5qroS7YZdZbhFsrM8J3rWWgaFyqTniNs/edit?usp=drive_link",
       "key": "understanding_bias",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

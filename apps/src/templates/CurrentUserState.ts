@@ -42,4 +42,5 @@ export interface CurrentUserState {
   userSharingDisabled: boolean;
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
+  aiTutorEnabledForPilot: boolean;
 }

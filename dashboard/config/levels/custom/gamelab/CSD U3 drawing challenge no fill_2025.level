@@ -83,6 +83,7 @@
     "libraries_enabled": "false",
     "encrypted_examples": "T2VGt0dqk/mFxSNWO+Ottf+qSGrCS9WhNpRy9GjVaANj6wideE2vI8X2P9P8\nZDCQKUEa1ygtXFPhB1gI4+w8uQ==\n",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

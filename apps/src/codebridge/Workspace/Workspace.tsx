@@ -7,17 +7,19 @@ import {FileBrowser} from '@codebridge/FileBrowser/FileBrowser';
 import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserHeaderPopUpButton';
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
-  isReadOnlyWorkspace,
   isProjectTemplateLevel,
+  isReadOnlyWorkspace,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HeaderButtons from './HeaderButtons';
@@ -39,9 +41,12 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
 }) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const teacherViewingStudent = Boolean(
+    useAppSelector(state => state.progress.viewAsUserId)
+  );
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
@@ -55,6 +60,35 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const versionDetails = useAppSelector(
+    state => state.lab2Project.versionDetails
+  );
+
+  const locale = currentLocale();
+  const versionDate = useMemo(() => {
+    if (!versionDetails?.lastModified) {
+      return '';
+    }
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+    // The Regex here removes the space before AM/PM to match mocks and make more compact.
+    return dateFormatter
+      .format(new Date(versionDetails.lastModified))
+      .replace(/\s(AM|PM)/gi, '$1');
+  }, [versionDetails, locale]);
+
+  const versionBannerText = versionDate ? (
+    <>
+      You're viewing a previous version of this project from{' '}
+      <strong>{versionDate}</strong>.
+    </>
+  ) : (
+    "You're viewing the initial version of this project."
+  );
 
   return (
     <div style={style} className={className}>
@@ -66,10 +100,13 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
+        {teacherViewingStudent && (
+          <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+        )}
         {viewingOldVersion && (
           <Alert
             className={moduleStyles.previousVersionBanner}
-            text={codebridgeI18n.viewingOldVersion()}
+            text={versionBannerText}
             type="warning"
             size="xs"
           />

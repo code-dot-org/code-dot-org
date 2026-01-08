@@ -17,10 +17,10 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -154,16 +154,14 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        // TO DO: figure out how to update to support starter assets.
-        // Work tracked here: https://codedotorg.atlassian.net/browse/AFL-354
-        // In start mode, we manage saving explicitly via the button in the header.
-        let uploadedFiles;
-        if (!getIsStartMode()) {
+        let uploadedFiles = {};
+        if (!readonlyWorkspace) {
           uploadedFiles = await uploadExternalFiles(
             currentSources.source.externalFiles || {},
             serializedData.files,
             filesBeingUploadedRef,
-            channelId
+            channelId,
+            levelProperties.name
           );
         }
 
@@ -172,13 +170,19 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             ...serializedData,
             externalFiles: {
               ...currentSources.source.externalFiles,
-              ...(uploadedFiles || {}),
+              ...uploadedFiles,
             },
           },
         });
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, channelId, currentSources.source]
+    [
+      updateSources,
+      channelId,
+      currentSources.source,
+      levelProperties.name,
+      readonlyWorkspace,
+    ]
   );
 
   useEffect(() => {
@@ -189,14 +193,23 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  useEffect(() => {
-    setReinitializationHandler(() => {
-      setExcalidrawMountKey(key => key + 1);
+  const reinitializationHandler = useCallback(() => {
+    setExcalidrawMountKey(key => key + 1);
+  }, []);
 
-      // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
-      downloadedFilesDataRef.current = {};
-    });
-  }, [setReinitializationHandler]);
+  const onLoadVersion = useCallback(
+    (sources: ProjectSources) => {
+      if (sources) {
+        updateSources(sources as SketchlabSources);
+      }
+      reinitializationHandler();
+    },
+    [updateSources, reinitializationHandler]
+  );
+
+  useEffect(() => {
+    setReinitializationHandler(reinitializationHandler);
+  }, [setReinitializationHandler, reinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -210,6 +223,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  const teacherViewingStudent = Boolean(
+    useAppSelector(state => state.progress.viewAsUserId)
+  );
+
   return (
     <div className={moduleStyles.sketchlabContainer}>
       <SketchlabTourSteps />
@@ -220,6 +237,12 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           hasRun={hasRun}
           hasEdited={false}
           settings={[useThemeSetting('sketchlab')]}
+          versionHistoryProps={{
+            startSources:
+              (levelProperties?.startSources as ProjectSources) ||
+              DEFAULT_SOURCES,
+            onLoadVersion: onLoadVersion,
+          }}
         />
       </div>
       <ResizeBar
@@ -246,6 +269,9 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             )
           }
         >
+          {teacherViewingStudent && (
+            <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+          )}
           <Excalidraw
             initialData={
               experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)

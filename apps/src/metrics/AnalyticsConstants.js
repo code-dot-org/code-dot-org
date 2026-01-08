@@ -457,7 +457,10 @@ const EVENTS = {
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
 
-  // Curriculumm Recommender
+  // Import project
+  APPLAB_IMPORT_PROJECT: 'User Imports Another App Lab Project',
+
+  // Curriculum Recommender
   RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
   RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
     'Recommended Similar Curriculum Clicked',
@@ -515,6 +518,14 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
+  // AI chat response copied. Shared across features; check event properties for usage and clientType
+  // to determine feature.
+  CHAT_COPIED: 'User copied an AI chat response',
+  CODE_COPIED: 'User copied AI-generated code snippet',
+
+  // AI Chat Access Control Settings
+  AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED: 'AI Chat section access level updated',
+
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
     'Teacher gave feedback on AIs summary of student work',
@@ -563,6 +574,7 @@ const EVENTS = {
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
+  BLOCKLY_SLASH_KEY_PRESSED: 'Blockly Slash Key Pressed',
 
   // Teacher Navigation V2
   NAVIGATE_TO_SECTION: 'Local Nav Class Section Selected',
@@ -661,6 +673,17 @@ const EVENTS = {
     'Music Lab Generate Code Back To Prompt Clicked',
   MUSIC_LAB_GENERATE_CODE_USE_CODE_CLICKED:
     'Music Lab Generate Code Use Code Clicked',
+
+  // AI Tutor accept-reject flow
+  AI_TUTOR_VERSION_ACCEPTED: 'AI Tutor Version Accepted',
+  AI_TUTOR_VERSION_REJECTED: 'AI Tutor Version Rejected',
+  AI_TUTOR_GENERATED_CODE: 'AI Tutor Generated Code',
+  AI_TUTOR_VERSION_VIEW_FILE_CLICKED:
+    'File Tab Clicked in AI Tutor Version View',
+  AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED:
+    'AI Tutor Version File Preview Button Clicked',
+  AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR:
+    'File Previewed in AI Tutor Version View via URL bar',
 };
 
 const EVENT_GROUP_NAMES = {

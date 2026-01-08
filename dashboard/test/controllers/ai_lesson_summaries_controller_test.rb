@@ -13,7 +13,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     @lesson_without_plan = create(:lesson, lesson_group: lesson_group)
     @lesson_with_plan_2 = create(:lesson, has_lesson_plan: true, lesson_group: lesson_group)
     @lesson_without_plan_2 = create(:lesson, lesson_group: lesson_group)
-    @ai_lesson_summary = AiLessonSummary.create(user_id: @teacher.id, lesson_id: @lesson_with_plan.id, lesson_summary: 'Test summary')
+    @ai_lesson_summary = AiLessonSummary.create(user_id: @teacher.id, lesson_id: @lesson_with_plan.id, lesson_summary: 'Test summary', script: "Test script with\n\nnewlines and \"quotes\"")
   end
 
   # *****
@@ -31,7 +31,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
   end
 
   test 'unauthenticated user cannot access perform_ai_lesson_summary_by_lesson' do
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id, unit_id: @unit.id}, format: :json
     assert_response :unauthorized
   end
 
@@ -39,7 +39,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
   # show action tests
   # *****
 
-  test 'show returns AI lesson summary when found for current user' do
+  test 'show returns AI lesson summary with brief text summary when found for current user' do
     sign_in @teacher
     get :show, params: {lesson_id: @lesson_with_plan.id}, format: :json
 
@@ -52,16 +52,16 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     assert response_data['lesson'].present?, 'Should include lesson data'
   end
 
-  test 'show returns not found when AI lesson summary does not exist' do
+  test 'show returns not found when AI lesson summary with brief text summary does not exist' do
     sign_in @teacher
     non_existent_lesson = create(:lesson)
     get :show, params: {lesson_id: non_existent_lesson.id}, format: :json
 
     assert_response :not_found
-    assert_equal 'AI lesson summary not found', json_response['error']
+    assert_equal 'AI brief text lesson summary not found', json_response['error']
   end
 
-  test 'show returns not found when AI lesson summary belongs to different user' do
+  test 'show returns not found when AI lesson summary with brief text summary belongs to different user' do
     other_teacher = create(:teacher)
     other_lesson = create(:lesson, has_lesson_plan: true)
     AiLessonSummary.create(user_id: other_teacher.id, lesson_id: other_lesson.id, lesson_summary: "Should not display")
@@ -70,7 +70,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     get :show, params: {lesson_id: other_lesson.id}, format: :json
 
     assert_response :not_found
-    assert_equal 'AI lesson summary not found', json_response['error']
+    assert_equal 'AI brief text lesson summary not found', json_response['error']
   end
 
   test 'show uses current_user.id instead of params user_id for security' do
@@ -86,6 +86,40 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
   end
 
   # *****
+  # ai_lesson_summary_podcast_script action tests
+  # *****
+
+  test 'ai_lesson_summary_podcast_script returns parsed AI lesson summary with podcast script when found for current user' do
+    sign_in @teacher
+    get :ai_lesson_summary_podcast_script, params: {lesson_id: @lesson_with_plan.id}, format: :json
+
+    assert_response :success
+    response_data = json_response
+    assert_equal response_data['podcast_script'], "Test script with newlines and 'quotes'"
+  end
+
+  test 'ai_lesson_summary_podcast_script returns not found when AI lesson summary with podcast script does not exist' do
+    sign_in @teacher
+    non_existent_lesson = create(:lesson)
+    get :ai_lesson_summary_podcast_script, params: {lesson_id: non_existent_lesson.id}, format: :json
+
+    assert_response :not_found
+    assert_equal json_response['error'], 'AI lesson summary podcast script not found'
+  end
+
+  test 'ai_lesson_summary_podcast_script returns not found when AI lesson summary with podcast script belongs to different user' do
+    other_teacher = create(:teacher)
+    other_lesson = create(:lesson, has_lesson_plan: true)
+    AiLessonSummary.create(user_id: other_teacher.id, lesson_id: other_lesson.id, lesson_summary: "Should not display")
+
+    sign_in @teacher
+    get :ai_lesson_summary_podcast_script, params: {lesson_id: other_lesson.id}, format: :json
+
+    assert_response :not_found
+    assert_equal json_response['error'], 'AI lesson summary podcast script not found'
+  end
+
+  # *****
   # perform_ai_lesson_summaries_by_unit action tests
   # *****
 
@@ -95,7 +129,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # Mock the job to verify it gets called with correct parameters
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id]
+      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -110,7 +145,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id]
+      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -129,7 +165,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: []
+      lesson_ids: [],
+      unit_id: unit_without_plans.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -156,12 +193,13 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
 
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id, unit_id: @unit.id}, format: :json
 
     assert_response :success
   end
@@ -172,7 +210,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # Should not call perform_later when lesson has no lesson plan
     AiLessonSummariesJob.expects(:perform_later).never
 
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_without_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_without_plan.id, unit_id: @unit.id}, format: :json
 
     assert_response :success
   end
@@ -181,7 +219,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     assert_raises(ActiveRecord::RecordNotFound) do
-      post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: 999999}, format: :json
+      post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: 999999, unit_id: @unit.id}, format: :json
     end
   end
 
@@ -190,12 +228,13 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
 
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id, unit_id: @unit.id}, format: :json
   end
 
   # *****
@@ -260,14 +299,16 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # the job should be enqueued with current_user.id
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
 
     post :perform_ai_lesson_summary_by_lesson, params: {
       lesson_id: @lesson_with_plan.id,
-      user_id: @student.id  # This should be ignored
+      user_id: @student.id,  # This should be ignored
+      unit_id: @unit.id
     }, format: :json
   end
 

@@ -28,7 +28,8 @@
     "validation_enabled": "true",
     "display_name": "User: Sofia - Review",
     "bubble_choice_description": "Choose this level to style Sofia's computer repair and technology services web page!",
-    "thumbnail_url": "https://images.code.org/aa69057c3727813823c287e63dbc6dc2-computer-tower.png"
+    "thumbnail_url": "https://images.code.org/aa69057c3727813823c287e63dbc6dc2-computer-tower.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

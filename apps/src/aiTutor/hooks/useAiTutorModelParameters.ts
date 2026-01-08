@@ -4,7 +4,16 @@ import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+const fetchLangfusePrompt = async (promptName: string) => {
+  const url = `/langfuse/get_prompt?name=${encodeURIComponent(promptName)}`;
+  const response = await HttpClient.get(url);
+  const prompt = await response.json();
+  const promptText = prompt.prompt;
+  return promptText;
+};
 
 export const fetchCustomPrompt = async (promptName: string) => {
   const url = `https://curriculum.code.org/media/prompt-library/${promptName}.md`;
@@ -65,7 +74,32 @@ export const useAiTutorModelParameters = (
       }
     };
 
-    fetchPrompt();
+    const fetchLangfusePromptAndSet = async () => {
+      if (!promptName) {
+        setSystemPrompt(defaultSystemPrompt);
+        return;
+      }
+
+      try {
+        const langfusePrompt = await fetchLangfusePrompt(promptName);
+        if (mounted && langfusePrompt) {
+          setSystemPrompt(langfusePrompt);
+        }
+      } catch (error) {
+        console.error('Error fetching Langfuse prompt:', error);
+        if (mounted) {
+          setSystemPrompt(defaultSystemPrompt);
+        }
+      }
+    };
+
+    if (
+      experiments.isEnabledAllowingQueryString(experiments.USE_LANGFUSE_PROMPT)
+    ) {
+      fetchLangfusePromptAndSet();
+    } else {
+      fetchPrompt();
+    }
 
     return () => {
       mounted = false;

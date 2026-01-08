@@ -30,21 +30,21 @@
     "widget_view": "false",
     "initial_view_mode": "code",
     "disable_edit_run_for_submission": "false",
-    "ai_tutor_mode": "outline",
+    "ai_tutor_mode": "tutor",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedjwyQvWACJWSDBaXO+ac4wtXWtucQasJ1pXh\neqljCYDSek//9+d3Q0NsquO3TRgcEdXlcnQzzVCqIu4fpadupAnJfB8hdBAu\n8yKDJsZPV5IN3kn2+WdrIcMgylwwRniq6UmHH53PlpBV3jtYpRj0UCOGTGoT\nerG5Dcq/BM535g0ey+awyKfkRdfVMU3IydxVc08wxty6V3z/JU/DwnX+uwCj\nzDw4f1n9N+Nu49C1/b/CKbW7hRHIG8BA5FQVEcaxtzNN4qaM0tGa2+mYXvwm\nHHe3hMhsJOy5eYKwecuAdgZIxAVe1jhz65zI60Q5wgWUGdqXim+0ztyrU6Nj\n7XF+D2BffHcB0jXySiKcFVRj+0Twx4h25Jhiq/JuxvbOm9R0S5D/S1tiEBSQ\nO/AHZH1iCiud2uq2G0SxtOLOg7tcTnRffivmbrayTDzBcyg+69wFJgbDr32F\nWPajCLOxb6gy8SE4/ETZHMoOC1SalzDJqgqmz1yKP9zBApbie81pvjpiFoZX\nO1/FWZs+37/UlRYpRdPBVyyZtApeheVUNz/TPEb++4fIdbHMxzI+gL9tov5E\nPaijr49gS9TNcUTkEHIhJH5u+wH7cNXlmzA9T2XSKWbsDp68ZM0Vm9RqPwdU\nmZHD/qAihqu1TltGnpR6cfFPE8dEY1Db4LwROao1+BcPIomN4DjZpxBKbF6o\nZPfnKXiZqpKHpBQFg7KN1YS5HrDIP9Wh7gweW8/SxlQ/5V+6amP0mD23smNN\ncNIkNH7j/i6ltA==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T11:30:34.818+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level3-test-2025\"},{\"changed_at\":\"2025-11-13 11:34:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:30:34.818+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson6-level3-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson6-level3-test-2025\"},{\"changed_at\":\"2025-11-13 11:34:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:36:38 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

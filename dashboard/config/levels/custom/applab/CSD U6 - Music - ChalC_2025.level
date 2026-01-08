@@ -117,6 +117,7 @@
     "start_blocks": "onEvent(\"testButton\", \"click\", function() {\r\n  //1) Get the value from the dropdown and store it in a variable\r\n  \r\n  //2) Play a song depending on what the user selected\r\n  \r\n});\r\n",
     "bubble_choice_description": "Create an app that lets the user choose their alarm settings to play different styles of notes or music.",
     "encrypted_examples": "v7IpwEMDQhdhZUqQfHl1r6Vdl6oDOxkIwnokDXK8ojohb78JuQdZK3hXU9kL\n670G8eOE0fMcfy1bPkEUEKbQAw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

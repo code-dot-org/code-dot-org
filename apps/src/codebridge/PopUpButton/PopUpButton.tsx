@@ -5,6 +5,8 @@ import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 
+import {createUuid} from '@cdo/apps/utils';
+
 import moduleStyles from './pop-up-button.module.scss';
 
 type PopUpButtonProps = {
@@ -20,6 +22,9 @@ type PopUpButtonProps = {
 
 const TOP_PADDING = 5;
 
+// Custom event used to coordinate closing other dropdowns when one opens
+const CLOSE_OTHER_DROPDOWNS_EVENT = 'popupbutton:close';
+
 export const PopUpButton = ({
   children,
   iconName,
@@ -33,22 +38,58 @@ export const PopUpButton = ({
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
   const [computedButtonStyles, setComputedButtonStyles] = useState(className);
-  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
-  // main lab container.
+  // Get the button element ref to remove focus when closing the dropdown
+  const buttonElementRef = useRef<HTMLButtonElement | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  // Unique identifier for current dropdown instance
+  const instanceId = useRef(createUuid());
+  // Track pending timeouts for cleanup
+  const timeoutsRef = useRef<Set<NodeJS.Timeout>>(new Set());
+
+  // We need to set the theme here because the dropdown is
+  // rendered in a portal, outside of the main lab container.
   const {theme} = useTheme();
 
+  // Listen for close events from other dropdowns
+  useEffect(() => {
+    const handleCloseOthers = (e: Event) => {
+      const customEvent = e as CustomEvent<{sourceId: string}>;
+      if (customEvent.detail.sourceId !== instanceId.current) {
+        // Defer state update to avoid updating during render
+        const timeoutId = setTimeout(() => {
+          setIsOpen(false);
+          timeoutsRef.current.delete(timeoutId);
+        }, 0);
+        timeoutsRef.current.add(timeoutId);
+      }
+    };
+    document.addEventListener(CLOSE_OTHER_DROPDOWNS_EVENT, handleCloseOthers);
+    return () =>
+      document.removeEventListener(
+        CLOSE_OTHER_DROPDOWNS_EVENT,
+        handleCloseOthers
+      );
+  }, []);
+
+  // Handler to close the dropdown.
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
     document.removeEventListener('click', setIsOpenFalse);
-    // Because this operates on a delay, we also have to update the styles on a delay
-    setTimeout(() => {
+
+    // Remove focus from the menu button when closing the dropdown
+    buttonElementRef.current?.blur();
+
+    // Because this operates on a delay, update the styles on a delay too
+    const timeoutId = setTimeout(() => {
       setComputedButtonStyles(className);
-    }, 300);
+      timeoutsRef.current.delete(timeoutId);
+    }, 0);
+    timeoutsRef.current.add(timeoutId);
   }, [setIsOpen, className]);
 
+  // Handler to show the dropdown.
   const clickHandler = useCallback(
     (
       e:
@@ -61,12 +102,20 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
-          // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
-          // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
-          setTimeout(
-            () => document.addEventListener('click', setIsOpenFalse),
-            0
+          // Tell other dropdowns to close
+          document.dispatchEvent(
+            new CustomEvent(CLOSE_OTHER_DROPDOWNS_EVENT, {
+              detail: {sourceId: instanceId.current},
+            })
           );
+
+          // Defer adding the close handler until the next tick of the event
+          // loop, otherwise it'll fire immediately and re-close the pop up.
+          const timeoutId = setTimeout(() => {
+            document.addEventListener('click', setIsOpenFalse);
+            timeoutsRef.current.delete(timeoutId);
+          }, 0);
+          timeoutsRef.current.add(timeoutId);
         } else {
           document.removeEventListener('click', setIsOpenFalse);
         }
@@ -89,12 +138,17 @@ export const PopUpButton = ({
             alignment === 'right'
               ? buttonRect.right - dropdownRect.width + window.scrollX
               : buttonRect.left + window.scrollX;
-          setDropdownStyles({
-            top,
-            left,
-          });
-          setUpdatedStyles(true);
-          setComputedButtonStyles(classNames(className, moduleStyles.active));
+          // Defer all state updates to avoid updating during render
+          const timeoutId = setTimeout(() => {
+            setDropdownStyles({
+              top,
+              left,
+            });
+            setUpdatedStyles(true);
+            setComputedButtonStyles(classNames(className, moduleStyles.active));
+            timeoutsRef.current.delete(timeoutId);
+          }, 0);
+          timeoutsRef.current.add(timeoutId);
         }
       }
     };
@@ -107,6 +161,20 @@ export const PopUpButton = ({
     };
   }, [alignment, buttonRef, isOpen, className]);
 
+  // Clear all pending timeouts and event listeners on unmount
+  // to prevent memory leaks and state updates after unmount.
+  useEffect(() => {
+    const timeouts = timeoutsRef.current;
+    return () => {
+      // Clear all pending timeouts to prevent state updates after unmount
+      timeouts.forEach(timeoutId => clearTimeout(timeoutId));
+      timeouts.clear();
+
+      // Remove click event listener if it exists
+      document.removeEventListener('click', setIsOpenFalse);
+    };
+  }, [setIsOpenFalse]);
+
   // We wait to make the dropdown visible until we've calculated the position
   // it should be in based on its own width and the size of the button.
   // We do this to avoid the dropdown appearing in the wrong place momentarily.
@@ -118,6 +186,7 @@ export const PopUpButton = ({
   return (
     <>
       <Button
+        ref={buttonElementRef}
         className={computedButtonStyles}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}

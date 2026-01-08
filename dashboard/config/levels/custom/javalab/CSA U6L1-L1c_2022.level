@@ -53,7 +53,7 @@
     "bubble_choice_description": "An example project that generates a random friend.",
     "thumbnail_url": "https://images.code.org/8ede526b52bbaead05a49565d535da44-friends.png",
     "name_suffix": "_2022",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-02-26T00:27:42.791+00:00\",\"changed\":[\"cloned from \\\"CSA U6L1-L1c\\\"\"],\"cloned_from\":\"CSA U6L1-L1c\"},{\"changed_at\":\"2022-05-11 12:45:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 13:49:24 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 13:57:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-25 13:57:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-01 14:40:31 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

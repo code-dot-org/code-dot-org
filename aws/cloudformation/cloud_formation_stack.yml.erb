@@ -302,7 +302,7 @@ Resources:
   frontend_availability_zones: frontend_availability_zones,
   frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
-  frontend_volume_size: 64,
+  frontend_volume_size: 128,
   ami_timeout: 'PT120M',
   build_ami: erb_file(BOOTSTRAP_CHEF,
     resource_id: "AMICreate#{commit_hash}",

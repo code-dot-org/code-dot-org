@@ -463,8 +463,8 @@ FactoryBot.define do
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: true, user: teacher)
+          create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::AI_TUTOR_PILOT_NAME)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -473,8 +473,7 @@ FactoryBot.define do
       factory :student_without_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: false, user: teacher)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -1092,9 +1091,9 @@ FactoryBot.define do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
       [
-        create(:dance, name: 'Generate Dancer'),
-        create(:music, name: 'Generate Music'),
-        create(:dance, name: 'Generate Dance')
+        create(:dance),
+        create(:music),
+        create(:dance)
       ]
     end
   end
@@ -2319,6 +2318,30 @@ FactoryBot.define do
     is_preset {false}
   end
 
+  factory :aidiff_exit_ticket do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffExitTicket"}
+  end
+
+  factory :aidiff_lesson_hook do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffLessonHook"}
+  end
+
+  factory :aidiff_artifact_association do
+    association :aidiff_artifact
+    association :unit
+    association :unit_group
+    association :lesson
+    association :section
+  end
+
   factory :modular_course_context, class: Hash do
     skip_create
     initialize_with do
@@ -2373,5 +2396,19 @@ FactoryBot.define do
   factory :misc_survey, class: 'Pd::MiscSurvey' do
     association :user
     form_id {1}
+  end
+
+  factory :teacher_notification do
+    association :user
+    title {"Test Teacher Notification"}
+    description {"Test teacher notification description"}
+    icon_name {"notification_icon"}
+    icon_color {"blue"}
+    href_links {[{'url' => 'https://example.com', 'text' => 'Test Link'}]}
+    ai_prompts {[{'text' => 'Test Prompt', 'prompt' => 'Test prompt text'}]}
+    priority {0}
+    expires_at {1.day.from_now}
+    read_at {nil}
+    is_dismissed {false}
   end
 end

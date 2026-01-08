@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
 import commonI18n from '@cdo/locale';
 
-import {setAllWorkspacesTheme} from '../blockly/utils';
+import {setWorkspaceTheme} from '../blockly/utils';
 import UserPreferences from '../lib/util/UserPreferences';
 
 import styles from './settings.module.scss';
@@ -31,7 +31,7 @@ const SettingsModal = () => {
     const theme = Blockly.themes[value];
     if (theme) {
       setSelectedTheme(value);
-      setAllWorkspacesTheme(theme, Blockly.getMainWorkspace()?.getTheme());
+      setWorkspaceTheme(value);
       new UserPreferences().setBlocklyTheme(value, () =>
         localStorage.setItem(BLOCKLY_THEME, value)
       );

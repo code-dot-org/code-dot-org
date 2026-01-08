@@ -117,7 +117,7 @@ namespace :ci do
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
-      Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+      Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
@@ -186,8 +186,16 @@ namespace :ci do
     end
   end
 
+  timed_task_with_logging :force_seed_ui_test do
+    Dir.chdir('dashboard') do
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
   timed_task_with_logging :sparse_checkout do
-    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
+    # never do sparse checkout in prepare_cacheable_build CI job, or it will
+    # cause later unit and ui jobs to fail.
+    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT) && ['unit_tests', 'ui_tests'].include?(ENV.fetch('CI_JOB', nil))
       cmd = 'bin/sparse-checkout no-pegasus-content'
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
       RakeUtils.system_stream_output "git status --porcelain"

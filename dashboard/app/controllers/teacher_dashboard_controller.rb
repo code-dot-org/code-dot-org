@@ -29,6 +29,7 @@ class TeacherDashboardController < ApplicationController
     end
     @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
+    @flash = flash
     view_options(full_width: true, no_padding_container: true)
   end
 
@@ -76,5 +77,17 @@ class TeacherDashboardController < ApplicationController
       afeEligible: afe_eligible,
       showNps: show_nps
     }
+  end
+
+  # This is used for the AI Lesson Summaries limited release in AIF.
+  # It can also be used for the limited release of AI audio summaries
+  def unit_in_aif
+    unit = Unit.find(params[:unit_id])
+    if unit
+      aif_status = unit.name.include?('aif')
+      render json: {aif: aif_status}
+    else
+      return false
+    end
   end
 end

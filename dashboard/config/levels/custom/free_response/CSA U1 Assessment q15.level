@@ -17,7 +17,7 @@
     "instructions_important": "false",
     "optional": "false",
     "allow_multiple_attempts": "false",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "notes": "",

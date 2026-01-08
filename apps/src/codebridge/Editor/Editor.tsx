@@ -58,7 +58,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     const extensions: Extension[] = [];
     if (
       file?.name &&
-      enableUserAddedSelectionContext(levelProperties.appName, file?.url)
+      enableUserAddedSelectionContext(levelProperties.appName)
     ) {
       const addToAiTutorField = getAddToAiTutorField(file.name, dispatch);
       extensions.push(addToAiTutorField);
@@ -96,17 +96,13 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     dispatch,
     file?.language,
     file?.name,
-    file?.url,
     langMapping,
     levelProperties.appName,
   ]);
 
   if (file?.url && viewableImageFileType(file.language)) {
-    return (
-      <div>
-        <img src={file.url} alt={file.name} />
-      </div>
-    );
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+    return <img src={file.url} alt={file.name} tabIndex={0} />;
   }
 
   if (file && !editableFileType(file.language, editableFileTypes)) {
