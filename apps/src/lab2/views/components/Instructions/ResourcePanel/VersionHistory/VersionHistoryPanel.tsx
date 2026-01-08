@@ -498,11 +498,10 @@ const VersionHistoryPanel: React.FunctionComponent<
       viewingOldVersion,
       restoreSelectedVersion,
       versionLoading,
+      hasEdited,
       currentSources,
       handleSaveVersionSuccess,
       alwaysShowAutoSaves,
-      viewingOldVersion,
-      hasEdited,
     ]
   );
 

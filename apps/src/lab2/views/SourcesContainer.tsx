@@ -110,7 +110,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
         reinitializationHandler.current();
       }
     },
-    [projectManager, setCurrentSources, reinitializationHandler]
+    [projectManager, setCurrentSources, reinitializationHandler, dispatch]
   );
 
   useEffect(() => {
