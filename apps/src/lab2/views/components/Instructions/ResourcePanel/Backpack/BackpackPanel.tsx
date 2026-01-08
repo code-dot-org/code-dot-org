@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -14,12 +15,16 @@ import BackpackFileChip from './BackpackFileChip';
 
 import moduleStyles from './backpack-panel.module.scss';
 
+// TODO: plumb through generic methods for validating filename and saving/creating files
 const BackpackPanel: React.FC = () => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const [alertList, setAlertList] = useState<
+    {type: 'success' | 'danger'; message: string}[]
+  >([]);
 
   const loadBackpackFiles = useCallback(() => {
     if (backpackApi) {
@@ -145,8 +150,27 @@ const BackpackPanel: React.FC = () => {
 
   return (
     <div className={moduleStyles.backpackPanelWithFiles}>
+      {alertList.map((alert, index) => (
+        <Alert type={alert.type} text={alert.message} key={index} />
+      ))}
       {fileList?.map(filename => (
-        <BackpackFileChip key={filename} filename={filename} />
+        <BackpackFileChip
+          key={filename}
+          filename={filename}
+          backpackApi={backpackApi}
+          addAlert={(type, message) =>
+            setAlertList(prevAlerts => [...prevAlerts, {type, message}])
+          }
+          validateFilename={filename => {
+            return {isSupportFilename: false, isDuplicateFilename: false};
+          }}
+          saveFile={async (filename: string, contents: string) => {
+            return true;
+          }}
+          createNewFile={async (filename: string, contents: string) => {
+            return true;
+          }}
+        />
       ))}
     </div>
   );

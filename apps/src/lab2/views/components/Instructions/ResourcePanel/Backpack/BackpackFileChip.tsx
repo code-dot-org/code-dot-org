@@ -9,14 +9,33 @@ import {
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
 interface BackpackFileChipProps {
   filename: string;
+  backpackApi: BackpackClientApi;
+  addAlert: (type: 'success' | 'danger', message: string) => void;
+  validateFilename: (filename: string) => {
+    isSupportFilename: boolean;
+    isDuplicateFilename: boolean;
+  };
+  saveFile: (filename: string, contents: string) => Promise<boolean>;
+  createNewFile: (filename: string, contents: string) => Promise<boolean>;
 }
 
-const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
+const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
+  filename,
+  backpackApi,
+  addAlert,
+  validateFilename,
+  saveFile,
+  createNewFile,
+}) => {
   const fileExtension = filename.split('.').pop()?.toUpperCase();
   const fileIcon = useMemo(
     () =>
@@ -29,9 +48,38 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({filename}) => {
       }),
     [filename]
   );
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
-  const handleAdd = () => {
-    console.log('adding file from backpack:', filename);
+  // TODO: log errors to cloudwatch
+  // TODO: chain of modals to handle duplicates
+  const handleAdd = async () => {
+    const {isSupportFilename, isDuplicateFilename} = validateFilename(filename);
+    const errorMessage = `An error occurred while adding ${filename} to your project, please try again.`;
+    const response = await backpackApi.fetchFileResponse(filename);
+    if (!response || response instanceof Error) {
+      addAlert('danger', errorMessage);
+      return;
+    }
+    let fileContent = '';
+    let url: string | undefined = undefined;
+    if (response?.headers.get('Content-Type')?.startsWith('image/')) {
+      // Handle image file content as a blob, and upload as an asset.
+      // Store the url as the new file contents.
+      const blob = await response.blob();
+      const uuid = createUuid();
+      const fileType = filename.split('.').pop();
+      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
+      try {
+        await HttpClient.put(uploadUrl, blob);
+      } catch (error) {
+        addAlert('danger', errorMessage);
+        return;
+      }
+      url = uploadUrl;
+    } else {
+      fileContent = await response.text();
+    }
   };
 
   const handleDelete = () => {
