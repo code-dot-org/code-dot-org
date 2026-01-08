@@ -3,25 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
-
-// Record events to Firehose to understand how often users:
-//   - see the download button,
-//   - click it,
-//   - actually get a download started,
-//   - successfully get a file and trigger the client download,
-//   - have the download fail,
-//   - have the download attempts timeout.
-
-const FIREHOSE_STUDY = 'finish_dialog';
-const FIREHOSE_STUDY_GROUP = 'replay_video';
-const FIREHOSE_EVENT_DOWNLOAD_BUTTON_SEEN = 'download_button_seen';
-const FIREHOSE_EVENT_DOWNLOAD_CLICKED = 'download_clicked';
-const FIREHOSE_EVENT_DOWNLOAD_STARTED = 'download_started';
-const FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED = 'download_succeeded';
-const FIREHOSE_EVENT_DOWNLOAD_FAILED = 'download_failed';
-const FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT = 'download_failed_timeout';
 
 /**
  * Trigger a download from the given url with the given name.
@@ -31,12 +13,6 @@ const FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT = 'download_failed_timeout';
  * URLs.
  */
 function downloadRemoteUrl(url, downloadName) {
-  firehoseClient.putRecord({
-    study: FIREHOSE_STUDY,
-    study_group: FIREHOSE_STUDY_GROUP,
-    event: FIREHOSE_EVENT_DOWNLOAD_STARTED,
-  });
-
   fetch(url, {
     method: 'GET',
   })
@@ -50,21 +26,9 @@ function downloadRemoteUrl(url, downloadName) {
       document.body.appendChild(element);
       element.click();
       document.body.removeChild(element);
-
-      firehoseClient.putRecord({
-        study: FIREHOSE_STUDY,
-        study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED,
-      });
     })
     .catch(error => {
       console.log(error);
-
-      firehoseClient.putRecord({
-        study: FIREHOSE_STUDY,
-        study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_FAILED,
-      });
     });
 }
 
@@ -106,14 +70,6 @@ class DownloadReplayVideoButton extends React.Component {
   componentDidMount() {
     this.tryCreateReplayVideo();
     this.checkVideoUntilSuccess();
-
-    if (this.shouldRenderButton()) {
-      firehoseClient.putRecord({
-        study: FIREHOSE_STUDY,
-        study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_BUTTON_SEEN,
-      });
-    }
   }
 
   componentWillUnmount() {
@@ -147,12 +103,6 @@ class DownloadReplayVideoButton extends React.Component {
   buttonEnabled = () => this.state.videoExists || !this.state.downloadInitiated;
 
   clickDownloadVideo = event => {
-    firehoseClient.putRecord({
-      study: FIREHOSE_STUDY,
-      study_group: FIREHOSE_STUDY_GROUP,
-      event: FIREHOSE_EVENT_DOWNLOAD_CLICKED,
-    });
-
     this.tryDownloadVideo(event);
   };
 
@@ -211,13 +161,6 @@ class DownloadReplayVideoButton extends React.Component {
       if (this.props.onError) {
         this.props.onError();
       }
-
-      firehoseClient.putRecord({
-        study: FIREHOSE_STUDY,
-        study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT,
-      });
-
       return;
     }
 
