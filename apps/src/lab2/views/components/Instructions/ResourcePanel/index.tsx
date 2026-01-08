@@ -68,6 +68,15 @@ interface VersionHistoryProps {
   onLoadVersion?: (sources: ProjectSources) => void;
 }
 
+export interface BackpackProps {
+  validateFilename: (filename: string) => {
+    isSupportFileName: boolean;
+    newFileName: string;
+  };
+  saveFile: (filename: string, contents: string, url?: string) => void;
+  createNewFile: (filename: string, contents: string, url?: string) => void;
+}
+
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
@@ -112,6 +121,7 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  backpackProps?: BackpackProps;
 };
 
 /**
@@ -136,6 +146,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
+  backpackProps,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -182,8 +193,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     appName,
     levelProperties.aiTutorAvailable
   );
-  // TODO: also check for readonly/viewing other user's project??
+
   const showBackpack =
+    backpackProps &&
     !isPermanentlyReadOnly &&
     (appName === 'pythonlab' || appName === 'weblab2');
 
@@ -251,7 +263,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
-      tabMap[Tabs.Backpack] = <BackpackPanel />;
+      tabMap[Tabs.Backpack] = <BackpackPanel {...backpackProps} />;
     }
 
     if (
@@ -281,8 +293,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isReadOnlyPredict,
     versionHistoryProps,
     showRubric,
-    isUserTeacher,
     showBackpack,
+    isUserTeacher,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
     levelName,
@@ -295,6 +307,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isTemporarilyReadOnly,
     isViewingOldVersion,
     currentTab,
+    backpackProps,
   ]);
 
   const hasTabs = useMemo(() => {

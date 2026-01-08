@@ -9,6 +9,7 @@ import {
 import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
+import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -16,16 +17,10 @@ import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
-interface BackpackFileChipProps {
+interface BackpackFileChipProps extends BackpackProps {
   filename: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
-  validateFilename: (filename: string) => {
-    isSupportFilename: boolean;
-    isDuplicateFilename: boolean;
-  };
-  saveFile: (filename: string, contents: string) => Promise<boolean>;
-  createNewFile: (filename: string, contents: string) => Promise<boolean>;
 }
 
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -54,7 +49,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   // TODO: log errors to cloudwatch
   // TODO: chain of modals to handle duplicates
   const handleAdd = async () => {
-    const {isSupportFilename, isDuplicateFilename} = validateFilename(filename);
+    const {isSupportFileName, newFileName} = validateFilename(filename);
+    console.log({filename, isSupportFileName, newFileName});
     const errorMessage = `An error occurred while adding ${filename} to your project, please try again.`;
     const response = await backpackApi.fetchFileResponse(filename);
     if (!response || response instanceof Error) {

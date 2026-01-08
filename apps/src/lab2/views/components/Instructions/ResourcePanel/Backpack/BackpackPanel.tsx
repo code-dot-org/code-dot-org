@@ -8,6 +8,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -15,8 +16,11 @@ import BackpackFileChip from './BackpackFileChip';
 
 import moduleStyles from './backpack-panel.module.scss';
 
-// TODO: plumb through generic methods for validating filename and saving/creating files
-const BackpackPanel: React.FC = () => {
+const BackpackPanel: React.FC<BackpackProps> = ({
+  validateFilename,
+  saveFile,
+  createNewFile,
+}) => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -161,15 +165,9 @@ const BackpackPanel: React.FC = () => {
           addAlert={(type, message) =>
             setAlertList(prevAlerts => [...prevAlerts, {type, message}])
           }
-          validateFilename={filename => {
-            return {isSupportFilename: false, isDuplicateFilename: false};
-          }}
-          saveFile={async (filename: string, contents: string) => {
-            return true;
-          }}
-          createNewFile={async (filename: string, contents: string) => {
-            return true;
-          }}
+          validateFilename={validateFilename}
+          saveFile={saveFile}
+          createNewFile={createNewFile}
         />
       ))}
     </div>

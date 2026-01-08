@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {
+  createNewFileThunk,
+  saveFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
   setIsValidating,
   setHasValidated,
@@ -17,6 +21,7 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
+import {validateBackpackFileName} from '../utils';
 
 import moduleStyles from './styles/info-panel.module.scss';
 interface InfoPanelProps {
@@ -56,6 +61,21 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
 
   const {appName, id: levelId} = levelProperties;
   const settings = useCodebridgeSettings();
+  const backpackProps = useMemo(
+    () => ({
+      validateFilename: (filename: string) =>
+        validateBackpackFileName(
+          filename,
+          source?.files || {},
+          levelProperties.validationFile
+        ),
+      saveFile: (fileId: string, contents: string, url?: string) =>
+        dispatch(saveFileThunk({fileId, contents, url})),
+      createNewFile: (fileName: string, contents: string, url?: string) =>
+        dispatch(createNewFileThunk({fileName, contents, url})),
+    }),
+    [source?.files, levelProperties.validationFile, dispatch]
+  );
 
   const handleValidate = () => {
     if (onRun) {
@@ -122,6 +142,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         documentationUrl={
           appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
         }
+        backpackProps={backpackProps}
       />
     </div>
   );
