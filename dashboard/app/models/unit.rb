@@ -88,7 +88,7 @@ class Unit < ApplicationRecord
         ],
         lessons: [
           :lesson_activities,
-          {script_levels: [:levels]}
+          {script_levels: :levels}
         ],
         unit_group_units: :unit_group
       )
@@ -100,13 +100,9 @@ class Unit < ApplicationRecord
     :with_seed_models, lambda do
       includes(
         :lesson_groups,
-        :script_levels,
-        :levels,
         :resources,
         :student_resources,
-        unit_group_units: {
-          unit_group: :course_version
-        },
+        script_levels: :levels,
         lessons: [
           {lesson_activities: :activity_sections},
           :resources,
@@ -116,7 +112,10 @@ class Unit < ApplicationRecord
           {rubric: {learning_goals: :learning_goal_evidence_levels}},
           :standards,
           :opportunity_standards
-        ]
+        ],
+        unit_group_units: {
+          unit_group: :course_version
+        }
       )
     end
   )
