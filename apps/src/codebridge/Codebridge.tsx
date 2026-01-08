@@ -152,6 +152,8 @@ export const Codebridge = React.memo(
     ]);
 
     const backpackApi = useMemo(() => {
+      // The backpack api does not work for signed-out users (it redirects to sign-in),
+      // so we don't create the api instance if there is no current user.
       if (currentUserId) {
         return new BackpackClientApi(appName, null);
       }

@@ -110,7 +110,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
             <StrongText>Your Backpack is loading</StrongText>
           </BodyTwoText>
           <BodyFourText>
-            Files in your Backpack will appear here shortly
+            Files in your Backpack will appear here shortly.
           </BodyFourText>
         </div>
       </div>

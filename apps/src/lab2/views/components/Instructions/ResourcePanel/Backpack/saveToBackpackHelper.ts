@@ -13,7 +13,9 @@ export const fetchAndSaveFile = async (
   selectedFileName: string,
   newFileName?: string
 ) => {
-  const errorMessage = `An error occurred while adding ${selectedFileName} to your project, please try again.`;
+  const errorMessage = `An error occurred while adding ${
+    newFileName || selectedFileName
+  } to your project, please try again.`;
   const successMessage = `${
     newFileName || selectedFileName
   } has been added to your project.`;
