@@ -148,13 +148,17 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     user = build(:student)
     refute_nil user.email
     refute_nil user.encrypted_password
-    PartialRegistration.persist_attributes @session, user
+    Timecop.freeze do
+      PartialRegistration.persist_attributes @session, user
 
-    cache_key = PartialRegistration.cache_key(user)
-    normalized_key = CDO.shared_cache.send(:normalize_key, cache_key, {})
-    cache_entry = CDO.shared_cache.send(:read_entry, normalized_key)
+      cache_key = PartialRegistration.cache_key(user)
+      normalized_key = CDO.shared_cache.send(:normalize_key, cache_key, {})
+      cache_entry = CDO.shared_cache.send(:read_entry, normalized_key)
 
-    assert_equal 8.hours, cache_entry.instance_variable_get(:@expires_in)
+      refute cache_entry.expired?
+      Timecop.travel(8.hours)
+      assert cache_entry.expired?
+    end
   end
 
   test 'round-trip preserves important attributes (sso)' do
