@@ -8,12 +8,11 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import {
   BlockColors,
-  BlocklyVersion,
   READ_ONLY_PROPERTIES,
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
@@ -79,10 +78,10 @@ import registerIfMutator from './addons/plusMinusBlocks/if';
 import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
-import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
-import customBlocks from './customBlocks/googleBlockly/index';
-import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
-import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/googleBlockly/variableBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/behaviorBlocks';
+import customBlocks from './customBlocks/index';
+import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/proceduresBlocks';
+import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/variableBlocks';
 import {
   adjustCalloutsOnViewportChange,
   bumpRTLBlocks,
@@ -119,7 +118,7 @@ import {
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
   FieldHelperOptions,
-  GoogleBlocklyInstance,
+  BlocklyCoreInstance,
 } from './types';
 import {
   INFINITE_LOOP_TRAP,
@@ -144,18 +143,17 @@ const MAX_GET_CODE_RETRIES = 2;
 const RETRY_GET_CODE_INTERVAL_MS = 500;
 
 /**
- * Wrapper class for https://github.com/google/blockly
- * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
- * by allowing us to unify the APIs so that we can switch out the underlying Blockly
- * object without affecting apps code.
- * This wrapper will contain all of our customizations to Google Blockly.
- * See also ./cdoBlocklyWrapper.js
+ * Wrapper class for https://github.com/RaspberryPiFoundation/blockly
+ * This wrapper was used to facilitate migrating from CDO Blockly to
+ * mainline (then Google) Blockly by allowing us to unify the APIs so
+ * that we can switch out the underlying Blockly object without affecting
+ * apps code.
+ * This wrapper now contains most of our customizations to Blockly.
  */
 const BlocklyWrapper = function (
   this: BlocklyWrapperType,
-  blocklyInstance: GoogleBlocklyInstance
+  blocklyInstance: BlocklyCoreInstance
 ) {
-  this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
   this.mainWorkspace = undefined;
   this.embeddedWorkspaces = [];
@@ -190,7 +188,7 @@ const BlocklyWrapper = function (
       const fieldClassName = override[1];
       const fieldClass = override[2];
 
-      // Force Google Blockly to use our custom versions of fields
+      // Force Blockly to use our custom versions of fields
       this.fieldRegistry.unregister(fieldRegistryName);
       this.fieldRegistry.register(fieldRegistryName, fieldClass);
 
@@ -204,7 +202,7 @@ const BlocklyWrapper = function (
   };
 };
 
-function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
+function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
@@ -243,7 +241,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   const getWorkspaceCodeHelper = (
     retryCount: number,
-    hiddenWorkspace: GoogleBlockly.Workspace | undefined
+    hiddenWorkspace: BlocklyCore.Workspace | undefined
   ): string => {
     let workspaceCode = '';
     try {
@@ -257,7 +255,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       getStore().dispatch(setFailedToGenerateCode(false));
     } catch (e) {
       if (retryCount < MAX_GET_CODE_RETRIES) {
-        // Sometimes we need to wait for Google Blockly change handlers to complete
+        // Sometimes we need to wait for Blockly change handlers to complete
         // before the code will generate correctly. Retry after a short delay.
         setTimeout(() => {
           return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
@@ -284,7 +282,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     console.warn(e);
   }
 
-  type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
+  type registrableFieldType = BlocklyCore.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
   const fieldOverrides: [string, string, registrableFieldType][] = [
@@ -488,7 +486,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     .prototype as ExtendedBlockSvg;
 
   extendedBlockSvg.isVisible = function () {
-    // TODO (eventually) - All Google Blockly blocks are currently visible.
+    // TODO (eventually) - All Blockly blocks are currently visible.
     // This shouldn't be a problem until we convert other labs.
     return true;
   };
@@ -539,7 +537,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedBlockSvg.toCopyData = function () {
     const blockCopyData = originalToCopyData.call(this);
     if (blockCopyData) {
-      blockCopyData.blockState = GoogleBlockly.serialization.blocks.save(this, {
+      blockCopyData.blockState = BlocklyCore.serialization.blocks.save(this, {
         addCoordinates: true,
         addNextBlocks: false,
         // We intentionally do not save IDs, because this can break student code
@@ -584,7 +582,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   // This is intentionally a no-op. Called by PlayLab.
-  // Google Blockly's implementation uses end row inputs instead.
+  // Blockly's implementation uses end row inputs instead.
   extendedInput.setInline = function (inline) {
     return this;
   };
@@ -698,7 +696,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   (blocklyWrapper.Block as any).createProcedureDefinitionBlock = function () {};
 
   // In cdo this is used to add "create a behavior" button to the toolbox
-  // Once we have fully moved to Google Blockly we can remove this.
+  // Once we have fully moved to Blockly we can remove this.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (blocklyWrapper.Flyout as any).configure = function () {};
 
@@ -763,7 +761,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
-    } as GoogleBlockly.Options);
+    } as BlocklyCore.Options);
     // Track that this is and embedded workspace to avoid trying
     // to run logic on it to ensure things run properly (such as procedures).
     blocklyWrapper.addEmbeddedWorkspace(workspace);
@@ -785,7 +783,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
 
-    workspace.setTheme(theme as GoogleBlockly.Theme);
+    workspace.setTheme(theme as BlocklyCore.Theme);
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
@@ -854,7 +852,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     };
     // For old levels, we remove statically-defined procedure call blocks from the
     // auto-populated Functions category. We also remove any invisible blocks because
-    // Google Blockly doesn't support them.
+    // modern Blockly doesn't support them.
     if (typeof options.toolbox === 'string') {
       const toolboxDom = Blockly.Xml.textToDom(options.toolbox);
       const visibleBlocksDom = removeInvisibleBlocks(toolboxDom);
@@ -896,7 +894,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(
-      options.theme as GoogleBlockly.Theme | undefined
+      options.theme as BlocklyCore.Theme | undefined
     );
 
     // Only allow toggling disabled blocks in start mode.
@@ -920,11 +918,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     Blockly.cdoUtils
       .getUserTheme(workspace.getTheme())
-      .then((theme: GoogleBlockly.Theme) => {
+      .then((theme: BlocklyCore.Theme) => {
         setThemeAndRenderBlocks(
           workspace,
           theme,
-          options.theme as GoogleBlockly.Theme
+          options.theme as BlocklyCore.Theme
         );
       });
     workspace.defs = Blockly.createSvgElement(
@@ -973,11 +971,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     // In toolbox mode, automatically clean up the workspace as blocks are moved.
-    // This needs to use Google Blockly's built-in cleanUp method, which arranges
+    // This needs to use Blockly's built-in cleanUp method, which arranges
     // all blocks into a single column.
     if (blocklyWrapper.isToolboxMode) {
       workspace.addChangeListener(event => {
-        if (event.type === GoogleBlockly.Events.MOVE) {
+        if (event.type === BlocklyCore.Events.MOVE) {
           workspace.cleanUp();
         }
       });
@@ -1117,7 +1115,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   blocklyWrapper.createSvgElement = blocklyWrapper.utils.dom.createSvgElement;
 
-  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  // Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {
     // Disable Blockly events to prevent unnecessary event mirroring
     Blockly.Events.disable();

@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -7,8 +7,8 @@ import {commonI18n} from '@cdo/apps/types/locale';
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns {FlyoutDefinition} An array of JSON block elements.
  */
-export function flyoutCategory(workspace: GoogleBlockly.WorkspaceSvg) {
-  const blockList: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
+export function flyoutCategory(workspace: BlocklyCore.WorkspaceSvg) {
+  const blockList: BlocklyCore.utils.toolbox.FlyoutItemInfoArray = [];
   const newVariableButton = getNewVariableButtonWithCallback(workspace);
   blockList.push(newVariableButton);
 
@@ -23,13 +23,13 @@ export function flyoutCategory(workspace: GoogleBlockly.WorkspaceSvg) {
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(
     block =>
-      (block as GoogleBlockly.utils.toolbox.BlockInfo).type === 'math_change'
+      (block as BlocklyCore.utils.toolbox.BlockInfo).type === 'math_change'
   ).length;
   // If there is more than one, remove the first occurrence which was auto-generated.
   if (mathChangeBlocksCount > 1) {
     const firstMathChangeIndex = blockList.findIndex(
       block =>
-        (block as GoogleBlockly.utils.toolbox.BlockInfo).type === 'math_change'
+        (block as BlocklyCore.utils.toolbox.BlockInfo).type === 'math_change'
     );
     if (firstMathChangeIndex !== -1) {
       blockList.splice(firstMathChangeIndex, 1);
@@ -40,7 +40,7 @@ export function flyoutCategory(workspace: GoogleBlockly.WorkspaceSvg) {
 }
 
 const getNewVariableButtonWithCallback = (
-  workspace: GoogleBlockly.WorkspaceSvg
+  workspace: BlocklyCore.WorkspaceSvg
 ) => {
   const callbackkey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackkey, () => {
@@ -67,7 +67,7 @@ const getNewVariableButtonWithCallback = (
  * @param workspace The workspace containing variables.
  * @returns {Array<Object>} An array of JSON block objects for a flyout.
  */
-export function flyoutCategoryBlocks(workspace: GoogleBlockly.WorkspaceSvg) {
+export function flyoutCategoryBlocks(workspace: BlocklyCore.WorkspaceSvg) {
   const variableModelList = workspace.getVariablesOfType('');
 
   const blockList = [];

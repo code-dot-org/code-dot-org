@@ -133,7 +133,6 @@ export const setUpWithLevel = createAsyncThunk<
     userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
-    scriptLevelId?: string;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -228,8 +227,7 @@ export const setUpWithLevel = createAsyncThunk<
           payload.levelId,
           levelProperties.isProjectLevel || false,
           payload.userId,
-          payload.scriptId,
-          payload.scriptLevelId
+          payload.scriptId
         );
 
     // Only set the project manager and initiate load
