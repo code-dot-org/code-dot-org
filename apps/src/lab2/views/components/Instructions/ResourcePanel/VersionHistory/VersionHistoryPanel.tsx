@@ -114,6 +114,7 @@ const VersionHistoryPanel: React.FunctionComponent<
   const reduxSources = useAppSelector(
     state => state.lab2Project.projectSources
   );
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const currentSources = sourcesContainerSources || reduxSources;
 
@@ -478,7 +479,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           restoreDisabled={disabled || versionLoading}
           alwaysShowAutoSaves={alwaysShowAutoSaves}
         >
-          {isLatest && !viewingOldVersion && !viewAsUserId && (
+          {isLatest && hasEdited && !viewingOldVersion && !viewAsUserId && (
             <SaveVersionPanel
               projectSources={currentSources}
               onSuccess={handleSaveVersionSuccess}
@@ -500,6 +501,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       handleSaveVersionSuccess,
       alwaysShowAutoSaves,
       viewingOldVersion,
+      hasEdited,
     ]
   );
 
