@@ -6,12 +6,12 @@
  * This file is sourced from @blockly/block-plus-minus
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 /**
  * Returns the extra state of the given block (either as XML or a JSO, depending
  * on the block's definition).
- * @param {!GoogleBlockly.BlockSvg} block The block to get the extra state of.
+ * @param {!BlocklyCore.BlockSvg} block The block to get the extra state of.
  * @returns {string} A stringified version of the extra state of the given
  *     block.
  */
@@ -23,7 +23,7 @@ export function getExtraBlockState(block) {
     return state ? JSON.stringify(state) : '';
   } else if (block.mutationToDom) {
     const state = block.mutationToDom();
-    return state ? GoogleBlockly.Xml.domToText(state) : '';
+    return state ? BlocklyCore.Xml.domToText(state) : '';
   }
   return '';
 }

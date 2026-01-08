@@ -1,5 +1,5 @@
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
@@ -17,7 +17,7 @@ import {procedureDefMutator} from './mutators/procedureDefMutator';
  * Replaces blocks that are part of core Blockly.
  * @type {!Object<string, Object>}
  */
-export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
+export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
@@ -126,7 +126,7 @@ export const editButtonHandler = function (this: CdoFieldButton) {
 };
 
 // This extension adds an edit button to the end of a procedure call block.
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'procedures_edit_button',
   function (this: ProcedureBlock) {
     // Edit buttons are used to open the modal editor. The button is appended to the last input.
@@ -154,7 +154,7 @@ GoogleBlockly.Extensions.register(
 
 // This extension renders function and behavior definitions as mini toolboxes
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'procedure_def_mini_toolbox',
   function (this: ProcedureBlock) {
     const miniToolboxBlocks = [];
@@ -191,7 +191,7 @@ GoogleBlockly.Extensions.register(
 // Adds an SVG frame to procedure definition blocks when they're on the main workspace.
 // Not used in Music Lab, the editor workspace, or embedded workspaces.
 // Note: The workspace frame used in the modal function editor is added there.
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'procedures_block_frame',
   function (this: ProcedureBlock) {
     if (
@@ -222,7 +222,7 @@ GoogleBlockly.Extensions.register(
 // we don't remove the procedure from the procedure map. Insertion markers also
 // get this destroy function and they should not cause us to delete a procedure
 // either.
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'modal_procedures_no_destroy',
   function (this: ProcedureBlock) {
     const originalDestroy = this.destroy?.bind(this);
@@ -238,7 +238,7 @@ GoogleBlockly.Extensions.register(
   }
 );
 
-GoogleBlockly.Extensions.register(
+BlocklyCore.Extensions.register(
   'procedure_call_overrides',
   function (this: ProcedureBlock) {
     const mixin = {
@@ -276,7 +276,7 @@ GoogleBlockly.Extensions.register(
        */
       getProcedureModel: function (
         this: ProcedureBlock
-      ): GoogleBlockly.Procedures.IProcedureModel | null {
+      ): BlocklyCore.Procedures.IProcedureModel | null {
         if (!this.model_) {
           this.model_ = this.findProcedureModel_(
             this.getFieldValue('NAME'),
@@ -316,8 +316,8 @@ GoogleBlockly.Extensions.register(
 // TODO: After updating to Blockly v10, remove this local copy of
 // procedureDefMutator and instead modify the imported mutator directly.
 // Our local copy has the compose() and decompose() methods removed.
-GoogleBlockly.Extensions.unregister('procedure_def_mutator');
-GoogleBlockly.Extensions.registerMutator(
+BlocklyCore.Extensions.unregister('procedure_def_mutator');
+BlocklyCore.Extensions.registerMutator(
   'procedure_def_mutator',
   procedureDefMutator
 );
@@ -325,28 +325,28 @@ GoogleBlockly.Extensions.registerMutator(
 // TODO: After updating to Blockly v10, use the original
 // procedure_caller_mutator and procedure_caller_on_change_mixin.
 // https://codedotorg.atlassian.net/browse/CT-148
-GoogleBlockly.Extensions.unregister('procedure_caller_mutator');
-GoogleBlockly.Extensions.registerMutator(
+BlocklyCore.Extensions.unregister('procedure_caller_mutator');
+BlocklyCore.Extensions.registerMutator(
   'procedure_caller_mutator',
   procedureCallerMutator
 );
 
-GoogleBlockly.Extensions.unregister('procedure_caller_onchange_mixin');
-GoogleBlockly.Extensions.registerMixin(
+BlocklyCore.Extensions.unregister('procedure_caller_onchange_mixin');
+BlocklyCore.Extensions.registerMixin(
   'procedure_caller_onchange_mixin',
   procedureCallerOnChangeMixin
 );
 
 // Labs like Maze and Artist turn undeletable blocks gray. This is not
 // done for special blocks like "when run" or procedure definitions.
-GoogleBlockly.Extensions.registerMixin('procedure_def_no_gray_out', {
+BlocklyCore.Extensions.registerMixin('procedure_def_no_gray_out', {
   shouldBeGrayedOut: function () {
     return false;
   },
 });
 
 // Used for giving feedback about empty function definition blocks.
-GoogleBlockly.Extensions.registerMixin('procedure_def_get_info', {
+BlocklyCore.Extensions.registerMixin('procedure_def_get_info', {
   getProcedureInfo: function () {
     return {
       name: this.getFieldValue('NAME'),
@@ -364,10 +364,10 @@ GoogleBlockly.Extensions.registerMixin('procedure_def_get_info', {
  * @returns an array of block objects representing the flyout blocks
  */
 export function flyoutCategory(
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   functionEditorOpen = false
 ) {
-  const blockList: GoogleBlockly.utils.toolbox.FlyoutItemInfoArray = [];
+  const blockList: BlocklyCore.utils.toolbox.FlyoutItemInfoArray = [];
 
   // Note: Blockly.Msg was undefined when this code was extracted into global scope
   const functionDefinitionBlock = {
@@ -399,7 +399,7 @@ export function flyoutCategory(
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
+  const allFunctions: BlocklyCore.serialization.procedures.State[] = [];
   workspaces.forEach(workspace => {
     const procedureBlocks = (
       workspace.getTopBlocks() as ProcedureBlock[]
@@ -430,7 +430,7 @@ export function flyoutCategory(
 }
 
 const getNewFunctionButtonWithCallback = (
-  workspace: GoogleBlockly.WorkspaceSvg
+  workspace: BlocklyCore.WorkspaceSvg
 ) => {
   const callbackkey = 'newProcedureCallback';
   const callback = () => {
@@ -461,7 +461,7 @@ const getNewFunctionButtonWithCallback = (
  * @returns boolean
  */
 export const toolboxConfigurationSupportsEditButton = (
-  block: GoogleBlockly.Block
+  block: BlocklyCore.Block
 ) => {
   if (block.type === BLOCK_TYPES.procedureCall) {
     return true;
