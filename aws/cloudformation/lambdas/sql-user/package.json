@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-secrets-manager": "^3.414.0",
+    "@aws-sdk/client-secrets-manager": "^3.965.0",
     "aws-sdk": "^2.1443.0",
     "cfn-response-promise": "^1.1.0",
     "ci": "^2.3.0",
