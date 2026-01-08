@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-06 15:08:44 UTC",
+    "serialized_at": "2026-01-07 21:54:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6330,6 +6330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L1-L1-2025"
+        ],
         "progression": "Sample Web Pages"
       },
       "bonus": false,
@@ -6352,6 +6355,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd2_2025"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -6374,6 +6380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L1-2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6396,6 +6405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L2-2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6418,6 +6430,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L3-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6440,6 +6455,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L4-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6462,6 +6480,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L5-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6484,6 +6505,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L6-2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6506,6 +6530,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L7-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6528,6 +6555,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L2 Assess FR_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6550,6 +6580,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2-L9-2025_clone"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6571,6 +6604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L1-2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6593,6 +6629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L2-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6615,6 +6654,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L3-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6637,6 +6679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2025"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -6659,6 +6704,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L5-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6681,6 +6729,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L6-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6703,6 +6754,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L7-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6725,6 +6779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L8_weblab2_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6747,6 +6804,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L9-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6769,6 +6829,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L3 Assess FR_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6791,6 +6854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L3-L11-2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -6813,6 +6879,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Social Sleuth_2018_2019_pilot_2025"
+        ],
         "progression": "Social Sleuth"
       },
       "bonus": false,
@@ -6831,6 +6900,72 @@
     },
     {
       "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Review: HTML"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L5-L1-2025"
+        ],
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8d56946c-0f54-4d72-a20d-473be0333d95"
+      },
+      "level_keys": [
+        "CSD U2L5-L1-2025"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Your Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L5-L2-2025"
+        ],
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "9673df3c-a181-4b36-92b1-a11643f3da53"
+      },
+      "level_keys": [
+        "CSD U2L5-L2-2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Review Your Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L5-L3-2025"
+        ],
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "542d039b-6d4c-4981-b21d-f997fe010874"
+      },
+      "level_keys": [
+        "CSD U2L5-L3-2025"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6854,7 +6989,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7154,6 +7289,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025",
         "activity_section.key": "c38ed937-7a12-470d-a9c1-50300bd0774d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L5-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L5-L1-2025"
+        ],
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "8d56946c-0f54-4d72-a20d-473be0333d95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L5-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L5-L2-2025"
+        ],
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "9673df3c-a181-4b36-92b1-a11643f3da53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L5-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L5-L3-2025"
+        ],
+        "lesson.key": "Lesson 5: Mini-Project - HTML Web Page",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "542d039b-6d4c-4981-b21d-f997fe010874"
       }
     },
     {
