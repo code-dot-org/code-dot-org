@@ -51,7 +51,6 @@ const COMPLETED_STATUSES: string[] = [
   LevelStatus.submitted,
 ];
 
-const COMPLETE_PERCENT_STRING = '100% complete';
 const ZERO_TIME_SPENT = '00:00:00';
 
 const formatTimeSpent = (secondsSpent: number) => {
@@ -217,7 +216,9 @@ const StudentLessonProgressDetailsWidget: React.FC<
 
   const numValidationLevelsUserCompleted = React.useMemo(() => {
     return userValidationProgressByLesson[selectedLessonId]
-      ? userValidationProgressByLesson[selectedLessonId][`${selectedStudentId}`]
+      ? userValidationProgressByLesson[selectedLessonId][
+          `${selectedStudentId}`
+        ] ?? 0
       : 0;
   }, [userValidationProgressByLesson, selectedLessonId, selectedStudentId]);
 
@@ -230,9 +231,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
 
     const totalValidationLevels =
       lessonsToValidationLevels[selectedLessonId]?.length ?? 0;
-    return numValidationLevelsComplete === totalValidationLevels
-      ? COMPLETE_PERCENT_STRING
-      : `${numValidationLevelsComplete} of ${totalValidationLevels} passed`;
+    return `${numValidationLevelsComplete} of ${totalValidationLevels} passed`;
   };
 
   const selectedStudentLessonProgress =
@@ -295,9 +294,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
             <div
               className={classNames(
                 styles.lessonDetailLabelAndInfo,
-                numValidationLevelsCompleteString(
-                  numValidationLevelsUserCompleted
-                ) === COMPLETE_PERCENT_STRING && styles.greenCompletedText
+                numUnpassedValidationLevels === 0 && styles.greenCompletedText
               )}
             >
               <Typography variant="overline3">Validation tests</Typography>
@@ -372,7 +369,9 @@ const StudentLessonProgressDetailsWidget: React.FC<
                     iconName={'triangle-exclamation'}
                     iconStyle={'solid'}
                   />
-                  <Typography variant="body3">{`${numUnpassedValidationLevels} tests not passed`}</Typography>
+                  <Typography variant="body3">{`${numUnpassedValidationLevels} ${
+                    numUnpassedValidationLevels > 1 ? 'tests' : 'test'
+                  } not passed`}</Typography>
                 </div>
               )}
               <Typography variant="body4">
