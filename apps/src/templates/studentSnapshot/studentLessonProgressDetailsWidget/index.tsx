@@ -317,7 +317,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
               >
                 <Typography variant="body4">{`Class Avg: ${numValidationLevelsCompleteString(
                   classAvgNumValidationLevelsCompleted
-                )}%`}</Typography>
+                )}`}</Typography>
                 {numValidationLevelsUserCompleted !==
                   classAvgNumValidationLevelsCompleted && (
                   <FontAwesomeV6Icon
