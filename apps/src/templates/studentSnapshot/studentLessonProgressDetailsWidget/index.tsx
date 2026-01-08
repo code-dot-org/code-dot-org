@@ -246,114 +246,140 @@ const StudentLessonProgressDetailsWidget: React.FC<
   const classAvgLessonTimeSpent =
     progressAveragesByLesson[selectedLessonId]?.timeSpentAverage ??
     ZERO_TIME_SPENT;
+  const numUnpassedValidationLevels =
+    (lessonsToValidationLevels[selectedLessonId]?.length ?? 0) -
+    numValidationLevelsUserCompleted;
 
   return (
-    <WidgetTemplate widgetName="Lesson Details" gridWidth={3} gridHeight={1}>
+    <WidgetTemplate widgetName="Lesson Details" gridWidth={3} gridHeight={2}>
       <div className={styles.lessonDetailsWidget}>
-        <div className={styles.lessonDetail}>
-          <FontAwesomeV6Icon iconName={'chart-line'} iconStyle={'regular'} />
-          <div
-            className={classNames(
-              styles.lessonDetailLabelAndInfo,
-              selectedStudentLessonProgress === 100 && styles.greenCompletedText
-            )}
-          >
-            <Typography variant="overline3">Progress</Typography>
-            <Typography variant="h4">{`${selectedStudentLessonProgress}% complete`}</Typography>
+        <div className={styles.lessonDetailsWidgetRow}>
+          <div className={styles.lessonDetail}>
+            <FontAwesomeV6Icon iconName={'chart-line'} iconStyle={'regular'} />
             <div
               className={classNames(
-                styles.classAvgInfo,
-                selectedStudentLessonProgress > classAvgLessonProgress
-                  ? styles.aboveClassAvg
-                  : styles.belowClassAvg
+                styles.lessonDetailLabelAndInfo,
+                selectedStudentLessonProgress === 100 &&
+                  styles.greenCompletedText
               )}
             >
-              <Typography variant="body4">{`Class Avg: ${classAvgLessonProgress}%`}</Typography>
-              {selectedStudentLessonProgress !== classAvgLessonProgress && (
-                <FontAwesomeV6Icon
-                  iconName={
-                    selectedStudentLessonProgress > classAvgLessonProgress
-                      ? 'arrow-up'
-                      : 'arrow-down'
-                  }
-                  iconStyle={'regular'}
-                />
-              )}
+              <Typography variant="overline3">Progress</Typography>
+              <Typography variant="h4">{`${selectedStudentLessonProgress}% complete`}</Typography>
+              <div
+                className={classNames(
+                  styles.classAvgInfo,
+                  selectedStudentLessonProgress > classAvgLessonProgress
+                    ? styles.aboveClassAvg
+                    : styles.belowClassAvg
+                )}
+              >
+                <Typography variant="body4">{`Class Avg: ${classAvgLessonProgress}%`}</Typography>
+                {selectedStudentLessonProgress !== classAvgLessonProgress && (
+                  <FontAwesomeV6Icon
+                    iconName={
+                      selectedStudentLessonProgress > classAvgLessonProgress
+                        ? 'arrow-up'
+                        : 'arrow-down'
+                    }
+                    iconStyle={'regular'}
+                  />
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.lessonDetail}>
-          <FontAwesomeV6Icon
-            iconName={'clipboard-check'}
-            iconStyle={'regular'}
-          />
-          <div
-            className={classNames(
-              styles.lessonDetailLabelAndInfo,
-              numValidationLevelsCompleteString(
-                numValidationLevelsUserCompleted
-              ) === COMPLETE_PERCENT_STRING && styles.greenCompletedText
-            )}
-          >
-            <Typography variant="overline3">Validation tests</Typography>
-            <Typography variant="h4">
-              {numValidationLevelsCompleteString(
-                numValidationLevelsUserCompleted
-              )}
-            </Typography>
+          <div className={styles.lessonDetail}>
+            <FontAwesomeV6Icon
+              iconName={'clipboard-check'}
+              iconStyle={'regular'}
+            />
             <div
               className={classNames(
-                styles.classAvgInfo,
-                numValidationLevelsUserCompleted >
-                  classAvgNumValidationLevelsCompleted
-                  ? styles.aboveClassAvg
-                  : styles.belowClassAvg
+                styles.lessonDetailLabelAndInfo,
+                numValidationLevelsCompleteString(
+                  numValidationLevelsUserCompleted
+                ) === COMPLETE_PERCENT_STRING && styles.greenCompletedText
               )}
             >
-              <Typography variant="body4">{`Class Avg: ${numValidationLevelsCompleteString(
-                classAvgNumValidationLevelsCompleted
-              )}%`}</Typography>
-              {numValidationLevelsUserCompleted !==
-                classAvgNumValidationLevelsCompleted && (
-                <FontAwesomeV6Icon
-                  iconName={
-                    numValidationLevelsUserCompleted >
+              <Typography variant="overline3">Validation tests</Typography>
+              <Typography variant="h4">
+                {numValidationLevelsCompleteString(
+                  numValidationLevelsUserCompleted
+                )}
+              </Typography>
+              <div
+                className={classNames(
+                  styles.classAvgInfo,
+                  numValidationLevelsUserCompleted >
                     classAvgNumValidationLevelsCompleted
-                      ? 'arrow-up'
-                      : 'arrow-down'
-                  }
-                  iconStyle={'regular'}
-                />
-              )}
+                    ? styles.aboveClassAvg
+                    : styles.belowClassAvg
+                )}
+              >
+                <Typography variant="body4">{`Class Avg: ${numValidationLevelsCompleteString(
+                  classAvgNumValidationLevelsCompleted
+                )}%`}</Typography>
+                {numValidationLevelsUserCompleted !==
+                  classAvgNumValidationLevelsCompleted && (
+                  <FontAwesomeV6Icon
+                    iconName={
+                      numValidationLevelsUserCompleted >
+                      classAvgNumValidationLevelsCompleted
+                        ? 'arrow-up'
+                        : 'arrow-down'
+                    }
+                    iconStyle={'regular'}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+          <div className={styles.lessonDetail}>
+            <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
+            <div className={styles.lessonDetailLabelAndInfo}>
+              <Typography variant="overline3">Time spent</Typography>
+              <Typography variant="h4">
+                {selectedStudentLessonTimeSpent}
+              </Typography>
+              <div
+                className={classNames(
+                  styles.classAvgInfo,
+                  selectedStudentLessonProgress > classAvgLessonProgress
+                    ? styles.aboveClassAvg
+                    : styles.belowClassAvg
+                )}
+              >
+                <Typography variant="body4">{`Class Avg: ${classAvgLessonTimeSpent}%`}</Typography>
+                {selectedStudentLessonTimeSpent !== classAvgLessonTimeSpent && (
+                  <FontAwesomeV6Icon
+                    iconName={
+                      selectedStudentLessonTimeSpent > classAvgLessonTimeSpent
+                        ? 'arrow-up'
+                        : 'arrow-down'
+                    }
+                    iconStyle={'regular'}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>
-        <div className={styles.lessonDetail}>
-          <FontAwesomeV6Icon iconName={'clock'} iconStyle={'regular'} />
-          <div className={styles.lessonDetailLabelAndInfo}>
-            <Typography variant="overline3">Time spent</Typography>
-            <Typography variant="h4">
-              {selectedStudentLessonTimeSpent}
-            </Typography>
-            <div
-              className={classNames(
-                styles.classAvgInfo,
-                selectedStudentLessonProgress > classAvgLessonProgress
-                  ? styles.aboveClassAvg
-                  : styles.belowClassAvg
+        <div className={styles.lessonDetailsWidgetRow}>
+          <div className={styles.lessonDetail}>
+            <div className={styles.validationLevelFeedback}>
+              {numUnpassedValidationLevels > 0 && (
+                <div className={styles.validationLevelCount}>
+                  <FontAwesomeV6Icon
+                    iconName={'triangle-exclamation'}
+                    iconStyle={'solid'}
+                  />
+                  <Typography variant="body3">{`${numUnpassedValidationLevels} tests not passed`}</Typography>
+                </div>
               )}
-            >
-              <Typography variant="body4">{`Class Avg: ${classAvgLessonTimeSpent}%`}</Typography>
-              {selectedStudentLessonTimeSpent !== classAvgLessonTimeSpent && (
-                <FontAwesomeV6Icon
-                  iconName={
-                    selectedStudentLessonTimeSpent > classAvgLessonTimeSpent
-                      ? 'arrow-up'
-                      : 'arrow-down'
-                  }
-                  iconStyle={'regular'}
-                />
-              )}
+              <Typography variant="body4">
+                {numUnpassedValidationLevels === 0
+                  ? 'There were no failed tests in this lesson.'
+                  : 'The app structure is correct, but key validation rules (e.g., form completion, value limits) were not implemented.'}
+              </Typography>
             </div>
           </div>
         </div>

@@ -3,57 +3,89 @@
 @import '@code-dot-org/component-library-styles/variables.scss';
 
 .lessonDetailsWidget {
+  width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 0.5rem;
-  width: 100%;
+  gap: 0.75rem;
 
-  .lessonDetail {
+  .lessonDetailsWidgetRow {
+    height: 100%;
     display: flex;
     flex-direction: row;
-    flex-basis: 0%;
-    flex-grow: 1;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: var(--background-neutral-primary);
-    border-radius: $regular-border-radius;
-    border-color: var(--borders-neutral-primary);
+    justify-content: space-between;
+    gap: 0.75rem;
 
-    i {
-      font-size: 30px;
-      padding-left: 0.25rem;
-      padding-right: 0.75rem;
-    }
-
-    .lessonDetailLabelAndInfo {
+    .lessonDetail {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      flex-basis: 0%;
+      flex-grow: 1;
+      align-items: center;
+      padding: 0.5rem;
+      background-color: var(--background-neutral-primary);
+      border-radius: $regular-border-radius;
+      border-color: var(--borders-neutral-primary);
 
-      p {
-        color: var(--text-neutral-tertiary);
+      i {
+        font-size: 30px;
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
       }
 
-      .classAvgInfo {
+      .lessonDetailLabelAndInfo {
         display: flex;
-        flex-direction: row;
-        gap: 0.25rem;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
 
-        i {
-          padding-top: 2px;
-          font-size: 12.5px;
+        p {
+          color: var(--text-neutral-tertiary);
+        }
+
+        .classAvgInfo {
+          display: flex;
+          flex-direction: row;
+          gap: 0.25rem;
+          align-items: center;
+
+          i {
+            padding-top: 2px;
+            font-size: 12.5px;
+          }
+        }
+
+        .aboveClassAvg > i {
+          color: var(--sentiment-success-50);
+        }
+
+        .belowClassAvg > i {
+          color: var(--sentiment-error-50);
         }
       }
 
-      .aboveClassAvg > i {
-        color: var(--sentiment-success-50);
-      }
+      .validationLevelFeedback {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem;
 
-      .belowClassAvg > i {
-        color: var(--sentiment-error-50);
+        .validationLevelCount {
+          display: flex;
+          flex-direction: row;
+          gap: 0.25rem;
+          align-items: center;
+
+          i {
+            font-size: 15px;
+            color: var(--sentiment-error-50);
+            padding: 0 0 2px 0;
+          }
+
+          p {
+            font-weight: 600;
+          }
+        }
       }
     }
   }
