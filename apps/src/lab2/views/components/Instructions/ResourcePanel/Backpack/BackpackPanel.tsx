@@ -156,7 +156,17 @@ const BackpackPanel: React.FC<BackpackProps> = ({
   return (
     <div className={moduleStyles.backpackPanelWithFiles}>
       {alertList.map((alert, index) => (
-        <Alert type={alert.type} text={alert.message} key={index} />
+        <Alert
+          type={alert.type}
+          text={alert.message}
+          key={index}
+          size="s"
+          onClose={() => {
+            const newList = [...alertList];
+            newList.splice(index, 1);
+            setAlertList(newList);
+          }}
+        />
       ))}
       {fileList?.map(fileName => (
         <BackpackFileChip

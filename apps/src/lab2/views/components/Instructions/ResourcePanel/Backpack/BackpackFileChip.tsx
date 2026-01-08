@@ -97,6 +97,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     newFileName?: string
   ) => {
     const errorMessage = `An error occurred while adding ${fileName} to your project, please try again.`;
+    const successMessage = `${
+      newFileName || selectedFileName
+    } has been added to your project.`;
     const response = await backpackApi.fetchFileResponse(fileName);
     if (!response || response instanceof Error) {
       console.error('Error fetching backpack file:', response);
@@ -124,10 +127,12 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     }
     if (newFileName) {
       createNewFile(newFileName, fileContent, url);
+      addAlert('success', successMessage);
     } else {
       const fileId = findIdForFileName(selectedFileName);
       if (fileId) {
         saveFile(fileId, fileContent, url);
+        addAlert('success', successMessage);
       } else {
         // todo: should we just create a new file if we can't find an existing one?
         console.error(
