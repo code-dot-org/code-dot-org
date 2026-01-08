@@ -52,25 +52,5 @@ class Api::V1::Roster::Clever::SectionsControllerTest < ActionDispatch::Integrat
       must_respond_with :ok
       _(response.body).must_equal '{"message":"Sync started. It will complete in a few minutes"}'
     end
-
-    context 'when teacher has already enqueued Roster::Clever::SyncSectionsJob' do
-      before do
-        ActiveJob::QueueAdapters::DelayedJobAdapter.new.enqueue(
-          Roster::Clever::SyncSectionsJob.new(teacher_id: user.id)
-        )
-      end
-
-      it 'does not enqueue another sync job' do
-        assert_no_enqueued_jobs only: Roster::Clever::SyncSectionsJob do
-          post_clever_roster_sections_sync
-        end
-      end
-
-      it 'renders acknowledgement message' do
-        post_clever_roster_sections_sync
-        must_respond_with :ok
-        _(response.body).must_equal '{"message":"Sync in progress. Please wait a few minutes"}'
-      end
-    end
   end
 end

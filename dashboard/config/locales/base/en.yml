@@ -1565,4 +1565,3 @@ en:
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes
-      in_progress: Sync in progress. Please wait a few minutes
