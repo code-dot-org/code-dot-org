@@ -20,6 +20,7 @@ import {sendLab2AnalyticsEvent} from '../../lab2/utils/analyticsReporterHelper';
 import {useCodebridgeContext} from '../codebridgeContext';
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {getSystemMessage} from '../Console/MessageHelpers';
+import {DEFAULT_FOLDER_ID} from '../constants';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 import {validateBackpackFileName} from '../utils';
 
@@ -61,21 +62,27 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
 
   const {appName, id: levelId} = levelProperties;
   const settings = useCodebridgeSettings();
-  const backpackProps = useMemo(
-    () => ({
-      validateFilename: (filename: string) =>
+  const backpackProps = useMemo(() => {
+    const projectFiles = source?.files || {};
+    return {
+      validateFileName: (fileName: string) =>
         validateBackpackFileName(
-          filename,
-          source?.files || {},
+          fileName,
+          projectFiles,
           levelProperties.validationFile
         ),
       saveFile: (fileId: string, contents: string, url?: string) =>
         dispatch(saveFileThunk({fileId, contents, url})),
       createNewFile: (fileName: string, contents: string, url?: string) =>
         dispatch(createNewFileThunk({fileName, contents, url})),
-    }),
-    [source?.files, levelProperties.validationFile, dispatch]
-  );
+      findIdForFileName: (fileName: string) =>
+        Object.keys(projectFiles).find(
+          id =>
+            projectFiles[id].name === fileName &&
+            projectFiles[id].folderId === DEFAULT_FOLDER_ID
+        ),
+    };
+  }, [source?.files, levelProperties.validationFile, dispatch]);
 
   const handleValidate = () => {
     if (onRun) {

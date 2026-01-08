@@ -69,12 +69,13 @@ interface VersionHistoryProps {
 }
 
 export interface BackpackProps {
-  validateFilename: (filename: string) => {
+  validateFileName: (fileName: string) => {
     isSupportFileName: boolean;
     newFileName: string;
   };
-  saveFile: (filename: string, contents: string, url?: string) => void;
-  createNewFile: (filename: string, contents: string, url?: string) => void;
+  saveFile: (fileId: string, contents: string, url?: string) => void;
+  createNewFile: (fileName: string, contents: string, url?: string) => void;
+  findIdForFileName: (fileName: string) => string | undefined;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {

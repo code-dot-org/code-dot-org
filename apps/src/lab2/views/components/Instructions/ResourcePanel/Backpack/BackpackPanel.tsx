@@ -17,9 +17,10 @@ import BackpackFileChip from './BackpackFileChip';
 import moduleStyles from './backpack-panel.module.scss';
 
 const BackpackPanel: React.FC<BackpackProps> = ({
-  validateFilename,
+  validateFileName,
   saveFile,
   createNewFile,
+  findIdForFileName,
 }) => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
@@ -157,17 +158,18 @@ const BackpackPanel: React.FC<BackpackProps> = ({
       {alertList.map((alert, index) => (
         <Alert type={alert.type} text={alert.message} key={index} />
       ))}
-      {fileList?.map(filename => (
+      {fileList?.map(fileName => (
         <BackpackFileChip
-          key={filename}
-          filename={filename}
+          key={fileName}
+          fileName={fileName}
           backpackApi={backpackApi}
           addAlert={(type, message) =>
             setAlertList(prevAlerts => [...prevAlerts, {type, message}])
           }
-          validateFilename={validateFilename}
+          validateFileName={validateFileName}
           saveFile={saveFile}
           createNewFile={createNewFile}
+          findIdForFileName={findIdForFileName}
         />
       ))}
     </div>
