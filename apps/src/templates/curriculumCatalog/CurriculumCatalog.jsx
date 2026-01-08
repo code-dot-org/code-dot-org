@@ -350,7 +350,6 @@ CurriculumCatalog.propTypes = {
  *   # Home dashboards
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       CurriculumCatalog:
  *         forceTranslated: true
  * ```
