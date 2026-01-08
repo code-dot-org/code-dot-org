@@ -135,9 +135,21 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
 
       context 'when limit is greater than zero' do
         let(:limit) {1}
-        let(:teacher2) {create(:teacher, email: "test" + teacher_email, name: teacher_name, current_sign_in_at: 48.months.ago, user_data_retention_status: create(:user_data_retention_status))}
+
+        let(:other_teacher) {create(:teacher, email: other_email, name: other_name, current_sign_in_at: 48.months.ago, user_data_retention_status: create(:user_data_retention_status))}
+        let(:other_email) {Faker::Internet.email}
+        let(:other_name) {Faker::Name.name}
+        let(:expect_other_teacher_warning_to_be_sent) do
+          MailJet.expects(:send_email).with(
+            :inactive_teacher_deletion_warning,
+            other_teacher.email,
+            other_teacher.name,
+            vars: {first_name: other_teacher.given_name || other_teacher.name}
+          )
+        end
         it 'sends emails up to the specified limit' do
           expect_teacher_warning_to_be_sent.times(1)
+          expect_other_teacher_warning_to_be_sent.never
           send_warning_emails
           _(described_instance.send(:num_teachers_warned)).must_equal 1
         end
