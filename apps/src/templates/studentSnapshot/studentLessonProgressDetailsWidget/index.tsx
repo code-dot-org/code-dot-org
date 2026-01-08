@@ -348,7 +348,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
                     : styles.belowClassAvg
                 )}
               >
-                <Typography variant="body4">{`Class Avg: ${classAvgLessonTimeSpent}%`}</Typography>
+                <Typography variant="body4">{`Class Avg: ${classAvgLessonTimeSpent}`}</Typography>
                 {selectedStudentLessonTimeSpent !== classAvgLessonTimeSpent && (
                   <FontAwesomeV6Icon
                     iconName={
