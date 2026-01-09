@@ -5,6 +5,8 @@ require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
 require 'policies/child_account'
 
+# Temporary change to trigger all the tests
+
 class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
