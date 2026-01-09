@@ -17,18 +17,9 @@ import React, {useEffect, useCallback, useRef, useState} from 'react';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {
-  getAppOptionsEditingExemplar,
-  getIsStartMode,
-} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {
-  LabProps,
-  LevelProperties,
-  SketchlabExternalFiles,
-  SketchlabProjectFile,
-} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -42,7 +33,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import {populateInitialExcalidrawState, uploadExternalFiles} from './utils';
+import {
+  generateNewExternalFiles,
+  populateInitialExcalidrawState,
+  uploadExternalFiles,
+} from './utils';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -61,19 +56,6 @@ const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 const DEFAULT_SOURCES = {source: {}};
 
 const S3_IMAGE_EXPERIMENT = 's3-images';
-
-const MIME_TO_EXT = {
-  'image/svg+xml': 'svg',
-  'image/png': 'png',
-  'image/jpeg': 'jpg',
-  'image/gif': 'gif',
-  'image/webp': 'webp',
-  'image/bmp': 'bmp',
-  'image/x-icon': 'ico',
-  'image/avif': 'avif',
-  'image/jfif': 'jfif',
-  'application/octet-stream': 'bin',
-};
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
@@ -186,30 +168,12 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
         );
 
-        const newFiles: SketchlabExternalFiles = {};
-        if (newFileIds.length && excalidrawFiles) {
-          newFileIds.forEach(fileId => {
-            const newFile = excalidrawFiles[fileId];
-            const extension = MIME_TO_EXT[newFile.mimeType];
-            const filenameWithExtension = `${fileId}.${extension}`;
-            const isStarterAssetOrExemplar = !!(
-              getIsStartMode() || getAppOptionsEditingExemplar()
-            );
-            const externalUrl = isStarterAssetOrExemplar
-              ? `/level_starter_assets/${encodeURIComponent(
-                  levelName
-                )}/uuid/${filenameWithExtension}`
-              : `/v3/assets/${channelId}/${filenameWithExtension}`;
-            const newExternalFile: SketchlabProjectFile = {
-              id: fileId,
-              url: externalUrl,
-              starterAsset: isStarterAssetOrExemplar,
-              filenameWithExtension,
-            };
-
-            newFiles[fileId] = newExternalFile;
-          });
-        }
+        const newFiles = generateNewExternalFiles(
+          newFileIds,
+          excalidrawFiles,
+          levelName,
+          channelId
+        );
 
         updateSources({
           source: {
