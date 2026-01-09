@@ -10,7 +10,6 @@ import {useSelector} from 'react-redux';
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {
-  getCurrentScriptLevelId,
   getLevelPropertiesPath,
   getUserAppOptionsPath,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -38,7 +37,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const scriptId = useAppSelector(
     state => state.progress.scriptId || undefined
   );
-  const scriptLevelId = useSelector(getCurrentScriptLevelId);
 
   const isStandaloneProjectLevel = useAppSelector(
     state => state.lab.levelProperties?.isProjectLevel
@@ -79,7 +77,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           levelId: parseInt(currentLevelId),
           userId,
           scriptId,
-          scriptLevelId,
           levelPropertiesPath,
           userAppOptionsPath,
           channelId,
@@ -96,7 +93,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     appName,
     currentLevelId,
     scriptId,
-    scriptLevelId,
     levelPropertiesPath,
     userAppOptionsPath,
     dispatch,

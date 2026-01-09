@@ -133,7 +133,6 @@ export const setUpWithLevel = createAsyncThunk<
     userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
-    scriptLevelId?: string;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -221,13 +220,14 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           payload.channelId,
+          levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.levelId,
+          levelProperties.isProjectLevel || false,
           payload.userId,
-          payload.scriptId,
-          payload.scriptLevelId
+          payload.scriptId
         );
 
     // Only set the project manager and initiate load

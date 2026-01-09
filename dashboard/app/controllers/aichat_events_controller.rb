@@ -80,7 +80,7 @@ class AichatEventsController < ApplicationController
       _, project_id = storage_decrypt_channel_id(channel_id)
       aichat_events = AichatEvent.where(user_id: user_id, project_id: project_id)
     end
-    aichat_events = aichat_events.order(:created_at).map do |event|
+    aichat_events = aichat_events.order(:id).map do |event|
       chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
       {
         id: event.id,

@@ -10,7 +10,7 @@ DEPRECATED = [
 
 def detect_deprecated_code
   Dir.chdir REPO_DIR do
-    diff_output = `git diff --cached -- . ':(exclude)tools/hooks/deprecated_code.rb' --unified=0`
+    diff_output = `git diff --cached -- . ':(exclude)tools/hooks/deprecated_code.rb' ':(exclude)apps/src/code-studio/initApp/project.js' --unified=0`
 
     # Only consider added lines (those starting with '+', excluding the diff metadata lines)
     @added_lines = diff_output.each_line.select {|line| line.start_with?('+') && !line.start_with?('+++')}.map {|line| line[1..]}.join

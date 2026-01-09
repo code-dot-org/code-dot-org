@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
@@ -22,12 +22,14 @@ import {
   Themes,
   ToolboxType,
 } from '../constants';
-import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {blocks as procedureBlocks} from '../customBlocks/proceduresBlocks';
+import {updateBlockCountMap} from '../eventHandlers';
 import cdoDark from '../themes/cdoDark';
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
   ExtendedBlock,
+  ExtendedWorkspaceSvg,
   JsonBlockConfig,
   SerializedFields,
   WorkspaceSerialization,
@@ -51,7 +53,7 @@ import {advancedProceduresBlocks} from './plusMinusBlocks/advancedProcedures';
  * @param {string} source - workspace serialization, either XML or JSON
  */
 export function loadBlocksToWorkspace(
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   source: string,
   includeHiddenDefinitions = true
 ) {
@@ -77,15 +79,19 @@ export function loadBlocksToWorkspace(
   if (Blockly.topLevelProcedureAutopopulate) {
     addProcedureCallBlocksToFlyout(workspace, mainSource);
   }
+
+  if (Blockly.blockLimitMap && Blockly.blockLimitMap.size > 0) {
+    updateBlockCountMap(workspace as ExtendedWorkspaceSvg);
+  }
 }
 
 function addProcedureCallBlocksToFlyout(
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   mainSource: WorkspaceSerialization
 ) {
   const translatedToolboxInfo = workspace.options?.languageTree;
   if (workspace.getFlyout() && translatedToolboxInfo) {
-    const callBlocks = [] as GoogleBlockly.utils.toolbox.ToolboxItemInfo[];
+    const callBlocks = [] as BlocklyCore.utils.toolbox.ToolboxItemInfo[];
     const definitionBlocks = mainSource.blocks.blocks.filter(
       block => block.type === BLOCK_TYPES.procedureDefinition
     );
@@ -109,7 +115,7 @@ function addProcedureCallBlocksToFlyout(
     if (callBlocks.length) {
       // Remove existing call blocks from the toolbox
       translatedToolboxInfo.contents = translatedToolboxInfo.contents.filter(
-        (item: GoogleBlockly.utils.toolbox.BlockInfo) =>
+        (item: BlocklyCore.utils.toolbox.BlockInfo) =>
           item.type !== BLOCK_TYPES.procedureCall
       );
       // Add the new callblocks to the toolbox and refresh it.
@@ -260,7 +266,7 @@ export function handleColorAndStyle(
 }
 
 export function setHSV(
-  block: GoogleBlockly.Block,
+  block: BlocklyCore.Block,
   h: number,
   s: number,
   v: number
@@ -272,12 +278,12 @@ export function injectCss() {
   return Blockly.Css.inject(true, 'media');
 }
 
-export function resizeSvg(blockSpace: GoogleBlockly.WorkspaceSvg) {
+export function resizeSvg(blockSpace: BlocklyCore.WorkspaceSvg) {
   return Blockly.svgResize(blockSpace);
 }
 
-export function getBlockFields(block: GoogleBlockly.Block) {
-  const fields: GoogleBlockly.Field[] = [];
+export function getBlockFields(block: BlocklyCore.Block) {
+  const fields: BlocklyCore.Field[] = [];
   block.inputList.forEach(input => {
     input.fieldRow.forEach(field => {
       fields.push(field);
@@ -286,7 +292,7 @@ export function getBlockFields(block: GoogleBlockly.Block) {
   return fields;
 }
 
-export function getToolboxType(workspaceOverride?: GoogleBlockly.WorkspaceSvg) {
+export function getToolboxType(workspaceOverride?: BlocklyCore.WorkspaceSvg) {
   const workspace = workspaceOverride || Blockly.getMainWorkspace();
   if (!workspace) {
     return;
@@ -302,9 +308,7 @@ export function getToolboxType(workspaceOverride?: GoogleBlockly.WorkspaceSvg) {
   }
 }
 
-export function getToolboxWidth(
-  workspaceOverride?: GoogleBlockly.WorkspaceSvg
-) {
+export function getToolboxWidth(workspaceOverride?: BlocklyCore.WorkspaceSvg) {
   const workspace = workspaceOverride || Blockly.getMainWorkspace();
   const metrics = workspace.getMetrics();
   switch (getToolboxType(workspace)) {
@@ -317,7 +321,7 @@ export function getToolboxWidth(
   }
 }
 
-export function workspaceSvgResize(workspace: GoogleBlockly.WorkspaceSvg) {
+export function workspaceSvgResize(workspace: BlocklyCore.WorkspaceSvg) {
   return Blockly.svgResize(workspace);
 }
 
@@ -333,8 +337,8 @@ export function bindBrowserEvent(
   return Blockly.browserEvents.bind(element, name, thisObject, func);
 }
 
-export function isWorkspaceReadOnly() {
-  return false; // TODO - used for feedback
+export function isWorkspaceReadOnly(workspace: BlocklyCore.Workspace) {
+  return workspace.isReadOnly();
 }
 /**
  * Checks if any block type's usage count exceeds its defined limit and returns
@@ -399,11 +403,11 @@ export function getField(type: string) {
  * Returns a theme object, based on user preferences, localStorage, and the current theme.
  *
  * @param {Theme} currentTheme - A fallback theme provided by the caller.
- * @returns {Promise<GoogleBlockly.Theme>} A resolved Blockly theme object.
+ * @returns {Promise<BlocklyCore.Theme>} A resolved Blockly theme object.
  */
 export async function getUserTheme(
-  currentTheme: GoogleBlockly.Theme | undefined
-): Promise<GoogleBlockly.Theme> {
+  currentTheme: BlocklyCore.Theme | undefined
+): Promise<BlocklyCore.Theme> {
   if (Blockly.isJigsaw) {
     // Jigsaw uses its own custom theme with an extra large font size.
     // Blocks use hard-coded colors instead of styles, so switching
@@ -448,7 +452,7 @@ export function getDefaultTheme() {
  * @returns {string} The serialization of the workspace.
  */
 export function getCode(
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   getSourceAsJson: boolean
 ) {
   if (!getSourceAsJson) {
@@ -495,8 +499,8 @@ export function soundField(
   transformText?: (text: string) => string,
   icon?: SVGElement
 ) {
-  // Handle 'play sound' block with default param from CDO blockly.
-  // TODO: Remove when sprite lab is migrated to Google blockly.
+  // Handle legacy or malformed serialized sound values by falling back
+  // to the default sound.
   const validator = (newValue: string) => {
     if (typeof newValue !== 'string') {
       return null;
@@ -710,7 +714,7 @@ function simplifyBlockState(block: JsonBlockConfig) {
   return result;
 }
 
-export function getBlockColor(block: GoogleBlockly.BlockSvg) {
+export function getBlockColor(block: BlocklyCore.BlockSvg) {
   return block?.style?.colourPrimary;
 }
 
@@ -744,7 +748,7 @@ export function appendSharedFunctions(
 }
 /**
  * Update the XML string representing toolbox data for compatibility with
- * Google Blockly.
+ * modern Blockly.
  * This function potentially modifies each <block> element in the XML
  * if there are unsupported attributes, missing mutators, etc.
  * We also process block xml during domToBlockSpace, which is called to
@@ -769,7 +773,7 @@ export function processToolboxXml(toolboxString: string) {
 }
 
 export function highlightBlock(id: string, spotlight: boolean) {
-  // Google Blockly doesn't consider the selected block to be a highlighted block,
+  // Blockly doesn't consider the selected block to be a highlighted block,
   // so we unselect it first.
   if (Blockly.selected) {
     Blockly.selected.unselect();
@@ -782,7 +786,7 @@ export function toolboxWithoutIds(
   toolbox:
     | string
     | Element
-    | GoogleBlockly.utils.toolbox.ToolboxDefinition
+    | BlocklyCore.utils.toolbox.ToolboxDefinition
     | undefined
 ) {
   if (typeof toolbox !== 'string') {
@@ -873,7 +877,7 @@ export function getCategoryBlocksJson(category: string) {
   return flyoutJson;
 }
 
-export function isFunctionBlock(block: GoogleBlockly.Block) {
+export function isFunctionBlock(block: BlocklyCore.Block) {
   return [
     BLOCK_TYPES.procedureDefinition,
     BLOCK_TYPES.procedureDefinitionReturn,

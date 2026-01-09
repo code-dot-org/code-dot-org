@@ -1,14 +1,16 @@
 name 'iterating-with-ai-postassessment-q7_2025'
 
-question 'question'
+question 'A record in your database is missing a `phone_number` field. How should the rendering logic handle this to maintain a professional UI?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+wrong 'Stop the loop and refuse to render any more items.'
+right 'Use a fallback string like "N/A" or "No phone provided" to fill the space.'
+wrong 'Leave the space entirely blank without a label.'
+wrong 'Delete that record from the database automatically.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 5
+
+Handling missing or null fields with fallbacks ensures the layout remains consistent and the user isn't confused by missing information.
 MARKDOWN

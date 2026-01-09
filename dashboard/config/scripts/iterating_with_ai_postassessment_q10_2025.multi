@@ -1,14 +1,16 @@
 name 'iterating-with-ai-postassessment-q10_2025'
 
-question 'question'
+question 'A developer wants to filter a list but realizes the original "Master List" has been permanently changed. What did they likely fail to do?'
 
-wrong 'answer'
-wrong 'answer'
-right 'answer'
-wrong 'answer'
+right 'They failed to use a "copy-not-mutate" strategy.'
+wrong 'They used too many pure functions.'
+wrong 'They forgot to use a `for` loop.'
+wrong 'They set the stopping condition to `i < 10`.'
 
 allow_multiple_attempts false
 
 teacher_markdown <<MARKDOWN
-Lesson x
+Lesson 8
+
+To keep data safe, developers should create a copy of the original dataset for filtering or sorting, rather than "mutating" (changing) the original source.
 MARKDOWN

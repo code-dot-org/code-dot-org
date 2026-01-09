@@ -271,6 +271,12 @@ describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
   let store;
 
+  const successResponse = (body = {}) => [
+    200,
+    {'Content-Type': 'application/json'},
+    JSON.stringify(body),
+  ];
+
   beforeEach(() => {
     stubRedux();
     registerReducers({currentUser, teacherSections: reducer});
@@ -1539,11 +1545,16 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('the importOrUpdateRoster action', () => {
-    let server;
+    let server, fetchSpy;
     const TEST_COURSE_ID = 'test-course-id';
     const TEST_COURSE_NAME = 'test-course-name';
 
     beforeEach(() => {
+      fetchSpy = sinon
+        .stub(HttpClient, 'fetchJson')
+        .returns(
+          Promise.resolve({response: new Response(), value: {aif: false}})
+        );
       server = sinon.fakeServer.create();
       // We have chained server requests separated by promises in these
       // tests, so have the fake server respond immediately becaue it's
@@ -1577,13 +1588,10 @@ describe('teacherSectionsRedux', () => {
         successResponse({availableParticipantTypes: ['student']})
       );
     });
-    afterEach(() => server.restore());
-
-    const successResponse = (body = {}) => [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(body),
-    ];
+    afterEach(() => {
+      server.restore();
+      fetchSpy.restore();
+    });
 
     const withGoogle = () =>
       store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
@@ -1983,7 +1991,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('AnalyticsReporter events', () => {
-    let analyticsSpy, jqueryStub;
+    let analyticsSpy, jqueryStub, fetchSpy;
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
@@ -1991,11 +1999,16 @@ describe('teacherSectionsRedux', () => {
 
       jqueryStub = sinon.stub($, 'ajax');
       jqueryStub.returns({done: sinon.stub().returns({fail: sinon.stub()})});
+      fetchSpy = sinon.stub(HttpClient, 'fetchJson');
+      fetchSpy.returns(
+        Promise.resolve({response: new Response(), value: {aif: false}})
+      );
     });
 
     afterEach(() => {
       analyticsSpy.restore();
       jqueryStub.restore();
+      fetchSpy.restore();
     });
 
     it('sends an event when course offering is assigned', () => {

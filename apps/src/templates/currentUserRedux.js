@@ -135,7 +135,6 @@ export const setHasSeenHomepageWelcome = hasSeenHomepageWelcome => ({
 
 const initialState = {
   userId: null,
-  uuid: null,
   userName: null,
   userType: 'unknown',
   userRoleInCourse: CourseRoles.Unknown,
@@ -298,7 +297,6 @@ export default function currentUser(state = initialState, action) {
   if (action.type === SET_INITIAL_DATA) {
     const {
       id,
-      uuid,
       username,
       display_name,
       user_type,
@@ -327,6 +325,7 @@ export default function currentUser(state = initialState, action) {
       educator_role,
       sharing_disabled,
       has_seen_homepage_welcome,
+      ai_tutor_enabled_for_pilot,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -345,7 +344,6 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       userId: id,
-      uuid: uuid,
       userName: username,
       userType: user_type,
       displayName: display_name,
@@ -376,6 +374,7 @@ export default function currentUser(state = initialState, action) {
       userCreatedAt: created_at,
       userSharingDisabled: sharing_disabled,
       hasSeenHomepageWelcome: has_seen_homepage_welcome,
+      aiTutorEnabledForPilot: ai_tutor_enabled_for_pilot,
     };
   }
 

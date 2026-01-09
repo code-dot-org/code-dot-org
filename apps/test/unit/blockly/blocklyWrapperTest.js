@@ -1,0 +1,43 @@
+import * as BlocklyCore from 'blockly/core';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import initializeBlocklyWrapper from '@cdo/apps/blockly/blocklyWrapper';
+import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
+import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+describe('Blockly Wrapper', () => {
+  const globalBlockly = Blockly;
+  beforeEach(() => {
+    if (BlocklyCore.JavaScript) {
+      sinon.stub(BlocklyCore, 'JavaScript');
+    }
+    Blockly = initializeBlocklyWrapper(BlocklyCore); // eslint-disable-line no-global-assign
+  });
+  afterEach(() => {
+    // Reset Blockly for other tests.
+    Blockly = globalBlockly; // eslint-disable-line no-global-assign
+    // Reset context menu for other tests.
+    BlocklyCore.ContextMenuRegistry.registry.reset();
+  });
+
+  it('readOnly properties cannot be set', () => {
+    READ_ONLY_PROPERTIES.forEach(property => {
+      expect(() => {
+        Blockly[property] = 'NEW VALUE';
+      }).to.throw('Cannot set property');
+    });
+  });
+
+  it('getGenerator returns the JS Generator', () => {
+    expect(Blockly.getGenerator()).to.deep.equal(Blockly.blockly_.JavaScript);
+  });
+
+  it('Setting SNAP_RADIUS also sets CONNECTING_SNAP_RADIUS', () => {
+    Blockly.SNAP_RADIUS = 0;
+    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(0);
+    Blockly.SNAP_RADIUS = 100;
+    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(100);
+  });
+});

@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::TextToSpeechControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup do
     Cdo::Throttle.stubs(:throttle).returns(false)
 
