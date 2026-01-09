@@ -4,6 +4,6 @@ import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  globalIgnores(['dist', 'public/vite*', 'vite.config.ts']),
+  globalIgnores(['dist', 'public/app', 'public/vite*', 'vite.config.ts']),
   ...cdoReactConfig,
 ];

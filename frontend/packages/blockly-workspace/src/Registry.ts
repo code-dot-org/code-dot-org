@@ -9,6 +9,7 @@ import * as Blockly from 'blockly/core';
 
 import ThrasosRenderer from '@blockly-workspace/renderers/thrasos';
 
+import {defineMutator} from './mutators/defineMutator';
 import {PluginType} from './plugins';
 import type {
   Plugin,
@@ -24,7 +25,6 @@ import type {
   BlockArgDefinition,
   BlockDefinition,
   BlockFlatArgDefinition,
-  FullBlockDefinition,
   Renderer,
   Theme,
   Extension,
@@ -107,15 +107,20 @@ class Registry<T extends Environment & object> {
    * remove the references to the plugins and instead refer to the name of the
    * extension or field instead.
    */
-  registerFromBlockDefinition(block: BlockDefinition): Plugin[] {
+  registerFromBlockDefinition(
+    definition: BlockDefinition,
+  ): (typeof Blockly.Blocks)[string] {
+    const block: (typeof Blockly.Blocks)[string] = {
+      ...definition,
+    };
     const plugins: Plugin[] = [];
 
     // Ignore old-style block initializers, typically supplied via Blockly itself
     if (typeof (block as OldBlockDefinition).init !== 'undefined') {
-      return plugins;
+      return block;
     }
 
-    const blockDefinition: FullBlockDefinition = block as FullBlockDefinition;
+    const blockDefinition: BlockDefinition = block as BlockDefinition;
 
     // Register input plugin if we have never seen it before
     if (blockDefinition.output && typeof blockDefinition.output !== 'string') {
@@ -126,47 +131,45 @@ class Registry<T extends Environment & object> {
     }
 
     // Register fields if we have never seen it before
-    (
-      ['args0', 'args1', 'args2', 'args3'] as (keyof FullBlockDefinition)[]
-    ).forEach(key => {
-      if (key in blockDefinition) {
-        (
-          blockDefinition as unknown as {
-            [key: string]: BlockFlatArgDefinition[];
-          }
-        )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
-          if (
-            typeof arg.type !== 'string' &&
-            (arg.type as FieldPlugin).type === PluginType.Field
-          ) {
-            const fieldPlugin = arg.type as FieldPlugin;
-            const formedArg: BlockFlatArgDefinition = {
-              ...arg,
-              type: fieldPlugin.name,
-            };
-            this.register(fieldPlugin);
-            plugins.push(fieldPlugin);
-            return formedArg;
-          }
-          return arg as BlockFlatArgDefinition;
-        });
-      }
-    });
+    (['args0', 'args1', 'args2', 'args3'] as (keyof BlockDefinition)[]).forEach(
+      key => {
+        if (key in blockDefinition) {
+          (
+            blockDefinition as unknown as {
+              [key: string]: BlockFlatArgDefinition[];
+            }
+          )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
+            if (
+              typeof arg.type !== 'string' &&
+              (arg.type as FieldPlugin).type === PluginType.Field
+            ) {
+              const fieldPlugin = arg.type as FieldPlugin;
+              const formedArg: BlockFlatArgDefinition = {
+                ...arg,
+                type: fieldPlugin.name,
+              };
+              this.register(fieldPlugin);
+              plugins.push(fieldPlugin);
+              return formedArg;
+            }
+            return arg as BlockFlatArgDefinition;
+          });
+        }
+      },
+    );
 
     // Register mutator if we have never seen it before and it exists
     if (blockDefinition.mutator) {
       if (typeof blockDefinition.mutator !== 'string') {
         const name = blockDefinition.mutator.name;
         this.registerMutator(blockDefinition.mutator);
-        blockDefinition.mutator = name;
+        block.mutator = name;
       }
     } else {
       // Ensure it gets the environment mutator
-      const blankMutator: Mutator = {
-        name: 'blank',
-      };
+      const blankMutator = defineMutator('blank', {});
       this.registerMutator(blankMutator);
-      blockDefinition.mutator = 'blank';
+      block.mutator = 'blank';
     }
 
     // Register extensions if we have never seen it before and it exists
@@ -186,7 +189,7 @@ class Registry<T extends Environment & object> {
       },
     );
 
-    return plugins;
+    return block;
   }
 
   /**
@@ -225,42 +228,46 @@ class Registry<T extends Environment & object> {
    */
   private registerMutator(mutator: Mutator) {
     const name = mutator.name;
-    const environment = this.environment;
     if (!Blockly.Extensions.isRegistered(name)) {
       // Maintain the old mutator data and copy it so we don't
       // corrupt it in the future.
-      const oldMutator: Mutator = mutator;
+      const oldMutator: Mutator['mutator'] = mutator.mutator;
       const environment: Environment = this.environment || {
         inline: false,
         embedded: true,
       };
-      mutator = {
+      const newMutator: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        [key: string]: any;
+      } = {
         ...mutator,
       };
 
       // Add the 'environment' to the mutator so the mutators that
       // use this feature can access workspace data.
-      mutator.loadExtraState = function (this: BlockSvg, state: object) {
+      newMutator.loadExtraState = function (this: BlockSvg, state: object) {
         this.environment = environment || {inline: false, embedded: true};
-        oldMutator.loadExtraState?.bind(this)(state);
+        oldMutator.loadExtraState?.bind(this as BlockSvg & Mutator<object>)(
+          state,
+        );
       };
-      mutator.getEnvironment = function (this: BlockSvg) {
+      newMutator.getEnvironment = function (this: BlockSvg) {
         return environment;
       };
-      mutator.isWithinInlineWorkspace = function (this: BlockSvg) {
+      newMutator.isWithinInlineWorkspace = function (this: BlockSvg) {
         return this.isWithinMainWorkspace() && environment.inline;
       };
-      mutator.isWithinEmbeddedWorkspace = function (this: BlockSvg) {
+      newMutator.isWithinEmbeddedWorkspace = function (this: BlockSvg) {
         return this.isWithinMainWorkspace() && environment.embedded;
       };
-      mutator.isWithinHiddenWorkspace = function (this: BlockSvg) {
+      newMutator.isWithinHiddenWorkspace = function (this: BlockSvg) {
         return environment.hiddenWorkspace === this.workspace;
       };
-      mutator.isWithinMainWorkspace = function (this: BlockSvg) {
+      newMutator.isWithinMainWorkspace = function (this: BlockSvg) {
         return environment.mainWorkspace === this.workspace;
       };
 
-      Blockly.Extensions.registerMutator(name, mutator);
+      Blockly.Extensions.registerMutator(name, newMutator);
     }
   }
 

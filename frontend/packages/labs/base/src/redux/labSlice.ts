@@ -133,7 +133,9 @@ const slice: Slice<LabState> = createSlice({
     ) {
       const levelProperties = action.payload.levelProperties;
       state.channel = action.payload.channel;
-      state.levelProperties = levelProperties;
+      // Cast needed because LevelProperties contains readonly nested types (BlockOptionsList)
+      // that conflict with Immer's WritableDraft requirements
+      state.levelProperties = levelProperties as typeof state.levelProperties;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
         state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;

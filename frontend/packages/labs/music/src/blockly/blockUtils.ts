@@ -173,7 +173,8 @@ function restoreBlockDefinitions(javascriptGenerator: JavascriptGenerator) {
   Object.keys(BlockCache.blockGenerators).forEach(type => {
     const generator = BlockCache.blockGenerators[type as keyof BlockGenerators];
     if (generator) {
-      javascriptGenerator.forBlock[type as string] = generator;
+      javascriptGenerator.forBlock[type as string] =
+        generator as unknown as (typeof javascriptGenerator)['forBlock'][string];
     }
   });
 }
