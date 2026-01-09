@@ -8,7 +8,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {ModelParameters} from '../types';
 
 import style from './flag-response-button.module.scss';
-import {a} from 'node_modules/@code-dot-org/fonts/dist/cjs/constants-CXlqrLQp';
 
 /** Component used to internally send data to Langfuse to create
  * a dataset of potentially problematic AI responses. Only visible to
