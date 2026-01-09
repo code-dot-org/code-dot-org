@@ -21,7 +21,7 @@ module Services
           iat: Time.now.to_i,
           exp: 5.minutes.from_now.to_i,
           jti: SecureRandom.alphanumeric(10),
-          nonce: Digest::SHA2.hexdigest(generate_random_string(10)),
+          nonce: Digest::SHA2.hexdigest(SecureRandom.alphanumeric(10)),
           # Deep Linking specific claims
           Policies::Lti::MessageType::CLAIM => Policies::Lti::MessageType::DEEP_LINKING_RESPONSE,
           Policies::Lti::VERSION_CLAIM => '1.3.0',
