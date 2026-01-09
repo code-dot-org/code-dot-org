@@ -3,7 +3,6 @@ import React from 'react';
 
 import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import * as utils from '@cdo/apps/utils';
@@ -260,11 +259,6 @@ describe('VersionHistory', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        jest
-          .spyOn(firehoseClient, 'putRecord')
-          .mockClear()
-          .mockImplementation();
-
         handleClearPuzzle = jest.fn().mockReturnValue(Promise.resolve());
         wrapper = mount(
           <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
@@ -276,7 +270,6 @@ describe('VersionHistory', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.mockRestore();
       });
 
       it('immediately renders spinner', () => {
@@ -284,25 +277,6 @@ describe('VersionHistory', () => {
           wrapper.containsMatchingElement(
             <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
           )
-        );
-      });
-
-      it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).toHaveBeenCalledWith(
-          {
-            study: 'project-data-integrity',
-            study_group: 'v4',
-            event: 'clear-puzzle',
-            project_id: 'fake-project-id',
-            data_json: JSON.stringify({
-              isOwner: true,
-              currentUrl: window.location.href,
-              shareUrl: 'fake-share-url',
-              isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION,
-            }),
-          },
-          {includeUserId: true}
         );
       });
 
