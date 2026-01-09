@@ -18,7 +18,8 @@ const whenRun = defineBlock({
       const nextBlock =
         block.nextConnection && block.nextConnection.targetBlock();
       const handlerCode = javascriptGenerator.blockToCode(nextBlock, false);
-      block.skipNextBlockGeneration = true;
+      // TODO: understand how to support this
+      //block.skipNextBlockGeneration = true;
       return `
       if (__context == 'when_run') {
         ${handlerCode}
@@ -53,7 +54,8 @@ const triggeredAt = defineBlock({
       const nextBlock =
         block.nextConnection && block.nextConnection.targetBlock();
       const handlerCode = javascriptGenerator.blockToCode(nextBlock, false);
-      block.skipNextBlockGeneration = true;
+      // TODO: understand how to support this
+      //block.skipNextBlockGeneration = true;
       return `
       ${varName} = startPosition;
       if (__context == "${id}") {
