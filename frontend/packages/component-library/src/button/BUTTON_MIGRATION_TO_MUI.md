@@ -649,7 +649,7 @@ Create `ButtonMui.tsx` that:
   variant="contained"
   color="primary" // purple maps to primary
   size="medium" // m maps to medium
-  disabled={isPending} // Disable when pending
+  disabled={isPending} // Optional: disable when pending to prevent double-clicks
   startIcon={
     isPending ? (
       <FontAwesomeV6Icon
@@ -665,7 +665,7 @@ Create `ButtonMui.tsx` that:
 </Button>
 ```
 
-**Note**: MUI Button does have a `loading` prop, but it's styled differently from DSCO designs. This is why we currently use a custom implementation with `FontAwesomeV6Icon` spinner icon and `disabled` prop as shown above. If a solution to customize MUI Button's native loading state styles is found, we can update the implementation accordingly.
+**Note**: MUI Button does have a `loading` prop, but it's styled differently from DSCO designs. This is why we currently use a custom implementation with `FontAwesomeV6Icon` spinner icon as shown above. Optionally, you can set `disabled={true}` to prevent double-clicks during the pending state. If a solution to customize MUI Button's native loading state styles is found, we can update the implementation accordingly.
 
 ### Example 5: Link Button
 
@@ -767,7 +767,7 @@ Create `ButtonMui.tsx` that:
 
 2. **Size System**: ✅ **Implemented** - Custom size `extraSmall` is added via theme extension. All sizes (xs→extraSmall, s→small, m→medium, l→large) are handled via theme variants. No data attributes are used.
 
-3. **Pending State**: ✅ **Custom Implementation** - MUI Button has a `loading` prop, but it's styled differently from DSCO designs. This is why we currently use a custom implementation with spinner icon and disabled state. If a solution to customize MUI Button's native loading state styles is found, we can update it.
+3. **Pending State**: ✅ **Custom Implementation** - MUI Button has a `loading` prop, but it's styled differently from DSCO designs. This is why we currently use a custom implementation with spinner icon. If a solution to customize MUI Button's native loading state styles is found, we can update it.
 
 4. **Icon Integration**: ✅ **Implemented** - Directly using `FontAwesomeV6Icon` component for `startIcon` and `endIcon`. No adapter needed.
 

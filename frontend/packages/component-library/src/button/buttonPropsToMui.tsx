@@ -119,9 +119,9 @@ export function buttonPropsToMui(props: GenericButtonProps): {
     color: muiColor,
     size: muiSize,
     disabled: disabled,
-    // Note: loading prop may require LoadingButton from @mui/lab
-    // For now, we'll use disabled state when pending
-    // loading: isPending, // Uncomment when using LoadingButton
+    // Note: MUI Button has a loading prop, but it's styled differently from DSCO designs.
+    // This is why we use a custom implementation with spinner icon (see below).
+    // If a solution to customize MUI Button's native loading state styles is found, we can update it.
     className: forceHover ? `${className || ''} force-hover`.trim() : className,
     id,
     onClick: handleClick,
@@ -145,6 +145,9 @@ export function buttonPropsToMui(props: GenericButtonProps): {
   };
 
   // Handle pending state with spinner icon
+  // Note: MUI Button has a loading prop, but it's styled differently from DSCO designs.
+  // This is why we currently use a custom implementation with spinner icon.
+  // If a solution to customize MUI Button's native loading state styles is found, we can update it.
   // Spinner logic matches original Button component:
   // - If there's only text - show only spinner (text is hidden but keeps space)
   // - If there's only icon - show only spinner
