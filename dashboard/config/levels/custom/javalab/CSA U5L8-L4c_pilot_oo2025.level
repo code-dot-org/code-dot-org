@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:42:36.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Mirror an image by flipping the image along the horizontal axis so that the top of the image becomes the bottom and the bottom becomes the top.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MirrorImage</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">mirrorVertical()</code> method to set the left side of the image on the right.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class,\r\n\r\n1. Instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MirrorImage</code> object with an image in the Asset Manager, then draw the image in the scene without any filters. You can also upload and use your own image.\r\n\r\n2. Add a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> after drawing the image.\r\n\r\n3. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">mirrorVertical()</code> method on your image, then draw the image with the filter in the scene.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> class in the <strong>Documentation</strong> tab ⬆️ for help with getting and setting color values for a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> object.\r\n</div>\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/3a6c0ea5383e90e83ffa538c99b6fc9b-image-1682903629320.gif)",
+    "long_instructions": "Mirror an image by reflecting it across the **vertical axis** (left to right). In this activity, you will create a one-sided mirror effect by copying the **right half** of the image onto the **left half** (the right side remains unchanged).\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MirrorImage</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">mirrorVertical()</code> method to copy the colors from the **right side of the image** to the corresponding pixels on the **left side** of the image.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class,\r\n\r\n1. Instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MirrorImage</code> object using an image from the Asset Manager (you may also upload and use your own image), then draw the image in the scene with no filters applied.\r\n\r\n2. Add a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> after drawing the image.\r\n\r\n3. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">mirrorVertical()</code> method on your image, then draw the image again in the scene to display the mirrored effect.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> This is a left-to-right mirror effect, not a top-to-bottom flip. Only the left half of the image changes; it is updated to match the right half. Use the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> class documentation in the <strong>Documentation</strong> tab ⬆️ for help with getting and setting color values.\r\n</div>\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/3a6c0ea5383e90e83ffa538c99b6fc9b-image-1682903629320.gif)\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -55,9 +56,11 @@
     },
     "thumbnail_url": "https://images.code.org/db0fa9d0976a4a9d13613ec5a2d1869a-optionC.gif",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": "false"
+    "ai_tutor_available": "false",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:42:36.424+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L4c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L8-L4c_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:42:36.424+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L4c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L8-L4c_pilot-2025\"},{\"changed_at\":\"2026-01-08 19:49:55 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Javalab>
