@@ -403,6 +403,11 @@ export const ICON_BUTTON_OVERRIDES = {
         '&.force-hover, &[data-force-hover="true"]': {
           boxShadow: 'none',
         },
+
+        // Disable ripple effect (CSS fallback in case defaultProps doesn't work)
+        '& .MuiTouchRipple-root': {
+          display: 'none',
+        },
       };
     },
   },

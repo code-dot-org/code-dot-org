@@ -52,6 +52,9 @@ const SIZE_SPECS = {
 };
 
 export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
+  defaultProps: {
+    disableRipple: true,
+  },
   // Add variants for custom sizes
   variants: [
     // Extra small size
@@ -455,6 +458,11 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.Mui-disabled, &[aria-disabled="true"]': {
           cursor: 'not-allowed',
           boxShadow: 'none', // Remove shadow when disabled
+        },
+
+        // Disable ripple effect (CSS fallback in case defaultProps doesn't work)
+        '& .MuiTouchRipple-root': {
+          display: 'none',
         },
 
         // Force hover state
