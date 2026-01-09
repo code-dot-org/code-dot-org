@@ -2059,13 +2059,6 @@ FactoryBot.define do
     data_synced_at {Time.now.utc}
   end
 
-  factory :lti_feedback, class: 'Lti::Feedback' do
-    association :user, factory: :teacher
-
-    locale {I18n.locale.to_s}
-    satisfied {true}
-  end
-
   factory :lti_integration do
     issuer {SecureRandom.alphanumeric}
     client_id {SecureRandom.alphanumeric}

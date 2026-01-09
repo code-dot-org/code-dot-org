@@ -3,8 +3,6 @@ require 'test_helper'
 class SectionsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
 

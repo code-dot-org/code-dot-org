@@ -64,11 +64,9 @@ import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   clearMarks,
   clearMeasures,
-  getEntriesByName,
   mark,
   measure,
 } from '@cdo/apps/util/performance';
@@ -763,7 +761,6 @@ export default class P5Lab {
   }
 
   haltExecution_() {
-    this.reportMetrics();
     clearMarks(DRAW_LOOP_START);
     clearMeasures(DRAW_LOOP_MEASURE);
     this.spriteTotalCount = 0;
@@ -1446,32 +1443,6 @@ export default class P5Lab {
     this.initialCaptureComplete = true;
     captureThumbnailFromCanvas(document.getElementById('defaultCanvas0'));
   }
-
-  /**
-   * Log some performance numbers to firehose
-   */
-  reportMetrics() {
-    const drawLoopTimes = getEntriesByName(DRAW_LOOP_MEASURE)
-      .map(entry => entry.duration)
-      .sort();
-    if (!drawLoopTimes.length) {
-      return;
-    }
-
-    const levelType = this.level.editCode
-      ? 'GameLab'
-      : this.level.helperLibraries && this.level.helperLibraries[0];
-    firehoseClient.putRecord({
-      study: 'gamelab_performance',
-      event: 'performance_report',
-      data_string: levelType,
-      data_json: JSON.stringify({
-        drawLoopAverageMs: drawLoopTimes[Math.floor(drawLoopTimes.length / 2)],
-        spriteAverageCount: this.spriteTotalCount / drawLoopTimes.length,
-      }),
-    });
-  }
-
   completeRedrawIfDrawComplete() {
     if (
       this.drawInProgress &&

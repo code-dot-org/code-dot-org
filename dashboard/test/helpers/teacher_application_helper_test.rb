@@ -8,8 +8,6 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     stubs(:current_user).returns user
   end
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @user_with_two_incomplete_apps = create(:teacher)
     @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete'
