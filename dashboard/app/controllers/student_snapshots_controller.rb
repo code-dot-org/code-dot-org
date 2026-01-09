@@ -26,7 +26,7 @@ class StudentSnapshotsController < ApplicationController
   end
 
   # GET /student_snapshots/cfu_levels/:lesson_id
-  # Returns all CFU levels from the specified lesson.
+  # Returns all CFU levels from the specified lesson, including metadata and basic question content.
   # CFU levels are identified by progression: "Check Your Understanding"
   # or "Check For Understanding".
   #
