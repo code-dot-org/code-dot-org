@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class EmailPreferenceTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   test "create email preference with valid attributes creates email preference" do
     assert_creates EmailPreference do
       create(:email_preference,
