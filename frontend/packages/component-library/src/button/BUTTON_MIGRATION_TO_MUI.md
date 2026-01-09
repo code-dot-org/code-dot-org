@@ -194,7 +194,7 @@ interface MuiIconButtonProps {
 
 ### MUI Button Capabilities & Considerations
 
-1. **Loading state** - ⚠️ MUI Button doesn't have built-in `loading` prop (requires `LoadingButton` from `@mui/lab`). Currently using custom implementation with spinner icon.
+1. **Loading state** - ✅ Use custom spinner icon implementation with `FontAwesomeV6Icon`. MUI Button has a `loading` prop, but it's styled differently from DSCO designs, which is why we use a custom implementation. If a solution to customize MUI Button's native loading state styles is found, we can update it.
 2. **Icon-only mode** - ✅ Use MUI's `IconButton` component for icon-only buttons (with `variant` prop support)
 3. **Custom colors** - ✅ Added via theme extensions: `white` and `tertiary` (see [Custom Colors](#custom-colors))
 4. **Custom sizes** - ✅ Added via theme extensions: `extraSmall` (see [Custom Sizes](#custom-sizes))
@@ -260,13 +260,13 @@ interface MuiIconButtonProps {
 
 ### Special Props That Need Custom Implementation
 
-| Current Prop             | MUI Equivalent | Implementation Strategy                                                                      |
-| ------------------------ | -------------- | -------------------------------------------------------------------------------------------- |
-| `isPending`              | Custom         | ⚠️ Custom implementation with spinner icon (MUI Button doesn't have built-in `loading` prop) |
-| `forceHover`             | ❌ None        | Custom className + style override                                                            |
-| `useAsLink`              | `href` prop    | ✅ Automatic when `href` is provided                                                         |
-| `buttonTagTypeAttribute` | `type`         | Direct mapping when not link                                                                 |
-| `analyticsCallback`      | ❌ None        | Custom onClick wrapper                                                                       |
+| Current Prop             | MUI Equivalent | Implementation Strategy                                                                                                                                                                                                                    |
+| ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `isPending`              | Custom         | ✅ Custom implementation with `FontAwesomeV6Icon` spinner. MUI Button has a `loading` prop, but it's styled differently from DSCO designs. If a solution to customize MUI Button's native loading state styles is found, we can update it. |
+| `forceHover`             | ❌ None        | Custom className + style override                                                                                                                                                                                                          |
+| `useAsLink`              | `href` prop    | ✅ Automatic when `href` is provided                                                                                                                                                                                                       |
+| `buttonTagTypeAttribute` | `type`         | Direct mapping when not link                                                                                                                                                                                                               |
+| `analyticsCallback`      | ❌ None        | Custom onClick wrapper                                                                                                                                                                                                                     |
 
 ---
 
@@ -502,8 +502,8 @@ Create `ButtonMui.tsx` that:
 
 1. **Pending State**
 
-   - Use MUI Button's `loading` prop (or `LoadingButton` from `@mui/lab`)
-   - Configure spinner appearance via theme
+   - ✅ Use custom spinner icon implementation with `FontAwesomeV6Icon` and `disabled` prop (already styled)
+   - MUI Button has a `loading` prop, but it's styled differently from DSCO designs. If a solution to customize MUI Button's native loading state styles is found, we can update it.
 
 2. **Icon-Only Mode**
 
@@ -665,21 +665,7 @@ Create `ButtonMui.tsx` that:
 </Button>
 ```
 
-**Note**: MUI Button doesn't have a built-in `loading` prop. The current implementation uses a custom spinner icon and disabled state. To use MUI's `LoadingButton`, you would need to install `@mui/lab`:
-
-```tsx
-import {LoadingButton} from '@mui/lab';
-
-<LoadingButton
-  variant="contained"
-  color="primary"
-  size="medium"
-  loading={isPending}
-  onClick={handleSubmit}
->
-  Submit
-</LoadingButton>;
-```
+**Note**: MUI Button does have a `loading` prop, but it's styled differently from DSCO designs. This is why we currently use a custom implementation with `FontAwesomeV6Icon` spinner icon and `disabled` prop as shown above. If a solution to customize MUI Button's native loading state styles is found, we can update the implementation accordingly.
 
 ### Example 5: Link Button
 
@@ -781,7 +767,7 @@ import {LoadingButton} from '@mui/lab';
 
 2. **Size System**: ✅ **Implemented** - Custom size `extraSmall` is added via theme extension. All sizes (xs→extraSmall, s→small, m→medium, l→large) are handled via theme variants. No data attributes are used.
 
-3. **Pending State**: ⚠️ **Custom Implementation** - MUI Button doesn't have a built-in `loading` prop. Currently using a custom implementation with spinner icon and disabled state. Can optionally use `LoadingButton` from `@mui/lab` if needed.
+3. **Pending State**: ✅ **Custom Implementation** - MUI Button has a `loading` prop, but it's styled differently from DSCO designs. This is why we currently use a custom implementation with spinner icon and disabled state. If a solution to customize MUI Button's native loading state styles is found, we can update it.
 
 4. **Icon Integration**: ✅ **Implemented** - Directly using `FontAwesomeV6Icon` component for `startIcon` and `endIcon`. No adapter needed.
 
