@@ -1424,7 +1424,7 @@ class User < ApplicationRecord
 
   # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
   def uuid
-    id && Digest::UUID.uuid_v5(Digest::UUID::OID_NAMESPACE, id.to_s)
+    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
   end
 
   # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
