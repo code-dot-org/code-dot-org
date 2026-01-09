@@ -8,7 +8,7 @@
 module User::AiAccessible
   extend ActiveSupport::Concern
 
-  AI_TUTOR_PILOT_NAME = 'ai-tutor-pilot'.freeze
+  AI_TUTOR_PILOT_NAME = 'ai-tutor'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like turn on the tutor UI
