@@ -8,6 +8,7 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Blockly Wrapper', () => {
+  const globalBlockly = Blockly;
   beforeEach(() => {
     if (BlocklyCore.JavaScript) {
       sinon.stub(BlocklyCore, 'JavaScript');
@@ -15,6 +16,8 @@ describe('Blockly Wrapper', () => {
     Blockly = initializeBlocklyWrapper(BlocklyCore); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
+    // Reset Blockly for other tests.
+    Blockly = globalBlockly; // eslint-disable-line no-global-assign
     // Reset context menu for other tests.
     BlocklyCore.ContextMenuRegistry.registry.reset();
   });
