@@ -8,6 +8,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {ModelParameters} from '../types';
 
 import style from './flag-response-button.module.scss';
+import {a} from 'node_modules/@code-dot-org/fonts/dist/cjs/constants-CXlqrLQp';
 
 /** Component used to internally send data to Langfuse to create
  * a dataset of potentially problematic AI responses. Only visible to
@@ -22,7 +23,22 @@ const FlagResponseButton: React.FC<{
   const [flagReason, setFlagReason] = useState('');
 
   const aichat = useAppSelector(state => state.aichat);
-  const analyticsData = useAppSelector(state => state.pageConstants);
+  const legacyLabData = useAppSelector(state => state.pageConstants);
+  const labData = useAppSelector(state => state.lab);
+  const user = useAppSelector(state => state.currentUser);
+
+  const analyticsData = {
+    appType: labData ? labData.levelProperties?.appName : legacyLabData.appType,
+    levelId: labData
+      ? labData.levelProperties?.id
+      : legacyLabData.serverLevelId,
+    scriptId: labData ? labData.scriptId : legacyLabData.serverScriptId,
+    userId: user.userId,
+    aiTutorMode: labData ? labData.levelProperties?.aiTutorMode : undefined,
+    levelSystemPrompt: labData
+      ? labData.levelProperties?.levelSystemPrompt
+      : undefined,
+  };
 
   const saveResponseToLangfuse = async (
     chatMessageId: number,
@@ -39,12 +55,9 @@ const FlagResponseButton: React.FC<{
         messageId: chatMessageId,
         reason: flagReason,
         conversation: aichat.chatEventsCurrent,
-        appType: analyticsData.appType,
-        scriptId: analyticsData.serverScriptId,
-        levelId: analyticsData.serverLevelId,
-        userId: analyticsData.userId,
         modelId: modelId,
-        systemPromptName: systemPrompt,
+        systemPrompt: systemPrompt,
+        ...analyticsData,
       },
     };
     const response = await HttpClient.post(url, JSON.stringify(payload), true, {
