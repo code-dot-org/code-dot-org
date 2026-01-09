@@ -28,7 +28,6 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
@@ -132,25 +131,7 @@ class TeacherPanel extends React.Component {
     });
   };
 
-  logToFirehose = (eventName, overrideData = {}) => {
-    const sectionId =
-      this.props.selectedSection && this.props.selectedSection.id;
-    const data = {
-      section_id: sectionId,
-      page_type: this.props.pageType,
-      ...overrideData,
-    };
-
-    firehoseClient.putRecord({
-      study: 'teacher_panel',
-      event: eventName,
-      data_json: JSON.stringify(data),
-    });
-  };
-
-  onSelectUser = (id, selectType) => {
-    this.logToFirehose('select_student', {select_type: selectType});
-
+  onSelectUser = id => {
     const isAsync =
       this.props.isCurrentLevelLab2 ||
       this.props.pageType === pageTypes.scriptOverview;
@@ -201,16 +182,10 @@ class TeacherPanel extends React.Component {
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
-      <TeacherPanelContainer
-        className={moduleStyles.teacherPanelContainer}
-        logToFirehose={this.logToFirehose}
-      >
+      <TeacherPanelContainer className={moduleStyles.teacherPanelContainer}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
-          <ViewAsToggle
-            isAsync={this.props.isCurrentLevelLab2}
-            logToFirehose={this.logToFirehose}
-          />
+          <ViewAsToggle isAsync={this.props.isCurrentLevelLab2} />
           {displaySelectedStudentInfo && (
             <SelectedStudentInfo
               students={students}
@@ -245,7 +220,6 @@ class TeacherPanel extends React.Component {
               <SectionSelector
                 style={{margin: '0px 10px'}}
                 reloadOnChange={true}
-                logToFirehose={() => this.logToFirehose('select_section')}
               />
               {selectedSection && (
                 <a
@@ -253,7 +227,6 @@ class TeacherPanel extends React.Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={styles.teacherDashboardLink}
-                  onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
                   {i18n.teacherDashboard()}
                 </a>

@@ -62,6 +62,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     const {sources, channel} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
@@ -75,6 +76,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -89,6 +91,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(FAKE_SOURCE);
@@ -103,6 +106,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -120,6 +124,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -137,6 +142,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     projectManager.destroy();
@@ -153,6 +159,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: true /* turn emergency mode on */,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -172,6 +179,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
 
     const noopListener = sinon.stub();
@@ -187,6 +195,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.rename('new name');
@@ -205,6 +214,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -220,6 +230,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
 
     const {channel, sources} = await projectManager.load();
@@ -239,6 +250,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
 
     try {
@@ -257,6 +269,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -273,6 +286,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
 
     // Load the initial sources
@@ -305,6 +319,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
 
     // Load the initial sources
@@ -326,6 +341,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE, false, true);
@@ -347,6 +363,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -382,6 +399,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -417,6 +435,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
     await projectManager.save(UPDATED_SOURCE);
@@ -453,6 +472,7 @@ describe('ProjectManager', () => {
       channelsStore,
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
     });
     await projectManager.load();
 

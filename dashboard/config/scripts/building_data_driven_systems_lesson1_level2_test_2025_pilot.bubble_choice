@@ -1,6 +1,7 @@
 name 'building-data-driven-systems-lesson1-level2-test_2025-pilot'
 display_name 'Magazine Cover Arrays'
 description 'Choose one of the magazine covers to create using parallel arrays'
+uses_lab2
 
 sublevels
 level 'building-data-driven-systems-lesson1-level2a-test_2025-pilot'

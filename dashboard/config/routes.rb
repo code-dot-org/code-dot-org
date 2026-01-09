@@ -49,6 +49,7 @@ Dashboard::Application.routes.draw do
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
+      get :unit_in_aif, controller: :teacher_dashboard, action: :unit_in_aif
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -368,8 +369,7 @@ Dashboard::Application.routes.draw do
     # can include script_id to get or create a project for the level and script.
     # Optionally, the request can include user_id to get a project for another user,
     # like a teacher viewing a student's work.
-    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
-    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
+    get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -754,7 +754,6 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resources :integrations, only: [:new, :create]
-        resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
           post 'dynamic_registration', action: :create_registration
@@ -1185,6 +1184,13 @@ Dashboard::Application.routes.draw do
       collection do
         get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
         get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+      end
+    end
+
+    resources :ai_lesson_summary_podcasts do
+      collection do
+        get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast
       end
     end
 

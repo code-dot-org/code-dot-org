@@ -255,9 +255,10 @@ describe('LessonMaterialsContainer', () => {
   const renderDefault = async (
     showNoCurriculumAssigned = false,
     lessonData: object = mockLessonData,
-    lessonSummary: object = LESSON_SUMMARY
+    lessonSummary: object = LESSON_SUMMARY,
+    aif = false
   ) => {
-    mockSpy(lessonData, lessonSummary);
+    mockSpy(lessonData, lessonSummary, aif);
     await act(async () =>
       render(
         <Provider store={store}>
@@ -284,9 +285,9 @@ describe('LessonMaterialsContainer', () => {
 
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
+    store.dispatch(setShowAITALessonSummary(true));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    mockSpy(mockLessonData, LESSON_SUMMARY);
   });
 
   afterEach(async () => {
@@ -296,7 +297,11 @@ describe('LessonMaterialsContainer', () => {
     experiments.isEnabled = realIsEnabled;
   });
 
-  const mockSpy = (lessonData: object, lessonSummary: object) => {
+  const mockSpy = (
+    lessonData: object,
+    lessonSummary: object,
+    aif_unit: boolean
+  ) => {
     fetchSpy.mockReset();
     fetchSpy.mockImplementation((path: string) => {
       if (path.includes('lesson_materials')) {
@@ -304,16 +309,19 @@ describe('LessonMaterialsContainer', () => {
           value: lessonData,
           response: new Response(),
         });
-      }
-      if (path.includes('section_courses')) {
+      } else if (path.includes('section_courses')) {
         return Promise.resolve({
           value: COURSES_WITH_PROGRESS,
           response: new Response(),
         });
-      }
-      if (path.includes('ai_lesson_summaries')) {
+      } else if (path.includes('ai_lesson_summaries')) {
         return Promise.resolve({
           value: {lesson_summary: JSON.stringify(lessonSummary)},
+          response: new Response(),
+        });
+      } else if (path.includes('unit_in_aif')) {
+        return Promise.resolve({
+          value: {aif: aif_unit},
           response: new Response(),
         });
       }
@@ -638,7 +646,6 @@ describe('LessonMaterialsContainer', () => {
 
     it('does not render lesson summary when showAITALessonSummary is false', async () => {
       store.dispatch(setShowAITALessonSummary(false));
-
       await renderDefault();
 
       expect(screen.queryByText(i18n.audioSummary())).toBe(null);
@@ -685,6 +692,21 @@ describe('LessonMaterialsContainer', () => {
       LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
     });
 
+    it('renders lesson summary when AIF unit is assigned', async () => {
+      store.dispatch(setShowAITALessonSummary(false));
+
+      await renderDefault(false, mockLessonData, LESSON_SUMMARY, true);
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+      screen.getByText(LESSON_SUMMARY.learning_objective);
+      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
+      LESSON_SUMMARY.misconceptions.forEach(misconception =>
+        screen.getByText(misconception)
+      );
+      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
+    });
+
     it('renders audio summary transcript dialog when transcript data is present', async () => {
       const audioTranscript = [
         {timeStamp: '0:00', text: 'First line of dialogue.'},
@@ -708,7 +730,6 @@ describe('LessonMaterialsContainer', () => {
 
     it('does not render Personalization Quiz note if user has completed the quiz', async () => {
       store.dispatch(setHasCompletedPersonalizationQuiz(true));
-
       await renderDefault();
 
       expect(screen.queryByText(i18n.wantToSeeDifferentInformation())).toBe(

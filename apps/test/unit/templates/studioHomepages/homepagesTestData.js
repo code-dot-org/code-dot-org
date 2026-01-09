@@ -115,6 +115,7 @@ export const joinedSections = [
     assignedTitle: 'Course 1',
     linkToAssigned: 'https://studio.code.org/courses/course1',
     code: 'ClassOneCode',
+    hidden: false,
     participantType: 'student',
   },
   {
@@ -126,6 +127,7 @@ export const joinedSections = [
     currentUnitTitle: 'Unit 3',
     linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
     code: 'ClassTwoCode',
+    hidden: false,
     participantType: 'student',
   },
   {
@@ -135,6 +137,7 @@ export const joinedSections = [
     linkToAssigned: 'https://studio.code.org/courses/course3',
     login_type: 'google_classroom',
     code: 'DoNotShowThis',
+    hidden: false,
     participantType: 'student',
   },
   {
@@ -144,6 +147,7 @@ export const joinedSections = [
     linkToAssigned: 'https://studio.code.org/courses/course4',
     login_type: 'clever',
     code: 'OrThisEither',
+    hidden: false,
     participantType: 'student',
   },
 ];
@@ -156,6 +160,7 @@ export const joinedStorySections = [
     assignedTitle: 'Course 1',
     linkToAssigned: 'https://studio.code.org/courses/course1',
     code: 'ClassOneCode',
+    hidden: false,
     participantType: 'student',
   },
   {
@@ -167,6 +172,7 @@ export const joinedStorySections = [
     currentUnitTitle: 'Unit 3',
     linkToCurrentUnit: 'https://studio.code.org/courses/course2/units/3',
     code: 'ClassTwoCode',
+    hidden: false,
     participantType: 'student',
   },
 ];
@@ -179,6 +185,7 @@ export const joinedPlSections = [
     assignedTitle: 'PL Course 1',
     linkToAssigned: 'https://studio.code.org/courses/course1',
     code: 'ClassOneCode',
+    hidden: false,
     participantType: 'teacher',
   },
   {
@@ -190,6 +197,7 @@ export const joinedPlSections = [
     currentUnitTitle: 'Unit 3',
     linkToCurrentUnit: 'https://studio.code.org/courses/course2/units/3',
     code: 'ClassTwoCode',
+    hidden: false,
     participantType: 'teacher',
   },
   {
@@ -199,6 +207,7 @@ export const joinedPlSections = [
     linkToAssigned: 'https://studio.code.org/courses/course3',
     loginType: 'google_classroom',
     code: 'DoNotShowThis',
+    hidden: false,
     participantType: 'teacher',
   },
   {
@@ -208,6 +217,7 @@ export const joinedPlSections = [
     linkToAssigned: 'https://studio.code.org/courses/course4',
     loginType: 'clever',
     code: 'OrThisEither',
+    hidden: false,
     participantType: 'teacher',
   },
 ];
