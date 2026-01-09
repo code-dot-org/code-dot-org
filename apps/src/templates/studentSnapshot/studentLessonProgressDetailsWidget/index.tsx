@@ -340,7 +340,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
               <div
                 className={classNames(
                   styles.classAvgInfo,
-                  selectedStudentLessonProgress > classAvgLessonProgress
+                  selectedStudentLessonProgress < classAvgLessonProgress
                     ? styles.aboveClassAvg
                     : styles.belowClassAvg
                 )}
@@ -349,7 +349,7 @@ const StudentLessonProgressDetailsWidget: React.FC<
                 {selectedStudentLessonTimeSpent !== classAvgLessonTimeSpent && (
                   <FontAwesomeV6Icon
                     iconName={
-                      selectedStudentLessonTimeSpent > classAvgLessonTimeSpent
+                      selectedStudentLessonTimeSpent < classAvgLessonTimeSpent
                         ? 'arrow-up'
                         : 'arrow-down'
                     }
