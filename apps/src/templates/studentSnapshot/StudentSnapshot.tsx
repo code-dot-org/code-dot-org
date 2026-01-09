@@ -80,14 +80,14 @@ const getLessonData = (lessonId: number, includeParams: string[]) => {
 };
 
 interface StudentCodeData {
-  studentCode: Record<string, string>;
+  studentCode: MultiFileSource;
 }
 
 const getStudentCode = (
   unitId: number,
   lessonId: number,
   studentId: number
-): Promise<Record<string, string>> => {
+): Promise<MultiFileSource> => {
   return HttpClient.fetchJson<StudentCodeData>(
     `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
   ).then(response => response?.value?.studentCode || {});
@@ -105,7 +105,9 @@ const StudentSnapshot: React.FC = () => {
     useState<boolean>(false);
   const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
   const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
-  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
+  const [studentCode, setStudentCode] = useState<MultiFileSource | undefined>(
+    undefined
+  );
   const [isStudentCodeLoading, setIsStudentCodeLoading] =
     useState<boolean>(false);
   const [lessonData, setLessonData] = useState<LessonData | null>(null);
@@ -210,13 +212,13 @@ const StudentSnapshot: React.FC = () => {
         })
         .catch(error => {
           console.error('Error fetching student code:', error);
-          setStudentCode({});
+          setStudentCode(undefined);
         })
         .finally(() => {
           setIsStudentCodeLoading(false);
         });
     } else {
-      setStudentCode({});
+      setStudentCode(undefined);
     }
   }, [selectedUnitId, selectedLessonId, selectedStudentId]);
 
