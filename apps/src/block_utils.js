@@ -8,7 +8,10 @@ import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
 import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
-import {initializeMiniToolbox} from './blockly/utils/fields/miniToolbox';
+import {
+  appendMiniToolboxToggle,
+  initializeMiniToolbox,
+} from './blockly/utils/fields/miniToolbox';
 import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
@@ -995,10 +998,7 @@ exports.createJsWrapperBlockCreator = function (
         this.setInputsInline(inline);
 
         if (showMiniToolbox) {
-          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
-            miniToolboxBlocks,
-            flyoutToggleButton
-          );
+          appendMiniToolboxToggle(this, miniToolboxBlocks, flyoutToggleButton);
         }
       },
     };
