@@ -1,62 +1,10 @@
-@import './dialog-manager.module.scss';
+.genericDialog {
+  font-size: 1rem;
 
-%generic-dialog {
-  @extend %dialog;
-  display: flex;
-  flex-direction: column;
-}
-
-.genericDialog-Dark {
-  @extend %generic-dialog;
-  background-color: $light_gray_950;
-
-  // override any foreground text in the dialog that might be
-  // passed in for the title or body of the dialog
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  strong {
-    color: var(--text-neutral-primary);
-  }
-  p {
-    color: var(--text-neutral-secondary);
-  }
-}
-
-.genericDialog-Light {
-  @extend %generic-dialog;
-}
-
-.title {
-  padding: 0;
-  margin-bottom: 8px;
-}
-
-.bodyText {
-  padding-top: 12px;
-  padding-bottom: 8px;
-}
-
-.bodyComponent {
-  padding-bottom: 12px;
-}
-
-.buttonContainer {
-  .outerButtonContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 16px;
-
-    .innerButtonContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 10px;
-    }
+  // Add padding around labels inside the dialog so the focus
+  // state styles are not cut off when elements are focused.
+  label {
+    padding: 0.25rem;
   }
 }
 
@@ -69,5 +17,5 @@
 
 .spinnerIcon {
   font-size: 36px;
-  color: var(--neutral-base-white);
+  color: var(--text-neutral-primary);
 }

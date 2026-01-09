@@ -1185,6 +1185,13 @@ Dashboard::Application.routes.draw do
       collection do
         get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
         get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+      end
+    end
+
+    resources :ai_lesson_summary_podcasts do
+      collection do
+        get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast
       end
     end
 
