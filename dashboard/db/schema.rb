@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2026_01_07_212238) do
-
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -156,8 +155,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_07_212238) do
     t.string "title"
     t.bigint "aidiff_thread_id", null: false
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["aidiff_thread_id"], name: "index_aidiff_artifacts_on_aidiff_thread_id"
     t.index ["user_id"], name: "index_aidiff_artifacts_on_user_id"
   end
@@ -2354,8 +2353,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_07_212238) do
     t.datetime "expires_at"
     t.datetime "read_at"
     t.boolean "is_dismissed", default: false, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id", "created_at"], name: "index_teacher_notifications_on_user_id_and_created_at"
     t.index ["user_id", "is_dismissed"], name: "index_teacher_notifications_on_user_id_and_is_dismissed"
     t.index ["user_id", "read_at"], name: "index_teacher_notifications_on_user_id_and_read_at"
