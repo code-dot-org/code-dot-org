@@ -104,7 +104,7 @@ const CfuWidgetHeader: React.FC<CfuWidgetHeaderProps> = ({
                 count={counts.incomplete}
                 label="Incomplete"
                 iconName="empty-set"
-                cardStyle={styles.incopleteCard}
+                cardStyle={styles.incompleteCard}
               />
             </div>
           </div>
