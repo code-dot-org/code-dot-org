@@ -523,10 +523,10 @@ class Level < ApplicationRecord
     properties["ai_tutor_available"] == "true" || properties["ai_tutor_available"] == true
   end
 
-  # Aichat and Weblab2 levels can't reasonably function without AI chat turned on,
-  # so AI chat is considered to be essential on these level types.
+  # true if the level can't reasonably function without AI chat turned on.
+  # overridden in some subclasses.
   def requires_ai_chat_tools?
-    ["Weblab2", "Aichat"].include?(type)
+    false
   end
 
   def has_ai_chat_tools?
