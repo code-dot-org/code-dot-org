@@ -7,13 +7,14 @@ import experiments from '@cdo/apps/util/experiments';
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-const useWeblab2PreviewV2 = experiments.isEnabledAllowingQueryString(
-  experiments.WEBLAB2_PREVIEW_V2
+
+const useLegacyPreview = experiments.isEnabledAllowingQueryString(
+  experiments.WEBLAB2_LEGACY_PREVIEW
 );
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    useWeblab2PreviewV2 ? <InnerHTMLPreview2 /> : <InnerHTMLPreview />,
+    useLegacyPreview ? <InnerHTMLPreview /> : <InnerHTMLPreview2 />,
     document.getElementById('codeprojects-preview-container')
   );
 });

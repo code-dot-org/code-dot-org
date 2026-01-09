@@ -9089,6 +9089,37 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: aichat_events
+    name: index_ace_user_level_script_id
+    unique: false
+    columns:
+    - user_id
+    - level_id
+    - script_id
+    - id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: aichat_events
+    name: index_ace_user_project_id
+    unique: false
+    columns:
+    - user_id
+    - project_id
+    - id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   aichat_requests:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_requests
@@ -14977,7 +15008,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20251203202435
+version: 20260107212238
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
