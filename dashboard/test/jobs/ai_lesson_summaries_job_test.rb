@@ -278,7 +278,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     assert_equal 'Aqua', notification.icon_color
     assert_equal 1, notification.href_links.size
     assert_equal 'View lesson materials', notification.href_links.first['text']
-    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
   end
 
   test 'after_perform creates notification with correct lesson count for single lesson' do
@@ -311,7 +311,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
 
     notification = TeacherNotification.last
-    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
   end
 
   test 'after_perform uses first section when unit_id provided but no matching section exists' do
@@ -329,7 +329,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
 
     notification = TeacherNotification.last
-    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
   end
 
   test 'after_perform does not create notification when user has no sections' do
