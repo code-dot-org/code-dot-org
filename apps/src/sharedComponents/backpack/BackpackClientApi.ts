@@ -201,6 +201,7 @@ export default class BackpackClientApi {
       onError(error as Error);
       return;
     }
+    this.eventListeners.forEach(listener => listener(BackpackEvent.FileAdded));
     onSuccess();
   }
 
