@@ -7,6 +7,7 @@ import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
@@ -26,7 +27,6 @@ import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
 import styles from './chatWorkspace.module.scss';
-
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
@@ -46,6 +46,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   clientType,
   modelParameters,
 }) => {
+  const user = useAppSelector(state => state.currentUser);
+
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {
     status,
@@ -57,6 +59,15 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   } = chatMessage;
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
+
+  // Determine if we should show the FlagResponseButton
+  // The user must either be a levelbuilder or have the LOG_TO_LANGFUSE
+  // experiment. And we currently only show the button for AI Tutor messages
+  // that have been saved to the server (i.e. have an ID).
+  const canLogToLangfuse =
+    (user.isLevelbuilder ||
+      experiments.isEnabledAllowingQueryString(experiments.LOG_TO_LANGFUSE)) &&
+    clientType === AiChatClientTypes.AI_TUTOR;
 
   // `chatMessageDisplayText` is optional and only needed if intended display text
   //  is different from the chatMessageText sent to the model.
@@ -116,16 +127,13 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
             copyText={chatMessage.chatMessageText}
             usage={'ai-chat-msg-footer'}
           />
-          {experiments.isEnabledAllowingQueryString(
-            experiments.LOG_TO_LANGFUSE
-          ) &&
-            clientType === AiChatClientTypes.AI_TUTOR && (
-              <FlagResponseButton
-                chatMessageId={chatMessage.updateId ?? ''}
-                chatMessageText={chatMessage.chatMessageText}
-                modelParameters={modelParameters}
-              />
-            )}
+          {canLogToLangfuse && isServerChatEvent(chatMessage) && (
+            <FlagResponseButton
+              chatMessageId={chatMessage.id}
+              chatMessageText={chatMessage.chatMessageText}
+              modelParameters={modelParameters}
+            />
+          )}
         </div>
       ) : null;
   }

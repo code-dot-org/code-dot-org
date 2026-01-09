@@ -5,12 +5,18 @@ import React, {useState} from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {ModelParameters} from '../types';
+
 import style from './flag-response-button.module.scss';
 
+/** Component used to internally send data to Langfuse to create
+ * a dataset of potentially problematic AI responses. Only visible to
+ * levelbuilders.
+ */
 const FlagResponseButton: React.FC<{
-  chatMessageId: string;
+  chatMessageId: number;
   chatMessageText: string;
-  modelParameters?: Record<string, unknown>;
+  modelParameters?: ModelParameters;
 }> = ({chatMessageId, chatMessageText, modelParameters}) => {
   const [showInput, setShowInput] = useState(false);
   const [flagReason, setFlagReason] = useState('');
@@ -18,10 +24,8 @@ const FlagResponseButton: React.FC<{
   const aichat = useAppSelector(state => state.aichat);
   const analyticsData = useAppSelector(state => state.pageConstants);
 
-  // console.log('current state:', state);
-
   const saveResponseToLangfuse = async (
-    chatMessageId: string,
+    chatMessageId: number,
     chatMessageText: string,
     flagReason: string,
     modelId: string,
@@ -90,7 +94,7 @@ const FlagResponseButton: React.FC<{
                 chatMessageText,
                 flagReason,
                 modelParameters?.selectedModelId as string,
-                modelParameters?.systemPromptName as string
+                modelParameters?.systemPrompt as string
               );
             }}
             color="purple"

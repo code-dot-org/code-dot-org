@@ -392,6 +392,10 @@ class Ability
       can [:fetch_free_response_answers], :student_work_sample
     end
 
+    if user.persisted? && user.levelbuilder?
+      can [:add_dataset_item], :langfuse
+    end
+
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.

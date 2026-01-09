@@ -77,6 +77,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
         sharing_disabled: current_user.sharing_disabled,
+        is_levelbuilder: current_user.levelbuilder?,
       }
     else
       render json: {

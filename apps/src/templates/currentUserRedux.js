@@ -149,6 +149,7 @@ const initialState = {
   isSortedByFamilyName: false,
   isLti: undefined,
   isTeacher: undefined,
+  isLevelbuilder: undefined,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
   over21: false,
@@ -314,6 +315,7 @@ export default function currentUser(state = initialState, action) {
       audioSummaryTranscript,
       progress_table_v2_closed_beta,
       is_lti,
+      is_levelbuilder,
       date_progress_table_invitation_last_delayed,
       has_seen_progress_table_v2_invitation,
       child_account_compliance_state,
@@ -362,6 +364,7 @@ export default function currentUser(state = initialState, action) {
       progressTableV2ClosedBeta: progress_table_v2_closed_beta,
       isLti: is_lti,
       isTeacher: user_type === UserTypes.TEACHER,
+      isLevelbuilder: is_levelbuilder,
       inUSA: ['US', 'RD'].includes(country_code) || !!us_state_code,
       dateProgressTableInvitationDelayed:
         date_progress_table_invitation_last_delayed,
