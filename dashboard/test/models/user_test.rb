@@ -6,7 +6,6 @@ require 'timecop'
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   include Minitest::RSpecMocks
-  self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
     test 'returns student us_state if present' do

@@ -16,8 +16,6 @@ class ProjectsControllerTest < ActionController::TestCase
     AzureTextToSpeech.stubs(:get_voices).returns({})
   end
 
-  self.use_transactional_test_case = false
-
   setup_all do
     # Create placeholder levels for the standalone project pages.
     # Note that all this does is create blank levels with appropriate names; it

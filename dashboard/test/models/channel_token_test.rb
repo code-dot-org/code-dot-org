@@ -3,8 +3,6 @@ require 'test_helper'
 require_relative '../../../dashboard/legacy/middleware/helpers/projects'
 
 class ChannelTokenTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @script = create(:script, :in_single_unit_course)
     @level = create(:level)

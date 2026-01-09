@@ -122,9 +122,16 @@
   animation: none;
 }
 
+// Normal button for the navigation area is full width and truncates text.
 .buttonInstruction {
   width: 100%;
   height: 32px;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 // Ensure the TooltipOverlay wrapper div matches the button width
@@ -134,10 +141,16 @@
     width: 100%;
   }
 
-  // Contained button takes full width.
+  // Contained button takes full width and truncates text.
   button {
     width: 100%;
     height: 32px;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 
