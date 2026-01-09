@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -17,7 +17,7 @@ const FIELD_PADDING = 2;
  * A custom field that renders the pattern editing UI, used in the
  * "play_pattern_ai" block. The UI is rendered by {@link PatternAiPanel}.
  */
-class FieldPatternAi extends GoogleBlockly.Field {
+class FieldPatternAi extends BlocklyCore.Field {
   constructor(options) {
     super(options.currentValue);
 
@@ -50,7 +50,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -136,7 +136,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark,
@@ -158,7 +158,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill:

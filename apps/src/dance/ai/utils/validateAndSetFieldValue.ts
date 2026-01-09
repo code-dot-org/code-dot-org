@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 export type ValidateAndSetFieldValueLogger = (o: {
   message: string;
@@ -12,7 +12,7 @@ export type ValidateAndSetFieldValueOptions = {
 };
 
 type ValidateAndSetFieldValueFunction = (
-  dropdown: GoogleBlockly.FieldDropdown,
+  dropdown: BlocklyCore.FieldDropdown,
   value: string,
   options?: ValidateAndSetFieldValueOptions
 ) => void;

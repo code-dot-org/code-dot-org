@@ -1,8 +1,4 @@
-# Submitted upstream at https://github.com/rails/rails/pull/28178
-require "active_support/concern"
-require "active_support/callbacks"
-
-require 'testing/setup_all_and_teardown_all'
+require_relative 'setup_all_and_teardown_all'
 
 module ActiveSupport
   module Testing
@@ -13,43 +9,37 @@ module ActiveSupport
       include ActiveSupport::Testing::SetupAllAndTeardownAll
 
       included do
-        class_attribute :use_transactional_test_case, instance_writer: false, default: false
+        class_attribute :db_connection, default: ActiveRecord::Base.connection
 
-        setup_all do
-          if use_transactional_test_case?
-            setup_fixtures
-            begin_transaction
+        # Disables transactional tests, which wrap each test in a transaction and reload fixtures per test.
+        # @see https://github.com/rails/rails/blob/v6.1.7.7/activerecord/lib/active_record/test_fixtures.rb
+        self.use_transactional_tests = false
+      end
+
+      class_methods do
+        # Ensures any database changes made in setup_all are rolled back after all tests in the class.
+        # @warning This keeps a transaction open for the whole test class.
+        #          Writes from other connections, for example Sequel, can wait on locks or hit a MySQL deadlock.
+        private def setup_all(*args, &block)
+          super(*args) do
+            db_connection.begin_transaction(joinable: false)
+            instance_exec(&block) if block
           end
-        end
 
-        teardown_all do
-          rollback_transaction if use_transactional_test_case?
+          teardown_all do
+            db_connection.rollback_transaction
+          end
         end
       end
 
       def before_setup
-        begin_transaction
+        db_connection.begin_transaction(joinable: false)
         super
       end
 
       def after_teardown
         super
-        rollback_transaction
-      end
-
-      # @see https://github.com/DatabaseCleaner/database_cleaner-active_record/blob/v2.1.0/lib/database_cleaner/active_record/transaction.rb#L6-L11
-      private def begin_transaction
-        # Hack to make sure that the connection is properly set up before cleaning
-        ActiveRecord::Base.connection.transaction {}
-
-        ActiveRecord::Base.connection.begin_transaction(joinable: false)
-      end
-
-      # @see https://github.com/DatabaseCleaner/database_cleaner-active_record/blob/v2.1.0/lib/database_cleaner/active_record/transaction.rb#L14-L19
-      private def rollback_transaction
-        ActiveRecord::Base.connection_pool.connections.each do |connection|
-          connection.rollback_transaction if connection.open_transactions > 0
-        end
+        db_connection.rollback_transaction
       end
     end
   end

@@ -1,7 +1,7 @@
-import GoogleBlockly from 'blockly/core';
+import BlocklyCore from 'blockly/core';
 import cookies from 'js-cookie';
 
-import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
+import initializeBlocklyWrapper from '@cdo/apps/blockly/blocklyWrapper';
 
 import {blocklyLocaleMap} from '../../src/sites/studio/pages/blocklyLocaleImports.js';
 
@@ -21,6 +21,6 @@ export default function setBlocklyGlobal() {
   var messages =
     blocklyLocaleMap[localeFromCookies.toLocaleLowerCase()] ||
     blocklyLocaleMap['en-us'];
-  GoogleBlockly.setLocale(messages);
-  window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
+  BlocklyCore.setLocale(messages);
+  window.Blockly = initializeBlocklyWrapper(BlocklyCore);
 }

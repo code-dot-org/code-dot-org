@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
-    self.use_transactional_test_case = true
-
     setup_all do
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)

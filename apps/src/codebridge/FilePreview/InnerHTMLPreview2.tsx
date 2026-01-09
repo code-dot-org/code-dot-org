@@ -26,7 +26,6 @@ const InnerHTMLPreview = () => {
   // Numerical key used to trigger iframe reloads when we have updates.
   const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  const {serviceWorkerRegistration} = useProjectServiceWorker(source);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
@@ -39,6 +38,11 @@ const InnerHTMLPreview = () => {
     const cdn = environment.includes('adhoc') ? 'cdn-' : '';
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
+
+  const {serviceWorkerRegistration} = useProjectServiceWorker(
+    source,
+    parentOrigin
+  );
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {

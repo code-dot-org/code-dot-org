@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import type {BlockDefinition, CustomInputTypes} from './blockly/types';
 
@@ -12,7 +12,7 @@ export declare function appendNewFunctions(
 );
 
 export declare function installCustomBlocks(args: {
-  blockly: typeof GoogleBlockly;
+  blockly: typeof BlocklyCore;
   blockDefinitions: BlockDefinition[];
   customInputTypes: CustomInputTypes;
 });
