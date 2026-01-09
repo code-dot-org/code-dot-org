@@ -10,6 +10,7 @@ import {
   setPredictResponse,
   submitPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
@@ -20,16 +21,15 @@ import PredictResetButton from './PredictResetButton';
 import moduleStyles from './predict.module.scss';
 
 interface PredictQuestionProps {
+  levelProperties: LevelProperties;
   className?: string;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
+  levelProperties,
   className,
 }) => {
-  const predictSettings = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings
-  );
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const {predictSettings, appName} = levelProperties;
   const isWeblab2 = appName === 'weblab2';
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
