@@ -542,7 +542,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 1: Simple Primary Button
 
-**Current:**
+**Current (DSCO Button component):**
 
 ```tsx
 <Button
