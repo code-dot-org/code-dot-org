@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class NewFeatureFeedbackControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @user = create(:teacher)
   end

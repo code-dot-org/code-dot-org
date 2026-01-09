@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Api::V1::Pd
   class WorkshopSurveyFoormReportControllerTest < ::ActionController::TestCase
-    self.use_transactional_test_case = true
-
     setup_all do
       @summer_post_survey = create(:foorm_form_summer_post_survey)
       @summer_pre_survey = create(:foorm_form_summer_pre_survey)
