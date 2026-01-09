@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {Voices} from '@cdo/generated-scripts/sharedVoices';
 
 import {AudioQueueContext} from './AudioQueue';
@@ -181,21 +180,6 @@ class InlineAudio extends React.Component {
     this.state.playing ? this.pauseAudio() : this.playAudio();
   };
 
-  recordPlayEvent() {
-    firehoseClient.putRecord({
-      study: 'tts-play',
-      study_group: 'v1',
-      event: 'play',
-      data_string: this.props.src,
-      data_json: JSON.stringify({
-        userId: this.props.userId,
-        puzzleNumber: this.props.puzzleNumber,
-        src: this.props.src,
-        csfStyleInstructions: this.props.isOnCSFPuzzle,
-      }),
-    });
-  }
-
   // adds event listeners to the DOM which trigger audio
   // when a significant enough user interaction has happened
   addAudioAutoplayTrigger() {
@@ -218,7 +202,6 @@ class InlineAudio extends React.Component {
       .play()
       .then(() => {
         this.setState({playing: true});
-        this.recordPlayEvent();
       })
       .catch(err => {
         const shouldAutoPlay =
