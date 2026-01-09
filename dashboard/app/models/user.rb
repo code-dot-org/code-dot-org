@@ -1422,11 +1422,6 @@ class User < ApplicationRecord
     followeds.filter_map(&:code_review_group)
   end
 
-  # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
-  def uuid
-    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
-  end
-
   # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
   def us_state_code
     state = student? ? us_state : school_info&.usa? && school_info&.state

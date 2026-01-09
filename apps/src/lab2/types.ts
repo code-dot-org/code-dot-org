@@ -258,6 +258,8 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
 }
 
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
+
 export interface BlocklyLevelProperties extends LevelProperties {
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   sharedBlocks?: BlockDefinition[];

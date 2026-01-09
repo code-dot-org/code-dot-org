@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
     @other_teacher = create(:teacher)

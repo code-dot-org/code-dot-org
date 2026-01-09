@@ -4,7 +4,6 @@ module Api::V1::Pd
   class RegionalPartnerWorkshopsControllerTest < ::ActionController::TestCase
     freeze_time Time.new(2018, 2, 1)
 
-    self.use_transactional_test_case = true
     setup_all do
       Pd::Workshop.any_instance.stubs(:process_location)
       first_session_time = Time.new(2018, 3, 15, 9)

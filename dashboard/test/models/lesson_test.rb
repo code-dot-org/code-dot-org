@@ -921,6 +921,26 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'dark', lesson.get_background_for_user(nil)
   end
 
+  test 'summarize_for_lab2_properties returns properties for all levels' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    python_level = create(:pythonlab)
+    music_level = create(:music)
+    bubble_choice_level = create(:bubble_choice_level, :with_sublevels)
+    create(:script_level, lesson: lesson, levels: [python_level], script: script)
+    create(:script_level, lesson: lesson, levels: [music_level], script: script)
+    create(:script_level, lesson: lesson, levels: [bubble_choice_level], script: script)
+
+    properties = lesson.summarize_for_lab2_properties
+    assert_equal 6, properties.size
+    [python_level, music_level, bubble_choice_level].each do |level|
+      assert_equal level.name, properties[level.id][:name]
+    end
+    bubble_choice_level.sublevels.each do |sublevel|
+      assert_equal sublevel.name, properties[sublevel.id][:name]
+    end
+  end
+
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
       Unit.any_instance.stubs(:write_script_json)

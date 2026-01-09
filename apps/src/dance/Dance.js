@@ -9,7 +9,6 @@ import {Provider} from 'react-redux';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import localization from '@cdo/apps/localization';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
@@ -242,16 +241,12 @@ Dance.prototype.initSongs = async function (config) {
       useRestrictedSongs: config.useRestrictedSongs,
       selectSongOptions: config.level,
       onAuthError: () => {
-        firehoseClient.putRecord(
+        analyticsReporter.sendEvent(
+          EVENTS.DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR,
           {
-            study: 'restricted-song-auth',
-            event: 'initial-auth-error',
-            data_json: JSON.stringify({
-              currentUrl: window.location.href,
-              channelId: config.channel,
-            }),
-          },
-          {includeUserId: true}
+            currentUrl: window.location.href,
+            channelId: config.channel,
+          }
         );
       },
       onSongSelected: songId => {
@@ -287,19 +282,6 @@ Dance.prototype.setSongCallback = function (songId) {
   getStore().dispatch(
     setSong({
       songId,
-      onAuthError: () => {
-        firehoseClient.putRecord(
-          {
-            study: 'restricted-song-auth',
-            event: 'repeated-auth-error',
-            data_json: JSON.stringify({
-              currentUrl: window.location.href,
-              channelId: getStore().getState().pageConstants.channelId,
-            }),
-          },
-          {includeUserId: true}
-        );
-      },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
         if (this.songUnavailableAlert) {
