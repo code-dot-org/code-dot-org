@@ -28,7 +28,7 @@
   }
 }
 
-%iconContainer {
+%icon-container {
   display: flex;
   width: 48px;
   height: 48px;
@@ -38,12 +38,12 @@
 }
 
 .neutralIconContainer {
-  @extend %iconContainer;
+  @extend %icon-container;
   background: var(--background-neutral-septenary);
 }
 
 .errorIconContainer {
-  @extend %iconContainer;
+  @extend %icon-container;
   background: var(--background-error-primary);
 }
 
