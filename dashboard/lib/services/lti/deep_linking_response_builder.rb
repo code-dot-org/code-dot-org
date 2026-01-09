@@ -2,10 +2,11 @@ module Services
   module Lti
     class DeepLinkingResponseBuilder < Services::Base
       include LtiAccessToken
-      attr_reader :audience, :deployment_id, :deep_linking_settings, :content_items
+      attr_reader :request_issuer, :client_id, :deployment_id, :deep_linking_settings, :content_items
 
-      def initialize(audience:, deployment_id:, deep_linking_settings:, content_items: [])
-        @audience = audience
+      def initialize(request_issuer:, client_id:, deployment_id:, deep_linking_settings:, content_items: [])
+        @request_issuer = request_issuer
+        @client_id = client_id
         @deployment_id = deployment_id
         @deep_linking_settings = deep_linking_settings
         @content_items = content_items
@@ -13,9 +14,10 @@ module Services
 
       def call
         sign_jwt({
-          iss: Policies::Lti::JWT_ISSUER,
-          # aud is the issuer of the JWT for the deep linking request
-          aud: audience,
+          # The iss and aud claims are flipped in this JWT compared to normal requests to
+          # LTI advantage services because it is a response to a deep linking request.
+          iss: client_id,
+          aud: request_issuer,
           iat: Time.now.to_i,
           exp: 5.minutes.from_now.to_i,
           Policies::Lti::MessageType::CLAIM => Policies::Lti::MessageType::DEEP_LINKING_RESPONSE,

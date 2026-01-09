@@ -165,6 +165,7 @@ class LtiV1Controller < ApplicationController
       # Store deployment ID and issuer in session for later use
       session[:lti_deployment_id] = deployment_id
       session[:lti_issuer] = extracted_issuer_id
+      session[:lti_client_id] = extracted_client_id
 
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name

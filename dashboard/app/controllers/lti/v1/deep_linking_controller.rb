@@ -14,7 +14,8 @@ module Lti
         deep_linking_settings = JSON.parse(params.require(:deep_linking_settings))
         content_items = build_content_items(params[:selected_items] || [])
         jwt = Services::Lti::DeepLinkingResponseBuilder.call(
-          audience: session[:lti_issuer],
+          request_issuer: session[:lti_issuer],
+          client_id: session[:lti_client_id],
           deployment_id: session[:lti_deployment_id],
           deep_linking_settings:,
           content_items:,
