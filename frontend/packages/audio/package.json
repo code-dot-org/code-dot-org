@@ -1,22 +1,26 @@
 {
-  "name": "@code-dot-org/lab",
+  "name": "@code-dot-org/audio",
   "version": "0.1.0",
   "keywords": [
-    "lab",
+    "audio",
     "code.org"
   ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/base/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/audio/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/labs/base"
+    "directory": "frontend/packages/audio"
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
     "**/*.css"
+  ],
+  "main": "src/index.ts",
+  "files": [
+    "dist"
   ],
   "exports": {
     "./package.json": "./package.json",
@@ -25,45 +29,17 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
-    "./dialogs": {
-      "types": "./dist/types/dialogs/index.d.ts",
-      "import": "./dist/esm/dialogs/index.mjs",
-      "require": "./dist/cjs/dialogs/index.js"
-    },
-    "./contexts": {
-      "types": "./dist/types/contexts/index.d.ts",
-      "import": "./dist/esm/contexts/index.mjs",
-      "require": "./dist/cjs/contexts/index.js"
-    },
-    "./hooks": {
-      "types": "./dist/types/hooks/index.d.ts",
-      "import": "./dist/esm/hooks/index.mjs",
-      "require": "./dist/cjs/hooks/index.js"
-    },
-    "./redux": {
-      "types": "./dist/types/redux/index.d.ts",
-      "import": "./dist/esm/redux/index.mjs",
-      "require": "./dist/cjs/redux/index.js"
-    },
-    "./redux/labSlice": {
-      "types": "./dist/types/redux/labSlice.d.ts"
-    },
-    "./redux/labSystemSlice": {
-      "types": "./dist/types/redux/labSystemSlice.d.ts"
-    },
-    "./redux/labProjectSlice": {
-      "types": "./dist/types/redux/labProjectSlice.d.ts"
-    },
-    "./redux/predictLevelSlice": {
-      "types": "./dist/types/redux/predictLevelSlice.d.ts"
+    "./textToSpeech": {
+      "types": "./dist/types/textToSpeech/index.d.ts",
+      "import": "./dist/esm/textToSpeech/index.mjs",
+      "require": "./dist/cjs/textToSpeech/index.js"
     }
   },
-  "main": "src/index.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup --clean",
+    "storybook:build": "storybook build -o dist/storybook",
+    "storybook:dev": "yarn run storybook",
+    "storybook": "storybook dev -p 6006",
     "clean": "rimraf dist .turbo",
     "dev": "tsup --watch",
     "lint": "eslint .",
@@ -84,31 +60,26 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/api": "workspace:*",
-    "@code-dot-org/audio": "workspace:*",
-    "@code-dot-org/blockly-workspace": "workspace:*",
-    "@code-dot-org/component-library": "workspace:*",
-    "@code-dot-org/fonts": "workspace:*",
-    "@code-dot-org/markdown": "workspace:*",
-    "@code-dot-org/metrics": "workspace:*",
-    "@code-dot-org/projects": "workspace:*",
-    "@code-dot-org/redux": "workspace:*",
-    "@code-dot-org/teacher-dashboard": "workspace:*",
-    "@code-dot-org/user": "workspace:*",
-    "@reduxjs/toolkit": "^2.8.2",
-    "focus-trap-react": "^11.0.4",
-    "lodash": "^4.17.21",
-    "qrcode.react": "^4.2.0",
-    "query-string": "^9.2.2",
-    "react-focus-lock": "^2.13.6",
-    "react-redux": "^9.2.0",
-    "react-string-replace": "^1.1.1"
+    "@code-dot-org/localization": "workspace:*"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",
+    "@storybook/addon-a11y": "^8.6.9",
+    "@storybook/addon-essentials": "^8.6.9",
+    "@storybook/addon-interactions": "^8.6.9",
+    "@storybook/addon-storysource": "^8.6.9",
+    "@storybook/addon-styling-webpack": "^1.0.1",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/blocks": "^8.6.9",
+    "@storybook/react": "^8.6.9",
+    "@storybook/react-webpack5": "^8.6.9",
+    "@storybook/test": "^8.6.9",
+    "@storybook/test-runner": "^0.22.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^10.4.0",
@@ -127,6 +98,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-jest": "^28.9.0",
     "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-storybook": "^0.11.1",
     "glob": "^11.0.0",
     "globals": "^15.12.0",
     "identity-obj-proxy": "^3.0.0",
@@ -140,6 +112,8 @@
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "schema-dts": "^1.1.5",
+    "storybook": "^8.6.9",
+    "storybook-addon-rtl": "^1.0.1",
     "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsc-alias": "^1.8.11",
