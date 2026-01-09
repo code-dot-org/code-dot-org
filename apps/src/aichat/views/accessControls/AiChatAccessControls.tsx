@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {
@@ -14,6 +15,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
+import {AI_SETTINGS_SUPPORT_LINK} from '../../constants';
 import {AiChatAccessLevel} from '../../types';
 import InfoTooltipIcon from '../InfoTooltipIcon';
 
@@ -63,25 +65,26 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
   sectionId,
 }) => {
   const sectionList = useAppSelector(state => state.teacherSections.sections);
+  const section = sectionList[sectionId];
+  if (!section) {
+    throw new Error('Section does not exist');
+  }
 
   const [accessToggle, setAccessToggle] = useState(
-    accessToggleState(
-      /*sectionList[sectionId].aiChatAccessLevel*/ defaultAccessLevel
-    )
+    accessToggleState(/*section.aiChatAccessLevel*/ defaultAccessLevel)
   );
   const [essentialOnlyCheckbox, setEssentialOnlyCheckbox] = useState(
-    essentialOnlyCheckboxState(
-      /*sectionList[sectionId].aiChatAccessLevel*/ defaultAccessLevel
-    )
+    essentialOnlyCheckboxState(/*section.aiChatAccessLevel*/ defaultAccessLevel)
   );
+
+  const shouldShowAlert =
+    section.isAssignedEssentialAiChat &&
+    calculateAccessLevel(accessToggle, essentialOnlyCheckbox) ===
+      AiChatAccessLevels.DISABLED;
 
   // const dispatch = useAppDispatch();
 
   const updateAccessLevel = async (newAccessLevel: AiChatAccessLevel) => {
-    if (!sectionList[sectionId]) {
-      throw new Error('Section does not exist');
-    }
-
     await handleUpdateSectionAiChatAccessLevel(sectionId, newAccessLevel);
     // dispatch(
     //   updateSectionAiChatAccessLevel({
@@ -122,11 +125,10 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
   };
 
   useEffect(() => {
-    const accessLevel =
-      /*sectionList[sectionId].aiChatAccessLevel ||*/ defaultAccessLevel;
+    const accessLevel = /*section.aiChatAccessLevel ||*/ defaultAccessLevel;
     setEssentialOnlyCheckbox(essentialOnlyCheckboxState(accessLevel));
     setAccessToggle(accessToggleState(accessLevel));
-  }, [sectionList, sectionId]);
+  }, [section, sectionId]);
 
   return (
     <div className={style.container}>
@@ -135,6 +137,17 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
         <BodyThreeText className={style.subHeader}>
           Control access to AI features and tools for the entire class section.
         </BodyThreeText>
+        {shouldShowAlert && (
+          <Alert
+            text="This class section is assigned a course that requires the use of AI tools to complete. If essential features are disabled, students won't be able to complete some levels in the assigned course."
+            type={alertTypes.danger}
+            link={{
+              href: AI_SETTINGS_SUPPORT_LINK,
+              text: 'Learn more',
+            }}
+            className={style.interactionsElement}
+          />
+        )}
         <div className={classNames(style.rowContainer, style.withBorderTop)}>
           <BodyTwoText noMargin className={style.semiBold}>
             AI Chat Tools

@@ -27,6 +27,7 @@ export interface Section {
   hidden: boolean;
   id: number;
   isAssignedCSA?: boolean;
+  isAssignedEssentialAiChat?: boolean;
   lessonExtras: boolean;
   loginType?: keyof typeof SectionLoginType;
   loginTypeName?: string;
