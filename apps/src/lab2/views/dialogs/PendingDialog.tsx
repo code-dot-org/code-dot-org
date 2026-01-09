@@ -48,7 +48,7 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
   return (
     <Dialog
       title={title}
-      customContent={customContent}
+      customContent={<div id="dsco-dialog-description">{customContent}</div>}
       className={moduleStyles.genericDialog}
       primaryButtonProps={{
         disabled: true,
