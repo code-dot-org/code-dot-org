@@ -3664,7 +3664,35 @@ columns:
     default: 
     default_function: 
     collation: 
-    comment:
+    comment: 
+  lti_feedbacks:
+  - *9
+  - *15
+  - &88 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: satisfied
+    sql_type_metadata: *17
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: locale
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: early_access
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *28
   lti_integrations:
   - *9
   - *49
@@ -8521,7 +8549,8 @@ primary_keys:
   libraries: id
   lti_courses: id
   lti_deployments: id
-  lti_deployments_user_identities:
+  lti_deployments_user_identities: 
+  lti_feedbacks: id
   lti_integrations: id
   lti_sections: id
   lti_user_identities: id
@@ -8739,6 +8768,7 @@ data_sources:
   lti_courses: true
   lti_deployments: true
   lti_deployments_user_identities: true
+  lti_feedbacks: true
   lti_integrations: true
   lti_sections: true
   lti_user_identities: true
@@ -11072,7 +11102,34 @@ indexes:
     where: 
     type: 
     using: :btree
-    comment:
+    comment: 
+  lti_feedbacks:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_feedbacks
+    name: index_lti_feedbacks_on_user_id
+    unique: true
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_feedbacks
+    name: index_lti_feedbacks_on_satisfied
+    unique: false
+    columns:
+    - satisfied
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   lti_integrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_integrations
