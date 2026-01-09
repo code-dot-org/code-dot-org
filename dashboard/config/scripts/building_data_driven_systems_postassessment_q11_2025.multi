@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-postassessment-q11_2025'
+
+question 'How can "Data Labels" in a UI influence a user\'s trust in an AI-driven system?'
+
+wrong 'Labels make the text look more professional.'
+right 'Accurate and descriptive labels help the user verify that the AI is processing the correct data.'
+wrong 'Labels prevent the user from seeing the actual data values.'
+wrong 'Labels are only used to satisfy legal requirements and do not affect trust.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+
+Transparency is key to trust. By clearly labeling data (e.g., "AI Confidence Score: 95%"), users can better interpret the system's outputs.
+MARKDOWN

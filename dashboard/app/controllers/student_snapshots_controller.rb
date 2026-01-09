@@ -1,4 +1,6 @@
 class StudentSnapshotsController < ApplicationController
+  include LevelsHelper
+
   before_action :authenticate_user!
 
   layout false
@@ -25,10 +27,6 @@ class StudentSnapshotsController < ApplicationController
       response[:pythonlabLevel] = pythonlab_level_data(lesson)
     end
 
-    if params[:include_cfu]
-      response[:cfuLevels] = cfu_levels_data(lesson)
-    end
-
     # Add more widget types as needed
     # if params[:include_other_widget]
     #   response[:otherWidget] = other_widget_data(lesson)
@@ -37,7 +35,7 @@ class StudentSnapshotsController < ApplicationController
     render json: response
   end
 
-  # GET /student_snapshots/lessons/:lesson_id/cfu_levels
+  # GET /student_snapshots/cfu_levels/:lesson_id
   # Returns all CFU levels from the specified lesson
   # CFU levels are identified by progression: "Check Your Understanding"
   def cfu_levels
@@ -67,6 +65,22 @@ class StudentSnapshotsController < ApplicationController
     render json: {cfu_levels: cfu_levels_data}
   end
 
+  # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+  def student_code
+    lesson = Lesson.find_by(id: params[:lesson_id])
+    return render json: {error: "Can't find Lesson id=#{params[:lesson_id]}"}, status: :bad_request unless lesson
+
+    # Get the last Pythonlab level for this lesson
+    level = lesson.levels.where(type: 'Pythonlab').last
+
+    if level
+      student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
+      render json: {studentCode: student_code_data[:student_code]}
+    else
+      render json: {studentCode: nil}
+    end
+  end
+
   private def find_unit(unit_id)
     context = Queries::Courses.get_course_context(unit_id)
     context[:unit]
@@ -87,17 +101,6 @@ class StudentSnapshotsController < ApplicationController
   private def pythonlab_level_data(lesson)
     level = lesson.levels.where(type: 'Pythonlab').last
     level_data(level)
-  end
-
-  private def cfu_levels_data(lesson)
-    # TODO: Implement CFU (Checks for Understanding) data retrieval
-    # This is a placeholder for future implementation
-    lesson.levels.where(type: 'LevelGroup').map do |level|
-      {
-        id: level.id,
-        name: level.name
-      }
-    end
   end
 
   private def level_data(level)

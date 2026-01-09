@@ -1,6 +1,9 @@
 import {KeyboardNavigation} from '@blockly/keyboard-navigation';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import './shortcutMenuStyles.scss';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {
   overrideOptionWeight as overrideContextMenuOptionWeight,
@@ -8,30 +11,39 @@ import {
   WeightOptions as ContextMenuWeightOptions,
 } from './contextMenu';
 
+// Store the keyboard listener reference for cleanup
+let slashKeyListener: ((event: KeyboardEvent) => void) | null = null;
+
+let stylesRegistered = false;
+
 // This is a Monkey patch while Blockly fixes issue #713. Once merged and
 // bumped, we can replace this class and the manual registry of
 // NavigationDeferringToolbox below with one line function.
-export class NavigationDeferringToolbox extends GoogleBlockly.Toolbox {
+export class NavigationDeferringToolbox extends BlocklyCore.Toolbox {
   protected override onKeyDown_(e: KeyboardEvent) {}
 }
 
 // Covers functions that need to be called prior to Blockly Inject. Because
 // we initialize and dispose here, we need to call these ourselves.
 export function preInjectRegistrations() {
-  KeyboardNavigation.registerKeyboardNavigationStyles();
-  GoogleBlockly.registry.register(
-    GoogleBlockly.registry.Type.TOOLBOX,
-    GoogleBlockly.registry.DEFAULT,
+  if (!stylesRegistered) {
+    stylesRegistered = true;
+    KeyboardNavigation.registerKeyboardNavigationStyles();
+  }
+  BlocklyCore.registry.register(
+    BlocklyCore.registry.Type.TOOLBOX,
+    BlocklyCore.registry.DEFAULT,
     NavigationDeferringToolbox,
     true
   );
 }
 
 export function initializeKeyboardNavigation(
-  workspace: GoogleBlockly.WorkspaceSvg,
+  workspace: BlocklyCore.WorkspaceSvg,
   isDarkTheme: boolean
 ) {
   if (Blockly.KeyboardNavigation) {
+    disableSlashKeyListener();
     Blockly.KeyboardNavigation.dispose();
   }
   unregisterCrossTabPluginOptions();
@@ -42,10 +54,11 @@ export function initializeKeyboardNavigation(
   // Re-register context menu options with our custom weights.
   reorderContextMenu();
   enableShortcutModalEscape();
+  enableSlashKeyListener();
 }
 
 export function initializeAdditionalWorkspace(
-  workspace: GoogleBlockly.WorkspaceSvg
+  workspace: BlocklyCore.WorkspaceSvg
 ) {
   // Ensure that any additional workspace also has keyboard navigation
   // initialized.
@@ -100,5 +113,52 @@ function reorderContextMenu() {
   };
   for (const [option, weight] of Object.entries(menuWeightMap)) {
     overrideContextMenuOptionWeight(option, weight);
+  }
+}
+
+/**
+ * Handles the '/' key press event and sends analytics.
+ */
+function handleSlashKeyPress(event: KeyboardEvent) {
+  if (event.key === '/') {
+    analyticsReporter.sendEvent(
+      EVENTS.BLOCKLY_SLASH_KEY_PRESSED,
+      {},
+      PLATFORMS.STATSIG
+    );
+  }
+}
+
+/**
+ * Enables the '/' key listener on the blockly-div element.
+ * Removes any existing listener before adding a new one.
+ */
+function enableSlashKeyListener() {
+  const blocklyDiv = document.getElementById('blockly-div');
+  if (!blocklyDiv) {
+    return;
+  }
+
+  // Remove existing listener if present
+  if (slashKeyListener) {
+    blocklyDiv.removeEventListener('keydown', slashKeyListener);
+  }
+
+  // Create and store new listener
+  slashKeyListener = handleSlashKeyPress;
+  blocklyDiv.addEventListener('keydown', slashKeyListener);
+}
+
+/**
+ * Removes the '/' key listener from the blockly-div element.
+ * This is automatically called when re-initializing keyboard navigation,
+ * but can also be called manually if needed during cleanup (e.g., when
+ * unmounting a component or disabling keyboard navigation features).
+ */
+export function disableSlashKeyListener() {
+  const blocklyDiv = document.getElementById('blockly-div');
+  if (blocklyDiv && slashKeyListener) {
+    blocklyDiv.removeEventListener('keydown', slashKeyListener);
+    slashKeyListener = null;
   }
 }

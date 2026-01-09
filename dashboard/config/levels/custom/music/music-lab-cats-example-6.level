@@ -444,6 +444,7 @@
     "display_name": "Box Cat",
     "bubble_choice_description": "Explore the backing track as a cat discovers this box and stairs",
     "thumbnail_url": "https://images.code.org/00c585b57f04da9f1dc529da275db90d-image-1749147360544.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

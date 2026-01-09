@@ -2,11 +2,11 @@ import {Order} from 'blockly/javascript';
 
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
+import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
 import {
   editButtonHandler,
   toolboxConfigurationSupportsEditButton,
-} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
+} from '@cdo/apps/blockly/customBlocks/proceduresBlocks';
 import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';

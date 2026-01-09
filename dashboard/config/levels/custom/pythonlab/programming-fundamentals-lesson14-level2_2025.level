@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Make a pet\r\n\r\n1. Create a pet object by adding `pet = Pet()` to you code. \r\n\r\n2. What kind of animal is your pet? Change the animal `\"sloth\"` to a something else.\r\n\r\n3. Give your pet a new name. Change the name `\"Buddy\"` to a different name.\r\n",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

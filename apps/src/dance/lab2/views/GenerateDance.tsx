@@ -1,5 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -70,11 +70,11 @@ interface GenerateCodeProps {
   resetProgram: () => void;
   updateSources: (newSources: {
     workspaceSerialization: WorkspaceSerialization;
-    flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+    flyoutDefinition: BlocklyCore.utils.toolbox.ToolboxInfo;
   }) => void;
   startOver: () => void;
   onFlyoutGenerated: (
-    toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo
+    toolboxDefinition: BlocklyCore.utils.toolbox.ToolboxInfo
   ) => void;
 }
 

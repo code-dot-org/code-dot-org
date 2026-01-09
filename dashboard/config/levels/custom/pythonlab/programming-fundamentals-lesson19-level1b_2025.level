@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "### Example 2: \"Space Escape Mission\"\r\n\r\n**Narrative:** The player is an astronaut trying to escape from a malfunctioning space station. They must solve problems related to oxygen levels, repair systems, and decide whom to trust among crewmates.\r\n\r\n**Key Features:**\r\n- Three decision points\r\n- Uses if-else conditions for branching paths\r\n- Interactive elements like countdowns or simple puzzles",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -18,7 +18,7 @@
     "name_suffix": "_pilot-2022",
     "encrypted": "false",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "notes": "",

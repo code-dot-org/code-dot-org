@@ -1,0 +1,74 @@
+name 'pl-aif-2-U3-sorting-function-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sorting
+
+#### Imagine opening an online gradebook and choosing **“Sort by highest score.”** Instantly, the list rearranges so the top scores appear first, even though the same students are still in the class.
+
+<img src="https://images.code.org/9d89fcfba48f603f4e8cee8b91e29cb4-image-1767804967209.png" alt="cartoon depiction of sorting a class by highest score" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+
+<br>
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
+
+#### **Pause & Reflect**
+
+- #### What changes when a list is sorted? The items, or just the order?
+- #### If two students have the same score, how should the gradebook decide which one appears first?
+- #### Who benefits from sorting a list one way instead of another?
+
+<br>
+
+> #### You may have thought about things like: sorting changes the order, not the data itself; ties need a rule; and different sorting choices can highlight different people or outcomes.
+
+#### 👉 The new order was created using a **sorting algorithm**.
+---
+
+## What is a sorting algorithm?
+
+#### A **sorting algorithm** is a rule a program uses to put items in a particular order (like highest-to-lowest, A–Z, newest-to-oldest, or closest-to-farthest).
+
+#### In JavaScript, sorting is often used with arrays (including arrays of objects) to organize data so it’s easier to read, compare, and make decisions like ordering scores, organizing names, or ranking search results.
+
+<br>
+
+<div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #efe7f8; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem;  margin: 0; line-height: 1.5; color: #3b0066;">
+      Every sort starts with an <b>order</b>. <br>
+      Every order is a <b>choice</b> that changes what stands out first.
+    </p>
+  </div>
+
+</div>
+
+---
+
+## What is a compare rule?
+
+#### When a computer sorts, it needs a way to decide which of two items should come first.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">↕️ <strong>Compare rule</strong> is the logic a program uses to decide which of two items should come first when sorting a list.</p>
+</div>
+
+#### A compare rule might be based on:
+- #### Numbers (highest to lowest, lowest to highest)
+- #### Text (A–Z, Z–A)
+- #### Dates (newest first, oldest first)
+- #### A specific property inside an object (like `score`, `lastName`, or `timestamp`)
+
+#### In JavaScript, the `sort()` function uses a compare rule (a function you provide) to decide how items should be ordered.
+
+---
+
+## Next up
+
+#### Let’s take a look at how sorting works in JavaScript.
+
+
+MARKDOWN

@@ -1,14 +1,14 @@
 import {ScrollMetricsManager} from '@blockly/plugin-scroll-options';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
-type ContainerRegion = GoogleBlockly.MetricsManager.ContainerRegion;
+type ContainerRegion = BlocklyCore.MetricsManager.ContainerRegion;
 export default class MetricsManager extends ScrollMetricsManager {
   /** Force content to start in top-left corner, not scroll in all directions.
    * @override
    */
   getPaddedContent_(
-    viewMetrics: GoogleBlockly.MetricsManager.ContainerRegion,
-    contentMetrics: GoogleBlockly.MetricsManager.ContainerRegion
+    viewMetrics: BlocklyCore.MetricsManager.ContainerRegion,
+    contentMetrics: BlocklyCore.MetricsManager.ContainerRegion
   ) {
     const contentBottom = contentMetrics.top + contentMetrics.height;
     const contentRight = contentMetrics.left + contentMetrics.width;
@@ -90,7 +90,7 @@ export default class MetricsManager extends ScrollMetricsManager {
     }
 
     // Work in pixels for the decision, since super() uses pixels internally.
-    const scale = (this.workspace_ as GoogleBlockly.WorkspaceSvg).scale || 1;
+    const scale = (this.workspace_ as BlocklyCore.WorkspaceSvg).scale || 1;
     const viewPx = opt_viewMetrics ?? this.getViewMetrics(false);
     const contentPx = opt_contentMetrics ?? this.getContentMetrics();
     const fixed = this.getComputedFixedEdges_(viewPx);

@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -33,8 +33,8 @@ interface FieldTuneOptions {
  * A custom field that renders the tune selection UI, used in the
  * "play_tune" block. The UI is rendered by {@link InstrumentGrid}.
  */
-export default class FieldTune extends GoogleBlockly.Field {
-  static fromJson(_options: GoogleBlockly.FieldConfig) {
+export default class FieldTune extends BlocklyCore.Field {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
     const options = _options as FieldTuneOptions;
     return new FieldTune(options);
   }
@@ -68,7 +68,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     }
 
     this.backgroundElement =
-      GoogleBlockly.utils.dom.createSvgElement<SVGGraphicsElement>(
+      BlocklyCore.utils.dom.createSvgElement<SVGGraphicsElement>(
         'g',
         {
           transform: 'translate(1,1)',
@@ -80,7 +80,7 @@ export default class FieldTune extends GoogleBlockly.Field {
   }
 
   applyColour() {
-    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
@@ -106,7 +106,7 @@ export default class FieldTune extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark,
@@ -169,7 +169,7 @@ export default class FieldTune extends GoogleBlockly.Field {
         )
       );
 
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill: selectedColor,
@@ -200,15 +200,15 @@ export default class FieldTune extends GoogleBlockly.Field {
     super.showEditor_();
 
     const editor = this.createDropdown();
-    GoogleBlockly.DropDownDiv.getContentDiv().appendChild(editor);
+    BlocklyCore.DropDownDiv.getContentDiv().appendChild(editor);
 
-    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
-    GoogleBlockly.DropDownDiv.setColour(
+    const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
+    BlocklyCore.DropDownDiv.setColour(
       style.colourPrimary,
       style.colourTertiary
     );
 
-    GoogleBlockly.DropDownDiv.showPositionedByField(
+    BlocklyCore.DropDownDiv.showPositionedByField(
       this,
       this.disposeDropdown.bind(this)
     );

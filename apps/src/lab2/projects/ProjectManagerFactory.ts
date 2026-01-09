@@ -17,6 +17,7 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectId: string,
+    isStandaloneProjectLevel: boolean,
     isShareView: boolean = false
   ): ProjectManager {
     return new ProjectManager({
@@ -25,6 +26,7 @@ export default class ProjectManagerFactory {
       channelId: projectId,
       reduceChannelUpdates: false,
       isShareView,
+      isStandaloneProjectLevel,
     });
   }
 
@@ -35,14 +37,13 @@ export default class ProjectManagerFactory {
    * @param levelId The identifier for the level.
    * @param userId The user ID of the creator.  Can be undefined if the user is looking at their own work.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
-   * @param scriptLevelId the ID of the script level (if different from the level ID). Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     levelId: number,
+    isStandaloneProjectLevel: boolean,
     userId?: number,
-    scriptId?: number,
-    scriptLevelId?: string
+    scriptId?: number
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
     let channelId: string | undefined = undefined;
@@ -50,7 +51,6 @@ export default class ProjectManagerFactory {
     const response = await channelsStore.loadForLevel(
       levelId,
       scriptId,
-      scriptLevelId,
       userId
     );
     if (response.ok) {
@@ -71,6 +71,7 @@ export default class ProjectManagerFactory {
       channelsStore,
       channelId,
       reduceChannelUpdates,
+      isStandaloneProjectLevel,
     });
   }
 }

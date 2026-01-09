@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Dog Tricks \r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results. \r\n\r\n1. Give your dog a new name. Look at line 5. Change the name `\"Leftie\"` to a different name. \r\n\r\n2. Add `dog.bark()` in line 8 to make your dog bark. \r\n\r\n3. Add `dog.wag()` in line 11 to make your dog wag its tail.\r\n\r\n4. Add `dog.run()` in line 14 to make your dog run. \r\n",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

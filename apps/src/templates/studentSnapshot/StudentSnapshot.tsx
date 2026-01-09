@@ -1,10 +1,11 @@
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import CodeWidget from '@cdo/apps/templates/studentSnapshot/CodeWidget';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -13,6 +14,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
 
@@ -23,16 +25,12 @@ interface UnitLessonsResponse {
   hasUnnumberedLessons: boolean;
 }
 
-interface PythonlabLevel {
-  id: number;
-  name: string;
-  exemplarSources?: MultiFileSource;
-}
+const getUnitLessons = (unitId: number) =>
+  HttpClient.fetchJson<UnitLessonsResponse>(
+    `/student_snapshots/units/${unitId}/lessons`
+  ).then(response => response?.value);
 
-interface LessonData {
-  pythonlabLevel?: PythonlabLevel | null;
-  cfuLevels?: Array<{id: number; name: string}>;
-}
+const unitLessonsCachedLoader = _.memoize(getUnitLessons);
 
 interface CFULevel {
   id: number;
@@ -49,10 +47,22 @@ interface CFULevelsData {
   cfu_levels: CFULevel[];
 }
 
-const getUnitLessons = (unitId: number) =>
-  HttpClient.fetchJson<UnitLessonsResponse>(
-    `/student_snapshots/units/${unitId}/lessons`
-  ).then(response => response?.value);
+const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
+  return HttpClient.fetchJson<CFULevelsData>(
+    `/student_snapshots/cfu_levels/${lessonId}`
+  ).then(response => response?.value?.cfu_levels || []);
+};
+
+interface PythonlabLevel {
+  id: number;
+  name: string;
+  exemplarSources?: MultiFileSource;
+}
+
+interface LessonData {
+  pythonlabLevel?: PythonlabLevel | null;
+  cfuLevels?: Array<{id: number; name: string}>;
+}
 
 const getLessonData = (lessonId: number, includeParams: string[]) => {
   const params = new URLSearchParams();
@@ -68,43 +78,63 @@ const getLessonData = (lessonId: number, includeParams: string[]) => {
   ).then(response => response?.value);
 };
 
-const unitLessonsCachedLoader = _.memoize(getUnitLessons);
+interface StudentCodeData {
+  studentCode: Record<string, string>;
+}
 
-const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
-  return HttpClient.fetchJson<CFULevelsData>(
-    `/student_snapshots/lessons/${lessonId}/cfu_levels`
-  ).then(response => response?.value?.cfu_levels || []);
+const getStudentCode = (
+  unitId: number,
+  lessonId: number,
+  studentId: number
+): Promise<Record<string, string>> => {
+  return HttpClient.fetchJson<StudentCodeData>(
+    `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
+  ).then(response => response?.value?.studentCode || {});
 };
 
 const StudentSnapshot: React.FC = () => {
-  const [selectedStudentId, setSelectedStudentId] = useState<number | null>(
-    null
-  );
+  const [selectedStudentId, setSelectedStudentId] = React.useState<
+    number | null
+  >(null);
   const [unitLessons, setUnitLessons] = useState<LessonOption[]>([]);
+  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
   const [isUnitLessonsLoading, setIsUnitLessonsLoading] =
     useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
   const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
   const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
-
-  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
+  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
+  const [isStudentCodeLoading, setIsStudentCodeLoading] =
+    useState<boolean>(false);
   const [lessonData, setLessonData] = useState<LessonData | null>(null);
   const [isLessonDataLoading, setIsLessonDataLoading] =
     useState<boolean>(false);
-
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
+  );
+  const sectionCourseId = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          .courseId
+      : null
+  );
+  const selectedUnitId = useSelector(getSelectedUnitId);
+  const selectedUnitPosition = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          .unitPosition
+      : null
+  );
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
-
-  const selectedStudent = useMemo(
+  const selectedStudent = React.useMemo(
     () => selectedStudents.find(student => student.id === selectedStudentId),
     [selectedStudentId, selectedStudents]
   );
 
-  const selectedUnitId = useSelector(getSelectedUnitId);
-
   const exemplarCode = lessonData?.pythonlabLevel?.exemplarSources;
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (selectedUnitId) {
       setIsUnitLessonsLoading(true);
       unitLessonsCachedLoader(selectedUnitId)
@@ -115,11 +145,17 @@ const StudentSnapshot: React.FC = () => {
         .finally(() => {
           setIsUnitLessonsLoading(false);
         });
+      loadUnitProgress(
+        selectedUnitId,
+        sectionId,
+        sectionCourseId,
+        selectedUnitPosition
+      );
     }
-  }, [selectedUnitId]);
+  }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
   // fetch last PythonLab exemplar code
-  useEffect(() => {
+  React.useEffect(() => {
     if (selectedLessonId) {
       setIsLessonDataLoading(true);
       // Specify which widgets/data you need
@@ -136,7 +172,7 @@ const StudentSnapshot: React.FC = () => {
   }, [selectedLessonId]);
 
   // Fetch CFU levels when lesson changes
-  useEffect(() => {
+  React.useEffect(() => {
     if (selectedLessonId) {
       setIsCfuLevelsLoading(true);
       getCFULevels(selectedLessonId)
@@ -157,6 +193,26 @@ const StudentSnapshot: React.FC = () => {
 
   // TODO: Use this in CFU widget
   console.log(cfuLevels, isCfuLevelsLoading);
+
+  // Fetch Student Code when student or lesson changes
+  React.useEffect(() => {
+    if (selectedUnitId && selectedLessonId && selectedStudentId) {
+      setIsStudentCodeLoading(true);
+      getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
+        .then(code => {
+          setStudentCode(code);
+        })
+        .catch(error => {
+          console.error('Error fetching student code:', error);
+          setStudentCode({});
+        })
+        .finally(() => {
+          setIsStudentCodeLoading(false);
+        });
+    } else {
+      setStudentCode({});
+    }
+  }, [selectedUnitId, selectedLessonId, selectedStudentId]);
 
   // TODO: replace with actual values from URL/Redux later
   const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
@@ -203,6 +259,12 @@ const StudentSnapshot: React.FC = () => {
           gridWidth={1}
           loading={isLessonDataLoading}
         />
+        <CodeWidget
+          codeData={studentCode}
+          widgetName="Student Code"
+          gridWidth={1}
+          loading={isStudentCodeLoading}
+        />
         <WidgetTemplate
           widgetName="Small Widget 1"
           gridWidth={1}
@@ -232,6 +294,13 @@ const StudentSnapshot: React.FC = () => {
         >
           <div>Should not be displayed</div>
         </WidgetTemplate>
+        {selectedLessonId && selectedStudentId && (
+          <StudentLessonProgressDetailsWidget
+            selectedUnitId={selectedUnitId}
+            selectedLessonId={selectedLessonId}
+            selectedStudentId={selectedStudentId}
+          />
+        )}
       </div>
     </div>
   );

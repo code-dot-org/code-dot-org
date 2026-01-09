@@ -1,0 +1,10 @@
+name 'iterating-with-ai-lesson11-level2-hub-test-2025'
+display_name 'Milestone Two Hub'
+description 'Your goal: Use these levels in whatever way helps you move your project forward — whether that is sketching your dashboard layout, mapping your schema to the UI, or building the static page that displays your dataset. You are in control of how and when to use these levels to meet the project goals.'
+uses_lab2
+
+sublevels
+level 'iterating-with-ai-lesson11-level3-test-2025'
+level 'iterating-with-ai-lesson11-milestone2-test-2025'
+level 'iterating-with-ai-lesson11-milestone2-frq-test-2025'
+
