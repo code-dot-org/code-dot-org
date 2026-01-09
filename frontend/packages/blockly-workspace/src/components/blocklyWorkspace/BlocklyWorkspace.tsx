@@ -20,6 +20,7 @@ import Registry from '@blockly-workspace/Registry';
 import {positionBlocksOnWorkspace} from '@blockly-workspace/serialization';
 import DefaultTheme from '@blockly-workspace/themes/default';
 import type {
+  BlockSvg,
   BlocklySerialization,
   BlockDefinition,
   Theme,
@@ -122,15 +123,12 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
     // Make sure we have the default blocks
     (blocks || []).forEach(blockDefinition => {
-      blockDefinition = {
-        ...blockDefinition,
-      };
-
       // Register (and modify the block definition to just reference mixins
       // and extensions by name) any block fields, extensions, etc.
-      registry.current.registerFromBlockDefinition(blockDefinition);
+      const formedBlockDefinition =
+        registry.current.registerFromBlockDefinition(blockDefinition);
 
-      Blockly.common.defineBlocksWithJsonArray([blockDefinition]);
+      Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
 
       // Bind the given block definition's generator to the overall generator
       javascriptGenerator.forBlock[blockDefinition.type] = function (
@@ -139,7 +137,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       ) {
         return (
           blockDefinition.generator?.javascript?.(
-            block,
+            block as BlockSvg,
             javascriptGenerator,
             environment,
           ) || ''

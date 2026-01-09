@@ -1,14 +1,13 @@
 import {blocks as Blocks} from 'blockly/blocks';
-import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
-import type {BlockDefinition} from './types';
+import type {BlockDefinition, OldBlockDefinition} from './types';
 
 /**
  * These are some predefined blocks that can be used across the platform.
  */
 const blocks: {
-  [key: string]: BlockDefinition;
+  [key: string]: BlockDefinition | OldBlockDefinition;
 } = {
   when_run: {
     type: 'when_run',
@@ -20,7 +19,7 @@ const blocks: {
       javascript: () => '\n',
     },
     nextStatement: true,
-  },
+  } as BlockDefinition,
   // This block add a harmless comment to the code
   comment: {
     type: 'comment',
@@ -39,10 +38,9 @@ const blocks: {
       },
     ],
     generator: {
-      javascript: (block: Blockly.Block) =>
-        `// ${block.getFieldValue('COMMENT')}\n`,
+      javascript: block => `// ${block.getFieldValue('COMMENT')}\n`,
     },
-  },
+  } as BlockDefinition,
   // Other common blocks and their generators
   ...Object.fromEntries(
     Object.entries(Blocks).map(([type, value]) => [
@@ -51,10 +49,10 @@ const blocks: {
         type,
         init: (value as {init: () => void}).init,
         generator: {
-          javascript: (block: Blockly.Block) =>
+          javascript: block =>
             javascriptGenerator.forBlock[type](block, javascriptGenerator),
         },
-      } as BlockDefinition,
+      } as OldBlockDefinition,
     ]),
   ),
 };

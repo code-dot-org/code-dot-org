@@ -45,10 +45,12 @@ const trySetLocalStorage: (item: string, value: string) => boolean = (
  */
 export const Experiment = {
   REDUX_LOGGING: 'reduxLogging',
-  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH: 'schoolAutocompleteDropdownNewSearch',
+  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH:
+    'schoolAutocompleteDropdownNewSearch',
   SHOW_UNPUBLISHED_DATASET_TABLES: 'showUnpublishedDatasetTables',
   TEACHER_DASHBOARD_SECTION_BUTTONS: 'teacher-dashboard-section-buttons',
-  TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT: 'teacher-dashboard-section-buttons-alternate-text',
+  TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT:
+    'teacher-dashboard-section-buttons-alternate-text',
   FINISH_DIALOG_METRICS: 'finish-dialog-metrics',
   I18N_TRACKING: 'frontend-i18n-tracking',
   TIME_SPENT: 'time-spent',
@@ -141,7 +143,7 @@ export const getEnabledExperiments = () => {
 };
 
 export const setEnabled = (
-  key: Experiment,
+  key: (typeof Experiment)[keyof typeof Experiment],
   shouldEnable: boolean,
   expiration?: number,
 ) => {
@@ -171,7 +173,7 @@ export const setEnabled = (
  * @param key - Name of experiment in question
  */
 export const isEnabledAllowingQueryString: (
-  key: Experiment,
+  key: (typeof Experiment)[keyof typeof Experiment],
 ) => boolean = key => {
   const query = queryString.parse(getQueryString());
 
@@ -189,7 +191,9 @@ export const isEnabledAllowingQueryString: (
  * Checks whether provided experiment is enabled or not.
  * @param key - Name of experiment in question
  */
-export const isEnabled: (key: Experiment) => boolean = key => {
+export const isEnabled: (
+  key: (typeof Experiment)[keyof typeof Experiment],
+) => boolean = key => {
   const storedExperiments = getStoredExperiments();
   let enabled =
     storedExperiments.some(experiment => experiment.key === key) ||
