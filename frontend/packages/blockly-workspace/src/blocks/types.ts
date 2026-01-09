@@ -69,6 +69,8 @@ export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
   /** For input fields, controls browser spellcheck */
   spellcheck?: boolean;
   variable?: string;
+  /** The alignment of the field */
+  align?: 'LEFT' | 'RIGHT' | 'CENTRE';
 }
 
 export interface BlockDummyArgDefinition extends BlockBaseArgDefinition {
@@ -79,6 +81,13 @@ export interface BlockDummyArgDefinition extends BlockBaseArgDefinition {
 export interface BlockStatementArgDefinition extends BlockBaseArgDefinition {
   /** Explictly a statement section */
   type: 'input_statement';
+}
+
+export interface BlockVariableArgDefinition extends BlockBaseArgDefinition {
+  /** Explictly a statement section */
+  type: 'field_variable';
+  /** The name of the variable */
+  variable: string;
 }
 
 export interface BlockNumberArgDefinition extends BlockBaseArgDefinition {
@@ -98,6 +107,7 @@ export interface BlockNumberArgDefinition extends BlockBaseArgDefinition {
 export type BlockArgDefinition =
   | BlockFieldPluginArgDefinition
   | BlockDummyArgDefinition
+  | BlockVariableArgDefinition
   | BlockStatementArgDefinition
   | BlockImageArgDefinition
   | BlockNumberArgDefinition
