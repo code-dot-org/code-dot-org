@@ -186,12 +186,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
         );
 
-        // Compare serialized data and saved data to identify new files.
-        // Use whether we're in start mode to generate the URL.
-        // Save these new files to the external files property.
-        // Come up with a list of new files, which we pass to the helper to actually upload (but don't wait).
-        // On error, toast notification? Update sources to mark as failed upload?
-
         const newFiles: SketchlabExternalFiles = {};
         if (newFileIds.length && excalidrawFiles) {
           newFileIds.forEach(fileId => {
@@ -228,12 +222,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
         });
 
         if (newFiles) {
-          const onError = () => excalidrawApi?.setToast({message: 'error'});
           uploadExternalFiles(
             newFiles,
             serializedData.files,
-            filesBeingUploadedRef,
-            onError
+            filesBeingUploadedRef
           );
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);

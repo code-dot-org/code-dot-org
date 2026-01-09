@@ -1,37 +1,14 @@
 import {
-  getIsStartMode,
-  getAppOptionsEditingExemplar,
-} from '@cdo/apps/lab2/projects/utils';
-import {
-  SketchlabProjectFile,
   SketchlabExternalFiles,
   ExcalidrawFilesWithOptionalData,
 } from '@cdo/apps/lab2/types';
 
 import {uploadBase64ToUrl} from './uploadBase64ToUrl';
 
-// TO DO: these are the upload types officially supported by Excalidraw,
-// not all of which we actually support uploading to S3.
-// Tracking error handling work here:
-// https://codedotorg.atlassian.net/browse/AFL-345
-const MIME_TO_EXT = {
-  'image/svg+xml': 'svg',
-  'image/png': 'png',
-  'image/jpeg': 'jpg',
-  'image/gif': 'gif',
-  'image/webp': 'webp',
-  'image/bmp': 'bmp',
-  'image/x-icon': 'ico',
-  'image/avif': 'avif',
-  'image/jfif': 'jfif',
-  'application/octet-stream': 'bin',
-};
-
 export const uploadExternalFiles = async (
   filesToUpload: SketchlabExternalFiles,
   excalidrawFiles: ExcalidrawFilesWithOptionalData,
-  filesBeingUploadedRef: React.MutableRefObject<Set<string>>,
-  onError: () => void
+  filesBeingUploadedRef: React.MutableRefObject<Set<string>>
 ) => {
   for (const [fileId, fileContents] of Object.entries(filesToUpload)) {
     filesBeingUploadedRef.current.add(fileId);
@@ -50,7 +27,7 @@ export const uploadExternalFiles = async (
         );
       }
     } catch {
-      onError();
+      // https://codedotorg.atlassian.net/browse/AFL-345
       console.error(`Error uploading file with id ${fileId}`);
     }
 
