@@ -8,7 +8,7 @@
 module User::AiAccessible
   extend ActiveSupport::Concern
 
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+  AI_TUTOR_PILOT_NAME = 'ai-tutor-pilot'.freeze
 
   # Chat apis trust the client to decide if it can access chat features
   # This allows us the flexibility to do things like turn on the tutor UI
@@ -44,16 +44,26 @@ module User::AiAccessible
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
+  def ai_tutor_enabled_for_pilot?
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+
+    ai_tutor_enabled_for_pilot_teacher? || ai_tutor_enabled_for_pilot_student?
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Error computing ai_tutor_enabled_for_pilot')
+    false
+  end
+
+  # Teachers: enabled if they are in the pilot single user experiment
+  private def ai_tutor_enabled_for_pilot_teacher?
+    teacher? && SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_PILOT_NAME)
+  end
+
+  # Students: enabled if any of their teachers are in the pilot
+  private def ai_tutor_enabled_for_pilot_student?
+    student? && Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_PILOT_NAME)
+  end
+
   private def ai_tutor_feature_globally_disabled?
     DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def in_ai_tutor_enabled_section_with_pilot_teacher?
-    Queries::User::TeacherEnabledExperiments.call(self).include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
-  end
-
-  private def in_ai_tutor_pilot?
-    SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 end

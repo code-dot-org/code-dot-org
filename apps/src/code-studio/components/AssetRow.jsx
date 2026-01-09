@@ -2,7 +2,6 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -41,19 +40,6 @@ export default class AssetRow extends React.Component {
    */
   confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
-    firehoseClient.putRecord({
-      study: 'delete-asset',
-      study_group:
-        this.props.onChoose && typeof this.props.onChoose === 'function'
-          ? 'choose-assets'
-          : 'manage-assets',
-      event: 'initiate',
-      project_id: this.props.projectId,
-      data_json: JSON.stringify({
-        assetName: this.props.name,
-        elementId: this.props.elementId,
-      }),
-    });
   };
 
   /**
@@ -79,17 +65,6 @@ export default class AssetRow extends React.Component {
   };
 
   chooseAsset = () => {
-    if (!this.props.imagePicker) {
-      firehoseClient.putRecord(
-        {
-          study: 'sound-dialog-2',
-          study_group: 'library-tab',
-          event: 'choose-uploaded-sound',
-          data_json: this.props.name,
-        },
-        {includeUserId: true}
-      );
-    }
     this.props.onChoose();
   };
 

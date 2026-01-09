@@ -9,11 +9,23 @@ markdown <<MARKDOWN
 
 #### Now that you’ve used HTML, CSS, and AI to modify a website, it’s time to build one!
 
-#### Think back to the four parts of the site from the last level: the navigation bar, hero section, cards, and footer.
+#### Think back to the four parts of the site from the last level:
 
-#### In the next level, you’ll prompt the AI to create a website on a topic of your choice that includes all four parts.
+- #### **Navigation bar-** Links to main pages
+
+- #### **Hero-** Main attention-grabbing section
+
+- #### **Cards-** Grouped content previews
+
+- #### **Footer-** Info and links at page bottom
+
+
 
 <div style="clear:both;"></div>
+
+
+
+
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
@@ -22,7 +34,6 @@ Then, tweak each section one by one until your site looks just right.
 </p>
 </div>
 
-
-
-![]()
+## Up Next 
+#### In the next level, you’ll prompt the AI to create a website on a topic of your choice that includes all four parts
 MARKDOWN

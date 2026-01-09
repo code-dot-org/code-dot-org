@@ -46,7 +46,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
-        uuid: current_user.uuid,
         username: current_user.username,
         display_name: current_user.name,
         user_type: current_user.user_type,
@@ -78,6 +77,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         educator_role: current_user.educator_role,
         sharing_disabled: current_user.sharing_disabled,
         is_levelbuilder: current_user.levelbuilder?,
+        ai_tutor_enabled_for_pilot: current_user.ai_tutor_enabled_for_pilot?
       }
     else
       render json: {

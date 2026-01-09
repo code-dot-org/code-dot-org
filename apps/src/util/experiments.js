@@ -68,8 +68,6 @@ experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
-// Use v2 of Web Lab 2 preview
-experiments.WEBLAB2_PREVIEW_V2 = 'weblab2-preview-v2';
 // Use AI Tutor system prompts from Langfuse
 experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
 // Enable flagging of AI responses to Langfuse
@@ -78,8 +76,9 @@ experiments.LOG_TO_LANGFUSE = 'log-to-langfuse';
 experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 // Enable AI lesson podcasts
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
-// Enable Localhost workaround for weblab 2 preview
-experiments.LOCAL_WEBLAB2_PREVIEW = 'local-weblab2-preview';
+// Use channel-id based preview urls on localhost for Web Lab 2
+experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
+experiments.WEBLAB2_LEGACY_PREVIEW = 'weblab2-legacy-preview';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
