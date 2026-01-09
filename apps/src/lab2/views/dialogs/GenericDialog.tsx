@@ -139,9 +139,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
         buttons?.neutral && buttons?.cancel ? (
           <Button
             onClick={cancelCallback}
-            type="secondary"
+            type="tertiary"
             disabled={buttons.cancel.disabled}
-            color={theme === 'Dark' ? 'white' : 'gray'}
+            color={theme === 'Dark' ? 'white' : 'black'}
             text={buttons.cancel.text || commonI18n.cancel()}
           />
         ) : undefined
