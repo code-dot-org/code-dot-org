@@ -86,9 +86,11 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     "#{basic_info}
     #{level_info}
     Was Submitted (only applicable for coding levels): #{user_level&.submitted}
+    Passing status: #{user_level&.passing? || false}
+    Perfect status: #{user_level&.perfect? || false}
+    Finished status: #{user_level&.finished? || false}
     Validation Status: ___
     Time spent: #{user_level&.time_spent || 0} seconds
-    Exemplar code?: ___
     Rubrics: #{rubric_summary}
     #{sublevel_info}}\n"
   end
@@ -143,10 +145,10 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
   end
 
   def self.get_code_level_info(level, student_id, unit_id)
+    exemplar = level.respond_to?(:exemplar_sources) ? "\nLevel Example Perfect Response: #{level.exemplar_sources}\n" : ""
     student_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id).to_json
     "Level Long Instructions: {#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}
-    Level Short Instructions: #{level.short_instructions}
-    Base Code:
+    Level Short Instructions: #{level.short_instructions}#{exemplar}
     Student Response: #{student_code}"
   end
 end
