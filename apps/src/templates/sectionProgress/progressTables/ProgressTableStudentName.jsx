@@ -7,8 +7,6 @@ import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import firehoseClient from '../../../metrics/firehose';
-
 export default class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -24,27 +22,10 @@ export default class ProgressTableStudentName extends React.PureComponent {
   constructor(props) {
     super(props);
     this.toggleExpand = this.toggleExpand.bind(this);
-    this.recordStudentNameClick = this.recordStudentNameClick.bind(this);
   }
 
   toggleExpand() {
     this.props.onToggleExpand(this.props.studentId);
-  }
-
-  recordStudentNameClick() {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'go_to_student',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-          student_id: this.props.studentId,
-        }),
-      },
-      {includeUserId: true}
-    );
   }
 
   tooltipId() {
@@ -92,11 +73,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
           style={styles.collapser}
         />
         {this.renderTooltip()}
-        <a
-          style={styles.link}
-          href={studentUrl}
-          onClick={this.recordStudentNameClick}
-        >
+        <a style={styles.link} href={studentUrl}>
           {name}
         </a>
       </div>

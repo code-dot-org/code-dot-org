@@ -2,7 +2,6 @@ require 'test_helper'
 
 class CoursesControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
-  self.use_transactional_test_case = true
 
   setup_all do
     @teacher = create(:teacher)
