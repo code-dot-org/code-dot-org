@@ -1579,6 +1579,76 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/audio@workspace:packages/audio":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/audio@workspace:packages/audio"
+  dependencies:
+    "@code-dot-org/changelogs": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/localization": "workspace:*"
+    "@eslint/js": "npm:^9.15.0"
+    "@release-it/conventional-changelog": "npm:^10.0.0"
+    "@storybook/addon-a11y": "npm:^8.6.9"
+    "@storybook/addon-essentials": "npm:^8.6.9"
+    "@storybook/addon-interactions": "npm:^8.6.9"
+    "@storybook/addon-storysource": "npm:^8.6.9"
+    "@storybook/addon-styling-webpack": "npm:^1.0.1"
+    "@storybook/addon-webpack5-compiler-swc": "npm:^3.0.0"
+    "@storybook/blocks": "npm:^8.6.9"
+    "@storybook/react": "npm:^8.6.9"
+    "@storybook/react-webpack5": "npm:^8.6.9"
+    "@storybook/test": "npm:^8.6.9"
+    "@storybook/test-runner": "npm:^0.22.0"
+    "@swc/core": "npm:^1.9.3"
+    "@swc/jest": "npm:^0.2.37"
+    "@testing-library/dom": "npm:^10.4.0"
+    "@testing-library/jest-dom": "npm:^6.6.3"
+    "@testing-library/react": "npm:^16.0.1"
+    "@types/identity-obj-proxy": "npm:^3"
+    "@types/jest": "npm:^29.5.14"
+    "@types/lodash": "npm:^4"
+    "@types/node": "npm:^22.9.0"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    axe-playwright: "npm:^2.0.3"
+    classnames: "npm:^2.5.1"
+    clean-package: "npm:^2.2.0"
+    esbuild-sass-plugin: "npm:^3.3.1"
+    eslint: "npm:^9.15.0"
+    eslint-plugin-jest: "npm:^28.9.0"
+    eslint-plugin-react: "npm:^7.37.2"
+    eslint-plugin-storybook: "npm:^0.11.1"
+    glob: "npm:^11.0.0"
+    globals: "npm:^15.12.0"
+    identity-obj-proxy: "npm:^3.0.0"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    postcss: "npm:^8.4.49"
+    postcss-modules: "npm:^6.0.1"
+    prettier: "npm:3.4.2"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    release-it: "npm:^18.1.2"
+    rimraf: "npm:^6.0.1"
+    schema-dts: "npm:^1.1.5"
+    storybook: "npm:^8.6.9"
+    storybook-addon-rtl: "npm:^1.0.1"
+    stylelint: "npm:^16.14.1"
+    swiper: "npm:^11.0.5"
+    tsc-alias: "npm:^1.8.11"
+    tsup: "npm:^8.3.5"
+    typescript: "npm:^5.7.3"
+    typescript-eslint: "npm:^8.15.0"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
+    swiper: ^11.0.5
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/blockly-workspace@workspace:*, @code-dot-org/blockly-workspace@workspace:packages/blockly-workspace":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace"
@@ -1909,6 +1979,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-focus-lock: "npm:^2.13.6"
     react-redux: "npm:^9.2.0"
+    react-string-replace: "npm:^1.1.1"
     release-it: "npm:^18.1.2"
     rimraf: "npm:^6.0.1"
     schema-dts: "npm:^1.1.5"
@@ -21312,6 +21383,13 @@ __metadata:
     schema-dts: ">=0.7.4"
     typescript: ">=3.1.6"
   checksum: 10c0/34dd300c6154a908a26cd8a7c664e60ed30b583d9b4c3afc0de1ca6a8ce139bb5fac2630483639d73bf79089ff699d86d453e81cbbb6a3bd2c485f92506ff3c0
+  languageName: node
+  linkType: hard
+
+"react-string-replace@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "react-string-replace@npm:1.1.1"
+  checksum: 10c0/5a4a4fd9c3758b4680da113adf411342116238b4dc68fa4c4e9b04c046cb757d4f00d6ba441301fa3afb44c847dacc17a2707865698ff1fc78a369182458e894
   languageName: node
   linkType: hard
 
