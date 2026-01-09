@@ -30,10 +30,19 @@ module Lti
       # Returns a static set of links to validate deep linking.
       # TODO: Update to build dynamic content items based on user selection.
       def build_content_items(selected_items)
-        [{
-          type: 'link',
-          url: 'https://studio.code.org/projects/music/new'
-        }]
+        possible_links = [
+          {
+            type: 'link',
+            url: 'https://studio.code.org/projects/music/new',
+            title: 'Music Lab'
+          },
+          {
+            type: 'link',
+            url: 'https://studio.code.org/courses/artificial-intelligence-foundations-2025',
+            title: 'AI Foundations 2025'
+          }
+        ]
+        selected_items.map {|index| possible_links[index.to_i]}
       end
 
       private def validate_deep_linking_enabled
