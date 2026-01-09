@@ -216,6 +216,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
+  const generatePodcastUrl = `/ai_lesson_summary_podcasts/generate_podcast?lesson_id=${selectedLesson?.id}`;
+
   React.useEffect(() => {
     if (selectedLesson) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
@@ -336,6 +338,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         <div className={styles.lessonSummaryContainer}>
           {experiments.isEnabled('ai-lesson-podcasts') && (
             <div className={styles.lessonSummarySection}>
+              {/* The following link is temporary for testing and will be removed before official release */}
+              <a href={generatePodcastUrl}>
+                Generate Podcast (this may take a minute...)
+              </a>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />

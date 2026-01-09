@@ -46,7 +46,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
-        uuid: current_user.uuid,
         username: current_user.username,
         display_name: current_user.name,
         user_type: current_user.user_type,
