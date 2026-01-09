@@ -134,7 +134,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   return (
     <DialogComponent
       title={title}
-      customContent={bodyComponent || message}
+      customContent={
+        <div id="dsco-dialog-description">{bodyComponent || message}</div>
+      }
       customBottomContent={
         buttons?.neutral && buttons?.cancel ? (
           <Button
