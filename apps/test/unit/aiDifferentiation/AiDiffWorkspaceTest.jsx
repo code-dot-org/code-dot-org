@@ -8,8 +8,17 @@ import {
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
+import {aichatReducer, setThreadMessages} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
+import {
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  EXIT_TICKET_PROMPT,
+  MINI_LESSON_PROMPT,
+  SUGGESTED_PROMPTS_FOR_SELECTION,
+} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {
   chatThreadMessagesValidator,
   chatThreadValidator,
@@ -52,6 +61,14 @@ const defaultProps = {
   curriculumCourses: [],
   personalizationData: {},
 };
+
+const DEFAULT_SUGGESTED_PROMPTS = [
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  MINI_LESSON_PROMPT,
+  EXIT_TICKET_PROMPT,
+];
 
 const now = new Date();
 const sixDaysAgo = new Date(now);
@@ -122,7 +139,7 @@ const defaultChatResponse = {
 
 describe('AiDiffWorkspace', () => {
   let fetchJsonStub;
-  let fetchStub;
+  let postStub;
 
   beforeEach(() => {
     stubRedux();
@@ -131,7 +148,7 @@ describe('AiDiffWorkspace', () => {
 
     fetchJsonStub = jest.fn();
     HttpClient.fetchJson = fetchJsonStub;
-    fetchStub = jest.spyOn(HttpClient, 'post').mockResolvedValue({
+    postStub = jest.spyOn(HttpClient, 'post').mockResolvedValue({
       json: jest.fn(() => defaultChatResponse),
     });
   });
@@ -157,6 +174,17 @@ describe('AiDiffWorkspace', () => {
       })
     );
     store.dispatch(setSections([]));
+    store.dispatch(
+      setThreadMessages([
+        {
+          role: Role.ASSISTANT,
+          chatMessageText:
+            SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
+          status: Status.OK,
+        },
+        DEFAULT_SUGGESTED_PROMPTS,
+      ])
+    );
 
     render(
       <Provider store={store}>
@@ -318,16 +346,12 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads/2/chat_completion',
         JSON.stringify({
           inputText: 'new message on old thread',
           isPreset: false,
           presetChipText: null,
-          context: {
-            type: AiDiffContext.LESSON,
-            lessonId: 2,
-          },
         }),
         true,
         {
@@ -430,7 +454,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
         JSON.stringify({
           inputText: 'starting new thread',
@@ -506,7 +530,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
         JSON.stringify({
           inputText: 'starting new thread',
@@ -561,7 +585,7 @@ describe('AiDiffWorkspace', () => {
     expect(screen.queryByLabelText(i18n.aiChatMessageUser())).toBeNull();
 
     fetchJsonStub.mockClear();
-    fetchStub.mockClear();
+    postStub.mockClear();
 
     const submit_btn2 = screen.getByRole('button', {name: i18n.submit()});
     const textbox2 = screen.getByRole('textbox');
@@ -569,7 +593,7 @@ describe('AiDiffWorkspace', () => {
     fireEvent.click(submit_btn2);
 
     await waitFor(() => {
-      expect(fetchStub).toHaveBeenCalledWith(
+      expect(postStub).toHaveBeenCalledWith(
         '/aidiff_threads',
         JSON.stringify({
           inputText: 'starting 2nd thread',
