@@ -10,6 +10,7 @@ import React, {useMemo} from 'react';
 
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -50,6 +51,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
+  // If we are in read-only mode, disable the add button.
+  const addButtonDisabled = useAppSelector(isReadOnlyWorkspace);
 
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
@@ -180,6 +183,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           color="gray"
           type="secondary"
           onClick={handleAdd}
+          disabled={addButtonDisabled}
         />
         <ActionDropdown
           name={`backpack-options-${fileName}`}
