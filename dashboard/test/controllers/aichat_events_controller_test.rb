@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class AichatEventsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher1 = create(:authorized_teacher)
     @authorized_teacher2 = create(:authorized_teacher)
