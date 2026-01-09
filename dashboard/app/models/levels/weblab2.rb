@@ -62,6 +62,12 @@ class Weblab2 < Level
     true
   end
 
+  # weblab2 requires ai chat tools enabled to reasonably function, given that
+  # aif curriculum uses tutor in weblab2 as part of its core functionality
+  def requires_ai_chat_tools?
+    true
+  end
+
   def add_starter_asset!(_, _)
     true
   end

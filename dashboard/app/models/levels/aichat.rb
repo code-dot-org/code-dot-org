@@ -51,6 +51,11 @@ class Aichat < Level
     true
   end
 
+  # ai chat lab requires ai chat tools enabled to reasonably function
+  def requires_ai_chat_tools?
+    true
+  end
+
   # Add a starter asset to the level and save it in properties.
   # Starter assets are stored as an object, where the key is the
   # friendly filename and the value is the UUID filename stored in S3:
