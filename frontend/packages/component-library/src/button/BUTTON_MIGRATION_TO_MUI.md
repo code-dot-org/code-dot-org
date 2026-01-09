@@ -683,7 +683,7 @@ import {LoadingButton} from '@mui/lab';
 
 ### Example 5: Link Button
 
-**Current:**
+**Current (DSCO Button component):**
 
 ```tsx
 <LinkButton
