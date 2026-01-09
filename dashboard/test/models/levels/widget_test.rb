@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class WidgetTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @level = Widget.create!(
       name: 'Test Widget',

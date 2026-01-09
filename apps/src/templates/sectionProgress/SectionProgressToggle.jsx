@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -28,20 +27,6 @@ class SectionProgressToggle extends React.Component {
   };
 
   onChange = selectedToggle => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'view_change_toggle',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          old_view: this.props.currentView,
-          new_view: selectedToggle,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
     analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,

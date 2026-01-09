@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Policies::InlineAnswerTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher = create(:authorized_teacher)
     @teacher = create(:teacher)

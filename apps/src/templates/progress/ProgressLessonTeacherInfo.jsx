@@ -12,7 +12,6 @@ import {
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
@@ -41,32 +40,12 @@ class ProgressLessonTeacherInfo extends React.Component {
   constructor(props) {
     super(props);
     this.onClickHiddenToggle = this.onClickHiddenToggle.bind(this);
-    this.firehoseData = this.firehoseData.bind(this);
   }
 
   onClickHiddenToggle(value) {
     const {unitName, section, lesson, toggleHiddenLesson} = this.props;
     const sectionId = (section && section.id.toString()) || '';
     toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord(
-      {
-        study: 'hidden-lessons',
-        study_group: 'v0',
-        event: value,
-        data_json: JSON.stringify(this.firehoseData()),
-      },
-      {includeUserId: true}
-    );
-  }
-
-  firehoseData() {
-    const {unitName, section, lesson} = this.props;
-    return {
-      script_name: unitName,
-      section_id: section && section.id,
-      lesson_id: lesson.id,
-      lesson_name: lesson.name,
-    };
   }
 
   render() {
@@ -143,7 +122,6 @@ class ProgressLessonTeacherInfo extends React.Component {
               lessonUrl={loginRequiredLessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
-              analyticsData={JSON.stringify(this.firehoseData())}
               buttonStyle={styles.button}
             />
           </div>
