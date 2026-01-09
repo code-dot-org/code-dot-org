@@ -3,14 +3,11 @@
   %head
     %title Returning to your LMS…
 
-  %body
+  %body{ onload: "document.getElementById('ltiDeepLinkReturn').submit();" }
     %p Returning to your LMS…
 
     %form#ltiDeepLinkReturn{ action: deep_link_return_url, method: "POST" }
       %input{ type: "hidden", name: "JWT", value: jwt }
 
-    %script{ nonce: request_content_security_policy_nonce }
-      :plain
-        window.addEventListener('DOMContentLoaded', function () {
-          document.getElementById('ltiDeepLinkReturn').submit();
-        });
+      %p Not redirected? Click continue to return to your LMS.
+      %button{ type: "submit" } Continue
