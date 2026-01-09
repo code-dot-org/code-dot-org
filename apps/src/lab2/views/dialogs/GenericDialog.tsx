@@ -1,16 +1,9 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
-import FocusTrap from 'focus-trap-react';
+import Modal from '@code-dot-org/component-library/modal';
 import React, {useMemo} from 'react';
 
-import {
-  useEnterKeyboardTrap,
-  useEscapeKeyboardTrap,
-} from '@cdo/apps/lab2/hooks';
+import {useEnterKeyboardTrap} from '@cdo/apps/lab2/hooks';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -20,15 +13,9 @@ export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
 export type dialogCallback = (args?: unknown) => void;
 
-type GenericDialogTitleProps =
-  | {
-      title?: never;
-      titleComponent?: React.ReactNode;
-    }
-  | {
-      title?: string;
-      titleComponent?: never;
-    };
+type GenericDialogTitleProps = {
+  title?: string;
+};
 
 export type GenericDialogBodyProps =
   | {
@@ -56,17 +43,19 @@ export type GenericDialogProps = GenericDialogTitleProps &
 import moduleStyles from './generic-dialog.module.scss';
 
 /**
- * Generic root dialog used in Lab2 labs.
- * Allows a title component or title message
- * a body component or message
- * a list of up to three buttons - confirm, cancel, neutral
- * each button takes up to four args - a callback (if not a default will be provided), a label,
- * a disabled flag, and a destructive flag. The confirm button is the only one that can be destructive,
- * and it will be styled as such (red) to provide extra visual warning when attempting to delete something.
- * An accept button is always added, with the default "OK" text if not provided.
- * dialogs maintain a context, which can provide data to any of the callbacks.
- * The title, message, and confirm button text can be customized.
- * If no confirm button text is provided, the default text is "OK" (translatable).
+ * Generic dialog component for Lab2 labs, built on the DSCO Modal component.
+ *
+ * Supports:
+ * - A title string
+ * - A message string or custom body component
+ * - Up to three buttons: confirm, cancel, and neutral
+ *
+ * Each button accepts: text, callback, disabled, and destructive flags.
+ * The confirm button defaults to "OK" and can be styled as destructive (red).
+ * The cancel button defaults to "Cancel" and appears as a secondary button.
+ * When all three buttons are present, cancel moves to the bottom content area.
+ *
+ * Dialogs use DialogControlContext to manage closing behavior.
  */
 
 export type GetButtonCallbackArgs = {
@@ -102,7 +91,6 @@ const useButtonCallback = ({
 const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   buttons,
   title,
-  titleComponent,
   message,
   bodyComponent,
   getButtonCallback = defaultGetButtonCallback,
@@ -135,71 +123,50 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
     getButtonCallback,
   });
 
-  useEscapeKeyboardTrap(cancelCallback);
   useEnterKeyboardTrap(confirmCallback);
 
-  const hasBodyComponent = !!bodyComponent;
-
   return (
-    <FocusTrap>
-      <div className={moduleStyles['genericDialog-' + theme]}>
-        {titleComponent ? (
-          titleComponent
-        ) : title ? (
-          <Heading3 className={moduleStyles.title}>{title}</Heading3>
-        ) : null}
-        <div
-          className={
-            hasBodyComponent
-              ? moduleStyles.bodyComponent
-              : moduleStyles.bodyText
-          }
-        >
-          {hasBodyComponent ? (
-            bodyComponent
-          ) : (
-            <BodyTwoText>{message}</BodyTwoText>
-          )}
-        </div>
-        <div className={moduleStyles.buttonContainer}>
-          <div className={moduleStyles.outerButtonContainer}>
-            {buttons?.cancel ? (
-              <Button
-                onClick={cancelCallback}
-                className={moduleStyles.cancel}
-                type="secondary"
-                disabled={buttons.cancel.disabled}
-                color={theme === 'Dark' ? 'white' : 'gray'}
-                text={buttons.cancel.text || commonI18n.cancel()}
-              />
-            ) : (
-              <div />
-            )}
-            <div className={moduleStyles.innerButtonContainer}>
-              {buttons?.neutral && (
-                <Button
-                  onClick={neutralCallback}
-                  type="secondary"
-                  disabled={buttons.neutral.disabled}
-                  color={
-                    buttons?.neutral?.destructive ? 'destructive' : 'white'
-                  }
-                  text={buttons.neutral.text}
-                />
-              )}
-              <Button
-                onClick={confirmCallback}
-                disabled={buttons?.confirm?.disabled}
-                type="primary"
-                color={buttons?.confirm?.destructive ? 'destructive' : 'purple'}
-                text={buttons?.confirm?.text || commonI18n.dialogOK()}
-                id="uitest-generic-dialog-ok"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </FocusTrap>
+    <Modal
+      title={title}
+      customContent={bodyComponent || message}
+      customBottomContent={
+        buttons?.neutral && buttons?.cancel ? (
+          <Button
+            onClick={cancelCallback}
+            type="secondary"
+            disabled={buttons.cancel.disabled}
+            color={theme === 'Dark' ? 'white' : 'gray'}
+            text={buttons.cancel.text || commonI18n.cancel()}
+          />
+        ) : undefined
+      }
+      onClose={buttons?.cancel ? cancelCallback : undefined}
+      className={moduleStyles.genericDialog}
+      primaryButtonProps={{
+        onClick: confirmCallback,
+        disabled: buttons?.confirm?.disabled,
+        color: buttons?.confirm?.destructive ? 'destructive' : 'purple',
+        text: buttons?.confirm?.text || commonI18n.dialogOK(),
+        id: 'uitest-generic-dialog-ok',
+      }}
+      secondaryButtonProps={
+        buttons?.neutral
+          ? {
+              onClick: neutralCallback,
+              disabled: buttons.neutral.disabled,
+              color: buttons.neutral.destructive ? 'destructive' : 'white',
+              text: buttons.neutral.text,
+            }
+          : buttons?.cancel
+          ? {
+              onClick: cancelCallback,
+              disabled: buttons.cancel.disabled,
+              color: theme === 'Dark' ? 'white' : 'gray',
+              text: buttons.cancel.text || commonI18n.cancel(),
+            }
+          : undefined
+      }
+    />
   );
 };
 

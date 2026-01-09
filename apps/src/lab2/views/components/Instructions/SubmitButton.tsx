@@ -41,7 +41,9 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   const scriptId = useAppSelector(
     state => state.progress.scriptId || undefined
   );
-  const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
+  const buttonText = hasSubmitted
+    ? commonI18n.unsubmit()
+    : commonI18n.submitWork();
 
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
