@@ -7,7 +7,6 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -180,13 +179,6 @@ export default class AssetManager extends React.Component {
     this.setState({
       statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
-    firehoseClient.putRecord({
-      study: 'project-data-integrity',
-      study_group: 'v4',
-      event: 'asset-upload-error',
-      project_id: this.props.projectId,
-      data_int: status,
-    });
   };
 
   onSelectRecord = () => {
@@ -198,19 +190,6 @@ export default class AssetManager extends React.Component {
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
-    firehoseClient.putRecord({
-      study: 'delete-asset',
-      study_group:
-        this.props.assetChosen && typeof this.props.assetChosen === 'function'
-          ? 'choose-assets'
-          : 'manage-assets',
-      event: 'confirm',
-      project_id: this.props.projectId,
-      data_json: JSON.stringify({
-        assetName: name,
-        elementId: this.props.elementId,
-      }),
-    });
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),

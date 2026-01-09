@@ -1,12 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:40:39.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A content creator is analyzing data about the number of views one of their videos received each day of the week for several weeks, but some of the data is missing!\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Video</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">fillMissingData()</code> method to replace the center element in the 2D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dailyViews</code> with the average of the element above, below, to the left, and to the right.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">VideoRunner</code> class,\r\n\r\n1. Create a 2D array to store the array returned from calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">fillMissingData()</code> method.\r\n\r\n2. Print the contents of the 2D array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">viewsToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Video</code> class.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing and modifying elements in a two-dimensional (2D) array.\r\n</div>",
+    "long_instructions": "A content creator is analyzing data about the number of views one of their videos received each day of the week for several weeks, but some of the data is missing!\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Video</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">fillMissingData()</code> method to replace the center element in the 2D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">dailyViews</code> with the average of the element above, below, to the left, and to the right.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">VideoRunner</code> class,\r\n\r\n1. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">fillMissingData()</code> method on the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Video</code> object to update its stored 2D array..\r\n\r\n2. Print the contents of the 2D array using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">viewsToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Video</code> class.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing and modifying elements in a two-dimensional (2D) array.\r\n</div>",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -33,9 +34,11 @@
       }
     },
     "name_suffix": "_oo2025",
-    "ai_tutor_available": "false"
+    "ai_tutor_available": "false",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:39.647+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L6c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L6c_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:39.647+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L6c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L6c_pilot-2025\"},{\"changed_at\":\"2026-01-08 18:56:18 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Javalab>

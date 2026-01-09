@@ -277,8 +277,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
   # POST /api/v1/sections/<id>/code_review_groups
   def set_code_review_groups
-    @section.reset_code_review_groups(params[:groups])
-    render json: {result: 'success'}
+    students_with_sharing_enabled = @section.reset_code_review_groups(params[:groups])
+    render json: {
+      result: 'success',
+      students_with_sharing_enabled: students_with_sharing_enabled
+    }
   # if the group data is invalid we will get a record invalid exception
   rescue ActiveRecord::RecordInvalid
     render json: {result: 'invalid groups'}, status: :bad_request
