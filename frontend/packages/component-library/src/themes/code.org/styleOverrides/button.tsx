@@ -485,13 +485,12 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         },
       };
 
-      // Handle custom colors via data attributes
-      // These will be styled based on variant × color combinations
-      // Full color × variant styling will be added in next phase
-
       return baseStyles;
     },
     // Color styling is now handled via variants above
+    // These are intentional placeholders. In MUI, styleOverrides.variantName can override variant styles,
+    // but since all variant × color styling is handled in the variants array, these are
+    // kept empty to prevent MUI from applying default variant styles that would conflict with our custom styling.
     contained: () => ({}),
     outlined: () => ({}),
     text: () => ({}),
