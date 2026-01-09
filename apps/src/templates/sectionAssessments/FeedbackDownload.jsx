@@ -51,7 +51,6 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
 class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
-    onClickDownload: PropTypes.func.isRequired,
     // provided by redux
     exportableFeedbackData: PropTypes.array.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -73,8 +72,7 @@ class FeedbackDownload extends Component {
   }
 
   render() {
-    const {sectionName, exportableFeedbackData, scriptName, onClickDownload} =
-      this.props;
+    const {sectionName, exportableFeedbackData, scriptName} = this.props;
 
     // These allow the CSVLink to be styled as a button
     let className = classNames(
@@ -94,7 +92,6 @@ class FeedbackDownload extends Component {
           })}
           data={exportableFeedbackData}
           headers={this.headers}
-          onClick={onClickDownload}
           style={styles.buttonContainer}
           className={className}
         >

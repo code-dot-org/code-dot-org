@@ -3,13 +3,11 @@ import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-jest.mock('@cdo/apps/metrics/firehose');
 jest.mock('@cdo/apps/metrics/AnalyticsReporter');
 jest.mock('@cdo/apps/util/copyToClipboard');
 
@@ -63,17 +61,6 @@ describe('JoinLinkCopyButton', () => {
 
     expect(copyToClipboard).toHaveBeenCalledWith(
       'https://studio.code.org/join/ABC123'
-    );
-    expect(firehoseClient.putRecord).toHaveBeenCalledWith(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'copy-section-code-join-link',
-        data_json: JSON.stringify({
-          sectionId: 123,
-        }),
-      },
-      {includeUserId: true}
     );
     expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
