@@ -600,7 +600,7 @@ Create `ButtonMui.tsx` that:
 
 ### Example 3: Icon-Only Button
 
-**Current:**
+**Current (DSCO Button component):**
 
 ```tsx
 <Button
