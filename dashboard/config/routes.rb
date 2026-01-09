@@ -754,7 +754,6 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resources :integrations, only: [:new, :create]
-        resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
           post 'dynamic_registration', action: :create_registration
