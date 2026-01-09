@@ -5,7 +5,6 @@ class LangfuseController < ApplicationController
 
   def add_dataset_item
     dataset_item = JSON.parse(request.body.read)
-    puts "LangfuseController#add_dataset_item called with dataset_item: #{dataset_item.inspect}"
     response = LangfuseHelper.add_dataset_item(dataset_item)
     return render(status: response[:status], json: response[:json])
   end
