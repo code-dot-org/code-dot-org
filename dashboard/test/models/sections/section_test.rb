@@ -905,6 +905,7 @@ class SectionTest < ActiveSupport::TestCase
       currentUnitTitle: '',
       linkToCurrentUnit: '',
       code: section.code,
+      hidden: false,
       login_type: "email",
       grades: nil,
       is_assigned_single_unit_course: false,

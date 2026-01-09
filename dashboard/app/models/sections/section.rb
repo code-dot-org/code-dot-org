@@ -611,6 +611,7 @@ class Section < ApplicationRecord
         currentUnitTitle: title_of_current_unit,
         linkToCurrentUnit: link_to_current_unit,
         code: code,
+        hidden: hidden,
         login_type: login_type,
         grades: grades,
         is_assigned_single_unit_course: unit_group&.single_unit_course?,
