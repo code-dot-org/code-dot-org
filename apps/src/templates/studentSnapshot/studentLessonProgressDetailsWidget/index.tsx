@@ -250,9 +250,11 @@ const StudentLessonProgressDetailsWidget: React.FC<
     numValidationLevelsUserCompleted;
 
   return (
-    <WidgetTemplate widgetName="Lesson Details" gridWidth={3} gridHeight={2}>
+    <WidgetTemplate widgetName="Lesson Details" gridWidth={3} gridHeight={1}>
       <div className={styles.lessonDetailsWidget}>
-        <div className={styles.lessonDetailsWidgetRow}>
+        <div
+          className={classNames(styles.lessonDetailsWidgetRow, styles.topRow)}
+        >
           <div className={styles.lessonDetail}>
             <FontAwesomeV6Icon iconName={'chart-line'} iconStyle={'regular'} />
             <div
@@ -360,7 +362,12 @@ const StudentLessonProgressDetailsWidget: React.FC<
             </div>
           </div>
         </div>
-        <div className={styles.lessonDetailsWidgetRow}>
+        <div
+          className={classNames(
+            styles.lessonDetailsWidgetRow,
+            styles.bottomRow
+          )}
+        >
           <div className={styles.lessonDetail}>
             <div className={styles.validationLevelFeedback}>
               {numUnpassedValidationLevels > 0 && (
