@@ -75,7 +75,9 @@ class StudentSnapshotsController < ApplicationController
 
     if level
       student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
-      render json: {studentCode: student_code_data[:student_code]}
+      student_code = format_code_to_multifile(student_code_data[:student_code]) if student_code_data[:student_code].present?
+
+      render json: {studentCode: student_code}
     else
       render json: {studentCode: nil}
     end
@@ -84,6 +86,35 @@ class StudentSnapshotsController < ApplicationController
   private def find_unit(unit_id)
     context = Queries::Courses.get_course_context(unit_id)
     context[:unit]
+  end
+
+  private def format_code_to_multifile(code_hash)
+    return nil unless code_hash.is_a?(Hash)
+    files = {}
+    folders = {
+      'root' => {
+        id: 'root',
+        name: 'root',
+        fileIds: []
+      }
+    }
+    code_hash.each_with_index do |(filename, contents), index|
+      file_id = "file_#{index}"
+      files[file_id] = {
+        id: file_id,
+        name: filename,
+        language: language,
+        contents: contents,
+        folderId: 'root',
+        active: index == 0 # Make first file active
+      }
+      folders['root'][:fileIds] << file_id
+    end
+    {
+      folders: folders,
+      files: files,
+      openFiles: files.keys.take(1) # Open the first file by default
+    }
   end
 
   private def build_lessons_data(unit)
