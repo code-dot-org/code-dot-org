@@ -349,7 +349,7 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson, context_unit_group|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties], Lesson do |lesson, context_unit_group|
       script = lesson.script
       unit_group = context_unit_group || script.original_unit_group
       can?(:read, script, unit_group)
