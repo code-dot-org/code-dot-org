@@ -4,8 +4,6 @@ class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
 
@@ -1143,7 +1141,9 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    # 8 queries from the request + 1 extra query triggered by the lazy transaction.
+    # @see ActiveSupport::Testing::TransactionalTestCase
+    assert_queries 9 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success

@@ -12,6 +12,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import StudentCodeWidget from './studentCodeWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
@@ -45,10 +46,24 @@ interface CFULevelsData {
   cfu_levels: CFULevel[];
 }
 
+interface StudentCodeData {
+  studentCode: Record<string, string>;
+}
+
 const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
   return HttpClient.fetchJson<CFULevelsData>(
     `/student_snapshots/cfu_levels/${lessonId}`
   ).then(response => response?.value?.cfu_levels || []);
+};
+
+const getStudentCode = (
+  unitId: number,
+  lessonId: number,
+  studentId: number
+): Promise<Record<string, string>> => {
+  return HttpClient.fetchJson<StudentCodeData>(
+    `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
+  ).then(response => response?.value?.studentCode || {});
 };
 
 const StudentSnapshot: React.FC = () => {
@@ -62,6 +77,9 @@ const StudentSnapshot: React.FC = () => {
     useState<boolean>(false);
   const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
   const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
+  const [isStudentCodeLoading, setIsStudentCodeLoading] =
+    useState<boolean>(false);
+  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -128,6 +146,28 @@ const StudentSnapshot: React.FC = () => {
   // TODO: Use this in CFU widget
   console.log(cfuLevels, isCfuLevelsLoading);
 
+  // Fetch Student Code when student or lesson changes
+  React.useEffect(() => {
+    if (selectedUnitId && selectedLessonId && selectedStudentId) {
+      setIsStudentCodeLoading(true);
+      getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
+        .then(code => {
+          setStudentCode(code);
+        })
+        .catch(error => {
+          console.error('Error fetching student code:', error);
+          setStudentCode({});
+        })
+        .finally(() => {
+          setIsStudentCodeLoading(false);
+        });
+    } else {
+      setStudentCode({});
+    }
+  }, [selectedUnitId, selectedLessonId, selectedStudentId]);
+
+  console.log(isStudentCodeLoading);
+
   // TODO: replace with actual values from URL/Redux later
   const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
   const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
@@ -167,9 +207,7 @@ const StudentSnapshot: React.FC = () => {
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>
         </WidgetTemplate>
-        <WidgetTemplate widgetName="Big Widget" gridWidth={2} gridHeight={2}>
-          <div>big content</div>
-        </WidgetTemplate>
+        <StudentCodeWidget studentCode={studentCode} />
         <WidgetTemplate
           widgetName="Small Widget 1"
           gridWidth={1}

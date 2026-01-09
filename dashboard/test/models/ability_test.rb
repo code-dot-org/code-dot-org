@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class AbilityTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
   setup_all do
     @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
       CourseOffering.add_course_offering(unit_group)

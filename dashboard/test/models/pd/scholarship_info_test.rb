@@ -5,8 +5,6 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
   include Pd::WorkshopConstants
   include Pd::Application::ActiveApplicationModels
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @user = create(:teacher)
   end

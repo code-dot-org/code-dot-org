@@ -325,8 +325,9 @@ exports.appendNewFunctions = function (blocksXml, functionsXml) {
     const alreadyPresent =
       startBlocksDocument.evaluate(
         // Ignore namespaces. Find blocks of type e.g. behavior_definition
-        // Shared behavior name will either be in the mutation (Google Blockly)
-        // or the name field/title (CDO Blockly)
+        // Shared function/behavior identifier may appear in different places depending on
+        // serialized XML version: either on a <mutation> attribute (e.g. behaviorId)
+        // or on the NAME field/title (id attribute or text content, legacy sources).
         `//*[local-name()="block" and @type="${type}"]/*` +
           `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
           `self::*[(local-name()="title" or local-name()="field") and (@id="${name}" or .="${name}")]
