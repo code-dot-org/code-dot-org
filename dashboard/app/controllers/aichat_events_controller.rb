@@ -24,7 +24,8 @@ class AichatEventsController < ApplicationController
     end
 
     context = params[:aichatContext]
-    event = params[:newChatEvent]
+    # Hidden context can be large, containing student code and console output
+    event = params.require(:newChatEvent).except(:hiddenContext).permit!.to_h
 
     project_id = nil
     if context[:channelId]
