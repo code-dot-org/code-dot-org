@@ -1,6 +1,222 @@
+# Changes to Node Modules Files (gitignored)
+
+This section summarizes all changes made to files in `apps/node_modules/@code-dot-org/maze/src/` that are gitignored but contain important modifications to make animations work correctly with method 2 animation disable.
+
+## File Modified
+
+`apps/node_modules/@code-dot-org/maze/src/animationsController.js`
+
+---
+
+## animationsController.js
+
+### 1. Disabled Turn Animations (`scheduleTurn` method)
+
+**Location:** Line ~452-460
+
+**Changes:**
+- **OLD:** Used `tiles.directionToFrame(endDirection)` which multiplies direction by 4, causing incorrect frame selection for 4-column sprite sheets
+- **NEW:** Directly uses direction (0=N, 1=E, 2=S, 3=W) as frame number
+- Removed all `clip_rect` manipulation and animation loops
+- Instantly updates pegman display without animation
+
+**Code:**
+```javascript
+scheduleTurn(endDirection, pegmanId) {
+  // DISABLED: Turn animations completely - just update direction without clip_rect manipulation
+  // Use direction directly as frame (0=N, 1=E, 2=S, 3=W) for 4-column sprite sheets
+  var x = this.maze.getPegmanX(pegmanId);
+  var y = this.maze.getPegmanY(pegmanId);
+  // Use direction directly as column index (0, 1, 2, 3) instead of directionToFrame
+  var frame = tiles.constrainDirection4(endDirection);
+  this.displayPegman(x, y, frame, pegmanId);
+}
+```
+
+### 2. Disabled Turn Animations (`simpleTurn` method)
+
+**Location:** Line ~469-490
+
+**Changes:**
+- **OLD:** Had animation loop with multiple frames and timeouts
+- **NEW:** Instant update without any animation frames
+- Uses direction (0-3) directly as frame number
+- Commented out original animation code
+
+**Code:**
+```javascript
+simpleTurn(endDirection, pegmanId) {
+  // DISABLED: Turn animations for bird/scrat - instant update (0 seconds)
+  // Use direction directly as frame (0=N, 1=E, 2=S, 3=W) for 4-column sprite sheets
+  var frame = tiles.constrainDirection4(endDirection);
+  this.displayPegman(
+    this.maze.getPegmanX(pegmanId),
+    this.maze.getPegmanY(pegmanId),
+    frame,
+    pegmanId);
+  // COMMENTED OUT: Original animation code with frames and timeouts
+}
+```
+
+### 3. Global Animation Disabling (Idle Animation)
+
+**Location:** Line ~32-56
+
+**Changes:**
+- Force `numFrames = 1` to prevent animation loop
+- Commented out `setInterval` that was cycling through idle animation frames
+
+**Code:**
+```javascript
+// GLOBAL ANIMATION DISABLE: Force numFrames to 1 to prevent animation loop
+var numFrames = 1; // this.maze.skin.idlePegmanRow;
+
+// GLOBAL ANIMATION DISABLE: Commented out setInterval to prevent animation loop
+// setInterval(() => { ... }, timePerFrame);
+```
+
+### 4. Global Animation Disabling (Move Animation)
+
+**Location:** Line ~336-355, 374-414
+
+**Changes:**
+- Force `numFrames = 1` in `scheduleSheetedMovement_`
+- Force `numFrames = 1` in `scheduleMove`
+- Added multiple `setTimeout` calls to aggressively ensure `pegmanIcon` stays visible after movement
+
+**Code:**
+```javascript
+// In scheduleSheetedMovement_:
+numFrames = 1; // GLOBAL ANIMATION DISABLE: Force numFrames to 1
+
+// In scheduleMove:
+numFrames = 1; // GLOBAL ANIMATION DISABLE: Force numFrames to 1
+
+// After movement, multiple timeouts to ensure pegmanIcon visibility:
+timeoutList.setTimeout(() => {
+  pegmanIcon.setAttribute('visibility', 'visible');
+  pegmanIcon.setAttribute('opacity', '1');
+}, 50);
+// ... additional timeouts at 100ms, 200ms, 500ms, 1000ms
+```
+
+### 5. Global Animation Disabling (Celebrate Animation)
+
+**Location:** Line ~700-757
+
+**Changes:**
+- Force `numFrames = 1` for celebrate animation
+- Added code to show pegman icon after celebration completes
+- Multiple timeouts to ensure pegman icon stays visible
+
+**Code:**
+```javascript
+// GLOBAL ANIMATION DISABLE: Force numFrames to 1
+const numFrames = 1; // this.maze.skin.celebratePegmanRow;
+
+// After celebrate animation:
+timeoutList.setTimeout(() => {
+  // Hide celebrate and idle icons
+  // Show pegman icon with multiple visibility checks
+  [50, 100, 200, 500, 1000].forEach(delay => {
+    timeoutList.setTimeout(() => {
+      pegmanIcon.setAttribute('visibility', 'visible');
+      pegmanIcon.setAttribute('opacity', '1');
+    }, delay);
+  });
+}, timePerFrame * numFrames);
+```
+
+### 6. Global Animation Disabling (Hitting Wall Animation)
+
+**Location:** Line ~532-582
+
+**Changes:**
+- Force `numFrames = 1` for wall hit animation
+
+**Code:**
+```javascript
+// GLOBAL ANIMATION DISABLE: Force numFrames to 1
+var numFrames = 1; // this.maze.skin.hittingWallAnimationFrameNumber || 0;
+```
+
+### 7. Single-Column Sprite Support
+
+**Location:** Line ~234-249, 260-273, 311-325
+
+**Changes:**
+- Added logic to handle single-column sprites differently from multi-column sprite sheets
+- Single-column sprites don't need clip paths
+- Single-column sprites are centered, not offset by direction
+
+**Code:**
+```javascript
+if (options.numColPegman === 1) {
+  // Single column: use actual sprite dimensions
+  imgWidth = this.maze.PEGMAN_WIDTH;
+  imgHeight = this.maze.PEGMAN_HEIGHT;
+} else {
+  // Multi-column sprite sheet: calculate from columns/rows
+  imgWidth = this.maze.PEGMAN_WIDTH * (options.numColPegman || 4);
+  imgHeight = this.maze.PEGMAN_HEIGHT * (options.numRowPegman || 1);
+}
+
+// Only apply clip path for multi-column sprites
+if (options.numColPegman !== 1) {
+  img.setAttribute('clip-path', 'url(#' + pegmanClipId + ')');
+}
+```
+
+### 8. Fix Scrat Initial Display in Reset
+
+**Location:** Line ~121-196
+
+**Changes:**
+- Ensured `pegmanIcon` is visible for scrat even if `idlePegmanAnimation` is set
+- Added explicit visibility and opacity settings
+
+**Code:**
+```javascript
+// Reset pegman's visibility if there is only one pegman
+const pegmanIcon = this.getPegmanIcon();
+if (!this.maze.subtype.allowMultiplePegmen()) {
+  pegmanIcon.setAttribute('opacity', 1);
+}
+
+if (this.maze.skin.idlePegmanAnimation) {
+  pegmanIcon.setAttribute('visibility', 'hidden');
+  var idlePegmanIcon = document.getElementById(
+    utils.getPegmanElementId(pegmanElements.IDLE)
+  );
+  idlePegmanIcon.setAttribute('visibility', 'visible');
+} else if (!this.maze.subtype.allowMultiplePegmen()) {
+  pegmanIcon.setAttribute('visibility', 'visible');
+}
+```
+
+---
+
+## Summary of Key Changes
+
+1. **Turn Animations Disabled:** All turn animations now instantly update without visual animation loops
+2. **Frame Mapping Fixed:** Changed from `tiles.directionToFrame(direction)` (which multiplies by 4) to using direction directly (0-3) for 4-column sprite sheets
+3. **Animation Frames Forced to 1:** All sprite sheet animations now show only the first frame
+4. **Pegman Visibility:** Added aggressive timeouts to ensure pegman icon stays visible at end of level
+5. **Single-Column Sprite Support:** Added logic to properly handle single-column sprites vs multi-column sprite sheets
+
+---
+
+## How to Apply These Changes
+
+Since these files are in `node_modules` and gitignored:
+
+1. Look for the separately provided file `animationsController_NEW.js`
+2. Or, after installing/updating dependencies, manually apply the changes documented above
+
+
 # Code.org Animation Disable Findings
 
-This document summarizes the investigation and implementation work done to disable character animations in the Code.org Maze and Studio engines. It explains how animations work internally, evaluates two approaches, and documents the final recommended solution.
+This section summarizes the investigation and implementation work done to disable character animations in the Code.org Maze and Studio engines. It explains how animations work internally, evaluates two approaches, and documents the final recommended solution.
 
 ---
 
