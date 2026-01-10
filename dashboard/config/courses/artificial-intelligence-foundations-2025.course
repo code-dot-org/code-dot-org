@@ -31,6 +31,16 @@
         "visibility": "Teacher-only",
         "dismissible": true,
         "buttonText": "Let's Go!"
+      },
+      {
+        "key": "3dca719a-c09a-4274-89af-687712bf4176",
+        "notice": "New Version Available!",
+        "details": "A new version of this curriculum is now available! Select Spring 2026 from the dropdown below to access the latest updates.",
+        "link": "https://studio.code.org/courses/artificial-intelligence-foundations-2026",
+        "type": "bullhorn_yellow",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Use the 2026 Version Now!"
       }
     ],
     "family_name": "artificial-intelligence-foundations",

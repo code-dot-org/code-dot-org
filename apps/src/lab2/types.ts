@@ -14,7 +14,7 @@ import {
   BinaryFileData,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
-import type * as GoogleBlockly from 'blockly/core';
+import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
@@ -257,10 +257,13 @@ export interface LevelProperties {
   showRubric?: boolean;
   customHelperLibrary?: string;
   validationCode?: string;
+  hideVersionHistory?: boolean;
 }
 
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
+
 export interface BlocklyLevelProperties extends LevelProperties {
-  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   sharedBlocks?: BlockDefinition[];
 }
 

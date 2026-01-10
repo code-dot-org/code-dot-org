@@ -10,9 +10,7 @@ import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
-import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
-import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import {EXT_COMPONENT_OPEN_FAB_EVENT} from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -33,10 +31,13 @@ import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
-import {AIF_UNIT_IDS} from './LessonSummaryConstants';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
+
+interface AifInfo {
+  aif: boolean;
+}
 
 interface LessonMaterialsData {
   unitId: number;
@@ -67,6 +68,13 @@ const lessonMaterialsApiCall = (unitId: number) =>
     `/dashboardapi/lesson_materials/${unitId}`
   ).then(response => response?.value);
 
+const handleLessonSummaryAskAITAClick = () => {
+  const openAITAEvent = new Event(EXT_COMPONENT_OPEN_FAB_EVENT, {
+    bubbles: true,
+  });
+  document.dispatchEvent(openAITAEvent);
+};
+
 interface LessonMaterialsContainerProps {
   showNoCurriculumAssigned: boolean;
 }
@@ -82,6 +90,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
+  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -131,9 +140,21 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   // This checks to see if the AI lesson summaries experiment or DCDO key are set
   // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  const canShowLessonSummaries =
-    (showAITALessonSummary || AIF_UNIT_IDS.includes(unitToLoad)) &&
-    aiTALessonSummaryInfo;
+  React.useEffect(() => {
+    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
+      if (!showAITALessonSummary) {
+        HttpClient.fetchJson<AifInfo>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
+        ).then(response => {
+          setCanShowLessonSummaries(response.value.aif);
+        });
+      } else {
+        setCanShowLessonSummaries(showAITALessonSummary);
+      }
+    } else {
+      setCanShowLessonSummaries(false);
+    }
+  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -195,6 +216,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
+  const generatePodcastUrl = `/ai_lesson_summary_podcasts/generate_podcast?lesson_id=${selectedLesson?.id}`;
+
   React.useEffect(() => {
     if (selectedLesson) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
@@ -214,16 +237,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         });
     }
   }, [userId, selectedLesson]);
-
-  const handleLessonSummaryAskAITAClick = () => {
-    dispatch(
-      fetchThreadMessages({
-        thread: 0,
-        threadType: THREAD_TYPES.lessonSummaryHelp,
-      })
-    );
-    dispatch(setChatIsOpen(true));
-  };
 
   const renderHeader = () => {
     return (
@@ -325,6 +338,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         <div className={styles.lessonSummaryContainer}>
           {experiments.isEnabled('ai-lesson-podcasts') && (
             <div className={styles.lessonSummarySection}>
+              {/* The following link is temporary for testing and will be removed before official release */}
+              <a href={generatePodcastUrl}>
+                Generate Podcast (this may take a minute...)
+              </a>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />

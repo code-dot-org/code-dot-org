@@ -72,6 +72,7 @@
     "start_blocks": "//Create a rainbow using the labels on the app screen\r\n",
     "encrypted_examples": "p7IcZ7MaP/nDxr8X9XCQWebNEGOStavdG1DGXkjZ68jNQ2vLKhrWdtZM2AvL\nUxjYbc7Hfts0BYCZF5F+QKrEAg==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -4,7 +4,9 @@ import React, {useEffect, useMemo, useRef} from 'react';
 
 import {
   getCurrentLevel,
-  nextLevelId,
+  getLessonCount,
+  getNextLevel,
+  getParentLevel,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -37,6 +39,13 @@ interface NavigationAreaProps {
   styleAsBubble?: boolean;
   /** Optional on continue/finish callback. */
   onContinue?: () => void;
+  /**
+   * How to render the text of this navigation area. By default we render it
+   * with the 'full' text. So, 'Continue to Level 3', etc.
+   *
+   * 'simple': Renders with 'simpler' text (Continue, Finish, etc)
+   */
+  textVariant?: 'simple';
 }
 
 /**
@@ -55,6 +64,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   overrideTheme,
   styleAsBubble = false,
   onContinue,
+  textVariant,
 }) => {
   const {
     id,
@@ -77,11 +87,45 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   const validationSatisfied = useAppSelector(
     state => state.lab.validationState?.satisfied
   );
+  // Determine what level is next in the progression
   const hasNextLevel = useAppSelector(
-    state => nextLevelId(state) !== undefined
+    state => getNextLevel(state)?.id !== undefined
   );
+
+  // Construct the button text.
+  // For when we would go to another level, say 'Continue to Level {x}'
+  // For when we would actually just go back to the same level (parent for a sublevel) just say 'Continue'
+  // For when we are already at the end of a lesson, say 'Finish Lesson'
+  const text = useAppSelector(state => {
+    const currentLevelNumber =
+      getParentLevel(state)?.levelNumber || getCurrentLevel(state)?.levelNumber;
+    const nextLevelNumber = getNextLevel(state)?.levelNumber;
+
+    return hasNextLevel
+      ? // Determine if the next level is not the same as the current level so
+        // as to craft the 'Continue to Level X' button text
+        // Otherise we're going to the parent perhaps, so we just say 'Continue'
+        currentLevelNumber !== nextLevelNumber
+        ? commonI18n.continueToLevel({level: nextLevelNumber})
+        : commonI18n.continue()
+      : lessonCount > 1
+      ? // If there's no level after this one, print 'Finish Lesson' or 'Finish'
+        // depending on if there is another lesson in the unit
+        commonI18n.finishLesson()
+      : commonI18n.finish();
+  });
+
+  // This supplies "simpler" text for the 'simple' text variant of the buttons
+  const simpleText = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
+
+  // Determine lesson count. We don't want to say 'Finish Lesson' if the unit
+  // only has one lesson. It's just 'Finish'!
+  const lessonCount = useAppSelector(state => getLessonCount(state));
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
   const showSecondaryFinishButton =
     useSecondaryFinishButton ||
     (queryParams('use-secondary-finish-button') === 'true' && !hasNextLevel);
@@ -159,7 +203,12 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     if (submittable) {
       return [false, undefined] as const;
     }
-    let action: 'Validate' | 'SubmitPrediction' | 'Run' | undefined;
+    let action:
+      | 'Validate'
+      | 'SubmitPrediction'
+      | 'Run'
+      | 'AiTutorVersion'
+      | undefined;
     let canContinue: boolean = true;
     if (isPredictLevel) {
       action = 'SubmitPrediction';
@@ -167,6 +216,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     } else if (hasValidationConditions) {
       action = 'Validate';
       canContinue = validationSatisfied;
+    } else if (isAiTutorVersion) {
+      action = 'AiTutorVersion';
+      canContinue = false;
     } else if (requireRun) {
       action = 'Run';
       canContinue = hasRun;
@@ -184,6 +236,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     validationSatisfied,
     requireRun,
     hasRun,
+    isAiTutorVersion,
   ]);
 
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
@@ -237,7 +290,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               type={type}
               color={color}
               iconRight={iconRight}
-              text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
+              text={textVariant === 'simple' ? simpleText : text}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}

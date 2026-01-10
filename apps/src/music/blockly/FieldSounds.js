@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -17,7 +17,7 @@ const FIELD_PADDING = 2;
  * A custom field that renders the sample previewing and choosing UI, used in
  * various "play_sound"-related blocks. The UI is rendered by {@link SoundsPanel}.
  */
-class FieldSounds extends GoogleBlockly.Field {
+class FieldSounds extends BlocklyCore.Field {
   constructor(options) {
     const currentValue =
       options.currentValue || MusicLibrary.getInstance()?.getDefaultSound();
@@ -52,7 +52,7 @@ class FieldSounds extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -206,7 +206,7 @@ class FieldSounds extends GoogleBlockly.Field {
     const constants = this.getConstants();
 
     // Create the text element so we can measure it.
-    this.textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+    this.textElement = BlocklyCore.utils.dom.createSvgElement('text', {
       fill: color.neutral_light,
       x: 27,
       y: 16,
@@ -229,7 +229,7 @@ class FieldSounds extends GoogleBlockly.Field {
     const fontSize = 9.75;
 
     // Measure the rendered text.
-    const textWidth = GoogleBlockly.utils.dom.getFastTextWidth(
+    const textWidth = BlocklyCore.utils.dom.getFastTextWidth(
       this.textElement,
       fontSize,
       constants.FIELD_TEXT_FONTWEIGHT,
@@ -242,7 +242,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Create the background rectangle and attach it to the background
     // parent.
-    this.rect = GoogleBlockly.utils.dom.createSvgElement(
+    this.rect = BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark90,
@@ -259,7 +259,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
     // Add an icon for the sound type.
     if (soundType) {
-      iconElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+      iconElement = BlocklyCore.utils.dom.createSvgElement('text', {
         fill: color.neutral_light,
         x: 5 + SoundStyle[soundType].marginLeft,
         y: 16,

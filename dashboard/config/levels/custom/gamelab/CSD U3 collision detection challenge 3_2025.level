@@ -141,6 +141,7 @@
     "validation_enabled": "false",
     "start_blocks": "var emoji = createSprite(200, 200);\r\nemoji.setAnimation(\"sad_face\");\r\nemoji.scale = 0.25;\r\nvar donut = createSprite(30, 50);\r\ndonut.setAnimation(\"donut\");\r\ndonut.scale = 0.15;\r\n\r\n\r\nfunction draw() {\r\n  background(\"lightblue\");\r\n\r\n  //1)Program the emoji to smile if it's touching the donut, otherwise the emoji should be sad.\r\n\r\n\r\n\r\n  //Emoji sprite movement\r\n  if(keyDown(\"up\")) {\r\n    emoji.y = emoji.y - 5;\r\n  }\r\n  if(keyDown(\"down\")) {\r\n    emoji.y = emoji.y + 5;\r\n  }\r\n  if(keyDown(\"left\")) {\r\n    emoji.x = emoji.x - 5;\r\n  }\r\n  if(keyDown(\"right\")) {\r\n    emoji.x = emoji.x + 5;\r\n  }\r\n\r\n  //Draw sprites\r\n  drawSprites();\r\n}",
     "video_key": "csd_gamelab_if_else",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

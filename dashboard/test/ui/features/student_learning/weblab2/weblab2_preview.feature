@@ -5,6 +5,9 @@ Feature: Web Lab 2 Preview
 @no_safari
 @no_mobile
 
+# The preview doesn't load on UI tests run via localhost or drone, so this test only runs on real environments.
+# weblab2_general covers the rest of the page loading behavior.
+@no_ci
 Scenario: Web Lab 2 Preview loads
   Given I create a student named "Penelope"
   When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/51/levels/11"

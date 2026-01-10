@@ -210,12 +210,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'rate-limit' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'rate-limit' &&
+        data['data_json']['agent'].nil?
     end
 
     # Run the job (and track attempts)
@@ -260,12 +260,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'timeout-error' &&
-        JSON.parse(data[:data_json])['agent'].nil? &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'timeout-error' &&
+        data['data_json']['agent'].nil?
     end
 
     # Run the job (and track attempts)
@@ -313,12 +313,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'service-unavailable' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'service-unavailable' &&
+        data['data_json']['agent'] == 'openai'
     end
 
     # Run the job (and track attempts)
@@ -366,12 +366,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       )
     )
 
-    # ensure firehose event is logged
-    FirehoseClient.instance.expects(:put_record).with do |stream, data|
-      data[:study] == AiRubricMetrics::AI_RUBRICS_FIREHOSE_STUDY &&
-        data[:event] == 'gateway-timeout' &&
-        JSON.parse(data[:data_json])['agent'] == 'openai' &&
-        stream == :analysis
+    # ensure cloudwatch event is logged
+    CDO.log.expects(:info).with do |data|
+      data = JSON.parse(data)
+      data['study'] == AiRubricMetrics::AI_RUBRICS_STUDY &&
+        data['event'] == 'gateway-timeout' &&
+        data['data_json']['agent'] == 'openai'
     end
 
     # Run the job (and track attempts)

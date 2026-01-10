@@ -61,6 +61,7 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "video_key": "csd_app_lab_events",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

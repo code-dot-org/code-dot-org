@@ -7,28 +7,21 @@ module ProjectsTestUtils
   # @param [User] owner - may be nil for anonymous channel
   def with_channel_for(owner)
     with_storage_id_for owner do |storage_id|
-      encrypted_channel_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
-      _, project_id = storage_decrypt_channel_id encrypted_channel_id
-      yield project_id, storage_id
-    ensure
-      projects_table.where(id: project_id).delete if project_id
+      projects_table.db.transaction(joinable: false, rollback: :always) do
+        encrypted_channel_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
+        _, project_id = storage_decrypt_channel_id encrypted_channel_id
+        yield project_id, storage_id
+      end
     end
   end
 
   # @param [User] user - may be nil for anonymous storage id
   def with_storage_id_for(user)
-    owns_storage_id = false
     user_id = user&.id
 
-    storage_id = storage_id_for_user_id(user_id)
-    unless storage_id
-      storage_id = create_storage_id_for_user(user_id)
-      owns_storage_id = true
+    user_storage_ids_table.db.transaction(joinable: false, rollback: :always) do
+      yield storage_id_for_user_id(user_id) || create_storage_id_for_user(user_id)
     end
-
-    yield storage_id
-  ensure
-    delete_storage_id_for_user(user_id) if owns_storage_id
   end
 
   def with_anonymous_channel(&block)

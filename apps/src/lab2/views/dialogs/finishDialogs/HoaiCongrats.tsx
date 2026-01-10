@@ -13,7 +13,7 @@ import {CopyToClipboardButton} from '../CopyToClipboardButton';
 import styles from './hoai-congrats.module.scss';
 
 const key = 'hoai2025-share-enabled';
-const shareEnabled = DCDO.get(key, false) || queryParams(key) === 'true';
+const shareEnabled = DCDO.get(key, true) || queryParams(key) === 'true';
 
 interface Props {
   handleClose: () => void;

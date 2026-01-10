@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class AiLessonSummariesControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
     @student = create(:student)
@@ -31,7 +29,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
   end
 
   test 'unauthenticated user cannot access perform_ai_lesson_summary_by_lesson' do
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id, unit_id: @unit.id}, format: :json
     assert_response :unauthorized
   end
 
@@ -129,7 +127,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # Mock the job to verify it gets called with correct parameters
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id]
+      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -144,7 +143,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id]
+      lesson_ids: [@lesson_with_plan.id, @lesson_with_plan_2.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -163,7 +163,8 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: []
+      lesson_ids: [],
+      unit_id: unit_without_plans.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
@@ -190,12 +191,13 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
 
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id, unit_id: @unit.id}, format: :json
 
     assert_response :success
   end
@@ -206,7 +208,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # Should not call perform_later when lesson has no lesson plan
     AiLessonSummariesJob.expects(:perform_later).never
 
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_without_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_without_plan.id, unit_id: @unit.id}, format: :json
 
     assert_response :success
   end
@@ -215,7 +217,7 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     assert_raises(ActiveRecord::RecordNotFound) do
-      post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: 999999}, format: :json
+      post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: 999999, unit_id: @unit.id}, format: :json
     end
   end
 
@@ -224,12 +226,13 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
 
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
 
-    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id}, format: :json
+    post :perform_ai_lesson_summary_by_lesson, params: {lesson_id: @lesson_with_plan.id, unit_id: @unit.id}, format: :json
   end
 
   # *****
@@ -294,14 +297,16 @@ class AiLessonSummariesControllerTest < ActionController::TestCase
     # the job should be enqueued with current_user.id
     expected_request = {
       user_id: @teacher.id,
-      lesson_ids: [@lesson_with_plan.id]
+      lesson_ids: [@lesson_with_plan.id],
+      unit_id: @unit.id
     }
 
     AiLessonSummariesJob.expects(:perform_later).with(request: expected_request)
 
     post :perform_ai_lesson_summary_by_lesson, params: {
       lesson_id: @lesson_with_plan.id,
-      user_id: @student.id  # This should be ignored
+      user_id: @student.id,  # This should be ignored
+      unit_id: @unit.id
     }, format: :json
   end
 

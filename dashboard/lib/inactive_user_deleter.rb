@@ -38,7 +38,7 @@ class InactiveUserDeleter
     @inactive_since = inactive_since || INACTIVE_USER_TTL.ago
     raise ArgumentError.new('inactive_since must be Time') unless @inactive_since.is_a? Time
 
-    # Maximum number of accounts to delete in a single run.
+    # Maximum number of accounts to delete per run.
     # This is a safety limit to prevent accidental deletion of too many accounts.
     @limit = limit || ACCOUNT_DELETION_LIMIT
     raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
@@ -51,18 +51,14 @@ class InactiveUserDeleter
 
   def call
     reset_metrics
-
-    total_size = inactive_users.size
-    if total_size > limit
-      raise SafetyConstraintViolation, "Too many accounts to delete: #{total_size} exceeds limit of #{limit}"
-    end
-
+    log_message("Starting InactiveUserDeleter#{dry_run? ? ' (dry-run)' : ''} for users inactive since #{inactive_since}, up to #{limit} accounts.")
     # Process individual batches in a loop to avoid issues with find_each, which imposes
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
     loop do
-      account_batch = inactive_users.limit(BATCH_SIZE)
+      account_batch = inactive_users
       account_batch.each do |user|
+        break if num_accounts_deleted >= limit
         delete_user(user)
         self.num_accounts_deleted += 1
       rescue StandardError => exception
@@ -72,7 +68,7 @@ class InactiveUserDeleter
       ensure
         processed_user_ids << user.id
       end
-      break if account_batch.size < BATCH_SIZE
+      break if account_batch.size < BATCH_SIZE || num_accounts_deleted >= limit
     end
 
     if dry_run?
@@ -88,7 +84,10 @@ class InactiveUserDeleter
 
   def inactive_users
     ActiveRecord::Base.connected_to(role: :reporting) do
-      Queries::User::Inactive.call(inactive_since: inactive_since).where.not(id: processed_user_ids)
+      Queries::User::Inactive.
+      call(inactive_since: inactive_since).
+      where.not(id: processed_user_ids).
+      limit(BATCH_SIZE)
     end
   end
 

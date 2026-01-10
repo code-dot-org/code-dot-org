@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nThe `Painter` is supposed to move and paint while it still has paint, but something isn't working. Help fix the code so it runs correctly.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/fde9632335bf10f4c48f2f65a0c4758c-image-1744861268117.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nIn Python, all the code you want to repeat must be indented under the `while` statement. If it's not indented, it won't run as part of the loop!",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

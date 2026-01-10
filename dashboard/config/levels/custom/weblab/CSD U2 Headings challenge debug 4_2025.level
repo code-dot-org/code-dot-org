@@ -26,7 +26,8 @@
     "map_reference": "/courses/csd-2022/guides/debugging-html",
     "name_suffix": "_2025",
     "validation_enabled": "false",
-    "video_key": "csd_debugging"
+    "video_key": "csd_debugging",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

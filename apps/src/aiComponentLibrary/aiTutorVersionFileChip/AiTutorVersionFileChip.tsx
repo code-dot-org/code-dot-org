@@ -1,10 +1,14 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import {getFolderPath} from '@codebridge/utils';
 import classNames from 'classnames';
 import React from 'react';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
 
@@ -46,7 +50,28 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
     const filePath =
       folderPath === '' ? file.name : folderPath + '/' + file.name;
     dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+    sendLab2AnalyticsEvent(
+      EVENTS.AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED,
+      {
+        fileName: file.name,
+        fileType: file.language,
+        aiTutorVersionFileUpdated: isUpdatedFile ? 'true' : 'false',
+        aiTutorVersionFileCreated: isNewFile ? 'true' : 'false',
+      }
+    );
   };
+
+  const statusText = isNewFile
+    ? 'New file created by AI Tutor'
+    : 'File updated by AI Tutor';
+  const acceptanceText = !isInReview
+    ? isAccepted
+      ? ', accepted'
+      : ', rejected'
+    : '';
+  const accessibleLabel = `${statusText}: ${file.name}${acceptanceText}`;
+
+  const hasPreviewButton = isHtmlFile && isInReview;
 
   return (
     <div
@@ -55,38 +80,57 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
         [moduleStyles.updatedFile]: isUpdatedFile,
       })}
     >
-      <div className={moduleStyles.statusIndicator}>
-        <FontAwesomeV6Icon
-          iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
-          iconStyle="solid"
-        />
+      <div
+        className={moduleStyles.fileInfo}
+        role="status"
+        aria-label={accessibleLabel}
+      >
+        <div className={moduleStyles.statusIndicator}>
+          <FontAwesomeV6Icon
+            iconName={isNewFile ? 'plus-circle' : 'pen-circle'}
+            iconStyle="solid"
+          />
+        </div>
+        <BodyThreeText className={moduleStyles.fileName} noMargin>
+          {file.name}
+        </BodyThreeText>
+        {!isInReview && isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="check"
+            iconStyle="solid"
+            className={moduleStyles.acceptedIcon}
+          />
+        )}
+        {!isInReview && !isAccepted && (
+          <FontAwesomeV6Icon
+            iconName="xmark"
+            iconStyle="solid"
+            className={moduleStyles.rejectedIcon}
+          />
+        )}
       </div>
-      <span className={moduleStyles.fileName}>{file.name}</span>
-      {isHtmlFile && isInReview && (
-        <Button
-          onClick={handlePreviewClick}
-          aria-label={`Preview ${file.name}`}
-          size="xs"
-          type="tertiary"
-          color="gray"
-          isIconOnly={true}
-          icon={{iconName: 'eye', iconStyle: 'solid'}}
-          className={moduleStyles.previewButton}
-        />
-      )}
-      {!isInReview && isAccepted && (
-        <FontAwesomeV6Icon
-          iconName="check"
-          iconStyle="solid"
-          className={moduleStyles.acceptedIcon}
-        />
-      )}
-      {!isInReview && !isAccepted && (
-        <FontAwesomeV6Icon
-          iconName="xmark"
-          iconStyle="solid"
-          className={moduleStyles.rejectedIcon}
-        />
+      {/* Preview button - outside role="img" so it remains accessible */}
+      {hasPreviewButton && (
+        <span className={moduleStyles.previewButtonWrapper}>
+          <WithTooltip
+            tooltipProps={{
+              text: 'Open in preview',
+              size: 's',
+              tooltipId: `${file.name}-preview-tooltip`,
+              direction: 'onTop',
+            }}
+          >
+            <Button
+              onClick={handlePreviewClick}
+              aria-label={`Preview ${file.name}`}
+              size="xs"
+              type="tertiary"
+              color="gray"
+              isIconOnly={true}
+              icon={{iconName: 'eye', iconStyle: 'solid'}}
+            />
+          </WithTooltip>
+        </span>
       )}
     </div>
   );

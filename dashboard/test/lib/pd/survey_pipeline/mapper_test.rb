@@ -4,7 +4,7 @@ require 'pd/survey_pipeline/reducer'
 
 module Pd::SurveyPipeline
   class GenericMapperTest < ActiveSupport::TestCase
-    setup_all do
+    setup do
       # All combinations of (a, b, c) which each value could be 0 or 1.
       @data = [
         {a: 0, b: 0, c: 0},

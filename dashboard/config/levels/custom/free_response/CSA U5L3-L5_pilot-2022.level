@@ -17,7 +17,7 @@
     "encrypted_solution": "bdSFJKTZAw4jqAVmjOdOPx63yVhklhd6Y/zUOnZsVlA=\n",
     "name_suffix": "_pilot-2022",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:00.336+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L5_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L5_2022\"}]",

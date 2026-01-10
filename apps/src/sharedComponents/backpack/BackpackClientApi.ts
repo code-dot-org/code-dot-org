@@ -16,6 +16,8 @@ interface FileMetadata {
 
 type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
+// Cache bust suffix ensures we always get the latest version of the file.
+const getCacheBustSuffix = () => `?t=${Date.now()}`;
 
 export default class BackpackClientApi {
   appType: string;
@@ -49,25 +51,38 @@ export default class BackpackClientApi {
     });
   }
 
+  // Fetch a file from the backpack, and return the file contents via callback (or call onError on failure).
   async fetchFile(
     filename: string,
     onError: ErrorCallback,
     onSuccess: (data: string) => void
   ) {
-    if (!this.channelId) {
+    const response = await this.fetchFileResponse(filename);
+    if (!response) {
       onError();
       return;
     }
+    if (response instanceof Error) {
+      onError(response);
+      return;
+    }
+
+    const fileContents = await response.text();
+    onSuccess(fileContents);
+  }
+
+  // Fetch a file from the backpack, and return the full response object, or false/Error if the fetch fails.
+  async fetchFileResponse(filename: string) {
+    if (!this.channelId) {
+      return false;
+    }
+
     try {
-      // Cache bust suffix ensures we always get the latest version of the file.
-      const cacheBustSuffix = `?t=${Date.now()}`;
-      const response = await HttpClient.get(
-        `${rootUrl(this.channelId)}/${filename}${cacheBustSuffix}`
+      return await HttpClient.get(
+        `${rootUrl(this.channelId!)}/${filename}${getCacheBustSuffix()}`
       );
-      const fileContents = await response.text();
-      onSuccess(fileContents);
     } catch (error) {
-      onError(error as Error);
+      return error as Error;
     }
   }
 
@@ -148,6 +163,38 @@ export default class BackpackClientApi {
       onSuccess,
       () => this.saveFilesHelper(fileObject, [filename], onError, onSuccess)
     );
+  }
+
+  /**
+   * Save a file to the backpack from the given URL.
+   */
+  async saveCodebridgeFileFromUrl(
+    filename: string,
+    fileUrl: string,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    if (!this.channelId) {
+      onError();
+      return;
+    }
+    try {
+      const fileResponse = await HttpClient.get(fileUrl);
+      if (fileResponse.ok) {
+        const responseBlob = await fileResponse.blob();
+        const fileToUpload = new File([responseBlob], filename, {
+          type: responseBlob.type,
+        });
+        await HttpClient.put(
+          `${rootUrl(this.channelId)}/${filename}`,
+          fileToUpload
+        );
+      }
+    } catch (error) {
+      onError(error as Error);
+      return;
+    }
+    onSuccess();
   }
 
   /**

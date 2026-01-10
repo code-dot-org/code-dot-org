@@ -95,6 +95,7 @@
     "thumbnail_url": "https://images.code.org/9bf5f0d72a21159a8af80971b6e022d6-csd3 scale and rotation.png",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

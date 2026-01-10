@@ -32,6 +32,8 @@ export const FileBrowserHeaderPopUpButton = () => {
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(files);
@@ -84,6 +86,7 @@ export const FileBrowserHeaderPopUpButton = () => {
               backpackApi: backpackApi,
               projectFiles: files,
               validationFile: validationFile,
+              channelId,
             })
           }
         />

@@ -7,7 +7,7 @@
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Exploring design\r\n\r\n1. Prompt the AI to create an HTML site on the topic of your choice that includes: a navigation bar, a hero, a row of cards, and a footer. \r\n\r\n2. Save this version.\r\n\r\n3. Next prompt the AI to style your website with CSS. Be as specific as you like and go back and forth as many times as  you like. Remember to save each version along the way. \r\n\r\n>This level is designed for you to get comfortable designing with AI. Spend as little or as much time here as you like. Move on when you are ready. \r\n\r\n:::details [**Why go back to an old version?**]\r\nSometimes new code breaks things that used to work. In that case, developers “revert” — they go back to a previous version that worked correctly. It’s important to save your changes with short, clear messages, so you can easily find and restore the right version later.\r\n:::",
+    "long_instructions": "## Exploring design\r\n\r\nIn this level, you’ll design for real users. Pick something that interests you and create a website that clearly teaches it to your friends.\r\n\r\n1. Prompt the AI to create an HTML site on the topic of your choice that includes: a navigation bar, a hero, a row of cards, and a footer. \r\n\r\n2. Save this version.\r\n\r\n3. Next prompt the AI to style your website with CSS. Be as specific as you like and go back and forth as many times as  you like. Remember to save each version along the way. \r\n\r\n>This level is designed for you to get comfortable designing with AI. Spend as little or as much time here as you like. Move on when you are ready. \r\n\r\n:::details [**Why go back to an old version?**]\r\nSometimes new code breaks things that used to work. In that case, developers “revert” — they go back to a previous version that worked correctly. It’s important to save your changes with short, clear messages, so you can easily find and restore the right version later.\r\n:::",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -18,13 +18,13 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "start_sources": {
       "folders": {
@@ -44,6 +44,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-21T16:46:18.393+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3-test-2025\"},{\"changed_at\":\"2025-10-23 19:58:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-21T16:46:18.393+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level3-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level3-test-2025\"},{\"changed_at\":\"2025-10-23 19:58:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 22:21:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -20,7 +20,8 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
+import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -85,6 +86,8 @@ interface MusicLabViewProps {
   levelProperties: LevelProperties;
   channel?: Channel;
   overrideProjectManager?: ProjectManager;
+  startSources: ProjectSources;
+  viewingOldVersion: boolean;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -109,6 +112,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   levelProperties,
   channel,
   overrideProjectManager,
+  startSources,
+  viewingOldVersion,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
@@ -156,6 +161,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     state => state.lab2View.isStandaloneCollapsed
   );
   const timelineAreaRef = useRef<HTMLDivElement | null>(null);
+  const teacherViewingStudent = Boolean(
+    useAppSelector(state => state.progress.viewAsUserId)
+  );
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -290,6 +298,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [dispatch, validationStateCallout]);
 
+  useEffect(() => {
+    // When the instructions sidebar collapses/expands, resize the workspace.
+    blocklyWorkspace.resizeBlockly();
+  }, [isStandaloneCollapsed, blocklyWorkspace]);
+
   const hideChaff = useCallback(
     () => blocklyWorkspace.hideChaff(),
     [blocklyWorkspace]
@@ -392,6 +405,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               styleNavigationAsBubble={true}
               documentationUrl={'/docs/ide/music'}
               sidebarOnly={!!guideMode}
+              versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
             />
           </div>
 
@@ -412,6 +426,17 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               }
               headerClassName={moduleStyles.headerWithBorder}
             >
+              {teacherViewingStudent && (
+                <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+              )}
+              {viewingOldVersion && (
+                <div
+                  id="viewingOldVersionBanner"
+                  className={moduleStyles.warningBanner}
+                >
+                  {WARNING_BANNER_MESSAGES.VIEWING_VERSION}
+                </div>
+              )}
               {isStartMode && (
                 <div
                   id="startSourcesWarningBanner"

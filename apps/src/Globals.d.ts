@@ -44,6 +44,11 @@ type WebLabInstance = {
 
 interface Window {
   getWebLab?: () => WebLabInstance | undefined;
+  appOptions?: {
+    level?: {
+      aiTutorAvailable?: boolean;
+    };
+  };
 }
 
 // Modules without types

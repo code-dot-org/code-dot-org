@@ -29,6 +29,7 @@ export interface Lab2ProjectState {
   hasEdited: boolean;
   projectTooLarge: boolean;
   lastSavedLabConfig: LabConfig | undefined;
+  projectSourceLevelId: number | undefined;
 }
 
 const initialState: Lab2ProjectState = {
@@ -41,6 +42,7 @@ const initialState: Lab2ProjectState = {
   hasEdited: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
+  projectSourceLevelId: undefined,
 };
 
 // SLICE
@@ -57,6 +59,9 @@ const projectSlice = createSlice({
         ...state.projectSources,
         source: action.payload,
       };
+    },
+    setProjectSourceLevelId(state, action: PayloadAction<number | undefined>) {
+      state.projectSourceLevelId = action.payload;
     },
     setProjectSourceBeforeAiTutorVersion(
       state,
@@ -99,6 +104,7 @@ const projectSlice = createSlice({
         fileName: string;
         folderId?: FolderId;
         contents?: string;
+        url?: string;
       }>
     ) {
       if (state.projectSources?.source) {
@@ -109,6 +115,7 @@ const projectSlice = createSlice({
             fileName: action.payload.fileName,
             folderId: action.payload.folderId,
             contents: action.payload.contents,
+            url: action.payload.url,
           }),
         };
         state.hasEdited = true;
@@ -170,15 +177,19 @@ const projectSlice = createSlice({
         state.hasEdited = true;
       }
     },
-    saveFile(state, action: PayloadAction<{fileId: FileId; contents: string}>) {
+    saveFile(
+      state,
+      action: PayloadAction<{fileId: FileId; contents: string; url?: string}>
+    ) {
       if (state.projectSources?.source) {
         const source = state.projectSources.source as MultiFileSource;
         if (
           !source.files[action.payload.fileId] ||
-          source.files[action.payload.fileId]?.contents ===
-            action.payload.contents
+          (source.files[action.payload.fileId]?.contents ===
+            action.payload.contents &&
+            source.files[action.payload.fileId]?.url === action.payload.url)
         ) {
-          // No-op if the contents are the same or the file does not exist.
+          // No-op if the contents and url are the same or the file does not exist.
           return;
         }
         state.projectSources = {
@@ -190,6 +201,7 @@ const projectSlice = createSlice({
               [action.payload.fileId]: {
                 ...source.files[action.payload.fileId],
                 contents: action.payload.contents,
+                url: action.payload.url,
               },
             },
           },
@@ -454,6 +466,7 @@ const projectSlice = createSlice({
 export const {
   setProjectSource,
   setProjectSourceBeforeAiTutorVersion,
+  setProjectSourceLevelId,
   setPreviousVersionSource,
   setViewingOldVersion,
   setViewingAiTutorVersion,

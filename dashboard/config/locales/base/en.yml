@@ -172,6 +172,9 @@ en:
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
     parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent."
+    token_expired: >
+      Your sign-in with %{provider} has expired.
+      Please sign out of Code.org and sign back in using your %{provider} account to continue.
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
@@ -281,6 +284,7 @@ en:
     picture: 'Now find your secret picture'
     words: 'Now enter your secret words'
     login: 'Sign in'
+    signing_in: 'Signing in...'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
     student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
