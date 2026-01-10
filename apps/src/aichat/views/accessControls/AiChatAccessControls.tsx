@@ -145,7 +145,7 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
               href: AI_SETTINGS_SUPPORT_LINK,
               text: 'Learn more',
             }}
-            className={style.interactionsElement}
+            className={style.alert}
           />
         )}
         <div className={classNames(style.rowContainer, style.withBorderTop)}>
