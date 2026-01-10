@@ -99,10 +99,11 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
 
   const showAiChatSettings = React.useMemo(
     () =>
+      !!selectedSection &&
       experiments.isEnabledAllowingQueryString(
         experiments.AI_CHAT_NEW_PERMISSIONS
       ),
-    []
+    [selectedSection]
   );
 
   const studentCount = useAppSelector(
