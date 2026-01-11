@@ -4,6 +4,10 @@ Feature: Web Lab 2 Preview
 # Once we upgrade to 17 we can likely remove no_safari.
 @no_safari
 @no_mobile
+# Skipping for now while we set up preview subdomains. We may not be able to run this on Drone
+# because Drone runs via localhost, which has issues with service workers. We should be able to re-enable
+# it on other environments however.
+@skip
 
 Scenario: Web Lab 2 Preview loads
   Given I create a student named "Penelope"

@@ -289,20 +289,12 @@ class Unit < ApplicationRecord
     enable_blockly_keyboard_navigation
   )
 
-  def self.twenty_hour_unit
-    Unit.get_from_cache(Unit::TWENTY_HOUR_NAME)
-  end
-
   def self.hoc_2014_unit
     Unit.get_from_cache(Unit::HOC_NAME)
   end
 
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
-  end
-
-  def self.course1_unit
-    Unit.get_from_cache(Unit::COURSE1_NAME)
   end
 
   def self.flappy_unit
@@ -618,17 +610,12 @@ class Unit < ApplicationRecord
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
-      Unit::TWENTY_HOUR_NAME,
       Unit::HOC_2013_NAME,
       Unit::EDIT_CODE_NAME,
       Unit::TWENTY_FOURTEEN_NAME,
       Unit::FLAPPY_NAME,
       Unit::JIGSAW_NAME
     ].include? name
-  end
-
-  def twenty_hour?
-    name == '20-hour'
   end
 
   def hoc?
@@ -645,10 +632,6 @@ class Unit < ApplicationRecord
 
   def flappy?
     name == 'flappy'
-  end
-
-  def csf_international?
-    ScriptConstants::CATEGORIES[:csf_international].include?(name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -681,8 +664,6 @@ class Unit < ApplicationRecord
   end
 
   def k5_course?
-    return false if twenty_hour?
-
     # TODO(dmcavoy): When we update course type to differentiate between k5 and 6-12 update this method
     k5_csc_course = [
       Unit::POETRY_2021_NAME,
@@ -799,7 +780,6 @@ class Unit < ApplicationRecord
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return true if csf_international?
     return false if csf?
 
     [
@@ -1204,29 +1184,21 @@ class Unit < ApplicationRecord
 
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/finish'
+      CDO.studio_url('/api/hour/finish')
     else
-      CDO.code_org_url "/api/hour/finish/#{name}"
+      CDO.studio_url("/api/hour/finish/#{name}")
     end
   end
 
   def csf_finish_url
-    if name == Unit::TWENTY_HOUR_NAME
-      # Rename from 20-hour to public facing Accelerated
-      CDO.code_org_url "/congrats/#{Unit::ACCELERATED_NAME}"
-    else
-      CDO.code_org_url "/congrats/#{name}"
-    end
+    ApplicationController.helpers.course_completion_certificate_url(course_name: name)
   end
 
   def finish_url(unit_group_unit: nil)
     return hoc_finish_url if hoc_or_hoai?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
-    if course
-      return CDO.code_org_url "/congrats/#{course.name}"
-    end
-    CDO.code_org_url "/congrats/#{name}"
+    ApplicationController.helpers.course_completion_certificate_url(course_name: course ? course.name : name)
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1322,8 +1294,8 @@ class Unit < ApplicationRecord
         student_detail_progress_view: student_detail_progress_view?,
         project_widget_visible: project_widget_visible?,
         project_widget_types: project_widget_types,
-        teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-        student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+        teacher_resources: sorted_user_facing_resources(resources),
+        student_resources: sorted_user_facing_resources(student_resources),
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
@@ -1396,8 +1368,8 @@ class Unit < ApplicationRecord
       unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      teacher_resources: sorted_user_facing_resources(resources),
+      student_resources: sorted_user_facing_resources(student_resources),
       numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
@@ -1939,5 +1911,9 @@ class Unit < ApplicationRecord
   private def teacher_feedback_enabled?
     initiative = get_course_version&.course_offering&.marketing_initiative
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
+  end
+
+  private def sorted_user_facing_resources(resources)
+    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
   end
 end

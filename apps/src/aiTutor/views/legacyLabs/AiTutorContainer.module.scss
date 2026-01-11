@@ -1,7 +1,7 @@
-$header-height: 30px;
+$header-height: 31px;
 
 .container {
-  width: 350px;
+  width: 325px;
   position: absolute;
   right: 0;
   top: 0;
@@ -10,15 +10,38 @@ $header-height: 30px;
   .header {
     width: 100%;
     height: $header-height;
-    background-color: aqua;
+    background-color: var(--background-brand-aqua-primary);
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
 
     button {
       position: absolute;
-      right: 0;
+      right: 4px;
+    }
+
+    .mini-bot-icon {
+      height: 1.5rem;
+      object-fit: contain;
+    }
+
+    .header-text {
+      font-weight: 500;
     }
   }
+
+  :global(.src-aichat-views-chatWorkspace-module__chatWorkspace) {
+    border-radius: 0;
+
+    :global(.src-aichat-views-chatWorkspace-module__footer) {
+      background-color: var(--background-neutral-primary);
+    }
+  }
+}
+
+.displayNone {
+  display: none;
 }

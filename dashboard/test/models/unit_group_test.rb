@@ -668,6 +668,19 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:description_teacher])
   end
 
+  test 'summarize filters out embed_only resources' do
+    embed_only_resource = create(:resource, name: 'Embed Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    resource_dropdown_only_resource = create(:resource, name: 'Resource Dropdown Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value])
+    course_version = create(:course_version)
+    unit_group = create(:unit_group, name: 'my-unit-group', course_version: course_version, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
+    unit_group.resources = [embed_only_resource, resource_dropdown_only_resource]
+
+    summary = unit_group.summarize
+    assert_equal 1, summary[:teacher_resources].count
+    assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
+  end
+
   test 'summarize_course_versions' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(csp_2017)

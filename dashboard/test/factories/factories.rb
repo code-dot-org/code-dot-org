@@ -256,15 +256,8 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
-      factory :ai_tutor_access do
-        after(:create) do |ai_tutor_access|
-          ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
-          ai_tutor_access.save
-        end
-      end
       factory :ai_iteration_tools_user do
         after(:create) do |ai_iteration_tools_user|
-          ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
           ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
           ai_iteration_tools_user.save
         end
@@ -470,8 +463,8 @@ FactoryBot.define do
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: true, user: teacher)
+          create(:single_user_experiment, min_user_id: teacher.id, name: User::AiAccessible::AI_TUTOR_PILOT_NAME)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -480,8 +473,7 @@ FactoryBot.define do
       factory :student_without_ai_tutor_access do
         after(:create) do |user|
           teacher = create(:teacher)
-          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
-          section = create(:section, ai_tutor_enabled: false, user: teacher)
+          section = create(:section, user: teacher)
           create(:follower, student_user: user, section: section)
           user.reload
         end
@@ -1093,6 +1085,17 @@ FactoryBot.define do
   factory :weblab2, parent: :level, class: Weblab2 do
     game {Game.weblab2}
     level_num {'custom'}
+  end
+
+  factory :music_dance_ai, parent: :bubble_choice_level do
+    sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    sublevels do
+      [
+        create(:dance),
+        create(:music),
+        create(:dance)
+      ]
+    end
   end
 
   factory :block do
@@ -2315,6 +2318,30 @@ FactoryBot.define do
     is_preset {false}
   end
 
+  factory :aidiff_exit_ticket do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffExitTicket"}
+  end
+
+  factory :aidiff_lesson_hook do
+    association :aidiff_thread, factory: :aidiff_thread
+    association :user
+    title {"An Aritfact Title"}
+    content {"Lorem ipsum"}
+    type {"AidiffLessonHook"}
+  end
+
+  factory :aidiff_artifact_association do
+    association :aidiff_artifact
+    association :unit
+    association :unit_group
+    association :lesson
+    association :section
+  end
+
   factory :modular_course_context, class: Hash do
     skip_create
     initialize_with do
@@ -2369,5 +2396,19 @@ FactoryBot.define do
   factory :misc_survey, class: 'Pd::MiscSurvey' do
     association :user
     form_id {1}
+  end
+
+  factory :teacher_notification do
+    association :user
+    title {"Test Teacher Notification"}
+    description {"Test teacher notification description"}
+    icon_name {"notification_icon"}
+    icon_color {"blue"}
+    href_links {[{'url' => 'https://example.com', 'text' => 'Test Link'}]}
+    ai_prompts {[{'text' => 'Test Prompt', 'prompt' => 'Test prompt text'}]}
+    priority {0}
+    expires_at {1.day.from_now}
+    read_at {nil}
+    is_dismissed {false}
   end
 end

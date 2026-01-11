@@ -8,8 +8,14 @@
     "6-12-problem-solving-with-ai",
     "student-end-of-unit-survey",
     "6-12-ai-powered-threats-and-defenses",
+    "aif-all-the-things",
     "6-12-aif-s2-unit1",
-    "6-12-aif-s2-unit2"
+    "6-12-aif-s2-unit2",
+    "6-12-aif-s2-unit3",
+    "6-12-aif-s2-unit4",
+    "csd2-web-lab-update-2025",
+    "6-12-aif-s2-unit5",
+    "6-12-aif-s2-unit6"
   ],
   "original_script_names": [
     "6-12-intro-to-programming-python",
@@ -20,7 +26,13 @@
     "student-end-of-unit-survey",
     "6-12-ai-powered-threats-and-defenses",
     "6-12-aif-s2-unit1",
-    "6-12-aif-s2-unit2"
+    "6-12-aif-s2-unit2",
+    "aif-all-the-things",
+    "6-12-aif-s2-unit3",
+    "6-12-aif-s2-unit4",
+    "csd2-web-lab-update-2025",
+    "6-12-aif-s2-unit5",
+    "6-12-aif-s2-unit6"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

@@ -1,27 +1,31 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {Setting} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import localization, {useLocalization} from '@cdo/apps/localization';
 import {LanguageInfo} from '@cdo/apps/localization/Localization';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import styles from './settings-panel.module.scss';
 interface SettingsPanelProps {
   settings: Setting[];
   closePanel: () => void;
+  appName: string;
 }
 
 const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   settings,
   closePanel,
+  appName,
 }) => {
   const {theme} = useTheme();
   // SimpleDropdown isn't themed properly, so we have to manually set the color.
-  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
+  const dropdownColor = theme === 'Dark' ? 'white' : 'gray';
   const locale = useLocalization();
   const [localeOptions, setLocaleOptions] = useState<LanguageInfo[]>(
     localization.locales
@@ -43,20 +47,43 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
   const handleLanguageChange = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    event.target.form?.submit();
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_LANGUAGE_CHANGE, {
+      languageChangedTo: event.target.value,
+      languageChangedFrom: locale,
+    });
+
+    if (localization.isLocalizeJS()) {
+      localization.locale = event.target.value;
+    } else {
+      event.target.form?.submit();
+    }
+  };
+
+  const handleSettingChange = (
+    setting: Setting,
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_SETTINGS_CHANGE, {
+      settingName: setting.label,
+      settingChangedTo: event.target.value,
+      settingChangedFrom: setting.selectedValue || '',
+    });
+    setting.onChange(event.target.value);
   };
 
   return (
-    <div className={styles.settingsPanel}>
-      <div className={styles.header}>
-        <Heading2 className={styles.headerText} visualAppearance={'body-three'}>
-          {commonI18n.settings()}
-        </Heading2>
+    <PanelContainer
+      id="settings-panel"
+      headerContent="Settings"
+      className={styles.settingsPanel}
+      headerClassName={styles.settingsHeader}
+      rightHeaderContent={
         <CloseButton
           onClick={closePanel}
           aria-label={commonI18n.closeSettings()}
         />
-      </div>
+      }
+    >
       <div className={styles.settingsList}>
         <form
           action={'/locale'}
@@ -89,7 +116,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
             key={setting.id}
             labelText={setting.label}
             isLabelVisible={true}
-            onChange={event => setting.onChange(event.target.value)}
+            onChange={event => handleSettingChange(setting, event)}
             items={setting.options}
             selectedValue={setting.selectedValue}
             name={setting.id}
@@ -100,7 +127,7 @@ const SettingsPanel: React.FunctionComponent<SettingsPanelProps> = ({
           />
         ))}
       </div>
-    </div>
+    </PanelContainer>
   );
 };
 

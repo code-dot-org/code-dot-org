@@ -111,6 +111,31 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
     },
     {
       iconFamily: 'kit',
+      iconName: 'ai-locked',
+      title: 'ai-locked-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-off',
+      title: 'ai-off-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-sleeping',
+      title: 'ai-sleeping-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-ta-head-solid',
+      title: 'ai-ta-head-solid-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-ta-tag',
+      title: 'ai-ta-tag-kit',
+    },
+    {
+      iconFamily: 'kit',
       iconName: 'clever',
       title: 'clever-kit',
     },
@@ -133,6 +158,11 @@ GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
       iconFamily: 'kit',
       iconName: 'duotone-solid-message-question-circle-exclamation',
       title: 'duotone-solid-message-question-circle-exclamation-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'move',
+      title: 'move-kit',
     },
     {
       iconFamily: 'kit',

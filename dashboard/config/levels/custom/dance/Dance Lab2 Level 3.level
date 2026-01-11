@@ -1,0 +1,212 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 63,
+  "created_at": "2025-10-07T21:41:12.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "dance",
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "true",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 17) {\r\n  nativeAPI.pass();\r\n}",
+    "default_song": "introtoshamstep_47SOUL",
+    "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure.",
+    "uses_lab2": true,
+    "encrypted": "false",
+    "validation_enabled": "false",
+    "hide_pause_button": "false",
+    "start_sources": {
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "Dancelab_whenRun",
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "selectedSong": "butter_bts"
+    },
+    "exemplar_sources": {
+      "selectedSong": "good4u_oliviarodrigo",
+      "source": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 16,
+              "y": 16,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "Dancelab_makeAnonymousDanceSprite",
+                  "id": "1",
+                  "fields": {
+                    "COSTUME": "<field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>",
+                    "LOCATION": "<field name=\"LOCATION\">{x: 300, y: 200}</field>"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "Dancelab_makeAnonymousDanceSprite",
+                      "id": "O3,0evv7cLQ0HPA(8WqE",
+                      "fields": {
+                        "COSTUME": "<field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"SLOTH\"</field>",
+                        "LOCATION": "<field name=\"LOCATION\">{x: 100, y: 200}</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "Dancelab_changeMoveEachLR",
+                          "id": "|y+CWEBlleENO5MU(?yL",
+                          "fields": {
+                            "GROUP": "<field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>",
+                            "MOVE": "<field name=\"MOVE\">MOVES.ClapHigh</field>",
+                            "DIR": "<field name=\"DIR\">-1</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "Dancelab_changeMoveEachLR",
+                              "id": "Vw/DajSIL)Uf2r!oa7jd",
+                              "fields": {
+                                "GROUP": "<field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"SLOTH\"</field>",
+                                "MOVE": "<field name=\"MOVE\">MOVES.Floss</field>",
+                                "DIR": "<field name=\"DIR\">1</field>"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "block",
+          "type": "Dancelab_makeAnonymousDanceSprite",
+          "id": "O$O.bva_1Ph7~Y.~iux-",
+          "fields": {
+            "COSTUME": "<field name=\"COSTUME\">\"ALIEN\"</field>",
+            "LOCATION": "<field name=\"LOCATION\">{x: 200, y: 100}</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_makeNewDanceSpriteGroup",
+          "id": "ec$AvzNAC~[ZY0!CH~OW",
+          "fields": {
+            "N": "<field name=\"N\">2</field>",
+            "COSTUME": "<field name=\"COSTUME\">\"ALIEN\"</field>",
+            "LAYOUT": "<field name=\"LAYOUT\">\"border\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_doMoveEachLR",
+          "id": "xTmotz3im4nyO3t9)1fD",
+          "fields": {
+            "GROUP": "<field name=\"GROUP\">sprites</field>",
+            "MOVE": "<field name=\"MOVE\">\"rand\"</field>",
+            "DIR": "<field name=\"DIR\">-1</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_changeMoveEachLR",
+          "id": "M.`6cmZT~{NMq8h:aeZv",
+          "fields": {
+            "GROUP": "<field name=\"GROUP\">sprites</field>",
+            "MOVE": "<field name=\"MOVE\">\"next\"</field>",
+            "DIR": "<field name=\"DIR\">-1</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_ai",
+          "id": "*G.#js[A?o~Mn!Gw]Zol",
+          "fields": {
+            "VALUE": null
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_setBackgroundEffectWithPaletteAI",
+          "id": "hoz1N{ey~x7z%f;]^{?N",
+          "fields": {
+            "PALETTE": "<field name=\"PALETTE\">\"autumn\"</field>",
+            "EFFECT": "<field name=\"EFFECT\">\"none\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_setForegroundEffect",
+          "id": "E.myuB4`,-!iO9hQ_j/#",
+          "fields": {
+            "EFFECT": "<field name=\"EFFECT\">\"none\"</field>"
+          },
+          "enabled": true
+        },
+        {
+          "kind": "block",
+          "type": "Dancelab_atTimestampNotAfter",
+          "id": "AiJxd[T6gt9E_shE?WE$",
+          "fields": {
+            "TIMESTAMP": 0,
+            "UNIT": "<field name=\"UNIT\">\"measures\"</field>"
+          },
+          "enabled": true
+        }
+      ],
+      "kind": "flyoutToolbox"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-10-07T21:41:12.224+00:00\",\"changed\":[\"cloned from \\\"Dance Lab2 Level 1\\\"\"],\"cloned_from\":\"Dance Lab2 Level 1\"}]"
+}]]></config>
+  <blocks/>
+</Dancelab>

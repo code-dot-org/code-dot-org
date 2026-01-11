@@ -1,0 +1,47 @@
+{
+  "name": "teaching-ai-foundations-semester2-2025",
+  "script_names": [
+    "self-paced-pl-ai-generated-design-pilot-2025",
+    "self-paced-pl-ai-and-algorithmic-decisions-pilot-2025",
+    "self-paced-pl-building-data-driven-systems-with-ai-pilot-2025",
+    "self-paced-pl-iterating-with-ai-pilot-2025",
+    "self-paced-pl-designing-reliable-apps-with-ai-and-apis-pilot-2025",
+    "self-paced-pl-web-apps-with-ai-capstone-project-pilot-2025",
+    "self-paced-pl-teaching-ai-foundations-sem2-core-content-2025",
+    "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+  ],
+  "unit_prefixes": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "1",
+    null
+  ],
+  "original_script_names": [
+    "self-paced-pl-ai-generated-design-pilot-2025",
+    "self-paced-pl-ai-and-algorithmic-decisions-pilot-2025",
+    "self-paced-pl-building-data-driven-systems-with-ai-pilot-2025",
+    "self-paced-pl-iterating-with-ai-pilot-2025",
+    "self-paced-pl-designing-reliable-apps-with-ai-and-apis-pilot-2025",
+    "self-paced-pl-web-apps-with-ai-capstone-project-pilot-2025",
+    "self-paced-pl-teaching-ai-foundations-sem2-core-content-2025",
+    "self-paced-pl-teaching-ai-foundations-sem2-intro-content-2025"
+  ],
+  "published_state": "preview",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "teaching-ai-foundations-semester2",
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

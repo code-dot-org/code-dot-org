@@ -1,0 +1,9 @@
+name 'ai-and-algorithmic-decisions-lesson1-level3-test-2025'
+display_name 'Considering the User'
+description 'Choose a feature and evaluate it from the point of view of different users.'
+uses_lab2
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson1-level3a-test-2025'
+level 'ai-and-algorithmic-decisions-lesson1-level3b-test-2025'
+level 'ai-and-algorithmic-decisions-lesson1-level3c-test-2025'

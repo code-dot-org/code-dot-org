@@ -1,3 +1,4 @@
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {
   parseMessageToNeighborhoodSignal,
   extractNeighborhoodExceptionType,
@@ -12,6 +13,8 @@ describe('messageHelpers', function () {
   let detailsErrorLine: string;
   let neighborhoodExceptionLine: string;
   let neighborhoodExceptionMessageLine: string;
+  let missingSupportedModuleErrorLine: string;
+  let missingGenericModuleErrorLine: string;
   beforeEach(() => {
     tracebackLine = 'Traceback (most recent call last): ';
     baseErrorLine =
@@ -23,14 +26,18 @@ describe('messageHelpers', function () {
       'raise NeighborhoodRuntimeException(ExceptionKey.INVALID_MOVE\n neighborhood.support.neighborhood_runtime_exception.NeighborhoodRuntimeException: NeighborhoodRuntimeException: INVALID_MOVE';
     neighborhoodExceptionMessageLine =
       '[EXCEPTION] Painter tried to move off the grid or into an obstacle.';
+    missingSupportedModuleErrorLine =
+      "ModuleNotFoundError: The module 'pandas' is included in the Pyodide distribution, but it is not installed.";
+    missingGenericModuleErrorLine =
+      "ModuleNotFoundError: The module 'some_module' is included in the Pyodide distribution, but it is not installed.";
   });
   describe('parseMessageToNeighborhoodSignal', function () {
-    it('can successfully parse a message string with no detail', async function () {
+    it('can successfully parse a message string with no detail', function () {
       expect(parseMessageToNeighborhoodSignal('[NEIGHBORHOOD] MOVE')).toEqual({
         value: 'MOVE',
       });
     });
-    it('can successfully parse a message string with detail', async function () {
+    it('can successfully parse a message string with detail', function () {
       expect(
         parseMessageToNeighborhoodSignal(
           '[NEIGHBORHOOD] PAINT {"color": "Blue"}'
@@ -42,50 +49,79 @@ describe('messageHelpers', function () {
         },
       });
     });
-    it('returns null if message string has invalid format', async function () {
+    it('returns null if message string has invalid format', function () {
       expect(parseMessageToNeighborhoodSignal('Invalid')).toEqual(null);
     });
   });
   describe('extractNeighborhoodExceptionType', function () {
-    it('can successfully extract a Neighborhood exception type given a traceback error message', async function () {
+    it('can successfully extract a Neighborhood exception type given a traceback error message', function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
       expect(extractNeighborhoodExceptionType(tracebackMessage)).toEqual(
         'INVALID_MOVE'
       );
     });
-    it('returns null if there is no Neighborhood exception within a traceback error message', async function () {
+    it('returns null if there is no Neighborhood exception within a traceback error message', function () {
       const tracebackMessage = `${tracebackLine}\n AttributeError: File '/Files/main.py', line 3, in <module>\n p.turnleft()\n 'Painter' object has no attribute 'turnleft'`;
       expect(extractNeighborhoodExceptionType(tracebackMessage)).toEqual(null);
     });
   });
   describe('getNeighborhoodExceptionMessage', function () {
-    it('can successfully return a Neighborhood exception given an exception type', async function () {
+    it('can successfully return a Neighborhood exception given an exception type', function () {
       expect(getNeighborhoodExceptionMessage('INVALID_MOVE')).toEqual(
         neighborhoodExceptionMessageLine
       );
     });
   });
   describe('parseErrorMessage', function () {
-    it('returns the entire error message if main.py error is not found', async function () {
+    it('returns the entire error message if main.py error is not found', function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(tracebackMessage);
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
+        tracebackMessage
+      );
     });
-    it('returns the Neighborhood exception message and entire error message if main.py error is not found', async function () {
+    it('returns the Neighborhood exception message and entire error message if main.py error is not found', function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
         `${neighborhoodExceptionMessageLine}\n${tracebackMessage}`
       );
     });
     it('successfully returns the parsed exception message', async function () {
       const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}`;
       const expectedErrorMessage = `${mainErrorLine}\n${detailsErrorLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(expectedErrorMessage);
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
+        expectedErrorMessage
+      );
     });
-    it('successfully returns the Neighborhood exception with parsed exception message', async function () {
+    it('successfully returns the Neighborhood exception with parsed exception message', function () {
       const tracebackMessage = `${tracebackLine}: \n${baseErrorLine}\n${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
       const expectedErrorMessage = `${mainErrorLine}\n${detailsErrorLine}\n${neighborhoodExceptionLine}`;
-      expect(parseErrorMessage(tracebackMessage)).toEqual(
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
         `${neighborhoodExceptionMessageLine}\n${expectedErrorMessage}`
+      );
+    });
+    it('provides correct message for missing module in system code', function () {
+      const tracebackMessage = missingSupportedModuleErrorLine;
+      const expectedMessage = pythonlabI18n.missingGenericModuleError();
+      expect(parseErrorMessage(tracebackMessage, true)).toEqual(
+        expectedMessage
+      );
+    });
+    it('provides correct message for missing supported module', function () {
+      const tracebackMessage = missingSupportedModuleErrorLine;
+      const expectedMessage = pythonlabI18n.missingModuleError({
+        module: 'pandas',
+      });
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
+        expectedMessage
+      );
+    });
+    it('provides correct message for missing unsupported module', function () {
+      const tracebackMessage = missingGenericModuleErrorLine;
+      const expectedMessage = pythonlabI18n.moduleNotSupported({
+        module: 'some_module',
+      });
+      expect(parseErrorMessage(tracebackMessage, false)).toEqual(
+        expectedMessage
       );
     });
   });

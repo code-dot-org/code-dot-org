@@ -111,6 +111,7 @@ const lessonData = [
             uses_lab2: false,
             type: 'maze',
             letter: 'a',
+            navigation_type: 'next_level',
           },
           {
             id: '10302',
@@ -121,6 +122,7 @@ const lessonData = [
             uses_lab2: false,
             type: 'maze',
             letter: 'b',
+            navigation_type: 'parent',
           },
         ],
       },
@@ -649,6 +651,7 @@ describe('progressReduxTest', () => {
             path: '/courses/course3/units/1/lessons/1/levels/1',
             scriptLevelId: '101',
             parentLevelId: undefined,
+            navigationType: undefined,
           },
           {
             id: '323',
@@ -677,6 +680,7 @@ describe('progressReduxTest', () => {
             path: '/courses/course3/units/1/lessons/1/levels/2',
             scriptLevelId: '102',
             parentLevelId: undefined,
+            navigationType: undefined,
           },
           {
             id: '322',
@@ -704,6 +708,7 @@ describe('progressReduxTest', () => {
             path: '/courses/course3/units/1/lessons/1/levels/3',
             scriptLevelId: '103',
             parentLevelId: undefined,
+            navigationType: undefined,
             sublevels: [
               {
                 id: '10301',
@@ -732,6 +737,7 @@ describe('progressReduxTest', () => {
                 teacherFeedbackReviewState: null,
                 path: 's/course3/lessons/1/levels/3/sublevel/1',
                 parentLevelId: '322',
+                navigationType: 'next_level',
               },
               {
                 id: '10302',
@@ -760,6 +766,7 @@ describe('progressReduxTest', () => {
                 teacherFeedbackReviewState: null,
                 path: 's/course3/lessons/1/levels/3/sublevel/2',
                 parentLevelId: '322',
+                navigationType: 'parent',
               },
             ],
           },
@@ -792,6 +799,7 @@ describe('progressReduxTest', () => {
             path: '/courses/course3/units/1/lessons/2/levels/1',
             scriptLevelId: '201',
             parentLevelId: undefined,
+            navigationType: undefined,
           },
           {
             id: '339',
@@ -820,6 +828,7 @@ describe('progressReduxTest', () => {
             path: '/courses/course3/units/1/lessons/2/levels/2',
             scriptLevelId: '202',
             parentLevelId: undefined,
+            navigationType: undefined,
           },
           {
             id: '341',
@@ -848,6 +857,7 @@ describe('progressReduxTest', () => {
             path: '/courses/course3/units/1/lessons/2/levels/3',
             scriptLevelId: '203',
             parentLevelId: undefined,
+            navigationType: undefined,
           },
         ],
       ];

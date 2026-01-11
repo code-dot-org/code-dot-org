@@ -40,7 +40,13 @@ const CleanFeedbackFooter: React.FC<Props> = ({
     );
   };
 
-  const copyButton = <CopyButton copyText={chatMessageText} />;
+  const copyButton = (
+    <CopyButton
+      key="copy"
+      copyText={chatMessageText}
+      usage={'teacher-feedback-footer'}
+    />
+  );
   const flagButton = (
     <WithTooltip
       key={`flag-tooltip-${teacherFlagged}`}

@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-12T20:21:51.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Create a Music Web App\r\n\r\nWith the help of AI, complete the missing code in `script.js` to make the Hit or Miss app work.\r\n\r\n**How do I start?**\r\n1. Create a variable for `likes`\r\n2. Complete `likeBtn` event handler \r\n3. Complete `unlikeBtn` event handler\r\n4. Complete `resetBtn` event handler",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Music Web App",
+    "bubble_choice_description": "Complete the `script.js` code to make your Music Web App work.",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Music Like Tracker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <main class=\"wrap\">\n    <h1>Hit or Miss</h1>\n\n    <section class=\"card\">\n      <h2>Now Playing:</h2>\n      <p class=\"song-title\">“Lo-Fi Study Beats”</p>\n\n      <div class=\"like-display\">\n        Likes: <span id=\"likeCount\">0</span>\n      </div>\n\n      <div class=\"buttons\">\n        <button id=\"likeBtn\" class=\"btn like\">Like</button>\n        <button id=\"unlikeBtn\" class=\"btn dislike\">Dislike</button>\n        <button id=\"resetBtn\" class=\"btn reset\">Reset</button>\n      </div>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root {\n  --bg: #f1f5f9;        /* light background */\n  --card: #ffffff;      /* white card */\n  --text: #0b1220;      /* dark text */\n  --like: #16a34a;      /* green */\n  --dislike: #dc2626;   /* red */\n  --reset: #2563eb;     /* blue */\n}\n\n* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;\n  background: var(--bg);\n  color: var(--text);\n  display: grid;\n  place-items: center;\n  height: 100vh;\n}\n\n.wrap {\n  text-align: center;\n}\n\nh1 {\n  margin-bottom: 1rem;\n  color: #1e293b;\n}\n\n.card {\n  background: var(--card);\n  color: var(--text);\n  border-radius: 16px;\n  padding: 1.5rem 2rem;\n  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);\n  max-width: 320px;\n}\n\n.song-title {\n  font-weight: 600;\n  font-size: 1.2rem;\n  color: var(--reset);\n  margin-bottom: 1rem;\n}\n\n.like-display {\n  font-size: 1.25rem;\n  margin-bottom: 1rem;\n}\n\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\n.btn {\n  border: none;\n  border-radius: 8px;\n  padding: 0.6rem 1rem;\n  font-size: 1rem;\n  font-weight: 600;\n  color: white;\n  cursor: pointer;\n  transition: background 0.2s, transform 0.1s;\n}\n\n.btn:hover { transform: scale(1.03); }\n.btn:active { transform: scale(0.97); }\n\n.like { background: var(--like); }\n.like:hover { background: #15803d; }\n\n.dislike { background: var(--dislike); }\n.dislike:hover { background: #b91c1c; }\n\n.reset { background: var(--reset); }\n.reset:hover { background: #1d4ed8; }\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// variable for likes\n\n\n\n// references to display element and buttons\nconst likeCount = document.getElementById('likeCount');\nconst likeBtn     = document.getElementById('likeBtn');\nconst unlikeBtn   = document.getElementById('unlikeBtn');\nconst resetBtn    = document.getElementById('resetBtn');\n\n// increases likes by 1 and updates the display\nlikeBtn.addEventListener('click', () => {\n\n  \n\n});\n\n// decreases likes by 1 and updates the display\nunlikeBtn.addEventListener('click', () => {\n\n\n  \n});\n\n// resets likes to 0 and updates the display\nresetBtn.addEventListener('click', () => {\n\n  \n\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nkb5U3g==\n",
+    "thumbnail_url": "https://images.code.org/72f2d8f18bbf83353fd0facafe4405da-Screenshot 2025-10-16 at 5.46.48 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:21:51.886+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level4a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level4a-test-2025\"},{\"changed_at\":\"2025-11-12 20:22:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:32:57 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

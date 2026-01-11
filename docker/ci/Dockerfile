@@ -1,5 +1,4 @@
-# Pushed to Docker Hub at codedotorg/code-dot-org:<version>
-# TODO: Switch to pushing this to codedotorg/cdo-ci:<version> and update .drone.yml
+# Pushed to Docker Hub at codedotorg/cdo-ci:<version>
 #
 # This Dockerfile builds the image used on DroneCI
 # and is referenced by version in .drone.yml
@@ -59,9 +58,9 @@ USER ${USER}
 
 RUN mkdir -p "$(rbenv root)"/plugins && \
     git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
-    rbenv install 3.1.0 && \
+    rbenv install 3.1.7 && \
     eval "$(rbenv init -)" && \
-    rbenv shell 3.1.0 && \
+    rbenv shell 3.1.7 && \
     rbenv rehash && \
     gem install bundler -v 2.5.17
 

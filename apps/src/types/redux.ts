@@ -22,10 +22,11 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Weblab2State} from '@cdo/apps/weblab2/redux';
+import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';
 
 import {DanceState} from '../dance/danceRedux';
 import {BlocklyState} from '../redux/blockly';
+import {LegacyLabsState} from '../redux/legacyLabs';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -54,8 +55,10 @@ export interface RootState {
   mapbox: MapboxState;
   maze: MazeState;
   music: MusicState;
+  pageConstants: LegacyLabsState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  sectionProgress: SectionProgressState;
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
@@ -95,4 +98,53 @@ export interface Student {
 interface ManageStudentsState {
   studentData: Student[];
   isLoadingStudents: boolean;
+}
+
+interface SectionProgressState {
+  unitDataByUnit?: {
+    [unitId: number]: {
+      id: number;
+      lessons: {
+        [index: number]: {
+          id: number;
+          script_id: number;
+          relative_position: number;
+          levels: {
+            [index: number]: {
+              id: string;
+              isValidated: boolean;
+            };
+          };
+        };
+      };
+      [userId: number]: {
+        [lessonId: number]: {
+          incompletePercent: number;
+          imperfectPercent: number;
+          completedPercent: number;
+          timeSpent: number;
+          lastTimestamp: number;
+        };
+      };
+    };
+  };
+  studentLessonProgressByUnit?: {
+    [unitId: number]: {
+      [userId: number]: {
+        [lessonId: number]: {
+          completedPercent: number;
+          timeSpent: number;
+        };
+      };
+    };
+  };
+  studentLevelProgressByUnit?: {
+    [unitId: string]: {
+      [userId: string]: {
+        [levelId: string]: {
+          status: string;
+        };
+      };
+    };
+  };
 }

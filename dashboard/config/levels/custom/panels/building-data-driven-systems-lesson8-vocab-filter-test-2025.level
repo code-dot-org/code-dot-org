@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-21T21:24:23.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Filter\n\nA **filter** is a rule or condition that chooses which items from a larger collection are included in a smaller result set.\n\nFor example, in a music app, a filter might return only songs where `genre === \"pop\"` or `popularity > 75`.",
+        "imageUrl": "https://images.code.org/7b516739ab02a9a4b5cc3eddb83095b5-Screenshot 2025-11-21 133350.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21T21:24:23.618+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level19-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level19-test-2025\"},{\"changed_at\":\"2025-11-21 21:25:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 21:34:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 18:31:30 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Panels>

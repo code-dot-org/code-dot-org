@@ -1,22 +1,26 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ToggleFileBrowserButton from '@codebridge/components/ToggleFileBrowserButton';
 import {Editor} from '@codebridge/Editor/Editor';
 import {FileBrowser} from '@codebridge/FileBrowser/FileBrowser';
+import {FileBrowserHeaderPopUpButton} from '@codebridge/FileBrowser/FileBrowserHeaderPopUpButton';
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
 import classnames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {
+  isProjectTemplateLevel,
+  isReadOnlyWorkspace,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import i18n from '@cdo/apps/pythonlab/locale';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import commonI18n from '@cdo/locale';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import currentLocale from '@cdo/apps/util/currentLocale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import HeaderButtons from './HeaderButtons';
 
@@ -39,12 +43,11 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const containerRef = useRef<HTMLDivElement>(null);
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-  const viewingOldVersion = useAppSelector(
-    state => state.lab2Project.viewingOldVersion
+  const teacherViewingStudent = Boolean(
+    useAppSelector(state => state.progress.viewAsUserId)
   );
-  const hasRestoredOldVersion = useAppSelector(
-    state => state.lab2Project.restoredOldVersion
-  );
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
   const showLockedFilesBanner = useAppSelector(
     state => state.codebridgeWorkspace.showLockedFilesBanner
   );
@@ -54,66 +57,60 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   const showFileBrowser = useAppSelector(
     state => state.codebridgeWorkspace.showFileBrowser
   );
-  const dispatch = useAppDispatch();
-
-  const headerContent = (
-    <div className={moduleStyles.centerHeaderContent}>
-      <div className={moduleStyles.centerHeaderContentText}>
-        {commonI18n.workspaceHeaderShort()}
-      </div>
-      {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
-    </div>
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
+  const versionDetails = useAppSelector(
+    state => state.lab2Project.versionDetails
   );
 
-  const closeRestoredVersionBanner = () => {
-    dispatch(setRestoredOldVersion(false));
-  };
-
-  // Sets keydown event listener on the editor container to handle Escape key
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        // Move focus back to codemirror-container
-        containerRef.current?.focus();
-      }
-    };
-    const observer = new MutationObserver(() => {
-      const cmContentDiv = document.querySelector('.cm-content') as HTMLElement;
-      if (cmContentDiv) {
-        cmContentDiv.addEventListener('keydown', handleKeyDown);
-        observer.disconnect(); // Stop observing once the element is found
-      }
-    });
-
-    observer.observe(document.body, {childList: true, subtree: true});
-
-    return () => observer.disconnect(); // Cleanup observer on unmount
-  }, []);
-
-  const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    const cmContentDiv = document.querySelector('.cm-content');
-
-    if (cmContentDiv) {
-      cmContentDiv.setAttribute('aria-label', i18n.codeEditorEditing());
-      cmContentDiv.setAttribute('tabIndex', '-1'); // Ensure focusability
-
-      if (event.key === 'Enter') {
-        // Open the .cm-content (focus it)
-        (cmContentDiv as HTMLElement).focus();
-      }
+  const locale = currentLocale();
+  const versionDate = useMemo(() => {
+    if (!versionDetails?.lastModified) {
+      return '';
     }
-  };
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+    // The Regex here removes the space before AM/PM to match mocks and make more compact.
+    return dateFormatter
+      .format(new Date(versionDetails.lastModified))
+      .replace(/\s(AM|PM)/gi, '$1');
+  }, [versionDetails, locale]);
+
+  const versionBannerText = versionDate ? (
+    <>
+      You're viewing a previous version of this project from{' '}
+      <strong>{versionDate}</strong>.
+    </>
+  ) : (
+    "You're viewing the initial version of this project."
+  );
 
   return (
     <div style={style} className={className}>
       <PanelContainer
         id="editor-workspace"
         hideHeaders={hideHeaders}
-        headerContent={headerContent}
+        headerContent={<WorkspaceHeader />}
         rightHeaderContent={<HeaderButtons />}
         className={moduleStyles.workspace}
         headerClassName={moduleStyles.workspaceHeader}
       >
+        {teacherViewingStudent && (
+          <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+        )}
+        {viewingOldVersion && (
+          <Alert
+            className={moduleStyles.previousVersionBanner}
+            text={versionBannerText}
+            type="warning"
+            size="xs"
+          />
+        )}
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: showFileBrowser,
@@ -124,23 +121,29 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
           >
-            <ToggleFileBrowserButton />
+            {showFileBrowser && (
+              <BodyFourText
+                className={moduleStyles.fileBrowserHeaderText}
+                noMargin
+              >
+                {codebridgeI18n.filesHeader()}
+              </BodyFourText>
+            )}
+            <div className={moduleStyles.fileBrowserHeaderButtons}>
+              {showFileBrowser && !isReadOnly && (
+                <FileBrowserHeaderPopUpButton />
+              )}
+              <ToggleFileBrowserButton />
+            </div>
           </div>
           <FileTabs />
           {showFileBrowser && <FileBrowser />}
-          {/* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
           <div
             className={classnames(moduleStyles.workplaceEditorWrapper, {
               [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
-            tabIndex={0}
-            onKeyDown={onKeyDown}
-            aria-label={i18n.codeEditorDescription()}
             ref={containerRef}
-            role="application"
-            id="uitest-codebridge-editor"
           >
-            {/* eslint-enable jsx-a11y/no-noninteractive-tabindex */}
             <Editor
               langMapping={config.languageMapping}
               editableFileTypes={config.editableFileTypes}
@@ -171,19 +174,6 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
               <Alert
                 text={codebridgeI18n.viewingWidgetView()}
                 type={'warning'}
-              />
-            )}
-            {viewingOldVersion && (
-              <Alert
-                text={codebridgeI18n.viewingOldVersion()}
-                type={'warning'}
-              />
-            )}
-            {hasRestoredOldVersion && (
-              <Alert
-                text={codebridgeI18n.restoredOldVersion()}
-                type={'success'}
-                onClose={closeRestoredVersionBanner}
               />
             )}
           </div>

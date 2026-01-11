@@ -41,7 +41,6 @@ export async function notifyErrorUnauthorized(
     sendAnalytics(
       EVENTS.SUBMIT_AICHAT_REQUEST_UNAUTHORIZED,
       {
-        levelPath: window.location.pathname,
         userType,
         userAction,
       },

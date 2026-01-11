@@ -1,6 +1,6 @@
 #
 # As part of our Amazon Future Engineer partnership, teachers at eligible
-# schools are offered a free CSTA+ membership. Our system expedites this
+# schools are offered a free CSTA membership. Our system expedites this
 # process by automatically creating a submission to CSTA's enrollment form
 # on the teacher's behalf.
 #

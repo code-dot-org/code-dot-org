@@ -32,8 +32,11 @@ interface NavigationAreaProps {
   requireRun?: boolean;
   hideContinueIfDisabled?: boolean;
   className?: string;
+  markdownClassName?: string;
   overrideTheme?: Theme;
   styleAsBubble?: boolean;
+  /** Optional on continue/finish callback. */
+  onContinue?: () => void;
 }
 
 /**
@@ -48,8 +51,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   handleInstructionsTextClick,
   hideContinueIfDisabled,
   className,
+  markdownClassName,
   overrideTheme,
   styleAsBubble = false,
+  onContinue,
 }) => {
   const {
     id,
@@ -77,6 +82,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   );
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const isPredictLevel = predictSettings?.isPredictLevel;
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
   const showSecondaryFinishButton =
     useSecondaryFinishButton ||
     (queryParams('use-secondary-finish-button') === 'true' && !hasNextLevel);
@@ -154,7 +162,12 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     if (submittable) {
       return [false, undefined] as const;
     }
-    let action: 'Validate' | 'SubmitPrediction' | 'Run' | undefined;
+    let action:
+      | 'Validate'
+      | 'SubmitPrediction'
+      | 'Run'
+      | 'AiTutorVersion'
+      | undefined;
     let canContinue: boolean = true;
     if (isPredictLevel) {
       action = 'SubmitPrediction';
@@ -162,6 +175,9 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     } else if (hasValidationConditions) {
       action = 'Validate';
       canContinue = validationSatisfied;
+    } else if (isAiTutorVersion) {
+      action = 'AiTutorVersion';
+      canContinue = false;
     } else if (requireRun) {
       action = 'Run';
       canContinue = hasRun;
@@ -179,6 +195,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     validationSatisfied,
     requireRun,
     hasRun,
+    isAiTutorVersion,
   ]);
 
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
@@ -209,7 +226,10 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
           <div ref={feedbackRef} tabIndex={-1}>
             <EnhancedSafeMarkdown
               markdown={feedbackMessage}
-              className={moduleStyles.markdownText}
+              className={classNames(
+                moduleStyles.markdownText,
+                markdownClassName
+              )}
               handleInstructionsTextClick={handleInstructionsTextClick}
             />
           </div>
@@ -232,6 +252,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
               text={hasNextLevel ? commonI18n.continue() : commonI18n.finish()}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
+              onContinue={onContinue}
             />
           )}
         </div>

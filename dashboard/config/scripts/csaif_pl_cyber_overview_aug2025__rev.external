@@ -1,0 +1,29 @@
+name 'csaif_pl_cyber_overview_aug2025_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Cybersecurity?
+
+
+<img src="https://images.code.org/93be18287edae8d6630b3d2b9807bf9f-Screenshot 2025-05-19 at 3.34.15 PM.png" alt="computer icon" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+
+## Defining Cybersecurity
+
+#### Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and other security threats.
+
+#### In today’s digital world, cybersecurity is essential to safeguard sensitive information, prevent data breaches, and ensure privacy and safety online.
+
+<br>
+
+---
+
+## Why students should learn it
+
+#### Learning cybersecurity empowers students to protect themselves and others in an increasingly connected and digital world. It builds critical thinking and problem-solving skills that are valuable in everyday life and across many careers. 
+
+#### Through learning cybersecurity, students become more aware of how to keep their personal information safe and make informed decisions about technology use. 
+
+#### Cybersecurity knowledge also opens doors to high-demand careers in technology and security, and it helps students grow into responsible digital citizens who understand the impact of their actions online.
+
+MARKDOWN

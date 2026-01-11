@@ -385,6 +385,7 @@ const marketingPaths = {
   "/about/2021": true,
   "/about/2022": true,
   "/about/2023": true,
+  "/about/ai-use-policy": true,
   "/about/donation-policy": true,
   "/about/donors": true,
   "/about/education-leadership-council": true,
@@ -425,6 +426,7 @@ const marketingPaths = {
   "/codebytes": true,
   "/hour-of-code/": true,
   "/community": true,
+  "/congrats": true,
   "/contact": true,
   "/cookies": true,
   "/cps": true,
@@ -783,11 +785,22 @@ const marketingPaths = {
   "/india": true,
   "/global/cuantrix": true,
   "/news/why-ai-education-is-the-key-to-global-competitiveness": true,
+  "/district-set-up": true,
+  "/impact-report": true,
+  "/about/impact-report": true,
+  "/news/fetc": true,
+  "/districts/set-up": true,
+  "/districts/program": true,
+  "/mix-move-ai": true,
+  "/promote/stats": true,
 }
 
 const pathPatterns = [
   /^\/_next\/static\//, // Next.js static assets
   /^\/_next\/image/,  // Next.js dynamic images, /_next/image*
+  /^\/api\/hour\//,     // /api/hour/*
+  /^\/certificates\//,  // /certificates/*
+  /^\/congrats\//,      // /congrats/*
   /^\/forms\//,         // /forms/*
   /^\/schools\//,       // /schools/*
   /^\/applab\/docs\//,  // /applab/docs/*

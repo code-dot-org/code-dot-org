@@ -1,0 +1,92 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T04:03:20.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Accessibility Feature: Image Alternatives\r\n\r\n_Short text explains images so the gallery still makes sense when pictures don’t load or can’t be seen._\r\n\r\nChat with the AI to learn how image alternatives were implemented in this web app.\r\n\r\nPossible Stems:\r\n\r\n* Where do we put the short description for each product image? Tell me the exact attribute name.\r\n\r\n* Which images are missing a description? List them and suggest one clear sentence for each.\r\n\r\n* Write one good description for this product image (brand/item/color/pose). Keep it short and specific.\r\n\r\n* Give me one JS line to toggle show-descriptions on <body> when I click #descBtn.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Image Alternatives",
+    "bubble_choice_description": "Short text or captions that stand in for pictures when they can’t be seen.",
+    "thumbnail_url": "https://images.code.org/e28d2636cbe200d00a9f35ae0d034ee8-aiChat.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Merch Gallery - Image Alternatives</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n  <script src=\"script.js\"></script>\n</head>\n<body>\n  <h1>Merch Gallery</h1>\n  \n  <button id=\"toggle-btn\">Show Descriptions</button>\n  \n  <div class=\"gallery\">\n    <div class=\"product-card\">\n      <img src=\"hawaiian-shirt.png\" alt=\"\" />\n      <p class=\"caption hidden\">Hawaiian Shirt - Tropical print button-up</p>\n    </div>\n    \n    <div class=\"product-card\">\n      <img src=\"purple-dress-shirt.png\" alt=\"\" />\n      <p class=\"caption hidden\">Purple Dress Shirt - Classic formal wear</p>\n    </div>\n  </div>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n  const toggleBtn = document.querySelector(\"#toggle-btn\");\n  const captions = document.querySelectorAll(\".caption\");\n\n  toggleBtn.addEventListener(\"click\", () => {\n    captions[0].classList.toggle(\"hidden\");\n    captions[1].classList.toggle(\"hidden\");\n    \n    if (captions[0].classList.contains(\"hidden\")) {\n      toggleBtn.textContent = \"Show Descriptions\";\n    } else {\n      toggleBtn.textContent = \"Hide Descriptions\";\n    }\n  });\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  padding: 20px;\n}\n\nh1 {\n  text-align: center;\n}\n\nbutton {\n  margin: 20px auto;\n  padding: 10px 20px;\n  font-size: 16px;\n  cursor: pointer;\n}\n\n.gallery {\n  margin-top: 20px;\n}\n\n.product-card {\n  margin-bottom: 30px;\n  border: 1px solid #ccc;\n  padding: 15px;\n  background: white;\n}\n\n.product-card img {\n  width: 100%;\n  max-width: 300px;\n  height: auto;\n}\n\n.caption {\n  margin-top: 10px;\n  font-size: 14px;\n  color: #333;\n}\n\n.hidden {\n  visibility: hidden;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "purple-dress-shirt.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-level3c-test-2025/uuid/71a4f7c1-da5f-4056-8b59-20c8f5cbba07.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "hawaiian-shirt.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson7-level3c-test-2025/uuid/82144b96-eb31-4d6e-a3bd-acdf8c047e09.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T04:03:20.384+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-level3c-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-level3c-test-2025\"},{\"changed_at\":\"2025-11-13 04:04:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:42:19 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

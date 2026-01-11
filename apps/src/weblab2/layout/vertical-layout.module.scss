@@ -2,19 +2,15 @@
 @import '../../mixins.scss';
 
 .headerContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 41px;
-  padding-inline: 0.5rem;
-  box-sizing: border-box;
+  height: 2.5rem;
   border-bottom: variables.$default-border;
-  background-color: var(--background-neutral-primary);
 }
 
-.headerLabel {
-  color: var(--text-neutral-quaternary);
-  font-size: 0.75rem; // 12px
+.workspaceContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .editorAndPreviewContainer {
@@ -23,6 +19,12 @@
   overflow: hidden;
 }
 
-.centerHeaderContent {
-  @include center-header-content(true);
+.truncateButtonText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aiTutorVersionContainer {
+  border-left: 1px solid var(--borders-brand-aqua-primary);
 }

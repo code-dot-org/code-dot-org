@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question11_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 11'
+
+wrong '`if` loop'
+right '`while` loop'
+wrong '`else` loop'
+wrong '`function` loop'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which type of loop runs as long as a condition remains true?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Introduction to Loops
+MARKDOWN

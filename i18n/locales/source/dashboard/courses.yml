@@ -636,7 +636,7 @@ en:
           description_teacher: "##### **Participants will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in their understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
           version_title: '2024'
         vpl-csa-2024:
-          title: CSA Virtual Professional Learning '24-'25
+          title: CSA Virtual Professional Learning
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -3805,7 +3805,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: "'25-'26"
         lori-sandbox-2025:
           title: lori-sandbox-2025
           description_short: ''
@@ -5129,7 +5129,7 @@ en:
           description_teacher: "#### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.\n\n#### The Insights from Data and AI unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs."
           version_title: ''
         teaching-problem-solving-with-ai-2025:
-          title: Teaching Problem-Solving with AI
+          title: Teaching Problem Solving with AI
           description_short: This professional learning module is designed to help you prepare to teach Code.org's Problem Solving with AI unit. This is a part of the AI Foundations curriculum.
           description_student: "#### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.\n\n#### The Problem-Solving with AI unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs."
           description_teacher: "#### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.\n\n#### The Problem-Solving with AI unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs."
@@ -5362,7 +5362,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: "'25-'26"
+          version_title: ''
         csp3-research-mxghyt:
           title: CSP Unit 3 - Intro to Programming (subgoals)
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
@@ -5401,6 +5401,90 @@ en:
           version_title: ''
         artificial-intelligence-foundations-v2-2025:
           title: artificial-intelligence-foundations-v2-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot2-course:
+          title: hoai-dance-pilot2-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot3:
+          title: hoai-dance-pilot3
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-pilot4:
+          title: hoai-dance-pilot4
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        dani-test:
+          title: dani-test
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pilot5:
+          title: pilot5
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-dance-5:
+          title: hoai-dance-5
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-hoai-pl:
+          title: sandbox-hoai-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-pilot-6:
+          title: hoai-pilot-6
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-semester2-2025:
+          title: "[PILOT] AI Foundations Semester 2"
+          description_short: AI Foundations Semester 2 teaches students to build interactive web apps with JavaScript while using AI as a creative coding partner to design technology that reflects their ideas and values.
+          description_student: "AI Foundations Semester 2 helps you become a creator who works with AI to build interactive web apps that matter. You learn JavaScript and use AI tools to generate, edit, and improve code across HTML, CSS, and JavaScript while developing skills in problem-solving, design, and systems thinking. Through a series of projects, you design and build apps that are creative, functional, and responsible. By the end of the course, you'll have the confidence to code, collaborate thoughtfully with AI, and create technology that reflects your own ideas and values.\n\n## Learning Outcomes\n\n**By the end of AIF Semester 2, you will be able to . . .**\n\n-   Apply core JavaScript concepts (variables, functions, conditionals, loops, arrays, objects, and state management) to design and implement interactive applications.\n-   Demonstrate judgment in selecting coding strategies by deciding when to write code independently, adapt existing code, or direct AI, and explain how these choices support their understanding and goals.\n-   Decompose problems and abstract patterns to structure solutions, and debug code through iterative refinement.\n-   Design user-centered applications that demonstrate usability, accessibility, and alignment with identified user needs.\n-   Critique AI outputs for bias, accuracy, and alignment with user goals, and justify design decisions that promote safety, transparency, and user agency.\n-   Reflect on their design process to explain how their choices connect to personal values, community needs, and responsible technology creation."
+          description_teacher: "AI Foundations Semester 2 equips students to become intentional designers who work alongside AI to build meaningful, interactive web apps. Students learn JavaScript while using AI to generate, adapt, and refine code across HTML, CSS, and JavaScript, developing computational thinking, human-centered design, and systems thinking skills. Across a progression of projects, they design and build interactive applications that are both technically functional and ethically informed, leaving the course with the confidence to program, collaborate thoughtfully with AI, and create systems that reflect their values and vision.\n\n## Learning Outcomes\n\n**By the end of AIF Semester 2, students will be able to . . .**\n\n-   Apply core JavaScript concepts (variables, functions, conditionals, loops, arrays, objects, and state management) to design and implement interactive applications.\n-   Demonstrate judgment in selecting coding strategies by deciding when to write code independently, adapt existing code, or direct AI, and explain how these choices support their understanding and goals.\n-   Decompose problems and abstract patterns to structure solutions, and debug code through iterative refinement.\n-   Design user-centered applications that demonstrate usability, accessibility, and alignment with identified user needs.\n-   Critique AI outputs for bias, accuracy, and alignment with user goals, and justify design decisions that promote safety, transparency, and user agency.\n-   Reflect on their design process to explain how their choices connect to personal values, community needs, and responsible technology creation.\n\n## Prerequisites\n\nAIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.\n\nThis curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).\n\nNo specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects."
+          version_title: "'25-'26"
+        foundations-of-ai-programming-tutor-pilot-2025:
+          title: foundations-of-ai-programming-tutor-pilot-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        hoai-pilot-7:
+          title: hoai-pilot-7
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-ai-foundations-semester2-2025:
+          title: "[PILOT] Teaching AI Foundations Semester 2"
+          description_short: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about."
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"
+        mix-move-ai-2025:
+          title: Mix & Move with AI
+          description_short: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.
+          description_student: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.
+          description_teacher: Bring dance, music, and coding together in Mix & Move with AI! In this fun, self-guided activity, students use AI to design a custom dancer, generate code for a musical remix, and choreograph moves to the beat.
+          version_title: ''
+        mix-move-ai-educators-2025:
+          title: mix-move-ai-educators-2025
           description_short: ''
           description_student: ''
           description_teacher: ''

@@ -12,6 +12,7 @@
 #  user_id           :integer          not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  version           :string(64)
 #
 # Indexes
 #
@@ -80,6 +81,12 @@ class AuthenticationOption < ApplicationRecord
     GOOGLE,
     MICROSOFT
   ].freeze
+
+  module Clever
+    VERSION = {
+      v3_1: 'v3.1'
+    }.freeze
+  end
 
   scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 

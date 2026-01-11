@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    = csrf_meta_tags
+    = csp_meta_tag
+    = vite_client_tag
+    = vite_react_refresh_tag
+
+    = vite_typescript_tag 'application.tsx'
+  %body
+    %div{id: 'vite-root'}

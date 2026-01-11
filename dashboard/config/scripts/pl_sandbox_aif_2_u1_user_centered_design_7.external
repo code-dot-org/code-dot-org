@@ -1,0 +1,47 @@
+name 'pl_sandbox_aif_2_U1-user-centered-design_7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#  Introducing User-Centered Design
+
+#### On the previous level, you may have noticed that the older website looks cluttered, text-heavy, and harder to navigate, while the newer version is *cleaner, more visual, and easier to use*. 
+
+#### These changes reflect a **stronger focus on the user** making information easier to find and the experience more engaging and intuitive.
+
+## Key Vocabulary
+
+<div style="background-color: #f2f4f7; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> <b>User experience-</b> the overall experience a person has when interacting with a product, system, or service. Good UX means the product is easy to use, efficient, and enjoyable. </p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"><b>User profile-</b> a description of a typical user of a product or service. It includes demographic information, goals, needs, and behaviors. User profiles help designers understand who they are designing for.
+</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"><b>Human Centered design-</b>the idea that design should start with understanding the needs of the end-user.
+</p>
+</div>
+
+
+
+## 💼Career Connection: UX Designer
+
+<img src="https://images.code.org/9731158db44349372b96a62c34b7e031-image-1760992932803.png" 
+     alt="icon of a person working on the UX of a website" 
+     style="width: 20%; border-radius: 5px; margin: 0px 20px 20px 10px; float: left;">
+
+#### A **User Experience (UX) Designer** focuses on making digital products easy, enjoyable, and meaningful to use. 
+#### They research user needs, test designs, and create layouts that improve how people interact with websites and apps.
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px;"> <b> 💡Teacher Tip: </b>You’ll see <b>career connections</b> like this highlighted throughout the unit. Use them to help students see how the skills they’re learning—like problem-solving, design thinking, and coding—connect to real-world tech careers.
+
+</p>
+</div>
+
+---
+
+#### Throughout the course, user-centered design is heavily emphasized as a guiding process for creating technology that meets real user needs and values.
+
+## Let's continue!
+MARKDOWN

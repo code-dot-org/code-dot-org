@@ -1,13 +1,8 @@
-.file-browser {
-  height: 100%;
-  background-color: var(--background-neutral-secondary);
-  color: var(--text-neutral-primary);
-  overflow: hidden;
-}
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
-.fileBrowserHeader {
-  background-color: var(--background-neutral-secondary) !important;
-  border-bottom: 1px solid var(--borders-neutral-primary);
+.fileBrowser {
+  height: 100%;
+  overflow: hidden;
 }
 
 .fileBrowserContents {
@@ -15,15 +10,13 @@
   scrollbar-color: var(--background-neutral-senary)
     var(--background-neutral-secondary);
   height: 100%;
-}
+  background-color: var(--background-neutral-secondary);
+  border-inline-end: variables.$default-border;
 
-.file-browser div.folder {
-  list-style: none;
-  margin: 0;
-}
-
-.file-browser div.folder div.folder {
-  padding-left: 8px;
+  // Override the background color of any child divs
+  & > div {
+    background-color: var(--background-neutral-secondary);
+  }
 }
 
 .row {
@@ -33,20 +26,65 @@
   cursor: pointer;
   font-size: 14px;
   min-height: 24px;
+  margin-inline: 0.375rem;
+  margin-bottom: 2px;
+  padding-block: 0.125rem;
+  transition: all 0.2s ease-in-out;
 
-  &:hover {
-    background-color: var(--background-neutral-quaternary);
+  &.aiTutorVersion {
+    border-radius: 0.25rem;
+    outline: 1px solid var(--borders-brand-aqua-primary);
+    outline-offset: -1px;
+    background: var(--background-brand-aqua-extra-light);
+
+    i {
+      color: var(--text-neutral-primary);
+    }
+
+    &:hover:not(.dragging) {
+      background-color: var(--background-brand-aqua-light);
+    }
+  }
+
+  &:hover:not(.dragging) {
+    background-color: var(--background-neutral-tertiary);
+    border-radius: variables.$default-border-radius;
+  }
+
+  .rowIcon {
+    margin: 0.125rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 125%;
+    width: 0.75rem;
+    text-align: center;
+
+    &::before {
+      vertical-align: middle;
+    }
   }
 }
 
-.title {
-  display: flex;
-  justify-content: flex-start;
-  cursor: pointer;
-  overflow: hidden;
+// Adds indent and border when a folder or file is in a folder
+.fileBrowser div.folder div.folder {
+  padding-inline-start: 8px;
+
+  .row:not(.dragging) {
+    border-inline-start: variables.$default-border;
+
+    &:hover {
+      border-radius: 0 variables.$default-border-radius
+        variables.$default-border-radius 0;
+
+      // RTL support
+      html[dir='rtl'] & {
+        border-radius: variables.$default-border-radius 0 0
+          variables.$default-border-radius;
+      }
+    }
+  }
 }
 
-.file-browser div.folder div span.button-bar {
+.fileBrowser div.folder div span.button-bar {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -54,18 +92,13 @@
   white-space: nowrap;
 }
 
-.file-browser div.folder div span.button-bar span:hover {
+.fileBrowser div.folder div span.button-bar span:hover {
   background-color: var(--background-neutral-quaternary);
 }
 
-.file-browser div.folder div span.button-bar span {
+.fileBrowser div.folder div span.button-bar span {
   display: grid;
   grid-template-columns: 15px auto;
-}
-
-.file-browser div.folder div span.label i,
-.file-browser div.folder div span.button-bar i {
-  margin-right: 4px;
 }
 
 // Using button to increase specificity of this class
@@ -75,7 +108,8 @@ button.button-kebab {
   height: 20px;
   width: 20px;
   min-width: 20px !important; // !important to override the default button min-width
-  margin: 2px;
+  margin-block: 0.125rem;
+  margin-inline: 0.125rem 0.25rem;
   transition: none;
 
   // We use important here because the hover, and active styles used by Button
@@ -99,35 +133,35 @@ button.button-kebab:focus {
 }
 
 .nameContainer {
-  text-overflow: ellipsis;
   overflow: hidden;
   width: auto;
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .activeFile & {
+      font-weight: 600;
+    }
+  }
 }
 
 .label {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  padding-right: 4px;
-  width: 100%;
-}
 
-.rowIcon {
-  margin: 2px 8px 2px 8px;
-  font-size: 13px;
-  line-height: 125%;
-
-  // prevents caret-down icon from pushing
-  // text to the right when toggling folders
-  min-width: 9px;
+  i {
+    color: var(--text-neutral-tertiary);
+  }
 }
 
 .acceptingDrop {
-  background-color: var(--background-neutral-senary);
+  background-color: var(--background-neutral-tertiary);
 }
 
 .expandedDroppableArea {
-  padding-bottom: 1rem;
+  padding-block: 0.25rem 0.5rem;
 }
 
 .dropdownItem {
@@ -151,17 +185,17 @@ button.button-kebab:focus {
   font-size: 1rem;
 }
 
+// Style applied when a file or folder is being dragged
 .dragging {
-  background-color: var(--background-neutral-quaternary);
+  background-color: var(--background-neutral-primary);
+  border-radius: variables.$default-border-radius;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  cursor: grabbing;
 }
 
 .notDraggable:focus-visible,
 .draggable:focus-visible {
   outline: var(--borders-brand-teal-primary) solid 2px;
-  outline-offset: 2px;
+  outline-offset: -2px;
   border-radius: 0.375rem;
-}
-
-.activeFile {
-  font-weight: bold;
 }

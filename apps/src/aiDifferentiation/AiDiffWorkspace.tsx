@@ -1,11 +1,12 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import experiments from '@cdo/apps/util/experiments';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 
 import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
+import {DEFAULT_THREAD_TITLE} from './constants';
 import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {
   ChatItem,
@@ -23,6 +24,7 @@ interface AiDiffWorkSpaceProps {
   scriptName?: string;
   curriculumCourses?: string[];
   unreadNotificationCount: number;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -30,14 +32,15 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   scriptName,
   curriculumCourses,
   unreadNotificationCount,
+  personalizationData,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [threadMessages, setThreadMessages] = useState<ChatItem[]>();
   const [threadId, setThreadId] = useState<number>(0);
+  const [threadTitle, setThreadTitle] = useState<string>(DEFAULT_THREAD_TITLE);
   const [keyId, setKeyId] = useState<number>(0);
   const [initialThreadPrompt, setInitialThreadPrompt] =
     useState<ChatPrompt | null>(null);
-
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   async function asyncFetchThreads(): Promise<ChatThread[]> {
@@ -77,6 +80,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       if (thread === 0) {
         setThreadMessages([]);
         setThreadId(thread);
+        setThreadTitle(DEFAULT_THREAD_TITLE);
         // changing the keyId resets the component state.
         // if key is already 0 (i.e. starting a new thread from a new thread)
         // then we need to alternate to a different key value to reset state
@@ -90,6 +94,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         asyncFetchThreadMessages(thread).then(response => {
           setThreadMessages(response.messages);
           setThreadId(thread);
+          setThreadTitle(response.title);
           setKeyId(thread);
         });
       }
@@ -119,7 +124,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         showNotifications={showNotifications}
         unreadNotificationCount={unreadNotificationCount}
       />
-      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
+      {showNotifications ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (
         <AiDiffChat
@@ -128,9 +133,12 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           curriculumCourses={curriculumCourses}
           threadFetchCallback={fetchThreads}
           threadMessages={threadMessages}
+          threadTitle={threadTitle}
+          setThreadTitle={setThreadTitle}
           key={keyId}
           threadId={threadId}
           setThreadId={setThreadId}
+          personalizationData={personalizationData}
           initialThreadPrompt={initialThreadPrompt}
           setInitialThreadPrompt={setInitialThreadPrompt}
         />

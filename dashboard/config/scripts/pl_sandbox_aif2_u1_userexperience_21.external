@@ -1,0 +1,53 @@
+name 'pl-sandbox-aif2-U1-userExperience-21'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Focusing on User Experience
+
+#### Once your students have gotten the basics on creating simple websites using HTML and CSS with AI, they will start diving into design elements that connect the user to their page.
+
+#### Check out some of the highlights from these lessons.
+
+<br>
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/6079bc1616787da05696fde0eebe0fa1-image-1761146475462.png" alt="icon of color palette and website on a computer screen" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3><b>Lesson 4: Finding Your Style</b></h3>
+            <p style="font-size: 14pt;">Students create a mood board that communicates a clear aesthetic direction, analyze existing websites for strengths and weaknesses, and provide constructive peer feedback on one another’s mood boards.</p>
+        </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/5f002d6491968bd6d153802ca1c5fd15-image-1761146570864.png" alt="icon of brand banner with paintbrush" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>Lesson 5: Brand Identity</b></h3>
+            <p style="font-size: 14pt;">Students define a brand identity using a color palette and typography, then justify their choices based on the intended tone or aesthetic direction.</p>
+        </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/51d1eee6000ac7d279ea249491c14eee-image-1761146649948.png" alt="icon of user profile" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+        <div style="flex: 1; background: #0093a4; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3 style="color: white; margin: 0;"><b>Lesson 7: Meet Your User</b></h3>
+            <p style="font-size: 14pt; color: white; margin-top: 10px;">Students create a persona representing a user type and write a concise problem statement that aligns with that persona.</p>
+        </div>
+  </div>
+
+</div>
+
+
+
+
+
+---
+
+#### Many lessons in this unit make use of the **Sketch Lab** tool, which you’ll have a chance to explore and practice with shortly.
+
+#### *Note: This professional learning module provides a high-level overview of Unit 1 to help you feel confident with the tools and structure of the unit before teaching it. We’ll focus on the lessons where teachers tend to need the most support.* 
+
+## Next up, Accessibility!
+MARKDOWN

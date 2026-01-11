@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T03:31:54.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Toggle Thinking\r\n\r\n**Do This:**\r\n\r\n1. Click the **Light/Dark** button to test what happens.\r\n\r\n2. Watch how the screen, icon, and isOn pill change.\r\n\r\n3. On your handout, fill in the pattern:\r\n\r\n   **Event → State flip → Render change**",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Toggle Thinking",
+    "bubble_choice_description": "See how one click updates the app's state and changes what you see on screen.",
+    "thumbnail_url": "https://images.code.org/b8254dcc5d40be2469c4dc3010be16c2-toggle.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Light / Dark Mode Toggle</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body class=\"light\">\n    <button id=\"btnToggle\">\n      <img id=\"sunIcon\" class=\"show\" src=\"sun.png\" alt=\"Light mode icon\">\n      <img id=\"moonIcon\" class=\"hidden\" src=\"moon.png\" alt=\"Dark mode icon\">\n      Toggle Mode\n    </button>\n\n    <div id=\"statePill\">isOn: false</div>\n    <p>This page switches between light and dark mode when you click the button.</p>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* ---------- Layout ---------- */\nbody {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  transition: background-color 0.4s, color 0.4s;\n}\n\n/* ---------- Button ---------- */\nbutton {\n  background: none;\n  border: 2px solid #ccc;\n  padding: 0.6rem 1rem;\n  border-radius: 8px;\n  cursor: pointer;\n  font-size: 1rem;\n  display: flex;\n  align-items: center;\n  gap: 0.5rem;\n  color: inherit; /* follows light/dark text */\n  transition: background-color 0.3s, border-color 0.3s, color 0.3s;\n}\n\nbutton:hover {\n  background-color: rgba(128, 128, 128, 0.2);\n  border-color: #aaa;\n}\n\n/* ---------- Icons ---------- */\nbutton img {\n  width: 24px;\n  height: 24px;\n}\n\n.hidden {\n  display: none;\n}\n\n/* ---------- Themes ---------- */\n.light {\n  background-color: white;\n  color: black;\n}\n\n.dark {\n  background-color: black;\n  color: white;\n}\n\n/* ---------- State Pill ---------- */\n#statePill {\n  display: inline-block;\n  margin: 1rem;\n  padding: 0.3rem 0.8rem;\n  border-radius: 1rem;\n  background: #eee;\n  color: #333;\n  transition: background 0.4s, color 0.4s;\n}\n\n.dark #statePill {\n  background: #444;\n  color: white;\n}\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "let isOn = false;\n\nconst btnToggle = document.getElementById(\"btnToggle\");\nconst sunIcon = document.getElementById(\"sunIcon\");\nconst moonIcon = document.getElementById(\"moonIcon\");\nconst statePill = document.getElementById(\"statePill\");\nconst body = document.body;\n\nbtnToggle.addEventListener(\"click\", () => {\n\n  isOn = !isOn;\n\n  if (isOn) {\n    body.classList.replace(\"light\", \"dark\");\n    sunIcon.classList.add(\"hidden\");\n    moonIcon.classList.remove(\"hidden\");\n  } else {\n    body.classList.replace(\"dark\", \"light\");\n    sunIcon.classList.remove(\"hidden\");\n    moonIcon.classList.add(\"hidden\");\n  }\n\n  statePill.textContent = \"isOn: \" + isOn;\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "sun.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level1-test-2025/uuid/70bab3a9-9faa-4ee4-975d-c96e8481dcfb.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "moon.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level1-test-2025/uuid/58ec27b1-a816-4051-9552-0cf28427af04.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:31:54.700+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level1-test-2025\"},{\"changed_at\":\"2025-11-13 03:37:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:45:03 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

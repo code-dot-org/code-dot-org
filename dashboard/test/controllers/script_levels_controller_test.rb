@@ -717,7 +717,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
@@ -726,7 +726,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
         unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
@@ -867,15 +867,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
-  test "updated routing for 20 hour script" do
-    sl = ScriptLevel.find_by script: Unit.twenty_hour_unit, chapter: 3
-    assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
-    assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}#{build_script_level_path(sl)}"},
-      {controller: "script_levels", action: "show", script_id: Unit::TWENTY_HOUR_NAME, lesson_position: sl.lesson.to_param, id: sl.to_param}
-    )
-  end
-
   test "chapter based routing" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},
@@ -1224,22 +1215,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
+    assert_equal('//test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
@@ -1287,7 +1278,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do
@@ -1303,7 +1294,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 2,
     }
 
-    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
+    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do

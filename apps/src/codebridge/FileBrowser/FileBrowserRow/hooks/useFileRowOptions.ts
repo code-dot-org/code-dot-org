@@ -5,31 +5,56 @@ import {
   enableUserAddedSelectionContext,
   getFolderPath,
   getPossibleDestinationFoldersForFile,
-  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
 import {useMemo} from 'react';
 
-import {addItemToUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {
+  addItemToUserAddedSelectionContext,
+  addStagedFile,
+} from '@cdo/apps/aichat/redux/slice';
+import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
 /**
  * Handles downloading a file and sending an analytics event.
  * @param file - The ProjectFile object representing the file to download.
- * @param appName - (optional) The name of the application triggering the download, used for analytics.
  * @returns Nothing (void)
  */
-const handleFileDownload = (file: ProjectFile, appName: string | undefined) => {
-  fileDownload(file.contents, file.name);
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, appName);
+const handleFileDownload = async (file: ProjectFile) => {
+  try {
+    if (WEBLAB2_IMAGE_FILE_TYPES.includes(file.language) && file.url) {
+      // File is an image and has a url, so download from browser
+      const image = await fetch(file.url);
+      if (!image.ok) {
+        console.error(
+          `Failed to fetch image: ${image.status} ${image.statusText}`
+        );
+        alert('Image retrieval failed. Please try again.');
+      }
+      const blob = await image.blob();
+      fileDownload(blob, file.name);
+    } else {
+      fileDownload(file.contents, file.name);
+    }
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DOWNLOAD_FILE, {
+      fileType: file.language?.toLowerCase() || '',
+    });
+  } catch (error) {
+    console.error('File download failed:', error);
+    alert('File download failed. Please try again.');
+  }
 };
 
 /**
@@ -48,7 +73,7 @@ export const useFileRowOptions = (
   hasValidationFile: boolean
 ) => {
   const {
-    config: {editableFileTypes},
+    config: {supportedFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
@@ -95,7 +120,7 @@ export const useFileRowOptions = (
         clickHandler: () => openRenameFilePrompt({fileId: file.id}),
       },
       {
-        condition: enableUserAddedSelectionContext(appName, file.url),
+        condition: enableUserAddedSelectionContext(appName),
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -105,19 +130,46 @@ export const useFileRowOptions = (
             fullFilename = (folderPath + '/' + file.name).substring(1); // remove leading slash
           }
           dispatch(
-            addItemToUserAddedSelectionContext({
-              displayName: fullFilename,
-              sourceCode: file.contents,
-              filename: fullFilename,
+            sendAnalytics(EVENTS.AI_TUTOR_FILE_ADDED_TO_CONTEXT, {
+              file: fullFilename,
+              codingLanguage:
+                fullFilename?.split('.').pop()?.toLowerCase() || '',
             })
           );
+
+          // Files with URLs are non-text files.
+          if (file.url) {
+            // Files with a type are provided by a levelbuilder.
+            const assetSource = file.type
+              ? AssetSource.LEVEL_UUID
+              : AssetSource.PROJECT;
+            const stagedFilename = file.url.split('/').slice(-1)[0];
+            dispatch(
+              addStagedFile({
+                key: `${stagedFilename}-${Date.now()}`,
+                asset: {
+                  filename: stagedFilename,
+                  source: assetSource,
+                },
+                loaded: true,
+              })
+            );
+          } else {
+            dispatch(
+              addItemToUserAddedSelectionContext({
+                displayName: fullFilename,
+                filename: fullFilename,
+                sourceCode: file.contents,
+              })
+            );
+          }
         },
       },
       {
-        condition: editableFileTypes.includes(file.language),
+        condition: supportedFileTypes.includes(file.language),
         iconName: 'download',
         labelText: codebridgeI18n.downloadFile(),
-        clickHandler: () => handleFileDownload(file, appName),
+        clickHandler: () => handleFileDownload(file),
       },
       {
         condition: !isLocked,
@@ -136,7 +188,7 @@ export const useFileRowOptions = (
       appName,
       backpackApi,
       dispatch,
-      editableFileTypes,
+      supportedFileTypes,
       file,
       isLocked,
       isStartMode,

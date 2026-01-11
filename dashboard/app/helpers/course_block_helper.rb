@@ -58,26 +58,6 @@ module CourseBlockHelper
         body: data_t_suffix('script.name', id, 'description_short'),
         teacher_guide: CDO.code_org_url("/hourofcode/artist")
       },
-      Unit::COURSE1_NAME => {
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short'),
-        audience: data_t_suffix('script.name', id, 'description_audience')
-      },
-      Unit::COURSE2_NAME => {
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short'),
-        audience: data_t_suffix('script.name', id, 'description_audience')
-      },
-      Unit::COURSE3_NAME => {
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short'),
-        audience: data_t_suffix('script.name', id, 'description_audience')
-      },
-      Unit::COURSE4_NAME => {
-        title: data_t_suffix('script.name', id, 'title'),
-        body: data_t_suffix('script.name', id, 'description_short'),
-        audience: data_t_suffix('script.name', id, 'description_audience')
-      },
       Unit::COURSEA_NAME => {
         title: data_t_suffix('script.name', id, 'title'),
         body: data_t_suffix('script.name', id, 'description_short'),
@@ -145,19 +125,19 @@ module CourseBlockHelper
       },
       Unit::MINECRAFT_AQUATIC_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::MINECRAFT_DESIGNER_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::MINECRAFT_HERO_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::MINECRAFT_NAME => {
         body: data_t_suffix('script.name', id, 'description_short'),
-        url: CDO.code_org_url('/api/hour/begin/mc')
+        url: CDO.studio_url('/api/hour/begin/mc')
       },
       Unit::STARWARS_BLOCKS_NAME => {
         url: CDO.code_org_url('/starwars'),
@@ -172,10 +152,6 @@ module CourseBlockHelper
       Unit::TEXT_COMPRESSION_NAME => {
         url: script_reset_url(id),
         teacher_guide: "https://curriculum.code.org/hoc/2016/1/"
-      },
-      Unit::TWENTY_HOUR_NAME => {
-        title: I18n.t('upsell.20hour.title'),
-        body: I18n.t('upsell.20hour.body')
       },
       Unit::OCEANS_NAME => {
         url: CDO.code_org_url('/oceans'),

@@ -1,0 +1,14 @@
+name 'programming-fundamentals-lesson2-level3_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'abstraction, decomposition'
+right 'decomposition, abstraction'
+wrong 'algorithm, abstraction'
+wrong 'decomposition, pattern recognition'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Planning a 7-course dinner requires breaking the task down into smaller steps, a process called ____________.
+
+Driving a car without understanding the underlying mechanics means only knowing relevant key details. This is called ____________.
+MARKDOWN

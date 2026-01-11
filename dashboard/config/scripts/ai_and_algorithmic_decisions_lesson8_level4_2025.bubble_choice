@@ -1,0 +1,10 @@
+name 'ai-and-algorithmic-decisions-lesson8-level4_2025'
+display_name 'Plan in Sketch Lab'
+description 'Choose a scenario to plan how your app makes decisions. If you get stuck, open the AI Chat Helper for hints about inputs, branches, or test cases.'
+uses_lab2
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson8-level4a_2025'
+level 'ai-and-algorithmic-decisions-lesson8-level4b_2025'
+level 'ai-and-algorithmic-decisions-lesson8-level4c_2025'
+level 'ai-and-algorithmic-decisions-lesson8-level4d_2025'

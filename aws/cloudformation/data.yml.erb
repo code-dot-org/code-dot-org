@@ -82,10 +82,10 @@ Resources:
       ReplicationInstanceIdentifier: export-mysql-to-redshift
       AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
-      EngineVersion: 3.5.1
+      EngineVersion: 3.6.1
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.r4.4xlarge
+      ReplicationInstanceClass: dms.r5.4xlarge
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
       # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
@@ -119,19 +119,21 @@ Resources:
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
       MySqlSettings:
-        # Initialize MySQL client to execute SELECT statements with long execution times that fetch large result sets
-        # without negatively impacting transaction isolation on the cluster and increase several client connection
-        # timeouts to ensure that pauses during the export don't result in prematurely terminated connections.
-        # The first three settings are the same as what the Reporting RDS Proxy uses:
+        # Initialize MySQL client to execute SELECT statements without negatively impacting transaction isolation on the
+        # cluster and increase several client connection timeouts to ensure that pauses during the export don't result
+        # in prematurely terminated connections. The first three settings are the same as what the Reporting RDS Proxy uses:
         # https://github.com/code-dot-org/code-dot-org/blob/5ffbfc6909a6d1b4e97497db247aeb5f1eba0847/aws/cloudformation/components/database.yml.erb#L265
+        # Use extended timeouts (86400s / 24h) to prevent server-side disconnects because the DMS ODBC driver reconnects
+        # without executing the AfterConnectScript.
         AfterConnectScript:  >-
           SET SESSION aurora_read_replica_read_committed=ON;
           SET SESSION transaction_isolation="READ-COMMITTED";
           SET SESSION max_execution_time = 0;
-          SET SESSION net_read_timeout=300;
-          SET SESSION net_write_timeout=300;
-          SET SESSION wait_timeout = 300;
-          SET SESSION interactive_timeout = 300;
+          SET SESSION autocommit=1;
+          SET SESSION net_read_timeout=86400;
+          SET SESSION net_write_timeout=86400;
+          SET SESSION wait_timeout = 86400;
+          SET SESSION interactive_timeout = 86400;
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
@@ -733,6 +735,8 @@ Resources:
               Type: string
             - Name: httprequest
               Type: struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>
+            - Name: nonterminatingmatchingrules
+              Type: array<struct<ruleid:string,action:string,rulematchdetails:array<struct<conditiontype:string,sensitivitylevel:string,location:string,matchedelements:array<string>>>,captcharesponse:struct<responsecode:int,solvetimestamp:bigint>,challengeresponse:struct<responsecode:int,solvetimestamp:bigint>>>
             - Name: ja3fingerprint
               Type: string
           OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat

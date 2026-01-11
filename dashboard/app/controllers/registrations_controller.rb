@@ -204,6 +204,7 @@ class RegistrationsController < Devise::RegistrationsController
           user: current_user,
           event_name: 'lti_user_created',
           metadata: metadata,
+          session: session,
         )
       end
       has_school = current_user.school_info&.school_id.present?
@@ -215,6 +216,7 @@ class RegistrationsController < Devise::RegistrationsController
         event_name: 'Sign Up Finished Backend',
         metadata: event_metadata,
         get_enabled_experiments: true,
+        session: session,
       )
     end
   end
@@ -386,6 +388,8 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
     return head(:bad_request) if params[:user][:user_type].nil?
 
+    previous_user_type = current_user.user_type
+
     successfully_updated =
       if current_user.migrated?
         if forbidden_change?(current_user, params)
@@ -408,6 +412,18 @@ class RegistrationsController < Devise::RegistrationsController
           current_user.update_without_password(set_user_type_params)
         end
       end
+
+    if successfully_updated && (previous_user_type != current_user.user_type)
+      Metrics::Events.log_event(
+        user: current_user,
+        event_name: 'user_type_changed',
+        metadata: {
+          from_user_type: previous_user_type,
+          to_user_type: current_user.user_type
+        },
+        session: session
+      )
+    end
 
     if successfully_updated
       head :no_content

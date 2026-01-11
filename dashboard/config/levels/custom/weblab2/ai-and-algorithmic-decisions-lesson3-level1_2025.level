@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-12T20:19:41.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Score Counter</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n<body>\n  <main class=\"wrap\">\n    <header class=\"header\">\n      <h1>Score</h1>\n    </header>\n\n    <section class=\"score-card\"\">\n      <div id=\"score\" class=\"score\">0</div>\n\n      <div class=\"controls\">\n        <!-- Up / Increment -->\n        <button id=\"btn-up\" class=\"control\">\n          <svg viewBox=\"0 0 120 120\" class=\"icon\">\n            <path d=\"M60 10 L115 110 H5 Z\" />\n            <rect x=\"56\" y=\"40\" width=\"8\" height=\"40\" rx=\"2\" fill=\"white\"/>\n            <rect x=\"40\" y=\"58\" width=\"40\" height=\"8\" rx=\"2\" fill=\"white\"/>\n          </svg>\n        </button>\n\n        <!-- Down / Decrement -->\n        <button id=\"btn-down\" class=\"control\">\n          <svg viewBox=\"0 0 120 120\" class=\"icon\">\n            <path d=\"M60 110 L5 10 H115 Z\" />\n            <rect x=\"40\" y=\"56\" width=\"40\" height=\"8\" rx=\"2\" fill=\"white\"/>\n          </svg>\n        </button>\n      </div>\n    </section>\n\n    <p class=\"hint\">Tip: Use ↑ and ↓ keys as well.</p>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": ":root{\n  --bg: #0f172a;                  /* slate-900 */\n  --card: #e2e8f0;                /* slate-200 */\n  --ink: #0b1220;                 /* deep ink */\n  --accent: #2563eb;              /* blue-600 */\n  --shadow: 0 10px 30px rgba(2, 6, 23, .35);\n}\n\n* { box-sizing: border-box; }\n\nhtml, body {\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\";\n  background:\n    radial-gradient(1200px 600px at 75% -10%, rgba(37,99,235,.18), transparent 60%),\n    radial-gradient(900px 500px at 10% 110%, rgba(59,130,246,.15), transparent 60%),\n    var(--bg);\n  color: var(--ink);\n}\n\n.wrap {\n  min-height: 100%;\n  display: grid;\n  place-items: center;\n  padding: 3rem 1rem;\n}\n\n.header h1{\n  margin: 0 0 1.25rem;\n  text-align: center;\n  font-size: clamp(1.5rem, 3vw + .5rem, 2.5rem);\n  letter-spacing: .02em;\n  color: #f1f5f9;\n  text-shadow: 0 1px 2px rgba(0,0,0,.3);\n}\n\n.score-card{\n  width: min(540px, 92vw);\n  background: linear-gradient(180deg, #f8fafc, #eef2f7);\n  border: 1px solid #e5e7eb;\n  border-radius: 20px;\n  padding: 1.75rem 1.5rem 1.25rem;\n  box-shadow: var(--shadow);\n}\n\n.score{\n  display: grid;\n  place-items: center;\n  height: clamp(120px, 22vw, 160px);\n  margin: .75rem auto 1.25rem;\n  background: linear-gradient(180deg, #dbeafe, #c7dbfb);\n  border: 2px solid #b6c6e6;\n  border-radius: 14px;\n  font-weight: 700;\n  font-size: clamp(4rem, 12vw, 6rem);\n  line-height: 1;\n  color: #0f172a;\n}\n\n.controls{\n  display: grid;\n  gap: 14px;\n  justify-items: center;\n}\n\n.control{\n  appearance: none;\n  border: none;\n  cursor: pointer;\n  background: #0b1220;\n  border-radius: 16px;\n  padding: 10px;\n  transition: transform .08s ease, box-shadow .2s ease, background .2s ease;\n  box-shadow: 0 6px 16px rgba(2,6,23,.35);\n}\n\n.control .icon{\n  display: block;\n  width: clamp(88px, 14vw, 110px);\n  height: auto;\n}\n\n.control path{\n  fill: #0b1220;\n}\n\n.control:focus-visible{\n  outline: 3px solid var(--accent);\n  outline-offset: 4px;\n}\n\n.control:hover{\n  transform: translateY(-1px);\n  background: #0a0f1d;\n  box-shadow: 0 10px 22px rgba(2,6,23,.45);\n}\n\n.control:active{\n  transform: translateY(0);\n  box-shadow: 0 4px 10px rgba(2,6,23,.35);\n}\n\n.hint{\n  margin: .85rem 0 0;\n  text-align: center;\n  font-size: .95rem;\n  color: #cbd5e1;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "let score = 0;\n\nconst scoreDisplay = document.getElementById('score');\nconst upBtn = document.getElementById('btn-up');\nconst downBtn = document.getElementById('btn-down');\n\nupBtn.addEventListener('click', () => {\n  score++;\n  scoreDisplay.textContent = score;\n});\n\ndownBtn.addEventListener('click', () => {\n  score--;\n  scoreDisplay.textContent = score;\n});\n                         \nwindow.addEventListener('keydown', (e) => {\n  if (e.key === 'ArrowUp') scoreDisplay.textContent = score++;\n  if (e.key === 'ArrowDown') scoreDisplay.textContent = score--;\n});\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "Type response here ",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": true,
+      "allowMultipleAttempts": true
+    },
+    "long_instructions": "## Change the Score\r\n\r\nPlay with this website by clicking the up and down arrow buttons (or by pressing up and down arrow keys). \r\n\r\nWith a partner, discuss how you think the code is working behind the scenes."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T20:19:41.176+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson3-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson3-level1-test-2025\"},{\"changed_at\":\"2025-11-12 20:23:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:32:07 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

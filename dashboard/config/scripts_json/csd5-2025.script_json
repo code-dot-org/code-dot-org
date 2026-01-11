@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-04 20:57:31 UTC",
+    "serialized_at": "2025-12-19 19:54:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6164,10 +6164,11 @@
     },
     {
       "name": "Project - Make a Recommendation",
-      "url": "https://docs.google.com/presentation/d/1YGowSqpNoGwgTDANdK9QdTv8ZPDWCdSZxsg9kYeOzdY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1YGowSqpNoGwgTDANdK9QdTv8ZPDWCdSZxsg9kYeOzdY/edit?usp=sharing",
       "key": "project_-_make_a_recommendation",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

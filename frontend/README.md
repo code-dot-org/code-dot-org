@@ -1,9 +1,9 @@
-# Code.org Frontend
+# Code.org Learning Platform Frontend
 
 This directory contains packages and applications that power Code.org sites.
 
 **Note**: Most of Code.org's Studio product (student experience, curriculum, teacher tools, etc.) is built in the
-top-level `apps` package and is not currently located in this directory.
+top-level `apps` package and is not currently located in this directory. For the marketing sites application, go to the [code-dot-org/marketing-sites repo](https://github.com/code-dot-org/marketing-sites).
 
 ## What's inside?
 
@@ -16,7 +16,7 @@ This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and
 
 Open source Code.org applications:
 
-- [@code-dot-org/marketing](apps/marketing): Code.org's marketing site (uses Contentful).
+- [@code-dot-org/studio](apps/studio): An experimental Vite-based shell application for the learning platform.
 - [@code-dot-org/design-system-storybook](apps/design-system-storybook): A [Storybook](https://storybook.js.org/)
   instance for the Code.org design system (`@code-dot-org/component-library`). Publicly available at
   [https://code-dot-org.github.io/code-dot-org/component-library-storybook](https://code-dot-org.github.io/code-dot-org/component-library-storybook).
@@ -41,7 +41,7 @@ Publicly available packages:
 
 _(!!!)_ If you're unable to find some information in this README.md, please refer to the documentation of package/app
 that you're working on. (e.g. go to [packages/component-library/README.md](packages/component-library/README.md),
-[apps/marketing/README.md](apps/marketing/README.md), etc)
+[apps/studio/README.md](apps/studio/README.md), etc)
 
 ### Prerequisites
 
@@ -69,20 +69,14 @@ yarn build
 
 ### Develop
 
-To develop **all** apps and packages, run the following command:
+To develop on the **studio** application, run in the `frontend` directory
 
 ```bash
 yarn dev
 ```
 
-To develop a specific set of apps and packages, use `yarn workspace [workspace name] [command]`.
-More information on this command [here](https://yarnpkg.com/cli/workspace).
-
-For example, to only run the design system storybook:
-
-```bash
-yarn workspace @code-dot-org/design-system-storybook dev
-```
+Changing any monorepo managed dependencies (such as labs) will automatically trigger a rebuild and be made
+available to the persistent dev server using Turborepo's watch feature.
 
 ### Formatting, Linting. (Prettier, ESLint, Stylelint)
 

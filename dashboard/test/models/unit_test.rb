@@ -467,10 +467,6 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
-    course1_unit = create(:script, name: 'course1')
-    course2_unit = create(:script, name: 'course2')
-    assert_equal 'banner_course1.jpg', course1_unit.banner_image
-    assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
   end
 
@@ -1019,6 +1015,17 @@ class UnitTest < ActiveSupport::TestCase
       'buttonText' => localized_button_text
     }]
     assert_equal expected_announcements, summary[:announcements]
+  end
+
+  test 'summarize filters out embed_only resources' do
+    embed_only_resource = create(:resource, name: 'Embed Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:EMBED_ONLY][:value])
+    resource_dropdown_only_resource = create(:resource, name: 'Resource Dropdown Only Resource', embeddability_type: SharedConstants::RESOURCE_EMBEDDABILITY_OPTIONS[:RESOURCE_DROPDOWN_ONLY][:value])
+    unit = create(:script, :in_single_unit_course)
+    unit.resources = [embed_only_resource, resource_dropdown_only_resource]
+
+    summary = unit.summarize
+    assert_equal 1, summary[:teacher_resources].count
+    assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
   end
 
   test 'summarize defaults to original unit group when no unit group unit is provided' do
@@ -1924,40 +1931,41 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'does allow major changes to unit within in_development course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    unit = unit_group.first_unit
+    assert unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to unit within pilot course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+    unit = unit_group.first_unit
+    assert unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within beta course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    unit = unit_group.first_unit
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does not allow major changes to in_development unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.reload
-    refute @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    unit.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    refute unit.allow_major_curriculum_changes?
   end
 
   test 'does allow major changes to hidden unit within stable course' do
-    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-    @unit_in_unit_group.update!(hide_within_course: true)
-    @unit_in_unit_group.reload
-    assert @unit_in_unit_group.allow_major_curriculum_changes?
+    unit_group = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    unit = unit_group.first_unit
+    unit.update!(hide_within_course: true)
+    assert unit.allow_major_curriculum_changes?
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase
@@ -2165,7 +2173,8 @@ class UnitTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
     unit.reload
 
-    assert unit.finish_url.include?(unit_group.name)
+    encoded_course_name = ERB::Util.url_encode(Base64.urlsafe_encode64(unit_group.name))
+    assert_equal "#{CDO.default_scheme}//test-studio.code.org/congrats?s=#{encoded_course_name}", unit.finish_url
   end
 
   test 'deleting unit in unit group deletes corresponding dependencies' do

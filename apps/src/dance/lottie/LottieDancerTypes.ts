@@ -1,6 +1,8 @@
 // Minimal types for the subset of Lottie JSON we mutate. These are intentionally
 // partial: we only model the fields this renderer reads/writes.
 
+import {GeneratedDancerMetadata} from '../types';
+
 export type CanvasAnimConfig = {
   renderer: 'canvas';
   loop?: boolean;
@@ -25,6 +27,7 @@ export type LottieShapeFillOrStroke = {
   ty: 'fl' | 'st';
   nm?: string;
   c?: LottieColorNode;
+  hd?: boolean;
 };
 
 export type LottieShapeGroup = {
@@ -81,10 +84,11 @@ export type LottieImageLayer = LottieLayerBase & {
   ty: 2; // image layer
   refId: string;
   shapes?: Array<LottieShapeAny>;
+  hasMask?: boolean;
 };
 
 export type LottieVectorLayer = LottieLayerBase & {
-  ty: 4; // shape/vector
+  ty: 4 | 1; // shape/vector
   shapes?: Array<LottieShapeAny>;
 };
 
@@ -110,8 +114,8 @@ export type LottieAssetImage = {
 
 export type LottieAssetPrecomp = {
   id: string;
-  w?: number;
-  h?: number;
+  w: number;
+  h: number;
   layers?: Array<LottieLayer>;
 };
 
@@ -124,16 +128,11 @@ export type LottieJSON = {
   assets?: Array<LottieAssetImage | LottieAssetPrecomp>;
 };
 
-export type HeadImageInfo = {
-  dataUrl: string;
-  width: number;
-  height: number;
-};
-
 export type Palette = {
   primary: RGBA | null;
   secondary: RGBA | null;
   tertiary: RGBA | null;
+  lock?: boolean;
 };
 
 export type Canvas2D =
@@ -171,22 +170,21 @@ export interface DancerMetadata {
   body_color?: string;
   secondary_color?: string;
   tertiary_color?: string;
+  lock_palette?: boolean;
   [k: string]: unknown;
 }
 
 export type ResolvedDancerAssets = {
   headUrl: string;
   metadataUrl: string;
+  bodyUrl?: string;
+  bodyMetadataUrl?: string;
 };
 
 export type ResolveDancerAssetsOpts = {
   /** Tag appended to headUrl as `?src=...` to avoid CORS errors */
   sourceTag?: string; // e.g., 'blockly' | 'canvas'
-  getLocalStorage?: (key: string) => string | null;
+  getSessionStorage?: (key: string) => string | null;
 };
 
-export type LocalStoragePayload = {
-  adlibOption: string;
-  choices: string[];
-  variant: number | string;
-} | null;
+export type SessionStoragePayload = GeneratedDancerMetadata | null;

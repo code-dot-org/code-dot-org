@@ -1,0 +1,31 @@
+name 'pl_sandbox_aif_2_U1-CSS-13_pilot-oct-2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing CSS 
+
+####  Now that we have the structure of a website, let’s add some style!
+
+## What is CSS?
+
+#### **CSS (Cascading Style Sheets)** is the language that controls the **look and feel** of a webpage.
+
+#### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
+
+<img src="https://images.code.org/f68c77c95058c8b47fa5edd30769402c-image-1761070407703.png" alt="Image CS Discoveries students" width="200px" style="border-radius:10px; float:right; margin: 0 50px 40px 10px;">
+
+## Key things CSS does
+
+- #### Changes colors, fonts, and text sizes
+- #### Controls spacing (margins, padding, alignment)
+- #### Adds borders, backgrounds, and styles
+- #### Defines layout (how sections of a page are arranged)
+
+
+## What's Next?
+
+#### Now, let’s add some style to your basic website by adding a CSS file.
+
+![]()
+MARKDOWN

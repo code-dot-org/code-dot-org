@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Make a pet\r\n\r\n1. Create a pet object by adding `pet = Pet()` to you code. \r\n\r\n2. What kind of animal is your pet? Change the animal `\"sloth\"` to a something else.\r\n\r\n3. Give your pet a new name. Change the name `\"Buddy\"` to a different name.\r\n",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -53,10 +53,10 @@
       "open": false,
       "type": "validation"
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8P7N3T0yWba2tZoHvFjp2kRap/MtKAMc\nz+pQeeEvkTVpnOZ5uXYrVphWXUTJ8ZDteJdZYsMHtVJx3E3Pue1sQVf8iu+W\n+gJGDnxI32izMFHmguyb+BzoabELiK0+SIzAqIj74rd6GauOEy8FAvuWEKbh\nGidfUFpEy6H2XTsaBQn3UK7sA0B8ha0ievROKCdZgMxwNSGChDBnj9bhKRsS\ngItpdXDiAXU6EcoRHVJ/yDNu6MxC0MF+MqAISCQx6b+a26iny+Yt2St0B918\nqJFBVda52HsLeVAL8JnSTf6RHQk8sftsqHBIdxxMxwwDKuRVAdawqfRpAF+1\nHCzoplRhl7OMf+1UhNaZyJ/pcr80C55OuK0N0FxPQ8imwkf2C9Sv/oeypU+F\nuY7KdybtXkPpbKAScC8NKxOL6vhZPYThuMpu9iFJOj6LhbO70XaP/huxmofb\n8NEGypE93NhRE5qqpwV2cjO0yIWxdfLxbeD9V2h+HN3E60CEsoklj0REebUC\nr2LacLHE8TdlLZkGyehcq6pWLecug4+BkbMiXtOsAVwEAS6a4R9P3wGso70S\nWApYKOP+Bk6QkgarWB7xutccxFFWXx3f2PvYyUPplB7Wb+pMlDOrvNr3abRC\nF0Rb2xvd0XCMr8ZWZtrkAWdubrjzMF+vxE3899WHVMI0ThF4bqVarF2tZOzC\nY6Z6FSwl3LWnRFCTQetNdtPvEODnmOVG3oCnT5qG5AfSSlYQZb/U5bPHbYbX\na/LGnwZUZl5Zqsg4qEKcDQVKQ66fgOVfCZbQr+N8Vh1kbQF0fSQXPmq4OfdQ\n7uGeCYLLX7P4FSEox4SgBMdACd3PMutAUYLwU+INdH66eMYQ4hG8DarsaLVL\nd7DuwB5aQONy1l2U1qPIC/V9BtSIMoX1WlCVkx5kgd0oF07vInNIaB3t7tkR\nf9S/O68jco4tE1sKZMxoPwVdkZJcyfacN+H3+I2kdgk7Sed5quCs4GtQuZ6w\n/1hTsF/N1yJn+QOfmcgFEoX34c4BAA5zywlHoPLdX6g5PYkWvlEshtA=\n",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8GdQcXf2ggzRYIXaC3Hccag5XVZEIuCa\nWdvdGfxM5ksmbktNK6n3AGBzImYk20o3RZ2CjNFZQwdjIlUFk6ZkiBSYEquX\nX1WIaM6suf8dyt0uYkiW9JJhWXpxXB73QPbyiGfjRNLGduGu86I9VC72oYDX\nPTfSByXhJv++OvRwS/1ejvY3dxDdNmWcUWyCNtBi/XPda2ap08euhfZItun9\nYIolzq+N2P64uM2b2XerSq+2pADsNZ/9htv5C3Oqws9gMdrZTYB4gTuCS81L\nBbCYc25w4x9UDGWCw2u1onkT37QFcYxI5ZwQSt0e5ksrsPCzBnJrTUJDdZ5C\n3WsMq5NwPZiGkL9ScM+iI9l/Fh4+fppYQLtxyLX1r8G7qxrULOgpJ5iqwmPz\nG8uxr80Ns2dNVtyxwNWFAdr1oJ6qRF+Oyhd3Gw3+r2VOCaI/rMHnmvH/0D4c\npqIkYGPmXOCIjJAzsf/ONNSqIn/hmN/zBlEoxIS4VZAWpoAtpyA5wzl8p63+\neRHeMjb0fTzVslTJMZvQ8xZedGmT0RSBGH9E8aAodoEp1lqPU3ALBc/y0YHX\nojSS6LK5GcFzer9GgoJJldqIUsS5ujK/MyJxQSH3hebfYg8dPc6cEWOF6LOL\nM1sz2vIihf8leFrFk75axEdOC7OXnGtFgrxgYs1MTpJENfYZ2K38tUukMLQk\nAOWDsG3eUwv9aayJmIFgu1CDeSIeQ1naM0q0WBxIfdD2IDgzGMdC7yakrftK\ntSLu0/ijVfSiVU/fdCNb1TyMeXbUWRTcHqwLZvZj0WVn9Lvpv5wJXMV8mvky\nNmp5f1G4Kppj1tQybSLTpo16ibPtB/xX0Rt18ra0jeO1TcvvaSedwdk58Cdv\nbXnl+wj42e4yvr2I0gKYjUqG5JIF4PtyY1sFehYCbu3urIcd+oUKs1nmvC1o\nS4uOK46XcAAxfAH9ZOJ1GqKq6bZHIA==\n",
     "name_suffix": "_2025"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:57:37.622+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson14-level2-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson14-level2-2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:57:37.622+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson14-level2-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson14-level2-2024\"},{\"changed_at\":\"2025-10-17 11:58:32 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Pythonlab>

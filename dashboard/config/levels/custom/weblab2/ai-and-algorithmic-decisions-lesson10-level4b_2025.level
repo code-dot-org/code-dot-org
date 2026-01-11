@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T03:33:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Password Visibility\r\n\r\n**Do This:**\r\n\r\n\r\n1. Add `let showPassword = false;` at the top of your JS.\r\n1. Write a `render()` function that:\r\n\r\n   * Sets the input field’s `type` to `\"text\"` when `showPassword` is true.\r\n   * Sets it to `\"password\"` when `showPassword` is false.\r\n1. In the checkbox change event: flip `showPassword` and call `render()`.\r\n\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Password Visibility",
+    "bubble_choice_description": "Show or hide a password in an input field.",
+    "thumbnail_url": "https://images.code.org/22f7b42cb451c3a7ef366ba683ca15d7-password.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Level 2 – Password Visibility</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body class=\"light\">\n    <h1>Password Visibility</h1>\n\n    <section id=\"pwBlock\">\n      <label for=\"pwInput\">Password:</label>\n      <input id=\"pwInput\" type=\"password\" value=\"p@ssword123!\">\n      <br/><br/>\n      <label>\n        <input id=\"chkToggle\" type=\"checkbox\">\n        Show password\n      </label>\n    </section>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Layout */\nbody {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  align-items: center;\n  min-height: 100vh;\n  transition: background-color 0.3s, color 0.3s;\n}\n\ninput[type=\"password\"],\ninput[type=\"text\"] {\n  padding: 0.4rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n\nlabel {\n  margin: 0.5rem;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Selectors\nconst pwInput = document.getElementById(\"pwInput\");\nconst chkToggle = document.getElementById(\"chkToggle\");\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:33:04.320+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level2b-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level2b-test-2025\"},{\"changed_at\":\"2025-11-13 03:36:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:45:41 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

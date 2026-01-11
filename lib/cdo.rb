@@ -320,7 +320,7 @@ module Cdo
     # to ensure that other systems (such as Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
-      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+      rack_env?(:test) && pegasus_hostname == 'test.code.org' && chef_managed
     end
 
     # Identify whether we are executing within a web application server as most of our Ruby classes and modules
@@ -330,6 +330,12 @@ module Cdo
     # we use `thin`.
     def running_web_application?
       %w(puma thin).include?(File.basename($0))
+    end
+
+    # Whether we are executing within a web application server on the
+    # chef-managed test system (test.code.org / test-studio.code.org).
+    def managed_test_server?
+      test_system? && running_web_application?
     end
 
     # Is this code running in a webserver as part of our Continuous Integration
@@ -347,6 +353,7 @@ module Cdo
       @@log = log
     end
 
+    # See docs/log-formats.md - Rails Application Logs - Useful Queries/Patterns for log query patterns.
     def log
       require 'logger'
       @@log ||= Logger.new($stdout).tap do |l|

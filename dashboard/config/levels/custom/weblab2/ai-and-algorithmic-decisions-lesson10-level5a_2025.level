@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T03:33:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Fee Waiver",
+    "long_instructions": "\r\n## Fee Waiver\r\n\r\n**Eligibility Criteria:**\r\nA student is **eligible** if their **income is below $45,000** **or** their **family has 5 or more members**, and they **do not owe past-due fees**.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Review the numeric input fields in the starter code: `income`, `familySize`, and the checkbox `feesDue`.\r\n\r\n2. Write the `eligible()` function so it updates the eligibility message (`message`) based on whether the current input values meet the criteria.\r\n\r\n3. In the event handler for the **Run** button (`runBtn`), call `eligible()` to test the current inputs.\r\n",
+    "thumbnail_url": "https://images.code.org/2bac91ddbbe28962c7f8a161f13dd64d-fee.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "bubble_choice_description": "Eligible if income is under the limit or family size is large, and not owing past-due fees.",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Fee Waiver – Eligibility</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Fee Waiver Checker</h1>\n\n    <label>\n      Income ($):\n      <input id=\"income\" type=\"number\" min=\"0\" value=\"44000\">\n    </label>\n\n    <label>\n      Family size:\n      <input id=\"familySize\" type=\"number\" min=\"1\" value=\"4\">\n    </label>\n\n    <label>\n      <input id=\"feesDue\" type=\"checkbox\">\n      Owes past-due fees\n    </label>\n\n    <button id=\"runBtn\">Run</button>\n\n    <p id=\"message\">—</p>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  background-color: #f9f9f9;\n}\n\nh1 {\n  margin-bottom: 1rem;\n}\n\nlabel {\n  display: block;\n  margin: 0.5rem 0;\n}\n\ninput[type=\"number\"] {\n  padding: 0.4rem;\n  margin-left: 0.5rem;\n}\n\nbutton {\n  margin-top: 1rem;\n  padding: 0.5rem 1rem;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background-color: #f2f2f2;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #e2e2e2;\n}\n\n#message {\n  margin-top: 1rem;\n  font-weight: bold;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const income = document.getElementById(\"income\");\nconst familySize = document.getElementById(\"familySize\");\nconst feesDue = document.getElementById(\"feesDue\");\nconst message = document.getElementById(\"message\");\nconst runBtn = document.getElementById(\"runBtn\");\n\nconst eligible = () => {\n  // Use these variables in your logic\n  const incomeValue = Number(income.value);\n  const familyValue = Number(familySize.value);\n  const owesFees = feesDue.checked;\n\n\n\n  \n}\n\nrunBtn.addEventListener(\"click\", eligible);\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n8xjcMe97bd+mhl8VZJpmuFdvHhnnYg==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:33:41.955+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level3a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level3a-test-2025\"},{\"changed_at\":\"2025-11-13 03:35:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:46:28 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -172,3 +172,48 @@ export async function evaluationFromOpenAI(
     throw new Error('Error getting evaluation response');
   }
 }
+
+const MATCH_TEACHING_PROFILE_URL = '/openai/match_teaching_profile';
+
+export interface TeachingProfileData {
+  selectedGoals?: string[];
+  selectedSupports?: string[];
+  otherSupportText?: string;
+  otherGoalText?: string;
+  selectedConfidence?: number;
+  yearsTeaching?: number;
+  classroomVision?: string;
+  challenge?: string;
+}
+
+export interface TeachingProfileMatch {
+  matchingProfile: string;
+  reasoning: string;
+}
+
+export async function matchTeachingProfile(
+  teachingProfileData: TeachingProfileData
+): Promise<TeachingProfileMatch | null> {
+  const payload = {
+    teaching_profile_data: teachingProfileData,
+  };
+
+  const response = await HttpClient.post(
+    MATCH_TEACHING_PROFILE_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  if (response.ok) {
+    const result = await response.json();
+    if (result.content) {
+      return JSON.parse(result.content);
+    }
+    return result;
+  } else {
+    throw new Error('Error matching teaching profile');
+  }
+}

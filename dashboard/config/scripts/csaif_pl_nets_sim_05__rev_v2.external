@@ -1,0 +1,23 @@
+name 'csaif_pl_nets_sim_05_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# DNS Queries
+
+#### In <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2025/units/4/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6</a>, students will use DNS GET requests to get IP addresses.
+
+
+#### Students will ask the DNS for the IP address of a user by sending GET username. They’ll then use the IP address they get back to communicate as they had in previous lessons using the Internt Simulator.
+<p align="center">
+<img src="https://images.code.org/4b51550cf1c48db53b18d2efc055c4b1-Screenshot 2025-04-22 at 10.03.28 AM.png" alt="Router 1 conneting users with DNS" width="50%" style="border-radius:10px; border: 2px solid black;">
+</p>
+
+#### At the end of the activity, students will reflect on: *What problem does DNS solve? What did they notice about how GET requests work to retrieve information?*
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If you're not sure, watch the video on <a href='https://www.youtube.com/watch?v=5o8CwafCxnU&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&index=3&pp=iAQB' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>IP Addresses and DNS</a>.
+</p>
+
+
+MARKDOWN

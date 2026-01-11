@@ -27,7 +27,8 @@
       "line": null,
       "shape": null,
       "point": null,
-      "rgb": null
+      "rgb": null,
+      "strokeWeight": null
     },
     "edit_code": true,
     "embed": "false",
@@ -76,11 +77,12 @@
     "bubble_choice_description": "Use all that you have learned so far to create a drawing of your favorite season that changes each time you run the program!",
     "libraries_enabled": "false",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:41.777+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play2_2024\\\"\"],\"cloned_from\":\"CSD U3 Random free play2_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:41.777+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play2_2024\\\"\"],\"cloned_from\":\"CSD U3 Random free play2_2024\"},{\"changed_at\":\"2025-11-12 22:59:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -1,0 +1,80 @@
+name 'sp-pl-DS-teacher-lesson2_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Sense of Data 
+
+<img src="https://images.code.org/80ecbee7c4dfb3f1c882ad81b5013b21-image-1744644828568.png" alt="Image CS Discoveries students" width="275px" style="border-radius:10px; float:right; margin: 0 0 10px 40px;">
+
+#### After using the Three Reads strategy, students will analyze a larger dataset to answer the question: *How much pizza should we order for a school party?*
+
+#### This dataset includes survey responses from hundreds of students, and they'll learn **how data scientists use computers to handle large, complex data sets**.
+
+#### They will us the AI Chat Lab to assist with their data analysis. 
+
+<div style="clear: both;"></div>
+
+---
+
+## How AI Helps Us Understand Data
+
+<div style="display: flex; gap: 40px; align-items: flex-start; font-size: 16pt;">
+
+<!-- Left Column: AI Tool Capabilities -->
+<div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; box-shadow: 2px 2px 6px rgba(0,0,0,0.15); padding: 20px; background-color: #f9fafa; max-width: 400px;">
+    <strong>AI data analytics tools can:</strong>
+    <ul style="padding-left: 20px; margin-top: 10px; font-size: 16pt;">
+      <li>Analyze large datasets in seconds</li><br>
+      <li>Spot patterns, trends, and outliers</li><br>
+      <li>Summarize data and make predictions</li>
+    </ul>
+  </div>
+
+  <!-- Right Column: YouTube Use Case Examples -->
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 400px;">
+
+<div style="display: flex; gap: 15px; align-items: flex-start;">
+      <img src="https://images.code.org/edd3d3876661789bc7b940ae57131ea6-image-1744644404677.png" alt="Spreadsheet icon" style="width: 40px; height: 40px;">
+      <div style="font-size: 16pt;">YouTube tracks what millions of viewers watch, like, and search.</div>
+    </div>
+
+<div style="display: flex; gap: 15px; align-items: flex-start;">
+      <img src="https://img.icons8.com/office/40/combo-chart.png" alt="Chart icon" style="width: 40px; height: 40px;">
+      <div style="font-size: 16pt;">AI spots trends like: “People who watch vlogs also like travel videos.”</div>
+    </div>
+
+<div style="display: flex; gap: 15px; align-items: flex-start;">
+      <img src="https://img.icons8.com/office/40/youtube-play.png" alt="YouTube icon" style="width: 40px; height: 40px;">
+      <div style="font-size: 16pt;">AI predicts videos you’ll probably enjoy next.</div>
+    </div>
+
+  </div>
+
+</div>
+
+---
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<h2>Introducing AI Chat Lab</h2>
+
+<img src="https://images.code.org/d82ce6ee4dc44c9d9ccdf68b2751fc1c-9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414 (2).png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding: 10px; height: 200px; clear: both; margin: 0 10px 10px 0;">
+
+<p style = "font-size:14pt;">Code.org has created <strong>AI Chat Lab</strong>, a safe and student-friendly chatbot built directly into the curriculum. This allows students to explore generative AI in an authentic and secure way without leaving the platform.</p>
+
+<p style = "font-size:14pt;">AI Chat Lab is designed specifically for education, so we’ve added guardrails to keep the experience safe and appropriate.</p>
+
+<ul style = "font-size:14pt;">
+	<li>The chatbot supports learning in a guided, structured environment that encourages students to think critically as they work through problems.</li><br>
+    <li>Content is monitored to ensure it remains appropriate and productive, making AI Chat Lab a safe space for exploration and discovery.</li>
+</ul>
+
+<p style = "font-size:14pt;">You'll get a chance to try out AI Chat Lab on the next level.</p>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ Want to know more about how AI Chat Lab works? Check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank" rel="noopener noreferrer"> FAQ Support Article</a>.
+</p>
+
+</div>
+
+## Let's practice Analyzing Data with AI!
+MARKDOWN

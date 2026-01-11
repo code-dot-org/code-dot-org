@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {AdlibType} from '@cdo/apps/lab2/views/components/guide/Adlib';
 
@@ -23,13 +23,20 @@ export interface MusicLevelData extends ProjectLevelData {
   showAiTemperatureExplanation?: boolean;
   showAiGenerateAgainHelp?: boolean;
   allowChangeStartingPlayheadPosition?: boolean;
-  toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   validationTimeout?: number;
-  aiCodeGenerate?: boolean;
+  // Show the Guide instead of regular instructions.
+  guideMode?: 'instructions' | 'aiCodeGenerate';
   // The ID of a code-defined adlib to display.
   aiCodeGenerateAdlibId?: string;
   // Alternatively, an actual adlib object to display.
   aiCodeGenerateAdlib?: AdlibType;
+  // Force showing the prompt text box instead of an adlib.
+  aiCodeGenerateText?: boolean;
+  // Optional extra prompt text.
+  aiCodeGenerateExtraPrompt?: string;
+  // Dance move to show when playing music.
+  danceMove?: string;
 }
 
 export type ExemplarValidationMode = 'default' | 'type';

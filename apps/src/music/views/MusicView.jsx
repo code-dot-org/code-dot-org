@@ -14,6 +14,7 @@ import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -23,8 +24,6 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -48,6 +47,7 @@ import {
   Triggers,
 } from '../constants';
 import {AnalyticsContext} from '../context';
+import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -73,6 +73,7 @@ import {
   getBlockMode,
   addPlaybackEvents,
   setCodeToLoad,
+  setAiGenerateState,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -95,6 +96,8 @@ class UnconnectedMusicView extends React.Component {
   static propTypes = {
     levelProperties: PropTypes.object.isRequired,
     initialSources: PropTypes.object,
+    channel: PropTypes.object,
+    projectManager: PropTypes.object,
     // populated by Redux
     currentLevelId: PropTypes.string,
     userId: PropTypes.number,
@@ -128,6 +131,7 @@ class UnconnectedMusicView extends React.Component {
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
+    orderedFunctions: PropTypes.array,
     validationState: PropTypes.object,
     canUndo: PropTypes.bool,
     canRedo: PropTypes.bool,
@@ -135,7 +139,11 @@ class UnconnectedMusicView extends React.Component {
     scriptName: PropTypes.string,
     clearCodeToLoad: PropTypes.func,
     sendAttemptReport: PropTypes.func,
+    setAiGenerateState: PropTypes.func,
     isFirstAttempt: PropTypes.bool,
+    logLevelActivity: PropTypes.func,
+    projectSources: PropTypes.object,
+    viewingOldVersion: PropTypes.bool,
   };
 
   constructor(props) {
@@ -279,6 +287,23 @@ class UnconnectedMusicView extends React.Component {
       this.props.clearCodeToLoad();
       // Reset the hasEdited state since we just loaded code.
       this.setState({hasEdited: false});
+    }
+
+    const prevProjectSource = prevProps.projectSources?.source;
+    const currProjectSource = this.props.projectSources?.source;
+    if (currProjectSource && currProjectSource !== prevProjectSource) {
+      try {
+        this.stopSong();
+        const restoredPackId =
+          this.props.projectSources.labConfig?.music?.packId || null;
+        this.library.setCurrentPackId(restoredPackId);
+        this.props.setPackId(restoredPackId);
+        const workspaceCode = JSON.parse(currProjectSource);
+        this.loadCode(workspaceCode);
+        this.setState({hasEdited: false});
+      } catch (e) {
+        console.error('Error loading blocks from project sources', e);
+      }
     }
   }
 
@@ -479,7 +504,16 @@ class UnconnectedMusicView extends React.Component {
     const imageAttributions = this.library.getImageAttributions();
     if (imageAttributions.length > 0) {
       setExtraCopyrightContent(
-        <ImageAttributions attributions={this.library.getImageAttributions()} />
+        <>
+          <ImageAttributions
+            attributions={this.library.getImageAttributions()}
+          />
+          {this.library.getExtraCredit() && (
+            <p>
+              {musicI18n.extraCredit({credit: this.library.getExtraCredit()})}
+            </p>
+          )}
+        </>
       );
     }
   };
@@ -520,7 +554,7 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  clearCode = () => {
+  clearCode = maintainPackId => {
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
     const isEditingExemplar = getAppOptionsEditingExemplar();
@@ -531,11 +565,15 @@ class UnconnectedMusicView extends React.Component {
       packId = packId || DEFAULT_PACK;
     }
 
-    // Clear the pack, unless it came from the level data itself.
-    if (!packId) {
+    // Clear the pack, unless it came from the level data itself, or we are
+    // explicitly told to leave it intact.
+    if (!packId && !maintainPackId) {
       this.props.setPackId(null);
       this.library.setCurrentPackId(null);
     }
+
+    // In case we are showing the music generation Guide, reset its state.
+    this.props.setAiGenerateState('clearing-before-none');
 
     // In Start mode, load sources from the default JSON.
     if (isStartMode) {
@@ -858,19 +896,21 @@ class UnconnectedMusicView extends React.Component {
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save(sourcesToSave, forceSave);
+    (
+      this.props.projectManager ||
+      Lab2Registry.getInstance().getProjectManager()
+    )?.save(sourcesToSave, forceSave);
 
     // If we are AI generating, then save metadata for Dance Party.
     if (
       AppConfig.getValue('ai-generate') === 'true' ||
-      this.props.levelProperties.levelData.aiCodeGenerate
+      this.props.levelProperties.levelData.guideMode === 'aiCodeGenerate'
     ) {
       saveGeneratedSongMetadata(
-        Lab2Registry.getInstance().getProjectManager().getChannelId(),
+        this.props.channel?.id,
         this.props.packId,
         this.props.playbackEvents,
+        this.props.orderedFunctions,
         this.props.lastMeasure
       );
     }
@@ -882,20 +922,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playSong = async () => {
-    if (!this.state.hasRun) {
-      const eventName = this.props.levelProperties.isProjectLevel
-        ? EVENTS.PROJECT_ACTIVITY
-        : EVENTS.LEVEL_ACTIVITY;
-      analyticsReporter.sendEvent(eventName, {
-        signedIn: this.props.signInState,
-        unitName: this.props.scriptName,
-        levelId: this.props.levelProperties.id,
-        levelName: this.props.levelProperties.name,
-      });
-    }
     this.setState({
       hasRun: true,
     });
+    this.props.logLevelActivity();
     if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
     }
@@ -994,6 +1024,10 @@ class UnconnectedMusicView extends React.Component {
           hasRun={this.state.hasRun}
           hasEdited={this.state.hasEdited}
           levelProperties={this.props.levelProperties}
+          channel={this.props.channel}
+          overrideProjectManager={this.props.projectManager}
+          startSources={{source: JSON.stringify(this.getStartSources())}}
+          viewingOldVersion={this.props.viewingOldVersion}
         />
         <Callouts />
       </AnalyticsContext.Provider>
@@ -1023,6 +1057,7 @@ const MusicView = connect(
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
+    orderedFunctions: state.music.orderedFunctions,
     validationState: state.lab.validationState,
     lastMeasure: state.music.lastMeasure,
     canUndo: state.music.canUndo,
@@ -1030,6 +1065,8 @@ const MusicView = connect(
     codeToLoad: state.music.codeToLoad,
     scriptName: state.progress.scriptName,
     isFirstAttempt: getCurrentLevel(state)?.status === LevelStatus.not_tried,
+    projectSources: state.lab2Project.projectSources,
+    viewingOldVersion: state.lab2Project.viewingOldVersion,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
@@ -1068,7 +1105,17 @@ const MusicView = connect(
     clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
     sendAttemptReport: () =>
       dispatch(sendProgressReport('music', TestResults.LEVEL_STARTED)),
+    setAiGenerateState: state => dispatch(setAiGenerateState(state)),
   })
 )(UnconnectedMusicView);
 
-export default MusicView;
+const MusicViewWithHooks = props => {
+  const logLevelActivity = useLevelActivityMetrics(props.levelProperties);
+  return <MusicView {...props} logLevelActivity={logLevelActivity} />;
+};
+
+MusicViewWithHooks.propTypes = {
+  levelProperties: PropTypes.object.isRequired,
+};
+
+export default MusicViewWithHooks;

@@ -14,16 +14,20 @@ describe('expandableImages', () => {
       renderSpy.mockRestore();
     });
 
-    const createExpandableImage = url => {
+    const createExpandableImage = (url, alt) => {
       const result = document.createElement('span');
       result.classList.add('expandable-image');
       result.dataset['url'] = url;
+      result.textContent = alt;
       return result;
     };
 
     it('creates an ImagePreview when it finds an expandable image', () => {
       const containerNode = document.createElement('div');
-      const image = createExpandableImage('https://example.com/img.jpg');
+      const image = createExpandableImage(
+        'https://example.com/img.jpg',
+        'This is alt text'
+      );
       containerNode.appendChild(image);
 
       renderExpandableImages(containerNode);
@@ -32,6 +36,7 @@ describe('expandableImages', () => {
 
       const renderElement = renderSpy.mock.calls[0][0];
       expect(renderElement.props.url).toBe('https://example.com/img.jpg');
+      expect(renderElement.props.alt).toBe('This is alt text');
 
       const renderContainer = renderSpy.mock.calls[0][1];
       expect(renderContainer).toBe(image);

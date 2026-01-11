@@ -42,6 +42,7 @@ dashboard/app/assets/javascripts/** !text !filter !merge !diff
 dashboard/app/assets/stylesheets/** !text !filter !merge !diff
 dashboard/config/locales/**/*en.yml !text !filter !merge !diff
 dashboard/config/locales/**/*en.json !text !filter !merge !diff
+dashboard/public/**/README.md !text !filter !merge !diff
 dashboard/test/fixtures/**/*.tsv !text !filter !merge !diff
 dashboard/test/fixtures/**/*.csv !text !filter !merge !diff
 dashboard/test/fixtures/**/*.json !text !filter !merge !diff

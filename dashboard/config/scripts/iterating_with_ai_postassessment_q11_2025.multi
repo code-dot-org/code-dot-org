@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q11_2025'
+
+question 'An app has a "Price Range" filter with thresholds of $0-$10, $11-$50, and $51+. If a user wants to find an item that costs $0.50 but the filter only shows items starting at $1.00, this is an issue of:'
+
+wrong 'Algorithmic mutation.'
+right 'Filter bias and exclusion.'
+wrong 'Off-by-one rendering.'
+wrong 'Pure function inconsistency.'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lesson 9
+
+Categorization choices and thresholds can accidentally sideline certain data or users. Analyzing these choices for inclusivity is a key part of responsible design.
+MARKDOWN

@@ -1,0 +1,24 @@
+name 'csaif_pl_project-description-L2-cyber_aug2025_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Designing Secure Systems Project Overview
+
+<img src="https://images.code.org/615dfc21f720531bfcc14b80a9b103d9-image-1755268620389.png" alt="sample comic from before artifact example. The character is concerned that the message isn't private" width="250px" style="border-radius:10px; float:left; margin: 0px 50px 0px 50px;">
+
+#### In the final project, students analyze a real-world digital system from multiple user perspectives to identify **two key issues**, such as weak input validation or insecure data storage. 
+
+#### They propose defense mechanism solutions, creating “Before” artifacts to show the problems and “After” artifacts to illustrate the fixes—featuring a personified defense mechanism. 
+
+#### Students also explain how each fix works, its trade-offs, and how it protects users.
+
+<div style="clear:both;"></div>
+
+---
+
+#### These requirements come from the  <a href="https://docs.google.com/document/d/1VgnmVktQ4_Kq4yWKW9v4xvuvNRTFfL1KIuRcFrSx2GQ/edit?usp=sharing" target="blank" rel="noopener noreferrer">rubric</a> located at the end of the project guide. 
+
+## Next up
+#### Let's examine the project guide and briefly look at the day-by-day plan for facilitating this project.
+MARKDOWN

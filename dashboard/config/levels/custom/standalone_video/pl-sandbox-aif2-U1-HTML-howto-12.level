@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-10-21T16:35:38.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aif2-weblab-html-tutorial",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "\r\n# Need more clarification?\r\n\r\n## Using the Backpack Feature\r\n\r\n#### The previous level instructed you to use the **backpack feature**.\r\n\r\n#### The backpack feature in coding platforms allows you to save and reuse code  across different projects.\r\n\r\n## How to Save to the Backpack\r\n\r\n#### Students should get in the habit of saving their files after each level they build in it. This way, they can easily access the code on future projects. \r\n\r\n- #### Click the three-dot menu icon next to the `index.html` file name.\r\n- #### Select \"Save to backpack\" from the drop-down menu.\r\n- #### Name the file and press save.\r\n\r\n<img src=\"https://images.code.org/a5083c7ccc54bfa4ea561fa29adf2902-image-1740077664809.gif\" alt=\"gif of how to use the backpack\" width=\"650px\" style=\"display: block; margin-left: auto; margin-right: auto;\">\r\n\r\n\r\n## How to Import the Backpack \r\n#### Students can import their previous work to use on current projects. \r\n\r\n- #### Click the `+` icon next to the File menu.\r\n- #### Select \"Import from backpack\" from the drop-down menu.\r\n- #### Select your file and click the \"Import to project\" button.\r\n\r\n<img src=\"https://images.code.org/f53f681651f42c532cf0c7078fc14099-image-1740078209718.gif\" alt=\"gif of how to use the backpack\" width=\"650px\" style=\"display: block; margin-left: auto; margin-right: auto;\">\r\n\r\n\r\n---\r\n## Step-by-Step Tutorial of the previous level\r\n\r\n#### Not sure about the last level? Check out this quick tutorial for a step-by-step walk through.\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-10-21T16:35:38.067+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations-overview_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations-overview_04_2024\"},{\"changed_at\":\"2025-10-21 17:24:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-21 18:07:36 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-23 19:12:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-23 21:58:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 21:40:02 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 21:42:12 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 21:44:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 21:48:53 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

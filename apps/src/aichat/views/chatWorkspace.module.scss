@@ -15,6 +15,26 @@ $tabs-default-spacing: 4px;
   overflow: hidden;
 }
 
+.chatMessageOutline {
+  scroll-margin-top: 0.6rem;
+}
+
+.chatMessageOutline:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+// We should avoid using this unless necessary for accessibility,
+// as it renders its component out of frame at a size of 1 pixel.
+.accessibilityHidden {
+  position: absolute;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 %conversation-area,
 .conversationArea {
   flex-grow: 1;
@@ -26,6 +46,12 @@ $tabs-default-spacing: 4px;
   position: relative;
   width: 100%;
   height: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .scrollToBottomButton {
@@ -41,7 +67,7 @@ $tabs-default-spacing: 4px;
   width: 100%;
   overflow-y: auto;
   box-sizing: border-box;
-  padding: $default-spacing;
+  padding: 0.625rem;
 }
 
 .floatingScrollToBottomButtonContainer {
@@ -66,7 +92,7 @@ $tabs-default-spacing: 4px;
   }
 
   .chatDisabledIcon {
-    width: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -107,6 +133,10 @@ $tabs-default-spacing: 4px;
   padding: 0.625rem;
   border-top: variables.$default-border;
   background: var(--background-neutral-secondary);
+
+  &:empty {
+    display: none;
+  }
 }
 
 .alertLink {
@@ -115,12 +145,15 @@ $tabs-default-spacing: 4px;
 
 .assetCol {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.375rem;
 }
 
 .imagePreview {
-  max-height: 120px;
+  max-height: 48px;
+  border-radius: variables.$default-border-radius;
   width: auto;
   height: auto;
   opacity: 1;
@@ -130,4 +163,8 @@ $tabs-default-spacing: 4px;
   @include remove-button-styles;
   align-self: end;
   font-size: 13px;
+  border-radius: variables.$default-border-radius;
+  line-height: 1;
+
+  @include focus-styles;
 }

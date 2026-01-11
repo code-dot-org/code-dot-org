@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {OverlineTwoText} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -14,23 +13,28 @@ import moduleStyles from './save-version-panel.module.scss';
 interface SaveVersionPanelProps {
   projectSources: ProjectSources | undefined;
   onSuccess: () => void;
-  versionLoading: boolean;
+  disabled: boolean;
+  buttonLabel: string;
 }
 
 const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
   projectSources,
   onSuccess,
-  versionLoading,
+  disabled,
+  buttonLabel,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
   const onSaveVersion = useCallback(async () => {
-    if (!projectSources) return;
+    if (!projectSources || isSaving) return;
+    setIsSaving(true);
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (!projectManager) {
       console.error('Project manager not available');
+      setIsSaving(false);
       return;
     }
 
@@ -61,7 +65,8 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
               'Content-Type': 'application/json; charset=UTF-8',
             }
           );
-          projectManager.setCurrentVersionHasComment(true);
+          // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
+          projectManager.setForceNewVersion(true);
           setCommitDescription('');
         } catch (error) {
           console.error('Failed to save commit comment:', error);
@@ -71,36 +76,44 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
       onSuccess();
     } catch (error) {
       console.error('Failed to save project:', error);
+    } finally {
+      setIsSaving(false);
     }
-  }, [commitDescription, projectSources, dispatch, channelId, onSuccess]);
+  }, [
+    commitDescription,
+    projectSources,
+    dispatch,
+    channelId,
+    onSuccess,
+    isSaving,
+  ]);
 
   return (
     <div className={moduleStyles.footerPanel}>
-      <div className={moduleStyles.saveCurrentVersionHeader}>
-        <div className={moduleStyles.saveCurrentVersionHeaderText}>
-          <OverlineTwoText className={moduleStyles.overlineTwoText}>
-            {lab2I18n.saveCurrentVersion()}
-          </OverlineTwoText>
-        </div>
-      </div>
       <div className={moduleStyles.saveCurrentVersionDescription}>
         <div className={moduleStyles.saveCurrentVersionDescriptionInput}>
-          <div className={moduleStyles.label}>
-            {lab2I18n.describeYourChanges()}
-          </div>
           <textarea
+            id="commit-description"
             onChange={e => setCommitDescription(e.target.value)}
             value={commitDescription}
             className={moduleStyles.textArea}
+            disabled={disabled}
+            placeholder={lab2I18n.describeYourChanges()}
           />
         </div>
         <Button
           id="save-version-button"
           size="s"
+          type="secondary"
+          color="gray"
+          iconLeft={{
+            iconName: 'save',
+            iconStyle: 'solid',
+          }}
           className={moduleStyles.versionButton}
-          text={lab2I18n.saveVersion()}
+          text={buttonLabel}
           onClick={onSaveVersion}
-          disabled={versionLoading || commitDescription.trim() === ''}
+          disabled={disabled || isSaving || commitDescription.trim() === ''}
         />
       </div>
     </div>

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-25T22:26:56.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Cleaning Data\r\n\r\n#### In this warm-up activity, students will write what they notice and what they wonder about the visualization.  \r\n\r\n#### Look at two graphs trying to help someone answer the question: “When should we have the party?”\r\n\r\n<img src=\"https://images.code.org/7e010252c79b9ea18ad1709c47913cde-image-1721314333157.png\" alt=\"spreadsheet of dataset with pizza preferences\" alt=\"diagram of software: system software, application software, and utlity software with examples of icons of each\" alt=\"chatbot lab level\" width=\"80%\" style=\"border: 2px solid black; border-radius: 8px; display: block; margin: auto\">\r\n<br>\r\n\r\n<img src=\"https://images.code.org/376f6fc4810525fd42748cf7661b5f71-image-1721314350825.png\" alt=\"spreadsheet of dataset with pizza preferences\" alt=\"diagram of software: system software, application software, and utlity software with examples of icons of each\" alt=\"chatbot lab level\" width=\"80%\" style=\"border: 2px solid black; border-radius: 8px; display: block; margin: auto;\">\r\n<br>\r\n\r\n#### In the reflection box below answer the following questions:\r\n- #### *What do you notice? What do you wonder?*\r\n- #### *Which of these makes it easier for a human to decide when the party should be? Explain your answer.*\r\n\r\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"><strong>Teacher Tip:</strong> After students have had a chance to write a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together for a <b>data talk</b>. \r\n</p>\r\n</div>\r\n<br>\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_-rev",
+    "stay_on_level_after_submit": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:26:56.826+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-cleaningData_2025\\\"\"],\"cloned_from\":\"sp-pl-DS-cleaningData_2025\"},{\"changed_at\":\"2025-12-16 16:54:26 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 17:03:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-16 21:44:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-19 13:11:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

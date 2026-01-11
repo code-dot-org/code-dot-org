@@ -1,0 +1,169 @@
+name 'pl_sandbox_aif_2_U1-CSS-13-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Common CSS Properties
+
+####  CSS properties tell the computer how each HTML element should look and behave, including color, spacing, and layout that bring the page’s structure to life.
+
+<table style="width:100%; border-collapse:collapse; margin-bottom:24px; font-size:14pt;">
+  <tr style="background:#f2f2f2;">
+    <th colspan="3" style="padding:10px; text-align:left;">🎨 Text & Color</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">color</td>
+    <td style="padding:8px;font-size:14pt;">Text color</td>
+    <td style="padding:8px;font-size:14pt;"><code>color: blue;</code></td>
+  </tr>
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">background-color</td>
+    <td style="padding:8px;font-size:14pt;">Fill behind content</td>
+    <td style="padding:8px;font-size:14pt;"><code>background-color: lightblue;</code></td>
+  </tr>
+  <tr>
+    <td style="padding:8px;font-size:14pt;">font-size</td>
+    <td style="padding:8px;font-size:14pt;">Text size</td>
+    <td style="padding:8px;font-size:14pt;"><code>font-size: 18px;</code></td>
+  </tr>
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">font-family</td>
+    <td style="padding:8px;font-size:14pt;">Font style</td>
+    <td style="padding:8px;font-size:14pt;"><code>font-family: Arial;</code></td>
+  </tr>
+  <tr>
+    <td style="padding:8px;font-size:14pt;">text-align</td>
+    <td style="padding:8px;font-size:14pt;">Horizontal text alignment</td>
+    <td style="padding:8px;font-size:14pt;"><code>text-align: center;</code></td>
+  </tr>
+</table>
+<br>
+
+<table style="width:100%; border-collapse:collapse; margin-bottom:24px; font-size:14pt;">
+  <tr style="background:#f2f2f2;">
+    <th colspan="3" style="padding:10px; text-align:left;">📏 Spacing & Size</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">margin</td>
+    <td style="padding:8px;font-size:14pt;">Outside spacing</td>
+    <td style="padding:8px;font-size:14pt;"><code>margin: 20px;</code></td>
+  </tr>
+
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">padding</td>
+    <td style="padding:8px;font-size:14pt;">Inside spacing</td>
+    <td style="padding:8px;font-size:14pt;"><code>padding: 16px;</code></td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">border</td>
+    <td style="padding:8px;font-size:14pt;">Outline</td>
+    <td style="padding:8px;font-size:14pt;"><code>border: 2px solid black;</code></td>
+  </tr>
+
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">width</td>
+    <td style="padding:8px;font-size:14pt;">Element width</td>
+    <td style="padding:8px;font-size:14pt;"><code>width: 300px;</code></td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">height</td>
+    <td style="padding:8px;font-size:14pt;">Element height</td>
+    <td style="padding:8px;font-size:14pt;"><code>height: 200px;</code></td>
+  </tr>
+</table>
+<br>
+<table style="width:100%; border-collapse:collapse; margin-bottom:24px; font-size:14pt;">
+  <tr style="background:#f2f2f2;">
+    <th colspan="3" style="padding:10px; text-align:left;">🧭 Layout & Alignment</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">display</td>
+    <td style="padding:8px;font-size:14pt;">Sets layout mode</td>
+    <td style="padding:8px;font-size:14pt;"><code>display: flex;</code></td>
+  </tr>
+
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">justify-content</td>
+    <td style="padding:8px;font-size:14pt;">Horizontal alignment</td>
+    <td style="padding:8px;font-size:14pt;"><code>justify-content: center;</code></td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">align-items</td>
+    <td style="padding:8px;font-size:14pt;">Vertical alignment</td>
+    <td style="padding:8px;font-size:14pt;"><code>align-items: center;</code></td>
+  </tr>
+
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">gap</td>
+    <td style="padding:8px;font-size:14pt;">Space between items</td>
+    <td style="padding:8px;font-size:14pt;"><code>gap: 12px;</code></td>
+  </tr>
+</table>
+<br>
+<table style="width:100%; border-collapse:collapse; margin-bottom:24px; font-size:14pt;">
+  <tr style="background:#f2f2f2;">
+    <th colspan="3" style="padding:10px; text-align:left;">📦 Box & Style</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">border-radius</td>
+    <td style="padding:8px;font-size:14pt;">Rounded corners</td>
+    <td style="padding:8px;font-size:14pt;"><code>border-radius: 10px;</code></td>
+  </tr>
+
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">box-shadow</td>
+    <td style="padding:8px;font-size:14pt;">Drop shadow</td>
+    <td style="padding:8px;font-size:14pt;"><code>box-shadow: 2px 2px 6px gray;</code></td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;font-size:14pt;">opacity</td>
+    <td style="padding:8px;font-size:14pt;">Transparency</td>
+    <td style="padding:8px;font-size:14pt;"><code>opacity: 0.9;</code></td>
+  </tr>
+
+  <tr style="background:#fafafa;">
+    <td style="padding:8px;font-size:14pt;">overflow</td>
+    <td style="padding:8px;font-size:14pt;">Clip or scroll content</td>
+    <td style="padding:8px;font-size:14pt;"><code>overflow: auto;</code></td>
+  </tr>
+</table>
+
+<div style="clear:both;"></div>
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <p style="margin: 12px; font-size: 16px;">
+    <strong>Do you recognize any of the properties from the previous level?</strong>
+  </p>
+</div>
+
+## Remember you are just getting started
+
+#### These are just a few properties to get you started. As you move into the next level, focus on recognizing and understanding what you can. 
+
+#### It’s not important yet to know how every line of code works, but to see the big picture and communicate clearly with the AI about what you want your page to do.
+
+
+MARKDOWN

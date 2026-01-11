@@ -9,11 +9,13 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
@@ -60,6 +62,10 @@ type AssignmentData = {
   unitName?: string | null;
 };
 
+interface AifInfo {
+  aif: boolean;
+}
+
 export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
@@ -73,6 +79,7 @@ export interface TeacherSectionState {
   sectionOrder: number[];
   selectedSectionId: number | null;
   selectedSectionName: string;
+  selectedSectionUnitName: string;
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -135,6 +142,7 @@ const initialState: TeacherSectionState = {
   sectionOrder: [],
   selectedSectionId: NO_SECTION,
   selectedSectionName: '',
+  selectedSectionUnitName: '',
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -212,13 +220,16 @@ const sectionSlice = createSlice({
         if (state.sectionIds.includes(id)) {
           state.selectedSectionId = id;
           state.selectedSectionName = state.sections[id].name;
+          state.selectedSectionUnitName = state.sections[id].unitName || '';
         } else {
           state.selectedSectionId = NO_SECTION;
           state.selectedSectionName = '';
+          state.selectedSectionUnitName = '';
         }
       } else {
         state.selectedSectionId = NO_SECTION;
         state.selectedSectionName = '';
+        state.selectedSectionUnitName = '';
       }
     },
     updateSelectedSection(state, action: PayloadAction<ServerSection>) {
@@ -1014,8 +1025,38 @@ export const assignToSection = (
     },
     {includeUserId: true}
   );
+
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
+    if (unitId && section.unitId !== unitId) {
+      if (
+        DCDO.get('show-aita-lesson-summaries', false) ||
+        experiments.isEnabled('ai_lesson_summaries')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      } else {
+        HttpClient.fetchJson<AifInfo>(
+          `/teacher_dashboard/unit_in_aif?unit_id=${unitId}`
+        ).then(response => {
+          const aif = response.value.aif;
+          if (
+            DCDO.get('show-aita-lesson-summaries', false) ||
+            experiments.isEnabled('ai_lesson_summaries') ||
+            aif
+          ) {
+            HttpClient.get(
+              `/ai_lesson_summaries/perform_ai_lesson_summaries_by_unit?unit_id=${unitId}`
+            ).catch(error => {
+              console.error(error);
+            });
+          }
+        });
+      }
+    }
     // Only log if the assignment is changing.
     if (
       (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||

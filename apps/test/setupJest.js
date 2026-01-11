@@ -12,7 +12,6 @@ import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
 import '../build/locales/en_us/netsim_locale.js';
 import '../build/locales/en_us/standaloneVideo_locale.js';
-import '../build/locales/en_us/tutorialExplorer_locale.js';
 import '../build/locales/en_us/weblab_locale.js';
 import '../build/locales/en_us/gamelab_locale.js';
 import '../build/locales/en_us/poetry_locale.js';
@@ -82,8 +81,9 @@ window.Element.prototype.getClientRects = function () {
     }
     node = node.parentNode;
   }
-  var self = $(this);
-  return [{width: self.width(), height: self.height()}];
+  const width = this.offsetWidth || this.clientWidth || 0;
+  const height = this.offsetHeight || this.clientHeight || 0;
+  return [{width, height}];
 };
 
 global.$ = global.jQuery = $;

@@ -1,9 +1,10 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {OverlineThreeText} from '@code-dot-org/component-library/typography';
 import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -70,148 +71,281 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   showNotifications,
   unreadNotificationCount,
 }) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [showDailyBytes, setShowDailyBytes] = useState(false);
+  const toggleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const onNewChatButtonClick = useCallback(() => {
+    setShowNotifications(false);
+    setShowDailyBytes(false);
+    threadSelectCallback(0);
+  }, [setShowNotifications, threadSelectCallback, setShowDailyBytes]);
+
+  const onNotificationsButtonClick = useCallback(() => {
+    setShowNotifications(true);
+    setShowDailyBytes(false);
+
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
+      unreadNotificationCount: unreadNotificationCount,
+    });
+  }, [setShowNotifications, unreadNotificationCount, setShowDailyBytes]);
+
+  const onDailyBytesButtonClick = useCallback(() => {
+    setShowDailyBytes(true);
+    setShowNotifications(false);
+    // TODO: add daily bytes logic
+  }, [setShowNotifications, setShowDailyBytes]);
+
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
+    setShowDailyBytes(false);
     threadSelectCallback(chatId);
   };
 
   const todayChats = threads.filter(thread => {
     return thread.updatedAt > yesterday;
   });
-
   const past7DaysChats = threads.filter(thread => {
     return thread.updatedAt >= sevenDaysAgo && thread.updatedAt <= yesterday;
   });
-
   const past30DaysChats = threads.filter(thread => {
     return (
       thread.updatedAt >= thirtyDaysAgo && thread.updatedAt <= sevenDaysAgo
     );
   });
-
   const oldChats = threads.filter(thread => {
     return thread.updatedAt < thirtyDaysAgo;
   });
 
+  const checkIfThreadIsSelected = (thread: ChatThread) =>
+    !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
+
   return (
-    <aside className={styles.sidebarContainer}>
+    <aside
+      className={classNames(
+        styles.sidebarContainer,
+        isCollapsed && styles.sidebarContainerCollapsed
+      )}
+    >
       <Box
         component="nav"
         sx={{width: {sm: '100%'}, flexShrink: {sm: 0}}}
         aria-label="AI differentiation chat threads"
-        className={styles.sidebarBox}
-      >
-        <Button
-          color={buttonColors.white}
-          size="s"
-          type="primary"
-          iconLeft={{iconName: 'plus'}}
-          onClick={() => {
-            setShowNotifications(false);
-            threadSelectCallback(0);
-          }}
-          text={commonI18n.aiDifferentiation_new_chat()}
-          className={styles.sidebarButton}
-        />
-        {experiments.isEnabled('teacher-notifications') && (
-          <button
-            onClick={() => {
-              setShowNotifications(true);
-
-              analyticsReporter.sendEvent(EVENTS.AI_DIFF_NOTIFICATIONS_OPENED, {
-                unreadNotificationCount: unreadNotificationCount,
-              });
-            }}
-            className={classNames(styles.notificationsButton, {
-              [styles.selected]: showNotifications,
-            })}
-            id="ui-notificationsButton"
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="bell" />
-            <span>{commonI18n.notifications()}</span>
-            {unreadNotificationCount > 0 && (
-              <FontAwesomeV6Icon
-                iconName="circle"
-                iconStyle="solid"
-                className={styles.readAt}
-                aria-label={i18n.unread()}
-              />
-            )}
-          </button>
+        className={classNames(
+          styles.sidebarBox,
+          isCollapsed && styles.sidebarBoxCollapsed
         )}
-        <div className={styles.sidebarContent}>
-          <List disablePadding={true}>
-            {todayChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  TODAY
-                </OverlineThreeText>
-                {todayChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
+      >
+        <Box className={styles.sidebarActions}>
+          <WithTooltip
+            tooltipProps={{
+              tooltipId: 'sidebar-toggle-tooltip',
+              direction: 'onRight',
+              text: isCollapsed ? 'Expand sidebar' : 'Collapse sidebar',
+              className: styles.sidebarActionTooltip,
+              hideTail: true,
+              size: 's',
+            }}
+          >
+            <Button
+              isIconOnly
+              onClick={toggleSidebar}
+              icon={{
+                iconName: isCollapsed
+                  ? 'arrow-right-to-line'
+                  : 'arrow-left-to-line',
+              }}
+              color="gray"
+              type="secondary"
+              size="s"
+              className={styles.sidebarToggleButton}
+            />
+          </WithTooltip>
+          {isCollapsed ? (
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'new-chat-button-tooltip',
+                direction: 'onRight',
+                text: commonI18n.aiDifferentiation_new_chat(),
+                className: styles.sidebarActionTooltip,
+                hideTail: true,
+                size: 's',
+              }}
+            >
+              <Button
+                color={buttonColors.purple}
+                size="s"
+                type="primary"
+                onClick={onNewChatButtonClick}
+                isIconOnly
+                icon={{iconName: 'plus'}}
+                aria-label={commonI18n.aiDifferentiation_new_chat()}
+              />
+            </WithTooltip>
+          ) : (
+            <Button
+              color={buttonColors.purple}
+              size="s"
+              type="primary"
+              onClick={onNewChatButtonClick}
+              iconLeft={{iconName: 'plus'}}
+              text={commonI18n.aiDifferentiation_new_chat()}
+              className={styles.expandedNewChatButton}
+            />
+          )}
+        </Box>
+        {isCollapsed ? (
+          <Box className={styles.sidebarActions}>
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'notifications-button-tooltip',
+                direction: 'onRight',
+                text: commonI18n.notifications(),
+                className: styles.sidebarActionTooltip,
+                hideTail: true,
+                size: 's',
+              }}
+            >
+              <Button
+                isIconOnly
+                onClick={onNotificationsButtonClick}
+                className={classNames(
+                  unreadNotificationCount > 0 && styles.buttonWithUnreadDot
+                )}
+                color="black"
+                type="tertiary"
+                size="s"
+                icon={{iconName: 'bell'}}
+                aria-label={commonI18n.notifications()}
+              />
+            </WithTooltip>
+            {experiments.isEnabled('daily-bytes') && (
+              <WithTooltip
+                tooltipProps={{
+                  tooltipId: 'daily-bytes-button-tooltip',
+                  direction: 'onRight',
+                  text: 'Daily Bytes',
+                  className: styles.sidebarActionTooltip,
+                  hideTail: true,
+                  size: 's',
+                }}
+              >
+                <Button
+                  isIconOnly
+                  onClick={onDailyBytesButtonClick}
+                  color="black"
+                  type="tertiary"
+                  size="s"
+                  icon={{iconName: 'podcast'}}
+                  aria-label="Daily Bytes"
+                />
+              </WithTooltip>
             )}
-            {past7DaysChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  PREVIOUS 7 DAYS
-                </OverlineThreeText>
-                {past7DaysChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
+          </Box>
+        ) : (
+          <Box className={styles.sidebarCategories}>
+            <button
+              onClick={onNotificationsButtonClick}
+              className={classNames(styles.categoryActionButton, {
+                [styles.selected]: showNotifications,
+              })}
+              id="ui-notificationsButton"
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="bell" />
+              <span>{commonI18n.notifications()}</span>
+              {unreadNotificationCount > 0 && (
+                <FontAwesomeV6Icon
+                  iconName="circle"
+                  iconStyle="solid"
+                  className={styles.readAt}
+                  aria-label={i18n.unread()}
+                />
+              )}
+            </button>
+            {experiments.isEnabled('daily-bytes') && (
+              <button
+                onClick={onDailyBytesButtonClick}
+                className={classNames(styles.categoryActionButton, {
+                  [styles.selected]: showDailyBytes,
+                })}
+                id="ui-dailyBytesButton"
+                type="button"
+              >
+                <FontAwesomeV6Icon iconName="podcast" />
+                <span>Daily Bytes</span>
+              </button>
             )}
-            {past30DaysChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  PREVIOUS 30 DAYS
-                </OverlineThreeText>
-                {past30DaysChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
-            )}
-            {oldChats.length > 0 && (
-              <>
-                <OverlineThreeText className={styles.sidebarSectionTitle}>
-                  OLDER CHATS
-                </OverlineThreeText>
-                {oldChats.map(chat => (
-                  <ThreadItem
-                    key={chat.id}
-                    chat={chat}
-                    selected={
-                      !showNotifications && chat.id === selectedThreadId
-                    }
-                    onClick={() => handleListItemClick(chat.id)}
-                  />
-                ))}
-              </>
-            )}
-          </List>
-        </div>
+          </Box>
+        )}
+        {!isCollapsed && (
+          <div className={styles.sidebarContent}>
+            <List disablePadding={true}>
+              {todayChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    TODAY
+                  </OverlineThreeText>
+                  {todayChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={checkIfThreadIsSelected(chat)}
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+              {past7DaysChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    PREVIOUS 7 DAYS
+                  </OverlineThreeText>
+                  {past7DaysChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={checkIfThreadIsSelected(chat)}
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+              {past30DaysChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    PREVIOUS 30 DAYS
+                  </OverlineThreeText>
+                  {past30DaysChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={checkIfThreadIsSelected(chat)}
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+              {oldChats.length > 0 && (
+                <>
+                  <OverlineThreeText className={styles.sidebarSectionTitle}>
+                    OLDER CHATS
+                  </OverlineThreeText>
+                  {oldChats.map(chat => (
+                    <ThreadItem
+                      key={chat.id}
+                      chat={chat}
+                      selected={checkIfThreadIsSelected(chat)}
+                      onClick={() => handleListItemClick(chat.id)}
+                    />
+                  ))}
+                </>
+              )}
+            </List>
+          </div>
+        )}
       </Box>
     </aside>
   );

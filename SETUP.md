@@ -21,7 +21,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.1.0
+     ruby --version     # --> ruby 3.1.7
      node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
@@ -106,6 +106,10 @@ External contributors can supply alternate placeholder values for secrets normal
 slack_bot_token: localoverride
 pardot_private_key: localoverride
 properties_encryption_key: ''
+openai_student_learning_api_key: localoverride
+openai_measures_of_learning_api_key: localoverride
+langfuse_secret_key: localoverride
+langfuse_public_key: localoverride
 ```
 
 ## OS-specific prerequisites
@@ -330,16 +334,17 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 20.04
-     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 1: Choose AMI**: Select Ubuntu Server 22.04
+     * **Step 2: Choose instance type**: Choose at least 32 GiB memory (e.g. `t3.2xlarge`)
      * **Step 3: Configure Instance**: 
        * Set IAM Instance Profile to `DeveloperEC2`
        * Set VPC to `vpc-a48462c3`
-     * **Step 4: Storage**: Increase storage to 100GiB
+     * **Step 4: Storage**: Increase storage to 100GiB of type `gp3`
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
      * move your private key to `~/.ssh/<keyname>.pem`
+     * fix key permissions with `chmod 600 ~/.ssh/<keyname>.pem`
      * add the following lines to ~/.ssh/config:     
        ```
        Host yourname-ec2

@@ -3,6 +3,7 @@ import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -25,6 +26,8 @@ interface HTMLPreviewHeaderProps {
   onToggleFullScreen: () => void;
   previewViewMode: PreviewViewMode;
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
+  onStopPreview: () => void;
+  isStopEnabled: boolean;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -39,6 +42,8 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onToggleFullScreen,
   previewViewMode,
   setPreviewViewMode,
+  onStopPreview,
+  isStopEnabled,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -50,24 +55,27 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
     color: 'strong',
     buttons: [
       {
-        label: weblab2I18n.desktop(),
-        value: PreviewViewMode.DESKTOP,
-        iconLeft: {
+        ariaLabel: weblab2I18n.desktopView(),
+        icon: {
           iconName: 'desktop',
           iconStyle: 'solid',
+          title: weblab2I18n.desktop(),
         },
+        value: PreviewViewMode.DESKTOP,
       },
       {
-        label: weblab2I18n.mobile(),
-        value: PreviewViewMode.MOBILE,
-        iconLeft: {
+        ariaLabel: weblab2I18n.mobileView(),
+        icon: {
           iconName: 'mobile',
           iconStyle: 'solid',
+          title: weblab2I18n.mobile(),
         },
+        value: PreviewViewMode.MOBILE,
       },
     ],
     size: 'xs',
     selectedButtonValue: previewViewMode,
+    type: 'iconOnly',
     onChange: previewViewMode =>
       setPreviewViewMode(previewViewMode as PreviewViewMode),
   };
@@ -109,6 +117,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           onKeyDown={handleKeyDown}
           value={value}
           name={'url-input'}
+          aria-label={weblab2I18n.addressBar()}
           size={'s'}
           className={moduleStyles.urlBarInput}
         />
@@ -123,6 +132,26 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.iconButton}
         />
       </div>
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: 'stop-preview',
+          direction: 'onBottom',
+          size: 'xs',
+          text: 'Stop preview',
+        }}
+      >
+        <Button
+          onClick={onStopPreview}
+          aria-label={'Stop Preview'}
+          size="xs"
+          type="secondary"
+          disabled={!isStopEnabled}
+          isIconOnly={true}
+          icon={{iconName: 'circle-stop'}}
+          className={moduleStyles.iconButton}
+          color={'destructive'}
+        />
+      </WithTooltip>
       <SegmentedButtons
         className={moduleStyles.previewViewModeButtons}
         {...previewViewModeButtonsProps}

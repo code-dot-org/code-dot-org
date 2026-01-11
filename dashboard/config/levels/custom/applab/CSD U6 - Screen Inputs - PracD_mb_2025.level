@@ -69,6 +69,7 @@
     "teacher_markdown": "**Screen 1 Bug:** Students need to change the `getProperty` block to get the `value` from the dropdown instead of `options`\r\n\r\n**Screen 2 Bug:** Students need to go into Design Mode and change the max value of the slider from 10 to something greater or equal to 35\r\n\r\n**Screen 3 Bug:** Students need to use the correct variable in the code, replacing `trial3Input` (which is the ID of the design element) with `trial3Answer` (which is the actual variable in the code)",
     "bubble_choice_description": "This app is meant to ask a series of secret questions to unlock the final screen, but each question has a bug.",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

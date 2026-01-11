@@ -1,0 +1,14 @@
+name 'ai-generated-design-preassessment-q5_2025'
+
+question 'A new café wants its website to feel warm and inviting, so the designer uses soft brown tones, rounded shapes, and a friendly-looking font. What is the designer trying to communicate through these choices?'
+
+right 'The café\’s brand personality and mood'
+wrong 'The café\’s menu prices and location'
+wrong 'The café\’s website loading speed'
+wrong 'The café\’s security and privacy features'
+
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Lessons 4, 5, 6
+MARKDOWN

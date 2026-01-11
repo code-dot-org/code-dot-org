@@ -1,29 +1,26 @@
 Feature: Playing the Farmer Game
 
 Background:
-  Given I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
-  And element ".instructions-markdown p" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."
+  And element ".instructions-markdown p" has escaped text "Wow, look at that! I don't know how many shovelfuls of dirt this hole needs.\nCan you write a program that keeps using the fill block until the ground is even?  "
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
 Scenario: Loading the first level
-  Then there's an image "video_thumbnails/farmer_intro"
   Then there's an image "farmer/small_static_avatar"
   Then I see "#pegman"
-  Then there's 1 dirt at (4, 4)
 
 Scenario: Winning the first level
   And I've initialized the workspace with winning farmer blocks
-  And there's 1 dirt at (4, 4)
   Then I press "runButton"
   And element "#resetButton" is visible
   Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 1."
-  And there's 0 dirt at (4, 4)
+  And there's 0 dirt at (3, 3)
   And I press "continue-button"
-  Then I wait until I am on "http://studio.code.org/courses/20-hour/units/1/lessons/9/levels/2"
+  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2"
 
 @no_mobile
 Scenario: Losing the first level
@@ -31,7 +28,7 @@ Scenario: Losing the first level
   And I press "runButton"
   And element "#resetButton" is visible
   Then I wait until element ".uitest-topInstructions-inline-feedback" is visible
-  And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet."
+  And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. Try using a block you aren’t using yet."
   And I press "resetButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {removeItemFromUserAddedSelectionContext} from '@cdo/apps/aichat/redux/slice';
+import {getLineReferenceText} from '@cdo/apps/aichat/utils';
 import FilePreview from '@cdo/apps/aichat/views/assets/FilePreview';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -22,17 +23,24 @@ const UserAddedSelectionContextPreview: React.FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        {Object.keys(userAddedSelectionContext).map(displayName => (
-          <FilePreview
-            key={displayName}
-            type={'text'}
-            filename={displayName}
-            isUploading={false}
-            onRemove={() =>
-              dispatch(removeItemFromUserAddedSelectionContext(displayName))
-            }
-          />
-        ))}
+        {Object.entries(userAddedSelectionContext).map(
+          ([displayName, contextItem]) => (
+            <FilePreview
+              key={displayName}
+              type={'text'}
+              filename={contextItem.filename}
+              fileDetail={
+                contextItem.lineReference
+                  ? getLineReferenceText(contextItem.lineReference)
+                  : undefined
+              }
+              isUploading={false}
+              onRemove={() =>
+                dispatch(removeItemFromUserAddedSelectionContext(displayName))
+              }
+            />
+          )
+        )}
       </div>
     </div>
   );

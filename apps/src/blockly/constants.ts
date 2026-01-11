@@ -2,11 +2,6 @@ import {makeEnum} from '@cdo/apps/utils';
 
 import {parseElement as parseXmlElement} from '../xml';
 
-export enum BlocklyVersion {
-  CDO = 'CDO',
-  GOOGLE = 'Google',
-}
-
 export const ToolboxType = makeEnum('CATEGORIZED', 'UNCATEGORIZED', 'NONE');
 export const BLOCKLY_THEME = 'blocklyTheme';
 export const BLOCKLY_CURSOR = 'blocklyCursor';
@@ -240,7 +235,6 @@ export const READ_ONLY_PROPERTIES = [
   'thrasos',
   'Toolbox',
   'Touch',
-  'tutorialExplorer_locale',
   'useContractEditor',
   'utils',
   'VARIABLE_CATEGORY_NAME',

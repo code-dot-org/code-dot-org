@@ -2,9 +2,9 @@ class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
   include SharedConstants
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :find, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
   load_resource only: [:show, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_and_authorize_resource except: [:find, :submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -46,6 +46,35 @@ class RubricsController < ApplicationController
   # GET /rubrics/:id
   def show
     render json: {rubric: @rubric.summarize, canShowTaScoresAlert: can_show_ta_scores_alert?(@rubric.lesson)}
+  end
+
+  # GET /rubrics/find?lesson_id=X&level_id=Y (level_id optional)
+  def find
+    lesson_id = params[:lesson_id]
+    level_id = params[:level_id]
+
+    return render json: {error: 'lesson_id is required'}, status: :bad_request unless lesson_id
+
+    lesson = Lesson.find_by(id: lesson_id)
+    return render json: {error: 'Lesson not found'}, status: :not_found unless lesson
+
+    # If level_id is provided, find specific rubric for (lesson_id, level_id)
+    # Otherwise, use lesson.rubric (which returns the first rubric via has_one association)
+    rubric = if level_id
+               Rubric.find_by(lesson_id: lesson_id, level_id: level_id)
+             else
+               lesson.rubric
+             end
+
+    if rubric
+      render json: {
+        rubricId: rubric.id,
+        rubric: rubric.summarize,
+        levelId: rubric.level_id
+      }
+    else
+      render json: {error: 'Rubric not found'}, status: :not_found
+    end
   end
 
   # POST /rubrics/:id/submit_evaluations

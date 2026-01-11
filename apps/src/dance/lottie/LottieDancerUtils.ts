@@ -1,12 +1,14 @@
 import lottie, {type AnimationItem} from 'lottie-web';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
 
 import {
   CanvasAnimConfig,
   DancerMetadata,
-  HeadImageInfo,
   LottieAssetImage,
   LottieAssetPrecomp,
   LottieColorNode,
@@ -18,62 +20,131 @@ import {
   LottieShapeAny,
   LottieShapeFillOrStroke,
   LottieShapeGroup,
-  LocalStoragePayload,
+  SessionStoragePayload,
   Palette,
   ResolveDancerAssetsOpts,
   ResolvedDancerAssets,
   RGBA,
 } from './LottieDancerTypes';
 
-const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate';
+const BASE_HOST = 'https://curriculum.code.org/media/musiclab/generate/dancer';
 
-const DEFAULT_HEAD_W = 1024;
-const DEFAULT_HEAD_H = 1024;
+const DEFAULT_IMAGE_SIZE = 1024;
 
-const ASSETS_FOLDER = 'basic2';
-const TEST_GENERATED_DANCER = 'basic-frog-baseball-cap-00';
+const DEFAULT_DANCER_PATH = `${BASE_HOST}/default`;
+const DEFAULT_HEAD_URL = `${DEFAULT_DANCER_PATH}/default.png`;
+const DEFAULT_METADATA_URL = `${DEFAULT_DANCER_PATH}/default-metadata.json`;
 
-const DEFAULT_HEAD_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}.png`;
-const DEFAULT_METADATA_URL = `${BASE_HOST}/dancer/${ASSETS_FOLDER}/${TEST_GENERATED_DANCER}-metadata.json`;
+const BODIES_PATH = `${BASE_HOST}/bodies`;
+const DEFAULT_BODY_URL = `${BODIES_PATH}/default.svg`;
+const DEFAULT_BODY_METADATA_URL = `${BODIES_PATH}/default.json`;
+
+const SKELETONS_PATH = `${BASE_HOST}/skeletons`;
+const PALETTES_PATH = `${SKELETONS_PATH}/palettes`;
+
+const DEFAULT_HEAD_SCALE = 0.5;
+
+// When we improve the palette, we want both secondary and tertiary to be at least
+// this far from the primary, when measured using simple Euclidean color distance.
+const COLOR_DISTANCE_REQUIRED = 0.32;
+
+// Expected colors to replace in body SVGs.
+const BODY_SVG_PRIMARY = '#33FF21';
+const BODY_SVG_SECONDARY = '#808080';
+const BODY_SVG_TERTIARY = '#4C4C4C';
+
+// Accessory-name mapping used to recolor vector content in the Lottie JSON.
+const BASE_ACCESSORY_MAP = {
+  secondaryArm: new Set(['bracelet', 'shirt']),
+  tertiaryArm: new Set(['cuff']),
+  tertiaryLeg: new Set(['cuff']),
+};
+
+// The cat's bracelets are part of the 'shirt low' layers. The body-color arm parts are
+// incorrectly labeled as 'cuff' layers, so we exclude those from tertiary.
+const CAT_ACCESSORY_MAP = {
+  secondaryArm: new Set(['shirt']),
+};
+
+// The unicorn's accessories use the same labels on both arms and legs. Creating two
+// unique sets allows us to assign different colors to arm vs. leg accessories, giving
+// the impression shirts and pants with different colors.
+const UNICORN_ACCESSORY_MAP = {
+  secondaryArm: new Set(['cuff', 'shirt']),
+  tertiaryLeg: new Set(['cuff', 'shirt']),
+};
+
+function getAccessoryMap(skeletonName: string): {
+  secondaryArm?: Set<string>;
+  tertiaryArm?: Set<string>;
+  tertiaryLeg?: Set<string>;
+} {
+  switch (skeletonName) {
+    case 'cat':
+      return CAT_ACCESSORY_MAP;
+    case 'unicorn':
+      return UNICORN_ACCESSORY_MAP;
+    default:
+      return BASE_ACCESSORY_MAP;
+  }
+}
 
 export const getConfigValue = (name: string) =>
   queryParams(name) as string | undefined;
 
 // Given information about a generated dancer, this returns the URL for the head image.
-export function getGeneratedDancerAssets(
-  adlibOption: string,
+function getGeneratedDancerAssets(
+  path: string,
   choices: string[] | undefined,
-  variant: number
+  choicesExtra: string[] | null,
+  variant: number,
+  extraVariant: number | null
 ) {
   const joinedChoices = choices?.join('-');
-  const cacheFilePath = `${BASE_HOST}/dancer/${adlibOption}/${joinedChoices}-${variant
+  const dancerPath = `${BASE_HOST}/${path}/${joinedChoices}-${variant
     .toString()
     .padStart(2, '0')}`;
-  const head = `${cacheFilePath}.png`;
-  const metadata = `${cacheFilePath}-metadata.json`;
+  const head = `${dancerPath}.png`;
+  const metadata = `${dancerPath}-metadata.json`;
 
-  return {head, metadata};
+  // Body selection logic: 1) default, 2) extra choices, 3) adlib choice
+  let body = `${BODIES_PATH}/default.svg`;
+  let bodyMetadata = `${BODIES_PATH}/default.json`;
+
+  const extraVariantString = extraVariant?.toString().padStart(2, '0') || '00';
+  // If we have choicesExtra, use them with the extraVariant to select body.
+  if (Array.isArray(choicesExtra) && choicesExtra.length > 0) {
+    const bodyName = `${choicesExtra.join('-')}-${extraVariantString}`;
+    body = `${BODIES_PATH}/${bodyName}.svg`;
+    bodyMetadata = `${BODIES_PATH}/${bodyName}.json`;
+  } else {
+    // If no choicesExtra, see if the path from adlibOption includes 'adjective' to select body.
+    const adjectiveIndex = path.split('-').indexOf('adjective');
+    if (adjectiveIndex >= 0 && choices && choices[adjectiveIndex]) {
+      const adlibBody = `${choices[adjectiveIndex]}-${extraVariantString}`;
+      body = `${BODIES_PATH}/${adlibBody}.svg`;
+      bodyMetadata = `${BODIES_PATH}/${adlibBody}.json`;
+    }
+  }
+  return {head, metadata, body, bodyMetadata};
 }
 
-// Example: .../dancers/input/DUCK/duck_<move>.json
+// Example: .../dancers/input/DUCK/duck_roll.json
 export function resolveAnimationUrl(
   skeletonName: string,
   danceMove: string
 ): string {
-  return `${BASE_HOST}/dancers/input/${skeletonName.toUpperCase()}/${skeletonName}_${danceMove}.json`;
-}
-
-// Example: .../dancer/<assetsPath>/<dancerName>-metadata.json
-export function resolveMetadataUrl(
-  assetsPath: string,
-  dancerName: string
-): string {
-  return `${BASE_HOST}/dancer/${assetsPath}/${dancerName}-metadata.json`;
+  return `${SKELETONS_PATH}/${skeletonName}/${skeletonName}_${danceMove}.json`;
 }
 
 export async function fetchJson<T>(url: string): Promise<T> {
-  const {value} = await HttpClient.fetchJson<T>(url);
-  return value;
+  try {
+    const {value} = await HttpClient.fetchJson<T>(url);
+    return value;
+  } catch (e) {
+    console.warn(`Error fetching JSON from ${url}:`, e);
+    throw e;
+  }
 }
 
 // Metadata keeps colors in hex; we convert to normalized RGBA [0..1].
@@ -97,28 +168,9 @@ export function normalizePalette(metadata: DancerMetadata = {}): Palette {
     primary: toRGBA(bodyColor),
     secondary: toRGBA(secondaryColor),
     tertiary: toRGBA(tertiaryColor),
+    lock: metadata['lock_palette'] === true,
   };
 }
-
-// Accessory-name mapping used to recolor vector content in the Lottie JSON.
-const ACCESSORY_MAP = {
-  secondary: new Set<string>([
-    'bracelet',
-    'shirt high',
-    'shirt low',
-    'shirt low 2',
-    'line',
-  ]),
-  tertiary: new Set<string>([
-    'cuff',
-    'hip',
-    'pelvis',
-    'torso accent',
-    'belly',
-    'leg cuff',
-    'arc',
-  ]),
-};
 
 /**
  * Walks the animation JSON, looking for fills/strokes that match accessory
@@ -130,9 +182,16 @@ const ACCESSORY_MAP = {
  */
 export function applyColorMapping(
   animationData: LottieJSON,
-  palette: Palette | null
+  palette: Palette | null,
+  skeletonName: string
 ): void {
   if (!palette) return;
+
+  const accessoryMap: {
+    secondaryArm?: Set<string>;
+    tertiaryArm?: Set<string>;
+    tertiaryLeg?: Set<string>;
+  } = getAccessoryMap(skeletonName);
 
   const normalize = (s?: string) =>
     (s || '').toLowerCase().replace(/[_-]+/g, ' ').trim();
@@ -150,17 +209,24 @@ export function applyColorMapping(
       'i'
     );
 
-  const SECONDARY_RXS = Array.from(ACCESSORY_MAP.secondary, tokenToRx);
-  const TERTIARY_RXS = Array.from(ACCESSORY_MAP.tertiary, tokenToRx);
-
+  const SECONDARY_ARM_RXS = Array.from(
+    accessoryMap.secondaryArm || [],
+    tokenToRx
+  );
+  const TERTIARY_ARM_RXS = Array.from(
+    accessoryMap.tertiaryArm || [],
+    tokenToRx
+  );
+  const TERTIARY_LEG_RXS = Array.from(
+    accessoryMap.tertiaryLeg || [],
+    tokenToRx
+  );
   const anyMatch = (str: string | undefined, rxs: RegExp[]) =>
     !!str && rxs.some(rx => rx.test(str));
 
-  const isArmLegSeg = (seg: string) =>
-    /\b(left|right)?\s*(arm|leg|wrist|shoulder|ankle|hip)\b/i.test(seg);
-
-  const isHoseySeg = (seg: string) =>
-    /\b(arc|lineforcurve|rubber\s*hose|style)\b/i.test(seg);
+  const isArmSeg = (seg: string) => /\b(arm)\b/i.test(seg);
+  const isLegSeg = (seg: string) => /\b(leg)\b/i.test(seg);
+  const isHoseySeg = (seg: string) => /\b(style)\b/i.test(seg);
 
   // Assign a color to a Lottie color node (handles direct and keyframed).
   const setColorNode = (
@@ -216,26 +282,24 @@ export function applyColorMapping(
       }
 
       const segs = pathNames.flatMap(splitSegments);
-      const shapeName = normalize(shapeNode.nm as string | undefined);
-      const pathStr = [...pathNames, shapeNode.nm || '']
-        .filter(Boolean)
-        .join(' / ');
+      const inArmContext = layerSegs.some(isArmSeg) || segs.some(isArmSeg);
+      const inLegContext = layerSegs.some(isLegSeg) || segs.some(isLegSeg);
+      const swapLegColor = skeletonName === 'unicorn' && inLegContext;
 
       // 1) Accessories FIRST (so they override hose matches)
-      const matchesSecondary =
-        segs.some(s => anyMatch(s, SECONDARY_RXS)) ||
-        anyMatch(shapeName, SECONDARY_RXS) ||
-        anyMatch(layerName, SECONDARY_RXS) ||
-        anyMatch(pathStr, SECONDARY_RXS);
+      const matchesSecondary = segs.some(s => anyMatch(s, SECONDARY_ARM_RXS));
 
-      const matchesTertiary =
-        segs.some(s => anyMatch(s, TERTIARY_RXS)) ||
-        anyMatch(shapeName, TERTIARY_RXS) ||
-        anyMatch(layerName, TERTIARY_RXS) ||
-        anyMatch(pathStr, TERTIARY_RXS);
+      const matchesTertiary = segs.some(
+        s =>
+          (layerSegs.some(isLegSeg) && anyMatch(s, TERTIARY_LEG_RXS)) ||
+          (layerSegs.some(isArmSeg) && anyMatch(s, TERTIARY_ARM_RXS))
+      );
 
       if (matchesSecondary) {
-        paintNode(shapeNode, palette.secondary);
+        paintNode(
+          shapeNode,
+          swapLegColor ? palette.tertiary : palette.secondary
+        );
         continue;
       }
       if (matchesTertiary) {
@@ -244,11 +308,14 @@ export function applyColorMapping(
       }
 
       // 2) Rubber-hose lines/areas on arms/legs → PRIMARY (if not accessory)
-      const inArmLegContext =
-        layerSegs.some(isArmLegSeg) || segs.some(isArmLegSeg);
       const inHoseGroup = segs.some(isHoseySeg);
+
       const ty = shapeNode.ty;
-      if ((ty === 'st' || ty === 'fl') && inArmLegContext && inHoseGroup) {
+      if (
+        (ty === 'st' || ty === 'fl') &&
+        (inArmContext || inLegContext) &&
+        inHoseGroup
+      ) {
         paintNode(shapeNode, palette.primary);
         continue;
       }
@@ -268,38 +335,39 @@ export function applyColorMapping(
   );
 }
 
-/** Loads head.png as a data URL and detects natural size (falls back to 1024×1024). */
-export async function fetchHeadImageInfo(
-  headUrl: string | null
-): Promise<HeadImageInfo | null> {
-  if (!headUrl) {
+/** Loads png as a data URL and detects natural size (falls back to 1024×1024). */
+export async function fetchDataUrl(url?: string): Promise<string | null> {
+  if (!url) {
     return null;
   }
   try {
-    const response = await fetch(headUrl);
+    const response = await fetch(url);
     if (!response.ok) {
       return null;
     }
 
     const blob = await response.blob();
-    const dataUrl = await new Promise<string>(resolve => {
+    return await new Promise<string>(resolve => {
       const fileReader = new FileReader();
       fileReader.onload = () => resolve(fileReader.result as string);
       fileReader.readAsDataURL(blob);
     });
-
-    // We’ve standardized head asset dimensions, so no image probe needed.
-    return {dataUrl, width: DEFAULT_HEAD_W, height: DEFAULT_HEAD_H};
-  } catch {
+  } catch (e) {
+    console.warn(`Failed to fetch data URL for image at ${url}:`, e);
     return null;
   }
 }
 
 /**
- * Searches all precomp assets for a layer named like “head”.
- * Returns pointers so we can locate the child comp that actually draws the head.
+ * Searches all precomp assets for a matching name.
+ * Returns pointers so we can locate the child comp that actually holds the layers.
+ * @param animationData
+ * @returns
  */
-export function findHeadPrecompLayerDeep(animationData: LottieJSON): {
+export function findPrecompLayerDeep(
+  animationData: LottieJSON,
+  nameRx: RegExp
+): {
   containerAsset: LottieAssetPrecomp;
   layers: Array<LottieLayer>;
   index: number;
@@ -309,12 +377,14 @@ export function findHeadPrecompLayerDeep(animationData: LottieJSON): {
   const assets = animationData.assets || [];
   for (const asset of assets) {
     const pre = asset as LottieAssetPrecomp;
-    if (!pre || !Array.isArray(pre.layers)) continue;
+    if (!pre || !Array.isArray(pre.layers)) {
+      continue;
+    }
 
     for (let i = 0; i < pre.layers.length; i++) {
-      const layer = pre.layers[i] as LottieLayer;
-      if (layer && layer.ty === 0 && /\bhead\b/i.test(layer.nm || '')) {
-        const precompLayer = layer as LottiePrecompLayer;
+      const layer = pre.layers[i];
+      if (layer && layer.ty === 0 && nameRx.test(layer.nm || '')) {
+        const precompLayer = layer;
         return {
           containerAsset: pre,
           layers: pre.layers,
@@ -334,51 +404,53 @@ export function getAssetById(
   id: string
 ): LottieAssetPrecomp | null {
   return (animationData.assets || []).find(
-    a => a && a.id === id
+    animationAsset => animationAsset && animationAsset.id === id
   ) as LottieAssetPrecomp | null;
 }
 
 /**
- * Hides vector head layers inside the head comp. Also captures a copy of the
+ * Hides vector layers inside their respective comp. Also captures a copy of the
  * first matching layer’s transform (ks), so we can reuse it for positioning.
  */
-export function hideVectorHeadInComp(headCompAsset: LottieAssetPrecomp): {
-  insertIndex: number;
-  headKs: LottieLayerCommon['ks'] | null;
-} {
+export function hideLayersByTypeAndCaptureKs(
+  compAsset: LottieAssetPrecomp,
+  typesToHide: number[] = [4, 1] // 4: shape, 1: solid
+): {insertIndex: number; ks: LottieLayerCommon['ks'] | null} {
+  const layers = (compAsset.layers = compAsset.layers || []);
   let firstHiddenIndex = -1;
-  let headKs: LottieLayerCommon['ks'] | null = null;
+  let captured: LottieLayerCommon['ks'] | null = null;
 
-  const layers = headCompAsset.layers || [];
   for (let i = 0; i < layers.length; i++) {
-    const layer = layers[i] as LottieLayer;
-    if (!layer) continue;
+    const currentLayer = layers[i];
+    if (!currentLayer) continue;
 
-    // In DoubleJam this is typically named like “BEAR - Head/Bear Outlines” (ty:4)
-    const nm = layer.nm || '';
-    if (layer.ty === 4 && (/bear outlines/i.test(nm) || /\bhead\b/i.test(nm))) {
-      layer.hd = true;
-      if (!headKs && layer.ks) {
-        headKs = JSON.parse(JSON.stringify(layer.ks));
+    if (typesToHide.includes(currentLayer.ty)) {
+      // Standardize on the hidden flag (no timing tweaks)
+      currentLayer.hd = true;
+
+      // Deep clone the first available ks
+      if (!captured && currentLayer.ks) {
+        captured = JSON.parse(JSON.stringify(currentLayer.ks));
       }
-      if (firstHiddenIndex === -1) firstHiddenIndex = i;
+
+      if (firstHiddenIndex < 0) firstHiddenIndex = i;
     }
   }
 
-  const insertIndex =
-    firstHiddenIndex >= 0 ? firstHiddenIndex + 1 : layers.length;
-  return {insertIndex, headKs};
+  // "Replace at" logic
+  const insertIndex = firstHiddenIndex >= 0 ? firstHiddenIndex : layers.length;
+  return {insertIndex, ks: captured};
 }
 
-/** Ensures a single embedded image asset exists for the custom head and returns its id. */
-export function ensureHeadImageAsset(
+/** Ensures a single embedded image asset exists for the custom image and returns its id. */
+export function ensureImageAsset(
   animationData: LottieJSON,
   dataUrl: string,
-  w: number,
-  h: number
+  id: string
 ): string {
   const assets = (animationData.assets = animationData.assets || []);
-  const id = 'img_head_custom';
+  const w = DEFAULT_IMAGE_SIZE;
+  const h = DEFAULT_IMAGE_SIZE;
   if (!assets.some(a => a && a.id === id)) {
     const imgAsset: LottieAssetImage = {id, w, h, u: '', p: dataUrl, e: 1};
     assets.push(imgAsset);
@@ -386,56 +458,64 @@ export function ensureHeadImageAsset(
   return id;
 }
 
-/**
- * Inserts an image layer into the head comp. If we captured a transform (ks)
- * from a hidden vector head layer, reuse it; otherwise center the image and
- * scale from image pixels → comp pixels, multiplied by headScale.
- */
-export function insertHeadImageLayer(
-  headCompAsset: LottieAssetPrecomp,
-  insertIndex: number,
-  imgAssetId: string,
+function cloneKs(ks?: LottieLayerCommon['ks'] | null) {
+  return (ks ? JSON.parse(JSON.stringify(ks)) : {}) as Partial<
+    NonNullable<LottieLayerCommon['ks']>
+  >;
+}
+function nextLayerInd(layers?: LottieLayer[]) {
+  return (layers || []).reduce((m, L) => Math.max(m, L.ind || 0), 0) + 1;
+}
+function buildCenteredKs(
+  compW: number,
+  compH: number,
   imgW: number,
   imgH: number,
-  headScale: number,
-  copiedKs?: LottieLayerCommon['ks'] | null
+  base: Partial<NonNullable<LottieLayerCommon['ks']>>,
+  scaleMul: number
 ) {
-  const compW = headCompAsset.w || 500;
-  const compH = headCompAsset.h || 500;
-
-  type Ks = NonNullable<LottieLayerCommon['ks']>;
-
-  const baseKs = (
-    copiedKs ? JSON.parse(JSON.stringify(copiedKs)) : {}
-  ) as Partial<Ks>;
-
-  // Map image pixels → comp pixels, then apply headScale
-  const sx = (compW / imgW) * 100 * headScale;
-  const sy = (compH / imgH) * 100 * headScale;
-
-  // Build a definite `ks` object (not optional) and normalize anchors/pos/scale
-  const ks: Ks = {
-    ...baseKs,
-    o: baseKs.o ?? {a: 0, k: 100},
-    r: baseKs.r ?? {a: 0, k: 0},
-    // Position at comp center so precomp motion applies cleanly
+  const sx = (compW / imgW) * 100 * scaleMul;
+  const sy = (compH / imgH) * 100 * scaleMul;
+  const ksBase = base as NonNullable<LottieLayerCommon['ks']>;
+  return {
+    ...base,
+    o: ksBase?.o ?? {a: 0, k: 100},
+    r: ksBase?.r ?? {a: 0, k: 0},
     p: {a: 0, k: [compW / 2, compH / 2, 0]},
-    // Anchor at image center so scaling is intuitive
     a: {a: 0, k: [imgW / 2, imgH / 2, 0]},
-    // Force correct pixel→comp scale (fixes the oversized/cropped head)
     s: {a: 0, k: [sx, sy, 100]},
-  };
+  } as NonNullable<LottieLayerCommon['ks']>;
+}
 
-  const maxInd = (headCompAsset.layers || []).reduce(
-    (m, L) => Math.max(m, L.ind || 0),
-    0
+export function insertImageLayer(
+  compAsset: LottieAssetPrecomp,
+  insertIndex: number,
+  imgAssetId: string,
+  copiedKs: LottieLayerCommon['ks'] | null | undefined,
+  name: string,
+  compDefaultW: number,
+  compDefaultH: number,
+  scaleMul: number,
+  extraLayerProps?: Partial<LottieImageLayer>
+): LottieImageLayer {
+  const compW = compAsset.w || compDefaultW;
+  const compH = compAsset.h || compDefaultH;
+  const imgW = DEFAULT_IMAGE_SIZE;
+  const imgH = DEFAULT_IMAGE_SIZE;
+
+  const ks = buildCenteredKs(
+    compW,
+    compH,
+    imgW,
+    imgH,
+    cloneKs(copiedKs),
+    scaleMul
   );
-
-  const imgLayer: LottieImageLayer = {
+  const layer: LottieImageLayer = {
     ddd: 0,
-    ind: maxInd + 1,
+    ind: nextLayerInd(compAsset.layers),
     ty: 2,
-    nm: 'Head Image',
+    nm: name,
     refId: imgAssetId,
     sr: 1,
     ks,
@@ -445,13 +525,12 @@ export function insertHeadImageLayer(
     st: 0,
     bm: 0,
     hd: false,
+    hasMask: false,
+    ...(extraLayerProps || {}),
   };
 
-  (headCompAsset.layers = headCompAsset.layers || []).splice(
-    insertIndex,
-    0,
-    imgLayer
-  );
+  (compAsset.layers = compAsset.layers || []).splice(insertIndex, 0, layer);
+  return layer;
 }
 
 export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
@@ -464,65 +543,365 @@ export function loadCanvasAnimation(config: CanvasAnimConfig): AnimationItem {
 }
 
 /**
- * Resolves the generated dancer assets (head PNG + metadata JSON).
+ * Resolves the generated dancer assets (head PNG + metadata JSON) and optional body PNG and metadata JSON.
  * Source of truth order:
- *   1) URL params (?path=...&dancer=...) → use exactly that dancer
- *   2) localStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
+ *   1) URL params (?path=...&dancer=...) use exactly that dancer and/or (?body=...) for body
+ *   2) sessionStorage('dancer-ai-generate') with {adlibOption, choices[], variant}
  *   3) hardcoded fallbacks (DEFAULT_HEAD_URL / DEFAULT_METADATA_URL)
+ * The renderer will not replace the body unless a bodyUrl is returned here.
  * TODO: Use channel ID instead of local storage.
  */
-export function resolveDancerAssets(
-  opts: ResolveDancerAssetsOpts = {}
-): ResolvedDancerAssets {
-  const {sourceTag = 'adefaultpp'} = opts;
-
+export function resolveDancerAssets(opts: ResolveDancerAssetsOpts = {}): {
+  urls: ResolvedDancerAssets;
+} {
+  // Source tags are need for the head image URL only. It prevents a CORS error
+  // that results when we load the same image URL in different contexts (dancer canvas and Blockly field).
+  const {sourceTag = 'default'} = opts;
   const srcSuffix = `?src=${encodeURIComponent(sourceTag)}`;
 
-  // 1) Explicit dancer via URL params
-  const pathParam = getConfigValue('path');
-  const dancerParam = getConfigValue('dancer')?.toLowerCase();
-
-  if (dancerParam && pathParam) {
-    const prefix = `${BASE_HOST}/dancer/${pathParam}/${dancerParam}`;
-    return {
-      headUrl: `${prefix}.png${srcSuffix}`,
-      metadataUrl: `${prefix}-metadata.json`,
-    };
-  }
-
-  // 2) Generated dancer from localStorage
-
-  let localStorageOptions: LocalStoragePayload = null;
-  try {
-    const raw = localStorage.getItem('dancer-ai-generate');
-    localStorageOptions = raw ? (JSON.parse(raw) as LocalStoragePayload) : null;
-  } catch {
-    localStorageOptions = null;
-  }
-
-  const adlibOption = localStorageOptions?.adlibOption;
-  const choices = Array.isArray(localStorageOptions?.choices)
-    ? (localStorageOptions!.choices as string[])
-    : null;
-
-  const variant = localStorageOptions?.variant;
-
-  if (
-    adlibOption &&
-    choices &&
-    choices.length > 0 &&
-    typeof variant === 'number'
-  ) {
-    const assets = getGeneratedDancerAssets(adlibOption, choices, variant);
-    return {
-      headUrl: `${assets.head}${srcSuffix}`,
-      metadataUrl: assets.metadata,
-    };
-  }
-
-  // 3) Exact fallback defaults
-  return {
+  // 1) Initialize with defaults
+  const urls: ResolvedDancerAssets = {
     headUrl: `${DEFAULT_HEAD_URL}${srcSuffix}`,
     metadataUrl: DEFAULT_METADATA_URL,
+    bodyUrl: DEFAULT_BODY_URL,
+    bodyMetadataUrl: DEFAULT_BODY_METADATA_URL,
   };
+
+  // 2) Generated dancer from sessionStorage
+  let sessionStorageOptions: SessionStoragePayload = null;
+  let extraVariant: number | null = null;
+  try {
+    const raw = sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY);
+    sessionStorageOptions = raw
+      ? (JSON.parse(raw) as SessionStoragePayload)
+      : null;
+  } catch {
+    sessionStorageOptions = null;
+  }
+  if (sessionStorageOptions) {
+    const path =
+      sessionStorageOptions?.path ?? sessionStorageOptions?.adlibOption;
+    const choices = Array.isArray(sessionStorageOptions?.choices)
+      ? (sessionStorageOptions!.choices as string[])
+      : null;
+    const choicesExtra = Array.isArray(sessionStorageOptions?.choicesExtra)
+      ? (sessionStorageOptions!.choicesExtra as string[])
+      : null;
+    extraVariant =
+      sessionStorageOptions?.extraVariant ??
+      // Keep bodyVariant for backward compatibility.
+      sessionStorageOptions?.bodyVariant ??
+      null;
+    const variant = sessionStorageOptions?.variant;
+
+    if (path && choices && choices.length > 0 && typeof variant === 'number') {
+      const assets = getGeneratedDancerAssets(
+        path,
+        choices,
+        choicesExtra,
+        variant,
+        extraVariant
+      );
+      urls.headUrl = `${assets.head}${srcSuffix}`;
+      urls.metadataUrl = assets.metadata;
+      urls.bodyUrl = assets.body;
+      urls.bodyMetadataUrl = assets.bodyMetadata;
+    }
+  }
+
+  // 3) Explicit dancer via URL params
+  const pathParam = getConfigValue('path');
+  const dancerParam = getConfigValue('dancer');
+  const bodyParam = getConfigValue('body');
+
+  if (dancerParam && pathParam) {
+    const headPrefix = `${BASE_HOST}/${pathParam}/${dancerParam}`;
+    urls.headUrl = `${headPrefix}.png${srcSuffix}`;
+    urls.metadataUrl = `${headPrefix}-metadata.json`;
+  }
+  if (bodyParam) {
+    urls.bodyUrl = `${BODIES_PATH}/${bodyParam}.svg`;
+    urls.bodyMetadataUrl = `${BODIES_PATH}/${bodyParam}.json`;
+  }
+  return {urls};
+}
+
+/**
+ * Fetches a text resource and returns its content as a string.
+ * Returns null if the request fails or the response is not OK.
+ * Used to load SVG markup for pre-raster recoloring.
+ */
+export async function fetchText(url?: string): Promise<string | null> {
+  if (!url) {
+    return null;
+  }
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      return null;
+    }
+    return await res.text();
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Fetches SVG text from the given URL, falling back to the default body SVG if needed.
+ */
+export async function safeFetchSvgText(url?: string): Promise<string | null> {
+  let svgText = await fetchText(url);
+  if (!svgText) {
+    console.warn(`Failed to fetch SVG text from ${url}`);
+    svgText = await fetchText(DEFAULT_BODY_URL);
+  }
+  return svgText;
+}
+
+/**
+ * Converts an SVG string into a base64-encoded data URL suitable for use in a
+ * Lottie image asset. Base64 encoding ensures that reserved characters such as
+ * “<”, “>”, or “#” do not corrupt the URL.
+ */
+export function svgStringToDataUrl(svg: string): string {
+  const base64 =
+    typeof btoa === 'function'
+      ? btoa(unescape(encodeURIComponent(svg)))
+      : Buffer.from(svg, 'utf8').toString('base64');
+  return `data:image/svg+xml;base64,${base64}`;
+}
+
+/** Converts an [r,g,b,a] array with values in 0–1 into a #RRGGBB string. */
+function toHexFromRgba(rgba: RGBA | null | undefined): string | null {
+  if (!rgba) return null;
+  const [r, g, b] = rgba.map(v => Math.round((v || 0) * 255));
+  const toHex = (v: number) => v.toString(16).padStart(2, '0');
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+/** Extracts a #RRGGBB fill value from an inline style string, if present. */
+function getInlineFillFromStyle(style: string | null): string | null {
+  if (!style) return null;
+  const m = style.match(/fill\s*:\s*(#[0-9a-fA-F]{6})\b/);
+  return m ? m[1] : null;
+}
+
+/** Simple Euclidean color distance between two colors. */
+function colorDistance(color1: RGBA, color2: RGBA) {
+  return Math.sqrt(
+    (color1[0] - color2[0]) * (color1[0] - color2[0]) +
+      (color1[1] - color2[1]) * (color1[1] - color2[1]) +
+      (color1[2] - color2[2]) * (color1[2] - color2[2])
+  );
+}
+
+/** Simple inversion of a color. */
+function colorInverse(color: RGBA): RGBA {
+  return [1 - color[0], 1 - color[1], 1 - color[2], color[3]];
+}
+
+/** Returns a new, improved palette, in which secondary and tertiary are
+ * at least COLOR_DISTANCE_REQUIRED away from primary.  If either is initially
+ * closer, then it is inverted in the returned palette.
+ */
+export function improvePalette(palette: Palette): Palette {
+  if (palette.primary && palette.secondary && palette.tertiary) {
+    const primary = palette.primary;
+    const secondary =
+      colorDistance(palette.primary, palette.secondary) <
+      COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.secondary)
+        : palette.secondary;
+    const tertiary =
+      colorDistance(palette.primary, palette.tertiary) < COLOR_DISTANCE_REQUIRED
+        ? colorInverse(palette.tertiary)
+        : palette.tertiary;
+
+    return {primary, secondary, tertiary};
+  }
+
+  return palette;
+}
+
+/**
+ * Performs in-place recoloring of an SVG markup string.
+ * Only shapes whose fill or inline-style fill exactly matches one of the
+ * standardized tokens are updated to the palette colors.
+ */
+export function recolorBodySvgString(
+  svgText: string,
+  palette: Palette | null
+): string {
+  if (!palette) return svgText;
+
+  const primaryHex = toHexFromRgba(palette.primary);
+  const secondaryHex = toHexFromRgba(palette.secondary ?? palette.primary);
+  const tertiaryHex = toHexFromRgba(
+    palette.tertiary ?? palette.secondary ?? palette.primary
+  );
+
+  /** Maps canonical source tokens (lowercased) to palette colors. */
+  const tokenToTarget = new Map<string, string>();
+  if (primaryHex) tokenToTarget.set(BODY_SVG_PRIMARY.toLowerCase(), primaryHex);
+  if (secondaryHex)
+    tokenToTarget.set(BODY_SVG_SECONDARY.toLowerCase(), secondaryHex);
+  if (tertiaryHex)
+    tokenToTarget.set(BODY_SVG_TERTIARY.toLowerCase(), tertiaryHex);
+
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(svgText, 'image/svg+xml');
+
+  /** Query all standard vector shape elements that can have fill attributes. */
+  const nodes = doc.querySelectorAll<SVGElement>(
+    'path,rect,circle,ellipse,polygon,polyline,line'
+  );
+
+  nodes.forEach(node => {
+    // Attribute-level fill
+    const attrFill = node.getAttribute('fill');
+    if (attrFill && /^#[0-9a-fA-F]{6}$/.test(attrFill)) {
+      const key = attrFill.toLowerCase();
+      const target = tokenToTarget.get(key);
+      if (target) {
+        node.setAttribute('fill', target);
+        return;
+      }
+    }
+
+    // Inline style fill
+    const styleFill = getInlineFillFromStyle(node.getAttribute('style'));
+    if (styleFill) {
+      const key = styleFill.toLowerCase();
+      const target = tokenToTarget.get(key);
+      if (target) {
+        const style = node.getAttribute('style')!;
+        node.setAttribute(
+          'style',
+          style.replace(/fill\s*:\s*#[0-9a-fA-F]{6}/, `fill:${target}`)
+        );
+      }
+    }
+  });
+
+  return new XMLSerializer().serializeToString(doc.documentElement);
+}
+
+export function getSkeletonMetadataUrl(skeletonName: string): string {
+  return `${PALETTES_PATH}/${skeletonName}-metadata.json`;
+}
+
+// Hide the magenta "dress" solids in the comp tree (frog skeleton only).
+export function hideMagentaDress(animData: LottieJSON): void {
+  if (!animData) return;
+
+  // Build lookup for nested precomps.
+  const assetById: Record<string, LottieJSON> = {};
+  for (const asset of animData.assets || []) {
+    if (asset?.id) assetById[asset.id] = asset;
+  }
+
+  const visitComp = (comp: LottieJSON) => {
+    if (!comp?.layers) return;
+    for (const layer of comp.layers) {
+      if (layer.nm === 'Deep Magenta-Red Solid 4') {
+        layer.hd = true;
+      }
+
+      // Recurse into precomps.
+      if (layer.ty === 0 && typeof layer.refId === 'string') {
+        const child = assetById[layer.refId];
+        if (child) visitComp(child);
+      }
+    }
+  };
+
+  // Start from top-level comp.
+  visitComp(animData);
+}
+
+/**
+ * Loads a PNG image from a data URL, mirrors it horizontally, and returns a new data URL.
+ * @param dataUrl
+ * @returns
+ */
+export async function mirrorPngDataUrl(dataUrl: string): Promise<string> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth || img.width;
+  canvas.height = img.naturalHeight || img.height;
+  const context2D = canvas.getContext('2d')!;
+  context2D.translate(canvas.width, 0);
+  context2D.scale(-1, 1);
+  context2D.drawImage(img, 0, 0);
+  return canvas.toDataURL('image/png');
+}
+
+// Head crop can be overridden via DCDO or URL param.
+function getHeadCrop(): number {
+  const dcdoHeadCrop = DCDO.get('ai-dancer-head-crop');
+
+  if (dcdoHeadCrop === false) {
+    return Number(getConfigValue('headCrop')) || 10;
+  }
+
+  return Number(dcdoHeadCrop);
+}
+
+// Head scale can be overridden via URL param, e.g. ?headScale=0.8, ?bigHead=true
+// If getHeadCrop() returns a value, then it calculates the right scale based on that.
+export function getHeadScale(): number {
+  const headCrop = getHeadCrop();
+
+  const scaleParam =
+    getConfigValue('headScale') ||
+    (getConfigValue('bigHead') === 'true'
+      ? '1.0'
+      : headCrop
+      ? String((0.5 * (DEFAULT_IMAGE_SIZE - 2 * headCrop)) / DEFAULT_IMAGE_SIZE)
+      : undefined);
+  const scale = scaleParam ? parseFloat(scaleParam) : NaN;
+  return isNaN(scale) || scale <= 0 ? DEFAULT_HEAD_SCALE : scale;
+}
+
+/** Crops "transparent" inset from all sides of a PNG data URL. */
+export async function cropDataUrl(dataUrl: string): Promise<string> {
+  const inset = getHeadCrop();
+
+  if (!inset) {
+    return dataUrl;
+  }
+
+  const loadedImage = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const imageElement = new Image();
+    imageElement.onload = () => resolve(imageElement);
+    imageElement.onerror = reject;
+    imageElement.src = dataUrl;
+  });
+
+  const scaledWidth = Math.max(1, loadedImage.naturalWidth - inset * 2);
+  const scaledHeight = Math.max(1, loadedImage.naturalHeight - inset * 2);
+
+  const offscreenCanvas = document.createElement('canvas');
+  offscreenCanvas.width = scaledWidth;
+  offscreenCanvas.height = scaledHeight;
+  const offscreenCanvasContext = offscreenCanvas.getContext('2d')!;
+  offscreenCanvasContext.drawImage(
+    loadedImage,
+    inset,
+    inset,
+    scaledWidth,
+    scaledHeight,
+    0,
+    0,
+    scaledWidth,
+    scaledHeight
+  );
+
+  return offscreenCanvas.toDataURL('image/png');
 }

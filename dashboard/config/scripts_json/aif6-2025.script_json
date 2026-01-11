@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-04 21:45:25 UTC",
+    "serialized_at": "2025-12-10 22:41:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -123,7 +123,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What is data science, and how can it be used?**\n\nThis is a survey lesson introducing students to all sorts of things data science can do. Students start with a pre-assessment asking them to find data in an image of a class pizza party, to introduce the concept of data and data science. Students then learn about a specific data scientist, who they will represent in conversations with their classmates. As they discuss with their classmates, they will learn about the other data scientists.",
-        "preparation": "* Provide copies of the Unit 1 Guided Notes for each student\n* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
+        "preparation": "* Provide copies of the Insights from Data and AI Unit Guide for each student\n* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
         "student_overview": "**What is data science, and how can it be used?**\n\nBecome an expert in a data scientist, what they do and their path to getting there. Then, represent that data scientist for the rest of the class, and learn about other data scientists."
       },
       "seeding_key": {
@@ -6405,6 +6405,34 @@
       }
     },
     {
+      "name": "Chart Match Visuals",
+      "url": "https://docs.google.com/presentation/d/1na9AAerHF9eITn2Y6RicBbRQspNvZZinDPWwp29vsSk/",
+      "key": "chart_match_visuals",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "chart_match_visuals"
+      }
+    },
+    {
+      "name": "Chart Match Warm-Up",
+      "url": "https://docs.google.com/document/d/1fW16bxEUMirRgq0LWewQv1zoIFzo0Kr-QnZPcdZUris/",
+      "key": "chart_match_warm-up",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "chart_match_warm-up"
+      }
+    },
+    {
       "name": "Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1It3QM-Ji8Yfz782pcBZAM3lb6fZBmqlSRfxhOxqg7w8/edit?usp=drivesdk",
       "key": "cleaning_data",
@@ -7277,6 +7305,18 @@
       "seeding_key": {
         "lesson.key": "Introduction to Data Science",
         "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "chart_match_visuals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "chart_match_warm-up"
       }
     },
     {

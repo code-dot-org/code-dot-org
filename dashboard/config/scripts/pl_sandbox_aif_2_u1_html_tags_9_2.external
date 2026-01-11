@@ -1,0 +1,118 @@
+name 'pl_sandbox_aif_2_U1-html-tags-9-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Common HTML Tags
+
+####  **HTML Tags**   are like containers with a specific job for the text. The browser reads the tags to decide how to structure and display the page.
+
+<table style="width: 100%; border-collapse: collapse; ">
+  <thead>
+    <tr style="background-color: #0093A4; color: white; text-align: left;">
+      <th style="padding: 12px; border: 1px solid #ccc; font-size: 16pt;">Tag</th>
+      <th style="padding: 12px; border: 1px solid #ccc; font-size: 16pt;">What It Does</th>
+      <th style="padding: 12px; border: 1px solid #ccc; font-size: 16pt;">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;html&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Wraps the entire webpage — the root of every HTML document.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;html&gt;...&lt;/html&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;head&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Holds information about the page like the title or metadata.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;body&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Contains all the content users see on the page.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;body&gt;Hello!&lt;/body&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Headings from largest (<code>&lt;h1&gt;</code>) to smallest (<code>&lt;h6&gt;</code>).</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;h1&gt;Welcome&lt;/h1&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;p&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Defines a paragraph of text.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;a&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Creates a clickable link to another page or site.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;a href="https://code.org"&gt;Visit Code.org&lt;/a&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;img&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Displays an image using a source and alt text.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;img src="dog.jpg" alt="A cute dog"&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Create bulleted or numbered lists.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;ul&gt;&lt;li&gt;Apples&lt;/li&gt;&lt;/ul&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;div&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Groups elements together for layout or styling.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;div class="container"&gt;...&lt;/div&gt;</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;header&gt;</code> / <code>&lt;footer&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Define the top and bottom sections of a page.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;footer&gt;© 2025 My Site&lt;/footer&gt;</code></td>
+    </tr>
+    
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;strong&gt;</code> / <code>&lt;em&gt;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;">Emphasize or italicize important text.</td>
+      <td style="padding: 10px; border: 1px solid #ccc; font-size: 14pt;"><code>&lt;strong&gt;Important!&lt;/strong&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div style="clear:both;"></div>
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <p style="margin: 12px; font-size: 16px;">
+    <strong>Do you recognize any of the tags from the previous level?</strong>
+  </p>
+</div>
+
+## Opening and Closing Tags 
+
+#### Most HTML elements come in pairs — an opening tag and a closing tag.
+
+- #### The opening tag starts the element (for example, `<p>`).
+
+- #### The closing tag ends it (for example, `</p>`).
+
+- #### The slash / in the closing tag tells the browser that the element is finished.
+
+#### Everything between those two tags is the content that the browser will display.
+
+> 💡 **Tip:** Think of tags like a sandwich: the opening tag is the top bun, the closing tag is the bottom bun, and the content goes in between!
+
+#### ***Remember:*** *it is not important that you know what every tag is. This is an overview to help you grasp the big picture. Take time to look over the HTML code generated by the AI and see what you can recognize or understand.* 
+
+MARKDOWN

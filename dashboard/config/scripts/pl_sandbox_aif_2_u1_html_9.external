@@ -1,0 +1,54 @@
+name 'pl_sandbox_aif_2_U1-html_9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing HTML + AI
+
+####  Now that you have been introduced to user experience, let’s dive into how the web apps are made.
+
+## HTML
+
+#### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
+
+<img src="https://images.code.org/1a60c7acc114352abd9a7e83320ddaa9-image-1763396009343.png" alt="html code with head, body , header, main and footer labeled" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px;">
+
+#### *Notice how each section has an opening tag and a closing tag with a back slash.This tells the computer where each section begins and ends, so it knows how to organize and display the content correctly.*
+
+<div style="clear:both;"></div>
+<div
+  style="
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 16px 0;
+    background: #b2dee3;
+  "
+>
+  <img 
+    src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+    alt="A clipboard labeled TO DO" 
+    width="40px"
+    style="margin-right: 12px;"
+  >
+
+  <p style="margin: 12px; font-size: 16px;">
+    <strong>Look at the tags. Can you guess what any of them do?</strong>
+  </p>
+</div>
+
+
+## The Structure of an HTML Page
+
+- #### **The `<head>` Section** -The head holds information about the page, not what’s shown on the page itself.
+
+- #### **The `<body>` Section** is what users see on the webpage.
+	- #### The `<header>` is the top portion of a website.
+    - #### The `<main>` section holds the core content of the site. In this example, there is a `<section>` with a subheading (`<h2>`), a paragraph (`<p>`), and a list (`<ul>`with `<li>` items).
+    - #### The `<footer>` section closes out the web page. This example has a copyright line. 
+    
+## Next Up
+
+#### Let's take a look at some common HTML tags. 
+MARKDOWN

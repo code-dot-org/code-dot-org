@@ -8,6 +8,7 @@ import React, {
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiInteractionStatus as Status,
@@ -20,97 +21,98 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffBotMessageFooter from './AiDiffBotMessageFooter';
 import AiDiffChatFooter from './AiDiffChatFooter';
+import AiDiffChatHeader from './AiDiffChatHeader';
+import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
+import {DEFAULT_THREAD_TITLE} from './constants';
 import {
-  EXAMPLE_PROMPT,
-  EXPLAIN_CONCEPT_PROMPT,
-  EXTRA_PRACTICE_PROMPT,
-  FINISH_EARLY_PROMPT,
-  ADJUST_TIMING_PROMPT,
-  DEBUG_MISTAKES_PROMPT,
-  REAL_WORLD_PROMPT,
-  EXIT_TICKET_PROMPT,
-  MINI_LESSON_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGEST_CURRICULUM_PROMPT,
-  GET_STARTED_PROMPT,
-  PROFESSIONAL_LEARNING_PROMPT,
-  CREATE_SECTION_PROMPT,
-  ADDITIONAL_HELP_PROMPT,
+  contextPrompts,
   APCSP_DUMMY_CREATE,
   APCSP_DUMMY_EXAM,
-  DEBUG_THIS_CODE,
-  IMPROVE_THIS_CODE,
-} from './AiDiffPredefinedPrompts';
-import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem, ChatPrompt, Context} from './types';
+  SUGGESTED_PROMPTS_FOR_SELECTION,
+  SUGGEST_CURRICULUM_PROMPT,
+  GET_STARTED_PROMPT,
+  CREATE_SECTION_PROMPT,
+} from './predefinedPrompts';
+import {ChatItem, ChatPrompt, Context, SuggestPromptsType} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
-
 const APCSP_PROMPTS = [APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM];
-
-const SUGGESTED_PROMPTS = [
-  [
-    EXAMPLE_PROMPT,
-    EXPLAIN_CONCEPT_PROMPT,
-    DEBUG_MISTAKES_PROMPT,
-    MINI_LESSON_PROMPT,
-    EXIT_TICKET_PROMPT,
-  ],
-  [
-    FINISH_EARLY_PROMPT,
-    EXTRA_PRACTICE_PROMPT,
-    LESSON_HOOK_PROMPT,
-    ADJUST_TIMING_PROMPT,
-    REAL_WORLD_PROMPT,
-  ],
-];
-
-const GENERAL_SUGGESTED_PROMPTS = [
-  SUGGEST_CURRICULUM_PROMPT,
-  GET_STARTED_PROMPT,
-  PROFESSIONAL_LEARNING_PROMPT,
-  CREATE_SECTION_PROMPT,
-  ADDITIONAL_HELP_PROMPT,
-];
 
 const AIDIFF_THREADS_ENDPOINT = '/aidiff_threads';
 const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 
+const getDefaultSuggestedPrompts = (
+  context: Context,
+  teacherHasSections: boolean,
+  teacherHasSectionWithCurriculum: boolean,
+  teacherHasSectionWithStudents: boolean
+) =>
+  context.type === AiDiffContext.GENERAL
+    ? SUGGESTED_PROMPTS_FOR_SELECTION['support'].suggestedPrompts.filter(
+        ({label}) => {
+          // Hide some new thread default prompts based on teacher's sections
+          if (
+            (label === GET_STARTED_PROMPT.label ||
+              label === CREATE_SECTION_PROMPT.label) &&
+            teacherHasSections &&
+            teacherHasSectionWithCurriculum &&
+            teacherHasSectionWithStudents
+          ) {
+            return false;
+          }
+
+          if (
+            label === SUGGEST_CURRICULUM_PROMPT.label &&
+            teacherHasSectionWithCurriculum
+          ) {
+            return false;
+          }
+
+          return true;
+        }
+      )
+    : SUGGESTED_PROMPTS_FOR_SELECTION['default'].suggestedPrompts;
+
 interface AiDiffChatProps {
   context: Context;
   threadMessages?: ChatItem[];
+  threadTitle?: string;
+  setThreadTitle?: Dispatch<SetStateAction<string>>;
   scriptName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
-  disableEndButtons?: boolean;
+  hideChatHeader?: boolean;
   curriculumCourses?: string[];
   threadFetchCallback?: () => void;
   threadId?: number;
   setThreadId?: Dispatch<SetStateAction<number>>;
   initialThreadPrompt?: ChatPrompt | null;
   setInitialThreadPrompt?: Dispatch<SetStateAction<ChatPrompt | null>>;
+  personalizationData?: PersonalizationData;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
   threadMessages = [],
+  threadTitle = DEFAULT_THREAD_TITLE,
+  setThreadTitle,
   scriptName,
   chatResponseCallback = () => {},
-  initialChatMessage = INITIAL_CHAT_MESSAGE,
-  suggestedPrompts = context.type === AiDiffContext.GENERAL
-    ? GENERAL_SUGGESTED_PROMPTS
-    : SUGGESTED_PROMPTS[0],
-  disableEndButtons = false,
+  initialChatMessage = SUGGESTED_PROMPTS_FOR_SELECTION['default']
+    .initialMessage,
+  suggestedPrompts,
+  hideChatHeader = false,
   curriculumCourses = [],
   threadFetchCallback = () => {},
   threadId = 0,
   setThreadId = () => {},
   initialThreadPrompt = null,
   setInitialThreadPrompt = () => {},
+  personalizationData,
 }) => {
+  const [userMessage, setUserMessage] = useState<string>('');
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
@@ -119,9 +121,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   }, [context, scriptName]);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
-
-  const [suggestionPage, setSuggestionPage] = useState(0);
-
   const [localThreadId, setLocalThreadId] = useState(threadId);
 
   const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
@@ -130,12 +129,26 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     state => state.progress?.viewAsUserId || undefined
   );
 
+  const teacherSections = Object.values(
+    useAppSelector(state => state.teacherSections.sections)
+  );
+  const teacherHasSections = teacherSections.length > 0;
+  const teacherHasSectionWithCurriculum = !!teacherSections.find(
+    section => section.courseId !== null
+  );
+  const teacherHasSectionWithStudents = !!teacherSections.find(
+    section => section.studentCount > 0
+  );
+
   const additionalPrompts: ChatPrompt[] = [];
   if (curriculumCourses.includes('csp')) {
     additionalPrompts.push(...APCSP_PROMPTS);
   }
   if (context.type === AiDiffContext.LEVEL) {
-    additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
+    additionalPrompts.push(
+      contextPrompts.code.DEBUG_THIS_CODE,
+      contextPrompts.code.IMPROVE_THIS_CODE
+    );
   }
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>(
@@ -147,7 +160,15 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             chatMessageText: initialChatMessage,
             status: Status.OK,
           },
-          suggestedPrompts.concat(additionalPrompts),
+          (
+            suggestedPrompts ||
+            getDefaultSuggestedPrompts(
+              context,
+              teacherHasSections,
+              teacherHasSectionWithCurriculum,
+              teacherHasSectionWithStudents
+            )
+          ).concat(additionalPrompts),
         ]
   );
 
@@ -187,7 +208,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         inputText: prompt,
         isPreset,
         presetChipText,
-        ...(localThreadId === 0 ? {context} : {}),
+        context,
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
       });
 
@@ -251,14 +272,29 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         status: Status.OK,
       };
 
+      if (
+        setThreadTitle &&
+        (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
+      ) {
+        setThreadTitle(message.slice(0, 100));
+      }
+
       setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
       getAIResponse(message, false, null);
+      setUserMessage('');
     },
-    [setMessageHistory, getAIResponse]
+    [threadTitle, getAIResponse, setThreadTitle]
   );
 
   const onPromptSelect = React.useCallback(
     (prompt: ChatPrompt) => {
+      if (
+        setThreadTitle &&
+        (!threadTitle || threadTitle === DEFAULT_THREAD_TITLE)
+      ) {
+        setThreadTitle(prompt.label);
+      }
+
       if (prompt.response !== undefined) {
         setMessageHistory(prevMessages => [
           ...prevMessages,
@@ -279,7 +315,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         getAIResponse(prompt.prompt, true, prompt.label);
       }
     },
-    [getAIResponse, setMessageHistory]
+    [getAIResponse, setThreadTitle, threadTitle]
   );
 
   React.useEffect(() => {
@@ -302,16 +338,20 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setInitialThreadPrompt,
   ]);
 
-  const onSuggestPrompts = () => {
-    const nextPage = (suggestionPage + 1) % SUGGESTED_PROMPTS.length;
+  const onSuggestPrompts = (promptType: SuggestPromptsType) => {
+    const aiInitialSuggestionsMessage = {
+      role: Role.ASSISTANT,
+      chatMessageText:
+        SUGGESTED_PROMPTS_FOR_SELECTION[promptType].initialMessage,
+      status: Status.OK,
+    };
     const newSuggestions =
-      context.type === AiDiffContext.GENERAL
-        ? GENERAL_SUGGESTED_PROMPTS
-        : SUGGESTED_PROMPTS[nextPage];
-    setSuggestionPage(nextPage);
+      SUGGESTED_PROMPTS_FOR_SELECTION[promptType].suggestedPrompts;
+
     setMessageHistory(prevMessages => [
       ...prevMessages,
-      newSuggestions.concat(additionalPrompts),
+      aiInitialSuggestionsMessage,
+      newSuggestions,
     ]);
   };
 
@@ -325,6 +365,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   return (
     <div className={style.chatContainer}>
+      {!hideChatHeader && (
+        <AiDiffChatHeader
+          onSuggestPrompts={onSuggestPrompts}
+          messages={messageHistory}
+          threadTitle={threadTitle}
+          personalizationData={personalizationData}
+        />
+      )}
       <div className={style.chatContent}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
@@ -365,11 +413,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         </div>
       </div>
       <AiDiffChatFooter
+        userMessage={userMessage}
+        onChange={setUserMessage}
         onSubmit={onMessageSend}
-        onSuggestPrompts={onSuggestPrompts}
-        messages={messageHistory}
         waiting={isWaitingForResponse}
-        disableEndButtons={disableEndButtons}
         userMessageEditorRef={userMessageEditorRef}
       />
     </div>

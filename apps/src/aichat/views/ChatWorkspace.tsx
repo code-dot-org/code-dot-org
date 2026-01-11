@@ -1,11 +1,13 @@
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
-import React, {useCallback, useEffect, useMemo} from 'react';
+import markdownToTxt from 'markdown-to-txt';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {isModelUpdate, WorkspaceTeacherViewTab} from '@cdo/apps/aichat/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ChatEventLogger from '../chatEventLogger';
 import {
@@ -34,7 +36,6 @@ import {
 import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
-import UploadButton from './assets/UploadButton';
 import UserAddedSelectionContextPreview from './assets/UserAddedSelectionContextPreview';
 import ChatEventsList from './ChatEventsList';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -53,6 +54,13 @@ interface ChatWorkspaceProps {
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+
+  // Optional callback to process the model's response before it is recorded in chat
+  // history (useful for structured outputs).
+  responseCallback?: (response: string) => string;
+
+  // Optional callback to log level activity
+  logLevelActivity?: () => void;
 }
 
 /**
@@ -68,6 +76,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   channelId,
   hasStarterAssets = false,
   hideModelChangeMessage = false,
+  responseCallback,
+  logLevelActivity,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -96,6 +106,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
@@ -144,14 +158,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
     if (selectedStudent) {
       dispatch(
-        fetchUserChatHistory({userId: selectedStudent.id, isOwnHistory: false})
+        fetchUserChatHistory({
+          userId: selectedStudent.id,
+          isOwnHistory: false,
+          channelId,
+        })
       );
     } else {
       dispatch(
-        fetchUserChatHistory({userId: currentUserId, isOwnHistory: true})
+        fetchUserChatHistory({
+          userId: currentUserId,
+          isOwnHistory: true,
+          channelId,
+        })
       );
     }
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent]);
+  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
 
   useEffect(() => {
     dispatch(setClientType(clientType));
@@ -207,10 +229,23 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     });
   }, [dispatch, previousParameters, modelParameters]);
 
+  const [liveAnnouncement, setLiveAnnouncement] = useState('');
+  const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+  useEffect(() => {
+    if (chatEvents.length > 0) {
+      const last = chatEvents[chatEvents.length - 1];
+      if ('chatMessageText' in last && last.chatMessageText) {
+        setLiveAnnouncement(markdownToTxt(last.chatMessageText));
+      }
+    }
+  }, [chatEvents]);
+
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
   };
+
+  const buildAssetUrlValue = multimodalAvailable ? buildAssetUrl : undefined;
 
   const tabs = [
     {
@@ -229,7 +264,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={studentChatHistory}
           isTeacherView={true}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       ),
       iconLeft: iconValue,
@@ -240,7 +276,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       tabContent: (
         <ChatEventsList
           events={visibleItems}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       ),
     },
@@ -265,17 +302,28 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const uploadDisabled = !canChatWithModel || !!selectedStudent || chatDisabled;
 
+  const isTeacherView = !!selectedStudent;
+
+  const showTabs =
+    selectedStudent && clientType === AiChatClientTypes.AI_CHAT_LAB;
+
   return (
-    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {selectedStudent ? (
+    <div
+      id="chat-workspace-area"
+      className={moduleStyles.chatWorkspace}
+      aria-live="polite"
+    >
+      <div className={moduleStyles.accessibilityHidden}>{liveAnnouncement}</div>
+      {showTabs ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList
-          events={visibleItems}
-          buildAssetUrl={multimodalAvailable ? buildAssetUrl : undefined}
+          events={chatEvents}
+          isTeacherView={isTeacherView}
+          buildAssetUrl={buildAssetUrlValue}
+          isAiTutorVersion={isAiTutorVersion}
         />
       )}
-
       <div className={moduleStyles.footer}>
         {multimodalAvailable && (
           <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
@@ -289,17 +337,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             chatButtons={chatButtons}
             hiddenContextCallback={hiddenContextCallback}
             multimodalAvailable={multimodalAvailable}
+            responseCallback={responseCallback}
+            levelName={levelName}
+            hasStarterAssets={hasStarterAssets}
+            buildAssetUrl={buildAssetUrl}
+            logLevelActivity={logLevelActivity}
+            uploadDisabled={uploadDisabled}
+            currentLevelId={currentLevelId}
           />
-        )}
-        {multimodalAvailable && (
-          <div className={moduleStyles.buttonRow}>
-            <UploadButton
-              isDisabled={uploadDisabled}
-              levelName={levelName}
-              hasStarterAssets={hasStarterAssets}
-              buildAssetUrl={buildAssetUrl}
-            />
-          </div>
         )}
       </div>
     </div>

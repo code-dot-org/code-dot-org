@@ -1,0 +1,8 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.node.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["vite.config.ts"]
+}
+

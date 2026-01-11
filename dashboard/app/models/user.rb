@@ -220,6 +220,7 @@ class User < ApplicationRecord
     roster_synced
     educator_role
     signup_sources_tracking
+    has_dismissed_personalization_alert
   )
 
   attr_accessor(
@@ -251,6 +252,7 @@ class User < ApplicationRecord
 
   has_many :hint_view_requests
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
+  has_many :ai_lesson_summaries, dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -312,6 +314,7 @@ class User < ApplicationRecord
   has_many :lti_user_identities, dependent: :destroy
 
   has_many :external_notifications, dependent: :destroy
+  has_many :teacher_notifications, dependent: :destroy
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
@@ -1079,8 +1082,13 @@ class User < ApplicationRecord
   def can_change_own_user_type?
     if student? # upgrading to teacher
       # Requires ability to edit email because upgrade requires adding a cleartext email address.
-      # Students in sections cannot edit user type because teacher/school owns the student's data.
-      can_edit_email? && sections_as_student.none? {|section| section.participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student}
+      return false unless can_edit_email?
+
+      if Policies::User.personal_account?(self)
+        true
+      else
+        over_21?
+      end
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
       # to be taught by teachers.
@@ -1694,7 +1702,7 @@ class User < ApplicationRecord
       end
 
       script = Unit.get_from_cache(script_id)
-      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
+      script_valid = script.csf?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
           new_result >= ActivityConstants::BEST_PASS_RESULT &&
           script_valid &&

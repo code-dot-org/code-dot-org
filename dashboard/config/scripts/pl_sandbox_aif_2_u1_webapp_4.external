@@ -1,0 +1,49 @@
+name 'pl_sandbox_aif_2_U1-webapp_4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is a Web App?
+
+#### A **web app (web application)** is a program that runs in a web browser—like Chrome, Safari, or Edge—instead of being installed on your computer or phone. It combines web technologies such as HTML, CSS, and JavaScript to create an interactive experience for users.
+
+
+#### Whereas a **website** usually displays static information (like an online brochure or article), a web app lets users do something like submit a form, play a game, generate text with AI, or draw on a canvas.
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+
+  <img src="https://images.code.org/f717660937a4dfe9e5ee5c26c2559e84-image-1760984133668.png" alt ="gmail logo" style="border-radius: 5pt; width: 32%;">
+    <img src="https://images.code.org/1c777228b8b20369dbbd4bdc9c541b32-image-1760984038365.png" alt= "netflix logo" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddaccf7331f24af662dd70608194f8ae-image-1760984217033.png" alt="amazon logo" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+## Key Components
+
+#### A web app is built using three core web technologies, and students can now use AI tools to assist in their development process.
+
+
+<img src="https://images.code.org/5a14dc8bdef7c9c9b5c4d8736c451265-image-1759348130243.png" alt="HTML – the structure of a webpage (like the frame of a house).CSS – the style and design (colors, fonts, layout—how the house looks).JavaScript – the interactivity and logic (how the house “works,” like doors opening or lights turning on). AI – a creative assistant that helps suggest, refine, and debug code, while students stay in control of decisions." width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+#### *Note: Unit One only covers HTML and CSS. JavaScript will be introduced in Unit 2*. 
+
+
+
+## Why it matters for students:
+
+#### **Building web apps helps students:**
+- #### See the connection between code and creativity.
+- #### Practice problem-solving and computational thinking.
+- #### Understand how many of the tools they use every day (from Google Docs to ChatGPT) are built with the same foundational technologies.
+
+
+## Next Up
+
+#### Let's take a look at the final project the students will create in this unit. 
+
+
+MARKDOWN

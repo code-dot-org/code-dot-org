@@ -64,16 +64,19 @@ SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
 SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 
+# Maximum parallel browsers to use for UI and eyes tests
+PARALLEL_COUNT = 24
+
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  timed_task_with_logging :run_tests do
-    unless CI::Utils.ci_job_unit_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
+  timed_task_with_logging :run_unit_tests do
+    target_branch = ENV.fetch('DRONE_TARGET_BRANCH', '')
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
+      RakeUtils.rake_stream_output 'test:all'
+    # Always run all unit tests on pull requests against the 'test' branch
+    elsif target_branch == 'test'
+      ChatClient.log "Target branch is #{target_branch.dump}, force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
@@ -114,7 +117,7 @@ namespace :ci do
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
-      Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+      Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
@@ -129,7 +132,7 @@ namespace :ci do
           "--local " \
           "--ci " \
           "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
           "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
@@ -143,7 +146,7 @@ namespace :ci do
             "--config Chrome,iPhone " \
             "--local " \
             "--ci " \
-            "--parallel 10 " \
+            "--parallel #{PARALLEL_COUNT} " \
             "--retry_count 1 " \
             "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
@@ -173,11 +176,6 @@ namespace :ci do
   end
 
   timed_task_with_logging :seed_ui_test do
-    unless CI::Utils.ci_job_ui_tests?
-      ChatClient.log "Wrong CI job, skipping"
-      next
-    end
-
     if CI::Utils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -188,8 +186,16 @@ namespace :ci do
     end
   end
 
+  timed_task_with_logging :force_seed_ui_test do
+    Dir.chdir('dashboard') do
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
+
   timed_task_with_logging :sparse_checkout do
-    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
+    # never do sparse checkout in prepare_cacheable_build CI job, or it will
+    # cause later unit and ui jobs to fail.
+    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT) && ['unit_tests', 'ui_tests'].include?(ENV.fetch('CI_JOB', nil))
       cmd = 'bin/sparse-checkout no-pegasus-content'
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
       RakeUtils.system_stream_output "git status --porcelain"

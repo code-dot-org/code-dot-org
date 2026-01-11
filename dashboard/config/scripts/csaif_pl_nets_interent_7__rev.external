@@ -1,0 +1,35 @@
+name 'csaif_pl_nets_interent_7_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Packets
+
+<img src="https://images.code.org/d7940af55b88113850b62becc989f70e-Screenshot 2025-12-09 at 12.18.04 PM.png" alt="trucks on roads driving between computers" width="250px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 0 0 40px 40px">
+
+#### When data is transmitted across the Internet, it is divided into small pieces called **packets**.
+
+#### Just like a large delivery might be split into several smaller boxes, shipped on different trucks, and then reassembled when they arrive, digital information is broken into multiple packets. These packets may travel along different routes and arrive at different times, but they are put back together correctly when they reach the final device.
+
+#### On the internet, routers act like traffic directors. They examine each packet and decide the best next hop to keep data moving efficiently across the network.
+
+#### TCP (Transmission Control Protocol) manages the sending and receiving of these packets. Think of it like a guaranteed mail service:
+* #### TCP makes sure all packets are delivered.
+* #### It checks that none were lost along the way.
+* #### If something is missing, TCP requests the sender to resend the lost packets.
+* #### Once everything has arrived, TCP reassembles the packets in the correct order so the data makes sense.
+
+#### Together, packets, routers, and TCP ensure that information travels reliably and accurately across the internet, even when the network is busy or parts of it are temporarily unavailable.
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Transmission Control Protocol (TCP)</strong> a protocol that ensures that all parts of a message are received and ordered correctly.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>User Datagram Protocol (UDP)</strong> is a protocol that focuses on speed and does not guarantee all packets arrive.</p>
+</div>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Students explore packets in an unplugged activity in Lesson 5. If you have time, check out the <a href='https://docs.google.com/document/d/13V6e6Qr-EBp1YX5J6MwUtt5EtvXwS1WVbUrFKjkfB2A/edit?tab=t.0' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Teacher Guide</a> for this activity.
+</p>
+MARKDOWN

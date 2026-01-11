@@ -33,7 +33,11 @@ const haveDifferentValues = (
     return JSON.stringify(value1) !== JSON.stringify(value2);
   }
   // In the case that field values are saved as different types, compare as strings.
-  if (typeof value1 !== typeof value2) {
+  if (
+    typeof value1 !== typeof value2 &&
+    value1 !== undefined &&
+    value2 !== undefined
+  ) {
     return value1.toString() !== value2.toString();
   }
 

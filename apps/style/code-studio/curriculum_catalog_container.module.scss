@@ -2,6 +2,10 @@
 
 $container-width: 309px;
 
+:global(#curriculum-catalog-container) {
+  background-color: var(--background-neutral-secondary);
+}
+
 .catalogContentContainer {
   max-width: 60em;
   margin: 0 auto 1em auto;
@@ -38,6 +42,12 @@ $container-width: 309px;
     margin: 16px;
     color: color.$bootstrap_success_text;
   }
+}
+
+.curriculumCatalogHeroBanner {
+ figure img {
+   height: 185px;
+ }
 }
 
 .assignSuccessMessageCenter {

@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:58.000Z",
   "level_num": "custom",
@@ -584,7 +583,7 @@
         "conditions": [
           {
             "name": "played_sounds_in_different_functions",
-            "value": 4
+            "value": 3
           }
         ]
       },
@@ -610,9 +609,13 @@
     ],
     "name_suffix": "_v2",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/benson_boone_beautiful_things/benson_boone_beautiful_things.jpg",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.374+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceC\"},{\"changed_at\":\"2025-06-25 19:25:20 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:27:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:45:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:49:34 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.374+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceC\"},{\"changed_at\":\"2025-06-25 19:25:20 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:27:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:45:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:49:34 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-24 16:15:41 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

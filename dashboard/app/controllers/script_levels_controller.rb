@@ -610,18 +610,12 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags
     )
 
     readonly_view_options if @level.channel_backed? && params[:version].present?
-
-    # Add video generation URL for only the last level of Dance
-    # If we eventually want to add video generation for other levels or level
-    # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

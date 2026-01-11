@@ -1,4 +1,6 @@
 require 'cdo/activity_constants'
+require 'csv'
+require 'tempfile'
 
 class AdminUsersController < ApplicationController
   include Pd::PageHelper
@@ -49,9 +51,19 @@ class AdminUsersController < ApplicationController
     user = User.from_identifier(user_id)
 
     if user
-      bypass_sign_in user
+      log_admin_action("assume_identity", user.id)
+
+      admin = current_user
+
+      # Ensures a clean new session for the assumed identity
+      sign_out admin
+      reset_session
+
       # Set cookie to indicate assumed identity
       session[:assumed_identity] = true
+      session[:admin_id] = admin.id
+
+      bypass_sign_in user
       redirect_to '/'
     else
       flash[:alert] = 'User not found'
@@ -63,6 +75,7 @@ class AdminUsersController < ApplicationController
     user = User.find_by_id(params.require(:user_id))
     if user
       user.destroy
+      log_admin_action("delete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Deleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or deleted"
@@ -74,6 +87,7 @@ class AdminUsersController < ApplicationController
     user = User.only_deleted.find_by_id(params[:user_id])
     if user
       user.undestroy
+      log_admin_action("undelete_user", user.id)
       flash[:alert] = "User (ID: #{params[:user_id]}) Undeleted!"
     else
       flash[:alert] = "User (ID: #{params[:user_id]}) not found or undeleted"
@@ -186,21 +200,8 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     script_id = params[:script_id]
 
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'reset-progress',
-        event: 'admin-delete-progress',
-        user_id: user_id,
-        script_id: script_id,
-        data_json: {
-          signed_in_user: current_user.username,
-          reason: params[:reason]
-        }.to_json
-      }
-    )
-
     User.delete_progress_for_unit(user_id: user_id, script_id: script_id)
+    log_admin_action("delete_progress", user_id, {script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
@@ -280,6 +281,7 @@ class AdminUsersController < ApplicationController
       return
     end
     @user.permission = params[:permission]
+    log_admin_action("grant_permission", user_id, {permission: params[:permission]})
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -287,7 +289,9 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     @user = restricted_users.find_by(id: user_id)
     permission = params[:permission]
-    @user.try(:delete_permission, permission)
+    if @user.try(:delete_permission, permission)
+      log_admin_action("revoke_permission", user_id, {permission: permission})
+    end
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -304,6 +308,7 @@ class AdminUsersController < ApplicationController
           next
         end
         user.permission = permission
+        log_admin_action("bulk_grant_permission", user.id, {permission: permission})
         succeeded_emails.push(email)
       end
       unless succeeded_emails.empty?
@@ -360,6 +365,131 @@ class AdminUsersController < ApplicationController
     redirect_to studio_person_form_path
   end
 
+  # GET /admin/mass_delete_student_progress
+  def mass_delete_student_progress
+  end
+
+  # POST /admin/convert_usernames_to_ids
+  def convert_usernames_to_ids
+    csv_data = params[:csv_data]
+    if csv_data.blank?
+      render json: {success: false, error: 'CSV data is required'}, status: :bad_request
+      return
+    end
+
+    # Create temporary input file
+    temp_input = Tempfile.new(['usernames', '.csv'])
+    # Create output filename that script expects
+    temp_output = temp_input.path.sub(/\.csv\z/, '-user-ids.csv')
+
+    # Write frontend data to temp file
+    CSV.open(temp_input.path, 'w', headers: true) do |csv|
+      csv << ['student_username', 'unit_name']  # Headers
+      csv_data.each {|row| csv << [row['student_username'], row['unit_name']]}
+    end
+
+    Rails.logger.info "Created temp input file: #{temp_input.path}"
+    Rails.logger.info "Expected output file: #{temp_output}"
+
+    converted_data = []
+    error_message = nil
+
+    CSV.foreach(temp_input.path, headers: true) do |row|
+      username = row['student_username']
+      unit_name = row['unit_name']
+
+      unless username
+        Rails.logger.error 'CSV must have a column named "student_username".'
+        error_message = 'CSV must have a column named "student_username"'
+        break
+      end
+
+      user = User.find_by_username(username)
+      unless user
+        Rails.logger.error "Student with username #{username} not found"
+        error_message = "Student with username #{username} not found"
+        break
+      end
+
+      converted_data << {
+        student_id: user.id.to_s,
+        unit_name: unit_name
+      }.compact
+    end
+
+    if error_message
+      temp_input.unlink
+      render json: {success: false, error: error_message}, status: :bad_request
+      return
+    end
+
+    Rails.logger.info "Successfully converted #{converted_data.length} records"
+
+    temp_input.unlink
+
+    render json: {success: true, converted_data: converted_data}
+  rescue => exception
+    Rails.logger.error "Error in convert_usernames_to_ids: #{exception.message}"
+    Rails.logger.error exception.backtrace.join("\n")
+    render json: {success: false, error: 'Internal server error', details: exception.message}, status: :internal_server_error
+  end
+
+  # POST /admin/delete_user_progress
+  def delete_user_progress
+    unless request.post?
+      render json: {error: 'Only POST requests are allowed'}, status: :method_not_allowed
+      return
+    end
+
+    begin
+      csv_data = params[:csv_data]
+      teacher_id = params[:teacher_id]
+      dry_run = params[:dry_run]
+
+      if csv_data.blank? || teacher_id.blank?
+        render json: {error: 'CSV data and teacher ID are required'}, status: :bad_request
+        return
+      end
+
+      # Create a temporary file for the CSV content with student_id,unit_name format
+      temp_file = Tempfile.new(['delete_progress', '.csv'])
+      CSV.open(temp_file.path, 'w', headers: true) do |csv|
+        csv << ['student_id', 'unit_name']
+        csv_data.each do |row|
+          csv << [row['student_id'], row['unit_name']]
+        end
+      end
+
+      # Path to the delete script
+      repo_root = File.expand_path('..', Rails.root)
+      script_path = File.join(repo_root, 'bin', 'oneoff', 'reset_student_progress_in_bulk', 'delete_user_progress_by_unit.rb')
+
+      commit_flag = dry_run == true ? '' : 'for-real'
+
+      output = `cd #{repo_root} && ruby #{script_path} #{teacher_id} #{temp_file.path} #{commit_flag} 2>&1`
+      exit_status = $?.exitstatus
+
+      temp_file.unlink
+
+      if exit_status != 0
+        Rails.logger.error "Delete progress script failed with exit status #{exit_status}: #{output}"
+        render json: {error: 'Delete progress script failed', details: output}, status: :internal_server_error
+        return
+      end
+
+      render json: {
+        success: true,
+        output: output,
+        dry_run: dry_run,
+        message: dry_run ? "Dry run completed successfully" : "Progress deletion completed successfully"
+      }
+    rescue => exception
+      Rails.logger.error "Error in delete_user_progress: #{exception.message}"
+      Rails.logger.error exception.backtrace.join("\n")
+      render json: {error: 'Internal server error', details: exception.message}, status: :internal_server_error
+    end
+  end
+
   private def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
@@ -378,5 +508,10 @@ class AdminUsersController < ApplicationController
       @target_user = User.from_identifier(user_identifier)
       flash[:alert] = 'User not found' unless @target_user
     end
+  end
+
+  private def log_admin_action(event, affected_user_id = nil, attributes = {})
+    log_payload =  {event: event, namespace: 'admin', request_id: request.request_id, authenticated_user_id: current_user.id, affected_user_id: affected_user_id.to_i}.merge(attributes)
+    CDO.log.warn log_payload.to_json
   end
 end

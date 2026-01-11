@@ -1,16 +1,18 @@
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {submitChatContents} from '../redux';
+import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
 import {
   AiChatClientType,
   ChatButtonAndKey,
   ModelParameters,
   AnalyticsProperties,
 } from '../types';
+
+import UploadButton, {UploadButtonProps} from './assets/UploadButton';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
@@ -21,6 +23,15 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
+  responseCallback?: (response: string) => string;
+  currentLevelId?: string | null;
+  logLevelActivity?: () => void;
+
+  /** UploadButton props */
+  uploadDisabled?: UploadButtonProps['isDisabled'];
+  levelName?: UploadButtonProps['levelName'];
+  buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
+  hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
 }
 
 /**
@@ -35,10 +46,18 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
+  responseCallback,
+  currentLevelId,
+  logLevelActivity,
+  levelName,
+  hasStarterAssets,
+  buildAssetUrl,
+  uploadDisabled,
 }) => {
+  const [userMessage, setUserMessage] = useState<string>('');
   const {chatDisabled} = useAiChatDisabled();
   const isWaitingForChatResponse = useAppSelector(
-    state => !!state.aichat.chatMessagePending
+    selectIsWaitingForChatResponse
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
@@ -51,6 +70,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   const userAddedSelectionContext = useAppSelector(
     state => state.aichat.userAddedSelectionContext
   );
+
   const dispatch = useAppDispatch();
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -61,13 +81,15 @@ const UserChatMessageEditor: React.FunctionComponent<
     uploadsPending ||
     chatDisabled;
 
+  const clearUserMessage = () => setUserMessage('');
+
   const handleSubmit = useCallback(
-    async (userMessage: string, analyticsProperties?: AnalyticsProperties) => {
+    async (message: string, analyticsProperties?: AnalyticsProperties) => {
       if (!disabled) {
         const hiddenContext = await hiddenContextCallback?.();
         dispatch(
           submitChatContents({
-            text: userMessage,
+            text: message,
             modelParameters,
             clientType,
             hiddenContext,
@@ -80,8 +102,11 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
+            responseCallback,
+            logLevelActivity,
           })
         );
+        clearUserMessage();
       }
     },
     [
@@ -93,8 +118,14 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
+      responseCallback,
+      logLevelActivity,
     ]
   );
+
+  useEffect(() => {
+    clearUserMessage();
+  }, [currentLevelId]);
 
   useEffect(() => {
     if (!disabled) {
@@ -106,7 +137,7 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   return (
     <>
-      {chatButtons && !chatDisabled && (
+      {chatButtons && chatButtons.length > 0 && !chatDisabled && (
         <div className={moduleStyles.chatButtonsContainer}>
           {chatButtons.map(({ChatButton, key}) => (
             <ChatButton key={key} onClick={handleSubmit} />
@@ -114,11 +145,24 @@ const UserChatMessageEditor: React.FunctionComponent<
         </div>
       )}
       <UserMessageEditor
+        userMessage={userMessage}
+        onChange={setUserMessage}
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
         ref={inputRef}
-      />
+      >
+        {multimodalAvailable && buildAssetUrl && levelName && (
+          <div className={moduleStyles.buttonRow}>
+            <UploadButton
+              isDisabled={!!uploadDisabled || disabled}
+              levelName={levelName}
+              hasStarterAssets={hasStarterAssets}
+              buildAssetUrl={buildAssetUrl}
+            />
+          </div>
+        )}
+      </UserMessageEditor>
     </>
   );
 };

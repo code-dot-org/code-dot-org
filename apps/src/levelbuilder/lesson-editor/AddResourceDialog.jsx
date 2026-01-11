@@ -7,6 +7,7 @@ import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
+import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import LessonEditorDialog from './LessonEditorDialog';
 
@@ -23,10 +24,24 @@ const TYPE_OPTIONS = [
 
 const AUDIENCE_OPTIONS = ['Student', 'Teacher', 'Verified Teacher'];
 
+const CURRICULUM_CATEGORIES = [
+  {
+    value: 'curriculum',
+    label: 'Curriculum',
+  },
+  {
+    value: 'professional_learning',
+    label: 'Professional Learning',
+  },
+];
+
 const initialState = {
   name: '',
   type: '',
   audience: '',
+  embeddabilityType:
+    ResourceEmbeddabilityOptions.EMBED_AND_RESOURCE_DROPDOWN.value,
+  curriculumCategory: '',
   includeInPdf: false,
   assessment: false,
   url: '',
@@ -51,6 +66,8 @@ export default class AddResourceDialog extends Component {
         name: props.existingResource.name,
         type: props.existingResource.type,
         audience: props.existingResource.audience,
+        embeddabilityType: props.existingResource.embeddabilityType,
+        curriculumCategory: props.existingResource.curriculumCategory,
         includeInPdf: props.existingResource.includeInPdf,
         assessment: props.existingResource.assessment,
         url: props.existingResource.url,
@@ -183,6 +200,39 @@ export default class AddResourceDialog extends Component {
                   {AUDIENCE_OPTIONS.map(option => (
                     <option value={option} key={option}>
                       {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+            <div style={styles.dropdownRow}>
+              <label style={styles.selectAndLabel}>
+                <span>Embeddability type:</span>
+                <select
+                  name="embeddabilityType"
+                  style={styles.selectInput}
+                  value={this.state.embeddabilityType}
+                  onChange={this.handleInputChange}
+                >
+                  {Object.values(ResourceEmbeddabilityOptions).map(option => (
+                    <option value={option.value} key={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label style={styles.selectAndLabel}>
+                Curriculum category:
+                <select
+                  name="curriculumCategory"
+                  style={styles.selectInput}
+                  value={this.state.curriculumCategory}
+                  onChange={this.handleInputChange}
+                >
+                  <option value={''}>{''}</option>
+                  {CURRICULUM_CATEGORIES.map(option => (
+                    <option value={option.value} key={option.value}>
+                      {option.label}
                     </option>
                   ))}
                 </select>

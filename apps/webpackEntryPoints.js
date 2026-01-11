@@ -25,9 +25,11 @@ const ALL_APPS = [
 
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
+  'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
+  'codeprojects_preview/page_not_found': './src/sites/studio/pages/codeprojects_preview/page_not_found.js',
   'codeprojects_preview/show': './src/sites/studio/pages/codeprojects_preview/show.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
@@ -228,9 +230,6 @@ const PEGASUS_ENTRIES = {
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
   'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
   'hourofcode.com/views/swiper_page_resources': './src/sites/hourofcode.com/pages/views/swiper_page_resources.js',
-
-  // shared between code.org and hourofcode.com
-  'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
 };
 
 // prettier-ignore
@@ -286,7 +285,6 @@ const OTHER_ENTRIES = {
   // The blockly dependency is huge, so we currently control when it is
   // loaded explicitly via script tags rather than via normal imports.
   blockly: './src/sites/studio/pages/blockly.js',
-  googleblockly: './src/sites/studio/pages/googleblockly.js',
 
   // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
   // in a bundle to minimize the amount of stuff we need when loading blocks

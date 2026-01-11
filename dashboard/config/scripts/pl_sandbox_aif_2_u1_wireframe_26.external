@@ -1,0 +1,41 @@
+name 'pl_sandbox_aif_2_U1-wireframe-26'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wireframes
+
+## What is a wireframe?
+#### A wireframe is a low-fidelity, structural layout showing content and functionality, without visual design.
+
+<div style="text-align: center; margin: 40px 0; padding: 10px;">
+
+  <!-- Quote Highlight Box -->
+  <div style="display: inline-block; background-color: #e5d8f2; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #3b0066;">
+      Just like an architect sketches a blueprint before building, designers use wireframes to plan a website’s structure before coding.
+    </p>
+  </div>
+
+</div>
+
+#### Wireframe sketches are intentionally simple so it’s easy to change ideas and adjust layouts without worrying about colors, images, or detailed design.
+
+<img src="https://images.code.org/1f42cada9ca13c98b7dd4d67ba13d231-image-1761150656423.png" alt="Sample sketched wireframe" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+<p style="font-size: 8pt; color: #555; margin-top: 8px;">
+Image source: <a href="https://www.springboard.com/blog/design/how-to-create-a-wireframe/" target="_blank" style="color: #0077cc; text-decoration: none;">Springboard – How to Create a Wireframe</a>
+</p>
+
+#### At this stage, the focus is on what goes where—like where a button, heading, or image might appear—rather than how it looks. Keeping things low-fidelity encourages feedback and quick revisions before time is spent on visuals or code.
+
+## Sketch Lab Sample
+#### Check out this example made in **Sketch Lab**, our built-in visual design tool. Like Canva or Figma, it allows students to create their designs right on the platform—no extra tools needed!
+
+<img src="https://images.code.org/366ecab8f8cd0f0c8138c45fc86e687e-image-1761152722160.png" alt="Sample sketched wireframe" width="850px" style="display: block; margin-left: auto; margin-right: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
+
+
+## Let’s practice
+#### Now it's your turn to draw a wireframe in Sketch Lab.
+
+
+MARKDOWN

@@ -28,7 +28,7 @@
       }
     },
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:11:50.184+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L1 Overloaded PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L3-L1 Overloaded PBT_pilot-2025\"},{\"changed_at\":\"2025-05-24 20:19:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 20:19:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

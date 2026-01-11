@@ -2,6 +2,8 @@ require 'test_helper'
 require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @teacher = create(:teacher)
     @teacher.freeze
@@ -34,7 +36,7 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_code_certificate.jpg'
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal expected_image_url, response_data['imageUrl']
   end
@@ -70,7 +72,7 @@ class CertificatesControllerTest < ActionController::TestCase
   test 'shows static image for blank certificate' do
     get :blank
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_code_certificate.jpg'
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal expected_image_url, response_data['imageUrl']
   end
@@ -83,7 +85,7 @@ class CertificatesControllerTest < ActionController::TestCase
     sign_in @teacher
     get :batch
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_code_certificate.jpg'
+    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'hourofcode', response_data['courseName']
     assert_equal expected_image_url, response_data['imageUrl']

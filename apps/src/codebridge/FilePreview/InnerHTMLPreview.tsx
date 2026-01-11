@@ -5,11 +5,14 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
+import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
+
 import {IframeMessageType} from './constants';
 import {
   updateLinksToHtmlFiles,
   updateLinksToNonHtmlFiles,
 } from './htmlParsingHelpers';
+import PageNotFound from './PageNotFound';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 const NOT_FOUND_FILE = 'NOT_FOUND';
@@ -32,7 +35,8 @@ const InnerHTMLPreview = () => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
-    const port = 'localhost-' === environment ? `:${location.port}` : '';
+    const port =
+      'localhost-' === environment && location.port ? `:${location.port}` : '';
     const cdn = environment.includes('adhoc') ? 'cdn-' : '';
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
@@ -170,10 +174,8 @@ const InnerHTMLPreview = () => {
   }, [parentOrigin, source]);
 
   const getPreview = useCallback(() => {
-    // TODO: better loading/page not found UI.
-    // https://codedotorg.atlassian.net/browse/CT-1258
     if (blobUrl === NOT_FOUND_FILE) {
-      return <div>Page not found</div>;
+      return <PageNotFound />;
     } else if (blobUrl) {
       return (
         <iframe
@@ -188,7 +190,11 @@ const InnerHTMLPreview = () => {
         />
       );
     } else {
-      return <div>Loading...</div>;
+      return (
+        <div className={moduleStyles.placeholderContainer}>
+          <CodebridgeEmptyState title="Loading..." />
+        </div>
+      );
     }
   }, [blobUrl, allowScripts]);
 

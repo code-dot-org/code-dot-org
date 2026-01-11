@@ -1,0 +1,17 @@
+name 'programming-fundamentals-preassessment-question3_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 3'
+
+right 'A step-by-step process to solve a problem'
+wrong 'A computer virus'
+wrong 'A large amount of stored data'
+wrong 'A collection of images'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Designing Algorithms
+MARKDOWN
+
+markdown <<MARKDOWN
+Which of the following is an **algorithm**?
+MARKDOWN

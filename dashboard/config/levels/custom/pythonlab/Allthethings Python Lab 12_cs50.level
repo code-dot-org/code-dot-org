@@ -1,0 +1,394 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-12-19T16:13:54.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\np1 = Painter(0,0,'South',2)\np2 = Painter(1,0)\np2.turn_left()\np1.move()\np1.move()\np1.paint('Red')\np1.turn_left()\np1.move()\np1.paint('Blue')\n",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        },
+        "2": {
+          "id": "2",
+          "name": "support.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "2"
+      ]
+    },
+    "long_instructions": "## Python Lab Neighborhood Widget View\r\n\r\nPress the Run button and see what happens.\r\nThis is an example of the widget view.\r\n",
+    "hide_share_and_remix": "true",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "enable_micro_bit": "false",
+    "mini_app": "neighborhood",
+    "widget_view": "true",
+    "widget_view_allow_show_code": "true",
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:54.618+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 12\\\"\"],\"cloned_from\":\"Allthethings Python Lab 12\"}]"
+}]]></config>
+</Pythonlab>

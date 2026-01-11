@@ -1,8 +1,4 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {
-  getFileNameWithNumberSuffix,
-  sendCodebridgeAnalyticsEvent,
-} from '@codebridge/utils';
+import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
@@ -21,12 +17,17 @@ type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   backpackApi: BackpackContextType;
   file: ProjectFile;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   file,
+  sendLab2AnalyticsEvent,
 }: OpenSaveToBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>
@@ -92,27 +93,34 @@ export const openSaveToBackpackPrompt = async ({
             ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
             : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
       }
-      const successCallback = () => sendCodebridgeAnalyticsEvent(successMetric);
+      const successCallback = () =>
+        sendLab2AnalyticsEvent(successMetric, {
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+        });
 
-      const fileContents = {
-        name: selectedFileName,
-        contents: file.contents,
-        folderId: DEFAULT_FOLDER_ID,
-        language: 'py',
-        active: false,
-      } as ProjectFile;
-      backpackApi.savePythonlabFile(
-        selectedFileName,
-        fileContents,
-        handleError(
-          codebridgeI18n.saveToBackpackTitle(),
-          codebridgeI18n.saveToBackpackError({selectedFileName}) +
-            ' ' +
-            codebridgeI18n.closeWindowTryAgain(),
-          'Save to backpack error'
-        ),
-        successCallback
+      const errorCallback = handleError(
+        codebridgeI18n.saveToBackpackTitle(),
+        codebridgeI18n.saveToBackpackError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain(),
+        'Save to backpack error'
       );
+
+      if (file.url) {
+        backpackApi.saveCodebridgeFileFromUrl(
+          selectedFileName,
+          file.url,
+          errorCallback,
+          successCallback
+        );
+      } else {
+        backpackApi.saveCodebridgeFile(
+          selectedFileName,
+          file.contents,
+          errorCallback,
+          successCallback
+        );
+      }
     }
   );
 };

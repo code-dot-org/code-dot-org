@@ -8,9 +8,14 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from './copyable-code-block.module.scss';
 
-const CopyableCodeBlock: React.FunctionComponent = (
-  props: React.HTMLAttributes<HTMLPreElement>
-) => {
+interface CopyableCodeBlockProps extends React.HTMLAttributes<HTMLPreElement> {
+  onCopy?: () => void;
+}
+
+const CopyableCodeBlock: React.FunctionComponent<CopyableCodeBlockProps> = ({
+  onCopy,
+  ...props
+}) => {
   const [visible, setVisible] = useState(false);
   const [, setVisibleCount] = useState(0);
   const [ariaCopyMessage, setAriaCopyMessage] = useState('');
@@ -42,6 +47,7 @@ const CopyableCodeBlock: React.FunctionComponent = (
   const handleCopy = () => {
     if (preRef.current?.textContent) {
       copyToClipboard(preRef.current.textContent);
+      onCopy?.();
 
       setVisible(true);
 
@@ -73,7 +79,9 @@ const CopyableCodeBlock: React.FunctionComponent = (
         />
       </header>
       <div className={moduleStyles.codeContentBody}>
-        <pre ref={preRef} className={moduleStyles.codeContent} {...props} />
+        <div className={moduleStyles.codeContent}>
+          <pre ref={preRef} {...props} />
+        </div>
         <div
           className={`${moduleStyles.codeContentOverlay}${
             visible ? ' ' + moduleStyles.showOverlay : ''

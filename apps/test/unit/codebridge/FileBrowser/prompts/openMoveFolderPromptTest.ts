@@ -19,7 +19,7 @@ const getMoveFolderMock = (): [ProjectFolder, MoveFolderFunction] => {
 
 describe('openMoveFolderPrompt', function () {
   it('can successfully move a folder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const destinationFolderId = '3';
 
@@ -30,7 +30,7 @@ describe('openMoveFolderPrompt', function () {
       projectFolders: testProject.folders,
       dialogControl: getDialogControlMock(destinationFolderId),
       moveFolder: moveFolderDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(moveFolderData.id).toEqual(folderId);
@@ -40,7 +40,7 @@ describe('openMoveFolderPrompt', function () {
   });
 
   it('can refuse to move a folder that cannot be moved', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const folderId = '1';
     const destinationFolderId = '0';
 
@@ -51,7 +51,7 @@ describe('openMoveFolderPrompt', function () {
       projectFolders: smallProject.folders,
       dialogControl: getDialogControlMock(destinationFolderId),
       moveFolder: moveFolderDataMock,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(Object.keys(moveFolderData).length).toEqual(0);

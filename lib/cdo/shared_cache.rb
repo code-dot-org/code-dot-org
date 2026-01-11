@@ -37,7 +37,16 @@ module Cdo
     # Generic shared cache.
     # Use memcached if available, with FileStore as fallback.
     def self.cache
-      @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared')))
+      @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(cache_dir))
+    end
+
+    def self.cache_dir
+      # In parallel tests, use a unique cache directory per test process
+      if ENV['TEST_ENV_NUMBER']
+        dashboard_dir('tmp', 'cache', 'shared', ENV['TEST_ENV_NUMBER'])
+      else
+        dashboard_dir('tmp', 'cache', 'shared')
+      end
     end
   end
 end

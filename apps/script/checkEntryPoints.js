@@ -82,7 +82,6 @@ const SILENCED = [
   'code-studio',
 
   // referenced by multiple sites
-  'tutorialExplorer',
   'cookieBanner',
   'userHeaderEventLogger',
   'regionalPartnerMiniContact',
@@ -92,7 +91,6 @@ const SILENCED = [
 
   // other entry points
   'blockly',
-  'googleblockly',
   'brambleHost',
   'levelbuilder',
 

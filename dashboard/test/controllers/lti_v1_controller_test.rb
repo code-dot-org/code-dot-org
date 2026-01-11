@@ -9,6 +9,8 @@ require 'clients/lti_dynamic_registration_client'
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
+  self.use_transactional_test_case = true
+
   setup_all do
     @integration = create(:lti_integration)
     @deployment_id = SecureRandom.uuid
@@ -278,6 +280,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
     Honeybadger.stubs(:notify)
+    Policies::Lti.stubs(:supported_message_type?).returns(true)
   end
 
   def create_jwt(payload)
@@ -455,6 +458,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - LTI Resource Type wrong' do
+    Policies::Lti.unstub(:supported_message_type?)
     payload = get_valid_payload
     payload[:'https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
     LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
@@ -843,61 +847,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_empty lti_course.lti_sections
     assert_response :internal_server_error
-  end
-
-  test 'integration - given valid inputs, creates a new integration if one does not exist' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-
-    client_id = "5678schoology"
-    lms = "schoology"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_response :ok
-  end
-
-  test 'integration - given missing inputs, does not create a new integration' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    # missing client_id
-    post '/lti/v1/integrations', params: {name: name, lms: lms, email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # missing lms
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: '', email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # missing email
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-
-    # unsupported lms type
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: 'unsupported', email: email}
-    assert_equal I18n.t('lti.error.unsupported_lms_type'), flash[:alert]
-
-    # missing name
-    post '/lti/v1/integrations', params: {client_id: client_id, lms: lms, email: email}
-    assert_equal I18n.t('lti.error.missing_params'), flash[:alert]
-  end
-
-  test 'integration - if existing integration, does not create a new one' do
-    name = "Fake School"
-    client_id = "1234canvas"
-    lms = "canvas_cloud"
-    email = "fake@email.com"
-
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_template 'lti/v1/integration_status'
-    post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    assert_template 'lti/v1/integration_status'
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do

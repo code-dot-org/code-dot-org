@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-14T17:54:13.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Nike (left) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Adidas (Right)",
+        "imageUrl": "https://images.code.org/66d3098660c4c2c465e48840b2184430-U1L5L1a.png",
+        "key": "ai-generated-design-lesson5-level1-test-2025-6759a875-8b50-4f17-adea-59da970e6bd6",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Spotify (left) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp SoundCloud (Right)",
+        "imageUrl": "https://images.code.org/c543f1cd8e06382033891e27e5dabeee-U1L5L1b.png",
+        "key": "ai-generated-design-lesson5-level1-test-2025-e907403d-ee5f-4ca2-9926-da1fe7f3b58c",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Netflix (left) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Disney (Right)",
+        "imageUrl": "https://images.code.org/13a33e26f90279ec37e02104f92771c5-U1L5L1c.png",
+        "key": "ai-generated-design-lesson5-level1-test-2025-e26c923f-714d-4855-9235-6e1990c09b00",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "Target (left) &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Walmart (Right)",
+        "imageUrl": "https://images.code.org/d1fe8c4628f0a3a127c79d0eed3acce0-U1L5L1d.png",
+        "key": "ai-generated-design-lesson5-level1-test-2025-fafca708-7047-41b1-9219-3ede660b42e0",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-14 17:54:15 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:03:32 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-14 18:20:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,74 @@
+name 'pl_sandbox_aif_2_U1-html_9-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing HTML + AI
+
+#### In this next activity, you’ll use AI to help generate a basic HTML framework for a simple web page. The AI acts like a coding assistant, helping students get started while they learn how each part of the code works.
+
+
+## Prompt Engineering
+#### A key ingredient of using AI is refining prompts through prompt engineering. When the AI’s output is flawed or incomplete, revise your prompt to be more specific and provide clear context or constraints.
+
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt Engineering</strong> is the process of designing, refining, and optimizing prompts given to AI models to achieve desired outputs. It's like giving clear instructions to a very smart assistant.
+</p>
+</div>
+
+## The CHAT Framework For Prompt Building
+
+<table style="width: 100%; border-collapse: collapse; font-size: 14pt;">
+  <thead>
+    <tr style="background-color: #B2DEE3; text-align: left;">
+      <th style="padding: 10px; border: 1px solid #d6e6ea;">Step</th>
+      <th style="padding: 10px; border: 1px solid #d6e6ea;">What It Means</th>
+      <th style="padding: 10px; border: 1px solid #d6e6ea;">How to Use It</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #d6e6ea; font-weight: bold; white-space: nowrap;font-size: 14pt;">C — Clarify</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">Define what you want the AI to do and what the page should include.</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">“Create a basic HTML page about dogs with a title, header, and list of popular breeds.”</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #d6e6ea; font-weight: bold; white-space: nowrap;font-size: 14pt;">H — Hone</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">Add or refine one feature at a time.</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">“Add a footer with a copyright symbol.”<br>“Add a navigation bar using a flexbox layout.”</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #d6e6ea; font-weight: bold; white-space: nowrap;font-size: 14pt;">A — Apply</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">Run the code, inspect results, and adjust based on what you see.</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">“Explain why the list is stacked on mobile. How can I fix it?”</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #d6e6ea; font-weight: bold; white-space: nowrap;font-size: 14pt;">T — Transfer</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">Improve clarity, reusability, or adaptability of your prompt or code.</td>
+      <td style="padding: 10px; border: 1px solid #d6e6ea;font-size: 14pt;">“Rephrase my prompt to be shorter but keep the same requirements.”<br>“Make the layout mobile-friendly.”</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+# What's Next?
+
+#### You will practice prompting AI to create a basic webpage in HTML but first, let's review the features in **Web Lab**.
+
+## 💡 Prompting Tips for This Activity
+
+- #### **Start simple:** “Make a webpage that introduces my favorite animal.”
+
+- #### **Encourage step-by-step refinement:** “Now add another section to the body.”
+
+- #### **Emphasize structure:** “Include a `<header>`, `<main>`, and `<footer>`.”
+
+- #### **Ask for explanations:** “Explain what each part of the code does in one sentence.”
+
+- #### **Encourage reflection:** “What part of this code do I recognize? What’s new to me?”
+
+## Let's take a quick tour of Web Lab.
+
+MARKDOWN

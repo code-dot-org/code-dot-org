@@ -89,6 +89,7 @@
     "bubble_choice_description": "Create an app prototype that lets the user generate words to appear in a customized story",
     "encrypted_examples": "u5Hf+cDBLbBFzMj+Qq/Ik06r1pRDiyrKIqWd9yJT9Odj54Jn3EDy87ZKGVgL\nJLbdn9tV46tQxMAdzvjo4hupfA==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

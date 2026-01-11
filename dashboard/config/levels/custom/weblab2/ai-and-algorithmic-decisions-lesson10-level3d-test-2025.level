@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-10-29T23:04:26.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Create Your Own",
+    "long_instructions": "\r\n## Create Your Own\r\n\r\n**Eligibility Criteria:**\r\n\r\nDesign your own realistic rule that uses **multiple inputs** and includes **all three logical operators**: `!`, `&&`, and `||`.Your rule should describe when someone is **eligible** or **not eligible** for something meaningful.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Review the available input fields in the starter code, or ask your teacher which fields you can use.\r\n\r\n2. Complete the `eligible()` function so it updates the **message (`message`)** based on your custom eligibility criteria.\r\n\r\n3. In the event handler for the **Run** button (`runBtn`), call `eligible()` to test your rule.\r\n\r\n",
+    "thumbnail_url": "https://images.code.org/20155bf44bbe88b7ba6315f386269d2e-imagination (1).png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "outline",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "bubble_choice_description": "Design a custom rule with multiple conditions and a fairness check.",
+    "encrypted_exemplar_sources": "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\n91gVZSi+WN1iEoDG0fo=\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Create Your Own Eligibility Rule</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Create Your Own</h1>\n\n    <p>Design your own eligibility rule using the inputs below, or modify them to fit your idea.</p>\n\n    <label>\n      <input id=\"optionA\" type=\"checkbox\">\n      Option A\n    </label>\n\n    <label>\n      <input id=\"optionB\" type=\"checkbox\">\n      Option B\n    </label>\n\n    <label>\n      <input id=\"optionC\" type=\"checkbox\">\n      Option C\n    </label>\n\n    <label>\n      Age:\n      <input id=\"age\" type=\"number\" min=\"0\" value=\"25\">\n    </label>\n\n    <button id=\"runBtn\">Run</button>\n\n    <p id=\"message\">—</p>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const optionA = document.getElementById(\"optionA\");\nconst optionB = document.getElementById(\"optionB\");\nconst optionC = document.getElementById(\"optionC\");\nconst age = document.getElementById(\"age\");\nconst message = document.getElementById(\"message\");\nconst runBtn = document.getElementById(\"runBtn\");\n\nconst eligible = () => {\n  const a = optionA.checked;\n  const b = optionB.checked;\n  const c = optionC.checked;\n  const ageValue = Number(age.value);\n\n\n  \n}\n\nrunBtn.addEventListener(\"click\", eligible);",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  background-color: #f9f9f9;\n}\n\nh1 {\n  margin-bottom: 1rem;\n}\n\np {\n  max-width: 400px;\n  margin: 0 auto 1rem;\n  font-size: 0.9rem;\n}\n\nlabel {\n  display: block;\n  margin: 0.5rem 0;\n}\n\ninput[type=\"number\"] {\n  padding: 0.4rem;\n  margin-left: 0.5rem;\n}\n\nbutton {\n  margin-top: 1rem;\n  padding: 0.5rem 1rem;\n  border: 1px solid #ccc;\n  border-radius: 6px;\n  background-color: #f2f2f2;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #e2e2e2;\n}\n\n#message {\n  margin-top: 1rem;\n  font-weight: bold;\n}\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-10-29 23:10:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 23:31:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-29 23:59:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:34:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:35:06 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:35:08 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:35:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-30 00:35:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-10-31 18:45:40 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-31 18:46:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

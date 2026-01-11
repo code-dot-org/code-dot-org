@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson5-level4_2025-launch_pilot-2025'
+display_name 'Modifying Existing Code'
+description 'Choose **ONE** scenario and modify the code so that the `Painter` takes a different path. Feel free to practice more than one. Click **Finish** when you are ready to move to the next level.'
+
+sublevels
+level 'programming-fundamentals-lesson5-level4a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson5-level4b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson5-level4c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson5-level4d_2025-launch_pilot-2025'

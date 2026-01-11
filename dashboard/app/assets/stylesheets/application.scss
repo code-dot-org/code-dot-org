@@ -482,7 +482,7 @@ img.video_thumbnail {
   }
 }
 
-/* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
+/* When we are using a dark theme in Blockly, we want the main Blockly area (inside #codeWorkspace)
  * to have a 1px separation between it and the PaneHeader above it.
 *  */
 #codeWorkspace > .cdomoderndark-theme,
@@ -493,7 +493,7 @@ img.video_thumbnail {
   /* A small separation. */
   margin-top: 1px;
 
-  /* Override the height in Google Blockly's .injectionDiv */
+  /* Override the height in Blockly's .injectionDiv */
   height: calc(100% - 1px);
 }
 
@@ -4336,6 +4336,12 @@ a {
 
 .cm-scroller {
   overflow: auto;
+
+  &:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: -2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .cm-wrap {

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-28T22:51:09.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Wireframing and Flowchart Chatbot\r\n\r\nUse this chatbot to plan your flowchart and wireframe before drawing.\r\nIt can help you outline steps, identify decision points, and think through how your interface connects to your app’s logic.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Possible Stems**]\r\n* “Can you help me describe how my app’s logic should flow?”\r\n* “Here’s what I want my app to do — what should go in my flowchart?”\r\n* “What sections should I include in my wireframe for this type of app?”\r\n* “How can I show different outcomes clearly in my flowchart?”\r\n:::",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a logic and design planning coach helping students prepare to create flowcharts and wireframes for their interactive web apps.\nYour goals are to:\n\t•\tGuide students in identifying clear steps, decision points, and outcomes for their logic.\n\t•\tHelp them plan how user inputs connect to visual results on the screen.\n\t•\tSuggest how to structure or label regions of a wireframe (e.g., controls, display, results, summary).\n\t•\tKeep the focus on conceptual design, not code.\nUse simple, supportive language and help students think visually about how their app will work.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "bubble_choice_description": "Chat with AI about designing wireframes and crafting flowcharts.",
+    "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
+    "display_name": "Flowchart Bot"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-28T22:51:09.678+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level3b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level3b-test-2025\"},{\"changed_at\":\"2025-10-28 22:51:58 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:11:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-29 23:25:29 +0000\",\"changed\":[\"aichat_settings\",\"bubble_choice_description\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-10-30 21:50:26 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

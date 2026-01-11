@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-17T15:21:38.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "display_name": "Program B",
@@ -16,15 +20,9 @@
     },
     "bubble_choice_description": "Are these two Strings equal?",
     "thumbnail_url": "https://images.code.org/628f4a9991dbf0e2da5be6820720d62f-image-1631892050525.png",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-17T15:21:38.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-09-17T15:21:38.387+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L1b\\\"\"],\"cloned_from\":\"CSA U4L6-L1b\"},{\"changed_at\":\"2021-09-17 15:21:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

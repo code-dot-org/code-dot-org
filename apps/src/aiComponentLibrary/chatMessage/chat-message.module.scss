@@ -12,12 +12,29 @@ $icon-overlay-padding-right: 8px;
 %message {
   @extend %markdown-styles;
   display: flex;
-  padding: 12px;
+  padding: 0.625rem 0.75rem;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   border-start-start-radius: $message-border-radius;
   border-start-end-radius: $message-border-radius;
+  word-break: break-word;
+
+  code {
+    word-break: break-word;
+    white-space: unset;
+  }
+
+  p a {
+    color: var(--text-brand-purple-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 %markdown-styles {
@@ -55,19 +72,27 @@ $icon-overlay-padding-right: 8px;
 .messageWithChildren {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.375rem;
 }
 
 .message-user {
   @extend %message;
-  background-color: var(--background-neutral-tertiary);
+  background-color: var(--background-neutral-secondary);
   border-end-start-radius: $message-border-radius;
   border-end-end-radius: 0;
 }
 
 .message-assistant {
   @extend %message;
-  background-color: var(--background-brand-teal-extra-light);
+  background-color: var(--background-brand-aqua-extra-light);
+  border-end-start-radius: 0;
+  border-end-end-radius: $message-border-radius;
+  overflow-x: auto;
+}
+
+.aiTutorVersion {
+  @extend %message;
+  background-color: var(--background-brand-aqua-extra-light);
   border-end-start-radius: 0;
   border-end-end-radius: $message-border-radius;
   overflow-x: auto;
@@ -114,7 +139,7 @@ $icon-overlay-padding-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .botIconContainerWithOverlay {
@@ -125,12 +150,11 @@ $icon-overlay-padding-right: 8px;
 }
 
 .footer {
-  margin-left: $bot-container-size + $icon-message-gap;
+  margin-inline-start: $bot-container-size + $icon-message-gap;
 }
 
-
 .footerWithOverlay {
-  margin-left: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
+  margin-inline-start: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
 }
 
 .botIcon {
@@ -172,4 +196,10 @@ $icon-overlay-padding-right: 8px;
 
 .warning {
   background-color: var(--background-warning-light);
+}
+
+.assistantMessageContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }

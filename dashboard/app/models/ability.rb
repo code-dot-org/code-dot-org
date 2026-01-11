@@ -61,7 +61,8 @@ class Ability
       CodeReview,
       LearningGoalTeacherEvaluation,
       AidiffThread,
-      AidiffMessage
+      AidiffMessage,
+      AidiffArtifact,
     ]
     cannot :index, Level
 
@@ -171,6 +172,7 @@ class Ability
 
       can :evaluate, :openai_evaluate
       can :evaluate_section, :openai_evaluate
+      can :match_teaching_profile, :openai_personalization
 
       # all signed in users can access the aichat_request and aichat_events endpoints
       # additional permission logic lives in the controllers themselves
@@ -287,6 +289,14 @@ class Ability
         can :submit_feedback, AidiffMessage
         can :create, AidiffThread
         can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
+        if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
+          can :create, AidiffArtifact
+          can :create, AidiffExitTicket
+          can :create, AidiffLessonHook
+          can [:index], AidiffArtifact, user_id: user.id
+          can [:index, :update, :show], AidiffExitTicket, user_id: user.id
+          can [:index, :update, :show], AidiffLessonHook, user_id: user.id
+        end
       end
 
       can :show, Rubric

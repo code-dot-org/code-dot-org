@@ -1,0 +1,91 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T03:32:52.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Like/Unlike Toggle\r\n\r\n**Do This:**\r\n\r\n1. Add `let liked = false;` at the top of your JS.\r\n2. Write a `render()` function that:\r\n\r\n   * Shows the filled heart when `liked` is true and the empty heart when `liked` is false.\r\n   * Updates the like count.\r\n3. In your button click event: flip `liked` and call `render()`.\r\n\r\n\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Like/Unlike",
+    "bubble_choice_description": "Toggle a heart icon and update the like count.",
+    "thumbnail_url": "https://images.code.org/3d2dd0e8a027b3ae5881b0f550a66d48-like-love-count.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Level 2 – Like Toggle</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body class=\"light\">\n    <h1>Like Toggle</h1>\n\n    <button id=\"btnToggle\">\n      <img id=\"heartEmpty\" src=\"heart-empty.png\" alt=\"Like off\">\n      <img id=\"heartFull\"  src=\"heart-full.png\"  alt=\"Like on\" class=\"hidden\">\n      Like\n    </button>\n\n    <section id=\"likeRow\">\n      <span id=\"likeCount\">0</span> likes\n    </section>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Layout */\nbody {\n  font-family: sans-serif;\n  text-align: center;\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  align-items: center;\n  min-height: 100vh;\n  transition: background-color 0.3s, color 0.3s;\n}\n\n.hidden { \n  display: none; \n}\n\n/* Button */\nbutton {\n  background: none;\n  border: 2px solid #ccc;\n  padding: 0.6rem 1rem;\n  border-radius: 8px;\n  cursor: pointer;\n  color: inherit;\n  display: flex;\n  align-items: center;\n  gap: 0.5rem;\n  transition: background-color 0.2s, border-color 0.2s;\n}\nbutton:hover { \n  background-color: rgba(128,128,128,0.15); \n  border-color: #aaa; \n}\n\nbutton img { \n  width: 28px; \n  height: 28px; \n}\n\n/* Theme (kept for consistency with other levels) */\n.light { \n  background-color: white; \n  color: black; \n}\n.dark  { \n  background-color: black; \n  color: white; \n}\n\n/* State pill */\n#statePill {\n  display: inline-block;\n  padding: 0.2rem 0.6rem;\n  border-radius: 1rem;\n  background: #eee;\n  color: #333;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Selectors\nconst btnToggle   = document.getElementById(\"btnToggle\");\nconst heartEmpty  = document.getElementById(\"heartEmpty\");\nconst heartFull   = document.getElementById(\"heartFull\");\nconst likeCountEl = document.getElementById(\"likeCount\");\n\n\nconst render = () => {\n\n\n}\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "heart-full.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level2a-test-2025/uuid/cb44e72a-874a-44d6-9913-60a82cb9849f.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "heart-empty.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson10-level2a-test-2025/uuid/a8bca1eb-6ebf-4e4a-9024-ef32246c9bef.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n2wM/qKzuoXbUYG1D\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T03:32:52.485+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson10-level2a-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson10-level2a-test-2025\"},{\"changed_at\":\"2025-11-13 03:36:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:45:21 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,381 @@
+require 'test_helper'
+
+class AiLessonSummariesJobTest < ActiveJob::TestCase
+  setup do
+    @user = create(:teacher)
+    @unit = create(:unit)
+    @course = create(:single_unit_course, unit: @unit)
+    lesson_group = create(:lesson_group, script: @unit)
+    @lesson1 = create(:lesson, lesson_group: lesson_group)
+    @lesson2 = create(:lesson, lesson_group: lesson_group)
+    @lesson3 = create(:lesson, lesson_group: lesson_group)
+    @request = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id]
+    }
+    @section = create(:section, user: @user, script_id: @unit.id, course_id: @course.id)
+
+    # Mock rack environment
+    CDO.stubs(:rack_env).returns('test')
+
+    # Mock Honeybadger to avoid actual notifications in tests
+    Honeybadger.stubs(:notify)
+    DCDO.stubs(:get).with('ai-lesson-summaries-notifications-enabled', false).returns(true)
+    DCDO.stubs(:get).with('modularity', true).returns(true)
+    DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
+  end
+
+  teardown do
+    DCDO.unstub(:get)
+  end
+
+  # *****
+  # Job execution tests
+  # *****
+
+  test 'perform calls AiLessonSummariesHelper for each lesson_id' do
+    # Expect the helper to be called for each lesson
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson2.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson3.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+
+    AiLessonSummariesJob.perform_now(request: @request)
+  end
+
+  test 'perform works with single lesson_id' do
+    single_request = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson1.id, @user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+
+    AiLessonSummariesJob.perform_now(request: single_request)
+  end
+
+  test 'perform works with empty lesson_ids array' do
+    empty_request = {
+      user_id: @user.id,
+      lesson_ids: [],
+      unit_id: @unit.id
+    }
+
+    # Should not call the helper at all
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).never
+
+    AiLessonSummariesJob.perform_now(request: empty_request)
+  end
+
+  # *****
+  # Error handling tests
+  # *****
+
+  test 'job rescues StandardError and notifies Honeybadger' do
+    error_message = 'Test error message'
+    error = StandardError.new(error_message)
+
+    # Make the helper raise an error
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
+      raises(error)
+
+    # Expect Honeybadger notification
+    Honeybadger.expects(:notify).with(
+      "AiLessonSummariesJob failed with unexpected error: #{error_message}",
+      context: {
+        request: @request.to_json
+      }
+    )
+
+    # Should re-raise the error
+    assert_raises(StandardError) do
+      AiLessonSummariesJob.perform_now(request: @request)
+    end
+  end
+
+  test 'job rescues and re-raises custom exceptions' do
+    custom_error = Class.new(StandardError)
+    error = custom_error.new('Custom error')
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
+      raises(error)
+
+    # Should still notify Honeybadger and re-raise
+    Honeybadger.expects(:notify)
+
+    assert_raises(custom_error) do
+      AiLessonSummariesJob.perform_now(request: @request)
+    end
+  end
+
+  test 'job can be enqueued and executed with proper parameters' do
+    # Test that the job can be properly enqueued
+    assert_enqueued_jobs 1 do
+      AiLessonSummariesJob.perform_later(request: @request)
+    end
+  end
+
+  test 'job is queued on default queue' do
+    job = AiLessonSummariesJob.new(request: @request)
+    assert_equal 'default', job.queue_name
+  end
+
+  test 'job executes successfully with valid request structure' do
+    # Mock successful helper calls
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    # Should complete without error
+    assert_nothing_raised do
+      AiLessonSummariesJob.perform_now(request: @request)
+    end
+  end
+
+  # *****
+  # Parameter validation tests
+  # *****
+
+  test 'job handles request with string lesson_ids' do
+    string_request = {
+      user_id: @user.id.to_s,
+      lesson_ids: [@lesson1.id.to_s, @lesson2.id.to_s],
+      unit_id: @unit.id
+    }
+
+    # Should convert strings to integers when calling helper
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson1.id.to_s, @user.id.to_s, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson2.id.to_s, @user.id.to_s, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+
+    AiLessonSummariesJob.perform_now(request: string_request)
+  end
+
+  test 'job handles malformed request gracefully' do
+    malformed_request = {
+      user_id: @user.id,
+      lesson_ids: nil,
+      unit_id: nil
+    }
+
+    # Should raise an error when trying to iterate over nil
+    assert_raises(NoMethodError) do
+      AiLessonSummariesJob.perform_now(request: malformed_request)
+    end
+  end
+
+  test 'job handles missing user_id in request' do
+    request_without_user = {
+      lesson_ids: [@lesson1.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.expects(:retrieve_and_save_ai_lesson_summary).
+      with(@lesson1.id, nil, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+
+    AiLessonSummariesJob.perform_now(request: request_without_user)
+  end
+
+  # *****
+  # Honeybadger integration tests
+  # *****
+
+  test 'Honeybadger notification includes full request context' do
+    error = StandardError.new('Context test error')
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
+      raises(error)
+
+    expected_context = {
+      request: @request.to_json
+    }
+
+    Honeybadger.expects(:notify).with(
+      "AiLessonSummariesJob failed with unexpected error: Context test error",
+      context: expected_context
+    )
+
+    assert_raises(StandardError) do
+      AiLessonSummariesJob.perform_now(request: @request)
+    end
+  end
+
+  test 'Honeybadger notification works with complex request structure' do
+    complex_request = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id],
+      metadata: {
+        source: 'unit_generation',
+        timestamp: Time.now.to_i
+      }
+    }
+
+    error = StandardError.new('Complex request error')
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
+      raises(error)
+
+    expected_context = {
+      request: complex_request.to_json
+    }
+
+    Honeybadger.expects(:notify).with(
+      "AiLessonSummariesJob failed with unexpected error: Complex request error",
+      context: expected_context
+    )
+
+    assert_raises(StandardError) do
+      AiLessonSummariesJob.perform_now(request: complex_request)
+    end
+  end
+
+  # *****
+  # Performance and behavior tests
+  # *****
+
+  test 'job processes large number of lessons' do
+    # Create many lessons to test performance
+    lesson_ids = (1..10).map {create(:lesson).id}
+    large_request = {
+      user_id: @user.id,
+      lesson_ids: lesson_ids
+    }
+
+    # Mock helper to avoid actual API calls
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary)
+
+    # Should handle large requests without issues
+    assert_nothing_raised do
+      AiLessonSummariesJob.perform_now(request: large_request)
+    end
+  end
+
+  test 'job inheritance from ApplicationJob' do
+    assert_equal ApplicationJob, AiLessonSummariesJob.superclass
+  end
+
+  test 'after_perform creates teacher notification with correct values when user has section' do
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_with_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal @user.id, notification.user_id
+    assert_equal 'AI Lesson Summaries ready to view', notification.title
+    assert_equal "Your personalized lesson summaries for 3 lessons for #{@unit.title_for_display} are live — prepare for your next class in minutes!", notification.description
+    assert_equal 'solid-flask-sparkle', notification.icon_name
+    assert_equal 'Aqua', notification.icon_color
+    assert_equal 1, notification.href_links.size
+    assert_equal 'View lesson materials', notification.href_links.first['text']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
+  end
+
+  test 'after_perform creates notification with correct lesson count for single lesson' do
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_with_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal "Your personalized lesson summaries for 1 lessons for #{@unit.title_for_display} are live — prepare for your next class in minutes!", notification.description
+  end
+
+  test 'after_perform uses first section when unit_id not provided' do
+    request_without_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id]
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_without_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
+  end
+
+  test 'after_perform uses first section when unit_id provided but no matching section exists' do
+    other_unit = create(:unit)
+    request_with_nonmatching_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id],
+      unit_id: other_unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_difference 'TeacherNotification.count', 1 do
+      AiLessonSummariesJob.perform_now(request: request_with_nonmatching_unit)
+    end
+
+    notification = TeacherNotification.last
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
+  end
+
+  test 'after_perform does not create notification when user has no sections' do
+    user_without_sections = create(:teacher)
+    request_for_user_without_sections = {
+      user_id: user_without_sections.id,
+      lesson_ids: [@lesson1.id, @lesson2.id]
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_no_difference 'TeacherNotification.count' do
+      AiLessonSummariesJob.perform_now(request: request_for_user_without_sections)
+    end
+  end
+
+  test 'after_perform does not create notification when job fails during perform' do
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).
+      raises(StandardError.new('Helper failed'))
+
+    assert_no_difference 'TeacherNotification.count' do
+      assert_raises(StandardError) do
+        AiLessonSummariesJob.perform_now(request: request_with_unit)
+      end
+    end
+  end
+
+  test 'after_perform does not create notification when DCDO flag is disabled' do
+    DCDO.stubs(:get).with('ai-lesson-summaries-notifications-enabled', false).returns(false)
+
+    request_with_unit = {
+      user_id: @user.id,
+      lesson_ids: [@lesson1.id, @lesson2.id, @lesson3.id],
+      unit_id: @unit.id
+    }
+
+    AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns(true)
+
+    assert_no_difference 'TeacherNotification.count' do
+      AiLessonSummariesJob.perform_now(request: request_with_unit)
+    end
+  end
+end

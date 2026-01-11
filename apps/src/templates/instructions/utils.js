@@ -124,6 +124,8 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
   ).forEach(container => container.remove());
 
   const xmls = xmlContainer.getElementsByTagName('xml');
+  const pendingThemePromises = [];
+
   Array.prototype.forEach.call(xmls, function (xml) {
     // Skip conversion if XML already has a blockspace
     if (xml.getElementsByTagName('svg').length) {
@@ -144,6 +146,8 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     // create a container and insert the blockspace into it
     const blockSpaceContainer = document.createElement(inline ? 'span' : 'div');
     blockSpaceContainer.classList.add('readonly-block-space-container');
+    // We do not translate the blockly workspaces
+    blockSpaceContainer.classList.add('notranslate');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block
@@ -159,13 +163,18 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     if (typeof Blockly.cdoUtils.getUserTheme === 'function') {
       // We need to do an asychronous lookup of the user's preferred block theme,
       // because it may not have been set yet on the student's primary workspace.
-      Blockly.cdoUtils.getUserTheme().then(theme => {
+      const themePromise = Blockly.cdoUtils.getUserTheme().then(theme => {
         createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl, theme);
       });
+      pendingThemePromises.push(themePromise);
     } else {
       createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl);
     }
   });
+
+  if (pendingThemePromises.length > 0) {
+    return Promise.all(pendingThemePromises);
+  }
 }
 
 export function shouldDisplayChatTips(skinId) {

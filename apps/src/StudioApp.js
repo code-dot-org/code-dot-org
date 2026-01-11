@@ -16,6 +16,7 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import localization from '@cdo/apps/localization';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -35,6 +36,7 @@ import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
+import * as BlocklyUtils from './blockly/utils';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
@@ -537,6 +539,12 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
+    // Hook the blockly environment into the localization engine
+    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      localization.on('change', info => {
+        BlocklyUtils.updateLocale(info.rtl);
+      });
+    }
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });
@@ -1269,7 +1277,7 @@ StudioApp.prototype.inject = function (div, options) {
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_),
   };
 
-  // Allows Google Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
+  // Allows Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
   if (experiments.isEnabled('zelos')) {
     options.renderer = Renderers.ZELOS;
   } else if (experiments.isEnabled('geras')) {
@@ -2925,9 +2933,9 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
   // behavior. We want a way to specify no toolbox, which is <xml></xml>.
-  // Google Blockly may also add a xmlns attribute to this xml.
+  // Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
-    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // Update legacy Blockly XML so it is compatible with mainline Blockly
     // (Nothing is changed if we are using CDO Blockly.)
     config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
       config.level.toolbox

@@ -1,4 +1,4 @@
-import {AppName} from './types';
+import {AppName, ProjectType} from './types';
 
 export const SOURCE_FILE = 'main.json';
 
@@ -18,12 +18,17 @@ export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 export const EDIT_EXEMPLAR = 'edit_exemplar';
 
-export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab', 'weblab2'];
+export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
+  'music',
+  'pythonlab',
+  'weblab2',
+  'music_dance_ai',
+];
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
 
-// Banner messages to show LevelBuilders when in start mode. These don't need to be translated because LevelBuilder is English only.
+// Banner messages to show for various modes.
 export enum WARNING_BANNER_MESSAGES {
   STANDARD = 'You are editing start sources.',
   TEMPLATE = 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
@@ -31,6 +36,7 @@ export enum WARNING_BANNER_MESSAGES {
   TOOLBOX_MODE = 'You are editing toolbox blocks.',
   EXEMPLAR_MODE = 'You are editing exemplar sources.',
   VIEWING_EXEMPLAR = 'You are viewing an example solution.',
+  VIEWING_VERSION = 'You are viewing an older version of this project. To continue working, you can either restore this version or go back to the current version.',
 }
 
 // Default height of the predict question free response text area.

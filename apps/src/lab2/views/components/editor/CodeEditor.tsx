@@ -12,6 +12,7 @@ import {
   setEditorFontSizeLoaded,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
+import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -79,6 +80,70 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       },
     });
   };
+
+  useEffect(() => {
+    let observer: MutationObserver | null = null;
+    let cleanup: (() => void) | null = null;
+
+    function setup() {
+      // This is not 'reacty' but we have to query them because CodeMirror
+      // manages these elements within the extension.
+      const cmScroller = document.querySelector(
+        '.cm-scroller'
+      ) as HTMLElement | null;
+      const cmContentDiv = document.querySelector(
+        '.cm-content'
+      ) as HTMLElement | null;
+      if (!cmScroller || !cmContentDiv) return false;
+
+      // Make scroller part of tab order, make editor hidden from tab order, and
+      // set labels on both elements
+      cmContentDiv.setAttribute('tabIndex', '-1');
+      cmScroller.setAttribute('tabIndex', '0');
+      cmContentDiv.setAttribute('aria-label', i18n.codeEditorEditing());
+      cmScroller.setAttribute('id', 'uitest-codebridge-editor');
+      cmScroller.setAttribute('aria-label', i18n.codeEditorDescription());
+
+      // Keydown handler for cmScroller
+      const onScrollerKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Enter') {
+          cmContentDiv.focus();
+        }
+      };
+      cmScroller.addEventListener('keydown', onScrollerKeyDown);
+
+      // Keydown handler for cmContentDiv (Escape to return focus)
+      const onContentKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          cmScroller.focus();
+        }
+      };
+      cmContentDiv.addEventListener('keydown', onContentKeyDown);
+
+      // Cleanup function
+      cleanup = () => {
+        cmScroller.removeEventListener('keydown', onScrollerKeyDown);
+        cmContentDiv.removeEventListener('keydown', onContentKeyDown);
+      };
+
+      return true;
+    }
+
+    if (!setup()) {
+      observer = new MutationObserver(() => {
+        if (setup()) {
+          observer?.disconnect();
+        }
+      });
+      observer.observe(document.body, {childList: true, subtree: true});
+    }
+
+    return () => {
+      observer?.disconnect();
+      cleanup?.();
+    };
+  }, []);
+
   useEffect(() => {
     if (!editorFontSizeLoaded || editorRef.current === null || didInit) {
       return;
@@ -86,7 +151,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
     const onEditorUpdate = EditorView.updateListener.of(
       (update: ViewUpdate) => {
-        onCodeChange(update.state.doc.toString());
+        if (update.docChanged) {
+          onCodeChange(update.state.doc.toString());
+        }
       }
     );
 

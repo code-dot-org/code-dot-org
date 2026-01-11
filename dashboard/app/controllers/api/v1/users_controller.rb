@@ -64,6 +64,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
         has_seen_homepage_welcome: current_user.has_seen_homepage_welcome?,
+        has_dismissed_personalization_alert: current_user.has_dismissed_personalization_alert?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
         child_account_compliance_state: current_user.cap_status,
         country_code: helpers.country_code(current_user, request),
@@ -76,6 +77,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
         sharing_disabled: current_user.sharing_disabled,
+        ai_tutor_enabled_for_pilot: current_user.ai_tutor_enabled_for_pilot?
       }
     else
       render json: {
@@ -251,6 +253,24 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     current_user.save!
 
     head :no_content
+  end
+
+  # POST /api/v1/users/has_dismissed_personalization_alert
+  def post_has_dismissed_personalization_alert
+    return head :unauthorized unless current_user
+
+    current_user.has_dismissed_personalization_alert = !!params[:has_dismissed_personalization_alert].try(:to_bool)
+    current_user.save!
+
+    head :no_content
+  end
+
+  # GET /api/v1/users/has_dismissed_personalization_alert
+  def get_has_dismissed_personalization_alert
+    return head :unauthorized unless current_user
+    render json: {
+      has_dismissed_personalization_alert: !!current_user.has_dismissed_personalization_alert
+    }
   end
 
   # POST /api/v1/users/has_seen_progress_table_v2_invitation
