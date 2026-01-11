@@ -11,6 +11,7 @@ import {
   LabConfig,
   MultiFileSource,
   ProjectSources,
+  ProjectVersion,
 } from '@code-dot-org/api/sources';
 
 import LabRegistry from '../LabRegistry';
@@ -18,7 +19,10 @@ import type {AppDispatch, RootState} from '../redux/store';
 
 export interface LabProjectState {
   projectSources: ProjectSources | undefined;
+  projectSourceBeforeAiTutorVersion?: MultiFileSource;
+  versionDetails: ProjectVersion | undefined;
   viewingOldVersion: boolean;
+  viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
@@ -27,7 +31,10 @@ export interface LabProjectState {
 
 const initialState: LabProjectState = {
   projectSources: undefined,
+  projectSourceBeforeAiTutorVersion: undefined,
+  versionDetails: undefined,
   viewingOldVersion: false,
+  viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
@@ -175,6 +182,9 @@ const projectSlice = createSlice({
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
     },
+    setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
+      state.viewingAiTutorVersion = action.payload;
+    },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
     },
@@ -188,8 +198,10 @@ const projectSlice = createSlice({
       // Reset the state that needs to be reset manually on level change.
       // Project source is handled elsewhere.
       state.hasEdited = false;
+      state.versionDetails = undefined;
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
+      state.viewingAiTutorVersion = false;
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;

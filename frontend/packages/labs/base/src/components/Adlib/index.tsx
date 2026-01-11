@@ -53,7 +53,7 @@ const Adlib: FunctionComponent<AdlibProps> = ({
   const localizedTemplate = useMemo(
     () =>
       locale !== 'en' ? localization.translate(template, ['adlib']) : template,
-    [template, locale]
+    [template, locale],
   );
 
   const fillTemplate = useCallback(
@@ -66,7 +66,7 @@ const Adlib: FunctionComponent<AdlibProps> = ({
       });
       return output;
     },
-    [options]
+    [options],
   );
 
   // Compute filled text.
@@ -79,10 +79,10 @@ const Adlib: FunctionComponent<AdlibProps> = ({
             key,
             options[key].find(option => option.id === adlibChoices[key])
               ?.text || '',
-          ])
-        )
+          ]),
+        ),
       ),
-    [fillTemplate, adlibChoices, options, template]
+    [fillTemplate, adlibChoices, options, template],
   );
   const localizedFilledAdlibText = useMemo(
     () =>
@@ -93,12 +93,12 @@ const Adlib: FunctionComponent<AdlibProps> = ({
             key,
             localization.translate(
               options[key].find(option => option.id === adlibChoices[key])
-                ?.text || ''
+                ?.text || '',
             ),
-          ])
-        )
+          ]),
+        ),
       ),
-    [fillTemplate, adlibChoices, options, localizedTemplate]
+    [fillTemplate, adlibChoices, options, localizedTemplate],
   );
 
   useEffect(() => {
@@ -144,15 +144,15 @@ const Adlib: FunctionComponent<AdlibProps> = ({
         glowSpeed === 'fast'
           ? styles.adlibFastGlowSpeed
           : glowSpeed === 'normal'
-          ? styles.adlibNormalGlowSpeed
-          : undefined,
-        hidden && styles.adlibHidden
+            ? styles.adlibNormalGlowSpeed
+            : undefined,
+        hidden && styles.adlibHidden,
       )}
     >
       <div
         className={classNames(
           styles.adlibInner,
-          readOnly && styles.adlibInnerReadOnly
+          readOnly && styles.adlibInnerReadOnly,
         )}
       >
         <div>{readOnly ? localizedFilledAdlibText : adlibHtml}</div>

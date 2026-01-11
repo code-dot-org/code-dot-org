@@ -74,6 +74,7 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  disableEditRunForSubmission?: boolean;
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;

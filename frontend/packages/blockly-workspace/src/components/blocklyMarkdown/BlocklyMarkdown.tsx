@@ -1,5 +1,3 @@
-'use client';
-
 import type {MarkdownToJSX} from 'markdown-to-jsx';
 import {RuleType} from 'markdown-to-jsx';
 import type {FunctionComponent} from 'react';

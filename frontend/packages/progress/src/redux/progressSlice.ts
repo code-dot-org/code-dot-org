@@ -2,6 +2,7 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import type {
   PayloadAction,
   ThunkAction,
+  ThunkDispatch,
   AnyAction,
   Slice,
 } from '@reduxjs/toolkit';
@@ -10,11 +11,19 @@ import _ from 'lodash';
 import type {Lesson} from '@code-dot-org/api/models/lessons';
 import type {Level} from '@code-dot-org/api/models/levels';
 import {LevelKind} from '@code-dot-org/api/models/levels';
-import type {StateFor, AppDispatchFor, MockStore} from '@code-dot-org/redux';
+import type {StateFor, MockStore} from '@code-dot-org/redux';
+import currentUserSlice from '@code-dot-org/user/redux/currentUserSlice';
 
-type Store = MockStore<[typeof progressSlice]>;
+type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
 type RootState = StateFor<Store>;
-type AppDispatch = AppDispatchFor<Store>;
+type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
+type AsyncProgressThunkAction = ThunkAction<
+  Promise<void>,
+  RootState,
+  undefined,
+  AnyAction
+>;
+type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
 import {
   PUZZLE_PAGE_NONE,
@@ -488,14 +497,6 @@ function sendReportHelper(
 }
 
 // Thunks
-type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
-type AsyncProgressThunkAction = ThunkAction<
-  Promise<void>,
-  RootState,
-  undefined,
-  AnyAction
->;
-
 export const getProgressLevelType: (
   state: RootState,
 ) => ProgressLevelType | undefined = state => {
@@ -760,6 +761,36 @@ export function navigateToLevelId(levelId: number): ProgressThunkAction {
     dispatch(setCurrentLevelId(levelId));
   };
 }
+
+export const sendSubmitReport = createAsyncThunk<
+  void,
+  {appType: string; submitted: boolean},
+  {
+    dispatch: AppDispatch;
+    state: RootState;
+  }
+>('progress/sendSubmitReport', async (payload, thunkAPI) => {
+  const extraPayload = {
+    submitted: payload.submitted.toString(),
+  };
+  const result = payload.submitted
+    ? TestResults.SUBMITTED_RESULT
+    : TestResults.UNSUBMITTED_ATTEMPT;
+  await sendReportHelper(
+    payload.appType,
+    result,
+    thunkAPI.dispatch,
+    thunkAPI.getState,
+    extraPayload,
+  );
+  // Submit status isn't properly updated by just saving the status code, so re-query
+  // user progress to force the bubble to update.
+  thunkAPI.dispatch(
+    queryUserProgress(
+      thunkAPI.getState().currentUser?.userId?.toString() || '',
+    ),
+  );
+});
 
 // The user has successfully completed the level and the page
 // will not be reloading. Currently only used by Lab2 labs.

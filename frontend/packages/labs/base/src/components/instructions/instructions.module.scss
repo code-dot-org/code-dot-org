@@ -1,5 +1,3 @@
-@import 'font.scss';
-
 @keyframes slidein {
   from {
     opacity: 0;
@@ -116,7 +114,7 @@
     &,
     em,
     strong {
-      font-family: $barlowSemiCondensed-semibold;
+      font-family: 'Barlow Semi Condensed Semibold', sans-serif;
     }
   }
 

@@ -1579,7 +1579,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/audio@workspace:packages/audio":
+"@code-dot-org/audio@workspace:*, @code-dot-org/audio@workspace:packages/audio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/audio@workspace:packages/audio"
   dependencies:
@@ -1931,6 +1931,7 @@ __metadata:
   resolution: "@code-dot-org/lab@workspace:packages/labs/base"
   dependencies:
     "@code-dot-org/api": "workspace:*"
+    "@code-dot-org/audio": "workspace:*"
     "@code-dot-org/blockly-workspace": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
@@ -2259,6 +2260,7 @@ __metadata:
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/projects": "workspace:*"
+    "@code-dot-org/user": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
     "@reduxjs/toolkit": "npm:^2.8.2"
     "@release-it/conventional-changelog": "npm:^10.0.0"
