@@ -13,9 +13,14 @@
 .adlib {
   border-radius: 10px;
   padding: 2px;
-  background: linear-gradient(49deg, rgba(72 2 170 / 1) 0%, rgba(176 14 229 / 1) 52%, rgba(77 202 239 / 1) 100%);
+  background: linear-gradient(
+    49deg,
+    rgba(72 2 170 / 1) 0%,
+    rgba(176 14 229 / 1) 52%,
+    rgba(77 202 239 / 1) 100%
+  );
   background-size: 400% 400%;
-  box-shadow: 0 6px 18px 0 rgba(0 0 0 / 0.30);
+  box-shadow: 0 6px 18px 0 rgba(0 0 0 / 0.3);
 
   &NormalGlowSpeed {
     animation: gradient-animation 5s ease infinite;

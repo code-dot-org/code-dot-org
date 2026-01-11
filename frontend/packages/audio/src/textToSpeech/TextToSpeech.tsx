@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import type {FunctionComponent, MutableRefObject} from 'react';
+import {useState, useEffect} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useLocalization} from '@code-dot-org/localization';
@@ -9,28 +10,37 @@ import {useBrowserTextToSpeech} from './BrowserTextToSpeechWrapper';
 import moduleStyles from './textToSpeech.module.scss';
 
 export interface TextToSpeechProps {
-  text: string;
-  higherPosition?: boolean;
+  /** The specific text to speak */
+  text?: string;
+  /** A Ref capturing the live content to read aloud. */
+  contentRef?: MutableRefObject<HTMLElement | null>;
 }
 
 const usePause: boolean = true;
 
+const enabledLocales = ['en', 'es', 'fr'];
+
 /**
  * TextToSpeech play button.
  */
-const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
+const TextToSpeech: FunctionComponent<TextToSpeechProps> = ({
   text,
-  higherPosition,
+  contentRef,
 }) => {
   const {isTtsAvailable, speak, cancel, pause, resume} =
     useBrowserTextToSpeech();
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
+  const [ttsButtonEnabled, setTtsButtonEnabled] = useState(false);
+
   const locale = useLocalization();
 
-  const ttsButtonEnabled = ['en'].includes(locale);
-  console.log('TTS ENABLED?', ttsButtonEnabled);
+  // Determine, whenever the locale is set on the first time or updated, if the
+  // text-to-speech engine is available for that locale.
+  useEffect(() => {
+    setTtsButtonEnabled(enabledLocales.includes(locale));
+  }, [locale]);
 
   const playText = () => {
     if (!isTtsAvailable) {
@@ -54,7 +64,11 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
       return;
     }
 
-    const utterance = speak(text);
+    // Determine the text to speak by either using the 'text' override or the
+    // text content for the provided content element.
+    const spokenText: string = text || contentRef?.current?.textContent || '';
+
+    const utterance = speak(spokenText);
     if (utterance) {
       utterance.addEventListener('start', () => setIsPlaying(true));
       utterance.addEventListener('end', () => {
@@ -85,7 +99,6 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
       className={classNames(
         moduleStyles.playButton,
         isPlaying && moduleStyles.playButtonPlaying,
-        higherPosition && moduleStyles.playButtonHigherPosition,
       )}
       onClick={playText}
       onKeyDown={handleKeyDown}

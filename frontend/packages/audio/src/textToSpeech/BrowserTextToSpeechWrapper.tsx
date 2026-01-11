@@ -1,10 +1,5 @@
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import type {FunctionComponent, PropsWithChildren} from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
 
 import {isTtsAvailable, onTtsAvailable, speak} from './BrowserTextToSpeech';
 
@@ -12,7 +7,7 @@ import {isTtsAvailable, onTtsAvailable, speak} from './BrowserTextToSpeech';
  * A wrapper component that provides the browser text-to-speech context.
  * Attaches a listener that updates context when browser text-to-speech is ready.
  */
-const BrowserTextToSpeechWrapper: React.FC<{children: ReactNode}> = ({
+const BrowserTextToSpeechWrapper: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
   const [ttsReady, setTtsReady] = useState(isTtsAvailable());
