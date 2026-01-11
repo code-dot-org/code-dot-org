@@ -23,7 +23,8 @@ var CONFIGS = {
     movePegmanAnimation: 'move_avatar.png',
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
-    movePegmanAnimationFrameNumber: 9,
+    // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
+    movePegmanAnimationFrameNumber: 1,
     hideInstructions: true,
   },
 
@@ -44,10 +45,13 @@ var CONFIGS = {
     idlePegmanAnimation: 'idle_avatar.gif',
     wallPegmanAnimation: 'wall_avatar.png',
     movePegmanAnimation: 'move_avatar.png',
+    movePegmanCol: 4, // 4 columns in the sprite sheet
+    movePegmanRow: 36, // 1800px / 50px = 36 rows
     hittingWallAnimation: 'wall.gif',
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
-    movePegmanAnimationFrameNumber: 9,
+    // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
+    movePegmanAnimationFrameNumber: 1,
     actionSpeedScale: {
       nectar: 1,
     },
@@ -61,7 +65,8 @@ var CONFIGS = {
     wallPegmanAnimation: 'wall_avatar.png',
     movePegmanAnimation: 'move_avatar.png',
     movePegmanAnimationSpeedScale: 1,
-    movePegmanAnimationFrameNumber: 8,
+    // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
+    movePegmanAnimationFrameNumber: 1,
     pegmanHeight: 50,
     pegmanWidth: 50,
 
@@ -117,7 +122,7 @@ var CONFIGS = {
   },
 
   pvz: {
-    goalIdle: 'goalIdle.gif',
+    goalIdle: 'goal.gif',
     obstacleIdle: 'obstacleIdle.gif',
 
     goalAnimation: 'goal.gif',
@@ -129,59 +134,76 @@ var CONFIGS = {
   },
 
   birds: {
-    goalIdle: 'goalIdle.gif',
+    goalIdle: 'close_goal.png',
     obstacleIdle: 'obstacle.png',
+    obstacleAnimation: 'obstacle.png',
 
-    goalAnimation: 'goal.gif',
+    goalAnimation: 'close_goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
 
     obstacleScale: 1.2,
     additionalSound: true,
-    idlePegmanAnimation: 'idle_avatar.gif',
-    wallPegmanAnimation: 'wall_avatar.png',
-    movePegmanAnimation: 'move_avatar.png',
+    avatar: 'avatar.png', // This is the PNG file used by displayPegman at the end
+    idlePegmanAnimation: 'avatar.png',
+    idlePegmanCol: 4,
+    idlePegmanRow: 1,
+    wallPegmanAnimation: 'avatar.png',
+    movePegmanAnimation: 'avatar.png',
+    movePegmanCol: 1,
+    movePegmanRow: 1,
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
-    movePegmanAnimationFrameNumber: 9,
+    // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
+    movePegmanAnimationFrameNumber: 1,
     hittingWallAnimation: 'wall.gif',
     approachingGoalAnimation: 'close_goal.png',
-    pegmanHeight: 68,
-    pegmanWidth: 51,
+    background: 'background.png',
+    pegmanHeight: 60,
+    pegmanWidth: 60,
     pegmanYOffset: -14,
     turnAfterVictory: true,
   },
 
   scrat: {
+    // DELIVERABLE WEEK 4 - Debugging in Maze.
     goalIdle: 'goal.png',
     goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
 
     additionalSound: true,
-    idlePegmanAnimation: 'idle_avatar_sheet.png',
+    avatar: 'avatar.png', // This is the PNG file used by displayPegman at the end
+    idlePegmanAnimation: 'avatar.png',
     idlePegmanAnimationSpeedScale: 1.5,
-    idlePegmanCol: 4,
-    idlePegmanRow: 11,
+    idlePegmanCol: 4, // 4 columns for direction sprites
+    // GLOBAL ANIMATION DISABLE: Force idle animation to 1 frame
+    idlePegmanRow: 1,
 
     hittingWallAnimation: 'wall_avatar_sheet.png',
-    hittingWallAnimationFrameNumber: 20,
+    // GLOBAL ANIMATION DISABLE: Force hitting wall animation to 1 frame
+    hittingWallAnimationFrameNumber: 1,
     hittingWallAnimationSpeedScale: 1.5,
     hittingWallPegmanCol: 1,
-    hittingWallPegmanRow: 20,
+    // GLOBAL ANIMATION DISABLE: Force hitting wall row to 1
+    hittingWallPegmanRow: 1,
 
     celebrateAnimation: 'jump_acorn_sheet.png',
     celebratePegmanCol: 1,
-    celebratePegmanRow: 9,
+    // GLOBAL ANIMATION DISABLE: Force celebrate animation to 1 frame
+    celebratePegmanRow: 1,
 
     movePegmanAnimation: 'move_avatar.png',
+    movePegmanCol: 1,
+    movePegmanRow: 1,
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
-    movePegmanAnimationFrameNumber: 9,
+    // GLOBAL ANIMATION DISABLE: Force move animation to 1 frame
+    movePegmanAnimationFrameNumber: 1,
 
     approachingGoalAnimation: 'close_goal.png',
-    pegmanHeight: 107,
-    pegmanWidth: 80,
+    pegmanHeight: 90,
+    pegmanWidth: 90,
     pegmanXOffset: -12,
     pegmanYOffset: -30,
     turnAfterVictory: true,
@@ -283,6 +305,23 @@ const load = function (assetUrl, id) {
     } else {
       skin[prop] = determineAssetUrl(val);
     }
+  }
+
+  // GLOBAL ANIMATION DISABLE: Force all animation frame counts to 1 for all skins
+  if (skin.movePegmanAnimationFrameNumber) {
+    skin.movePegmanAnimationFrameNumber = 1;
+  }
+  if (skin.idlePegmanRow) {
+    skin.idlePegmanRow = 1;
+  }
+  if (skin.hittingWallAnimationFrameNumber) {
+    skin.hittingWallAnimationFrameNumber = 1;
+  }
+  if (skin.hittingWallPegmanRow) {
+    skin.hittingWallPegmanRow = 1;
+  }
+  if (skin.celebratePegmanRow) {
+    skin.celebratePegmanRow = 1;
   }
 
   return skin;
