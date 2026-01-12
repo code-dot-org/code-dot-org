@@ -69,9 +69,10 @@ const BackpackPanel: React.FC<BackpackProps> = ({
           ...prevAlerts,
           {
             type: 'success',
-            message: `${filename} successfully saved to Backpack!`,
+            message: `${filename} successfully saved to your Backpack!`,
           },
         ]);
+        // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
         setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
         setTimeout(() => {
           setRecentlyAddedFiles(prevFiles =>
