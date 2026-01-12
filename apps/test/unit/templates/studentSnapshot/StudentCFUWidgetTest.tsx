@@ -13,7 +13,6 @@ jest.mock('@cdo/apps/util/HttpClient', () => {
   };
 });
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const HttpClient = require('@cdo/apps/util/HttpClient').default as {
   fetchJson: jest.Mock;
 };

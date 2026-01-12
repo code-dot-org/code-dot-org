@@ -92,7 +92,6 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
         setFetchedCfuLevels(response?.value?.cfu_levels || []);
       })
       .catch(error => {
-        // eslint-disable-next-line no-console
         console.error('Error fetching CFU levels:', error);
         setFetchedCfuLevels([]);
       })
@@ -118,7 +117,6 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
         setFetchedCfuResponses(response?.value?.cfu_responses || []);
       })
       .catch(error => {
-        // eslint-disable-next-line no-console
         console.error('Error fetching CFU responses:', error);
         setFetchedCfuResponses([]);
       })
