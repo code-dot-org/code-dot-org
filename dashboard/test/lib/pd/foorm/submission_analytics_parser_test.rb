@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Pd::Foorm
   class SubmissionAnalyticsParserTest < ActiveSupport::TestCase
-    self.use_transactional_test_case = true
-
     setup_all do
       @form = create(:foorm_form_csf_intro_post_survey)
     end

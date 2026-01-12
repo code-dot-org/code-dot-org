@@ -472,13 +472,12 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'level_properties', to: 'lessons#level_properties', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level's properties via JSON.
-            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -754,7 +753,6 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resources :integrations, only: [:new, :create]
-        resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
           post 'dynamic_registration', action: :create_registration

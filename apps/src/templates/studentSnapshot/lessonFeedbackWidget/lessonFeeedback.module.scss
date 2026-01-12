@@ -1,0 +1,15 @@
+@import '@code-dot-org/component-library-styles/mixins';
+
+.topContianer {
+  display: flex;
+  width: 638px;
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+label.typographyLabelTwo {
+  @include label-two;
+  margin-bottom: 0;
+}

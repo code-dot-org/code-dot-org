@@ -12,6 +12,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
 import StudentCodeWidget from './studentCodeWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
@@ -98,6 +99,11 @@ const StudentSnapshot: React.FC = () => {
       : null
   );
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  const aiTaEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
+  );
+
   const selectedStudent = React.useMemo(
     () => selectedStudents.find(student => student.id === selectedStudentId),
     [selectedStudentId, selectedStudents]
@@ -195,6 +201,11 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
+        <LessonFeedbackWidget
+          lessonId={selectedLessonId}
+          studentId={HARDCODED_STUDENT_ID}
+          teacherHasEnabledAi={aiTaEnabled}
+        />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}

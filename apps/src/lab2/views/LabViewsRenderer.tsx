@@ -72,9 +72,8 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     currentAppName,
     levelProperties,
   });
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel || false
-  );
+  const isPredictLevel =
+    levelProperties?.predictSettings?.isPredictLevel || false;
   const hasSubmittedPredictResponse = useAppSelector(
     state => state.predictLevel.hasSubmittedResponse
   );

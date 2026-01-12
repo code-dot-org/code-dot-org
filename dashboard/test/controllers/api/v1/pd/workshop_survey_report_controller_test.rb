@@ -4,7 +4,6 @@ module Api::V1::Pd
   class WorkshopSurveyReportControllerTest < ::ActionController::TestCase
     include Pd::WorkshopConstants
 
-    self.use_transactional_test_case = true
     setup_all do
       @facilitator = create(:facilitator)
       @program_manager = create(:program_manager)
