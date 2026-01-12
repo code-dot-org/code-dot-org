@@ -7,7 +7,7 @@ right 'When you need to repeat an action based on a condition that might change 
 wrong 'When you are working with an array of a fixed size.'
 wrong 'When you want to ensure the loop only runs exactly five times.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3

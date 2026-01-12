@@ -7,7 +7,7 @@ right 'Accurate and descriptive labels help the user verify that the AI is proce
 wrong 'Labels prevent the user from seeing the actual data values.'
 wrong 'Labels are only used to satisfy legal requirements and do not affect trust.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 7
