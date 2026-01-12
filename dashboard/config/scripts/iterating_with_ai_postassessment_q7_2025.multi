@@ -7,7 +7,7 @@ right 'Use a fallback string like "N/A" or "No phone provided" to fill the space
 wrong 'Leave the space entirely blank without a label.'
 wrong 'Delete that record from the database automatically.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 5

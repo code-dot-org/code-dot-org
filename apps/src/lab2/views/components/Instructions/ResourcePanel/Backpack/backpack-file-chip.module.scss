@@ -1,0 +1,59 @@
+.backpackFileChip {
+  display: flex;
+  height: 52px;
+  align-items: flex-start;
+  border-radius: var(--border-radius-br-s, 4px);
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+  width: 100%;
+}
+
+.fileIconContainer {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
+  border: 1px solid var(--borders-brand-teal-primary);
+  background: var(--background-brand-teal-primary);
+}
+
+.fileIcon {
+  color: var(--text-neutral-white-fixed);
+  font-size: 18px;
+}
+
+.fileInfo {
+  display: flex;
+  padding: 2px 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: -2px;
+  flex: 1 0 0;
+  align-self: stretch;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.infoText {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  min-width: 0; 
+}
+
+.fileActions {
+  display: flex;
+  padding: 2px 6px 2px 8px;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+}

@@ -7,7 +7,7 @@ right 'It ignored users\' main goals and needs.'
 wrong 'It made the app load too slowly.'
 wrong 'It added too many security features.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 2, 7
