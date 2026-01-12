@@ -162,7 +162,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           ? {
               onClick: neutralCallback,
               disabled: buttons.neutral.disabled,
-              color: buttons.neutral.destructive ? 'destructive' : 'white',
+              color: buttons.neutral.destructive ? 'destructive' : 'gray',
               text: buttons.neutral.text,
             }
           : buttons?.cancel
