@@ -1,167 +1,172 @@
-  /* Arrow */
-  .introjs-arrow {
-    display: none !important;
-  }
+@use '@code-dot-org/component-library-styles/mixins';
 
-  /* Helper Layer - customized for dark mode. */
-  .introjs-helperLayer {
-    // Use box-shadow instead of border to avoid layout shift.
-    // Shadows are rendered in reverse order: first = on top, last = on bottom.
-    box-shadow:
-      0 0 0 3px #9657C7,                    // Purple border (on top, most visible).
-      0 0 20px 3px rgb(150 87 199 / 0.9),   // Purple glow (middle layer).
-      0 0 0 5000px rgb(0 0 0 / 0.5),        // Lighter overlay (bottom layer).
-      inset 0 0 0 3px rgb(255 255 255 / 0.2) !important; // Inner highlight.
-  }
- 
-  /* Tooltip */
-  .introjs-tooltip {
-    box-sizing: content-box;
-    position: absolute;
-    visibility: visible;
-    background-color: #fff;
-    min-width: 250px;
-    max-width: 650px;
-    border-radius: 5px;
-    box-shadow: 0 3px 30px #21212140;
-    transition: opacity .1s ease-out;
-  }
+/* Arrow */
+.introjs-arrow {
+  display: none !important;
+}
 
-  .introjs-tooltipReferenceLayer {
-    // This fixes the Safari bug where the introjs panel is not always visible.
-    // See https://github.com/usablica/intro.js/issues/2081.
-    visibility: visible !important;
-  }
+/* Helper Layer - customized for dark mode. */
+.introjs-helperLayer {
+  // Use box-shadow instead of border to avoid layout shift.
+  // Shadows are rendered in reverse order: first = on top, last = on bottom.
+  box-shadow: 0 0 0 3px #9657c7, // Purple border (on top, most visible).
+    0 0 20px 3px rgb(150 87 199 / 0.9), // Purple glow (middle layer).
+    0 0 0 5000px rgb(0 0 0 / 0.5), // Lighter overlay (bottom layer).
+    inset 0 0 0 3px rgb(255 255 255 / 0.2) !important; // Inner highlight.
+}
 
-  /* Wide tooltip for specific steps */
-  .introjs-tooltip:has(.sketchlab-tour-wide-step) {
-    max-width: 650px;
-    min-width: 600px;
-  }
+/* Tooltip */
+.introjs-tooltip {
+  box-sizing: content-box;
+  position: absolute;
+  visibility: visible;
+  background-color: #fff;
+  min-width: 250px;
+  max-width: 650px;
+  border-radius: 5px;
+  box-shadow: 0 3px 30px #21212140;
+  transition: opacity 0.1s ease-out;
+}
 
-  /* Move the tooltip vertically upwards. */
-  .introjs-tooltip:has(.sketchlab-move-vertical) {
-    transform: translateY(-120px);
+.introjs-tooltipReferenceLayer {
+  // This fixes the Safari bug where the introjs panel is not always visible.
+  // See https://github.com/usablica/intro.js/issues/2081.
+  visibility: visible !important;
+}
+
+/* Wide tooltip for specific steps */
+.introjs-tooltip:has(.sketchlab-tour-wide-step) {
+  max-width: 650px;
+  min-width: 600px;
+}
+
+/* Move the tooltip vertically upwards. */
+.introjs-tooltip:has(.sketchlab-move-vertical) {
+  transform: translateY(-120px);
+}
+
+.introjs-tooltiptext {
+  padding: 20px;
+  color: #576575;
+  font-family: Figtree, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 23.68px;
+}
+
+/* Tooltip Title */
+.introjs-tooltip-title {
+  font-family: Figtree, sans-serif;
+  font-size: 20px;
+  width: 90%;
+  min-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Tooltip Header */
+.introjs-tooltip-header {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  min-height: 1.5em;
+}
+
+/* Tooltip Buttons */
+.introjs-tooltipbuttons {
+  border-top: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: right;
+  white-space: nowrap;
+
+  button:focus-visible,
+  a:focus-visible {
+    @include mixins.focus-styles;
   }
-  
-  .introjs-tooltiptext {
-    padding: 20px;
-    color: #576575;
-    font-family: Figtree, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 23.68px;
-  }
-  
-  /* Tooltip Title */
-  .introjs-tooltip-title {
-    font-family: Figtree, sans-serif;
-    font-size: 20px;
-    width: 90%;
-    min-height: 1.5em;
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-  
-  /* Tooltip Header */
-  .introjs-tooltip-header {
-    position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    min-height: 1.5em;
-  }
-  
-  /* Tooltip Buttons */
-  .introjs-tooltipbuttons {
-    border-top: 1px solid #e0e0e0;
-    padding: 10px;
-    text-align: right;
-    white-space: nowrap;
-  }
-  
-  .introjs-tooltipbuttons:after {
-    content: "";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-  
-  /* Button */
-  .introjs-button {
-    box-sizing: content-box;
-    position: relative;
-    overflow: visible;
-    padding: .5rem 1rem;
-    border: 1px solid #bdbdbd;
+}
+
+.introjs-tooltipbuttons:after {
+  content: '';
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* Button */
+.introjs-button {
+  box-sizing: content-box;
+  position: relative;
+  overflow: visible;
+  padding: 0.5rem 1rem;
+  border: 1px solid #bdbdbd;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff;
+  font-size: 14px;
+  color: #424242;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: 0;
+  background-color: #f4f4f4;
+  border-radius: 0.2em;
+  zoom: 1;
+  display: inline;
+}
+
+/* Navigation Buttons */
+.introjs-prevbutton {
+  float: left;
+  text-shadow: none;
+  color: #292f36;
+  border: 1px solid #292f36;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: #fff;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: #292f36;
+    background-color: #dfe3e9;
     text-decoration: none;
-    text-shadow: 1px 1px 0 #fff;
-    font-size: 14px;
-    color: #424242;
-    white-space: nowrap;
-    cursor: pointer;
-    outline: 0;
-    background-color: #f4f4f4;
-    border-radius: .2em;
-    zoom: 1;
-    display: inline;
+    box-shadow: none;
   }
+}
 
-  /* Navigation Buttons */
-  .introjs-prevbutton {
-    float: left;
-    text-shadow: none;
-    color: #292F36;
-    border: 1px solid #292F36;
-    border-width: 1px;
-    border-radius: 4px;
-    background-color: #fff;
-  
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited {
-      color: #292F36;
-      background-color: #dfe3e9;
-      text-decoration: none;
-      box-shadow: none;
-    }
-  }
-  
-  .introjs-nextbutton {
-    float: right;
-    text-shadow: none;
-    border-radius: 4px;
+.introjs-nextbutton {
+  float: right;
+  text-shadow: none;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  background-color: #9657c7;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
     color: #fff;
+    background-color: #6c468a;
+    text-decoration: none;
     border: none;
-    background-color: #9657C7;
-  
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited {
-      color: #fff;
-      background-color: #6c468a;
-      text-decoration: none;
-      border: none;
-      box-shadow: none;
-    }
-    &:disabled,
-    &[disabled] {
-      opacity: 0.5;
-      cursor: not-allowed;
-      pointer-events: none;
-      background-color: #d4dae1;
-      color: #fff;
-      text-shadow: none;
-    }
+    box-shadow: none;
   }
-  
-  .introjs-hidden {
-    display: none;
+  &:disabled,
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: #d4dae1;
+    color: #fff;
+    text-shadow: none;
   }
-  
+}
+
+.introjs-hidden {
+  display: none;
+}
