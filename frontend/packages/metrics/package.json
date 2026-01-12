@@ -16,7 +16,8 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
-    "**/*.css"
+    "**/*.css",
+    "**/nodePolyfills.ts"
   ],
   "main": "src/index.ts",
   "types": "./dist/types/index.d.ts",

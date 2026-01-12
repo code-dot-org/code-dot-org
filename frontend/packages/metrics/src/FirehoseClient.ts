@@ -2,14 +2,14 @@
  * Provides clients to AWS Firehose, whose data is imported into AWS Redshift.
  */
 
-// eslint-disable-next-line import-x/default
-import AWS from 'aws-sdk';
+// Polyfill Node.js globals for browser compatibility (required by aws-sdk's buffer dependency)
+import './nodePolyfills';
+
 import type {AWSError} from 'aws-sdk';
-import Firehose, {PutRecordOutput} from 'aws-sdk/clients/firehose';
+import type FirehoseType from 'aws-sdk/clients/firehose';
+import type {PutRecordOutput} from 'aws-sdk/clients/firehose';
 
 import localization from '@code-dot-org/localization';
-
-import 'aws-sdk/lib/config';
 
 import {
   getEnvironment,
@@ -153,10 +153,24 @@ const maxDataJSONBytes = 65500;
 const maxDataStringBytes = 4095;
 
 class FirehoseClient {
-  firehose: Firehose;
+  firehose: FirehoseType | null = null;
+  firehosePromise: Promise<FirehoseType> | null = null;
 
-  constructor() {
-    this.firehose = createNewFirehose();
+  /**
+   * Lazily initializes and returns the Firehose client.
+   * Uses dynamic imports to ensure the global polyfill runs before aws-sdk loads.
+   */
+  async getFirehose(): Promise<FirehoseType> {
+    if (this.firehose) {
+      return this.firehose;
+    }
+    if (!this.firehosePromise) {
+      this.firehosePromise = createNewFirehose().then(firehose => {
+        this.firehose = firehose;
+        return firehose;
+      });
+    }
+    return this.firehosePromise;
   }
 
   /**
@@ -260,7 +274,7 @@ class FirehoseClient {
    * the manually set user_id.
    * @option options [function(err, data)] callback Invoked upon completion with error or data
    */
-  putRecord(data: RecordData, options: PutRecordOptions = {}) {
+  async putRecord(data: RecordData, options: PutRecordOptions = {}) {
     const {userId, scriptId, levelId} = options;
     data = this.addCommonValues(data);
     if (userId !== undefined) {
@@ -289,7 +303,8 @@ class FirehoseClient {
       return;
     }
 
-    this.firehose.putRecord(
+    const firehose = await this.getFirehose();
+    firehose.putRecord(
       {
         DeliveryStreamName: deliveryStreamName,
         Record: {
@@ -314,7 +329,7 @@ class FirehoseClient {
    * @option options [boolean] alwaysPut Forces the record to be sent.
    * @option options [boolean] includeUserId Include userId in records, if signed in
    */
-  putRecordBatch(data: RecordData[], options: PutRecordOptions = {}) {
+  async putRecordBatch(data: RecordData[], options: PutRecordOptions = {}) {
     data.map(record => {
       const {userId, scriptId, levelId} = options;
       record = this.addCommonValues(record);
@@ -351,7 +366,8 @@ class FirehoseClient {
       };
     });
 
-    this.firehose.putRecordBatch(
+    const firehose = await this.getFirehose();
+    firehose.putRecordBatch(
       {
         DeliveryStreamName: deliveryStreamName,
         Records: batch,
@@ -378,7 +394,15 @@ function validateFirehoseDataSize(data: RecordData) {
 // This code sets up an AWS config against a very restricted user, so this is
 // not a concern, we just don't want to make things super obvious. For more
 // info, contact the infrastructure team.
-function createNewFirehose(): Firehose {
+async function createNewFirehose(): Promise<FirehoseType> {
+  // Dynamic imports ensure the polyfill runs before aws-sdk loads
+  const [AWS, {default: Firehose}] = await Promise.all([
+    import('aws-sdk'),
+    import('aws-sdk/clients/firehose'),
+  ]);
+  // Also load the config module
+  await import('aws-sdk/lib/config');
+
   const _0xr0t13: (message: string) => string = (message: string) => {
     return message.replace(/[a-z]/gi, letter =>
       String.fromCharCode(
@@ -412,7 +436,7 @@ function createNewFirehose(): Firehose {
     return _0x4291ea;
   };
   // @ts-expect-error - It does not understand our cryptic shenanigans here
-  AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
+  AWS.default[_0xd12e('0x0')] = new AWS.default['\x43\x6f\x6e\x66\x69\x67']({
     accessKeyId: _0xd12e('0x1'),
     secretAccessKey: _0xd12e('0x2'),
     region: _0xd12e('0x3'),
