@@ -68,7 +68,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
 
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
     sublevel_info = sublevels&.any? ? "Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_level_prompt_info(sublevel, student_id, unit_id)}.join(", ")}]" : ""
-    rubric_summary = level.rubrics.present? ? {learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)} : 'N/A'
+    rubric_summary = level.rubrics.present? ? "Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
 
@@ -91,8 +91,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     Finished status: #{user_level&.finished? || false}
     Validation Status: ___
     Time spent: #{user_level&.time_spent || 0} seconds
-    Rubrics: #{rubric_summary}
-    #{sublevel_info}}\n"
+    #{rubric_summary}#{sublevel_info}}\n"
   end
 
   def self.get_cfu_level_info(level, student_id, unit_id)
@@ -145,7 +144,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
   end
 
   def self.get_code_level_info(level, student_id, unit_id)
-    exemplar = level.respond_to?(:exemplar_sources) ? "\nLevel Example Perfect Response: #{level.exemplar_sources}\n" : ""
+    exemplar = level.respond_to?(:exemplar_sources) && level.exemplar_sources ? "\n    Level Example Perfect Response: #{level.exemplar_sources}" : ""
     student_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id).to_json
     "Level Long Instructions: {#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}
     Level Short Instructions: #{level.short_instructions}#{exemplar}
