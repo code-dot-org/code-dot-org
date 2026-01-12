@@ -22,6 +22,8 @@ import {
   DialogClosePromiseReturnType,
 } from './types';
 
+import moduleStyles from './dialog-manager.module.scss';
+
 /**
  * Manages displaying common dialogs for Lab2.
  */
@@ -103,10 +105,12 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
         setPromiseArgs,
       }}
     >
-      {DialogView && <DialogView {...activeDialog?.dialogArgs} />}
-      {/* Adding inert attribute to disable interaction with underlying content
-          when a dialog is open so keyboard navigation works as expected */}
-      <div {...(DialogView ? {inert: ''} : {})}>{children}</div>
+      {DialogView && (
+        <div className={moduleStyles.dialogContainer}>
+          <DialogView {...activeDialog?.dialogArgs} />
+        </div>
+      )}
+      {children}
     </DialogControlContext.Provider>
   );
 };
