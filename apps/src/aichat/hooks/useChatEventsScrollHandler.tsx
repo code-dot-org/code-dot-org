@@ -9,15 +9,15 @@ const MESSAGE_AREA_VERTICAL_PADDING = 20;
 
 export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
   const [showScrollToBottom, setShowScrollToBottom] = useState(false);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const spacerRef = useRef<HTMLDivElement>(null);
   const lastUserMessageRef = useRef<HTMLDivElement | null>(null);
+  const activeMessageRef = useRef<HTMLDivElement | null>(null);
 
-  // Ref tracking to avoid re-renders
   const stateRef = useRef({
     spacerHeight: 0,
     prevEventsCount: events.length,
-    prevAssistantLength: 0,
   });
 
   const scrollToBottom = useCallback((behavior: ScrollBehavior = 'smooth') => {
@@ -51,7 +51,10 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
 
     const containerHeight = container.clientHeight;
 
+    // as the active message grows, spacer.offsetTop increases,
+    // contentHeightBelowAnchor increases, and desiredHeight decreases.
     const contentHeightBelowAnchor = spacer.offsetTop - anchor.offsetTop;
+
     const desiredHeight = Math.max(
       0,
       containerHeight - contentHeightBelowAnchor - MESSAGE_AREA_VERTICAL_PADDING
@@ -59,55 +62,61 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
 
     if (Math.abs(desiredHeight - stateRef.current.spacerHeight) > 1) {
       stateRef.current.spacerHeight = desiredHeight;
+      // direct DOM manipulation prevents render loops
       spacer.style.height = `${desiredHeight}px`;
     }
   }, []);
 
-  // Handle Window/Container Resizing
+  const handleResize = useCallback(() => {
+    // on resize, only update the spacer if it already has height
+    if (stateRef.current.spacerHeight) {
+      updateSpacer();
+    }
+
+    setShowScrollToBottom(!isAtBottom());
+  }, [isAtBottom, updateSpacer]);
+
+  // window/container resizing
   useEffect(() => {
     if (!containerRef.current) return;
-    const observer = new ResizeObserver(() => updateSpacer());
+    const observer = new ResizeObserver(handleResize);
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, [updateSpacer]);
+  }, [handleResize]);
+
+  // message resizing (streaming)
+  useEffect(() => {
+    const currentMessage = activeMessageRef.current;
+    if (!currentMessage) return;
+
+    const observer = new ResizeObserver(handleResize);
+
+    observer.observe(currentMessage);
+    return () => observer.disconnect();
+  }, [events.length, handleResize]);
 
   useLayoutEffect(() => {
-    const {prevEventsCount, prevAssistantLength} = stateRef.current;
+    const {prevEventsCount} = stateRef.current;
     const currentEvent = events[events.length - 1];
-    if (!currentEvent) return;
 
-    const isNewEvent = events.length !== prevEventsCount;
+    const initialLoadOfEvents = !prevEventsCount && events.length;
+    const newEventOrChatCleared =
+      prevEventsCount && events.length !== prevEventsCount;
 
-    // 1. Initial Load
-    if (events.length && !prevEventsCount) {
-      stateRef.current.prevEventsCount = events.length;
+    stateRef.current.prevEventsCount = events.length;
+
+    if (initialLoadOfEvents) {
+      //  jump to bottom of messages
       scrollToBottom('auto');
-      return;
-    }
-
-    // 2. Streaming Assistant Message
-    if (
-      !isNewEvent &&
-      isChatMessage(currentEvent) &&
-      currentEvent.role === Role.ASSISTANT
-    ) {
-      if (currentEvent.chatMessageText.length > prevAssistantLength) {
-        stateRef.current.prevAssistantLength =
-          currentEvent.chatMessageText.length;
-        updateSpacer();
-        setShowScrollToBottom(!isAtBottom());
-      }
-    }
-
-    // 3. New Message Added (User or Assistant)
-    if (isNewEvent) {
-      stateRef.current.prevEventsCount = events.length;
+    } else if (newEventOrChatCleared) {
       updateSpacer();
 
       const currentEventFromUser =
-        isChatMessage(currentEvent) && currentEvent.role === Role.USER;
+        currentEvent &&
+        isChatMessage(currentEvent) &&
+        currentEvent.role === Role.USER;
+
       if (currentEventFromUser) {
-        stateRef.current.prevAssistantLength = 0;
         scrollToBottom();
       } else {
         setShowScrollToBottom(!isAtBottom());
@@ -115,11 +124,10 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
     }
   }, [events, updateSpacer, isAtBottom, scrollToBottom]);
 
-  // Scroll Listener for the Button
+  // scroll listener for scroll to bottom button
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
     const handleScroll = () => setShowScrollToBottom(!isAtBottom());
     container.addEventListener('scroll', handleScroll, {passive: true});
     return () => container.removeEventListener('scroll', handleScroll);
@@ -128,6 +136,7 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
   return {
     containerRef,
     lastUserMessageRef,
+    activeMessageRef,
     spacerRef,
     showScrollToBottom,
     scrollToBottom,

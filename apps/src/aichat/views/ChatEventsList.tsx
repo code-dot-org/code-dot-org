@@ -44,6 +44,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const {
     containerRef,
     lastUserMessageRef,
+    activeMessageRef,
     spacerRef,
     showScrollToBottom,
     scrollToBottom,
@@ -54,7 +55,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   );
 
   const parentRef = useRef<HTMLDivElement>(null);
-  const finalEventRef = useRef<HTMLDivElement | null>(null);
 
   const lastUserMessageIndex = useMemo(() => {
     for (let index = events.length - 1; index >= 0; index--) {
@@ -73,17 +73,17 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         parentRef.current?.focus();
       }
     },
-    []
+    [parentRef]
   );
 
   const handleParentKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLDivElement>) => {
       if (e.target === e.currentTarget && e.key === 'Enter') {
         setIsInChatNavigationMode(true);
-        finalEventRef.current?.focus();
+        activeMessageRef.current?.focus();
       }
     },
-    []
+    [activeMessageRef]
   );
 
   return (
@@ -127,7 +127,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                       lastUserMessageRef.current = element;
                     }
                     if (isLastMessage) {
-                      finalEventRef.current = element;
+                      activeMessageRef.current = element;
                     }
                   }}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
