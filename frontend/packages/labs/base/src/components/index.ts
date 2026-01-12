@@ -14,5 +14,7 @@ export * from './Adlib';
 export {default as Adlib} from './Adlib';
 export * from './Guide';
 export {default as Guide} from './Guide';
+export * from './GuideInstructions';
+export {default as GuideInstructions} from './GuideInstructions';
 export * from './EnhancedMarkdown';
 export {default as EnhancedMarkdown} from './EnhancedMarkdown';

@@ -64,7 +64,10 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
     offerBrowserTts,
   } = levelProperties;
   const hasValidationConditions = useAppSelector(
-    state => state.lab.validationState?.hasConditions,
+    state => {
+      console.log(state);
+      return state.lab.validationState?.hasConditions;
+    }
   );
   const validationMessage = useAppSelector(
     state => state.lab.validationState?.message,

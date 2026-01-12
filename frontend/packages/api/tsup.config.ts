@@ -21,7 +21,8 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     outDir: `dist/${format}`,
     target: 'es2019',
     format: [format],
-    external: ['./index.css'],
+    // This package has no CSS or @code-dot-org/* runtime dependencies
+    external: [],
     dts: false, // See typescript generator below
     splitting: false,
     async onSuccess() {

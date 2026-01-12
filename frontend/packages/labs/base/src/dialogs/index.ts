@@ -1,6 +1,3 @@
-// Auto-import SASS generated CSS
-import './index.css';
-
 export * from './components/GenericDialog';
 export {default as GenericDialog} from './components/GenericDialog';
 export * from './components/GenericAlertDialog';

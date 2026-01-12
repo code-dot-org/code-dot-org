@@ -1,6 +1,3 @@
-// Auto-import SASS generated CSS
-import './index.css';
-
 export * from './types';
 export * from './responseValidators';
 export * as hooks from './hooks';
