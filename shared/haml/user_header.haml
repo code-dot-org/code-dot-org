@@ -26,7 +26,8 @@
     options = {
       ge_region: ge_region,
       limit_project_types: limit_project_types,
-      project_type: (request.path_info.include? '/projects/') && params && params[:key]
+      project_type: (request.path_info.include? '/projects/') && params && params[:key],
+      loc_prefix: loc_prefix,
     }
     create_drop_down_items = CreateHeader.get_create_dropdown_contents(options)
   end
@@ -36,7 +37,7 @@
 
 %script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
-%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
+%script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
 
 = render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 

@@ -62,6 +62,7 @@
     "teacher_markdown": "Students should notice that the names in the var blocks are repeated in the code. They may guess that the numbers assigned to these names at the top will be substituted in farther down the code. Even if students aren't sure what the screen will look like, they may be more sure that the rectangles will all look the same because they have the same width and height",
     "slider_speed": "0.5",
     "watchers_prepopulated": "[\"rectangleWidth\", \"rectangleHeight\"]",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

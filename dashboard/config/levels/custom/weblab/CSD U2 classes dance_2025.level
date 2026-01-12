@@ -16,7 +16,8 @@
     "bubble_choice_description": "Figure out what html elements need which classes in order to fix the web page.",
     "thumbnail_url": "https://images.code.org/c2b9e1b799d3305e1926a81446eb76cb-classesChallenge.png",
     "encrypted_examples": "ukit+KMvnvpjDTEtvzAc+W2QI1K/am7xfD6IXM73TfCtkKTAdxSyAUZawh+r\nBrtX0IQRZtakgLnXOiZVpQn/hQ==\n",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:39.576+00:00\",\"changed\":[\"cloned from \\\"CSD U2 classes dance_2024\\\"\"],\"cloned_from\":\"CSD U2 classes dance_2024\"}]"

@@ -13,6 +13,8 @@ import {RubricData, TeacherEvaluations} from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useLevelProperties} from '../../LevelPropertiesWrapper';
+
 interface RubricContextType {
   showRubric: boolean;
   isLoading: boolean;
@@ -35,8 +37,7 @@ export function useRubric() {
  */
 const RubricWrapper: React.FC<{children: React.ReactNode}> = ({children}) => {
   const rubricId = useAppSelector(state => getCurrentLesson(state)?.rubric?.id);
-  const showRubric =
-    useAppSelector(state => state.lab.levelProperties?.showRubric) || false;
+  const showRubric = useLevelProperties().levelProperties.showRubric || false;
 
   const [rubricData, setRubricData] = useState<RubricData>();
   const [teacherEvaluations, setTeacherEvaluations] =

@@ -55,7 +55,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
-    "validation_enabled": "true",
+    "validation_enabled": "false",
     "text_mode_at_start": "false",
     "hide_view_data_button": "false",
     "show_debug_watch": "true",
@@ -77,11 +77,12 @@
     "libraries_enabled": "false",
     "encrypted_examples": "9VX1x9Dctt4dqiQrQz4xaxcNJeux6LiEmL+HrD0NRESQS7uqIxtI3QOZDwpu\npoYcT8cDiLtZr99dOBzI5ocrKw==\n",
     "name_suffix": "_2025",
+    "ai_enabled": "false",
     "preload_asset_list": null,
-    "ai_enabled": "false"
+    "ai_tutor_available": "false"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:46.500+00:00\",\"changed\":[\"cloned from \\\"U5 Traversals Investigate Mile Tracker Modify_2024\\\"\"],\"cloned_from\":\"U5 Traversals Investigate Mile Tracker Modify_2024\"},{\"changed_at\":\"2025-05-22 15:47:31 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:46.500+00:00\",\"changed\":[\"cloned from \\\"U5 Traversals Investigate Mile Tracker Modify_2024\\\"\"],\"cloned_from\":\"U5 Traversals Investigate Mile Tracker Modify_2024\"},{\"changed_at\":\"2025-05-22 15:47:31 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-09 23:29:12 +0000\",\"changed\":[\"code_functions\",\"validation_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -2,7 +2,6 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import HttpClient from '../util/HttpClient';
@@ -17,7 +16,7 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffWorkSpaceProps {
   context: Context;
   scriptName?: string;
-  curriculumCourses?: string[];
+  curriculumCourses: string[];
   unreadNotificationCount: number;
   personalizationData?: PersonalizationData;
 }
@@ -46,7 +45,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   const fetchThreads = useCallback(() => {
     asyncFetchThreads().then(response => {
       setThreads(
-        response.sort((a, b) => {
+        response?.sort((a, b) => {
           return a.updatedAt > b.updatedAt ? -1 : 1;
         })
       );
@@ -62,15 +61,17 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
       setShowNotifications(false);
       dispatch(
         fetchThreadMessages({
+          contextType: context.type,
           thread: 0,
           initialThreadPrompt: {
             label: label,
             prompt: prompt,
           },
+          curriculumCourses: curriculumCourses,
         })
       );
     },
-    [dispatch]
+    [dispatch, context, curriculumCourses]
   );
 
   return (
@@ -83,7 +84,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         unreadNotificationCount={unreadNotificationCount}
         curriculumCourses={curriculumCourses}
       />
-      {showNotifications && experiments.isEnabled('teacher-notifications') ? (
+      {showNotifications ? (
         <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
       ) : (
         <AiDiffChat

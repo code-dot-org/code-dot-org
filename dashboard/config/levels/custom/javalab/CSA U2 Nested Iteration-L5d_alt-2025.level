@@ -14,7 +14,7 @@
     "long_instructions": "Paint the sidewalk in front of the grassy lawn.\r\n\r\n✅ **TO DO:** Use nested loops to have a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> object paint a sidewalk in front of the grass lawn, ending at the door of the business.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">nested</code> loops.\r\n</div>\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n",
     "mini_rubric": "false",
     "bubble_choice_description": "Paint a sidewalk in front of the grassy lawn, ending at the front of the business. ",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "start_direction": "1",

@@ -5497,7 +5497,7 @@ en:
             * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
 
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
-          version_title: "'25-'26"
+          version_title: Fall 2025
         self-paced-pl-ai-foundations-2025:
           title: EARLY ACCESS - Teaching AI Foundations
           description_short: ''
@@ -6336,11 +6336,28 @@ en:
           description_teacher: ''
           version_title: ''
         artificial-intelligence-foundations-v2-2025:
-          title: artificial-intelligence-foundations-v2-2025
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          title: AI Foundations (AIF)
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-foundations-s1-v2-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: Spring 2026
         hoai-dance-pilot2-course:
           title: hoai-dance-pilot2-course
           description_short: ''
@@ -6560,3 +6577,50 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        miniglobal-2025:
+          title: miniglobal-2025
+          description_short: First half of express
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        customizing-llms-latm-2025:
+          title: Customizing Language Models
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-ai-foundations-s1-v2-2025:
+          title: Teaching AI Foundations, Semester 1
+          description_short: ''
+          description_student: "The [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\nThis Professional Learning covers Semester 1 of the AI Foundations Curriculum. Semester 2 is currently in development.\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
+          description_teacher: "The [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.\n\nThis Professional Learning covers Semester 1 of the AI Foundations Curriculum. Semester 2 is currently in development.\n \n## Prerequisites\n* This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.\n\n* No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.\n\n## **Find the learning that works for you**\n\n**Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n**Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.\n\n## Flexible implementation\nThis curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.\n"
+          version_title: 25-26
+        cs50-playground:
+          title: CS50 Playground
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-2026:
+          title: AI Foundations (AIF)
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/teaching-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: Spring 2026

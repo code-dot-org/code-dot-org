@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-12-15T17:06:38.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Schema\n\nA **schema** is a clear, repeatable plan for how each item in a dataset is structured.\n\nIt usually includes:\n\n- The **field names** (like `studentName`, `assignment`, `pointsEarned`)\n- The **data type** for each field (text/string, number, date, boolean, etc.)",
+        "imageUrl": "https://images.code.org/cacd61d9e1c2372730b5c7578bce86bd-schema-vocab.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:06:38.512+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level6-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level6-test-2025\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,34 @@
+name 'pl_sandbox_aif-2-U1-class-context_2-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Context
+
+#### This unit is for high school students with little or no coding experience who are comfortable with technology and curious about how apps are made. Students may be motivated by creativity, design, or interest in AI.
+
+#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+
+
+## Unit Length and Format
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Twelve 45-minute lessons and one 3-day culminating project
+
+<img src="https://images.code.org/27d89b5c9e55147dadba43e39b4debed-image-1765825164125.png" alt="design process graph of the cycle" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+#### **Lesson Flow:**
+
+
+- #### Early lessons focus on empathy, user-centered design, and planning (user personas, sitemaps, wireframes).
+
+
+- #### Mid-unit lessons introduce HTML and CSS through guided practice and short creative challenges.
+
+
+- #### The final project synthesizes these skills as students design and build a multi-page web app for a fictional brand using AI collaboration.
+
+## Next up
+
+## Let's dive into the instructional commitments for this course. 
+MARKDOWN

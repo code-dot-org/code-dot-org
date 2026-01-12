@@ -7,7 +7,8 @@ import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
-import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';
+import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -26,6 +27,7 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import '@cdo/apps/lab2/introjs.scss';
 
@@ -34,6 +36,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
@@ -62,6 +65,18 @@ export interface Setting {
 
 interface VersionHistoryProps {
   startSources: ProjectSources;
+  alwaysShowAutoSaves?: boolean;
+  onLoadVersion?: (sources: ProjectSources) => void;
+}
+
+export interface BackpackProps {
+  validateFileName: (fileName: string) => {
+    isSupportFileName: boolean;
+    newFileName: string;
+  };
+  saveFile: (fileId: string, contents: string, url?: string) => void;
+  createNewFile: (fileName: string, contents: string, url?: string) => void;
+  findIdForFileName: (fileName: string) => string | undefined;
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -82,6 +97,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.TeachersOnly]: {
     title: commonI18n.teachingTips(),
     icon: 'chalkboard-teacher',
+  },
+  [Tabs.Backpack]: {
+    title: 'Backpack',
+    icon: 'backpack',
   },
 };
 
@@ -104,6 +123,7 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  backpackProps?: BackpackProps;
 };
 
 /**
@@ -128,6 +148,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
+  backpackProps,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -138,7 +159,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasAutoCollapsedNoTabs = useRef(false);
   const settingsButtonRef = useRef<HTMLDivElement | null>(null);
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
+  const tabContentRefs = useRef<{[key in Tabs]?: HTMLDivElement | null}>({});
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const aiTutorEnabledForPilot = useAppSelector(
+    state => state.currentUser.aiTutorEnabledForPilot
+  );
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -169,10 +194,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isTemporarilyReadOnly = !isPermanentlyReadOnly && isReadOnly;
 
   const levelProperties = instructionsProps.levelProperties;
-  const aiTutorVisible = shouldShowAiTutor(
-    appName,
-    levelProperties.aiTutorAvailable
-  );
+  const aiTutorVisible =
+    shouldShowAiTutor({
+      appName,
+      tutorPilot: aiTutorEnabledForPilot,
+      tutorLevel: levelProperties.aiTutorAvailable,
+    }) ||
+    queryParams('show-ai-tutor2') === 'true' ||
+    queryParams('show-ai-tutor') === 'true';
+
+  const showBackpack =
+    backpackProps &&
+    !isPermanentlyReadOnly &&
+    (appName === 'pythonlab' || appName === 'weblab2');
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -216,22 +250,29 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const versionHistoryHidden =
       (isPermanentlyReadOnly && !viewAsUserId) ||
       isWidgetView ||
-      isReadOnlyPredict;
+      isReadOnlyPredict ||
+      levelProperties.hideVersionHistory;
     if (versionHistoryProps && !versionHistoryHidden) {
       tabMap[Tabs.VersionHistory] = (
         <VersionHistoryPanel
           selectedVersion={selectedVersion}
           setSelectedVersion={setSelectedVersion}
           startSources={versionHistoryProps.startSources}
-          appName={levelProperties.appName}
           levelId={levelId}
           disabled={isTemporarilyReadOnly && !isViewingOldVersion}
+          isOpen={currentTab === Tabs.VersionHistory}
+          alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
+          onLoadVersion={versionHistoryProps.onLoadVersion}
         />
       );
     }
 
     if (showRubric) {
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
+    }
+
+    if (showBackpack) {
+      tabMap[Tabs.Backpack] = <BackpackPanel {...backpackProps} />;
     }
 
     if (
@@ -258,8 +299,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isPermanentlyReadOnly,
     viewAsUserId,
     isWidgetView,
+    isReadOnlyPredict,
     versionHistoryProps,
     showRubric,
+    showBackpack,
     isUserTeacher,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
@@ -272,7 +315,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelId,
     isTemporarilyReadOnly,
     isViewingOldVersion,
-    isReadOnlyPredict,
+    currentTab,
+    backpackProps,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -307,6 +351,32 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
+
+  // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
+  useEffect(() => {
+    if (currentTab === Tabs.AiTutor || currentTab === Tabs.VersionHistory) {
+      const panelContent = tabContentRefs.current[currentTab];
+      if (panelContent) {
+        // Use setTimeout to ensure the panel is rendered and visible before focusing.
+        const timeoutId = setTimeout(() => {
+          const focusableElement =
+            currentTab === Tabs.AiTutor
+              ? panelContent.querySelector<HTMLTextAreaElement>(
+                  '#uitest-chat-textarea'
+                )
+              : findFirstFocusableElement(panelContent);
+          if (focusableElement) {
+            focusableElement.focus();
+          } else {
+            // If no focusable element exists, make the panel content focusable and focus it
+            panelContent.setAttribute('tabindex', '-1');
+            panelContent.focus();
+          }
+        }, 0);
+        return () => clearTimeout(timeoutId);
+      }
+    }
+  }, [currentTab]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
@@ -530,6 +600,21 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     ref={el => {
                       if (el) {
                         el.inert = tab !== currentTab;
+                        // Store ref for AI Tutor and Version History tabs.
+                        if (
+                          tab === Tabs.AiTutor ||
+                          tab === Tabs.VersionHistory
+                        ) {
+                          tabContentRefs.current[tab] = el;
+                        }
+                      } else {
+                        // Clear ref when element is removed.
+                        if (
+                          tab === Tabs.AiTutor ||
+                          tab === Tabs.VersionHistory
+                        ) {
+                          tabContentRefs.current[tab] = null;
+                        }
                       }
                     }}
                   >

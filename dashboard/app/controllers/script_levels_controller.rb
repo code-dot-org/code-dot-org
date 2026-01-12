@@ -243,23 +243,6 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  # Get a JSON summary of a level's information, used in modern labs that don't
-  # reload the page between level views.  Note that this can be cached for a relatively
-  # long amount of time, including by the CDN, and does not vary per user.
-  def level_properties
-    authorize! :read, ScriptLevel
-
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    unit_group_unit = unit_context[:unit_group_unit]
-    @script = unit_context[:unit]
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
-    raise ActiveRecord::RecordNotFound unless @script_level
-
-    @level = select_level
-
-    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user, unit_group_unit: unit_group_unit)
-  end
-
   # Get a list of hidden lessons for the current users section
   def hidden_lesson_ids
     authorize! :read, ScriptLevel
@@ -610,7 +593,6 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags

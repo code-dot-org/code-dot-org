@@ -20,6 +20,7 @@ import Notification, {
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import experiments from '@cdo/apps/util/experiments';
 import {navigateToHref} from '@cdo/apps/utils';
 import {
   CapLinks,
@@ -91,7 +92,6 @@ const useSections = section => {
 export default function SectionsSetUpContainer({
   isUsersFirstSection,
   sectionToBeEdited,
-  canEnableAITutor,
   userCountry,
   defaultRedirectUrl,
   setIsEditInProgress = value => {},
@@ -378,7 +378,9 @@ export default function SectionsSetUpContainer({
 
   const renderAdvancedSettings = () => {
     const aiTutorAvailable =
-      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
+      experiments.isEnabledAllowingQueryString(
+        experiments.AI_CHAT_NEW_PERMISSIONS
+      ) && aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',
@@ -543,7 +545,6 @@ export default function SectionsSetUpContainer({
 SectionsSetUpContainer.propTypes = {
   isUsersFirstSection: PropTypes.bool,
   sectionToBeEdited: PropTypes.object,
-  canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
   defaultRedirectUrl: PropTypes.string.isRequired,
   setIsEditInProgress: PropTypes.func,

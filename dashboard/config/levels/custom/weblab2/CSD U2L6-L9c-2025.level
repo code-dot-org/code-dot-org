@@ -1,0 +1,60 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-09T20:07:13.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug missing heading css",
+    "long_instructions": "# Debug: Missing Heading Style\r\n\r\n\r\n![](https://images.code.org/5b170479e70199cb867c86be5cdcea6d-image-1767988470887.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug",
+    "thumbnail_url": "https://images.code.org/7d9ca9e7fbe74bd10f77529cf7dd1c3b-image-1563297084071.JPG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Tips to Go Green</h1>\n    <p>It is important that we take care of our planet. Here are some tips for how you can be more green.</p>\n    <p>1. Bring a reusable bag to the store. Avoid getting plastic or paper bags.</p>\n    <p>2. Turn off electronics and lights when you are not using them to reduce electricty use.</p>\n    <p>3. Only buy what you need, and borrow items you  only need once or twice. This will reduce waste. </p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "p {\n  color: black;\n}\nh1 [\n  font-weight: bold;\n  color: limegreen;\n]",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWrya3GsH9LKcl\nLjyHNxG8n6CoB1DZStELysJpNphS3IPEPffDbICHr5kiBtID/+VOFTiiZXdA\nCKAEL7OeE1x4IZk1j7dDSZRUx5eosJsrVmeLh2qqs+qtLP8fqWUMN1lF4+IS\nzbMDk3hGHE0QMd+rS7LQ30L6PHi66y5aw40NZYb38edwfikU9NCuWuEoiXag\nd4c6s4EkETTlTNE08oBHgMqP1F+p0FSD+k7kMJrMi2k7oKOEnasA8tpsqKRN\nT5dLVHnnajkeHbea/Tgs78ekE+8pNJOxlkGaGcVKHmAS0OWzRb4eZS2H/Nyd\nNXYr9VEICBjyybOnsmyk2xWk5S3ybnPIgR1kFbh3kXJE2o3xoH3soYXPCcu7\nWI2yImqQhsQTAKa1bt5Bux2uMdZyArGDveiFEytHgUr2uZy6SvxiXn2eKsv7\nz0EE/VOLVP5zGCgcQG74bZC1S9kA5C1SsmqmErNVcOFo/QKVs5xXRDdK1yP9\nctR6tqIIekQQf1aqJdiQo5nnLTb/+aqoFQ5DecZ9ymFiTjKJJEuKVj/Uc1v/\n5gaNAOGZrU1fzeoWVEZ0lKVRWGdn6MDqTFYXc+3lsV3GyL24DltdEfW3Fsc4\nQnvwI9UsAO7CZoJ3KrAUGZImShf7Fc0khcahNBF8J3g/N8Yfhz0s5BIf7NvV\nvTgZJ8G1Yu8GVQ57lH04F5B6FsfPtscpJw4tFmLg2tpKVgilcl6Fq6MF9End\nB4NhhhFhnFgHccumJUDxDJOqH7qWk4ckp+qNAJIQo0iSyf4iO5tOZ8NMZS7L\nvIoClbOJax+SMjTl8Qaco78DuEv6i7eTbHFXitIYOzakt+3YP/RFh1rAXNGQ\nfaUVT4j0CgwOfbo9JMDgtdlQ2iMwmAytkDJaOFufqxpn/jwcnlw+CJqXj79g\ne/X7Gjczz6Nk3Dk5IZSwBeFMrlDLsPuQZp0bOMe5aaZlrOAxP1FgdBCQaW/v\nGaGWoj/vM+RHFplOV3zUhjzxPW4EbsIuLRmNx2OKaYkgGbPm5VCQqzxnbFS9\nTOm3sukRgk4IXTlgi3xW88nTEcCxqDBGeLcE2hqE7BXNfVU7kusbdh4Y4Lfl\nm2gNOZDk1QWoW97lKz4CNKLPWgW+lJPvwumYYG3fvQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-09 20:07:38 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:08:26 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

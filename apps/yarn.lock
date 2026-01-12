@@ -3869,13 +3869,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/blockly@npm:4.0.14":
-  version: 4.0.14
-  resolution: "@code-dot-org/blockly@npm:4.0.14"
-  checksum: 10/4f1e76f03dafbf2a92159ee48b7fd223caabf619b3dbcb45340808d20865e085522852215804a48654755c4dc60b94494956fc041270546f8892149628c683f8
-  languageName: node
-  linkType: hard
-
 "@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A."
@@ -6709,90 +6702,132 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@serialport/binding-abstract@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/binding-abstract@npm:8.0.6"
+"@serialport/binding-mock@npm:10.2.2":
+  version: 10.2.2
+  resolution: "@serialport/binding-mock@npm:10.2.2"
   dependencies:
-    debug: "npm:^4.1.1"
-  checksum: 10/7ce1012796470c3939562780b219d593970c524108e8f88d058bdf6e58245f5a42c5d1d44eeb26e0dc905ddc78612e6bc7be513d361f844c26c93e8efe974629
+    "@serialport/bindings-interface": "npm:^1.2.1"
+    debug: "npm:^4.3.3"
+  checksum: 10/7f4fcc70d48e35c3f0cc9d9a422863ac8613693c6b0b7138bf7959afca5c1da45f927f3f3af728bd29e02a0174c5a4e80b6d9223c97137d7640f987f6ed200b7
   languageName: node
   linkType: hard
 
-"@serialport/binding-mock@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/binding-mock@npm:8.0.6"
+"@serialport/bindings-cpp@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/bindings-cpp@npm:13.0.0"
   dependencies:
-    "@serialport/binding-abstract": "npm:^8.0.6"
-    debug: "npm:^4.1.1"
-  checksum: 10/7e8a4c5873f81fa6c8c23d903b47bbda59ff896bcd0c8604c947a25b3a3d617919dc4a27706c6713ddbbd6e4284693904a6aee8aef1921b995c26785e00e3132
-  languageName: node
-  linkType: hard
-
-"@serialport/bindings@npm:^8.0.8":
-  version: 8.0.8
-  resolution: "@serialport/bindings@npm:8.0.8"
-  dependencies:
-    "@serialport/binding-abstract": "npm:^8.0.6"
-    "@serialport/parser-readline": "npm:^8.0.6"
-    bindings: "npm:^1.5.0"
-    debug: "npm:^4.1.1"
-    nan: "npm:^2.14.0"
+    "@serialport/bindings-interface": "npm:1.2.2"
+    "@serialport/parser-readline": "npm:12.0.0"
+    debug: "npm:4.4.0"
+    node-addon-api: "npm:8.3.0"
     node-gyp: "npm:latest"
-    prebuild-install: "npm:^5.3.0"
-  checksum: 10/8b1f31de4212682a533751b68b4a3e8e369315e5bc960714b55a404710e861d16d4e9fa10ba1c973b0921460bae745ed56d1c3f99c67527fb94a8c3eefb16bb0
+    node-gyp-build: "npm:4.8.4"
+  checksum: 10/7f4758a4ae87df46453f74170b3cad20e4d285a336cfd80b951359c902c85b3f0df69b46e860b81864015f2b75693fa58964c0992d76368d6c5124bf8d37c0c4
   languageName: node
   linkType: hard
 
-"@serialport/parser-byte-length@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/parser-byte-length@npm:8.0.6"
-  checksum: 10/f17901adad16f8e46e7b92570ae8463efc3d2a433ff53c6cd752720a395f0db3985769a559158464e7eca6d23d632fcdbd05203b744f6c8e8625c41f6f161b61
+"@serialport/bindings-interface@npm:1.2.2, @serialport/bindings-interface@npm:^1.2.1":
+  version: 1.2.2
+  resolution: "@serialport/bindings-interface@npm:1.2.2"
+  checksum: 10/f0c0d67ed89582184d117cf2eb22c0b2d157604ca7a816851bcd8af0b447c68b587a8a21a61b7bda390ce142981bfb3115a7cf44c6c258a98c28fd9f0c30bcd6
   languageName: node
   linkType: hard
 
-"@serialport/parser-cctalk@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/parser-cctalk@npm:8.0.6"
-  checksum: 10/bcdf11e4f810bbe38a1d6155b1060b71d0c8f2c3f0cce80c3bd46191f3c207f5698cfdaf819c9f7117149d208282457370b70d022c4c9d6b710872a5acd6e55c
+"@serialport/parser-byte-length@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-byte-length@npm:13.0.0"
+  checksum: 10/8005c6f93e8c588bdc4b6eac7f9c0e92e48b7aea1c45438041fb65749c263fa8a903f5ec879c7df594ccd83a1d838946c8276235016d9f5ffcd3a88432db4bb6
   languageName: node
   linkType: hard
 
-"@serialport/parser-delimiter@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/parser-delimiter@npm:8.0.6"
-  checksum: 10/863944c0c7785b0523989cc0baab4b730da1e0c8ee46b0c229e630d777ee8e91adc9f39227969d7cf44f02ec6438552d02540dc56474d7d923a76b3d11f02b82
+"@serialport/parser-cctalk@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-cctalk@npm:13.0.0"
+  checksum: 10/97ff69f4e2b56309217b5fa1d5a0ab623bca2e8a8f59502123454ed595d4cc96de700c2c5d453f357f017b49b46da6b050865bb4fd23f783af5a4635ba8cd238
   languageName: node
   linkType: hard
 
-"@serialport/parser-readline@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/parser-readline@npm:8.0.6"
+"@serialport/parser-delimiter@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@serialport/parser-delimiter@npm:12.0.0"
+  checksum: 10/dcfdc3e5f4419d0aa5444bc0042674c46c63c82daee0c5e673c36c54539e846c4b6de233b7ba1f7df0ad72cd369fc117673c5cbec4833d2018e9fb584d916316
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-delimiter@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-delimiter@npm:13.0.0"
+  checksum: 10/c6c77dc7d9fc4430908a9229dcccb3d1da4fa21a7cf9d01a702c4d265179724db2ea7c5a8d911091086b6108d6b6b79f9c532dbeaf96790cf9c7d811b89559ab
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-inter-byte-timeout@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-inter-byte-timeout@npm:13.0.0"
+  checksum: 10/cd2c700d0312ff9c364c7e4dfd48782020a80ee656a67997b6f39963b3a1dbd406229d5c2417f7ed9e1551ca11ab3183a1365f926002e92a90b28f978b816417
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-packet-length@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-packet-length@npm:13.0.0"
+  checksum: 10/e2f4e5e788af711fb2d069898aaec516ea15fbcee147a7e3184e3faa9025e968f79d6aecdfcac17b23e1b4732f621efe5909b259fe810caddee51ee7ad5d80e5
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-readline@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@serialport/parser-readline@npm:12.0.0"
   dependencies:
-    "@serialport/parser-delimiter": "npm:^8.0.6"
-  checksum: 10/ed2f075b1ec63dbb1eb0ea2a7a4d6bef9f0118867401485b4fac2aaf776ca3288d8fbc30397e382c49da3894cba377c2bf4f47eb28b93b5a9d0678d28521a4f6
+    "@serialport/parser-delimiter": "npm:12.0.0"
+  checksum: 10/816830c724ce209cf89bca5b95cc2ee537232eff8d26dc15b3ba5eacbb05947e96689d254fb9d7250d97297e80a73240795fcbd11a64873d4b1dfa6ee80825f6
   languageName: node
   linkType: hard
 
-"@serialport/parser-ready@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/parser-ready@npm:8.0.6"
-  checksum: 10/48c5a05e15f013c42094ce7c1c507ed0f13908f8991737c17207e358832cdfb53041ed8b49543325b0db9f49092292ed7811224cbb41d387809c0c8f470387bb
-  languageName: node
-  linkType: hard
-
-"@serialport/parser-regex@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/parser-regex@npm:8.0.6"
-  checksum: 10/702273391fb9f259b90ad3a1c1218d8bd343bd7a2f4152cb3640ecdd922088200b04d6b82c87e24fd4cc02ec25e17aee63e99a9eddbf8acf65561a3eb98457bb
-  languageName: node
-  linkType: hard
-
-"@serialport/stream@npm:^8.0.6":
-  version: 8.0.6
-  resolution: "@serialport/stream@npm:8.0.6"
+"@serialport/parser-readline@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-readline@npm:13.0.0"
   dependencies:
-    debug: "npm:^4.1.1"
-  checksum: 10/38293bcd0d7fcfcdd071f96706a3e6930ed062414e3a8d92cf9df0bbe86ff8867c27d4e1ab81f6cc561a221cf770565603bceccb0e4138d0aadb91646ec83946
+    "@serialport/parser-delimiter": "npm:13.0.0"
+  checksum: 10/237dd26cf625861bfbe85535b57e6c7ae46529e71f1ef47132d505ca9bb51dbe0fcf31deb294ee4a0667aed7c36b4fef24e154198c04421b8087e30bb74ac541
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-ready@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-ready@npm:13.0.0"
+  checksum: 10/77e99b2eaaab8e345ccd7e8d66cef47093ac0a11fd9aac07d6d7af15ffaa46e06399c98ae6bfbf2c0d9b1352df6c3aa1110878c880bd4f26c911cb7119e4f219
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-regex@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-regex@npm:13.0.0"
+  checksum: 10/5396f6b601afc105b7f9595b8c609e09113f3d1cfacbab065738af21bf771e09dc19f601d4d25899f2f10ec97340a977623eaaf7fb72ea68d3416ea1e21f616f
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-slip-encoder@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-slip-encoder@npm:13.0.0"
+  checksum: 10/2c4b6ee2b954c1a216c98789eb462c354cba545d5a01e06be83a983ba675457e2082898efc2d517a11c628819721529645b21bb2059eaf69d9a4e30684e353f6
+  languageName: node
+  linkType: hard
+
+"@serialport/parser-spacepacket@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/parser-spacepacket@npm:13.0.0"
+  checksum: 10/61b4cb042f3ce806e044b7ab03b0a274d91f50e5b92dd02d7d5fd432ccb2d7a4cc84936d2bca561d68ce9ad9cb690248ca679d83f4c6649d17bf9988f6643cbb
+  languageName: node
+  linkType: hard
+
+"@serialport/stream@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@serialport/stream@npm:13.0.0"
+  dependencies:
+    "@serialport/bindings-interface": "npm:1.2.2"
+    debug: "npm:4.4.0"
+  checksum: 10/0636ca796fd348e43f86f836a9c729b683c72320faecc1a51cebce49b293b8b2cad807535977f8eb2f74d0115b0c2ee6f9dc78d4e353b8b7c86bc92d336586dd
   languageName: node
   linkType: hard
 
@@ -8709,6 +8744,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/rails__actioncable@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "@types/rails__actioncable@npm:8.0.3"
+  checksum: 10/3d46a88d0cf0ba92368111ba67f15c816ac1c300b56b7d96ac90a3befff7aa51638a9b155296bf162b17e73bc90fe1c1c81f9c9803d76f80a931c01ec7a8847f
+  languageName: node
+  linkType: hard
+
 "@types/range-parser@npm:*":
   version: 1.2.7
   resolution: "@types/range-parser@npm:1.2.7"
@@ -10219,13 +10261,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aproba@npm:^1.0.3":
-  version: 1.0.4
-  resolution: "aproba@npm:1.0.4"
-  checksum: 10/cca3712d7b10f174e67efaa9b80935ede74c5f853da018bafa69e43b1b23b6aee919c318876fbfa489cf259f40f77790e6e7b4cd77a57be3a3496714423cd335
-  languageName: node
-  linkType: hard
-
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0
   resolution: "aproba@npm:2.0.0"
@@ -10240,16 +10275,6 @@ __metadata:
     delegates: "npm:^1.0.0"
     readable-stream: "npm:^3.6.0"
   checksum: 10/390731720e1bf9ed5d0efc635ea7df8cbc4c90308b0645a932f06e8495a0bf1ecc7987d3b97e805f62a17d6c4b634074b25200aa4d149be2a7b17250b9744bc4
-  languageName: node
-  linkType: hard
-
-"are-we-there-yet@npm:~1.1.2":
-  version: 1.1.2
-  resolution: "are-we-there-yet@npm:1.1.2"
-  dependencies:
-    delegates: "npm:^1.0.0"
-    readable-stream: "npm:^2.0.0 || ^1.1.13"
-  checksum: 10/cd2c07e42baaa997f9d3ea455864fa38d458a92daa2c4a44b8aafd01f23f34c6747c9463976533fd61e7f52b77ea4859599746b7ed3cce81f7266914fac6303e
   languageName: node
   linkType: hard
 
@@ -11099,15 +11124,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bindings@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "bindings@npm:1.5.0"
-  dependencies:
-    file-uri-to-path: "npm:1.0.0"
-  checksum: 10/593d5ae975ffba15fbbb4788fe5abd1e125afbab849ab967ab43691d27d6483751805d98cb92f7ac24a2439a8a8678cd0131c535d5d63de84e383b0ce2786133
-  languageName: node
-  linkType: hard
-
 "bit-twiddle@npm:^1.0.0, bit-twiddle@npm:^1.0.2":
   version: 1.0.2
   resolution: "bit-twiddle@npm:1.0.2"
@@ -11153,7 +11169,6 @@ __metadata:
     "@blockly/theme-highcontrast": "npm:^7.0.0"
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": "npm:0.2.1"
-    "@code-dot-org/blockly": "npm:4.0.14"
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": "npm:0.2.2"
@@ -11228,6 +11243,7 @@ __metadata:
     "@types/mocha": "npm:^10.0.1"
     "@types/papaparse": "npm:^5.3.14"
     "@types/qrcode.react": "npm:^1.0.5"
+    "@types/rails__actioncable": "npm:^8.0.3"
     "@types/react": "npm:^18.0.28"
     "@types/react-bootstrap": "npm:^0.32.36"
     "@types/react-csv": "npm:^1.1.10"
@@ -11360,7 +11376,6 @@ __metadata:
     papaparse: "npm:^5.4.1"
     path-browserify: "npm:^1.0.1"
     pdf-lib: "npm:^1.17.1"
-    pepjs: "npm:^0.4.3"
     pixelmatch: "npm:^5.2.0"
     playground-io: "code-dot-org/playground-io#v0.6.0-cdo.2"
     prettier: "npm:2.8.7"
@@ -11460,7 +11475,7 @@ __metadata:
     ts-jest: "npm:^29.1.2"
     ts-loader: "npm:^9.5.1"
     ts-sinon: "npm:^2.0.2"
-    typescript: "npm:^5.5.3"
+    typescript: "npm:^5.9.3"
     uglify-js: "npm:^3.18.0"
     unified: "npm:~9.2.0"
     unminified-webpack-plugin: "npm:^3.0.0"
@@ -12853,7 +12868,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"console-control-strings@npm:^1.0.0, console-control-strings@npm:^1.1.0, console-control-strings@npm:~1.1.0":
+"console-control-strings@npm:^1.1.0":
   version: 1.1.0
   resolution: "console-control-strings@npm:1.1.0"
   checksum: 10/27b5fa302bc8e9ae9e98c03c66d76ca289ad0c61ce2fe20ab288d288bee875d217512d2edb2363fc83165e88f1c405180cf3f5413a46e51b4fe1a004840c6cdb
@@ -13716,6 +13731,18 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"debug@npm:4.4.0":
+  version: 4.4.0
+  resolution: "debug@npm:4.4.0"
+  dependencies:
+    ms: "npm:^2.1.3"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10/1847944c2e3c2c732514b93d11886575625686056cd765336212dc15de2d2b29612b6cd80e1afba767bb8e1803b778caf9973e98169ef1a24a7a7009e1820367
+  languageName: node
+  linkType: hard
+
 "debug@npm:^3.1.0":
   version: 3.1.0
   resolution: "debug@npm:3.1.0"
@@ -13807,15 +13834,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"decompress-response@npm:^4.2.0":
-  version: 4.2.1
-  resolution: "decompress-response@npm:4.2.1"
-  dependencies:
-    mimic-response: "npm:^2.0.0"
-  checksum: 10/4e783ca4dfe9417354d61349750fe05236f565a4415a6ca20983a311be2371debaedd9104c0b0e7b36e5f167aeaae04f84f1a0b3f8be4162f1d7d15598b8fdba
-  languageName: node
-  linkType: hard
-
 "dedent@npm:^0.7.0":
   version: 0.7.0
   resolution: "dedent@npm:0.7.0"
@@ -13892,13 +13910,6 @@ canvg@gabelerner/canvg:
     which-collection: "npm:^1.0.1"
     which-typed-array: "npm:^1.1.9"
   checksum: 10/c59f1ca67546e25b57ee66806b966e605be825ec22f5fbf30663e6b5ce4e1b43519c601f8282e10837d9c71d0136ddee5917dbfd0da1b11654dcfea6f0557ee3
-  languageName: node
-  linkType: hard
-
-"deep-extend@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "deep-extend@npm:0.6.0"
-  checksum: 10/7be7e5a8d468d6b10e6a67c3de828f55001b6eb515d014f7aeb9066ce36bd5717161eb47d6a0f7bed8a9083935b465bc163ee2581c8b128d29bf61092fdf57a7
   languageName: node
   linkType: hard
 
@@ -14113,15 +14124,6 @@ canvg@gabelerner/canvg:
   version: 6.1.0
   resolution: "detect-indent@npm:6.1.0"
   checksum: 10/ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
-  languageName: node
-  linkType: hard
-
-"detect-libc@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "detect-libc@npm:1.0.3"
-  bin:
-    detect-libc: ./bin/detect-libc.js
-  checksum: 10/3849fe7720feb153e4ac9407086956e073f1ce1704488290ef0ca8aab9430a8d48c8a9f8351889e7cdc64e5b1128589501e4fef48f3a4a49ba92cd6d112d0757
   languageName: node
   linkType: hard
 
@@ -16126,13 +16128,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"expand-template@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "expand-template@npm:2.0.3"
-  checksum: 10/588c19847216421ed92befb521767b7018dc88f88b0576df98cb242f20961425e96a92cbece525ef28cc5becceae5d544ae0f5b9b5e2aa05acb13716ca5b3099
-  languageName: node
-  linkType: hard
-
 "expand-tilde@npm:^2.0.0, expand-tilde@npm:^2.0.2":
   version: 2.0.2
   resolution: "expand-tilde@npm:2.0.2"
@@ -16446,13 +16441,6 @@ canvg@gabelerner/canvg:
     fs-extra: "npm:11.1.1"
     ramda: "npm:0.29.0"
   checksum: 10/8f0530aaa8bed115ef1b00f69accde8d1311d0eaffc6e37bb0b5057b8be79e6e960823025ea3c980a58147eed0ba690b9906c2229e132f5d96158e9b635a052c
-  languageName: node
-  linkType: hard
-
-"file-uri-to-path@npm:1.0.0":
-  version: 1.0.0
-  resolution: "file-uri-to-path@npm:1.0.0"
-  checksum: 10/b648580bdd893a008c92c7ecc96c3ee57a5e7b6c4c18a9a09b44fb5d36d79146f8e442578bc0e173dc027adf3987e254ba1dfd6e3ec998b7c282873010502144
   languageName: node
   linkType: hard
 
@@ -17064,22 +17052,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"gauge@npm:~2.7.3":
-  version: 2.7.4
-  resolution: "gauge@npm:2.7.4"
-  dependencies:
-    aproba: "npm:^1.0.3"
-    console-control-strings: "npm:^1.0.0"
-    has-unicode: "npm:^2.0.0"
-    object-assign: "npm:^4.1.0"
-    signal-exit: "npm:^3.0.0"
-    string-width: "npm:^1.0.1"
-    strip-ansi: "npm:^3.0.1"
-    wide-align: "npm:^1.1.0"
-  checksum: 10/0db20a7def238f0e8eab50226247e1f94f1446ab24700eab0a56e5ccf23ce85ccf8f0c0c462112b89beb964431b1edabd3f7b31f1f6d5f62294c453594523993
-  languageName: node
-  linkType: hard
-
 "gaze@npm:^1.1.0":
   version: 1.1.3
   resolution: "gaze@npm:1.1.3"
@@ -17272,13 +17244,6 @@ canvg@gabelerner/canvg:
   bin:
     giget: dist/cli.mjs
   checksum: 10/5d50c70754fef1f199547fc58ad8ad18fed7f4ee3a2e624827d3f214476b731492ee96bd14934ae23b863524369801b23fd0785028576837be0c23bf2031c2b7
-  languageName: node
-  linkType: hard
-
-"github-from-package@npm:0.0.0":
-  version: 0.0.0
-  resolution: "github-from-package@npm:0.0.0"
-  checksum: 10/2a091ba07fbce22205642543b4ea8aaf068397e1433c00ae0f9de36a3607baf5bcc14da97fbb798cfca6393b3c402031fca06d8b491a44206d6efef391c58537
   languageName: node
   linkType: hard
 
@@ -18050,7 +18015,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"has-unicode@npm:^2.0.0, has-unicode@npm:^2.0.1":
+"has-unicode@npm:^2.0.1":
   version: 2.0.1
   resolution: "has-unicode@npm:2.0.1"
   checksum: 10/041b4293ad6bf391e21c5d85ed03f412506d6623786b801c4ab39e4e6ca54993f13201bceb544d92963f9e0024e6e7fbf0cb1d84c9d6b31cb9c79c8c990d13d8
@@ -18941,13 +18906,6 @@ canvg@gabelerner/canvg:
   version: 1.3.8
   resolution: "ini@npm:1.3.8"
   checksum: 10/314ae176e8d4deb3def56106da8002b462221c174ddb7ce0c49ee72c8cd1f9044f7b10cc555a7d8850982c3b9ca96fc212122749f5234bc2b6fb05fb942ed566
-  languageName: node
-  linkType: hard
-
-"ini@npm:~1.3.0":
-  version: 1.3.4
-  resolution: "ini@npm:1.3.4"
-  checksum: 10/2a92b22c2fe80831acb546c4c75f61b6717d4929014c32d38fe4c65108f7315a6cf9c6fd07ebc7cf508a4cbfbd4f8265dfc98b67b6bb99de5f9de4c7c67f23b4
   languageName: node
   linkType: hard
 
@@ -22203,13 +22161,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"mimic-response@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "mimic-response@npm:2.1.0"
-  checksum: 10/014fad6ab936657e5f2f48bd87af62a8e928ebe84472aaf9e14fec4fcb31257a5edff77324d8ac13ddc6685ba5135cf16e381efac324e5f174fb4ddbf902bf07
-  languageName: node
-  linkType: hard
-
 "min-document@npm:^2.19.0":
   version: 2.19.0
   resolution: "min-document@npm:2.19.0"
@@ -22419,7 +22370,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"mkdirp-classic@npm:^0.5.2, mkdirp-classic@npm:^0.5.3":
+"mkdirp-classic@npm:^0.5.2":
   version: 0.5.3
   resolution: "mkdirp-classic@npm:0.5.3"
   checksum: 10/3f4e088208270bbcc148d53b73e9a5bd9eef05ad2cbf3b3d0ff8795278d50dd1d11a8ef1875ff5aea3fa888931f95bfcb2ad5b7c1061cfefd6284d199e6776ac
@@ -22624,15 +22575,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"nan@npm:^2.14.0":
-  version: 2.17.0
-  resolution: "nan@npm:2.17.0"
-  dependencies:
-    node-gyp: "npm:latest"
-  checksum: 10/bba1efee2475afb0cce154300b554863fb4bb0a683a28f5d0fa7390794b3b4381356aabeab6472c70651d9c8a2830e7595963f3ec0aa2008e5c4d83dbeb820fa
-  languageName: node
-  linkType: hard
-
 "nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
@@ -22673,13 +22615,6 @@ canvg@gabelerner/canvg:
   version: 0.3.10
   resolution: "nanotimer@npm:0.3.10"
   checksum: 10/16e6b8de8655a4296a89ae3fdd4ab198e1e6f75741f42b63a91b1974de081974f717acaa2e7b476b799f1b17a081bd416d4e1b0e01f8a4b3e71776714fd2cca0
-  languageName: node
-  linkType: hard
-
-"napi-build-utils@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "napi-build-utils@npm:1.0.2"
-  checksum: 10/276feb8e30189fe18718e85b6f82e4f952822baa2e7696f771cc42571a235b789dc5907a14d9ffb6838c3e4ff4c25717c2575e5ce1cf6e02e496e204c11e57f6
   languageName: node
   linkType: hard
 
@@ -22834,19 +22769,19 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"node-abi@npm:^2.7.0":
-  version: 2.30.1
-  resolution: "node-abi@npm:2.30.1"
-  dependencies:
-    semver: "npm:^5.4.1"
-  checksum: 10/4122521d4410a199e06d1a008a8893ef16e71db7b961bbbfcaeb7f20baa3b00f3dcebb0a843e086dbc65a9103c597b5f905aeccf92f576731dfc1007b56fcc37
-  languageName: node
-  linkType: hard
-
 "node-abort-controller@npm:^3.0.1":
   version: 3.1.1
   resolution: "node-abort-controller@npm:3.1.1"
   checksum: 10/0a2cdb7ec0aeaf3cb31e1ca0e192f5add48f1c5c9c9ed822129f9dddbd9432f69b7425982f94ce803c56a2104884530aa67cd57696e5774b2e5b8ec2f58de042
+  languageName: node
+  linkType: hard
+
+"node-addon-api@npm:8.3.0":
+  version: 8.3.0
+  resolution: "node-addon-api@npm:8.3.0"
+  dependencies:
+    node-gyp: "npm:latest"
+  checksum: 10/b1c2218e794c149011d8f14e5f14b2ffd5f260c08b2982d4163a0f881069dc390458de7703602b9940a1130c1ad87c3f9d35cd7bb116e2f2a134ac0a0c0036ca
   languageName: node
   linkType: hard
 
@@ -22911,6 +22846,17 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"node-gyp-build@npm:4.8.4":
+  version: 4.8.4
+  resolution: "node-gyp-build@npm:4.8.4"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: 10/6a7d62289d1afc419fc8fc9bd00aa4e554369e50ca0acbc215cb91446148b75ff7e2a3b53c2c5b2c09a39d416d69f3d3237937860373104b5fe429bf30ad9ac5
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:latest":
   version: 9.4.0
   resolution: "node-gyp@npm:9.4.0"
@@ -22971,13 +22917,6 @@ canvg@gabelerner/canvg:
   version: 2.0.18
   resolution: "node-releases@npm:2.0.18"
   checksum: 10/241e5fa9556f1c12bafb83c6c3e94f8cf3d8f2f8f904906ecef6e10bcaa1d59aa61212d4651bec70052015fc54bd3fdcdbe7fc0f638a17e6685aa586c076ec4e
-  languageName: node
-  linkType: hard
-
-"noop-logger@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "noop-logger@npm:0.1.1"
-  checksum: 10/9f99da270d074a2f268de2eae3ebcb44f12cc2f7241417c7be9f1e206f614afa632a27b91febab86163f88bb54466d638e49c9f62d899105f18d5ed5bcd51ed1
   languageName: node
   linkType: hard
 
@@ -23089,18 +23028,6 @@ canvg@gabelerner/canvg:
   dependencies:
     path-key: "npm:^4.0.0"
   checksum: 10/ae8e7a89da9594fb9c308f6555c73f618152340dcaae423e5fb3620026fefbec463618a8b761920382d666fa7a2d8d240b6fe320e8a6cdd54dc3687e2b659d25
-  languageName: node
-  linkType: hard
-
-"npmlog@npm:^4.0.1":
-  version: 4.1.2
-  resolution: "npmlog@npm:4.1.2"
-  dependencies:
-    are-we-there-yet: "npm:~1.1.2"
-    console-control-strings: "npm:~1.1.0"
-    gauge: "npm:~2.7.3"
-    set-blocking: "npm:~2.0.0"
-  checksum: 10/b6b85c9f33da8f600f72564b6ec71136b1641b8b235fca7cc543d1041acb74c2d989d97fe443a0e65754f438d9a974a2fe1b4ff8723c78ef3f9b7a6d74b02079
   languageName: node
   linkType: hard
 
@@ -24156,13 +24083,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"pepjs@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "pepjs@npm:0.4.3"
-  checksum: 10/9889d6dc0ba1298366c2f05f28913a9a1d4143f743a010103c089aa22d05a2e224c5504968c9fb8fa454d6bd910ba9969bc442fd15c62e05115d6247fa7f3f51
-  languageName: node
-  linkType: hard
-
 "performance-now@npm:^0.2.0, performance-now@npm:~0.2.0":
   version: 0.2.0
   resolution: "performance-now@npm:0.2.0"
@@ -24543,31 +24463,6 @@ canvg@gabelerner/canvg:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
   checksum: 10/e05f3426bde19889b446fae0e4a70f6d8775f2d9905fb9e25f40ed1b0a26d000f7e92a9f2acacf55118bef376100e4e6b6432f42b3876824bc71fea8e0cd0182
-  languageName: node
-  linkType: hard
-
-"prebuild-install@npm:^5.3.0":
-  version: 5.3.6
-  resolution: "prebuild-install@npm:5.3.6"
-  dependencies:
-    detect-libc: "npm:^1.0.3"
-    expand-template: "npm:^2.0.3"
-    github-from-package: "npm:0.0.0"
-    minimist: "npm:^1.2.3"
-    mkdirp-classic: "npm:^0.5.3"
-    napi-build-utils: "npm:^1.0.1"
-    node-abi: "npm:^2.7.0"
-    noop-logger: "npm:^0.1.1"
-    npmlog: "npm:^4.0.1"
-    pump: "npm:^3.0.0"
-    rc: "npm:^1.2.7"
-    simple-get: "npm:^3.0.3"
-    tar-fs: "npm:^2.0.0"
-    tunnel-agent: "npm:^0.6.0"
-    which-pm-runs: "npm:^1.0.0"
-  bin:
-    prebuild-install: bin.js
-  checksum: 10/e1fd60ed80268be93c0d81213471abee87842fc6fae2ce885fc9b01627257da4e2740518890e7be395572510a29b283313d0ef30cb2f27908b68f3cfa3ac64a3
   languageName: node
   linkType: hard
 
@@ -25211,20 +25106,6 @@ canvg@gabelerner/canvg:
   version: 0.5.1
   resolution: "raw-loader@npm:0.5.1"
   checksum: 10/6cad08ce5359c9ae3fff802be1dd9591a159a397b3df3712fca58ff8a948a9d4660d2f9cd6aeb831ded813b13b667c705f8ba93ec6e4a92d176c0a0ad2327b1b
-  languageName: node
-  linkType: hard
-
-"rc@npm:^1.2.7":
-  version: 1.2.8
-  resolution: "rc@npm:1.2.8"
-  dependencies:
-    deep-extend: "npm:^0.6.0"
-    ini: "npm:~1.3.0"
-    minimist: "npm:^1.2.0"
-    strip-json-comments: "npm:~2.0.1"
-  bin:
-    rc: ./cli.js
-  checksum: 10/5c4d72ae7eec44357171585938c85ce066da8ca79146b5635baf3d55d74584c92575fa4e2c9eac03efbed3b46a0b2e7c30634c012b4b4fa40d654353d3c163eb
   languageName: node
   linkType: hard
 
@@ -26378,7 +26259,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.0 || ^1.1.13":
+"readable-stream@npm:^2.0.0":
   version: 2.3.3
   resolution: "readable-stream@npm:2.3.3"
   dependencies:
@@ -27520,7 +27401,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:5.2.1, safe-buffer@npm:>=5.1.0, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0":
+"safe-buffer@npm:5.2.1, safe-buffer@npm:>=5.1.0, safe-buffer@npm:^5.1.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: 10/32872cd0ff68a3ddade7a7617b8f4c2ae8764d8b7d884c651b74457967a9e0e886267d3ecc781220629c44a865167b61c375d2da6c720c840ecd73f45d5d9451
@@ -27910,21 +27791,25 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"serialport@npm:^8.0.5":
-  version: 8.0.8
-  resolution: "serialport@npm:8.0.8"
+"serialport@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "serialport@npm:13.0.0"
   dependencies:
-    "@serialport/binding-mock": "npm:^8.0.6"
-    "@serialport/bindings": "npm:^8.0.8"
-    "@serialport/parser-byte-length": "npm:^8.0.6"
-    "@serialport/parser-cctalk": "npm:^8.0.6"
-    "@serialport/parser-delimiter": "npm:^8.0.6"
-    "@serialport/parser-readline": "npm:^8.0.6"
-    "@serialport/parser-ready": "npm:^8.0.6"
-    "@serialport/parser-regex": "npm:^8.0.6"
-    "@serialport/stream": "npm:^8.0.6"
-    debug: "npm:^4.1.1"
-  checksum: 10/cc970cfaad9028f8fdb308b85e9a67e720b06c1975ceef2e31736df304599bdc34892c6f976d08d6088d08f62735300a399feaedcc6c25c5daa434d88aa60168
+    "@serialport/binding-mock": "npm:10.2.2"
+    "@serialport/bindings-cpp": "npm:13.0.0"
+    "@serialport/parser-byte-length": "npm:13.0.0"
+    "@serialport/parser-cctalk": "npm:13.0.0"
+    "@serialport/parser-delimiter": "npm:13.0.0"
+    "@serialport/parser-inter-byte-timeout": "npm:13.0.0"
+    "@serialport/parser-packet-length": "npm:13.0.0"
+    "@serialport/parser-readline": "npm:13.0.0"
+    "@serialport/parser-ready": "npm:13.0.0"
+    "@serialport/parser-regex": "npm:13.0.0"
+    "@serialport/parser-slip-encoder": "npm:13.0.0"
+    "@serialport/parser-spacepacket": "npm:13.0.0"
+    "@serialport/stream": "npm:13.0.0"
+    debug: "npm:4.4.0"
+  checksum: 10/100572a605e30b2ce9273e1e87a637139c89d836b62404c00dda1b2a173d7280320a8b2fb71ff99b7c8b1997aa57b04439d84e0b9cb9a32fc3bec387d579cafc
   languageName: node
   linkType: hard
 
@@ -27955,7 +27840,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"set-blocking@npm:^2.0.0, set-blocking@npm:~2.0.0":
+"set-blocking@npm:^2.0.0":
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
   checksum: 10/8980ebf7ae9eb945bb036b6e283c547ee783a1ad557a82babf758a065e2fb6ea337fd82cac30dd565c1e606e423f30024a19fff7afbf4977d784720c4026a8ef
@@ -28096,7 +27981,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"signal-exit@npm:^3.0.0, signal-exit@npm:^3.0.2":
+"signal-exit@npm:^3.0.2":
   version: 3.0.2
   resolution: "signal-exit@npm:3.0.2"
   checksum: 10/ccc08b9ad53644154d274ed147bb5e6cd5fd09c81bc6480a93bbe581f9030a599882907f78b305b81214ea725be7c09ed9182b58c675a148a1fe48cd50e43b2b
@@ -28121,24 +28006,6 @@ canvg@gabelerner/canvg:
   version: 4.1.0
   resolution: "signal-exit@npm:4.1.0"
   checksum: 10/c9fa63bbbd7431066174a48ba2dd9986dfd930c3a8b59de9c29d7b6854ec1c12a80d15310869ea5166d413b99f041bfa3dd80a7947bcd44ea8e6eb3ffeabfa1f
-  languageName: node
-  linkType: hard
-
-"simple-concat@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "simple-concat@npm:1.0.1"
-  checksum: 10/4d211042cc3d73a718c21ac6c4e7d7a0363e184be6a5ad25c8a1502e49df6d0a0253979e3d50dbdd3f60ef6c6c58d756b5d66ac1e05cda9cacd2e9fc59e3876a
-  languageName: node
-  linkType: hard
-
-"simple-get@npm:^3.0.3":
-  version: 3.1.1
-  resolution: "simple-get@npm:3.1.1"
-  dependencies:
-    decompress-response: "npm:^4.2.0"
-    once: "npm:^1.3.1"
-    simple-concat: "npm:^1.0.0"
-  checksum: 10/94fa04e74077c2607142f7597af8409c6c8d1e9487b597ce1da6f824e732b3e51ef492e495a4d8a2a12a94780214d77a8d3bb81c2139b3ec4ce21b93224442c0
   languageName: node
   linkType: hard
 
@@ -29091,13 +28958,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"strip-json-comments@npm:~2.0.1":
-  version: 2.0.1
-  resolution: "strip-json-comments@npm:2.0.1"
-  checksum: 10/1074ccb63270d32ca28edfb0a281c96b94dc679077828135141f27d52a5a398ef5e78bcf22809d23cadc2b81dfbe345eb5fd8699b385c8b1128907dec4a7d1e1
-  languageName: node
-  linkType: hard
-
 "style-loader@npm:^3.2.1":
   version: 3.3.1
   resolution: "style-loader@npm:3.3.1"
@@ -29420,7 +29280,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"tar-fs@npm:^2.0.0, tar-fs@npm:^2.1.1":
+"tar-fs@npm:^2.1.1":
   version: 2.1.2
   resolution: "tar-fs@npm:2.1.2"
   dependencies:
@@ -30187,15 +30047,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"tunnel-agent@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "tunnel-agent@npm:0.6.0"
-  dependencies:
-    safe-buffer: "npm:^5.0.1"
-  checksum: 10/7f0d9ed5c22404072b2ae8edc45c071772affd2ed14a74f03b4e71b4dd1a14c3714d85aed64abcaaee5fec2efc79002ba81155c708f4df65821b444abb0cfade
-  languageName: node
-  linkType: hard
-
 "twitch-video-element@npm:^0.1.5":
   version: 0.1.5
   resolution: "twitch-video-element@npm:0.1.5"
@@ -30422,23 +30273,23 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.5.3":
-  version: 5.5.3
-  resolution: "typescript@npm:5.5.3"
+"typescript@npm:^5.9.3":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/11a867312419ed497929aafd2f1d28b2cd41810a5eb6c6e9e169559112e9ea073d681c121a29102e67cd4478d0a4ae37a306a5800f3717f59c4337e6a9bd5e8d
+  checksum: 10/c089d9d3da2729fd4ac517f9b0e0485914c4b3c26f80dc0cffcb5de1719a17951e92425d55db59515c1a7ddab65808466debb864d0d56dcf43f27007d0709594
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.5.3#optional!builtin<compat/typescript>":
-  version: 5.5.3
-  resolution: "typescript@patch:typescript@npm%3A5.5.3#optional!builtin<compat/typescript>::version=5.5.3&hash=379a07"
+"typescript@patch:typescript@npm%3A^5.9.3#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/7cf7acb78a80f749b82842f2ffe01e90e7b3e709a6f4268588e0b7599c41dca1059be217f47778fe1a380bfaf60933021ef20d002c426d4d7745e1b36c11467b
+  checksum: 10/696e1b017bc2635f4e0c94eb4435357701008e2f272f553d06e35b494b8ddc60aa221145e286c28ace0c89ee32827a28c2040e3a69bdc108b1a5dc8fb40b72e3
   languageName: node
   linkType: hard
 
@@ -31963,13 +31814,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"which-pm-runs@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "which-pm-runs@npm:1.1.0"
-  checksum: 10/39a56ee50886fb33ec710e3b36dc9fe3d0096cac44850d9ca0c6186c4cb824d6c8125f013e0562e7c94744e1e8e4a6ab695592cdb12555777c7a4368143d822c
-  languageName: node
-  linkType: hard
-
 "which-typed-array@npm:^1.1.11, which-typed-array@npm:^1.1.13":
   version: 1.1.13
   resolution: "which-typed-array@npm:1.1.13"
@@ -32040,15 +31884,6 @@ canvg@gabelerner/canvg:
   bin:
     node-which: ./bin/node-which
   checksum: 10/4782f8a1d6b8fc12c65e968fea49f59752bf6302dc43036c3bf87da718a80710f61a062516e9764c70008b487929a73546125570acea95c5b5dcc8ac3052c70f
-  languageName: node
-  linkType: hard
-
-"wide-align@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "wide-align@npm:1.1.0"
-  dependencies:
-    string-width: "npm:^1.0.1"
-  checksum: 10/d2cdf184967485d25da47783b48d324825bf2395e8fb909b79c629e653cd255ba077998eb9f74e1ff37ec7b5cdb589610e9b2a2f5add92fbfeda6ae1eb804ecb
   languageName: node
   linkType: hard
 

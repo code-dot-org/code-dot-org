@@ -6,7 +6,6 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
@@ -17,13 +16,12 @@ import {
 } from './hooks';
 
 export const FileBrowserHeaderPopUpButton = () => {
-  const {openNewFilePrompt, openNewFolderPrompt, openImportFromBackpackPrompt} =
-    usePrompts();
+  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
     config: {validMimeTypes, supportedFileTypes, editableFileTypes},
     levelProperties,
   } = useCodebridgeContext();
-  const {appName, validationFile} = levelProperties;
+  const {appName} = levelProperties;
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const openNewFilePromptArgs = {
     folderId: DEFAULT_FOLDER_ID,
@@ -48,7 +46,6 @@ export const FileBrowserHeaderPopUpButton = () => {
     DEFAULT_FOLDER_ID
   );
 
-  const backpackApi = useBackpackAPIContext();
   return (
     <>
       <FileUploaderComponent />
@@ -75,17 +72,6 @@ export const FileBrowserHeaderPopUpButton = () => {
           iconName="upload"
           labelText={codebridgeI18n.uploadFile()}
           clickHandler={() => startFileUpload()}
-        />
-        <PopUpButtonOption
-          iconName="backpack"
-          labelText={codebridgeI18n.importFromBackpackTitle()}
-          clickHandler={() =>
-            openImportFromBackpackPrompt({
-              backpackApi: backpackApi,
-              projectFiles: files,
-              validationFile: validationFile,
-            })
-          }
         />
       </PopUpButton>
     </>

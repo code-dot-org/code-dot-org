@@ -7,7 +7,7 @@ wrong 'The app creates a new copy of the same code for every city in the world.'
 wrong 'The app saves each city name inside the HTML so the page never changes.'
 wrong 'The function runs without needing any information from the user.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 6

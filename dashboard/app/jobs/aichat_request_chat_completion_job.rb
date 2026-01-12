@@ -58,12 +58,13 @@ class AichatRequestChatCompletionJob < ApplicationJob
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_3_PRO_PREVIEW],
     ].include? model_id
   end
 
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id)
+    user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
@@ -90,7 +91,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     # Moderate model output for toxicity.
-    model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id)
+    model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id, 'Assistant')
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
 
     model_pii = find_pii(response, locale)

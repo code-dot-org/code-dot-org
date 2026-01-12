@@ -158,7 +158,7 @@ class Policies::Lti
     }
   }.freeze
 
-  MAX_COURSE_MEMBERSHIP = 650
+  MAX_COURSE_MEMBERSHIP = 1000
 
   def self.get_account_type(roles)
     # ClassLink includes a non-standard role as a string instead of an array of strings
@@ -239,10 +239,6 @@ class Policies::Lti
   # Force Schoology and Canvas through iframe mitigation flow
   def self.force_iframe_launch?(issuer)
     %w[Schoology Canvas].include?(issuer_name(issuer))
-  end
-
-  def self.feedback_available?(user)
-    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
   end
 
   # Check if a partial registration is in progress for an LTI user.

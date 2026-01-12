@@ -78,7 +78,11 @@ const moderateImage = async (
   ext: string,
   appName?: string
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  if (appName !== 'weblab2' || !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)) {
+  if (
+    appName !== 'weblab2' ||
+    ext.toLowerCase() === 'gif' || // Our current moderation API does not support GIFs, so we skip them.
+    !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)
+  ) {
     return 'skipped';
   }
   const response = await HttpClient.post(`/v3/images/moderate`, file, true, {

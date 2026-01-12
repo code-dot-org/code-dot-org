@@ -78,6 +78,7 @@
     "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "bubble_choice_description": "Create an app that uses button presses and the buzzer to communicate \"yes\" and \"no\" answers",
     "start_blocks": "//1) When the user presses the left button, respond with \"yes\"\r\n\r\n//2) When the user presses the right button, respond with \"no\"",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

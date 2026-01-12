@@ -196,7 +196,7 @@ button.advancedSettingsButton {
 
 .celebrationDialogBody {
   padding: 36px;
-  font: $barlowSemiCondensed-medium;
+  font-family: var(--font-family-barlow-semi-condensed-medium);
 
   h1 {
     margin-bottom: 0;

@@ -58,6 +58,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const [userMessage, setUserMessage] = useState<string>('');
   const [hasSentInitialPrompt, setHasSentInitialPrompt] =
     useState<boolean>(false);
+  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
+
+  const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
+
   const reportingData = React.useMemo(() => {
     return {
       chatContext: context,
@@ -65,14 +69,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     };
   }, [context, scriptName]);
 
-  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
-
-  const userMessageEditorRef = useRef<HTMLTextAreaElement>(null);
-
   const viewAsUserId = useAppSelector(
     state => state.progress?.viewAsUserId || undefined
   );
-
   const threadId = useAppSelector(state => state.aichat.threadId);
   const threadTitle = useAppSelector(state => state.aichat.threadTitle);
   const initialThreadPrompt = useAppSelector(

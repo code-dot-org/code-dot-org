@@ -26,8 +26,8 @@ describe('EditKeyRow', () => {
 
       const wrapper = createEditKeyRow();
 
-      let button = wrapper.find('button').at(0);
-      expect(button.text()).toContain('i18n-edit');
+      let button = wrapper.find('[id="editKeyValueButton"]').at(0);
+      expect(button.prop('text')).toContain('i18n-edit');
     });
 
     it('should render a localized string for "Save"', () => {
@@ -38,23 +38,8 @@ describe('EditKeyRow', () => {
       // Ensure it is in 'editing' mode.
       wrapper.setState({isEditing: true});
 
-      let saveButton = wrapper.find('PendingButton').at(0);
+      let saveButton = wrapper.find('[id="saveKeyValueButton"]').at(0);
       expect(saveButton.prop('text')).toContain('i18n-save');
-    });
-
-    it('should render a localized string while saving the row', () => {
-      jest
-        .spyOn(commonI18n, 'saving')
-        .mockClear()
-        .mockReturnValue('i18n-saving');
-
-      const wrapper = createEditKeyRow();
-
-      // Ensure it is in 'editing' mode.
-      wrapper.setState({isEditing: true});
-
-      let saveButton = wrapper.find('PendingButton').at(0);
-      expect(saveButton.prop('pendingText')).toContain('i18n-saving');
     });
 
     it('should render a localized string for "Delete"', () => {
@@ -65,20 +50,8 @@ describe('EditKeyRow', () => {
 
       const wrapper = createEditKeyRow();
 
-      let deleteButton = wrapper.find('PendingButton').at(0);
+      let deleteButton = wrapper.find('[id="deleteKeyValueButton"]').at(0);
       expect(deleteButton.prop('text')).toContain('i18n-delete');
-    });
-
-    it('should render a localized string while saving the row', () => {
-      jest
-        .spyOn(commonI18n, 'deletingWithEllipsis')
-        .mockClear()
-        .mockReturnValue('i18n-deleting');
-
-      const wrapper = createEditKeyRow();
-
-      let deleteButton = wrapper.find('PendingButton').at(0);
-      expect(deleteButton.prop('pendingText')).toContain('i18n-deleting');
     });
   });
 });

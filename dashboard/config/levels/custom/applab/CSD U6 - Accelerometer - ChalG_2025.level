@@ -105,6 +105,7 @@
     "display_name": "Accessibility App",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "bubble_choice_description": "Create an app prototype that could be used in an accessibility setting to make it easier for someone with a disability to use technology",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

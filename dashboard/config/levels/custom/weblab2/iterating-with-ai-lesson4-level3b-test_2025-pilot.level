@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-22T17:40:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Restaurant Finder",
+    "thumbnail_url": "https://images.code.org/a45a4c5f57bf52df72b7044ffd0c7375-food-app.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "bubble_choice_description": "Add a count message, a filter summary label, and a friendly empty state to a restaurant search app.",
+    "long_instructions": "## Restaurant Finder\r\n\r\n**Goal:**\r\nImprove the restaurant search app with clear transparency cues so users always know what’s shown, which filters are active, and what happens when no results appear.\r\n\r\n---\r\n\r\n1. **Open `script.js`.**\r\n   Find the `render()` function. This is where the restaurant list is built.\r\n\r\n2. **Add three messages to improve clarity:**\r\n\r\n   * **Count message:**\r\n     Update `#countMessage` to show how many results are displayed out of the total.\r\n     Example: `Showing 4 of 12 results`\r\n\r\n   * **Filter label:**\r\n     Update `#filterLabel` to summarize the active filters in plain language (e.g., cuisine, max price, “open now”).\r\n\r\n   * **Empty-state message:**\r\n     If no results match, show a friendly message in `#emptyMessage`, such as: \"No restaurants match your selection.\"\r\n\r\n3. **Test your work.**\r\n\r\n\r\n4. **Use AI to check your reasoning:**\r\n\r\n   * “Explain what my filter condition is doing and when it returns 0 results.”\r\n   * “Is my count message still accurate when the dataset is empty?”\r\n   * “Suggest three concise, friendly versions of my empty-state message.”\r\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Restaurant Finder — Adding Transparency</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <h2>Restaurant Finder</h2>\n\n  <p id=\"countMessage\"></p>\n  <p id=\"filterLabel\"></p>\n\n  <ul id=\"restaurantList\"></ul>\n  <p id=\"emptyMessage\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  background-color: #f9f9f9;\n  color: #222;\n  margin: 40px;\n  line-height: 1.5;\n}\n\nh2 {\n  color: #333;\n  margin-bottom: 10px;\n}\n\n#countMessage,\n#filterLabel {\n  background: #fff;\n  border-radius: 8px;\n  display: inline-block;\n  margin-right: 8px;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);\n}\n\n#countMessage {\n  font-weight: bold;\n}\n\n#filterLabel {\n  color: #555;\n  font-style: italic;\n}\n\n#emptyMessage {\n  color: #666;\n  font-style: italic;\n  background: #fff3f3;\n  border-left: 4px solid #e57373;\n\n  border-radius: 6px;\n  margin-top: 10px;\n}\n\n#restaurantList {\n  list-style: none;\n  padding: 0;\n  margin-top: 16px;\n}\n\n#restaurantList li {\n  background: #fff;\n  margin: 8px 0;\n  padding: 10px 14px;\n  border-radius: 8px;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);\n}\n\np {\n  margin: 6px 0;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- Sample data (toggle to test) ---\nconst restaurants = [\n  { name: \"Luna Verde\", cuisine: \"Mexican\", price: 2, open: true },\n  { name: \"Brick & Basil\", cuisine: \"Italian\", price: 3, open: false },\n  { name: \"Chili & Lime\", cuisine: \"Thai\", price: 1, open: true },\n  { name: \"Docks Diner\", cuisine: \"American\", price: 2, open: true },\n  { name: \"Tivoli\", cuisine: \"Italian\", price: 4, open: true },\n  { name: \"Sunset Grill\", cuisine: \"American\", price: 3, open: false }\n];\n// const restaurants = []; // test with an empty list\n\nconst render = () => {\n  \n  const list = document.getElementById(\"restaurantList\");\n  const countMsg = document.getElementById(\"countMessage\");\n  const filterLabel = document.getElementById(\"filterLabel\");\n  const emptyMsg = document.getElementById(\"emptyMessage\");\n\n  list.innerHTML = \"\";\n\n  // Filters for any cuisine, price, and open restaurant\n  const cuisine = \"any\";\n  const maxPrice = 3; // represents $$$\n  const openNow = true;\n\n  const results = [];\n\n  for (let i = 0; i < restaurants.length; i++) {\n    const r = restaurants[i];\n\n    let cuisineOk;\n    if (cuisine === \"any\") {\n      cuisineOk = true;\n    } else {\n      cuisineOk = r.cuisine === cuisine;\n    }\n\n    const priceOk = r.price <= maxPrice;\n\n    let openOk;\n    if (openNow === false) {\n      openOk = true;\n    } else {\n      openOk = r.open === true;\n    }\n\n    if (cuisineOk && priceOk && openOk) {\n      results.push(r);\n\n      // Build price symbols\n      let priceSymbols = \"\";\n      for (let j = 0; j < r.price; j++) {\n        priceSymbols = priceSymbols + \"$\";\n      }\n\n      // Set open/closed text\n      let status = \"Closed\";\n      if (r.open === true) {\n        status = \"Open\";\n      }\n\n      const li = document.createElement(\"li\");\n      li.textContent = r.name + \" — \" + r.cuisine + \" — \" + priceSymbols + \" — \" + status;\n      list.appendChild(li);\n    }\n  }\n\n\n  \n};\n\nrender();",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:40:10.518+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson4-level3b-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson4-level3b-test-2025\"}]"
+}]]></config>
+</Weblab2>

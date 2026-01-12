@@ -103,6 +103,7 @@
     "ai_model_id": "j5MH8AtyV1sw",
     "ai_model_name": "Pet Recommender",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

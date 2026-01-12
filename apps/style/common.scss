@@ -1594,7 +1594,7 @@ $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-$tooltip-font: $main-font;
+$tooltip-font: var(--font-family-main);
 $function-name-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 $see-examples-thick-underline-color: $yellow;
 
@@ -1646,7 +1646,7 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: $tooltip-font;
-  font-weight: $regular-font-weight;
+  font-weight: var(--font-weight-regular);
   font-size: 12px;
   line-height: 16px;
   padding: 8px 10px;

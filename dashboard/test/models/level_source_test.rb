@@ -3,8 +3,6 @@ require 'test_helper'
 require 'digest/md5'
 
 class LevelSourceTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @user = create(:user)
     @level = create(:level)

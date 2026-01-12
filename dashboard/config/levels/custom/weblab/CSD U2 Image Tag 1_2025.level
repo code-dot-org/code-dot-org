@@ -27,7 +27,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
-    "teacher_markdown": "Students may come across some image tags that include a slash at the end, like this: \r\n`<img src=\"imgURL.jpg\" alt=\"my image\" />`\r\n\r\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page."
+    "teacher_markdown": "Students may come across some image tags that include a slash at the end, like this: \r\n`<img src=\"imgURL.jpg\" alt=\"my image\" />`\r\n\r\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page.",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

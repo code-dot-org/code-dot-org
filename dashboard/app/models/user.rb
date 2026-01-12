@@ -1418,11 +1418,6 @@ class User < ApplicationRecord
     followeds.filter_map(&:code_review_group)
   end
 
-  # Can be used to identify users in cases where integer IDs may be vulnerable to abuse
-  def uuid
-    id && Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, id.to_s)
-  end
-
   # @return [String, nil] the user's US state code in the ISO 3166-2:US standard
   def us_state_code
     state = student? ? us_state : school_info&.usa? && school_info&.state
@@ -1702,7 +1697,7 @@ class User < ApplicationRecord
       end
 
       script = Unit.get_from_cache(script_id)
-      script_valid = script.csf? && script.name != Unit::COURSE1_NAME
+      script_valid = script.csf?
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
           new_result >= ActivityConstants::BEST_PASS_RESULT &&
           script_valid &&

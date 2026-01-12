@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -18,17 +17,6 @@ export default class ProgressionDetails extends Component {
 
   handleBubbleClick = level => {
     this.setState({previewingLevel: level});
-    firehoseClient.putRecord(
-      {
-        study: 'lesson-plan',
-        study_group: 'teacher-lesson-plan',
-        event: 'click-level-preview',
-        data_json: JSON.stringify({
-          scriptLevelId: level.id,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   convertScriptLevelForProgression = scriptLevel => {

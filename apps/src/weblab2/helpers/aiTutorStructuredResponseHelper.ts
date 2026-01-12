@@ -2,6 +2,7 @@ import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
 
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
@@ -41,13 +42,12 @@ const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
         items: {
           type: 'object',
           properties: {
-            language: {type: 'string'},
             sourceCode: {
               type: 'string',
             },
             filename: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'filename'],
+          required: ['sourceCode', 'filename'],
           additionalProperties: false,
         },
         description:
@@ -121,19 +121,19 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
         items: {
           type: 'object',
           properties: {
-            language: {type: 'string'},
             sourceCode: {
               type: 'string',
             },
-            name: {type: 'string'},
-            id: {type: 'string'},
-            folderId: {type: 'string'},
+            filename: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'name', 'id', 'folderId'],
+          required: ['sourceCode', 'filename'],
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. The list can be empty. Code should be formatted with appropriate newlines and indentation.  When providing modifications to student code, provide the entire contents of the file, the id and folderId of the file being updated. If the file is a new file and not currently in the the student code, then the id is "new", and the folderId is "0".The list can be empty. Code should be formatted with appropriate newlines and indentation. If the language is javascript or js, then the student will need to copy and paste this code into their project.',
+          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. ' +
+          'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
+          'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
+          'Code should be formatted with appropriate newlines and indentation.',
       },
       explanation: {
         type: 'string',
@@ -213,8 +213,6 @@ export const formatCopyPasteResponse = (response: any): string => {
 };
 
 type AiTutorCodeFile = {
-  id: string;
-  folderId: string;
   name: string;
   contents: string;
 };
@@ -244,10 +242,8 @@ export const formatAcceptRejectResponse = (
     explanation: formattedExplanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
-      name: codeFile.name,
+      name: codeFile.filename,
       contents: codeFile.sourceCode,
-      id: codeFile.id,
-      folderId: codeFile.folderId,
     })),
     answerType: response.tutorMode,
   };
@@ -276,66 +272,64 @@ export const getMergedAiTutorCodeWithSource = (
   // For each AI code file, find and replace the updated file if the file already exists in student code.
   // If the AI code file is a new file, add it to updatedSource.
   code.forEach((aiFile: AiTutorCodeFile) => {
-    let fileId;
-    // File id is 'new' so we are creating a new file.
-    if (aiFile.id === 'new') {
-      fileId = getNextFileId(Object.values(updatedSource.files));
+    // First check active file is the same as the AI code file.
+    const activeFile = getActiveFileForSource(source);
+    if (activeFile?.name === aiFile.name) {
+      // Active file is the same as the AI code file - replace it.
+      const aiTutorVersionFile: ProjectFile = {
+        ...updatedSource.files[activeFile.id],
+        contents: aiFile.contents,
+        isAiTutorVersionUpdated: true,
+      };
+      aiTutorVersionFiles.push(aiTutorVersionFile);
+      updatedSource.files[activeFile.id] = aiTutorVersionFile;
+      return;
+    }
+    // Find all files with matching name, if any.
+    const matchingFiles = Object.values(updatedSource.files).filter(
+      f => f.name === aiFile.name
+    );
+    if (matchingFiles.length === 1) {
+      // One matching file found, replace it.
+      updatedSource.files[matchingFiles[0].id] = {
+        ...matchingFiles[0],
+        contents: aiFile.contents,
+        isAiTutorVersionUpdated: true,
+      };
+      aiTutorVersionFiles.push(updatedSource.files[matchingFiles[0].id]);
+      return;
     } else {
-      // File id is not 'new' so we are updating an existing file.
-      fileId = aiFile.id;
-      // We need to validate the file name of the AI code file with the given file id.
-      // If the file name of the AI code file is the same as the file name in the student code,
-      // then we use the same file id.
-      if (updatedSource.files[aiFile.id]?.name === aiFile.name) {
-        fileId = aiFile.id;
-      } else {
-        // If the file name is different, then we need to create a new file with a different id.
-        fileId = getNextFileId(Object.values(updatedSource.files));
+      // No matching files found OR multiple matching files found.
+      // For both of these cases, add a new file to updatedSource in the root folder to avoid overwriting the wrong file.
+      const newFileId = getNextFileId(Object.values(updatedSource.files));
+      if (matchingFiles.length > 0) {
         // Validate the file name of the AI code file.
-        const validateFileNameError = validateFileName({
-          fileName: aiFile.name,
-          folderId: aiFile.folderId,
-          projectFiles: updatedSource.files,
-          isStartMode: false,
-          validationFile: undefined,
-        });
-        if (validateFileNameError) {
-          // TODO: Log error via analytics.
-          // If the file name is invalid (e.g. duplicate), place in root folder, if not already in root folder.
-          // Then validate name and if still invalid, add numeric suffix to the file name until valid.
-          if (aiFile.folderId !== DEFAULT_FOLDER_ID) {
-            aiFile.folderId = DEFAULT_FOLDER_ID;
-          } else {
+        let validateFileNameError;
+        do {
+          const validateFileNameError = validateFileName({
+            fileName: aiFile.name,
+            folderId: DEFAULT_FOLDER_ID,
+            projectFiles: updatedSource.files,
+            isStartMode: false,
+            validationFile: undefined,
+          });
+          if (validateFileNameError) {
             aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
           }
-          let validateFileNameError;
-          do {
-            validateFileNameError = validateFileName({
-              fileName: aiFile.name,
-              folderId: aiFile.folderId,
-              projectFiles: updatedSource.files,
-              isStartMode: false,
-              validationFile: undefined,
-            });
-            if (validateFileNameError) {
-              aiFile.name = getFileNameWithNumberSuffix(aiFile.name);
-            }
-          } while (validateFileNameError);
-        }
+        } while (validateFileNameError);
       }
+      const aiTutorVersionFile: ProjectFile = {
+        id: newFileId,
+        name: aiFile.name,
+        contents: aiFile.contents,
+        folderId: DEFAULT_FOLDER_ID,
+        language: aiFile.name.split('.').pop() || '',
+        isAiTutorVersionCreated: true,
+      };
+      updatedSource.files[newFileId] = aiTutorVersionFile;
+      aiTutorVersionFiles.push(aiTutorVersionFile);
+      return;
     }
-
-    const aiTutorVersionFile: ProjectFile = {
-      id: fileId,
-      name: aiFile.name,
-      folderId: aiFile.folderId,
-      language: aiFile.name.split('.').pop() || '',
-      contents: aiFile.contents,
-      isAiTutorVersionUpdated: aiFile.id === 'new' ? false : true,
-      isAiTutorVersionCreated: aiFile.id === 'new' ? true : false,
-    };
-    updatedSource.files[aiTutorVersionFile.id] = aiTutorVersionFile;
-    aiTutorVersionFiles.push(aiTutorVersionFile);
   });
 
   // Sort AI-updated files by name alphabetically.

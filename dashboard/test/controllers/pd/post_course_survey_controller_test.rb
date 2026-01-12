@@ -4,8 +4,6 @@ module Pd
   class PostCourseSurveyControllerTest < ActionDispatch::IntegrationTest
     include WorkshopConstants
 
-    self.use_transactional_test_case = true
-
     FAKE_FORM_ID = 123459
 
     setup do

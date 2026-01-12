@@ -52,9 +52,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
   firstState?: WelcomeState;
-  curriculumCourses?: string[];
 }
 
 const optionButton = (
@@ -141,19 +141,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
+  curriculumCourses,
   // This should only be used for testing purposes
   firstState = 'get_started',
-  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
-
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
-
   const [selectedOption, setSelectedOption] =
     React.useState<SuggestPromptsType | null>(null);
-
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
 
   const dispatch = useAppDispatch();
@@ -166,6 +163,24 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       url: window.location.href,
     };
   }, [context, scriptName, selectedOption]);
+
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
+  }, [selectedOption, dispatch]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -264,8 +279,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
-            {curriculumCourses &&
-              curriculumCourses.includes('csp') &&
+            {curriculumCourses.includes('csp') &&
               optionButton(
                 selectedOption === 'apcsp',
                 () => setSelectedOption('apcsp'),
@@ -289,24 +303,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       setChatContinueButtonDisabled(true);
     }
   }, [currentWelcomeState]);
-
-  React.useEffect(() => {
-    if (selectedOption) {
-      const {initialMessage, suggestedPrompts} =
-        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
-      dispatch(setInitialChatMessage(initialMessage));
-      dispatch(
-        setThreadMessages([
-          {
-            role: Role.ASSISTANT,
-            chatMessageText: initialMessage,
-            status: Status.OK,
-          },
-          suggestedPrompts,
-        ])
-      );
-    }
-  }, [selectedOption, dispatch]);
 
   const endPage = React.useCallback(() => {
     return (

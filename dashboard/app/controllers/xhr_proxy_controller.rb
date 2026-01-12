@@ -14,12 +14,13 @@ require 'cdo/shared_constants'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
-  include AllowedHostnameHelper
+  include SharedConstants
 
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
       application/json
       application/geo+json
+      application/vnd.api+json
       text/javascript
       text/json
       text/plain

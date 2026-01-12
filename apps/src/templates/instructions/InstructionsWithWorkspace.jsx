@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
@@ -29,6 +30,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
+    aiTutorEnabledForPilot: PropTypes.bool,
   };
 
   // only used so that we can rerender when resized
@@ -110,12 +112,21 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       workspaceStyle,
       instructionsHeight,
       labType,
+      aiTutorEnabledForPilot,
       children,
     } = this.props;
 
+    const aiTutorAvailableForLevel =
+      window?.appOptions?.level?.aiTutorAvailable ?? false;
+
     const showAiTutor =
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
-      experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR);
+      (experiments.isEnabled(experiments.LEGACY_LAB_AI_TUTOR) ||
+        shouldShowAiTutor({
+          appName: labType,
+          tutorPilot: aiTutorEnabledForPilot,
+          tutorLevel: aiTutorAvailableForLevel,
+        }));
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
@@ -155,6 +166,7 @@ export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
+    aiTutorEnabledForPilot: state.currentUser.aiTutorEnabledForPilot,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

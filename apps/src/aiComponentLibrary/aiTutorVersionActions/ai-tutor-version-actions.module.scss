@@ -1,16 +1,22 @@
-.fileList {
-  margin: 10px 0 12px 0;
-  padding-left: 1.25rem;
-  list-style-type: disc;
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.fileItem {
-  margin-top: 0.125rem;
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
 }
 
 .buttonContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  justify-content: flex-start;
 }
 
+.actionButton {
+  flex: 1;
+  min-width: 107px; // Triggers wrapping when container is narrow.
+}

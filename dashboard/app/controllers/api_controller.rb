@@ -324,7 +324,7 @@ class ApiController < ApplicationController
     # occur when we get the progress for the student twice.  We saw two issues that were caused by
     # having duplicate students in a section AND the number of students being a multiple of the page amount
     # Deduplicating students ensures all data for all students is pulled.
-    deduplicated_students = section.students.distinct
+    deduplicated_students = section.students.distinct.order(:id)
     paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should
@@ -687,7 +687,11 @@ class ApiController < ApplicationController
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
       yield JSON.parse(response)['data']
     rescue RestClient::ExceptionWithResponse => exception
-      render status: exception.response.code, json: {error: exception.response.body}
+      if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
+        render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
+      else
+        render status: exception.response.code, json: {error: exception.response.body}
+      end
     end
   end
 
@@ -760,7 +764,7 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id
-    script ||= Unit.twenty_hour_unit
+    script ||= Unit.hoc_2014_unit
     script
   end
 end

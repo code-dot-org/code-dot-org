@@ -29,7 +29,8 @@
     "display_name": "Extra Code: Letter Spacing",
     "bubble_choice_description": "Space letters further out and closer to each other.",
     "thumbnail_url": "https://images.code.org/b9314952ab5ccac127a2d1412aec66a2-image-1566322123736.PNG",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
