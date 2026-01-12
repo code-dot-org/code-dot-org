@@ -5,6 +5,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
@@ -57,9 +58,15 @@ const BackpackPanel: React.FC<BackpackProps> = ({
     loadBackpackFiles(true);
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
     // adds or deletes.
-    const listenerId = backpackApi?.addEventListener(() => {
+    const listenerId = backpackApi?.addEventListener(event => {
       // We don't show the load view here to avoid the screen flickering when the backpack updates.
       loadBackpackFiles(false);
+      if (event === BackpackEvent.FileAdded) {
+        setAlertList(prevAlerts => [
+          ...prevAlerts,
+          {type: 'success', message: 'File successfully saved to Backpack!'},
+        ]);
+      }
     });
     return () => {
       if (listenerId) {

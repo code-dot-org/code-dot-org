@@ -21,7 +21,7 @@ const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
 
 // Events that can a listener can subscribe to.
-enum BackpackEvent {
+export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
 }
