@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {TestResults} from '@cdo/apps/constants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {getStore} from '../redux';
 import {
@@ -181,6 +182,12 @@ Ailab.prototype.initMLActivities = function () {
     });
   };
 
+  const logMetric = (eventName, details) => {
+    analyticsReporter.sendEvent(eventName, {
+      details,
+    });
+  };
+
   setAssetPath('/blockly/media/skins/ailab/');
 
   const {
@@ -195,6 +202,7 @@ Ailab.prototype.initMLActivities = function () {
     setInstructionsKey,
     i18n: mlPlaygroundMsg,
     saveTrainedModel,
+    logMetric,
   });
 
   if (instructionsDismissed) {
