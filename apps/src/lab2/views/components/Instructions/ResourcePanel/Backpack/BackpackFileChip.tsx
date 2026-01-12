@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {
   BodyFourText,
   BodyThreeText,
@@ -60,6 +61,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const dialogControl = useDialogControl();
   // If we are in read-only mode, disable the add button.
   const addButtonDisabled = useAppSelector(isReadOnlyWorkspace);
+  const addButtonTooltipText = addButtonDisabled
+    ? 'Cannot add files in read-only mode'
+    : 'Add to project';
 
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
@@ -165,15 +169,26 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             size="s"
           />
         ) : (
-          <Button
-            size="xs"
-            isIconOnly
-            icon={{iconName: 'plus'}}
-            color="gray"
-            type="secondary"
-            onClick={handleAdd}
-            disabled={addButtonDisabled}
-          />
+          <WithTooltip
+            tooltipProps={{
+              text: addButtonTooltipText,
+              tooltipId: `${fileName}-add-button-tooltip`,
+              direction: 'onTop',
+              size: 'xs',
+            }}
+          >
+            <div>
+              <Button
+                size="xs"
+                isIconOnly
+                icon={{iconName: 'plus'}}
+                color="gray"
+                type="secondary"
+                onClick={handleAdd}
+                disabled={addButtonDisabled}
+              />
+            </div>
+          </WithTooltip>
         )}
         <ActionDropdown
           name={`backpack-options-${fileName}`}
