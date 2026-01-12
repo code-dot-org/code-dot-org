@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-09T19:47:21.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the font size",
+    "long_instructions": "# Debug: Wrong Font Size\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n![](https://images.code.org/8104fd6467d946e094b7bef3490098bd-image-1767992129137.png)\r\n# Do this\r\n1) Find and fix the problem that is causing the bug.\r\n\r\n",
+    "bubble_choice_description": "Use your debugging skills to figure out why the font size isn't changing.",
+    "thumbnail_url": "https://images.code.org/6e8ee18a5b343bde265e2ef03793e96a-image-1563293765020.JPG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Are Black and White Colors?</h1>\n      <p>People often can't agree if black and white are really colors. So what's the truth?</p>\n    <p>Turns out, it really depends on how you define color. Physics defines color by the range of visible light people can see. This range includes violet to red, and black is the absence of color while white is the sum of all the colors. Therefore, black and white themselves are not colors. In art, the definition of black and white are the opposite. Artists often define white as the absence of color and black as a color.</p>\n    <p>As you can see, this is a complicated topic.  Black and white are colors depending on how you want to define color!</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "p {\n  color: black;\n  fontsize: 24px;\n}\nh1 {\n  font-weight: bold;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryY9qnKDs41A\n/O6EBhsWcoWSW8I7aANQxSXWTHQ+1cIPmfOnGpDh9R5VF359JaMRZbpdSJEE\n/rfixNasN8N5qyE85vOCbRrSA5PikNbQyc5+7VsSsl2i4Wy1ScfRt4nwaiqG\ny0x3u8f8xaXmMyqQi3hCENP+rPc5iL8Bg7yLbwvGfIQscW8AdIG0jpnKADD4\nMYkstZYsFHsR4cMQs39qrT9HSc7WNBO8w31/05yx+hkpvEYd/tFOAAvthg5a\n/R3VI8VlscMnF/SwSI2UOLABbn0rrHHRNWQpI8PjnAA+2H1DivLSTXWag9L0\nvIONK7yJzXBPsCcdfN2DLH8gij3fWFNRgjIt9I8myeuiqGYk33cvPNOOhkY2\nMlz46lay0yzHxf+rKSh9s4soAjDKs1y3cQbi+ElWCKA17+vONXTEw0+LKDnn\nAvlAUKjI7dKXDTxVFSqwerLQOUyAcc/iDAB0XxYke5hFArNW2o7V9jgEiKUE\npGPpF+eyLcJqAFuHzcrVFVI3qszz2J4RZaDjR4wzrUZI0GWbNIyguOL0TMaq\nGMGuYhgXdi6BZddfy4skr3C+PXlRf4scrAYw0owUxQX/PZwx6uUCvQlAFn1C\nC6tje0oJnWFUzcrPhmBetuUkMsUztL6xddbYnvZTLnwQB1g/UBFrKsWVfpxV\nQ2DA6Z5+kxHLx+Wplev9FVBzaPtDVGA9cAaz5x/nknAUnkH7wPoKxTkUPj8N\nRIRKAROgewnSuWWUSGedNDpDFXhRCKSBN6UpL1AWRPrZFDEmr6C3l9a5C5Of\n2gn9ScabCpiahfby0qAg87FfK0kmsUfFYm4/duH62iHXuTiiQEpyCIgw+Sur\n9YHclao0pdeC3NpVIZflLGOORghU9ixXy5mmW2Efp5UDaZufSzWmZzov4OSz\n8jQUlcvpkfWk7fUYJE+PQyHD2bFV5r/bNVF+ZttbFC1L45twpcr3UOs+CBu/\nMT+AlvUCCH0fs7tUnkfV+Lwdy7XusIpZ9gl+LbUNe4Y9lzLI27PJQYBKNU0P\n/2dmfSPQ9wzAzmz+9vtLycWmSNbp1KHIVwu0J6iUID9c0nBRJ9G/XjJ6MzNJ\nAEx2urTbhTeuYieBQkctT+RK4/b6nHaJVJ/9HSa56SH++hrZNyPsT5twWSn+\nhCYFi7UDp3soXXWFDkUioBrYTb38HTsPeqyshOUy7wMsaxoIMzysFfTuURQm\nOiVdpvwfIzffmFIqay/DhWNHJMEKuXHOWsWFcLiqUCojhEejo7oLQhNSSDiG\nKbRwUgyqSl6zxwK1cMZ8lhyVntlcrEMKWhIa13jbBDLa378GZz0Ozxn+9w3S\nX+URXiUX0b0mrQ/JSwp8mOLlNTU0d2MNaGjiSPPxoCuNmCwUP60JCLkPVKvV\nnzKko+JMRmiaHAFGN0WImgFpCI7dkgWS6I1bvj/64A/vghm4U7+MdeL3JR/u\n5Li5x0yiEPlbloqwFeYRx9cf+9jSErpOcEoIb+BuKP0lZqyR38vD/4I10nPB\nGb7vGw3HJMSBYruC5B9dvXbOpltoXSpA5NtDev1A66tNlBE2qL36ciR5IO7x\nqfovjXE/KK6UV/7bHf/Gw2CiOlKFvGY=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-09 19:48:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 19:48:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:55:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

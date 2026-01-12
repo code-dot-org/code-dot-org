@@ -7,7 +7,7 @@ wrong 'To permanently delete items from the original array after they are shown.
 right 'To iterate through the array and return a new set of elements, such as HTML tags, for each item.'
 wrong 'To sort the array alphabetically before it is sent to the DOM.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

@@ -7,7 +7,7 @@ wrong 'If the filter labels are written in all capital letters.'
 right 'Whether the filter categories or thresholds accidentally exclude or sideline certain groups of people.'
 wrong 'If the AI can guess what the user wants to filter before they type it.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 9

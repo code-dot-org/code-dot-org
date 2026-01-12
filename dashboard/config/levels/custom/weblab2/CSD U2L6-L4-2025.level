@@ -1,0 +1,33 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-09T19:17:42.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSD U2L6-L3-template-2025",
+    "long_instructions": "# Making a new CSS rule-set\r\n\r\nThe block of code that gives rules for a particular tag is called a _rule-set_.  You can make a new rule set by copying the pattern you see in the rule-set for the `h1` tag.\r\n\r\n# Do this\r\n\r\n1) Find the CSS rule-set in the style sheet that determines the styles for the `h1` tag.\r\n* Using the same pattern, write a new CSS rule-set that will determine the style for the `h3` tag.\r\n* Add code to set a different color for the `h3` tags.\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n![](https://images.code.org/0d7d02ecd1cd315bb348142747970e76-image-1767996639916.gif)\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryaMFQh0MORt\nyCexn3aMqlQ5R0PG7Hw71Ojz/p/t1GWrC0H/kqT5FsE4OadXS9za+K+qnW73\n609leXbn17wWMdPqM6haSeEr2cjXFmWji72RuBMl7VgVJti9GMTqgBssp5nH\nv1hAYj4KaYctG5kepd8zXmxz62p4JLmZ2tsDDUAht+HBMbFRzL5B4Vj/Cexq\nrXot3CESellrSYYIHOXwxeXscSBnf/z3eb7Lcy6wkYL7g4pJ5bl2Q8lq4zPN\nhxbrc3hvB5z2718qjIdQhlnQPaDQQ7tOBV1yadVm5eXI3UFLQrT/vb2w2QZ7\nVcXe68X6Ze0J7611QALUc3pT1r+gbd8wSGMGiOLOg2v9Q8rvipMACVRqhPho\nO1I7mJbOUIyuMCnpf/kh8Rp/TM4rrNyL2532mNE3W08QWkNsRekesQTL8aLW\ndb+UwddhOv0luQMIDMQALZwZLAMhuoPSMdDvDDvgxdoYaNssP5L0kmm0nbIZ\nM23w7thnD38FNX8EoDYvSyWeLGvpeMdzJTAgmRBryFfrGKlxYgo/WysfJ5Wc\nDF3td3STx2ZLRacCywvxuE3Qb0Oi1WtEOyV7/90fm+XYYt7K6kQdedfWte6e\ndetQvuFW4xBP+Qfh/gRpi+QoCWQRIIsu0u0miaoRsZ65V0tFcSIhCvGMG3oG\npJeDFtz+06XoyZz6vPeabpeskBh/7dd4YpYx5HGQ61xHdYJkBFd/6Upn5VQ7\n9EH7LwXzY1Oxqm2/mjVlPcXamR/OzgJL9ZyY77WvGkBVmEym8A2OS1eRGUTY\nXr0Cspkl7bg3MzN0lgHHz2YiVjQusQFHJbVRJQH96O/tHRwi8ewBm/45MA+O\nitjcuS5QxXfJKqNxPizBg9XdWAv4kQaa8Kiauf80IBMobbhAA7rNbqghUx9H\nI9bzJI60hNawK3XguBOjXLe1lRxwRXpSdEsxHQZi9KrO+ROvAYWhGdmCMHUc\nU/0qpqLLvU+17r154x1cIBBFRv66dcE5er+jq5Kwxnr7nK7B3K97oY2qms42\nGUnz8H7XU6ogjnlepiw4I+/j6iwjK5XTsmFsxf7TRauAnBxINFZ96YtcQtoN\nVI7mfZKzwH1FQvC7LuVuP+0xp0CXfqLDU/cpxOKuEhbnmbVrRNZUUINSMZdn\nDsQmQA8Ptq2phNsUjKWne7omRXrZfhqWf0KPCumGPu5FYYxSkVvhCKm5Rfyx\nyITAan1uZkfdppyOP/gzd7iTVHtIjFLg/m88DtpDfsmL7ultXd6uj5XlxXBh\nGVJPBKuSu9qPKvbLBuG5dBJgDWx30Gzim/Yd1tEkQk1qn8vhArPAPMP0iVz5\nX3+qcIvF0PetRVFxpArAg4xSKXhk0M9yf/4VHOqhc+VQ63HvKlg+fhV1/V7X\nllEv1BHemejHC+G58Cq2BoIc16N3FH4+S8PDhaw0YGbedOCYNOi48ugn9a7+\n0zYcAr1aYOqAhmkZpMOLXTG6su6YaRX7h7geNri27c3KHxmp9vqs1ZsodanQ\nRkFKRE6dGNglFVq0LSIoP4TOaClM83k/SZsmmZG4IAaffikqKJCqrZbtiJIo\n6oqpY5faDNgjl5WK6TLnd3/UQoLD2Qt+lOyT51i7R0osJXJM1QucUXQuidhy\nbL/pzq6FBtAoe7ILKdVSUg3/+xKzTCDgDHUOr7p3MrowKPV7PjwCgz5qXwO5\noo/t3kHf2E2ZRacuuBYAKwH1OM0KmPVhuNsiRJS6Q+U147KrRjkGe4q/YA9E\ndBPquDnlalQpGOuWWY7VvYMtL0yH9Cd+ieFbXz4bdpqukLefBWuGR7XUGk6+\nZpWF4nn58FP4X4hU1t3bNdnk47JSX+mk9GsDUF1JB7F3PpN8lEtqrYza5Gd/\nhZPsCnz3WdFXS1Ri3KP+In1NuQDN+HkO4x56u3XDLVaLy9kcZ+OINWnaTBqL\nh16oxM88r9Cjd77dzqwMQl3Beeyvat4BGjGOKvvCVPHkqH3z7h56Z6uBWfPF\nxYKZOAGGQailYaFfkYZxJGvKmAbcNOhyZkixf9s6+KZ6TDTRr7ncjeUoBWY=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-09 19:18:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 22:11:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

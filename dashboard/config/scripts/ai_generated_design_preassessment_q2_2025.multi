@@ -7,7 +7,7 @@ wrong 'HTML for style and CSS for structure.'
 wrong 'Only CSS, since it controls everything on a webpage.'
 wrong 'Only HTML, since styling isn\'t important for users.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 

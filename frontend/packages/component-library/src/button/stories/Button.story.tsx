@@ -1,18 +1,60 @@
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 import Button, {ButtonProps, buttonColors} from '../Button';
+import {buttonPropsToMui} from '../buttonPropsToMui';
 
 export default {
   title: 'DesignSystem/Button/Button',
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore-next-line
   component: Button.type,
+  parameters: {
+    useMui: true,
+  },
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<ButtonProps> = args => <Button {...args} />;
+const SingleTemplate: StoryFn<ButtonProps> = args => {
+  const muiProps = buttonPropsToMui(args);
+
+  return (
+    // <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
+    //   <div>
+    //     <div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>
+    //       Current Button
+    //     </div>
+    //     <Button {...args} />
+    //   </div>
+    //   <div>
+    //     <div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>
+    //       MUI Button
+    //     </div>
+    //     {
+    muiProps.isIconButton ? (
+      <MuiIconButton {...muiProps.iconButtonProps}>
+        {muiProps.isPending ? (
+          <FontAwesomeV6Icon
+            iconName="spinner"
+            iconStyle="solid"
+            animationType="spin"
+          />
+        ) : (
+          args.icon && <FontAwesomeV6Icon {...args.icon} />
+        )}
+      </MuiIconButton>
+    ) : (
+      <MuiButton {...muiProps.buttonProps} />
+    )
+    // }
+    // </div>
+    // </div>
+  );
+};
 
 const MultipleTemplate: StoryFn<{
   components: ButtonProps[];
@@ -25,12 +67,56 @@ const MultipleTemplate: StoryFn<{
       gap: '20px',
     }}
   >
-    {args.components?.map(componentArg => (
-      <Button
-        key={`${componentArg.size}-${componentArg.text}`}
-        {...componentArg}
-      />
-    ))}
+    {args.components?.map(
+      (
+        componentArg,
+        // index
+      ) => {
+        const muiProps = buttonPropsToMui(componentArg);
+        // const key = `${componentArg.size}-${componentArg.text || componentArg.icon?.iconName || index}`;
+
+        return (
+          // <div
+          //   key={key}
+          //   style={{display: 'flex', flexDirection: 'column', gap: '8px'}}
+          // >
+          //   <div style={{fontSize: '12px', color: '#666', marginBottom: '4px'}}>
+          //     Current
+          //   </div>
+          //   <Button {...componentArg} />
+          //   <div
+          //     style={{
+          //       fontSize: '12px',
+          //       color: '#666',
+          //       marginTop: '8px',
+          //       marginBottom: '4px',
+          //     }}
+          //   >
+          //     MUI
+          //   </div>
+          //   {
+          muiProps.isIconButton ? (
+            <MuiIconButton {...muiProps.iconButtonProps}>
+              {muiProps.isPending ? (
+                <FontAwesomeV6Icon
+                  iconName="spinner"
+                  iconStyle="solid"
+                  animationType="spin"
+                />
+              ) : (
+                componentArg.icon && (
+                  <FontAwesomeV6Icon {...componentArg.icon} />
+                )
+              )}
+            </MuiIconButton>
+          ) : (
+            <MuiButton {...muiProps.buttonProps} />
+          )
+          // }
+          // </div>
+        );
+      },
+    )}
   </div>
 );
 

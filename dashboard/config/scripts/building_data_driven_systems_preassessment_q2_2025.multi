@@ -5,7 +5,7 @@ wrong '`playlist[1]`'
 wrong '`playlist["Song A"]`'
 wrong '`playlist.first()`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1

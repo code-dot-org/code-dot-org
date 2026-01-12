@@ -20,6 +20,7 @@ class XhrProxyController < ApplicationController
     %w(
       application/json
       application/geo+json
+      application/vnd.api+json
       text/javascript
       text/json
       text/plain
