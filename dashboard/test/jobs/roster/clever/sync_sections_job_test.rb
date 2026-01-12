@@ -12,18 +12,18 @@ class Roster::Clever::SyncSectionsJobTest < ActiveJob::TestCase
     subject(:perform_job) {described_instance.perform(teacher_id: teacher.id)}
 
     let(:teacher) {create(:teacher, :with_clever_authentication_option)}
-    let(:section1) {create(:section, teacher:)}
-    let(:section2) {create(:section, :from_clever, teacher:)}
-    let(:section3) {create(:section, :from_clever, teacher:)}
+    let(:clever_section) {create(:section, :from_clever, teacher:)}
+    let(:archived_clever_section) {create(:section, :from_clever, :archived, teacher:)}
+    let(:email_section) {create(:section, teacher:)}
 
     before do
       Services::Roster::Clever::SectionSyncer.stubs(:call)
     end
 
-    it 'syncs teacher Clever sections' do
-      Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: section1).never
-      Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: section2).once
-      Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: section3).once
+    it 'syncs teacher`s visible Clever sections' do
+      Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: clever_section).once
+      Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: archived_clever_section).never
+      Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: email_section).never
       perform_job
     end
 
