@@ -16,7 +16,11 @@ import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {fetchAndSaveFile} from './saveToBackpackHelper';
+import {
+  fetchAndSaveFile,
+  handleSaveDuplicateFile,
+  handleSaveSupportFile,
+} from './saveToBackpackHelper';
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
@@ -57,62 +61,31 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
-      // The user wants to import a file that has the same name as a hidden support file.
-      // Give the user a choice to import with a new name or cancel the import.
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericConfirmation,
-        title: 'A file with this name already exists',
-        message: `This file already exists in the level's support code. Would you like to import it as ${newFileName}?`,
-        confirmText: `Import as ${newFileName}`,
-      });
-      if (results.type === 'confirm') {
-        await fetchAndSaveFile(
-          backpackApi,
-          channelId,
-          addAlert,
-          saveFile,
-          createNewFile,
-          findIdForFileName,
-          fileName,
-          newFileName
-        );
-      }
+      handleSaveSupportFile(
+        dialogControl,
+        backpackApi,
+        channelId,
+        addAlert,
+        saveFile,
+        createNewFile,
+        findIdForFileName,
+        fileName,
+        newFileName
+      );
       return;
     }
     if (newFileName !== fileName) {
-      // The file name is a duplicate, but not a support file.
-      // Give user the choice to replace or import with the new name.
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericConfirmation,
-        title: 'A file with this name already exists',
-        message: `Would you like to replace the existing file with this file or import this file as ${newFileName}?`,
-        confirmText: 'Replace existing file',
-        neutralText: `Import as ${newFileName}`,
-      });
-      if (results.type === 'confirm') {
-        // Import as replacement
-        await fetchAndSaveFile(
-          backpackApi,
-          channelId,
-          addAlert,
-          saveFile,
-          createNewFile,
-          findIdForFileName,
-          fileName
-        );
-      } else if (results.type === 'neutral') {
-        // Import as new file
-        await fetchAndSaveFile(
-          backpackApi,
-          channelId,
-          addAlert,
-          saveFile,
-          createNewFile,
-          findIdForFileName,
-          fileName,
-          newFileName
-        );
-      }
+      handleSaveDuplicateFile(
+        dialogControl,
+        backpackApi,
+        channelId,
+        addAlert,
+        saveFile,
+        createNewFile,
+        findIdForFileName,
+        fileName,
+        newFileName
+      );
       return;
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.

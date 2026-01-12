@@ -1,11 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  BodyTwoText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -14,6 +8,7 @@ import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/Backpac
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
+import BackpackMessage from './BackpackMessage';
 
 import moduleStyles from './backpack-panel.module.scss';
 
@@ -76,96 +71,56 @@ const BackpackPanel: React.FC<BackpackProps> = ({
       detailMessage = 'Please sign in to access your Backpack.';
     }
     return (
-      <div className={moduleStyles.backpackPanelWithMessage}>
-        <div className={moduleStyles.neutralIconContainer}>
-          <FontAwesomeV6Icon
-            iconName="lock"
-            iconStyle="solid"
-            className={moduleStyles.icon}
-          />
-        </div>
-        <div className={moduleStyles.backpackMessageText}>
-          <BodyTwoText>
-            <StrongText>{titleMessage}</StrongText>
-          </BodyTwoText>
-          <BodyFourText>{detailMessage}</BodyFourText>
-        </div>
-      </div>
+      <BackpackMessage
+        type="neutral"
+        iconName="lock"
+        title={titleMessage}
+        message={detailMessage}
+      />
     );
   }
 
   if (isLoading) {
     return (
-      <div className={moduleStyles.backpackPanelWithMessage}>
-        <div className={moduleStyles.neutralIconContainer}>
-          <FontAwesomeV6Icon
-            iconName="spinner"
-            iconStyle="solid"
-            className={moduleStyles.icon}
-            animationType={'spin'}
-          />
-        </div>
-        <div className={moduleStyles.backpackMessageText}>
-          <BodyTwoText>
-            <StrongText>Your Backpack is loading</StrongText>
-          </BodyTwoText>
-          <BodyFourText>
-            Files in your Backpack will appear here shortly.
-          </BodyFourText>
-        </div>
-      </div>
+      <BackpackMessage
+        type="neutral"
+        iconName="spinner"
+        iconAnimation="spin"
+        title="Your Backpack is loading"
+        message="Files in your Backpack will appear here shortly."
+      />
     );
   }
 
   if (loadError) {
     return (
-      <div className={moduleStyles.backpackPanelWithMessage}>
-        <div className={moduleStyles.errorIconContainer}>
-          <FontAwesomeV6Icon
-            iconName="exclamation"
-            iconStyle="solid"
-            className={moduleStyles.icon}
+      <BackpackMessage
+        type="error"
+        iconName="exclamation"
+        title="An error occurred"
+        message="Your Backpack failed to load, please try again."
+        BottomComponent={
+          <Button
+            iconLeft={{iconName: 'refresh'}}
+            text="Retry"
+            onClick={() => loadBackpackFiles(true)}
+            size="s"
+            type="secondary"
+            color="gray"
           />
-        </div>
-        <div className={moduleStyles.backpackMessageText}>
-          <BodyTwoText>
-            <StrongText>An error occurred</StrongText>
-          </BodyTwoText>
-          <BodyFourText>
-            Your Backpack failed to load, please try again.
-          </BodyFourText>
-        </div>
-        <Button
-          iconLeft={{iconName: 'refresh'}}
-          text="Retry"
-          onClick={() => loadBackpackFiles(true)}
-          size="s"
-          type="secondary"
-          color="gray"
-        />
-      </div>
+        }
+      />
     );
   }
 
   if (fileList && fileList.length === 0) {
     return (
-      <div className={moduleStyles.backpackPanelWithMessage}>
-        <div className={moduleStyles.neutralIconContainer}>
-          <FontAwesomeV6Icon
-            iconName="backpack"
-            iconStyle="solid"
-            className={moduleStyles.icon}
-          />
-        </div>
-        <div className={moduleStyles.backpackMessageText}>
-          <BodyTwoText>
-            <StrongText>Your Backpack is empty</StrongText>
-          </BodyTwoText>
-          <BodyFourText>
-            Files you save to your Backpack will appear here.
-          </BodyFourText>
-        </div>
-      </div>
+      <BackpackMessage
+        type="neutral"
+        iconName="backpack"
+        title="Your Backpack is empty"
+        message="Files you save to your Backpack will appear here."
+      />
     );
   }
 
