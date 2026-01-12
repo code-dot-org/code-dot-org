@@ -1,7 +1,87 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
+
+export const handleSaveSupportFile = async (
+  dialogControl: DialogControlInterface,
+  backpackApi: BackpackClientApi,
+  channelId: string,
+  addAlert: (type: 'success' | 'danger', message: string) => void,
+  saveFile: (fileId: string, contents: string, url?: string) => void,
+  createNewFile: (fileName: string, contents: string, url?: string) => void,
+  findIdForFileName: (fileName: string) => string | undefined,
+  selectedFileName: string,
+  newFileName?: string
+) => {
+  // The user wants to import a file that has the same name as a hidden support file.
+  // Give the user a choice to import with a new name or cancel the import.
+  const results = await dialogControl?.showDialog({
+    type: DialogType.GenericConfirmation,
+    title: 'A file with this name already exists',
+    message: `This file already exists in the level's support code. Would you like to import it as ${newFileName}?`,
+    confirmText: `Import as ${newFileName}`,
+  });
+  if (results.type === 'confirm') {
+    await fetchAndSaveFile(
+      backpackApi,
+      channelId,
+      addAlert,
+      saveFile,
+      createNewFile,
+      findIdForFileName,
+      selectedFileName,
+      newFileName
+    );
+  }
+};
+
+export const handleSaveDuplicateFile = async (
+  dialogControl: DialogControlInterface,
+  backpackApi: BackpackClientApi,
+  channelId: string,
+  addAlert: (type: 'success' | 'danger', message: string) => void,
+  saveFile: (fileId: string, contents: string, url?: string) => void,
+  createNewFile: (fileName: string, contents: string, url?: string) => void,
+  findIdForFileName: (fileName: string) => string | undefined,
+  selectedFileName: string,
+  newFileName?: string
+) => {
+  // The file name is a duplicate, but not a support file.
+  // Give user the choice to replace or import with the new name.
+  const results = await dialogControl?.showDialog({
+    type: DialogType.GenericConfirmation,
+    title: 'A file with this name already exists',
+    message: `Would you like to replace the existing file with this file or import this file as ${newFileName}?`,
+    confirmText: 'Replace existing file',
+    neutralText: `Import as ${newFileName}`,
+  });
+  if (results.type === 'confirm') {
+    // Import as replacement
+    await fetchAndSaveFile(
+      backpackApi,
+      channelId,
+      addAlert,
+      saveFile,
+      createNewFile,
+      findIdForFileName,
+      selectedFileName
+    );
+  } else if (results.type === 'neutral') {
+    // Import as new file
+    await fetchAndSaveFile(
+      backpackApi,
+      channelId,
+      addAlert,
+      saveFile,
+      createNewFile,
+      findIdForFileName,
+      selectedFileName,
+      newFileName
+    );
+  }
+};
 
 export const fetchAndSaveFile = async (
   backpackApi: BackpackClientApi,
