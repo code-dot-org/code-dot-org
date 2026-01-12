@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
 import {
   BodyFourText,
   BodyThreeText,
@@ -28,6 +29,7 @@ interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
+  isRecentlyAdded?: boolean;
 }
 
 // TODO: add statsig logging
@@ -39,6 +41,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   saveFile,
   createNewFile,
   findIdForFileName,
+  isRecentlyAdded,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toUpperCase();
   const fileIcon = useMemo(
@@ -149,15 +152,29 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         </BodyFourText>
       </div>
       <div className={moduleStyles.fileActions}>
-        <Button
-          size="xs"
-          isIconOnly
-          icon={{iconName: 'plus'}}
-          color="gray"
-          type="secondary"
-          onClick={handleAdd}
-          disabled={addButtonDisabled}
-        />
+        {isRecentlyAdded ? (
+          <Tags
+            tagsList={[
+              {
+                tooltipId: `${fileName}-recently-added`,
+                label: 'Added',
+                tooltipContent: 'Added',
+                icon: {iconName: 'check', placement: 'left'},
+              },
+            ]}
+            size="s"
+          />
+        ) : (
+          <Button
+            size="xs"
+            isIconOnly
+            icon={{iconName: 'plus'}}
+            color="gray"
+            type="secondary"
+            onClick={handleAdd}
+            disabled={addButtonDisabled}
+          />
+        )}
         <ActionDropdown
           name={`backpack-options-${fileName}`}
           options={[

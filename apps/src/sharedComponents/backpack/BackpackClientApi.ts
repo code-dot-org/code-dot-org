@@ -25,7 +25,7 @@ export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
 }
-type BackpackEventListener = (event: BackpackEvent) => void;
+type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
   appType: string;
@@ -205,7 +205,7 @@ export default class BackpackClientApi {
       return;
     }
     Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.FileAdded)
+      listener(BackpackEvent.FileAdded, filename)
     );
     onSuccess();
   }
@@ -412,10 +412,12 @@ export default class BackpackClientApi {
     if (filenameIndex >= 0) {
       filesInRequest.splice(filenameIndex, 1);
     }
-    if (filesInRequest.length === 0 && failedFileList.length === 0) {
+    if (!failedFileList.includes(filename)) {
       Object.values(this.eventListeners).forEach(listener =>
-        listener(requestType)
+        listener(requestType, filename)
       );
+    }
+    if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
     } else if (filesInRequest.length === 0) {
       onError(error, failedFileList);
