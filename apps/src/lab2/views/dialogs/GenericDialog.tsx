@@ -39,6 +39,9 @@ export type GenericDialogProps = GenericDialogTitleProps &
     };
     getButtonCallback?: typeof defaultGetButtonCallback;
     /** Use the Modal component instead of Dialog. Defaults to false (Dialog). */
+    // Dialog is used for confirmation actions and is center aligned with less content.
+    // Modal is used for longer content, inputs, additional options, etc and are left aligned
+    // with divider lines separating the body content from the title and action buttons.
     useModal?: boolean;
   };
 
