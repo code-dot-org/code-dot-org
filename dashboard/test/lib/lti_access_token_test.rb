@@ -5,8 +5,6 @@ require 'jwt'
 class LtiAccessTokenTest < ActiveSupport::TestCase
   include LtiAccessToken
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @lti_integration = create(:lti_integration)
     fake_response_hash = {

@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -24,17 +23,6 @@ class AddMultipleStudents extends Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'add-students-button-click',
-        data_json: JSON.stringify({
-          sectionId: this.props.sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   closeDialog = () => {
@@ -50,17 +38,6 @@ class AddMultipleStudents extends Component {
       return {name, familyName};
     });
     this.props.addMultipleStudents(studentDataArray);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'add-students-confirm',
-        data_json: JSON.stringify({
-          sectionId: this.props.sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
     this.closeDialog();
   };
 

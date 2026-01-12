@@ -362,6 +362,8 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
   DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+  DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR:
+    'Dance Party Restricted Song Auth Error',
   DANCE_PARTY_VALIDATION: 'Dance Party Validation',
   DANCE_PARTY_AI_MODAL_CLOSED: 'Dance Party AI Modal Closed',
 
