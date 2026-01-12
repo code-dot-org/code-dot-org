@@ -24,6 +24,9 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     external: ['./index.css'],
     dts: false, // See typescript generator below
     splitting: false,
+    // Inject the polyfill to define Node.js globals before any modules are processed.
+    // This is required for aws-sdk to work in browser environments.
+    inject: ['./src/nodePolyfills.ts'],
     async onSuccess() {
       successes++;
       if (successes === 2) {

@@ -81,8 +81,7 @@ export class StatsigReporter {
       managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
     this.localMode = !(
       isProductionEnvironment() ||
-      managedTestEnvironment ||
-      process.env.STATSIG_LOCAL_MODE_OFF
+      managedTestEnvironment
     );
     this.options = {
       environment: {tier: getEnvironment()},
