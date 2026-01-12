@@ -1,19 +1,32 @@
-import {useState} from 'react';
-import {CodeStudioConfig} from '@code-dot-org/core';
+import MusicLab from './components/MusicLab';
+import {LevelKind} from '@code-dot-org/api/models/levels';
+import {RootStateProvider} from '@code-dot-org/redux/providers';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import '@code-dot-org/lab/redux';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Music Lab</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <p>Dashboard: {CodeStudioConfig.dashboardApiUrl}</p>
-    </>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+      }}
+    >
+      <RootStateProvider>
+        <ThemeProvider>
+          <MusicLab
+            level={{
+              key: 'music-lab-test',
+              type: 'Music',
+              kind: LevelKind.activity,
+              url: '/music/',
+              subData: {},
+            }}
+          />
+        </ThemeProvider>
+      </RootStateProvider>
+    </div>
   );
 }
 

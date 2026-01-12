@@ -21,7 +21,9 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     outDir: `dist/${format}`,
     target: 'es2019',
     format: [format],
-    external: ['./index.css'],
+    // Externalize workspace packages to ensure singletons are shared
+    // Note: Don't externalize './index.css' - let esbuild handle CSS imports so they resolve correctly
+    external: [/^@code-dot-org\//],
     dts: false, // See typescript generator below
     splitting: false,
     async onSuccess() {

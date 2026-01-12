@@ -21,9 +21,14 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     outDir: `dist/${format}`,
     target: 'es2019',
     format: [format],
-    external: ['./index.css'],
+    // Externalize peer dependencies to avoid bundling them - the consuming app provides these
+    // Note: Don't externalize './index.css' - let esbuild handle CSS imports so they resolve correctly
+    external: ['react', 'react-dom', 'react/jsx-runtime', 'classnames'],
     dts: false, // See typescript generator below
-    splitting: false,
+    // Enable splitting for ESM to ensure the store singleton is shared between entry points
+    // (e.g., between @code-dot-org/redux and @code-dot-org/redux/providers)
+    // Note: splitting only works for ESM format
+    splitting: format === 'esm',
     async onSuccess() {
       successes++;
       if (successes === 2) {

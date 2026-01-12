@@ -311,7 +311,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   }, []);
 
   // Resize the Blockly workspace when the container changes size
-  if (!inline) {
+  if (!inline && anchor.current) {
     useResizeObserver(anchor, () => {
       if (workspace.current) {
         Blockly.svgResize(workspace.current);

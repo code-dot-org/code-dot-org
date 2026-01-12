@@ -2,13 +2,15 @@
 
 import * as Blockly from 'blockly/core';
 
-import React, {useRef, useMemo, useEffect} from 'react';
+import type {FunctionComponent} from 'react';
+import {useRef, useMemo, useEffect} from 'react';
 
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
 import type {
   Environment,
   BlocklySerialization,
 } from '@code-dot-org/blockly-workspace';
+import {GuideInstructions} from '@code-dot-org/lab';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
@@ -16,6 +18,8 @@ import type {Level} from '@code-dot-org/api/models/levels';
 
 import blocks from '../blockly/blocks';
 import type {MusicData} from '../types';
+
+import styles from './musicLab.module.scss';
 
 /** By default, a blank level should at least show a 'When Run' block */
 const DefaultStartBlocks: BlocklySerialization = {
@@ -28,11 +32,11 @@ const DefaultStartBlocks: BlocklySerialization = {
   },
 };
 
-export interface LabMusicProps {
-  levelData: Level<MusicData>;
+export interface MusicLabProps {
+  level: Level<MusicData>;
 }
 
-const LabMusic: React.FunctionComponent<LabMusicProps> = ({levelData}) => {
+const MusicLab: FunctionComponent<MusicLabProps> = ({level}) => {
   const workspaceRef = useRef<Blockly.Workspace | null>(null);
 
   // Set up the driver
@@ -40,27 +44,39 @@ const LabMusic: React.FunctionComponent<LabMusicProps> = ({levelData}) => {
     return () => {
       console.log('UNINIT THE MUSIC LEVEL');
     };
-  }, [levelData]);
+  }, [level]);
 
   const toolboxBlocks = useMemo(
     () =>
-      levelData.multipleChoice
+      level.multipleChoice
         ? undefined
-        : levelData.subData?.toolboxBlocks?.contents?.length === 0
+        : level.subData?.toolboxBlocks?.contents?.length === 0
           ? undefined
-          : levelData.subData?.toolboxBlocks,
-    [levelData],
+          : level.subData?.toolboxBlocks,
+    [level],
   );
 
   return (
-    <div>
+    <div className={styles['music-lab']}>
+      <GuideInstructions
+        levelProperties={{
+          id: 1,
+          name: 'music-lab',
+          appName: 'music',
+          longInstructions:
+            'This is a demo of music lab within a vite application',
+        }}
+        isRunning={false}
+        hasRun={false}
+        hasEdited={false}
+      />
       <BlocklyWorkspace<Environment>
         options={{
-          readOnly: levelData.multipleChoice ? true : undefined,
+          readOnly: level.multipleChoice ? true : undefined,
         }}
         startBlocks={
-          levelData.template?.subData?.startBlocks ||
-          levelData.subData?.startBlocks ||
+          level.template?.subData?.startBlocks ||
+          level.subData?.startBlocks ||
           DefaultStartBlocks
         }
         blocks={blocks}
@@ -74,4 +90,4 @@ const LabMusic: React.FunctionComponent<LabMusicProps> = ({levelData}) => {
   );
 };
 
-export default LabMusic;
+export default MusicLab;

@@ -240,7 +240,7 @@ class Registry<T extends Environment & object> {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [key: string]: any;
       } = {
-        ...mutator,
+        ...mutator.mutator,
       };
 
       // Add the 'environment' to the mutator so the mutators that
@@ -250,6 +250,8 @@ class Registry<T extends Environment & object> {
         oldMutator.loadExtraState?.bind(this as BlockSvg & Mutator<object>)(
           state,
         );
+      };
+      newMutator.saveExtraState ||= function () {
       };
       newMutator.getEnvironment = function (this: BlockSvg) {
         return environment;

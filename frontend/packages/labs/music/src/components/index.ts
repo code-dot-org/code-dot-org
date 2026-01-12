@@ -1,4 +1,4 @@
-export {default} from './LabMusic';
+export {default} from './MusicLab';
 export {default as LoadingOverlay} from './LoadingOverlay';
 export type {LoadingOverlayProps} from './LoadingOverlay';
 export {default as PreviewControls} from './PreviewControls';

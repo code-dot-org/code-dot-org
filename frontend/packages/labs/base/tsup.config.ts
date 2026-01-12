@@ -21,7 +21,17 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     outDir: `dist/${format}`,
     target: 'es2019',
     format: [format],
-    external: ['./index.css'],
+    // Externalize peer dependencies to avoid bundling them - the consuming app provides these
+    // Also externalize all @code-dot-org/* workspace packages to ensure singletons (like Redux store) are shared
+    // Note: Don't externalize './index.css' - let esbuild handle CSS imports so they resolve correctly
+    external: [
+      'react',
+      'react-dom',
+      'react/jsx-runtime',
+      'classnames',
+      'swiper',
+      /^@code-dot-org\//,
+    ],
     dts: false, // See typescript generator below
     splitting: false,
     async onSuccess() {
