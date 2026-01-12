@@ -97,10 +97,6 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    course1
-    course2
-    course3
-    course4
     coursea-2017
     courseb-2017
     coursec-2017
@@ -153,7 +149,6 @@ namespace :seed do
     hourofcode
     infinity
     mc
-    minecraft
     playlab
     starwars
     starwarsblocks
@@ -335,10 +330,6 @@ namespace :seed do
        alltheselfpacedplthings
        allthettsthings
        artist
-       course1
-       course2
-       course3
-       course4
        coursea-2017
        courseb-2017
        coursec-2017
@@ -363,7 +354,6 @@ namespace :seed do
        hourofcode
        infinity
        mc
-       minecraft
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course

@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class UnitGroupTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup do
     File.stubs(:write)
   end

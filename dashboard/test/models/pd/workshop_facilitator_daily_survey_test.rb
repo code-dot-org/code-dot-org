@@ -7,7 +7,6 @@ module Pd
     FAKE_FORM_ID = 12345
     FAKE_SUBMISSION_ID = 67890
 
-    self.use_transactional_test_case = true
     setup_all do
       @user = create(:user)
       @facilitator = create(:facilitator)

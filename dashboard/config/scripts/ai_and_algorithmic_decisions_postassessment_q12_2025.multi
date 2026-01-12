@@ -7,7 +7,7 @@ wrong 'An OR operator that gives free shipping if either condition is true'
 wrong 'A loop that adds more items until the order reaches $50 automatically'
 wrong 'A variable that always sets shipping cost to $0, no matter the conditions'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 9

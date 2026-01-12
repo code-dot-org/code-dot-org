@@ -7,7 +7,7 @@ right 'Revise the prompt to include details about layout sections and the need f
 wrong 'Switch to a different AI tool without changing the request.'
 wrong 'Add new photos to distract from the missing contact information.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 3, 6, 10

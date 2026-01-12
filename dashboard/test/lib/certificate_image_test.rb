@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class CertificateImageTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     create_csf_unit 'coursea-2025'
   end

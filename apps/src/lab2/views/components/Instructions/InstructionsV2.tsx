@@ -124,7 +124,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               handleInstructionsTextClick={handleInstructionsTextClick}
               ref={ref}
             />
-            <PredictQuestion className={moduleStyles.predictQuestion} />
+            <PredictQuestion
+              levelProperties={levelProperties}
+              className={moduleStyles.predictQuestion}
+            />
           </div>
           {showTts && (
             <div className={moduleStyles.ttsContainer}>
@@ -150,7 +153,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 <PredictSummary />
               </div>
             </InstructorsOnly>
-            <PredictQuestionRunPrompt />
+            <PredictQuestionRunPrompt appName={levelProperties.appName} />
           </>
         )}
         {!hideNavigation && (

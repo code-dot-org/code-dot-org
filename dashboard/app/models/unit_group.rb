@@ -68,6 +68,7 @@ class UnitGroup < ApplicationRecord
   validates :link, presence: true
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
   validate :validate_family_name_and_version_year
+  validate :prevent_unlaunch_stable_courses
 
   def validate_family_name_and_version_year
     unless plc_course || (family_name.present? && version_year.present?)
@@ -80,6 +81,26 @@ class UnitGroup < ApplicationRecord
   def plc_courses_cannot_be_launched
     if plc_course && (launched? || pilot?)
       errors.add(:published_state, 'can never be pilot, preview or stable for a plc course.')
+    end
+  end
+
+  # Prevent changing a stable course back to in_development. We've had this
+  # happen accidentally as part of a levelbuilder content scoop, and it led to a
+  # major course becoming unavailable to end users. This validation is here as a
+  # debugging tactic to try to track down how this is happening. Once the bug is
+  # understood, we may want to remove this validation and/or add a more
+  # comprehensive protection against unlaunching stable courses.
+  #
+  # In the case where you really do want to unpublish a course, such as to allow
+  # curriculum writers to make edits to the course on levelbuilder, you can work
+  # around this validation by first changing the published_state to another
+  # state before changing it to in_development.
+  def prevent_unlaunch_stable_courses
+    return unless published_state_changed?
+
+    if published_state_was == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable &&
+        published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+      errors.add(:published_state, 'cannot change from stable to in_development')
     end
   end
 

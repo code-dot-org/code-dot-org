@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class CodeReviewTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @project_owner = create(:student)
     @project = create(:project, owner: @project_owner)

@@ -129,10 +129,7 @@ markdown <<MARKDOWN
       <li>Does <strong>not</strong> change the original array</li>
     </ul>
 
-<p style="font-size: 14pt; margin-bottom: 0;">
-      Think of <code>.map()</code> as:<br>
-      👉 <em>“Take each element, do something to it, and give me a new list.”</em>
-    </p>
+
   </div>
 
   <!-- Card 2 -->
@@ -162,4 +159,18 @@ markdown <<MARKDOWN
     </ul>
   </div>
 </div>
+
+
+  <div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #efe7f8; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem; margin: 0; line-height: 1.5; color: #3b0066;">
+       Think of <code>.map()</code> as:<br>
+       <em>“Take each element, do something to it, and give me a new list.”</em>
+    </p>
+  </div>
+
+</div>
+
+
 MARKDOWN

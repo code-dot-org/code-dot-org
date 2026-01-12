@@ -6,15 +6,13 @@
     "aif3-v2-2025",
     "aif4-v2-2025",
     "aif5-v3",
-    "aif6-v2-2025",
-    "aif5-v2-2025"
+    "aif6-v2-2025"
   ],
   "original_script_names": [
     "aif1-v2-2025",
     "aif2-v2-2025",
     "aif3-v2-2025",
     "aif4-v2-2025",
-    "aif5-v2-2025",
     "aif6-v2-2025",
     "aif5-v3"
   ],
@@ -28,7 +26,7 @@
         "key": "58113759-dcf0-447a-be87-c7731bee01f0",
         "notice": "AI Foundations Professional Development",
         "details": "Before starting this course, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-        "link": "https://studio.code.org/courses/teaching-ai-foundations-2025/",
+        "link": "https://studio.code.org/courses/teaching-ai-foundations-s1-v2-2025",
         "type": "information",
         "visibility": "Teacher-only",
         "dismissible": true,
@@ -49,6 +47,20 @@
       },
       "seeding_key": {
         "resource.key": "ai_chat_faq"
+      }
+    },
+    {
+      "name": "AI Foundations Changelog",
+      "url": "https://docs.google.com/document/d/1dhkmFRrxMF8Ach510fq3QyfKCAflJY6eAccVvc-PJZk/edit?usp=sharing",
+      "key": "ai_foundations_changelog",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_changelog"
       }
     },
     {
