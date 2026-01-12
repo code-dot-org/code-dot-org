@@ -7,7 +7,7 @@ wrong 'A function that changes the website\'s background color'
 wrong 'A style rule that adjusts the size of the text'
 right 'An if/else statement that checks whether all answers are correct'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 5

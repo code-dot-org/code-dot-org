@@ -7,7 +7,7 @@ wrong 'Making sure the data is encrypted so that only the developer can see it.'
 right 'Ensuring that users with screen readers can understand the data through proper labels and alt text.'
 wrong 'Using the most advanced AI models to generate the user interface automatically.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 7

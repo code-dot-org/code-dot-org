@@ -7,7 +7,7 @@ right 'To reduce the chance of the user misinterpreting raw data values.'
 wrong 'Because JavaScript objects cannot be displayed without labels.'
 wrong 'To make the list of items sort faster.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 5

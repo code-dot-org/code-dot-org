@@ -7,7 +7,7 @@ right 'To repeat a block of code multiple times until a specific condition is me
 wrong 'To permanently delete data that the user no longer needs.'
 wrong 'To change the color and layout of a web application.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1
