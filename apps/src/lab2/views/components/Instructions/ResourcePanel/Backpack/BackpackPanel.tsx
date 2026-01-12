@@ -57,10 +57,15 @@ const BackpackPanel: React.FC<BackpackProps> = ({
     loadBackpackFiles(true);
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
     // adds or deletes.
-    backpackApi?.addEventListener(() => {
+    const listenerId = backpackApi?.addEventListener(() => {
       // We don't show the load view here to avoid the screen flickering when the backpack updates.
       loadBackpackFiles(false);
     });
+    return () => {
+      if (listenerId) {
+        backpackApi?.removeEventListener(listenerId);
+      }
+    };
   }, [loadBackpackFiles, backpackApi]);
 
   if (!backpackApi) {
