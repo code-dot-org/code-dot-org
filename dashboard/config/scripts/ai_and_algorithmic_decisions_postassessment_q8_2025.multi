@@ -7,7 +7,7 @@ wrong 'The app loads an entirely new webpage for every single update.'
 right 'The app calls a function that adds the prices of all items and updates the total on screen.'
 wrong 'The app changes the color of the total text without changing the number.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4
