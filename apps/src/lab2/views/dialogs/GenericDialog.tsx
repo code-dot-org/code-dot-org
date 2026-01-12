@@ -4,7 +4,6 @@ import Dialog from '@code-dot-org/component-library/dialog';
 import Modal from '@code-dot-org/component-library/modal';
 import React, {useMemo} from 'react';
 
-import {useEnterKeyboardTrap} from '@cdo/apps/lab2/hooks';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -126,8 +125,6 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
     disabled: buttons?.confirm?.disabled,
     getButtonCallback,
   });
-
-  useEnterKeyboardTrap(confirmCallback);
 
   const DialogComponent = useModal ? Modal : Dialog;
 
