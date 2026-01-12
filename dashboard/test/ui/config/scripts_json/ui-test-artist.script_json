@@ -61,7 +61,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-06 22:44:24 UTC",
+    "serialized_at": "2026-01-12 20:29:09 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -274,6 +274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -295,6 +298,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -316,6 +322,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -337,6 +346,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -358,6 +370,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -379,6 +394,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_5.5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -400,6 +418,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -421,6 +442,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -442,6 +466,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -463,6 +490,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Standalone_Artist_9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
