@@ -96,29 +96,15 @@
       AutoPublish: true
       FunctionCode: |
         function handler(event) {
-          var newUrl = 'https://<%=CDO.pegasus_hostname%>';
-
-          // Append path
-          newUrl += event.request.uri;
-
-          // Reconstruct query string
-          var qs = event.request.querystring;
-          var queryParts = [];
-          for (var key in qs) {
-            if (qs.hasOwnProperty(key)) {
-              for (var i = 0; i < qs[key].multiValue.length; i++) {
-                queryParts.push(encodeURIComponent(key) + '=' + encodeURIComponent(qs[key].multiValue[i].value));
-              }
-            }
-          }
-          if (queryParts.length > 0) {
-            newUrl += '?' + queryParts.join('&');
-          }
+          var request = event.request;
+          var host = request.headers.host.value;
+          var newHost = host.replace(/^www\./, '');
+          var newUrl = 'https://' + newHost + request.uri;
 
           return {
             statusCode: 301,
-            statusDescription: 'Moved Permanently',
-            headers: {
+            statusDescription: '301 Moved Permanently',
+            headers:{
               "location": { "value": newUrl }
             }
           };
