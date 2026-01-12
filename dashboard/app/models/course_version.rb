@@ -23,9 +23,9 @@ class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
 
   belongs_to :course_offering, optional: true
-  has_many :resources
-  has_many :vocabularies
-  has_many :reference_guides
+  has_many :resources, dependent: :destroy
+  has_many :vocabularies, dependent: :destroy
+  has_many :reference_guides, dependent: :destroy
 
   attr_readonly :content_root_id
 
