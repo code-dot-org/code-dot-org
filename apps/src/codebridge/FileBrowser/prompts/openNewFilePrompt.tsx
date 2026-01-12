@@ -3,7 +3,6 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileName} from '@codebridge/utils';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -38,7 +37,15 @@ export const openNewFilePrompt = async ({
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
-    title: codebridgeI18n.newFilePrompt(),
+    title: 'Create a new file',
+    message: 'Give your new file a name and type.',
+    messageMargin: false,
+    label: 'File name',
+    buttons: {
+      confirm: {
+        text: 'Create file',
+      },
+    },
     validateInput: (fileName: string) =>
       validateFileName({
         fileName,

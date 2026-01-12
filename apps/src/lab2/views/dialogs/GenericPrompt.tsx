@@ -10,19 +10,23 @@ import GenericDialog, {
   GetButtonCallbackArgs,
 } from './GenericDialog';
 
+import moduleStyles from './generic-prompt.module.scss';
+
 const DEBOUNCE_TIME_OUT = 300;
 
 export type GenericPromptProps = Pick<
   GenericDialogProps,
-  'title' | 'useModal'
+  'title' | 'useModal' | 'buttons'
 > & {
   handleConfirm?: (prompt: string) => void;
   handleCancel?: () => void;
+  label?: string;
   placeholder?: string;
   value?: string;
   validateInput?: (prompt: string) => string | undefined;
   requiresPrompt?: boolean;
   message?: string;
+  messageMargin?: boolean;
 };
 
 /**
@@ -33,24 +37,35 @@ export type GenericPromptProps = Pick<
 
 type GenericPromptBodyProps = {
   message?: string;
+  label?: string;
   placeholder?: string;
   prompt: string;
   handleInputChange: (newInput: string) => void;
   errorMessage?: string;
+  messageMargin?: boolean;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   message,
+  label,
   placeholder,
   prompt,
   handleInputChange,
   errorMessage,
+  messageMargin = true,
 }) => {
   return (
     <>
-      {message && <BodyTwoText>{message}</BodyTwoText>}
+      {message && (
+        <BodyTwoText
+          className={messageMargin ? moduleStyles.messageMargin : ''}
+        >
+          {message}
+        </BodyTwoText>
+      )}
       <TextField
         name="prompt-field"
+        label={label}
         placeholder={placeholder}
         value={prompt}
         onChange={e => handleInputChange(e.target.value)}
@@ -66,11 +81,13 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   message,
   handleConfirm,
   handleCancel,
+  label,
   placeholder,
   value,
   validateInput = () => undefined,
   requiresPrompt = true,
   useModal = false,
+  buttons,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
@@ -145,6 +162,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       bodyComponent={
         <GenericPromptBody
           message={message}
+          label={label}
           placeholder={placeholder}
           prompt={prompt}
           handleInputChange={handleInputChange}
@@ -153,10 +171,14 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       }
       buttons={{
         confirm: {
+          ...buttons?.confirm,
           callback: () => handleConfirm?.(prompt),
           disabled: Boolean(errorMessage) || (requiresPrompt && !prompt.length),
         },
-        cancel: {callback: () => handleCancel?.()},
+        cancel: {
+          ...buttons?.cancel,
+          callback: () => handleCancel?.(),
+        },
       }}
       getButtonCallback={getButtonCallback}
     />
