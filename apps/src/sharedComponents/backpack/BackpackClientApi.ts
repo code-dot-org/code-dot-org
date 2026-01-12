@@ -18,6 +18,8 @@ type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
+
+// Events that can a listener can subscribe to.
 enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
