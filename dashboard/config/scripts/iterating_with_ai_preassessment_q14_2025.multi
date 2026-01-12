@@ -7,7 +7,7 @@ right 'Design a wireframe and specify a data schema that supports the planned fe
 wrong 'Pick the colors and fonts for the final product.'
 wrong 'Write a `while` loop that prints "Hello World."'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 11

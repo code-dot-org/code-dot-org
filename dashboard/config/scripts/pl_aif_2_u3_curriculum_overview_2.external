@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Curriculum Overview
+# Unit 3: Building Data-Driven Systems with AI - Overview
 
-## What is Building Data-Driven Systems all about?
+## What is Building Data-Driven Systems with AI all about?
  
 #### In **Building Data-Driven Systems**, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
 
@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Building Data-Driven Systmes is the 3rd unit in the course.***
+#### ***Note: Unlike the first semester, the second semester of AI Foundations is a continuous sequence and must be taught in order. Building Data-Driven Systems is the 3rd unit in the course.***
 
 ## Student Learning Goals
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
@@ -45,12 +45,7 @@ markdown <<MARKDOWN
 
 
 
-## Unit Length and Format
 
-
-
-#### **Total Duration:** Approximately 3 weeks
-#### **Structure:** Eleven 45-minute lessons and one 3-day culminating project
 
 
 
