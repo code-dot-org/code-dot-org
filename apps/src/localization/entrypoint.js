@@ -11,7 +11,7 @@ import {get, set} from 'js-cookie';
  * The current course listing and a mapping between them and Localize project
  * keys. This is a temporary measure for now.
  */
-const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024'];
+const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024', '/courses/aiml-2024'];
 
 const csf_prefixes = [
   '/courses/k5-unplugged',
@@ -88,6 +88,7 @@ const live = [
   '/courses/teaching-ai-foundations-2025',
   '/courses/oceans',
   '/courses/how-ai-works-2023',
+  '/courses/aiml-2024',
 ];
 
 const experiments =
