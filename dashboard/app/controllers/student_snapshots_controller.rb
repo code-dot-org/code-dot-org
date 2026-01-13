@@ -79,15 +79,30 @@ class StudentSnapshotsController < ApplicationController
     script = lesson.script
     cfu_responses_data = []
 
-    cfu_script_levels_for(lesson).each do |script_level|
+    # Precompute CFU script levels and batch-load all relevant UserLevels to avoid N+1 queries.
+    script_levels = cfu_script_levels_for(lesson)
+    non_level_group_levels = script_levels.flat_map(&:levels).reject {|level| level.is_a?(LevelGroup)}
+    level_ids = non_level_group_levels.map(&:id)
+
+    user_levels_by_level_id =
+      if level_ids.empty?
+        {}
+      else
+        UserLevel.where(user: student, script: script, level_id: level_ids).
+          includes(:level_source).
+          order(updated_at: :desc).
+          group_by(&:level_id).
+          transform_values(&:first)
+      end
+
+    script_levels.each do |script_level|
       script_level.levels.each do |level|
         # CFUs can be a LevelGroup (collection of sublevels). In that case, the
         # student's responses live on the sublevels, not on the parent itself.
         if level.is_a?(LevelGroup)
           cfu_responses_data << build_cfu_level_group_response(level, script_level, student, script)
         else
-          user_level = UserLevel.where(user: student, script: script, level: level).
-            order(updated_at: :desc).first
+          user_level = user_levels_by_level_id[level.id]
           student_answer = user_level&.level_source&.data
 
           response_summary = summarize_cfu_level_result(level, student_answer)
