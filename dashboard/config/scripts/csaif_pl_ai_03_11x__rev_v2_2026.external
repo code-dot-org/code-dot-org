@@ -1,0 +1,62 @@
+name 'csaif_pl_ai_03_11x_-rev_v2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethics of AI Collaboration
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Ethics</strong> the branch of philosophy that deals with what is morally right and wrong, and how decisions affect people and society.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Copyright</strong> the legal right granted to the creator of an original work to use, distribute, and modify it.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Attribution</strong> the act of giving credit to the original creator of a work, especially in the context of using or referencing their material.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Transparency</strong> the practice of openly disclosing how something works, especially in terms of decision-making, data use, or AI processes.</p>
+</div>
+
+#### AI-generated content can blur the line between real and misleading; consequently, here are some ethical and legal challenges it's risen.
+
+#### 🔎 **Think About** 
+#### While you're reviewing these scenarios, here are some questions you may wish to reflect on.
+* #### *Who should own AI-generated content - the AI creator, the user, the company, or shared ownership? What happens if AI uses copyrighted material in training?*
+* #### *Should AI-generated art be considered “real art”? Who should get credit—the AI, the programmer, or the person providing the prompt?*
+* #### *Should musicians have control over AI trained on their music? Who should be compensated when AI-generated music is sold?*
+
+#### Your answers may be very personal, guided by your own legal, ethical, or creative values.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="font-size: 14px">In 2023, controversy arose when AI-generated books—	created using tools like ChatGPT—were listed on Amazon under fake author names and marketed as legitimate works.</p>
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="font-size: 14px">Debates over "real art" raged in 2022 after an AI-generated artwork titled "Théâtre D’opéra Spatial", created using MidJourney, won first place at the Colorado State Fair’s digital art competition.
+</p>
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="font-size: 14px">In 2023, major music companies filed lawsuits against AI music platforms Suno AI and Udio AI, accusing them of using copyrighted songs without permission. These tools generate new music from user prompts, raising serious questions about ownership, consent, and compensation.</p>
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="font-size: 14px">In 2023, artists and authors sued AI companies, arguing their copyrighted works were scraped and used without permission. They believe this practice is not just illegal—but also unethical—because it harms their ability to earn a living.</p>
+</div>
+</div>
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> The vocabulary words are introduced at the start of the lesson, and then students explore the related ideas in a stations activity. Encourage students to use the vocabulary words throughout the activity and following discussions to help reinforce their use.
+</p>
+</div>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 11. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+MARKDOWN

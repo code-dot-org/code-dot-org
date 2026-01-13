@@ -7,7 +7,7 @@ wrong '5 times'
 right '6 times'
 wrong 'It will not run at all.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

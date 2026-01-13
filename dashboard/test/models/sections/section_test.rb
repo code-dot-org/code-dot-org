@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
-  self.use_transactional_test_case = true
+
   setup_all do
     @student = create(:student)
     @teacher = create(:teacher)
@@ -905,6 +905,7 @@ class SectionTest < ActiveSupport::TestCase
       currentUnitTitle: '',
       linkToCurrentUnit: '',
       code: section.code,
+      hidden: false,
       login_type: "email",
       grades: nil,
       is_assigned_single_unit_course: false,

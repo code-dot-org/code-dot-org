@@ -7,7 +7,7 @@ right 'Read the AI\'s code carefully, test it step by step, and look for where t
 wrong 'Delete the project and start completely over from scratch.'
 wrong 'Ask a classmate to fix it without checking what the AI suggested.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 2-6

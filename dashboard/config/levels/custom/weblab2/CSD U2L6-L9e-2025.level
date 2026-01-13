@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-09T20:13:06.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the missing styles",
+    "long_instructions": "# Debug: Missing Styles\r\n\r\n![](https://images.code.org/17d4d7c7e8e2fa291f0a1ce23f1ef50c-image-1767989562973.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug\r\n\r\n",
+    "bubble_choice_description": "Use your debugging skills to figure out why none of the styles are being applied.",
+    "thumbnail_url": "https://images.code.org/184256137c9e35cf179bbeeb3e3d9ee9-image-1563315505750.JPG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <h1>Olympic Games</h1>\n    <p>The Olympic Games, or Olympics, are  international sports events. Athletes from over 200 nations participate in these competitions. The games were inspired by the Ancient Olympic Games held in Olympia, Greece. </p>\n    <h2>Timeline</h2>\n    <p>The Ancient Olympic Games were held in the 8th century BC, but the first modern Olympics were held in 1896. Now there are summer and winter competitions, and they are held every four years to honor the ancient origins. The games last for 16 days and include over 300 events.</p>\n    <h2>Ceremonies</h2>\n    <p>Olympic Games have an opening and closing ceremony. The opening cermony usually starts with the president of the host nation and the national anthem. There are then displays of music, singing, and dance of that nation's culture. After the displays, athletes walk around the stadium by nation. Finally, the Olympic torch is passed among athletes until it reaches the final torch carrier, who lights the Olympic flame.</p>\n    <p>The closing cermony takes place after all the sporting events have finished. The athletes enter again together, not divided by nation. Speeches are given and the flame is put out. The host nation for the next Olympics is announced, and that nation briefly puts on displays of its culture.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "p {\n  color: black;\n  font-size: 12px;\n}\nh1 {\n  font-weight: bold;\n  color: blue;\n}\nh2 {\n  color: green;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-09 20:13:17 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:13:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:13:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:13:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:13:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

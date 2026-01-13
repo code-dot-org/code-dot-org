@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-06 22:26:42 UTC",
+    "serialized_at": "2026-01-09 17:55:24 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -466,6 +466,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-HTML-howto-12"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -563,6 +566,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-CSS-howto-15"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -860,6 +866,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-howto-29"
+        ],
         "progression": "Sitemaps and Wireframes"
       },
       "bonus": false,

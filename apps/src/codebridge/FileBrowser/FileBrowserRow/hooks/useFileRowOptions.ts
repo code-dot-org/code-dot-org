@@ -178,10 +178,13 @@ export const useFileRowOptions = (
         clickHandler: () => openConfirmDeleteFile({file}),
       },
       {
-        condition: true,
+        condition: backpackApi !== null,
         iconName: 'backpack',
         labelText: codebridgeI18n.saveToBackpackTitle(),
-        clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
+        clickHandler: () =>
+          backpackApi
+            ? openSaveToBackpackPrompt({file, backpackApi})
+            : undefined,
       },
     ],
     [

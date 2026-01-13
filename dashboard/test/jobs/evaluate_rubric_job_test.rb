@@ -679,7 +679,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     version_id: 'fake-version-id',
     include_exact_confidence: true
   )
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    _owner_id, project_id = get_storage_id_and_project_id(channel_id)
     rubric_ai_eval = RubricAiEvaluation.where(user_id: user.id).order(updated_at: :desc).first
     assert_equal project_id, rubric_ai_eval.project_id
     assert_equal version_id, rubric_ai_eval.project_version
