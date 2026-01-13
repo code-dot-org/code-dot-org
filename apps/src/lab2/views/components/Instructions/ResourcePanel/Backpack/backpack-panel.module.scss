@@ -1,0 +1,13 @@
+.backpackPanelWithFiles {
+  display: flex;
+  padding: var(--padding-p-xxs, 8px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
