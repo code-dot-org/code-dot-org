@@ -232,12 +232,6 @@ export const formatAcceptRejectResponse = (
   if (response.explanation) {
     formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
   }
-  if (response.nextSteps) {
-    formattedExplanation += `**Next Steps**\n\n${response.nextSteps}\n\n`;
-  }
-  if (response.questions) {
-    formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
-  }
   return {
     explanation: formattedExplanation,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
