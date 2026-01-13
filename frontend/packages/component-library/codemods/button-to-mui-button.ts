@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars, prefer-const */ /**
+/**
 
  * Codemod to transform Button/LinkButton components to MUI Button/IconButton
  *
@@ -14,11 +14,78 @@
  * expressions so we don't lose any custom props.
  */
 
-import type {API, FileInfo, Options} from 'jscodeshift';
+import type {
+  API,
+  FileInfo,
+  ImportSpecifier,
+  JSXAttribute,
+  JSXElement,
+  Literal,
+  ObjectExpression,
+  Property,
+  Expression,
+} from 'jscodeshift';
 
 import {transformButtonPropsCore} from '../src/button/buttonPropsToMuiCore';
 
-function transformer(file: FileInfo, api: API, _options: Options) {
+// Type definitions for AST nodes
+interface LiteralNode extends Literal {
+  type: 'Literal' | 'StringLiteral';
+  value: string | number | boolean | null;
+}
+
+interface BooleanLiteralNode {
+  type: 'BooleanLiteral';
+  value: boolean;
+}
+
+interface MemberExpressionNode {
+  type: 'MemberExpression';
+  object: {name?: string};
+  property: {name?: string};
+}
+
+interface ObjectExpressionNode extends ObjectExpression {
+  type: 'ObjectExpression';
+  properties: Property[];
+}
+
+interface JSXExpressionContainerNode {
+  type: 'JSXExpressionContainer';
+  expression: Expression;
+}
+
+interface JSXAttributeNode extends JSXAttribute {
+  name: {name: string};
+  value: LiteralNode | JSXExpressionContainerNode | null;
+  type?: string;
+}
+
+interface ImportSpecifierNode extends ImportSpecifier {
+  imported?: {name: string};
+  local?: {name: string};
+}
+
+interface IconProps {
+  iconName?: string;
+  iconStyle?: string;
+  iconFamily?: string;
+  animationType?: string;
+  title?: unknown;
+  [key: string]: unknown;
+}
+
+interface TransformResult {
+  isIconButton: boolean;
+  buttonProps: Record<string, unknown>;
+  iconButtonProps: Record<string, unknown>;
+  isPending: boolean;
+  icon?: IconProps;
+  _originalPropsMap: Record<string, {value: unknown; attr: JSXAttributeNode}>;
+  _originalProps: JSXAttributeNode[];
+}
+
+function transformer(file: FileInfo, api: API) {
   const j = api.jscodeshift;
   const root = j(file.source);
 
@@ -31,29 +98,24 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     return file.source; // No changes needed
   }
 
-  let hasButton = false;
-  let hasLinkButton = false;
   let hasButtonColors = false;
 
   // Step 1: Update imports
   buttonImports.forEach(path => {
-    const specifiers = path.value.specifiers || [];
+    const specifiers = (path.value.specifiers || []) as ImportSpecifierNode[];
 
-    hasButton = specifiers.some((s: any) => s.imported?.name === 'Button');
-    hasLinkButton = specifiers.some(
-      (s: any) => s.imported?.name === 'LinkButton',
-    );
-    hasButtonColors = specifiers.some(
-      (s: any) => s.imported?.name === 'buttonColors',
-    );
+    hasButtonColors = specifiers.some(s => s.imported?.name === 'buttonColors');
 
-    const newSpecifiers: any[] = [];
+    const newSpecifiers: ImportSpecifierNode[] = [];
 
     // Keep buttonColors if it exists
     if (hasButtonColors) {
-      newSpecifiers.push(
-        specifiers.find((s: any) => s.imported?.name === 'buttonColors'),
+      const buttonColorsSpec = specifiers.find(
+        s => s.imported?.name === 'buttonColors',
       );
+      if (buttonColorsSpec) {
+        newSpecifiers.push(buttonColorsSpec);
+      }
     }
 
     // Replace or remove the import
@@ -70,42 +132,55 @@ function transformer(file: FileInfo, api: API, _options: Options) {
   let needsIconImport = false;
 
   // Helper to extract prop value from JSX attribute
-  const getPropValue = (attr: any) => {
+  const getPropValue = (
+    attr: JSXAttributeNode,
+  ): LiteralNode | Expression | null => {
     if (!attr.value) return null;
     if (attr.value.type === 'JSXExpressionContainer') {
       return attr.value.expression;
     }
-    return attr.value;
+    return attr.value as LiteralNode;
   };
 
   // Helper to evaluate expression to get runtime value (for buttonPropsToMui)
   const evaluateExpression = (expr: unknown): unknown => {
-    if (!expr || typeof expr !== 'object') return undefined;
-    const node = expr as {type?: string; [key: string]: unknown};
+    if (!expr || typeof expr !== 'object' || !('type' in expr)) {
+      return undefined;
+    }
+
+    const node = expr as {type: string; [key: string]: unknown};
 
     if (node.type === 'Literal' || node.type === 'StringLiteral') {
-      return (node as any).value;
+      return (node as unknown as LiteralNode).value;
     }
     if (node.type === 'BooleanLiteral') {
-      return (node as any).value;
+      return (node as unknown as BooleanLiteralNode).value;
     }
     if (node.type === 'MemberExpression') {
-      const obj = (node as any).object;
-      const prop = (node as any).property;
-      if (obj?.name === 'buttonColors') {
-        return prop?.name;
+      const memberNode = node as unknown as MemberExpressionNode;
+      if (memberNode.object?.name === 'buttonColors') {
+        return memberNode.property?.name;
       }
       return undefined;
     }
     if (node.type === 'ObjectExpression') {
+      const objNode = node as unknown as ObjectExpressionNode;
       const obj: Record<string, unknown> = {};
-      (node as any).properties.forEach((prop: any) => {
-        if (prop.key?.name) {
-          const value = prop.value;
-          if (value.type === 'Literal' || value.type === 'StringLiteral') {
-            obj[prop.key.name] = value.value;
-          } else if (value.type === 'BooleanLiteral') {
-            obj[prop.key.name] = value.value;
+      objNode.properties.forEach(prop => {
+        if (
+          prop.type === 'ObjectProperty' &&
+          prop.key &&
+          'name' in prop.key &&
+          prop.value
+        ) {
+          const key = prop.key.name as string;
+          const value = prop.value as {type?: string; value?: unknown};
+          if (
+            value.type === 'Literal' ||
+            value.type === 'StringLiteral' ||
+            value.type === 'BooleanLiteral'
+          ) {
+            obj[key] = value.value;
           }
         }
       });
@@ -121,76 +196,83 @@ function transformer(file: FileInfo, api: API, _options: Options) {
   };
 
   // Helper to create JSX attribute value - wraps expressions in JSXExpressionContainer
-  const createJSXAttributeValue = (value: any) => {
+  const createJSXAttributeValue = (
+    value: LiteralNode | Expression | null,
+  ): LiteralNode | JSXExpressionContainerNode | null => {
     if (!value) return null;
     if (
       value.type === 'Literal' ||
       value.type === 'StringLiteral' ||
       value.type === 'BooleanLiteral'
     ) {
-      return value;
+      return value as LiteralNode;
     }
     if (value.type === 'JSXExpressionContainer') {
-      return value;
+      return value as JSXExpressionContainerNode;
     }
-    return j.jsxExpressionContainer(value);
+    return j.jsxExpressionContainer(value as Expression);
   };
 
   // Helper to create FontAwesomeV6Icon JSX element
   // Handles both AST ObjectExpression nodes (from original code) and plain objects
   // Creates individual JSX attributes instead of using spread syntax
   const createIconElement = (
-    iconProps:
-      | {
-          iconName?: string;
-          iconStyle?: string;
-          iconFamily?: string;
-          animationType?: string;
-          title?: any;
-          [key: string]: any;
-        }
-      | {type?: string; properties?: any[]}
-      | null
-      | undefined,
+    iconProps: IconProps | ObjectExpressionNode | null | undefined,
   ) => {
     if (!iconProps) return null;
 
-    const jsxAttributes: any[] = [];
+    const jsxAttributes: JSXAttribute[] = [];
 
     // If it's an AST ObjectExpression node, extract each property
-    if (iconProps.type === 'ObjectExpression' && iconProps.properties) {
-      (iconProps as any).properties.forEach((prop: any) => {
-        if (!prop.key) return;
-        const key = prop.key.name || prop.key.value;
+    if (
+      typeof iconProps === 'object' &&
+      'type' in iconProps &&
+      iconProps.type === 'ObjectExpression' &&
+      'properties' in iconProps
+    ) {
+      const objNode = iconProps as ObjectExpressionNode;
+      objNode.properties.forEach(prop => {
+        if (prop.type !== 'ObjectProperty' || !prop.key) return;
+        const key =
+          'name' in prop.key
+            ? prop.key.name
+            : 'value' in prop.key
+              ? String(prop.key.value)
+              : null;
         if (!key) return;
 
         const value = prop.value;
-        let attrValue: any;
+        let attrValue: LiteralNode | JSXExpressionContainerNode;
 
         // Handle different value types
         if (
-          value.type === 'Literal' ||
-          value.type === 'StringLiteral' ||
-          value.type === 'BooleanLiteral'
+          value &&
+          typeof value === 'object' &&
+          'type' in value &&
+          (value.type === 'Literal' ||
+            value.type === 'StringLiteral' ||
+            value.type === 'BooleanLiteral')
         ) {
           // Literal values: use directly
-          attrValue = j.literal(value.value);
+          attrValue = j.literal(
+            (value as LiteralNode | BooleanLiteralNode).value,
+          );
         } else {
           // Complex expressions (function calls, etc.): wrap in JSXExpressionContainer
-          attrValue = j.jsxExpressionContainer(value);
+          attrValue = j.jsxExpressionContainer(value as Expression);
         }
 
         jsxAttributes.push(j.jsxAttribute(j.jsxIdentifier(key), attrValue));
       });
     } else {
       // Otherwise, treat it as a plain object and build individual attributes
-      const plainObj = iconProps as Record<string, unknown>;
+      const plainObj = iconProps as IconProps;
 
       Object.keys(plainObj).forEach(key => {
         const value = plainObj[key];
         if (value === undefined || value === null) return;
 
-        let attrValue: any;
+        let attrValue: LiteralNode | JSXExpressionContainerNode;
 
         if (
           typeof value === 'string' ||
@@ -201,7 +283,7 @@ function transformer(file: FileInfo, api: API, _options: Options) {
           attrValue = j.literal(value);
         } else if (value && typeof value === 'object' && 'type' in value) {
           // AST node: wrap in JSXExpressionContainer
-          attrValue = j.jsxExpressionContainer(value as any);
+          attrValue = j.jsxExpressionContainer(value as Expression);
         } else {
           // Other complex values: skip (can't convert to AST)
           return;
@@ -228,9 +310,12 @@ function transformer(file: FileInfo, api: API, _options: Options) {
   };
 
   // Transform props using shared core logic
-  const transformProps = (props: any[]) => {
+  const transformProps = (props: JSXAttributeNode[]): TransformResult => {
     const propsObj: Record<string, unknown> = {};
-    const originalPropsMap: Record<string, {value: unknown; attr: any}> = {};
+    const originalPropsMap: Record<
+      string,
+      {value: unknown; attr: JSXAttributeNode}
+    > = {};
 
     props.forEach(attr => {
       if (attr.type === 'JSXSpreadAttribute') {
@@ -248,14 +333,22 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       if (evaluatedValue !== undefined) {
         propsObj[key] = evaluatedValue;
       } else if (value) {
-        if (value.type === 'ObjectExpression') {
+        if (
+          value &&
+          typeof value === 'object' &&
+          'type' in value &&
+          value.type === 'ObjectExpression'
+        ) {
           const objValue = evaluateExpression(value);
           if (objValue) {
             propsObj[key] = objValue;
           }
         } else if (
-          value.type === 'ArrowFunctionExpression' ||
-          value.type === 'FunctionExpression'
+          value &&
+          typeof value === 'object' &&
+          'type' in value &&
+          (value.type === 'ArrowFunctionExpression' ||
+            value.type === 'FunctionExpression')
         ) {
           // skip, handled by onClick logic
         } else {
@@ -272,27 +365,25 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       propsObj.useAsLink = true;
     }
 
-    const core = transformButtonPropsCore(propsObj as any);
-
-    const isIconButton = !!(
-      (propsObj as any).isIconOnly && (propsObj as any).icon
+    const core = transformButtonPropsCore(
+      propsObj as Parameters<typeof transformButtonPropsCore>[0],
     );
-    const isPending = !!(propsObj as any).isPending;
+
+    const isIconButton = !!(propsObj.isIconOnly && propsObj.icon);
+    const isPending = !!propsObj.isPending;
     const baseProps = {...core.baseProps} as Record<string, unknown>;
 
     const muiProps: Record<string, unknown> = {...baseProps};
 
-    const iconLeft = (propsObj as any).iconLeft;
-    const iconRight = (propsObj as any).iconRight;
-    const icon = (propsObj as any).icon;
+    const iconLeft = propsObj.iconLeft as IconProps | undefined;
+    const iconRight = propsObj.iconRight as IconProps | undefined;
+    const icon = propsObj.icon as IconProps | undefined;
     const spinnerIcon = core.spinnerIcon;
     const spinnerPosition = core.spinnerPosition;
     const addPendingButtonWithHiddenTextClass =
       core.addPendingButtonWithHiddenTextClass;
 
-    let iconOnlyIcon:
-      | {iconName: string; iconStyle?: string; animationType?: string}
-      | undefined;
+    let iconOnlyIcon: IconProps | undefined;
 
     if (!isIconButton) {
       if (isPending) {
@@ -334,8 +425,8 @@ function transformer(file: FileInfo, api: API, _options: Options) {
           ? `${existingClassName} buttonPendingWithHiddenText`
           : 'buttonPendingWithHiddenText';
       }
-    } else if (icon) {
-      iconOnlyIcon = icon;
+    } else if (icon && typeof icon === 'object' && 'iconName' in icon) {
+      iconOnlyIcon = icon as IconProps;
     }
 
     return {
@@ -350,8 +441,11 @@ function transformer(file: FileInfo, api: API, _options: Options) {
   };
 
   // Convert buttonPropsToMui result to JSX attributes
-  const propsToJSXAttributes = (muiProps: any, originalProps: any[]) => {
-    const jsxAttributes: any[] = [];
+  const propsToJSXAttributes = (
+    muiProps: Record<string, unknown>,
+    originalProps: JSXAttributeNode[],
+  ): {jsxAttributes: JSXAttribute[]; children: unknown[]} => {
+    const jsxAttributes: JSXAttribute[] = [];
 
     // variant / color / size / disabled
     if (muiProps.variant) {
@@ -394,7 +488,7 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     const pendingWithHiddenText = muiProps._pendingWithHiddenText;
 
     if (classNameAttr || forceHoverAttr || pendingWithHiddenText) {
-      let classNameExpr = classNameAttr
+      const classNameExpr = classNameAttr
         ? getPropValue(classNameAttr)
         : j.literal('');
       let needsTemplateLiteral = false;
@@ -602,13 +696,16 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     }
 
     // icons & children
-    const children: any[] = [];
+    const children: unknown[] = [];
 
     // startIcon
     if (muiProps.startIcon) {
-      const iconProps = muiProps.startIcon;
+      const iconProps = muiProps.startIcon as IconProps | ObjectExpressionNode;
       const iconLeftAttr = originalProps.find(p => p.name?.name === 'iconLeft');
-      const isSpinner = iconProps.iconName === 'spinner';
+      const isSpinner =
+        typeof iconProps === 'object' &&
+        'iconName' in iconProps &&
+        iconProps.iconName === 'spinner';
       let iconJSX = null;
 
       if (isSpinner) {
@@ -619,9 +716,15 @@ function transformer(file: FileInfo, api: API, _options: Options) {
         });
       } else if (iconLeftAttr) {
         const iconValue = getPropValue(iconLeftAttr);
-        iconJSX = createIconElement(iconValue);
-      } else if (typeof iconProps === 'object' && iconProps.iconName) {
-        iconJSX = createIconElement(iconProps);
+        iconJSX = createIconElement(
+          iconValue as IconProps | ObjectExpressionNode | null,
+        );
+      } else if (
+        typeof iconProps === 'object' &&
+        'iconName' in iconProps &&
+        iconProps.iconName
+      ) {
+        iconJSX = createIconElement(iconProps as IconProps);
       }
 
       if (iconJSX) {
@@ -636,11 +739,14 @@ function transformer(file: FileInfo, api: API, _options: Options) {
 
     // endIcon
     if (muiProps.endIcon) {
-      const iconProps = muiProps.endIcon;
+      const iconProps = muiProps.endIcon as IconProps | ObjectExpressionNode;
       const iconRightAttr = originalProps.find(
         p => p.name?.name === 'iconRight',
       );
-      const isSpinner = iconProps.iconName === 'spinner';
+      const isSpinner =
+        typeof iconProps === 'object' &&
+        'iconName' in iconProps &&
+        iconProps.iconName === 'spinner';
       let iconJSX = null;
 
       if (isSpinner) {
@@ -651,9 +757,15 @@ function transformer(file: FileInfo, api: API, _options: Options) {
         });
       } else if (iconRightAttr) {
         const iconValue = getPropValue(iconRightAttr);
-        iconJSX = createIconElement(iconValue);
-      } else if (typeof iconProps === 'object' && iconProps.iconName) {
-        iconJSX = createIconElement(iconProps);
+        iconJSX = createIconElement(
+          iconValue as IconProps | ObjectExpressionNode | null,
+        );
+      } else if (
+        typeof iconProps === 'object' &&
+        'iconName' in iconProps &&
+        iconProps.iconName
+      ) {
+        iconJSX = createIconElement(iconProps as IconProps);
       }
 
       if (iconJSX) {
@@ -712,10 +824,10 @@ function transformer(file: FileInfo, api: API, _options: Options) {
   };
 
   // Step 2: Transform Button/LinkButton JSX elements
-  const transformButton = (path: any) => {
+  const transformButton = (path: {value: JSXElement}) => {
     const element = path.value;
     const openingElement = element.openingElement;
-    const props = openingElement.attributes || [];
+    const props = (openingElement.attributes || []) as JSXAttributeNode[];
 
     const {
       isIconButton,
@@ -734,10 +846,12 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     // Icon-only buttons: render icon as child
     if (isIconButton && iconOnlyIcon) {
       needsIconImport = true;
-      const iconAttr = props.find((p: any) => p.name?.name === 'icon');
+      const iconAttr = props.find(p => p.name?.name === 'icon');
       if (iconAttr) {
         const iconValue = getPropValue(iconAttr);
-        const iconElement = createIconElement(iconValue);
+        const iconElement = createIconElement(
+          iconValue as IconProps | ObjectExpressionNode | null,
+        );
         if (iconElement) {
           muiChildren.push(iconElement);
         }
@@ -751,8 +865,8 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     } else {
       needsMuiButton = true;
       // Check if regular button has icons
-      const hasIconLeft = props.some((p: any) => p.name?.name === 'iconLeft');
-      const hasIconRight = props.some((p: any) => p.name?.name === 'iconRight');
+      const hasIconLeft = props.some(p => p.name?.name === 'iconLeft');
+      const hasIconRight = props.some(p => p.name?.name === 'iconRight');
       if (hasIconLeft || hasIconRight) {
         needsIconImport = true;
       }
@@ -761,12 +875,12 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     const componentName = isIconButton ? 'MuiIconButton' : 'MuiButton';
 
     const hasStartIcon = jsxAttributes.some(
-      (a: any) => a.name?.name === 'startIcon',
+      a => a.name && 'name' in a.name && a.name.name === 'startIcon',
     );
     const hasEndIcon = jsxAttributes.some(
-      (a: any) => a.name?.name === 'endIcon',
+      a => a.name && 'name' in a.name && a.name.name === 'endIcon',
     );
-    const hasText = props.some((p: any) => p.name?.name === 'text');
+    const hasText = props.some(p => p.name?.name === 'text');
     const hasChildren =
       muiChildren.length > 0 ||
       hasStartIcon ||
@@ -798,13 +912,12 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     .replaceWith(transformButton);
 
   // Step 3: Add imports at the beginning of the file in the correct order
-  const allImports = root.find(j.ImportDeclaration);
   const programBody = root.get().node.program.body;
 
   // Helper to find insertion point (beginning of imports section)
-  const getInsertionIndex = () => {
+  const getInsertionIndex = (): number => {
     const firstNonImportIndex = programBody.findIndex(
-      (node: any) => node.type !== 'ImportDeclaration',
+      node => node.type !== 'ImportDeclaration',
     );
     return firstNonImportIndex >= 0 ? firstNonImportIndex : programBody.length;
   };
@@ -833,7 +946,7 @@ function transformer(file: FileInfo, api: API, _options: Options) {
     });
 
     if (existingMuiImport.length === 0) {
-      const muiSpecifiers: any[] = [];
+      const muiSpecifiers: ImportSpecifier[] = [];
       if (needsMuiButton) {
         muiSpecifiers.push(
           j.importSpecifier(j.identifier('Button'), j.identifier('MuiButton')),
@@ -862,12 +975,13 @@ function transformer(file: FileInfo, api: API, _options: Options) {
       // MUI import exists, check if we need to add missing specifiers
       const existingMuiImportPath = existingMuiImport.paths()[0];
       if (existingMuiImportPath && existingMuiImportPath.value) {
-        const existingSpecifiers = existingMuiImportPath.value.specifiers || [];
+        const existingSpecifiers = (existingMuiImportPath.value.specifiers ||
+          []) as ImportSpecifierNode[];
         const hasMuiButton = existingSpecifiers.some(
-          (s: any) => s.imported?.name === 'Button',
+          s => s.imported?.name === 'Button',
         );
         const hasMuiIconButton = existingSpecifiers.some(
-          (s: any) => s.imported?.name === 'IconButton',
+          s => s.imported?.name === 'IconButton',
         );
 
         if (needsMuiButton && !hasMuiButton) {

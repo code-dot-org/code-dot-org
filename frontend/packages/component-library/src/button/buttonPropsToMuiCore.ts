@@ -26,6 +26,7 @@ export const sizeMap: Record<
 };
 
 // Map color to MUI color prop
+// Note: 'tertiary' and 'white' are custom colors defined in types.d.ts
 export const colorMap: Record<ButtonColor, MuiButtonProps['color']> = {
   purple: 'primary',
   black: 'secondary',
