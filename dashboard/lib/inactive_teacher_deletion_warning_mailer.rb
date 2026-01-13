@@ -41,7 +41,7 @@ class InactiveTeacherDeletionWarningMailer
           upload_metrics(teacher.id) unless @dry_run
         rescue StandardError => exception
           self.num_errors += 1
-          log_message("Error deleting user_id #{teacher.id}: #{exception.message}")
+          log_message("Error emailing user_id #{teacher.id}: #{exception.message}")
         ensure
           processed_teacher_ids << teacher.id
         end
