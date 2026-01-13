@@ -1,9 +1,10 @@
+import {ThemeProvider} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import {ThemeProvider} from '@mui/material';
 
 import {CdoTheme} from '@/themes';
+
 import NotificationBanner from '../NotificationBanner';
 
 const renderWithTheme = (component: React.ReactElement) => {

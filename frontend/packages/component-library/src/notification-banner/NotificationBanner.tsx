@@ -2,14 +2,14 @@ import {Paper, Stack, Typography, IconButton, Box} from '@mui/material';
 import {forwardRef, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-
-import {NotificationBannerVariant, NotificationBannerStyle} from './types';
 import {
   getNotificationBannerBackgroundColor,
   getNotificationBannerBorderColor,
   getNotificationBannerIconContainerBorderColor,
   getNotificationBannerIconColor,
 } from '@/themes/code.org/styleOverrides/notificationBanner';
+
+import {NotificationBannerVariant, NotificationBannerStyle} from './types';
 
 export interface NotificationBannerProps {
   /** Variant color/sentiment */
