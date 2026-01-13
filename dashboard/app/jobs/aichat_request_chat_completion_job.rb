@@ -30,12 +30,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     request = arguments.first[:request]
     request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
-    Honeybadger.notify(
-      "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
-      context: {
-        request: request.to_json
-      }
-    )
 
     # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
