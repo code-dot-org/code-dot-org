@@ -57,3 +57,9 @@
   gap: 4px;
   align-self: stretch;
 }
+
+.filePreview {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
+}
