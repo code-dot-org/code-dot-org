@@ -25,6 +25,8 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
@@ -186,6 +188,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
+
+  const backpackApi = useBackpackAPIContext();
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -351,6 +355,23 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
+
+  useEffect(() => {
+    if (backpackApi) {
+      // Subscribe to backpack changes if we have a backpack.
+      // We set the current tab to backpack if the user just added a file to the backpack.
+      const listenerId = backpackApi.addEventListener((event, _) => {
+        if (event === BackpackEvent.FileAdded) {
+          setCurrentTab(Tabs.Backpack);
+        }
+      });
+      return () => {
+        if (listenerId) {
+          backpackApi?.removeEventListener(listenerId);
+        }
+      };
+    }
+  }, [backpackApi]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {

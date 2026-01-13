@@ -40,7 +40,9 @@
   min-width: 0;
 }
 
-.infoText {
+// Duplicate class name to increase specificity, otherwise the typography component
+// may apply an unnecessary bottom margin.
+.infoText.infoText {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
