@@ -1,7 +1,7 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {getStore} from '@cdo/apps/redux';
@@ -10,6 +10,7 @@ import i18n from '@cdo/locale';
 import BackToFrontConfetti from './BackToFrontConfetti';
 import BaseDialog from './BaseDialog';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
+
 import styles from './ChallengeDialog.module.scss';
 
 class ChallengeDialog extends React.Component {
@@ -98,7 +99,9 @@ class ChallengeDialog extends React.Component {
           />
         </div>
         <div className={styles.content}>
-          {this.props.text && <div className={styles.text}>{this.props.text}</div>}
+          {this.props.text && (
+            <div className={styles.text}>{this.props.text}</div>
+          )}
           {this.props.children}
         </div>
         <Button
