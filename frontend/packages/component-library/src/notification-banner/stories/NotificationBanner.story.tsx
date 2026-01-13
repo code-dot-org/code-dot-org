@@ -1,9 +1,7 @@
 import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import NotificationBanner, {
   NotificationBannerProps,
 } from '../NotificationBanner';
@@ -202,7 +200,7 @@ WithClose.args = {
   style: 'subtle',
   title: "You're in a newer version of this course",
   description:
-    "We noticed you have progress in an older version of this course. You can go back to that version any time by using the dropdown below to select the version of the course you want.",
+    'We noticed you have progress in an older version of this course. You can go back to that version any time by using the dropdown below to select the version of the course you want.',
   icon: {iconName: 'triangle-exclamation', iconStyle: 'solid'},
   onClose: () => console.log('Close clicked'),
 };

@@ -1,18 +1,9 @@
-import {
-  Paper,
-  Stack,
-  Typography,
-  IconButton,
-  Box,
-} from '@mui/material';
+import {Paper, Stack, Typography, IconButton, Box} from '@mui/material';
 import {forwardRef, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import {
-  NotificationBannerVariant,
-  NotificationBannerStyle,
-} from './types';
+import {NotificationBannerVariant, NotificationBannerStyle} from './types';
 import {
   getNotificationBannerBackgroundColor,
   getNotificationBannerBorderColor,

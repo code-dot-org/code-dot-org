@@ -6,7 +6,9 @@ This package exports a styled React component: [NotificationBanner](Notification
 You can import it like this:
 
 ```javascript
-import NotificationBanner, {NotificationBannerProps} from '@code-dot-org/component-library/notification-banner';
+import NotificationBanner, {
+  NotificationBannerProps,
+} from '@code-dot-org/component-library/notification-banner';
 ```
 
 ## Features
@@ -31,7 +33,7 @@ import NotificationBanner from '@code-dot-org/component-library/notification-ban
   title="This is a title"
   description="This is additional descriptive text."
   icon={{iconName: 'circle-info', iconStyle: 'solid'}}
-/>
+/>;
 ```
 
 ### With Actions
@@ -48,11 +50,15 @@ import {Button} from '@mui/material';
   icon={{iconName: 'envelope', iconStyle: 'solid'}}
   actions={
     <>
-      <Button variant="outlined" color="secondary">Cancel</Button>
-      <Button variant="contained" color="primary">Submit</Button>
+      <Button variant="outlined" color="secondary">
+        Cancel
+      </Button>
+      <Button variant="contained" color="primary">
+        Submit
+      </Button>
     </>
   }
-/>
+/>;
 ```
 
 ### With Close Handler
