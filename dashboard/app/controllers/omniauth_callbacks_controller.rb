@@ -261,7 +261,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     params = auth_params.presence || {}
     user_type = auth_hash.info&.user_type&.downcase
     cookies['sign_up_user_type'] = user_type unless params[:user_type]
-    us_state = auth_hash.info&.state_name if user_type == 'student'
+    us_state = auth_hash.info&.state_name if user_type == User::TYPE_STUDENT
     user = User.new.tap do |u|
       User.initialize_new_oauth_user(u, auth_hash, params)
       u.oauth_token = auth_hash.credentials&.token
@@ -405,7 +405,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth
   end
 
-  # Moves non-standard attributes from the extra Classlink OAuth data and puts it in the location we
+  # Moves non-standard attributes from the extra ClassLink OAuth data and puts it in the location we
   # expect it to be in the AuthHash.
   private def inject_classlink_data(auth)
     return if auth.nil?

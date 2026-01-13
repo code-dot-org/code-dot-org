@@ -1525,7 +1525,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         request.env['omniauth.auth'] = TEST_CLASSLINK_AUTH_HASH
         request.env['omniauth.params'] = {}
       end
-      it 'does not create new user`' do
+      it 'does not create new user' do
         assert_does_not_create(User) do
           classlink_req
         end
@@ -1560,7 +1560,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         request.env['omniauth.params'] = {}
       end
 
-      it 'creates parital user (Student) from auth hash' do
+      it 'creates partial user (Student) from auth hash' do
         classlink_req
         _(partial_user).wont_be_nil
         _(partial_user.uid).must_equal student_auth_hash.uid
