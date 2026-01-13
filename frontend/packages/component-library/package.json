@@ -367,9 +367,6 @@
       "require": "./dist/cjs/typography/index.js"
     },
     "./typography/index.css": "./dist/esm/typography/index.css",
-    "./themes/code.org/types": {
-      "types": "./src/themes/code.org/types.d.ts"
-    },
     "./video": {
       "types": {
         "import": "./dist/esm/video/index.d.ts",
