@@ -213,7 +213,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     );
     const completed = total - counts.incomplete;
     const accuracy =
-      total === 0 ? 0 : Math.round((counts.correct / total) * 100);
+      completed === 0 ? 0 : Math.round((counts.correct / completed) * 100);
     return {total, completed, accuracy, counts};
   }, [fetchedCfuLevels, bucketForLevel]);
 
