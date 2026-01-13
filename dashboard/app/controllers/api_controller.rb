@@ -736,18 +736,13 @@ class ApiController < ApplicationController
 
       # Pairing info
       is_navigator = user_level.navigator?
-      puts "is_navigator: #{is_navigator}"
       if is_navigator
-        puts "is_navigator is true"
         driver = user_level.driver
-        puts "driver: #{driver.name}"
         driver_level_source_id = user_level.driver_level_source_id
-        puts "driver_level_source_id: #{driver_level_source_id}"
       end
 
       response[:isNavigator] = is_navigator
       if driver
-        puts "driver is true"
         response[:pairingDriver] = driver.name
         if driver_level_source_id
           response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
