@@ -152,7 +152,7 @@ export const setUpWithLevel = createAsyncThunk<
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
     const levelProperties = payload.levelProperties;
-
+    console.log('levelProperties', levelProperties);
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
     // If we are cached, and there is a user app options path because we are in a script

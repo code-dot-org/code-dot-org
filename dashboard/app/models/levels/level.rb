@@ -910,6 +910,33 @@ class Level < ApplicationRecord
     # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
     properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts
 
+    # Pairing info from user_level
+    if current_user && script
+      user_level = current_user.last_attempt(self, script)
+      if user_level
+        is_navigator = user_level.navigator?
+        properties_camelized[:isNavigator] = is_navigator
+
+        if is_navigator
+          driver = user_level.driver
+          if driver
+            properties_camelized[:pairingDriver] = driver.name
+            driver_level_source_id = user_level.driver_level_source_id
+            if driver_level_source_id
+              properties_camelized[:pairingAttempt] = Rails.application.routes.url_helpers.edit_level_source_path(driver_level_source_id)
+            elsif channel_backed?
+              # For channel-backed levels, get the driver's channel
+              driver_storage_id = driver.user_storage_id
+              if driver_storage_id
+                channel_token = ChannelToken.find_channel_token(self, driver_storage_id, script.id)
+                properties_camelized[:pairingChannelId] = channel_token&.channel
+              end
+            end
+          end
+        end
+      end
+    end
+
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
     elsif (level_data = try(:project_template_level).try(:level_data)) && level_data['startSources']
