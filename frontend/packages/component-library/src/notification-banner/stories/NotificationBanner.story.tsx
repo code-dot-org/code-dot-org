@@ -1,7 +1,8 @@
 import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 
-import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
+
 import NotificationBanner, {
   NotificationBannerProps,
 } from '../NotificationBanner';
