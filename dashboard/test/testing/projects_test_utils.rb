@@ -9,7 +9,7 @@ module ProjectsTestUtils
     with_storage_id_for owner do |storage_id|
       projects_table.db.transaction(joinable: false, rollback: :always) do
         encrypted_channel_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
-        _, project_id = storage_decrypt_channel_id encrypted_channel_id
+        _, project_id = get_storage_id_and_project_id encrypted_channel_id
         yield project_id, storage_id
       end
     end

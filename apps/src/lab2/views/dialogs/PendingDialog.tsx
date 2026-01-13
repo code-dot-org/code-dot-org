@@ -1,5 +1,5 @@
+import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Modal from '@code-dot-org/component-library/modal';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
@@ -46,11 +46,16 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
   );
 
   return (
-    <Modal
+    <Dialog
       title={title}
-      customContent={customContent}
+      customContent={<div id="dsco-dialog-description">{customContent}</div>}
       className={moduleStyles.genericDialog}
-      primaryButtonProps={{isPending: true, text: 'Loading', onClick: () => {}}}
+      primaryButtonProps={{
+        disabled: true,
+        isPending: true,
+        text: 'Loading',
+        onClick: () => {},
+      }}
     />
   );
 };

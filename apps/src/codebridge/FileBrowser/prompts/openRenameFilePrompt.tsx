@@ -54,6 +54,7 @@ export const openRenameFilePrompt = async ({
         validationFile,
       });
     },
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {
