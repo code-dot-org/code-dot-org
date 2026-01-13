@@ -114,6 +114,9 @@
       "types": "./dist/types/plugins/fields/fieldColour/index.d.ts",
       "import": "./dist/esm/plugins/fields/fieldColour/index.mjs",
       "require": "./dist/cjs/plugins/fields/fieldColour/index.js"
+    },
+    "./blocks/types": {
+      "types": "./dist/types/blocks/types.d.ts"
     }
   },
   "main": "src/index.ts",

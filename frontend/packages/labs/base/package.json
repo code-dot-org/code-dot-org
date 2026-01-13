@@ -49,6 +49,9 @@
     "./redux/labSlice": {
       "types": "./dist/types/redux/labSlice.d.ts"
     },
+    "./redux/labViewSlice": {
+      "types": "./dist/types/redux/labViewSlice.d.ts"
+    },
     "./redux/labSystemSlice": {
       "types": "./dist/types/redux/labSystemSlice.d.ts"
     },
