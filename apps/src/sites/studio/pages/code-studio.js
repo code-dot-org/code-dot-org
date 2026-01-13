@@ -7,7 +7,8 @@
  * so when moving things preserve the include order as much as possible.
  */
 import '@code-dot-org/component-library-styles/fontVariables.css';
-import '@code-dot-org/component-library-styles/colors.scss';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
 import React from 'react';

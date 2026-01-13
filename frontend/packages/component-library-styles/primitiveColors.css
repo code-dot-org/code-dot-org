@@ -1,5 +1,5 @@
 /* This is a collection of Primitive Colors.
- Unlike Semantic colors (color.css) these variables will be equal to the same color value in all themes.
+ Unlike Semantic colors (colors.css) these variables will be equal to the same color value in all themes.
  Ideally, these colors should be used for components that are not theme dependent.
  In the future it's possible that we will only need to use these colors in Semantic colors (colors.css).
  */
