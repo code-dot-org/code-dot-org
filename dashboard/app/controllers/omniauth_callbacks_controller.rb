@@ -415,7 +415,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       given_name: auth.dig(:extra, :raw_info, :first_name),
       family_name: auth.dig(:extra, :raw_info, :last_name),
       username: auth.dig(:extra, :raw_info, :display_name),
-      user_type: auth.dig(:extra, :raw_info, :role).downcase,
+      user_type: auth.dig(:extra, :raw_info, :role)&.downcase,
       state_name: auth.dig(:extra, :raw_info, :state_name),
     )
 
