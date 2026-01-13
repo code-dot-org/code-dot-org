@@ -175,7 +175,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
       }
 
       // Multi: status is correct/incorrect/unsubmitted
-      // Match: status is array of submitted/unsubmitted
+      // Match: status is array of submitted/unsubmitted, correctness determined by student_result
       // Free response: status is "" and student_result contains the text
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const status = (response as any).status;
@@ -185,10 +185,23 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
       if (status === 'correct') return 'correct';
       if (status === 'incorrect') return 'incorrect';
       if (status === 'unsubmitted') return 'incomplete';
-      if (Array.isArray(status))
-        return status.includes('unsubmitted')
-          ? 'incomplete'
-          : 'partially_correct';
+      if (Array.isArray(status)) {
+        // For Match levels: if any unsubmitted, it's incomplete
+        if (status.includes('unsubmitted')) return 'incomplete';
+        // If all submitted, check if all matches are correct
+        // For Match, correct means student_result[index] === index for all
+        if (
+          Array.isArray(studentResult) &&
+          studentResult.length === status.length &&
+          studentResult.every(
+            (answer: number, index: number) => answer === index
+          )
+        ) {
+          return 'correct';
+        }
+        // All submitted but not all correct = partially_correct
+        return 'partially_correct';
+      }
       if (studentResult !== undefined && studentResult !== null)
         return 'partially_correct';
       return 'incomplete';
