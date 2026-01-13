@@ -31,6 +31,8 @@ class ChallengeDialog extends React.Component {
     showPuzzleRatingButtons: PropTypes.bool,
     text: PropTypes.string,
     title: PropTypes.string,
+    levelId: PropTypes.number,
+    unitId: PropTypes.number,
   };
 
   constructor(props) {
@@ -60,7 +62,7 @@ class ChallengeDialog extends React.Component {
   }
 
   render() {
-    // const isRtl = getStore().getState().isRtl;
+    const isRtl = getStore().getState().isRtl;
     const isRtl = false;
     const bannerStyle = {
       ...styles.banner,
@@ -110,7 +112,11 @@ class ChallengeDialog extends React.Component {
         />
         {this.props.showPuzzleRatingButtons && (
           <div style={styles.footer}>
-            <PuzzleRatingButtons useLegacyStyles />
+            <PuzzleRatingButtons
+              useLegacyStyles
+              levelId={this.props.levelId}
+              unitId={this.props.unitId}
+            />
           </div>
         )}
       </BaseDialog>

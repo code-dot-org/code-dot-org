@@ -2,10 +2,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
-const labState = useSelector(
-    (state: {pageConstants: LegacyLabsState}) => state.pageConstants
-  );
-
 import locale from '@cdo/locale';
 
 import color from '../util/color';
@@ -79,16 +75,21 @@ class PuzzleRatingButtons extends Component {
   static propTypes = {
     useLegacyStyles: PropTypes.bool,
     label: PropTypes.string,
+    levelId: PropTypes.number,
+    unitId: PropTypes.number,
   };
 
   logRating(rating) {
     var url = '/puzzle_ratings';
-    console.log('rating from challenge puzzle', rating);
-    {script_id: 734, level_id: 73007, rating: '1'}
+    ratingData = {
+      script_id: this.props.unitId,
+      level_id: this.props.levelId,
+      rating: rating,
+    };
     $.ajax({
       url: url,
       type: 'POST',
-      data: rating,
+      data: ratingData,
       complete: function () {
         console.log('Puzzle rating submitted');
       },
@@ -97,10 +98,12 @@ class PuzzleRatingButtons extends Component {
 
   like() {
     this.setState({liked: !this.state.liked, disliked: false});
+    this.logRating(1);
   }
 
   dislike() {
     this.setState({liked: false, disliked: !this.state.disliked});
+    this.logRating(0);
   }
 
   render() {
