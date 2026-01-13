@@ -1,0 +1,110 @@
+name 'csaif_pl_nets_project_1_-rev_v2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Internet Access Advocacy Campaign Project Overview
+
+#### This project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #B7E0E5; display: inline-block;"><i class="fa-solid fa-user-graduate"></i> Career Journeys
+</p>
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Explain the role of hardware and infrastructure in ensuring the Internet is reliable and scalable.
+</li> <br>
+    <li>Analyze the societal and ethical impacts of the digital divide and net neutrality.
+</li><br>
+        <li>Propose actionable solutions to improve Internet access, including the role of AI-driven technologies.
+</li><br>
+<li>Develop a persuasive and well-supported advocacy campaign targeting a specific audience.
+</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
+         alt="Icon of clipboard and pen" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+## Project Requirements
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🎧 Clarity & Focus
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### The campaign has a clear, well-defined focus that directly addresses a key issue related to the digital divide or net neutrality.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💭 Persuasive Argument</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### The campaign effectively persuades the audience using strong reasoning, appeals to emotion or logic, and a clear call to action.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✏️ Use of Evidence</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### The campaign includes well-researched evidence, statistics, or real-world examples that strongly support the argument.
+
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🧠 Technical Understanding
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### Clearly and thoroughly explains technical infrastructure (routers, switches, servers, etc) in terms of scalability and reliability. 
+- #### Addresses challenges like high traffic or rural access with detailed and feasible solutions.
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✅ Feasibility & Actionability
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+- #### The campaign presents a realistic, actionable solution that could be implemented.
+
+</p></div>
+</details>
+
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Check out the <a href="https://docs.google.com/document/d/1A6MfgiFK4T66KDu4w9Qg-L9DwtqzZEub-8q0uE1SSB8/edit?tab=t.0#heading=h.xe9cnc3216z0" target="blank" rel="noopener noreferrer">Exemplar</a> to see how these concepts come to life in the classroom.
+</p>
+
+MARKDOWN

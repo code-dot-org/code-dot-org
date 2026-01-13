@@ -1,0 +1,65 @@
+name 'csaif_pl_ai_01_02-new_v2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Curriculum Overview
+
+## What is Problem Solving with AI about?
+ 
+#### As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. This unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
+
+#### This unit blends hands-on AI experimentation with critical evaluation and refinement, guiding students through an iterative cycle of testing, analyzing, and improving AI-generated outputs. Instead of passively accepting AI responses, students will actively investigate AI's reasoning, challenge its assumptions, and refine its outputs through computational thinking and ethical frameworks.
+
+
+#### **This is the first unit in the six unit <a href='https://code.org/en-US/curriculum/artificial-intelligence-foundations' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Foundations</a> semester 1 course. This professional learning module prepares you to teach it!**
+
+
+## Student Learning Goals
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this unit, students will be able to :</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Investigate how AI generates responses.</li>
+      <li>Critically evaluate AI-generated outputs.</li>
+      <li>Refine AI-generated content.</li>
+      <li>Explore AI's role in creativity, forecasting, and decision-making.</li>
+	  <li>Design and test AI-assisted solutions to real-world challenges.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+
+
+## Classroom Context
+
+#### This content has been developed for high school students with little or no coding experience who are comfortable with technology and curious about AI and computer science.
+
+#### This unit can be implemented on it's own or part of the AI Foundations Semester or year-long course.
+
+#### All lessons within the unit are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace.
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Learn more about the AI Foundations Curriculum by taking the <a href='https://studio.code.org/courses/teaching-ai-foundations-s1-v2-2025/units/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Introductory Module</a>.
+</p>
+
+
+## Unit Length and Format
+
+
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Twelve 45-minute lessons and one 3-day culminating project
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Preview <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit 1: Problem Solving with AI</a>.
+</p>
+
+
+MARKDOWN
