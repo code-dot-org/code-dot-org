@@ -3,7 +3,8 @@ import {useEffect} from 'react';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import LabRegistry from '../LabRegistry';
-import {Callback, LifecycleEvent} from '../LifecycleNotifier';
+import {LifecycleEvent} from '../LifecycleNotifier';
+import type {Callback} from '../LifecycleNotifier';
 import {useAppSelector} from '../redux/store';
 
 /**
@@ -54,7 +55,7 @@ const MetricsAdapter: FunctionComponent = () => {
   }, [pageError]);
 
   // Log a LevelLoad metric when a level is loaded.
-  const logLoadMetric: Callback<LifecycleEvent.LevelLoadCompleted> = (
+  const logLoadMetric: Callback<typeof LifecycleEvent.LevelLoadCompleted> = (
     levelProperties,
     _channel,
     _initialSources,

@@ -13,11 +13,13 @@ export const LABS_WITH_JSON_SOURCES: AppName[] = ['aichat'];
 
 export const MAIN_PYTHON_FILE = 'main.py';
 
-export enum PERMISSIONS {
+export const PERMISSIONS = {
   // Add more permissions as needed.
-  LEVELBUILDER = 'levelbuilder',
-  PROJECT_VALIDATOR = 'project_validator',
-}
+  LEVELBUILDER: 'levelbuilder',
+  PROJECT_VALIDATOR: 'project_validator',
+} as const;
+
+export type PermissionsType = (typeof PERMISSIONS)[keyof typeof PERMISSIONS];
 
 export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
@@ -29,25 +31,32 @@ export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
 
 // Banner messages to show LevelBuilders when in start mode. These don't need to be translated because LevelBuilder is English only.
-export enum WARNING_BANNER_MESSAGES {
-  STANDARD = 'You are editing start sources.',
-  TEMPLATE = 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
-  LOCK_FILES = 'Reminder: lock all start files your validation file references.',
-  TOOLBOX_MODE = 'You are editing toolbox blocks.',
-  EXEMPLAR_MODE = 'You are editing exemplar sources.',
-  VIEWING_EXEMPLAR = 'You are viewing an example solution.',
-}
+export const WARNING_BANNER_MESSAGES = {
+  STANDARD: 'You are editing start sources.',
+  TEMPLATE:
+    'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
+  LOCK_FILES: 'Reminder: lock all start files your validation file references.',
+  TOOLBOX_MODE: 'You are editing toolbox blocks.',
+  EXEMPLAR_MODE: 'You are editing exemplar sources.',
+  VIEWING_EXEMPLAR: 'You are viewing an example solution.',
+} as const;
+
+export type WarningBannerMessagesType =
+  (typeof WARNING_BANNER_MESSAGES)[keyof typeof WARNING_BANNER_MESSAGES];
 
 // Default height of the predict question free response text area.
 export const PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT = 50;
 
-export enum FontSize {
-  Tiny = 10,
-  Small = 13, // Default font size
-  Medium = 17,
-  Large = 22,
-  Huge = 27,
-}
+export const FontSize = {
+  Tiny: 10,
+  Small: 13, // Default font size
+  Medium: 17,
+  Large: 22,
+  Huge: 27,
+};
+
+export type FontSizeKey = keyof typeof FontSize;
+export type FontSizeType = (typeof FontSize)[FontSizeKey];
 
 export const ProjectSubmissionStatus = {
   CAN_SUBMIT: 'can_submit',
@@ -64,3 +73,5 @@ export const FeaturedProjectStatus = {
   bookmarked: 'bookmarked',
   archived: 'archived',
 } as const;
+
+export const INITIAL_VERSION_ID = 'initial-version';

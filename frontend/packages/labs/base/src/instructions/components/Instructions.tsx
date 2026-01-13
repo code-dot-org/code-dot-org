@@ -7,7 +7,7 @@ import TextToSpeech from '@code-dot-org/audio/textToSpeech';
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 
 import {LevelProperties} from '../../types';
-import InstructorsOnly from '../InstructorsOnly';
+import InstructorsOnly from '../../components/InstructorsOnly';
 
 import MainInstructionsContent from './MainInstructionsContent';
 import NavigationArea from './NavigationArea';

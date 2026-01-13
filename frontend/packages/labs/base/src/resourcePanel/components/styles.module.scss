@@ -1,0 +1,234 @@
+.resource-panel {
+  background-color: var(--background-neutral-primary);
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .top-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collapse-button-container {
+    align-items: center;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+
+    html[dir='rtl'] & {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .tabs {
+    border-top: var(--lab-border-default);
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    width: 3.5rem;
+  }
+
+  // Doubling class name to increase specificity and override default button styles.
+  .tab-button.tab-button {
+    background-color: var(--background-neutral-secondary);
+    border-bottom: var(--lab-border-default);
+    border-inline: 0;
+    border-radius: 0;
+    border-top: 0;
+    height: 3.5rem;
+    min-width: 2rem;
+    width: 3.5rem;
+
+    &.teachers-only-tab {
+      background-color: var(--background-info-extra-light);
+
+      i {
+        color: var(--text-info-primary-fixed);
+      }
+    }
+
+    &.selected {
+      background-color: var(--background-neutral-primary);
+      position: relative;
+      z-index: 2;
+
+      i {
+        color: var(--text-brand-teal-primary);
+      }
+
+      // Extend the background to cover the border between selected tab and resource panel.
+      &::after {
+        background-color: var(--background-neutral-primary);
+        content: '';
+        inset-inline-end: -1px;
+        height: 100%;
+        top: 0;
+        width: 1px;
+        position: absolute;
+      }
+
+      // Add a border to the start of the selected tab.
+      &::before {
+        background-color: var(--borders-brand-teal-primary);
+        content: '';
+        inset-inline-start: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 3px;
+      }
+
+      &.teachers-only-tab {
+        i {
+          color: var(--text-info-primary-fixed);
+        }
+
+        &::before {
+          background-color: var(--text-info-primary-fixed);
+        }
+      }
+    }
+
+    i {
+      color: var(--text-neutral-quaternary);
+      font-size: 1.25rem;
+      width: auto;
+    }
+
+    &:hover:not(.selected) {
+      background-color: var(--background-neutral-primary);
+
+      i {
+        color: var(--text-neutral-tertiary);
+      }
+
+      &.teachers-only-tab i {
+        color: var(--text-info-primary-fixed);
+      }
+    }
+
+    // Override default active state borders to prevent jumping when clicking a tab
+    &:active {
+      border-bottom: var(--lab-border-default) !important;
+      border-inline: none !important;
+      border-top: none !important;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: -2px;
+    }
+  }
+
+  // Styles applied when the sidebar is collapsed
+  &.collapsed .tab-button.tab-button {
+    background-color: var(--background-neutral-primary);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--background-neutral-secondary);
+    }
+
+    &.selected {
+      // Adding this border to match the border on non-selected tabs when collapsed
+      border-inline-end: var(--lab-border-default);
+
+      i {
+        color: var(--text-neutral-quaternary);
+      }
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .bottom-tabs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    padding: 8px 0;
+
+    // Adding this to remove extra space between elements
+    // from the empty div this creates in the DOM. This
+    // is added by the CopyrightDialog component.
+    > div[data-theme='Light'] {
+      margin-bottom: -0.4rem;
+    }
+  }
+
+  // Doubling class name to increase specificity and override default button styles.
+  .resource-panel-button.resource-panel-button {
+    height: 2rem;
+    min-width: 2rem;
+    width: 2rem;
+
+    i {
+      font-size: 14px;
+    }
+  }
+}
+
+.panels {
+  border-inline-start: var(--lab-border-default);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  opacity: 1;
+}
+
+.panel-content {
+  background-color: var(--background-neutral-primary);
+  height: 100%;
+}
+
+.tab-content-container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  .tab-content {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &Hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.navigation-footer {
+  background-color: var(--background-neutral-secondary);
+  border-top: var(--lab-border-default);
+  padding: 10px;
+}
+
+.floating-settings-panel-container {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 5px;
+  box-shadow:
+    0 2px 2px 0 rgb(0 0 0 / 0.07),
+    0 4px 7px 0 rgb(0 0 0 / 0.07);
+  position: fixed;
+  width: 260px;
+  z-index: 1000;
+}
+
+.hidden-footer {
+  display: none;
+}

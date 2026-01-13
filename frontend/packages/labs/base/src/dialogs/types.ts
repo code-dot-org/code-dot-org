@@ -7,16 +7,18 @@ import type {PendingDialogProps} from './components/PendingDialog';
 import type {SkipDialogProps} from './components/SkipDialog';
 import type {StartOverDialogProps} from './components/StartOverDialog';
 
-export enum DialogType {
-  GenericAlert = 'GenericAlert',
-  GenericConfirmation = 'GenericConfirmation',
-  GenericPrompt = 'GenericPrompt',
-  GenericDropdown = 'GenericDropdown',
-  GenericDialog = 'GenericDialog',
-  Skip = 'Skip',
-  StartOver = 'StartOver',
-  PendingDialog = 'PendingDialog',
-}
+export const DialogType = {
+  GenericAlert: 'GenericAlert',
+  GenericConfirmation: 'GenericConfirmation',
+  GenericPrompt: 'GenericPrompt',
+  GenericDropdown: 'GenericDropdown',
+  GenericDialog: 'GenericDialog',
+  Skip: 'Skip',
+  StartOver: 'StartOver',
+  PendingDialog: 'PendingDialog',
+} as const;
+
+export type DialogTypeType = (typeof DialogType)[keyof typeof DialogType];
 
 export type DialogCloseActionType = 'cancel' | 'neutral' | 'confirm';
 export type DialogCloseFunctionType = (
@@ -31,24 +33,24 @@ export type DialogClosePromiseReturnType = {
 
 export type SpecificTypedDialogProps =
   | (GenericAlertDialogProps & {
-      type: DialogType.GenericAlert;
+      type: typeof DialogType.GenericAlert;
     })
   | (GenericConfirmationDialogProps & {
-      type: DialogType.GenericConfirmation;
+      type: typeof DialogType.GenericConfirmation;
     })
   | (GenericDropdownProps & {
-      type: DialogType.GenericDropdown;
+      type: typeof DialogType.GenericDropdown;
     })
   | (GenericPromptProps & {
-      type: DialogType.GenericPrompt;
+      type: typeof DialogType.GenericPrompt;
     })
   | (GenericDialogProps & {
-      type: DialogType.GenericDialog;
+      type: typeof DialogType.GenericDialog;
     })
-  | (SkipDialogProps & {type: DialogType.Skip})
-  | (StartOverDialogProps & {type: DialogType.StartOver})
+  | (SkipDialogProps & {type: typeof DialogType.Skip})
+  | (StartOverDialogProps & {type: typeof DialogType.StartOver})
   | (PendingDialogProps & {
-      type: DialogType.PendingDialog;
+      type: typeof DialogType.PendingDialog;
     });
 
 export type TypedDialogProps = SpecificTypedDialogProps & {

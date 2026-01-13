@@ -1,3 +1,4 @@
+import {NetworkError} from '@code-dot-org/api';
 import {AppName, ProjectType} from '@code-dot-org/api/projects';
 import {
   ProjectSources,
@@ -17,11 +18,7 @@ export class SourcesStore {
   private lastNewVersionTime: number | null = null;
 
   async load(appName: AppName, channelId: string, versionId?: string) {
-    const {response, value} = await sourcesApi.get(
-      appName,
-      channelId,
-      versionId,
-    );
+    const {response, value} = await sourcesApi.get(appName, channelId, versionId);
 
     if (response.ok && !versionId) {
       // Only store the current version id if we are loading the latest version.
@@ -35,7 +32,7 @@ export class SourcesStore {
     channelId: string,
     sources: ProjectSources,
     projectType?: ProjectType,
-    forceNewVersion = false,
+    forceNewVersion = false
   ) {
     let options: SaveSourceOptions = {projectType};
     if (this.currentVersionId) {
@@ -63,13 +60,19 @@ export class SourcesStore {
       this.firstSaveTime = this.firstSaveTime || timestamp;
       this.currentVersionId = versionId;
     } else {
-      throw new Error(response.status + ' ' + response.statusText);
+      throw new NetworkError(
+        response.status + ' ' + response.statusText,
+        response
+      );
     }
     return response;
   }
 
-  async getVersionList(channelId: string) {
-    const response = await sourcesApi.getVersionList(channelId);
+  async getVersionList(channelId: string, includeComments: boolean = false) {
+    const response = await sourcesApi.getVersionList(
+      channelId,
+      includeComments
+    );
     return response.value || [];
   }
 
@@ -90,5 +93,9 @@ export class SourcesStore {
     // We should replace the existing version if the last new version was less than 15 minutes ago
     // (the last new version time plus the interval is greater than the current time).
     return this.lastNewVersionTime + this.newVersionInterval > Date.now();
+  }
+
+  getCurrentVersionId(): string | null {
+    return this.currentVersionId;
   }
 }

@@ -14,11 +14,11 @@ import moduleStyles from './predict.module.scss';
 
 // Component that displays the solution to a predict question.
 // The backend will only send the solution if the user has permission to see it.
-interface PredictSolutionProps {
+export interface PredictSolutionProps {
   predictSettings: LevelPredictSettings | undefined;
 }
 
-export const PredictSolution: FunctionComponent<PredictSolutionProps> = ({
+const PredictSolution: FunctionComponent<PredictSolutionProps> = ({
   predictSettings,
 }) => {
   if (!predictSettings?.solution) {

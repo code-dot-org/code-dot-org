@@ -1,0 +1,73 @@
+@import '@code-dot-org/component-library-styles/mixins';
+
+#copyright-modal {
+  display: flex;
+  min-width: 37.5rem;
+  max-width: 50rem;
+  max-height: 80vh;
+  box-sizing: border-box;
+  padding: 1.5rem 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background: var(--neutral-base-white);
+  overflow: hidden;
+
+  hr {
+    border-color: var(--neutral-gray-50);
+  }
+
+  & p {
+    @include body-three;
+
+    & a {
+      @include link-body-three;
+      color: var(--brand-purple-50);
+      text-decoration: underline;
+
+      &:hover,
+      :active,
+      :visited {
+        color: var(--brand-purple-70);
+      }
+
+      &:focus-visible {
+        color: var(--brand-purple-50);
+      }
+    }
+  }
+
+  .modalBody {
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: var(--neutral-gray-20) transparent; /* Scrollbar styling for Firefox browsers */
+
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--neutral-gray-20);
+      border-radius: 6rem;
+    }
+
+    .awsLogoContainer {
+      display: block;
+      margin-left: -2px;
+      margin-bottom: 1rem;
+    }
+
+    .awsLogo {
+      width: 11.5rem;
+    }
+  }
+}

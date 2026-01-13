@@ -8,13 +8,13 @@ import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {LevelStatus} from '@code-dot-org/progress';
 import {progressActions} from '@code-dot-org/progress/redux';
 
+import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 import {isPredictResponseSubmitted} from '../../redux/predictLevelSlice';
 import {useAppSelector} from '../../redux/store';
+import {resourcePanelNavigationButtonElementId} from '../../resourcePanel/constants';
 import {LevelProperties} from '../../types';
-import EnhancedMarkdown from '../EnhancedMarkdown';
 
 import ContinueButton from './ContinueButton';
-import {resourcePanelNavigationButtonElementId} from './ResourcePanel/constants';
 import SubmitButton from './SubmitButton';
 
 import moduleStyles from './instructions.module.scss';
@@ -63,12 +63,10 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
     disableEditRunForSubmission,
     offerBrowserTts,
   } = levelProperties;
-  const hasValidationConditions = useAppSelector(
-    state => {
-      console.log(state);
-      return state.lab.validationState?.hasConditions;
-    }
-  );
+  const hasValidationConditions = useAppSelector(state => {
+    console.log(state);
+    return state.lab.validationState?.hasConditions;
+  });
   const validationMessage = useAppSelector(
     state => state.lab.validationState?.message,
   );

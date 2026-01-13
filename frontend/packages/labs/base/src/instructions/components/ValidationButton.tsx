@@ -2,6 +2,10 @@ import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
+import type {
+  ButtonColor,
+  ButtonType,
+} from '@code-dot-org/component-library/button';
 
 import {useAppSelector} from '../../redux/store';
 
@@ -12,6 +16,8 @@ interface ValidationButtonProps {
   onStopValidation: () => void;
   isValidating: boolean;
   isValidateDisabled: boolean;
+  buttonColor?: ButtonColor;
+  buttonType?: ButtonType;
 }
 
 const ValidationButton: FunctionComponent<ValidationButtonProps> = ({
@@ -19,6 +25,8 @@ const ValidationButton: FunctionComponent<ValidationButtonProps> = ({
   onStopValidation,
   isValidating,
   isValidateDisabled = false,
+  buttonColor = 'black',
+  buttonType = 'secondary',
 }) => {
   const hasConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions,
@@ -43,14 +51,14 @@ const ValidationButton: FunctionComponent<ValidationButtonProps> = ({
     <Button
       text="Validate"
       onClick={onValidate}
-      type={'secondary'}
+      type={buttonType}
       disabled={isValidateDisabled}
       iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
       className={classNames(
         moduleStyles.buttonInstruction,
         moduleStyles.validationButton,
       )}
-      color={'black'}
+      color={buttonColor}
       size={'s'}
       id={'uitest-validate-button'}
     />

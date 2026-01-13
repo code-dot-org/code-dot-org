@@ -18,8 +18,11 @@ import type {
   Source,
   ProjectFile,
   ProjectSources,
+  ProjectVersion,
   Channel,
 } from '@code-dot-org/projects';
+
+export type {ProjectVersion, ProjectSources};
 
 import type {LevelPredictSettings} from '@lab-base/levelEditors';
 
@@ -94,6 +97,10 @@ export interface LevelProperties {
   progressionType?: string;
   type?: string;
   starterAssets?: {[key: string]: string};
+  showRubric?: boolean;
+  customHelperLibrary?: string;
+  validationCode?: string;
+  hideVersionHistory?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -221,12 +228,6 @@ export interface ExtraLinksProjectData {
     abuse_score: number;
   };
   meesage?: string;
-}
-
-export interface ProjectVersion {
-  versionId: string;
-  lastModified: string;
-  isLatest: boolean;
 }
 
 export interface ScriptLevelPathLink {

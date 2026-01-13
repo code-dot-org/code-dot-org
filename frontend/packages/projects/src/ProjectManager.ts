@@ -10,7 +10,7 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {ValidationError} from '@code-dot-org/api';
+import {ValidationError, NetworkError} from '@code-dot-org/api';
 import type {Channel, ProjectAndSources} from '@code-dot-org/api/channels';
 import {
   getProjectThumbnailUrl,
@@ -56,6 +56,7 @@ export default class ProjectManager {
   private isShareView: boolean | undefined;
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
+  private forceNewVersion: boolean = false;
 
   constructor({
     sourcesStore,
@@ -108,10 +109,19 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
+    await this.initializeForceNewVersionState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
     const sharingDisabled =
       await this.channelsStore.getSharingDisabled(channel);
-    return {sources, channel, abuseScore, sharingDisabled};
+    const isTeacherOfProjectOwner =
+      await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    return {
+      sources,
+      channel,
+      abuseScore,
+      sharingDisabled,
+      isTeacherOfProjectOwner,
+    };
   }
 
   // Restore the given version of the project. This will call restore on the sources store
@@ -146,11 +156,7 @@ export default class ProjectManager {
   async loadSources(appName: AppName, versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(
-        appName,
-        this.channelId,
-        versionId,
-      );
+      sources = await this.sourcesStore.load(appName, this.channelId, versionId);
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),
       // we still want to load the channel. In the case of a validation error,
@@ -158,8 +164,13 @@ export default class ProjectManager {
       // is new. If neither of these cases, throw the error.
       if (error instanceof ValidationError) {
         this.metricsReporter.logWarning(
-          `Error validating sources (${error.message}). Defaulting to empty sources.`,
+          `Error validating sources (${error.message}). Defaulting to empty sources.`
         );
+      } else if (
+        error instanceof NetworkError &&
+        (error as NetworkError).response.status === 404
+      ) {
+        // This is expected if the project is new. Default to empty sources.
       } else {
         throw new Error('Error loading sources', {cause: error});
       }
@@ -315,8 +326,11 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
-  async getVersionList() {
-    return await this.sourcesStore.getVersionList(this.channelId);
+  async getVersionList(includeComments: boolean = false) {
+    return await this.sourcesStore.getVersionList(
+      this.channelId,
+      includeComments
+    );
   }
 
   addSaveSuccessListener(listener: (channel: Channel) => void) {
@@ -333,6 +347,47 @@ export default class ProjectManager {
 
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
+  }
+
+  getCurrentVersionId(): string | null {
+    return this.sourcesStore.getCurrentVersionId();
+  }
+
+  getForceNewVersion(): boolean {
+    return this.forceNewVersion;
+  }
+
+  setForceNewVersion(value: boolean): void {
+    this.forceNewVersion = value;
+  }
+
+  /**
+   * Initialize the forceNewVersion value by checking if the current version has a comment.
+   * If the current version has a comment, we set forceNewVersion to true.
+   * This is used to prevent overwriting a version that has a comment.
+   * @returns void
+   */
+  private async initializeForceNewVersionState(): Promise<void> {
+    const currentVersionId = this.getCurrentVersionId();
+    if (!currentVersionId) {
+      this.setForceNewVersion(false);
+      return;
+    }
+
+    try {
+      const versionList = await this.getVersionList(true); // include comments
+      const currentVersion = versionList.find(
+        v => v.versionId === currentVersionId
+      );
+      const hasComment = !!currentVersion?.comment?.trim();
+      this.setForceNewVersion(hasComment);
+    } catch (error) {
+      // If we can't fetch version list, assume no comment.
+      this.metricsReporter.logWarning(
+        `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
+      );
+      this.setForceNewVersion(false);
+    }
   }
 
   isForceReloading(): boolean {
@@ -414,7 +469,7 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion,
+          forceNewVersion || this.getForceNewVersion()
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -431,6 +486,11 @@ export default class ProjectManager {
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
+
+      // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
+      if (forceNewVersion || this.getForceNewVersion()) {
+        this.setForceNewVersion(false);
+      }
     }
 
     // Normally, reduceChannelUpdates is false and we update the channel

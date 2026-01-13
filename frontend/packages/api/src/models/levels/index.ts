@@ -44,7 +44,7 @@ export interface Level<T extends object = object> {
   /** Unique incremental id for the parent level */
   parentLevelId?: number;
   /** Unique incremental id for the script level */
-  scriptLevelId?: number;
+  scriptLevelId?: string;
   /** Unique key for this level */
   key: string;
   /** The type of level (Maze, etc) */

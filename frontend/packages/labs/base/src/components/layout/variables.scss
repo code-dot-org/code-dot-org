@@ -1,20 +1,30 @@
-// Shared variables across Lab2
+// Shared CSS custom properties for Lab components
+// These are defined on :root and can be used by any package via var(--lab-*)
+// Applications must import this file to make these variables available.
 
-// Default border style
-$default-border: 1px solid var(--borders-neutral-primary);
+:root {
+  // Border styles
+  --lab-border-default: 1px solid var(--borders-neutral-primary);
+  --lab-border-strong: 1px solid var(--borders-neutral-strong);
 
-// Strong border style
-$strong-border: 1px solid var(--borders-neutral-strong);
+  // Border radius
+  --lab-border-radius-default: 4px;
 
-// Border radius
-$default-border-radius: 4px;
+  // Z-indices
+  // UI elements that float above main content but below overlays
+  --lab-z-index-floating-ui: 60;
+  // Full screen overlays (e.g. loading screen)
+  --lab-z-index-overlay: 72;
+  // Full screen overlays that need to be above everything else
+  // (e.g. file preview in full screen) — got value from MUI
+  --lab-z-index-fullscreen: 1300;
+}
 
-/** z-indices */
-
-// UI elements that float above main content but below overlays
-$z-index-floating-ui: 60;
-// Full screen overlays (e.g. loading screen)
-$z-index-overlay: 72;
-// Full screen overlays that need to be above everything else
-// (e.g. file preview in full screen) — got value from MUI
-$z-index-fullscreen: 1300;
+// Legacy SCSS variable aliases for backwards compatibility
+// TODO: Migrate usages to CSS custom properties and remove these
+$default-border: var(--lab-border-default);
+$strong-border: var(--lab-border-strong);
+$default-border-radius: var(--lab-border-radius-default);
+$z-index-floating-ui: var(--lab-z-index-floating-ui);
+$z-index-overlay: var(--lab-z-index-overlay);
+$z-index-fullscreen: var(--lab-z-index-fullscreen);

@@ -6,7 +6,6 @@ import {
 } from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
 
-import type {AppName} from '@code-dot-org/api/projects';
 import {
   LabConfig,
   MultiFileSource,
@@ -18,27 +17,24 @@ import LabRegistry from '../LabRegistry';
 import type {AppDispatch, RootState} from '../redux/store';
 
 export interface LabProjectState {
-  projectSources: ProjectSources | undefined;
+  projectSources?: ProjectSources;
   projectSourceBeforeAiTutorVersion?: MultiFileSource;
-  versionDetails: ProjectVersion | undefined;
+  versionDetails?: ProjectVersion;
   viewingOldVersion: boolean;
   viewingAiTutorVersion?: boolean;
   restoredOldVersion: boolean;
   hasEdited: boolean;
   projectTooLarge: boolean;
-  lastSavedLabConfig: LabConfig | undefined;
+  lastSavedLabConfig?: LabConfig;
+  projectSourceLevelId?: number;
 }
 
 const initialState: LabProjectState = {
-  projectSources: undefined,
-  projectSourceBeforeAiTutorVersion: undefined,
-  versionDetails: undefined,
   viewingOldVersion: false,
   viewingAiTutorVersion: false,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
-  lastSavedLabConfig: undefined,
 };
 
 // THUNKS
@@ -87,9 +83,9 @@ export const loadVersion = createAsyncThunk(
   'labProject/loadVersion',
   async (
     payload: {
-      appName: AppName;
-      versionId: string;
       startSources: ProjectSources;
+      version?: ProjectVersion;
+      onLoadVersion?: (sources: ProjectSources) => void;
     },
     thunkAPI,
   ) => {
@@ -100,34 +96,55 @@ export const loadVersion = createAsyncThunk(
       // Fall back to start source if we can't load the version.
       const sources =
         (await projectManager.loadSources(
-          payload.appName,
-          payload.versionId,
+          LabRegistry.appName,
+          payload.version?.versionId,
         )) || payload.startSources;
-      thunkAPI.dispatch(setPreviousVersionSource(sources));
+      thunkAPI.dispatch(
+        setPreviousVersionSource({
+          sources,
+          version: payload.version,
+        }),
+      );
+      if (payload.onLoadVersion) payload.onLoadVersion(sources);
     }
   },
 );
 
 export const previewStartSources = createAsyncThunk(
   'labProject/previewStartSources',
-  async (payload: {startSources: ProjectSources}, thunkAPI) => {
+  async (
+    payload: {
+      startSources: ProjectSources;
+      onLoadVersion?: (sources: ProjectSources) => void;
+    },
+    thunkAPI,
+  ) => {
     const projectManager = LabRegistry.projectManager;
     if (projectManager) {
       // We need to ensure we save the existing project before loading the start source.
       await projectManager.flushSave();
-      thunkAPI.dispatch(setPreviousVersionSource(payload.startSources));
+      thunkAPI.dispatch(
+        setPreviousVersionSource({
+          sources: payload.startSources,
+        }),
+      );
+      if (payload.onLoadVersion) payload.onLoadVersion(payload.startSources);
     }
   },
 );
 
 export const resetToCurrentVersion = createAsyncThunk(
   'labProject/resetToActiveVersion',
-  async (payload: {appName: AppName}, thunkAPI) => {
+  async (
+    payload: {onLoadVersion?: (sources: ProjectSources) => void},
+    thunkAPI,
+  ) => {
     const projectManager = LabRegistry.projectManager;
     if (projectManager) {
-      const sources = await projectManager.loadSources(payload.appName);
+      const sources = await projectManager.loadSources(LabRegistry.appName);
       thunkAPI.dispatch(setProjectSource(sources));
       thunkAPI.dispatch(setViewingOldVersion(false));
+      if (sources && payload.onLoadVersion) payload.onLoadVersion(sources);
     }
   },
 );
@@ -172,15 +189,31 @@ const projectSlice = createSlice({
         source: action.payload,
       };
     },
+    setProjectSourceLevelId(state, action: PayloadAction<number | undefined>) {
+      state.projectSourceLevelId = action.payload;
+    },
+    setProjectSourceBeforeAiTutorVersion(
+      state,
+      action: PayloadAction<MultiFileSource | undefined>,
+    ) {
+      state.projectSourceBeforeAiTutorVersion = action.payload;
+    },
     setPreviousVersionSource(
       state,
-      action: PayloadAction<ProjectSources | undefined>,
+      action: PayloadAction<{
+        sources: ProjectSources | undefined;
+        version?: ProjectVersion;
+      }>,
     ) {
-      state.projectSources = action.payload;
+      state.projectSources = action.payload.sources;
+      state.versionDetails = action.payload.version;
       state.viewingOldVersion = true;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
+      if (!action.payload) {
+        state.versionDetails = undefined;
+      }
     },
     setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
       state.viewingAiTutorVersion = action.payload;

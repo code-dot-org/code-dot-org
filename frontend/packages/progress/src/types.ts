@@ -194,6 +194,7 @@ export type TestStatus =
   | 'FAIL'
   | 'SKIP'
   | 'ERROR'
+  | 'PENDING'
   | 'EXPECTED_FAILURE'
   | 'UNEXPECTED_SUCCESS';
 

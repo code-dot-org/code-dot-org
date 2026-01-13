@@ -1,25 +1,19 @@
-import {useState, useCallback, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
-import {localization} from './Localization';
+import localization from './Localization';
 
 /**
  * This hook will cause a rerender of a component when the locale changed by
  * giving you a locale state.
  */
 export const useLocalization = () => {
-  const [locale, setLocale] = useState<string>(localization().locale);
-  const updateCallback = useCallback(
-    (_language: string) => {
-      setLocale(localization().locale);
-    },
-    [setLocale],
-  );
+  const [locale, setLocale] = useState<string>(localization.locale);
 
   useEffect(() => {
-    localization().on('change', info => {
-      updateCallback(info.code);
+    localization.on('change', _ => {
+      setLocale(localization.locale);
     });
-  }, [updateCallback]);
+  }, [setLocale]);
 
   return locale;
 };
