@@ -1,17 +1,16 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import classNames from 'classnames';
 
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 
-import color from '../util/color';
-
 import BackToFrontConfetti from './BackToFrontConfetti';
 import BaseDialog from './BaseDialog';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
+import styles from './ChallengeDialog.module.scss';
 
 class ChallengeDialog extends React.Component {
   static propTypes = {
@@ -63,35 +62,43 @@ class ChallengeDialog extends React.Component {
 
   render() {
     const isRtl = getStore().getState().isRtl;
-    const bannerStyle = {
-      ...styles.banner,
-      ...(this.props.complete ? styles.bannerComplete : {}),
-    };
+    const bannerImage = this.props.complete
+      ? assetUrl('media/dialog/challenge_target_complete.svg')
+      : assetUrl('media/dialog/challenge_target.svg');
+    const bannerClassName = classNames(styles.banner, {
+      [styles.bannerComplete]: this.props.complete,
+    });
+    const dialogStyle = {top: '20%'};
+    const confettiStyle = {top: 150};
 
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
-        style={styles.dialog}
+        style={dialogStyle}
         handleClose={this.handlePrimary}
         hideCloseButton={true}
         hideBackdrop={this.props.hideBackdrop}
+        bodyClassName={styles.dialogBody}
       >
         <img
           className="modal-image"
           src={this.props.avatar}
           alt={i18n.cheeringInstructorAltText()}
         />
-        <div style={bannerStyle}>
-          <h1 style={styles.title} id="uitest-challenge-title">
+        <div
+          className={bannerClassName}
+          style={{backgroundImage: `url(${bannerImage})`}}
+        >
+          <h1 className={styles.title} id="uitest-challenge-title">
             {this.props.title}
           </h1>
           <BackToFrontConfetti
             active={this.state.confettiActive}
-            style={styles.confetti}
+            style={confettiStyle}
           />
         </div>
-        <div style={styles.content}>
-          {this.props.text && <div style={styles.text}>{this.props.text}</div>}
+        <div className={styles.content}>
+          {this.props.text && <div className={styles.text}>{this.props.text}</div>}
           {this.props.children}
         </div>
         <Button
@@ -107,10 +114,10 @@ class ChallengeDialog extends React.Component {
           text={this.props.primaryButtonLabel}
           type="primary"
           color={buttonColors.purple}
-          style={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
+          className={isRtl ? styles.primaryButtonRtl : styles.primaryButton}
         />
         {this.props.showPuzzleRatingButtons && (
-          <div style={styles.footer}>
+          <div className={styles.footer}>
             <PuzzleRatingButtons
               useLegacyStyles
               levelId={this.props.levelId}
@@ -123,65 +130,4 @@ class ChallengeDialog extends React.Component {
   }
 }
 
-const styles = {
-  dialog: {
-    top: '20%',
-    border: `5px solid ${color.purple}`,
-    borderRadius: 10,
-  },
-  banner: {
-    backgroundPosition: 'top center',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
-    position: 'relative',
-    marginTop: -85,
-    height: 135,
-  },
-  bannerComplete: {
-    backgroundImage: `url(${assetUrl(
-      'media/dialog/challenge_target_complete.svg'
-    )})`,
-    marginTop: -99,
-    height: 149,
-  },
-  content: {
-    color: color.purple,
-    position: 'relative',
-    textAlign: 'center',
-    marginBottom: 30,
-  },
-  text: {
-    margin: '0px 40px 20px',
-    textAlign: 'center',
-    fontSize: 18,
-  },
-  title: {
-    textAlign: 'center',
-    position: 'absolute',
-    bottom: 0,
-    color: '#fff',
-    backgroundColor: color.purple,
-    border: '3px solid white',
-    minWidth: '50%',
-    left: '25%',
-    fontSize: '150%',
-    height: 30,
-    lineHeight: '30px',
-  },
-  confetti: {
-    top: 150,
-  },
-  primaryButton: {
-    float: 'right',
-  },
-  primaryButtonRtl: {
-    float: 'left',
-  },
-  footer: {
-    marginTop: 20,
-    paddingTop: 20,
-    borderTop: '2px solid #ccc',
-  },
-};
-
-export default Radium(ChallengeDialog);
+export default ChallengeDialog;

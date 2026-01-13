@@ -1,76 +1,16 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
+import classNames from 'classnames';
 
 import locale from '@cdo/locale';
 
-import color from '../util/color';
-
-const newStyles = {
-  puzzleRatingButton: {
-    fill: color.light_gray,
-    cursor: 'pointer',
-    display: 'inline-block',
-    backgroundColor: color.lightest_gray,
-    borderColor: color.light_gray,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    padding: '5px 5px 0px',
-    ':active': {
-      backgroundColor: color.lighter_gray,
-    },
-  },
-  like: {
-    borderRadius: '2px 0px 0px 2px',
-  },
-  likeDisabled: {
-    ':hover': {
-      fill: '#333',
-    },
-  },
-  likeEnabled: {
-    fill: color.red,
-    backgroundColor: color.lighter_gray,
-    ':hover': {
-      fill: color.dark_red,
-    },
-  },
-  dislike: {
-    borderRadius: '0px 2px 2px 0px',
-  },
-  dislikeDisabled: {
-    ':hover': {
-      fill: color.dark_gray,
-    },
-  },
-  dislikeEnabled: {
-    fill: color.cyan,
-    backgroundColor: color.lighter_gray,
-    ':hover': {
-      fill: color.dark_blue,
-    },
-  },
-};
-
-const legacyStyles = {
-  puzzleRatingButton: {
-    verticalAlign: 'middle',
-  },
-  question: {
-    fontSize: 16,
-    color: color.light_gray,
-    marginRight: 10,
-  },
-};
+import styles from './PuzzleRatingButtons.module.scss';
 
 class PuzzleRatingButtons extends Component {
-  constructor() {
-    super();
-    this.state = {
-      liked: false,
-      disliked: false,
-    };
-  }
+  state = {
+    liked: false,
+    disliked: false,
+  };
 
   static propTypes = {
     useLegacyStyles: PropTypes.bool,
@@ -79,9 +19,9 @@ class PuzzleRatingButtons extends Component {
     unitId: PropTypes.number,
   };
 
-  logRating(rating) {
-    var url = '/puzzle_ratings';
-    ratingData = {
+  logRating = rating => {
+    const url = '/puzzle_ratings';
+    const ratingData = {
       script_id: this.props.unitId,
       level_id: this.props.levelId,
       rating: rating,
@@ -94,41 +34,54 @@ class PuzzleRatingButtons extends Component {
         console.log('Puzzle rating submitted');
       },
     });
-  }
+  };
 
-  like() {
-    this.setState({liked: !this.state.liked, disliked: false});
+  like = () => {
+    this.setState(state => ({liked: !state.liked, disliked: false}));
     this.logRating(1);
-  }
+  };
 
-  dislike() {
-    this.setState({liked: false, disliked: !this.state.disliked});
+  dislike = () => {
+    this.setState(state => ({liked: false, disliked: !state.disliked}));
     this.logRating(0);
-  }
+  };
 
   render() {
-    const styles = this.props.useLegacyStyles ? legacyStyles : newStyles;
+    const {useLegacyStyles} = this.props;
     const label = this.props.label || locale.puzzleRatingQuestion();
+    const likeClassName = classNames(
+      useLegacyStyles ? 'puzzle-rating-btn' : styles.button,
+      !useLegacyStyles && styles.like,
+      useLegacyStyles && styles.legacyButton,
+      {
+        [styles.likeEnabled]: !useLegacyStyles && this.state.liked,
+        [styles.likeDisabled]: !useLegacyStyles && !this.state.liked,
+        enabled: useLegacyStyles && this.state.liked,
+      }
+    );
+
+    const dislikeClassName = classNames(
+      useLegacyStyles ? 'puzzle-rating-btn' : styles.button,
+      !useLegacyStyles && styles.dislike,
+      useLegacyStyles && styles.legacyButton,
+      {
+        [styles.dislikeEnabled]: !useLegacyStyles && this.state.disliked,
+        [styles.dislikeDisabled]: !useLegacyStyles && !this.state.disliked,
+        enabled: useLegacyStyles && this.state.disliked,
+      }
+    );
+
     return (
-      <div id="puzzleRatingButtons" style={{display: 'inline-block'}}>
+      <div id="puzzleRatingButtons" className={styles.container}>
         {this.props.useLegacyStyles && (
-          <span style={styles.question}>{label}</span>
+          <span className={styles.question}>{label}</span>
         )}
         <a
-          className={
-            (this.state.liked ? 'enabled' : '') +
-            ' ' +
-            (this.props.useLegacyStyles ? 'puzzle-rating-btn' : '')
-          }
+          className={likeClassName}
           id="like"
           key="like"
           data-value="1"
-          onClick={this.like.bind(this)}
-          style={[
-            styles.puzzleRatingButton,
-            styles.like,
-            this.state.liked ? styles.likeEnabled : styles.likeDisabled,
-          ]}
+          onClick={this.like}
         >
           <svg
             version="1.1"
@@ -148,22 +101,11 @@ class PuzzleRatingButtons extends Component {
         </a>
 
         <a
-          className={
-            (this.state.disliked ? 'enabled' : '') +
-            ' ' +
-            (this.props.useLegacyStyles ? 'puzzle-rating-btn' : '')
-          }
+          className={dislikeClassName}
           id="dislike"
           key="dislike"
           data-value="0"
-          onClick={this.dislike.bind(this)}
-          style={[
-            styles.puzzleRatingButton,
-            styles.dislike,
-            this.state.disliked
-              ? styles.dislikeEnabled
-              : styles.dislikeDisabled,
-          ]}
+          onClick={this.dislike}
         >
           <svg
             version="1.1"
@@ -184,4 +126,4 @@ class PuzzleRatingButtons extends Component {
     );
   }
 }
-export default Radium(PuzzleRatingButtons);
+export default PuzzleRatingButtons;
