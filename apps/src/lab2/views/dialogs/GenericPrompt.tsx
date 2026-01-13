@@ -12,7 +12,10 @@ import GenericDialog, {
 
 const DEBOUNCE_TIME_OUT = 300;
 
-export type GenericPromptProps = Pick<GenericDialogProps, 'title'> & {
+export type GenericPromptProps = Pick<
+  GenericDialogProps,
+  'title' | 'useModal'
+> & {
   handleConfirm?: (prompt: string) => void;
   handleCancel?: () => void;
   placeholder?: string;
@@ -67,6 +70,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   value,
   validateInput = () => undefined,
   requiresPrompt = true,
+  useModal = false,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
@@ -137,6 +141,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   return (
     <GenericDialog
       title={title}
+      useModal={useModal}
       bodyComponent={
         <GenericPromptBody
           message={message}

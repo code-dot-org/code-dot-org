@@ -35,7 +35,7 @@ class SourceBucket < BucketHelper
     # In most cases fall back on the generic restore behavior.
     return super(encrypted_channel_id, filename, version_id, user_id) unless filename == MAIN_JSON_FILENAME
 
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id, storage_app_id = get_storage_id_and_project_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
 
     source_object = s3.get_object(bucket: @bucket, key: key, version_id: version_id)
@@ -86,8 +86,8 @@ class SourceBucket < BucketHelper
   # in dest_channel
   # Note: this function assumes that the animations have already been copied
   def remix_source(src_channel, dest_channel, animation_list)
-    src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
-    dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
+    src_owner_id, src_storage_app_id = get_storage_id_and_project_id(src_channel)
+    dest_owner_id, dest_storage_app_id = get_storage_id_and_project_id(dest_channel)
 
     src = s3_path src_owner_id, src_storage_app_id, MAIN_JSON_FILENAME
     dest = s3_path dest_owner_id, dest_storage_app_id, MAIN_JSON_FILENAME
@@ -124,7 +124,7 @@ class SourceBucket < BucketHelper
   # bucket will be called main.json.
   # This avoids a potentially expensive LIST request to S3.
   def app_size(encrypted_channel_id)
-    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_id, storage_app_id = get_storage_id_and_project_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, MAIN_JSON_FILENAME
     s3.head_object(bucket: @bucket, key: key).content_length.to_i
   rescue Aws::S3::Errors::NotFound
