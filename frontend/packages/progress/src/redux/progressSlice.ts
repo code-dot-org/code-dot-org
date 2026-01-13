@@ -413,7 +413,7 @@ const progressSlice: Slice<ProgressState> = _progressSlice;
  */
 export const getCurrentScriptLevelId: (
   state: RootState,
-) => number | undefined = state => {
+) => string | undefined = state => {
   const currentLevel = getCurrentLevel(state);
   if (!currentLevel) {
     return;

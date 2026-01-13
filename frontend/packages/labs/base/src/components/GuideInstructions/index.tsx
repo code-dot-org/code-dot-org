@@ -2,15 +2,14 @@ import type {FunctionComponent} from 'react';
 
 import {queryParams} from '@code-dot-org/api';
 
-
+import MainInstructionsContent from '../../instructions/components/MainInstructionsContent';
+import NavigationArea from '../../instructions/components/NavigationArea';
 import type {LevelProperties} from '../../types';
 import Guide from '../Guide';
-import MainInstructionsContent from '../instructions/MainInstructionsContent';
-import NavigationArea from '../instructions/NavigationArea';
 
 import styles from './guideInstructions.module.scss';
 
-interface GuideInstructionsProps {
+export interface GuideInstructionsProps {
   width?: 'narrow' | 'normal';
   levelProperties: LevelProperties;
   isRunning: boolean;

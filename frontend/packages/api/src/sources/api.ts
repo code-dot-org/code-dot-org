@@ -48,8 +48,12 @@ export async function update(
 
 export async function getVersionList(
   channelId: string,
+  includeComments: boolean = false
 ): Promise<GetResponse<ProjectVersion[]>> {
-  const requestUrl = rootUrl(channelId) + '/versions';
+  let requestUrl = rootUrl(channelId) + '/versions';
+  if (includeComments) {
+    requestUrl += '?with_comments=true';
+  }
   return HttpClient.fetchJson<ProjectVersion[]>(requestUrl);
 }
 

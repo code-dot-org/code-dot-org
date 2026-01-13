@@ -13,6 +13,7 @@ import {currentUserSlice} from '@code-dot-org/user/redux';
 import labProjectSlice from './labProjectSlice';
 import labSlice from './labSlice';
 import labSystemSlice from './labSystemSlice';
+import labViewSlice from './labViewSlice';
 import predictLevelSlice from './predictLevelSlice';
 
 const store = injectSlices(
@@ -21,6 +22,7 @@ const store = injectSlices(
     labSlice,
     labSystemSlice,
     labProjectSlice,
+    labViewSlice,
     predictLevelSlice,
     progressSlice,
     teacherSectionsSlice,

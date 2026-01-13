@@ -70,7 +70,7 @@ const CopyToClipboardButton: FunctionComponent<{
   );
 };
 
-const AfeCareerTourBlock: React.FunctionComponent = () => {
+const AfeCareerTourBlock: FunctionComponent = () => {
   const careersUrl =
     'https://www.amazonfutureengineer.com/musicsolo?utm_campaign=Code.Org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024';
 
@@ -105,7 +105,7 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
   );
 };
 
-const SubmitButtonInfo: React.FunctionComponent<{
+const SubmitButtonInfo: FunctionComponent<{
   submissionStatus: SubmissionStatusType | undefined;
   onSubmitClick: () => void;
 }> = ({submissionStatus, onSubmitClick}) => {
@@ -156,7 +156,7 @@ export interface ShareDialogProps {
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
  * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
  */
-const ShareDialog: React.FunctionComponent<ShareDialogProps> = ({
+const ShareDialog: FunctionComponent<ShareDialogProps> = ({
   dialogId,
   shareUrl,
   finishUrl,

@@ -3,7 +3,7 @@ import type {FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {useApp} from '@lab-base/contexts';
+import {useApp} from '../../contexts';
 
 import moduleStyles from './loading.module.scss';
 

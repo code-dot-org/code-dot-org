@@ -6,6 +6,7 @@ import GenericPrompt from './components/GenericPrompt';
 import PendingDialog from './components/PendingDialog';
 import SkipDialog from './components/SkipDialog';
 import StartOverDialog from './components/StartOverDialog';
+import type {DialogTypeType} from './types';
 import {DialogType} from './types';
 
 /**
@@ -13,7 +14,7 @@ import {DialogType} from './types';
  */
 const DialogViews: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key in DialogType]: React.FunctionComponent<any>;
+  [key in DialogTypeType]: React.FunctionComponent<any>;
 } = {
   [DialogType.StartOver]: StartOverDialog,
   [DialogType.Skip]: SkipDialog,

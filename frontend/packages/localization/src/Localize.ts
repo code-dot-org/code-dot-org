@@ -193,6 +193,12 @@ export type LocalizeUpdatedDictionaryData = {
 };
 
 /**
+ * The argument given to the callback for the 'dictionaryAdded' event
+ * callback.
+ */
+export type LocalizeDictionaryAddedData = string;
+
+/**
  * The argument given to the callback for an 'error' event.
  */
 export type LocalizeErrorData = string;
@@ -207,10 +213,19 @@ export type LocalizeCallbackData =
   | LocalizeErrorData
   | undefined;
 
+export interface LocalizeEventMap {
+  dictionaryAdded: LocalizeDictionaryAddedData;
+  error: LocalizeErrorData;
+  initialize: LocalizeOptions;
+  setLanguage: LocalizeSetLanguageData;
+  updatedDictionary: LocalizeUpdatedDictionaryData;
+  widgetLoaded: object;
+}
+
 /**
  * The LocalizeJS frontend API object.
  */
-interface Localize {
+interface LocalizeJS {
   /**
    * Translates the page into the given language.
    */
@@ -230,7 +245,7 @@ interface Localize {
    * `accept-language` header.
    */
   detectLanguage: (
-    callback: (err: string | undefined, languages: string[]) => void,
+    callback: (err: string | undefined, languages: string[]) => void
   ) => void;
   /**
    * Returns all available languages for the project.
@@ -238,8 +253,8 @@ interface Localize {
   getAvailableLanguages: (
     callback: (
       err: string | undefined,
-      languages: LocalizeLanguageInfo[],
-    ) => void,
+      languages: LocalizeLanguageInfo[]
+    ) => void
   ) => void;
   /**
    * Calling this function will hide the default Localize language-switching
@@ -278,7 +293,7 @@ interface Localize {
   translate: <T = string | string[] | HTMLElement>(
     key: T,
     variables?: {[key: string]: string | number} | ((translation: T) => void),
-    callback?: (translation: T) => void,
+    callback?: (translation: T) => void
   ) => T;
   /**
    * Untranslates a specified element on the page.
@@ -310,18 +325,24 @@ interface Localize {
   /**
    * Attach an event handler to Localize events.
    */
-  on: (eventName: string, fn: (data: LocalizeCallbackData) => void) => void;
+  on: <K extends keyof LocalizeEventMap>(
+    eventName: K,
+    fn: (data: LocalizeEventMap[K]) => void
+  ) => void;
   /**
    * Remove an event handler.
    */
-  off: (eventName: string, fn?: (data: LocalizeCallbackData) => void) => void;
+  off: <K extends keyof LocalizeEventMap>(
+    eventName: K,
+    fn?: (data: LocalizeEventMap[K]) => void
+  ) => void;
   /**
    * Convert the format of a number to the format used in the currently selected
    * language/locale.
    */
   number: (
     originalValue: number,
-    callback: (err: string, value: string) => void,
+    callback: (err: string, value: string) => void
   ) => void;
   /**
    * Convert a monetary value from one currency to another, using the current
@@ -330,7 +351,7 @@ interface Localize {
   currency: (
     originalValue: number,
     options: {fromCurrency: string; toCurrency: string},
-    callback: (err: string, value: number) => void,
+    callback: (err: string, value: number) => void
   ) => void;
   /**
    * Returns the exchange rate between the provided currencies. Rates are updated hourly.
@@ -340,16 +361,18 @@ interface Localize {
     toCurrency: string,
     callback: (
       err: string,
-      rateData: {fromCurrency: string; toCurrency: string; rate: number},
-    ) => void,
+      rateData: {fromCurrency: string; toCurrency: string; rate: number}
+    ) => void
   ) => void;
 }
 
 declare global {
   interface Window {
-    Localize: Localize | undefined;
+    Localize: LocalizeJS | undefined;
   }
 }
+
+export {LocalizeJS};
 
 const Localize = typeof window !== 'undefined' ? window.Localize : undefined;
 

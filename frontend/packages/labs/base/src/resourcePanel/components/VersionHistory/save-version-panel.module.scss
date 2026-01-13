@@ -1,0 +1,47 @@
+.footer-panel {
+  border-top: 1px solid var(--borders-neutral-primary);
+  z-index: 1;
+}
+
+.save-current-version-description {
+  background-color: var(--background-neutral-secondary);
+  border-radius: 0 0 var(--lab-border-radius-default)
+    var(--lab-border-radius-default);
+  padding: 0.5rem;
+}
+
+.save-current-version-description-input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.text-area {
+  background-color: var(--background-neutral-primary);
+  border: var(--lab-border-strong);
+  border-radius: var(--lab-border-radius-default);
+  box-shadow: none;
+  box-sizing: border-box;
+  color: var(--text-neutral-secondary);
+  height: 75px;
+  margin-bottom: 0.375rem;
+  padding: 0.625rem;
+  resize: none;
+  width: 100%;
+
+  &:focus {
+    border: var(--lab-border-strong);
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-brand-teal-primary);
+    outline-offset: 2px;
+  }
+}
+
+.version-button {
+  box-sizing: border-box;
+  height: 32px;
+  width: 100%;
+}

@@ -3,7 +3,7 @@ import {forwardRef, useRef, MutableRefObject} from 'react';
 
 import TextToSpeech from '@code-dot-org/audio/textToSpeech';
 
-import EnhancedMarkdown from '../EnhancedMarkdown';
+import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 
 import moduleStyles from './instructions.module.scss';
 

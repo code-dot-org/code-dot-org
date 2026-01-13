@@ -1968,6 +1968,7 @@ __metadata:
     glob: "npm:^11.0.0"
     globals: "npm:^15.12.0"
     identity-obj-proxy: "npm:^3.0.0"
+    intro.js-react: "npm:^1.0.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     lodash: "npm:^4.17.21"
@@ -16028,6 +16029,16 @@ __metadata:
   version: 1.4.0
   resolution: "interpret@npm:1.4.0"
   checksum: 10c0/08c5ad30032edeec638485bc3f6db7d0094d9b3e85e0f950866600af3c52e9fd69715416d29564731c479d9f4d43ff3e4d302a178196bdc0e6837ec147640450
+  languageName: node
+  linkType: hard
+
+"intro.js-react@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "intro.js-react@npm:1.0.0"
+  peerDependencies:
+    intro.js: ">=2.5.0"
+    react: ">=0.14.0"
+  checksum: 10c0/e45a429419dc746408c7ad5a97f716a0bb16eb66f36742719e140f26f23a81ccab1cdc5f9d3a59b46ff00869ddeb8edf3c62a8f97024b746a13a891eaebc0b12
   languageName: node
   linkType: hard
 

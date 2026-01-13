@@ -2,11 +2,14 @@ import type {Channel, ProjectSources} from '@code-dot-org/projects';
 
 import {LevelProperties} from './types';
 
-export enum LifecycleEvent {
-  LevelChangeRequested,
-  LevelLoadStarted,
-  LevelLoadCompleted,
-}
+export const LifecycleEvent = {
+  LevelChangeRequested: 0,
+  LevelLoadStarted: 1,
+  LevelLoadCompleted: 2,
+} as const;
+
+export type LifecycleEventType =
+  (typeof LifecycleEvent)[keyof typeof LifecycleEvent];
 
 type CallbackArgs = {
   [LifecycleEvent.LevelChangeRequested]: [
@@ -24,7 +27,7 @@ type CallbackArgs = {
   ];
 };
 
-export type Callback<T extends LifecycleEvent> = (
+export type Callback<T extends LifecycleEventType> = (
   ...args: CallbackArgs[T]
 ) => void;
 
@@ -32,13 +35,13 @@ export type Callback<T extends LifecycleEvent> = (
  * Notifies listeners of lifecycle events in the Lab2 system, which doesn't reload the page between levels.
  */
 class LifecycleNotifier {
-  private listeners: {[T in LifecycleEvent]?: Callback<T>[]};
+  private listeners: {[T in LifecycleEventType]?: Callback<T>[]};
 
   constructor() {
     this.listeners = {};
   }
 
-  addListener<T extends LifecycleEvent>(event: T, callback: Callback<T>) {
+  addListener<T extends LifecycleEventType>(event: T, callback: Callback<T>) {
     if (!this.listeners[event]) {
       this.listeners[event] = [];
     }
@@ -46,7 +49,10 @@ class LifecycleNotifier {
     return this;
   }
 
-  removeListener<T extends LifecycleEvent>(event: T, callback: Callback<T>) {
+  removeListener<T extends LifecycleEventType>(
+    event: T,
+    callback: Callback<T>,
+  ) {
     if (this.listeners[event]) {
       const index = this.listeners[event].indexOf(callback);
       if (index !== -1) {
@@ -56,7 +62,7 @@ class LifecycleNotifier {
     return this;
   }
 
-  notify<T extends LifecycleEvent>(event: T, ...args: CallbackArgs[T]) {
+  notify<T extends LifecycleEventType>(event: T, ...args: CallbackArgs[T]) {
     this.listeners[event]?.forEach(callback => callback(...args));
   }
 }

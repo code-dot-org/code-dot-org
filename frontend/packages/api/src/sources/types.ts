@@ -57,6 +57,7 @@ export interface ProjectVersion {
   versionId: string;
   lastModified: string;
   isLatest: boolean;
+  comment?: string;
 }
 
 // Represents the structure of the full project sources object (i.e. the main.json file)

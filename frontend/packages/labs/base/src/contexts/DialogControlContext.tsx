@@ -14,7 +14,7 @@ import type {
 } from '@lab-base/dialogs';
 import {getDeferredPromise, DeferredPromiseObject} from '@lab-base/utils';
 
-import {DialogType, AnyDialogType} from '../dialogs/types';
+import type {DialogTypeType, AnyDialogType} from '../dialogs/types';
 
 import moduleStyles from '../dialogs/components/dialog-manager.module.scss';
 
@@ -37,7 +37,7 @@ export const useDialogControl = () => useContext(DialogControlContext);
 
 export interface DialogControlProviderProps extends PropsWithChildren {
   dialogViews: {
-    [key in DialogType]: React.FunctionComponent<AnyDialogType>;
+    [key in DialogTypeType]: React.FunctionComponent<AnyDialogType>;
   };
 }
 
@@ -52,7 +52,7 @@ export const DialogControlProvider: React.FunctionComponent<
   const [promiseArgs, setPromiseArgs] = useState<unknown>();
   const [activeDialog, setActiveDialog] = useState<
     | {
-        type?: DialogType;
+        type?: DialogTypeType;
         dialogArgs?: AnyDialogType;
       }
     | undefined

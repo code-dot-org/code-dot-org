@@ -1,0 +1,49 @@
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
+  .panel-container-header {
+    background-color: var(--background-neutral-primary);
+    border-bottom: var(--lab-border-default);
+    color: var(--text-neutral-quaternary);
+    display: grid;
+    flex-shrink: 0;
+    gap: 20px;
+    grid-template-columns: 1fr auto 1fr;
+    height: 2.5rem;
+    padding-inline: 0.5rem;
+    position: relative;
+
+    &Item {
+      align-items: center;
+      color: var(--text-neutral-quaternary);
+      display: flex;
+      font-size: 0.75rem; // 12px
+      margin: 0;
+      z-index: 1;
+
+      &Text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &Center {
+        flex: 1;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      &Left {
+        justify-content: start;
+      }
+
+      &Right {
+        justify-content: end;
+      }
+    }
+  }
+}

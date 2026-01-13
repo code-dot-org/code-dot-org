@@ -1,0 +1,33 @@
+.settings-panel {
+  background: var(--background-neutral-secondary);
+  border-top: var(--lab-border-default);
+  flex: 1;
+
+  .settings-header {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.settings-list {
+  align-items: flex-start;
+  align-self: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.625rem 0.625rem 1rem;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+
+  > div,
+  select {
+    width: 100%;
+  }
+}
+
+.language-form {
+  width: 100%;
+}

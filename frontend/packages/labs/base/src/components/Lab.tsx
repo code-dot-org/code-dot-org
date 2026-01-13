@@ -1,32 +1,34 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
 import {Suspense} from 'react';
 
-import type {Level} from '@code-dot-org/api/models/levels';
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {RootStateProvider} from '@code-dot-org/redux/providers';
 
-import Loading from '@lab-base/components/loading';
+import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
+
+import Loading from './Loading';
 
 export interface LabProps extends PropsWithChildren {
-  labView?: React.ComponentType<{
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    levelData: Level<any>;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any;
-  }>;
-  level?: Level;
+  isLoading: boolean;
 }
 
 /**
- * A simple container for a lazily loaded lab.
- *
- * The `labView` can be a `React.lazy` loaded lab or a Next.js `dynamic` import.
- * While the content loads, the `<Loading/>` component will be visible.
+ * A wrapper for any lab that will connect it to the appropriate data sources
+ * and contexts.
  */
-const Lab: FunctionComponent<LabProps> = ({labView, level}) => {
-  const LabView = labView;
-
+const Lab: FunctionComponent<LabProps> = ({isLoading, children}) => {
   return (
-    <Suspense fallback={<Loading isLoading={true} />}>
-      {LabView && level && <LabView levelData={level} />}
+    <Suspense fallback={<Loading isLoading={isLoading} />}>
+      {!isLoading && (
+        /* Redux */
+        <RootStateProvider>
+          {/* UI theming */}
+          <ThemeProvider>
+            {/* Supports extra links buttons and toggling */}
+            <ExtraLinksButtonProvider>{children}</ExtraLinksButtonProvider>
+          </ThemeProvider>
+        </RootStateProvider>
+      )}
     </Suspense>
   );
 };

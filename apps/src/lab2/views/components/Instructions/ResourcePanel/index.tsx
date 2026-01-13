@@ -56,14 +56,6 @@ import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
 
-export interface Setting {
-  id: string;
-  label: string;
-  options: {value: string; text: string}[];
-  selectedValue: string | undefined;
-  onChange: (value: string) => void;
-}
-
 interface VersionHistoryProps {
   startSources: ProjectSources;
   alwaysShowAutoSaves?: boolean;

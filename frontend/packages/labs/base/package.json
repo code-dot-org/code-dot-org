@@ -16,7 +16,8 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
-    "**/*.css"
+    "**/*.css",
+    "**/*.scss"
   ],
   "exports": {
     "./package.json": "./package.json",
@@ -60,7 +61,8 @@
   },
   "main": "src/index.ts",
   "files": [
-    "dist"
+    "dist",
+    "src/components/layout/variables.scss"
   ],
   "scripts": {
     "build": "tsup --clean",
@@ -97,6 +99,7 @@
     "@code-dot-org/user": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "focus-trap-react": "^11.0.4",
+    "intro.js-react": "^1.0.0",
     "lodash": "^4.17.21",
     "qrcode.react": "^4.2.0",
     "query-string": "^9.2.2",

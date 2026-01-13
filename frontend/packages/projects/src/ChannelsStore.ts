@@ -58,4 +58,8 @@ export class ChannelsStore {
   getSharingDisabled(channel: Channel) {
     return channelsApi.fetchSharingDisabled(channel.id);
   }
+
+  getIsTeacherOfProjectOwner(channel: Channel) {
+    return channelsApi.fetchIsTeacherOfProjectOwner(channel.id);
+  }
 }

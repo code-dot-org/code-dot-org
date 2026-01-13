@@ -16,7 +16,7 @@ import PredictResetButton from './PredictResetButton';
 
 import moduleStyles from './predict.module.scss';
 
-interface PredictQuestionProps {
+export interface PredictQuestionProps {
   className?: string;
 }
 
