@@ -102,7 +102,7 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
     end
 
     context 'when teacher email is internal' do
-      let(:teacher) {create(:teacher, email: 'teacher@code.org', name: teacher_name)}
+      let(:teacher) {create(:teacher, email: 'teacher@code.org', name: teacher_name, current_sign_in_at: 48.months.ago)}
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
@@ -112,6 +112,12 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
       it 'does not increment num_teachers_warned' do
         send_warning_emails
         _(described_instance.send(:num_teachers_warned)).must_equal 0
+      end
+
+      it 'sets deletion_warning_email_sent_at' do
+        send_warning_emails
+        teacher.reload
+        _(teacher.user_data_retention_status&.deletion_warning_email_sent_at).wont_be_nil
       end
     end
 
