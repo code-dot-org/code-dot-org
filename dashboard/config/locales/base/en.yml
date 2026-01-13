@@ -1562,3 +1562,6 @@ en:
   global_edition:
     regions:
       fa: Farsi
+  roster:
+    sync:
+      has_started: Sync started. It will complete in a few minutes

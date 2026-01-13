@@ -10,7 +10,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "files": [
-    "*.scss"
+    "*.scss",
+    "*.css"
   ],
   "scripts": {
     "release": "release-it --preRelease=alpha"
