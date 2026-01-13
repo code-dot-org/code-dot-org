@@ -111,7 +111,6 @@ class JavabuilderSessionsController < ApplicationController
       can_access_dashboard_assets: can_access_dashboard_assets
     }.merge(additional_payload)
 
-    log_token_creation(payload)
     create_encoded_payload(payload)
   end
 
@@ -125,18 +124,6 @@ class JavabuilderSessionsController < ApplicationController
       teachers << section.teacher.id
     end
     teachers.uniq
-  end
-
-  private def log_token_creation(payload)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'java-builder-sessions',
-        event: "new-token-created",
-        user_id: current_user.id,
-        data_json: payload.to_json
-      }
-    )
   end
 
   private def create_encoded_payload(payload)

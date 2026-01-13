@@ -1,6 +1,5 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
-require 'cdo/firehose'
 require 'cdo/web_purify'
 require 'policies/ai'
 require 'metrics/events'
@@ -63,11 +62,8 @@ class ActivitiesController < ApplicationController
         project_type = 'playlab'
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale, project_type)
-        rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
-          # If WebPurify or Geocoder fail, the program will be allowed, and we
-          # retain the share_filtering_error to log it alongside the level_source
-          # ID below.
-          share_filtering_error = exception
+        rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
+          # Ignored
         end
       end
 
@@ -77,20 +73,6 @@ class ActivitiesController < ApplicationController
           @level_source = LevelSource.find_identical_or_create(
             @level,
             params[:program].strip_utf8mb4
-          )
-        end
-        if share_filtering_error
-          FirehoseClient.instance.put_record(
-            :analysis,
-            {
-              study: 'share_filtering',
-              study_group: 'v0',
-              event: 'share_filtering_error',
-              data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
-              data_json: {
-                level_source_id: @level_source.id
-              }.to_json
-            }
           )
         end
       end

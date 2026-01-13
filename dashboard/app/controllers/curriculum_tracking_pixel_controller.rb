@@ -1,5 +1,3 @@
-require 'cdo/firehose'
-
 class CurriculumTrackingPixelController < ApplicationController
   STUDY_NAME = 'curriculum-builder-page-views'
   EVENT_NAME = 'curriculum-builder-page-view'
@@ -41,8 +39,7 @@ class CurriculumTrackingPixelController < ApplicationController
         lesson = split_url[2]
       end
 
-      FirehoseClient.instance.put_record(
-        :analysis,
+      CDO.log.info(
         {
           study: STUDY_NAME,
           study_group: 'v1',

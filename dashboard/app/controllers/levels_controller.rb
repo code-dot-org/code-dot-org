@@ -297,7 +297,6 @@ class LevelsController < ApplicationController
         @level.name.casecmp?(level_params[:name])
       # do not allow case-only changes in the level name because that confuses git on OSX
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
-      log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
       return
     end
@@ -321,7 +320,6 @@ class LevelsController < ApplicationController
                  end
       render json: {redirect: redirect}
     else
-      log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
   rescue ArgumentError, ActiveRecord::RecordInvalid => exception
@@ -787,27 +785,5 @@ class LevelsController < ApplicationController
       true
     )
     @level.properties['solution_image_url'] = level_source_image.s3_url if level_source_image
-  end
-
-  # Gathers data on top pain points for level builders by logging error details
-  # to Firehose / Redshift.
-  private def log_save_error(level)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'level-save-error',
-        # Make it easy to count most frequent field name in which errors occur.
-        event: level.errors.keys.first,
-        # Level ids are different on levelbuilder, so use the level name. The
-        # level name can be joined on, against the levels table, to determine the
-        # level type or other level properties.
-        data_string: level.name,
-        data_json: {
-          errors: level.errors.to_h,
-          # User ids are different on levelbuilder, so use the email.
-          user_email: current_user.email,
-        }.to_json
-      }
-    )
   end
 end

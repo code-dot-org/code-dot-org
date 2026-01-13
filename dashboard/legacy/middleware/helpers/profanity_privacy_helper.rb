@@ -31,26 +31,10 @@ def channel_policy_violation?(channel_id)
 end
 
 def title_profanity_privacy_violation(name, locale)
-  share_failure = begin
-    ShareFiltering.find_name_failure(name, locale)
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
-    # If WebPurify or Geocoder are unavailable, default to viewable, but log error
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'share_filtering',
-        study_group: 'v0',
-        event: 'share_filtering_error',
-        data_string: "#{exception.class.name}: #{exception}",
-        data_json: {
-          name: name,
-          locale: locale
-        }.to_json
-      }
-    )
-    return false
-  end
-  share_failure
+  ShareFiltering.find_name_failure(name, locale)
+rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
+  # If WebPurify or Geocoder are unavailable, default to viewable
+  return false
 end
 
 # @example

@@ -29,33 +29,10 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
         request.locale,
         PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
-    rescue OpenURI::HTTPError => exception
-      share_filtering_error = exception
-    end
-    if share_filtering_error
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'ai-ml',
-          study_group: 'pii-profanity-api',
-          event: 'share_filtering_error',
-          user_id: current_user&.id,
-          data_json: model_data.except(:trainedModel).to_json
-        }
-      )
+    rescue OpenURI::HTTPError
+      # ignore
     end
     if profanity_or_pii
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'ai-ml',
-          study_group: 'pii-profanity-api',
-          event: 'profanity_or_pii',
-          user_id: current_user&.id,
-          data_json: model_data.except(:trainedModel).to_json,
-          profanity_or_pii_json: profanity_or_pii&.to_json
-        }
-      )
       render json: {id: model_id, status: "piiProfanity", data: profanity_or_pii}
     else
       metadata = model_data.except(:trainedModel, :featureNumberKey)
@@ -94,17 +71,7 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
       return head :not_found unless model
       render json: model
     else
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'ai-ml',
-          study_group: 'show-model',
-          event: 'invalid_model_id',
-          user_id: current_user&.id,
-          data_json: params[:id]
-        }
-      )
-      return head :not_found
+      head :not_found
     end
   end
 

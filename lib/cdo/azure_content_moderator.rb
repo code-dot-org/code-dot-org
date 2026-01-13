@@ -1,5 +1,4 @@
 require 'net/http'
-require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 #
@@ -46,15 +45,9 @@ class AzureContentModerator
       image/png
     ).include? content_type
 
-    report_request(image_url)
-
-    request_start_time = Time.now
     result = make_request(image_data, content_type)
-    request_duration = Time.now - request_start_time
 
-    rating = rating_from_azure_result(result)
-    report_response(image_url, rating, result, request_duration)
-    rating
+    rating_from_azure_result(result)
   end
 
   #
@@ -98,43 +91,6 @@ class AzureContentModerator
     else
       :everyone
     end
-  end
-
-  # Report to Firehose that we're about to make a request to Azure
-  private def report_request(image_url)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'azure-content-moderation',
-        study_group: 'v1',
-        event: 'moderation-request',
-        data_json: {
-          ImageUrl: image_url
-        }.to_json
-      }
-    )
-  end
-
-  # Report the response we got from Azure to Firehose
-  private def report_response(image_url, rating, data, request_duration)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'azure-content-moderation',
-        study_group: 'v1',
-        event: 'moderation-result',
-        data_string: rating.to_s,
-        data_json: data.
-          slice(ADULT_SCORE, IS_ADULT, RACY_SCORE, IS_RACY).
-          merge(
-            RequestDuration: request_duration,
-            ImageUrl: image_url,
-            RacyThresholdUsed: racy_threshold,
-            AdultThresholdUsed: adult_threshold,
-          ).
-          to_json
-      }
-    )
   end
 
   #

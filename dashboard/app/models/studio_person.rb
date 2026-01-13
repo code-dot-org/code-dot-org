@@ -28,7 +28,6 @@ class StudioPerson < ApplicationRecord
   def self.merge(studio_person_a, studio_person_b)
     raise ArgumentError.new('StudioPersons must be distinct') if studio_person_a == studio_person_b
 
-    users_a = User.where(studio_person_id: studio_person_a.id).pluck(:id)
     users_b = User.where(studio_person_id: studio_person_b.id).pluck(:id)
 
     # Arbitrarily, we merge the two StudioPersons into studio_person_a.
@@ -39,21 +38,6 @@ class StudioPerson < ApplicationRecord
         user.update!(studio_person_id: studio_person_a.id)
       end
     end
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'studio_person_audit',
-        event: 'studio_person_merge',
-        data_json: {
-          studio_person_a_id: studio_person_a.id,
-          studio_person_b_id: studio_person_b.id,
-          studio_person_merged_id: studio_person_a.id,
-          user_a_id: users_a,
-          user_b_id: users_b
-        }.to_json
-      }
-    )
 
     # Delete the now orphaned StudioPerson.
     studio_person_b.destroy!
@@ -79,21 +63,6 @@ class StudioPerson < ApplicationRecord
     # users.second.
     studio_person.update!(emails: users.first.email)
     users.second.update!(studio_person: StudioPerson.create!(emails: users.second.email))
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'studio_person_audit',
-        event: 'studio_person_split',
-        data_json: {
-          combined_studio_person_id: studio_person.id,
-          studio_person_a_id: users.first.studio_person_id,
-          studio_person_b_id: users.second.studio_person_id,
-          user_a_id: users.first.id,
-          user_b_id: users.second.id
-        }.to_json
-      }
-    )
   end
 
   # Adds email to the list of emails contained within emails and logs the event to Firehose.
@@ -105,18 +74,5 @@ class StudioPerson < ApplicationRecord
     normalized_email = email.strip.downcase
     return if emails_as_array.include? normalized_email
     update!(emails: (emails_as_array << normalized_email).join(','))
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'studio_person_audit',
-        event: 'studio_person_add_email_to_emails',
-        data_json: {
-          studio_person_id: id,
-          new_email: email,
-          emails: emails
-        }
-      }
-    )
   end
 end

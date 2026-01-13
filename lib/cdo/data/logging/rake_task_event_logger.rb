@@ -50,39 +50,6 @@ class RakeTaskEventLogger
     @rake_task.prerequisites.join(', ')
   end
 
-  def log_firehose(event, duration_ms, exception)
-    if @enabled_firehose == false
-      return
-    end
-
-    begin
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: STUDY_TABLE,
-          event: event,
-          data_json: {
-            task_name: @rake_task.name,
-            pid: Process.pid,
-            invocation_chain: task_chain,
-            duration_ms: duration_ms,
-            exception: exception&.to_s,
-            exception_backtrace: exception&.backtrace,
-            version: CURRENT_LOGGING_VERSION,
-          }.to_json
-        }
-      )
-    rescue => exception
-      Honeybadger.notify(
-        exception,
-        error_message: "Failed to log rake task information in firehose",
-        context: {
-          event: event
-        }
-      )
-    end
-  end
-
   # Logging 3 metrics to track rake tasks performance
   # 1) Any task that has no dependencies (root task)
   # 2) Any task that is a leaf task (children, the processes to optimize)
@@ -105,7 +72,6 @@ class RakeTaskEventLogger
   end
 
   def log_event(event, duration = nil, exception = nil)
-    log_firehose(event, duration, exception)
     log_cloud_watch(event, duration)
   end
 end

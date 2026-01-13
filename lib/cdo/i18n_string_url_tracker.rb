@@ -124,31 +124,12 @@ class I18nStringUrlTracker
 
   # Sends the buffered i18n string usage data to Firehose.
   def flush
-    buffer = nil
-
     # Capture the current data and start a new buffer
     # Use .synchronize to make sure this is the only thread modifying @buffer
     @buffer.synchronize do
-      buffer = @buffer
       @buffer = {}
       @buffer.extend(MonitorMixin) # Adds synchronization
       @buffer_size = 0
-    end
-
-    # If the DCDO flag has changed since data was buffered, we want to clear the buffer and not log/flush the data.
-    return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
-
-    # log every <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> combination to Firehose
-    buffer&.each_key do |url|
-      buffer[url].each_key do |normalized_key|
-        buffer[url][normalized_key].each do |values|
-          # record the <url>:<normalized_key>:<source>:<string_key>:<scope>:<separator> association.
-          FirehoseClient.instance.put_record(
-            :i18n,
-            {url: url, normalized_key: normalized_key, source: values[0], string_key: values[1], scope: values[2], separator: values[3]}
-          )
-        end
-      end
     end
   end
 

@@ -19,17 +19,6 @@ module ImageModeration
     # behavior is to allow everything through, but we also want to notify
     # Honeybadger so that we can figure out exactly what is going wrong.
     Honeybadger.notify(exception)
-
-    # Log to firehose as well, to have longer-lived data
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'azure-content-moderation',
-        study_group: 'v1',
-        event: 'moderation-error',
-        data_string: exception
-      }
-    )
     :unknown
   end
 end

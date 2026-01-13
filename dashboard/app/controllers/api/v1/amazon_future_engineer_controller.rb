@@ -1,5 +1,4 @@
 require 'honeybadger/ruby'
-require 'cdo/firehose'
 require 'state_abbr'
 
 #
@@ -18,7 +17,7 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     # Retrieve the school to fill in address (and other) details
     school = School.find_by(id: afe_params['schoolId'])
 
-    submission_body = Services::AFEEnrollment.submit(
+    Services::AFEEnrollment.submit(
       first_name: afe_params['firstName'],
       last_name: afe_params['lastName'],
       email: afe_params['email'],
@@ -32,21 +31,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
       csta_plus: afe_params['csta'],
       amazon_terms: afe_params['consentAFE'],
       new_code_account: current_user.created_at > 5.minutes.ago
-    )
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'amazon-future-engineer-eligibility',
-        event: 'submit_to_afe',
-        data_json: {
-          accountEmail: current_user.email,
-          accountSchoolId: current_user&.school_info&.school&.id,
-          formEmail: afe_params['email'],
-          formSchoolId: afe_params['schoolId'],
-          formData: submission_body
-        }.to_json
-      }
     )
 
     # If the teacher requested it, submit to CSTA as well

@@ -25,12 +25,8 @@ module UsersHelper
       # We don't want to destroy an account with progress. Log to Redshift and return false.
       firehose_params[:type] = "cancelled-#{takeover_type}"
       firehose_params[:error] = "Attempted takeover for account with progress."
-      log_account_takeover_to_firehose(firehose_params)
       return false
     end
-
-    # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
-    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
 
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
@@ -51,61 +47,9 @@ module UsersHelper
       source_user.destroy!
     end
 
-    log_account_takeover_to_firehose(**firehose_params)
     true
-  rescue => exception
-    # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
-    if source_user && destination_user
-      firehose_params = {
-        source_user: source_user,
-        destination_user: destination_user,
-        type: takeover_type,
-        provider: provider,
-        error: "Type: #{exception.class} Message: #{exception.message}"
-      }
-      log_self_takeover_investigation_to_firehose(firehose_params)
-    end
+  rescue
     false
-  end
-
-  def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'user-soft-delete-audit-v2',
-        event: "#{type}-account-takeover", # Silent or OAuth takeover
-        user_id: source_user.id, # User account being "taken over" (deleted)
-        data_int: destination_user.id, # User account after takeover
-        data_string: provider, # OAuth provider
-        data_json: {
-          user_type: destination_user.user_type,
-          error: error,
-        }.to_json
-      }
-    )
-  end
-
-  # TODO: Remove this function https://codedotorg.atlassian.net/browse/FND-1927
-  def log_self_takeover_investigation_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'self-takeover-investigation',
-        event: "#{type}-account-takeover", # Silent or OAuth takeover
-        user_id: source_user.id, # User account being "taken over" (deleted)
-        data_int: destination_user.id, # User account after takeover
-        data_string: provider,
-        error: error,   # Move error outside of data_json to query easier
-        data_json: {
-          session_sign_up_type: session[:sign_up_type],
-          destination_user_hashed_email: destination_user.hashed_email,
-          source_user_hashed_email: source_user.hashed_email,
-          # Including the auth_option_ids for reference, but not confident they will reveal much
-          destination_user_auth_option_ids: destination_user.authentication_options.map(&:id).join(', '),
-          source_user_auth_option_ids: source_user.authentication_options.map(&:id).join(', ')
-        }.to_json
-      }
-    )
   end
 
   # Summarize a user and their progress within a certain unit.

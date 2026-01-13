@@ -483,30 +483,6 @@ class ProjectsController < ApplicationController
       @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
       replay_video_view_options unless sharing || readonly
     end
-
-    begin
-      _, project_id = get_storage_id_and_project_id(params[:channel_id]) if params[:channel_id]
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      # continue as normal, as we only use this value for stats.
-    end
-
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'project-views',
-        event: project_view_event_type(iframe_embed, sharing),
-        # allow cross-referencing with the projects table.
-        project_id: project_id,
-        # make it easier to group by project_type.
-        data_string: params[:key],
-        data_json: {
-          # not currently used, but may prove useful to have in the data later.
-          encrypted_channel_id: params[:channel_id],
-          # record type again to make it clear what data_string represents.
-          project_type: params[:key],
-        }.to_json
-      }
-    )
     render 'levels/show'
   end
 
