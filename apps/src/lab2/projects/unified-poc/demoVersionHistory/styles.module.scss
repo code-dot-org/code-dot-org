@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
+  border: 1px solid var(--borders-neutral-primary);
+  overflow-y: auto;
+  width: 290px;
+}
+
+h3 {
+  white-space: nowrap;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  button {
+    flex: 1;
+  }
+}
+
+.green {
+  color: var(--text-success-primary);
+}
+.red {
+  color: var(--text-error-primary);
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.version {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 8px;
+
+  .id {
+    font-size: 10px;
+  }
+
+  textarea {
+    width: auto;
+    resize: none;
+    margin: 0;
+  }
+}
