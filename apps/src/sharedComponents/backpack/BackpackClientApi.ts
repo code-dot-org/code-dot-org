@@ -100,7 +100,7 @@ export default class BackpackClientApi {
     if (!this.channelId) {
       return undefined;
     }
-    return `${rootUrl(this.channelId!)}/${filename}${getCacheBustSuffix()}`;
+    return `${rootUrl(this.channelId!)}/${filename}`;
   }
 
   async getFileList(
