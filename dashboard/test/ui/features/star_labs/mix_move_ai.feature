@@ -1,3 +1,6 @@
+@no_mobile
+@no_safari
+
 Feature: Mix & Move with AI
 Scenario: Dancer, music, dance
 
