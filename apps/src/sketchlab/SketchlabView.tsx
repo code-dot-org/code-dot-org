@@ -32,12 +32,17 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useDialogControl} from '../lab2/views/dialogs';
 import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import {populateInitialExcalidrawState, uploadExternalFiles} from './utils';
+import {
+  populateInitialExcalidrawState,
+  uploadExternalFiles,
+  handleSaveToBackpack,
+} from './utils';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -104,6 +109,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     }
     return null;
   }, [currentUserId]);
+  const dialogControl = useDialogControl();
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -266,10 +272,14 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               createNewProjectFile: () => {},
               findIdForFileName: () => undefined,
               saveToBackpackButton: {
+                onClick: (fileList: string[]) =>
+                  handleSaveToBackpack(
+                    excalidrawApiRef.current,
+                    backpackApi,
+                    dialogControl,
+                    fileList
+                  ),
                 text: 'Save Sketch to Backpack',
-                onClick: () => {
-                  console.log('save to backpack clicked');
-                },
               },
             }}
           />

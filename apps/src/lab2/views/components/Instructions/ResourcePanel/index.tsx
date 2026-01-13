@@ -83,7 +83,7 @@ export interface BackpackProps {
   findIdForFileName: (fileName: string) => string | undefined;
   saveToBackpackButton?: {
     text: string;
-    onClick: () => void;
+    onClick: (fileList: string[]) => Promise<void>;
   };
 }
 

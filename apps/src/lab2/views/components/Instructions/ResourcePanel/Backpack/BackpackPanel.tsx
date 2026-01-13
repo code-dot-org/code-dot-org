@@ -184,7 +184,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
       {saveToBackpackButton && (
         <Button
           text={saveToBackpackButton.text}
-          onClick={saveToBackpackButton.onClick}
+          onClick={() => saveToBackpackButton.onClick(fileList || [])}
           size="s"
           type="secondary"
           color="gray"
