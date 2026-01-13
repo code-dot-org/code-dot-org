@@ -357,9 +357,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [levelId, viewAsUserId]);
 
   useEffect(() => {
-    if (backpackApi) {
-      // Subscribe to backpack changes if we have a backpack.
-      // We set the current tab to backpack if the user just added a file to the backpack.
+    // Subscribe to backpack changes if we have a backpack and the tab exists.
+    // We set the current tab to backpack if the user just added a file to the backpack.
+    if (backpackApi && availableTabs[Tabs.Backpack]) {
       const listenerId = backpackApi.addEventListener((event, _) => {
         if (event === BackpackEvent.FileAdded) {
           setCurrentTab(Tabs.Backpack);
@@ -371,7 +371,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         }
       };
     }
-  }, [backpackApi]);
+  }, [availableTabs, backpackApi]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {
