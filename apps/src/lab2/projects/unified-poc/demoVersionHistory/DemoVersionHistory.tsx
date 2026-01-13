@@ -8,6 +8,7 @@ import styles from './styles.module.scss';
 interface Props {
   isLoading: boolean;
   isEditable: boolean;
+  hasEdited: boolean;
   versionList: ProjectVersion[];
   currentVersion: string | undefined;
   previewVersion: (version: string) => void;
@@ -24,6 +25,7 @@ const DemoVersionHistory: React.FC<Props> = ({
   previewVersion,
   restoreVersion,
   createCommit,
+  hasEdited,
 }) => {
   const [commitMessage, setCommitMessage] = useState('');
   return (
@@ -32,18 +34,9 @@ const DemoVersionHistory: React.FC<Props> = ({
       <p>
         using <code>useSources</code> hook
       </p>
-      <div className={styles.row}>
-        Loading:{' '}
-        <p className={isLoading ? styles.green : styles.red}>
-          {isLoading ? 'true' : 'false'}
-        </p>
-      </div>
-      <div className={styles.row}>
-        Editable:{' '}
-        <p className={isEditable ? styles.green : styles.red}>
-          {isEditable ? 'true' : 'false'}
-        </p>
-      </div>
+      <BooleanDisplay label="Loading" value={isLoading} />
+      <BooleanDisplay label="Editable" value={isEditable} />
+      <BooleanDisplay label="Has Edited" value={hasEdited} />
       {versionList.map(({versionId, isLatest, comment, lastModified}) => {
         const isCurrent = currentVersion === versionId;
         return (
@@ -71,7 +64,7 @@ const DemoVersionHistory: React.FC<Props> = ({
                 />
               )}
             </div>
-            {isLatest && isCurrent && !comment && (
+            {isLatest && isCurrent && hasEdited && (
               <>
                 <textarea
                   placeholder="Enter commit message"
@@ -97,5 +90,17 @@ const DemoVersionHistory: React.FC<Props> = ({
     </div>
   );
 };
+
+const BooleanDisplay: React.FC<{label: string; value: boolean}> = ({
+  label,
+  value,
+}) => (
+  <div className={styles.row}>
+    {label}:
+    <p className={value ? styles.green : styles.red}>
+      {value ? 'true' : 'false'}
+    </p>
+  </div>
+);
 
 export default DemoVersionHistory;

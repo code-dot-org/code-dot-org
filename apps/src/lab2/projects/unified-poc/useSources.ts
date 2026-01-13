@@ -46,6 +46,8 @@ interface UseSourcesOutput<T extends ProjectSources> {
   isLoading: boolean;
   /** If the current sources are editable. */
   isEditable: boolean;
+  /** If the user has updated the most recently loaded sources. Reset when reloading sources or restoring a version. */
+  hasEdited: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
   /** Update the current project sources. */
@@ -88,6 +90,7 @@ export default function useSources<T extends ProjectSources>({
   const [currentSources, setCurrentSources] = useState<T>();
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [currentVersion, setCurrentVersion] = useState<string>();
+  const [hasEdited, setHasEdited] = useState(false);
 
   const isOwner = projectManagerRef.current?.getLastChannel()?.isOwner;
 
@@ -111,6 +114,8 @@ export default function useSources<T extends ProjectSources>({
     // Clear out existing data.
     setCurrentSources(undefined);
     setVersionList([]);
+    setCurrentVersion(undefined);
+    setHasEdited(false);
     await projectManagerRef.current?.cleanUp();
 
     // Set up new Project Manager.
@@ -175,6 +180,7 @@ export default function useSources<T extends ProjectSources>({
         if (isEqual(prev, newSources)) {
           return prev;
         }
+        setHasEdited(true);
         return newSources;
       });
 
@@ -198,6 +204,7 @@ export default function useSources<T extends ProjectSources>({
       : ((templateSources || startSources || defaultSources) as ProjectSources);
     projectManagerRef.current.save(startOverSources as T, true);
     reinitializeSources(startOverSources as T | undefined);
+    setHasEdited(false);
   }, [defaultSources, levelProperties, reinitializeSources]);
 
   const previewVersion = useCallback(
@@ -223,6 +230,7 @@ export default function useSources<T extends ProjectSources>({
       const sources = await projectManagerRef.current.restoreSources(version);
       reinitializeSources(sources as T | undefined);
       await refreshVersionList(projectManagerRef.current);
+      setHasEdited(false);
       setIsLoading(false);
     },
     [includeVersionHistory, reinitializeSources]
@@ -253,6 +261,7 @@ export default function useSources<T extends ProjectSources>({
       // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
       projectManagerRef.current.setForceNewVersion(true);
       await refreshVersionList(projectManagerRef.current);
+      setHasEdited(false);
       setIsLoading(false);
     },
     [includeVersionHistory, isEditable]
@@ -278,6 +287,7 @@ export default function useSources<T extends ProjectSources>({
   return {
     isLoading,
     isEditable,
+    hasEdited,
     currentSources,
     updateSources,
     startOver,
