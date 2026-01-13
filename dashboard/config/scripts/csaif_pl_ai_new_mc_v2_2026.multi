@@ -1,0 +1,11 @@
+name 'csaif_pl_ai-new_MC_v2_2026'
+title 'Revising Prompts'
+description ''
+question 'Students are working on a project and use an AI chatbot to suggest ways to optimize their program. The chatbot provides several confident optimization strategies. Some suggestions seem reasonable, but you notice that one suggestion is incorrect and would actually reduce performance or cause new issues. *What could you do next to best take advantage of this teaching moment?*'
+
+wrong 'Point out the incorrect suggestion immediately, explain why it is wrong, and give students the correct optimization approach.'
+wrong  'Let students choose whichever suggestion they think sounds most effective and assess only the final optimized program, not the decision-making process.'
+right 'Facilitate a class discussion where students analyze the suggestions, explain which ones they think would improve performance and which might cause problems, and justify their reasoning before any changes are made.'
+wrong 'Tell students to ignore the incorrect suggestion and focus only on the optimizations that align with best practices already taught.'
+wrong 'Stop students from using the AI chatbot for optimization tasks and instead provide a curated list of approved strategies to ensure accuracy.'
+allow_multiple_attempts true
