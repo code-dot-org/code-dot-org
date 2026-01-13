@@ -112,7 +112,7 @@ class PuzzleRatingButtons extends Component {
     return (
       <div id="puzzleRatingButtons" style={{display: 'inline-block'}}>
         {this.props.useLegacyStyles && (
-          <span style={styles.question}>Hi!!! {label}</span>
+          <span style={styles.question}>{label}</span>
         )}
         <a
           className={

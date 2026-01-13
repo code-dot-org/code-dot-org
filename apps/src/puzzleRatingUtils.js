@@ -115,7 +115,6 @@ puzzleRatingUtils.cachePuzzleRating = function (container, options) {
 puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
   var ratings = puzzleRatingUtils.getPuzzleRatings_();
   ratings.forEach(function (rating) {
-    console.log('rating from og puzzle', rating);
     $.ajax({
       url: url,
       type: 'POST',
