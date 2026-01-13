@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {CodeStudioConfig} from '@code-dot-org/core';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
           count is {count}
         </button>
       </div>
+      <p>Dashboard: {CodeStudioConfig.dashboardApiUrl}</p>
     </>
   );
 }
