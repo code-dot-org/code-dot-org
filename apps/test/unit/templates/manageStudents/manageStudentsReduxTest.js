@@ -764,7 +764,7 @@ describe('manageStudentsRedux', () => {
     it('setLoginType does NOT create an add row for email login types', () => {
       const action = setLoginType('email');
       const nextState = manageStudents(initialState, action);
-      assert.notExists(nextState.studentData[0]);
+      assert.equal(nextState.studentData[0], undefined);
       assert.deepEqual(nextState.editingData, {});
       assert.deepEqual(nextState.loginType, 'email');
     });
