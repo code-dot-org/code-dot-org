@@ -71,10 +71,13 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           projectFiles,
           levelProperties.validationFile
         ),
-      saveFile: (fileId: string, contents: string, url?: string) =>
+      saveFileToProject: (fileId: string, contents: string, url?: string) =>
         dispatch(saveFileThunk({fileId, contents, url})),
-      createNewFile: (fileName: string, contents: string, url?: string) =>
-        dispatch(createNewFileThunk({fileName, contents, url})),
+      createNewProjectFile: (
+        fileName: string,
+        contents: string,
+        url?: string
+      ) => dispatch(createNewFileThunk({fileName, contents, url})),
       findIdForFileName: (fileName: string) =>
         Object.keys(projectFiles).find(
           id =>

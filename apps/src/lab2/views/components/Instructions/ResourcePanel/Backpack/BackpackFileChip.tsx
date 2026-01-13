@@ -39,8 +39,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   backpackApi,
   addAlert,
   validateFileName,
-  saveFile,
-  createNewFile,
+  saveFileToProject,
+  createNewProjectFile,
   findIdForFileName,
   isRecentlyAdded,
 }) => {
@@ -73,8 +73,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         newFileName
@@ -87,8 +87,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         newFileName
@@ -100,8 +100,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         fileName
