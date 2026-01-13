@@ -35,6 +35,16 @@ export const asyncLoadSelectedSection = async (
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
+
+  // Set loginType before loading students to ensure correct behavior when
+  // navigating via NavLink. This prevents the empty "Add Student" row from
+  // appearing for email sections when the previous section was word/picture.
+  const section = state.sections[parseInt(sectionId)];
+  if (section?.loginType) {
+    getStore().dispatch(setLoginType(section.loginType));
+    getStore().dispatch(setRosterProvider(section.loginType));
+  }
+
   getStore().dispatch(loadSectionStudentData(sectionId));
 
   const response = fetch(`/dashboardapi/section/${sectionId}`, {

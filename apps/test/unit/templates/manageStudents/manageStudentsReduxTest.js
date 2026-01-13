@@ -761,6 +761,14 @@ describe('manageStudentsRedux', () => {
       });
     });
 
+    it('setLoginType does NOT create an add row for email login types', () => {
+      const action = setLoginType('email');
+      const nextState = manageStudents(initialState, action);
+      assert.notExists(nextState.studentData[0]);
+      assert.deepEqual(nextState.editingData, {});
+      assert.deepEqual(nextState.loginType, 'email');
+    });
+
     it('addStudentsSuccess updates studentData, removes editingData, and adds new blank row', () => {
       // Initial state with blank row
       const initialState = {
