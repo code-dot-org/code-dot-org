@@ -320,6 +320,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
                 const disabled = !tabDataMap[tab];
                 return (
                   <button
+                    id={`tab-button-${tab}`}
                     type="button"
                     className={classNames(
                       styles.button,
