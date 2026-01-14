@@ -2395,6 +2395,21 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'script_json_filepath returns UI test directory for ui-test- prefixed units' do
+    expected = "#{Rails.root}/test/ui/config/scripts_json/ui-test-example.script_json"
+    assert_equal expected, Unit.script_json_filepath('ui-test-example')
+  end
+
+  test 'script_json_filepath returns normal directory for non-ui-test units' do
+    expected = "#{Rails.root}/config/scripts_json/regular-script.script_json"
+    assert_equal expected, Unit.script_json_filepath('regular-script')
+  end
+
+  test 'script_json_filepath returns normal directory when ui-test is not a prefix' do
+    expected = "#{Rails.root}/config/scripts_json/my-ui-test-script.script_json"
+    assert_equal expected, Unit.script_json_filepath('my-ui-test-script')
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end

@@ -1,6 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tags from '@code-dot-org/component-library/tags';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {
   BodyFourText,
   BodyThreeText,
@@ -28,7 +30,10 @@ interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
+  isRecentlyAdded?: boolean;
 }
+
+const EXTENSIONS_WITH_PREVIEWS = ['PNG', 'JPG', 'JPEG'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -39,6 +44,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   saveFile,
   createNewFile,
   findIdForFileName,
+  isRecentlyAdded,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toUpperCase();
   const fileIcon = useMemo(
@@ -57,6 +63,16 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const dialogControl = useDialogControl();
   // If we are in read-only mode, disable the add button.
   const addButtonDisabled = useAppSelector(isReadOnlyWorkspace);
+  const addButtonTooltipText = addButtonDisabled
+    ? 'Cannot add files in read-only mode'
+    : 'Add to project';
+
+  const filePreviewUrl = useMemo(() => {
+    if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
+      return backpackApi.getFileFetchUrl(fileName);
+    }
+    return undefined;
+  }, [backpackApi, fileExtension, fileName]);
 
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
@@ -132,14 +148,22 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 
   return (
     <div className={moduleStyles.backpackFileChip}>
-      <div className={moduleStyles.fileIconContainer}>
-        <FontAwesomeV6Icon
-          iconName={fileIcon.iconName}
-          iconStyle={fileIcon.iconStyle}
-          className={moduleStyles.fileIcon}
-          iconFamily={fileIcon.isBrand ? 'brands' : undefined}
+      {filePreviewUrl ? (
+        <img
+          src={filePreviewUrl}
+          className={moduleStyles.filePreview}
+          alt={fileName}
         />
-      </div>
+      ) : (
+        <div className={moduleStyles.fileIconContainer}>
+          <FontAwesomeV6Icon
+            iconName={fileIcon.iconName}
+            iconStyle={fileIcon.iconStyle}
+            className={moduleStyles.fileIcon}
+            iconFamily={fileIcon.isBrand ? 'brands' : undefined}
+          />
+        </div>
+      )}
       <div className={moduleStyles.fileInfo} title={fileName}>
         <BodyThreeText className={moduleStyles.infoText}>
           <StrongText>{fileName}</StrongText>
@@ -149,15 +173,40 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         </BodyFourText>
       </div>
       <div className={moduleStyles.fileActions}>
-        <Button
-          size="xs"
-          isIconOnly
-          icon={{iconName: 'plus'}}
-          color="gray"
-          type="secondary"
-          onClick={handleAdd}
-          disabled={addButtonDisabled}
-        />
+        {isRecentlyAdded ? (
+          <Tags
+            tagsList={[
+              {
+                tooltipId: `${fileName}-recently-added`,
+                label: 'Added',
+                tooltipContent: 'Added',
+                icon: {iconName: 'check', placement: 'left'},
+              },
+            ]}
+            size="s"
+          />
+        ) : (
+          <WithTooltip
+            tooltipProps={{
+              text: addButtonTooltipText,
+              tooltipId: `${fileName}-add-button-tooltip`,
+              direction: 'onTop',
+              size: 'xs',
+            }}
+          >
+            <div>
+              <Button
+                size="xs"
+                isIconOnly
+                icon={{iconName: 'plus'}}
+                color="gray"
+                type="secondary"
+                onClick={handleAdd}
+                disabled={addButtonDisabled}
+              />
+            </div>
+          </WithTooltip>
+        )}
         <ActionDropdown
           name={`backpack-options-${fileName}`}
           options={[

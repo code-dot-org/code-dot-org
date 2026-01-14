@@ -6,13 +6,13 @@ import {
 import {GenericButtonProps} from '@/button/GenericButton';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {ButtonType, ButtonColor} from './types';
+import {transformButtonPropsCore} from './buttonPropsToMuiCore';
 
 /**
  * Transforms current Button props to MUI Button/IconButton props.
  *
- * This is a temporary mapping function for comparison purposes.
- * Style overrides will be added later to match the design system exactly.
+ * This function uses the shared `transformButtonPropsCore` logic to compute
+ * MUI variant/color/size and base props, then adds JSX rendering for icons and children.
  */
 export function buttonPropsToMui(props: GenericButtonProps): {
   isIconButton: boolean;
@@ -21,72 +21,25 @@ export function buttonPropsToMui(props: GenericButtonProps): {
   isPending?: boolean;
 } {
   const {
-    type = 'primary',
-    color = 'purple',
-    size = 'm',
     text,
     iconLeft,
     iconRight,
     isIconOnly = false,
     icon,
-    disabled = false,
     isPending = false,
-    ariaLabel,
-    className,
-    id,
-    onClick,
-    buttonTagTypeAttribute,
-    forceHover,
-    // Link props
-    useAsLink,
-    href,
-    target,
-    download,
-    title,
-    analyticsCallback,
-    // Other HTML props
-    ...rest
   } = props;
 
-  // Map type to variant
-  const variantMap: Record<ButtonType, MuiButtonProps['variant']> = {
-    primary: 'contained',
-    secondary: 'outlined',
-    tertiary: 'text',
-  };
-  const variant = variantMap[type];
-
-  // Map size (for now, map to closest MUI size - will be extended via theme later)
-  const sizeMap: Record<string, 'extraSmall' | 'small' | 'medium' | 'large'> = {
-    xs: 'extraSmall',
-    s: 'small',
-    m: 'medium',
-    l: 'large',
-  };
-  const muiSize = sizeMap[size] || 'medium';
-
-  // Map color to MUI color prop
-  // MUI colors: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'inherit' | 'white' | 'tertiary'
-  const colorMap: Record<ButtonColor, MuiButtonProps['color']> = {
-    purple: 'primary',
-    black: 'secondary',
-    gray: 'tertiary',
-    white: 'white',
-    destructive: 'error',
-  };
-  const muiColor = colorMap[color] || 'primary';
-
-  // Create onClick handler that calls both analyticsCallback and onClick
-  const handleClick = analyticsCallback
-    ? (
-        event:
-          | React.MouseEvent<HTMLButtonElement>
-          | React.MouseEvent<HTMLAnchorElement>,
-      ) => {
-        analyticsCallback();
-        onClick?.(event);
-      }
-    : onClick;
+  // Use shared core logic for prop transformation
+  const core = transformButtonPropsCore(props);
+  const {
+    variant,
+    muiSize,
+    muiColor,
+    baseProps,
+    spinnerIcon,
+    spinnerPosition,
+    addPendingButtonWithHiddenTextClass,
+  } = core;
 
   // Handle icon-only buttons with IconButton
   if (isIconOnly && icon) {
@@ -94,54 +47,24 @@ export function buttonPropsToMui(props: GenericButtonProps): {
       isIconButton: true,
       buttonProps: {},
       iconButtonProps: {
+        ...baseProps,
         variant,
         color: muiColor,
         size: muiSize,
-        disabled: disabled,
-        className: forceHover
-          ? `${className || ''} force-hover`.trim()
-          : className,
-        id,
-        onClick: handleClick,
-        'aria-label': ariaLabel || rest['aria-label'],
-        // Keep data-force-hover for backwards compatibility
-        ...(forceHover &&
-          ({'data-force-hover': true} as Record<string, boolean>)),
-        ...rest,
       } as Partial<MuiIconButtonProps>,
       isPending,
     };
   }
 
-  // Regular button props
+  // Regular button props - start with base props from core
   const muiProps: Partial<MuiButtonProps> = {
+    ...baseProps,
     variant,
     color: muiColor,
     size: muiSize,
-    disabled: disabled,
     // Note: MUI Button has a loading prop, but it's styled differently from DSCO designs.
     // This is why we use a custom implementation with spinner icon (see below).
     // If a solution to customize MUI Button's native loading state styles is found, we can update it.
-    className: forceHover ? `${className || ''} force-hover`.trim() : className,
-    id,
-    onClick: handleClick,
-    'aria-label': ariaLabel || rest['aria-label'],
-    // Keep data-force-hover for backwards compatibility
-    ...(forceHover && ({'data-force-hover': true} as Record<string, boolean>)),
-    // Link behavior
-    ...(useAsLink &&
-      href && {
-        href: disabled ? undefined : href,
-        target,
-        download,
-        title,
-        rel: target === '_blank' ? 'noopener noreferrer' : undefined,
-      }),
-    // Button-specific props
-    ...(!useAsLink && {
-      type: buttonTagTypeAttribute || 'button',
-    }),
-    ...rest,
   };
 
   // Handle pending state with spinner icon
@@ -153,16 +76,6 @@ export function buttonPropsToMui(props: GenericButtonProps): {
   // - If there's only icon - show only spinner
   // - If there's text and iconLeft or both iconLeft and iconRight -> spinner on the left + text + iconRight
   // - If there's text and iconRight (but no iconLeft) -> text + spinner on the right
-  const spinnerIcon = {
-    iconName: 'spinner' as const,
-    iconStyle: 'solid' as const,
-    animationType: 'spin' as const,
-  };
-  const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
-  const addPendingButtonWithHiddenTextClass =
-    isPending && !icon && !iconLeft && !iconRight;
-
-  // Handle icons (hide iconLeft when pending, show iconRight only if not pending or if both icons exist)
   if (isPending) {
     if (addPendingButtonWithHiddenTextClass) {
       // When pending with only text (no icons), spinner should be centered
