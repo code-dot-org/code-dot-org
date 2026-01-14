@@ -8,9 +8,7 @@ import {CdoTheme} from '@/themes';
 
 import NotificationBanner from '../NotificationBanner';
 
-const AllTheProviders: React.FC<{children: React.ReactNode}> = ({
-  children,
-}) => {
+const AllTheProviders = ({children}: {children: React.ReactNode}) => {
   return <ThemeProvider theme={CdoTheme}>{children}</ThemeProvider>;
 };
 
