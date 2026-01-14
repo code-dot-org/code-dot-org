@@ -6,17 +6,18 @@ class Services::Lti::DeepLinkingResponseBuilderTest < ActiveSupport::TestCase
   let(:deployment_id) {SecureRandom.alphanumeric(10)}
   let(:deep_linking_settings_data) {SecureRandom.alphanumeric(10)}
   let(:content_items) {['item-1', 'item-2']}
-  let(:described_instance) {described_class.new(
-    request_issuer:,
-    client_id:,
-    deployment_id:,
-    deep_linking_settings_data:,
-    content_items:
-  )}
+  let(:described_instance) do
+    described_class.new(
+      request_issuer:,
+      client_id:,
+      deployment_id:,
+      deep_linking_settings_data:,
+      content_items:
+    )
+  end
 
   subject(:response_jwt) {described_instance.call}
   subject(:decoded_jwt) {decoded_jwt}
-
 
   describe '#call' do
     it 'returns a valid JWT' do
