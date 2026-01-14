@@ -1,3 +1,17 @@
 p.messageMargin {
   margin-bottom: 0.5rem;
 }
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1rem;
+  // Add end padding so the focus state styles are
+  // not cut off when elements are focused.
+  padding-inline-end: 0.25rem;
+
+  input {
+    width: 100%;
+  }
+}

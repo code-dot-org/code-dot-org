@@ -1,7 +1,14 @@
+import {IconDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import debounce from 'lodash/debounce';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {
+  ComponentProps,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {
@@ -20,8 +27,6 @@ export type GenericPromptProps = Pick<
 > & {
   handleConfirm?: (prompt: string) => void;
   handleCancel?: () => void;
-  label?: string;
-  placeholder?: string;
   value?: string;
   validateInput?: (
     prompt: string
@@ -29,6 +34,8 @@ export type GenericPromptProps = Pick<
   requiresPrompt?: boolean;
   message?: string;
   messageMargin?: boolean;
+  textFieldProps?: Partial<ComponentProps<typeof TextField>>;
+  dropdownProps?: Partial<ComponentProps<typeof IconDropdown>>;
 };
 
 /**
@@ -39,22 +46,22 @@ export type GenericPromptProps = Pick<
 
 type GenericPromptBodyProps = {
   message?: string;
-  label?: string;
-  placeholder?: string;
   prompt: string;
   handleInputChange: (newInput: string) => void;
   errorMessage?: string;
   messageMargin?: boolean;
+  textFieldProps?: Partial<ComponentProps<typeof TextField>>;
+  dropdownProps?: Partial<ComponentProps<typeof IconDropdown>>;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   message,
-  label,
-  placeholder,
   prompt,
   handleInputChange,
   errorMessage,
   messageMargin = true,
+  textFieldProps,
+  dropdownProps,
 }) => {
   return (
     <>
@@ -65,15 +72,30 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
           {message}
         </BodyTwoText>
       )}
-      <TextField
-        name="prompt-field"
-        label={label}
-        placeholder={placeholder}
-        value={prompt}
-        onChange={e => handleInputChange(e.target.value)}
-        errorMessage={errorMessage}
-        id="uitest-prompt-field"
-      />
+      <div className={moduleStyles.inputContainer}>
+        <TextField
+          name="prompt-field"
+          label={textFieldProps?.label || ''}
+          value={prompt}
+          onChange={e => handleInputChange(e.target.value)}
+          errorMessage={errorMessage}
+          color="gray"
+          id="uitest-prompt-field"
+          {...textFieldProps}
+        />
+        {dropdownProps?.options && (
+          <IconDropdown
+            name="prompt-dropdown"
+            className={moduleStyles.dropdown}
+            labelText={dropdownProps.labelText || ''}
+            options={dropdownProps.options}
+            selectedOption={dropdownProps.selectedOption!}
+            onChange={() => {}}
+            color="gray"
+            {...dropdownProps}
+          />
+        )}
+      </div>
     </>
   );
 };
@@ -81,15 +103,16 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
 const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   title,
   message,
+  messageMargin,
   handleConfirm,
   handleCancel,
-  label,
-  placeholder,
   value,
   validateInput = () => undefined,
   requiresPrompt = true,
   useModal = false,
   buttons,
+  textFieldProps,
+  dropdownProps,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
@@ -165,11 +188,12 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       bodyComponent={
         <GenericPromptBody
           message={message}
-          label={label}
-          placeholder={placeholder}
+          messageMargin={messageMargin}
           prompt={prompt}
           handleInputChange={handleInputChange}
           errorMessage={validationMessage?.text}
+          textFieldProps={textFieldProps}
+          dropdownProps={dropdownProps}
         />
       }
       buttons={{

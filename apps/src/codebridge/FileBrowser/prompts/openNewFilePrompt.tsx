@@ -1,7 +1,10 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {validateFileNameForModal} from '@codebridge/utils';
+import {
+  validateFileNameForModal,
+  getFileIconNameAndStyle,
+} from '@codebridge/utils';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
@@ -39,8 +42,51 @@ export const openNewFilePrompt = async ({
     type: DialogType.GenericPrompt,
     title: 'Create a new file',
     message: 'Give your new file a name and type.',
-    messageMargin: false,
-    label: 'File name',
+    messageMargin: true,
+    textFieldProps: {
+      label: 'File name',
+    },
+    dropdownProps: {
+      labelText: 'File type',
+      options: validFileTypes
+        ? validFileTypes.map(fileType => {
+            const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle({
+              name: `file.${fileType}`,
+            } as ProjectFile);
+            return {
+              key: fileType,
+              text: fileType,
+              value: fileType,
+              label: fileType.toUpperCase(),
+              icon: {
+                iconName,
+                iconStyle,
+                iconFamily: isBrand ? 'brands' : undefined,
+              },
+            };
+          })
+        : [],
+      selectedOption: validFileTypes?.length
+        ? {
+            value: validFileTypes[0],
+            label: validFileTypes[0].toUpperCase(),
+            icon: {
+              iconName: getFileIconNameAndStyle({
+                name: `file.${validFileTypes[0]}`,
+              } as ProjectFile).iconName,
+              iconStyle: getFileIconNameAndStyle({
+                name: `file.${validFileTypes[0]}`,
+              } as ProjectFile).iconStyle,
+              iconFamily: getFileIconNameAndStyle({
+                name: `file.${validFileTypes[0]}`,
+              } as ProjectFile).isBrand
+                ? 'brands'
+                : undefined,
+            },
+          }
+        : undefined,
+      styleAsFormField: true,
+    },
     buttons: {
       confirm: {
         text: 'Create file',
