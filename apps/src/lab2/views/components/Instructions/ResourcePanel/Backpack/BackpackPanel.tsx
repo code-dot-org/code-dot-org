@@ -5,6 +5,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
@@ -12,20 +13,28 @@ import BackpackMessage from './BackpackMessage';
 
 import moduleStyles from './backpack-panel.module.scss';
 
-const BackpackPanel: React.FC<BackpackProps> = ({
+const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
+
+interface BackpackPanelProps extends BackpackProps {
+  openPanelCallback: () => void;
+}
+
+type AlertConfig = {type: 'success' | 'danger'; message: string};
+
+const BackpackPanel: React.FC<BackpackPanelProps> = ({
   validateFileName,
   saveFile,
   createNewFile,
   findIdForFileName,
+  openPanelCallback,
 }) => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [loadError, setLoadError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const [alertList, setAlertList] = useState<
-    {type: 'success' | 'danger'; message: string}[]
-  >([]);
+  const [alertList, setAlertList] = useState<AlertConfig[]>([]);
+  const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<string[]>([]);
 
   const loadBackpackFiles = useCallback(
     (showLoading: boolean) => {
@@ -57,11 +66,33 @@ const BackpackPanel: React.FC<BackpackProps> = ({
     loadBackpackFiles(true);
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
     // adds or deletes.
-    backpackApi?.addEventListener(() => {
+    const listenerId = backpackApi?.addEventListener((event, filename) => {
       // We don't show the load view here to avoid the screen flickering when the backpack updates.
       loadBackpackFiles(false);
+      if (event === BackpackEvent.FileAdded) {
+        setAlertList(prevAlerts => [
+          ...prevAlerts,
+          {
+            type: 'success',
+            message: `${filename} successfully saved to your Backpack!`,
+          },
+        ]);
+        openPanelCallback();
+        // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
+        setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
+        setTimeout(() => {
+          setRecentlyAddedFiles(prevFiles =>
+            prevFiles.filter(file => file !== filename)
+          );
+        }, SHOW_RECENTLY_ADDED_DURATION_MS);
+      }
     });
-  }, [loadBackpackFiles, backpackApi]);
+    return () => {
+      if (listenerId) {
+        backpackApi?.removeEventListener(listenerId);
+      }
+    };
+  }, [loadBackpackFiles, backpackApi, openPanelCallback]);
 
   if (!backpackApi) {
     let titleMessage = 'Your Backpack is unavailable';
@@ -144,13 +175,15 @@ const BackpackPanel: React.FC<BackpackProps> = ({
           key={fileName}
           fileName={fileName}
           backpackApi={backpackApi}
-          addAlert={(type, message) =>
-            setAlertList(prevAlerts => [...prevAlerts, {type, message}])
-          }
+          addAlert={(type, message) => {
+            setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+            openPanelCallback();
+          }}
           validateFileName={validateFileName}
           saveFile={saveFile}
           createNewFile={createNewFile}
           findIdForFileName={findIdForFileName}
+          isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
         />
       ))}
     </div>

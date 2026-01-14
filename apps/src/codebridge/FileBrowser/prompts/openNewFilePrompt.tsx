@@ -1,7 +1,7 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {validateFileNameForModal} from '@codebridge/utils';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
@@ -47,7 +47,7 @@ export const openNewFilePrompt = async ({
       },
     },
     validateInput: (fileName: string) =>
-      validateFileName({
+      validateFileNameForModal({
         fileName,
         folderId,
         projectFiles,

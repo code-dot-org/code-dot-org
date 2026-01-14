@@ -23,7 +23,9 @@ export type GenericPromptProps = Pick<
   label?: string;
   placeholder?: string;
   value?: string;
-  validateInput?: (prompt: string) => string | undefined;
+  validateInput?: (
+    prompt: string
+  ) => {text: string; type: 'error' | 'warning'} | undefined;
   requiresPrompt?: boolean;
   message?: string;
   messageMargin?: boolean;
@@ -91,15 +93,15 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
-  const [errorMessage, setErrorMessage] = useState<string | undefined>(
-    undefined
-  );
+  const [validationMessage, setValidationMessage] = useState<
+    {text: string; type: 'error' | 'warning'} | undefined
+  >(undefined);
 
   const debouncedErrorHandler = useMemo(() => {
     return debounce((newInput: string) => {
-      setErrorMessage(validateInput(newInput));
+      setValidationMessage(validateInput(newInput));
     }, DEBOUNCE_TIME_OUT);
-  }, [setErrorMessage, validateInput]);
+  }, [setValidationMessage, validateInput]);
 
   const handleInputChange = useCallback(
     (newInput: string) => {
@@ -110,18 +112,17 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       //That'll prevent the error from popping up immediately and giving a chance to type.
       // Otherwise, if there is no input or the user already has an error, then we want to
       // validate immediately (in an attempt to clear the error), so use the non-debounced version.
-      if (newInput.length && !errorMessage?.length) {
+      if (newInput.length && !validationMessage?.text?.length) {
         debouncedErrorHandler(newInput);
       } else {
-        setErrorMessage(validateInput(newInput));
+        setValidationMessage(validateInput(newInput));
       }
     },
     [
-      errorMessage,
-      validateInput,
       setPromiseArgs,
-      setErrorMessage,
+      validationMessage?.text?.length,
       debouncedErrorHandler,
+      validateInput,
     ]
   );
 
@@ -141,7 +142,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       if (closeType === 'confirm') {
         const validationError = validateInput(prompt);
         if (validationError) {
-          setErrorMessage(validationError);
+          setValidationMessage(validationError);
           return;
         }
       }
@@ -155,6 +156,8 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       return defaultCallback();
     };
 
+  const hasError = validationMessage?.type === 'error';
+
   return (
     <GenericDialog
       title={title}
@@ -166,14 +169,14 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
           placeholder={placeholder}
           prompt={prompt}
           handleInputChange={handleInputChange}
-          errorMessage={errorMessage}
+          errorMessage={validationMessage?.text}
         />
       }
       buttons={{
         confirm: {
           ...buttons?.confirm,
           callback: () => handleConfirm?.(prompt),
-          disabled: Boolean(errorMessage) || (requiresPrompt && !prompt.length),
+          disabled: hasError || (requiresPrompt && !prompt.length),
         },
         cancel: {
           ...buttons?.cancel,

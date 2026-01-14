@@ -1,4 +1,5 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 const REQUEST_RETRY_COUNT = 1;
 
@@ -20,11 +21,11 @@ const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
 
 // Events that can a listener can subscribe to.
-enum BackpackEvent {
+export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
 }
-type BackpackEventListener = (event: BackpackEvent) => void;
+type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
   appType: string;
@@ -34,7 +35,7 @@ export default class BackpackClientApi {
   fileUploadsFailed: string[];
   fileDeletesInProgress: string[];
   fileDeletesFailed: string[];
-  eventListeners: BackpackEventListener[];
+  eventListeners: {[key: string]: BackpackEventListener};
 
   constructor(appType: string, channelId: string | null) {
     this.appType = appType;
@@ -44,7 +45,7 @@ export default class BackpackClientApi {
     this.fileUploadsFailed = [];
     this.fileDeletesInProgress = [];
     this.fileDeletesFailed = [];
-    this.eventListeners = [];
+    this.eventListeners = {};
   }
 
   hasBackpack() {
@@ -93,6 +94,13 @@ export default class BackpackClientApi {
     } catch (error) {
       return error as Error;
     }
+  }
+
+  getFileFetchUrl(filename: string) {
+    if (!this.channelId) {
+      return undefined;
+    }
+    return `${rootUrl(this.channelId!)}/${filename}`;
   }
 
   async getFileList(
@@ -203,7 +211,9 @@ export default class BackpackClientApi {
       onError(error as Error);
       return;
     }
-    this.eventListeners.forEach(listener => listener(BackpackEvent.FileAdded));
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.FileAdded, filename)
+    );
     onSuccess();
   }
 
@@ -409,8 +419,12 @@ export default class BackpackClientApi {
     if (filenameIndex >= 0) {
       filesInRequest.splice(filenameIndex, 1);
     }
+    if (!failedFileList.includes(filename)) {
+      Object.values(this.eventListeners).forEach(listener =>
+        listener(requestType, filename)
+      );
+    }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
-      this.eventListeners.forEach(listener => listener(requestType));
       onSuccess();
     } else if (filesInRequest.length === 0) {
       onError(error, failedFileList);
@@ -418,6 +432,14 @@ export default class BackpackClientApi {
   }
 
   addEventListener(listener: BackpackEventListener) {
-    this.eventListeners.push(listener);
+    const id = createUuid();
+    this.eventListeners[id] = listener;
+    return id;
+  }
+
+  removeEventListener(id: string) {
+    if (this.eventListeners[id]) {
+      delete this.eventListeners[id];
+    }
   }
 }

@@ -198,7 +198,7 @@ class LessonsController < ApplicationController
     unit_group_unit = unit_context[:unit_group_unit]
 
     @lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+      l.relative_position == params[:lesson_position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
 
