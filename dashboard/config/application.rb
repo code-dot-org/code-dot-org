@@ -275,6 +275,6 @@ module Dashboard
     # Using it as the route host and clearing the port avoids duplication and
     # matches the behavior of the global `CDO.studio_url` route generation helper.
     routes.default_url_options[:host] = CDO.dashboard_site_host
-    routes.default_url_options[:port] = nil
+    routes.default_url_options.delete(:port)
   end
 end
