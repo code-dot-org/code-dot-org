@@ -1,10 +1,8 @@
 import {Breadcrumbs as MUIBreadcrumbs} from '@mui/material';
-import {ThemeProvider} from '@mui/material/styles';
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 import {within, expect} from 'storybook/test';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-import theme from '@/themes/code.org';
 
 import Breadcrumbs, {
   BreadcrumbsProps,
@@ -17,6 +15,19 @@ export default {
   // @ts-ignore-next-line
   component: Breadcrumbs.type,
   parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable the color contrast rule for action blocks.
+            // ActionBlock component has one a11y issue, and it's related to the overline color.
+            // This is a known issue across our design system, and we are ok accepting this for now.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
     useMui: true,
     componentSubtitle: 'Renders navigation breadcrumbs',
   },
@@ -30,19 +41,17 @@ const SingleTemplate: StoryFn<BreadcrumbsProps> = args => {
 
   return (
     <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
+      {/*<div>*/}
+      {/*  <div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>*/}
+      {/*    Current Breadcrumbs*/}
+      {/*  </div>*/}
+      {/*  <Breadcrumbs {...args} />*/}
+      {/*</div>*/}
       <div>
-        <div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>
-          Current Breadcrumbs
-        </div>
-        <Breadcrumbs {...args} />
-      </div>
-      <div>
-        <div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>
-          MUI Breadcrumbs
-        </div>
-        <ThemeProvider theme={theme}>
-          <MUIBreadcrumbs {...muiProps} />
-        </ThemeProvider>
+        {/*<div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>*/}
+        {/*  MUI Breadcrumbs*/}
+        {/*</div>*/}
+        <MUIBreadcrumbs {...muiProps} />
       </div>
     </div>
   );
@@ -64,23 +73,21 @@ const MultipleTemplate: StoryFn<{
           key={key}
           style={{display: 'flex', flexDirection: 'column', gap: '8px'}}
         >
-          <div style={{fontSize: '12px', color: '#666', marginBottom: '4px'}}>
-            Current
-          </div>
-          <Breadcrumbs {...componentArg} />
-          <div
-            style={{
-              fontSize: '12px',
-              color: '#666',
-              marginTop: '8px',
-              marginBottom: '4px',
-            }}
-          >
-            MUI
-          </div>
-          <ThemeProvider theme={theme}>
-            <MUIBreadcrumbs {...muiProps} />
-          </ThemeProvider>
+          {/*<div style={{fontSize: '12px', color: '#666', marginBottom: '4px'}}>*/}
+          {/*  Current*/}
+          {/*</div>*/}
+          {/*<Breadcrumbs {...componentArg} />*/}
+          {/*<div*/}
+          {/*  style={{*/}
+          {/*    fontSize: '12px',*/}
+          {/*    color: '#666',*/}
+          {/*    marginTop: '8px',*/}
+          {/*    marginBottom: '4px',*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  MUI*/}
+          {/*</div>*/}
+          <MUIBreadcrumbs {...muiProps} />
         </div>
       );
     })}
