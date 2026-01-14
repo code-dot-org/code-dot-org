@@ -57,7 +57,12 @@ const VersionHistoryRow: React.FunctionComponent<
 
   let ariaLabel;
   let isBoldtype = true;
-  const isAiSaveComment = comment && comment === AI_SAVED_COMMENT;
+  console.log('comment', comment);
+  const aiSavedComment =
+    comment && comment.startsWith(AI_SAVED_COMMENT)
+      ? comment.slice(AI_SAVED_COMMENT.length)
+      : undefined;
+  console.log('aiSaveComment', aiSavedComment);
   const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
     classes.push(moduleStyles.initialVersionRow);
@@ -65,7 +70,7 @@ const VersionHistoryRow: React.FunctionComponent<
     // Note that the latest or most current version can also include a comment.
     // This styling adds the appropriate margin to a given row.
     classes.push(moduleStyles.currentVersionRow);
-  } else if (comment && !isAiSaveComment) {
+  } else if (comment && aiSavedComment) {
     classes.push(moduleStyles.commentRow);
     ariaLabel = lab2I18n.committedVersion();
   } else {
@@ -73,9 +78,9 @@ const VersionHistoryRow: React.FunctionComponent<
     ariaLabel = lab2I18n.autosavedVersion();
     isBoldtype = false;
   }
-  if (isAiSaveComment) {
+  if (aiSavedComment) {
     classes.push(moduleStyles.aiSaveRow);
-    ariaLabel = 'AI Version Save';
+    ariaLabel = aiSavedComment;
   }
 
   const showAutoSavedIcon =
@@ -116,7 +121,7 @@ const VersionHistoryRow: React.FunctionComponent<
               disabled={restoreDisabled}
             />
           )}
-          {isAiSaveComment && !showRestoreButton && (
+          {aiSavedComment && !showRestoreButton && (
             <WithTooltip
               tooltipProps={{
                 text: 'AI Version Save',
@@ -149,9 +154,9 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
         </div>
         {children}
-        {comment && !isAiSaveComment && (
+        {(aiSavedComment || comment) && (
           <BodyFourText className={moduleStyles.commitDescription} noMargin>
-            {comment}
+            {aiSavedComment || comment}
           </BodyFourText>
         )}
       </div>
