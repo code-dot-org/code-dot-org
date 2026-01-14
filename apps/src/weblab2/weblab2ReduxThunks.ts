@@ -45,7 +45,6 @@ export const acceptAiTutorVersion = createAsyncThunk<
 >(
   'weblab2/acceptAiTutorVersion',
   async ({files, commitDescription}, thunkAPI) => {
-    console.log('commitDescription', commitDescription);
     const state = thunkAPI.getState();
     const sources = state.lab2Project.projectSources;
     const channelId = state.lab.channel?.id;
@@ -123,7 +122,6 @@ export const acceptAiTutorVersion = createAsyncThunk<
     }
     const newVersionId = projectManager.getCurrentVersionId();
     const aiSavedCommentDescription = AI_SAVED_COMMENT + commitDescription;
-    console.log('aiSavedCommentDescription', aiSavedCommentDescription);
     if (newVersionId) {
       const payload = {
         storage_id: channelId,

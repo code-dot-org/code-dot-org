@@ -57,12 +57,12 @@ const VersionHistoryRow: React.FunctionComponent<
 
   let ariaLabel;
   let isBoldtype = true;
-  console.log('comment', comment);
-  const aiSavedComment =
-    comment && comment.startsWith(AI_SAVED_COMMENT)
-      ? comment.slice(AI_SAVED_COMMENT.length)
-      : undefined;
-  console.log('aiSaveComment', aiSavedComment);
+  let aiSavedComment;
+  if (comment && comment === AI_SAVED_COMMENT) {
+    aiSavedComment = comment; // Display AI saved versions without a comment if no user description was added.
+  } else if (comment && comment.startsWith(AI_SAVED_COMMENT)) {
+    aiSavedComment = comment.slice(AI_SAVED_COMMENT.length);
+  }
   const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
     classes.push(moduleStyles.initialVersionRow);
@@ -154,11 +154,12 @@ const VersionHistoryRow: React.FunctionComponent<
           )}
         </div>
         {children}
-        {(aiSavedComment || comment) && (
-          <BodyFourText className={moduleStyles.commitDescription} noMargin>
-            {aiSavedComment || comment}
-          </BodyFourText>
-        )}
+        {comment !== AI_SAVED_COMMENT && // Display comment only if user description is included.
+          (aiSavedComment || comment) && (
+            <BodyFourText className={moduleStyles.commitDescription} noMargin>
+              {aiSavedComment || comment}
+            </BodyFourText>
+          )}
       </div>
     </div>
   );
