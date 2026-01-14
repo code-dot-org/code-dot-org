@@ -21,6 +21,9 @@ export const handleSaveToBackpack = async (
   const validateSketchName = (
     sketchName: string
   ): {type: 'error' | 'warning'; text: string} | undefined => {
+    if (sketchName.length === 0) {
+      return undefined;
+    }
     const containsValidCharacters = /^[\w-]+$/.test(sketchName);
     if (!containsValidCharacters) {
       return {

@@ -60,7 +60,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
-  console.log({supportedFileTypes: config.supportedFileTypes});
 
   const {appName, id: levelId} = levelProperties;
   const settings = useCodebridgeSettings();
