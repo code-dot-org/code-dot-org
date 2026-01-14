@@ -380,10 +380,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
     {
       props: {variant: 'text', color: 'white'},
       style: {
-        color: 'var(--text-neutral-inverse)',
+        color: 'var(--neutral-base-white)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--neutral-white-alpha-30)',
-          color: 'var(--text-neutral-inverse)',
+          color: 'var(--neutral-base-white)',
         },
         '&:active': {
           backgroundColor: 'var(--neutral-white-alpha-30)',
