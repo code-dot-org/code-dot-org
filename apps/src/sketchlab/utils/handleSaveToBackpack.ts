@@ -12,7 +12,8 @@ export const handleSaveToBackpack = async (
   excalidrawApi: ExcalidrawImperativeAPI | undefined | null,
   backpackApi: BackpackClientApi | null,
   dialogControl: DialogControlInterface,
-  backpackFileList: string[]
+  backpackFileList: string[],
+  errorCallback: (error: string) => void
 ) => {
   if (!excalidrawApi || !backpackApi) {
     return;
@@ -47,7 +48,6 @@ export const handleSaveToBackpack = async (
     return;
   }
   // User has confirmed and file name is valid, start upload.
-  console.log('confirmed!');
   const newFileName = extractUserInput(dialogResults) + '.png';
   const blobToSave = await exportToBlob({
     elements: excalidrawApi.getSceneElements(),
@@ -59,10 +59,12 @@ export const handleSaveToBackpack = async (
     newFileName,
     blobToSave,
     () => {
-      console.log('Error!');
+      errorCallback(
+        `Error saving ${newFileName} to your Backpack. Please try again`
+      );
     },
     () => {
-      console.log('success!');
+      // Backpack component handles success.
     }
   );
 };

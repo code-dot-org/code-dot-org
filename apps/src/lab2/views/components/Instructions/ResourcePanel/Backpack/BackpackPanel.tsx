@@ -99,6 +99,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     };
   }, [loadBackpackFiles, backpackApi, openPanelCallback]);
 
+  const addAlert = useCallback(
+    (type: 'success' | 'danger', message: string) => {
+      setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+      openPanelCallback();
+    },
+    [openPanelCallback]
+  );
+
   if (!backpackApi) {
     let titleMessage = 'Your Backpack is unavailable';
     let detailMessage = 'Please reload the page to try again.';
@@ -180,10 +188,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             key={fileName}
             fileName={fileName}
             backpackApi={backpackApi}
-            addAlert={(type, message) => {
-              setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
-              openPanelCallback();
-            }}
+            addAlert={addAlert}
             validateFileName={validateFileName}
             saveFileToProject={saveFileToProject}
             createNewProjectFile={createNewProjectFile}
@@ -196,7 +201,11 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
       {saveToBackpackButton && (
         <Button
           text={saveToBackpackButton.text}
-          onClick={() => saveToBackpackButton.onClick(fileList || [])}
+          onClick={() =>
+            saveToBackpackButton.onClick(fileList || [], (error: string) =>
+              addAlert('danger', error)
+            )
+          }
           size="s"
           type="secondary"
           color="gray"

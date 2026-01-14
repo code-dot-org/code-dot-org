@@ -272,12 +272,16 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               createNewProjectFile: () => {},
               findIdForFileName: () => undefined,
               saveToBackpackButton: {
-                onClick: (fileList: string[]) =>
+                onClick: (
+                  fileList: string[],
+                  errorCallback: (error: string) => void
+                ) =>
                   handleSaveToBackpack(
                     excalidrawApiRef.current,
                     backpackApi,
                     dialogControl,
-                    fileList
+                    fileList,
+                    errorCallback
                   ),
                 text: 'Save Sketch to Backpack',
               },

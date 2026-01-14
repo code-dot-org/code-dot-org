@@ -6,7 +6,6 @@
   flex: 1 0 0;
   align-self: stretch;
   height: 100%;
-  width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -19,8 +18,6 @@
   width: 100%;
   flex: 1;
   overflow-y: auto;
-  overflow-x: hidden;
-  box-sizing: border-box;
 }
 
 .saveButton {
