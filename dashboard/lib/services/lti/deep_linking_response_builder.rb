@@ -2,13 +2,13 @@ module Services
   module Lti
     class DeepLinkingResponseBuilder < Services::Base
       include LtiAccessToken
-      attr_reader :request_issuer, :client_id, :deployment_id, :deep_linking_settings, :content_items
+      attr_reader :request_issuer, :client_id, :deployment_id, :deep_linking_settings_data, :content_items
 
-      def initialize(request_issuer:, client_id:, deployment_id:, deep_linking_settings:, content_items: [])
+      def initialize(request_issuer:, client_id:, deployment_id:, deep_linking_settings_data: nil, content_items: [])
         @request_issuer = request_issuer
         @client_id = client_id
         @deployment_id = deployment_id
-        @deep_linking_settings = deep_linking_settings
+        @deep_linking_settings_data = deep_linking_settings_data
         @content_items = content_items
       end
 
@@ -28,11 +28,11 @@ module Services
           Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM => deployment_id,
           # The data claim is optional, but if it was present in the deep linking request,
           # it must be included in the response, and the values must match.
-          Policies::Lti::DEEP_LINKING_DATA_CLAIM => deep_linking_settings['data'],
+          Policies::Lti::DEEP_LINKING_DATA_CLAIM => deep_linking_settings_data,
           # While technically optional, the content items array must be populated
           # to create deep links in the LMS.
           Policies::Lti::DEEP_LINKING_CONTENT_ITEMS_CLAIM => content_items
-        })
+        }.compact)
       end
     end
   end

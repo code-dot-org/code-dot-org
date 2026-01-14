@@ -9,7 +9,7 @@ module Lti
         @deep_linking_settings = params[:deep_linking_settings]
       end
 
-      # POST /lti/v1/deep_linking
+      # POST /lti/v1/deep_linking/submit
       def submit
         deep_linking_settings = JSON.parse(params.require(:deep_linking_settings))
         content_items = build_content_items(params[:selected_items] || [])
@@ -17,7 +17,7 @@ module Lti
           request_issuer: session[:lti_issuer],
           client_id: session[:lti_client_id],
           deployment_id: session[:lti_deployment_id],
-          deep_linking_settings:,
+          deep_linking_settings_data: deep_linking_settings['data'],
           content_items:,
         )
 
