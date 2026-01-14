@@ -10,10 +10,11 @@ import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeRevie
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeReviewGroupsDialog', () => {
-  let wrapper, dataApi, fakeGroups;
+  let wrapper, dataApi, fakeGroups, alertStub;
 
   beforeEach(() => {
     fakeGroups = [{name: 'fake group'}];
+    alertStub = sinon.stub(window, 'alert');
 
     dataApi = {
       getCodeReviewGroups: () => {
@@ -26,13 +27,17 @@ describe('CodeReviewGroupsDialog', () => {
       },
       setCodeReviewGroups: sinon.stub().returns({
         done: callback => {
-          callback();
+          callback({students_with_sharing_enabled: []});
           return {fail: () => {}};
         },
       }),
     };
 
     wrapper = isolateComponent(<CodeReviewGroupsDialog dataApi={dataApi} />);
+  });
+
+  afterEach(() => {
+    alertStub.restore();
   });
 
   it('click of button opens dialog', () => {
@@ -64,5 +69,34 @@ describe('CodeReviewGroupsDialog', () => {
     );
     wrapper.findOne(StylizedBaseDialog).props.handleConfirmation();
     sinon.assert.calledOnceWithExactly(dataApi.setCodeReviewGroups, newGroups);
+  });
+
+  it('does not show alert when all students already had sharing enabled', () => {
+    const newGroups = [{name: 'new group'}];
+    wrapper.findOne(CodeReviewGroupsManager).props.setGroups(newGroups);
+    wrapper.findOne(StylizedBaseDialog).props.handleConfirmation();
+
+    sinon.assert.notCalled(alertStub);
+  });
+
+  it('shows alert when backend updated students with sharing formerly disabled', () => {
+    // Update the mock to return students with sharing enabled
+    dataApi.setCodeReviewGroups = sinon.stub().returns({
+      done: callback => {
+        callback({
+          students_with_sharing_enabled: ['Alice', 'Bob'],
+        });
+        return {fail: () => {}};
+      },
+    });
+
+    const newGroups = [{name: 'new group'}];
+    wrapper.findOne(CodeReviewGroupsManager).props.setGroups(newGroups);
+    wrapper.findOne(StylizedBaseDialog).props.handleConfirmation();
+
+    sinon.assert.calledOnce(alertStub);
+    expect(alertStub.firstCall.args[0]).to.equal(
+      'Project sharing (required for code reviews) has been enabled for the following students: Alice, Bob'
+    );
   });
 });

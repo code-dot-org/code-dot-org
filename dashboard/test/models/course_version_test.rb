@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class CourseVersionTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @student = create(:student)
     @teacher = create(:teacher)
@@ -225,12 +223,21 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_nil CourseVersion.find_by(course_offering: offering, key: '2050') # old CourseVersion should be deleted
   end
 
-  test "cannot destroy course version if it has resources" do
+  test "destroying course version destroys associated resources" do
     course_version = create(:course_version)
-    create(:resource, course_version: course_version)
-    assert_raises ActiveRecord::RecordNotDestroyed do
-      course_version.destroy_and_destroy_parent_if_empty
-    end
+    resource = create(:resource, course_version: course_version)
+    vocabulary = create(:vocabulary, course_version: course_version)
+    reference_guide = create(:reference_guide, course_version: course_version)
+
+    resource_id = resource.id
+    vocabulary_id = vocabulary.id
+    reference_guide_id = reference_guide.id
+
+    course_version.destroy_and_destroy_parent_if_empty
+
+    assert_nil Resource.find_by(id: resource_id)
+    assert_nil Vocabulary.find_by(id: vocabulary_id)
+    assert_nil ReferenceGuide.find_by(id: reference_guide_id)
   end
 
   test "destroy_and_destroy_parent_if_empty destroys version and offering for offering with one version" do

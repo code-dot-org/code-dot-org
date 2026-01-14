@@ -2,8 +2,6 @@ require 'test_helper'
 
 module Foorm
   class LibrariesControllerTest < ActionController::TestCase
-    self.use_transactional_test_case = true
-
     setup_all do
       @levelbuilder = create(:levelbuilder)
     end

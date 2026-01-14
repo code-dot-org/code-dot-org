@@ -18,8 +18,8 @@ import {
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  isLabLoading,
   hasPageError,
+  isLabLoading,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
@@ -29,11 +29,13 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
+import useLoadLevelProperties from '../hooks/useLoadLevelProperties';
 import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {LifecycleEvent} from '../utils';
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import LevelPropertiesWrapper from './LevelPropertiesWrapper';
 import Loading from './Loading';
 import {ProjectBlockedUI} from './ProjectBlockedUI';
 
@@ -44,7 +46,8 @@ export interface Lab2WrapperProps {
 }
 
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
-  const isLoading: boolean = useSelector(isLabLoading);
+  const levelPropertiesMap = useLoadLevelProperties();
+  const isLoading: boolean = useSelector(isLabLoading) || !levelPropertiesMap;
   const isPageError: boolean = useSelector(hasPageError);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const projectSharingDisabled = useAppSelector(
@@ -143,7 +146,12 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {children}
+        {levelPropertiesMap && (
+          // Don't display children (including lab views) until we have loaded level properties.
+          <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
+            {children}
+          </LevelPropertiesWrapper>
+        )}
         <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}

@@ -7,7 +7,7 @@ wrong 'Accessibility only matters for mobile users, not desktop users.'
 right 'Trade-offs are part of design – what helps one user might frustrate another.'
 wrong 'Designers should remove all interactive elements to avoid complaints.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 1, 7

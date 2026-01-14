@@ -7,7 +7,7 @@ wrong 'Data schema optimization'
 right 'Training data bias'
 wrong 'A rendering error in the DOM'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

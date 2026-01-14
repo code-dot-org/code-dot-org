@@ -1,0 +1,77 @@
+name 'csaif_pl_ai_rev_chat_practices_-launch_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Best Practices
+
+#### In <a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3/lessons/13" target="blank" rel="noopener noreferrer">Unit 1 - Problem Solving with AI</a> students will develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways.
+
+#### Here are some quick tips for you to think about when getting started working with AI Chat.
+
+<details style="background-color: #f3f3f3; padding: 12px; margin-bottom: 12px; margin-right: 5px; 
+                 border-radius: 6px; border: 1px solid #ddd;">
+  <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+    Model Effective Prompting
+  </summary>
+  <div style="margin-top: 12px; margin-left: 12px; margin-right: 12px;">
+    <p style="font-size: 14pt; line-height: 1.4;">
+      Show students that the quality of their prompt shapes the quality 
+      of the AI’s response. Clear instructions, intended audience, and output format all help the AI 
+      give more useful answers.<br><br>
+      <strong>Practical example:</strong> Instead of typing “Explain loops,” model a strong prompt like:<br>
+      <em>“Explain loops for 9th graders using a real-world analogy, then give two short code examples 
+      and one common misconception.”</em><br>
+      Then revise the prompt together to show the iterative nature of prompting.
+    </p>
+  </div>
+</details>
+
+<details style="background-color: #f3f3f3; padding: 12px; margin-bottom: 12px; margin-right: 5px; 
+                 border-radius: 6px; border: 1px solid #ddd;">
+  <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+    Use AI as a Thinking Partner
+  </summary>
+  <div style="margin-top: 12px; margin-left: 12px; margin-right: 12px;">
+    <p style="font-size: 14pt; line-height: 1.4;">
+      AI works best when used to spark thinking—not replace it. Encourage 
+      students to use AI to brainstorm, compare solutions, or clarify ideas while still doing the real 
+      reasoning themselves.<br><br>
+      <strong>Practical example:</strong> Ask students to prompt the AI with:<br>
+      <em>“Give me two different ways to solve this coding problem and explain the pros and cons 
+      of each.”</em><br>
+      Students must then choose a solution and explain their reasoning independently.
+    </p>
+  </div>
+</details>
+
+<details style="background-color: #f3f3f3; padding: 12px; margin-bottom: 12px; margin-right: 5px; 
+                 border-radius: 6px; border: 1px solid #ddd;">
+  <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+    Fact-Check Everything
+  </summary>
+  <div style="margin-top: 12px; margin-left: 12px; margin-right: 12px;">
+    <p style="font-size: 14pt; line-height: 1.4;">
+      AI can sound confident but still be wrong or misleading. Treat its 
+      responses as drafts that need verification, testing, or comparison with reliable sources.<br><br>
+      <strong>Practical example:</strong> After the AI writes code or explains a concept, ask students:<br>
+      <em>“How can we check whether this is accurate?”</em><br>
+      They might thoughtfully review the response, check with an online source, or discuss with a classmate.
+    </p>
+  </div>
+</details>
+
+<details style="background-color: #f3f3f3; padding: 12px; margin-bottom: 12px; margin-right: 5px; 
+                 border-radius: 6px; border: 1px solid #ddd;">
+  <summary style="font-size: 16pt; font-weight: bold; cursor: pointer;">
+    Set Clear Boundaries for Ethical Use
+  </summary>
+  <div style="margin-top: 12px; margin-left: 12px; margin-right: 12px;">
+    <p style="font-size: 14pt; line-height: 1.4;">
+      Students need explicit guidance about when and how it is appropriate 
+      to use AI. Good boundaries help prevent plagiarism, protect privacy, and ensure responsible use.<br><br>
+      <strong>Practical example:</strong> Students should never share personal or identifying information with AI tools (such as full names, addresses, login details, or photos). Model how to rephrase prompts so they stay safe, and remind students to ask themselves, “Does this reveal anything private about me or someone else?” before submitting a prompt.
+    </p>
+  </div>
+</details>
+MARKDOWN

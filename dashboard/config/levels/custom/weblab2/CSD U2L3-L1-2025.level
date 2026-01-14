@@ -1,14 +1,15 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-04T06:27:11.000Z",
   "level_num": "custom",
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Explore Heading Tags\r\n\r\nHTML defines six levels of headings, and these heading elements are H1, H2, H3, H4, H5, and H6. The H1 element is the highest or most important level, and the H6 element is the least important.\r\n\r\nThese different heading levels help to communicate the organization and hierarchy of the content on a page. For example, headings with an equal or higher ranking indicate the start of a new section, and headings with a lower rank indicate the start of a new subsection that is part of a higher-ranked section.\r\n\r\n# Do This\r\n\r\n1) Turn on the Inspector Tool.\r\n2) Hover over each of the bold headings on the web page to find out which heading size was used.\r\n3) Discuss with your partner:\r\n   * When would you use each of these headings?\r\n      * For example, which heading would you use for a web page title ... when might you use the H6 heading?",
+    "long_instructions": "# Explore Heading Tags\r\n\r\nHTML defines six levels of headings, and these heading elements are H1, H2, H3, H4, H5, and H6. The H1 element is the highest or most important level, and the H6 element is the least important.\r\n\r\nThese different heading levels help to communicate the organization and hierarchy of the content on a page. For example, headings with an equal or higher ranking indicate the start of a new section, and headings with a lower rank indicate the start of a new subsection that is part of a higher-ranked section.\r\n\r\n# Do This\r\n\r\n1) Open the AI Chat tab.\r\n2) Copy the HTML code to learn about what the different heading sizes are.\r\n3) Discuss with your partner:\r\n   * When would you use each of these headings?\r\n      * For example, which heading would you use for a web page title ... when might you use the H6 heading?",
     "submittable": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
@@ -42,7 +43,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-01-04 06:28:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 06:28:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-04 06:28:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-04 06:28:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-10 01:50:08 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

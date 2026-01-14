@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -53,19 +52,7 @@ class ProgressDetailToggle extends React.Component {
 
   onChange = () => {
     const isSummaryView = !this.props.isSummaryView;
-    this.recordEvent(isSummaryView);
     this.props.setIsSummaryView(isSummaryView);
-  };
-
-  recordEvent = isSummary => {
-    firehoseClient.putRecord(
-      {
-        study: 'progress-detail-toggle',
-        study_group: this.props.toggleStudyGroup,
-        event: isSummary ? 'see-summary' : 'see-detail',
-      },
-      {includeUserId: true}
-    );
   };
 
   render() {

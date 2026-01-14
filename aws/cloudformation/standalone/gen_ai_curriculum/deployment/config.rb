@@ -22,7 +22,7 @@ module Config
         production: "ml.g5.4xlarge",
         test: "ml.g5.xlarge"
       },
-      min_num_instances: 3,
+      min_num_instances: 2,
       max_num_instances: 4,
       autoscaling_target_value: 150
     },

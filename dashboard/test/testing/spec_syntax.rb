@@ -61,6 +61,8 @@ module ActiveSupport
         # @param block [Proc] The block that defines the subject
         # @return [void]
         def subject(name = :subject, &block)
+          subject(:subject, &block) unless name == :subject
+
           already_initialized = respond_to?(name)
 
           let name, &block
@@ -102,9 +104,11 @@ module ActiveSupport
         # Executes a shared example group with the given description, falling back to parent contexts.
         #
         # @param desc [String, Symbol] The description of the shared example group to execute.
+        # @param kwargs [Hash{Symbol => Object}] Keyword arguments passed to the shared example block.
+        #
         # @return [void]
-        def it_behaves_like(desc)
-          describe_block = superclass
+        def it_behaves_like(desc, **kwargs)
+          describe_block = self
 
           while describe_block.respond_to?(:shared_examples)
             block = describe_block.shared_examples[desc]
@@ -114,7 +118,7 @@ module ActiveSupport
 
           raise KeyError, "shared examples not found: #{desc.inspect}" unless block
 
-          instance_eval(&block)
+          instance_exec(**kwargs, &block)
         end
       end
 

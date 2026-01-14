@@ -12,6 +12,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getFullName} from '../manageStudents/utils';
 
 import Header from './header';
+import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
+import StudentCFUWidget from './studentCFUWidget';
 import StudentCodeWidget from './studentCodeWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
@@ -31,30 +33,9 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
-interface CFULevel {
-  id: number;
-  name: string;
-  display_name: string;
-  type: string;
-  key?: string;
-  script_level_id: number;
-  progression?: string;
-  progression_display_name?: string;
-}
-
-interface CFULevelsData {
-  cfu_levels: CFULevel[];
-}
-
 interface StudentCodeData {
   studentCode: Record<string, string>;
 }
-
-const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
-  return HttpClient.fetchJson<CFULevelsData>(
-    `/student_snapshots/cfu_levels/${lessonId}`
-  ).then(response => response?.value?.cfu_levels || []);
-};
 
 const getStudentCode = (
   unitId: number,
@@ -75,8 +56,6 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
-  const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
   const [isStudentCodeLoading, setIsStudentCodeLoading] =
     useState<boolean>(false);
   const [studentCode, setStudentCode] = useState<Record<string, string>>({});
@@ -98,6 +77,11 @@ const StudentSnapshot: React.FC = () => {
       : null
   );
   const {selectedStudents} = useAppSelector(state => state.teacherSections);
+
+  const aiTaEnabled = useAppSelector(
+    state => state.currentUser.aiDifferentiationEnabled
+  );
+
   const selectedStudent = React.useMemo(
     () => selectedStudents.find(student => student.id === selectedStudentId),
     [selectedStudentId, selectedStudents]
@@ -122,29 +106,6 @@ const StudentSnapshot: React.FC = () => {
       );
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
-
-  // Fetch CFU levels when lesson changes
-  React.useEffect(() => {
-    if (selectedLessonId) {
-      setIsCfuLevelsLoading(true);
-      getCFULevels(selectedLessonId)
-        .then(levels => {
-          setCfuLevels(levels);
-        })
-        .catch(error => {
-          console.error('Error fetching CFU levels:', error);
-          setCfuLevels([]);
-        })
-        .finally(() => {
-          setIsCfuLevelsLoading(false);
-        });
-    } else {
-      setCfuLevels([]);
-    }
-  }, [selectedLessonId]);
-
-  // TODO: Use this in CFU widget
-  console.log(cfuLevels, isCfuLevelsLoading);
 
   // Fetch Student Code when student or lesson changes
   React.useEffect(() => {
@@ -195,6 +156,11 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
+        <LessonFeedbackWidget
+          lessonId={selectedLessonId}
+          studentId={HARDCODED_STUDENT_ID}
+          teacherHasEnabledAi={aiTaEnabled}
+        />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}
@@ -203,6 +169,12 @@ const StudentSnapshot: React.FC = () => {
           studentName={HARDCODED_STUDENT_NAME}
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
+        />
+        <StudentCFUWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
         />
         <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
           <div>content</div>

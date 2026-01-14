@@ -7,7 +7,7 @@ wrong 'Whether the animation makes the site feel more "modern"'
 wrong 'Whether users with light sensitivity can simply turn off their screens'
 wrong 'Whether the progress bars make the code easier for developers to write'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1, 7

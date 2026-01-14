@@ -38,8 +38,10 @@
 #
 
 class CleverSection < OmniAuthSection
+  CODE_PREFIX = 'C-'.freeze
+
   def self.from_service(course_id, owner_id, student_list, section_name)
-    code = "C-#{course_id}"
+    code = "#{CODE_PREFIX}#{course_id}"
 
     set_family_name = DCDO.get('clever_family_name', false)
 
@@ -63,5 +65,9 @@ class CleverSection < OmniAuthSection
       students: students,
       section_name: section_name,
     )
+  end
+
+  def clever_id
+    code.sub(/^#{CODE_PREFIX}/o, '')
   end
 end
