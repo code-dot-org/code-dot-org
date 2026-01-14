@@ -5,6 +5,7 @@ import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import CdoFieldButton from '@cdo/apps/blockly/addons/cdoFieldButton';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {ExtendedWorkspaceSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
+import {getCategoryBlocksJson} from '@cdo/apps/blockly/utils/toolbox/retrieval';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {nameComparator} from '@cdo/apps/util/sort';
 
@@ -203,7 +204,7 @@ BlocklyCore.Extensions.register(
       !(this.workspace as ExtendedWorkspaceSvg).noFunctionBlockFrame
     ) {
       const getColor = () => {
-        return Blockly.cdoUtils.getBlockColor(this);
+        return this.style?.colourPrimary || '';
       };
       this.functionalSvg_ = new BlockSvgFrame(
         this,
@@ -395,7 +396,7 @@ export function flyoutCategory(
   }
 
   // Add blocks from the level toolbox XML, if present.
-  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('PROCEDURE'));
+  blockList.push(...getCategoryBlocksJson('PROCEDURE'));
 
   // Workspaces to populate functions flyout category from
   const workspaces = [

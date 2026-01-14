@@ -18,11 +18,12 @@
 
 import * as BlocklyCore from 'blockly/core';
 
-import {BLOCK_TYPES} from '../../constants';
 import {
   getNonFunctionVariableIds,
   deleteUnusedVariables,
-} from '../cdoVariables';
+} from '@cdo/apps/blockly/addons/cdoVariables';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {isFunctionBlock} from '@cdo/apps/blockly/utils/blocks/types';
 
 import {createMinusField} from './field_minus';
 import {createPlusField} from './field_plus';
@@ -670,7 +671,7 @@ function argumentReporterValidator(newValue) {
 
   // Prevent fields from being edited if the block is not within a function definiton.
   if (
-    !Blockly.cdoUtils.isFunctionBlock(sourceArgBlock.getRootBlock()) &&
+    !isFunctionBlock(sourceArgBlock.getRootBlock()) &&
     // Ignore new blocks, ie. those that do not yet have a position.
     (x || y)
   ) {
@@ -768,7 +769,7 @@ BlocklyCore.Extensions.register('argument_reporter_validator', function () {
 function updateArgReporterWarningText(block) {
   const rootBlock = block.getRootBlock();
   const isConnected = block.outputConnection.isConnected();
-  const isInDefinition = Blockly.cdoUtils.isFunctionBlock(rootBlock);
+  const isInDefinition = isFunctionBlock(rootBlock);
   const defHasModel = rootBlock?.argData_
     ?.map(datum => datum.model)
     .includes(block.getVarModels()[0]);
@@ -795,10 +796,7 @@ function finishEditing_(finalName) {
   const model = getModelForNewValue(sourceArgBlock, finalName);
   updateDefinition(sourceArgBlock, model);
 
-  if (
-    sourceArgBlock === rootBlock ||
-    !Blockly.cdoUtils.isFunctionBlock(rootBlock)
-  ) {
+  if (sourceArgBlock === rootBlock || !isFunctionBlock(rootBlock)) {
     return;
   }
 
@@ -889,7 +887,7 @@ function getModelForNewValue(block, varName) {
 function updateDefinition(block, model) {
   const rootBlock = block.getRootBlock();
   // Update the definition block and its callers.
-  if (Blockly.cdoUtils.isFunctionBlock(rootBlock)) {
+  if (isFunctionBlock(rootBlock)) {
     const defBlock = rootBlock;
     const argData = defBlock.argData_;
     const newVarExistsInDef = argData.find(

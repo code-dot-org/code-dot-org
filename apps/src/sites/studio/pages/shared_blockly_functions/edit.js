@@ -1,7 +1,8 @@
 import unzip from 'lodash/unzip';
 import zip from 'lodash/zip';
 
-import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {installCustomBlocks, getCode} from '@cdo/apps/block_utils';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
@@ -50,7 +51,7 @@ const blockXml = `<xml>
   </block>
 </xml>`;
 
-Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blockXml);
+loadBlocksToWorkspace(Blockly.mainBlockSpace, blockXml);
 const block = Blockly.mainBlockSpace.getTopBlocks()[0];
 const name = getInput('name').value || DEFAULT_NAME;
 
@@ -97,7 +98,7 @@ document
         '#functionDescriptionText'
       ).value;
       if (stack) {
-        getInput('stack').value = Blockly.cdoUtils.getCode(stack);
+        getInput('stack').value = getCode(stack);
       }
     } catch (error) {
       alert(`Error saving:\n\n${error}`);
