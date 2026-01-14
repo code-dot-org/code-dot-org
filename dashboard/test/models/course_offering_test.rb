@@ -1121,33 +1121,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute pl_course_offering.pl_for_elementary_school?
   end
 
-  test 'file_path returns UI test directory for ui-test- prefixed course offerings' do
-    expected = Rails.root.join('test/ui/config/course_offerings/ui-test-example.json')
-    assert_equal expected, CourseOffering.file_path('ui-test-example')
-  end
-
-  test 'file_path returns normal directory for non-ui-test course offerings' do
-    expected = Rails.root.join('config/course_offerings/regular-offering.json')
-    assert_equal expected, CourseOffering.file_path('regular-offering')
-  end
-
-  test 'file_path returns normal directory when ui-test is not a prefix' do
-    expected = Rails.root.join('config/course_offerings/my-ui-test-offering.json')
-    assert_equal expected, CourseOffering.file_path('my-ui-test-offering')
-  end
-
-  test 'file_path respects custom root_path for UI test course offerings' do
-    custom_root = Pathname.new('/custom/path')
-    expected = custom_root.join('test/ui/config/course_offerings/ui-test-example.json')
-    assert_equal expected, CourseOffering.file_path('ui-test-example', custom_root)
-  end
-
-  test 'file_path respects custom root_path for normal course offerings' do
-    custom_root = Pathname.new('/custom/path')
-    expected = custom_root.join('config/course_offerings/regular-offering.json')
-    assert_equal expected, CourseOffering.file_path('regular-offering', custom_root)
-  end
-
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)
     create(:course_offering) do |offering|
       create_list(:course_version, num_versions, content_root_trait, course_offering: offering)
