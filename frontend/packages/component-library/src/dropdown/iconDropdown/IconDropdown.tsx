@@ -128,6 +128,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
             icon: {
               iconName,
               iconStyle,
+              iconFamily,
               title: iconTitle,
               className: iconClassName,
             },
@@ -148,6 +149,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
                 <FontAwesomeV6Icon
                   iconName={iconName}
                   iconStyle={iconStyle}
+                  iconFamily={iconFamily}
                   title={iconTitle}
                   className={iconClassName}
                 />
