@@ -7,10 +7,6 @@ class CertificatesControllerTest < ActionController::TestCase
     @teacher.freeze
   end
 
-  before do
-    CDO.stubs(:default_scheme).returns('http:')
-  end
-
   test 'can show given name and course' do
     data = {name: 'student', course: 'hourofcode'}
     encoded_params = Base64.urlsafe_encode64(data.to_json)
@@ -34,7 +30,7 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
+    expected_image_url = 'https://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal expected_image_url, response_data['imageUrl']
   end
@@ -44,7 +40,7 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/MC_Hour_Of_Code_Certificate.png'
+    expected_image_url = 'https://test-studio.code.org/blockly/media/certificates/MC_Hour_Of_Code_Certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal expected_image_url, response_data['imageUrl']
   end
@@ -70,7 +66,7 @@ class CertificatesControllerTest < ActionController::TestCase
   test 'shows static image for blank certificate' do
     get :blank
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
+    expected_image_url = 'https://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal expected_image_url, response_data['imageUrl']
   end
@@ -83,7 +79,7 @@ class CertificatesControllerTest < ActionController::TestCase
     sign_in @teacher
     get :batch
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
+    expected_image_url = 'https://test-studio.code.org/blockly/media/certificates/hour_of_ai_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'hourofcode', response_data['courseName']
     assert_equal expected_image_url, response_data['imageUrl']
@@ -98,7 +94,7 @@ class CertificatesControllerTest < ActionController::TestCase
     encoded_course_name = Base64.urlsafe_encode64('oceans')
     get :batch, params: {course: encoded_course_name}
     assert_response :success
-    expected_image_url = 'http://test-studio.code.org/blockly/media/certificates/oceans_hoc_certificate.png'
+    expected_image_url = 'https://test-studio.code.org/blockly/media/certificates/oceans_hoc_certificate.png'
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'oceans', response_data['courseName']
     assert_equal expected_image_url, response_data['imageUrl']

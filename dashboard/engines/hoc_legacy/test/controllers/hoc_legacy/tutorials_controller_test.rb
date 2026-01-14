@@ -5,10 +5,6 @@ require 'test_helper'
 class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
-  before do
-    allow(CDO).to receive(:default_scheme).and_return('https:')
-  end
-
   describe 'GET /api/hour/begin/:code' do
     subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}"}
 
@@ -188,7 +184,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_current_tutorial_request
 
       must_respond_with :found
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}"
+      must_redirect_to "http://test-studio.code.org/congrats?i=#{session_id}"
     end
 
     it 'disables caching' do
@@ -207,7 +203,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_current_tutorial_request
 
         must_respond_with :found
-        must_redirect_to 'https://test-studio.code.org/congrats'
+        must_redirect_to 'http://test-studio.code.org/congrats'
       end
     end
 
@@ -223,7 +219,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_current_tutorial_request
 
         must_respond_with :found
-        must_redirect_to 'https://test-studio.code.org/congrats'
+        must_redirect_to 'http://test-studio.code.org/congrats'
       end
     end
   end
@@ -253,9 +249,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_tutorial_request
 
       must_respond_with :found
-      must_redirect_to(
-        "https://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
-      )
+      must_redirect_to "http://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
     end
 
     it 'disables caching' do
@@ -274,7 +268,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_request
 
         must_respond_with :found
-        must_redirect_to "https://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
+        must_redirect_to "http://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
       end
     end
 
@@ -303,7 +297,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_request
 
         must_respond_with :found
-        must_redirect_to "https://test-studio.code.org/congrats"
+        must_redirect_to "http://test-studio.code.org/congrats"
       end
     end
   end
