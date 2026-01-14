@@ -1,4 +1,4 @@
-import {IconDropdown} from '@code-dot-org/component-library/dropdown';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import debounce from 'lodash/debounce';
@@ -35,7 +35,7 @@ export type GenericPromptProps = Pick<
   message?: string;
   messageMargin?: boolean;
   textFieldProps?: Partial<ComponentProps<typeof TextField>>;
-  dropdownProps?: Partial<ComponentProps<typeof IconDropdown>>;
+  dropdownProps?: Partial<ComponentProps<typeof SimpleDropdown>>;
 };
 
 /**
@@ -51,7 +51,7 @@ type GenericPromptBodyProps = {
   errorMessage?: string;
   messageMargin?: boolean;
   textFieldProps?: Partial<ComponentProps<typeof TextField>>;
-  dropdownProps?: Partial<ComponentProps<typeof IconDropdown>>;
+  dropdownProps?: Partial<ComponentProps<typeof SimpleDropdown>>;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
@@ -83,13 +83,13 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
           id="uitest-prompt-field"
           {...textFieldProps}
         />
-        {dropdownProps?.options && (
-          <IconDropdown
+        {dropdownProps?.items && (
+          <SimpleDropdown
             name="prompt-dropdown"
             className={moduleStyles.dropdown}
             labelText={dropdownProps.labelText || ''}
-            options={dropdownProps.options}
-            selectedOption={dropdownProps.selectedOption!}
+            items={dropdownProps.items}
+            selectedValue={dropdownProps.selectedValue!}
             onChange={() => {}}
             color="gray"
             {...dropdownProps}

@@ -1,10 +1,7 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {
-  validateFileNameForModal,
-  getFileIconNameAndStyle,
-} from '@codebridge/utils';
+import {validateFileNameForModal} from '@codebridge/utils';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
@@ -48,43 +45,16 @@ export const openNewFilePrompt = async ({
     },
     dropdownProps: {
       labelText: 'File type',
-      options: validFileTypes
+      items: validFileTypes
         ? validFileTypes.map(fileType => {
-            const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle({
-              name: `file.${fileType}`,
-            } as ProjectFile);
             return {
               key: fileType,
-              text: fileType,
+              text: fileType.toUpperCase(),
               value: fileType,
-              label: fileType.toUpperCase(),
-              icon: {
-                iconName,
-                iconStyle,
-                iconFamily: isBrand ? 'brands' : undefined,
-              },
             };
           })
         : [],
-      selectedOption: validFileTypes?.length
-        ? {
-            value: validFileTypes[0],
-            label: validFileTypes[0].toUpperCase(),
-            icon: {
-              iconName: getFileIconNameAndStyle({
-                name: `file.${validFileTypes[0]}`,
-              } as ProjectFile).iconName,
-              iconStyle: getFileIconNameAndStyle({
-                name: `file.${validFileTypes[0]}`,
-              } as ProjectFile).iconStyle,
-              iconFamily: getFileIconNameAndStyle({
-                name: `file.${validFileTypes[0]}`,
-              } as ProjectFile).isBrand
-                ? 'brands'
-                : undefined,
-            },
-          }
-        : undefined,
+      selectedValue: validFileTypes ? validFileTypes[0] : '',
       styleAsFormField: true,
     },
     buttons: {
