@@ -1,4 +1,4 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {act, render} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -34,56 +34,67 @@ describe('Java Lab Backpack Test', () => {
   });
 
   const renderWithProps = props => {
-    return mount(
+    const backpackRef = React.createRef();
+    const utils = render(
       <BackpackAPIContext.Provider value={backpackApiStub}>
-        <Backpack {...{...defaultProps, ...props}} />
+        <Backpack ref={backpackRef} {...{...defaultProps, ...props}} />
       </BackpackAPIContext.Provider>
     );
+    return {backpackRef, ...utils};
   };
 
   it('updates selected files correctly', () => {
-    const wrapper = renderWithProps({});
-    wrapper
-      .instance()
-      .handleFileCheckboxChange({target: {name: 'Class1.java', checked: true}});
-    wrapper
-      .instance()
-      .handleFileCheckboxChange({target: {name: 'Class2.java', checked: true}});
-    wrapper
-      .instance()
-      .handleFileCheckboxChange({target: {name: 'Class3.java', checked: true}});
-    wrapper.instance().handleFileCheckboxChange({
-      target: {name: 'Class1.java', checked: false},
+    const {backpackRef} = renderWithProps({});
+    act(() => {
+      backpackRef.current.handleFileCheckboxChange({
+        target: {name: 'Class1.java', checked: true},
+      });
     });
-    const selectedFiles = wrapper.instance().state.selectedFiles;
+    act(() => {
+      backpackRef.current.handleFileCheckboxChange({
+        target: {name: 'Class2.java', checked: true},
+      });
+    });
+    act(() => {
+      backpackRef.current.handleFileCheckboxChange({
+        target: {name: 'Class3.java', checked: true},
+      });
+    });
+    act(() => {
+      backpackRef.current.handleFileCheckboxChange({
+        target: {name: 'Class1.java', checked: false},
+      });
+    });
+    const selectedFiles = backpackRef.current.state.selectedFiles;
     expect(selectedFiles.length).to.equal(2);
     expect(selectedFiles[0]).to.equal('Class2.java');
     expect(selectedFiles[1]).to.equal('Class3.java');
   });
 
   it('expand dropdown triggers getFileList', () => {
-    const wrapper = renderWithProps({});
-    const getFileListStub = sinon.stub(
-      BackpackClientApi.prototype,
-      'getFileList'
-    );
-    wrapper.instance().expandDropdown();
-    expect(getFileListStub.calledOnce);
-    getFileListStub.restore();
+    const {backpackRef} = renderWithProps({});
+    act(() => {
+      backpackRef.current.expandDropdown();
+    });
+    expect(backpackApiStub.getFileList.calledOnce).to.be.true;
   });
 
   it('expand dropdown resets state correctly', () => {
-    const wrapper = renderWithProps({});
+    const {backpackRef} = renderWithProps({});
     // set state to something that should be cleared by expandDropdown
-    wrapper.instance().setState({
-      dropdownOpen: false,
-      backpackLoadError: true,
-      selectedFiles: ['file1', 'file2'],
-      backpackFilenames: ['file1', 'file2', 'file3'],
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: false,
+        backpackLoadError: true,
+        selectedFiles: ['file1', 'file2'],
+        backpackFilenames: ['file1', 'file2', 'file3'],
+      });
     });
 
-    wrapper.instance().expandDropdown();
-    const state = wrapper.instance().state;
+    act(() => {
+      backpackRef.current.expandDropdown();
+    });
+    const state = backpackRef.current.state;
     assert(state.dropdownOpen);
     assert.isFalse(state.backpackLoadError);
     expect(state.selectedFiles.length).to.equal(0);
@@ -94,17 +105,21 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const wrapper = renderWithProps(otherProps);
+    const {backpackRef} = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3'],
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['file1', 'file2', 'file3'],
+        selectedFiles: ['file1', 'file3'],
+      });
     });
 
-    wrapper.instance().handleImport();
+    act(() => {
+      backpackRef.current.handleImport();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     expect(state.openDialog).to.equal('IMPORT_WARNING');
   });
 
@@ -112,54 +127,66 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}},
     };
-    const wrapper = renderWithProps(otherProps);
+    const {backpackRef} = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['visibleFile', 'hiddenFile', 'file3'],
-      selectedFiles: ['hiddenFile', 'file3'],
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['visibleFile', 'hiddenFile', 'file3'],
+        selectedFiles: ['hiddenFile', 'file3'],
+      });
     });
 
-    wrapper.instance().handleImport();
+    act(() => {
+      backpackRef.current.handleImport();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     expect(state.openDialog).to.equal('IMPORT_ERROR');
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
-    const wrapper = renderWithProps({});
+    const {backpackRef} = renderWithProps({});
     // set state to something that should be cleared by expandDropdown
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file2', 'file3'],
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['file1', 'file2', 'file3'],
+        selectedFiles: ['file2', 'file3'],
+      });
     });
 
-    wrapper.instance().handleImport();
+    act(() => {
+      backpackRef.current.handleImport();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     expect(state.openDialog).to.equal(null);
   });
 
   it('renders nothing if backpack is disabled', () => {
-    const wrapper = renderWithProps({backpackEnabled: false});
-    expect(wrapper.isEmptyRender()).to.be.true;
+    const {container} = renderWithProps({backpackEnabled: false});
+    expect(container.firstChild).to.equal(null);
   });
 
   it('delete shows warning before deleting files', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const wrapper = renderWithProps(otherProps);
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3'],
+    const {backpackRef} = renderWithProps(otherProps);
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['file1', 'file2', 'file3'],
+        selectedFiles: ['file1', 'file3'],
+      });
     });
 
-    wrapper.instance().confirmAndDeleteFiles();
+    act(() => {
+      backpackRef.current.confirmAndDeleteFiles();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     expect(state.openDialog).to.equal('DELETE_CONFIRM');
   });
 
@@ -167,21 +194,27 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const wrapper = renderWithProps(otherProps);
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3'],
+    const {backpackRef} = renderWithProps(otherProps);
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['file1', 'file2', 'file3'],
+        selectedFiles: ['file1', 'file3'],
+      });
     });
     // set up delete files to call success callback
     backpackApiStub.deleteFiles.callsArg(2);
 
     // open modal
-    wrapper.instance().confirmAndDeleteFiles();
+    act(() => {
+      backpackRef.current.confirmAndDeleteFiles();
+    });
     // click delete
-    wrapper.instance().handleDelete();
+    act(() => {
+      backpackRef.current.handleDelete();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     expect(state.openDialog).to.equal(null);
   });
 
@@ -189,21 +222,27 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const wrapper = renderWithProps(otherProps);
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3'],
+    const {backpackRef} = renderWithProps(otherProps);
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['file1', 'file2', 'file3'],
+        selectedFiles: ['file1', 'file3'],
+      });
     });
     // set up delete files to call failure callback
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
 
     // open modal
-    wrapper.instance().confirmAndDeleteFiles();
+    act(() => {
+      backpackRef.current.confirmAndDeleteFiles();
+    });
     // click delete
-    wrapper.instance().handleDelete();
+    act(() => {
+      backpackRef.current.handleDelete();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     expect(state.openDialog).to.equal('DELETE_ERROR');
   });
 
@@ -211,21 +250,27 @@ describe('Java Lab Backpack Test', () => {
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const wrapper = renderWithProps(otherProps);
-    wrapper.instance().setState({
-      dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3'],
+    const {backpackRef} = renderWithProps(otherProps);
+    act(() => {
+      backpackRef.current.setState({
+        dropdownOpen: true,
+        backpackFilenames: ['file1', 'file2', 'file3'],
+        selectedFiles: ['file1', 'file3'],
+      });
     });
     // set up delete files to call failure callback where only file 1 failed to delete
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
 
     // open modal
-    wrapper.instance().confirmAndDeleteFiles();
+    act(() => {
+      backpackRef.current.confirmAndDeleteFiles();
+    });
     // click delete
-    wrapper.instance().handleDelete();
+    act(() => {
+      backpackRef.current.handleDelete();
+    });
 
-    const state = wrapper.instance().state;
+    const state = backpackRef.current.state;
     const selectedFiles = state.selectedFiles;
     // selected files should only contain the file that failed to delete (file1).
     expect(selectedFiles.length).to.equal(1);
