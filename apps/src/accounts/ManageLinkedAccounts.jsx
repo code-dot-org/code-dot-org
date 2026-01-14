@@ -54,6 +54,7 @@ class ManageLinkedAccounts extends React.Component {
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
+    isClasslinkStudent: PropTypes.bool.isRequired,
     personalAccountLinkingEnabled: PropTypes.bool.isRequired,
     usStateCode: PropTypes.string,
     age: PropTypes.number,
@@ -154,6 +155,8 @@ class ManageLinkedAccounts extends React.Component {
         return i18n.manageLinkedAccounts_microsoft();
       case SingleSignOnProviders.clever:
         return i18n.manageLinkedAccounts_clever();
+      case SingleSignOnProviders.classlink:
+        return i18n.manageLinkedAccounts_classlink();
       case SingleSignOnProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
       case SingleSignOnProviders.lti_v1:
