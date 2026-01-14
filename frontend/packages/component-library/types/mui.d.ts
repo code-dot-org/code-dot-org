@@ -50,4 +50,10 @@ declare module '@mui/material/Typography' {
   }
 }
 
+declare module '@mui/material/Breadcrumbs' {
+  interface BreadcrumbsProps {
+    size?: 'xs' | 's' | 'm' | 'l';
+  }
+}
+
 export {};

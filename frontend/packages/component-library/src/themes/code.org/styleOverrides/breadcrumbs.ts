@@ -5,77 +5,77 @@ import {Components, Theme} from '@mui/material/styles';
  *
  * Default size is 'm' (label2: 0.875rem / 14px, line-height: 1.54)
  *
- * To use different sizes, add a className or data-size attribute:
- * - data-size="xs": label4 (0.625rem / 10px, line-height: 1.8)
- * - data-size="s": label3 (0.75rem / 12px, line-height: 1.64)
- * - data-size="m": label2 (0.875rem / 14px, line-height: 1.54) - default
- * - data-size="l": label1 (1rem / 16px, line-height: 1.48)
+ * Supports size prop: 'xs' | 's' | 'm' | 'l'
+ * - size="xs": label4 (0.625rem / 10px, line-height: 1.8)
+ * - size="s": label3 (0.75rem / 12px, line-height: 1.64)
+ * - size="m": label2 (0.875rem / 14px, line-height: 1.54) - default
+ * - size="l": label1 (1rem / 16px, line-height: 1.48)
  */
 export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
   styleOverrides: {
-    root: ({theme}) => {
+    root: ({theme, ownerState}) => {
+      const size = (ownerState.size as 'xs' | 's' | 'm' | 'l') || 'm';
       const label2Styles = theme.typography.label2;
       const label1Styles = theme.typography.label1;
       const label3Styles = theme.typography.label3;
       const label4Styles = theme.typography.label4;
 
-      return {
-        display: 'inline-flex',
-        alignItems: 'center',
-        fontFeatureSettings: "'liga' off, 'clig' off",
-        // Use typography styles for default size (m = label2)
-        ...label2Styles,
-        // Separator default size: m
-        '& .MuiBreadcrumbs-separator': {
+      // Get typography styles based on size
+      const sizeStyles = {
+        xs: label4Styles,
+        s: label3Styles,
+        m: label2Styles,
+        l: label1Styles,
+      };
+
+      // Get separator styles based on size
+      const separatorStyles = {
+        xs: {
+          padding: '4px 6px',
+          fontSize: '10px',
+          width: '13px',
+          lineHeight: 1.25,
+        },
+        s: {
+          padding: '5px 6px',
+          fontSize: '11px',
+          width: '14px',
+          lineHeight: 1.25,
+        },
+        m: {
           padding: '5px 6px',
           fontSize: '12px',
           width: '15px',
           lineHeight: 1.25,
         },
-        // 'i': {
-        //   padding: '5px 6px',
-        //   fontSize: '12px',
-        //   width: '15px',
-        //   lineHeight: '1.25',
-        // },
-        // Size: xs (label4)
-        '&[data-size="xs"], &.breadcrumbs-xs': {
-          ...label4Styles,
-          '& .MuiBreadcrumbs-separator': {
-            padding: '4px 6px',
-            fontSize: '10px',
-            width: '13px',
-            lineHeight: 1.25,
-          },
-          i: {
-            fontSize: '0.625rem', // 10px
-          },
+        l: {
+          padding: '6px',
+          fontSize: '13px',
+          width: '16px',
+          lineHeight: 1.25,
         },
-        // Size: s (label3)
-        '&[data-size="s"], &.breadcrumbs-s': {
-          ...label3Styles,
-          '& .MuiBreadcrumbs-separator': {
-            padding: '5px 6px',
-            fontSize: '11px',
-            width: '14px',
-            lineHeight: 1.25,
-          },
-          i: {
-            fontSize: '0.75rem', // 12px
-          },
-        },
-        // Size: l (label1)
-        '&[data-size="l"], &.breadcrumbs-l': {
-          ...label1Styles,
-          '& .MuiBreadcrumbs-separator': {
-            padding: '6px',
-            fontSize: '13px',
-            width: '16px',
-            lineHeight: 1.25,
-          },
-          i: {
-            fontSize: '1rem', // 16px
-          },
+      };
+
+      // Get icon font sizes based on size
+      const iconFontSizes = {
+        xs: '0.625rem', // 10px
+        s: '0.75rem', // 12px
+        m: '0.875rem', // 14px
+        l: '1rem', // 16px
+      };
+
+      return {
+        display: 'inline-flex',
+        alignItems: 'center',
+        fontFeatureSettings: "'liga' off, 'clig' off",
+        // Use typography styles based on size
+        ...sizeStyles[size],
+        // Separator styles based on size
+        '& .MuiBreadcrumbs-separator': separatorStyles[size],
+        // Icon font size based on size
+        i: {
+          color: 'inherit',
+          fontSize: iconFontSizes[size],
         },
         // Style the links within breadcrumbs
         // MUI uses Link components for breadcrumb items
@@ -109,10 +109,6 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
             outline: '2px solid var(--borders-brand-teal-primary)',
             outlineOffset: '2px',
           },
-        },
-        i: {
-          color: 'inherit',
-          fontSize: '0.875rem', // Default size m: 14px
         },
         // Hover, active, visited states for non-last breadcrumbs
         '& .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:hover, & .MuiBreadcrumbs-li:not(:last-child) > a:hover, & .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:active, & .MuiBreadcrumbs-li:not(:last-child) > a:active, & .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:visited, & .MuiBreadcrumbs-li:not(:last-child) > a:visited':

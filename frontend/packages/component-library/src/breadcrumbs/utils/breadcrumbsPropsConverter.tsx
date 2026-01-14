@@ -1,5 +1,8 @@
-import {Link as MUILink, Typography} from '@mui/material';
-import {BreadcrumbsProps as MUIBreadcrumbsProps} from '@mui/material/Breadcrumbs';
+import {
+  Breadcrumbs as MUIBreadcrumbs,
+  Link as MUILink,
+  Typography,
+} from '@mui/material';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -12,9 +15,8 @@ import {BreadcrumbsProps as DSCOBreadcrumbsProps} from '../Breadcrumbs';
  */
 export function convertBreadcrumbsPropsToMUI(
   dscoProps: DSCOBreadcrumbsProps,
-): Omit<MUIBreadcrumbsProps, 'children'> & {
-  children: React.ReactNode;
-  'data-size'?: string;
+): React.ComponentProps<typeof MUIBreadcrumbs> & {
+  size?: 'xs' | 's' | 'm' | 'l';
 } {
   const {
     breadcrumbs,
@@ -22,13 +24,8 @@ export function convertBreadcrumbsPropsToMUI(
     className,
     showHomeIcon,
     homeIconHref = '/',
+    name,
   } = dscoProps;
-
-  // Convert size to className or data-size attribute
-  const sizeClassName = `breadcrumbs-${size}`;
-  const combinedClassName = className
-    ? `${sizeClassName} ${className}`
-    : sizeClassName;
 
   // Map size to label variant
   const sizeToVariant: Record<
@@ -100,8 +97,9 @@ export function convertBreadcrumbsPropsToMUI(
   );
 
   return {
-    className: combinedClassName,
-    'data-size': size,
+    size,
+    className,
+    'aria-label': `Breadcrumb navigation: ${name}`,
     separator,
     children,
   };
