@@ -22,18 +22,19 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     }.freeze
 
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    intro = "This is where the insight system prompt intro goes. Weight the assessment level more heavily.\n"
+    intro = "This is where the insight system prompt intro goes. Weight the assessment level more heavily."
+
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
-    "#{intro}\n#{general_prompt}"
+    "#{intro}\n\n#{general_prompt}"
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     intro = "This is where the feedback system prompt intro goes."
+
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
-    "#{intro}
-    #{general_prompt}"
+    "#{intro}\n#{general_prompt}"
   end
 
   def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
@@ -43,97 +44,142 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     lesson = Lesson.find(lesson_id)
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
-    lesson_info = "Lesson Name: #{lesson.name}
-    Lesson Overview: #{lesson.render_property(:overview)}
-    Learning Objectives: #{objectives}
-    Standards: #{lesson.standards.map(&:summarize_for_lesson_show).to_json}
-    Unit Name: #{unit.title_for_display}
-    Unit Overview: \"#{unit_description}\""
+    lesson_info = {
+      "Lesson Name" => lesson.name,
+      "Lesson Overview" => lesson.render_property(:overview),
+      "Learning Objectives" => objectives,
+      "Standards" => lesson.standards.map(&:summarize_for_lesson_show).to_json,
+      "Unit Name" => unit.title_for_display,
+      "Unit Overview" => "\"#{unit_description}\""
+    }
 
     levels = lesson.levels.order(:position)
-    # Special cases to think about:
-    # - Choice levels (probably skip in v0)
-    # - Survey levels/lessons (Don't ever need?)
-    # - Unplugged levels (skip)
-    # - Videos (skip)
-    # - teacher feedback - not in AIF, skip
     assessment_level = lesson.levels.where(type: 'Pythonlab').last || nil
-    level_info = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
+    level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
-    "Use the following lesson info to generate your summary:\n#{lesson_info}\n
-Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
+    # Format lesson info into string
+    lesson_info_str = lesson_info.map {|key, value| "#{key}: #{value}"}.join("\n")
+
+    # Format level info data into strings
+    level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}
+
+    "Use the following lesson info to generate your summary:
+#{lesson_info_str}
+
+Levels: [{
+#{level_info_strings.join("\n},{\n")}
+}]"
   end
 
   # Get an abridged version of level info for prompt
   # This is used for non-assessment levels
   def self.get_brief_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
-    return unless level
+    return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
 
-    basic_info = "  Level Name: #{level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name}
-    Level Id (for debugging: remove before merge): #{level.id}
-    Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
-    Number of attempts: #{user_level&.attempts || 0}"
+    level_data = {
+      "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
+      "Level Id (for debugging: remove before merge)" => level.id,
+      "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
+      "Number of attempts" => user_level&.attempts || 0
+    }
 
     has_questions = !level.properties.nil? && level.properties["questions"].present?
-    level_info = if has_questions then get_cfu_level_info(level, student_id, unit_id) else get_code_level_info(level, student_id, unit_id) end
+    level_content = if has_questions then get_cfu_level_info(level, student_id, unit_id) else get_code_level_info(level, student_id, unit_id) end
+
+    level_data.merge!({
+                        "Was Submitted (only applicable for coding levels)" => user_level&.submitted,
+      "Passing status" => user_level&.passing? || false,
+      "Perfect status" => user_level&.perfect? || false,
+      "Finished status" => user_level&.finished? || false
+                      }
+)
+
+    level_data["Time spent"] = "#{user_level.time_spent} seconds" if user_level&.time_spent && user_level.time_spent > 0
 
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "\n    Sublevels (A student should pick at least one to complete):\n  [{\n  #{sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join("\n  },{\n  ")}}]" : ""
-    rubric_summary = level.rubrics.present? ? "\n  Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
-    time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n    Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
+    sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)} : []
+
+    rubric_data = level.rubrics.present? ? {learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)} : {}
 
     section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
 
-    "#{basic_info}
-    #{level_info}
-    Was Submitted (only applicable for coding levels): #{user_level&.submitted}
-    Passing status: #{user_level&.passing? || false}
-    Perfect status: #{user_level&.perfect? || false}
-    Finished status: #{user_level&.finished? || false}#{time_spent}
-#{section_stats}"
+    {
+      basic_info: level_data,
+      level_content: level_content,
+      sublevels: sublevel_data,
+      rubrics: rubric_data,
+      section_stats: section_stats
+    }
   end
 
   # Get a detailed version of level info for prompt
   # This is used for assessment levels
   def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
-    return unless level
-
-    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "\n    Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join(", ")}]" : ""
+    return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
 
-    basic_info = "  Assessment Level - weight this more heavily towards student mastery:
-    Level Name: #{level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name}
-    Level Id (for debugging: remove before merge): #{level.id}
-    Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
-    Number of attempts: #{user_level&.attempts || 0}"
+    level_data = {
+      "Assessment Level - weight this more heavily towards student mastery" => "",
+      "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
+      "Level Id (for debugging: remove before merge)" => level.id,
+      "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
+      "Number of attempts" => user_level&.attempts || 0
+    }
+
+    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
+    sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)} : []
 
     section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
 
     # return only basic info if user hasn't attempted the level
-    return "#{basic_info}\n    Attempted: false\n#{section_stats}" if user_level.nil? && sublevels.nil?
+    if user_level.nil? && sublevels.nil?
+      level_data["Attempted"] = false
+      return {
+        basic_info: level_data,
+        level_content: {},
+        sublevels: [],
+        rubrics: {},
+        section_stats: section_stats,
+        attempted: false
+      }
+    end
 
-    rubric_summary = level.rubrics.present? ? "\n    Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
-    time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n  Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
-    "#{basic_info}
-    #{get_code_level_info(level, student_id, unit_id)}
-    Was Submitted (only applicable for coding levels): #{user_level&.submitted}
-    Passing status: #{user_level&.passing? || false}
-    Perfect status: #{user_level&.perfect? || false}
-    Finished status: #{user_level&.finished? || false}#{time_spent}
-#{section_stats}"
+    level_data.merge!({
+                        "Was Submitted (only applicable for coding levels)" => user_level&.submitted,
+      "Passing status" => user_level&.passing? || false,
+      "Perfect status" => user_level&.perfect? || false,
+      "Finished status" => user_level&.finished? || false
+                      }
+)
+
+    level_data["Time spent"] = "#{user_level.time_spent} seconds" if user_level&.time_spent && user_level.time_spent > 0
+
+    rubric_data = level.rubrics.present? ? {learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)} : {}
+
+    level_content = get_code_level_info(level, student_id, unit_id)
+
+    {
+      basic_info: level_data,
+      level_content: level_content,
+      sublevels: sublevel_data,
+      rubrics: rubric_data,
+      section_stats: section_stats,
+      attempted: true
+    }
   end
 
   def self.get_cfu_level_info(level, student_id, unit_id)
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
     student_response = get_student_response(user_level, level)
 
-    "Questions: #{level.properties["questions"]}
-    Answers: #{level.properties["answers"]}
-    Student Responses: #{student_response}"
+    {
+      "Questions" => level.properties["questions"],
+      "Answers" => level.properties["answers"],
+      "Student Responses" => student_response
+    }
   end
 
   def self.get_student_response(user_level, level)
@@ -145,7 +191,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
 
   def self.get_section_stats_for_level(level, section_id, teacher_id, unit_id)
     section = Section.find_by(id: section_id)
-    return "" unless section
+    return {} unless section
 
     students = section.followers
 
@@ -175,21 +221,15 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     completed_students = user_levels.count(&:passing?)
     completion_percentage = total_students > 0 ? (completed_students.to_f / total_students * 100).round(1) : 0
 
-    section_stats = "    Section Stats:
-      Total students in section: #{total_students}
-      Percentage of students who completed the level: #{completion_percentage}%"
+    stats = {
+      "Total students in section" => total_students,
+      "Percentage of students who completed the level" => "#{completion_percentage}%"
+    }
 
-    if median_time_spent
-      section_stats += "
-      Section median time spent: #{median_time_spent} seconds"
-    end
+    stats["Section median time spent"] = "#{median_time_spent} seconds" if median_time_spent
+    stats["Section average time spent"] = "#{average_time_spent.round(1)} seconds" if average_time_spent
 
-    if average_time_spent
-      section_stats += "
-      Section average time spent: #{average_time_spent.round(1)} seconds"
-    end
-
-    section_stats
+    stats
   end
 
   def self.format_response_by_level_type(raw_data, level)
@@ -226,11 +266,56 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
   end
 
   def self.get_code_level_info(level, student_id, unit_id)
-    exemplar = level.respond_to?(:exemplar_sources) && level.exemplar_sources ? "\n    Level Example Perfect Response: #{level.exemplar_sources}" : ""
+    exemplar = level.respond_to?(:exemplar_sources) && level.exemplar_sources ? level.exemplar_sources : nil
     student_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id).to_json
-    "Level Long Instructions: {#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}
-    Level Short Instructions: #{level.short_instructions}#{exemplar}
-    Student Response: #{student_code}"
+
+    code_data = {
+      "Level Long Instructions" => "{#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}",
+      "Level Short Instructions" => level.short_instructions,
+      "Student Response" => student_code
+    }
+
+    code_data["Level Example Perfect Response"] = exemplar if exemplar
+    code_data
+  end
+
+  def self.format_level_info(level_data, indentation = '  ')
+    return "" if level_data.empty?
+
+    basic_info_parts = []
+    level_data[:basic_info]&.each do |key, value|
+      basic_info_parts << "#{indentation}#{key}: #{value}" unless  value == ""
+    end
+
+    level_content_parts = []
+    level_data[:level_content]&.each do |key, value|
+      level_content_parts << "#{key}: #{value}"
+    end
+
+    section_stats_parts = []
+    if level_data[:section_stats]&.any?
+      section_stats_parts << "#{indentation}Section Stats:"
+      level_data[:section_stats].each do |key, value|
+        section_stats_parts << "#{indentation}  #{key}: #{value}"
+      end
+    end
+
+    result_parts = []
+    result_parts << basic_info_parts.join("\n") if basic_info_parts.any?
+    result_parts << "#{indentation}#{level_content_parts.join("\n#{indentation}")}" if level_content_parts.any?
+
+    if level_data[:rubrics]&.any?
+      result_parts << "#{indentation}Rubrics: #{level_data[:rubrics]}"
+    end
+
+    if level_data[:sublevels]&.any?
+      sublevel_strings = level_data[:sublevels].map {|sublevel| format_level_info(sublevel, indentation + '  ')}
+      result_parts << "#{indentation}Sublevels (A student should pick at least one to complete):\n#{indentation}[{\n#{sublevel_strings.join("\n#{indentation}},{\n")}}]"
+    end
+
+    result_parts << section_stats_parts.join("\n") if section_stats_parts.any?
+
+    result_parts.join("\n")
   end
 
   # Identify assessment level and add
@@ -242,8 +327,5 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
   # if final assessment isn't perfect?
   #
   # Time spent on CFUs always 0?
-  #
-  # **comparative across the section**
-  # Is number of attempts useful?
   #
 end
