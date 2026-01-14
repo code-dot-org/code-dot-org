@@ -58,7 +58,7 @@ class InactiveUserDeleter
     # for this operation, so we can use a simple limit approach.
     loop do
       account_batch = inactive_users
-      account_batch.each do |user|
+      account_batch.includes(:user_data_retention_status).each do |user|
         break if num_accounts_deleted >= limit
         # Only delete student accounts or teacher accounts where a deletion warning email has been sent over 30 days ago
         user_data_retention_status = user.user_data_retention_status
