@@ -28,41 +28,13 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
         l: label1Styles,
       };
 
-      // Get separator styles based on size
-      const separatorStyles = {
-        xs: {
-          padding: '4px 6px',
-          fontSize: '10px',
-          width: '13px',
-          lineHeight: 1.25,
-        },
-        s: {
-          padding: '5px 6px',
-          fontSize: '11px',
-          width: '14px',
-          lineHeight: 1.25,
-        },
-        m: {
-          padding: '5px 6px',
-          fontSize: '12px',
-          width: '15px',
-          lineHeight: 1.25,
-        },
-        l: {
-          padding: '6px',
-          fontSize: '13px',
-          width: '16px',
-          lineHeight: 1.25,
-        },
-      };
-
-      // Get icon font sizes based on size
-      const iconFontSizes = {
-        xs: '0.625rem', // 10px
-        s: '0.75rem', // 12px
-        m: '0.875rem', // 14px
-        l: '1rem', // 16px
-      };
+      // Get home icon font sizes based on size (for .homeIcon class)
+      // const homeIconFontSizes = {
+      //   xs: '0.625rem', // 10px
+      //   s: '0.75rem', // 12px
+      //   m: '0.875rem', // 14px
+      //   l: '1rem', // 16px
+      // };
 
       return {
         display: 'inline-flex',
@@ -70,13 +42,6 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
         fontFeatureSettings: "'liga' off, 'clig' off",
         // Use typography styles based on size
         ...sizeStyles[size],
-        // Separator styles based on size
-        '& .MuiBreadcrumbs-separator': separatorStyles[size],
-        // Icon font size based on size
-        i: {
-          color: 'inherit',
-          fontSize: iconFontSizes[size],
-        },
         // Style the links within breadcrumbs
         // MUI uses Link components for breadcrumb items
         '& .MuiLink-root, & .MuiBreadcrumbs-li > a': {
@@ -147,15 +112,49 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
     li: {
       display: 'inline-flex',
       alignItems: 'center',
+      margin: 0,
+      padding: 0,
     },
-    separator: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      color: 'var(--text-neutral-tertiary)',
-      marginLeft: 0,
-      marginRight: 0,
+    separator: ({ownerState}) => {
+      const size = (ownerState.size as 'xs' | 's' | 'm' | 'l') || 'm';
+
+      const separatorStyles = {
+        xs: {
+          padding: '4px 6px',
+          fontSize: '10px',
+          width: '13px',
+          lineHeight: 1.25,
+        },
+        s: {
+          padding: '5px 6px',
+          fontSize: '11px',
+          width: '14px',
+          lineHeight: 1.25,
+        },
+        m: {
+          padding: '5px 6px',
+          fontSize: '12px',
+          width: '15px',
+          lineHeight: 1.25,
+        },
+        l: {
+          padding: '6px',
+          fontSize: '13px',
+          width: '16px',
+          lineHeight: 1.25,
+        },
+      };
+
+      return {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'var(--text-neutral-tertiary)',
+        marginLeft: 0,
+        marginRight: 0,
+        ...separatorStyles[size],
+      };
     },
   },
 };
