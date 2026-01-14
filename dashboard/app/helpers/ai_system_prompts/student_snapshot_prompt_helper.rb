@@ -22,7 +22,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     }.freeze
 
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id)
-    intro = "This is where the insight system prompt intro goes.\n"
+    intro = "This is where the insight system prompt intro goes. Weight the assessment level more heavily.\n"
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
 
     "#{intro}\n#{general_prompt}"
@@ -57,41 +57,68 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     # - Unplugged levels (skip)
     # - Videos (skip)
     # - teacher feedback - not in AIF, skip
-    level_info = levels.map {|level| get_level_prompt_info(level, student_id, unit.id)}
+    assessment_level = lesson.levels.where(type: 'Pythonlab').last || nil
+    level_info = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id) else get_brief_level_prompt_info(level, student_id, unit.id) end}
 
     "Use the following lesson info to generate your summary:\n#{lesson_info}\n
 Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
   end
 
-  def self.get_level_prompt_info(level, student_id, unit_id)
+  # Get an abridged version of level info for prompt
+  # This is used for non-assessment levels
+  def self.get_brief_level_prompt_info(level, student_id, unit_id)
     return unless level
-
-    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_level_prompt_info(sublevel, student_id, unit_id)}.join(", ")}]" : ""
-    rubric_summary = level.rubrics.present? ? "Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
 
-    has_questions = !level.properties.nil? && level.properties["questions"].present?
-    level_info = if has_questions then get_cfu_level_info(level, student_id, unit_id) else get_code_level_info(level, student_id, unit_id) end
-
-    basic_info = "  {Level Name: #{level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name}
+    basic_info = "  Level Name: #{level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name}
     Level Id (for debugging: remove before merge): #{level.id}
     Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
     Number of attempts: #{user_level&.attempts || 0}"
 
-    # only show basic info if user hasn't attempted the level
-    return basic_info if user_level.nil?
+    has_questions = !level.properties.nil? && level.properties["questions"].present?
+    level_info = if has_questions then get_cfu_level_info(level, student_id, unit_id) else get_code_level_info(level, student_id, unit_id) end
+
+    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
+    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete):\n  [{\n  #{sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id)}.join("\n  },{\n  ")}}]" : ""
+    rubric_summary = level.rubrics.present? ? "\n  Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
+    time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n    Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
 
     "#{basic_info}
     #{level_info}
     Was Submitted (only applicable for coding levels): #{user_level&.submitted}
     Passing status: #{user_level&.passing? || false}
     Perfect status: #{user_level&.perfect? || false}
-    Finished status: #{user_level&.finished? || false}
-    Validation Status: ___
-    Time spent: #{user_level&.time_spent || 0} seconds
-    #{rubric_summary}#{sublevel_info}}\n"
+    Finished status: #{user_level&.finished? || false}#{time_spent}"
+  end
+
+  # Get a detailed version of level info for prompt
+  # This is used for assessment levels
+  def self.get_full_level_prompt_info(level, student_id, unit_id)
+    return unless level
+
+    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
+    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id)}.join(", ")}]" : ""
+
+    user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+
+    basic_info = "  Assessment Level - weight this more heavily towards student mastery:
+    Level Name: #{level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name}
+    Level Id (for debugging: remove before merge): #{level.id}
+    Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
+    Number of attempts: #{user_level&.attempts || 0}"
+
+    # return only basic info if user hasn't attempted the level
+    return "#{basic_info}\n    Attempted: false" if user_level.nil? && sublevels.nil?
+
+    rubric_summary = level.rubrics.present? ? "\n    Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
+    time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n  Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
+    "#{basic_info}
+    #{get_code_level_info(level, student_id, unit_id)}
+    Was Submitted (only applicable for coding levels): #{user_level&.submitted}
+    Passing status: #{user_level&.passing? || false}
+    Perfect status: #{user_level&.perfect? || false}
+    Finished status: #{user_level&.finished? || false}#{time_spent}"
   end
 
   def self.get_cfu_level_info(level, student_id, unit_id)
@@ -150,4 +177,18 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     Level Short Instructions: #{level.short_instructions}#{exemplar}
     Student Response: #{student_code}"
   end
+
+  # Identify assessment level and add
+  # as much as we have for it
+  #   previous code versions
+  #   ULI
+
+  # Only need info on non-assessment levels
+  # if final assessment isn't perfect?
+  #
+  # Time spent on CFUs always 0?
+  #
+  # **comparative across the section**
+  # Is number of attempts useful?
+  #
 end
