@@ -44,6 +44,13 @@ class StudentSnapshotsController < ApplicationController
         question_text = question_summary&.dig(:question_text) || question_summary&.dig(:question)
         answers = question_summary&.dig(:answers)
 
+        # Set question_text to array of sublevel question texts if level is a LevelGroup
+        if level.is_a?(LevelGroup)
+          question_text = level.levels.reduce([]) do |question_texts, sublevel|
+            question_texts << LevelGroup.get_sublevel_question_text(sublevel)
+          end
+        end
+
         cfu_levels_data << {
           id: level.id,
           name: level.name,
