@@ -5,6 +5,8 @@
  *
  */
 
+import {numberValidator} from '@cdo/apps/blockly/utils';
+
 var _ = require('lodash');
 
 var commonMsg = require('@cdo/locale');
@@ -640,10 +642,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle('variable_blocks');
       this.appendDummyInput()
         .appendField(msg.setScore())
-        .appendField(
-          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
-          'VALUE'
-        );
+        .appendField(new blockly.FieldTextInput('0', numberValidator), 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);

@@ -1,4 +1,5 @@
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {DEFAULT_SOUND} from '@cdo/apps/blockly/constants';
 
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -29,4 +30,32 @@ export function parseSoundPathString(text: string) {
   // Examples: 'Board games: card_dealing_multiple', 'default'
   const fieldText = `${category}${soundName}`;
   return fieldText;
+}
+
+export function soundField(
+  onClick: () => void,
+  transformText?: (text: string) => string,
+  icon?: SVGElement
+) {
+  // Handle legacy or malformed serialized sound values by falling back
+  // to the default sound.
+  const validator = (newValue: string) => {
+    if (typeof newValue !== 'string') {
+      return null;
+    }
+    if (!newValue.startsWith(SOUND_PREFIX) || !newValue.endsWith('.mp3')) {
+      console.error(
+        'An invalid sound value was selected. Therefore, the default sound value will be used.'
+      );
+      return DEFAULT_SOUND;
+    }
+    return newValue;
+  };
+  return new Blockly.FieldButton({
+    value: DEFAULT_SOUND,
+    validator,
+    onClick,
+    transformText,
+    icon,
+  });
 }

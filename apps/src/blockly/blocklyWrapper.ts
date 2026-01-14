@@ -60,10 +60,8 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
-import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
-import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml, {
@@ -79,7 +77,6 @@ import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/behaviorBlocks';
-import customBlocks from './customBlocks/index';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/proceduresBlocks';
 import {flyoutCategory as variablesFlyoutCategory} from './customBlocks/variableBlocks';
 import {
@@ -129,6 +126,10 @@ import {
   interpolateMsg,
   isDarkTheme,
   setThemeAndRenderBlocks,
+  getUserTheme,
+  createBlockLimitMap,
+  loadBlocksToWorkspace,
+  cleanUp,
 } from './utils';
 
 const options: {contextMenu: true; shortcut: true} = {
@@ -509,7 +510,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   extendedBlockSvg.setDeletable = function (deletable) {
     originalSetDeletable.call(this, deletable);
     if (this.shouldBeGrayedOut()) {
-      Blockly.cdoUtils.setHSV(this, ...BlockColors.DISABLED);
+      const [h, s, v] = BlockColors.DISABLED;
+      this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
     }
   };
 
@@ -765,7 +767,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
-    Blockly.cdoUtils.loadBlocksToWorkspace(
+    loadBlocksToWorkspace(
       workspace,
       Blockly.Xml.domToText(xml),
       includeHiddenDefinitions
@@ -870,7 +872,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
-    blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
+    blocklyWrapper.blockLimitMap = createBlockLimitMap();
     blocklyWrapper.isDarkTheme = isDarkTheme(
       options.theme as BlocklyCore.Theme | undefined
     );
@@ -894,15 +896,13 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       (container as HTMLElement).classList.remove('notranslate');
     }
 
-    Blockly.cdoUtils
-      .getUserTheme(workspace.getTheme())
-      .then((theme: BlocklyCore.Theme) => {
-        setThemeAndRenderBlocks(
-          workspace,
-          theme,
-          options.theme as BlocklyCore.Theme
-        );
-      });
+    getUserTheme(workspace.getTheme()).then((theme: BlocklyCore.Theme) => {
+      setThemeAndRenderBlocks(
+        workspace,
+        theme,
+        options.theme as BlocklyCore.Theme
+      );
+    });
     workspace.defs = Blockly.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
@@ -1126,10 +1126,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
   blocklyWrapper.SourceCustomInputTypes = {};
 
-  // Keep track of the custom blocks that are used to initialize the
-  // Blockly environment.
-  blocklyWrapper.customBlocks = customBlocks;
-
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeVariables(blocklyWrapper);
@@ -1138,8 +1134,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
   blocklyWrapper.JavaScript.forBlock.unknown = () => '/* unknown block */\n';
-
-  blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;

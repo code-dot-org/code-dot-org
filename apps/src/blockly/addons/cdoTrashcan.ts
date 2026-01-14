@@ -1,6 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
-import {isDarkTheme} from '../utils';
+import {getToolboxWidth, isDarkTheme} from '@cdo/apps/blockly/utils';
 
 export default class CdoTrashcan extends BlocklyCore.DeleteArea {
   private workspace: BlocklyCore.WorkspaceSvg;
@@ -237,7 +237,7 @@ export default class CdoTrashcan extends BlocklyCore.DeleteArea {
    * @param {!Blockly.MetricsManager.UiMetrics} metrics The workspace metrics.
    */
   position(metrics: BlocklyCore.MetricsManager.UiMetrics) {
-    const toolboxWidth = Blockly.cdoUtils.getToolboxWidth(this.workspace);
+    const toolboxWidth = getToolboxWidth(this.workspace);
     if (!this.container) {
       return;
     }
