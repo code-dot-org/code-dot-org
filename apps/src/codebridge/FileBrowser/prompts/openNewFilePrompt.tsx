@@ -48,6 +48,7 @@ export const openNewFilePrompt = async ({
         validationFile,
         validFileTypes,
       }),
+    useModal: true,
   });
   if (results.type !== 'confirm') {
     return;
