@@ -51,7 +51,6 @@ I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
-Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 

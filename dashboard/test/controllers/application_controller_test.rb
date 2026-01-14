@@ -168,6 +168,14 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe '#root_url' do
+    subject(:root_url_helper) {root_url}
+
+    it 'return the canonical studio root URL' do
+      _root_url_helper.must_equal CDO.studio_url('/', CDO.default_scheme)
+    end
+  end
+
   # Assert that the response is not a redirection to the given path.
   private def refute_redirect_to(expected_path)
     return unless response.redirect_url
