@@ -33,7 +33,7 @@ module Lti
         possible_links = [
           {
             type: 'link',
-            url: CDO.studio_url(music_project_create_new_projects_path, CDO.default_scheme)
+            url: CDO.studio_url(music_project_create_new_projects_path, CDO.default_scheme),
             title: 'Music Lab'
           },
           {
