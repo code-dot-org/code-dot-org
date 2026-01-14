@@ -20,7 +20,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish' do
     VCR.use_cassette('hoc_legacy/api_flow/basic_flow') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'https://test.code.org/minecraft'
+      must_redirect_to CDO.code_org_url('/minecraft', CDO.default_scheme)
 
       session_id = cookies[HocLegacy::HOC_COOKIE_KEY]
       _(session_id).wont_be_nil
@@ -69,7 +69,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish_current' do
     VCR.use_cassette('hoc_legacy/api_flow/basic_flow_with_finish_current') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'https://test.code.org/minecraft'
+      must_redirect_to CDO.code_org_url('/minecraft', CDO.default_scheme)
 
       session_id = cookies[HocLegacy::HOC_COOKIE_KEY]
       _(session_id).wont_be_nil

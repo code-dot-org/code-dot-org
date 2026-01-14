@@ -44,7 +44,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       it 'redirects to tutorial URL on code.org domain' do
         begin_tutorial_request
         must_respond_with :found
-        must_redirect_to 'https://test.code.org/relative/tutorial_url'
+        must_redirect_to CDO.code_org_url('/relative/tutorial_url', CDO.default_scheme)
       end
     end
 
