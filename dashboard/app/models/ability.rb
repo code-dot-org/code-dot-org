@@ -180,6 +180,7 @@ class Ability
       can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
+        can :access, :teacher_only
         can :manage, Section do |s|
           s.instructors.include?(user)
         end
@@ -349,7 +350,7 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson, context_unit_group|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties], Lesson do |lesson, context_unit_group|
       script = lesson.script
       unit_group = context_unit_group || script.original_unit_group
       can?(:read, script, unit_group)

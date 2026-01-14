@@ -3,10 +3,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {memo, Suspense, useCallback, useEffect, useState} from 'react';
 
-import {
-  getCurrentLesson,
-  levelById,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {GENERATED_DANCER_STORAGE_KEY} from '@cdo/apps/dance/ai/constants';
 import {DanceProjectSources} from '@cdo/apps/dance/types';
 import {setIsLoading} from '@cdo/apps/lab2/lab2Redux';
@@ -14,17 +10,14 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getIsShareView} from '@cdo/apps/lab2/projects/utils';
-import {LevelPropertiesValidator} from '@cdo/apps/lab2/responseValidators';
 import {
   BubbleChoiceLevelData,
-  BubbleChoiceSublevel,
   Channel,
   LevelProperties,
 } from '@cdo/apps/lab2/types';
-import LevelPropertiesCache from '@cdo/apps/lab2/utils/LevelPropertiesCache';
+import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {getTypedKeys} from '@cdo/apps/types/utils';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 import DancerIcon from '@cdo/static/dance/mixMoveAi/design.svg';
@@ -62,20 +55,6 @@ interface MusicDanceAiProps {
   channel: Channel;
 }
 
-async function loadLevelProperties(path: string): Promise<LevelProperties> {
-  const cached = LevelPropertiesCache.get(path);
-  if (cached) {
-    return cached;
-  }
-  const {value} = await HttpClient.fetchJson<LevelProperties>(
-    path,
-    {},
-    LevelPropertiesValidator
-  );
-  LevelPropertiesCache.set(path, value);
-  return value;
-}
-
 interface LabData {
   levelProperties: LevelProperties;
   // We pass down a dedicated ProjectManager for each sublevel, so each lab is writing
@@ -94,35 +73,12 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
   levelProperties,
   channel,
 }) => {
+  const {levelPropertiesMap} = useLevelProperties();
   const [currentTab, setCurrentTab] = useState<Tab>();
   const [tabDataMap, setTabDataMap] = useState<{[tab in Tab]?: LabData}>();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const dispatch = useAppDispatch();
-
-  const levelPropertiesPathPrefix = useAppSelector(state => {
-    if (state.progress.lessons) {
-      const scriptName = state.progress.scriptName;
-      const lessonPosition = getCurrentLesson(state)?.relative_position;
-      const currentLevel = levelById(
-        state.progress,
-        state.progress.currentLessonId,
-        levelProperties.id.toString()
-      );
-      return `/s/${scriptName}/lessons/${lessonPosition}/levels/${currentLevel.levelNumber}`;
-    }
-  });
-
-  const getLevelPropertiesPath = useCallback(
-    (sublevel: BubbleChoiceSublevel) => {
-      if (!levelPropertiesPathPrefix) {
-        return `/levels/${sublevel.level_id}/level_properties`;
-      }
-
-      return `${levelPropertiesPathPrefix}/sublevel/${sublevel.position}/level_properties`;
-    },
-    [levelPropertiesPathPrefix]
-  );
 
   // Load level properties and project data for each sublevel.
   const loadData = useCallback(async () => {
@@ -140,9 +96,7 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     const map: {[tab in Tab]?: LabData} = {};
     dispatch(setIsLoading(true));
     for (const sublevel of sublevels) {
-      const sublevelProperties = await loadLevelProperties(
-        getLevelPropertiesPath(sublevel)
-      );
+      const sublevelProperties = levelPropertiesMap[sublevel.level_id];
       const appName = sublevelProperties.appName;
       let tab: Tab | undefined;
       if (appName === 'music') {
@@ -221,9 +175,9 @@ const MusicDanceAi: React.FC<MusicDanceAiProps> = ({
     levelProperties,
     channel.labConfig,
     channel.subprojects,
+    levelPropertiesMap,
     userId,
     scriptId,
-    getLevelPropertiesPath,
     dispatch,
     tabDataMap,
   ]);

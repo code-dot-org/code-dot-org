@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Filtering in Java Script
+# Filtering in JavaScript
 
 #### Before diving into the details, take a moment to look over the code sample as a whole.
 
@@ -66,6 +66,6 @@ markdown <<MARKDOWN
 ---
 ## What's next?
 
-#### Let's dive into the **searching function.**
+#### Let's practice filtering and then learn about the **searching function.**
 
 MARKDOWN

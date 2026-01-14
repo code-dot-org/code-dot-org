@@ -1,0 +1,48 @@
+name 'csaif_pl_ai_rev_lit_framework_-launch_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AILit Framework
+
+#### The AI Foundations curriculum is aligned to the Empowering Learners for the Age of AI: An AI Literacy Framework for Primary and Secondary Education. The **AILit Framework** is a joint initiative of the European Commission and the Organization for Economic Cooperation and Development (OECD). Code.org and leading international experts support its development. 
+
+<img src="https://images.code.org/47195a537b2a24a3fcc52cec328b90f7-Screenshot 2025-12-02 at 4.39.18 PM.png" alt="pie chart divided into thirds labeled: AI literacy, human-centered design, and computational thinking" width="500px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px; border: 3px solid black;">
+
+## Explore the AILit Framework's Domains
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em"><strong>Engaging with AI:</strong> Recognize AI is interpreting their input.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size: 16px">Engaging with AI in daily life involves using AI as a tool to access new content, information, or recommendations. These situations require learners to first recognize AI's presence, then evaluate the accuracy and relevance of AI outputs. Learners must develop a fundamental understanding of AI's technical foundations in order to critically analyze its capabilities and limitations.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em"><strong>Creating with AI:</strong> Use prompts to collaborate and refine.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size: 16px">Creating with AI consists of collaborating with an AI system in a creative or problem-solving process. It involves guiding and refining AI output through prompts and feedback, while ensuring the content remains fair and appropriate. It also involves ethical considerations related to content ownership, attribution, and the responsible use of existing materials.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em"><strong>Managing AI:</strong> Decide when to accept, reject, or remix.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size: 16px">Managing AI requires intentionally choosing how AI can support and enhance human work. This includes assigning structured tasks to AI, such as organizing information, so humans can focus on areas requiring creativity, empathy, and judgment. AI systems can simulate a variety of roles, acting as an analyst, debate partner, or career guide. Learners who manage AI's actions learn to delegate tasks thoughtfully, guide AI outputs with clear instructions, and assess whether AI's involvement aligns with their goals and values. This domain helps learners build agency, ensuring that AI works for them and that its use remains ethical and human-centered.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em"><strong>Designing AI:</strong> Spark curiosity about how AI is trained on patterns and data.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size: 16px">Designing AI empowers learners to understand AI's social and ethical impacts and how AI works by shaping how AI systems function. Through hands-on exploration in an education context, students examine how data, design choices, and model behavior influence the fairness, usefulness, and impact of AI systems. The goal is not to develop commercial products or put them into service, but to build the confidence and capacity to shape AI for human good by understanding the principles underpinning the design and behavior of AI from an early age.
+</p></div>
+</details>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Want to learn more about the AI Literacy Framework? Check out <a href='https://www.teachai.org/ailiteracy' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>teachai.org/ailiteracy</a>.
+</p>
+
+MARKDOWN

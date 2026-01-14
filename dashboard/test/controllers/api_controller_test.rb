@@ -4,8 +4,6 @@ class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
 

@@ -7,7 +7,7 @@ wrong 'The loop will finish faster than expected.'
 wrong 'The loop will run once and then stop correctly.'
 wrong 'The loop will skip every other item in the dataset.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1

@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 #### For a deeper dive into AI Foundations Semester 1, try our self-paced learning by Unit. Each one covers lessons and key skills needed to teach each unit. 
 
-#### Try **Unit 1 - Problem Solving with AI** next. 
+#### Try <a href="https://studio.code.org/courses/teaching-ai-foundations-s1-v2-2025/units/2" target="blank" rel="noopener noreferrer">Unit 1 - Problem Solving with AI</a> next. 
 
 ## Next Steps
 
@@ -61,7 +61,7 @@ markdown <<MARKDOWN
                style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_csd_post?survey_data[module]=3" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
+            Your feedback shapes future learning experiences. Please take our short end-of-module survey.
           </p>
         </div>
       </div>

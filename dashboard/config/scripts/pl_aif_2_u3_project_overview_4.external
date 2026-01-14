@@ -7,27 +7,20 @@ markdown <<MARKDOWN
 
 #### Unit 3: Building Data-Driven Systems culminates with a final **Value Explorer** project. 
 
+<img src="https://images.code.org/ae1f7db6b63189e93e183a912e8456b3-image-1767975441911.png" alt="prototype of volunteer app that has input for interests and time and suggests a volunteer opportunity" width="300px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+
 ## Value Explorer
-#### In the Value Explorer project, students act as product designers and data stewards, creating a web app that helps users explore a curated set of items or opportunities—such as side hustles, volunteer roles, or clubs—based on what they value. 
+#### In the Value Explorer project, students act as product designers and data stewards, creating a web app that helps users explore a curated set of items or opportunities such as side hustles, volunteer roles, or clubs. 
 
 #### Students define their own dataset, design a simple schema, and build features that let users sort and filter the collection through different “value lenses,” such as profit, time, or social impact. By making their ranking rules transparent, students learn that data design and algorithms always involve choices.
 
  
 
----
+
 
 ### **When Project Begins:** Final lesson of the unit
 
-### The project extends over three class periods. Beginning in Lesson 11.
-
-## Sample
-
-#### 
-
-
-
----
-
+### The project extends over five class periods beginning in Lesson 11.
 
 
 ## What success looks like
@@ -43,4 +36,6 @@ markdown <<MARKDOWN
 ## Now, let’s see how we get here! 
 
 #### Arrays are up next! 
+
+
 MARKDOWN

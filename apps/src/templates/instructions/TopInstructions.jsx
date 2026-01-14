@@ -11,7 +11,6 @@ import {connect} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
@@ -424,17 +423,6 @@ class TopInstructions extends Component {
 
     toggleInstructionsCollapsed();
 
-    // record event
-    const eventName = isCollapsed
-      ? 'expand-instructions'
-      : 'collapse-instructions';
-
-    this.recordEvent(eventName, {
-      data_json: JSON.stringify({
-        csfStyleInstructions: !noInstructionsWhenCollapsed,
-      }),
-    });
-
     // adjust rendered height based on next collapsed state
     const height =
       !isCollapsed && noInstructionsWhenCollapsed
@@ -455,15 +443,6 @@ class TopInstructions extends Component {
     win.focus();
   };
 
-  recordEvent(eventName, additionalData = {}) {
-    const record = {
-      study: 'top-instructions',
-      event: eventName,
-      ...additionalData,
-    };
-    firehoseClient.putRecord(record);
-  }
-
   handleTabClick = newTab => {
     this.scrollToTopOfTab();
     this.setState({tabSelected: newTab}, () => {
@@ -474,7 +453,6 @@ class TopInstructions extends Component {
 
   handleHelpTabClick = () => {
     this.handleTabClick(TabType.RESOURCES);
-    this.recordEvent('click-help-and-tips-tab');
     logUserLevelInteraction({
       levelId: this.props.serverLevelId,
       scriptId: this.props.serverScriptId,
@@ -489,7 +467,6 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
-    this.recordEvent('click-feedback-tab');
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
@@ -499,7 +476,6 @@ class TopInstructions extends Component {
 
   handleTeacherOnlyTabClick = () => {
     this.handleTabClick(TabType.TEACHER_ONLY);
-    this.recordEvent('click-teacher-only-tab');
   };
 
   scrollToTopOfTab = () => {

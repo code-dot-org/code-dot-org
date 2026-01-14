@@ -6,7 +6,6 @@ require 'timecop'
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   include Minitest::RSpecMocks
-  self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
     test 'returns student us_state if present' do
@@ -3993,7 +3992,7 @@ class UserTest < ActiveSupport::TestCase
   test 'find_channel_owner finds channel owner' do
     student = create(:student)
     with_channel_for student do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
+      encrypted_channel_id = get_project_channel_id storage_id, project_id
       result = User.find_channel_owner encrypted_channel_id
       assert_equal student, result
     end
@@ -4001,7 +4000,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner returns nil for channel with no owner' do
     with_anonymous_channel do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
+      encrypted_channel_id = get_project_channel_id storage_id, project_id
       result = User.find_channel_owner encrypted_channel_id
       assert_nil result
     end

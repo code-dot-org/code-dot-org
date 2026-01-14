@@ -7,7 +7,7 @@ wrong 'It is the only way to close the web application.'
 wrong 'It automatically sends a report of all user actions to the developer.'
 wrong 'It changes the schema of the data to make it simpler.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 8

@@ -7,7 +7,7 @@ wrong 'AI-generated tests are usually written in a different version of JavaScri
 wrong ' You should never refine them; the AI knows better than the human developer.'
 wrong 'Refining them is the only way to make the tests run faster.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 9

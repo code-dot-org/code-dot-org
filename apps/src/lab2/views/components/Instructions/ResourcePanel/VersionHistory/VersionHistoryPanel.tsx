@@ -474,7 +474,7 @@ const VersionHistoryPanel: React.FunctionComponent<
           restoreDisabled={disabled || versionLoading}
           alwaysShowAutoSaves={alwaysShowAutoSaves}
         >
-          {isLatest && hasEdited && !viewAsUserId && (
+          {isLatest && hasEdited && !viewingOldVersion && !viewAsUserId && (
             <SaveVersionPanel
               projectSources={projectSources}
               onSuccess={handleSaveVersionSuccess}
@@ -490,6 +490,7 @@ const VersionHistoryPanel: React.FunctionComponent<
       onVersionChange,
       disabled,
       viewAsUserId,
+      viewingOldVersion,
       restoreSelectedVersion,
       versionLoading,
       hasEdited,
