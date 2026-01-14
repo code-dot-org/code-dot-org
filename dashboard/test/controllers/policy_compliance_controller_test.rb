@@ -221,7 +221,13 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to lockout_path
 
     mail = ActionMailer::Base.deliveries.first
-    assert_includes(mail.body.to_s, policy_compliance_child_account_consent_url)
+    token_endpoint_url = url_for(
+      action: :child_account_consent,
+      controller: :policy_compliance,
+      only_path: false,
+      protocol: Rails.application.routes.default_url_options[:protocol],
+    )
+    assert_includes(mail.body.to_s, token_endpoint_url)
   end
 
   class PendingPermissionRequestTest < ActionDispatch::IntegrationTest
