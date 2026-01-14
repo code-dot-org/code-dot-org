@@ -26635,7 +26635,9 @@ en:
           description: ''
           student_description: ''
         6-12-aif-s2-unit6:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Playground
           lesson_groups: {}
           name: 6-12-aif-s2-unit6
           title: "[DEV] AIF S2 Unit 6"

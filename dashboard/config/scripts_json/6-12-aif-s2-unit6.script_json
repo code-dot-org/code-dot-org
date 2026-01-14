@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-07 01:35:28 UTC",
+    "serialized_at": "2026-01-13 18:33:05 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -33,19 +33,86 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Playground",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e357db24-dce6-43db-8cb3-e7453984cbbb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d",
+        "lesson_activity.key": "e357db24-dce6-43db-8cb3-e7453984cbbb"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ken-capstone-playground"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d"
+      },
+      "level_keys": [
+        "ken-capstone-playground"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "ken-capstone-playground",
+        "script_level.level_keys": [
+          "ken-capstone-playground"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit6",
+        "activity_section.key": "ade139b3-b0ad-4566-84cb-8772ab1ee68d"
+      }
+    }
   ],
   "resources": [
 
