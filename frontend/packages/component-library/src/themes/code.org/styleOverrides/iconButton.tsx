@@ -327,10 +327,10 @@ const iconButtonVariants = [
     props: {variant: 'text', color: 'white'},
     style: {
       backgroundColor: 'transparent',
-      color: 'var(--text-neutral-inverse)',
+      color: 'var(--neutral-base-white)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--neutral-white-alpha-30)',
-        color: 'var(--text-neutral-inverse)',
+        color: 'var(--neutral-base-white)',
       },
       '&:active': {
         backgroundColor: 'var(--neutral-white-alpha-30)',
