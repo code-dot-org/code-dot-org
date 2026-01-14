@@ -80,7 +80,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     level_info = if has_questions then get_cfu_level_info(level, student_id, unit_id) else get_code_level_info(level, student_id, unit_id) end
 
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete):\n  [{\n  #{sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join("\n  },{\n  ")}}]" : ""
+    sublevel_info = sublevels&.any? ? "\n    Sublevels (A student should pick at least one to complete):\n  [{\n  #{sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join("\n  },{\n  ")}}]" : ""
     rubric_summary = level.rubrics.present? ? "\n  Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
     time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n    Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
 
@@ -101,7 +101,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     return unless level
 
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join(", ")}]" : ""
+    sublevel_info = sublevels&.any? ? "\n    Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join(", ")}]" : ""
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
 
@@ -175,11 +175,21 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     completed_students = user_levels.count(&:passing?)
     completion_percentage = total_students > 0 ? (completed_students.to_f / total_students * 100).round(1) : 0
 
-    "    Section Stats:
+    section_stats = "    Section Stats:
       Total students in section: #{total_students}
-      Percentage of students who completed the level: #{completion_percentage}%
-      Section median time spent: #{median_time_spent ? "#{median_time_spent} seconds" : "No data"}
-      Section average time spent: #{average_time_spent ? "#{average_time_spent.round(1)} seconds" : "No data"}"
+      Percentage of students who completed the level: #{completion_percentage}%"
+
+    if median_time_spent
+      section_stats += "
+      Section median time spent: #{median_time_spent} seconds"
+    end
+
+    if average_time_spent
+      section_stats += "
+      Section average time spent: #{average_time_spent.round(1)} seconds"
+    end
+
+    section_stats
   end
 
   def self.format_response_by_level_type(raw_data, level)
