@@ -1,4 +1,5 @@
-import {act, render} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -8,8 +9,9 @@ import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import javalabMsg from '@cdo/javalab/locale';
 
-import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
@@ -34,134 +36,137 @@ describe('Java Lab Backpack Test', () => {
   });
 
   const renderWithProps = props => {
-    const backpackRef = React.createRef();
-    const utils = render(
+    return render(
       <BackpackAPIContext.Provider value={backpackApiStub}>
-        <Backpack ref={backpackRef} {...{...defaultProps, ...props}} />
+        <Backpack {...{...defaultProps, ...props}} />
       </BackpackAPIContext.Provider>
     );
-    return {backpackRef, ...utils};
   };
 
-  it('updates selected files correctly', () => {
-    const {backpackRef} = renderWithProps({});
-    act(() => {
-      backpackRef.current.handleFileCheckboxChange({
-        target: {name: 'Class1.java', checked: true},
-      });
-    });
-    act(() => {
-      backpackRef.current.handleFileCheckboxChange({
-        target: {name: 'Class2.java', checked: true},
-      });
-    });
-    act(() => {
-      backpackRef.current.handleFileCheckboxChange({
-        target: {name: 'Class3.java', checked: true},
-      });
-    });
-    act(() => {
-      backpackRef.current.handleFileCheckboxChange({
-        target: {name: 'Class1.java', checked: false},
-      });
-    });
-    const selectedFiles = backpackRef.current.state.selectedFiles;
-    expect(selectedFiles.length).to.equal(2);
-    expect(selectedFiles[0]).to.equal('Class2.java');
-    expect(selectedFiles[1]).to.equal('Class3.java');
+  const openBackpack = async user => {
+    await user.click(screen.getByRole('button', {name: /backpack/i}));
+  };
+
+  it('updates selected files correctly', async () => {
+    const user = userEvent.setup();
+    renderWithProps({});
+    backpackApiStub.getFileList.callsArgWith(1, [
+      'Class1.java',
+      'Class2.java',
+      'Class3.java',
+    ]);
+
+    await openBackpack(user);
+    await screen.findByLabelText('Class1.java');
+    await user.click(screen.getByLabelText('Class1.java'));
+    await user.click(screen.getByLabelText('Class2.java'));
+    await user.click(screen.getByLabelText('Class3.java'));
+    await user.click(screen.getByLabelText('Class1.java'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
+
+    const confirmMessage = await screen.findByText(
+      javalabMsg.fileDeleteConfirm()
+    );
+    const dialog = confirmMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    const dialogQueries = within(dialog);
+    expect(dialogQueries.queryByText('Class1.java')).to.equal(null);
+    expect(dialogQueries.getByText('Class2.java')).to.not.equal(null);
+    expect(dialogQueries.getByText('Class3.java')).to.not.equal(null);
   });
 
-  it('expand dropdown triggers getFileList', () => {
-    const {backpackRef} = renderWithProps({});
-    act(() => {
-      backpackRef.current.expandDropdown();
-    });
+  it('expand dropdown triggers getFileList', async () => {
+    const user = userEvent.setup();
+    renderWithProps({});
+    await openBackpack(user);
     expect(backpackApiStub.getFileList.calledOnce).to.be.true;
   });
 
-  it('expand dropdown resets state correctly', () => {
-    const {backpackRef} = renderWithProps({});
-    // set state to something that should be cleared by expandDropdown
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: false,
-        backpackLoadError: true,
-        selectedFiles: ['file1', 'file2'],
-        backpackFilenames: ['file1', 'file2', 'file3'],
-      });
-    });
+  it('expand dropdown resets state correctly', async () => {
+    const user = userEvent.setup();
+    renderWithProps({});
+    backpackApiStub.getFileList.onCall(0).callsArgWith(1, ['file1', 'file2']);
+    backpackApiStub.getFileList.onCall(1).callsArgWith(1, ['file1', 'file2']);
 
-    act(() => {
-      backpackRef.current.expandDropdown();
-    });
-    const state = backpackRef.current.state;
-    assert(state.dropdownOpen);
-    assert.isFalse(state.backpackLoadError);
-    expect(state.selectedFiles.length).to.equal(0);
-    expect(state.backpackFilenames.length).to.equal(0);
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    await user.click(screen.getByLabelText('file1'));
+    expect(
+      screen.getByRole('button', {name: javalabMsg.import()}).disabled
+    ).to.equal(false);
+    await openBackpack(user);
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    expect(
+      screen.getByRole('button', {name: javalabMsg.import()}).disabled
+    ).to.equal(true);
   });
 
-  it('import shows warning before overwriting files', () => {
+  it('import shows warning before overwriting files', async () => {
+    const user = userEvent.setup();
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const {backpackRef} = renderWithProps(otherProps);
-    // set state to something that should be cleared by expandDropdown
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['file1', 'file2', 'file3'],
-        selectedFiles: ['file1', 'file3'],
-      });
-    });
+    renderWithProps(otherProps);
+    backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    act(() => {
-      backpackRef.current.handleImport();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    await user.click(screen.getByLabelText('file1'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.import()}));
 
-    const state = backpackRef.current.state;
-    expect(state.openDialog).to.equal('IMPORT_WARNING');
+    const warningMessage = await screen.findByText(
+      javalabMsg.fileImportWarning()
+    );
+    const dialog = warningMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    const dialogQueries = within(dialog);
+    expect(dialogQueries.getByText('file1')).to.not.equal(null);
+    expect(dialogQueries.queryByText('file3')).to.equal(null);
   });
 
-  it('import shows error if hidden file name is used', () => {
+  it('import shows error if hidden file name is used', async () => {
+    const user = userEvent.setup();
     const otherProps = {
       sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}},
     };
-    const {backpackRef} = renderWithProps(otherProps);
-    // set state to something that should be cleared by expandDropdown
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['visibleFile', 'hiddenFile', 'file3'],
-        selectedFiles: ['hiddenFile', 'file3'],
-      });
-    });
+    renderWithProps(otherProps);
+    backpackApiStub.getFileList.callsArgWith(1, [
+      'visibleFile',
+      'hiddenFile',
+      'file3',
+    ]);
 
-    act(() => {
-      backpackRef.current.handleImport();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('hiddenFile');
+    await user.click(screen.getByLabelText('hiddenFile'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.import()}));
 
-    const state = backpackRef.current.state;
-    expect(state.openDialog).to.equal('IMPORT_ERROR');
+    const errorMessage = await screen.findByText(javalabMsg.fileImportError());
+    const dialog = errorMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    const dialogQueries = within(dialog);
+    expect(dialogQueries.getByText('hiddenFile')).to.not.equal(null);
   });
 
-  it('no dialog shown if there are no duplicate file names', () => {
-    const {backpackRef} = renderWithProps({});
-    // set state to something that should be cleared by expandDropdown
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['file1', 'file2', 'file3'],
-        selectedFiles: ['file2', 'file3'],
-      });
-    });
+  it('no dialog shown if there are no duplicate file names', async () => {
+    const user = userEvent.setup();
+    renderWithProps({});
+    backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    act(() => {
-      backpackRef.current.handleImport();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('file2');
+    await user.click(screen.getByLabelText('file2'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.import()}));
 
-    const state = backpackRef.current.state;
-    expect(state.openDialog).to.equal(null);
+    expect(screen.queryByText(javalabMsg.fileImportWarning())).to.equal(null);
+    expect(screen.queryByText(javalabMsg.fileImportError())).to.equal(null);
+    expect(screen.queryByRole('button', {name: javalabMsg.import()})).to.equal(
+      null
+    );
   });
 
   it('renders nothing if backpack is disabled', () => {
@@ -169,113 +174,110 @@ describe('Java Lab Backpack Test', () => {
     expect(container.firstChild).to.equal(null);
   });
 
-  it('delete shows warning before deleting files', () => {
+  it('delete shows warning before deleting files', async () => {
+    const user = userEvent.setup();
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const {backpackRef} = renderWithProps(otherProps);
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['file1', 'file2', 'file3'],
-        selectedFiles: ['file1', 'file3'],
-      });
-    });
+    renderWithProps(otherProps);
+    backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    act(() => {
-      backpackRef.current.confirmAndDeleteFiles();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    await user.click(screen.getByLabelText('file1'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
 
-    const state = backpackRef.current.state;
-    expect(state.openDialog).to.equal('DELETE_CONFIRM');
+    const confirmMessage = await screen.findByText(
+      javalabMsg.fileDeleteConfirm()
+    );
+    const dialog = confirmMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    const dialogQueries = within(dialog);
+    expect(dialogQueries.getByText('file1')).to.not.equal(null);
+    expect(dialogQueries.getByText('file3')).to.not.equal(null);
   });
 
-  it('dropdown and modal are closed if delete succeeds', () => {
+  it('dropdown and modal are closed if delete succeeds', async () => {
+    const user = userEvent.setup();
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const {backpackRef} = renderWithProps(otherProps);
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['file1', 'file2', 'file3'],
-        selectedFiles: ['file1', 'file3'],
-      });
-    });
+    renderWithProps(otherProps);
     // set up delete files to call success callback
     backpackApiStub.deleteFiles.callsArg(2);
+    backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    // open modal
-    act(() => {
-      backpackRef.current.confirmAndDeleteFiles();
-    });
-    // click delete
-    act(() => {
-      backpackRef.current.handleDelete();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    await user.click(screen.getByLabelText('file1'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
 
-    const state = backpackRef.current.state;
-    expect(state.openDialog).to.equal(null);
+    const confirmMessage = await screen.findByText(
+      javalabMsg.fileDeleteConfirm()
+    );
+    const dialog = confirmMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    await user.click(
+      within(dialog).getByRole('button', {name: javalabMsg.delete()})
+    );
+    expect(screen.queryByText(javalabMsg.fileDeleteConfirm())).to.equal(null);
+    expect(screen.queryByLabelText('file1')).to.equal(null);
   });
 
-  it('Delete error modal is shown if delete fails', () => {
+  it('Delete error modal is shown if delete fails', async () => {
+    const user = userEvent.setup();
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const {backpackRef} = renderWithProps(otherProps);
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['file1', 'file2', 'file3'],
-        selectedFiles: ['file1', 'file3'],
-      });
-    });
+    renderWithProps(otherProps);
     // set up delete files to call failure callback
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
+    backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    // open modal
-    act(() => {
-      backpackRef.current.confirmAndDeleteFiles();
-    });
-    // click delete
-    act(() => {
-      backpackRef.current.handleDelete();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    await user.click(screen.getByLabelText('file1'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
 
-    const state = backpackRef.current.state;
-    expect(state.openDialog).to.equal('DELETE_ERROR');
+    const confirmMessage = await screen.findByText(
+      javalabMsg.fileDeleteConfirm()
+    );
+    const dialog = confirmMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    await user.click(
+      within(dialog).getByRole('button', {name: javalabMsg.delete()})
+    );
+    await screen.findByText(javalabMsg.fileDeleteError());
   });
 
-  it('Deleted files are removed from dropdown on partial delete success', () => {
+  it('Deleted files are removed from dropdown on partial delete success', async () => {
+    const user = userEvent.setup();
     const otherProps = {
       sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
-    const {backpackRef} = renderWithProps(otherProps);
-    act(() => {
-      backpackRef.current.setState({
-        dropdownOpen: true,
-        backpackFilenames: ['file1', 'file2', 'file3'],
-        selectedFiles: ['file1', 'file3'],
-      });
-    });
+    renderWithProps(otherProps);
     // set up delete files to call failure callback where only file 1 failed to delete
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
+    backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    // open modal
-    act(() => {
-      backpackRef.current.confirmAndDeleteFiles();
-    });
-    // click delete
-    act(() => {
-      backpackRef.current.handleDelete();
-    });
+    await openBackpack(user);
+    await screen.findByLabelText('file1');
+    await user.click(screen.getByLabelText('file1'));
+    await user.click(screen.getByLabelText('file3'));
+    await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
 
-    const state = backpackRef.current.state;
-    const selectedFiles = state.selectedFiles;
-    // selected files should only contain the file that failed to delete (file1).
-    expect(selectedFiles.length).to.equal(1);
-    expect(selectedFiles[0]).to.equal('file1');
-    // backpackFilenames should have length 2 (file3 should be gone)
-    expect(state.backpackFilenames.length).to.equal(2);
+    const confirmMessage = await screen.findByText(
+      javalabMsg.fileDeleteConfirm()
+    );
+    const dialog = confirmMessage.closest('.modal');
+    expect(dialog).to.not.equal(null);
+    await user.click(
+      within(dialog).getByRole('button', {name: javalabMsg.delete()})
+    );
+    await screen.findByText(javalabMsg.fileDeleteError());
+    expect(screen.queryByLabelText('file3')).to.equal(null);
   });
 });
