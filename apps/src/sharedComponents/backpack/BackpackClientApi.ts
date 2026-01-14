@@ -96,6 +96,13 @@ export default class BackpackClientApi {
     }
   }
 
+  getFileFetchUrl(filename: string) {
+    if (!this.channelId) {
+      return undefined;
+    }
+    return `${rootUrl(this.channelId!)}/${filename}`;
+  }
+
   async getFileList(
     onError: ErrorCallback,
     onSuccess: (filenames: string[]) => void
