@@ -209,7 +209,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           size="s"
           type="secondary"
           color="gray"
-          iconLeft={{iconName: 'save'}}
           className={moduleStyles.saveButton}
         />
       )}
