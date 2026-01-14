@@ -133,6 +133,71 @@ class StorageIdTest < Minitest::Test
     assert_nil storage_id_from_cookie
   end
 
+  def test_get_project_channel_id
+    # Test with project without UUID - should encrypt
+    storage_id = 123
+    project_id = 456
+    mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: nil)
+
+    # Create mock constants without defining classes
+    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
+
+    # Stub Projects.table.where(...)
+    projects_table = mock
+    Projects.stubs(:table).returns(projects_table)
+    projects_table.stubs(:where).with(id: project_id).returns([mock_project])
+
+    encrypted = get_project_channel_id(storage_id, project_id)
+    assert encrypted.is_a?(String)
+    assert encrypted != storage_id.to_s && encrypted != project_id.to_s
+
+    # Verify round-trip
+    decrypted_storage_id, decrypted_project_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
+    assert_equal storage_id, decrypted_storage_id
+    assert_equal project_id, decrypted_project_id
+
+    # Test with project with UUID and DCDO off - should encrypt
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(false)
+    uuid = SecureRandom.uuid
+    mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
+    projects_table.stubs(:where).with(id: project_id).returns([mock_project])
+
+    # Should still return the same encryption as before
+    uuid_encrypted = get_project_channel_id(storage_id, project_id)
+    assert_equal encrypted, uuid_encrypted
+
+    # Test with project with UUID and DCDO on - should return UUID
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
+    result = get_project_channel_id(storage_id, project_id)
+    assert_equal uuid, result
+  end
+
+  def test_get_storage_id_and_project_id
+    project_id = 789
+    storage_id = 456
+    uuid = SecureRandom.uuid
+
+    mock_project = OpenStruct.new(id: project_id, storage_id: storage_id, uuid: uuid)
+
+    # Create mock constants without defining classes
+    Object.const_set(:Projects, mock) unless Object.const_defined?(:Projects)
+
+    # Stub Projects.table.where(...)
+    projects_table = mock
+    Projects.stubs(:table).returns(projects_table)
+    projects_table.stubs(:where).with(uuid: uuid).returns([mock_project])
+
+    storage_id_out, project_id_out = get_storage_id_and_project_id(uuid)
+    assert_equal storage_id, storage_id_out
+    assert_equal project_id, project_id_out
+
+    # legacy token decryption
+    channel_token = Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
+    storage_id_out, project_id_out = get_storage_id_and_project_id(channel_token)
+    assert_equal storage_id, storage_id_out
+    assert_equal project_id, project_id_out
+  end
+
   # Ensures decrypt/encrypt performance exceeds a minimum iterations per second threshold.
   def test_encrypt_performance
     require 'benchmark/ips'

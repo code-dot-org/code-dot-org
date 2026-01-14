@@ -1313,6 +1313,25 @@ class LevelsControllerTest < ActionController::TestCase
     refute level.skill_keys
   end
 
+  test "level_properties returns map of ID to properties" do
+    level = create(:level)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+  end
+
+  test "level_properties includes sublevels if present" do
+    level = create(:bubble_choice_level, :with_sublevels)
+    get :level_properties, params: {id: level.id}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal level.name, properties[level.id.to_s]["name"]
+    level.sublevels.each do |sublevel|
+      assert_equal sublevel.name, properties[sublevel.id.to_s]["name"]
+    end
+  end
+
   # Assert that the url is a real S3 url, and not a placeholder.
   private def assert_s3_image_url(url)
     assert(

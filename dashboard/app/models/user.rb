@@ -1920,7 +1920,7 @@ class User < ApplicationRecord
   end
 
   def self.find_channel_owner(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound

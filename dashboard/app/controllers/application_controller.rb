@@ -285,6 +285,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  protected def authorize_teacher!
+    authorize! :access, :teacher_only
+  end
+
   protected def require_admin
     authorize! :read, :reports
   end

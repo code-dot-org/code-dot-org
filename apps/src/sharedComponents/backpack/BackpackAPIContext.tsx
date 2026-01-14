@@ -9,9 +9,5 @@ export const BackpackAPIContext = createContext<BackpackContextType | null>(
 );
 
 export const useBackpackAPIContext = () => {
-  const context = useContext(BackpackAPIContext);
-  if (context === null) {
-    throw new Error('Backpack API Context has not been provided!');
-  }
-  return context;
+  return useContext(BackpackAPIContext);
 };

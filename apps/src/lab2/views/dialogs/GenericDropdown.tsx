@@ -8,7 +8,10 @@ import React, {useCallback, useEffect} from 'react';
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
-export type GenericDropdownProps = Pick<GenericDialogProps, 'title'> & {
+export type GenericDropdownProps = Pick<
+  GenericDialogProps,
+  'title' | 'useModal'
+> & {
   dropdownLabel: string;
   handleConfirm?: (Dropdown: string) => void;
   handleCancel?: () => void;
@@ -60,6 +63,7 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
   confirmText,
   neutralText,
   neutralDestructive,
+  useModal = false,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
 
@@ -106,6 +110,7 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
         />
       }
       buttons={buttons}
+      useModal={useModal}
     />
   );
 };

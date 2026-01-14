@@ -1141,9 +1141,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    # 8 queries from the request + 1 extra query triggered by the lazy transaction.
-    # @see ActiveSupport::Testing::TransactionalTestCase
-    assert_queries 9 do
+    assert_queries 8 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success

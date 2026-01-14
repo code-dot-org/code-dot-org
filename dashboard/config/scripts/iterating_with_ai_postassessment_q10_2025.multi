@@ -7,7 +7,7 @@ wrong 'They used too many pure functions.'
 wrong 'They forgot to use a `for` loop.'
 wrong 'They set the stopping condition to `i < 10`.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 8
