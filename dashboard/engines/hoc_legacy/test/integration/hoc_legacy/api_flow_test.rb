@@ -18,14 +18,10 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
     HocLegacy::Tutorials.clear
   end
 
-  before do
-    allow(CDO).to receive(:default_scheme).and_return('http:')
-  end
-
   it 'has expected basic flow from begin to finish' do
     VCR.use_cassette('hoc_legacy/api_flow/basic_flow') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'http://test.code.org/minecraft'
+      must_redirect_to 'https://test.code.org/minecraft'
 
       session_id = cookies[HocLegacy::HOC_COOKIE_KEY]
       _(session_id).wont_be_nil
@@ -44,7 +40,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).must_equal session_id
 
       get "/api/hour/finish/#{tutorial_code}"
-      must_redirect_to "http://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
+      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
       follow_redirect!
       must_respond_with :success
 
@@ -74,7 +70,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   it 'has expected basic flow from begin to finish_current' do
     VCR.use_cassette('hoc_legacy/api_flow/basic_flow_with_finish_current') do
       get "/api/hour/begin/#{tutorial_code}"
-      must_redirect_to 'http://test.code.org/minecraft'
+      must_redirect_to 'https://test.code.org/minecraft'
 
       session_id = cookies[HocLegacy::HOC_COOKIE_KEY]
       _(session_id).wont_be_nil
@@ -89,7 +85,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).must_equal session_id
 
       get '/api/hour/finish'
-      must_redirect_to "http://test-studio.code.org/congrats?i=#{session_id}"
+      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}"
       follow_redirect!
       must_respond_with :success
 
@@ -137,7 +133,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
 
       get "/api/hour/finish/#{tutorial_code}"
-      must_redirect_to 'http://test-studio.code.org/congrats'
+      must_redirect_to 'https://test-studio.code.org/congrats'
       follow_redirect!
       must_respond_with :success
     end
@@ -154,7 +150,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       must_respond_with :success
 
       get '/api/hour/finish'
-      must_redirect_to 'http://test-studio.code.org/congrats'
+      must_redirect_to 'https://test-studio.code.org/congrats'
       follow_redirect!
       must_respond_with :success
     end
