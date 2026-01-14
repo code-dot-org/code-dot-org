@@ -50,7 +50,7 @@ export function convertXmlToJson(xml: Element, embedded?: boolean) {
  * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
  * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and serialized blocks (values)
  */
-function addPositionsToState(
+export function addPositionsToState(
   xmlBlocks: XmlBlockConfig[],
   blockIdMap: Map<string, JsonBlockConfig>
 ) {
