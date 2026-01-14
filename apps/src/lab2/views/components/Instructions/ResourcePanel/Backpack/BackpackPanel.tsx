@@ -65,6 +65,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   useEffect(() => {
     // Show the load screen on initial load.
     loadBackpackFiles(true);
+  }, [loadBackpackFiles, backpackApi]);
+
+  useEffect(() => {
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
     // adds or deletes.
     const listenerId = backpackApi?.addEventListener((event, filename) => {
