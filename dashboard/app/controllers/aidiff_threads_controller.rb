@@ -1,5 +1,6 @@
 class AidiffThreadsController < ApplicationController
   include AiDiffBedrockHelper
+  include AidiffPromptHelper
   include LevelsHelper
 
   before_action :authenticate_user!
@@ -190,7 +191,7 @@ class AidiffThreadsController < ApplicationController
     unit_display_name = @unit&.title_for_display(unit_group_unit: @unit&.unit_group_units&.first)
     student_code = get_student_code(params[:viewAsUserId] || current_user.id, @level, @unit.id) if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
 
-    prompt = AidiffPromptHelper.get_prompt_for_context(
+    prompt = get_prompt_for_context(
       context_type,
       course_display_name,
       unit_display_name,
