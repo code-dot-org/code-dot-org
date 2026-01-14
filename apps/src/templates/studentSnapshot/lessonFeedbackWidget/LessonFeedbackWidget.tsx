@@ -67,25 +67,11 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     ],
   });
 
-  /**
-
-PRE SAVED DATA
-
-initialAiFeedback: "TEXT"
-teacherEditedFeedback: "TEXT"
-recommendedActions: [. <= Should this be it's own data type
-  {
-    resourceLink: "URL"
-    resourceName: "TEXT"
-    actionDescription: "TEXT"
-  }
-]
- */
-
   let widgetContent: React.ReactNode;
   let scrollable = false;
 
   // TODO: Load feedback data from server when API is available - building off Liam's Lesson Insight work
+  // Update state according to the data from back end
 
   useEffect(() => {
     if (!lessonId) {
@@ -107,6 +93,44 @@ recommendedActions: [. <= Should this be it's own data type
     setResourceName('');
   };
 
+  const createFeedbackData = (): FeedbackData => {
+    return {
+      feedbackText,
+      recommendedActions: [
+        {
+          actionText: recommendedActionText,
+          resourceName: resourceName || undefined,
+          resourceLink: resourceLink || undefined,
+        },
+      ],
+    };
+  };
+
+  const exitResourcePopup = () => {
+    setTempResourceName('');
+    setTempResourceLink('');
+    setShowAddResourcePopup(false);
+  };
+
+  const handleFeedbackEdited = (newText: string) => {
+    setFeedbackText(newText);
+    setIsFeedbackEdited(true);
+  };
+
+  const openResourcePopup = () => {
+    setShowAddResourcePopup(true);
+  };
+
+  const saveFeedbackAsDraft = () => {
+    setFeedbackData(createFeedbackData());
+    // TO DO: Send to backend as draft
+  };
+
+  const saveFeedbackAndSendToStudent = () => {
+    setFeedbackData(createFeedbackData());
+    // TO DO: Send to backend as final
+  };
+
   // TODO: Finish UI implementation
   if (error) {
     widgetContent = <BodyThreeText>{error}</BodyThreeText>;
@@ -116,7 +140,6 @@ recommendedActions: [. <= Should this be it's own data type
       <div className={styles.topContainer}>
         <Alert
           icon={{iconName: 'sparkles'}}
-          onClick={() => console.log('Alert clicked')}
           text={i18n.lessonFeedbackAlertText()}
           type="aqua"
         />
@@ -124,10 +147,7 @@ recommendedActions: [. <= Should this be it's own data type
           <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
           <FeedbackTextbox
             feedbackText={feedbackText}
-            onFeedbackChange={newText => {
-              setFeedbackText(newText);
-              setIsFeedbackEdited(true);
-            }}
+            onFeedbackChange={handleFeedbackEdited}
           />
         </div>
         <div className={styles.recommendedActionContainer}>
@@ -158,16 +178,14 @@ recommendedActions: [. <= Should this be it's own data type
                 iconName: 'plus',
                 title: 'Add Resource',
               }}
-              onClick={() => {
-                setShowAddResourcePopup(true);
-              }}
+              onClick={openResourcePopup}
             />
             {resourceLink && resourceName && (
               <UrlTab urlName={resourceName} onClick={deleteResourceLink} />
             )}
           </div>
           {showAddResourcePopup && (
-            <AccessibleDialog onClose={() => setShowAddResourcePopup(false)}>
+            <AccessibleDialog onClose={exitResourcePopup}>
               <div className={styles.popUpContainer}>
                 <TextField
                   className={styles.resourceLinkInput}
@@ -188,20 +206,14 @@ recommendedActions: [. <= Should this be it's own data type
                   <Button
                     text="Cancel"
                     type="secondary"
-                    onClick={() => {
-                      setTempResourceName('');
-                      setTempResourceLink('');
-                      setShowAddResourcePopup(false);
-                    }}
+                    onClick={exitResourcePopup}
                   />
                   <Button
                     text="Save"
                     onClick={() => {
                       setResourceName(tempResourceName);
                       setResourceLink(tempResourceLink);
-                      setTempResourceName('');
-                      setTempResourceLink('');
-                      setShowAddResourcePopup(false);
+                      exitResourcePopup();
                     }}
                   />
                 </div>
@@ -214,42 +226,13 @@ recommendedActions: [. <= Should this be it's own data type
             text={'Save as draft'}
             type="secondary"
             size="xs"
-            onClick={() => {
-              const updatedFeedbackData: FeedbackData = {
-                feedbackText,
-                recommendedActions: [
-                  {
-                    actionText: recommendedActionText,
-                    resourceName: resourceName || undefined,
-                    resourceLink: resourceLink || undefined,
-                  },
-                ],
-              };
-              setFeedbackData(updatedFeedbackData);
-              console.log('Save as draft clicked', updatedFeedbackData);
-            }}
+            onClick={saveFeedbackAsDraft}
           />
           <Button
             text="Send feedback to student"
             size="xs"
             type="primary"
-            onClick={() => {
-              const updatedFeedbackData: FeedbackData = {
-                feedbackText,
-                recommendedActions: [
-                  {
-                    actionText: recommendedActionText,
-                    resourceName: resourceName || undefined,
-                    resourceLink: resourceLink || undefined,
-                  },
-                ],
-              };
-              setFeedbackData(updatedFeedbackData);
-              console.log(
-                'Send feedback to student clicked',
-                updatedFeedbackData
-              );
-            }}
+            onClick={saveFeedbackAndSendToStudent}
           />
         </div>
       </div>
