@@ -5,12 +5,15 @@ import React, {useCallback, useEffect, useState} from 'react';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
 import BackpackMessage from './BackpackMessage';
 
 import moduleStyles from './backpack-panel.module.scss';
+
+const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
 
 const BackpackPanel: React.FC<BackpackProps> = ({
   validateFileName,
@@ -26,6 +29,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
   const [alertList, setAlertList] = useState<
     {type: 'success' | 'danger'; message: string}[]
   >([]);
+  const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<string[]>([]);
 
   const loadBackpackFiles = useCallback(
     (showLoading: boolean) => {
@@ -57,10 +61,31 @@ const BackpackPanel: React.FC<BackpackProps> = ({
     loadBackpackFiles(true);
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
     // adds or deletes.
-    backpackApi?.addEventListener(() => {
+    const listenerId = backpackApi?.addEventListener((event, filename) => {
       // We don't show the load view here to avoid the screen flickering when the backpack updates.
       loadBackpackFiles(false);
+      if (event === BackpackEvent.FileAdded) {
+        setAlertList(prevAlerts => [
+          ...prevAlerts,
+          {
+            type: 'success',
+            message: `${filename} successfully saved to your Backpack!`,
+          },
+        ]);
+        // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
+        setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
+        setTimeout(() => {
+          setRecentlyAddedFiles(prevFiles =>
+            prevFiles.filter(file => file !== filename)
+          );
+        }, SHOW_RECENTLY_ADDED_DURATION_MS);
+      }
     });
+    return () => {
+      if (listenerId) {
+        backpackApi?.removeEventListener(listenerId);
+      }
+    };
   }, [loadBackpackFiles, backpackApi]);
 
   if (!backpackApi) {
@@ -151,6 +176,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
           saveFile={saveFile}
           createNewFile={createNewFile}
           findIdForFileName={findIdForFileName}
+          isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
         />
       ))}
     </div>

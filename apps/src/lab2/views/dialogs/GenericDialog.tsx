@@ -1,9 +1,9 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import Dialog from '@code-dot-org/component-library/dialog';
 import Modal from '@code-dot-org/component-library/modal';
 import React, {useMemo} from 'react';
 
-import {useEnterKeyboardTrap} from '@cdo/apps/lab2/hooks';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -38,6 +38,11 @@ export type GenericDialogProps = GenericDialogTitleProps &
       };
     };
     getButtonCallback?: typeof defaultGetButtonCallback;
+    /** Use the Modal component instead of Dialog. Defaults to false (Dialog). */
+    // Dialog is used for confirmation actions and is center aligned with less content.
+    // Modal is used for longer content, inputs, additional options, etc and are left aligned
+    // with divider lines separating the body content from the title and action buttons.
+    useModal?: boolean;
   };
 
 import moduleStyles from './generic-dialog.module.scss';
@@ -94,6 +99,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   message,
   bodyComponent,
   getButtonCallback = defaultGetButtonCallback,
+  useModal = false,
 }) => {
   const dialogControl = useDialogControl();
 
@@ -123,19 +129,21 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
     getButtonCallback,
   });
 
-  useEnterKeyboardTrap(confirmCallback);
+  const DialogComponent = useModal ? Modal : Dialog;
 
   return (
-    <Modal
+    <DialogComponent
       title={title}
-      customContent={bodyComponent || message}
+      customContent={
+        <div id="dsco-dialog-description">{bodyComponent || message}</div>
+      }
       customBottomContent={
         buttons?.neutral && buttons?.cancel ? (
           <Button
             onClick={cancelCallback}
-            type="secondary"
+            type="tertiary"
             disabled={buttons.cancel.disabled}
-            color={theme === 'Dark' ? 'white' : 'gray'}
+            color={theme === 'Dark' ? 'white' : 'black'}
             text={buttons.cancel.text || commonI18n.cancel()}
           />
         ) : undefined
@@ -154,7 +162,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           ? {
               onClick: neutralCallback,
               disabled: buttons.neutral.disabled,
-              color: buttons.neutral.destructive ? 'destructive' : 'white',
+              color: buttons.neutral.destructive ? 'destructive' : 'gray',
               text: buttons.neutral.text,
             }
           : buttons?.cancel

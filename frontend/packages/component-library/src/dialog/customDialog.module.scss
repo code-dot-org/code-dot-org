@@ -19,19 +19,12 @@
 // Common dialog styles
 .customDialog {
   position: relative;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
 }
 
 .customDialogCloseButton {
   position: absolute;
   inset-block-start: 8px;
   inset-inline-end: 8px;
-}
-
-// Dialog colors
-.customDialog-light {
-  background-color: var(--neutral-base-white);
-}
-
-.customDialog-dark {
-  background-color: var(--neutral-gray-90);
 }

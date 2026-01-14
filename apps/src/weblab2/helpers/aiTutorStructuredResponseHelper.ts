@@ -185,13 +185,20 @@ export const acceptRejectJsonSchema: JsonObjectSchema = {
   additionalProperties: false,
 };
 
+/**
+ * Helper function to format a section with a title and optional content.
+ * Returns an empty string if content is not provided.
+ */
+const formatSection = (title: string, content?: string): string => {
+  return content ? `**${title}**\n\n${content}\n\n` : '';
+};
+
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';
-  if (response.assumptions) {
-    formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
-  }
+  formattedResponse += formatSection('Assumptions', response.assumptions);
+
   if (response.code && response.code.length > 0) {
     formattedResponse += `**Code**\n\n`;
     // Parsed json comes in as 'any'
@@ -200,15 +207,11 @@ export const formatCopyPasteResponse = (response: any): string => {
       formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }
-  if (response.explanation) {
-    formattedResponse += `**Explanation**\n\n${response.explanation}\n\n`;
-  }
-  if (response.nextSteps) {
-    formattedResponse += `**Next Steps**\n\n${response.nextSteps}\n\n`;
-  }
-  if (response.questions) {
-    formattedResponse += `**Questions**\n\n${response.questions}\n\n`;
-  }
+
+  formattedResponse += formatSection('Explanation', response.explanation);
+  formattedResponse += formatSection('Next Steps', response.nextSteps);
+  formattedResponse += formatSection('Questions', response.questions);
+
   return formattedResponse;
 };
 
@@ -228,18 +231,8 @@ export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
-  let formattedExplanation = '';
-  if (response.explanation) {
-    formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
-  }
-  if (response.nextSteps) {
-    formattedExplanation += `**Next Steps**\n\n${response.nextSteps}\n\n`;
-  }
-  if (response.questions) {
-    formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
-  }
   return {
-    explanation: formattedExplanation,
+    explanation: formatSection('Explanation', response.explanation),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.filename,

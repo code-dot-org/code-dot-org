@@ -42,6 +42,7 @@ export const openRenameFolderPrompt = async ({
         projectFolders,
       });
     },
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {

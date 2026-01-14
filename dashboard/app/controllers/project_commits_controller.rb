@@ -3,7 +3,7 @@ class ProjectCommitsController < ApplicationController
 
   # POST /project_commits
   def create
-    _, project_id = storage_decrypt_channel_id(params[:storage_id])
+    _, project_id = get_storage_id_and_project_id(params[:storage_id])
     # Use find_or_initialize_by to detect if this is a duplicate submission.
     project_commit = ProjectCommit.find_or_initialize_by(
       project_id: project_id,
@@ -42,7 +42,7 @@ class ProjectCommitsController < ApplicationController
 
   # GET /project_commits/:channel_id
   def project_commits
-    user_storage_id, project_id = storage_decrypt_channel_id(params[:channel_id])
+    user_storage_id, project_id = get_storage_id_and_project_id(params[:channel_id])
     project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))
     return render :not_acceptable unless project_owner
     return render :forbidden unless can?(:view_project_commits, project_owner)
