@@ -58,7 +58,6 @@ export const handleSaveToBackpack = async (
   backpackApi.saveBlobFile(
     newFileName,
     blobToSave,
-    'image/png',
     () => {
       console.log('Error!');
     },

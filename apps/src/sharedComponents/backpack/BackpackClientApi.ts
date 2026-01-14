@@ -220,7 +220,6 @@ export default class BackpackClientApi {
   async saveBlobFile(
     filename: string,
     contents: Blob,
-    mimeType: string,
     onError: ErrorCallback,
     onSuccess: () => void
   ) {
@@ -229,14 +228,7 @@ export default class BackpackClientApi {
       return;
     }
     try {
-      await HttpClient.put(
-        `${rootUrl(this.channelId)}/${filename}`,
-        contents,
-        undefined,
-        {
-          'Content-Type': mimeType,
-        }
-      );
+      await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
     } catch (error) {
       onError(error as Error);
       return;
