@@ -277,7 +277,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
-      tabMap[Tabs.Backpack] = <BackpackPanel {...backpackProps} />;
+      tabMap[Tabs.Backpack] = (
+        <BackpackPanel
+          {...backpackProps}
+          openPanelCallback={() => setCurrentTab(Tabs.Backpack)}
+        />
+      );
     }
 
     if (

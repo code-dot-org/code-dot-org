@@ -15,21 +15,26 @@ import moduleStyles from './backpack-panel.module.scss';
 
 const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
 
-const BackpackPanel: React.FC<BackpackProps> = ({
+interface BackpackPanelProps extends BackpackProps {
+  openPanelCallback: () => void;
+}
+
+type AlertConfig = {type: 'success' | 'danger'; message: string};
+
+const BackpackPanel: React.FC<BackpackPanelProps> = ({
   validateFileName,
   saveFileToProject,
   createNewProjectFile,
   findIdForFileName,
   saveToBackpackButton,
+  openPanelCallback,
 }) => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [loadError, setLoadError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const [alertList, setAlertList] = useState<
-    {type: 'success' | 'danger'; message: string}[]
-  >([]);
+  const [alertList, setAlertList] = useState<AlertConfig[]>([]);
   const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<string[]>([]);
 
   const loadBackpackFiles = useCallback(
@@ -73,6 +78,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
             message: `${filename} successfully saved to your Backpack!`,
           },
         ]);
+        openPanelCallback();
         // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
         setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
         setTimeout(() => {
@@ -87,7 +93,7 @@ const BackpackPanel: React.FC<BackpackProps> = ({
         backpackApi?.removeEventListener(listenerId);
       }
     };
-  }, [loadBackpackFiles, backpackApi]);
+  }, [loadBackpackFiles, backpackApi, openPanelCallback]);
 
   if (!backpackApi) {
     let titleMessage = 'Your Backpack is unavailable';
@@ -170,9 +176,10 @@ const BackpackPanel: React.FC<BackpackProps> = ({
             key={fileName}
             fileName={fileName}
             backpackApi={backpackApi}
-            addAlert={(type, message) =>
-              setAlertList(prevAlerts => [...prevAlerts, {type, message}])
-            }
+            addAlert={(type, message) => {
+              setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+              openPanelCallback();
+            }}
             validateFileName={validateFileName}
             saveFileToProject={saveFileToProject}
             createNewProjectFile={createNewProjectFile}

@@ -33,6 +33,8 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
 }
 
+const EXTENSIONS_WITH_PREVIEWS = ['PNG', 'JPG', 'JPEG'];
+
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   fileName,
@@ -64,6 +66,13 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const addButtonTooltipText = addButtonDisabled
     ? 'Cannot add files in read-only mode'
     : 'Add to project';
+
+  const filePreviewUrl = useMemo(() => {
+    if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
+      return backpackApi.getFileFetchUrl(fileName);
+    }
+    return undefined;
+  }, [backpackApi, fileExtension, fileName]);
 
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
@@ -139,14 +148,22 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 
   return (
     <div className={moduleStyles.backpackFileChip}>
-      <div className={moduleStyles.fileIconContainer}>
-        <FontAwesomeV6Icon
-          iconName={fileIcon.iconName}
-          iconStyle={fileIcon.iconStyle}
-          className={moduleStyles.fileIcon}
-          iconFamily={fileIcon.isBrand ? 'brands' : undefined}
+      {filePreviewUrl ? (
+        <img
+          src={filePreviewUrl}
+          className={moduleStyles.filePreview}
+          alt={fileName}
         />
-      </div>
+      ) : (
+        <div className={moduleStyles.fileIconContainer}>
+          <FontAwesomeV6Icon
+            iconName={fileIcon.iconName}
+            iconStyle={fileIcon.iconStyle}
+            className={moduleStyles.fileIcon}
+            iconFamily={fileIcon.isBrand ? 'brands' : undefined}
+          />
+        </div>
+      )}
       <div className={moduleStyles.fileInfo} title={fileName}>
         <BodyThreeText className={moduleStyles.infoText}>
           <StrongText>{fileName}</StrongText>
