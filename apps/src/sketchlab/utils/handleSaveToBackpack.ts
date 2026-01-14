@@ -22,6 +22,8 @@ export const handleSaveToBackpack = async (
     sketchName: string
   ): {type: 'error' | 'warning'; text: string} | undefined => {
     if (sketchName.length === 0) {
+      // The name is required by GenericPrompt, so the button will be disabled
+      // and we don't want to provide an error message.
       return undefined;
     }
     const containsValidCharacters = /^[\w-]+$/.test(sketchName);
