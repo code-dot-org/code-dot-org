@@ -40,7 +40,9 @@
   min-width: 0;
 }
 
-.infoText {
+// Duplicate class name to increase specificity, otherwise the typography component
+// may apply an unnecessary bottom margin.
+.infoText.infoText {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -56,4 +58,10 @@
   align-items: center;
   gap: 4px;
   align-self: stretch;
+}
+
+.filePreview {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--border-radius-br-s, 4px) 0 0 var(--border-radius-br-s, 4px);
 }
