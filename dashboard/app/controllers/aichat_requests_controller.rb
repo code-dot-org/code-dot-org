@@ -157,13 +157,6 @@ class AichatRequestsController < ApplicationController
     end
   end
 
-  private def get_project_id(context)
-    if context[:channelId]
-      _, project_id = get_storage_id_and_project_id(context[:channelId])
-      project_id
-    end
-  end
-
   private def get_polling_interval_ms
     DCDO.get("aichat_polling_interval_ms", DEFAULT_POLLING_INTERVAL_MS)
   end

@@ -1,4 +1,5 @@
 require 'cdo/aws/metrics'
+require_relative '../../../shared/middleware/helpers/storage_id'
 
 class OpenaiUserInputResponseTimeout < StandardError; end
 
@@ -224,9 +225,9 @@ module AichatAiHelper
     )
   end
 
-  def self.build_request_attributes(user_id, data)
-    context = data[:aichatContext] || {}
-    model_customizations = data[:modelParameters] || {}
+  def self.build_request_attributes(user_id, params)
+    context = params[:aichatContext] || {}
+    model_customizations = params[:modelParameters] || {}
 
     # Add client type to model parameters.
     model_customizations[:clientType] ||= context[:clientType]
@@ -234,11 +235,11 @@ module AichatAiHelper
     {
       user_id:              user_id,
       model_customizations: model_customizations,
-      stored_messages:      successful_stored_chat_messages(data[:storedMessages]),
-      new_message:          data[:newMessage] || {},
+      stored_messages:      successful_stored_chat_messages(params[:storedMessages]),
+      new_message:          params[:newMessage] || {},
       level_id:             context[:currentLevelId],
       script_id:            context[:scriptId],
-      project_id:           project_id_from_channel_id(context),
+      project_id:           project_id_from_context(context),
     }
   end
 
@@ -250,9 +251,10 @@ module AichatAiHelper
     end
   end
 
-  def self.project_id_from_channel_id(context)
-    return unless context[:channelId]
-    _, project_id = storage_decrypt_channel_id(context[:channelId])
-    project_id
+  def self.project_id_from_context(context)
+    if context[:channelId]
+      _, project_id = get_storage_id_and_project_id(context[:channelId])
+      project_id
+    end
   end
 end

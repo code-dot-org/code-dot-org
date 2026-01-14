@@ -203,7 +203,7 @@ class AichatAiHelperTest < ActionView::TestCase
       ]
     end
 
-    let(:data) do
+    let(:params) do
       {
         aichatContext: {
           clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB],
@@ -217,14 +217,14 @@ class AichatAiHelperTest < ActionView::TestCase
     end
 
     it 'builds attributes with filtered messages and context' do
-      attributes = AichatAiHelper.build_request_attributes(10, data)
+      attributes = AichatAiHelper.build_request_attributes(10, params)
 
       _(attributes[:user_id]).must_equal 10
       _(attributes[:model_customizations][:temperature]).must_equal 0.8
       _(attributes[:model_customizations][:clientType]).must_equal SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]
 
       _(attributes[:stored_messages]).must_equal [stored_messages.first]
-      _(attributes[:new_message]).must_equal data[:newMessage]
+      _(attributes[:new_message]).must_equal params[:newMessage]
       _(attributes[:level_id]).must_equal 7
       _(attributes[:script_id]).must_equal 3
       _(attributes[:project_id]).must_be_nil
@@ -245,23 +245,23 @@ class AichatAiHelperTest < ActionView::TestCase
     end
   end
 
-  describe '.project_id_from_channel_id' do
+  describe '.project_id_from_context' do
     it 'returns decrypted project id from channel id' do
-      AichatAiHelper.stubs(:storage_decrypt_channel_id).with('encrypted').returns([456, 789])
+      AichatAiHelper.stubs(:get_storage_id_and_project_id).with('encrypted').returns([456, 789])
 
-      _(AichatAiHelper.project_id_from_channel_id({channelId: 'encrypted'})).must_equal 789
+      _(AichatAiHelper.project_id_from_context({channelId: 'encrypted'})).must_equal 789
     end
 
     it 'returns nil if no channel id' do
-      AichatAiHelper.stubs(:storage_decrypt_channel_id).with('encrypted').returns([456, 789])
+      AichatAiHelper.stubs(:get_storage_id_and_project_id).with('encrypted').returns([456, 789])
 
-      _(AichatAiHelper.project_id_from_channel_id({})).must_be_nil
+      _(AichatAiHelper.project_id_from_context({})).must_be_nil
     end
 
     it 'raises an error when decryption fails' do
-      AichatAiHelper.stubs(:storage_decrypt_channel_id).raises(StandardError.new('boom'))
+      AichatAiHelper.stubs(:get_storage_id_and_project_id).raises(StandardError.new('boom'))
 
-      err = _(-> {AichatAiHelper.project_id_from_channel_id({channelId: 'encrypted'})}).must_raise StandardError
+      err = _(-> {AichatAiHelper.project_id_from_context({channelId: 'encrypted'})}).must_raise StandardError
       _(err.message).must_include "boom"
     end
   end
