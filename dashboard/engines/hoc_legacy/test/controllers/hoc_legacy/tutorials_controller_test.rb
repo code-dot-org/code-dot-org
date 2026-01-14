@@ -184,7 +184,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_current_tutorial_request
 
       must_respond_with :found
-      must_redirect_to congrats_url(i: session_id)
+      must_redirect_to congrats_path(i: session_id)
     end
 
     it 'disables caching' do
@@ -203,7 +203,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_current_tutorial_request
 
         must_respond_with :found
-        must_redirect_to congrats_url
+        must_redirect_to congrats_path
       end
     end
 
@@ -219,7 +219,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_current_tutorial_request
 
         must_respond_with :found
-        must_redirect_to congrats_url
+        must_redirect_to congrats_path
       end
     end
   end
@@ -249,7 +249,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_tutorial_request
 
       must_respond_with :found
-      must_redirect_to congrats_url(i: session_id, s: encoded_tutorial_code)
+      must_redirect_to congrats_path(i: session_id, s: encoded_tutorial_code)
     end
 
     it 'disables caching' do
@@ -268,7 +268,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_request
 
         must_respond_with :found
-        must_redirect_to congrats_url(s: encoded_tutorial_code)
+        must_redirect_to congrats_path(s: encoded_tutorial_code)
       end
     end
 
@@ -297,7 +297,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_request
 
         must_respond_with :found
-        must_redirect_to congrats_url
+        must_redirect_to congrats_path
       end
     end
   end
