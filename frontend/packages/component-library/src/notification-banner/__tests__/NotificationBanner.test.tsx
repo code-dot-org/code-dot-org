@@ -1,5 +1,6 @@
+import React from 'react';
 import {ThemeProvider} from '@mui/material';
-import {render, screen} from '@testing-library/react';
+import {render, screen, RenderOptions} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
@@ -7,8 +8,17 @@ import {CdoTheme} from '@/themes';
 
 import NotificationBanner from '../NotificationBanner';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={CdoTheme}>{component}</ThemeProvider>);
+const AllTheProviders: React.FC<{children: React.ReactNode}> = ({
+  children,
+}) => {
+  return <ThemeProvider theme={CdoTheme}>{children}</ThemeProvider>;
+};
+
+const renderWithTheme = (
+  ui: React.ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>,
+) => {
+  return render(ui, {wrapper: AllTheProviders, ...options});
 };
 
 describe('Design System - NotificationBanner', () => {
@@ -91,9 +101,9 @@ describe('Design System - NotificationBanner', () => {
     expect(banner).toBeInTheDocument();
 
     rerender(
-      <ThemeProvider theme={CdoTheme}>
+      <AllTheProviders>
         <NotificationBanner {...defaultProps} role="alert" />
-      </ThemeProvider>,
+      </AllTheProviders>,
     );
     banner = screen.getByRole('alert');
     expect(banner).toBeInTheDocument();
@@ -107,9 +117,9 @@ describe('Design System - NotificationBanner', () => {
     expect(banner).toHaveAttribute('aria-live', 'polite');
 
     rerender(
-      <ThemeProvider theme={CdoTheme}>
+      <AllTheProviders>
         <NotificationBanner {...defaultProps} role="alert" />
-      </ThemeProvider>,
+      </AllTheProviders>,
     );
     banner = screen.getByRole('alert');
     expect(banner).toHaveAttribute('aria-live', 'assertive');
@@ -144,9 +154,9 @@ describe('Design System - NotificationBanner', () => {
     expect(banner).toBeInTheDocument();
 
     rerender(
-      <ThemeProvider theme={CdoTheme}>
+      <AllTheProviders>
         <NotificationBanner {...defaultProps} style="filled" />
-      </ThemeProvider>,
+      </AllTheProviders>,
     );
     banner = screen.getByRole('status');
     expect(banner).toBeInTheDocument();
