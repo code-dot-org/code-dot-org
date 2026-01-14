@@ -304,12 +304,11 @@ a.button-tertiary {
   }
 
   &.button-white {
-    color: var(--text-neutral-inverse);
+    color: var(--neutral-base-white);
 
     &:hover,
     &.button-withForcedHover {
       background-color: var(--neutral-white-alpha-30);
-      color: var(--text-neutral-inverse);
     }
 
     &:active {

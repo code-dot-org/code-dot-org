@@ -47,15 +47,11 @@ class UnitGroup < ApplicationRecord
   scope(
     :with_associated_models, lambda do
       includes(
-        [
-          :plc_course,
-          :default_unit_group_units,
-          {
-            course_version: {
-              course_offering: :course_versions
-            }
-          }
-        ]
+        :plc_course,
+        :default_unit_group_units,
+        course_version: {
+          course_offering: :course_versions
+        }
       )
     end
   )

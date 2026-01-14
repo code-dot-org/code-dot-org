@@ -32,6 +32,7 @@ export const openNewFolderPrompt = async ({
     title: codebridgeI18n.newFolderPrompt(),
     validateInput: (folderName: string) =>
       validateFolderName({folderName, parentId, projectFolders}),
+    useModal: true,
   });
   if (results.type !== 'confirm') {
     return;

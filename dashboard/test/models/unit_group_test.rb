@@ -169,6 +169,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
+    unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
     unit_group.destroy
     course_version.destroy
 
@@ -213,6 +214,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
+    unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
     unit_group.destroy
     course_version.destroy
 
