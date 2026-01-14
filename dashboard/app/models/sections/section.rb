@@ -558,7 +558,6 @@ class Section < ApplicationRecord
           students: include_students ? unique_students.map(&:summarize) : nil,
           restrict_section: restrict_section,
           is_assigned_csa: assigned_csa?,
-          is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
           # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
