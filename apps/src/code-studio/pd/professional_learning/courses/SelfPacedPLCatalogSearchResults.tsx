@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SelfPacedPLCatalogCard from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogCard';
-import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMathcingSearchResultsFound';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
 import {CourseOffering} from '@cdo/apps/templates/courseOfferings/types';
 import NoMatchingCoursesImage from '@cdo/static/professional-learning/courses/no-curriculum-assigned-empty-state-illustration.png';
 
