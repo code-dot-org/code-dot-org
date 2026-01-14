@@ -7,6 +7,13 @@ import {ChatEvent, isChatMessage} from '../types';
 const BOTTOM_BUFFER = 16;
 const MESSAGE_AREA_VERTICAL_PADDING = 20;
 
+type StateRefType = {
+  spacerHeight: number;
+  prevEventsCount: number;
+  containerResizeInitialized: boolean;
+  messageResizeInitialized: boolean;
+};
+
 export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
   const [showScrollToBottom, setShowScrollToBottom] = useState(false);
 
@@ -15,9 +22,11 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
   const lastUserMessageRef = useRef<HTMLDivElement | null>(null);
   const activeMessageRef = useRef<HTMLDivElement | null>(null);
 
-  const stateRef = useRef({
+  const stateRef = useRef<StateRefType>({
     spacerHeight: 0,
     prevEventsCount: events.length,
+    containerResizeInitialized: false,
+    messageResizeInitialized: false,
   });
 
   const scrollToBottom = useCallback((behavior: ScrollBehavior = 'smooth') => {
@@ -67,19 +76,29 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
     }
   }, []);
 
-  const handleResize = useCallback(() => {
-    // on resize, only update the spacer if it already has height
-    if (stateRef.current.spacerHeight) {
-      updateSpacer();
-    }
+  const handleResize = useCallback(
+    (
+      stateRefKey: 'containerResizeInitialized' | 'messageResizeInitialized'
+    ) => {
+      // on resize, only update the spacer if both resize observers
+      // have been initialized
+      if (stateRef.current[stateRefKey]) {
+        updateSpacer();
+      } else {
+        stateRef.current[stateRefKey] = true;
+      }
 
-    setShowScrollToBottom(!isAtBottom());
-  }, [isAtBottom, updateSpacer]);
+      setShowScrollToBottom(!isAtBottom());
+    },
+    [isAtBottom, updateSpacer]
+  );
 
   // window/container resizing
   useEffect(() => {
     if (!containerRef.current) return;
-    const observer = new ResizeObserver(handleResize);
+    const observer = new ResizeObserver(() =>
+      handleResize('containerResizeInitialized')
+    );
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, [handleResize]);
@@ -89,7 +108,9 @@ export const useChatEventsScrollHandler = (events: ChatEvent[]) => {
     const currentMessage = activeMessageRef.current;
     if (!currentMessage) return;
 
-    const observer = new ResizeObserver(handleResize);
+    const observer = new ResizeObserver(() =>
+      handleResize('messageResizeInitialized')
+    );
 
     observer.observe(currentMessage);
     return () => observer.disconnect();
