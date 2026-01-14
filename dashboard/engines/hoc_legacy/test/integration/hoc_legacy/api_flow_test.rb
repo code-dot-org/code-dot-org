@@ -8,7 +8,6 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   self.vcr_cassette_library_dir = HocLegacy::Engine.root.join('test/vcr_cassettes')
 
   let(:tutorial_code) {'mc'}
-  let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
   let(:student_name) {'Student Name'}
 
   around do |test|
@@ -40,7 +39,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).must_equal session_id
 
       get "/api/hour/finish/#{tutorial_code}"
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
+      must_redirect_to congrats_url(i: session_id, s: Base64.urlsafe_encode64(tutorial_code))
       follow_redirect!
       must_respond_with :success
 
@@ -85,7 +84,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       _(cookies[HocLegacy::HOC_COOKIE_KEY]).must_equal session_id
 
       get '/api/hour/finish'
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}"
+      must_redirect_to congrats_url(i: session_id)
       follow_redirect!
       must_respond_with :success
 
@@ -133,7 +132,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       _(response.headers["Content-Disposition"]).must_equal %q[inline; filename="1x1.png"; filename*=UTF-8''1x1.png]
 
       get "/api/hour/finish/#{tutorial_code}"
-      must_redirect_to 'https://test-studio.code.org/congrats'
+      must_redirect_to congrats_url
       follow_redirect!
       must_respond_with :success
     end
@@ -150,7 +149,7 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
       must_respond_with :success
 
       get '/api/hour/finish'
-      must_redirect_to 'https://test-studio.code.org/congrats'
+      must_redirect_to congrats_url
       follow_redirect!
       must_respond_with :success
     end

@@ -9,7 +9,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}"}
 
     let(:tutorial_code) {'tutorial_code'}
-    let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
+    let(:tutorial_url) {CDO.studio_url('/expected/tutorial_url', CDO.default_scheme)}
     let(:tutorial_primary_ref) {OpenStruct.new(fields: {primary_target: tutorial_url})}
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: tutorial_primary_ref)}
 
@@ -184,7 +184,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_current_tutorial_request
 
       must_respond_with :found
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}"
+      must_redirect_to congrats_url(i: session_id)
     end
 
     it 'disables caching' do
@@ -203,7 +203,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_current_tutorial_request
 
         must_respond_with :found
-        must_redirect_to 'https://test-studio.code.org/congrats'
+        must_redirect_to congrats_url
       end
     end
 
@@ -219,7 +219,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_current_tutorial_request
 
         must_respond_with :found
-        must_redirect_to 'https://test-studio.code.org/congrats'
+        must_redirect_to congrats_url
       end
     end
   end
@@ -228,7 +228,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     subject(:finish_tutorial_request) {get "/api/hour/finish/#{tutorial_code}"}
 
     let(:tutorial_code) {'tutorial_code'}
-    let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial_code))}
+    let(:encoded_tutorial_code) {Base64.urlsafe_encode64(tutorial_code)}
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code)}
 
     let(:session_id) {Faker::Internet.unique.uuid}
@@ -249,7 +249,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       finish_tutorial_request
 
       must_respond_with :found
-      must_redirect_to "https://test-studio.code.org/congrats?i=#{session_id}&s=#{encoded_tutorial_code}"
+      must_redirect_to congrats_url(i: session_id, s: encoded_tutorial_code)
     end
 
     it 'disables caching' do
@@ -268,7 +268,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_request
 
         must_respond_with :found
-        must_redirect_to "https://test-studio.code.org/congrats?s=#{encoded_tutorial_code}"
+        must_redirect_to congrats_url(s: encoded_tutorial_code)
       end
     end
 
@@ -297,7 +297,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
         finish_tutorial_request
 
         must_respond_with :found
-        must_redirect_to "https://test-studio.code.org/congrats"
+        must_redirect_to congrats_url
       end
     end
   end
