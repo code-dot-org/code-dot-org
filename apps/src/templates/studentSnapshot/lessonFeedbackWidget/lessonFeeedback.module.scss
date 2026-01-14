@@ -4,7 +4,7 @@
 
 .topContainer {
   display: flex;
-  width: 638px;
+  width: 100%;
   padding: 8px;
   flex-direction: column;
   align-items: flex-start;
@@ -26,7 +26,6 @@ label.typographyLabelTwo {
 
 .inputWrapper {
   position: relative;
-  width: 100%;
   background-color: white;
   border-radius: 4px;
   padding: 8px 10px 10px 10px;
@@ -65,6 +64,17 @@ label.typographyLabelTwo {
 
 .popUpContainer {
   padding: 8px 16px;
+}
+
+.recommendedActionContainer {
+  width: 100%;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 100%;
 }
 
 .fileTab {

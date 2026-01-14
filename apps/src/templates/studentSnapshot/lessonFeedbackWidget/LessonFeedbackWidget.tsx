@@ -17,6 +17,18 @@ import UrlTab from './UrlTab';
 
 import styles from './lessonFeeedback.module.scss';
 
+interface FeedbackData {
+  feedbackText: string;
+  recommendedActions: Array<{
+    actionText: string;
+    resourceName?: string;
+    resourceLink?: string;
+  }>;
+  // Future fields:
+  // participationScore?: number;
+  // sticker?: string;
+}
+
 interface LessonFeedbackWidgetProps {
   lessonId: number | null;
   studentId: number;
@@ -41,6 +53,19 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   const [tempResourceLink, setTempResourceLink] = useState('');
   const [resourceName, setResourceName] = useState('');
   const [tempResourceName, setTempResourceName] = useState('');
+  const [recommendedActionText, setRecommendedActionText] = useState('');
+  const [feedbackText, setFeedbackText] = useState('');
+  const [isFeedbackEdited, setIsFeedbackEdited] = useState(false);
+  const [feedbackData, setFeedbackData] = useState<FeedbackData>({
+    feedbackText: '',
+    recommendedActions: [
+      {
+        actionText: '',
+        resourceName: undefined,
+        resourceLink: undefined,
+      },
+    ],
+  });
 
   /**
 
@@ -77,6 +102,11 @@ recommendedActions: [. <= Should this be it's own data type
     }
   }, [lessonId, teacherHasEnabledAi]);
 
+  const deleteResourceLink = () => {
+    setResourceLink('');
+    setResourceName('');
+  };
+
   // TODO: Finish UI implementation
   if (error) {
     widgetContent = <BodyThreeText>{error}</BodyThreeText>;
@@ -93,13 +123,14 @@ recommendedActions: [. <= Should this be it's own data type
         <div>
           <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
           <FeedbackTextbox
-            feedbackText="PLACEHOLDER - This is where the feedback text will go."
+            feedbackText={feedbackText}
             onFeedbackChange={newText => {
-              console.log('Feedback changed:', newText);
+              setFeedbackText(newText);
+              setIsFeedbackEdited(true);
             }}
           />
         </div>
-        <div>
+        <div className={styles.recommendedActionContainer}>
           <label className={styles.typographyLabelTwo}>
             {i18n.lessonFeedbackRecommendedAction()}
           </label>
@@ -111,8 +142,9 @@ recommendedActions: [. <= Should this be it's own data type
               className={styles.inputBox}
               type="text"
               placeholder={'Write a message'}
+              value={recommendedActionText}
               onChange={e => {
-                console.log('Recommended action changed:', e.target.value);
+                setRecommendedActionText(e.target.value);
               }}
             />
             <Button
@@ -120,6 +152,7 @@ recommendedActions: [. <= Should this be it's own data type
               size="xs"
               type="secondary"
               color="gray"
+              disabled={!!resourceLink}
               iconLeft={{
                 iconStyle: 'solid',
                 iconName: 'plus',
@@ -130,10 +163,7 @@ recommendedActions: [. <= Should this be it's own data type
               }}
             />
             {resourceLink && resourceName && (
-              <UrlTab
-                urlName={resourceName}
-                onClick={() => console.log('URL clicked')}
-              />
+              <UrlTab urlName={resourceName} onClick={deleteResourceLink} />
             )}
           </div>
           {showAddResourcePopup && (
@@ -178,6 +208,49 @@ recommendedActions: [. <= Should this be it's own data type
               </div>
             </AccessibleDialog>
           )}
+        </div>
+        <div className={styles.actionButtons}>
+          <Button
+            text={'Save as draft'}
+            type="secondary"
+            size="xs"
+            onClick={() => {
+              const updatedFeedbackData: FeedbackData = {
+                feedbackText,
+                recommendedActions: [
+                  {
+                    actionText: recommendedActionText,
+                    resourceName: resourceName || undefined,
+                    resourceLink: resourceLink || undefined,
+                  },
+                ],
+              };
+              setFeedbackData(updatedFeedbackData);
+              console.log('Save as draft clicked', updatedFeedbackData);
+            }}
+          />
+          <Button
+            text="Send feedback to student"
+            size="xs"
+            type="primary"
+            onClick={() => {
+              const updatedFeedbackData: FeedbackData = {
+                feedbackText,
+                recommendedActions: [
+                  {
+                    actionText: recommendedActionText,
+                    resourceName: resourceName || undefined,
+                    resourceLink: resourceLink || undefined,
+                  },
+                ],
+              };
+              setFeedbackData(updatedFeedbackData);
+              console.log(
+                'Send feedback to student clicked',
+                updatedFeedbackData
+              );
+            }}
+          />
         </div>
       </div>
     );
