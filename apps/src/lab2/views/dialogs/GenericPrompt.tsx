@@ -124,7 +124,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     () => {
       if (closeType === 'confirm') {
         const validationError = validateInput(prompt);
-        if (validationError && validationError.type === 'error') {
+        if (validationError) {
           setValidationMessage(validationError);
           return;
         }
