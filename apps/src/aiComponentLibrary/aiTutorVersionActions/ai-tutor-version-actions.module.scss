@@ -8,6 +8,7 @@
 }
 
 .fileList {
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
@@ -32,6 +33,7 @@
 }
 
 .saveAiTutorVersionDescriptionInput {
+  padding-bottom: 0.5rem;
   width: 100%;
   box-sizing: border-box;
 }

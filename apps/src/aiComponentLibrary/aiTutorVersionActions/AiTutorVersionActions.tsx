@@ -23,7 +23,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   files,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
-  const [inAcceptMode, setInAcceptMode] = useState(false);
+  const [isAcceptMode, setIsAcceptMode] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
   const dispatch = useAppDispatch();
@@ -54,7 +54,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
           <AiTutorVersionFileChip key={file.id} file={file} />
         ))}
       </div>
-      {!inAcceptMode && (
+      {!isAcceptMode && (
         <div className={moduleStyles.buttonContainer}>
           <Button
             text="Reject"
@@ -79,12 +79,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
               iconName: 'check',
               title: 'Accept',
             }}
-            onClick={() => setInAcceptMode(true)}
+            onClick={() => setIsAcceptMode(true)}
             className={moduleStyles.actionButton}
           />
         </div>
       )}
-      {inAcceptMode && (
+      {isAcceptMode && (
         <div className={moduleStyles.saveAiTutorVersionDescription}>
           <div className={moduleStyles.saveAiTutorVersionDescriptionInput}>
             <textarea
@@ -99,8 +99,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
           <Button
             id="save-ai-tutor-version-button"
             size="s"
-            type="secondary"
-            color="gray"
+            type="primary"
             iconLeft={{
               iconName: 'save',
               iconStyle: 'solid',
