@@ -1,19 +1,19 @@
-import React from 'react';
 import {ThemeProvider} from '@mui/material';
 import {render, screen, RenderOptions} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import {ReactElement, ReactNode} from 'react';
 
 import {CdoTheme} from '@/themes';
 
 import NotificationBanner from '../NotificationBanner';
 
-const AllTheProviders = ({children}: {children: React.ReactNode}) => {
+const AllTheProviders = ({children}: {children: ReactNode}) => {
   return <ThemeProvider theme={CdoTheme}>{children}</ThemeProvider>;
 };
 
 const renderWithTheme = (
-  ui: React.ReactElement,
+  ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>,
 ) => {
   return render(ui, {wrapper: AllTheProviders, ...options});
