@@ -45,6 +45,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    config,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -59,6 +60,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   const hasLoadedEnvironment = useAppSelector(
     state => state.lab2System.loadedCodeEnvironment
   );
+  console.log({supportedFileTypes: config.supportedFileTypes});
 
   const {appName, id: levelId} = levelProperties;
   const settings = useCodebridgeSettings();
@@ -84,8 +86,14 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             projectFiles[id].name === fileName &&
             projectFiles[id].folderId === DEFAULT_FOLDER_ID
         ),
+      supportedFileTypes: config.supportedFileTypes,
     };
-  }, [source?.files, levelProperties.validationFile, dispatch]);
+  }, [
+    source?.files,
+    config.supportedFileTypes,
+    levelProperties.validationFile,
+    dispatch,
+  ]);
 
   const handleValidate = () => {
     if (onRun) {

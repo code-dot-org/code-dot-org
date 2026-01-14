@@ -28,6 +28,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   findIdForFileName,
   saveToBackpackButton,
   openPanelCallback,
+  supportedFileTypes,
 }) => {
   const backpackApi = useBackpackAPIContext();
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
@@ -188,6 +189,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             createNewProjectFile={createNewProjectFile}
             findIdForFileName={findIdForFileName}
             isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
+            supportedFileTypes={supportedFileTypes}
           />
         ))}
       </div>

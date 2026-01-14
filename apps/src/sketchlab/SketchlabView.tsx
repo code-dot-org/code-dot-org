@@ -281,6 +281,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
                   ),
                 text: 'Save Sketch to Backpack',
               },
+              supportedFileTypes: [],
             }}
           />
         </div>

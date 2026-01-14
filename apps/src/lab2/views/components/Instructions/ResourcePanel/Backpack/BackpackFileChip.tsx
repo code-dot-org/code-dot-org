@@ -33,7 +33,7 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
 }
 
-const EXTENSIONS_WITH_PREVIEWS = ['PNG', 'JPG', 'JPEG'];
+const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -45,8 +45,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   createNewProjectFile,
   findIdForFileName,
   isRecentlyAdded,
+  supportedFileTypes,
 }) => {
-  const fileExtension = fileName.split('.').pop()?.toUpperCase();
+  const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -62,10 +63,19 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
   // If we are in read-only mode, disable the add button.
-  const addButtonDisabled = useAppSelector(isReadOnlyWorkspace);
-  const addButtonTooltipText = addButtonDisabled
-    ? 'Cannot add files in read-only mode'
-    : 'Add to project';
+  const inReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isFileSupported =
+    fileExtension && supportedFileTypes.includes(fileExtension);
+  const addButtonDisabled = inReadOnly || !isFileSupported;
+  const addButtonTooltipText = useMemo(() => {
+    if (inReadOnly) {
+      return 'Cannot add files in read-only mode';
+    } else if (!isFileSupported) {
+      return 'File type not supported in this project';
+    } else {
+      return 'Add to project';
+    }
+  }, [inReadOnly, isFileSupported]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
@@ -169,7 +179,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           <StrongText>{fileName}</StrongText>
         </BodyThreeText>
         <BodyFourText className={moduleStyles.infoText}>
-          {fileExtension}
+          {fileExtension?.toUpperCase()}
         </BodyFourText>
       </div>
       <div className={moduleStyles.fileActions}>

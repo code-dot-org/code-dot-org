@@ -85,6 +85,7 @@ export interface BackpackProps {
     text: string;
     onClick: (fileList: string[]) => Promise<void>;
   };
+  supportedFileTypes: string[];
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
