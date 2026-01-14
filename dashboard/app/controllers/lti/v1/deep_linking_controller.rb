@@ -16,7 +16,7 @@ module Lti
         jwt = Services::Lti::DeepLinkingResponseBuilder.call(
           request_issuer: session[:lti_issuer],
           client_id: session[:lti_client_id],
-          deployment_id: session[:lti_deployment_id],
+          deployment_id: session[:external_lti_deployment_id],
           deep_linking_settings_data: deep_linking_settings['data'],
           content_items:,
         )

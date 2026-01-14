@@ -187,8 +187,8 @@ class RegistrationsController < Devise::RegistrationsController
       PartialRegistration.delete session
       if Policies::Lti.lti? current_user
         current_user.verify_teacher! if Policies::Lti.unverified_teacher?(current_user)
-        if session[:internal_lti_deployment_id] && current_user.lti_user_identities.any?
-          deployment = LtiDeployment.find_by(id: session[:internal_lti_deployment_id])
+        if session[:lti_deployment_id] && current_user.lti_user_identities.any?
+          deployment = LtiDeployment.find_by(id: session[:lti_deployment_id])
           lti_identity = current_user.lti_user_identities.find_by(lti_integration_id: deployment.lti_integration_id)
           if deployment && lti_identity && !deployment.lti_user_identities.exists?(lti_identity.id)
             deployment.lti_user_identities << lti_identity

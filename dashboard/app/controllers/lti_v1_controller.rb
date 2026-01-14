@@ -163,7 +163,7 @@ class LtiV1Controller < ApplicationController
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
 
       # Store deployment ID and issuer in session for later use
-      session[:lti_deployment_id] = deployment_id
+      session[:external_lti_deployment_id] = deployment_id
       session[:lti_issuer] = extracted_issuer_id
       session[:lti_client_id] = extracted_client_id
 
@@ -233,7 +233,7 @@ class LtiV1Controller < ApplicationController
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
         # Store the deployment ID in the session, so we can check if it's a restricted deployment later
-        session[:internal_lti_deployment_id] = deployment.id
+        session[:lti_deployment_id] = deployment.id
         publish_linking_page_visit(user, integration[:platform_name])
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
