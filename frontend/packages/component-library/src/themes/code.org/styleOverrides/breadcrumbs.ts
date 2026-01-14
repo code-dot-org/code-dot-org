@@ -47,12 +47,9 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
             width: '13px',
             lineHeight: 1.25,
           },
-          // 'i': {
-          //   padding: '4px 6px',
-          //   fontSize: '10px',
-          //   width: '13px',
-          //   lineHeight: '1.25',
-          // },
+          i: {
+            fontSize: '0.625rem', // 10px
+          },
         },
         // Size: s (label3)
         '&[data-size="s"], &.breadcrumbs-s': {
@@ -63,12 +60,9 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
             width: '14px',
             lineHeight: 1.25,
           },
-          // 'i': {
-          //   padding: '5px 6px',
-          //   fontSize: '11px',
-          //   width: '14px',
-          //   lineHeight: '1.25',
-          // },
+          i: {
+            fontSize: '0.75rem', // 12px
+          },
         },
         // Size: l (label1)
         '&[data-size="l"], &.breadcrumbs-l': {
@@ -79,12 +73,9 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
             width: '16px',
             lineHeight: 1.25,
           },
-          // 'i': {
-          //   padding: '6px',
-          //   fontSize: '13px',
-          //   width: '16px',
-          //   lineHeight: '1.25',
-          // }
+          i: {
+            fontSize: '1rem', // 16px
+          },
         },
         // Style the links within breadcrumbs
         // MUI uses Link components for breadcrumb items
@@ -102,11 +93,6 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
           fontSize: 'inherit',
           lineHeight: 'inherit',
           gap: '0.375rem',
-
-          i: {
-            color: 'var(--text-neutral-tertiary)',
-          },
-
           // Remove default Link underline
           '&:hover, &:active, &:visited': {
             textDecoration: 'none',
@@ -124,15 +110,14 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
             outlineOffset: '2px',
           },
         },
+        i: {
+          color: 'inherit',
+          fontSize: '0.875rem', // Default size m: 14px
+        },
         // Hover, active, visited states for non-last breadcrumbs
         '& .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:hover, & .MuiBreadcrumbs-li:not(:last-child) > a:hover, & .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:active, & .MuiBreadcrumbs-li:not(:last-child) > a:active, & .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:visited, & .MuiBreadcrumbs-li:not(:last-child) > a:visited':
           {
             color: 'var(--text-neutral-secondary)',
-          },
-        // Home icon color inheritance in hover states
-        '& .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:hover .homeIcon, & .MuiBreadcrumbs-li:not(:last-child) > a:hover .homeIcon, & .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:active .homeIcon, & .MuiBreadcrumbs-li:not(:last-child) > a:active .homeIcon, & .MuiBreadcrumbs-li:not(:last-child) .MuiLink-root:visited .homeIcon, & .MuiBreadcrumbs-li:not(:last-child) > a:visited .homeIcon':
-          {
-            color: 'inherit',
           },
         // Last breadcrumb link styling (when not using aria-current)
         '& .MuiBreadcrumbs-li:last-child .MuiLink-root, & .MuiBreadcrumbs-li:last-child > a':
