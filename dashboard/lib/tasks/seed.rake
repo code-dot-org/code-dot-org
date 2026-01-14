@@ -155,6 +155,7 @@ namespace :seed do
     oceans
     sports
     jigsaw
+    mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
