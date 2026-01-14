@@ -21,22 +21,22 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       "Sketchlab" => "Sketch Lab: students interact with a whiteboarding tool to create visual designs",
     }.freeze
 
-  def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id)
+  def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     intro = "This is where the insight system prompt intro goes. Weight the assessment level more heavily.\n"
-    general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
+    general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
     "#{intro}\n#{general_prompt}"
   end
 
-  def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id)
+  def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     intro = "This is where the feedback system prompt intro goes."
-    general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
+    general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
     "#{intro}
     #{general_prompt}"
   end
 
-  def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id)
+  def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     unit = Unit.find(unit_id)
     unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description) : nil
 
@@ -58,7 +58,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     # - Videos (skip)
     # - teacher feedback - not in AIF, skip
     assessment_level = lesson.levels.where(type: 'Pythonlab').last || nil
-    level_info = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id) else get_brief_level_prompt_info(level, student_id, unit.id) end}
+    level_info = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
     "Use the following lesson info to generate your summary:\n#{lesson_info}\n
 Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
@@ -66,7 +66,7 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
 
   # Get an abridged version of level info for prompt
   # This is used for non-assessment levels
-  def self.get_brief_level_prompt_info(level, student_id, unit_id)
+  def self.get_brief_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
     return unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
@@ -80,25 +80,28 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     level_info = if has_questions then get_cfu_level_info(level, student_id, unit_id) else get_code_level_info(level, student_id, unit_id) end
 
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete):\n  [{\n  #{sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id)}.join("\n  },{\n  ")}}]" : ""
+    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete):\n  [{\n  #{sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join("\n  },{\n  ")}}]" : ""
     rubric_summary = level.rubrics.present? ? "\n  Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
     time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n    Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
+
+    section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
 
     "#{basic_info}
     #{level_info}
     Was Submitted (only applicable for coding levels): #{user_level&.submitted}
     Passing status: #{user_level&.passing? || false}
     Perfect status: #{user_level&.perfect? || false}
-    Finished status: #{user_level&.finished? || false}#{time_spent}"
+    Finished status: #{user_level&.finished? || false}#{time_spent}
+#{section_stats}"
   end
 
   # Get a detailed version of level info for prompt
   # This is used for assessment levels
-  def self.get_full_level_prompt_info(level, student_id, unit_id)
+  def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
     return unless level
 
     sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id)}.join(", ")}]" : ""
+    sublevel_info = sublevels&.any? ? "\n  Sublevels (A student should pick at least one to complete): [#{sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)}.join(", ")}]" : ""
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
 
@@ -108,8 +111,10 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     Level Type: #{LEVEL_TYPE_PROMPTS[level.type] || level.type || ''}
     Number of attempts: #{user_level&.attempts || 0}"
 
+    section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
+
     # return only basic info if user hasn't attempted the level
-    return "#{basic_info}\n    Attempted: false" if user_level.nil? && sublevels.nil?
+    return "#{basic_info}\n    Attempted: false\n#{section_stats}" if user_level.nil? && sublevels.nil?
 
     rubric_summary = level.rubrics.present? ? "\n    Rubrics: #{{learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)}}\n" : ''
     time_spent = if user_level&.time_spent && (user_level&.time_spent&.> 0) then "\n  Time spent: #{user_level&.time_spent} seconds#{rubric_summary}#{sublevel_info}" else "" end
@@ -118,7 +123,8 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
     Was Submitted (only applicable for coding levels): #{user_level&.submitted}
     Passing status: #{user_level&.passing? || false}
     Perfect status: #{user_level&.perfect? || false}
-    Finished status: #{user_level&.finished? || false}#{time_spent}"
+    Finished status: #{user_level&.finished? || false}#{time_spent}
+#{section_stats}"
   end
 
   def self.get_cfu_level_info(level, student_id, unit_id)
@@ -135,6 +141,45 @@ Levels: [{\n  #{level_info.join("\n},{\n  ")}\n}]"
 
     raw_data = user_level.level_source.data
     format_response_by_level_type(raw_data, level)
+  end
+
+  def self.get_section_stats_for_level(level, section_id, teacher_id, unit_id)
+    section = Section.find_by(id: section_id)
+    return "" unless section
+
+    students = section.followers
+
+    user_levels = UserLevel.where(
+      user_id: students.pluck(:student_user_id),
+      level_id: level.id,
+      script_id: unit_id
+    )
+
+    time_spent_values = user_levels.map(&:time_spent).compact.select {|t| t > 0}
+
+    median_time_spent = if time_spent_values.any?
+                          sorted_times = time_spent_values.sort
+                          len = sorted_times.length
+                          if len.odd?
+                            sorted_times[len / 2]
+                          else
+                            (sorted_times[(len / 2) - 1] + sorted_times[len / 2]) / 2.0
+                          end
+                        else
+                          nil
+                        end
+
+    average_time_spent = time_spent_values.any? ? time_spent_values.sum.to_f / time_spent_values.length : nil
+
+    total_students = students.count
+    completed_students = user_levels.count(&:passing?)
+    completion_percentage = total_students > 0 ? (completed_students.to_f / total_students * 100).round(1) : 0
+
+    "    Section Stats:
+      Total students in section: #{total_students}
+      Percentage of students who completed the level: #{completion_percentage}%
+      Section median time spent: #{median_time_spent ? "#{median_time_spent} seconds" : "No data"}
+      Section average time spent: #{average_time_spent ? "#{average_time_spent.round(1)} seconds" : "No data"}"
   end
 
   def self.format_response_by_level_type(raw_data, level)
