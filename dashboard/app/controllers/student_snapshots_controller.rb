@@ -170,7 +170,7 @@ class StudentSnapshotsController < ApplicationController
         level_result[:student_result] = student_answer
         level_result[:status] = ""
       when Multi
-        answer_indexes = Unit.cache_find_level(level.id).correct_answer_indexes_array
+        answer_indexes = level.correct_answer_indexes_array
         student_result = student_answer.split(",").map(&:to_i).sort
         level_result[:student_result] = student_result
 
