@@ -62,10 +62,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
-  // If we are in read-only mode, disable the add button.
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported =
     fileExtension && supportedFileTypes.includes(fileExtension);
+  // If we are in read-only mode or the file type is unsupported, disable the add button.
   const addButtonDisabled = inReadOnly || !isFileSupported;
   const addButtonTooltipText = useMemo(() => {
     if (inReadOnly) {
