@@ -1890,15 +1890,7 @@ class Unit < ApplicationRecord
 
   # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
-    levels&.any?(&:ai_tutor_available?)
-  end
-
-  def has_ai_chat_tools?
-    levels&.any?(&:has_ai_chat_tools?)
-  end
-
-  def requires_ai_chat_tools?
-    levels&.any?(&:requires_ai_chat_tools?)
+    levels.merge(Level.ai_tutor_available).exists?
   end
 
   private def teacher_feedback_enabled?

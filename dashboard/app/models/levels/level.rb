@@ -519,19 +519,14 @@ class Level < ApplicationRecord
     unplugged? || properties["display_as_unplugged"] == "true"
   end
 
-  def ai_tutor_available?
-    properties["ai_tutor_available"] == "true" || properties["ai_tutor_available"] == true
-  end
+  scope :ai_tutor_available, (lambda do
+    where(
+      "levels.properties -> '$.ai_tutor_available' = true OR levels.properties -> '$.ai_tutor_available' = 'true'"
+    )
+  end)
 
-  # true if the level can't reasonably function without AI chat turned on.
-  # overridden in some subclasses.
-  def requires_ai_chat_tools?
-    false
-  end
-
-  def has_ai_chat_tools?
-    ai_tutor_available? || requires_ai_chat_tools?
-  end
+  # scope for levels that require ai chat tools to reasonably function.
+  scope :requires_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
 
   def summarize
     {

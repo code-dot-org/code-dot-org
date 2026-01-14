@@ -1132,4 +1132,28 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal single_unit_course.default_units.first, single_unit_course.first_unit
     assert_equal multi_unit_course.default_units.first, multi_unit_course.first_unit
   end
+
+  test 'has_ai_chat_tools? returns true for ai tutor available levels' do
+    unit = create(:unit, :with_levels, levels_count: 1)
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    refute unit_group.has_ai_chat_tools?
+    refute unit_group.requires_ai_chat_tools?
+
+    unit.levels.first.update!(ai_tutor_available: true)
+
+    assert unit_group.has_ai_chat_tools?
+    refute unit_group.requires_ai_chat_tools?
+  end
+
+  test 'requires_ai_chat_tools? returns true for essential ai chat level types' do
+    unit = create(:unit, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    activity_section = lesson.activity_sections.first
+    create(:script_level, levels: [create(:aichat)], activity_section: activity_section)
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    assert unit_group.has_ai_chat_tools?
+    assert unit_group.requires_ai_chat_tools?
+  end
 end
