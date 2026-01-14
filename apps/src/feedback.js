@@ -1,6 +1,7 @@
 // Globals used in this file:
 //   Blockly
 
+import Button from '@code-dot-org/component-library/button';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
@@ -9,6 +10,7 @@ import {Provider} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -1145,31 +1147,37 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
+  const onClose = () => {
+    ReactDOM.unmountComponentAtNode(codeDiv);
+    codeDiv.remove();
+  };
+
   ReactDOM.render(
-    <div>
-      <GeneratedCode
-        message={generatedCodeProperties.message}
-        code={generatedCodeProperties.code}
-      />
-      <DialogButtons ok={true} />
-    </div>,
+    <AccessibleDialog
+      id="show-code-dialog"
+      onClose={onClose}
+      initialFocus="#ok-button"
+      closeOnClickBackdrop={true}
+    >
+      <div>
+        <GeneratedCode
+          message={generatedCodeProperties.message}
+          code={generatedCodeProperties.code}
+        />
+        <div style={{textAlign: 'center', marginTop: '20px'}}>
+          <Button
+            id="ok-button"
+            text="OK"
+            color="purple" // Use the appropriate color from `buttonColors`
+            onClick={onClose}
+          />
+        </div>
+      </div>
+    </AccessibleDialog>,
     codeDiv
   );
 
-  var dialog = this.createModalDialog({
-    contentDiv: codeDiv,
-    icon: this.studioApp_.icon,
-    defaultBtnSelector: '#ok-button',
-  });
-
-  var okayButton = codeDiv.querySelector('#ok-button');
-  if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function () {
-      dialog.hide();
-    });
-  }
-
-  dialog.show();
+  document.body.appendChild(codeDiv);
 };
 
 /**
