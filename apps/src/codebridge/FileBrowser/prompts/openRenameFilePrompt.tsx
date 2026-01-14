@@ -1,6 +1,6 @@
 import {RenameFileFunction} from '@codebridge/codebridgeContext/types';
 import {ProjectFile, FileId} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {validateFileNameForModal} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -46,7 +46,7 @@ export const openRenameFilePrompt = async ({
         return;
       }
 
-      return validateFileName({
+      return validateFileNameForModal({
         fileName: newName,
         folderId: file.folderId,
         projectFiles,
