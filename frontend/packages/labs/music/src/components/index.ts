@@ -13,3 +13,5 @@ export {default as ChordPanel} from './ChordPanel';
 export type {ChordPanelProps} from './ChordPanel';
 export {default as Timeline, TimelineElement} from './Timeline';
 export type {TimelineProps, TimelineElementProps} from './Timeline';
+export * from './HeaderButtons';
+export {default as HeaderButtons} from './HeaderButtons';

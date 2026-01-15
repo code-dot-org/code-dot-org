@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  min-width: 190px;
+  max-width: calc(100vw - 270px);
+  margin-top: 1px;
+  justify-content: end;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.currentPack {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-inline-end: 0.5rem;
+
+  img {
+    height: 21px;
+    border-radius: 0.125rem;
+  }
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+  }
+}
+
+.startOverButton {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.125rem;
+  height: 26.25px;
+  padding-block: 0.1875rem;
+  padding-inline: 0.5rem;
+  border: var(--lab-border-default);
+  border-color: var(--borders-neutral-strong);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+
+  &WithPack {
+    padding-inline: 0.125rem 0.5rem;
+  }
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  // Add focus-visible styles
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+
+  p {
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 0.8125rem;
+  }
+}

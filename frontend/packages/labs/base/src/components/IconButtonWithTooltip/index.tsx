@@ -26,7 +26,7 @@ export interface IconButtonWithTooltipProps {
   hideTooltipTail?: TooltipProps['hideTail'];
   disabled?: boolean;
   onClick?: () => void;
-  containerRef?: RefObject<HTMLDivElement>;
+  containerRef?: RefObject<HTMLDivElement | null>;
   className?: string;
   theme?: Theme;
   href?: LinkButtonProps['href'];

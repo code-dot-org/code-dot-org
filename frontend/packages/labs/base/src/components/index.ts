@@ -17,3 +17,5 @@ export * from './GuideInstructions';
 export {default as GuideInstructions} from './GuideInstructions';
 export * from './EnhancedMarkdown';
 export {default as EnhancedMarkdown} from './EnhancedMarkdown';
+export * from './IconButtonWithTooltip';
+export {default as IconButtonWithTooltip} from './IconButtonWithTooltip';
