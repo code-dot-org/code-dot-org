@@ -26,7 +26,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
-    "#{intro}\n\n#{general_prompt}"
+    "#{intro}\n#{general_prompt}"
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
@@ -39,14 +39,14 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
   def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     unit = Unit.find(unit_id)
-    unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description) : nil
+    unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description)&.gsub(/\n/, '. ')&.strip : nil
 
     lesson = Lesson.find(lesson_id)
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
     lesson_info = {
       "Lesson Name" => lesson.name,
-      "Lesson Overview" => lesson.render_property(:overview),
+      "Lesson Overview" => lesson.render_property(:overview)&.gsub(/\n/, '. ')&.strip,
       "Learning Objectives" => objectives,
       "Standards" => lesson.standards.map(&:summarize_for_lesson_show).to_json,
       "Unit Name" => unit.title_for_display,
@@ -54,7 +54,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     }
 
     levels = lesson.levels.order(:position)
-    assessment_level = lesson.levels.where(type: 'Pythonlab').last || nil
+    assessment_level = lesson.levels.where(type: 'Pythonlab').last
     level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
     lesson_info_str = lesson_info.map {|key, value| "#{key}: #{value}"}.join("\n")
@@ -62,8 +62,8 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}
 
     "Use the following lesson info to generate your summary:
-#{lesson_info_str}
 
+#{lesson_info_str}
 Levels: [{
 #{level_info_strings.join("\n},{\n")}
 }]"
@@ -78,7 +78,6 @@ Levels: [{
 
     level_data = {
       "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
-      "Level Id (for debugging: remove before merge)" => level.id,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -122,7 +121,6 @@ Levels: [{
     level_data = {
       "Assessment Level - weight this more heavily towards student mastery" => "",
       "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
-      "Level Id (for debugging: remove before merge)" => level.id,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
