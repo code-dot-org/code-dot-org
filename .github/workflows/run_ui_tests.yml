@@ -56,6 +56,7 @@ jobs:
             dashboard_workers: 5
             skip_seed_all: true
             no_https_store: true
+            default_scheme: \"http:\"
             override_dashboard: \"localhost-studio.code.org\"
             override_pegasus: \"localhost.code.org\"
             dashboard_port: 3000

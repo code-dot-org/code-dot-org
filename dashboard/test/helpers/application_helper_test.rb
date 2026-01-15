@@ -28,8 +28,8 @@ class ApplicationHelperTest < ActionView::TestCase
   test "canonical_hostname in CI" do
     set_env :test
     CDO.stubs(:ci_webserver?).returns(true)
-    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
-    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
+    assert_equal 'test-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'test.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in development" do

@@ -63,11 +63,8 @@ ignore_eyes_mismatches: true
 localize_apps: true
 use_my_apps: true
 skip_seed_all: true
-default_scheme: \"http:\"
-override_dashboard: \"localhost-studio.code.org\"
-override_pegasus: \"localhost.code.org\"
-dashboard_port: 3000
-pegasus_port: 3000
+override_dashboard:
+override_pegasus:
 build_i18n: true
 animations_s3_directory: animations_circle/$CI_BUILD_NUMBER
 assets_s3_directory: assets_circle/$CI_BUILD_NUMBER
