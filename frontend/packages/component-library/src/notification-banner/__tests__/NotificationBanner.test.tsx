@@ -153,9 +153,7 @@ describe('Design System - NotificationBanner', () => {
   });
 
   it('applies custom className', () => {
-    render(
-      <NotificationBanner {...defaultProps} className="custom-class" />,
-    );
+    render(<NotificationBanner {...defaultProps} className="custom-class" />);
     const banner = screen.getByRole('status');
     expect(banner).toHaveClass('custom-class');
   });
