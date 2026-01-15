@@ -20,7 +20,11 @@ function App() {
                 'This is a demo of music lab within a vite application',
               type: 'music',
               kind: LevelKind.activity,
-              levelData: {},
+              offerBrowserTts: true,
+              levelData: {
+                allowChangeStartingPlayheadPosition: true,
+                library: 'launch2024',
+              },
             }}
           />
         </PlayerProvider>

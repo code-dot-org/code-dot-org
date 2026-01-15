@@ -1,0 +1,27 @@
+import {BlockTypes} from '../blockTypes';
+
+const map = {
+  Sounds: [
+    BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+  ],
+  Control: [
+    BlockTypes.TRIGGERED_AT_SIMPLE2,
+    BlockTypes.PLAY_SOUNDS_TOGETHER,
+    BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+    BlockTypes.PLAY_SOUNDS_RANDOM,
+    BlockTypes.REPEAT_SIMPLE2,
+  ],
+  Effects: [
+    BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+  ],
+  Functions: [],
+};
+
+export default map;

@@ -1,6 +1,3 @@
-@import '../../../mixins.scss';
-@import 'color.scss';
-
 $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   #55efc4;
 $cell-width: 25px;
@@ -15,8 +12,8 @@ $peek-height: 5px;
   rowGap: $row-gap;
   displayRows: $display-rows;
   peekHeight: $peek-height;
-  black: $black;
-  white: $white;
+  black: var(--neutral-base-black);
+  white: var(--neutral-base-white);
   selectedColor: var(--brand-aqua-50);
 }
 
@@ -27,7 +24,7 @@ $peek-height: 5px;
   padding: 10px;
   user-select: none;
   color-scheme: dark;
-  background-color: $neutral_dark;
+  background-color: vaR(--neutral-base-black);
 }
 
 .controlRow {
@@ -84,12 +81,59 @@ $peek-height: 5px;
     min-height: 0;
   }
 
-  @for $i from 1 through 8 {
-    &:nth-child(#{$i}) {
-      .cell-outer-drums > .innerCell.selected,
-      .cell-outer-drums:hover > .innerCell.selected {
-        background-color: nth($colors-drums, 8 - $i + 1);
-      }
+  &:nth-child(1) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[8];
+    }
+  }
+
+  &:nth-child(2) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[7];
+    }
+  }
+
+  &:nth-child(3) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[6];
+    }
+  }
+
+  &:nth-child(4) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[5];
+    }
+  }
+
+  &:nth-child(5) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[4];
+    }
+  }
+
+  &:nth-child(6) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[3];
+    }
+  }
+
+  &:nth-child(7) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[2];
+    }
+  }
+
+  &:nth-child(8) {
+    .cell-outer-drums > .innerCell.selected,
+    .cell-outer-drums:hover > .innerCell.selected {
+      background-color: $colors-drums[1];
     }
   }
 }
@@ -100,20 +144,29 @@ $peek-height: 5px;
 
 %cell-outer,
 .cell-outer {
-  @include remove-button-styles;
+  margin: 0;
   padding: calc($row-gap / 2);
   cursor: pointer;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:hover {
+    box-shadow: none;
+  }
 
   &:hover,
   &:focus-visible {
     .innerCell {
       transform: scale(1.2);
-      background-color: $neutral_dark40;
+      background-color: var(--neutral-gray-40);
       z-index: 1;
     }
   }
 
   &:active {
+    border: none !important;
+
     .innerCell {
       transform: scale(1);
     }
@@ -122,19 +175,20 @@ $peek-height: 5px;
   .innerCell {
     width: $cell-width;
     height: $cell-height;
-    background-color: $neutral_dark80;
+    background-color: var(--neutral-gray-80);
     box-sizing: border-box;
     transition:
       transform 0.2s ease,
       background-color 0.2s ease;
 
     &.preview {
-      background-color: $neutral_dark70;
+      background-color: var(--neutral-gray-70);
     }
 
     &.selected,
     &.selected:hover {
-      background-color: $brand_primary_default;
+      background-color: var(--brand-teal-50);
+
       &.preview {
         transform: scale(1.2);
       }
@@ -148,7 +202,7 @@ $peek-height: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $neutral_light;
+    color: var(--neutral-gray-5);
   }
 
   .textLabel {
@@ -168,8 +222,8 @@ $peek-height: 5px;
 
   .keyLabel {
     @extend %label;
-    background-color: $neutral_light;
-    color: $neutral_dark;
+    background-color: var(--neutral-gray-5);
+    color: var(--neutral-base-black);
     border-radius: 0 2px 2px 0;
     transition:
       color 0.8s ease,
@@ -178,7 +232,7 @@ $peek-height: 5px;
 
     &.blackKey {
       background-color: black;
-      color: $neutral_light;
+      color: var(--neutral-gray-5);
     }
   }
 }

@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
 import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 
+import {BlockTypes} from '../../blockly/blockTypes';
+import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {ProjectSources} from '@code-dot-org/projects';
@@ -18,6 +20,7 @@ import {
   PanelContainer,
   WorkspaceHeader,
 } from '@code-dot-org/lab';
+import blocks from '../../blockly/blocks/simple2';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
 import Controls from '../Controls';
 import Timeline from '../Timeline';
@@ -29,11 +32,11 @@ import '@code-dot-org/lab/index.css';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import {darkTheme} from '@code-dot-org/blockly-workspace/themes';
+import toolboxes from '../../blockly/toolbox';
 
 import ExemplarPlayerView from '../ExemplarPlayerView';
 
 import AppConfig from '../../appConfig';
-import blocks from '../../blockly/blocks';
 import PlayerContext from '../../contexts/PlayerContext';
 import MusicPlayer from '../../player/MusicPlayer';
 import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
@@ -43,6 +46,8 @@ import {labActions} from '@code-dot-org/lab/redux';
 import type {Trigger, MusicLevelProperties} from '../../types';
 
 import moduleStyles from './musicLab.module.scss';
+
+const DEFAULT_TOOLBOX = toolboxes[BlockMode.SIMPLE2];
 
 const exemplarPlayerInsideInstructions =
   AppConfig.getValue('exemplar-player-bottom') !== 'true';
@@ -55,7 +60,7 @@ const DefaultStartBlocks: BlocklySerialization = {
   blocks: {
     blocks: [
       {
-        type: 'when_run',
+        type: BlockTypes.WHEN_RUN_SIMPLE2,
       },
     ],
   },
@@ -133,11 +138,13 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
     () =>
       levelProperties.multipleChoice
         ? undefined
-        : levelProperties.toolboxBlocks?.contents?.length === 0
-          ? undefined
+        : (levelProperties.toolboxBlocks?.contents?.length || 0) === 0
+          ? DEFAULT_TOOLBOX
           : levelProperties.toolboxBlocks,
     [levelProperties],
   );
+
+  console.log('toolbox', toolboxBlocks);
 
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);

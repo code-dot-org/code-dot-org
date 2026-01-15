@@ -4,11 +4,11 @@ import {
   PingPongDelay,
   Player,
   Sampler,
-  ToneAudioNode,
   Transport,
   getContext,
   start,
 } from 'tone';
+import type {ToneAudioNode} from 'tone';
 import type {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import type {Source, SourceOptions} from 'tone/build/esm/source/Source';
 
