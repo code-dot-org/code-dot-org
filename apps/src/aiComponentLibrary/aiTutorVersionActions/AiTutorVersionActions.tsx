@@ -28,11 +28,11 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
 
   const dispatch = useAppDispatch();
 
-  const handleSaveAiTutorVersion = useCallback(() => {
+  const handleSaveAiTutorVersion = useCallback(async () => {
     if (isSaving) return;
     setIsSaving(true);
     try {
-      dispatch(acceptAiTutorVersion({files, commitDescription}));
+      await dispatch(acceptAiTutorVersion({files, commitDescription}));
     } catch (error) {
       console.error(
         'Error saving and accepting AI Tutor version changes:',

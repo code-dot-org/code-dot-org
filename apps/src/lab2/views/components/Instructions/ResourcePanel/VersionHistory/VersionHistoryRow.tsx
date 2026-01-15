@@ -4,7 +4,7 @@ import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -57,12 +57,14 @@ const VersionHistoryRow: React.FunctionComponent<
 
   let ariaLabel;
   let isBoldtype = true;
-  let aiSavedComment;
-  if (comment && comment === AI_SAVED_COMMENT) {
-    aiSavedComment = comment; // Display AI saved versions without a comment if no user description was added.
-  } else if (comment && comment.startsWith(AI_SAVED_COMMENT)) {
-    aiSavedComment = comment.slice(AI_SAVED_COMMENT.length);
-  }
+  const aiSavedComment = useMemo(() => {
+    if (comment && comment === AI_SAVED_COMMENT) {
+      return comment; // Display AI saved versions without a comment if no user description was added.
+    } else if (comment && comment.startsWith(AI_SAVED_COMMENT)) {
+      return comment.slice(AI_SAVED_COMMENT.length);
+    }
+    return undefined;
+  }, [comment]);
   const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
     classes.push(moduleStyles.initialVersionRow);
