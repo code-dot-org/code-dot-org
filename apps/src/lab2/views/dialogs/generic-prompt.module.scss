@@ -6,10 +6,22 @@ p.messageMargin {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 1rem;
+  gap: 0.25rem;
   // Add end padding so the focus state styles are
   // not cut off when elements are focused.
   padding-inline-end: 0.25rem;
+
+  > :first-child {
+    flex: 0 0 calc(70% - 0.5rem);
+  }
+
+  > :only-child {
+    flex: 0 0 100%;
+  }
+
+  > :last-child:not(:first-child) {
+    flex: 0 0 calc(30% - 0.5rem);
+  }
 
   input {
     width: 100%;
