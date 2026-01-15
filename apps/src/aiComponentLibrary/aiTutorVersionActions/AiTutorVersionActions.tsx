@@ -92,7 +92,9 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
               onChange={e => setCommitDescription(e.target.value)}
               value={commitDescription}
               className={moduleStyles.textArea}
-              placeholder={'Describe what AI changed (max 180 characters).'}
+              placeholder={
+                'Describe what AI changed (maximum of 180 characters).'
+              }
               maxLength={180}
             />
             This is what you'll see in the version history.
