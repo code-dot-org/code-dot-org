@@ -71,7 +71,6 @@ namespace :seed do
 
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = %w(
-    ui-test-artist
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
@@ -156,6 +155,7 @@ namespace :seed do
     oceans
     sports
     jigsaw
+    mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -367,7 +367,6 @@ namespace :seed do
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
     %w(
-      ui-test-artist
       ui-test-course-2017
       ui-test-course-2019
       ui-test-original-course-2017
@@ -511,7 +510,6 @@ namespace :seed do
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
     %w(
-      ui-test-artist
       ui-test-course
       ui-test-csa-family-script
       ui-test-original-course
