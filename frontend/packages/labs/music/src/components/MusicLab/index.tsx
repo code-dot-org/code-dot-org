@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 
 import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
-import {useRef, useCallback, useMemo, useEffect} from 'react';
+import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
@@ -20,6 +20,7 @@ import {
 } from '@code-dot-org/lab';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
 import HeaderButtons from '../HeaderButtons';
+import PackDialog from '../PackDialog';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 import '@code-dot-org/lab/resourcePanel/index.css';
 import '@code-dot-org/lab/index.css';
@@ -31,6 +32,7 @@ import ExemplarPlayerView from '../ExemplarPlayerView';
 
 import AppConfig from '../../appConfig';
 import blocks from '../../blockly/blocks';
+import PlayerContext from '../../contexts/PlayerContext';
 import MusicPlayer from '../../player/MusicPlayer';
 import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
@@ -83,7 +85,9 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   const undo: () => void = () => {};
   const redo: () => void = () => {};
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
-  const allowPackSelection = false;
+  const allowPackSelection = true;
+
+  const {loadAndInitializePlayer} = useContext(PlayerContext);
 
   useEffect(() => {
     // Ensure we use dark theme for music lab, for now
@@ -101,8 +105,9 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
           hidden: false,
         }),
       );
+      loadAndInitializePlayer('launch2024');
     }
-  }, [dispatch, theme, setTheme]);
+  }, [loadAndInitializePlayer, dispatch, theme, setTheme]);
 
   // Set up the driver
   useEffect(() => {
@@ -141,6 +146,8 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   const exemplarPlaybackEvents: PlaybackEvent[] = [];
   const player: MusicPlayer = new MusicPlayer();
 
+  console.log(allowPackSelection, player);
+
   return (
     <div className={moduleStyles.musicLab}>
       <div
@@ -149,6 +156,12 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
           timelineAtTop && moduleStyles.reverse,
         )}
       >
+        {allowPackSelection && (
+          <PackDialog
+            player={player}
+            forcePackSelect={guideMode === 'aiCodeGenerate'}
+          />
+        )}
         {guideMode === 'instructions' && (
           <GuideInstructions
             levelProperties={levelProperties}
