@@ -19,6 +19,8 @@ import {
   WorkspaceHeader,
 } from '@code-dot-org/lab';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
+import Controls from '../Controls';
+import Timeline from '../Timeline';
 import HeaderButtons from '../HeaderButtons';
 import PackDialog from '../PackDialog';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
@@ -38,7 +40,7 @@ import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
 import {useAppDispatch, useAppSelector} from '../../redux/store';
 import {labActions} from '@code-dot-org/lab/redux';
-import type {MusicLevelProperties} from '../../types';
+import type {Trigger, MusicLevelProperties} from '../../types';
 
 import moduleStyles from './musicLab.module.scss';
 
@@ -80,12 +82,16 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   };
 
   const {theme, setTheme} = useTheme();
+  const timelineAreaRef = useRef<HTMLDivElement | null>(null);
 
   const hideChaff = useCallback(() => {}, []);
   const undo: () => void = () => {};
   const redo: () => void = () => {};
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
   const allowPackSelection = true;
+  const setPlaying: (_: boolean) => void = _ => {};
+  const triggers: Trigger[] = [];
+  const playTrigger: (id: string) => void = _ => {};
 
   const {loadAndInitializePlayer} = useContext(PlayerContext);
 
@@ -237,26 +243,74 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
                 />
               }
               headerClassName={moduleStyles.headerWithBorder}
-            ></PanelContainer>
-            <BlocklyWorkspace<Environment>
-              className={moduleStyles.blocklyWorkspace}
-              options={{
-                readOnly: levelProperties.multipleChoice ? true : undefined,
-              }}
-              startBlocks={
-                levelProperties.template?.startBlocks ||
-                levelProperties.startBlocks ||
-                DefaultStartBlocks
-              }
-              blocks={blocks}
-              toolboxBlocks={toolboxBlocks}
-              theme={darkTheme}
-              renderer={ThrasosRenderer}
-              workspaceRef={workspaceRef}
-              plugins={[ToolboxTrashcanPlugin]}
-            />
+            >
+              <BlocklyWorkspace<Environment>
+                className={moduleStyles.blocklyWorkspace}
+                options={{
+                  readOnly: levelProperties.multipleChoice ? true : undefined,
+                }}
+                startBlocks={
+                  levelProperties.template?.startBlocks ||
+                  levelProperties.startBlocks ||
+                  DefaultStartBlocks
+                }
+                blocks={blocks}
+                toolboxBlocks={toolboxBlocks}
+                theme={darkTheme}
+                renderer={ThrasosRenderer}
+                workspaceRef={workspaceRef}
+                plugins={[ToolboxTrashcanPlugin]}
+              />
+            </PanelContainer>
           </div>
         </div>
+
+        {!isToolboxMode && (
+          <div id="play-area" className={classNames(moduleStyles.playArea)}>
+            <div id="controls-area" className={moduleStyles.controlsArea}>
+              <PanelContainer
+                id="controls-panel"
+                headerContent="Controls"
+                hideHeaders={hideHeaders}
+              >
+                <Controls
+                  setPlaying={setPlaying}
+                  playTrigger={playTrigger}
+                  triggers={triggers}
+                  isPredictLevel={
+                    levelProperties.predictSettings?.isPredictLevel
+                  }
+                  enableSkipControls={
+                    AppConfig.getValue('skip-controls-enabled') === 'true'
+                  }
+                />
+              </PanelContainer>
+            </div>
+
+            <div
+              dir="ltr"
+              id="timeline-area"
+              className={moduleStyles.timelineArea}
+              ref={timelineAreaRef}
+            >
+              <PanelContainer
+                id="timeline-panel"
+                headerContent="Timeline"
+                hideHeaders={hideHeaders}
+              >
+                <Timeline
+                  allowChangeStartingPlayheadPosition={
+                    levelProperties.levelData
+                      ?.allowChangeStartingPlayheadPosition
+                  }
+                  isPredictLevel={
+                    levelProperties.predictSettings?.isPredictLevel
+                  }
+                />
+              </PanelContainer>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

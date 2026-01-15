@@ -24,8 +24,8 @@
 
   .measuresBackground {
     background-color: var(--neutral-gray-95);
-    height: 24px;
-    border-bottom: solid $default-spacing var(--neutral-gray-99);
+    height: 26px;
+    border-bottom: var(--lab-border-default);
 
     &Clickable {
       cursor: pointer;
@@ -39,8 +39,10 @@
     height: 100%;
 
     .barNumber {
+      margin: 0;
+      padding: 0;
       position: absolute;
-      top: 4px;
+      top: 2px;
       left: 6px;
       color: var(--neutral-gray-20);
 
@@ -55,8 +57,8 @@
 
     .barLine {
       position: absolute;
-      top: 32px;
-      bottom: 6px;
+      top: 26px;
+      bottom: 0;
       border-left: 1px var(--neutral-gray-50) solid;
 
       &Current {

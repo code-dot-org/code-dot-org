@@ -4,6 +4,7 @@ import type {MouseEvent} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {predictLevelActions} from '@code-dot-org/lab/redux';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 
 import appConfig from '../../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../../constants';
@@ -223,7 +224,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
               className={moduleStyles.barLineContainer}
               style={{left: paddingOffset + index * barWidth}}
             >
-              <div
+              <BodyFourText
                 className={classNames(
                   moduleStyles.barNumber,
                   measure === Math.floor(currentPlayheadPosition) &&
@@ -234,7 +235,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
                 onClick={() => onMeasureNumberClick(measure)}
               >
                 {measure}
-              </div>
+              </BodyFourText>
               <div
                 id={index === 0 ? 'timeline-first-barline' : undefined}
                 ref={index === 0 ? firstBarLineRef : undefined}
