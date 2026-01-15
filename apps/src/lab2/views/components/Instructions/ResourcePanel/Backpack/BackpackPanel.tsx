@@ -49,10 +49,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     [key: string]: string[];
   }>({PRIMARY_BACKPACK_KEY: []});
   const isLoading = listsLoading > 0;
-  console.log({
-    recentlyAddedFiles,
-    recentlyAddedPrimaryFiles: recentlyAddedFiles[PRIMARY_BACKPACK_KEY],
-  });
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
@@ -115,7 +111,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           appKey === PRIMARY_BACKPACK_KEY
             ? setFileList
             : (fileList: string[]) =>
-                setSecondaryFileLists(prev => ({...prev, appKey: fileList}));
+                setSecondaryFileLists(prev => ({...prev, [appKey]: fileList}));
         loadForApi(clientToLoad, listCallback, false);
         if (event === BackpackEvent.FileAdded) {
           setAlertList(prevAlerts => [
@@ -132,15 +128,17 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             if (!previousListForApp) {
               previousListForApp = [];
             }
-            return {...prevFiles, appKey: [...previousListForApp, filename]};
+            return {...prevFiles, [appKey]: [...previousListForApp, filename]};
           });
           setTimeout(() => {
             setRecentlyAddedFiles(prevFiles => {
-              const previousListForApp = prevFiles[appKey];
+              let previousListForApp = prevFiles[appKey];
               if (previousListForApp) {
-                previousListForApp.filter(file => file !== filename);
+                previousListForApp = previousListForApp.filter(
+                  file => file !== filename
+                );
               }
-              return {...prevFiles, appKey: previousListForApp};
+              return {...prevFiles, [appKey]: previousListForApp};
             });
           }, SHOW_RECENTLY_ADDED_DURATION_MS);
         }
