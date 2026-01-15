@@ -19,18 +19,19 @@ import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
-import SourcesContainer, {
-  useSources,
-} from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import DemoVersionHistory from '../lab2/projects/unified-poc/demoVersionHistory/DemoVersionHistory';
+import useSources from '../lab2/projects/unified-poc/useSources';
+import {DialogType, useDialogControl} from '../lab2/views/dialogs';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
@@ -62,12 +63,23 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const excalidrawApiRef = useRef<ExcalidrawImperativeAPI | null>();
+  const reinitializationHandler = useCallback(() => {
+    setExcalidrawMountKey(key => key + 1);
+  }, []);
+
   const {
+    isLoading: isLoadingSources,
+    isEditable,
     currentSources,
     updateSources,
-    setReinitializationHandler,
-    showStartOverDialog,
-  } = useSources<SketchlabSources>();
+    startOver,
+    ...versionHistoryProps
+  } = useSources<SketchlabSources>({
+    levelProperties,
+    defaultSources: DEFAULT_SOURCES,
+    onReinitialize: reinitializationHandler,
+    includeVersionHistory: true,
+  });
 
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -82,10 +94,14 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
 
-  const onClickStartOver = useCallback(() => {
-    showStartOverDialog('custom', commonI18n.startOverGeneric());
-  }, [showStartOverDialog]);
+  const dialogControl = useDialogControl();
 
+  const onClickStartOver = useCallback(() => {
+    dialogControl.showDialog({
+      type: DialogType.StartOver,
+      handleConfirm: startOver,
+    });
+  }, [dialogControl, startOver]);
   const {theme} = useTheme();
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
@@ -138,6 +154,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       state: AppState,
       files: BinaryFiles
     ) => {
+      if (isLoadingSources || !currentSources) return;
       if (saveSourcesTimeoutRef.current) {
         clearTimeout(saveSourcesTimeoutRef.current);
         saveSourcesTimeoutRef.current = null;
@@ -198,7 +215,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     [
       updateSources,
       channelId,
-      currentSources.source,
+      currentSources,
+      isLoadingSources,
       levelProperties.name,
       readonlyWorkspace,
     ]
@@ -211,24 +229,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       }
     };
   }, []);
-
-  const reinitializationHandler = useCallback(() => {
-    setExcalidrawMountKey(key => key + 1);
-  }, []);
-
-  const onLoadVersion = useCallback(
-    (sources: ProjectSources) => {
-      if (sources) {
-        updateSources(sources as SketchlabSources);
-      }
-      reinitializationHandler();
-    },
-    [updateSources, reinitializationHandler]
-  );
-
-  useEffect(() => {
-    setReinitializationHandler(reinitializationHandler);
-  }, [setReinitializationHandler, reinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -256,18 +256,17 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           hasRun={hasRun}
           hasEdited={false}
           settings={[useThemeSetting('sketchlab')]}
-          versionHistoryProps={{
-            startSources:
-              (levelProperties?.startSources as ProjectSources) ||
-              DEFAULT_SOURCES,
-            onLoadVersion: onLoadVersion,
-          }}
         />
       </div>
       <ResizeBar
         isVertical={true}
         separatorProps={panelSeparatorProps}
         isDragging={isDragging}
+      />
+      <DemoVersionHistory
+        {...versionHistoryProps}
+        isEditable={isEditable}
+        isLoading={isLoadingSources}
       />
       <div style={{width: rightPanelWidth}}>
         <PanelContainer
@@ -291,21 +290,25 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           {teacherViewingStudent && (
             <TeacherViewingStudentProjectAlert inWorkspaceContainer />
           )}
-          <Excalidraw
-            initialData={
-              experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-                ? populateInitialExcalidrawState(
-                    currentSources.source,
-                    downloadedFilesDataRef.current
-                  )
-                : (currentSources.source as ExcalidrawInitialDataState)
-            }
-            onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => (excalidrawApiRef.current = api)}
-            key={excalidrawMountKey}
-            theme={theme.toLowerCase() as ExcalidrawTheme}
-            viewModeEnabled={readonlyWorkspace}
-          />
+          {isLoadingSources || !currentSources ? (
+            <div>Loading...</div>
+          ) : (
+            <Excalidraw
+              initialData={
+                experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
+                  ? populateInitialExcalidrawState(
+                      currentSources.source,
+                      downloadedFilesDataRef.current
+                    )
+                  : (currentSources.source as ExcalidrawInitialDataState)
+              }
+              onChange={debouncedSerializeAndSaveWorkspace}
+              excalidrawAPI={api => (excalidrawApiRef.current = api)}
+              key={excalidrawMountKey}
+              theme={theme.toLowerCase() as ExcalidrawTheme}
+              viewModeEnabled={!isEditable}
+            />
+          )}
           {WorkspaceAlert}
         </PanelContainer>
       </div>
@@ -313,12 +316,4 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   );
 };
 
-export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={DEFAULT_SOURCES}
-    key={props.levelProperties.id}
-  >
-    <SketchlabView levelProperties={props.levelProperties} />
-  </SourcesContainer>
-);
+export default SketchlabView;

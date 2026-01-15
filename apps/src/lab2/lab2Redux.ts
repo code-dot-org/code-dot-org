@@ -169,7 +169,11 @@ export const setUpWithLevel = createAsyncThunk<
       }
     }
 
-    if (!levelProperties.usesProjects) {
+    // Skipping for sketchlab for demo purposes
+    if (
+      !levelProperties.usesProjects ||
+      levelProperties.appName === 'sketchlab'
+    ) {
       // If projects are disabled on this level, we can skip loading projects data.
       setProjectAndLevelData(
         {levelProperties},

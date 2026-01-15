@@ -229,16 +229,13 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async flushSave() {
+  async flushSave(forceNewVersion = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(
-      /* forceSave */ true,
-      /* forceNewVersion */ false
-    );
+    return await this.enqueueSaveOrSave(/* forceSave */ true, forceNewVersion);
   }
 
   /**
