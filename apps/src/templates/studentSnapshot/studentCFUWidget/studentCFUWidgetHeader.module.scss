@@ -1,0 +1,85 @@
+.studentCFUWidgetSummaryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+
+  .titleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+  }
+
+  .summarySection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    align-self: stretch;
+
+    .summaryCards {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.25rem;
+      align-self: stretch;
+
+
+      .summaryCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        flex: 1 0 0;
+        border-radius: 0.25rem;
+        border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+        background: var(--background-neutral-primary, #FFF);
+
+        &.largeCard {
+          height: 5.5rem;
+          padding: 0.5rem;
+          gap: 0.75rem;
+
+
+          .summaryCardContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        &.smallCard {
+          padding: 0.5rem;
+          gap: 0.5rem;
+        }
+      }
+
+      .metricsContainer {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        flex: 1 0 0;
+        align-self: stretch;
+      }
+
+      .correctnessContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        flex: 1 0 0;
+        align-self: stretch;
+
+        .smallCardsRow {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.25rem;
+          flex: 1 0 0;
+          align-self: stretch;
+        }
+      }
+    }
+  }
+}
