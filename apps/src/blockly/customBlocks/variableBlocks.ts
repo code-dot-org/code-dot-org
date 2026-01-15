@@ -1,5 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
+import {getCategoryBlocksJson} from '@cdo/apps/blockly/utils/';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 /**
@@ -16,7 +17,7 @@ export function flyoutCategory(workspace: BlocklyCore.WorkspaceSvg) {
   blockList.push(...categoryBlocks);
 
   // Add blocks from the level toolbox XML, if present.
-  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('VARIABLE'));
+  blockList.push(...getCategoryBlocksJson('VARIABLE'));
 
   // The toolox may include "change [var] by" blocks with custom default values.
   // If any of these blocks are found, we can remove the auto-generated block.
