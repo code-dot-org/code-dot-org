@@ -140,6 +140,7 @@ Levels: [{
       return {
         basic_info: level_data,
         level_content: {},
+        user_interactions: {},
         sublevels: [],
         rubrics: {},
         section_stats: section_stats,
@@ -161,9 +162,12 @@ Levels: [{
 
     level_content = get_code_level_info(level, student_id, unit_id)
 
+    user_interactions = get_user_level_interactions(level, student_id, unit_id)
+
     {
       basic_info: level_data,
       level_content: level_content,
+      user_interactions: user_interactions,
       sublevels: sublevel_data,
       rubrics: rubric_data,
       section_stats: section_stats,
@@ -279,6 +283,19 @@ Levels: [{
     code_data
   end
 
+  def self.get_user_level_interactions(level, student_id, unit_id)
+    user_level_interactions = UserLevelInteraction.where(user_id: student_id, level_id: level.id).
+                                                  order(:created_at)
+
+    return {} unless user_level_interactions.any?
+
+    return user_level_interactions.map do |interaction|
+      version_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id, interaction.code_version)
+
+      "#{interaction.created_at.strftime('%Y-%m-%d %H:%M:%S')} - #{interaction.interaction}: #{version_code.to_json}"
+    end
+  end
+
   def self.format_level_info(level_data, indentation = '  ')
     return "" if level_data.empty?
 
@@ -303,6 +320,14 @@ Levels: [{
     result_parts = []
     result_parts << basic_info_parts.join("\n") if basic_info_parts.any?
     result_parts << "#{indentation}#{level_content_parts.join("\n#{indentation}")}" if level_content_parts.any?
+
+    if level_data[:user_interactions]&.any?
+      user_interactions_parts = ["#{indentation}A list of all tracked actions the student took in chronological order. This includes the code that at the time of the action:"]
+      level_data[:user_interactions].each do |interaction_string|
+        user_interactions_parts << "#{indentation}  #{interaction_string}"
+      end
+      result_parts << user_interactions_parts.join("\n")
+    end
 
     if level_data[:rubrics]&.any?
       result_parts << "#{indentation}Rubrics: #{level_data[:rubrics]}"
