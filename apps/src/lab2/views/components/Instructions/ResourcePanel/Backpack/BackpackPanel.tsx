@@ -22,6 +22,7 @@ interface BackpackPanelProps extends BackpackProps {
 }
 
 type AlertConfig = {type: 'success' | 'danger'; message: string};
+const PRIMARY_BACKPACK_KEY = 'PRIMARY';
 
 const BackpackPanel: React.FC<BackpackPanelProps> = ({
   validateFileName,
@@ -32,7 +33,10 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
-  const secondaryBackpackApis = backpackContext?.secondaryApis;
+  const secondaryBackpackApis = useMemo(
+    () => backpackContext?.secondaryApis || {},
+    [backpackContext?.secondaryApis]
+  );
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [secondaryFileLists, setSecondaryFileLists] = useState<
     {[key: string]: string[]} | undefined
@@ -41,8 +45,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const [listsLoading, setListsLoading] = useState<number>(0);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const [alertList, setAlertList] = useState<AlertConfig[]>([]);
-  const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<string[]>([]);
+  const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<{
+    [key: string]: string[];
+  }>({PRIMARY_BACKPACK_KEY: []});
   const isLoading = listsLoading > 0;
+  console.log({
+    recentlyAddedFiles,
+    recentlyAddedPrimaryFiles: recentlyAddedFiles[PRIMARY_BACKPACK_KEY],
+  });
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
@@ -88,17 +98,25 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   );
 
   useEffect(() => {
-    // Show the load screen on initial load.
+    // Show the load screen on initial load, and load all backpacks.
     loadBackpackFiles(true);
   }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis]);
 
   useEffect(() => {
-    // Subscribe to backpack changes. Always reload when notified, as we get notified for file
-    // adds or deletes.
-    const listenerId = primaryBackpackApi?.addEventListener(
-      (event, filename) => {
+    const eventListener =
+      (appKey: string) => (event: BackpackEvent, filename: string) => {
         // We don't show the load view here to avoid the screen flickering when the backpack updates.
-        loadBackpackFiles(false);
+        // We only need to load the list for the backpack that saw an update.
+        const clientToLoad =
+          appKey === PRIMARY_BACKPACK_KEY
+            ? primaryBackpackApi
+            : secondaryBackpackApis[appKey];
+        const listCallback =
+          appKey === PRIMARY_BACKPACK_KEY
+            ? setFileList
+            : (fileList: string[]) =>
+                setSecondaryFileLists(prev => ({...prev, appKey: fileList}));
+        loadForApi(clientToLoad, listCallback, false);
         if (event === BackpackEvent.FileAdded) {
           setAlertList(prevAlerts => [
             ...prevAlerts,
@@ -109,21 +127,50 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           ]);
           openPanelCallback();
           // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
-          setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
+          setRecentlyAddedFiles(prevFiles => {
+            let previousListForApp = prevFiles[appKey];
+            if (!previousListForApp) {
+              previousListForApp = [];
+            }
+            return {...prevFiles, appKey: [...previousListForApp, filename]};
+          });
           setTimeout(() => {
-            setRecentlyAddedFiles(prevFiles =>
-              prevFiles.filter(file => file !== filename)
-            );
+            setRecentlyAddedFiles(prevFiles => {
+              const previousListForApp = prevFiles[appKey];
+              if (previousListForApp) {
+                previousListForApp.filter(file => file !== filename);
+              }
+              return {...prevFiles, appKey: previousListForApp};
+            });
           }, SHOW_RECENTLY_ADDED_DURATION_MS);
         }
-      }
+      };
+
+    // Subscribe to backpack changes. Always reload when notified, as we get notified for file
+    // adds or deletes.
+    const primaryListenerId = primaryBackpackApi?.addEventListener(
+      eventListener(PRIMARY_BACKPACK_KEY)
     );
+    const secondaryListenerIds: {[key: string]: string} = {};
+    Object.entries(secondaryBackpackApis)?.forEach(([appKey, api]) => {
+      const listenerId = api.addEventListener(eventListener(appKey));
+      secondaryListenerIds[appKey] = listenerId;
+    });
+
     return () => {
-      if (listenerId) {
-        primaryBackpackApi?.removeEventListener(listenerId);
+      if (primaryListenerId) {
+        primaryBackpackApi?.removeEventListener(primaryListenerId);
       }
+      Object.entries(secondaryListenerIds).forEach(([appKey, listenerId]) => {
+        secondaryBackpackApis[appKey]?.removeEventListener(listenerId);
+      });
     };
-  }, [loadBackpackFiles, primaryBackpackApi, openPanelCallback]);
+  }, [
+    loadBackpackFiles,
+    primaryBackpackApi,
+    openPanelCallback,
+    secondaryBackpackApis,
+  ]);
 
   const isBackpackEmpty = useMemo(() => {
     const emptyPrimaryBackpack =
@@ -226,13 +273,15 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           saveFile={saveFile}
           createNewFile={createNewFile}
           findIdForFileName={findIdForFileName}
-          isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
+          isRecentlyAdded={recentlyAddedFiles[PRIMARY_BACKPACK_KEY]?.includes(
+            fileName
+          )}
         />
       ))}
       {secondaryFileLists && secondaryBackpackApis !== undefined
         ? Object.entries(secondaryFileLists).map(
             ([appName, secondaryFileList]) => (
-              <div>
+              <>
                 <div>{appName}</div>
                 {secondaryFileList?.map(fileName => (
                   <BackpackFileChip
@@ -252,10 +301,12 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                     saveFile={saveFile}
                     createNewFile={createNewFile}
                     findIdForFileName={findIdForFileName}
-                    isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
+                    isRecentlyAdded={recentlyAddedFiles[appName]?.includes(
+                      fileName
+                    )}
                   />
                 ))}
-              </div>
+              </>
             )
           )
         : undefined}
