@@ -1,3 +1,5 @@
+import {getCode, getAllGeneratedCode} from '@cdo/apps/blockly/utils';
+
 import {TestResults, ResultType} from '../constants';
 import AppView from '../templates/AppView';
 
@@ -317,9 +319,7 @@ module.exports = class Maze {
 
     let code = '';
     if (studioApp().isUsingBlockly()) {
-      code = Blockly.cdoUtils.getAllGeneratedCode(
-        studioApp().initializationCode
-      );
+      code = getAllGeneratedCode(studioApp().initializationCode);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();
@@ -478,7 +478,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      program = getCode(Blockly.mainBlockSpace);
     }
 
     this.waitingForReport = true;

@@ -38,6 +38,8 @@ export type GenericPromptProps = Pick<
   messageMargin?: boolean;
   textFieldProps?: Partial<ComponentProps<typeof TextField>>;
   dropdownProps?: Partial<ComponentProps<typeof SimpleDropdown>>;
+  confirmButtonTextWithWarning?: string;
+  confirmButtonText?: string;
 };
 
 /**
@@ -117,6 +119,8 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   buttons,
   textFieldProps,
   dropdownProps,
+  confirmButtonTextWithWarning,
+  confirmButtonText,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const hasDropdown = !!dropdownProps?.items?.length;
@@ -194,7 +198,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     () => {
       if (closeType === 'confirm') {
         const validationError = validateInput(prompt, dropdownValue);
-        if (validationError) {
+        if (validationError && validationError.type === 'error') {
           setValidationMessage(validationError);
           return;
         }
@@ -210,6 +214,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     };
 
   const hasError = validationMessage?.type === 'error';
+  const hasWarning = validationMessage?.type === 'warning';
 
   return (
     <GenericDialog
@@ -235,6 +240,10 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
           ...buttons?.confirm,
           callback: () => handleConfirm?.(prompt),
           disabled: hasError || (requiresPrompt && !prompt.length),
+          text:
+            confirmButtonTextWithWarning && hasWarning
+              ? confirmButtonTextWithWarning
+              : confirmButtonText,
         },
         cancel: {
           ...buttons?.cancel,
