@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
 
 import {sources as sourcesApi, files as filesApi} from '../clientApi';
@@ -115,22 +114,6 @@ export default class VersionHistory extends React.Component {
 
   onClearPuzzle = () => {
     this.setState({showSpinner: true});
-    firehoseClient.putRecord(
-      {
-        study: 'project-data-integrity',
-        study_group: 'v4',
-        event: 'clear-puzzle',
-        project_id: project.getCurrentId(),
-        data_json: JSON.stringify({
-          isOwner: project.isOwner(),
-          currentUrl: window.location.href,
-          shareUrl: project.getShareUrl(),
-          isProjectTemplateLevel: this.props.isProjectTemplateLevel,
-          currentSourceVersionId: project.getCurrentSourceVersionId(),
-        }),
-      },
-      {includeUserId: true}
-    );
 
     this.props
       .handleClearPuzzle()

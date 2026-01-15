@@ -1,7 +1,7 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {validateFileNameForModal} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -40,7 +40,7 @@ export const openNewFilePrompt = async ({
     type: DialogType.GenericPrompt,
     title: codebridgeI18n.newFilePrompt(),
     validateInput: (fileName: string) =>
-      validateFileName({
+      validateFileNameForModal({
         fileName,
         folderId,
         projectFiles,
@@ -48,6 +48,7 @@ export const openNewFilePrompt = async ({
         validationFile,
         validFileTypes,
       }),
+    useModal: true,
   });
   if (results.type !== 'confirm') {
     return;

@@ -7,7 +7,7 @@ wrong 'The browser is downloading a new version of the website every time the bu
 wrong 'A CSS animation is moving the cart icon to a new location on the screen.'
 wrong 'The HTML code is permanently rewritten on the server whenever a new item is added.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

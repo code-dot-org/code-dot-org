@@ -115,13 +115,3 @@
   inset-block-start: 8px;
   inset-inline-end: 8px;
 }
-
-// Modal colors (deprecated - will be removed in future version)
-.modal-dark {
-  background-color: var(--neutral-gray-90);
-
-  .modalTitleSection h3,
-  .modalContentSection p {
-    color: var(--neutral-base-white);
-  }
-}

@@ -26,22 +26,22 @@ const Lab2: React.FunctionComponent = () => {
   return (
     <Provider store={getStore()}>
       <BrowserTextToSpeechWrapper>
-        <RubricWrapper>
-          <ThemeProvider>
-            <Lab2Wrapper>
-              <DialogManager>
-                <MetricsAdapter />
-                <Lab2IdleTimer />
-                <ProjectContainer channelId={getStandaloneProjectId()}>
-                  <AiChatDisabledProvider>
+        <Lab2IdleTimer />
+        <ThemeProvider>
+          <AiChatDisabledProvider>
+            <DialogManager>
+              <Lab2Wrapper>
+                <RubricWrapper>
+                  <MetricsAdapter />
+                  <ProjectContainer channelId={getStandaloneProjectId()}>
                     <LabViewsRenderer />
-                  </AiChatDisabledProvider>
-                </ProjectContainer>
-                <RubricFABContainer />
-              </DialogManager>
-            </Lab2Wrapper>
-          </ThemeProvider>
-        </RubricWrapper>
+                  </ProjectContainer>
+                  <RubricFABContainer />
+                </RubricWrapper>
+              </Lab2Wrapper>
+            </DialogManager>
+          </AiChatDisabledProvider>
+        </ThemeProvider>
       </BrowserTextToSpeechWrapper>
     </Provider>
   );

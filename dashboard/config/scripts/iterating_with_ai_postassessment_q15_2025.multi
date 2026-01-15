@@ -7,7 +7,7 @@ wrong 'Delete the code and write it from scratch without any AI help.'
 right 'Refactor (simplify) and document the code until they fully understand how it works and can verify its safety.'
 wrong 'Ask a different AI to explain why the first AI wrote it that way.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 11

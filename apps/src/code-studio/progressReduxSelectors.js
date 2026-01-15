@@ -103,42 +103,6 @@ export const getProgressLevelType = state => {
 };
 
 /**
- * Returns the dashboard URL path to retrieve the level properties for a script
- * level (if we have lessons) or a level (if we don't have lessons). If we don't
- * have a current level, this returns undefined.
- */
-export const getLevelPropertiesPath = state => {
-  if (state.progress.lessons) {
-    const scriptName = state.progress.scriptName;
-    const lessonPosition = state.progress.lessons?.find(
-      lesson => lesson.id === state.progress.currentLessonId
-    ).relative_position;
-
-    let levelPosition, sublevelPosition;
-    const currentLevel = getCurrentLevel(state);
-    levelPosition = currentLevel.levelNumber;
-
-    // Use the sublevel position if we're on a sublevel
-    if (currentLevel.parentLevelId) {
-      const parentLevel = getParentLevel(state);
-      levelPosition = parentLevel.levelNumber;
-      sublevelPosition = currentLevel.levelNumber;
-    }
-
-    // TODO: TEACH-1864
-    // use /courses/:course_name/units/:unit_position/... instead of /s/
-    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelPosition}/${
-      sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`
-    }level_properties`;
-  } else if (state.progress.currentLevelId !== null) {
-    const levelId = state.progress.currentLevelId;
-    return `/levels/${levelId}/level_properties`;
-  } else {
-    return undefined;
-  }
-};
-
-/**
  * Returns the dashboard URL path to retrieve the user app options for a script level.
  * If we don't have a current level, this returns undefined.
  */

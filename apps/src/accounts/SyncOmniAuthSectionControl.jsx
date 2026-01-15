@@ -6,7 +6,6 @@ import ReactTooltip from 'react-tooltip';
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/simpleSignUp/lti/sync/LtiSectionSyncDialog';
@@ -71,22 +70,9 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   onClick = () => {
-    const {sectionId, sectionCode, sectionName, updateRoster, sectionProvider} =
+    const {sectionCode, sectionName, updateRoster, sectionProvider} =
       this.props;
     const {buttonState} = this.state;
-
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students',
-        event: 'sync-oauth-button-click',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-          loginType: sectionProvider,
-        }),
-      },
-      {includeUserId: true}
-    );
 
     if ([IN_PROGRESS, SUCCESS, DISABLED].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
@@ -122,20 +108,6 @@ class SyncOmniAuthSectionControl extends React.Component {
           needsGoogleReauth: needsGoogleReauth,
         });
         this.openDialog();
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students',
-            event: 'sync-oauth-button-error',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              loginType: sectionProvider,
-              error_message: sync_error,
-              needs_google_reauth: needsGoogleReauth,
-            }),
-          },
-          {includeUserId: true}
-        );
       });
   };
 

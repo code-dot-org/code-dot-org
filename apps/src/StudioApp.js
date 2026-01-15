@@ -61,7 +61,6 @@ import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
-import firehoseClient from './metrics/firehose';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -2783,31 +2782,6 @@ StudioApp.prototype.enableBreakpoints = function () {
       } else {
         this.editor.setBreakpoint(e.line);
       }
-
-      // Log breakpoints usage to firehose. This is part of the work to add
-      // inline teacher comments; we want to get a sense of how much
-      // breakpoints are used and in what scenarios, so we can reason about the
-      // feasibility of repurposing line number clicks for this feature.
-      const currentUser = getStore().getState().currentUser;
-      const userType = currentUser && currentUser.userType;
-      firehoseClient.putRecord(
-        {
-          study: 'droplet-breakpoints',
-          study_group: userType,
-          event: 'guttermousedown',
-          data_json: JSON.stringify({
-            levelId: this.config.serverLevelId,
-            lineNumber: e.line,
-            activeBreakpoint,
-            projectLevelId: this.config.serverProjectLevelId,
-            scriptId: this.config.scriptId,
-            scriptName: this.config.scriptName,
-            studentUserId: queryParams('user_id'),
-            url: window.location.toString(),
-          }),
-        },
-        {includeUserId: true}
-      );
     }.bind(this)
   );
 };

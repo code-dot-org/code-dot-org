@@ -25171,7 +25171,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-powered-threats-and-defenses-pilot-2025
-          title: "[PILOT] Teaching AI-Powered Threats and Defenses"
+          title: Teaching AI-Powered Threats and Defenses
           description_audience: ''
           description_short: ''
           description: |-
@@ -25283,8 +25283,8 @@ en:
           title: Pre-Learning for Teaching AI Foundations Semester 2
           description_audience: ''
           description_short: ''
-          description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? "
-          student_description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course— a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? "
+          description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course, a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? \n\n#### **Suggested Time: 25 minutes**"
+          student_description: "# Welcome!\n#### This short professional learning module introduces you to the concepts in **AI Foundations (Semester 2)** course, a curriculum where students code alongside AI to build real-world interactive projects.\n\n#### This quick overview answers the questions: What is AI Foundations, and how is it different? \n\n#### **Suggested Time: 25 minutes**"
         pl-sandbox-aif-sem-2-unit-1:
           lessons:
             lesson-1:
@@ -25300,12 +25300,16 @@ en:
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
 
+            #### **Suggested Time: 60 minutes**
+
 
           student_description: |+
             ## Welcome
             #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
 
             #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Suggested Time: 60 minutes**
 
         pl-sandbox-aif-sem-2-unit-2:
           lessons:
@@ -25321,11 +25325,15 @@ en:
             #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
             #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 60 minutes**
           student_description: |-
             ## Welcome!
             #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
 
             #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 60 minutes**
         aif1-v2-2025:
           lesson_groups:
             lessonGroup-3:
@@ -26004,6 +26012,8 @@ en:
               name: Unit 4 Prototypes
             lesson-5:
               name: Unit 5 Code Examples
+            lesson-6:
+              name: Unit 5 Prototypes
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -26294,11 +26304,32 @@ en:
           title: 'Teaching Unit 3: Data-Driven Systems'
           description_audience: ''
           description_short: ''
+          description: |2
+
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+          student_description: |2+
+
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this  module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+
+        pl-sandbox-aif-sem-2-unit-4:
+          lessons:
+            lesson-1:
+              name: Teaching Iterating with AI
+          lesson_groups: {}
+          name: pl-sandbox-aif-sem-2-unit-4
+          title: Teaching Iterating with AI
+          description_audience: ''
+          description_short: ''
           description: ''
           student_description: ''
-        pl-sandbox-aif-sem-2-unit-4:
-          lessons: {}
-          lesson_groups: {}
         miniexpress1:
           lessons: {}
           lesson_groups: {}
@@ -26614,7 +26645,9 @@ en:
           description: ''
           student_description: ''
         6-12-aif-s2-unit6:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Playground
           lesson_groups: {}
           name: 6-12-aif-s2-unit6
           title: "[DEV] AIF S2 Unit 6"
@@ -26622,3 +26655,115 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-teaching-aif-s1-overview-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aif-s1-overview-2026
+          title: Introduction to AI Foundations, Semester 1
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##Start Here!
+
+            #### This professional learning module is designed to help you prepare to teach Semester 1 of Code.org’s [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations). It provides an overview of the curriculum, teaching resources, and learning foundations.
+
+            #### It is recommended that you complete this module before working through any of the unit specific modules.
+          student_description: |-
+            ##Start Here!
+
+            #### This professional learning module is designed to help you prepare to teach Semester 1 of Code.org’s [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations). It provides an overview of the curriculum, teaching resources, and learning foundations.
+
+            #### It is recommended that you complete this module before working through any of the unit specific modules.
+        self-paced-pl-teaching-ps-with-ai-s1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ps-with-ai-s1-2026
+          title: Teaching Problem-Solving with AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-foundations-ai-programming-2026:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-teaching-foundations-ai-programming-s1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-foundations-ai-programming-s1-2026
+          title: Teaching Foundations of AI Programming
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-ai-systems-that-power-it-s1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-systems-that-power-it-s1-2026
+          title: Teaching AI and the Systems that Power It
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-fabric-of-internet-and-ai-s1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-fabric-of-internet-and-ai-s1-2026
+          title: Teaching the Fabric of The Internet
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/4).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026
+          title: Teaching AI-Powered Threats and Defenses
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/5).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+        self-paced-pl-teaching-insights-from-data-ai-s1-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-insights-from-data-ai-s1-2026
+          title: Teaching Insights from Data and AI
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/6).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/6).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
