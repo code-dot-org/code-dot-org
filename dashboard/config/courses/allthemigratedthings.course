@@ -11,7 +11,7 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "allthemigratedthings",
+    "family_name": "ui-test-versioned-script",
     "version_year": "2020"
   },
   "resources": [

@@ -102,7 +102,7 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
     end
 
     context 'when teacher email is internal' do
-      let(:teacher) {create(:teacher, email: 'teacher@code.org', name: teacher_name)}
+      let(:teacher) {create(:teacher, email: 'teacher@code.org', name: teacher_name, current_sign_in_at: 48.months.ago)}
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
@@ -113,6 +113,12 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
         send_warning_emails
         _(described_instance.send(:num_teachers_warned)).must_equal 0
       end
+
+      it 'sets deletion_warning_email_sent_at' do
+        send_warning_emails
+        teacher.reload
+        _(teacher.user_data_retention_status&.deletion_warning_email_sent_at).wont_be_nil
+      end
     end
 
     context 'when dry run' do
@@ -120,6 +126,39 @@ class User::InactiveTeacherDeletionWarningMailerTest < ActiveJob::TestCase
       it 'does not send emails in dry run mode' do
         expect_teacher_warning_to_be_sent.never
         send_warning_emails
+      end
+    end
+
+    describe 'when limit is provided' do
+      context 'when limit is zero' do
+        let(:limit) {0}
+        it 'limits the inactive teachers query to the specified limit' do
+          expect_teacher_warning_to_be_sent.never
+          send_warning_emails
+          _(described_instance.send(:num_teachers_warned)).must_equal 0
+        end
+      end
+
+      context 'when limit is greater than zero' do
+        let(:limit) {1}
+
+        let(:other_teacher) {create(:teacher, email: other_email, name: other_name, current_sign_in_at: 48.months.ago, user_data_retention_status: create(:user_data_retention_status))}
+        let(:other_email) {Faker::Internet.email}
+        let(:other_name) {Faker::Name.name}
+        let(:expect_other_teacher_warning_to_be_sent) do
+          MailJet.expects(:send_email).with(
+            :inactive_teacher_deletion_warning,
+            other_teacher.email,
+            other_teacher.name,
+            vars: {first_name: other_teacher.given_name || other_teacher.name}
+          )
+        end
+        it 'sends emails up to the specified limit' do
+          expect_teacher_warning_to_be_sent.times(1)
+          expect_other_teacher_warning_to_be_sent.never
+          send_warning_emails
+          _(described_instance.send(:num_teachers_warned)).must_equal 1
+        end
       end
     end
   end
