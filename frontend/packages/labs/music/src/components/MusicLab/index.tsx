@@ -12,8 +12,14 @@ import type {
   Environment,
   BlocklySerialization,
 } from '@code-dot-org/blockly-workspace';
-import {GuideInstructions, LabConstants} from '@code-dot-org/lab';
+import {
+  GuideInstructions,
+  LabConstants,
+  PanelContainer,
+  WorkspaceHeader,
+} from '@code-dot-org/lab';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
+import HeaderButtons from '../HeaderButtons';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 import '@code-dot-org/lab/resourcePanel/index.css';
 import '@code-dot-org/lab/index.css';
@@ -29,6 +35,7 @@ import MusicPlayer from '../../player/MusicPlayer';
 import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
 import {useAppDispatch, useAppSelector} from '../../redux/store';
+import {labActions} from '@code-dot-org/lab/redux';
 import type {MusicLevelProperties} from '../../types';
 
 import moduleStyles from './musicLab.module.scss';
@@ -64,6 +71,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
     state => state.labView.isStandaloneCollapsed,
   );
 
+  const {skipUrl} = levelProperties;
   const guideMode = levelProperties.levelData.guideMode;
   const startSources: ProjectSources = {
     source: 'hello world',
@@ -71,12 +79,30 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
 
   const {theme, setTheme} = useTheme();
 
+  const hideChaff = useCallback(() => {}, []);
+  const undo: () => void = () => {};
+  const redo: () => void = () => {};
+  const clearCode: (maintainPackId?: boolean) => void = _ => {};
+  const allowPackSelection = false;
+
   useEffect(() => {
     // Ensure we use dark theme for music lab, for now
     if (theme === 'Light') {
       setTheme('Dark');
+      // TODO: add a channel/progress wrapper for offline levels
+      dispatch(
+        labActions.setChannel({
+          id: '1',
+          name: 'my-channel',
+          isOwner: true,
+          projectType: 'music',
+          createdAt: '2026-01-01',
+          updatedAt: '2026-01-01',
+          hidden: false,
+        }),
+      );
     }
-  }, [theme, setTheme]);
+  }, [dispatch, theme, setTheme]);
 
   // Set up the driver
   useEffect(() => {
@@ -103,6 +129,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   );
 
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
+  const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const instructionsPosition = useAppSelector(
     state => state.music.instructionsPosition,
   );
@@ -182,6 +209,22 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
           </div>
 
           <div id="blockly-area" className={moduleStyles.blocklyArea}>
+            <PanelContainer
+              id="workspace-panel"
+              headerContent={<WorkspaceHeader />}
+              hideHeaders={hideHeaders}
+              rightHeaderContent={
+                <HeaderButtons
+                  onClickUndo={undo}
+                  onClickRedo={redo}
+                  clearCode={clearCode}
+                  allowPackSelection={allowPackSelection}
+                  skipUrl={skipUrl}
+                  hideChaff={hideChaff}
+                />
+              }
+              headerClassName={moduleStyles.headerWithBorder}
+            ></PanelContainer>
             <BlocklyWorkspace<Environment>
               className={moduleStyles.blocklyWorkspace}
               options={{
