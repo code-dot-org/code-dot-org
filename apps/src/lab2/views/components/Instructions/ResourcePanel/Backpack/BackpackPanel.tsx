@@ -290,7 +290,10 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         {secondaryFileLists && secondaryBackpackApis !== undefined
           ? Object.entries(secondaryFileLists).map(
               ([appName, secondaryFileList]) => (
-                <div key={`backpack-${appName}`}>
+                <div
+                  key={`backpack-${appName}`}
+                  className={moduleStyles.secondaryFileList}
+                >
                   <BodyThreeText className={moduleStyles.backpackDivider}>
                     {appName}
                   </BodyThreeText>

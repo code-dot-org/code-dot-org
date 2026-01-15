@@ -18,6 +18,7 @@
   width: 100%;
   flex: 1;
   overflow-y: auto;
+  padding-right: 8px;
 }
 
 .saveButton {
@@ -30,4 +31,10 @@
   align-items: center;
   gap: 8px;
   align-self: stretch;
+}
+
+.secondaryFileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
