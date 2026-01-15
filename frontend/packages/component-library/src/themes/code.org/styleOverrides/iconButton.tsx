@@ -452,9 +452,10 @@ export const ICON_BUTTON_OVERRIDES = {
         '&:focus, a&:focus': {
           boxShadow: 'none', // Remove shadow on focus
           textDecoration: 'none',
+          outline: 'none',
         },
 
-        '&:focus-visible': {
+        '&:focus-visible, a&:focus-visible': {
           outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
           borderRadius: '0.375rem',

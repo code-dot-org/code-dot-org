@@ -512,9 +512,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:focus, a&:focus': {
           boxShadow: 'none', // Remove shadow on focus
           textDecoration: 'none',
+          outline: 'none', // Remove default outline to use focus-visible styles
         },
 
-        '&:focus-visible': {
+        '&:focus-visible, a&:focus-visible': {
           outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
           borderRadius: '0.375rem',
