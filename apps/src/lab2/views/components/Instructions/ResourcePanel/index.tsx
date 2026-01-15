@@ -67,6 +67,7 @@ interface VersionHistoryProps {
   startSources: ProjectSources;
   alwaysShowAutoSaves?: boolean;
   onLoadVersion?: (sources: ProjectSources) => void;
+  sourcesContainerSources?: ProjectSources;
 }
 
 export interface BackpackProps {
@@ -263,6 +264,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           isOpen={currentTab === Tabs.VersionHistory}
           alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
           onLoadVersion={versionHistoryProps.onLoadVersion}
+          sourcesContainerSources={versionHistoryProps.sourcesContainerSources}
         />
       );
     }
