@@ -48,22 +48,22 @@ export type GenericPromptProps = Pick<
 
 type GenericPromptBodyProps = {
   message?: string;
+  messageMargin?: boolean;
   prompt: string;
   handleInputChange: (newInput: string) => void;
   handleDropdownChange?: (newValue: string) => void;
   errorMessage?: string;
-  messageMargin?: boolean;
   textFieldProps?: Partial<ComponentProps<typeof TextField>>;
   dropdownProps?: Partial<ComponentProps<typeof SimpleDropdown>>;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   message,
+  messageMargin = true,
   prompt,
   handleInputChange,
   handleDropdownChange,
   errorMessage,
-  messageMargin = true,
   textFieldProps,
   dropdownProps,
 }) => {
