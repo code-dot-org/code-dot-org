@@ -44,7 +44,9 @@ describe('Java Lab Backpack Test', () => {
   };
 
   const openBackpack = async user => {
-    await user.click(screen.getByRole('button', {name: /backpack/i}));
+    await user.click(
+      screen.getByRole('button', {name: javalabMsg.backpackLabel()})
+    );
   };
 
   it('updates selected files correctly', async () => {
