@@ -1,3 +1,4 @@
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -51,60 +52,41 @@ export default class VersionRow extends React.Component {
     let buttons = [];
     if (this.props.isLatest) {
       buttons.push(
-        <button
-          key={'latest-version-message'}
-          type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', background: 'none', border: 'none'}}
-        >
-          {msg.latestVersion()}
-        </button>
+        <Button
+          key="latest-version-message"
+          color="black"
+          type="tertiary"
+          onClick={() => {}}
+          text={msg.latestVersion()}
+        />
       );
     } else if (!this.props.isReadOnly) {
-      const className = this.props.isSelectedVersion
-        ? 'btn-info'
-        : 'img-upload';
       buttons.push(
-        <button
-          key={'restore-version-button'}
-          type="button"
-          className={className}
+        <Button
+          key="restore-version-button"
+          color="black"
+          type="secondary"
           onClick={this.props.onChoose}
-        >
-          {msg.restore()}
-        </button>
+          className="version-restore"
+          text={msg.restore()}
+        />
       );
     }
 
-    if (!this.props.isSelectedVersion) {
-      buttons.push(
-        <a
-          key={'not-selected-version-button'}
-          href={
-            location.origin + location.pathname + '?' + this.getQueryParams()
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button type="button" className="btn-info">
-            {msg.view()}
-          </button>
-        </a>
-      );
-    } else {
-      buttons.push(
-        <button
-          key={'disabled-view-button'}
-          type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', color: 'white'}}
-        >
-          {msg.view()}
-        </button>
-      );
-    }
+    buttons.push(
+      <LinkButton
+        key={
+          this.props.isSelectedVersion
+            ? 'disabled-view-button'
+            : 'not-selected-version-button'
+        }
+        color="purple"
+        disabled={this.props.isSelectedVersion}
+        href={location.origin + location.pathname + '?' + this.getQueryParams()}
+        text={msg.view()}
+        target="_blank"
+      />
+    );
 
     return (
       <tr
@@ -120,7 +102,10 @@ export default class VersionRow extends React.Component {
             })}
           </p>
         </td>
-        <td width="275" height="52" style={{textAlign: 'right'}}>
+        <td
+          width="275"
+          style={{display: 'flex', justifyContent: 'flex-end', gap: '10px'}}
+        >
           {buttons}
         </td>
       </tr>

@@ -1,4 +1,5 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -11,10 +12,11 @@ describe('VersionRow', () => {
   const MINIMUM_PROPS = {
     versionId: 'abcdef',
     lastModified: new Date(),
+    onChoose: () => {},
   };
 
   it('renders preview and restore buttons for a non-latest version', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={false}
@@ -24,21 +26,15 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.not.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
-      <a target="_blank">
-        <button type="button" className="btn-info">
-          {msg.view()}
-        </button>
-      </a>
+      <LinkButton color="purple" text={msg.view()} target="_blank" />
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="img-upload">
-        {msg.restore()}
-      </button>
+      <Button color="black" type="secondary" text={msg.restore()} />
     );
   });
 
   it('renders restore button and disabled view button for selected version', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={false}
@@ -48,19 +44,20 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-default">
-        {msg.view()}
-      </button>
+      <LinkButton
+        color="purple"
+        disabled={true}
+        text={msg.view()}
+        target="_blank"
+      />
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-info">
-        {msg.restore()}
-      </button>
+      <Button color="black" type="secondary" text={msg.restore()} />
     );
   });
 
   it('renders a disabled button for the latest version', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={true}
@@ -68,22 +65,15 @@ describe('VersionRow', () => {
         isReadOnly={false}
       />
     );
+
     expect(wrapper).to.containMatchingElement(
-      <button
-        key={'latest-version-message'}
-        type="button"
-        className="btn-default"
-        disabled="disabled"
-        style={{cursor: 'default', background: 'none', border: 'none'}}
-      >
-        {msg.latestVersion()}
-      </button>
+      <Button color="black" type="tertiary" text={msg.latestVersion()} />
     );
   });
 
   it('calls onChoose when restore button is clicked', () => {
     const onChoose = sinon.spy();
-    const wrapper = shallow(
+    const wrapper = mount(
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={false}
@@ -94,7 +84,7 @@ describe('VersionRow', () => {
     );
     expect(onChoose).not.to.have.been.called;
 
-    wrapper.find('.img-upload').simulate('click');
+    wrapper.find('.version-restore button').simulate('click');
     expect(onChoose).to.have.been.calledOnce;
   });
 });

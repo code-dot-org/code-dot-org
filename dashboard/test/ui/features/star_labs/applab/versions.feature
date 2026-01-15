@@ -67,7 +67,7 @@ Scenario: Project Load and Reload
   And I wait until element "div:contains(Latest Version)" is visible
 
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
+  And element ".versionRow:nth-child(2) .version-restore button" contains text "Restore"
 
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):eq(1)" is not visible
 
@@ -100,7 +100,7 @@ Scenario: Project Version Checkpoints
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
+  And element ".versionRow:nth-child(2) .version-restore button" contains text "Restore"
 
 @no_mobile
 Scenario: Project page refreshes when other client adds a newer version

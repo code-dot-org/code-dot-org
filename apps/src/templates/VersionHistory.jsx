@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -195,14 +196,12 @@ export default class VersionHistory extends React.Component {
                       <p>{i18n.versionHistory_initialVersion_label()}</p>
                     </td>
                     <td width="250" style={{textAlign: 'right'}}>
-                      <button
-                        type="button"
-                        className="btn-danger"
+                      <Button
+                        text={i18n.versionHistory_clearProgress_confirm()}
+                        color="destructive"
+                        className="version-clear-progress"
                         onClick={this.onConfirmClearPuzzle}
-                        style={{float: 'right'}}
-                      >
-                        {i18n.versionHistory_clearProgress_confirm()}
-                      </button>
+                      />
                     </td>
                   </tr>
                 )}

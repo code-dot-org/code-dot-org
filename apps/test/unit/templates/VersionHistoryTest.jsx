@@ -164,14 +164,14 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.toHaveBeenCalled();
 
-      wrapper.find('.img-upload').first().simulate('click');
+      wrapper.find('.version-restore button').first().simulate('click');
       expect(restoreSpy()).toHaveBeenCalledTimes(1);
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('.img-upload').first().simulate('click');
+      wrapper.find('.version-restore button').first().simulate('click');
 
       failRestoreVersion();
       expect(wrapper.text()).toContain('An error occurred.');
@@ -180,7 +180,7 @@ describe('VersionHistory', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('.img-upload').first().simulate('click');
+      wrapper.find('.version-restore button').first().simulate('click');
       expect(utils.reload).not.toHaveBeenCalled();
 
       finishRestoreVersion();
@@ -192,7 +192,7 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('.btn-danger').simulate('click');
+      wrapper.find('.version-clear-progress button').simulate('click');
 
       // Expect confirmation to show
       expect(
@@ -218,7 +218,7 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('.btn-danger').simulate('click');
+      wrapper.find('.version-clear-progress button').simulate('click');
 
       // Expect confirmation to show
       expect(
@@ -250,7 +250,7 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('.btn-danger').simulate('click');
+      wrapper.find('.version-clear-progress button').simulate('click');
 
       expect(wrapper.find('.template-level-warning')).toBeDefined();
     });
@@ -264,7 +264,7 @@ describe('VersionHistory', () => {
           <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
         );
         finishVersionHistoryLoad();
-        wrapper.find('.btn-danger').simulate('click');
+        wrapper.find('.version-clear-progress button').simulate('click');
         wrapper.find('#start-over-button').simulate('click');
       });
 
