@@ -89,8 +89,23 @@ class AichatRequestsController < ApplicationController
   def create_request
     safe_params = params.permit(
       :locale,
-      newMessage: [:role, :chatMessageText, :status, :hiddenContext, :timestamp],
-      storedMessages: [:role, :chatMessageText, :status],
+      newMessage: [
+        :role,
+        :chatMessageText,
+        :chatMessageDisplayText,
+        :status,
+        :hiddenContext,
+        :timestamp,
+        {assets: [:filename, :source]},
+        {userAddedSelectionContext: [:sourceCode, :filename, :displayName, {lineReference: [:start, :end]}]}
+      ],
+      storedMessages: [
+        :role,
+        :chatMessageText,
+        :status,
+        :timestamp,
+        {assets: [:filename, :source]},
+      ],
       modelParameters: [
         :selectedModelId, :temperature, :systemPrompt,
         {retrievalContexts: [], responseJsonSchema: {}}
