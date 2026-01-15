@@ -7,16 +7,12 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
-import type {ComponentType, LazyExoticComponent} from 'react';
-
-import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
+import type {Level} from '@code-dot-org/api/models/levels';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {ExemplarSettings} from '@code-dot-org/progress';
 import type {
   AppName,
   MultiFileSource,
-  Source,
-  ProjectFile,
   ProjectSources,
   ProjectVersion,
   Channel,
@@ -38,41 +34,18 @@ export interface PartialUserAppOptions {
 
 /// ------ LEVELS ------ ///
 
-/**
- * Labs may extend this type to add lab-specific properties.
- */
-export interface LevelProperties {
-  // Not a complete list; add properties as needed.
-  id: number;
-  name: string;
+export interface BaseLabProperties {
+  appName: AppName;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
   usesProjects?: boolean;
-  levelData?: LevelData;
-  appName: AppName;
-  longInstructions?: string;
-  freePlay?: boolean;
-  edit_blocks?: string;
-  isK1?: boolean;
-  skin?: string;
-  toolboxBlocks?: string;
   startSources?: MultiFileSource;
   templateSources?: MultiFileSource;
-  sharedBlocks?: BlockDefinition[];
-  validations?: Validation[];
-  baseAssetUrl?: string;
-  // An optional URL that allows the user to skip the progression.
-  skipUrl?: string;
+  hideVersionHistory?: boolean;
+  aiTutorAvailable?: boolean;
+  showRubric?: boolean;
   // Project Template level name for the level if it exists.
   projectTemplateLevelName?: string;
-  // Help and Tips values
-  mapReference?: string;
-  referenceLinks?: string[];
-  helpVideos?: VideoData[];
-  // Exemplars
-  exampleSolutions?: string[];
-  exemplarSources?: Source;
-  exemplarSettings?: ExemplarSettings;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
@@ -82,92 +55,20 @@ export interface LevelProperties {
   finishDialog?: string;
   offerBrowserTts?: boolean;
   useSecondaryFinishButton?: boolean;
-  // Python Lab/Codebridge specific properties
-  validationFile?: ProjectFile;
-  enableMicroBit?: boolean;
-  miniApp?: string;
-  serializedMaze?: MazeCell[][];
-  startDirection?: number;
+  // Codebridge
   widgetView?: boolean;
-  widgetViewAllowShowCode?: boolean;
-  aiTutor2Available?: boolean;
-  // Properties added for parity with non-lab2 AI Tutor levels
-  aiTutorAvailable?: boolean;
-  isAssessment?: boolean;
-  progressionType?: string;
-  type?: string;
-  starterAssets?: {[key: string]: string};
-  showRubric?: boolean;
-  customHelperLibrary?: string;
-  validationCode?: string;
-  hideVersionHistory?: boolean;
 }
 
-// Level configuration data used by project-backed labs that don't require
-// reloads between levels. Labs may define more specific fields.
-export interface ProjectLevelData {
-  startSources: Source;
-}
-
-// The level data for a standalone_video level that doesn't require
-// reloads between levels.
-export interface VideoLevelData {
-  src: string;
-  download: string;
-  thumbnail: string;
-}
-
-// The level data for a bubble_choice level that doesn't require
-// reloads between levels.
-export interface BubbleChoiceLevelData {
-  displayName: string;
-  description: string;
-  sublevels: BubbleChoiceSublevel[];
-}
-
-// Bubble Choice specific property
-export interface BubbleChoiceSublevel {
-  display_name: string;
-  description?: string;
-  level_id: string;
-  thumbnail_url: string;
-  url: string;
-}
-
-// Addtional fields for videos that are linked as references in the
-// Help & Tips tab of Instructions.
-interface VideoData extends VideoLevelData {
-  name?: string;
-  key?: string;
-  enable_fallback?: boolean;
-  autoplay?: boolean;
-}
-
-// Python Lab specific property
-export interface MazeCell {
-  tileType: number;
-  value: number;
-  assetId: number;
-}
-
-// Configuration for how a Lab should be rendered
-export interface Lab2EntryPoint {
-  /**
-   * A lazy loaded view for the lab. This should be a lazy-loaded react
-   * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
-   * example.
-   */
-  view: LazyExoticComponent<ComponentType<LabProps>>;
-  /**
-   * An array of themes that the lab supports.
-   */
-  themes: Theme[];
-}
-
-export type LevelData =
-  | ProjectLevelData
-  | VideoLevelData
-  | BubbleChoiceLevelData;
+/**
+ * Labs may extend this type to add lab-specific properties.
+ */
+export type LevelProperties<
+  T extends BaseLabProperties = BaseLabProperties,
+  U extends object = object,
+> = Level<T> & {
+  // Other level data
+  levelData: U;
+};
 
 export type StandaloneAppName =
   | 'spritelab'
@@ -216,6 +117,7 @@ export interface ExtraLinksLevelData {
   parent_level_path_links: ParentLevelPathLink[];
   is_standalone_project: boolean;
 }
+
 export interface ExtraLinksProjectData {
   owner_info?: {storage_id: number; name: string};
   project_info?: {

@@ -1,5 +1,5 @@
-import {useState, createContext} from 'react';
 import type {FunctionComponent, PropsWithChildren} from 'react';
+import {useState, createContext, useContext} from 'react';
 
 import type {Plugin} from '@blockly-workspace/plugins';
 import type {
@@ -22,6 +22,13 @@ const BlocklyContext = createContext<BlocklyContent>({
   setTheme: (_: Theme) => {},
   blocks: [],
 });
+
+/**
+ * This hook returns the blockly state.
+ */
+export const useBlocklyContext = () => {
+  return useContext(BlocklyContext);
+};
 
 export interface BlocklyProviderProps extends PropsWithChildren {
   blocks?: BlockDefinition[];

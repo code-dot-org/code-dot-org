@@ -38,9 +38,9 @@ export enum LevelKind {
 }
 
 /** Describes a level's properties */
-export interface Level<T extends object = object> {
+export type Level<T extends object = object> = {
   /** Unique incremental id for this level */
-  id?: number;
+  id: number;
   /** Unique incremental id for the parent level */
   parentLevelId?: number;
   /** Unique incremental id for the script level */
@@ -87,6 +87,4 @@ export interface Level<T extends object = object> {
   videoData?: VideoData;
   /** Sub-levels */
   sublevels?: Level[];
-  /** Specific level data. */
-  subData?: T;
-}
+} & T;

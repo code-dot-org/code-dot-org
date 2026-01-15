@@ -2,26 +2,39 @@ import * as Blockly from 'blockly/core';
 
 import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
-import {useRef, useMemo, useEffect} from 'react';
+import {useRef, useCallback, useMemo, useEffect} from 'react';
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
+import type {ProjectSources} from '@code-dot-org/projects';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
 import type {
   Environment,
   BlocklySerialization,
 } from '@code-dot-org/blockly-workspace';
 import {GuideInstructions, LabConstants} from '@code-dot-org/lab';
+import {useBlocklySettings} from '@code-dot-org/lab/hooks';
+import ResourcePanel from '@code-dot-org/lab/resourcePanel';
+import '@code-dot-org/lab/resourcePanel/index.css';
+import '@code-dot-org/lab/index.css';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
-import type {Level} from '@code-dot-org/api/models/levels';
 
+import ExemplarPlayerView from '../ExemplarPlayerView';
+
+import AppConfig from '../../appConfig';
 import blocks from '../../blockly/blocks';
-import {InstructionsPosition} from '../../redux/musicSlice';
-import {useAppSelector} from '../../redux/store';
-import type {MusicData} from '../../types';
+import MusicPlayer from '../../player/MusicPlayer';
+import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
+import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
+import {useAppDispatch, useAppSelector} from '../../redux/store';
+import type {MusicLevelProperties} from '../../types';
 
-import styles from './musicLab.module.scss';
+import moduleStyles from './musicLab.module.scss';
+
+const exemplarPlayerInsideInstructions =
+  AppConfig.getValue('exemplar-player-bottom') !== 'true';
 
 //const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
@@ -38,27 +51,55 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface MusicLabProps {
-  level: Level<MusicData>;
+  levelProperties: MusicLevelProperties;
 }
 
-const MusicLab: FunctionComponent<MusicLabProps> = ({level}) => {
+const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   const workspaceRef = useRef<Blockly.Workspace | null>(null);
+
+  const settings = useBlocklySettings();
+  const dispatch = useAppDispatch();
+
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.labView.isStandaloneCollapsed,
+  );
+
+  const guideMode = levelProperties.levelData.guideMode;
+  const startSources: ProjectSources = {
+    source: 'hello world',
+  };
+
+  const {theme, setTheme} = useTheme();
+
+  useEffect(() => {
+    // Ensure we use dark theme for music lab, for now
+    if (theme === 'Light') {
+      setTheme('Dark');
+    }
+  }, [theme, setTheme]);
 
   // Set up the driver
   useEffect(() => {
     return () => {
       console.log('UNINIT THE MUSIC LEVEL');
     };
-  }, [level]);
+  }, [levelProperties]);
+
+  const onInstructionsTextClick = useCallback(
+    (id: string) => {
+      dispatch(showCallout(id));
+    },
+    [dispatch],
+  );
 
   const toolboxBlocks = useMemo(
     () =>
-      level.multipleChoice
+      levelProperties.multipleChoice
         ? undefined
-        : level.subData?.toolboxBlocks?.contents?.length === 0
+        : levelProperties.toolboxBlocks?.contents?.length === 0
           ? undefined
-          : level.subData?.toolboxBlocks,
-    [level],
+          : levelProperties.toolboxBlocks,
+    [levelProperties],
   );
 
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
@@ -66,51 +107,98 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({level}) => {
     state => state.music.instructionsPosition,
   );
 
+  const hasRun = false;
+  const hasEdited = false;
+  const isPlaying = false;
+  const showExemplarPlayer = false;
+  const exemplarPlaybackEvents: PlaybackEvent[] = [];
+  const player: MusicPlayer = new MusicPlayer();
+
   return (
-    <div className={styles.musicLab}>
+    <div className={moduleStyles.musicLab}>
       <div
         className={classNames(
-          styles.mainContent,
-          timelineAtTop && styles.reverse,
+          moduleStyles.mainContent,
+          timelineAtTop && moduleStyles.reverse,
         )}
       >
-        <GuideInstructions
-          levelProperties={{
-            id: 1,
-            name: 'music-lab',
-            appName: 'music',
-            longInstructions:
-              'This is a demo of music lab within a vite application',
-          }}
-          isRunning={false}
-          hasRun={false}
-          hasEdited={false}
-        />
+        {guideMode === 'instructions' && (
+          <GuideInstructions
+            levelProperties={levelProperties}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={false}
+          />
+        )}
         <div
           id="work-area"
-          className={classNames(styles.workArea, {
+          className={classNames(moduleStyles.workArea, {
             // Allow full height when the play area is hidden.
-            [styles.toolboxMode]: isToolboxMode,
-            [styles.reverse]:
+            [moduleStyles.toolboxMode]: isToolboxMode,
+            [moduleStyles.reverse]:
               instructionsPosition === InstructionsPosition.RIGHT,
           })}
         >
-          <BlocklyWorkspace<Environment>
-            options={{
-              readOnly: level.multipleChoice ? true : undefined,
-            }}
-            startBlocks={
-              level.template?.subData?.startBlocks ||
-              level.subData?.startBlocks ||
-              DefaultStartBlocks
-            }
-            blocks={blocks}
-            toolboxBlocks={toolboxBlocks}
-            theme={DefaultTheme}
-            renderer={ThrasosRenderer}
-            workspaceRef={workspaceRef}
-            plugins={[ToolboxTrashcanPlugin]}
-          />
+          <div
+            id="instructions-area"
+            className={classNames(
+              moduleStyles.instructionsArea,
+              moduleStyles.instructionsSide,
+              (isStandaloneCollapsed || guideMode) &&
+                moduleStyles.instructionsCollapsed,
+            )}
+          >
+            <ResourcePanel
+              isRunning={isPlaying}
+              onInstructionsTextClick={onInstructionsTextClick}
+              bottomComponent={
+                exemplarPlayerInsideInstructions &&
+                showExemplarPlayer && (
+                  <ExemplarPlayerView
+                    playbackEvents={exemplarPlaybackEvents}
+                    title={
+                      levelProperties.levelData.exemplarSettings!.playerTitle!
+                    }
+                    player={player}
+                    insideInstructions={exemplarPlayerInsideInstructions}
+                  />
+                )
+              }
+              hasRun={hasRun}
+              hasEdited={hasEdited}
+              fixedDarkBackground={true}
+              overrideTheme={'Light'}
+              includeFooterSpacing={false}
+              levelProperties={levelProperties}
+              headerClassName={moduleStyles.headerWithBorder}
+              settings={settings}
+              hideContinueIfDisabled={true}
+              hideNavigation={false}
+              styleNavigationAsBubble={true}
+              documentationUrl={'/docs/ide/music'}
+              sidebarOnly={!!guideMode}
+              versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
+            />
+          </div>
+
+          <div id="blockly-area" className={moduleStyles.blocklyArea}>
+            <BlocklyWorkspace<Environment>
+              options={{
+                readOnly: levelProperties.multipleChoice ? true : undefined,
+              }}
+              startBlocks={
+                levelProperties.template?.startBlocks ||
+                levelProperties.startBlocks ||
+                DefaultStartBlocks
+              }
+              blocks={blocks}
+              toolboxBlocks={toolboxBlocks}
+              theme={DefaultTheme}
+              renderer={ThrasosRenderer}
+              workspaceRef={workspaceRef}
+              plugins={[ToolboxTrashcanPlugin]}
+            />
+          </div>
         </div>
       </div>
     </div>

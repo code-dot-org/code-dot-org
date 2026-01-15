@@ -54,6 +54,7 @@
     "@magenta/music": "^1.23.1",
     "@react-hook/resize-observer": "^2.0.2",
     "@rexxars/react-split-pane": "^1.0.0",
+    "intro.js": "^8.3.2",
     "lodash": "^4.17.21",
     "react-focus-lock": "^2.13.6",
     "tone": "15.1.22"

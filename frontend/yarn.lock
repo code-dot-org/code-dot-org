@@ -1524,6 +1524,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/theme-dark@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "@blockly/theme-dark@npm:8.0.3"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/e9269455c26954ee7db6f9aa8043a6876371e31d71a4d470b8991e8fe8f1fee4556848109eb703901d01cdc76bd08c39af56d77e22f9f279df0bdab56b6ca6f4
+  languageName: node
+  linkType: hard
+
+"@blockly/theme-highcontrast@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "@blockly/theme-highcontrast@npm:7.0.3"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/45a3b2bad53c6177e97f9d62143f15ee1d7195bea42e2e2f85fdb661c586cc1ec598d5cbaf450f091c13de89894bce2395795a61b1d9363e78be0a5893818b3e
+  languageName: node
+  linkType: hard
+
 "@code-dot-org/api@workspace:*, @code-dot-org/api@workspace:packages/api":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/api@workspace:packages/api"
@@ -1656,6 +1674,8 @@ __metadata:
     "@blockly/block-shareable-procedures": "npm:^6.0.1"
     "@blockly/field-colour": "npm:^6.0.4"
     "@blockly/field-grid-dropdown": "npm:^6.0.3"
+    "@blockly/theme-dark": "npm:^8.0.3"
+    "@blockly/theme-highcontrast": "npm:^7.0.3"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
@@ -1935,6 +1955,7 @@ __metadata:
     "@code-dot-org/blockly-workspace": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
@@ -1944,6 +1965,7 @@ __metadata:
     "@code-dot-org/teacher-dashboard": "workspace:*"
     "@code-dot-org/user": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
+    "@fortawesome/fontawesome-free": "npm:^7.1.0"
     "@reduxjs/toolkit": "npm:^2.8.2"
     "@release-it/conventional-changelog": "npm:^10.0.0"
     "@swc/core": "npm:^1.9.3"
@@ -2235,6 +2257,7 @@ __metadata:
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
     globals: "catalog:"
+    intro.js: "npm:^8.3.2"
     lodash: "npm:^4.17.21"
     prettier: "npm:3.4.2"
     react: "npm:^19.2.0"
@@ -3419,6 +3442,13 @@ __metadata:
   version: 5.2.6
   resolution: "@fontsource/roboto-mono@npm:5.2.6"
   checksum: 10c0/a0ac77aacdce5b5fa4a1a4cdb364615e52a208040d5cfdf0537fcf9d84fd3130b7321e627969948430cc557599f4bdd89e38cd7ceaf13cf429b108f697c6a72e
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-free@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "@fortawesome/fontawesome-free@npm:7.1.0"
+  checksum: 10c0/3bcaf2c18f3b2ece0fb5640681f13051cb787d686ab444437b3605ba3dca9dce4c7c1f844d94b7ad011482ac20b2b387f3a4c33c2739b50c4425fe529ab7b050
   languageName: node
   linkType: hard
 
@@ -16039,6 +16069,13 @@ __metadata:
     intro.js: ">=2.5.0"
     react: ">=0.14.0"
   checksum: 10c0/e45a429419dc746408c7ad5a97f716a0bb16eb66f36742719e140f26f23a81ccab1cdc5f9d3a59b46ff00869ddeb8edf3c62a8f97024b746a13a891eaebc0b12
+  languageName: node
+  linkType: hard
+
+"intro.js@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "intro.js@npm:8.3.2"
+  checksum: 10c0/8ee4b54a03cf3399ad4dced9d97d37f7c6765d81cc4c758ee9ad6407c4be94a2538330f32da4f84cecf5d2db51a0706d39ddec76fa54e3b07028a9617cf6cd36
   languageName: node
   linkType: hard
 

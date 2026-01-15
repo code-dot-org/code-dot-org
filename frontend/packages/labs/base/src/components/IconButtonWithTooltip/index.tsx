@@ -55,20 +55,17 @@ const IconButtonWithTooltip: FunctionComponent<IconButtonWithTooltipProps> =
     }) => {
       const tooltipRef = useRef<WithTooltipHandle>(null);
 
-      const handleClick = useCallback(
-        () => {
-          // Hide the tooltip when button is clicked (keyboard or mouse)
-          tooltipRef.current?.hideTooltip();
-          onClick?.();
-          // Adding this to prevent focus from jumping to the next button
-          // and showing its tooltip when a button is disabled after click.
-          // This moves focus to the container div instead.
-          setTimeout(() => {
-            containerRef?.current?.focus();
-          }, 0);
-        },
-        [onClick, containerRef],
-      );
+      const handleClick = useCallback(() => {
+        // Hide the tooltip when button is clicked (keyboard or mouse)
+        tooltipRef.current?.hideTooltip();
+        onClick?.();
+        // Adding this to prevent focus from jumping to the next button
+        // and showing its tooltip when a button is disabled after click.
+        // This moves focus to the container div instead.
+        setTimeout(() => {
+          containerRef?.current?.focus();
+        }, 0);
+      }, [onClick, containerRef]);
 
       // Common props shared between Button and LinkButton.
       const commonButtonProps = {

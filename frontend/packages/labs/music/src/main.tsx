@@ -7,6 +7,10 @@ import '@code-dot-org/component-library-styles/colors.scss';
 // Import code.org brand fonts (Figtree, Noto Sans, Barlow)
 import '@code-dot-org/fonts/brands/code.org/index.css';
 
+// Load Font Awesome Pro 6 icons from CDN
+import {injectFontAwesome} from '@code-dot-org/fonts';
+injectFontAwesome();
+
 // Import lab CSS variables (borders, z-indices, etc.)
 import '@code-dot-org/lab/styles/variables.scss';
 

@@ -4,7 +4,8 @@ import * as Blockly from 'blockly/core';
  * The default blockly theme used to typically style the blocks in labs.
  */
 export const definition = {
-  name: 'cdo-default',
+  name: 'default',
+  option: 'Modern Theme',
   blockLimits: {
     indicator: {
       fill: 'var(--background-info-primary)',

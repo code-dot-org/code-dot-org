@@ -251,8 +251,7 @@ class Registry<T extends Environment & object> {
           state,
         );
       };
-      newMutator.saveExtraState ||= function () {
-      };
+      newMutator.saveExtraState ||= function () {};
       newMutator.getEnvironment = function (this: BlockSvg) {
         return environment;
       };

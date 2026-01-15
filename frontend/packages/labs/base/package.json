@@ -36,6 +36,16 @@
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
     },
+    "./instructions": {
+      "types": "./dist/types/instructions/index.d.ts",
+      "import": "./dist/esm/instructions/index.mjs",
+      "require": "./dist/cjs/instructions/index.js"
+    },
+    "./resourcePanel": {
+      "types": "./dist/types/resourcePanel/index.d.ts",
+      "import": "./dist/esm/resourcePanel/index.mjs",
+      "require": "./dist/cjs/resourcePanel/index.js"
+    },
     "./hooks": {
       "types": "./dist/types/hooks/index.d.ts",
       "import": "./dist/esm/hooks/index.mjs",
@@ -60,7 +70,8 @@
     },
     "./redux/predictLevelSlice": {
       "types": "./dist/types/redux/predictLevelSlice.d.ts"
-    }
+    },
+    "./styles/variables.scss": "./src/components/layout/variables.scss"
   },
   "main": "src/index.ts",
   "files": [
@@ -100,6 +111,7 @@
     "@code-dot-org/redux": "workspace:*",
     "@code-dot-org/teacher-dashboard": "workspace:*",
     "@code-dot-org/user": "workspace:*",
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@reduxjs/toolkit": "^2.8.2",
     "focus-trap-react": "^11.0.4",
     "intro.js-react": "^1.0.0",
@@ -112,6 +124,7 @@
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",

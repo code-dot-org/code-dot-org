@@ -1,11 +1,11 @@
-.panel-container {
+.panelContainer {
   display: flex;
   flex-direction: column;
   height: 100%;
   position: relative;
   width: 100%;
 
-  .panel-container-header {
+  .panelContainerHeader {
     background-color: var(--background-neutral-primary);
     border-bottom: var(--lab-border-default);
     color: var(--text-neutral-quaternary);

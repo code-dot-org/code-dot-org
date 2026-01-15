@@ -18,7 +18,7 @@ const ExtraLinksButtonContext = createContext<ExtraLinksButtonContent>({
 });
 
 /**
- * This hook returns the share dialog state.
+ * This hook returns the extra links state.
  */
 export const useExtraLinksButtonContext = () => {
   return useContext(ExtraLinksButtonContext);

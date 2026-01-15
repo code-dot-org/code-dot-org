@@ -29,7 +29,7 @@ const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
   handleConfirm,
   handleCancel = () => {},
 }) => {
-  const currentAppName = useApp().lab?.levelProperties?.appName;
+  const currentAppName = useApp().lab?.levelProperties.appName;
 
   const isTextWorkspace =
     currentAppName && TEXT_BASED_LABS.includes(currentAppName);

@@ -56,7 +56,7 @@ export async function fetchSharingDisabled(
 }
 
 export async function fetchIsTeacherOfProjectOwner(
-  channelId: string
+  channelId: string,
 ): Promise<boolean> {
   const {value} = await HttpClient.fetchJson<{
     is_teacher_of_project_owner: boolean;

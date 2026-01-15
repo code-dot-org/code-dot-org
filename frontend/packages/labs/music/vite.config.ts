@@ -47,6 +47,13 @@ export default defineConfig({
         __dirname,
         '../../markdown/dist/esm',
       ),
+      // Allow direct SCSS imports from source (must come before the general @code-dot-org/lab alias)
+      '@code-dot-org/lab/styles/variables.scss': path.resolve(
+        __dirname,
+        '../base/src/components/layout/variables.scss',
+      ),
+      // Use dist for compiled JS/CSS components
+      '@code-dot-org/lab': path.resolve(__dirname, '../base/dist/esm'),
     },
   },
   optimizeDeps: {
