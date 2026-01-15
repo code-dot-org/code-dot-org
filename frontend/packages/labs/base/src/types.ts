@@ -51,6 +51,7 @@ export interface BaseLabProperties {
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
+  skipUrl?: string;
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;
