@@ -52,10 +52,7 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
           textDecoration: 'none',
           borderRadius: '4px',
           margin: 0,
-          fontFamily: 'inherit',
-          fontFeatureSettings: 'inherit',
-          fontWeight: 'inherit',
-          fontSize: 'inherit',
+          ...sizeStyles[size],
           lineHeight: 'inherit',
           gap: '0.375rem',
           // Remove default Link underline
@@ -145,6 +142,8 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
         },
       };
 
+      const sizeConfig = separatorStyles[size];
+
       return {
         display: 'flex',
         flexDirection: 'column',
@@ -153,7 +152,22 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
         color: 'var(--text-neutral-tertiary)',
         marginLeft: 0,
         marginRight: 0,
-        ...separatorStyles[size],
+        padding: sizeConfig.padding,
+        fontSize: sizeConfig.fontSize,
+        lineHeight: sizeConfig.lineHeight,
+        // Target child icon elements (FontAwesomeV6Icon renders as i or svg)
+        // The width and fontSize should be applied to the icon element itself,
+        // matching the SCSS where the i element has these properties directly
+        '& > i, & > svg, & i, & svg': {
+          fontSize: sizeConfig.fontSize,
+          width: sizeConfig.width,
+          height: 'auto',
+          lineHeight: sizeConfig.lineHeight,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexShrink: 0, // Prevent shrinking
+        },
       };
     },
   },
