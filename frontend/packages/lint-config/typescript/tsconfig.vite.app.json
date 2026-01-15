@@ -6,7 +6,7 @@
   "extends": "@tsconfig/vite-react/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": ["vite/client"],
+    "types": ["vite/client", "vitest/globals", "node"],
     // For Code.org applications, the `@/*` path alias refers to the `src` directory
     "paths": {
       "@/*": ["src/*"]

@@ -18,6 +18,7 @@ type RenameNewFilePromptArgsType = {
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
   sendLab2AnalyticsEvent: (
     eventName: string,
     payload?: Record<string, string>
@@ -32,6 +33,7 @@ export const openRenameFilePrompt = async ({
   sendLab2AnalyticsEvent,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: RenameNewFilePromptArgsType) => {
   const file = projectFiles[fileId];
   const results = await dialogControl?.showDialog({
@@ -52,6 +54,7 @@ export const openRenameFilePrompt = async ({
         projectFiles,
         isStartMode,
         validationFile,
+        validFileTypes,
       });
     },
     useModal: true,

@@ -617,6 +617,8 @@ StudioApp.prototype.init = function (config) {
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
+        levelId={config.serverLevelId}
+        unitId={config.serverScriptId}
       />,
       startDialogDiv
     );
