@@ -38,10 +38,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
-  const secondaryBackpackApis = useMemo(
-    () => backpackContext?.secondaryApis || {},
-    [backpackContext?.secondaryApis]
-  );
+  const secondaryBackpackApis = backpackContext?.secondaryApis;
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [secondaryFileLists, setSecondaryFileLists] = useState<
     {[key: string]: string[]} | undefined
@@ -67,7 +64,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
       setLoadError(false);
       backpackApi.getFileList(
         error => {
-          setListsLoading(listsLoading => listsLoading - 1);
+          if (showLoading) {
+            setListsLoading(listsLoading => listsLoading - 1);
+          }
           setLoadError(true);
           Lab2Registry.getInstance()
             .getMetricsReporter()
@@ -75,7 +74,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         },
         (fileList: string[]) => {
           listCallback(fileList);
-          setListsLoading(listsLoading => listsLoading - 1);
+          if (showLoading) {
+            setListsLoading(listsLoading => listsLoading - 1);
+          }
         }
       );
     }
@@ -108,8 +109,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 
   useEffect(() => {
     // Show the load screen on initial load, and load all backpacks.
+    console.log(`on load, loading files`);
     loadBackpackFiles(true);
-  }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis]);
+  }, [loadBackpackFiles]);
 
   useEffect(() => {
     const eventListener =
@@ -118,7 +120,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         const clientToLoad =
           appKey === PRIMARY_BACKPACK_KEY
             ? primaryBackpackApi
-            : secondaryBackpackApis[appKey];
+            : (secondaryBackpackApis || {})[appKey];
         const listCallback =
           appKey === PRIMARY_BACKPACK_KEY
             ? setFileList
@@ -158,18 +160,22 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
       eventListener(PRIMARY_BACKPACK_KEY)
     );
     const secondaryListenerIds: {[key: string]: string} = {};
-    Object.entries(secondaryBackpackApis)?.forEach(([appKey, api]) => {
-      const listenerId = api.addEventListener(eventListener(appKey));
-      secondaryListenerIds[appKey] = listenerId;
-    });
+    if (secondaryBackpackApis) {
+      Object.entries(secondaryBackpackApis)?.forEach(([appKey, api]) => {
+        const listenerId = api.addEventListener(eventListener(appKey));
+        secondaryListenerIds[appKey] = listenerId;
+      });
+    }
 
     return () => {
       if (primaryListenerId) {
         primaryBackpackApi?.removeEventListener(primaryListenerId);
       }
-      Object.entries(secondaryListenerIds).forEach(([appKey, listenerId]) => {
-        secondaryBackpackApis[appKey]?.removeEventListener(listenerId);
-      });
+      if (secondaryBackpackApis) {
+        Object.entries(secondaryListenerIds).forEach(([appKey, listenerId]) => {
+          secondaryBackpackApis[appKey]?.removeEventListener(listenerId);
+        });
+      }
     };
   }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis, addAlert]);
 

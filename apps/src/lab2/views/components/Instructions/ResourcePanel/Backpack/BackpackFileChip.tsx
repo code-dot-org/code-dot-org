@@ -79,7 +79,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
-      return `${backpackApi.getFileFetchUrl(fileName)}?cacheBust=${Date.now()}`;
+      const url = backpackApi.getFileFetchUrl(fileName);
+      if (url) {
+        return `${url}?cacheBust=${Date.now()}`;
+      }
     }
     return undefined;
     // We explicitly including `isRecentlyAdded` even though it isn't used so the
