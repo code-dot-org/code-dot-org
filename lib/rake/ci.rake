@@ -182,7 +182,6 @@ namespace :ci do
     end
 
     Dir.chdir('dashboard') do
-      RakeUtils.system_stream_output 'rm -f config/scripts/.seeded'
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
