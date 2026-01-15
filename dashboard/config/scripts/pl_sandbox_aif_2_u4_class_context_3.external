@@ -1,0 +1,28 @@
+name 'pl_sandbox_aif-2-U4-class-context-3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Context
+
+#### This is the fourth unit of the course, building off the content from units one through three. The course was designed to teach in order.
+
+#### Teachers serve as guides supporting **design thinking, encouraging responsible AI use, and helping students interpret and improve AI-generated work**.
+
+
+## Unit Length and Format
+
+#### **Total Duration:** Approximately 3 weeks
+#### **Structure:** Eleven 45-minute lessons and one 5-day culminating project
+
+<img src="https://images.code.org/64f9fd216d8674befc3da54e558ff1fc-image-1768411220399.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+
+
+
+## Next up
+
+#### Let's begin with the end in mind and take a look at the final project. 
+
+
+MARKDOWN

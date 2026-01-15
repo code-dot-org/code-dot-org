@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 22:01:30 UTC",
+    "serialized_at": "2026-01-14 19:21:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -103,6 +103,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Unit 5 Prototypes",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -1637,6 +1652,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l1-example2"
+        ],
         "progression": "Lesson 1 Code Snippets"
       },
       "bonus": false,
@@ -1659,6 +1677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l2-example1"
+        ],
         "progression": "Lesson 2 Code Snippets"
       },
       "bonus": false,
@@ -1681,6 +1702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l2-example2"
+        ],
         "progression": "Lesson 2 Code Snippets"
       },
       "bonus": false,
@@ -1703,6 +1727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l3-example1"
+        ],
         "progression": "Lesson 3 Code Snippets"
       },
       "bonus": false,
@@ -1725,6 +1752,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l4-example1"
+        ],
         "progression": "Lesson 4 Code Snippets"
       },
       "bonus": false,
@@ -1747,6 +1777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l5-example1"
+        ],
         "progression": "Lesson 5 Code Snippets"
       },
       "bonus": false,
@@ -1769,6 +1802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-s2-u5-l6-example1"
+        ],
         "progression": "Lesson 6 Code Snippets"
       },
       "bonus": false,
