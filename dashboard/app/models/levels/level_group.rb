@@ -204,12 +204,6 @@ class LevelGroup < DSLDefined
     child_levels.all
   end
 
-  def self.get_sublevel_question_text(sublevel)
-    sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-      sublevel.properties.try(:[], "question") ||
-      sublevel.properties.try(:[], "long_instructions")
-  end
-
   # Surveys: Given a sublevel, and the known response string to it, return a result hash.
   def self.get_sublevel_result(sublevel, sublevel_response)
     sublevel_result = {}
@@ -232,7 +226,8 @@ class LevelGroup < DSLDefined
   def self.get_levelgroup_survey_results(script_level, section)
     # Go through each sublevel
     script_level.level.levels.map do |sublevel|
-      question_text = get_sublevel_question_text(sublevel)
+      question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
+        sublevel.properties.try(:[], "long_instructions")
 
       # Go through each student, and make sure to shuffle their results for additional
       # anonymity.
