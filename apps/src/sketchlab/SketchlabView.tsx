@@ -12,7 +12,7 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
-import React, {useEffect, useCallback, useRef, useState} from 'react';
+import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -32,9 +32,14 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useDialogControl} from '../lab2/views/dialogs';
+import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
+
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
 import {
+  handleSaveToBackpack,
   generateNewExternalFiles,
   populateInitialExcalidrawState,
   uploadExternalFiles,
@@ -95,6 +100,17 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   // We remount (ie, reset) Excalidraw any time we observe
   // sources being initialized (eg, when level changes, teacher views a student's project, etc).
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const backpackApi = useMemo(() => {
+    // The backpack api does not work for signed-out users (it redirects to sign-in),
+    // so we don't create the api instance if there is no current user.
+    if (currentUserId) {
+      return new BackpackClientApi('sketchlab', null);
+    }
+    return null;
+  }, [currentUserId]);
+  const dialogControl = useDialogControl();
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -247,69 +263,101 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   );
 
   return (
-    <div className={moduleStyles.sketchlabContainer}>
-      <SketchlabTourSteps />
-      <div style={{width: leftPanelWidth}} className={panelClassName}>
-        <ResourcePanel
-          levelProperties={levelProperties}
-          isRunning={false}
-          hasRun={hasRun}
-          hasEdited={false}
-          settings={[useThemeSetting('sketchlab')]}
-          versionHistoryProps={{
-            startSources:
-              (levelProperties?.startSources as ProjectSources) ||
-              DEFAULT_SOURCES,
-            onLoadVersion: onLoadVersion,
-          }}
-        />
-      </div>
-      <ResizeBar
-        isVertical={true}
-        separatorProps={panelSeparatorProps}
-        isDragging={isDragging}
-      />
-      <div style={{width: rightPanelWidth}}>
-        <PanelContainer
-          id="workspace"
-          className={panelClassName}
-          headerContent={<WorkspaceHeader />}
-          rightHeaderContent={
-            !readonlyWorkspace && (
-              <Button
-                text={commonI18n.startOver()}
-                iconRight={{iconStyle: 'solid', iconName: 'arrow-rotate-left'}}
-                color={'gray'}
-                onClick={onClickStartOver}
-                ariaLabel={commonI18n.startOver()}
-                size={'xs'}
-                type="secondary"
-              />
-            )
-          }
-        >
-          {teacherViewingStudent && (
-            <TeacherViewingStudentProjectAlert inWorkspaceContainer />
-          )}
-          <Excalidraw
-            initialData={
-              experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-                ? populateInitialExcalidrawState(
-                    currentSources.source,
-                    downloadedFilesDataRef.current
-                  )
-                : (currentSources.source as ExcalidrawInitialDataState)
-            }
-            onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => (excalidrawApiRef.current = api)}
-            key={excalidrawMountKey}
-            theme={theme.toLowerCase() as ExcalidrawTheme}
-            viewModeEnabled={readonlyWorkspace}
+    <BackpackAPIContext.Provider value={backpackApi}>
+      <div className={moduleStyles.sketchlabContainer}>
+        <SketchlabTourSteps />
+        <div style={{width: leftPanelWidth}} className={panelClassName}>
+          <ResourcePanel
+            levelProperties={levelProperties}
+            isRunning={false}
+            hasRun={hasRun}
+            hasEdited={false}
+            settings={[useThemeSetting('sketchlab')]}
+            versionHistoryProps={{
+              startSources:
+                (levelProperties?.startSources as ProjectSources) ||
+                DEFAULT_SOURCES,
+              onLoadVersion: onLoadVersion,
+            }}
+            backpackProps={{
+              validateFileName: (fileName: string) => ({
+                isSupportFileName: false,
+                newFileName: fileName,
+              }),
+              // Sketch Lab doesn't support importing Backpack files into
+              // the project, so we provide dummy methods.
+              saveFileToProject: () => {},
+              createNewProjectFile: () => {},
+              findIdForFileName: () => undefined,
+              saveToBackpackButton: {
+                onClick: (
+                  fileList: string[],
+                  errorCallback: (error: string) => void
+                ) =>
+                  handleSaveToBackpack(
+                    excalidrawApiRef.current,
+                    backpackApi,
+                    dialogControl,
+                    fileList,
+                    errorCallback
+                  ),
+                text: 'Save Sketch to Backpack',
+              },
+              // We don't currently support importing backpack files, so this list is empty.
+              supportedFileTypes: [],
+            }}
           />
-          {WorkspaceAlert}
-        </PanelContainer>
+        </div>
+        <ResizeBar
+          isVertical={true}
+          separatorProps={panelSeparatorProps}
+          isDragging={isDragging}
+        />
+        <div style={{width: rightPanelWidth}}>
+          <PanelContainer
+            id="workspace"
+            className={panelClassName}
+            headerContent={<WorkspaceHeader />}
+            rightHeaderContent={
+              !readonlyWorkspace && (
+                <Button
+                  text={commonI18n.startOver()}
+                  iconRight={{
+                    iconStyle: 'solid',
+                    iconName: 'arrow-rotate-left',
+                  }}
+                  color={'gray'}
+                  onClick={onClickStartOver}
+                  ariaLabel={commonI18n.startOver()}
+                  size={'xs'}
+                  type="secondary"
+                />
+              )
+            }
+          >
+            {teacherViewingStudent && (
+              <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+            )}
+            <Excalidraw
+              initialData={
+                experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
+                  ? populateInitialExcalidrawState(
+                      currentSources.source,
+                      downloadedFilesDataRef.current
+                    )
+                  : (currentSources.source as ExcalidrawInitialDataState)
+              }
+              onChange={debouncedSerializeAndSaveWorkspace}
+              excalidrawAPI={api => (excalidrawApiRef.current = api)}
+              key={excalidrawMountKey}
+              theme={theme.toLowerCase() as ExcalidrawTheme}
+              viewModeEnabled={readonlyWorkspace}
+            />
+            {WorkspaceAlert}
+          </PanelContainer>
+        </div>
       </div>
-    </div>
+    </BackpackAPIContext.Provider>
   );
 };
 
