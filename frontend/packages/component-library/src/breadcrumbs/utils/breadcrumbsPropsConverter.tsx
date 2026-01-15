@@ -89,12 +89,8 @@ export function convertBreadcrumbsPropsToMUI(
   });
 
   // Custom separator using chevron-right icon
-  const separator = (
-    <FontAwesomeV6Icon
-      iconName="chevron-right"
-      style={{display: 'flex', alignItems: 'center'}}
-    />
-  );
+  // Note: Styles are applied via MUI theme overrides, so no inline styles needed
+  const separator = <FontAwesomeV6Icon iconName="chevron-right" />;
 
   return {
     size,

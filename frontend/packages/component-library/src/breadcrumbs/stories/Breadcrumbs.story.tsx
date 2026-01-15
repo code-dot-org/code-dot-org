@@ -47,12 +47,12 @@ const SingleTemplate: StoryFn<BreadcrumbsProps> = args => {
       {/*  </div>*/}
       {/*  <Breadcrumbs {...args} />*/}
       {/*</div>*/}
-      <div>
-        {/*<div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>*/}
-        {/*  MUI Breadcrumbs*/}
-        {/*</div>*/}
-        <MUIBreadcrumbs {...muiProps} />
-      </div>
+      {/*<div>*/}
+      {/*<div style={{marginBottom: '8px', fontSize: '12px', color: '#666'}}>*/}
+      {/*  MUI Breadcrumbs*/}
+      {/*</div>*/}
+      <MUIBreadcrumbs {...muiProps} />
+      {/*</div>*/}
     </div>
   );
 };
