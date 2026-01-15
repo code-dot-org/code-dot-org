@@ -42,7 +42,7 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   options?: BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
-  /** A set of blocks to put into a single, simple toolbox within the workspace */
+  /** A set of blocks to put into the toolbox or flyout within the workspace */
   toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
   /** The blockly renderer to use. */
   renderer?: Renderer;
