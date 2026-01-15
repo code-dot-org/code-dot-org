@@ -1,7 +1,13 @@
 import type {LabMetricsReporter} from '@code-dot-org/lab';
 import {LabRegistry} from '@code-dot-org/lab';
 
-import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
+import {
+  DEFAULT_CHORD_LENGTH,
+  MIN_BPM,
+  MAX_BPM,
+  DEFAULT_BPM,
+  DEFAULT_KEY,
+} from '../constants';
 import AnalyticsReporter from '../LabMusicMetricsReporter';
 import type {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import type {ChordNote} from '../utils/Chords';
@@ -35,9 +41,6 @@ import type {
   SampleEvent,
   SamplerSequence,
 } from './types';
-
-const DEFAULT_BPM = 120;
-const DEFAULT_KEY = KeyFromName.C;
 
 /**
  * Main music player component which maintains the list of playback events and
