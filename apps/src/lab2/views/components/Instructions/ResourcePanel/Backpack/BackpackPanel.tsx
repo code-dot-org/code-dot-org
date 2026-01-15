@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -102,7 +103,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     const eventListener =
       (appKey: string) => (event: BackpackEvent, filename: string) => {
         // We don't show the load view here to avoid the screen flickering when the backpack updates.
-        // We only need to load the list for the backpack that saw an update.
         const clientToLoad =
           appKey === PRIMARY_BACKPACK_KEY
             ? primaryBackpackApi
@@ -145,7 +145,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
       };
 
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
-    // adds or deletes.
+    // adds or deletes for that backpack.
     const primaryListenerId = primaryBackpackApi?.addEventListener(
       eventListener(PRIMARY_BACKPACK_KEY)
     );
@@ -279,8 +279,10 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
       {secondaryFileLists && secondaryBackpackApis !== undefined
         ? Object.entries(secondaryFileLists).map(
             ([appName, secondaryFileList]) => (
-              <>
-                <div>{appName}</div>
+              <div key={`backpack-${appName}`}>
+                <BodyThreeText className={moduleStyles.backpackDivider}>
+                  {appName}
+                </BodyThreeText>
                 {secondaryFileList?.map(fileName => (
                   <BackpackFileChip
                     key={fileName}
@@ -304,7 +306,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                     )}
                   />
                 ))}
-              </>
+              </div>
             )
           )
         : undefined}
