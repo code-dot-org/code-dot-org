@@ -38,7 +38,7 @@ module Lti
           },
           {
             type: 'link',
-            url: CDO.studio_url(course_path(course_name: 'artificial-intelligence-foundations-2025', CDO.default_scheme),
+            url: CDO.studio_url(course_path(course_name: 'artificial-intelligence-foundations-2025'), CDO.default_scheme),
             title: 'AI Foundations 2025'
           }
         ]
