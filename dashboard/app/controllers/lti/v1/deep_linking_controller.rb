@@ -34,13 +34,13 @@ module Lti
           {
             type: 'link',
             url: CDO.studio_url(music_project_create_new_projects_path, CDO.default_scheme),
-            title: 'Music Lab'
+            title: 'Music Lab',
           },
           {
             type: 'link',
             url: CDO.studio_url(course_path(course_name: 'artificial-intelligence-foundations-2025'), CDO.default_scheme),
-            title: 'AI Foundations 2025'
-          }
+            title: 'AI Foundations 2025',
+          },
         ]
         selected_items.map {|index| possible_links[index.to_i]}
       end
