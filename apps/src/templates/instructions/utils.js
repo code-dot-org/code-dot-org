@@ -159,17 +159,12 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     // Don't render the raw XML
     xml.style.display = 'none';
 
-    // Only Google Blockly supports themes.
-    if (typeof Blockly.cdoUtils.getUserTheme === 'function') {
-      // We need to do an asychronous lookup of the user's preferred block theme,
-      // because it may not have been set yet on the student's primary workspace.
-      const themePromise = Blockly.cdoUtils.getUserTheme().then(theme => {
-        createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl, theme);
-      });
-      pendingThemePromises.push(themePromise);
-    } else {
-      createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl);
-    }
+    // We need to do an asychronous lookup of the user's preferred block theme,
+    // because it may not have been set yet on the student's primary workspace.
+    const themePromise = Blockly.cdoUtils.getUserTheme().then(theme => {
+      createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl, theme);
+    });
+    pendingThemePromises.push(themePromise);
   });
 
   if (pendingThemePromises.length > 0) {
