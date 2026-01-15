@@ -2,7 +2,10 @@ import {createContext, useContext} from 'react';
 
 import BackpackClientApi from './BackpackClientApi';
 
-export type BackpackContextType = BackpackClientApi;
+export interface BackpackContextType {
+  primaryApi: BackpackClientApi;
+  secondaryApis?: {[key: string]: BackpackClientApi};
+}
 
 export const BackpackAPIContext = createContext<BackpackContextType | null>(
   null

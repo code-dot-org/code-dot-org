@@ -28,7 +28,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   findIdForFileName,
   openPanelCallback,
 }) => {
-  const backpackApi = useBackpackAPIContext();
+  const backpackApi = useBackpackAPIContext()?.primaryApi;
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
   const [loadError, setLoadError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
