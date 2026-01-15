@@ -79,10 +79,7 @@ export class StatsigReporter {
     ) as HTMLElement | undefined;
     const managedTestEnvironment =
       managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
-    this.localMode = !(
-      isProductionEnvironment() ||
-      managedTestEnvironment
-    );
+    this.localMode = !(isProductionEnvironment() || managedTestEnvironment);
     this.options = {
       environment: {tier: getEnvironment()},
     };

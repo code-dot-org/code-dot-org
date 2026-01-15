@@ -17,13 +17,15 @@ export const EVENTS = {
   LOGIN_PAGE_SIGN_IN_CLICKED: 'Login Page Sign In Button Clicked',
   LOGIN_PAGE_OAUTH_CLICKED: 'Login Page OAuth Button Clicked',
   LOGIN_PAGE_COURSE_BLOCK_CLICKED: 'Login Page Course Block Clicked',
-  CURRICULUM_FREE_DIALOG_BUTTON_CLICKED: 'Curriculum Free Dialog Button Clicked',
+  CURRICULUM_FREE_DIALOG_BUTTON_CLICKED:
+    'Curriculum Free Dialog Button Clicked',
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
   LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
-  UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT: 'Upgrade To Teacher Account Page Visited',
+  UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT:
+    'Upgrade To Teacher Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -63,12 +65,16 @@ export const EVENTS = {
   CAP_SETTINGS_EMAIL_SUBMITTED: 'CAP Settings Email Submitted',
   CAP_SETTINGS_EMAIL_UPDATED: 'CAP Settings Email Updated',
   CAP_SETTINGS_EMAIL_RESEND: 'CAP Settings Email Resend',
-  CAP_STUDENT_WARNING_LINK_CLICKED: 'CAP Teacher Students Warning Modal Documentation Clicked',
+  CAP_STUDENT_WARNING_LINK_CLICKED:
+    'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
   CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN: 'CAP Teacher Sections Warning Modal Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED: 'CAP Teacher Sections Warning Modal Closed',
-  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED: 'CAP Teacher Sections Table Section Name Clicked',
+  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
+    'CAP Teacher Sections Warning Modal Shown',
+  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
+    'CAP Teacher Sections Warning Modal Closed',
+  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
+    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -76,15 +82,22 @@ export const EVENTS = {
   SCHOOL_SEARCH_INPUT_ENTERED: 'School Search Input Entered',
   SCHOOL_SELECTED_FROM_LIST: 'School Selected from Dropdown',
   ADD_MANUALLY_CLICKED: 'User Elects to Add School Name Manually',
-  DO_NOT_TEACH_AT_SCHOOL_CLICKED: 'User Clicks I Do Not Teach In A School Setting',
+  DO_NOT_TEACH_AT_SCHOOL_CLICKED:
+    'User Clicks I Do Not Teach In A School Setting',
 
   // Course/Unit info
-  COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT: 'Course Overview Page Visited By Teacher',
-  COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT: 'Course Overview Page Visited By Student',
-  COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT: 'Course Overview Page Visited By Signed Out User',
-  UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT: 'Unit Overview Page Visited By Teacher',
-  UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT: 'Unit Overview Page Visited By Student',
-  UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT: 'Unit Overview Page Visited By Signed Out User',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
+    'Course Overview Page Visited By Teacher',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT:
+    'Course Overview Page Visited By Student',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT:
+    'Course Overview Page Visited By Signed Out User',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
+    'Unit Overview Page Visited By Teacher',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT:
+    'Unit Overview Page Visited By Student',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT:
+    'Unit Overview Page Visited By Signed Out User',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',
 
   // Lesson info
@@ -94,12 +107,14 @@ export const EVENTS = {
   // Regional Workshop Catalog
   REGIONAL_WS_CATALOG_PAGE_VISITED: 'Regional Workshop Catalog Page Visited',
   REGIONAL_WS_CATALOG_ZIP_ENTERED: 'Regional Workshop Catalog Zip Entered',
-  REGIONAL_WS_CATALOG_LEARN_MORE_CLICK_EVENT: 'Regional Workshop Catalog Learn More Button Clicked',
+  REGIONAL_WS_CATALOG_LEARN_MORE_CLICK_EVENT:
+    'Regional Workshop Catalog Learn More Button Clicked',
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
-  WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT: 'Workshop Add Session to Calendar Clicked',
+  WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
+    'Workshop Add Session to Calendar Clicked',
 
   // Workshop session attendance
   WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
@@ -141,24 +156,36 @@ export const EVENTS = {
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
   // Section table on teacher My Dashboard
-  SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED: 'Section table print login cards clicked',
-  SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED: 'Section table join instructions clicked',
-  SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED: 'Section table edit section details clicked',
+  SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED:
+    'Section table print login cards clicked',
+  SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED:
+    'Section table join instructions clicked',
+  SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
+    'Section table edit section details clicked',
   SECTION_TABLE_VIEW_PROGRESS_CLICKED: 'Section table view progress clicked',
-  SECTION_TABLE_MANAGE_STUDENTS_CLICKED: 'Section table manage students clicked',
-  SECTION_TABLE_ARCHIVE_SECTION_CLICKED: 'Section table archive section clicked',
-  SECTION_TABLE_RESTORE_SECTION_CLICKED: 'Section table restore section clicked',
+  SECTION_TABLE_MANAGE_STUDENTS_CLICKED:
+    'Section table manage students clicked',
+  SECTION_TABLE_ARCHIVE_SECTION_CLICKED:
+    'Section table archive section clicked',
+  SECTION_TABLE_RESTORE_SECTION_CLICKED:
+    'Section table restore section clicked',
   SECTION_TABLE_DELETE_SECTION_CLICKED: 'Section table delete section clicked',
-  SECTION_TABLE_PRINT_CERTIFICATES_CLICKED: 'Section table print certificates clicked',
-  SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED: 'Section table sync google classroom clicked',
+  SECTION_TABLE_PRINT_CERTIFICATES_CLICKED:
+    'Section table print certificates clicked',
+  SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED:
+    'Section table sync google classroom clicked',
   SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
 
   // Section students table on teacher My Dashboard
   SECTION_STUDENTS_TABLE_US_STATE_SET: 'Section students table US state set',
-  SECTION_STUDENTS_TABLE_US_STATE_BULK_SET: 'Section students table US state bulk set',
-  SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED: 'Section students table add row clicked',
-  SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED: 'Section students table save row clicked',
-  SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED: 'Section students table save all clicked',
+  SECTION_STUDENTS_TABLE_US_STATE_BULK_SET:
+    'Section students table US state bulk set',
+  SECTION_STUDENTS_TABLE_ADD_ROW_CLICKED:
+    'Section students table add row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ROW_CLICKED:
+    'Section students table save row clicked',
+  SECTION_STUDENTS_TABLE_SAVE_ALL_CLICKED:
+    'Section students table save all clicked',
 
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
@@ -175,12 +202,16 @@ export const EVENTS = {
   PROGRESS_V2_VIEW_LEVEL_DETAILS: 'Section New Progress Level Details',
   PROGRESS_V2_ACCEPT_INVITATION: 'Section Progress Invitation Modal Accept',
   PROGRESS_V2_DISMISS_INVITATION: 'Section Progress Invitation Modal Dismiss',
-  PROGRESS_V2_DELAY_INVITATION: 'Section Progress Invitation Modal Remind Later',
+  PROGRESS_V2_DELAY_INVITATION:
+    'Section Progress Invitation Modal Remind Later',
   PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
   PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
-  PROGRESS_V2_ALL_ROWS_EXPANDED: 'Section New Progress All Student Rows Expanded',
-  PROGRESS_V2_ONE_ROW_COLLAPSED: 'Section New Progress One Student Row Collapsed',
-  PROGRESS_V2_ALL_ROWS_COLLAPSED: 'Section New Progress All Student Rows Collapsed',
+  PROGRESS_V2_ALL_ROWS_EXPANDED:
+    'Section New Progress All Student Rows Expanded',
+  PROGRESS_V2_ONE_ROW_COLLAPSED:
+    'Section New Progress One Student Row Collapsed',
+  PROGRESS_V2_ALL_ROWS_COLLAPSED:
+    'Section New Progress All Student Rows Collapsed',
   PROGRESS_V2_DOWNLOAD_LEVEL_CSV: 'Section New Progress Download Level CSV',
   PROGRESS_V2_DOWNLOAD_LESSON_CSV: 'Section New Progress Download Lesson CSV',
 
@@ -218,11 +249,15 @@ export const EVENTS = {
   // Curriculum Catalog page
   CURRICULUM_CATALOG_VISITED_EVENT: 'Curriculum Catalog Visited',
   CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT: 'Assign Clicked',
-  CURRICULUM_CATALOG_SIGN_IN_CLICKED_IN_ASSIGN_DIALOG: 'Sign In Or Create Account Clicked In Assign Dialog',
-  CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT: 'Course Offering Assignment Completed',
+  CURRICULUM_CATALOG_SIGN_IN_CLICKED_IN_ASSIGN_DIALOG:
+    'Sign In Or Create Account Clicked In Assign Dialog',
+  CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT:
+    'Course Offering Assignment Completed',
   CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT: 'Filter Selected',
-  CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT: 'Show Only Translated Curriculums Toggled',
-  CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT: 'No Available Curriculums Message Shown',
+  CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT:
+    'Show Only Translated Curriculums Toggled',
+  CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT:
+    'No Available Curriculums Message Shown',
   CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT: 'Quick View Clicked',
 
   // Rubrics
@@ -235,9 +270,11 @@ export const EVENTS = {
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
   TA_RUBRIC_ON_STUDENT_WORK_UNLOADED: 'TA Rubric On Student Work Unloaded',
   TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
-  TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK: 'TA Rubric Submitted Written Feedback To Student',
+  TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK:
+    'TA Rubric Submitted Written Feedback To Student',
   TA_RUBRIC_EVIDENCE_LEVEL_SELECTED: 'TA Rubric Evidence Level Selected',
-  TA_RUBRIC_RUN_BUTTON_CLICKED: 'TA Rubric Teacher clicked RUN button on student work',
+  TA_RUBRIC_RUN_BUTTON_CLICKED:
+    'TA Rubric Teacher clicked RUN button on student work',
   TA_RUBRIC_LEARNING_GOAL_SELECTED: 'TA Rubric Learning Goal Selected',
   TA_RUBRIC_DROPDOWN_STUDENT_SELECTED: 'TA Rubric Student Switched',
   TA_RUBRIC_CSV_DOWNLOADED: 'TA Rubric CSV Downloaded',
@@ -245,7 +282,8 @@ export const EVENTS = {
   TA_RUBRIC_SECTION_AI_EVAL: 'TA Rubric Section AI Eval Requested',
   TA_RUBRIC_AI_PAGE_VISITED: 'TA Rubric AI Level Page Visited',
   TA_RUBRIC_STUDENT_AI_SUBMITTED: 'TA Rubric Student AI Level Submitted',
-  TA_RUBRIC_AI_EVAL_FROM_SECTION: 'TA Rubric AI Eval started from section request',
+  TA_RUBRIC_AI_EVAL_FROM_SECTION:
+    'TA Rubric AI Eval started from section request',
   TA_RUBRIC_WINDOW_MOVE_START: 'TA Rubric window move start',
   TA_RUBRIC_WINDOW_MOVE_END: 'TA Rubric window move end',
   TA_RUBRIC_TOUR_STARTED: 'First view of TA Rubric product tour',
@@ -297,13 +335,15 @@ export const EVENTS = {
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
-  HOC_ACTIVITY_START_BUTTON_CLICKED: 'Hour of Code Activity Start Button Clicked',
+  HOC_ACTIVITY_START_BUTTON_CLICKED:
+    'Hour of Code Activity Start Button Clicked',
 
   // Hour of Code - Dance Party
   DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',
   DANCE_PARTY_LEVEL_COMPLETED: 'Dance Party Level Completed',
   DANCE_PARTY_AI_BACKGROUND_GENERATED: 'Dance Party AI Background Generated',
-  DANCE_PARTY_AI_BACKGROUND_REGENERATED: 'Dance Party AI Background Regenerated',
+  DANCE_PARTY_AI_BACKGROUND_REGENERATED:
+    'Dance Party AI Background Regenerated',
   DANCE_PARTY_AI_BACKGROUND_USED: 'Dance Party AI Background Used',
   DANCE_PARTY_AI_BACKGROUND_RESTARTED: 'Dance Party AI Background Restarted',
   DANCE_PARTY_AI_BACKGROUND_EDITED: 'Dance Party AI Background Edited',
@@ -338,26 +378,34 @@ export const EVENTS = {
 
   // Header navigation - signed out
   SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
-  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK: 'Signed Out User Clicks Hamburger Link',
+  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
+    'Signed Out User Clicks Hamburger Link',
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
   CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 
   // Header Create menu - signed out
-  SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN: 'Signed Out User Clicks Create Dropdown',
-  SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION: 'Signed Out User Selects Create Dropdown Option',
+  SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed Out User Clicks Create Dropdown',
+  SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed Out User Selects Create Dropdown Option',
 
   // Header navigation - signed in
   SIGNED_IN_USER_CLICKS_HEADER_LINK: 'Signed In User Clicks Header Link',
   SIGNED_IN_USER_CLICKS_HAMBURGER_LINK: 'Signed In User Clicks Hamburger Link',
-  SIGNED_IN_USER_CLICKS_HAMBURGER_OPTION: 'Signed In User Clicks Hamburger Dropdown Option',
+  SIGNED_IN_USER_CLICKS_HAMBURGER_OPTION:
+    'Signed In User Clicks Hamburger Dropdown Option',
   SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
-  SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION: 'Signed In User Clicks Help Menu Option',
+  SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
+    'Signed In User Clicks Help Menu Option',
   SIGNED_IN_USER_CLICKS_USER_MENU: 'Signed In User Clicks User Menu',
-  SIGNED_IN_USER_CLICKS_USER_MENU_OPTION: 'Signed In User Clicks User Menu Option',
+  SIGNED_IN_USER_CLICKS_USER_MENU_OPTION:
+    'Signed In User Clicks User Menu Option',
 
   // Header Create menu - signed in
-  SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN: 'Signed In User Clicks Create Dropdown',
-  SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION: 'Signed In User Selects Create Dropdown Option',
+  SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed In User Clicks Create Dropdown',
+  SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed In User Selects Create Dropdown Option',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
@@ -365,19 +413,24 @@ export const EVENTS = {
   SHARING_PUBLISH: 'User Clicks Publish In Project Share Dialog',
   SHARING_FB: 'User Clicks Facebook Icon In Project Share Dialog',
   SHARING_TWITTER: 'User Clicks Twitter Icon In Project Share Dialog',
-  SHARING_LINK_SEND_TO_PHONE: 'User Clicks Send To Phone In Project Share Dialog',
+  SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Project Share Dialog',
   SHARING_CLOSE_ESCAPE: 'User Clicks X Or Esc Button In Project Share Dialog',
 
   // Project sharing via 'Finish' button
-  FINISH_SHARING_LINK_COPY: 'User Clicks Project Copy Link In Finish Congrats Dialog',
+  FINISH_SHARING_LINK_COPY:
+    'User Clicks Project Copy Link In Finish Congrats Dialog',
   FINISH_SHARING_PUBLISH: 'User Clicks Publish In Finish Congrats Dialog',
   FINISH_SHARING_FB: 'User Clicks Facebook Icon In Finish Congrats Dialog',
   FINISH_SHARING_TWITTER: 'User Clicks Twitter Icon In Finish Congrats Dialog',
-  FINISH_SHARING_LINK_SEND_TO_PHONE: 'User Clicks Send To Phone In Finish Congrats Dialog',
-  FINISH_BUTTON_CERTIFICATE: 'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
+  FINISH_SHARING_LINK_SEND_TO_PHONE:
+    'User Clicks Send To Phone In Finish Congrats Dialog',
+  FINISH_BUTTON_CERTIFICATE:
+    'User Clicks on Finish Button in Finish Congrats Dialog - Certificate',
 
   // Project submission
-  SHARING_DIALOG_SUBMIT_TO_BE_FEATURED: 'User Clicks Submit To Be Featured In Share Dialog',
+  SHARING_DIALOG_SUBMIT_TO_BE_FEATURED:
+    'User Clicks Submit To Be Featured In Share Dialog',
   SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
 
   // Add custom image to project
@@ -389,8 +442,10 @@ export const EVENTS = {
 
   // Curriculumm Recommender
   RECOMMENDED_CATALOG_CURRICULUM_SHOWN: 'Recommended Catalog Curriculum Shown',
-  RECOMMENDED_SIMILAR_CURRICULUM_CLICKED: 'Recommended Similar Curriculum Clicked',
-  RECOMMENDED_STRETCH_CURRICULUM_CLICKED: 'Recommended Stretch Curriculum Clicked',
+  RECOMMENDED_SIMILAR_CURRICULUM_CLICKED:
+    'Recommended Similar Curriculum Clicked',
+  RECOMMENDED_STRETCH_CURRICULUM_CLICKED:
+    'Recommended Stretch Curriculum Clicked',
 
   // LTI & LMS
   LTI_UNLINK_MODAL_SHOWN: 'lti_unlink_modal_shown',
@@ -404,18 +459,23 @@ export const EVENTS = {
 
   // New Teacher Homepage
   NEW_TEACHER_HOMEPAGE_VISITED: 'New Teacher Homepage Visited',
-  SECTION_LIST_TEACHING_TOGGLE_CLICKED: 'Class Sections Teaching Toggle Clicked',
+  SECTION_LIST_TEACHING_TOGGLE_CLICKED:
+    'Class Sections Teaching Toggle Clicked',
   SECTION_LIST_ARCHIVE_TOGGLE_CLICKED: 'Class Sections Archive Toggle Clicked',
   SECTION_CARD_CLASS_CODE_CLICKED: 'Section Card Class Code Clicked',
-  SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED: 'Section Card Go To Course Button Clicked',
+  SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED:
+    'Section Card Go To Course Button Clicked',
   SECTION_CARD_JUMP_TO_LESSON_CLICKED: 'Section Card Jump To Lesson Clicked',
-  SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED: 'Section Card Jump To Unit Overview Clicked',
+  SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED:
+    'Section Card Jump To Unit Overview Clicked',
   SECTION_CARD_VIEW_PROGRESS_CLICKED: 'Section Card View Progress Clicked',
-  SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED: 'Section Card View Lesson Materials Clicked',
+  SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED:
+    'Section Card View Lesson Materials Clicked',
   SECTION_CARD_SETTINGS_CLICKED: 'Section Card Settings Clicked',
   SECTION_CARD_ROSTER_CLICKED: 'Section Card Roster Clicked',
   SECTION_CARD_LOGIN_CARDS_CLICKED: 'Section Card Login Cards Clicked',
-  SECTION_CARD_PRINT_CERTIFICATES_CLICKED: 'Section Card Print Certificates Clicked',
+  SECTION_CARD_PRINT_CERTIFICATES_CLICKED:
+    'Section Card Print Certificates Clicked',
   SECTION_CARD_ARCHIVE_CLICKED: 'Section Card Archive Clicked',
   SECTION_CARD_DELETE_CLICKED: 'Section Card Delete Clicked',
   SECTION_CARD_RESTORE_CLICKED: 'Section Card Restore Clicked',
@@ -431,13 +491,15 @@ export const EVENTS = {
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
   AICHAT_START_OVER: 'Student starts over and resets to default model settings',
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
-  SUBMIT_AICHAT_REQUEST_UNAUTHORIZED: 'Unauthorized user attempts to submit aichat request or model customizations and fails',
+  SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
+    'Unauthorized user attempts to submit aichat request or model customizations and fails',
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
   // Measures of learning
-  AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK: 'Teacher gave feedback on AIs summary of student work',
+  AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
+    'Teacher gave feedback on AIs summary of student work',
 
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
@@ -451,17 +513,22 @@ export const EVENTS = {
   CODEBRIDGE_RENAME_FOLDER: 'Rename folder on codebridge',
   CODEBRIDGE_DOWNLOAD_FILE: 'Download file on codebridge',
   CODEBRIDGE_UPLOAD_FILE: 'Upload file on codebridge',
-  CODEBRIDGE_UPLOAD_UNACCEPTED_FILE: 'Attempted upload of unaccepted file on codebridge',
+  CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
+    'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
   // Codebridge - Backpack events
   CODEBRIDGE_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on codebridge',
   CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME: 'Save renamed file to backpack on codebridge',
+  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME:
+    'Save renamed file to backpack on codebridge',
   CODEBRIDGE_DELETE_FROM_BACKPACK: 'Delete from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW: 'Import new file from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE: 'Import a file from backpack on codebridge, replacing existing file',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack on codebridge, renaming it',
+  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW:
+    'Import new file from backpack on codebridge',
+  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE:
+    'Import a file from backpack on codebridge, replacing existing file',
+  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME:
+    'Import a file from backpack on codebridge, renaming it',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
@@ -471,11 +538,14 @@ export const EVENTS = {
   CODEBRIDGE_VALIDATE_CLICK: 'Validate button clicked on codebridge',
   CODEBRIDGE_VERSION_RESTORED: 'Version restored on codebridge',
   CODEBRIDGE_VERSION_VIEWED: 'Version viewed on codebridge',
-  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE: 'Toggled to For Teachers Only on codebridge',
+  CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE:
+    'Toggled to For Teachers Only on codebridge',
   CODEBRIDGE_INSTRUCTIONS_TOGGLE: 'Toggled to Instructions on codebridge',
   CODEBRIDGE_ZOOM: 'Zoomed in or out on codebridge',
-  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE: 'User changed font size on codebridge editor',
-  CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE: 'User changed font size on codebridge console',
+  CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge editor',
+  CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE:
+    'User changed font size on codebridge console',
   CODEBRIDGE_THEME_CHANGE: 'User changed theme on codebridge',
 
   // Blockly Lab Settings
@@ -498,28 +568,38 @@ export const EVENTS = {
   VIEW_LESSON_MATERIALS: 'Local Nav View Lesson Materials',
   LESSON_MATERIALS_LESSON_CHANGE: 'Local Nav Lesson Materials Lesson Change',
   LESSON_MATERIALS_FAILURE: 'Local Nav Lesson Materials Load Failure',
-  LESSON_MATERIALS_DOWNLOAD_ALL_LESSON_PLANS: 'Local Nav Download All Lesson Plans',
+  LESSON_MATERIALS_DOWNLOAD_ALL_LESSON_PLANS:
+    'Local Nav Download All Lesson Plans',
   LESSON_MATERIALS_DOWNLOAD_ALL_HANDOUTS: 'Local Nav Download All Handouts',
-  LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION: 'Local Nav Resource Dropdown Option Clicked',
+  LESSON_MATERIALS_RESOURCE_DROPDOWN_OPTION:
+    'Local Nav Resource Dropdown Option Clicked',
 
   // Unit Overview
-  TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED: 'Teacher Nav Unit Overview Page Viewed',
+  TEACHER_NAV_UNIT_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Unit Overview Page Viewed',
   TEACHER_NAV_UNIT_OVERVIEW_FAILED: 'Teacher Nav Unit Overview Load Failure',
 
   // Course Overview
-  TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED: 'Teacher Nav Course Overview Page Viewed',
-  TEACHER_NAV_COURSE_OVERVIEW_FAILED: 'Teacher Nav Course Overview Load Failure',
+  TEACHER_NAV_COURSE_OVERVIEW_PAGE_VIEWED:
+    'Teacher Nav Course Overview Page Viewed',
+  TEACHER_NAV_COURSE_OVERVIEW_FAILED:
+    'Teacher Nav Course Overview Load Failure',
 
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
   // Global Edition - Region Reset Button
-  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED: 'Global Edition Return to Full Site Clicked',
+  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
+    'Global Edition Return to Full Site Clicked',
   // Global Edition - Region Switch Confirm events
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN: 'Global Edition Region Switch Confirm Shown',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED: 'Global Edition Region Switch Confirm Closed',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED: 'Global Edition Region Switch Confirm Accepted',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED: 'Global Edition Region Switch Confirm Rejected',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
+    'Global Edition Region Switch Confirm Shown',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
+    'Global Edition Region Switch Confirm Closed',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
+    'Global Edition Region Switch Confirm Accepted',
+  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
+    'Global Edition Region Switch Confirm Rejected',
 
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
@@ -584,7 +664,7 @@ export const EVENTS = {
 } as const;
 
 export type EventKey = keyof typeof EVENTS;
-export type EventType = typeof EVENTS[EventKey];
+export type EventType = (typeof EVENTS)[EventKey];
 
 export const EVENT_GROUP_NAMES = {
   VIDEO_EVENTS: 'video-events',
@@ -594,7 +674,8 @@ export const EVENT_GROUP_NAMES = {
 } as const;
 
 export type EventGroupNamesKey = keyof typeof EVENT_GROUP_NAMES;
-export type EventGroupNamesType = typeof EVENT_GROUP_NAMES[EventGroupNamesKey];
+export type EventGroupNamesType =
+  (typeof EVENT_GROUP_NAMES)[EventGroupNamesKey];
 
 export const EVENT_GROUPS = {
   // Hour of Code - Dance Party

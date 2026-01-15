@@ -245,7 +245,7 @@ interface LocalizeJS {
    * `accept-language` header.
    */
   detectLanguage: (
-    callback: (err: string | undefined, languages: string[]) => void
+    callback: (err: string | undefined, languages: string[]) => void,
   ) => void;
   /**
    * Returns all available languages for the project.
@@ -253,8 +253,8 @@ interface LocalizeJS {
   getAvailableLanguages: (
     callback: (
       err: string | undefined,
-      languages: LocalizeLanguageInfo[]
-    ) => void
+      languages: LocalizeLanguageInfo[],
+    ) => void,
   ) => void;
   /**
    * Calling this function will hide the default Localize language-switching
@@ -293,7 +293,7 @@ interface LocalizeJS {
   translate: <T = string | string[] | HTMLElement>(
     key: T,
     variables?: {[key: string]: string | number} | ((translation: T) => void),
-    callback?: (translation: T) => void
+    callback?: (translation: T) => void,
   ) => T;
   /**
    * Untranslates a specified element on the page.
@@ -327,14 +327,14 @@ interface LocalizeJS {
    */
   on: <K extends keyof LocalizeEventMap>(
     eventName: K,
-    fn: (data: LocalizeEventMap[K]) => void
+    fn: (data: LocalizeEventMap[K]) => void,
   ) => void;
   /**
    * Remove an event handler.
    */
   off: <K extends keyof LocalizeEventMap>(
     eventName: K,
-    fn?: (data: LocalizeEventMap[K]) => void
+    fn?: (data: LocalizeEventMap[K]) => void,
   ) => void;
   /**
    * Convert the format of a number to the format used in the currently selected
@@ -342,7 +342,7 @@ interface LocalizeJS {
    */
   number: (
     originalValue: number,
-    callback: (err: string, value: string) => void
+    callback: (err: string, value: string) => void,
   ) => void;
   /**
    * Convert a monetary value from one currency to another, using the current
@@ -351,7 +351,7 @@ interface LocalizeJS {
   currency: (
     originalValue: number,
     options: {fromCurrency: string; toCurrency: string},
-    callback: (err: string, value: number) => void
+    callback: (err: string, value: number) => void,
   ) => void;
   /**
    * Returns the exchange rate between the provided currencies. Rates are updated hourly.
@@ -361,8 +361,8 @@ interface LocalizeJS {
     toCurrency: string,
     callback: (
       err: string,
-      rateData: {fromCurrency: string; toCurrency: string; rate: number}
-    ) => void
+      rateData: {fromCurrency: string; toCurrency: string; rate: number},
+    ) => void,
   ) => void;
 }
 
