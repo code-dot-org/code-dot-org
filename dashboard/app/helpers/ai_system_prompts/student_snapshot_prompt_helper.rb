@@ -57,10 +57,8 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     assessment_level = lesson.levels.where(type: 'Pythonlab').last || nil
     level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
-    # Format lesson info into string
     lesson_info_str = lesson_info.map {|key, value| "#{key}: #{value}"}.join("\n")
 
-    # Format level info data into strings
     level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}
 
     "Use the following lesson info to generate your summary:
@@ -134,7 +132,6 @@ Levels: [{
 
     section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
 
-    # return only basic info if user hasn't attempted the level
     if user_level.nil? && sublevels.nil?
       level_data["Attempted"] = false
       return {
@@ -342,15 +339,4 @@ Levels: [{
 
     result_parts.join("\n")
   end
-
-  # Identify assessment level and add
-  # as much as we have for it
-  #   previous code versions
-  #   ULI
-
-  # Only need info on non-assessment levels
-  # if final assessment isn't perfect?
-  #
-  # Time spent on CFUs always 0?
-  #
 end
