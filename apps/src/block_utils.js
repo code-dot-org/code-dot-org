@@ -8,6 +8,10 @@ import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
 import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
 import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
+import {
+  appendMiniToolboxToggle,
+  initializeMiniToolbox,
+} from './blockly/utils/fields/miniToolbox';
 import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
@@ -948,10 +952,7 @@ exports.createJsWrapperBlockCreator = function (
 
         let flyoutToggleButton;
         if (showMiniToolbox) {
-          flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-              miniToolboxBlocks
-            );
+          flyoutToggleButton = initializeMiniToolbox();
         }
 
         // We only set up block shadowing for blocks that have a type in spriteLabPointers.
@@ -997,10 +998,7 @@ exports.createJsWrapperBlockCreator = function (
         this.setInputsInline(inline);
 
         if (showMiniToolbox) {
-          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
-            miniToolboxBlocks,
-            flyoutToggleButton
-          );
+          appendMiniToolboxToggle(this, miniToolboxBlocks, flyoutToggleButton);
         }
       },
     };

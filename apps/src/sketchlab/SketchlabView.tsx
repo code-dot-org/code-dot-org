@@ -39,9 +39,10 @@ import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
 import {
+  handleSaveToBackpack,
+  generateNewExternalFiles,
   populateInitialExcalidrawState,
   uploadExternalFiles,
-  handleSaveToBackpack,
 } from './utils';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
@@ -173,26 +174,41 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        let uploadedFiles = {};
-        if (!readonlyWorkspace) {
-          uploadedFiles = await uploadExternalFiles(
-            currentSources.source.externalFiles || {},
-            serializedData.files,
-            filesBeingUploadedRef,
-            channelId,
-            levelProperties.name
-          );
-        }
+        const savedFiles = currentSources.source.externalFiles || {};
+        const excalidrawFiles = serializedData.files;
+        const levelName = levelProperties.name;
+
+        const savedFileIds = Object.keys(savedFiles || {});
+        const excalidrawFileIds = Object.keys(excalidrawFiles || {});
+        const newFileIds = excalidrawFileIds.filter(
+          id =>
+            !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
+        );
+
+        const newFiles = generateNewExternalFiles(
+          newFileIds,
+          excalidrawFiles,
+          levelName,
+          channelId
+        );
 
         updateSources({
           source: {
             ...serializedData,
             externalFiles: {
               ...currentSources.source.externalFiles,
-              ...uploadedFiles,
+              ...newFiles,
             },
           },
         });
+
+        if (newFiles && !readonlyWorkspace) {
+          uploadExternalFiles(
+            newFiles,
+            serializedData.files,
+            filesBeingUploadedRef
+          );
+        }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [

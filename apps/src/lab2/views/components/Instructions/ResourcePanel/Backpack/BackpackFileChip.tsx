@@ -33,7 +33,7 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
 }
 
-const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg'];
+const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
