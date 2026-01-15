@@ -228,7 +228,12 @@ module RakeUtils
   end
 
   def self.yarn_install(*args)
-    run_packages_with('yarn', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
+    commands = []
+    commands << 'COREPACK_ENABLE_DOWNLOAD_PROMPT=0'
+    commands << 'yarn'
+    commands << (ENV.fetch('CI', nil) && '--frozen-lockfile')
+    commands += args
+    RakeUtils.system(*commands)
   end
 
   def self.npm_rebuild(*args)
