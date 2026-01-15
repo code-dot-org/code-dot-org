@@ -1,23 +1,8 @@
-import {ThemeProvider} from '@mui/material';
-import {render, screen, RenderOptions} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import {ReactElement, ReactNode} from 'react';
-
-import {CdoTheme} from '@/themes';
 
 import NotificationBanner from '../NotificationBanner';
-
-const AllTheProviders = ({children}: {children: ReactNode}) => {
-  return <ThemeProvider theme={CdoTheme}>{children}</ThemeProvider>;
-};
-
-const renderWithTheme = (
-  ui: ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>,
-) => {
-  return render(ui, {wrapper: AllTheProviders, ...options});
-};
 
 describe('Design System - NotificationBanner', () => {
   const defaultProps = {
@@ -28,20 +13,20 @@ describe('Design System - NotificationBanner', () => {
   };
 
   it('renders with correct title and description', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} />);
+    render(<NotificationBanner {...defaultProps} />);
     expect(screen.getByText('Test Title')).toBeInTheDocument();
     expect(screen.getByText('Test description')).toBeInTheDocument();
   });
 
   it('renders icon correctly', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} />);
+    render(<NotificationBanner {...defaultProps} />);
     const icon = screen.getByTestId('font-awesome-v6-icon');
     expect(icon).toBeInTheDocument();
     expect(icon.className).toContain('fa-circle-info');
   });
 
   it('renders children when provided instead of description', () => {
-    renderWithTheme(
+    render(
       <NotificationBanner
         {...defaultProps}
         description={undefined}
@@ -53,7 +38,7 @@ describe('Design System - NotificationBanner', () => {
   });
 
   it('renders actions when provided', () => {
-    renderWithTheme(
+    render(
       <NotificationBanner
         {...defaultProps}
         actions={<button>Action Button</button>}
@@ -64,7 +49,7 @@ describe('Design System - NotificationBanner', () => {
 
   it('renders close button when onClose is provided', () => {
     const onClose = jest.fn();
-    renderWithTheme(<NotificationBanner {...defaultProps} onClose={onClose} />);
+    render(<NotificationBanner {...defaultProps} onClose={onClose} />);
     const closeButton = screen.getByRole('button', {
       name: 'Close notification',
     });
@@ -74,7 +59,7 @@ describe('Design System - NotificationBanner', () => {
   it('calls onClose when close button is clicked', async () => {
     const user = userEvent.setup();
     const onClose = jest.fn();
-    renderWithTheme(<NotificationBanner {...defaultProps} onClose={onClose} />);
+    render(<NotificationBanner {...defaultProps} onClose={onClose} />);
 
     const closeButton = screen.getByRole('button', {
       name: 'Close notification',
@@ -85,40 +70,32 @@ describe('Design System - NotificationBanner', () => {
   });
 
   it('does not render close button when onClose is not provided', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} />);
+    render(<NotificationBanner {...defaultProps} />);
     expect(
       screen.queryByRole('button', {name: 'Close notification'}),
     ).not.toBeInTheDocument();
   });
 
   it('renders with correct role attribute', () => {
-    const {rerender} = renderWithTheme(
+    const {rerender} = render(
       <NotificationBanner {...defaultProps} role="status" />,
     );
     let banner = screen.getByRole('status');
     expect(banner).toBeInTheDocument();
 
-    rerender(
-      <AllTheProviders>
-        <NotificationBanner {...defaultProps} role="alert" />
-      </AllTheProviders>,
-    );
+    rerender(<NotificationBanner {...defaultProps} role="alert" />);
     banner = screen.getByRole('alert');
     expect(banner).toBeInTheDocument();
   });
 
   it('sets aria-live based on role', () => {
-    const {rerender} = renderWithTheme(
+    const {rerender} = render(
       <NotificationBanner {...defaultProps} role="status" />,
     );
     let banner = screen.getByRole('status');
     expect(banner).toHaveAttribute('aria-live', 'polite');
 
-    rerender(
-      <AllTheProviders>
-        <NotificationBanner {...defaultProps} role="alert" />
-      </AllTheProviders>,
-    );
+    rerender(<NotificationBanner {...defaultProps} role="alert" />);
     banner = screen.getByRole('alert');
     expect(banner).toHaveAttribute('aria-live', 'assertive');
   });
@@ -136,7 +113,7 @@ describe('Design System - NotificationBanner', () => {
     ] as const;
 
     variants.forEach(variant => {
-      const {unmount} = renderWithTheme(
+      const {unmount} = render(
         <NotificationBanner {...defaultProps} variant={variant} />,
       );
       expect(screen.getByText('Test Title')).toBeInTheDocument();
@@ -145,42 +122,38 @@ describe('Design System - NotificationBanner', () => {
   });
 
   it('renders both styles correctly', () => {
-    const {rerender} = renderWithTheme(
+    const {rerender} = render(
       <NotificationBanner {...defaultProps} style="subtle" />,
     );
     let banner = screen.getByRole('status');
     expect(banner).toBeInTheDocument();
 
-    rerender(
-      <AllTheProviders>
-        <NotificationBanner {...defaultProps} style="filled" />
-      </AllTheProviders>,
-    );
+    rerender(<NotificationBanner {...defaultProps} style="filled" />);
     banner = screen.getByRole('status');
     expect(banner).toBeInTheDocument();
   });
 
   it('defaults to fullWidth true', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} />);
+    render(<NotificationBanner {...defaultProps} />);
     const banner = screen.getByRole('status');
     // CSS Module class is applied for fullWidth (default: true)
     expect(banner.className).toMatch(/fullWidth/);
   });
 
   it('applies fullWidth when set to true', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} fullWidth={true} />);
+    render(<NotificationBanner {...defaultProps} fullWidth={true} />);
     const banner = screen.getByRole('status');
     expect(banner.className).toMatch(/fullWidth/);
   });
 
   it('does not apply fullWidth class when fullWidth is false', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} fullWidth={false} />);
+    render(<NotificationBanner {...defaultProps} fullWidth={false} />);
     const banner = screen.getByRole('status');
     expect(banner.className).not.toMatch(/fullWidth/);
   });
 
   it('applies custom className', () => {
-    renderWithTheme(
+    render(
       <NotificationBanner {...defaultProps} className="custom-class" />,
     );
     const banner = screen.getByRole('status');
@@ -188,13 +161,13 @@ describe('Design System - NotificationBanner', () => {
   });
 
   it('applies custom id', () => {
-    renderWithTheme(<NotificationBanner {...defaultProps} id="custom-id" />);
+    render(<NotificationBanner {...defaultProps} id="custom-id" />);
     const banner = screen.getByRole('status');
     expect(banner).toHaveAttribute('id', 'custom-id');
   });
 
   it('renders multiple action buttons', () => {
-    renderWithTheme(
+    render(
       <NotificationBanner
         {...defaultProps}
         actions={
