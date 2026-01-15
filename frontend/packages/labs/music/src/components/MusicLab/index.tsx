@@ -19,7 +19,7 @@ import '@code-dot-org/lab/resourcePanel/index.css';
 import '@code-dot-org/lab/index.css';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
-import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
+import DarkTheme from '@code-dot-org/blockly-workspace/themes/dark';
 
 import ExemplarPlayerView from '../ExemplarPlayerView';
 
@@ -183,6 +183,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
 
           <div id="blockly-area" className={moduleStyles.blocklyArea}>
             <BlocklyWorkspace<Environment>
+              className={moduleStyles.blocklyWorkspace}
               options={{
                 readOnly: levelProperties.multipleChoice ? true : undefined,
               }}
@@ -193,7 +194,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
               }
               blocks={blocks}
               toolboxBlocks={toolboxBlocks}
-              theme={DefaultTheme}
+              theme={DarkTheme}
               renderer={ThrasosRenderer}
               workspaceRef={workspaceRef}
               plugins={[ToolboxTrashcanPlugin]}

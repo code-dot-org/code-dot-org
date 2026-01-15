@@ -51,43 +51,44 @@ const CopyrightDialog: FunctionComponent<CopyrightDialogProps> = ({
         onClick: closeModal,
         text: 'OK',
       }}
-    >
-      <div>
-        <div className="modalBody">
-          <Markdown>{textThanks}</Markdown>
-          <BodyThreeText>
-            We especially want to recognize the engineers from Amazon, Google,
-            and Microsoft who helped create these materials.
-          </BodyThreeText>
-          <Markdown>
-            {textArtFrom.replaceAll(
-              '{current_year}',
-              new Date().getFullYear().toString(),
-            )}
-          </Markdown>
-          <Markdown>{textCodeLicense}</Markdown>
-          {extraCopyrightContent && <div>{extraCopyrightContent}</div>}
-          <BodyThreeText>Built on GitHub from Microsoft</BodyThreeText>
-          <Link
-            href="https://aws.amazon.com/what-is-cloud-computing"
-            className="awsLogoContainer"
-          >
-            <img
-              src="/shared/images/Powered-By_logo-horiz_RGB.png"
-              alt="Powered by AWS Cloud Computing"
-              className="awsLogo"
-            />
-          </Link>
-          <Markdown>
-            {textTrademark.replaceAll(
-              '{current_year}',
-              new Date().getFullYear().toString(),
-            )}
-          </Markdown>
+      customContent={
+        <div>
+          <div className="modalBody">
+            <Markdown>{textThanks}</Markdown>
+            <BodyThreeText>
+              We especially want to recognize the engineers from Amazon, Google,
+              and Microsoft who helped create these materials.
+            </BodyThreeText>
+            <Markdown>
+              {textArtFrom.replaceAll(
+                '{current_year}',
+                new Date().getFullYear().toString(),
+              )}
+            </Markdown>
+            <Markdown>{textCodeLicense}</Markdown>
+            {extraCopyrightContent && <div>{extraCopyrightContent}</div>}
+            <BodyThreeText>Built on GitHub from Microsoft</BodyThreeText>
+            <Link
+              href="https://aws.amazon.com/what-is-cloud-computing"
+              className="awsLogoContainer"
+            >
+              <img
+                src="/shared/images/Powered-By_logo-horiz_RGB.png"
+                alt="Powered by AWS Cloud Computing"
+                className="awsLogo"
+              />
+            </Link>
+            <Markdown>
+              {textTrademark.replaceAll(
+                '{current_year}',
+                new Date().getFullYear().toString(),
+              )}
+            </Markdown>
+          </div>
+          <hr aria-hidden="true" />
         </div>
-        <hr aria-hidden="true" />
-      </div>
-    </Dialog>
+      }
+    />
   ) : null;
 };
 

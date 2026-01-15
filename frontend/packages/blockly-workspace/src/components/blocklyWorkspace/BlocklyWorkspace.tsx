@@ -73,6 +73,10 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
    * This will be certainly set when onInject is called.
    */
   workspaceRef?: MutableRefObject<Blockly.Workspace | null>;
+  /**
+   * Any additional class to apply to the workspace container.
+   */
+  className?: string;
 }
 
 // Ensure these are still compiled into module initialization.
@@ -97,6 +101,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   plugins,
   environment,
   workspaceRef,
+  className,
 }: BlocklyWorkspaceProps<T>): ReactElement {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
   const workspace = useRef<Blockly.WorkspaceSvg | null>(null);
@@ -323,6 +328,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     ref: anchor,
     className: classNames([
       moduleStyles.blocklyWorkspace,
+      className,
       ...(hidden ? [moduleStyles.hiddenWorkspace] : []),
     ]),
   });
