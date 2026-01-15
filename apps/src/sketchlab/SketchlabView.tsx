@@ -303,6 +303,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
                   ),
                 text: 'Save Sketch to Backpack',
               },
+              // We don't currently support importing backpack files, so this list is empty.
               supportedFileTypes: [],
             }}
           />
