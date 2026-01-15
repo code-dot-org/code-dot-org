@@ -269,7 +269,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
                 newFileName: fileName,
               }),
               // Sketch Lab doesn't support importing Backpack files into
-              // the project, so we provide dummy mehthod.
+              // the project, so we provide dummy methods.
               saveFileToProject: () => {},
               createNewProjectFile: () => {},
               findIdForFileName: () => undefined,
