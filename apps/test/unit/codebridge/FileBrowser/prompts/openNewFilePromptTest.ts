@@ -23,22 +23,24 @@ const getNewFileMock = (parentId: FolderId): [ProjectFile, NewFileFunction] => {
 describe('openNewFilePrompt', function () {
   it('can successfully add a new file to root w/o validation file', async function () {
     const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
-    const newFileName = 'valid_file.txt';
+    const baseFileName = 'valid_file';
+    const fileExtension = 'txt';
     const folderId = DEFAULT_FOLDER_ID;
 
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
       folderId,
-      dialogControl: getDialogControlMock(newFileName),
+      dialogControl: getDialogControlMock(baseFileName, fileExtension),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: [fileExtension],
     });
 
-    expect(newFileData.name).toEqual(newFileName);
+    expect(newFileData.name).toEqual(`${baseFileName}.${fileExtension}`);
     expect(newFileData.folderId).toEqual(folderId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_FILE);
@@ -46,21 +48,23 @@ describe('openNewFilePrompt', function () {
 
   it('can successfully implicitly add a new file to root w/o validation file', async function () {
     const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
-    const newFileName = 'valid_file.txt';
+    const baseFileName = 'valid_file';
+    const fileExtension = 'txt';
     const folderId = DEFAULT_FOLDER_ID;
 
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
-      dialogControl: getDialogControlMock(newFileName),
+      dialogControl: getDialogControlMock(baseFileName, fileExtension),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: [fileExtension],
     });
 
-    expect(newFileData.name).toEqual(newFileName);
+    expect(newFileData.name).toEqual(`${baseFileName}.${fileExtension}`);
     expect(newFileData.folderId).toEqual(folderId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_FILE);
@@ -68,22 +72,24 @@ describe('openNewFilePrompt', function () {
 
   it('can successfully add a new file to a subfolder  w/o validation file', async function () {
     const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
-    const newFileName = 'valid_file.txt';
+    const baseFileName = 'valid_file';
+    const fileExtension = 'txt';
     const folderId = '1';
 
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
       folderId,
-      dialogControl: getDialogControlMock(newFileName),
+      dialogControl: getDialogControlMock(baseFileName, fileExtension),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: [fileExtension],
     });
 
-    expect(newFileData.name).toEqual(newFileName);
+    expect(newFileData.name).toEqual(`${baseFileName}.${fileExtension}`);
     expect(newFileData.folderId).toEqual(folderId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_FILE);
@@ -91,22 +97,24 @@ describe('openNewFilePrompt', function () {
 
   it('can successfully add a new file to root w/ validation file', async function () {
     const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
-    const newFileName = 'valid_file.txt';
+    const baseFileName = 'valid_file';
+    const fileExtension = 'txt';
     const folderId = DEFAULT_FOLDER_ID;
 
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
       folderId,
-      dialogControl: getDialogControlMock(newFileName),
+      dialogControl: getDialogControlMock(baseFileName, fileExtension),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile,
+      validFileTypes: [fileExtension],
     });
 
-    expect(newFileData.name).toEqual(newFileName);
+    expect(newFileData.name).toEqual(`${baseFileName}.${fileExtension}`);
     expect(newFileData.folderId).toEqual(folderId);
 
     expect(analyticsData.event).toEqual(EVENTS.CODEBRIDGE_NEW_FILE);
@@ -114,19 +122,20 @@ describe('openNewFilePrompt', function () {
 
   it('can refuse to add an invalid file', async function () {
     const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
-    const newFileName = 'invalid_file';
+    const invalidFileName = 'invalid file';
     const folderId = DEFAULT_FOLDER_ID;
 
     const [newFileData, newFileDataMock] = getNewFileMock(folderId);
 
     await openNewFilePrompt({
       folderId,
-      dialogControl: getDialogControlMock(newFileName),
+      dialogControl: getDialogControlMock(invalidFileName, 'txt'),
       newFile: newFileDataMock,
       projectFiles: testProject.files,
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(newFileData).length).toEqual(0);

@@ -6,14 +6,18 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {smallProject} from './test-files';
 
 export const getDialogControlMock = (
-  dialogInput: string
+  dialogInput: string,
+  dropdownValue?: string
 ): Pick<DialogControlInterface, 'showDialog'> => ({
   showDialog: ({validateInput}: GenericPromptProps) => {
-    const error = validateInput?.(dialogInput);
+    const error = validateInput?.(dialogInput, dropdownValue);
     if (error) {
       return Promise.resolve({type: 'cancel', args: error});
     } else {
-      return Promise.resolve({type: 'confirm', args: dialogInput});
+      return Promise.resolve({
+        type: 'confirm',
+        args: {textField: dialogInput, dropdown: dropdownValue},
+      });
     }
   },
 });
