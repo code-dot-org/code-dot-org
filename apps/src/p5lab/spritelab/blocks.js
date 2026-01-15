@@ -9,7 +9,10 @@ import {
 } from '@cdo/apps/blockly/customBlocks/proceduresBlocks';
 import {
   defineNewBlockGenerator,
+  locationField,
   parseSoundPathString,
+  registerCustomProcedureBlocks,
+  soundField,
 } from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
@@ -105,7 +108,7 @@ const customInputTypes = {
           }
         });
       };
-      const fieldButton = Blockly.cdoUtils.locationField(
+      const fieldButton = locationField(
         icon,
         onChange,
         block,
@@ -137,7 +140,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          Blockly.cdoUtils.soundField(onClick, transformText, icon),
+          soundField(onClick, transformText, icon),
           inputConfig.name
         );
     },
@@ -472,7 +475,7 @@ export default {
   costumeList,
   customInputTypes,
   install(blockly, blockInstallOptions) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
