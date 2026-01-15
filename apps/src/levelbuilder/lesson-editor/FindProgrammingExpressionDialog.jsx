@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
-import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import PaginationWrapper from '@cdo/apps/sharedComponents/PaginationWrapper';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 import LessonEditorDialog from './LessonEditorDialog';
