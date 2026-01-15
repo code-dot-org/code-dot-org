@@ -5,15 +5,15 @@ import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 
 import Workspace from './Workspace';
 
-import styles from './studentCodeWidget.module.scss';
+import styles from './codeWidget.module.scss';
 
-interface StudentCodeWidgetProps {
+interface CodeWidgetProps {
   studentCode?: Record<string, string>;
   gridWidth?: number;
   gridHeight?: number;
 }
 
-const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
+const CodeWidget: React.FC<CodeWidgetProps> = ({
   studentCode = {},
   gridWidth = 2,
   gridHeight = 2,
@@ -79,4 +79,4 @@ const StudentCodeWidget: React.FC<StudentCodeWidgetProps> = ({
   );
 };
 
-export default StudentCodeWidget;
+export default CodeWidget;

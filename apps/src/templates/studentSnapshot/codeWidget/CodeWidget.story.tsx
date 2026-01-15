@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 
-import StudentCodeWidget from './index';
+import CodeWidget from './index';
 
 const SAMPLE_STUDENT_CODE: Record<string, string> = {
   'main.py':
@@ -16,8 +16,8 @@ const SAMPLE_STUDENT_CODE_2: Record<string, string> = {
     'student_id,lesson_date,lesson_topic,lesson_duration,lesson_grade\n1,12/19/2021,Natural Language Processing,1.8,34\n2,1/2/2021,Natural Language Processing,1.7,64\n3,7/5/2020,Machine Learning,2.0,8\n4,10/8/2020,Natural Language Processing,1.8,10\n5,1/21/2020,Neural Networks,2.9,74\n6,5/25/2021,Machine Learning,2.8,68\n7,4/1/2020,Machine Learning,2.6,9\n8,11/14/2021,Machine Learning,1.7,67',
 };
 
-const meta: Meta<typeof StudentCodeWidget> = {
-  component: StudentCodeWidget,
+const meta: Meta<typeof CodeWidget> = {
+  component: CodeWidget,
   parameters: {
     layout: 'padded',
   },
@@ -39,7 +39,7 @@ const meta: Meta<typeof StudentCodeWidget> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof StudentCodeWidget>;
+type Story = StoryObj<typeof CodeWidget>;
 
 export const NoFiles: Story = {
   args: {
