@@ -1,0 +1,54 @@
+{
+  "name": "@code-dot-org/core",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "design-system",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/core/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/core"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "tldjs": "^2.3.2"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "^20",
+    "@types/tldjs": "^2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "prettier": "3.4.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-externalize-deps": "^0.10.0",
+    "vitest": "^4.0.17"
+  }
+}
