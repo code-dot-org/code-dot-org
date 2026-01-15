@@ -9,9 +9,6 @@ import type {
 declare global {
   interface Window {
     LocalizeLoader?: Promise<LocalizeJS>;
-    newrelic?: {
-      noticeError: (err: Error) => void;
-    };
   }
 }
 
@@ -65,46 +62,46 @@ type Listener<T> = (payload: T) => void;
 // A type mapping for the event emitter
 class TypedEventEmitter<
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any -- any callback data */
-  Events extends Record<string, any>
+  Events extends Record<string, any>,
 > extends EventEmitter {
   override on<K extends keyof Events>(
     event: K | symbol | string,
-    listener: Listener<Events[K]>
+    listener: Listener<Events[K]>,
   ): this {
     return super.on(event as string, listener);
   }
 
   override once<K extends keyof Events>(
     event: K | symbol | string,
-    listener: Listener<Events[K]>
+    listener: Listener<Events[K]>,
   ): this {
     return super.once(event as string, listener);
   }
 
   override off<K extends keyof Events>(
     event: K | symbol | string,
-    listener: Listener<Events[K]>
+    listener: Listener<Events[K]>,
   ): this {
     return super.off(event as string, listener);
   }
 
   override emit<K extends keyof Events>(
     event: K | symbol | string,
-    payload: Events[K]
+    payload: Events[K],
   ): boolean {
     return super.emit(event as string, payload);
   }
 
   override addListener<K extends keyof Events>(
     event: K | symbol | string,
-    listener: Listener<Events[K]>
+    listener: Listener<Events[K]>,
   ): this {
     return super.addListener(event as string, listener);
   }
 
   override removeListener<K extends keyof Events>(
     event: K | symbol | string,
-    listener: Listener<Events[K]>
+    listener: Listener<Events[K]>,
   ): this {
     return super.removeListener(event as string, listener);
   }
@@ -171,7 +168,11 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
         resolve(true);
       }).catch(err => {
         // There was an error loading the Localize library, so log that via NewRelic
-        window.newrelic?.noticeError?.(err);
+        (
+          window as unknown as {
+            newrelic?: {noticeError?: (err: Error) => void};
+          }
+        ).newrelic?.noticeError?.(err);
       });
 
       if (window.LocalizeLoader === undefined) {
@@ -208,8 +209,7 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
   get locale(): string {
     // If not using LocalizeJS, then pull from the language cookie
     // And always fall back to the DefaultLocale
-    const language =
-      this.Localize?.getLanguage?.() || DefaultLocale;
+    const language = this.Localize?.getLanguage?.() || DefaultLocale;
 
     return (
       this.localeList.find(info => info.value === language)?.value ||
@@ -239,7 +239,7 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
 
   override on<K extends keyof LocalizationEventMap>(
     event: K,
-    listener: (payload: LocalizationEventMap[K]) => void
+    listener: (payload: LocalizationEventMap[K]) => void,
   ): this {
     const ret = super.on(event, listener);
 
@@ -253,7 +253,7 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
 
   override addListener<K extends keyof LocalizationEventMap>(
     event: K,
-    listener: (payload: LocalizationEventMap[K]) => void
+    listener: (payload: LocalizationEventMap[K]) => void,
   ): this {
     // We have to override this to ensure `addListener` is an alias to `on`
     return this.on(event, listener);
@@ -297,7 +297,7 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
    */
   translate<T extends string | string[] | HTMLElement | TranslatableHash>(
     key: T,
-    labels: string[] = []
+    labels: string[] = [],
   ): T {
     if (Array.isArray(key)) {
       return key.map(key => this.translate(key, labels)) as T;
