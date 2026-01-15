@@ -108,7 +108,7 @@ class StudentSnapshotsController < ApplicationController
             level_id: level.id,
             script_level_id: script_level.id,
             response: response_summary,
-            submitted: user_level&.submitted,
+            submitted: user_level&.submitted || submitted?(response_summary[:status]),
             timestamp: user_level&.updated_at
           }
         end
@@ -228,7 +228,7 @@ class StudentSnapshotsController < ApplicationController
         type: "LevelGroup",
         level_results: sublevel_results
       },
-      submitted: parent_ul&.submitted,
+      submitted: parent_ul&.submitted || (sublevel_results.all? {|sublevel_result| submitted?(sublevel_result[:status])}),
       timestamp: parent_ul&.updated_at
     }
   end
@@ -250,5 +250,9 @@ class StudentSnapshotsController < ApplicationController
       question_text = question_summary&.dig(:question_text) || question_summary&.dig(:question)
       return question_text, (question_summary&.dig(:answers) || question_summary&.dig('answers'))
     end
+  end
+
+  private def submitted?(status)
+    status.is_a?(Array) ? status.exclude?("unsubmitted") : status != "unsubmitted"
   end
 end
