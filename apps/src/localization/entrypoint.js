@@ -30,6 +30,7 @@ const csf_prefixes = [
 const donor_prefixes = [
   '/courses/customizing-llms-2024',
   '/courses/self-paced-pl-ai-101-2024',
+  '/courses/ai-ethics-2023'
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
