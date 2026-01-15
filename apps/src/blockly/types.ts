@@ -237,7 +237,6 @@ export type BlocklyCoreInstance = typeof BlocklyCore;
 
 export interface ExtendedBlockSvg extends BlocklyCore.BlockSvg {
   canSerializeNextConnection?: boolean;
-  isVisible: () => boolean;
   isUserVisible: () => boolean;
   shouldBeGrayedOut: () => boolean;
   // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
@@ -269,7 +268,6 @@ export interface ExtendedInput extends BlocklyCore.Input {
   // Blockly explicitly uses any for this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getFieldRow: () => BlocklyCore.Field<any>[];
-  setInline: (inline: boolean) => ExtendedInput;
 }
 export interface ExtendedConnection extends BlocklyCore.Connection {
   getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;

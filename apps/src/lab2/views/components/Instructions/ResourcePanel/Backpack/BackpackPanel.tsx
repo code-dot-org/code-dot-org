@@ -27,10 +27,12 @@ const PRIMARY_BACKPACK_KEY = 'PRIMARY';
 
 const BackpackPanel: React.FC<BackpackPanelProps> = ({
   validateFileName,
-  saveFile,
-  createNewFile,
+  saveFileToProject,
+  createNewProjectFile,
   findIdForFileName,
+  saveToBackpackButton,
   openPanelCallback,
+  supportedFileTypes,
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
@@ -245,38 +247,43 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 
   return (
     <div className={moduleStyles.backpackPanelWithFiles}>
-      {alertList.map((alert, index) => (
-        <Alert
-          type={alert.type}
-          text={alert.message}
-          key={index}
-          size="s"
-          onClose={() => {
-            const newList = [...alertList];
-            newList.splice(index, 1);
-            setAlertList(newList);
-          }}
-        />
-      ))}
-      {fileList?.map(fileName => (
-        <BackpackFileChip
-          key={fileName}
-          fileName={fileName}
-          backpackApi={primaryBackpackApi}
-          addAlert={(type, message) => {
-            setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
-            openPanelCallback();
-          }}
-          validateFileName={validateFileName}
-          saveFile={saveFile}
-          createNewFile={createNewFile}
-          findIdForFileName={findIdForFileName}
-          isRecentlyAdded={recentlyAddedFiles[PRIMARY_BACKPACK_KEY]?.includes(
-            fileName
-          )}
-        />
-      ))}
-      {secondaryFileLists && secondaryBackpackApis !== undefined
+      <div className={moduleStyles.fileListContainer}>
+        {alertList.map((alert, index) => (
+          <Alert
+            type={alert.type}
+            text={alert.message}
+            key={index}
+            size="s"
+            onClose={() => {
+              const newList = [...alertList];
+              newList.splice(index, 1);
+              setAlertList(newList);
+            }}
+          />
+        ))}
+        {isBackpackEmpty && (
+          <BackpackMessage
+            type="neutral"
+            iconName="backpack"
+            title="Your Backpack is empty"
+            message="Files you save to your Backpack will appear here."
+          />
+        )}
+        {fileList?.map(fileName => (
+          <BackpackFileChip
+            key={fileName}
+            fileName={fileName}
+            backpackApi={primaryBackpackApi}
+            addAlert={addAlert}
+            validateFileName={validateFileName}
+            saveFileToProject={saveFileToProject}
+            createNewProjectFile={createNewProjectFile}
+            findIdForFileName={findIdForFileName}
+            isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
+            supportedFileTypes={supportedFileTypes}
+          />
+        ))}
+              {secondaryFileLists && secondaryBackpackApis !== undefined
         ? Object.entries(secondaryFileLists).map(
             ([appName, secondaryFileList]) => (
               <div key={`backpack-${appName}`}>
@@ -309,7 +316,21 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
               </div>
             )
           )
-        : undefined}
+      </div>
+      {saveToBackpackButton && (
+        <Button
+          text={saveToBackpackButton.text}
+          onClick={() =>
+            saveToBackpackButton.onClick(fileList || [], (error: string) =>
+              addAlert('danger', error)
+            )
+          }
+          size="s"
+          type="secondary"
+          color="gray"
+          className={moduleStyles.saveButton}
+        />
+      )}
     </div>
   );
 };

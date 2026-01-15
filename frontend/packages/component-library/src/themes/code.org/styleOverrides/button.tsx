@@ -170,6 +170,13 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         color: 'var(--text-neutral-white-fixed)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-brand-purple-strong)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&:active, a&:active': {
+          color: 'var(--text-neutral-white-fixed)',
         },
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-disabled)',
@@ -184,6 +191,13 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         color: 'var(--text-neutral-inverse)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-octonary)',
+          color: 'var(--text-neutral-inverse)',
+        },
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-inverse)',
+        },
+        '&:active, a&:active': {
+          color: 'var(--text-neutral-inverse)',
         },
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-disabled)',
@@ -198,6 +212,13 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         color: 'var(--text-neutral-primary)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-quaternary)',
+          color: 'var(--text-neutral-primary)',
+        },
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-primary)',
+        },
+        '&:active, a&:active': {
+          color: 'var(--text-neutral-primary)',
         },
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-octonary)',
@@ -212,6 +233,13 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         color: 'var(--text-neutral-white-fixed)',
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-error-strong)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&:active, a&:active': {
+          color: 'var(--text-neutral-white-fixed)',
         },
         '&.Mui-disabled': {
           backgroundColor: 'var(--background-neutral-disabled)',
@@ -231,8 +259,12 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           border: '1px solid var(--borders-brand-purple-primary)',
           color: 'var(--text-brand-purple-primary)',
         },
-        '&:active': {
-          border: '1px solid var(--borders-brand-purple-primary) !important',
+        '&:focus, a&:focus': {
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&:active, a&:active': {
+          border: '1px solid var(--borders-brand-purple-primary)',
+          color: 'var(--text-brand-purple-primary)',
         },
         '&.Mui-disabled': {
           borderColor: 'var(--borders-neutral-disabled) !important',
@@ -250,9 +282,14 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-tertiary)',
           border: '1px solid var(--borders-neutral-solid)',
+          color: 'var(--text-neutral-primary)',
         },
-        '&:active': {
-          border: '1px solid var(--borders-neutral-solid) !important',
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-primary)',
+        },
+        '&:active, a&:active': {
+          border: '1px solid var(--borders-neutral-solid)',
+          color: 'var(--text-neutral-primary)',
         },
         '&.Mui-disabled': {
           borderColor: 'var(--borders-neutral-disabled) !important',
@@ -270,9 +307,14 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-neutral-tertiary)',
           border: '1px solid var(--borders-neutral-strong)',
+          color: 'var(--text-neutral-primary)',
         },
-        '&:active': {
-          border: '1px solid var(--borders-neutral-strong) !important',
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-primary)',
+        },
+        '&:active, a&:active': {
+          border: '1px solid var(--borders-neutral-strong)',
+          color: 'var(--text-neutral-primary)',
         },
         '&.Mui-disabled': {
           borderColor: 'var(--borders-neutral-disabled) !important',
@@ -290,9 +332,14 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--neutral-gray-80)',
           border: '1px solid var(--neutral-base-white)',
+          color: 'var(--neutral-base-white)',
         },
-        '&:active': {
-          border: '1px solid var(--neutral-base-white) !important',
+        '&:focus, a&:focus': {
+          color: 'var(--neutral-base-white)',
+        },
+        '&:active, a&:active': {
+          border: '1px solid var(--neutral-base-white)',
+          color: 'var(--neutral-base-white)',
         },
         '&.Mui-disabled': {
           borderColor: 'var(--neutral-gray-80) !important',
@@ -310,9 +357,14 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:hover, &.force-hover, &[data-force-hover="true"]': {
           backgroundColor: 'var(--background-error-light)',
           border: '1px solid var(--borders-error-primary)',
+          color: 'var(--text-error-primary)',
         },
-        '&:active': {
-          border: '1px solid var(--borders-error-primary) !important',
+        '&:focus, a&:focus': {
+          color: 'var(--text-error-primary)',
+        },
+        '&:active, a&:active': {
+          border: '1px solid var(--borders-error-primary)',
+          color: 'var(--text-error-primary)',
         },
         '&.Mui-disabled': {
           borderColor: 'var(--borders-neutral-disabled) !important',
@@ -331,7 +383,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           backgroundColor: 'var(--background-brand-purple-hover)',
           color: 'var(--text-brand-purple-primary)',
         },
-        '&:active': {
+        '&:focus, a&:focus': {
+          color: 'var(--text-brand-purple-primary)',
+        },
+        '&:active, a&:active': {
           backgroundColor: 'var(--background-brand-purple-hover)',
           color: 'var(--text-brand-purple-secondary)',
         },
@@ -349,7 +404,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           backgroundColor: 'var(--background-neutral-quaternary)',
           color: 'var(--text-neutral-primary)',
         },
-        '&:active': {
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-primary)',
+        },
+        '&:active, a&:active': {
           backgroundColor: 'var(--background-neutral-quaternary)',
           color: 'var(--text-neutral-tertiary)',
         },
@@ -367,7 +425,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           backgroundColor: 'var(--background-neutral-quaternary)',
           color: 'var(--text-neutral-quaternary)',
         },
-        '&:active': {
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-quaternary)',
+        },
+        '&:active, a&:active': {
           backgroundColor: 'var(--background-neutral-quaternary)',
           color: 'var(--text-neutral-tertiary)',
         },
@@ -385,7 +446,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           backgroundColor: 'var(--neutral-white-alpha-30)',
           color: 'var(--neutral-base-white)',
         },
-        '&:active': {
+        '&:focus, a&:focus': {
+          color: 'var(--text-neutral-inverse)',
+        },
+        '&:active, a&:active': {
           backgroundColor: 'var(--neutral-white-alpha-30)',
           color: 'var(--neutral-gray-20)',
         },
@@ -403,7 +467,10 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           backgroundColor: 'var(--background-error-light)',
           color: 'var(--text-error-primary)',
         },
-        '&:active': {
+        '&:focus, a&:focus': {
+          color: 'var(--text-error-primary)',
+        },
+        '&:active, a&:active': {
           backgroundColor: 'var(--background-error-light)',
           color: 'var(--text-error-secondary)',
         },
@@ -436,23 +503,30 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         minHeight: 'auto', // Remove MUI's default minHeight
         lineHeight: 'normal', // Use normal line height
         boxShadow: 'none', // Remove MUI's default shadow
-        '&:hover': {
+        // Override global link styles when button is rendered as <a>
+        // Using more specific selectors to override global a:hover, a:focus, a:active
+        '&:hover, a&:hover': {
           boxShadow: 'none', // Remove shadow on hover
+          textDecoration: 'none', // Override global a:hover styles via specificity
         },
-        '&:focus': {
+        '&:focus, a&:focus': {
           boxShadow: 'none', // Remove shadow on focus
+          textDecoration: 'none',
+          outline: 'none', // Remove default outline to use focus-visible styles
         },
 
-        '&:focus-visible': {
+        '&:focus-visible, a&:focus-visible': {
           outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
           borderRadius: '0.375rem',
           boxShadow: 'none', // Remove shadow on focus-visible
+          textDecoration: 'none',
         },
 
-        '&:active': {
-          border: '1px solid transparent !important',
+        '&:active, a&:active': {
+          border: '1px solid transparent',
           boxShadow: 'none', // Remove shadow on active
+          textDecoration: 'none',
         },
 
         '&.Mui-disabled, &[aria-disabled="true"]': {

@@ -1,6 +1,6 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import {CheckboxDropdown} from '@code-dot-org/component-library/dropdown';
 import {Heading6} from '@code-dot-org/component-library/typography';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, ChangeEvent} from 'react';
 
 import {FilterTypeConfig} from '@cdo/apps/templates/courseOfferings/filters/helpers';
@@ -60,15 +60,17 @@ const CourseOfferingsFilters = <TFilterKey extends string = string>({
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
         </Heading6>
-        <Button
-          id="clear-filters"
+        <MuiButton
+          variant="text"
+          color="primary"
+          size="small"
           className={style.catalogClearFiltersButton}
-          color={buttonColors.purple}
-          size="s"
-          type="tertiary"
-          text={i18n.clearFilters()}
+          id="clear-filters"
           onClick={onClearAllFilters}
-        />
+          type="button"
+        >
+          {i18n.clearFilters()}
+        </MuiButton>
       </div>
       <div className={style.catalogDropdownFilters}>
         {filtersConfigArray.map(({name, label, options}) => {

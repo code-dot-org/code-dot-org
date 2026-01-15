@@ -6,6 +6,7 @@
   border: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .fileIconContainer {

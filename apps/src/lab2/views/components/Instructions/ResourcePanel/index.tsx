@@ -74,9 +74,21 @@ export interface BackpackProps {
     isSupportFileName: boolean;
     newFileName: string;
   };
-  saveFile: (fileId: string, contents: string, url?: string) => void;
-  createNewFile: (fileName: string, contents: string, url?: string) => void;
+  saveFileToProject: (fileId: string, contents: string, url?: string) => void;
+  createNewProjectFile: (
+    fileName: string,
+    contents: string,
+    url?: string
+  ) => void;
   findIdForFileName: (fileName: string) => string | undefined;
+  saveToBackpackButton?: {
+    text: string;
+    onClick: (
+      fileList: string[],
+      errorCallback: (error: string) => void
+    ) => Promise<void>;
+  };
+  supportedFileTypes: string[];
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -203,10 +215,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
 
-  const showBackpack =
-    backpackProps &&
-    !isPermanentlyReadOnly &&
-    (appName === 'pythonlab' || appName === 'weblab2');
+  const showBackpack = backpackProps && !isPermanentlyReadOnly;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {

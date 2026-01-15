@@ -485,12 +485,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedBlockSvg = blocklyWrapper.BlockSvg
     .prototype as ExtendedBlockSvg;
 
-  extendedBlockSvg.isVisible = function () {
-    // TODO (eventually) - All Blockly blocks are currently visible.
-    // This shouldn't be a problem until we convert other labs.
-    return true;
-  };
-
   extendedBlockSvg.isUserVisible = function () {
     // Used for EXTRA_TOP_BLOCKS_FAIL feedback
     // Mainline Blockly doesn't support invisible blocks. If a block should be
@@ -578,12 +572,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       fieldHelper,
       options
     );
-    return this;
-  };
-
-  // This is intentionally a no-op. Called by PlayLab.
-  // Blockly's implementation uses end row inputs instead.
-  extendedInput.setInline = function (inline) {
     return this;
   };
 
@@ -689,16 +677,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
 
   gestureOverrides(blocklyWrapper);
-
-  // Used for spritelab behavior blocks.
-  // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.Block as any).createProcedureDefinitionBlock = function () {};
-
-  // In cdo this is used to add "create a behavior" button to the toolbox
-  // Once we have fully moved to Blockly we can remove this.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (blocklyWrapper.Flyout as any).configure = function () {};
 
   blocklyWrapper.getGenerator = function () {
     // Additional methods are added to the generator when initializeGenerator is called,

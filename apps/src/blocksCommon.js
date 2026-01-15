@@ -1,10 +1,11 @@
 /**
  * Defines blocks useful in multiple blockly apps
  */
-var commonMsg = require('@cdo/locale');
 
-var BlockStyles = require('./blockly/constants').BlockStyles;
-var BlockColors = require('./blockly/constants').BlockColors;
+import commonMsg from '@cdo/locale';
+
+import {BLOCK_TYPES, BlockColors, BlockStyles} from './blockly/constants';
+import {copyBlockGenerator, defineNewBlockGenerator} from './blockly/utils';
 
 /**
  * Install extensions to Blockly's language and JavaScript generator
@@ -25,15 +26,14 @@ exports.install = function (blockly, blockInstallOptions) {
   // The custom block supports the US English spelling of "color"
   installCustomColourRandomBlock(blockly);
 };
-
 function installControlsRepeatSimplified(blockly, skin) {
   // Re-uses the repeat block generator from core
-  blockly.customBlocks.copyBlockGenerator(
+  copyBlockGenerator(
     blockly.JavaScript,
     'controls_repeat_simplified',
     'controls_repeat'
   );
-  blockly.customBlocks.copyBlockGenerator(
+  copyBlockGenerator(
     blockly.JavaScript,
     'controls_repeat_simplified_dropdown',
     'controls_repeat'
@@ -93,7 +93,7 @@ function installControlsRepeatSimplified(blockly, skin) {
 }
 
 function installControlsRepeatDropdown(blockly) {
-  blockly.customBlocks.copyBlockGenerator(
+  copyBlockGenerator(
     blockly.JavaScript,
     'controls_repeat_dropdown',
     'controls_repeat'
@@ -127,11 +127,7 @@ function installControlsRepeatDropdown(blockly) {
 }
 
 function installNumberDropdown(blockly) {
-  blockly.customBlocks.copyBlockGenerator(
-    blockly.JavaScript,
-    'math_number_dropdown',
-    'math_number'
-  );
+  copyBlockGenerator(blockly.JavaScript, 'math_number_dropdown', 'math_number');
 
   blockly.Blocks.math_number_dropdown = {
     // Numeric value with a customizable dropdown.
@@ -168,13 +164,9 @@ function installPickOne(blockly) {
       this.appendStatementInput('PICK');
     },
   };
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'pick_one',
-    () => {
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'pick_one', () => {
+    return '\n';
+  });
 }
 
 // A "Category" block for level editing, for delineating category groups.
@@ -197,13 +189,9 @@ function installCategory(blockly) {
       this.setNextStatement(false);
     },
   };
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'category',
-    () => {
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'category', () => {
+    return '\n';
+  });
 
   blockly.Blocks.custom_category = {
     // Repeat n times (internal number).
@@ -230,13 +218,9 @@ function installCategory(blockly) {
     },
   };
 
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'custom_category',
-    () => {
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'custom_category', () => {
+    return '\n';
+  });
 }
 
 function installWhenRun(blockly, skin, isK1) {
@@ -265,21 +249,32 @@ function installWhenRun(blockly, skin, isK1) {
     },
   };
 
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'when_run',
-    () => {
-      // Generate JavaScript for handling click event.
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'when_run', () => {
+    // Generate JavaScript for handling click event.
+    return '\n';
+  });
 }
 
 function installJoinBlock(blockly) {
-  Blockly.customBlocks.installJoinBlock(blockly);
+  // text_join is included with core Blockly. We register a custom text_join_mutator
+  // which adds the plus/minus block UI.
+  blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
+  blockly.JavaScript.forBlock.text_join_simple =
+    blockly.JavaScript.forBlock.text_join;
 }
 function installCustomColourRandomBlock(blockly) {
-  Blockly.customBlocks.installCustomColourRandomBlock(blockly);
+  // We need to use a custom block so that English users will see "random color".
+  delete blockly.Blocks['colour_random'];
+  blockly.common.defineBlocks(
+    blockly.common.createBlockDefinitionsFromJsonArray([
+      {
+        type: BLOCK_TYPES.colourRandom,
+        message0: commonMsg?.colourRandom?.() || 'random color',
+        output: 'Colour',
+        style: 'colour_blocks',
+      },
+    ])
+  );
 }
 
 function installCommentBlock(blockly) {
@@ -296,12 +291,8 @@ function installCommentBlock(blockly) {
     },
   };
 
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'comment',
-    function () {
-      var comment = this.getFieldValue('TEXT');
-      return `// ${comment}\n`;
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'comment', function () {
+    var comment = this.getFieldValue('TEXT');
+    return `// ${comment}\n`;
+  });
 }
