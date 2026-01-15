@@ -217,6 +217,28 @@ export default class BackpackClientApi {
     onSuccess();
   }
 
+  async saveBlobFile(
+    filename: string,
+    contents: Blob,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    if (!this.channelId) {
+      onError();
+      return;
+    }
+    try {
+      await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
+    } catch (error) {
+      onError(error as Error);
+      return;
+    }
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.FileAdded, filename)
+    );
+    onSuccess();
+  }
+
   /**
    * Delete files from the backpack
    * @param {Array} filenames Array of filenames to delete from the backpack.

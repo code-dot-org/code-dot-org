@@ -1,10 +1,16 @@
 /**
  * Defines blocks useful in multiple blockly apps
  */
-var commonMsg = require('@cdo/locale');
 
-var BlockStyles = require('./blockly/constants').BlockStyles;
-var BlockColors = require('./blockly/constants').BlockColors;
+import {nonnegativeIntegerValidator} from '@cdo/apps/blockly/utils';
+import commonMsg from '@cdo/locale';
+
+import {BLOCK_TYPES, BlockStyles} from './blockly/constants';
+import {
+  addSerializationHooksToBlock,
+  copyBlockGenerator,
+  defineNewBlockGenerator,
+} from './blockly/utils';
 
 /**
  * Install extensions to Blockly's language and JavaScript generator
@@ -25,15 +31,14 @@ exports.install = function (blockly, blockInstallOptions) {
   // The custom block supports the US English spelling of "color"
   installCustomColourRandomBlock(blockly);
 };
-
 function installControlsRepeatSimplified(blockly, skin) {
   // Re-uses the repeat block generator from core
-  blockly.customBlocks.copyBlockGenerator(
+  copyBlockGenerator(
     blockly.JavaScript,
     'controls_repeat_simplified',
     'controls_repeat'
   );
-  blockly.customBlocks.copyBlockGenerator(
+  copyBlockGenerator(
     blockly.JavaScript,
     'controls_repeat_simplified_dropdown',
     'controls_repeat'
@@ -43,20 +48,13 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
         )
         .appendField(
-          new blockly.FieldTextInput(
-            '10',
-            blockly.cdoUtils.nonnegativeIntegerValidator
-          ),
+          new blockly.FieldTextInput('10', nonnegativeIntegerValidator),
           'TIMES'
         );
       this.appendStatementInput('DO').appendField(
@@ -72,11 +70,7 @@ function installControlsRepeatSimplified(blockly, skin) {
     // Repeat n times (internal number) with simplified UI
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
@@ -93,7 +87,7 @@ function installControlsRepeatSimplified(blockly, skin) {
 }
 
 function installControlsRepeatDropdown(blockly) {
-  blockly.customBlocks.copyBlockGenerator(
+  copyBlockGenerator(
     blockly.JavaScript,
     'controls_repeat_dropdown',
     'controls_repeat'
@@ -103,11 +97,7 @@ function installControlsRepeatDropdown(blockly) {
     // Repeat n times (internal number) with a customizable dropdown of # choices.
     init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
@@ -127,21 +117,13 @@ function installControlsRepeatDropdown(blockly) {
 }
 
 function installNumberDropdown(blockly) {
-  blockly.customBlocks.copyBlockGenerator(
-    blockly.JavaScript,
-    'math_number_dropdown',
-    'math_number'
-  );
+  copyBlockGenerator(blockly.JavaScript, 'math_number_dropdown', 'math_number');
 
   blockly.Blocks.math_number_dropdown = {
     // Numeric value with a customizable dropdown.
     init: function () {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.MATH,
-        BlockStyles.MATH
-      );
+      this.setStyle(BlockStyles.MATH);
       this.appendDummyInput().appendField(new blockly.FieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
@@ -155,12 +137,7 @@ function installPickOne(blockly) {
   blockly.Blocks.pick_one = {
     // Repeat n times (internal number).
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
-
+      this.setStyle(BlockStyles.LOOP);
       // Not localized as this is only used by level builders
       this.appendDummyInput().appendField(
         'Pick one (Use only in required blocks)'
@@ -168,13 +145,9 @@ function installPickOne(blockly) {
       this.appendStatementInput('PICK');
     },
   };
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'pick_one',
-    () => {
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'pick_one', () => {
+    return '\n';
+  });
 }
 
 // A "Category" block for level editing, for delineating category groups.
@@ -182,11 +155,7 @@ function installCategory(blockly) {
   blockly.Blocks.category = {
     // Repeat n times (internal number).
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.setInputsInline(true);
 
       // Not localized as this is only used by level builders
@@ -197,22 +166,14 @@ function installCategory(blockly) {
       this.setNextStatement(false);
     },
   };
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'category',
-    () => {
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'category', () => {
+    return '\n';
+  });
 
   blockly.Blocks.custom_category = {
     // Repeat n times (internal number).
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.setInputsInline(true);
 
       var customDropdown = new blockly.FieldDropdown([
@@ -230,13 +191,9 @@ function installCategory(blockly) {
     },
   };
 
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'custom_category',
-    () => {
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'custom_category', () => {
+    return '\n';
+  });
 }
 
 function installWhenRun(blockly, skin, isK1) {
@@ -244,11 +201,7 @@ function installWhenRun(blockly, skin, isK1) {
     // Block to handle event where mouse is clicked
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.SETUP,
-        BlockStyles.SETUP
-      );
+      this.setStyle(BlockStyles.SETUP);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.whenRun())
@@ -258,35 +211,46 @@ function installWhenRun(blockly, skin, isK1) {
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      Blockly.customBlocks.addSerializationHooksToBlock(this);
+      addSerializationHooksToBlock(this);
     },
     shouldBeGrayedOut: function () {
       return false;
     },
   };
 
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'when_run',
-    () => {
-      // Generate JavaScript for handling click event.
-      return '\n';
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'when_run', () => {
+    // Generate JavaScript for handling click event.
+    return '\n';
+  });
 }
 
 function installJoinBlock(blockly) {
-  Blockly.customBlocks.installJoinBlock(blockly);
+  // text_join is included with core Blockly. We register a custom text_join_mutator
+  // which adds the plus/minus block UI.
+  blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
+  blockly.JavaScript.forBlock.text_join_simple =
+    blockly.JavaScript.forBlock.text_join;
 }
 function installCustomColourRandomBlock(blockly) {
-  Blockly.customBlocks.installCustomColourRandomBlock(blockly);
+  // We need to use a custom block so that English users will see "random color".
+  delete blockly.Blocks['colour_random'];
+  blockly.common.defineBlocks(
+    blockly.common.createBlockDefinitionsFromJsonArray([
+      {
+        type: BLOCK_TYPES.colourRandom,
+        message0: commonMsg?.colourRandom?.() || 'random color',
+        output: 'Colour',
+        style: 'colour_blocks',
+      },
+    ])
+  );
 }
 
 function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
     init: function () {
       // Comment blocks use a hard-coded HSV color and are not compatible with themes.
-      Blockly.cdoUtils.handleColorAndStyle(this, BlockColors.COMMENT);
+      this.setStyle(BlockStyles.COMMENT);
       this.appendDummyInput()
         .appendField(commonMsg.commentPrefix())
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
@@ -296,12 +260,8 @@ function installCommentBlock(blockly) {
     },
   };
 
-  Blockly.customBlocks.defineNewBlockGenerator(
-    blockly.JavaScript,
-    'comment',
-    function () {
-      var comment = this.getFieldValue('TEXT');
-      return `// ${comment}\n`;
-    }
-  );
+  defineNewBlockGenerator(blockly.JavaScript, 'comment', function () {
+    var comment = this.getFieldValue('TEXT');
+    return `// ${comment}\n`;
+  });
 }

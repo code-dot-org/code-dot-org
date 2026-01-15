@@ -1,9 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
 import Image, {ImageProps} from '@code-dot-org/component-library/image';
 import {
   Heading2,
   BodyTwoText,
 } from '@code-dot-org/component-library/typography';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -33,12 +33,15 @@ const NoMatchingSearchResultsFound: React.FunctionComponent<
         <BodyTwoText noMargin>{noResultsSubHeadingText}</BodyTwoText>
       )}
       {onClearAllFilters && (
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={onClearAllFilters}
-          text={i18n.clearFilters()}
-          color="purple"
-          type="primary"
-        />
+          type="button"
+        >
+          {i18n.clearFilters()}
+        </MuiButton>
       )}
     </div>
   );
