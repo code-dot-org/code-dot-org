@@ -54,14 +54,14 @@ $default-spacing: 2px;
   width: 100%;
 
   .controls-area {
-    border: var(--lab-default-border);
+    border: var(--lab-border-default);
     border-inline-start: none;
     height: 100%;
     width: 220px;
   }
 
   .timeline-area {
-    border-top: var(--lab-default-border);
+    border-top: var(--lab-border-default);
     height: 100%;
     width: calc(100% - 220px);
   }
@@ -69,7 +69,7 @@ $default-spacing: 2px;
 
 .instructions-area {
   background-color: var(--neutral-gray-99);
-  border-inline-end: var(--lab-default-border);
+  border-inline-end: var(--lab-border-default);
   border-radius: $default-border-radius;
   box-sizing: border-box;
   color: var(--neutral-gray-5);
@@ -112,7 +112,7 @@ $default-spacing: 2px;
 }
 
 .header-with-border {
-  border-bottom: var(--lab-default-border);
+  border-bottom: var(--lab-border-default);
 }
 
 .advanced-controls-container {
