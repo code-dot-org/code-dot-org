@@ -1,6 +1,10 @@
-import Breadcrumbs from '@code-dot-org/component-library/breadcrumbs';
-import {LinkWithText} from '@code-dot-org/component-library/link';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Heading1} from '@code-dot-org/component-library/typography';
+import {
+  Breadcrumbs as MUIBreadcrumbs,
+  Link as MUILink,
+  Typography,
+} from '@mui/material';
 import React, {useEffect} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -17,17 +21,6 @@ import {
 } from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
-
-const workshopMarketingBreadcrumbs: LinkWithText[] = [
-  {
-    text: 'Explore workshops',
-    href: '/professional-learning/workshops/',
-  },
-  {
-    text: 'Workshop information',
-    href: window.location.pathname,
-  },
-];
 
 interface WorkshopMarketingPageProps extends WorkshopInfo, UserInfoForWorkshop {
   userEnrollment?: UserWorkshopEnrollment;
@@ -74,14 +67,30 @@ const WorkshopMarketingPage: React.FunctionComponent<
   return (
     <div className={moduleStyles.workshopMarketingPage}>
       <section className={moduleStyles.header}>
-        <Breadcrumbs
-          name="workShopMarketingPage-HeaderBreadcrumbs"
-          size="l"
-          showHomeIcon={true}
-          homeIconHref="/my-professional-learning"
-          breadcrumbs={workshopMarketingBreadcrumbs}
+        <MUIBreadcrumbs
           className={moduleStyles.headerBreadcrumbs}
-        />
+          aria-label="Breadcrumb navigation: workShopMarketingPage-HeaderBreadcrumbs"
+          separator={<FontAwesomeV6Icon iconName="chevron-right" />}
+        >
+          <MUILink
+            key="home"
+            href="/my-professional-learning"
+            color="inherit"
+            underline="none"
+          >
+            <FontAwesomeV6Icon iconName="house" title="Home" />
+          </MUILink>
+          <MUILink
+            href="/professional-learning/workshops/"
+            color="inherit"
+            underline="none"
+          >
+            Explore workshops
+          </MUILink>
+          <Typography component="span" variant="body2">
+            Workshop information
+          </Typography>
+        </MUIBreadcrumbs>
         <Heading1>
           {isUserEnrolled ? 'Workshop information' : 'Register for a workshop'}
         </Heading1>
