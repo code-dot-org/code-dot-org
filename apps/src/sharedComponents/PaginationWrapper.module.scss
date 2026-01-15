@@ -24,10 +24,10 @@
   }
 
   .active a {
-    color: #333;
+    color: var(--color-default-text);
   }
 
   a:hover {
-    color: #333;
+    color: var(--color-default-text);
   }
 }
