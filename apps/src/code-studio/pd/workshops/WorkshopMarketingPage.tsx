@@ -71,6 +71,7 @@ const WorkshopMarketingPage: React.FunctionComponent<
           className={moduleStyles.headerBreadcrumbs}
           aria-label="Breadcrumb navigation: workShopMarketingPage-HeaderBreadcrumbs"
           separator={<FontAwesomeV6Icon iconName="chevron-right" />}
+          size="m"
         >
           <MUILink
             key="home"
@@ -87,7 +88,7 @@ const WorkshopMarketingPage: React.FunctionComponent<
           >
             Explore workshops
           </MUILink>
-          <Typography component="span" variant="body2">
+          <Typography component="span" variant="label2">
             Workshop information
           </Typography>
         </MUIBreadcrumbs>
