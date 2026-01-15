@@ -96,6 +96,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     [primaryBackpackApi, secondaryBackpackApis]
   );
 
+  const addAlert = useCallback(
+    (type: 'success' | 'danger', message: string) => {
+      setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+      openPanelCallback();
+    },
+    [openPanelCallback]
+  );
+
   useEffect(() => {
     // Show the load screen on initial load, and load all backpacks.
     loadBackpackFiles(true);
@@ -116,14 +124,10 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                 setSecondaryFileLists(prev => ({...prev, [appKey]: fileList}));
         loadForApi(clientToLoad, listCallback, false);
         if (event === BackpackEvent.FileAdded) {
-          setAlertList(prevAlerts => [
-            ...prevAlerts,
-            {
-              type: 'success',
-              message: `${filename} successfully saved to your Backpack!`,
-            },
-          ]);
-          openPanelCallback();
+          addAlert(
+            'success',
+            `${filename} successfully saved to your Backpack!`
+          );
           // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
           setRecentlyAddedFiles(prevFiles => {
             let previousListForApp = prevFiles[appKey];
@@ -165,12 +169,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         secondaryBackpackApis[appKey]?.removeEventListener(listenerId);
       });
     };
-  }, [
-    loadBackpackFiles,
-    primaryBackpackApi,
-    openPanelCallback,
-    secondaryBackpackApis,
-  ]);
+  }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis, addAlert]);
 
   const isBackpackEmpty = useMemo(() => {
     const emptyPrimaryBackpack =
@@ -274,48 +273,55 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             key={fileName}
             fileName={fileName}
             backpackApi={primaryBackpackApi}
-            addAlert={addAlert}
+            addAlert={(type, message) => {
+              setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+              openPanelCallback();
+            }}
             validateFileName={validateFileName}
             saveFileToProject={saveFileToProject}
             createNewProjectFile={createNewProjectFile}
             findIdForFileName={findIdForFileName}
-            isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
+            isRecentlyAdded={recentlyAddedFiles[PRIMARY_BACKPACK_KEY]?.includes(
+              fileName
+            )}
             supportedFileTypes={supportedFileTypes}
           />
         ))}
-              {secondaryFileLists && secondaryBackpackApis !== undefined
-        ? Object.entries(secondaryFileLists).map(
-            ([appName, secondaryFileList]) => (
-              <div key={`backpack-${appName}`}>
-                <BodyThreeText className={moduleStyles.backpackDivider}>
-                  {appName}
-                </BodyThreeText>
-                {secondaryFileList?.map(fileName => (
-                  <BackpackFileChip
-                    key={fileName}
-                    fileName={fileName}
-                    backpackApi={
-                      secondaryBackpackApis && secondaryBackpackApis[appName]
-                    }
-                    addAlert={(type, message) => {
-                      setAlertList(prevAlerts => [
-                        ...prevAlerts,
-                        {type, message},
-                      ]);
-                      openPanelCallback();
-                    }}
-                    validateFileName={validateFileName}
-                    saveFile={saveFile}
-                    createNewFile={createNewFile}
-                    findIdForFileName={findIdForFileName}
-                    isRecentlyAdded={recentlyAddedFiles[appName]?.includes(
-                      fileName
-                    )}
-                  />
-                ))}
-              </div>
+        {secondaryFileLists && secondaryBackpackApis !== undefined
+          ? Object.entries(secondaryFileLists).map(
+              ([appName, secondaryFileList]) => (
+                <div key={`backpack-${appName}`}>
+                  <BodyThreeText className={moduleStyles.backpackDivider}>
+                    {appName}
+                  </BodyThreeText>
+                  {secondaryFileList?.map(fileName => (
+                    <BackpackFileChip
+                      key={fileName}
+                      fileName={fileName}
+                      backpackApi={
+                        secondaryBackpackApis && secondaryBackpackApis[appName]
+                      }
+                      addAlert={(type, message) => {
+                        setAlertList(prevAlerts => [
+                          ...prevAlerts,
+                          {type, message},
+                        ]);
+                        openPanelCallback();
+                      }}
+                      validateFileName={validateFileName}
+                      saveFileToProject={saveFileToProject}
+                      createNewProjectFile={createNewProjectFile}
+                      findIdForFileName={findIdForFileName}
+                      isRecentlyAdded={recentlyAddedFiles[appName]?.includes(
+                        fileName
+                      )}
+                      supportedFileTypes={supportedFileTypes}
+                    />
+                  ))}
+                </div>
+              )
             )
-          )
+          : undefined}
       </div>
       {saveToBackpackButton && (
         <Button
