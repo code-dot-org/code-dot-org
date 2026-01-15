@@ -1,14 +1,10 @@
 import {Paper, Stack, Typography, IconButton, Box} from '@mui/material';
+import classNames from 'classnames';
 import {forwardRef, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {
-  getNotificationBannerBackgroundColor,
-  getNotificationBannerBorderColor,
-  getNotificationBannerIconContainerBorderColor,
-  getNotificationBannerIconColor,
-} from '@/themes/code.org/styleOverrides/notificationBanner';
 
+import styles from './notificationBanner.module.scss';
 import {NotificationBannerVariant, NotificationBannerStyle} from './types';
 
 export interface NotificationBannerProps {
@@ -62,35 +58,20 @@ const NotificationBanner = forwardRef<HTMLDivElement, NotificationBannerProps>(
     ref,
   ) => {
     const bodyContent = description || children;
-
-    const paperStyles = {
-      elevation: 0,
-      borderRadius: '0.25rem',
-      border: `1px solid ${getNotificationBannerBorderColor(variant, style)}`,
-      backgroundColor: getNotificationBannerBackgroundColor(variant, style),
-      width: fullWidth ? '100%' : 'auto',
-      p: 2,
-      position: 'relative' as const,
-      boxShadow: 'none',
-    };
-
-    const iconContainerStyles = {
-      width: '3rem',
-      height: '3rem',
-      borderRadius: '50%',
-      border: `3px solid ${getNotificationBannerIconContainerBorderColor(variant)}`,
-      backgroundColor: 'var(--background-neutral-primary)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexShrink: 0,
-      '& i': {
-        color: getNotificationBannerIconColor(variant),
-        fontSize: '1.375rem',
-      },
-    };
-
     const ariaLive = role === 'alert' ? 'assertive' : 'polite';
+
+    const bannerClassName = classNames(
+      styles.banner,
+      styles[style],
+      styles[variant],
+      fullWidth && styles.fullWidth,
+      className,
+    );
+
+    const iconContainerClassName = classNames(
+      styles.iconContainer,
+      styles[variant],
+    );
 
     return (
       <Paper
@@ -98,18 +79,18 @@ const NotificationBanner = forwardRef<HTMLDivElement, NotificationBannerProps>(
         component="div"
         role={role}
         aria-live={ariaLive}
-        sx={paperStyles}
-        className={className}
+        className={bannerClassName}
         id={id}
+        elevation={0}
         {...rest}
       >
         <Stack direction="row" spacing={2} alignItems="center">
-          <Box sx={iconContainerStyles}>
+          <Box className={iconContainerClassName}>
             <FontAwesomeV6Icon {...icon} />
           </Box>
 
-          <Stack direction="column" spacing={0.5} flex={1} minWidth={0}>
-            <Typography variant="h6" component="h3" sx={{fontWeight: 600}}>
+          <Stack direction="column" spacing={0.5} className={styles.content}>
+            <Typography variant="h6" component="h3" className={styles.title}>
               {title}
             </Typography>
 
@@ -121,18 +102,14 @@ const NotificationBanner = forwardRef<HTMLDivElement, NotificationBannerProps>(
           </Stack>
 
           {(actions || onClose) && (
-            <Stack
-              direction="row"
-              spacing={0.5}
-              sx={{flexWrap: 'wrap', gap: 0.5, flexShrink: 0}}
-            >
+            <Stack direction="row" spacing={0.5} className={styles.actions}>
               {actions}
               {onClose && (
                 <IconButton
                   size="small"
                   onClick={onClose}
                   aria-label="Close notification"
-                  sx={{flexShrink: 0}}
+                  className={styles.closeButton}
                 >
                   <FontAwesomeV6Icon
                     iconName="xmark"

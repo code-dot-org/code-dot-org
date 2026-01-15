@@ -163,19 +163,20 @@ describe('Design System - NotificationBanner', () => {
   it('defaults to fullWidth true', () => {
     renderWithTheme(<NotificationBanner {...defaultProps} />);
     const banner = screen.getByRole('status');
-    expect(banner).toHaveStyle({width: '100%'});
+    // CSS Module class is applied for fullWidth (default: true)
+    expect(banner.className).toMatch(/fullWidth/);
   });
 
   it('applies fullWidth when set to true', () => {
     renderWithTheme(<NotificationBanner {...defaultProps} fullWidth={true} />);
     const banner = screen.getByRole('status');
-    expect(banner).toHaveStyle({width: '100%'});
+    expect(banner.className).toMatch(/fullWidth/);
   });
 
-  it('applies auto width when fullWidth is false', () => {
+  it('does not apply fullWidth class when fullWidth is false', () => {
     renderWithTheme(<NotificationBanner {...defaultProps} fullWidth={false} />);
     const banner = screen.getByRole('status');
-    expect(banner).toHaveStyle({width: 'auto'});
+    expect(banner.className).not.toMatch(/fullWidth/);
   });
 
   it('applies custom className', () => {
