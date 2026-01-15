@@ -1,12 +1,14 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
 import {createContext, useCallback, useMemo, useEffect, useState} from 'react';
 
+import {DEFAULT_BPM, DEFAULT_KEY} from '../constants';
 import AppConfig from '../appConfig';
 import AnalyticsReporter from '../LabMusicMetricsReporter';
 import {KeyFromName} from '../utils/Notes';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicRegistry from '../MusicRegistry';
+import {KeyMapping} from '../utils/Notes';
 
 export interface PlayerContent {
   /** A method to load the given library and establish it on the player */
@@ -40,8 +42,8 @@ export const PlayerProvider: FunctionComponent<PropsWithChildren> = ({
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
     return new MusicPlayer(
-      bpm,
-      key && KeyFromName[key.toUpperCase()],
+      parseInt(bpm || DEFAULT_BPM.toString()),
+      KeyFromName[(key || KeyMapping[DEFAULT_KEY]).toUpperCase()],
       analyticsReporter,
     );
   }, [analyticsReporter]);

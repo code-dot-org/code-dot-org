@@ -232,9 +232,10 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
                   canChangeStartingPlayheadPosition &&
                     moduleStyles.barNumberClickable,
                 )}
-                onClick={() => onMeasureNumberClick(measure)}
               >
-                {measure}
+                <span onClick={() => onMeasureNumberClick(measure)}>
+                  {measure}
+                </span>
               </BodyFourText>
               <div
                 id={index === 0 ? 'timeline-first-barline' : undefined}

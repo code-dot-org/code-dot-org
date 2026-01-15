@@ -1,7 +1,7 @@
-@import '../base.module.scss';
+@use '../base.module.scss' as baseStyles;
 
 .timeline {
-  border-radius: $default-border-radius;
+  border-radius: baseStyles.$default-border-radius;
   background-size: 100% 200%;
   box-sizing: border-box;
   background-color: var(--neutral-base-black);

@@ -3,7 +3,7 @@ import {queryParams} from '@code-dot-org/api';
 import {baseAssetUrl} from './constants';
 
 export const getBaseAssetUrl = (): string => {
-  const url = queryParams('base-asset-url') as string;
+  const url = queryParams('base-asset-url') as string | undefined;
   if (url) {
     return url + '/';
   } else {
@@ -13,7 +13,7 @@ export const getBaseAssetUrl = (): string => {
 
 export default {
   // Returns a config value.
-  getValue(name: string) {
-    return queryParams(name);
+  getValue(name: string): string | undefined {
+    return queryParams(name) as string | undefined;
   },
 };
