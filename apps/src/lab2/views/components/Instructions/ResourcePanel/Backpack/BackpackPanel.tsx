@@ -4,6 +4,8 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProjectType} from '@cdo/apps/lab2/types';
+import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi, {
@@ -295,7 +297,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                   className={moduleStyles.secondaryFileList}
                 >
                   <BodyThreeText className={moduleStyles.backpackDivider}>
-                    {appName}
+                    {convertProjectTypeToDisplayName(appName as ProjectType)}
                   </BodyThreeText>
                   {secondaryFileList?.map(fileName => (
                     <BackpackFileChip
