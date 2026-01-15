@@ -205,6 +205,17 @@ Resources:
               - 's3:ReplicateObject'
               - 's3:RestoreObject'
             Resource: 'arn:aws:s3:::cdo-v3-libraries/libraries_<%=environment%>/*'
+          # S3 access for user-content bucket (AI-generated audio, etc.)
+          - Effect: Allow
+            Action:
+              - 's3:GetObject'
+              - 's3:PutObject'
+              - 's3:DeleteObject'
+            Resource: 'arn:aws:s3:::cdo.<%=environment%>.user-content/*'
+          - Effect: Allow
+            Action:
+              - 's3:ListBucket'
+            Resource: 'arn:aws:s3:::cdo.<%=environment%>.user-content'
           # General s3 access.
           # TODO: Switch from `allow *` then `deny risky` to a proper least-privilege allow-list
           - Effect: Allow
@@ -874,6 +885,11 @@ Resources:
 <% end -%>
 
 <%=  component 'logging'%>
+
+  # ---------------------------------------------
+  # User Content Storage (AI-generated audio, etc.)
+  # ---------------------------------------------
+<%=  component 'user-content-bucket'%>
 
   # ---------------------------------------------
   # Database

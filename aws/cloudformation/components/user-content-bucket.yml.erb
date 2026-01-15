@@ -1,0 +1,24 @@
+  # S3 bucket for user-generated AI content (audio lesson summaries, etc.)
+  #
+  # Access: Explicit permissions granted in CDOPolicy (GetObject, PutObject, DeleteObject, ListBucket).
+
+  UserContentBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: cdo.<%=environment%>.user-content
+      # To constrain costs, impose a hard limit here. We should consider more proactive cleanup in-platform.
+      LifecycleConfiguration:
+        Rules:
+          - Id: expire-after-6-months
+            Status: Enabled
+            ExpirationInDays: 180
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LoggingConfiguration:
+        DestinationBucketName: cdo-logs
+        # TODO: confirm this is where we want these logs
+        LogFilePrefix: s3/user-content/<%=environment%>/
