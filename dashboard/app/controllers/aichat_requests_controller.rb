@@ -46,9 +46,24 @@ class AichatRequestsController < ApplicationController
       return head :too_many_requests
     end
 
+    # Filter out non-OK messages (e.g. errors).
+    messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
+    context = params[:aichatContext]
+
+    # Add client type to model parameters.
+    params[:modelParameters][:clientType] = params[:aichatContext][:clientType]
+
     # Create the request object.
     begin
-      request = create_request
+      request = AichatRequest.create!(
+        user_id: current_user.id,
+        model_customizations: params[:modelParameters],
+        stored_messages: messages_for_model,
+        new_message: params[:newMessage],
+        level_id: context[:currentLevelId],
+        script_id: context[:scriptId],
+        project_id: get_project_id(context)
+      )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
@@ -84,23 +99,6 @@ class AichatRequestsController < ApplicationController
       response: request.response
     }
     render(status: :ok, json: response_body)
-  end
-
-  def create_request
-    safe_params = params.permit(
-      :locale,
-      newMessage: [:role, :chatMessageText, :status, :hiddenContext, :timestamp],
-      storedMessages: [:role, :chatMessageText, :status],
-      modelParameters: [
-        :selectedModelId, :temperature, :systemPrompt,
-        {retrievalContexts: [], responseJsonSchema: {}}
-      ],
-      aichatContext: [:clientType, :currentLevelId, :scriptId, :channelId]
-    ).to_h.deep_symbolize_keys
-
-    attributes = AichatAiHelper.build_request_attributes(current_user.id, safe_params)
-
-    AichatRequest.new(attributes).tap(&:save!)
   end
 
   private def can_access_ai_tutor_chat_completion?(client_type)
@@ -154,6 +152,13 @@ class AichatRequestsController < ApplicationController
     if params[:aichatModelCustomizations].present?
       params[:modelParameters] = params[:aichatModelCustomizations]
       params.delete(:aichatModelCustomizations)
+    end
+  end
+
+  private def get_project_id(context)
+    if context[:channelId]
+      _, project_id = get_storage_id_and_project_id(context[:channelId])
+      project_id
     end
   end
 
