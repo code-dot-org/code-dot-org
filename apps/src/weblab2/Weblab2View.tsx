@@ -156,6 +156,7 @@ const Weblab2View: React.FC<
             levelProperties.aiTutorMode
           )}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          secondaryBackpackAppNames={['sketchlab']}
         />
       )}
     </div>

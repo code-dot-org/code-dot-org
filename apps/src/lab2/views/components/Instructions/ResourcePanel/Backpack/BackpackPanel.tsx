@@ -1,11 +1,13 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import BackpackClientApi, {
+  BackpackEvent,
+} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BackpackFileChip from './BackpackFileChip';
@@ -28,76 +30,114 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   findIdForFileName,
   openPanelCallback,
 }) => {
-  const backpackApi = useBackpackAPIContext()?.primaryApi;
+  const backpackContext = useBackpackAPIContext();
+  const primaryBackpackApi = backpackContext?.primaryApi;
+  const secondaryBackpackApis = backpackContext?.secondaryApis;
   const [fileList, setFileList] = useState<string[] | undefined>(undefined);
+  const [secondaryFileLists, setSecondaryFileLists] = useState<
+    {[key: string]: string[]} | undefined
+  >(undefined);
   const [loadError, setLoadError] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [listsLoading, setListsLoading] = useState<number>(0);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const [alertList, setAlertList] = useState<AlertConfig[]>([]);
   const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<string[]>([]);
+  const isLoading = listsLoading > 0;
+
+  function loadForApi(
+    backpackApi: BackpackClientApi | undefined,
+    listCallback: (fileList: string[]) => void,
+    showLoading: boolean
+  ) {
+    if (backpackApi) {
+      if (showLoading) {
+        setListsLoading(listsLoading => listsLoading + 1);
+      }
+      setLoadError(false);
+      backpackApi.getFileList(
+        error => {
+          setListsLoading(listsLoading => listsLoading - 1);
+          setLoadError(true);
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError('Backpack file list fetch error', error);
+        },
+        (fileList: string[]) => {
+          listCallback(fileList);
+          setListsLoading(listsLoading => listsLoading - 1);
+        }
+      );
+    }
+  }
 
   const loadBackpackFiles = useCallback(
     (showLoading: boolean) => {
-      if (backpackApi) {
-        if (showLoading) {
-          setIsLoading(true);
-        }
-        setLoadError(false);
-        backpackApi.getFileList(
-          error => {
-            setIsLoading(false);
-            setLoadError(true);
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .logError('Backpack file list fetch error', error);
-          },
-          (fileList: string[]) => {
-            setFileList(fileList);
-            setIsLoading(false);
-          }
-        );
+      loadForApi(primaryBackpackApi, setFileList, showLoading);
+      if (secondaryBackpackApis) {
+        Object.entries(secondaryBackpackApis).forEach(([appName, api]) => {
+          loadForApi(
+            api,
+            fileList =>
+              setSecondaryFileLists(prev => ({...prev, [appName]: fileList})),
+            showLoading
+          );
+        });
       }
     },
-    [backpackApi]
+    [primaryBackpackApi, secondaryBackpackApis]
   );
 
   useEffect(() => {
     // Show the load screen on initial load.
     loadBackpackFiles(true);
-  }, [loadBackpackFiles, backpackApi]);
+  }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis]);
 
   useEffect(() => {
     // Subscribe to backpack changes. Always reload when notified, as we get notified for file
     // adds or deletes.
-    const listenerId = backpackApi?.addEventListener((event, filename) => {
-      // We don't show the load view here to avoid the screen flickering when the backpack updates.
-      loadBackpackFiles(false);
-      if (event === BackpackEvent.FileAdded) {
-        setAlertList(prevAlerts => [
-          ...prevAlerts,
-          {
-            type: 'success',
-            message: `${filename} successfully saved to your Backpack!`,
-          },
-        ]);
-        openPanelCallback();
-        // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
-        setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
-        setTimeout(() => {
-          setRecentlyAddedFiles(prevFiles =>
-            prevFiles.filter(file => file !== filename)
-          );
-        }, SHOW_RECENTLY_ADDED_DURATION_MS);
+    const listenerId = primaryBackpackApi?.addEventListener(
+      (event, filename) => {
+        // We don't show the load view here to avoid the screen flickering when the backpack updates.
+        loadBackpackFiles(false);
+        if (event === BackpackEvent.FileAdded) {
+          setAlertList(prevAlerts => [
+            ...prevAlerts,
+            {
+              type: 'success',
+              message: `${filename} successfully saved to your Backpack!`,
+            },
+          ]);
+          openPanelCallback();
+          // Show that the file was recently added for SHOW_RECENTLY_ADDED_DURATION_MS milliseconds.
+          setRecentlyAddedFiles(prevFiles => [...prevFiles, filename]);
+          setTimeout(() => {
+            setRecentlyAddedFiles(prevFiles =>
+              prevFiles.filter(file => file !== filename)
+            );
+          }, SHOW_RECENTLY_ADDED_DURATION_MS);
+        }
       }
-    });
+    );
     return () => {
       if (listenerId) {
-        backpackApi?.removeEventListener(listenerId);
+        primaryBackpackApi?.removeEventListener(listenerId);
       }
     };
-  }, [loadBackpackFiles, backpackApi, openPanelCallback]);
+  }, [loadBackpackFiles, primaryBackpackApi, openPanelCallback]);
 
-  if (!backpackApi) {
+  const isBackpackEmpty = useMemo(() => {
+    const emptyPrimaryBackpack =
+      !fileList || (fileList && fileList.length === 0);
+    let emptySecondaryBackpacks = true;
+    if (secondaryFileLists) {
+      emptySecondaryBackpacks = Object.values(secondaryFileLists)
+        .map(secondaryList => secondaryList.length === 0)
+        .every(isEmpty => isEmpty);
+    }
+    return emptyPrimaryBackpack && emptySecondaryBackpacks;
+  }, [fileList, secondaryFileLists]);
+
+  if (!primaryBackpackApi) {
     let titleMessage = 'Your Backpack is unavailable';
     let detailMessage = 'Please reload the page to try again.';
     if (!currentUserId) {
@@ -147,7 +187,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     );
   }
 
-  if (fileList && fileList.length === 0) {
+  if (isBackpackEmpty) {
     return (
       <BackpackMessage
         type="neutral"
@@ -177,7 +217,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         <BackpackFileChip
           key={fileName}
           fileName={fileName}
-          backpackApi={backpackApi}
+          backpackApi={primaryBackpackApi}
           addAlert={(type, message) => {
             setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
             openPanelCallback();
@@ -189,6 +229,36 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
         />
       ))}
+      {secondaryFileLists && secondaryBackpackApis !== undefined
+        ? Object.entries(secondaryFileLists).map(
+            ([appName, secondaryFileList]) => (
+              <div>
+                <div>{appName}</div>
+                {secondaryFileList?.map(fileName => (
+                  <BackpackFileChip
+                    key={fileName}
+                    fileName={fileName}
+                    backpackApi={
+                      secondaryBackpackApis && secondaryBackpackApis[appName]
+                    }
+                    addAlert={(type, message) => {
+                      setAlertList(prevAlerts => [
+                        ...prevAlerts,
+                        {type, message},
+                      ]);
+                      openPanelCallback();
+                    }}
+                    validateFileName={validateFileName}
+                    saveFile={saveFile}
+                    createNewFile={createNewFile}
+                    findIdForFileName={findIdForFileName}
+                    isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
+                  />
+                ))}
+              </div>
+            )
+          )
+        : undefined}
     </div>
   );
 };
