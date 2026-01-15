@@ -79,10 +79,14 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
-      return backpackApi.getFileFetchUrl(fileName);
+      return `${backpackApi.getFileFetchUrl(fileName)}?cacheBust=${Date.now()}`;
     }
     return undefined;
-  }, [backpackApi, fileExtension, fileName]);
+    // We explicitly including `isRecentlyAdded` even though it isn't used so the
+    // cache bust suffix gets refreshed. This allows an image that's been replaced to
+    // be refreshed properly
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
