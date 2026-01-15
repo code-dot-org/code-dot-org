@@ -1,14 +1,13 @@
-import {NewFileFunction} from '@codebridge/codebridgeContext/types';
+import {
+  GenericPromptArgs,
+  NewFileFunction,
+} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileNameForModal} from '@codebridge/utils';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  DialogType,
-  DialogControlInterface,
-  extractUserInput,
-} from '@cdo/apps/lab2/views/dialogs';
+import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {
@@ -62,7 +61,7 @@ export const openNewFilePrompt = async ({
         text: 'Create file',
       },
     },
-    validateInput: (fileName: string) =>
+    validateInput: (fileName: string, dropdownValue?: string) =>
       validateFileNameForModal({
         fileName,
         folderId,
@@ -70,13 +69,19 @@ export const openNewFilePrompt = async ({
         isStartMode,
         validationFile,
         validFileTypes,
+        selectedFileType: dropdownValue,
       }),
     useModal: true,
   });
   if (results.type !== 'confirm') {
     return;
   }
-  const fileName = extractUserInput(results);
+
+  const {textField: baseFileName, dropdown: selectedExtension} =
+    results.args as GenericPromptArgs;
+  const fileName = selectedExtension
+    ? `${baseFileName}.${selectedExtension}`
+    : baseFileName;
 
   newFile({
     fileName,
@@ -84,6 +89,7 @@ export const openNewFilePrompt = async ({
   });
 
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_NEW_FILE, {
-    fileType: fileName.split('.').pop()?.toLowerCase() || '',
+    fileType:
+      selectedExtension || fileName.split('.').pop()?.toLowerCase() || '',
   });
 };
