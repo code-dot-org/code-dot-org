@@ -19,7 +19,9 @@ import PanelContainer from '../../components/PanelContainer';
 import {useExtraLinksButtonContext} from '../../contexts/ExtraLinksButtonContext';
 import usePanelPosition from '../../hooks/usePanelPosition';
 import ForTeachersOnly from '../../instructions/components/ForTeachersOnly';
-import Instructions, {InstructionsProps} from '../../instructions/components/Instructions';
+import Instructions, {
+  InstructionsProps,
+} from '../../instructions/components/Instructions';
 import NavigationArea from '../../instructions/components/NavigationArea';
 import {
   isReadOnlyWorkspace,
@@ -152,7 +154,9 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   const hasAutoCollapsedNoTabs = useRef(false);
   const settingsButtonRef = useRef<HTMLDivElement | null>(null);
   const floatingPanelRef = useRef<HTMLDivElement | null>(null);
-  const tabContentRefs = useRef<{[key in TabsType]?: HTMLDivElement | null}>({});
+  const tabContentRefs = useRef<{[key in TabsType]?: HTMLDivElement | null}>(
+    {},
+  );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const isViewingOldVersion = useAppSelector(
@@ -554,7 +558,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
                 /*currentTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
                 ) : (*/
-                  rightHeaderContent
+                rightHeaderContent
                 //)
               }
             >

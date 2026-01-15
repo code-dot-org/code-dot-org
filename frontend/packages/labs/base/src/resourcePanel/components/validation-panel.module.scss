@@ -1,4 +1,4 @@
-.validation-bubble {
+.validationBubble {
   background-color: var(--background-neutral-secondary);
   border-radius: 4px;
   display: flex;
@@ -8,7 +8,7 @@
   padding: 12px;
 }
 
-.validation-panel {
+.validationPanel {
   background-color: var(--background-neutral-primary);
   display: flex;
   flex-direction: column;
@@ -17,14 +17,14 @@
   overflow: hidden;
 }
 
-.validation-results {
+.validationResults {
   flex: 1;
   margin-bottom: 12px;
   min-height: 0;
   overflow-y: auto;
 }
 
-.validation-results-table {
+.validationResultsTable {
   border: 1px solid var(--borders-neutral-strong);
   border-collapse: collapse;
   table-layout: auto;
@@ -45,7 +45,7 @@
   }
 }
 
-.results-text {
+.resultsText {
   align-items: center;
   display: flex;
   flex-direction: column;

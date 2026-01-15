@@ -4,6 +4,7 @@ export * as hooks from './hooks';
 export * as utils from './utils';
 export * as dialogs from './dialogs';
 export * as LabConstants from './constants';
+export * from './LifecycleNotifier';
 export {default as LifecycleNotifier} from './LifecycleNotifier';
 export * from './components';
 export {default as LabMetricsReporter} from './LabMetricsReporter';

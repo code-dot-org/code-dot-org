@@ -38,6 +38,8 @@ export const BlockMode = {
   ADVANCED: 'Advanced',
 } as const;
 
+export type BlockModeType = (typeof BlockMode)[keyof typeof BlockMode];
+
 export const DEFAULT_PATTERN_LENGTH = 1;
 export const DEFAULT_PATTERN_AI_LENGTH = 2;
 export const DEFAULT_CHORD_LENGTH = 1;

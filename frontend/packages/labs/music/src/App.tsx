@@ -1,31 +1,27 @@
 import MusicLab from './components/MusicLab';
 import {LevelKind} from '@code-dot-org/api/models/levels';
-import {RootStateProvider} from '@code-dot-org/redux/providers';
-import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import '@code-dot-org/lab/redux';
+import {Lab} from '@code-dot-org/lab';
+
+import styles from './app.module.scss';
 
 function App() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
-      }}
-    >
-      <RootStateProvider>
-        <ThemeProvider>
-          <MusicLab
-            level={{
-              key: 'music-lab-test',
-              type: 'Music',
-              kind: LevelKind.activity,
-              url: '/music/',
-              subData: {},
-            }}
-          />
-        </ThemeProvider>
-      </RootStateProvider>
+    <div className={styles.app}>
+      <Lab isLoading={false}>
+        <MusicLab
+          levelProperties={{
+            id: 1,
+            appName: 'music',
+            key: 'music-lab-demo',
+            url: '/music-lab-demo',
+            longInstructions:
+              'This is a demo of music lab within a vite application',
+            type: 'music',
+            kind: LevelKind.activity,
+            levelData: {},
+          }}
+        />
+      </Lab>
     </div>
   );
 }

@@ -2,7 +2,8 @@
 // These are defined on :root and can be used by any package via var(--lab-*)
 // Applications must import this file to make these variables available.
 
-:root {
+:root,
+[data-theme] {
   // Border styles
   --lab-border-default: 1px solid var(--borders-neutral-primary);
   --lab-border-strong: 1px solid var(--borders-neutral-strong);

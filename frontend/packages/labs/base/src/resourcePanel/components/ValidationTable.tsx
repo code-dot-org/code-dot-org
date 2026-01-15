@@ -7,7 +7,10 @@ import {
 } from '@code-dot-org/component-library/typography';
 
 import ValidationStatusIcon from '../../instructions/components/ValidationStatusIcon';
-import {getStatusForResult, getTranslatedResult} from '../../instructions/validationHelpers';
+import {
+  getStatusForResult,
+  getTranslatedResult,
+} from '../../instructions/validationHelpers';
 import {useAppSelector} from '../../redux/store';
 
 import moduleStyles from './validation-panel.module.scss';

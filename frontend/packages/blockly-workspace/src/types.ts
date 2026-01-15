@@ -91,6 +91,10 @@ export interface ThemeBlockStyle {
  */
 export interface Theme {
   definition: {
+    /**
+     * The human-oriented name of the Theme to place in any settings dialog.
+     */
+    option: string;
     blockLimits: {
       indicator: {
         fill: string;

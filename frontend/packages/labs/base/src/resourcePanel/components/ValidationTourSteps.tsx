@@ -6,10 +6,7 @@ import {EVENTS} from '@code-dot-org/metrics';
 
 import {ValidationSettings} from '../../instructions/components/Instructions';
 import {sendLabAnalyticsEvent} from '../../utils/analyticsReporterHelper';
-import {
-  tryGetLocalStorage,
-  trySetLocalStorage,
-} from '../../utils/localStorage';
+import {tryGetLocalStorage, trySetLocalStorage} from '../../utils/localStorage';
 import {
   VALIDATION_TOUR_SEEN,
   RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,

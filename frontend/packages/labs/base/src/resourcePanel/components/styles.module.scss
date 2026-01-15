@@ -1,4 +1,4 @@
-.resource-panel {
+.resourcePanel {
   background-color: var(--background-neutral-primary);
   display: flex;
   height: 100%;
@@ -9,12 +9,12 @@
   flex-direction: column;
   justify-content: space-between;
 
-  .top-section {
+  .topSection {
     display: flex;
     flex-direction: column;
   }
 
-  .collapse-button-container {
+  .collapseButtonContainer {
     align-items: center;
     display: flex;
     height: 2.5rem;
@@ -36,7 +36,7 @@
   }
 
   // Doubling class name to increase specificity and override default button styles.
-  .tab-button.tab-button {
+  .tabButton.tabButton {
     background-color: var(--background-neutral-secondary);
     border-bottom: var(--lab-border-default);
     border-inline: 0;
@@ -46,7 +46,7 @@
     min-width: 2rem;
     width: 3.5rem;
 
-    &.teachers-only-tab {
+    &.teachersOnlyTab {
       background-color: var(--background-info-extra-light);
 
       i {
@@ -85,7 +85,7 @@
         width: 3px;
       }
 
-      &.teachers-only-tab {
+      &.teachersOnlyTab {
         i {
           color: var(--text-info-primary-fixed);
         }
@@ -109,7 +109,7 @@
         color: var(--text-neutral-tertiary);
       }
 
-      &.teachers-only-tab i {
+      &.teachersOnlyTab i {
         color: var(--text-info-primary-fixed);
       }
     }
@@ -128,7 +128,7 @@
   }
 
   // Styles applied when the sidebar is collapsed
-  &.collapsed .tab-button.tab-button {
+  &.collapsed .tabButton.tabButton {
     background-color: var(--background-neutral-primary);
     transition: background-color 0.2s ease-in-out;
 
@@ -151,7 +151,7 @@
     }
   }
 
-  .bottom-tabs {
+  .bottomTabs {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -168,7 +168,7 @@
   }
 
   // Doubling class name to increase specificity and override default button styles.
-  .resource-panel-button.resource-panel-button {
+  .resourcePanelButton.resourcePanelButton {
     height: 2rem;
     min-width: 2rem;
     width: 2rem;
@@ -188,17 +188,17 @@
   opacity: 1;
 }
 
-.panel-content {
+.panelContent {
   background-color: var(--background-neutral-primary);
   height: 100%;
 }
 
-.tab-content-container {
+.tabContentContainer {
   height: 100%;
   position: relative;
   width: 100%;
 
-  .tab-content {
+  .tabContent {
     height: 100%;
     left: 0;
     position: absolute;
@@ -212,13 +212,13 @@
   }
 }
 
-.navigation-footer {
+.navigationFooter {
   background-color: var(--background-neutral-secondary);
   border-top: var(--lab-border-default);
   padding: 10px;
 }
 
-.floating-settings-panel-container {
+.floatingSettingsPanelContainer {
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 5px;
   box-shadow:
@@ -229,6 +229,6 @@
   z-index: 1000;
 }
 
-.hidden-footer {
+.hiddenFooter {
   display: none;
 }

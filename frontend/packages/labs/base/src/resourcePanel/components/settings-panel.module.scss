@@ -1,4 +1,4 @@
-.settings-panel {
+.settingsPanel {
   background: var(--background-neutral-secondary);
   border-top: var(--lab-border-default);
   flex: 1;
@@ -8,7 +8,7 @@
   }
 }
 
-.settings-list {
+.settingsList {
   align-items: flex-start;
   align-self: stretch;
   box-sizing: border-box;
@@ -28,6 +28,6 @@
   }
 }
 
-.language-form {
+.languageForm {
   width: 100%;
 }
