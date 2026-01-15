@@ -39,17 +39,7 @@ class StudentSnapshotsController < ApplicationController
     cfu_levels_data = []
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
-        # Use existing Level helpers to get question text / answers when available.
-        question_summary = level.respond_to?(:question_summary) ? level.question_summary : nil
-        question_text = question_summary&.dig(:question_text) || question_summary&.dig(:question)
-        answers = question_summary&.dig(:answers)
-
-        # Set question_text to array of sublevel question texts if level is a LevelGroup
-        if level.is_a?(LevelGroup)
-          question_text = level.levels.reduce([]) do |question_texts, sublevel|
-            question_texts << LevelGroup.get_sublevel_question_text(sublevel)
-          end
-        end
+        question_text, answers = get_level_question_and_answers(level)
 
         cfu_levels_data << {
           id: level.id,
@@ -241,5 +231,24 @@ class StudentSnapshotsController < ApplicationController
       submitted: parent_ul&.submitted,
       timestamp: parent_ul&.updated_at
     }
+  end
+
+  # For Levels, return its question text and possible answers
+  # For LevelGroups, return an array of the sublevel question texts and their respective possible answers
+  private def get_level_question_and_answers(level)
+    if level.is_a?(LevelGroup)
+      level_group_question_texts = []
+      level_group_answers = []
+      level.levels.each do |sublevel|
+        sublevel_question_text, sublevel_answer_text = get_level_question_and_answers(sublevel)
+        level_group_question_texts << sublevel_question_text
+        level_group_answers << sublevel_answer_text
+      end
+      return level_group_question_texts, level_group_answers
+    else
+      question_summary = level.respond_to?(:question_summary) ? level.question_summary : nil
+      question_text = question_summary&.dig(:question_text) || question_summary&.dig(:question)
+      return question_text, (question_summary&.dig(:answers) || question_summary&.dig('answers'))
+    end
   end
 end
