@@ -2490,6 +2490,12 @@ a.download-video {
       border-color: $clever_brand_color;
       color: $neutral_white;
     }
+
+    &.with-classlink {
+      background-color: $classlink_brand_color;
+      border-color: $classlink_brand_color;
+      color: $neutral_white;
+    }
   }
 }
 
