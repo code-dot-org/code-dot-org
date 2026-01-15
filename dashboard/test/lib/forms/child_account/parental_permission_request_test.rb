@@ -41,7 +41,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
 
       ParentMailer.
         expects(:parent_permission_request).
-        with(@parent_email, "http://test-studio.code.org/policy_compliance/child_account_consent?token=#{uuid}").
+        with(@parent_email, CDO.studio_url("/policy_compliance/child_account_consent?token=#{uuid}", CDO.default_scheme)).
         returns(mock(deliver_now: true))
 
       assert @permission_request_form.request

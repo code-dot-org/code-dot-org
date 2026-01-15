@@ -866,7 +866,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop_dashboard_url' do
-    expected_url = "http://#{CDO.dashboard_hostname}/pd/workshop_dashboard/workshops/#{@workshop.id}"
+    expected_url = CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}", CDO.default_scheme)
     assert_equal expected_url, @workshop.workshop_dashboard_url
   end
 
