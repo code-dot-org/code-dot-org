@@ -439,24 +439,24 @@ async function setUpAndLoadProject(
 }
 
 // If any load is currently in progress.
-export const isLabLoading = (state: {lab: LabState}) =>
+export const isLabLoading = (state: RootState) =>
   state.lab.isLoadingProjectOrLevel ||
   state.lab.isLoading ||
   state.lab.isLoadingTheme;
 
 // If there is an error present on the page.
-export const hasPageError = (state: {lab: LabState}) => {
+export const hasPageError = (state: RootState) => {
   return state.lab.pageError !== undefined;
 };
 
 // If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
 // if not specified.
-export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
+export const shouldHideShareAndRemix = (state: RootState): boolean => {
   const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
   return hideShareAndRemix === undefined ? true : hideShareAndRemix;
 };
 
-export const isProjectTemplateLevel = (state: {lab: LabState}) =>
+export const isProjectTemplateLevel = (state: RootState) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
 
 // Returns if the current state represents a predict level that should be read only.
