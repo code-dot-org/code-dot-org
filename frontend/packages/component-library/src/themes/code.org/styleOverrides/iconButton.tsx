@@ -112,6 +112,13 @@ const iconButtonVariants = [
       color: 'var(--text-neutral-white-fixed)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-brand-purple-strong)',
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&:active, a&:active': {
+        color: 'var(--text-neutral-white-fixed)',
       },
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-disabled)',
@@ -126,6 +133,13 @@ const iconButtonVariants = [
       color: 'var(--text-neutral-inverse)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-neutral-octonary)',
+        color: 'var(--text-neutral-inverse)',
+      },
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-inverse)',
+      },
+      '&:active, a&:active': {
+        color: 'var(--text-neutral-inverse)',
       },
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-disabled)',
@@ -140,6 +154,13 @@ const iconButtonVariants = [
       color: 'var(--text-neutral-primary)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-neutral-quaternary)',
+        color: 'var(--text-neutral-primary)',
+      },
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-primary)',
+      },
+      '&:active, a&:active': {
+        color: 'var(--text-neutral-primary)',
       },
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-octonary)',
@@ -154,6 +175,13 @@ const iconButtonVariants = [
       color: 'var(--text-neutral-white-fixed)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-error-strong)',
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&:active, a&:active': {
+        color: 'var(--text-neutral-white-fixed)',
       },
       '&.Mui-disabled': {
         backgroundColor: 'var(--background-neutral-disabled)',
@@ -174,8 +202,12 @@ const iconButtonVariants = [
         border: '1px solid var(--borders-brand-purple-primary)',
         color: 'var(--text-brand-purple-primary)',
       },
-      '&:active': {
-        border: '1px solid var(--borders-brand-purple-primary) !important',
+      '&:focus, a&:focus': {
+        color: 'var(--text-brand-purple-primary)',
+      },
+      '&:active, a&:active': {
+        border: '1px solid var(--borders-brand-purple-primary)',
+        color: 'var(--text-brand-purple-primary)',
       },
       '&.Mui-disabled': {
         borderColor: 'var(--borders-neutral-disabled) !important',
@@ -193,9 +225,14 @@ const iconButtonVariants = [
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-neutral-tertiary)',
         border: '1px solid var(--borders-neutral-solid)',
+        color: 'var(--text-neutral-primary)',
       },
-      '&:active': {
-        border: '1px solid var(--borders-neutral-solid) !important',
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-primary)',
+      },
+      '&:active, a&:active': {
+        border: '1px solid var(--borders-neutral-solid)',
+        color: 'var(--text-neutral-primary)',
       },
       '&.Mui-disabled': {
         borderColor: 'var(--borders-neutral-disabled)',
@@ -213,9 +250,14 @@ const iconButtonVariants = [
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-neutral-tertiary)',
         border: '1px solid var(--borders-neutral-strong)',
+        color: 'var(--text-neutral-primary)',
       },
-      '&:active': {
-        border: '1px solid var(--borders-neutral-strong) !important',
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-primary)',
+      },
+      '&:active, a&:active': {
+        border: '1px solid var(--borders-neutral-strong)',
+        color: 'var(--text-neutral-primary)',
       },
       '&.Mui-disabled': {
         borderColor: 'var(--borders-neutral-disabled)',
@@ -233,9 +275,14 @@ const iconButtonVariants = [
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--neutral-gray-80)',
         border: '1px solid var(--neutral-base-white)',
+        color: 'var(--neutral-base-white)',
       },
-      '&:active': {
-        border: '1px solid var(--neutral-base-white) !important',
+      '&:focus, a&:focus': {
+        color: 'var(--neutral-base-white)',
+      },
+      '&:active, a&:active': {
+        border: '1px solid var(--neutral-base-white)',
+        color: 'var(--neutral-base-white)', // Override global link styles via specificity
       },
       '&.Mui-disabled': {
         borderColor: 'var(--neutral-gray-80)',
@@ -253,9 +300,14 @@ const iconButtonVariants = [
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
         backgroundColor: 'var(--background-error-light)',
         border: '1px solid var(--borders-error-primary)',
+        color: 'var(--text-error-primary)',
       },
-      '&:active': {
-        border: '1px solid var(--borders-error-primary) !important',
+      '&:focus, a&:focus': {
+        color: 'var(--text-error-primary)',
+      },
+      '&:active, a&:active': {
+        border: '1px solid var(--borders-error-primary)',
+        color: 'var(--text-error-primary)',
       },
       '&.Mui-disabled': {
         borderColor: 'var(--borders-neutral-disabled)',
@@ -275,7 +327,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-brand-purple-hover)',
         color: 'var(--text-brand-purple-primary)',
       },
-      '&:active': {
+      '&:focus, a&:focus': {
+        color: 'var(--text-brand-purple-primary)',
+      },
+      '&:active, a&:active': {
         backgroundColor: 'var(--background-brand-purple-hover)',
         color: 'var(--text-brand-purple-secondary)',
       },
@@ -294,7 +349,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-quaternary)',
         color: 'var(--text-neutral-primary)',
       },
-      '&:active': {
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-primary)',
+      },
+      '&:active, a&:active': {
         backgroundColor: 'var(--background-neutral-quaternary)',
         color: 'var(--text-neutral-tertiary)',
       },
@@ -313,7 +371,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-neutral-quaternary)',
         color: 'var(--text-neutral-quaternary)',
       },
-      '&:active': {
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-quaternary)',
+      },
+      '&:active, a&:active': {
         backgroundColor: 'var(--background-neutral-quaternary)',
         color: 'var(--text-neutral-tertiary)',
       },
@@ -332,7 +393,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--neutral-white-alpha-30)',
         color: 'var(--text-neutral-inverse)',
       },
-      '&:active': {
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-inverse)',
+      },
+      '&:active, a&:active': {
         backgroundColor: 'var(--neutral-white-alpha-30)',
         color: 'var(--neutral-gray-20)',
       },
@@ -351,7 +415,10 @@ const iconButtonVariants = [
         backgroundColor: 'var(--background-error-light)',
         color: 'var(--text-error-primary)',
       },
-      '&:active': {
+      '&:focus, a&:focus': {
+        color: 'var(--text-error-primary)',
+      },
+      '&:active, a&:active': {
         backgroundColor: 'var(--background-error-light)',
         color: 'var(--text-error-secondary)',
       },
@@ -371,16 +438,20 @@ export const ICON_BUTTON_OVERRIDES = {
   styleOverrides: {
     root: () => {
       return {
-        borderRadius: '0.25rem !important', // Force square corners (MUI defaults to circular)
+        borderRadius: '0.25rem', // Force square corners (MUI defaults to circular)
         transition: 'all 0.2s ease-in-out',
         boxShadow: 'none', // Remove MUI's default shadow
         minWidth: 'auto', // Remove MUI's default minWidth
         padding: '0', // Padding is handled by size variants
-        '&:hover': {
+        textDecoration: 'none',
+        // Override global link styles when iconButton is rendered as <a>
+        '&:hover, a&:hover': {
           boxShadow: 'none', // Remove shadow on hover
+          textDecoration: 'none',
         },
-        '&:focus': {
+        '&:focus, a&:focus': {
           boxShadow: 'none', // Remove shadow on focus
+          textDecoration: 'none',
         },
 
         '&:focus-visible': {
@@ -388,10 +459,12 @@ export const ICON_BUTTON_OVERRIDES = {
           outlineOffset: '2px',
           borderRadius: '0.375rem',
           boxShadow: 'none', // Remove shadow on focus-visible
+          textDecoration: 'none',
         },
 
-        '&:active': {
+        '&:active, a&:active': {
           boxShadow: 'none', // Remove shadow on active
+          textDecoration: 'none',
         },
 
         '&.Mui-disabled': {
@@ -402,6 +475,7 @@ export const ICON_BUTTON_OVERRIDES = {
         // Force hover state (still supports data attribute for backwards compatibility)
         '&.force-hover, &[data-force-hover="true"]': {
           boxShadow: 'none',
+          textDecoration: 'none',
         },
 
         // Disable ripple effect (CSS fallback in case defaultProps doesn't work)
