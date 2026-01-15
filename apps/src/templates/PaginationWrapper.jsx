@@ -1,10 +1,9 @@
 /** Pagination controls */
 import {Pagination} from '@react-bootstrap/pagination';
 import PropTypes from 'prop-types';
-import Radium, {Style} from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
-import color from '../util/color';
+import styles from './PaginationWrapper.module.scss';
 
 /**
  * Pagination control for navigating between pages of a list.
@@ -19,33 +18,9 @@ class PaginationWrapper extends Component {
 
   render() {
     return (
-      <div className="paginationControl">
-        <Style
-          scopeSelector=".pagination"
-          rules={{
-            listStyleType: 'none',
-            display: 'inline',
-            padding: 0,
-            margin: 0,
-            li: {
-              display: 'inline',
-            },
-            a: {
-              float: 'left',
-              paddingLeft: 12,
-              textDecoration: 'none',
-              color: color.cyan,
-            },
-            '.active a': {
-              color: color.default_text,
-            },
-            'a:hover': {
-              color: color.default_text,
-            },
-          }}
-        />
+      <div className={`${styles.container} paginationControl`}>
         {this.props.label && (
-          <span style={styles.label}>{this.props.label}</span>
+          <span className={styles.label}>{this.props.label}</span>
         )}
         <Pagination
           bsSize={'small'}
@@ -59,10 +34,4 @@ class PaginationWrapper extends Component {
   }
 }
 
-const styles = {
-  label: {
-    float: 'left',
-  },
-};
-
-export default Radium(PaginationWrapper);
+export default PaginationWrapper;
