@@ -2,7 +2,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Button from '@code-dot-org/component-library/button';
 import {predictLevelActions} from '@code-dot-org/lab/redux';
 import classNames from 'classnames';
-import type {FunctionComponent} from 'react';
 import {memo, useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -18,7 +17,7 @@ import BeatPad from '../BeatPad';
 
 import moduleStyles from './controls.module.scss';
 
-const LoadingProgress: FunctionComponent = () => {
+const LoadingProgress = () => {
   const progressValue = useAppSelector(
     state => state.music.soundLoadingProgress,
   );
@@ -46,7 +45,7 @@ const LoadingProgress: FunctionComponent = () => {
   );
 };
 
-const SkipControls: FunctionComponent = () => {
+const SkipControls = () => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const dispatch = useDispatch();
 
@@ -110,13 +109,13 @@ interface ControlsProps {
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
  */
-const Controls: FunctionComponent<ControlsProps> = ({
+const Controls = ({
   setPlaying,
   playTrigger,
   triggers,
   isPredictLevel,
   enableSkipControls = false,
-}) => {
+}: ControlsProps) => {
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const disableRun = useAppSelector(({predictLevel, music}) => {

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback} from 'react';
+import {useCallback} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -10,10 +10,7 @@ export interface ClearButtonProps {
   cancelPreviews: () => void;
 }
 
-const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
-  onClickClear,
-  cancelPreviews,
-}) => {
+const ClearButton = ({onClickClear, cancelPreviews}: ClearButtonProps) => {
   const onClick = useCallback(() => {
     cancelPreviews();
     onClickClear();
@@ -39,12 +36,12 @@ export interface PreviewButtonProps {
   isPlayingPreview: boolean;
 }
 
-const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
+const PreviewButton = ({
   enabled,
   playPreview,
   cancelPreviews,
   isPlayingPreview,
-}) => {
+}: PreviewButtonProps) => {
   const onClick = useCallback(() => {
     if (isPlayingPreview) {
       cancelPreviews();
@@ -75,9 +72,7 @@ export type PreviewControlsProps = PreviewButtonProps & ClearButtonProps;
 /**
  * Set of controls for previewing sounds in various custom Music Lab block fields
  */
-const PreviewControls: React.FunctionComponent<
-  PreviewControlsProps
-> = props => (
+const PreviewControls = ({...props}: PreviewControlsProps) => (
   <div className={moduleStyles.controlsRow}>
     <PreviewButton {...props} />
     <ClearButton {...props} />

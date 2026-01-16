@@ -1,4 +1,3 @@
-import type {FunctionComponent} from 'react';
 import {useState, useEffect, useCallback, useMemo} from 'react';
 import FocusLock from 'react-focus-lock';
 
@@ -32,10 +31,7 @@ export interface ChordPanelProps {
   onChange: (value: ChordEventValue) => void;
 }
 
-const ChordPanel: FunctionComponent<ChordPanelProps> = ({
-  initValue,
-  onChange,
-}) => {
+const ChordPanel = ({initValue, onChange}: ChordPanelProps) => {
   const [selectedNotes, setSelectedNotes] = useState<number[]>(initValue.notes);
   const [playStyle, setPlayStyle] = useState<PlayStyle>(initValue.playStyle);
   const [instrument, setInstrument] = useState<string>(initValue.instrument);
@@ -200,13 +196,13 @@ interface NoteGridProps {
   instrument: string;
 }
 
-const NoteGrid: FunctionComponent<NoteGridProps> = ({
+const NoteGrid = ({
   numOctaves,
   startOctave,
   selectedNotes,
   playStyle,
   instrument,
-}) => {
+}: NoteGridProps) => {
   const graphNotes: ChordGraphNote[] = generateGraphDataFromChord({
     chordEventValue: {
       notes: selectedNotes,

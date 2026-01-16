@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
+import {memo, useCallback, useEffect, useRef, useState} from 'react';
 import type {MouseEvent} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -43,10 +43,10 @@ export interface TimelineProps {
 /**
  * Renders the music playback timeline.
  */
-const Timeline: React.FunctionComponent<TimelineProps> = ({
+const Timeline = ({
   allowChangeStartingPlayheadPosition,
   isPredictLevel,
-}) => {
+}: TimelineProps) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
 
   const blockMode = useSelector(getBlockMode);
@@ -277,10 +277,12 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
   );
 };
 
-const LoopMarkers: React.FunctionComponent<{
+export interface LoopMarkersProps {
   loopStart: number;
   loopEnd: number;
-}> = ({loopStart, loopEnd}) => {
+}
+
+const LoopMarkers = ({loopStart, loopEnd}: LoopMarkersProps) => {
   const startOffset = (loopStart - 1) * barWidth;
   const endOffset = (loopEnd - 1) * barWidth;
 

@@ -2,7 +2,6 @@ import * as Blockly from 'blockly/core';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import type {FunctionComponent} from 'react';
 import {useCallback, useContext, useEffect, useState} from 'react';
 
 import {useLifecycleNotifier} from '@code-dot-org/lab/hooks';
@@ -24,12 +23,12 @@ interface ExemplarPlayerViewProps {
   insideInstructions: boolean;
 }
 
-const ExemplarPlayerView: FunctionComponent<ExemplarPlayerViewProps> = ({
+const ExemplarPlayerView = ({
   playbackEvents,
   title,
   player,
   insideInstructions,
-}) => {
+}: ExemplarPlayerViewProps) => {
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const [exemplarIsPlaying, setExemplarIsPlaying] = useState<boolean>(false);

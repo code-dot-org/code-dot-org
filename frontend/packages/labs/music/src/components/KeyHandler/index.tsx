@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect} from 'react';
+import {useCallback, useContext, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {Triggers} from '../../constants';
@@ -23,12 +23,12 @@ export interface KeyHandlerProps {
  * Utility component for handling key presses in Music Lab that map to
  * specific UI actions.
  */
-const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
+const KeyHandler = ({
   togglePlaying,
   playTrigger,
   uiShortcutsEnabled,
   disabled,
-}) => {
+}: KeyHandlerProps) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const dispatch = useDispatch();
 

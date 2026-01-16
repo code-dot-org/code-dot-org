@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import React from 'react';
 
 import {getNoteName, isBlackKey} from '../../utils/Notes';
 
@@ -14,14 +13,14 @@ export interface KeybedProps {
   isVertical: boolean;
 }
 
-const Keybed: React.FunctionComponent<KeybedProps> = ({
+const Keybed = ({
   numOctaves,
   startOctave,
   selectedNotes,
   onPressKey,
   isDisabled,
   isVertical,
-}) => {
+}: KeybedProps) => {
   const keys = [];
   const startingNote = startOctave * 12;
 
@@ -65,7 +64,7 @@ interface KeyProps {
   isVertical: boolean;
 }
 
-const Key: React.FunctionComponent<KeyProps> = ({
+const Key = ({
   type,
   isSelected,
   isDisabled,

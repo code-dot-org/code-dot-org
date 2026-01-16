@@ -2,7 +2,6 @@ import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import type {FunctionComponent} from 'react';
 import {memo, useCallback, useContext, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -23,9 +22,7 @@ export interface CurrentPackProps {
   packFolder: SoundFolder;
 }
 
-export const CurrentPack: FunctionComponent<CurrentPackProps> = ({
-  packFolder,
-}) => {
+export const CurrentPack = ({packFolder}: CurrentPackProps) => {
   const library = MusicLibrary.getInstance();
 
   let packImageSrc = null;
@@ -67,14 +64,14 @@ export interface HeaderButtonsProps {
 /**
  * A set of control buttons for the workspace header in Music Lab.
  */
-const HeaderButtons: FunctionComponent<HeaderButtonsProps> = ({
+const HeaderButtons = ({
   onClickUndo,
   onClickRedo,
   clearCode,
   allowPackSelection,
   skipUrl,
   hideChaff,
-}) => {
+}: HeaderButtonsProps) => {
   const readOnlyWorkspace: boolean = useSelector(
     labActions.isReadOnlyWorkspace,
   );

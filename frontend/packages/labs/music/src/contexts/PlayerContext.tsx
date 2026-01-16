@@ -1,74 +1,70 @@
-import type {FunctionComponent, PropsWithChildren} from 'react';
-import {createContext, useCallback, useMemo, useEffect, useState} from 'react';
+import * as Blockly from 'blockly/core';
 
-import {DEFAULT_BPM, DEFAULT_KEY} from '../constants';
-import AppConfig from '../appConfig';
-import AnalyticsReporter from '../LabMusicMetricsReporter';
-import {KeyFromName} from '../utils/Notes';
-import MusicPlayer from '../player/MusicPlayer';
+import type {PropsWithChildren, MutableRefObject} from 'react';
+import {createContext, useCallback, useRef, useEffect, useState} from 'react';
+
 import MusicLibrary from '../player/MusicLibrary';
 import MusicRegistry from '../MusicRegistry';
-import {KeyMapping} from '../utils/Notes';
+import Driver, {DriverEvent} from '../Driver';
 
 export interface PlayerContent {
   /** A method to load the given library and establish it on the player */
   loadAndInitializePlayer: (libraryName: string) => Promise<void>;
   /** A reference to the currently loaded library, if loaded */
   library?: MusicLibrary;
-  /** A reference to the currently initialized player */
-  player: MusicPlayer;
+  /** A possible reference to the blockly workspace */
+  workspaceRef?: MutableRefObject<Blockly.Workspace | null>;
+  /** A reference to the Driver */
+  driverRef: MutableRefObject<Driver>;
+  /** An upcall to be registered with the blockly workspace */
+  onInject: (workspace: Blockly.WorkspaceSvg) => void;
 }
 
-const PlayerContext = createContext<PlayerContent>({
-  loadAndInitializePlayer: async () => {},
-  player: new MusicPlayer(),
-});
-
-//export const usePlayer = () => useContext(PlayerContext);
+const PlayerContext = createContext<PlayerContent>(
+  {} as unknown as PlayerContent,
+);
 
 /**
  * This keeps track of the different components related to the music library
- * and playback.
+ * and playback. Namely, this keeps a reference to a Driver class and facilitates
+ * movement of state to and from that Driver.
  *
- * This generally takes the place of the old MusicView wrapper.
+ * This plus the Driver class generally take the place of the old MusicView wrapper.
  */
-export const PlayerProvider: FunctionComponent<PropsWithChildren> = ({
-  children,
-}) => {
-  const analyticsReporter = useMemo(() => new AnalyticsReporter(), []);
+export const PlayerProvider = ({children}: PropsWithChildren) => {
   const [library, setLibrary] = useState<MusicLibrary | undefined>(undefined);
+  const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
+  const onInject = useCallback(
+    (workspace: Blockly.WorkspaceSvg) => {
+      workspaceRef.current = workspace;
+    },
+    [workspaceRef],
+  );
 
-  const player = useMemo(() => {
-    const bpm = AppConfig.getValue('bpm');
-    const key = AppConfig.getValue('key');
-    return new MusicPlayer(
-      parseInt(bpm || DEFAULT_BPM.toString()),
-      KeyFromName[(key || KeyMapping[DEFAULT_KEY]).toUpperCase()],
-      analyticsReporter,
-    );
-  }, [analyticsReporter]);
+  const driver = useRef<Driver>(new Driver());
 
   useEffect(() => {
     // Set these in the registry as well
-    MusicRegistry.player = player;
-    MusicRegistry.analyticsReporter = analyticsReporter;
-  }, [analyticsReporter, player]);
+    MusicRegistry.player = driver.current.player;
+    MusicRegistry.analyticsReporter = driver.current.analyticsReporter;
 
-  const loadAndInitializePlayer = useCallback(
-    async (libraryName: string) => {
-      console.log('loading library', libraryName);
-      const library = await MusicLibrary.loadLibrary(libraryName);
+    driver.current.on(DriverEvent.LibraryUpdated, library => {
       setLibrary(library);
-    },
-    [setLibrary],
-  );
+    });
+  }, [setLibrary, driver]);
+
+  const loadAndInitializePlayer = useCallback(async (libraryName: string) => {
+    driver.current.loadAndInitializePlayer(libraryName);
+  }, []);
 
   return (
     <PlayerContext.Provider
       value={{
         loadAndInitializePlayer,
         library,
-        player,
+        driverRef: driver,
+        workspaceRef,
+        onInject,
       }}
     >
       {children}
