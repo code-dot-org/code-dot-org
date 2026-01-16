@@ -62,7 +62,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
       if (showLoading) {
         setListsLoading(listsLoading => listsLoading + 1);
       }
-      setLoadError(false);
       backpackApi.getFileList(
         error => {
           if (showLoading) {
@@ -85,6 +84,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 
   const loadBackpackFiles = useCallback(
     (showLoading: boolean) => {
+      setLoadError(false);
       loadForApi(primaryBackpackApi, setFileList, showLoading);
       if (secondaryBackpackApis) {
         Object.entries(secondaryBackpackApis).forEach(([appName, api]) => {
@@ -126,6 +126,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             : (fileList: string[]) =>
                 setSecondaryFileLists(prev => ({...prev, [appKey]: fileList}));
         // We don't show the load view here to avoid the screen flickering when the backpack updates.
+        setLoadError(false);
         loadForApi(clientToLoad, listCallback, false);
         if (event === BackpackEvent.FileAdded) {
           addAlert(
