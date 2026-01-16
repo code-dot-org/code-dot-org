@@ -4,7 +4,7 @@
  * IMPORTANT: This file contains manually copied type augmentations from:
  *   frontend/packages/component-library/src/themes/code.org/types.d.ts
  *
- * When Button/IconButton type augmentations change in component-library,
+ * When Button/IconButton/Breadcrumbs type augmentations change in component-library,
  * they must be manually copied here to keep apps in sync.
  *
  * This file also includes apps-specific Typography type augmentations.
@@ -13,6 +13,7 @@
 import {Theme as MuiTheme} from '@mui/material/styles';
 import '@mui/material/Button';
 import '@mui/material/IconButton';
+import '@mui/material/Breadcrumbs';
 
 type Theme = Omit<MuiTheme, 'components'>;
 
@@ -52,6 +53,10 @@ declare module '@mui/material/Typography' {
     overline3: true;
     caption: false; // disable the default caption
     figcaption: true; // add figcaption variant to match DSCO naming pattern
+    label1: true;
+    label2: true;
+    label3: true;
+    label4: true;
     strong: true;
     em: true;
   }
@@ -95,6 +100,13 @@ declare module '@mui/material/IconButton' {
   // Extend IconButtonOwnProps to include variant prop
   interface IconButtonOwnProps {
     variant?: 'contained' | 'outlined' | 'text';
+  }
+}
+
+// Breadcrumbs type augmentations
+declare module '@mui/material/Breadcrumbs' {
+  interface BreadcrumbsOwnProps {
+    size?: 'xs' | 's' | 'm' | 'l';
   }
 }
 

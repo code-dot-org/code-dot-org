@@ -37,6 +37,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const [alertList, setAlertList] = useState<AlertConfig[]>([]);
   const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<string[]>([]);
+  const [actionInProgress, setActionInProgress] = useState<boolean>(false);
 
   const loadBackpackFiles = useCallback(
     (showLoading: boolean) => {
@@ -195,6 +196,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             findIdForFileName={findIdForFileName}
             isRecentlyAdded={recentlyAddedFiles.includes(fileName)}
             supportedFileTypes={supportedFileTypes}
+            setActionInProgress={setActionInProgress}
+            disableActions={actionInProgress}
           />
         ))}
       </div>

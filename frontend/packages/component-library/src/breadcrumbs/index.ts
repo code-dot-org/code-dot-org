@@ -3,3 +3,4 @@ import './index.css';
 
 export {default as Breadcrumbs, BreadcrumbsProps} from './Breadcrumbs';
 export {default as default} from './Breadcrumbs';
+export {convertBreadcrumbsPropsToMUI} from './utils/breadcrumbsPropsConverter';

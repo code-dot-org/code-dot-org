@@ -7,6 +7,10 @@ import {
   DEFAULT_THREAD_TITLE,
 } from '@cdo/apps/aiDifferentiation/constants';
 import {
+  AIF_PHILOSOPHY_MENU,
+  AIF_LOGISTICS_MENU,
+  AIF_TEACHER_PREP_MENU,
+  AIF_MATERIALS_MENU,
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
   DEBUG_MISTAKES_PROMPT,
@@ -53,6 +57,13 @@ interface FetchThreadMessagesParams {
 }
 
 const APCSP_PROMPTS = [APCSP_DUMMY_CREATE, APCSP_DUMMY_EXAM];
+
+const AIF_PROMPTS = [
+  AIF_PHILOSOPHY_MENU,
+  AIF_LOGISTICS_MENU,
+  AIF_TEACHER_PREP_MENU,
+  AIF_MATERIALS_MENU,
+];
 
 const SUGGESTED_PROMPTS = [
   EXAMPLE_PROMPT,
@@ -136,6 +147,9 @@ export const fetchThreadMessages = createAsyncThunk(
     const additionalPrompts: ChatPrompt[] = [];
     if (curriculumCourses?.includes('csp')) {
       additionalPrompts.push(...APCSP_PROMPTS);
+    }
+    if (curriculumCourses?.includes('artificial-intelligence-foundations')) {
+      additionalPrompts.push(...AIF_PROMPTS);
     }
     if (contextType === AiDiffContext.LEVEL) {
       additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
