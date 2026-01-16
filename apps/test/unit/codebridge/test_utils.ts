@@ -1,19 +1,39 @@
 import {CodebridgeContextType} from '@cdo/apps/codebridge';
-import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
+import {
+  DialogControlInterface,
+  DialogType,
+  TypedDialogProps,
+} from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {smallProject} from './test-files';
 
 export const getDialogControlMock = (
-  dialogInput: string
+  dialogInput: string,
+  dropdownValue?: string
 ): Pick<DialogControlInterface, 'showDialog'> => ({
-  showDialog: ({validateInput}: GenericPromptProps) => {
-    const error = validateInput?.(dialogInput);
+  showDialog: (props: TypedDialogProps) => {
+    const {validateInput, dropdownProps} = props as GenericPromptProps;
+    const error = validateInput?.(dialogInput, dropdownValue);
     if (error) {
       return Promise.resolve({type: 'cancel', args: error});
     } else {
-      return Promise.resolve({type: 'confirm', args: dialogInput});
+      // GenericPrompt with both text field and dropdown returns structured args
+      // GenericDropdown returns dropdown value (or dialogInput for backwards compatibility)
+      // GenericPrompt without dropdown returns just the text field value
+      let args;
+      if (props.type === DialogType.GenericPrompt && dropdownProps) {
+        args = {textField: dialogInput, dropdown: dropdownValue};
+      } else if (props.type === DialogType.GenericDropdown) {
+        args = dropdownValue ?? dialogInput;
+      } else {
+        args = dialogInput;
+      }
+      return Promise.resolve({
+        type: 'confirm',
+        args,
+      });
     }
   },
 });
