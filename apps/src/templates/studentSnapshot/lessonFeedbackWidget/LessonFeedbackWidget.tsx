@@ -1,33 +1,21 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
-import TextField from '@code-dot-org/component-library/textField';
 import {
   BodyThreeText,
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
-import {Divider} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
-import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import i18n from '@cdo/locale';
 
+import ActionButtons from './ActionButtons';
+import AddResourceDialog from './AddResourceDialog';
 import FeedbackTextbox from './FeedbackTextbox';
 import UrlTab from './UrlTab';
+import {useLessonFeedback} from './useLessonFeedback';
 
 import styles from './lessonFeeedback.module.scss';
-
-interface FeedbackData {
-  feedbackText: string;
-  recommendedActions: Array<{
-    actionText: string;
-    resourceName?: string;
-    resourceLink?: string;
-  }>;
-  // Future fields:
-  // participationScore?: number;
-  // sticker?: string;
-}
 
 interface LessonFeedbackWidgetProps {
   lessonId: number | null;
@@ -35,107 +23,49 @@ interface LessonFeedbackWidgetProps {
   teacherHasEnabledAi: boolean;
 }
 
-/**
- * Teacher-style lesson feedback widget for the Student Snapshot dashboard.
- *
- * The widget handles its own data fetching, loading, and error states.
- */
-
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   lessonId,
   studentId,
   teacherHasEnabledAi = false,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [showAddResourcePopup, setShowAddResourcePopup] = useState(false);
-  const [resourceLink, setResourceLink] = useState('');
-  const [tempResourceLink, setTempResourceLink] = useState('');
-  const [resourceName, setResourceName] = useState('');
-  const [tempResourceName, setTempResourceName] = useState('');
-  const [recommendedActionText, setRecommendedActionText] = useState('');
-  const [feedbackText, setFeedbackText] = useState('');
-  const [isFeedbackEdited, setIsFeedbackEdited] = useState(false);
-  const [feedbackData, setFeedbackData] = useState<FeedbackData>({
-    feedbackText: '',
-    recommendedActions: [
-      {
-        actionText: '',
-        resourceName: undefined,
-        resourceLink: undefined,
-      },
-    ],
+  const {
+    // State values
+    isLoading,
+    error,
+    scrollable,
+    feedbackText,
+    recommendedActionText,
+    resourceLink,
+    resourceName,
+    showAddResourcePopup,
+    tempResourceName,
+    tempResourceLink,
+    // Event handlers
+    handleFeedbackEdited,
+    handleRecommendedActionChange,
+    handleAddResourceClick,
+    handleCloseResourcePopup,
+    handleTempResourceNameChange,
+    handleTempResourceLinkChange,
+    exitResourcePopup,
+    handleResourceSave,
+    handleSaveAsDraft,
+    handleSendToStudent,
+    deleteResourceLink,
+  } = useLessonFeedback({
+    lessonId,
+    studentId,
+    teacherHasEnabledAi,
   });
 
   let widgetContent: React.ReactNode;
-  let scrollable = false;
 
   // TODO: Load feedback data from server when API is available - building off Liam's Lesson Insight work
   // Update state according to the data from back end
 
-  useEffect(() => {
-    if (!lessonId) {
-      setIsLoading(true);
-      setError(null);
-      return;
-    } else if (!teacherHasEnabledAi) {
-      setError('AI Teaching Assistant is not enabled for this teacher.');
-      setIsLoading(false);
-      return;
-    } else {
-      setIsLoading(false);
-      setError(null);
-    }
-  }, [lessonId, teacherHasEnabledAi]);
-
-  const deleteResourceLink = () => {
-    setResourceLink('');
-    setResourceName('');
-  };
-
-  const createFeedbackData = (): FeedbackData => {
-    return {
-      feedbackText,
-      recommendedActions: [
-        {
-          actionText: recommendedActionText,
-          resourceName: resourceName || undefined,
-          resourceLink: resourceLink || undefined,
-        },
-      ],
-    };
-  };
-
-  const exitResourcePopup = () => {
-    setTempResourceName('');
-    setTempResourceLink('');
-    setShowAddResourcePopup(false);
-  };
-
-  const handleFeedbackEdited = (newText: string) => {
-    setFeedbackText(newText);
-    setIsFeedbackEdited(true);
-  };
-
-  const openResourcePopup = () => {
-    setShowAddResourcePopup(true);
-  };
-
-  const saveFeedbackAsDraft = () => {
-    setFeedbackData(createFeedbackData());
-    // TO DO: Send to backend as draft
-  };
-
-  const saveFeedbackAndSendToStudent = () => {
-    setFeedbackData(createFeedbackData());
-    // TO DO: Send to backend as final
-  };
-
-  // TODO: Finish UI implementation
   if (error) {
     widgetContent = <BodyThreeText>{error}</BodyThreeText>;
   } else {
-    scrollable = true;
     widgetContent = (
       <div className={styles.topContainer}>
         <Alert
@@ -163,9 +93,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
               type="text"
               placeholder={'Write a message'}
               value={recommendedActionText}
-              onChange={e => {
-                setRecommendedActionText(e.target.value);
-              }}
+              onChange={handleRecommendedActionChange}
             />
             <Button
               text={'Add resource link'}
@@ -178,63 +106,28 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
                 iconName: 'plus',
                 title: 'Add Resource',
               }}
-              onClick={openResourcePopup}
+              onClick={handleAddResourceClick}
             />
             {resourceLink && resourceName && (
               <UrlTab urlName={resourceName} onClick={deleteResourceLink} />
             )}
           </div>
           {showAddResourcePopup && (
-            <AccessibleDialog onClose={exitResourcePopup}>
-              <div className={styles.popUpContainer}>
-                <TextField
-                  className={styles.resourceLinkInput}
-                  label="Resource name"
-                  name="resouce name"
-                  value={tempResourceName}
-                  onChange={e => setTempResourceName(e.target.value)}
-                />
-                <TextField
-                  className={styles.resourceLinkInput}
-                  label="Add a link to the resource"
-                  name="resouce link"
-                  value={tempResourceLink}
-                  onChange={e => setTempResourceLink(e.target.value)}
-                />
-                <Divider className={styles.resourcePopUpDivider} />
-                <div className={styles.resourceLinkPopUpButtons}>
-                  <Button
-                    text="Cancel"
-                    type="secondary"
-                    onClick={exitResourcePopup}
-                  />
-                  <Button
-                    text="Save"
-                    onClick={() => {
-                      setResourceName(tempResourceName);
-                      setResourceLink(tempResourceLink);
-                      exitResourcePopup();
-                    }}
-                  />
-                </div>
-              </div>
-            </AccessibleDialog>
+            <AddResourceDialog
+              tempResourceName={tempResourceName}
+              tempResourceLink={tempResourceLink}
+              onResourceNameChange={handleTempResourceNameChange}
+              onResourceLinkChange={handleTempResourceLinkChange}
+              onCancel={exitResourcePopup}
+              onSave={handleResourceSave}
+              onClose={handleCloseResourcePopup}
+            />
           )}
         </div>
-        <div className={styles.actionButtons}>
-          <Button
-            text={'Save as draft'}
-            type="secondary"
-            size="xs"
-            onClick={saveFeedbackAsDraft}
-          />
-          <Button
-            text="Send feedback to student"
-            size="xs"
-            type="primary"
-            onClick={saveFeedbackAndSendToStudent}
-          />
-        </div>
+        <ActionButtons
+          onSaveAsDraft={handleSaveAsDraft}
+          onSendToStudent={handleSendToStudent}
+        />
       </div>
     );
   }
