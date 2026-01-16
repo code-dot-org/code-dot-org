@@ -119,6 +119,7 @@ module.exports = {
     'react/no-render-return-value': 'off',
     'react/no-string-refs': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/self-closing-comp': 'error',
     'react/no-danger': 'error',
     'react-hooks/exhaustive-deps': 'error',
