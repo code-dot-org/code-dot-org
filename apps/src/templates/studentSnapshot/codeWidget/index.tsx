@@ -1,6 +1,10 @@
-import {ProjectFile} from '@codebridge/types';
-import React, {useMemo, useState} from 'react';
+import {useMemo, useState, useEffect} from 'react';
 
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 
 import Workspace from './Workspace';
@@ -8,39 +12,39 @@ import Workspace from './Workspace';
 import styles from './codeWidget.module.scss';
 
 interface CodeWidgetProps {
-  studentCode?: Record<string, string>;
+  codeData?: MultiFileSource;
+  widgetName?: string;
   gridWidth?: number;
   gridHeight?: number;
+  loading?: boolean;
 }
 
-const CodeWidget: React.FC<CodeWidgetProps> = ({
-  studentCode = {},
+const CodeWidget = ({
+  codeData,
+  widgetName = 'Code',
   gridWidth = 2,
   gridHeight = 2,
-}) => {
+  loading,
+}: CodeWidgetProps) => {
   const [theme, setTheme] = useState<'Light' | 'Dark'>('Light');
 
   // Convert student code to ProjectFile objects
   const projectFiles = useMemo<ProjectFile[]>(() => {
-    if (!studentCode || typeof studentCode !== 'object') {
-      return [];
-    }
-    return Object.entries(studentCode).map(([fileName, contents]) => ({
-      id: fileName,
-      name: fileName,
-      language: '',
-      contents: contents,
-      folderId: '',
-    }));
-  }, [studentCode]);
+    if (!codeData?.files) return [];
+    return Object.values(codeData.files).filter(
+      file => file.type !== ProjectFileType.SYSTEM_SUPPORT
+    );
+  }, [codeData]);
 
   const [selectedFileId, setSelectedFileId] = useState<string>('');
 
-  React.useEffect(() => {
-    if (projectFiles.length > 0 && !selectedFileId) {
+  useEffect(() => {
+    if (projectFiles.length > 0) {
       setSelectedFileId(projectFiles[0].id);
+    } else {
+      setSelectedFileId('');
     }
-  }, [projectFiles, selectedFileId]);
+  }, [projectFiles]);
 
   const themeOptions = [
     {
@@ -61,11 +65,12 @@ const CodeWidget: React.FC<CodeWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="Student Code"
+      widgetName={widgetName}
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       scrollable={true}
       settingsOptions={themeOptions}
+      loading={loading}
     >
       <div data-theme={theme} className={styles.workspaceContainer}>
         <Workspace
