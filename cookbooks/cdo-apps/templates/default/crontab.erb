@@ -122,8 +122,7 @@
       cronjob at:"0 8 * * *", do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::PiiScrubberJob"
 
       # Send Warning Emails to Inactive Teacher Accounts before Deletion
-      cronjob at: "0,30 16-23 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob limit=1000"
-      cronjob at: "0,30 0-3 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob limit=1000"
+      cronjob at: "0,30 0-11 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob limit=1000"
     end
 
     # 'daemons' in all environments.
