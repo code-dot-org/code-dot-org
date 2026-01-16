@@ -38,7 +38,7 @@ module Cdo
       @instance_id = begin
         AWS::EC2.instance_id
       rescue
-        nil
+        'UNKNOWN'
       end
       self.instance = self
     end
