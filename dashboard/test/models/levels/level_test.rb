@@ -42,12 +42,12 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, level_nil
   end
 
-  test 'with_required_ai_chat_tools returns levels with type Aichat or Weblab2' do
+  test 'with_essential_ai_chat_tools returns levels with type Aichat or Weblab2' do
     aichat_level = Level.create(name: 'aichat', type: 'Aichat')
     weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
     maze_level = Level.create(name: 'maze', type: 'Maze')
 
-    result = Level.with_required_ai_chat_tools
+    result = Level.with_essential_ai_chat_tools
     assert_includes result, aichat_level
     assert_includes result, weblab2_level
     refute_includes result, maze_level
