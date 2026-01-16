@@ -240,15 +240,32 @@ export class FieldTune extends Blockly.Field {
       return;
     }
 
+    if (this.root) {
+      return;
+    }
+
+    // Determine the current site theme
+    const workspace = this.sourceBlock_?.workspace as
+      | Blockly.WorkspaceSvg
+      | undefined;
+
+    const siteTheme =
+      workspace
+        ?.getInjectionDiv()
+        ?.closest('[data-theme]')
+        ?.getAttribute('data-theme') || 'Dark';
+
     this.root = createRoot(this.newDiv);
     this.root.render(
-      <InstrumentGrid
-        // Make a copy of the value object so that we don't overwrite Blockly's data.
-        initialValue={JSON.parse(JSON.stringify(this.getValue()))}
-        editorType={'notes'}
-        onChange={this.onValueChange}
-        lengthMeasures={1}
-      />,
+      <div data-theme={siteTheme}>
+        <InstrumentGrid
+          // Make a copy of the value object so that we don't overwrite Blockly's data.
+          initialValue={JSON.parse(JSON.stringify(this.getValue()))}
+          editorType={'notes'}
+          onChange={this.onValueChange}
+          lengthMeasures={1}
+        />
+      </div>,
     );
   }
 
