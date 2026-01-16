@@ -81,7 +81,7 @@ export const useFileRowOptions = (
   );
   const dispatch = useAppDispatch();
 
-  const backpackApi = useBackpackAPIContext();
+  const backpackApi = useBackpackAPIContext()?.primaryApi;
 
   const {
     openConfirmDeleteFile,
