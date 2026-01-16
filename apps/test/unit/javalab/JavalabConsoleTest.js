@@ -1,6 +1,7 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import $ from 'jquery';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -23,14 +24,22 @@ import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-re
 
 describe('Java Lab Console Test', () => {
   let store;
+  let postStub;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({javalab, javalabView, javalabConsole});
     store = getStore();
+    postStub = sinon.stub($, 'post').callsFake(url => {
+      if (url.endsWith('/display_theme')) {
+        return Promise.resolve({});
+      }
+      throw new Error(`Unexpected POST in test: ${url}`);
+    });
   });
 
   afterEach(() => {
+    postStub.restore();
     restoreRedux();
   });
 
