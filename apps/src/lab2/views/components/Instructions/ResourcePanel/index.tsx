@@ -25,8 +25,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
@@ -76,9 +74,21 @@ export interface BackpackProps {
     isSupportFileName: boolean;
     newFileName: string;
   };
-  saveFile: (fileId: string, contents: string, url?: string) => void;
-  createNewFile: (fileName: string, contents: string, url?: string) => void;
+  saveFileToProject: (fileId: string, contents: string, url?: string) => void;
+  createNewProjectFile: (
+    fileName: string,
+    contents: string,
+    url?: string
+  ) => void;
   findIdForFileName: (fileName: string) => string | undefined;
+  saveToBackpackButton?: {
+    text: string;
+    onClick: (
+      fileList: string[],
+      errorCallback: (error: string) => void
+    ) => Promise<void>;
+  };
+  supportedFileTypes: string[];
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -189,8 +199,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
 
-  const backpackApi = useBackpackAPIContext();
-
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
 
@@ -207,10 +215,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
 
-  const showBackpack =
-    backpackProps &&
-    !isPermanentlyReadOnly &&
-    (appName === 'pythonlab' || appName === 'weblab2');
+  const showBackpack = backpackProps && !isPermanentlyReadOnly;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -276,7 +281,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
-      tabMap[Tabs.Backpack] = <BackpackPanel {...backpackProps} />;
+      tabMap[Tabs.Backpack] = (
+        <BackpackPanel
+          {...backpackProps}
+          openPanelCallback={() => setCurrentTab(Tabs.Backpack)}
+        />
+      );
     }
 
     if (
@@ -355,23 +365,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     // Reset current tab to instructions when switching levels or viewAsUserId.
     setCurrentTab(Tabs.Instructions);
   }, [levelId, viewAsUserId]);
-
-  useEffect(() => {
-    // Subscribe to backpack changes if we have a backpack and the tab exists.
-    // We set the current tab to backpack if the user just added a file to the backpack.
-    if (backpackApi && availableTabs[Tabs.Backpack]) {
-      const listenerId = backpackApi.addEventListener((event, _) => {
-        if (event === BackpackEvent.FileAdded) {
-          setCurrentTab(Tabs.Backpack);
-        }
-      });
-      return () => {
-        if (listenerId) {
-          backpackApi?.removeEventListener(listenerId);
-        }
-      };
-    }
-  }, [availableTabs, backpackApi]);
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {

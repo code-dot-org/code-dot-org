@@ -1,7 +1,7 @@
 import {NewFolderFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId} from '@codebridge/types';
-import {validateFolderName} from '@codebridge/utils';
+import {validateFolderNameForModal} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -30,8 +30,13 @@ export const openNewFolderPrompt = async ({
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
     title: codebridgeI18n.newFolderPrompt(),
-    validateInput: (folderName: string) =>
-      validateFolderName({folderName, parentId, projectFolders}),
+    validateInput: (folderName: string) => {
+      return validateFolderNameForModal({
+        folderName,
+        parentId,
+        projectFolders,
+      });
+    },
     useModal: true,
   });
   if (results.type !== 'confirm') {

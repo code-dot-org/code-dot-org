@@ -15,6 +15,9 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "@code-dot-org/core": "workspace:*"
+  },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",

@@ -142,21 +142,8 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  # Subdirectory paths for course files, relative to root_path
-  COURSE_DIRECTORY = 'config/courses'.freeze
-  UI_TEST_COURSE_DIRECTORY = 'test/ui/config/courses'.freeze
-
-  # Returns the filepath for a unit group's .course file.
-  # UI test courses (those with names starting with 'ui-test-') are stored in
-  # test/ui/config/courses/, while normal courses are stored in config/courses/.
-  # The root_path parameter can be customized for different environments or testing.
-  #
-  # @param [String] name - the name of the course
-  # @param [Pathname, String] root_path - the root directory path (defaults to Rails.root)
-  # @return [Pathname] - the absolute filepath to the .course file
   def self.file_path(name, root_path = Rails.root)
-    subdirectory = name.start_with?('ui-test-') ? UI_TEST_COURSE_DIRECTORY : COURSE_DIRECTORY
-    root_path.join(subdirectory, "#{name}.course")
+    root_path.join("config/courses/#{name}.course")
   end
 
   def self.load_from_path(path)
