@@ -5,6 +5,7 @@ import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED,
 } from '@cdo/apps/accounts/ManageLinkedAccounts';
+import DCDO from '@cdo/apps/dcdo';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -19,6 +20,16 @@ const DEFAULT_PROPS = {
 };
 
 describe('ManageLinkedAccounts', () => {
+  // TODO: remove this DCDO manipulation after ClassLink LMS launch
+  beforeEach(() => {
+    DCDO.set('classlink_lms_enabled', true);
+  });
+
+  afterEach(() => {
+    DCDO.set('classlink_lms_enabled', false);
+  });
+  // End TODO
+
   it('renders a table with oauth provider rows', () => {
     const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
     expect(wrapper.find('table')).to.exist;
