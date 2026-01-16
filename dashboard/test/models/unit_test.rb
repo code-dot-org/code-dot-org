@@ -2289,7 +2289,7 @@ class UnitTest < ActiveSupport::TestCase
     normal_level = create(:level)
 
     # Stub Level scopes
-    Level.stubs(:with_required_ai_chat_tools).returns(Level.where(id: ai_level.id))
+    Level.stubs(:with_essential_ai_chat_tools).returns(Level.where(id: ai_level.id))
     Level.stubs(:with_ai_tutor_available).returns(Level.where(id: ai_tutor_level.id))
 
     unit_with_ai = create(:script, name: 'unit-with-ai')
@@ -2307,11 +2307,11 @@ class UnitTest < ActiveSupport::TestCase
     refute_includes result, unit_without_ai
   end
 
-  test 'with_required_ai_chat_tools returns only units with required AI chat tools' do
+  test 'with_essential_ai_chat_tools returns only units with required AI chat tools' do
     ai_level = create(:level)
     normal_level = create(:level)
 
-    Level.stubs(:with_required_ai_chat_tools).returns(Level.where(id: ai_level.id))
+    Level.stubs(:with_essential_ai_chat_tools).returns(Level.where(id: ai_level.id))
 
     unit_with_ai = create(:script, name: 'unit-with-ai')
     unit_with_ai.levels << ai_level
@@ -2319,7 +2319,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_without_ai = create(:script, name: 'unit-without-ai')
     unit_without_ai.levels << normal_level
 
-    result = Unit.with_required_ai_chat_tools
+    result = Unit.with_essential_ai_chat_tools
     assert_includes result, unit_with_ai
     refute_includes result, unit_without_ai
   end

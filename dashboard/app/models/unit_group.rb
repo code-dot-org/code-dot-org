@@ -686,6 +686,6 @@ class UnitGroup < ApplicationRecord
   end
 
   def requires_ai_chat_tools?
-    default_units.with_required_ai_chat_tools.exists?
+    default_units.with_essential_ai_chat_tools.exists?
   end
 end
