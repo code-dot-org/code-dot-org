@@ -1,6 +1,6 @@
 import {RenameFileFunction} from '@codebridge/codebridgeContext/types';
 import {ProjectFile, FileId} from '@codebridge/types';
-import {validateFileName} from '@codebridge/utils';
+import {validateFileNameForModal} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -18,6 +18,7 @@ type RenameNewFilePromptArgsType = {
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
   sendLab2AnalyticsEvent: (
     eventName: string,
     payload?: Record<string, string>
@@ -32,6 +33,7 @@ export const openRenameFilePrompt = async ({
   sendLab2AnalyticsEvent,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: RenameNewFilePromptArgsType) => {
   const file = projectFiles[fileId];
   const results = await dialogControl?.showDialog({
@@ -46,12 +48,13 @@ export const openRenameFilePrompt = async ({
         return;
       }
 
-      return validateFileName({
+      return validateFileNameForModal({
         fileName: newName,
         folderId: file.folderId,
         projectFiles,
         isStartMode,
         validationFile,
+        validFileTypes,
       });
     },
     useModal: true,

@@ -27,6 +27,7 @@ import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
@@ -1194,7 +1195,7 @@ Bounce.onPuzzleComplete = function () {
       : TestResults.TOO_FEW_BLOCKS_FAIL;
   }
 
-  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  var textBlocks = getCode(Blockly.mainBlockSpace);
 
   Bounce.waitingForReport = true;
 

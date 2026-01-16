@@ -96,6 +96,7 @@ export interface Notification extends BaseChatEvent {
     | 'aiTutorVersionActionReject';
   includeInChatHistory?: boolean;
   files?: ProjectFile[];
+  commitDescription?: string;
 }
 
 /** All chat events displayed in the chat workspace must be one of these types. */

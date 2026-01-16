@@ -17,7 +17,10 @@ import {
 import * as BlocklyCore from 'blockly/core';
 
 import {ProcedureBlock} from '@cdo/apps/blockly/types';
-import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  FALSEY_DEFAULT,
+  readBooleanAttribute,
+} from '@cdo/apps/blockly/utils/xml/booleanAttributes';
 
 import {
   getBlockDescription,

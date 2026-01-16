@@ -75,3 +75,15 @@ export const validateFileName = ({
     }
   }
 };
+
+export const validateFileNameForModal = (
+  args: ValidateFileNameArgs
+): {text: string; type: 'error' | 'warning'} | undefined => {
+  const errorMessage = validateFileName(args);
+  if (errorMessage) {
+    return {
+      text: errorMessage,
+      type: 'error',
+    };
+  }
+};

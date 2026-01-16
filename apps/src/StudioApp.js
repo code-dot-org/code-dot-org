@@ -12,6 +12,12 @@ import {
   stringIsXml,
   stripUserCreated,
 } from '@cdo/apps/blockly/constants';
+import {
+  loadBlocksToWorkspace,
+  highlightBlock,
+  appendSharedFunctions,
+  processToolboxXml,
+} from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
@@ -617,6 +623,8 @@ StudioApp.prototype.init = function (config) {
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
+        levelId={config.serverLevelId}
+        unitId={config.serverScriptId}
       />,
       startDialogDiv
     );
@@ -1312,7 +1320,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -1645,7 +1653,7 @@ StudioApp.prototype.resizeToolboxHeader = function () {
       toolboxWidth = categories.getBoundingClientRect().width;
     }
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
+    toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -1662,7 +1670,7 @@ StudioApp.prototype.highlight = function (id, spotlight) {
       id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.cdoUtils.highlightBlock(id, spotlight);
+    highlightBlock(id, spotlight);
   }
 };
 
@@ -2839,7 +2847,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
-    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+    startBlocks = appendSharedFunctions(
       startBlocks,
       config.level.sharedFunctions
     );
@@ -2911,9 +2919,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.level.toolbox) {
     // Update legacy Blockly XML so it is compatible with mainline Blockly
     // (Nothing is changed if we are using CDO Blockly.)
-    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
-      config.level.toolbox
-    );
+    config.level.toolbox = processToolboxXml(config.level.toolbox);
 
     const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
     const emptyToolboxOptionsWithoutWhitespace = [

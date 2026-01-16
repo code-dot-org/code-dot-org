@@ -240,6 +240,13 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
                               params: -> {{course_course_name: @in_development_course.name, unit_position: 1, lesson_position: @in_development_unit.lessons[0].relative_position}}, name: 'levelbuilder can view in-development student lesson plan'
 
+  # anyone can fetch lesson level properties
+  test_user_gets_response_for :level_properties, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: nil, response: :success
+
+  test_user_gets_response_for :level_properties, user: nil, response: :success,
+                              params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson2.relative_position}},
+                              name: 'anyone can fetch lesson level properties on a lesson without a lesson plan'
+
   test 'show includes correct SEO data' do
     get :show, params: {
       course_course_name: @course.name,

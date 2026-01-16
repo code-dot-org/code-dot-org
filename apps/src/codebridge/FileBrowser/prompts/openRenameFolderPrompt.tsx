@@ -1,6 +1,6 @@
 import {RenameFolderFunction} from '@codebridge/codebridgeContext/types';
 import {FolderId} from '@codebridge/types';
-import {validateFolderName} from '@codebridge/utils';
+import {validateFolderNameForModal} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -36,7 +36,7 @@ export const openRenameFolderPrompt = async ({
         return;
       }
 
-      return validateFolderName({
+      return validateFolderNameForModal({
         folderName: newName,
         parentId: folder.parentId,
         projectFolders,
