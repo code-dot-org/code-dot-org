@@ -1,5 +1,14 @@
 %h1 Deep Linking
 - if @deep_linking_settings.present?
   = @deep_linking_settings.to_s
+  = form_with url: submit_lti_v1_deep_linking_path, method: :post do |f|
+    %div
+      = check_box_tag 'selected_items[]', 0, false, id: 'selected_item_music_lab'
+      = label_tag 'selected_item_music_lab', 'Music Lab'
+    %div
+      = check_box_tag 'selected_items[]', 1, false, id: 'selected_item_ai_foundations'
+      = label_tag 'selected_item_ai_foundations', 'AI Foundations 2025'
+    = f.hidden_field :deep_linking_settings, value: @deep_linking_settings.to_json
+    = f.submit "Submit Selected Items"
 - else
   %p No `deep_linking_settings` parameter provided.

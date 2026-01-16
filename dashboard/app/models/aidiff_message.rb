@@ -37,6 +37,8 @@ class AidiffMessage < ApplicationRecord
       updated_at: updated_at,
       is_preset: is_preset,
       preset_chip_text: preset_chip_text,
+      is_artifact_candidate: is_artifact_candidate,
+      artifact_candidate_type: artifact_candidate_type,
     }
   end
 end

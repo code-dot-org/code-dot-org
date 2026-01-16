@@ -763,7 +763,9 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
-        resource :deep_linking, controller: :deep_linking, only: :show
+        resource :deep_linking, controller: :deep_linking, only: :show do
+          post :submit, on: :collection
+        end
         namespace :account_linking do
           get :landing
           get :existing_account

@@ -9,7 +9,7 @@ import {
   lightMode as lightModeTheme,
 } from '@cdo/apps/lab2/views/components/editor/editorThemes';
 
-import styles from './studentCodeWidget.module.scss';
+import styles from './codeWidget.module.scss';
 
 interface EditorProps {
   code: string;
