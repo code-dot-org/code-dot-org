@@ -120,6 +120,10 @@ class Unit < ApplicationRecord
     end
   )
 
+  scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_required_ai_chat_tools.or(Level.with_ai_tutor_available))}
+
+  scope :with_required_ai_chat_tools, -> {joins(:levels).merge(Level.with_required_ai_chat_tools)}
+
   attr_accessor :skip_name_format_validation
 
   include SerializedToFileValidation
