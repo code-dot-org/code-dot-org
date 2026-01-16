@@ -3,19 +3,46 @@ class AichatRequestStreamJob < ApplicationJob
 
   STATUS = SharedConstants::AI_REQUEST_EXECUTION_STATUS
 
-  def perform(request_id:, stream_name:, locale:)
-    @stream_name = stream_name
-    request = nil
-    request = AichatRequest.find(request_id)
+  before_enqueue do |job|
+    request = job.arguments.first[:request]
+    request.update!(execution_status: STATUS[:QUEUED])
+  end
 
+  before_perform do |job|
+    request = job.arguments.first[:request]
     request.update!(execution_status: STATUS[:RUNNING])
+    AichatAiHelper.report_job_start(self.class.name, request)
+  end
+
+  after_perform do |job|
+    request = job.arguments.first[:request]
+    AichatAiHelper.report_job_finish(self.class.name, request)
+  end
+
+  # Catch any exceptions that occur during the job and update the request status accordingly.
+  rescue_from StandardError do |exception|
+    request = arguments.first[:request]
+    locale = arguments.first[:locale]
+
+    fail_job(request, exception.message, STATUS[:FAILURE], locale)
+
+    # Report metrics for the failed job (after_perform doesn't run on failure).
+    AichatAiHelper.report_job_finish(self.class.name, request)
+
+    # Re-raise error to notify our system of the failed job.
+    raise exception
+  end
+
+  def perform(request:, stream_name:, locale:)
+    @stream_name = stream_name
+
     broadcast({event: 'start', request_id: request.id})
 
     user_text = request.new_message['chatMessageText']
     level_id = request.level_id
 
     user_toxicity = AichatSafetyHelper.find_toxicity(user_text, level_id, 'User')
-    return fail_job(request, STATUS[:USER_PROFANITY], user_toxicity) if user_toxicity
+    return fail_job(request, serialize_details(user_toxicity),  STATUS[:USER_PROFANITY], locale) if user_toxicity
 
     current_seq_id = 0
 
@@ -33,7 +60,7 @@ class AichatRequestStreamJob < ApplicationJob
     end
 
     model_toxicity = AichatSafetyHelper.find_toxicity(full_response, level_id, 'Assistant')
-    return fail_job(request, STATUS[:MODEL_PROFANITY], model_toxicity) if model_toxicity
+    return fail_job(request, serialize_details(model_toxicity), STATUS[:MODEL_PROFANITY], locale) if model_toxicity
 
     request.update!(
       response: full_response,
@@ -42,37 +69,18 @@ class AichatRequestStreamJob < ApplicationJob
 
     broadcast({event: 'complete', text: full_response, request_id: request.id})
   rescue OpenaiUserInputResponseTimeout => exception
-    fail_job(request, STATUS[:MODEL_TIMEOUT], exception.message)
-  rescue ArgumentError => exception
-    fail_job(request, STATUS[:FAILURE], exception.message)
-  rescue StandardError => exception
-    fail_job(request, STATUS[:FAILURE], exception.message, exception: exception)
+    fail_job(request, exception.message, STATUS[:MODEL_TIMEOUT], locale)
   end
 
   private def broadcast(payload)
     AichatAiHelper.broadcast_to_stream(@stream_name, payload)
   end
 
-  private def fail_job(request, status_code, details, exception: nil)
+  private def fail_job(request, details, status_code, locale)
     safe_details = serialize_details(details)
-    request&.update!(
-      response: safe_details,
-      execution_status: status_code
-    )
+    AichatAiHelper.handle_error("AichatRequestStreamJob failed", safe_details, request, locale, status_code)
 
     AichatAiHelper.broadcast_error(@stream_name, status_code, request&.id, safe_details)
-
-    if exception
-      Honeybadger.notify(
-        "AichatRequestStreamJob failed: #{exception.message}",
-        context: {
-          user_id: request&.user_id,
-          request_id: request&.id,
-          locale: @locale,
-          status_code: status_code
-        }
-      )
-    end
   end
 
   private def serialize_details(details)

@@ -1,25 +1,25 @@
-require 'cdo/aws/metrics'
-
 class AichatRequestChatCompletionJob < ApplicationJob
   queue_as :default
+
+  STATUS = SharedConstants::AI_REQUEST_EXECUTION_STATUS
 
   DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
   DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
 
   before_enqueue do |job|
     request = job.arguments.first[:request]
-    request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
+    request.update!(execution_status: STATUS[:QUEUED])
   end
 
   before_perform do |job|
     request = job.arguments.first[:request]
-    request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:RUNNING])
-    report_job_start(request)
+    request.update!(execution_status: STATUS[:RUNNING])
+    AichatAiHelper.report_job_start(self.class.name, request)
   end
 
   after_perform do |job|
     request = job.arguments.first[:request]
-    report_job_finish(request)
+    AichatAiHelper.report_job_finish(self.class.name, request)
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
@@ -27,10 +27,10 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request = arguments.first[:request]
     locale = arguments.first[:locale]
 
-    AichatAiHelper.handle_error("AichatRequestChatCompletionJob", exception, request, locale)
+    AichatAiHelper.handle_error("AichatRequestChatCompletionJob", exception.message, request, locale)
 
     # Report metrics for the failed job (after_perform doesn't run on failure).
-    report_job_finish(request)
+    AichatAiHelper.report_job_finish(self.class.name, request)
 
     # Re-raise error to notify our system of the failed job.
     raise exception
@@ -42,32 +42,21 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   # Determine if one of the models handled by  `aichat_ai_client.rb`.
-  private def openai_or_gemini?(model_id)
-    [
-      SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
-      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
-      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
-      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
-      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
-      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
-      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_3_PRO_PREVIEW],
-    ].include? model_id
-  end
 
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
     user_toxicity = AichatSafetyHelper.find_toxicity(request.new_message['chatMessageText'], request.level_id, 'User')
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
+    return [STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
+    return [STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
-    if openai_or_gemini?(request.model_customizations['selectedModelId'])
+    if AichatAiHelper.openai_or_gemini?(request.model_customizations['selectedModelId'])
       begin
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
-        return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
+        return [STATUS[:MODEL_TIMEOUT], exception.message]
       end
     else
       begin
@@ -75,7 +64,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
       rescue Aws::SageMakerRuntime::Errors::ModelError => exception
         # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
         if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")
-          return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], exception.message]
+          return [STATUS[:USER_INPUT_TOO_LARGE], exception.message]
         else
           raise exception
         end
@@ -84,12 +73,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     # Moderate model output for toxicity.
     model_toxicity = AichatSafetyHelper.find_toxicity(response, request.level_id, 'Assistant')
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
+    return [STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
 
     model_pii = find_pii(response, locale)
-    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PII], "PII detected in model output: #{model_pii}"] if model_pii
+    return [STATUS[:MODEL_PII], "PII detected in model output: #{model_pii}"] if model_pii
 
-    [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
+    [STATUS[:SUCCESS], response]
   end
 
   private def make_openai_request(request)
@@ -115,75 +104,5 @@ class AichatRequestChatCompletionJob < ApplicationJob
   # Check the given text for PII.
   private def find_pii(text, locale)
     # TODO: Check for PII. Currently we don't check for PII but we plan to add post-launch.
-  end
-
-  private def get_model_id(request)
-    request.model_customizations['selectedModelId']
-  end
-
-  private def report_job_start(request)
-    @start_time = Time.now
-
-    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
-      [
-        {
-          metric_name: "#{self.class.name}.Start",
-          value: 1,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-          ],
-        }
-      ]
-    )
-  end
-
-  private def report_job_finish(request)
-    execution_time = Time.now - @start_time
-    status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
-
-    execution_time_metric_base = {
-      metric_name: "#{self.class.name}.ExecutionTime",
-      value: execution_time,
-      unit: 'Seconds',
-      timestamp: Time.now,
-      dimensions: [],
-    }
-
-    execution_time_dimensions_base = [
-      {name: 'Environment', value: CDO.rack_env},
-      {name: 'ModelId', value: get_model_id(request)},
-    ]
-
-    metrics = [
-      {
-        metric_name: "#{self.class.name}.Finish",
-        value: 1,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: [
-          {name: 'Environment', value: CDO.rack_env},
-          {name: 'ModelId', value: get_model_id(request)},
-          {name: 'ExecutionStatus', value: status_name},
-        ],
-      },
-      execution_time_metric_base.merge({dimensions: execution_time_dimensions_base}),
-    ]
-
-    model_id = get_model_id(request)
-    if openai_or_gemini?(model_id)
-      multimodal_dimension = {name: 'Multimodal', value: request_multimodal?(request).to_s}
-      execution_time_metric_multimodal = execution_time_metric_base.merge({dimensions: execution_time_dimensions_base + [multimodal_dimension]})
-      metrics.push(execution_time_metric_multimodal)
-    end
-
-    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
-  end
-
-  private def request_multimodal?(request)
-    (request.new_message['assets']&.length || 0) > 0 ||
-      request.stored_messages.any? {|message| (message['assets']&.length || 0) > 0}
   end
 end
