@@ -109,7 +109,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
 
   useEffect(() => {
     // Show the load screen on initial load, and load all backpacks.
-    console.log(`on load, loading files`);
     loadBackpackFiles(true);
   }, [loadBackpackFiles]);
 
