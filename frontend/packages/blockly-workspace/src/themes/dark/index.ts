@@ -1,6 +1,8 @@
 import DarkTheme from '@blockly/theme-dark';
 import * as Blockly from 'blockly/core';
 
+import {definition as DefaultDefinition} from '../default';
+
 /**
  * The default blockly theme used to typically style the blocks in labs.
  */
@@ -21,10 +23,7 @@ export const definition = {
     fill: 'var(--background-brand-purple-primary)',
   },
   fontStyle: {
-    family:
-      'Figtree, "Noto Sans", "Noto Sans Math", "Noto Sans Arabic", "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC", "Noto Sans Devanagari", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR", "Noto Sans Myanmar", "Noto Sans Sinhala", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", "Noto Sans Thaana", sans-serif',
-    weight: 'normal',
-    size: 12,
+    ...DefaultDefinition.fontStyle,
   },
   blockStyles: {
     default: {
@@ -87,7 +86,7 @@ export const definition = {
     flyoutBackgroundColour: 'var(--neutral-gray-95)',
     flyoutOpacity: 0.8,
   },
-  startHats: undefined,
+  startHats: DefaultDefinition.startHats,
 };
 
 const instance = Blockly.Theme.defineTheme(definition.name, {
