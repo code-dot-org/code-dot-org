@@ -1,6 +1,5 @@
 import type {MarkdownToJSX} from 'markdown-to-jsx';
 import {RuleType} from 'markdown-to-jsx';
-import type {FunctionComponent} from 'react';
 
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import Markdown, {MarkdownProps} from '@code-dot-org/markdown';
@@ -60,13 +59,13 @@ const xmlRenderer: (
  *
  * This is useful for rendering instructions or documentation with embedded blocks.
  */
-const BlocklyMarkdown: FunctionComponent<BlocklyMarkdownProps> = ({
+const BlocklyMarkdown = ({
   blocks,
   renderer,
   plugins,
   theme,
   ...props
-}) => (
+}: BlocklyMarkdownProps) => (
   <Markdown
     {...props}
     options={{
