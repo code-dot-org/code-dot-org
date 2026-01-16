@@ -6,11 +6,16 @@ import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  AppName,
+  LabProps,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
@@ -140,6 +145,8 @@ const Weblab2View: React.FC<
   const aiTutorResponseSchemaSettings =
     useAiTutorResponseSchemaSettings(source);
 
+  const secondaryBackpackAppNames: AppName[] = useMemo(() => ['sketchlab'], []);
+
   return (
     <div className={moduleStyles.weblab2Container}>
       {hasSource && sourceLevel === levelProperties.id && (
@@ -156,7 +163,7 @@ const Weblab2View: React.FC<
             levelProperties.aiTutorMode
           )}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-          secondaryBackpackAppNames={['sketchlab']}
+          secondaryBackpackAppNames={secondaryBackpackAppNames}
         />
       )}
     </div>
