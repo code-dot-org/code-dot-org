@@ -2,6 +2,7 @@ import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, VARIABLE_BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType} from '../types';
+import {addSerializationHooksToBlock} from '../utils/serialization/hooks';
 
 export default function initializeVariables(
   blocklyWrapper: BlocklyWrapperType
@@ -40,9 +41,7 @@ export default function initializeVariables(
   // variable dropdown blocks in the toolbox.
   VARIABLE_BLOCK_TYPES.forEach(blockType => {
     if (blocklyWrapper.Blocks[blockType]) {
-      blocklyWrapper.customBlocks.addSerializationHooksToBlock(
-        blocklyWrapper.Blocks[blockType]
-      );
+      addSerializationHooksToBlock(blocklyWrapper.Blocks[blockType]);
     }
   });
 }

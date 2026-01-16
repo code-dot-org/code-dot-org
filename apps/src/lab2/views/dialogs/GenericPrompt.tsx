@@ -25,6 +25,8 @@ export type GenericPromptProps = Pick<
   ) => {text: string; type: 'error' | 'warning'} | undefined;
   requiresPrompt?: boolean;
   message?: string;
+  confirmButtonTextWithWarning?: string;
+  confirmButtonText?: string;
 };
 
 /**
@@ -73,6 +75,8 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   validateInput = () => undefined,
   requiresPrompt = true,
   useModal = false,
+  confirmButtonTextWithWarning,
+  confirmButtonText,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
@@ -124,7 +128,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     () => {
       if (closeType === 'confirm') {
         const validationError = validateInput(prompt);
-        if (validationError) {
+        if (validationError && validationError.type === 'error') {
           setValidationMessage(validationError);
           return;
         }
@@ -140,6 +144,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     };
 
   const hasError = validationMessage?.type === 'error';
+  const hasWarning = validationMessage?.type === 'warning';
 
   return (
     <GenericDialog
@@ -158,6 +163,10 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
         confirm: {
           callback: () => handleConfirm?.(prompt),
           disabled: hasError || (requiresPrompt && !prompt.length),
+          text:
+            confirmButtonTextWithWarning && hasWarning
+              ? confirmButtonTextWithWarning
+              : confirmButtonText,
         },
         cancel: {callback: () => handleCancel?.()},
       }}

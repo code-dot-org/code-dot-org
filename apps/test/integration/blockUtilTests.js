@@ -1,3 +1,4 @@
+import {getBlockFields} from '@cdo/apps/blockly/utils';
 import {parseElement} from '@cdo/apps/xml';
 
 import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -19,7 +20,7 @@ describe('blockUtils', function () {
     var newBlock = blockUtils.domStringToBlock(blockXMLString);
     assert(Blockly.mainBlockSpace.getBlockCount() === 1);
     assert(newBlock.getFieldValue('NUM') === 10);
-    assert(Blockly.cdoUtils.getBlockFields(newBlock).length === 1);
+    assert(getBlockFields(newBlock).length === 1);
   });
 
   it('can create a block from XML and remove it from the workspace', function () {
@@ -45,8 +46,8 @@ describe('requiredBlockUtils', function () {
     var blockRequiredString =
       '<block type="math_number"><field name="NUM">10</field></block>';
     var blockRequired = blockUtils.domStringToBlock(blockRequiredString);
-    assert(Blockly.cdoUtils.getBlockFields(blockUser).length === 1);
-    assert(Blockly.cdoUtils.getBlockFields(blockRequired).length === 1);
+    assert(getBlockFields(blockUser).length === 1);
+    assert(getBlockFields(blockRequired).length === 1);
   });
 
   it('can recognize matching blocks with mismatched ignored attributes', function () {

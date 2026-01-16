@@ -4,10 +4,18 @@ import {
   updatePointerBlockImage,
   updatePointerBlockWarning,
 } from '@cdo/apps/blockly/addons/cdoSpritePointer';
+import {
+  BlockStyles,
+  CLAMPED_NUMBER_REGEX,
+  EMPTY_OPTION,
+} from '@cdo/apps/blockly/constants';
+import cdoBlockStyles from '@cdo/apps/blockly/themes/cdoBlockStyles';
+import {
+  appendMiniToolboxToggle,
+  initializeMiniToolbox,
+} from '@cdo/apps/blockly/utils/fields/miniToolbox';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
-import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
-import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
 import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
@@ -175,12 +183,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
   blockly.Blocks[name] = {
     helpUrl: helpUrl,
     init: function () {
-      // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
@@ -644,7 +647,19 @@ const STANDARD_INPUT_TYPES = {
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const {type} = inputConfig;
-      const field = Blockly.cdoUtils.getField(type);
+      let field;
+      if (type === Blockly.BlockValueType.NUMBER) {
+        field = new Blockly.FieldNumber();
+      } else if (type.includes('ClampedNumber')) {
+        const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+        if (clampedNumberMatch) {
+          const min = parseFloat(clampedNumberMatch[1]);
+          const max = parseFloat(clampedNumberMatch[2]);
+          field = new Blockly.FieldNumber(0, min, max);
+        }
+      } else {
+        field = new Blockly.FieldTextInput();
+      }
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -793,7 +808,6 @@ exports.createJsWrapperBlockCreator = function (
    */
   return (
     {
-      color,
       style,
       func,
       expression,
@@ -919,8 +933,7 @@ exports.createJsWrapperBlockCreator = function (
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
       init: function () {
-        // Apply style or color to block as needed, based on Blockly version.
-        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
+        this.setStyle(style || BlockStyles.DEFAULT);
 
         if (returnType) {
           this.setOutput(
@@ -948,10 +961,7 @@ exports.createJsWrapperBlockCreator = function (
 
         let flyoutToggleButton;
         if (showMiniToolbox) {
-          flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-              miniToolboxBlocks
-            );
+          flyoutToggleButton = initializeMiniToolbox();
         }
 
         // We only set up block shadowing for blocks that have a type in spriteLabPointers.
@@ -997,10 +1007,7 @@ exports.createJsWrapperBlockCreator = function (
         this.setInputsInline(inline);
 
         if (showMiniToolbox) {
-          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
-            miniToolboxBlocks,
-            flyoutToggleButton
-          );
+          appendMiniToolboxToggle(this, miniToolboxBlocks, flyoutToggleButton);
         }
       },
     };
