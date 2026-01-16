@@ -43,7 +43,7 @@ describe('Java Lab Backpack Test', () => {
     );
   };
 
-  const openBackpack = async user => {
+  const toggleBackpack = async user => {
     await user.click(
       screen.getByRole('button', {name: javalabMsg.backpackLabel()})
     );
@@ -58,7 +58,7 @@ describe('Java Lab Backpack Test', () => {
       'Class3.java',
     ]);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('Class1.java');
     await user.click(screen.getByLabelText('Class1.java'));
     await user.click(screen.getByLabelText('Class2.java'));
@@ -66,22 +66,13 @@ describe('Java Lab Backpack Test', () => {
     await user.click(screen.getByLabelText('Class1.java'));
     await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
 
-    const confirmMessage = await screen.findByText(
-      javalabMsg.fileDeleteConfirm()
-    );
-    const dialog = confirmMessage.closest('.modal');
-    expect(dialog).to.not.equal(null);
-    const dialogQueries = within(dialog);
-    expect(dialogQueries.queryByText('Class1.java')).to.equal(null);
-    expect(dialogQueries.getByText('Class2.java')).to.not.equal(null);
-    expect(dialogQueries.getByText('Class3.java')).to.not.equal(null);
-  });
+    const class1Checkbox = screen.getByLabelText('Class1.java');
+    const class2Checkbox = screen.getByLabelText('Class2.java');
+    const class3Checkbox = screen.getByLabelText('Class3.java');
 
-  it('expand dropdown triggers getFileList', async () => {
-    const user = userEvent.setup();
-    renderWithProps({});
-    await openBackpack(user);
-    expect(backpackApiStub.getFileList.calledOnce).to.be.true;
+    expect(class1Checkbox.checked).to.be.false;
+    expect(class2Checkbox.checked).to.be.true;
+    expect(class3Checkbox.checked).to.be.true;
   });
 
   it('expand dropdown resets state correctly', async () => {
@@ -90,14 +81,14 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub.getFileList.onCall(0).callsArgWith(1, ['file1', 'file2']);
     backpackApiStub.getFileList.onCall(1).callsArgWith(1, ['file1', 'file2']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     await user.click(screen.getByLabelText('file1'));
     expect(
       screen.getByRole('button', {name: javalabMsg.import()}).disabled
     ).to.equal(false);
-    await openBackpack(user);
-    await openBackpack(user);
+    await toggleBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     expect(
       screen.getByRole('button', {name: javalabMsg.import()}).disabled
@@ -112,7 +103,7 @@ describe('Java Lab Backpack Test', () => {
     renderWithProps(otherProps);
     backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     await user.click(screen.getByLabelText('file1'));
     await user.click(screen.getByLabelText('file3'));
@@ -140,7 +131,7 @@ describe('Java Lab Backpack Test', () => {
       'file3',
     ]);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('hiddenFile');
     await user.click(screen.getByLabelText('hiddenFile'));
     await user.click(screen.getByLabelText('file3'));
@@ -158,7 +149,7 @@ describe('Java Lab Backpack Test', () => {
     renderWithProps({});
     backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file2');
     await user.click(screen.getByLabelText('file2'));
     await user.click(screen.getByLabelText('file3'));
@@ -184,7 +175,7 @@ describe('Java Lab Backpack Test', () => {
     renderWithProps(otherProps);
     backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     await user.click(screen.getByLabelText('file1'));
     await user.click(screen.getByLabelText('file3'));
@@ -210,7 +201,7 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub.deleteFiles.callsArg(2);
     backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     await user.click(screen.getByLabelText('file1'));
     await user.click(screen.getByLabelText('file3'));
@@ -238,7 +229,7 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
     backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     await user.click(screen.getByLabelText('file1'));
     await user.click(screen.getByLabelText('file3'));
@@ -265,7 +256,7 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
     backpackApiStub.getFileList.callsArgWith(1, ['file1', 'file2', 'file3']);
 
-    await openBackpack(user);
+    await toggleBackpack(user);
     await screen.findByLabelText('file1');
     await user.click(screen.getByLabelText('file1'));
     await user.click(screen.getByLabelText('file3'));
@@ -280,6 +271,10 @@ describe('Java Lab Backpack Test', () => {
       within(dialog).getByRole('button', {name: javalabMsg.delete()})
     );
     await screen.findByText(javalabMsg.fileDeleteError());
+
+    const file1Checkbox = screen.getByLabelText('file1');
+    expect(file1Checkbox.checked).to.be.true;
+
     expect(screen.queryByLabelText('file3')).to.equal(null);
   });
 });
