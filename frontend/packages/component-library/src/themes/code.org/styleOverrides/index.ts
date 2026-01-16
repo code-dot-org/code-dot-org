@@ -1,5 +1,6 @@
 import {Components, Theme} from '@mui/material/styles';
 
+import {BREADCRUMBS_OVERRIDES} from './breadcrumbs';
 import {BUTTON_OVERRIDES} from './button';
 import {ICON_BUTTON_OVERRIDES} from './iconButton';
 import {LINK_OVERRIDES} from './link';
@@ -14,6 +15,7 @@ const BUTTON_BASE_OVERRIDES: Components<Theme>['MuiButtonBase'] = {
 export const STYLE_OVERRIDES: Components<Theme> = {
   MuiTypography: TYPOGRAPHY_OVERRIDES,
   MuiLink: LINK_OVERRIDES,
+  MuiBreadcrumbs: BREADCRUMBS_OVERRIDES,
   MuiButtonBase: BUTTON_BASE_OVERRIDES,
   MuiButton: BUTTON_OVERRIDES,
   MuiIconButton: ICON_BUTTON_OVERRIDES,
