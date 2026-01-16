@@ -453,6 +453,7 @@ const PatternAiPanel = ({initValue, onChange}: PatternAiPanelProps) => {
       currentEvents,
       previewNote,
       setCurrentEvents,
+      generateState,
       updateGenerateState,
     ],
   );
