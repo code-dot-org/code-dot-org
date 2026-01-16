@@ -11,10 +11,10 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getFullName} from '../manageStudents/utils';
 
+import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
 import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
 import StudentCFUWidget from './studentCFUWidget';
-import StudentCodeWidget from './studentCodeWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
 import WidgetTemplate from './widgetTemplate';
