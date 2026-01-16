@@ -165,7 +165,7 @@ class StudentSnapshotsController < ApplicationController
       case level
       when TextMatch, FreeResponse
         level_result[:student_result] = student_answer
-        level_result[:status] = ""
+        level_result[:status] = student_answer.empty? ? "unsubmitted" : "submitted"
       when Multi
         answer_indexes = level.correct_answer_indexes_array
         student_result = student_answer.split(",").map(&:to_i).sort
@@ -190,7 +190,7 @@ class StudentSnapshotsController < ApplicationController
         student_result.each_with_index do |answer, index|
           option_status[index] = answer.nil? ? "unsubmitted" : "submitted"
         end
-        level_result[:status] = option_status
+        level_result[:status] = option_status.presence || "unsubmitted"
       end
     else
       level_result[:status] = "unsubmitted"
