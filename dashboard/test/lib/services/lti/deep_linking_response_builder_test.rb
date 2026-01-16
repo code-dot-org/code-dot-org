@@ -20,6 +20,15 @@ class Services::Lti::DeepLinkingResponseBuilderTest < ActiveSupport::TestCase
   subject(:decoded_jwt) {decoded_jwt}
 
   describe '#call' do
+    before do
+      jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), {use: 'sig', alg: 'RS256', kid: 'test-kid'})
+      fake_private_key_obj = {
+        kid: jwk[:kid],
+        private_key: jwk.signing_key.to_s,
+      }
+      CDO.stubs(:jwk_private_key_data).returns(fake_private_key_obj)
+    end
+
     it 'returns a valid JWT' do
       _(decoded_jwt).wont_be_nil
     end
