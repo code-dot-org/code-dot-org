@@ -2,6 +2,8 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {defineBlock} from '@code-dot-org/blockly-workspace';
 
+import imgAiBot from '../../assets/ai/ai-bot-mini-2.svg';
+
 import {MAX_LOOP_ITERATIONS_COUNT} from '../../constants';
 
 import {BlockTypes} from '../blockTypes';
@@ -144,8 +146,7 @@ const playPatternAiAtCurrentLocationSimple2 = defineBlock({
   args0: [
     {
       type: 'field_image',
-      // TODO: use imported asset somehow
-      src: '/blockly/media/ai-bot-mini-2.svg',
+      src: imgAiBot,
       width: 24,
       height: 24,
       alt: '',
