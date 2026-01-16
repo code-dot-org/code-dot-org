@@ -80,7 +80,7 @@ export const definition = {
   },
   categoryStyles: {},
   componentStyles: {
-    toolboxBackgroundColour: '#dddddd',
+    toolboxBackgroundColour: '#394450',
     workspaceBackgroundColour: 'var(--neutral-base-black)',
     blackBackground: 'var(--neutral-gray-95)',
     flyoutBackgroundColour: 'var(--neutral-gray-95)',
