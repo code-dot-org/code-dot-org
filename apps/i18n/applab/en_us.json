@@ -8,7 +8,7 @@
   "catProcedures": "Functions",
   "catText": "Text",
   "catVariables": "Variables",
-  "chrome133PlusBugCallout": "ChromeOS version 133+ has an issue affecting the use of Circuit Playground Express. Updating to the latest version of ChromeOS (>=v141.0.7390.135) appears to resolve this issue.",
+  "chrome133PlusBugCallout": "ChromeOS version 133+ has an issue affecting the use of Circuit Playground Express. Updating to the latest version of ChromeOS (>=v141.0.7390.135) appears to resolve this issue for most users.",
   "columnDoesNotExistError": "You tried to get a column called \"{columnName}\" from a table called \"{tableName}\", but that column doesn't exist. ",
   "connectToBoard": "Connect to Board",
   "confirmClearTable": "Do you really want to delete all data from this table? You cannot undo this action.",
