@@ -156,7 +156,14 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
   end
 
   test "cfu_levels endpoint includes all required fields" do
-    cfu_level = create(:level, name: 'CFU Level', type: 'Multi', display_name: 'CFU Display Name')
+    level_answers = [
+      {"text" => "answer 1", "correct" => false},
+      {"text" => "answer 2", "correct" => true},
+      {"text" => "answer 2", "correct" => true},
+    ]
+    cfu_level = create(:level, name: 'CFU Level', type: 'Multi',
+      properties: {display_name: 'CFU Display Name', questions: [{text: 'Question text'}], answers: level_answers}
+    )
     create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
@@ -173,9 +180,89 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     refute_nil cfu_data['progression']
     refute_nil cfu_data['progression_display_name']
     assert_equal 'CFU Display Name', cfu_data['display_name']
-    # New optional fields for question content
-    assert_includes cfu_data.keys, 'question_text'
-    assert_includes cfu_data.keys, 'answers'
+    assert_equal cfu_data['question_text'], 'Question text'
+    assert_equal cfu_data['answers'], level_answers
+  end
+
+  test "cfu_levels endpoint includes question and possible answers for level" do
+    multi_level_answers = [
+      {"text" => "answer 1", "correct" => false},
+      {"text" => "answer 2", "correct" => true},
+    ]
+    match_level_answers = [
+      {"text" => "answer 1"},
+      {"text" => "answer 2"},
+      {"text" => "answer 3"}
+    ]
+
+    multi_cfu_level = create(:level, name: 'Multi CFU Level', type: 'Multi',
+      properties: {display_name: 'Multi CFU Display Name', questions: [{text: 'Multi question text'}], answers: multi_level_answers}
+    )
+    match_cfu_level = create(:level, name: 'Match CFU Level', type: 'Match',
+      properties: {display_name: 'Match CFU Display Name', content1: 'Match question text', answers: match_level_answers}
+    )
+    free_res_cfu_level = create(:level, name: 'Free Response CFU Level', type: 'FreeResponse',
+      properties: {display_name: 'Free Response CFU Display Name', long_instructions: 'Free Response question text', answers: nil}
+    )
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [multi_cfu_level])
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [match_cfu_level])
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [free_res_cfu_level])
+
+    get :cfu_levels, params: {lesson_id: @lesson1.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    cfu_data = response_data['cfu_levels']
+
+    assert_equal 'Multi question text', cfu_data[0]['question_text']
+    assert_equal multi_level_answers, cfu_data[0]['answers']
+    assert_equal 'Match question text', cfu_data[1]['question_text']
+    assert_equal match_level_answers, cfu_data[1]['answers']
+    assert_equal 'Free Response question text', cfu_data[2]['question_text']
+    assert_nil cfu_data[2]['answers']
+  end
+
+  test "cfu_levels endpoint includes question and possible answers for level_group" do
+    multi_sublevel_answers = [
+      {"text" => "answer 1", "correct" => false},
+      {"text" => "answer 2", "correct" => true},
+    ]
+    match_sublevel_answers = [
+      {"text" => "answer 1"},
+      {"text" => "answer 2"},
+      {"text" => "answer 3"}
+    ]
+
+    create(:level, name: 'Multi CFU Level', type: 'Multi',
+      properties: {display_name: 'Multi CFU Display Name', questions: [{text: 'Multi question text'}], answers: multi_sublevel_answers}
+    )
+    create(:level, name: 'Match CFU Level', type: 'Match',
+      properties: {display_name: 'Match CFU Display Name', content1: 'Match question text', answers: match_sublevel_answers}
+    )
+    create(:level, name: 'Free Response CFU Level', type: 'FreeResponse',
+      properties: {display_name: 'Free Response CFU Display Name', long_instructions: 'Free Response question text', answers: nil}
+    )
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Level Group'
+      anonymous 'true'
+
+      page
+      level 'Multi CFU Level'
+      level 'Match CFU Level'
+      level 'Free Response CFU Level'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [level1], assessment: true)
+
+    get :cfu_levels, params: {lesson_id: @lesson1.id}
+
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    cfu_data = response_data['cfu_levels'].first
+
+    assert_equal ['Multi question text', 'Match question text', 'Free Response question text'], cfu_data['question_text']
+    assert_equal [multi_sublevel_answers, match_sublevel_answers, nil], cfu_data['answers']
   end
 
   test "cfu_levels endpoint uses level name as display_name when display_name is nil" do
@@ -273,5 +360,119 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal sublevel.id, sublevel_result['level_id']
     assert_equal 'FreeResponse', sublevel_result['type']
     assert_equal 'hello world', sublevel_result['student_result']
+  end
+
+  test "cfu_responses endpoint tracks submitted status for CFU levels" do
+    multi_level_answers = [
+      {"text" => "answer 1", "correct" => false},
+      {"text" => "answer 2", "correct" => true},
+    ]
+    match_level_answers = [
+      {"text" => "answer 1"},
+      {"text" => "answer 2"},
+      {"text" => "answer 3"}
+    ]
+
+    multi_cfu_level = create(:level, name: 'Multi CFU Level', type: 'Multi',
+      properties: {display_name: 'Multi CFU Display Name', questions: [{text: 'Multi question text'}], answers: multi_level_answers}
+    )
+    match_cfu_level = create(:level, name: 'Match CFU Level', type: 'Match',
+      properties: {display_name: 'Match CFU Display Name', content1: 'Match question text', answers: match_level_answers}
+    )
+    free_res_cfu_level = create(:level, name: 'Free Response CFU Level', type: 'FreeResponse',
+      properties: {display_name: 'Free Response CFU Display Name', long_instructions: 'Free Response question text', answers: nil}
+    )
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [multi_cfu_level])
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [match_cfu_level])
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [free_res_cfu_level])
+
+    student_with_submitted_levels = create(:student)
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: multi_cfu_level, level_source: create(:level_source, data: '1'))
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: match_cfu_level, level_source: create(:level_source, data: '0,2,1'))
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: free_res_cfu_level, level_source: create(:level_source, data: 'Sample free response text'))
+
+    student_with_unsubmitted_levels = create(:student)
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: multi_cfu_level, level_source: create(:level_source, data: '-1'))
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: match_cfu_level, level_source: create(:level_source, data: ''))
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: free_res_cfu_level, level_source: create(:level_source, data: ''))
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student_with_submitted_levels.id}
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    responses = response_data['cfu_responses']
+
+    assert_equal true, responses[0]['submitted']
+    assert_equal true, responses[1]['submitted']
+    assert_equal true, responses[2]['submitted']
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student_with_unsubmitted_levels.id}
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    responses = response_data['cfu_responses']
+
+    assert_equal false, responses[0]['submitted']
+    assert_equal false, responses[1]['submitted']
+    assert_equal false, responses[2]['submitted']
+  end
+
+  test "cfu_responses endpoint tracks submitted status for LevelGroup CFUs" do
+    multi_level_answers = [
+      {"text" => "answer 1", "correct" => false},
+      {"text" => "answer 2", "correct" => true},
+    ]
+    match_level_answers = [
+      {"text" => "answer 1"},
+      {"text" => "answer 2"},
+      {"text" => "answer 3"}
+    ]
+
+    multi_cfu_sublevel = create(:level, name: 'Multi CFU Level', type: 'Multi',
+      properties: {display_name: 'Multi CFU Display Name', questions: [{text: 'Multi question text'}], answers: multi_level_answers}
+    )
+    match_cfu_sublevel = create(:level, name: 'Match CFU Level', type: 'Match',
+      properties: {display_name: 'Match CFU Display Name', content1: 'Match question text', answers: match_level_answers}
+    )
+    free_res_cfu_sublevel = create(:level, name: 'Free Response CFU Level', type: 'FreeResponse',
+      properties: {display_name: 'Free Response CFU Display Name', long_instructions: 'Free Response question text', answers: nil}
+    )
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Level Group'
+      anonymous 'true'
+
+      page
+      level 'Multi CFU Level'
+      level 'Match CFU Level'
+      level 'Free Response CFU Level'
+    DSL
+    level_group = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [level_group], assessment: true)
+
+    student_with_submitted_levels = create(:student)
+    # Even if the LevelGroup has a 'submitted' value of 'false', if the student has submitted each sublevel the response will return 'submitted' as 'true'
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: level_group, submitted: false)
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: multi_cfu_sublevel, level_source: create(:level_source, data: '1'))
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: match_cfu_sublevel, level_source: create(:level_source, data: '0,2,1'))
+    create(:user_level, user: student_with_submitted_levels, script: @unit, level: free_res_cfu_sublevel, level_source: create(:level_source, data: 'Sample free response text'))
+
+    student_with_unsubmitted_levels = create(:student)
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: level_group, submitted: false)
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: multi_cfu_sublevel, level_source: create(:level_source, data: '-1'))
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: match_cfu_sublevel, level_source: create(:level_source, data: ''))
+    create(:user_level, user: student_with_unsubmitted_levels, script: @unit, level: free_res_cfu_sublevel, level_source: create(:level_source, data: ''))
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student_with_submitted_levels.id}
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    student_response = response_data['cfu_responses'].first
+
+    assert_equal true, student_response['submitted']
+
+    get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student_with_unsubmitted_levels.id}
+    assert_response :ok
+    response_data = JSON.parse(response.body)
+    student_response = response_data['cfu_responses'].first
+
+    assert_equal false, student_response['submitted']
   end
 end
