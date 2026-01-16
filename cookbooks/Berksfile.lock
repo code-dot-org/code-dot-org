@@ -84,7 +84,7 @@ GRAPH
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.38)
     apt (>= 0.0.0)
-  cdo-cloudwatch-agent (0.1.21)
+  cdo-cloudwatch-agent (0.1.22)
     aws_cloudwatch (>= 0.0.0)
   cdo-github-access (0.1.14)
     apt (>= 0.0.0)

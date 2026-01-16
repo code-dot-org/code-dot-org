@@ -44,7 +44,7 @@ markdown <<MARKDOWN
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: Arial, sans-serif; font-size: 14pt; margin: 20px 0;">
 
   <!-- 🎯 Selectors Card -->
-  <div style="flex: 1 1 350px; background-color: #f7f8fa; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+  <div style="flex: 1 1 350px; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
     <h4 style="margin-top: 0; color: #005b6b;">🎯 <strong>Selectors</strong></h4>
     <p style="margin-bottom: 12px;font-size: 14pt">
       Selectors are the names of the HTML elements you want to style.
@@ -62,7 +62,7 @@ markdown <<MARKDOWN
   </div>
 
   <!-- 🎨 Properties and Values Card -->
-  <div style="flex: 1 1 350px; background-color: #dlb9e3; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+  <div style="flex: 1 1 350px; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
     <h4 style="margin-top: 0; color: #005b6b;">🎨 <strong>Properties and Values</strong></h4>
     <p style="margin-bottom: 12px;font-size: 14pt">
       Inside each set of curly braces { }, you see properties and values.

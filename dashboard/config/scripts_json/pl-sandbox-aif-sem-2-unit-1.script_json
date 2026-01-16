@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-09 17:55:24 UTC",
+    "serialized_at": "2026-01-15 21:38:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -38,7 +38,7 @@
       "name": "Introduction to WebApps",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "####**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested Time:** 60 minutes",
@@ -115,7 +115,7 @@
       "key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1",
       "position": 5,
       "properties": {
-        "progression_name": "Sitemaps and Wireframes"
+        "progression_name": "Wireframes and Sitemaps "
       },
       "seeding_key": {
         "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1",
@@ -742,34 +742,9 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "pl_sandbox_aif_2_U1-sitemaps-23"
-        ],
-        "progression": "Sitemaps and Wireframes"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-sitemaps-23"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
-      },
-      "level_keys": [
-        "pl_sandbox_aif_2_U1-sitemaps-23"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "pl_sandbox_aif_2_U1-wireframe-26"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes and Sitemaps "
       },
       "bonus": false,
       "seeding_key": {
@@ -786,15 +761,15 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
-      "activity_section_position": 3,
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl_sandbox_aif_2_sketchlab_panels"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes and Sitemaps "
       },
       "bonus": false,
       "seeding_key": {
@@ -811,15 +786,15 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 4,
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-webapp-27"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes and Sitemaps "
       },
       "bonus": false,
       "seeding_key": {
@@ -836,15 +811,15 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 5,
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-practice-28"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes and Sitemaps "
       },
       "bonus": false,
       "seeding_key": {
@@ -861,15 +836,15 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 6,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-howto-29"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes and Sitemaps "
       },
       "bonus": false,
       "seeding_key": {
@@ -886,6 +861,31 @@
       ]
     },
     {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23"
+        ],
+        "progression": "Wireframes and Sitemaps "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-1",
+        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
+      },
+      "level_keys": [
+        "pl_sandbox_aif_2_U1-sitemaps-23"
+      ]
+    },
+    {
       "chapter": 31,
       "position": 31,
       "activity_section_position": 7,
@@ -894,7 +894,7 @@
         "level_keys": [
           "pl_sandbox_aif_2_U1-finalproject-31"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes and Sitemaps "
       },
       "bonus": false,
       "seeding_key": {
@@ -1277,18 +1277,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_U1-sitemaps-23",
-        "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-sitemaps-23"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "pl_sandbox_aif_2_U1-wireframe-26",
         "script_level.level_keys": [
           "pl_sandbox_aif_2_U1-wireframe-26"
@@ -1340,6 +1328,18 @@
         "level.key": "pl-sandbox-aif2-U1-wireframe-howto-29",
         "script_level.level_keys": [
           "pl-sandbox-aif2-U1-wireframe-howto-29"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-1",
+        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif_2_U1-sitemaps-23",
+        "script_level.level_keys": [
+          "pl_sandbox_aif_2_U1-sitemaps-23"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
