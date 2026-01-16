@@ -36,9 +36,3 @@ export type SetFileTypeFunction = (
   type: ProjectFileType
 ) => void;
 export type RearrangeFilesFunction = (fileIds: FileId[]) => void;
-
-// Args passed to GenericPrompt dialogs in Lab2
-export type GenericPromptArgs = {
-  textField: string;
-  dropdown?: string;
-};

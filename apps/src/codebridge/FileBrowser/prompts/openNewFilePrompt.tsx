@@ -1,13 +1,11 @@
-import {
-  GenericPromptArgs,
-  NewFileFunction,
-} from '@codebridge/codebridgeContext/types';
+import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
 import {validateFileNameForModal} from '@codebridge/utils';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
+import {GenericPromptArgs} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenNewFilePromptArgsType = {

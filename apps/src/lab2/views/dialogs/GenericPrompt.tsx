@@ -1,7 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
-import {GenericPromptArgs} from '@codebridge/codebridgeContext/types';
 import debounce from 'lodash/debounce';
 import React, {
   ComponentProps,
@@ -21,6 +20,11 @@ import GenericDialog, {
 import moduleStyles from './generic-prompt.module.scss';
 
 const DEBOUNCE_TIME_OUT = 300;
+
+export type GenericPromptArgs = {
+  textField: string;
+  dropdown?: string;
+};
 
 export type GenericPromptProps = Pick<
   GenericDialogProps,
