@@ -27,6 +27,10 @@ import {
   MINI_LESSON_PROMPT,
   APCSP_DUMMY_CREATE,
   APCSP_DUMMY_EXAM,
+  AIF_PHILOSOPHY_MENU,
+  AIF_LOGISTICS_MENU,
+  AIF_TEACHER_PREP_MENU,
+  AIF_MATERIALS_MENU,
   SUGGESTED_PROMPTS_FOR_SELECTION,
 } from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -351,6 +355,117 @@ describe('AiDiffChat', () => {
           inputText: responseEventData.text,
           isPreset: true,
           presetChipText: 'Can I grade the Create Task',
+          context: {
+            type: AiDiffContext.LESSON,
+            lessonId: 2,
+          },
+        }),
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData,
+        PLATFORMS.STATSIG
+      );
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData2,
+        PLATFORMS.STATSIG
+      );
+    });
+  });
+
+  it('Selecting a 2-stage AIF suggested prompt gives response and adds second set of prompts to thread messages', async () => {
+    const overrideThreadMessages = [
+      {
+        role: Role.ASSISTANT,
+        chatMessageText:
+          SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
+        status: Status.OK,
+      },
+      [
+        ...DEFAULT_SUGGESTED_PROMPTS,
+        AIF_PHILOSOPHY_MENU,
+        AIF_LOGISTICS_MENU,
+        AIF_TEACHER_PREP_MENU,
+        AIF_MATERIALS_MENU,
+      ],
+    ];
+    renderDefault(0, overrideThreadMessages);
+
+    // Click a suggested prompt
+    const suggestedPromptsGroup = screen.getByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    expect(within(suggestedPromptsGroup).getAllByRole('button')).toHaveLength(
+      9
+    );
+    const prompt = screen.getByRole('button', {
+      name: 'Course Philosophy & Big Picture',
+    });
+    fireEvent.click(prompt);
+
+    // Bot message should show in the chat
+    const message = screen.getAllByLabelText(i18n.aiChatMessageBot())[1];
+    expect(message).toHaveTextContent(
+      "Let's explore the philosophy and structure of the AI Fundamentals course. Here are some ideas you can ask me, or type your question below"
+    );
+
+    // Second set of suggested prompts
+    // Count buttons across all groups after new prompts are added
+    const allGroups = screen.getAllByRole('group', {
+      name: 'Suggested Prompts',
+    });
+    const totalButtons = allGroups.flatMap(group =>
+      within(group).getAllByRole('button')
+    );
+    expect(totalButtons).toHaveLength(12);
+    screen.getByRole('button', {name: 'More about Pedagogy'});
+    screen.getByRole('button', {name: 'Which units should I teach?'});
+    screen.getByRole('button', {name: 'Explore Prerequisites'});
+
+    // Click a second step suggested prompt
+    const prompt2 = screen.getByRole('button', {
+      name: 'Explore Prerequisites',
+    });
+    fireEvent.click(prompt2);
+
+    const responseEventData = {
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
+      scriptName: 'test_lesson',
+      role: Role.USER,
+      isPreset: true,
+      text: 'Are there prerequisites for this course?',
+      threadId: defaultChatResponse.thread_id,
+      url: window.location.href,
+    };
+    const responseEventData2 = {
+      chatContext: {
+        type: AiDiffContext.LESSON,
+        lessonId: 2,
+      },
+      scriptName: 'test_lesson',
+      role: Role.ASSISTANT,
+      isPreset: true,
+      text: "Beep boop I'm a bot",
+      threadId: defaultChatResponse.thread_id,
+      url: window.location.href,
+    };
+
+    // Sends the api call then logs the suggested prompt and the bot message
+    await waitFor(() => {
+      expect(postStub).toHaveBeenCalledWith(
+        '/aidiff_threads',
+        JSON.stringify({
+          inputText: responseEventData.text,
+          isPreset: true,
+          presetChipText: 'Explore Prerequisites',
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,

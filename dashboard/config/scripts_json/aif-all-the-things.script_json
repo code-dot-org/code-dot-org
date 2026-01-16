@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-14 19:21:00 UTC",
+    "serialized_at": "2026-01-15 19:32:08 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -382,6 +382,18 @@
       "seeding_key": {
         "lesson_activity.key": "3fc81dc4-365a-4595-bb1f-ebc3d2059039",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "82a3910b-d8c0-4285-9f77-9308c43ae844",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -842,6 +854,37 @@
       "seeding_key": {
         "activity_section.key": "f1accd36-5c48-4b4b-9297-c8f4f7c09a45",
         "lesson_activity.key": "3fc81dc4-365a-4595-bb1f-ebc3d2059039"
+      }
+    },
+    {
+      "key": "a31540f9-bbaf-4afa-938c-2334a6ab8705",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a31540f9-bbaf-4afa-938c-2334a6ab8705",
+        "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844"
+      }
+    },
+    {
+      "key": "22bcae85-1848-4b12-963d-ada8e0cd0223",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson 4 Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "22bcae85-1848-4b12-963d-ada8e0cd0223",
+        "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844"
+      }
+    },
+    {
+      "key": "0d2d594c-408e-425e-99f7-9cb408eb6592",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0d2d594c-408e-425e-99f7-9cb408eb6592",
+        "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844"
       }
     }
   ],
@@ -1820,6 +1863,28 @@
       "level_keys": [
         "aif-s2-u5-l6-example1"
       ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 4 Prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-sem2-u5-l4-prototype"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "22bcae85-1848-4b12-963d-ada8e0cd0223"
+      },
+      "level_keys": [
+        "aif-sem2-u5-l4-prototype"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2289,6 +2354,18 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "8ccf04d3-1e11-4583-b993-f3c6a0ceadd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-sem2-u5-l4-prototype",
+        "script_level.level_keys": [
+          "aif-sem2-u5-l4-prototype"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "22bcae85-1848-4b12-963d-ada8e0cd0223"
       }
     }
   ],
