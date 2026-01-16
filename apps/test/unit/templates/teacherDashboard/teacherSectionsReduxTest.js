@@ -586,6 +586,7 @@ describe('teacherSectionsRedux', () => {
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
         isAssignedCSA: undefined,
+        isAssignedEssentialAiChat: undefined,
         sectionInstructors: [
           {
             id: 2,
