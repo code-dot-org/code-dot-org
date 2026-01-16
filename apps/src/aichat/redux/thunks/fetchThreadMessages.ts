@@ -27,6 +27,7 @@ import {
 } from '@cdo/apps/aiDifferentiation/predefinedPrompts';
 import {
   ChatPrompt,
+  ChatTextMessage,
   ChatThread,
   chatThreadMessagesValidator,
 } from '@cdo/apps/aiDifferentiation/types';
@@ -46,6 +47,7 @@ import {
   setInitialChatMessage,
   setInitialThreadPrompt,
   setSelectedPrompt,
+  setArtifactType,
 } from '../slice';
 
 interface FetchThreadMessagesParams {
@@ -163,6 +165,7 @@ export const fetchThreadMessages = createAsyncThunk(
       thunkAPI.dispatch(setThreadTitle(DEFAULT_THREAD_TITLE));
       thunkAPI.dispatch(setInitialChatMessage(threadType.initialMessage));
       thunkAPI.dispatch(setSelectedPrompt(null));
+      thunkAPI.dispatch(setArtifactType(undefined));
 
       if (initialThreadPrompt) {
         thunkAPI.dispatch(setInitialThreadPrompt(initialThreadPrompt));
@@ -206,6 +209,23 @@ export const fetchThreadMessages = createAsyncThunk(
         thunkAPI.dispatch(setThreadId(thread));
         thunkAPI.dispatch(setThreadTitle(response.title));
         thunkAPI.dispatch(setThreadKeyId(thread));
+        thunkAPI.dispatch(setArtifactType(undefined));
+        const thread_messages = response.messages || [];
+        if (thread_messages.length > 1) {
+          const last_msg = thread_messages[
+            thread_messages.length - 1
+          ] as ChatTextMessage;
+          const second_last_msg = thread_messages[
+            thread_messages.length - 2
+          ] as ChatTextMessage;
+          if (last_msg.isArtifactCandidate) {
+            thunkAPI.dispatch(setArtifactType(last_msg.artifactCandidateType));
+          } else {
+            thunkAPI.dispatch(
+              setArtifactType(second_last_msg.artifactCandidateType)
+            );
+          }
+        }
       });
     }
   }

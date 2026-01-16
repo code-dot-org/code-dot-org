@@ -2,6 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import React, {useState, useCallback} from 'react';
 
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {
@@ -34,10 +35,12 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     try {
       await dispatch(acceptAiTutorVersion({files, commitDescription}));
     } catch (error) {
-      console.error(
-        'Error saving and accepting AI Tutor version changes:',
-        error
-      );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error saving and accepting AI Tutor version changes:',
+          error as Error
+        );
     } finally {
       setIsSaving(false);
     }
