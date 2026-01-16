@@ -1,6 +1,3 @@
-// Auto-import SASS generated CSS
-import './index.css';
-
 import ActionDropdown, {
   ActionDropdownProps,
 } from './actionDropdown/ActionDropdown';
@@ -13,13 +10,13 @@ export {dropdownColors} from '@/common/constants';
 
 export {
   ActionDropdown,
-  ActionDropdownProps,
+  type ActionDropdownProps,
   CheckboxDropdown,
-  CheckboxDropdownProps,
+  type CheckboxDropdownProps,
   IconDropdown,
-  IconDropdownProps,
+  type IconDropdownProps,
   SimpleDropdown,
-  SimpleDropdownProps,
+  type SimpleDropdownProps,
   CustomDropdown,
-  CustomDropdownProps,
+  type CustomDropdownProps,
 };
