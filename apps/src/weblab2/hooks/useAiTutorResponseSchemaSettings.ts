@@ -13,7 +13,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
-  acceptRejectJsonSchema,
+  aiTutorResponseJsonSchema,
   formatAcceptRejectResponse,
   formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
@@ -32,7 +32,7 @@ export const useAiTutorResponseSchemaSettings = (
 
   return useMemo(() => {
     return {
-      jsonSchema: acceptRejectJsonSchema,
+      jsonSchema: aiTutorResponseJsonSchema,
       responseCallback: (response: string) => {
         const jsonResponse = JSON.parse(response);
         console.log('🤖: AI Tutor response (in jsonSchema callback):', {
