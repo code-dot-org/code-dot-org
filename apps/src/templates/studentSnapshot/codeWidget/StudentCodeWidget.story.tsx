@@ -27,14 +27,6 @@ const meta: Meta<typeof StudentCodeWidget> = {
       control: 'object',
       description: 'Student code files (Record<string, string>)',
     },
-    gridWidth: {
-      control: {type: 'number', min: 1, max: 4},
-      description: 'Width in grid columns',
-    },
-    gridHeight: {
-      control: {type: 'number', min: 1, max: 4},
-      description: 'Height in grid rows',
-    },
   },
 };
 

@@ -1,4 +1,4 @@
-import {useMemo} from 'react';
+import React, {useMemo} from 'react';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
@@ -38,7 +38,7 @@ const StudentCodeWidget = ({
       root: {
         id: 'root',
         name: 'root',
-        fileIds: fileIds,
+        parentId: '',
       },
     };
 
