@@ -6,85 +6,6 @@ import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
-  return {
-    type: 'object',
-    properties: {
-      tutorMode: {
-        type: 'string',
-        enum: [
-          'Build HTML',
-          'Build CSS',
-          'Build JavaScript',
-          'Ask',
-          'Hint',
-          'Debug',
-          'Explain Code',
-          'Example',
-          'Pseudocode',
-          'Documentation',
-          'Test Case',
-          'Refusal JavaScript Snippet',
-          'Refusal',
-        ],
-      },
-      goal: {
-        type: 'string',
-        description: 'What we are achieving this turn, limit to 1 line of text',
-      },
-      assumptions: {
-        type: 'string',
-        description:
-          'Explicit design choices you made from the wireframe. Format as bullets.',
-      },
-      code: {
-        type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            sourceCode: {
-              type: 'string',
-            },
-            filename: {type: 'string'},
-          },
-          required: ['sourceCode', 'filename'],
-          additionalProperties: false,
-        },
-        description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. The student will need to copy and paste this code into their project.',
-      },
-      explanation: {
-        type: 'string',
-        description:
-          "1 paragraph or less explanation of the code or plain-text answer to the student's question. Use markdown.",
-      },
-      nextSteps: {
-        type: 'string',
-        description:
-          '1-2 concrete action(s) for student to achieve goal. Format as markdown bullets',
-      },
-      questions: {
-        type: 'string',
-        description:
-          'short list to confirm ambiguous details. Format as markdown bullets.',
-      },
-    },
-    // We return tutorMode and goal but do not show them to the student.
-    // These are used to help guide the AI's response.
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
-    propertyOrdering: [
-      'tutorMode',
-      'goal',
-      'assumptions',
-      'code',
-      'explanation',
-      'nextSteps',
-      'questions',
-    ],
-    additionalProperties: false,
-  };
-};
-
 const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
   return {
     type: 'object',
@@ -167,15 +88,6 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
   };
 };
 
-export const copyCodeJsonSchema: JsonObjectSchema = {
-  type: 'object',
-  properties: {
-    answer: getAnswerJsonSchemaCopyPaste(),
-  },
-  required: ['answer'],
-  additionalProperties: false,
-};
-
 export const acceptRejectJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
@@ -193,7 +105,8 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
+// This function is used when the AI Tutor response's tutorMode is not 'Build HTML', 'Build CSS', nor 'Build JavaScript'.
+// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';

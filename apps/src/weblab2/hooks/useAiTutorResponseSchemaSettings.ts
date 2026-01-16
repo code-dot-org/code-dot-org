@@ -10,12 +10,10 @@ import {
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   acceptRejectJsonSchema,
-  copyCodeJsonSchema,
   formatAcceptRejectResponse,
   formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
@@ -33,87 +31,68 @@ export const useAiTutorResponseSchemaSettings = (
   const dispatch = useAppDispatch();
 
   return useMemo(() => {
-    if (
-      experiments.isEnabledAllowingQueryString(
-        experiments.WEBLAB2_ACCEPT_REJECT
-      )
-    ) {
-      return {
-        jsonSchema: acceptRejectJsonSchema,
-        responseCallback: (response: string) => {
-          const jsonResponse = JSON.parse(response);
-          console.log('🤖: AI Tutor response (in jsonSchema callback):', {
-            jsonResponse,
-          });
-          const formattedResponse = formatAcceptRejectResponse(
-            jsonResponse.answer
-          );
-          const answerType = formattedResponse.answerType;
-          if (
-            !['Build HTML', 'Build CSS', 'Build JavaScript'].includes(
-              answerType
-            )
-          ) {
-            return formatCopyPasteResponse(jsonResponse.answer);
-          }
-          sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
-            answerType,
-          });
-          dispatch(setViewingAiTutorVersion(true));
-          // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
-          // Workspace will be read-only until user clicks "accept" or "reject".
-
-          // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
-          // If user clicks "accept":
-          // - force save a version for projectSourceBeforeAiTutorVersion. Check with product/design about this. TODO.
-          // - force save an AI version for AI tutor version with description 'AI Save'. TODO.
-          // - workspace is now editable.
-          // - sources are updated with the newer updated AI files, but AI flags removed.
-          const aiTutorVersionFiles: ProjectFile[] = [];
-          const mergedSourceVersion = getMergedAiTutorCodeWithSource(
-            formattedResponse.code,
-            source as MultiFileSource,
-            aiTutorVersionFiles
-          ) as MultiFileSource;
-          // If no AI-updated files, return explanation.
-          if (aiTutorVersionFiles.length === 0) {
-            return formattedResponse.explanation;
-          }
-          dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
-          dispatch(setProjectSourceBeforeAiTutorVersion(source));
-          dispatch(setSource(mergedSourceVersion));
-
-          // Set the preview path to the first AI-updated HTML file, if it exists.
-          const firstHtmlFile = aiTutorVersionFiles.find(file => {
-            return file.name.endsWith('.html');
-          });
-          if (firstHtmlFile) {
-            const folderPath = getFolderPath(
-              firstHtmlFile.folderId,
-              mergedSourceVersion.folders
-            ).substring(1);
-            const filePath =
-              folderPath === ''
-                ? firstHtmlFile.name
-                : folderPath + '/' + firstHtmlFile.name;
-            dispatch(
-              setAiFilePathToPreview({path: filePath, timestamp: Date.now()})
-            );
-          }
-          return formattedResponse.explanation;
-        },
-      };
-    } else {
-      return {
-        jsonSchema: copyCodeJsonSchema,
-        responseCallback: (response: string) => {
-          const jsonResponse = JSON.parse(response);
-          console.log('🤖: Tutor response (in jsonSchema callback):', {
-            jsonResponse,
-          });
+    return {
+      jsonSchema: acceptRejectJsonSchema,
+      responseCallback: (response: string) => {
+        const jsonResponse = JSON.parse(response);
+        console.log('🤖: AI Tutor response (in jsonSchema callback):', {
+          jsonResponse,
+        });
+        const formattedResponse = formatAcceptRejectResponse(
+          jsonResponse.answer
+        );
+        const answerType = formattedResponse.answerType;
+        if (
+          !['Build HTML', 'Build CSS', 'Build JavaScript'].includes(answerType)
+        ) {
           return formatCopyPasteResponse(jsonResponse.answer);
-        },
-      };
-    }
+        }
+        sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
+          answerType,
+        });
+        dispatch(setViewingAiTutorVersion(true));
+        // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
+        // Workspace will be read-only until user clicks "accept" or "reject".
+
+        // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
+        // If user clicks "accept":
+        // - force save a version for projectSourceBeforeAiTutorVersion. Check with product/design about this. TODO.
+        // - force save an AI version for AI tutor version with description 'AI Save'. TODO.
+        // - workspace is now editable.
+        // - sources are updated with the newer updated AI files, but AI flags removed.
+        const aiTutorVersionFiles: ProjectFile[] = [];
+        const mergedSourceVersion = getMergedAiTutorCodeWithSource(
+          formattedResponse.code,
+          source as MultiFileSource,
+          aiTutorVersionFiles
+        ) as MultiFileSource;
+        // If no AI-updated files, return explanation.
+        if (aiTutorVersionFiles.length === 0) {
+          return formattedResponse.explanation;
+        }
+        dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
+        dispatch(setProjectSourceBeforeAiTutorVersion(source));
+        dispatch(setSource(mergedSourceVersion));
+
+        // Set the preview path to the first AI-updated HTML file, if it exists.
+        const firstHtmlFile = aiTutorVersionFiles.find(file => {
+          return file.name.endsWith('.html');
+        });
+        if (firstHtmlFile) {
+          const folderPath = getFolderPath(
+            firstHtmlFile.folderId,
+            mergedSourceVersion.folders
+          ).substring(1);
+          const filePath =
+            folderPath === ''
+              ? firstHtmlFile.name
+              : folderPath + '/' + firstHtmlFile.name;
+          dispatch(
+            setAiFilePathToPreview({path: filePath, timestamp: Date.now()})
+          );
+        }
+        return formattedResponse.explanation;
+      },
+    };
   }, [dispatch, source]);
 };
