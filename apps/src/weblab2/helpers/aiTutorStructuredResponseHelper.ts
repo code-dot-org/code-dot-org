@@ -88,6 +88,9 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
   };
 };
 
+// This list is used to determine if the AI Tutor response should trigger the accept-reject flow
+// for which we format the model response with formatAcceptRejectResponse. Otherwise, we format
+// the model response with formatCopyPasteResponse.
 export const acceptRejectAnswerTypes = [
   'Build HTML',
   'Build CSS',
