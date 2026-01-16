@@ -1,4 +1,9 @@
 import {BlockTypes} from '../blockTypes';
+import {
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE,
+  DEFAULT_EFFECT_VALUE,
+} from '../constants';
 
 const map = {
   Sounds: [
@@ -17,9 +22,30 @@ const map = {
     BlockTypes.REPEAT_SIMPLE2,
   ],
   Effects: [
-    BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-    BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-    BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+    {
+      kind: 'block',
+      type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+      fields: {
+        [FIELD_EFFECTS_NAME]: 'volume',
+        [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+      },
+    },
+    {
+      kind: 'block',
+      type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+      fields: {
+        [FIELD_EFFECTS_NAME]: 'filter',
+        [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+      },
+    },
+    {
+      kind: 'block',
+      type: BlockTypes.SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+      fields: {
+        [FIELD_EFFECTS_NAME]: 'delay',
+        [FIELD_EFFECTS_VALUE]: DEFAULT_EFFECT_VALUE,
+      },
+    },
   ],
   Functions: [],
 };
