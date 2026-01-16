@@ -4,7 +4,7 @@ import React, {useMemo} from 'react';
 import Editor from './Editor';
 import FileTabs from './FileTabs';
 
-import styles from './studentCodeWidget.module.scss';
+import styles from './codeWidget.module.scss';
 
 interface WorkspaceProps {
   files: ProjectFile[];
