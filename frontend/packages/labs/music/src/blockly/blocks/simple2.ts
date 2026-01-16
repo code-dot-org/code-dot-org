@@ -11,7 +11,6 @@ import {
   DOCS_BASE_URL,
   FIELD_CHORD_NAME,
   FIELD_EFFECT_NAME_OPTIONS,
-  FIELD_EFFECTS_EXTENSION,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
   FIELD_PATTERN_NAME,
@@ -23,6 +22,7 @@ import {
   TRIGGER_FIELD,
 } from '../constants';
 import {nextConnectionMutator} from '../extensions/nextConnectionMutator';
+import {fieldEffectsExtension} from '../extensions/fieldEffectsExtension';
 import {fieldSoundsValidatorExtension} from '../extensions/fieldSoundsValidatorExtension';
 import {fieldPatternsValidatorExtension} from '../extensions/fieldPatternsValidatorExtension';
 import {
@@ -144,6 +144,7 @@ const playPatternAiAtCurrentLocationSimple2 = defineBlock({
   args0: [
     {
       type: 'field_image',
+      // TODO: use imported asset somehow
       src: '/blockly/media/ai-bot-mini-2.svg',
       width: 24,
       height: 24,
@@ -247,7 +248,7 @@ const setEffectAtCurrentLocationSimple2 = defineBlock({
   style: 'lab_blocks',
   tooltip: 'set effect',
   helpUrl: DOCS_BASE_URL + 'set_effect',
-  extensions: [FIELD_EFFECTS_EXTENSION],
+  extensions: [fieldEffectsExtension],
   generator: {
     javascript(block) {
       const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
