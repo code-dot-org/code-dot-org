@@ -296,14 +296,13 @@ $ai-rubric-cyan-hover: #37e1db;
 .help {
   position: absolute;
   font-size: 14px;
-  background-color: white;
-  color: black;
   padding: 14px;
   border-radius: 4px;
   max-width: 300px;
   white-space: pre-line;
   animation: slidein 0.5s;
   z-index: 1;
+  background-color: var(--neutral-gray-5);
 
   &DrawDrums {
     left: 370px;
@@ -336,6 +335,12 @@ $ai-rubric-cyan-hover: #37e1db;
     left: 370px;
     top: 80px;
   }
+
+  p {
+    color: var(--neutral-gray-99);
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .arrowContainer {
@@ -367,6 +372,14 @@ $ai-rubric-cyan-hover: #37e1db;
 .arrow {
   position: absolute;
   width: 32px;
+
+  img {
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    max-width: 100%;
+    border: 0;
+  }
 
   &Left {
     transform: rotate(270deg);

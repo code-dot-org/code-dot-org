@@ -154,7 +154,7 @@ export class FieldPatternAi extends Blockly.Field {
 
     this.root = createRoot(this.newDiv);
     this.root.render(
-      <div data-theme={siteTheme}>
+      <div style={{height: '100%'}} data-theme={siteTheme}>
         <PatternAiPanel
           initValue={this.getValue()}
           onChange={value => {

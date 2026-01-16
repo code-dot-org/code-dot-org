@@ -7,6 +7,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider from '@code-dot-org/component-library/slider';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 
 import imgAiBot0 from '../../assets/ai/ai-bot-0.png';
 import imgAiBot1 from '../../assets/ai/ai-bot-1.png';
@@ -95,7 +96,7 @@ const Help: FunctionComponent<HelpProps> = ({
       {userCompletedTask === 'none' && clickDrumsText && (
         <div className={styles.helpContainer}>
           <div className={classNames(styles.help, styles.helpDrawDrums)}>
-            {clickDrumsText}
+            <BodyFourText>{clickDrumsText}</BodyFourText>
           </div>
           <div
             className={classNames(
@@ -145,9 +146,11 @@ const Help: FunctionComponent<HelpProps> = ({
                 : styles.helpGenerate,
             )}
           >
-            {userCompletedTask === 'changedTemperature'
-              ? 'Click this button and A.I. will generate more drums based on this temperature.'
-              : 'Click this button and A.I. will generate more drums based on what you started.'}
+            <BodyFourText>
+              {userCompletedTask === 'changedTemperature'
+                ? 'Click this button and A.I. will generate more drums based on this temperature.'
+                : 'Click this button and A.I. will generate more drums based on what you started.'}
+            </BodyFourText>
           </div>
           <div
             className={classNames(
@@ -170,7 +173,9 @@ const Help: FunctionComponent<HelpProps> = ({
         generatingScanStep > numberScanStepsBeforeHelpText && (
           <div className={styles.helpContainer}>
             <div className={classNames(styles.help, styles.helpGenerating)}>
-              A.I. is generating more drums based on what you started.
+              <BodyFourText>
+                A.I. is generating more drums based on what you started.
+              </BodyFourText>
             </div>
             <div className={styles.generatingSpinner}>
               <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
@@ -324,26 +329,6 @@ const PatternAiPanel: FunctionComponent<PatternAiPanelProps> = ({
     [currentInstrument, currentPreviewTick],
   );
 
-  const toggleEvent = useCallback(
-    (tick: number, note: number) => {
-      const index = currentEvents.findIndex(
-        event => event.note === note && event.tick === tick,
-      );
-      if (index !== -1) {
-        // If found, delete.
-        currentEvents.splice(index, 1);
-      } else {
-        // Not found, so add.
-        currentEvents.push({tick, note});
-        previewNote(note);
-      }
-
-      currentValue.current.events = currentEvents;
-      onChange(currentValue.current);
-    },
-    [onChange, currentEvents, previewNote],
-  );
-
   const hasEvent = (note: number, tick: number) => {
     const element = currentEvents.find(
       event => event.note === note && event.tick === tick,
@@ -447,6 +432,34 @@ const PatternAiPanel: FunctionComponent<PatternAiPanelProps> = ({
     ],
   );
 
+  const toggleEvent = useCallback(
+    (tick: number, note: number) => {
+      const index = currentEvents.findIndex(
+        event => event.note === note && event.tick === tick,
+      );
+      if (index !== -1) {
+        // If found, delete.
+        currentEvents.splice(index, 1);
+      } else {
+        // Not found, so add.
+        currentEvents.push({tick, note});
+        previewNote(note);
+      }
+
+      currentValue.current.events = [...currentEvents];
+      setCurrentEvents(currentValue.current.events);
+      updateGenerateState();
+      onChange(currentValue.current);
+    },
+    [
+      onChange,
+      currentEvents,
+      previewNote,
+      setCurrentEvents,
+      updateGenerateState,
+    ],
+  );
+
   const stopPreview = useCallback(() => {
     MusicRegistry.player.cancelPreviews();
     setCurrentPreviewTick(0);
@@ -503,7 +516,7 @@ const PatternAiPanel: FunctionComponent<PatternAiPanelProps> = ({
     currentValue.current.events = currentValue.current.events.filter(
       event => event.tick <= PATTERN_AI_NUM_SEED_EVENTS,
     );
-    setCurrentEvents(currentValue.current.events);
+    setCurrentEvents([...currentValue.current.events]);
     onChange(currentValue.current);
 
     const startTime = Date.now();
@@ -633,12 +646,14 @@ const PatternAiPanel: FunctionComponent<PatternAiPanelProps> = ({
                   return (
                     <div className={styles.row} key={note}>
                       <div className={styles.nameContainer}>
-                        <span
-                          className={styles.name}
-                          onClick={() => previewNote(note || index)}
-                        >
-                          {name}
-                        </span>
+                        <BodyFourText>
+                          <span
+                            className={styles.name}
+                            onClick={() => previewNote(note || index)}
+                          >
+                            {name}
+                          </span>
+                        </BodyFourText>
                       </div>
                     </div>
                   );
