@@ -174,6 +174,10 @@ export class FieldSounds extends Blockly.Field {
       return;
     }
 
+    if (this.root) {
+      return;
+    }
+
     const library = MusicLibrary.getInstance();
     if (!library) {
       return;
@@ -191,7 +195,8 @@ export class FieldSounds extends Blockly.Field {
       | undefined;
 
     const siteTheme =
-      workspace?.injectionDiv
+      workspace
+        ?.getInjectionDiv()
         ?.closest('[data-theme]')
         ?.getAttribute('data-theme') || 'Dark';
 

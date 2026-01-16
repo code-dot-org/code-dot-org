@@ -137,14 +137,31 @@ export class FieldPatternAi extends Blockly.Field {
       return;
     }
 
+    if (this.root) {
+      return;
+    }
+
+    // Determine the current site theme
+    const workspace = this.sourceBlock_?.workspace as
+      | Blockly.WorkspaceSvg
+      | undefined;
+
+    const siteTheme =
+      workspace
+        ?.getInjectionDiv()
+        ?.closest('[data-theme]')
+        ?.getAttribute('data-theme') || 'Dark';
+
     this.root = createRoot(this.newDiv);
     this.root.render(
-      <PatternAiPanel
-        initValue={this.getValue()}
-        onChange={value => {
-          this.setValue(value);
-        }}
-      />,
+      <div data-theme={siteTheme}>
+        <PatternAiPanel
+          initValue={this.getValue()}
+          onChange={value => {
+            this.setValue(value);
+          }}
+        />
+      </div>,
     );
   }
 

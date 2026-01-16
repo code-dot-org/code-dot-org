@@ -1,5 +1,4 @@
 import * as Blockly from 'blockly/core';
-import * as React from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
@@ -7,7 +6,6 @@ import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
 import {experiments} from '@code-dot-org/metrics';
 
 import ChordPanel from '../../components/ChordPanel';
-import type {ChordPanelProps} from '../../components/ChordPanel';
 import type {ChordEventValue} from '../../player/interfaces/ChordEvent';
 import type {ChordGraphNote} from '../../utils/Chords';
 import {generateGraphDataFromChord} from '../../utils/Chords';
@@ -191,12 +189,26 @@ export class FieldChord extends Blockly.Field {
       return;
     }
 
+    if (this.root) {
+      return;
+    }
+
+    // Determine the current site theme
+    const workspace = this.sourceBlock_?.workspace as
+      | Blockly.WorkspaceSvg
+      | undefined;
+
+    const siteTheme =
+      workspace
+        ?.getInjectionDiv()
+        ?.closest('[data-theme]')
+        ?.getAttribute('data-theme') || 'Dark';
+
     this.root = createRoot(this.newDiv);
     this.root.render(
-      React.createElement<ChordPanelProps>(ChordPanel, {
-        initValue: this.getValue(),
-        onChange: this.onValueChange,
-      }),
+      <div data-theme={siteTheme}>
+        <ChordPanel initValue={this.getValue()} onChange={this.onValueChange} />
+      </div>,
     );
   }
 
