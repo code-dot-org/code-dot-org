@@ -25,6 +25,5 @@
       / TODO: Remove this special case when ClassLink support is ready
       - next if provider == :classlink && !DCDO.get('classlink_lms_enabled', false)
       = button_to omniauth_authorize_path(resource_name, provider), id: "#{provider}-sign-in", class: "oauth-sign-in with-#{provider}" do
-        - file_type = provider == :classlink ? 'png' : 'svg'
-        = image_tag("oauth/#{provider}.#{file_type}")
+        = image_tag("oauth/#{provider}.svg")
         = t('auth.continue_with', provider: t("auth.#{provider}"))
