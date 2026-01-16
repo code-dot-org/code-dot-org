@@ -6,6 +6,10 @@ import FocusLock from 'react-focus-lock';
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {
+  BodyThreeText,
+  BodyFourText,
+} from '@code-dot-org/component-library/typography';
 
 import {getBaseAssetUrl} from '../../appConfig';
 import MusicLibrary from '../../player/MusicLibrary';
@@ -96,9 +100,13 @@ const FolderPanelRow: FunctionComponent<FolderPanelRowProps> = ({
         )}
       </div>
       <div className={styles.folderRowMiddle}>
-        <div className={styles.folderRowMiddleName}>{folder.name}</div>
+        <BodyThreeText className={styles.folderRowMiddleName}>
+          {folder.name}
+        </BodyThreeText>
         {folder.artist && (
-          <div className={styles.folderRowMiddleSubTitle}>{folder.artist}</div>
+          <BodyFourText className={styles.folderRowMiddleSubTitle}>
+            {folder.artist}
+          </BodyFourText>
         )}
       </div>
       <div className={styles.folderRowRight}>
@@ -195,14 +203,14 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
           )}
           iconStyle="regular"
         />
-        <div
+        <BodyFourText
           className={classNames(
             styles.name,
             sound.type === 'vocal' && styles.nameVocal,
           )}
         >
           {sound.name}
-        </div>
+        </BodyFourText>
       </div>
       {showingSoundsOnly && (
         <div className={styles.soundRowMiddle}>
@@ -210,7 +218,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         </div>
       )}
       <div className={styles.soundRowRight}>
-        <div
+        <BodyFourText
           className={classNames(
             styles.length,
             styles.lengthNoMarginRight,
@@ -218,7 +226,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
           )}
         >
           {getLengthRepresentation(sound.length)}
-        </div>
+        </BodyFourText>
       </div>
     </div>
   );

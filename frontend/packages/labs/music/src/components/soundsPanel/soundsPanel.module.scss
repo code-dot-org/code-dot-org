@@ -74,10 +74,14 @@
       float: left;
 
       &Name {
+        margin: 0;
+        padding: 0;
         font-size: 16px;
       }
 
       &SubTitle {
+        margin: 0;
+        padding: 0;
         font-size: 11px;
         line-height: 2em;
       }
@@ -87,6 +91,14 @@
       float: right;
       width: 43px;
       margin-right: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      vertical-align: middle;
+      border: 0;
     }
   }
 
@@ -130,6 +142,8 @@
       }
 
       .name {
+        margin: 0;
+        padding: 0;
         font-size: 14px;
         white-space: nowrap;
         overflow: hidden;
@@ -160,6 +174,8 @@
     display: inline-block;
     font-size: 13px;
     width: 15px;
+    margin: 0;
+    padding: 0;
     margin-right: 10px;
     color: var(--neutral-gray-50);
     text-align: right;

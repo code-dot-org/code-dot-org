@@ -185,38 +185,50 @@ export class FieldSounds extends Blockly.Field {
     const sortUnrestrictedPacksByType =
       MusicRegistry.sortUnrestrictedPacksByType;
 
+    // Determine the current site theme
+    const workspace = this.sourceBlock_?.workspace as
+      | Blockly.WorkspaceSvg
+      | undefined;
+
+    const siteTheme =
+      workspace?.injectionDiv
+        ?.closest('[data-theme]')
+        ?.getAttribute('data-theme') || 'Dark';
+
     this.root = createRoot(this.newDiv);
     this.root.render(
-      <SoundsPanel
-        library={library}
-        currentValue={this.getValue()}
-        playingPreview={this.playingPreview || ''}
-        showSoundFilters={MusicRegistry.showSoundFilters}
-        defaultMode={defaultMode}
-        sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
-        onClose={() => {
-          this.dropdownDispose_();
-          this.hide_();
-        }}
-        onPreview={(value: string) => {
-          this.playingPreview = value;
-          this.renderContent();
-
-          MusicRegistry.player.previewSound(value, () => {
-            // If the user starts another preview while one is
-            // already playing, it will have started playing before
-            // we get this stop event.  We want to wait until the
-            // new preview stops before we reactivate the button, and
-            // so we don't clear out this.playingPreview unless the
-            // stop event coming in is for the actively playing preview.
-            if (this.playingPreview === value) {
-              this.playingPreview = null;
-            }
+      <div data-theme={siteTheme}>
+        <SoundsPanel
+          library={library}
+          currentValue={this.getValue()}
+          playingPreview={this.playingPreview || ''}
+          showSoundFilters={MusicRegistry.showSoundFilters}
+          defaultMode={defaultMode}
+          sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
+          onClose={() => {
+            this.dropdownDispose_();
+            this.hide_();
+          }}
+          onPreview={(value: string) => {
+            this.playingPreview = value;
             this.renderContent();
-          });
-        }}
-        onSelect={(value: string) => this.setValue(value)}
-      />,
+
+            MusicRegistry.player.previewSound(value, () => {
+              // If the user starts another preview while one is
+              // already playing, it will have started playing before
+              // we get this stop event.  We want to wait until the
+              // new preview stops before we reactivate the button, and
+              // so we don't clear out this.playingPreview unless the
+              // stop event coming in is for the actively playing preview.
+              if (this.playingPreview === value) {
+                this.playingPreview = null;
+              }
+              this.renderContent();
+            });
+          }}
+          onSelect={(value: string) => this.setValue(value)}
+        />
+      </div>,
     );
   }
 
@@ -254,6 +266,9 @@ export class FieldSounds extends Blockly.Field {
         height: 20,
       },
     );
+
+    this.textElement.classList.add('blocklyText');
+    this.textElement.style.fontSize = '13px';
 
     const soundType = MusicLibrary.getInstance()?.getSoundForId(
       this.getValue(),
