@@ -1,6 +1,8 @@
 module AiSystemPrompts::StudentSnapshotPromptHelper
   include LevelsHelper
 
+  ALPHABET = ('a'..'z').to_a
+
   LEVEL_TYPE_PROMPTS =
     {
       "LevelGroup" => "Level Group: students interact with a group of levels that all display on a single page",
@@ -69,15 +71,33 @@ Levels: [{
 }]"
   end
 
+  def self.get_level_number(level, script_level, parent_script_level = nil, parent_level_display_text = nil)
+    if parent_script_level
+      sublevel_index = parent_script_level.sublevel_position(level)
+      index_letter = ALPHABET[sublevel_index - 1] unless sublevel_index.nil?
+      parent_level_display_text.to_s + index_letter.to_s
+    else
+      if script_level&.respond_to?(:kind) && script_level.kind == "unplugged"
+        nil
+      else
+        script_level&.level_display_text
+      end
+    end
+  end
+
   # Get an abridged version of level info for prompt
   # This is used for non-assessment levels
-  def self.get_brief_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
+  def self.get_brief_level_prompt_info(level, student_id, unit_id, section_id, teacher_id, parent_script_level = nil, parent_level_display_text = nil)
     return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+    script_level = level.script_levels.first
+
+    level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
+      "LevelId (remove later)" => level.id,
+      'Level Number': level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -95,8 +115,11 @@ Levels: [{
 
     level_data["Time spent"] = "#{user_level.time_spent} seconds" if user_level&.time_spent && user_level.time_spent > 0
 
-    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)} : []
+    sublevel_data = []
+    if script_level&.bubble_choice?
+      sublevels = level.sublevels
+      sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
+    end
 
     rubric_data = level.rubrics.present? ? {learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)} : {}
 
@@ -113,20 +136,27 @@ Levels: [{
 
   # Get a detailed version of level info for prompt
   # This is used for assessment levels
-  def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
+  def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id, parent_script_level = nil, parent_level_display_text = nil)
     return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+    script_level = level.script_levels.first
+
+    level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      "Assessment Level - weight this more heavily towards student mastery" => "",
-      "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
+      "Assessment Level" => "weight this more heavily towards student mastery",
+      "LevelId (remove later)" => level.id,
+      'Level Number': level_number,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
 
-    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)} : []
+    sublevel_data = []
+    if script_level&.bubble_choice?
+      sublevels = level.sublevels
+      sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
+    end
 
     section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
 
@@ -330,7 +360,7 @@ Levels: [{
 
     if level_data[:sublevels]&.any?
       sublevel_strings = level_data[:sublevels].map {|sublevel| format_level_info(sublevel, indentation + '  ')}
-      result_parts << "#{indentation}Sublevels (A student should pick at least one to complete):\n#{indentation}[{\n#{sublevel_strings.join("\n#{indentation}},{\n")}}]"
+      result_parts << "#{indentation}Sublevels (A student picks one sublevel to complete and can optionally do more, but only one sublevel is required for mastery):\n#{indentation}[{\n#{sublevel_strings.join("\n#{indentation}},{\n")}}]"
     end
 
     result_parts << section_stats_parts.join("\n") if section_stats_parts.any?
