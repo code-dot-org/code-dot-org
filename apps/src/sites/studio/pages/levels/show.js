@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -15,6 +14,7 @@ import instructions, {
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
@@ -40,7 +40,7 @@ function initPage() {
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
-    ReactDOM.render(
+    createReactRoot(
       <ScriptLevelRedirectDialog
         redirectUrl={config.redirect_script_url}
         scriptName={config.script_name}
@@ -69,7 +69,7 @@ function initPage() {
       'ai-differentiation-fab-mount-point'
     );
     if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
-      ReactDOM.render(
+      createReactRoot(
         <Provider store={getStore()}>
           <AiDiffFloatingActionButton
             context={differentiationContext}
@@ -113,7 +113,7 @@ function initPage() {
           PLATFORMS.BOTH
         );
       }
-      ReactDOM.render(
+      createReactRoot(
         <Provider store={getStore()}>
           <RubricFloatingActionButton
             rubric={rubric}

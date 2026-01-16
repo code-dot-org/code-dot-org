@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import EditPanels from '@cdo/apps/lab2/levelEditors/panels/EditPanels';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -10,7 +10,7 @@ $(document).ready(function () {
   const levelName = document.querySelector('script[data-levelname]')?.dataset
     ?.levelname;
 
-  ReactDOM.render(
+  createReactRoot(
     <EditPanels initialPanels={initialPanels} levelName={levelName} />,
     document.getElementById('panels-editor')
   );

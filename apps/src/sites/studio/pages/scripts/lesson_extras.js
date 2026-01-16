@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {getStore} from '@cdo/apps/code-studio/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 const script = document.querySelector('script[data-extras]');
 const config = JSON.parse(script.dataset.extras);
@@ -20,7 +20,7 @@ config.bonusLevels = config.bonusLevels.map(bonus => {
   return bonus;
 });
 
-ReactDOM.render(
+createReactRoot(
   <Provider store={store}>
     <LessonExtras
       lessonNumber={config.lessonNumber}

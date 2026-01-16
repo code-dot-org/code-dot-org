@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -8,6 +7,7 @@ import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
 import ProgrammingExpressionOverview from '@cdo/apps/templates/codeDocs/ProgrammingExpressionOverview';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -33,7 +33,7 @@ $(document).ready(() => {
 
   prepareBlocklyForEmbedding(customBlocksConfig, programmingEnvironmentName);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <>
         <PageContainer

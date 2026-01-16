@@ -1,6 +1,5 @@
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -8,6 +7,7 @@ import {TestResults} from '@cdo/apps/constants';
 import localization from '@cdo/apps/localization';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {getStore} from '../redux';
 
@@ -109,7 +109,7 @@ Fish.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <FishView onMount={onMount} />
     </Provider>,

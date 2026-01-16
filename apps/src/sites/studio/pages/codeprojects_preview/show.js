@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import InnerHTMLPreview from '@cdo/apps/codebridge/FilePreview/InnerHTMLPreview';
 import InnerHTMLPreview2 from '@cdo/apps/codebridge/FilePreview/InnerHTMLPreview2';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 window.React = require('react');
@@ -13,7 +13,7 @@ const useLegacyPreview = experiments.isEnabledAllowingQueryString(
 );
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
+  createReactRoot(
     useLegacyPreview ? <InnerHTMLPreview /> : <InnerHTMLPreview2 />,
     document.getElementById('codeprojects-preview-container')
   );

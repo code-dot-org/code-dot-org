@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LinkAccountPage from '@cdo/apps/templates/gates/LinkAccountPage';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 document.addEventListener('DOMContentLoaded', function () {
-  ReactDOM.render(
+  createReactRoot(
     <LinkAccountPage />,
     document.getElementById('logged-out-page')
   );

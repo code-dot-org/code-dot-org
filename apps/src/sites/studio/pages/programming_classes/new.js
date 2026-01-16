@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import NewProgrammingClassForm from '@cdo/apps/levelbuilder/code-docs-editor/NewProgrammingClassForm';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const programmingEnvironmentsForSelect = getScriptData(
     'programmingEnvironmentsForSelect'
   );
-  ReactDOM.render(
+  createReactRoot(
     <NewProgrammingClassForm
       programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
     />,

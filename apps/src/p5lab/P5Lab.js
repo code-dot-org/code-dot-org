@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {getCode} from '@cdo/apps/blockly/utils';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
@@ -11,6 +10,7 @@ import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {changeInterfaceMode, viewAnimationJson} from './actions';
@@ -498,7 +498,7 @@ export default class P5Lab {
     const loader = this.studioApp_
       .loadLibraries(this.level.helperLibraries)
       .then(() =>
-        ReactDOM.render(
+        createReactRoot(
           <Provider store={getStore()}>
             <P5LabView
               showFinishButton={finishButtonFirstLine && showFinishButton}

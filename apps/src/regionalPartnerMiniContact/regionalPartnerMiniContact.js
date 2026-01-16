@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {
   RegionalPartnerMiniContact,
   RegionalPartnerMiniContactPopupLink,
 } from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 window.showRegionalPartnerMiniContact = function () {
   const regionalPartnerMiniContactElement = $(
@@ -28,7 +28,7 @@ window.showRegionalPartnerMiniContact = function () {
       };
     })
     .complete(() => {
-      ReactDOM.render(
+      createReactRoot(
         <RegionalPartnerMiniContact
           options={options}
           apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
@@ -50,7 +50,7 @@ window.showRegionalPartnerMiniContactPopupLink = function () {
   const isButton =
     regionalPartnerMiniContactPopupLinkElement.data('link-button');
 
-  ReactDOM.render(
+  createReactRoot(
     <RegionalPartnerMiniContactPopupLink sourcePageId={sourcePageId}>
       {isButton && <button type="button">{linkText}</button>}
       {!isButton && linkText}

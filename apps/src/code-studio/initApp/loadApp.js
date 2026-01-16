@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {getCode} from '@cdo/apps/blockly/utils';
 import {files} from '@cdo/apps/clientApi';
@@ -14,6 +13,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
 
 import getScriptData from '../../util/getScriptData';
@@ -164,7 +164,7 @@ export function setupApp(appOptions) {
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
-        ReactDOM.render(
+        createReactRoot(
           <PlayZone
             lessonName={lessonName}
             onContinue={() => {

@@ -1,7 +1,6 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -14,6 +13,7 @@ import reducers, {
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/levelbuilder/unit-editor/unitEditorRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 export default function initPage(unitEditorData) {
@@ -35,7 +35,7 @@ export default function initPage(unitEditorData) {
     initResources('studentResource', scriptData.student_resources || [])
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <UnitEditor
         id={scriptData.id}

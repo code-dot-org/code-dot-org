@@ -1,7 +1,6 @@
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {
   configMicrobit,
@@ -9,6 +8,7 @@ import {
   getMakerBlocks,
 } from '@cdo/apps/maker/dropletConfig';
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -140,7 +140,7 @@ $(document).ready(function () {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <DataLibrary />,
     $('<div></div>')
       .insertAfter(`label[for="level_data_library_tables"]`)

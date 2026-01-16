@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -9,6 +8,7 @@ import {getStore} from '@cdo/apps/redux';
 import SummaryContainer from '@cdo/apps/templates/levelSummary/SummaryContainer.jsx';
 import SummaryPredictQuestion from '@cdo/apps/templates/levelSummary/SummaryPredictQuestion';
 import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -17,7 +17,7 @@ $(document).ready(() => {
 
   const isLevelGroup = scriptData.in_level_group;
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <InstructorsOnly>
         <SummaryTopLinks scriptData={scriptData} />
@@ -26,7 +26,7 @@ $(document).ready(() => {
     document.getElementById('summary-top-links')
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <SummaryContainer
       store={store}
       scriptData={scriptData}
@@ -43,7 +43,7 @@ $(document).ready(() => {
       'summary-predict-correct-answer'
     );
     if (predictQuestionContainer) {
-      ReactDOM.render(
+      createReactRoot(
         <SummaryPredictQuestion
           question={scriptData.levels[0].properties.long_instructions}
           predictSettings={scriptData.levels[0].properties.predict_settings}
@@ -53,7 +53,7 @@ $(document).ready(() => {
     }
 
     if (correctAnswerContainer) {
-      ReactDOM.render(
+      createReactRoot(
         <UnconnectedPredictSolution
           predictSettings={scriptData.levels[0].properties.predict_settings}
         />,

@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 var dom = require('../dom');
 
@@ -144,7 +144,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
                 if (library) {
                   $('.tooltipstered').tooltipster('hide');
                   $('body').append("<div id='libraryFunctionTooltipModal' />");
-                  ReactDOM.render(
+                  createReactRoot(
                     <LibraryViewCode
                       title={library.name}
                       description={library.description}

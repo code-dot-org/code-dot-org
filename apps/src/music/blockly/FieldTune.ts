@@ -2,6 +2,8 @@ import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
 import {DEFAULT_KEY} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import {
@@ -232,7 +234,7 @@ export default class FieldTune extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       React.createElement(InstrumentGrid, {
         // Make a copy of the value object so that we don't overwrite Blockly's data.
         initialValue: JSON.parse(JSON.stringify(this.getValue())),

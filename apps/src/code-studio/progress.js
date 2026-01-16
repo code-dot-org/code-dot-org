@@ -2,7 +2,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -10,6 +9,7 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import clientState from './clientState';
 import DisabledBubblesAlert from './components/DisabledBubblesAlert';
@@ -35,7 +35,7 @@ function showDisabledBubblesModal() {
   const div = $('<div>');
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesModal />, div[0]);
+  createReactRoot(<DisabledBubblesModal />, div[0]);
 }
 
 /**
@@ -57,7 +57,7 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert />, div[0]);
+  createReactRoot(<DisabledBubblesAlert />, div[0]);
 };
 
 /**

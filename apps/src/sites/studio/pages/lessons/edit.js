@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import reducers, {
@@ -25,6 +24,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
@@ -62,7 +62,7 @@ $(document).ready(function () {
     initStandards('opportunityStandard', lessonData.opportunityStandards || [])
   );
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <div>
         <LessonEditor

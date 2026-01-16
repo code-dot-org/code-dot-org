@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import AppView from '@cdo/apps/templates/AppView';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import dom from '../../dom';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -556,7 +556,7 @@ export default class Craft {
       });
     };
 
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={

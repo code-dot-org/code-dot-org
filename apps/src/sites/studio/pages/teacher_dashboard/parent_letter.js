@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
@@ -13,6 +12,7 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 const script = document.querySelector('script[data-json]');
 const scriptData = JSON.parse(script.dataset.json);
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // Mount and render the letter:
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <ParentLetter
         autoPrint

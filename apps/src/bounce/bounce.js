@@ -5,12 +5,12 @@
  *
  */
 var React = require('react');
-var ReactDOM = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var dom = require('../dom');
 var studioApp = require('../StudioApp').singleton;
 var Hammer = require('../third-party/hammer');
+var createReactRoot = require('../util/createReactRoot').createReactRoot;
 
 var api = require('./api');
 var BounceVisualizationColumn = require('./BounceVisualizationColumn');
@@ -832,7 +832,7 @@ Bounce.init = function (config) {
 
   studioApp().setPageConstants(config);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppView
         visualizationColumn={<BounceVisualizationColumn />}

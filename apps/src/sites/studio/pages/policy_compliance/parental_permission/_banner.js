@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <ParentalPermissionBanner lockoutDate={getScriptData('lockoutDate')} />
     </Provider>,

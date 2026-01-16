@@ -7,7 +7,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
@@ -17,6 +16,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import commonMsg from '@cdo/locale';
 
@@ -230,7 +230,7 @@ function renderFooterInSharedGame() {
 
   const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
-  ReactDOM.render(
+  createReactRoot(
     <SmallFooter
       i18nDropdownInBase={false}
       privacyPolicyInBase={false}
@@ -937,7 +937,7 @@ Applab.render = function () {
     handleVersionHistory: Applab.handleVersionHistory,
     autogenerateML: autogenerateML,
   });
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,

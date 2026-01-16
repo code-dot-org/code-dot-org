@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -18,7 +18,7 @@ $(document).ready(() => {
 
   if (refGuideElement) {
     const referenceGuide = getScriptData('referenceGuide');
-    ReactDOM.render(
+    createReactRoot(
       <>
         <h1>{referenceGuide.display_name}</h1>
         <ReferenceGuide referenceGuide={referenceGuide} />

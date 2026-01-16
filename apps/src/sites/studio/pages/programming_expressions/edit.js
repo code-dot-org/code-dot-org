@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import ProgrammingExpressionEditor from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingExpressionEditor';
@@ -9,6 +8,7 @@ import reducers, {
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
@@ -24,7 +24,7 @@ $(document).ready(() => {
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
   store.dispatch(initLevelSearching(levelSearchingInfo));
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <>
         <ProgrammingExpressionEditor

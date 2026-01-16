@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyContractMatchErrorDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 $(window).load(function () {
@@ -310,7 +311,7 @@ $(window).load(function () {
     }
   }
 
-  const contractForm = ReactDOM.render(
+  const contractForm = createReactRoot(
     <ContractForm />,
     document.getElementById('contractForm')
   );

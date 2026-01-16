@@ -4,7 +4,6 @@
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {
@@ -18,6 +17,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
@@ -272,7 +272,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       };
     }
 
-    ReactDOM.render(
+    createReactRoot(
       <ChallengeDialog
         title={
           isPerfect
@@ -558,7 +558,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
     }
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <DialogButtons
       tryAgain={tryAgainText}
       continueText={
@@ -934,7 +934,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
       var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
       var annotatedShareLink = options.shareLink + '?qr=true';
-      ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
+      createReactRoot(<QRCode value={annotatedShareLink} size={90} />, qrCode);
 
       if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
@@ -984,7 +984,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (downloadReplayVideoContainer) {
     const onDownloadError = () => $('#download-replay-video-error').show();
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <DownloadReplayVideoButton onError={onDownloadError} />
       </Provider>,
@@ -998,7 +998,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-  ReactDOM.render(this.getShowCodeComponent_(options), showCodeDiv);
+  createReactRoot(this.getShowCodeComponent_(options), showCodeDiv);
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -1150,7 +1150,7 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
-  ReactDOM.render(
+  createReactRoot(
     <div>
       <GeneratedCode
         message={generatedCodeProperties.message}
@@ -1230,7 +1230,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10,
   };
-  var contentDiv = ReactDOM.render(
+  var contentDiv = createReactRoot(
     <div>
       {options.headerText && (
         <h5 className="dialog-title">{options.headerText}</h5>
@@ -1295,7 +1295,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  ReactDOM.render(<DialogButtons ok={true} />, buttons);
+  createReactRoot(<DialogButtons ok={true} />, buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

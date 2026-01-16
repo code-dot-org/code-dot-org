@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import afterPartyProjectImg from '@cdo/static/dance/hoc/after_party_project.gif';
 import bearBopProjectImg from '@cdo/static/dance/hoc/bear_bop_project.gif';
 import downToTheBeatProjectImg from '@cdo/static/dance/hoc/down_to_the_beat_project.gif';
@@ -47,7 +47,7 @@ const DANCE_PROJECTS = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('student_dance_projects');
-  ReactDOM.render(
+  createReactRoot(
     <ProjectCardRow
       galleryType="public"
       showFullThumbnail={true}

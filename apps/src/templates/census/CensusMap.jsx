@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 class CensusMapInfoWindow extends Component {
   static propTypes = {
@@ -356,7 +357,7 @@ export default class CensusMap extends Component {
     teachesCs
   ) => {
     const infoWindowDom = document.createElement('div');
-    ReactDOM.render(
+    createReactRoot(
       <CensusMapInfoWindow
         onTakeSurveyClick={this.props.onTakeSurveyClick}
         schoolId={schoolId}

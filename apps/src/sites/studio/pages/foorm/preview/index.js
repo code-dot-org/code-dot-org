@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import FoormPreviewIndex from '@cdo/apps/code-studio/pd/foorm/FoormPreviewIndex';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  ReactDOM.render(
+  createReactRoot(
     <FoormPreviewIndex {...getScriptData('props')} />,
     document.getElementById('application-container')
   );
