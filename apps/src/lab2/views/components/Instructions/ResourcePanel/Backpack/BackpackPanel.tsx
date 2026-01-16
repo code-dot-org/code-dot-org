@@ -241,17 +241,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     );
   }
 
-  if (isBackpackEmpty) {
-    return (
-      <BackpackMessage
-        type="neutral"
-        iconName="backpack"
-        title="Your Backpack is empty"
-        message="Files you save to your Backpack will appear here."
-      />
-    );
-  }
-
   const renderFileChip = (
     fileName: string,
     backpackApi: BackpackClientApi,
@@ -311,23 +300,24 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         )}
         {secondaryFileLists && secondaryBackpackApis !== undefined
           ? Object.entries(secondaryFileLists).map(
-              ([appName, secondaryFileList]) => (
-                <div
-                  key={`backpack-${appName}`}
-                  className={moduleStyles.secondaryFileList}
-                >
-                  <BodyThreeText className={moduleStyles.backpackDivider}>
-                    {convertProjectTypeToDisplayName(appName as ProjectType)}
-                  </BodyThreeText>
-                  {secondaryFileList?.map(fileName =>
-                    renderFileChip(
-                      fileName,
-                      secondaryBackpackApis[appName],
-                      recentlyAddedFiles[fileName]
-                    )
-                  )}
-                </div>
-              )
+              ([appName, secondaryFileList]) =>
+                secondaryFileList.length > 0 && (
+                  <div
+                    key={`backpack-${appName}`}
+                    className={moduleStyles.secondaryFileList}
+                  >
+                    <BodyThreeText className={moduleStyles.backpackDivider}>
+                      {convertProjectTypeToDisplayName(appName as ProjectType)}
+                    </BodyThreeText>
+                    {secondaryFileList?.map(fileName =>
+                      renderFileChip(
+                        fileName,
+                        secondaryBackpackApis[appName],
+                        recentlyAddedFiles[fileName]
+                      )
+                    )}
+                  </div>
+                )
             )
           : undefined}
       </div>
