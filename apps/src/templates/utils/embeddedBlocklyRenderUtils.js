@@ -1,10 +1,8 @@
 import {PROCEDURE_BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {getUserTheme, shrinkBlockSpaceContainer} from '@cdo/apps/blockly/utils';
 import {parseElement} from '@cdo/apps/xml';
 
-import {
-  convertXmlToBlockly,
-  shrinkBlockSpaceContainer,
-} from '../instructions/utils';
+import {convertXmlToBlockly} from '../instructions/utils';
 
 /**
  * Creates and renders an embedded Blockly block into the given container element.
@@ -15,7 +13,7 @@ export function embedBlocklyBlock(container, blockType) {
   convertXmlToBlockly(container);
   const blocksDom = parseElement(`<block type='${blockType}' />`);
   addNameToProcedureBlocks(blocksDom);
-  Blockly.cdoUtils.getUserTheme().then(theme => {
+  getUserTheme().then(theme => {
     const blockSpace = Blockly.createEmbeddedWorkspace(container, blocksDom, {
       noScrolling: true,
       inline: true,

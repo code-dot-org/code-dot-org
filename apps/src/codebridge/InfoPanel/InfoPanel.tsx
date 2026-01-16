@@ -45,6 +45,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    config,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -71,18 +72,27 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           projectFiles,
           levelProperties.validationFile
         ),
-      saveFile: (fileId: string, contents: string, url?: string) =>
+      saveFileToProject: (fileId: string, contents: string, url?: string) =>
         dispatch(saveFileThunk({fileId, contents, url})),
-      createNewFile: (fileName: string, contents: string, url?: string) =>
-        dispatch(createNewFileThunk({fileName, contents, url})),
+      createNewProjectFile: (
+        fileName: string,
+        contents: string,
+        url?: string
+      ) => dispatch(createNewFileThunk({fileName, contents, url})),
       findIdForFileName: (fileName: string) =>
         Object.keys(projectFiles).find(
           id =>
             projectFiles[id].name === fileName &&
             projectFiles[id].folderId === DEFAULT_FOLDER_ID
         ),
+      supportedFileTypes: config.supportedFileTypes,
     };
-  }, [source?.files, levelProperties.validationFile, dispatch]);
+  }, [
+    source?.files,
+    config.supportedFileTypes,
+    levelProperties.validationFile,
+    dispatch,
+  ]);
 
   const handleValidate = () => {
     if (onRun) {

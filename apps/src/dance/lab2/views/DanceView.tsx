@@ -12,13 +12,13 @@ import React, {
   useState,
 } from 'react';
 
-import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  loadBlocksToWorkspace,
   updateLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';

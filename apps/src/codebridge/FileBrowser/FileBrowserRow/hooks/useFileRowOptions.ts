@@ -117,7 +117,11 @@ export const useFileRowOptions = (
         condition: !isLocked,
         iconName: 'pencil',
         labelText: codebridgeI18n.renameFile(),
-        clickHandler: () => openRenameFilePrompt({fileId: file.id}),
+        clickHandler: () =>
+          openRenameFilePrompt({
+            fileId: file.id,
+            validFileTypes: supportedFileTypes,
+          }),
       },
       {
         condition: enableUserAddedSelectionContext(appName),

@@ -33,7 +33,7 @@ interface BackpackFileChipProps extends BackpackProps {
   isRecentlyAdded?: boolean;
 }
 
-const EXTENSIONS_WITH_PREVIEWS = ['PNG', 'JPG', 'JPEG'];
+const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -41,12 +41,13 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   backpackApi,
   addAlert,
   validateFileName,
-  saveFile,
-  createNewFile,
+  saveFileToProject,
+  createNewProjectFile,
   findIdForFileName,
   isRecentlyAdded,
+  supportedFileTypes,
 }) => {
-  const fileExtension = fileName.split('.').pop()?.toUpperCase();
+  const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -61,18 +62,31 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
-  // If we are in read-only mode, disable the add button.
-  const addButtonDisabled = useAppSelector(isReadOnlyWorkspace);
-  const addButtonTooltipText = addButtonDisabled
-    ? 'Cannot add files in read-only mode'
-    : 'Add to project';
+  const inReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isFileSupported =
+    fileExtension && supportedFileTypes.includes(fileExtension);
+  // If we are in read-only mode or the file type is unsupported, disable the add button.
+  const addButtonDisabled = inReadOnly || !isFileSupported;
+  const addButtonTooltipText = useMemo(() => {
+    if (inReadOnly) {
+      return 'Cannot add files in read-only mode';
+    } else if (!isFileSupported) {
+      return 'File type not supported in this project';
+    } else {
+      return 'Add to project';
+    }
+  }, [inReadOnly, isFileSupported]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
-      return backpackApi.getFileFetchUrl(fileName);
+      return `${backpackApi.getFileFetchUrl(fileName)}?cacheBust=${Date.now()}`;
     }
     return undefined;
-  }, [backpackApi, fileExtension, fileName]);
+    // We explicitly including `isRecentlyAdded` even though it isn't used so the
+    // cache bust suffix gets refreshed. This allows an image that's been replaced to
+    // be refreshed properly
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async () => {
     const {isSupportFileName, newFileName} = validateFileName(fileName);
@@ -82,8 +96,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         newFileName
@@ -96,8 +110,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         newFileName
@@ -109,8 +123,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         fileName
@@ -169,7 +183,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           <StrongText>{fileName}</StrongText>
         </BodyThreeText>
         <BodyFourText className={moduleStyles.infoText}>
-          {fileExtension}
+          {fileExtension?.toUpperCase()}
         </BodyFourText>
       </div>
       <div className={moduleStyles.fileActions}>
