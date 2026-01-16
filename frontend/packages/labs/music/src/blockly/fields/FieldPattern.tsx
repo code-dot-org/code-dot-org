@@ -8,6 +8,7 @@ import {experiments} from '@code-dot-org/metrics';
 import {DEFAULT_PATTERN_LENGTH} from '../../constants';
 import {generateGraphDataFromPattern} from '../../utils/Patterns';
 import InstrumentGrid from '../../components/InstrumentGrid';
+import type {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
@@ -18,13 +19,8 @@ const getCSSVariable: (name: string) => string = name =>
     ? window.getComputedStyle(document.body).getPropertyValue(`--${name}`) || ''
     : '';
 
-export interface FieldPatternValue {
-  instrument: string;
-  length: number;
-}
-
 export interface FieldPatternOptions {
-  currentValue: FieldPatternValue;
+  currentValue: InstrumentEventValue;
 }
 
 /**
@@ -37,7 +33,7 @@ export class FieldPattern extends Blockly.Field {
   private root: ReturnType<typeof createRoot> | null;
   readonly CURSOR: string;
   private backgroundElement: SVGGraphicsElement | null;
-  private onValueChange: (value: FieldPatternValue) => void;
+  private onValueChange: (value: InstrumentEventValue) => void;
 
   constructor(options: FieldPatternOptions) {
     super(options.currentValue);
@@ -56,8 +52,8 @@ export class FieldPattern extends Blockly.Field {
   }
 
   loadState(
-    state: Omit<FieldPatternValue, 'length'> &
-      Partial<Pick<FieldPatternValue, 'length'>> & {kit?: string},
+    state: Omit<InstrumentEventValue, 'length'> &
+      Partial<Pick<InstrumentEventValue, 'length'>> & {kit?: string},
   ) {
     if (state.kit) {
       state.instrument = state.kit;

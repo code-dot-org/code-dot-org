@@ -5,11 +5,10 @@ import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
 import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
 import {experiments} from '@code-dot-org/metrics';
 
-import type {FieldPatternValue} from './FieldPattern';
-
 import {PATTERN_AI_NUM_SEED_EVENTS} from '../../constants';
 import {generateGraphDataFromPattern} from '../../utils/Patterns';
 import PatternAiPanel from '../../components/PatternAiPanel';
+import type {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
 
 const FIELD_WIDTH = 64;
 const FIELD_HEIGHT = 18;
@@ -21,7 +20,7 @@ const getCSSVariable: (name: string) => string = name =>
     : '';
 
 export interface FieldPatternAiOptions {
-  currentValue: FieldPatternValue;
+  currentValue: InstrumentEventValue;
 }
 
 /**
@@ -50,7 +49,7 @@ export class FieldPatternAi extends Blockly.Field {
     return this.getValue();
   }
 
-  loadState(state: FieldPatternValue & {kit?: string}) {
+  loadState(state: InstrumentEventValue & {kit?: string}) {
     if (state.kit) {
       state.instrument = state.kit;
       delete state.kit;
