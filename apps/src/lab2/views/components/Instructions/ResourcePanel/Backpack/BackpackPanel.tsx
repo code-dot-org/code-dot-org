@@ -116,7 +116,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   useEffect(() => {
     const eventListener =
       (appKey: string) => (event: BackpackEvent, filename: string) => {
-        // We don't show the load view here to avoid the screen flickering when the backpack updates.
         const clientToLoad =
           appKey === PRIMARY_BACKPACK_KEY
             ? primaryBackpackApi
@@ -126,6 +125,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             ? setFileList
             : (fileList: string[]) =>
                 setSecondaryFileLists(prev => ({...prev, [appKey]: fileList}));
+        // We don't show the load view here to avoid the screen flickering when the backpack updates.
         loadForApi(clientToLoad, listCallback, false);
         if (event === BackpackEvent.FileAdded) {
           addAlert(
@@ -252,6 +252,30 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     );
   }
 
+  const renderFileChip = (
+    fileName: string,
+    backpackApi: BackpackClientApi,
+    recentlyAddedList: string[] | undefined
+  ) => {
+    return (
+      <BackpackFileChip
+        key={fileName}
+        fileName={fileName}
+        backpackApi={backpackApi}
+        addAlert={(type, message) => {
+          setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
+          openPanelCallback();
+        }}
+        validateFileName={validateFileName}
+        saveFileToProject={saveFileToProject}
+        createNewProjectFile={createNewProjectFile}
+        findIdForFileName={findIdForFileName}
+        isRecentlyAdded={recentlyAddedList?.includes(fileName)}
+        supportedFileTypes={supportedFileTypes}
+      />
+    );
+  };
+
   return (
     <div className={moduleStyles.backpackPanelWithFiles}>
       <div className={moduleStyles.fileListContainer}>
@@ -276,25 +300,13 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             message="Files you save to your Backpack will appear here."
           />
         )}
-        {fileList?.map(fileName => (
-          <BackpackFileChip
-            key={fileName}
-            fileName={fileName}
-            backpackApi={primaryBackpackApi}
-            addAlert={(type, message) => {
-              setAlertList(prevAlerts => [...prevAlerts, {type, message}]);
-              openPanelCallback();
-            }}
-            validateFileName={validateFileName}
-            saveFileToProject={saveFileToProject}
-            createNewProjectFile={createNewProjectFile}
-            findIdForFileName={findIdForFileName}
-            isRecentlyAdded={recentlyAddedFiles[PRIMARY_BACKPACK_KEY]?.includes(
-              fileName
-            )}
-            supportedFileTypes={supportedFileTypes}
-          />
-        ))}
+        {fileList?.map(fileName =>
+          renderFileChip(
+            fileName,
+            primaryBackpackApi,
+            recentlyAddedFiles[PRIMARY_BACKPACK_KEY]
+          )
+        )}
         {secondaryFileLists && secondaryBackpackApis !== undefined
           ? Object.entries(secondaryFileLists).map(
               ([appName, secondaryFileList]) => (
@@ -305,30 +317,13 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                   <BodyThreeText className={moduleStyles.backpackDivider}>
                     {convertProjectTypeToDisplayName(appName as ProjectType)}
                   </BodyThreeText>
-                  {secondaryFileList?.map(fileName => (
-                    <BackpackFileChip
-                      key={fileName}
-                      fileName={fileName}
-                      backpackApi={
-                        secondaryBackpackApis && secondaryBackpackApis[appName]
-                      }
-                      addAlert={(type, message) => {
-                        setAlertList(prevAlerts => [
-                          ...prevAlerts,
-                          {type, message},
-                        ]);
-                        openPanelCallback();
-                      }}
-                      validateFileName={validateFileName}
-                      saveFileToProject={saveFileToProject}
-                      createNewProjectFile={createNewProjectFile}
-                      findIdForFileName={findIdForFileName}
-                      isRecentlyAdded={recentlyAddedFiles[appName]?.includes(
-                        fileName
-                      )}
-                      supportedFileTypes={supportedFileTypes}
-                    />
-                  ))}
+                  {secondaryFileList?.map(fileName =>
+                    renderFileChip(
+                      fileName,
+                      secondaryBackpackApis[appName],
+                      recentlyAddedFiles[fileName]
+                    )
+                  )}
                 </div>
               )
             )
