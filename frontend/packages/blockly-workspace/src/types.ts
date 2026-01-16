@@ -10,6 +10,7 @@ import type {
   OldBlockDefinition,
   ProcedureBlock,
 } from './blocks/types';
+import type {Extension} from './extensions/types';
 import type {Mutator} from './mutators/types';
 import type {RendererClassType} from './renderers/base';
 
@@ -22,6 +23,7 @@ export {
   JavascriptBlockGenerator,
   OldBlockDefinition,
   ProcedureBlock,
+  Extension,
   Mutator,
 };
 
@@ -39,17 +41,6 @@ export type LegacyProcedureBlock = ProcedureBlock & {
   renameProcedure: (p1: string, p2: string) => void;
   getProcedureDef: () => [string, string[], boolean];
 };
-
-/**
- * Our encapsulation of block extensions, which are functions that are used
- * when generating and initializing certain blocks.
- */
-export interface Extension {
-  /** The unique name of the extension which can be referenced from other blocks. */
-  name: string;
-  /** The extension method. We pass in the Blockly environment object, also. */
-  extension: (this: Blockly.BlockSvg, environment: Environment) => void;
-}
 
 /**
  * Our encapsulation of block mixins, which just add methods and properties to

@@ -21,7 +21,6 @@ export * from './IconButtonWithTooltip';
 export {default as IconButtonWithTooltip} from './IconButtonWithTooltip';
 export * from './ProjectTemplateWorkspaceIcon';
 export {default as ProjectTemplateWorkspaceIcon} from './ProjectTemplateWorkspaceIcon';
-export * from './WorkspaceHeader';
 export {default as WorkspaceHeader} from './WorkspaceHeader';
 export * from './PanelContainer';
 export {default as PanelContainer} from './PanelContainer';

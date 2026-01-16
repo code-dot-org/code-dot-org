@@ -51,6 +51,7 @@
       "import": "./dist/esm/resourcePanel/index.mjs",
       "require": "./dist/cjs/resourcePanel/index.js"
     },
+    "./resourcePanel/index.css": "./dist/esm/resourcePanel/index.css",
     "./hooks": {
       "types": "./dist/types/hooks/index.d.ts",
       "import": "./dist/esm/hooks/index.mjs",
@@ -76,7 +77,8 @@
     "./redux/predictLevelSlice": {
       "types": "./dist/types/redux/predictLevelSlice.d.ts"
     },
-    "./styles/variables.scss": "./src/components/layout/variables.scss"
+    "./styles/variables.scss": "./src/components/layout/variables.scss",
+    "./index.css": "./dist/esm/index.css"
   },
   "main": "src/index.ts",
   "files": [

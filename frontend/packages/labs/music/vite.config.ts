@@ -69,6 +69,14 @@ export default defineConfig({
       localsConvention: 'camelCase',
     },
   },
+  worker: {
+    format: 'es',
+    rollupOptions: {
+      output: {
+        inlineDynamicImports: true,
+      },
+    },
+  },
   build: {
     lib: {
       entry: ['src/index.ts'],

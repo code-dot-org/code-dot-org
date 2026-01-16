@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import type {ReactNode} from 'react';
 import {HTMLAttributes, useMemo, forwardRef} from 'react';
 
 import CloseButton from '@/closeButton';
@@ -29,7 +30,7 @@ export const alertTypes: {[key in AlertType]: AlertType} = {
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   /** Alert text */
-  text: string | JSX.Element;
+  text: string | ReactNode;
   /** Alert link */
   link?: LinkProps;
   /** Alert icon */

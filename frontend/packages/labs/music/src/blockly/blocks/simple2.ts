@@ -19,12 +19,12 @@ import {
   FIELD_PATTERNS_VALIDATOR,
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,
-  FIELD_SOUNDS_VALIDATOR,
   FIELD_TRIGGER_START_NAME,
   FIELD_TUNE_NAME,
   TRIGGER_FIELD,
 } from '../constants';
 import {nextConnectionMutator} from '../extensions/nextConnectionMutator';
+import {fieldSoundsValidatorExtension} from '../extensions/fieldSoundsValidatorExtension';
 import {
   fieldChordDefinition,
   fieldPatternDefinition,
@@ -106,7 +106,7 @@ const playSoundAtCurrentLocationSimple2 = defineBlock({
   style: 'lab_blocks',
   tooltip: 'play sound',
   helpUrl: DOCS_BASE_URL + 'play_sample',
-  extensions: [FIELD_SOUNDS_VALIDATOR],
+  extensions: [fieldSoundsValidatorExtension],
   mutator: nextConnectionMutator,
   generator: {
     javascript(block) {
