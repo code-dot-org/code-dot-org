@@ -88,6 +88,12 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
   };
 };
 
+export const acceptRejectAnswerTypes = [
+  'Build HTML',
+  'Build CSS',
+  'Build JavaScript',
+];
+
 export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {

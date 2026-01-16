@@ -13,6 +13,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
+  acceptRejectAnswerTypes,
   aiTutorResponseJsonSchema,
   formatAcceptRejectResponse,
   formatCopyPasteResponse,
@@ -42,9 +43,7 @@ export const useAiTutorResponseSchemaSettings = (
           jsonResponse.answer
         );
         const answerType = formattedResponse.answerType;
-        if (
-          !['Build HTML', 'Build CSS', 'Build JavaScript'].includes(answerType)
-        ) {
+        if (!acceptRejectAnswerTypes.includes(answerType)) {
           return formatCopyPasteResponse(jsonResponse.answer);
         }
         sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
@@ -56,8 +55,8 @@ export const useAiTutorResponseSchemaSettings = (
 
         // If user clicks "reject", go back to projectSourceBeforeAiTutorVersion.
         // If user clicks "accept":
-        // - force save a version for projectSourceBeforeAiTutorVersion. Check with product/design about this. TODO.
-        // - force save an AI version for AI tutor version with description 'AI Save'. TODO.
+        // - force save a version for projectSourceBeforeAiTutorVersion (if there were any updates since the last saved version).
+        // - force save an AI version for AI tutor version with commit message 'AI***SAVE' + required user description.
         // - workspace is now editable.
         // - sources are updated with the newer updated AI files, but AI flags removed.
         const aiTutorVersionFiles: ProjectFile[] = [];
