@@ -19,7 +19,13 @@ const DEFAULT_PROJECT_TYPES_ADVANCED = [
 
 const DEFAULT_PROJECT_TYPES_BASIC = ['spritelab', 'artist', 'dance', 'playlab'];
 
-const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry', 'music'];
+const OPEN_ENDED_PROJECT_TYPES = [
+  'music_dance_ai',
+  'music',
+  'dance',
+  'spritelab',
+  'poetry',
+];
 
 const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
 

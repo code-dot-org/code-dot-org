@@ -126,6 +126,11 @@ const PROJECT_INFO = {
     label: i18n.projectTypePythonlab(),
     thumbnail: studio('/shared/images/courses/logo_pythonlab.png'),
   },
+  music_dance_ai: {
+    label: 'Mix & Move with AI',
+    thumbnail: studio('/shared/images/courses/header-music-dance-ai-icon.png'),
+    urlOverride: pegasus('/mix-move-ai'),
+  },
 };
 
 const TILES_PER_ROW = 4;
