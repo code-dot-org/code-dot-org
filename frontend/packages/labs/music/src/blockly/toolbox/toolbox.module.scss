@@ -1,0 +1,32 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+.toolboxCategoryContainer {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.toolboxRow {
+  cursor: pointer;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 0;
+
+  &:hover {
+    background-color: var(--neutral-gray-60);
+  }
+}
+
+.toolboxLabel {
+  @include typography.body-four;
+
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.25rem;
+  padding: 0 5px;
+  vertical-align: middle;
+  user-select: none;
+}
