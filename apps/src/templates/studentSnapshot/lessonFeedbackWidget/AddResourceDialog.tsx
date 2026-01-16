@@ -32,14 +32,14 @@ const AddResourceDialog: React.FC<AddResourceDialogProps> = ({
         <TextField
           className={styles.resourceLinkInput}
           label="Resource name"
-          name="resouce name"
+          name="resource name"
           value={tempResourceName}
           onChange={onResourceNameChange}
         />
         <TextField
           className={styles.resourceLinkInput}
           label="Add a link to the resource"
-          name="resouce link"
+          name="resource link"
           value={tempResourceLink}
           onChange={onResourceLinkChange}
         />

@@ -7,10 +7,10 @@ import styles from './lessonFeeedback.module.scss';
 
 interface UrlTabProps {
   urlName: string;
-  onClick: () => void;
+  onClickHandler: () => void;
 }
 
-const UrlTab: React.FC<UrlTabProps> = ({urlName, onClick}) => {
+const UrlTab: React.FC<UrlTabProps> = ({urlName, onClickHandler}) => {
   return (
     <div className={`${styles.fileTab} ${styles.active}`}>
       <div className={styles.label}>
@@ -20,10 +20,7 @@ const UrlTab: React.FC<UrlTabProps> = ({urlName, onClick}) => {
         </Typography>
       </div>
       <CloseButton
-        onClick={() => {
-          onClick();
-          console.log('Remove resource link clicked');
-        }}
+        onClick={onClickHandler}
         color={'light'}
         aria-label={'remove resource link'}
         size="s"

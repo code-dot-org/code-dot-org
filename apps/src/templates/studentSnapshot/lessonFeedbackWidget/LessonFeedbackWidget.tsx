@@ -109,7 +109,10 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
               onClick={handleAddResourceClick}
             />
             {resourceLink && resourceName && (
-              <UrlTab urlName={resourceName} onClick={deleteResourceLink} />
+              <UrlTab
+                urlName={resourceName}
+                onClickHandler={deleteResourceLink}
+              />
             )}
           </div>
           {showAddResourcePopup && (
