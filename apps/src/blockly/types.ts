@@ -143,12 +143,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   functionEditor: FunctionEditor;
   mainBlockSpace: ExtendedWorkspaceSvg;
   hiddenDefinitionWorkspace: ExtendedWorkspace;
-  // TODO: better define this type
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  customBlocks: any;
-  // TODO: better define this type
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  cdoUtils: any;
   Generator: ExtendedCodeGenerator;
   Xml: ExtendedXml;
   Procedures: ExtendedProcedures;

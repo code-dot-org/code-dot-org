@@ -3,6 +3,7 @@ import jsonic from 'jsonic';
 
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
@@ -199,7 +200,7 @@ function updateBlockPreview() {
   });
   const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
   Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 

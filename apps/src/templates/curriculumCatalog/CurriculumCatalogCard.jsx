@@ -350,7 +350,10 @@ const CustomizableCurriculumCatalogCard = ({
                   variant="outlined"
                   color="secondary"
                   size="medium"
-                  className={`${style.buttonFlex} ${style.quickViewButton}`}
+                  className={classNames(
+                    style.quickViewButton,
+                    isEnglish && style.buttonFlex
+                  )}
                   aria-label={quickViewButtonDescription}
                   type="button"
                 >
@@ -363,7 +366,10 @@ const CustomizableCurriculumCatalogCard = ({
                     variant="outlined"
                     color="secondary"
                     size="medium"
-                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                    className={classNames(
+                      style.teacherAndSignedOutLearnMoreButton,
+                      isEnglish && style.buttonFlex
+                    )}
                     aria-label={i18n.learnMoreDescription({
                       course_name: courseDisplayName,
                     })}
@@ -375,7 +381,7 @@ const CustomizableCurriculumCatalogCard = ({
                     variant="contained"
                     color="primary"
                     size="medium"
-                    className={style.buttonFlex}
+                    className={classNames(isEnglish && style.buttonFlex)}
                     onClick={() => handleClickAssign('top-card')}
                     aria-label={assignButtonDescription}
                     type="button"
@@ -389,7 +395,10 @@ const CustomizableCurriculumCatalogCard = ({
                   variant="contained"
                   color="primary"
                   size="medium"
-                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+                  className={classNames(
+                    style.studentLearnMoreButton,
+                    isEnglish && style.buttonFlex
+                  )}
                   aria-label={i18n.tryCourseNow({
                     course_name: courseDisplayName,
                   })}

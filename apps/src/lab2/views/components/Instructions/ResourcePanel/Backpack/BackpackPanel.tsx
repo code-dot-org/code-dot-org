@@ -50,6 +50,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const [recentlyAddedFiles, setRecentlyAddedFiles] = useState<{
     [key: string]: string[];
   }>({PRIMARY_BACKPACK_KEY: []});
+  const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const isLoading = listsLoading > 0;
 
   function loadForApi(
@@ -271,6 +272,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         findIdForFileName={findIdForFileName}
         isRecentlyAdded={recentlyAddedList?.includes(fileName)}
         supportedFileTypes={supportedFileTypes}
+        setActionInProgress={setActionInProgress}
+        disableActions={actionInProgress}
       />
     );
   };

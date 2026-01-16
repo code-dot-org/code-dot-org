@@ -1,17 +1,10 @@
 import * as BlocklyCore from 'blockly/core';
-import _ from 'lodash';
 
-import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
-import {
-  Collider,
-  ExtendedBlockSvg,
-  JsonBlockConfig,
-  WorkspaceSerialization,
-  XmlBlockConfig,
-} from '../types';
-import {shouldSkipHiddenWorkspace} from '../utils';
+import {frameSizes} from '@cdo/apps/blockly/addons/cdoConstants';
+import {WORKSPACE_PADDING, SETUP_TYPES} from '@cdo/apps/blockly/constants';
+import {Collider, ExtendedBlockSvg} from '@cdo/apps/blockly/types';
 
-import {frameSizes} from './cdoConstants';
+import {partitionJsonBlocksByType} from '../serialization/json';
 
 const {
   BLOCK_HEADER_HEIGHT,
@@ -23,15 +16,6 @@ const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
 const SVG_FRAME_TOP_PADDING = BLOCK_HEADER_HEIGHT + MARGIN_TOP;
 const SORT_BY_POSITION = true;
 const SPACE_BETWEEN_BLOCKS = 10;
-
-export function hasBlocks(
-  workspaceSerialization: WorkspaceSerialization | null
-) {
-  return (
-    !_.isEmpty(workspaceSerialization) &&
-    _.has(workspaceSerialization, 'blocks.blocks')
-  );
-}
 
 /**
  * Returns the desired x-coordinate for a block given the workspace properties
@@ -74,64 +58,6 @@ function getSpaceBetweenBlocks(block: ExtendedBlockSvg) {
     verticalSpace += SVG_FRAME_TOP_PADDING;
   }
   return verticalSpace;
-}
-
-/**
- * Converts XML serialization to JSON using a temporary unrendered workspace.
- * @param {xml} xml - workspace serialization, current/legacy format
- * @param {boolean} [embedded] - indicates whether the source will be converted
- * for an embedded workspace for not.
- * @returns {json} stateToLoad - modern workspace serialization
- */
-export function convertXmlToJson(xml: Element, embedded?: boolean) {
-  const tempWorkspace = new Blockly.Workspace();
-
-  // The temporary workspace should mirror the embedded state of the workspace
-  // that will use the converted source.
-  if (embedded) {
-    Blockly.addEmbeddedWorkspace(tempWorkspace);
-  }
-
-  // domToBlockSpace returns an array of "block" objects with the following properties:
-  //   blockly_block: the actual block object created by Blockly
-  //   x: the x attribute found in <block/> element
-  //   y: the y attribute found in <block/> element
-  const xmlBlocks = Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
-  const stateToLoad = Blockly.serialization.workspaces.save(
-    tempWorkspace
-  ) as WorkspaceSerialization;
-
-  if (xmlBlocks.length && hasBlocks(stateToLoad)) {
-    // Create a map of ids (key) and block serializations (value).
-    const blockIdMap = stateToLoad.blocks.blocks.reduce(
-      (map: Map<string, JsonBlockConfig>, blockJson: JsonBlockConfig) =>
-        map.set(blockJson.id || '', blockJson),
-      new Map()
-    );
-
-    addPositionsToState(xmlBlocks, blockIdMap);
-  }
-  tempWorkspace.dispose();
-  return stateToLoad;
-}
-
-/**
- * Adds x/y values from XML to JSON serialization.
- * @param {Array<Object>} xmlBlocks - an array of "block" objects containing a block and x/y coordinates
- * @param {Map<String, Object>} blockIdMap - a map of ids (keys) and serialized blocks (values)
- */
-export function addPositionsToState(
-  xmlBlocks: XmlBlockConfig[],
-  blockIdMap: Map<string, JsonBlockConfig>
-) {
-  xmlBlocks.forEach(xmlBlock => {
-    const blockJson = blockIdMap.get(xmlBlock.blockly_block.id);
-    if (blockJson) {
-      // Note: If xmlBlock values are NaN, they will be ignored and blockJson values will be used
-      blockJson.x = xmlBlock.x || blockJson.x;
-      blockJson.y = xmlBlock.y || blockJson.y;
-    }
-  });
 }
 
 /**
@@ -306,188 +232,6 @@ export const getDefaultLocation = (
 
   return {defaultX, defaultY};
 };
-
-// See addEditorWorkspaceBlockConfig on the FunctionEditor for
-// the list of properties to undo here
-export const resetEditorWorkspaceBlockConfig = (
-  blocks: JsonBlockConfig[] = []
-) =>
-  blocks.forEach(block => {
-    const {defaultX, defaultY} = getDefaultLocation();
-    block.x = defaultX;
-    block.y = defaultY;
-    block.movable = true;
-
-    // Since all blocks opened with the function editor are forced to be
-    // undeletable, we need to reset deletable to its initial value
-    // before we save the block data to the project source
-    block.deletable = block.extraState?.initialDeleteConfig;
-  });
-
-/**
- * Partitions JSON objects of the specified types to the front of the list.
- *
- * @param {Object[]} [blocks=[]] - An array of JSON blocks to be partitioned.
- * @param {string[]} [prioritizedBlockTypes=[]] - An array of strings representing block types to move to the front.
- * @returns {Object[]} A new array of JSON blocks partitioned based on their types.
- */
-export function partitionJsonBlocksByType(
-  blocks: ExtendedBlockSvg[] = [],
-  prioritizedBlockTypes: string[] = []
-) {
-  const prioritizedBlocks: ExtendedBlockSvg[] = [];
-  const remainingBlocks: ExtendedBlockSvg[] = [];
-
-  blocks.forEach(block => {
-    const blockType = block.type;
-    prioritizedBlockTypes.includes(blockType)
-      ? prioritizedBlocks.push(block)
-      : remainingBlocks.push(block);
-  });
-
-  return [...prioritizedBlocks, ...remainingBlocks];
-}
-
-/**
- * Gets the JSON serialization for a project, including its workspace and, if applicable, the hidden definition workspace.
- *
- * @param {Blockly.Workspace} workspace - The workspace to serialize
- * @returns {Object} The combined JSON serialization of the workspace and the hidden definition workspace.
- */
-export function getProjectSerialization(workspace: BlocklyCore.WorkspaceSvg) {
-  const workspaceSerialization = Blockly.serialization.workspaces.save(
-    workspace
-  ) as WorkspaceSerialization;
-
-  if (shouldSkipHiddenWorkspace(workspace)) {
-    return workspaceSerialization;
-  }
-  const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-  const hiddenWorkspaceSerialization = hiddenDefinitionWorkspace
-    ? (Blockly.serialization.workspaces.save(
-        hiddenDefinitionWorkspace
-      ) as WorkspaceSerialization)
-    : null;
-
-  // Blocks rendered in the hidden workspace get extra properties that need to be
-  // removed so they don't apply if the block moves to the main workspace on subsequent loads
-  if (hiddenWorkspaceSerialization && hasBlocks(hiddenWorkspaceSerialization)) {
-    resetEditorWorkspaceBlockConfig(hiddenWorkspaceSerialization.blocks.blocks);
-  }
-
-  const combinedSerialization = getCombinedSerialization(
-    workspaceSerialization,
-    hiddenWorkspaceSerialization
-  );
-  return combinedSerialization;
-}
-
-/**
- * Combines the serialization of two workspaces so that both can be saved to a project source when calling getCode.
- * @param {json} primaryWorkspaceSerialization - Contains block and procedure information for the first workspace.
- * @param {json} secondaryWorkspaceSerialization - Contains block and procedure information for the second
- * (e.g. hidden procedure definitions) workspace.
- * @returns {json} A combined serialization, using the primaryWorkspaceSerialization as the base, that includes all
- * blocks and procedures from each workspace with unique ids. (Note: The elements on each workspace are not
- * necessarily mutually exclusive.)
- */
-export function getCombinedSerialization(
-  primaryWorkspaceSerialization: WorkspaceSerialization,
-  secondaryWorkspaceSerialization: WorkspaceSerialization | null
-) {
-  if (
-    !secondaryWorkspaceSerialization ||
-    !hasBlocks(secondaryWorkspaceSerialization) ||
-    !hasBlocks(primaryWorkspaceSerialization)
-  ) {
-    // Default case is to return mainWorkspaceSerialization because it's not possible
-    // to have a hiddenWorkspaceSerialization but no mainWorkspaceSerialization
-    return primaryWorkspaceSerialization;
-  }
-
-  const combinedSerialization = _.cloneDeep(primaryWorkspaceSerialization);
-  combinedSerialization.blocks.blocks = _.unionBy(
-    primaryWorkspaceSerialization.blocks.blocks,
-    secondaryWorkspaceSerialization.blocks.blocks,
-    'id'
-  );
-  combinedSerialization.procedures = _.unionBy(
-    primaryWorkspaceSerialization.procedures,
-    secondaryWorkspaceSerialization.procedures,
-    'id'
-  );
-  return combinedSerialization;
-}
-
-/**
- * Converts blocks in XML format to JSON representation. Shared behaviors are saved
- * as XML, so we need to convert it if the student's project is in JSON.
- * Conversion occurs by loading blocks onto a temporary headless workspace and re-serializing.
- *
- * @param {string} functionsXml - The XML representation of functions to convert.
- * @returns {Object} - JSON representation of the functions.
- */
-export function convertFunctionsXmlToJson(functionsXml: string) {
-  const parser = new DOMParser();
-  const xml = parser.parseFromString(`<xml>${functionsXml}</xml>`, 'text/xml');
-  const tempWorkspace = new Blockly.Workspace();
-  Blockly.Xml.domToBlockSpace(tempWorkspace, xml.children[0]);
-  const proceduresState = Blockly.serialization.workspaces.save(
-    tempWorkspace
-  ) as WorkspaceSerialization;
-  tempWorkspace.dispose();
-  return proceduresState;
-}
-
-/**
- * Appends procedures from shared state to the project state, merging blocks and procedures.
- * This works by comparing each block list. For any shared behavior that is not already
- * in the saved project (based on behaviorId value), add the block and its procedure
- * to the state.
- *
- * @param {Object} projectState - The saved project in JSON (blocks and procedures).
- * @param {Object} proceduresState - The shared procedures in JSON (blocks and procedures).
- * @returns {Object} - The updated project state with shared procedures appended.
- * TODO: define a type for projectState and proceduresState. Blockly defines these as any.
- */
-export function appendProceduresToState(
-  projectState: WorkspaceSerialization,
-  proceduresState: WorkspaceSerialization
-) {
-  const projectBlocks = projectState.blocks?.blocks || [];
-  const projectProcedures = projectState.procedures || [];
-
-  const sharedBlocks = proceduresState.blocks?.blocks || [];
-  const sharedProcedures = proceduresState.procedures || [];
-
-  sharedBlocks.forEach(block => {
-    const {behaviorId, procedureId} = block.extraState;
-
-    if (!blockExists(behaviorId, projectBlocks)) {
-      // If the block doesn't exist, add it to the student project
-      projectBlocks.push(block);
-      const procedure = sharedProcedures.find(
-        procedure => procedure.id === procedureId
-      );
-      if (procedure) {
-        projectProcedures.push(procedure);
-      }
-    }
-  });
-  projectState.blocks = {blocks: projectBlocks};
-  projectState.procedures = projectProcedures;
-  return projectState;
-}
-
-// Function to check if a block with the given behaviorId exists in the project
-// TODO: define type for projectBlocks.
-function blockExists(behaviorId: string, projectBlocks: JsonBlockConfig[]) {
-  return projectBlocks.some(
-    block =>
-      block.type === BLOCK_TYPES.behaviorDefinition &&
-      block.extraState?.behaviorId === behaviorId
-  );
-}
 
 /**
  * Repositions blocks on the workspace to eliminate overlaps.

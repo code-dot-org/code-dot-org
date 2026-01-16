@@ -24,10 +24,18 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
-    request = arguments.first[:request]
-    locale = arguments.first[:locale]
+    if rack_env?(:development)
+      puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
+    end
 
-    AichatAiHelper.handle_error("AichatRequestChatCompletionJob", exception, request, locale)
+    request = arguments.first[:request]
+    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    Honeybadger.notify(
+      "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
+      context: {
+        request: request.to_json
+      }
+    )
 
     # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
