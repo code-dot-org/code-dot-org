@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import type {FunctionComponent} from 'react';
 import {useCallback} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
@@ -9,9 +8,9 @@ import moduleStyles from './preview-controls.module.scss';
 /**
  * Updated version of {@link PreviewControls} that uses the new Button component
  */
-const PreviewControlsV2: FunctionComponent<
-  PreviewButtonProps & ClearButtonProps
-> = props => (
+const PreviewControlsV2 = ({
+  ...props
+}: PreviewButtonProps & ClearButtonProps) => (
   <div className={classNames(moduleStyles.controlsRow, moduleStyles.v2)}>
     <PreviewButton {...props} />
     <ClearButton {...props} />
@@ -24,11 +23,11 @@ interface ClearButtonProps {
   cancelPreviews: () => void;
 }
 
-const ClearButton: FunctionComponent<ClearButtonProps> = ({
+const ClearButton = ({
   enabled,
   onClickClear,
   cancelPreviews,
-}) => {
+}: ClearButtonProps) => {
   const onClick = useCallback(() => {
     cancelPreviews();
     onClickClear();
@@ -53,12 +52,12 @@ interface PreviewButtonProps {
   isPlayingPreview: boolean;
 }
 
-const PreviewButton: FunctionComponent<PreviewButtonProps> = ({
+const PreviewButton = ({
   enabled,
   playPreview,
   cancelPreviews,
   isPlayingPreview,
-}) => {
+}: PreviewButtonProps) => {
   const onClick = useCallback(() => {
     if (isPlayingPreview) {
       cancelPreviews();

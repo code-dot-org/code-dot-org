@@ -5,7 +5,7 @@ import Typography, {
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import type {FunctionComponent, MutableRefObject} from 'react';
+import type {MutableRefObject} from 'react';
 import {useCallback, useEffect, useState, useRef, useContext} from 'react';
 import {FocusOn} from 'react-focus-on';
 
@@ -32,7 +32,7 @@ interface PackEntryProps {
   currentFolderRefCallback: (ref: HTMLDivElement) => void;
 }
 
-const PackEntry: FunctionComponent<PackEntryProps> = ({
+const PackEntry = ({
   playingPreview,
   folder,
   folderIndex,
@@ -41,7 +41,7 @@ const PackEntry: FunctionComponent<PackEntryProps> = ({
   onPreview,
   mode,
   currentFolderRefCallback,
-}) => {
+}: PackEntryProps) => {
   const library = MusicLibrary.getInstance();
 
   const previewSound = folder.sounds.find(sound => sound.type === 'preview');
@@ -124,10 +124,7 @@ type Mode = 'popular' | 'song' | 'artist';
  * The PackDialog allows the user to preview and choose from the set of restricted
  * sound packs.
  */
-const PackDialog: FunctionComponent<PackDialogProps> = ({
-  player,
-  forcePackSelect,
-}) => {
+const PackDialog = ({player, forcePackSelect}: PackDialogProps) => {
   const dispatch = useAppDispatch();
 
   const currentPackId = useAppSelector(state => state.music.packId);

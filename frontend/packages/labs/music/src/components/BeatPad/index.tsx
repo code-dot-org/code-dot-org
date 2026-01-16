@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import React from 'react';
 
 import {useAppSelector} from '../../redux/store';
 import type {Trigger} from '../../types';
@@ -14,10 +13,7 @@ export interface BeatPadProps {
 /**
  * Renders the Beat Pad component, which can be used to play numbered triggers during playback
  */
-const BeatPad: React.FunctionComponent<BeatPadProps> = ({
-  triggers,
-  playTrigger,
-}) => {
+const BeatPad = ({triggers, playTrigger}: BeatPadProps) => {
   const selectedTriggerId = useAppSelector(
     state => state.music.selectedTriggerId,
   );

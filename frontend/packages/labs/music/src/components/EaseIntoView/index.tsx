@@ -1,9 +1,4 @@
-import type {
-  FunctionComponent,
-  KeyboardEvent,
-  MutableRefObject,
-  ReactNode,
-} from 'react';
+import type {KeyboardEvent, MutableRefObject, PropsWithChildren} from 'react';
 import {useEffect, useRef} from 'react';
 
 const clamp = (number: number, min: number, max: number) => {
@@ -18,7 +13,7 @@ const animationFramesPerSecond = 60;
 // escape paradigm for keyboard users to navigate into and out of the container and
 // access the children (marked with the 'showing' class) within.
 
-interface EaseIntoViewProps {
+interface EaseIntoViewProps extends PropsWithChildren {
   id?: string;
   className?: string;
   /** Whether or not to perform the ease into view */
@@ -33,15 +28,13 @@ interface EaseIntoViewProps {
   scrollEnd?: number;
   /** Aria label for the container */
   ariaLabel?: string;
-  /** Child elements to be rendered within the container */
-  children: ReactNode;
   /** An array of refs for direct a11y reference */
   focusableChildrenRef?: MutableRefObject<
     Array<Array<HTMLButtonElement | null>>
   >;
 }
 
-const EaseIntoView: FunctionComponent<EaseIntoViewProps> = ({
+const EaseIntoView = ({
   id,
   className,
   doEase,
@@ -52,7 +45,7 @@ const EaseIntoView: FunctionComponent<EaseIntoViewProps> = ({
   ariaLabel = 'Scrollable content',
   children,
   focusableChildrenRef,
-}) => {
+}: EaseIntoViewProps) => {
   const scrollStep = useRef<number | undefined>(0);
   const lastScrollPosition = useRef<number | undefined>(undefined);
   const containerRef: MutableRefObject<HTMLDivElement | null> = useRef(null);

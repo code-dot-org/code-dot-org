@@ -1,5 +1,3 @@
-import * as Blockly from 'blockly/core';
-
 import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
 import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
@@ -71,8 +69,6 @@ export interface MusicLabProps {
 }
 
 const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
-  const workspaceRef = useRef<Blockly.Workspace | null>(null);
-
   const settings = useBlocklySettings();
   const dispatch = useAppDispatch();
 
@@ -98,7 +94,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
 
-  const {loadAndInitializePlayer} = useContext(PlayerContext);
+  const {loadAndInitializePlayer, onInject} = useContext(PlayerContext);
 
   useEffect(() => {
     // Ensure we use dark theme for music lab, for now
@@ -265,7 +261,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
                 toolboxBlocks={toolboxBlocks}
                 theme={darkTheme}
                 renderer={ThrasosRenderer}
-                workspaceRef={workspaceRef}
+                onInject={onInject}
                 plugins={[ToolboxTrashcanPlugin]}
               />
             </PanelContainer>

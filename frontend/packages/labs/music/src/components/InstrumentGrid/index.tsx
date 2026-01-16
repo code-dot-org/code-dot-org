@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import type {ChangeEvent, FunctionComponent, KeyboardEvent} from 'react';
+import type {ChangeEvent, KeyboardEvent} from 'react';
 import {
   Fragment,
   useCallback,
@@ -36,7 +36,7 @@ import styles from './styles.module.scss';
 
 const SHOWING = 'showing';
 
-interface Props {
+export interface InstrumentGridProps {
   initialValue: InstrumentEventValue;
   onChange: (value: InstrumentEventValue) => void;
   editorType: EditorType;
@@ -47,12 +47,12 @@ interface Props {
  * Instrument grid editor for selecting notes in a pattern.
  * Used in the "play_tune" and "play_pattern" blocks.
  */
-const InstrumentGrid: FunctionComponent<Props> = ({
+const InstrumentGrid = ({
   initialValue,
   onChange,
   editorType,
   lengthMeasures,
-}) => {
+}: InstrumentGridProps) => {
   const instruments = getInstruments(editorType);
   const [currentValue, setCurrentValue] = useState(() => {
     // Convert to absolute when loading.

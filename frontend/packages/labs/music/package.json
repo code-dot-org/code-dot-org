@@ -54,6 +54,7 @@
     "@magenta/music": "^1.23.1",
     "@react-hook/resize-observer": "^2.0.2",
     "@rexxars/react-split-pane": "^1.0.0",
+    "events": "^3.3.0",
     "intro.js": "^8.3.2",
     "lodash": "^4.17.21",
     "react-focus-lock": "^2.13.6",
@@ -62,6 +63,7 @@
   },
   "devDependencies": {
     "@eslint/js": "catalog:",
+    "@types/events": "^3",
     "@types/node": "catalog:",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -74,6 +76,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "stylelint": "^16.14.1",
+    "typed-emitter": "^2.1.0",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "vite": "catalog:",

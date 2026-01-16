@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import React from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -10,10 +9,7 @@ export interface LoadingOverlayProps {
   delayAppearance?: boolean;
 }
 
-const LoadingOverlay: React.FunctionComponent<LoadingOverlayProps> = ({
-  show,
-  delayAppearance,
-}) => (
+const LoadingOverlay = ({show, delayAppearance}: LoadingOverlayProps) => (
   <div
     className={classNames(
       moduleStyles.loadingContainer,

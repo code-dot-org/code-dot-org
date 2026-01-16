@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import type {ChangeEvent, FunctionComponent} from 'react';
+import type {ChangeEvent} from 'react';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
@@ -73,14 +73,14 @@ interface HelpProps {
   shouldShowGenerateAgainHelp: boolean;
 }
 
-const Help: FunctionComponent<HelpProps> = ({
+const Help = ({
   userCompletedTask,
   generateState,
   generatingScanStep,
   eventsLength,
   isPlaying,
   shouldShowGenerateAgainHelp,
-}) => {
+}: HelpProps) => {
   const clickDrumsTexts = [
     'Click to set up the start of your drums.',
     'Click to set up the start of your drums.\nThree more!',
@@ -242,10 +242,7 @@ interface PatternAiPanelProps {
  * Renders a UI for designing a pattern, with AI generation. This is currently
  * used within a custom Blockly Field {@link FieldPatternAi}
  */
-const PatternAiPanel: FunctionComponent<PatternAiPanelProps> = ({
-  initValue,
-  onChange,
-}) => {
+const PatternAiPanel = ({initValue, onChange}: PatternAiPanelProps) => {
   const [isLoading, setIsLoading] = useState(false);
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
@@ -448,7 +445,7 @@ const PatternAiPanel: FunctionComponent<PatternAiPanelProps> = ({
 
       currentValue.current.events = [...currentEvents];
       setCurrentEvents(currentValue.current.events);
-      updateGenerateState();
+      updateGenerateState(generateState);
       onChange(currentValue.current);
     },
     [
