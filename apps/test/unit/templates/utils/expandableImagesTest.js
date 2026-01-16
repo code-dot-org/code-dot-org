@@ -1,17 +1,19 @@
-import ReactDOM from 'react-dom';
-
 import {renderExpandableImages} from '@cdo/apps/templates/utils/expandableImages';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+jest.mock('@cdo/apps/util/createReactRoot', () => ({
+  __esModule: true,
+  createReactRoot: jest.fn(),
+}));
 
 describe('expandableImages', () => {
   describe('renderExpandableImages', () => {
-    let renderSpy;
-
     beforeEach(() => {
-      renderSpy = jest.spyOn(ReactDOM, 'render').mockClear();
+      createReactRoot.mockReset();
     });
 
     afterEach(() => {
-      renderSpy.mockRestore();
+      jest.clearAllMocks();
     });
 
     const createExpandableImage = (url, alt) => {
@@ -32,13 +34,14 @@ describe('expandableImages', () => {
 
       renderExpandableImages(containerNode);
 
-      expect(renderSpy).toHaveBeenCalledTimes(1);
+      expect(createReactRoot).toHaveBeenCalledTimes(1);
 
-      const renderElement = renderSpy.mock.calls[0][0];
+      const renderElement = createReactRoot.mock.calls[0][0];
+
       expect(renderElement.props.url).toBe('https://example.com/img.jpg');
       expect(renderElement.props.alt).toBe('This is alt text');
 
-      const renderContainer = renderSpy.mock.calls[0][1];
+      const renderContainer = createReactRoot.mock.calls[0][1];
       expect(renderContainer).toBe(image);
     });
 
@@ -53,7 +56,7 @@ describe('expandableImages', () => {
       }
 
       renderExpandableImages(containerNode);
-      expect(renderSpy).toHaveBeenCalledTimes(N);
+      expect(createReactRoot).toHaveBeenCalledTimes(N);
     });
   });
 });

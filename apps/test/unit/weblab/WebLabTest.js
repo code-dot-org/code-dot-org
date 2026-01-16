@@ -1,4 +1,3 @@
-import ReactDOM from 'react-dom';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -18,6 +17,7 @@ import {
 } from '@cdo/apps/StudioApp';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 import * as utils from '@cdo/apps/utils';
 import {
   changeMaxProjectCapacity,
@@ -47,14 +47,14 @@ describe('WebLab', () => {
       skin: {},
       level: {},
     };
-    sinon.stub(ReactDOM, 'render');
+    sinon.stub(createReactRootModule, 'createReactRoot');
     sinon.stub(getStore(), 'dispatch');
   });
 
   afterEach(() => {
     restoreRedux();
     restoreStudioApp();
-    ReactDOM.render.restore();
+    createReactRootModule.createReactRoot.restore();
   });
 
   describe('init', () => {
