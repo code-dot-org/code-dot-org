@@ -5,10 +5,10 @@ import type {FunctionComponent} from 'react';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import Markdown, {MarkdownProps} from '@code-dot-org/markdown';
 
-import BlocklyWorkspace from '@blockly-workspace/components/blocklyWorkspace';
-import type {Plugin} from '@blockly-workspace/plugins';
-import type {Theme, Renderer, BlockDefinition} from '@blockly-workspace/types';
-import {convertBlocklyXmlToJson} from '@blockly-workspace/xml';
+import type {Plugin} from '../../plugins';
+import type {Theme, Renderer, BlockDefinition} from '../../types';
+import {convertBlocklyXmlToJson} from '../../xml';
+import BlocklyWorkspace from '../BlocklyWorkspace';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
   blocks?: BlockDefinition[];

@@ -7,8 +7,6 @@ export {defineMutator} from './mutators/defineMutator';
 export {defineExtension} from './extensions/defineExtension';
 export {defineBlock} from './blocks/defineBlock';
 
-export type {BlocklyOptions} from './components/blocklyWorkspace/BlocklyWorkspace';
-export {default as BlocklyMarkdown} from './components/blocklyMarkdown';
-export {default as BlocklyWorkspace} from './components/blocklyWorkspace';
+export * from './components';
 
 export * as Blockly from 'blockly/core';

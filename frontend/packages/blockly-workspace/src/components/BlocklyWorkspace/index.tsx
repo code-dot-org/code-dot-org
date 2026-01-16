@@ -60,7 +60,7 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** Whether or not this is a hidden workspace. */
   hidden?: boolean;
   /** A callback when the Blockly environment is loaded into the container */
-  onInject?: () => void;
+  onInject?: (workspace: Blockly.WorkspaceSvg) => void;
   /** A callback for when anything in the workspace updates */
   onChange?: (event: Blockly.Events.Abstract) => void;
   /** A set of plugins to install to this workspace */
@@ -72,7 +72,7 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
    *
    * This will be certainly set when onInject is called.
    */
-  workspaceRef?: MutableRefObject<Blockly.Workspace | null>;
+  workspaceRef?: MutableRefObject<Blockly.WorkspaceSvg | null>;
   /**
    * Any additional class to apply to the workspace container.
    */
@@ -231,7 +231,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
     // Level implementation callback for custom behaviors per-level type
     if (onInject) {
-      onInject();
+      onInject(workspace.current);
     }
 
     // Apply the custom styles to our custom elements
