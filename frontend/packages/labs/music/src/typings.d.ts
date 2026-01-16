@@ -4,3 +4,9 @@ declare module '*.module.scss';
 declare module '*.scss';
 declare module '*.png';
 declare module '*.svg';
+
+// Vite worker imports with inline query
+declare module '*?worker&inline' {
+  const workerConstructor: new () => Worker;
+  export default workerConstructor;
+}

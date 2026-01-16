@@ -6,7 +6,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import styles from './projectTemplateWorkspaceIcon.module.scss';
 
-interface ProjectTemplateWorkspaceIconV2Props {
+export interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
 }
 

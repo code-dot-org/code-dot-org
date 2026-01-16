@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import type {RefObject} from 'react';
 import {HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
 
 import CloseButton from '@/closeButton';
@@ -48,10 +49,10 @@ const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({
   ['aria-labelledby']: ariaLabelledBy,
   ...HTMLAttributes
 }) => {
-  const dialogRef = useRef<HTMLDivElement>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
   useBodyScrollLock(true);
-  useFocusTrap(dialogRef);
+  useFocusTrap(dialogRef as RefObject<HTMLDivElement>);
   useEscapeKeyHandler(onClose);
 
   useEffect(() => {

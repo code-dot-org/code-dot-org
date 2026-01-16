@@ -92,7 +92,7 @@ const ValidationTourSteps: FunctionComponent<ValidationTourStepsProps> = ({
       if (validationTourStep === 0) {
         setCurrentTab(validationTabEnum);
         // Enable 'Next' button on first step (index 0).
-        setValidationTourStepsEnabled(prev => [true, false, true]);
+        setValidationTourStepsEnabled(_ => [true, false, true]);
 
         // Return focus to the tour panel for keyboard users.
         returnFocusToTourPanel();
@@ -102,7 +102,7 @@ const ValidationTourSteps: FunctionComponent<ValidationTourStepsProps> = ({
     const handleValidateButtonActivation = () => {
       if (validationTourStep === 1) {
         // Enable 'Next' button on second step (index 1).
-        setValidationTourStepsEnabled(prev => [true, true, true]);
+        setValidationTourStepsEnabled(_ => [true, true, true]);
         // Return focus to the tour panel for keyboard users.
         returnFocusToTourPanel();
       }

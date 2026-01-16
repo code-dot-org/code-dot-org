@@ -6,7 +6,9 @@ import type {InstrumentTickEvent} from '../player/interfaces/InstrumentEvent';
 
 import {Message} from './types';
 
-const worker = new Worker(new URL('patternAiWorker.ts', import.meta.url));
+import PatternAiWorker from './patternAiWorker?worker&inline';
+
+const worker = new PatternAiWorker();
 
 // Track the first generate attempt per page load separately, as it typically
 // takes much longer than subsequent attempts.

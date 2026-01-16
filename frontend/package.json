@@ -34,11 +34,11 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "resolutions": {
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
     "esbuild": "^0.25.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",

@@ -31,7 +31,6 @@ import type {
   Mixin,
   Mutator,
   OldBlockDefinition,
-  ProcedureBlock,
 } from './types';
 
 class Registry<T extends Environment & object> {
@@ -279,8 +278,10 @@ class Registry<T extends Environment & object> {
     const name = extension.name;
     const environment = this.environment || {inline: false, embedded: true};
     if (!Blockly.Extensions.isRegistered(name)) {
-      Blockly.Extensions.register(name, function (this: ProcedureBlock) {
-        return extension.extension.bind(this, environment)();
+      Blockly.Extensions.register(name, function (this: BlockSvg) {
+        const bound = extension.extension.bind(this, environment);
+        console.log('extension call', extension.extension, bound);
+        bound();
       });
       this.extensions.push(extension);
     }

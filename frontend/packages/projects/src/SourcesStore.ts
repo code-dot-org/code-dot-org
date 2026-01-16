@@ -18,7 +18,11 @@ export class SourcesStore {
   private lastNewVersionTime: number | null = null;
 
   async load(appName: AppName, channelId: string, versionId?: string) {
-    const {response, value} = await sourcesApi.get(appName, channelId, versionId);
+    const {response, value} = await sourcesApi.get(
+      appName,
+      channelId,
+      versionId,
+    );
 
     if (response.ok && !versionId) {
       // Only store the current version id if we are loading the latest version.
@@ -32,7 +36,7 @@ export class SourcesStore {
     channelId: string,
     sources: ProjectSources,
     projectType?: ProjectType,
-    forceNewVersion = false
+    forceNewVersion = false,
   ) {
     let options: SaveSourceOptions = {projectType};
     if (this.currentVersionId) {
@@ -62,7 +66,7 @@ export class SourcesStore {
     } else {
       throw new NetworkError(
         response.status + ' ' + response.statusText,
-        response
+        response,
       );
     }
     return response;
@@ -71,7 +75,7 @@ export class SourcesStore {
   async getVersionList(channelId: string, includeComments: boolean = false) {
     const response = await sourcesApi.getVersionList(
       channelId,
-      includeComments
+      includeComments,
     );
     return response.value || [];
   }
