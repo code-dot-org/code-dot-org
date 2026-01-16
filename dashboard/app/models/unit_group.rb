@@ -682,10 +682,10 @@ class UnitGroup < ApplicationRecord
   end
 
   def has_ai_chat_tools?
-    default_units.joins(:levels).merge(Level.requires_ai_chat_tools.or(Level.ai_tutor_available)).exists?
+    default_units.with_ai_chat_tools.exists?
   end
 
   def requires_ai_chat_tools?
-    default_units.joins(:levels).merge(Level.requires_ai_chat_tools).exists?
+    default_units.with_required_ai_chat_tools.exists?
   end
 end

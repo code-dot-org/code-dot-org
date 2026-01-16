@@ -2283,6 +2283,47 @@ class UnitTest < ActiveSupport::TestCase
     assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
+  test 'with_ai_chat_tools returns units with required AI chat tools or AI tutor available' do
+    ai_level = create(:level)
+    ai_tutor_level = create(:level)
+    normal_level = create(:level)
+
+    # Stub Level scopes
+    Level.stubs(:with_required_ai_chat_tools).returns(Level.where(id: ai_level.id))
+    Level.stubs(:with_ai_tutor_available).returns(Level.where(id: ai_tutor_level.id))
+
+    unit_with_ai = create(:script, name: 'unit-with-ai')
+    unit_with_ai.levels << ai_level
+
+    unit_with_tutor = create(:script, name: 'unit-with-tutor')
+    unit_with_tutor.levels << ai_tutor_level
+
+    unit_without_ai = create(:script, name: 'unit-without-ai')
+    unit_without_ai.levels << normal_level
+
+    result = Unit.with_ai_chat_tools
+    assert_includes result, unit_with_ai
+    assert_includes result, unit_with_tutor
+    refute_includes result, unit_without_ai
+  end
+
+  test 'with_required_ai_chat_tools returns only units with required AI chat tools' do
+    ai_level = create(:level)
+    normal_level = create(:level)
+
+    Level.stubs(:with_required_ai_chat_tools).returns(Level.where(id: ai_level.id))
+
+    unit_with_ai = create(:script, name: 'unit-with-ai')
+    unit_with_ai.levels << ai_level
+
+    unit_without_ai = create(:script, name: 'unit-without-ai')
+    unit_without_ai.levels << normal_level
+
+    result = Unit.with_required_ai_chat_tools
+    assert_includes result, unit_with_ai
+    refute_includes result, unit_without_ai
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
