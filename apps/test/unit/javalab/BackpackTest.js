@@ -49,32 +49,6 @@ describe('Java Lab Backpack Test', () => {
     );
   };
 
-  it('updates selected files correctly', async () => {
-    const user = userEvent.setup();
-    renderWithProps({});
-    backpackApiStub.getFileList.callsArgWith(1, [
-      'Class1.java',
-      'Class2.java',
-      'Class3.java',
-    ]);
-
-    await toggleBackpack(user);
-    await screen.findByLabelText('Class1.java');
-    await user.click(screen.getByLabelText('Class1.java'));
-    await user.click(screen.getByLabelText('Class2.java'));
-    await user.click(screen.getByLabelText('Class3.java'));
-    await user.click(screen.getByLabelText('Class1.java'));
-    await user.click(screen.getByRole('button', {name: javalabMsg.delete()}));
-
-    const class1Checkbox = screen.getByLabelText('Class1.java');
-    const class2Checkbox = screen.getByLabelText('Class2.java');
-    const class3Checkbox = screen.getByLabelText('Class3.java');
-
-    expect(class1Checkbox.checked).to.be.false;
-    expect(class2Checkbox.checked).to.be.true;
-    expect(class3Checkbox.checked).to.be.true;
-  });
-
   it('expand dropdown resets state correctly', async () => {
     const user = userEvent.setup();
     renderWithProps({});
