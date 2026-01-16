@@ -11,6 +11,11 @@ const FILE_TYPE_ICON_MAP = {
   md: {iconName: 'markdown', iconStyle: 'regular' as const, isBrand: true},
   html: {iconName: 'file-code', iconStyle: 'solid' as const, isBrand: false},
   js: {iconName: 'js', iconStyle: 'regular' as const, isBrand: true},
+  json: {
+    iconName: 'file-brackets-curly',
+    iconStyle: 'solid' as const,
+    isBrand: false,
+  },
   css: {iconName: 'css', iconStyle: 'regular' as const, isBrand: true},
   jpg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
   png: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
