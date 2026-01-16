@@ -330,7 +330,8 @@ export class FieldSounds extends Blockly.Field {
         height: 20,
       });
 
-      iconElement.setAttribute('style', 'font-family: "Font Awesome 6 Pro"');
+      iconElement.style.fontFamily = '"Font Awesome 6 Pro"';
+      iconElement.style.fontSize = '13px';
       iconElement.classList.add(SoundStyle[soundType]?.classNameFill || '');
 
       // Attach the actual text.
