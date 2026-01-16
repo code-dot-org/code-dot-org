@@ -16,7 +16,6 @@ import {
   FIELD_EFFECTS_VALUE,
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_AI_NAME,
-  FIELD_PATTERNS_VALIDATOR,
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,
   FIELD_TRIGGER_START_NAME,
@@ -25,6 +24,7 @@ import {
 } from '../constants';
 import {nextConnectionMutator} from '../extensions/nextConnectionMutator';
 import {fieldSoundsValidatorExtension} from '../extensions/fieldSoundsValidatorExtension';
+import {fieldPatternsValidatorExtension} from '../extensions/fieldPatternsValidatorExtension';
 import {
   fieldChordDefinition,
   fieldPatternDefinition,
@@ -127,7 +127,7 @@ const playPatternAtCurrentLocationSimple2 = defineBlock({
   style: 'lab_blocks',
   tooltip: 'play drums',
   helpUrl: DOCS_BASE_URL + 'play_pattern',
-  extensions: [FIELD_PATTERNS_VALIDATOR],
+  extensions: [fieldPatternsValidatorExtension],
   mutator: nextConnectionMutator,
   generator: {
     javascript(block) {
@@ -157,7 +157,7 @@ const playPatternAiAtCurrentLocationSimple2 = defineBlock({
   style: 'lab_blocks',
   tooltip: 'play AI drums',
   helpUrl: DOCS_BASE_URL + 'play_pattern_ai',
-  extensions: [FIELD_PATTERNS_VALIDATOR],
+  extensions: [fieldPatternsValidatorExtension],
   mutator: nextConnectionMutator,
   generator: {
     javascript(block) {
