@@ -363,6 +363,7 @@ namespace :seed do
        step
        oceans
        jigsaw
+       mix-move-ai-2025
        sports).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
