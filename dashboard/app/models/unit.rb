@@ -1894,7 +1894,7 @@ class Unit < ApplicationRecord
 
   # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
-    levels.merge(Level.ai_tutor_available).exists?
+    levels.merge(Level.with_ai_tutor_available).exists?
   end
 
   def has_ai_chat_tools?
