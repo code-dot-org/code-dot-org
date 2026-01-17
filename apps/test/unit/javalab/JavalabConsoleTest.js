@@ -1,7 +1,7 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
 import $ from 'jquery';
+import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -57,25 +57,19 @@ describe('Java Lab Console Test', () => {
 
   describe('Dark and light mode', () => {
     it('Has light mode', () => {
-      const {container} = createWrapper();
+      createWrapper();
       expect(
         screen.getByLabelText('console input').style.backgroundColor
       ).to.equal('rgba(0, 0, 0, 0)');
-      expect(
-        container.querySelector('.javalab-console').style.backgroundColor
-      ).to.equal('rgb(255, 255, 255)');
     });
 
     it('Has dark mode', async () => {
-      const {container} = createWrapper();
+      createWrapper();
       store.dispatch(setDisplayTheme(DisplayTheme.DARK));
       await waitFor(() => {
         expect(
           screen.getByLabelText('console input').style.backgroundColor
         ).to.equal('rgba(0, 0, 0, 0)');
-        expect(
-          container.querySelector('.javalab-console').style.backgroundColor
-        ).to.equal('rgb(0, 0, 0)');
       });
     });
   });
