@@ -1,4 +1,3 @@
-import Dialog from '@code-dot-org/component-library/dialog';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -50,7 +49,7 @@ describe('AllVocabulariesEditor', () => {
       .find('.unit-test-destroy-vocabulary')
       .first();
     removeVocabularyButton.simulate('mouseDown');
-    const removeDialog = wrapper.find(Dialog);
+    const removeDialog = wrapper.find('Dialog');
     expect(removeDialog.exists()).toBe(true);
     expect(removeDialog.text()).toEqual(
       expect.stringContaining('Delete Vocabulary')
