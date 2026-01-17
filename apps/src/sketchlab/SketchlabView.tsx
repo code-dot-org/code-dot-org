@@ -102,11 +102,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const backpackApi = useMemo(() => {
+  const backpackContext = useMemo(() => {
     // The backpack api does not work for signed-out users (it redirects to sign-in),
     // so we don't create the api instance if there is no current user.
     if (currentUserId) {
-      return new BackpackClientApi('sketchlab', null);
+      return {primaryApi: new BackpackClientApi('sketchlab', null)};
     }
     return null;
   }, [currentUserId]);
@@ -263,7 +263,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   );
 
   return (
-    <BackpackAPIContext.Provider value={backpackApi}>
+    <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
         <SketchlabTourSteps />
         <div style={{width: leftPanelWidth}} className={panelClassName}>
@@ -296,7 +296,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
                 ) =>
                   handleSaveToBackpack(
                     excalidrawApiRef.current,
-                    backpackApi,
+                    backpackContext?.primaryApi,
                     dialogControl,
                     fileList,
                     errorCallback
