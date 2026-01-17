@@ -1,8 +1,0 @@
-{
-  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "verbatimModuleSyntax": false
-  },
-  "include": ["src", "types"]
-}
