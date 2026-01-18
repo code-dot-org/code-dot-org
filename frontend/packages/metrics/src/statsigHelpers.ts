@@ -1,4 +1,7 @@
-import {getEnvironment, isProductionEnvironment} from './environment';
+import {
+  getEnvironmentFromHostname,
+  isProductionEnvironment,
+} from '@code-dot-org/core';
 
 export const getUserID: () => string | undefined = () => {
   const userIdElement = (
@@ -36,7 +39,7 @@ export const formatUserId = (userId: string | number) => {
   if (isProductionEnvironment()) {
     return userIdString.padStart(5, '0');
   } else {
-    const environment = getEnvironment();
+    const environment = getEnvironmentFromHostname();
     return `${environment}-${userIdString}`;
   }
 };

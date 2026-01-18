@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@code-dot-org/api": "workspace:*",
-    "@code-dot-org/localization": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@newrelic/browser-agent": "^1.294.0",
     "@statsig/js-client": "^3.20.2",
     "@statsig/session-replay": "^3.20.2",

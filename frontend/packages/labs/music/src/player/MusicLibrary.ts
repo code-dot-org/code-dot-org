@@ -2,7 +2,7 @@ import cloneDeep from 'lodash/cloneDeep';
 
 import type {ResponseValidator, GetResponse} from '@code-dot-org/api';
 import {HttpClient} from '@code-dot-org/api';
-import localization from '@code-dot-org/localization';
+import {localization} from '@code-dot-org/core';
 
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';

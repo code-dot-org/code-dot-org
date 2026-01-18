@@ -20,7 +20,8 @@ import {StatsigClient} from '@statsig/js-client';
 import {runStatsigSessionReplay} from '@statsig/session-replay';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
-import {isProductionEnvironment} from './environment';
+import {isProductionEnvironment} from '@code-dot-org/core';
+
 import * as experiments from './experiments';
 import {
   getUserID,

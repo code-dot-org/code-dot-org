@@ -111,6 +111,7 @@
     "@code-dot-org/audio": "workspace:*",
     "@code-dot-org/blockly-workspace": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/metrics": "workspace:*",

@@ -3,10 +3,11 @@ import type {StatsigUser, AnyStatsigOptions} from '@statsig/js-client';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
 import {
-  getEnvironment,
+  getEnvironmentFromHostname,
   isProductionEnvironment,
   isDevelopmentEnvironment,
-} from './environment';
+} from '@code-dot-org/core';
+
 import * as experiments from './experiments';
 import * as NewRelicReporter from './NewRelicReporter';
 import {
@@ -81,7 +82,7 @@ export class StatsigReporter {
       managedTestEnvironmentElement?.dataset?.managedTestServer === 'true';
     this.localMode = !(isProductionEnvironment() || managedTestEnvironment);
     this.options = {
-      environment: {tier: getEnvironment()},
+      environment: {tier: getEnvironmentFromHostname()},
     };
 
     this.initialize(this.apiKey, this.user, this.options);

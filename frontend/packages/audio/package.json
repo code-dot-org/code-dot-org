@@ -60,7 +60,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/localization": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
