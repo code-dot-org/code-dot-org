@@ -3,7 +3,7 @@ import type {FunctionComponent, ReactNode} from 'react';
 import {useEffect, useCallback, useMemo} from 'react';
 import reactStringReplace from 'react-string-replace';
 
-import localization, {useLocalization} from '@code-dot-org/localization';
+import {localization, useLocalization} from '@code-dot-org/core';
 
 import styles from './adlib.module.scss';
 

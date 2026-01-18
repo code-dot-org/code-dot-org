@@ -35,25 +35,11 @@ export default defineConfig({
     // Force workspace packages with CSS to use dist files so CSS imports are resolved correctly.
     // Source files import './index.css' which doesn't exist - CSS is only generated during build.
     alias: {
-      '@code-dot-org/component-library': path.resolve(
-        __dirname,
-        '../../component-library/dist/esm',
-      ),
-      '@code-dot-org/blockly-workspace': path.resolve(
-        __dirname,
-        '../../blockly-workspace/dist/esm',
-      ),
-      '@code-dot-org/markdown': path.resolve(
-        __dirname,
-        '../../markdown/dist/esm',
-      ),
       // Allow direct SCSS imports from source (must come before the general @code-dot-org/lab alias)
       '@code-dot-org/lab/styles/variables.scss': path.resolve(
         __dirname,
         '../base/src/components/layout/variables.scss',
       ),
-      // Use dist for compiled JS/CSS components
-      '@code-dot-org/lab': path.resolve(__dirname, '../base/dist/esm'),
     },
   },
   optimizeDeps: {

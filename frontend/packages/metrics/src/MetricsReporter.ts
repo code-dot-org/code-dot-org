@@ -1,6 +1,7 @@
+import {isDevelopmentEnvironment} from '@code-dot-org/core';
+
 import {getBrowserName} from './browserDetector';
 import DashboardMetricsApi from './DashboardMetricsApi';
-import {isDevelopmentEnvironment} from './environment';
 import {MetricsApi} from './MetricsApi';
 import {LogLevel, MetricDatum, MetricDimension, MetricUnit} from './types';
 

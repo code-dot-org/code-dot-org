@@ -3,7 +3,7 @@ import type {FunctionComponent, MutableRefObject} from 'react';
 import {useState, useEffect} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {useLocalization} from '@code-dot-org/localization';
+import {useLocalization} from '@code-dot-org/core';
 
 import {useBrowserTextToSpeech} from './BrowserTextToSpeechWrapper';
 

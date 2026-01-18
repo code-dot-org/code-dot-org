@@ -1,18 +1,16 @@
 import type * as Blockly from 'blockly/core';
 
 import {LabRegistry} from '@code-dot-org/lab';
-import {
-  DCDO,
-  environment,
-  AnalyticsReporter,
-  GoogleAnalytics,
-} from '@code-dot-org/metrics';
+import {DCDO, AnalyticsReporter, GoogleAnalytics} from '@code-dot-org/metrics';
 
 import {BlockTypes} from './blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from './blockly/constants';
 
-const {getEnvironment, isDevelopmentEnvironment, isProductionEnvironment} =
-  environment;
+import {
+  getEnvironmentFromHostname,
+  isDevelopmentEnvironment,
+  isProductionEnvironment,
+} from '@code-dot-org/core';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -332,7 +330,7 @@ export default class LabMusicMetricsReporter extends AnalyticsReporter {
     if (isProductionEnvironment()) {
       return userIdString.padStart(5, '0');
     } else {
-      const environment = getEnvironment();
+      const environment = getEnvironmentFromHostname();
       return `${environment}-${userIdString}`;
     }
   }

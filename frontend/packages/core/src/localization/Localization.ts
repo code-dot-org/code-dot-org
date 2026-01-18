@@ -211,8 +211,6 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
    * Gets the current locale as a region code.
    */
   get locale(): string {
-    // If not using LocalizeJS, then pull from the language cookie
-    // And always fall back to the DefaultLocale
     return this.Localize?.getLanguage?.() || DefaultLocale;
   }
 

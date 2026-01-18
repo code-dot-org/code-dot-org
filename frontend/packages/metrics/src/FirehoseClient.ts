@@ -9,13 +9,13 @@ import type {AWSError} from 'aws-sdk';
 import type FirehoseType from 'aws-sdk/clients/firehose';
 import type {PutRecordOutput} from 'aws-sdk/clients/firehose';
 
-import localization from '@code-dot-org/localization';
-
 import {
-  getEnvironment,
+  getEnvironmentFromHostname,
   isDevelopmentEnvironment,
   isTestEnvironment,
-} from './environment';
+  localization,
+} from '@code-dot-org/core';
+
 import {logError} from './NewRelicReporter';
 
 export interface DeviceInfo {
@@ -239,7 +239,7 @@ class FirehoseClient {
    */
   addCommonValues(data: RecordData) {
     data.created_at = new Date().toISOString();
-    data.environment = getEnvironment();
+    data.environment = getEnvironmentFromHostname();
     data.uuid = this.getAnalyticsUuid();
     data.device = JSON.stringify(this.getDeviceInfo());
     data.locale = this.getLocale();

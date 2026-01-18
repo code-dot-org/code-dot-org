@@ -15,6 +15,10 @@ the application. This includes the FontAwesome package.
 
 The [`@code-dot-org/lint-config`](./lint-config) package contains some of the base configurations for eslint, stylelint, typescript, prettier, and lint-staged.
 
+The [`@code-dot-org/core`](./core) package provides a means to interact with
+the Localization engine and aid in marking content for translation using our translation
+system (LocalizeJS).
+
 ## Component Library
 
 The [`@code-dot-org/component-library`](./component-library) package contains the basic ingredients to our UI. This
@@ -50,10 +54,6 @@ otherwise core and used by a number of other packages.
 The [`@code-dot-org/audio`](./audio) package provides a sound and music manager that can load, play, pause, and stop a variety of sounds. This package attempts to smooth over different compatibility issues across browsers and devices.
 
 The [`@code-dot-org/markdown`](./markdown) package provides our Markdown component to render markdown content with our component library typography.
-
-The [`@code-dot-org/localization`](./localization) package provides a means to interact with
-the Localization engine and aid in marking content for translation using our translation
-system (LocalizeJS).
 
 The [`@code-dot-org/metrics`](./metrics) package provides interfaces for user metrics and analytics.
 

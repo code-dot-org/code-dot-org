@@ -1,5 +1,4 @@
 export {default as DCDO} from './dcdo';
-export * as environment from './environment';
 export * as experiments from './experiments';
 export * as GoogleAnalytics from './GoogleAnalytics';
 export * as NewRelicReporter from './NewRelicReporter';
