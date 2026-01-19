@@ -1492,16 +1492,16 @@ __metadata:
     "@release-it/conventional-changelog": "npm:^10.0.0"
     "@swc/core": "npm:^1.9.3"
     "@swc/jest": "npm:^0.2.37"
-    "@testing-library/dom": "npm:^10.4.0"
-    "@testing-library/jest-dom": "npm:^6.6.3"
-    "@testing-library/react": "npm:^16.0.1"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
     "@types/identity-obj-proxy": "npm:^3"
     "@types/jest": "npm:^29.5.14"
     "@types/lodash": "npm:^4"
-    "@types/node": "npm:^22.9.0"
+    "@types/node": "catalog:"
     "@types/react": "npm:^18.3.12"
     "@types/react-dom": "npm:^18.3.1"
-    classnames: "npm:^2.5.1"
+    classnames: "catalog:"
     clean-package: "npm:^2.2.0"
     esbuild-sass-plugin: "npm:^3.3.1"
     eslint-plugin-jest: "npm:^28.9.0"
@@ -1527,10 +1527,10 @@ __metadata:
     swiper: "npm:^11.0.5"
     ts-node: "npm:^10.9.2"
     tsc-alias: "npm:^1.8.11"
-    typescript: "npm:^5.7.3"
-    vite: "npm:^7.2.7"
-    vite-plugin-dts: "npm:^4.5.4"
-    vite-plugin-externalize-deps: "npm:^0.10.0"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
     vite-plugin-lib-inject-css: "npm:^2.2.2"
   peerDependencies:
     classnames: ^2.5.1
@@ -1628,7 +1628,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     sass: "npm:^1.85.0"
-    stylelint: "npm:^16.14.1"
+    stylelint: "catalog:"
     tsup: "npm:^8.3.6"
   peerDependencies:
     react: ">=17"
@@ -1641,14 +1641,14 @@ __metadata:
   resolution: "@code-dot-org/frontend@workspace:."
   dependencies:
     "@axe-core/playwright": "npm:^4.10.1"
-    "@eslint/js": "npm:^9.39.1"
-    eslint: "npm:^9.39.1"
-    lint-staged: "npm:^15.4.3"
-    prettier: "npm:3.4.2"
+    "@eslint/js": "catalog:"
+    eslint: "catalog:"
+    lint-staged: "catalog:"
+    prettier: "catalog:"
     rimraf: "npm:^6.0.1"
     turbo: "npm:^2.6.3"
-    typescript: "npm:5.8.2"
-    typescript-eslint: "npm:^8.49.0"
+    typescript: "catalog:"
+    typescript-eslint: "catalog:"
   languageName: unknown
   linkType: soft
 
@@ -1678,22 +1678,22 @@ __metadata:
   resolution: "@code-dot-org/music-lab@workspace:packages/labs/music"
   dependencies:
     "@code-dot-org/core": "workspace:*"
-    "@eslint/js": "npm:^9.39.1"
-    "@types/node": "npm:^24.10.1"
+    "@eslint/js": "catalog:"
+    "@types/node": "catalog:"
     "@types/react": "npm:^19.2.5"
     "@types/react-dom": "npm:^19.2.3"
-    "@vitejs/plugin-react": "npm:^5.1.1"
-    eslint: "npm:^9.39.1"
-    eslint-plugin-react-hooks: "npm:^7.0.1"
-    eslint-plugin-react-refresh: "npm:^0.4.24"
-    globals: "npm:^16.5.0"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    eslint-plugin-react-refresh: "catalog:"
+    globals: "catalog:"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
-    typescript: "npm:~5.9.3"
-    typescript-eslint: "npm:^8.46.4"
-    vite: "npm:^7.2.4"
-    vite-plugin-dts: "npm:^4.5.4"
-    vite-plugin-externalize-deps: "npm:^0.10.0"
+    typescript: "catalog:"
+    typescript-eslint: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -6307,15 +6307,6 @@ __metadata:
   dependencies:
     undici-types: "npm:~6.19.8"
   checksum: 10c0/ea489ae603aa8874e4e88980aab6f2dad09c755da779c88dd142983bfe9609803c89415ca7781f723072934066f63daf2b3339ef084a8ad1a8079cf3958be243
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^24.10.1":
-  version: 24.10.1
-  resolution: "@types/node@npm:24.10.1"
-  dependencies:
-    undici-types: "npm:~7.16.0"
-  checksum: 10c0/d6bca7a78f550fbb376f236f92b405d676003a8a09a1b411f55920ef34286ee3ee51f566203920e835478784df52662b5b2af89159d9d319352e9ea21801c002
   languageName: node
   linkType: hard
 
@@ -20186,7 +20177,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.46.4, typescript-eslint@npm:^8.48.1":
+"typescript-eslint@npm:^8.48.1":
   version: 8.48.1
   resolution: "typescript-eslint@npm:8.48.1"
   dependencies:
@@ -20211,7 +20202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.7.3, typescript@npm:~5.9.3":
+"typescript@npm:^5.8.2, typescript@npm:~5.9.3":
   version: 5.9.3
   resolution: "typescript@npm:5.9.3"
   bin:
@@ -20231,7 +20222,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.7.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~5.9.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.8.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~5.9.3#optional!builtin<compat/typescript>":
   version: 5.9.3
   resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
@@ -20303,13 +20294,6 @@ __metadata:
   version: 7.14.0
   resolution: "undici-types@npm:7.14.0"
   checksum: 10c0/e7f3214b45d788f03c51ceb33817be99c65dae203863aa9386b3ccc47201a245a7955fc721fb581da9c888b6ebad59fa3f53405214afec04c455a479908f0f14
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~7.16.0":
-  version: 7.16.0
-  resolution: "undici-types@npm:7.16.0"
-  checksum: 10c0/3033e2f2b5c9f1504bdc5934646cb54e37ecaca0f9249c983f7b1fc2e87c6d18399ebb05dc7fd5419e02b2e915f734d872a65da2e3eeed1813951c427d33cc9a
   languageName: node
   linkType: hard
 
@@ -20885,61 +20869,6 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 10c0/d444a159ab8f0f854d596d1938f201b449d59ed4d336e587be9dc89005467214d85848c212c2495f76a8421372ffe4d061d023d659600f1aaa3ba5ac13e804f7
-  languageName: node
-  linkType: hard
-
-"vite@npm:^7.2.7":
-  version: 7.2.7
-  resolution: "vite@npm:7.2.7"
-  dependencies:
-    esbuild: "npm:^0.25.0"
-    fdir: "npm:^6.5.0"
-    fsevents: "npm:~2.3.3"
-    picomatch: "npm:^4.0.3"
-    postcss: "npm:^8.5.6"
-    rollup: "npm:^4.43.0"
-    tinyglobby: "npm:^0.2.15"
-  peerDependencies:
-    "@types/node": ^20.19.0 || >=22.12.0
-    jiti: ">=1.21.0"
-    less: ^4.0.0
-    lightningcss: ^1.21.0
-    sass: ^1.70.0
-    sass-embedded: ^1.70.0
-    stylus: ">=0.54.8"
-    sugarss: ^5.0.0
-    terser: ^5.16.0
-    tsx: ^4.8.1
-    yaml: ^2.4.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  peerDependenciesMeta:
-    "@types/node":
-      optional: true
-    jiti:
-      optional: true
-    less:
-      optional: true
-    lightningcss:
-      optional: true
-    sass:
-      optional: true
-    sass-embedded:
-      optional: true
-    stylus:
-      optional: true
-    sugarss:
-      optional: true
-    terser:
-      optional: true
-    tsx:
-      optional: true
-    yaml:
-      optional: true
-  bin:
-    vite: bin/vite.js
-  checksum: 10c0/0c502d9eb898d9c05061dbd8fd199f280b524bbb4c12ab5f88c7b12779947386684a269e4dd0aa424aa35bcd857f1aa44aadb9ea764702a5043af433052455b5
   languageName: node
   linkType: hard
 
