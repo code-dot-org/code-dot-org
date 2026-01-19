@@ -10,7 +10,7 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 
 export const handleSaveToBackpack = async (
   excalidrawApi: ExcalidrawImperativeAPI | undefined | null,
-  backpackApi: BackpackClientApi | null,
+  backpackApi: BackpackClientApi | undefined,
   dialogControl: DialogControlInterface,
   backpackFileList: string[],
   errorCallback: (error: string) => void

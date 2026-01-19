@@ -198,6 +198,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
+  const setBackpackTabAsActive = useCallback(
+    () => setCurrentTab(Tabs.Backpack),
+    []
+  );
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -284,7 +288,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Backpack] = (
         <BackpackPanel
           {...backpackProps}
-          openPanelCallback={() => setCurrentTab(Tabs.Backpack)}
+          openPanelCallback={setBackpackTabAsActive}
         />
       );
     }
@@ -331,6 +335,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isViewingOldVersion,
     currentTab,
     backpackProps,
+    setBackpackTabAsActive,
   ]);
 
   const hasTabs = useMemo(() => {
