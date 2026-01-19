@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-15 19:32:08 UTC",
+    "serialized_at": "2026-01-16 19:54:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -884,6 +884,17 @@
       },
       "seeding_key": {
         "activity_section.key": "0d2d594c-408e-425e-99f7-9cb408eb6592",
+        "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844"
+      }
+    },
+    {
+      "key": "fddb1b26-2e7f-41cd-bc78-51a91d67957a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson 6 prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "fddb1b26-2e7f-41cd-bc78-51a91d67957a",
         "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844"
       }
     }
@@ -1870,6 +1881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u5-l4-prototype"
+        ],
         "progression": "Lesson 4 Prototype"
       },
       "bonus": false,
@@ -1884,6 +1898,28 @@
       },
       "level_keys": [
         "aif-sem2-u5-l4-prototype"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson 6 prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-sem2-u5-l6-prototype"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "fddb1b26-2e7f-41cd-bc78-51a91d67957a"
+      },
+      "level_keys": [
+        "aif-sem2-u5-l6-prototype"
       ]
     }
   ],
@@ -2366,6 +2402,18 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "22bcae85-1848-4b12-963d-ada8e0cd0223"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-sem2-u5-l6-prototype",
+        "script_level.level_keys": [
+          "aif-sem2-u5-l6-prototype"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "fddb1b26-2e7f-41cd-bc78-51a91d67957a"
       }
     }
   ],
