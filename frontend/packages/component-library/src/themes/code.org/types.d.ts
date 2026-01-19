@@ -1,5 +1,5 @@
 /**
- * Type declarations to extend MUI's Button and IconButton components with custom sizes and colors
+ * Type declarations to extend MUI's Button, IconButton, and Breadcrumbs components with custom sizes and colors
  *
  * IMPORTANT: These type augmentations must be manually copied to apps/src/types/mui.d.ts
  * when they change. Right now, TypeScript module augmentation doesn't work across package boundaries
@@ -7,7 +7,7 @@
  *
  * To update apps types:
  * 1. Make changes to this file
- * 2. Copy the Button and IconButton declare module blocks to apps/src/types/mui.d.ts
+ * 2. Copy the Button, IconButton, and Breadcrumbs declare module blocks to apps/src/types/mui.d.ts
  * 3. Keep the source reference comment in apps/src/types/mui.d.ts pointing to this file
  *
  * If at any point we find a solution for sharing this without
@@ -15,6 +15,7 @@
  */
 
 import '@mui/material/styles';
+import '@mui/material/Breadcrumbs';
 
 declare module '@mui/material/Button' {
   interface ButtonPropsSizeOverrides {
@@ -52,5 +53,11 @@ declare module '@mui/material/IconButton' {
   // Extend IconButtonOwnProps to include variant prop
   interface IconButtonOwnProps {
     variant?: 'contained' | 'outlined' | 'text';
+  }
+}
+
+declare module '@mui/material/Breadcrumbs' {
+  interface BreadcrumbsOwnProps {
+    size?: 'xs' | 's' | 'm' | 'l';
   }
 }

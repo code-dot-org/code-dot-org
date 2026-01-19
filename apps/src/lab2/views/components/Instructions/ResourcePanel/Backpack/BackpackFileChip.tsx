@@ -31,6 +31,8 @@ interface BackpackFileChipProps extends BackpackProps {
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
   isRecentlyAdded?: boolean;
+  disableActions: boolean;
+  setActionInProgress: (inProgress: boolean) => void;
 }
 
 const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
@@ -46,6 +48,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   findIdForFileName,
   isRecentlyAdded,
   supportedFileTypes,
+  disableActions,
+  setActionInProgress,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
@@ -65,21 +69,26 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const inReadOnly = useAppSelector(isReadOnlyWorkspace);
   const isFileSupported =
     fileExtension && supportedFileTypes.includes(fileExtension);
-  // If we are in read-only mode or the file type is unsupported, disable the add button.
-  const addButtonDisabled = inReadOnly || !isFileSupported;
+  // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
+  const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
   const addButtonTooltipText = useMemo(() => {
-    if (inReadOnly) {
+    if (disableActions) {
+      return 'An operation is currently in progress';
+    } else if (inReadOnly) {
       return 'Cannot add files in read-only mode';
     } else if (!isFileSupported) {
       return 'File type not supported in this project';
     } else {
       return 'Add to project';
     }
-  }, [inReadOnly, isFileSupported]);
+  }, [disableActions, inReadOnly, isFileSupported]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
-      return `${backpackApi.getFileFetchUrl(fileName)}?cacheBust=${Date.now()}`;
+      const url = backpackApi.getFileFetchUrl(fileName);
+      if (url) {
+        return `${url}?cacheBust=${Date.now()}`;
+      }
     }
     return undefined;
     // We explicitly including `isRecentlyAdded` even though it isn't used so the
@@ -89,9 +98,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async () => {
+    setActionInProgress(true);
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
-      handleSaveSupportFile(
+      await handleSaveSupportFile(
         dialogControl,
         backpackApi,
         channelId,
@@ -102,10 +112,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         fileName,
         newFileName
       );
-      return;
-    }
-    if (newFileName !== fileName) {
-      handleSaveDuplicateFile(
+    } else if (newFileName !== fileName) {
+      await handleSaveDuplicateFile(
         dialogControl,
         backpackApi,
         channelId,
@@ -116,7 +124,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         fileName,
         newFileName
       );
-      return;
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
       await fetchAndSaveFile(
@@ -130,9 +137,11 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         fileName
       );
     }
+    setActionInProgress(false);
   };
 
   const handleDelete = async () => {
+    setActionInProgress(true);
     // Show confirmation modal
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericConfirmation,
@@ -152,9 +161,11 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Backpack file delete error', error);
+          setActionInProgress(false);
         },
         () => {
           // TODO: log to statsig
+          setActionInProgress(false);
         }
       );
     }
@@ -242,6 +253,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             size: 'xs',
           }}
           menuPlacement="right"
+          disabled={disableActions}
         />
       </div>
     </div>
