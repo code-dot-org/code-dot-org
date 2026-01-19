@@ -338,9 +338,7 @@ markdown <<MARKDOWN
 <hr>
 ---
 
-## Reflection
-
-#### Before you move on, take a moment to think about:
+>#### Before you move on, take a moment to think about:
 >- #### How these ideas will shape the way students design, build, and collaborate with AI in their web apps.
 >- #### Which practices you want to intentionally highlight or reinforce as students work through this unit?
 MARKDOWN
