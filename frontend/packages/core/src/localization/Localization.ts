@@ -134,6 +134,10 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     };
 
     this.loader = new Promise(resolve => {
+      if (typeof window === 'undefined') {
+        return;
+      }
+
       window.LocalizeLoader?.then(loadedLocalize => {
         this.Localize = loadedLocalize;
 
@@ -209,13 +213,7 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
   get locale(): string {
     // If not using LocalizeJS, then pull from the language cookie
     // And always fall back to the DefaultLocale
-    const language = this.Localize?.getLanguage?.() || DefaultLocale;
-
-    return (
-      this.localeList.find(info => info.value === language)?.value ||
-      this.localeList.find(info => info.value.startsWith(language))?.value ||
-      language
-    );
+    return this.Localize?.getLanguage?.() || DefaultLocale;
   }
 
   /**
@@ -259,6 +257,9 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     return this.on(event, listener);
   }
 
+  /**
+   * Returns the options used to initialize LocalizeJS.
+   */
   getOptions(): LocalizeOptions | undefined {
     return this.options;
   }
