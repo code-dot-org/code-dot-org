@@ -6,6 +6,10 @@
   label {
     padding: 0.25rem;
   }
+
+  .customContentWrapper {
+    width: calc(100% - 0.25rem);
+  }
 }
 
 .spinnerContainer {

@@ -1,0 +1,69 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-15T17:03:11.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Broken Password Generator</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <header>\n      <h1>Password Generator</h1>\n      <p>This app should create a password with the number of characters you enter.</p>\n    </header>\n\n    <main>\n      <section class=\"generator\">\n        <label for=\"lengthInput\">Password length:</label>\n        <input id=\"lengthInput\" type=\"number\" min=\"1\" max=\"20\" value=\"8\" />\n\n        <button id=\"generateButton\">Generate Password</button>\n\n        <div class=\"output\">\n          <p><strong>Password:</strong></p>\n          <div id=\"passwordBox\" class=\"password-box\"></div>\n          <p id=\"status\" class=\"status\"></p>\n        </div>\n      </section>\n    </main>\n\n    <script src=\"script.js\"></script>\n  </body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: Arial, Helvetica, sans-serif;\n  background-color: #f5f6fa;\n  color: #222;\n  text-align: center;\n  margin: 0;\n  padding: 0;\n}\n\nheader {\n  background-color: #1e3a8a;\n  color: white;\n  padding: 20px 10px;\n}\n\nmain {\n  display: flex;\n  justify-content: center;\n  margin-top: 30px;\n}\n\n.generator {\n  background-color: white;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  padding: 20px;\n  width: 300px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n}\n\nlabel {\n  display: block;\n  font-weight: bold;\n  margin-bottom: 6px;\n}\n\ninput[type=\"number\"] {\n  width: 60px;\n  padding: 5px;\n  text-align: center;\n  font-size: 1rem;\n  margin-bottom: 10px;\n}\n\nbutton {\n  display: block;\n  margin: 10px auto;\n  background-color: #2563eb;\n  color: white;\n  border: none;\n  border-radius: 6px;\n  padding: 8px 14px;\n  cursor: pointer;\n  font-size: 1rem;\n}\n\nbutton:hover {\n  background-color: #1d4ed8;\n}\n\n.output {\n  margin-top: 20px;\n}\n\n.password-box {\n  border: 1px solid #ccc;\n  background-color: #f0f0f0;\n  font-family: \"Courier New\", Courier, monospace;\n  padding: 10px;\n  min-height: 30px;\n  word-break: break-all;\n  border-radius: 6px;\n}\n\n.status {\n  margin-top: 10px;\n  font-weight: bold;\n}\n\nfooter {\n  margin-top: 30px;\n  color: #555;\n  font-size: 0.9rem;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Select elements\nconst input = document.getElementById(\"lengthInput\");\nconst button = document.getElementById(\"generateButton\");\nconst passwordBox = document.getElementById(\"passwordBox\");\nconst status = document.getElementById(\"status\");\n\n// Arrow function to generate a random password\nconst generatePassword = () => {\n  passwordBox.textContent = \"\";\n  status.textContent = \"\";\n\n  const length = Number(input.value);\n  const chars = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\";\n\n  let password = \"\";\n\n  for (let i = 0; i < length - 1; i++) {\n    const randomIndex = Math.floor(Math.random() * chars.length);\n    password += chars[randomIndex];\n  }\n\n  passwordBox.textContent = password;\n\n  // Show expected vs. actual length\n  status.textContent = \"Expected length: \" + length + \" | Actual length: \" + password.length;\n};\n\n// Add event listener for button\nbutton.addEventListener(\"click\", generatePassword);\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTDpXPPdPt34\ny3ooT2HHHTTGHJKHbDL5R9vokE7p6N5M4VIAykgWNfnz5waVyjlKIK+Nt+xW\n2+yxOoKJ+LY4w4lScigjC2lxx8KiAjOeyEVgKSMN30WlQzcKiH58V+n6VPff\nlxqwQQpXGb0jGzJXHhqsPyPtsFGFzpfgxNpyN4psoJqpid7gtwlDXtU7CcXi\nZVPkD1uXOa1+UAsALOjk2vguH2653BWDb7MzVhbf9y/ZxRECI4XnWUBUHnbR\n2pfKvNuKCGtdopZWdUoCVr9rzSUMSEVE3Axx6H4yWLfRmnqA5/WWcU7+Lqdg\nrkq6vAzolBFUwbIUB1YzDAUxVMURXPfQLa7YpnoEClBXZYMPggCuCMqrQsVb\nb1Ajs6GDTK5RAxR+JRa9BAxdWmIJUUzmv9vvVBsJidKpSjLP4hba1msPbV1J\nyssmZPrUduP8eM6HcB1M4yQLEuxXHXli7cfkFsoX/lCSj3rpoYXaGo9dMDTm\ngjPaEtZNHEpRGRqCcFCx6vw6e6JTfWuyCmEe3Eym3GtFGR9oCBhCS5VNPC62\nstmMk0eKSvuCEH/5H/C+SaTg08w2Q64oUVufJKaP99x9nD1VzVnX+jNmr/Pe\nA6dc6Fmgc7ChPPA7C3z7N1eDIvBzxHFQVYuf4sPvI1xczWG3bFIB410dsR9c\nJS/2/pbXlfAkQ0tB9du2JxNbDubpTCWrvNANuvZkoyy4588w7BDTaiAygabO\nfkZNHtl5jSpbOhQod0fpsyME+JxkX0+NQI6LPpieQWIJjitMHftBqLd57Bli\nz8FlZl5pgcQThBz++Cn9Gje9LJIU9KBpCPWOxu5zI9EwyuP82jp7DgaJPViK\nKjWJ/Q4g0iQf7DJ5edDamZ/665w3+MpQKzfEV8gNwds9A8zzA094K8kszhbN\nNWOuPJsmhY8flich+3jNl99RcyLGOFofd/knIcmW8Tr/C4YRNL4PKjn8VdAP\nRC+PKNekdgh+0uNx09oVLlBXEr3re2NH4YX1PNAKvU0R5DrGGB5eg4RSpYz0\n19pRnYGNkpdcJNdpg0RNHrlS9qd3VDPlfbg04orcLszGQG5c6tKpjyIp7X39\nn1sUz6qZj4Tsknjjz81pBWF0yJWEGyYrrtzvC/Lz5vg9JrErYWv2I/RzIW3G\niLvEFKPVGXMHoKfLTPQau9jbuCZmLHyX9New8+d2nnBoNKNOGKOGYLinN1e7\nM1wD0wNsx88RbiwPXynMAZkQOa4cG4NMA2h40Vu94z/IxKC/Y86q3j/qAy0n\nYZc7eGHaL5vWsaseHCQAjVoJjoULnXMEa/s5ouP6XgclD8Dpqre3buu254T5\nYXiGbVxC5uo6TPO465b56ldy7/228kf6nwm6S9vGOV5p/YyJ3sV8qQ+Eo1AH\nE8SkBjoI1/Uv0YX+L8flTofQ8sq8uZTdyR9LHwdAv948GD2BgN7EM/iYVg7H\niLivz96O+bSIteIrYNwTjkZCLdRkHYliCTpnjNN6XELhrvaUCTJxYm80YFCd\nnu6yoEfSSTzylZFfM82o5OdtbadPp7a3GH2czY9vTEFRRYI0sSm0SoxsITr7\nCFMvVrEPOYjCNzyAVR9RX0eWzvMtEGuc3fj3Uqsfd0ewCygUN2Sf0Gm/luPW\nbYUjAByohBkwLrpxGiAmEc001i0yo5p2wLWzSZpLCMxD3I/9e8FsBIt2AIhX\n/1UES48MHkP3iFmg70IHECH4vPJJDormpvgpc++cdg4FgUyBoZhH1YsW3Et1\n/guDC1zkUvNTvBUKQyxnQz1eMKwicfxhhssibk7Q8t59t91aZE4NsmJ/aeQI\nMKWOlgj4V2VuCzGyMCrpJv/Ebl8pCmtxCTr985Nmv929HvFzcDsXWCgWcvTW\ngArgCyi2uQaap07sNNJFBK20cpWCsaYcqpUSx9dCVzMaUSjfpzUllUh9ohA4\nefTP6higKkWbupnlVBC25T+ogAQbv5RfcMlP67BdIr3vCOPwMjF+0lJwEzjz\nYr605wo4KVh56rqE19nmz9X5W3EuV90lsE5/5lPxiFb1VygeqpSSZY/2h2lH\nkzXVDvcMvy36PQw5R+RODJsXBws7xGMa4EMQUUYOiPBGW6nw+SwiY2N6I6aK\nzyRDpIjwkQY9MzK5uUt8bDYsOskpPAxlgwxMa+dzovVWPB0KLd99xrpomTU+\njc6X/QiGwLbEWARq63JkaepeaP4qfLCQ1GIjLIESRIRRgOoXva5DRHf5rmUB\neQ7IozzT2kHtOvHELXlfDXLvJEXQhrVv2Z8Bdjhv6H62yrcYeW+Bx/W13rm6\n0iJ0mQ0g9DIh7t04IID0Jmrq8woP/+BTEzK7v2ZUdzX0KUiTk2/FXvJoiKAt\nzLt7aw2mwU2keOcgKnQssAyDAXEF99hbtVszIxVniBDLKiFdpF6E3WztnvP7\n/INwmc4BUn4W4bqdLZr795X9Rc89ZpFb+TyJeDKPvmU2UF/sJQLUWv8llTFR\n0aXLiXVlFkyG9yQZqxXxWIpUnSahpqDnsvvvTmpPcb25rWYK4zljcM8+nC/I\nuZFx1jy1Bc+IyHwbJI+RGGle7oRKIa2BVnQFO6Sru2sU+05Y44AwJameN1dH\nrFZMGkY9q20KW/WfOYg8RlpEivVjEFONwN2eBdQD5iJnh8ex06y1nNnZrbJA\nEAynwiavPS082uNGwC/XNZycVnNO8Qxg64As5ee4yp6LKiNQO7lr11oivC3O\nl8rIlPW0N2mhNTnE7MHDyHKyrzKW33lxjvKeLwaVGi+IuSNPhcTNAeocB39M\nEAQvBj0lXkvljdH2UPVFIxv8GDmQjrkrehPCMu5IHo8NtD+pyEZ/tv912oYd\nAvIA4uT+SRiLrqSD/Y/mrvmxvWDcC612MYRhmoKS0LSIymFqcjUXNKAaTEEm\nB4gx71+f3pW2kL8cWO1PMZwz9//16Ps4EV8bs3GZiJqUhnx5HNzi3TFxzt95\nzNfWu7w9EnP5BFInV9Lds0T4MNJTgZJ3yhfx4o4RcScMocE972NECrg1uPSg\nsGcaMSsduI2EXJLo3vCd+dB6cRLxlXsL62JV9ipNUefBgmdZ1rgpWZmmoSUW\ndy3fHjzj8KC/JLYc5v3eKKnOjW7Jf+rgZeVp9kVgvHHRK0NhIuVbwwW3PCIz\nhxxjIICLJ5HD/D6WB8ZL/Iys6goWdbe4GddtO1ZxDkKP+nSvyou888F2O/uT\nQQ4KawZSnA2smme/OYYuymrbF6FbEwREco9kzrkcdGOWnp4IbTrF/gmlHR6R\nN5aJQiHR+YBkzI8GA5DRtfMl4SjtuHLERNkDd7sjjWICGPGKCFsc8GhQNEa8\nbwG1INRbrSktc3VLhNHYoEKUpTkdiCcp8bAXptWk4CqzV8l/BLtEw+oCPRrK\n1U6xKS687I2mtjotNLlP9ss+N07orkj+YEqJpk41gFxpoKWk0t/bqVD7hpaB\nLBUCdsi1TOoKXo5DcJYPSXXHbL8De2oqSUZkFJ1ng3h9hIJLhlG7dS2wtE8j\nK0OfhLHoqUKTurNF0MEUHHqB9ZofCR1ygzp5TB/u8+wQ0inHOn2YYHY6rn6/\nJbeozKUJLBweefo78iGkLQKvMIyNkoOMK3Ue8D9syr2+9tr1VIspTxZN8V+J\n8FtT5qK0c8md8E4utX9JNki4+V+68nxvy6eBn1bCIyZdLt1r2v5wh4urdvv/\n3xUqZ5Cgxss6S7AhZa29Ez9HTjY13VhejtD9BG2xG62vj+q671J9PLtw7KGE\nOezeI2ddjPlvlPJzmgpHGrjhbWOSBFsqvHi0NAs3+m8rJTz3pxjiww+MIqTH\n/9mFjV7bMtseWu9PktCVTvfMCAmRVDW0bKl0gHh/Dq1G0ll/RTl8WH+/D/xc\nAJZCWw1/mso3O9DVZuTDEeCfxjvm/I1RcWEzeMC3XxtuPKgZLGZku/0aLpb1\n3bScr/+1Lw7kZlumuo7+Um4NAp/rbZJpdKSDHZPZQDohIfByTJOj5jj4ZknU\nEKJ00A82B/fxrj4KzcSegdATOgx3vhFsCgIzM8/wsDDkzeDtcTsyvU2AxkSm\nBoTO7psW2DO5cABohOifkfXilQNO4cA2ryeEEIS9lCL2FHqOdOjoxhyoYSdq\nHNb9eJNhokVA4U0i8aazCpVxXhCZAXVMNerTw6Fo9rU3MZyYxKh76x0eHzRR\nyo0mE+yT3pYYBx7b9TCt2Daqvy7GcDgpdYcdVUDqvKtidOcC/r3MU8uBbHp+\nf51ZF7RI3O4fevFotd+OGFFqu+P+C8BWLnJ9MswufU5IlwOopobK1QukkMdn\n9aZXHURV+7bmmUWIsJzy98JTHEFoYlX95Jsr6Rrbt59Tj0QRSHG0rPJJ/INX\nzhWovRWiZfekMCdFmtZ0vKdBCXABxY0lNx7TEVPn5U0Ehe87oJNeGfkxpiwu\nREPigM4jheG3VujUbCgldBsODoedR0arjJ43zQ42nti3+81w77F9VqOAJW/W\nKjYuoYuPchWC9VLCl/J+nDZoqh9NWMJ+rnbx/mxERoeqYpR9lfnk\n",
+    "encrypted": "false",
+    "long_instructions": "## Broken Password Generator\r\n\r\n**Role:** You are a member of a **Quality Assurance (QA)** team, your job is to test applications and products for unexpected bugs or errors. \r\n\r\n**Goal:** Fix the bug so the generated password has the same number of characters as the number you enter.\r\n\r\n---\r\n\r\n\r\n**1. Run the app and ask the AI Tutor.**\r\n\r\n* Type a number and click **Generate Password**.\r\n* Look at the bottom of the app to see the *expected* vs *actual* length.\r\n* Ask AI Tutor to walk you through the starter code:\r\n\r\n  * \"Walk me through how this loop works.\"\r\n  * \"How does the stop condition affect how many times it runs?\"\r\n\r\n**2. Find the loop.**\r\n\r\n**3. Focus on the loop variable.**\r\n\r\n* What is the loop variable in this code?\r\n* What number does it start at?\r\n* When does it stop changing?\r\n* How does that affect how many characters get added to the password?\r\n\r\n**4. Fix the bug.**\r\nChange the for-loop so it runs the correct number of times.\r\n\r\n**5. Test again.**\r\nRun the program again. Do the expected and actual lengths match?\r\n\r\n::: details [**🔎 Hint**]\r\n- Remember arrays start at index[0] and go to index[length-1].\r\n- Pay attention to the **comparison operator** on the stop value.\r\n:::\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-15T17:03:11.325+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level2-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level2-test_2025-pilot\"},{\"changed_at\":\"2026-01-15 17:32:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 15:40:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

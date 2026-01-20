@@ -81,7 +81,7 @@ export const useFileRowOptions = (
   );
   const dispatch = useAppDispatch();
 
-  const backpackApi = useBackpackAPIContext();
+  const backpackApi = useBackpackAPIContext()?.primaryApi;
 
   const {
     openConfirmDeleteFile,
@@ -117,7 +117,11 @@ export const useFileRowOptions = (
         condition: !isLocked,
         iconName: 'pencil',
         labelText: codebridgeI18n.renameFile(),
-        clickHandler: () => openRenameFilePrompt({fileId: file.id}),
+        clickHandler: () =>
+          openRenameFilePrompt({
+            fileId: file.id,
+            validFileTypes: supportedFileTypes,
+          }),
       },
       {
         condition: enableUserAddedSelectionContext(appName),

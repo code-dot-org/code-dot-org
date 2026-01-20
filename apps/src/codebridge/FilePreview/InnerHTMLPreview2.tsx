@@ -39,10 +39,8 @@ const InnerHTMLPreview = () => {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
 
-  const {serviceWorkerRegistration} = useProjectServiceWorker(
-    source,
-    parentOrigin
-  );
+  const {serviceWorkerRegistration, serviceWorkerUnavailable} =
+    useProjectServiceWorker(source, parentOrigin);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -82,6 +80,17 @@ const InnerHTMLPreview = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage, parentOrigin]);
+
+  useEffect(() => {
+    if (serviceWorkerUnavailable) {
+      window.parent.postMessage(
+        {
+          type: IframeMessageType.SERVICE_WORKER_UNAVAILABLE,
+        },
+        parentOrigin
+      );
+    }
+  }, [serviceWorkerUnavailable, parentOrigin]);
 
   useEffect(() => {
     window.addEventListener('unload', () => {
@@ -138,6 +147,15 @@ const InnerHTMLPreview = () => {
           className={moduleStyles.fileIframe}
         />
       );
+    } else if (serviceWorkerUnavailable) {
+      return (
+        <div className={moduleStyles.placeholderContainer}>
+          <CodebridgeEmptyState
+            title="Preview Unavailable"
+            description="We're sorry, the preview is unavailable in your browser. Please contact support@code.org for assistance."
+          />
+        </div>
+      );
     } else {
       return (
         <div className={moduleStyles.placeholderContainer}>
@@ -145,7 +163,13 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [allowScripts, currentFile, isLevelLoading, serviceWorkerReady]);
+  }, [
+    allowScripts,
+    currentFile,
+    isLevelLoading,
+    serviceWorkerReady,
+    serviceWorkerUnavailable,
+  ]);
 
   return getPreview();
 };

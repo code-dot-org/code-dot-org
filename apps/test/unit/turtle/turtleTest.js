@@ -1,3 +1,4 @@
+import * as loadBlocksModule from '@cdo/apps/blockly/utils/workspace/loadBlocks';
 import {Position} from '@cdo/apps/constants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
@@ -440,6 +441,9 @@ describe('Artist', () => {
         </block>`;
       newDom = undefined;
       window.Blockly = {
+        isEmbeddedWorkspace() {
+          return false;
+        },
         Xml: {
           blockSpaceToDom() {
             return parseElement(oldXml);
@@ -451,12 +455,13 @@ describe('Artist', () => {
         mainBlockSpace: {
           clear() {},
         },
-        cdoUtils: {
-          loadBlocksToWorkspace(blockspace, str) {
-            newDom = parseElement(str);
-          },
-        },
       };
+
+      jest
+        .spyOn(loadBlocksModule, 'loadBlocksToWorkspace')
+        .mockImplementation((ws, source) => {
+          newDom = parseElement(source);
+        });
     });
 
     it('does nothing if the level specifies no start position or direction', () => {

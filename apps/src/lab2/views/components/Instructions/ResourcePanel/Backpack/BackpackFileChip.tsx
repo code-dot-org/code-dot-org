@@ -13,8 +13,10 @@ import React, {useMemo} from 'react';
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -31,9 +33,11 @@ interface BackpackFileChipProps extends BackpackProps {
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
   isRecentlyAdded?: boolean;
+  disableActions: boolean;
+  setActionInProgress: (inProgress: boolean) => void;
 }
 
-const EXTENSIONS_WITH_PREVIEWS = ['PNG', 'JPG', 'JPEG'];
+const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
 
 // TODO: add statsig logging
 const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
@@ -41,12 +45,15 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   backpackApi,
   addAlert,
   validateFileName,
-  saveFile,
-  createNewFile,
+  saveFileToProject,
+  createNewProjectFile,
   findIdForFileName,
   isRecentlyAdded,
+  supportedFileTypes,
+  disableActions,
+  setActionInProgress,
 }) => {
-  const fileExtension = fileName.split('.').pop()?.toUpperCase();
+  const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
     () =>
       getFileIconNameAndStyle({
@@ -61,64 +68,83 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const dialogControl = useDialogControl();
-  // If we are in read-only mode, disable the add button.
-  const addButtonDisabled = useAppSelector(isReadOnlyWorkspace);
-  const addButtonTooltipText = addButtonDisabled
-    ? 'Cannot add files in read-only mode'
-    : 'Add to project';
+  const inReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isFileSupported =
+    fileExtension && supportedFileTypes.includes(fileExtension);
+  // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
+  const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
+  const addButtonTooltipText = useMemo(() => {
+    if (disableActions) {
+      return 'An operation is currently in progress';
+    } else if (inReadOnly) {
+      return 'Cannot add files in read-only mode';
+    } else if (!isFileSupported) {
+      return 'File type not supported in this project';
+    } else {
+      return 'Add to project';
+    }
+  }, [disableActions, inReadOnly, isFileSupported]);
 
   const filePreviewUrl = useMemo(() => {
     if (fileExtension && EXTENSIONS_WITH_PREVIEWS.includes(fileExtension)) {
-      return backpackApi.getFileFetchUrl(fileName);
+      const url = backpackApi.getFileFetchUrl(fileName);
+      if (url) {
+        return `${url}?cacheBust=${Date.now()}`;
+      }
     }
     return undefined;
-  }, [backpackApi, fileExtension, fileName]);
+    // We explicitly including `isRecentlyAdded` even though it isn't used so the
+    // cache bust suffix gets refreshed. This allows an image that's been replaced to
+    // be refreshed properly
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [backpackApi, fileExtension, fileName, isRecentlyAdded]);
 
   const handleAdd = async () => {
+    setActionInProgress(true);
     const {isSupportFileName, newFileName} = validateFileName(fileName);
     if (isSupportFileName) {
-      handleSaveSupportFile(
+      await handleSaveSupportFile(
         dialogControl,
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         newFileName
       );
-      return;
-    }
-    if (newFileName !== fileName) {
-      handleSaveDuplicateFile(
+    } else if (newFileName !== fileName) {
+      await handleSaveDuplicateFile(
         dialogControl,
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         newFileName
       );
-      return;
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
       await fetchAndSaveFile(
+        EVENTS.IMPORT_FROM_BACKPACK_NEW,
         backpackApi,
         channelId,
         addAlert,
-        saveFile,
-        createNewFile,
+        saveFileToProject,
+        createNewProjectFile,
         findIdForFileName,
         fileName,
         fileName
       );
     }
+    setActionInProgress(false);
   };
 
   const handleDelete = async () => {
+    setActionInProgress(true);
     // Show confirmation modal
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericConfirmation,
@@ -138,9 +164,14 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Backpack file delete error', error);
+          setActionInProgress(false);
         },
         () => {
           // TODO: log to statsig
+          setActionInProgress(false);
+          sendLab2AnalyticsEvent(EVENTS.DELETE_FROM_BACKPACK, {
+            fileType: fileExtension || '',
+          });
         }
       );
     }
@@ -169,7 +200,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           <StrongText>{fileName}</StrongText>
         </BodyThreeText>
         <BodyFourText className={moduleStyles.infoText}>
-          {fileExtension}
+          {fileExtension?.toUpperCase()}
         </BodyFourText>
       </div>
       <div className={moduleStyles.fileActions}>
@@ -228,6 +259,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             size: 'xs',
           }}
           menuPlacement="right"
+          disabled={disableActions}
         />
       </div>
     </div>

@@ -1,7 +1,14 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import debounce from 'lodash/debounce';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {
+  ComponentProps,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {
@@ -10,21 +17,33 @@ import GenericDialog, {
   GetButtonCallbackArgs,
 } from './GenericDialog';
 
+import moduleStyles from './generic-prompt.module.scss';
+
 const DEBOUNCE_TIME_OUT = 300;
+
+export type GenericPromptArgs = {
+  textField: string;
+  dropdown?: string;
+};
 
 export type GenericPromptProps = Pick<
   GenericDialogProps,
-  'title' | 'useModal'
+  'title' | 'useModal' | 'buttons'
 > & {
   handleConfirm?: (prompt: string) => void;
   handleCancel?: () => void;
-  placeholder?: string;
   value?: string;
   validateInput?: (
-    prompt: string
+    prompt: string,
+    dropdownValue?: string
   ) => {text: string; type: 'error' | 'warning'} | undefined;
   requiresPrompt?: boolean;
   message?: string;
+  messageMargin?: boolean;
+  textFieldProps?: Partial<ComponentProps<typeof TextField>>;
+  dropdownProps?: Partial<ComponentProps<typeof SimpleDropdown>>;
+  confirmButtonTextWithWarning?: string;
+  confirmButtonText?: string;
 };
 
 /**
@@ -35,30 +54,58 @@ export type GenericPromptProps = Pick<
 
 type GenericPromptBodyProps = {
   message?: string;
-  placeholder?: string;
+  messageMargin?: boolean;
   prompt: string;
   handleInputChange: (newInput: string) => void;
+  handleDropdownChange?: (newValue: string) => void;
   errorMessage?: string;
+  textFieldProps?: Partial<ComponentProps<typeof TextField>>;
+  dropdownProps?: Partial<ComponentProps<typeof SimpleDropdown>>;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   message,
-  placeholder,
+  messageMargin = true,
   prompt,
   handleInputChange,
+  handleDropdownChange,
   errorMessage,
+  textFieldProps,
+  dropdownProps,
 }) => {
   return (
     <>
-      {message && <BodyTwoText>{message}</BodyTwoText>}
-      <TextField
-        name="prompt-field"
-        placeholder={placeholder}
-        value={prompt}
-        onChange={e => handleInputChange(e.target.value)}
-        errorMessage={errorMessage}
-        id="uitest-prompt-field"
-      />
+      {message && (
+        <BodyTwoText
+          className={messageMargin ? moduleStyles.messageMargin : ''}
+        >
+          {message}
+        </BodyTwoText>
+      )}
+      <div className={moduleStyles.inputContainer}>
+        <TextField
+          name="prompt-field"
+          label={textFieldProps?.label || ''}
+          value={prompt}
+          onChange={e => handleInputChange(e.target.value)}
+          errorMessage={errorMessage}
+          color="gray"
+          id="uitest-prompt-field"
+          {...textFieldProps}
+        />
+        {dropdownProps?.items && (
+          <SimpleDropdown
+            name="prompt-dropdown"
+            className={moduleStyles.dropdown}
+            labelText={dropdownProps.labelText || ''}
+            items={dropdownProps.items}
+            selectedValue={dropdownProps.selectedValue!}
+            onChange={e => handleDropdownChange?.(e.target.value)}
+            color="gray"
+            {...dropdownProps}
+          />
+        )}
+      </div>
     </>
   );
 };
@@ -66,29 +113,49 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
 const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
   title,
   message,
+  messageMargin,
   handleConfirm,
   handleCancel,
-  placeholder,
   value,
   validateInput = () => undefined,
   requiresPrompt = true,
   useModal = false,
+  buttons,
+  textFieldProps,
+  dropdownProps,
+  confirmButtonTextWithWarning,
+  confirmButtonText,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
-  const prompt = (promiseArgs ?? (value || '')) as string;
+  const hasDropdown = !!dropdownProps?.items?.length;
+  const defaultPromptArgs: GenericPromptArgs = {
+    textField: value || '',
+    dropdown: dropdownProps?.selectedValue,
+  };
+  const promptArgs = hasDropdown
+    ? ((promiseArgs ?? defaultPromptArgs) as GenericPromptArgs)
+    : null;
+  const prompt = hasDropdown
+    ? promptArgs!.textField
+    : ((promiseArgs ?? (value || '')) as string);
+  const dropdownValue = promptArgs?.dropdown;
   const [validationMessage, setValidationMessage] = useState<
     {text: string; type: 'error' | 'warning'} | undefined
   >(undefined);
 
   const debouncedErrorHandler = useMemo(() => {
-    return debounce((newInput: string) => {
-      setValidationMessage(validateInput(newInput));
+    return debounce((newInput: string, currentDropdownValue?: string) => {
+      setValidationMessage(validateInput(newInput, currentDropdownValue));
     }, DEBOUNCE_TIME_OUT);
   }, [setValidationMessage, validateInput]);
 
   const handleInputChange = useCallback(
     (newInput: string) => {
-      setPromiseArgs(newInput);
+      if (hasDropdown) {
+        setPromiseArgs({...promptArgs, textField: newInput});
+      } else {
+        setPromiseArgs(newInput);
+      }
       // if the user has typed something in and we do not currently have an error,
       // then use the debounced handler with the delay.
       //
@@ -96,17 +163,28 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       // Otherwise, if there is no input or the user already has an error, then we want to
       // validate immediately (in an attempt to clear the error), so use the non-debounced version.
       if (newInput.length && !validationMessage?.text?.length) {
-        debouncedErrorHandler(newInput);
+        debouncedErrorHandler(newInput, dropdownValue);
       } else {
-        setValidationMessage(validateInput(newInput));
+        setValidationMessage(validateInput(newInput, dropdownValue));
       }
     },
     [
       setPromiseArgs,
+      hasDropdown,
+      promptArgs,
+      dropdownValue,
       validationMessage?.text?.length,
       debouncedErrorHandler,
       validateInput,
     ]
+  );
+
+  const handleDropdownChange = useCallback(
+    (newValue: string) => {
+      setPromiseArgs({...promptArgs, dropdown: newValue});
+      setValidationMessage(validateInput(prompt, newValue));
+    },
+    [setPromiseArgs, promptArgs, validateInput, prompt]
   );
 
   // fire the handleInputChange callback once upon loading. This'll populate the given prompt into the promiseArgs
@@ -123,8 +201,8 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     ({closeDialog, closeType, callback, disabled}: GetButtonCallbackArgs) =>
     () => {
       if (closeType === 'confirm') {
-        const validationError = validateInput(prompt);
-        if (validationError) {
+        const validationError = validateInput(prompt, dropdownValue);
+        if (validationError && validationError.type === 'error') {
           setValidationMessage(validationError);
           return;
         }
@@ -140,6 +218,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     };
 
   const hasError = validationMessage?.type === 'error';
+  const hasWarning = validationMessage?.type === 'warning';
 
   return (
     <GenericDialog
@@ -148,18 +227,32 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
       bodyComponent={
         <GenericPromptBody
           message={message}
-          placeholder={placeholder}
+          messageMargin={messageMargin}
           prompt={prompt}
           handleInputChange={handleInputChange}
+          handleDropdownChange={handleDropdownChange}
           errorMessage={validationMessage?.text}
+          textFieldProps={textFieldProps}
+          dropdownProps={{
+            ...dropdownProps,
+            selectedValue: dropdownValue,
+          }}
         />
       }
       buttons={{
         confirm: {
+          ...buttons?.confirm,
           callback: () => handleConfirm?.(prompt),
           disabled: hasError || (requiresPrompt && !prompt.length),
+          text:
+            confirmButtonTextWithWarning && hasWarning
+              ? confirmButtonTextWithWarning
+              : confirmButtonText,
         },
-        cancel: {callback: () => handleCancel?.()},
+        cancel: {
+          ...buttons?.cancel,
+          callback: () => handleCancel?.(),
+        },
       }}
       getButtonCallback={getButtonCallback}
     />

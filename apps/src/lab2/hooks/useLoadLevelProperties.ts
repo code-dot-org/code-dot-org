@@ -28,7 +28,7 @@ export default function useLoadLevelProperties() {
     const {scriptName, currentLevelId, lessons, currentLessonId} = progress;
     const lessonPosition = lessons?.find(
       lesson => lesson.id === currentLessonId
-    )?.relative_position;
+    )?.position;
     if (scriptName && lessonPosition) {
       return `/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
     }
