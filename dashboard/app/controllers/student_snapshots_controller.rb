@@ -188,7 +188,11 @@ class StudentSnapshotsController < ApplicationController
           result.empty? ? nil : result.to_i
         end
         level_result[:student_result] = student_result
-        level_result[:status] = student_user_level&.best_result && student_user_level.best_result >= 100 ? "correct" : "incorrect"
+
+        level_result[:status] = "unsubmitted"
+        unless student_result.empty?
+          level_result[:status] = student_user_level&.best_result && student_user_level.best_result >= 100 ? "correct" : "incorrect"
+        end
       end
     else
       level_result[:status] = "unsubmitted"
