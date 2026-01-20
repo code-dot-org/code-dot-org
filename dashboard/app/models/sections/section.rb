@@ -427,7 +427,6 @@ class Section < ApplicationRecord
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
         is_assigned_csa: assigned_csa?,
-        is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
@@ -481,6 +480,7 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
       }
     end
   end
@@ -567,6 +567,7 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
         }
       )
     end
@@ -697,11 +698,11 @@ class Section < ApplicationRecord
   end
 
   def assigned_essential_ai_chat?
-    script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
+    !!(script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?)
   end
 
   def assigned_any_ai_chat?
-    script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
+    !!(script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

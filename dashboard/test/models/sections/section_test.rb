@@ -532,7 +532,6 @@ class SectionTest < ActiveSupport::TestCase
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
@@ -581,7 +580,6 @@ class SectionTest < ActiveSupport::TestCase
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
@@ -635,7 +633,6 @@ class SectionTest < ActiveSupport::TestCase
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         participant_type: 'student',
         sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
@@ -690,7 +687,6 @@ class SectionTest < ActiveSupport::TestCase
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
@@ -736,7 +732,6 @@ class SectionTest < ActiveSupport::TestCase
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         participant_type: 'student',
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
@@ -806,6 +801,7 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -839,6 +835,7 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -960,7 +957,6 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
@@ -972,6 +968,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1021,7 +1018,6 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         is_assigned_single_unit_course: true,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
@@ -1033,6 +1029,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1087,7 +1084,6 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
@@ -1100,6 +1096,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1155,7 +1152,6 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         is_assigned_single_unit_course: true,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
@@ -1167,6 +1163,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1213,7 +1210,6 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_essential_ai_chat: false,
         is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
@@ -1225,6 +1221,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)

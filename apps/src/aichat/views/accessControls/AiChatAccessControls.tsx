@@ -11,6 +11,8 @@ import React, {useEffect, useState} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
@@ -64,11 +66,13 @@ interface AiChatAccessControlsProps {
 const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
   sectionId,
 }) => {
-  const sectionList = useAppSelector(state => state.teacherSections.sections);
-  const section = sectionList[sectionId];
+  const section = useAppSelector(selectedSectionSelector);
   if (!section) {
     throw new Error('Section does not exist');
   }
+  const isLoadingSectionData = useAppSelector(
+    state => state.teacherSections.isLoadingSectionData
+  );
 
   const [accessToggle, setAccessToggle] = useState(
     accessToggleState(/*section.aiChatAccessLevel*/ defaultAccessLevel)
@@ -137,42 +141,50 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
         <BodyThreeText className={style.subHeader}>
           Control access to AI features and tools for the entire class section.
         </BodyThreeText>
-        {shouldShowAlert && (
-          <Alert
-            text="This class section is assigned a course that requires the use of AI tools to complete. If essential features are disabled, students won't be able to complete some levels in the assigned course."
-            type={alertTypes.danger}
-            link={{
-              href: AI_SETTINGS_SUPPORT_LINK,
-              text: 'Learn more',
-            }}
-            className={style.alert}
-          />
-        )}
-        <div className={classNames(style.rowContainer, style.withBorderTop)}>
-          <BodyTwoText noMargin className={style.semiBold}>
-            AI Chat Tools
-          </BodyTwoText>
-          {!accessToggle && (
-            <div className={style.toolTipContainer}>
-              <Checkbox
-                label="Allow essential AI features only"
-                name="section_essential_ai_checkbox"
-                onChange={handleEssentialOnlyToggle}
-                checked={essentialOnlyCheckbox}
+        {isLoadingSectionData ? (
+          <Spinner />
+        ) : (
+          <>
+            {shouldShowAlert && (
+              <Alert
+                text="This class section is assigned a course that requires the use of AI tools to complete. If essential features are disabled, students won't be able to complete some levels in the assigned course."
+                type={alertTypes.danger}
+                link={{
+                  href: AI_SETTINGS_SUPPORT_LINK,
+                  text: 'Learn more',
+                }}
+                className={style.alert}
               />
-              <InfoTooltipIcon
-                id="section-essential-ai-checkbox-info"
-                tooltipText="The assigned course requires the use of AI tools. This option will give students access to only the AI tools needed to complete the assigned course."
+            )}
+            <div
+              className={classNames(style.rowContainer, style.withBorderTop)}
+            >
+              <BodyTwoText noMargin className={style.semiBold}>
+                AI Chat Tools
+              </BodyTwoText>
+              {!accessToggle && (
+                <div className={style.toolTipContainer}>
+                  <Checkbox
+                    label="Allow essential AI features only"
+                    name="section_essential_ai_checkbox"
+                    onChange={handleEssentialOnlyToggle}
+                    checked={essentialOnlyCheckbox}
+                  />
+                  <InfoTooltipIcon
+                    id="section-essential-ai-checkbox-info"
+                    tooltipText="The assigned course requires the use of AI tools. This option will give students access to only the AI tools needed to complete the assigned course."
+                  />
+                </div>
+              )}
+              <Toggle
+                id="uitest-ai-chat-section-access-toggle"
+                name="aiChatSectionAccessToggle"
+                checked={accessToggle}
+                onChange={handleAccessToggle}
               />
             </div>
-          )}
-          <Toggle
-            id="uitest-ai-chat-section-access-toggle"
-            name="aiChatSectionAccessToggle"
-            checked={accessToggle}
-            onChange={handleAccessToggle}
-          />
-        </div>
+          </>
+        )}
       </div>
     </div>
   );
