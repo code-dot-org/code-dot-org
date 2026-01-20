@@ -12,7 +12,9 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
 
   let(:email) {Faker::Internet.unique.email}
   let!(:student) {create(:student, current_sign_in_at: inactive_since - 1.day)}
-  let!(:teacher) {create(:teacher, current_sign_in_at: inactive_since - 1.day)}
+  let!(:teacher) {create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: user_data_retention_status)}
+  let!(:user_data_retention_status) {create(:user_data_retention_status, deletion_warning_email_sent_at: deletion_warning_email_sent_at)}
+  let(:deletion_warning_email_sent_at) {described_class::DELETION_WARNING_GRACE_PERIOD.ago - 1.day}
 
   let(:expect_event_logging) do
     Metrics::Events.expects(:log_event).with(
@@ -74,7 +76,27 @@ class User::InactiveUserDeleterTest < ActiveJob::TestCase
       _(active_user.deleted?).must_equal false
     end
 
+    it 'does not delete inactive teachers who have not been sent deletion warning email' do
+      teacher_no_warning = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: nil))
+      delete_inactive_users
+      teacher_no_warning.reload
+      _(teacher_no_warning.deleted?).must_equal false
+    end
+
+    it 'does not delete inactive teachers who have been sent deletion warning email less than 30 days ago' do
+      teacher_recent_warning = create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: described_class::DELETION_WARNING_GRACE_PERIOD.ago + 1.day))
+      delete_inactive_users
+      teacher_recent_warning.reload
+      _(teacher_recent_warning.deleted?).must_equal false
+    end
+
     it 'increments num_accounts_deleted' do
+      delete_inactive_users
+      _(described_instance.send(:num_accounts_deleted)).must_equal 2
+    end
+
+    it 'correctly increments num_accounts_deleted when deleting inactive teachers with mixed retention statuses' do
+      create(:teacher, current_sign_in_at: inactive_since - 1.day, user_data_retention_status: create(:user_data_retention_status, deletion_warning_email_sent_at: described_class::DELETION_WARNING_GRACE_PERIOD.ago + 1.day))
       delete_inactive_users
       _(described_instance.send(:num_accounts_deleted)).must_equal 2
     end

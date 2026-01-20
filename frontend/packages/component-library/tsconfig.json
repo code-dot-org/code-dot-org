@@ -1,10 +1,7 @@
 {
-  "extends": "@code-dot-org/lint-config/typescript/tsconfig.react.json",
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["src", "types"],
-  "exclude": ["codemods"]
+  "files": [],
+  "references": [
+    {"path": "./tsconfig.app.json"},
+    {"path": "./tsconfig.node.json"}
+  ]
 }
