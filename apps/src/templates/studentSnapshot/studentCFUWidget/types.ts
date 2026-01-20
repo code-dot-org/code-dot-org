@@ -1,8 +1,10 @@
+export type CFULevelType = 'Multi' | 'Match' | 'FreeResponse';
+
 export interface CFULevel {
   id: number;
   name: string;
   display_name: string;
-  type: string;
+  type: CFULevelType;
   key?: string;
   script_level_id: number;
   progression?: string;
@@ -23,3 +25,9 @@ export interface CFULevelResponse {
   submitted?: boolean;
   timestamp?: string;
 }
+
+export type StatusBucket =
+  | 'correct'
+  | 'partially_correct'
+  | 'incorrect'
+  | 'incomplete';
