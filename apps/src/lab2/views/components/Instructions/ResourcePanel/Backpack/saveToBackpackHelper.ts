@@ -1,5 +1,7 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
@@ -25,6 +27,7 @@ export const handleSaveSupportFile = async (
   });
   if (results.type === 'confirm') {
     await fetchAndSaveFile(
+      EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
       addAlert,
@@ -60,6 +63,7 @@ export const handleSaveDuplicateFile = async (
   if (results.type === 'confirm') {
     // Import as replacement
     await fetchAndSaveFile(
+      EVENTS.IMPORT_FROM_BACKPACK_REPLACE,
       backpackApi,
       channelId,
       addAlert,
@@ -71,6 +75,7 @@ export const handleSaveDuplicateFile = async (
   } else if (results.type === 'neutral') {
     // Import as new file
     await fetchAndSaveFile(
+      EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
       addAlert,
@@ -84,6 +89,7 @@ export const handleSaveDuplicateFile = async (
 };
 
 export const fetchAndSaveFile = async (
+  successMetric: string,
   backpackApi: BackpackClientApi,
   channelId: string,
   addAlert: (type: 'success' | 'danger', message: string) => void,
@@ -136,11 +142,17 @@ export const fetchAndSaveFile = async (
   if (newFileName) {
     createNewFile(newFileName, fileContent, url);
     addAlert('success', successMessage);
+    sendLab2AnalyticsEvent(successMetric, {
+      fileType: newFileName.split('.').pop()?.toLowerCase() || '',
+    });
   } else {
     const fileId = findIdForFileName(selectedFileName);
     if (fileId) {
       saveFile(fileId, fileContent, url);
       addAlert('success', successMessage);
+      sendLab2AnalyticsEvent(successMetric, {
+        fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+      });
     } else {
       // If for some reason we can't find the file to replace, show an error.
       // This should not happen, but could theoretically happen if the project was updated while
