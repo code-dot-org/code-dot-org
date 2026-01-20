@@ -12,7 +12,7 @@ const FILE_TYPE_ICON_MAP = {
   html: {iconName: 'file-code', iconStyle: 'solid' as const, isBrand: false},
   js: {iconName: 'js', iconStyle: 'regular' as const, isBrand: true},
   json: {
-    iconName: 'file-brackets-curly',
+    iconName: 'brackets-curly',
     iconStyle: 'solid' as const,
     isBrand: false,
   },
