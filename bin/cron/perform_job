@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'active_support/core_ext/hash/keys'
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
+require 'active_support/core_ext/hash/keys'
 require 'json'
 require 'optparse'
 
