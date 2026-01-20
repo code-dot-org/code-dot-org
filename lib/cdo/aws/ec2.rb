@@ -3,30 +3,54 @@ require 'uri'
 
 module AWS
   module EC2
-    REQUEST_TIMEOUT = 10 # seconds
+    METADATA_IP = '169.254.169.254'.freeze
+    TOKEN_URL = "http://#{METADATA_IP}/latest/api/token".freeze
+    METADATA_URL = "http://#{METADATA_IP}/latest/meta-data/".freeze
 
-    INSTANCE_ID_URI = URI('http://169.254.169.254/latest/meta-data/instance-id').freeze
-    REGION_URI = URI('http://169.254.169.254/latest/meta-data/placement/region').freeze
+    REQUEST_TIMEOUT = 5
+    TOKEN_TTL = 6.hours
 
     def self.instance_id
-      return @instance_id if defined? @instance_id
-      @instance_id = http_get(INSTANCE_ID_URI)
+      return @instance_id if defined?(@instance_id) && @instance_id
+      # Fetch metadata and fall back to nil if unreachable
+      @instance_id = fetch_metadata('instance-id')
     end
 
     def self.region
-      return @region if defined? @region
-      @region = http_get(REGION_URI)
+      return @region if defined?(@region) && @region
+      @region = fetch_metadata('placement/region')
     end
 
-    private_class_method def self.http_get(uri)
-      http = Net::HTTP.new(uri.host, uri.port)
+    private_class_method def self.fetch_metadata(path)
+      token = fetch_token
+      return nil unless token # IMDSv2 requires a token; fail if not obtained
 
-      # Sets a short timeout to fail faster when it is not executed on an EC2 Instance
+      uri = URI.join(METADATA_URL, path)
+      response = http_request(Net::HTTP::Get, uri, {'X-aws-ec2-metadata-token' => token})
+
+      # Ensure we return nil for 404s or other non-200 responses
+      response&.code == '200' ? response.body : nil
+    end
+
+    private_class_method def self.fetch_token
+      uri = URI(TOKEN_URL)
+      headers = {'X-aws-ec2-metadata-token-ttl-seconds' => TOKEN_TTL.to_s}
+
+      response = http_request(Net::HTTP::Put, uri, headers)
+      response&.code == '200' ? response.body : nil
+    end
+
+    private_class_method def self.http_request(method_class, uri, headers = {})
+      http = Net::HTTP.new(uri.host, uri.port)
       http.open_timeout = REQUEST_TIMEOUT
       http.read_timeout = REQUEST_TIMEOUT
 
-      http.request_get(uri.path).body
-    rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
+      request = method_class.new(uri.path)
+      headers.each {|k, v| request[k] = v}
+
+      http.request(request)
+    rescue StandardError => exception
+      Honeybadger.notify(exception) if defined?(Honeybadger)
       nil
     end
   end
