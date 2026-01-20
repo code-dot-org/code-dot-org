@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import AddResourceDialog from '@cdo/apps/levelbuilder/lesson-editor/AddResourceDialog';
 import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
@@ -51,7 +52,7 @@ describe('AddResourceDialog', () => {
       .mockClear()
       .mockImplementation();
 
-    await React.act(() => {
+    await act(() => {
       instance.setState({
         name: 'my resource name',
         url: 'code.org',

@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import {KeyCodes} from '@cdo/apps/constants';
@@ -64,11 +65,11 @@ describe('The DebugConsole component when the console is enabled', () => {
 
   it('jumps to bottom on componentDidUpdate if log output has changed', async () => {
     expect(jumpToBottomSpy).not.toHaveBeenCalled();
-    await React.act(() => {
+    await act(() => {
       getStore().dispatch(actions.attach(newJSInterpreter()));
     });
     expect(jumpToBottomSpy).not.toHaveBeenCalled();
-    await React.act(() => {
+    await act(() => {
       getStore().dispatch(actions.appendLog({output: 1 + 1}));
     });
     expect(jumpToBottomSpy).toHaveBeenCalledTimes(1);
@@ -189,7 +190,7 @@ describe('The DebugConsole component when the console is enabled', () => {
 
     describe('when input originates from code workspace console.logging', () => {
       it('a logged array prints an array with an expander icon', () => {
-        React.act(() => {
+        act(() => {
           getStore().dispatch(
             actions.appendLog({
               output: ['test'],
@@ -201,7 +202,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
 
       it('a logged string prints a string without an arrow', () => {
-        React.act(() => {
+        act(() => {
           getStore().dispatch(
             actions.appendLog({
               output: 'hello world',
@@ -213,7 +214,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
 
       it('a logged integer or mathematical operation prints an integer without an arrow', () => {
-        React.act(() => {
+        act(() => {
           getStore().dispatch(
             actions.appendLog({
               output: 1 + 1,
@@ -225,7 +226,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
 
       it('a logged object prints an object with an expandable arrow', () => {
-        React.act(() => {
+        act(() => {
           getStore().dispatch(
             actions.appendLog({
               output: {foo: 'bar'},
@@ -239,7 +240,7 @@ describe('The DebugConsole component when the console is enabled', () => {
 
     describe('when input originates from the command prompt in the debug console', () => {
       it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', async () => {
-        await React.act(() => {
+        await act(() => {
           getStore().dispatch(
             actions.appendLog({
               input: '["test"]',
@@ -256,7 +257,7 @@ describe('The DebugConsole component when the console is enabled', () => {
 
       it('the original string is prepended with >, and the interpreted string is prepended with <', async () => {
         var input = 'hello world';
-        await React.act(() => {
+        await act(() => {
           getStore().dispatch(
             actions.appendLog({
               input: input,
@@ -272,7 +273,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
 
       it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', async () => {
-        await React.act(() => {
+        await act(() => {
           getStore().dispatch(
             actions.appendLog({
               input: '1 + 1',
@@ -288,7 +289,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
 
       it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', async () => {
-        await React.act(() => {
+        await act(() => {
           getStore().dispatch(
             actions.appendLog({
               input: "{foo: 'bar'}",
@@ -359,7 +360,7 @@ describe('The DebugConsole component when the console is enabled', () => {
     });
 
     it('warning debug output will change background color to lightest yellow', async () => {
-      await React.act(() => {
+      await act(() => {
         getStore().dispatch(actions.appendLog({output: 'test normal text'}));
         getStore().dispatch(
           actions.appendLog({output: 'test warning text'}, 'WARNING')
@@ -371,7 +372,7 @@ describe('The DebugConsole component when the console is enabled', () => {
     });
 
     it('error debug output will change background color to lightest red', async () => {
-      await React.act(() => {
+      await act(() => {
         getStore().dispatch(actions.appendLog({output: 'test normal text'}));
         getStore().dispatch(
           actions.appendLog({output: 'test warning text'}, 'WARNING')

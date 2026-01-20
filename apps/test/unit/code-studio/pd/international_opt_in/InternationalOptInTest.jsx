@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import InternationalOptIn from '@cdo/apps/code-studio/pd/international_opt_in/InternationalOptIn';
 
@@ -57,7 +58,7 @@ describe('InternationalOptInTest', () => {
         expect(node.prop('disabled')).toBe(true);
       });
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'selected country'}});
       });
 
@@ -75,7 +76,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCity')).toHaveLength(0);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCountry: 'someplace other than Colombia'},
         });
@@ -86,7 +87,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCity')).toHaveLength(0);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Colombia'}});
       });
 
@@ -102,7 +103,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
       expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCountry: 'someplace other than Colombia'},
         });
@@ -111,7 +112,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolDepartment')).toHaveLength(0);
       expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Colombia'}});
       });
 
@@ -121,7 +122,7 @@ describe('InternationalOptInTest', () => {
 
     it('requires each Colombian school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Colombia'}});
       });
 
@@ -131,7 +132,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(true);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolDepartment: 'department', ...wrapper.state().data},
         });
@@ -143,7 +144,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(true);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolMunicipality: 'municipality', ...wrapper.state().data},
         });
@@ -155,7 +156,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(false);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCity: 'city', ...wrapper.state().data},
         });
@@ -199,7 +200,7 @@ describe('InternationalOptInTest', () => {
         },
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Colombia'}});
       });
 
@@ -221,7 +222,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
 
       // after selecting a department, municipality becomes available
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolDepartment: 'department 1', ...wrapper.state().data},
         });
@@ -238,7 +239,7 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // selecting a different department will change the municipalities available
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolDepartment: 'department 2'},
         });
@@ -257,7 +258,7 @@ describe('InternationalOptInTest', () => {
       // likewise, municipality and city selections unlock in turn
       expect(wrapper.find('select#schoolCity').children()).toHaveLength(2);
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {
             ...wrapper.state().data,
@@ -267,7 +268,7 @@ describe('InternationalOptInTest', () => {
       });
       expect(wrapper.find('select#schoolCity').children()).toHaveLength(4);
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolCity: 'city 2-1-1'},
         });
@@ -285,7 +286,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('input#schoolName')).toHaveLength(1);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCountry: 'someplace other than Chile'},
         });
@@ -295,7 +296,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('input#schoolName')).toHaveLength(1);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Chile'}});
       });
 
@@ -311,7 +312,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCommune')).toHaveLength(0);
       expect(wrapper.find('select#schoolId')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCountry: 'someplace other than Chile'},
         });
@@ -321,7 +322,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCommune')).toHaveLength(0);
       expect(wrapper.find('select#schoolId')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Chile'}});
       });
 
@@ -332,7 +333,7 @@ describe('InternationalOptInTest', () => {
 
     it('requires each Chilean school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Chile'}});
       });
 
@@ -340,7 +341,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
       expect(wrapper.find('select#schoolId').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolDepartment: 'department', ...wrapper.state().data},
         });
@@ -350,7 +351,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
       expect(wrapper.find('select#schoolId').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCommune: 'commune', ...wrapper.state().data},
         });
@@ -360,7 +361,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
       expect(wrapper.find('select#schoolId').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolName: 'name', ...wrapper.state().data},
         });
@@ -402,7 +403,7 @@ describe('InternationalOptInTest', () => {
         },
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Chile'}});
       });
 
@@ -422,7 +423,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolId').children()).toHaveLength(2);
 
       // after selecting a department, municipality becomes available
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolDepartment: 'department 1', ...wrapper.state().data},
         });
@@ -439,7 +440,7 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // selecting a different department will change the communes available
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolDepartment: 'department 2'},
         });
@@ -458,14 +459,14 @@ describe('InternationalOptInTest', () => {
       // likewise, name and id selections unlock in turn
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
       expect(wrapper.find('select#schoolId').children()).toHaveLength(2);
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolCommune: 'commune 2-1'},
         });
       });
       expect(wrapper.find('select#schoolName').children()).toHaveLength(4);
       expect(wrapper.find('select#schoolId').children()).toHaveLength(2);
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolName: 'name 2-1-1'},
         });
@@ -483,7 +484,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('input#schoolName')).toHaveLength(1);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCountry: 'someplace other than Uzbekistan'},
         });
@@ -493,7 +494,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('input#schoolName')).toHaveLength(1);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
       });
 
@@ -509,7 +510,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolCountry: 'someplace other than Uzbekistan'},
         });
@@ -519,7 +520,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolMunicipality')).toHaveLength(0);
       expect(wrapper.find('select#schoolName')).toHaveLength(0);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
       });
 
@@ -531,7 +532,7 @@ describe('InternationalOptInTest', () => {
     it('requires each Uzbekistan school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
       });
 
@@ -540,7 +541,7 @@ describe('InternationalOptInTest', () => {
       );
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolDepartment: 'department', ...wrapper.state().data},
         });
@@ -551,7 +552,7 @@ describe('InternationalOptInTest', () => {
       );
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolMunicipality: 'district', ...wrapper.state().data},
         });
@@ -582,7 +583,7 @@ describe('InternationalOptInTest', () => {
         },
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      React.act(() => {
+      act(() => {
         wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
       });
 
@@ -603,7 +604,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
 
       // after selecting a department, district becomes available
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {schoolDepartment: 'department 1', ...wrapper.state().data},
         });
@@ -620,7 +621,7 @@ describe('InternationalOptInTest', () => {
       ]);
 
       // selecting a different department will change the districts available
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolDepartment: 'department 2'},
         });
@@ -638,7 +639,7 @@ describe('InternationalOptInTest', () => {
 
       // after selecting a district, school becomes available
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
-      React.act(() => {
+      act(() => {
         wrapper.setState({
           data: {...wrapper.state().data, schoolMunicipality: 'district 2-1'},
         });

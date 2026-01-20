@@ -1,6 +1,7 @@
 import {render, waitFor} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
@@ -121,7 +122,7 @@ describe('InlineAudio', function () {
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
-    await React.act(() => {
+    await act(() => {
       component.instance().toggleAudio();
     });
     waitFor(() => {

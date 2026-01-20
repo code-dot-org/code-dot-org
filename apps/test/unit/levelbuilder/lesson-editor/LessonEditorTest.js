@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -253,7 +254,7 @@ describe('LessonEditor', () => {
 
     clock = sinon.useFakeTimers(new Date('2020-12-01'));
     const expectedLastSaved = Date.now();
-    await React.act(() => {
+    await act(() => {
       server.respond();
     });
     clock.tick(50);
@@ -291,7 +292,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    await React.act(() => {
+    await act(() => {
       server.respond();
     });
     lessonEditor.update();
@@ -391,7 +392,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    await React.act(() => {
+    await act(() => {
       server.respond();
     });
 

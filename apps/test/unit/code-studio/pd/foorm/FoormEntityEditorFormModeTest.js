@@ -1,6 +1,7 @@
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -112,7 +113,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('can save draft form', () => {
     const wrapper = createWrapper();
 
-    React.act(() => {
+    act(() => {
       store.dispatch(setFormData(sampleDraftFormData));
 
       server.respondWith('PUT', `/foorm/forms/0/update_questions`, [
@@ -126,14 +127,14 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
-    React.act(() => {
+    act(() => {
       server.respond();
     });
     saveBar.update();
@@ -148,7 +149,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('can publish form', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(sampleDraftFormData)));
+    act(() => store.dispatch(setFormData(sampleDraftFormData)));
 
     const publishUrl = '/foorm/forms/0/publish';
     server.respondWith('PUT', publishUrl, [
@@ -175,7 +176,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // simulate save click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    React.act(() => {
+    act(() => {
       saveBar.instance().save(publishUrl);
 
       server.respond();
@@ -192,7 +193,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('shows save error', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(sampleDraftFormData)));
+    act(() => store.dispatch(setFormData(sampleDraftFormData)));
 
     server.respondWith('PUT', `/foorm/forms/0/update_questions`, [
       500,
@@ -204,14 +205,14 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
-    React.act(() => server.respond());
+    act(() => server.respond());
     wrapper.update();
     saveBar.update();
 
@@ -228,12 +229,12 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('save published form pops up warning message', () => {
     const wrapper = createWrapper();
 
-    React.act(() => {
+    act(() => {
       store.dispatch(setFormData(sampleDraftFormData));
     });
 
     const url = '/foorm/forms/1/update_questions';
-    React.act(() => {
+    act(() => {
       server.respondWith('PUT', url, [
         200,
         {'Content-Type': 'application/json'},
@@ -246,7 +247,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveButton = saveBar.find('button').at(1);
     expect(saveButton.text().includes('Save')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
@@ -261,7 +262,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // simulate save click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    React.act(() => {
+    act(() => {
       saveBar.instance().save(url);
 
       server.respond();
@@ -278,7 +279,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('shows save as new version button for latest version', async () => {
     const wrapper = createWrapper();
 
-    await React.act(() => store.dispatch(setFormData(samplePublishedFormData)));
+    await act(() => store.dispatch(setFormData(samplePublishedFormData)));
     wrapper.update();
 
     const saveBarButtons = wrapper
@@ -301,7 +302,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     });
     const wrapper = createWrapper({saveBar: SaveBarNotLatestVersion});
 
-    React.act(() => store.dispatch(setFormData(samplePublishedFormData)));
+    act(() => store.dispatch(setFormData(samplePublishedFormData)));
     wrapper.update();
 
     const saveBarButtons = wrapper
@@ -316,7 +317,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('hides publish button for published survey', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(samplePublishedFormData)));
+    act(() => store.dispatch(setFormData(samplePublishedFormData)));
     wrapper.update();
 
     const saveBarButtons = wrapper
@@ -333,14 +334,14 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('can cancel save published form', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(samplePublishedFormData)));
+    act(() => store.dispatch(setFormData(samplePublishedFormData)));
     wrapper.update();
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
@@ -355,7 +356,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    React.act(() => {
+    act(() => {
       saveBar.instance().handleSaveCancel();
     });
     saveBar.update();
@@ -370,14 +371,14 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('can cancel publish form', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(sampleDraftFormData)));
+    act(() => store.dispatch(setFormData(sampleDraftFormData)));
     wrapper.update();
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Publish')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
@@ -392,7 +393,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    React.act(() => {
+    act(() => {
       saveBar.instance().handleSaveCancel();
     });
     saveBar.update();
@@ -407,7 +408,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('can save new survey', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(sampleNewFormData)));
+    act(() => store.dispatch(setFormData(sampleNewFormData)));
     wrapper.update();
 
     server.respondWith('POST', `/foorm/forms`, [
@@ -424,7 +425,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     // click save button
     const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
@@ -441,7 +442,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     // which is outside the wrapper.
     saveBar.instance().saveNewForm();
 
-    React.act(() => server.respond());
+    act(() => server.respond());
     saveBar.update();
 
     expect(saveBar.find('FontAwesome').length).to.equal(0);
@@ -459,7 +460,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   it('can cancel save new survey', () => {
     const wrapper = createWrapper();
 
-    React.act(() => store.dispatch(setFormData(sampleNewFormData)));
+    act(() => store.dispatch(setFormData(sampleNewFormData)));
 
     // expect to see no form name
     expect(wrapper.find('FoormEditorHeader').find('h2').length).to.equal(0);
@@ -469,7 +470,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     // click save button
     const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => saveButton.simulate('click'));
+    act(() => saveButton.simulate('click'));
     wrapper.update();
 
     // check the spinner is showing
@@ -484,7 +485,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    React.act(() => saveBar.instance().handleNewFormSaveCancel());
+    act(() => saveBar.instance().handleNewFormSaveCancel());
     wrapper.update();
 
     saveBar.update();

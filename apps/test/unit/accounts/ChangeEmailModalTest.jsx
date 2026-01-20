@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeEmailModal from '@cdo/apps/accounts/ChangeEmail/ChangeEmailModal';
@@ -54,7 +55,7 @@ describe('ChangeEmailModal', () => {
       beforeEach(() => wrapper.setProps({userType}));
 
       it('disables everything and shows spinner when saving', () => {
-        React.act(() => {
+        act(() => {
           wrapper.setState({saveState: 'saving'});
         });
         expect(emailInput(wrapper)).to.have.attr('disabled');
@@ -69,7 +70,7 @@ describe('ChangeEmailModal', () => {
       });
 
       it('shows unknown error text when an unknown error occurs', () => {
-        React.act(() => {
+        act(() => {
           wrapper.setState({saveState: 'unknown-error'});
         });
         expect(wrapper.text()).to.include(
@@ -87,7 +88,7 @@ describe('ChangeEmailModal', () => {
 
       describe('validation', () => {
         it('checks that email is present', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: '',
@@ -103,7 +104,7 @@ describe('ChangeEmailModal', () => {
         });
 
         it('checks that email is valid', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: 'invalidEmail@nowhere',
@@ -122,7 +123,7 @@ describe('ChangeEmailModal', () => {
           const email = 'validEmail@example.com';
           const hashedEmail = hashEmail(email);
           wrapper.setProps({currentHashedEmail: hashedEmail});
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: email,
@@ -140,7 +141,7 @@ describe('ChangeEmailModal', () => {
         it('reports email server errors', () => {
           const serverError = 'test-server-error';
 
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: 'new@example.com',
@@ -157,7 +158,7 @@ describe('ChangeEmailModal', () => {
         });
 
         it('checks that password is present if user has a password', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: 'new@example.com',
@@ -176,7 +177,7 @@ describe('ChangeEmailModal', () => {
           wrapper = mount(
             <ChangeEmailModal {...DEFAULT_PROPS} isPasswordRequired={false} />
           );
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: 'new@example.com',
@@ -193,7 +194,7 @@ describe('ChangeEmailModal', () => {
 
         it('reports password server errors', () => {
           const serverError = 'test-password-server-error';
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: 'new@example.com',
@@ -211,7 +212,7 @@ describe('ChangeEmailModal', () => {
 
         if ('teacher' === userType) {
           it('checks that emailOptIn is present', () => {
-            React.act(() => {
+            act(() => {
               wrapper.setState({
                 values: {
                   newEmail: 'new@example.com',
@@ -228,7 +229,7 @@ describe('ChangeEmailModal', () => {
 
           it('reports emailOptIn server errors', () => {
             const serverError = 'test-email-opt-in-server-error';
-            React.act(() => {
+            act(() => {
               wrapper.setState({
                 values: {
                   newEmail: 'new@example.com',
@@ -246,7 +247,7 @@ describe('ChangeEmailModal', () => {
         }
 
         it('disables the submit button when validation errors are present', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: '',
@@ -260,7 +261,7 @@ describe('ChangeEmailModal', () => {
         });
 
         it('enables the submit button form passes validation', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               values: {
                 newEmail: 'me@example.com',
@@ -276,7 +277,7 @@ describe('ChangeEmailModal', () => {
 
       describe('changes clear server errors', () => {
         it('on email', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               serverErrors: {
                 newEmail: 'test-server-error',
@@ -293,7 +294,7 @@ describe('ChangeEmailModal', () => {
         });
 
         it('on password', () => {
-          React.act(() => {
+          act(() => {
             wrapper.setState({
               serverErrors: {
                 currentPassword: 'test-server-error',
@@ -311,7 +312,7 @@ describe('ChangeEmailModal', () => {
 
         if (userType === 'teacher') {
           it('on emailOptIn', () => {
-            React.act(() => {
+            act(() => {
               wrapper.setState({
                 serverErrors: {
                   emailOptIn: 'test-server-error',
@@ -330,7 +331,7 @@ describe('ChangeEmailModal', () => {
       describe('onSubmitFailure', () => {
         it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
           expect(wrapper.state().saveState).to.equal('initial');
-          React.act(() => {
+          act(() => {
             wrapper.instance().onSubmitFailure(null, {});
           });
           expect(wrapper.state().saveState).to.equal('unknown-error');
@@ -343,7 +344,7 @@ describe('ChangeEmailModal', () => {
             currentPassword: '',
             emailOptIn: '',
           });
-          React.act(() => {
+          act(() => {
             wrapper.instance().onSubmitFailure({
               serverErrors: {
                 newEmail: 'test-email-server-error',

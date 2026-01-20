@@ -1,6 +1,7 @@
 import CodeMirror from 'codemirror';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
 
@@ -73,7 +74,7 @@ describe('DropletPaletteSelector', () => {
           )
         ).toBe(true);
 
-        await React.act(() => {
+        await act(() => {
           editor.setValue(JSON.stringify({a: null, b: null}));
         });
         selector.update();
@@ -95,7 +96,7 @@ describe('DropletPaletteSelector', () => {
             palette={{a: null, b: null}}
           />
         );
-        await React.act(() => {
+        await act(() => {
           editor.setValue('invalud json');
         });
         selector.update();
@@ -118,7 +119,7 @@ describe('DropletPaletteSelector', () => {
           />
         );
 
-        await React.act(() => {
+        await act(() => {
           selector
             .find('select')
             .props()
@@ -137,7 +138,7 @@ describe('DropletPaletteSelector', () => {
           )
         ).toBe(true);
 
-        await React.act(() => {
+        await act(() => {
           selector
             .find('select')
             .props()

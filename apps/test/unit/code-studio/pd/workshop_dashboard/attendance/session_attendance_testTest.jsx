@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {SessionAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
@@ -99,7 +100,7 @@ describe('SessionAttendance', () => {
     expect(server.requests).to.have.length(1);
 
     // After the server responds
-    await React.act(() => {
+    await act(() => {
       server.respond();
     });
     wrapper.update();
@@ -130,7 +131,7 @@ describe('SessionAttendance', () => {
     );
 
     // After the server responds
-    await React.act(() => {
+    await act(() => {
       server.respond();
     });
     wrapper.update();
@@ -158,7 +159,7 @@ describe('SessionAttendance', () => {
     );
 
     // After the server responds
-    await React.act(() => server.respond());
+    await act(() => server.respond());
     wrapper.update();
     // Has expected columns:
     expect(

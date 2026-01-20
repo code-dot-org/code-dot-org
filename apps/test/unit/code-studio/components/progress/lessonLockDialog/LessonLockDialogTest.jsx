@@ -1,5 +1,6 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -271,13 +272,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
     const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
-    React.act(() => {
+    act(() => {
       lockLessonButton.simulate('click');
       wrapper.update();
     });
 
     const saveButton = wrapper.find('button').at(7);
-    await React.act(() => {
+    await act(() => {
       expect(saveButton.text() === 'Save');
       saveButton.simulate('click');
       wrapper.update();

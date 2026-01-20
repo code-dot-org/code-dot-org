@@ -2,6 +2,7 @@ import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -104,7 +105,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
   const fakeSurveysAppearedIn = ['surveys/pd/a_form.0'];
 
   it('can save existing library question in existing library', () => {
-    React.act(() => {
+    act(() => {
       store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
       store.dispatch(setLibraryData(sampleExistingLibraryData));
 
@@ -119,12 +120,12 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => {
+    act(() => {
       saveButton.simulate('click');
     });
     wrapper.update();
 
-    React.act(() => {
+    act(() => {
       // expect first response checking whether library question appears in any published forms
       server.respond();
     });
@@ -135,7 +136,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     expect(saveBar.state().isSaving).to.equal(true);
 
     // expect second response (upon successful save of the library question)
-    React.act(() => {
+    act(() => {
       server.respond();
       saveBar.update();
     });
@@ -226,7 +227,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   it('save published form pops up warning message', () => {
-    React.act(() => {
+    act(() => {
       store.dispatch(setLibraryData(sampleExistingLibraryData));
       store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
 
@@ -246,13 +247,13 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => {
+    act(() => {
       saveButton.simulate('click');
     });
     wrapper.update();
 
     // server tells us that library question appears in a published form
-    React.act(() => {
+    act(() => {
       server.respond();
     });
     saveBar.update();
@@ -265,7 +266,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   it('shows save error', () => {
-    React.act(() => {
+    act(() => {
       store.dispatch(setLibraryData(sampleExistingLibraryData));
       store.dispatch(setLibraryQuestionData(sampleExistingLibraryQuestionData));
 
@@ -280,7 +281,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => {
+    act(() => {
       saveButton.simulate('click');
 
       // expect first response checking whether library question appears in any published forms
@@ -292,7 +293,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(saveBar.state().isSaving).to.equal(true);
 
-    React.act(() => {
+    act(() => {
       server.respond();
     });
     saveBar.update();
@@ -309,7 +310,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   it('can cancel save new survey', () => {
-    React.act(() => {
+    act(() => {
       store.dispatch(setLibraryData(sampleExistingLibraryData));
     });
 
@@ -318,7 +319,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // click save button
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
-    React.act(() => {
+    act(() => {
       saveButton.simulate('click');
 
       // expect first response checking whether library question appears in any published forms
@@ -338,7 +339,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // simulate cancel click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
-    React.act(() => {
+    act(() => {
       saveBar.instance().handleNewLibraryQuestionSaveCancel();
 
       saveBar.update();

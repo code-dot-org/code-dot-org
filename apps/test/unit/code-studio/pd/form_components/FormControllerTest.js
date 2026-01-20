@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
@@ -95,7 +96,7 @@ describe('FormController', () => {
     });
 
     it('Has back and next buttons on middle pages', () => {
-      React.act(() => {
+      act(() => {
         form.setState({currentPage: 1});
       });
 
@@ -105,7 +106,7 @@ describe('FormController', () => {
     });
 
     it('Has a back and submit button on the last page', () => {
-      React.act(() => {
+      act(() => {
         form.setState({currentPage: 2});
       });
       const buttons = form.find('button');
@@ -151,7 +152,7 @@ describe('FormController', () => {
 
         beforeEach(() => {
           server = sinon.fakeServer.create();
-          React.act(() => {
+          act(() => {
             form.setState({currentPage: 2});
           });
         });
@@ -187,7 +188,7 @@ describe('FormController', () => {
         it('Re-enables the submit button on error', () => {
           validateCurrentPageRequiredFields.returns(true);
 
-          React.act(() => {
+          act(() => {
             server.respondWith([
               400,
               {'Content-Type': 'application/json'},
@@ -251,7 +252,7 @@ describe('FormController', () => {
         stubRequiedFields(['included', 'excluded']);
         DummyPage1.associatedFields = ['included'];
 
-        React.act(() => {
+        act(() => {
           const validated = form.instance().validateCurrentPageRequiredFields();
           expect(validated).to.be.false;
         });
@@ -259,7 +260,7 @@ describe('FormController', () => {
       });
 
       it('Strips string values on current page and sets empty ones to null', () => {
-        React.act(() => {
+        act(() => {
           form.setState({
             data: {
               textFieldWithSpace: '   trim   ',
@@ -279,7 +280,7 @@ describe('FormController', () => {
           'onlySpaces',
         ];
 
-        React.act(() => {
+        act(() => {
           form.instance().validateCurrentPageRequiredFields();
         });
         expect(form.state('data')).to.deep.eql({
@@ -310,7 +311,7 @@ describe('FormController', () => {
           'page1Field2',
           'page1Field3',
         ];
-        React.act(() => {
+        act(() => {
           form.setState({
             data: {
               ...pageData,
@@ -319,7 +320,7 @@ describe('FormController', () => {
           });
         });
 
-        React.act(() => {
+        act(() => {
           form.instance().validateCurrentPageRequiredFields();
         });
         expect(processPageData).to.be.calledOnce;
@@ -341,7 +342,7 @@ describe('FormController', () => {
       });
 
       it('Saves form data to session storage', () => {
-        React.act(() => {
+        act(() => {
           form.setState({
             data: {
               existingField1: 'existing value 1',
@@ -361,7 +362,7 @@ describe('FormController', () => {
       });
 
       it('Saves current page to session storage', () => {
-        React.act(() => {
+        act(() => {
           form.setState({
             data: {
               existingField1: 'existing value 1',

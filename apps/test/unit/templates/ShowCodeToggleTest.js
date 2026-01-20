@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
@@ -271,7 +272,7 @@ describe('The ShowCodeToggle component', () => {
     describe('And studioApp() is subsequently initialized with enableShowCode turned off', () => {
       beforeEach(() => {
         config.enableShowCode = false;
-        React.act(() => {
+        act(() => {
           studioApp().init(config);
         });
         toggle.update();
@@ -319,7 +320,7 @@ describe('The ShowCodeToggle component', () => {
     beforeEach(() => {
       toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       config.enableShowCode = false;
-      React.act(() => {
+      act(() => {
         studioApp().init(config);
       });
       toggle.update();

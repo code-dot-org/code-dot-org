@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import * as Sticky from 'reactabular-sticky';
 import {createStore, combineReducers} from 'redux';
@@ -167,7 +168,7 @@ describe('ProgressTableView', () => {
         .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      React.act(() => {
+      act(() => {
         container.onToggleRow(rowData.student.id);
       });
 
@@ -240,7 +241,7 @@ describe('ProgressTableView', () => {
         .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      React.act(() => {
+      act(() => {
         container.onToggleRow(rowData.student.id);
       });
 
@@ -258,7 +259,7 @@ describe('ProgressTableView', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    React.act(() => {
+    act(() => {
       wrapper.onToggleRow(rowData.student.id);
     });
     expect(wrapper.state.rows).toHaveLength(STUDENTS.length + numDetailRows);
@@ -272,11 +273,11 @@ describe('ProgressTableView', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    React.act(() => {
+    act(() => {
       wrapper.onToggleRow(rowData.student.id);
     });
     expect(wrapper.state.rows).toHaveLength(STUDENTS.length + numDetailRows);
-    React.act(() => {
+    act(() => {
       wrapper.onToggleRow(rowData.student.id);
     });
     expect(wrapper.state.rows).toHaveLength(STUDENTS.length);
