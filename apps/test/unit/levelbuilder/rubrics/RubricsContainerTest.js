@@ -93,20 +93,20 @@ describe('RubricsContainerTest', () => {
 
     expect(
       screen.getByRole('heading', {name: 'Create your rubric'})
-    ).toBeInTheDocument();
-    expect(screen.getByRole('combobox')).toBeInTheDocument();
+    ).not.toBeNull();
+    expect(screen.getByRole('combobox')).not.toBeNull();
     expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
     expect(
       screen.getByRole('button', {name: 'Add new Key Concept'})
-    ).toBeInTheDocument();
+    ).not.toBeNull();
     expect(
-      screen.getAllByRole('button', {name: 'Delete key concept'})
-    ).toHaveLength(1);
+      screen.getByRole('button', {name: 'Delete key concept'})
+    ).not.toBeNull();
     expect(
       screen.getByRole('button', {name: 'Save your rubric'})
-    ).toBeInTheDocument();
+    ).not.toBeNull();
   });
 
   it('renders "the components on the page correctly for an exisiting rubric"', () => {
@@ -114,7 +114,7 @@ describe('RubricsContainerTest', () => {
 
     expect(
       screen.getByRole('heading', {name: 'Modify your rubric'})
-    ).toBeInTheDocument();
+    ).not.toBeNull();
     expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
@@ -123,7 +123,7 @@ describe('RubricsContainerTest', () => {
     );
     expect(
       screen.getByRole('button', {name: 'Save your rubric'})
-    ).toBeInTheDocument();
+    ).not.toBeNull();
   });
 
   it('adds a new learning goal on "Add new Key Concept" button click', async () => {
