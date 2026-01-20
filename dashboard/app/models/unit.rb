@@ -18,6 +18,7 @@
 #  participant_audience   :string(255)
 #  original_unit_group_id :integer
 #  hide_within_course     :boolean          default(FALSE)
+#  md5                    :string(255)
 #
 # Indexes
 #
