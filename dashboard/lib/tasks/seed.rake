@@ -88,7 +88,6 @@ namespace :seed do
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
-    aiml-2021
     algebra
     allthehiddenthings
     allthelessonplans
@@ -327,7 +326,6 @@ namespace :seed do
        csp-2024
        csp-2025
        20-hour
-       aiml-2021
        algebra
        allthelessonplans
        alltheselfpacedplthings
