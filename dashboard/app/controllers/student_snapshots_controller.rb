@@ -100,9 +100,7 @@ class StudentSnapshotsController < ApplicationController
           cfu_responses_data << build_cfu_level_group_response(level, script_level, student, script)
         else
           user_level = user_levels_by_level_id[level.id]
-          student_answer = user_level&.level_source&.data
-
-          response_summary = summarize_cfu_level_result(level, student_answer)
+          response_summary = summarize_cfu_level_result(level, user_level)
 
           cfu_responses_data << {
             level_id: level.id,
@@ -144,7 +142,7 @@ class StudentSnapshotsController < ApplicationController
   # Summarizes a single CFU level result for a given student answer.
   # This mirrors summarize_level_result from Api::V1::AssessmentsController
   # but without aggregated stats.
-  private def summarize_cfu_level_result(level, student_answer)
+  private def summarize_cfu_level_result(level, student_user_level)
     level_result = {
       type: (
         case level
@@ -160,6 +158,8 @@ class StudentSnapshotsController < ApplicationController
         end
       )
     }
+
+    student_answer = student_user_level&.level_source&.data
 
     if student_answer
       case level
@@ -185,12 +185,7 @@ class StudentSnapshotsController < ApplicationController
           result.empty? ? nil : result.to_i
         end
         level_result[:student_result] = student_result
-
-        option_status = []
-        student_result.each_with_index do |answer, index|
-          option_status[index] = answer.nil? ? "unsubmitted" : "submitted"
-        end
-        level_result[:status] = option_status.presence || "unsubmitted"
+        level_result[:status] = student_user_level&.best_result && student_user_level.best_result >= 100 ? "correct" : "incorrect"
       end
     else
       level_result[:status] = "unsubmitted"
@@ -216,9 +211,7 @@ class StudentSnapshotsController < ApplicationController
     parent_ul = latest_by_level_id[level_group.id]
 
     sublevel_results = sublevels.map do |sublevel|
-      ul = latest_by_level_id[sublevel.id]
-      student_answer = ul&.level_source&.data
-      summarize_cfu_level_result(sublevel, student_answer).merge(level_id: sublevel.id)
+      summarize_cfu_level_result(sublevel, latest_by_level_id[sublevel.id]).merge(level_id: sublevel.id)
     end
 
     {
