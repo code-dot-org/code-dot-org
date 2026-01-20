@@ -237,8 +237,6 @@ namespace :seed do
   #   all script files.
   def update_scripts(opts = {})
     script_files = opts[:script_files] || SCRIPTS_GLOB
-
-    # Load existing MD5 hashes (following parse_dsl_files pattern)
     script_md5s_by_name = Unit.pluck(:name, :md5).to_h
 
     script_files.each do |filepath|
