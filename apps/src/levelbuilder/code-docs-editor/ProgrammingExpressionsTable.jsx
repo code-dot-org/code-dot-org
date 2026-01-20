@@ -4,8 +4,8 @@ import React, {useEffect, useState} from 'react';
 import * as Table from 'reactabular-table';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import PaginationWrapper from '@cdo/apps/sharedComponents/PaginationWrapper';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
