@@ -36,10 +36,12 @@ class StudentSnapshotsController < ApplicationController
     lesson = Lesson.find_by(id: lesson_id)
     return render json: {error: "Can't find Lesson id=#{lesson_id}"}, status: :bad_request unless lesson
 
+    lesson_level_ids = lesson.levels&.map(&:id)&.presence || []
     cfu_levels_data = []
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
         question_text, answers = get_level_question_and_answers(level)
+        level_index_in_lesson = lesson_level_ids.index(level.id)
 
         cfu_levels_data << {
           id: level.id,
@@ -48,6 +50,7 @@ class StudentSnapshotsController < ApplicationController
           type: level.type,
           key: level.try(:key),
           script_level_id: script_level.id,
+          level_position: level_index_in_lesson ? level_index_in_lesson + 1 : -1,
           progression: script_level.progression,
           progression_display_name: script_level.progression ? I18n.t(script_level.progression, scope: %i[data progressions], default: script_level.progression) : nil,
           question_text: question_text,
