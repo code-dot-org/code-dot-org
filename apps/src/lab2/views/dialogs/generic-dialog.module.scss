@@ -1,6 +1,18 @@
 .genericDialog {
   font-size: 1rem;
 
+  // Override default FontAwesome styles
+  // causing the icon to be left-aligned.
+  > i {
+    display: flex;
+  }
+
+  // If the dialog is marked as destructive, change
+  // the icon background color to the error color.
+  &.destructive > i {
+    background-color: var(--background-error-primary);
+  }
+
   // Add padding around labels inside the dialog so the focus
   // state styles are not cut off when elements are focused.
   label {
