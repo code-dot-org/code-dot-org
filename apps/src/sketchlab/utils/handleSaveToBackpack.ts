@@ -1,11 +1,13 @@
 import {exportToBlob} from '@excalidraw/excalidraw';
 import {ExcalidrawImperativeAPI} from '@excalidraw/excalidraw/types/types';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogControlInterface,
   DialogType,
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 export const handleSaveToBackpack = async (
@@ -60,6 +62,9 @@ export const handleSaveToBackpack = async (
     files: excalidrawApi.getFiles(),
     exportPadding: 10,
   });
+  const eventName = backpackFileList.includes(newFileName)
+    ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+    : EVENTS.SAVE_TO_BACKPACK_NEW;
   backpackApi.saveBlobFile(
     newFileName,
     blobToSave,
@@ -69,7 +74,8 @@ export const handleSaveToBackpack = async (
       );
     },
     () => {
-      // Backpack component handles success.
+      // Backpack component handles success, just log to statsig.
+      sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
     }
   );
 };
