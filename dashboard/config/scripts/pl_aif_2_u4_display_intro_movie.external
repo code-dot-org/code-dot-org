@@ -1,0 +1,165 @@
+name 'pl-aif-2-U4-display-intro-movie'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Types of Loops
+
+#### Not all loops repeat in the same way. What makes loops different is how the repetition is controlled.
+
+#### In most programs, iteration falls into one of two common categories.
+
+<div style="
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+">
+
+  <!-- Count-Controlled Iteration Card -->
+  <div style="
+    background-color: #F5F7F8;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+  ">
+
+<p style="font-size: 14pt; font-weight: bold; margin: 0; ">
+      Count-Controlled Iteration<br>(For Loop)
+    </p>
+
+<ul style="
+  list-style-position: outside; padding-left: 16px; margin: 12px 0 0 0;">
+
+
+<li style="font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;  padding-left: 0;
+">
+        Repeats a set of steps a <strong>specific number of times</strong>
+      </li>
+
+<li style="  font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0;">
+        The number of repetitions is known before the loop starts
+      </li>
+
+ <li style="  font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0; font-style: italic;">
+         “How many times should this happen?”
+      </li>
+
+ </ul>
+
+  </div>
+
+  <!-- Condition-Controlled Iteration Card -->
+  <div style="
+    background-color: #F5F7F8;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+  ">
+
+ <p style="font-size: 14pt; font-weight: bold; margin: 0;">
+      Condition-Controlled Iteration<br>(While Loop)
+    </p>
+
+<ul style="
+  list-style-position: outside; padding-left: 16px; margin: 12px 0 0 0;">
+
+<li style="  font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0;">
+        Repeats a set of steps <strong>as long as a condition is true</strong>
+      </li>
+
+ <li style="  font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0;">
+        The number of repetitions is not known ahead of time
+      </li>
+
+ <li style="  font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0; font-style: italic;">
+         “When should this stop?”
+      </li>
+
+</ul>
+
+  </div>
+
+</div>
+
+## Let's look at the flow charts
+#### Below are two flowcharts that show iteration in action.
+#### Before labeling them, take a moment to study how each one repeats.
+---
+
+
+## Flowchart A
+
+<img src="https://images.code.org/d80a0b774a89fa285465c1a50a654d79-image-1768419690819.png" alt="flowchart for a for loop" width="350px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
+
+#### **Think about:**
+
+- #### What causes the steps to repeat?
+
+- #### Is the number of repetitions fixed?
+
+- #### What makes the loop stop?
+
+ #### 👉 **Which type of loop do you think this represents?**
+
+
+
+<div style="clear:both;"></div>
+
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    <p style = "font-size: 14pt;">
+  Flowchart A represents a <b>count-controlled loop (for loop) </b> because the number of repetitions is determined in advance.
+</p>
+</div>
+</details>
+
+
+---
+
+## Flowchart B
+
+<img src="https://images.code.org/4afcb2bde4184c0c4735dcfb18d4a4a2-image-1768418982827.png" alt="flowchart for a while" width="350px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
+
+#### **Think about:**
+
+- #### Does the loop repeat a known number of times?
+
+- #### Is the number of repetitions fixed?
+
+- #### Or does it continue until a condition changes?
+
+ #### 👉 **Which type of loop do you think this represents?**
+
+
+
+<div style="clear:both;"></div>
+
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    <p style = "font-size: 14pt;">
+    Flowchart B represents a <b>condition-controlled loop (while loop) </b> because the steps repeat as long as a condition remains true.
+</p>
+</div>
+</details>
+
+
+## Next up
+
+#### Let's see what this looks like in code starting with for loops. 
+
+![](https://images.code.org/7d57afeca63698b5ed2a4d26f03e039f-image-1768601417811.png)
+MARKDOWN

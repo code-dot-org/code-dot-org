@@ -265,7 +265,7 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
       <div className={moduleStyles.fieldRow}>
         <ImageInput
           initialImageUrl={panel.imageUrl}
-          updateImageUrl={imageUrl => {
+          updateImageUrl={(imageUrl: string) => {
             updatePanel({...panel, imageUrl: imageUrl});
           }}
           dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}

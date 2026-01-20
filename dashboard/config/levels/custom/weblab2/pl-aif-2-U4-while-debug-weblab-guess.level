@@ -1,0 +1,71 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-16T16:36:57.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Guessing Game (While Loop)</title>\n</head>\n<body>\n  <h2>🎯 Guess the Number (1–10)</h2>\n  <p>Secret Number: <span id=\"targetNumber\"></span></p>\n\n  <input id=\"guessInput\" placeholder=\"Enter your guess\">\n  <p id=\"output\"></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n\n\n\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: \"Segoe UI\", Arial, sans-serif;\n  background-color: #f7f8fc;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.container {\n  background: #fff;\n  border-radius: 12px;\n  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\n  padding: 30px;\n  width: 320px;\n  text-align: center;\n}\n\nh1 {\n  margin-top: 0;\n  color: #0066cc;\n}\n\n.game-box {\n  margin-top: 20px;\n}\n\ninput {\n  padding: 8px;\n  width: 80%;\n  border-radius: 6px;\n  border: 1px solid #ccc;\n  margin-bottom: 10px;\n}\n\nbutton {\n  padding: 8px 16px;\n  border: none;\n  border-radius: 6px;\n  background-color: #0066cc;\n  color: white;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #0055aa;\n}\n\n#output {\n  margin-top: 15px;\n  font-weight: bold;\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const output = document.getElementById(\"output\");\nconst guessInput = document.getElementById(\"guessInput\");\nconst targetNumber = document.getElementById(\"targetNumber\");\n\n// Generate random number between 1–10\nconst secretNumber = Math.floor(Math.random() * 10) + 1;\ntargetNumber.textContent = `${secretNumber}`; // for teaching visibility\n\nlet attempts = 0; // persist across guesses\n\n// --- GAME LOGIC USING A WHILE LOOP ---\nconst playGame = () => {\n  let playingGame = true;\n  let guess = Number(guessInput.value);\n\n  // Only run if a valid number is entered\n  if (!guess) {\n    output.textContent = \"\";\n    return;\n  }\n\n   while (playingGame) {\n    while (guess !== secretNumber) {\n      attempts++;\n\n      if (guess < secretNumber) {\n        output.textContent = \"Too low! Try again.\";\n      } else {\n        output.textContent = \"Too high! Try again.\";\n      }\n\n      // break so it doesn't lock up the browser\n      break;\n    }\n\n    //BUGGY CODE\n    // if (guess === secretNumber) {\n    //   attempts++;\n    //   playingGame = true;\n    // }\n\n    // stop the outer while loop after one iteration\n    break;\n  }\n};\n\n// 👇 Run game every time the user types\nguessInput.addEventListener(\"input\", playGame);\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "long_instructions": "## Guess the Number\r\n\r\n### Do This\r\n\r\n1. Find the buggy code in the `while` loop inside the `playGame()` function. It has been commented out to not crash the browser.\r\n\r\n2. Use AI to help you rewrite the code so that it shows a message when the player guesses correctly and then ends the game. \r\n\r\n3. Make sure to test your loop so it stops when the user is correct and doesn’t become an infinite loop.\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>How do I update a state variable for the current guess?</li>\r\n  \t\t<li>How do I end the loop when the user has guessed correctly?</li>\r\n    </ol>\r\n\r\n</details>\r\n\r\n---\r\n::: details [**🔎 Show me how**]\r\n![](https://images.code.org/ee8d8a484e3213d3c73b58596e4d40ae-image-1768583498621.png)\r\n*Expand the instruction panel to enlarge the image.*\r\n:::\r\n\r\n",
+    "bubble_choice_description": "Debug the **while loop** so it runs correctly.",
+    "display_name": "Guess the Number",
+    "thumbnail_url": "https://images.code.org/ffa1d8548264aaced3460124471e93b7-number.png",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTAl3kWNLD2U\n4QZTsqysWtXtoY1DMbFwgr0EP2ig0Drqg+GIST/lc4dzkFgxtLEIPK/QcpCu\nqCIxlZ4zIj2nPb3WQ5F/B9RQEOYHcJIZFPIlQ3XmYA8dIxCilFRJF492a8w+\nsdkN4aG9LSxBuVSFNB4Fbi0Bs47Bsa+YUBF6YG3frpm32L00vMKKnZEzpV9K\n4cDeNUWzs+I4NBHP0jEUUDRRnEVF24YYL+/rQpodRInqY7UXympCFAauSGFt\nu6LzkTle/ncV04mkWrQuO0E6ir33iCzzTI4F0db8xB6JErQqGgZ0UeHXGOUO\nJWuAij/LjrF+HxKoD64A0p8JillbcRKr3tpcfuEJINhZKa2wMBgBFj3rcQ3d\n0vsVz/g5zwMhWZsTSF/Lwx3As41UjJiuwiChOIqEjJFSqOocqglgUGZ+H9Il\nLDWaV8yLTcybW+DxHq5CFMKX1+H7pwLKFf6AsSnKcTh9ff/iEWLJ7COALj+k\neK4L+WNoB4qaxUXuFbHhFp1q60FTkNELSohyaJi/Qw1zEyVgmqUp5MvdN/tb\nI/FAsrRBuprFIhboRO8NxHLerxdsQH820LuzWtPdKkrep8dQu0faFaKMn8p7\nXc7oVq9skMjyb2XFLHparLTYajRZzLl0VwviJIc+4hsGm3Acfa7v5gScpeut\np1YJR1ZtIkGOZgOu1UcJaRmS12jBRwEiw0Xgq3i2CGsUVc+31wquChBVreCj\nfb9EXO4Vm0Ds7K6kNmcJrQYhomx4g9ar7HtEN2vfkgdhlAfAZrM17E0brREG\nYxQSGseo2dU+P4USK0ZSGDh+RCFF+sMoGdYIqAe9YOxMLlcUq6mAiFGJn9Y8\n8P/E/2/0eWJThlJ4Wd56k3spN2vdHeSt4O7yrzKQHmgklp9uDFRnQTFVCz43\nmEfeZ33tKG+SGepwoNfUkT6olGxuDqziy3P8qFvPpEzrUvKfDrdaYQ9luvzP\n2+Kp/rMdiGzL5Wn6h18TGBylzvJ+PnuZM3crceuMOpqIauSzrH3k7+DmQdAU\nSqDTO5uxATwH83bo7iH/xu1qFIhzb4gO98K+6HiRM63fEoEwwXB40JECry9J\nwsCnerDMzvcLQ+XpyTr+3aFg6x7RaGFDhrZXiof6nzOHJC2DOnr+DahCpMuB\nfvJdzEmVOn4W5ruLMi9ptgHyJh7eorgwJLITgxn4nR+dGQ94Vge9A27RSqak\nY5+riWiOEWGdCwBUo1dK/0Ue4EQoU8hsICXOiK56n2hARvfLQrcXaaE/bHOS\nvGukQ/MXjBUSHwv8Ja5H0fD20dWmJx2pZK7rSEVYPHhudMO/9rs4xnDev8me\n/MIfFlTaHonU37+34WozxPIvzXLmeZt92Pxkget0HtTARF9qLJMHzMHKZdfH\nlvbsL4aDguzLf6OC6PJHLweoMy37FiDwlgvdtO7q6tTwUbL7OayfgPPUfoJV\n9xPFxkOEK7vyfjIWq1xruTLzKfxCMIfxbr+rzg/Ptn6lwpgnz86G9833COph\nPY1bQ6VGJc4hYs70pMLry0f5na+fLIhPAHMpbUP/+7amqzf/6njqse2qjXPR\n0BR2H5qUGdVeWIuRKY7fKVgxjmp4AR7bQqtL/sebN5X3oBW1iTU/UgrXfpcW\nkhjXmlIvD6DIvMmeqU15in8XqN9cqg/JoAheK5I+8ErFXTaJLbsq0ZGAnXad\nqTJcUXGM1xGiNutMtfPLHxO72WiJvX14RDp8zSYGayAJ3r6leHW+7hO+jzWz\nBwmZOsGwy2YQcnEFwcOBg5WXA0fDwE7q84yxTHEvOgWYdIYDqn3rcidxBUIQ\nVluTqolFwgcYLc68ubYWPaxBMzb3J1sQDZaeL45VgWO6ZwS6Ci8uMjs5Mz5t\nkRypGfVOY5e5E6GKnwNpeXOuzScN0sXWnP7ijxPYuBh9GY9p3I0dGbFEK/ZC\nc94ETntpBS/ve7VmXYfB5W7/tgvhDMtM/Fac2tEAloWHMp7bCNp3bJo7qvtY\n1FNOxuenmumYK0/HIYocWyuaU+kqZpHznMR/S7Idwiui1iWixg9/7XnhvPhT\ncDm9MbBP0jGeCAAoW0GYM9cDI5bFCr1YSL7GxJQimmTK7uNcccWDXzzmm1EC\nXlaCs+9CHRy3ObMkc7KcBv1Vfk+SVZwkowWbuWUkvDRsgIPkJmGgG8sA2tpO\nLHNlPMMFE/x04QtjAGROE4QKa6YtoyVUNxQ9Swo/aVidvRWY5nrI44XbWBr0\nTQKr1AeP2TrtrPYgclETBLZAQw47UV4YCS9D52vEoajtDfdJmYhgGh/lymrM\nc6iTN8iRLmayrZ/5ClCNoLla9BftB+nJBoD4QIToG2JI24rv4ds8AlwTHLSI\n97M1NIE48eVhKh1t4U7jkFK70p4wVJpHJySqJOmAYhybJmSNoNVbMmB6xO8D\nfd5vBHvJUZ7uhb+7j91yv6a8b5mXeQG56NPdPw/o4mYfTi8fjNzy/ex5+gbP\nJyseu5cZFGcS6qzc/qZ8l9lkBKadbYY/VlWE+DrrlONWG/eZE8npbQk7eoqH\nQa1f1VXc2MuDSCfWtB2BPyLlf8/k2K30f1xHn8CY9s2BjfZzcsg/YS4YCjXr\nh0fTc096Y6qpP6Dd8alfFqnTxtXx2Qd4790dKfZCFceKsOMrNY++dj/tSeBN\naA/WKL4TI6bhgPFMWXnXNgn+Od7mhfYHDYH0q5qCmQXnqjPROkvKSmj+2dHc\nYLCigU0VGojQLi+S1DKH4UYjtl1gomxfnzjODAUneqhEz1JcophsOebu9VCY\nAxcYWj0AcBSUTCXNKoUcz3HJfKgRWPd4jS3ii8bM0fg/fbACGd426V9F6Uof\nYucjcIRjzswWrl5taWqIj8YPp4QFK83u0f2EPevFNYmU5GyZSqkYSgSTp9po\nFB6k5fGnzyVTQyFrF5ZX0OwnB9hv0HssQcz3/gx75MlwP5oSqZEgBhXHxKS4\ne1hU8Jm+IbqEQRM/oeo0WUfNGuuJvEqnQb0RL0bva+/S9SZ85COcXiFtoc4/\n71c9/xRnpR2eTrUqtpiawEvQLqSeMBUNfRZP5rtdZK4506ppkChQqwmIJzOH\nhH/OUp8gc20Den6rJ+BY0c4ukAsTUuH2EVoqXs9/sXbHJ3C4TL4oRNAsZeDJ\n18vcwGqse9rf8wnywLmHdavroAVcxo1UMZU97ftkQX68ULvFIN23D5pSVola\njfsgKUR3cVaWUuMLqyooOcmTnM1E0aQO7D4HlFmSkqJ+5ttaSiLstNqXrCvy\nkE9WjzhYkXqJJebQAEHHP3KMVffg9hRudNp/oH7b/co3+nUM2kB/50utUXdW\naA1HcFCYQV6+7YQ4kSyBtQltbHUNOf0BRnIWwLkPMt4zBkRo4FHj8F6uCwja\nNv9aS0/Q6jKExUq19zBgcQ4q+PYA2+iiK7eSdsJSkN7otRpiHq1ilNsN1OO6\nfy/h1gvv+3jgMc1SipFzIYNp2sx0dscIYP4drm032AVqWdx73XK61tTLskOF\nqg2S8RCQzMBHOSxQswd5IWR90joxtTNi4C1tLIsFM+jtYcXSbBKZlExOtWsa\nETAlyXX2yDW6VS3aSDYe9h4ccdMwijZ/ov2jLFrHvewUF6d45ovuXY0PcOYm\nQdk6WYj1vFfatfT9wA==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-16T16:36:57.413+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson3-level7a-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson3-level7a-test-2025\"},{\"changed_at\":\"2026-01-16 16:37:31 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 16:38:45 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 17:12:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>
