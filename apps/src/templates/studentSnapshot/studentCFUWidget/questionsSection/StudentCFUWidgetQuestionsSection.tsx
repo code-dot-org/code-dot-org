@@ -75,7 +75,7 @@ const CfuQuestionsSections: React.FC<CfuQuestionsSectionsProps> = ({
   console.log(cfuLevels);
   console.log(cfuResponses);
   console.log(statusBuckets);
-  return cfuLevels.length ? (
+  return (
     <div className={styles.studentCFUWidgetQuestionsSectionContainer}>
       <div className={styles.heading}>
         <Typography variant="body2">
@@ -93,7 +93,7 @@ const CfuQuestionsSections: React.FC<CfuQuestionsSectionsProps> = ({
         ))}
       </div>
     </div>
-  ) : null;
+  );
 };
 
 export default CfuQuestionsSections;

@@ -71,15 +71,18 @@
 
           &.correctCard i {
             background: var(--background-success-light, #C7ECC6);
-            color: var(--sentiment-success-50, #3EA33E);          }
+            color: var(--sentiment-success-50, #3EA33E);
+          }
 
           &.partiallyCorrectCard i {
             background: var(--background-warning-light, #FEF8C3);
-            color: var(--accent-orange-70, #D68A00);          }
+            color: var(--accent-orange-70, #D68A00);
+          }
 
           &.incorrectCard i {
             background: var(--background-error-light, #FFBFB6);
-            color: var(--sentiment-error-50, #E02D16);          }
+            color: var(--sentiment-error-50, #E02D16);
+          }
 
           &.incompleteCard i {
             background: var(--background-neutral-tertiary, #DFE3E9);

@@ -225,11 +225,13 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
           accuracy={summary.accuracy}
           counts={summary.counts}
         />
-        <StudentCFUWidgetQuestionsSection
-          cfuLevels={fetchedCfuLevels}
-          cfuResponses={fetchedCfuResponses}
-          statusBuckets={statusBuckets}
-        />
+        {!!fetchedCfuLevels.length && (
+          <StudentCFUWidgetQuestionsSection
+            cfuLevels={fetchedCfuLevels}
+            cfuResponses={fetchedCfuResponses}
+            statusBuckets={statusBuckets}
+          />
+        )}
 
         <div style={{marginBottom: 12}}>
           <ul style={{margin: '8px 0 0 18px', padding: 0}}>
