@@ -4,6 +4,7 @@ import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
+import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useEffect, useState} from 'react';
@@ -36,6 +37,7 @@ const weblab2LangMapping: {[key: string]: LanguageSupport} = {
   css: css(),
   js: javascript(),
   md: markdown(),
+  json: json(),
 };
 
 const defaultConfig: ConfigType = {
