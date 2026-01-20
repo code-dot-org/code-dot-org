@@ -161,10 +161,12 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       {"text" => "answer 2", "correct" => true},
       {"text" => "answer 2", "correct" => true},
     ]
-    cfu_level = create(:level, name: 'CFU Level', type: 'Multi',
+    cfu_level_1 = create(:level, name: 'CFU Level 1', type: 'Multi',
       properties: {display_name: 'CFU Display Name', questions: [{text: 'Question text'}], answers: level_answers}
     )
-    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level])
+    cfu_level_2 = create(:level, name: 'CFU Level 2', type: 'Match')
+    cfu_level_3 = create(:level, name: 'CFU Level 3', type: 'FreeResponse')
+    create(:script_level, script: @unit, lesson: @lesson1, progression: 'Check Your Understanding', levels: [cfu_level_1, cfu_level_2, cfu_level_3])
 
     get :cfu_levels, params: {lesson_id: @lesson1.id}
 
@@ -182,6 +184,11 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal 'CFU Display Name', cfu_data['display_name']
     assert_equal cfu_data['question_text'], 'Question text'
     assert_equal cfu_data['answers'], level_answers
+
+    # Ensure level_position is tracked for CFU levels
+    assert_equal 1, cfu_data['level_position']
+    assert_equal 2, response_data['cfu_levels'][1]['level_position']
+    assert_equal 3, response_data['cfu_levels'][2]['level_position']
   end
 
   test "cfu_levels endpoint includes question and possible answers for level" do
@@ -400,19 +407,27 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_response :ok
     response_data = JSON.parse(response.body)
     responses = response_data['cfu_responses']
-
+    # Correct response
     assert_equal true, responses[0]['submitted']
+    assert_equal 'correct', responses[0]['response']['status']
+    # Incorrect response
     assert_equal true, responses[1]['submitted']
+    assert_equal 'incorrect', responses[1]['response']['status']
+    # Submitted free response
     assert_equal true, responses[2]['submitted']
+    assert_equal 'submitted', responses[2]['response']['status']
 
     get :cfu_responses, params: {lesson_id: @lesson1.id, student_id: student_with_unsubmitted_levels.id}
     assert_response :ok
     response_data = JSON.parse(response.body)
     responses = response_data['cfu_responses']
-
+    # Unsubmitted responses
     assert_equal false, responses[0]['submitted']
+    assert_equal 'unsubmitted', responses[0]['response']['status']
     assert_equal false, responses[1]['submitted']
+    assert_equal 'unsubmitted', responses[0]['response']['status']
     assert_equal false, responses[2]['submitted']
+    assert_equal 'unsubmitted', responses[0]['response']['status']
   end
 
   test "cfu_responses endpoint tracks submitted status for LevelGroup CFUs" do
