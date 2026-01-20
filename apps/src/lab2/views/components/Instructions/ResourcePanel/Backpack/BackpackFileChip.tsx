@@ -13,8 +13,10 @@ import React, {useMemo} from 'react';
 import {getFileIconNameAndStyle} from '@cdo/apps/codebridge';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {BackpackProps} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -127,6 +129,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     } else {
       // Fetch backpack file content and import new file to project - not a duplicate file name.
       await fetchAndSaveFile(
+        EVENTS.IMPORT_FROM_BACKPACK_NEW,
         backpackApi,
         channelId,
         addAlert,
@@ -172,6 +175,9 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         () => {
           // TODO: log to statsig
           setActionInProgress(false);
+          sendLab2AnalyticsEvent(EVENTS.DELETE_FROM_BACKPACK, {
+            fileType: fileExtension || '',
+          });
         }
       );
     }
