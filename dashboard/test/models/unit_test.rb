@@ -2284,22 +2284,21 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'with_ai_chat_tools returns units with required AI chat tools or AI tutor available' do
-    ai_level = create(:level)
-    ai_tutor_level = create(:level)
+    ai_level = create(:aichat)
+    ai_tutor_level = create(:level, properties: {'ai_tutor_available' => true})
     normal_level = create(:level)
 
-    # Stub Level scopes
-    Level.stubs(:with_essential_ai_chat_tools).returns(Level.where(id: ai_level.id))
-    Level.stubs(:with_ai_tutor_available).returns(Level.where(id: ai_tutor_level.id))
-
     unit_with_ai = create(:script, name: 'unit-with-ai')
-    unit_with_ai.levels << ai_level
+    lesson_with_ai = create(:lesson, :with_lesson_group, script: unit_with_ai)
+    create(:script_level, script: unit_with_ai, lesson: lesson_with_ai, levels: [ai_level])
 
     unit_with_tutor = create(:script, name: 'unit-with-tutor')
-    unit_with_tutor.levels << ai_tutor_level
+    lesson_with_tutor = create(:lesson, :with_lesson_group, script: unit_with_tutor)
+    create(:script_level, script: unit_with_tutor, lesson: lesson_with_tutor, levels: [ai_tutor_level])
 
     unit_without_ai = create(:script, name: 'unit-without-ai')
-    unit_without_ai.levels << normal_level
+    lesson_without_ai = create(:lesson, :with_lesson_group, script: unit_without_ai)
+    create(:script_level, script: unit_without_ai, lesson: lesson_without_ai, levels: [normal_level])
 
     result = Unit.with_ai_chat_tools
     assert_includes result, unit_with_ai
@@ -2308,16 +2307,16 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'with_essential_ai_chat_tools returns only units with required AI chat tools' do
-    ai_level = create(:level)
+    ai_level = create(:weblab2)
     normal_level = create(:level)
 
-    Level.stubs(:with_essential_ai_chat_tools).returns(Level.where(id: ai_level.id))
-
     unit_with_ai = create(:script, name: 'unit-with-ai')
-    unit_with_ai.levels << ai_level
+    lesson_with_ai = create(:lesson, :with_lesson_group, script: unit_with_ai)
+    create(:script_level, script: unit_with_ai, lesson: lesson_with_ai, levels: [ai_level])
 
     unit_without_ai = create(:script, name: 'unit-without-ai')
-    unit_without_ai.levels << normal_level
+    lesson_without_ai = create(:lesson, :with_lesson_group, script: unit_without_ai)
+    create(:script_level, script: unit_without_ai, lesson: lesson_without_ai, levels: [normal_level])
 
     result = Unit.with_essential_ai_chat_tools
     assert_includes result, unit_with_ai
