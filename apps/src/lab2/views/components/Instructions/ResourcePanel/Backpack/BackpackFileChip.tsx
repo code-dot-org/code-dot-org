@@ -152,7 +152,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           Backpack.
         </>
       ),
-      confirmText: 'Delete',
+      confirmText: 'Delete file',
       destructive: true,
       icon: {iconName: 'trash', iconStyle: 'solid'},
     });
