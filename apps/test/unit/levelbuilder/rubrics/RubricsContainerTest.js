@@ -1,15 +1,11 @@
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {act, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import LearningGoalItem from '@cdo/apps/levelbuilder/rubrics/LearningGoalItem';
-import RubricEditor from '@cdo/apps/levelbuilder/rubrics/RubricEditor';
-import * as rubricHelper from '@cdo/apps/levelbuilder/rubrics/rubricHelper';
 import RubricsContainer from '@cdo/apps/levelbuilder/rubrics/RubricsContainer';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
-
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -85,125 +81,132 @@ describe('RubricsContainerTest', () => {
     ],
   };
 
+  afterEach(() => {
+    sinon.restore();
+  });
+
+  const renderComponent = props =>
+    render(<RubricsContainer {...defaultProps} {...props} />);
+
   it('renders the components on the page correctly for a new rubric', () => {
-    const wrapper = mount(<RubricsContainer {...defaultProps} />);
-    expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+    renderComponent();
+
+    expect(
+      screen.getByRole('heading', {name: 'Create your rubric'})
+    ).toBeInTheDocument();
+    expect(screen.getByRole('combobox')).toBeInTheDocument();
+    expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
-    expect(wrapper.find(RubricEditor)).to.have.length(1);
-    expect(wrapper.find('Button[text="Delete key concept"]')).to.have.length(1);
-    expect(wrapper.find(LearningGoalItem)).to.have.length(1);
-    expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
+    expect(
+      screen.getByRole('button', {name: 'Add new Key Concept'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole('button', {name: 'Delete key concept'})
+    ).toHaveLength(1);
+    expect(
+      screen.getByRole('button', {name: 'Save your rubric'})
+    ).toBeInTheDocument();
   });
 
   it('renders "the components on the page correctly for an exisiting rubric"', () => {
-    const props = {...defaultProps, rubric: rubricInfo};
-    const wrapper = mount(<RubricsContainer {...props} />);
-    expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+    renderComponent({rubric: rubricInfo});
+
+    expect(
+      screen.getByRole('heading', {name: 'Modify your rubric'})
+    ).toBeInTheDocument();
+    expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
-    expect(wrapper.find(RubricEditor).prop('learningGoalList')).to.equal(
-      rubricInfo.learningGoals
-    );
-    expect(wrapper.find(LearningGoalItem)).to.have.length(
+    expect(screen.getAllByLabelText('Key Concept:')).toHaveLength(
       rubricInfo.learningGoals.length
     );
-    expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
+    expect(
+      screen.getByRole('button', {name: 'Save your rubric'})
+    ).toBeInTheDocument();
   });
 
-  it('adds a new learning goal on "Add new Key Concept" button click', () => {
-    const wrapper = mount(<RubricsContainer {...defaultProps} />);
-    const initialLearningGoalItems = wrapper.find('LearningGoalItem').length;
-    const addButton = wrapper
-      .find(Button)
-      .findWhere(n => n.props().text === 'Add new Key Concept');
-    expect(addButton).to.have.length(1);
-    addButton.simulate('click');
-    const afterAddLearningGoalItems = wrapper.find('LearningGoalItem').length;
-    expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
-  });
+  it('adds a new learning goal on "Add new Key Concept" button click', async () => {
+    const user = userEvent.setup();
+    renderComponent();
 
-  it('adds a deletes learning goal on "Delete Key Concept" button click', () => {
-    const wrapper = mount(<RubricsContainer {...defaultProps} />);
-    const initialLearningGoalItems = wrapper.find('LearningGoalItem').length;
-    const deleteButton = wrapper
-      .find(Button)
-      .findWhere(n => n.props().text === 'Delete key concept');
-    expect(deleteButton).to.have.length(1);
-    deleteButton.simulate('click');
-    const afterAddDeletingGoalItems = wrapper.find('LearningGoalItem').length;
-    expect(afterAddDeletingGoalItems).to.equal(initialLearningGoalItems - 1);
-  });
-
-  it('changes the selected level for assessment when the dropdown is changed', () => {
-    const wrapper = shallow(<RubricsContainer {...defaultProps} />);
-    let dropdown = wrapper.find('select#rubric_level_id');
-    const dropdownValue = dropdown.prop('value');
-    expect(dropdownValue).to.equal(defaultProps.submittableLevels[0].id);
-
-    dropdown.simulate('change', {
-      target: {value: defaultProps.submittableLevels[1].id},
+    const initialDeleteButtons = screen.getAllByRole('button', {
+      name: 'Delete key concept',
     });
-    dropdown = wrapper.find('select#rubric_level_id');
-    expect(dropdown.prop('value')).to.equal(
-      defaultProps.submittableLevels[1].id
+    await user.click(screen.getByRole('button', {name: 'Add new Key Concept'}));
+
+    await waitFor(() => {
+      expect(
+        screen.getAllByRole('button', {name: 'Delete key concept'})
+      ).toHaveLength(initialDeleteButtons.length + 1);
+    });
+  });
+
+  it('adds a deletes learning goal on "Delete Key Concept" button click', async () => {
+    const user = userEvent.setup();
+    renderComponent();
+
+    const initialDeleteButtons = screen.getAllByRole('button', {
+      name: 'Delete key concept',
+    });
+    await user.click(screen.getByRole('button', {name: 'Delete key concept'}));
+
+    await waitFor(() => {
+      expect(
+        screen.queryAllByRole('button', {name: 'Delete key concept'})
+      ).toHaveLength(initialDeleteButtons.length - 1);
+    });
+  });
+
+  it('changes the selected level for assessment when the dropdown is changed', async () => {
+    const user = userEvent.setup();
+    renderComponent();
+
+    const dropdown = screen.getByRole('combobox');
+    expect(dropdown).toHaveValue(String(defaultProps.submittableLevels[0].id));
+
+    await user.selectOptions(
+      dropdown,
+      String(defaultProps.submittableLevels[1].id)
     );
+
+    expect(dropdown).toHaveValue(String(defaultProps.submittableLevels[1].id));
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
+    const user = userEvent.setup();
     const mockFetch = sinon.stub(global, 'fetch');
-    mockFetch.returns(
-      Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
-    );
+    let resolveFetch;
+    const fetchPromise = new Promise(resolve => {
+      resolveFetch = resolve;
+    });
+    mockFetch.returns(fetchPromise);
 
-    const props = {...defaultProps, rubric: rubricInfo};
+    renderComponent({rubric: rubricInfo});
 
-    const wrapper = mount(<RubricsContainer {...props} />);
-    const notification = wrapper.find('BodyThreeText');
-
-    expect(notification.text()).not.to.contain('Saving...');
-    expect(notification.text()).not.to.contain('Save complete!');
-
-    // Simulate the save button click
-    let saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).to.be.false;
-    saveButton.simulate('click');
-    expect(notification.text()).to.contain('Saving...');
-    saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).to.be.true;
-
-    // Allow state to change from the fetch request and the re-render of components
-    await new Promise(resolve => setTimeout(resolve, 0));
-    await new Promise(resolve => setTimeout(resolve, 0));
-    wrapper.update();
-
-    expect(notification.text()).to.contain('Save complete!');
-    saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).to.be.false;
-    sinon.restore();
-  });
-
-  it('calls the save helper on save click', () => {
-    const mockSave = sinon.stub(rubricHelper, 'saveRubricToTable');
-    mockSave.returns(
-      Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
-    );
-
-    const props = {...defaultProps, rubric: rubricInfo};
-
-    const wrapper = mount(<RubricsContainer {...props} />);
-    const notification = wrapper.find('BodyThreeText');
-
-    expect(notification.text()).not.to.contain('Saving...');
-    expect(notification.text()).not.to.contain('Save complete!');
+    expect(screen.queryByText('Saving...')).not.toBeInTheDocument();
+    expect(screen.queryByText('Save complete!')).not.toBeInTheDocument();
 
     // Simulate the save button click
-    let saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).to.be.false;
-    saveButton.simulate('click');
-    sinon.assert.calledWith(mockSave);
-    sinon.restore();
+    const saveButton = screen.getByRole('button', {name: 'Save your rubric'});
+    expect(saveButton).toBeEnabled();
+    await user.click(saveButton);
+
+    expect(await screen.findByText('Saving...')).toBeInTheDocument();
+    expect(saveButton).toBeDisabled();
+
+    await act(async () => {
+      resolveFetch(
+        new Response(
+          JSON.stringify({
+            learningGoals: rubricInfo.learningGoals,
+          })
+        )
+      );
+      await fetchPromise;
+    });
+
+    expect(await screen.findByText('Save complete!')).toBeInTheDocument();
+    expect(saveButton).toBeEnabled();
   });
 });
