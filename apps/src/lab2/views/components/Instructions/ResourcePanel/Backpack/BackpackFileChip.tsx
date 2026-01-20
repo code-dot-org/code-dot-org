@@ -146,9 +146,15 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
     const results = await dialogControl?.showDialog({
       type: DialogType.GenericConfirmation,
       title: 'Are you sure?',
-      message: `You are about to delete ${fileName} from your Backpack.`,
+      bodyComponent: (
+        <>
+          You are about to delete <strong>{fileName}</strong> from your
+          Backpack.
+        </>
+      ),
       confirmText: 'Delete',
       destructive: true,
+      icon: {iconName: 'trash', iconStyle: 'solid'},
     });
     if (results.type === 'confirm') {
       backpackApi.deleteFiles(
