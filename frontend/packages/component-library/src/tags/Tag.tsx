@@ -1,19 +1,20 @@
+import Chip from '@mui/material/Chip';
 import classNames from 'classnames';
 import type {Key, KeyboardEvent, MouseEvent, ReactNode} from 'react';
 import {memo, useMemo} from 'react';
 
-import Chip from '@mui/material/Chip';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {WithTooltip} from '@/tooltip';
 
-import moduleStyles from './tags.module.scss';
 import {
   TagColor,
   TagSize,
   TagVariant,
   transformTagPropsCore,
 } from './tagPropsToMuiCore';
+
+import moduleStyles from './tags.module.scss';
 
 type TagIconProps = FontAwesomeV6IconProps & {
   placement: 'left' | 'right';
