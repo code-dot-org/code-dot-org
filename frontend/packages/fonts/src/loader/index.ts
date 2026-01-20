@@ -13,7 +13,15 @@ export function injectFont(locale: InternationalFontLocale) {
   });
 }
 
+let fontAwesomeInjected = false;
+
 export function injectFontAwesome() {
+  // Prevent duplicate injection
+  if (fontAwesomeInjected) {
+    return;
+  }
+  fontAwesomeInjected = true;
+
   const stylesheets = [
     'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/fontawesome.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1776787306/css/brands.min.css',

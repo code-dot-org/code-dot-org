@@ -1,7 +1,8 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
-import {Suspense} from 'react';
+import {Suspense, useEffect} from 'react';
 
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {injectFontAwesome} from '@code-dot-org/fonts';
 import {RootStateProvider} from '@code-dot-org/redux/providers';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
@@ -17,6 +18,11 @@ export interface LabProps extends PropsWithChildren {
  * and contexts.
  */
 const Lab: FunctionComponent<LabProps> = ({isLoading, children}) => {
+  // Ensure FontAwesome icons are available for all labs
+  useEffect(() => {
+    injectFontAwesome();
+  }, []);
+
   return (
     <Suspense fallback={<Loading isLoading={isLoading} />}>
       {!isLoading && (

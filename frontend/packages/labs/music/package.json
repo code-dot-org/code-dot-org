@@ -13,6 +13,11 @@
     "directory": "frontend/packages/labs/music"
   },
   "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "type": "module",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -94,6 +99,7 @@
     "typed-emitter": "^2.1.0",
     "typescript": "catalog:",
     "vite": "catalog:",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
     "vitest": "catalog:"
