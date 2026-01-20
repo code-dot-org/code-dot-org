@@ -3,6 +3,7 @@ import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import dts from 'vite-plugin-dts';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,6 +12,9 @@ export default defineConfig({
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({tsconfigPath: './tsconfig.app.json'}),
+    // Inject CSS directly into JS bundle as inline styles
+    // This ensures CSS is automatically loaded when the module is lazy loaded.
+    cssInjectedByJsPlugin(),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.

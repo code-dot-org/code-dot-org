@@ -1628,8 +1628,8 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^22.9.0"
-    "@types/react": "npm:^18.3.12"
-    "@types/react-dom": "npm:^18.3.1"
+    "@types/react": "npm:^19.2.5"
+    "@types/react-dom": "npm:^19.2.3"
     axe-playwright: "npm:^2.0.3"
     classnames: "npm:^2.5.1"
     clean-package: "npm:^2.2.0"
@@ -1646,8 +1646,8 @@ __metadata:
     postcss: "npm:^8.4.49"
     postcss-modules: "npm:^6.0.1"
     prettier: "npm:3.4.2"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
     release-it: "npm:^18.1.2"
     rimraf: "npm:^6.0.1"
     schema-dts: "npm:^1.1.5"
@@ -1978,8 +1978,8 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^22.9.0"
-    "@types/react": "npm:^18.3.12"
-    "@types/react-dom": "npm:^18.3.1"
+    "@types/react": "npm:^19.2.5"
+    "@types/react-dom": "npm:^19.2.3"
     axe-playwright: "npm:^2.0.3"
     classnames: "npm:^2.5.1"
     clean-package: "npm:^2.2.0"
@@ -2000,8 +2000,8 @@ __metadata:
     prettier: "npm:3.4.2"
     qrcode.react: "npm:^4.2.0"
     query-string: "npm:^9.2.2"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
     react-focus-lock: "npm:^2.13.6"
     react-redux: "npm:^9.2.0"
     react-string-replace: "npm:^1.1.1"
@@ -2204,6 +2204,7 @@ __metadata:
     typescript: "catalog:"
     typescript-eslint: "catalog:"
     vite: "catalog:"
+    vite-plugin-css-injected-by-js: "npm:^3.5.2"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
   peerDependencies:
@@ -25227,6 +25228,15 @@ __metadata:
   dependencies:
     "@vimeo/player": "npm:2.29.0"
   checksum: 10c0/0c38d3591a91c3cc34f2ff7e26408c15732497e0d2881a12eecda7c17c7243412e5d9825741586d7fe8d11bc1f4067ad4b2b68ed06cf74e4e7e66cc55899e8a9
+  languageName: node
+  linkType: hard
+
+"vite-plugin-css-injected-by-js@npm:^3.5.2":
+  version: 3.5.2
+  resolution: "vite-plugin-css-injected-by-js@npm:3.5.2"
+  peerDependencies:
+    vite: ">2.0.0-0"
+  checksum: 10c0/5c6a2434d4f302640a4bfc7695d56cf83eca03a4f89f05820057fedd8a2e788186105942360d19808042872ba0970ed6b1c04cd02337bbe67d8321993a464c04
   languageName: node
   linkType: hard
 
