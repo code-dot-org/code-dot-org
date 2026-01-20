@@ -34,7 +34,7 @@ job_args = JSON.parse(ARGV[1] || '[]')
 raise OptionParser::MissingArgument, 'JOB_CLASS argument is missing' unless job_class
 
 if job_args.is_a?(Hash)
-  job_class.perform_now(**job_args.symbolize_keys)
+  job_class.perform_later(**job_args.symbolize_keys)
 else
-  job_class.perform_now(*job_args)
+  job_class.perform_later(*job_args)
 end
