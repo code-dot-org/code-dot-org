@@ -2395,6 +2395,34 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'write_script_json updates md5 in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+
+    unit = create(:unit, name: 'test-write-md5')
+    unit.write_script_json
+
+    unit.reload
+    refute_nil unit.md5
+
+    # Verify MD5 matches file contents
+    filepath = Unit.script_json_filepath(unit.name)
+    expected_md5 = Digest::MD5.hexdigest(File.read(filepath))
+    assert_equal expected_md5, unit.md5
+  ensure
+    FileUtils.rm_f(Unit.script_json_filepath('test-write-md5'))
+  end
+
+  test 'write_script_json does nothing outside levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+
+    unit = create(:unit, name: 'test-no-write-md5')
+    unit.write_script_json
+
+    unit.reload
+    assert_nil unit.md5
+    refute File.exist?(Unit.script_json_filepath(unit.name))
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
