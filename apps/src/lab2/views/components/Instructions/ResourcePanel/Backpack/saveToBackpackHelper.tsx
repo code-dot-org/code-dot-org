@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -22,6 +24,7 @@ export const handleSaveSupportFile = async (
     title: 'A file with this name already exists',
     message: `This file already exists in the level's support code. Would you like to import it as ${newFileName}?`,
     confirmText: `Import as ${newFileName}`,
+    icon: {iconName: 'exclamation-circle', iconStyle: 'solid'},
   });
   if (results.type === 'confirm') {
     await fetchAndSaveFile(
@@ -53,9 +56,16 @@ export const handleSaveDuplicateFile = async (
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericConfirmation,
     title: 'A file with this name already exists',
-    message: `Would you like to replace the existing file with this file or import this file as ${newFileName}?`,
+    bodyComponent: (
+      <>
+        A file with the same name already exists in your project, would you like
+        to replace the existing file with this file or import this file as{' '}
+        <strong>{newFileName}</strong>?
+      </>
+    ),
     confirmText: 'Replace existing file',
     neutralText: `Import as ${newFileName}`,
+    icon: {iconName: 'exclamation-circle', iconStyle: 'solid'},
   });
   if (results.type === 'confirm') {
     // Import as replacement

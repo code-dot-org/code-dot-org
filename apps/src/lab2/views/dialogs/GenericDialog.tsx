@@ -165,7 +165,8 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
       onClose={buttons?.cancel ? cancelCallback : undefined}
       className={classNames(
         moduleStyles.genericDialog,
-        isDestructive && moduleStyles.destructive
+        isDestructive && moduleStyles.destructive,
+        !useModal && moduleStyles.dialogOnlyStyle
       )}
       primaryButtonProps={{
         onClick: confirmCallback,

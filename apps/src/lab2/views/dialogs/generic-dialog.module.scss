@@ -22,6 +22,11 @@
   .customContentWrapper {
     width: calc(100% - 0.25rem);
   }
+
+  &.dialogOnlyStyle {
+    text-align: center;
+    line-height: 1.4;
+  }
 }
 
 .spinnerContainer {
