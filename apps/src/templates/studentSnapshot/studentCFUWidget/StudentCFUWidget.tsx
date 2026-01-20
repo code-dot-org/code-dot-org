@@ -6,7 +6,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import StudentCFUWidgetQuestionsSection from './questionsSection/StudentCFUWidgetQuestionsSection';
 import StudentCFUWidgetHeader from './StudentCFUWidgetHeader';
-import {CFULevel, CFULevelResponse} from './types';
+import {CFULevel, CFULevelResponse, StatusBucket} from './types';
 
 import styles from './studentCFUWidget.module.scss';
 
@@ -112,12 +112,6 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     return map;
   }, [fetchedCfuResponses]);
 
-  type StatusBucket =
-    | 'correct'
-    | 'partially_correct'
-    | 'incorrect'
-    | 'incomplete';
-
   const bucketForLevel = React.useCallback(
     (levelId: number): StatusBucket => {
       const response = responsesByLevelId.get(levelId)?.response;
@@ -187,10 +181,14 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     [responsesByLevelId]
   );
 
+  const statusBuckets = React.useMemo(
+    () => fetchedCfuLevels.map(level => bucketForLevel(level.id)),
+    [fetchedCfuLevels, bucketForLevel]
+  );
+
   const summary = React.useMemo(() => {
     const total = fetchedCfuLevels.length;
-    const buckets = fetchedCfuLevels.map(level => bucketForLevel(level.id));
-    const counts = buckets.reduce(
+    const counts = statusBuckets.reduce(
       (acc, b) => {
         acc[b] += 1;
         return acc;
@@ -206,7 +204,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     const accuracy =
       completed === 0 ? 0 : Math.round((counts.correct / completed) * 100);
     return {total, completed, accuracy, counts};
-  }, [fetchedCfuLevels, bucketForLevel]);
+  }, [fetchedCfuLevels, statusBuckets]);
 
   let content: React.ReactNode;
   let scrollable = false;
@@ -230,12 +228,10 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
         <StudentCFUWidgetQuestionsSection
           cfuLevels={fetchedCfuLevels}
           cfuResponses={fetchedCfuResponses}
+          statusBuckets={statusBuckets}
         />
 
         <div style={{marginBottom: 12}}>
-          <BodyThreeText>
-            <strong>Level Details</strong>
-          </BodyThreeText>
           <ul style={{margin: '8px 0 0 18px', padding: 0}}>
             {fetchedCfuLevels.map(level => {
               const bucket = bucketForLevel(level.id);
