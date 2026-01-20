@@ -51,8 +51,45 @@
         }
 
         &.smallCard {
+          display: flex;
+          align-items: center;
+          justify-content: unset;
+          flex: 1 0 0;
           padding: 0.5rem;
           gap: 0.5rem;
+
+          i {
+            display: flex;
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.25rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            border-radius: 0.25rem;
+          }
+
+          &.correctCard i {
+            background: var(--background-success-light, #C7ECC6);
+            color: var(--sentiment-success-50, #3EA33E);          }
+
+          &.partiallyCorrectCard i {
+            background: var(--background-warning-light, #FEF8C3);
+            color: var(--accent-orange-70, #D68A00);          }
+
+          &.incorrectCard i {
+            background: var(--background-error-light, #FFBFB6);
+            color: var(--sentiment-error-50, #E02D16);          }
+
+          &.incompleteCard i {
+            background: var(--background-neutral-tertiary, #DFE3E9);
+            color: var(--neutral-gray-80, #69788A);
+          }
+
+          .cardText {
+            color: var(--text-neutral-tertiary, #576575);
+            font-feature-settings: 'liga' off, 'clig' off;
+          }
         }
       }
 
