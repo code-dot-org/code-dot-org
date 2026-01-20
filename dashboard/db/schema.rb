@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2026_01_07_212238) do
+ActiveRecord::Schema.define(version: 2026_01_09_152639) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -104,9 +104,7 @@ ActiveRecord::Schema.define(version: 2026_01_07_212238) do
     t.bigint "request_id"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
-    t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
     t.index ["user_id", "project_id", "id"], name: "index_ace_user_project_id"
-    t.index ["user_id", "project_id"], name: "index_ace_user_project"
   end
 
   create_table "aichat_requests", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
