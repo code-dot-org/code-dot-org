@@ -1,94 +1,39 @@
-@use '@code-dot-org/component-library-styles/typography.module.scss' as
-  typography;
-
-// Tags common styles
+// Tags list layout
 .tags {
   display: flex;
   column-gap: 0.5em;
-
-  .tag {
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-    color: var(--text-neutral-primary);
-    padding: 2px 12px;
-    background: var(--background-brand-teal-light);
-    border-radius: 6.25rem;
-    max-width: 15em;
-
-    span {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    i {
-      display: flex;
-      justify-content: center;
-    }
-
-    &:has(i:first-child) {
-      padding-inline-start: 8px;
-    }
-
-    &:has(i:last-child),
-    &:has(button:last-child) {
-      padding-inline-end: 8px;
-    }
-  }
 }
 
-// Sizes
-.tags-l {
-  .tag {
-    span {
-      @include typography.overline-one;
-      line-height: 1.5;
-      margin-bottom: 0;
-      margin-top: 1.5px;
-    }
-
-    i {
-      font-size: 0.875rem;
-      line-height: 1.25;
-      width: 1.25rem;
-      height: 1.125rem;
-    }
-  }
+// Tag label layout helpers used by MUI Chip label content
+.tagLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
 }
 
-.tags-m {
-  .tag {
-    span {
-      @include typography.overline-two;
-      line-height: 1.54;
-      margin-bottom: 0;
-      margin-top: 2px;
-    }
-
-    i {
-      font-size: 0.75rem;
-      line-height: 1.25;
-      width: 1.125rem;
-      height: 0.9375rem;
-    }
-  }
+.tagLabelText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.tags-s {
-  .tag {
-    span {
-      @include typography.overline-three;
-      line-height: 1.8;
-      margin-bottom: 0;
-      margin-top: 1px;
-    }
+:global(.tag-icon) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    i {
-      font-size: 0.625rem;
-      line-height: 1.25;
-      width: 1rem;
-      height: 0.8125rem;
-    }
-  }
+:global(.tag-close-button) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+:global(.tag-close-button):disabled {
+  cursor: not-allowed;
 }

@@ -14,6 +14,7 @@ import {Theme as MuiTheme} from '@mui/material/styles';
 import '@mui/material/Button';
 import '@mui/material/IconButton';
 import '@mui/material/Breadcrumbs';
+import '@mui/material/Chip';
 
 type Theme = Omit<MuiTheme, 'components'>;
 
@@ -107,6 +108,26 @@ declare module '@mui/material/IconButton' {
 declare module '@mui/material/Breadcrumbs' {
   interface BreadcrumbsOwnProps {
     size?: 'xs' | 's' | 'm' | 'l';
+  }
+}
+
+// Chip type augmentations
+declare module '@mui/material/Chip' {
+  interface ChipPropsSizeOverrides {
+    large: true;
+  }
+
+  interface ChipPropsColorOverrides {
+    teal: true;
+    purple: true;
+    aqua: true;
+    gray: true;
+    disabled: true;
+  }
+
+  interface ChipPropsVariantOverrides {
+    light: true;
+    solid: true;
   }
 }
 

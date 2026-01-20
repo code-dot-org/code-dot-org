@@ -1,11 +1,14 @@
 import {Meta, StoryFn} from '@storybook/react-webpack5';
 import {useState} from 'react';
 
-import Tags, {TagProps, TagsProps} from '../index';
+import Tags, {Tag, TagProps, TagsProps} from '../index';
 
 export default {
   title: 'DesignSystem/Tags',
   component: Tags,
+  parameters: {
+    useMui: true,
+  },
 } as Meta;
 
 //
@@ -23,42 +26,6 @@ const SingleTemplate: StoryFn<TagsProps> = args => (
     </div>
   </>
 );
-
-const SingleTemplateWithTagState: StoryFn<TagsProps> = args => {
-  const initialState = ['AAA', 'BBB', 'CCC'];
-  const [tags, setTags] = useState(initialState);
-
-  const removeTag = (index: number) => {
-    setTags(prev => {
-      const newTags = [...prev];
-      newTags.splice(index, 1);
-      return newTags;
-    });
-  };
-
-  const tagsList: TagProps[] = tags.map((label, i) => ({
-    label,
-    tooltipId: label,
-    tooltipContent: label,
-    onClose: () => removeTag(i),
-    type: 'closable',
-  }));
-
-  return (
-    <>
-      <p>
-        * Margins on this screen does not represent Component's margins, and are
-        only added to improve storybook view *{' '}
-      </p>
-      <div style={{marginTop: 50}}>
-        <Tags {...args} tagsList={tagsList} />
-      </div>
-      <div style={{marginTop: 50}}>
-        <button onClick={() => setTags(initialState)}>Reset</button>
-      </div>
-    </>
-  );
-};
 
 const MultipleTemplate: StoryFn<{
   components: TagsProps[];
@@ -84,9 +51,9 @@ DefaultTags.args = {
     {
       label: 'Icon left',
       icon: {
-        iconName: 'check',
+        iconName: 'smile',
         iconStyle: 'solid',
-        title: 'check',
+        title: 'smile',
         placement: 'left',
       },
       tooltipId: 'science-english',
@@ -95,9 +62,9 @@ DefaultTags.args = {
     {
       label: 'Icon right',
       icon: {
-        iconName: 'check',
+        iconName: 'smile',
         iconStyle: 'solid',
-        title: 'check',
+        title: 'smile',
         placement: 'right',
       },
       tooltipId: 'english-science',
@@ -115,18 +82,18 @@ NoTooltipTags.args = {
     {
       label: 'Icon left',
       icon: {
-        iconName: 'check',
+        iconName: 'smile',
         iconStyle: 'solid',
-        title: 'check',
+        title: 'smile',
         placement: 'left',
       },
     },
     {
       label: 'Icon right',
       icon: {
-        iconName: 'check',
+        iconName: 'smile',
         iconStyle: 'solid',
-        title: 'check',
+        title: 'smile',
         placement: 'right',
       },
     },
@@ -142,9 +109,9 @@ TagsWithHTMLTooltipContent.args = {
     {
       label: 'Icon left',
       icon: {
-        iconName: 'check',
+        iconName: 'smile',
         iconStyle: 'solid',
-        title: 'check',
+        title: 'smile',
         placement: 'left',
       },
       tooltipId: 'science-english',
@@ -157,9 +124,9 @@ TagsWithHTMLTooltipContent.args = {
     {
       label: 'Icon right',
       icon: {
-        iconName: 'check',
+        iconName: 'smile',
         iconStyle: 'solid',
-        title: 'check',
+        title: 'smile',
         placement: 'right',
       },
       tooltipId: 'english-science',
@@ -170,10 +137,171 @@ TagsWithHTMLTooltipContent.args = {
   className: 'test',
 };
 
-export const TagsWithOnCloseProp = SingleTemplateWithTagState.bind({});
+export const TagsWithOnCloseProp: StoryFn<TagsProps> = args => {
+  const initialState = ['AAA', 'BBB', 'CCC'];
+  const [lightTags, setLightTags] = useState(initialState);
+  const [solidTags, setSolidTags] = useState(initialState);
+  const [showLightIconClose, setShowLightIconClose] = useState(true);
+  const [showSolidIconClose, setShowSolidIconClose] = useState(true);
+
+  const removeTag = (
+    setTags: React.Dispatch<React.SetStateAction<string[]>>,
+    index: number,
+  ) => {
+    setTags(prev => {
+      const newTags = [...prev];
+      newTags.splice(index, 1);
+      return newTags;
+    });
+  };
+
+  const buildTagsList = (
+    tags: string[],
+    variant: 'light' | 'solid',
+  ): TagProps[] =>
+    tags.map((label, i) => ({
+      label,
+      tooltipId: `${variant}-${label}`,
+      tooltipContent: label,
+      onDelete: () =>
+        removeTag(variant === 'light' ? setLightTags : setSolidTags, i),
+      variant,
+    }));
+
+  return (
+    <>
+      <p>
+        * Margins on this screen does not represent Component's margins, and are
+        only added to improve storybook view *{' '}
+      </p>
+      <div style={{marginTop: 50, display: 'flex', gap: 24}}>
+        <div>
+          <p>Subtle</p>
+          <Tags {...args} tagsList={buildTagsList(lightTags, 'light')} />
+          {showLightIconClose && (
+            <Tag
+              label="Icon + Close"
+              tooltipId="light-icon-close"
+              tooltipContent="Icon + Close"
+              icon={{iconName: 'smile', iconStyle: 'solid', placement: 'right'}}
+              onDelete={() => setShowLightIconClose(false)}
+              variant="light"
+              color="teal"
+            />
+          )}
+        </div>
+        <div>
+          <p>Solid</p>
+          <Tags {...args} tagsList={buildTagsList(solidTags, 'solid')} />
+          {showSolidIconClose && (
+            <Tag
+              label="Icon + Close"
+              tooltipId="solid-icon-close"
+              tooltipContent="Icon + Close"
+              icon={{iconName: 'smile', iconStyle: 'solid', placement: 'right'}}
+              onDelete={() => setShowSolidIconClose(false)}
+              variant="solid"
+              color="teal"
+            />
+          )}
+        </div>
+      </div>
+      <div style={{marginTop: 50}}>
+        <button
+          onClick={() => {
+            setLightTags(initialState);
+            setSolidTags(initialState);
+            setShowLightIconClose(true);
+            setShowSolidIconClose(true);
+          }}
+        >
+          Reset
+        </button>
+      </div>
+    </>
+  );
+};
+
 TagsWithOnCloseProp.args = {
   size: 'm',
   className: 'test',
+};
+
+export const SingleTagVariants: StoryFn = () => {
+  const colors: Array<{
+    label: string;
+    value:
+      | 'teal'
+      | 'purple'
+      | 'aqua'
+      | 'error'
+      | 'warning'
+      | 'success'
+      | 'gray'
+      | 'disabled';
+  }> = [
+    {label: 'Teal', value: 'teal'},
+    {label: 'Purple', value: 'purple'},
+    {label: 'Aqua', value: 'aqua'},
+    {label: 'Error', value: 'error'},
+    {label: 'Warning', value: 'warning'},
+    {label: 'Success', value: 'success'},
+    {label: 'Gray', value: 'gray'},
+    {label: 'Disabled', value: 'disabled'},
+  ];
+
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: 8,
+        alignItems: 'start',
+        width: '50%',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+          justifyItems: 'start',
+          alignItems: 'flex-start',
+        }}
+      >
+        <p>Subtle</p>
+        {colors.map(color => (
+          <Tag
+            key={`light-${color.value}`}
+            label={color.label}
+            color={color.value}
+            variant="light"
+            icon={{iconName: 'smile', iconStyle: 'solid', placement: 'right'}}
+          />
+        ))}
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+          justifyItems: 'start',
+          alignItems: 'flex-start',
+        }}
+      >
+        <p>Solid</p>
+        {colors.map(color => (
+          <Tag
+            key={`solid-${color.value}`}
+            label={color.label}
+            color={color.value}
+            variant="solid"
+            icon={{iconName: 'smile', iconStyle: 'solid', placement: 'right'}}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export const GroupOfSizesOfTags = MultipleTemplate.bind({});
@@ -186,9 +314,9 @@ GroupOfSizesOfTags.args = {
           label: 'Science English S',
           tooltipId: 'science-englishS',
           icon: {
-            iconName: 'check',
+            iconName: 'smile',
             iconStyle: 'solid',
-            title: 'check',
+            title: 'smile',
             placement: 'left',
           },
           tooltipContent: 'Science S, English S',
@@ -200,7 +328,7 @@ GroupOfSizesOfTags.args = {
           icon: {
             iconName: 'circle-user',
             iconStyle: 'solid',
-            title: 'check',
+            title: 'smile',
             placement: 'right',
           },
         },
@@ -221,9 +349,9 @@ GroupOfSizesOfTags.args = {
           label: 'Science english M',
           tooltipId: 'science-englishM',
           icon: {
-            iconName: 'check',
+            iconName: 'smile',
             iconStyle: 'solid',
-            title: 'check',
+            title: 'smile',
             placement: 'left',
           },
           tooltipContent: 'Science M, English M',
@@ -235,7 +363,7 @@ GroupOfSizesOfTags.args = {
           icon: {
             iconName: 'circle-user',
             iconStyle: 'solid',
-            title: 'check',
+            title: 'smile',
             placement: 'right',
           },
         },
@@ -256,9 +384,9 @@ GroupOfSizesOfTags.args = {
           label: 'Science English L',
           tooltipId: 'science-englishL',
           icon: {
-            iconName: 'check',
+            iconName: 'smile',
             iconStyle: 'solid',
-            title: 'check',
+            title: 'smile',
             placement: 'left',
           },
           tooltipContent: 'Science L, English L',
@@ -270,7 +398,7 @@ GroupOfSizesOfTags.args = {
           icon: {
             iconName: 'circle-user',
             iconStyle: 'solid',
-            title: 'check',
+            title: 'smile',
             placement: 'right',
           },
         },

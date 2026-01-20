@@ -3,7 +3,7 @@ import {FunctionComponent} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 
-import Tag, {TagProps} from './_Tag';
+import Tag, {TagProps} from './Tag';
 
 import moduleStyles from './tags.module.scss';
 
@@ -34,26 +34,39 @@ const Tags: FunctionComponent<TagsProps> = ({
   size = 'm',
   className,
 }) => (
-  <div
-    className={classNames(
-      moduleStyles.tags,
-      moduleStyles[`tags-${size}`],
-      className,
-    )}
-    data-testid="tags"
-  >
+  <div className={classNames(moduleStyles.tags, className)} data-testid="tags">
     {tagsList.map(
-      ({key, tooltipId, label, tooltipContent, ariaLabel, icon, ...props}) => (
-        <Tag
-          key={key ?? tooltipId ?? label}
-          tooltipId={tooltipId}
-          label={label}
-          ariaLabel={ariaLabel}
-          icon={icon}
-          tooltipContent={tooltipContent}
-          {...props}
-        />
-      ),
+      (
+        {
+          key,
+          tooltipId,
+          label,
+          tooltipContent,
+          ariaLabel,
+          icon,
+          size: tagSize,
+          ...props
+        },
+        index,
+      ) => {
+        const fallbackKey =
+          typeof label === 'string' || typeof label === 'number'
+            ? label
+            : undefined;
+
+        return (
+          <Tag
+            key={key ?? tooltipId ?? fallbackKey ?? index}
+            size={tagSize ?? size}
+            tooltipId={tooltipId}
+            label={label}
+            ariaLabel={ariaLabel}
+            icon={icon}
+            tooltipContent={tooltipContent}
+            {...props}
+          />
+        );
+      },
     )}
   </div>
 );

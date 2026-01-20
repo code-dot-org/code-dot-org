@@ -144,7 +144,29 @@ describe('Design System - Tags Component', () => {
     expect(icon).toBeInTheDocument();
   });
 
-  describe('onClose', () => {
+  it('renders tags with variant and color props', () => {
+    render(
+      <Tags
+        tagsList={[
+          {
+            label: 'Solid warning',
+            variant: 'solid',
+            color: 'warning',
+          },
+          {
+            label: 'Light teal',
+            variant: 'light',
+            color: 'teal',
+          },
+        ]}
+      />,
+    );
+
+    expect(screen.getByText('Solid warning')).toBeInTheDocument();
+    expect(screen.getByText('Light teal')).toBeInTheDocument();
+  });
+
+  describe('onDelete', () => {
     let user: UserEvent;
     let onClick1: jest.Mock;
     let onClick2: jest.Mock;
@@ -158,11 +180,10 @@ describe('Design System - Tags Component', () => {
       onClick2 = jest.fn();
       tagsList = [
         {
-          type: 'closable',
           tooltipId: 'tag-icon-1',
           label: 'tag with icon',
           tooltipContent: 'Tooltip with icon',
-          onClose: onClick1,
+          onDelete: onClick1,
           icon: {
             iconName: 'close',
             iconStyle: 'solid',
@@ -171,11 +192,10 @@ describe('Design System - Tags Component', () => {
           },
         },
         {
-          type: 'closable',
           tooltipId: 'tag-icon-2',
           label: 'tag with icon',
           tooltipContent: 'Tooltip with icon',
-          onClose: onClick2,
+          onDelete: onClick2,
           icon: {
             iconName: 'close',
             iconStyle: 'solid',
@@ -187,12 +207,10 @@ describe('Design System - Tags Component', () => {
 
       render(<Tags tagsList={tagsList} />);
 
-      [button1, button2] = screen.getAllByRole('button', {
-        name: /close/i,
-      });
+      [button1, button2] = screen.getAllByRole('button', {name: /close/i});
     });
 
-    it('has keyboard navigable close button if onClose is present', async () => {
+    it('has keyboard navigable close button if onDelete is present', async () => {
       await user.tab();
 
       expect(button1).toHaveFocus();
@@ -202,14 +220,14 @@ describe('Design System - Tags Component', () => {
       expect(button2).toHaveFocus();
     });
 
-    it('calls onClose when the close button is clicked', async () => {
+    it('calls onDelete when the close button is clicked', async () => {
       await user.click(button1);
 
       expect(onClick1).toHaveBeenCalledTimes(1);
       expect(onClick2).not.toHaveBeenCalled();
     });
 
-    it('calls onClose when Enter or Space is pressed while close button has focus', async () => {
+    it('calls onDelete when Enter or Space is pressed while close button has focus', async () => {
       await user.tab();
       expect(button1).toHaveFocus();
       await user.keyboard('{Enter}');
