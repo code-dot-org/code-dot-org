@@ -70,7 +70,9 @@ class DCDOBase < DynamicConfigBase
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
       'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
-      'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false)
+      'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
+      # TODO: Remove this after the ClassLink LMS launch
+      classlink_lms_enabled: DCDO.get('classlink_lms_enabled', false)
     }
   end
 end

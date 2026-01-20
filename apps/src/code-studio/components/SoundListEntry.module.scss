@@ -1,0 +1,39 @@
+.root {
+  float: left;
+  width: 215px;
+  height: 35px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 6px;
+  border: solid 0;
+  border-radius: 5px;
+}
+
+.selected {
+  background-color: #cfc9de;
+}
+
+.notSelected {
+  background-color: #fff;
+}
+
+.icon {
+  float: left;
+  padding: 6px 10px 6px 2px;
+}
+
+.metadata {
+  float: left;
+  width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.soundName {
+  font-size: 14px;
+}
+
+.time {
+  color: #5b6770;
+  font-size: 11px;
+}
