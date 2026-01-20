@@ -63,8 +63,8 @@ export const handleSaveDuplicateFile = async (
         <strong>{newFileName}</strong>?
       </>
     ),
-    confirmText: 'Replace existing file',
-    neutralText: `Import as ${newFileName}`,
+    confirmText: `Import as ${newFileName}`,
+    neutralText: 'Replace existing file',
     icon: {iconName: 'exclamation-circle', iconStyle: 'solid'},
   });
   if (results.type === 'confirm') {
@@ -76,7 +76,8 @@ export const handleSaveDuplicateFile = async (
       saveFile,
       createNewFile,
       findIdForFileName,
-      selectedFileName
+      selectedFileName,
+      newFileName
     );
   } else if (results.type === 'neutral') {
     // Import as new file
@@ -87,8 +88,7 @@ export const handleSaveDuplicateFile = async (
       saveFile,
       createNewFile,
       findIdForFileName,
-      selectedFileName,
-      newFileName
+      selectedFileName
     );
   }
 };
