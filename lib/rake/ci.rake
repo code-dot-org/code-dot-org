@@ -29,6 +29,11 @@ SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
+# Reset the dashboard database before seeding for UI tests. By default, the
+# database will have been prepopulated based on recent data from the staging
+# branch (see cache-staging-build pipeline in .drone.yml).
+RESET_DB_TAG = 'reset db'.freeze
+
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 
@@ -182,6 +187,10 @@ namespace :ci do
     end
 
     Dir.chdir('dashboard') do
+      if CI::Utils.tagged?(RESET_DB_TAG)
+        ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RESET_DB_TAG}], resetting dashboard database."
+        RakeUtils.rake_stream_output 'db:reset db:setup_or_migrate'
+      end
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
