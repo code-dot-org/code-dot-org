@@ -5,7 +5,7 @@
 import {nonnegativeIntegerValidator} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
-import {BLOCK_TYPES, BlockStyles} from './blockly/constants';
+import {BLOCK_TYPES, BlockColors, BlockStyles} from './blockly/constants';
 import {
   addSerializationHooksToBlock,
   copyBlockGenerator,
@@ -250,7 +250,8 @@ function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
     init: function () {
       // Comment blocks use a hard-coded HSV color and are not compatible with themes.
-      this.setStyle(BlockStyles.COMMENT);
+      const [h, s, v] = BlockColors.COMMENT;
+      this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
       this.appendDummyInput()
         .appendField(commonMsg.commentPrefix())
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
