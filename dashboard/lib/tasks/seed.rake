@@ -140,7 +140,6 @@ namespace :seed do
     csp8-2025
     csp9-2025
     csp10-2025
-    dance
     events
     flappy
     frozen
@@ -345,7 +344,6 @@ namespace :seed do
        interactive-games-animations-2023
        interactive-games-animations-2024
        customizing-llms-2024
-       dance
        events
        flappy
        frozen
