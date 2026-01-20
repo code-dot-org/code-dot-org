@@ -87,33 +87,10 @@ class AichatRequestsController < ApplicationController
   end
 
   def create_request
-    safe_params = params.permit(
-      :locale,
-      newMessage: [
-        :role,
-        :chatMessageText,
-        :chatMessageDisplayText,
-        :status,
-        :hiddenContext,
-        :timestamp,
-        {assets: [:filename, :source]},
-        {userAddedSelectionContext: [:sourceCode, :filename, :displayName, {lineReference: [:start, :end]}]}
-      ],
-      storedMessages: [
-        :role,
-        :chatMessageText,
-        :status,
-        :timestamp,
-        {assets: [:filename, :source]},
-      ],
-      modelParameters: [
-        :selectedModelId, :temperature, :systemPrompt,
-        {retrievalContexts: [], responseJsonSchema: {}}
-      ],
-      aichatContext: [:clientType, :currentLevelId, :scriptId, :channelId]
-    ).to_h.deep_symbolize_keys
+    # TODO: confirm request shape and data usage https://codedotorg.atlassian.net/browse/TEACHING-60
+    request_params = params.permit!.to_h.deep_symbolize_keys
 
-    attributes = AichatAiHelper.build_request_attributes(current_user.id, safe_params)
+    attributes = AichatAiHelper.build_request_attributes(current_user.id, request_params)
 
     AichatRequest.new(attributes).tap(&:save!)
   end
