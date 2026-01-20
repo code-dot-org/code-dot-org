@@ -3,6 +3,7 @@ import React from 'react';
 
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
+
 import styles from '@cdo/apps/code-studio/components/SoundListEntry.module.scss';
 
 describe('SoundListEntry', () => {
