@@ -22,7 +22,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
      ```sh
      ruby --version     # --> ruby 3.1.7
-     node --version     # --> v20.18.3
+     node --version     # --> >= v20.19.0
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```

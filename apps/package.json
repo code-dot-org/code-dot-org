@@ -4,7 +4,7 @@
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": "^20.18.3",
+    "node": "^20.19",
     "npm": "^10.8.2"
   },
   "scripts": {
