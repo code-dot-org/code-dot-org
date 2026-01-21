@@ -14,12 +14,14 @@ interface CFUQuestionStudentAnswerProps {
   level: CFULevel;
   response: CFULevelResponse;
   isOpen: boolean;
+  questionText?: string;
 }
 
 const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
   level,
   response,
   isOpen,
+  questionText,
 }) => {
   const renderStudentAnswerByType = (type: CFULevelType) => {
     switch (type) {
@@ -47,15 +49,7 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
             <Typography variant="body3">
               <strong>Question</strong>
             </Typography>
-            {level.question_text && (
-              <SafeMarkdown
-                markdown={
-                  Array.isArray(level.question_text)
-                    ? level.question_text.join(' \n\n ')
-                    : level.question_text
-                }
-              />
-            )}
+            <SafeMarkdown markdown={questionText} />
           </div>
           <div className={styles.cfuQuestionStudentAnswerContent}>
             <Typography variant="body3">

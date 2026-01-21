@@ -76,11 +76,26 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
         </IconButton>
       </div>
     </div>
-    <CFUQuestionStudentAnswer
-      level={level}
-      response={response}
-      isOpen={isOpen}
-    />
+    {Array.isArray(level.question_text) ? (
+      <>
+        {level.question_text.map(questionText => (
+          <CFUQuestionStudentAnswer
+            key={questionText}
+            level={level}
+            response={response}
+            questionText={questionText}
+            isOpen={isOpen}
+          />
+        ))}
+      </>
+    ) : (
+      <CFUQuestionStudentAnswer
+        level={level}
+        response={response}
+        questionText={level.question_text || ''}
+        isOpen={isOpen}
+      />
+    )}
   </div>
 );
 
