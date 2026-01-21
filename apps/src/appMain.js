@@ -2,6 +2,7 @@ import {
   installCustomBlocks,
   appendBlocksByCategory,
 } from '@cdo/apps/block_utils';
+import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
 
 import {generateAuthoredHints} from './authoredHintUtils';
 import * as blocksCommon from './blocksCommon';
@@ -12,11 +13,12 @@ import * as commonReducers from './redux/commonReducers';
 import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
 import defaultSkinModule from './skins.js';
 import {singleton as studioApp} from './StudioApp';
-import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
+import {valueOr} from './utils';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
-  getBlockXML: () => Blockly.cdoUtils.getCode(Blockly.mainBlockSpace),
+  getBlockXML: () =>
+    Blockly.Xml.domToText(getProjectXml(Blockly.mainBlockSpace)),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
   getDropletContents: () => studioApp().editor.getValue(),
   getDroplet: () => studioApp().editor,
@@ -77,10 +79,6 @@ export default function (app, levels, options) {
       isK1: options.level && options.level.isK1,
       level: options.level,
     };
-
-    if (options.level && options.level.edit_blocks) {
-      wrapNumberValidatorsForLevelBuilder();
-    }
 
     blocksCommon.install(Blockly, blockInstallOptions);
     options.blocksModule.install(Blockly, blockInstallOptions);

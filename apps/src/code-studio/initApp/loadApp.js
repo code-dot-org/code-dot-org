@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {files} from '@cdo/apps/clientApi';
 import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
@@ -128,7 +129,7 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          report.program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          report.program = getCode(Blockly.mainBlockSpace);
         }
         report.callback = appOptions.report.callback;
       }
@@ -527,9 +528,9 @@ const sourceHandler = {
         try {
           const getSourceAsJson = true;
           // If we're readOnly, source hasn't changed at all
-          source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
+          source = Blockly.mainBlockSpace.isReadOnly()
             ? currentLevelSource
-            : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
+            : getCode(Blockly.mainBlockSpace, getSourceAsJson);
           resolve(source);
         } catch (err) {
           MetricsReporter.logError({

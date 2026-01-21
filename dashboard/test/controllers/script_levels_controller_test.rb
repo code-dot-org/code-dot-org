@@ -8,8 +8,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   include ScriptLevelsHelper
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @student = create(:student)
     @young_student = create(:young_student)

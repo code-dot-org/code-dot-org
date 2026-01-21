@@ -36,6 +36,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
   resourcePanelTabsElementId,
@@ -68,6 +69,28 @@ interface VersionHistoryProps {
   onLoadVersion?: (sources: ProjectSources) => void;
 }
 
+export interface BackpackProps {
+  validateFileName: (fileName: string) => {
+    isSupportFileName: boolean;
+    newFileName: string;
+  };
+  saveFileToProject: (fileId: string, contents: string, url?: string) => void;
+  createNewProjectFile: (
+    fileName: string,
+    contents: string,
+    url?: string
+  ) => void;
+  findIdForFileName: (fileName: string) => string | undefined;
+  saveToBackpackButton?: {
+    text: string;
+    onClick: (
+      fileList: string[],
+      errorCallback: (error: string) => void
+    ) => Promise<void>;
+  };
+  supportedFileTypes: string[];
+}
+
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
@@ -86,6 +109,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.TeachersOnly]: {
     title: commonI18n.teachingTips(),
     icon: 'chalkboard-teacher',
+  },
+  [Tabs.Backpack]: {
+    title: 'Backpack',
+    icon: 'backpack',
   },
 };
 
@@ -108,6 +135,7 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  backpackProps?: BackpackProps;
 };
 
 /**
@@ -132,6 +160,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   aiTutorResponseSchemaSettings,
   documentationUrl,
   sidebarOnly = false,
+  backpackProps,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -169,6 +198,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
+  const setBackpackTabAsActive = useCallback(
+    () => setCurrentTab(Tabs.Backpack),
+    []
+  );
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -185,6 +218,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }) ||
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
+
+  const showBackpack = backpackProps && !isPermanentlyReadOnly;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -249,6 +284,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.StudentRubric] = <StudentRubricView />;
     }
 
+    if (showBackpack) {
+      tabMap[Tabs.Backpack] = (
+        <BackpackPanel
+          {...backpackProps}
+          openPanelCallback={setBackpackTabAsActive}
+        />
+      );
+    }
+
     if (
       isUserTeacher &&
       (levelProperties.teacherMarkdown ||
@@ -273,8 +317,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isPermanentlyReadOnly,
     viewAsUserId,
     isWidgetView,
+    isReadOnlyPredict,
     versionHistoryProps,
     showRubric,
+    showBackpack,
     isUserTeacher,
     hideInstructionsNavigation,
     aiTutorMultimodalEnabled,
@@ -287,8 +333,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelId,
     isTemporarilyReadOnly,
     isViewingOldVersion,
-    isReadOnlyPredict,
     currentTab,
+    backpackProps,
+    setBackpackTabAsActive,
   ]);
 
   const hasTabs = useMemo(() => {

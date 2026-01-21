@@ -9,16 +9,14 @@ markdown <<MARKDOWN
 
 #### These changes reflect a **stronger focus on the user** making information easier to find and the experience more engaging and intuitive.
 
-## Key Vocabulary
-
-<div style="background-color: #f2f4f7; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
-        <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"> <b>User experience-</b> the overall experience a person has when interacting with a product, system, or service. Good UX means the product is easy to use, efficient, and enjoyable. </p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"><b>User profile-</b> a description of a typical user of a product or service. It includes demographic information, goals, needs, and behaviors. User profiles help designers understand who they are designing for.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>User Experience</b> is the overall experience a person has when interacting with a product, system, or service. Good UX means the product is easy to use, efficient, and enjoyable.
 </p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;"><b>Human Centered design-</b>the idea that design should start with understanding the needs of the end-user.
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>User Profile</b> is a description of a typical user of a product or service. It includes demographic information, goals, needs, and behaviors. User profiles help designers understand who they are designing for.
+</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>Human Centered Design</b> is the idea that design should start with understanding the needs of the end-user.
 </p>
 </div>
-
 
 
 ## 💼Career Connection: UX Designer
@@ -32,10 +30,11 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+</div>
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px;"> <b> 💡Teacher Tip: </b>You’ll see <b>career connections</b> like this highlighted throughout the unit. Use them to help students see how the skills they’re learning—like problem-solving, design thinking, and coding—connect to real-world tech careers.
+<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><b> 💡Teacher Tip: </b>You’ll see <b>career connections</b> like this highlighted throughout the unit. Use them to help students see how the skills they’re learning—like problem-solving, design thinking, and coding—connect to real-world tech careers.
 </p>
 </div>
 

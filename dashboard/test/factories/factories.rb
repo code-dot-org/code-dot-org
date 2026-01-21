@@ -626,6 +626,11 @@ FactoryBot.define do
       end
     end
 
+    trait :classlink_sso_provider do
+      sso_provider_with_token
+      provider {'classlink'}
+    end
+
     trait :clever_sso_provider do
       untrusted_email_sso_provider
       provider {'clever'}
@@ -816,6 +821,19 @@ FactoryBot.define do
       if section.script_id && section.course_id.nil?
         section.course_id = section.script.original_unit_group_id
       end
+    end
+
+    trait :hidden do
+      hidden {true}
+    end
+
+    trait :archived do
+      hidden
+    end
+
+    trait :from_clever do
+      login_type {Section::LOGIN_TYPE_CLEVER}
+      code {"#{CleverSection::CODE_PREFIX}#{Faker::Alphanumeric.unique.alphanumeric(number: 24)}"}
     end
 
     trait :teacher_participants do
@@ -2052,13 +2070,6 @@ FactoryBot.define do
     pardot_id_updated_at {Time.now.utc - 1.hour}
     data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now.utc}
-  end
-
-  factory :lti_feedback, class: 'Lti::Feedback' do
-    association :user, factory: :teacher
-
-    locale {I18n.locale.to_s}
-    satisfied {true}
   end
 
   factory :lti_integration do

@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-09T20:59:24.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Add a style sheet",
+    "long_instructions": "# Style this page!\r\nHere is an opportunity to be creative and have some fun with styles.\r\n\r\n \r\n# Do this\r\n1) Link the stylesheet to the web page.\r\n2) Make the paragraph text a different size.\r\n3) Make the paragraph text a different color.\r\n   * It is your choice whether to use a named color or use an RGB color.\r\n",
+    "bubble_choice_description": "Add a style sheet and rule-sets to this article.",
+    "thumbnail_url": "https://images.code.org/3297ad9f32df97ea4fcbb93b2352ed0d-image-1564005833568.JPG",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n   <!-- 1) Link the stylesheet to the web page -->\n  </head>\n  <body>\n    <!-- content about CSS -->\n    <h1>CSS</h1>\n    <p>Cascading Style Sheets are a great way to give your web pages a little extra STYLE!  You can change the color, size, and lots of other things.  It's okay if you don't remember every property, because you can always look them back up to remind yourself.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 2) Make the paragraph text a different size */\n\n/* 3) Make the paragraph text a different color */",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWrya0/hk2V+fh\npMuor67jrGFxdTYDXCAuySiLh3JboY78nwuWcE3fcC8auCAPUM0E62+y6MQr\nSNtflkRNG+1UiKM2xo0W6lkjX8f29M+Hc6l+OlkLjcjIqTSV3GGV9VSVmBmV\nqC7p2QjHp4U6cMDtsG1Kl8b1iB5phVQ3k9pdI+UfkusitTTmcL54jecYZHO8\nqKldcxuo9w+QtBsNFIBugF6TztYp3bv8YiKo16AOydMi3ITh23uxj861Y6YM\ndpw+fY9/q/w+41tKCBpgyi6I5a1FPs7k3x4V7RGTHV8R6riRy2HbmzRZeqvP\n43nprd+KSnWyL1q68w5aF49chWMzFb5BbO6yxidx4C721VxqktWJnFD0P99u\nWJ/dR0zqNnO+FLg8SnP7phnLxhpqb6E0W3GkWCGI2TZbTlyrTKUUeTsdHlgm\nPvI2BxgKzj7RdB2k5PWSYC8OUA9LDdBx34GG6yXvnivcdDA7i2dxCqkiE7e2\nYdP+PKCBNM3KNnmMreiP/tXV016rQEk38KNugNwOa/DEeS45mKeUAiTyW8p3\nvHen/q5XbPISpmqMUKT7DDLfat6EQccGWn9u3srMPGoe31rsNRn7p/HJCrif\nofZXSK8SepAg8Ry0JopvPp+JBYoOYn/dxXGc0ME4vvtOXsKUSDh8xbNNZ7e2\npc1Z0klK+TJJLY/0p+Lf9mwmm96VQ5jSN45KRfEfDrULy9qSlDsJMGtRs60y\nOj3K1px/GRH9oBY9/tY5hdUnRJhj2bK/xSC1gvb8woMFT9btB9gLcfYjVWFP\nyZ4gYI/Usnjzd88i+gIFmmR09/j4LrUQU5DmEAhkCq8wBBQ5QYZObfpXHBCX\nuKHhCMWBiSy+awgqo94iM6IhGb0xxxNTk7DmTvOm0ph2LEhCmvWi1fMMj0ZD\ntTnsalhMswDoJ9sWYdEflOlBamVywAcVQslZuPlanRbhWmD2PL8b1QzGYb1F\n4W9422VM4+D7dr72MpLo+QNbuAwyA/Vwig==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-09 20:59:50 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 21:00:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

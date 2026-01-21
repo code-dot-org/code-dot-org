@@ -14,12 +14,10 @@ import {
 } from '@cdo/apps/weblab/dialogs/';
 import weblabI18n from '@cdo/weblab/locale';
 
-import {getCurrentId} from '../code-studio/initApp/project';
 import consoleApi from '../consoleApi';
 import {TestResults} from '../constants';
 import dom from '../dom';
 import logToCloud from '../logToCloud';
-import firehoseClient from '../metrics/firehose';
 import {getStore} from '../redux';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import {reload} from '../utils';
@@ -127,18 +125,6 @@ WebLab.prototype.init = function (config) {
       filesApi.deleteAll(
         xhr => {
           this.fileEntries = null;
-          firehoseClient.putRecord(
-            {
-              study: 'weblab_loading_investigation',
-              study_group: 'empty_manifest',
-              event: 'clear_puzzle_success',
-              project_id: getCurrentId(),
-              data_json: JSON.stringify({
-                responseText: xhr.responseText,
-              }),
-            },
-            {includeUserId: true}
-          );
           // The project has been reset, reload() the page now - don't resolve
           // the promise, because that will lead to a project.save() that we
           // don't want or need in this scenario.
@@ -521,19 +507,6 @@ WebLab.prototype.setupReduxSubscribers = function (store) {
 WebLab.prototype.onIsRunningChange = function () {};
 
 WebLab.prototype.onFilesReady = function (files, filesVersionId) {
-  // Gather information when the weblab manifest is empty but should
-  // contain references to files (i.e. after changes have been made to the project)
-  if (filesVersionId && files && files.length === 0) {
-    firehoseClient.putRecord(
-      {
-        study: 'weblab_loading_investigation',
-        study_group: 'empty_manifest',
-        event: 'get_empty_manifest',
-        project_id: getCurrentId(),
-      },
-      {includeUserId: true}
-    );
-  }
   assetListStore.reset(files);
   this.fileEntries = assetListStore.list().map(fileEntry => ({
     name: fileEntry.filename,
@@ -671,17 +644,8 @@ WebLab.prototype.addPageAction = function (...args) {
   logToCloud.addPageAction(...args);
 };
 
-// Some temporary logging to diagnose possible loading issues.
-WebLab.prototype.tempLog = function (event, data = null) {
-  firehoseClient.putRecord(
-    {
-      study: 'weblab_loading_investigation_2022',
-      event: event,
-      data_json: data === null ? null : JSON.stringify(data),
-    },
-    {includeUserId: true}
-  );
-};
+// Leave an empty function to avoid issues with CdoBramble
+WebLab.prototype.tempLog = function () {};
 
 WebLab.prototype.syncBrambleFiles = function (callback = () => {}) {
   this.brambleHost?.syncFiles(

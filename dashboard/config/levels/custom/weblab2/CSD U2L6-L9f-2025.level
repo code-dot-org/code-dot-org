@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-09T20:16:28.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Add a heading rule-set",
+    "long_instructions": "# Add Heading Rule\r\nHere is an opportunity to be creative and customize the heading.\r\n\r\n \r\n# Do this\r\n1) Add a rule-set for the heading.",
+    "bubble_choice_description": "Add a rule-set for the heading of this article.",
+    "thumbnail_url": "https://images.code.org/90085ed44cc9b516bff3c50ffb1e7e87-image-1564006558581.JPG",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <!-- content about elephants -->\n    <h1>Elephants</h1>\n    \n    <h3>Fun facts about elephants:</h3>\n    \n    <p>- Elephants are the largest land animals on Earth!</p>\n    \n    <p>- There are 3 different species of elephants: African Savannah elephant, African Forest elephant, and Asian elephant</p>\n    \n    <p>- Want to tell the types of elephants apart? African elephants' ears are the shape of Africa, and Asian elephants' ears are the shape of India.</p>\n    \n    <p>- Elephant tusks never stop growing!</p>\n    \n    <p>- Elephants cover themselves in mud to protect themselves from the sun.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: white;\n}\n\n/* 1) Add a rule-set for the heading */",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryatL/sl2eOB\nAuHdTuhzIEI0TCx0ZgVgf029ErwpDJiDszq7jNBWAzmihYWIp1tfNnD0KtVI\n1EpAWMMuMh8SRRU97vvtUMgyuqx5GzG3vojaR2HaP8Wq5pxUCpDeHlfM4oKP\nlI2iT1Q0NK1mZ24TOxr21viW+M3F9so3SlzOnid1Z78qqkWE7APzGdEwBnA1\nl5VIrH0ZXVqBuautQ7Z+KuKEK5A8YLzF9qCgTF9KJlV2s0NG5J/dXXy5/Fhn\nYeguIYXLb/ILP6kIlbta8mMsQilNWZW4vfS0W2uXyGh7w7vP21eoYbLX5i1s\nhqC53dKai5/eCLkdXaU1v/CrqimD4wgqgqvLfgGioG7Ui6eVPzOXyrmbHBwl\nfuDU+jqi15J4bToaP+xtvDtASJTjPTZ9YoJs6GaA+xYT74y7io3iAsMyiy2s\n3Im6kf0lA+JjO0Z9HisxWD6nGbAchjjZJCPp9VWZbY707C4P3lkP5N0lPA5d\nTTGVqVZIx6ctQ9JX6KvZaF0ZbzIfmaGwLfu/ICUDQifVNc+q2BL8FYSaeU3y\nUpBZDvqZKx/e2Nq9MAObun22bJtGRzCSKenWXdWXSvueZ7n5xJOPSjQHAWmA\nCfajPapMcBVR3O15drFVy9HbgIQR+0vIlmYqEiYtMgxhvVovLQoqdkXKzuxK\nEDmvS0iuds84G4JBN4nhjK7NagamaR+ElOiDZOsE3TdQsNwd/6KAjB1tiLQt\np27SmcJd+spaWl72Dfg6AYhh2dcqVkhXb+5jD6+qUKXfJ4E2aRyLLEU7Uz+d\n+0EzswVOQ4SX8+QLHA19Iot1xeqxcVJSotWfKRkq9v9Ii6TDN9XJ3W8T2Qid\nClmbEFZ0ij8gOpP1+EPn3FqUWTRbalxTT8vIKGm99ubnbpyh2XX56mTZrigU\n9WuEItZJkZtrHFNY/0+P2aGLv+FKEmZF1JTDOxWU7Sbf1Z68DjRwC+ktrMv2\na7DHJlsJRZ9L/uomObaDCStGibwAKxm7686lmoW9ePkOu0zwTQuX8Dwb3NB/\nRdbb1Ox/nVsTNQwtlE/Z7krjYVvWod73vQSPIOdYho9l/D3+ZDZVeoHCRRI7\n94r3flF9qSaZl/mT9Ys7rgehDN3wywAL6mDd/cd8Qf0vBRTIbNuBscAdLOjd\nSyOosmuySZFKgRuEtt8HIjGULFlNwlqyz2I1RDIWYPC9WfE6BQY4e/JUUAac\nCHow69EkcVksGa2xXd3hyPcpmMj0l/MSgWbcLzxFhabHyWLpTGGmX+P3j1cl\n0XN1qkJygr95n7sv9v3VcVKJ7zc7ibj2ZaTTjU/7U2g7F69j5bcxg6UBhYbo\nSvdaql/v5G8qpxU=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-09 20:17:40 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:18:32 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

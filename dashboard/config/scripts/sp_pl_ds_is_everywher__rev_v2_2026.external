@@ -1,0 +1,86 @@
+name 'sp-pl-DS_is_everywher_-rev_v2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Data Science?
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Data</strong> is any form of organized information. This could be words, numbers or pictures.</p>
+
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;"><strong>📖 Data Science </strong> is the process of making meaning from that data.</p>
+
+</div>
+
+#### Learning data science helps students develop critical thinking skills and understand how to make informed decisions based on evidence. It teaches students how to gather information, look for patterns, ask questions, and use data to support conclusions.
+
+#### Data science is used across many fields. It helps organizations solve problems, improve efficiency, and make predictions about the future. By studying data science, students gain skills that prepare them for a wide range of careers and help them better understand how the world works.
+
+#### Many industries rely on data science to make decisions and innovate. The examples below show how different fields use data to improve their work.
+
+<div style="border:1px solid #d3d3d3; border-radius:12px; overflow:hidden; margin:20px 0; background:#ffffff;">
+<table style="width:100%; border-collapse:collapse; table-layout:fixed;">
+<tr>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/c063cc1809e98ebc07d0659bb8dc52c8-image-1724079338929.png" alt="healthcare icon" style="width:75px; border-radius:10px;">
+</td>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/4d6957c590afe4356a34fd0d880dada9-image-1724079415496.png" alt="finance icon" style="width:70px; border-radius:10px;">
+</td>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/fe851509654f7a2f909715868a3d7fde-image-1724079637108.png" alt="retail shop icon" style="width:75px; border-radius:10px;">
+</td>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/febd63b16d05af08c0c69b6f2b76fb09-image-1724079744724.png" alt="transportation icon" style="width:75px; border-radius:10px;">
+</td>
+</tr>
+<tr>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px; border-right:1px solid #d3d3d3;">Healthcare</th>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px; border-right:1px solid #d3d3d3;">Finance</th>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px; border-right:1px solid #d3d3d3;">Retail</th>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px;">Transportation</th>
+</tr>
+<tr>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3;">Predictive models that help diagnose diseases earlier and personalize treatments.</td>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3;">Systems that detect fraud and provide personalized financial advice.</td>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3;">Tools that predict product demand and adjust prices in real time.</td>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3;">Algorithms that improve transit routes and predict vehicle maintenance needs.</td>
+</tr>
+</table>
+</div>
+
+<div style="border:1px solid #d3d3d3; border-radius:12px; overflow:hidden; margin:20px 0; background:#ffffff;">
+<table style="width:100%; border-collapse:collapse; table-layout:fixed;">
+<tr>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/24815a5ef848a7ae17799879e481847f-image-1724079815627.png" alt="education icon" style="width:75px; border-radius:10px;">
+</td>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/5cc860b95a9d00dc52d3498c31e05673-image-1724079929431.png" alt="sports icon" style="width:70px; border-radius:10px;">
+</td>
+<td style="border:none; text-align:center; padding:15px;">
+<img src="https://images.code.org/a93502230072c87cd257ac2516e45e91-image-1724080036483.png" alt="earth icon" style="width:75px; border-radius:10px;">
+</td>
+</tr>
+<tr>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px; border-right:1px solid #d3d3d3;">Education</th>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px; border-right:1px solid #d3d3d3;">Sports</th>
+<th style="background-color:#5E666F; color:#ffffff; font-size:14pt; padding:10px;">Environmental Science</th>
+</tr>
+<tr>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3;">Adaptive learning tools that tailor lessons and track student progress.</td>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3; border-right:1px solid #d3d3d3;">Performance analysis using wearable tech and game data.</td>
+<td style="font-size:12pt; padding:12px; border-top:1px solid #d3d3d3;">Tools that monitor climate patterns and support conservation efforts.</td>
+</tr>
+</table>
+</div>
+
+
+<br>
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Data science is everywhere, influencing industries from healthcare to sports. Connecting your students to these real-world applications helps them see the relevance of what they’re learning and deepens their understanding.  
+</p>
+</div>
+
+MARKDOWN

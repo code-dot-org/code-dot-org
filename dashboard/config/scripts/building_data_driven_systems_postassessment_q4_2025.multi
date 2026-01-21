@@ -7,7 +7,7 @@ right 'If you provide the AI with real user data as examples, that sensitive inf
 wrong 'The AI will charge you a fee for every piece of data it creates.'
 wrong 'Using AI data makes it impossible to use the `.map()` method later.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

@@ -4162,6 +4162,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@codemirror/lang-json@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "@codemirror/lang-json@npm:6.0.2"
+  dependencies:
+    "@codemirror/language": "npm:^6.0.0"
+    "@lezer/json": "npm:^1.0.0"
+  checksum: 10/a8e57ad5c6cc53edd0d8bce4c26fa189dd5a95c371e72d32957d4a5c857f814761d9dfab81361f8e8ae9da7bcf657e7e1343f39694f9cffb1c144dd3ef7092a0
+  languageName: node
+  linkType: hard
+
 "@codemirror/lang-markdown@npm:^6.3.4":
   version: 6.3.4
   resolution: "@codemirror/lang-markdown@npm:6.3.4"
@@ -5548,6 +5558,17 @@ __metadata:
     "@lezer/highlight": "npm:^1.1.3"
     "@lezer/lr": "npm:^1.3.0"
   checksum: 10/2ebdfae4968e7d0ff1a6b21b13b511cfcc78ee08f548de0133d5dc6fa4e45f089ef35368ff82ab4370f22881768958e70d3d2d5c662784add0170a0fc48c9be0
+  languageName: node
+  linkType: hard
+
+"@lezer/json@npm:^1.0.0":
+  version: 1.0.3
+  resolution: "@lezer/json@npm:1.0.3"
+  dependencies:
+    "@lezer/common": "npm:^1.2.0"
+    "@lezer/highlight": "npm:^1.0.0"
+    "@lezer/lr": "npm:^1.0.0"
+  checksum: 10/48e7b945fdfa2b5b6f862e27bc31f3991cba93f18df7fed0059b25f119b64dedd50bbc709d279e16e2b3eee10e7758d7d80c6d98d21bc15c284809d268837897
   languageName: node
   linkType: hard
 
@@ -11176,6 +11197,7 @@ __metadata:
     "@codemirror/lang-html": "npm:^6.4.9"
     "@codemirror/lang-java": "npm:^6.0.1"
     "@codemirror/lang-javascript": "npm:^6.2.4"
+    "@codemirror/lang-json": "npm:^6.0.2"
     "@codemirror/lang-markdown": "npm:^6.3.4"
     "@codemirror/lang-python": "npm:^6.1.7"
     "@codemirror/language": "npm:^6.11.0"

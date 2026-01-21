@@ -7,7 +7,7 @@ right 'The app responded to your action by updating what you see on the screen.'
 wrong 'The app automatically downloaded all your songs to your device.'
 wrong 'The app reset to its default settings to load faster.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1

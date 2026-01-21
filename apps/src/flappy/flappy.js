@@ -5,6 +5,7 @@
  *
  */
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import placeholder from '../../static/flappy/placeholder.jpg';
@@ -892,7 +893,7 @@ Flappy.onPuzzleComplete = function () {
 };
 
 function sendReport() {
-  const textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  const textBlocks = getCode(Blockly.mainBlockSpace);
 
   Flappy.waitingForReport = true;
 

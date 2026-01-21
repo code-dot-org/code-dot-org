@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-06 22:26:42 UTC",
+    "serialized_at": "2026-01-20 18:21:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -38,7 +38,7 @@
       "name": "Introduction to WebApps",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "####**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested Time:** 60 minutes",
@@ -101,8 +101,19 @@
       }
     },
     {
-      "key": "f194476b-67f7-4778-b176-640b4562c468",
+      "key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da",
       "position": 4,
+      "properties": {
+        "progression_name": "Adding Style to Web Apps with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da",
+        "lesson_activity.key": "43a1709f-4161-4b3e-8ea8-dc8f30525d25"
+      }
+    },
+    {
+      "key": "f194476b-67f7-4778-b176-640b4562c468",
+      "position": 5,
       "properties": {
         "progression_name": "Web Design with AI"
       },
@@ -113,9 +124,9 @@
     },
     {
       "key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "progression_name": "Sitemaps and Wireframes"
+        "progression_name": "Wireframes "
       },
       "seeding_key": {
         "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1",
@@ -124,7 +135,7 @@
     },
     {
       "key": "3d42791f-5713-463c-9dc3-c952d7c88e00",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Closing"
       },
@@ -466,6 +477,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-U1-HTML-howto-12"
+        ],
         "progression": "Building Web Apps with AI"
       },
       "bonus": false,
@@ -485,13 +499,10 @@
     {
       "chapter": 15,
       "position": 15,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U1-CSS-13"
-        ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -501,7 +512,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl_sandbox_aif_2_U1-CSS-13"
@@ -510,13 +521,10 @@
     {
       "chapter": 16,
       "position": 16,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U1-CSS-13-2"
-        ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -526,7 +534,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl_sandbox_aif_2_U1-CSS-13-2"
@@ -535,13 +543,10 @@
     {
       "chapter": 17,
       "position": 17,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U1-CSS-practice-14"
-        ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -551,7 +556,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl-sandbox-aif2-U1-CSS-practice-14"
@@ -560,10 +565,10 @@
     {
       "chapter": 18,
       "position": 18,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -573,7 +578,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl-sandbox-aif2-U1-CSS-howto-15"
@@ -582,13 +587,10 @@
     {
       "chapter": 19,
       "position": 19,
-      "activity_section_position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U1-weblabTips-16"
-        ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -598,7 +600,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl-sandbox-aif2-U1-weblabTips-16"
@@ -607,13 +609,10 @@
     {
       "chapter": 20,
       "position": 20,
-      "activity_section_position": 12,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U1-CFU-17"
-        ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -623,7 +622,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl-sandbox-aif2-U1-CFU-17"
@@ -632,13 +631,10 @@
     {
       "chapter": 21,
       "position": 21,
-      "activity_section_position": 13,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-U1-CSS-HTML-18"
-        ],
-        "progression": "Building Web Apps with AI"
+        "progression": "Adding Style to Web Apps with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -648,7 +644,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       },
       "level_keys": [
         "pl-sandbox-aif2-U1-CSS-HTML-18"
@@ -736,34 +732,9 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "pl_sandbox_aif_2_U1-sitemaps-23"
-        ],
-        "progression": "Sitemaps and Wireframes"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-sitemaps-23"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
-      },
-      "level_keys": [
-        "pl_sandbox_aif_2_U1-sitemaps-23"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "pl_sandbox_aif_2_U1-wireframe-26"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes "
       },
       "bonus": false,
       "seeding_key": {
@@ -780,15 +751,15 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
-      "activity_section_position": 3,
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl_sandbox_aif_2_sketchlab_panels"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes "
       },
       "bonus": false,
       "seeding_key": {
@@ -805,15 +776,15 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 4,
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-webapp-27"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes "
       },
       "bonus": false,
       "seeding_key": {
@@ -830,15 +801,15 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
-      "activity_section_position": 5,
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-sandbox-aif2-U1-wireframe-practice-28"
         ],
-        "progression": "Sitemaps and Wireframes"
+        "progression": "Wireframes "
       },
       "bonus": false,
       "seeding_key": {
@@ -855,12 +826,15 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
-      "activity_section_position": 6,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Sitemaps and Wireframes"
+        "level_keys": [
+          "pl-sandbox-aif2-U1-wireframe-howto-29"
+        ],
+        "progression": "Wireframes "
       },
       "bonus": false,
       "seeding_key": {
@@ -877,59 +851,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl_sandbox_aif_2_U1-finalproject-31"
-        ],
-        "progression": "Sitemaps and Wireframes"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-finalproject-31"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
-      },
-      "level_keys": [
-        "pl_sandbox_aif_2_U1-finalproject-31"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl-sandbox-aif2-lesson-info"
-        ],
-        "progression": "Closing"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-lesson-info"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "3d42791f-5713-463c-9dc3-c952d7c88e00"
-      },
-      "level_keys": [
-        "pl-sandbox-aif2-lesson-info"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 33,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -952,8 +876,33 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-sandbox-aif2-lesson-info"
+        ],
+        "progression": "Closing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif2-lesson-info"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-1",
+        "activity_section.key": "3d42791f-5713-463c-9dc3-c952d7c88e00"
+      },
+      "level_keys": [
+        "pl-sandbox-aif2-lesson-info"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1155,7 +1104,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1167,7 +1116,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1179,7 +1128,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1191,7 +1140,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1203,7 +1152,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1215,7 +1164,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1227,7 +1176,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "a4e8e8fe-059a-4585-a43f-cdd039201f44"
+        "activity_section.key": "bcf09bd0-5c7e-40d0-be61-9140f3b977da"
       }
     },
     {
@@ -1264,18 +1213,6 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-1",
         "activity_section.key": "f194476b-67f7-4778-b176-640b4562c468"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_U1-sitemaps-23",
-        "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-sitemaps-23"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
       }
     },
     {
@@ -1340,21 +1277,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl_sandbox_aif_2_U1-finalproject-31",
+        "level.key": "pl-sandbox-aif2-U1-reflection",
         "script_level.level_keys": [
-          "pl_sandbox_aif_2_U1-finalproject-31"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-1",
-        "activity_section.key": "503dc3c9-9a07-4aec-ba04-9fcdc1e83fd1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-sandbox-aif2-lesson-info",
-        "script_level.level_keys": [
-          "pl-sandbox-aif2-lesson-info"
+          "pl-sandbox-aif2-U1-reflection"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1364,9 +1289,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-sandbox-aif2-U1-reflection",
+        "level.key": "pl-sandbox-aif2-lesson-info",
         "script_level.level_keys": [
-          "pl-sandbox-aif2-U1-reflection"
+          "pl-sandbox-aif2-lesson-info"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

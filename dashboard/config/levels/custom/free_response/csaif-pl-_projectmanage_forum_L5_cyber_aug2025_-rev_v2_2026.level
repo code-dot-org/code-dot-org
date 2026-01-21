@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-01-12T16:41:29.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflecting on the Project",
+    "long_instructions": "#### As students work on their cybersecurity projects, balancing technical structure with creative exploration is key — thoughtful scaffolds, guided analysis of security trade-offs, and opportunities for peer critique will help them transform their ideas into well-reasoned, user-focused solutions.\r\n\r\n## Discussion Questions: \r\n#### 1️⃣ How will I help students move beyond surface-level issues to identify deeper security problems in a system?\r\n\r\n#### 2️⃣ What strategies can I use to support students in balancing creativity (e.g., personified defense mechanisms) with technical accuracy?\r\n\r\n#### 3️⃣ How will I guide students to explain trade-offs in their solutions rather than focusing only on the “best” fix?\r\n\r\n#### *These questions are just starting points for reflection — there is no need to answer all of them. Focus on the ones that resonate most with your teaching experience and goals.*\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-12T16:41:29.898+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_projectmanage_forum_L5_cyber_aug2025_-rev_v2\\\"\"],\"cloned_from\":\"csaif-pl-_projectmanage_forum_L5_cyber_aug2025_-rev_v2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

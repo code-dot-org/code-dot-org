@@ -14,8 +14,17 @@ import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
 
+import {
+  setInitialChatMessage,
+  setThreadMessages,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
@@ -43,9 +52,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
   firstState?: WelcomeState;
-  curriculumCourses?: string[];
 }
 
 const optionButton = (
@@ -132,20 +141,19 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
+  curriculumCourses,
   // This should only be used for testing purposes
   firstState = 'get_started',
-  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
-
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
-
   const [selectedOption, setSelectedOption] =
     React.useState<SuggestPromptsType | null>(null);
-
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
+
+  const dispatch = useAppDispatch();
 
   const reportingContext = React.useMemo(() => {
     return {
@@ -155,6 +163,24 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       url: window.location.href,
     };
   }, [context, scriptName, selectedOption]);
+
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
+  }, [selectedOption, dispatch]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -253,8 +279,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
-            {curriculumCourses &&
-              curriculumCourses.includes('csp') &&
+            {curriculumCourses.includes('csp') &&
               optionButton(
                 selectedOption === 'apcsp',
                 () => setSelectedOption('apcsp'),
@@ -350,9 +375,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return null;
     }
 
-    const {initialMessage, suggestedPrompts} =
-      SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
-
     return (
       <div className={style.practicePage}>
         {progressBarHeader(60, () => setCurrentWelcomeState('select_option'))}
@@ -361,8 +383,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             context={context}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-            initialChatMessage={initialMessage}
-            suggestedPrompts={suggestedPrompts}
             hideChatHeader
           />
         </div>

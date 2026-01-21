@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-22 17:57:48 UTC",
+    "serialized_at": "2026-01-16 18:17:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7298,12 +7298,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "building-data-driven-systems-lesson4-level6-test_2025-pilot",
+      "seeding_key": {
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+      "position": 1,
+      "learning_goal": "test",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    }
   ]
 }

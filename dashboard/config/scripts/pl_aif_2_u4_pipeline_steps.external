@@ -1,0 +1,92 @@
+name 'pl-aif-2-U4-pipeline-steps'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Display Pipeline
+
+#### Before users ever see data on the screen, an app has to make a series of decisions about what data to use, how to process it, and how to display it.
+
+
+ <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"> <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>pipeline</strong> is a series of steps that you run in order, where the output from one step becomes the input to the next. </p> </div>
+
+
+#### A pipeline starts with raw data, reshapes it for a purpose, and then displays the result to the user.
+
+---
+
+## How Loops Fit into the Display Pipeline
+
+#### A display pipeline describes how data moves from storage to the screen.
+#### Loops are what allow the program to process each piece of data systematically at every stage.
+
+
+## Steps
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/31f147dec60e5cb84e6be34638f4dc3d-image-1768927433873.png" alt="file folder emoji" style="width: 20%; max-width: 120px; height: auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+        <p style = "font-size: 18pt";> <b>1. Read: Decide What Data Your App Will Use </b></p>
+            <p style = "font-size: 14pt";>            
+           Data is stored in an array or list. <br> A loop is prepared to move through the array one element at a time.
+ <br><br>
+<i><b>Loop’s role:</b> Enables access to each item in the dataset.</i>
+
+</p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/c58c4f780a34e12135ae97962267c13d-image-1768927841008.png" alt="gear emoji" style="width: 20%; max-width: 120px; height: auto;border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+        <p style = "font-size: 18pt";> <b>2. Transform: Select What Fits Your Purpose
+ </b></p>
+            <p style = "font-size: 14pt";>            
+           A loop goes through the array and checks each element.<br>
+Conditions (if statements) inside the loop decide:</p>
+<ul>
+<li style = "font-size: 14pt";>Which items to keep</li>
+<li style = "font-size: 14pt";>Which items to skip</li>
+<li style = "font-size: 14pt";>How values should be modified</li>
+</ul>
+<br>
+<p style = "font-size: 14pt";><i><b>Loop's role:</b></i> Applies the same rules consistently to every item.</p>
+</div>
+    </div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/792cd534bf599b4696528668350410eb-image-1768927535521.png" alt="computer monitor emoji" style="width: 20%; max-width: 120px; height: auto;border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+        <p style = "font-size: 18pt";> <b>3. Render: Display the Data to the User</b></p>
+            <p style = "font-size: 14pt";>            
+          The loop uses the transformed data to update the screen.<br>
+Each iteration adds text, images, or visual elements to the view.<br>
+Formatting and feedback (colors, messages, layout) happen here.
+
+</p>
+<p style = "font-size: 14pt";><i><b>Loop's role:</b></i> Turns processed data into visible output, one item at a time.</p>
+        </div>
+    </div>
+
+
+---
+
+  <div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #ffffff;  border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #0093a4;">
+      <i>A display pipeline is the plan for moving data, and loops are the mechanism that carry each piece of data through that plan from start to finish.</i>
+    </p>
+  </div>
+
+</div>
+
+## Next up
+#### Practice creating a pipeline for a web app. 
+
+
+MARKDOWN

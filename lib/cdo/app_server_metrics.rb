@@ -35,6 +35,11 @@ module Cdo
       @namespace = opts[:namespace] || 'App Server'
       @dimensions = opts[:dimensions] || {}
       @interval = opts[:interval] || 1
+      @instance_id = begin
+        AWS::EC2.instance_id
+      rescue
+        'UNKNOWN'
+      end
       self.instance = self
     end
 
@@ -56,6 +61,15 @@ module Cdo
           name,
           value,
           @dimensions,
+          storage_resolution: 1,
+          unit: 'Count'
+        )
+        # Also publish active/queued/calling listener metrics with an EC2 Instance ID Dimension.
+        Cdo::Metrics.put(
+          @namespace,
+          name,
+          value,
+          @dimensions.merge(InstanceId: @instance_id),
           storage_resolution: 1,
           unit: 'Count'
         )
@@ -85,10 +99,7 @@ module Cdo
           Host: host,
         }
 
-        begin
-          dimensions[:InstanceId] = AWS::EC2.instance_id
-        rescue
-        end
+        dimensions[:InstanceId] = @instance_id
 
         loop do
           Cdo::Metrics.put(

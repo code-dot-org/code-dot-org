@@ -7,6 +7,12 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
+import {
+  blockLimitExceeded,
+  getAllBlocks,
+  getBlockLimit,
+  getBlockFields,
+} from '@cdo/apps/blockly/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
@@ -15,7 +21,6 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
-import {getAllBlocks} from './blockly/utils';
 import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
 import LegacyDialog from './code-studio/LegacyDialog';
@@ -695,7 +700,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
+        var limit = getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -1406,7 +1411,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function () {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
+    if (!Blockly.mainBlockSpace.isReadOnly()) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1761,7 +1766,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function () {
   return getAllBlocks().some(function (block) {
-    return Blockly.cdoUtils.getBlockFields(block).some(function (field) {
+    return getBlockFields(block).some(function (field) {
       return field.value_ === '???' || field.text_ === '???';
     });
   });
@@ -1884,7 +1889,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function (node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
-  return Blockly.cdoUtils.blockLimitExceeded();
+  return blockLimitExceeded();
 };
 
 /**

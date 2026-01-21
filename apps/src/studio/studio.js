@@ -12,6 +12,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {loadBlocksToWorkspace, getCode} from '@cdo/apps/blockly/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay,
@@ -2515,7 +2516,7 @@ Studio.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
+  loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.domToText(blocksDom)
   );
@@ -3686,7 +3687,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
 
     program = studioApp().getCode();
   } else {
-    program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    program = getCode(Blockly.mainBlockSpace);
   }
 
   Studio.waitingForReport = true;

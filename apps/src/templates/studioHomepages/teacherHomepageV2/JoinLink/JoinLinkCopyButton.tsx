@@ -10,7 +10,6 @@ import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -39,17 +38,6 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
 
   const showSectionCodeDialog = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'no-section-code-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
     setShouldShowDialog(true);
   };
 
@@ -61,17 +49,6 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'copy-section-code-join-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
     analyticsReporter.sendEvent(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
       {source: sourceName},

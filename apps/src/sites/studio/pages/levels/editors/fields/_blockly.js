@@ -8,7 +8,7 @@ const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.
 if (Blockly && !data.uses_droplet) {
   Blockly.assetUrl = path => `/assets/${path}`;
-  Blockly.cdoUtils.injectCss(document);
+  Blockly.Css.inject(true, 'media');
   let blocksLocation = data.app;
   if (data.app === 'spritelab' || data.app === 'poetry') {
     blocksLocation = 'p5lab/spritelab';
