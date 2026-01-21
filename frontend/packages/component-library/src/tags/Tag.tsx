@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import type {Key, KeyboardEvent, MouseEvent, ReactNode} from 'react';
 import {memo, useMemo} from 'react';
 
-
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {WithTooltip} from '@/tooltip';
 
