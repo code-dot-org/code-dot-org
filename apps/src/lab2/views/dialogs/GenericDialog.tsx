@@ -1,7 +1,9 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import Dialog from '@code-dot-org/component-library/dialog';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import commonI18n from '@cdo/locale';
@@ -43,6 +45,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
     // Modal is used for longer content, inputs, additional options, etc and are left aligned
     // with divider lines separating the body content from the title and action buttons.
     useModal?: boolean;
+    icon?: FontAwesomeV6IconProps;
   };
 
 import moduleStyles from './generic-dialog.module.scss';
@@ -100,6 +103,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   bodyComponent,
   getButtonCallback = defaultGetButtonCallback,
   useModal = false,
+  icon,
 }) => {
   const dialogControl = useDialogControl();
 
@@ -130,6 +134,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   });
 
   const DialogComponent = useModal ? Modal : Dialog;
+  const isDestructive = buttons?.confirm?.destructive;
 
   return (
     <DialogComponent
@@ -138,7 +143,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
         <div
           id="dsco-dialog-description"
           className={
-            bodyComponent ? moduleStyles.customContentWrapper : undefined
+            bodyComponent && useModal
+              ? moduleStyles.customContentWrapper
+              : undefined
           }
         >
           {bodyComponent || message}
@@ -156,11 +163,15 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
         ) : undefined
       }
       onClose={buttons?.cancel ? cancelCallback : undefined}
-      className={moduleStyles.genericDialog}
+      className={classNames(
+        moduleStyles.genericDialog,
+        isDestructive && moduleStyles.destructive,
+        !useModal && moduleStyles.dialogOnlyStyle
+      )}
       primaryButtonProps={{
         onClick: confirmCallback,
         disabled: buttons?.confirm?.disabled,
-        color: buttons?.confirm?.destructive ? 'destructive' : 'purple',
+        color: isDestructive ? 'destructive' : 'purple',
         text: buttons?.confirm?.text || commonI18n.dialogOK(),
         id: 'uitest-generic-dialog-ok',
       }}
@@ -169,7 +180,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           ? {
               onClick: neutralCallback,
               disabled: buttons.neutral.disabled,
-              color: buttons.neutral.destructive ? 'destructive' : 'gray',
+              color: isDestructive ? 'destructive' : 'gray',
               text: buttons.neutral.text,
             }
           : buttons?.cancel
@@ -181,6 +192,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
             }
           : undefined
       }
+      icon={useModal ? undefined : icon}
     />
   );
 };

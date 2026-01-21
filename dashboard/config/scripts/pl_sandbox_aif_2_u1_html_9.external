@@ -49,8 +49,6 @@ Click to reveal the web page.
     - #### The `<main>` section holds the core content of the site. In this example, there is a `<section>` with a subheading (`<h2>`), a paragraph (`<p>`), and a list (`<ul>`with `<li>` items).
     - #### The `<footer>` section closes out the web page. This example has a copyright line. 
     
-## Next Up
-
-#### Let's take a look at some common HTML tags. 
+## Next Up: let's take a look at some common HTML tags. 
 
 MARKDOWN
