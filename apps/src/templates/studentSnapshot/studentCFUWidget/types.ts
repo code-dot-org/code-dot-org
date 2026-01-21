@@ -11,7 +11,7 @@ export interface CFULevel {
   progression?: string;
   progression_display_name?: string;
   // Optional fields populated by the backend for question content.
-  question_text?: string | null;
+  question_text?: string | string[] | null;
   answers?: unknown;
 }
 

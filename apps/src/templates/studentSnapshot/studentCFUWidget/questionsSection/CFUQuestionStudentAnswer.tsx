@@ -1,6 +1,8 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
 import {CFULevel, CFULevelResponse, CFULevelType} from './../types';
 import CFUFreeResponseAnswer from './answers/CFUFreeResponseAnswer';
 import CFUMatchAnswer from './answers/CFUMatchAnswer';
@@ -45,7 +47,15 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
             <Typography variant="body3">
               <strong>Question</strong>
             </Typography>
-            <Typography variant="body4">{level.question_text}</Typography>
+            {level.question_text && (
+              <SafeMarkdown
+                markdown={
+                  Array.isArray(level.question_text)
+                    ? level.question_text.join(' \n\n ')
+                    : level.question_text
+                }
+              />
+            )}
           </div>
           <div className={styles.cfuQuestionStudentAnswerContent}>
             <Typography variant="body3">
