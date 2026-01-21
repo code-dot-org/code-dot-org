@@ -249,7 +249,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'enrollments can be created' do
-    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
+    @teacher = create(:teacher, :with_school_info, given_name: 'Firstname', family_name: 'Lastname')
     assert_creates(Pd::Enrollment) do
       post :create, params: {
         workshop_id: @workshop.id,
@@ -265,7 +265,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   test 'sends enrollment receipt email to both the users email and alternate summer email if available and for a summer workshop' do
     Pd::WorkshopMailer.expects(:teacher_enrollment_receipt).returns(stub(:deliver_now)).times(2)
 
-    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
+    @teacher = create(:teacher, :with_school_info, given_name: 'Firstname', family_name: 'Lastname')
     sign_in @teacher
     workshop = create(:summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
     create(:pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted')
@@ -307,7 +307,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
-    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
+    @teacher = create(:teacher, :with_school_info, given_name: 'Firstname', family_name: 'Lastname')
     post :create, params: {
       workshop_id: @workshop.id,
       user_id: @teacher.id
@@ -348,8 +348,29 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_equal RESPONSE_MESSAGES[:OWN], JSON.parse(@response.body)["workshop_enrollment_status"]
   end
 
+  test 'creating an enrollment without school info sends \'no school\' workshop enrollment status' do
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
+    post :create, params: {
+      workshop_id: @workshop.id,
+      user_id: @teacher.id
+    }
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:NO_SCHOOL], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
+  test 'creating an enrollment with a non-US based user sends \'not usa\' workshop enrollment status' do
+    school_info = create(:school_info_non_us)
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname', school_info: school_info)
+    post :create, params: {
+      workshop_id: @workshop.id,
+      user_id: @teacher.id
+    }
+    assert_response 400
+    assert_equal RESPONSE_MESSAGES[:NOT_USA], JSON.parse(@response.body)["workshop_enrollment_status"]
+  end
+
   test 'creating an enrollment with errors sends \'error\' workshop enrollment status' do
-    @teacher = create(:teacher, given_name: '')
+    @teacher = create(:teacher, :with_school_info, given_name: '')
     post :create, params: {
       workshop_id: @workshop.id,
       user_id: @teacher.id
@@ -359,7 +380,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'creating an enrollment on an unknown workshop id returns 404' do
-    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
+    @teacher = create(:teacher, :with_school_info, given_name: 'Firstname', family_name: 'Lastname')
     post :create, params: {
       workshop_id: 'nonsense',
       user_id: @teacher.id

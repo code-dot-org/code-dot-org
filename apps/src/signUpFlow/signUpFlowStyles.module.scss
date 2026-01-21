@@ -265,6 +265,15 @@ span {
       }
     }
 
+    .classlinkButton {
+      background-color: $classlink_brand_color;
+      color: $white;
+
+      &:hover {
+        background-color: darken($classlink_brand_color, 10%);
+      }
+    }
+
     .greyTextbox {
       margin-top: 1rem;
       background-color: $light_gray_50;
@@ -292,6 +301,7 @@ span {
         margin-bottom: 0.75rem;
 
         img {
+          height: 20px;
           padding: 0.5rem;
           background: $light_white;
           border: 1px solid $light_gray_200;

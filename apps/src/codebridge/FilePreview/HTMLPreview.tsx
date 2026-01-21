@@ -7,6 +7,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsViewingExemplar,
   getAppOptionsEditingExemplar,
@@ -300,6 +301,12 @@ export const HTMLPreview: React.FC = () => {
           navigationHistoryIndex,
           navigationHistory
         );
+      } else if (
+        event.data.type === IframeMessageType.SERVICE_WORKER_UNAVAILABLE
+      ) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logWarning('Service worker unavailable in HTMLPreview iframe.');
       }
     };
 
