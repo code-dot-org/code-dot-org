@@ -4,6 +4,7 @@ export interface CFULevel {
   id: number;
   name: string;
   display_name: string;
+  level_position: number;
   type: CFULevelType;
   key?: string;
   script_level_id: number;

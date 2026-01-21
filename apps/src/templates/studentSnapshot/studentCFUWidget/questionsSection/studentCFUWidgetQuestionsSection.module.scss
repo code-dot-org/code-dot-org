@@ -47,13 +47,13 @@
         display: flex;
         width: 1.625rem;
         height: 1.625rem;
-        padding: 0.125rem 0.3125rem;
+        //padding: 0.125rem 0.3125rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
         aspect-ratio: 1/1;
-        border-radius: 2.5rem;
+        border-radius: 50%;
         border: 1px solid var(--borders-neutral-primary, #D4DAE1);
         background: var(--background-neutral-primary, #FFF);
       }

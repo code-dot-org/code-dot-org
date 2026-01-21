@@ -33,7 +33,7 @@ const CFUQuestion: React.FC<{
   <div className={styles.cfuQuestionWrapper}>
     <div className={styles.cfuQuestionContainer}>
       <div className={styles.cfuQuestionLeftPart}>
-        <div className={styles.levelNumber}>{1}</div>
+        <div className={styles.levelNumber}>{level.level_position}</div>
         <div className={styles.cfuQuestionTypeContainer}>
           <Typography
             variant="overline3"
