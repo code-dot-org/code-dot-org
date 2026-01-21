@@ -1,7 +1,6 @@
-import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -18,21 +17,27 @@ $(document).ready(() => {
 
   const isLevelGroup = scriptData.in_level_group;
 
-  const root = createRoot(document.getElementById('summary-top-links'));
+  const rootLinks = createRoot(document.getElementById('summary-top-links'));
 
-  root.render(<Provider store={store}>
-    <InstructorsOnly>
-      <SummaryTopLinks scriptData={scriptData} />
-    </InstructorsOnly>
-  </Provider>);
+  rootLinks.render(
+    <Provider store={store}>
+      <InstructorsOnly>
+        <SummaryTopLinks scriptData={scriptData} />
+      </InstructorsOnly>
+    </Provider>
+  );
 
-  const root = createRoot(document.getElementById('summary-responses'));
+  const rootResponses = createRoot(
+    document.getElementById('summary-responses')
+  );
 
-  root.render(<SummaryContainer
-    store={store}
-    scriptData={scriptData}
-    isLevelGroup={isLevelGroup}
-  />);
+  rootResponses.render(
+    <SummaryContainer
+      store={store}
+      scriptData={scriptData}
+      isLevelGroup={isLevelGroup}
+    />
+  );
 
   // Predict levels are a lab2 feature that replace contained levels.
   if (scriptData.levels[0].properties.predict_settings?.isPredictLevel) {
@@ -44,18 +49,22 @@ $(document).ready(() => {
     if (predictQuestionContainer) {
       const root = createRoot(predictQuestionContainer);
 
-      root.render(<SummaryPredictQuestion
-        question={scriptData.levels[0].properties.long_instructions}
-        predictSettings={scriptData.levels[0].properties.predict_settings}
-      />);
+      root.render(
+        <SummaryPredictQuestion
+          question={scriptData.levels[0].properties.long_instructions}
+          predictSettings={scriptData.levels[0].properties.predict_settings}
+        />
+      );
     }
 
     if (correctAnswerContainer) {
       const root = createRoot(correctAnswerContainer);
 
-      root.render(<UnconnectedPredictSolution
-        predictSettings={scriptData.levels[0].properties.predict_settings}
-      />);
+      root.render(
+        <UnconnectedPredictSolution
+          predictSettings={scriptData.levels[0].properties.predict_settings}
+        />
+      );
     }
   }
 });

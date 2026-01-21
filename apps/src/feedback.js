@@ -1,11 +1,10 @@
-import { createRoot } from "react-dom/client";
 // Globals used in this file:
 //   Blockly
 
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -270,22 +269,24 @@ FeedbackUtils.prototype.displayFeedback = function (
 
     const root = createRoot(container);
 
-    root.render(<ChallengeDialog
-      title={
-        isPerfect
-          ? msg.challengeLevelPerfectTitle()
-          : msg.challengeLevelPassTitle()
-      }
-      avatar={icon}
-      text={isPerfect ? null : msg.challengeLevelPassText({idealBlocks})}
-      complete={isPerfect}
-      handlePrimary={onChallengeContinue}
-      primaryButtonLabel={msg.continue()}
-      cancelButtonLabel={msg.tryAgain()}
-      showPuzzleRatingButtons={showPuzzleRatingButtons}
-    >
-      {displayShowCode && this.getShowCodeComponent_(options, true)}
-    </ChallengeDialog>);
+    root.render(
+      <ChallengeDialog
+        title={
+          isPerfect
+            ? msg.challengeLevelPerfectTitle()
+            : msg.challengeLevelPassTitle()
+        }
+        avatar={icon}
+        text={isPerfect ? null : msg.challengeLevelPassText({idealBlocks})}
+        complete={isPerfect}
+        handlePrimary={onChallengeContinue}
+        primaryButtonLabel={msg.continue()}
+        cancelButtonLabel={msg.tryAgain()}
+        showPuzzleRatingButtons={showPuzzleRatingButtons}
+      >
+        {displayShowCode && this.getShowCodeComponent_(options, true)}
+      </ChallengeDialog>
+    );
 
     return;
   }
@@ -556,18 +557,20 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
 
   const root = createRoot(buttons);
 
-  root.render(<DialogButtons
-    tryAgain={tryAgainText}
-    continueText={
-      options.continueText ||
-      (options.finalLevel ? msg.finish() : msg.continue())
-    }
-    nextLevel={this.canContinueToNextLevel(options.feedbackType)}
-    shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
-    isK1={options.isK1}
-    assetUrl={this.studioApp_.assetUrl}
-    freePlay={options.freePlay}
-  />);
+  root.render(
+    <DialogButtons
+      tryAgain={tryAgainText}
+      continueText={
+        options.continueText ||
+        (options.finalLevel ? msg.finish() : msg.continue())
+      }
+      nextLevel={this.canContinueToNextLevel(options.feedbackType)}
+      shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
+      isK1={options.isK1}
+      assetUrl={this.studioApp_.assetUrl}
+      freePlay={options.freePlay}
+    />
+  );
 
   return buttons;
 };
@@ -982,9 +985,11 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     const onDownloadError = () => $('#download-replay-video-error').show();
     const root = createRoot(downloadReplayVideoContainer);
 
-    root.render(<Provider store={getStore()}>
-      <DownloadReplayVideoButton onError={onDownloadError} />
-    </Provider>);
+    root.render(
+      <Provider store={getStore()}>
+        <DownloadReplayVideoButton onError={onDownloadError} />
+      </Provider>
+    );
   }
 
   return sharingDiv;
@@ -1148,13 +1153,15 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
 
   const root = createRoot(codeDiv);
 
-  root.render(<div>
-    <GeneratedCode
-      message={generatedCodeProperties.message}
-      code={generatedCodeProperties.code}
-    />
-    <DialogButtons ok={true} />
-  </div>);
+  root.render(
+    <div>
+      <GeneratedCode
+        message={generatedCodeProperties.message}
+        code={generatedCodeProperties.code}
+      />
+      <DialogButtons ok={true} />
+    </div>
+  );
 
   var dialog = this.createModalDialog({
     contentDiv: codeDiv,
@@ -1225,31 +1232,34 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10,
   };
-  var const root = createRoot(document.createElement('div'));,
-      root.render(<div>
-        {options.headerText && (
-          <h5 className="dialog-title">{options.headerText}</h5>
-        )}
-        {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
-        {options.prompt && (
-          <input style={textBoxStyle} defaultValue={options.promptPrefill} />
-        )}
-        <DialogButtons
-          confirmText={options.confirmText}
-          cancelText={options.cancelText}
-          isDangerCancel={!!options.isDangerCancel}
-        />
-      </div>);;
+  const root = createRoot(document.createElement('div'));
+  root.render(
+    <div>
+      {options.headerText && (
+        <h5 className="dialog-title">{options.headerText}</h5>
+      )}
+      {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
+      {options.prompt && (
+        <input style={textBoxStyle} defaultValue={options.promptPrefill} />
+      )}
+      <DialogButtons
+        confirmText={options.confirmText}
+        cancelText={options.cancelText}
+        isDangerCancel={!!options.isDangerCancel}
+      />
+    </div>
+  );
 
+  // NOTE: THIS MIGHT BE WRONG
   var dialog = this.createModalDialog({
-    contentDiv: contentDiv,
+    contentDiv: root,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button',
     disableSpaceClose: !!options.disableSpaceClose,
   });
 
-  var cancelButton = contentDiv.querySelector('#again-button');
-  var textBox = contentDiv.querySelector('input');
+  var cancelButton = root.querySelector('#again-button');
+  var textBox = root.querySelector('input');
   if (cancelButton) {
     dom.addClickTouchEvent(cancelButton, function () {
       if (options.onCancel) {
@@ -1263,7 +1273,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
     });
   }
 
-  var confirmButton = contentDiv.querySelector('#confirm-button');
+  var confirmButton = root.querySelector('#confirm-button');
   if (confirmButton) {
     dom.addClickTouchEvent(confirmButton, function () {
       if (options.onConfirm) {

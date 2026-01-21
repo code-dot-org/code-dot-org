@@ -1,8 +1,7 @@
-import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
@@ -497,19 +496,21 @@ export default class P5Lab {
     this.loadValidationCodeIfNeeded_();
     const loader = this.studioApp_
       .loadLibraries(this.level.helperLibraries)
-      .then(
-      const root = createRoot(document.getElementById(config.containerId));,
-      root.render(<Provider store={getStore()}>
-        <P5LabView
-          showFinishButton={finishButtonFirstLine && showFinishButton}
-          onMount={onMount}
-          pauseHandler={this.onPause?.bind(this)}
-          hidePauseButton={!!this.level.hidePauseButton}
-          onPromptAnswer={this.onPromptAnswer?.bind(this)}
-          labType={this.getLabType()}
-        />
-      </Provider>);
-    );
+      .then(() => {
+        const root = createRoot(document.getElementById(config.containerId));
+        root.render(
+          <Provider store={getStore()}>
+            <P5LabView
+              showFinishButton={finishButtonFirstLine && showFinishButton}
+              onMount={onMount}
+              pauseHandler={this.onPause?.bind(this)}
+              hidePauseButton={!!this.level.hidePauseButton}
+              onPromptAnswer={this.onPromptAnswer?.bind(this)}
+              labType={this.getLabType()}
+            />
+          </Provider>
+        );
+      });
 
     if (IN_UNIT_TEST) {
       return loader.catch(() => {});

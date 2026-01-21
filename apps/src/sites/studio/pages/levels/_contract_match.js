@@ -1,8 +1,8 @@
-import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyContractMatchErrorDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
@@ -311,7 +311,8 @@ $(window).load(function () {
     }
   }
 
-  const const root = createRoot(document.getElementById('contractForm'));, root.render(<ContractForm />);;
+  const root = createRoot(document.getElementById('contractForm'));
+  root.render(<ContractForm />);
 
   /**
    * Creates a getResult function compatible with _dialog.html.haml's getResult call
@@ -361,7 +362,8 @@ $(window).load(function () {
    * Set the getResult used by _dialog.html.haml
    * @return {Object} response, result, error type
    */
-  const getResult = generateGetResultFunction(contractForm, window.levelData);
+  // NOTE: THIS MIGHT BE WRONG
+  const getResult = generateGetResultFunction(root, window.levelData);
   registerGetResult(getResult);
 
   /**
