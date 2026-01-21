@@ -3,7 +3,8 @@ import React from 'react';
 
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
-import color from '@cdo/apps/util/color';
+
+import styles from '@cdo/apps/code-studio/components/SoundListEntry.module.scss';
 
 describe('SoundListEntry', () => {
   const sounds = new Sounds();
@@ -22,14 +23,14 @@ describe('SoundListEntry', () => {
 
   it('renders with purple background when selected', () => {
     const wrapper = shallow(<SoundListEntry {...defaultProps} />);
-    expect(wrapper.props().style.backgroundColor).toEqual(color.lighter_purple);
+    expect(wrapper.hasClass(styles.selected)).toBe(true);
   });
 
   it('renders with no background when not selected', () => {
     const wrapper = shallow(
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
-    expect(wrapper.props().style.backgroundColor).toEqual(color.white);
+    expect(wrapper.hasClass(styles.notSelected)).toBe(true);
   });
 
   it('renders a play button when not playing', () => {

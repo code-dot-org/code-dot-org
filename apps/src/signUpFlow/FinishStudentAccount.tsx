@@ -32,6 +32,8 @@ import {
   clearSignUpSessionStorage,
   SIGN_UP_USER_TYPE,
   MAX_DISPLAY_NAME_LENGTH,
+  US_STATE_SESSION_KEY,
+  NAME_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -84,6 +86,17 @@ const FinishStudentAccount: React.FunctionComponent<{
       navigateToHref(
         `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
       );
+    }
+
+    // If their name and state are known from their 3rd-party provider login choice, prepopulate their values.
+    const prepopulatedUsState = sessionStorage.getItem(US_STATE_SESSION_KEY);
+    const prepopulatedName = sessionStorage.getItem(NAME_SESSION_KEY);
+
+    if (prepopulatedUsState) {
+      setState(prepopulatedUsState);
+    }
+    if (prepopulatedName) {
+      setName(prepopulatedName);
     }
 
     analyticsReporter.sendEvent(

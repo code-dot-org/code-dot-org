@@ -157,6 +157,7 @@ en:
     windowslive: 'Microsoft'
     microsoft_v2_auth: 'Microsoft'
     clever: 'Clever'
+    classlink: 'ClassLink'
     powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'
     migration_success: 'Success! You have updated to our new account experience.'
