@@ -3,29 +3,11 @@
 This module will give information about the current locale and will, if dynamic
 translation is available, translate source strings into their target strings.
 
-## Dynamic Translation
+You can read later on in this document "How Dynamic Translation Works" for more
+information about how the translation management system (TMS) and its tooling
+technically works.
 
-Our system uses LocalizeJS as a third-party localization service. This service
-stores a dictionary of strings for a particular set of pages and requests them
-on the first page load. The strings are then dynamically swapped out when content
-on the page is rendered. It compares the English source strings with those in the
-dictionary and swaps them out.
-
-When the language is switched, the dynamic localization engine will swap out the
-strings on the page to the new language instantly without a page load.
-
-## New Translations
-
-To provide a new translation, one only needs to add the language into LocalizeJS
-for the relevant project. Then, the translation team can approve new translations
-and perhaps schedule machine translation for the strings.
-
-When newly translated strings are approved, they are immediately available to the
-page. The next time somebody visits that page and pulls down a new dictionary,
-they will see the newly translated content. There is no need to synchronize the
-localized strings to the code repository itself.
-
-## Usage
+## Usage as a Developer
 
 Typically, you don't need to do anything! Just write your components as though
 they were in English and let the widget do the heavy lifting. You'll only need
@@ -45,7 +27,7 @@ other user handles. We do not send up such strings to the third-party service
 even if they were crawled as a precaution, but they can still render in strange
 ways if not careful.
 
-## Manually Supplying Strings
+### Manually Supplying Strings
 
 Sometimes, the automatic ingest of strings on the page can be problematic. For
 instance, with Blockly blocks (which powers many of our learning labs), when the
@@ -74,7 +56,7 @@ localization.on('change', info => {
 We wrap it in the event handler so that we re-localize when a different language
 is chosen.
 
-## Manual Strings in React
+### Manual Strings in React
 
 If you are using a React component, and really need to do manual translation, we
 can simplify things by using the `useLocalization` hook:
@@ -102,3 +84,25 @@ const MyComponent: React.FunctionComponent = () => {
 This will cause a re-render when the language changes where the new language
 code is given as `locale`. If you want to know whether or not the new language
 is right-to-left, you can just pull that from the `localization.rtl` property.
+
+## How Dynamic Translation Works
+
+Our system uses LocalizeJS as a third-party localization service. This service
+stores a dictionary of strings for a particular set of pages and requests them
+on the first page load. The strings are then dynamically swapped out when content
+on the page is rendered. It compares the English source strings with those in the
+dictionary and swaps them out.
+
+When the language is switched, the dynamic localization engine will swap out the
+strings on the page to the new language instantly without a page load.
+
+## Adding New Translations
+
+To provide a new translation, one only needs to add the language into LocalizeJS
+for the relevant project. Then, the translation team can approve new translations
+and perhaps schedule machine translation for the strings.
+
+When newly translated strings are approved, they are immediately available to the
+page. The next time somebody visits that page and pulls down a new dictionary,
+they will see the newly translated content. There is no need to synchronize the
+localized strings to the code repository itself.
