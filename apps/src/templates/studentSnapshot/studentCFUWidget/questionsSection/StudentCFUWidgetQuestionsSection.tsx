@@ -23,6 +23,10 @@ const CfuQuestionsSections: React.FC<CfuQuestionsSectionsProps> = ({
     setOpenLevelId(prev => (prev === levelId ? null : levelId));
   };
 
+  console.log(cfuLevels);
+  console.log(cfuResponses);
+  console.log(statusBuckets);
+
   return (
     <div className={styles.studentCFUWidgetQuestionsSectionContainer}>
       <div className={styles.heading}>
