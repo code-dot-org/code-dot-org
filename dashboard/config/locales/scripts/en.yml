@@ -26635,15 +26635,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-        ui-test-artist:
-          title: UI Test Artist
-          description: Draw cool pictures and designs with the Artist!
-          student_description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
-          description_audience: ''
-          lessons: {}
-          lesson_groups: {}
-          name: ui-test-artist
         6-12-aif-s2-unit5:
           lessons:
             lesson-1:
