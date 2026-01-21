@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -33,64 +34,62 @@ function showCourseEditor() {
 
   let announcements = courseEditorData.course_summary.announcements || [];
 
-  // Eventually we want to do this all via redux
-  ReactDOM.render(
-    <Provider store={store}>
-      <CourseEditor
-        name={courseEditorData.course_summary.name}
-        initialTitle={courseEditorData.course_summary.title}
-        initialVersionTitle={courseEditorData.course_summary.version_title}
-        initialFamilyName={courseEditorData.course_summary.family_name}
-        initialVersionYear={courseEditorData.course_summary.version_year}
-        initialPublishedState={courseEditorData.course_summary.published_state}
-        initialInstructionType={
-          courseEditorData.course_summary.instruction_type
-        }
-        initialInstructorAudience={
-          courseEditorData.course_summary.instructor_audience
-        }
-        initialParticipantAudience={
-          courseEditorData.course_summary.participant_audience
-        }
-        initialPilotExperiment={
-          courseEditorData.course_summary.pilot_experiment || ''
-        }
-        initialDescriptionShort={
-          courseEditorData.course_summary.description_short
-        }
-        initialDescriptionStudent={
-          courseEditorData.course_summary.description_student || ''
-        }
-        initialDescriptionTeacher={
-          courseEditorData.course_summary.description_teacher || ''
-        }
-        initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
-          unit => unit.name
-        )}
-        initialUnitPrefixes={courseEditorData.course_summary.scripts.map(
-          (unit, index) =>
-            unit.unit_prefix === null
-              ? (index + 1).toString()
-              : unit.unit_prefix
-        )}
-        unitNames={courseEditorData.script_names.sort()}
-        initialHasVerifiedResources={
-          courseEditorData.course_summary.has_verified_resources
-        }
-        initialNumberedUnits={courseEditorData.course_summary.numbered_units}
-        courseFamilies={courseEditorData.course_families}
-        versionYearOptions={courseEditorData.version_year_options}
-        initialAnnouncements={announcements}
-        courseVersionId={courseEditorData.course_summary.course_version_id}
-        coursePath={courseEditorData.course_summary.course_path}
-        courseOfferingEditorLink={
-          courseEditorData.course_summary.course_offering_edit_path
-        }
-        isMissingRequiredDeviceCompatibilities={
-          courseEditorData.missing_required_device_compatibilities
-        }
-      />
-    </Provider>,
-    document.getElementById('course_editor')
-  );
+  const root = createRoot(document.getElementById('course_editor'));
+
+  root.render(<Provider store={store}>
+    <CourseEditor
+      name={courseEditorData.course_summary.name}
+      initialTitle={courseEditorData.course_summary.title}
+      initialVersionTitle={courseEditorData.course_summary.version_title}
+      initialFamilyName={courseEditorData.course_summary.family_name}
+      initialVersionYear={courseEditorData.course_summary.version_year}
+      initialPublishedState={courseEditorData.course_summary.published_state}
+      initialInstructionType={
+        courseEditorData.course_summary.instruction_type
+      }
+      initialInstructorAudience={
+        courseEditorData.course_summary.instructor_audience
+      }
+      initialParticipantAudience={
+        courseEditorData.course_summary.participant_audience
+      }
+      initialPilotExperiment={
+        courseEditorData.course_summary.pilot_experiment || ''
+      }
+      initialDescriptionShort={
+        courseEditorData.course_summary.description_short
+      }
+      initialDescriptionStudent={
+        courseEditorData.course_summary.description_student || ''
+      }
+      initialDescriptionTeacher={
+        courseEditorData.course_summary.description_teacher || ''
+      }
+      initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
+        unit => unit.name
+      )}
+      initialUnitPrefixes={courseEditorData.course_summary.scripts.map(
+        (unit, index) =>
+          unit.unit_prefix === null
+            ? (index + 1).toString()
+            : unit.unit_prefix
+      )}
+      unitNames={courseEditorData.script_names.sort()}
+      initialHasVerifiedResources={
+        courseEditorData.course_summary.has_verified_resources
+      }
+      initialNumberedUnits={courseEditorData.course_summary.numbered_units}
+      courseFamilies={courseEditorData.course_families}
+      versionYearOptions={courseEditorData.version_year_options}
+      initialAnnouncements={announcements}
+      courseVersionId={courseEditorData.course_summary.course_version_id}
+      coursePath={courseEditorData.course_summary.course_path}
+      courseOfferingEditorLink={
+        courseEditorData.course_summary.course_offering_edit_path
+      }
+      isMissingRequiredDeviceCompatibilities={
+        courseEditorData.missing_required_device_compatibilities
+      }
+    />
+  </Provider>);
 }

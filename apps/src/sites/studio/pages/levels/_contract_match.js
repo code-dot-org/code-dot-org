@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -310,10 +311,7 @@ $(window).load(function () {
     }
   }
 
-  const contractForm = ReactDOM.render(
-    <ContractForm />,
-    document.getElementById('contractForm')
-  );
+  const const root = createRoot(document.getElementById('contractForm'));, root.render(<ContractForm />);;
 
   /**
    * Creates a getResult function compatible with _dialog.html.haml's getResult call

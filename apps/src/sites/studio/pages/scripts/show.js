@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -109,53 +110,52 @@ function initPage() {
   const showAiAssessmentsAnnouncement =
     scriptData.showAiAssessmentsAnnouncement;
 
-  ReactDOM.render(
-    <Provider store={store}>
-      {parentalPermissionBannerData && (
-        <ParentalPermissionBanner {...parentalPermissionBannerData} />
-      )}
+  const root = createRoot(mountPoint);
 
-      <UnitOverview
-        id={scriptData.id}
-        courseId={scriptData.course_id}
-        courseOfferingId={scriptData.courseOfferingId}
-        courseVersionId={scriptData.courseVersionId}
-        courseTitle={scriptData.course_title}
-        courseLink={scriptData.course_link}
-        isSingleUnitCourse={scriptData.is_single_unit_course}
-        excludeCsfColumnInLegend={!scriptData.csf}
-        teacherResources={scriptData.teacher_resources}
-        studentResources={scriptData.student_resources || []}
-        showCourseUnitVersionWarning={
-          scriptData.show_course_unit_version_warning
-        }
-        showScriptVersionWarning={scriptData.show_script_version_warning}
-        showRedirectWarning={scriptData.show_redirect_warning}
-        redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.course_versions}
-        courseName={scriptData.course_name}
-        showAssignButton={scriptData.show_assign_button}
-        isProfessionalLearningCourse={scriptData.isPlCourse}
-        userId={scriptData.user_id}
-        userType={scriptData.user_type}
-        assignedSectionId={scriptData.assigned_section_id}
-        showCalendar={scriptData.showCalendar}
-        weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
-        unitCalendarLessons={scriptData.calendarLessons}
-        unitHasLevels={unitHasLevels}
-        isMigrated={scriptData.is_migrated}
-        scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
-        scriptPath={scriptData.scriptPath}
-        scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
-        isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
-        completedLessonNumber={completedLessonNumber}
-        publishedState={scriptData.publishedState}
-        participantAudience={scriptData.participantAudience}
-        showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
-      />
-    </Provider>,
-    mountPoint
-  );
+  root.render(<Provider store={store}>
+    {parentalPermissionBannerData && (
+      <ParentalPermissionBanner {...parentalPermissionBannerData} />
+    )}
+
+    <UnitOverview
+      id={scriptData.id}
+      courseId={scriptData.course_id}
+      courseOfferingId={scriptData.courseOfferingId}
+      courseVersionId={scriptData.courseVersionId}
+      courseTitle={scriptData.course_title}
+      courseLink={scriptData.course_link}
+      isSingleUnitCourse={scriptData.is_single_unit_course}
+      excludeCsfColumnInLegend={!scriptData.csf}
+      teacherResources={scriptData.teacher_resources}
+      studentResources={scriptData.student_resources || []}
+      showCourseUnitVersionWarning={
+        scriptData.show_course_unit_version_warning
+      }
+      showScriptVersionWarning={scriptData.show_script_version_warning}
+      showRedirectWarning={scriptData.show_redirect_warning}
+      redirectScriptUrl={scriptData.redirect_script_url}
+      versions={scriptData.course_versions}
+      courseName={scriptData.course_name}
+      showAssignButton={scriptData.show_assign_button}
+      isProfessionalLearningCourse={scriptData.isPlCourse}
+      userId={scriptData.user_id}
+      userType={scriptData.user_type}
+      assignedSectionId={scriptData.assigned_section_id}
+      showCalendar={scriptData.showCalendar}
+      weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
+      unitCalendarLessons={scriptData.calendarLessons}
+      unitHasLevels={unitHasLevels}
+      isMigrated={scriptData.is_migrated}
+      scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
+      scriptPath={scriptData.scriptPath}
+      scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
+      isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
+      completedLessonNumber={completedLessonNumber}
+      publishedState={scriptData.publishedState}
+      participantAudience={scriptData.participantAudience}
+      showAiAssessmentsAnnouncement={showAiAssessmentsAnnouncement}
+    />
+  </Provider>);
 
   tooltipifyVocabulary();
   displayDifferentiationChat(scriptData);
@@ -196,17 +196,16 @@ function displayDifferentiationChat(scriptData) {
   );
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AiDiffFloatingActionButton
-          context={{
-            type: AiDiffContext.UNIT,
-            unitId: scriptData.id,
-          }}
-          scriptName={scriptData.name}
-        />
-      </Provider>,
-      aiDiffFabMountPoint
-    );
+    const root = createRoot(aiDiffFabMountPoint);
+
+    root.render(<Provider store={getStore()}>
+      <AiDiffFloatingActionButton
+        context={{
+          type: AiDiffContext.UNIT,
+          unitId: scriptData.id,
+        }}
+        scriptName={scriptData.name}
+      />
+    </Provider>);
   }
 }

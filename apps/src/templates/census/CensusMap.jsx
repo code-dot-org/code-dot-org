@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -356,18 +357,18 @@ export default class CensusMap extends Component {
     teachesCs
   ) => {
     const infoWindowDom = document.createElement('div');
-    ReactDOM.render(
-      <CensusMapInfoWindow
-        onTakeSurveyClick={this.props.onTakeSurveyClick}
-        schoolId={schoolId}
-        schoolName={schoolName}
-        city={city}
-        state={state}
-        location={location}
-        teachesCs={teachesCs}
-      />,
-      infoWindowDom
-    );
+    const root = createRoot(infoWindowDom);
+
+    root.render(<CensusMapInfoWindow
+      onTakeSurveyClick={this.props.onTakeSurveyClick}
+      schoolId={schoolId}
+      schoolName={schoolName}
+      city={city}
+      state={state}
+      location={location}
+      teachesCs={teachesCs}
+    />);
+
     return infoWindowDom;
   };
 

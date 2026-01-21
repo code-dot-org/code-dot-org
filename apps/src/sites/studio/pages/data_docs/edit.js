@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -10,14 +11,13 @@ import DataDocFormEditor from '../../../../levelbuilder/data-docs-editor/DataDoc
 $(document).ready(() => {
   const store = getStore();
   const {dataDocKey, dataDocName, dataDocContent} = getScriptData('dataDoc');
-  ReactDOM.render(
-    <Provider store={store}>
-      <DataDocFormEditor
-        dataDocKey={dataDocKey}
-        originalDataDocName={dataDocName}
-        originalDataDocContent={dataDocContent}
-      />
-    </Provider>,
-    document.getElementById('edit-data-doc')
-  );
+  const root = createRoot(document.getElementById('edit-data-doc'));
+
+  root.render(<Provider store={store}>
+    <DataDocFormEditor
+      dataDocKey={dataDocKey}
+      originalDataDocName={dataDocName}
+      originalDataDocContent={dataDocContent}
+    />
+  </Provider>);
 });

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -62,19 +63,18 @@ $(document).ready(function () {
     initStandards('opportunityStandard', lessonData.opportunityStandards || [])
   );
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <div>
-        <LessonEditor
-          initialObjectives={objectives}
-          relatedLessons={relatedLessons}
-          initialLessonData={lessonData}
-          unitInfo={unitInfo}
-          rubricId={rubric ? rubric.id : null}
-        />
-        <ExpandableImageDialog />
-      </div>
-    </Provider>,
-    document.getElementById('edit-container')
-  );
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(<Provider store={store}>
+    <div>
+      <LessonEditor
+        initialObjectives={objectives}
+        relatedLessons={relatedLessons}
+        initialLessonData={lessonData}
+        unitInfo={unitInfo}
+        rubricId={rubric ? rubric.id : null}
+      />
+      <ExpandableImageDialog />
+    </div>
+  </Provider>);
 });

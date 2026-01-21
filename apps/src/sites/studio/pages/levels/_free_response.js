@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -18,14 +19,13 @@ $(document).ready(() => {
     const container = this;
     const store = getStore();
 
-    ReactDOM.render(
-      <Provider store={store}>
-        <InstructorsOnly>
-          <SummaryEntryPoint scriptData={scriptData} />
-        </InstructorsOnly>
-      </Provider>,
-      container
-    );
+    const root = createRoot(container);
+
+    root.render(<Provider store={store}>
+      <InstructorsOnly>
+        <SummaryEntryPoint scriptData={scriptData} />
+      </InstructorsOnly>
+    </Provider>);
   });
 
   $('.free-response > .markdown-container').each(function () {
@@ -34,10 +34,8 @@ $(document).ready(() => {
       return;
     }
 
-    ReactDOM.render(
-      React.createElement(SafeMarkdown, container.dataset, null),
-      container
-    );
+    const root = createRoot(container);
+    root.render(React.createElement(SafeMarkdown, container.dataset, null));
   });
 
   if (!appOptions.hasContainedLevels) {
@@ -51,12 +49,11 @@ $(document).ready(() => {
       return appOptions.channel;
     };
 
-    ReactDOM.render(
-      <Attachments
-        showUnderageWarning={!appOptions.is13Plus}
-        {...attachmentsProps}
-      />,
-      attachmentsMountPoint
-    );
+    const root = createRoot(attachmentsMountPoint);
+
+    root.render(<Attachments
+      showUnderageWarning={!appOptions.is13Plus}
+      {...attachmentsProps}
+    />);
   }
 });

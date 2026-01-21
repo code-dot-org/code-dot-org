@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,18 +11,17 @@ $(document).ready(function () {
     'input#level_additional_ai_evaluation_instructions'
   );
   const data = getScriptData('skillevaluationdata');
-  ReactDOM.render(
-    <SkillEvaluationSettings
-      skills={data.skills}
-      levelId={data.levelId}
-      systemPrompt={data.systemPrompt}
-      additionalAiEvaluationInstructions={
-        data.additionalAiEvaluationInstructions
-      }
-      updateAdditionalAiEvaluationInstructions={newInstructions =>
-        aiPromptModificationInput.val(newInstructions)
-      }
-    />,
-    document.getElementById('skill-evaluation-settings-editor')
-  );
+  const root = createRoot(document.getElementById('skill-evaluation-settings-editor'));
+
+  root.render(<SkillEvaluationSettings
+    skills={data.skills}
+    levelId={data.levelId}
+    systemPrompt={data.systemPrompt}
+    additionalAiEvaluationInstructions={
+      data.additionalAiEvaluationInstructions
+    }
+    updateAdditionalAiEvaluationInstructions={newInstructions =>
+      aiPromptModificationInput.val(newInstructions)
+    }
+  />);
 });

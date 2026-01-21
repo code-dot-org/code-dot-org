@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -45,11 +46,9 @@ function showJobBoard() {
       });
     })
     .complete(() => {
-      ReactDOM.render(
-        <JobBoard jobsByDepartment={jobsByDepartment} />,
-        jobBoardElement[0]
-      );
-    });
+    const root = createRoot(jobBoardElement[0]);
+    root.render(<JobBoard jobsByDepartment={jobsByDepartment} />);
+  });
 }
 
 const getJobDetails = job => {

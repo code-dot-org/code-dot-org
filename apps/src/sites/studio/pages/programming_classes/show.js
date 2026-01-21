@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -30,23 +31,22 @@ $(document).ready(() => {
   const currentCategoryKey = hasScriptData('currentCategoryKey')
     ? getScriptData('currentCategoryKey')
     : null;
-  ReactDOM.render(
-    <Provider store={store}>
-      <>
-        <PageContainer
-          programmingEnvironmentTitle={programmingEnvironmentTitle}
-          categoriesForNavigation={categoriesForNavigation}
-          currentCategoryKey={currentCategoryKey}
-        >
-          <ProgrammingClassOverview
-            programmingClass={programmingClass}
-            programmingEnvironmentName={programmingEnvironmentName}
-            programmingEnvironmentLanguage={programmingEnvironmentLanguage}
-          />
-        </PageContainer>
-        <ExpandableImageDialog />
-      </>
-    </Provider>,
-    document.getElementById('show-container')
-  );
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(<Provider store={store}>
+    <>
+      <PageContainer
+        programmingEnvironmentTitle={programmingEnvironmentTitle}
+        categoriesForNavigation={categoriesForNavigation}
+        currentCategoryKey={currentCategoryKey}
+      >
+        <ProgrammingClassOverview
+          programmingClass={programmingClass}
+          programmingEnvironmentName={programmingEnvironmentName}
+          programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+        />
+      </PageContainer>
+      <ExpandableImageDialog />
+    </>
+  </Provider>);
 });

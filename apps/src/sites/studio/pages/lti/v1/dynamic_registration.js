@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Renders the LtiDynamicRegistrationPage component on page load.
  * This file is responsible for mounting and unmounting the React component,
@@ -16,12 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('json');
   const {logoUrl, registrationID, lmsName} = scriptData;
 
-  ReactDOM.render(
-    <LtiDynamicRegistrationPage
-      logoUrl={logoUrl}
-      registrationID={registrationID}
-      lmsName={lmsName}
-    />,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+
+  root.render(<LtiDynamicRegistrationPage
+    logoUrl={logoUrl}
+    registrationID={registrationID}
+    lmsName={lmsName}
+  />);
 });

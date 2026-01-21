@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -14,15 +15,14 @@ export default class AddPasswordController {
   }
 
   renderAddPasswordForm = () => {
-    ReactDOM.render(
-      <AddPasswordForm
-        handleSubmit={this.submitAddPassword}
-        disabled={this.disabled}
-        userAge={this.userAge}
-        userUsState={this.userUsState}
-      />,
-      this.mountPoint
-    );
+    const root = createRoot(this.mountPoint);
+
+    root.render(<AddPasswordForm
+      handleSubmit={this.submitAddPassword}
+      disabled={this.disabled}
+      userAge={this.userAge}
+      userUsState={this.userUsState}
+    />);
   };
 
   submitAddPassword = (password, passwordConfirmation) => {

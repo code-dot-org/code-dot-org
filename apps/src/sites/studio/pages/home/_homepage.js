@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
@@ -86,55 +87,55 @@ function showHomepage() {
     />
   );
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <div>
-        {isTeacher ? (
-          <TeacherHomepage
-            announcement={announcement}
-            hocLaunch={homepageData.hocLaunch}
-            courses={homepageData.courses}
-            plCourses={homepageData.plCourses}
-            joinedStudentSections={homepageData.joined_student_sections}
-            joinedPlSections={homepageData.joined_pl_sections}
-            topCourse={homepageData.topCourse}
-            topPlCourse={homepageData.topPlCourse}
-            queryStringOpen={query['open']}
-            canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            existingSchoolInfo={homepageData.existingSchoolInfo}
-            censusQuestion={homepageData.censusQuestion}
-            showCensusBanner={homepageData.showCensusBanner}
-            showNpsSurvey={homepageData.showNpsSurvey}
-            afeEligible={homepageData.afeEligible}
-            teacherName={homepageData.teacherName}
-            teacherId={homepageData.teacherId}
-            teacherEmail={homepageData.teacherEmail}
-            schoolYear={homepageData.currentSchoolYear}
-            specialAnnouncement={specialAnnouncement}
-            hasFeedback={homepageData.hasFeedback}
-            showIncubatorBanner={homepageData.showIncubatorBanner}
-            currentUserId={homepageData.currentUserId}
-          />
-        ) : (
-          <StudentHomepage
-            courses={homepageData.courses}
-            topCourse={homepageData.topCourse}
-            hasFeedback={homepageData.hasFeedback}
-            sections={homepageData.sections}
-            canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            studentId={homepageData.studentId}
-            isEnglish={isEnglish}
-            showVerifiedTeacherWarning={
-              homepageData.showStudentAsVerifiedTeacherWarning
-            }
-            specialAnnouncement={studentSpecialAnnouncement}
-            topComponents={[parentalPermissionBanner]}
-          />
-        )}
-      </div>
-    </Provider>,
-    document.getElementById('homepage-container')
-  );
+  const root = createRoot(document.getElementById('homepage-container'));
+
+  root.render(<Provider store={store}>
+    <div>
+      {isTeacher ? (
+        <TeacherHomepage
+          announcement={announcement}
+          hocLaunch={homepageData.hocLaunch}
+          courses={homepageData.courses}
+          plCourses={homepageData.plCourses}
+          joinedStudentSections={homepageData.joined_student_sections}
+          joinedPlSections={homepageData.joined_pl_sections}
+          topCourse={homepageData.topCourse}
+          topPlCourse={homepageData.topPlCourse}
+          queryStringOpen={query['open']}
+          canViewAdvancedTools={homepageData.canViewAdvancedTools}
+          existingSchoolInfo={homepageData.existingSchoolInfo}
+          censusQuestion={homepageData.censusQuestion}
+          showCensusBanner={homepageData.showCensusBanner}
+          showNpsSurvey={homepageData.showNpsSurvey}
+          afeEligible={homepageData.afeEligible}
+          teacherName={homepageData.teacherName}
+          teacherId={homepageData.teacherId}
+          teacherEmail={homepageData.teacherEmail}
+          schoolYear={homepageData.currentSchoolYear}
+          specialAnnouncement={specialAnnouncement}
+          hasFeedback={homepageData.hasFeedback}
+          showIncubatorBanner={homepageData.showIncubatorBanner}
+          currentUserId={homepageData.currentUserId}
+        />
+      ) : (
+        <StudentHomepage
+          courses={homepageData.courses}
+          topCourse={homepageData.topCourse}
+          hasFeedback={homepageData.hasFeedback}
+          sections={homepageData.sections}
+          canViewAdvancedTools={homepageData.canViewAdvancedTools}
+          studentId={homepageData.studentId}
+          isEnglish={isEnglish}
+          showVerifiedTeacherWarning={
+            homepageData.showStudentAsVerifiedTeacherWarning
+          }
+          specialAnnouncement={studentSpecialAnnouncement}
+          topComponents={[parentalPermissionBanner]}
+        />
+      )}
+    </div>
+  </Provider>);
+
   displayDifferentiationChat();
 }
 

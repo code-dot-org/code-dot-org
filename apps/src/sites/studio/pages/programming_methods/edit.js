@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -16,16 +17,15 @@ $(document).ready(() => {
 
   const programmingMethod = getScriptData('programmingMethod');
   const overloadOptions = getScriptData('overloadOptions');
-  ReactDOM.render(
-    <Provider store={store}>
-      <>
-        <ProgrammingMethodEditor
-          initialProgrammingMethod={programmingMethod}
-          overloadOptions={overloadOptions}
-        />
-        <ExpandableImageDialog />
-      </>
-    </Provider>,
-    document.getElementById('edit-container')
-  );
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(<Provider store={store}>
+    <>
+      <ProgrammingMethodEditor
+        initialProgrammingMethod={programmingMethod}
+        overloadOptions={overloadOptions}
+      />
+      <ExpandableImageDialog />
+    </>
+  </Provider>);
 });

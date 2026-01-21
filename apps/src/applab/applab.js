@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * CodeOrgApp: Applab
  *
@@ -230,24 +231,23 @@ function renderFooterInSharedGame() {
 
   const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
-  ReactDOM.render(
-    <SmallFooter
-      i18nDropdownInBase={false}
-      privacyPolicyInBase={false}
-      copyrightInBase={false}
-      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
-      rowHeight={applabConstants.FOOTER_HEIGHT}
-      style={{fontSize: 18}}
-      baseStyle={{
-        width: $('#divApplab').width(),
-        paddingLeft: 0,
-      }}
-      className="dark"
-      menuItems={menuItems}
-      phoneFooter={true}
-    />,
-    footerDiv
-  );
+  const root = createRoot(footerDiv);
+
+  root.render(<SmallFooter
+    i18nDropdownInBase={false}
+    privacyPolicyInBase={false}
+    copyrightInBase={false}
+    baseMoreMenuString={commonMsg.builtOnCodeStudio()}
+    rowHeight={applabConstants.FOOTER_HEIGHT}
+    style={{fontSize: 18}}
+    baseStyle={{
+      width: $('#divApplab').width(),
+      paddingLeft: 0,
+    }}
+    className="dark"
+    menuItems={menuItems}
+    phoneFooter={true}
+  />);
 }
 
 /**
@@ -937,12 +937,11 @@ Applab.render = function () {
     handleVersionHistory: Applab.handleVersionHistory,
     autogenerateML: autogenerateML,
   });
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <AppLabView {...nextProps} />
-    </Provider>,
-    Applab.reactMountPoint_
-  );
+  const root = createRoot(Applab.reactMountPoint_);
+
+  root.render(<Provider store={getStore()}>
+    <AppLabView {...nextProps} />
+  </Provider>);
 };
 
 Applab.exportApp = function () {

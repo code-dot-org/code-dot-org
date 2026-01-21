@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -184,13 +185,12 @@ export default class FieldChord extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.render(
-      React.createElement<ChordPanelProps>(ChordPanel, {
-        initValue: this.getValue(),
-        onChange: this.onValueChange,
-      }),
-      this.newDiv
-    );
+    const root = createRoot(this.newDiv);
+
+    root.render(React.createElement<ChordPanelProps>(ChordPanel, {
+      initValue: this.getValue(),
+      onChange: this.onValueChange,
+    }));
   }
 
   private disposeDropdown() {
@@ -198,7 +198,8 @@ export default class FieldChord extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.unmountComponentAtNode(this.newDiv);
+    const root = createRoot(this.newDiv);
+    root.unmount();
     this.newDiv = null;
   }
 

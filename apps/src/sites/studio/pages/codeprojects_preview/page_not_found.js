@@ -1,10 +1,9 @@
+import { createRoot } from "react-dom/client";
 import PageNotFound from '@codebridge/FilePreview/PageNotFound';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <PageNotFound />,
-    document.getElementById('page-not-found-container')
-  );
+  const root = createRoot(document.getElementById('page-not-found-container'));
+  root.render(<PageNotFound />);
 });

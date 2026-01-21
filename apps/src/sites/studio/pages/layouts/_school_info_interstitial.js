@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Renders the SchoolInfoInterstitial component on page load.
  * This file is responsibile for mounting and unmounting the React component,
@@ -17,12 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
 
   function unmount() {
-    ReactDOM.unmountComponentAtNode(mountPoint);
+    const root = createRoot(mountPoint);
+    root.unmount();
     document.body.removeChild(mountPoint);
   }
 
-  ReactDOM.render(
-    <SchoolInfoInterstitial scriptData={scriptData} onClose={unmount} />,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+  root.render(<SchoolInfoInterstitial scriptData={scriptData} onClose={unmount} />);
 });

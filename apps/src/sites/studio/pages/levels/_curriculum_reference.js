@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -18,13 +19,12 @@ $(document).ready(() => {
 
   if (refGuideElement) {
     const referenceGuide = getScriptData('referenceGuide');
-    ReactDOM.render(
-      <>
-        <h1>{referenceGuide.display_name}</h1>
-        <ReferenceGuide referenceGuide={referenceGuide} />
-      </>,
-      refGuideElement
-    );
+    const root = createRoot(refGuideElement);
+
+    root.render(<>
+      <h1>{referenceGuide.display_name}</h1>
+      <ReferenceGuide referenceGuide={referenceGuide} />
+    </>);
   }
 
   reportTeacherReviewingStudentNonLabLevel();

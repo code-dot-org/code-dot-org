@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -49,19 +50,19 @@ export default class AddParentEmailController {
       this.submitParentEmailChange(values).then(this.onParentEmailChanged);
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
-    ReactDOM.render(
-      <AddParentEmailModal
-        handleSubmit={handleSubmit}
-        handleCancel={this.hideAddParentEmailModal}
-        currentParentEmail={this.formParentEmailField.val()}
-      />,
-      this.mountPoint
-    );
+    const root = createRoot(this.mountPoint);
+
+    root.render(<AddParentEmailModal
+      handleSubmit={handleSubmit}
+      handleCancel={this.hideAddParentEmailModal}
+      currentParentEmail={this.formParentEmailField.val()}
+    />);
   };
 
   hideAddParentEmailModal = () => {
     if (this.mountPoint) {
-      ReactDOM.unmountComponentAtNode(this.mountPoint);
+      const root = createRoot(this.mountPoint);
+      root.unmount();
       document.body.removeChild(this.mountPoint);
       delete this.mountPoint;
     }

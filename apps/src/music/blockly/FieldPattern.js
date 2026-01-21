@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -109,20 +110,20 @@ class FieldPattern extends BlocklyCore.Field {
     if (!this.newDiv_) {
       return;
     }
-    ReactDOM.render(
-      <InstrumentGrid
-        editorType="drums"
-        // Make a copy of the value object so that we don't overwrite Blockly's data.
-        initialValue={JSON.parse(JSON.stringify(this.getValue()))}
-        onChange={this.onValueChange}
-        lengthMeasures={1}
-      />,
-      this.newDiv_
-    );
+    const root = createRoot(this.newDiv_);
+
+    root.render(<InstrumentGrid
+      editorType="drums"
+      // Make a copy of the value object so that we don't overwrite Blockly's data.
+      initialValue={JSON.parse(JSON.stringify(this.getValue()))}
+      onChange={this.onValueChange}
+      lengthMeasures={1}
+    />);
   }
 
   dropdownDispose_() {
-    ReactDOM.unmountComponentAtNode(this.newDiv_);
+    const root = createRoot(this.newDiv_);
+    root.unmount();
     this.newDiv_ = null;
   }
 

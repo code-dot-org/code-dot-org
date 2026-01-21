@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import _ from 'lodash';
 import queryString from 'query-string';
@@ -35,7 +36,8 @@ function showDisabledBubblesModal() {
   const div = $('<div>');
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesModal />, div[0]);
+  const root = createRoot(div[0]);
+  root.render(<DisabledBubblesModal />);
 }
 
 /**
@@ -57,7 +59,8 @@ progress.showDisabledBubblesAlert = function () {
   });
   $(document.body).append(div);
 
-  ReactDOM.render(<DisabledBubblesAlert />, div[0]);
+  const root = createRoot(div[0]);
+  root.render(<DisabledBubblesAlert />);
 };
 
 /**

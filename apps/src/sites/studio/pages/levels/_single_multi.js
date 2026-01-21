@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -13,13 +14,12 @@ $(document).ready(() => {
     const container = this;
     const store = getStore();
 
-    ReactDOM.render(
-      <Provider store={store}>
-        <InstructorsOnly>
-          <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
-        </InstructorsOnly>
-      </Provider>,
-      container
-    );
+    const root = createRoot(container);
+
+    root.render(<Provider store={store}>
+      <InstructorsOnly>
+        <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
+      </InstructorsOnly>
+    </Provider>);
   });
 });

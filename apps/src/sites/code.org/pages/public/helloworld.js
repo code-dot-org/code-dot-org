@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -47,12 +48,11 @@ const HELLOWORLD_PROJECTS = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('helloworld_student_projects');
-  ReactDOM.render(
-    <ProjectCardRow
-      galleryType="public"
-      showFullThumbnail={true}
-      projects={HELLOWORLD_PROJECTS}
-    />,
-    container
-  );
+  const root = createRoot(container);
+
+  root.render(<ProjectCardRow
+    galleryType="public"
+    showFullThumbnail={true}
+    projects={HELLOWORLD_PROJECTS}
+  />);
 });

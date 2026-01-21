@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -28,10 +29,9 @@ $(document).ready(function () {
   store.dispatch(updateTableRecords(tableName, dataset.records));
   store.dispatch(updateTableColumns(tableName, dataset.columns));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <Dataset isLive={isLive} />
-    </Provider>,
-    document.querySelector('.dataset')
-  );
+  const root = createRoot(document.querySelector('.dataset'));
+
+  root.render(<Provider store={store}>
+    <Dataset isLive={isLive} />
+  </Provider>);
 });

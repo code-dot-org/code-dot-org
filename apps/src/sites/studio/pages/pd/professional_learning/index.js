@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -17,23 +18,23 @@ $(() => {
 
   const landingPageData = getScriptData('landingPageData');
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <LandingPage
-        lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
-        lastWorkshopSurveyCourse={
-          landingPageData['last_workshop_survey_course']
-        }
-        showDeeperLearning={landingPageData['show_deeper_learning']}
-        hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
-        plCoursesStarted={landingPageData['pl_courses_started']}
-        userPermissions={landingPageData['user_permissions']}
-        joinedStudentSections={landingPageData['joined_student_sections']}
-        joinedPlSections={landingPageData['joined_pl_sections']}
-        coursesAsFacilitator={landingPageData['courses_as_facilitator']}
-      />
-    </Provider>,
-    document.getElementById('pl-landing-page-container')
-  );
+  const root = createRoot(document.getElementById('pl-landing-page-container'));
+
+  root.render(<Provider store={store}>
+    <LandingPage
+      lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
+      lastWorkshopSurveyCourse={
+        landingPageData['last_workshop_survey_course']
+      }
+      showDeeperLearning={landingPageData['show_deeper_learning']}
+      hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
+      plCoursesStarted={landingPageData['pl_courses_started']}
+      userPermissions={landingPageData['user_permissions']}
+      joinedStudentSections={landingPageData['joined_student_sections']}
+      joinedPlSections={landingPageData['joined_pl_sections']}
+      coursesAsFacilitator={landingPageData['courses_as_facilitator']}
+    />
+  </Provider>);
+
   displayDifferentiationChat();
 });

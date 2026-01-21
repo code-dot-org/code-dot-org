@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Renders the LtiUpgradeAccountDialog component on page load.
  * This file is responsible for mounting and unmounting the React component,
@@ -21,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = formData.destination_url;
   };
 
-  ReactDOM.render(
-    <LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+  root.render(<LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />);
 });

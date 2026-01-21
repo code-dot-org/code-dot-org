@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -41,26 +42,25 @@ export function shareProject(shareUrl) {
     const canPublish =
       !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);
 
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <ShareDialog
-          isProjectLevel={!!dashboard.project.isProjectLevel()}
-          allowSignedOutShare={appType === 'dance'}
-          shareUrl={shareUrl}
-          selectedSong={selectedSong}
-          thumbnailUrl={dashboard.project.getThumbnailUrl()}
-          isAbusive={dashboard.project.exceedsAbuseThreshold()}
-          canPrint={appType === 'artist'}
-          canPublish={canPublish}
-          channelId={dashboard.project.getCurrentId()}
-          appType={appType}
-          onClickPopup={popupWindow}
-          canShareSocial={canShareSocial}
-          userSharingDisabled={appOptions.userSharingDisabled}
-        />
-      </Provider>,
-      dialogDom
-    );
+    const root = createRoot(dialogDom);
+
+    root.render(<Provider store={getStore()}>
+      <ShareDialog
+        isProjectLevel={!!dashboard.project.isProjectLevel()}
+        allowSignedOutShare={appType === 'dance'}
+        shareUrl={shareUrl}
+        selectedSong={selectedSong}
+        thumbnailUrl={dashboard.project.getThumbnailUrl()}
+        isAbusive={dashboard.project.exceedsAbuseThreshold()}
+        canPrint={appType === 'artist'}
+        canPublish={canPublish}
+        channelId={dashboard.project.getCurrentId()}
+        appType={appType}
+        onClickPopup={popupWindow}
+        canShareSocial={canShareSocial}
+        userSharingDisabled={appOptions.userSharingDisabled}
+      />
+    </Provider>);
 
     getStore().dispatch(showShareDialog());
   });

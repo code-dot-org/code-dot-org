@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -19,7 +20,8 @@ export function ProjectNotFoundAlert() {
 }
 
 export default () => {
-  ReactDOM.render(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
+  const root = createRoot(document.getElementById('codeApp'));
+  root.render(<ProjectNotFoundAlert />);
 };
 
 const styles = {

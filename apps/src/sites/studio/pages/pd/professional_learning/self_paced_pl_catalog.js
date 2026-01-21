@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,11 +12,10 @@ $(() => {
   );
   const studentsCourseOfferings = getScriptData('studentsCourseOfferings');
 
-  ReactDOM.render(
-    <SelfPacedPLCatalog
-      selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
-      studentsCourseOfferings={studentsCourseOfferings}
-    />,
-    document.getElementById('self-paced-pl-catalog')
-  );
+  const root = createRoot(document.getElementById('self-paced-pl-catalog'));
+
+  root.render(<SelfPacedPLCatalog
+    selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
+    studentsCourseOfferings={studentsCourseOfferings}
+  />);
 });

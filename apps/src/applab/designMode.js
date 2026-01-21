@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
@@ -1757,12 +1758,11 @@ designMode.renderDesignWorkspace = function (element) {
     ),
     autogenerateML,
   };
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <DesignWorkspace {...props} />
-    </Provider>,
-    designWorkspace
-  );
+  const root = createRoot(designWorkspace);
+
+  root.render(<Provider store={getStore()}>
+    <DesignWorkspace {...props} />
+  </Provider>);
 };
 
 /**

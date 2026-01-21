@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 // Globals used in this file:
 //   Blockly
 
@@ -267,25 +268,25 @@ FeedbackUtils.prototype.displayFeedback = function (
       };
     }
 
-    ReactDOM.render(
-      <ChallengeDialog
-        title={
-          isPerfect
-            ? msg.challengeLevelPerfectTitle()
-            : msg.challengeLevelPassTitle()
-        }
-        avatar={icon}
-        text={isPerfect ? null : msg.challengeLevelPassText({idealBlocks})}
-        complete={isPerfect}
-        handlePrimary={onChallengeContinue}
-        primaryButtonLabel={msg.continue()}
-        cancelButtonLabel={msg.tryAgain()}
-        showPuzzleRatingButtons={showPuzzleRatingButtons}
-      >
-        {displayShowCode && this.getShowCodeComponent_(options, true)}
-      </ChallengeDialog>,
-      container
-    );
+    const root = createRoot(container);
+
+    root.render(<ChallengeDialog
+      title={
+        isPerfect
+          ? msg.challengeLevelPerfectTitle()
+          : msg.challengeLevelPassTitle()
+      }
+      avatar={icon}
+      text={isPerfect ? null : msg.challengeLevelPassText({idealBlocks})}
+      complete={isPerfect}
+      handlePrimary={onChallengeContinue}
+      primaryButtonLabel={msg.continue()}
+      cancelButtonLabel={msg.tryAgain()}
+      showPuzzleRatingButtons={showPuzzleRatingButtons}
+    >
+      {displayShowCode && this.getShowCodeComponent_(options, true)}
+    </ChallengeDialog>);
+
     return;
   }
 
@@ -553,21 +554,20 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
     }
   }
 
-  ReactDOM.render(
-    <DialogButtons
-      tryAgain={tryAgainText}
-      continueText={
-        options.continueText ||
-        (options.finalLevel ? msg.finish() : msg.continue())
-      }
-      nextLevel={this.canContinueToNextLevel(options.feedbackType)}
-      shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
-      isK1={options.isK1}
-      assetUrl={this.studioApp_.assetUrl}
-      freePlay={options.freePlay}
-    />,
-    buttons
-  );
+  const root = createRoot(buttons);
+
+  root.render(<DialogButtons
+    tryAgain={tryAgainText}
+    continueText={
+      options.continueText ||
+      (options.finalLevel ? msg.finish() : msg.continue())
+    }
+    nextLevel={this.canContinueToNextLevel(options.feedbackType)}
+    shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
+    isK1={options.isK1}
+    assetUrl={this.studioApp_.assetUrl}
+    freePlay={options.freePlay}
+  />);
 
   return buttons;
 };
@@ -929,7 +929,8 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
       var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
       var annotatedShareLink = options.shareLink + '?qr=true';
-      ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
+      const root = createRoot(qrCode);
+      root.render(<QRCode value={annotatedShareLink} size={90} />);
 
       if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
@@ -979,12 +980,11 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (downloadReplayVideoContainer) {
     const onDownloadError = () => $('#download-replay-video-error').show();
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <DownloadReplayVideoButton onError={onDownloadError} />
-      </Provider>,
-      downloadReplayVideoContainer
-    );
+    const root = createRoot(downloadReplayVideoContainer);
+
+    root.render(<Provider store={getStore()}>
+      <DownloadReplayVideoButton onError={onDownloadError} />
+    </Provider>);
   }
 
   return sharingDiv;
@@ -993,7 +993,8 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-  ReactDOM.render(this.getShowCodeComponent_(options), showCodeDiv);
+  const root = createRoot(showCodeDiv);
+  root.render(this.getShowCodeComponent_(options));
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -1145,16 +1146,15 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
-  ReactDOM.render(
-    <div>
-      <GeneratedCode
-        message={generatedCodeProperties.message}
-        code={generatedCodeProperties.code}
-      />
-      <DialogButtons ok={true} />
-    </div>,
-    codeDiv
-  );
+  const root = createRoot(codeDiv);
+
+  root.render(<div>
+    <GeneratedCode
+      message={generatedCodeProperties.message}
+      code={generatedCodeProperties.code}
+    />
+    <DialogButtons ok={true} />
+  </div>);
 
   var dialog = this.createModalDialog({
     contentDiv: codeDiv,
@@ -1225,23 +1225,21 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var textBoxStyle = {
     marginBottom: 10,
   };
-  var contentDiv = ReactDOM.render(
-    <div>
-      {options.headerText && (
-        <h5 className="dialog-title">{options.headerText}</h5>
-      )}
-      {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
-      {options.prompt && (
-        <input style={textBoxStyle} defaultValue={options.promptPrefill} />
-      )}
-      <DialogButtons
-        confirmText={options.confirmText}
-        cancelText={options.cancelText}
-        isDangerCancel={!!options.isDangerCancel}
-      />
-    </div>,
-    document.createElement('div')
-  );
+  var const root = createRoot(document.createElement('div'));,
+      root.render(<div>
+        {options.headerText && (
+          <h5 className="dialog-title">{options.headerText}</h5>
+        )}
+        {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
+        {options.prompt && (
+          <input style={textBoxStyle} defaultValue={options.promptPrefill} />
+        )}
+        <DialogButtons
+          confirmText={options.confirmText}
+          cancelText={options.cancelText}
+          isDangerCancel={!!options.isDangerCancel}
+        />
+      </div>);;
 
   var dialog = this.createModalDialog({
     contentDiv: contentDiv,
@@ -1290,7 +1288,8 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  ReactDOM.render(<DialogButtons ok={true} />, buttons);
+  const root = createRoot(buttons);
+  root.render(<DialogButtons ok={true} />);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */
@@ -79,28 +80,25 @@ function initializeCodeMirror(target, mode, options = {}) {
       const originalCallback = callback;
       updatePreview = editor => {
         if (game === 'Pythonlab' || game === 'Weblab2') {
-          ReactDOM.render(
-            React.createElement(MainInstructionsPreview, {
-              instructionsText: editor.getValue(),
-              theme: 'Dark',
-            }),
-            previewElement
-          );
+          const root = createRoot(previewElement);
+
+          root.render(React.createElement(MainInstructionsPreview, {
+            instructionsText: editor.getValue(),
+            theme: 'Dark',
+          }));
         } else if (game === 'Aichat' || game === 'Music') {
-          ReactDOM.render(
-            React.createElement(MainInstructionsPreview, {
-              instructionsText: editor.getValue(),
-              theme: 'Light',
-            }),
-            previewElement
-          );
+          const root = createRoot(previewElement);
+
+          root.render(React.createElement(MainInstructionsPreview, {
+            instructionsText: editor.getValue(),
+            theme: 'Light',
+          }));
         } else {
-          ReactDOM.render(
-            React.createElement(SafeMarkdown, {
-              markdown: editor.getValue(),
-            }),
-            previewElement
-          );
+          const root = createRoot(previewElement);
+
+          root.render(React.createElement(SafeMarkdown, {
+            markdown: editor.getValue(),
+          }));
         }
       };
 

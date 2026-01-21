@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -51,18 +52,18 @@ describe('getContainedLevelResultInfo', () => {
     registerReducers(commonReducers);
 
     gameButtons = document.createElement('div');
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <GameButtons
-          hideRunButton={false}
-          runButtonText={'Run'}
-          nextLevelUrl={'nextUrl'}
-          showSkipButton
-          showFinishButton
-        />
-      </Provider>,
-      gameButtons
-    );
+    const root = createRoot(gameButtons);
+
+    root.render(<Provider store={getStore()}>
+      <GameButtons
+        hideRunButton={false}
+        runButtonText={'Run'}
+        nextLevelUrl={'nextUrl'}
+        showSkipButton
+        showFinishButton
+      />
+    </Provider>);
+
     document.body.appendChild(gameButtons);
 
     sinon.stub(codeStudioLevels, 'lockContainedLevelAnswers');

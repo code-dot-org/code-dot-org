@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import React, {ReactElement} from 'react';
@@ -27,8 +28,6 @@ export function createReactRoot(
     );
   }
 
-  ReactDOM.render(
-    <MuiThemeProvider theme={CdoTheme}>{component}</MuiThemeProvider>,
-    containerElement
-  );
+  const root = createRoot(containerElement);
+  root.render(<MuiThemeProvider theme={CdoTheme}>{component}</MuiThemeProvider>);
 }

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Renders the LtiIframePage component on page load.
  * This file is responsible for mounting and unmounting the React component,
@@ -22,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  ReactDOM.render(
-    <LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+  root.render(<LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />);
 });

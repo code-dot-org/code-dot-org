@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -240,23 +241,22 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <WebLabView
-        onAddFileHTML={onAddFileHTML.bind(this)}
-        onAddFileCSS={onAddFileCSS.bind(this)}
-        onAddFileImage={onAddFileImage.bind(this)}
-        onUndo={onUndo.bind(this)}
-        onRedo={onRedo.bind(this)}
-        onRefreshPreview={onRefreshPreview.bind(this)}
-        onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
-        onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
-        onToggleInspector={this.onToggleInspector.bind(this)}
-        onMount={() => this.onMount(config)}
-      />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <WebLabView
+      onAddFileHTML={onAddFileHTML.bind(this)}
+      onAddFileCSS={onAddFileCSS.bind(this)}
+      onAddFileImage={onAddFileImage.bind(this)}
+      onUndo={onUndo.bind(this)}
+      onRedo={onRedo.bind(this)}
+      onRefreshPreview={onRefreshPreview.bind(this)}
+      onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
+      onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
+      onToggleInspector={this.onToggleInspector.bind(this)}
+      onMount={() => this.onMount(config)}
+    />
+  </Provider>);
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
 };

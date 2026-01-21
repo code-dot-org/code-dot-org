@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -18,15 +19,14 @@ $(document).ready(() => {
   prepareBlockly();
   const programmingEnvironment = getScriptData('programmingEnvironment');
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
-  ReactDOM.render(
-    <PageContainer
-      programmingEnvironmentTitle={programmingEnvironment.title}
-      categoriesForNavigation={categoriesForNavigation}
-    >
-      <ProgrammingEnvironmentOverview
-        programmingEnvironment={programmingEnvironment}
-      />
-    </PageContainer>,
-    document.getElementById('container')
-  );
+  const root = createRoot(document.getElementById('container'));
+
+  root.render(<PageContainer
+    programmingEnvironmentTitle={programmingEnvironment.title}
+    categoriesForNavigation={categoriesForNavigation}
+  >
+    <ProgrammingEnvironmentOverview
+      programmingEnvironment={programmingEnvironment}
+    />
+  </PageContainer>);
 });

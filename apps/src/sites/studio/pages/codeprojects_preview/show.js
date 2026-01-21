@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -13,8 +14,6 @@ const useLegacyPreview = experiments.isEnabledAllowingQueryString(
 );
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    useLegacyPreview ? <InnerHTMLPreview /> : <InnerHTMLPreview2 />,
-    document.getElementById('codeprojects-preview-container')
-  );
+  const root = createRoot(document.getElementById('codeprojects-preview-container'));
+  root.render(useLegacyPreview ? <InnerHTMLPreview /> : <InnerHTMLPreview2 />);
 });

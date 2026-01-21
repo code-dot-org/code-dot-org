@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -63,12 +64,11 @@ function renderTeacherContentToggle(store) {
     .insertAfter(levelContent)[0];
   const isBlocklyOrDroplet = !!(window.appOptions && appOptions.app);
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <InstructorsOnly>
-        <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
-      </InstructorsOnly>
-    </Provider>,
-    element
-  );
+  const root = createRoot(element);
+
+  root.render(<Provider store={store}>
+    <InstructorsOnly>
+      <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
+    </InstructorsOnly>
+  </Provider>);
 }

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -109,12 +110,11 @@ Fish.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <FishView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <FishView onMount={onMount} />
+  </Provider>);
 };
 
 // Called by the fish app when it wants to go to the next level.

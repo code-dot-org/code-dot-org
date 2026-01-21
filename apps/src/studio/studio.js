@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * Blockly App: Studio
  *
@@ -2396,12 +2397,11 @@ Studio.init = function (config) {
     />
   );
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
+  </Provider>);
 };
 
 Studio.prepareForRemix = function () {
@@ -5925,17 +5925,16 @@ Studio.askForInput = function (question, callback) {
     Studio.queueCallback(callback, [value]);
   }
 
-  ReactDOM.render(
-    <InputPrompt question={question} onInputReceived={onInputReceived} />,
-    target
-  );
+  const root = createRoot(target);
+  root.render(<InputPrompt question={question} onInputReceived={onInputReceived} />);
 };
 
 Studio.hideInputPrompt = function () {
   const target = Studio.inputPromptElement;
 
   if (target) {
-    ReactDOM.unmountComponentAtNode(target);
+    const root = createRoot(target);
+    root.unmount();
     target.parentNode.removeChild(target);
     Studio.inputPromptElement = null;
   }

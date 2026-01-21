@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -106,12 +107,11 @@ function displayLessonOverview() {
     );
   }
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <LessonOverview lesson={lessonData} activities={activities} />
-    </Provider>,
-    document.getElementById('show-container')
-  );
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(<Provider store={store}>
+    <LessonOverview lesson={lessonData} activities={activities} />
+  </Provider>);
 }
 
 /**
@@ -126,12 +126,11 @@ function prepareExpandableImageDialog() {
   const container = document.createElement('div');
   document.body.appendChild(container);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ExpandableImageDialog />
-    </Provider>,
-    container
-  );
+  const root = createRoot(container);
+
+  root.render(<Provider store={getStore()}>
+    <ExpandableImageDialog />
+  </Provider>);
 }
 
 function displayDifferentiationChat() {
@@ -143,18 +142,17 @@ function displayDifferentiationChat() {
   const lessonName = lessonData['displayName'];
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AiDiffFloatingActionButton
-          context={{
-            type: AiDiffContext.LESSON,
-            lessonId: lessonId,
-          }}
-          scriptName={lessonName}
-        />
-      </Provider>,
-      aiDiffFabMountPoint
-    );
+    const root = createRoot(aiDiffFabMountPoint);
+
+    root.render(<Provider store={getStore()}>
+      <AiDiffFloatingActionButton
+        context={{
+          type: AiDiffContext.LESSON,
+          lessonId: lessonId,
+        }}
+        scriptName={lessonName}
+      />
+    </Provider>);
   }
 }
 
@@ -167,13 +165,12 @@ const renderCopyLessonButton = () => {
     const lessonId = lessonData['id'];
     const lessonName = lessonData['displayName'];
 
-    ReactDOM.render(
-      <CloneLessonDialogButton
-        lessonId={lessonId}
-        lessonName={lessonName}
-        buttonText="Copy"
-      />,
-      element
-    );
+    const root = createRoot(element);
+
+    root.render(<CloneLessonDialogButton
+      lessonId={lessonId}
+      lessonName={lessonName}
+      buttonText="Copy"
+    />);
   }
 };

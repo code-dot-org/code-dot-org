@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -12,24 +13,23 @@ import showProjectAdmin from '../showProjectAdmin';
  * @param {string} tosText
  */
 export default (project, tosText) => {
-  ReactDOM.render(
-    React.createElement(AbuseExclamation, {
-      i18n: {
-        tos: tosText,
-        contact_us: msg.contactUs({
-          url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
-            `Abuse error for project at url: ${project.getShareUrl()}`
-          )}`,
-        }),
-        edit_project: msg.editProject(),
-        view_project: msg.viewProject(),
-        go_to_code_studio: msg.goToCodeStudio(),
-      },
-      isOwner: project.isOwner(),
-      canViewFlaggedProject: project.canViewFlaggedProject(),
-    }),
-    document.getElementById('codeApp')
-  );
+  const root = createRoot(document.getElementById('codeApp'));
+
+  root.render(React.createElement(AbuseExclamation, {
+    i18n: {
+      tos: tosText,
+      contact_us: msg.contactUs({
+        url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+          `Abuse error for project at url: ${project.getShareUrl()}`
+        )}`,
+      }),
+      edit_project: msg.editProject(),
+      view_project: msg.viewProject(),
+      go_to_code_studio: msg.goToCodeStudio(),
+    },
+    isOwner: project.isOwner(),
+    canViewFlaggedProject: project.canViewFlaggedProject(),
+  }));
 
   // update admin box (if it exists) with abuse info
   showProjectAdmin(project);

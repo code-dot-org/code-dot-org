@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
@@ -270,15 +271,14 @@ NetSim.prototype.init = function (config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <NetSimView
-        generateCodeAppHtml={generateCodeAppHtmlFromEjs}
-        onMount={onMount}
-      />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <NetSimView
+      generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+      onMount={onMount}
+    />
+  </Provider>);
 };
 
 /**

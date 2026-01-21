@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -5,9 +6,8 @@ import ProfessionalLearningCourseProgress from '@cdo/apps/code-studio/pd/profess
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const userCourseEnrollmentData = getScriptData('userCourseEnrollmentData');
-ReactDOM.render(
-  <ProfessionalLearningCourseProgress
-    deeperLearningCourseData={userCourseEnrollmentData}
-  />,
-  document.getElementById('user-course-enrollment-container')
-);
+const root = createRoot(document.getElementById('user-course-enrollment-container'));
+
+root.render(<ProfessionalLearningCourseProgress
+  deeperLearningCourseData={userCourseEnrollmentData}
+/>);

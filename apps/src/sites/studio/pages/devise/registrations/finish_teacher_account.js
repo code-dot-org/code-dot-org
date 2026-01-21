@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -9,12 +10,11 @@ $(document).ready(() => {
   const usIp = getScriptData('usIp');
   const countryCode = getScriptData('countryCode');
   const redirectUrl = getScriptData('redirectUrl');
-  ReactDOM.render(
-    <FinishTeacherAccount
-      usIp={usIp}
-      countryCode={countryCode}
-      redirectUrl={redirectUrl}
-    />,
-    document.getElementById('finish-teacher-account-root')
-  );
+  const root = createRoot(document.getElementById('finish-teacher-account-root'));
+
+  root.render(<FinishTeacherAccount
+    usIp={usIp}
+    countryCode={countryCode}
+    redirectUrl={redirectUrl}
+  />);
 });

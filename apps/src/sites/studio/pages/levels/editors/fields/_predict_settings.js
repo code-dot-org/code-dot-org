@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,8 +9,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(document).ready(function () {
   const initialSettings = getScriptData('predictsettings');
 
-  ReactDOM.render(
-    <EditPredictSettings initialSettings={initialSettings} />,
-    document.getElementById('predict-settings-editor')
-  );
+  const root = createRoot(document.getElementById('predict-settings-editor'));
+  root.render(<EditPredictSettings initialSettings={initialSettings} />);
 });

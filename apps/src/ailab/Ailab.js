@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import $ from 'jquery';
 import React from 'react';
@@ -128,12 +129,11 @@ Ailab.prototype.init = function (config) {
     setDynamicInstructionsDefaults(getInstructionsDefaults())
   );
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <AilabView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <AilabView onMount={onMount} />
+  </Provider>);
 };
 
 // Called by the ailab app when it wants to go to the next level.

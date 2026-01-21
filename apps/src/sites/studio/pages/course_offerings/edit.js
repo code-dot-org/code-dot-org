@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -21,14 +22,13 @@ function showCourseOfferingEditor() {
 
   const facilitatorsCourses = getScriptData('facilitatorsCourses');
 
-  ReactDOM.render(
-    <CourseOfferingEditor
-      initialCourseOffering={courseOfferingEditorData}
-      selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
-      professionalLearningProgramPaths={professionalLearningProgramPaths}
-      videos={videos}
-      facilitatorsCourses={facilitatorsCourses}
-    />,
-    document.getElementById('course_offering_editor')
-  );
+  const root = createRoot(document.getElementById('course_offering_editor'));
+
+  root.render(<CourseOfferingEditor
+    initialCourseOffering={courseOfferingEditorData}
+    selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
+    professionalLearningProgramPaths={professionalLearningProgramPaths}
+    videos={videos}
+    facilitatorsCourses={facilitatorsCourses}
+  />);
 }

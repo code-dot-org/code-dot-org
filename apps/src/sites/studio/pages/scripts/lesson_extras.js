@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -20,19 +21,18 @@ config.bonusLevels = config.bonusLevels.map(bonus => {
   return bonus;
 });
 
-ReactDOM.render(
-  <Provider store={store}>
-    <LessonExtras
-      lessonNumber={config.lessonNumber}
-      nextLessonNumber={config.nextLessonNumber}
-      nextLevelPath={config.nextLevelPath}
-      bonusLevels={config.bonusLevels}
-      showProjectWidget={showProjectWidget}
-      projectTypes={projectTypes}
-      sectionId={viewer.section_id}
-      userId={viewer.user_id}
-      showLessonExtrasWarning={viewer.show_lesson_extras_warning}
-    />
-  </Provider>,
-  document.querySelector('#lesson-extras')
-);
+const root = createRoot(document.querySelector('#lesson-extras'));
+
+root.render(<Provider store={store}>
+  <LessonExtras
+    lessonNumber={config.lessonNumber}
+    nextLessonNumber={config.nextLessonNumber}
+    nextLevelPath={config.nextLevelPath}
+    bonusLevels={config.bonusLevels}
+    showProjectWidget={showProjectWidget}
+    projectTypes={projectTypes}
+    sectionId={viewer.section_id}
+    userId={viewer.user_id}
+    showLessonExtrasWarning={viewer.show_lesson_extras_warning}
+  />
+</Provider>);

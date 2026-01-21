@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -9,5 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
 
   updateQueryParam('showSectionCreationDialog', undefined, true);
-  ReactDOM.render(<SectionCreationCelebrationDialog />, mountPoint);
+  const root = createRoot(mountPoint);
+  root.render(<SectionCreationCelebrationDialog />);
 });

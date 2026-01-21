@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -45,31 +46,26 @@ $(document).ready(() => {
     document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
     const store = getStore();
-    ReactDOM.render(
-      <Provider store={store}>
-        <MigrateToMultiAuth />
-      </Provider>,
-      migrateMultiAuthMountPoint
-    );
+    const root = createRoot(migrateMultiAuthMountPoint);
+
+    root.render(<Provider store={store}>
+      <MigrateToMultiAuth />
+    </Provider>);
   }
 
   const accountInformationMountPoint = document.getElementById(
     'account-information'
   );
   if (accountInformationMountPoint) {
-    ReactDOM.render(
-      <AccountInformation {...scriptData} />,
-      accountInformationMountPoint
-    );
+    const root = createRoot(accountInformationMountPoint);
+    root.render(<AccountInformation {...scriptData} />);
   }
 
   const schoolInformationMountPoint =
     document.getElementById('school-information');
   if (schoolInformationMountPoint) {
-    ReactDOM.render(
-      <SchoolInformation {...scriptData} />,
-      schoolInformationMountPoint
-    );
+    const root = createRoot(schoolInformationMountPoint);
+    root.render(<SchoolInformation {...scriptData} />);
   }
 
   const updateDisplayedParentEmail = parentEmail => {
@@ -110,64 +106,61 @@ $(document).ready(() => {
   const ltiSyncSettingsMountPoint =
     document.getElementById('lti-sync-settings');
   if (ltiSyncSettingsMountPoint) {
-    ReactDOM.render(
-      <LtiRosterSyncSettings
-        ltiRosterSyncEnabled={
-          ltiSyncSettingsMountPoint.getAttribute(
-            'data-lti-roster-sync-enabled'
-          ) === 'true'
-        }
-        formId={'lti-sync-settings-form'}
-        lmsName={lmsName}
-      />,
-      ltiSyncSettingsMountPoint
-    );
+    const root = createRoot(ltiSyncSettingsMountPoint);
+
+    root.render(<LtiRosterSyncSettings
+      ltiRosterSyncEnabled={
+        ltiSyncSettingsMountPoint.getAttribute(
+          'data-lti-roster-sync-enabled'
+        ) === 'true'
+      }
+      formId={'lti-sync-settings-form'}
+      lmsName={lmsName}
+    />);
   }
 
   const lockoutLinkedAccountsMountPoint = document.getElementById(
     'lockout-linked-accounts'
   );
   if (lockoutLinkedAccountsMountPoint) {
-    ReactDOM.render(
-      <LockoutLinkedAccounts
-        pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
-          'data-pending-email'
-        )}
-        requestDate={
-          new Date(
-            Date.parse(
-              lockoutLinkedAccountsMountPoint.getAttribute('data-request-date')
-            )
+    const root = createRoot(lockoutLinkedAccountsMountPoint);
+
+    root.render(<LockoutLinkedAccounts
+      pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
+        'data-pending-email'
+      )}
+      requestDate={
+        new Date(
+          Date.parse(
+            lockoutLinkedAccountsMountPoint.getAttribute('data-request-date')
           )
-        }
-        permissionStatus={lockoutLinkedAccountsMountPoint.getAttribute(
-          'data-permission-status'
-        )}
-        userEmail={lockoutLinkedAccountsMountPoint.getAttribute(
-          'data-user-email'
-        )}
-        inSection={JSON.parse(
-          lockoutLinkedAccountsMountPoint.getAttribute('data-in-section')
-        )}
-        providers={JSON.parse(
-          lockoutLinkedAccountsMountPoint.getAttribute('data-providers')
-        )}
-        usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
-      />,
-      lockoutLinkedAccountsMountPoint
-    );
+        )
+      }
+      permissionStatus={lockoutLinkedAccountsMountPoint.getAttribute(
+        'data-permission-status'
+      )}
+      userEmail={lockoutLinkedAccountsMountPoint.getAttribute(
+        'data-user-email'
+      )}
+      inSection={JSON.parse(
+        lockoutLinkedAccountsMountPoint.getAttribute('data-in-section')
+      )}
+      providers={JSON.parse(
+        lockoutLinkedAccountsMountPoint.getAttribute('data-providers')
+      )}
+      usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
+    />);
   }
 
   const turnOffAiDiffMountPoint = document.getElementById('turn-off-ai-diff');
 
   if (turnOffAiDiffMountPoint && experiments.isEnabled('ai-differentiation')) {
     const store = getStore();
-    ReactDOM.render(
-      <Provider store={store}>
-        <TurnOffAiDiff />
-      </Provider>,
-      turnOffAiDiffMountPoint
-    );
+    const root = createRoot(turnOffAiDiffMountPoint);
+
+    root.render(<Provider store={store}>
+      <TurnOffAiDiff />
+    </Provider>);
   }
 
   const manageLinkedAccountsMountPoint = document.getElementById(
@@ -187,17 +180,16 @@ $(document).ready(() => {
 
   const deleteAccountMountPoint = document.getElementById('delete-account');
   if (deleteAccountMountPoint) {
-    ReactDOM.render(
-      <DeleteAccount
-        isPasswordRequired={isPasswordRequired}
-        isTeacher={userType === 'teacher'}
-        dependedUponForLogin={dependedUponForLogin}
-        dependentStudentsCount={dependentStudentsCount}
-        hasStudents={dependentStudentsCount > 0}
-        isAdmin={isAdmin}
-      />,
-      deleteAccountMountPoint
-    );
+    const root = createRoot(deleteAccountMountPoint);
+
+    root.render(<DeleteAccount
+      isPasswordRequired={isPasswordRequired}
+      isTeacher={userType === 'teacher'}
+      dependedUponForLogin={dependedUponForLogin}
+      dependentStudentsCount={dependentStudentsCount}
+      hasStudents={dependentStudentsCount > 0}
+      isAdmin={isAdmin}
+    />);
   }
 
   analyticsReporter.sendEvent(

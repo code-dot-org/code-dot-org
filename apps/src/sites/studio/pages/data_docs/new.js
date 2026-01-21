@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -8,10 +9,9 @@ import {getStore} from '@cdo/apps/redux';
 $(document).ready(() => {
   const store = getStore();
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <NewDataDocForm />
-    </Provider>,
-    document.getElementById('form')
-  );
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(<Provider store={store}>
+    <NewDataDocForm />
+  </Provider>);
 });

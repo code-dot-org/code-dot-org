@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -6,11 +7,10 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const aiIterationToolsData = getScriptData('aiIterationToolsData');
-  ReactDOM.render(
-    <AIIterationTools
-      aiTutorAccess={aiIterationToolsData.aiTutorAccess}
-      studentWorkAccess={aiIterationToolsData.studentWorkAccess}
-    />,
-    document.getElementById('ai-iteration-tools')
-  );
+  const root = createRoot(document.getElementById('ai-iteration-tools'));
+
+  root.render(<AIIterationTools
+    aiTutorAccess={aiIterationToolsData.aiTutorAccess}
+    studentWorkAccess={aiIterationToolsData.studentWorkAccess}
+  />);
 });

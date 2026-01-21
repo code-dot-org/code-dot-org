@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -149,39 +150,38 @@ class FieldSounds extends BlocklyCore.Field {
     const sortUnrestrictedPacksByType =
       MusicRegistry.sortUnrestrictedPacksByType;
 
-    ReactDOM.render(
-      <SoundsPanel
-        library={MusicLibrary.getInstance()}
-        currentValue={this.getValue()}
-        playingPreview={this.playingPreview}
-        showSoundFilters={MusicRegistry.showSoundFilters}
-        defaultMode={defaultMode}
-        sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
-        onClose={() => {
-          this.dropdownDispose_();
-          this.hide_();
-        }}
-        onPreview={value => {
-          this.playingPreview = value;
-          this.renderContent();
+    const root = createRoot(this.newDiv_);
 
-          MusicRegistry.player.previewSound(value, () => {
-            // If the user starts another preview while one is
-            // already playing, it will have started playing before
-            // we get this stop event.  We want to wait until the
-            // new preview stops before we reactivate the button, and
-            // so we don't clear out this.playingPreview unless the
-            // stop event coming in is for the actively playing preview.
-            if (this.playingPreview === value) {
-              this.playingPreview = null;
-            }
-            this.renderContent();
-          });
-        }}
-        onSelect={value => this.setValue(value)}
-      />,
-      this.newDiv_
-    );
+    root.render(<SoundsPanel
+      library={MusicLibrary.getInstance()}
+      currentValue={this.getValue()}
+      playingPreview={this.playingPreview}
+      showSoundFilters={MusicRegistry.showSoundFilters}
+      defaultMode={defaultMode}
+      sortUnrestrictedPacksByType={sortUnrestrictedPacksByType}
+      onClose={() => {
+        this.dropdownDispose_();
+        this.hide_();
+      }}
+      onPreview={value => {
+        this.playingPreview = value;
+        this.renderContent();
+
+        MusicRegistry.player.previewSound(value, () => {
+          // If the user starts another preview while one is
+          // already playing, it will have started playing before
+          // we get this stop event.  We want to wait until the
+          // new preview stops before we reactivate the button, and
+          // so we don't clear out this.playingPreview unless the
+          // stop event coming in is for the actively playing preview.
+          if (this.playingPreview === value) {
+            this.playingPreview = null;
+          }
+          this.renderContent();
+        });
+      }}
+      onSelect={value => this.setValue(value)}
+    />);
   }
 
   dropdownDispose_() {

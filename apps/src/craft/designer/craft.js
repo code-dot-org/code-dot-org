@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {
   GameController,
   FacingDirection,
@@ -449,28 +450,27 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <div>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn
-              showFinishButton={!config.level.isProjectLevel}
-              showScore={!!config.level.useScore}
-            />
-          }
-          onMount={onMount}
-        />
-        <PlayerSelectionDialog
-          players={[CHARACTER_ALEX, CHARACTER_STEVE]}
-          title={craftMsg.playerSelectChooseCharacter()}
-          titleClassName="minecraft-big-gray-header"
-          hideSubtitle
-        />
-      </div>
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <div>
+      <AppView
+        visualizationColumn={
+          <CraftVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+            showScore={!!config.level.useScore}
+          />
+        }
+        onMount={onMount}
+      />
+      <PlayerSelectionDialog
+        players={[CHARACTER_ALEX, CHARACTER_STEVE]}
+        title={craftMsg.playerSelectChooseCharacter()}
+        titleClassName="minecraft-big-gray-header"
+        hideSubtitle
+      />
+    </div>
+  </Provider>);
 };
 
 Craft.getAppReducers = function () {

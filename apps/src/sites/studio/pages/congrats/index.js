@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
@@ -63,32 +64,31 @@ $(document).ready(function () {
       courseNames: certificateData.map(data => data.courseName),
     });
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <Congrats
-        congratsData={congratsData}
-        certificateId={certificateId}
-        tutorial={courseName}
-        userType={userType}
-        userName={userName}
-        under13={under13}
-        language={language}
-        MCShareLink={mcShareLink}
-        randomDonorTwitter={randomDonorTwitter}
-        randomDonorName={randomDonorName}
-        hideDancePartyFollowUp={hideDancePartyFollowUp}
-        certificateData={certificateData}
-        isHocTutorial={isHocTutorial}
-        isPlCourse={isPlCourse}
-        isK5PlCourse={isK5PlCourse}
-        nextCourseScriptName={nextCourseScriptName}
-        nextCourseTitle={nextCourseTitle}
-        nextCourseDesc={nextCourseDesc}
-        curriculumUrl={curriculumUrl}
-        assignableCourseSuggestions={assignableCourseSuggestions}
-        isEnglish={isEnglish}
-      />
-    </Provider>,
-    document.getElementById('congrats-container')
-  );
+  const root = createRoot(document.getElementById('congrats-container'));
+
+  root.render(<Provider store={store}>
+    <Congrats
+      congratsData={congratsData}
+      certificateId={certificateId}
+      tutorial={courseName}
+      userType={userType}
+      userName={userName}
+      under13={under13}
+      language={language}
+      MCShareLink={mcShareLink}
+      randomDonorTwitter={randomDonorTwitter}
+      randomDonorName={randomDonorName}
+      hideDancePartyFollowUp={hideDancePartyFollowUp}
+      certificateData={certificateData}
+      isHocTutorial={isHocTutorial}
+      isPlCourse={isPlCourse}
+      isK5PlCourse={isK5PlCourse}
+      nextCourseScriptName={nextCourseScriptName}
+      nextCourseTitle={nextCourseTitle}
+      nextCourseDesc={nextCourseDesc}
+      curriculumUrl={curriculumUrl}
+      assignableCourseSuggestions={assignableCourseSuggestions}
+      isEnglish={isEnglish}
+    />
+  </Provider>);
 });

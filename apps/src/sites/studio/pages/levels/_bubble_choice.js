@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -16,7 +17,5 @@ level.id = level.id.toString();
 
 reportTeacherReviewingStudentNonLabLevel();
 
-ReactDOM.render(
-  <BubbleChoice level={level} />,
-  document.querySelector('#bubble-choice')
-);
+const root = createRoot(document.querySelector('#bubble-choice'));
+root.render(<BubbleChoice level={level} />);

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -21,28 +22,15 @@ export function renderExpandableImages(node, showImageDialog) {
   for (let i = 0; i < expandableImages.length; i++) {
     const expandableImg = expandableImages[i];
 
-    /*
-     * TODO: When this method is used in the context of an existing React
-     * component, it raises the following warning:
-     *
-     * > Replacing React-rendered children with a new root component. If you
-     * > intended to update the children of this node, you should instead have
-     * > the existing children update their state and render the new components
-     * > instead of calling ReactDOM.render.
-     *
-     * We should probably rebuild this in such a way as to not violate React's
-     * expectations like this.
-     */
-    ReactDOM.render(
-      <ImagePreview
-        url={expandableImg.dataset.url}
-        alt={expandableImg.textContent}
-        noVisualization={false}
-        showInstructionsDialog={() =>
-          showImageDialog(expandableImg.dataset.url, expandableImg.textContent)
-        }
-      />,
-      expandableImg
-    );
+    const root = createRoot(expandableImg);
+
+    root.render(<ImagePreview
+      url={expandableImg.dataset.url}
+      alt={expandableImg.textContent}
+      noVisualization={false}
+      showInstructionsDialog={() =>
+        showImageDialog(expandableImg.dataset.url, expandableImg.textContent)
+      }
+    />);
   }
 }

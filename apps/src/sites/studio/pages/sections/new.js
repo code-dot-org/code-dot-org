@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {Heading1} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,16 +16,16 @@ $(document).ready(() => {
 
   const defaultRedirectUrl = '/teacher_dashboard/home';
 
-  ReactDOM.render(
-    <div className={moduleStyles.containerWithMarginTop}>
-      <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
-      <SectionsSetUpContainer
-        isUsersFirstSection={isUsersFirstSection}
-        userCountry={userCountry}
-        defaultRedirectUrl={defaultRedirectUrl}
-      />
-    </div>,
-    document.getElementById('form')
-  );
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(<div className={moduleStyles.containerWithMarginTop}>
+    <Heading1>{i18n.setUpClassSectionsHeader()}</Heading1>
+    <SectionsSetUpContainer
+      isUsersFirstSection={isUsersFirstSection}
+      userCountry={userCountry}
+      defaultRedirectUrl={defaultRedirectUrl}
+    />
+  </div>);
+
   displayDifferentiationChat();
 });

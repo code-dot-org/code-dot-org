@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -556,17 +557,16 @@ export default class Craft {
       });
     };
 
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn showScore={!!config.level.useScore} />
-          }
-          onMount={onMount}
-        />
-      </Provider>,
-      document.getElementById(config.containerId)
-    );
+    const root = createRoot(document.getElementById(config.containerId));
+
+    root.render(<Provider store={getStore()}>
+      <AppView
+        visualizationColumn={
+          <CraftVisualizationColumn showScore={!!config.level.useScore} />
+        }
+        onMount={onMount}
+      />
+    </Provider>);
   }
 
   /**

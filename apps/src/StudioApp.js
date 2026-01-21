@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {EventEmitter} from 'events';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -362,17 +363,16 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <InstructionsDialog
-          title={msg.puzzleTitle({
-            stage_total: config.level.lesson_total,
-            puzzle_number: config.level.puzzle_number,
-          })}
-        />
-      </Provider>,
-      document.body.appendChild(document.createElement('div'))
-    );
+    const root = createRoot(document.body.appendChild(document.createElement('div')));
+
+    root.render(<Provider store={getStore()}>
+      <InstructionsDialog
+        title={msg.puzzleTitle({
+          stage_total: config.level.lesson_total,
+          puzzle_number: config.level.puzzle_number,
+        })}
+      />
+    </Provider>);
   }
 
   if (config.usesAssets && config.channel) {
@@ -605,22 +605,21 @@ StudioApp.prototype.init = function (config) {
     const isComplete =
       progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
-    ReactDOM.render(
-      <ChallengeDialog
-        isOpen={true}
-        avatar={this.icon || this.skin.staticAvatar}
-        handleCancel={() => {
-          this.skipLevel();
-        }}
-        cancelButtonLabel={msg.challengeLevelSkip()}
-        complete={isComplete}
-        isIntro={true}
-        primaryButtonLabel={msg.challengeLevelStart()}
-        text={msg.challengeLevelIntro()}
-        title={msg.challengeLevelTitle()}
-      />,
-      startDialogDiv
-    );
+    const root = createRoot(startDialogDiv);
+
+    root.render(<ChallengeDialog
+      isOpen={true}
+      avatar={this.icon || this.skin.staticAvatar}
+      handleCancel={() => {
+        this.skipLevel();
+      }}
+      cancelButtonLabel={msg.challengeLevelSkip()}
+      complete={isComplete}
+      isIntro={true}
+      primaryButtonLabel={msg.challengeLevelStart()}
+      text={msg.challengeLevelIntro()}
+      title={msg.challengeLevelTitle()}
+    />);
   }
 
   if (!config.readonlyWorkspace) {
@@ -749,7 +748,8 @@ StudioApp.prototype.getSettingsHandler = function () {
       id: 'settings-modal',
     });
 
-    ReactDOM.render(React.createElement(SettingsModal), contentDiv);
+    const root = createRoot(contentDiv);
+    root.render(React.createElement(SettingsModal));
     dialog.show();
   };
 };
@@ -762,16 +762,15 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal',
     });
-    ReactDOM.render(
-      React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
-        isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi,
-        selectedVersion: queryParams('version'),
-        isReadOnly: !!config.readonlyWorkspace,
-      }),
-      contentDiv
-    );
+    const root = createRoot(contentDiv);
+
+    root.render(React.createElement(VersionHistory, {
+      handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+      isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
+      useFilesApi: !!config.useFilesApi,
+      selectedVersion: queryParams('version'),
+      isReadOnly: !!config.readonlyWorkspace,
+    }));
 
     dialog.show();
   };
@@ -1059,7 +1058,8 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
+  const root = createRoot(footerDiv);
+  root.render(<SmallFooter {...reactProps} />);
 };
 
 /**
@@ -2328,14 +2328,13 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         div.className = 'WireframeButtons_containerRight';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(
-            React.createElement(WireframeButtons, {
-              channelId: project.getCurrentId(),
-              appType: project.getStandaloneApp(),
-              isLegacyShare: !!options.isLegacyShare,
-            }),
-            div
-          );
+          const root = createRoot(div);
+
+          root.render(React.createElement(WireframeButtons, {
+            channelId: project.getCurrentId(),
+            appType: project.getStandaloneApp(),
+            isLegacyShare: !!options.isLegacyShare,
+          }));
         }
       }
 
@@ -3157,7 +3156,8 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  ReactDOM.render(workspaceAlert, container[0]);
+  const root = createRoot(container[0]);
+  root.render(workspaceAlert);
 
   return container[0];
 };
@@ -3196,7 +3196,8 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  ReactDOM.render(playspaceAlert, renderElement);
+  const root = createRoot(renderElement);
+  root.render(playspaceAlert);
 
   return renderElement;
 };
@@ -3206,7 +3207,8 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
  * @param {Node} alert
  */
 StudioApp.prototype.closeAlert = function (alert) {
-  ReactDOM.unmountComponentAtNode(alert);
+  const root = createRoot(alert);
+  root.unmount();
 };
 
 /**

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Replacement for application.js.erb in dashboard as much as possible.
  *       Code added here will be loaded for (almost) every page in dashboard,
@@ -113,13 +114,12 @@ $(document).ready(function () {
   if (document.querySelector(`script[data-gdpr]`)) {
     const gdprData = getScriptData('gdpr');
     if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
-      ReactDOM.render(
-        <GDPRDialog
-          isDialogOpen={gdprData.show_gdpr_dialog}
-          currentUserId={gdprData.current_user_id}
-        />,
-        document.getElementById('gdpr-dialog')
-      );
+      const root = createRoot(document.getElementById('gdpr-dialog'));
+
+      root.render(<GDPRDialog
+        isDialogOpen={gdprData.show_gdpr_dialog}
+        currentUserId={gdprData.current_user_id}
+      />);
     }
   }
 });

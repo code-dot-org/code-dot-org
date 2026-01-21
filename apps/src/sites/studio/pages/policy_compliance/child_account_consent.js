@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,13 +16,12 @@ $(document).ready(function () {
     : undefined;
   const studentId = element.getAttribute('data-student-id');
   const usState = element.getAttribute('data-us-state');
-  ReactDOM.render(
-    <ChildAccountConsent
-      permissionGranted={permissionGranted}
-      permissionGrantedDate={permissionGrantedDate}
-      studentId={studentId}
-      usState={usState}
-    />,
-    element
-  );
+  const root = createRoot(element);
+
+  root.render(<ChildAccountConsent
+    permissionGranted={permissionGranted}
+    permissionGrantedDate={permissionGrantedDate}
+    studentId={studentId}
+    usState={usState}
+  />);
 });

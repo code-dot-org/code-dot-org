@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -28,15 +29,14 @@ window.showRegionalPartnerMiniContact = function () {
       };
     })
     .complete(() => {
-      ReactDOM.render(
-        <RegionalPartnerMiniContact
-          options={options}
-          apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
-          sourcePageId={sourcePageId}
-        />,
-        regionalPartnerMiniContactElement[0]
-      );
-    });
+    const root = createRoot(regionalPartnerMiniContactElement[0]);
+
+    root.render(<RegionalPartnerMiniContact
+      options={options}
+      apiEndpoint="/dashboardapi/v1/pd/regional_partner_mini_contacts/"
+      sourcePageId={sourcePageId}
+    />);
+  });
 };
 
 window.showRegionalPartnerMiniContactPopupLink = function () {
@@ -50,11 +50,10 @@ window.showRegionalPartnerMiniContactPopupLink = function () {
   const isButton =
     regionalPartnerMiniContactPopupLinkElement.data('link-button');
 
-  ReactDOM.render(
-    <RegionalPartnerMiniContactPopupLink sourcePageId={sourcePageId}>
-      {isButton && <button type="button">{linkText}</button>}
-      {!isButton && linkText}
-    </RegionalPartnerMiniContactPopupLink>,
-    regionalPartnerMiniContactPopupLinkElement[0]
-  );
+  const root = createRoot(regionalPartnerMiniContactPopupLinkElement[0]);
+
+  root.render(<RegionalPartnerMiniContactPopupLink sourcePageId={sourcePageId}>
+    {isButton && <button type="button">{linkText}</button>}
+    {!isButton && linkText}
+  </RegionalPartnerMiniContactPopupLink>);
 };

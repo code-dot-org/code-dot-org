@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -25,16 +26,15 @@ $(document).ready(function () {
   const formNamesAndVersions = scriptData.formNamesAndVersions;
   getStore().dispatch(setFetchableEntities(formNamesAndVersions));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <FoormFormEditorManager
-        populateCodeMirror={populateCodeMirror}
-        resetCodeMirror={resetCodeMirror}
-        categories={scriptData.formCategories}
-      />
-    </Provider>,
-    document.getElementById('editor-container')
-  );
+  const root = createRoot(document.getElementById('editor-container'));
+
+  root.render(<Provider store={store}>
+    <FoormFormEditorManager
+      populateCodeMirror={populateCodeMirror}
+      resetCodeMirror={resetCodeMirror}
+      categories={scriptData.formCategories}
+    />
+  </Provider>);
 });
 
 window.onbeforeunload = confirmNoUnsavedChanges;

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -33,19 +34,19 @@ $(document).ready(function () {
     language: languageEnglishName,
   });
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <CurriculumCatalog
-        curriculaData={curriculaData}
-        isEnglish={isEnglish}
-        languageNativeName={languageNativeName}
-        isSignedOut={isSignedOut}
-        isTeacher={isTeacher}
-        isInUS={isInUS}
-        curriculaTaught={curriculaTaught}
-      />
-    </Provider>,
-    document.getElementById('curriculum-catalog-container')
-  );
+  const root = createRoot(document.getElementById('curriculum-catalog-container'));
+
+  root.render(<Provider store={store}>
+    <CurriculumCatalog
+      curriculaData={curriculaData}
+      isEnglish={isEnglish}
+      languageNativeName={languageNativeName}
+      isSignedOut={isSignedOut}
+      isTeacher={isTeacher}
+      isInUS={isInUS}
+      curriculaTaught={curriculaTaught}
+    />
+  </Provider>);
+
   displayDifferentiationChat();
 });

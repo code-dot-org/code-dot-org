@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -17,8 +18,6 @@ $(document).ready(function () {
   props.abuseUrl = weblabUrl.includes('channelId')
     ? weblabUrl
     : document.referrer;
-  ReactDOM.render(
-    <ReportAbuseForm {...props} />,
-    document.getElementById('report-abuse-form')
-  );
+  const root = createRoot(document.getElementById('report-abuse-form'));
+  root.render(<ReportAbuseForm {...props} />);
 });

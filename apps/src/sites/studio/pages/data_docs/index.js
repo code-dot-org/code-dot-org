@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -6,8 +7,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
   const dataDocs = getScriptData('dataDocs');
-  ReactDOM.render(
-    <DataDocIndex dataDocs={dataDocs} />,
-    document.getElementById('see-data-docs')
-  );
+  const root = createRoot(document.getElementById('see-data-docs'));
+  root.render(<DataDocIndex dataDocs={dataDocs} />);
 });

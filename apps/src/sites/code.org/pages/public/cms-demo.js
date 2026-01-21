@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 // This installs the Swiper library WebComponent.
@@ -51,14 +52,13 @@ const showProjects = () => {
   }));
 
   const container = document.getElementById('transformersone_student_projects');
-  ReactDOM.render(
-    <ProjectCardRow
-      galleryType="public"
-      showFullThumbnail={true}
-      projects={TRANSFORMERSONE_PROJECTS}
-    />,
-    container
-  );
+  const root = createRoot(container);
+
+  root.render(<ProjectCardRow
+    galleryType="public"
+    showFullThumbnail={true}
+    projects={TRANSFORMERSONE_PROJECTS}
+  />);
 };
 
 const setupSwiperCarousels = () => {

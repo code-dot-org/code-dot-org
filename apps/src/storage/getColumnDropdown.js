@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -12,18 +13,17 @@ function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');
   modalDiv.setAttribute('id', 'modalDiv');
   document.body.appendChild(modalDiv);
-  ReactDOM.render(
-    <GetColumnParamPicker
-      param={type}
-      table={table}
-      onChoose={option => callback(`"${option}"`)}
-      onClose={() => {
-        var element = document.getElementById('modalDiv');
-        element.parentNode.removeChild(element);
-      }}
-    />,
-    document.querySelector('#modalDiv')
-  );
+  const root = createRoot(document.querySelector('#modalDiv'));
+
+  root.render(<GetColumnParamPicker
+    param={type}
+    table={table}
+    onChoose={option => callback(`"${option}"`)}
+    onClose={() => {
+      var element = document.getElementById('modalDiv');
+      element.parentNode.removeChild(element);
+    }}
+  />);
 }
 
 export function getTables() {

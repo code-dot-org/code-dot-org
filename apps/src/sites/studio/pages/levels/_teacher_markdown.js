@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDom from 'react-dom';
@@ -12,10 +13,8 @@ $(document).ready(() => {
         return;
       }
 
-      ReactDom.render(
-        React.createElement(SafeMarkdown, container.dataset, null),
-        container
-      );
+      const root = createRoot(container);
+      root.render(React.createElement(SafeMarkdown, container.dataset, null));
     }
   );
 });

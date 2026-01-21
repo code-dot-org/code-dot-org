@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -17,12 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const userEnrollmentParams = getScriptData('userEnrollment');
 
-  ReactDOM.render(
-    <WorkshopMarketingPage
-      {...workshopInfoParams}
-      {...userInfoParams}
-      userEnrollment={userEnrollmentParams}
-    />,
-    document.getElementById('workshop-container')
-  );
+  const root = createRoot(document.getElementById('workshop-container'));
+
+  root.render(<WorkshopMarketingPage
+    {...workshopInfoParams}
+    {...userInfoParams}
+    userEnrollment={userEnrollmentParams}
+  />);
 });

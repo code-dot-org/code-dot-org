@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -12,12 +13,11 @@ $(document).ready(function () {
   const appName = document.querySelector('script[data-levelname]').dataset
     .appname;
 
-  ReactDOM.render(
-    <EditValidations
-      initialValidations={validations}
-      levelName={levelName}
-      appName={appName}
-    />,
-    document.getElementById('validations-editor')
-  );
+  const root = createRoot(document.getElementById('validations-editor'));
+
+  root.render(<EditValidations
+    initialValidations={validations}
+    levelName={levelName}
+    appName={appName}
+  />);
 });

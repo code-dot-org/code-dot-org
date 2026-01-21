@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import moment from 'moment';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -73,15 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     };
 
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <Modal
-          lockoutDate={getScriptData('lockoutDate')}
-          inSection={getScriptData('inSection')}
-        />
-      </Provider>,
-      document.getElementById('parental-permission-modal-container')
-    );
+    const root = createRoot(document.getElementById('parental-permission-modal-container'));
+
+    root.render(<Provider store={getStore()}>
+      <Modal
+        lockoutDate={getScriptData('lockoutDate')}
+        inSection={getScriptData('inSection')}
+      />
+    </Provider>);
   };
 
   if (getScriptData('forceDisplay')) {

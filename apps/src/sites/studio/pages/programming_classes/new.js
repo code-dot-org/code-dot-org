@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -8,10 +9,9 @@ $(document).ready(() => {
   const programmingEnvironmentsForSelect = getScriptData(
     'programmingEnvironmentsForSelect'
   );
-  ReactDOM.render(
-    <NewProgrammingClassForm
-      programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
-    />,
-    document.getElementById('form')
-  );
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(<NewProgrammingClassForm
+    programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
+  />);
 });

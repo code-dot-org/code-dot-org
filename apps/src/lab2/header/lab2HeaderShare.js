@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -31,16 +32,15 @@ export function shareLab2Project(dialogId, finishUrl) {
       dialogDom.setAttribute('id', PROJECT_SHARE_DIALOG_ID);
       document.body.appendChild(dialogDom);
     }
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <Lab2ShareDialogWrapper
-          shareDialogId={dialogId}
-          shareUrl={shareUrl}
-          finishUrl={finishUrl}
-        />
-      </Provider>,
-      dialogDom
-    );
+    const root = createRoot(dialogDom);
+
+    root.render(<Provider store={getStore()}>
+      <Lab2ShareDialogWrapper
+        shareDialogId={dialogId}
+        shareUrl={shareUrl}
+        finishUrl={finishUrl}
+      />
+    </Provider>);
 
     getStore().dispatch(showShareDialog());
     const projectType = projectManager.getProjectType();

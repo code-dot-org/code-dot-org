@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -25,16 +26,15 @@ $(document).ready(function () {
   const libraryNamesAndVersions = scriptData.libraryNamesAndVersions;
   getStore().dispatch(setFetchableEntities(libraryNamesAndVersions));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <FoormLibraryEditorManager
-        populateCodeMirror={populateCodeMirror}
-        resetCodeMirror={resetCodeMirror}
-        categories={scriptData.libraryCategories}
-      />
-    </Provider>,
-    document.getElementById('editor-container')
-  );
+  const root = createRoot(document.getElementById('editor-container'));
+
+  root.render(<Provider store={store}>
+    <FoormLibraryEditorManager
+      populateCodeMirror={populateCodeMirror}
+      resetCodeMirror={resetCodeMirror}
+      categories={scriptData.libraryCategories}
+    />
+  </Provider>);
 });
 
 window.onbeforeunload = confirmNoUnsavedChanges;

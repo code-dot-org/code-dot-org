@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
@@ -163,15 +164,15 @@ export function setupApp(appOptions) {
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
-        ReactDOM.render(
-          <PlayZone
-            lessonName={lessonName}
-            onContinue={() => {
-              dialog.hide();
-            }}
-          />,
-          body
-        );
+        const root = createRoot(body);
+
+        root.render(<PlayZone
+          lessonName={lessonName}
+          onContinue={() => {
+            dialog.hide();
+          }}
+        />);
+
         const dialog = new LegacyDialog({
           body: body,
           width: 800,

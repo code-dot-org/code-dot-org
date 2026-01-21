@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -567,9 +568,7 @@ function showFallbackPlayerCaptionLink(inDialog) {
     'fallback-player-caption-dialog-link'
   );
   if (mountPoint) {
-    ReactDOM.render(
-      <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
-      mountPoint
-    );
+    const root = createRoot(mountPoint);
+    root.render(<FallbackPlayerCaptionDialogLink inDialog={inDialog} />);
   }
 }

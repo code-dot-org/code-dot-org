@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -19,7 +20,8 @@ export function VersionNotFoundAlert() {
 }
 
 export default () => {
-  ReactDOM.render(<VersionNotFoundAlert />, document.getElementById('codeApp'));
+  const root = createRoot(document.getElementById('codeApp'));
+  root.render(<VersionNotFoundAlert />);
 };
 
 const styles = {

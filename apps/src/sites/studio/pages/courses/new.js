@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -5,12 +6,11 @@ import NewCourseForm from '@cdo/apps/levelbuilder/course-editor/NewCourseForm';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  ReactDOM.render(
-    <NewCourseForm
-      families={getScriptData('families')}
-      versionYearOptions={getScriptData('versionYearOptions')}
-      familiesCourseTypes={getScriptData('familiesCourseTypes')}
-    />,
-    document.getElementById('form')
-  );
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(<NewCourseForm
+    families={getScriptData('families')}
+    versionYearOptions={getScriptData('versionYearOptions')}
+    familiesCourseTypes={getScriptData('familiesCourseTypes')}
+  />);
 });

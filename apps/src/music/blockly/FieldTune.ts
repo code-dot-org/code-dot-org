@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -232,16 +233,15 @@ export default class FieldTune extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.render(
-      React.createElement(InstrumentGrid, {
-        // Make a copy of the value object so that we don't overwrite Blockly's data.
-        initialValue: JSON.parse(JSON.stringify(this.getValue())),
-        editorType: 'notes',
-        onChange: this.onValueChange,
-        lengthMeasures: 1,
-      }),
-      this.newDiv
-    );
+    const root = createRoot(this.newDiv);
+
+    root.render(React.createElement(InstrumentGrid, {
+      // Make a copy of the value object so that we don't overwrite Blockly's data.
+      initialValue: JSON.parse(JSON.stringify(this.getValue())),
+      editorType: 'notes',
+      onChange: this.onValueChange,
+      lengthMeasures: 1,
+    }));
   }
 
   private disposeDropdown() {
@@ -249,7 +249,8 @@ export default class FieldTune extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.unmountComponentAtNode(this.newDiv);
+    const root = createRoot(this.newDiv);
+    root.unmount();
     this.newDiv = null;
   }
 

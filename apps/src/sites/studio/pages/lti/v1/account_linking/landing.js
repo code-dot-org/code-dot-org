@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Renders the LtiLinkAccountPage component on page load.
  * This file is responsible for mounting and unmounting the React component,
@@ -36,10 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     userType,
   };
 
-  ReactDOM.render(
-    <LtiProviderContext.Provider value={ltiProviderContext}>
-      <LtiLinkAccountPage />
-    </LtiProviderContext.Provider>,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+
+  root.render(<LtiProviderContext.Provider value={ltiProviderContext}>
+    <LtiLinkAccountPage />
+  </LtiProviderContext.Provider>);
 });

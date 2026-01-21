@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -17,17 +18,16 @@ $(document).ready(() => {
   const programmingClass = getScriptData('programmingClass');
   const environmentCategories = getScriptData('environmentCategories');
   const videoOptions = getScriptData('videoOptions');
-  ReactDOM.render(
-    <Provider store={store}>
-      <>
-        <ProgrammingClassEditor
-          initialProgrammingClass={programmingClass}
-          environmentCategories={environmentCategories}
-          videoOptions={videoOptions}
-        />
-        <ExpandableImageDialog />
-      </>
-    </Provider>,
-    document.getElementById('edit-container')
-  );
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(<Provider store={store}>
+    <>
+      <ProgrammingClassEditor
+        initialProgrammingClass={programmingClass}
+        environmentCategories={environmentCategories}
+        videoOptions={videoOptions}
+      />
+      <ExpandableImageDialog />
+    </>
+  </Provider>);
 });

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import cookies from 'js-cookie';
 import React from 'react';
@@ -47,12 +48,12 @@ export default function initSigninState(userType, under13) {
     }
 
     const div = document.createElement('div');
-    ReactDOM.render(
-      <Provider store={store}>
-        <SignInOrAgeDialog />
-      </Provider>,
-      div
-    );
+    const root = createRoot(div);
+
+    root.render(<Provider store={store}>
+      <SignInOrAgeDialog />
+    </Provider>);
+
     document.body.appendChild(div);
   });
 }

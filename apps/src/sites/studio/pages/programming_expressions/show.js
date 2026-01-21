@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -33,24 +34,23 @@ $(document).ready(() => {
 
   prepareBlocklyForEmbedding(customBlocksConfig, programmingEnvironmentName);
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <>
-        <PageContainer
-          programmingEnvironmentTitle={programmingEnvironmentTitle}
-          categoriesForNavigation={categoriesForNavigation}
-          currentCategoryKey={currentCategoryKey}
-          currentDocId={programmingExpression.id}
-        >
-          <ProgrammingExpressionOverview
-            programmingExpression={programmingExpression}
-            programmingEnvironmentName={programmingEnvironmentName}
-            programmingEnvironmentLanguage={programmingEnvironmentLanguage}
-          />
-        </PageContainer>
-        <ExpandableImageDialog />
-      </>
-    </Provider>,
-    document.getElementById('show-container')
-  );
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(<Provider store={store}>
+    <>
+      <PageContainer
+        programmingEnvironmentTitle={programmingEnvironmentTitle}
+        categoriesForNavigation={categoriesForNavigation}
+        currentCategoryKey={currentCategoryKey}
+        currentDocId={programmingExpression.id}
+      >
+        <ProgrammingExpressionOverview
+          programmingExpression={programmingExpression}
+          programmingEnvironmentName={programmingEnvironmentName}
+          programmingEnvironmentLanguage={programmingEnvironmentLanguage}
+        />
+      </PageContainer>
+      <ExpandableImageDialog />
+    </>
+  </Provider>);
 });

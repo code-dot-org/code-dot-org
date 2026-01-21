@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import AddToAiTutorChatButton from '@codebridge/Editor/AddToAiTutorChatButton';
 import {EditorState, StateField} from '@codemirror/state';
 import {showTooltip, Tooltip} from '@codemirror/view';
@@ -70,10 +71,8 @@ export const getAddToAiTutorField = (
           create: () => {
             const dom = document.createElement('div');
             dom.className = moduleStyles.aiTutorTooltip;
-            ReactDOM.render(
-              <AddToAiTutorChatButton saveSelectionContext={saveSelection} />,
-              dom
-            );
+            const root = createRoot(dom);
+            root.render(<AddToAiTutorChatButton saveSelectionContext={saveSelection} />);
             return {dom};
           },
         };

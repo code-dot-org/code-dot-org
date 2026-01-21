@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -31,7 +32,8 @@ export function showDialog(component, callback, onHidden) {
     return;
   }
   const div = document.createElement('div');
-  ReactDOM.render(component, div);
+  const root = createRoot(div);
+  root.render(component);
   const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
@@ -159,15 +161,15 @@ export function processResults(onComplete, beforeHook) {
           const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
             lessonInfo.name
           }`;
-          ReactDOM.render(
-            <PlayZone
-              lessonName={lessonName}
-              onContinue={() => {
-                dialog.hide();
-              }}
-            />,
-            body
-          );
+          const root = createRoot(body);
+
+          root.render(<PlayZone
+            lessonName={lessonName}
+            onContinue={() => {
+              dialog.hide();
+            }}
+          />);
+
           const dialog = new LegacyDialog({
             body: body,
             width: 800,

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -25,15 +26,14 @@ $(() => {
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
   store.dispatch(initLevelSearching(levelSearchingInfo));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <ReferenceGuideEditor
-        referenceGuide={referenceGuide}
-        referenceGuides={referenceGuides}
-        updateUrl={updateUrl}
-        editAllUrl={editAllUrl}
-      />
-    </Provider>,
-    document.getElementById('show-container')
-  );
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(<Provider store={store}>
+    <ReferenceGuideEditor
+      referenceGuide={referenceGuide}
+      referenceGuides={referenceGuides}
+      updateUrl={updateUrl}
+      editAllUrl={editAllUrl}
+    />
+  </Provider>);
 });

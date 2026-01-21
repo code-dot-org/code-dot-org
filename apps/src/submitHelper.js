@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * This helper can be used by an app (e.g. GameLab) to handle the pressing of
  * submit/unsubmit buttons if the level is submittable.
@@ -115,13 +116,13 @@ function showConfirmationDialog(config) {
     '</p>';
 
   const buttons = document.createElement('div');
-  ReactDOM.render(
-    <DialogButtons
-      confirmText={commonMsg.dialogOK()}
-      cancelText={commonMsg.dialogCancel()}
-    />,
-    buttons
-  );
+  const root = createRoot(buttons);
+
+  root.render(<DialogButtons
+    confirmText={commonMsg.dialogOK()}
+    cancelText={commonMsg.dialogCancel()}
+  />);
+
   contentDiv.appendChild(buttons);
 
   const dialog = studioApp.createModalDialog({

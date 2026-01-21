@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -110,19 +111,19 @@ class FieldPatternAi extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.render(
-      <PatternAiPanel
-        initValue={this.getValue()}
-        onChange={value => {
-          this.setValue(value);
-        }}
-      />,
-      this.newDiv_
-    );
+    const root = createRoot(this.newDiv_);
+
+    root.render(<PatternAiPanel
+      initValue={this.getValue()}
+      onChange={value => {
+        this.setValue(value);
+      }}
+    />);
   }
 
   dropdownDispose_() {
-    ReactDOM.unmountComponentAtNode(this.newDiv_);
+    const root = createRoot(this.newDiv_);
+    root.unmount();
     this.newDiv_ = null;
   }
 

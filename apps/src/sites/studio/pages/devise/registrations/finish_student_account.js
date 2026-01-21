@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,13 +12,12 @@ $(document).ready(() => {
   const usStateOptions = getScriptData('usStateOptions');
   const countryCode = getScriptData('countryCode');
 
-  ReactDOM.render(
-    <FinishStudentAccount
-      ageOptions={ageOptions}
-      usIp={usIp}
-      countryCode={countryCode}
-      usStateOptions={usStateOptions}
-    />,
-    document.getElementById('finish-student-account-root')
-  );
+  const root = createRoot(document.getElementById('finish-student-account-root'));
+
+  root.render(<FinishStudentAccount
+    ageOptions={ageOptions}
+    usIp={usIp}
+    countryCode={countryCode}
+    usStateOptions={usStateOptions}
+  />);
 });

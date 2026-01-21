@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,14 +12,13 @@ $(document).ready(function () {
   const exemplarDefined = !!getScriptData('exemplarsources');
   const exemplarSettings = getScriptData('exemplarsettings');
 
-  ReactDOM.render(
-    <div>
-      <ExemplarSettings
-        appName={appName}
-        exemplarDefined={exemplarDefined}
-        initialExemplarSettings={exemplarSettings}
-      />
-    </div>,
-    document.getElementById('exemplar-settings-editor')
-  );
+  const root = createRoot(document.getElementById('exemplar-settings-editor'));
+
+  root.render(<div>
+    <ExemplarSettings
+      appName={appName}
+      exemplarDefined={exemplarDefined}
+      initialExemplarSettings={exemplarSettings}
+    />
+  </div>);
 });

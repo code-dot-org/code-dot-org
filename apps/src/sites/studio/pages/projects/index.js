@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -41,19 +42,19 @@ $(document).ready(() => {
   store.dispatch(setPublicProjects());
   store.dispatch(setCaptchaKey(projectsData.recaptchaSiteKey));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <div>
-        <ProjectHeader
-          canViewAdvancedTools={projectsData.canViewAdvancedTools}
-          projectCount={projectsData.projectCount}
-        />
-        <div className={'main container'}>
-          <ProjectsGallery limitedGallery={projectsData.limitedGallery} />
-        </div>
+  const root = createRoot(document.querySelector('#projects-page'));
+
+  root.render(<Provider store={store}>
+    <div>
+      <ProjectHeader
+        canViewAdvancedTools={projectsData.canViewAdvancedTools}
+        projectCount={projectsData.projectCount}
+      />
+      <div className={'main container'}>
+        <ProjectsGallery limitedGallery={projectsData.limitedGallery} />
       </div>
-    </Provider>,
-    document.querySelector('#projects-page')
-  );
+    </div>
+  </Provider>);
+
   displayDifferentiationChat();
 });

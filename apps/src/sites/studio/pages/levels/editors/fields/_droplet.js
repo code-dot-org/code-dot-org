@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -31,13 +32,12 @@ Object.keys(fieldConfig).forEach(key => {
 });
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
-  ReactDOM.render(
-    <DropletPaletteSelector
-      palette={data.original_palette}
-      editor={fieldConfig.codeFunctions.editor}
-    />,
-    $('<div></div>')
-      .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
-      .get(0)
-  );
+  const root = createRoot($('<div></div>')
+    .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
+    .get(0));
+
+  root.render(<DropletPaletteSelector
+    palette={data.original_palette}
+    editor={fieldConfig.codeFunctions.editor}
+  />);
 }

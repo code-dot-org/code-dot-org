@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,12 +12,11 @@ $(document).ready(function () {
   const archivedFeaturedProjects = featuredProjectsData.archived;
   const bookmarkedFeaturedProjects = featuredProjectsData.bookmarked;
 
-  ReactDOM.render(
-    <FeaturedProjects
-      activeFeaturedProjects={activeFeaturedProjects}
-      bookmarkedFeaturedProjects={bookmarkedFeaturedProjects}
-      archivedFeaturedProjects={archivedFeaturedProjects}
-    />,
-    document.getElementById('featured-projects-container')
-  );
+  const root = createRoot(document.getElementById('featured-projects-container'));
+
+  root.render(<FeaturedProjects
+    activeFeaturedProjects={activeFeaturedProjects}
+    bookmarkedFeaturedProjects={bookmarkedFeaturedProjects}
+    archivedFeaturedProjects={archivedFeaturedProjects}
+  />);
 });

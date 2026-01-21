@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import {
   GameController,
   FacingDirection,
@@ -399,22 +400,21 @@ export default class Craft {
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <div>
-          <AppView
-            visualizationColumn={
-              <CraftVisualizationColumn
-                showFinishButton={!config.level.isProjectLevel}
-              />
-            }
-            onMount={onMount}
-          />
-          <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
-        </div>
-      </Provider>,
-      document.getElementById(config.containerId)
-    );
+    const root = createRoot(document.getElementById(config.containerId));
+
+    root.render(<Provider store={getStore()}>
+      <div>
+        <AppView
+          visualizationColumn={
+            <CraftVisualizationColumn
+              showFinishButton={!config.level.isProjectLevel}
+            />
+          }
+          onMount={onMount}
+        />
+        <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+      </div>
+    </Provider>);
   }
 
   static getAppReducers() {

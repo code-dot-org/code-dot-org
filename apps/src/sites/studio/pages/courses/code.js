@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -19,10 +20,9 @@ function initPage() {
 
   const store = getStore();
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <CourseRollup objectToRollUp={'Code'} course={courseSummary} />
-    </Provider>,
-    document.getElementById('roll_up')
-  );
+  const root = createRoot(document.getElementById('roll_up'));
+
+  root.render(<Provider store={store}>
+    <CourseRollup objectToRollUp={'Code'} course={courseSummary} />
+  </Provider>);
 }

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -144,20 +145,19 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
                 if (library) {
                   $('.tooltipstered').tooltipster('hide');
                   $('body').append("<div id='libraryFunctionTooltipModal' />");
-                  ReactDOM.render(
-                    <LibraryViewCode
-                      title={library.name}
-                      description={library.description}
-                      onClose={() => {
-                        var element = document.getElementById(
-                          'libraryFunctionTooltipModal'
-                        );
-                        element.parentNode.removeChild(element);
-                      }}
-                      sourceCode={library.source}
-                    />,
-                    document.querySelector('#libraryFunctionTooltipModal')
-                  );
+                  const root = createRoot(document.querySelector('#libraryFunctionTooltipModal'));
+
+                  root.render(<LibraryViewCode
+                    title={library.name}
+                    description={library.description}
+                    onClose={() => {
+                      var element = document.getElementById(
+                        'libraryFunctionTooltipModal'
+                      );
+                      element.parentNode.removeChild(element);
+                    }}
+                    sourceCode={library.source}
+                  />);
                 }
               });
             }

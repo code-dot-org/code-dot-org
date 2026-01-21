@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -36,12 +37,11 @@ async function displayLessonOverview() {
     );
   }
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <StudentLessonOverview lesson={lessonData} />
-    </Provider>,
-    document.getElementById('show-container')
-  );
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(<Provider store={store}>
+    <StudentLessonOverview lesson={lessonData} />
+  </Provider>);
 }
 
 /**
@@ -56,10 +56,9 @@ function prepareExpandableImageDialog() {
   const container = document.createElement('div');
   document.body.appendChild(container);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ExpandableImageDialog />
-    </Provider>,
-    container
-  );
+  const root = createRoot(container);
+
+  root.render(<Provider store={getStore()}>
+    <ExpandableImageDialog />
+  </Provider>);
 }

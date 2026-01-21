@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -7,11 +8,10 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(() => {
   const referenceGuides = getScriptData('referenceGuides');
   const baseUrl = getScriptData('baseUrl');
-  ReactDOM.render(
-    <ReferenceGuideEditAll
-      referenceGuides={referenceGuides}
-      baseUrl={baseUrl}
-    />,
-    document.getElementById('show-container')
-  );
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(<ReferenceGuideEditAll
+    referenceGuides={referenceGuides}
+    baseUrl={baseUrl}
+  />);
 });

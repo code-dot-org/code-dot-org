@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -18,17 +19,17 @@ export function renderTeacherPanel(
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <InstructorsOnly>
-        <TeacherPanel
-          unitName={scriptName}
-          pageType={pageType}
-          scriptId={scriptId}
-        />
-      </InstructorsOnly>
-    </Provider>,
-    div
-  );
+  const root = createRoot(div);
+
+  root.render(<Provider store={store}>
+    <InstructorsOnly>
+      <TeacherPanel
+        unitName={scriptName}
+        pageType={pageType}
+        scriptId={scriptId}
+      />
+    </InstructorsOnly>
+  </Provider>);
+
   document.body.appendChild(div);
 }

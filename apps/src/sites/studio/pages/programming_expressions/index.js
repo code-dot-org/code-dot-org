@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -8,11 +9,10 @@ $(document).ready(() => {
   const programmingEnvironments = getScriptData('programmingEnvironments');
   const allCategories = getScriptData('allCategories');
 
-  ReactDOM.render(
-    <AllCodeDocs
-      programmingEnvironments={programmingEnvironments}
-      allCategories={allCategories}
-    />,
-    document.getElementById('container')
-  );
+  const root = createRoot(document.getElementById('container'));
+
+  root.render(<AllCodeDocs
+    programmingEnvironments={programmingEnvironments}
+    allCategories={allCategories}
+  />);
 });

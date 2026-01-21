@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
@@ -192,32 +193,31 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ErrorBoundary
-        // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
-        fallback={<ErrorFallbackPage />}
-        onError={(error, componentStack) => {
-          danceMetricsReporter.logError('Uncaught React Error', error, {
-            componentStack,
-          });
-        }}
-      >
-        <AppView
-          visualizationColumn={
-            <DanceVisualizationColumn
-              showFinishButton={showFinishButton}
-              setSong={this.setSongCallback.bind(this)}
-              resetProgram={this.reset.bind(this)}
-              playSound={this.playSound.bind(this)}
-            />
-          }
-          onMount={onMount}
-        />
-      </ErrorBoundary>
-    </Provider>,
-    document.getElementById(config.containerId)
-  );
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(<Provider store={getStore()}>
+    <ErrorBoundary
+      // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
+      fallback={<ErrorFallbackPage />}
+      onError={(error, componentStack) => {
+        danceMetricsReporter.logError('Uncaught React Error', error, {
+          componentStack,
+        });
+      }}
+    >
+      <AppView
+        visualizationColumn={
+          <DanceVisualizationColumn
+            showFinishButton={showFinishButton}
+            setSong={this.setSongCallback.bind(this)}
+            resetProgram={this.reset.bind(this)}
+            playSound={this.playSound.bind(this)}
+          />
+        }
+        onMount={onMount}
+      />
+    </ErrorBoundary>
+  </Provider>);
 };
 
 /**

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -20,15 +21,14 @@ $(document).ready(function () {
   const store = getStore();
   store.dispatch(initVocabularies(vocabularies || []));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <AllVocabulariesEditor
-        vocabularies={vocabularies}
-        courseVersionId={courseVersionData.id}
-        courseVersionLessons={courseVersionData.lessons}
-        courseName={courseName}
-      />
-    </Provider>,
-    document.getElementById('vocabularies-table')
-  );
+  const root = createRoot(document.getElementById('vocabularies-table'));
+
+  root.render(<Provider store={store}>
+    <AllVocabulariesEditor
+      vocabularies={vocabularies}
+      courseVersionId={courseVersionData.id}
+      courseVersionLessons={courseVersionData.lessons}
+      courseName={courseName}
+    />
+  </Provider>);
 });

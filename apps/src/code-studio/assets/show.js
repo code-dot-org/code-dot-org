@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -58,30 +59,29 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
-  ReactDOM.render(
-    React.createElement(pickerType, {
-      typeFilter: typeFilter,
-      customAllowedExtensions: options.customAllowedExtensions,
-      uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
-      useFilesApi: !!options.useFilesApi,
-      assetChosen: showChoseImageButton
-        ? function (fileWithPath, timestamp) {
-            dialog.hide();
-            assetChosen(fileWithPath, timestamp);
-          }
-        : null,
-      showUnderageWarning: !!options.showUnderageWarning,
-      projectId: dashboard.project.getCurrentId(),
-      soundPlayer: sounds,
-      disableAudioRecording: options.disableAudioRecording,
-      recordingFileType: options.recordingFileType || RecordingFileType.MP3,
-      elementId: options.elementId,
-      libraryOnly: options.libraryOnly,
-      currentValue: options.currentValue,
-      currentImageType: options.currentImageType,
-    }),
-    codeDiv
-  );
+  const root = createRoot(codeDiv);
+
+  root.render(React.createElement(pickerType, {
+    typeFilter: typeFilter,
+    customAllowedExtensions: options.customAllowedExtensions,
+    uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
+    useFilesApi: !!options.useFilesApi,
+    assetChosen: showChoseImageButton
+      ? function (fileWithPath, timestamp) {
+          dialog.hide();
+          assetChosen(fileWithPath, timestamp);
+        }
+      : null,
+    showUnderageWarning: !!options.showUnderageWarning,
+    projectId: dashboard.project.getCurrentId(),
+    soundPlayer: sounds,
+    disableAudioRecording: options.disableAudioRecording,
+    recordingFileType: options.recordingFileType || RecordingFileType.MP3,
+    elementId: options.elementId,
+    libraryOnly: options.libraryOnly,
+    currentValue: options.currentValue,
+    currentImageType: options.currentImageType,
+  }));
 
   dialog.show();
 }

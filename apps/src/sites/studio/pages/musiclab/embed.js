@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,10 +12,9 @@ $(document).ready(function () {
     document.querySelector('script[data-projects]').dataset.projects
   );
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <MiniMusicPlayer projects={projects} libraryName="launch2024" />
-    </Provider>,
-    document.getElementById('musiclab-container')
-  );
+  const root = createRoot(document.getElementById('musiclab-container'));
+
+  root.render(<Provider store={getStore()}>
+    <MiniMusicPlayer projects={projects} libraryName="launch2024" />
+  </Provider>);
 });

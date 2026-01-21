@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -13,12 +14,12 @@ $(document).ready(function () {
   registerReducers({data});
   const store = getStore();
   store.dispatch(setLibraryManifest(manifest));
-  ReactDOM.render(
-    <Provider store={store}>
-      <ManifestEditor />
-    </Provider>,
-    document.querySelector('.manifest_editor')
-  );
+  const root = createRoot(document.querySelector('.manifest_editor'));
+
+  root.render(<Provider store={store}>
+    <ManifestEditor />
+  </Provider>);
+
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: onChange,

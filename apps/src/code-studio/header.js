@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -115,16 +116,16 @@ header.build = function (
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
   $(document).ready(function () {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <HeaderMiddle
-          scriptNameData={scriptNameData}
-          lessonData={lessonData}
-          scriptData={scriptData}
-        />
-      </Provider>,
-      document.querySelector('.header_level')
-    );
+    const root = createRoot(document.querySelector('.header_level'));
+
+    root.render(<Provider store={getStore()}>
+      <HeaderMiddle
+        scriptNameData={scriptNameData}
+        lessonData={lessonData}
+        scriptData={scriptData}
+      />
+    </Provider>);
+
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
     if (scriptData.show_sign_in_callout && signedIn === false) {
@@ -143,10 +144,8 @@ header.build = function (
         }
       });
 
-      ReactDOM.render(
-        <SignInCalloutWrapper />,
-        document.querySelector('.signin_callout_wrapper')
-      );
+      const root = createRoot(document.querySelector('.signin_callout_wrapper'));
+      root.render(<SignInCalloutWrapper />);
     }
   });
 };
@@ -157,23 +156,21 @@ header.buildProjectInfoOnly = function (currentLevelId) {
   // Store the current level ID in the progressRedux store.
   store.dispatch(setCurrentLevelId(currentLevelId));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <HeaderMiddle projectInfoOnly={true} />
-    </Provider>,
-    document.querySelector('.header_level')
-  );
+  const root = createRoot(document.querySelector('.header_level'));
+
+  root.render(<Provider store={store}>
+    <HeaderMiddle projectInfoOnly={true} />
+  </Provider>);
 };
 
 // When viewing the level page in code review mode, we want to show only the
 // lesson information (which is displayed by the ScriptName component).
 header.buildScriptNameOnly = function (scriptNameData) {
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
-    </Provider>,
-    document.querySelector('.header_level')
-  );
+  const root = createRoot(document.querySelector('.header_level'));
+
+  root.render(<Provider store={getStore()}>
+    <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
+  </Provider>);
 };
 
 // When the page is cached, this function is called to retrieve and set the

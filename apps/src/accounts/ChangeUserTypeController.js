@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -87,18 +88,18 @@ export default class ChangeUserTypeController {
     }
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
-    ReactDOM.render(
-      <ChangeUserTypeModal
-        handleSubmit={this.submitUserTypeChange}
-        handleCancel={this.hideChangeUserTypeModal}
-      />,
-      this.mountPoint
-    );
+    const root = createRoot(this.mountPoint);
+
+    root.render(<ChangeUserTypeModal
+      handleSubmit={this.submitUserTypeChange}
+      handleCancel={this.hideChangeUserTypeModal}
+    />);
   }
 
   hideChangeUserTypeModal = () => {
     if (this.mountPoint) {
-      ReactDOM.unmountComponentAtNode(this.mountPoint);
+      const root = createRoot(this.mountPoint);
+      root.unmount();
       document.body.removeChild(this.mountPoint);
       delete this.mountPoint;
     }

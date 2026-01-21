@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -15,12 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const userInfoParams = userInfoDataResponseToParams(joinInfo.user_info);
 
-  ReactDOM.render(
-    <WorkshopJoin
-      workshopEnrollmentStatus={joinInfo.workshop_enrollment_status}
-      workshopInfo={workshopInfoParams}
-      userInfo={userInfoParams.userInfo}
-    />,
-    document.getElementById('join-workshop-container')
-  );
+  const root = createRoot(document.getElementById('join-workshop-container'));
+
+  root.render(<WorkshopJoin
+    workshopEnrollmentStatus={joinInfo.workshop_enrollment_status}
+    workshopInfo={workshopInfoParams}
+    userInfo={userInfoParams.userInfo}
+  />);
 });

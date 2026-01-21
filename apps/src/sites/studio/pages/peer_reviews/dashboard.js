@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -5,11 +6,10 @@ import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReview
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', function () {
-  ReactDOM.render(
-    <PeerReviewSubmissions
-      courseList={getScriptData('courseList')}
-      courseUnitMap={getScriptData('courseUnitMap')}
-    />,
-    document.getElementById('dashboard-container')
-  );
+  const root = createRoot(document.getElementById('dashboard-container'));
+
+  root.render(<PeerReviewSubmissions
+    courseList={getScriptData('courseList')}
+    courseUnitMap={getScriptData('courseUnitMap')}
+  />);
 });

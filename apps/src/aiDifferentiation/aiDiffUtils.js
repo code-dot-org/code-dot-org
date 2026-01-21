@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -15,11 +16,10 @@ export function displayDifferentiationChat() {
   const context = {type: AiDiffContext.GENERAL};
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AiDiffFloatingActionButton context={context} />
-      </Provider>,
-      aiDiffFabMountPoint
-    );
+    const root = createRoot(aiDiffFabMountPoint);
+
+    root.render(<Provider store={getStore()}>
+      <AiDiffFloatingActionButton context={context} />
+    </Provider>);
   }
 }

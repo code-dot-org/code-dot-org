@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -24,17 +25,16 @@ $(document).ready(() => {
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
   store.dispatch(initLevelSearching(levelSearchingInfo));
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <>
-        <ProgrammingExpressionEditor
-          initialProgrammingExpression={programmingExpression}
-          environmentCategories={environmentCategories}
-          videoOptions={videoOptions}
-        />
-        <ExpandableImageDialog />
-      </>
-    </Provider>,
-    document.getElementById('edit-container')
-  );
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(<Provider store={store}>
+    <>
+      <ProgrammingExpressionEditor
+        initialProgrammingExpression={programmingExpression}
+        environmentCategories={environmentCategories}
+        videoOptions={videoOptions}
+      />
+      <ExpandableImageDialog />
+    </>
+  </Provider>);
 });

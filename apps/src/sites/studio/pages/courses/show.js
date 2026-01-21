@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -80,36 +81,35 @@ function showCourseOverview() {
     );
   }
 
-  // Eventually we want to do this all via redux
-  ReactDOM.render(
-    <Provider store={store}>
-      <CourseOverview
-        name={courseSummary.name}
-        title={courseSummary.title}
-        assignmentFamilyTitle={courseSummary.assignment_family_title}
-        id={courseSummary.id}
-        courseOfferingId={courseSummary.course_offering_id}
-        courseVersionId={courseSummary.course_version_id}
-        descriptionStudent={courseSummary.description_student}
-        descriptionTeacher={courseSummary.description_teacher}
-        teacherResources={courseSummary.teacher_resources}
-        studentResources={courseSummary.student_resources}
-        scripts={courseSummary.scripts}
-        versions={versions}
-        showVersionWarning={
-          !!scriptData.show_version_warning &&
-          Object.values(versions).length > 1
-        }
-        showRedirectWarning={scriptData.show_redirect_warning}
-        redirectToCourseUrl={scriptData.redirect_to_course_url}
-        showAssignButton={courseSummary.show_assign_button}
-        userId={userId}
-        userType={scriptData.user_type}
-        participantAudience={courseSummary.participant_audience}
-      />
-    </Provider>,
-    document.getElementById('course_overview')
-  );
+  const root = createRoot(document.getElementById('course_overview'));
+
+  root.render(<Provider store={store}>
+    <CourseOverview
+      name={courseSummary.name}
+      title={courseSummary.title}
+      assignmentFamilyTitle={courseSummary.assignment_family_title}
+      id={courseSummary.id}
+      courseOfferingId={courseSummary.course_offering_id}
+      courseVersionId={courseSummary.course_version_id}
+      descriptionStudent={courseSummary.description_student}
+      descriptionTeacher={courseSummary.description_teacher}
+      teacherResources={courseSummary.teacher_resources}
+      studentResources={courseSummary.student_resources}
+      scripts={courseSummary.scripts}
+      versions={versions}
+      showVersionWarning={
+        !!scriptData.show_version_warning &&
+        Object.values(versions).length > 1
+      }
+      showRedirectWarning={scriptData.show_redirect_warning}
+      redirectToCourseUrl={scriptData.redirect_to_course_url}
+      showAssignButton={courseSummary.show_assign_button}
+      userId={userId}
+      userType={scriptData.user_type}
+      participantAudience={courseSummary.participant_audience}
+    />
+  </Provider>);
+
   tooltipifyVocabulary();
   displayDifferentiationChat(scriptData);
 }
@@ -120,17 +120,16 @@ function displayDifferentiationChat(scriptData) {
   );
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <AiDiffFloatingActionButton
-          context={{
-            type: AiDiffContext.COURSE,
-            courseId: scriptData.course_summary.id,
-          }}
-          scriptName={scriptData.course_summary.name}
-        />
-      </Provider>,
-      aiDiffFabMountPoint
-    );
+    const root = createRoot(aiDiffFabMountPoint);
+
+    root.render(<Provider store={getStore()}>
+      <AiDiffFloatingActionButton
+        context={{
+          type: AiDiffContext.COURSE,
+          courseId: scriptData.course_summary.id,
+        }}
+        scriptName={scriptData.course_summary.name}
+      />
+    </Provider>);
   }
 }

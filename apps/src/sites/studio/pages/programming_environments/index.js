@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -6,10 +7,9 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const programmingEnvironments = getScriptData('programmingEnvironments');
-  ReactDOM.render(
-    <ProgrammingEnvironmentIndex
-      programmingEnvironments={programmingEnvironments}
-    />,
-    document.getElementById('container')
-  );
+  const root = createRoot(document.getElementById('container'));
+
+  root.render(<ProgrammingEnvironmentIndex
+    programmingEnvironments={programmingEnvironments}
+  />);
 });

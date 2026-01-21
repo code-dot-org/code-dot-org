@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -7,8 +8,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(document).ready(function () {
   const datasets = getScriptData('datasets');
   const liveDatasets = getScriptData('liveDatasets');
-  ReactDOM.render(
-    <DatasetList datasets={datasets} liveDatasets={liveDatasets} />,
-    document.querySelector('.datasets')
-  );
+  const root = createRoot(document.querySelector('.datasets'));
+  root.render(<DatasetList datasets={datasets} liveDatasets={liveDatasets} />);
 });

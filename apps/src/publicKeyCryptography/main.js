@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /** @file Main entry file for the publicKeyCryptography bundle, used by the
  *        Public Key Cryptography widget levels. */
 import React from 'react';
@@ -15,14 +16,13 @@ const ALICE_EVE_BOB_VIEW = 2;
 
 function initialize(options) {
   registerGetResult(); // a default getResult function.
-  ReactDOM.render(
-    parseInt(options.cryptographyWidgetView, 10) === ALICE_EVE_BOB_VIEW ? (
-      <PublicKeyCryptographyWidget />
-    ) : (
-      <ModuloClockWidget />
-    ),
-    document.getElementById('public-key-cryptography-mount')
-  );
+  const root = createRoot(document.getElementById('public-key-cryptography-mount'));
+
+  root.render(parseInt(options.cryptographyWidgetView, 10) === ALICE_EVE_BOB_VIEW ? (
+    <PublicKeyCryptographyWidget />
+  ) : (
+    <ModuloClockWidget />
+  ));
 }
 
 // Start initialization when DOM is ready.

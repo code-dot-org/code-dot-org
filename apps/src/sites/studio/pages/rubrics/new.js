@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -12,13 +13,12 @@ $(document).ready(() => {
     level => level.properties.submittable === 'true'
   );
 
-  ReactDOM.render(
-    <RubricsContainer
-      unitName={unitName}
-      lessonNumber={lessonNumber}
-      submittableLevels={submittableLevels}
-      lessonId={lessonId}
-    />,
-    document.getElementById('form')
-  );
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(<RubricsContainer
+    unitName={unitName}
+    lessonNumber={lessonNumber}
+    submittableLevels={submittableLevels}
+    lessonId={lessonId}
+  />);
 });

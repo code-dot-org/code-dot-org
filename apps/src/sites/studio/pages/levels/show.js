@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -40,14 +41,13 @@ function initPage() {
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   if (redirectDialogMountPoint && config.redirect_script_url) {
-    ReactDOM.render(
-      <ScriptLevelRedirectDialog
-        redirectUrl={config.redirect_script_url}
-        scriptName={config.script_name}
-        courseName={config.course_name}
-      />,
-      redirectDialogMountPoint
-    );
+    const root = createRoot(redirectDialogMountPoint);
+
+    root.render(<ScriptLevelRedirectDialog
+      redirectUrl={config.redirect_script_url}
+      scriptName={config.script_name}
+      courseName={config.course_name}
+    />);
   }
 
   // AI Differentiation FAB to be shown only if rubric FAB is not.
@@ -69,18 +69,17 @@ function initPage() {
       'ai-differentiation-fab-mount-point'
     );
     if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
-      ReactDOM.render(
-        <Provider store={getStore()}>
-          <AiDiffFloatingActionButton
-            context={differentiationContext}
-            scriptId={reportingData.unitName}
-            scriptName={reportingData.unitName}
-            canStartOpen={false}
-            canDefaultOpen={false}
-          />
-        </Provider>,
-        aiDiffFabMountPoint
-      );
+      const root = createRoot(aiDiffFabMountPoint);
+
+      root.render(<Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={differentiationContext}
+          scriptId={reportingData.unitName}
+          scriptName={reportingData.unitName}
+          canStartOpen={false}
+          canDefaultOpen={false}
+        />
+      </Provider>);
     }
   };
 
@@ -113,19 +112,18 @@ function initPage() {
           PLATFORMS.BOTH
         );
       }
-      ReactDOM.render(
-        <Provider store={getStore()}>
-          <RubricFloatingActionButton
-            rubric={rubric}
-            studentLevelInfo={studentLevelInfo}
-            reportingData={reportingData}
-            currentLevelName={config.level_name}
-            aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
-            canShowTaScoresAlert={canShowTaScoresAlert}
-          />
-        </Provider>,
-        rubricFabMountPoint
-      );
+      const root = createRoot(rubricFabMountPoint);
+
+      root.render(<Provider store={getStore()}>
+        <RubricFloatingActionButton
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          reportingData={reportingData}
+          currentLevelName={config.level_name}
+          aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+          canShowTaScoresAlert={canShowTaScoresAlert}
+        />
+      </Provider>);
     } else {
       renderAiDiffButton();
     }

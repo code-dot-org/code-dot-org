@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -41,14 +42,13 @@ window.addEventListener('DOMContentLoaded', function () {
   // Mount and render the letter:
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);
-  ReactDOM.render(
-    <Provider store={store}>
-      <ParentLetter
-        autoPrint
-        logoUrl={scriptData.logoUrl}
-        loginTypeName={scriptData.section.login_type_name}
-      />
-    </Provider>,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+
+  root.render(<Provider store={store}>
+    <ParentLetter
+      autoPrint
+      logoUrl={scriptData.logoUrl}
+      loginTypeName={scriptData.section.login_type_name}
+    />
+  </Provider>);
 });

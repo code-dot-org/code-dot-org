@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,13 +11,12 @@ $(document).ready(function () {
   const certificateData = getScriptData('certificate');
   const {courseName, courseTitle, studentNames, imageUrl} = certificateData;
   analyticsReporter.sendEvent(EVENTS.BATCH_CERTIFICATES_PAGE_VIEWED);
-  ReactDOM.render(
-    <CertificateBatch
-      courseName={courseName}
-      courseTitle={courseTitle}
-      initialStudentNames={studentNames}
-      imageUrl={imageUrl}
-    />,
-    document.getElementById('certificate-batch')
-  );
+  const root = createRoot(document.getElementById('certificate-batch'));
+
+  root.render(<CertificateBatch
+    courseName={courseName}
+    courseTitle={courseTitle}
+    initialStudentNames={studentNames}
+    imageUrl={imageUrl}
+  />);
 });

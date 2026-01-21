@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
@@ -243,25 +244,24 @@ NetSimRouterLogModal.prototype.render = function () {
       message: entry.getMessageAscii(),
     })
   );
-  ReactDOM.render(
-    <NetSimLogBrowser
-      isOpen={this.isVisible()}
-      handleClose={this.hide.bind(this)}
-      i18n={i18n}
-      canSetRouterLogMode={this.canSetRouterLogMode_()}
-      isAllRouterLogMode={this.isAllRouterLogMode_}
-      setRouterLogMode={this.setRouterLogMode_}
-      localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
-      currentTrafficFilter={this.currentTrafficFilter_}
-      setTrafficFilter={this.setTrafficFilterMode_}
-      headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
-      logRows={tableRows}
-      senderNames={this.uniqueSenderNames_}
-      renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
-      teacherView={this.teacherView_}
-    />,
-    this.rootDiv_[0]
-  );
+  const root = createRoot(this.rootDiv_[0]);
+
+  root.render(<NetSimLogBrowser
+    isOpen={this.isVisible()}
+    handleClose={this.hide.bind(this)}
+    i18n={i18n}
+    canSetRouterLogMode={this.canSetRouterLogMode_()}
+    isAllRouterLogMode={this.isAllRouterLogMode_}
+    setRouterLogMode={this.setRouterLogMode_}
+    localAddress={this.localNode_ ? this.localNode_.getAddress() : undefined}
+    currentTrafficFilter={this.currentTrafficFilter_}
+    setTrafficFilter={this.setTrafficFilterMode_}
+    headerFields={NetSimGlobals.getLevelConfig().routerExpectsPacketHeader}
+    logRows={tableRows}
+    senderNames={this.uniqueSenderNames_}
+    renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
+    teacherView={this.teacherView_}
+  />);
 };
 
 /**

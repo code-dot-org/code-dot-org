@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /**
  * @file Renders the LtiSectionSyncDialog component on page load.
  * This file is responsible for mounting and unmounting the React component,
@@ -23,14 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = scriptData['lti_section_sync_result'];
   const lmsName = scriptData['lms_name'];
 
-  ReactDOM.render(
-    <LtiSectionSyncDialog
-      isOpen
-      syncResult={result}
-      onClose={onClose}
-      disableRosterSyncButtonEnabled
-      lmsName={lmsName}
-    />,
-    mountPoint
-  );
+  const root = createRoot(mountPoint);
+
+  root.render(<LtiSectionSyncDialog
+    isOpen
+    syncResult={result}
+    onClose={onClose}
+    disableRosterSyncButtonEnabled
+    lmsName={lmsName}
+  />);
 });
