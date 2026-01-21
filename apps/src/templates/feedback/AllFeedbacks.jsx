@@ -1,21 +1,42 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
+import LevelFeedbackContainer from '@cdo/apps/templates/feedback/LevelFeedbackContainer';
 import i18n from '@cdo/locale';
 
 import {levelFeedbackShape} from './types';
-
 function AllFeedbacks({feedbacksByLevel}) {
-  const noFeedback = feedbacksByLevel.length === 0;
+  const [showLessonFeedback, setShowLessonFeedback] = React.useState(false);
+
+  const selectedTab = showLessonFeedback ? 'lesson' : 'level';
 
   return (
     <div>
       <h1 style={styles.header}>{i18n.feedbackAll()}</h1>
-      {noFeedback && <div>{i18n.feedbackNoneYet()}</div>}
-      {feedbacksByLevel.map((levelFeedback, i) => {
-        return <LevelFeedback key={i} {...levelFeedback} />;
-      })}
+      <SegmentedButtons
+        selectedButtonValue={selectedTab}
+        size="s"
+        buttons={[
+          {
+            id: 'assess-a-student-button',
+            label: 'Level Feedback',
+            value: 'level',
+          },
+          {
+            id: 'class-data-button',
+            label: 'Lesson Feedback',
+            value: 'lesson',
+          },
+        ]}
+        onChange={() => {
+          setShowLessonFeedback(!showLessonFeedback);
+        }}
+      />
+      {!showLessonFeedback && (
+        <LevelFeedbackContainer feedbacksByLevel={feedbacksByLevel} />
+      )}
+      {showLessonFeedback && <div>{'Here is your lesson feedback'}</div>}
     </div>
   );
 }
