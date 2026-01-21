@@ -35,7 +35,11 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
   isOpen,
   onToggle,
 }) => (
-  <div className={styles.cfuQuestionWrapper}>
+  <div
+    className={`${styles.cfuQuestionWrapper} ${
+      isOpen ? styles.cfuQuestionWrapperOpen : ''
+    }`}
+  >
     <div className={styles.cfuQuestionContainer}>
       <div className={styles.cfuQuestionLeftPart}>
         <div className={styles.levelNumber}>{level.level_position}</div>
@@ -65,11 +69,18 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
           ]}
         />
         <IconButton size="small" onClick={onToggle}>
-          <FontAwesomeV6Icon iconName={isOpen ? 'angle-up' : 'angle-down'} />
+          <FontAwesomeV6Icon
+            className={styles.cfuQuestionExpandIcon}
+            iconName="angle-down"
+          />
         </IconButton>
       </div>
     </div>
-    {isOpen && <CFUQuestionStudentAnswer level={level} response={response} />}
+    <CFUQuestionStudentAnswer
+      level={level}
+      response={response}
+      isOpen={isOpen}
+    />
   </div>
 );
 
