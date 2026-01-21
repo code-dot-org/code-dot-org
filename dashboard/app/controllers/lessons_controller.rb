@@ -19,6 +19,22 @@ class LessonsController < ApplicationController
     return render :forbidden
   end
 
+  # GET /s/:script_name_or_id/lessons
+  # GET /courses/:course_course_name/units/:unit_position/lessons
+  def index
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+
+    lesson_info = script.lessons.map do |lesson|
+      {
+        id: lesson.id,
+        name: lesson.localized_name
+      }
+    end
+
+    render json: lesson_info
+  end
+
   # GET /s/:script_name_or_id/lessons/:position
   # GET /courses/:course_course_name/units/:unit_position/lessons/:position
   def show

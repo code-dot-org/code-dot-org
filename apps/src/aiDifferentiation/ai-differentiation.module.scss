@@ -544,6 +544,11 @@ html body .sidebarActionTooltip {
     padding: 20px;
     background-color: var(--background-neutral-secondary);
 
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
 
     &Header {
       border-bottom: 1px solid var(--borders-neutral-primary);
@@ -554,12 +559,6 @@ html body .sidebarActionTooltip {
       align-items: flex-start;
       align-self: stretch;
 
-      h6 {
-        font-size: 16px;
-        font-weight: 600;
-        margin: 0;
-      }
-
       a {
         color: #9660bf;
         text-decoration: underline;
@@ -569,16 +568,27 @@ html body .sidebarActionTooltip {
     }
   }
 
+  &Dropdowns {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    label {
+      width: 294px;
+    }
+  }
+
   &Checkboxes {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 12px;
 
     label {
       width: 294px;
-      margin-bottom: 12px;
     }
   }
 

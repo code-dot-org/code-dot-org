@@ -1,10 +1,12 @@
 import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {clearPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ChatTextMessage} from './types';
@@ -19,13 +21,68 @@ interface IdSet {
   [id: number]: boolean;
 }
 
+interface LessonList {
+  id: number;
+  name: string;
+}
+
+interface LessonInfo {
+  [unitId: number]: LessonList;
+}
+
 const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const [selectedSectionIds, setSelectedSectionIds] = useState<IdSet>({});
+  const [lessonInfo, setLessonInfo] = useState<LessonInfo>({});
   const [toggleValue, setToggleValue] = useState<boolean>(true);
 
   const sections: TeacherSectionState = useAppSelector(
-    state => state.teacherSections || {}
+    state => {
+      console.log(state);
+      return state.teacherSections || {};
+    }
   );
+
+  console.log(sections);
+
+  const unitMenuList = useMemo(() => {
+    // TODO: dedupe these
+    const curriculumIds = sections.sectionIds.map(sectionId => {
+      return (({courseOfferingId, courseVersionId}) => ({
+        courseOfferingId,
+        courseVersionId,
+      }))(sections.sections[sectionId]);
+    });
+
+    console.log(curriculumIds);
+
+    return curriculumIds
+      .map(({courseOfferingId, courseVersionId}) => {
+        const courseOffering = sections.courseOfferings[courseOfferingId];
+        console.log(`course offering id: ${courseOfferingId}`);
+        console.log(courseOffering);
+        if (!courseOffering) {
+          return null;
+        }
+        const courseVersion = courseOffering.course_versions[courseVersionId];
+        console.log('version:');
+        console.log(courseVersion);
+        if (!courseVersion) {
+          return null;
+        }
+        return {
+          label: courseVersion.name,
+          groupItems: Object.values(courseVersion.units).map(unit => {
+            return {
+              value: unit.id,
+              text: unit.name,
+            };
+          }),
+        };
+      })
+      .filter(item => item);
+  }, [sections]);
+
+  console.log(unitMenuList);
 
   const dispatch = useAppDispatch();
 
@@ -36,6 +93,25 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
       sections.sectionIds.reduce((acc, id) => ({...acc, [id]: toggleValue}), {})
     );
     setToggleValue(oldValue => !oldValue);
+  };
+
+  const swapLessonInfo = unitId => {
+    if (lessonInfo[unitId]) {
+      setLessonList(lessonInfo[unitId]);
+      return;
+    }
+    const response = await HttpClient.get(`/s/${unitId}/lessons`);
+    const unitLessonInfo = await response.json();
+    console.log('loaded lesson info');
+    console.log(unitLessonInfo);
+    setLessonInfo({...lessonInfo, [unitId]: unitLessonInfo});
+    setLessonList(unitLessonInfo);
+  };
+
+  const handleUnitChange = event => {
+    const unitId = event.target.value;
+    console.log(`loading info for unit ${unitId}`);
+    swapLessonInfo(unitId);
   };
 
   return (
@@ -78,7 +154,19 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           The artifact will be shown on the Lesson Materials page for this
           lesson.
         </h4>
-        <p>To be implemented...</p>
+        <div className={style.artifactConfigurationDropdowns}>
+          <SimpleDropdown
+            itemGroups={unitMenuList}
+            labelText="Unit"
+            name="unit-dropdown"
+            onChange={handleUnitChange}
+          />
+          <SimpleDropdown
+            items={[1,2,3].map(num => ({value: `${num}`, text: `${num}${num}`}))}
+            labelText="Lesson"
+            name="lesson-dropdown"
+          />
+        </div>
       </div>
       <a
         href="https://support.code.org/hc/en-us/articles/115001595051-Finding-curriculum-and-lesson-plans"
