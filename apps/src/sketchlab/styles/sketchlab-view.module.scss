@@ -12,3 +12,11 @@
 :global(.excalidraw .popover) {
   display: block;
 }
+
+:global(.excalidraw .Toast) {
+  background-color: var(--background-error-primary);
+
+  p {
+    color: var(--text-error-primary);
+  }
+}
