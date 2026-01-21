@@ -3,9 +3,8 @@ import React, {useMemo} from 'react';
 import loadable from '@cdo/apps/util/loadable';
 
 const LoadableFoorm = loadable(
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  () => import('@cdo/apps/code-studio/pd/foorm/Foorm')
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('@cdo/apps/code-studio/pd/foorm/Foorm' as any)
 );
 
 const customCssClasses = {
