@@ -74,7 +74,6 @@ experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 // Use channel-id based preview urls on localhost for Web Lab 2
 experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
-experiments.WEBLAB2_LEGACY_PREVIEW = 'weblab2-legacy-preview';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
