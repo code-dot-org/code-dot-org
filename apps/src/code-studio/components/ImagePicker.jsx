@@ -89,6 +89,8 @@ export default class ImagePicker extends React.Component {
               ? this.props.currentValue
               : ''
           }
+          projectId={this.props.projectId}
+          projectType={'applab'}
         />
       );
     }
