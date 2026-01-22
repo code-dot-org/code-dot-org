@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+require 'cdo/aws/metrics'
+require 'cdo/aws/s3'
+require 'cdo/chat_client'
+require 'cdo/honeybadger'
+
 module InactivityCleanup
   INACTIVITY_THRESHOLD = 42.months
 
