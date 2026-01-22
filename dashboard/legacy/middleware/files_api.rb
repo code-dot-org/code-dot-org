@@ -1085,6 +1085,88 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # POST /v3/images/moderate-url
+  #
+  # Moderate an image from a URL via ImageModeration and return a JSON rating.
+  # This endpoint fetches the image server-side to avoid CORS issues.
+  # Possible ratings: [:everyone|:racy|:adult|:unknown]
+  #
+  post %r{/v3/images/moderate-url$} do
+    content_type :json
+    dont_cache
+
+    # Parse the JSON body to get the URL
+    request_body = request.body.read
+    begin
+      params_hash = JSON.parse(request_body)
+      image_url = params_hash['url']
+    rescue JSON::ParserError
+      status 400
+      return {error: 'Invalid JSON in request body.'}.to_json
+    end
+
+    unless image_url
+      status 400
+      return {error: 'Missing "url" parameter in request body.'}.to_json
+    end
+
+    # Validate URL format
+    begin
+      uri = URI.parse(image_url)
+      unless uri.is_a?(URI::HTTPS)
+        status 400
+        return {error: 'URL must be HTTPS.'}.to_json
+      end
+    rescue URI::InvalidURIError
+      status 400
+      return {error: 'Invalid URL format.'}.to_json
+    end
+
+    # Fetch the image from the URL
+    begin
+      require 'net/http'
+      require 'timeout'
+
+      # Set a timeout to avoid hanging on slow requests
+      response = Timeout.timeout(10) do
+        Net::HTTP.get_response(uri)
+      end
+
+      unless response.is_a?(Net::HTTPSuccess)
+        status 400
+        return {error: "Failed to fetch image from URL. Status: #{response.code}"}.to_json
+      end
+
+      # Get the content type from response headers
+      content_type_header = response['content-type']
+      unless content_type_header&.start_with?('image/')
+        status 400
+        return {error: 'URL does not point to an image.'}.to_json
+      end
+
+      # Only moderate PNG, JPEG, and GIF images
+      unless ['image/png', 'image/jpeg', 'image/jpg', 'image/gif'].include?(content_type_header)
+        # For other image types (GIF, etc), return 'unknown' rating
+        return {rating: 'unknown', message: 'Image type not supported for moderation.'}.to_json
+      end
+
+      # Create IO stream from response body
+      image_stream = StringIO.new(response.body)
+
+      # Moderate the image
+      rating = ImageModeration.rate_image(image_stream, content_type_header, image_url)
+
+      {rating: rating.to_s}.to_json
+    rescue Timeout::Error
+      status 408
+      return {error: 'Request timeout while fetching image from URL.'}.to_json
+    rescue => exception
+      status 500
+      return {error: "Error fetching or moderating image: #{exception.message}"}.to_json
+    end
+  end
+
+  #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
   private def get_manifest(bucket, encrypted_channel_id)
