@@ -10,6 +10,7 @@
     padding: 0.375rem;
     align-items: center;
     align-content: center;
+    align-self: stretch;
     gap: 0.5rem;
     flex: 1 0 0;
     flex-wrap: wrap;
@@ -42,6 +43,7 @@
     height: 0.9375rem;
     font-size: 0.9375rem;
     flex-shrink: 0;
+    justify-self: flex-end;
   }
 
   .multiAnswerIconCorrect {
@@ -51,4 +53,10 @@
   .multiAnswerIconIncorrect {
     color: var(--sentiment-error-50, #E02D16);
   }
+}
+
+.multiAnswerContainerTwoColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
 }

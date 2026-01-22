@@ -26,8 +26,15 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
       ? studentResult[0]
       : null;
 
+  // const useTwoColumns = answers.length >= 4;
+
   return (
-    <div className={styles.multiAnswerContainer}>
+    <div
+      className={classNames(
+        styles.multiAnswerContainer,
+        false && styles.multiAnswerContainerTwoColumns
+      )}
+    >
       {answers.map((answer, index) => {
         const isSelected = selectedIndex === index;
         const isCorrect = answer.correct;
@@ -76,7 +83,7 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
                     iconStyle="solid"
                     className={classNames(
                       styles.multiAnswerIcon,
-                      styles.multiAnswerIconCorrect
+                      styles.multiAnswerIconIncorrect
                     )}
                   />
                 </div>
