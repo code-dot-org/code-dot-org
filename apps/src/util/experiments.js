@@ -64,8 +64,6 @@ experiments.MODULARITY = 'modularity';
 experiments.LOCALIZEJS = 'localizejs';
 // Show AI Tutor in legacy labs
 experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
-// Use accept/reject code flow in Web Lab 2
-experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 // Enable ActionCable load testing
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use AI Tutor system prompts from Langfuse
