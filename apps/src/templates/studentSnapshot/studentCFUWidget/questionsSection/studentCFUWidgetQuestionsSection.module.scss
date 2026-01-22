@@ -1,0 +1,170 @@
+@use '@code-dot-org/component-library-styles/mixins' as mixins;
+
+.studentCFUWidgetQuestionsSectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .questionsList {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .cfuQuestionWrapper {
+    @include mixins.transition-all;
+
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-primary, #FFF);
+  }
+
+  .cfuQuestionWrapperOpen {
+    gap: 0.5rem;
+  }
+
+  .cfuQuestionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+
+    .cfuQuestionLeftPart {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1 0 0;
+      border-radius: 0.25rem;
+
+      .levelNumber {
+        display: flex;
+        width: 1.625rem;
+        height: 1.625rem;
+        //padding: 0.125rem 0.3125rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+        background: var(--background-neutral-primary, #FFF);
+      }
+
+      .cfuQuestionTypeContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+
+        p {
+          align-self: stretch;
+        }
+
+        .cfuQuestionAssessmentType {
+          color: var(--text-neutral-tertiary, #576575);
+          font-feature-settings: 'liga' off, 'clig' off;
+        }
+      }
+    }
+
+    .cfuQuestionRightPart {
+      display: flex;
+      min-width: 10.3125rem;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.25rem;
+
+
+      .cfuStatusBucketTags-correct {
+        > div {
+            background: var(--background-success-light, #C7ECC6);
+          i {
+            color: var(--sentiment-success-50, #3EA33E);
+          }
+        }
+      }
+
+      .cfuStatusBucketTags-partially_correct {
+        > div {
+          background: var(--background-warning-light, #FEF8C3);
+          i {
+            color: var(--accent-orange-70, #D68A00);
+          }
+        }
+      }
+
+      .cfuStatusBucketTags-incorrect {
+        > div {
+          background: var(--background-error-light, #FFBFB6);
+          i {
+            color: var(--sentiment-error-50, #E02D16);
+          }
+        }
+      }
+
+      .cfuStatusBucketTags-incomplete {
+        > div {
+          background: var(--background-neutral-tertiary, #DFE3E9);
+          i {
+            color: var(--neutral-gray-80, #69788A);
+          }
+        }
+      }
+    }
+  }
+
+  .cfuQuestionStudentAnswer {
+    @include mixins.transition-all;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-radius: 0.25rem;
+    border: 0 solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-secondary, #F0F2F5);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  }
+
+  .cfuQuestionWrapperOpen .cfuQuestionStudentAnswer {
+    max-height: 1000px;
+    opacity: 1;
+    border-width: 1px;
+    padding: 0.75rem;
+  }
+
+  .cfuQuestionExpandIcon {
+    @include mixins.transition-all;
+  }
+
+  .cfuQuestionWrapperOpen .cfuQuestionExpandIcon {
+    transform: rotate(180deg);
+  }
+}

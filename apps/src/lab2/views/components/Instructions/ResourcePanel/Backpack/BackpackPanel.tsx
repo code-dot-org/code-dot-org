@@ -22,6 +22,7 @@ const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
 
 interface BackpackPanelProps extends BackpackProps {
   openPanelCallback: () => void;
+  backpackRefreshKey: number;
 }
 
 type AlertConfig = {type: 'success' | 'danger'; message: string};
@@ -35,6 +36,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   saveToBackpackButton,
   openPanelCallback,
   supportedFileTypes,
+  backpackRefreshKey,
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
@@ -112,6 +114,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     // Show the load screen on initial load, and load all backpacks.
     loadBackpackFiles(true);
   }, [loadBackpackFiles]);
+
+  useEffect(() => {
+    // Reload backpack files when the refresh key changes. We don't refresh until the key
+    // is greater than 0. We show the load screen on manual refreshes by the user.
+    if (backpackRefreshKey > 0) {
+      loadBackpackFiles(true);
+    }
+  }, [backpackRefreshKey, loadBackpackFiles]);
 
   useEffect(() => {
     const eventListener =

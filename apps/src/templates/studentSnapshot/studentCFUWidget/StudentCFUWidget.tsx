@@ -4,33 +4,11 @@ import React, {useEffect, useState} from 'react';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import StudentCFUWidgetQuestionsSection from './questionsSection/StudentCFUWidgetQuestionsSection';
 import StudentCFUWidgetHeader from './StudentCFUWidgetHeader';
+import {CFULevel, CFULevelResponse, StatusBucket} from './types';
 
-interface CFULevel {
-  id: number;
-  name: string;
-  display_name: string;
-  type: string;
-  key?: string;
-  script_level_id: number;
-  progression?: string;
-  progression_display_name?: string;
-  // Optional fields populated by the backend for question content.
-  question_text?: string | null;
-  answers?: unknown;
-}
-
-interface CFULevelResponse {
-  level_id: number;
-  script_level_id: number;
-  response: {
-    type: string;
-    student_result?: unknown;
-    status: unknown;
-  };
-  submitted?: boolean;
-  timestamp?: string;
-}
+import styles from './studentCFUWidget.module.scss';
 
 interface CFULevelsData {
   cfu_levels: CFULevel[];
@@ -134,12 +112,6 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     return map;
   }, [fetchedCfuResponses]);
 
-  type StatusBucket =
-    | 'correct'
-    | 'partially_correct'
-    | 'incorrect'
-    | 'incomplete';
-
   const bucketForLevel = React.useCallback(
     (levelId: number): StatusBucket => {
       const response = responsesByLevelId.get(levelId)?.response;
@@ -209,10 +181,14 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     [responsesByLevelId]
   );
 
+  const statusBuckets = React.useMemo(
+    () => fetchedCfuLevels.map(level => bucketForLevel(level.id)),
+    [fetchedCfuLevels, bucketForLevel]
+  );
+
   const summary = React.useMemo(() => {
     const total = fetchedCfuLevels.length;
-    const buckets = fetchedCfuLevels.map(level => bucketForLevel(level.id));
-    const counts = buckets.reduce(
+    const counts = statusBuckets.reduce(
       (acc, b) => {
         acc[b] += 1;
         return acc;
@@ -228,7 +204,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     const accuracy =
       completed === 0 ? 0 : Math.round((counts.correct / completed) * 100);
     return {total, completed, accuracy, counts};
-  }, [fetchedCfuLevels, bucketForLevel]);
+  }, [fetchedCfuLevels, statusBuckets]);
 
   let content: React.ReactNode;
   let scrollable = false;
@@ -242,17 +218,22 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
   } else {
     scrollable = true;
     content = (
-      <div>
+      <div className={styles.studentCFUWidgetContent}>
         <StudentCFUWidgetHeader
           completed={summary.completed}
           total={summary.total}
           accuracy={summary.accuracy}
           counts={summary.counts}
         />
+        {!!fetchedCfuLevels.length && (
+          <StudentCFUWidgetQuestionsSection
+            cfuLevels={fetchedCfuLevels}
+            cfuResponses={fetchedCfuResponses}
+            statusBuckets={statusBuckets}
+          />
+        )}
+
         <div style={{marginBottom: 12}}>
-          <BodyThreeText>
-            <strong>Level Details</strong>
-          </BodyThreeText>
           <ul style={{margin: '8px 0 0 18px', padding: 0}}>
             {fetchedCfuLevels.map(level => {
               const bucket = bucketForLevel(level.id);
@@ -294,7 +275,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="CFU (raw)"
+      widgetName="CFU"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={loading}
