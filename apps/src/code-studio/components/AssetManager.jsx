@@ -7,6 +7,11 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -78,6 +83,10 @@ export default class AssetManager extends React.Component {
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE,
       projectType: '',
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+      uploadsDisabled: false,
     };
   }
 
@@ -152,9 +161,162 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  getImageDimensions = file => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const img = new Image();
+        img.onload = () => {
+          resolve({width: img.width, height: img.height});
+        };
+        img.onerror = reject;
+        img.src = reader.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
+
+  /**
+   * Called when user initiates an upload. If the file is an image, send it
+   * to be moderated first. If flagged, show modal. Otherwise continue with upload.
+   * @param data - Upload data from jquery.fileupload
+   */
   onUploadStart = data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      return;
+    }
+
+    // Only moderate image files
+    const isImage = [
+      'image/png',
+      'image/jpeg',
+      'image/jpg',
+      'image/gif',
+    ].includes(file.type);
+
+    if (!isImage) {
+      // Not an image, proceed with upload without moderation
+      this.setState({statusMessage: 'Uploading...'});
+      console.log('onUploadStart data', data);
+      data.submit();
+      return;
+    }
+
+    analyticsReporter.sendEvent(
+      EVENTS.UPLOAD_CUSTOM_IMAGE,
+      {UploaderType: 'Asset Uploader', ProjectType: this.state.projectType},
+      PLATFORMS.STATSIG
+    );
+
     this.setState({statusMessage: 'Uploading...'});
-    data.submit();
+
+    this.getImageDimensions(file)
+      .then(({width, height}) => {
+        if (width < 128 || height < 128) {
+          // We skip moderation of small images because Azure Content Moderator has a minimum
+          // requirement for their evaluate endpoint.
+          console.log('onUploadStart data', data);
+          data.submit();
+          return;
+        }
+
+        this.setState({
+          pendingUploadData: data,
+        });
+
+        HttpClient.post(`/v3/images/moderate`, file, true, {
+          'Content-Type': file.type,
+        })
+          .then(response => response.json())
+          .then(json => {
+            // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
+            if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+              this.setState({
+                showFlaggedModal: true,
+              });
+              analyticsReporter.sendEvent(
+                EVENTS.FLAGGED_CUSTOM_IMAGE,
+                {
+                  UploaderType: 'Asset Manager',
+                  ProjectType: this.state.projectType,
+                },
+                PLATFORMS.STATSIG
+              );
+            } else {
+              // If the image is rated 'everyone' or 'unknown', continue with upload.
+              console.log('onUploadStart data', this.state.pendingUploadData);
+              this.state.pendingUploadData.submit();
+              this.setState({pendingUploadData: null});
+            }
+          })
+          .catch(err => {
+            this.onUploadError(500);
+            MetricsReporter.logError('Azure image moderation error: ' + err);
+          });
+      })
+      .catch(err => {
+        MetricsReporter.logError('Error getting image dimensions: ' + err);
+        this.onUploadError(500);
+      });
+  };
+
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) return;
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.projectId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(() => {
+        console.log('onUploadStart data', pendingUploadData);
+        pendingUploadData.submit();
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+          uploadsDisabled: true,
+          statusMessage: errorUploadDisabled,
+        });
+        analyticsReporter.sendEvent(
+          EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
+          {
+            UploaderType: 'Asset Manager',
+            ProjectType: this.state.projectType,
+          },
+          PLATFORMS.STATSIG
+        );
+      })
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: 'Error uploading file: ' + getErrorMessage(500),
+        });
+        MetricsReporter.logError('Update project abuse error: ' + err);
+      });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+      statusMessage: '',
+    });
+    analyticsReporter.sendEvent(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'Asset Manager',
+        ProjectType: this.state.projectType,
+      },
+      PLATFORMS.STATSIG
+    );
   };
 
   onUploadDone = result => {
@@ -275,6 +437,7 @@ export default class AssetManager extends React.Component {
       return starterAssetsApi.withLevelName(this.props.levelName);
     } else {
       let api = this.props.useFilesApi ? filesApi : assetsApi;
+      console.log('uploadApi this.props.useFilesApi', this.props.useFilesApi);
 
       // Bind API if it isn't already bound
       if (!api.getProjectId()) {
@@ -289,6 +452,8 @@ export default class AssetManager extends React.Component {
     const displayAudioRecorder =
       this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
       this.state.recordingAudio;
+    const uploadsEnabled =
+      this.props.uploadsEnabled && !this.state.uploadsDisabled;
     const buttons = (
       <div>
         {this.state.audioErrorType === AudioErrorType.SAVE && (
@@ -306,7 +471,7 @@ export default class AssetManager extends React.Component {
           />
         )}
         <AddAssetButtonRow
-          uploadsEnabled={this.props.uploadsEnabled}
+          uploadsEnabled={uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
           api={this.uploadApi()}
           onUploadStart={this.onUploadStart}
@@ -378,7 +543,18 @@ export default class AssetManager extends React.Component {
       );
     }
 
-    return assetList;
+    return (
+      <>
+        {this.state.showFlaggedModal && (
+          <FlaggedImageModal
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
+          />
+        )}
+        {assetList}
+      </>
+    );
   }
 }
 
