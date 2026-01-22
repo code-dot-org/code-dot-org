@@ -7,6 +7,8 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -152,7 +154,33 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  /**
+   * Called when user initiates an upload.
+   * If the file is an image, log event.
+   * TODO: moderate if file is an image.
+   * @param data - Upload data from jquery.fileupload
+   */
   onUploadStart = data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      return;
+    }
+    const isImage = [
+      'image/png',
+      'image/jpeg',
+      'image/jpg',
+      'image/gif',
+    ].includes(file.type);
+
+    if (isImage) {
+      analyticsReporter.sendEvent(
+        EVENTS.UPLOAD_CUSTOM_IMAGE,
+        {UploaderType: 'Asset Uploader', ProjectType: this.state.projectType},
+        PLATFORMS.STATSIG
+      );
+    }
+
     this.setState({statusMessage: 'Uploading...'});
     data.submit();
   };
