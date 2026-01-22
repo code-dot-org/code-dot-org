@@ -22,6 +22,7 @@
     > label {
       align-items: center;
       cursor: default;
+      width: 100%;
     }
   }
 
@@ -43,7 +44,7 @@
     height: 0.9375rem;
     font-size: 0.9375rem;
     flex-shrink: 0;
-    justify-self: flex-end;
+    margin-left: auto;
   }
 
   .multiAnswerIconCorrect {
