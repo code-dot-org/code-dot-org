@@ -406,7 +406,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "react-player": "^3.4.0",
     "react-schemaorg": "^2.0.0"
   },
