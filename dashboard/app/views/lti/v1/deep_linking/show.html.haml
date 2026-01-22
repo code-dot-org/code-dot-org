@@ -4,6 +4,6 @@
       deepLinkingSettings: @deep_linking_settings
     }
 
-  %script{src: webpack_asset_path('js/lti/v1/deep_linking/content_selection.js'), data: {json: script_data.to_json}}
+  %script{src: webpack_asset_path('js/lti/v1/deep_linking/show.js'), data: {json: script_data.to_json}}
 %body
   %div{id: 'mount-point'}
