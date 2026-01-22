@@ -300,7 +300,7 @@
     "lazysizes": "^4.0.0-rc1",
     "loadable-components": "2.2.3",
     "loader-utils": "^2.0.4",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "lottie-web": "^5.13.0",
     "markdown-to-txt": "^2.0.1",
     "md5": "^2.3.0",
