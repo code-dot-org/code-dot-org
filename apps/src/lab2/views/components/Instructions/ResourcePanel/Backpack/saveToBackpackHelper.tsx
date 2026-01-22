@@ -1,5 +1,9 @@
+import React from 'react';
+
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
@@ -22,9 +26,11 @@ export const handleSaveSupportFile = async (
     title: 'A file with this name already exists',
     message: `This file already exists in the level's support code. Would you like to import it as ${newFileName}?`,
     confirmText: `Import as ${newFileName}`,
+    icon: {iconName: 'exclamation-circle', iconStyle: 'solid'},
   });
   if (results.type === 'confirm') {
     await fetchAndSaveFile(
+      EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
       addAlert,
@@ -53,24 +59,21 @@ export const handleSaveDuplicateFile = async (
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericConfirmation,
     title: 'A file with this name already exists',
-    message: `Would you like to replace the existing file with this file or import this file as ${newFileName}?`,
-    confirmText: 'Replace existing file',
-    neutralText: `Import as ${newFileName}`,
+    bodyComponent: (
+      <>
+        A file with the same name already exists in your project, would you like
+        to replace the existing file with this file or import this file as{' '}
+        <strong>{newFileName}</strong>?
+      </>
+    ),
+    confirmText: `Import as ${newFileName}`,
+    neutralText: 'Replace existing file',
+    icon: {iconName: 'exclamation-circle', iconStyle: 'solid'},
   });
   if (results.type === 'confirm') {
     // Import as replacement
     await fetchAndSaveFile(
-      backpackApi,
-      channelId,
-      addAlert,
-      saveFile,
-      createNewFile,
-      findIdForFileName,
-      selectedFileName
-    );
-  } else if (results.type === 'neutral') {
-    // Import as new file
-    await fetchAndSaveFile(
+      EVENTS.IMPORT_FROM_BACKPACK_REPLACE,
       backpackApi,
       channelId,
       addAlert,
@@ -80,10 +83,23 @@ export const handleSaveDuplicateFile = async (
       selectedFileName,
       newFileName
     );
+  } else if (results.type === 'neutral') {
+    // Import as new file
+    await fetchAndSaveFile(
+      EVENTS.IMPORT_FROM_BACKPACK_RENAME,
+      backpackApi,
+      channelId,
+      addAlert,
+      saveFile,
+      createNewFile,
+      findIdForFileName,
+      selectedFileName
+    );
   }
 };
 
 export const fetchAndSaveFile = async (
+  successMetric: string,
   backpackApi: BackpackClientApi,
   channelId: string,
   addAlert: (type: 'success' | 'danger', message: string) => void,
@@ -136,11 +152,17 @@ export const fetchAndSaveFile = async (
   if (newFileName) {
     createNewFile(newFileName, fileContent, url);
     addAlert('success', successMessage);
+    sendLab2AnalyticsEvent(successMetric, {
+      fileType: newFileName.split('.').pop()?.toLowerCase() || '',
+    });
   } else {
     const fileId = findIdForFileName(selectedFileName);
     if (fileId) {
       saveFile(fileId, fileContent, url);
       addAlert('success', successMessage);
+      sendLab2AnalyticsEvent(successMetric, {
+        fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+      });
     } else {
       // If for some reason we can't find the file to replace, show an error.
       // This should not happen, but could theoretically happen if the project was updated while

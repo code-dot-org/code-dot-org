@@ -36,6 +36,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
@@ -202,6 +203,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     () => setCurrentTab(Tabs.Backpack),
     []
   );
+  const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -289,6 +291,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         <BackpackPanel
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
+          backpackRefreshKey={backpackRefreshKey}
         />
       );
     }
@@ -336,6 +339,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     currentTab,
     backpackProps,
     setBackpackTabAsActive,
+    backpackRefreshKey,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -603,6 +607,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
+                ) : currentTab === Tabs.Backpack ? (
+                  <BackpackHeaderButtons
+                    incrementBackpackRefreshKey={() =>
+                      setBackpackRefreshKey(prev => prev + 1)
+                    }
+                  />
                 ) : (
                   rightHeaderContent
                 )
