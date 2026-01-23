@@ -62,7 +62,7 @@
   border-color: var(--borders-error-primary);
 }
 
-.filled.aqua {
+.filled.ai {
   background-color: var(--background-brand-aqua-extra-light);
   border-color: var(--borders-brand-aqua-primary);
 }
@@ -139,7 +139,7 @@
   }
 }
 
-.iconContainer.aqua {
+.iconContainer.ai {
   border-color: var(--borders-brand-aqua-primary);
 
   i {
@@ -169,7 +169,7 @@
 // Actions container styles
 .actions {
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   flex-shrink: 0;
 }
 

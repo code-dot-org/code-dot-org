@@ -17,6 +17,6 @@ export const VARIANT_PREFIX_MAP: Record<string, string> = {
   success: 'success',
   warning: 'warning',
   error: 'error',
-  aqua: 'brand-aqua',
+  ai: 'brand-aqua',
   gray: 'neutral',
 };

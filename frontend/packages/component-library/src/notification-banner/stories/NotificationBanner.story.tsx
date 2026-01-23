@@ -29,7 +29,7 @@ export default {
         'success',
         'warning',
         'error',
-        'aqua',
+        'ai',
         'gray',
       ],
       description: 'Variant color/sentiment',
@@ -92,12 +92,12 @@ export const AllVariants = () => {
   }> = [
     {
       variant: 'primary',
-      icon: {iconName: 'circle-info', iconStyle: 'solid'},
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       title: 'Primary (Purple)',
     },
     {
       variant: 'brand',
-      icon: {iconName: 'circle-info', iconStyle: 'solid'},
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       title: 'Brand (Teal)',
     },
     {
@@ -121,13 +121,13 @@ export const AllVariants = () => {
       title: 'Error',
     },
     {
-      variant: 'aqua',
+      variant: 'ai',
       icon: {iconName: 'robot', iconStyle: 'solid'},
-      title: 'Aqua (AI)',
+      title: 'AI',
     },
     {
       variant: 'gray',
-      icon: {iconName: 'circle-info', iconStyle: 'solid'},
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       title: 'Gray',
     },
   ];

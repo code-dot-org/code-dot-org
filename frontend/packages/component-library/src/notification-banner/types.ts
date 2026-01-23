@@ -5,7 +5,7 @@ export type NotificationBannerVariant =
   | 'success'
   | 'warning'
   | 'error'
-  | 'aqua'
+  | 'ai'
   | 'gray';
 
 export type NotificationBannerStyle = 'subtle' | 'filled';

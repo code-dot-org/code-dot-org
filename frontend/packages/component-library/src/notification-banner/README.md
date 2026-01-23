@@ -13,7 +13,7 @@ import NotificationBanner, {
 
 ## Features
 
-- **8 Variants**: `primary`, `brand`, `info`, `success`, `warning`, `error`, `aqua`, `gray`
+- **8 Variants**: `primary`, `brand`, `info`, `success`, `warning`, `error`, `ai`, `gray`
 - **2 Styles**: `subtle` (white background) or `filled` (tinted background/color border)
 - **Optional Actions**: Support for 1-2 action buttons
 - **Optional Close**: Dismissible with close button

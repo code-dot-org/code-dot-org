@@ -108,7 +108,7 @@ describe('Design System - NotificationBanner', () => {
       'success',
       'warning',
       'error',
-      'aqua',
+      'ai',
       'gray',
     ] as const;
 
