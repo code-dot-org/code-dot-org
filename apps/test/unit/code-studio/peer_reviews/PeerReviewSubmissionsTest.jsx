@@ -2,6 +2,7 @@ import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
@@ -39,7 +40,7 @@ describe('PeerReviewSubmissions', () => {
     },
   };
 
-  beforeAll(() => {
+  beforeAll(async () => {
     // stub out debounce to return the original function, so it's called immediately
     debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
 
@@ -54,24 +55,27 @@ describe('PeerReviewSubmissions', () => {
       ]
     );
 
-    peerReviewSubmissions = mount(
-      <PeerReviewSubmissions
-        courseList={[
-          ['course_1', 1],
-          ['course_2', 2],
-        ]}
-        courseUnitMap={{
-          1: [
-            ['course_1_unit_1', 10],
-            ['course_1_unit_2', 11],
-          ],
-          2: [
-            ['course_2_unit_1', 20],
-            ['course_2_unit_2', 21],
-          ],
-        }}
-      />
-    );
+    await act(async () => {
+      peerReviewSubmissions = mount(
+        <PeerReviewSubmissions
+          courseList={[
+            ['course_1', 1],
+            ['course_2', 2],
+          ]}
+          courseUnitMap={{
+            1: [
+              ['course_1_unit_1', 10],
+              ['course_1_unit_2', 11],
+            ],
+            2: [
+              ['course_2_unit_1', 20],
+              ['course_2_unit_2', 21],
+            ],
+          }}
+        />
+      );
+    });
+    peerReviewSubmissions.update();
   });
 
   afterAll(() => {
@@ -79,13 +83,16 @@ describe('PeerReviewSubmissions', () => {
     server.restore();
   });
 
-  it('Initially renders course options and calls API for submissions', () => {
+  it('Initially renders course options and calls API for submissions', async () => {
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
 
-    server.respond();
+    await act(async () => {
+      server.respond();
+    });
+    peerReviewSubmissions.update();
 
     expect(peerReviewSubmissions.state()).to.deep.equal({
       loading: false,
@@ -115,12 +122,15 @@ describe('PeerReviewSubmissions', () => {
     ).to.be.true;
   });
 
-  it('Changing the course makes a new call and enables the button when a course is selected', () => {
+  it('Changing the course makes a new call and enables the button when a course is selected', async () => {
     server.reset();
 
-    peerReviewSubmissions
-      .find('select#PlcCourseSelect')
-      .simulate('change', {target: {value: '1'}});
+    await act(async () => {
+      peerReviewSubmissions
+        .find('select#PlcCourseSelect')
+        .simulate('change', {target: {value: '1'}});
+    });
+    peerReviewSubmissions.update();
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=1&plc_course_unit_id=&page=1&per=30'
     );
@@ -143,9 +153,12 @@ describe('PeerReviewSubmissions', () => {
       ['course_1_unit_2', 11],
     ]);
 
-    peerReviewSubmissions
-      .find('select#PlcCourseUnitSelect')
-      .simulate('change', {target: {value: '10'}});
+    await act(async () => {
+      peerReviewSubmissions
+        .find('select#PlcCourseUnitSelect')
+        .simulate('change', {target: {value: '10'}});
+    });
+    peerReviewSubmissions.update();
     expect(server.requests[1].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=1&plc_course_unit_id=10&page=1&per=30'
     );
@@ -155,9 +168,12 @@ describe('PeerReviewSubmissions', () => {
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
     ).to.be.false;
 
-    peerReviewSubmissions
-      .find('select#PlcCourseSelect')
-      .simulate('change', {target: {value: ''}});
+    await act(async () => {
+      peerReviewSubmissions
+        .find('select#PlcCourseSelect')
+        .simulate('change', {target: {value: ''}});
+    });
+    peerReviewSubmissions.update();
     expect(server.requests[2].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
@@ -171,12 +187,15 @@ describe('PeerReviewSubmissions', () => {
     ).to.be.true;
   });
 
-  it('Changing the email filter triggers a new call with email filter applied', () => {
+  it('Changing the email filter triggers a new call with email filter applied', async () => {
     server.reset();
 
-    peerReviewSubmissions
-      .find('input#NameEmailFilter')
-      .simulate('change', {target: {value: 'someone@example.com'}});
+    await act(async () => {
+      peerReviewSubmissions
+        .find('input#NameEmailFilter')
+        .simulate('change', {target: {value: 'someone@example.com'}});
+    });
+    peerReviewSubmissions.update();
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=someone@example.com&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
