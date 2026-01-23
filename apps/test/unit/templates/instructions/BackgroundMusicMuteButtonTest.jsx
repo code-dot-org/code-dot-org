@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
@@ -36,7 +37,10 @@ describe('SignedInUser', () => {
   it('switches label and icon when button is pressed', () => {
     const wrapper = setUp();
     assert(wrapper.text() === i18n.backgroundMusicOn());
-    wrapper.find('.uitest-mute-music-button').simulate('click');
+    act(() => {
+      wrapper.find('.uitest-mute-music-button').simulate('click');
+    });
+    wrapper.update();
     assert(wrapper.text() === i18n.backgroundMusicOff());
   });
 
@@ -47,10 +51,18 @@ describe('SignedInUser', () => {
       muteBackgroundMusic: onMuteSpy,
       unmuteBackgroundMusic: onUnmuteSpy,
     });
-    wrapper.find('.uitest-mute-music-button').simulate('click');
-    server.respond();
+    act(() => {
+      wrapper.find('.uitest-mute-music-button').simulate('click');
+    });
+    act(() => {
+      server.respond();
+    });
+    wrapper.update();
     expect(onMuteSpy).to.have.been.calledOnce;
-    wrapper.find('.uitest-mute-music-button').simulate('click');
+    act(() => {
+      wrapper.find('.uitest-mute-music-button').simulate('click');
+    });
+    wrapper.update();
     expect(onUnmuteSpy).to.have.been.calledOnce;
   });
 
