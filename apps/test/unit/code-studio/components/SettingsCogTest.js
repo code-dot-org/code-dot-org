@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import * as assets from '@cdo/apps/code-studio/assets';
@@ -27,27 +28,35 @@ describe('SettingsCog', () => {
     expect(wrapper.find(FontAwesome)).toHaveLength(1);
   });
 
-  it('opens the menu when the cog is clicked', () => {
+  it('opens the menu when the cog is clicked', async () => {
     const wrapper = shallow(<SettingsCog />);
     expect(wrapper.find(JavalabDropdown)).toHaveLength(0);
-    wrapper.instance().open();
+    await act(async () => {
+      wrapper.instance().open();
+    });
     wrapper.update();
     expect(wrapper.find(JavalabDropdown)).toHaveLength(1);
   });
 
-  it('can close the menu', () => {
+  it('can close the menu', async () => {
     const wrapper = shallow(<SettingsCog />);
-    wrapper.instance().open();
+    await act(async () => {
+      wrapper.instance().open();
+    });
     wrapper.update();
     expect(wrapper.find(JavalabDropdown)).toHaveLength(1);
-    wrapper.instance().close();
+    await act(async () => {
+      wrapper.instance().close();
+    });
     wrapper.update();
     expect(wrapper.find(JavalabDropdown)).toHaveLength(0);
   });
 
-  it('does not show maker toggle when "showMakerToggle" is false', () => {
+  it('does not show maker toggle when "showMakerToggle" is false', async () => {
     const wrapper = mount(<SettingsCog showMakerToggle={false} />);
-    wrapper.instance().open();
+    await act(async () => {
+      wrapper.instance().open();
+    });
     wrapper.update();
     expect(wrapper.text()).not.toContain(msg.enableMaker());
   });
@@ -55,9 +64,11 @@ describe('SettingsCog', () => {
   describe('menu items', () => {
     let wrapper;
 
-    beforeEach(() => {
+    beforeEach(async () => {
       wrapper = shallow(<SettingsCog showMakerToggle={true} />);
-      wrapper.instance().open();
+      await act(async () => {
+        wrapper.instance().open();
+      });
       wrapper.update();
     });
 
@@ -70,15 +81,19 @@ describe('SettingsCog', () => {
         assets.showAssetManager.mockRestore();
       });
 
-      it('calls showAssetManager when clicked', () => {
+      it('calls showAssetManager when clicked', async () => {
         expect(assets.showAssetManager).not.toHaveBeenCalled();
-        wrapper.instance().manageAssets();
+        await act(async () => {
+          wrapper.instance().manageAssets();
+        });
         wrapper.update();
         expect(assets.showAssetManager).toHaveBeenCalledTimes(1);
       });
 
-      it('closes the menu when clicked', () => {
-        wrapper.instance().manageAssets();
+      it('closes the menu when clicked', async () => {
+        await act(async () => {
+          wrapper.instance().manageAssets();
+        });
         wrapper.update();
         expect(wrapper.find(JavalabDropdown)).toHaveLength(0);
       });
@@ -114,12 +129,14 @@ describe('SettingsCog', () => {
         expect(renderMakerButton(() => {})).toBeNull();
       });
 
-      it('asks for confirmation when clicked', () => {
+      it('asks for confirmation when clicked', async () => {
         makerRedux.isAvailable.mockReturnValue(true);
         makerRedux.isEnabled.mockReturnValue(false);
         let settings = shallow(<SettingsCog showMakerToggle={true} />);
         expect(settings.state().confirmingEnableMaker).toBe(false);
-        settings.instance().toggleMakerToolkit();
+        await act(async () => {
+          settings.instance().toggleMakerToolkit();
+        });
         settings.update();
         expect(settings.state().confirmingEnableMaker).toBe(true);
       });
@@ -141,7 +158,7 @@ describe('SettingsCog', () => {
         restoreRedux();
       });
 
-      it('does not display maker toggle if a curriculum level', () => {
+      it('does not display maker toggle if a curriculum level', async () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: true,
@@ -153,12 +170,14 @@ describe('SettingsCog', () => {
           </Provider>
         );
         let settings = wrapper.find('SettingsCog');
-        settings.instance().open();
+        await act(async () => {
+          settings.instance().open();
+        });
         settings.update();
         expect(settings.text()).not.toContain(msg.disableMaker());
       });
 
-      it('does display maker toggle if not a curriculum level (standalone project)', () => {
+      it('does display maker toggle if not a curriculum level (standalone project)', async () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: false,
@@ -170,7 +189,9 @@ describe('SettingsCog', () => {
           </Provider>
         );
         let settings = wrapper.find('SettingsCog');
-        settings.instance().open();
+        await act(async () => {
+          settings.instance().open();
+        });
         settings.update();
         expect(settings.text()).toContain(msg.disableMaker());
       });
