@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
@@ -99,8 +100,13 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    rosterDialog.instance().setState({selectedId: '2'});
-    rosterDialog.instance().importClassroom();
+    act(() => {
+      rosterDialog.instance().setState({selectedId: '2'});
+    });
+    rosterDialog.update();
+    act(() => {
+      rosterDialog.instance().importClassroom();
+    });
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(
@@ -148,7 +154,10 @@ describe('RosterDialog', () => {
       />
     );
 
-    rosterDialog.instance().setState({selectedId: '2'});
+    act(() => {
+      rosterDialog.instance().setState({selectedId: '2'});
+    });
+    rosterDialog.update();
     await rosterDialog
       .instance()
       .handleRedirect()
