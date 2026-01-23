@@ -4,6 +4,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
@@ -87,6 +88,10 @@ const moderateImage = async (
   ) {
     return 'skipped';
   }
+  MetricsReporter.incrementCounter('ModerateCustomImage', [
+    {name: 'AppName', value: appName},
+    {name: 'UploaderType', value: 'Lab2FileUploader'},
+  ]);
   const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
     'Content-Type': file.type || 'application/octet-stream',
   });
@@ -94,10 +99,22 @@ const moderateImage = async (
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error with image moderation');
+    MetricsReporter.incrementCounter('ModerateCustomImageError', [
+      {name: 'AppName', value: appName},
+      {name: 'UploaderType', value: 'Lab2FileUploader'},
+    ]);
     return 'skipped';
   }
   const json = await response.json();
+  MetricsReporter.incrementCounter('ModerateCustomImageSuccess', [
+    {name: 'AppName', value: appName},
+    {name: 'UploaderType', value: 'Lab2FileUploader'},
+  ]);
   if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
+    MetricsReporter.incrementCounter('ModerateCustomImageFlagged', [
+      {name: 'AppName', value: appName},
+      {name: 'UploaderType', value: 'Lab2FileUploader'},
+    ]);
     return 'flagged';
   }
   return 'ok';
