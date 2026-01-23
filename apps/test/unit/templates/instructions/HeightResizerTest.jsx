@@ -5,7 +5,7 @@ import {act} from 'react-dom/test-utils';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 describe('HeightResizer', () => {
-  it('handles a drag event', () => {
+  it('handles a drag event', async () => {
     const resizeItemTopCallback = jest.fn().mockReturnValue(5);
     const onResizeCallback = jest.fn();
     const wrapper = mount(
@@ -22,7 +22,7 @@ describe('HeightResizer', () => {
       pageY: 20,
       cancelable: true,
     });
-    act(() => {
+    await act(async () => {
       wrapper.instance().onMouseDown(mouseDownEvent);
     });
     wrapper.update();
@@ -50,7 +50,7 @@ describe('HeightResizer', () => {
       pageY: 40,
       cancelable: true,
     });
-    act(() => {
+    await act(async () => {
       wrapper.instance().onMouseUp(mouseUpEvent);
     });
     wrapper.update();

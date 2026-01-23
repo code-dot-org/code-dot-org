@@ -34,32 +34,32 @@ describe('SignedInUser', () => {
 
   afterEach(() => server.restore());
 
-  it('switches label and icon when button is pressed', () => {
+  it('switches label and icon when button is pressed', async () => {
     const wrapper = setUp();
     assert(wrapper.text() === i18n.backgroundMusicOn());
-    act(() => {
+    await act(async () => {
       wrapper.find('.uitest-mute-music-button').simulate('click');
     });
     wrapper.update();
     assert(wrapper.text() === i18n.backgroundMusicOff());
   });
 
-  it('calls mute and unmute functions accordingly', () => {
+  it('calls mute and unmute functions accordingly', async () => {
     let onMuteSpy = sinon.spy();
     let onUnmuteSpy = sinon.spy();
     const wrapper = setUp({
       muteBackgroundMusic: onMuteSpy,
       unmuteBackgroundMusic: onUnmuteSpy,
     });
-    act(() => {
+    await act(async () => {
       wrapper.find('.uitest-mute-music-button').simulate('click');
     });
-    act(() => {
+    await act(async () => {
       server.respond();
     });
     wrapper.update();
     expect(onMuteSpy).to.have.been.calledOnce;
-    act(() => {
+    await act(async () => {
       wrapper.find('.uitest-mute-music-button').simulate('click');
     });
     wrapper.update();

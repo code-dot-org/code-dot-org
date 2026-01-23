@@ -52,7 +52,7 @@ describe('MoveStudents', () => {
     expect(dropdownOptions[1].name).toBe('Other teacher');
   });
 
-  it('renders additional inputs if other teacher is selected', () => {
+  it('renders additional inputs if other teacher is selected', async () => {
     const transferData = {
       ...blankStudentTransfer,
       otherTeacher: true,
@@ -61,7 +61,7 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    act(() => {
+    await act(async () => {
       wrapper.instance().openDialog();
     });
     wrapper.update();
@@ -83,17 +83,17 @@ describe('MoveStudents', () => {
     expect(transferStudents).toHaveBeenCalledTimes(1);
   });
 
-  it('calls cancelStudentTransfer on close', () => {
+  it('calls cancelStudentTransfer on close', async () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     expect(cancelStudentTransfer).not.toHaveBeenCalled();
-    act(() => {
+    await act(async () => {
       wrapper.instance().closeDialog();
     });
     expect(cancelStudentTransfer).toHaveBeenCalledTimes(1);
   });
 
-  it('renders an error message if the transfer status is fail', () => {
+  it('renders an error message if the transfer status is fail', async () => {
     const transferStatus = {
       status: TransferStatus.FAIL,
       error: 'failed to transfer students!',
@@ -102,7 +102,7 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferStatus={transferStatus} />
     );
 
-    act(() => {
+    await act(async () => {
       wrapper.find('Button').simulate('click');
     });
     wrapper.update();

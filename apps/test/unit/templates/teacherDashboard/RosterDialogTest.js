@@ -87,7 +87,7 @@ describe('RosterDialog', () => {
     expect(wrapper.text()).not.contains('ARCHIVED');
   });
 
-  it('sends section set up completed analytics event when import is called', () => {
+  it('sends section set up completed analytics event when import is called', async () => {
     const rosterDialog = mount(
       <RosterDialog
         handleImport={() => {}}
@@ -100,11 +100,11 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    act(() => {
+    await act(async () => {
       rosterDialog.instance().setState({selectedId: '2'});
     });
     rosterDialog.update();
-    act(() => {
+    await act(async () => {
       rosterDialog.instance().importClassroom();
     });
     assert(analyticsSpy.calledOnce);
@@ -154,7 +154,7 @@ describe('RosterDialog', () => {
       />
     );
 
-    act(() => {
+    await act(async () => {
       rosterDialog.instance().setState({selectedId: '2'});
     });
     rosterDialog.update();
