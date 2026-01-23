@@ -36,13 +36,12 @@ class StudentSnapshotsController < ApplicationController
     lesson = Lesson.find_by(id: lesson_id)
     return render json: {error: "Can't find Lesson id=#{lesson_id}"}, status: :bad_request unless lesson
 
+    lesson_level_ids = lesson.levels&.map(&:id)&.presence || []
     cfu_levels_data = []
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
-        # Use existing Level helpers to get question text / answers when available.
-        question_summary = level.respond_to?(:question_summary) ? level.question_summary : nil
-        question_text = question_summary&.dig(:question_text) || question_summary&.dig(:question)
-        answers = question_summary&.dig(:answers)
+        question_text, answers = get_level_question_and_answers(level)
+        level_index_in_lesson = lesson_level_ids.index(level.id)
 
         cfu_levels_data << {
           id: level.id,
@@ -51,6 +50,7 @@ class StudentSnapshotsController < ApplicationController
           type: level.type,
           key: level.try(:key),
           script_level_id: script_level.id,
+          level_position: level_index_in_lesson ? level_index_in_lesson + 1 : -1,
           progression: script_level.progression,
           progression_display_name: script_level.progression ? I18n.t(script_level.progression, scope: %i[data progressions], default: script_level.progression) : nil,
           question_text: question_text,
@@ -103,15 +103,13 @@ class StudentSnapshotsController < ApplicationController
           cfu_responses_data << build_cfu_level_group_response(level, script_level, student, script)
         else
           user_level = user_levels_by_level_id[level.id]
-          student_answer = user_level&.level_source&.data
-
-          response_summary = summarize_cfu_level_result(level, student_answer)
+          response_summary = summarize_cfu_level_result(level, user_level)
 
           cfu_responses_data << {
             level_id: level.id,
             script_level_id: script_level.id,
             response: response_summary,
-            submitted: user_level&.submitted,
+            submitted: user_level&.submitted || submitted?(response_summary[:status]),
             timestamp: user_level&.updated_at
           }
         end
@@ -147,7 +145,7 @@ class StudentSnapshotsController < ApplicationController
   # Summarizes a single CFU level result for a given student answer.
   # This mirrors summarize_level_result from Api::V1::AssessmentsController
   # but without aggregated stats.
-  private def summarize_cfu_level_result(level, student_answer)
+  private def summarize_cfu_level_result(level, student_user_level)
     level_result = {
       type: (
         case level
@@ -164,11 +162,13 @@ class StudentSnapshotsController < ApplicationController
       )
     }
 
+    student_answer = student_user_level&.level_source&.data
+
     if student_answer
       case level
       when TextMatch, FreeResponse
         level_result[:student_result] = student_answer
-        level_result[:status] = ""
+        level_result[:status] = student_answer.empty? ? "unsubmitted" : "submitted"
       when Multi
         answer_indexes = level.correct_answer_indexes_array
         student_result = student_answer.split(",").map(&:to_i).sort
@@ -189,11 +189,10 @@ class StudentSnapshotsController < ApplicationController
         end
         level_result[:student_result] = student_result
 
-        option_status = []
-        student_result.each_with_index do |answer, index|
-          option_status[index] = answer.nil? ? "unsubmitted" : "submitted"
+        level_result[:status] = "unsubmitted"
+        unless student_result.empty?
+          level_result[:status] = student_user_level&.best_result && student_user_level.best_result >= 100 ? "correct" : "incorrect"
         end
-        level_result[:status] = option_status
       end
     else
       level_result[:status] = "unsubmitted"
@@ -219,9 +218,7 @@ class StudentSnapshotsController < ApplicationController
     parent_ul = latest_by_level_id[level_group.id]
 
     sublevel_results = sublevels.map do |sublevel|
-      ul = latest_by_level_id[sublevel.id]
-      student_answer = ul&.level_source&.data
-      summarize_cfu_level_result(sublevel, student_answer).merge(level_id: sublevel.id)
+      summarize_cfu_level_result(sublevel, latest_by_level_id[sublevel.id]).merge(level_id: sublevel.id)
     end
 
     {
@@ -231,8 +228,31 @@ class StudentSnapshotsController < ApplicationController
         type: "LevelGroup",
         level_results: sublevel_results
       },
-      submitted: parent_ul&.submitted,
+      submitted: parent_ul&.submitted || (sublevel_results.all? {|sublevel_result| submitted?(sublevel_result[:status])}),
       timestamp: parent_ul&.updated_at
     }
+  end
+
+  # For Levels, return its question text and possible answers
+  # For LevelGroups, return an array of the sublevel question texts and their respective possible answers
+  private def get_level_question_and_answers(level)
+    if level.is_a?(LevelGroup)
+      level_group_question_texts = []
+      level_group_answers = []
+      level.levels.each do |sublevel|
+        sublevel_question_text, sublevel_answer_text = get_level_question_and_answers(sublevel)
+        level_group_question_texts << sublevel_question_text
+        level_group_answers << sublevel_answer_text
+      end
+      return level_group_question_texts, level_group_answers
+    else
+      question_summary = level.respond_to?(:question_summary) ? level.question_summary : nil
+      question_text = question_summary&.dig(:question_text) || question_summary&.dig(:question)
+      return question_text, (question_summary&.dig(:answers) || question_summary&.dig('answers'))
+    end
+  end
+
+  private def submitted?(status)
+    status.is_a?(Array) ? status.exclude?("unsubmitted") : status != "unsubmitted"
   end
 end

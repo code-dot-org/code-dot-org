@@ -18,6 +18,7 @@
 #  participant_audience   :string(255)
 #  original_unit_group_id :integer
 #  hide_within_course     :boolean          default(FALSE)
+#  md5                    :string(255)
 #
 # Indexes
 #
@@ -1104,7 +1105,12 @@ class Unit < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
 
     filepath = Unit.script_json_filepath(name)
-    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    contents = Services::ScriptSeed.serialize_seeding_json(self)
+    File.write(filepath, contents)
+
+    # Update MD5 hash to match the written file, so incremental seeding
+    # in other environments will recognize this version as already seeded.
+    update_column(:md5, Digest::MD5.hexdigest(contents))
   end
 
   def update_teacher_resources(resource_ids)
