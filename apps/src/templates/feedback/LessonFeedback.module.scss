@@ -1,4 +1,4 @@
-.lesson-feedback-container {
+.lessonFeedbackContainer {
   margin-bottom: 24px;
   padding: 20px;
   display: flex;
@@ -10,7 +10,7 @@
   align-self: stretch;
 }
 
-.lesson-feedback-header {
+.lessonFeedbackHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -18,27 +18,30 @@
   width: 100%;
 }
 
-.lesson-feedback-content {
+.lessonFeedbackContent {
   flex: 1;
 }
 
-.lesson-feedback-heading {
+.lessonFeedbackHeading {
   margin-bottom: 8px;
 }
 
-.lesson-feedback-details {
+.lessonFeedbackDetails {
   margin-bottom: 0;
   color: #666;
 }
 
-.lesson-feedback-button {
+.lessonFeedbackButton {
   flex-shrink: 0;
 }
 
-.lesson-feedback-box {
+.lessonFeedbackBox {
   padding: 16px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
   line-height: 1.5;
+}
+.strongText {
+  font-weight: 600;
 }

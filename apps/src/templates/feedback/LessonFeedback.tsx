@@ -5,8 +5,9 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import './LessonFeedback.scss';
+import LessonRecommendedAction from './LessonRecommendedAction';
 
+import styles from './LessonFeedback.module.scss';
 interface LessonFeedbackProps {
   feedbackText: string;
   lessonName: string;
@@ -35,14 +36,14 @@ function LessonFeedback({
   };
 
   return (
-    <div className="lesson-feedback-container">
-      <div className="lesson-feedback-header">
-        <div className="lesson-feedback-content">
-          <Heading5 className="lesson-feedback-heading">
+    <div className={styles.lessonFeedbackContainer}>
+      <div className={styles.lessonFeedbackHeader}>
+        <div className={styles.lessonFeedbackContent}>
+          <Heading5 className={styles.lessonFeedbackHeading}>
             Lesson {lessonNumber}: {lessonName}
           </Heading5>
 
-          <BodyFourText className="lesson-feedback-details">
+          <BodyFourText className={styles.lessonFeedbackDetails}>
             Sent by {teacherName} on {formattedDate}
           </BodyFourText>
         </div>
@@ -57,8 +58,13 @@ function LessonFeedback({
         />
       </div>
       <hr />
-      <div className="lesson-feedback-box">{feedbackText}</div>
+      <div className={styles.lessonFeedbackBox}>{feedbackText}</div>
       <hr />
+      {/* TODO: Add in real data here */}
+      <LessonRecommendedAction
+        resourceComment="Review the lesson and complete the exercises to improve your understanding."
+        resourceLink={lessonLink}
+      />
     </div>
   );
 }
