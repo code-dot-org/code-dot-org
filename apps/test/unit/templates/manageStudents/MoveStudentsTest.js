@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import {
   blankStudentTransfer,
@@ -60,7 +61,9 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    wrapper.instance().openDialog();
+    act(() => {
+      wrapper.instance().openDialog();
+    });
     wrapper.update();
     expect(wrapper.find('#uitest-other-teacher').exists()).toBe(true);
   });
@@ -84,7 +87,9 @@ describe('MoveStudents', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     expect(cancelStudentTransfer).not.toHaveBeenCalled();
-    wrapper.instance().closeDialog();
+    act(() => {
+      wrapper.instance().closeDialog();
+    });
     expect(cancelStudentTransfer).toHaveBeenCalledTimes(1);
   });
 
@@ -97,7 +102,10 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferStatus={transferStatus} />
     );
 
-    wrapper.find('Button').simulate('click');
+    act(() => {
+      wrapper.find('Button').simulate('click');
+    });
+    wrapper.update();
     const errorElement = wrapper.find('#uitest-error');
     expect(errorElement.exists()).toBe(true);
     expect(errorElement.text()).toBe(transferStatus.error);
