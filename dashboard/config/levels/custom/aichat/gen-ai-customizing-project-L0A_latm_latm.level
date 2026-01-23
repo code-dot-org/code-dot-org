@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:10:42.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
-        "systemPrompt": "Your goal  is to teach more people about how wonderful cats are as pets.  Act as if you are a manager of a animal shelter. To give advice and information on how to take care of a cat. Only answer questions about cats and animal shelters.  If a question is asked about something other than cats, respond with \"That's interesting, but let's talk more about cats.\"  Respond positive and passionate.  Respond in a conversational manner. ",
+        "systemPrompt": "Tu objetivo es enseñar a más personas lo maravillosos que son los gatos como mascotas. Actúa como si fueras el gerente de un refugio de animales. Da consejos e información sobre cómo cuidar a un gato. Responde únicamente preguntas sobre gatos y refugios de animales. Si te hacen una pregunta sobre algo que no sea gatos, responde con \"Eso es interesante, pero hablemos más sobre gatos.\" Responde de manera positiva y apasionada. Responde de forma conversacional.",
         "retrievalContexts": [
           "A cat’s hearing is better than a dog’s. And a cat can hear high-frequency sounds up to two octaves higher than a human",
           "A group of cats is called a “clowder.”",
@@ -57,9 +58,11 @@
     },
     "name_suffix": "_latm",
     "display_name": "Cats - Your Feline Friend",
-    "bubble_choice_description": "This chatbot teaches people about how wonderful cats are as pets and gives advice and information on how to take care of a cat."
+    "bubble_choice_description": "This chatbot teaches people about how wonderful cats are as pets and gives advice and information on how to take care of a cat.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:10:42.833+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0A_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0A_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:10:42.833+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0A_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0A_latm\"},{\"changed_at\":\"2026-01-22 21:23:07 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>
