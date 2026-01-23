@@ -124,6 +124,14 @@ const moderateImage = async (
       {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
+    analyticsReporter.sendEvent(
+      EVENTS.FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'Lab2 File Uploader',
+        ProjectType: appName,
+      },
+      PLATFORMS.STATSIG
+    );
     return 'flagged';
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);
