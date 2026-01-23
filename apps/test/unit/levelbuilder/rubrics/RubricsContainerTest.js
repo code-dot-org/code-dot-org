@@ -94,7 +94,9 @@ describe('RubricsContainerTest', () => {
     expect(
       screen.getByRole('heading', {name: 'Create your rubric'})
     ).not.toBeNull();
-    expect(screen.getByRole('combobox')).not.toBeNull();
+    expect(
+      screen.getByLabelText('Choose a level for this rubric to be evaluated on')
+    ).not.toBeNull();
     expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
@@ -162,7 +164,9 @@ describe('RubricsContainerTest', () => {
     const user = userEvent.setup();
     renderComponent();
 
-    const dropdown = screen.getByRole('combobox');
+    const dropdown = screen.getByLabelText(
+      'Choose a level for this rubric to be evaluated on'
+    );
     expect(dropdown).toHaveValue(String(defaultProps.submittableLevels[0].id));
 
     await user.selectOptions(

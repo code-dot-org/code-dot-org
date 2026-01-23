@@ -179,7 +179,9 @@ export default function RubricsContainer({
             This rubric will be used for {unitName}, lesson {lessonNumber}.
           </BodyTwoText>
           <div style={styles.containerStyle}>
-            <label>Choose a level for this rubric to be evaluated on</label>
+            <label htmlFor="rubric_level_id">
+              Choose a level for this rubric to be evaluated on
+            </label>
             <select
               id="rubric_level_id"
               required={true}
