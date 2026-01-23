@@ -1,0 +1,44 @@
+.lesson-feedback-container {
+  margin-bottom: 24px;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary, #d1d9e0);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.lesson-feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.lesson-feedback-content {
+  flex: 1;
+}
+
+.lesson-feedback-heading {
+  margin-bottom: 8px;
+}
+
+.lesson-feedback-details {
+  margin-bottom: 0;
+  color: #666;
+}
+
+.lesson-feedback-button {
+  flex-shrink: 0;
+}
+
+.lesson-feedback-box {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  line-height: 1.5;
+}

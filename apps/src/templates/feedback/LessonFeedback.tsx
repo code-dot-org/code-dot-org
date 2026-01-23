@@ -5,6 +5,8 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import './LessonFeedback.scss';
+
 interface LessonFeedbackProps {
   feedbackText: string;
   lessonName: string;
@@ -22,54 +24,43 @@ function LessonFeedback({
   submittedAtDate,
   teacherName,
 }: LessonFeedbackProps) {
-  const formattedDate = new Date(submittedAtDate).toLocaleDateString();
+  const formattedDate = new Date(submittedAtDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 
   const handleGoToLesson = () => {
     window.open(lessonLink, '_blank');
   };
 
   return (
-    <div style={styles.container}>
-      <Heading5 style={styles.heading}>
-        {lessonName} - Lesson {lessonNumber}
-      </Heading5>
+    <div className="lesson-feedback-container">
+      <div className="lesson-feedback-header">
+        <div className="lesson-feedback-content">
+          <Heading5 className="lesson-feedback-heading">
+            Lesson {lessonNumber}: {lessonName}
+          </Heading5>
 
-      <BodyFourText style={styles.details}>
-        Teacher: {teacherName} • Submitted: {formattedDate}
-      </BodyFourText>
+          <BodyFourText className="lesson-feedback-details">
+            Sent by {teacherName} on {formattedDate}
+          </BodyFourText>
+        </div>
 
-      <Button
-        onClick={handleGoToLesson}
-        style={styles.button}
-        text="Go to Lesson"
-      />
-
-      <div style={styles.feedbackBox}>{feedbackText}</div>
+        <Button
+          onClick={handleGoToLesson}
+          text="Go to Lesson"
+          type="secondary"
+          size="s"
+          iconRight={{iconName: 'arrow-up-right-from-square'}}
+          color="gray"
+        />
+      </div>
+      <hr />
+      <div className="lesson-feedback-box">{feedbackText}</div>
+      <hr />
     </div>
   );
 }
-
-const styles = {
-  container: {
-    marginBottom: 24,
-  },
-  heading: {
-    marginBottom: 8,
-  },
-  details: {
-    marginBottom: 16,
-    color: '#666',
-  },
-  button: {
-    marginBottom: 16,
-  },
-  feedbackBox: {
-    padding: 16,
-    border: '1px solid #ddd',
-    borderRadius: 8,
-    backgroundColor: '#f9f9f9',
-    lineHeight: 1.5,
-  },
-};
 
 export default LessonFeedback;
