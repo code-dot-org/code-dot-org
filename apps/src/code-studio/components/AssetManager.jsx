@@ -163,6 +163,7 @@ export default class AssetManager extends React.Component {
     const file = data?.files?.[0];
     if (!file) {
       console.error('No file found in upload data.');
+      this.setState({statusMessage: 'Error: No file selected for upload.'});
       return;
     }
     const isImage = [
