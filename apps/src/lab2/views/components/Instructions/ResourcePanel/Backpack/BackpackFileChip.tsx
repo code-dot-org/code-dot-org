@@ -180,6 +180,8 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           });
         }
       );
+    } else {
+      setActionInProgress(false);
     }
   };
 

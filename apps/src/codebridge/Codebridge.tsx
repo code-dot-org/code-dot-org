@@ -216,6 +216,7 @@ export const Codebridge = React.memo(
               <FlaggedImageModal
                 onAccept={handleAcceptFlaggedImage}
                 onCancel={handleCancelFlaggedImage}
+                appName={appName}
               />
             )}
             <InnerLayout

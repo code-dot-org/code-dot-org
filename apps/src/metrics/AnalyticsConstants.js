@@ -449,6 +449,7 @@ const EVENTS = {
 
   // Add custom image to project
   UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  MODERATE_CUSTOM_IMAGE: 'User-submitted image is moderated',
   SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
   FLAGGED_CUSTOM_IMAGE:
     'User attempting to upload an image that is flagged for abuse',
