@@ -92,6 +92,14 @@ const moderateImage = async (
     {name: 'AppName', value: appName || 'unknown'},
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
+  analyticsReporter.sendEvent(
+    EVENTS.MODERATE_CUSTOM_IMAGE,
+    {
+      UploaderType: 'Lab2 File Uploader',
+      ProjectType: appName,
+    },
+    PLATFORMS.STATSIG
+  );
   try {
     const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type || 'application/octet-stream',
@@ -234,20 +242,6 @@ export const useFileUploader = ({
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .incrementCounter('ModerateCustomImage', [
-                {name: 'AppName', value: appName || 'unknown'},
-                {name: 'UploaderType', value: 'Lab2FileUploader'},
-              ]);
-            analyticsReporter.sendEvent(
-              EVENTS.MODERATE_CUSTOM_IMAGE,
-              {
-                UploaderType: 'Lab2 File Uploader',
-                ProjectType: appName,
-              },
-              PLATFORMS.STATSIG
-            );
             const moderationStatus = await moderateImage(file, ext, appName);
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {
