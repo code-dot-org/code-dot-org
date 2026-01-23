@@ -26,7 +26,7 @@ Content.propTypes = {
 
 const Loading = () => (
   <Body>
-    <img src={loadingGif} style={styles.loading} />
+    <img src={loadingGif} style={styles.loading} alt="Loading"/>
   </Body>
 )
 
