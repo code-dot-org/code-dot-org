@@ -43,11 +43,12 @@ let UnwrappedTrain = class Train extends React.Component {
               styles.trainBotHead,
               this.state.headOpen && styles.trainBotOpen
             ]}
+            alt=""
           />
-          <img src={aiBotBody} style={styles.trainBotBody} />
+          <img src={aiBotBody} style={styles.trainBotBody} alt=""/>
         </div>
         <div style={styles.counter}>
-          <img src={counterIcon} style={styles.counterImg} />
+          <img src={counterIcon} style={styles.counterImg} alt=""/>
           <span style={styles.counterNum} id="uitest-train-count">
             {Math.min(999, state.yesCount + state.noCount)}
           </span>
