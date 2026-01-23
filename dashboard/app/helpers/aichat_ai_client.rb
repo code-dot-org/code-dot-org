@@ -1,3 +1,4 @@
+require 'net/http'
 # Combined class to hold shared logic for multiple AI API backends. This is essentially an "abstract" class
 # that is never instantiated directly. The derived classes hold implementation details in required overridden
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs.
@@ -17,14 +18,12 @@ class AichatAiClient
 
     AichatAiClientTypes.validate_json_schema(body)
 
-    read_timeout = DCDO.get('openai_http_read_timeout', SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]] || 30)
-
     http_response = HTTParty.post(
       url,
       headers: headers,
       body: body.to_json,
-      open_timeout: DCDO.get('openai_http_open_timeout', 5),
-      read_timeout: read_timeout
+      open_timeout: http_open_timeout,
+      read_timeout: http_read_timeout
     )
 
     response_body = JSON.parse(http_response.body)
@@ -42,6 +41,31 @@ class AichatAiClient
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 
     response_text
+  end
+
+  def stream_response(config, request, context = [], &block)
+    AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
+    AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
+    AichatRubyTypes.assert_value_is_type(context, AichatAiClientTypes::AiContext)
+
+    body = create_body(config, request, context, stream: true)
+    AichatAiClientTypes.validate_json_schema(body)
+
+    uri = URI(stream_url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.open_timeout = http_open_timeout
+    http.read_timeout = http_read_timeout(SharedConstants::AI_CHAT_READ_TIMEOUTS[config[:clientType]])
+
+    req = Net::HTTP::Post.new(uri, headers.merge(streaming_header_attributes))
+    req.body = body.to_json
+
+    process_sse_stream(http, req) do |parsed_event|
+      text_delta = extract_text_from_event(parsed_event)
+      block&.call(text_delta) if text_delta
+    end
+  rescue Net::ReadTimeout
+    raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide streamed response to user input.")
   end
 
   attr_accessor :api_key, :model, :usage_reporter
@@ -96,23 +120,41 @@ class AichatAiClient
     raise_not_implemented_error
   end
 
+  # The stream url to send with the post request.
+  private def stream_url
+    raise_not_implemented_error
+  end
+
   # Take response_body and raise any errors if appropriate.
-  private def raise_possible_response_errors_from_body
+  private def raise_possible_response_errors_from_body(response_body)
     raise_not_implemented_error
   end
 
   # Take response_body and extract the text response.
-  private def extract_text_response_from_body
+  private def extract_text_response_from_body(response_body)
+    raise_not_implemented_error
+  end
+
+  # Take stream event and extract the text response.
+  private def extract_text_from_event(event)
     raise_not_implemented_error
   end
 
   # Take response_body and extract usage data for reporting.
-  private def get_usage_from_body
+  private def get_usage_from_body(response_body)
     raise_not_implemented_error
   end
 
   # Create request body from config, request and context
-  private def create_body
+  private def create_body(config, request, context = [], stream: false)
+    raise_not_implemented_error
+  end
+
+  private def http_read_timeout(fallback = nil)
+    raise_not_implemented_error
+  end
+
+  private def http_open_timeout(fallback = nil)
     raise_not_implemented_error
   end
   # ------------------------------------------------------------
@@ -128,5 +170,9 @@ class AichatAiClient
 
   private def raise_not_implemented_error
     raise NotImplementedError, "This method must be implemented in the derived class"
+  end
+
+  private def streaming_header_attributes
+    {}
   end
 end
