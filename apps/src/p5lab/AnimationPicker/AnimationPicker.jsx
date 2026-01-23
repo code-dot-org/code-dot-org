@@ -236,7 +236,9 @@ class AnimationPicker extends React.Component {
         })
           .then(response => {
             if (!response.ok) {
-              MetricsReporter.logError('Error with image moderation');
+              MetricsReporter.logError(
+                'Error with image moderation: HTTP error'
+              );
               MetricsReporter.incrementCounter('ModerateCustomImageError', [
                 {name: 'AppName', value: this.props.projectType},
                 {name: 'UploaderType', value: 'AnimationPicker'},
@@ -277,7 +279,7 @@ class AnimationPicker extends React.Component {
           })
           .catch(err => {
             this.props.onUploadError(msg.animationPicker_uploadingError());
-            MetricsReporter.logError('Azure image moderation error: ' + err);
+            MetricsReporter.logError('Error with image moderation: ' + err);
             MetricsReporter.incrementCounter('ModerateCustomImageError', [
               {name: 'AppName', value: this.props.projectType},
               {name: 'UploaderType', value: 'AnimationPicker'},

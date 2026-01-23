@@ -97,7 +97,7 @@ const moderateImage = async (
       'Content-Type': file.type || 'application/octet-stream',
     });
     if (!response.ok) {
-      metricsReporter.logError('Error with image moderation');
+      metricsReporter.logError('Error with image moderation: HTTP error');
       metricsReporter.incrementCounter('ModerateCustomImageError', [
         {name: 'AppName', value: appName},
         {name: 'UploaderType', value: 'Lab2FileUploader'},
