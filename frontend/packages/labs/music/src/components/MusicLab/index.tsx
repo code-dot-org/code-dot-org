@@ -5,7 +5,7 @@ import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 import {BlockTypes} from '../../blockly/blockTypes';
 import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {getAppOptionsEditBlocks, queryParams} from '@code-dot-org/api';
+import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import {
   getEnvironmentFromHostname,
   getDashboardApiUrl,
@@ -80,7 +80,9 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
     state => state.labView.isStandaloneCollapsed,
   );
 
-  const projectId = queryParams('project');
+  const projectId = window.location.pathname.match(
+    /^\/app\/projects\/music\/([^/]+)\/edit$/,
+  )?.[1];
 
   console.log({
     url: getDashboardApiUrl(getEnvironmentFromHostname()),
@@ -105,7 +107,8 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
 
-  const {loadAndInitializePlayer, onInject} = useContext(PlayerContext);
+  const {loadAndInitializePlayer, onInject, onChange} =
+    useContext(PlayerContext);
 
   useEffect(() => {
     // Ensure we use dark theme for music lab, for now
@@ -273,6 +276,7 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
                 theme={darkTheme}
                 renderer={ThrasosRenderer}
                 onInject={onInject}
+                onChange={onChange}
                 plugins={[ToolboxTrashcanPlugin]}
               />
             </PanelContainer>
