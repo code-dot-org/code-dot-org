@@ -5,7 +5,11 @@ import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 import {BlockTypes} from '../../blockly/blockTypes';
 import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {getAppOptionsEditBlocks} from '@code-dot-org/api';
+import {getAppOptionsEditBlocks, queryParams} from '@code-dot-org/api';
+import {
+  getEnvironmentFromHostname,
+  getDashboardApiUrl,
+} from '@code-dot-org/core';
 import type {ProjectSources} from '@code-dot-org/projects';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
 import type {
@@ -75,6 +79,13 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
   const isStandaloneCollapsed = useAppSelector(
     state => state.labView.isStandaloneCollapsed,
   );
+
+  const projectId = queryParams('project');
+
+  console.log({
+    url: getDashboardApiUrl(getEnvironmentFromHostname()),
+    project: projectId,
+  });
 
   const {skipUrl} = levelProperties;
   const guideMode = levelProperties.levelData.guideMode;

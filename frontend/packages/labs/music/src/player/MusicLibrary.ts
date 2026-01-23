@@ -30,7 +30,7 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
 
   const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
     url,
-    {},
+    {credentials: 'omit'},
     LibraryValidator,
   );
   const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
@@ -41,6 +41,7 @@ export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
   if (locale !== 'en_us') {
     const translationPromise = HttpClient.fetchJson<Translations>(
       getBaseAssetUrl() + libraryFilename + '-loc/' + locale + '.json',
+      {credentials: 'omit'},
     );
     promises.push(translationPromise);
   }

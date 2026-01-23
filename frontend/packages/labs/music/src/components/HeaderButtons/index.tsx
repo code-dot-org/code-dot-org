@@ -114,7 +114,7 @@ const HeaderButtons = ({
     if (dialogControl) {
       dialogControl.showDialog({
         type: DialogType.StartOver,
-        handleConfirm: clearCode,
+        onConfirm: clearCode,
       });
     }
 

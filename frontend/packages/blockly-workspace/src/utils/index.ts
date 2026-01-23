@@ -3,6 +3,8 @@ import {javascriptGenerator} from 'blockly/javascript';
 
 import {BLOCK_TYPES, ToolboxType} from '@blockly-workspace/constants';
 
+export * from './toolboxToWorkspaceBlocks';
+
 /**
  * Options for the `getAllGeneratedCode` method.
  */

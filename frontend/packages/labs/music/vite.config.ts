@@ -64,6 +64,9 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    allowedHosts: ['localhost', 'localhost-studio.code.org'],
+  },
   build: {
     lib: {
       entry: ['src/App.tsx'],

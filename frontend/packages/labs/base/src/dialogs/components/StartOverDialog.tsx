@@ -17,17 +17,17 @@ const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
 
 export type StartOverDialogProps = GenericDialogProps & {
   /** Callback when confirm is pressed. */
-  handleConfirm: () => void;
+  onConfirm: () => void;
   /** Callback when cancel is pressed. */
-  handleCancel?: () => void;
+  onCancel?: () => void;
 };
 
 /**
  * Start Over dialog used in Lab2 labs.
  */
 const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
-  handleConfirm,
-  handleCancel = () => {},
+  onConfirm,
+  onCancel = () => {},
 }) => {
   const currentAppName = useApp().lab?.levelProperties.appName;
 
@@ -46,11 +46,11 @@ const StartOverDialog: FunctionComponent<StartOverDialogProps> = ({
       message={dialogMessage}
       buttons={{
         confirm: {
-          callback: handleConfirm,
+          callback: onConfirm,
           text: 'Start Over',
         },
         cancel: {
-          callback: handleCancel,
+          callback: onCancel,
         },
       }}
     />

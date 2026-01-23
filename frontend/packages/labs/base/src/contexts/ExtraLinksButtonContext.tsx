@@ -1,4 +1,4 @@
-import type {FunctionComponent, PropsWithChildren} from 'react';
+import type {PropsWithChildren} from 'react';
 import {useState, createContext, useContext} from 'react';
 
 /**
@@ -20,16 +20,14 @@ const ExtraLinksButtonContext = createContext<ExtraLinksButtonContent>({
 /**
  * This hook returns the extra links state.
  */
-export const useExtraLinksButtonContext = () => {
+export const useExtraLinksButton = () => {
   return useContext(ExtraLinksButtonContext);
 };
 
 /**
  * Holds the share state.
  */
-export const ExtraLinksButtonProvider: FunctionComponent<PropsWithChildren> = ({
-  children,
-}) => {
+export const ExtraLinksButtonProvider = ({children}: PropsWithChildren) => {
   const [showExtraLinksButton, setShowExtraLinksButton] = useState(true);
 
   return (

@@ -1,23 +1,51 @@
-import type {FunctionComponent, PropsWithChildren} from 'react';
+import type {PropsWithChildren} from 'react';
 import {Suspense, useEffect} from 'react';
 
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {injectFontAwesome} from '@code-dot-org/fonts';
+import {progressActions} from '@code-dot-org/progress/redux';
 import {RootStateProvider} from '@code-dot-org/redux/providers';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
+import {useAppDispatch} from '../redux/store';
+import type {LevelProperties} from '../types';
 
 import Loading from './Loading';
 
-export interface LabProps extends PropsWithChildren {
+interface LabWrapperProps extends PropsWithChildren {
+  levelId: string;
+}
+
+const LabWrapper = ({levelId, children}: LabWrapperProps) => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    // Set the level id if it is known
+    dispatch(progressActions.setCurrentLevelId(parseInt(levelId)));
+  }, []);
+
+  return children;
+};
+
+export interface LabProps<T extends LevelProperties = LevelProperties>
+  extends PropsWithChildren {
+  /** Whether or not the lab considers itself loading */
   isLoading: boolean;
+  /** The LevelProperties for the lab */
+  levelProperties: T;
+  /** The level id */
+  levelId: string;
 }
 
 /**
  * A wrapper for any lab that will connect it to the appropriate data sources
  * and contexts.
  */
-const Lab: FunctionComponent<LabProps> = ({isLoading, children}) => {
+const Lab = <T extends LevelProperties = LevelProperties>({
+  isLoading,
+  levelId,
+  children,
+}: LabProps<T>) => {
   // Ensure FontAwesome icons are available for all labs
   useEffect(() => {
     injectFontAwesome();
@@ -31,7 +59,10 @@ const Lab: FunctionComponent<LabProps> = ({isLoading, children}) => {
           {/* UI theming */}
           <ThemeProvider>
             {/* Supports extra links buttons and toggling */}
-            <ExtraLinksButtonProvider>{children}</ExtraLinksButtonProvider>
+            <ExtraLinksButtonProvider>
+              {/* The actual lab content */}
+              <LabWrapper levelId={levelId}>{children}</LabWrapper>
+            </ExtraLinksButtonProvider>
           </ThemeProvider>
         </RootStateProvider>
       )}

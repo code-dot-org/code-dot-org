@@ -7,7 +7,14 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import * as Blockly from 'blockly/core';
+
 import type {Level} from '@code-dot-org/api/models/levels';
+import type {Source} from '@code-dot-org/api/sources';
+import type {
+  BlockDefinition,
+  BlocklySerialization,
+} from '@code-dot-org/blockly-workspace';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {ExemplarSettings} from '@code-dot-org/progress';
 import type {
@@ -41,6 +48,7 @@ export interface BaseLabProperties {
   usesProjects?: boolean;
   startSources?: MultiFileSource;
   templateSources?: MultiFileSource;
+  exemplarSources?: ProjectSources | MultiFileSource;
   hideVersionHistory?: boolean;
   aiTutorAvailable?: boolean;
   showRubric?: boolean;
@@ -49,6 +57,7 @@ export interface BaseLabProperties {
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  exemplarSettings?: ExemplarSettings;
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   skipUrl?: string;
@@ -70,6 +79,16 @@ export type LevelProperties<
   // Other level data
   levelData: U;
 };
+
+export type BlocklyLevelProperties<
+  T extends BaseLabProperties = BaseLabProperties,
+  U extends object = object,
+> = LevelProperties<T, U> & {
+  toolboxDefinition?: Blockly.utils.toolbox.ToolboxInfo;
+  sharedBlocks?: BlockDefinition[];
+};
+
+export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
 
 export type StandaloneAppName =
   | 'spritelab'
@@ -155,3 +174,5 @@ export interface LabProps<
   isReadOnlyWorkspace?: boolean;
   channel?: Channel;
 }
+
+export type BlocklySource = Source<BlocklySerialization>;
