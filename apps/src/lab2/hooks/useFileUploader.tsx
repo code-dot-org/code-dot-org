@@ -105,11 +105,11 @@ const moderateImage = async (
       return 'skipped';
     }
     const json = await response.json();
+    metricsReporter.incrementCounter('ModerateCustomImageSuccess', [
+      {name: 'AppName', value: appName},
+      {name: 'UploaderType', value: 'Lab2FileUploader'},
+    ]);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
-      metricsReporter.incrementCounter('ModerateCustomImageSuccess', [
-        {name: 'AppName', value: appName},
-        {name: 'UploaderType', value: 'Lab2FileUploader'},
-      ]);
       return 'ok';
     }
     metricsReporter.incrementCounter('ModerateCustomImageFlagged', [
@@ -234,6 +234,17 @@ export const useFileUploader = ({
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .incrementCounter('ModerateCustomImage', [
+                {name: 'AppName', value: appName || ''},
+                {name: 'UploaderType', value: 'Lab2FileUploader'},
+              ]);
+            analyticsReporter.sendEvent(
+              EVENTS.MODERATE_CUSTOM_IMAGE,
+              {UploaderType: 'Lab2 File Uploader', ProjectType: appName},
+              PLATFORMS.STATSIG
+            );
             const moderationStatus = await moderateImage(file, ext, appName);
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {

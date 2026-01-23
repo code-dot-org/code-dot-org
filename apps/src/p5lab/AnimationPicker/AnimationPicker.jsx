@@ -230,6 +230,14 @@ class AnimationPicker extends React.Component {
           {name: 'AppName', value: this.props.projectType},
           {name: 'UploaderType', value: 'AnimationPicker'},
         ]);
+        analyticsReporter.sendEvent(
+          EVENTS.MODERATE_CUSTOM_IMAGE,
+          {
+            UploaderType: 'Animation Picker',
+            ProjectType: this.props.projectType,
+          },
+          PLATFORMS.STATSIG
+        );
 
         HttpClient.post(`/v3/images/moderate`, file, true, {
           'Content-Type': file.type,
