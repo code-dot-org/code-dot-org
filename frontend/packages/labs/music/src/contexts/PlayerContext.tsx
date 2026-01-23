@@ -16,8 +16,10 @@ export interface PlayerContent {
   workspaceRef?: MutableRefObject<Blockly.Workspace | null>;
   /** A reference to the Driver */
   driverRef: MutableRefObject<Driver>;
-  /** An upcall to be registered with the blockly workspace */
+  /** An upcall to be registered with the Blockly workspace */
   onInject: (workspace: Blockly.WorkspaceSvg) => void;
+  /** An upcall for Blockly events to be registered with the workspace */
+  onChange: (event: Blockly.Events.Abstract) => void;
 }
 
 const PlayerContext = createContext<PlayerContent>(
@@ -40,6 +42,8 @@ export const PlayerProvider = ({children}: PropsWithChildren) => {
     },
     [workspaceRef],
   );
+
+  const onChange = useCallback((_event: Blockly.Events.Abstract) => {}, []);
 
   const driver = useRef<Driver>(new Driver());
 
@@ -65,6 +69,7 @@ export const PlayerProvider = ({children}: PropsWithChildren) => {
         driverRef: driver,
         workspaceRef,
         onInject,
+        onChange,
       }}
     >
       {children}

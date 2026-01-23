@@ -23,6 +23,12 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 export const STARTOVER_WORKSPACE_BLOCKS_MESSAGE =
   "This will reset the workspace to its start state and remove all the blocks you've added or changed.";
 
+/**
+ * This wraps a lab that has a Blockly workspace and Blockly-based sources.
+ *
+ * Effectively, this is a special case of a LabWithSources that understands that
+ * the sources are meant to be some kind of Blockly serialization.
+ */
 const BlocklyLab = <T extends LevelProperties = LevelProperties>({
   children,
   ...props
