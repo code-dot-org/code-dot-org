@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
@@ -21,7 +22,10 @@ describe('HeightResizer', () => {
       pageY: 20,
       cancelable: true,
     });
-    wrapper.instance().onMouseDown(mouseDownEvent);
+    act(() => {
+      wrapper.instance().onMouseDown(mouseDownEvent);
+    });
+    wrapper.update();
 
     expect(resizeItemTopCallback).toHaveBeenCalledTimes(1);
     expect(onResizeCallback).not.toHaveBeenCalled();
@@ -46,7 +50,10 @@ describe('HeightResizer', () => {
       pageY: 40,
       cancelable: true,
     });
-    wrapper.instance().onMouseUp(mouseUpEvent);
+    act(() => {
+      wrapper.instance().onMouseUp(mouseUpEvent);
+    });
+    wrapper.update();
 
     expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
     expect(onResizeCallback).toHaveBeenCalledTimes(1);
