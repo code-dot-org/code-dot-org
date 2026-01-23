@@ -89,7 +89,7 @@ const moderateImage = async (
   }
   const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
   metricsReporter.incrementCounter('ModerateCustomImage', [
-    {name: 'AppName', value: appName},
+    {name: 'AppName', value: appName || 'unknown'},
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
   try {
@@ -99,28 +99,28 @@ const moderateImage = async (
     if (!response.ok) {
       metricsReporter.logError('Error with image moderation: HTTP error');
       metricsReporter.incrementCounter('ModerateCustomImageError', [
-        {name: 'AppName', value: appName},
+        {name: 'AppName', value: appName || 'unknown'},
         {name: 'UploaderType', value: 'Lab2FileUploader'},
       ]);
       return 'skipped';
     }
     const json = await response.json();
     metricsReporter.incrementCounter('ModerateCustomImageSuccess', [
-      {name: 'AppName', value: appName},
+      {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
       return 'ok';
     }
     metricsReporter.incrementCounter('ModerateCustomImageFlagged', [
-      {name: 'AppName', value: appName},
+      {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     return 'flagged';
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);
     metricsReporter.incrementCounter('ModerateCustomImageError', [
-      {name: 'AppName', value: appName},
+      {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     return 'skipped';
@@ -237,12 +237,15 @@ export const useFileUploader = ({
             Lab2Registry.getInstance()
               .getMetricsReporter()
               .incrementCounter('ModerateCustomImage', [
-                {name: 'AppName', value: appName || ''},
+                {name: 'AppName', value: appName || 'unknown'},
                 {name: 'UploaderType', value: 'Lab2FileUploader'},
               ]);
             analyticsReporter.sendEvent(
               EVENTS.MODERATE_CUSTOM_IMAGE,
-              {UploaderType: 'Lab2 File Uploader', ProjectType: appName},
+              {
+                UploaderType: 'Lab2 File Uploader',
+                ProjectType: appName,
+              },
               PLATFORMS.STATSIG
             );
             const moderationStatus = await moderateImage(file, ext, appName);
