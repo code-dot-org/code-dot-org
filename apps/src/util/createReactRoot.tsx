@@ -1,11 +1,12 @@
-import { createRoot } from "react-dom/client";
-import '@code-dot-org/component-library-styles/colors.css';
-import '@code-dot-org/component-library-styles/fontVariables.css';
-import '@code-dot-org/component-library-styles/primitiveColors.css';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import React, {ReactElement} from 'react';
+import {createRoot} from 'react-dom/client';
+import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
 
+// NOTE: MIGHT NEED TO FIGURE OUT WHAT IS GOING ON HERE
 /**
  * Global bootstrapper function that wraps rendered DOM trees with configured providers
  *
@@ -31,5 +32,7 @@ export function createReactRoot(
   }
 
   const root = createRoot(containerElement);
-  root.render(<MuiThemeProvider theme={CdoTheme}>{component}</MuiThemeProvider>);
+  root.render(
+    <MuiThemeProvider theme={CdoTheme}>{component}</MuiThemeProvider>
+  );
 }
