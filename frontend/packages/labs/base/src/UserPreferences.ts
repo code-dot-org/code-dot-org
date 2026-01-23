@@ -1,4 +1,8 @@
 import {NetworkError, HttpClient} from '@code-dot-org/api';
+import {
+  getEnvironmentFromHostname,
+  getDashboardApiUrl,
+} from '@code-dot-org/core';
 
 import type {FontSizeKey} from './constants';
 import LabRegistry from './LabRegistry';
@@ -27,13 +31,14 @@ export default class UserPreferences {
       level_id?: string;
     } = {},
   ) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       ...context,
       using_text_mode: usingTextMode,
     };
 
     HttpClient.post(
-      `/api/v1/users/${this.userId}/using_text_mode`,
+      `${host}/api/v1/users/${this.userId}/using_text_mode`,
       JSON.stringify(body),
       true,
       {
@@ -43,10 +48,11 @@ export default class UserPreferences {
   }
 
   async getUsingTextMode(): Promise<boolean> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const response = await HttpClient.fetchJson<{
         using_text_mode: boolean;
-      }>(`/api/v1/users/${this.userId}/using_text_mode`);
+      }>(`${host}/api/v1/users/${this.userId}/using_text_mode`);
       return response.value.using_text_mode;
     } catch {
       return false;
@@ -58,12 +64,13 @@ export default class UserPreferences {
    * @param displayTheme - display mode string.
    */
   setDisplayTheme(displayTheme: string) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       display_theme: displayTheme,
     };
 
     HttpClient.post(
-      `/api/v1/users/${this.userId}/display_theme`,
+      `${host}/api/v1/users/${this.userId}/display_theme`,
       JSON.stringify(body),
       true,
       {
@@ -73,10 +80,11 @@ export default class UserPreferences {
   }
 
   async getDisplayTheme(): Promise<string> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const response = await HttpClient.fetchJson<{
         display_theme: string;
-      }>(`/api/v1/users/${this.userId}/display_theme`);
+      }>(`${host}/api/v1/users/${this.userId}/display_theme`);
       return response.value.display_theme;
     } catch {
       return '';
@@ -88,12 +96,13 @@ export default class UserPreferences {
    * @param sortByFamilyName - True if sorting by family name, false otherwise.
    */
   setSortByFamilyName(sortByFamilyName: boolean) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       sort_by_family_name: sortByFamilyName,
     };
 
     HttpClient.post(
-      `/api/v1/users/sort_by_family_name`,
+      `${host}/api/v1/users/sort_by_family_name`,
       JSON.stringify(body),
       true,
       {
@@ -107,12 +116,13 @@ export default class UserPreferences {
    * @param showProgressTableV2 - 'v2' if showing progress table v2, 'legacy' if showing v1.
    */
   setShowProgressTableV2(showProgressTableV2: 'v2' | 'legacy') {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       show_progress_table_v2: showProgressTableV2,
     };
 
     HttpClient.post(
-      `/api/v1/users/show_progress_table_v2`,
+      `${host}/api/v1/users/show_progress_table_v2`,
       JSON.stringify(body),
       true,
       {
@@ -126,12 +136,13 @@ export default class UserPreferences {
    * @param hasSeenHomepageWelcome: True if the user has seen the welcome, false otherwise.
    */
   setHasSeenProgressTableInvite(hasSeenHomepageWelcome: boolean) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       has_seen_homepage_welcome: hasSeenHomepageWelcome,
     };
 
     HttpClient.post(
-      `/api/v1/users/has_seen_homepage_welcome`,
+      `${host}/api/v1/users/has_seen_homepage_welcome`,
       JSON.stringify(body),
       true,
       {
@@ -147,12 +158,13 @@ export default class UserPreferences {
   setHasDismissedPersonalizationAlert(
     hasDismissedPersonalizationAlert: boolean,
   ) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       has_dismissed_personalization_alert: hasDismissedPersonalizationAlert,
     };
 
     HttpClient.post(
-      `/api/v1/users/has_dismissed_personalization_alert`,
+      `${host}/api/v1/users/has_dismissed_personalization_alert`,
       JSON.stringify(body),
       true,
       {
@@ -162,10 +174,11 @@ export default class UserPreferences {
   }
 
   async getHasDismissedPersonalizationAlert(): Promise<boolean> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const response = await HttpClient.fetchJson<{
         has_dismissed_personalization_alert: boolean;
-      }>('/api/v1/users/has_dismissed_personalization_alert');
+      }>(`${host}/api/v1/users/has_dismissed_personalization_alert`);
       return response.value.has_dismissed_personalization_alert;
     } catch (error) {
       console.error(
@@ -181,12 +194,13 @@ export default class UserPreferences {
    * @param aiRubricsDisabled - True if disabling AI rubric features, false otherwise.
    */
   setAiRubricsDisabled(aiRubricsDisabled: boolean) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       ai_rubrics_disabled: aiRubricsDisabled,
     };
 
     HttpClient.post(
-      `/api/v1/users/ai_rubrics_disabled`,
+      `${host}/api/v1/users/ai_rubrics_disabled`,
       JSON.stringify(body),
       true,
       {
@@ -196,12 +210,13 @@ export default class UserPreferences {
   }
 
   setAiDifferentiationEnabled(aiDifferentiationEnabled: boolean) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       ai_differentiation_enabled: aiDifferentiationEnabled,
     };
 
     HttpClient.post(
-      `/api/v1/users/ai_differentiation_enabled`,
+      `${host}/api/v1/users/ai_differentiation_enabled`,
       JSON.stringify(body),
       true,
       {
@@ -215,12 +230,13 @@ export default class UserPreferences {
    * @param muteMusic - True if background music muted
    */
   setMuteMusic(muteMusic: boolean) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       mute_music: muteMusic,
     };
 
     HttpClient.post(
-      `/api/v1/users/${this.userId}/mute_music`,
+      `${host}/api/v1/users/${this.userId}/mute_music`,
       JSON.stringify(body),
       true,
       {
@@ -230,10 +246,11 @@ export default class UserPreferences {
   }
 
   async getMuteMusic(): Promise<boolean> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const response = await HttpClient.fetchJson<{
         mute_music: boolean;
-      }>(`/api/v1/users/${this.userId}/mute_music`);
+      }>(`${host}/api/v1/users/${this.userId}/mute_music`);
       return response.value.mute_music;
     } catch {
       return false;
@@ -248,13 +265,14 @@ export default class UserPreferences {
     appName: string,
     field: 'consoleFontSize' | 'editorFontSize',
   ) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     const body = {
       [field]: {
         [appName]: fontSize,
       },
     };
 
-    HttpClient.put('/user_preference', JSON.stringify(body), true, {
+    HttpClient.put(`${host}/user_preference`, JSON.stringify(body), true, {
       'Content-Type': 'application/json',
     });
   }
@@ -263,12 +281,13 @@ export default class UserPreferences {
    * Fetch the user's console font size selection.
    */
   async getConsoleFontSize(appName: string): Promise<FontSizeKey | undefined> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const consoleFontSizeResponse = await HttpClient.fetchJson<{
         console_font_size: {
           [key: string]: FontSizeKey;
         };
-      }>('/user_preference/font_size/console');
+      }>(`${host}/user_preference/font_size/console`);
       const consoleFontSize =
         consoleFontSizeResponse.value.console_font_size[appName];
       return consoleFontSize;
@@ -294,12 +313,13 @@ export default class UserPreferences {
    * Fetch the user's editor font size selection.
    */
   async getEditorFontSize(appName: string): Promise<FontSizeKey | undefined> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const editorFontSizeResponse = await HttpClient.fetchJson<{
         editor_font_size: {
           [key: string]: FontSizeKey;
         };
-      }>('/user_preference/font_size/editor');
+      }>(`${host}/user_preference/font_size/editor`);
       const editorFontSize =
         editorFontSizeResponse.value.editor_font_size[appName];
       return editorFontSize;
@@ -327,10 +347,13 @@ export default class UserPreferences {
   async getThemeSettings(
     errorCallback: (error: NetworkError) => UserThemeSettings,
   ): Promise<UserThemeSettings | undefined> {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       const themeResponse = await HttpClient.fetchJson<{
         theme: UserThemeSettings;
-      }>('/user_preference/theme', {headers: {Accept: 'application/json'}});
+      }>(`${host}/user_preference/theme`, {
+        headers: {Accept: 'application/json'},
+      });
       return themeResponse.value?.theme;
     } catch (error) {
       // Don't call the error callback if 'Not found', as it just means the
@@ -377,9 +400,10 @@ export default class UserPreferences {
     themeUpdate: object,
     errorCallback?: (error: NetworkError) => void,
   ) {
+    const host = getDashboardApiUrl(getEnvironmentFromHostname());
     try {
       return await HttpClient.put(
-        '/user_preference',
+        `${host}/user_preference`,
         JSON.stringify({theme: themeUpdate}),
         true,
         {'Content-Type': 'application/json'},

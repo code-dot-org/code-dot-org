@@ -16,7 +16,7 @@ import {EVENTS} from '@code-dot-org/metrics';
 //import type {ChatButtonData, ResponseSchemaSettings} from '../../../aichat/types';
 import IconButtonWithTooltip from '../../components/IconButtonWithTooltip';
 import PanelContainer from '../../components/PanelContainer';
-import {useExtraLinksButtonContext} from '../../contexts/ExtraLinksButtonContext';
+import {useExtraLinksButton} from '../../contexts/ExtraLinksButtonContext';
 import usePanelPosition from '../../hooks/usePanelPosition';
 import ForTeachersOnly from '../../instructions/components/ForTeachersOnly';
 import Instructions, {
@@ -360,7 +360,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   }, [currentTab]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
-  const {setShowExtraLinksButton} = useExtraLinksButtonContext();
+  const {setShowExtraLinksButton} = useExtraLinksButton();
   useEffect(() => {
     setShowExtraLinksButton(false);
     return () => {

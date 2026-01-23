@@ -47,3 +47,5 @@ export const ToolboxType = {
   UNCATEGORIZED: 'UNCATEGORIZED',
   NONE: 'NONE',
 };
+
+export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
