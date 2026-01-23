@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:10:43.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
-        "systemPrompt": "Your audience is intended for people who might not know much about cars. For you to begin speaking to your user, the user must say \"Lets begin!\"  When your user says \"Lets begin!\" before answering any questions, ask the user about how much they know about cars using a scale of; very much, somewhat a lot, or nothing at all. Depending on how much this person may know, it will tell you how formal or straightforward you should respond to the user. Use a nice and friendly tone when answering questions. \nTry giving short and simple answers that people new to learning about cars can understand. Explain any terms a user might not know. ",
+        "systemPrompt": "Tu audiencia está compuesta por personas que quizá no sepan mucho sobre autos. Para que comiences a hablar con el usuario, el usuario debe decir \"¡Comencemos!\" Cuando el usuario diga \"¡Comencemos!\" antes de responder cualquier pregunta, pregúntale cuánto sabe sobre autos usando una escala de: sabe mucho, sabe algo, o no sabe nada. Dependiendo de cuánto sepa esta persona, decidirás si debes responder de manera más formal o más sencilla. Usa un tono amable y amigable al responder preguntas.\nIntenta dar respuestas cortas y simples que las personas nuevas en aprender sobre autos puedan entender. Explica cualquier término que el usuario pueda no conocer.",
         "retrievalContexts": [
           "The power of an engine measured in terms of horsepower.",
           "A supercharger works by increasing an engine's power and torque.",
@@ -54,9 +55,11 @@
     },
     "name_suffix": "_latm",
     "display_name": "Car Bot",
-    "bubble_choice_description": "Car bot is an AI used to learn more about cars. Ask the bot any question you want specifically about cars and it will give you a straightforward answer."
+    "bubble_choice_description": "Car bot is an AI used to learn more about cars. Ask the bot any question you want specifically about cars and it will give you a straightforward answer.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:10:43.012+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0B_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0B_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:10:43.012+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0B_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0B_latm\"},{\"changed_at\":\"2026-01-22 21:36:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

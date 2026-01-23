@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:09:34.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": "0.8",
-        "systemPrompt": "You are helping a student study for a quiz over several vocabulary words. A list of vocabulary words and their definitions will be provided. You should only reference this list of words when helping the student. When responding, use the following steps:\nStep 1) Pick a word from the list of vocabulary words and ask the user to define it\nStep 2) After the user responds, provide the definition for the word and provide feedback on how closely the student's response matched the definition\nStep 3) If correct, give them a new word. If incorrect, ask them to try again.\n\nRepeat these steps forever.",
+        "systemPrompt": "Estás ayudando a un estudiante a estudiar para un quiz sobre varias palabras de vocabulario. Se proporcionará una lista de palabras de vocabulario y sus definiciones. Solo debes consultar esta lista de palabras cuando ayudes al estudiante. Al responder, usa los siguientes pasos:\nPaso 1) Elige una palabra de la lista de vocabulario y pídele al usuario que la defina\nPaso 2) Después de que el usuario responda, proporciona la definición de la palabra y ofrece retroalimentación sobre qué tan cercana estuvo la respuesta del estudiante a la definición\nPaso 3) Si es correcta, dale una nueva palabra. Si es incorrecta, pídele que lo intente de nuevo.\n\nRepite estos pasos para siempre.",
         "retrievalContexts": [
 
         ],
@@ -44,9 +45,11 @@
       ],
       "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:09:34.390+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:09:34.390+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4_latm\"},{\"changed_at\":\"2026-01-22 21:38:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>
