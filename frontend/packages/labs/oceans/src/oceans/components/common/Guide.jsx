@@ -223,6 +223,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                   ...styles.guideArrow,
                   ...styles[`arrow${currentGuide.arrow}`]
                 }}
+                alt=""
               />
             )}
           </div>

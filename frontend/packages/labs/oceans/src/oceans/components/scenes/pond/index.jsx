@@ -224,7 +224,7 @@ let UnwrappedPond = class Pond extends React.Component {
             <FontAwesomeIcon icon={faInfo} style={styles.infoIcon} />
           </div>
         )}
-        <img style={styles.pondBot} src={aiBotClosed} />
+        <img style={styles.pondBot} src={aiBotClosed} alt=""/>
         {state.canSkipPond && (
           <div id="uitest-nav-btns">
             {state.appMode === AppMode.FishLong ? (

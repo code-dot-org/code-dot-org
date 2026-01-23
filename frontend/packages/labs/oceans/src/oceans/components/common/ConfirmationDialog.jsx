@@ -22,7 +22,7 @@ let UnwrappedConfirmationDialog = class ConfirmationDialog extends React.Compone
       <div style={styles.confirmationDialogBackground}>
         <div style={styles.confirmationDialog}>
           <div style={styles.confirmationDialogContent}>
-            <img src={snail} style={styles.confirmationDialogImg}/>
+            <img src={snail} style={styles.confirmationDialogImg} alt=""/>
             <div>
               <div
                 style={styles.confirmationHeader}
