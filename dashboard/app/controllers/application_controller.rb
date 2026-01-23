@@ -120,7 +120,9 @@ class ApplicationController < ActionController::Base
     allowed_origin = CDO.code_org_url('', request.protocol.chomp('//'))
 
     request_origin = request.headers['Origin']
-    allowed_origin = request_origin if CDO.marketing_sites_hosts.include?(request_origin)
+    allowed_origin = request_origin if CDO.marketing_sites_hosts.include?(request_origin) || CDO.frontend_sites_hosts.include?(request_origin)
+
+    puts request.path, 'request', request_origin, 'allowed', allowed_origin
 
     response.headers['Access-Control-Allow-Origin']      = allowed_origin
     response.headers['Access-Control-Allow-Methods']     = request.request_method
