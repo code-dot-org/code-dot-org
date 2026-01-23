@@ -36,15 +36,6 @@ export interface SourcesContent<T extends ProjectSources = ProjectSources> {
   startOver: () => void;
 }
 
-interface StartOverProps {
-  type: MessageType;
-  message?: string;
-}
-
-const INITIAL_STARTOVER_PROPS: StartOverProps = {
-  type: 'text',
-};
-
 /**
  * The current lab sources metadata.
  */
@@ -79,12 +70,12 @@ export interface SourcesProviderProps<
   getInitialSources?: (levelProperties: T, projectSources?: U) => U | undefined;
   /** The sources to use when starting over */
   startOverSources?: U;
+  /** The message to display when potentially starting over. */
+  defaultStartOverMessage?: string;
 }
 
 export const STARTOVER_WORKSPACE_TEXT_MESSAGE =
   "This will reset the workspace to its start state and remove all the code you've added or changed.";
-export const STARTOVER_WORKSPACE_BLOCKS_MESSAGE =
-  "This will reset the workspace to its start state and remove all the blocks you've added or changed.";
 
 /**
  * Holds the sources for a lab.
@@ -99,6 +90,7 @@ export const SourcesProvider = <
   projectManager,
   getInitialSources,
   startOverSources,
+  defaultStartOverMessage,
   children,
 }: SourcesProviderProps<T, U> & PropsWithChildren) => {
   const [currentSources, setCurrentSources] = useState<U>(
@@ -118,9 +110,7 @@ export const SourcesProvider = <
   const readonlyWorkspaceRef = useRef(readonlyWorkspace);
   readonlyWorkspaceRef.current = readonlyWorkspace;
 
-  const [startOverProps, setStartOverProps] = useState<StartOverProps>(
-    INITIAL_STARTOVER_PROPS,
-  );
+  const [startOverMessage, setStartOverMessage] = useState<string | undefined>(undefined);
 
   const reinitializationHandler = useRef<() => void | null>(null);
   const setReinitializationHandler = useCallback((handler: () => void) => {
@@ -184,14 +174,14 @@ export const SourcesProvider = <
 
   const onStartOver = useCallback(() => {
     reinitializeSources(memoizedStartOverSources as U, true);
-    setStartOverProps(INITIAL_STARTOVER_PROPS);
+    setStartOverMessage(undefined);
   }, [reinitializeSources, memoizedStartOverSources]);
 
   const showStartOverDialog = useCallback(
-    (type: MessageType, message?: string) => {
-      setStartOverProps({type, message});
+    (message?: string) => {
+      setStartOverMessage(message || defaultStartOverMessage);
     },
-    [],
+    [defaultStartOverMessage, setStartOverMessage],
   );
 
   const TypedContext = SourcesContext as unknown as ReturnType<
@@ -209,15 +199,12 @@ export const SourcesProvider = <
       }}
     >
       {children}
-      {startOverProps && (
+      {startOverMessage !== undefined && (
         <StartOverDialog
           onConfirm={onStartOver}
-          onCancel={() => setStartOverProps(INITIAL_STARTOVER_PROPS)}
+          onCancel={() => setStartOverMessage(undefined)}
           message={
-            startOverProps.message ||
-            (startOverProps.type === 'text'
-              ? STARTOVER_WORKSPACE_TEXT_MESSAGE
-              : STARTOVER_WORKSPACE_BLOCKS_MESSAGE)
+            startOverMessage || defaultStartOverMessage || STARTOVER_WORKSPACE_TEXT_MESSAGE
           }
         />
       )}

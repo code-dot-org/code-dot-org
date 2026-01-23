@@ -20,6 +20,8 @@ export interface LabWithSourcesProps<
   getInitialSources?: (levelProperties: T, projectSources?: U) => U | undefined;
   /** The sources to use when starting over */
   startOverSources?: U;
+  /** The message to display when potentially starting over */
+  startOverMessage?: string;
 }
 
 const LabWithSources = <
@@ -33,6 +35,7 @@ const LabWithSources = <
   projectManager,
   getInitialSources,
   startOverSources,
+  startOverMessage,
   children,
 }: LabWithSourcesProps<T, U>) => (
   <Lab
@@ -46,6 +49,7 @@ const LabWithSources = <
       projectManager={projectManager}
       getInitialSources={getInitialSources}
       startOverSources={startOverSources}
+      defaultStartOverMessage={startOverMessage}
     >
       {children}
     </SourcesProvider>

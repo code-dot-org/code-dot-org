@@ -20,6 +20,9 @@ export type BlocklyLabProps<T extends LevelProperties = LevelProperties> =
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
+export const STARTOVER_WORKSPACE_BLOCKS_MESSAGE =
+  "This will reset the workspace to its start state and remove all the blocks you've added or changed.";
+
 const BlocklyLab = <T extends LevelProperties = LevelProperties>({
   children,
   ...props
@@ -47,6 +50,7 @@ const BlocklyLab = <T extends LevelProperties = LevelProperties>({
   return (
     <LabWithSources<T, ProjectSources<BlocklySource>>
       {...props}
+      startOverMessage={props.startOverMessage || STARTOVER_WORKSPACE_BLOCKS_MESSAGE}
       getInitialSources={props.getInitialSources || getInitialBlocklySources}
       startOverSources={memoizedStartOverSources || props.startOverSources}
     >
