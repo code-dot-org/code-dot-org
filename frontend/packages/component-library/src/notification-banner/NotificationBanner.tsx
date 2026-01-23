@@ -4,8 +4,9 @@ import {forwardRef, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import styles from './notificationBanner.module.scss';
 import {NotificationBannerVariant, NotificationBannerStyle} from './types';
+
+import styles from './notificationBanner.module.scss';
 
 export interface NotificationBannerProps {
   /** Variant color/sentiment */
