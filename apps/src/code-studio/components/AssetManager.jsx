@@ -157,7 +157,6 @@ export default class AssetManager extends React.Component {
   /**
    * Called when user initiates an upload.
    * If the file is an image, log event.
-   * TODO: moderate if file is an image.
    * @param data - Upload data from jquery.fileupload
    */
   onUploadStart = data => {
