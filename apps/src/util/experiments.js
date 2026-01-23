@@ -70,8 +70,6 @@ experiments.WEBLAB2_ACCEPT_REJECT = 'weblab2-accept-reject';
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use AI Tutor system prompts from Langfuse
 experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
-// Enable flagging of AI responses to Langfuse
-experiments.LOG_TO_LANGFUSE = 'log-to-langfuse';
 // Enable AI lesson summaries
 experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 // Enable AI lesson podcasts

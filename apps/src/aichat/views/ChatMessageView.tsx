@@ -6,7 +6,6 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   AiChatClientTypes,
@@ -61,13 +60,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   // Determine if we should show the FlagResponseButton
-  // The user must either be a levelbuilder or have the LOG_TO_LANGFUSE
-  // experiment. And we currently only show the button for AI Tutor messages
+  // The user must be a levelbuilder, and we currently only show the button for AI Tutor messages
   // that have been saved to the server (i.e. have an ID).
   const canLogToLangfuse =
-    (user.isLevelbuilder ||
-      experiments.isEnabledAllowingQueryString(experiments.LOG_TO_LANGFUSE)) &&
-    clientType === AiChatClientTypes.AI_TUTOR;
+    user.isLevelbuilder && clientType === AiChatClientTypes.AI_TUTOR;
 
   // `chatMessageDisplayText` is optional and only needed if intended display text
   //  is different from the chatMessageText sent to the model.
