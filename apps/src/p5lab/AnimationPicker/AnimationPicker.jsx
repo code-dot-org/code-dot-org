@@ -226,7 +226,7 @@ class AnimationPicker extends React.Component {
           pendingUploadData: data,
         });
 
-        MetricsReporter.incrementCounter('ModerateCustomImage', [
+        MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
           {name: 'AppName', value: this.props.projectType || 'unknown'},
           {name: 'UploaderType', value: 'AnimationPicker'},
         ]);
@@ -247,7 +247,7 @@ class AnimationPicker extends React.Component {
               MetricsReporter.logError(
                 'Error with image moderation: HTTP error'
               );
-              MetricsReporter.incrementCounter('ModerateCustomImageError', [
+              MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
                 {name: 'AppName', value: this.props.projectType || 'unknown'},
                 {name: 'UploaderType', value: 'AnimationPicker'},
               ]);
@@ -259,7 +259,7 @@ class AnimationPicker extends React.Component {
           .then(json => {
             if (!json) return; // Skip if an HTTP error occurred.
 
-            MetricsReporter.incrementCounter('ModerateCustomImageSuccess', [
+            MetricsReporter.incrementCounter('ModerateCustomImage.Success', [
               {name: 'AppName', value: this.props.projectType || 'unknown'},
               {name: 'UploaderType', value: 'AnimationPicker'},
             ]);
@@ -276,7 +276,7 @@ class AnimationPicker extends React.Component {
                 },
                 PLATFORMS.STATSIG
               );
-              MetricsReporter.incrementCounter('ModerateCustomImageFlagged', [
+              MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
                 {name: 'AppName', value: this.props.projectType || 'unknown'},
                 {name: 'UploaderType', value: 'AnimationPicker'},
               ]);
@@ -288,7 +288,7 @@ class AnimationPicker extends React.Component {
           .catch(err => {
             this.props.onUploadError(msg.animationPicker_uploadingError());
             MetricsReporter.logError('Error with image moderation: ' + err);
-            MetricsReporter.incrementCounter('ModerateCustomImageError', [
+            MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
               {name: 'AppName', value: this.props.projectType || 'unknown'},
               {name: 'UploaderType', value: 'AnimationPicker'},
             ]);

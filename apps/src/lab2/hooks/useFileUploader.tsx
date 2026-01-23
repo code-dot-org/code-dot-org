@@ -88,7 +88,7 @@ const moderateImage = async (
     return 'skipped';
   }
   const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
-  metricsReporter.incrementCounter('ModerateCustomImage', [
+  metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
     {name: 'AppName', value: appName || 'unknown'},
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
@@ -98,28 +98,28 @@ const moderateImage = async (
     });
     if (!response.ok) {
       metricsReporter.logError('Error with image moderation: HTTP error');
-      metricsReporter.incrementCounter('ModerateCustomImageError', [
+      metricsReporter.incrementCounter('ModerateCustomImage.Error', [
         {name: 'AppName', value: appName || 'unknown'},
         {name: 'UploaderType', value: 'Lab2FileUploader'},
       ]);
       return 'skipped';
     }
     const json = await response.json();
-    metricsReporter.incrementCounter('ModerateCustomImageSuccess', [
+    metricsReporter.incrementCounter('ModerateCustomImage.Success', [
       {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
       return 'ok';
     }
-    metricsReporter.incrementCounter('ModerateCustomImageFlagged', [
+    metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
       {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     return 'flagged';
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);
-    metricsReporter.incrementCounter('ModerateCustomImageError', [
+    metricsReporter.incrementCounter('ModerateCustomImage.Error', [
       {name: 'AppName', value: appName || 'unknown'},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
