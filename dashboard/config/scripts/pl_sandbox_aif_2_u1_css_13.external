@@ -7,16 +7,27 @@ markdown <<MARKDOWN
 
 ####  Now that we have the structure of a website, let’s add some style!
 
-## What is CSS?
-
-#### **CSS (Cascading Style Sheets)** is the language that controls the **look and feel** of a webpage.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <b>CSS</b> (Cascading Style Sheets) is the language that controls the look and feel of a webpage.
+</p>
+</div>
 
 #### If HTML is the structure, CSS is the design—it handles colors, fonts, spacing, and layout.
 
-<img src="https://images.code.org/f68c77c95058c8b47fa5edd30769402c-image-1761070407703.png" alt="Image CS Discoveries students" width="200px" style="border-radius:20px; float:right; margin: 0 50px 5px 10px;">
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    HTML builds the page. <br>CSS styles it.
+  </p>
+</div>
 
-## Key things CSS does
-
+#### With CSS you can...
 - #### Changes colors, fonts, and text sizes
 - #### Controls spacing (margins, padding, alignment)
 - #### Adds borders, backgrounds, and styles
@@ -26,8 +37,8 @@ markdown <<MARKDOWN
 
 ---
 
-# How it Works 
-#### The CSS file will connect to your HTML file using a line inside the `<head>` section: 
+## How it Works 
+#### To apply CSS to a webpage, you link a CSS file inside the `<head>` section of your HTML: 
 
 <img src="https://images.code.org/25a94e1abb5764272bb756bd05e472bf-image-1763399640046.png" alt="link code to connect html to css file" width="450px" style="display: block;  float:left ;border-radius:10px; ">
 
@@ -35,75 +46,64 @@ markdown <<MARKDOWN
 
 #### That line tells the computer: *“Use the style rules in this file to decorate and arrange my HTML content.”*
 
-#### Once that link is made, the browser looks at the CSS file and matches each selector (like body, header, or h1) to the same element in your HTML.
+####  Once the file is linked, the browser looks at each CSS rule and applies it to the matching HTML elements.
+
+---
 
 ## CSS Selectors and Properties
 
-<img src="https://images.code.org/d661e83194c3820b2be249901b728d9b-image-1763399381136.png" alt="sample css code with header, body, h1 and h2 selectors labeled" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+#### Each CSS rule has three parts:
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; font-family: Arial, sans-serif; font-size: 14pt; margin: 20px 0;">
 
   <!-- 🎯 Selectors Card -->
-  <div style="flex: 1 1 350px; background-color: #f7f8fa; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+  <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
     <h4 style="margin-top: 0; color: #005b6b;">🎯 <strong>Selectors</strong></h4>
     <p style="margin-bottom: 12px;font-size: 14pt">
-      Selectors are the names of the HTML elements you want to style.
-      In this example:
-    </p>
-    <ul style="list-style-type: none; padding-left: 0; line-height: 1.5;">
-      <li style ="font-size: 14pt"><strong>header →</strong> Targets the &lt;header&gt; section of the HTML page.</li>
-      <li style ="font-size: 14pt"><strong>body →</strong> Styles the whole page.</li>
-      <li style ="font-size: 14pt"><strong>h1 →</strong> Styles the main heading inside the body.</li>
-      <li style ="font-size: 14pt"><strong>h2 →</strong> Styles subheadings inside the body.</li>
-    </ul>
-    <p style="margin-top: 12px;font-size: 14pt">
-      Each selector acts like a label — the browser looks for that tag in the HTML and applies the matching styles.
+     Tell the browser <strong>which HTML elements</strong> to style (like <code>body</code>, <code>header</code>, or <code>h1</code>).
     </p>
   </div>
 
-  <!-- 🎨 Properties and Values Card -->
-  <div style="flex: 1 1 350px; background-color: #dlb9e3; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
-    <h4 style="margin-top: 0; color: #005b6b;">🎨 <strong>Properties and Values</strong></h4>
+  <!-- 🎨 Properties Card -->
+  <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">🎨 <strong>Properties</strong></h4>
     <p style="margin-bottom: 12px;font-size: 14pt">
-      Inside each set of curly braces { }, you see properties and values.
-      Each property controls one visual or layout feature, and the value tells the browser how to display it.
-    </p>
-    <ul style="list-style-type: none; padding-left: 0; line-height: 1.5;">
-      <li style ="font-size: 14pt"><strong>background-color: lightblue; →</strong> fills the header background with light blue.</li>
-      <li style ="font-size: 14pt"><strong>text-align: center; →</strong> centers the text horizontally.</li>
-      <li style ="font-size: 14pt"><strong>font-family: Arial, sans-serif; →</strong> sets the font style for all text inside &lt;body&gt;.</li>
-      <li style ="font-size: 14pt"><strong>max-width: 800px; →</strong> limits how wide the content can stretch.</li>
-      <li style ="font-size: 14pt"><strong>color: #0056b3; →</strong> changes text color using a hex code.</li>
-      <li style ="font-size: 14pt"><strong>margin and padding →</strong> control spacing outside or inside an element.</li>
-    </ul>
-  </div>
+      Name <strong>what you want to change</strong> about an element, such as <code>color</code>, <code>margin</code>, or <code>background-color</code>.
+      </p>
+</div>
 
+  <!-- ＃ Values Card -->
+  <div style="flex: 1; background-color: #F5F7F8; border-radius: 12px; padding: 20px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+    <h4 style="margin-top: 0; color: #005b6b;">＃ <strong>Values</strong></h4>
+    <p style="margin-bottom: 12px;font-size: 14pt">
+      Set <strong>how the property changes</strong>, like <code>blue</code>, <code>20px</code>, or <code>center</code>.
+      </p>
+</div>
 </div>
 
 
+> #### Review the CSS below and try to identify the selectors, properties, and values. 
 
-<div style="text-align: center;">
-  <p style="
-    font-size: 18px; 
-    background-color: #F5F7F8; 
-    padding: 10px; 
-    border-left: 5px solid #8148B2; 
-    border-right: 5px solid #8148B2;
-    display: inline-block;
-  ">
-    <i>
-      <b>Selectors</b> point to what you want to style. <br><br>
-      <b>Properties</b> describe how it should look.<br><br>
-      <b>Values</b> tell the browser exactly what to do.
-    </i>
-  </p>
+
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/d661e83194c3820b2be249901b728d9b-image-1763399381136.png" alt="sample css code with header, body, h1 and h2 selectors labeled" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+<br>
+
+<details style="text-align:center;">
+<summary style="cursor:pointer;display:inline-block; background:#8148B2; color:white; padding:14px 22px; font-size:18px; font-weight:600; border-radius:999px; list-style:none; margin:0 auto;">
+Click to show example how this might look on a webpage.
+</summary>
+
+<div style="margin-top:16px;display:flex;justify-content:center;gap:20px;">
+<img src="https://images.code.org/249cab55a1e216d7653998ffb88ba016-Screenshot%202026-01-16%20at%2012.54.52%20PM.png" alt="annotated html structure" width="400" style="border-radius:10px;">
+<img src="https://images.code.org/a546b33c4184dc532d0e59c7e15f6104-Screenshot%202026-01-16%20at%2012.52.29%20PM.png" alt="annotated html structure" width="450" style="border-radius:10px;">
 </div>
+</details>
 
+<br>
 
-
-
-## What's Next?
-
-#### Let's take a look at some common CSS tags and see what they do. 
+## Up Next: let's take a look at some common CSS tags and see what they do. 
 
 MARKDOWN

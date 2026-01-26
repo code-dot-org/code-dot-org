@@ -44,5 +44,5 @@ When the `updatePrice()` method is called with `item2` as the argument, it is ac
 
 In the `updatePrice()` method, the `price` attribute of the item object passed as a parameter is updated to `10.0`. Since the `item1` object and the `item2` object both refer to the same object in memory, the `price` attribute of `item2` is also updated to `10.0`.
 
-Therefore, when `System.out.println(item2.price);` is executed, it prints the updated price of MARKDOWN0.
+Therefore, when `System.out.println(item2.price);` is executed, it prints the updated price of 10.
 MARKDOWN

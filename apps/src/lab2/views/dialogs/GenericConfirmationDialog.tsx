@@ -1,17 +1,22 @@
 import React from 'react';
 
-import GenericDialog, {GenericDialogProps} from './GenericDialog';
+import GenericDialog, {
+  GenericDialogBodyProps,
+  GenericDialogProps,
+} from './GenericDialog';
 
-export type GenericConfirmationDialogProps = Required<
-  Pick<GenericDialogProps, 'title' | 'message'>
-> & {
-  handleConfirm?: () => void;
-  handleCancel?: () => void;
-  handleNeutral?: () => void;
-  confirmText?: string;
-  neutralText?: string;
-  destructive?: boolean;
-};
+export type GenericConfirmationDialogProps = Pick<
+  GenericDialogProps,
+  'title' | 'icon'
+> &
+  Pick<GenericDialogBodyProps, 'message' | 'bodyComponent'> & {
+    handleConfirm?: () => void;
+    handleCancel?: () => void;
+    handleNeutral?: () => void;
+    confirmText?: string;
+    neutralText?: string;
+    destructive?: boolean;
+  };
 
 /**
  * Generic confirmation dialog used in Lab2 labs.
@@ -23,12 +28,14 @@ const GenericConfirmationDialog: React.FunctionComponent<
 > = ({
   title,
   message,
+  bodyComponent,
   handleConfirm,
   handleCancel,
   handleNeutral,
   confirmText,
   destructive,
   neutralText,
+  icon,
 }) => {
   const buttons = {
     confirm: {
@@ -43,7 +50,14 @@ const GenericConfirmationDialog: React.FunctionComponent<
       ? {neutral: {text: neutralText, callback: () => handleNeutral?.()}}
       : {}),
   };
-  return <GenericDialog title={title} message={message} buttons={buttons} />;
+  return (
+    <GenericDialog
+      title={title}
+      buttons={buttons}
+      icon={icon}
+      {...(message ? {message} : {bodyComponent})}
+    />
+  );
 };
 
 export default GenericConfirmationDialog;

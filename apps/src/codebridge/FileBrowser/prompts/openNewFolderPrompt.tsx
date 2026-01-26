@@ -3,7 +3,6 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {FolderId} from '@codebridge/types';
 import {validateFolderNameForModal} from '@codebridge/utils';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -29,7 +28,12 @@ export const openNewFolderPrompt = async ({
 }: OpenNewFilePromptArgsType) => {
   const results = await dialogControl.showDialog({
     type: DialogType.GenericPrompt,
-    title: codebridgeI18n.newFolderPrompt(),
+    title: 'Create a new folder',
+    message: 'Give your folder a name.',
+    textFieldProps: {
+      label: 'Folder name',
+    },
+    confirmButtonText: 'Create folder',
     validateInput: (folderName: string) => {
       return validateFolderNameForModal({
         folderName,

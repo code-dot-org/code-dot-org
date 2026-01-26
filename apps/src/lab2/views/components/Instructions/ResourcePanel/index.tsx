@@ -36,6 +36,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
   resourcePanelInstructionsElementId,
@@ -74,9 +75,21 @@ export interface BackpackProps {
     isSupportFileName: boolean;
     newFileName: string;
   };
-  saveFile: (fileId: string, contents: string, url?: string) => void;
-  createNewFile: (fileName: string, contents: string, url?: string) => void;
+  saveFileToProject: (fileId: string, contents: string, url?: string) => void;
+  createNewProjectFile: (
+    fileName: string,
+    contents: string,
+    url?: string
+  ) => void;
   findIdForFileName: (fileName: string) => string | undefined;
+  saveToBackpackButton?: {
+    text: string;
+    onClick: (
+      fileList: string[],
+      errorCallback: (error: string) => void
+    ) => Promise<void>;
+  };
+  supportedFileTypes: string[];
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -186,6 +199,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const dispatch = useAppDispatch();
+  const setBackpackTabAsActive = useCallback(
+    () => setCurrentTab(Tabs.Backpack),
+    []
+  );
+  const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -203,10 +221,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor2') === 'true' ||
     queryParams('show-ai-tutor') === 'true';
 
-  const showBackpack =
-    backpackProps &&
-    !isPermanentlyReadOnly &&
-    (appName === 'pythonlab' || appName === 'weblab2');
+  const showBackpack = backpackProps && !isPermanentlyReadOnly;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -275,7 +290,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Backpack] = (
         <BackpackPanel
           {...backpackProps}
-          openPanelCallback={() => setCurrentTab(Tabs.Backpack)}
+          openPanelCallback={setBackpackTabAsActive}
+          backpackRefreshKey={backpackRefreshKey}
         />
       );
     }
@@ -322,6 +338,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isViewingOldVersion,
     currentTab,
     backpackProps,
+    setBackpackTabAsActive,
+    backpackRefreshKey,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -589,6 +607,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               rightHeaderContent={
                 currentTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
+                ) : currentTab === Tabs.Backpack ? (
+                  <BackpackHeaderButtons
+                    incrementBackpackRefreshKey={() =>
+                      setBackpackRefreshKey(prev => prev + 1)
+                    }
+                  />
                 ) : (
                   rightHeaderContent
                 )

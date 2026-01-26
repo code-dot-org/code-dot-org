@@ -7,6 +7,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsViewingExemplar,
   getAppOptionsEditingExemplar,
@@ -90,19 +91,6 @@ export const HTMLPreview: React.FC = () => {
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
-
-  // The legacy preview is behind an experiment flag. We pass this flag
-  // through to the inner iframe via a query string so it knows whether or not to use the legacy preview.
-  // TODO: remove this and use the new preview by default once the new preview has been out for a few days.
-  // https://codedotorg.atlassian.net/browse/AFL-406
-  const previewQueryString = useMemo(() => {
-    const useLegacyPreview = experiments.isEnabledAllowingQueryString(
-      experiments.WEBLAB2_LEGACY_PREVIEW
-    );
-    return useLegacyPreview
-      ? `?${experiments.WEBLAB2_LEGACY_PREVIEW}=true`
-      : '';
-  }, []);
 
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
@@ -300,6 +288,12 @@ export const HTMLPreview: React.FC = () => {
           navigationHistoryIndex,
           navigationHistory
         );
+      } else if (
+        event.data.type === IframeMessageType.SERVICE_WORKER_UNAVAILABLE
+      ) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logWarning('Service worker unavailable in HTMLPreview iframe.');
       }
     };
 
@@ -446,7 +440,7 @@ export const HTMLPreview: React.FC = () => {
                   ? moduleStyles.desktopPreviewIframe
                   : moduleStyles.mobilePreviewIframe
               )}
-              src={`${previewUrl}${previewQueryString}`}
+              src={previewUrl}
             />
           </div>
         )}

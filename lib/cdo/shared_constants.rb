@@ -909,6 +909,11 @@ module SharedConstants
     SECTION: "section"
   }.freeze
 
+  AI_DIFF_ARTIFACT_TYPE = {
+    EXIT_TICKET: "AidiffExitTicket",
+    LESSON_HOOK: "AidiffLessonHook"
+  }.freeze
+
   DISALLOWED_ROUTES = [
     "/admin/",
     "/api/",

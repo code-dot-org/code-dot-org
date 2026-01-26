@@ -155,6 +155,7 @@ namespace :seed do
     oceans
     sports
     jigsaw
+    mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -226,30 +227,29 @@ namespace :seed do
     oceans
     sports
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
-  SEEDED = "#{CURRICULUM_CONTENT_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
   #
   # @param [Hash] opts the options to update the scripts with.
-  # @option opts [Boolean] :incremental Whether to only process modified scripts.
-  # @option opts [Boolean] :script_files Which script files to update. Default:
+  # @option opts [Boolean] :incremental Whether to only process modified scripts
+  #   (compares MD5 hash of file contents against stored hash in database).
+  # @option opts [Array<String>] :script_files Which script files to update. Default:
   #   all script files.
   def update_scripts(opts = {})
-    # optionally, only process modified scripts to speed up seed time
-    scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
-      File.mtime(SEEDED) : Time.at(0)
-    FileUtils.touch(SEEDED) # touch seeded "early" to reduce race conditions
     script_files = opts[:script_files] || SCRIPTS_GLOB
-    begin
-      custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      custom_scripts.each do |filepath|
-        Services::ScriptSeed.seed_from_json_file(filepath)
-      rescue => exception
-        raise exception, "Error parsing script file #{filepath}: #{exception}"
-      end
-    rescue
-      FileUtils.rm(SEEDED) # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
-      raise
+    script_md5s_by_name = Unit.pluck(:name, :md5).to_h
+
+    script_files.each do |filepath|
+      contents = File.read(filepath)
+      md5 = Digest::MD5.hexdigest(contents)
+      script_name = JSON.parse(contents)['script']['name']
+
+      # Skip if incremental AND hash matches
+      next if opts[:incremental] && md5 == script_md5s_by_name[script_name]
+
+      Services::ScriptSeed.seed_from_json_file(filepath, md5: md5)
+    rescue => exception
+      raise exception, "Error parsing script file #{filepath}: #{exception}"
     end
   end
 
@@ -362,6 +362,7 @@ namespace :seed do
        step
        oceans
        jigsaw
+       mix-move-ai-2025
        sports).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end

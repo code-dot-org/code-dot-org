@@ -1,0 +1,53 @@
+name 'pl-aif-2-U3-Intro-1_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/ce7cbc10881c44be5b601d1063955dc5-image-1765207617354.png" alt="Banner image that says, Welcome to Teaching Building Data-driven systems" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
+
+# Welcome!
+
+#### This professional learning module prepares you to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+
+
+___
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/7f813b0aec7d472e470f94eb91471aa1-image-1760466945803.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/ddb463a06ccc88f5d7390a1f841a0f31-image-1760467013014.png" style="border-radius: 5pt; width: 32%;">
+</div>
+
+___
+
+
+#### **By the end of this professional learning module, you will be able to:**
+
+* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design
+* #### Model core data-structure skills in Web Lab
+* #### Teach common array and object operations
+* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code
+
+
+
+
+
+
+## Take Our Pre-Survey
+
+#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+</div>
+
+### **Suggested total time for this module:** 75 minutes
+
+
+MARKDOWN

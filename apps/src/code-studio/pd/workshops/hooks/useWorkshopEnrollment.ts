@@ -71,6 +71,18 @@ export function useWorkshopEnrollment({
           text: 'Sorry, we could not find this workshop. Please check the link and try again.',
         });
         break;
+      case SUBMISSION_STATUSES.NO_SCHOOL:
+        setAlertState({
+          show: true,
+          text: 'Please add your school information in account settings.',
+        });
+        break;
+      case SUBMISSION_STATUSES.NOT_USA:
+        setAlertState({
+          show: true,
+          text: 'Sorry, we are only accepting workshop enrollments from the US at this time.',
+        });
+        break;
       case SUBMISSION_STATUSES.SUCCESS:
         sessionStorage.setItem('rpName', regionalPartnerName || '');
         sessionStorage.setItem('workshopId', `${workshopId}`);

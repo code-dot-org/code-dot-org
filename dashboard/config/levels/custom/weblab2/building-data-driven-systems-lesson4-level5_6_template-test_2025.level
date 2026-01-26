@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-20T05:14:23.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<link href=\"https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"style.css\">\n\n<section class=\"dessert-card\">\n  <h2>Current Dessert</h2>\n  <p><strong>Name:</strong> <span id=\"dessertName\"></span></p>\n  <p><strong>Flavor:</strong> <span id=\"dessertFlavor\"></span></p>\n  <p><strong>Frozen?</strong> <span id=\"dessertFrozen\"></span></p>\n</section>\n\n<div class=\"controls\">\n  <button id=\"rename\">Rename to \"Cookie Sundae\"</button>\n  <button id=\"toggle-frozen\">Toggle Frozen Status</button>\n  <button id=\"recategorize\">Change Flavor (Bracket Notation)</button>\n</div>\n\n<script src=\"script.js\" defer></script>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Dessert Theme Styling */\nbody {\n  font-family: 'Quicksand', sans-serif;\n  background-color: #fff5f8; /* Light pink background */\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n  gap: 20px;\n}\n\n.dessert-card {\n  background-color: white;\n  border: 4px solid #f8a5c2; /* Darker pink border */\n  border-radius: 20px;\n  padding: 30px;\n  width: 300px;\n  box-shadow: 0 8px 16px rgba(246, 107, 157, 0.2);\n  text-align: center;\n}\n\nh2 {\n  font-family: 'Fredoka', sans-serif;\n  color: #c44569; /* Deep berry color */\n  margin-top: 0;\n  font-size: 2em;\n}\n\np {\n  color: #596275;\n  font-size: 1.1em;\n  margin: 15px 0;\n  border-bottom: 2px dashed #f1f2f6;\n  padding-bottom: 10px;\n}\n\nstrong {\n  color: #c44569;\n}\n\nspan {\n  font-weight: 600;\n  color: #303952;\n}\n\n/* Button Controls Styling */\n.controls {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  width: 300px;\n}\n\nbutton {\n  background-color: #f78fb3;\n  color: white;\n  border: none;\n  padding: 12px;\n  border-radius: 10px;\n  font-family: 'Quicksand', sans-serif;\n  font-weight: 600;\n  cursor: pointer;\n  transition: background-color 0.2s;\n  font-size: 0.95em;\n}\n\nbutton:hover {\n  background-color: #e66767;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// --- Parallel Arrays (Reference Data) ---\nconst dessertNames = [\"Brownie\", \"Cupcake\", \"Ice Cream\"];\nconst dessertFlavors = [\"Chocolate\", \"Vanilla\", \"Strawberry\"];\nconst dessertIsFrozen = [false, false, true];\n\n//Dessert object\n\n//Render function to display object properties\nconst render = () => {\n  const nameSpan = document.querySelector(\"#dessertName\");\n  const flavorSpan = document.querySelector(\"#dessertFlavor\");\n  const frozenSpan = document.querySelector(\"#dessertFrozen\");\n\n  nameSpan.textContent = \"\";\n  flavorSpan.textContent = \"\";\n\n  if (true) {\n    frozenSpan.textContent = \"Yes\";\n  } else {\n    frozenSpan.textContent = \"No\";\n  }\n};\n\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "PAIR.md",
+          "language": "md",
+          "contents": "## Prompt \nAsk AI how to update object properties using dot notation \nand bracket notation\n\n## Analyze \nExamine the AI’s examples, noting the similarities and differences \nbetween the two methods.\n\n## Integrate \nTry both methods to change property values\n\n## Reflect \nWhich syntax feels easier or clearer? \n\n\nWhen might you need bracket notation instead?\n\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "4"
+      ]
+    },
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-20T05:14:23.569+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level5_6_template-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level5_6_template-test-2025\"}]"
+}]]></config>
+</Weblab2>

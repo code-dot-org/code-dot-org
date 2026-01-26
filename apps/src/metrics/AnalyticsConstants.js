@@ -449,6 +449,7 @@ const EVENTS = {
 
   // Add custom image to project
   UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  MODERATE_CUSTOM_IMAGE: 'User-submitted image is moderated',
   SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
   FLAGGED_CUSTOM_IMAGE:
     'User attempting to upload an image that is flagged for abuse',
@@ -547,19 +548,6 @@ const EVENTS = {
   CODEBRIDGE_UPLOAD_UNACCEPTED_FILE:
     'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
-
-  // Codebridge - Backpack events
-  CODEBRIDGE_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME:
-    'Save renamed file to backpack on codebridge',
-  CODEBRIDGE_DELETE_FROM_BACKPACK: 'Delete from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW:
-    'Import new file from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE:
-    'Import a file from backpack on codebridge, replacing existing file',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME:
-    'Import a file from backpack on codebridge, renaming it',
 
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
@@ -686,6 +674,16 @@ const EVENTS = {
     'AI Tutor Version File Preview Button Clicked',
   AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR:
     'File Previewed in AI Tutor Version View via URL bar',
+
+  // Generic backpack events
+  SAVE_TO_BACKPACK_NEW: 'Save new file to backpack',
+  SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack',
+  SAVE_TO_BACKPACK_RENAME: 'Save renamed file to backpack',
+  DELETE_FROM_BACKPACK: 'Delete from backpack',
+  IMPORT_FROM_BACKPACK_NEW: 'Import new file from backpack',
+  IMPORT_FROM_BACKPACK_REPLACE:
+    'Import a file from backpack, replacing existing file',
+  IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack, renaming it',
 };
 
 const EVENT_GROUP_NAMES = {

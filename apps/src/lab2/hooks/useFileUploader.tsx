@@ -2,6 +2,8 @@ import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
@@ -85,20 +87,61 @@ const moderateImage = async (
   ) {
     return 'skipped';
   }
-  const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
-    'Content-Type': file.type || 'application/octet-stream',
-  });
-  if (!response.ok) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error with image moderation');
+  const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
+  const appNameForMetrics = appName || 'unknown';
+  metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
+    {name: 'AppName', value: appNameForMetrics},
+    {name: 'UploaderType', value: 'Lab2FileUploader'},
+  ]);
+  analyticsReporter.sendEvent(
+    EVENTS.MODERATE_CUSTOM_IMAGE,
+    {
+      UploaderType: 'Lab2 File Uploader',
+      ProjectType: appName,
+    },
+    PLATFORMS.STATSIG
+  );
+  try {
+    const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
+      'Content-Type': file.type || 'application/octet-stream',
+    });
+    if (!response.ok) {
+      metricsReporter.logError('Error with image moderation: HTTP error');
+      metricsReporter.incrementCounter('ModerateCustomImage.Error', [
+        {name: 'AppName', value: appNameForMetrics},
+        {name: 'UploaderType', value: 'Lab2FileUploader'},
+      ]);
+      return 'skipped';
+    }
+    const json = await response.json();
+    metricsReporter.incrementCounter('ModerateCustomImage.Success', [
+      {name: 'AppName', value: appNameForMetrics},
+      {name: 'UploaderType', value: 'Lab2FileUploader'},
+    ]);
+    if (json?.rating === 'everyone' || json?.rating === 'unknown') {
+      return 'ok';
+    }
+    metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
+      {name: 'AppName', value: appNameForMetrics},
+      {name: 'UploaderType', value: 'Lab2FileUploader'},
+    ]);
+    analyticsReporter.sendEvent(
+      EVENTS.FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'Lab2 File Uploader',
+        ProjectType: appName,
+      },
+      PLATFORMS.STATSIG
+    );
+    return 'flagged';
+  } catch (error) {
+    metricsReporter.logError('Error with image moderation: ' + error);
+    metricsReporter.incrementCounter('ModerateCustomImage.Error', [
+      {name: 'AppName', value: appNameForMetrics},
+      {name: 'UploaderType', value: 'Lab2FileUploader'},
+    ]);
     return 'skipped';
   }
-  const json = await response.json();
-  if (json?.rating !== 'everyone' && json?.rating !== 'unknown') {
-    return 'flagged';
-  }
-  return 'ok';
 };
 /**
  * A custom hook that provides functionality for file uploads,
@@ -200,6 +243,11 @@ export const useFileUploader = ({
           }
         };
       } else {
+        analyticsReporter.sendEvent(
+          EVENTS.UPLOAD_CUSTOM_IMAGE,
+          {UploaderType: 'Lab2 File Uploader', ProjectType: appName},
+          PLATFORMS.STATSIG
+        );
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:41.000Z",
   "level_num": "custom",
@@ -71,10 +72,13 @@
     "bubble_choice_description": "Build an app that helps users calculate the price for renting scooters and bikes.",
     "thumbnail_url": "https://images.code.org/9ca103f511c4976f5d571151624e1f32-scooterApp.png",
     "name_suffix": "_2025",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:41.198+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice VeloCity Ride L0\\\"\"],\"cloned_from\":\"CSP Conditionals Practice VeloCity Ride L0\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:41.198+00:00\",\"changed\":[\"cloned from \\\"CSP Conditionals Practice VeloCity Ride L0\\\"\"],\"cloned_from\":\"CSP Conditionals Practice VeloCity Ride L0\"},{\"changed_at\":\"2026-01-16 20:10:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-16 20:13:44 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

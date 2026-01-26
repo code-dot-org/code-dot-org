@@ -1,14 +1,19 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
 import {
   BodyThreeText,
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import i18n from '@cdo/locale';
 
+import ActionButtons from './ActionButtons';
+import AddResourceDialog from './AddResourceDialog';
 import FeedbackTextbox from './FeedbackTextbox';
+import UrlTab from './UrlTab';
+import {useLessonFeedback} from './useLessonFeedback';
 
 import styles from './lessonFeeedback.module.scss';
 
@@ -18,66 +23,114 @@ interface LessonFeedbackWidgetProps {
   teacherHasEnabledAi: boolean;
 }
 
-/**
- * Teacher-style lesson feedback widget for the Student Snapshot dashboard.
- *
- * The widget handles its own data fetching, loading, and error states.
- */
-
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   lessonId,
   studentId,
   teacherHasEnabledAi = false,
 }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const {
+    // State values
+    isLoading,
+    error,
+    scrollable,
+    feedbackText,
+    recommendedActionText,
+    resourceLink,
+    resourceName,
+    showAddResourcePopup,
+    tempResourceName,
+    tempResourceLink,
+    // Event handlers
+    handleFeedbackEdited,
+    handleRecommendedActionChange,
+    handleAddResourceClick,
+    handleCloseResourcePopup,
+    handleTempResourceNameChange,
+    handleTempResourceLinkChange,
+    exitResourcePopup,
+    handleResourceSave,
+    handleSaveAsDraft,
+    handleSendToStudent,
+    deleteResourceLink,
+  } = useLessonFeedback({
+    lessonId,
+    studentId,
+    teacherHasEnabledAi,
+  });
 
   let widgetContent: React.ReactNode;
-  let scrollable = false;
 
   // TODO: Load feedback data from server when API is available - building off Liam's Lesson Insight work
+  // Update state according to the data from back end
 
-  useEffect(() => {
-    if (!lessonId) {
-      setIsLoading(true);
-      setError(null);
-      return;
-    } else if (!teacherHasEnabledAi) {
-      setError('AI Teaching Assistant is not enabled for this teacher.');
-      setIsLoading(false);
-      return;
-    } else {
-      setIsLoading(false);
-      setError(null);
-    }
-  }, [lessonId, teacherHasEnabledAi]);
-
-  // TODO: Finish UI implementation
   if (error) {
     widgetContent = <BodyThreeText>{error}</BodyThreeText>;
   } else {
-    scrollable = true;
     widgetContent = (
       <div className={styles.topContainer}>
         <Alert
           icon={{iconName: 'sparkles'}}
-          onClick={() => console.log('Alert clicked')}
           text={i18n.lessonFeedbackAlertText()}
           type="aqua"
         />
-        <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
-        <FeedbackTextbox
-          feedbackText="PLACEHOLDER - This is where the feedback text will go."
-          onFeedbackChange={newText => {
-            console.log('Feedback changed:', newText);
-          }}
+        <div>
+          <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
+          <FeedbackTextbox
+            feedbackText={feedbackText}
+            onFeedbackChange={handleFeedbackEdited}
+          />
+        </div>
+        <div className={styles.recommendedActionContainer}>
+          <label className={styles.typographyLabelTwo}>
+            {i18n.lessonFeedbackRecommendedAction()}
+          </label>
+          <BodyFourText noMargin>
+            {i18n.lessonFeedbackRecommendedActionDirections()}
+          </BodyFourText>
+          <div className={styles.inputWrapper}>
+            <input
+              className={styles.inputBox}
+              type="text"
+              placeholder={'Write a message'}
+              value={recommendedActionText}
+              onChange={handleRecommendedActionChange}
+            />
+            <Button
+              text={'Add resource link'}
+              size="xs"
+              type="secondary"
+              color="gray"
+              disabled={!!resourceLink}
+              iconLeft={{
+                iconStyle: 'solid',
+                iconName: 'plus',
+                title: 'Add Resource',
+              }}
+              onClick={handleAddResourceClick}
+            />
+            {resourceLink && resourceName && (
+              <UrlTab
+                urlName={resourceName}
+                onClickHandler={deleteResourceLink}
+              />
+            )}
+          </div>
+          {showAddResourcePopup && (
+            <AddResourceDialog
+              tempResourceName={tempResourceName}
+              tempResourceLink={tempResourceLink}
+              onResourceNameChange={handleTempResourceNameChange}
+              onResourceLinkChange={handleTempResourceLinkChange}
+              onCancel={exitResourcePopup}
+              onSave={handleResourceSave}
+              onClose={handleCloseResourcePopup}
+            />
+          )}
+        </div>
+        <ActionButtons
+          onSaveAsDraft={handleSaveAsDraft}
+          onSendToStudent={handleSendToStudent}
         />
-        <label className={styles.typographyLabelTwo}>
-          {i18n.lessonFeedbackRecommendedAction()}
-        </label>
-        <BodyFourText noMargin>
-          {i18n.lessonFeedbackRecommendedActionDirections()}
-        </BodyFourText>
       </div>
     );
   }
