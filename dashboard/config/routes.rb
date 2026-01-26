@@ -4,6 +4,7 @@ Dashboard::Application.routes.draw do
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
+  draw :api
   draw :marketing
 
   get "app", to: "app#index"
@@ -35,7 +36,7 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: CDO.preview_codeprojects_hostname do
+  constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
     get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
@@ -44,11 +45,12 @@ Dashboard::Application.routes.draw do
   end
 
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
+      get :unit_in_aif, controller: :teacher_dashboard, action: :unit_in_aif
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -368,8 +370,7 @@ Dashboard::Application.routes.draw do
     # can include script_id to get or create a project for the level and script.
     # Optionally, the request can include user_id to get a project for another user,
     # like a teacher viewing a student's work.
-    # The request can also include a script_level_id if the level_id refers to a different level (for example, a sublevel).
-    get "projects(/script/:script_id)(/script_level/:script_level_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
+    get "projects(/script/:script_id)/level/:level_id(/user/:user_id)", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -472,13 +473,12 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'level_properties', to: 'lessons#level_properties', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level's properties via JSON.
-            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -736,6 +736,9 @@ Dashboard::Application.routes.draw do
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
+        post :convert_usernames_to_ids
+        post :delete_user_progress
       end
 
       get :styleguide, to: redirect('/styleguide/'), as: 'admin_styleguide'
@@ -751,7 +754,6 @@ Dashboard::Application.routes.draw do
     namespace :lti do
       namespace :v1 do
         resources :integrations, only: [:new, :create]
-        resource :feedback, controller: :feedback, only: %i[create show]
         controller :dynamic_registration do
           get 'dynamic_registration', action: :new_registration
           post 'dynamic_registration', action: :create_registration
@@ -761,7 +763,9 @@ Dashboard::Application.routes.draw do
             patch :bulk_update_owners
           end
         end
-        resource :deep_linking, controller: :deep_linking, only: :show
+        resource :deep_linking, controller: :deep_linking, only: :show do
+          post :submit, on: :collection
+        end
         namespace :account_linking do
           get :landing
           get :existing_account
@@ -1182,6 +1186,14 @@ Dashboard::Application.routes.draw do
       collection do
         get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
         get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get '/cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
+        get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+      end
+    end
+
+    resources :ai_lesson_summary_podcasts do
+      collection do
+        get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast
       end
     end
 

@@ -1,0 +1,133 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-20T05:14:20.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Template U3L3L3a\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>The Stylist</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"phone-screen\">\n    <header>\n      <h1>My Feed</h1>\n      <p class=\"subtitle\">Weekly Planner</p>\n    </header>\n\n    <main>\n      <div class=\"post-card\">\n        <div class=\"post-info\">\n          <h2 id=\"post1-title\">Title Here</h2>\n          <p id=\"post1-content\" class=\"post-content\">Caption...</p>\n          <p class=\"post-day\">MONDAY</p>\n        </div>\n        <div class=\"post-image-placeholder\">\n          <span id=\"post1-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"post-card\">\n        <div class=\"post-info\">\n          <h2 id=\"post2-title\">Title Here</h2>\n          <p id=\"post2-content\" class=\"post-content\">Caption...</p>\n          <p class=\"post-day\">TUESDAY</p>\n        </div>\n        <div class=\"post-image-placeholder\">\n          <span id=\"post2-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"post-card\">\n        <div class=\"post-info\">\n          <h2 id=\"post3-title\">Title Here</h2>\n          <p id=\"post3-content\" class=\"post-content\">Caption...</p>\n          <p class=\"post-day\">WEDNESDAY</p>\n        </div>\n        <div class=\"post-image-placeholder\">\n          <span id=\"post3-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"post-card\">\n        <div class=\"post-info\">\n          <h2 id=\"post4-title\">Title Here</h2>\n          <p id=\"post4-content\" class=\"post-content\">Caption...</p>\n          <p class=\"post-day\">THURSDAY</p>\n        </div>\n        <div class=\"post-image-placeholder\">\n          <span id=\"post4-img-name\">img.png</span>\n        </div>\n      </div>\n\n      <div class=\"post-card\">\n        <div class=\"post-info\">\n          <h2 id=\"post5-title\">Title Here</h2>\n          <p id=\"post5-content\" class=\"post-content\">Caption...</p>\n          <p class=\"post-day\">FRIDAY</p>\n        </div>\n        <div class=\"post-image-placeholder\">\n          <span id=\"post5-img-name\">img.png</span>\n        </div>\n      </div>\n    </main>\n  </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// DOM ELEMENTS\nlet post1Title = document.querySelector(\"#post1-title\");\nlet post1Content = document.querySelector(\"#post1-content\");\nlet post1Img = document.querySelector(\"#post1-img-name\");\n\nlet post2Title = document.querySelector(\"#post2-title\");\nlet post2Content = document.querySelector(\"#post2-content\");\nlet post2Img = document.querySelector(\"#post2-img-name\");\n\nlet post3Title = document.querySelector(\"#post3-title\");\nlet post3Content = document.querySelector(\"#post3-content\");\nlet post3Img = document.querySelector(\"#post3-img-name\");\n\nlet post4Title = document.querySelector(\"#post4-title\");\nlet post4Content = document.querySelector(\"#post4-content\");\nlet post4Img = document.querySelector(\"#post4-img-name\");\n\nlet post5Title = document.querySelector(\"#post5-title\");\nlet post5Content = document.querySelector(\"#post5-content\");\nlet post5Img = document.querySelector(\"#post5-img-name\");\n\n// DATA LISTS (Parallel Arrays)\n// Index 0 belongs to the Monday slot, Index 1 to Tuesday, etc.\nlet titles = [\"Motivation Monday\", \"Tip Tuesday\", \"Work in Progress\", \"Throwback Thursday\", \"Fashion Friday\"];\nlet contents = [\"Start strong!\", \"Mix metals.\", \"Sewing a hem.\", \"Old style.\", \"Weekend vibes.\"];\nlet images = [\"/images/one.png\", \"/images/two.png\", \"/images/three.png\", \"/images/four.png\", \"/images/five.png\"];\n\n// DISPLAY LOGIC\nfunction renderFeed() {\n  // Monday Slot (Index 0)\n  post1Title.textContent = titles[0];\n  post1Content.textContent = contents[0];\n  post1Img.textContent = images[0];\n\n  // Tuesday Slot (Index 1)\n  post2Title.textContent = titles[1];\n  post2Content.textContent = contents[1];\n  post2Img.textContent = images[1];\n\n  // Wednesday Slot (Index 2)\n  post3Title.textContent = titles[2];\n  post3Content.textContent = contents[2];\n  post3Img.textContent = images[2];\n\n  // Thursday Slot (Index 3)\n  post4Title.textContent = titles[3];\n  post4Content.textContent = contents[3];\n  post4Img.textContent = images[3];\n\n  // Friday Slot (Index 4)\n  post5Title.textContent = titles[4];\n  post5Content.textContent = contents[4];\n  post5Img.textContent = images[4];\n}\n\n// START APP\nrenderFeed();\n\n// HELPER FUNCTIONS\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:wght@700&display=swap');\n\nbody {\n  background-color: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n  font-family: 'Didact Gothic', sans-serif;\n}\n\n.phone-screen {\n  width: 320px;\n  height: 600px;\n  background-color: #fff;\n  border: 8px solid #333;\n  border-radius: 24px;\n  overflow: hidden;\n  box-shadow: 0 10px 25px rgba(0,0,0,0.1);\n  display: flex;\n  flex-direction: column;\n}\n\nheader {\n  background-color: #FFD1DC; /* Pastel Pink */\n  padding: 20px;\n  text-align: center;\n  border-bottom: 1px solid #eee;\n  flex-shrink: 0;\n}\n\nh1 {\n  font-family: 'Playfair Display', serif;\n  margin: 0;\n  color: #333;\n  font-size: 24px;\n}\n\n.subtitle {\n  margin: 5px 0 0;\n  color: #666;\n  font-size: 12px;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n}\n\nmain {\n  flex: 1;\n  padding: 15px;\n  background-color: #fafafa;\n  overflow-y: auto;\n}\n\n.post-card {\n  background: white;\n  border-radius: 12px;\n  margin-bottom: 15px;\n  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start; /* Aligns text to top */\n  padding: 12px;\n}\n\n.post-info {\n  flex: 1;\n  padding-right: 10px;\n}\n\n.post-card h2 {\n  margin: 0;\n  font-size: 16px;\n  color: #333;\n  line-height: 1.2;\n}\n\n.post-content {\n  margin: 4px 0;\n  font-size: 13px;\n  color: #555;\n  font-style: italic;\n}\n\n.post-day {\n  margin: 6px 0 0;\n  font-size: 10px;\n  color: #999;\n  font-weight: bold;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n\n.post-image-placeholder {\n  width: 60px;\n  height: 60px;\n  background-color: #eee;\n  border-radius: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 10px;\n  color: #aaa;\n  flex-shrink: 0; /* Prevents squishing */\n  word-break: break-all;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "two.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateA-test-2025/uuid/317ad6a4-8a98-4f42-9560-94fcd84bb176.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "four.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateA-test-2025/uuid/97fc690f-03b1-41ff-9e68-b0b83313e3ab.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "one.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateA-test-2025/uuid/cc490a4d-679b-4759-803d-84f62280a116.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "five.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateA-test-2025/uuid/05fcfc4d-d031-4a59-8314-8aa64abb4be2.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "three.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson3-templateA-test-2025/uuid/83762d56-198f-4b19-8dcc-b4cf7b0e6364.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "reflection.md",
+          "language": "md",
+          "contents": "##Reflect: Write a short statement about how helper functions protect data consistency.\n\n* push() helper function\n\n\n* pop() helper function\n\n\n* unshift() helper function\n\n\n* shift() helper function\n\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "3",
+        "2",
+        "9"
+      ]
+    },
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-20T05:14:20.286+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-templateA-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-templateA-test-2025\"}]"
+}]]></config>
+</Weblab2>

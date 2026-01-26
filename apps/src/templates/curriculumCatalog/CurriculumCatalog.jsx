@@ -14,7 +14,7 @@ import React, {useState, useEffect} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMathcingSearchResultsFound';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
@@ -350,7 +350,6 @@ CurriculumCatalog.propTypes = {
  *   # Home dashboards
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       CurriculumCatalog:
  *         forceTranslated: true
  * ```

@@ -19,7 +19,7 @@
     "contained_level_names": [
       "CSA-UserInput-L1 Contained_pilot_alt-2025"
     ],
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "name_suffix": "_alt-2025"
   },
   "published": true,

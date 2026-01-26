@@ -137,16 +137,23 @@ class LevelsController < ApplicationController
       full_width: true,
       no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
-      has_i18n: @game.has_i18n?,
-      blocklyVersion: params[:blocklyVersion]
+      has_i18n: @game.has_i18n?
     )
   end
 
   # Get a JSON summary of a level's properties, used in modern labs that don't
-  # reload the page between level views.
+  # reload the page between level views. Returns a mapping of level ID to properties,
+  # in the case that the level contains sublevels (e.g. BubbleChoice).
   def level_properties
     # TODO: TEACH-1864 pass in unit_group_unit
-    render json: @level.summarize_for_lab2_properties(nil, nil, current_user)
+    properties = {}
+    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user)
+    if @level.is_a?(BubbleChoice)
+      @level.sublevels.each do |sublevel|
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(nil, nil, current_user)
+      end
+    end
+    render json: properties
   end
 
   # GET /levels/1/edit

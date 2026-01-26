@@ -1,6 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {
@@ -12,13 +12,13 @@ import React, {
   useState,
 } from 'react';
 
-import {loadBlocksToWorkspace} from '@cdo/apps/blockly/addons/cdoUtils';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
   applyBlockIdOverrides,
+  loadBlocksToWorkspace,
   updateLocale,
   validateBlockCategories,
 } from '@cdo/apps/blockly/utils';
@@ -147,13 +147,13 @@ const DanceView: React.FunctionComponent<{
   );
 
   const programExecutor = useRef<ProgramExecutor | null>(null);
-  const workspace = useRef<GoogleBlockly.Workspace | null>(null);
+  const workspace = useRef<BlocklyCore.Workspace | null>(null);
 
   const onFlyoutGenerated = useCallback(
-    (toolboxDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo) => {
+    (toolboxDefinition: BlocklyCore.utils.toolbox.ToolboxInfo) => {
       const currentWorkspace = workspace.current;
       if (currentWorkspace && currentWorkspace.rendered) {
-        (currentWorkspace as GoogleBlockly.WorkspaceSvg).updateToolbox(
+        (currentWorkspace as BlocklyCore.WorkspaceSvg).updateToolbox(
           toolboxDefinition
         );
       }
@@ -212,7 +212,7 @@ const DanceView: React.FunctionComponent<{
           if (workspace.current && workspace.current.rendered) {
             return {
               toolbox_definition: workspaceToToolboxDefinition(
-                workspace.current as GoogleBlockly.WorkspaceSvg
+                workspace.current as BlocklyCore.WorkspaceSvg
               ),
             };
           }
@@ -321,28 +321,26 @@ const DanceView: React.FunctionComponent<{
   };
 
   const onBlockSpaceChange = useCallback(
-    (e: GoogleBlockly.Events.Abstract) => {
+    (e: BlocklyCore.Events.Abstract) => {
       if (
         isToolboxMode &&
         workspace.current &&
         workspace.current.rendered &&
         e.type === Blockly.Events.BLOCK_MOVE
       ) {
-        validateBlockCategories(
-          workspace.current as GoogleBlockly.WorkspaceSvg
-        );
+        validateBlockCategories(workspace.current as BlocklyCore.WorkspaceSvg);
       }
 
       if (
-        e.type !== GoogleBlockly.Events.BLOCK_DRAG &&
-        e.type !== GoogleBlockly.Events.BLOCK_CHANGE
+        e.type !== BlocklyCore.Events.BLOCK_DRAG &&
+        e.type !== BlocklyCore.Events.BLOCK_CHANGE
       ) {
         return;
       }
 
       if (
-        e.type === GoogleBlockly.Events.BLOCK_DRAG &&
-        (e as GoogleBlockly.Events.BlockDrag).isStart
+        e.type === BlocklyCore.Events.BLOCK_DRAG &&
+        (e as BlocklyCore.Events.BlockDrag).isStart
       ) {
         return;
       }
@@ -405,7 +403,7 @@ const DanceView: React.FunctionComponent<{
     });
 
     if (isShareView) {
-      workspace.current = new GoogleBlockly.Workspace();
+      workspace.current = new BlocklyCore.Workspace();
     } else {
       const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
       if (!blocklyDiv) {
@@ -431,7 +429,7 @@ const DanceView: React.FunctionComponent<{
         readOnly: readonlyWorkspace,
         editBlocks: getAppOptionsEditBlocks(),
         extraScrollheight: guideMode === 'aiCodeGenerate' ? 200 : 0,
-      } as GoogleBlockly.BlocklyOptions);
+      } as BlocklyCore.BlocklyOptions);
     }
 
     return () => workspace.current?.dispose();
@@ -444,7 +442,7 @@ const DanceView: React.FunctionComponent<{
     const blocks = Blockly.serialization.workspaces.save(workspace.current);
     if (!isEqual(blocks, currentSources.source)) {
       loadBlocksToWorkspace(
-        workspace.current as GoogleBlockly.WorkspaceSvg,
+        workspace.current as BlocklyCore.WorkspaceSvg,
         JSON.stringify(currentSources.source)
       );
       // Provide extra scroll height to account for bottom-anchored guide overlay.

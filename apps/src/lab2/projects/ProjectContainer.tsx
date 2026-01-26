@@ -9,28 +9,22 @@ import {useSelector} from 'react-redux';
 
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
-import {
-  getCurrentScriptLevelId,
-  getLevelPropertiesPath,
-  getUserAppOptionsPath,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {
-  isReadOnlyWorkspace,
-  shouldHideShareAndRemix,
-} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {AppName} from '@cdo/apps/lab2/types';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {useLevelProperties} from '../views/LevelPropertiesWrapper';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
   channelId,
-  appName,
 }) => {
+  const {levelProperties} = useLevelProperties();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const userId = useAppSelector(
     state => state.progress.viewAsUserId || undefined
@@ -38,12 +32,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const scriptId = useAppSelector(
     state => state.progress.scriptId || undefined
   );
-  const scriptLevelId = useSelector(getCurrentScriptLevelId);
 
-  const isStandaloneProjectLevel = useAppSelector(
-    state => state.lab.levelProperties?.isProjectLevel
-  );
-  const hideShareAndRemix = useSelector(shouldHideShareAndRemix);
+  const isStandaloneProjectLevel = levelProperties.isProjectLevel;
+  // Only show share and remix if hideShareAndRemix is explicitly false.
+  const hideShareAndRemix = levelProperties.hideShareAndRemix !== false;
   const loadedChannelId = useAppSelector(
     state => state.lab.channel && state.lab.channel.id
   );
@@ -51,7 +43,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     state => state.lab.channel && state.lab.channel.isOwner
   );
 
-  const levelPropertiesPath = useSelector(getLevelPropertiesPath);
   const userAppOptionsPath = useSelector(getUserAppOptionsPath);
 
   const dispatch = useAppDispatch();
@@ -70,7 +61,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // Before loading, clear the header so we don't accidentally show share and remix
     // for a level that does not allow it.
     dispatch(clearHeader());
-    if (currentLevelId && levelPropertiesPath) {
+    if (currentLevelId) {
       // If we have a level id, set up the lab with that level. If we also have a channel id,
       // we will load the project based on that channel id, otherwise we will look up a channel id
       // for the level.
@@ -79,8 +70,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           levelId: parseInt(currentLevelId),
           userId,
           scriptId,
-          scriptLevelId,
-          levelPropertiesPath,
+          levelProperties,
           userAppOptionsPath,
           channelId,
         })
@@ -93,11 +83,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     };
   }, [
     channelId,
-    appName,
     currentLevelId,
     scriptId,
-    scriptLevelId,
-    levelPropertiesPath,
+    levelProperties,
     userAppOptionsPath,
     dispatch,
     userId,
@@ -165,11 +153,6 @@ interface ProjectContainerProps {
   children: React.ReactNode;
   /** Channel ID for the project, if already known. Used for standalone projects and projects without levels. */
   channelId?: string;
-  /**
-   * App name for the lab that will be displayed, used only for projects without levels. Must be provided
-   * if loading a lab without a level.
-   */
-  appName?: AppName;
 }
 
 export default ProjectContainer;

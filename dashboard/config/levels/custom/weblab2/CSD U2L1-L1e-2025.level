@@ -1,0 +1,94 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-31T20:54:25.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Template E",
+    "long_instructions": "Use your Web Design for Users activity guide in order to determine which user this website might be a match for. ",
+    "teacher_markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\r\n",
+    "thumbnail_url": "https://images.code.org/68afb5ea16d9e61545c68254570ce39e-image-1677194239625.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1> Visit Tucson! </h1>\n    \n    <p> This is a Tucson Appreciation page for everyone to know how great Tucson is! Here are 3 places to visit while in Tucson:</p>\n\n    \n    <img class=\"alignleft\" src=\"university.jpg\" />\n    \n    <img class=\"alignright\" src=\"mission.jpg\" />\n    \n    <ol>\n      <li>the University of Arizona</li>\n      <li>the San Xavier Mission</li>\n      <li>the Biosphere</li>\n    </ol>\n    \n    <p>Tucson is also home to beautiful mountains and sunsets!</p>\n    <p id=\"learnmore\">\n      <a href=\"https://www.visittucson.org/\">Click here to learn more about Tucson!</a>\n    </p>\n    \n    <img class=\"footerimg\" src=\"sunset.jpg\" />\n    \n    <hr />\n    \n    <p class=\"disclaimer\">All images from Pixabay and are provided with a Pixabay license</p>\n    \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "10": {
+          "id": "10",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: yellow;\n  font-family: Arial;\n  \n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n  font-family: fantasy;\n  text-align: center;\n}\n\n.alignleft {\n  width: 200px;\n  float: left;\n  margin-right: 40px;\n  border: solid 3px black;\n  box-shadow: 5px 5px 2px red;\n}\n\n.alignright {\n  width: 200px;\n  float: right;\n  margin-left: 40px;\n  border: solid 3px black;\n  box-shadow: -5px 5px 2px red;\n}\n\n.footerimg {\n  width: 100%;\n  margin-top: 20px;\n  margin-bottom: 10px;\n}\n\n#learnmore {\n  text-align: center;\n  font-size: 20px;\n  font-weight: bold;\n  font-family: fantasy\n}\n\n.disclaimer {\n  font-family: Consolas;\n  font-size: 10px;\n  color: gray;\n  text-align: center;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "sunset.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1e-2025/uuid/3f1a2b4d-31d2-407b-9cbd-502d241d905d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "mission.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1e-2025/uuid/599a2d1e-123b-49d1-ab04-d8c0ba34c014.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "university.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1e-2025/uuid/17eef512-23d5-4b84-b449-1b044a8626c7.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ]
+    },
+    "bubble_choice_description": "A website about visiting Tuscon, Arizona. "
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-31T20:54:25.584+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1d-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1d-2025\"},{\"changed_at\":\"2025-12-31 20:54:43 +0000\",\"changed\":[\"name\",\"display_name\",\"thumbnail_url\",\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:59:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 20:59:58 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-12-31 21:15:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

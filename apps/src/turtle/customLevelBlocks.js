@@ -2,7 +2,7 @@
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
-import {BlockColors, BlockStyles} from '../blockly/constants';
+import {BlockStyles} from '../blockly/constants';
 
 var msg = require('./locale');
 
@@ -59,11 +59,7 @@ function createACircleCode(size, gensym, indent) {
 function makeBlockInitializer(title, parameter) {
   return {
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.PROCEDURE,
-        BlockStyles.PROCEDURE
-      );
+      this.setStyle(BlockStyles.PROCEDURE);
 
       this.appendDummyInput().appendField(title);
 
@@ -583,11 +579,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     // We use custom initialization (instead of makeBlockInitializer) here
     // because each initialization needs a new instance of the FieldDropdown.
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.PROCEDURE,
-        BlockStyles.PROCEDURE
-      );
+      this.setStyle(BlockStyles.PROCEDURE);
 
       var title = new blockly.FieldDropdown(snowflakes);
       this.appendDummyInput().appendField(title, 'TYPE');

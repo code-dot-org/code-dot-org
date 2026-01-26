@@ -13,6 +13,7 @@ class Policies::Lti
     CLAIM = :'https://purl.imsglobal.org/spec/lti/claim/message_type'
     RESOURCE_LINK_REQUEST = 'LtiResourceLinkRequest'
     DEEP_LINKING_REQUEST = 'LtiDeepLinkingRequest'
+    DEEP_LINKING_RESPONSE = 'LtiDeepLinkingResponse'
   end
 
   module DeploymentConfiguration
@@ -53,9 +54,12 @@ class Policies::Lti
   LTI_DEPLOYMENT_PLATFORM_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/tool_platform"
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice"
   DEEP_LINKING_SETTINGS_CLAIM = "https://purl.imsglobal.org/spec/lti-dl/claim/deep_linking_settings"
+  DEEP_LINKING_DATA_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/data'
+  DEEP_LINKING_CONTENT_ITEMS_CLAIM = 'https://purl.imsglobal.org/spec/lti-dl/claim/content_items'
   LTI_PLATFORM_CONFIGURATION = "https://purl.imsglobal.org/spec/lti-platform-configuration"
   CANVAS_ACCOUNT_NAME = "https://canvas.instructure.com/lti/account_name"
   CLASSLINK_ROLE_KEY = 'classLink_role'
+  VERSION_CLAIM = 'https://purl.imsglobal.org/spec/lti/claim/version'
 
   # Prioritized lists for looking up a user's name from custom LTI variable claims.
   TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
@@ -239,10 +243,6 @@ class Policies::Lti
   # Force Schoology and Canvas through iframe mitigation flow
   def self.force_iframe_launch?(issuer)
     %w[Schoology Canvas].include?(issuer_name(issuer))
-  end
-
-  def self.feedback_available?(user)
-    user.teacher? && lti?(user) && user.created_at <= 2.days.ago
   end
 
   # Check if a partial registration is in progress for an LTI user.

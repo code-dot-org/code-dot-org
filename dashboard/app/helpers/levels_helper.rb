@@ -128,7 +128,7 @@ module LevelsHelper
     channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     return result unless channel_token
 
-    _owner_id, result[:project_id] = storage_decrypt_channel_id(channel_token.channel)
+    _owner_id, result[:project_id] = get_storage_id_and_project_id(channel_token.channel)
     source_data = SourceBucket.new.get(channel_token.channel, "main.json")
 
     if source_data[:status] == 'FOUND'
@@ -483,7 +483,6 @@ module LevelsHelper
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_javalab: use_javalab,
@@ -496,17 +495,6 @@ module LevelsHelper
         preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
-  end
-
-  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
-  # In priority order they are:
-  # 1. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
-  # 2. All Blockly levels now default to using Google Blockly.
-
-  def use_google_blockly
-    return true if view_options[:blocklyVersion]&.downcase == 'google'
-    return false if view_options[:blocklyVersion]&.downcase == 'cdo'
-    return true
   end
 
   # Options hash for Widget
@@ -1070,7 +1058,7 @@ module LevelsHelper
     channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
     if channel_token
       storage_app_id = channel_token.storage_app_id
-      channel_id = storage_encrypt_channel_id(storage_id, storage_app_id)
+      channel_id = get_project_channel_id(storage_id, storage_app_id)
       s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
       s3_args = {bucket: bucket, key: s3_filename}
       s3_args[:version_id] = code_version if code_version

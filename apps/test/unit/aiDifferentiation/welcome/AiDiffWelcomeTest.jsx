@@ -1,17 +1,15 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 
+import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import AiDiffWelcome from '@cdo/apps/aiDifferentiation/welcome/AiDiffWelcome';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({
     json: jest.fn().mockReturnValue({}),
   }),
-}));
-
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  __esModule: true,
-  useAppDispatch: () => jest.fn(),
 }));
 
 jest.mock('@react-pdf/renderer', () => {
@@ -39,6 +37,7 @@ jest.mock('react-dom-confetti', () => () => <div>confetti</div>);
 const DEFAULT_PROPS = {
   setShowWelcomeExperience: () => {},
   context: 'some-context',
+  curriculumCourses: [],
   scriptId: 1,
   scriptName: 'Test Script',
 };
@@ -48,8 +47,20 @@ describe('AiDiffWelcome', () => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
   });
 
+  function renderDefault(propOverrides = {}) {
+    const store = getStore();
+
+    registerReducers({aichat: aichatReducer});
+
+    render(
+      <Provider store={store}>
+        <AiDiffWelcome {...DEFAULT_PROPS} {...propOverrides} />
+      </Provider>
+    );
+  }
+
   test('renders get started page initially', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
+    renderDefault();
     screen.getByText('AI Teaching Assistant');
 
     screen.getByText('Empowering teachers. Enhancing learning.');
@@ -57,7 +68,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('clicking "Get Started" transitions to select option page', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
+    renderDefault();
 
     fireEvent.click(screen.getByText('Get Started'));
 
@@ -67,7 +78,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('selecting an option and clicking "Continue" transitions to practice page', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
+    renderDefault({firstState: 'select_option'});
 
     fireEvent.click(screen.getByRole('button', {name: 'Ideate'}));
 
@@ -77,7 +88,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('practice page buttons work correctly', async () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'practice'} />);
+    renderDefault({firstState: 'practice'});
 
     expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
 
@@ -92,13 +103,10 @@ describe('AiDiffWelcome', () => {
 
   test('clicking "Finish" on the end page triggers setShowWelcomeExperience', async () => {
     const setShowWelcomeExperienceStub = jest.fn();
-    render(
-      <AiDiffWelcome
-        {...DEFAULT_PROPS}
-        setShowWelcomeExperience={setShowWelcomeExperienceStub}
-        firstState={'end_page'}
-      />
-    );
+    renderDefault({
+      setShowWelcomeExperience: setShowWelcomeExperienceStub,
+      firstState: 'end_page',
+    });
     screen.getByText('You’re on your way to becoming an AI all-star!');
 
     screen.getByText('Continue your learning journey');
@@ -114,7 +122,7 @@ describe('AiDiffWelcome', () => {
   }, 15000);
 
   test('End page buttons work correctly', async () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'end_page'} />);
+    renderDefault({firstState: 'end_page'});
 
     screen.getByText('confetti');
 
@@ -131,7 +139,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('Back button works correctly', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
+    renderDefault({firstState: 'select_option'});
 
     fireEvent.click(screen.getByRole('button', {name: 'Back'}));
     screen.getByText('AI Teaching Assistant');
@@ -141,13 +149,10 @@ describe('AiDiffWelcome', () => {
 
   test('Skip tutorial works correctly', async () => {
     const setShowWelcomeExperienceStub = jest.fn();
-    render(
-      <AiDiffWelcome
-        {...DEFAULT_PROPS}
-        setShowWelcomeExperience={setShowWelcomeExperienceStub}
-        firstState={'select_option'}
-      />
-    );
+    renderDefault({
+      setShowWelcomeExperience: setShowWelcomeExperienceStub,
+      firstState: 'select_option',
+    });
 
     fireEvent.click(screen.getByRole('link', {name: 'Skip the tutorial'}));
 

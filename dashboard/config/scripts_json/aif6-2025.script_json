@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-10-21 13:43:11 UTC",
+    "serialized_at": "2025-12-10 22:41:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -123,7 +123,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What is data science, and how can it be used?**\n\nThis is a survey lesson introducing students to all sorts of things data science can do. Students start with a pre-assessment asking them to find data in an image of a class pizza party, to introduce the concept of data and data science. Students then learn about a specific data scientist, who they will represent in conversations with their classmates. As they discuss with their classmates, they will learn about the other data scientists.",
-        "preparation": "* Provide copies of the Unit 1 Guided Notes for each student\n* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
+        "preparation": "* Provide copies of the Insights from Data and AI Unit Guide for each student\n* Print copies of the Data Scientist Bingo Card (one for each student)\n* Print copies of the Data Scientists Tents (one for each student)\n* Gather several sticky notes (2-3 for each student)",
         "student_overview": "**What is data science, and how can it be used?**\n\nBecome an expert in a data scientist, what they do and their path to getting there. Then, represent that data scientist for the rest of the class, and learn about other data scientists."
       },
       "seeding_key": {

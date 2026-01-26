@@ -99,6 +99,7 @@
     "map_reference": "/courses/csd-2022/guides/the-counter-pattern-2",
     "video_key": "csd_gamelab_sprites_2",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

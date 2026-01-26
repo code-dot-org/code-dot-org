@@ -8,17 +8,9 @@ import {
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {
-  aichatReducer,
-  setThreadId,
-  setThreadTitle,
-  setThreadType,
-  setThreadMessages,
-  setInitialChatMessage,
-} from '@cdo/apps/aichat/redux/slice';
+import {aichatReducer, setThreadMessages} from '@cdo/apps/aichat/redux/slice';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiDiffWorkspace from '@cdo/apps/aiDifferentiation/AiDiffWorkspace';
-import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -59,15 +51,8 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
-const DEFAULT_SUGGESTED_PROMPTS = [
-  EXAMPLE_PROMPT,
-  EXPLAIN_CONCEPT_PROMPT,
-  DEBUG_MISTAKES_PROMPT,
-  MINI_LESSON_PROMPT,
-  EXIT_TICKET_PROMPT,
-];
-
 const defaultProps = {
+  open: true,
   context: {
     type: AiDiffContext.LESSON,
     lessonId: 2,
@@ -76,6 +61,14 @@ const defaultProps = {
   curriculumCourses: [],
   personalizationData: {},
 };
+
+const DEFAULT_SUGGESTED_PROMPTS = [
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  DEBUG_MISTAKES_PROMPT,
+  MINI_LESSON_PROMPT,
+  EXIT_TICKET_PROMPT,
+];
 
 const now = new Date();
 const sixDaysAgo = new Date(now);
@@ -166,7 +159,7 @@ describe('AiDiffWorkspace', () => {
     restoreRedux();
   });
 
-  function renderDefault(overrideThreadId = 0) {
+  function renderDefault(propOverrides = {}) {
     const store = getStore();
 
     registerReducers({
@@ -181,15 +174,6 @@ describe('AiDiffWorkspace', () => {
       })
     );
     store.dispatch(setSections([]));
-    store.dispatch(setSections([]));
-    store.dispatch(setThreadId(overrideThreadId));
-    store.dispatch(setThreadTitle('Sample title'));
-    store.dispatch(setThreadType(THREAD_TYPES.default));
-    store.dispatch(
-      setInitialChatMessage(
-        SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage
-      )
-    );
     store.dispatch(
       setThreadMessages([
         {
@@ -204,7 +188,7 @@ describe('AiDiffWorkspace', () => {
 
     render(
       <Provider store={store}>
-        <AiDiffWorkspace {...defaultProps} />
+        <AiDiffWorkspace {...defaultProps} {...propOverrides} />
       </Provider>
     );
   }

@@ -29,6 +29,7 @@ export interface Lab2ProjectState {
   hasEdited: boolean;
   projectTooLarge: boolean;
   lastSavedLabConfig: LabConfig | undefined;
+  projectSourceLevelId: number | undefined;
 }
 
 const initialState: Lab2ProjectState = {
@@ -41,6 +42,7 @@ const initialState: Lab2ProjectState = {
   hasEdited: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
+  projectSourceLevelId: undefined,
 };
 
 // SLICE
@@ -57,6 +59,9 @@ const projectSlice = createSlice({
         ...state.projectSources,
         source: action.payload,
       };
+    },
+    setProjectSourceLevelId(state, action: PayloadAction<number | undefined>) {
+      state.projectSourceLevelId = action.payload;
     },
     setProjectSourceBeforeAiTutorVersion(
       state,
@@ -165,6 +170,8 @@ const projectSlice = createSlice({
               [action.payload.fileId]: {
                 ...source.files[action.payload.fileId],
                 name: action.payload.newName,
+                language:
+                  action.payload.newName.split('.').pop()?.toLowerCase() || '',
               },
             },
           },
@@ -461,6 +468,7 @@ const projectSlice = createSlice({
 export const {
   setProjectSource,
   setProjectSourceBeforeAiTutorVersion,
+  setProjectSourceLevelId,
   setPreviousVersionSource,
   setViewingOldVersion,
   setViewingAiTutorVersion,

@@ -1,0 +1,56 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-16T19:54:48.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "spotify.js",
+          "language": "js",
+          "contents": "{\n  \"external_urls\": {\n    \"spotify\": \"string\"\n  },\n  \"followers\": {\n    \"href\": \"string\",\n    \"total\": 0\n  },\n  \"genres\": [\"Prog rock\", \"Grunge\"],\n  \"href\": \"string\",\n  \"id\": \"string\",\n  \"images\": [\n    {\n      \"url\": \"https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228\",\n      \"height\": 300,\n      \"width\": 300\n    }\n  ],\n  \"name\": \"string\",\n  \"popularity\": 0,\n  \"type\": \"artist\",\n  \"uri\": \"string\"\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "updated_data.js",
+          "language": "js",
+          "contents": "[\n  {\n    \"artist_NAME\": \"RADIOHEAD\",\n    \"genres\": [\"Prog rock\", \"Electronic\"],\n    \"img_link\": \"https://i.scdn.co/image/ab6761610000e5ebed3f9d511470438d61689759\",\n    \"fame_score\": 83,\n    \"status\": \"Active\"\n  },\n  {\n    \"artist_NAME\": \"Nirvana\",\n    \"genres\": [\"Grunge\", \"Alt Rock\"],\n    \"img_link\": \"https://i.scdn.co/image/ab6761610000e5eb437b12d7c57ed5d5395f9227\",\n    \"fame_score\": 0,\n    \"status\": \"Archived\"\n  },\n  {\n    \"artist_NAME\": \"pink floyd\",\n    \"genres\": [],\n    \"img_link\": null,\n    \"fame_score\": 90,\n    \"note\": \"Missing image from backend\"\n  }\n]",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-16 19:55:16 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-16 19:57:56 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-16 19:58:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

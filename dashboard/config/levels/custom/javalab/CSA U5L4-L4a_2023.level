@@ -32,7 +32,7 @@
         "tabOrder": 1
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-03-27T23:53:28.064+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L3d_2023\\\"\"],\"cloned_from\":\"CSA U5L4-L3d_2023\"},{\"changed_at\":\"2023-03-27 23:53:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-17 14:44:57 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 23:41:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-27 15:10:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-27 15:15:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-27 15:15:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-27 15:16:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-27 15:16:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-27 15:16:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

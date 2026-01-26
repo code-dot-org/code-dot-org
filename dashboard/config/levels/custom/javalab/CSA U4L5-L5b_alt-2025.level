@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T22:04:05.000Z",
   "level_num": "custom",
@@ -19,7 +18,7 @@
     "encrypted_exemplar_sources": "+Z0NnXOQBnTgPA4QLAqPs88BCdobcQC59R0cvg5Mke89IizYdE+n5lyO0Awr\nYVSOeHCGPw4U1U/qCSFYo1OpbtNkD81q7r6hiy/oK59TM8gBp87oJwPrAgDR\nlM6M4JC/t3axeuCrxF7lDNrYFqRGWwKeOJqhovH/QfC2omvcfXPbjkam+h7f\n9NwEMZWXRB1KoVM8jFEAAEid4BqSIcKtJWoZjCV29RvuyIrJ/sgAunc/FTea\nL5KLEru5CWxugvQFmLYLdBFOlgle9rtkRNFRKWCDuEHFOpix7nHffdWNXH+S\nZ5JkQtf8FTw22e4xXje+hgtVHHzXsmz2JDBYrxab24bvep8XR/vrZZryNh27\nvGVKGqMQDnimnCL4V05wL5+eFyoXpLEXXhZON0+K1AdvfJDpKISTsNoUizIb\nZs/eQMaVVu1FJp2yS0LA0UKFQbJ1kUZXmZDJL+D1oBhx2EOxIKAqCHaY2HN+\nwmzZvcikThZsvqVfy/ZZwgIFaZLXse8kRt1lZ65GMuZ0D4ZwRLxOwcOF9xin\nAzfCUcUZzrn+7BsLbgMRXuqWrkavBfFP7ayeYWOKwQpoUY4LJEcZ9z75VvlZ\nrGWrEry76wC9WWE3b+n9+e0YmWN3tqPPlZC48FLy2/0U0sUAmlv/OwVw3t7o\nAuv7IZQys6NY5Lml64g3RNzYVuxJUZ82lkSGsbWvOeVzlO0VImuEnYXqws0Z\nccfe0ZWTFEwfyEZ88RlN3zbtYSzYpU4nSEIFc4HN7MqLPoau6Fm8sZHip1EM\nQX1Rlqsg5ultg6hOYD3OrTX415Gt6NTsYPklCgfO4QB0/d/1dd+9VJwk3YXS\nX5P8d9enHoryuEsN/5JWir+YLkP+VMbZsOUziMxHyaZI9XQ1oxIycQs0Hgeg\n8ZHZMZ29dC4MMIrng8s1eSJJP4tX+QB/DsNJBOJ+WDIWqKk0l03C06Vi4Xij\nbnMAs23nUh05Uj+Lkqnr3k37z4Qh66ChbzmmB+/W6BNb58zpL+3yseJ4KBL/\nftWjlJsKeG65fTCEWAiy6FQPzMQXqekKp6WCySK6WLU85OndMaZyTWNSkwzh\nf3etkcr2NnXhqv31K66I92rfTmPd0tuSEl5cqw/lqY4jECE2Yx5HSOPjs1Ou\n3/lJ5pWA2P+8XkS00IUwucdtE0CoQWUHTMeRsCxNoEmkL1e2t1NAzsCfjLu0\nVUpP7fWMqHmN6N33EU1Hh92YR8KJzawe1M24AGgGrOuPuGPcuT7NmkxiwmtT\n6sVr9XNWVNjQ9HfkCB6rbJFnOc9MHsrQCQ5HLfvfqmYcTljuXWd9CiVnTk2n\nYddfg/2Irlg4BHdzSqwhqUQnsQ/NDlW4P4PLsfP31MtHbb3mNGBlubRqZiZg\nezu/hilcQ99/XjUWDmOJpEZsapaPiupMklAbcXlXBQz9Yi5QVS7sC2UFvFsQ\nSvElG3IhlwPI1wYkcMJGnez81LngomCpzQgcIyIT24/PQx0I/OJrj0jZht/7\nZlrtyWsKTSFhzXV4CSRiX2w0BaqiFMDFaO50CB3CsXg0tSSXzL6f2ttOeIrH\n+TsL5QoREPQVPvfq5c3u2ZzhxbnVlBTKV906ZSpvnNv5XccgcvAqCu6uO4C5\nfjs8U/8r/6zflg1MqdpPRaT6rWHIwQB9sQsPEPbRuzxhLpNLzx/XB6qNJfpv\nfBk9tw==\n",
     "video_key": "csa_random_numbers",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true",
+    "ai_tutor_available": "false",
     "start_sources": {
       "SimulationRunner.java": {
         "text": "public class SimulationRunner {\n  public static void main(String[] args) {\n\n    // Generate daily estimates\n    int d1 = Simulation.getDailyCars();\n    int d2 = Simulation.getDailyCars();\n    int d3 = Simulation.getDailyCars();\n    int d4 = Simulation.getDailyCars();\n    int d5 = Simulation.getDailyCars();\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Print each daily estimate so it's clear what values were returned.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Calculate the average of the five values and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n  }\n}\n",
@@ -31,11 +30,9 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:05.408+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L5b_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L5-L5b_pilot-2025\"},{\"changed_at\":\"2025-05-24 02:49:32 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:53:29 +0000\",\"changed\":[\"encrypted_validation\",\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:53:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:53:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:54:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:55:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:56:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-24 02:57:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

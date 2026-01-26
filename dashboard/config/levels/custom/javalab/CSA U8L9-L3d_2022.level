@@ -33,7 +33,7 @@
     "display_name": "State Populations",
     "bubble_choice_description": "Sort a list of states in order by their populations.",
     "thumbnail_url": "https://images.code.org/9513e77948fce6f8c29039cc875efe38-united-states.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-18T19:49:53.340+00:00\",\"changed\":[\"cloned from \\\"CSA U8L9-L2d_2022\\\"\"],\"cloned_from\":\"CSA U8L9-L2d_2022\"},{\"changed_at\":\"2022-04-18 19:49:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-18 20:22:33 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 00:02:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 00:05:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 13:13:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 13:13:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 13:13:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 13:14:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-19 13:16:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

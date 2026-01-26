@@ -20,8 +20,8 @@ const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
-  curriculumCourses?: string[];
   unreadNotificationCount: number;
 }
 
@@ -49,8 +49,8 @@ const AI_DIFF_CLOSE_BUTTON_CLASSNAME = 'ai_diff_close_button';
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
-  scriptName,
   curriculumCourses,
+  scriptName,
   unreadNotificationCount,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
@@ -154,7 +154,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         }
         style={chatIsOpen ? undefined : {display: 'none'}}
       >
-        <FocusLock disabled={!open}>
+        <FocusLock disabled={!chatIsOpen}>
           <AiDiffHeader
             closeTutor={closeTutor}
             closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}

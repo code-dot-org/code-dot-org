@@ -13,21 +13,21 @@
     "hide_share_and_remix": "false",
     "widget_view": "false",
     "initial_view_mode": "split",
-    "ai_tutor_mode": "suggest",
+    "ai_tutor_mode": "designer",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "project_template_level_name": "ai-generated-design-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-24T20:08:03.025+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson11-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson11-level1-test-2025\"},{\"changed_at\":\"2025-10-24 20:08:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-24T20:08:03.025+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson11-level1-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson11-level1-test-2025\"},{\"changed_at\":\"2025-10-24 20:08:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:26:08 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -1,4 +1,5 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 const REQUEST_RETRY_COUNT = 1;
 
@@ -19,6 +20,13 @@ const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
 
+// Events that can a listener can subscribe to.
+export enum BackpackEvent {
+  FileAdded = 'fileAdded',
+  FileDeleted = 'fileDeleted',
+}
+type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
+
 export default class BackpackClientApi {
   appType: string;
   channelId: string | null;
@@ -27,6 +35,7 @@ export default class BackpackClientApi {
   fileUploadsFailed: string[];
   fileDeletesInProgress: string[];
   fileDeletesFailed: string[];
+  eventListeners: {[key: string]: BackpackEventListener};
 
   constructor(appType: string, channelId: string | null) {
     this.appType = appType;
@@ -36,6 +45,7 @@ export default class BackpackClientApi {
     this.fileUploadsFailed = [];
     this.fileDeletesInProgress = [];
     this.fileDeletesFailed = [];
+    this.eventListeners = {};
   }
 
   hasBackpack() {
@@ -84,6 +94,13 @@ export default class BackpackClientApi {
     } catch (error) {
       return error as Error;
     }
+  }
+
+  getFileFetchUrl(filename: string) {
+    if (!this.channelId) {
+      return undefined;
+    }
+    return `${rootUrl(this.channelId!)}/${filename}`;
   }
 
   async getFileList(
@@ -194,6 +211,31 @@ export default class BackpackClientApi {
       onError(error as Error);
       return;
     }
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.FileAdded, filename)
+    );
+    onSuccess();
+  }
+
+  async saveBlobFile(
+    filename: string,
+    contents: Blob,
+    onError: ErrorCallback,
+    onSuccess: () => void
+  ) {
+    if (!this.channelId) {
+      onError();
+      return;
+    }
+    try {
+      await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
+    } catch (error) {
+      onError(error as Error);
+      return;
+    }
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.FileAdded, filename)
+    );
     onSuccess();
   }
 
@@ -297,7 +339,8 @@ export default class BackpackClientApi {
         this.fileUploadsInProgress,
         this.fileUploadsFailed,
         onError,
-        onSuccess
+        onSuccess,
+        BackpackEvent.FileAdded
       );
     } catch (error) {
       if (retryCount > 0) {
@@ -317,6 +360,7 @@ export default class BackpackClientApi {
           this.fileUploadsFailed,
           onError,
           onSuccess,
+          BackpackEvent.FileAdded,
           error as Error
         );
       }
@@ -354,7 +398,8 @@ export default class BackpackClientApi {
         this.fileDeletesInProgress,
         this.fileDeletesFailed,
         onError,
-        onSuccess
+        onSuccess,
+        BackpackEvent.FileDeleted
       );
     } catch (error) {
       if (retryCount > 0) {
@@ -373,6 +418,7 @@ export default class BackpackClientApi {
           this.fileDeletesFailed,
           onError,
           onSuccess,
+          BackpackEvent.FileDeleted,
           error as Error
         );
       }
@@ -388,16 +434,34 @@ export default class BackpackClientApi {
     failedFileList: string[],
     onError: ErrorCallback,
     onSuccess: () => void,
+    requestType: BackpackEvent,
     error?: Error
   ) {
     const filenameIndex = filesInRequest.indexOf(filename);
     if (filenameIndex >= 0) {
       filesInRequest.splice(filenameIndex, 1);
     }
+    if (!failedFileList.includes(filename)) {
+      Object.values(this.eventListeners).forEach(listener =>
+        listener(requestType, filename)
+      );
+    }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
     } else if (filesInRequest.length === 0) {
       onError(error, failedFileList);
+    }
+  }
+
+  addEventListener(listener: BackpackEventListener) {
+    const id = createUuid();
+    this.eventListeners[id] = listener;
+    return id;
+  }
+
+  removeEventListener(id: string) {
+    if (this.eventListeners[id]) {
+      delete this.eventListeners[id];
     }
   }
 }

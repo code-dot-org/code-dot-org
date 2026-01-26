@@ -26,7 +26,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     stubs(:current_user).returns nil
     stub_get_storage_id(nil)
-    stubs(:storage_decrypt_channel_id).returns([123, 456])
+    stubs(:get_storage_id_and_project_id).returns([123, 456])
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
@@ -352,32 +352,6 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'use_google_blockly is true if not set' do
-    @level = build(:level)
-    assert use_google_blockly
-  end
-
-  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
-    view_options(blocklyVersion: 'google')
-    @level = build(:level)
-    assert use_google_blockly
-    reset_view_options
-  end
-
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
-    view_options(blocklyVersion: 'cdo')
-    @level = build(:level)
-    refute use_google_blockly
-    reset_view_options
-  end
-
-  test 'use_google_blockly is true if blocklyVersion is not set to cdo in view_options' do
-    view_options(blocklyVersion: nil)
-    @level = build(:level)
-    assert use_google_blockly
-    reset_view_options
-  end
-
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do
     # two different users
     @user = create(:user)
@@ -424,7 +398,7 @@ class LevelsHelperTest < ActionView::TestCase
     @channel_id = get_channel_for(@level, script.id, @user)
     refute_nil @channel_id
 
-    _,  @project_id = storage_decrypt_channel_id(@channel_id)
+    _,  @project_id = get_storage_id_and_project_id(@channel_id)
     create(:code_review, user_id: @user.id, project_id: @project_id)
 
     # calling app_options should set readonly_workspace, since a code review is open

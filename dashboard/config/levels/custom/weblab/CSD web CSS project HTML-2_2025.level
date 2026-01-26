@@ -28,7 +28,8 @@
     "validation_enabled": "true",
     "display_name": "Lesson 5 User-Add Images",
     "bubble_choice_description": "Choose this level if you created an HTML web page for a user during the previous mini-project.",
-    "thumbnail_url": "https://images.code.org/d63ac68f142c45840c90dd2053982325-behavior.png"
+    "thumbnail_url": "https://images.code.org/d63ac68f142c45840c90dd2053982325-behavior.png",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

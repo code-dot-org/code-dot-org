@@ -26,18 +26,21 @@ const InnerHTMLPreview = () => {
   // Numerical key used to trigger iframe reloads when we have updates.
   const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
-  useProjectServiceWorker(source);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
   const parentOrigin = useMemo(() => {
-    const regex = /preview\.([^.]+)\.codeprojects\.org/;
+    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
-    const port = 'localhost-' === environment ? `:${location.port}` : '';
+    const port =
+      'localhost-' === environment && location.port ? `:${location.port}` : '';
     const cdn = environment.includes('adhoc') ? 'cdn-' : '';
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
+
+  const {serviceWorkerRegistration, serviceWorkerUnavailable} =
+    useProjectServiceWorker(source, parentOrigin);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -77,6 +80,24 @@ const InnerHTMLPreview = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage, parentOrigin]);
+
+  useEffect(() => {
+    if (serviceWorkerUnavailable) {
+      window.parent.postMessage(
+        {
+          type: IframeMessageType.SERVICE_WORKER_UNAVAILABLE,
+        },
+        parentOrigin
+      );
+    }
+  }, [serviceWorkerUnavailable, parentOrigin]);
+
+  useEffect(() => {
+    window.addEventListener('unload', () => {
+      // Ensure the service worker is unregistered when we unload
+      serviceWorkerRegistration?.unregister();
+    });
+  }, [serviceWorkerRegistration]);
 
   useEffect(() => {
     // Set up a broadcast channel to receive messages from the service worker.
@@ -126,6 +147,15 @@ const InnerHTMLPreview = () => {
           className={moduleStyles.fileIframe}
         />
       );
+    } else if (serviceWorkerUnavailable) {
+      return (
+        <div className={moduleStyles.placeholderContainer}>
+          <CodebridgeEmptyState
+            title="Preview Unavailable"
+            description="We're sorry, the preview is unavailable in your browser. Please contact support@code.org for assistance."
+          />
+        </div>
+      );
     } else {
       return (
         <div className={moduleStyles.placeholderContainer}>
@@ -133,7 +163,13 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [allowScripts, currentFile, isLevelLoading, serviceWorkerReady]);
+  }, [
+    allowScripts,
+    currentFile,
+    isLevelLoading,
+    serviceWorkerReady,
+    serviceWorkerUnavailable,
+  ]);
 
   return getPreview();
 };

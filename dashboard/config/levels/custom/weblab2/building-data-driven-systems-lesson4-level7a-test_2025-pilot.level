@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-12-15T17:07:14.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Update and Evolve an Object\r\n1. **Update the Object:** In the \"Update\" section, use dot notation or bracket notation to set update the object properties.\r\n2. **Add a Feature:** Create a new property on the object for an extra feature \r\n3. **Update the Screen:** Use AI to assist with creating a new HTML element to display your new property inside the `render()` function.\r\n4. **Test:** Run the code to verify the card shows the proper updates\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bike Upgrade</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <div class=\"card\">\n    <h2>Vanessa's Bike</h2>\n    <p>Color: <span id=\"display-color\"></span></p>\n    <p>Gears: <span id=\"display-gears\"></span></p>\n    <p>Bell: <span id=\"display-bell\"></span></p>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Object\nconst bike = {\n  color: \"red\",\n  gears: 7,\n  hasBell: false\n};\n\n// Update\n\n\n\n// Render function\nfunction render() {\n  document.getElementById(\"display-color\").textContent = bike.color;\n  document.getElementById(\"display-gears\").textContent = bike.gears;\n  if (bike.hasBell) {\n    document.getElementById(\"display-bell\").textContent = \"Yes\";\n  } else {\n    document.getElementById(\"display-bell\").textContent = \"No\";\n  }\n\n}\n\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: 'Verdana', sans-serif;\n  background-color: #eef2f5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.card {\n  background-color: white;\n  width: 300px;\n  padding: 2rem;\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n  border-top: 6px solid #9b59b6; /* Purple accent */\n}\n\nh2 {\n  margin-top: 0;\n  color: #2c3e50;\n  text-align: center;\n  font-size: 1.5rem;\n}\n\np {\n  font-size: 1.1rem;\n  color: #7f8c8d;\n  border-bottom: 1px solid #ecf0f1;\n  padding-bottom: 0.5rem;\n  margin: 1rem 0;\n  display: flex;\n  justify-content: space-between;\n}\n\nspan {\n  font-weight: bold;\n  color: #2c3e50;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n++wSEQYkSWgsaS0ZDSjdlA==\n",
+    "display_name": "Bike",
+    "bubble_choice_description": "Explore and update what might constitute a `bike` object",
+    "thumbnail_url": "https://images.code.org/3c2caedb924f7af237d5772c47c8bbfa-bike.jpg",
+    "name_suffix": "_2025-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:07:14.441+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level7a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level7a-test-2025\"},{\"changed_at\":\"2026-01-16 18:14:43 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-01-16 18:22:15 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

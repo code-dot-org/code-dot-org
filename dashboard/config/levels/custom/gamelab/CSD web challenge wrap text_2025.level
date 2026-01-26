@@ -1,6 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:57:12.000Z",
   "level_num": "custom",
@@ -102,8 +101,10 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"17d36055-4e2e-4813-abc6-17b46dffd2fa\": {\r\n      \"name\": \"rainbow\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd/category_backgrounds/background_rainbow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oxL0ak8K0_DZMb1sQi0VfaI8XrHTF6Jd\"\r\n    }\r\n  }\r\n}",
     "thumbnail_url": "https://images.code.org/fa2ff3ab86764a3afd9f262c25c76d40-image-1592428480087.png",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:57:12.068+00:00\",\"changed\":[\"cloned from \\\"CSD web challenge wrap text_2024\\\"\"],\"cloned_from\":\"CSD web challenge wrap text_2024\"},{\"changed_at\":\"2025-10-22 15:54:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>

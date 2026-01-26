@@ -20,7 +20,7 @@
         "isVisible": true
       }
     },
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-12T14:51:33.862+00:00\",\"changed\":[\"cloned from \\\"CSA Magpie Lab L3 PBT\\\"\"],\"cloned_from\":\"CSA Magpie Lab L3 PBT\"},{\"changed_at\":\"2022-09-12 14:51:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-12 15:05:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

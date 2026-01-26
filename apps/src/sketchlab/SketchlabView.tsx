@@ -12,14 +12,14 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
-import React, {useEffect, useCallback, useRef, useState} from 'react';
+import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -32,9 +32,18 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useDialogControl} from '../lab2/views/dialogs';
+import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
+
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import {populateInitialExcalidrawState, uploadExternalFiles} from './utils';
+import {
+  handleSaveToBackpack,
+  generateNewExternalFiles,
+  populateInitialExcalidrawState,
+  uploadExternalFiles,
+} from './utils';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -91,6 +100,17 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   // We remount (ie, reset) Excalidraw any time we observe
   // sources being initialized (eg, when level changes, teacher views a student's project, etc).
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
+
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const backpackContext = useMemo(() => {
+    // The backpack api does not work for signed-out users (it redirects to sign-in),
+    // so we don't create the api instance if there is no current user.
+    if (currentUserId) {
+      return {primaryApi: new BackpackClientApi('sketchlab', null)};
+    }
+    return null;
+  }, [currentUserId]);
+  const dialogControl = useDialogControl();
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -154,12 +174,22 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           serializedData.appState.zoom = appState.zoom;
         }
 
-        const uploadedFiles = await uploadExternalFiles(
-          currentSources.source.externalFiles || {},
-          serializedData.files,
-          filesBeingUploadedRef,
-          channelId,
-          levelProperties.name
+        const savedFiles = currentSources.source.externalFiles || {};
+        const excalidrawFiles = serializedData.files;
+        const levelName = levelProperties.name;
+
+        const savedFileIds = Object.keys(savedFiles || {});
+        const excalidrawFileIds = Object.keys(excalidrawFiles || {});
+        const newFileIds = excalidrawFileIds.filter(
+          id =>
+            !savedFileIds.includes(id) && !filesBeingUploadedRef.current.has(id)
+        );
+
+        const newFiles = generateNewExternalFiles(
+          newFileIds,
+          excalidrawFiles,
+          levelName,
+          channelId
         );
 
         updateSources({
@@ -167,13 +197,27 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             ...serializedData,
             externalFiles: {
               ...currentSources.source.externalFiles,
-              ...(uploadedFiles || {}),
+              ...newFiles,
             },
           },
         });
+
+        if (newFiles && !readonlyWorkspace) {
+          uploadExternalFiles(
+            newFiles,
+            serializedData.files,
+            filesBeingUploadedRef
+          );
+        }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
-    [updateSources, channelId, currentSources.source, levelProperties.name]
+    [
+      updateSources,
+      channelId,
+      currentSources.source,
+      levelProperties.name,
+      readonlyWorkspace,
+    ]
   );
 
   useEffect(() => {
@@ -184,14 +228,23 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, []);
 
-  useEffect(() => {
-    setReinitializationHandler(() => {
-      setExcalidrawMountKey(key => key + 1);
+  const reinitializationHandler = useCallback(() => {
+    setExcalidrawMountKey(key => key + 1);
+  }, []);
 
-      // Reset loaded images on remount so we don't end up with a large number of images stored across pages.
-      downloadedFilesDataRef.current = {};
-    });
-  }, [setReinitializationHandler]);
+  const onLoadVersion = useCallback(
+    (sources: ProjectSources) => {
+      if (sources) {
+        updateSources(sources as SketchlabSources);
+      }
+      reinitializationHandler();
+    },
+    [updateSources, reinitializationHandler]
+  );
+
+  useEffect(() => {
+    setReinitializationHandler(reinitializationHandler);
+  }, [setReinitializationHandler, reinitializationHandler]);
 
   // Since there's no run button in Sketch Lab, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -210,63 +263,101 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   );
 
   return (
-    <div className={moduleStyles.sketchlabContainer}>
-      <SketchlabTourSteps />
-      <div style={{width: leftPanelWidth}} className={panelClassName}>
-        <ResourcePanel
-          levelProperties={levelProperties}
-          isRunning={false}
-          hasRun={hasRun}
-          hasEdited={false}
-          settings={[useThemeSetting('sketchlab')]}
-        />
-      </div>
-      <ResizeBar
-        isVertical={true}
-        separatorProps={panelSeparatorProps}
-        isDragging={isDragging}
-      />
-      <div style={{width: rightPanelWidth}}>
-        <PanelContainer
-          id="workspace"
-          className={panelClassName}
-          headerContent={<WorkspaceHeader />}
-          rightHeaderContent={
-            !readonlyWorkspace && (
-              <Button
-                text={commonI18n.startOver()}
-                iconRight={{iconStyle: 'solid', iconName: 'arrow-rotate-left'}}
-                color={'gray'}
-                onClick={onClickStartOver}
-                ariaLabel={commonI18n.startOver()}
-                size={'xs'}
-                type="secondary"
-              />
-            )
-          }
-        >
-          {teacherViewingStudent && (
-            <TeacherViewingStudentProjectAlert inWorkspaceContainer />
-          )}
-          <Excalidraw
-            initialData={
-              experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-                ? populateInitialExcalidrawState(
-                    currentSources.source,
-                    downloadedFilesDataRef.current
-                  )
-                : (currentSources.source as ExcalidrawInitialDataState)
-            }
-            onChange={debouncedSerializeAndSaveWorkspace}
-            excalidrawAPI={api => (excalidrawApiRef.current = api)}
-            key={excalidrawMountKey}
-            theme={theme.toLowerCase() as ExcalidrawTheme}
-            viewModeEnabled={readonlyWorkspace}
+    <BackpackAPIContext.Provider value={backpackContext}>
+      <div className={moduleStyles.sketchlabContainer}>
+        <SketchlabTourSteps />
+        <div style={{width: leftPanelWidth}} className={panelClassName}>
+          <ResourcePanel
+            levelProperties={levelProperties}
+            isRunning={false}
+            hasRun={hasRun}
+            hasEdited={false}
+            settings={[useThemeSetting('sketchlab')]}
+            versionHistoryProps={{
+              startSources:
+                (levelProperties?.startSources as ProjectSources) ||
+                DEFAULT_SOURCES,
+              onLoadVersion: onLoadVersion,
+            }}
+            backpackProps={{
+              validateFileName: (fileName: string) => ({
+                isSupportFileName: false,
+                newFileName: fileName,
+              }),
+              // Sketch Lab doesn't support importing Backpack files into
+              // the project, so we provide dummy methods.
+              saveFileToProject: () => {},
+              createNewProjectFile: () => {},
+              findIdForFileName: () => undefined,
+              saveToBackpackButton: {
+                onClick: (
+                  fileList: string[],
+                  errorCallback: (error: string) => void
+                ) =>
+                  handleSaveToBackpack(
+                    excalidrawApiRef.current,
+                    backpackContext?.primaryApi,
+                    dialogControl,
+                    fileList,
+                    errorCallback
+                  ),
+                text: 'Save Sketch to Backpack',
+              },
+              // We don't currently support importing backpack files, so this list is empty.
+              supportedFileTypes: [],
+            }}
           />
-          {WorkspaceAlert}
-        </PanelContainer>
+        </div>
+        <ResizeBar
+          isVertical={true}
+          separatorProps={panelSeparatorProps}
+          isDragging={isDragging}
+        />
+        <div style={{width: rightPanelWidth}}>
+          <PanelContainer
+            id="workspace"
+            className={panelClassName}
+            headerContent={<WorkspaceHeader />}
+            rightHeaderContent={
+              !readonlyWorkspace && (
+                <Button
+                  text={commonI18n.startOver()}
+                  iconRight={{
+                    iconStyle: 'solid',
+                    iconName: 'arrow-rotate-left',
+                  }}
+                  color={'gray'}
+                  onClick={onClickStartOver}
+                  ariaLabel={commonI18n.startOver()}
+                  size={'xs'}
+                  type="secondary"
+                />
+              )
+            }
+          >
+            {teacherViewingStudent && (
+              <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+            )}
+            <Excalidraw
+              initialData={
+                experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
+                  ? populateInitialExcalidrawState(
+                      currentSources.source,
+                      downloadedFilesDataRef.current
+                    )
+                  : (currentSources.source as ExcalidrawInitialDataState)
+              }
+              onChange={debouncedSerializeAndSaveWorkspace}
+              excalidrawAPI={api => (excalidrawApiRef.current = api)}
+              key={excalidrawMountKey}
+              theme={theme.toLowerCase() as ExcalidrawTheme}
+              viewModeEnabled={readonlyWorkspace}
+            />
+            {WorkspaceAlert}
+          </PanelContainer>
+        </div>
       </div>
-    </div>
+    </BackpackAPIContext.Provider>
   );
 };
 

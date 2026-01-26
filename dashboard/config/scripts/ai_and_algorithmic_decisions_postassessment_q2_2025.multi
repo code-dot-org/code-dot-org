@@ -7,7 +7,7 @@ wrong 'Remove the feature completely so users can\'t be distracted.'
 right 'Adjust the timing or trigger so the preview only appears when users clearly choose to see it.'
 wrong 'Make the previews open automatically for every book on the page.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1

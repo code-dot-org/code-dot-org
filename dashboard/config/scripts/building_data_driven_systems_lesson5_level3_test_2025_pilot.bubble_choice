@@ -1,0 +1,8 @@
+name 'building-data-driven-systems-lesson5-level3-test_2025-pilot'
+display_name 'Data Fairness in Real-World Systems'
+description 'Choose one of the scenarios below:'
+
+sublevels
+level 'building-data-driven-systems-lesson5-level3a-test_2025-pilot'
+level 'building-data-driven-systems-lesson5-level3b-test_2025-pilot'
+level 'building-data-driven-systems-lesson5-level3c-test_2025-pilot'

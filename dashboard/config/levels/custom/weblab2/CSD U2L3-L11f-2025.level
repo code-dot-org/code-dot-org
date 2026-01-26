@@ -1,0 +1,53 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-05T06:56:30.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Your Favorite Games",
+    "long_instructions": "# Your Favorite Games\r\n\r\nNow that you have learned how to create HTML headings, lists, and code special characters, you can put your skills to the test! \r\n\r\n# Do This\r\n1) Create a web page about your favorite games!\r\n\t- For example, this web page could include information about your favorite type of games and then a list of your top 3 favorites!\r\n    - You could even do favorite games and use the horizontal rule tag to separate the descriptions of each one!\r\n    \r\nYou may not be able to create the \"perfect\" web page just yet, but you can develop a **prototype** that shows your general idea!",
+    "teacher_markdown": "While this level does contain an exemplar, because of how open-ended the directions are, we encourage you to consider this as a focused free-play level: students are free to design a web page based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their web page, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop a web page of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
+    "bubble_choice_description": "Try using the new code you have learned to create your own HTML page about your favorite games.",
+    "thumbnail_url": "https://images.code.org/38c2972138a05f7a9f0efec02725dffc-f.png",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    \n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-05 06:56:39 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-05 06:56:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

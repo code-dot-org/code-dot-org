@@ -51,7 +51,10 @@ describe('WorkspaceAlert', () => {
   });
 
   it('isBlockly uses #toolbox-header for left', () => {
-    jQueryWidth.onCall(0).returns(1);
+    const toolboxHeader = document.createElement('div');
+    toolboxHeader.id = 'toolbox-header';
+    document.body.appendChild(toolboxHeader);
+
     const isBlockly = mount(
       <WorkspaceAlert
         type="warning"
@@ -62,9 +65,8 @@ describe('WorkspaceAlert', () => {
         <span>This is a blockly alert</span>
       </WorkspaceAlert>
     );
-    expect(jQueryWidth.callCount).to.equal(1);
-    expect(jQueryWidth.thisValues[0].selector).to.equal('#toolbox-header');
-    expect(isBlockly.find('div').first().props().style.left).to.equal(1);
+    expect(isBlockly.find('div').first().props().style.left).to.equal(0);
+    document.body.removeChild(toolboxHeader);
   });
 
   it('not isBlockly uses .droplet-gutter and .droplet-palette-element for left', () => {

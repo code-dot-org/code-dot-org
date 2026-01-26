@@ -1,4 +1,6 @@
 module AidiffPromptHelper
+  include AiDiffBedrockHelper
+
   EXIT_TICKET_SCHEMA = {
     "type" => "object",
     "required" => ["comment", "exit_ticket_items"],
@@ -62,7 +64,7 @@ module AidiffPromptHelper
     }
   }
 
-  def self.get_prompt_supplement(section_contexts)
+  def get_prompt_supplement(section_contexts)
     return "" unless section_contexts
     prompt = "\nThe courses that this teacher may ask you about are:"
     section_contexts.each do |context|
@@ -71,15 +73,7 @@ module AidiffPromptHelper
     prompt
   end
 
-  def self.populate_new_session_messages(messages, input)
-    new_input_text = "This is a continuation of a previous conversation. The previous messages are:"
-    messages.each do |msg|
-      new_input_text << "\n\n#{msg.user? ? "User" : "Assistant"}: #{msg.raw_content}"
-    end
-    new_input_text << "\n\n\n**The current message that you should respond to is:**\nUser: #{input}"
-  end
-
-  def self.add_exit_ticket_formatting(prompt, previous_message = nil)
+  def add_exit_ticket_formatting(prompt, previous_message = nil)
     prompt = format('%{prompt}
 
       This teacher is asking you to produce or modify an exit ticket. An exit ticket is a short set of 1-5 questions for the end of class that checks if students understand the major points of the lesson. If the teacher requests a specific number of questions you must only generate the number of questions requested.
@@ -90,9 +84,7 @@ module AidiffPromptHelper
       prompt = format('%{prompt}
         Here is the previous exit ticket that you should make modifications to:
 
-        %{previous_exit_ticket}
-
-        ', prompt: prompt, previous_exit_ticket: previous_message.content
+        %{previous_exit_ticket}', prompt: prompt, previous_exit_ticket: previous_message.content
         )
     end
 
@@ -112,13 +104,12 @@ module AidiffPromptHelper
             "answer" : "a) moo"
           }
         ]
-      }
-    ', prompt: prompt, json_schema: EXIT_TICKET_SCHEMA.to_json
+      }', prompt: prompt, json_schema: EXIT_TICKET_SCHEMA.to_json
       )
     prompt
   end
 
-  def self.add_lesson_hook_formatting(prompt, previous_message = nil)
+  def add_lesson_hook_formatting(prompt, previous_message = nil)
     prompt = format('%{prompt}
 
       This teacher is asking you to produce or modify a lesson hook. A lesson hook is a short activity or fun introduction for the beginning of class that introduces the lesson, engages students, and connects the lesson with previous lessons, student interests, or other subjects. A lesson hook should take 1-5 minutes of class time. If the teacher requests a specific lesson hook subject or activity type, you must follow their request.
@@ -129,9 +120,7 @@ module AidiffPromptHelper
       prompt = format('%{prompt}
         Here is the previous lesson hook that you should make modifications to:
 
-        %{previous_lesson_hook}
-
-        ', prompt: prompt, previous_lesson_hook: previous_message.content
+        %{previous_lesson_hook}', prompt: prompt, previous_lesson_hook: previous_message.content
         )
     end
 
@@ -149,13 +138,12 @@ module AidiffPromptHelper
             "activity" : "Duck Duck Goose: sit in a circle, one person is it, if they say goose, then you chase them",
             "wrap_up" : "Think about what other birds live in the water like ducks and geese. How are they similar?"
         }
-      }
-    ', prompt: prompt, json_schema: LESSON_HOOK_SCHEMA.to_json
+      }', prompt: prompt, json_schema: LESSON_HOOK_SCHEMA.to_json
       )
     prompt
   end
 
-  def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset, section_contexts, level_instructions, student_code, artifact_type, previous_message = nil)
+  def get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset, section_contexts, level_instructions, student_code, artifact_type, previous_message = nil)
     case context
     when SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
       prompt =
@@ -213,6 +201,17 @@ module AidiffPromptHelper
 
       Here are the search results in numbered order:
       $search_results$", course_name: course_name
+      )
+    when SharedConstants::AI_DIFF_CONTEXT[:PROGRESS]
+      prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with the %{course_name} course. The teacher will either ask you questions about the current course plan and resources or ask you to make changes to or create new material for this course. When creating new material for the course, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+    The current course this teacher is working on is %{course_name}. The teacher is currently viewing a page showing how much progress their students have made in this course.
+
+    If asked about a student, here is some data in CSV format about the student progress the teacher is viewing. The column headers refer to level numbers. In the data rows, 'A' means the student attempted the work but did not finish; 'S' means the student submitted their work; 'V' means the student submitted their work and the submission has been validated for completeness or correctness; 'N' means the student has not started the work. Please do not repeat these abbreviations to the teacher as the page they are viewing uses a different, graphical method of displaying this information.
+
+    %{progress_csvs}
+
+    Here are the search results in numbered order:
+    $search_results$", course_name: course_name, progress_csvs: progress_csv_for_all_sections(section_contexts).join("\n\n")
       )
     when SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
       prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.%{section_contexts}

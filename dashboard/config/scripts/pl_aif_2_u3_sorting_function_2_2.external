@@ -1,0 +1,77 @@
+name 'pl-aif-2-U3-sorting-function-2-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sorting in JavaScript
+
+#### Once last time, before diving into the details, take a moment to look over the code sample as a whole.
+
+
+<div style="background-color:#f7f8fa; padding:16px; border-radius:8px; margin:20px 0;">
+  <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+       alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." 
+       width="40px" 
+       style="border-radius:10px; float:left; margin:0 12px 10px 0;">
+
+  <h4><strong>Think about:</strong></h4><br>
+
+  <ul>
+    <li style="font-size: 14pt;">Where do you see the sort rule being defined?</li>
+    <li style="font-size: 14pt;">What value is being compared to decide the order?</li>
+    <li style="font-size: 14pt;">If you wanted lowest score first instead, what is the one place you would change?</li>
+  </ul>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+
+<img src="https://images.code.org/27d7b6030e8e13feff668b11c076f6f7-image-1767807024312.png" alt="JavaScript code sample with a sorting function for highest score" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
+## Breaking it down
+
+
+
+#### **1. The data (array of objects)** 
+
+<img src="https://images.code.org/0b65b2bb3aa1f996960173280e8430cb-image-1767807082322.png" alt="array of students with scores in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+
+#### This is the data the app starts with. 
+#### Each student is an object, and all the students together are stored in an array. 
+
+<br><br>
+
+
+#### **2. The sort logic (inside a function)**
+
+<div style="clear:both;"></div>
+<img src="https://images.code.org/82ab47eabbc680e18ae36151e17c01b2-image-1767807127427.png" alt="function with sorting algorithm" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+
+
+#### This function defines the sort rule.
+#### It compares two students at a time and decides which one should come first based on score.
+
+> #### `sort()` is a JavaScript array function that reorders items in a list.
+> #### When you provide a **compare function**, you control what “first” means (highest score, A–Z, newest, etc.).
+
+<br><br>
+
+
+#### **3. Using the function**
+
+<img src="https://images.code.org/f6ec4d1caba87b0013b42acc2abe3e42-image-1767807197683.png" alt="calling the sorting function in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+
+#### This line runs the function using the original data.
+#### The result is the same list of students, but reordered so the highest scores appear first.
+
+---
+
+## What's next?
+
+#### Now that we’ve seen searching, filtering, and sorting, let’s explore how these tools can work together in a real app.
+
+
+MARKDOWN

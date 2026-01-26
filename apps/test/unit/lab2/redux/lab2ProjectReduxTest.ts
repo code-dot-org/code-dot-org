@@ -87,6 +87,7 @@ const initialState: Lab2ProjectState = {
   hasEdited: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
+  projectSourceLevelId: undefined,
 };
 
 describe('lab2ProjectRedux', () => {
@@ -235,6 +236,30 @@ describe('lab2ProjectRedux', () => {
       expect(
         (state.projectSources!.source as MultiFileSource).files['1'].name
       ).toBe('renamed.html');
+      expect(state.hasEdited).toBe(true);
+    });
+
+    it('should update file language when renaming with new extension', () => {
+      const initialProjectSources = createMockProjectSources();
+      const initialStateWithSources = {
+        ...initialState,
+        projectSources: initialProjectSources,
+      };
+
+      // Verify initial language
+      const initialFile = (
+        initialStateWithSources.projectSources!.source as MultiFileSource
+      ).files['1'];
+      expect(initialFile.language).toBe('html');
+
+      const state = reducer(
+        initialStateWithSources,
+        renameFile({fileId: '1', newName: 'renamed.css'})
+      );
+
+      const file = (state.projectSources!.source as MultiFileSource).files['1'];
+      expect(file.name).toBe('renamed.css');
+      expect(file.language).toBe('css');
       expect(state.hasEdited).toBe(true);
     });
 

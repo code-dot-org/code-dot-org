@@ -1,5 +1,6 @@
 class AidiffThreadsController < ApplicationController
   include AiDiffBedrockHelper
+  include AidiffPromptHelper
   include LevelsHelper
 
   before_action :authenticate_user!
