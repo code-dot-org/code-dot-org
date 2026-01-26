@@ -1,4 +1,4 @@
-.row-container {
+.rowContainer {
   align-items: flex-start;
   align-self: stretch;
   background: var(--background-neutral-secondary);
@@ -20,31 +20,31 @@
   margin-block: 0.5rem;
 }
 
-.initial-version-row {
+.initialVersionRow {
   margin-block: 0.625rem 0;
 }
 
-.current-version-row {
+.currentVersionRow {
   margin-block: 0.625rem 1rem;
 }
 
-.ai-save-row {
+.aiSaveRow {
   background: var(--background-brand-aqua-extra-light);
   border: 1px solid var(--borders-brand-aqua-primary);
 }
 
-.ai-save-icon {
+.aiSaveIcon {
   color: var(--text-brand-aqua-primary);
 }
 
-.version-content {
+.versionContent {
   display: flex;
   flex-direction: column;
   gap: 0;
   width: 100%;
 }
 
-.version-header {
+.versionHeader {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -55,7 +55,7 @@
   width: 100%;
 }
 
-.version-label {
+.versionLabel {
   min-width: 0;
 
   span {
@@ -65,19 +65,19 @@
   }
 }
 
-.commit-description {
+.commitDescription {
   border-top: var(--lab-border-default);
   color: var(--text-neutral-secondary);
   padding: 0.5rem 0.75rem;
 }
 
-.restore-button i {
+.restoreButton i {
   html[dir='rtl'] & {
     transform: scaleX(-1);
   }
 }
 
-.auto-saved-icon {
+.autoSavedIcon {
   color: var(--text-neutral-placeholder);
   margin-inline-end: 0.125rem;
 }

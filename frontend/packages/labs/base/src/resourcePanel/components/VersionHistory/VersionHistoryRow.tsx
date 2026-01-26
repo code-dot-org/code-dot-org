@@ -50,7 +50,7 @@ const VersionHistoryRow: FunctionComponent<
   alwaysShowAutoSaves = false,
 }) => {
   if (isLatest) {
-    label = 'Current version';
+    label = 'Current Version';
   }
 
   let ariaLabel;
