@@ -1,0 +1,78 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-26T01:39:21.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n  <link rel=\"stylesheet\" href=\"animals.css\">\n</head>\n <body>\n   <h1> Dogs vs Cats </h1> \n \n    <h3>Dogs</h3> \n  <img src=\"dog.jpg\" \n      alt=\"dog jumping\"> \n \n  <p>Cpl Ian Houlding - Wikimedia Commons - OGL</p>\n \n  <h3>Cats</h3> \n </body> \n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "animals.css",
+          "language": "css",
+          "contents": "p {\n  color: gray;\n  font-style: italic;\n}\nh1 {\n  color: navy;\n  font-weight: bold;\n  font-family: Helvetica, sans-serif;\n}\n\nh3 {\n  color: navy;\n  font-weight: bold;\n  text-decoration: underline;\n  font-family: Helvetica, sans-serif;\n}",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "dog.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L2-template-2025/uuid/8f407941-5626-47c7-ad35-ad9cd781c3c5.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "cat.jpeg",
+          "language": "jpeg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L2-template-2025/uuid/7c3c688d-2ed5-481d-b09c-6806dd7276d9.jpeg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-26 01:40:02 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
