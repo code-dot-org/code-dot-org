@@ -70,6 +70,7 @@ Fish.prototype.init = function (config) {
         unitName: config.scriptName,
         levelId: config.serverLevelId,
         levelName: config.level.name,
+        appName: config.appName,
       },
       PLATFORMS.BOTH
     );
