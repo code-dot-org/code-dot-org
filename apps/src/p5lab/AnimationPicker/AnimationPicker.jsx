@@ -226,11 +226,43 @@ class AnimationPicker extends React.Component {
           pendingUploadData: data,
         });
 
+        MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
+          {name: 'AppName', value: this.props.projectType || 'unknown'},
+          {name: 'UploaderType', value: 'AnimationPicker'},
+        ]);
+        analyticsReporter.sendEvent(
+          EVENTS.MODERATE_CUSTOM_IMAGE,
+          {
+            UploaderType: 'Animation Picker',
+            ProjectType: this.props.projectType,
+          },
+          PLATFORMS.STATSIG
+        );
+
         HttpClient.post(`/v3/images/moderate`, file, true, {
           'Content-Type': file.type,
         })
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) {
+              MetricsReporter.logError(
+                'Error with image moderation: HTTP error'
+              );
+              MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
+                {name: 'AppName', value: this.props.projectType || 'unknown'},
+                {name: 'UploaderType', value: 'AnimationPicker'},
+              ]);
+              this.props.onUploadError(msg.animationPicker_uploadingError());
+              return null;
+            }
+            return response.json();
+          })
           .then(json => {
+            if (!json) return; // Skip if an HTTP error occurred.
+
+            MetricsReporter.incrementCounter('ModerateCustomImage.Success', [
+              {name: 'AppName', value: this.props.projectType || 'unknown'},
+              {name: 'UploaderType', value: 'AnimationPicker'},
+            ]);
             // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
             if (json.rating !== 'everyone' && json.rating !== 'unknown') {
               this.setState({
@@ -244,6 +276,10 @@ class AnimationPicker extends React.Component {
                 },
                 PLATFORMS.STATSIG
               );
+              MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
+                {name: 'AppName', value: this.props.projectType || 'unknown'},
+                {name: 'UploaderType', value: 'AnimationPicker'},
+              ]);
             } else {
               // If the image is rated 'everyone' or 'unknown', continue with upload.
               this.props.onUploadStart(this.state.pendingUploadData);
@@ -251,7 +287,11 @@ class AnimationPicker extends React.Component {
           })
           .catch(err => {
             this.props.onUploadError(msg.animationPicker_uploadingError());
-            MetricsReporter.logError('Azure image moderation error: ' + err);
+            MetricsReporter.logError('Error with image moderation: ' + err);
+            MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
+              {name: 'AppName', value: this.props.projectType || 'unknown'},
+              {name: 'UploaderType', value: 'AnimationPicker'},
+            ]);
           });
       })
       .catch(err => {
