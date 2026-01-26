@@ -160,6 +160,8 @@ export const fetchAndSaveFile = async ({
   if (response?.headers.get('Content-Type')?.startsWith('image/')) {
     const fileType = selectedFileName.split('.').pop();
     const blob = await response.blob();
+    const uuid = createUuid();
+    const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
 
     // Moderate image if file is from a secondary backpack.
     if (isSecondaryBackpack && fileType) {
@@ -175,52 +177,107 @@ export const fetchAndSaveFile = async ({
       );
       console.log('moderationStatus', moderationStatus);
       if (moderationStatus === 'flagged') {
-        const saveImageFileToAssetsChannelFunction = async () => {
-          // Handle image file content as a blob, and upload as an asset.
-          // Store the url as the new file contents.
-          const uuid = createUuid();
-          const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
-          try {
-            await HttpClient.put(uploadUrl, blob);
-          } catch (error) {
-            Lab2Registry.getInstance()
-              .getMetricsReporter()
-              .logError(
-                'Backpack could not upload image file to assets channel',
-                error as Error
-              );
-            addAlert('danger', errorMessage);
-            return;
+        const saveBackpackImageFileToProjectFunction = async () => {
+          const uploadedUrl = await handleSaveImageToChannelAssets(
+            uploadUrl,
+            blob,
+            errorMessage,
+            addAlert
+          );
+          if (uploadedUrl) {
+            await handleSaveFileToProject(
+              newFileName,
+              selectedFileName,
+              createNewFile,
+              findIdForFileName,
+              saveFile,
+              fileContent,
+              uploadedUrl,
+              errorMessage,
+              addAlert,
+              successMetric,
+              successMessage
+            );
           }
-          url = uploadUrl;
         };
         // FlagedImageModal will be shown to the user and user can choose to add the image file to the project or not.
         onImageFlagged &&
-          onImageFlagged(file, fileType, saveImageFileToAssetsChannelFunction);
-        return;
-      }
-    } else {
-      // Handle image file content as a blob, and upload as an asset.
-      // Store the url as the new file contents.
-      const uuid = createUuid();
-      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
-      try {
-        await HttpClient.put(uploadUrl, blob);
-      } catch (error) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError(
-            'Backpack could not upload image file to assets channel',
-            error as Error
+          onImageFlagged(
+            file,
+            fileType,
+            saveBackpackImageFileToProjectFunction
           );
-        addAlert('danger', errorMessage);
         return;
       }
-      url = uploadUrl;
+    }
+
+    // Upload image to assets channel without moderation because image was already moderated when uploaded to project (for primary backpack files).
+    const uploadedUrl = await handleSaveImageToChannelAssets(
+      uploadUrl,
+      blob,
+      errorMessage,
+      addAlert
+    );
+    if (uploadedUrl) {
+      url = uploadedUrl;
+    } else {
+      return; // Exit if upload failed
     }
   } else {
     fileContent = await response.text();
   }
+  await handleSaveFileToProject(
+    newFileName,
+    selectedFileName,
+    createNewFile,
+    findIdForFileName,
+    saveFile,
+    fileContent,
+    url,
+    errorMessage,
+    addAlert,
+    successMetric,
+    successMessage
+  );
+};
+
+// Handle image file content as a blob, and upload as an asset.
+// Return the url for the new file contents.
+const handleSaveImageToChannelAssets = async (
+  uploadUrl: string,
+  blob: Blob,
+  errorMessage: string,
+  addAlert: (type: 'success' | 'danger', message: string) => void
+): Promise<string | undefined> => {
+  try {
+    await HttpClient.put(uploadUrl, blob);
+    return uploadUrl;
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(
+        'Backpack could not upload image file to assets channel',
+        error as Error
+      );
+    addAlert('danger', errorMessage);
+    return undefined;
+  }
+};
+
+// Save backpack file to project.
+const handleSaveFileToProject = async (
+  newFileName: string | undefined,
+  selectedFileName: string,
+  createNewFile: (fileName: string, contents: string, url?: string) => void,
+  findIdForFileName: (fileName: string) => string | undefined,
+  saveFile: (fileId: string, contents: string, url?: string) => void,
+  fileContent: string,
+  url: string | undefined,
+  errorMessage: string,
+  addAlert: (type: 'success' | 'danger', message: string) => void,
+  successMetric: string,
+  successMessage: string
+) => {
   if (newFileName) {
     createNewFile(newFileName, fileContent, url);
     addAlert('success', successMessage);
