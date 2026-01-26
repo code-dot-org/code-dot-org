@@ -61,6 +61,8 @@ Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
     DeletionPolicy: Retain
+    Metadata:
+      UpdateTrigger: "Force output export - 2026-01-26"
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
