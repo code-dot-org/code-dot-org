@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 20:43:13 UTC",
+    "serialized_at": "2026-01-16 18:17:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -83,9 +83,25 @@
   ],
   "lessons": [
     {
-      "key": "Intro to Data Structures",
-      "name": "Intro to Data Structures",
+      "key": "lesson-1",
+      "name": "Pre-Assessment",
       "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "key": "Intro to Data Structures",
+      "name": "Lesson 1: Intro to Data Structures",
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -101,8 +117,8 @@
     },
     {
       "key": "Turning Data Into Displays",
-      "name": "Turning Data Into Displays",
-      "absolute_position": 2,
+      "name": "Lesson 2: Turning Data Into Displays",
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -118,8 +134,8 @@
     },
     {
       "key": "Basic Array Methods",
-      "name": "Basic Array Methods",
-      "absolute_position": 3,
+      "name": "Lesson 3: Basic Array Methods",
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -135,8 +151,8 @@
     },
     {
       "key": "Objects for Real-World Data",
-      "name": "Objects for Real-World Data",
-      "absolute_position": 4,
+      "name": "Lesson 4: Objects for Real-World Data",
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -152,8 +168,8 @@
     },
     {
       "key": "Lists of Objects",
-      "name": "Lists of Objects",
-      "absolute_position": 5,
+      "name": "Lesson 5: Lists of Objects",
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -169,8 +185,8 @@
     },
     {
       "key": "Rendering Lists of Objects",
-      "name": "Rendering Lists of Objects",
-      "absolute_position": 6,
+      "name": "Lesson 6: Rendering Lists of Objects",
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -186,8 +202,8 @@
     },
     {
       "key": "Evaluating Fairness and Accessibility",
-      "name": "Evaluating Fairness and Accessibility",
-      "absolute_position": 7,
+      "name": "Lesson 7: Evaluating Fairness and Accessibility",
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -204,8 +220,8 @@
     },
     {
       "key": "Filtering",
-      "name": "Filtering",
-      "absolute_position": 8,
+      "name": "Lesson 8: Filtering",
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -222,8 +238,8 @@
     },
     {
       "key": "Searching",
-      "name": "Searching",
-      "absolute_position": 9,
+      "name": "Lesson 9: Searching",
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -239,8 +255,8 @@
     },
     {
       "key": "Sorting and Chaining",
-      "name": "Sorting and Chaining",
-      "absolute_position": 10,
+      "name": "Lesson 10: Sorting and Chaining",
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -256,8 +272,8 @@
     },
     {
       "key": "Value Explorer Project",
-      "name": "Value Explorer Project",
-      "absolute_position": 11,
+      "name": "Lesson 11: Value Explorer Project",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -271,9 +287,37 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "building-data-driven-systems-with-ai-pilot-2025"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "End of Unit Assessment",
+      "absolute_position": 13,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "6cd468b9-90ec-458e-8a88-009bfcef4c58",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6cd468b9-90ec-458e-8a88-009bfcef4c58",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
     {
       "key": "b5297da6-c8e8-4acc-a10a-c036ded3a8d0",
       "position": 1,
@@ -763,9 +807,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "building-data-driven-systems-with-ai-pilot-2025"
       }
+    },
+    {
+      "key": "7b63fd69-78eb-489f-8d62-b7e58980c605",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b63fd69-78eb-489f-8d62-b7e58980c605",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "d1a4934b-08a4-4a11-8c91-6dddbaa079b8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1a4934b-08a4-4a11-8c91-6dddbaa079b8",
+        "lesson_activity.key": "6cd468b9-90ec-458e-8a88-009bfcef4c58"
+      }
+    },
+    {
+      "key": "ae926563-d6fb-46f3-9d04-2044b86f4922",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ae926563-d6fb-46f3-9d04-2044b86f4922",
+        "lesson_activity.key": "6cd468b9-90ec-458e-8a88-009bfcef4c58"
+      }
+    },
     {
       "key": "6928fc04-d569-43b5-b9ad-24488313e2a3",
       "position": 1,
@@ -3386,11 +3463,47 @@
         "activity_section.key": "eed2fdd5-529e-4032-9cc4-932850eda454",
         "lesson_activity.key": "6be8d3a5-f0a3-4a3f-99d9-bb1d45ef5176"
       }
+    },
+    {
+      "key": "22e8ee85-3dee-4598-a818-81a9f484f4c2",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "22e8ee85-3dee-4598-a818-81a9f484f4c2",
+        "lesson_activity.key": "7b63fd69-78eb-489f-8d62-b7e58980c605"
+      }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-preassessment_2025"
+        ],
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-preassessment_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025",
+        "activity_section.key": "d1a4934b-08a4-4a11-8c91-6dddbaa079b8"
+      },
+      "level_keys": [
+        "building-data-driven-systems-preassessment_2025"
+      ]
+    },
+    {
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3415,7 +3528,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3440,7 +3553,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3465,7 +3578,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -3490,7 +3603,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3515,7 +3628,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -3540,11 +3653,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson1-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3562,7 +3678,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3587,7 +3703,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3612,7 +3728,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3637,7 +3753,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3662,7 +3778,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3687,7 +3803,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3712,7 +3828,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3737,11 +3853,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson2-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3759,7 +3878,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3784,7 +3903,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3809,7 +3928,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3834,7 +3953,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3859,7 +3978,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3884,7 +4003,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -3909,7 +4028,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3934,7 +4053,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3959,11 +4078,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson3-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3981,7 +4103,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4006,7 +4128,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4031,7 +4153,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4056,7 +4178,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4081,7 +4203,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4106,7 +4228,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4131,7 +4253,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4156,7 +4278,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4181,7 +4303,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4206,11 +4328,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson4-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4228,7 +4353,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4253,7 +4378,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4278,7 +4403,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4303,7 +4428,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4328,7 +4453,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4353,7 +4478,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4378,11 +4503,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson5-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4400,7 +4528,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4425,7 +4553,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4450,7 +4578,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4475,7 +4603,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4500,7 +4628,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4525,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4550,7 +4678,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4575,11 +4703,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson6-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4597,7 +4728,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4622,7 +4753,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4647,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4672,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4697,11 +4828,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson7-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4719,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4744,7 +4878,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4769,7 +4903,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4794,7 +4928,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4819,11 +4953,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson8-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4841,7 +4978,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4866,7 +5003,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4891,7 +5028,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4916,7 +5053,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4941,11 +5078,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson9-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -4963,7 +5103,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4988,7 +5128,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5013,7 +5153,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5038,7 +5178,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5063,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5088,11 +5228,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson10-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5110,11 +5253,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-choice-level1-test_2025-pilot"
+        ],
         "progression": "Milestone 1"
       },
       "bonus": false,
@@ -5132,11 +5278,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-choice-level2-test_2025-pilot"
+        ],
         "progression": "Milestone 2"
       },
       "bonus": false,
@@ -5154,11 +5303,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-level5-test_2025-pilot"
+        ],
         "progression": "Milestone 3"
       },
       "bonus": false,
@@ -5176,11 +5328,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-choice-level4-test_2025-pilot"
+        ],
         "progression": "Milestone 4"
       },
       "bonus": false,
@@ -5198,11 +5353,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "building-data-driven-systems-lesson11-pilot-survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5218,9 +5376,46 @@
       "level_keys": [
         "building-data-driven-systems-lesson11-pilot-survey_2025"
       ]
+    },
+    {
+      "chapter": 77,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "building-data-driven-systems-postassessment_2025"
+        ],
+        "progression": "End of Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "building-data-driven-systems-postassessment_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025",
+        "activity_section.key": "22e8ee85-3dee-4598-a818-81a9f484f4c2"
+      },
+      "level_keys": [
+        "building-data-driven-systems-postassessment_2025"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-preassessment_2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-preassessment_2025"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025",
+        "activity_section.key": "d1a4934b-08a4-4a11-8c91-6dddbaa079b8"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "building-data-driven-systems-lesson1-level1-test_2025-pilot",
@@ -6119,6 +6314,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "building-data-driven-systems-with-ai-pilot-2025",
         "activity_section.key": "eed2fdd5-529e-4032-9cc4-932850eda454"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "building-data-driven-systems-postassessment_2025",
+        "script_level.level_keys": [
+          "building-data-driven-systems-postassessment_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025",
+        "activity_section.key": "22e8ee85-3dee-4598-a818-81a9f484f4c2"
       }
     }
   ],
@@ -7091,12 +7298,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "building-data-driven-systems-lesson4-level6-test_2025-pilot",
+      "seeding_key": {
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+      "position": 1,
+      "learning_goal": "test",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "test",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ec0a36f3-23ed-4397-9a76-30d6f242b211",
+        "lesson.key": "Objects for Real-World Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "building-data-driven-systems-with-ai-pilot-2025"
+      }
+    }
   ]
 }

@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U2L10-toString PBT_pilot-2025",
     "teacher_markdown": "After adding the `toString()` method to the `Content` class, students will see the following displayed in the console:\r\n\r\n```\r\nSpongeBob SquarePants (1999)\r\n```\r\n\r\nThe `toString()` method tells Java how to print the object. Since the `TVShow` class is a subclass of the `Content` class, it inherits this method from the `Content` class to display the information.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-22T16:42:54.803+00:00\",\"changed\":[\"cloned from \\\"CSA U2L10-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L10-L2_pilot-2025\"}]"

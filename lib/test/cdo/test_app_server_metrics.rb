@@ -27,14 +27,30 @@ class AppServerMetricsTest < Minitest::Test
 
   def expect_metrics(*metrics)
     @sequence ||= sequence('metrics')
+    # Define the ID we expect to see.
+    # Must match the value stubbed in the test method below.
+    expected_instance_id = 'i-12345678'
+
     metrics.each do |name, value|
+      # Expect app server metrics published with Dimensions for the current environment/site.
       Cdo::Metrics.expects(:put).with(
         "App Server", name, value, {}, {storage_resolution: 1, unit: 'Count'}
+      ).in_sequence(@sequence)
+
+      # Expect app server metrics published with Dimensions for the current environment/site AND current EC2 Instance ID.
+      Cdo::Metrics.expects(:put).with(
+        "App Server",
+        name,
+        value,
+        {InstanceId: expected_instance_id},
+        {storage_resolution: 1, unit: 'Count'}
       ).in_sequence(@sequence)
     end
   end
 
   def test_app_server_metrics
+    AWS::EC2.stubs(:instance_id).returns('i-12345678')
+
     Raindrops::Linux.expects(:tcp_listener_stats).
       with([TCP_LISTENER]).times(2).
       returns(

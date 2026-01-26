@@ -5,6 +5,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
+import Lab2Registry from '../Lab2Registry';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
 
 interface ExtraLinksData {
@@ -37,7 +38,7 @@ async function fetchExtraLinksData(
 
   // Fetch project link data.
   let projectLinkData: ExtraLinksProjectData | undefined;
-  if (permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
+  if (channelId && permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)) {
     const levelProjectDataResponse =
       await HttpClient.fetchJson<ExtraLinksProjectData>(
         `/projects/${channelId}/extra_links`,
@@ -76,12 +77,25 @@ export const useExtraLinks = (levelId: number) => {
       scriptLevelId,
       channelId,
       abortController.signal
-    ).then(data => {
-      if (!abortController.signal.aborted) {
-        setExtraLinksData(data);
+    )
+      .then(data => {
+        if (!abortController.signal.aborted) {
+          setExtraLinksData(data);
+          setIsLoading(false);
+        }
+      })
+      .catch(e => {
+        if (e.name === 'AbortError') {
+          // Ignore abort errors
+          return;
+        }
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching extra links data', e as Error, {
+            message: e.message,
+          });
         setIsLoading(false);
-      }
-    });
+      });
 
     return () => abortController.abort();
   }, [permissions, levelId, scriptLevelId, channelId]);

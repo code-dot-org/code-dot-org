@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-16 13:53:12 UTC",
+    "serialized_at": "2025-12-19 18:27:43 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,8 +40,6 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 20 minutes\n",
-        "student_overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Hardware and Software",
@@ -651,15 +649,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
-        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
+          "csaif_pl_ai-new_MC"
         ],
         "lesson.key": "Hardware and Software",
         "lesson_group.key": "",
@@ -667,7 +662,7 @@
         "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
       },
       "level_keys": [
-        "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
+        "csaif_pl_ai-new_MC"
       ]
     },
     {
@@ -1189,9 +1184,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev",
+        "level.key": "csaif_pl_ai-new_MC",
         "script_level.level_keys": [
-          "csaif-pl-_hardware-software_forum_L21_CSandDev_-rev"
+          "csaif_pl_ai-new_MC"
         ],
         "lesson.key": "Hardware and Software",
         "lesson_group.key": "",

@@ -58,6 +58,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_AI_L10_predict\",\r\n  \"callout_text\": \"Add your if-statement inside here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"predict\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"getPrediction\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "thumbnail_url": "https://images.code.org/bf4fbbd4ab4f314b8239d6d9be2600ae-image-1617978080438.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

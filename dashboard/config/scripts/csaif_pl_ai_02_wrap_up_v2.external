@@ -1,0 +1,199 @@
+name 'csaif_pl_ai_02_wrap-up_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap-Up
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned how to:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Prepare to teach foundational AI programming concepts by modeling computational thinking and core programming constructs, including variables, functions, loops, and conditionals.</li><br>
+      <li>Guide students in reasoning about program behavior and decision making, including nested conditionals and ethical considerations in algorithmic systems.</li><br>
+      <li>Prepare students for a culminating project by guiding them through a structured, multi-day design and development process that includes brainstorming and decomposition, iterative coding with peer feedback, and reflection on both their creative choices and responsible AI use.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
+         alt="Icon with computer and weblayout" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+#### Below is some additional information, resources, and practice which you may choose to explore before continuing.
+
+## Tips from Teachers
+
+#### Here are some insights into teaching the **Foundations of AI Programming** unit. 
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The detailed lesson plans and slides are fantastic. They take the stress out of teaching new concepts, making the whole process seamless and enjoyable.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+   
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The AI integration is a game-changer. It not only helps students troubleshoot their code but also opens up conversations about the ethical implications of AI in society.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 100%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+This curriculum takes the intimidation out of coding. My students, even those who had never coded before, quickly saw how they could use Python to solve problems.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+## Additional Practice
+
+#### Need some additional practice? Try out the following optional activities.
+  <!-- Dropdown 1 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Variables
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4: Variables and Data Flow</a> to practice creating, modifing, and printing variables of different data types.
+
+<i>You may have already completed some of the levels from this lesson in this Professional Learning.</i>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/4/levels/1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 2 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Objects
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5: Working with Objects</a> to practice using objects to organize and control the behavior of things in a program.
+
+<i>You may have already completed some of the levels from this lesson in this Professional Learning.</i>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/5/levels/1?no_redirect=1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 3 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Functions
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7: Functions with Parameters</a> to practice writing your own functions with parameters.
+
+<i>You may have already completed some of the levels from this lesson in this Professional Learning.</i>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/7/levels/1?no_redirect=1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 4 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Loops
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: Introduction to Loops
+</a> to practice using loops to make code repeat instructions and solve problems more efficiently.
+
+<i>You may have already completed some of the levels from this lesson in this Professional Learning.</i>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/8/levels/1?no_redirect=1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+
+  <!-- Dropdown 5 -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 16px; font-weight: bold">
+	Selection
+</summary>
+
+<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">Work through the curriculum levels from <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/12' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 12: Two-Way Selection
+</a> to practice using if and if/else statements.
+
+<i>You may have already completed some of the levels from this lesson in this Professional Learning.</i>
+</p>
+
+
+<a href="https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/2/lessons/12/levels/1?no_redirect=1" 
+         target="blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-block; margin-top: 5px; padding: 8px 12px; background-color: #026C7A; color: #ffffff; text-decoration: none; border-radius: 6px; font-size: 14px;"> Open Additional Practice
+</a>
+</div>
+
+</details>
+MARKDOWN

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-12 15:41:24 UTC",
+    "serialized_at": "2025-12-19 19:13:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -37,19 +37,1207 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Teaching AI and the Systems that Power It",
+      "name": "Teaching AI and the Systems that Power It",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7eac2953-7256-4078-8000-a68ae755fbba",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba",
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    },
+    {
+      "key": "06035432-8edb-4d0d-8e27-33e32ceefd73",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    },
+    {
+      "key": "1b451f46-7fd1-443a-9c11-4316e9cdc581",
+      "position": 3,
+      "properties": {
+        "progression_name": "Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    },
+    {
+      "key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415",
+      "position": 4,
+      "properties": {
+        "progression_name": "Optimizing Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    },
+    {
+      "key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461",
+      "position": 5,
+      "properties": {
+        "progression_name": "Data in Computer Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    },
+    {
+      "key": "6cfa069e-3caa-4b14-82df-983f39aa5de5",
+      "position": 6,
+      "properties": {
+        "progression_name": "Preparing for the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    },
+    {
+      "key": "fe59e076-8664-4925-8ec1-2e18db2dc49c",
+      "position": 7,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe59e076-8664-4925-8ec1-2e18db2dc49c",
+        "lesson_activity.key": "7eac2953-7256-4078-8000-a68ae755fbba"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_00-new_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_00-new_v2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_02-new_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_02-new_v2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      },
+      "level_keys": [
+        "csaif-pl-computersystems-video-L2-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      },
+      "level_keys": [
+        "csaif_pl_ispo-L3-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-panels-L4-1-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif-pl-procssing-L4-2-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif_pl-SNOT-overview-L5-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-assess-L8-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      },
+      "level_keys": [
+        "csaif_pl_software-L11-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      },
+      "level_keys": [
+        "csaif-pl-matchingsoftware-L12-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      },
+      "level_keys": [
+        "csaif_pl-reflectsoftware-L13-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      },
+      "level_keys": [
+        "csaif_pl_troubleshoot-about-L14-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      },
+      "level_keys": [
+        "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      },
+      "level_keys": [
+        "csaif_pl_optimizing-lesson-L18-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      },
+      "level_keys": [
+        "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      },
+      "level_keys": [
+        "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai-new_MC_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      },
+      "level_keys": [
+        "csaif_pl_ai-new_MC_v2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      },
+      "level_keys": [
+        "csaif_pl-everyday-data-L2-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      },
+      "level_keys": [
+        "csaif_pl-analyzedatea-L4-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      },
+      "level_keys": [
+        "csaif-pl-data-library-panels-L5-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2_v3-PL_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level2_v3-PL_v2"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      },
+      "level_keys": [
+        "csaif_pl-AI-realworld-L7-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      },
+      "level_keys": [
+        "csaif-pl-aiethics-video-L11-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5"
+      },
+      "level_keys": [
+        "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_)wrap-up_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "fe59e076-8664-4925-8ec1-2e18db2dc49c"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_)wrap-up_v2"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-systems-rev2_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "fe59e076-8664-4925-8ec1-2e18db2dc49c"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-systems-rev2_v2"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_00-new_v2",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_00-new_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_02-new_v2",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_02-new_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-computersystems-video-L2-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ispo-L3-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "3f6b6fd9-dbbf-451d-899f-7b89577a74c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-panels-L4-1-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-procssing-L4-2-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-SNOT-overview-L5-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-assess-L8-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "06035432-8edb-4d0d-8e27-33e32ceefd73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_software-L11-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-matchingsoftware-L12-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-reflectsoftware-L13-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_troubleshoot-about-L14-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "1b451f46-7fd1-443a-9c11-4316e9cdc581"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_optimizing-lesson-L18-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai-new_MC_v2",
+        "script_level.level_keys": [
+          "csaif_pl_ai-new_MC_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6e22bfa1-761d-4ecc-86f3-cf07548ac415"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-everyday-data-L2-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-analyzedatea-L4-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-data-library-panels-L5-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson8-level2_v3-PL_v2",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2_v3-PL_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-AI-realworld-L7-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-aiethics-video-L11-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "b5690b3e-f7b6-4b90-bad5-d7c51d662461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_project-description-L2-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2",
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "6cfa069e-3caa-4b14-82df-983f39aa5de5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_)wrap-up_v2",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_)wrap-up_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "fe59e076-8664-4925-8ec1-2e18db2dc49c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-systems-rev2_v2",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-systems-rev2_v2"
+        ],
+        "lesson.key": "Teaching AI and the Systems that Power It",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-ai-systems-that-power-it-v2-2025",
+        "activity_section.key": "fe59e076-8664-4925-8ec1-2e18db2dc49c"
+      }
+    }
   ],
   "resources": [
 

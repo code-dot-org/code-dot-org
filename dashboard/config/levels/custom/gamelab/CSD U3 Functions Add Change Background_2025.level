@@ -72,10 +72,14 @@
     "rubric_performance_level_3": "A function is both defined and called inside the program, but there may be major errors that prevent it from running successfully, or code has been incorrectly placed in the draw loop.",
     "rubric_performance_level_4": "There are no new functions in the program.",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "ai_tutor_available": "true",
+    "preload_asset_list": null,
+    "code_functions": {
+      "greaterThanOperator": null
+    }
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:59:36.784+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Add Change Background_2024\\\"\"],\"cloned_from\":\"CSD U3 Functions Add Change Background_2024\"},{\"changed_at\":\"2025-11-14 21:58:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-14 22:01:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-14 22:02:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:59:36.784+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Add Change Background_2024\\\"\"],\"cloned_from\":\"CSD U3 Functions Add Change Background_2024\"},{\"changed_at\":\"2025-11-14 21:58:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-14 22:01:57 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-14 22:02:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-15 22:12:36 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

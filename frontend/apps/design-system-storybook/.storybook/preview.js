@@ -3,6 +3,9 @@ import {default as RtlPreview} from 'storybook-addon-rtl/preview';
 import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
 
 import '@code-dot-org/fonts/brands/code.org/index.css';
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
 import './preview.module.scss';
 import MuiDecorator from '../decorators/MuiDecorator';
 

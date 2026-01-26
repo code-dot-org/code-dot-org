@@ -6,3 +6,4 @@ export * from './partialApply';
 export * from './fetchPermissions';
 export * from './getLabViewPageAction';
 export * from './getIsLabViewBlocked';
+export * from './convertProjectTypeToDisplayName';

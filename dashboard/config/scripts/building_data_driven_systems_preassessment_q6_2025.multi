@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q6_2025'
+
+question 'Why should a developer use a "helper function" to handle an array operation like `.push()` instead of just calling `.push()` directly in the main code?'
+
+right 'Helper functions allow you to include validation logic (like checking if the data is valid) before updating the collection.'
+wrong 'JavaScript requires every array method to be wrapped in a function to work.'
+wrong 'Functions make the code run significantly faster by reducing memory usage.'
+wrong 'It prevents the AI from being able to read or suggest changes to the data.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 3
+
+Wrapping operations in helper functions promotes "defensive programming." It allows you to check for errors or empty data before it is added to your main collection.
+MARKDOWN

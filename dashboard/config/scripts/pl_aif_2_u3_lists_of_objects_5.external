@@ -24,8 +24,7 @@ markdown <<MARKDOWN
 
 - #### For example,
 
-	- #### `{ id: 103, name: "Stapler", location: "Desk 1" }`
-tells us that the item with ID 3 is a Stapler, stored in Desk 1.
+	- #### `{ id: 103, name: "Stapler", location: "Desk 1" }` tells us that the item with ID 3 is a Stapler, stored in Desk 1.
 
 #### This structure is extremely common in real-world data: a dataset (the array) made up of many individual records (the objects), each with fields that describe them.
 

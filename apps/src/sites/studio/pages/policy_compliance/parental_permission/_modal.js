@@ -5,6 +5,7 @@ import {Provider, useSelector} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {findOrCreateStableId} from '@cdo/apps/metrics/statsigHelpers';
 import {getStore} from '@cdo/apps/redux';
 import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -87,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (getScriptData('forceDisplay')) {
     renderModal();
   } else {
-    const studentUuid = getScriptData('studentUuid');
-    const modalKey = `cap-ppm-last-shown-at-${studentUuid}`;
+    const studentStableId = findOrCreateStableId();
+    const modalKey = `cap-ppm-last-shown-at-${studentStableId}`;
     const lastShownAt = moment(tryGetLocalStorage(modalKey, ''));
 
     // If the modal has been shown in the last 24 hours, don't show it again.

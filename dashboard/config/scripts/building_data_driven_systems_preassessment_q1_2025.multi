@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q1_2025'
+
+question 'A developer needs to store a list of 50 different song titles for a music app. Which data structure is the most efficient choice?'
+
+wrong 'A single string containing all 50 titles separated by commas.'
+wrong 'Fifty individual variables, each named after a different song.'
+right 'An array, which allows all titles to be stored and accessed under one name.'
+wrong 'A boolean variable that tracks if the playlist is currently playing.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 1
+
+An array is specifically designed to store collections of related data. Storing them in a single string makes it hard to access individual items, and 50 variables would be impossible to manage at scale.
+MARKDOWN

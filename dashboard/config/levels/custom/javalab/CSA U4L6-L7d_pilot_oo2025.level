@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:31:49.000Z",
   "level_num": "custom",
@@ -31,11 +30,9 @@
     },
     "video_key": "csa_the_equals_method",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true,
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:31:49.826+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L7d_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L6-L7d_pilot-2025\"},{\"changed_at\":\"2025-12-02 22:35:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-02 22:36:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

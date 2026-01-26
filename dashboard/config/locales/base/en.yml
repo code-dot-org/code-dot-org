@@ -157,6 +157,7 @@ en:
     windowslive: 'Microsoft'
     microsoft_v2_auth: 'Microsoft'
     clever: 'Clever'
+    classlink: 'ClassLink'
     powerschool: 'Powerschool'
     forgot_password: 'Forgot your password?'
     migration_success: 'Success! You have updated to our new account experience.'
@@ -284,6 +285,7 @@ en:
     picture: 'Now find your secret picture'
     words: 'Now enter your secret words'
     login: 'Sign in'
+    signing_in: 'Signing in...'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
     student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
@@ -1561,3 +1563,6 @@ en:
   global_edition:
     regions:
       fa: Farsi
+  roster:
+    sync:
+      has_started: Sync started. It will complete in a few minutes

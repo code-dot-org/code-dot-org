@@ -1,8 +1,5 @@
-// Auto-import SASS generated CSS
-import './index.css';
-
 // Types
-export {ButtonType, ButtonColor} from './types';
+export type {ButtonType, ButtonColor} from './types';
 
 // Component Props Types
 export type {ButtonProps} from './Button';

@@ -7,7 +7,7 @@ wrong 'Stop using AI tools and hire someone else to rebuild the page.'
 wrong 'Keep running the same prompt until it looks better by chance.'
 wrong 'Add more pictures to hide the layout problems.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 3, 6, 10

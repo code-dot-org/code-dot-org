@@ -46,6 +46,18 @@ def storage_decrypt_id(encrypted)
   return id
 end
 
+def get_storage_id_and_project_id(encrypted)
+  raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
+
+  if uuid?(encrypted)
+    project = Projects.table.where(uuid: encrypted).first || Project.find_by(uuid: encrypted)
+    raise ArgumentError, "No project found with uuid #{encrypted}" unless project
+    [project[:storage_id], project[:id]]
+  else
+    storage_decrypt_channel_id(encrypted)
+  end
+end
+
 # This method can throw the following errors:
 # ArgumentError if encrypted is incorrectly formatted/padded for base64; or
 # OpenSSL::Cipher::CipherError if the base64-decoded value is not properly
@@ -62,7 +74,7 @@ end
 
 def valid_encrypted_channel_id(encrypted)
   begin
-    storage_decrypt_channel_id(encrypted)
+    get_storage_id_and_project_id(encrypted)
   rescue ArgumentError, OpenSSL::Cipher::CipherError
     return false
   end
@@ -87,11 +99,21 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def storage_encrypt_channel_id(storage_id, project_id)
+def get_project_channel_id(storage_id, project_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
+  project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
+
+  # return uuid if it exists
+  return project[:uuid] if DCDO.get('project-uuid-in-url', false) && project && project[:uuid]
+
+  # otherwise, continue to use the old encryption method
+  storage_encrypt_channel_id(storage_id, project_id)
+end
+
+def storage_encrypt_channel_id(storage_id, project_id)
   Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{project_id}")).tr('=', '')
 end
 
@@ -159,7 +181,7 @@ def storage_id_from_cookie
 end
 
 def owns_channel?(encrypted_channel_id)
-  owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+  owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
   owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false
@@ -205,4 +227,9 @@ end
 # Used in tests only
 def delete_storage_id_for_user(user_id)
   user_storage_ids_table.where(user_id: user_id).delete
+end
+
+private def uuid?(string)
+  uuid_format = /\A[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\z/i
+  uuid_format.match?(string)
 end

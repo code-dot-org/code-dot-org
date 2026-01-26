@@ -18,6 +18,7 @@
 #  participant_audience   :string(255)
 #  original_unit_group_id :integer
 #  hide_within_course     :boolean          default(FALSE)
+#  md5                    :string(255)
 #
 # Indexes
 #
@@ -71,34 +72,26 @@ class Unit < ApplicationRecord
   scope(
     :with_associated_models, lambda do
       includes(
-        [
+        :lesson_groups,
+        :resources,
+        :student_resources,
+        script_levels: [
           {
-            script_levels: [
-              {
-                levels: [
-                  :concepts,
-                  :game,
-                  :level_concept_difficulty,
-                  :levels_child_levels
-                ]
-              },
-              :lesson,
-              :callouts
+            levels: [
+              :concepts,
+              :game,
+              :level_concept_difficulty,
+              :levels_child_levels
             ]
           },
-          :lesson_groups,
-          :resources,
-          :student_resources,
-          {
-            lessons: [
-              :lesson_activities,
-              {script_levels: [:levels]}
-            ]
-          },
-          {
-            unit_group_units: :unit_group
-          }
-        ]
+          :lesson,
+          :callouts
+        ],
+        lessons: [
+          :lesson_activities,
+          {script_levels: :levels}
+        ],
+        unit_group_units: :unit_group
       )
     end
   )
@@ -107,30 +100,23 @@ class Unit < ApplicationRecord
   scope(
     :with_seed_models, lambda do
       includes(
-        [
-          {
-            unit_group_units: {
-              unit_group: :course_version
-            }
-          },
-          :lesson_groups,
-          {
-            lessons: [
-              {lesson_activities: :activity_sections},
-              :resources,
-              :vocabularies,
-              :programming_expressions,
-              :objectives,
-              {rubric: {learning_goals: :learning_goal_evidence_levels}},
-              :standards,
-              :opportunity_standards
-            ]
-          },
-          :script_levels,
-          :levels,
+        :lesson_groups,
+        :resources,
+        :student_resources,
+        script_levels: :levels,
+        lessons: [
+          {lesson_activities: :activity_sections},
           :resources,
-          :student_resources
-        ]
+          :vocabularies,
+          :programming_expressions,
+          :objectives,
+          {rubric: {learning_goals: :learning_goal_evidence_levels}},
+          :standards,
+          :opportunity_standards
+        ],
+        unit_group_units: {
+          unit_group: :course_version
+        }
       )
     end
   )
@@ -289,20 +275,12 @@ class Unit < ApplicationRecord
     enable_blockly_keyboard_navigation
   )
 
-  def self.twenty_hour_unit
-    Unit.get_from_cache(Unit::TWENTY_HOUR_NAME)
-  end
-
   def self.hoc_2014_unit
     Unit.get_from_cache(Unit::HOC_NAME)
   end
 
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
-  end
-
-  def self.course1_unit
-    Unit.get_from_cache(Unit::COURSE1_NAME)
   end
 
   def self.flappy_unit
@@ -618,17 +596,12 @@ class Unit < ApplicationRecord
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
-      Unit::TWENTY_HOUR_NAME,
       Unit::HOC_2013_NAME,
       Unit::EDIT_CODE_NAME,
       Unit::TWENTY_FOURTEEN_NAME,
       Unit::FLAPPY_NAME,
       Unit::JIGSAW_NAME
     ].include? name
-  end
-
-  def twenty_hour?
-    name == '20-hour'
   end
 
   def hoc?
@@ -645,10 +618,6 @@ class Unit < ApplicationRecord
 
   def flappy?
     name == 'flappy'
-  end
-
-  def csf_international?
-    ScriptConstants::CATEGORIES[:csf_international].include?(name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -681,8 +650,6 @@ class Unit < ApplicationRecord
   end
 
   def k5_course?
-    return false if twenty_hour?
-
     # TODO(dmcavoy): When we update course type to differentiate between k5 and 6-12 update this method
     k5_csc_course = [
       Unit::POETRY_2021_NAME,
@@ -799,7 +766,6 @@ class Unit < ApplicationRecord
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return true if csf_international?
     return false if csf?
 
     [
@@ -1139,7 +1105,12 @@ class Unit < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
 
     filepath = Unit.script_json_filepath(name)
-    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    contents = Services::ScriptSeed.serialize_seeding_json(self)
+    File.write(filepath, contents)
+
+    # Update MD5 hash to match the written file, so incremental seeding
+    # in other environments will recognize this version as already seeded.
+    update_column(:md5, Digest::MD5.hexdigest(contents))
   end
 
   def update_teacher_resources(resource_ids)
@@ -1211,12 +1182,7 @@ class Unit < ApplicationRecord
   end
 
   def csf_finish_url
-    if name == Unit::TWENTY_HOUR_NAME
-      # Rename from 20-hour to public facing Accelerated
-      ApplicationController.helpers.course_completion_certificate_url(course_name: Unit::ACCELERATED_NAME)
-    else
-      ApplicationController.helpers.course_completion_certificate_url(course_name: name)
-    end
+    ApplicationController.helpers.course_completion_certificate_url(course_name: name)
   end
 
   def finish_url(unit_group_unit: nil)

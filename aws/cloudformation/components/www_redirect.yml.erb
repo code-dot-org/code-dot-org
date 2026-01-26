@@ -3,7 +3,8 @@
     # As CDO properties can vary between workstations, using them here is generally unsafe
     # Since this line is restricted to only run in production, we are comfortable using it.
     redirected_domains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
-    
+    redirected_domains.uniq!
+
     www_redirect_hosted_zone_id = CDO.hostedzone_id(domain)
   -%>
 
@@ -27,11 +28,12 @@
         Enabled: true
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
+        HttpVersion: http2and3
         Aliases: <%= redirected_domains.to_json %>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
-            DomainName: <%= CDO.pegasus_hostname %>
+            DomainName: example.com
             CustomOriginConfig:
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
@@ -52,7 +54,7 @@
     Type: AWS::CertificateManager::Certificate
     Properties:
       DomainName: www.<%= subdomain %>
-      <%- if rack_env?(:production) -%>
+      <%- if rack_env?(:production) && subdomain != CDO.pegasus_hostname -%>
       SubjectAlternativeNames:
         - www.<%=CDO.pegasus_hostname%>
       <%- end -%>
@@ -60,7 +62,7 @@
       DomainValidationOptions:
         - DomainName: www.<%= subdomain %>
           HostedZoneId: <%= www_redirect_hosted_zone_id %>
-        <%- if rack_env?(:production) -%>
+        <%- if rack_env?(:production) && subdomain != CDO.pegasus_hostname -%>
         - DomainName: www.<%=CDO.pegasus_hostname%>
           HostedZoneId: <%= www_redirect_hosted_zone_id %>
         <%- end -%>
@@ -94,14 +96,14 @@
       AutoPublish: true
       FunctionCode: |
         function handler(event) {
-          var newUrl = 'https://<%=CDO.pegasus_hostname%>';
-
-          // Append path
-          newUrl += event.request.uri;
+          var request = event.request;
+          var host = request.headers.host.value;
+          var newHost = host.replace(/^www\./, '');
+          var newUrl = 'https://' + newHost + request.uri;
 
           return {
-            statusCode: 302,
-            statusDescription: '302 Redirect to root domain',
+            statusCode: 301,
+            statusDescription: '301 Moved Permanently',
             headers:{
               "location": { "value": newUrl }
             }

@@ -10,8 +10,13 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
+import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
-import {currentLocation} from '@cdo/apps/utils';
+import {
+  currentLocation,
+  getEnvironment,
+  isProductionEnvironment,
+} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
@@ -58,12 +63,14 @@ export default class ProjectManager {
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
   private forceNewVersion: boolean = false;
+  private isStandaloneProjectLevel: boolean = false;
 
   constructor({
     sourcesStore,
     channelsStore,
     channelId,
     reduceChannelUpdates,
+    isStandaloneProjectLevel,
     isShareView = false,
     metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
   }: {
@@ -71,6 +78,7 @@ export default class ProjectManager {
     channelsStore: ChannelsStore;
     channelId: string;
     reduceChannelUpdates: boolean;
+    isStandaloneProjectLevel: boolean;
     isShareView?: boolean;
     metricsReporter?: LabMetricsReporter;
   }) {
@@ -82,6 +90,7 @@ export default class ProjectManager {
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
     this.isShareView = isShareView;
+    this.isStandaloneProjectLevel = isStandaloneProjectLevel;
   }
 
   getChannelId(): string {
@@ -112,6 +121,7 @@ export default class ProjectManager {
     );
     const isTeacherOfProjectOwner =
       await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    this.setTitleFromChannel(channel);
     return {
       sources,
       channel,
@@ -251,6 +261,7 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
+    this.setTitleFromChannel(this.channelToSave);
     return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
@@ -574,6 +585,18 @@ export default class ProjectManager {
       // showing the user a dialog before reload.
       this.forceReloading = true;
       this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
+      const errorType = error.message.includes('409')
+        ? 'conflict'
+        : 'unauthorized';
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailureClient',
+        1,
+        'Count',
+        [
+          {name: 'SaveType', value: type},
+          {name: 'ErrorType', value: errorType},
+        ]
+      );
       reload();
     } else if (error.message.includes('413')) {
       // Log 413s as warnings. The save fail listener should handle these errors and labs should
@@ -719,6 +742,27 @@ export default class ProjectManager {
     const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
     return sources;
+  }
+
+  /**
+   * Set the title of the page based on the channel name. We only do this for standalone project levels.
+   * The title format is:
+   * {channel.name} - {project type display name} - Code.org [{environment}]. If we are on production,
+   * we omit the environment suffix, and if we don't have a project type display name, we omit that as well.
+   * @param channel
+   */
+  private setTitleFromChannel(channel: Channel) {
+    if (channel.name && this.isStandaloneProjectLevel) {
+      const currentEnvironment = getEnvironment();
+      const environmentSuffix =
+        isProductionEnvironment() || !currentEnvironment
+          ? ''
+          : ` [${currentEnvironment}]`;
+      const projectName = convertProjectTypeToDisplayName(channel.projectType);
+      const projectString = projectName ? `${projectName} - ` : '';
+      document.title = `${channel.name} - ${projectString}Code.org${environmentSuffix}`;
+    }
+    // Otherwise, we will use the default document title from the server.
   }
 
   // LISTENERS

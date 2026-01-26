@@ -1,11 +1,14 @@
 import {getOpenFiles} from '@codebridge/utils';
 import {
   dragAndDropKeyboardCodes,
+  getFileNameById,
   sortableKeyboardCoordinatesWithTab,
 } from '@codebridge/utils/dragAndDropUtils';
 import {
   DndContext,
+  DragCancelEvent,
   DragEndEvent,
+  DragOverEvent,
   DragOverlay,
   DragStartEvent,
   KeyboardSensor,
@@ -23,7 +26,7 @@ import {
   horizontalListSortingStrategy,
   SortableContext,
 } from '@dnd-kit/sortable';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import i18n from '@cdo/apps/codebridge/locale';
 import {
@@ -99,6 +102,46 @@ export const FileTabs = React.memo(() => {
     }
   }
 
+  const announcements = useMemo(() => {
+    const getName = (id: string) => getFileNameById(id, source.files);
+    const getPosition = (id: string) => files.findIndex(f => f.id === id) + 1;
+
+    return {
+      onDragStart({active}: DragStartEvent) {
+        const position = getPosition(active.id as string);
+        return `Picked up file ${getName(
+          active.id as string
+        )}. Item is in position ${position} of ${files.length}`;
+      },
+      onDragOver({active, over}: DragOverEvent) {
+        const fileName = getName(active.id as string);
+        return over
+          ? `File ${fileName} is over ${getName(
+              over.id as string
+            )} at position ${getPosition(over.id as string)}`
+          : `File ${fileName} is not over a valid position`;
+      },
+      onDragEnd({active, over}: DragEndEvent) {
+        const fileName = getName(active.id as string);
+        if (over && active.id !== over.id) {
+          const movedFiles = arrayMove(
+            files,
+            getPosition(active.id as string) - 1,
+            getPosition(over.id as string) - 1
+          );
+          const newPosition = movedFiles.findIndex(f => f.id === active.id) + 1;
+          return `File ${fileName} was moved. New position is ${newPosition} of ${files.length}`;
+        }
+        return `File ${fileName} was dropped at its original position`;
+      },
+      onDragCancel({active}: DragCancelEvent) {
+        return `Dragging was cancelled. ${getName(
+          active.id as string
+        )} was dropped`;
+      },
+    };
+  }, [files, source.files]);
+
   return (
     <div className={moduleStyles.fileTabs}>
       <DndContext
@@ -109,6 +152,7 @@ export const FileTabs = React.memo(() => {
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
         accessibility={{
+          announcements,
           screenReaderInstructions: {
             draggable: i18n.dragAndDropInstructionsTabs(),
           },

@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-09T20:10:24.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the RGB color style",
+    "long_instructions": "# Debug: RGB Color Style\r\n\r\n![](https://images.code.org/37276a2561f6d84110b8ea2edfe335af-image-1767989395689.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Use your debugging skills to figure out why the RGB style is not being applied.",
+    "thumbnail_url": "https://images.code.org/a08f5b40962868ded5887b11f95823b0-rgb.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Five Women Programmers Who Changed The World!</h1>\n    <p>Did you know that the First Computer Programmer was a Woman? I didn’t either! So let me enlighten you today with five women who were leading the way in Computer Science!</p>\n    \n    <h3>Ada Lovelace (1815-1852) </h3> \n    <p>Ada was a mathematician in Victorian Times (Yes that long ago!) and she is credited as being the First Computer Programmer Ever.</p>\n    \n    <h3>Kathleen Booth (Born 1922)</h3>\n    <p>Kathleen wrote the first Assembly language in the world. And that is not enough, she also designed the assembler and autocode for the first computer system at Birkbeck College, the University of London.</p>\n    \n    <h3>Margaret Hamilton (Born 1936)</h3>\n    <p>Margaret was the director of the Software Engineering Division at MIT. She was responsible for creating the software(literally from scratch!!!) for the Apollo Guide Computer in the Apollo Space Program.</p>\n    \n    <h3>Grace Hopper (1906 – 1992)</h3>\n    <p>Grace was a Computer Scientist as well as a Rear Admiral in the United States Navy (She was multitalented!). She believed in machine-independent programming languages and so created the first compiler that converted English terms into machine code understood by computers.</p>\n    \n    <h3>Joan Clarke (1917 – 1996)</h3>\n    <p>Joan was an English cryptanalyst that was well known for her role as a code-breaker during the Second World War. She worked along with Alan Turing at Hut 8 in Bletchley Park (Their top-secret lair!!!) and was the only woman there that worked on decrypting the German Enigma messages.</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: white;\n}\nh1 {\n  font-weight: bold;\n  background-color: rbg(240, 200, 250);\n}\nh3 {\n  font-weight: bold;\n  color: rgb 200, 50, 225;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-09 20:10:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 20:11:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 00:24:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

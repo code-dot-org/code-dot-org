@@ -15,7 +15,7 @@
     "display_name": "Homework Schedule",
     "bubble_choice_description": "A student assigns the homework they need to work on for their classes on specific days of the week for each week in a month. They want to shift the schedule for the next month.",
     "thumbnail_url": "https://images.code.org/0812ab21fc5a74cea0a89693442bcfbb-image-1651322985589.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:46:22.231+00:00\",\"changed\":[\"cloned from \\\"CSA U5L10-L5a CR_2022\\\"\"],\"cloned_from\":\"CSA U5L10-L5a CR_2022\"},{\"changed_at\":\"2022-04-12 19:46:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 00:17:49 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 01:42:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-30 12:50:33 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:07:43 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

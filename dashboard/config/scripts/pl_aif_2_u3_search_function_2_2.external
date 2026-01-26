@@ -1,0 +1,76 @@
+name 'pl-aif-2-U3-search-function-2-2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Searching in JavaScript
+
+#### Before diving into the details, take a moment to look over the code sample as a whole.
+
+
+<div style="background-color:#f7f8fa; padding:16px; border-radius:8px; margin:20px 0;">
+  <img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" 
+       alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." 
+       width="40px" 
+       style="border-radius:10px; float:left; margin:0 12px 10px 0;">
+
+  <h4><strong>Think about:</strong></h4><br>
+
+  <ul>
+    <li style="font-size: 14pt;">Where do you see the search term being used?</li>
+    <li style="font-size: 14pt;">Which part of the code decides whether a page is included in the results?</li>
+    <li style="font-size: 14pt;">If a user searched for a different word, what is the one place you would change?</li>
+  </ul>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+
+<img src="https://images.code.org/27526a2ffecd3d3b9ca19967d1489a5e-image-1767803724551.png" alt="JavaScript code sample with a searching function for a calendar" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
+## Breaking it down
+
+
+
+#### **1. The data (array of objects)** 
+
+<img src="https://images.code.org/140a16e283fdb9d39f28457606140f8f-image-1767803913974.png" alt="array of songs in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+
+#### This is the data the app starts with. 
+#### Each page is an object, and all the pages together are stored in an array. 
+
+<br><br>
+
+
+#### **2. The search logic (inside a function)**
+
+<div style="clear:both;"></div>
+<img src="https://images.code.org/b888879a13a1a1f5bfce1f20f47dc052-image-1767804325162.png" alt="function with search algorithm" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+
+
+#### This function defines the search rule.
+#### It looks at each page and checks whether the title includes the search term (like “calendar”).
+
+> #### `toLowerCase()` is a JavaScript string function that converts all letters in text to lowercase.
+> #### It’s commonly used in searching so that matches work regardless of capitalization.
+
+<br><br>
+
+
+#### **3. Using the function**
+
+<img src="https://images.code.org/11e47568ea70e49b94ebda716af3df8d-image-1767804025432.png" alt="calling the function in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+
+#### This line runs the function using the original data.
+#### The result is a new array that contains only the pages that match the search term.
+
+---
+## What's next?
+
+#### Let's see what our final function, the sorting function, does.
+
+![]()
+MARKDOWN

@@ -1,0 +1,16 @@
+name 'iterating-with-ai-preassessment-q7_2025'
+
+question 'Why should a developer include labels (like "Price:" or "Category:") when rendering a complex object record?'
+
+wrong 'To make the code easier for the AI to read.'
+right 'To reduce the chance of the user misinterpreting raw data values.'
+wrong 'Because JavaScript objects cannot be displayed without labels.'
+wrong 'To make the list of items sort faster.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 5
+
+Raw data (like `true` or `45`) can be confusing. Labels provide context, ensuring the user understands what the information represents, which improves inclusivity and clarity.
+MARKDOWN

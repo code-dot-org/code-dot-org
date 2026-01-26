@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2025-03-12T21:01:45.000Z",
   "level_num": "custom",
@@ -57,11 +56,13 @@
     "code_functions": {
       "setScreen": null
     },
-    "preload_asset_list": null,
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "ai_tutor_available": "true",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-12T21:01:45.961+00:00\",\"changed\":[\"cloned from \\\"U4 Model Design 2_2024\\\"\"],\"cloned_from\":\"U4 Model Design 2_2024\"},{\"changed_at\":\"2025-09-12 20:51:49 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>

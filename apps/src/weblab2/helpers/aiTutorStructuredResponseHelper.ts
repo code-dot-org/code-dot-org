@@ -6,7 +6,7 @@ import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
+const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
     type: 'object',
     properties: {
@@ -42,93 +42,12 @@ const getAnswerJsonSchemaCopyPaste = (): JsonObjectSchema => {
         items: {
           type: 'object',
           properties: {
-            language: {type: 'string'},
             sourceCode: {
               type: 'string',
             },
             filename: {type: 'string'},
           },
-          required: ['language', 'sourceCode', 'filename'],
-          additionalProperties: false,
-        },
-        description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. When providing modifications to student code, provide the entire contents of the file. The list can be empty. Code should be formatted with appropriate newlines and indentation. The student will need to copy and paste this code into their project.',
-      },
-      explanation: {
-        type: 'string',
-        description:
-          "1 paragraph or less explanation of the code or plain-text answer to the student's question. Use markdown.",
-      },
-      nextSteps: {
-        type: 'string',
-        description:
-          '1-2 concrete action(s) for student to achieve goal. Format as markdown bullets',
-      },
-      questions: {
-        type: 'string',
-        description:
-          'short list to confirm ambiguous details. Format as markdown bullets.',
-      },
-    },
-    // We return tutorMode and goal but do not show them to the student.
-    // These are used to help guide the AI's response.
-    required: ['tutorMode', 'nextSteps', 'code', 'explanation', 'goal'],
-    propertyOrdering: [
-      'tutorMode',
-      'goal',
-      'assumptions',
-      'code',
-      'explanation',
-      'nextSteps',
-      'questions',
-    ],
-    additionalProperties: false,
-  };
-};
-
-const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
-  return {
-    type: 'object',
-    properties: {
-      tutorMode: {
-        type: 'string',
-        enum: [
-          'Build HTML',
-          'Build CSS',
-          'Build JavaScript',
-          'Ask',
-          'Hint',
-          'Debug',
-          'Explain Code',
-          'Example',
-          'Pseudocode',
-          'Documentation',
-          'Test Case',
-          'Refusal JavaScript Snippet',
-          'Refusal',
-        ],
-      },
-      goal: {
-        type: 'string',
-        description: 'What we are achieving this turn, limit to 1 line of text',
-      },
-      assumptions: {
-        type: 'string',
-        description:
-          'Explicit design choices you made from the wireframe. Format as bullets.',
-      },
-      code: {
-        type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            language: {type: 'string'},
-            sourceCode: {
-              type: 'string',
-            },
-            filename: {type: 'string'},
-          },
-          required: ['language', 'sourceCode', 'filename'],
+          required: ['sourceCode', 'filename'],
           additionalProperties: false,
         },
         description:
@@ -169,31 +88,39 @@ const getAnswerJsonSchemaAcceptReject = (): JsonObjectSchema => {
   };
 };
 
-export const copyCodeJsonSchema: JsonObjectSchema = {
+// This list is used to determine if the AI Tutor response should trigger the accept-reject flow
+// for which we format the model response with formatAcceptRejectResponse. Otherwise, we format
+// the model response with formatCopyPasteResponse.
+export const acceptRejectAnswerTypes = [
+  'Build HTML',
+  'Build CSS',
+  'Build JavaScript',
+];
+
+export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {
-    answer: getAnswerJsonSchemaCopyPaste(),
+    answer: getAnswerJsonSchema(),
   },
   required: ['answer'],
   additionalProperties: false,
 };
 
-export const acceptRejectJsonSchema: JsonObjectSchema = {
-  type: 'object',
-  properties: {
-    answer: getAnswerJsonSchemaAcceptReject(),
-  },
-  required: ['answer'],
-  additionalProperties: false,
+/**
+ * Helper function to format a section with a title and optional content.
+ * Returns an empty string if content is not provided.
+ */
+const formatSection = (title: string, content?: string): string => {
+  return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
+// This is used when the AI Tutor response's tutorMode is not 'Build HTML', 'Build CSS', nor 'Build JavaScript'.
+// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';
-  if (response.assumptions) {
-    formattedResponse += `**Assumptions**\n\n${response.assumptions}\n\n`;
-  }
+  formattedResponse += formatSection('Assumptions', response.assumptions);
+
   if (response.code && response.code.length > 0) {
     formattedResponse += `**Code**\n\n`;
     // Parsed json comes in as 'any'
@@ -202,15 +129,11 @@ export const formatCopyPasteResponse = (response: any): string => {
       formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }
-  if (response.explanation) {
-    formattedResponse += `**Explanation**\n\n${response.explanation}\n\n`;
-  }
-  if (response.nextSteps) {
-    formattedResponse += `**Next Steps**\n\n${response.nextSteps}\n\n`;
-  }
-  if (response.questions) {
-    formattedResponse += `**Questions**\n\n${response.questions}\n\n`;
-  }
+
+  formattedResponse += formatSection('Explanation', response.explanation);
+  formattedResponse += formatSection('Next Steps', response.nextSteps);
+  formattedResponse += formatSection('Questions', response.questions);
+
   return formattedResponse;
 };
 
@@ -225,23 +148,14 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
+// This is used when the AI Tutor response's tutorMode is 'Build HTML', 'Build CSS', or 'Build JavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
 ): AcceptRejectFormattedResponse => {
-  let formattedExplanation = '';
-  if (response.explanation) {
-    formattedExplanation += `**Explanation**\n\n${response.explanation}\n\n`;
-  }
-  if (response.nextSteps) {
-    formattedExplanation += `**Next Steps**\n\n${response.nextSteps}\n\n`;
-  }
-  if (response.questions) {
-    formattedExplanation += `**Questions**\n\n${response.questions}\n\n`;
-  }
   return {
-    explanation: formattedExplanation,
+    explanation: formatSection('Explanation', response.explanation),
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     code: response.code.map((codeFile: any) => ({
       name: codeFile.filename,

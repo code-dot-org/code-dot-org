@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::SectionsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @levelbuilder = create(:levelbuilder)
     @universal_instructor = create(:universal_instructor)

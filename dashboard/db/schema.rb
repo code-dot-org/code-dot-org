@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_12_03_202435) do
+ActiveRecord::Schema.define(version: 2026_01_20_185836) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -103,7 +103,9 @@ ActiveRecord::Schema.define(version: 2025_12_03_202435) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "request_id"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
+    t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
+    t.index ["user_id", "project_id", "id"], name: "index_ace_user_project_id"
     t.index ["user_id", "project_id"], name: "index_ace_user_project"
   end
 
@@ -912,6 +914,19 @@ ActiveRecord::Schema.define(version: 2025_12_03_202435) do
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_lesson_activities_on_key", unique: true
     t.index ["lesson_id"], name: "index_lesson_activities_on_lesson_id"
+  end
+
+  create_table "lesson_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "teacher_id"
+    t.integer "student_id"
+    t.bigint "section_id"
+    t.integer "lesson_id"
+    t.text "saved_feedback"
+    t.text "submitted_feedback"
+    t.datetime "submitted_at"
+    t.json "resources"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "lesson_groups", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2081,6 +2096,7 @@ ActiveRecord::Schema.define(version: 2025_12_03_202435) do
     t.string "participant_audience"
     t.integer "original_unit_group_id"
     t.boolean "hide_within_course", default: false
+    t.string "md5"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"

@@ -89,6 +89,7 @@
     "bubble_choice_description": "Add text to this scene to display the score.",
     "validation_enabled": "false",
     "start_blocks": "//1) Add text to the scene so that it matches the scene in the picture\r\nvar field = createSprite(200, 200);\r\nfield.setAnimation(\"field\");\r\nvar ball = createSprite(200, 200);\r\nball.setAnimation(\"ball\");\r\nball.scale = 0.15;\r\ndrawSprites();",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

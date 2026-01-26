@@ -906,6 +906,12 @@ var projects = (module.exports = {
     }
   },
 
+  // Metrics logging requires a non-null value, so we return 'unknown' if
+  // there is no known standalone app for this project.
+  getStandaloneAppForMetrics() {
+    return this.getStandaloneApp() || 'unknown';
+  },
+
   isWebLab() {
     return this.getStandaloneApp() === 'weblab';
   },
@@ -1124,18 +1130,48 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
-              this.logError_(
-                'unauthorized-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
+              Promise.all([
+                this.logError_(
+                  'unauthorized-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'unauthorized'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
-              this.logError_(
-                'conflict-save-sources-reload',
-                saveSourcesErrorCount,
-                err.message
-              ).finally(() => utils.reload());
+              Promise.all([
+                this.logError_(
+                  'conflict-save-sources-reload',
+                  saveSourcesErrorCount,
+                  err.message
+                ),
+                Promise.resolve(
+                  MetricsReporter.incrementCounter(
+                    'LegacyLab.ProjectSaveFailureClient',
+                    [
+                      {
+                        name: 'AppName',
+                        value: this.getStandaloneAppForMetrics(),
+                      },
+                      {name: 'SaveType', value: 'sources'},
+                      {name: 'ErrorType', value: 'conflict'},
+                    ]
+                  )
+                ),
+              ]).finally(() => utils.reload());
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_();
@@ -1145,7 +1181,7 @@ var projects = (module.exports = {
                 err.message
               );
               MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
-                {name: 'AppName', value: this.getStandaloneApp()},
+                {name: 'AppName', value: this.getStandaloneAppForMetrics()},
                 {name: 'SaveType', value: 'sources'},
               ]);
               if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
@@ -1326,7 +1362,7 @@ var projects = (module.exports = {
           MetricsReporter.logError({
             event: 'Error in getUpdatedSourceAndHtml_',
             error: repackageError(error),
-            appType: this.getStandaloneApp(),
+            appType: this.getStandaloneAppForMetrics(),
             channelId: this.getCurrentId(),
           });
           callback({error});
@@ -1407,15 +1443,20 @@ var projects = (module.exports = {
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    MetricsReporter.logError({
-      event: errorType,
-      errorMessage: errorText,
-      errorCount: errorCount,
-      appType: this.getStandaloneApp(),
-      channelId: this.getCurrentId(),
-    });
+    // Log to CloudWatch via MetricsReporter. This is the primary logging system for project saving.
+    const metricsPromise = Promise.resolve(
+      MetricsReporter.logError({
+        event: errorType,
+        errorMessage: errorText,
+        errorCount: errorCount,
+        appType: this.getStandaloneAppForMetrics(),
+        channelId: this.getCurrentId(),
+      })
+    );
 
-    return firehoseClient.putRecord(
+    // Although Firehose is being deprecated, we continue to log for project data integrity errors so that
+    // we can still search for project saving errors over multiple years and compare with MetricsReporter.
+    const firehosePromise = firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
@@ -1437,6 +1478,15 @@ var projects = (module.exports = {
       },
       {includeUserId: true}
     );
+
+    // Wait for both logging systems to complete before allowing page reload.
+    return Promise.all([metricsPromise, firehosePromise]).catch(err => {
+      // Log the error but don't throw - we don't want to break the user flow.
+      MetricsReporter.logError({
+        event: 'Error logging to metrics and/or firehose systems',
+        error: repackageError(err),
+      });
+    });
   },
   updateCurrentData_(err, data, options = {}) {
     const {shouldNavigate} = options;
@@ -1448,7 +1498,7 @@ var projects = (module.exports = {
         header.showTryAgainDialog();
       }
       MetricsReporter.incrementCounter('LegacyLab.ProjectSaveFailure', [
-        {name: 'AppName', value: this.getStandaloneApp()},
+        {name: 'AppName', value: this.getStandaloneAppForMetrics()},
         {name: 'SaveType', value: 'channel'},
       ]);
       return;
@@ -1480,7 +1530,7 @@ var projects = (module.exports = {
     current = current || {};
     Object.assign(current, data);
     MetricsReporter.incrementCounter('LegacyLab.ProjectSaveSuccess', [
-      {name: 'AppName', value: this.getStandaloneApp()},
+      {name: 'AppName', value: this.getStandaloneAppForMetrics()},
     ]);
 
     if (shouldNavigate) {

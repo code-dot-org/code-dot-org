@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
 
+import {getUserTheme, shrinkBlockSpaceContainer} from '@cdo/apps/blockly/utils';
+
 /**
  * Checks the given inputs to determine whether the instruction panel should be displayed
  * @param {string} shortInstructions
@@ -54,32 +56,6 @@ export function scrollTo(element, scrollTop, animate = 400) {
 }
 
 /**
- * Shrink the DOM element containing the given blockSpace to the minimum size
- * required to contain the block space
- * @param {BlockSpace} blockSpace - the Blockly BlockSpace to resize
- * @param {boolean} withPadding - whether or not to include padding
- * @see convertXmlToBlockly
- */
-export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
-  const container = blockSpace.getContainer();
-
-  // calculate the minimum required size for the container
-  const metrics = blockSpace.getMetrics();
-  let height = metrics.contentHeight;
-  let width = metrics.contentWidth;
-
-  if (withPadding) {
-    height += metrics.contentTop * 2;
-    width += metrics.contentLeft;
-  }
-
-  // and shrink it, triggering a blockspace resize when we do so
-  container.style.height = height + 'px';
-  container.style.width = width + 'px';
-  Blockly.cdoUtils.workspaceSvgResize(blockSpace);
-}
-
-/**
  * Remove all Comment nodes from a Node tree
  * @param {Node} root
  */
@@ -124,6 +100,8 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
   ).forEach(container => container.remove());
 
   const xmls = xmlContainer.getElementsByTagName('xml');
+  const pendingThemePromises = [];
+
   Array.prototype.forEach.call(xmls, function (xml) {
     // Skip conversion if XML already has a blockspace
     if (xml.getElementsByTagName('svg').length) {
@@ -157,17 +135,17 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
     // Don't render the raw XML
     xml.style.display = 'none';
 
-    // Only Google Blockly supports themes.
-    if (typeof Blockly.cdoUtils.getUserTheme === 'function') {
-      // We need to do an asychronous lookup of the user's preferred block theme,
-      // because it may not have been set yet on the student's primary workspace.
-      Blockly.cdoUtils.getUserTheme().then(theme => {
-        createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl, theme);
-      });
-    } else {
-      createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl);
-    }
+    // We need to do an asychronous lookup of the user's preferred block theme,
+    // because it may not have been set yet on the student's primary workspace.
+    const themePromise = getUserTheme().then(theme => {
+      createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl, theme);
+    });
+    pendingThemePromises.push(themePromise);
   });
+
+  if (pendingThemePromises.length > 0) {
+    return Promise.all(pendingThemePromises);
+  }
 }
 
 export function shouldDisplayChatTips(skinId) {
