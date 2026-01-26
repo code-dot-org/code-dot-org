@@ -26,15 +26,8 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
       ? studentResult[0]
       : null;
 
-  // const useTwoColumns = answers.length >= 4;
-
   return (
-    <div
-      className={classNames(
-        styles.multiAnswerContainer,
-        false && styles.multiAnswerContainerTwoColumns
-      )}
-    >
+    <div className={classNames(styles.multiAnswerContainer)}>
       {answers.map((answer, index) => {
         const isSelected = selectedIndex === index;
         const isCorrect = answer.correct;
@@ -49,7 +42,7 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
 
         return (
           <div
-            key={index}
+            key={`${answer.text}-${index}`}
             className={classNames(
               styles.multiAnswerOption,
               optionCorrectnessClass
@@ -61,10 +54,9 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
               onChange={() => null}
               name={answer.text}
               size="s"
+              aria-disabled
             >
-              <Typography variant="body4" className={styles.multiAnswerLabel}>
-                {LETTERS_LABELS[index]}.
-              </Typography>
+              <Typography variant="body4">{LETTERS_LABELS[index]}.</Typography>
               <SafeMarkdown unwrapped markdown={answer.text} />
               {isCorrect && (
                 <FontAwesomeV6Icon
@@ -77,16 +69,14 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
                 />
               )}
               {isSelected && !isCorrect && (
-                <div className={styles.multiAnswerIcon}>
-                  <FontAwesomeV6Icon
-                    iconName="xmark"
-                    iconStyle="solid"
-                    className={classNames(
-                      styles.multiAnswerIcon,
-                      styles.multiAnswerIconIncorrect
-                    )}
-                  />
-                </div>
+                <FontAwesomeV6Icon
+                  iconName="xmark"
+                  iconStyle="solid"
+                  className={classNames(
+                    styles.multiAnswerIcon,
+                    styles.multiAnswerIconIncorrect
+                  )}
+                />
               )}
             </RadioButton>
           </div>
