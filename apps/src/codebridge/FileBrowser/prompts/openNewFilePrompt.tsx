@@ -54,11 +54,7 @@ export const openNewFilePrompt = async ({
       selectedValue: validFileTypes ? validFileTypes[0] : '',
       styleAsFormField: true,
     },
-    buttons: {
-      confirm: {
-        text: 'Create file',
-      },
-    },
+    confirmButtonText: 'Create file',
     validateInput: (fileName: string, dropdownValue?: string) =>
       validateFileNameForModal({
         fileName,

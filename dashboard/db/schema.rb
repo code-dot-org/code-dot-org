@@ -2096,6 +2096,7 @@ ActiveRecord::Schema.define(version: 2026_01_20_185836) do
     t.string "participant_audience"
     t.integer "original_unit_group_id"
     t.boolean "hide_within_course", default: false
+    t.string "md5"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"

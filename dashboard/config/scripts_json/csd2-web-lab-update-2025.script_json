@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-10 01:49:08 UTC",
+    "serialized_at": "2026-01-26 00:29:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6978,6 +6978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L1-2025"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -7000,6 +7003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L2-2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -7022,6 +7028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L3-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7044,6 +7053,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L4-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7066,6 +7078,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L5-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7088,6 +7103,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L6-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7110,6 +7128,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L7-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7132,6 +7153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L8-2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7154,6 +7178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L9-2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7176,6 +7203,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L10-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7198,6 +7228,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L11-2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7220,6 +7253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L6-L12-2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11377,6 +11413,14 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }
+    },
+    {
+      "level_name": "CSD U2L6-L10-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
     }
   ],
   "learning_goals": [
@@ -11389,6 +11433,19 @@
       "seeding_key": {
         "learning_goal.key": "c424e4cc-1a42-4c67-8a4b-faef78f012b6",
         "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "key": "ce14abba-17ae-43a5-8bf0-da52f5d5d7d1",
+      "position": 1,
+      "learning_goal": "Create a stylesheet and link to the sheet in the HTML. The stylesheet includes a rule that changes the paragraph element of a webpage.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ce14abba-17ae-43a5-8bf0-da52f5d5d7d1",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }
@@ -11452,6 +11509,54 @@
         "understanding": 3,
         "learning_goal.key": "c424e4cc-1a42-4c67-8a4b-faef78f012b6",
         "lesson.key": "Lesson 2: Intro to HTML",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There is no special rule-set for paragraphs or the color or size properties are not used in the rule-set. There is no code to link the stylesheet to the web page.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ce14abba-17ae-43a5-8bf0-da52f5d5d7d1",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The paragraphs have a special rule-set in the stylesheet, and the color or size property is used, but there are enough errors that the text does not change color or size. There is HTML code that attempts to link the stylesheet to the web page.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ce14abba-17ae-43a5-8bf0-da52f5d5d7d1",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The stylesheet link is placed correctly in the HTML code. The paragraphs are a new color or size.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ce14abba-17ae-43a5-8bf0-da52f5d5d7d1",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The stylesheet link is placed correctly in the <head> of the HTML code. The paragraphs are a new color and size, and there are no errors or inconsistencies in the HTML or CSS code.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ce14abba-17ae-43a5-8bf0-da52f5d5d7d1",
+        "lesson.key": "Lesson 6: Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }

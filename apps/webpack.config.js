@@ -317,6 +317,17 @@ const WEBPACK_BASE_CONFIG = {
         },
       },
       {
+        test: /\.(json)$/,
+        include: [p('static', 'json')],
+        type: 'asset/resource',
+        generator: {
+          filename: '[name]wp[contenthash:20][ext]',
+          outputPath: 'json/', // build/package/js/json/
+          publicPath: '/assets/js/json/', // Dashboard assets path
+        },
+      },
+
+      {
         test: /\.jsx?$/,
         enforce: 'pre',
         include: [...nodeModulesToTranspile, p('src'), p('test')],
