@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 
 interface FlaggedImageModalProps {
   appName: string;
-  onAccept: (appName: string) => void;
+  onAccept: (appName: string) => void | Promise<void>;
   onCancel: (appName: string) => void;
   errorMessage?: string;
 }
