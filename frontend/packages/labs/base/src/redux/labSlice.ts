@@ -191,48 +191,31 @@ export const setUpWithLevel = createAsyncThunk<
   {
     levelId: number;
     scriptId?: number;
-    levelPropertiesPath: string;
+    levelProperties: LevelProperties;
     userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
-    scriptLevelId?: string;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
-  LabRegistry.lifecycleNotifier.notify(
-    LifecycleEvent.LevelLoadStarted,
-    payload.levelId,
-  );
+  LabRegistry.lifecycleNotifier.notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
+  console.log('setUpWithLevel');
+
   try {
-    // Update properties for reporting as early as possible in case of errors.
-    LabRegistry.metricsReporter.updateProperties({
-      currentLevelId: payload.levelId,
-      scriptId: payload.scriptId,
-      channelId: payload.channelId,
-    });
+    // Update standalone channel ID early if we have one.
+    if (payload.channelId) {
+      LabRegistry.metricsReporter.updateProperties({
+        channelId: payload.channelId,
+      });
+    }
 
     await cleanUpProjectManager();
     const isViewingExemplar = getAppOptionsViewingExemplar();
     const isEditingExemplar = getAppOptionsEditingExemplar();
 
-    // Load level properties if we have a levelPropertiesPath.
-    const levelProperties = await loadLevelProperties(
-      payload.levelPropertiesPath,
-    );
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
-    // Massage levelProperties to match aiTutor's format
-    // TODO: handle aitutor reducer upstream
-    //const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
-    //thunkAPI.dispatch(setLevel(aiTutorLevel));
-
-    LabRegistry.metricsReporter.updateProperties({
-      appName: levelProperties.appName,
-    });
-
-    const {isProjectLevel, usesProjects} = levelProperties;
-
-    LabRegistry.appName = levelProperties.appName;
+    const levelProperties = payload.levelProperties;
 
     // If we are cached, and there is a user app options path because we are in a script
     // level, then make an async call to the server to find out whether the user is an
@@ -242,21 +225,19 @@ export const setUpWithLevel = createAsyncThunk<
       if (payload.userAppOptionsPath) {
         loadUserAppOptions(payload.userAppOptionsPath).then(result => {
           if (result.isInstructor) {
-            thunkAPI.dispatch(
-              currentUserActions.setUserRoleInCourse(CourseRoles.Instructor),
-            );
+            thunkAPI.dispatch(currentUserActions.setUserRoleInCourse(CourseRoles.Instructor));
           }
         });
       }
     }
 
-    if (!usesProjects) {
+    if (!levelProperties.usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState,
+        thunkAPI.getState
       );
       return;
     }
@@ -270,7 +251,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState,
+        thunkAPI.getState
       );
       return;
     }
@@ -290,18 +271,19 @@ export const setUpWithLevel = createAsyncThunk<
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
-    const projectManager =
-      payload.channelId && isProjectLevel
-        ? ProjectManagerFactory.getProjectManager(
-            payload.channelId,
-            thunkAPI.getState().lab.isShareView,
-          )
-        : await ProjectManagerFactory.getProjectManagerForLevel(
-            payload.levelId,
-            payload.userId,
-            payload.scriptId,
-            payload.scriptLevelId,
-          );
+    const projectManager = payload.channelId
+      ? ProjectManagerFactory.getProjectManager(
+          payload.channelId,
+          levelProperties.isProjectLevel || false,
+          thunkAPI.getState().lab.isShareView,
+          LabRegistry.metricsReporter
+        )
+      : await ProjectManagerFactory.getProjectManagerForLevel(
+          payload.levelId,
+          levelProperties.isProjectLevel || false,
+          payload.userId,
+          payload.scriptId
+        );
 
     // Only set the project manager and initiate load
     // if this request hasn't been cancelled.
@@ -317,7 +299,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState,
+        thunkAPI.getState
       );
       return;
     }
@@ -330,12 +312,14 @@ export const setUpWithLevel = createAsyncThunk<
     LabRegistry.projectManager = projectManager;
 
     // Load channel and source.
-    const {sources, channel, abuseScore, sharingDisabled} =
-      await setUpAndLoadProject(
-        LabRegistry.appName,
-        projectManager,
-        thunkAPI.dispatch,
-      );
+    const {
+      sources,
+      channel,
+      abuseScore,
+      sharingDisabled,
+      isTeacherOfProjectOwner,
+    } = await setUpAndLoadProject(levelProperties.appName, projectManager, thunkAPI.dispatch);
+    console.log('LOADED', levelProperties, sources, channel);
     setProjectAndLevelData(
       {
         initialSources: sources,
@@ -343,10 +327,11 @@ export const setUpWithLevel = createAsyncThunk<
         levelProperties,
         abuseScore,
         sharingDisabled,
+        isTeacherOfProjectOwner,
       },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
-      thunkAPI.getState,
+      thunkAPI.getState
     );
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -555,10 +540,11 @@ function setProjectAndLevelData(
     initialSources?: ProjectSources;
     abuseScore?: number;
     sharingDisabled?: boolean;
+    isTeacherOfProjectOwner?: boolean;
   },
   aborted: boolean,
   dispatch: AppDispatch,
-  getState: () => RootState,
+  getState: () => RootState
 ) {
   // Only set channel and sources if the request has not been cancelled.
   if (aborted) {
@@ -575,18 +561,8 @@ function setProjectAndLevelData(
     data.abuseScore,
     isReadOnlyWorkspace(getState()),
     data.sharingDisabled,
+    data.isTeacherOfProjectOwner
   );
-}
-
-async function loadLevelProperties(
-  levelPropertiesPath: string,
-): Promise<LevelProperties> {
-  const response = await HttpClient.fetchJson<LevelProperties>(
-    levelPropertiesPath,
-    {},
-    LevelPropertiesValidator,
-  );
-  return response.value;
 }
 
 async function loadUserAppOptions(

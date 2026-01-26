@@ -15,11 +15,13 @@ export default class ProjectManagerFactory {
   /**
    * Get a project manager for a project identitifer.
    * @param projectId The identifier for the project.
+   * @param isStandaloneProjectLevel Project is standalone and not part of a lesson.
    * @param isShareView Project is in share view mode.
    * @returns A project manager
    */
   static getProjectManager(
     projectId: string,
+    isStandaloneProjectLevel: boolean,
     isShareView: boolean = false,
     metricsReporter: MetricsReporter = metricsReporterSingleton,
   ): ProjectManager {
@@ -29,6 +31,7 @@ export default class ProjectManagerFactory {
       channelId: projectId,
       reduceChannelUpdates: false,
       isShareView,
+      isStandaloneProjectLevel,
       metricsReporter,
     });
   }
@@ -40,14 +43,13 @@ export default class ProjectManagerFactory {
    * @param levelId The identifier for the level.
    * @param userId The user ID of the creator.  Can be undefined if the user is looking at their own work.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
-   * @param scriptLevelId the ID of the script level (if different from the level ID). Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     levelId: number,
+    isStandaloneProjectLevel: boolean,
     userId?: number,
     scriptId?: number,
-    scriptLevelId?: string,
     metricsReporter: MetricsReporter = metricsReporterSingleton,
   ): Promise<ProjectManager | null> {
     const channelsStore = new ChannelsStore();
@@ -56,7 +58,6 @@ export default class ProjectManagerFactory {
     const response = await channelsStore.loadForLevel(
       levelId,
       scriptId,
-      scriptLevelId,
       userId,
     );
     if (response.ok) {
@@ -77,6 +78,7 @@ export default class ProjectManagerFactory {
       channelsStore,
       channelId,
       reduceChannelUpdates,
+      isStandaloneProjectLevel,
       metricsReporter,
     });
   }

@@ -7,8 +7,8 @@ import {progressActions} from '@code-dot-org/progress/redux';
 import {RootStateProvider} from '@code-dot-org/redux/providers';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
+import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
 import {useAppDispatch} from '../redux/store';
-import type {LevelProperties} from '../types';
 
 import Loading from './Loading';
 
@@ -27,25 +27,25 @@ const LabWrapper = ({levelId, children}: LabWrapperProps) => {
   return children;
 };
 
-export interface LabProps<T extends LevelProperties = LevelProperties>
+export interface LabProps
   extends PropsWithChildren {
   /** Whether or not the lab considers itself loading */
   isLoading: boolean;
-  /** The LevelProperties for the lab */
-  levelProperties: T;
   /** The level id */
   levelId: string;
+  /** Optionally, a channel id for a standalone level */
+  channelId?: string;
 }
 
 /**
  * A wrapper for any lab that will connect it to the appropriate data sources
  * and contexts.
  */
-const Lab = <T extends LevelProperties = LevelProperties>({
+const Lab = ({
   isLoading,
   levelId,
   children,
-}: LabProps<T>) => {
+}: LabProps) => {
   // Ensure FontAwesome icons are available for all labs
   useEffect(() => {
     injectFontAwesome();
@@ -60,8 +60,10 @@ const Lab = <T extends LevelProperties = LevelProperties>({
           <ThemeProvider>
             {/* Supports extra links buttons and toggling */}
             <ExtraLinksButtonProvider>
-              {/* The actual lab content */}
-              <LabWrapper levelId={levelId}>{children}</LabWrapper>
+              <LevelPropertiesProvider>
+                {/* The actual lab content */}
+                <LabWrapper levelId={levelId}>{children}</LabWrapper>
+              </LevelPropertiesProvider>
             </ExtraLinksButtonProvider>
           </ThemeProvider>
         </RootStateProvider>

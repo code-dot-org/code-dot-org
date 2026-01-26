@@ -2,12 +2,17 @@
  * API for getting and updating channels via the code.org dashboard. A channel contains
  * metadata about a project.
  */
+import {
+  getEnvironmentFromHostname,
+  getDashboardApiUrl,
+} from '@code-dot-org/core';
 
 import HttpClient from '../HttpClient';
 
 import {Channel} from './types';
 
-const rootUrl = '/v3/channels';
+const host = getDashboardApiUrl(getEnvironmentFromHostname());
+const rootUrl = `${host}/v3/channels`;
 
 export async function get(channelId: string): Promise<Channel> {
   const {value} = await HttpClient.fetchJson<Channel>(

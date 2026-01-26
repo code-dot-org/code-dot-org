@@ -33,7 +33,10 @@ function createConfig(format: 'cjs' | 'esm'): Options {
       /^@code-dot-org\//,
     ],
     dts: false, // See typescript generator below
-    splitting: false,
+    // Enable code splitting for ESM to create shared chunks for modules imported by multiple
+    // entry points. This ensures singletons like React contexts are only instantiated once.
+    // Note: splitting only works with ESM format, not CJS.
+    splitting: format === 'esm',
     async onSuccess() {
       successes++;
       if (successes === 2) {

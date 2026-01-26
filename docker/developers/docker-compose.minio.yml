@@ -17,13 +17,18 @@ services:
 
   minio:
     <<: *minio-base
+    ports:
+      - "3001:3001"
+      - "9000:9000"
+    expose:
+      - "3001"
+      - "9000"
     environment: &minio-env
       MINIO_VOLUMES: "http://localhost:9000/data{1...4}"
       MINIO_SERVER_URL: "http://localhost:9000"
       MINIO_ROOT_USER: local-development
       MINIO_ROOT_PASSWORD: allstudents
       MINIO_STORAGE_CLASS_STANDARD: "EC:2"
-    network_mode: host
 
   minio-contained:
     <<: *minio-base

@@ -52,6 +52,7 @@ class ChannelsApi < Sinatra::Base
   get '/v3/channels' do
     dont_cache
     content_type :json
+    allow_cdo_cors
     begin
       Projects.new(get_storage_id).to_a.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -100,6 +101,7 @@ class ChannelsApi < Sinatra::Base
       bad_request
     end
 
+    allow_cdo_cors
     redirect "/v3/channels/#{id}", 301
   end
 
@@ -111,6 +113,7 @@ class ChannelsApi < Sinatra::Base
   get %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
     content_type :json
+    allow_cdo_cors
     begin
       Projects.new(get_storage_id).get(id).to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -125,6 +128,7 @@ class ChannelsApi < Sinatra::Base
   #
   delete %r{/v3/channels/([^/]+)$} do |id|
     dont_cache
+    allow_cdo_cors
     begin
       Projects.new(get_storage_id).delete(id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
@@ -142,6 +146,7 @@ class ChannelsApi < Sinatra::Base
   # Update an existing channel.
   #
   post %r{/v3/channels/([^/]+)$} do |id|
+    allow_cdo_cors
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.casecmp?('utf-8')
 
@@ -192,6 +197,7 @@ class ChannelsApi < Sinatra::Base
   #
   get %r{/v3/channels/([^/]+)/privacy-profanity} do |id|
     dont_cache
+    allow_cdo_cors
     content_type :json
 
     value = channel_policy_violation?(id)
@@ -205,6 +211,7 @@ class ChannelsApi < Sinatra::Base
   #
   get %r{/v3/channels/([^/]+)/share-failure} do |id|
     dont_cache
+    allow_cdo_cors
     content_type :json
     language = request.language
 
@@ -226,6 +233,7 @@ class ChannelsApi < Sinatra::Base
   #
   get %r{/v3/channels/([^/]+)/sharing_disabled} do |id|
     dont_cache
+    allow_cdo_cors
     content_type :json
     begin
       value = Projects.new(get_storage_id).get_sharing_disabled(id, current_user_id)
@@ -242,6 +250,7 @@ class ChannelsApi < Sinatra::Base
   #
   get %r{/v3/channels/([^/]+)/is_teacher_of_project_owner} do |id|
     dont_cache
+    allow_cdo_cors
     content_type :json
     begin
       value = Projects.new(get_storage_id).get_is_teacher_of_project_owner(id, current_user_id)

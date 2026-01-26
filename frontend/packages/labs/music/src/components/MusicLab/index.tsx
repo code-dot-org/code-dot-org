@@ -1,15 +1,10 @@
 import classNames from 'classnames';
-import type {FunctionComponent} from 'react';
 import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 
 import {BlockTypes} from '../../blockly/blockTypes';
 import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
-import {
-  getEnvironmentFromHostname,
-  getDashboardApiUrl,
-} from '@code-dot-org/core';
 import type {ProjectSources} from '@code-dot-org/projects';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
 import type {
@@ -23,6 +18,7 @@ import {
   WorkspaceHeader,
 } from '@code-dot-org/lab';
 import blocks from '../../blockly/blocks/simple2';
+import {useLevelProperties} from '@code-dot-org/lab/contexts';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
 import Controls from '../Controls';
 import Timeline from '../Timeline';
@@ -68,11 +64,7 @@ const DefaultStartBlocks: BlocklySerialization = {
   },
 };
 
-export interface MusicLabProps {
-  levelProperties: MusicLevelProperties;
-}
-
-const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
+const MusicLab = () => {
   const settings = useBlocklySettings();
   const dispatch = useAppDispatch();
 
@@ -80,14 +72,8 @@ const MusicLab: FunctionComponent<MusicLabProps> = ({levelProperties}) => {
     state => state.labView.isStandaloneCollapsed,
   );
 
-  const projectId = window.location.pathname.match(
-    /^\/app\/projects\/music\/([^/]+)\/edit$/,
-  )?.[1];
-
-  console.log({
-    url: getDashboardApiUrl(getEnvironmentFromHostname()),
-    project: projectId,
-  });
+  const levelProperties = useLevelProperties<MusicLevelProperties>();
+  console.log(useLevelProperties);
 
   const {skipUrl} = levelProperties;
   const guideMode = levelProperties.levelData.guideMode;

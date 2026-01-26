@@ -56,3 +56,17 @@ end
 def unsupported_media_type
   halt(415, "Unsupported Media Type\n")
 end
+
+def allow_cdo_cors
+  allowed_origin = CDO.code_org_url('', request.scheme)
+
+  request_origin = request.env['HTTP_ORIGIN'] || request.referer
+  allowed_origin = request_origin if CDO.frontend_sites_hosts.include?(request_origin)
+
+  response.headers['Access-Control-Allow-Origin']      = allowed_origin
+  response.headers['Access-Control-Allow-Methods']     = request.request_method
+  response.headers['Access-Control-Allow-Headers']     = 'Accept'
+  response.headers['Access-Control-Expose-Headers']    = 'S3-Version-Id,Content-Type,Content-Length'
+  response.headers['Access-Control-Allow-Credentials'] = 'true'
+  response.headers['Vary'] = 'Origin'
+end

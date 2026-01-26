@@ -2,7 +2,7 @@ import type {AppName} from '../projects/types';
 import type {ResponseValidator} from '../types';
 import ValidationError from '../ValidationError';
 
-import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
+import {LABS_WITH_JSON_SOURCES} from './constants';
 import {MultiFileSource, ProjectSources} from './types';
 
 function missingFieldError(fieldName: string) {

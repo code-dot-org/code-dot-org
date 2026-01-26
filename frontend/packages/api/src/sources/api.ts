@@ -3,6 +3,11 @@
  * A source is the code of a project.
  */
 
+import {
+  getEnvironmentFromHostname,
+  getDashboardApiUrl,
+} from '@code-dot-org/core';
+
 import HttpClient from '../HttpClient';
 import type {AppName} from '../projects/types';
 import type {GetResponse} from '../types';
@@ -12,8 +17,10 @@ import {SOURCE_FILE} from './constants';
 import {SourceResponseValidator} from './responseValidators';
 import {ProjectSources, ProjectVersion, SaveSourceOptions} from './types';
 
+const host = getDashboardApiUrl(getEnvironmentFromHostname());
+
 const rootUrl = (channelId: string) =>
-  `/v3/sources/${channelId}/${SOURCE_FILE}`;
+  `${host}/v3/sources/${channelId}/${SOURCE_FILE}`;
 
 export async function get(
   appName: AppName,

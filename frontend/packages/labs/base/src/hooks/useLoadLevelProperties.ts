@@ -41,6 +41,11 @@ export function useLoadLevelProperties() {
     if (currentLevelId) {
       return `${host}/levels/${currentLevelId}/level_properties`;
     }
+    // Standalone project levels
+    const projectType = '';
+    if (projectType) {
+      return `${host}/projects/${projectType}/level_properties`;
+    }
   });
 
   useEffect(() => {

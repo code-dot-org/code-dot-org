@@ -9,9 +9,8 @@ import {
   Heading3,
 } from '@code-dot-org/component-library/typography';
 
-import {useDialogControl} from '@lab-base/contexts';
-import {useEnterKeyboardTrap, useEscapeKeyboardTrap} from '@lab-base/hooks';
-
+import {useDialogControl} from '../../contexts/DialogControlContext';
+import {useEnterKeyboardTrap, useEscapeKeyboardTrap} from '../../hooks';
 import {DialogCloseFunctionType, DialogCloseActionType} from '../types';
 
 export type ButtonType = 'confirm' | 'cancel' | 'neutral';

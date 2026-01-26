@@ -122,11 +122,10 @@ class ApplicationController < ActionController::Base
     request_origin = request.headers['Origin']
     allowed_origin = request_origin if CDO.marketing_sites_hosts.include?(request_origin) || CDO.frontend_sites_hosts.include?(request_origin)
 
-    puts request.path, 'request', request_origin, 'allowed', allowed_origin
-
     response.headers['Access-Control-Allow-Origin']      = allowed_origin
     response.headers['Access-Control-Allow-Methods']     = request.request_method
     response.headers['Access-Control-Allow-Headers']     = '*'
+    response.headers['Access-Control-Expose-Headers']    = 'S3-Version-Id,Content-Type,Content-Length'
     response.headers['Access-Control-Allow-Credentials'] = 'true'
   end
 

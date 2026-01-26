@@ -2,8 +2,8 @@ import type {FunctionComponent} from 'react';
 
 import {AppName} from '@code-dot-org/projects';
 
-import {TEXT_BASED_LABS} from '@lab-base/constants';
-import {useApp} from '@lab-base/contexts';
+import {TEXT_BASED_LABS} from '../../constants';
+import {useApp} from '../../contexts/AppContext';
 
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
