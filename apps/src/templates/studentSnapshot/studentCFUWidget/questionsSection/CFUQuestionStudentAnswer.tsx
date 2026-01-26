@@ -3,7 +3,7 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {CFULevel, CFULevelResponse, CFULevelType} from './../types';
+import {CFULevel, CFULevelResponse, CFUMultipleLevelAnswer} from './../types';
 import CFUFreeResponseAnswer from './answers/CFUFreeResponseAnswer';
 import CFUMatchAnswer from './answers/CFUMatchAnswer';
 import CFUMultiAnswer from './answers/CFUMultiAnswer';
@@ -14,6 +14,8 @@ interface CFUQuestionStudentAnswerProps {
   level: CFULevel;
   response: CFULevelResponse;
   isOpen: boolean;
+  isLevelGroupAnswer?: boolean;
+  levelGroupLevelIndex?: number;
   questionText?: string;
 }
 
@@ -21,20 +23,48 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
   level,
   response,
   isOpen,
+  isLevelGroupAnswer,
+  levelGroupLevelIndex = 0,
   questionText,
 }) => {
-  const renderStudentAnswerByType = (type: CFULevelType) => {
-    switch (type) {
+  const renderStudentAnswerByType = (level: CFULevel) => {
+    let levelGroupResponseResponse;
+    if (isLevelGroupAnswer) {
+      levelGroupResponseResponse =
+        response?.response?.level_results &&
+        response?.response.level_results[levelGroupLevelIndex];
+    }
+    const levelType =
+      isLevelGroupAnswer && levelGroupResponseResponse
+        ? levelGroupResponseResponse.type
+        : level.type;
+
+    const studentResponse =
+      isLevelGroupAnswer && levelGroupResponseResponse
+        ? levelGroupResponseResponse
+        : response?.response;
+
+    switch (levelType) {
       case 'Multi':
-        return <CFUMultiAnswer level={level} response={response} />;
+        return (
+          <CFUMultiAnswer
+            answers={
+              (isLevelGroupAnswer
+                ? level.answers?.[levelGroupLevelIndex]
+                : level.answers) as CFUMultipleLevelAnswer[]
+            }
+            level={level}
+            response={studentResponse}
+          />
+        );
       case 'Match':
-        return <CFUMatchAnswer level={level} response={response} />;
+        return <CFUMatchAnswer level={level} response={studentResponse} />;
       case 'FreeResponse':
-        return <CFUFreeResponseAnswer level={level} response={response} />;
+        return <CFUFreeResponseAnswer response={studentResponse} />;
       default:
         return (
           <Typography variant="body4">
-            {/* TODO: Handle additional CFU level type: {type} */}"{type}
+            {/* TODO: Handle additional CFU level type: {type} */}"{levelType}
             "&nbsp;Student answer placeholder
           </Typography>
         );
@@ -55,7 +85,7 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
             <Typography variant="body3">
               <strong>Student Answer</strong>
             </Typography>
-            {renderStudentAnswerByType(level.type)}
+            {renderStudentAnswerByType(level)}
           </div>
         </>
       )}
