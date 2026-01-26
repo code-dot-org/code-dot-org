@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import soundLibraryPath from '@cdo/static/json/code-studio/soundLibrary.json';
+
 import {searchAssets} from '../assets/searchAssets';
-import soundLibrary from '../soundLibrary.json';
 
 import SoundListEntry from './SoundListEntry';
 
@@ -18,12 +19,31 @@ export default class SoundList extends React.Component {
     soundsRegistry: PropTypes.object.isRequired,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      soundLibrary: null,
+    };
+  }
+
+  componentDidMount() {
+    // Load sound library JSON
+    fetch(soundLibraryPath)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({soundLibrary: data});
+      })
+      .catch(error => {
+        console.error('Error loading sound library:', error);
+      });
+  }
+
   getMatches(searchQuery) {
     // Sound library does not use pagination so give a range from 0 - 400
     const searchedData = searchAssets(
       searchQuery,
       this.props.category,
-      soundLibrary,
+      this.state.soundLibrary,
       0,
       400
     );
@@ -31,6 +51,10 @@ export default class SoundList extends React.Component {
   }
 
   render() {
+    if (!this.state.soundLibrary) {
+      return <div>Loading sounds...</div>;
+    }
+
     const results = this.getMatches(this.props.search);
     const soundEntries = results.map(sound => {
       const isSelected =
