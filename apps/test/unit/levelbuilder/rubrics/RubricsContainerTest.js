@@ -1,8 +1,7 @@
-import {act, render, screen, waitFor} from '@testing-library/react';
+import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import RubricsContainer from '@cdo/apps/levelbuilder/rubrics/RubricsContainer';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
@@ -82,7 +81,7 @@ describe('RubricsContainerTest', () => {
   };
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   const renderComponent = props =>
@@ -179,12 +178,14 @@ describe('RubricsContainerTest', () => {
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
     const user = userEvent.setup();
-    const mockFetch = sinon.stub(global, 'fetch');
-    let resolveFetch;
-    const fetchPromise = new Promise(resolve => {
-      resolveFetch = resolve;
-    });
-    mockFetch.returns(fetchPromise);
+
+    jest.spyOn(global, 'fetch').mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          learningGoals: rubricInfo.learningGoals,
+        })
+      )
+    );
 
     renderComponent({rubric: rubricInfo});
 
@@ -195,17 +196,6 @@ describe('RubricsContainerTest', () => {
     const saveButton = screen.getByRole('button', {name: 'Save your rubric'});
     expect(saveButton).toBeEnabled();
     await user.click(saveButton);
-
-    await act(async () => {
-      resolveFetch(
-        new Response(
-          JSON.stringify({
-            learningGoals: rubricInfo.learningGoals,
-          })
-        )
-      );
-      await fetchPromise;
-    });
 
     await screen.findByText('Save complete!');
     expect(saveButton).toBeEnabled();
