@@ -1,5 +1,4 @@
 class UserPreferencesController < ApplicationController
-  before_action :allow_cdo_cors
   before_action :authenticate_user!
 
   def update
