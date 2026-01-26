@@ -75,7 +75,7 @@ const isValidMimeType = (
   );
 };
 
-const moderateImage = async (
+export const moderateImage = async (
   file: File,
   ext: string,
   appName?: string

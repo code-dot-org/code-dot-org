@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {moderateImage} from '@cdo/apps/lab2/hooks/useFileUploader';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -29,8 +30,8 @@ export const handleSaveSupportFile = async (
     icon: {iconName: 'exclamation-circle', iconStyle: 'solid'},
   });
   if (results.type === 'confirm') {
-    await fetchAndSaveFile(
-      EVENTS.IMPORT_FROM_BACKPACK_RENAME,
+    await fetchAndSaveFile({
+      successMetric: EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
       addAlert,
@@ -38,8 +39,8 @@ export const handleSaveSupportFile = async (
       createNewFile,
       findIdForFileName,
       selectedFileName,
-      newFileName
-    );
+      newFileName,
+    });
   }
 };
 
@@ -52,7 +53,8 @@ export const handleSaveDuplicateFile = async (
   createNewFile: (fileName: string, contents: string, url?: string) => void,
   findIdForFileName: (fileName: string) => string | undefined,
   selectedFileName: string,
-  newFileName?: string
+  newFileName?: string,
+  isSecondaryBackpack?: boolean
 ) => {
   // The file name is a duplicate, but not a support file.
   // Give user the choice to replace or import with the new name.
@@ -72,8 +74,8 @@ export const handleSaveDuplicateFile = async (
   });
   if (results.type === 'confirm') {
     // Import as replacement
-    await fetchAndSaveFile(
-      EVENTS.IMPORT_FROM_BACKPACK_REPLACE,
+    await fetchAndSaveFile({
+      successMetric: EVENTS.IMPORT_FROM_BACKPACK_REPLACE,
       backpackApi,
       channelId,
       addAlert,
@@ -81,34 +83,56 @@ export const handleSaveDuplicateFile = async (
       createNewFile,
       findIdForFileName,
       selectedFileName,
-      newFileName
-    );
+      newFileName,
+      isSecondaryBackpack,
+    });
   } else if (results.type === 'neutral') {
     // Import as new file
-    await fetchAndSaveFile(
-      EVENTS.IMPORT_FROM_BACKPACK_RENAME,
+    await fetchAndSaveFile({
+      successMetric: EVENTS.IMPORT_FROM_BACKPACK_RENAME,
       backpackApi,
       channelId,
       addAlert,
       saveFile,
       createNewFile,
       findIdForFileName,
-      selectedFileName
-    );
+      selectedFileName,
+      isSecondaryBackpack,
+    });
   }
 };
 
-export const fetchAndSaveFile = async (
-  successMetric: string,
-  backpackApi: BackpackClientApi,
-  channelId: string,
-  addAlert: (type: 'success' | 'danger', message: string) => void,
-  saveFile: (fileId: string, contents: string, url?: string) => void,
-  createNewFile: (fileName: string, contents: string, url?: string) => void,
-  findIdForFileName: (fileName: string) => string | undefined,
-  selectedFileName: string,
-  newFileName?: string
-) => {
+export interface FetchAndSaveFileParams {
+  successMetric: string;
+  backpackApi: BackpackClientApi;
+  channelId: string;
+  addAlert: (type: 'success' | 'danger', message: string) => void;
+  saveFile: (fileId: string, contents: string, url?: string) => void;
+  createNewFile: (fileName: string, contents: string, url?: string) => void;
+  findIdForFileName: (fileName: string) => string | undefined;
+  selectedFileName: string;
+  newFileName?: string;
+  isSecondaryBackpack?: boolean;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
+}
+
+export const fetchAndSaveFile = async ({
+  successMetric,
+  backpackApi,
+  channelId,
+  addAlert,
+  saveFile,
+  createNewFile,
+  findIdForFileName,
+  selectedFileName,
+  newFileName,
+  isSecondaryBackpack,
+  onImageFlagged,
+}: FetchAndSaveFileParams) => {
   const errorMessage = `An error occurred while adding ${
     newFileName || selectedFileName
   } to your project, please try again.`;
@@ -127,25 +151,65 @@ export const fetchAndSaveFile = async (
   let fileContent = '';
   let url: string | undefined = undefined;
   if (response?.headers.get('Content-Type')?.startsWith('image/')) {
-    // Handle image file content as a blob, and upload as an asset.
-    // Store the url as the new file contents.
-    const blob = await response.blob();
-    const uuid = createUuid();
     const fileType = selectedFileName.split('.').pop();
-    const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
-    try {
-      await HttpClient.put(uploadUrl, blob);
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError(
-          'Backpack could not upload image file to assets channel',
-          error as Error
-        );
-      addAlert('danger', errorMessage);
-      return;
+    const blob = await response.blob();
+
+    // Moderate image if file is from a secondary backpack.
+    if (isSecondaryBackpack && fileType) {
+      // Convert blob to File object for moderation
+      const contentType = response.headers.get('Content-Type') || 'image/*';
+      const file = new File([blob], selectedFileName, {type: contentType});
+      const appName = Lab2Registry.getInstance().getAppName();
+
+      const moderationStatus = await moderateImage(
+        file,
+        fileType,
+        appName || undefined
+      );
+      console.log('moderationStatus', moderationStatus);
+      if (moderationStatus === 'flagged') {
+        const saveImageFileToAssetsChannelFunction = async () => {
+          // Handle image file content as a blob, and upload as an asset.
+          // Store the url as the new file contents.
+          const uuid = createUuid();
+          const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
+          try {
+            await HttpClient.put(uploadUrl, blob);
+          } catch (error) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError(
+                'Backpack could not upload image file to assets channel',
+                error as Error
+              );
+            addAlert('danger', errorMessage);
+            return;
+          }
+          url = uploadUrl;
+        };
+        // FlagedImageModal will be shown to the user and user can choose to add the image file to the project or not.
+        onImageFlagged(file, fileType, saveImageFileToAssetsChannelFunction);
+        return;
+      }
+    } else {
+      // Handle image file content as a blob, and upload as an asset.
+      // Store the url as the new file contents.
+      const uuid = createUuid();
+      const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
+      try {
+        await HttpClient.put(uploadUrl, blob);
+      } catch (error) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError(
+            'Backpack could not upload image file to assets channel',
+            error as Error
+          );
+        addAlert('danger', errorMessage);
+        return;
+      }
+      url = uploadUrl;
     }
-    url = uploadUrl;
   } else {
     fileContent = await response.text();
   }
