@@ -4,11 +4,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-interface LevelProperties {
-  isProjectLevel?: boolean;
-  id?: number;
-  name?: string;
-}
+import {LevelProperties} from '../types';
 
 /**
  * Custom hook that provides a callback to log LEVEL_ACTIVITY or PROJECT_ACTIVITY
@@ -53,11 +49,13 @@ export function useLevelActivityMetrics(
       unitName: scriptName,
       levelId: levelProperties.id,
       levelName: levelProperties.name,
+      appName: levelProperties.appName,
     });
   }, [
     levelProperties.isProjectLevel,
     levelProperties.id,
     levelProperties.name,
+    levelProperties.appName,
     signedIn,
     scriptName,
   ]);

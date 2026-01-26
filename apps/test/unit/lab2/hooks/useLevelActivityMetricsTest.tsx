@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -31,28 +32,25 @@ const mockProgress = (
   action: any
 ) => state;
 
-interface LevelProperties {
-  isProjectLevel?: boolean;
-  id?: number;
-  name?: string;
-}
-
 const defaultLevelProperties: LevelProperties = {
   isProjectLevel: false,
   id: 123,
   name: 'Test Level',
+  appName: 'weblab2',
 };
 
 const projectLevelProperties: LevelProperties = {
   isProjectLevel: true,
   id: 456,
   name: 'Project Level',
+  appName: 'weblab2',
 };
 
 const differentLevelProperties: LevelProperties = {
   isProjectLevel: false,
   id: 789,
   name: 'Different Level',
+  appName: 'weblab2',
 };
 
 describe('useLevelActivityMetrics', () => {
@@ -118,6 +116,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 123,
           levelName: 'Test Level',
+          appName: 'weblab2',
         }
       );
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
@@ -137,6 +136,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 456,
           levelName: 'Project Level',
+          appName: 'weblab2',
         }
       );
       expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
@@ -156,6 +156,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: expect.any(String),
           levelId: expect.any(Number),
           levelName: expect.any(String),
+          appName: 'weblab2',
         })
       );
     });
@@ -220,6 +221,7 @@ describe('useLevelActivityMetrics', () => {
           unitName: 'test-script',
           levelId: 789,
           levelName: 'Different Level',
+          appName: 'weblab2',
         }
       );
     });
@@ -244,6 +246,7 @@ describe('useLevelActivityMetrics', () => {
         expect.objectContaining({
           levelId: 456,
           levelName: 'Project Level',
+          appName: 'weblab2',
         })
       );
     });
