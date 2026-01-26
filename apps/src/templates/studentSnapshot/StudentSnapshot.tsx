@@ -11,6 +11,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getFullName} from '../manageStudents/utils';
 
+import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
 import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
 import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
@@ -180,6 +181,7 @@ const StudentSnapshot: React.FC = () => {
           <div>content</div>
         </WidgetTemplate>
         <StudentCodeWidget studentCode={studentCode} />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
         <WidgetTemplate
           widgetName="Small Widget 1"
           gridWidth={1}

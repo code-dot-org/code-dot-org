@@ -5,11 +5,15 @@ import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import CodeWidget from './';
 
 interface StudentCodeWidgetProps {
+  gridWidth?: number;
+  gridHeight?: number;
   studentCode?: Record<string, string>;
   loading?: boolean;
 }
 
 const StudentCodeWidget = ({
+  gridWidth = 1,
+  gridHeight = 2,
   studentCode = {},
   loading,
 }: StudentCodeWidgetProps) => {
@@ -53,8 +57,8 @@ const StudentCodeWidget = ({
     <CodeWidget
       codeData={codeData}
       widgetName="Student Code"
-      gridWidth={2}
-      gridHeight={2}
+      gridWidth={gridWidth}
+      gridHeight={gridHeight}
       loading={loading}
     />
   );
