@@ -55,9 +55,3 @@
     color: var(--sentiment-error-50, #E02D16);
   }
 }
-
-.multiAnswerContainerTwoColumns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-}

@@ -27,7 +27,7 @@ const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
       : null;
 
   return (
-    <div className={classNames(styles.multiAnswerContainer)}>
+    <div className={styles.multiAnswerContainer}>
       {answers.map((answer, index) => {
         const isSelected = selectedIndex === index;
         const isCorrect = answer.correct;
