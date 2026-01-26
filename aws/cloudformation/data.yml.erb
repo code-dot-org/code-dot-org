@@ -79,23 +79,27 @@ Resources:
       PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
-  RedshiftZeroETLResourcePolicy:
-    Type: AWS::Redshift::ResourcePolicy
-    Properties:
-      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
-      Policy:
-        Version: "2012-10-17"
-        Statement:
-          - Sid: AllowZeroETLFromProductionAurora
-            Effect: Allow
-            Principal:
-              Service: "redshift.amazonaws.com"
-            Action:
-              - "redshift:AuthorizeInboundIntegration"
-            Resource: !GetAtt Tableau.ClusterNamespaceArn
-            Condition:
-              ArnEquals:
-                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
+#  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
+#  manually.
+#  TODO: Move our Redshift datawarehouse to a Serverless and/or implement this via CloudFormation when Provisioned
+#  cluster Resources are supported.
+#  RedshiftZeroETLResourcePolicy:
+#    Type: AWS::RedshiftServerless::ResourcePolicy
+#    Properties:
+#      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
+#      Policy:
+#        Version: "2012-10-17"
+#        Statement:
+#          - Sid: AllowZeroETLFromProductionAurora
+#            Effect: Allow
+#            Principal:
+#              Service: "redshift.amazonaws.com"
+#            Action:
+#              - "redshift:AuthorizeInboundIntegration"
+#            Resource: !GetAtt Tableau.ClusterNamespaceArn
+#            Condition:
+#              ArnEquals:
+#                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
   DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
@@ -766,6 +770,6 @@ Resources:
 Outputs:
   RedshiftClusterNamespace:
     Value: !GetAtt Tableau.ClusterNamespaceArn
-    Description: "Redshift Cluster Namespace for Zero-ETL targeting"
+    Description: "Redshift Cluster Namespace for Zero-ETL targeting."
     Export:
       Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"
