@@ -137,6 +137,9 @@ class StudentSnapshotsController < ApplicationController
 
   # GET /student_snapshots/exemplar_code/{lesson_id}
   def exemplar_code
+    # Cache until next deployment (refresh gets new content)
+    expires_in 12.hours, public: true
+
     unless current_user.verified_instructor?
       return render json: {error: "Unauthorized user"}, status: :forbidden
     end
@@ -158,9 +161,6 @@ class StudentSnapshotsController < ApplicationController
       name: level.name,
       exemplarSources: level.exemplar_sources
     }
-
-    # Cache until next deployment (refresh gets new content)
-    expires_in 1.day, public: true
   end
 
   # Returns the script_levels in a lesson that correspond to CFU progressions.
