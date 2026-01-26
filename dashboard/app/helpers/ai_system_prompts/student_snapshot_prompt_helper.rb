@@ -23,19 +23,20 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       "Sketchlab" => "Sketch Lab: students interact with a whiteboarding tool to create visual designs",
     }.freeze
 
-  LESSON_INSIGHT_PROMPT = "You are a teaching assistant for a computer science curriculum. I need you to return a short summary of what a student has done on a specific lesson that contains multiple levels.
-Follow these steps to generate a progress summary and assessment:
-  List the completed levels, including the level number and any completed sublevels under the level.
-  List time spent if available
-  For “Check Your Understanding” levels, list whether the student was correct.
-  List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
-Write the following summary based on all info and above steps:
-  Progress: Write 1-2 sentences about the student's progress through the levels, optional sublevels, and finally the assessment level. The student's performance on the assessment level is the most important.
-  Misconceptions: Write 1-2 sentences about any of the student’s misconceptions in the lesson. If there are no misconceptions, say “Student showed no misconceptions”
-  Assessment: Write 1-2 sentences specifically about the assessment level, including a brief description of what they did and what their program does. Write about what skills they did well on and/or need to improve on. Only include information about the assessment level.
-  Next Steps: Write 1 sentence based on any misconceptions or issues with their code levels (especially the assessment level) with suggestions on what to do next. This could be going over concepts, trying additional levels or sublevels or just stating that they should continue on to the next lesson. Do not recommend completing additional sublevels if the student has completed one and there are no misconceptions.
-Use the following lesson info to complete the steps above:
-"
+  LESSON_INSIGHT_PROMPT = <<~INSIGHT_PROMPT
+    You are a teaching assistant for a computer science curriculum. I need you to return a short summary of what a student has done on a specific lesson that contains multiple levels.
+    Follow these steps to generate a progress summary and assessment:
+      List the completed levels, including the level number and any completed sublevels under the level.
+      List time spent if available
+      For “Check Your Understanding” levels, list whether the student was correct.
+      List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
+    Write the following summary based on all info and above steps:
+      Progress: Write 1-2 sentences about the student's progress through the levels, optional sublevels, and finally the assessment level. The student's performance on the assessment level is the most important.
+      Misconceptions: Write 1-2 sentences about any of the student’s misconceptions in the lesson. If there are no misconceptions, say “Student showed no misconceptions”
+      Assessment: Write 1-2 sentences specifically about the assessment level, including a brief description of what they did and what their program does. Write about what skills they did well on and/or need to improve on. Only include information about the assessment level.
+      Next Steps: Write 1 sentence based on any misconceptions or issues with their code levels (especially the assessment level) with suggestions on what to do next. This could be going over concepts, trying additional levels or sublevels or just stating that they should continue on to the next lesson. Do not recommend completing additional sublevels if the student has completed one and there are no misconceptions.
+    Use the following lesson info to complete the steps above:
+  INSIGHT_PROMPT
 
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
@@ -108,8 +109,7 @@ Levels: [{
     level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      "LevelId (remove later)" => level.id,
-      'Level Number': level_number.to_s,
+      'Level Number'=> level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -158,8 +158,7 @@ Levels: [{
 
     level_data = {
       "Assessment Level" => "weight this more heavily towards student mastery",
-      "LevelId (remove later)" => level.id,
-      'Level Number': level_number,
+      'Level Number'=> level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
