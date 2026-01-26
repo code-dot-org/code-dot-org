@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-26T02:55:54.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the missing image",
+    "long_instructions": "\r\n# Debug: Missing Image\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------\r\nThere is an image of balloons | There is no image\r\n# Do This\r\n1) Find and fix the problem that is causing the bug.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Use your debugging skills to figure out why the image is not appearing.",
+    "thumbnail_url": "https://images.code.org/21f43e73cace17175ff2815cab98f0dc-image-1564092347166.JPG",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <!-- Bday celebration info -->\n    <h1>Alex turns 14!</h1>\n    <p>Please join me on July 25th to celebrate my birthday! There will be music, cake, and games. Hope to see you there!</p> \n    <img src=\"Balloons.jpg alt=\"colorful balloons\">\n    <p>Photo by pcst from FreeImages</p>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "Balloons.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L7b-2025/uuid/4d2b95a5-bb6f-44c4-b919-2b173182df7b.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryZ997QCdrFT\nS9dNkGkf1CtdKUUA6eSjdAchrLbwMN5bObrrbtYdmj0O4v4SePW6DUmjuPDY\nv0Kl/PEpEEZ/9Tmy/YN3mKxaqzNLZHxoKWfDdf98YREQYbD75rnDIPluww8x\nseAUC2LvpPMC7FA22GK/xyxp/zfUOMYJZAtCZm69GcRIBY6W2tdSeEehQNQe\nTd3xPfxdqJ2qSgtrMLNb719DM676Hj0v+4CbOXkD/uzfyBIkCWop1ICt5Kkb\nWTZtPYHS70cYPmFBu7wdkxxLB4027KySm3D51d8hbvk+0c2GUnKZQl5Qvnpm\ncYwij5t6ezB9/P7xTneCb2gvXo0TExPNyUd3m75xktGMhVPIc0BZzPTrSXfq\n0jJcTKe8BuHS7fAz8CKZhKZGlmdSG+TKFGm23AxtCsq7Ti4w2f0bqTib/Yoe\nlnFP29lNVZGKV+wzc33bwXP/FuuEvZf3/fFZ/7pcpq+vd0vmxauv8VSNQQQz\n79luSeREdZOcsCd2cxiKghrpxOBn4uODTAjd8uiHKZVA33rNJZnJiuu1VlYq\nrjLovm2IEe0uwzNvf0SWzDxpGda7AeKP9FYnAL0oG/hD6aWtqNxL81Yr8Ahk\niU8lAKb8KWl/XDEh+ZgSXR52CgrYQcvrL5NaLthxOEBhPsTjkFZG9MK01PvQ\nhC6SgpTN6YHg1V0cA4z/dDvvN912YQrd49vUo/VOzfg/QStnXqb1HI+BxVv5\nJ5evEQeWDa9EeFcvwy7sTGa1UlND4r8TTzZUn2dyJi0j7+4sZXiGVVLO5KiG\nHFWFPwe5d51N2FHqUk0rTMg27CwmFRDygCCjuidNCdB6E8UaWUA2TLE9FDSB\nz4UjUSKNtkG4QZqEtvsAfWhewiMr7g8uKVwZRF3f6LVeVQtkEYMxib++XS2m\nHR96VM+A/nrhButrRAYjwLD24zYg2RCmgaA68bR9y+u177HQz3YqvY3eGSqB\no1pWm2m5wYvUALitOx77ivhI54v0cOOJwnLnnosCi6w8y6pKEMKzWsdWd7P4\nNfzd3QxWcmhfxYsnx7BiXdMNMd7iDXEPzFQB/bDLXL1yqLmz2Yvo34qnswWi\nVGj8PRUoau6O8K4PMell\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-26 02:56:43 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 02:56:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
