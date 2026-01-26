@@ -1,4 +1,4 @@
-.version-history-panel {
+.versionHistoryPanel {
   background-color: var(--background-neutral-primary);
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   margin: 0.625rem 0.625rem 0;
 }
 
-.list-container {
+.listContainer {
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -36,7 +36,7 @@
   padding-bottom: 0.625rem;
   position: relative;
 
-  > .collapse-button + .auto-save-row {
+  > .collapseButton + .autoSaveRow {
     margin-top: 0.625rem;
   }
 
@@ -49,7 +49,7 @@
 
 // Repeating the class name to increase
 // specificity to override DSCO styles
-.collapse-button.collapse-button {
+.collapseButton.collapseButton {
   background: var(--background-neutral-primary);
   margin-inline-start: 0.75rem;
   position: relative;
@@ -61,7 +61,7 @@
   }
 }
 
-.loading-version-spinner {
+.loadingVersionSpinner {
   font-size: 32px;
   margin-right: 0.75rem;
   text-align: center;
