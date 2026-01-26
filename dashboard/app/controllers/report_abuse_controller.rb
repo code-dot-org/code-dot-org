@@ -21,8 +21,6 @@ end
 class ReportAbuseController < ApplicationController
   AGE_CUSTOM_FIELD_ID = 24_024_923
 
-  before_action :allow_cdo_cors
-
   # Projects that are created by users with project validator permissions are
   # blocked from abuse reports because they are created internally and we know
   # they are safe. This reduces spamming of the report abuse feature.

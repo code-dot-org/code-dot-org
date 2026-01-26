@@ -8,7 +8,6 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :allow_cdo_cors
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 

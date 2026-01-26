@@ -31,17 +31,6 @@ module Cdo
       'https://preview-code.marketing-sites.code.org',
     ].freeze
 
-    FRONTEND_SITES_HOSTS = [
-      # Studio app for local development
-      'http://localhost-studio.code.org:3036',
-      'http://localhost:3036',
-      # Package vite mini-application via dev
-      'http://localhost-studio.code.org:5173',
-      'http://localhost:5173',
-      'http://localhost-studio.code.org:5174',
-      'http://localhost:5174',
-    ].freeze
-
     def initialize
       super
       root = File.expand_path('..', __dir__)
@@ -156,10 +145,6 @@ module Cdo
 
     def marketing_sites_hosts
       MARKETING_SITES_HOSTS
-    end
-
-    def frontend_sites_hosts
-      FRONTEND_SITES_HOSTS
     end
 
     def site_url(domain, path = '', scheme = '', ge_region: nil)

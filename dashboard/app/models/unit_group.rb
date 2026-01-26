@@ -92,6 +92,7 @@ class UnitGroup < ApplicationRecord
   # around this validation by first changing the published_state to another
   # state before changing it to in_development.
   def prevent_unlaunch_stable_courses
+    return
     return unless published_state_changed?
 
     if published_state_was == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable &&
