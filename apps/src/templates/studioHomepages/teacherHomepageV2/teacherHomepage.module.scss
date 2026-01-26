@@ -438,8 +438,11 @@
   border: 1px solid var(--borders-neutral-strong);
   max-height: 60%;
 
-  h2 {
-    margin-bottom: 0;
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 0 !important;
   }
 
   p {
