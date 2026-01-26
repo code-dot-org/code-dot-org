@@ -32,6 +32,9 @@ Parameters:
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
   RDSClusterEndpointRootDomain:
     Type: String
+  ProductionAuroraClusterARN:
+    Type: String
+    Description: The ARN of the production Aurora cluster so we can authorize it as a Redshift source for Zero-ETL.
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -76,6 +79,23 @@ Resources:
       PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+  RedshiftZeroETLResourcePolicy:
+    Type: AWS::Redshift::ResourcePolicy
+    Properties:
+      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
+      Policy:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowZeroETLFromProductionAurora
+            Effect: Allow
+            Principal:
+              Service: "redshift.amazonaws.com"
+            Action:
+              - "redshift:AuthorizeInboundIntegration"
+            Resource: !GetAtt Tableau.ClusterNamespaceArn
+            Condition:
+              ArnEquals:
+                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
   DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
@@ -743,3 +763,9 @@ Resources:
           InputFormat: org.apache.hadoop.mapred.TextInputFormat
           SerdeInfo:
             SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+Outputs:
+  RedshiftClusterNamespace:
+    Value: !GetAtt Tableau.ClusterNamespaceArn
+    Description: "Redshift Cluster Namespace for Zero-ETL targeting"
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"
