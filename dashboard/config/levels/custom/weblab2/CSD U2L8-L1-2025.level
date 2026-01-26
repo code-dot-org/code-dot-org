@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-26T00:43:36.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Explore Image Tags\r\n\r\nAdding images to our web pages is a powerful skill that will make your pages more appealing to users!\r\n\r\nAn image tag consist of some new components, namely the **src** attribute and the **alt** attribute.\r\n\r\nThe **src** attribute stands for \"source\" and the value of this attribute will be the name of the image file you want on your web page.\r\n\r\nThe **alt** attribute stands for \"alternate text\" and the value should be a short descriptive word or two about the image. If an image does not load on a web page, it is this alternate text that will show up instead.\r\n\r\n# Do This\r\n\r\n1) Use AI Chat to determine how the image on the website is displayed and how the **src** and **alt** attributes are used.\r\n2) Discuss with your partner:\r\n   * How do you think they knew what the name of the image should be for the **src** (source) attribute? Where did they find this information here in Web Lab?\r\n   * What did they put as the alternate text? Do you think that is descriptive enough?\r\n   * What else do you notice about the image tag?\r\n   \r\n   \r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n:::",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <!-- content about images and the Inspector tool -->\n    <h1>Adding Images</h1>\n\n    <p>Most webpages out there have images on them! So let's learn how to add images to our web pages!</p>\n    \n    <p>Use the Inspector Tool to check out the tag that made the image below appear on this website.</p>\n    \n    <img src=\"elephants.jpg\" alt=\"Family of elephants\">\n\n    \n\n    \n    \n     \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "elephants.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L1-2025/uuid/2a28c8ad-d6d6-4d64-82f9-407ace05a761.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: #e6f3ff;\n}\np {\n  font-size: 18px;\n  font-family: sans-serif;\n}\nh1 {\n  font-family: sans-serif;\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-26 00:45:04 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
