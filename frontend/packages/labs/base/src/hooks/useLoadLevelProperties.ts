@@ -12,6 +12,7 @@ import {LevelPropertiesMapValidator} from '../responseValidators';
 import {LevelPropertiesMap} from '../types';
 
 async function loadLevelProperties(path: string) {
+  console.log('loadLevel', path);
   const response = await HttpClient.fetchJson<LevelPropertiesMap>(
     path,
     undefined,
@@ -41,7 +42,7 @@ export function useLoadLevelProperties() {
     if (currentLevelId) {
       return `${host}/levels/${currentLevelId}/level_properties`;
     }
-    // Standalone project levels
+    // TODO: Standalone project levels
     const projectType = '';
     if (projectType) {
       return `${host}/projects/${projectType}/level_properties`;
@@ -49,6 +50,7 @@ export function useLoadLevelProperties() {
   });
 
   useEffect(() => {
+    console.log('path?', path);
     if (path) {
       loadLevelProperties(path)
         .then(setPropertiesMap)

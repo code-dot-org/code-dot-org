@@ -52,7 +52,7 @@ async function fetchJson<ResponseType>(
   init?: RequestInit,
   validator?: ResponseValidator<ResponseType>,
 ): Promise<GetResponse<ResponseType>> {
-  const response = await fetch(endpoint, {credentials: 'include', ...init});
+  const response = await fetch(endpoint, init);
   if (!response.ok) {
     throw new NetworkError(
       response.status + ' ' + response.statusText,
@@ -92,7 +92,6 @@ async function sendRequest(
     method,
     body,
     headers,
-    credentials: 'include',
   });
   if (!response.ok) {
     throw new NetworkError(

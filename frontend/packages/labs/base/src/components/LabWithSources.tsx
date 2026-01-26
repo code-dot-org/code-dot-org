@@ -40,7 +40,7 @@ const LabWithSourcesWrapper = <
 }: LabWithSourcesProps<T, U>) => {
   const levelProperties = useMaybeLevelProperties<T>();
 
-  console.log('level?', levelProperties);
+  console.log('level?', channelId, levelProperties);
 
   return levelProperties ? (
     <SourcesProvider<T, U>

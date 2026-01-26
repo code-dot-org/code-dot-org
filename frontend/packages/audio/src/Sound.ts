@@ -478,9 +478,7 @@ class Sound {
     }
 
     try {
-      const response = await fetch(filename, {
-        credentials: 'include',
-      });
+      const response = await fetch(filename);
 
       if (!response.ok) {
         this.handleLoadFailed(response.status);
