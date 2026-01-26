@@ -114,7 +114,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
       // Signal any loading errors
       if (initialErrors.current.length > 0) {
-        console.log('setToast initialError', initialErrors.current[0].message);
         api.setToast({
           message: initialErrors.current[0].message,
         });
@@ -127,7 +126,6 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     const api = excalidrawApiRef.current;
     if (api) {
       // The app is loaded, so just pop up the error
-      console.log('setToast onError', error.message);
       api.setToast({
         message: error.message,
       });
