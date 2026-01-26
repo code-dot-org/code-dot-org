@@ -35,12 +35,10 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const [lessonInfo, setLessonInfo] = useState<LessonInfo>({});
   const [toggleValue, setToggleValue] = useState<boolean>(true);
 
-  const sections: TeacherSectionState = useAppSelector(
-    state => {
-      console.log(state);
-      return state.teacherSections || {};
-    }
-  );
+  const sections: TeacherSectionState = useAppSelector(state => {
+    console.log(state);
+    return state.teacherSections || {};
+  });
 
   console.log(sections);
 
@@ -162,7 +160,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             onChange={handleUnitChange}
           />
           <SimpleDropdown
-            items={[1,2,3].map(num => ({value: `${num}`, text: `${num}${num}`}))}
+            items={[1, 2].map(num => ({value: `${num}`, text: `${num}${num}`}))}
             labelText="Lesson"
             name="lesson-dropdown"
           />

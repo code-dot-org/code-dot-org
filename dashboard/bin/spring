@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
 
 # This file loads Spring without using Bundler, in order to be fast.
 # It gets overwritten when you run the `spring binstub` command.
 
-ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
+unless defined?(Spring)
+  require 'rubygems'
+  require 'bundler'
 
   # Spring breaks when Bundler is running in deployment mode (ie, on the
   # managed test server), but fortunately it also doesn't offer any benefits to
@@ -19,8 +20,3 @@ ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
     end
   end
 end
-
-require "rubygems"
-require "bundler/setup"
-
-load Gem.bin_path("spring", "spring")
