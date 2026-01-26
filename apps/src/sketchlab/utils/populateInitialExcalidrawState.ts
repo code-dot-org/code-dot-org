@@ -52,8 +52,5 @@ export const populateInitialExcalidrawState = async (
   // Excalidraw does not need to access externalFiles, so we remove it
   // before passing this initial state to Excalidraw.
   delete excalidrawInitialState.externalFiles;
-
-  onError(new Error('test error'));
-
   return excalidrawInitialState as ExcalidrawInitialDataState;
 };
