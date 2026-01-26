@@ -431,6 +431,35 @@ export const getCurrentScriptLevelId: (
 };
 
 /**
+ * Returns the dashboard URL path to retrieve the user app options for a script level.
+ * If we don't have a current level, this returns undefined.
+ */
+export const getUserAppOptionsPath: (
+  state: RootState,
+) => string | undefined = state => {
+  if (state.progress.lessons) {
+    const scriptName = state.progress.scriptName;
+
+    const lessonPosition = state.progress.lessons?.find(
+      lesson => lesson.id === state.progress.currentLessonId
+    )?.relativePosition;
+
+    const currentLevel = getCurrentLevel(state);
+    if (!currentLevel) {
+      return undefined;
+    }
+
+    const levelPosition = currentLevel.levelNumber;
+
+    const levelId = state.progress.currentLevelId;
+
+    return `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${levelId}`;
+  } else {
+    return undefined;
+  }
+};
+
+/**
  * Given a lesson ID, and a level ID, returns the requested level.
  */
 export const levelById: (

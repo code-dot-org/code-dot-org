@@ -68,8 +68,8 @@ export interface SourcesProviderProps<
   projectManager?: ProjectManager;
   /** How to determine the initial sources */
   getInitialSources?: (levelProperties: T, projectSources?: U) => U | undefined;
-  /** The sources to use when starting over */
-  startOverSources?: U;
+  /** The callback to determine initial sources to use when starting over */
+  startOverSources?: (levelProperties: T) => U;
   /** The message to display when potentially starting over. */
   defaultStartOverMessage?: string;
 }
@@ -119,6 +119,7 @@ export const SourcesProvider = <
 
   const reinitializeSources = useCallback(
     (sources: U, save: boolean = false) => {
+      console.log("REINIT SOURCES", sources);
       setCurrentSources(sources);
       if (save && !readonlyWorkspaceRef.current) {
         (projectManager || LabRegistry.projectManager)?.save(sources, true);
@@ -143,7 +144,7 @@ export const SourcesProvider = <
   // Sources to reset to when starting over. Depends on the level edit mode.
   const memoizedStartOverSources: U = useMemo(() => {
     if (startOverSources) {
-      return startOverSources;
+      return startOverSources(levelProperties);
     }
 
     const {templateSources, startSources} = levelProperties;

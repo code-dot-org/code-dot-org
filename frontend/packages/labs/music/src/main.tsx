@@ -20,6 +20,10 @@ import '@code-dot-org/component-library-styles/colors.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import {LevelKind} from '@code-dot-org/api/models/levels';
+import {
+  getEnvironmentFromHostname,
+  getDashboardApiUrl,
+} from '@code-dot-org/core';
 import type {LevelProperties} from '@code-dot-org/lab';
 
 injectFontAwesome();
@@ -29,7 +33,7 @@ import '@code-dot-org/lab/styles/variables.scss';
 
 import App from './App.tsx';
 
-const mockLevelProperties: LevelProperties = {
+const _mockLevelProperties: LevelProperties = {
   id: 1,
   appName: 'music',
   key: 'music-lab-demo',
@@ -44,12 +48,17 @@ const mockLevelProperties: LevelProperties = {
   },
 };
 
+const channelId = window.location.pathname.match(
+  /^\/app\/projects\/music\/([^/]+)\/edit$/,
+)?.[1];
+
+console.log({
+  url: getDashboardApiUrl(getEnvironmentFromHostname()),
+  channel: channelId,
+});
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App
-      levelProperties={mockLevelProperties}
-      levelId={'62733'}
-      isLoading={false}
-    />
+    <App levelId={'62733'} channelId={channelId} isLoading={false} />
   </StrictMode>,
 );

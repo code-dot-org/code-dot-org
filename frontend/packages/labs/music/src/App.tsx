@@ -14,7 +14,7 @@ const App = ({...props}: Omit<BlocklyLabProps, 'defaultSources'>) => (
         {/* Wraps the music player instance and all callbacks/methods for playback */}
         <PlayerProvider>
           {/* The lab interfaces themselves */}
-          <MusicLab levelProperties={props.levelProperties} />
+          <MusicLab />
         </PlayerProvider>
       </BlocklyLab>
     </div>

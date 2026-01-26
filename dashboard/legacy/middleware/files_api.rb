@@ -136,6 +136,7 @@ class FilesApi < Sinatra::Base
   get %r{/v3/(animations|assets|sources|libraries)/([^/]+)$} do |endpoint, encrypted_channel_id|
     dont_cache
     content_type :json
+    allow_cdo_cors
 
     begin
       get_bucket_impl(endpoint).new.list(encrypted_channel_id).to_json
@@ -155,6 +156,7 @@ class FilesApi < Sinatra::Base
     if endpoint == 'libraries'
       dont_cache
     end
+    allow_cdo_cors
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -164,6 +166,7 @@ class FilesApi < Sinatra::Base
   # Read the latest version of a source file, and cache the response.
   #
   get %r{/v3/sources-public/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+    allow_cdo_cors
     get_file('sources', encrypted_channel_id, filename, cache_duration: SOURCES_PUBLIC_CACHE_DURATION)
   end
 
@@ -176,6 +179,7 @@ class FilesApi < Sinatra::Base
   get %r{/projects/([a-z]+)/([^/]+)/([^/]+)$}, {code_projects_domain: true} do |project_type, encrypted_channel_id, filename|
     not_found unless project_type == 'weblab'
     pass unless valid_encrypted_channel_id(encrypted_channel_id)
+    allow_cdo_cors
 
     get_file('files', encrypted_channel_id, filename, true)
   end
@@ -284,6 +288,7 @@ class FilesApi < Sinatra::Base
     end
 
     response.headers['S3-Version-Id'] = result[:version_id]
+    puts '*******************', 'S3-Version-Id', request.path, result[:version_id]
 
     if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
       return StringIO.new sanitize_for_under_13 result[:body].string
@@ -687,6 +692,7 @@ class FilesApi < Sinatra::Base
   #
   delete %r{/v3/(animations|assets|sources|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
+    allow_cdo_cors
 
     not_authorized unless owns_channel?(encrypted_channel_id)
 
@@ -703,16 +709,21 @@ class FilesApi < Sinatra::Base
   get %r{/v3/(animations|sources|files|libraries)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
+    allow_cdo_cors
 
     filename.downcase! if endpoint == 'files'
     begin
       versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
+      puts 'VERSIONS', versions
+      puts 'a'
       return versions.to_json if owns_channel?(encrypted_channel_id)
 
       owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
       owner_user_id = user_id_for_storage_id(owner_storage_id)
+      puts 'b'
       return versions.to_json if teaches_student?(owner_user_id)
 
+      puts 'c'
       return versions.select {|version| version[:isLatest]}.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request

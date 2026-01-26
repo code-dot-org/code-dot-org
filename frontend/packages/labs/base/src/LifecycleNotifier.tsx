@@ -24,6 +24,7 @@ type CallbackArgs = {
     abuseScore: number | undefined,
     isReadOnly: boolean | undefined,
     projectSharingDisabled: boolean | undefined,
+    isTeacherOfProjectOwner: boolean | undefined,
   ];
 };
 

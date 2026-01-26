@@ -1,4 +1,4 @@
-import {useMemo} from 'react';
+import {useCallback} from 'react';
 
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
@@ -33,32 +33,27 @@ const BlocklyLab = <T extends LevelProperties = LevelProperties>({
   children,
   ...props
 }: BlocklyLabProps<T>) => {
+  const {startOverSources} = props;
+
   // Sources to reset to when starting over. Depends on the level edit mode.
-  const memoizedStartOverSources: ProjectSources<BlocklySource> | undefined =
-    useMemo(() => {
-      const {levelProperties, startOverSources} = props;
+  const memoizedStartOverSources = useCallback((levelProperties: T) => {
+    if (startOverSources) {
+      return startOverSources(levelProperties);
+    }
 
-      if (startOverSources) {
-        return startOverSources;
-      }
-
-      if (isToolboxMode) {
-        return {
-          source: toolboxToWorkspaceBlocks(
-            (levelProperties as BlocklyLevelProperties).toolboxDefinition,
-          ),
-        };
-      }
-
-      return undefined;
-    }, [props]);
+    return {
+      source: toolboxToWorkspaceBlocks(
+        (levelProperties as BlocklyLevelProperties).toolboxDefinition,
+      ),
+    } as ProjectSources<BlocklySource>;
+  }, [startOverSources]);
 
   return (
     <LabWithSources<T, ProjectSources<BlocklySource>>
       {...props}
       startOverMessage={props.startOverMessage || STARTOVER_WORKSPACE_BLOCKS_MESSAGE}
       getInitialSources={props.getInitialSources || getInitialBlocklySources}
-      startOverSources={memoizedStartOverSources || props.startOverSources}
+      startOverSources={isToolboxMode ? memoizedStartOverSources : props.startOverSources}
     >
       {children}
     </LabWithSources>

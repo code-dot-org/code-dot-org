@@ -57,12 +57,14 @@ export default class ProjectManager {
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
   private forceNewVersion: boolean = false;
+  private isStandaloneProjectLevel: boolean = false;
 
   constructor({
     sourcesStore,
     channelsStore,
     channelId,
     reduceChannelUpdates,
+    isStandaloneProjectLevel,
     isShareView = false,
     metricsReporter,
   }: {
@@ -71,6 +73,7 @@ export default class ProjectManager {
     channelId: string;
     metricsReporter: MetricsReporter;
     reduceChannelUpdates: boolean;
+    isStandaloneProjectLevel: boolean;
     isShareView?: boolean;
   }) {
     this.channelId = channelId;
@@ -81,6 +84,7 @@ export default class ProjectManager {
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
     this.isShareView = isShareView;
+    this.isStandaloneProjectLevel = isStandaloneProjectLevel;
   }
 
   getChannelId(): string {
@@ -331,6 +335,7 @@ export default class ProjectManager {
   }
 
   async getVersionList(includeComments: boolean = false) {
+    console.log("GETTING VERSIONS", this.channelId);
     return await this.sourcesStore.getVersionList(
       this.channelId,
       includeComments,
@@ -373,6 +378,7 @@ export default class ProjectManager {
    */
   private async initializeForceNewVersionState(): Promise<void> {
     const currentVersionId = this.getCurrentVersionId();
+    console.log('CURRENT VERSION ID', currentVersionId);
     if (!currentVersionId) {
       this.setForceNewVersion(false);
       return;

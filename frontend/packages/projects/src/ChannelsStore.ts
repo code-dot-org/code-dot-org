@@ -15,13 +15,11 @@ export class ChannelsStore {
   loadForLevel(
     levelId: number,
     scriptId?: number,
-    scriptLevelId?: string,
     userId?: number,
   ) {
     return projectsApi.getChannelForLevel(
       levelId,
       scriptId,
-      scriptLevelId,
       userId,
     );
   }
