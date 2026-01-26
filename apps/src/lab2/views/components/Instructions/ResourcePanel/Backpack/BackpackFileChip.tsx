@@ -36,6 +36,11 @@ interface BackpackFileChipProps extends BackpackProps {
   disableActions: boolean;
   setActionInProgress: (inProgress: boolean) => void;
   isSecondaryBackpack?: boolean;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 }
 
 const EXTENSIONS_WITH_PREVIEWS = ['png', 'jpg', 'jpeg', 'gif'];
@@ -54,6 +59,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   disableActions,
   setActionInProgress,
   isSecondaryBackpack,
+  onImageFlagged,
 }) => {
   const fileExtension = fileName.split('.').pop()?.toLowerCase();
   const fileIcon = useMemo(
@@ -127,6 +133,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         findIdForFileName,
         fileName,
         newFileName,
+        onImageFlagged,
         isSecondaryBackpack
       );
     } else {
@@ -141,6 +148,7 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
         findIdForFileName,
         selectedFileName: fileName,
         newFileName: fileName,
+        onImageFlagged,
         isSecondaryBackpack,
       });
     }

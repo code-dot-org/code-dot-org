@@ -54,6 +54,11 @@ export const handleSaveDuplicateFile = async (
   findIdForFileName: (fileName: string) => string | undefined,
   selectedFileName: string,
   newFileName?: string,
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void,
   isSecondaryBackpack?: boolean
 ) => {
   // The file name is a duplicate, but not a support file.
@@ -84,6 +89,7 @@ export const handleSaveDuplicateFile = async (
       findIdForFileName,
       selectedFileName,
       newFileName,
+      onImageFlagged,
       isSecondaryBackpack,
     });
   } else if (results.type === 'neutral') {
@@ -97,6 +103,7 @@ export const handleSaveDuplicateFile = async (
       createNewFile,
       findIdForFileName,
       selectedFileName,
+      onImageFlagged,
       isSecondaryBackpack,
     });
   }
@@ -188,7 +195,8 @@ export const fetchAndSaveFile = async ({
           url = uploadUrl;
         };
         // FlagedImageModal will be shown to the user and user can choose to add the image file to the project or not.
-        onImageFlagged(file, fileType, saveImageFileToAssetsChannelFunction);
+        onImageFlagged &&
+          onImageFlagged(file, fileType, saveImageFileToAssetsChannelFunction);
         return;
       }
     } else {
