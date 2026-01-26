@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-09T21:11:53.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Extra Code: Align text",
-    "long_instructions": "\r\n# Text Alignment\r\n\r\nThe `text-align` property sets the horizontal (side to side) position of the text within each line.\r\n\r\n# Do This\r\n1) Find the CSS code that is making the \"From Wikipedia\" in the `h6` tag align to the right.\r\n* Change the `h1` tag so that it is aligned to the center of the page.\r\n* Change the alignment of the paragraph tag, too.",
+    "long_instructions": "\r\n# Text Alignment\r\n\r\nThe `text-align` property sets the horizontal (side to side) position of the text within each line.\r\n\r\n# Do This\r\n1) Find the CSS code that is making the \"From Wikipedia\" in the `h6` tag align to the right.\r\n* Change the `h1` tag so that it is aligned to the center of the page.\r\n* Change the alignment of the paragraph tag, too.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
     "bubble_choice_description": "Align text to the right or center of the page.",
     "thumbnail_url": "https://images.code.org/f074b4d2427feefc77110bc017f0ccc0-image-1565643571085.59.19 PM.png",
     "submittable": "false",
@@ -55,7 +56,6 @@
     },
     "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryb+SBOmollU\n+tXmNHIQJN5zAHm6IB3TtKLpjRH5oSBLEvjH3qy3VVtrYnvNsih4F8pLEDza\nkKwnmdu0pwXasncagZlPN45i2souh0ukJsIKcoGxC9VUYvT8LvgQVjUQXmb3\nqTjKRVjw3ocFSeSIu3UhNC3FTe2G714TVINqIKNebvXdGHA/cpHtnnW6guHA\noHG9+uL0Txq/yHe5B2JMZMxAgY4DZrk8G7V5b7iBk7/XoSyLoB5hOnx10M3B\nedFfniVDrOcRyq2YOlOcAYQwHAb9E6+WPSfQsRHNmzsdvydYrVqkPfLGExYg\nLwvD56vURJFsPHXFe3gJglDXoyQ47LMaMM3OzRVMwvqjhquK/6zcR4gPysa6\n53D5lFNz97Hb59G/mU2FF/SMUi+uYZlNJhbHIxvyPJ2d6MTwxfpcqtDX8gBi\nQiFmUcRiCbsDXs0SUjGdivxosMDLIW6Ld370MTe5U1Ewgw85d/pHcSQMroq1\n7C+Goho4X3HJBc7OC9bkJxTgav5VOCDvFGcvFyf62BWBcyqh7zDwkf5us6TT\n/KlNlYKVGmtXrVaIQUw1IRdAVUGGHE89tbmqCswDuwfo9nT4TOzOsCUQuZE9\nceH87JBwsSrwB0QwSETe0Q5o/ghfQdhqtliohmIm05AiIeEHTxKC3dDDhfFy\nT1PCrnpexttLvg7kOiqvcYsnGiCKF53srGEhrXFbMiBN2grWQg9Lqp1YLJ2i\nWYS2ifVq1bo10gzVI5ANezkiiVVb53vvWI6l//GL3jZlyt6SE+on9T7bmuyU\nvnAlug/hPABZiWSFKgAK7uf+OVoyINfA69zaCjzvj9IIs+YT2QngFYI1gstl\nwBCCadl0ZdsyOlmawk4uCl5XPNyWLUX/yV7ze0tq3vYJW0AudyhxvU7m4KDU\nKWuGiWXSAnZ6nasJi09vNt4MHV9g4E3hP8FUNy1UbI3YtnOuEOVI0xv3Ehnm\n18vJnQuNs7kuoly7HqKILfs6gJulbiTloDaN9MIDu0YvGImiZqO/FcMk7DxR\nwM595wBcieCggCMV3HqhK5Id+4YIdhoJXBzNDZ8L8WqFju5K3mXGPsw5gfsL\nGCLd00u/XA/NSJItlyah37aYwrVj94AIBrC5mS3b0BAtWYwxT9rpOwDhFS2x\n8eKIgIVRtJUktPrboQQxW5QRaEU4i8cP/BbDhBQdwBhzf2uQVg/bIQ1Y3viU\n+DbocIe9PpRpmVCRJjZwNsXmcIi2Sx0oWeltk7Vy9+uMycr33vWyWydTqAT3\n++Nfjavofxc0EfXCCpa/f4QQBl2pn/6/C+hU+I5XqtQeSIkz4FC2v2BX+Aiw\nlK2IM91YlSYLyL4zWKazzqjxi6rtmcCK4rpqY3BZO0+brpTnUHXR4SWiHloi\ni7eiMVjB+D8uORbboxDdpOUxQGmBuAKu99Rk/phr5M33s2wVhzAx8Ph/5A6B\niLLgqLbeixktk38bJFJ6jd9K5a4jXw56tFJcj5kKP9VK\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-01-09 21:12:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 21:12:35 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-09 21:12:16 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 21:12:35 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 00:32:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

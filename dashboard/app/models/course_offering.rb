@@ -62,10 +62,6 @@ class CourseOffering < ApplicationRecord
     '6-12 Workshops': 'https://code.org/apply',
   }
 
-  # Subdirectory paths for course offering files, relative to root_path
-  COURSE_OFFERING_DIRECTORY = 'config/course_offerings'
-  UI_TEST_COURSE_OFFERING_DIRECTORY = 'test/ui/config/course_offerings'
-
   has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
@@ -429,24 +425,11 @@ class CourseOffering < ApplicationRecord
     }
   end
 
-  # Returns the filepath for a course offering's .json file.
-  # UI test course offerings (those with keys starting with 'ui-test-') are stored in
-  # test/ui/config/course_offerings/, while normal offerings are stored in config/course_offerings/.
-  # The root_path parameter can be customized for different environments or testing.
-  #
-  # @param [String] key - the key of the course offering
-  # @param [Pathname, String] root_path - the root directory path (defaults to Rails.root)
-  # @return [Pathname] - the absolute filepath to the .json file
-  def self.file_path(key, root_path = Rails.root)
-    subdirectory = key.start_with?('ui-test-') ? UI_TEST_COURSE_OFFERING_DIRECTORY : COURSE_OFFERING_DIRECTORY
-    root_path.join(subdirectory, "#{key}.json")
-  end
-
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    filepath = CourseOffering.file_path(key)
+    file_path = Rails.root.join("config/course_offerings/#{key}.json")
     object_to_serialize = serialize
-    File.write(filepath, JSON.pretty_generate(object_to_serialize) + "\n")
+    File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
   def self.seed_all(root_dir: Rails.root, glob: "config/course_offerings/*.json")
