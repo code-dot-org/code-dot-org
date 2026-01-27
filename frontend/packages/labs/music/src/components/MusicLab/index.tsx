@@ -96,7 +96,7 @@ const MusicLab = () => {
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
 
-  const {loadAndInitializePlayer, onInject, onChange} =
+  const {loadAndInitializePlayer, onInject, onChange, javascriptGeneratorRef} =
     useContext(PlayerContext);
 
   useEffect(() => {
@@ -267,6 +267,7 @@ const MusicLab = () => {
                 renderer={ThrasosRenderer}
                 onInject={onInject}
                 onChange={onChange}
+                javascriptGeneratorRef={javascriptGeneratorRef}
                 plugins={[ToolboxTrashcanPlugin]}
               />
             </PanelContainer>

@@ -141,6 +141,9 @@ export class FieldSounds extends Blockly.Field {
     super.showEditor_();
 
     const editor = this.dropdownCreate_();
+    console.log(Blockly);
+    console.log(Blockly.DropDownDiv);
+    console.log(Blockly.DropDownDiv.getContentDiv());
     Blockly.DropDownDiv.getContentDiv().appendChild(editor);
 
     Blockly.DropDownDiv.setColour(
