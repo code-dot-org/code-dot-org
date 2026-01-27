@@ -33,9 +33,8 @@ export const populateInitialExcalidrawState = async (
             downloadedFileData[file.id] = base64;
           } catch (error) {
             // Excalidraw handles files it can't load pretty well (ie, shows a placeholder image),
-            // so proceed if we fail to encode an image for now.
-            // Error handling investigation tracked here:
-            // https://codedotorg.atlassian.net/browse/AFL-345
+            // so proceed if we fail to encode an image for now and just track the error via this
+            // upcall.
             if (error instanceof Error) {
               onError(new Error('Cannot load image from sources.'));
             }
