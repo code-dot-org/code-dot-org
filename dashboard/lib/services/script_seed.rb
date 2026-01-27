@@ -724,10 +724,10 @@ module Services
         LearningGoal.new(learning_goal_attrs)
       end
 
-      # existing_learning_goals = LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
-      # destroy_outdated_objects(LearningGoal, existing_learning_goals, learning_goals_to_import, seed_context)
-      # LearningGoal.import! learning_goals_to_import, on_duplicate_key_update: get_columns(LearningGoal)
-      # LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+      existing_learning_goals = LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+      destroy_outdated_objects(LearningGoal, existing_learning_goals, learning_goals_to_import, seed_context)
+      LearningGoal.import! learning_goals_to_import, on_duplicate_key_update: get_columns(LearningGoal)
+      LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
     end
 
     def self.import_learning_goals_evidence_levels(learning_goal_evidence_levels_data, seed_context)

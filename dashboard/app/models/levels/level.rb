@@ -948,7 +948,8 @@ class Level < ApplicationRecord
       else
         # Show rubric if any rubric level shares the same project template level as this level.
         rubric_template_levels = Level.where(id: rubric_level_ids).map {|l| l.try(:project_template_level)}.compact
-        properties_camelized[:showRubric] = rubric_template_levels.include?(try(:project_template_level))
+        has_rubric = rubric_template_levels.include?(try(:project_template_level))
+        properties_camelized[:showRubric] = has_rubric if has_rubric
       end
     end
     properties_camelized
