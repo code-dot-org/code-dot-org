@@ -940,13 +940,15 @@ class Level < ApplicationRecord
 
     # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
     # project template level as this level.
-    rubric_level_id = script_level&.lesson&.rubric&.level_id
-    if rubric_level_id
-      if rubric_level_id == id
+    # PROBLEM: showRubric doesn't indicate which rubric to show if there are multiple rubrics associated with the lesson.
+    rubric_level_ids = script_level&.lesson&.rubrics&.map(&:level_id)
+    if rubric_level_ids
+      if rubric_level_ids.include?(id)
         properties_camelized[:showRubric] = true
       else
-        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
-        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+        # Show rubric if any rubric level shares the same project template level as this level.
+        rubric_template_levels = Level.where(id: rubric_level_ids).map {|l| l.try(:project_template_level)}.compact
+        properties_camelized[:showRubric] = rubric_template_levels.include?(try(:project_template_level))
       end
     end
     properties_camelized

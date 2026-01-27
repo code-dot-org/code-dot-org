@@ -110,7 +110,7 @@ class Unit < ApplicationRecord
           :vocabularies,
           :programming_expressions,
           :objectives,
-          {rubric: {learning_goals: :learning_goal_evidence_levels}},
+          :rubrics,
           :standards,
           :opportunity_standards
         ],
@@ -1885,7 +1885,7 @@ class Unit < ApplicationRecord
 
   def ai_assessment_enabled?
     lessons.any? do |lesson|
-      lesson.rubric&.learning_goals&.any?(&:ai_enabled?)
+      lesson.rubrics&.flat_map(&:learning_goals)&.any?(&:ai_enabled?)
     end
   end
 

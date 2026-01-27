@@ -73,7 +73,7 @@ module Services
 
       objectives = script.lessons.map(&:objectives).flatten.sort_by(&:key)
 
-      rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
+      rubrics = script.lessons.filter_map(&:rubrics).flatten.sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
       learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
@@ -715,18 +715,19 @@ module Services
 
     def self.import_learning_goals(learning_goals_data, seed_context)
       learning_goals_to_import = learning_goals_data.map do |learning_goal_data|
-        rubric = seed_context.lessons.find {|l| l.key == learning_goal_data['seeding_key']['lesson.key']}.rubric
-        raise 'No rubric found' if rubric.nil?
+        rubrics = seed_context.lessons.find {|l| l.key == learning_goal_data['seeding_key']['lesson.key']}.rubrics
+        raise 'No rubric found' if rubrics.empty?
 
         learning_goal_attrs = learning_goal_data.except('seeding_key')
-        learning_goal_attrs['rubric_id'] = rubric.id
+        # PROBLEM: currently we only support one rubric id for learning goal attrs
+        learning_goal_attrs['rubric_id'] = rubrics.first.id
         LearningGoal.new(learning_goal_attrs)
       end
 
-      existing_learning_goals = LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
-      destroy_outdated_objects(LearningGoal, existing_learning_goals, learning_goals_to_import, seed_context)
-      LearningGoal.import! learning_goals_to_import, on_duplicate_key_update: get_columns(LearningGoal)
-      LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+      # existing_learning_goals = LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+      # destroy_outdated_objects(LearningGoal, existing_learning_goals, learning_goals_to_import, seed_context)
+      # LearningGoal.import! learning_goals_to_import, on_duplicate_key_update: get_columns(LearningGoal)
+      # LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
     end
 
     def self.import_learning_goals_evidence_levels(learning_goal_evidence_levels_data, seed_context)

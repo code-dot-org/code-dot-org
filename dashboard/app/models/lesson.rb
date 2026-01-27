@@ -57,7 +57,7 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
-  has_many :rubric, dependent: :destroy
+  has_many :rubrics, dependent: :destroy
 
   self.table_name = 'stages'
 
@@ -315,7 +315,7 @@ class Lesson < ApplicationRecord
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
         background: background,
-        rubric: rubric,
+        rubrics: rubrics,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -467,7 +467,8 @@ class Lesson < ApplicationRecord
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       lessonPath: get_uncached_show_path,
-      rubric: rubric,
+      # what is summarize_for_lesson_edit doing? The map converts this to an array, otherwise we try to stringify a collection.
+      rubrics: rubrics.map(&:summarize_for_lesson_edit),
     }
   end
 
