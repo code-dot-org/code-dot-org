@@ -87,6 +87,7 @@ namespace :seed do
     ui-test-unnumbered-lessons
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
+    odometer
     20-hour
     algebra
     allthehiddenthings
@@ -321,6 +322,7 @@ namespace :seed do
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse
+       odometer
        csp-2024
        csp-2025
        20-hour
