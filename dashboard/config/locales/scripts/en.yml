@@ -10311,6 +10311,8 @@ en:
               name: U5 L10
             lesson-23:
               name: U5 Project
+            lesson-24:
+              name: Step 5 Project Design Prototype
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10328,6 +10330,8 @@ en:
               display_name: AI Tutor
             lessonGroup-9:
               display_name: Web Dev - AIF Sem 2
+            lessonGroup-10:
+              display_name: CSD 2.0
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -26034,7 +26038,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-ai-generated-design-pilot-2025
-          title: Teaching AI-Generated Design
+          title: "[PILOT] Teaching AI-Generated Design"
           description_audience: ''
           description_short: ''
           description: |-
@@ -26054,17 +26058,39 @@ en:
           title: "[PILOT] Teaching AI and Algorithmic Decisions"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 60 minutes**
+          student_description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 60 minutes**
         self-paced-pl-building-data-driven-systems-with-ai-pilot-2025:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-building-data-driven-systems-with-ai-pilot-2025
-          title: Teaching Building Data-Driven Systems with AI
+          title: "[PILOT] Teaching Building Data-Driven Systems with AI"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+          student_description: |
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
         self-paced-pl-iterating-with-ai-pilot-2025:
           lessons: {}
           lesson_groups: {}

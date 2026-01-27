@@ -8,6 +8,7 @@ import {
   SingleSignOnProviders,
   LmsLoginTypeNames,
 } from '@cdo/apps/accounts/constants';
+import DCDO from '@cdo/apps/dcdo';
 import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -154,6 +155,8 @@ class ManageLinkedAccounts extends React.Component {
         return i18n.manageLinkedAccounts_microsoft();
       case SingleSignOnProviders.clever:
         return i18n.manageLinkedAccounts_clever();
+      case SingleSignOnProviders.classlink:
+        return i18n.manageLinkedAccounts_classlink();
       case SingleSignOnProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
       case SingleSignOnProviders.lti_v1:
@@ -186,6 +189,12 @@ class ManageLinkedAccounts extends React.Component {
       if (
         provider === SingleSignOnProviders.lti_v1 &&
         !optionsByProvider[provider]
+      ) {
+        return;
+      }
+      if (
+        DCDO.get('classlink_lms_enabled', false) === false &&
+        provider === SingleSignOnProviders.classlink
       ) {
         return;
       }

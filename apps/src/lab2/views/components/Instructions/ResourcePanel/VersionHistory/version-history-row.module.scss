@@ -33,6 +33,10 @@
 .aiSaveRow {
   border: 1px solid var(--borders-brand-aqua-primary);
   background: var(--background-brand-aqua-extra-light);
+
+  .commitDescription {
+    border-top: 1px solid var(--borders-brand-aqua-primary);
+  }
 }
 
 .aiSaveIcon {

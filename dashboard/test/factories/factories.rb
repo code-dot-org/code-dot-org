@@ -626,6 +626,11 @@ FactoryBot.define do
       end
     end
 
+    trait :classlink_sso_provider do
+      sso_provider_with_token
+      provider {'classlink'}
+    end
+
     trait :clever_sso_provider do
       untrusted_email_sso_provider
       provider {'clever'}
