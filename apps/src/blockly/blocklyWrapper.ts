@@ -515,20 +515,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     }
   };
 
-  const originalSetInputsInline =
-    blocklyWrapper.Block.prototype.setInputsInline;
-  // Replace the original setInputsInline with a version that forces a
-  // two-row Play Lab block to always use inline inputs..
-  extendedBlockSvg.setInputsInline = function (inline) {
-    originalSetInputsInline.call(this, inline);
-    if (
-      this.type === 'studio_whenSpriteAndGroupCollide' &&
-      !this.getInputsInline()
-    ) {
-      this.setInputsInline(true);
-    }
-  };
-
   const originalToCopyData = blocklyWrapper.BlockSvg.prototype.toCopyData;
   extendedBlockSvg.toCopyData = function () {
     const blockCopyData = originalToCopyData.call(this);

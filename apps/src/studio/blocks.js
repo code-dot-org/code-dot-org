@@ -2401,6 +2401,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+      this.setInputsInline(true);
     },
   };
 
