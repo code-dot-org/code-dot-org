@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState} from 'react';
@@ -18,6 +19,7 @@ import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
 import StudentCFUWidget from './studentCFUWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
+import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
 
@@ -133,6 +135,37 @@ const StudentSnapshot: React.FC = () => {
   const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
   const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
+  const [insightContent, setInsightContent] = useState<string>('');
+  const fetchInsightPrompt = () => {
+    if (
+      !selectedLessonId ||
+      !selectedUnitId ||
+      !selectedStudentId ||
+      !sectionId
+    ) {
+      console.log('Missing required parameters');
+      return;
+    }
+
+    const params = new URLSearchParams({
+      lesson_id: selectedLessonId.toString(),
+      unit_id: selectedUnitId.toString(),
+      student_id: selectedStudentId.toString(),
+      section_id: sectionId.toString(),
+    });
+
+    HttpClient.fetchJson<{json: string}>(
+      `/student_snapshots/insight_system_prompt?${params}`
+    )
+      .then(response => {
+        console.log('Insight System Prompt:', response?.value);
+        setInsightContent(response?.value?.json || '');
+      })
+      .catch(error => {
+        console.error('Error fetching insight prompt:', error);
+      });
+  };
+
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -156,6 +189,20 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
+        <WidgetTemplate
+          widgetName="Small Widget 1"
+          gridWidth={1}
+          gridHeight={1}
+        >
+          <Button
+            text="Get Insight Prompt"
+            onClick={fetchInsightPrompt}
+            disabled={
+              !selectedLessonId || !selectedUnitId || !selectedStudentId
+            }
+          />
+          {insightContent}
+        </WidgetTemplate>
         {selectedLessonId && selectedStudentId && (
           <StudentLessonProgressDetailsWidget
             selectedUnitId={selectedUnitId}

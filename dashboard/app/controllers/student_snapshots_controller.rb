@@ -163,6 +163,22 @@ class StudentSnapshotsController < ApplicationController
     }
   end
 
+  # GET /student_snapshots/insight_system_prompt
+  # Returns the system prompt for generating insights
+  def insight_system_prompt
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+    section_id = params[:section_id]
+    teacher_id = current_user.id
+
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+
+    response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    render json: response
+  end
+
   # Returns the script_levels in a lesson that correspond to CFU progressions.
   private def cfu_script_levels_for(lesson)
     lesson.script_levels.select do |script_level|
