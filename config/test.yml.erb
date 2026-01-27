@@ -1,7 +1,7 @@
 ##
-## Secrets and any other config specific to the web server and non-test rake
-## tasks on the chef-managed test system. These secrets will not be available
-## in unit tests or on other chef-managed servers running with RAILS_ENV=test.
+## Secrets and any other config to apply only outside of unit tests on the
+## chef-managed test system. These secrets will not be available in unit tests
+## or on other chef-managed servers running with RAILS_ENV=test.
 ##
 
 <% if test_system? && !unit_test -%>
