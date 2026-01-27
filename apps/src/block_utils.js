@@ -935,10 +935,12 @@ exports.createJsWrapperBlockCreator = function (
       init: function () {
         this.setStyle(style || BlockStyles.DEFAULT);
 
+        const check =
+          returnType === Blockly.BlockValueType.NONE ? null : returnType;
         if (returnType) {
           this.setOutput(
             true,
-            returnType,
+            check,
             strictOutput || strictTypes.includes(returnType)
           );
         } else if (eventLoopBlock) {

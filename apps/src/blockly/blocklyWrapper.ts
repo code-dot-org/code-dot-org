@@ -596,17 +596,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     return this.setOutput(isOutput, check);
   };
 
-  const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
-  // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
-  // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
-  extendedBlock.setOutput = function (isOutput, check) {
-    if (check === 'None') {
-      return originalSetOutput.call(this, isOutput, null);
-    } else {
-      return originalSetOutput.call(this, isOutput, check);
-    }
-  };
-
   // Block fields are referred to as titles in CDO Blockly.
   extendedBlock.setTitleValue = function (newValue, name) {
     return this.setFieldValue(newValue, name);
