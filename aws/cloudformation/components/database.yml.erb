@@ -314,7 +314,7 @@
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
   ZeroETLIntegration:
-    Type: AWS::Redshift::Integration
+    Type: AWS::RDS::Integration
 <% unless rack_env?(:production) -%>
     # Ensure Aurora instances are provisioned before creating the integration link.
     DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',') %>]
