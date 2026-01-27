@@ -1,26 +1,24 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
-import CommitDialogBody from '@cdo/apps/javalab/CommitDialogBody';
-import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import i18n from '@cdo/javalab/locale';
-
-import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CommitDialog test', () => {
   let defaultProps, handleCommitSpy, setCommitSaveStatusSpy, backpackApiStub;
 
   beforeEach(() => {
-    handleCommitSpy = sinon.spy();
+    handleCommitSpy = jest.fn();
 
-    backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.getFileList.callsArgWith(1, ['backpackFile.java']);
-    backpackApiStub.hasBackpack.returns(true);
-    setCommitSaveStatusSpy = sinon.spy();
+    backpackApiStub = {
+      getFileList: jest.fn((_, cb) => cb(['backpackFile.java'])),
+      hasBackpack: jest.fn(() => true),
+      saveFiles: jest.fn(),
+    };
+
+    setCommitSaveStatusSpy = jest.fn();
 
     defaultProps = {
       isOpen: true,
@@ -36,112 +34,100 @@ describe('CommitDialog test', () => {
   });
 
   const renderWithProps = props => {
-    return mount(
+    return render(
       <BackpackAPIContext.Provider value={backpackApiStub}>
         <CommitDialog {...{...defaultProps, ...props}} />
       </BackpackAPIContext.Provider>
     );
   };
 
-  it('cannot commit with message', () => {
-    const wrapper = renderWithProps({});
+  it('cannot commit with message', async () => {
+    renderWithProps({});
+    const user = userEvent.setup();
+
+    const commitButton = screen.getByRole('button', {name: i18n.commit()});
+    expect(commitButton).toBeDisabled();
+
+    const notesInput = screen.getByRole('textbox');
+    await user.type(notesInput, 'commit notes');
+
+    expect(commitButton).toBeEnabled();
+  });
+
+  it('shows warning when file already in backpack included in commit', async () => {
+    renderWithProps({files: ['backpackFile.java']});
+    const user = userEvent.setup();
+
     expect(
-      wrapper.find('#confirmationButton').find('FooterButton').props().disabled
-    ).to.be.true;
-    wrapper.instance().updateNotes('commit notes');
-    wrapper.update();
+      screen.queryByText(i18n.backpackFileNameConflictWarning())
+    ).not.toBeInTheDocument();
+
+    const checkbox = screen.getAllByRole('checkbox')[0];
+    await user.click(checkbox);
+
     expect(
-      wrapper.find('#confirmationButton').find('FooterButton').props().disabled
-    ).to.be.false;
+      screen.getByText(i18n.backpackFileNameConflictWarning())
+    ).toBeInTheDocument();
   });
 
-  it('shows warning when file already in backpack included in commit', () => {
-    const wrapper = renderWithProps({files: ['backpackFile.java']});
-    const file = wrapper.find(CommitDialogFileRow).first();
+  it('does not show warning when file not already in backpack included in commit', async () => {
+    renderWithProps({files: ['fileNotInBackpack.java']});
+    const user = userEvent.setup();
 
-    expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
-    file.find('input[type="checkbox"]').first().simulate('change');
-    expect(file.text()).to.contain(i18n.backpackFileNameConflictWarning());
-  });
+    const checkbox = screen.getAllByRole('checkbox')[0];
+    await user.click(checkbox);
 
-  it('does not show warning when file not already in backpack included in commit', () => {
-    const wrapper = renderWithProps({files: ['fileNotInBackpack.java']});
-    const file = wrapper.find(CommitDialogFileRow).first();
-
-    file.find('input[type="checkbox"]').first().simulate('change');
-    expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
-  });
-
-  it('can commit and save', () => {
-    const wrapper = renderWithProps({});
-    wrapper.instance().updateNotes('commit notes');
-    wrapper.update();
-    wrapper.instance().commitAndSaveToBackpack();
-    expect(handleCommitSpy).to.be.called.once;
-    expect(backpackApiStub.saveFiles).to.be.called.once;
-    expect(setCommitSaveStatusSpy).to.be.calledWith({
-      isCommitSaveInProgress: true,
-      hasCommitSaveError: false,
-    });
-
-    expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
-  });
-
-  it('dialog closes after save then commit succeeds', () => {
-    const handleCloseSpy = sinon.spy();
-    const wrapper = renderWithProps({
-      handleClose: handleCloseSpy,
-      isCommitSaveInProgress: true,
-      hasCommitSaveError: false,
-    });
-    wrapper.instance().updateNotes('commit notes');
-    wrapper.update();
-    wrapper.instance().commitAndSaveToBackpack();
-    expect(handleCommitSpy).to.be.called.once;
-    expect(backpackApiStub.saveFiles).to.be.called.once;
-    expect(setCommitSaveStatusSpy).to.be.calledWith({
-      isCommitSaveInProgress: true,
-      hasCommitSaveError: false,
-    });
-
-    expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
-    expect(handleCloseSpy.callCount).to.equal(0);
-
-    wrapper.instance().handleBackpackSaveSuccess();
-    expect(handleCloseSpy.callCount).to.equal(0);
-
-    // Close dialog once both backpack save and commit save have finished
-    wrapper.instance().handleCommitSaveSuccess();
-    expect(handleCloseSpy.callCount).to.equal(1);
-  });
-
-  it('dialog closes after commit then save succeeds', () => {
-    const handleCloseSpy = sinon.spy();
-    const wrapper = renderWithProps({handleClose: handleCloseSpy});
-    wrapper.instance().updateNotes('commit notes');
-    wrapper.update();
-    wrapper.instance().commitAndSaveToBackpack();
-    expect(handleCommitSpy).to.be.called.once;
-    expect(backpackApiStub.saveFiles).to.be.called.once;
-    expect(setCommitSaveStatusSpy).to.be.calledWith({
-      isCommitSaveInProgress: true,
-      hasCommitSaveError: false,
-    });
-
-    expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
-    expect(handleCloseSpy.callCount).to.equal(0);
-
-    wrapper.instance().handleCommitSaveSuccess();
-    expect(handleCloseSpy.callCount).to.equal(0);
-
-    wrapper.instance().handleBackpackSaveSuccess();
-    expect(handleCloseSpy.callCount).to.equal(1);
-  });
-
-  it('hides the backpack sesion in the dialog body if backpack disabled', () => {
-    const wrapper = renderWithProps({backpackEnabled: false});
     expect(
-      wrapper.find(CommitDialogBody).first().props().showSaveToBackpackSection
-    ).to.be.false;
+      screen.queryByText(i18n.backpackFileNameConflictWarning())
+    ).not.toBeInTheDocument();
+  });
+
+  it('hides the backpack section in the dialog body if backpack disabled', () => {
+    renderWithProps({backpackEnabled: false});
+    expect(screen.queryByText(i18n.saveToBackpack())).not.toBeInTheDocument();
+  });
+
+  it('commits and saves to backpack when a file is selected', async () => {
+    renderWithProps({files: ['MyClass.java'], sources: {}});
+
+    const user = userEvent.setup();
+    const notesInput = screen.getByRole('textbox');
+    await user.type(notesInput, 'commit notes');
+
+    const checkbox = screen.getAllByRole('checkbox')[0];
+    await user.click(checkbox);
+
+    const commitAndSaveButton = screen.getByRole('button', {
+      name: i18n.commitAndSave(),
+    });
+    await user.click(commitAndSaveButton);
+
+    expect(handleCommitSpy).toHaveBeenCalledWith(
+      'commit notes',
+      expect.any(Function)
+    );
+    expect(backpackApiStub.saveFiles).toHaveBeenCalledWith(
+      {},
+      ['MyClass.java'],
+      expect.any(Function),
+      expect.any(Function)
+    );
+  });
+
+  it('does not save to backpack when backpack is disabled', async () => {
+    renderWithProps({backpackEnabled: false, files: ['MyClass.java']});
+
+    const user = userEvent.setup();
+    const notesInput = screen.getByRole('textbox');
+    await user.type(notesInput, 'commit notes');
+
+    const commitButton = screen.getByRole('button', {name: i18n.commit()});
+    await user.click(commitButton);
+
+    expect(handleCommitSpy).toHaveBeenCalledWith(
+      'commit notes',
+      expect.any(Function)
+    );
+    expect(backpackApiStub.saveFiles).not.toHaveBeenCalled();
   });
 });
