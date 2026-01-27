@@ -11,7 +11,7 @@ interface FeedbackData {
 
 interface UseLessonFeedbackProps {
   lessonId: number | null;
-  studentId: number;
+  studentId: number | null;
   teacherHasEnabledAi: boolean;
 }
 

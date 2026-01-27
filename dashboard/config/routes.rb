@@ -1181,6 +1181,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :lesson_feedbacks, only: [:create, :update]
+
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do
@@ -1324,6 +1326,12 @@ Dashboard::Application.routes.draw do
     resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
       collection do
         post :get_by_ai_evaluation_id
+      end
+    end
+
+    resources :lesson_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_lesson_id
       end
     end
 

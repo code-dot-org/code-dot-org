@@ -7,6 +7,8 @@ import {
 import React from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import ActionButtons from './ActionButtons';
@@ -19,7 +21,7 @@ import styles from './lessonFeeedback.module.scss';
 
 interface LessonFeedbackWidgetProps {
   lessonId: number | null;
-  studentId: number;
+  studentId: number | null;
   teacherHasEnabledAi: boolean;
 }
 
@@ -49,7 +51,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     handleTempResourceLinkChange,
     exitResourcePopup,
     handleResourceSave,
-    handleSaveAsDraft,
     handleSendToStudent,
     deleteResourceLink,
   } = useLessonFeedback({
@@ -58,10 +59,49 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     teacherHasEnabledAi,
   });
 
+  const teacherId = useAppSelector(state => state.currentUser.userId);
+
   let widgetContent: React.ReactNode;
 
   // TODO: Load feedback data from server when API is available - building off Liam's Lesson Insight work
   // Update state according to the data from back end
+
+  // Handle save as draft
+  // 1. Save the Feedback.
+  // a. Save the teacher_id, student_id, lesson_id
+  // 2. Save the resources.
+
+  // eventually these should all be updates, I think
+  const saveFeedback = async () => {
+    console.log('recommended action text:' + recommendedActionText);
+    console.log('feedback text:' + feedbackText);
+    const response = await fetch('/lesson_feedbacks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify({
+        lesson_feedback: {
+          teacher_id: teacherId,
+          student_id: studentId,
+          lesson_id: lessonId,
+          saved_feedback: feedbackText,
+          submitted_feedback: null,
+          submitted_at: null,
+        },
+      }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+  };
+
+  // Handle send to student
+  // 1. Save the Feedback.
+  // 2. Save the resources.
+
+  // Get exisiting feedback and resources to pre-populate the form if they exist
 
   if (error) {
     widgetContent = <BodyThreeText>{error}</BodyThreeText>;
@@ -128,7 +168,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           )}
         </div>
         <ActionButtons
-          onSaveAsDraft={handleSaveAsDraft}
+          onSaveAsDraft={saveFeedback}
           onSendToStudent={handleSendToStudent}
         />
       </div>
