@@ -3,7 +3,6 @@ require 'cdo/aws/metrics'
 require 'honeybadger/ruby'
 require 'concurrent/timer_task'
 require 'active_support/core_ext/module/attribute_accessors'
-require 'thread'
 
 module Cdo
   # AppServerMetrics extends the Raindrops::Middleware class,
@@ -37,24 +36,19 @@ module Cdo
       @dimensions = opts[:dimensions] || {}
       @interval = opts[:interval] || 1
       @instance_id = 'UNKNOWN'
-      @id_mutex = Mutex.new # Protects the promotion logic
       self.instance = self
     end
 
-    # Thread-safe helper to fetch or retry the ID
+    # Fetch or retry the ID.
     def instance_id
-      # Fast path: return the ID if it's already known
+      # Fast path: return the ID if it's already known.
       unless @instance_id == 'UNKNOWN'
         return @instance_id
       end
 
-      # Slow path: synchronize to fetch the ID
-      @id_mutex.synchronize do
-        # Double-check inside the lock to prevent redundant network calls
-        if @instance_id == 'UNKNOWN'
-          fetched_id = AWS::EC2.instance_id
-          @instance_id = fetched_id if fetched_id # Update only on success
-        end
+      if @instance_id == 'UNKNOWN'
+        fetched_id = AWS::EC2.instance_id
+        @instance_id = fetched_id if fetched_id # Update only on success.
       end
 
       @instance_id
