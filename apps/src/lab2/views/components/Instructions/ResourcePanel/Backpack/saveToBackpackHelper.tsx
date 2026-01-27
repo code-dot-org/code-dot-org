@@ -175,8 +175,8 @@ export const fetchAndSaveFile = async ({
         fileType,
         appName || undefined
       );
-      console.log('moderationStatus', moderationStatus);
       if (moderationStatus === 'flagged') {
+        // Callback function so if user accepts flagged image, we can save the image to the project.
         const saveBackpackImageFileToProjectFunction = async () => {
           const uploadedUrl = await handleSaveImageToChannelAssets(
             uploadUrl,
@@ -211,7 +211,7 @@ export const fetchAndSaveFile = async ({
       }
     }
 
-    // Upload image to assets channel without moderation because image was already moderated when uploaded to project (for primary backpack files).
+    // Proceed without moderation because image was already moderated when uploaded to project (for primary backpack files).
     const uploadedUrl = await handleSaveImageToChannelAssets(
       uploadUrl,
       blob,

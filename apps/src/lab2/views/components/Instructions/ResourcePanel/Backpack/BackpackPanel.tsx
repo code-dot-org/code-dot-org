@@ -1,7 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
-// import {useFlaggedImage} from '@codebridge/hooks';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -61,7 +60,6 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   }>({PRIMARY_BACKPACK_KEY: []});
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const isLoading = listsLoading > 0;
-  // const {onImageFlagged} = useFlaggedImage();
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
