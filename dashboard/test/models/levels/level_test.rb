@@ -53,6 +53,19 @@ class LevelTest < ActiveSupport::TestCase
     refute_includes result, maze_level
   end
 
+  test 'with_any_ai_chat_tools returns levels with type Aichat, Weblab2, or ai_tutor_available true' do
+    aichat_level = Level.create(name: 'aichat', type: 'Aichat')
+    weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
+    ai_tutor_level = Level.create(name: 'ai_tutor', properties: {'ai_tutor_available' => 'true'})
+    maze_level = Level.create(name: 'maze', type: 'Maze')
+
+    result = Level.with_any_ai_chat_tools
+    assert_includes result, aichat_level
+    assert_includes result, weblab2_level
+    assert_includes result, ai_tutor_level
+    refute_includes result, maze_level
+  end
+
   test 'types marked as having ideal level sources' do
     raise_unless_specifies_ideal_level_source(Level)
   end

@@ -120,7 +120,7 @@ class Unit < ApplicationRecord
     end
   )
 
-  scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools.or(Level.with_ai_tutor_available))}
+  scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
 
   scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
 
@@ -1894,7 +1894,7 @@ class Unit < ApplicationRecord
 
   # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
-    levels.merge(Level.with_ai_tutor_available).exists?
+    levels.with_ai_tutor_available.exists?
   end
 
   def has_ai_chat_tools?
