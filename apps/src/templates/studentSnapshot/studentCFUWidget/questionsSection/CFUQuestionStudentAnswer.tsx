@@ -30,9 +30,14 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
   const renderStudentAnswerByType = (level: CFULevel) => {
     let levelGroupResponseResponse;
     if (isLevelGroupAnswer) {
-      levelGroupResponseResponse =
-        response?.response?.level_results &&
-        response?.response.level_results[levelGroupLevelIndex];
+      const levelResults = response?.response?.level_results;
+      if (
+        Array.isArray(levelResults) &&
+        levelGroupLevelIndex >= 0 &&
+        levelGroupLevelIndex < levelResults.length
+      ) {
+        levelGroupResponseResponse = levelResults[levelGroupLevelIndex];
+      }
     }
     const levelType =
       isLevelGroupAnswer && levelGroupResponseResponse
