@@ -19,6 +19,18 @@ module AiLessonSummaryPodcastsHelper
     end
   end
 
+  def self.generate_sample_podcasts(lessons, user)
+    count = 1
+    lessons.each do |lesson|
+      script = AiLessonSummariesHelper.generate_lesson_summary(lesson, user.id, AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
+      script = JSON.parse(script)['podcast_script']
+      podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
+
+      File.binwrite('lesson'+count.to_s+'.mp3', podcast)
+      count += 1
+    end
+  end
+
   class Client
     attr_accessor :api_key, :model
 
@@ -44,7 +56,8 @@ module AiLessonSummaryPodcastsHelper
       HTTParty.post(
         ELEVENLABS_URL,
         headers: headers,
-        body: data.to_json
+        body: data.to_json,
+        timeout: 240
       )
     end
   end
