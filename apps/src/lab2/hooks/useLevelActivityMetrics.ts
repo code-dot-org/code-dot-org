@@ -24,7 +24,9 @@ import {LevelProperties} from '../types';
 export function useLevelActivityMetrics(
   levelProperties: LevelProperties
 ): () => void {
-  const signedIn = useAppSelector(state => state.currentUser.signInState);
+  const signedIn =
+    useAppSelector(state => state.currentUser.signInState) === 'SignedIn' ||
+    false;
   const scriptName = useAppSelector(state => state.progress.scriptName);
 
   const hasLoggedRef = useRef(false);
@@ -45,7 +47,7 @@ export function useLevelActivityMetrics(
       : EVENTS.LEVEL_ACTIVITY;
 
     sendLab2AnalyticsEvent(eventName, {
-      signedIn,
+      signedIn: signedIn.toString(),
       unitName: scriptName ?? '',
       levelId: levelProperties.id.toString(),
       levelName: levelProperties.name,
