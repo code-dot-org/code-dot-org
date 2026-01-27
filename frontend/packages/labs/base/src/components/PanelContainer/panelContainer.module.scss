@@ -8,6 +8,7 @@
   .panelContainerHeader {
     background-color: var(--background-neutral-primary);
     border-bottom: var(--lab-border-default);
+    box-sizing: content-box;
     color: var(--text-neutral-quaternary);
     display: grid;
     flex-shrink: 0;
