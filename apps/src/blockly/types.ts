@@ -231,7 +231,6 @@ export type BlocklyCoreInstance = typeof BlocklyCore;
 
 export interface ExtendedBlockSvg extends BlocklyCore.BlockSvg {
   canSerializeNextConnection?: boolean;
-  isUserVisible: () => boolean;
   shouldBeGrayedOut: () => boolean;
   // imageSourceId, shortString, longString and thumbnailSize are used for sprite pointer blocks
   imageSourceId?: string;

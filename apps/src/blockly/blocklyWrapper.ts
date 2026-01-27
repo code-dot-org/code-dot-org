@@ -486,15 +486,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedBlockSvg = blocklyWrapper.BlockSvg
     .prototype as ExtendedBlockSvg;
 
-  extendedBlockSvg.isUserVisible = function () {
-    // Used for EXTRA_TOP_BLOCKS_FAIL feedback
-    // Mainline Blockly doesn't support invisible blocks. If a block should be
-    // invisible, we instead load it to the hidden workspace. We use custom
-    // serialization hooks to manage this block state.
-    // Any block on the main workspace is visible.
-    return this.workspace === Blockly.getMainWorkspace();
-  };
-
   // Labs like Maze and Artist turn undeletable blocks gray.
   extendedBlockSvg.shouldBeGrayedOut = function () {
     return (
