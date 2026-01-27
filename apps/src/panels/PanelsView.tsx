@@ -12,6 +12,7 @@ import React, {
 import Typist from 'react-typist';
 
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import localization from '@cdo/apps/localization';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -224,21 +225,21 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           <div
             className={styles.image}
             style={{
-              backgroundImage: `url("${previousPanel.imageUrl}")`,
+              backgroundImage: `url("${localization.translate(previousPanel.imageUrl, ['lz-image'])}")`,
             }}
           />
         )}
         <div
           className={classNames(styles.image, styles.imageCurrent)}
           style={{
-            backgroundImage: `url("${panel.imageUrl}")`,
+            backgroundImage: `url("${localization.translate(panel.imageUrl, ['lz-image'])}")`,
           }}
         />
         {nextPanel && (
           <div
             className={classNames(styles.image, styles.imageInvisible)}
             style={{
-              backgroundImage: `url("${nextPanel.imageUrl}")`,
+              backgroundImage: `url("${localization.translate(nextPanel.imageUrl, ['lz-image'])}")`,
             }}
           />
         )}
