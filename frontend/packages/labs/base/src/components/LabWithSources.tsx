@@ -10,25 +10,30 @@ import type {LabProps} from './Lab';
 
 export interface LabWithSourcesProps<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 > extends LabProps {
-  defaultSources: U;
+  defaultSources: ProjectSources<U>;
   /**
    * Optionally supply a custom ProjectManager to use in place of the LabRegistry's ProjectManager.
    * Currently only used in very specific multi-project scenarios.
    */
   projectManager?: ProjectManager;
   /** How to determine the initial sources */
-  getInitialSources?: (levelProperties: T, projectSources?: U) => U | undefined;
+  getInitialSources?: (
+    levelProperties: T,
+    projectSources?: ProjectSources<U>,
+  ) => ProjectSources<U> | undefined;
   /** The sources to use when starting over */
-  startOverSources?: (levelProperties: T) => U;
+  startOverSources?: (levelProperties: T) => ProjectSources<U>;
   /** The message to display when potentially starting over */
   startOverMessage?: string;
+  /** A transformer to parse the sources into the typed ProjectSources form expected */
+  transform?: (projectSources: ProjectSources<U>) => ProjectSources<U>;
 }
 
 const LabWithSourcesWrapper = <
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 >({
   defaultSources,
   projectManager,
@@ -36,6 +41,7 @@ const LabWithSourcesWrapper = <
   startOverSources,
   startOverMessage,
   channelId,
+  transform,
   children,
 }: LabWithSourcesProps<T, U>) => {
   const levelProperties = useMaybeLevelProperties<T>();
@@ -50,17 +56,16 @@ const LabWithSourcesWrapper = <
       getInitialSources={getInitialSources}
       startOverSources={startOverSources}
       defaultStartOverMessage={startOverMessage}
+      transform={transform}
     >
-      <ProjectProvider channelId={channelId}>
-        {children}
-      </ProjectProvider>
+      <ProjectProvider channelId={channelId}>{children}</ProjectProvider>
     </SourcesProvider>
   ) : undefined;
 };
 
 const LabWithSources = <
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 >({
   children,
   ...props
@@ -68,13 +73,8 @@ const LabWithSources = <
   const {levelId, isLoading} = props;
 
   return (
-    <Lab
-      levelId={levelId}
-      isLoading={isLoading}
-    >
-      <LabWithSourcesWrapper<T, U> {...props}>
-        {children}
-      </LabWithSourcesWrapper>
+    <Lab levelId={levelId} isLoading={isLoading}>
+      <LabWithSourcesWrapper<T, U> {...props}>{children}</LabWithSourcesWrapper>
     </Lab>
   );
 };

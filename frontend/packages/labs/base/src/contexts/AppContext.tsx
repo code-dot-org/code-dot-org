@@ -1,7 +1,7 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
 import {useState, createContext, useContext} from 'react';
 
-import type {ProjectSources, ProjectManager} from '@code-dot-org/projects';
+import type {ProjectManager} from '@code-dot-org/projects';
 
 import type {LabProps, LevelProperties} from '@lab-base/types';
 
@@ -10,7 +10,7 @@ import type {LabProps, LevelProperties} from '@lab-base/types';
  */
 export interface AppContent<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 > {
   lab?: LabProps<T, U>;
   setLab: (value?: LabProps<T, U>) => void;
@@ -31,7 +31,7 @@ const AppContext = createContext<AppContent>({
  */
 export const useApp = <
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 >() => useContext(AppContext) as unknown as AppContent<T, U>;
 
 /**

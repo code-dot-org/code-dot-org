@@ -22,11 +22,20 @@ const isViewingExemplar = getAppOptionsViewingExemplar();
  */
 export function getInitialSources<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
->(levelProperties: T, projectSources?: U): U | undefined {
-  const startSources = levelProperties.startSources as U | undefined;
-  const templateSources = levelProperties.templateSources as U | undefined;
-  const exemplarSources = levelProperties.exemplarSources as U | undefined;
+  U = string,
+>(
+  levelProperties: T,
+  projectSources?: ProjectSources<U>,
+): ProjectSources<U> | undefined {
+  const startSources = levelProperties.startSources as
+    | ProjectSources<U>
+    | undefined;
+  const templateSources = levelProperties.templateSources as
+    | ProjectSources<U>
+    | undefined;
+  const exemplarSources = levelProperties.exemplarSources as
+    | ProjectSources<U>
+    | undefined;
   const predictSettings = levelProperties.predictSettings;
 
   if (isStartMode) {
@@ -38,7 +47,7 @@ export function getInitialSources<
       source: toolboxToWorkspaceBlocks(
         (levelProperties as BlocklyLevelProperties).toolboxDefinition,
       ),
-    } as U;
+    } as ProjectSources<U>;
   }
 
   if (isEditingExemplar || isViewingExemplar) {

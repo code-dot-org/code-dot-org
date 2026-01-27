@@ -335,7 +335,7 @@ export default class ProjectManager {
   }
 
   async getVersionList(includeComments: boolean = false) {
-    console.log("GETTING VERSIONS", this.channelId);
+    console.log('GETTING VERSIONS', this.channelId);
     return await this.sourcesStore.getVersionList(
       this.channelId,
       includeComments,

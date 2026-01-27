@@ -8,7 +8,9 @@ import {LevelProperties, LevelPropertiesMap} from '../types';
 /**
  * Describes the state of the level properties metadata across the lesson.
  */
-export interface LevelPropertiesContent<T extends LevelProperties = LevelProperties> {
+export interface LevelPropertiesContent<
+  T extends LevelProperties = LevelProperties,
+> {
   levelProperties?: T;
   levelPropertiesMap?: LevelPropertiesMap;
 }
@@ -16,20 +18,28 @@ export interface LevelPropertiesContent<T extends LevelProperties = LevelPropert
 /**
  * The current level metadata.
  */
-const LevelPropertiesContext = createContext<LevelPropertiesContent>({} as unknown as LevelPropertiesContent);
+const LevelPropertiesContext = createContext<LevelPropertiesContent>(
+  {} as unknown as LevelPropertiesContent,
+);
 
 /**
  * This hook returns the level properties state.
  */
-export const useLevelProperties = <T extends LevelProperties = LevelProperties>() => {
+export const useLevelProperties = <
+  T extends LevelProperties = LevelProperties,
+>() => {
   return useContext(LevelPropertiesContext).levelProperties as unknown as T;
 };
 
 /**
  * This hook returns the level properties state when it might be empty.
  */
-export const useMaybeLevelProperties = <T extends LevelProperties = LevelProperties>() => {
-  return useContext(LevelPropertiesContext).levelProperties as unknown as (T | undefined);
+export const useMaybeLevelProperties = <
+  T extends LevelProperties = LevelProperties,
+>() => {
+  return useContext(LevelPropertiesContext).levelProperties as unknown as
+    | T
+    | undefined;
 };
 
 /**
