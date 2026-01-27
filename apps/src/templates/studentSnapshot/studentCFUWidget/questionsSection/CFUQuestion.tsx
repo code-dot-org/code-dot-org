@@ -19,6 +19,8 @@ const questionTypeMap: Record<CFULevelType, string> = {
   Multi: 'Multiple Choice',
   FreeResponse: 'Free Response',
   LevelGroup: 'Level Group',
+  Panels: 'Panels',
+  Aichat: 'AI Chat',
 };
 
 interface CFUQuestionProps {

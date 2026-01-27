@@ -1,4 +1,10 @@
-export type CFULevelType = 'Multi' | 'Match' | 'FreeResponse' | 'LevelGroup';
+export type CFULevelType =
+  | 'Multi'
+  | 'Match'
+  | 'FreeResponse'
+  | 'LevelGroup'
+  | 'Aichat'
+  | 'Panels';
 
 export type CFUMultipleLevelAnswer = {text: string; correct: boolean};
 
@@ -13,6 +19,7 @@ interface CFULevelBase {
   progression?: string;
   progression_display_name?: string;
   question_text: string | string[] | null;
+  level_url?: string | null;
 }
 
 // LevelGroup level - answers is an array of arrays (or nulls)
