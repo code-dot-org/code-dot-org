@@ -3,8 +3,6 @@ import React from 'react';
 import FreeResponseDatasetMaker from './FreeResponseDatasetMaker';
 import StudentCodeDatasetMaker from './StudentCodeDatasetMaker';
 
-// import styles from './ai-tutor/ai-tutor-tester.module.scss';
-
 interface DatasetMakerProps {
   studentWorkAccess: boolean;
 }
