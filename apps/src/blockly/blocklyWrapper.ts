@@ -592,9 +592,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
   extendedBlock.interpolateMsg = interpolateMsg;
-  extendedBlock.setStrictOutput = function (isOutput, check) {
-    return this.setOutput(isOutput, check);
-  };
 
   // Block fields are referred to as titles in CDO Blockly.
   extendedBlock.setTitleValue = function (newValue, name) {

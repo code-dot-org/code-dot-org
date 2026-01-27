@@ -181,7 +181,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       getVars: function () {
@@ -217,7 +217,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       renameVar(oldName, newName) {
@@ -252,7 +252,7 @@ export default {
           mainTitle.appendField(editLabel);
         }
 
-        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
+        this.setOutput(true, Blockly.BlockValueType.BEHAVIOR);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.currentParameterNames_ = [];
       },
