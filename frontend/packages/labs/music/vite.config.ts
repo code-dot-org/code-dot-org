@@ -28,6 +28,7 @@ export default defineConfig({
     // IMPORTANT: @code-dot-org/redux must be deduped to ensure the store singleton is shared
     // between @code-dot-org/redux and @code-dot-org/redux/providers subpath exports.
     dedupe: [
+      'blockly',
       'react',
       'react-dom',
       'react/jsx-runtime',
