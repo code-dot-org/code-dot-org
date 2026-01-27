@@ -106,7 +106,8 @@ function main() {
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
           // We use a cache-busting query parameter to ensure that we get the correct response headers,
-          // specifically to avoid CORs issues with Access-Control-Allow-Origin being out of date.
+          // specifically to avoid CORs issues with Access-Control-Allow-Origin being set to someone else's
+          // preview url.
           const cacheBust = `?cache-bust=${cacheBustSuffix}`;
           fetchUrl = codeDotOrgOrigin + url + cacheBust;
           console.log({fetchUrl});
