@@ -3,67 +3,123 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Displaying Objects as Cards
+# Filtering and Transparency
 
-#### Many apps display information as cards that combine text, images, and ratings into something users can quickly scan. But real-world data is often messy. Some fields may be missing, incomplete, or even **null.**
+#### When you scroll through a feed (videos, posts, news, shopping), you’re not seeing everything available. You’re seeing what an algorithm decided to show you based on **filters**.
 
-#### When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
+#### Sometimes those filters are helpful. Sometimes they can hide information in ways you don’t notice.
 
 ---
-## Why Websites Do This
+## Scenario: The Feed You See
 
-#### Below are two versions of the same card. One includes a missing value.
+#### Imagine two teachers, Ms. Rivera and Mr. Chen, open the same app during lunch to look for classroom ideas about AI.
 
-#### Websites don’t usually leave empty or broken-looking fields on the screen. Instead, they often substitute a default value so the interface still feels complete and usable even when the data is imperfect.
+#### They type the same search: “AI projects for beginners” …but their feeds look very different.
 
-<img src="https://images.code.org/822e82632e65af46a8c2aca29c92adf2-image-1768937250577.png" alt="2 cards with names, titles, emails, but one is missing the image" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed A (Ms. Rivera)</div> <div style="font-size:13pt; color:#555; margin-bottom:10px;">Mostly upbeat “AI makes teaching easier” content</div>
 
+<div style="background:#f7f7f7; border-radius:10px; padding:10px; margin-bottom:10px;">
+  <div style="font-weight:bold; font-size:13pt;">🎥 “5 AI tools for lesson planning”</div>
+  <div style="font-size:10.5pt; color:#666; font-size:13pt;">Recommended because you liked productivity tips</div>
+</div>
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>fallback value</strong> is a default value shown when data is missing or null.</p>
+<div style="background:#f7f7f7; border-radius:10px; padding:10px; margin-bottom:10px;">
+  <div style="font-weight:bold; font-size:13pt;">🧠 “Prompting strategies for beginners”</div>
+  <div style="font-size:10.5pt; color:#666; font-size:13pt;">Popular with teachers in your network</div>
+</div>
+
+<div style="background:#f7f7f7; border-radius:10px; padding:10px;">
+  <div style="font-weight:bold; font-size:13pt;">⭐ “Top-rated classroom AI activities”</div>
+  <div style="font-size:10.5pt; color:#666;font-size:13pt;">Similar to posts you watched last week</div>
 </div>
 
 
---- 
-## Design Thinking: User Perception
-#### The way information is displayed doesn’t just inform users—it can shape their opinions.
+</div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed B (Mr. Chen)</div> <div style="font-size:13pt; color:#555; margin-bottom:10px;">More critical “AI risks and harms” content</div>
 
-#### Below are three versions of the same card, each presenting information slightly differently.
-
-<img src="https://images.code.org/b38f316ba798d349ef86af689fbfb366-image-1768937551031.png" alt="3 cards with names, ratings, and reviews" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
-
- #### 👉 **How does each version of the card influence your perception?**
-
-
-
-<div style="clear:both;"></div>
-
-
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style = "font-size: 14pt;">
-Students should recognize the differences between the three versions:<br><br>
-<b>Version 1:</b> Neutral
-Shows a plain rating (for example, “Rating: 2.5/5 stars”).<br>
-<b>Version 2:</b> Biased
-Uses hype language (for example, “Top Value Pick!”).<br>
-<b>Version 3:</b> Hidden Information
-Leaves the rating off entirely.<br><br>
-Tone, label choice (like “Top Value Pick!”), and hiding information (such as omitting a low rating) can all influence user perception and bias how trustworthy or appealing something appears.
-
-</p>
+<div style="background:#f7f7f7; border-radius:10px; padding:10px; margin-bottom:10px;">
+  <div style="font-weight:bold;font-size:13pt;">⚠️ “Bias in AI grading tools”</div>
+  <div style="font-size:10.5pt; color:#666; font-size:13pt;">Recommended because you engaged with ethics posts</div>
 </div>
+
+<div style="background:#f7f7f7; border-radius:10px; padding:10px; margin-bottom:10px;">
+  <div style="font-weight:bold;font-size:13pt;">📰 “What schools should ask before using AI”</div>
+  <div style="font-size:10.5pt; color:#666;font-size:13pt;">Trending in your region</div>
+</div>
+
+<div style="background:#f7f7f7; border-radius:10px; padding:10px;">
+  <div style="font-weight:bold;font-size:13pt;">🔍 “AI transparency: what’s hidden?”</div>
+  <div style="font-size:10.5pt; color:#666;font-size:13pt;">Similar to content you shared recently</div>
+</div>
+
+</div> </div> <div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;"> <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Filters can shape what you learn, what you believe is “normal,” and what options you think exist.</p> </div>
+
+
+## Discuss: What do filters change?
+
+#### Take a moment to compare the two feeds.
+#### 👉 What effect do these filters have on what you see or don’t see?
+#### 👉 Who decides what gets filtered out?
+
+<details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
+<summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
+<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;">
+<p style="margin-top:0; font-size:12pt;">
+      Your answers might include ideas like these:
+    </p>
+
+<ul>
+<li style ="font-size:12pt;">
+<strong>Filters change what feels “normal” or “true.”</strong><br>
+        If your feed mostly shows positive AI stories, AI may feel exciting and low-risk. If it mostly shows harms or concerns, AI may feel risky or untrustworthy.
+      </li>
+
+<li style="margin-top:10px; font-size:12pt;">
+<strong>Filters can hide important context.</strong><br>
+        One feed might leave out topics like bias, privacy, or limitations. Another might leave out practical classroom benefits and success stories. What’s missing can matter as much as what’s shown.
+      </li>
+
+<li style="margin-top:10px; font-size:12pt;">
+<strong>Filters can influence decisions.</strong><br>
+        A teacher seeing only “easy wins” might adopt tools quickly without asking critical questions. A teacher seeing only risks might avoid tools that could be helpful.
+      </li>
+
+<li style="margin-top:10px; font-size:12pt;">
+<strong>Who decides what gets filtered?</strong><br>
+        It’s a mix of <em>platform choices</em> (what the algorithm prioritizes, like engagement), <em>user signals</em> (likes, watch time, follows), and sometimes <em>policies</em> (what content is removed or downranked).
+      </li>
+<li style="margin-top:10px; font-size:12pt;">
+<strong>Common signals algorithms use:</strong><br>
+        Likes, watch time, comments, shares, who you follow, your location, what you click, and what similar users engage with.
+      </li>
+    </ul>
+
+<div style="background:#ffffff; border-radius:10px; padding:12px; margin-top:12px; border:1px solid #ddd;">
+      <strong>Takeaway:</strong> Filters don’t just organize information — they can shape what you learn, what you trust, and what you think your choices are.
+    </div>
+
+  </div>
 </details>
 
 
+
 ---
 
+## Terms to Know
 
+<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-sizing:border-box;"> <div style="font-size:14pt; font-weight:bold; margin-bottom:6px;">🔧 Active filter</div> <div style="font-size:12.5pt; line-height:140%;"> An <strong>active filter</strong> is the current set of rules being applied to a set of data and <strong>clearly shown to the user</strong>.<br><br> It explains how the data is being limited <em>right now</em>. </div> <div style="margin-top:10px; background:#ffffff; border-radius:10px; padding:10px; font-size:12pt;"> <strong>Example:</strong> “Showing posts from: <em>People you follow</em>” + “Topic: <em>Education</em>” + “Time: <em>Last 7 days</em>” </div> </div> <div style="background:#f9cfcf; border-radius:12px; padding:14px; width:360px; box-sizing:border-box;"> <div style="font-size:14pt; font-weight:bold; margin-bottom:6px;">🫧 Filter bubble</div> <div style="font-size:12.5pt; line-height:140%;"> A <strong>filter bubble</strong> is when algorithms mostly show you content that matches what you already like or agree with, and hide other viewpoints or topics—often <strong>without you noticing</strong>. </div> <div style="margin-top:10px; background:#ffffff; border-radius:10px; padding:10px; font-size:12pt;"> <strong>Example:</strong> You keep seeing “AI is amazing!” posts and rarely see “AI has risks!” posts (or vice versa). </div> </div> </div>
 
-## Next up
+---
 
-#### Let's practice adding fallback values in weblab! 
+## Transparency Check: What would you want to see?
 
+#### Many platforms apply filters quietly. But designers can make filters more transparent.
+#### Below are two interface styles. One makes filtering visible. One does not.
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 1: Transparent</div> <div style="background:#f2fbf4; border:1px solid #cdebd6; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>Active filters:</strong> Following • Education • Last 7 days<br> <span style="font-size:11pt;">(You can edit these)</span> </div> <div style="font-size:12pt; color:#444;">Users can tell what’s shaping the feed and adjust it.</div> </div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 2: Hidden</div> <div style="background:#fff3f3; border:1px solid #f1c1c1; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>For you</strong><br> <span style="font-size:11pt;">(No explanation)</span> </div> <div style="font-size:12pt; color:#444;">Users may assume this is “what’s out there,” not what was selected.</div> </div> </div>
+
+#### 👉 Which design feels more trustworthy? Why?
+
+## Next
+
+#### Let's see how filters work in JavaScript.
 MARKDOWN

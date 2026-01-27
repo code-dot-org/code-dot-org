@@ -6721,6 +6721,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_chat_access_level
+    sql_type_metadata: *3
+    'null': true
+    default: disabled
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   seed_info:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -15045,7 +15053,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260120185836
+version: 20260120193121
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
