@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import * as assets from '@cdo/apps/code-studio/assets';
@@ -158,7 +159,7 @@ describe('SettingsCog', () => {
         expect(settings.text()).not.toContain(msg.disableMaker());
       });
 
-      it('does display maker toggle if not a curriculum level (standalone project)', () => {
+      it('does display maker toggle if not a curriculum level (standalone project)', async () => {
         getStore().dispatch(
           setPageConstants({
             isCurriculumLevel: false,
@@ -170,7 +171,9 @@ describe('SettingsCog', () => {
           </Provider>
         );
         let settings = wrapper.find('SettingsCog');
-        settings.instance().open();
+        await act(async () => {
+          settings.instance().open();
+        });
         settings.update();
         expect(settings.text()).toContain(msg.disableMaker());
       });
