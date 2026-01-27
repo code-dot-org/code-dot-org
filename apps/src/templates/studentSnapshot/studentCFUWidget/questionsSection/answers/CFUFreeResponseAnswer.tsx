@@ -20,7 +20,9 @@ const CFUFreeResponseAnswer: React.FC<CFUFreeResponseAnswerProps> = ({
         <SafeMarkdown
           unwrapped
           markdown={
-            response?.student_result || 'No answer provided by student.'
+            typeof response?.student_result === 'string'
+              ? response.student_result
+              : 'No answer provided by student.'
           }
         />
       </Typography>
