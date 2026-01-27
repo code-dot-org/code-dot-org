@@ -20,7 +20,7 @@ const BubbleChoiceDescriptionEditor = ({
     if (element) {
       initializeCodeMirror(elementId, 'markdown', {
         callback: codeMirror => {
-          handleDescriptionChange(index, codeMirror.getValue());
+          handleDescriptionChange(codeMirror.getValue());
         },
       });
       isInitialized.current = true;
