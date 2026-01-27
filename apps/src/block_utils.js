@@ -554,11 +554,7 @@ const STANDARD_INPUT_TYPES = {
       const inputRow = block
         .appendValueInput(inputConfig.name)
         .setAlign(blockly.ALIGN_RIGHT);
-      if (inputConfig.strict) {
-        inputRow.setStrictCheck(inputConfig.type);
-      } else {
-        inputRow.setCheck(inputConfig.type);
-      }
+      inputRow.setCheck(inputConfig.type);
       return inputRow;
     },
     generateCode(block, inputConfig) {

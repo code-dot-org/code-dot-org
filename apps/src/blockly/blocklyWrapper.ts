@@ -510,10 +510,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
 
-  extendedInput.setStrictCheck = function (check) {
-    return this.setCheck(check);
-  };
-
   // We use fieldRow because it is public.
   extendedInput.getFieldRow = function () {
     return this.fieldRow;
