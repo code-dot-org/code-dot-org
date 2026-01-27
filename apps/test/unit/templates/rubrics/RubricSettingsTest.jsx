@@ -332,7 +332,7 @@ describe('RubricSettings', () => {
         rubricId: defaultRubric.id,
         sectionId: 1,
       },
-      'Statisig'
+      'Statsig'
     );
 
     // Perform fetches and re-renders
