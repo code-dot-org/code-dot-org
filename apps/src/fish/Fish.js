@@ -119,11 +119,6 @@ Fish.prototype.init = function (config) {
 
 // Called by the fish app when it wants to go to the next level.
 Fish.prototype.onContinue = function () {
-  // Report level activity before continuing (which causes a page reload)
-  if (this.reportActivityEvent_) {
-    this.reportActivityEvent_();
-  }
-
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
