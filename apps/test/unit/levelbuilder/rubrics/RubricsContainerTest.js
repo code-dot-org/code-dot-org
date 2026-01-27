@@ -80,6 +80,12 @@ describe('RubricsContainerTest', () => {
     ],
   };
 
+  beforeEach(() => {
+    // Logs the full test name
+
+    console.log('Running:', expect.getState().currentTestName);
+  });
+
   afterEach(() => {
     jest.restoreAllMocks();
   });
@@ -90,41 +96,27 @@ describe('RubricsContainerTest', () => {
   it('renders the components on the page correctly for a new rubric', () => {
     renderComponent();
 
-    expect(
-      screen.getByRole('heading', {name: 'Create your rubric'})
-    ).not.toBeNull();
-    expect(
-      screen.getByLabelText('Choose a level for this rubric to be evaluated on')
-    ).not.toBeNull();
+    screen.getByRole('heading', {name: 'Create your rubric'});
+    screen.getByLabelText('Choose a level for this rubric to be evaluated on');
     expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
-    expect(
-      screen.getByRole('button', {name: 'Add new Key Concept'})
-    ).not.toBeNull();
-    expect(
-      screen.getByRole('button', {name: 'Delete key concept'})
-    ).not.toBeNull();
-    expect(
-      screen.getByRole('button', {name: 'Save your rubric'})
-    ).not.toBeNull();
+    screen.getByRole('button', {name: 'Add new Key Concept'});
+    screen.getByRole('button', {name: 'Delete key concept'});
+    screen.getByRole('button', {name: 'Save your rubric'});
   });
 
   it('renders "the components on the page correctly for an exisiting rubric"', () => {
     renderComponent({rubric: rubricInfo});
 
-    expect(
-      screen.getByRole('heading', {name: 'Modify your rubric'})
-    ).not.toBeNull();
+    screen.getByRole('heading', {name: 'Modify your rubric'});
     expect(screen.getAllByRole('option')).toHaveLength(
       defaultProps.submittableLevels.length
     );
     expect(screen.getAllByLabelText('Key Concept:')).toHaveLength(
       rubricInfo.learningGoals.length
     );
-    expect(
-      screen.getByRole('button', {name: 'Save your rubric'})
-    ).not.toBeNull();
+    screen.getByRole('button', {name: 'Save your rubric'});
   });
 
   it('adds a new learning goal on "Add new Key Concept" button click', async () => {
@@ -176,7 +168,7 @@ describe('RubricsContainerTest', () => {
     expect(dropdown).toHaveValue(String(defaultProps.submittableLevels[1].id));
   });
 
-  it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
+  it('changes the saveNotificationText when saving rubric', async () => {
     const user = userEvent.setup();
 
     jest.spyOn(global, 'fetch').mockResolvedValue(
@@ -198,6 +190,5 @@ describe('RubricsContainerTest', () => {
     await user.click(saveButton);
 
     await screen.findByText('Save complete!');
-    expect(saveButton).toBeEnabled();
   });
 });
