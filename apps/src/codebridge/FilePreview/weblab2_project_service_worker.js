@@ -110,7 +110,6 @@ function main() {
           // preview url.
           const cacheBust = `?cache-bust=${cacheBustSuffix}`;
           fetchUrl = codeDotOrgOrigin + url + cacheBust;
-          console.log({fetchUrl});
         }
         return await fetch(fetchUrl);
       }
