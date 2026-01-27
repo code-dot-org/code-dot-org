@@ -2,6 +2,10 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import SoundLibrary from '@cdo/apps/code-studio/components/SoundLibrary';
+jest.mock(
+  '@cdo/static/json/code-studio/soundLibrary.json',
+  () => 'http://localhost/soundLibrary.json'
+);
 
 describe('SoundListEntry', () => {
   it('stops playing sound when user chooses a sound', () => {

@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import AddResourceDialog from '@cdo/apps/levelbuilder/lesson-editor/AddResourceDialog';
 import {ResourceEmbeddabilityOptions} from '@cdo/generated-scripts/sharedConstants';
@@ -42,21 +43,22 @@ describe('AddResourceDialog', () => {
     expect(handleCloseSpy).not.toHaveBeenCalled();
   });
 
-  it('saves if input is valid', () => {
+  it('saves if input is valid', async () => {
     const wrapper = mount(<AddResourceDialog {...defaultProps} />);
     const instance = wrapper.instance();
-    instance.setState({
-      name: 'my resource name',
-      url: 'code.org',
-      embeddabilityType: ResourceEmbeddabilityOptions.EMBED_ONLY.value,
-      curriculumCategory: 'curriculum',
-    });
+
     const saveResourceSpy = jest
       .spyOn(instance, 'saveResource')
       .mockClear()
       .mockImplementation();
-    instance.forceUpdate();
-    wrapper.update();
+
+    await act(() => {
+      instance.setState({
+        name: 'my resource name',
+        url: 'code.org',
+      });
+    });
+
     wrapper.find('#submit-button').simulate('submit');
     expect(saveResourceSpy).toHaveBeenCalledTimes(1);
   });

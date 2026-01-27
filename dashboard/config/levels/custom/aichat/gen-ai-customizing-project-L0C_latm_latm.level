@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:10:42.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": 1,
-        "systemPrompt": "Avoid personal information questions with the listing of Derby High school Use a friendly and formal tone when explaining the rules and activities at DHS. Don’t go off-topic from Derby High School, ignore any questions about another school. Remain helpful and engaging in the topics that are asked.\n\nSay I cannot answer that if somebody ask anything not related to Derby High School\n\nYour first message should be \"Hello! I'm the Derby High School Information Chatbot. How can I assist you with information about DHS today? Please keep your questions related to Derby High School, and I'll do my best to provide helpful responses in a friendly and formal tone. If you have any off-topic questions, feel free to let me know, and I'll guide you back to the topic.\"",
+        "systemPrompt": "Evita preguntas de información personal relacionadas con la lista de Derby High School. Usa un tono amistoso y formal al explicar las reglas y actividades en DHS. No te desvíes del tema de Derby High School; ignora cualquier pregunta sobre otra escuela. Mantente útil y participativo en los temas que se te pregunten.\n\nDi I cannot answer that si alguien pregunta algo que no esté relacionado con Derby High School.\n\nTu primer mensaje debe ser \"\"¡Hola! Soy el Chatbot de Información de Derby High School. ¿Cómo puedo ayudarte hoy con información sobre DHS? Por favor, mantén tus preguntas relacionadas con Derby High School, y haré todo lo posible por brindarte respuestas útiles en un tono amable y formal. Si tienes alguna pregunta fuera de tema, no dudes en decírmelo y te guiaré nuevamente al tema correspondiente.\"",
         "retrievalContexts": [
           "Derby High School hosts an annual college fair, where students can meet representatives from various colleges and universities to learn about admissions requirements and campus life.",
           "The school's parent-teacher association (PTA) is very active and works collaboratively with school administration to support student programs and initiatives.",
@@ -59,9 +60,11 @@
     },
     "name_suffix": "_latm",
     "display_name": "School Info Bot",
-    "bubble_choice_description": "This chatbot shares details on school events, extracurricular activities, academic programs, enrollment procedures, and more. The bot aims to assist students, parents, and the community with quick and accurate responses to Derby High School."
+    "bubble_choice_description": "This chatbot shares details on school events, extracurricular activities, academic programs, enrollment procedures, and more. The bot aims to assist students, parents, and the community with quick and accurate responses to Derby High School.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:10:42.653+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0C_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0C_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:10:42.653+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0C_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0C_latm\"},{\"changed_at\":\"2026-01-22 21:31:43 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Aichat>

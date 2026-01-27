@@ -21,11 +21,15 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
-import AiDiffContainer from './AiDiffContainer';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
+
+const LazyAiDiffContainer = React.lazy(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('./AiDiffContainer' as any)
+);
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
@@ -252,15 +256,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           />
         </Badge>
       </button>
-      <AiDiffContainer
-        context={context}
-        closeTutor={handleClick}
-        curriculumCourses={curriculumCourses || ([] as string[])}
-        scriptName={scriptName}
-        unreadNotificationCount={
-          unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
-        }
-      />
+      <React.Suspense fallback={<div />}>
+        <LazyAiDiffContainer
+          context={context}
+          closeTutor={handleClick}
+          curriculumCourses={curriculumCourses || ([] as string[])}
+          scriptName={scriptName}
+          unreadNotificationCount={
+            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+          }
+        />
+      </React.Suspense>
     </div>
   );
 };
