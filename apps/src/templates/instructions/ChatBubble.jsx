@@ -1,5 +1,5 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import color from '@cdo/apps/util/color';
@@ -8,38 +8,7 @@ import ChatBubbleTip from './ChatBubbleTip';
 import InlineAudio from './InlineAudio';
 import {shouldDisplayChatTips} from './utils';
 
-const styles = {
-  container: {
-    position: 'relative',
-  },
-
-  main: {
-    backgroundColor: color.white,
-    borderRadius: 10,
-    margin: '5px 0',
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    position: 'relative',
-    borderWidth: 2,
-  },
-
-  minecraft: {
-    borderRadius: 4,
-    borderWidth: 0,
-  },
-
-  withAudioControls: {
-    paddingRight: 76,
-  },
-
-  audioControls: {
-    position: 'absolute',
-    top: 7,
-    right: 12,
-  },
-};
+import styles from './ChatBubble.module.scss';
 
 var audioStyle = {
   wrapper: {
@@ -74,17 +43,20 @@ const ChatBubble = ({
   isDashed = isDashed || false;
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 
+  const mainClassName = classNames(styles.main, {
+    [styles.minecraft]: isMinecraft,
+    [styles.withAudioControls]: showAudioControls,
+  });
+
   return (
-    <div style={styles.container}>
+    <div className={styles.container}>
       <div
-        style={[
-          styles.main,
-          isMinecraft && styles.minecraft,
-          showAudioControls && styles.withAudioControls,
-          {borderColor},
-          {backgroundColor},
-          {borderStyle: isDashed ? 'dashed' : 'solid'},
-        ]}
+        className={mainClassName}
+        style={{
+          borderColor,
+          backgroundColor,
+          borderStyle: isDashed ? 'dashed' : 'solid',
+        }}
       >
         {children}
         {shouldDisplayChatTips(skinId) && (
@@ -96,7 +68,7 @@ const ChatBubble = ({
         )}
       </div>
       {showAudioControls && (
-        <div style={styles.audioControls}>
+        <div className={styles.audioControls}>
           <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle} />
         </div>
       )}
@@ -116,4 +88,4 @@ ChatBubble.propTypes = {
   textToSpeechEnabled: PropTypes.bool,
 };
 
-export default Radium(ChatBubble);
+export default ChatBubble;
