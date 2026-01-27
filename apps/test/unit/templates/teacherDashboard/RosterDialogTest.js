@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
@@ -86,7 +87,7 @@ describe('RosterDialog', () => {
     expect(wrapper.text()).not.contains('ARCHIVED');
   });
 
-  it('sends section set up completed analytics event when import is called', () => {
+  it('sends section set up completed analytics event when import is called', async () => {
     const rosterDialog = mount(
       <RosterDialog
         handleImport={() => {}}
@@ -99,8 +100,13 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    rosterDialog.instance().setState({selectedId: '2'});
-    rosterDialog.instance().importClassroom();
+    await act(async () => {
+      rosterDialog.instance().setState({selectedId: '2'});
+    });
+    rosterDialog.update();
+    await act(async () => {
+      rosterDialog.instance().importClassroom();
+    });
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(
