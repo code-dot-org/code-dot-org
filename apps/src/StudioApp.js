@@ -2192,10 +2192,14 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
+      // For publicly cached pages, config.isSignedIn will be false even when signed in.
+      // Check the Redux store for the actual sign-in state.
+      const state = getStore().getState();
+      const signedIn = state.currentUser?.signInState;
       analyticsReporter.sendEvent(
         eventName,
         {
-          signedIn: config.isSignedIn,
+          signedIn,
           unitName: config.scriptName,
           levelId: config.serverLevelId,
           levelName: config.level.name,
