@@ -29,16 +29,23 @@ export const stopTypingSounds = () => {
 };
 
 let UnwrappedGuide = class Guide extends React.Component {
-  componentDidUpdate(prevProps, prevState) {
-    // Focus the dialog on guide change, but do not trap focus
+  guideDialogRef = React.createRef();
+
+  componentDidUpdate() {
+    // Focus the dialog only when the guide changes, not on every re-render
     const currentGuide = guide.getCurrentGuide();
+    const currentGuideId = currentGuide ? currentGuide.id : null;
+
     if (
+      currentGuideId !== this.lastFocusedGuideId &&
       currentGuide &&
       this.guideDialogRef &&
-      this.guideDialogRef.current &&
-      document.activeElement !== this.guideDialogRef.current
+      this.guideDialogRef.current
     ) {
       this.guideDialogRef.current.focus();
+      this.lastFocusedGuideId = currentGuideId;
+    } else if (!currentGuide) {
+      this.lastFocusedGuideId = null;
     }
   }
   onTypingDone() {
@@ -160,11 +167,6 @@ let UnwrappedGuide = class Guide extends React.Component {
       state.guideShowing &&
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
-
-      // Ref for focus management
-      if (!this.guideDialogRef) {
-        this.guideDialogRef = React.createRef();
-      }
 
     return (
       <div>
