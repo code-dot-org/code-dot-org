@@ -96,7 +96,7 @@ class CourseVersion < ApplicationRecord
     # - If the content root's previous course version equals the new one, then there's no change
     # - If the content_root doesn't prevent a course version change, we can safely change it
     if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
-      raise "cannot change course version of #{content_root.name}"
+      raise "cannot change course version of #{content_root.name}\nold course version: #{content_root.course_version.to_debug_hash}\nnew course version: #{course_version.to_debug_hash}"
     end
     course_version&.save!
 
@@ -205,5 +205,17 @@ class CourseVersion < ApplicationRecord
 
   def hoc_or_hoai?
     hoc? || hoai?
+  end
+
+  def to_debug_hash
+    {
+      id: id,
+      key: key,
+      course_offering_id: course_offering_id,
+      course_offering_key: course_offering&.key,
+      display_name: display_name,
+      content_root_id: content_root_id,
+      content_root_name: content_root&.name
+    }
   end
 end
