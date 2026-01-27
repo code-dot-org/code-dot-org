@@ -4,11 +4,11 @@
  * which handles any movement.
  */
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import styleConstants from '../../styleConstants';
-import color from '../../util/color';
+
+import styles from './HeightResizer.module.scss';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -151,26 +151,20 @@ class HeightResizer extends React.Component {
   };
 
   render() {
-    let mainStyle, ellipsisStyle, ellipsisClassName;
+    let mainStyle, ellipsisClassName, mainClass;
     if (this.props.vertical) {
-      mainStyle = [
-        styles.mainVertical,
-        {
-          left: this.props.position - RESIZER_HEIGHT,
-        },
-        this.props.style,
-      ];
-      ellipsisStyle = styles.ellipsisVertical;
+      mainClass = styles.mainVertical;
+      mainStyle = {
+        left: this.props.position - RESIZER_HEIGHT,
+        ...this.props.style,
+      };
       ellipsisClassName = 'fa fa-ellipsis-v';
     } else {
-      mainStyle = [
-        styles.main,
-        {
-          top: this.props.position - RESIZER_HEIGHT,
-        },
-        this.props.style,
-      ];
-      ellipsisStyle = styles.ellipsis;
+      mainClass = styles.main;
+      mainStyle = {
+        top: this.props.position - RESIZER_HEIGHT,
+        ...this.props.style,
+      };
       ellipsisClassName = 'fa fa-ellipsis-h';
     }
 
@@ -178,49 +172,17 @@ class HeightResizer extends React.Component {
       <div
         id="ui-test-resizer"
         style={mainStyle}
+        className={mainClass}
         ref={ref => (this.resizerRef = ref)}
       >
-        <div style={ellipsisStyle} className={ellipsisClassName} />
+        <div
+          className={`${styles.ellipsis} ${
+            this.props.vertical ? styles.ellipsisVertical : ''
+          } ${ellipsisClassName}`}
+        />
       </div>
     );
   }
 }
 
-const styles = {
-  main: {
-    position: 'absolute',
-    height: RESIZER_HEIGHT,
-    left: 0,
-    right: 0,
-    cursor: 'ns-resize',
-  },
-  mainVertical: {
-    position: 'absolute',
-    width: RESIZER_HEIGHT,
-    top: 0,
-    bottom: 0,
-    cursor: 'ew-resize',
-  },
-  ellipsis: {
-    width: '100%',
-    color: color.lighter_gray,
-    fontSize: 24,
-    textAlign: 'center',
-    whiteSpace: 'nowrap',
-    lineHeight: RESIZER_HEIGHT + 'px',
-    paddingTop: 1, // results in a slightly better centering
-  },
-  ellipsisVertical: {
-    width: '100%',
-    color: color.lighter_gray,
-    fontSize: 24,
-    textAlign: 'center',
-    whiteSpace: 'nowrap',
-    lineHeight: RESIZER_HEIGHT + 'px',
-    top: '50%',
-    position: 'absolute',
-    transform: 'translateY(-50%)',
-  },
-};
-
-export default Radium(HeightResizer);
+export default HeightResizer;

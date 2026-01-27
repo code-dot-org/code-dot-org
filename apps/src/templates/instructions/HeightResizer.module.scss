@@ -1,0 +1,31 @@
+.main {
+  position: absolute;
+  height: 13px; /* resize-bar-width from styleConstants */
+  left: 0;
+  right: 0;
+  cursor: ns-resize;
+}
+
+.mainVertical {
+  position: absolute;
+  width: 13px; /* resize-bar-width */
+  top: 0;
+  bottom: 0;
+  cursor: ew-resize;
+}
+
+.ellipsis {
+  width: 100%;
+  color: #9b9b9b; /* color.lighter_gray */
+  font-size: 24px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 13px; /* matches bar height */
+  padding-top: 1px;
+}
+
+.ellipsisVertical {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
