@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-07 01:34:09 UTC",
+    "serialized_at": "2026-01-27 01:26:03 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -200,16 +200,284 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c70d3db0-613d-4995-b0f7-460dccde42ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c70d3db0-613d-4995-b0f7-460dccde42ae",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
+      "key": "e12cc387-cf4a-4aba-b8d0-d579407fe4ba",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e12cc387-cf4a-4aba-b8d0-d579407fe4ba",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "99ff6b8b-e613-4cd6-a240-c6105b702084",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Synchronous Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "99ff6b8b-e613-4cd6-a240-c6105b702084",
+        "lesson_activity.key": "c70d3db0-613d-4995-b0f7-460dccde42ae"
+      }
+    },
+    {
+      "key": "3c31edd3-e0e6-43a3-b154-1cc56da8dd2d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Asynchronous Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c31edd3-e0e6-43a3-b154-1cc56da8dd2d",
+        "lesson_activity.key": "c70d3db0-613d-4995-b0f7-460dccde42ae"
+      }
+    },
+    {
+      "key": "3977a37c-b024-45e6-a8e0-25b6f1cf4241",
+      "position": 3,
+      "properties": {
+        "progression_name": "Demo: Run the Frozen App"
+      },
+      "seeding_key": {
+        "activity_section.key": "3977a37c-b024-45e6-a8e0-25b6f1cf4241",
+        "lesson_activity.key": "c70d3db0-613d-4995-b0f7-460dccde42ae"
+      }
+    },
+    {
+      "key": "8a313c33-57db-4f74-96db-5849566e4a39",
+      "position": 1,
+      "properties": {
+        "progression_name": "Analogy: Synchronous vs. Asynchronous "
+      },
+      "seeding_key": {
+        "activity_section.key": "8a313c33-57db-4f74-96db-5849566e4a39",
+        "lesson_activity.key": "e12cc387-cf4a-4aba-b8d0-d579407fe4ba"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Synchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level1-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "99ff6b8b-e613-4cd6-a240-c6105b702084"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level1-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Synchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level2-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "99ff6b8b-e613-4cd6-a240-c6105b702084"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level2-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Asynchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "3c31edd3-e0e6-43a3-b154-1cc56da8dd2d"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level3-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Asynchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level4-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "3c31edd3-e0e6-43a3-b154-1cc56da8dd2d"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level4-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Demo: Run the Frozen App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level5-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "3977a37c-b024-45e6-a8e0-25b6f1cf4241"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level5-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Analogy: Synchronous vs. Asynchronous "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level6-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "8a313c33-57db-4f74-96db-5849566e4a39"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level6-test_2025-pilot"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level1-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level1-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "99ff6b8b-e613-4cd6-a240-c6105b702084"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level2-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level2-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "99ff6b8b-e613-4cd6-a240-c6105b702084"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level3-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "3c31edd3-e0e6-43a3-b154-1cc56da8dd2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level4-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level4-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "3c31edd3-e0e6-43a3-b154-1cc56da8dd2d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level5-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level5-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "3977a37c-b024-45e6-a8e0-25b6f1cf4241"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level6-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level6-test_2025-pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "8a313c33-57db-4f74-96db-5849566e4a39"
+      }
+    }
   ],
   "resources": [
 
