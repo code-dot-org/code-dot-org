@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {moderateImage} from '@cdo/apps/lab2/hooks/useFileUploader';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {moderateImage} from '@cdo/apps/lab2/utils/moderateImage';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
