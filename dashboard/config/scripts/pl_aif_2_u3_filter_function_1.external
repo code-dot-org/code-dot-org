@@ -1,0 +1,54 @@
+name 'pl-aif-2-U3-filter-function-1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Filtering
+
+#### Imagine opening a music app and seeing a playlist labeled “Top 10 Songs Right Now.” Only ten songs appear even though thousands of songs exist on the platform.
+
+<br>
+
+<img src="https://images.code.org/87e2e5cfc91d0d45db89936e0818a5d1-image-1767631501751.png" alt="example list of top 10 songs" width="400px" style= "border-radius:10px; float:right; margin: 0 10px 10px 20px;">
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 10px 0px;">
+
+#### **Pause & Reflect**
+
+- #### If an app only shows songs from the Top 10, what happens to everyone else?
+
+- #### What rule do you think the app uses to decide which songs appear?
+
+- #### What is one change you could make to that rule to make the playlist feel more fair or inclusive?
+
+<br>
+
+> #### You may have considered things like: someone decided this rule, some data is included, some is excluded, newer, older, or less mainstream artists may be left out. 
+
+#### 👉 This playlist didn’t happen by accident. It was created using a **filtering algorithm**.
+---
+
+## What is a filter algorithm? 
+
+#### A **filter algorithm** is a rule a program uses to look through a list of data and keep only the items that meet certain conditions.
+
+#### In JavaScript, filtering is often used with arrays of objects to narrow a large list into a smaller, more relevant one like deciding which songs, messages, or results appear in a web app.
+
+<br>
+
+  <div style="text-align: center; width: 100%;">
+
+  <div style="display: inline-block; background-color: #ffffff; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2rem;  margin: 0; line-height: 1.5; color: #0093a4;">
+    <i>Every filter starts as a <b>condition</b>. <br>Every condition is a <b>choice</b> that changes what is visible and what is hidden.</i>
+    </p>
+  </div>
+
+</div>
+
+
+---
+## Next up
+
+#### Let's take a look at how this algorithm looks in JavaScript. 
+MARKDOWN

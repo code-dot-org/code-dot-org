@@ -6,23 +6,25 @@ import {Box, List, ListItem, ListItemButton, ListItemText} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {ChatThread} from './types';
+import {ChatThread, Context} from './types';
 
 import styles from './ai-differentiation.module.scss';
 
 interface AiDiffSidebarProps {
+  context: Context;
   threads?: ChatThread[];
-  selectedThreadId?: number;
-  threadSelectCallback?: (thread: number) => void;
   setShowNotifications: (show: boolean) => void;
   showNotifications: boolean;
   unreadNotificationCount: number;
+  curriculumCourses: string[] | undefined;
 }
 
 const now = new Date();
@@ -64,24 +66,25 @@ const ThreadItem: React.FC<{
 );
 
 const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
+  context,
   threads = [],
-  selectedThreadId,
-  threadSelectCallback = () => {},
   setShowNotifications,
   showNotifications,
   unreadNotificationCount,
+  curriculumCourses,
 }) => {
+  const selectedThreadId = useAppSelector(state => state.aichat.threadId);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [showDailyBytes, setShowDailyBytes] = useState(false);
+
+  const dispatch = useAppDispatch();
+
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const onNewChatButtonClick = useCallback(() => {
-    setShowNotifications(false);
-    setShowDailyBytes(false);
-    threadSelectCallback(0);
-  }, [setShowNotifications, threadSelectCallback, setShowDailyBytes]);
+  const checkIfThreadIsSelected = (thread: ChatThread) =>
+    !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
 
   const onNotificationsButtonClick = useCallback(() => {
     setShowNotifications(true);
@@ -101,7 +104,13 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   const handleListItemClick = (chatId: number) => {
     setShowNotifications(false);
     setShowDailyBytes(false);
-    threadSelectCallback(chatId);
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: chatId,
+        curriculumCourses: curriculumCourses,
+      })
+    );
   };
 
   const todayChats = threads.filter(thread => {
@@ -119,8 +128,23 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
     return thread.updatedAt < thirtyDaysAgo;
   });
 
-  const checkIfThreadIsSelected = (thread: ChatThread) =>
-    !showNotifications && !showDailyBytes && thread.id === selectedThreadId;
+  const onNewChatButtonClick = useCallback(() => {
+    setShowNotifications(false);
+    setShowDailyBytes(false);
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+  }, [
+    setShowNotifications,
+    setShowDailyBytes,
+    curriculumCourses,
+    context,
+    dispatch,
+  ]);
 
   return (
     <aside
@@ -198,31 +222,29 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         </Box>
         {isCollapsed ? (
           <Box className={styles.sidebarActions}>
-            {experiments.isEnabled('teacher-notifications') && (
-              <WithTooltip
-                tooltipProps={{
-                  tooltipId: 'notifications-button-tooltip',
-                  direction: 'onRight',
-                  text: commonI18n.notifications(),
-                  className: styles.sidebarActionTooltip,
-                  hideTail: true,
-                  size: 's',
-                }}
-              >
-                <Button
-                  isIconOnly
-                  onClick={onNotificationsButtonClick}
-                  className={classNames(
-                    unreadNotificationCount > 0 && styles.buttonWithUnreadDot
-                  )}
-                  color="black"
-                  type="tertiary"
-                  size="s"
-                  icon={{iconName: 'bell'}}
-                  aria-label={commonI18n.notifications()}
-                />
-              </WithTooltip>
-            )}
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'notifications-button-tooltip',
+                direction: 'onRight',
+                text: commonI18n.notifications(),
+                className: styles.sidebarActionTooltip,
+                hideTail: true,
+                size: 's',
+              }}
+            >
+              <Button
+                isIconOnly
+                onClick={onNotificationsButtonClick}
+                className={classNames(
+                  unreadNotificationCount > 0 && styles.buttonWithUnreadDot
+                )}
+                color="black"
+                type="tertiary"
+                size="s"
+                icon={{iconName: 'bell'}}
+                aria-label={commonI18n.notifications()}
+              />
+            </WithTooltip>
             {experiments.isEnabled('daily-bytes') && (
               <WithTooltip
                 tooltipProps={{
@@ -248,27 +270,25 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           </Box>
         ) : (
           <Box className={styles.sidebarCategories}>
-            {experiments.isEnabled('teacher-notifications') && (
-              <button
-                onClick={onNotificationsButtonClick}
-                className={classNames(styles.categoryActionButton, {
-                  [styles.selected]: showNotifications,
-                })}
-                id="ui-notificationsButton"
-                type="button"
-              >
-                <FontAwesomeV6Icon iconName="bell" />
-                <span>{commonI18n.notifications()}</span>
-                {unreadNotificationCount > 0 && (
-                  <FontAwesomeV6Icon
-                    iconName="circle"
-                    iconStyle="solid"
-                    className={styles.readAt}
-                    aria-label={i18n.unread()}
-                  />
-                )}
-              </button>
-            )}
+            <button
+              onClick={onNotificationsButtonClick}
+              className={classNames(styles.categoryActionButton, {
+                [styles.selected]: showNotifications,
+              })}
+              id="ui-notificationsButton"
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="bell" />
+              <span>{commonI18n.notifications()}</span>
+              {unreadNotificationCount > 0 && (
+                <FontAwesomeV6Icon
+                  iconName="circle"
+                  iconStyle="solid"
+                  className={styles.readAt}
+                  aria-label={i18n.unread()}
+                />
+              )}
+            </button>
             {experiments.isEnabled('daily-bytes') && (
               <button
                 onClick={onDailyBytesButtonClick}

@@ -317,6 +317,17 @@ const WEBPACK_BASE_CONFIG = {
         },
       },
       {
+        test: /\.(json)$/,
+        include: [p('static', 'json')],
+        type: 'asset/resource',
+        generator: {
+          filename: '[name]wp[contenthash:20][ext]',
+          outputPath: 'json/', // build/package/js/json/
+          publicPath: '/assets/js/json/', // Dashboard assets path
+        },
+      },
+
+      {
         test: /\.jsx?$/,
         enforce: 'pre',
         include: [...nodeModulesToTranspile, p('src'), p('test')],
@@ -612,7 +623,6 @@ function createWebpackConfig({
                     'immutable',
                     'lodash',
                     'moment',
-                    'pepjs',
                     'radium',
                     'react',
                     'react-dom',
@@ -782,7 +792,7 @@ function createWebpackConfig({
             'localhost-studio.code.org',
             'localhost.code.org',
             'localhost.hourofcode.com',
-            'preview.localhost.codeprojects.org',
+            '.preview.localhost.codeprojects.org',
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,

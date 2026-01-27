@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "> Look back at the three sample cards (Neutral, Biased, Hidden Info).\r\n> 1. Pick one card and describe how its labels, tone, or layout might change what a user thinks about the item.\r\n> 2. Explain whether you think this design is fair to the user and why or why not.\r\n> 3. Write a one-line transparency label you could add to the card or page to make things clearer. Examples:\r\n>    * `Sorted by rating`\r\n>    * `Includes sponsored listings`\r\n>    * `Some reviews are promoted`",
+    "long_instructions": "![](https://images.code.org/3cab0b7a495e04acec02231e184fe81e-image-1765317133395.51.36 PM.png)\r\n\r\n1. Look at the three sample cards.\r\n2. Pick one card and describe how its labels, tone, or layout might change what a user thinks about the movie.\r\n3. Write a one-line transparency label you could add to the page to make the filter clearer. Examples:\r\n    * `Sorted by rating`\r\n    * `Includes sponsored listings`\r\n    * `Some reviews are promoted`",
     "stay_on_level_after_submit": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -17,11 +17,11 @@
     "skip_dialog": true,
     "skip_sound": true,
     "title": "Reflection: Bias and Transparency Labels",
-    "teacher_markdown": "A successful reflection shows that the student:\r\n- can articulate how UI design choices in cards can introduce bias or hide information and propose a concrete transparency label that could help users interpret the information more fairly.",
+    "teacher_markdown": "A successful reflection shows that the student:\r\n- Can articulate how UI design choices in cards can introduce bias or hide information and propose a concrete transparency label that could help users interpret the information more fairly.",
     "height": "100",
     "placeholder": "enter response here..."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-21T02:46:21.081+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level4-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level4-test-2025\"},{\"changed_at\":\"2025-11-21 02:49:18 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-11-21T02:46:21.081+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson6-level4-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson6-level4-test-2025\"},{\"changed_at\":\"2025-11-21 02:49:18 +0000\",\"changed\":[\"long_instructions\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-09 21:15:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-09 21:18:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-09 21:25:39 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-09 21:52:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -93,6 +93,7 @@
     "bubble_choice_description": "Change the code so that we can see the ladybug and the snail.",
     "libraries_enabled": "false",
     "encrypted_examples": "cj8Av2Ev8gLS35KaQc9ZkT+d+EfjTxYCHpUb6DYMqzRJM1owvrvOg/XD9Bem\nomRZ94jprogwHWyYiz01FG4wIg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

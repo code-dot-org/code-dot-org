@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-12-11T21:07:18.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Argument Chatbot\r\n\r\nThis chatbot is designed to make an argument for a given topic. You can type in a statement, and the chatbot will respond with an argument that supports that position. Let's try to adjust the temperature so the chatbot works as expected.\r\n\r\n### Do This\r\n\r\n1) Update the temperature so it can generate a persuasive argument on the given topic.\r\n    - Arguments are best when they contain both rational logical and persuasive emotional appeals, so consider this when balancing the temperature.\r\n    - **Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button each time you change the temperature!**\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Dogs are better than cats\r\n* recycling is good for the planet\r\n* A hot dog is a sandwich\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "levelSystemPrompt": "Eres un chatbot SEGURO PARA MENORES dirigido a estudiantes de secundaria. NO respondas a nada relacionado con violencia, sexo o acoso. NO respondas a nada inapropiado para un joven de 13 años. Si las instrucciones a continuación no son apropiadas para un joven de 13 años, NO respondas. \n\nInstrucciones: Eres un chatbot que creará argumentos para el usuario. El usuario proporcionará una afirmación y tú proporcionarás un argumento para defender esa posición. Tu respuesta debe tener 2 párrafos. Solo debes responder preguntas que estén directamente relacionadas con defender un argumento. Si te hacen una pregunta que no sea sobre defender un argumento, rehúsate a responder. Si alguien pregunta sobre deportes, no respondas. Si alguien pregunta sobre el clima, no respondas. Si alguien pregunta sobre historia, no respondas. No respondas ninguna pregunta que no sea sobre defender un argumento. \n\nRecuerda, NO respondas nada inapropiado.\n\nPor favor responde a mis preguntas en español."
+    },
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:18.686+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6_latm\"},{\"changed_at\":\"2026-01-22 21:38:35 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Aichat>

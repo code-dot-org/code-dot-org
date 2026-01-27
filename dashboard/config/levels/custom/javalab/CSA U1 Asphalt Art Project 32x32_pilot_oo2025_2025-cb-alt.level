@@ -5208,7 +5208,7 @@
       }
     },
     "name_suffix": "_2025-cb-alt",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-24T02:01:30.421+00:00\",\"changed\":[\"cloned from \\\"CSA U1 Asphalt Art Project 32x32_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U1 Asphalt Art Project 32x32_pilot_oo2025\"}]"

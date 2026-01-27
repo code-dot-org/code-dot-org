@@ -1,17 +1,31 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {useEffect, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {getFolderPath} from '../utils';
 
 import {ProjectServiceWorkerMessageType} from './constants';
+import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHelper';
 import {addBaseTagToDocument} from './htmlParsingHelpers';
 
 // Hook that handles registering and communicating with the project service worker.
-function useProjectServiceWorker(source: MultiFileSource | undefined) {
+function useProjectServiceWorker(
+  source: MultiFileSource | undefined,
+  codeStudioUrl: string
+) {
   const [serviceWorker, setServiceWorker] = useState<ServiceWorker | null>(
     null
+  );
+  const [serviceWorkerRegistration, setServiceWorkerRegistration] = useState<
+    ServiceWorkerRegistration | undefined
+  >(undefined);
+  const [serviceWorkerUnavailable, setServiceWorkerUnavailable] =
+    useState<boolean>(false);
+
+  const contentSecurityPolicy = useMemo(
+    () => generateContentSecurityPolicyForPreview(codeStudioUrl),
+    [codeStudioUrl]
   );
 
   useEffect(() => {
@@ -19,6 +33,7 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
       undefined;
     if ('serviceWorker' in navigator) {
       setServiceWorker(null);
+      setServiceWorkerUnavailable(false);
       navigator.serviceWorker
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
@@ -37,9 +52,11 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
             }
           });
           serviceWorkerRegistration = registration;
+          setServiceWorkerRegistration(registration);
         });
     } else {
       console.error('Service workers are not supported in this browser.');
+      setServiceWorkerUnavailable(true);
     }
     return () => {
       serviceWorkerRegistration?.unregister();
@@ -48,7 +65,7 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
 
   // Send source data to service worker when it changes.
   useEffect(() => {
-    if (serviceWorker && source) {
+    if (serviceWorker && source && contentSecurityPolicy) {
       // Prepare files data for service worker
       const filesData: Record<
         string,
@@ -92,9 +109,10 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
       serviceWorker.postMessage({
         type: ProjectServiceWorkerMessageType.UPDATE_FILES,
         files: filesData,
+        contentSecurityPolicy,
       });
     }
-  }, [serviceWorker, source]);
+  }, [contentSecurityPolicy, serviceWorker, source]);
 
   // Send an intermittent keep-alive message to the service worker to ensure it stays active.
   useEffect(() => {
@@ -125,6 +143,8 @@ function useProjectServiceWorker(source: MultiFileSource | undefined) {
     const fullPath = folderPath + '/' + fileName;
     return {fullFileName: fullPath.substring(1), folder: folderPath}; // remove leading slash
   }
+
+  return {serviceWorkerRegistration, serviceWorkerUnavailable};
 }
 
 export default useProjectServiceWorker;

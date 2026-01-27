@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:59:36.000Z",
   "level_num": "custom",
@@ -62,7 +63,10 @@
       "visible": null,
       "scale": null,
       "comment": null,
-      "comment_GameLab": null
+      "comment_GameLab": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOrEqualOperator": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -89,11 +93,14 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "ai_tutor_available": "true",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:59:36.140+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions bunny template_2024\\\"\"],\"cloned_from\":\"CSD U3 Functions bunny template_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:59:36.140+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions bunny template_2024\\\"\"],\"cloned_from\":\"CSD U3 Functions bunny template_2024\"},{\"changed_at\":\"2026-01-15 22:15:31 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

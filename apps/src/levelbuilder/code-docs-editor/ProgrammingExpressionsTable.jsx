@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React, {useEffect, useState} from 'react';
+import {flushSync} from 'react-dom';
 import * as Table from 'reactabular-table';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import PaginationWrapper from '@cdo/apps/sharedComponents/PaginationWrapper';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
-import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
@@ -98,8 +99,10 @@ export default function ProgrammingExpressionsTable({
       })
       .then(data => {
         if (success) {
-          setProgrammingExpressions(data.results);
-          setNumPages(data.numPages);
+          flushSync(() => {
+            setProgrammingExpressions(data.results);
+            setNumPages(data.numPages);
+          });
         }
       })
       .catch(error => {

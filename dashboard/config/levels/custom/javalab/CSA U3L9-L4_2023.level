@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U3L9-Nested PBT_2023",
     "teacher_markdown": "When students run the program, they should see the following printed to the console:\r\n\r\n```\r\nOuter: 2, Inner: 4\r\nOuter: 2, Inner: 6\r\nOuter: 2, Inner: 8\r\n \r\nOuter: 4, Inner: 6\r\nOuter: 4, Inner: 8\r\n \r\nOuter: 6, Inner: 8\r\n```\r\n\r\nStudents should have some ideas of how they might use nested loops with 1D arrays, such as searching for duplicate values.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-12T22:22:10.963+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L3_2023\\\"\"],\"cloned_from\":\"CSA U3L9-L3_2023\"},{\"changed_at\":\"2023-01-12 22:22:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-30 00:46:19 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 21:29:56 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

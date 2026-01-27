@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "link_title": "End-of-Lesson Survey ",
-    "url": "https://forms.gle/WNpS4QJaVNKE3S7H8",
-    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://forms.gle/WNpS4QJaVNKE3S7H8).",
+    "url": "https://form.jotform.com/260093093631150",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://form.jotform.com/260114311119138).",
     "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**."
   },
-  "audit_log": "[{\"changed_at\":\"2025-10-23T19:08:57.917+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-pilot-survey_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-pilot-survey_2025\"},{\"changed_at\":\"2025-10-23 19:10:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-10-23T19:08:57.917+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-pilot-survey_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-pilot-survey_2025\"},{\"changed_at\":\"2025-10-23 19:10:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-01-12 22:30:42 +0000\",\"changed\":[\"url\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

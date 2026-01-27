@@ -5,8 +5,9 @@ import React from 'react';
 import i18n from '@cdo/locale';
 
 interface FlaggedImageModalProps {
-  onAccept: () => void;
-  onCancel: () => void;
+  appName: string;
+  onAccept: (appName: string) => void;
+  onCancel: (appName: string) => void;
   errorMessage?: string;
 }
 
@@ -14,11 +15,12 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   onAccept,
   onCancel,
   errorMessage,
+  appName,
 }) => {
   return (
     <Modal
       id="image-flagged-modal"
-      onClose={onCancel}
+      onClose={() => onCancel(appName)}
       title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
         <div id="dsco-dialog-description">
@@ -47,12 +49,12 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
       }
       primaryButtonProps={{
         text: i18n.accept(),
-        onClick: onAccept,
+        onClick: () => onAccept(appName),
         disabled: !!errorMessage, // Disable if there's an error message.
       }}
       secondaryButtonProps={{
         text: i18n.cancel(),
-        onClick: onCancel,
+        onClick: () => onCancel(appName),
       }}
     />
   );

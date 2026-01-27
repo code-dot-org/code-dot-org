@@ -1,0 +1,114 @@
+@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+.lessonDetailsWidget {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.25rem;
+
+  .lessonDetailsWidgetRow {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+
+    .lessonDetail {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 0%;
+      flex-grow: 1;
+      align-items: center;
+      padding: 0 0.5rem;
+      background-color: var(--background-neutral-primary);
+      border-radius: $regular-border-radius;
+      border-color: var(--borders-neutral-primary);
+
+      i {
+        font-size: 30px;
+        padding-left: 0.25rem;
+        padding-right: 0.75rem;
+      }
+
+      .lessonDetailLabelAndInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+          font-size: 1.25rem;
+        }
+
+        p {
+          height: 1rem;
+          font-size: 0.75rem;
+          color: var(--text-neutral-tertiary);
+        }
+
+        .classAvgInfo {
+          display: flex;
+          flex-direction: row;
+          gap: 0.25rem;
+          align-items: center;
+
+          i {
+            padding-top: 2px;
+            font-size: 12.5px;
+          }
+        }
+
+        .aboveClassAvg > i {
+          color: var(--sentiment-success-50);
+        }
+
+        .belowClassAvg > i {
+          color: var(--sentiment-error-50);
+        }
+      }
+
+      .validationLevelFeedback {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+
+        .validationLevelCount {
+          display: flex;
+          flex-direction: row;
+          gap: 0.25rem;
+          align-items: center;
+
+          i {
+            font-size: 15px;
+            color: var(--sentiment-error-50);
+            padding: 0;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        p {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .topRow {
+    flex: 2 auto;
+  }
+
+  .bottomRow {
+    flex: 1 0px;
+  }
+}
+
+.greenCompletedText {
+  h4 {
+    color: var(--text-success-primary);
+  }
+}

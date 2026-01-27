@@ -87,6 +87,7 @@
     ],
     "palette_category_at_start": "functions",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -10,7 +10,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   PERFORMANCE3 = 'performanceLevel4'
   REVIEW_STATE = TeacherFeedback::REVIEW_STATES.keepWorking
 
-  self.use_transactional_test_case = true
   setup_all do
     #create student, teacher, and level and register student in teacher's section
     @teacher = create(:authorized_teacher)

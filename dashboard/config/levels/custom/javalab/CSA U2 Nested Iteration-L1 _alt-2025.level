@@ -10,7 +10,7 @@
       "CSA U2 Nested Iteration-L1 Contained_alt-2025"
     ],
     "mini_rubric": "false",
-    "ai_tutor_available": true,
+    "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "csa_view_mode": "console",

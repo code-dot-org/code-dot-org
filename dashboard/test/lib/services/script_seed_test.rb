@@ -1157,6 +1157,39 @@ module Services
       assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
+    test 'seed_from_json_file stores md5 when provided' do
+      script = create_script_tree(name_prefix: 'test-md5-storage')
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      file = Tempfile.new(['test-script', '.script_json'])
+      file.write(json)
+      file.rewind
+
+      md5 = Digest::MD5.hexdigest(json)
+      ScriptSeed.seed_from_json_file(file.path, md5: md5)
+
+      assert_equal md5, Unit.find_by_name(script.name).md5
+    ensure
+      file&.close
+      file&.unlink
+    end
+
+    test 'seed_from_json_file works without md5 parameter' do
+      script = create_script_tree(name_prefix: 'test-no-md5')
+      json = ScriptSeed.serialize_seeding_json(script)
+
+      file = Tempfile.new(['test-script', '.script_json'])
+      file.write(json)
+      file.rewind
+
+      ScriptSeed.seed_from_json_file(file.path)
+
+      assert_nil Unit.find_by_name(script.name).md5
+    ensure
+      file&.close
+      file&.unlink
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Unit.transaction do

@@ -1,0 +1,151 @@
+{
+  "name": "artificial-intelligence-foundations-2026",
+  "script_names": [
+    "aif1-v2-2025",
+    "aif2-v2-2025",
+    "aif3-v2-2025",
+    "aif4-v2-2025",
+    "aif5-v3",
+    "aif6-v2-2025"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "announcements": [
+      {
+        "key": "fc284d01-9d4a-471c-881f-bb62d50bca8a",
+        "notice": "AI Foundations Professional Development",
+        "details": "Before starting this course, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+        "link": "https://studio.code.org/courses/teaching-ai-foundations-s1-v2/",
+        "type": "information",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Let's Go!"
+      }
+    ],
+    "family_name": "artificial-intelligence-foundations",
+    "has_verified_resources": true,
+    "numbered_units": "auto",
+    "version_year": "2026"
+  },
+  "resources": [
+    {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
+      "name": "AIF and CSD: What's the Difference?",
+      "url": "https://docs.google.com/document/d/1QyiVt5G6riTcO82XkcM3uJF4cvyvCuDzCYDNnvXHOiQ/edit?usp=sharing",
+      "key": "aif_and_csd_what_s_the_difference_",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "aif_and_csd_what_s_the_difference_"
+      }
+    },
+    {
+      "name": "AIF and CSP: What's the Difference?",
+      "url": "https://docs.google.com/document/d/15vzVtbfX3HsGjQzsR6tOLixeLF82D8lIthY6uAM9kFM/edit?usp=sharing",
+      "key": "aif_and_csp_what_s_the_difference_",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "aif_and_csp_what_s_the_difference_"
+      }
+    },
+    {
+      "name": "AIF Teacher Forum",
+      "url": "https://forum.code.org/c/aif/487",
+      "key": "aif_teacher_forum",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "aif_teacher_forum"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/artificial-intelligence-foundations-2026/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/artificial-intelligence-foundations-2026/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/artificial-intelligence-foundations-2026/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "Implementation Guide",
+      "url": "https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing",
+      "key": "implementation_guide",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_guide"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1vd_s6hfIMd-NpmtHrsIEhKN9uO-yB6F_YQlzqh-IOmM/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "\thttps://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
+}

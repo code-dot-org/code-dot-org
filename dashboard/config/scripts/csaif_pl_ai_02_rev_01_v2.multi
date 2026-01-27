@@ -1,0 +1,10 @@
+name 'csaif_pl_ai_02-rev-01_v2'
+title 'Redundancy'
+description ''
+question 'What does redundancy mean in a network?'
+
+wrong 'Having a single path for messages to travel.'
+right  'Having backup paths so data can still reach its destination if one path fails.'
+wrong 'Sending the same message multiple times to make sure it arrives.'
+wrong 'Deleting unnecessary routers from the network to improve speed.'
+allow_multiple_attempts true

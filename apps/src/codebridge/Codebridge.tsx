@@ -18,7 +18,7 @@ import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelp
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -48,6 +48,7 @@ type CodebridgeProps = {
   aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  secondaryBackpackAppNames?: AppName[];
 };
 
 export const Codebridge = React.memo(
@@ -66,11 +67,13 @@ export const Codebridge = React.memo(
     aiTutorContextHelper,
     aiTutorSystemPromptName,
     aiTutorResponseSchemaSettings,
+    secondaryBackpackAppNames,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
+    const currentUserId = useAppSelector(state => state.currentUser.userId);
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -150,10 +153,25 @@ export const Codebridge = React.memo(
       isWidgetView,
     ]);
 
-    const backpackApi = useMemo(
-      () => new BackpackClientApi(appName, null),
-      [appName]
-    );
+    const backpackContext = useMemo(() => {
+      // The backpack api does not work for signed-out users (it redirects to sign-in),
+      // so we don't create the api instance if there is no current user.
+      if (currentUserId) {
+        const primaryApi = new BackpackClientApi(appName, null);
+        if (secondaryBackpackAppNames && secondaryBackpackAppNames.length > 0) {
+          const secondaryApis: {[key: string]: BackpackClientApi} = {};
+          secondaryBackpackAppNames.forEach(secondaryAppName => {
+            secondaryApis[secondaryAppName] = new BackpackClientApi(
+              secondaryAppName,
+              null
+            );
+          });
+          return {primaryApi, secondaryApis};
+        }
+        return {primaryApi};
+      }
+      return null;
+    }, [appName, currentUserId, secondaryBackpackAppNames]);
 
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
@@ -192,12 +210,13 @@ export const Codebridge = React.memo(
           aiTutorResponseSchemaSettings,
         }}
       >
-        <BackpackAPIContext.Provider value={backpackApi}>
+        <BackpackAPIContext.Provider value={backpackContext}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
             {flaggedImageData && (
               <FlaggedImageModal
                 onAccept={handleAcceptFlaggedImage}
                 onCancel={handleCancelFlaggedImage}
+                appName={appName}
               />
             )}
             <InnerLayout

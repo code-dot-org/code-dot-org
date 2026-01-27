@@ -1,0 +1,16 @@
+name 'building-data-driven-systems-preassessment-q4_2025'
+
+question 'When using the `.map()` method to display an array of data on a webpage, what is its primary role?'
+
+wrong 'To filter out data that the user doesn\'t want to see.'
+wrong 'To permanently delete items from the original array after they are shown.'
+right 'To iterate through the array and return a new set of elements, such as HTML tags, for each item.'
+wrong 'To sort the array alphabetically before it is sent to the DOM.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 2
+
+`.map()` is a transformation tool. It takes an array of data and "maps" each item to a new structure, typically HTML elements like `<li>` or `<div>`, without changing the original data. 
+MARKDOWN

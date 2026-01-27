@@ -17,7 +17,7 @@
     "reference_links": [
       "https://docs.google.com/document/d/e/2PACX-1vT9hI7CfPeweBqYhqYFj_Enz--AtabbyK2BVO5c6KsrDobWoaC42adeG1j_n6TzimzvQv9ZDVJZdjnl/pub"
     ],
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-08-11T00:24:43.385+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4\\\"\"],\"cloned_from\":\"CSA U3L9-L4\"},{\"changed_at\":\"2021-08-11 00:24:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-11 00:29:45 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-12 13:26:50 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-19 18:27:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-20 13:09:34 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-24 17:35:00 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"

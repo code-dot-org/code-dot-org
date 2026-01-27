@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -6,6 +7,12 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  getAppOptionsViewingExemplar,
+  getAppOptionsEditingExemplar,
+  getIsStartMode,
+} from '@cdo/apps/lab2/projects/utils';
 import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -30,30 +37,60 @@ import moduleStyles from './styles/html-preview.module.scss';
 const SOURCE_CHANGE_DELAY_MS = 500;
 
 export const HTMLPreview: React.FC = () => {
+  const normalizedChannelId = useAppSelector(
+    // Make channel id all lower case and remove underscores, as underscores are not valid in domain names,
+    // and domain names are case-insensitive.
+    state => state.lab.channel?.id?.toLowerCase().replace('_', '') || ''
+  );
+
+  const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const {levelProperties} = useCodebridgeContext();
+  const levelId = levelProperties.id;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
     const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-    const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-    return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
-  }, []);
+    const useFullUrlOnLocal = experiments.isEnabledAllowingQueryString(
+      experiments.WEBLAB2_FULL_URLS
+    );
+    const isLocalhost = 'localhost' === environmentKey;
+    // When testing on localhost, it is convenient to have a fixed subdomain
+    // to avoid having to give permissions to every channel id version of the preview url.
+    // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
+    // to use the true channel id based url on localhost (this makes it so having multiple tabs with different projects
+    // open at the same time works correctly).
+    let prefix =
+      !useFullUrlOnLocal && isLocalhost ? 'localtesting' : normalizedChannelId;
+    // In some cases we have no channel id, so we fall back to other prefixes.
+    if (!prefix) {
+      if (isViewingExemplar || isEditingExemplar) {
+        prefix = `exemplar-${levelId}`;
+      } else if (isStartMode) {
+        prefix = `start-mode-${levelId}`;
+      } else {
+        // Unknown channel, not in exemplar or start mode, use generic preview prefix.
+        prefix = `weblab2-${levelId}`;
+      }
+    }
+
+    const port = isLocalhost && location.port ? `:${location.port}` : '';
+    return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
+  }, [
+    isEditingExemplar,
+    isStartMode,
+    isViewingExemplar,
+    levelId,
+    normalizedChannelId,
+  ]);
 
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
-
-  // The new preview is currently behind an experiment flag. We pass this flag
-  // through to the inner iframe via a query string so it knows whether or not to use the new preview.
-  const previewQueryString = useMemo(() => {
-    const useV2Preview = experiments.isEnabledAllowingQueryString(
-      experiments.WEBLAB2_PREVIEW_V2
-    );
-    return useV2Preview ? `?${experiments.WEBLAB2_PREVIEW_V2}=true` : '';
-  }, []);
 
   const [navigationHistory, setNavigationHistory] = useState<string[]>([]);
   const [navigationHistoryIndex, setNavigationHistoryIndex] = useState(-1);
@@ -207,9 +244,10 @@ export const HTMLPreview: React.FC = () => {
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
-    // When we switch levels, reset stopped state.
+    // When we switch levels, reset stopped state and iframe state.
     setIsStopped(false);
     setIsLevelLoading(true);
+    setIsIframeLoaded(false);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
@@ -250,6 +288,12 @@ export const HTMLPreview: React.FC = () => {
           navigationHistoryIndex,
           navigationHistory
         );
+      } else if (
+        event.data.type === IframeMessageType.SERVICE_WORKER_UNAVAILABLE
+      ) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logWarning('Service worker unavailable in HTMLPreview iframe.');
       }
     };
 
@@ -370,6 +414,8 @@ export const HTMLPreview: React.FC = () => {
           <PreviewEmptyState />
         ) : isStopped ? (
           <PreviewStopped onReload={onReloadPreview} />
+        ) : isLevelLoading ? (
+          <CodebridgeEmptyState title="Loading..." />
         ) : (
           /* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
             route to InnerHTMLPreview. */
@@ -394,7 +440,7 @@ export const HTMLPreview: React.FC = () => {
                   ? moduleStyles.desktopPreviewIframe
                   : moduleStyles.mobilePreviewIframe
               )}
-              src={`${previewUrl}${previewQueryString}`}
+              src={previewUrl}
             />
           </div>
         )}

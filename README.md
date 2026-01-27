@@ -28,7 +28,6 @@ Here's a quick overview of the major landmarks:
 * There are many more topical guides in the [docs](./docs) folder.
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
-  * [blockly/README](https://github.com/code-dot-org/blockly/blob/master/README.md)
 
 ### [dashboard](./dashboard)
 

@@ -1,0 +1,18 @@
+.filterWrapper {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  height: 24px;
+}
+
+.filterLabel {
+  display: inline-flex;
+  align-items: center;
+}
+
+.filterLabelText {
+  margin: 0 8px 0 0;
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+  font-size: 16px;
+}

@@ -1,0 +1,57 @@
+.multiAnswerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  .multiAnswerOption {
+    display: flex;
+    padding: 0.375rem;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    gap: 0.5rem;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+    border-radius: 0.25rem;
+    border: 1px solid var(--borders-neutral-primary, #D4DAE1);
+    background: var(--background-neutral-primary, #FFF);
+
+    // Radio Button styles
+    > label {
+      align-items: center;
+      cursor: default;
+      width: 100%;
+    }
+  }
+
+  .multiAnswerOptionCorrect {
+    border: 1px solid var(--borders-success-primary, #3EA33E);
+    background: var(--background-success-extra-light, #E2F6E2);
+  }
+
+  .multiAnswerOptionIncorrect {
+    border: 1px solid var(--borders-error-primary, #E02D16);
+    background: var(--background-error-extra-light, #FFE1DD);
+  }
+
+  .multiAnswerIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    font-size: 0.9375rem;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .multiAnswerIconCorrect {
+    color: var(--sentiment-success-50, #3EA33E);
+  }
+
+  .multiAnswerIconIncorrect {
+    color: var(--sentiment-error-50, #E02D16);
+  }
+}

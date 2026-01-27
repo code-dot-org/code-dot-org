@@ -8,7 +8,7 @@
  * Toolbox blocks are dynamically synced to generated blocks with each prompt.
  */
 
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {
   BlockDefinition,
@@ -18,10 +18,10 @@ import {
 
 import getBlockOptions from './getBlockOptions';
 
-type BlockState = GoogleBlockly.serialization.blocks.State & {
+type BlockState = BlocklyCore.serialization.blocks.State & {
   kind: 'block';
 };
-type BlockStateFlyout = GoogleBlockly.utils.toolbox.BlockInfo;
+type BlockStateFlyout = BlocklyCore.utils.toolbox.BlockInfo;
 
 const DANCELAB_PREFIX = 'Dancelab_';
 const GENERATED_PREFIX = 'GeneratedDancers_';
@@ -369,7 +369,7 @@ export default function buildDanceBlockly(
   backgroundDancers: string
 ): {
   workspaceSerialization: WorkspaceSerialization;
-  flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo;
+  flyoutDefinition: BlocklyCore.utils.toolbox.ToolboxInfo;
 } {
   const defsCached = getDefsCache(blockDefinitions);
   const {
@@ -444,7 +444,7 @@ export default function buildDanceBlockly(
   const simpleCode = codeComplexity === 'simple';
   const hasBackgroundDancers = backgroundDancers !== 'nobody';
 
-  const flyoutDefinition: GoogleBlockly.utils.toolbox.ToolboxInfo = {
+  const flyoutDefinition: BlocklyCore.utils.toolbox.ToolboxInfo = {
     kind: 'flyoutToolbox',
     contents: [],
   };

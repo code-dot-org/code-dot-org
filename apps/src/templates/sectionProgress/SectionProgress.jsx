@@ -18,7 +18,6 @@ import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
-import firehoseClient from '../../metrics/firehose';
 
 import LessonSelector from './LessonSelector';
 import ProgressViewHeader from './ProgressViewHeader';
@@ -143,11 +142,6 @@ class SectionProgress extends Component {
   onChangeScript = (scriptId, courseVersionId) => {
     this.props.setUnit(scriptId, courseVersionId);
 
-    this.recordEvent('change_script', {
-      old_script_id: this.props.scriptId,
-      new_script_id: scriptId,
-    });
-
     analyticsReporter.sendEvent(
       EVENTS.PROGRESS_CHANGE_UNIT,
       {
@@ -162,35 +156,11 @@ class SectionProgress extends Component {
   onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
 
-    this.recordEvent('jump_to_lesson', {
-      script_id: this.props.scriptId,
-      stage_id: this.props.scriptData.lessons[lessonOfInterest].id,
-    });
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_JUMP_TO_LESSON, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
       lesson: this.props.scriptData.lessons[lessonOfInterest].id,
     });
-  };
-
-  navigateToScript = () => {
-    this.recordEvent('go_to_script', {script_id: this.props.scriptId});
-  };
-
-  recordEvent = (eventName, dataJson = {}) => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: eventName,
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          ...dataJson,
-        }),
-      },
-      {includeUserId: true}
-    );
   };
 
   levelDataInitialized = () => {

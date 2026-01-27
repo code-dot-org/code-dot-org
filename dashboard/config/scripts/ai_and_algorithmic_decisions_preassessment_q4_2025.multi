@@ -7,7 +7,7 @@ wrong 'The browser\'s search bar'
 wrong 'The internet connection settings'
 right 'The HTML structure displayed on the screen'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson X

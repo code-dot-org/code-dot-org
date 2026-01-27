@@ -32,7 +32,7 @@
     "display_name": "Motivational Quotes",
     "bubble_choice_description": "Use private and public methods to create a scene that animates quote images.",
     "thumbnail_url": "https://images.code.org/21bc2894aa2f590f68add47ec59d188b-U7L4-L2c.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:55:39.491+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L2c_2022\\\"\"],\"cloned_from\":\"CSA U7L4-L2c_2022\"}]"

@@ -2,7 +2,6 @@ import i18n from '@cdo/locale';
 
 /**
  * Map from project type to friendly name.
- * @type {Object}
  */
 
 export const PROJECT_TYPE_MAP = {
@@ -42,10 +41,12 @@ export const PROJECT_TYPE_MAP = {
   pythonlab: i18n.projectTypePythonlab(),
   thebadguys: i18n.projectTypeThebadguys(),
   science: i18n.projectTypeScience(),
+  sketchlab: 'Sketch Lab',
   story: i18n.projectTypeStory(),
   time_capsule: i18n.projectTypeTimeCapsule(),
   transformers: i18n.projectTypeTransformers(),
   music_dance_ai: 'Mix & Move with AI',
+  weblab2: 'Web Lab 2',
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {

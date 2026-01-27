@@ -84,9 +84,8 @@
       %br
       %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
-      - unless params[:blocklyVersion] == 'cdo'
-        %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
-          Undo
+      %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
+        Undo
       %hr
     This level is in #{@level.script_levels.count} scripts:
     %ul
@@ -117,7 +116,7 @@
       Project info:
       %ul
         - owner_storage_id, project_id = begin
-          - storage_decrypt_channel_id(params[:channel_id])
+          - get_storage_id_and_project_id(params[:channel_id])
         - rescue
           - [nil, nil]
         - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{project_id}/"

@@ -362,6 +362,8 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
   DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+  DANCE_PARTY_RESTRICTED_SONG_AUTH_ERROR:
+    'Dance Party Restricted Song Auth Error',
   DANCE_PARTY_VALIDATION: 'Dance Party Validation',
   DANCE_PARTY_AI_MODAL_CLOSED: 'Dance Party AI Modal Closed',
 
@@ -447,6 +449,7 @@ const EVENTS = {
 
   // Add custom image to project
   UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  MODERATE_CUSTOM_IMAGE: 'User-submitted image is moderated',
   SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
   FLAGGED_CUSTOM_IMAGE:
     'User attempting to upload an image that is flagged for abuse',
@@ -523,6 +526,9 @@ const EVENTS = {
   CHAT_COPIED: 'User copied an AI chat response',
   CODE_COPIED: 'User copied AI-generated code snippet',
 
+  // AI Chat Access Control Settings
+  AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED: 'AI Chat section access level updated',
+
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
     'Teacher gave feedback on AIs summary of student work',
@@ -543,19 +549,6 @@ const EVENTS = {
     'Attempted upload of unaccepted file on codebridge',
   CODEBRIDGE_UPLOAD_FAILED: 'Failed to upload file on codebridge',
 
-  // Codebridge - Backpack events
-  CODEBRIDGE_SAVE_TO_BACKPACK_NEW: 'Save new file to backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack on codebridge',
-  CODEBRIDGE_SAVE_TO_BACKPACK_RENAME:
-    'Save renamed file to backpack on codebridge',
-  CODEBRIDGE_DELETE_FROM_BACKPACK: 'Delete from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW:
-    'Import new file from backpack on codebridge',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE:
-    'Import a file from backpack on codebridge, replacing existing file',
-  CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME:
-    'Import a file from backpack on codebridge, renaming it',
-
   // Codebridge - Other events
   CODEBRIDGE_CLEAR_CONSOLE: 'Console cleared on codebridge',
   CODEBRIDGE_MOVE_CONSOLE: 'Console moved on codebridge',
@@ -571,6 +564,7 @@ const EVENTS = {
   BLOCKLY_SETTING_ON: 'on',
   BLOCKLY_SETTING_OFF: 'off',
   BLOCKLY_APP_TYPE_MUSIC: 'music',
+  BLOCKLY_SLASH_KEY_PRESSED: 'Blockly Slash Key Pressed',
 
   // Teacher Navigation V2
   NAVIGATE_TO_SECTION: 'Local Nav Class Section Selected',
@@ -680,6 +674,16 @@ const EVENTS = {
     'AI Tutor Version File Preview Button Clicked',
   AI_TUTOR_VERSION_FILE_PREVIEWED_IN_URL_BAR:
     'File Previewed in AI Tutor Version View via URL bar',
+
+  // Generic backpack events
+  SAVE_TO_BACKPACK_NEW: 'Save new file to backpack',
+  SAVE_TO_BACKPACK_REPLACE: 'Replace file in backpack',
+  SAVE_TO_BACKPACK_RENAME: 'Save renamed file to backpack',
+  DELETE_FROM_BACKPACK: 'Delete from backpack',
+  IMPORT_FROM_BACKPACK_NEW: 'Import new file from backpack',
+  IMPORT_FROM_BACKPACK_REPLACE:
+    'Import a file from backpack, replacing existing file',
+  IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack, renaming it',
 };
 
 const EVENT_GROUP_NAMES = {

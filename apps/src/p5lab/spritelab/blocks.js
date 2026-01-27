@@ -2,12 +2,18 @@ import {Order} from 'blockly/javascript';
 
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
+import {blocks as behaviorBlocks} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
 import {
   editButtonHandler,
   toolboxConfigurationSupportsEditButton,
-} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
-import {parseSoundPathString} from '@cdo/apps/blockly/utils';
+} from '@cdo/apps/blockly/customBlocks/proceduresBlocks';
+import {
+  defineNewBlockGenerator,
+  locationField,
+  parseSoundPathString,
+  registerCustomProcedureBlocks,
+  soundField,
+} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {getStore} from '@cdo/apps/redux';
@@ -15,7 +21,6 @@ import {getAlphanumericId} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 
-import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {changeInterfaceMode} from '../actions';
 import {P5LabInterfaceMode} from '../constants';
 import {animationSourceUrl} from '../redux/animationList';
@@ -103,7 +108,7 @@ const customInputTypes = {
           }
         });
       };
-      const fieldButton = Blockly.cdoUtils.locationField(
+      const fieldButton = locationField(
         icon,
         onChange,
         block,
@@ -135,7 +140,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          Blockly.cdoUtils.soundField(onClick, transformText, icon),
+          soundField(onClick, transformText, icon),
           inputConfig.name
         );
     },
@@ -470,11 +475,11 @@ export default {
   costumeList,
   customInputTypes,
   install(blockly, blockInstallOptions) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
-    const behaviorEditor = (Blockly.behaviorEditor = new FunctionEditor(
+    Blockly.behaviorEditor = new FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
         FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
@@ -493,7 +498,7 @@ export default {
         Blockly.BlockValueType.SPRITE,
         Blockly.BlockValueType.LOCATION,
       ]
-    ));
+    );
 
     Blockly.common.defineBlocks(behaviorBlocks);
 
@@ -649,49 +654,49 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    Blockly.customBlocks.defineNewBlockGenerator(
-      generator,
-      'sprite_variables_get',
-      function () {
-        return [
-          `{name: '${Blockly.JavaScript.translateVarName(
-            this.getFieldValue('VAR')
-          )}'}`,
-          Blockly.JavaScript.ORDER_ATOMIC,
-        ];
-      }
-    );
+    defineNewBlockGenerator(generator, 'sprite_variables_get', function () {
+      return [
+        `{name: '${Blockly.JavaScript.translateVarName(
+          this.getFieldValue('VAR')
+        )}'}`,
+        Blockly.JavaScript.ORDER_ATOMIC,
+      ];
+    });
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
     );
-    Blockly.customBlocks.defineNewBlockGenerator(
+    // Generator function copied and modified from core Blockly:
+    // https://github.com/google/blockly/blob/1ba0e55e8a61f4228dfcc4d0eb18b7e38666dc6c/generators/javascript/math.ts#L406-L429
+    // We need to provide this generator in order to continue using the
+    // legacy function name. Other custom blocks in pools depend on the original name.
+    defineNewBlockGenerator(
       generator,
       'math_random_int',
-      Blockly.customBlocks.mathRandomIntGenerator
+      (block, generator) => {
+        // Random integer between [X] and [Y].
+        const argument0 =
+          generator.valueToCode(block, 'FROM', Order.NONE) || '0';
+        const argument1 = generator.valueToCode(block, 'TO', Order.NONE) || '0';
+        const functionName = generator.provideFunction_(
+          'math_random_int', // Core Blockly uses 'mathRandomInt'
+          `
+function ${generator.FUNCTION_NAME_PLACEHOLDER_}(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+`
+        );
+        const code = `${functionName}(${argument0}, ${argument1})`;
+        return [code, Order.FUNCTION_CALL];
+      }
     );
-    // NOTE: On the page where behaviors are created (the functions/#/edit page)
-    // blockInstallOptions is undefined.
-    if (
-      !blockInstallOptions ||
-      !blockInstallOptions.level ||
-      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
-    ) {
-      // This is only used by CDO Blockly. When we are ready to remove support
-      // for CDO Blockly we can remove this call.
-      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-        initialize(flyout, cursor) {
-          if (behaviorEditor && !behaviorEditor.isOpen()) {
-            flyout.addButtonToFlyout_(
-              cursor,
-              i18n.createBlocklyBehavior(),
-              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-            );
-          }
-        },
-        addDefaultVar: false,
-      });
-    }
+
     delete blockly.Blocks.procedures_defreturn;
     delete blockly.Blocks.procedures_ifreturn;
   },

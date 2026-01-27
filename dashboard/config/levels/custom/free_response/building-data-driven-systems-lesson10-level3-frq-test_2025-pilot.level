@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-15T17:10:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> Use 4–6 sentences to answer all three questions. Be specific to the scenario you chose.\r\n>  \r\n> 1. Briefly describe the **filter → sort → map** pipeline you built today (For You Page, Comment Climb, or Ad Transparency). What did each step do?  \r\n> 2. Give one concrete example of how a choice you made in your **sort** or **map** step could affect who gets seen or how users feel about the results.\r\n> 2. If you had more time, what is one change you would make to your pipeline to improve fairness or representation?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "title": "Reflection: Pipeline Fairness",
+    "teacher_markdown": "A successful reflection shows that the student:\r\n- can connect their concrete pipeline design to its social impact, explaining how sort and map choices shape user experience and representation, and proposing at least one intentional improvement for fairness.",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:10:50.122+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level3-frq-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level3-frq-test-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

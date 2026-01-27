@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "link_title": "End-of-Lesson Survey ",
-    "url": "https://forms.gle/JJvYRhnUECoF4Kf17",
-    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://forms.gle/JJvYRhnUECoF4Kf17).",
+    "url": "https://form.jotform.com/260115475593156",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://form.jotform.com/260115638014145).",
     "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**."
   },
-  "audit_log": "[{\"changed_at\":\"2025-11-13T11:57:41.067+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-pilot-survey_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-pilot-survey_2025\"},{\"changed_at\":\"2025-11-13 11:58:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:57:41.067+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-pilot-survey_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-pilot-survey_2025\"},{\"changed_at\":\"2025-11-13 11:58:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-01-12 22:36:18 +0000\",\"changed\":[\"url\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

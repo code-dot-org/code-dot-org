@@ -25,6 +25,7 @@ const ALL_APPS = [
 
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
+  'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
@@ -203,7 +204,6 @@ const PEGASUS_ENTRIES = {
   'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
-  'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
@@ -284,7 +284,6 @@ const OTHER_ENTRIES = {
   // The blockly dependency is huge, so we currently control when it is
   // loaded explicitly via script tags rather than via normal imports.
   blockly: './src/sites/studio/pages/blockly.js',
-  googleblockly: './src/sites/studio/pages/googleblockly.js',
 
   // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
   // in a bundle to minimize the amount of stuff we need when loading blocks

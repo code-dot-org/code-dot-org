@@ -273,12 +273,12 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     notification = TeacherNotification.last
     assert_equal @user.id, notification.user_id
     assert_equal 'AI Lesson Summaries ready to view', notification.title
-    assert_equal "Your personalized lesson summaries for 3 lessons for #{@unit.name} are live — prepare for your next class in minutes!", notification.description
+    assert_equal "Your personalized lesson summaries for 3 lessons for #{@unit.title_for_display} are live — prepare for your next class in minutes!", notification.description
     assert_equal 'solid-flask-sparkle', notification.icon_name
     assert_equal 'Aqua', notification.icon_color
     assert_equal 1, notification.href_links.size
     assert_equal 'View lesson materials', notification.href_links.first['text']
-    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
   end
 
   test 'after_perform creates notification with correct lesson count for single lesson' do
@@ -295,7 +295,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
 
     notification = TeacherNotification.last
-    assert_equal "Your personalized lesson summaries for 1 lessons for #{@unit.name} are live — prepare for your next class in minutes!", notification.description
+    assert_equal "Your personalized lesson summaries for 1 lessons for #{@unit.title_for_display} are live — prepare for your next class in minutes!", notification.description
   end
 
   test 'after_perform uses first section when unit_id not provided' do
@@ -311,7 +311,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
 
     notification = TeacherNotification.last
-    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
   end
 
   test 'after_perform uses first section when unit_id provided but no matching section exists' do
@@ -329,7 +329,7 @@ class AiLessonSummariesJobTest < ActiveJob::TestCase
     end
 
     notification = TeacherNotification.last
-    assert_equal "/teacher_dashboard/sections/#{@section.id}/lesson_materials", notification.href_links.first['url']
+    assert_equal "/teacher_dashboard/sections/#{@section.id}/materials", notification.href_links.first['url']
   end
 
   test 'after_perform does not create notification when user has no sections' do

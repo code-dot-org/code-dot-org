@@ -1,0 +1,56 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-15T19:31:59.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "then.js",
+          "language": "js",
+          "contents": "function startQuest() {\n  let status = \"Fresh\"; // This variable changes along the way\n\n  fetch('https://api.quest.com/map')\n    .then(response => response.json())\n    .then(mapData => {\n      status = \"Tired\"; // Update status\n      displayText(\"Found map to \" + mapData.location + \". Status: \" + status);\n      \n      // We must return BOTH pieces of data to the next step\n      return fetch('https://api.quest.com/key/' + mapData.location)\n        .then(response => response.json())\n        .then(keyData => {\n          // If we didn't nest this, we'd lose access to the 'status' above!\n          status = \"Exhausted\"; \n          displayText(\"Got \" + keyData.type + \" key. Final Status: \" + status);\n          openChest(keyData.id);\n        });\n    })\n    .catch(error => {\n      displayText(\"Quest failed: \" + error);\n    });\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "async.js",
+          "language": "js",
+          "contents": "async function startQuest() {\n  try {\n    let status = \"Fresh\";\n\n    const mapRes = await fetch('https://api.quest.com/map');\n    const mapData = await mapRes.json();\n    \n    status = \"Tired\"; // Update it naturally\n    displayText(\"Found map to \" + mapData.location + \". Status: \" + status);\n\n    const keyRes = await fetch('https://api.quest.com/key/' + mapData.location);\n    const keyData = await keyRes.json();\n\n    status = \"Exhausted\"; // Update it again\n    displayText(\"Got \" + keyData.type + \" key. Final Status: \" + status);\n    \n    openChest(keyData.id);\n\n  } catch (error) {\n    displayText(\"Quest failed: \" + error);\n  }\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-15 19:57:24 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-15 19:57:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-15 19:57:55 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

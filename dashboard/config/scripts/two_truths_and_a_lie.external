@@ -1,0 +1,70 @@
+name 'Two Truths and a Lie'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+  <p style="font-size: 18pt; font-weight: bold; margin-bottom: 10px;">🕵️‍♀️ Two truths and a lie - Computational Thinking Edition!</p>
+
+<p style="font-size: 12pt; margin-bottom: 10px;">Read the three statements, decide which you think is untrue then click to reveal the answer. Can you get all three correct? </p>
+
+</p>
+
+<!-- 3-Column Game Layout with Improved Readability -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 95%; margin: 20px auto;">
+
+  <!-- Column 1: Problem Solving -->
+  <div style="background-color: #F7F8FA; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🧠 Problem Solving</p>
+    <ol style="font-size: 12pt; line-height: 1.8; padding-left: 20px; margin-bottom: 20px;">
+      <li><strong>Planning</strong> helps organize your thoughts before coding.</li>
+      <li><strong>Debugging</strong> only happens after everything is built.</li>
+      <li><strong>Reflection</strong> helps you learn from what you built.</li>
+    </ol>
+    <details style="background-color: #0093A4; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #2 is the lie!</strong><br>
+        Debugging happens throughout the process, not just at the end. ✅
+      </p>
+    </details>
+  </div>
+
+  <!-- Column 2: Computational Thinking -->
+  <div style="background-color: #DECEEA; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🤖 Computational Thinking</p>
+    <ol style="font-size: 12pt; line-height: 1.8; padding-left: 20px; margin-bottom: 20px;">
+      <li><strong>Decomposition</strong> means combining all the small steps at once.</li>
+      <li><strong>Algorithms</strong> are step-by-step instructions for solving problems.</li>
+      <li><strong>Pattern recognition</strong> helps find similarities in problems.</li>
+    </ol>
+    <details style="background-color: #8C52BA; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #1 is the lie!</strong><br>
+        Decomposition means breaking a big problem into smaller parts, not combining them. 🧩
+      </p>
+    </details>
+  </div>
+
+
+
+
+  <!-- Column 3: Debugging & Teamwork -->
+  <div style="background-color: #B7E0E5; padding: 20px; border-radius: 20px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">🛠️ Debugging & Teamwork</p>
+    <ol style="font-size: 12pt; line-height: 1.8; padding-left: 20px; margin-bottom: 20px;">
+      <li>It’s okay to <strong>ask a partner</strong> for help while debugging.</li>
+      <li><strong>Teamwork</strong> slows down the problem solving process.</li>
+      <li><strong>Explaining your thinking</strong> can help you find bugs.</li>
+    </ol>
+    <details style="background-color: #292F36; color: #FFFFFF; padding: 10px; border-radius: 12px;">
+      <summary style="font-size: 13pt; font-weight: bold;">🎉 Reveal Answer</summary>
+      <p style="font-size: 12pt; margin-top: 10px;">
+        ❌ <strong>Statement #2 is the lie!</strong><br>
+        Teamwork actually helps you solve problems more effectively—not slower. 
+      </p>
+    </details>
+  </div>
+
+</div>
+MARKDOWN

@@ -1,0 +1,41 @@
+@import '@code-dot-org/component-library-styles/font';
+
+.container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.interactionsElement {
+  margin-bottom: 10px;
+}
+
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+  label {
+    margin-bottom: 0;
+  }
+  gap: 4px;
+}
+
+.withBorderTop {
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+.rowContainer {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.semiBold {
+  @include main-font-semi-bold;
+}
+
+.subHeader {
+  color: var(--text-neutral-tertiary);
+}

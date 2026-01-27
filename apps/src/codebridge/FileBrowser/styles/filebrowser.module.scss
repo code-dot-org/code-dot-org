@@ -27,13 +27,19 @@
   font-size: 14px;
   min-height: 24px;
   margin-inline: 0.375rem;
+  margin-bottom: 2px;
   padding-block: 0.125rem;
   transition: all 0.2s ease-in-out;
 
   &.aiTutorVersion {
-    border-radius: var(--border-radius-br-s, 4px);
-    border: 1px solid var(--borders-brand-aqua-primary);
+    border-radius: 0.25rem;
+    outline: 1px solid var(--borders-brand-aqua-primary);
+    outline-offset: -1px;
     background: var(--background-brand-aqua-extra-light);
+
+    i {
+      color: var(--text-neutral-primary);
+    }
 
     &:hover:not(.dragging) {
       background-color: var(--background-brand-aqua-light);
