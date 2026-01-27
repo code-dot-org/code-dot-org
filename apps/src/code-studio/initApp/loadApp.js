@@ -76,7 +76,7 @@ export function setupApp(appOptions) {
             levelId: appOptions.serverLevelId,
             sectionId: queryParams('section_id'),
           },
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       }
 

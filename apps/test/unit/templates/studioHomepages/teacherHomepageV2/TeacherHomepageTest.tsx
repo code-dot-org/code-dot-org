@@ -191,7 +191,7 @@ describe('TeacherHomepage', () => {
       {
         'user id': 1,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -202,7 +202,7 @@ describe('TeacherHomepage', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -247,7 +247,7 @@ describe('TeacherHomepage', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     fireEvent.click(teachingButton);
@@ -256,7 +256,7 @@ describe('TeacherHomepage', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
