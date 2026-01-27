@@ -2200,8 +2200,9 @@ StudioApp.prototype.configureDom = function (config) {
           levelId: config.serverLevelId,
           levelName: config.level.name,
           appName: config.appName,
+          levelPath: window.location.pathname,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
       runButtonWasClicked = true;
     }

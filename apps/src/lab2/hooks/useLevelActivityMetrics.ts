@@ -1,7 +1,7 @@
 import {useCallback, useEffect, useRef} from 'react';
 
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {LevelProperties} from '../types';
@@ -44,18 +44,16 @@ export function useLevelActivityMetrics(
       ? EVENTS.PROJECT_ACTIVITY
       : EVENTS.LEVEL_ACTIVITY;
 
-    analyticsReporter.sendEvent(eventName, {
+    sendLab2AnalyticsEvent(eventName, {
       signedIn,
-      unitName: scriptName,
-      levelId: levelProperties.id,
+      unitName: scriptName ?? '',
+      levelId: levelProperties.id.toString(),
       levelName: levelProperties.name,
-      appName: levelProperties.appName,
     });
   }, [
     levelProperties.isProjectLevel,
     levelProperties.id,
     levelProperties.name,
-    levelProperties.appName,
     signedIn,
     scriptName,
   ]);
