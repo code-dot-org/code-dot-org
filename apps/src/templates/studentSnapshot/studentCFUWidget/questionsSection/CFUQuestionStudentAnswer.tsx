@@ -69,7 +69,7 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
       default:
         return (
           <Typography variant="body4">
-            {/* TODO: Handle additional CFU level type: {type} */}"{levelType}
+            {/* TODO: Handle additional CFU level type: {levelType} */}"{levelType}
             "&nbsp;Student answer placeholder
           </Typography>
         );
