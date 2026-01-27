@@ -454,7 +454,7 @@ class CourseOffering < ApplicationRecord
     Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
-    # where(key: removed_records).destroy_all
+    where(key: removed_records).destroy_all
   end
 
   def self.properties_from_file(content)
