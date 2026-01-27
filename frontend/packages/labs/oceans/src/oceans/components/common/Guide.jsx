@@ -29,10 +29,29 @@ export const stopTypingSounds = () => {
 };
 
 let UnwrappedGuide = class Guide extends React.Component {
+  componentDidUpdate(prevProps, prevState) {
+    // Focus the dialog on guide change, but do not trap focus
+    const currentGuide = guide.getCurrentGuide();
+    if (
+      currentGuide &&
+      this.guideDialogRef &&
+      this.guideDialogRef.current &&
+      document.activeElement !== this.guideDialogRef.current
+    ) {
+      this.guideDialogRef.current.focus();
+    }
+  }
   onTypingDone() {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: undefined});
   }
+
+  onGuideKeyDown = (e) => {
+    if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
+      e.preventDefault();
+      this.onGuideClick();
+    }
+  };
 
   onGuideClick = () => {
     const state = getState();
@@ -142,6 +161,11 @@ let UnwrappedGuide = class Guide extends React.Component {
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
+      // Ref for focus management
+      if (!this.guideDialogRef) {
+        this.guideDialogRef = React.createRef();
+      }
+
     return (
       <div>
         {currentGuide && currentGuide.image && (
@@ -157,9 +181,16 @@ let UnwrappedGuide = class Guide extends React.Component {
               key={currentGuide.id}
               style={guideBgStyle}
               onClick={this.onGuideClick}
+              onKeyDown={this.onGuideKeyDown}
+              tabIndex={0}
+              role="button"
+              aria-label={I18n.t('continue')}
               id="uitest-dismiss-guide"
             >
               <div
+                ref={this.guideDialogRef}
+                aria-labelledby="guide-heading"
+                tabIndex={-1}
                 style={{
                   ...styles.guide,
                   ...styles[`guide${currentGuide.style}`]
@@ -167,12 +198,18 @@ let UnwrappedGuide = class Guide extends React.Component {
               >
                 <div>
                   {currentGuide.style === 'Info' && (
-                    <div style={styles.guideHeading}>
+                    <div id="guide-heading" style={styles.guideHeading}>
                       {I18n.t('didYouKnow')}
                     </div>
                   )}
 
-                  <div style={styles.guideTypingText}>
+
+                  {/* Visually hidden aria-live region for screen readers */}
+                  <div style={{position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden'}} aria-live="polite">
+                    {currentGuide.textFn(getState())}
+                  </div>
+                  {/* Visible Typist animation for sighted users */}
+                  <div style={styles.guideTypingText} aria-hidden="true">
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
@@ -190,7 +227,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                         : styles.guideFinalTextContainer
                     }
                   >
-                    <div style={styles.guideFinalText}>
+                    <div style={styles.guideFinalText} aria-hidden="true">
                       {currentGuide.textFn(getState())}
                     </div>
                   </div>
