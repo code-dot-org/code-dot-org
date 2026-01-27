@@ -10311,6 +10311,8 @@ en:
               name: U5 L10
             lesson-23:
               name: U5 Project
+            lesson-24:
+              name: Step 5 Project Design Prototype
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10328,6 +10330,8 @@ en:
               display_name: AI Tutor
             lessonGroup-9:
               display_name: Web Dev - AIF Sem 2
+            lessonGroup-10:
+              display_name: CSD 2.0
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
