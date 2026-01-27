@@ -25,6 +25,21 @@ class StudentSnapshotsController < ApplicationController
     render json: {lessons: lessons_data, hasUnnumberedLessons: unit.has_unnumbered_lessons?}
   end
 
+  # GET /student_snapshots/lesson_feedback_prompt
+  # Returns the feedback system prompt for a given lesson, unit, student, teacher, and section
+  def lesson_feedback_prompt
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+    teacher_id = params[:teacher_id]
+    section_id = params[:section_id]
+
+    prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(
+      lesson_id, unit_id, student_id, teacher_id, section_id
+    )
+    render json: {prompt: prompt}
+  end
+
   # GET /student_snapshots/cfu_levels/:lesson_id
   # Returns all CFU levels from the specified lesson, including metadata and basic question content.
   # CFU levels are identified by progression: "Check Your Understanding"
