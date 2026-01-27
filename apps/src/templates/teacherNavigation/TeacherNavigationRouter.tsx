@@ -329,7 +329,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.aiChatSettings}
               element={
                 showAiChatSettings ? (
-                  <AiChatAccessControls sectionId={sectionId || 0} />
+                  <AiChatAccessControls />
                 ) : (
                   <Navigate
                     to={TEACHER_NAVIGATION_PATHS.progress}

@@ -59,13 +59,7 @@ const accessToggleState = (
   return accessLevel === AiChatAccessLevels.ENABLED;
 };
 
-interface AiChatAccessControlsProps {
-  sectionId: number;
-}
-
-const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
-  sectionId,
-}) => {
+const AiChatAccessControls: React.FC = () => {
   const section = useAppSelector(selectedSectionSelector);
   if (!section) {
     throw new Error('Section does not exist');
@@ -89,15 +83,15 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
   // const dispatch = useAppDispatch();
 
   const updateAccessLevel = async (newAccessLevel: AiChatAccessLevel) => {
-    await handleUpdateSectionAiChatAccessLevel(sectionId, newAccessLevel);
+    await handleUpdateSectionAiChatAccessLevel(section.id, newAccessLevel);
     // dispatch(
     //   updateSectionAiChatAccessLevel({
-    //     sectionId,
+    //     sectionId: section.id,
     //     aiChatAccessLevel: newAccessLevel,
     //   })
     // );
     analyticsReporter.sendEvent(EVENTS.AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED, {
-      sectionId: sectionId,
+      sectionId: section.id,
       newAccessLevel: newAccessLevel,
       uiLocation: 'aiSettingsTeacherDashboardTab',
     });
@@ -132,7 +126,7 @@ const AiChatAccessControls: React.FC<AiChatAccessControlsProps> = ({
     const accessLevel = /*section.aiChatAccessLevel ||*/ defaultAccessLevel;
     setEssentialOnlyCheckbox(essentialOnlyCheckboxState(accessLevel));
     setAccessToggle(accessToggleState(accessLevel));
-  }, [section, sectionId]);
+  }, [section]);
 
   return (
     <div className={style.container}>
