@@ -1,13 +1,13 @@
+import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import {CheckedRadioButton} from '@cdo/apps/templates/instructions/teacherFeedback/CheckedRadioButton';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import styles from './RubricField.module.scss';
 
 const rubricPerformanceHeaders = {
   performanceLevel1: i18n.rubricLevelOneHeader(),
@@ -42,15 +42,16 @@ class RubricField extends Component {
   };
 
   render() {
-    const performanceHeaderStyle = this.props.currentlyChecked
-      ? styles.performanceLevelHeaderSelected
-      : styles.performanceLevelHeader;
+    const performanceHeaderClass = classNames(
+      styles.performanceLevelHeader,
+      this.props.currentlyChecked && styles.performanceLevelHeaderSelected
+    );
 
     const tooltipId = _.uniqueId();
     return (
-      <div style={styles.rubricPerformanceHeaders}>
+      <div className={styles.rubricPerformanceHeaders}>
         <div
-          style={performanceHeaderStyle}
+          className={performanceHeaderClass}
           data-tip
           data-for={tooltipId}
           aria-describedby={tooltipId}
@@ -66,13 +67,16 @@ class RubricField extends Component {
           )}
           <details
             id={`rubric-details-${this.props.rubricLevel}`}
-            style={styles.detailsArea}
+            className={styles.detailsArea}
             open={this.state.detailsOpen}
           >
-            <summary style={styles.rubricHeader} onClick={this.updateToggle}>
+            <summary
+              className={styles.rubricHeader}
+              onClick={this.updateToggle}
+            >
               {rubricPerformanceHeaders[this.props.rubricLevel]}
             </summary>
-            <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
+            <p className={styles.rubricDetails}>{this.props.rubricValue}</p>
           </details>
         </div>
         <ReactTooltip
@@ -82,66 +86,11 @@ class RubricField extends Component {
           effect="solid"
           disable={this.state.detailsOpen}
         >
-          <div style={styles.tooltip}>{this.props.rubricValue}</div>
+          <div className={styles.tooltip}>{this.props.rubricValue}</div>
         </ReactTooltip>
       </div>
     );
   }
 }
-
-const styles = {
-  rubricLevelHeaders: {
-    width: '100%',
-  },
-  detailsArea: {
-    width: '100%',
-    paddingTop: 2,
-  },
-  rubricHeader: {
-    fontSize: 12,
-    marginLeft: 10,
-    color: color.black,
-    ...fontConstants['main-font-semi-bold'],
-    // Don't show default summary tag outline and background on hover or focus
-    outline: 'none',
-    background: 'none',
-  },
-  performanceLevelHeader: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    margin: '0px 8px',
-    padding: 4,
-    borderRadius: 4,
-    border: `solid 1px ${color.white}`,
-    ':hover': {
-      border: `solid 1px ${color.light_cyan}`,
-    },
-  },
-  performanceLevelHeaderSelected: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    margin: '0px 8px',
-    padding: 4,
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 4,
-    border: `solid 1px ${color.white}`,
-    ':hover': {
-      border: `solid 1px ${color.light_cyan}`,
-    },
-  },
-  tooltip: {
-    maxWidth: 200,
-    lineHeight: '20px',
-    whiteSpace: 'normal',
-  },
-  rubricDetails: {
-    paddingLeft: 23,
-    paddingTop: 5,
-    fontSize: 12,
-    margin: 0,
-  },
-};
 export const UnwrappedRubricField = RubricField;
-export default Radium(RubricField);
+export default RubricField;

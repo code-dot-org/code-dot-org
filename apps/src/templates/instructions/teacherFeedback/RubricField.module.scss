@@ -1,0 +1,53 @@
+.rubricPerformanceHeaders {
+  width: 100%;
+}
+
+.detailsArea {
+  width: 100%;
+  padding-top: 2px;
+}
+
+.rubricHeader {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #000;
+  font-family: Figtree, sans-serif;
+  font-weight: 600;
+  outline: none;
+  background: none;
+}
+
+.performanceLevelHeader {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 0 8px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+
+  &:hover {
+    border: 1px solid #59b9dc;
+  }
+}
+
+.performanceLevelHeaderSelected {
+  background-color: #d9eff7;
+
+  &:hover {
+    border: 1px solid #59b9dc;
+  }
+}
+
+.tooltip {
+  max-width: 200px;
+  line-height: 20px;
+  white-space: normal;
+}
+
+.rubricDetails {
+  padding-left: 23px;
+  padding-top: 5px;
+  font-size: 12px;
+  margin: 0;
+}
