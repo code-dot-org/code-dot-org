@@ -108,50 +108,6 @@ module Cdo
       stats[:calling] = @stats.max_calling.tap {@stats.max_calling = 0}
       stats
     end
-
-    # Gathers cloudfront metrics from each puma worker process and logs it
-    # to CloudWatch segmented by Host and PID. To get overall values, you
-    # must aggregate/sum across all Host and PID dimensions in CloudWatch.
-    def self.start_background_metrics_thread(host:)
-      Thread.new do
-        # Set a helpful name for debugging in thread dumps
-        Thread.current.name = "cdo-actioncable-metrics"
-
-        # Base dimensions that don't change
-        base_dimensions = {
-          PID: Process.pid.to_s,
-          Host: host,
-        }
-
-        loop do
-          begin
-            # Use the Rails executor to safely interact with ActionCable and DB connections
-            Rails.application.executor.wrap do
-              # Access the latest ID via the thread-safe singleton accessor
-              # Retry the metadata lookup if it is currently 'UNKNOWN'
-              current_id = Cdo::AppServerMetrics.instance&.instance_id || 'UNKNOWN'
-
-              dimensions = base_dimensions.merge(InstanceId: current_id)
-
-              if defined?(ActionCable) && ActionCable.server
-                Cdo::Metrics.put(
-                  'ActionCable',
-                  'ServerConnectionsCount',
-                  ActionCable.server.connections.count,
-                  dimensions,
-                  unit: 'Count'
-                )
-              end
-            end
-          rescue StandardError=> exception
-            # Prevent the thread from dying silently on a network or ActionCable error
-            Honeybadger.notify(exception, context: {component: 'actioncable_metrics_thread'})
-          end
-
-          sleep 30.seconds
-        end
-      end
-    end
   end
 
   # Extends Raindrops::Middleware::Stats (which defines :calling and :writing)
