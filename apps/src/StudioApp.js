@@ -2199,7 +2199,7 @@ StudioApp.prototype.configureDom = function (config) {
           unitName: config.scriptName,
           levelId: config.serverLevelId,
           levelName: config.level.name,
-          appName: config.appName,
+          appName: project.getStandaloneApp(),
           levelPath: window.location.pathname,
         },
         PLATFORMS.STATSIG

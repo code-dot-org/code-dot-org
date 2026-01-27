@@ -68,7 +68,7 @@ Fish.prototype.init = function (config) {
         unitName: config.scriptName,
         levelId: config.serverLevelId,
         levelName: config.level.name,
-        appName: config.appName,
+        appName: 'fish',
         levelPath: window.location.pathname,
       },
       PLATFORMS.STATSIG
