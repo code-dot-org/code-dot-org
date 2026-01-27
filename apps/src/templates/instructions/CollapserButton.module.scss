@@ -1,12 +1,14 @@
+@import 'color.scss';
+
 .collapseButton {
   background-color: #fff;
-  border: 2px solid $color-neutral-dark;
-  color: $color-neutral-dark;
+  border: $neutral-dark;
+  color: #4a4a4a;
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    background-color: $color-neutral-dark20;
+    background-color: $neutral-dark20;
     box-shadow: none;
   }
 }
