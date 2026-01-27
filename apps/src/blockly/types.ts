@@ -278,9 +278,6 @@ export interface ExtendedBlock extends BlocklyCore.Block {
     msg: string,
     ...inputArgs: [...([string, string, number] | (() => void))[], number]
   ) => void;
-  // Blockly uses any for value.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  setTitleValue: (newValue: any, name: string) => void;
   skipNextBlockGeneration?: boolean;
   svgPathFill: SVGElement;
 }

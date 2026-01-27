@@ -686,7 +686,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // deserialize the counter variable name
     domToMutation: function (xmlElement) {
       var counter = xmlElement.getAttribute('counter');
-      this.setTitleValue(counter, 'VAR');
+      this.setFieldValue(counter, 'VAR');
     },
   };
   generator.controls_for_counter = generator.forBlock.controls_for;

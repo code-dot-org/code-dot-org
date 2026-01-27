@@ -191,7 +191,7 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
@@ -270,13 +270,13 @@ export default {
 
       renameVar(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
 
       renameProcedure(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
 

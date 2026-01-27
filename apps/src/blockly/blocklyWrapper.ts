@@ -593,10 +593,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   extendedBlock.interpolateMsg = interpolateMsg;
 
-  // Block fields are referred to as titles in CDO Blockly.
-  extendedBlock.setTitleValue = function (newValue, name) {
-    return this.setFieldValue(newValue, name);
-  };
   /**
    * Change the fill pattern of a block
    * @param {string} pattern The id of the pattern
