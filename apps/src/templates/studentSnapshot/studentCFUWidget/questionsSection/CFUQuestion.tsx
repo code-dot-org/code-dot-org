@@ -79,7 +79,7 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
     </div>
     {Array.isArray(level.question_text) ? (
       <>
-        {level?.question_text?.map((questionText, index) => (
+        {level.question_text.map((questionText, index) => (
           <CFUQuestionStudentAnswer
             key={questionText}
             level={level}

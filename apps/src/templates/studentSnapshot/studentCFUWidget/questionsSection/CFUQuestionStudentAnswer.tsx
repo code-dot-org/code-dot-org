@@ -49,6 +49,8 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
         ? levelGroupResponseResponse
         : response?.response;
 
+    console.log(studentResponse);
+
     switch (levelType) {
       case 'Multi':
         return (
@@ -56,7 +58,7 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
             answers={
               (isLevelGroupAnswer
                 ? level.answers?.[levelGroupLevelIndex]
-                : level.answers) as CFUMultipleLevelAnswer[]
+                : level.answers || []) as CFUMultipleLevelAnswer[]
             }
             level={level}
             response={studentResponse}
@@ -69,7 +71,8 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
       default:
         return (
           <Typography variant="body4">
-            {/* TODO: Handle additional CFU level type: {levelType} */}"{levelType}
+            {/* TODO: Handle additional CFU level type: {levelType} */}"
+            {levelType}
             "&nbsp;Student answer placeholder
           </Typography>
         );

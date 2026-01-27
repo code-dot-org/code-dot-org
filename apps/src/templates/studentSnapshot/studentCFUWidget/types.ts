@@ -18,13 +18,13 @@ interface CFULevelBase {
 // LevelGroup level - answers is an array of arrays (or nulls)
 export interface CFULevelGroup extends CFULevelBase {
   type: 'LevelGroup';
-  answers?: Array<CFUMultipleLevelAnswer[] | null>;
+  answers: Array<CFUMultipleLevelAnswer[] | null>;
 }
 
 // Other level types - answers is a single array
 export interface CFULevelOther extends CFULevelBase {
   type: 'Multi' | 'Match' | 'FreeResponse';
-  answers?: CFUMultipleLevelAnswer[];
+  answers: CFUMultipleLevelAnswer[] | null;
 }
 
 // Discriminated union type
@@ -40,14 +40,14 @@ export interface CFULevelResponse {
 
 export interface CFULevelResponseResponse {
   type: CFULevelType;
-  student_result?: unknown;
+  student_result?: string | number[];
   level_results?: {
     type: CFULevelType;
-    student_result?: unknown;
-    status: unknown;
+    student_result?: string | number[];
+    status: CFULevelResponseSubmissionStatus;
     level_id: number;
   }[];
-  status: unknown;
+  status: CFULevelResponseSubmissionStatus;
 }
 
 export type StatusBucket =
@@ -55,3 +55,5 @@ export type StatusBucket =
   | 'partially_correct'
   | 'incorrect'
   | 'incomplete';
+
+export type CFULevelResponseSubmissionStatus = 'submitted' | 'unsubmitted';
