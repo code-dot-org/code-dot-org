@@ -510,11 +510,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
 
-  // We use fieldRow because it is public.
-  extendedInput.getFieldRow = function () {
-    return this.fieldRow;
-  };
-
   /**
    * Enable the specified field helper with the specified options for this
    * input's connection

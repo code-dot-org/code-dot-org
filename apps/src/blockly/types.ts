@@ -257,9 +257,6 @@ export interface ExtendedInput extends BlocklyCore.Input {
     fieldHelper: string,
     options: FieldHelperOptions
   ) => ExtendedInput;
-  // Blockly explicitly uses any for this type
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  getFieldRow: () => BlocklyCore.Field<any>[];
 }
 export interface ExtendedConnection extends BlocklyCore.Connection {
   getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;
