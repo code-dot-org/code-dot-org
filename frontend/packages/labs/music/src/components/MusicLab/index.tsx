@@ -5,7 +5,6 @@ import {BlockTypes} from '../../blockly/blockTypes';
 import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
-import type {ProjectSources} from '@code-dot-org/projects';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
 import type {
   Environment,
@@ -18,8 +17,9 @@ import {
   WorkspaceHeader,
 } from '@code-dot-org/lab';
 import blocks from '../../blockly/blocks/simple2';
-import {useLevelProperties} from '@code-dot-org/lab/contexts';
+import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
+import type {ProjectSources} from '@code-dot-org/projects';
 import Controls from '../Controls';
 import Timeline from '../Timeline';
 import HeaderButtons from '../HeaderButtons';
@@ -74,6 +74,9 @@ const MusicLab = () => {
 
   const levelProperties = useLevelProperties<MusicLevelProperties>();
   console.log(useLevelProperties);
+
+  const {currentSources} = useSources<BlocklySerialization>();
+  console.log('SOURCES', currentSources);
 
   const {skipUrl} = levelProperties;
   const guideMode = levelProperties.levelData.guideMode;
@@ -253,6 +256,7 @@ const MusicLab = () => {
                   readOnly: levelProperties.multipleChoice ? true : undefined,
                 }}
                 startBlocks={
+                  currentSources?.source ||
                   levelProperties.template?.startBlocks ||
                   levelProperties.startBlocks ||
                   DefaultStartBlocks

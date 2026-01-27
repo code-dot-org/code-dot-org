@@ -18,9 +18,14 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
  */
 export function getInitialBlocklySources<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
->(levelProperties: T, projectSources?: U): U | undefined {
-  const startSources = levelProperties.startSources as U | undefined;
+  U = string,
+>(
+  levelProperties: T,
+  projectSources?: ProjectSources<U>,
+): ProjectSources<U> | undefined {
+  const startSources = levelProperties.startSources as
+    | ProjectSources<U>
+    | undefined;
 
   if (isStartMode) {
     return startSources;
@@ -31,7 +36,7 @@ export function getInitialBlocklySources<
       source: toolboxToWorkspaceBlocks(
         (levelProperties as BlocklyLevelProperties).toolboxDefinition,
       ),
-    } as U;
+    } as ProjectSources<U>;
   }
 
   return getInitialSources<T, U>(levelProperties, projectSources);

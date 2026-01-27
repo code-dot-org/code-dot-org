@@ -166,10 +166,10 @@ export interface ParentLevelPathLink {
 
 export interface LabProps<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 > {
   levelProperties: T;
-  initialSources?: U;
+  initialSources?: ProjectSources<U>;
   isShareView?: boolean;
   isReadOnlyWorkspace?: boolean;
   channel?: Channel;

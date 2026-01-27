@@ -61,9 +61,9 @@ export interface ProjectVersion {
 }
 
 // Represents the structure of the full project sources object (i.e. the main.json file)
-export interface ProjectSources<T extends object = object> {
-  // Source code can either be a string or a nested JSON object (for multi-file).
-  source: string | Source<T>;
+export interface ProjectSources<T = string> {
+  /** The source data */
+  source: Source<T>;
   // Optional lab-specific configuration for this project
   labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
@@ -71,7 +71,7 @@ export interface ProjectSources<T extends object = object> {
 
 // -- SOURCE -- //
 
-export type Source<T extends object = object> = T | MultiFileSource;
+export type Source<T> = T extends object ? T : string;
 
 export interface SaveSourceOptions {
   projectType?: string;

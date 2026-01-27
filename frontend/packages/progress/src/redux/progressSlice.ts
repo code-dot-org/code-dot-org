@@ -441,7 +441,7 @@ export const getUserAppOptionsPath: (
     const scriptName = state.progress.scriptName;
 
     const lessonPosition = state.progress.lessons?.find(
-      lesson => lesson.id === state.progress.currentLessonId
+      lesson => lesson.id === state.progress.currentLessonId,
     )?.relativePosition;
 
     const currentLevel = getCurrentLevel(state);

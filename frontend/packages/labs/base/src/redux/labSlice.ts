@@ -24,7 +24,6 @@ import {currentUserActions} from '@code-dot-org/user/redux';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import type {RootState, AppDispatch} from '../redux/store';
-import {LevelPropertiesValidator} from '../responseValidators';
 import type {LevelProperties, PartialUserAppOptions} from '../types';
 import {queryParams, updateQueryParam} from '../utils/queryParams';
 
@@ -198,7 +197,10 @@ export const setUpWithLevel = createAsyncThunk<
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
-  LabRegistry.lifecycleNotifier.notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
+  LabRegistry.lifecycleNotifier.notify(
+    LifecycleEvent.LevelLoadStarted,
+    payload.levelId,
+  );
   console.log('setUpWithLevel');
 
   try {
@@ -225,7 +227,9 @@ export const setUpWithLevel = createAsyncThunk<
       if (payload.userAppOptionsPath) {
         loadUserAppOptions(payload.userAppOptionsPath).then(result => {
           if (result.isInstructor) {
-            thunkAPI.dispatch(currentUserActions.setUserRoleInCourse(CourseRoles.Instructor));
+            thunkAPI.dispatch(
+              currentUserActions.setUserRoleInCourse(CourseRoles.Instructor),
+            );
           }
         });
       }
@@ -237,7 +241,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState
+        thunkAPI.getState,
       );
       return;
     }
@@ -251,7 +255,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState
+        thunkAPI.getState,
       );
       return;
     }
@@ -276,13 +280,13 @@ export const setUpWithLevel = createAsyncThunk<
           payload.channelId,
           levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView,
-          LabRegistry.metricsReporter
+          LabRegistry.metricsReporter,
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.levelId,
           levelProperties.isProjectLevel || false,
           payload.userId,
-          payload.scriptId
+          payload.scriptId,
         );
 
     // Only set the project manager and initiate load
@@ -299,7 +303,7 @@ export const setUpWithLevel = createAsyncThunk<
         {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
-        thunkAPI.getState
+        thunkAPI.getState,
       );
       return;
     }
@@ -318,7 +322,11 @@ export const setUpWithLevel = createAsyncThunk<
       abuseScore,
       sharingDisabled,
       isTeacherOfProjectOwner,
-    } = await setUpAndLoadProject(levelProperties.appName, projectManager, thunkAPI.dispatch);
+    } = await setUpAndLoadProject(
+      levelProperties.appName,
+      projectManager,
+      thunkAPI.dispatch,
+    );
     console.log('LOADED', levelProperties, sources, channel);
     setProjectAndLevelData(
       {
@@ -331,7 +339,7 @@ export const setUpWithLevel = createAsyncThunk<
       },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
-      thunkAPI.getState
+      thunkAPI.getState,
     );
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -544,7 +552,7 @@ function setProjectAndLevelData(
   },
   aborted: boolean,
   dispatch: AppDispatch,
-  getState: () => RootState
+  getState: () => RootState,
 ) {
   // Only set channel and sources if the request has not been cancelled.
   if (aborted) {
@@ -561,7 +569,7 @@ function setProjectAndLevelData(
     data.abuseScore,
     isReadOnlyWorkspace(getState()),
     data.sharingDisabled,
-    data.isTeacherOfProjectOwner
+    data.isTeacherOfProjectOwner,
   );
 }
 

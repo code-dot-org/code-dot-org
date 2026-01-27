@@ -27,8 +27,7 @@ const LabWrapper = ({levelId, children}: LabWrapperProps) => {
   return children;
 };
 
-export interface LabProps
-  extends PropsWithChildren {
+export interface LabProps extends PropsWithChildren {
   /** Whether or not the lab considers itself loading */
   isLoading: boolean;
   /** The level id */
@@ -41,11 +40,7 @@ export interface LabProps
  * A wrapper for any lab that will connect it to the appropriate data sources
  * and contexts.
  */
-const Lab = ({
-  isLoading,
-  levelId,
-  children,
-}: LabProps) => {
+const Lab = ({isLoading, levelId, children}: LabProps) => {
   // Ensure FontAwesome icons are available for all labs
   useEffect(() => {
     injectFontAwesome();

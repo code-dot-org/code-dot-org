@@ -166,8 +166,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     // the container to build it offscreen before copying it to its final
     // location.
     const container = inline ? document.createElement('div') : anchor.current;
-
-    console.log(container, workspace.current);
     if (!container) {
       return;
     }
@@ -239,12 +237,33 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       workspace.current.addChangeListener(grayOutUndeletableBlocks);
     }
 
+    // Add custom events
+    // Add the orphan disabler which disables blocks that aren't connected to top
+    // blocks or procedures, etc.
+    workspace.current.addChangeListener(disableOrphans);
+
+    // Add main change listener
+    if (onChange) {
+      workspace.current.addChangeListener(onChange);
+    }
+
+    // Deconstruct the blockly instance when the component is unmounted
+    return () => {
+      registry.current.unregisterAll();
+
+      // Dispose of the workspace
+      workspace.current?.dispose();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!workspace.current) {
+      return;
+    }
+
     // JSON serialization
     if (startBlocks) {
       Blockly.serialization.workspaces.load(startBlocks, workspace.current);
-      for (const block of workspace.current.getTopBlocks()) {
-        console.log('JSON SERIAL', block);
-      }
     }
 
     // Reposition blocks if this is a full workspace
@@ -256,6 +275,11 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       // Move top block to corner (hopefully there is only one)
       for (const block of workspace.current.getTopBlocks()) {
         block.moveTo(new Blockly.utils.Coordinate(0, 0));
+      }
+
+      const container = workspace.current.getInjectionDiv();
+      if (!container) {
+        return;
       }
 
       // Copy over SVG rendered blocks to the span in our anchor
@@ -295,25 +319,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         }
       }
     }
-
-    // Add custom events
-    // Add the orphan disabler which disables blocks that aren't connected to top
-    // blocks or procedures, etc.
-    workspace.current.addChangeListener(disableOrphans);
-
-    // Add main change listener
-    if (onChange) {
-      workspace.current.addChangeListener(onChange);
-    }
-
-    // Deconstruct the blockly instance when the component is unmounted
-    return () => {
-      registry.current.unregisterAll();
-
-      // Dispose of the workspace
-      workspace.current?.dispose();
-    };
-  }, []);
+  }, [startBlocks]);
 
   // Resize the Blockly workspace when the container changes size
   if (!inline) {

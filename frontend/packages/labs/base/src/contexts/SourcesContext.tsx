@@ -11,11 +11,14 @@ import {
 } from 'react';
 
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
+import type {Channel} from '@code-dot-org/api/channels';
 import type {ProjectManager, ProjectSources} from '@code-dot-org/projects';
 
 import {START_SOURCES} from '../constants';
 import StartOverDialog from '../dialogs/components/StartOverDialog';
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import LabRegistry from '../LabRegistry';
+import {LifecycleEvent} from '../LifecycleNotifier';
 import {labActions} from '../redux';
 import {useAppSelector} from '../redux/store';
 import {LevelProperties, LabProps} from '../types';
@@ -28,9 +31,9 @@ const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 /**
  * Describes the state of the sources available in the current lab.
  */
-export interface SourcesContent<T extends ProjectSources = ProjectSources> {
-  currentSources: T;
-  updateSources: (newSources: T, forceSave?: boolean) => void;
+export interface SourcesContent<T = string> {
+  currentSources: ProjectSources<T>;
+  updateSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
   setReinitializationHandler: (handler: () => void) => void;
   startOver: () => void;
@@ -52,26 +55,31 @@ const SourcesContext = createContext<SourcesContent>({
 /**
  * This hook returns the current lab sources.
  */
-export const useSources = <T extends ProjectSources = ProjectSources>() => {
+export const useSources = <T = string,>() => {
   return useContext(SourcesContext) as unknown as SourcesContent<T>;
 };
 
 export interface SourcesProviderProps<
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 > extends LabProps<T, U> {
-  defaultSources: U;
+  defaultSources: ProjectSources<U>;
   /**
    * Optionally supply a custom ProjectManager to use in place of the LabRegistry's ProjectManager.
    * Currently only used in very specific multi-project scenarios.
    */
   projectManager?: ProjectManager;
   /** How to determine the initial sources */
-  getInitialSources?: (levelProperties: T, projectSources?: U) => U | undefined;
+  getInitialSources?: (
+    levelProperties: T,
+    projectSources?: ProjectSources<U>,
+  ) => ProjectSources<U> | undefined;
   /** The callback to determine initial sources to use when starting over */
-  startOverSources?: (levelProperties: T) => U;
+  startOverSources?: (levelProperties: T) => ProjectSources<U>;
   /** The message to display when potentially starting over. */
   defaultStartOverMessage?: string;
+  /** A transformer to parse the sources into the typed ProjectSources form expected */
+  transform?: (projectSources: ProjectSources<U>) => ProjectSources<U>;
 }
 
 export const STARTOVER_WORKSPACE_TEXT_MESSAGE =
@@ -82,7 +90,7 @@ export const STARTOVER_WORKSPACE_TEXT_MESSAGE =
  */
 export const SourcesProvider = <
   T extends LevelProperties = LevelProperties,
-  U extends ProjectSources = ProjectSources,
+  U = string,
 >({
   levelProperties,
   initialSources,
@@ -91,9 +99,10 @@ export const SourcesProvider = <
   getInitialSources,
   startOverSources,
   defaultStartOverMessage,
+  transform,
   children,
 }: SourcesProviderProps<T, U> & PropsWithChildren) => {
-  const [currentSources, setCurrentSources] = useState<U>(
+  const [currentSources, setCurrentSources] = useState<ProjectSources<U>>(
     () =>
       (getInitialSources || defaultGetInitialSources<T, U>)(
         levelProperties,
@@ -110,7 +119,9 @@ export const SourcesProvider = <
   const readonlyWorkspaceRef = useRef(readonlyWorkspace);
   readonlyWorkspaceRef.current = readonlyWorkspace;
 
-  const [startOverMessage, setStartOverMessage] = useState<string | undefined>(undefined);
+  const [startOverMessage, setStartOverMessage] = useState<string | undefined>(
+    undefined,
+  );
 
   const reinitializationHandler = useRef<() => void | null>(null);
   const setReinitializationHandler = useCallback((handler: () => void) => {
@@ -118,18 +129,21 @@ export const SourcesProvider = <
   }, []);
 
   const reinitializeSources = useCallback(
-    (sources: U, save: boolean = false) => {
-      console.log("REINIT SOURCES", sources);
-      setCurrentSources(sources);
+    (sources: ProjectSources<U>, save: boolean = false) => {
+      console.log('REINIT SOURCES', sources);
+      setCurrentSources(transform?.(sources) || sources);
       if (save && !readonlyWorkspaceRef.current) {
-        (projectManager || LabRegistry.projectManager)?.save(sources, true);
+        (projectManager || LabRegistry.projectManager)?.save(
+          sources as ProjectSources,
+          true,
+        );
       }
 
       if (reinitializationHandler.current) {
         reinitializationHandler.current();
       }
     },
-    [projectManager, setCurrentSources, reinitializationHandler],
+    [projectManager, transform, setCurrentSources, reinitializationHandler],
   );
 
   useEffect(() => {
@@ -142,7 +156,7 @@ export const SourcesProvider = <
   }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
-  const memoizedStartOverSources: U = useMemo(() => {
+  const memoizedStartOverSources: ProjectSources<U> = useMemo(() => {
     if (startOverSources) {
       return startOverSources(levelProperties);
     }
@@ -150,31 +164,50 @@ export const SourcesProvider = <
     const {templateSources, startSources} = levelProperties;
     return isStartMode
       ? defaultSources
-      : ((templateSources || startSources || defaultSources) as U);
+      : ((templateSources ||
+          startSources ||
+          defaultSources) as ProjectSources<U>);
   }, [startOverSources, defaultSources, levelProperties]);
 
   const updateSources = useCallback(
-    (newSources: U, forceSave = false) => {
+    (newSources: ProjectSources<U>, forceSave = false) => {
       setCurrentSources(prev => {
+        const transformed = transform?.(newSources) || newSources;
+
         // Perform a deep equality check to prevent unnecessary re-renders
-        if (isEqual(prev, newSources)) {
+        if (isEqual(prev, transformed)) {
           return prev;
         }
-        return newSources;
+
+        return transformed;
       });
 
       if (!readonlyWorkspaceRef.current) {
         (projectManager || LabRegistry.projectManager)?.save(
-          newSources,
+          newSources as ProjectSources,
           forceSave,
         );
       }
     },
-    [setCurrentSources, projectManager],
+    [setCurrentSources, transform, projectManager],
   );
 
+  const onLevelLoad = useCallback(
+    (
+      _levelProperties?: LevelProperties,
+      _channel?: Channel,
+      initialSources?: ProjectSources,
+    ) => {
+      updateSources(initialSources as ProjectSources<U>);
+    },
+    [updateSources],
+  );
+
+  // When the level changes, reflect the loaded initialSources
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, onLevelLoad);
+
   const onStartOver = useCallback(() => {
-    reinitializeSources(memoizedStartOverSources as U, true);
+    reinitializeSources(memoizedStartOverSources as ProjectSources<U>, true);
     setStartOverMessage(undefined);
   }, [reinitializeSources, memoizedStartOverSources]);
 
@@ -205,7 +238,9 @@ export const SourcesProvider = <
           onConfirm={onStartOver}
           onCancel={() => setStartOverMessage(undefined)}
           message={
-            startOverMessage || defaultStartOverMessage || STARTOVER_WORKSPACE_TEXT_MESSAGE
+            startOverMessage ||
+            defaultStartOverMessage ||
+            STARTOVER_WORKSPACE_TEXT_MESSAGE
           }
         />
       )}

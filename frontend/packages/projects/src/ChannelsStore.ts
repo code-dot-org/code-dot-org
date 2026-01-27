@@ -12,16 +12,8 @@ import type {Channel, DefaultChannel} from './types';
 export class ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(
-    levelId: number,
-    scriptId?: number,
-    userId?: number,
-  ) {
-    return projectsApi.getChannelForLevel(
-      levelId,
-      scriptId,
-      userId,
-    );
+  loadForLevel(levelId: number, scriptId?: number, userId?: number) {
+    return projectsApi.getChannelForLevel(levelId, scriptId, userId);
   }
 
   load(channelId: string) {

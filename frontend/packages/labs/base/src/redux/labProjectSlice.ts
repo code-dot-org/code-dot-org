@@ -187,7 +187,7 @@ const projectSlice = createSlice({
       state.projectSources = {
         ...state.projectSources,
         source: action.payload,
-      };
+      } as ProjectSources<MultiFileSource> as unknown as ProjectSources;
     },
     setProjectSourceLevelId(state, action: PayloadAction<number | undefined>) {
       state.projectSourceLevelId = action.payload;

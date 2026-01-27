@@ -49,30 +49,32 @@ export const ProjectProvider = ({
   const levelProperties = useMaybeLevelProperties();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const userId = useAppSelector(
-    state => state.progress.viewAsUserId || undefined
+    state => state.progress.viewAsUserId || undefined,
   );
   const scriptId = useAppSelector(
-    state => state.progress.scriptId || undefined
+    state => state.progress.scriptId || undefined,
   );
 
   const isStandaloneProjectLevel = !!levelProperties?.isProjectLevel;
   // Only show share and remix if hideShareAndRemix is explicitly false.
   const hideShareAndRemix = levelProperties?.hideShareAndRemix !== false;
   const loadedChannelId = useAppSelector(
-    state => state.lab.channel && state.lab.channel.id
+    state => state.lab.channel && state.lab.channel.id,
   );
   const isOwnerOfChannel = useAppSelector(
-    state => state.lab.channel && state.lab.channel.isOwner
+    state => state.lab.channel && state.lab.channel.isOwner,
   );
 
-  const userAppOptionsPath = useAppSelector(progressActions.getUserAppOptionsPath);
+  const userAppOptionsPath = useAppSelector(
+    progressActions.getUserAppOptionsPath,
+  );
 
   const dispatch = useAppDispatch();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
 
   // When the level changes, reset metadata relating to the project in redux.
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () =>
-    dispatch(labProjectActions.resetProjectMetadata())
+    dispatch(labProjectActions.resetProjectMetadata()),
   );
 
   useEffect(() => {
@@ -85,17 +87,19 @@ export const ProjectProvider = ({
     // If we have a level id, set up the lab with that level. If we also have a channel id,
     // we will load the project based on that channel id, otherwise we will look up a channel id
     // for the level.
-    const promise = (currentLevelId && levelProperties) ? 
-      dispatch(
-        labActions.setUpWithLevel({
-          levelId: currentLevelId,
-          userId,
-          scriptId,
-          levelProperties,
-          userAppOptionsPath,
-          channelId,
-        })
-      ) : undefined;
+    const promise =
+      currentLevelId && levelProperties
+        ? dispatch(
+            labActions.setUpWithLevel({
+              levelId: currentLevelId,
+              userId,
+              scriptId,
+              levelProperties,
+              userAppOptionsPath,
+              channelId,
+            }),
+          )
+        : undefined;
 
     return () => {
       // If we have an early return, we will abort the promise in progress.
