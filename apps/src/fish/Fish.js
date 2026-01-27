@@ -61,10 +61,8 @@ Fish.prototype.init = function (config) {
   config.pinWorkspaceToBottom = true;
 
   const reportActivityEvent = () => {
-    const {isProjectLevel} = getStore().getState().pageConstants;
-
     analyticsReporter.sendEvent(
-      isProjectLevel ? EVENTS.PROJECT_ACTIVITY : EVENTS.LEVEL_ACTIVITY,
+      EVENTS.LEVEL_ACTIVITY,
       {
         signedIn: config.isSignedIn,
         unitName: config.scriptName,
@@ -121,6 +119,11 @@ Fish.prototype.init = function (config) {
 
 // Called by the fish app when it wants to go to the next level.
 Fish.prototype.onContinue = function () {
+  // Report level activity before continuing (which causes a page reload)
+  if (this.reportActivityEvent_) {
+    this.reportActivityEvent_();
+  }
+
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
