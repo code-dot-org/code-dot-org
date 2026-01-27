@@ -3,7 +3,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
@@ -27,7 +26,6 @@ import {
   getDynamicInstructions,
 } from '../../redux/instructions';
 import styleConstants from '../../styleConstants';
-import color from '../../util/color';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
@@ -46,6 +44,8 @@ import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
 import {hasInstructions} from './utils';
 
+import styles from './TopInstructions.module.scss';
+
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -62,17 +62,6 @@ export const TabType = {
 };
 
 // Minecraft-specific styles
-const craftStyles = {
-  instructionsBody: {
-    // $below-header-background from craft/style.scss
-    backgroundColor: '#646464',
-  },
-  headerBar: {
-    color: color.white,
-    backgroundColor: '#3b3b3b',
-  },
-};
-
 class TopInstructions extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
@@ -627,26 +616,38 @@ class TopInstructions extends Component {
     const isCSF = !noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
 
-    const topInstructionsStyle = [
+    const topInstructionsClass = classNames(
       isRtl ? styles.mainRtl : styles.main,
       noVisualization && styles.noViz,
-      mainStyle,
-      {
-        height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
-      },
       isEmbedView && styles.embedView,
-      dynamicInstructions &&
-        overlayVisible &&
-        styles.dynamicInstructionsWithOverlay,
-    ];
+      !standalone && 'editor-column'
+    );
 
-    const instructionsContainerStyle = [
+    const topInstructionsStyle = {
+      height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT,
+      ...(dynamicInstructions && overlayVisible
+        ? {zIndex: OVERLAY_Z_INDEX + 1}
+        : {}),
+      ...mainStyle,
+    };
+
+    const baseContainerClass =
       isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
-        : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody,
-      tabSelected === TabType.REVIEW && styles.commitAndReview,
-    ];
+        : !containerStyle && styles.body;
+
+    const instructionsContainerClass = classNames(
+      baseContainerClass,
+      isMinecraft && styles.craftBody,
+      tabSelected === TabType.REVIEW && styles.commitAndReview
+    );
+
+    const instructionsContainerStyle = containerStyle || {
+      top: HEADER_HEIGHT,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    };
 
     // Only display the help tab when there are one or more videos or
     // additional resource links.
@@ -698,7 +699,7 @@ class TopInstructions extends Component {
     return (
       <div
         style={topInstructionsStyle}
-        className={classNames({'editor-column': !standalone})}
+        className={topInstructionsClass}
         ref={ref => (this.topInstructions = ref)}
       >
         <AudioQueue>
@@ -735,7 +736,11 @@ class TopInstructions extends Component {
             {...passThroughHeaderProps}
           />
           <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
-            <div style={instructionsContainerStyle} id="scroll-container">
+            <div
+              style={instructionsContainerStyle}
+              className={instructionsContainerClass}
+              id="scroll-container"
+            >
               {this.renderInstructions(isCSF)}
               {tabSelected === TabType.RESOURCES && (
                 <HelpTabContents
@@ -773,7 +778,7 @@ class TopInstructions extends Component {
               )}
               {tabSelected === TabType.TEACHER_ONLY &&
                 exampleSolutions.length > 0 && (
-                  <div style={styles.exampleSolutions}>
+                  <div className={styles.exampleSolutions}>
                     {exampleSolutions.map((example, index) => (
                       <Button
                         __useDeprecatedTag
@@ -784,7 +789,7 @@ class TopInstructions extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                         ref={ref => (this.teacherOnlyTab = ref)}
-                        style={styles.exampleSolutionButton}
+                        className={styles.exampleSolutionButton}
                       />
                     ))}
                   </div>
@@ -826,79 +831,9 @@ class TopInstructions extends Component {
     );
   }
 }
-
-const styles = {
-  main: {
-    position: 'absolute',
-    marginLeft: 15,
-    top: 0,
-    right: 0,
-    // left handled by media queries for .editor-column
-  },
-  mainRtl: {
-    position: 'absolute',
-    marginRight: 15,
-    top: 0,
-    left: 0,
-    // right handled by media queries for .editor-column
-  },
-  noViz: {
-    left: 0,
-    right: 0,
-    marginRight: 0,
-    marginLeft: 0,
-  },
-  body: {
-    backgroundColor: 'white',
-    paddingLeft: 10,
-    paddingRight: 10,
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflowY: 'scroll',
-  },
-  csfBody: {
-    backgroundColor: '#ddd',
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflow: 'hidden',
-  },
-  commitAndReview: {
-    backgroundColor: color.background_gray,
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflowY: 'auto',
-  },
-  embedView: {
-    height: undefined,
-    bottom: 0,
-  },
-  title: {
-    textAlign: 'center',
-    height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px',
-  },
-  dynamicInstructionsWithOverlay: {
-    zIndex: OVERLAY_Z_INDEX + 1,
-  },
-  exampleSolutions: {
-    marginTop: 10,
-  },
-  exampleSolutionButton: {
-    marginLeft: 20,
-  },
-};
 // Note: usually the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
-export const UnconnectedTopInstructions = Radium(TopInstructions);
+export const UnconnectedTopInstructions = TopInstructions;
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
@@ -958,4 +893,4 @@ export default connect(
   }),
   null,
   {forwardRef: true}
-)(Radium(TopInstructions));
+)(TopInstructions);
