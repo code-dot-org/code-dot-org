@@ -1,0 +1,43 @@
+.collapseButton {
+  background-color: #fff;
+  border: 2px solid $color-neutral-dark;
+  color: $color-neutral-dark;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: $color-neutral-dark20;
+    box-shadow: none;
+  }
+}
+
+.collapseIcon {
+  margin-right: 5px;
+}
+
+.collapseIconRtl {
+  margin-left: 5px;
+}
+
+.textWrapper {
+  display: inline-block;
+  user-select: none;
+}
+
+.labelGrid {
+  display: grid;
+}
+
+.label {
+  grid-row: 1;
+  grid-column: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
