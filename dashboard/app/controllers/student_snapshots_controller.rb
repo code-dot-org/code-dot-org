@@ -1,5 +1,6 @@
 class StudentSnapshotsController < ApplicationController
   include LevelsHelper
+  include Rails.application.routes.url_helpers
 
   before_action :authenticate_user!
 
@@ -37,11 +38,26 @@ class StudentSnapshotsController < ApplicationController
     return render json: {error: "Can't find Lesson id=#{lesson_id}"}, status: :bad_request unless lesson
 
     lesson_level_ids = lesson.levels&.map(&:id)&.presence || []
+    script = lesson.script
+    unit_group_unit = script&.unit_group_units&.first
     cfu_levels_data = []
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
         question_text, answers = get_level_question_and_answers(level)
         level_index_in_lesson = lesson_level_ids.index(level.id)
+
+        # Build URL to the level using the existing helper
+        level_url = begin
+          if unit_group_unit
+            build_script_level_url(script_level, unit_group_unit: unit_group_unit)
+          else
+            nil
+          end
+        rescue => exception
+          # If URL building fails, log error but don't break the response
+          Rails.logger.warn("Failed to build level URL for script_level #{script_level.id}: #{exception.message}")
+          nil
+        end
 
         cfu_levels_data << {
           id: level.id,
@@ -54,7 +70,8 @@ class StudentSnapshotsController < ApplicationController
           progression: script_level.progression,
           progression_display_name: script_level.progression ? I18n.t(script_level.progression, scope: %i[data progressions], default: script_level.progression) : nil,
           question_text: question_text,
-          answers: answers
+          answers: answers,
+          level_url: level_url
         }
       end
     end
