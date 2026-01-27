@@ -61,14 +61,18 @@ Fish.prototype.init = function (config) {
   config.pinWorkspaceToBottom = true;
 
   const reportActivityEvent = () => {
+    // For publicly cached pages, config.isSignedIn will be false even when signed in.
+    // Check the Redux store for the actual sign-in state.
+    const state = getStore().getState();
+    const signedIn = state.currentUser?.signInState === 'SignedIn';
     analyticsReporter.sendEvent(
       EVENTS.LEVEL_ACTIVITY,
       {
-        signedIn: config.isSignedIn,
+        signedIn,
         unitName: config.scriptName,
         levelId: config.serverLevelId,
         levelName: config.level.name,
-        appName: 'fish',
+        appName: config.app,
         levelPath: window.location.pathname,
       },
       PLATFORMS.STATSIG
