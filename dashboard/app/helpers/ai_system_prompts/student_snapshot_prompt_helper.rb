@@ -30,11 +30,11 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       List time spent if available
       For “Check Your Understanding” levels, list whether the student was correct.
       List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
-    Write the following summary based on all info and above steps:
-      Progress: Write 1-2 sentences about the student's progress through the levels, optional sublevels, and finally the assessment level. The student's performance on the assessment level is the most important.
-      Misconceptions: Write 1-2 sentences about any of the student’s misconceptions in the lesson. If there are no misconceptions, say “Student showed no misconceptions”
-      Assessment: Write 1-2 sentences specifically about the assessment level, including a brief description of what they did and what their program does. Write about what skills they did well on and/or need to improve on. Only include information about the assessment level.
-      Next Steps: Write 1 sentence based on any misconceptions or issues with their code levels (especially the assessment level) with suggestions on what to do next. This could be going over concepts, trying additional levels or sublevels or just stating that they should continue on to the next lesson. Do not recommend completing additional sublevels if the student has completed one and there are no misconceptions.
+    Write the following summary based on all info and above steps. returned in JSON format and should be composed as follows:
+      {progress: Write 1-2 sentences about the student's progress through the levels, optional sublevels, and finally the assessment level. The student's performance on the assessment level is the most important,
+      misconceptions: Write 1-2 sentences about any of the student’s misconceptions in the lesson. If there are no misconceptions, say “Student showed no misconceptions”,
+      assessment: Write 1-2 sentences specifically about the assessment level, including a brief description of what they did and what their program does. Write about what skills they did well on and/or need to improve on. Only include information about the assessment level,
+      next_steps: Write 1 sentence based on any misconceptions or issues with their code levels (especially the assessment level) with suggestions on what to do next. This could be going over concepts, trying additional levels or sublevels or just stating that they should continue on to the next lesson. Do not recommend completing additional sublevels if the student has completed one and there are no misconceptions,}
     Use the following lesson info to complete the steps above:
   INSIGHT_PROMPT
 
@@ -70,7 +70,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
     levels = lesson.levels.order(:position)
     assessment_level = lesson.levels.where(type: 'Pythonlab').last
-    level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_full_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
+    level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_assessment_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
     lesson_info_str = lesson_info.map {|key, value| "#{key}: #{value}"}.join("\n")
 
@@ -148,7 +148,7 @@ Levels: [{
 
   # Get a detailed version of level info for prompt
   # This is used for assessment levels
-  def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id, parent_script_level = nil, parent_level_display_text = nil)
+  def self.get_assessment_level_prompt_info(level, student_id, unit_id, section_id, teacher_id, parent_script_level = nil, parent_level_display_text = nil)
     return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
@@ -166,7 +166,7 @@ Levels: [{
     sublevel_data = []
     if script_level&.bubble_choice?
       sublevels = level.sublevels
-      sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
+      sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_assessment_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
     end
 
     section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
