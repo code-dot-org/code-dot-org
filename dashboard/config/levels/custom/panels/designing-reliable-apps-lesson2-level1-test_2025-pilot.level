@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-01-26T23:31:19.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Synchronous Programming\n\n**Synchronous programming** is code that blocks progress by waiting for one task to fully finish before starting the next.",
+        "imageUrl": "https://images.code.org/40f48b98dcd32afdc633e1476b9efb46-sychronous.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-bottom-center"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-27 00:08:24 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>
