@@ -476,7 +476,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         className={classNames(styles.resourcePanel, className)}
       >
         {!isStartMode && isOnboardingTourEnabled && <OnboardingTourSteps />}
-        {isValidationTourEnabled && (
+        {!isStartMode && isValidationTourEnabled && (
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
