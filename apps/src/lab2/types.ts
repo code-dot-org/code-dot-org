@@ -254,7 +254,7 @@ export interface LevelProperties {
   isAssessment?: boolean;
   type?: string;
   starterAssets?: {[key: string]: string};
-  showRubric?: boolean;
+  rubricId?: number;
   customHelperLibrary?: string;
   validationCode?: string;
   hideVersionHistory?: boolean;

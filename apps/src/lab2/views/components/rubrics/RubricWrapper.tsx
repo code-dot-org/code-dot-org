@@ -6,12 +6,10 @@ import React, {
   useState,
 } from 'react';
 
-import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getTaRubricFeedbackForStudent} from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 import {RubricData, TeacherEvaluations} from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useLevelProperties} from '../../LevelPropertiesWrapper';
 
@@ -36,8 +34,8 @@ export function useRubric() {
  * Rubric context wrapper that loads the lesson rubric and teacher evaluations asynchronously.
  */
 const RubricWrapper: React.FC<{children: React.ReactNode}> = ({children}) => {
-  const rubricId = useAppSelector(state => getCurrentLesson(state)?.rubric?.id);
-  const showRubric = useLevelProperties().levelProperties.showRubric || false;
+  const rubricId = useLevelProperties().levelProperties.rubricId;
+  const showRubric = Boolean(rubricId);
 
   const [rubricData, setRubricData] = useState<RubricData>();
   const [teacherEvaluations, setTeacherEvaluations] =

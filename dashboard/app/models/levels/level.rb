@@ -939,9 +939,8 @@ class Level < ApplicationRecord
     end
 
     rubric = script_level&.rubric
-    # TODO: should we be including the rubric here?
     if rubric
-      properties_camelized[:showRubric] = true
+      properties_camelized[:rubricId] = rubric.id
     end
     properties_camelized
   end
