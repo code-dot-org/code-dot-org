@@ -1,6 +1,6 @@
 name 'designing-reliable-apps-lesson2-level6-test_2025-pilot'
 display_name 'Analogy: Synchronous vs. Asynchronous'
-description 'level description here'
+description '### Explore the difference between blocking (synchronous) and non-blocking (asynchronous) code patterns using kitchen analogies.'
 
 sublevels
 level 'designing-reliable-apps-lesson2-level6a-test_2025-pilot'

@@ -1,0 +1,156 @@
+name 'pl-aif-2-U4-pure-methods-vocab'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pure Functions & Side Effects
+
+#### When you work with data in JavaScript, how you write a function matters just as much as what it does.
+
+#### Some functions quietly change data behind the scenes. Others leave the original data untouched. Understanding the difference helps you write code that is easier to trust, debug, and explain.
+
+<img src="https://images.code.org/bff91671a8287ee446cd10565f019e5f-image-1769542918474.png" alt="phone with a volunteer app showing 2 opportinies" width="250px" style="border-radius:10px; float:right; margin: 0 40px 00px 10px;">
+
+
+## Scenario: Filtering Roles
+
+#### Imagine your app starts with a list of opportunities.
+
+#### You run a function to filter the list based on category and age.
+
+#### After the function runs, one of two things could be true:
+
+- #### The original list stayed the same, and you got a new filtered list
+
+- #### The original list was changed, even if you didn’t mean to change it
+
+
+<div style="clear:both;"></div>
+
+
+<div style="background-color:#B7E0E5; border-radius:10px; padding:18px; margin:18px auto; max-width:85%;"> <p style="font-size:16pt; margin:0; line-height:135%;"><strong>Why this matters:</strong> When data changes unexpectedly, it can affect other parts of your app and confuse users.</p> </div>
+
+---
+
+## Pure Function
+
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin-top:18px; font-size:14pt; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+
+
+<p style = "font-size:14pt";>
+✅ What is a pure function?
+</p>
+
+
+<p style= "font-size: 14pt";><b>A pure function:</b>
+
+</p>
+
+<ul>
+<li style="font-size:14pt";>Always returns the same output for the same input</li>
+<li style="font-size:14pt";>Does not change anything outside itself</li>
+<li style="font-size:14pt";>Does not modify the original data it uses</li>
+</ul>
+
+<p style= "font-size:14pt":>
+In other words, when a pure function runs, the original array stays exactly the same.
+The function only computes and returns a new value.
+
+</p>
+
+</div>
+
+##Side Effect
+
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin-top:18px; font-size:14pt; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+
+
+
+<p style="font-size:14pt;">
+⚠️ What is a side effect?
+</p>
+
+<p style="font-size:14pt;"><b>A side effect:</b></p>
+
+<ul>
+  <li style="font-size:14pt;">Modifies an array that was passed in</li>
+  <li style="font-size:14pt;">Changes a global variable</li>
+  <li style="font-size:14pt;">Updates the screen</li>
+  <li style="font-size:14pt;">Logs to the console</li>
+</ul>
+
+<p style="font-size:14pt;">
+Side effects can make code harder to predict because something changes somewhere else.
+</p>
+
+</div>
+
+---
+
+</div>
+
+## Comparing the Two
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:16px;">
+
+  <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <strong style="font-size:14pt;">Pure function</strong>
+    <ul>
+      <li style="font-size:14pt;">Predictable results</li>
+      <li style="font-size:14pt;">Original data stays the same</li>
+      <li style="font-size:14pt;">Easier to test and debug</li>
+      <li style="font-size:14pt;">Safer for shared data</li>
+    </ul>
+  </div>
+
+  <div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <strong style="font-size:14pt;">Function with side effects</strong>
+    <ul>
+      <li style="font-size:14pt;">Can change data unexpectedly</li>
+      <li style="font-size:14pt;">Harder to reason about</li>
+      <li style="font-size:14pt;">Order of operations matters</li>
+      <li style="font-size:14pt;">Can impact other code</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+## Common Methods and Their Behavior
+
+
+<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;">
+
+  <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <strong style="font-size:14pt;">🧼 Pure (non-mutating)</strong>
+    <p style="font-size:14pt;">
+      These methods return a <strong>new array</strong> and leave the original unchanged.
+    </p>
+    <ul>
+      <li style="font-size:14pt;"><code>.map()</code></li>
+      <li style="font-size:14pt;"><code>.filter()</code></li>
+      <li style="font-size:14pt;">Loops that build a copy</li>
+    </ul>
+  </div>
+
+  <div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <strong style="font-size:14pt;">🧨 Mutating (side effects)</strong>
+    <p style="font-size:14pt;">
+      These approaches can change existing data or rely on external effects.
+    </p>
+    <ul>
+      <li style="font-size:14pt;"><code>.forEach()</code></li>
+      <li style="font-size:14pt;">Loops that modify the original array</li>
+    </ul>
+  </div>
+
+</div>
+
+## Next
+
+#### Check for understanding
+
+
+MARKDOWN
