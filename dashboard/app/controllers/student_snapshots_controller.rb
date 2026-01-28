@@ -135,6 +135,34 @@ class StudentSnapshotsController < ApplicationController
     end
   end
 
+  # GET /student_snapshots/exemplar_code/{lesson_id}
+  def exemplar_code
+    # Cache until next deployment (refresh gets new content)
+    expires_in 12.hours, public: true
+
+    unless current_user.verified_instructor?
+      return render json: {error: "Unauthorized user"}, status: :forbidden
+    end
+
+    lesson = Lesson.find_by(id: params[:lesson_id])
+
+    unless lesson
+      return render json: {error: "Lesson not found"}, status: :not_found
+    end
+
+    level = lesson.levels.where(type: 'Pythonlab').last
+
+    unless level
+      return render json: {id: nil, name: nil, exemplarSources: nil}
+    end
+
+    render json: {
+      id: level.id,
+      name: level.name,
+      exemplarSources: level.exemplar_sources
+    }
+  end
+
   # Returns the script_levels in a lesson that correspond to CFU progressions.
   private def cfu_script_levels_for(lesson)
     lesson.script_levels.select do |script_level|

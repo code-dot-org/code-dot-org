@@ -27,6 +27,7 @@
 #  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
+#  ai_chat_access_level :string(255)      default("disabled")
 #
 # Indexes
 #

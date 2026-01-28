@@ -1,5 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddVocabularyDialog from '@cdo/apps/levelbuilder/lesson-editor/AddVocabularyDialog';
@@ -31,14 +32,16 @@ describe('AddVocabularyDialog', () => {
     expect(wrapper.find('input').first().props().disabled).to.be.false;
   });
 
-  it('closes if save is successful', () => {
+  it('closes if save is successful', async () => {
     const wrapper = mount(<AddVocabularyDialog {...defaultProps} />);
     const instance = wrapper.instance();
-    instance.setState({
-      word: 'my vocabulary word',
-      definition: 'my vocabulary definition',
+    await act(async () => {
+      instance.setState({
+        word: 'my vocabulary word',
+        definition: 'my vocabulary definition',
+      });
+      instance.forceUpdate();
     });
-    instance.forceUpdate();
     wrapper.update();
     let returnData = {
       id: 1,
@@ -54,10 +57,15 @@ describe('AddVocabularyDialog', () => {
       JSON.stringify(returnData),
     ]);
 
-    wrapper.find('#submit-button').simulate('click');
+    await act(async () => {
+      wrapper.find('#submit-button').simulate('click');
+    });
+    wrapper.update();
     expect(wrapper.find('AddVocabularyDialog').state().isSaving).to.be.true;
 
-    server.respond();
+    await act(async () => {
+      server.respond();
+    });
     wrapper.update();
 
     expect(handleCloseSpy.calledOnce).to.be.true;

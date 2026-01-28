@@ -105,10 +105,7 @@ jest.mock('@cdo/apps/templates/studioHomepages/RecentCourses', () => props => (
   // eslint-disable-next-line react/forbid-dom-props
   <div data-testid={'test-RecentCourses'} data-props={JSON.stringify(props)} />
 ));
-jest.mock('@cdo/apps/templates/studioHomepages/NpsSurveyBlock', () => props => (
-  // eslint-disable-next-line react/forbid-dom-props
-  <div data-testid={'test-NpsSurveyBlock'} data-props={JSON.stringify(props)} />
-));
+
 jest.mock(
   '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner',
   () => props =>

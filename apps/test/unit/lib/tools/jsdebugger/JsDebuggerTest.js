@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -112,7 +113,9 @@ describe('The JSDebugger component', () => {
 
   describe('clicking the close icon', () => {
     beforeEach(() => {
-      jsDebugger.instance().slideToggle();
+      act(() => {
+        jsDebugger.instance().slideToggle();
+      });
       jsDebugger.update();
     });
 
@@ -131,7 +134,9 @@ describe('The JSDebugger component', () => {
 
     describe('Then clicking the open icon', () => {
       beforeEach(() => {
-        jsDebugger.instance().slideToggle();
+        act(() => {
+          jsDebugger.instance().slideToggle();
+        });
         jsDebugger.update();
       });
 
@@ -154,17 +159,23 @@ describe('The JSDebugger component', () => {
 
       describe('And resizing the debug area with other code', () => {
         beforeEach(() => {
-          jsDebugger.instance().setDebugHeight(350);
+          act(() => {
+            jsDebugger.instance().setDebugHeight(350);
+          });
           jsDebugger.update();
         });
 
         it('will make closing and opening the debugger return to the same height', () => {
           expect(debugAreaEl().instance().style.height).to.equal('350px');
           // close
-          jsDebugger.instance().slideToggle();
+          act(() => {
+            jsDebugger.instance().slideToggle();
+          });
           jsDebugger.update();
           // re-open
-          jsDebugger.instance().slideToggle();
+          act(() => {
+            jsDebugger.instance().slideToggle();
+          });
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('350px');
         });

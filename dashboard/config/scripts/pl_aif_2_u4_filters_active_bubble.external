@@ -3,67 +3,81 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Displaying Objects as Cards
+# Filtering in JavaScript
 
-#### Many apps display information as cards that combine text, images, and ratings into something users can quickly scan. But real-world data is often messy. Some fields may be missing, incomplete, or even **null.**
+#### In the next level, you will use AI to help you apply a filter function to a community volunteer finder app. But first, let's take a look at what the `.filter()` function does. 
 
-#### When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
+#### `.filter()` is an array method that makes a new list from an old list by keeping only the items that pass a test.
+
+<div style="background-color:#B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box;"> <p style="font-size: 14pt; margin: 0; line-height: 130%;">📖  <strong>.filter()</strong> loops through every item in an array and keeps it only if your function returns true.</p> </div>
+
+## Starting with a full data set
+
+<img src="https://images.code.org/07859f953499a6ef709e164b06c26367-image-1769452525453.png" alt="javascript of a database with volunteer opportunities in environment, education, and health" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+#### You have a full dataset, but the user doesn’t always want all roles. They might want:
+
+- #### only **Health**
+
+- #### only roles with **minAge <= 12**
+
+- #### or both at the same time
+
+#### So you use `.filter()` to create a filteredList that matches the user’s choices.
 
 ---
-## Why Websites Do This
 
-#### Below are two versions of the same card. One includes a missing value.
+## How .filter() works
 
-#### Websites don’t usually leave empty or broken-looking fields on the screen. Instead, they often substitute a default value so the interface still feels complete and usable even when the data is imperfect.
+<img src="https://images.code.org/289a762a14af21d0486b3b8c84da939f-image-1769453111297.png" alt="javascript of using .filter to go throught the opportunites data base looking at jobs" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
-<img src="https://images.code.org/822e82632e65af46a8c2aca29c92adf2-image-1768937250577.png" alt="2 cards with names, titles, emails, but one is missing the image" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+#### This code  
 
+- #### Starts with an empty new array
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>fallback value</strong> is a default value shown when data is missing or null.</p>
-</div>
+- #### Goes through `opportunities` one item at a time
 
+- #### For each `job`, runs your callback function
 
---- 
-## Design Thinking: User Perception
-#### The way information is displayed doesn’t just inform users—it can shape their opinions.
+- #### If your function returns **true**, that job gets added to `filteredList`
 
-#### Below are three versions of the same card, each presenting information slightly differently.
+- #### If it returns **false**, it’s skipped
 
-<img src="https://images.code.org/b38f316ba798d349ef86af689fbfb366-image-1768937551031.png" alt="3 cards with names, ratings, and reviews" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+- #### When it’s done, you get a new array (`filteredList`) with only the kept items
 
- #### 👉 **How does each version of the card influence your perception?**
+#### **Important:** `.filter()` does not change the original array. It returns a new one.
 
+## What is 'job' in the code?
 
+#### Inside the filter, job is just a variable name for “the current item.”
+
+#### So when .filter() is running:
+
+- #### first job is { role:"Park Cleanup", ... }
+
+- #### then job is { role:"Tree Planting", ... }
+
+- #### and so on through all 10
+
+---
+
+## What gets returned (the “keep it?” test)
+
+#### The filter function does two checks:
+
+<img src="https://images.code.org/6e9a65c0da7346962e9ce7027afd2fe0-image-1769453536357.png" alt="javascript of usingfiltering age and category choice" width="750px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+## What that return line means
+
+- #### `matchesCategory` && `matchesAge` is only true if both are **true**.
+
+- #### So a job only gets kept if it matches the category rule and the age rule.
 
 <div style="clear:both;"></div>
 
 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style = "font-size: 14pt;">
-Students should recognize the differences between the three versions:<br><br>
-<b>Version 1:</b> Neutral
-Shows a plain rating (for example, “Rating: 2.5/5 stars”).<br>
-<b>Version 2:</b> Biased
-Uses hype language (for example, “Top Value Pick!”).<br>
-<b>Version 3:</b> Hidden Information
-Leaves the rating off entirely.<br><br>
-Tone, label choice (like “Top Value Pick!”), and hiding information (such as omitting a low rating) can all influence user perception and bias how trustworthy or appealing something appears.
+## Next 
 
-</p>
-</div>
-</details>
-
-
----
-
-
-
-## Next up
-
-#### Let's practice adding fallback values in weblab! 
-
+Let's put it all together in  Web Lab.
 MARKDOWN
