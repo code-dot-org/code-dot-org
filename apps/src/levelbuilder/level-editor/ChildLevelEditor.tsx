@@ -39,7 +39,6 @@ const ChildLevelEditor: React.FC<ChildLevelEditorProps> = ({
   );
 
   const handleSave = useCallback(async () => {
-    event.preventDefault();
     const url = `/levels/${childLevel.id}/update_bubble_choice_settings`;
     const properties = {
       ...childLevel.properties,
