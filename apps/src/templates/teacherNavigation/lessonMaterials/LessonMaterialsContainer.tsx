@@ -316,11 +316,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   };
 
   const renderCustomResources = () => {
-    if (!selectedLesson) {
+    if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
+      return <CustomLessonResources />;
+    } else {
       return null;
     }
-
-    return <CustomLessonResources />;
   };
 
   const renderLessonSummaryContainer = () => {
