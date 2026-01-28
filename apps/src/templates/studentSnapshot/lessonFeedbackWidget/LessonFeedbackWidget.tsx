@@ -19,7 +19,7 @@ import styles from './lessonFeeedback.module.scss';
 
 interface LessonFeedbackWidgetProps {
   lessonId: number | null;
-  studentId: number;
+  studentId: number | null;
   teacherHasEnabledAi: boolean;
 }
 
@@ -54,7 +54,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     deleteResourceLink,
   } = useLessonFeedback({
     lessonId,
-    studentId,
     teacherHasEnabledAi,
   });
 

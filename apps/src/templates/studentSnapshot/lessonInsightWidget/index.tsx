@@ -1,0 +1,153 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
+import React, {useState} from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import WidgetTemplate from '../widgetTemplate';
+
+import styles from './lessonInsightWidget.module.scss';
+
+interface InsightData {
+  progress: string;
+  misconceptions: string;
+  assessment: string;
+  next_steps: string;
+}
+
+interface LessonInsightWidgetProps {
+  selectedUnitId: number | null;
+  selectedLessonId: number | null;
+  selectedStudentId: number | null;
+}
+
+const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
+  selectedUnitId,
+  selectedLessonId,
+  selectedStudentId,
+}) => {
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
+  );
+  const [insightData, setInsightData] = useState<InsightData | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const currentRequestRef = React.useRef<string | null>(null);
+
+  const loadInsight = React.useCallback(() => {
+    if (
+      !selectedLessonId ||
+      !selectedUnitId ||
+      !selectedStudentId ||
+      !sectionId
+    ) {
+      console.log('Missing required parameters');
+      return;
+    }
+
+    // Create a unique request identifier for this set of parameters
+    const requestId = `${selectedUnitId}-${selectedLessonId}-${selectedStudentId}-${sectionId}`;
+    currentRequestRef.current = requestId;
+
+    setLoading(true);
+    setError(null);
+    const params = new URLSearchParams({
+      lesson_id: selectedLessonId.toString(),
+      unit_id: selectedUnitId.toString(),
+      student_id: selectedStudentId.toString(),
+      section_id: sectionId.toString(),
+    });
+    HttpClient.fetchJson<{json: string}>(
+      `/student_snapshots/insight_system_prompt?${params}`
+    )
+      .then(response => {
+        // Only update state if this request is still current
+        if (currentRequestRef.current === requestId) {
+          const jsonString = response?.value?.json || '';
+          try {
+            const parsedData = JSON.parse(jsonString) as InsightData;
+            setInsightData(parsedData);
+          } catch (parseError) {
+            console.error('Error parsing insight JSON:', parseError);
+            setError('Failed to parse insight data');
+          }
+        }
+      })
+      .catch(error => {
+        // Only update state if this request is still current
+        if (currentRequestRef.current === requestId) {
+          console.error('Error fetching insight prompt:', error);
+          setError('Failed to fetch insight data');
+        }
+      })
+      .finally(() => {
+        // Only update loading state if this request is still current
+        if (currentRequestRef.current === requestId) {
+          setLoading(false);
+        }
+      });
+  }, [selectedLessonId, selectedUnitId, selectedStudentId, sectionId]);
+
+  React.useEffect(loadInsight, [loadInsight]);
+
+  return (
+    <WidgetTemplate
+      widgetName="Lesson Insight"
+      gridWidth={1}
+      gridHeight={2}
+      loading={loading}
+      settingsOptions={[
+        {
+          onClick: loadInsight,
+          isOptionDestructive: false,
+          icon: {iconName: 'arrows-rotate'},
+          label: 'Refresh Insight',
+          value: 'refresh_insight',
+        },
+      ]}
+    >
+      {error && <Typography color="error">{error}</Typography>}
+      {insightData && (
+        <div className={styles.content}>
+          <div>
+            <Typography variant="body3" sx={{fontWeight: 'bold'}}>
+              Progress
+            </Typography>
+            <Typography variant="body4">{insightData.progress}</Typography>
+
+            <Typography variant="body3" sx={{fontWeight: 'bold'}}>
+              Misconceptions
+            </Typography>
+            <Typography variant="body4">
+              {insightData.misconceptions}
+            </Typography>
+
+            <Typography variant="body3" sx={{fontWeight: 'bold'}}>
+              Assessment
+            </Typography>
+            <Typography variant="body4">{insightData.assessment}</Typography>
+
+            <Typography variant="body3" sx={{fontWeight: 'bold'}}>
+              Next Steps
+            </Typography>
+            <Typography variant="body4">{insightData.next_steps}</Typography>
+          </div>
+          <Typography
+            className={styles.aiGeneratedLabel}
+            variant="body4"
+            sx={{fontStyle: 'italic', marginTop: '4px'}}
+          >
+            <FontAwesomeV6Icon
+              iconName="solid-flask-sparkle"
+              iconFamily="kit"
+            />{' '}
+            AI generated summary
+          </Typography>
+        </div>
+      )}
+    </WidgetTemplate>
+  );
+};
+
+export default LessonInsightWidget;
