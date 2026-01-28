@@ -33,7 +33,6 @@ function Collide(x1, y1, w1, h1, x2, y2, w2, h2) {
   return true;
 }
 
-
 let UnwrappedPond = class Pond extends React.Component {
   constructor(props) {
     super(props);
@@ -193,24 +192,30 @@ let UnwrappedPond = class Pond extends React.Component {
       <Body>
         <div onClick={this.onPondClick} style={styles.pondSurface} />
         <div style={recallIconsStyle}>
-          <FontAwesomeIcon
-            icon={faCheck}
+          <button
+            type="button"
+            onClick={this.toggleRecall}
+            aria-label="Toggle Identified Fish"
             style={{
               ...styles.recallIcon,
               ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
               ...(state.showRecallFish ? {} : styles.bgGreen)
             }}
+          >
+            <FontAwesomeIcon icon={faCheck} style={{width: '100%', height: '100%'}} />
+          </button>
+          <button
+            type="button"
             onClick={this.toggleRecall}
-          />
-          <FontAwesomeIcon
-            icon={faBan}
+            aria-label="Toggle Identified Trash"
             style={{
               ...styles.recallIcon,
               ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
-              ...(state.showRecallFish ? styles.bgRed : {})
+              ...(state.showRecallFish ? styles.bgRed : {}),
             }}
-            onClick={this.toggleRecall}
-          />
+          >
+            <FontAwesomeIcon icon={faBan} style={{width: '100%', height: '100%'}} />
+          </button>
         </div>
         {showInfoButton && (
           <div
