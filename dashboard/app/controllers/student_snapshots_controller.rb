@@ -44,6 +44,13 @@ class StudentSnapshotsController < ApplicationController
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
         question_text, answers = get_level_question_and_answers(level)
+
+        # For matching CFUs, also include the list of options (terms) used on the left side.
+        options = nil
+        if level.is_a?(Match)
+          summary = level.summarize_for_lesson_show(false)
+          options = summary[:content] if summary && summary[:content].present?
+        end
         level_index_in_lesson = lesson_level_ids.index(level.id)
 
         # Build URL to the level using the existing helper
@@ -71,6 +78,7 @@ class StudentSnapshotsController < ApplicationController
           progression_display_name: script_level.progression ? I18n.t(script_level.progression, scope: %i[data progressions], default: script_level.progression) : nil,
           question_text: question_text,
           answers: answers,
+          options: options,
           level_url: level_url
         }
       end
