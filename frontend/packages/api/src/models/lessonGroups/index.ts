@@ -1,4 +1,4 @@
-import {Lesson} from '@api/models/lessons';
+import type {Lesson} from '../lessons';
 
 /** Defines a lesson group in the raw, internal data */
 export interface LessonGroupDefinition {

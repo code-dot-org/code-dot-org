@@ -9,7 +9,7 @@ import {
 
 import HttpClient from '../HttpClient';
 
-import {Channel} from './types';
+import type {Channel} from './types';
 
 const host = getDashboardApiUrl(getEnvironmentFromHostname());
 const rootUrl = `${host}/v3/channels`;

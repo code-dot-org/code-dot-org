@@ -3,7 +3,7 @@ import type {ResponseValidator} from '../types';
 import ValidationError from '../ValidationError';
 
 import {LABS_WITH_JSON_SOURCES} from './constants';
-import {MultiFileSource, ProjectSources} from './types';
+import type {MultiFileSource, ProjectSources} from './types';
 
 function missingFieldError(fieldName: string) {
   return new ValidationError('Missing required field: ' + fieldName);

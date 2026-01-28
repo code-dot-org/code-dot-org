@@ -3,7 +3,7 @@ import {
   getDashboardApiUrl,
 } from '@code-dot-org/core';
 
-import {ProjectType} from './types';
+import type {ProjectType} from './types';
 
 const host = getDashboardApiUrl(getEnvironmentFromHostname());
 const rootUrl = `${host}/projects/`;

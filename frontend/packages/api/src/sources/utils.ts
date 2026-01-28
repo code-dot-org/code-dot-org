@@ -1,7 +1,8 @@
 import {getAppOptionsEditBlocks} from '../utils';
 
 import {START_SOURCES} from './constants';
-import {MultiFileSource, ProjectFile, ProjectFileType} from './types';
+import type {MultiFileSource, ProjectFile} from './types';
+import {ProjectFileType} from './types';
 
 /**
  * Given a map of {fileId: ProjectFile}, return the first file with the given name.

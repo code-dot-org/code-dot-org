@@ -15,7 +15,7 @@ import {stringifyQueryParams} from '../utils';
 
 import {SOURCE_FILE} from './constants';
 import {SourceResponseValidator} from './responseValidators';
-import {ProjectSources, ProjectVersion, SaveSourceOptions} from './types';
+import type {ProjectSources, ProjectVersion, SaveSourceOptions} from './types';
 
 const host = getDashboardApiUrl(getEnvironmentFromHostname());
 
