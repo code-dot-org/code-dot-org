@@ -1,11 +1,14 @@
 import SoundBoard from './SoundBoard';
 
-export enum PlaybackState {
-  NONE = 'none',
-  BEGIN = 'begin',
-  LOOP = 'loop',
-  END = 'end',
-}
+export const PlaybackState = {
+  NONE: 'none',
+  BEGIN: 'begin',
+  LOOP: 'loop',
+  END: 'end',
+} as const;
+
+export type PlaybackStateKey =
+  (typeof PlaybackState)[keyof typeof PlaybackState];
 
 export interface ThreeSliceAudioDefinition {
   /** Audio clip name for the start of sound. */
@@ -29,7 +32,7 @@ export interface ThreeSliceAudioDefinition {
  * system.
  */
 class ThreeSliceAudio {
-  protected state: PlaybackState = PlaybackState.NONE;
+  protected state: PlaybackStateKey = PlaybackState.NONE;
   protected soundBoard: SoundBoard;
   protected beginClipName?: string;
   protected loopClipName?: string;
@@ -71,7 +74,7 @@ class ThreeSliceAudio {
     }
   }
 
-  protected enterState(state: PlaybackState) {
+  protected enterState(state: PlaybackStateKey) {
     this.exitState(this.state);
     this.state = state;
     const callback = this.whenSoundStopped.bind(this, state);
@@ -107,7 +110,7 @@ class ThreeSliceAudio {
     }
   }
 
-  protected exitState(state: PlaybackState) {
+  protected exitState(state: PlaybackStateKey) {
     if (state === PlaybackState.BEGIN && this.beginClipName) {
       this.soundBoard.stopLoopingAudio(this.beginClipName);
     } else if (state === PlaybackState.LOOP && this.loopClipName) {
@@ -117,7 +120,7 @@ class ThreeSliceAudio {
     }
   }
 
-  protected whenSoundStopped(stoppedState: PlaybackState) {
+  protected whenSoundStopped(stoppedState: PlaybackStateKey) {
     if (
       stoppedState === PlaybackState.BEGIN &&
       this.state === PlaybackState.BEGIN

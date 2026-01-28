@@ -44,8 +44,8 @@ export default defineConfig({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: 'src/index.ts',
-      name: 'interpreter',
+      entry: ['src/index.ts', 'src/textToSpeech/index.ts'],
+      name: 'audio',
     },
     rollupOptions: {
       output: [getRollupOutputConfig('es'), getRollupOutputConfig('cjs')],
