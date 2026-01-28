@@ -6,10 +6,7 @@ import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
-import type {
-  Environment,
-  BlocklySerialization,
-} from '@code-dot-org/blockly-workspace';
+import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import {
   GuideInstructions,
   LabConstants,
@@ -28,6 +25,7 @@ import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 import '@code-dot-org/lab/resourcePanel/index.css';
 import '@code-dot-org/lab/index.css';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
+import {BlocklyProvider} from '@code-dot-org/blockly-workspace/contexts';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import {darkTheme} from '@code-dot-org/blockly-workspace/themes';
 import toolboxes from '../../blockly/toolbox';
@@ -103,6 +101,7 @@ const MusicLab = () => {
     // Ensure we use dark theme for music lab, for now
     if (theme === 'Light') {
       setTheme('Dark');
+
       // TODO: add a channel/progress wrapper for offline levels
       dispatch(
         labActions.setChannel({
@@ -161,168 +160,171 @@ const MusicLab = () => {
   console.log(allowPackSelection, player);
 
   return (
-    <div className={moduleStyles.musicLab}>
-      <div
-        className={classNames(
-          moduleStyles.mainContent,
-          timelineAtTop && moduleStyles.reverse,
-        )}
-      >
-        {allowPackSelection && (
-          <PackDialog
-            player={player}
-            forcePackSelect={guideMode === 'aiCodeGenerate'}
-          />
-        )}
-        {guideMode === 'instructions' && (
-          <GuideInstructions
-            levelProperties={levelProperties}
-            isRunning={false}
-            hasRun={false}
-            hasEdited={false}
-          />
-        )}
+    <BlocklyProvider
+      theme={darkTheme}
+      renderer={ThrasosRenderer}
+      blocks={blocks}
+      plugins={[ToolboxTrashcanPlugin]}
+    >
+      <div className={moduleStyles.musicLab}>
         <div
-          id="work-area"
-          className={classNames(moduleStyles.workArea, {
-            // Allow full height when the play area is hidden.
-            [moduleStyles.toolboxMode]: isToolboxMode,
-            [moduleStyles.reverse]:
-              instructionsPosition === InstructionsPosition.RIGHT,
-          })}
+          className={classNames(
+            moduleStyles.mainContent,
+            timelineAtTop && moduleStyles.reverse,
+          )}
         >
-          <div
-            id="instructions-area"
-            className={classNames(
-              moduleStyles.instructionsArea,
-              moduleStyles.instructionsSide,
-              (isStandaloneCollapsed || guideMode) &&
-                moduleStyles.instructionsCollapsed,
-            )}
-          >
-            <ResourcePanel
-              isRunning={isPlaying}
-              onInstructionsTextClick={onInstructionsTextClick}
-              bottomComponent={
-                exemplarPlayerInsideInstructions &&
-                showExemplarPlayer && (
-                  <ExemplarPlayerView
-                    playbackEvents={exemplarPlaybackEvents}
-                    title={
-                      levelProperties.levelData.exemplarSettings!.playerTitle!
-                    }
-                    player={player}
-                    insideInstructions={exemplarPlayerInsideInstructions}
-                  />
-                )
-              }
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-              fixedDarkBackground={true}
-              overrideTheme={'Light'}
-              includeFooterSpacing={false}
-              levelProperties={levelProperties}
-              headerClassName={moduleStyles.headerWithBorder}
-              settings={settings}
-              hideContinueIfDisabled={true}
-              hideNavigation={false}
-              styleNavigationAsBubble={true}
-              documentationUrl={'/docs/ide/music'}
-              sidebarOnly={!!guideMode}
-              versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
+          {allowPackSelection && (
+            <PackDialog
+              player={player}
+              forcePackSelect={guideMode === 'aiCodeGenerate'}
             />
-          </div>
-
-          <div id="blockly-area" className={moduleStyles.blocklyArea}>
-            <PanelContainer
-              id="workspace-panel"
-              headerContent={<WorkspaceHeader />}
-              hideHeaders={hideHeaders}
-              rightHeaderContent={
-                <HeaderButtons
-                  onClickUndo={undo}
-                  onClickRedo={redo}
-                  clearCode={clearCode}
-                  allowPackSelection={allowPackSelection}
-                  skipUrl={skipUrl}
-                  hideChaff={hideChaff}
-                />
-              }
-              headerClassName={moduleStyles.headerWithBorder}
-            >
-              <BlocklyWorkspace<Environment>
-                className={moduleStyles.blocklyWorkspace}
-                options={{
-                  readOnly: levelProperties.multipleChoice ? true : undefined,
-                  trashcan: false,
-                }}
-                startBlocks={
-                  currentSources?.source ||
-                  levelProperties.template?.startBlocks ||
-                  levelProperties.startBlocks ||
-                  DefaultStartBlocks
-                }
-                blocks={blocks}
-                toolboxBlocks={toolboxBlocks}
-                theme={darkTheme}
-                renderer={ThrasosRenderer}
-                onInject={onInject}
-                onChange={onChange}
-                javascriptGeneratorRef={javascriptGeneratorRef}
-                plugins={[ToolboxTrashcanPlugin]}
-              />
-            </PanelContainer>
-          </div>
-        </div>
-
-        {!isToolboxMode && (
-          <div id="play-area" className={classNames(moduleStyles.playArea)}>
-            <div id="controls-area" className={moduleStyles.controlsArea}>
-              <PanelContainer
-                id="controls-panel"
-                headerContent="Controls"
-                hideHeaders={hideHeaders}
-              >
-                <Controls
-                  setPlaying={setPlaying}
-                  playTrigger={playTrigger}
-                  triggers={triggers}
-                  isPredictLevel={
-                    levelProperties.predictSettings?.isPredictLevel
-                  }
-                  enableSkipControls={
-                    AppConfig.getValue('skip-controls-enabled') === 'true'
-                  }
-                />
-              </PanelContainer>
-            </div>
-
+          )}
+          {guideMode === 'instructions' && (
+            <GuideInstructions
+              levelProperties={levelProperties}
+              isRunning={false}
+              hasRun={false}
+              hasEdited={false}
+            />
+          )}
+          <div
+            id="work-area"
+            className={classNames(moduleStyles.workArea, {
+              // Allow full height when the play area is hidden.
+              [moduleStyles.toolboxMode]: isToolboxMode,
+              [moduleStyles.reverse]:
+                instructionsPosition === InstructionsPosition.RIGHT,
+            })}
+          >
             <div
-              dir="ltr"
-              id="timeline-area"
-              className={moduleStyles.timelineArea}
-              ref={timelineAreaRef}
+              id="instructions-area"
+              className={classNames(
+                moduleStyles.instructionsArea,
+                moduleStyles.instructionsSide,
+                (isStandaloneCollapsed || guideMode) &&
+                  moduleStyles.instructionsCollapsed,
+              )}
             >
+              <ResourcePanel
+                isRunning={isPlaying}
+                onInstructionsTextClick={onInstructionsTextClick}
+                bottomComponent={
+                  exemplarPlayerInsideInstructions &&
+                  showExemplarPlayer && (
+                    <ExemplarPlayerView
+                      playbackEvents={exemplarPlaybackEvents}
+                      title={
+                        levelProperties.levelData.exemplarSettings!.playerTitle!
+                      }
+                      player={player}
+                      insideInstructions={exemplarPlayerInsideInstructions}
+                    />
+                  )
+                }
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                fixedDarkBackground={true}
+                overrideTheme={'Light'}
+                includeFooterSpacing={false}
+                levelProperties={levelProperties}
+                headerClassName={moduleStyles.headerWithBorder}
+                settings={settings}
+                hideContinueIfDisabled={true}
+                hideNavigation={false}
+                styleNavigationAsBubble={true}
+                documentationUrl={'/docs/ide/music'}
+                sidebarOnly={!!guideMode}
+                versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
+              />
+            </div>
+
+            <div id="blockly-area" className={moduleStyles.blocklyArea}>
               <PanelContainer
-                id="timeline-panel"
-                headerContent="Timeline"
+                id="workspace-panel"
+                headerContent={<WorkspaceHeader />}
                 hideHeaders={hideHeaders}
+                rightHeaderContent={
+                  <HeaderButtons
+                    onClickUndo={undo}
+                    onClickRedo={redo}
+                    clearCode={clearCode}
+                    allowPackSelection={allowPackSelection}
+                    skipUrl={skipUrl}
+                    hideChaff={hideChaff}
+                  />
+                }
+                headerClassName={moduleStyles.headerWithBorder}
               >
-                <Timeline
-                  allowChangeStartingPlayheadPosition={
-                    levelProperties.levelData
-                      ?.allowChangeStartingPlayheadPosition
+                <BlocklyWorkspace
+                  className={moduleStyles.blocklyWorkspace}
+                  options={{
+                    readOnly: levelProperties.multipleChoice ? true : undefined,
+                    trashcan: false,
+                  }}
+                  startBlocks={
+                    currentSources?.source ||
+                    levelProperties.template?.startBlocks ||
+                    levelProperties.startBlocks ||
+                    DefaultStartBlocks
                   }
-                  isPredictLevel={
-                    levelProperties.predictSettings?.isPredictLevel
-                  }
+                  toolboxBlocks={toolboxBlocks}
+                  onInject={onInject}
+                  onChange={onChange}
+                  javascriptGeneratorRef={javascriptGeneratorRef}
                 />
               </PanelContainer>
             </div>
           </div>
-        )}
+
+          {!isToolboxMode && (
+            <div id="play-area" className={classNames(moduleStyles.playArea)}>
+              <div id="controls-area" className={moduleStyles.controlsArea}>
+                <PanelContainer
+                  id="controls-panel"
+                  headerContent="Controls"
+                  hideHeaders={hideHeaders}
+                >
+                  <Controls
+                    setPlaying={setPlaying}
+                    playTrigger={playTrigger}
+                    triggers={triggers}
+                    isPredictLevel={
+                      levelProperties.predictSettings?.isPredictLevel
+                    }
+                    enableSkipControls={
+                      AppConfig.getValue('skip-controls-enabled') === 'true'
+                    }
+                  />
+                </PanelContainer>
+              </div>
+
+              <div
+                dir="ltr"
+                id="timeline-area"
+                className={moduleStyles.timelineArea}
+                ref={timelineAreaRef}
+              >
+                <PanelContainer
+                  id="timeline-panel"
+                  headerContent="Timeline"
+                  hideHeaders={hideHeaders}
+                >
+                  <Timeline
+                    allowChangeStartingPlayheadPosition={
+                      levelProperties.levelData
+                        ?.allowChangeStartingPlayheadPosition
+                    }
+                    isPredictLevel={
+                      levelProperties.predictSettings?.isPredictLevel
+                    }
+                  />
+                </PanelContainer>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </BlocklyProvider>
   );
 };
 

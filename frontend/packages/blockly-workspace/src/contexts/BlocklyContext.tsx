@@ -1,5 +1,5 @@
 import type {PropsWithChildren, MutableRefObject} from 'react';
-import {useCallback, createContext, useRef, useContext} from 'react';
+import {useCallback, createContext, useRef, useEffect, useContext} from 'react';
 
 import Driver from '../Driver';
 import type {Plugin} from '../plugins';
@@ -12,14 +12,10 @@ export interface BlocklyContent<T extends Environment = Environment> {
   driver?: MutableRefObject<Driver<T>>;
   environment?: T;
   setTheme: (value: Theme) => void;
-  renderer?: Renderer;
-  plugins?: Plugin[];
-  blocks: BlockDefinition[];
 }
 
 const BlocklyContext = createContext<BlocklyContent>({
   setTheme: (_: Theme) => {},
-  blocks: [],
 } as unknown as BlocklyContent);
 
 /**
@@ -61,15 +57,16 @@ export const BlocklyProvider = <T extends Environment = Environment>({
     driver.current.theme = newTheme;
   }, []);
 
+  useEffect(() => {
+    driver.current.blocks = blocks || [];
+  }, [blocks]);
+
   return (
     <BlocklyContext.Provider
       value={{
         driver,
         setTheme,
-        plugins,
-        renderer,
         environment,
-        blocks: blocks || [],
       }}
     >
       {children}
