@@ -154,11 +154,6 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
-        <LessonInsightWidget
-          selectedUnitId={selectedUnitId}
-          selectedLessonId={selectedLessonId}
-          selectedStudentId={selectedStudentId}
-        />
         {selectedLessonId && selectedStudentId && (
           <StudentLessonProgressDetailsWidget
             selectedUnitId={selectedUnitId}
@@ -166,19 +161,23 @@ const StudentSnapshot: React.FC = () => {
             selectedStudentId={selectedStudentId}
           />
         )}
+        <LessonInsightWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
           teacherHasEnabledAi={aiTaEnabled}
         />
-        <StudentCodeWidget studentCode={studentCode} />
         <StudentCFUWidget
           gridWidth={2}
           gridHeight={2}
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
         />
-        <ExemplarCodeWidget lessonId={selectedLessonId} />
+        <StudentCodeWidget studentCode={studentCode} />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}
@@ -188,6 +187,7 @@ const StudentSnapshot: React.FC = () => {
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
         />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
       </div>
     </div>
   );

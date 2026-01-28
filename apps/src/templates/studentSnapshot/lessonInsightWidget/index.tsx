@@ -59,7 +59,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       section_id: sectionId.toString(),
     });
     HttpClient.fetchJson<{json: string}>(
-      `/student_snapshots/insight_system_prompt?${params}`
+      `/student_snapshots/lesson_insight?${params}`
     )
       .then(response => {
         // Only update state if this request is still current

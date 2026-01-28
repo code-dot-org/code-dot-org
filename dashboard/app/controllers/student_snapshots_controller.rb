@@ -163,9 +163,9 @@ class StudentSnapshotsController < ApplicationController
     }
   end
 
-  # GET /student_snapshots/insight_system_prompt
+  # GET /student_snapshots/lesson_insight
   # Returns the system prompt for generating insights
-  def insight_system_prompt
+  def lesson_insight
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
