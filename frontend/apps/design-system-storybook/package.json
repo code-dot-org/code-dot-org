@@ -62,7 +62,7 @@
     "http-server": "^14.1.1",
     "playwright": "^1.57.0",
     "sass-loader": "^16.0.3",
-    "storybook": "^10.1.7",
+    "storybook": "^10.1.10",
     "storybook-addon-rtl": "^3.0.1",
     "stylelint": "^16.14.1",
     "tsx": "^4.19.2",
