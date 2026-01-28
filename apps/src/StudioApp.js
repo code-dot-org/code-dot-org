@@ -2199,7 +2199,7 @@ StudioApp.prototype.configureDom = function (config) {
       analyticsReporter.sendEvent(
         eventName,
         {
-          signedIn: signedIn.toString(),
+          signedIn: signedIn,
           unitName: config.scriptName,
           levelId: config.serverLevelId,
           levelName: config.level.name,

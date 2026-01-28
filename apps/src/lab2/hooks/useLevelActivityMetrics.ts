@@ -47,9 +47,9 @@ export function useLevelActivityMetrics(
       : EVENTS.LEVEL_ACTIVITY;
 
     sendLab2AnalyticsEvent(eventName, {
-      signedIn: signedIn.toString(),
+      signedIn: signedIn,
       unitName: scriptName ?? '',
-      levelId: levelProperties.id.toString(),
+      levelId: levelProperties.id,
       levelName: levelProperties.name,
     });
   }, [

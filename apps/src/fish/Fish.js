@@ -68,7 +68,7 @@ Fish.prototype.init = function (config) {
     analyticsReporter.sendEvent(
       EVENTS.LEVEL_ACTIVITY,
       {
-        signedIn: signedIn.toString(),
+        signedIn: signedIn,
         unitName: config.scriptName,
         levelId: config.serverLevelId,
         levelName: config.level.name,
