@@ -9,31 +9,25 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import ResourceRow from './ResourceRow';
 
 import styles from './lesson-materials.module.scss';
+import {Resource} from './LessonMaterialTypes';
 
 type CustomResourcesProps = {
   unitId: number | null;
   lessonId: number;
   sectionId: number;
 };
-export type CustomArtifact = {
-  id: number;
-  key: string;
-  title: string;
-  type: string;
-  content: string;
-};
 
 async function asyncFetchCustomResources(
   unitId: number,
   lessonId: number,
   sectionId: number
-): Promise<CustomArtifact[]> {
+): Promise<Resource[]> {
   const pararms: Record<string, number> = {
     unitId: unitId,
     lessonId: lessonId,
     sectionId: sectionId,
   };
-  const response = await HttpClient.fetchJson<CustomArtifact[]>(
+  const response = await HttpClient.fetchJson<Resource[]>(
     `/aidiff_artifacts`,
     pararms
   );
@@ -58,7 +52,7 @@ const CustomLessonResources: React.FC<CustomResourcesProps> = ({
   lessonId,
   sectionId,
 }) => {
-  const [resources, setResources] = useState<CustomArtifact[]>([]);
+  const [resources, setResources] = useState<Resource[]>([]);
 
   useEffect(() => {
     let cancelled = false;

@@ -18,13 +18,16 @@ export type Lesson = {
 
 export type Resource = {
   key: string;
+  url: string;
+  type: string;
+  // For non-custom resources, name is used
   name?: string;
-  // custom resources use 'title' instead of 'name'
-  title?: string;
-  url?: string;
   downloadUrl?: string;
   audience?: string;
-  type: string;
+  // For custom resources, title is used instead of name
+  id?: number;
+  title?: string;
+  content?: string;
 };
 
 export type MaterialType =
