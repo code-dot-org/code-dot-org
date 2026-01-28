@@ -1,5 +1,7 @@
 import React, {useState, ChangeEvent} from 'react';
 
+import styles from './lessonFeeedback.module.scss';
+
 interface FeedbackTextboxProps {
   feedbackText: string;
   onFeedbackChange?: (newFeedbackText: string) => void;
@@ -18,15 +20,13 @@ const FeedbackTextbox: React.FC<FeedbackTextboxProps> = ({
   };
 
   return (
-    <div>
-      <textarea
-        value={text}
-        onChange={handleTextChange}
-        placeholder="Enter your feedback here..."
-        rows={5}
-        cols={50}
-      />
-    </div>
+    <textarea
+      value={text}
+      onChange={handleTextChange}
+      placeholder="Enter your feedback here..."
+      rows={5}
+      className={styles.feedbackInputBox}
+    />
   );
 };
 
