@@ -32,10 +32,12 @@ export interface VideoData {
   locale: string;
 }
 
-export enum LevelKind {
-  assessment = 'assessment',
-  activity = 'activity',
-}
+export const LevelKind = {
+  assessment: 'assessment',
+  activity: 'activity',
+} as const;
+
+export type LevelKindKey = (typeof LevelKind)[keyof typeof LevelKind];
 
 /** Describes a level's properties */
 export type Level<T extends object = object> = {
@@ -50,7 +52,7 @@ export type Level<T extends object = object> = {
   /** The type of level (Maze, etc) */
   type: string;
   /** The level kind attribute */
-  kind: LevelKind;
+  kind: LevelKindKey;
   /** The filepath of the level definition, if available */
   path?: string;
   /** Whether or not the level is a concept level */

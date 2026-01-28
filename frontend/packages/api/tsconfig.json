@@ -1,10 +1,7 @@
 {
-  "extends": "@code-dot-org/lint-config/typescript/tsconfig.react.json",
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": "./",
-    "paths": {
-      "@api/*": ["./src/*"]
-    }
-  }
+    "baseUrl": "."
+  },
+  "include": ["src"]
 }

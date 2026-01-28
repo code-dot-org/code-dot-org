@@ -1,21 +1,21 @@
-import {ActivitySectionDefinition} from '@api/models/activitySections';
-import {LearningGoalEvidenceLevelDefinition} from '@api/models/learningGoalEvidenceLevels';
-import {LearningGoalDefinition} from '@api/models/learningGoals';
-import {LessonActivityDefinition} from '@api/models/lessonActivities';
-import {LessonGroupDefinition, LessonGroup} from '@api/models/lessonGroups';
-import {LessonDefinition, Lesson} from '@api/models/lessons';
-import {LessonsOpportunityStandardDefinition} from '@api/models/lessonsOpportunityStandards';
-import {LessonsProgrammingExpressionDefinition} from '@api/models/lessonsProgrammingExpressions';
-import {LessonsResourceDefinition} from '@api/models/lessonsResources';
-import {LessonsStandardDefinition} from '@api/models/lessonsStandards';
-import {LessonsVocabularyDefinition} from '@api/models/lessonsVocabularies';
-import {LevelScriptLevelDefinition} from '@api/models/levelScriptLevels';
-import {ObjectiveDefinition} from '@api/models/objectives';
-import {ResourceDefinition} from '@api/models/resources';
-import {RubricDefinition} from '@api/models/rubrics';
-import {ScriptLevelDefinition} from '@api/models/scriptLevels';
-import {ScriptsResourceDefinition} from '@api/models/scriptsResources';
-import {VocabularyDefinition} from '@api/models/vocabularies';
+import type {ActivitySectionDefinition} from '../activitySections';
+import type {LearningGoalEvidenceLevelDefinition} from '../learningGoalEvidenceLevels';
+import type {LearningGoalDefinition} from '../learningGoals';
+import type {LessonActivityDefinition} from '../lessonActivities';
+import type {LessonGroupDefinition, LessonGroup} from '../lessonGroups';
+import type {LessonDefinition, Lesson} from '../lessons';
+import type {LessonsOpportunityStandardDefinition} from '../lessonsOpportunityStandards';
+import type {LessonsProgrammingExpressionDefinition} from '../lessonsProgrammingExpressions';
+import type {LessonsResourceDefinition} from '../lessonsResources';
+import type {LessonsStandardDefinition} from '../lessonsStandards';
+import type {LessonsVocabularyDefinition} from '../lessonsVocabularies';
+import type {LevelScriptLevelDefinition} from '../levelScriptLevels';
+import type {ObjectiveDefinition} from '../objectives';
+import type {ResourceDefinition} from '../resources';
+import type {RubricDefinition} from '../rubrics';
+import type {ScriptLevelDefinition} from '../scriptLevels';
+import type {ScriptsResourceDefinition} from '../scriptsResources';
+import type {VocabularyDefinition} from '../vocabularies';
 
 /** Describes a unit in the raw, internal data */
 export interface UnitDefinition {

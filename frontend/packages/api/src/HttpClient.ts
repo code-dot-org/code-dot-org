@@ -14,11 +14,12 @@ export function isNetworkError(error: unknown): error is NetworkError {
  * reference to the response object.
  */
 export class NetworkError extends Error {
-  constructor(
-    message: string,
-    public response: Response,
-  ) {
+  response: Response;
+
+  constructor(message: string, response: Response) {
     super(message);
+
+    this.response = response;
     this.name = 'NetworkError';
 
     // Needed for TypeScript to register this class correctly in ES5

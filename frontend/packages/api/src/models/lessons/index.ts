@@ -1,5 +1,5 @@
-import {ActivitySection} from '@api/models/activitySections';
-import {LessonLevel} from '@api/models/lessonLevels';
+import type {ActivitySection} from '../activitySections';
+import type {LessonLevel} from '../lessonLevels';
 
 /** Defines a lesson in the raw, internal data */
 export interface LessonDefinition {

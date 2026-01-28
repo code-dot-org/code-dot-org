@@ -1,4 +1,4 @@
-import {Level} from '@api/models/levels';
+import type {Level} from '../levels';
 
 /** Describes a reference to a level within a lesson. */
 export interface LessonLevel {

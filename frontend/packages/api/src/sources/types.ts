@@ -11,13 +11,16 @@ export type LabConfig = {[key: string]: {[key: string]: string}};
  * System Support: Files that are used for running code and for share/remix, but are hidden from the user.
  *  For example, the serialized maze for a neighborhood level.
  */
-export enum ProjectFileType {
-  STARTER = 'starter',
-  SUPPORT = 'support',
-  VALIDATION = 'validation',
-  LOCKED_STARTER = 'locked_starter',
-  SYSTEM_SUPPORT = 'system_support',
-}
+export const ProjectFileType = {
+  STARTER: 'starter',
+  SUPPORT: 'support',
+  VALIDATION: 'validation',
+  LOCKED_STARTER: 'locked_starter',
+  SYSTEM_SUPPORT: 'system_support',
+} as const;
+
+export type ProjectFileTypeKey =
+  (typeof ProjectFileType)[keyof typeof ProjectFileType];
 
 export interface ProjectFolder {
   id: FolderId;
@@ -50,7 +53,7 @@ export interface ProjectFile {
   open?: boolean;
   active?: boolean;
   folderId: string;
-  type?: ProjectFileType;
+  type?: ProjectFileTypeKey;
 }
 
 export interface ProjectVersion {

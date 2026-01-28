@@ -1,11 +1,14 @@
-export enum SectionLoginType {
-  Word = 'word',
-  Picture = 'picture',
-  Email = 'email',
-  GoogleClassroom = 'google_classroom',
-  Clever = 'clever',
-  LtiV1 = 'lti_v1',
-}
+export const SectionLoginType = {
+  Word: 'word',
+  Picture: 'picture',
+  Email: 'email',
+  GoogleClassroom: 'google_classroom',
+  Clever: 'clever',
+  LtiV1: 'lti_v1',
+} as const;
+
+export type SectionLoginTypeKey =
+  (typeof SectionLoginType)[keyof typeof SectionLoginType];
 
 /** Describes the course attached to a Section */
 export interface Course {
@@ -48,7 +51,7 @@ export interface Section {
   isAssignedCSA?: boolean;
   isAssignedStandaloneCourse: boolean;
   lessonExtras: boolean;
-  loginType?: SectionLoginType;
+  loginType?: SectionLoginTypeKey;
   loginTypeName?: string;
   name: string;
   pairingAllowed: boolean;
