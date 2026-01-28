@@ -113,9 +113,9 @@ describe('useLevelActivityMetrics', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.LEVEL_ACTIVITY,
         {
-          signedIn: 'true',
+          signedIn: true,
           unitName: 'test-script',
-          levelId: '123',
+          levelId: 123,
           levelName: 'Test Level',
         }
       );
@@ -132,9 +132,9 @@ describe('useLevelActivityMetrics', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.PROJECT_ACTIVITY,
         {
-          signedIn: 'true',
+          signedIn: true,
           unitName: 'test-script',
-          levelId: '456',
+          levelId: 456,
           levelName: 'Project Level',
         }
       );
@@ -151,9 +151,9 @@ describe('useLevelActivityMetrics', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.LEVEL_ACTIVITY,
         expect.objectContaining({
-          signedIn: expect.any(String),
+          signedIn: expect.any(Boolean),
           unitName: expect.any(String),
-          levelId: expect.any(String),
+          levelId: expect.any(Number),
           levelName: expect.any(String),
         })
       );
@@ -215,9 +215,9 @@ describe('useLevelActivityMetrics', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenLastCalledWith(
         EVENTS.LEVEL_ACTIVITY,
         {
-          signedIn: 'true',
+          signedIn: true,
           unitName: 'test-script',
-          levelId: '789',
+          levelId: 789,
           levelName: 'Different Level',
         }
       );
@@ -241,7 +241,7 @@ describe('useLevelActivityMetrics', () => {
       expect(mockSendLab2AnalyticsEvent).toHaveBeenLastCalledWith(
         EVENTS.PROJECT_ACTIVITY,
         expect.objectContaining({
-          levelId: '456',
+          levelId: 456,
           levelName: 'Project Level',
         })
       );
