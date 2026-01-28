@@ -85,17 +85,22 @@ const MusicLab = () => {
   const {theme, setTheme} = useTheme();
   const timelineAreaRef = useRef<HTMLDivElement | null>(null);
 
+  const {
+    loadAndInitializePlayer,
+    onInject,
+    onChange,
+    javascriptGeneratorRef,
+    driverRef,
+  } = useContext(PlayerContext);
+
   const hideChaff = useCallback(() => {}, []);
-  const undo: () => void = () => {};
-  const redo: () => void = () => {};
+  const undo = useCallback(() => driverRef.current.undo(), [driverRef]);
+  const redo = useCallback(() => driverRef.current.redo(), [driverRef]);
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
   const allowPackSelection = true;
   const setPlaying: (_: boolean) => void = _ => {};
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
-
-  const {loadAndInitializePlayer, onInject, onChange, javascriptGeneratorRef} =
-    useContext(PlayerContext);
 
   useEffect(() => {
     // Ensure we use dark theme for music lab, for now

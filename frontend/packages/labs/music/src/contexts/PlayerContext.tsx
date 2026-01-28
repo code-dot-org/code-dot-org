@@ -69,9 +69,17 @@ export const PlayerProvider = ({children}: PropsWithChildren) => {
         // Update undo status when blocks change.
         setCanUndo(driver.current.canUndo());
         setCanRedo(driver.current.canRedo());
+
+        // Also update in redux
+        dispatch(
+          musicActions.setUndoStatus({
+            canUndo: driver.current.canUndo(),
+            canRedo: driver.current.canRedo(),
+          }),
+        );
       }
     },
-    [driver, setCanUndo, setCanRedo],
+    [dispatch, driver, setCanUndo, setCanRedo],
   );
 
   useEffect(() => {
