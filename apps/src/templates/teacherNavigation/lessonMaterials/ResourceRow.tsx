@@ -16,7 +16,7 @@ type ResourceRowProps = {
 
 const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
   const resourceDisplayText = () => {
-    if (!resource.type) {
+    if (!resource.type || resource.type === 'Custom') {
       return resource.name;
     } else if (resource.type === 'Standards') {
       if (unitNumber) {

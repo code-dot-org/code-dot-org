@@ -32,7 +32,8 @@ export type MaterialType =
   | 'LESSON_PLAN'
   | 'STANDARDS'
   | 'VOCABULARY'
-  | 'LINK';
+  | 'LINK'
+  | 'CUSTOM';
 
 export const computeMaterialType = (
   resourceType: string,
@@ -52,6 +53,8 @@ export const computeMaterialType = (
     return 'STANDARDS';
   } else if (resourceType === 'Vocabulary') {
     return 'VOCABULARY';
+  } else if (resourceType === 'Custom') {
+    return 'CUSTOM';
   } else {
     return 'LINK';
   }

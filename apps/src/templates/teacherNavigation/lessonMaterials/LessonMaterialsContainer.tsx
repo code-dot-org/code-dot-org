@@ -36,6 +36,8 @@ import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
+import CustomLessonResources from './CustomLessonResources';
+
 import styles from './lesson-materials.module.scss';
 
 interface AifInfo {
@@ -313,6 +315,14 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
+  const renderCustomResources = () => {
+    if (!selectedLesson) {
+      return null;
+    }
+
+    return <CustomLessonResources />;
+  };
+
   const renderLessonSummaryContainer = () => {
     return (
       <>
@@ -489,6 +499,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           <>
             {renderTeacherResources()}
             {renderStudentResources()}
+            {renderCustomResources()}
           </>
         )}
       </div>
