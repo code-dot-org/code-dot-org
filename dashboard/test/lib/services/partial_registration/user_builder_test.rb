@@ -14,6 +14,13 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
     test_user_to_delete&.destroy
   end
 
+  # Based on https://github.com/rails/rails/blob/v7.0.8.7/actionpack/test/dispatch/request/session_test.rb#L134-L140
+  class MockSessionStore
+    def load_session(env); [1, {}]; end
+    def session_exists?(env); true; end
+    def delete_session(env, id, options); 123; end
+  end
+
   def user_params(override_params = {})
     default_params = {
       user_type: override_params[:user_type] || 'student',
@@ -33,6 +40,7 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
   def setup_partial_user(override_params = {})
     env = Rack::MockRequest.env_for("test-env", 'HTTP_X_FORWARDED_FOR' => TEST_IP, :params => {user: user_params(override_params)})
     @request = ActionDispatch::Request.new env
+    @request.session = ActionDispatch::Request::Session.create(MockSessionStore.new, @request, {})
 
     partial_user = User.new({email: TEST_USER_EMAIL, password: 'fake-pass', password_confirmation: 'fake-pass'})
     partial_user.validate_for_finish_sign_up
