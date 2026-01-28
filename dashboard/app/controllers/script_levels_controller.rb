@@ -211,12 +211,12 @@ class ScriptLevelsController < ApplicationController
     end
 
     # Lab2 levels load rubric data asynchronously as they don't reload the page between levels.
-    @rubric = @script_level.lesson.rubric unless @level.uses_lab2?
+    @rubric = @script_level.rubric unless @level.uses_lab2?
     ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?(@script_level.lesson)
-      if @script_level.lesson.rubric && view_as_other
+      if @script_level.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
           user_id: @view_as_user.id,
