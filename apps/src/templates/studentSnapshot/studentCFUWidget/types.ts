@@ -1,30 +1,53 @@
-export type CFULevelType = 'Multi' | 'Match' | 'FreeResponse';
+export type CFULevelType = 'Multi' | 'Match' | 'FreeResponse' | 'LevelGroup';
 
-export interface CFULevel {
+export type CFUMultipleLevelAnswer = {text: string; correct: boolean};
+
+// Base level properties shared by all level types
+interface CFULevelBase {
   id: number;
   name: string;
   display_name: string;
   level_position: number;
-  type: CFULevelType;
   key?: string;
   script_level_id: number;
   progression?: string;
   progression_display_name?: string;
-  // Optional fields populated by the backend for question content.
   question_text: string | string[] | null;
-  answers?: unknown;
 }
+
+// LevelGroup level - answers is an array of arrays (or nulls)
+export interface CFULevelGroup extends CFULevelBase {
+  type: 'LevelGroup';
+  answers: Array<CFUMultipleLevelAnswer[] | null>;
+}
+
+// Other level types - answers is a single array
+export interface CFULevelOther extends CFULevelBase {
+  type: 'Multi' | 'Match' | 'FreeResponse';
+  answers: CFUMultipleLevelAnswer[] | null;
+}
+
+// Discriminated union type
+export type CFULevel = CFULevelGroup | CFULevelOther;
 
 export interface CFULevelResponse {
   level_id: number;
   script_level_id: number;
-  response: {
-    type: string;
-    student_result?: unknown;
-    status: unknown;
-  };
+  response: CFULevelResponseResponse;
   submitted?: boolean;
   timestamp?: string;
+}
+
+export interface CFULevelResponseResponse {
+  type: CFULevelType;
+  student_result?: string | number[];
+  level_results?: {
+    type: CFULevelType;
+    student_result?: string | number[];
+    status: CFULevelResponseSubmissionStatus;
+    level_id: number;
+  }[];
+  status: CFULevelResponseSubmissionStatus;
 }
 
 export type StatusBucket =
@@ -32,3 +55,5 @@ export type StatusBucket =
   | 'partially_correct'
   | 'incorrect'
   | 'incomplete';
+
+export type CFULevelResponseSubmissionStatus = 'submitted' | 'unsubmitted';
