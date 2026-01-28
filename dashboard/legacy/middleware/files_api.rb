@@ -276,7 +276,6 @@ class FilesApi < Sinatra::Base
     end
 
     response.headers['S3-Version-Id'] = result[:version_id]
-    puts '*******************', 'S3-Version-Id', request.path, result[:version_id]
 
     if endpoint == 'sources' && should_sanitize_for_under_13?(encrypted_channel_id)
       return StringIO.new sanitize_for_under_13 result[:body].string
@@ -690,16 +689,12 @@ class FilesApi < Sinatra::Base
     filename.downcase! if endpoint == 'files'
     begin
       versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
-      puts 'VERSIONS', versions
-      puts 'a'
       return versions.to_json if owns_channel?(encrypted_channel_id)
 
       owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
       owner_user_id = user_id_for_storage_id(owner_storage_id)
-      puts 'b'
       return versions.to_json if teaches_student?(owner_user_id)
 
-      puts 'c'
       return versions.select {|version| version[:isLatest]}.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
