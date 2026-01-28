@@ -1,7 +1,8 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
-  "created_at": "2019-10-24T16:55:06.000Z",
+  "created_at": "2018-02-26T19:03:23.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -129,7 +130,6 @@
       }
     ],
     "instructions_important": "false",
-    "makerlab_enabled": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
@@ -138,15 +138,17 @@
     "map_reference": "/docs/concepts/maker-toolkit/circuit-playground/index.html",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
+    "ai_tutor_available": "false",
+    "validation_enabled": "false",
+    "ai_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-26 11:03:52 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"video_key\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2020-02-04 11:13:00 -0500\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-02-26 11:03:52 -0800\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"video_key\",\"log_conditions\",\"teacher_markdown\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"erin@code.org\"},{\"changed_at\":\"2020-02-04 11:13:00 -0500\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2026-01-28 03:46:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

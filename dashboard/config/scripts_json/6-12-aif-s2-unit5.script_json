@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-27 01:26:03 UTC",
+    "serialized_at": "2026-01-27 17:50:06 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -201,6 +201,18 @@
   ],
   "lesson_activities": [
     {
+      "key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5"
+      }
+    },
+    {
       "key": "c70d3db0-613d-4995-b0f7-460dccde42ae",
       "position": 1,
       "properties": {
@@ -226,6 +238,60 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "316341f5-03de-4e9b-92b5-5c85fedf27f3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Navigate a Weather App"
+      },
+      "seeding_key": {
+        "activity_section.key": "316341f5-03de-4e9b-92b5-5c85fedf27f3",
+        "lesson_activity.key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335"
+      }
+    },
+    {
+      "key": "75872234-42eb-4334-b0a5-32bcfa2c08bf",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore API Documentation"
+      },
+      "seeding_key": {
+        "activity_section.key": "75872234-42eb-4334-b0a5-32bcfa2c08bf",
+        "lesson_activity.key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335"
+      }
+    },
+    {
+      "key": "e026aada-bdef-440f-9c38-3e1656fd26e6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Modify an API Call"
+      },
+      "seeding_key": {
+        "activity_section.key": "e026aada-bdef-440f-9c38-3e1656fd26e6",
+        "lesson_activity.key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335"
+      }
+    },
+    {
+      "key": "79e51d1e-41da-43ba-a4dc-b5da1ca08640",
+      "position": 4,
+      "properties": {
+        "progression_name": "Adding Comments"
+      },
+      "seeding_key": {
+        "activity_section.key": "79e51d1e-41da-43ba-a4dc-b5da1ca08640",
+        "lesson_activity.key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335"
+      }
+    },
+    {
+      "key": "7d3c29d2-5bac-476a-91c2-501425f75068",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7d3c29d2-5bac-476a-91c2-501425f75068",
+        "lesson_activity.key": "0db5ba4c-951e-4d18-b11e-9b1b2113a335"
+      }
+    },
     {
       "key": "99ff6b8b-e613-4cd6-a240-c6105b702084",
       "position": 1,
@@ -278,6 +344,97 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Navigate a Weather App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level1-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "316341f5-03de-4e9b-92b5-5c85fedf27f3"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level1-test-2025-pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore API Documentation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level2-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "75872234-42eb-4334-b0a5-32bcfa2c08bf"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level2-test-2025-pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify an API Call"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level3-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "e026aada-bdef-440f-9c38-3e1656fd26e6"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level3-test-2025-pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Adding Comments"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level4-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "79e51d1e-41da-43ba-a4dc-b5da1ca08640"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level4-test-2025-pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level1-test_2025-pilot"
+        ],
         "progression": "Vocab: Synchronous Programming"
       },
       "bonus": false,
@@ -295,11 +452,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level2-test_2025-pilot"
+        ],
         "progression": "Vocab: Synchronous Programming"
       },
       "bonus": false,
@@ -317,11 +477,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level3-test_2025-pilot"
+        ],
         "progression": "Vocab: Asynchronous Programming"
       },
       "bonus": false,
@@ -339,11 +502,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level4-test_2025-pilot"
+        ],
         "progression": "Vocab: Asynchronous Programming"
       },
       "bonus": false,
@@ -361,11 +527,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level5-test_2025-pilot"
+        ],
         "progression": "Demo: Run the Frozen App"
       },
       "bonus": false,
@@ -383,11 +552,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "designing-reliable-apps-lesson2-level6-test_2025-pilot"
+        ],
         "progression": "Analogy: Synchronous vs. Asynchronous "
       },
       "bonus": false,
@@ -406,6 +578,54 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level1-test-2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level1-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "316341f5-03de-4e9b-92b5-5c85fedf27f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level2-test-2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level2-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "75872234-42eb-4334-b0a5-32bcfa2c08bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level3-test-2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level3-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "e026aada-bdef-440f-9c38-3e1656fd26e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level4-test-2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level4-test-2025-pilot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aif-s2-unit5",
+        "activity_section.key": "79e51d1e-41da-43ba-a4dc-b5da1ca08640"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "designing-reliable-apps-lesson2-level1-test_2025-pilot",

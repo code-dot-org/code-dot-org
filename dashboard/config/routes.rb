@@ -559,6 +559,7 @@ Dashboard::Application.routes.draw do
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
+        get :level_properties, to: 'lessons#level_properties_by_id', format: false
         post :clone
       end
     end
