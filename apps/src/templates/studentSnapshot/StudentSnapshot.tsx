@@ -18,7 +18,6 @@ import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
 import StudentCFUWidget from './studentCFUWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
-import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
 
@@ -157,11 +156,26 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
+        {selectedLessonId && selectedStudentId && (
+          <StudentLessonProgressDetailsWidget
+            selectedUnitId={selectedUnitId}
+            selectedLessonId={selectedLessonId}
+            selectedStudentId={selectedStudentId}
+          />
+        )}
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
           studentId={HARDCODED_STUDENT_ID}
           teacherHasEnabledAi={aiTaEnabled}
         />
+        <StudentCodeWidget studentCode={studentCode} />
+        <StudentCFUWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
+        />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}
@@ -171,53 +185,6 @@ const StudentSnapshot: React.FC = () => {
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
         />
-        <StudentCFUWidget
-          gridWidth={2}
-          gridHeight={2}
-          lessonId={selectedLessonId}
-          studentId={selectedStudentId}
-        />
-        <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
-          <div>content</div>
-        </WidgetTemplate>
-        <StudentCodeWidget studentCode={studentCode} />
-        <ExemplarCodeWidget lessonId={selectedLessonId} />
-        <WidgetTemplate
-          widgetName="Small Widget 1"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 1</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Small Widget 2"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 2</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Small Widget 3"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 3</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Loading widget"
-          gridWidth={1}
-          gridHeight={1}
-          loading={true}
-        >
-          <div>Should not be displayed</div>
-        </WidgetTemplate>
-        {selectedLessonId && selectedStudentId && (
-          <StudentLessonProgressDetailsWidget
-            selectedUnitId={selectedUnitId}
-            selectedLessonId={selectedLessonId}
-            selectedStudentId={selectedStudentId}
-          />
-        )}
       </div>
     </div>
   );
