@@ -29,9 +29,15 @@ SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
 # Don't run any UI or Eyes tests.
 SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 
-# Reset the dashboard database before seeding for UI tests. By default, the
-# database will have been prepopulated based on recent data from the staging
-# branch (see cache-staging-build pipeline in .drone.yml).
+# Reset the dashboard database before seeding for UI tests. It is recommended to
+# use this tag when running drone against PRs that reduce what gets seeded in
+# drone via seed:ui_test, such as if you remove something from UI_TEST_SCRIPTS.
+#
+# By default, the database will have been prepopulated based on recent data
+# from the staging branch (see cache-staging-build pipeline in .drone.yml).
+# If you remove something from UI_TEST_SCRIPTS but do not specify this tag,
+# drone will still have that unit seeded in the database, possibly masking any
+# test failures that might show up in later drone builds after you merge.
 RESET_DB_TAG = 'reset db'.freeze
 
 # Don't run any unit tests.
