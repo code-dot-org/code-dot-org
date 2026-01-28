@@ -80,12 +80,6 @@ describe('RubricsContainerTest', () => {
     ],
   };
 
-  beforeEach(() => {
-    // Logs the full test name
-
-    console.log('Running:', expect.getState().currentTestName);
-  });
-
   afterEach(() => {
     jest.restoreAllMocks();
   });
