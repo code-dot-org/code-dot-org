@@ -34,7 +34,7 @@ class AidiffArtifact < ApplicationRecord
       updated_at: updated_at,
       type: type,
       content: content,
-      aidiff_artifact_associations: aidiff_artifact_associations&.map(&:summarize),
+      aidiff_artifact_associations: aidiff_artifact_associations&.map(&:summarize)
     }
   end
 

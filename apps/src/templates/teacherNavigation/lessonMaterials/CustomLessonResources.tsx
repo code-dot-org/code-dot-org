@@ -31,7 +31,6 @@ async function asyncFetchCustomResources(
     `/aidiff_artifacts`,
     pararms
   );
-  console.log('Custom Resources response:', response);
   return response.value;
 }
 
