@@ -9,8 +9,10 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -194,6 +196,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const levelId = instructionsProps.levelProperties.id;
   const hasValidationConditions = useAppSelector(
@@ -472,7 +475,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {isOnboardingTourEnabled && <OnboardingTourSteps />}
+        {!isStartMode && isOnboardingTourEnabled && <OnboardingTourSteps />}
         {isValidationTourEnabled && (
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
