@@ -1,0 +1,9 @@
+name 'designing-reliable-apps-lesson1-level4-test-2025-pilot'
+display_name 'Adding Comments to Your API Call'
+description 'Make the same selection (Choice A or B) that you did in the previous level. Then work with AI to add comments to explain the code.'
+
+sublevels
+level 'designing-reliable-apps-lesson1-level4a-choice-test-2025-pilot'
+level 'designing-reliable-apps-lesson1-level4b-choice-test-2025-pilot'
+
+uses_lab2

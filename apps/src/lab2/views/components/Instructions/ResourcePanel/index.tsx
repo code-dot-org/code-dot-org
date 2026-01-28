@@ -137,6 +137,11 @@ type ResourcePanelProps = InstructionsProps & {
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
   backpackProps?: BackpackProps;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 };
 
 /**
@@ -162,6 +167,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
+  onImageFlagged,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -292,6 +298,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
+          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -340,6 +347,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackProps,
     setBackpackTabAsActive,
     backpackRefreshKey,
+    onImageFlagged,
   ]);
 
   const hasTabs = useMemo(() => {

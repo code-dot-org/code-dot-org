@@ -46,6 +46,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
     config,
+    onImageFlagged,
   } = useCodebridgeContext();
 
   const dispatch = useAppDispatch();
@@ -160,6 +161,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
         }
         backpackProps={backpackProps}
+        onImageFlagged={onImageFlagged}
       />
     </div>
   );

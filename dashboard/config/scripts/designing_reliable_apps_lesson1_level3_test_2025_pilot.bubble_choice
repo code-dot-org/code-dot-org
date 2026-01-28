@@ -1,0 +1,9 @@
+name 'designing-reliable-apps-lesson1-level3-test-2025-pilot'
+display_name 'Modify an API Call'
+description 'Choose from one of the following two levels. Explore how you can modify the API call to display different information on screen.'
+
+sublevels
+level 'designing-reliable-apps-lesson1-level3a-test-2025-pilot'
+level 'designing-reliable-apps-lesson1-level3b-test-2025-pilot'
+
+uses_lab2

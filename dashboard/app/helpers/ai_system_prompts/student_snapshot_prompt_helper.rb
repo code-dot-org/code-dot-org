@@ -1,6 +1,8 @@
 module AiSystemPrompts::StudentSnapshotPromptHelper
   include LevelsHelper
 
+  ALPHABET = ('a'..'z').to_a
+
   LEVEL_TYPE_PROMPTS =
     {
       "LevelGroup" => "Level Group: students interact with a group of levels that all display on a single page",
@@ -21,12 +23,25 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       "Sketchlab" => "Sketch Lab: students interact with a whiteboarding tool to create visual designs",
     }.freeze
 
-  def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    intro = "This is where the insight system prompt intro goes. Weight the assessment level more heavily."
+  LESSON_INSIGHT_PROMPT = <<~INSIGHT_PROMPT
+    You are a teaching assistant for a computer science curriculum. I need you to return a short summary of what a student has done on a specific lesson that contains multiple levels.
+    Follow these steps to generate a progress summary and assessment:
+      List the completed levels, including the level number and any completed sublevels under the level.
+      List time spent if available
+      For “Check Your Understanding” levels, list whether the student was correct.
+      List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
+    Write the following summary based on all info and above steps:
+      Progress: Write 1-2 sentences about the student's progress through the levels, optional sublevels, and finally the assessment level. The student's performance on the assessment level is the most important.
+      Misconceptions: Write 1-2 sentences about any of the student’s misconceptions in the lesson. If there are no misconceptions, say “Student showed no misconceptions”
+      Assessment: Write 1-2 sentences specifically about the assessment level, including a brief description of what they did and what their program does. Write about what skills they did well on and/or need to improve on. Only include information about the assessment level.
+      Next Steps: Write 1 sentence based on any misconceptions or issues with their code levels (especially the assessment level) with suggestions on what to do next. This could be going over concepts, trying additional levels or sublevels or just stating that they should continue on to the next lesson. Do not recommend completing additional sublevels if the student has completed one and there are no misconceptions.
+    Use the following lesson info to complete the steps above:
+  INSIGHT_PROMPT
 
+  def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
 
-    "#{intro}\n#{general_prompt}"
+    "#{LESSON_INSIGHT_PROMPT}\n#{general_prompt}"
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
@@ -69,15 +84,32 @@ Levels: [{
 }]"
   end
 
+  def self.get_level_number(level, script_level, parent_script_level = nil, parent_level_display_text = nil)
+    if parent_script_level
+      sublevel_index = parent_script_level.sublevel_position(level)
+      index_letter = ALPHABET[sublevel_index - 1] unless sublevel_index.nil?
+      parent_level_display_text.to_s + index_letter.to_s
+    else
+      if script_level&.respond_to?(:kind) && script_level.kind == "unplugged"
+        nil
+      else
+        script_level&.level_display_text
+      end
+    end
+  end
+
   # Get an abridged version of level info for prompt
   # This is used for non-assessment levels
-  def self.get_brief_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
+  def self.get_brief_level_prompt_info(level, student_id, unit_id, section_id, teacher_id, parent_script_level = nil, parent_level_display_text = nil)
     return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+    script_level = level.script_levels.first
+
+    level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
+      'Level Number'=> level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -95,8 +127,11 @@ Levels: [{
 
     level_data["Time spent"] = "#{user_level.time_spent} seconds" if user_level&.time_spent && user_level.time_spent > 0
 
-    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)} : []
+    sublevel_data = []
+    if script_level&.bubble_choice?
+      sublevels = level.sublevels
+      sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_brief_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
+    end
 
     rubric_data = level.rubrics.present? ? {learningGoals: level.rubrics&.flat_map(&:learning_goals)&.map(&:learning_goal)} : {}
 
@@ -113,20 +148,26 @@ Levels: [{
 
   # Get a detailed version of level info for prompt
   # This is used for assessment levels
-  def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
+  def self.get_full_level_prompt_info(level, student_id, unit_id, section_id, teacher_id, parent_script_level = nil, parent_level_display_text = nil)
     return {} unless level
 
     user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+    script_level = level.script_levels.first
+
+    level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      "Assessment Level - weight this more heavily towards student mastery" => "",
-      "Level Name" => level.display_name || (!level.properties.nil? && level.properties["title"]) || level.name,
+      "Assessment Level" => "weight this more heavily towards student mastery",
+      'Level Number'=> level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
 
-    sublevels = level.respond_to?(:sublevels) ? level.sublevels&.order(:position) : nil
-    sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id)} : []
+    sublevel_data = []
+    if script_level&.bubble_choice?
+      sublevels = level.sublevels
+      sublevel_data = sublevels&.any? ? sublevels.map {|sublevel| get_full_level_prompt_info(sublevel, student_id, unit_id, section_id, teacher_id, level, level_number)} : []
+    end
 
     section_stats = get_section_stats_for_level(level, section_id, teacher_id, unit_id)
 
@@ -330,7 +371,7 @@ Levels: [{
 
     if level_data[:sublevels]&.any?
       sublevel_strings = level_data[:sublevels].map {|sublevel| format_level_info(sublevel, indentation + '  ')}
-      result_parts << "#{indentation}Sublevels (A student should pick at least one to complete):\n#{indentation}[{\n#{sublevel_strings.join("\n#{indentation}},{\n")}}]"
+      result_parts << "#{indentation}Sublevels (A student picks one sublevel to complete and can optionally do more, but only one sublevel is required for mastery):\n#{indentation}[{\n#{sublevel_strings.join("\n#{indentation}},{\n")}}]"
     end
 
     result_parts << section_stats_parts.join("\n") if section_stats_parts.any?

@@ -1,11 +1,67 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-26T23:33:18.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Robot Chef Logic</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <div class=\"card\">\n        <header>\n            <h1>Robot Chef 2.0</h1>\n            <p>Task Queue Monitor</p>\n        </header>\n\n        <div id=\"logBox\" class=\"console-screen\">\n            <div class=\"line system\">> System Ready...</div>\n        </div>\n\n        <div class=\"controls\">\n            <button id=\"runBtn\" class=\"primary-btn\">RUN ROUTINE ▶</button>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n    background-color: #f0f2f5;\n    font-family: sans-serif;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100vh;\n    margin: 0;\n}\n\n.card {\n    background: white;\n    width: 400px;\n    padding: 30px;\n    border-radius: 12px;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\nheader h1 { margin: 0; font-size: 1.5rem; color: #333; }\nheader p { margin: 5px 0 20px 0; color: #666; font-size: 0.9rem; }\n\n/* The Log Box */\n.console-screen {\n    background-color: #2d2d2d;\n    color: #4cd137; /* Bright green text */\n    height: 250px;\n    border-radius: 8px;\n    padding: 15px;\n    overflow-y: auto;\n    font-family: monospace;\n    font-size: 0.95rem;\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n}\n\n.line { border-bottom: 1px solid #444; padding-bottom: 4px; }\n.system { color: #888; }\n.error { color: #ff4757; font-weight: bold; }\n\n/* Button & Status */\n.controls { margin-top: 20px; text-align: center; }\n\n.primary-btn {\n    background-color: #0097e6;\n    color: white;\n    border: none;\n    padding: 12px 24px;\n    font-size: 1rem;\n    font-weight: bold;\n    border-radius: 6px;\n    cursor: pointer;\n    width: 100%;\n}\n\n.primary-btn:hover { background-color: #007bbd; }\n.primary-btn:disabled { background-color: #ccc; cursor: not-allowed; }\n\n.status-text {\n    margin-top: 15px;\n    font-weight: bold;\n    color: #666;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const runBtn = document.getElementById('runBtn');\nconst logBox = document.getElementById('logBox');\n\nconst addLog = (text) => {\n    const div = document.createElement('div');\n    div.innerText = \"> \" + text;\n    logBox.appendChild(div);\n};\n\nrunBtn.addEventListener('click', () => {\n\n    addLog(\"Chef grabs the order ticket.\");\n\n    addLog(\"Heating up the pan...\");\n\n    // A loop to show repetitive synchronous work\n    for (let i = 1; i <= 3; i++) {\n        addLog(\"Cracking egg \" + i + \" into bowl...\");\n    }\n\n    addLog(\"Whisking the eggs.\");\n\n    addLog(\"Pouring mixture into pan.\");\n\n    addLog(\"Cooking the omelette.\");\n\n    addLog(\"Sliding omelette onto plate.\");\n\n    addLog(\"Order served!\");\n\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "The Synchronous Kitchen",
+    "bubble_choice_description": "Predict how blocking code freezes the interface while tasks complete one at a time.",
+    "thumbnail_url": "https://images.code.org/81dc4b2506783a5d09470978ba50e4bd-Pasted Graphic 5.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": true
+    },
+    "long_instructions": "### The Synchronous Kitchen\r\n\r\n**Do This:**\r\n\r\n1. **Read**: Look closely at the code inside the Event Listener.\r\n\r\n2. **Predict**: In what order will the chef complete the tasks? Submit your prediction in the box below.\r\n\r\n3. **Run**: Click the 'Run Routine' button to see the actual order in which the chef completes the tasks."
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-01-27 19:30:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 19:36:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 19:43:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 19:58:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 20:00:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:46:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:02:10 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:03:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:03:42 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:12:06 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:43:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:45:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:55:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:55:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 01:10:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 01:10:40 +0000\",\"changed\":[\"disable_edit_run_for_submission\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 01:11:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 01:17:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>
