@@ -1,0 +1,94 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-28T06:08:14.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sizing Images in CSS",
+    "long_instructions": "\r\n# Height and Width Attributes\r\n\r\nImages are not always the right size for a webpage. Luckily, there are width and height properties in CSS to set how many pixels tall or wide we want an image to be. _Make sure you **don't set both** \"width\" and \"height\" or you may distort the image._\r\n\r\n# Do This\r\n1) Find the rule set for the image tags in the CSS file.\r\n2) Add the width property with a value of your choice to make the other images smaller.\r\n   - Example: `width: 300px;`\r\n",
+    "bubble_choice_description": "Learn how to customize the height and width of images.",
+    "thumbnail_url": "https://images.code.org/ced4f6389bd2efcf29c35830ec3d663c-image-1564701914524.jpg",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <!-- corgis! -->\n    <h1>Corgi Lovers United</h1>\n    \n    <p>Welcome to Corgi Lovers United! We enjoy sharing our love of corgis with the world, and this social media page is dedicated to pictures of them. Enjoy!</p>\n    \n    <img src=\"CorgiTongue.jpg\" alt=\"corgi\">\n    \n    <img src=\"CorgiInTent.jpg\" alt=\"corg in a tent\">\n    \n    <img src=\"FluffyCorgi.jpg\" alt=\"super fluffy corgi\">\n    \n    <p>Photos by Florenica Potter, ipet photo, and Cole Keister from Unplash</p>\n    \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  background: #fff3e7;\n}\np {\n  font-family: cursive;\n}\nh1 {\n  font-family: cursive;\n}\n\n/* 2) Add the width property with a value of your choice */\nimg {\n  \n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "FluffyCorgi.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L10a-2025/uuid/d050dbcf-6e8c-49d3-b52e-537e5f23e87b.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "CorgiInTent.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L10a-2025/uuid/6f92122b-7a96-43c4-9664-b76a411d99f1.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "CorgiTongue.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L10a-2025/uuid/40b5997f-d147-4494-9754-c31311afd779.jpg",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nwsFDKwLLCRvHJFWFXRps\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-28 06:08:47 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:09:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

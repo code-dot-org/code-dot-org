@@ -1,0 +1,82 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-27T17:44:04.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Weather Data Lab</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <div class=\"container\">\n        <section class=\"app-side\">\n            \n            <div class=\"weather-card-wide\">\n                <div class=\"card-content\">\n                    \n                    <div class=\"location-group\">\n                        <img id=\"weatherIcon\" src=\"\" alt=\"Weather Icon\" class=\"hidden\">\n                        <div class=\"text-group\">\n                            <h1 id=\"cityName\">Loading...</h1>\n                            <p id=\"description\">Checking skies...</p>\n                        </div>\n                    </div>\n\n                    <div class=\"temp-group\">\n                        <span id=\"tempMain\">--</span>\n                    </div>\n\n                    <div class=\"details-group\">\n                        <p>Humidity: <strong id=\"humidity\">--</strong></p>\n                        <p>Wind: <strong id=\"wind\">--</strong></p>\n                    </div>\n\n                </div>\n            </div>\n\n            <button id=\"toggleDevTools\">Inspect Fetch Request</button>\n        </section>\n\n        <section id=\"devTools\" class=\"inspect-side hidden\">\n            <div class=\"tabs-header\">\n                <span class=\"active-header-tab\">Network</span>\n                <span>Console</span>\n                <span>Sources</span>\n            </div>\n            \n            <div class=\"network-panel\">\n                <div class=\"requests-list\">\n                    <div class=\"request-item\">weather.json</div>\n                </div>\n                \n                <div class=\"preview-area\">\n                    <div class=\"preview-tabs\">\n                        <span>Headers</span>\n                        <span>Payload</span>\n                        <span class=\"active-tab\">Preview</span>\n                        <span>Response</span>\n                    </div>\n                    <pre id=\"jsonContent\"></pre>\n                </div>\n            </div>\n        </section>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "weather.json",
+          "language": "json",
+          "contents": "{\n  \"name\": \"London\",\n  \"coord\": { \"lon\": -0.1257, \"lat\": 51.5085 },\n  \"weather\": [\n    { \n      \"id\": 804, \n      \"main\": \"Clouds\", \n      \"description\": \"overcast clouds\", \n      \"icon_file\": \"overcast.png\" \n    }\n  ],\n  \"main\": { \"temp\": 46, \"feels_like\": 42, \"humidity\": 92, \"pressure\": 1008 },\n  \"wind\": { \"speed\": 8.0, \"deg\": 210 },\n  \"visibility\": 10000,\n  \"dt\": 1768419002\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "styles.css",
+          "language": "css",
+          "contents": ":root {\n    --dev-bg: #f3f3f3;\n    --dev-border: #d0d0d0;\n    --openweather-orange: #eb6e4b;\n    --text-dark: #48484a;\n    --blue-link: #1a73e8;\n}\n\nbody {\n    font-family: 'Segoe UI', Tahoma, sans-serif;\n    margin: 0;\n    background-color: #f0f2f5;\n    color: var(--text-dark);\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n}\n\n.container {\n    display: flex;\n    flex-direction: column; /* Stacks App on top, DevTools on bottom */\n    height: 100%;\n}\n\n/* --- Weather App Section --- */\n.app-side {\n    padding: 20px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: #fff;\n    border-bottom: 1px solid var(--dev-border);\n}\n\n.weather-card-wide {\n    background: #ffffff;\n    border-radius: 12px;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.1);\n    width: 90%;\n    max-width: 800px;\n    padding: 20px 40px;\n    margin-bottom: 20px;\n}\n\n.card-content {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.location-group {\n    display: flex;\n    align-items: center;\n    gap: 15px;\n    flex: 1;\n}\n\n#weatherIcon {\n    width: 70px;\n    height: 70px;\n}\n\n.text-group h1 {\n    margin: 0;\n    font-size: 1.5rem;\n}\n\n.text-group p {\n    margin: 5px 0 0 0;\n    color: #666;\n}\n\n.temp-group {\n    flex: 1;\n    text-align: center;\n}\n\n#tempMain {\n    font-size: 3.5rem;\n    font-weight: bold;\n}\n\n.details-group {\n    flex: 1;\n    text-align: right;\n    font-size: 1rem;\n    color: #555;\n    line-height: 1.6;\n}\n\n#toggleDevTools {\n    padding: 10px 25px;\n    background: var(--openweather-orange);\n    color: white;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    font-weight: bold;\n}\n\n/* --- Mock DevTools Section --- */\n.inspect-side {\n    flex: 1; /* Takes up remaining vertical space */\n    background: var(--dev-bg);\n    display: flex;\n    flex-direction: column;\n    font-size: 12px;\n    border-top: 2px solid var(--dev-border);\n}\n\n.tabs-header {\n    background: #fff;\n    padding: 8px 15px;\n    border-bottom: 1px solid var(--dev-border);\n    display: flex;\n    gap: 20px;\n}\n\n.active-header-tab {\n    border-bottom: 2px solid var(--blue-link);\n    color: var(--blue-link);\n}\n\n.network-panel {\n    display: flex;\n    flex: 1;\n    overflow: hidden;\n}\n\n.requests-list {\n    width: 200px;\n    background: #fff;\n    border-right: 1px solid var(--dev-border);\n}\n\n.request-item {\n    padding: 10px;\n    background: #e8f0fe;\n    color: #000;\n}\n\n.preview-area {\n    flex: 1;\n    background: #fff;\n    display: flex;\n    flex-direction: column;\n}\n\n.preview-tabs {\n    background: #f3f3f3;\n    padding: 5px 10px;\n    border-bottom: 1px solid var(--dev-border);\n    display: flex;\n    gap: 15px;\n}\n\n.active-tab {\n    color: var(--blue-link);\n    border-bottom: 2px solid var(--blue-link);\n}\n\n#jsonContent {\n    margin: 0;\n    padding: 15px;\n    font-family: 'Consolas', 'Monaco', monospace;\n    color: #c80000;\n    overflow-y: auto;\n    white-space: pre-wrap;\n}\n\n/* Utility */\n.hidden { display: none !important; }",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "language": "js",
+          "contents": "window.addEventListener('DOMContentLoaded', () => {\n    fetch('weather.json')\n        .then(response => response.json())\n        .then(data => {\n            renderUI(data);\n            renderInspectTool(data);\n        });\n});\n\nfunction renderUI(data) {\n    const weather = data.weather[0];\n    \n    // Update Text\n    document.getElementById('cityName').innerText = `${data.name}, GB`;\n    document.getElementById('tempMain').innerText = `${data.main.temp}°F`;\n    document.getElementById('description').innerText = weather.description;\n    document.getElementById('humidity').innerText = `${data.main.humidity}%`;\n    document.getElementById('wind').innerText = `${data.wind.speed}mph`;\n\n    // Update Image\n    const iconImg = document.getElementById('weatherIcon');\n    iconImg.src = weather.icon_file; // Uses \"overcast.png\" from JSON\n    iconImg.classList.remove('hidden');\n}\n\nfunction renderInspectTool(data) {\n    document.getElementById('jsonContent').textContent = JSON.stringify(data, null, 2);\n}\n\ndocument.getElementById('toggleDevTools').addEventListener('click', () => {\n    document.getElementById('devTools').classList.toggle('hidden');\n});",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "overcast.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson1-level1-test-2025-pilot/uuid/b1b30ed7-3639-4938-a8f2-544d1d737be3.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Browser Scavenger Hunt\r\n\r\nLet's explore this weather app's data! \r\n\r\nClick the 'Inspect Fetch Request' button to find the raw JSON file. Then answer the scavenger hunt questions in your activity guide.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-27 17:58:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 18:04:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 18:04:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 18:08:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 18:12:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 18:14:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 18:14:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:05:07 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:07:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:09:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-27 19:09:11 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

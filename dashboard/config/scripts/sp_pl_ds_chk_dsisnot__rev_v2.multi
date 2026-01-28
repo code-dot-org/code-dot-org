@@ -6,11 +6,11 @@ question 'Select the scenarios that are NOT examples of Data Science.'
 
 
 
-right 'An app uses past user behavior to recommend new music playlists tailored to individual tastes.'
-wrong 'A teacher grades student essays manually based on a rubric without any software assistance.'
-right 'A company analyzes customer purchase history to forecast future product demand and optimize inventory.'
-wrong 'A photographer manually edits photos in Photoshop to enhance their quality.'
-right 'A social media platform analyzes user interactions to identify trending topics and suggest relevant content.'
+wrong 'An app uses past user behavior to recommend new music playlists tailored to individual tastes.'
+right 'A teacher grades student essays manually based on a rubric without any software assistance.'
+wrong 'A company analyzes customer purchase history to forecast future product demand and optimize inventory.'
+right 'A photographer manually edits photos in Photoshop to enhance their quality.'
+wrong 'A social media platform analyzes user interactions to identify trending topics and suggest relevant content.'
 
 
 teacher_markdown <<MARKDOWN
