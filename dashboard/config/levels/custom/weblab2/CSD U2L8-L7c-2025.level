@@ -1,0 +1,63 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-28T05:13:22.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Debug the missing image 2",
+    "long_instructions": "\r\n# Debug: Missing Image\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------\r\nThere is an image of Half Dome | There is alt text but no image\r\n# Do This\r\n1) Find and fix the problem that is causing the bug.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "bubble_choice_description": "Use your debugging skills to figure out why the alt text, but not the image, is appearing.",
+    "thumbnail_url": "https://images.code.org/f2fe825e0da85448a0d7fd1bf69dc33d-image-1564089788394.JPG",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    <!-- info on Yosemite -->\n    <h1>Yosemite National Park</h1>\n    <p>Yosemite National Park is located in central California. It is a World Heritage Site and has over 4 million visitors every year. Yosemite has beautiful granite cliffs, waterfalls, sequoia groves, hiking trails, and biological diversity. One of its most popular attractions is Half Dome, which people can  hike and climb up.</p> \n    <img scr=\"Yosemite.jpg\" alt=\"Half Dome, Yosemite\">\n    <p>Photo by David Iliff on Wikimedia Commons. License: CC BY-SA 3.0</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "Yosemite.jpg",
+          "language": "jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L8-L7c-2025/uuid/87bd5d58-aa0a-483e-ab71-3278c8f36397.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMq6axOHbZCY2Ot6j2ta\nc2xUssWeFgyQik6LW5d9KjvGXB0WNtSc6Aew3gFAHiWxOPOkXODL1KEHdyrC\n197vfOvUyempysyXw77NCjviYRUdHKAC/uKseWjOSd/luHbWryaAEL1hb1iU\nEtAu+Ib/n6twZBBvGXNEV+oj6SDXfRK4lCNTzaM51329vP1EaVJ/NCEjFzJ+\n9VU18DAJQ3hUTU7bSqq7VoGr1OanxCS+7SiYnDVsZmsq0mM4zN6MtYnHX22N\nYYSv4LHBfhYNqZohs7EErXYjRaaiX/UXSwrMMTepDdZxirVtuvti/sq7e0pH\nDtXugA5Z9dUyWlzAYeaKGNvMr6/SOnVSuAYRj9uUtKYp4qFBlyx2DLZOTT9B\nJYiywz/m0mwpCM/jXPD9Hft8dOlZIeKWr86xzX7OrufisKhP0imHXcH3S7A3\nYxX1CWDn8hlWkOy2wH08rBqaGuxpY2WSJJmzmITTUPs//ihFHW+0fm2JftjC\noWRs1d6yqIgIQA1fnzcjK9mwY8s7ebHNvKZ4kGbPv7opd1Btx5+YRV7lJc1b\najXmdRSMFZAW2kjtWbo643bYujmbIAOG2inB1aQhbRVIfPTtxqFZ04LKGuuD\n04DY6Gz/ng7DeKWeUiju38Jl/Mv+hVaE1NkFO592r3WXSg/iyi2MMY7S9oWn\n7a3Wdxfz2Xg5YJTuEJg7wUbFjrfNivrko4id06cT1FZ2k7LD93BbwDp1nTtF\ng4y09ygI8l+UDz8ENTzL9m35oPMnClOgmrX4N0RmUaGVe2O0zUJ9MJ3odG5d\n2y/FlkXO1jAivtxhawFK8jrkUG8n988p4UGXiJwgTLvFV1k+4rXrx7QIhzpi\n+W5AXmnELSLODbvY57fSvBeTcYzo/pOm79jdXibUZy1ro9bdqh2bxEAZG9SS\nv/opWNhtDinQVDn0NSroYoInY8OkWzj/sLjd4GZEqBpSJxHa4w6RVFp23dZy\nAjI18YNuCRAGgOD3LPOMevW+Am4QHXhCskzgI6WIT57lcZvduRRB87gUguIh\nYUGUWYvMY+OMwFVfK/jvEF+ddciUiCIREGgw8LQX3hXDxfWJJ+RSkBKPT9x/\nphe7hnPgHU7ck+ySQh+hJg4pJqBhPlQEx8Lp+pdeX/THEMs7Lr2lIgDBAxCS\nReU4r+vG4dj2n3lp/VhCnUmoB0NkUtOulFF7XjuVGnQlMvDqeDzSiYAxvfj8\nti7C7AASqsQgjmgnccJ+PukgLnuOVtoniiWp/bvhLNxf/cSHHM2bxQLSSJw1\ngyvTQXBfndOPmhpGR9tdkCOoqqUnIJPT0h8WRalfIMDyLg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-28 05:13:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 05:14:07 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

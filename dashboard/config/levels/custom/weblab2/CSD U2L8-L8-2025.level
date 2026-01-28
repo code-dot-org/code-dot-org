@@ -1,0 +1,58 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-28T06:01:35.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "\r\n# All about you!\r\n\r\nYou can use images to make a web page more personal.\r\n\r\n# Do This\r\n\r\n1) Add an image to the page.\r\n* Make sure to follow the rules about copyright, naming, and using good coding styles.\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Images in HTML](https://studio.code.org/courses/csd-2024/guides/images-in-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Creative Commons Search](https://studio.code.org/courses/csd-2024/guides/creative-commons-search)\r\n- [<i class=\"fa-solid fa-book\"></i> Style Sheets](https://studio.code.org/courses/csd-2024/guides/style-sheets)\r\n- [<i class=\"fa-solid fa-book\"></i> Text Properties](https://studio.code.org/courses/csd-2024/guides/text-properties)\r\n- [<i class=\"fa-solid fa-book\"></i> Formatting HTML](https://studio.code.org/courses/csd-2024/guides/formatting-html)\r\n- [<i class=\"fa-solid fa-book\"></i> Lists](https://studio.code.org/courses/csd-2024/guides/lists)\r\n- [<i class=\"fa-solid fa-book\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n- [<i class=\"fa-solid fa-book\"></i> Debugging in HTML](https://studio.code.org/courses/csd-2022/guides/debugging-html)\r\n:::",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html> \n<head>\n  <link rel=\"stylesheet\" href=\"aboutme.css\">\n</head>\n <body>\n   <!-- info about me -->\n   <h1> All About Me! </h1> \n \n   <!-- 1) Add an image to the page -->\n   <h3>Cool Picture</h3> \n   \n   \n  </body> \n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "aboutme.css",
+          "language": "css",
+          "contents": "p {\n\n}\nh1 {\n\n}",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTCrc14xXleF\n+E4bX4CIcK+XG9P4UdHBhEwwupKT22/9SUwudmEIy6vdfMyjVL2JmHd30RJb\nJhFhpsNCp2/hNOUdbuqqAw/m8M2OXQAMhQQUgvhGvjxbzvtY1p2nteD+r8tC\nxaqwiPUB2vvxTB1O6YMbgrSHBAPBICt4F5yPBMxBNkXWYPKmxg2CHvPT9buf\nQ83jZla1+xYCe39Q95HAMWsiOMe53UHF52aCfJQmpimvN02nvJgBQPoU250Z\n9CgcuEZPGM4Gm989ZMY2uOsz2viIbEAMXxQEboZUHrd4OgZZ/aCSNDvrxa0O\nOrZg5KhHBgNof1sZ6GZjltsNO1OImp4KD7Mc/vIWWPZBN5nXQIc7pfECNSmc\nrvhs4FIxE3ovIPH76I1HYhlldGXun5IRYurM4ZMQhPJVsKxFsijYHdZkh8hh\ndruT43hnJ1RTP0WpPF/OssBqGHxghRkHLXkOwOHdIdRWYXP4twWSeSS/ziiB\nmIGLa1XE9mwScJblUqCyCelTXt/3TqW5xUMq01lEETXvwGBdNMfQarMGdkV2\nlWCr70AwdsD6/bEdJAGr9VK+7/sFvTTyP/acX41UlqFA+72qeX3K6QbGUbTm\n3tX4QHHai4Eh75ESj30Bi0kBdm380uJTaI7Tr7zhNjJCkFwZw/o/FMjEU1vu\nNXB5jZb/yRhgeAydgoKG9bZpEuCQfbEPKHD04Ab9XtrSkz8I/obasVxKIA6P\noLELyxsfXdk1GFXCX9E61u+UBfp/YDVSUf+9sz6mlvI4sOad5XwazqOtQxPs\nukN44FR924ZpWWjhUFlonmXtYEO55z2131I2Tb2dkWUCH+lZly4mhvuBVvJR\nQ/dp5CcZdPo495vb6cK2fj38frqtonTeA/NtR3pGzaSP7oLxilukTrIAAUHP\nP6Gm8/by+oel/4PTyYtl9v2nDTYZQKfNsYC+KtyBYRnZuoU2BS8NSA7MdKKF\nf7MioRzt8xIknMwvUkFABiw6LSeljUxdcjCY04hhTZO2yp16UZMsJ4teHaNg\nbGj7LpOxre4b8mus\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-28 06:02:10 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:02:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-28 06:03:27 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
