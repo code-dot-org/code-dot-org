@@ -116,11 +116,15 @@ class Agent<
     }
   }
 
-  get toolbox(): Blockly.utils.toolbox.ToolboxInfo | undefined {
+  setContainer(newContainer: HTMLDivElement | HTMLSpanElement) {
+    this.container = newContainer;
+  }
+
+  getToolbox(): Blockly.utils.toolbox.ToolboxInfo | undefined {
     return this._toolbox;
   }
 
-  set toolbox(toolboxBlocks: Blockly.utils.toolbox.ToolboxInfo | undefined) {
+  setToolbox(toolboxBlocks: Blockly.utils.toolbox.ToolboxInfo | undefined) {
     this._toolbox = toolboxBlocks;
   }
 

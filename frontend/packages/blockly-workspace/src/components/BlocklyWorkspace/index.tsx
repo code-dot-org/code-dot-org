@@ -6,10 +6,8 @@ import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 import classNames from 'classnames';
-import {createElement, useEffect, useRef} from 'react';
+import {createElement, useCallback, useEffect, useRef} from 'react';
 import type {ReactElement, MutableRefObject} from 'react';
-
-console.log('blockly-workspace Blockly:', Blockly);
 
 import Agent, {AgentEvent} from '../../Agent';
 import Driver from '../../Driver';
@@ -108,43 +106,64 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   const {driver: contextDriver} = useBlocklyContext();
 
-  theme ||= DefaultTheme;
-
-  // Create a Driver to handle all of the state if none are present in the environment already
-  const driver = useRef<Driver<T>>(
-    contextDriver?.current ||
-      new Driver<T>(
-        environment || ({} as unknown as T),
-        renderer || ThrasosRenderer,
-        theme || DefaultTheme,
-        plugins || [],
-      ),
-  );
-
   // Creates the encapsulating Agent class for this workspace within the environment
   const agent = useRef<Agent<T>>(
-    new Agent(driver.current, options || {}, !!inline, !!hidden, !!embedded),
+    new Agent(
+      contextDriver?.current ||
+        new Driver<T>(
+          environment || ({} as unknown as T),
+          renderer || ThrasosRenderer,
+          theme || DefaultTheme,
+          plugins || [],
+        ),
+      options || {},
+      !!inline,
+      !!hidden,
+      !!embedded,
+    ),
   );
 
   useEffect(() => {
     // Update toolbox
-    agent.current.toolbox = toolboxBlocks;
+    agent.current.setToolbox(toolboxBlocks);
   }, [toolboxBlocks]);
 
+  const wrappedOnInject = useCallback(
+    (workspace: Blockly.WorkspaceSvg) => {
+      if (workspaceRef) {
+        workspaceRef.current = workspace || null;
+      }
+
+      if (javascriptGeneratorRef) {
+        javascriptGeneratorRef.current = javascriptGenerator;
+      }
+
+      // Ensure it resizes to the container
+      if (!agent.current.inline) {
+        if (agent.current.workspace) {
+          Blockly.svgResize(agent.current.workspace);
+        }
+      }
+
+      if (onInject) {
+        onInject(workspace);
+      }
+    },
+    [javascriptGeneratorRef, workspaceRef, onInject],
+  );
+
   useEffect(() => {
-    const oldOnInject = onInject;
+    const oldOnInject = wrappedOnInject;
     const currentAgent = agent.current;
 
-    if (onInject) {
-      currentAgent.addListener(AgentEvent.Injected, onInject);
-    }
+    currentAgent.addListener(AgentEvent.Injected, wrappedOnInject);
 
     return () => {
       if (oldOnInject) {
         currentAgent.removeListener(AgentEvent.Injected, oldOnInject);
       }
     };
-  }, [onInject]);
+  }, [wrappedOnInject]);
 
   useEffect(() => {
     const oldOnChange = onChange;
@@ -170,7 +189,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   }, [inline]);
 
   useEffect(() => {
-    if (renderer !== agent.current.driver.renderer) {
+    if (renderer && renderer !== agent.current.driver.renderer) {
       console.error(
         'Cannot switch renderer once the workspace has been created.',
       );
@@ -179,7 +198,9 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   useEffect(() => {
     // Update theme
-    agent.current.driver.theme = theme;
+    if (theme) {
+      agent.current.driver.setTheme(theme);
+    }
   }, [theme]);
 
   useEffect(() => {
@@ -190,22 +211,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       // the container to build it offscreen before copying it to its final
       // location.
       const container = anchor.current;
-      agent.current.container = container;
-
-      if (workspaceRef) {
-        workspaceRef.current = agent.current.workspace || null;
-      }
-
-      if (javascriptGeneratorRef) {
-        javascriptGeneratorRef.current = javascriptGenerator;
-      }
-
-      // Ensure it resizes to the container
-      if (!agent.current.inline) {
-        if (agent.current.workspace) {
-          Blockly.svgResize(agent.current.workspace);
-        }
-      }
+      agent.current.setContainer(container);
     }
   }, [workspaceRef, javascriptGeneratorRef, anchor]);
 
@@ -213,7 +219,9 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   useEffect(() => {
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
-    driver.current.blocks = blocks || [];
+    if (blocks) {
+      agent.current.driver.setBlocks(blocks);
+    }
   }, [blocks, environment]);
 
   useEffect(() => {

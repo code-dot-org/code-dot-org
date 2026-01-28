@@ -88,12 +88,6 @@ class Driver<
     this._registry.registerAll(plugins);
   }
 
-  protected unregisterBlocks() {
-    this._blocks.forEach(blockDefinition => {
-      Blockly.registry.unregister('block', blockDefinition.type);
-    });
-  }
-
   protected registerBlocks() {
     this._blocks.forEach(blockDefinition => {
       // Register (and modify the block definition to just reference mixins
@@ -101,6 +95,9 @@ class Driver<
       const formedBlockDefinition =
         this._registry.registerFromBlockDefinition(blockDefinition);
 
+      if (Blockly.Blocks[blockDefinition.type]) {
+        delete Blockly.Blocks[blockDefinition.type];
+      }
       Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
 
       const environment = this._environment;
@@ -143,14 +140,25 @@ class Driver<
   }
 
   /**
+   * Updates the theme.
+   */
+  setTheme(theme: Theme | undefined) {
+    this._theme = theme || DefaultTheme;
+  }
+
+  /**
    * Registers the given set of blocks.
    *
    * If you give this method another list, it will replace the list of blocks currently in use.
    */
   set blocks(blocks: BlockDefinition[]) {
-    this.unregisterBlocks();
+    console.log('setting blocks to', blocks, 'from', this._blocks);
     this._blocks = blocks;
     this.registerBlocks();
+  }
+
+  setBlocks(blocks: BlockDefinition[]) {
+    this.blocks = blocks;
   }
 
   /**

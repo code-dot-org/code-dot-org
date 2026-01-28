@@ -277,7 +277,6 @@ class Registry<T extends Environment = Environment> {
     if (!Blockly.Extensions.isRegistered(name)) {
       Blockly.Extensions.register(name, function (this: BlockSvg) {
         const bound = extension.extension.bind(this, environment);
-        console.log('extension call', extension.extension, bound);
         bound();
       });
       this.extensions.push(extension);
