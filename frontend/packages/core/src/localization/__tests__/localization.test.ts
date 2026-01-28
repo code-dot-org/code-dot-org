@@ -56,15 +56,19 @@ const mockedLocalizeJS = (currentLocale: string) => ({
 
 function mockLocalizeJS(currentLocale: string): Promise<LocalizeJS> {
   return new Promise(resolve => {
-    resolve(mockedLocalizeJS(currentLocale));
+    resolve(mockedLocalizeJS(currentLocale) as unknown as LocalizeJS);
   });
 }
 
-async function setupLocalizeJS(currentLocale: string = 'rd'): Localization {
+async function setupLocalizeJS(
+  currentLocale: string = 'rd',
+): Promise<Localization> {
   const localizePromise = mockLocalizeJS(currentLocale);
-  global.window = {
-    LocalizeLoader: localizePromise,
-  };
+  Object.defineProperty(global, 'window', {
+    value: {LocalizeLoader: localizePromise},
+    writable: true,
+    configurable: true,
+  });
   const localization = new Localization();
   await localization.waitUntilLoaded();
   return localization;
@@ -102,9 +106,10 @@ describe('localization', () => {
 
     it('should pass the code to LocalizeJS via setLanguage', async () => {
       const localization = await setupLocalizeJS();
+      const Localize = await global.window.LocalizeLoader;
       localization.locale = 'pt-BR';
-      expect(localization.Localize.setLanguage).toHaveBeenCalledWith('pt-BR');
-      expect(localization.Localize.setLanguage).toHaveBeenCalledOnce();
+      expect(Localize?.setLanguage).toHaveBeenCalledWith('pt-BR');
+      expect(Localize?.setLanguage).toHaveBeenCalledOnce();
     });
   });
 
@@ -166,17 +171,19 @@ describe('localization', () => {
 
     it('should call out to LocalizeJS.translate when loaded', async () => {
       const localization = await setupLocalizeJS();
+      const Localize = await global.window.LocalizeLoader;
       const response = localization.translate('foo');
-      expect(localization.Localize.translate).toHaveBeenCalledWith('foo');
+      expect(Localize?.translate).toHaveBeenCalledWith('foo');
       // Our mock translation just reverses the string
       expect(response).toBe('oof');
     });
 
     it('should call out to LocalizeJS.translate with a mocked up HTML when labels are given', async () => {
       const localization = await setupLocalizeJS();
+      const Localize = await global.window.LocalizeLoader;
       const response = localization.translate('foo', ['bar']);
 
-      const firstCallFirstArg = localization.Localize.translate.mock
+      const firstCallFirstArg = vi.mocked(Localize!.translate).mock
         .calls[0][0] as HTMLElement;
       expect(firstCallFirstArg instanceof HTMLElement).toBe(true);
       expect(firstCallFirstArg.getAttribute('data-localize')).toBe('bar');
@@ -187,9 +194,10 @@ describe('localization', () => {
 
     it('should call out to LocalizeJS.translate with a mocked up HTML when multiple labels are given', async () => {
       const localization = await setupLocalizeJS();
+      const Localize = await global.window.LocalizeLoader;
       const response = localization.translate('foo', ['bar', 'baz']);
 
-      const firstCallFirstArg = localization.Localize.translate.mock
+      const firstCallFirstArg = vi.mocked(Localize!.translate).mock
         .calls[0][0] as HTMLElement;
       expect(firstCallFirstArg instanceof HTMLElement).toBe(true);
       expect(firstCallFirstArg.getAttribute('data-localize')).toBe('bar baz');
@@ -200,14 +208,15 @@ describe('localization', () => {
 
     it('should call out to LocalizeJS.translate for each value in a passed in hash', async () => {
       const localization = await setupLocalizeJS();
+      const Localize = await global.window.LocalizeLoader;
       const response = localization.translate({
         foo: 'foo',
         for: 'for',
         foz: 'foz',
       });
-      expect(localization.Localize.translate).toHaveBeenCalledWith('foo');
-      expect(localization.Localize.translate).toHaveBeenCalledWith('for');
-      expect(localization.Localize.translate).toHaveBeenCalledWith('foz');
+      expect(Localize?.translate).toHaveBeenCalledWith('foo');
+      expect(Localize?.translate).toHaveBeenCalledWith('for');
+      expect(Localize?.translate).toHaveBeenCalledWith('foz');
       // Our mock translation just reverses the string
       expect(response).toStrictEqual({
         foo: 'oof',
