@@ -352,6 +352,21 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self, unit_group_unit: unit_group_unit)
   end
 
+  def rubric
+    rubrics_for_lesson = lesson.rubrics
+    if rubrics_for_lesson.empty?
+      return nil
+    end
+    rubric_for_level = rubrics_for_lesson.find {|r| r.level_id == level.id}
+    return rubric_for_level if rubric_for_level.present?
+    if level.project_template_level
+      rubric_level_ids = rubrics_for_lesson.map(&:level_id)
+      rubric_template_levels = Level.where(id: rubric_level_ids).select {|l| l.try(:project_template_level)&.id == level.project_template_level.id}
+      return rubrics_for_lesson.find {|r| r.level_id == rubric_template_levels.first.id} if rubric_template_levels.any?
+    end
+    nil
+  end
+
   def summarize(include_prev_next = true, for_edit: false, user_id: nil, unit_group_unit: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       ids = level_ids

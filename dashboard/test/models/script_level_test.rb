@@ -1162,6 +1162,83 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
+  class RubricTests < ActiveSupport::TestCase
+    test 'rubric returns nil when lesson has no rubrics' do
+      script_level = create(:script_level)
+      assert_nil script_level.rubric
+    end
+
+    test 'rubric returns rubric when there is a rubric for this exact level' do
+      script_level = create(:script_level)
+      rubric = create(:rubric, lesson: script_level.lesson, level: script_level.level)
+
+      assert_equal rubric, script_level.rubric
+    end
+
+    test 'rubric returns nil when there is no rubric for this level and level has no project_template_level' do
+      script_level = create(:script_level)
+      other_level = create(:level)
+      create(:rubric, lesson: script_level.lesson, level: other_level)
+
+      assert_nil script_level.rubric
+    end
+
+    test 'rubric returns rubric for different level that shares the same project_template_level' do
+      template_level = create(:level, name: 'shared_template_level')
+
+      level_with_rubric = create(:level)
+      level_with_rubric.update!(project_template_level_name: template_level.name)
+
+      level_without_rubric = create(:level)
+      level_without_rubric.update!(project_template_level_name: template_level.name)
+
+      script = create(:script)
+      lesson_group = create(:lesson_group, script: script)
+      lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+      create(:script_level, script: script, lesson: lesson, levels: [level_with_rubric])
+      script_level_without_rubric = create(:script_level, script: script, lesson: lesson, levels: [level_without_rubric])
+
+      rubric = create(:rubric, lesson: lesson, level: level_with_rubric)
+
+      assert_equal rubric, script_level_without_rubric.rubric
+    end
+
+    test 'rubric returns nil when level has project_template_level but no rubrics share it' do
+      template_level = create(:level, name: 'template_level_1')
+      other_template_level = create(:level, name: 'template_level_2')
+
+      level_with_rubric = create(:level)
+      level_with_rubric.update!(project_template_level_name: other_template_level.name)
+
+      level_without_rubric = create(:level)
+      level_without_rubric.update!(project_template_level_name: template_level.name)
+
+      script = create(:script)
+      lesson_group = create(:lesson_group, script: script)
+      lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+      create(:script_level, script: script, lesson: lesson, levels: [level_with_rubric])
+      script_level_without_rubric = create(:script_level, script: script, lesson: lesson, levels: [level_without_rubric])
+
+      create(:rubric, lesson: lesson, level: level_with_rubric)
+
+      assert_nil script_level_without_rubric.rubric
+    end
+
+    test 'rubric returns direct match even when project_template_level exists' do
+      template_level = create(:level, name: 'direct_match_template')
+
+      level = create(:level)
+      level.update!(project_template_level_name: template_level.name)
+
+      script_level = create(:script_level, levels: [level])
+      rubric = create(:rubric, lesson: script_level.lesson, level: level)
+
+      assert_equal rubric, script_level.rubric
+    end
+  end
+
   private def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
