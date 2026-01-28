@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
+import {jsonVideoRehypeMap} from '@cdo/apps/json-video/json-video-reype-map';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -34,12 +35,14 @@ const taRehypeMap = {
   pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
     <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(true)} />
   ),
+  ...jsonVideoRehypeMap,
 };
 
 const nonTaRehypeMap = {
   pre: (props: React.ComponentPropsWithoutRef<'pre'>) => (
     <CopyableCodeBlock {...props} onCopy={codeCopiedAnalytics(false)} />
   ),
+  ...jsonVideoRehypeMap,
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
