@@ -280,7 +280,10 @@ const WEBPACK_BASE_CONFIG = {
             loader: 'css-loader',
             options: {
               modules: {
-                auto: true,
+                auto: resourcePath => {
+                  // Do not treat CSS files in node_modules as CSS modules
+                  return !/node_modules/.test(resourcePath);
+                },
                 localIdentName: process.env.DEV
                   ? '[path][name]__[local]'
                   : '[hash:base64]',
