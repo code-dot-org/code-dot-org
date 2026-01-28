@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import CourseOfferingEditor from '@cdo/apps/levelbuilder/CourseOfferingEditor';
@@ -127,13 +128,18 @@ describe('CourseOfferingEditor', () => {
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
-      saveAndKeepEditingButton.simulate('click');
+      act(() => {
+        saveAndKeepEditingButton.simulate('click');
+      });
+      wrapper.update();
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
       clock = sinon.useFakeTimers(new Date('2020-12-01'));
-      server.respond();
+      act(() => {
+        server.respond();
+      });
       clock.tick(50);
 
       wrapper.update();
@@ -230,12 +236,17 @@ describe('CourseOfferingEditor', () => {
 
       const saveAndCloseButton = saveBar.find('button').at(2);
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
-      saveAndCloseButton.simulate('click');
+      act(() => {
+        saveAndCloseButton.simulate('click');
+      });
+      wrapper.update();
 
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
-      server.respond();
+      act(() => {
+        server.respond();
+      });
 
       wrapper.update();
       expect(utils.navigateToHref).to.not.have.been.called;
