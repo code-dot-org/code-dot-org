@@ -32,7 +32,7 @@ import type {
   OldBlockDefinition,
 } from './types';
 
-class Registry<T extends Environment & object> {
+class Registry<T extends Environment = Environment> {
   /** The current Theme. */
   private theme: Theme;
   /** The current Renderer */
@@ -230,10 +230,8 @@ class Registry<T extends Environment & object> {
       // Maintain the old mutator data and copy it so we don't
       // corrupt it in the future.
       const oldMutator: Mutator['mutator'] = mutator.mutator;
-      const environment: Environment = this.environment || {
-        inline: false,
-        embedded: true,
-      };
+      const environment: Environment =
+        this.environment || ({} as unknown as Environment);
       const newMutator: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         [key: string]: any;
@@ -244,7 +242,7 @@ class Registry<T extends Environment & object> {
       // Add the 'environment' to the mutator so the mutators that
       // use this feature can access workspace data.
       newMutator.loadExtraState = function (this: BlockSvg, state: object) {
-        this.environment = environment || {inline: false, embedded: true};
+        this.environment = environment || ({} as unknown as Environment);
         oldMutator.loadExtraState?.bind(this as BlockSvg & Mutator<object>)(
           state,
         );
@@ -275,7 +273,7 @@ class Registry<T extends Environment & object> {
    */
   private registerExtension(extension: Extension) {
     const name = extension.name;
-    const environment = this.environment || {inline: false, embedded: true};
+    const environment = this.environment || ({} as unknown as Environment);
     if (!Blockly.Extensions.isRegistered(name)) {
       Blockly.Extensions.register(name, function (this: BlockSvg) {
         const bound = extension.extension.bind(this, environment);

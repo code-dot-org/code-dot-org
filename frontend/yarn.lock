@@ -1681,7 +1681,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
-    "@react-hook/resize-observer": "npm:^2.0.2"
+    "@mantine/hooks": "npm:^8.3.13"
     "@release-it/conventional-changelog": "npm:^10.0.0"
     "@types/identity-obj-proxy": "npm:^3"
     "@types/node": "npm:^22.9.0"
@@ -4589,6 +4589,15 @@ __metadata:
     tonal: "npm:^2.0.0"
     tone: "npm:^14.7.58"
   checksum: 10c0/e5eb6669312aefec920ac3b38edf98d86776dff3b99e6f7a823a2f66ac9b12ad3d53e9b5653acbc963ebae5e5592a050d5e4baf60831e224226e7ffd93e47b93
+  languageName: node
+  linkType: hard
+
+"@mantine/hooks@npm:^8.3.13":
+  version: 8.3.13
+  resolution: "@mantine/hooks@npm:8.3.13"
+  peerDependencies:
+    react: ^18.x || ^19.x
+  checksum: 10c0/2b91a20ddaf2f209e09c45f11e4b157f43b0652d9eef5e9fc8874c7947316481d0a969ab50a50594b834cbe2e5ca3478797ccff51ed42f721a7c672f52fdb130
   languageName: node
   linkType: hard
 

@@ -1,12 +1,16 @@
-import type {FunctionComponent, PropsWithChildren} from 'react';
-import {useState, createContext, useContext} from 'react';
+import type {PropsWithChildren, MutableRefObject} from 'react';
+import {useCallback, createContext, useRef, useContext} from 'react';
 
+import Driver from '../Driver';
 import type {Plugin} from '../plugins';
 import type {BlockDefinition, Theme, Renderer, Environment} from '../types';
 
-export interface BlocklyContent {
-  environment?: Environment & object;
-  theme?: Theme;
+import DefaultTheme from '../themes/default';
+import ThrasosRenderer from '../renderers/thrasos';
+
+export interface BlocklyContent<T extends Environment = Environment> {
+  driver?: MutableRefObject<Driver<T>>;
+  environment?: T;
   setTheme: (value: Theme) => void;
   renderer?: Renderer;
   plugins?: Plugin[];
@@ -16,38 +20,51 @@ export interface BlocklyContent {
 const BlocklyContext = createContext<BlocklyContent>({
   setTheme: (_: Theme) => {},
   blocks: [],
-});
+} as unknown as BlocklyContent);
 
 /**
  * This hook returns the blockly state.
  */
-export const useBlocklyContext = () => {
-  return useContext(BlocklyContext);
+export const useBlocklyContext = <T extends Environment = Environment>() => {
+  return useContext(BlocklyContext) as unknown as T;
 };
 
-export interface BlocklyProviderProps extends PropsWithChildren {
+export interface BlocklyProviderProps<T extends Environment = Environment>
+  extends PropsWithChildren {
   blocks?: BlockDefinition[];
-  environment?: Environment & object;
+  environment?: T;
   theme?: Theme;
   plugins?: Plugin[];
   renderer?: Renderer;
 }
 
-export const BlocklyProvider: FunctionComponent<BlocklyProviderProps> = ({
+export const BlocklyProvider = <T extends Environment = Environment>({
   blocks,
   environment,
   theme,
   plugins,
   renderer,
   children,
-}) => {
+}: BlocklyProviderProps<T>) => {
+  // Create a Driver to handle all of the state
+  const driver = useRef<Driver<T>>(
+    new Driver<T>(
+      environment || ({} as unknown as T),
+      renderer || ThrasosRenderer,
+      theme || DefaultTheme,
+      plugins || [],
+    ),
+  );
+
   // Themes can be updated
-  const [currentTheme, setTheme] = useState<Theme | undefined>(theme);
+  const setTheme = useCallback((newTheme: Theme | undefined) => {
+    driver.current.theme = newTheme;
+  }, []);
 
   return (
     <BlocklyContext.Provider
       value={{
-        theme: currentTheme,
+        driver,
         setTheme,
         plugins,
         renderer,

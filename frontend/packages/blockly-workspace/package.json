@@ -156,7 +156,7 @@
     "@blockly/theme-highcontrast": "^7.0.3",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
-    "@react-hook/resize-observer": "^2.0.2",
+    "@mantine/hooks": "^8.3.13",
     "blockly": "12.2.0"
   },
   "devDependencies": {

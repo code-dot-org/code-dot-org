@@ -129,7 +129,7 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
       // Weight determines the order of drag targets. The toolbox is also a drag
       // target (weight 1). onDragEnter/Exit/Over are only called for the first
       // drag target, so the trashcan needs to have a smaller weight than the toolbox.
-      weight: 0,
+      weight: -1,
       capabilities: [
         Blockly.ComponentManager.Capability.DELETE_AREA,
         Blockly.ComponentManager.Capability.DRAG_TARGET,
@@ -170,7 +170,7 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
       // query selector for uncategorized toolbox contents
       document
         .querySelectorAll<SVGElement>(
-          '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace',
+          '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace, .blocklyToolboxCategoryGroup',
         )
         .forEach(x => {
           x.style.visibility = toolboxVisibility;
