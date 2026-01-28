@@ -1,4 +1,5 @@
-import Sound, {SoundConfig} from './Sound';
+import type {SoundConfig} from './Sound';
+import Sound from './Sound';
 import type SoundBoard from './SoundBoard';
 
 export interface MusicTrackDefinition {
@@ -163,6 +164,19 @@ class MusicController {
       },
       1000 * duration + 100,
     );
+  }
+
+  /**
+   * Call when one wants to interrupt the music with some other audio/visual
+   * experience, like a video.
+   */
+  interrupt() {
+    if (this.nowPlaying || this.betweenTrackTimeout) {
+      if (this.betweenTrackTimeout) {
+        clearTimeout(this.betweenTrackTimeout);
+        this.betweenTrackTimeout = undefined;
+      }
+    }
   }
 
   /**

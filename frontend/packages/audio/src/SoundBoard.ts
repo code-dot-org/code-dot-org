@@ -1,6 +1,7 @@
 // In the original codebase, this was represented by /apps/src/Sounds.js
 
-import Sound, {SoundConfig, PlaybackOptions, SoundExtensions} from './Sound';
+import type {SoundConfig, PlaybackOptions} from './Sound';
+import Sound, {SoundExtensions} from './Sound';
 
 /**
  * Represents the audio context and sound management.
@@ -37,7 +38,7 @@ class SoundBoard {
       try {
         this.audioContext = new AudioContext();
         this.initializeAudioUnlockState();
-      } catch (_) {
+      } catch {
         /**
          * Chrome occasionally chokes on creating singleton AudioContext instances in separate tabs
          * when iframes are open, potentially related to:

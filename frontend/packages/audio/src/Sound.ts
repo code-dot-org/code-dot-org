@@ -487,7 +487,7 @@ class Sound {
 
       const arraybuffer = await response.arrayBuffer();
       return await this.audioContext.decodeAudioData(arraybuffer);
-    } catch (_) {
+    } catch {
       this.handleLoadFailed(500);
       return;
     }
