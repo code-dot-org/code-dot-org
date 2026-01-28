@@ -1,6 +1,10 @@
-# Any secrets set here will only be set on the chef-managed test-system.
-# In other test environments, we clear all secrets below.
+##
+## Secrets and any other config to apply only outside of unit tests on the
+## chef-managed test system. These secrets will not be available in unit tests
+## or on other chef-managed servers running with RAILS_ENV=test.
+##
 
+<% if test_system? && !unit_test -%>
 github_webhook_secret: !Secret
 slack_set_last_dtt_green_token: !Secret
 slack_start_build_token: !Secret
@@ -8,16 +12,12 @@ azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 
-# Configurations for making calls to the Immersive Reader API on Azure
-imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
+<% else %>
 
-# speed up rake tasks that are not running unit tests or web application.
-# This saves 30 seconds each time the rails environment is loaded.
-lazy_load_i18n: <%= !(running_web_application? || unit_test) %>
+##
+## Disable secrets in all other environments, and replace them with stub values.
+##
 
-# Disable Secrets unless we are running on the chef-managed test system,
-# outside of unit tests (such as in rake tasks, web server or rails console).
-<% unless test_system? && !unit_test -%>
 <%= clear_secrets %>
 
 dashboard_honeybadger_api_key: '00000000'
@@ -46,24 +46,18 @@ db_credential_admin: {"username":"root", "password":""}
 db_credential_writer: {"username":"root", "password":""}
 db_credential_reader: {"username":"root", "password":""}
 db_writer: 'mysql://root@localhost/'
-
-# Number of workers to start when running `rake build:start_active_job_workers`:
-active_job_backend_n_workers_to_start: 2
-active_job_backend_rolling_restart_in_n_batches: 1
 <% end -%>
 
-# CI Unit Test Optimizations
-<% if ENV['CI_JOB'] == 'unit_tests' -%>
-# Skip asset compilation for unit tests; we take more time doing the
-# compilation than we gain from serving optimized assets. We preserve the
-# default behavior for UI tests so we still have some consistency with prod.
-optimize_rails_assets: false
-optimize_webpack_assets: false
+##
+## Configuration common to all test environments
+##
 
-# We already use the ActiveJob TestAdapter class within unit tests. Specify that adapter here
-# explicitly so that we also do not start any ActiveJob backend workers during rake tasks.
-active_job_queue_adapter: :test
-<% end -%>
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
+
+# speed up rake tasks that are not running unit tests or web application.
+# This saves 30 seconds each time the rails environment is loaded.
+lazy_load_i18n: <%= !(running_web_application? || unit_test) %>
 
 netsim_enable_metrics: true
 stub_school_data: true
@@ -107,3 +101,79 @@ use_cookie_dcdo: true
 
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
+
+##
+## CI-specific config settings
+##
+
+<% if ENV['CI'] -%>
+
+# Config shared by ui and unit pipelines.
+
+# customize build steps in CI
+build_apps: true
+use_my_apps: true
+skip_seed_all: true
+
+# Pass in secrets via env vars, since Drone cannot access secrets directly.
+cloudfront_key_pair_id: <%= ENV['CLOUDFRONT_KEY_PAIR_ID'] %>
+cloudfront_private_key: "<%= ENV['CLOUDFRONT_PRIVATE_KEY'] %>"
+contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
+saucelabs_authkey: <%= ENV['SAUCE_ACCESS_KEY'] %>
+saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
+properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
+
+# customize rails server to run on localhost
+dashboard_enable_pegasus: true
+override_dashboard: localhost-studio.code.org
+override_pegasus: localhost.code.org
+dashboard_port: 3000
+pegasus_port: 3000
+no_https_store: true
+
+# custom redis config for CI
+redis_url: 'redis://ci-tests-redis:6379/0'
+netsim_redis_groups:
+- master: redis://ci-tests-redis:6379
+
+# CI-specific S3 settings, to avoid collisions between concurrent CI jobs
+animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>
+assets_s3_directory: <%= "assets_circle/#{ENV['CI_BUILD_NUMBER']}" %>
+files_s3_directory: <%= "files_circle/#{ENV['CI_BUILD_NUMBER']}" %>
+libraries_s3_directory: <%= "libraries_circle/#{ENV['CI_BUILD_NUMBER']}" %>
+sources_s3_directory: <%= "sources_circle/#{ENV['CI_BUILD_NUMBER']}" %>
+
+# custom tunnel name to avoid collisions between concurrent CI jobs
+saucelabs_tunnel_name: cdo-tunnel-<%= ENV['CI_BUILD_NUMBER'] %>
+
+# we run eyes features in CI, but skip comparing visual diffs
+disable_all_eyes_running: true
+
+# The number of puma workers in CI has been optimized to minimize ui test time
+# for drone workers running on m7i.4xlarge instances.
+dashboard_workers: 5
+
+# Number of workers to start when running `rake build:start_active_job_workers`.
+# Use the minimum numbers needed to exercise batch start logic. UI tests will
+# run against these backends in CI.
+active_job_backend_n_workers_to_start: 2
+active_job_backend_rolling_restart_in_n_batches: 1
+
+##
+## Unit-specific settings for CI
+##
+
+<% if ENV['CI_JOB'] == 'unit_tests' -%>
+# Skip asset compilation for unit tests; we take more time doing the
+# compilation than we gain from serving optimized assets. We preserve the
+# default behavior for UI tests so we still have some consistency with prod.
+optimize_rails_assets: false
+optimize_webpack_assets: false
+
+# We already use the ActiveJob TestAdapter class within unit tests. Specify that adapter here
+# explicitly so that we also do not start any ActiveJob backend workers during rake tasks.
+active_job_queue_adapter: :test
+<% end -%>
+
+# End CI-specific settings
+<% end -%>
