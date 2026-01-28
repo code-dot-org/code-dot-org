@@ -1,6 +1,6 @@
 import type * as Blockly from 'blockly/core';
 
-import {BLOCK_TYPES, DEFAULT_CATEGORY_NAME} from '../constants';
+import {BlockTypes, DEFAULT_CATEGORY_NAME} from '../constants';
 
 /**
  * Converts a toolbox definition into workspace blocks for toolbox editing mode.
@@ -38,7 +38,7 @@ function contentsToBlocks(contents: Blockly.utils.toolbox.ToolboxItemInfo[]) {
         console.warn('Missing dynamic category name: ', item);
       } else {
         blocks.push({
-          type: BLOCK_TYPES.categoryDynamic,
+          type: BlockTypes.categoryDynamic,
           fields: {
             CUSTOM: dynamicCategoryName,
           },
@@ -51,7 +51,7 @@ function contentsToBlocks(contents: Blockly.utils.toolbox.ToolboxItemInfo[]) {
       // 'DEFAULT' categories are intentionally skipped.
       if (categoryName && categoryName !== DEFAULT_CATEGORY_NAME) {
         blocks.push({
-          type: BLOCK_TYPES.category,
+          type: BlockTypes.category,
           fields: {
             CATEGORY: categoryName,
           },

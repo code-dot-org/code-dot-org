@@ -1,6 +1,6 @@
-import * as Blockly from 'blockly/core';
 import {createRoot} from 'react-dom/client';
 
+import {Blockly} from '@code-dot-org/blockly-workspace';
 import {isDarkTheme} from '@code-dot-org/blockly-workspace/themes';
 import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
 import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';

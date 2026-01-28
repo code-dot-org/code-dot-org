@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 
-import {PluginType} from '@blockly-workspace/plugins';
-import type {InputPlugin} from '@blockly-workspace/plugins';
+import {PluginType} from '../../../plugins';
+import type {InputPlugin} from '../../../plugins';
 
 /**
  * Adds a rectangular notch for an input/output of a block.

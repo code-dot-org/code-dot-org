@@ -5,7 +5,11 @@ import {evalWithEvents} from '@code-dot-org/interpreter';
 import type {LabMetricsReporter} from '@code-dot-org/lab';
 
 import {BlockTypes} from './blockly/blockTypes';
-import {TriggerStart, TRIGGER_FIELD, FIELD_TRIGGER_START_NAME} from './blockly/constants';
+import {
+  TriggerStart,
+  TRIGGER_FIELD,
+  FIELD_TRIGGER_START_NAME,
+} from './blockly/constants';
 import {BlockMode} from './constants';
 import AdvancedSequencer from './player/sequencer/AdvancedSequencer';
 import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
@@ -24,7 +28,7 @@ const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
  */
 class Generator {
   protected readonly workspace: Blockly.WorkspaceSvg;
-  protected readonly blockMode: typeof BlockMode[keyof typeof BlockMode];
+  protected readonly blockMode: (typeof BlockMode)[keyof typeof BlockMode];
   private readonly metricsReporter: LabMetricsReporter;
   private compiledEvents: CompiledEvents;
   private lastExecutedEvents: CompiledEvents;
@@ -32,7 +36,12 @@ class Generator {
   private codeHooks: {[key: string]: (...args: unknown[]) => void};
   private compiledCode: string;
 
-  constructor(workspace: Blockly.WorkspaceSvg, javascriptGenerator: JavascriptGenerator, blockMode: typeof BlockMode[keyof typeof BlockMode], metricsReporter: LabMetricsReporter) {
+  constructor(
+    workspace: Blockly.WorkspaceSvg,
+    javascriptGenerator: JavascriptGenerator,
+    blockMode: (typeof BlockMode)[keyof typeof BlockMode],
+    metricsReporter: LabMetricsReporter,
+  ) {
     this.workspace = workspace;
     this.blockMode = blockMode;
     this.metricsReporter = metricsReporter;
@@ -125,7 +134,7 @@ class Generator {
       {Sequencer: Sequencers[blockMode]},
       this.compiledEvents,
       '',
-      undefined
+      undefined,
     ).hooks.forEach(hook => {
       this.codeHooks[hook.name] = hook.func as () => void;
     });

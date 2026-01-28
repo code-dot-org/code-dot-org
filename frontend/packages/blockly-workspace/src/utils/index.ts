@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
-import {BLOCK_TYPES, ToolboxType} from '@blockly-workspace/constants';
+import {BlockTypes, ToolboxType} from '../constants';
 
 export * from './toolboxToWorkspaceBlocks';
 
@@ -85,7 +85,7 @@ export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
   // When a function definition is moved, we should not suddenly enable
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
-    if (block.type === BLOCK_TYPES.procedureCall) {
+    if (block.type === BlockTypes.procedureCall) {
       block.setDisabledReason(true, 'ORPHANED');
     }
     updateBlockEnabled(block, 'ORPHANED');

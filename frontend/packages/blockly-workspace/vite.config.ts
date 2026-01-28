@@ -12,7 +12,7 @@ import {externalizeDeps} from 'vite-plugin-externalize-deps';
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
-    exports: 'auto',
+    exports: 'named',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
     preserveModules: true,
     preserveModulesRoot: 'src',
@@ -36,6 +36,16 @@ export default defineConfig({
     externalizeDeps(),
   ],
   resolve: {
+    dedupe: [
+      'blockly',
+      'react',
+      'react-dom',
+      'react/jsx-runtime',
+      'react/jsx-dev-runtime',
+      'react-redux',
+      '@reduxjs/toolkit',
+      '@code-dot-org/redux',
+    ],
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
@@ -44,8 +54,29 @@ export default defineConfig({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: 'src/index.ts',
-      name: 'interpreter',
+      entry: [
+        'src/index.ts',
+        'src/xml/index.ts',
+        'src/utils/index.ts',
+        'src/events/index.ts',
+        'src/contexts/index.ts',
+        'src/renderers/index.ts',
+        'src/renderers/thrasos/index.ts',
+        'src/themes/index.ts',
+        'src/themes/default/index.ts',
+        'src/plugins/index.ts',
+        'src/plugins/toolboxTrashcan/index.ts',
+        'src/plugins/sharableProcedures/index.ts',
+        'src/plugins/blockLimits/index.ts',
+        'src/plugins/inputs/index.ts',
+        'src/plugins/inputs/rectangle/index.ts',
+        'src/plugins/inputs/round/index.ts',
+        'src/plugins/inputs/triangle/index.ts',
+        'src/plugins/fields/fieldButton/index.ts',
+        'src/plugins/fields/fieldColour/index.ts',
+        'src/blocks/types.ts',
+      ],
+      name: 'blockly-workspace',
     },
     rollupOptions: {
       output: [getRollupOutputConfig('es'), getRollupOutputConfig('cjs')],

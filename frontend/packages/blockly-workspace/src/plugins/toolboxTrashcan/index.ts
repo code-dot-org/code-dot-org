@@ -1,10 +1,10 @@
 import * as Blockly from 'blockly/core';
 import type {IDraggable} from 'blockly/core';
 
-import {PluginType, WrapPlugin} from '@blockly-workspace/plugins';
-import type {Plugin} from '@blockly-workspace/plugins';
-import type {Theme} from '@blockly-workspace/types';
-import {getToolboxWidth} from '@blockly-workspace/utils';
+import {PluginType, WrapPlugin} from '../../plugins';
+import type {Plugin} from '../../plugins';
+import type {Theme} from '../../types';
+import {getToolboxWidth} from '../../utils';
 
 const {dom, toolbox, Rect, Svg} = Blockly.utils;
 

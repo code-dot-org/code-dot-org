@@ -14,7 +14,7 @@ import type {Extension} from './extensions/types';
 import type {Mutator} from './mutators/types';
 import type {RendererClassType} from './renderers/base';
 
-export {
+export type {
   BlockArgDefinition,
   BlockDefinition,
   BlockDefinitions,

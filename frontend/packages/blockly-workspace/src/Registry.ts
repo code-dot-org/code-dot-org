@@ -7,8 +7,6 @@
 
 import * as Blockly from 'blockly/core';
 
-import ThrasosRenderer from '@blockly-workspace/renderers/thrasos';
-
 import {defineMutator} from './mutators/defineMutator';
 import {PluginType} from './plugins';
 import type {
@@ -18,6 +16,7 @@ import type {
   InputPlugin,
   InjectPlugin,
 } from './plugins';
+import ThrasosRenderer from './renderers/thrasos';
 import DefaultTheme from './themes/default';
 import type {
   Environment,

@@ -1,13 +1,8 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
 import {useState, createContext, useContext} from 'react';
 
-import type {Plugin} from '@blockly-workspace/plugins';
-import type {
-  BlockDefinition,
-  Theme,
-  Renderer,
-  Environment,
-} from '@blockly-workspace/types';
+import type {Plugin} from '../plugins';
+import type {BlockDefinition, Theme, Renderer, Environment} from '../types';
 
 export interface BlocklyContent {
   environment?: Environment & object;

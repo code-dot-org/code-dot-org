@@ -22,7 +22,7 @@ function safeReadProperty(
 ): any {
   try {
     return object[property];
-  } catch (_) {
+  } catch {
     // Allow errors to silently be ignored
   }
 }
