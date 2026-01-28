@@ -5,16 +5,34 @@
   "title": "Prompting Playbook",
   "categories": [
     {
-      "key": "strategies",
-      "name": "Strategies",
-      "color": null,
+      "key": "prompt_basics",
+      "name": "Prompt Basics",
+      "color": "#98f5e1",
       "position": 0
     },
     {
-      "key": "prompt_library",
-      "name": "Prompt Library",
-      "color": null,
+      "key": "prompt_patterns",
+      "name": "Prompt Patterns",
+      "color": "#a3c4f3",
       "position": 1
+    },
+    {
+      "key": "evaluate_output",
+      "name": "Evaluate Output",
+      "color": "#ffcfd2",
+      "position": 2
+    },
+    {
+      "key": "refine_prompts",
+      "name": "Refine Prompts",
+      "color": "#cfbaf0",
+      "position": 3
+    },
+    {
+      "key": "quick_reference",
+      "name": "Quick Reference",
+      "color": "#fbf8cc",
+      "position": 4
     }
   ]
 }
