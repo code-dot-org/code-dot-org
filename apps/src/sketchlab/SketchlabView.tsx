@@ -14,9 +14,11 @@ import {
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
@@ -86,6 +88,8 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   >({});
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -265,7 +269,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
-        <SketchlabTourSteps />
+        {!isStartMode && <SketchlabTourSteps />}
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
             levelProperties={levelProperties}
