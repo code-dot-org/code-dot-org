@@ -9,7 +9,7 @@ import styles from './lesson-materials.module.scss';
 
 type ResourceIconProps = {
   resourceType: string;
-  resourceUrl: string;
+  resourceUrl?: string;
 };
 
 const computeIconType = (resourceType: string, resourceUrl: string) => {

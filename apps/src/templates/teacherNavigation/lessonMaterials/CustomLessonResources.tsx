@@ -2,26 +2,44 @@ import {
   BodyTwoText,
   Heading6,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-import i18n from '@cdo/locale';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Resource} from './LessonMaterialTypes';
 import ResourceRow from './ResourceRow';
 
 import styles from './lesson-materials.module.scss';
 
 type CustomResourcesProps = {
-  //   unitNumber: number | null;
-  //   lessonNumber: number;
-  //   lessonPlanUrl?: string;
-  //   lessonPlanPdfUrl?: string;
-  //   standardsUrl?: string;
-  //   vocabularyUrl?: string;
-  //   lessonName?: string;
-  //   resources: Resource[];
-  //   hasLessonPlan?: boolean;
+  unitId: number | null;
+  lessonId: number;
+  sectionId: number;
 };
+export type CustomArtifact = {
+  id: number;
+  key: string;
+  title: string;
+  type: string;
+  content: string;
+};
+
+async function asyncFetchCustomResources(
+  unitId: number,
+  lessonId: number,
+  sectionId: number
+): Promise<CustomArtifact[]> {
+  const pararms: Record<string, number> = {
+    unitId: unitId,
+    lessonId: lessonId,
+    sectionId: sectionId,
+  };
+  const response = await HttpClient.fetchJson<CustomArtifact[]>(
+    `/aidiff_artifacts`,
+    pararms
+  );
+  console.log('Custom Resources response:', response);
+  return response.value;
+}
 
 const renderNoResourcesRow = (
   <div className={styles.rowContainer}>
@@ -35,16 +53,46 @@ const renderNoResourcesRow = (
   </div>
 );
 
-const CustomLessonResources: React.FC<CustomResourcesProps> = ({}) => {
-  const resources = [
-    {
-      key: 'customResource1',
-      name: 'Custom Resource 1',
-      url: 'https://example.com/resource1',
-      audience: 'student',
-      type: 'Custom',
-    },
-  ];
+const CustomLessonResources: React.FC<CustomResourcesProps> = ({
+  unitId,
+  lessonId,
+  sectionId,
+}) => {
+  const [resources, setResources] = useState<CustomArtifact[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const fetchResources = async () => {
+      try {
+        const result = await asyncFetchCustomResources(
+          unitId ?? 0,
+          lessonId,
+          sectionId
+        );
+        if (!cancelled) {
+          setResources(result);
+        }
+      } catch (error) {
+        console.error('Failed to fetch custom resources', error);
+        if (!cancelled) {
+          setResources([]);
+        }
+      }
+    };
+
+    // Only attempt fetch when we have a unitId
+    if (unitId) {
+      fetchResources();
+    } else {
+      setResources([]);
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, [unitId, lessonId, sectionId]);
+
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
@@ -52,7 +100,7 @@ const CustomLessonResources: React.FC<CustomResourcesProps> = ({}) => {
       </div>
       {resources.length === 0 && renderNoResourcesRow}
       {resources.map(resource => (
-        <ResourceRow key={resource.key} unitNumber={null} resource={resource} />
+        <ResourceRow key={resource.id} unitNumber={null} resource={resource} />
       ))}
     </div>
   );

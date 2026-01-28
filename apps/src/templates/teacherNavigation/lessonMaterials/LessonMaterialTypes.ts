@@ -18,10 +18,12 @@ export type Lesson = {
 
 export type Resource = {
   key: string;
-  name: string;
-  url: string;
+  name?: string;
+  // custom resources use 'title' instead of 'name'
+  title?: string;
+  url?: string;
   downloadUrl?: string;
-  audience: string;
+  audience?: string;
   type: string;
 };
 
@@ -34,6 +36,8 @@ export type MaterialType =
   | 'VOCABULARY'
   | 'LINK'
   | 'CUSTOM';
+
+export const CUSTOM_RESOURCE_TYPES = ['AidiffExitTicket', 'AidiffLessonHook'];
 
 export const computeMaterialType = (
   resourceType: string,
@@ -53,7 +57,7 @@ export const computeMaterialType = (
     return 'STANDARDS';
   } else if (resourceType === 'Vocabulary') {
     return 'VOCABULARY';
-  } else if (resourceType === 'Custom') {
+  } else if (CUSTOM_RESOURCE_TYPES.includes(resourceType)) {
     return 'CUSTOM';
   } else {
     return 'LINK';

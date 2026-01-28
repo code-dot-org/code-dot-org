@@ -31,12 +31,11 @@ import AIBotTAIcon from '@cdo/static/ai-bot-ta-tag-icon.png';
 import LessonSelector from '../../teacherDashboardShared/LessonSelector';
 import UnitSelectorV2 from '../../teacherDashboardShared/UnitSelectorV2';
 
+import CustomLessonResources from './CustomLessonResources';
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
 import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
-
-import CustomLessonResources from './CustomLessonResources';
 
 import styles from './lesson-materials.module.scss';
 
@@ -317,7 +316,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const renderCustomResources = () => {
     if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
-      return <CustomLessonResources />;
+      return (
+        <CustomLessonResources
+          unitId={1}
+          lessonId={selectedLesson.id}
+          sectionId={3}
+        />
+      );
     } else {
       return null;
     }

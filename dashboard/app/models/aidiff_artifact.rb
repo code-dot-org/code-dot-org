@@ -34,7 +34,9 @@ class AidiffArtifact < ApplicationRecord
       updated_at: updated_at,
       type: type,
       content: content,
-      aidiff_artifact_associations: aidiff_artifact_associations&.map(&:summarize)
+      aidiff_artifact_associations: aidiff_artifact_associations&.map(&:summarize),
+      # TODO: make specific to artifact type (e.g. exit ticket vs lesson hook)
+      url: "/aidiff_artifacts/#{id}"
     }
   end
 
