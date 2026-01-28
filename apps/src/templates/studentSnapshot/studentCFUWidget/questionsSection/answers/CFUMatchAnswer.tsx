@@ -93,7 +93,7 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
         </>
       )}
 
-      {/* Optional overall correctness hint, if you want to use it in styling */}
+      {/* Optional overall correctness hint */}
       <Typography variant="overline2">
         Overall status: {isCorrect ? 'correct' : 'not correct'}
       </Typography>
