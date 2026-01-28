@@ -153,17 +153,12 @@ export interface Renderer {
 export interface Environment {
   /** The main workspace reference, when available. */
   mainWorkspace?: Blockly.Workspace;
-  /** The hidden workspace reference, when provided. */
-  hiddenWorkspace?: Blockly.Workspace;
-  /** Whether or not the main workspace is inline */
-  inline: boolean;
-  /**
-   * Whether or not the workspace is considered embedded.
-   *
-   * An embedded workspace is one that is not meant to be modified, but rather
-   * shown as an example or preview.
-   */
-  embedded: boolean;
+  /** The hidden workspaces in the environment, if any */
+  hiddenWorkspaces: Blockly.Workspace[];
+  /** The inline workspaces in the environment, if any */
+  inlineWorkspaces: Blockly.Workspace[];
+  /** The embedded workspaces in the environment, if any */
+  embeddedWorkspaces: Blockly.Workspace[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }

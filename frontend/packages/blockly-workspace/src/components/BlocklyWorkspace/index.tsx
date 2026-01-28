@@ -1,6 +1,6 @@
 'use client';
 
-import useResizeObserver from '@react-hook/resize-observer';
+import {useResizeObserver} from '@mantine/hooks';
 import 'blockly/blocks';
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
@@ -11,15 +11,13 @@ import type {ReactElement, MutableRefObject} from 'react';
 
 console.log('blockly-workspace Blockly:', Blockly);
 
-import {disableOrphans, grayOutUndeletableBlocks} from '../../events';
-import FunctionBlockMixin from '../../mixins/functionBlockMixin';
-import {PluginType} from '../../plugins';
+import Agent, {AgentEvent} from '../../Agent';
+import Driver from '../../Driver';
+import {useBlocklyContext} from '../../contexts/BlocklyContext';
 import type {Plugin} from '../../plugins';
-import Registry from '../../Registry';
-import {positionBlocksOnWorkspace} from '../../serialization';
+import ThrasosRenderer from '../../renderers/thrasos';
 import DefaultTheme from '../../themes/default';
 import type {
-  BlockSvg,
   BlocklySerialization,
   BlockDefinition,
   Theme,
@@ -29,16 +27,11 @@ import type {
 
 import moduleStyles from './blocklyWorkspace.module.scss';
 
-export interface BlocklyOptions extends Blockly.BlocklyOptions {
-  /** When specified, undeletable blocks are grayed out. */
-  grayOutUndeletableBlocks?: boolean;
-}
-
 export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of custom blocks to load within the Blockly instance. */
   blocks?: BlockDefinition[];
   /** Some options that will alter the typical Blockly behavior. */
-  options?: BlocklyOptions;
+  options?: Blockly.BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
   /** A set of blocks to put into the toolbox or flyout within the workspace */
@@ -103,219 +96,135 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   javascriptGeneratorRef,
   className,
 }: BlocklyWorkspaceProps<T>): ReactElement {
-  const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
-  const workspace = useRef<Blockly.WorkspaceSvg | null>(null);
+  // Resize the Blockly workspace when the container changes size
+  const [anchor, rect] = useResizeObserver();
+  useEffect(() => {
+    if (!inline) {
+      if (agent.current.workspace) {
+        Blockly.svgResize(agent.current.workspace);
+      }
+    }
+  }, [inline, rect]);
+
+  const {driver: contextDriver} = useBlocklyContext();
+
   theme ||= DefaultTheme;
 
-  // Create a new plugin registry to keep track of the current blockly
-  // registered plugins for this session.
-  const registry = useRef<Registry<T>>(
-    new Registry<T>(environment, theme, renderer),
+  // Create a Driver to handle all of the state if none are present in the environment already
+  const driver = useRef<Driver<T>>(
+    contextDriver?.current ||
+      new Driver<T>(
+        environment || ({} as unknown as T),
+        renderer || ThrasosRenderer,
+        theme || DefaultTheme,
+        plugins || [],
+      ),
   );
+
+  // Creates the encapsulating Agent class for this workspace within the environment
+  const agent = useRef<Agent<T>>(
+    new Agent(driver.current, options || {}, !!inline, !!hidden, !!embedded),
+  );
+
+  useEffect(() => {
+    // Update toolbox
+    agent.current.toolbox = toolboxBlocks;
+  }, [toolboxBlocks]);
+
+  useEffect(() => {
+    const oldOnInject = onInject;
+    const currentAgent = agent.current;
+
+    if (onInject) {
+      currentAgent.addListener(AgentEvent.Injected, onInject);
+    }
+
+    return () => {
+      if (oldOnInject) {
+        currentAgent.removeListener(AgentEvent.Injected, oldOnInject);
+      }
+    };
+  }, [onInject]);
+
+  useEffect(() => {
+    const oldOnChange = onChange;
+    const currentAgent = agent.current;
+
+    if (onChange) {
+      currentAgent.addListener(AgentEvent.BlocklyEvent, onChange);
+    }
+
+    return () => {
+      if (oldOnChange) {
+        currentAgent.removeListener(AgentEvent.BlocklyEvent, oldOnChange);
+      }
+    };
+  }, [onChange]);
+
+  useEffect(() => {
+    if (!!inline !== agent.current.inline) {
+      console.error(
+        'Cannot switch to an inline workspace once the workspace has been created.',
+      );
+    }
+  }, [inline]);
+
+  useEffect(() => {
+    if (renderer !== agent.current.driver.renderer) {
+      console.error(
+        'Cannot switch renderer once the workspace has been created.',
+      );
+    }
+  }, [renderer]);
+
+  useEffect(() => {
+    // Update theme
+    agent.current.driver.theme = theme;
+  }, [theme]);
+
+  useEffect(() => {
+    // Either move or newly inject the Blockly workspace when the container is known
+    if (anchor.current) {
+      // Determine the location of the workspace
+      // For inline workspaces (like those within markdown instructions) create
+      // the container to build it offscreen before copying it to its final
+      // location.
+      const container = anchor.current;
+      agent.current.container = container;
+
+      if (workspaceRef) {
+        workspaceRef.current = agent.current.workspace || null;
+      }
+
+      if (javascriptGeneratorRef) {
+        javascriptGeneratorRef.current = javascriptGenerator;
+      }
+
+      // Ensure it resizes to the container
+      if (!agent.current.inline) {
+        if (agent.current.workspace) {
+          Blockly.svgResize(agent.current.workspace);
+        }
+      }
+    }
+  }, [workspaceRef, javascriptGeneratorRef, anchor]);
 
   // Register any new custom blocks
   useEffect(() => {
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
-    // Make sure we have the default blocks
-    (blocks || []).forEach(blockDefinition => {
-      // Register (and modify the block definition to just reference mixins
-      // and extensions by name) any block fields, extensions, etc.
-      const formedBlockDefinition =
-        registry.current.registerFromBlockDefinition(blockDefinition);
-
-      Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
-
-      // Bind the given block definition's generator to the overall generator
-      javascriptGenerator.forBlock[blockDefinition.type] = function (
-        block: Blockly.Block,
-        _generator: JavascriptGenerator,
-      ) {
-        return (
-          blockDefinition.generator?.javascript?.(
-            block as BlockSvg,
-            javascriptGenerator,
-            environment,
-          ) || ''
-        );
-      };
-    });
+    driver.current.blocks = blocks || [];
   }, [blocks, environment]);
 
   useEffect(() => {
-    // Determine the location of the workspace
-    // For inline workspaces (like those within markdown instructions) create
-    // the container to build it offscreen before copying it to its final
-    // location.
-    const container = inline ? document.createElement('div') : anchor.current;
-    if (!container) {
+    if (!agent.current.workspace) {
       return;
     }
 
-    // Add mixins
-    try {
-      Blockly.Extensions.registerMixin(
-        'function_block_mixin',
-        FunctionBlockMixin,
-      );
-    } catch (err) {
-      if (err instanceof Error) {
-        if (!err.toString().includes('already registered')) {
-          throw err;
-        }
-      }
-    }
-
-    // Add plugins
-    const registryInstance = registry.current;
-    registryInstance.registerAll(plugins || []);
-
-    // Create the workspace within the container
-    workspace.current = Blockly.inject(container, {
-      renderer: renderer?.name || 'geras',
-      theme: theme?.instance || 'classic',
-      toolbox: toolboxBlocks,
-      trashcan: false,
-      media: '/blockly/media/',
-      ...options,
-      ...(inline || hidden
-        ? {
-            readOnly: true,
-            scrollbars: false,
-            media: '', // Don't need media assets
-          }
-        : {}),
-    });
-
-    if (workspaceRef) {
-      workspaceRef.current = workspace.current;
-    }
-
-    if (javascriptGeneratorRef) {
-      javascriptGeneratorRef.current = javascriptGenerator;
-    }
-
-    // Add injection plugins
-    registryInstance.registerAll(
-      (plugins || []).filter(plugin => plugin.type === PluginType.Inject),
-      inline,
-      workspace.current,
-    );
-
-    // Retain the main workspace in the environment, if it exists
-    if (!inline && environment) {
-      if (hidden) {
-        environment.hiddenWorkspace = workspace.current || undefined;
-      } else {
-        environment.mainWorkspace = workspace.current || undefined;
-        environment.embedded = !!embedded;
-      }
-    } else if (inline && environment && !hidden) {
-      environment.inline = true;
-    }
-
-    // Level implementation callback for custom behaviors per-level type
-    if (onInject) {
-      onInject(workspace.current);
-    }
-
-    // Apply the custom styles to our custom elements
-    if (options?.grayOutUndeletableBlocks) {
-      workspace.current.addChangeListener(grayOutUndeletableBlocks);
-    }
-
-    // Add custom events
-    // Add the orphan disabler which disables blocks that aren't connected to top
-    // blocks or procedures, etc.
-    workspace.current.addChangeListener(disableOrphans);
-
-    // Add main change listener
-    if (onChange) {
-      workspace.current.addChangeListener(onChange);
-    }
-
-    // Deconstruct the blockly instance when the component is unmounted
-    return () => {
-      registryInstance.unregisterAll();
-
-      // Dispose of the workspace
-      workspace.current?.dispose();
-    };
-  }, [inline]);
-
-  useEffect(() => {
-    if (!workspace.current) {
-      return;
-    }
-
-    // JSON serialization
     if (startBlocks) {
-      Blockly.serialization.workspaces.load(startBlocks, workspace.current);
-    }
-
-    // Reposition blocks if this is a full workspace
-    if (!inline) {
-      positionBlocksOnWorkspace(workspace.current);
-    }
-
-    if (inline) {
-      // Move top block to corner (hopefully there is only one)
-      for (const block of workspace.current.getTopBlocks()) {
-        block.moveTo(new Blockly.utils.Coordinate(0, 0));
-      }
-
-      const container = workspace.current.getInjectionDiv();
-      if (!container) {
-        return;
-      }
-
-      // Copy over SVG rendered blocks to the span in our anchor
-      document.body.appendChild(container);
-      if (workspace.current) {
-        Blockly.svgResize(workspace.current);
-      }
-
-      const svg = container.querySelector('svg')?.cloneNode(true) as SVGElement;
-      if (svg && anchor.current) {
-        svg.style.background = 'none';
-        svg.style.position = 'relative';
-        svg.style.display = 'inline-block';
-        svg.style.border = 'none';
-        svg.querySelector('.blocklyMainBackground')?.remove();
-        anchor.current.innerHTML = '';
-        anchor.current.appendChild(svg);
-
-        // Fix width and height (after it renders)
-        window.requestAnimationFrame(() => {
-          const size = (svg
-            .querySelector('.blocklyWorkspace')
-            ?.getClientRects() || [])[0] || {
-            width: 30,
-            height: 30,
-          };
-          svg.style.width = size.width + 'px';
-          svg.style.height = size.height + 'px';
-        });
-
-        // Copy classes over
-        for (const blocklyClassName of Array.from(
-          (container?.querySelector('svg')?.parentNode as HTMLElement | null)
-            ?.classList || [],
-        )) {
-          anchor.current.classList.add(blocklyClassName);
-        }
-      }
+      agent.current.load(startBlocks);
     }
   }, [inline, startBlocks]);
-
-  // Resize the Blockly workspace when the container changes size
-  useResizeObserver(anchor, () => {
-    if (!inline) {
-      if (workspace.current) {
-        Blockly.svgResize(workspace.current);
-      }
-    }
-  });
 
   return createElement(inline ? 'span' : 'div', {
     ref: anchor,

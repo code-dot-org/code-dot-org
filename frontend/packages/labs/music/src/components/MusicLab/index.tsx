@@ -254,6 +254,7 @@ const MusicLab = () => {
                 className={moduleStyles.blocklyWorkspace}
                 options={{
                   readOnly: levelProperties.multipleChoice ? true : undefined,
+                  trashcan: false,
                 }}
                 startBlocks={
                   currentSources?.source ||
