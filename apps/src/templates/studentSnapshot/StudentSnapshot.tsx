@@ -15,6 +15,7 @@ import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
 import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
 import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
+import LessonInsightWidget from './lessonInsightWidget';
 import StudentCFUWidget from './studentCFUWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
@@ -127,11 +128,8 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedUnitId, selectedLessonId, selectedStudentId]);
 
+  // TODO(lfm): figure out what this is supposed to do
   console.log(isStudentCodeLoading);
-
-  // TODO: replace with actual values from URL/Redux later
-  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
-  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
   return (
     <div className={styles.snapshotContainer}>
@@ -163,28 +161,33 @@ const StudentSnapshot: React.FC = () => {
             selectedStudentId={selectedStudentId}
           />
         )}
+        <LessonInsightWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
+          studentId={selectedStudentId}
           teacherHasEnabledAi={aiTaEnabled}
         />
-        <StudentCodeWidget studentCode={studentCode} />
         <StudentCFUWidget
           gridWidth={2}
           gridHeight={2}
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
         />
-        <ExemplarCodeWidget lessonId={selectedLessonId} />
+        <StudentCodeWidget studentCode={studentCode} />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}
           lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
-          studentName={HARDCODED_STUDENT_NAME}
+          studentId={selectedStudentId}
+          studentName={selectedStudent ? getFullName(selectedStudent) : ''}
           teacherHasEnabledAi={false}
           canProvideFeedback={true}
         />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
       </div>
     </div>
   );

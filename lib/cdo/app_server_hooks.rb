@@ -38,11 +38,6 @@ module Cdo
       # intialized in config/initializers/statsig.rb
       require 'cdo/statsig'
       Cdo::StatsigInitializer.init
-
-      if CDO.rack_env?(:production) || CDO.test_system?
-        require 'cdo/app_server_metrics'
-        Cdo::AppServerMetrics.start_background_metrics_thread(host: host)
-      end
     end
   end
 end
