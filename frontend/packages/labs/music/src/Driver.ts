@@ -1,4 +1,4 @@
-import {ProcedureBase} from '@blockly/block-shareable-procedures';
+//import {ProcedureBase} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import type {JavascriptGenerator} from 'blockly/javascript';
 import EventEmitter from 'events';
@@ -18,10 +18,7 @@ import AnalyticsReporter from './LabMusicMetricsReporter';
 
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {LabMetricsReporter} from '@code-dot-org/lab';
-import {
-  LabConstants,
-  LabRegistry,
-} from '@code-dot-org/lab';
+import {LabConstants, LabRegistry} from '@code-dot-org/lab';
 
 export const DriverEvent = {
   /** The music library was loaded and updated */
@@ -58,7 +55,7 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   private readonly metricsReporter: LabMetricsReporter;
   readonly player: MusicPlayer;
   private isPlaying: boolean;
-  private blockMode: typeof BlockMode[keyof typeof BlockMode];
+  private blockMode: (typeof BlockMode)[keyof typeof BlockMode];
 
   constructor() {
     super();
@@ -132,9 +129,14 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
     if (e.type === Blockly.Events.CHANGE) {
       const changeEvent = e as Blockly.Events.BlockChange;
-      if (changeEvent.element === 'field' && changeEvent.name === TRIGGER_FIELD && changeEvent.blockId) {
-        this.emit(DriverEvent.SetTrigger,
-          this.getSelectedTriggerId(changeEvent.blockId)
+      if (
+        changeEvent.element === 'field' &&
+        changeEvent.name === TRIGGER_FIELD &&
+        changeEvent.blockId
+      ) {
+        this.emit(
+          DriverEvent.SetTrigger,
+          this.getSelectedTriggerId(changeEvent.blockId),
         );
       }
     }
@@ -163,7 +165,9 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
       const procedureMap = this.workspace.getProcedureMap();
       procedureMap
         .getProcedures()
-        .filter(p => !Blockly.Procedures.getDefinition(p.getName(), this.workspace!))
+        .filter(
+          p => !Blockly.Procedures.getDefinition(p.getName(), this.workspace!),
+        )
         .forEach(p => procedureMap.delete(p.getId()));
 
       // Adjust the position of any overlapping blocks, including immovable top blocks.
@@ -192,16 +196,14 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
         }
       });
 
-      this.analyticsReporter.onBlocksUpdated(
-        this.workspace.getAllBlocks()
-      );
+      this.analyticsReporter.onBlocksUpdated(this.workspace.getAllBlocks());
     }
   }
 
   getSelectedTriggerId(blockId: string) {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
-        'getSelectedTriggerId called before workspace initialized.'
+        'getSelectedTriggerId called before workspace initialized.',
       );
       return;
     }
@@ -291,14 +293,14 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   compileSong(): string {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
-        'compileSong called before workspace initialized.'
+        'compileSong called before workspace initialized.',
       );
       return '';
     }
 
     if (!this.javascriptGenerator) {
       this.metricsReporter.logWarning(
-        'compileSong called before javascript generator initialized.'
+        'compileSong called before javascript generator initialized.',
       );
       return '';
     }
@@ -306,7 +308,12 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     console.log('compileSong');
 
     // Create the generator and compile the song
-    this.generator = new Generator(this.workspace, this.javascriptGenerator, this.blockMode, this.metricsReporter);
+    this.generator = new Generator(
+      this.workspace,
+      this.javascriptGenerator,
+      this.blockMode,
+      this.metricsReporter,
+    );
 
     // Update the list of triggers that are available in the workspace.
     //this.triggers = Triggers.filter(trigger =>

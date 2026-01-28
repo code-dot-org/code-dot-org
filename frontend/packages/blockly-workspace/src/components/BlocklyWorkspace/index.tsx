@@ -1,7 +1,7 @@
 'use client';
 
 import useResizeObserver from '@react-hook/resize-observer';
-import * as libraryBlocks from 'blockly/blocks';
+import 'blockly/blocks';
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
@@ -9,16 +9,15 @@ import classNames from 'classnames';
 import {createElement, useEffect, useRef} from 'react';
 import type {ReactElement, MutableRefObject} from 'react';
 
-import {
-  disableOrphans,
-  grayOutUndeletableBlocks,
-} from '@blockly-workspace/events';
-import FunctionBlockMixin from '@blockly-workspace/mixins/functionBlockMixin';
-import {PluginType} from '@blockly-workspace/plugins';
-import type {Plugin} from '@blockly-workspace/plugins';
-import Registry from '@blockly-workspace/Registry';
-import {positionBlocksOnWorkspace} from '@blockly-workspace/serialization';
-import DefaultTheme from '@blockly-workspace/themes/default';
+console.log('blockly-workspace Blockly:', Blockly);
+
+import {disableOrphans, grayOutUndeletableBlocks} from '../../events';
+import FunctionBlockMixin from '../../mixins/functionBlockMixin';
+import {PluginType} from '../../plugins';
+import type {Plugin} from '../../plugins';
+import Registry from '../../Registry';
+import {positionBlocksOnWorkspace} from '../../serialization';
+import DefaultTheme from '../../themes/default';
 import type {
   BlockSvg,
   BlocklySerialization,
@@ -26,7 +25,7 @@ import type {
   Theme,
   Renderer,
   Environment,
-} from '@blockly-workspace/types';
+} from '../../types';
 
 import moduleStyles from './blocklyWorkspace.module.scss';
 
@@ -74,14 +73,14 @@ export interface BlocklyWorkspaceProps<T extends Environment & object> {
    */
   workspaceRef?: MutableRefObject<Blockly.WorkspaceSvg | null>;
   /**
+   * A MutableRef that holds the code generator.
+   */
+  javascriptGeneratorRef?: MutableRefObject<JavascriptGenerator | null>;
+  /**
    * Any additional class to apply to the workspace container.
    */
   className?: string;
 }
-
-// Ensure these are still compiled into module initialization.
-const _ = libraryBlocks;
-const __ = En;
 
 /**
  * Represents a Blockly workspace.
@@ -101,6 +100,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
   plugins,
   environment,
   workspaceRef,
+  javascriptGeneratorRef,
   className,
 }: BlocklyWorkspaceProps<T>): ReactElement {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
@@ -115,15 +115,6 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   // Register any new custom blocks
   useEffect(() => {
-    console.log(
-      'BLOCKLY_INIT environment via renderer',
-      blocks,
-      startBlocks,
-      renderer,
-      theme,
-      environment,
-      toolboxBlocks,
-    );
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
     // Make sure we have the default blocks
@@ -149,18 +140,9 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         );
       };
     });
-  }, [blocks]);
+  }, [blocks, environment]);
 
   useEffect(() => {
-    console.log(
-      'BLOCKLY_INIT environment via anchor',
-      blocks,
-      startBlocks,
-      renderer,
-      theme,
-      environment,
-    );
-
     // Determine the location of the workspace
     // For inline workspaces (like those within markdown instructions) create
     // the container to build it offscreen before copying it to its final
@@ -185,7 +167,8 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     }
 
     // Add plugins
-    registry.current.registerAll(plugins || []);
+    const registryInstance = registry.current;
+    registryInstance.registerAll(plugins || []);
 
     // Create the workspace within the container
     workspace.current = Blockly.inject(container, {
@@ -208,8 +191,12 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       workspaceRef.current = workspace.current;
     }
 
+    if (javascriptGeneratorRef) {
+      javascriptGeneratorRef.current = javascriptGenerator;
+    }
+
     // Add injection plugins
-    registry.current.registerAll(
+    registryInstance.registerAll(
       (plugins || []).filter(plugin => plugin.type === PluginType.Inject),
       inline,
       workspace.current,
@@ -249,12 +236,12 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
     // Deconstruct the blockly instance when the component is unmounted
     return () => {
-      registry.current.unregisterAll();
+      registryInstance.unregisterAll();
 
       // Dispose of the workspace
       workspace.current?.dispose();
     };
-  }, []);
+  }, [inline]);
 
   useEffect(() => {
     if (!workspace.current) {
@@ -319,16 +306,16 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         }
       }
     }
-  }, [startBlocks]);
+  }, [inline, startBlocks]);
 
   // Resize the Blockly workspace when the container changes size
-  if (!inline) {
-    useResizeObserver(anchor, () => {
+  useResizeObserver(anchor, () => {
+    if (!inline) {
       if (workspace.current) {
         Blockly.svgResize(workspace.current);
       }
-    });
-  }
+    }
+  });
 
   return createElement(inline ? 'span' : 'div', {
     ref: anchor,

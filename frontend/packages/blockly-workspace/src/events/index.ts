@@ -5,11 +5,8 @@
 
 import * as Blockly from 'blockly/core';
 
-import {BLOCK_TYPES} from '@blockly-workspace/constants';
-import {
-  updateBlockEnabled,
-  disableOrphanBlocks,
-} from '@blockly-workspace/utils';
+import {BlockTypes} from '../constants';
+import {updateBlockEnabled, disableOrphanBlocks} from '../utils';
 
 type State = Blockly.serialization.blocks.State;
 
@@ -73,7 +70,7 @@ export function disableOrphans(event: Blockly.Events.Abstract) {
     }
   } else if (
     blockEvent.type === Blockly.Events.BLOCK_DRAG &&
-    block?.type === BLOCK_TYPES.procedureDefinition &&
+    block?.type === BlockTypes.procedureDefinition &&
     eventWorkspace
   ) {
     disableOrphanBlocks(eventWorkspace);

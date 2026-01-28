@@ -61,15 +61,18 @@ export const PlayerProvider = ({children}: PropsWithChildren) => {
   const [canUndo, setCanUndo] = useState<boolean>(false);
   const [canRedo, setCanRedo] = useState<boolean>(false);
 
-  const onChange = useCallback((event: Blockly.Events.Abstract) => {
-    if (driver.current) {
-      driver.current.onBlockEvent(event);
+  const onChange = useCallback(
+    (event: Blockly.Events.Abstract) => {
+      if (driver.current) {
+        driver.current.onBlockEvent(event);
 
-      // Update undo status when blocks change.
-      setCanUndo(driver.current.canUndo());
-      setCanRedo(driver.current.canRedo());
-    }
-  }, [driver, setCanUndo, setCanRedo]);
+        // Update undo status when blocks change.
+        setCanUndo(driver.current.canUndo());
+        setCanRedo(driver.current.canRedo());
+      }
+    },
+    [driver, setCanUndo, setCanRedo],
+  );
 
   useEffect(() => {
     // Set these in the registry as well
@@ -82,9 +85,9 @@ export const PlayerProvider = ({children}: PropsWithChildren) => {
     });
 
     // Attach an event when a trigger is selected
-    driver.current.on(DriverEvent.SetTrigger, triggerId => (
-      dispatch(musicActions.setSelectedTriggerId(triggerId))
-    ));
+    driver.current.on(DriverEvent.SetTrigger, triggerId =>
+      dispatch(musicActions.setSelectedTriggerId(triggerId)),
+    );
 
     // Attach an event when a block is selected
     driver.current.on(DriverEvent.Selected, blockId => {

@@ -1,4 +1,4 @@
-import {IProcedureBlock} from '@blockly/block-shareable-procedures';
+import type {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import {JavascriptGenerator} from 'blockly/javascript';
 

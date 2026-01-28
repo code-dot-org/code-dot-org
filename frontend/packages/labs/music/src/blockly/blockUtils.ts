@@ -2,7 +2,8 @@ import {isProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import {JavascriptGenerator} from 'blockly/javascript';
 
-import {BLOCK_TYPES} from '@code-dot-org/blockly-workspace';
+import type {BlockTypesKey as BaseBlockTypesKey} from '@code-dot-org/blockly-workspace';
+import {BlockTypes as BaseBlockTypes} from '@code-dot-org/blockly-workspace';
 import type {
   JavascriptBlockGenerator,
   BlocklySerialization,
@@ -15,11 +16,11 @@ import {BlockTypes} from './blockTypes';
 import {DOCS_BASE_URL} from './constants';
 
 type BlockDefinitions = {
-  [key in BLOCK_TYPES]?: Blockly.Block;
+  [key in BaseBlockTypesKey]?: Blockly.Block;
 };
 
 type BlockGenerators = {
-  [key in BLOCK_TYPES]?: JavascriptBlockGenerator;
+  [key in BaseBlockTypesKey]?: JavascriptBlockGenerator;
 };
 
 // Cache for storing Music Lab specific block definitions and generators.
@@ -147,9 +148,9 @@ export function backupFunctionDefinitons(
 ) {
   const backupBlockDefinitionTypes = [
     // Can potentially be overwritten by Simple2
-    BLOCK_TYPES.procedureCall,
+    BaseBlockTypes.procedureCall,
     // Can potentially be deleted by Simple2
-    BLOCK_TYPES.procedureIfReturn,
+    BaseBlockTypes.procedureIfReturn,
   ];
   backupBlockDefinitionTypes.forEach(type => {
     BlockCache.blockDefinitions[type] = {...Blockly.Blocks[type as string]};

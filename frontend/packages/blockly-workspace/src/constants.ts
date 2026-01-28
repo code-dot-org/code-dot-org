@@ -22,25 +22,27 @@ export const Renderers = {
 /**
  * Our custom top-block types.
  */
-export enum BLOCK_TYPES {
-  argumentReporter = 'argument_reporter',
-  behaviorDefinition = 'behavior_definition',
-  behaviorGet = 'gamelab_behavior_get',
-  category = 'category',
-  categoryDynamic = 'custom_category',
-  colourRandom = 'colour_random',
-  danceWhenSetup = 'Dancelab_whenSetup',
-  parametersGet = 'parameters_get',
-  procedureDefinition = 'procedures_defnoreturn',
-  procedureDefinitionReturn = 'procedures_defreturn',
-  procedureCall = 'procedures_callnoreturn',
-  procedureCallReturn = 'procedures_callreturn',
-  procedureIfReturn = 'procedures_ifreturn',
-  spriteParameterGet = 'sprite_parameter_get',
-  whenRun = 'when_run',
-  variableGet = 'variables_get',
-  variableSet = 'variables_set',
-}
+export const BlockTypes = {
+  argumentReporter: 'argument_reporter',
+  behaviorDefinition: 'behavior_definition',
+  behaviorGet: 'gamelab_behavior_get',
+  category: 'category',
+  categoryDynamic: 'custom_category',
+  colourRandom: 'colour_random',
+  danceWhenSetup: 'Dancelab_whenSetup',
+  parametersGet: 'parameters_get',
+  procedureDefinition: 'procedures_defnoreturn',
+  procedureDefinitionReturn: 'procedures_defreturn',
+  procedureCall: 'procedures_callnoreturn',
+  procedureCallReturn: 'procedures_callreturn',
+  procedureIfReturn: 'procedures_ifreturn',
+  spriteParameterGet: 'sprite_parameter_get',
+  whenRun: 'when_run',
+  variableGet: 'variables_get',
+  variableSet: 'variables_set',
+} as const;
+
+export type BlockTypesKey = (typeof BlockTypes)[keyof typeof BlockTypes];
 
 export const ToolboxType = {
   CATEGORIZED: 'CATEGORIZED',

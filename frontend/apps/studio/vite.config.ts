@@ -20,6 +20,30 @@ export default defineConfig(({mode}) => {
       alias: {
         '@': path.resolve(__dirname, './src'),
       },
+      // Dedupe blockly to ensure only one instance across all workspace packages.
+      // Combined with optimizeDeps.include, this ensures proper deduplication.
+      dedupe: [
+        'blockly',
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'react/jsx-dev-runtime',
+        'react-redux',
+        '@reduxjs/toolkit',
+        '@code-dot-org/redux',
+      ],
+    },
+    optimizeDeps: {
+      // Include blockly and its subpaths in pre-bundling to handle CJS-to-ESM conversion.
+      // Combined with resolve.dedupe, this ensures a single instance.
+      include: [
+        'blockly',
+        'blockly/core',
+        'blockly/blocks',
+        'blockly/javascript',
+        'react',
+        'react-dom',
+      ],
     },
     plugins: [
       ViteRails(),

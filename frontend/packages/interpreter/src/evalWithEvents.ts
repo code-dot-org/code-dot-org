@@ -1,6 +1,4 @@
-import type {
-  InterpreterObject,
-} from '@code-dot-org/js-interpreter';
+import type {InterpreterObject} from '@code-dot-org/js-interpreter';
 
 import type {MarshalObject} from './CustomMarshaler';
 import CustomMarshaler from './CustomMarshaler';
@@ -33,7 +31,7 @@ export function evalWithEvents(
   },
   events: MarshalEvents,
   evalCode: string = '',
-  customMarshalObjectList?: MarshalObject[]
+  customMarshalObjectList?: MarshalObject[],
 ): {
   hooks: {
     name: string;
@@ -64,7 +62,7 @@ export function evalWithEvents(
         func: (...args) => {
           const eventArgs = {name: eventId, args};
           currentCallback?.(
-            interpreter.marshalNativeToInterpreter(eventArgs, null, 5)
+            interpreter.marshalNativeToInterpreter(eventArgs, null, 5),
           );
           interpreter.run();
           return lastReturnValue;
@@ -91,20 +89,21 @@ export function evalWithEvents(
       interpreter.setProperty(
         scope,
         '_wait',
-        interpreter.createAsyncFunction((callback: (_: InterpreterObject) => void) => {
-          currentCallback = callback;
-        })
+        interpreter.createAsyncFunction(
+          (callback: (_: InterpreterObject) => void) => {
+            currentCallback = callback;
+          },
+        ),
       );
       interpreter.setProperty(
         scope,
         'setReturnValue',
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         interpreter.createNativeFunction((returnValue: any | undefined) => {
-          lastReturnValue =
-            interpreter.marshalInterpreterToNative(returnValue);
-        })
+          lastReturnValue = interpreter.marshalInterpreterToNative(returnValue);
+        }),
       );
-    }
+    },
   );
   interpreter.run();
 
