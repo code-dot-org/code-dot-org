@@ -23,6 +23,11 @@ const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
 interface BackpackPanelProps extends BackpackProps {
   openPanelCallback: () => void;
   backpackRefreshKey: number;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 }
 
 type AlertConfig = {type: 'success' | 'danger'; message: string};
@@ -37,6 +42,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   openPanelCallback,
   supportedFileTypes,
   backpackRefreshKey,
+  onImageFlagged,
 }) => {
   const backpackContext = useBackpackAPIContext();
   const primaryBackpackApi = backpackContext?.primaryApi;
@@ -255,7 +261,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const renderFileChip = (
     fileName: string,
     backpackApi: BackpackClientApi,
-    recentlyAddedList: string[] | undefined
+    recentlyAddedList: string[] | undefined,
+    isSecondaryBackpack?: boolean
   ) => {
     return (
       <BackpackFileChip
@@ -274,6 +281,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         supportedFileTypes={supportedFileTypes}
         setActionInProgress={setActionInProgress}
         disableActions={actionInProgress}
+        isSecondaryBackpack={isSecondaryBackpack}
+        onImageFlagged={onImageFlagged}
       />
     );
   };
@@ -324,7 +333,8 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
                       renderFileChip(
                         fileName,
                         secondaryBackpackApis[appName],
-                        recentlyAddedFiles[fileName]
+                        recentlyAddedFiles[fileName],
+                        true // isSecondaryBackpack
                       )
                     )}
                   </div>
