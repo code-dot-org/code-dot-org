@@ -1193,8 +1193,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level_without_rubric.update!(project_template_level_name: template_level.name)
 
       script = create(:script)
-      lesson_group = create(:lesson_group, script: script)
-      lesson = create(:lesson, script: script, lesson_group: lesson_group)
+      lesson = create(:lesson, script: script)
 
       create(:script_level, script: script, lesson: lesson, levels: [level_with_rubric])
       script_level_without_rubric = create(:script_level, script: script, lesson: lesson, levels: [level_without_rubric])
@@ -1215,8 +1214,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level_without_rubric.update!(project_template_level_name: template_level.name)
 
       script = create(:script)
-      lesson_group = create(:lesson_group, script: script)
-      lesson = create(:lesson, script: script, lesson_group: lesson_group)
+      lesson = create(:lesson, script: script)
 
       create(:script_level, script: script, lesson: lesson, levels: [level_with_rubric])
       script_level_without_rubric = create(:script_level, script: script, lesson: lesson, levels: [level_without_rubric])
@@ -1226,16 +1224,25 @@ class ScriptLevelTest < ActiveSupport::TestCase
       assert_nil script_level_without_rubric.rubric
     end
 
-    test 'rubric returns direct match even when project_template_level exists' do
+    test 'rubric returns direct match even if level with shared project_template_level has a rubric' do
       template_level = create(:level, name: 'direct_match_template')
 
-      level = create(:level)
-      level.update!(project_template_level_name: template_level.name)
+      level_with_rubric = create(:level)
+      level_with_rubric.update!(project_template_level_name: template_level.name)
 
-      script_level = create(:script_level, levels: [level])
-      rubric = create(:rubric, lesson: script_level.lesson, level: level)
+      level_with_other_rubric = create(:level)
+      level_with_other_rubric.update!(project_template_level_name: template_level.name)
 
-      assert_equal rubric, script_level.rubric
+      script = create(:script)
+      lesson = create(:lesson, script: script)
+
+      script_level_with_rubric = create(:script_level, script: script, lesson: lesson, levels: [level_with_rubric])
+      create(:script_level, script: script, lesson: lesson, levels: [level_with_other_rubric])
+
+      rubric = create(:rubric, lesson: lesson, level: level_with_rubric)
+      create(:rubric, lesson: lesson, level: level_with_other_rubric)
+
+      assert_equal rubric, script_level_with_rubric.rubric
     end
   end
 
