@@ -7,7 +7,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
-import './swiper.module.css';
+import './swiper.css';
 import moduleStyles from './carousel.module.scss';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
