@@ -1,6 +1,6 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
-import jsonAssets from './json-video-files';
+import jsonAssets from './jsonVideoFiles';
 
 const showAiTutorVideos = queryParams('show-ai-tutor-videos') === 'true';
 

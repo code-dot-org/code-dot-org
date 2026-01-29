@@ -1,4 +1,4 @@
-import styles from './json-video-styles';
+import styles from './jsonVideoStyles';
 
 export class JsonVideo extends HTMLElement {
   static get observedAttributes() {
