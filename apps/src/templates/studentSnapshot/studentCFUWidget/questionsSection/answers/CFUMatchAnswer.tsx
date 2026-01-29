@@ -1,4 +1,5 @@
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {
@@ -6,6 +7,8 @@ import {
   CFULevelResponseResponse,
   CFUMultipleLevelAnswer,
 } from '../../types';
+
+import styles from './studentCFUAnswers.module.scss';
 
 interface CFUMatchAnswerProps {
   level: CFULevel;
@@ -18,6 +21,9 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
   const options: string[] = (level.options || []).map(option =>
     typeof option === 'string' ? option : ''
   );
+
+  console.log('CFUMatchAnswer level:', level);
+  console.log('CFUMatchAnswer response:', response);
 
   const rawStudentResult = response.student_result;
 
@@ -49,7 +55,36 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
     hasCompleteStudentOrder && options.length === flatAnswers.length;
 
   return (
-    <div>
+    <div className={styles.matchAnswerContainer}>
+      {options.map((optionText, index) => {
+        const answerIndex = studentOrder && studentOrder![index];
+        const answer = answerIndex && flatAnswers[answerIndex];
+        return (
+          <div key={optionText} className={styles.matchingAnswerPairContainer}>
+            <div className={styles.matchingAnswerOptionContainer}>
+              <Typography variant="body4">{optionText}</Typography>
+            </div>
+            {!answer && (
+              <div
+                className={classNames(
+                  styles.matchingAnswerOptionContainer,
+                  styles.notAnsweredOption
+                )}
+              >
+                <Typography variant="h3" component="p">
+                  ?
+                </Typography>
+              </div>
+            )}
+
+            <div className={styles.matchingAnswerDefinitionContainer}>
+              <Typography variant="body4">
+                {answer ? answer.text : 'No match selected'}
+              </Typography>
+            </div>
+          </div>
+        );
+      })}
       {hasStudentMatches ? (
         <>
           <Typography variant="body3">
