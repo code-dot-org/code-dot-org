@@ -76,6 +76,7 @@
     "start_blocks": "var photoList = [\"https://images.code.org/33b3dc2551fa95a343615c8b4a996047-image-1649881721432.png\", \"https://images.code.org/45602755a1d329a915172f8fd02e7a71-image-1669945308291.png\", \"https://images.code.org/0589842feb31f1d293f498407be180c6-image-1669945446206.png\"];\r\nvar index = 0;\r\nupdateScreen();\r\n\r\nonEvent(\"photo_select\", \"change\", function( ) {\r\n\tappendItem(photoList, getImageURL(\"photo_select\"));\r\n\tupdateScreen();\r\n});\r\n\r\n\r\n//Add code to debug these two scroll buttons\r\nonEvent(\"rightButton\", \"click\", function( ) {\r\n\tindex = index + 1;\r\n\tupdateScreen();\r\n});\r\n\r\nonEvent(\"leftButton\", \"click\", function( ) {\r\n\tindex = index - 1;\r\n\tupdateScreen();\r\n});\r\n\r\nonEvent(\"randomButton\", \"click\", function( ) {\r\n\t// Add code here to make this button cause a random photo to show up\r\n});\r\n\r\nfunction updateScreen(){\r\n  setImageURL(\"pictureOutput\", photoList[index]);\r\n  //Add code here to make the total number of photos show in 'totalPhotosOutput' \r\n}",
     "bubble_choice_description": "Debug some scrolling issues and add code to update the total number of photos on the app screen.",
     "encrypted_examples": "toe9QlX45MGawrp93LCiZYmLiQUox1QdoGoNBltm+wgpc4AnhOvzglpMGtFD\n+lCN+Juc9yqUn+7xrqzQOnAWqA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
