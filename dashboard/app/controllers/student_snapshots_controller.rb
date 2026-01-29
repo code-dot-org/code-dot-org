@@ -45,11 +45,17 @@ class StudentSnapshotsController < ApplicationController
       script_level.levels.each do |level|
         question_text, answers = get_level_question_and_answers(level)
 
-        # For matching CFUs, also include the list of options (terms) used on the left side.
+        # For matching CFUs, include the list of options (terms) for the left column.
+        # Match levels from DSL use questions (terms) and answers (definitions).
         options = nil
         if level.is_a?(Match)
-          summary = level.summarize_for_lesson_show(false)
-          options = summary[:content] if summary && summary[:content].present?
+          if level.questions.present?
+            options = level.questions.map {|q| q['text'] || q[:text]}.compact
+          else
+            # Legacy format: content1, content2, etc. hold the option strings
+            summary = level.summarize_for_lesson_show(false)
+            options = summary[:content] if summary && summary[:content].present?
+          end
         end
         level_index_in_lesson = lesson_level_ids.index(level.id)
 
