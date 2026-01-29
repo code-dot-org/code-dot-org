@@ -111,7 +111,7 @@ class Unit < ApplicationRecord
           :vocabularies,
           :programming_expressions,
           :objectives,
-          :rubrics,
+          {rubrics: :learning_goals},
           :standards,
           :opportunity_standards
         ],

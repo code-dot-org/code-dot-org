@@ -66,7 +66,6 @@ module Services
       script = create_script_tree
       assert script.original_unit_group.course_version
       assert script.original_unit_group.id, script.original_unit_group_id
-      assert_equal 2, script.lessons.filter_map(&:rubrics).flatten.map(&:learning_goals).flatten.count
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -95,7 +94,6 @@ module Services
     test 'seed script not yet in unit group' do
       script = create_script_tree
       assert script.get_original_unit_group.course_version
-      assert_equal 2, script.lessons.filter_map(&:rubrics).flatten.map(&:learning_goals).flatten.count
 
       # Capture the json while resources are still present. This test checks
       # that these resources do not get added back during the seed process.
@@ -176,7 +174,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Unit.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script, [], 4
+      assert_script_trees_equal script_with_changes, script
       assert_equal 'updated big questions', script.lesson_groups.first.big_questions
     end
 
@@ -730,8 +728,7 @@ module Services
       ScriptSeed.seed_from_json(json)
       script = Unit.with_seed_models.find(script.id)
 
-      # todo: why is the query count 3 here?
-      assert_script_trees_equal script_with_deletion, script, [], 3
+      assert_script_trees_equal script_with_deletion, script
       assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
       assert_equal (1..3).to_a, script.lessons.map(&:relative_position)
       assert_equal (1..24).to_a, script.script_levels.map(&:chapter)
@@ -1217,10 +1214,10 @@ module Services
       ].map {|c| [c.name, c.count]}.to_h
     end
 
-    def assert_script_trees_equal(s1, s2, script_excludes = [], num_queries = 2)
+    def assert_script_trees_equal(s1, s2, script_excludes = [])
       # Make sure the scripts and their associations are already in memory,
       # because fetching data from the DB could lead to false positive matches.
-      assert_queries(num_queries) do
+      assert_queries(0) do
         assert_scripts_equal s1, s2, script_excludes
         assert_lesson_groups_equal s1.lesson_groups, s2.lesson_groups
         assert_lessons_equal s1.lessons, s2.lessons
