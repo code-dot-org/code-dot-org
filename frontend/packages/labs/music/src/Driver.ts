@@ -8,11 +8,14 @@ import type {EventMap} from 'typed-emitter';
 import AppConfig from './appConfig';
 import {BlockTypes} from './blockly/blockTypes';
 import {TRIGGER_FIELD} from './blockly/constants';
-import {DEFAULT_BPM, DEFAULT_KEY, BlockMode} from './constants';
-import Generator from './Generator';
+import {DEFAULT_BPM, DEFAULT_KEY, BlockMode, Triggers} from './constants';
+import type {CompiledEvents} from './Generator';
+import Generator, {Sequencers, triggerIdToEvent} from './Generator';
+import type {FunctionEvents} from './player/interfaces/FunctionEvents';
 import type {PlaybackEvent} from './player/interfaces/PlaybackEvent';
 import MusicPlayer from './player/MusicPlayer';
 import MusicLibrary from './player/MusicLibrary';
+import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
 import {KeyFromName, KeyMapping} from './utils/Notes';
 import AnalyticsReporter from './LabMusicMetricsReporter';
 
@@ -25,20 +28,40 @@ export const DriverEvent = {
   LibraryUpdated: 'library-updated',
   /** A trigger was updated */
   SetTrigger: 'set-trigger',
-  /** A block was selected */
+  /**
+   * A block was selected (or everything was deselected if the blockId is
+   * undefined)
+   */
   Selected: 'selected',
   /** The code was edited */
   Updated: 'updated',
+  /** We want to clear the timeline */
+  ClearTimeline: 'clear-timeline',
+  /** We want to update the timeline */
+  UpdateTimeline: 'update-timeline',
+  /** We have preloaded the initial sounds */
+  LoadedInitialSounds: 'loaded-initial-sounds',
 } as const;
 
 interface DriverEvents extends EventMap {
   [DriverEvent.LibraryUpdated]: (library: MusicLibrary) => void;
   [DriverEvent.SetTrigger]: (triggerId: string) => void;
-  [DriverEvent.Selected]: (blockId: string) => void;
+  [DriverEvent.Selected]: (blockId?: string) => void;
   [DriverEvent.Updated]: () => void;
+  [DriverEvent.ClearTimeline]: () => void;
+  [DriverEvent.UpdateTimeline]: (data: PlaybackExecutionData) => void;
+  [DriverEvent.LoadedInitialSounds]: () => void;
 }
 
 const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
+
+export type TriggerEvents = {id: string; startPosition: number}[];
+
+export type PlaybackExecutionData = {
+  playbackEvents: PlaybackEvent[];
+  orderedFunctions: FunctionEvents[];
+  lastMeasure: number;
+};
 
 /**
  * This is the interface to the music lab player and blockly workspace.
@@ -55,12 +78,18 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   private readonly metricsReporter: LabMetricsReporter;
   readonly player: MusicPlayer;
   private isPlaying: boolean;
+  private lastExecutedEvents: CompiledEvents;
   private blockMode: (typeof BlockMode)[keyof typeof BlockMode];
+  private playingTriggers: TriggerEvents;
+  private hasLoadedInitialSounds: boolean;
 
   constructor() {
     super();
 
+    this.hasLoadedInitialSounds = false;
+    this.playingTriggers = [];
     this.blockMode = BlockMode.SIMPLE2;
+    this.lastExecutedEvents = {};
     this.metricsReporter = LabRegistry.metricsReporter;
     this.analyticsReporter = new AnalyticsReporter();
     const bpm = AppConfig.getValue('bpm');
@@ -176,9 +205,8 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
     if (e.type === Blockly.Events.SELECTED) {
       const selectedEvent = e as Blockly.Events.Selected;
-      if (selectedEvent.newElementId) {
-        this.emit(DriverEvent.Selected, selectedEvent.newElementId);
-      }
+      console.log('SELECTED', selectedEvent, selectedEvent.newElementId);
+      this.emit(DriverEvent.Selected, selectedEvent.newElementId);
       return;
     }
 
@@ -189,7 +217,7 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
       // Upcall to tell consumer that the workspace as updated
       this.emit(DriverEvent.Updated);
 
-      this.executeCompiledSong().then(playbackEvents => {
+      this.populateCompiledSong().then(playbackEvents => {
         // If code has changed mid-playback, clear and re-queue all events in the player
         if (this.isPlaying) {
           this.player.playEvents(playbackEvents, true);
@@ -198,6 +226,29 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
       this.analyticsReporter.onBlocksUpdated(this.workspace.getAllBlocks());
     }
+  }
+
+  clearSelection() {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning(
+        'clearSelection called before workspace initialized.',
+      );
+      return;
+    }
+
+    this.workspace.getAllBlocks().forEach(block => block.removeSelect());
+  }
+
+  selectBlock(blockId: string) {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning(
+        'selectBlock called before workspace initialized.',
+      );
+      return;
+    }
+
+    this.clearSelection();
+    this.workspace.getBlockById(blockId)?.addSelect();
   }
 
   getSelectedTriggerId(blockId: string) {
@@ -290,29 +341,29 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   /**
    * Crafts a Generator and compiles the current workspace code into it.
    */
-  compileSong(): string {
+  compileSong(): CompiledEvents | undefined {
     if (!this.workspace) {
       this.metricsReporter.logWarning(
         'compileSong called before workspace initialized.',
       );
-      return '';
+      return;
     }
 
     if (!this.javascriptGenerator) {
       this.metricsReporter.logWarning(
         'compileSong called before javascript generator initialized.',
       );
-      return '';
+      return;
     }
 
     console.log('compileSong');
 
     // Create the generator and compile the song
     this.generator = new Generator(
+      this.lastExecutedEvents,
       this.workspace,
       this.javascriptGenerator,
       this.blockMode,
-      this.metricsReporter,
     );
 
     // Update the list of triggers that are available in the workspace.
@@ -320,11 +371,98 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     //  this.hasTrigger(trigger.id)
     //);
 
-    return this.generator.code;
+    return this.generator.events;
   }
 
-  async executeCompiledSong(): Promise<PlaybackEvent[]> {
-    return [];
+  /**
+   * Executes code for the specific trigger referenced by the ID. It is
+   * assumed that {@link compileSong()} has already been called and all event
+   * hooks have already been generated, as triggers cannot be played until
+   * the song has started.
+   *
+   * @param id ID of the trigger
+   */
+  executeTrigger(id: string, startPosition: number): PlaybackExecutionData {
+    if (this.generator) {
+      const hook = this.generator.hooks[triggerIdToEvent(id)];
+      if (hook) {
+        return this.callUserGeneratedCode(hook, [startPosition]);
+      }
+    }
+
+    return {
+      playbackEvents: [],
+      orderedFunctions: [],
+      lastMeasure: 0,
+    };
+  }
+
+  /**
+   * Executes code for all triggers in the workspace. Useful for assembling
+   * all events that could be potentially triggered for preloading sounds.
+   */
+  executeAllTriggers(startPosition = 0): PlaybackEvent[] {
+    return Triggers.map(
+      ({id}) => this.executeTrigger(id, startPosition).playbackEvents,
+    ).flat();
+  }
+
+  executeCompiledSong(
+    triggerEvents: TriggerEvents = [],
+  ): PlaybackExecutionData {
+    const data = {
+      playbackEvents: [],
+      orderedFunctions: [],
+      lastMeasure: 0,
+    };
+
+    if (!this.generator) {
+      return data;
+    }
+
+    if (Object.keys(this.generator.events).length === 0) {
+      this.metricsReporter.logWarning(
+        'executeCompiledSong called before compileSong.',
+      );
+      return data;
+    }
+
+    const startTime = Date.now();
+    console.log('Executing compiled song.');
+
+    if (this.generator.hooks.whenRunButton) {
+      this.mergePlaybackData(
+        data,
+        this.callUserGeneratedCode(this.generator.hooks.whenRunButton, [0]),
+      );
+    }
+
+    for (const {id, startPosition} of triggerEvents) {
+      this.mergePlaybackData(data, this.executeTrigger(id, startPosition));
+    }
+
+    this.lastExecutedEvents = this.generator.events;
+
+    console.log('Execution time: ', Date.now() - startTime);
+
+    return data;
+  }
+
+  async populateCompiledSong(): Promise<PlaybackEvent[]> {
+    if (AppConfig.getValue('js-editor') === 'true') {
+      return [];
+    }
+
+    // Sequence out all possible trigger events to preload sounds if necessary.
+    const allTriggerEvents = this.executeAllTriggers();
+    const data = this.executeCompiledSong(this.playingTriggers);
+
+    // Clear the events list because it will be populated next.
+    this.emit(DriverEvent.ClearTimeline);
+    this.emit(DriverEvent.UpdateTimeline, data);
+
+    await this.preloadSounds([...data.playbackEvents, ...allTriggerEvents]);
+    return data.playbackEvents;
   }
 
   /*
@@ -366,6 +504,74 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   onBlockSpaceChange(e) {
   }
   */
+
+  // Preload sounds.
+  // Called by populateCompiledSong and executeSongCode.
+  preloadSounds(events: PlaybackEvent[]) {
+    return this.player.preloadSounds(events, (loadTimeMs, soundsLoaded) => {
+      // Report load time metrics if any sounds were loaded.
+      if (soundsLoaded > 0) {
+        LabRegistry.metricsReporter.reportLoadTime(
+          'PreloadSoundLoadTime',
+          loadTimeMs,
+          [
+            {
+              name: 'LoadType',
+              value: this.hasLoadedInitialSounds ? 'Subsequent' : 'Initial',
+            },
+          ],
+        );
+      }
+
+      if (!this.hasLoadedInitialSounds) {
+        LabRegistry.metricsReporter.logInfo({
+          event: 'InitialSoundsLoaded',
+          soundsLoaded,
+          loadTimeMs,
+        });
+
+        this.hasLoadedInitialSounds = true;
+        this.emit(DriverEvent.LoadedInitialSounds);
+      }
+    });
+  }
+
+  private callUserGeneratedCode(
+    fn: (...args: unknown[]) => void,
+    args: unknown[] = [],
+  ): PlaybackExecutionData {
+    const sequencer = Sequencers[this.blockMode];
+    sequencer.clear();
+    try {
+      fn.call(this, ...args);
+    } catch (e) {
+      this.metricsReporter.logError(
+        'Error running user generated code',
+        e as Error,
+      );
+    }
+
+    return {
+      playbackEvents: sequencer.getPlaybackEvents(),
+      orderedFunctions:
+        sequencer instanceof Simple2Sequencer
+          ? sequencer.getOrderedFunctions()
+          : [],
+      lastMeasure: sequencer.getLastMeasure(),
+    };
+  }
+
+  private mergePlaybackData(
+    currentData: PlaybackExecutionData,
+    newData: PlaybackExecutionData,
+  ) {
+    currentData.playbackEvents.push(...newData.playbackEvents);
+    currentData.orderedFunctions.push(...newData.orderedFunctions);
+    currentData.lastMeasure = Math.max(
+      currentData.lastMeasure,
+      newData.lastMeasure,
+    );
+  }
 }
 
 export default Driver;
