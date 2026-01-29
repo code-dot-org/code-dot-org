@@ -84,11 +84,12 @@ class Unit < ApplicationRecord
               :levels_child_levels
             ]
           },
-          :lesson,
+          {lesson: :rubrics},
           :callouts
         ],
         lessons: [
           :lesson_activities,
+          :rubrics,
           {script_levels: :levels}
         ],
         unit_group_units: :unit_group
