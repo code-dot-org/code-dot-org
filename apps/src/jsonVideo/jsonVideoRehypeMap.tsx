@@ -1,7 +1,7 @@
 import React from 'react';
 
-import jsonAssets from '@cdo/apps/json-video/jsonVideoFiles';
-import '@cdo/apps/json-video/jsonVideoElement';
+import jsonAssets from '@cdo/apps/jsonVideo/jsonVideoFiles';
+import '@cdo/apps/jsonVideo/jsonVideoElement';
 
 const LinkWrapper: React.FunctionComponent<
   React.AnchorHTMLAttributes<HTMLAnchorElement>

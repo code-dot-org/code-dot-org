@@ -2,7 +2,7 @@ import {useEffect, useMemo, useState} from 'react';
 
 import {ModelParameters} from '@cdo/apps/aichat/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {jsonVideoPrompt} from '@cdo/apps/json-video/jsonVideoPrompt';
+import {jsonVideoPrompt} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import experiments from '@cdo/apps/util/experiments';

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
-import {jsonVideoRehypeMap} from '@cdo/apps/json-video/jsonVideoRehypeMap';
+import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
