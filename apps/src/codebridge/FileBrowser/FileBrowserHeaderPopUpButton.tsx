@@ -18,15 +18,11 @@ import {
 export const FileBrowserHeaderPopUpButton = () => {
   const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
-    config: {validMimeTypes, supportedFileTypes, editableFileTypes},
+    config: {validMimeTypes, supportedFileTypes},
     levelProperties,
   } = useCodebridgeContext();
   const {appName} = levelProperties;
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
-  const openNewFilePromptArgs = {
-    folderId: DEFAULT_FOLDER_ID,
-    validFileTypes: editableFileTypes,
-  };
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
@@ -65,7 +61,7 @@ export const FileBrowserHeaderPopUpButton = () => {
         <PopUpButtonOption
           iconName="plus"
           labelText={codebridgeI18n.newFile()}
-          clickHandler={() => openNewFilePrompt(openNewFilePromptArgs)}
+          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
           id="uitest-new-file"
         />
         <PopUpButtonOption
