@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-26 00:29:33 UTC",
+    "serialized_at": "2026-01-28 07:06:01 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7276,6 +7276,226 @@
       "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L1-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "41377a5b-16f9-43af-b622-f87173c72d18"
+      },
+      "level_keys": [
+        "CSD U2L8-L1-2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L2-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      },
+      "level_keys": [
+        "CSD U2L8-L2-2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L3-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      },
+      "level_keys": [
+        "CSD U2L8-L3-2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L4-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      },
+      "level_keys": [
+        "CSD U2L8-L4-2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L5-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      },
+      "level_keys": [
+        "CSD U2L8-L5-2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L6-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      },
+      "level_keys": [
+        "CSD U2L8-L6-2025"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L7-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0999238c-a359-4ab7-94c7-b7478b8daf4f"
+      },
+      "level_keys": [
+        "CSD U2L8-L7-2025"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L8-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "78b708f6-681e-4b8c-8987-2d620501c7d2"
+      },
+      "level_keys": [
+        "CSD U2L8-L8-2025"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L9-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "78b708f6-681e-4b8c-8987-2d620501c7d2"
+      },
+      "level_keys": [
+        "CSD U2L8-L9-2025"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L8-L10-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "e2bb83a1-5b47-4d97-9e73-fc16da1e413a"
+      },
+      "level_keys": [
+        "CSD U2L8-L10-2025"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -7297,7 +7517,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7777,6 +7997,126 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025",
         "activity_section.key": "5f9d8621-24d6-4407-b8bf-4ae69e2f821a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L1-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L1-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "41377a5b-16f9-43af-b622-f87173c72d18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L2-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L2-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L3-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L3-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L4-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L4-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L5-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L5-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L6-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L6-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "7f246c71-612e-4bda-a059-8cfdbf6a275d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L7-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L7-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "0999238c-a359-4ab7-94c7-b7478b8daf4f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L8-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L8-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "78b708f6-681e-4b8c-8987-2d620501c7d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L9-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L9-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "78b708f6-681e-4b8c-8987-2d620501c7d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L8-L10-2025",
+        "script_level.level_keys": [
+          "CSD U2L8-L10-2025"
+        ],
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025",
+        "activity_section.key": "e2bb83a1-5b47-4d97-9e73-fc16da1e413a"
       }
     },
     {
@@ -11421,9 +11761,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-web-lab-update-2025"
       }
+    },
+    {
+      "level_name": "CSD U2L8-L8-2025",
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
     }
   ],
   "learning_goals": [
+    {
+      "key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
+      "position": 1,
+      "learning_goal": "Structure content on a web page using HTML (Add an image to a web page). Accurately attribute others when using their work.",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
     {
       "key": "c424e4cc-1a42-4c67-8a4b-faef78f012b6",
       "position": 1,
@@ -11465,6 +11826,54 @@
     }
   ],
   "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "The `img` tag is not used or no source address is given for the image.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The `img` tag is used and a source address for the image is provided, but there may be minor syntax errors or misspellings that prevent the image from being displayed properly. The image may not be available for legal use on the web page.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The image displays properly and is being used according to its copyright license description.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The image displays properly and an `alt` attribute gives a reasonable text description of the image. No unnecessary code is included in the`img` tag. There is accurate attribution and the image is named appropriately.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b1816d10-3caa-483b-be41-d48aef58b1a5",
+        "lesson.key": "Lesson 8: Using Images",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-web-lab-update-2025"
+      }
+    },
     {
       "understanding": 0,
       "teacher_description": "There are no paragraph tags in the text.\n\n",

@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-12 16:41:45 UTC",
+    "serialized_at": "2026-01-28 15:14:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -143,6 +143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_00-new_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -165,6 +168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_05_02-new_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -187,6 +193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cyber_overview_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -209,6 +218,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_for_understanding_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -231,6 +243,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_check_answer_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -253,6 +268,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_02_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -275,6 +293,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_03b_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -297,6 +318,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_04_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -319,6 +343,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_05_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -341,6 +368,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson2-level6-pl_aug2025_-rev_v_2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -363,6 +393,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level1choice-pl_aug2025__2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -385,6 +418,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_06b_aug2025_-rev_v2_2026"
+        ],
         "progression": "Introduction to Cybersecuirty"
       },
       "bonus": false,
@@ -407,6 +443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_07_aug2025_-rev_v2_2026"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -429,6 +468,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_08_aug2025_-rev_v2_2026"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -451,6 +493,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_09_aug2025_-rev_v2_2026"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -473,6 +518,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_10_aug2025_-rev_v2_2026"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -495,6 +543,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_11_aug2025_-rev_v2_2026"
+        ],
         "progression": "CIA Triad and AAA"
       },
       "bonus": false,
@@ -517,6 +568,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_12_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -539,6 +593,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_13_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -561,6 +618,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_14_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -583,6 +643,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_17_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -605,6 +668,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_18_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -627,6 +693,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_15_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -649,6 +718,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_aithreats_16_aug2025_-rev_v2_2026"
+        ],
         "progression": "Encryption"
       },
       "bonus": false,
@@ -671,6 +743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_cyber_aug2025_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -693,6 +768,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-cyber_aug2025_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -715,6 +793,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_cyber_aug2025_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -737,6 +818,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_wrap-up_aug2025_-rev_v2_2026"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -759,6 +843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-cyber_aug2025_-rev_v2_2026"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -781,6 +868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-cyber-rev2_v2_2026"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,

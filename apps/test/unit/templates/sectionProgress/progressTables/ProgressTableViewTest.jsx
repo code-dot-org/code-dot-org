@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import * as Sticky from 'reactabular-sticky';
 import {createStore, combineReducers} from 'redux';
@@ -167,7 +168,9 @@ describe('ProgressTableView', () => {
         .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      container.onToggleRow(rowData.student.id);
+      act(() => {
+        container.onToggleRow(rowData.student.id);
+      });
 
       // one call for each of the two lessons
       expect(timeSpentFormatterStub).toHaveBeenCalledTimes(2);
@@ -238,7 +241,9 @@ describe('ProgressTableView', () => {
         .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      container.onToggleRow(rowData.student.id);
+      act(() => {
+        container.onToggleRow(rowData.student.id);
+      });
 
       // one call for each of the two lessons
       expect(timeSpentFormatterStub).toHaveBeenCalledTimes(2);
@@ -254,7 +259,9 @@ describe('ProgressTableView', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    wrapper.onToggleRow(rowData.student.id);
+    act(() => {
+      wrapper.onToggleRow(rowData.student.id);
+    });
     expect(wrapper.state.rows).toHaveLength(STUDENTS.length + numDetailRows);
   });
 
@@ -266,9 +273,13 @@ describe('ProgressTableView', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    wrapper.onToggleRow(rowData.student.id);
+    act(() => {
+      wrapper.onToggleRow(rowData.student.id);
+    });
     expect(wrapper.state.rows).toHaveLength(STUDENTS.length + numDetailRows);
-    wrapper.onToggleRow(rowData.student.id);
+    act(() => {
+      wrapper.onToggleRow(rowData.student.id);
+    });
     expect(wrapper.state.rows).toHaveLength(STUDENTS.length);
   });
 

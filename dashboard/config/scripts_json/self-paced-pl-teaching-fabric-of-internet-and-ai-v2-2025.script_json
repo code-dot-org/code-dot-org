@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-19 19:13:50 UTC",
+    "serialized_at": "2026-01-28 15:10:09 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -155,6 +155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl__net_overview_objectives_-rev2_v2"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -177,6 +180,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl__net_curriculum_-rev2_v2"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -199,6 +205,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl__net_inter_-rev2_v2"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -221,6 +230,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_-rev_v2"
+        ],
         "progression": "Network Components"
       },
       "bonus": false,
@@ -243,6 +255,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_1_-rev_v2"
+        ],
         "progression": "Network Components"
       },
       "bonus": false,
@@ -265,6 +280,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level2_v3-PL_v2"
+        ],
         "progression": "Network Components"
       },
       "bonus": false,
@@ -287,6 +305,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_3_-rev_v2"
+        ],
         "progression": "Network Components"
       },
       "bonus": false,
@@ -309,6 +330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_2_-rev_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -331,6 +355,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_05_-rev_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -353,6 +380,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_06_-rev_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -375,6 +405,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_02-rev-01_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -397,6 +430,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_7_-rev_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -419,6 +455,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_0X_-rev_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -441,6 +480,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level3_v3-PL_v2"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -463,6 +505,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_sim_01_-rev_v2"
+        ],
         "progression": "The Internet Simulator"
       },
       "bonus": false,
@@ -485,6 +530,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_sim_02_-rev_v2"
+        ],
         "progression": "The Internet Simulator"
       },
       "bonus": false,
@@ -507,6 +555,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_sim_03_-rev_v2"
+        ],
         "progression": "The Internet Simulator"
       },
       "bonus": false,
@@ -529,6 +580,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_sim_04_-rev_v2"
+        ],
         "progression": "The Internet Simulator"
       },
       "bonus": false,
@@ -551,6 +605,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_sim_05_-rev_v2"
+        ],
         "progression": "The Internet Simulator"
       },
       "bonus": false,
@@ -573,6 +630,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_1_-rev_v2"
+        ],
         "progression": "Internet Access Advocacy Campaign Project"
       },
       "bonus": false,
@@ -595,6 +655,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_1B_-rev_v2"
+        ],
         "progression": "Internet Access Advocacy Campaign Project"
       },
       "bonus": false,
@@ -617,6 +680,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_1_2_-rev_v2"
+        ],
         "progression": "Internet Access Advocacy Campaign Project"
       },
       "bonus": false,
@@ -639,6 +705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_security_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -661,6 +730,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_security_02_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -683,6 +755,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_2_C_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -705,6 +780,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_security_03_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -727,6 +805,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_inter_wrap-up_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -749,6 +830,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_2_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -771,6 +855,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_2B_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -793,6 +880,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_project_2_02_-rev_v2"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -815,6 +905,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_04_wrap-up_v2"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -837,6 +930,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-nets_-rev2_v2"
+        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,

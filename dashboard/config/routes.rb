@@ -559,6 +559,7 @@ Dashboard::Application.routes.draw do
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
+        get :level_properties, to: 'lessons#level_properties_by_id', format: false
         post :clone
       end
     end
@@ -1190,6 +1191,7 @@ Dashboard::Application.routes.draw do
         get 'exemplar_code/:lesson_id', action: :exemplar_code # GET /student_snapshots/exemplar_code/{lesson_id}
         get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
         get 'lesson_feedback_prompt', controller: :student_snapshots, action: :lesson_feedback_prompt # GET /student_snapshots/lesson_feedback_prompt?lesson_id=2
+        get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
       end
     end
 

@@ -75,6 +75,7 @@
     "display_name": "Ticket Prices",
     "thumbnail_url": "https://images.code.org/cbdc2c888eb5863809a904570d894bce-image-1647378108940.png",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

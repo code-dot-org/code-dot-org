@@ -71,6 +71,7 @@
     "bubble_choice_description": "Build an app that helps users figure out the prices for various concerts.",
     "thumbnail_url": "https://images.code.org/23990e819ba3d399ae3fdcc5d90346fc-Concert.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

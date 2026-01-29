@@ -18,6 +18,7 @@ import {
   formatAcceptRejectResponse,
   formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
+  isAcceptRejectCodeFileTypes,
 } from '../helpers/aiTutorStructuredResponseHelper';
 import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
 
@@ -43,7 +44,11 @@ export const useAiTutorResponseSchemaSettings = (
           jsonResponse.answer
         );
         const answerType = formattedResponse.answerType;
-        if (!acceptRejectAnswerTypes.includes(answerType)) {
+        const files = formattedResponse.code;
+        if (
+          !acceptRejectAnswerTypes.includes(answerType) ||
+          !isAcceptRejectCodeFileTypes(files)
+        ) {
           return formatCopyPasteResponse(jsonResponse.answer);
         }
         sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {

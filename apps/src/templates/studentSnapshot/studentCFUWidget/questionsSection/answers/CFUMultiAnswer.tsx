@@ -6,21 +6,24 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {CFULevel, CFULevelResponse} from '../../types';
+import {
+  CFULevel,
+  CFULevelResponseResponse,
+  CFUMultipleLevelAnswer,
+} from '../../types';
 
 import styles from './studentCFUAnswers.module.scss';
 
 interface CFUMultiAnswerProps {
+  answers: CFUMultipleLevelAnswer[];
   level: CFULevel;
-  response: CFULevelResponse;
+  response: CFULevelResponseResponse;
 }
 
 const LETTERS_LABELS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({level, response}) => {
-  const answers =
-    (level.answers as Array<{text: string; correct: boolean}>) || [];
-  const studentResult = response?.response?.student_result;
+const CFUMultiAnswer: React.FC<CFUMultiAnswerProps> = ({answers, response}) => {
+  const studentResult = response?.student_result;
   const selectedIndex =
     Array.isArray(studentResult) && studentResult.length > 0
       ? studentResult[0]
