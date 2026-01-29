@@ -44,7 +44,7 @@ class Project < ApplicationRecord
   # be found.
   def self.find_by_channel_id(channel_id)
     begin
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = get_storage_id_and_project_id(channel_id)
     rescue
       raise ActiveRecord::RecordNotFound.new("Invalid channel_id: #{channel_id}")
     end
@@ -53,7 +53,7 @@ class Project < ApplicationRecord
   end
 
   def channel_id
-    storage_encrypt_channel_id(storage_id, id)
+    get_project_channel_id(storage_id, id)
   end
 
   # Returns the user_id of the owner of this project. Returns nil if the project

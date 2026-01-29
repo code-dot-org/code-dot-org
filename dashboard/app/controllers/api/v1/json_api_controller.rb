@@ -10,4 +10,8 @@ class Api::V1::JSONApiController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound do
     head :forbidden
   end
+
+  protected def force_json
+    request.format = :json
+  end
 end

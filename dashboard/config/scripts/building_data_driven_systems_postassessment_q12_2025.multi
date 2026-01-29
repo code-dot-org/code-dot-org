@@ -7,7 +7,7 @@ right 'The condition inside the filter (e.g., `job.salary > 1000000`) is too res
 wrong 'The developer forgot to use a `.map()` method before filtering.'
 wrong 'The array has too many items for the filter to process.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 8

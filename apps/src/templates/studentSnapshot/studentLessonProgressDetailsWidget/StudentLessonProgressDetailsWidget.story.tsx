@@ -92,6 +92,26 @@ const mockUnitDataByUnit = {
           },
         },
       },
+      4: {
+        id: 14,
+        script_id: 1,
+        relative_position: 5,
+        // level index in array: level info
+        levels: {
+          0: {
+            id: '141',
+            isValidated: false,
+          },
+          1: {
+            id: '142',
+            isValidated: false,
+          },
+          2: {
+            id: '143',
+            isValidated: false,
+          },
+        },
+      },
     },
   },
 };
@@ -99,6 +119,7 @@ const mockStudentLevelProgressByUnit = {
   // unitId: unit info
   1: {
     // userId: user progress in unit
+    // User 1 completed a mix of levels
     1: {
       // levelId: user progress in level
       '101': {status: 'perfect'},
@@ -113,13 +134,37 @@ const mockStudentLevelProgressByUnit = {
       '131': {status: 'perfect'},
       '132': {status: 'perfect'},
       '133': {status: 'perfect'},
+      '141': {status: 'not_tried'},
+      '142': {status: 'not_tried'},
+      '143': {status: 'not_tried'},
     },
+    // User 2 completed all levels
+    2: {
+      // levelId: user progress in level
+      '101': {status: 'perfect'},
+      '102': {status: 'perfect'},
+      '103': {status: 'perfect'},
+      '111': {status: 'perfect'},
+      '112': {status: 'perfect'},
+      '113': {status: 'perfect'},
+      '121': {status: 'perfect'},
+      '122': {status: 'perfect'},
+      '123': {status: 'perfect'},
+      '131': {status: 'perfect'},
+      '132': {status: 'perfect'},
+      '133': {status: 'perfect'},
+      '141': {status: 'perfect'},
+      '142': {status: 'perfect'},
+      '143': {status: 'perfect'},
+    },
+    // User 3 completed no levels so they have no entry in studentLevelProgressByUnit
   },
 };
 const mockStudentLessonProgressByUnit = {
   // unitId: unit info
   1: {
     // userId: user progress in unit
+    // User 1 made some progress
     1: {
       // lessonId: user progress info in lesson
       10: {
@@ -138,16 +183,48 @@ const mockStudentLessonProgressByUnit = {
         completedPercent: 100,
         timeSpent: 20,
       },
+      14: {
+        completedPercent: 0,
+        timeSpent: 0,
+      },
     },
+    // User 2 finished everything
+    2: {
+      // lessonId: user progress info in lesson
+      10: {
+        completedPercent: 100,
+        timeSpent: 200,
+      },
+      11: {
+        completedPercent: 100,
+        timeSpent: 20,
+      },
+      12: {
+        completedPercent: 100,
+        timeSpent: 300,
+      },
+      13: {
+        completedPercent: 100,
+        timeSpent: 200,
+      },
+      14: {
+        completedPercent: 100,
+        timeSpent: 50,
+      },
+    },
+    // User 3 did nothing so they have no data in studentLessonProgressByUnit
   },
 };
 
-// Minimal mock Redux store used by lesson progress details widget
+// Mock Redux store
 const initialState = {
   sectionProgress: {
     unitDataByUnit: mockUnitDataByUnit,
     studentLevelProgressByUnit: mockStudentLevelProgressByUnit,
     studentLessonProgressByUnit: mockStudentLessonProgressByUnit,
+  },
+  teacherSections: {
+    selectedStudents: [{id: 1}, {id: 2}, {id: 3}],
   },
 };
 

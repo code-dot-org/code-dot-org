@@ -5,19 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # Wireframes
 
-## What is a wireframe?
+## What is a Wireframe?
 #### A wireframe is a low-fidelity, structural layout showing content and functionality, without visual design.
 
-<div style="text-align: center; margin: 40px 0; padding: 10px;">
-
-  <!-- Quote Highlight Box -->
-  <div style="display: inline-block; background-color: #e5d8f2; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <p style="font-size: 1.2rem; font-weight: bold; margin: 0; line-height: 1.5; color: #3b0066;">
-      Just like an architect sketches a blueprint before building, designers use wireframes to plan a website’s structure before coding.
-    </p>
-  </div>
-
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 18px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    Just like an architect sketches a blueprint before building, designers use wireframes to plan a website’s structure before coding.
+  </p>
 </div>
+
 
 #### Wireframe sketches are intentionally simple so it’s easy to change ideas and adjust layouts without worrying about colors, images, or detailed design.
 
@@ -34,8 +37,7 @@ Image source: <a href="https://www.springboard.com/blog/design/how-to-create-a-w
 <img src="https://images.code.org/366ecab8f8cd0f0c8138c45fc86e687e-image-1761152722160.png" alt="Sample sketched wireframe" width="850px" style="display: block; margin-left: auto; margin-right: auto; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15)">
 
 
-## Let’s practice
-#### Now it's your turn to draw a wireframe in Sketch Lab.
+## Let’s Practice: now it's your turn to draw a wireframe in Sketch Lab.
 
 
 MARKDOWN

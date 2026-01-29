@@ -1,5 +1,5 @@
 name 'pl-aif-2-U3-pipeline-CFU'
-title 'Multiple Choice: Packets'
+title 'Multiple Choice: Pipelines'
 description ''
 question '#### **Scenario:**
 A music app wants to show users a “Trending Now” playlist.

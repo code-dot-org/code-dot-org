@@ -130,6 +130,8 @@ export type ExcalidrawSourceWithExternalFiles = Omit<
 
 export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
   uploadFailed?: boolean;
+  starterAsset?: boolean;
+  filenameWithExtension?: string;
 };
 
 // -- MULTI-FILE -- //

@@ -738,6 +738,7 @@ module SharedConstants
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   AI_EVALUATION_TYPES = {
@@ -907,6 +908,11 @@ module SharedConstants
     UNIT: "unit",
     COURSE: "course",
     SECTION: "section"
+  }.freeze
+
+  AI_DIFF_ARTIFACT_TYPE = {
+    EXIT_TICKET: "AidiffExitTicket",
+    LESSON_HOOK: "AidiffLessonHook"
   }.freeze
 
   DISALLOWED_ROUTES = [

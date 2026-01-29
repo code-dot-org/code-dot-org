@@ -33,6 +33,7 @@ describe('openRenameFilePrompt', function () {
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(renameFileData.id).toEqual(fileId);
@@ -55,6 +56,7 @@ describe('openRenameFilePrompt', function () {
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(renameFileData.id).toEqual(fileId);
@@ -77,6 +79,7 @@ describe('openRenameFilePrompt', function () {
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(renameFileData.id).toEqual(fileId);
@@ -99,6 +102,7 @@ describe('openRenameFilePrompt', function () {
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(renameFileData).length).toEqual(0);
@@ -120,6 +124,7 @@ describe('openRenameFilePrompt', function () {
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(renameFileData).length).toEqual(0);
@@ -141,6 +146,7 @@ describe('openRenameFilePrompt', function () {
       sendLab2AnalyticsEvent,
       isStartMode: false,
       validationFile: undefined,
+      validFileTypes: ['txt'],
     });
 
     expect(Object.keys(renameFileData).length).toEqual(0);

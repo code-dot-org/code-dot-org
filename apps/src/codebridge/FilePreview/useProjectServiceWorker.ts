@@ -20,6 +20,8 @@ function useProjectServiceWorker(
   const [serviceWorkerRegistration, setServiceWorkerRegistration] = useState<
     ServiceWorkerRegistration | undefined
   >(undefined);
+  const [serviceWorkerUnavailable, setServiceWorkerUnavailable] =
+    useState<boolean>(false);
 
   const contentSecurityPolicy = useMemo(
     () => generateContentSecurityPolicyForPreview(codeStudioUrl),
@@ -31,6 +33,7 @@ function useProjectServiceWorker(
       undefined;
     if ('serviceWorker' in navigator) {
       setServiceWorker(null);
+      setServiceWorkerUnavailable(false);
       navigator.serviceWorker
         .register('/weblab2_project_service_worker.js')
         .then(registration => {
@@ -53,6 +56,7 @@ function useProjectServiceWorker(
         });
     } else {
       console.error('Service workers are not supported in this browser.');
+      setServiceWorkerUnavailable(true);
     }
     return () => {
       serviceWorkerRegistration?.unregister();
@@ -140,7 +144,7 @@ function useProjectServiceWorker(
     return {fullFileName: fullPath.substring(1), folder: folderPath}; // remove leading slash
   }
 
-  return {serviceWorkerRegistration};
+  return {serviceWorkerRegistration, serviceWorkerUnavailable};
 }
 
 export default useProjectServiceWorker;

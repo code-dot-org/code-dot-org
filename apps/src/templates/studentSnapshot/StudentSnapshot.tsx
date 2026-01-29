@@ -11,12 +11,14 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getFullName} from '../manageStudents/utils';
 
+import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
+import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
 import LessonFeedbackWidget from './lessonFeedbackWidget/LessonFeedbackWidget';
-import StudentCodeWidget from './studentCodeWidget';
+import LessonInsightWidget from './lessonInsightWidget';
+import StudentCFUWidget from './studentCFUWidget';
 import StudentLessonProgressDetailsWidget from './studentLessonProgressDetailsWidget';
 import StudentRubricWidget from './studentRubricWidget/StudentRubricWidget';
-import WidgetTemplate from './widgetTemplate';
 
 import styles from './studentSnapshot.module.scss';
 
@@ -32,30 +34,9 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
-interface CFULevel {
-  id: number;
-  name: string;
-  display_name: string;
-  type: string;
-  key?: string;
-  script_level_id: number;
-  progression?: string;
-  progression_display_name?: string;
-}
-
-interface CFULevelsData {
-  cfu_levels: CFULevel[];
-}
-
 interface StudentCodeData {
   studentCode: Record<string, string>;
 }
-
-const getCFULevels = (lessonId: number): Promise<CFULevel[]> => {
-  return HttpClient.fetchJson<CFULevelsData>(
-    `/student_snapshots/cfu_levels/${lessonId}`
-  ).then(response => response?.value?.cfu_levels || []);
-};
 
 const getStudentCode = (
   unitId: number,
@@ -76,8 +57,6 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [cfuLevels, setCfuLevels] = useState<CFULevel[]>([]);
-  const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
   const [isStudentCodeLoading, setIsStudentCodeLoading] =
     useState<boolean>(false);
   const [studentCode, setStudentCode] = useState<Record<string, string>>({});
@@ -129,29 +108,6 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
-  // Fetch CFU levels when lesson changes
-  React.useEffect(() => {
-    if (selectedLessonId) {
-      setIsCfuLevelsLoading(true);
-      getCFULevels(selectedLessonId)
-        .then(levels => {
-          setCfuLevels(levels);
-        })
-        .catch(error => {
-          console.error('Error fetching CFU levels:', error);
-          setCfuLevels([]);
-        })
-        .finally(() => {
-          setIsCfuLevelsLoading(false);
-        });
-    } else {
-      setCfuLevels([]);
-    }
-  }, [selectedLessonId]);
-
-  // TODO: Use this in CFU widget
-  console.log(cfuLevels, isCfuLevelsLoading);
-
   // Fetch Student Code when student or lesson changes
   React.useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
@@ -172,11 +128,8 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [selectedUnitId, selectedLessonId, selectedStudentId]);
 
+  // TODO(lfm): figure out what this is supposed to do
   console.log(isStudentCodeLoading);
-
-  // TODO: replace with actual values from URL/Redux later
-  const HARDCODED_STUDENT_ID = 8; // Replace with actual student ID
-  const HARDCODED_STUDENT_NAME = 'Student Name'; // Replace with actual student name
 
   return (
     <div className={styles.snapshotContainer}>
@@ -201,53 +154,6 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
-        <LessonFeedbackWidget
-          lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
-          teacherHasEnabledAi={aiTaEnabled}
-        />
-        <StudentRubricWidget
-          gridWidth={2}
-          gridHeight={2}
-          lessonId={selectedLessonId}
-          studentId={HARDCODED_STUDENT_ID}
-          studentName={HARDCODED_STUDENT_NAME}
-          teacherHasEnabledAi={false}
-          canProvideFeedback={true}
-        />
-        <WidgetTemplate widgetName="Long Widget" gridWidth={3} gridHeight={1}>
-          <div>content</div>
-        </WidgetTemplate>
-        <StudentCodeWidget studentCode={studentCode} />
-        <WidgetTemplate
-          widgetName="Small Widget 1"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 1</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Small Widget 2"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 2</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Small Widget 3"
-          gridWidth={1}
-          gridHeight={1}
-        >
-          <div>small content 3</div>
-        </WidgetTemplate>
-        <WidgetTemplate
-          widgetName="Loading widget"
-          gridWidth={1}
-          gridHeight={1}
-          loading={true}
-        >
-          <div>Should not be displayed</div>
-        </WidgetTemplate>
         {selectedLessonId && selectedStudentId && (
           <StudentLessonProgressDetailsWidget
             selectedUnitId={selectedUnitId}
@@ -255,6 +161,33 @@ const StudentSnapshot: React.FC = () => {
             selectedStudentId={selectedStudentId}
           />
         )}
+        <LessonInsightWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
+        <LessonFeedbackWidget
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
+          teacherHasEnabledAi={aiTaEnabled}
+        />
+        <StudentCFUWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
+        />
+        <StudentCodeWidget studentCode={studentCode} />
+        <StudentRubricWidget
+          gridWidth={2}
+          gridHeight={2}
+          lessonId={selectedLessonId}
+          studentId={selectedStudentId}
+          studentName={selectedStudent ? getFullName(selectedStudent) : ''}
+          teacherHasEnabledAi={false}
+          canProvideFeedback={true}
+        />
+        <ExemplarCodeWidget lessonId={selectedLessonId} />
       </div>
     </div>
   );

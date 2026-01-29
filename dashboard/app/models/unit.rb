@@ -18,6 +18,7 @@
 #  participant_audience   :string(255)
 #  original_unit_group_id :integer
 #  hide_within_course     :boolean          default(FALSE)
+#  md5                    :string(255)
 #
 # Indexes
 #
@@ -119,6 +120,10 @@ class Unit < ApplicationRecord
       )
     end
   )
+
+  scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
+
+  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
 
   attr_accessor :skip_name_format_validation
 
@@ -1104,7 +1109,12 @@ class Unit < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
 
     filepath = Unit.script_json_filepath(name)
-    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    contents = Services::ScriptSeed.serialize_seeding_json(self)
+    File.write(filepath, contents)
+
+    # Update MD5 hash to match the written file, so incremental seeding
+    # in other environments will recognize this version as already seeded.
+    update_column(:md5, Digest::MD5.hexdigest(contents))
   end
 
   def update_teacher_resources(resource_ids)
@@ -1890,7 +1900,15 @@ class Unit < ApplicationRecord
 
   # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
-    levels&.any?(&:ai_tutor_available?)
+    levels.with_ai_tutor_available.exists?
+  end
+
+  def has_ai_chat_tools?
+    self.class.where(id: id).with_ai_chat_tools.exists?
+  end
+
+  def requires_ai_chat_tools?
+    self.class.where(id: id).with_essential_ai_chat_tools.exists?
   end
 
   private def teacher_feedback_enabled?

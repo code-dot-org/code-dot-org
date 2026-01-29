@@ -39,7 +39,7 @@ class AssetBucket < BucketHelper
   end
 
   def copy_level_starter_assets(src_channel, dest_channel)
-    src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
+    src_owner_id, src_storage_app_id = get_storage_id_and_project_id(src_channel)
 
     channel = ChannelToken.find_by(storage_id: src_owner_id, storage_app_id: src_storage_app_id)
     return unless channel
@@ -49,7 +49,7 @@ class AssetBucket < BucketHelper
     level = Level.cache_find(channel.level_id)
     return unless level&.starter_assets
 
-    dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
+    dest_owner_id, dest_storage_app_id = get_storage_id_and_project_id(dest_channel)
 
     # As noted above, when copying from a template-backed level,
     # the level associated with the channel is the template level (rather than the "derived" level).

@@ -8,7 +8,7 @@ wrong 'Delete the entire project and start over from scratch.'
 wrong 'Copy another company\'s website to save time.
 '
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 3, 6, 10

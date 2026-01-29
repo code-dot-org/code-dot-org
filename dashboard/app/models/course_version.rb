@@ -23,9 +23,9 @@ class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
 
   belongs_to :course_offering, optional: true
-  has_many :resources
-  has_many :vocabularies
-  has_many :reference_guides
+  has_many :resources, dependent: :destroy
+  has_many :vocabularies, dependent: :destroy
+  has_many :reference_guides, dependent: :destroy
 
   attr_readonly :content_root_id
 
@@ -66,14 +66,6 @@ class CourseVersion < ApplicationRecord
   delegate :included_in_units?, to: :content_root, allow_nil: true
   delegate :link, to: :content_root, allow_nil: false
   delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
-
-  before_destroy :ensure_no_resources
-
-  def ensure_no_resources
-    if resources.any? || vocabularies.any? || reference_guides.any?
-      raise ActiveRecord::RecordNotDestroyed, "Cannot delete CourseVersion with resources, vocabularies, or reference guides"
-    end
-  end
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a UnitGroup.

@@ -84,4 +84,7 @@ export interface AichatState {
   // The tab selected when a teacher is viewing a student's chat history.
   chatWorkspaceSelectedTab: WorkspaceTeacherViewTab | null;
   userAddedSelectionContext: UserAddedSelectionContext;
+  // The thread's artifact state- undefined if not in the artifact creation flow,
+  // otherwise a string representing the artifact type
+  artifactType: string | undefined;
 }

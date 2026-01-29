@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import localization from '@cdo/apps/localization';
@@ -589,9 +590,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  let program = encodeURIComponent(
-    Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
-  );
+  let program = encodeURIComponent(getCode(Blockly.mainBlockSpace));
 
   if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');

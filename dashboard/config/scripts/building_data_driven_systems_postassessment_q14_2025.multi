@@ -7,7 +7,7 @@ wrong 'The `.map()` function will generate error messages on the screen.'
 right 'The filter returns an empty array, and the subsequent sort and map operations simply do nothing, resulting in an empty display.'
 wrong 'The AI will automatically add more items so the pipeline can finish.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 10

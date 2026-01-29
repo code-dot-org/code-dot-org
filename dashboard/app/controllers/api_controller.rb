@@ -69,11 +69,12 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def clever_classrooms
     return head :forbidden unless current_user
 
     uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
-    query_clever_service("v2.1/teachers/#{uid}/sections") do |response|
+    query_clever_service("teachers/#{uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -88,13 +89,14 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def import_clever_classroom
     return head :forbidden unless current_user
 
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service("v2.1/sections/#{course_id}/students") do |students|
+    query_clever_service("sections/#{course_id}/students") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -682,10 +684,9 @@ class ApiController < ApplicationController
 
   private def query_clever_service(endpoint)
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    clever_client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token])
     begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
+      yield clever_client.get(endpoint)['data']
     rescue RestClient::ExceptionWithResponse => exception
       if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
         render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))

@@ -7,7 +7,7 @@ wrong 'The developer manually types in new values for every item.'
 right 'The data is modified or filtered (e.g., converted to uppercase or narrowed down) before it is turned into UI elements.'
 wrong 'The array is deleted to save memory.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

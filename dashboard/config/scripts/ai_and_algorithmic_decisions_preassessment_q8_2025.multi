@@ -7,7 +7,7 @@ wrong 'The app automatically deletes the previous episode from its database.'
 wrong 'The app randomly picks a new show for you to watch.'
 wrong 'The app changes the website\'s layout colors to match the new episode.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

@@ -3,20 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Begin with the End in Mind -Final Project Overview
+# Final Project Overview
 
-## Multi-page web application
-#### In the final project, students take on the role of web designers to create a multi-page digital magazine for a fictional user or community.
+#### Let's take a moment to *begin with the end in mind* by taking a look at the Final Project for this Unit.
 
-#### They identify their target audience and brand, plan the layout for key pages like a home page and article page, and then use AI in Guide mode to help them generate the HTML and CSS needed to build their site. 
+## Multi-Page Web Application
 
----
+#### In this project, students take on the role of web designers to create a multi-page digital magazine for a fictional user or community.
 
-### **When Project Begins:** Final lesson of the unit
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
-### The project extends over three class periods. Beginning in Lesson 13.
-
-## Sample
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold">Students willl:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Identify their target audience and brand.
+</li> <br>
+    <li>Plan the layout for key pages like a home page and article page.
+</li><br>
+        <li>Use AI in Guide mode to help them generate the HTML and CSS needed to build their site. 
+        </li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
+         alt="Icon of clipboard and pen" 
+         style="border-radius: 10px; width: 200px; height: auto;">
+  </div>
+</div>
 
 #### In this example, the student designed a web app to showcase local events and activities in their town.
 
@@ -32,7 +45,7 @@ markdown <<MARKDOWN
 #### ✅Prompt engineering and evaluating AI output
 
 
-## Project criteria used for evaluation
+## Project Criteria Used for Evaluation
 
 #### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
 

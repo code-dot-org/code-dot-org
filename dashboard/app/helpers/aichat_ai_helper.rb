@@ -1,4 +1,5 @@
 require 'cdo/aws/metrics'
+require_relative '../../../shared/middleware/helpers/storage_id'
 
 class OpenaiUserInputResponseTimeout < StandardError; end
 
@@ -170,7 +171,7 @@ module AichatAiHelper
   end
 
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
-    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
+    encrypted_channel_id = get_project_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
 
     model_id = aichat_model_customizations["selectedModelId"]
 
@@ -206,5 +207,54 @@ module AichatAiHelper
     # "/user/" included to leave space for potential throttling at the classroom/teacher level.
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
     TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
+  end
+
+  def self.handle_error(source, exception, request, locale)
+    if rack_env?(:development)
+      puts "#{source} Error: #{exception.full_message}"
+    end
+
+    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    Honeybadger.notify(
+      "#{source} failed with unexpected error: #{exception.message}",
+      context: {
+        request: request.to_json,
+        user_id: request.user_id,
+        locale: locale
+      }
+    )
+  end
+
+  def self.build_request_attributes(user_id, params)
+    context = params[:aichatContext] || {}
+    model_customizations = params[:modelParameters] || {}
+
+    # Add client type to model parameters.
+    model_customizations[:clientType] ||= context[:clientType]
+
+    {
+      user_id:              user_id,
+      model_customizations: model_customizations,
+      stored_messages:      successful_stored_chat_messages(params[:storedMessages]),
+      new_message:          params[:newMessage] || {},
+      level_id:             context[:currentLevelId],
+      script_id:            context[:scriptId],
+      project_id:           project_id_from_context(context),
+    }
+  end
+
+  def self.successful_stored_chat_messages(stored_messages)
+    # Filter out non-OK messages (e.g. errors).
+    Array(stored_messages).select do |message|
+      message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        message[:chatMessageText].present?
+    end
+  end
+
+  def self.project_id_from_context(context)
+    if context[:channelId]
+      _, project_id = get_storage_id_and_project_id(context[:channelId])
+      project_id
+    end
   end
 end

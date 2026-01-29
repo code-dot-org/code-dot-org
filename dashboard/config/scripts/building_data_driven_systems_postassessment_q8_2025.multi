@@ -7,7 +7,7 @@ wrong 'The dataset is structured as an object instead of an array.'
 right 'The dataset reinforces a "narrow" or biased perspective of family, potentially alienating users with different family structures.'
 wrong 'The AI used strings instead of booleans for the names.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 4

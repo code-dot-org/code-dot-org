@@ -1,0 +1,15 @@
+name 'CSD U2L6-L9-2025'
+display_name 'Styling Text with CSS'
+description 'Try out your new skills on these different challenges!'
+
+sublevels
+level 'CSD U2L6-L9a-2025'
+level 'CSD U2L6-L9b-2025'
+level 'CSD U2L6-L9c-2025'
+level 'CSD U2L6-L9d-2025'
+level 'CSD U2L6-L9e-2025'
+level 'CSD U2L6-L9f-2025'
+level 'CSD U2L6-L9g-2025'
+level 'CSD U2L6-L9h-2025'
+
+uses_lab2

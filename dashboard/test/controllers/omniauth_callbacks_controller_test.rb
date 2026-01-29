@@ -82,6 +82,62 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   )
   )
 
+  # This is a sample AuthHash provided by omniauth-classlink plugin
+  TEST_CLASSLINK_AUTH_HASH = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
+    {
+      "provider": "classlink",
+      "uid": "987654321",
+      "info": {
+        "first_name": "Teacher",
+        "last_name": "Test",
+        "district_id": "0001",
+        "classlink_id": "987654321",
+        "external_id": "1234_5678-0000",
+        "role": "Teacher",
+        "email": "classlink_teacher@school.test",
+        "image": "",
+        "name": "Teacher Test"
+      },
+      "credentials": {
+        "token": "faketoken123455678",
+        "expires": false
+      },
+      "extra": {
+        "raw_info": {
+          "user_id": "12345678",
+          "tenant_id": "0001",
+          "state_id": "2",
+          "state_name": "New Jersey",
+          "building_id": "0000",
+          "authentication_type": "2",
+          "display_name": "Teacher Test",
+          "first_name": "Teacher",
+          "last_name": "Test",
+          "email": "classlink_teacher@school.test",
+          "login_id": "1234_5678-0000",
+          "image_path": "",
+          "language_id": "1",
+          "language": "en",
+          "default_time_format": "12",
+          "profile": "Teachers",
+          "profile_id": "11111",
+          "tenant": "Dev: ClassLink Test District",
+          "building": "Global - ClassLink Certification 3",
+          "role": "Teacher",
+          "role_level": "3",
+          "last_access_time": "2026-01-12T17:45:26.324Z",
+          "org_id": [
+            "1234",
+            "1234-2"
+          ],
+          "sourced_id": "1234_5678-0000"
+        }
+      }
+    }
+  JSON
+  )
+  )
+
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     @request.host = CDO.dashboard_hostname
@@ -1459,6 +1515,88 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal 1, account.authentication_options.count
 
     assert_nil signed_in_user_id
+  end
+
+  describe '#classlink' do
+    context 'when authorizing with unknown user' do
+      subject(:partial_user) {User.new_from_partial_registration(session)}
+      let(:classlink_req) {get :classlink}
+      before do
+        request.env['omniauth.auth'] = TEST_CLASSLINK_AUTH_HASH
+        request.env['omniauth.params'] = {}
+      end
+      it 'does not create new user' do
+        assert_does_not_create(User) do
+          classlink_req
+        end
+      end
+      it 'redirects to omniauth/redirect' do
+        _(classlink_req.status).must_equal 200
+        assert_template 'omniauth/redirect'
+      end
+      it 'creates new user (Teacher) from auth hash' do
+        classlink_req
+        _(partial_user).wont_be_nil
+        _(partial_user.uid).must_equal TEST_CLASSLINK_AUTH_HASH.uid
+        _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
+        _(partial_user.user_type).must_equal User::TYPE_TEACHER
+      end
+      it 'sets token on new user' do
+        classlink_req
+        _(partial_user.oauth_token).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.token
+        _(partial_user.oauth_token_expiration).must_equal TEST_CLASSLINK_AUTH_HASH.credentials.expires_at
+      end
+    end
+    context 'when authorizing with unknown Student' do
+      subject(:partial_user) {User.new_from_partial_registration(session)}
+      let(:classlink_req) {get :classlink}
+      let(:student_auth_hash) do
+        auth_hash = TEST_CLASSLINK_AUTH_HASH.dup
+        auth_hash.extra.raw_info.role = 'Student'
+        auth_hash
+      end
+      before do
+        request.env['omniauth.auth'] = student_auth_hash
+        request.env['omniauth.params'] = {}
+      end
+
+      it 'creates partial user (Student) from auth hash' do
+        classlink_req
+        _(partial_user).wont_be_nil
+        _(partial_user.uid).must_equal student_auth_hash.uid
+        _(partial_user.provider).must_equal AuthenticationOption::CLASSLINK
+        _(partial_user.user_type).must_equal User::TYPE_STUDENT
+      end
+    end
+    context 'when authorizing with existing user' do
+      subject(:existing_user) {create(:teacher, :classlink_sso_provider, uid: TEST_CLASSLINK_AUTH_HASH.uid)}
+      let(:auth_hash) do
+        auth = TEST_CLASSLINK_AUTH_HASH.dup
+        auth.token = 'new-token'
+        auth.expires_at = 12345
+        auth
+      end
+      let(:classlink_req) {get :classlink}
+      before do
+        request.env['omniauth.auth'] = auth_hash
+        request.env['omniauth.params'] = {}
+        existing_user
+      end
+
+      it 'updates tokens when migrated user is found by credentials' do
+        _(existing_user.primary_contact_info.data_hash[:oauth_token]).wont_equal auth_hash[:credentials][:token]
+        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).wont_equal auth_hash[:credentials][:expires_at]
+        classlink_req
+        existing_user.reload
+        _(existing_user.primary_contact_info.data_hash[:oauth_token]).must_equal auth_hash[:credentials][:token]
+        _(existing_user.primary_contact_info.data_hash[:oauth_token_expiration]).must_equal auth_hash[:credentials][:expires_at]
+      end
+
+      it 'signs in the existing user' do
+        classlink_req
+        _(existing_user.id).must_equal signed_in_user_id
+      end
+    end
   end
 
   describe '#connect_provider' do

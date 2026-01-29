@@ -1,0 +1,9 @@
+name 'AI Insider Games'
+display_name 'Welcome to the Arcade!'
+description 'Choose a game to practice your AI Insider skills!'
+
+sublevels
+level 'prototype_AI_game_1'
+level 'prototype_AI_game_2'
+level 'prototype_AI_game_3'
+level 'prototype_AI_game_4'

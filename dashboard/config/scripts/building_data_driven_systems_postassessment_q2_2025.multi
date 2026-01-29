@@ -7,7 +7,7 @@ right ' An "undefined" value or an empty space, because that index does not exis
 wrong ' The name of the 1st user in the list.'
 wrong 'A list of all 5 users at once.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1

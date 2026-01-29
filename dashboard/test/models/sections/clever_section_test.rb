@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CleverSectionTest < ActiveSupport::TestCase
+  subject(:described_instance) {build(:section, :from_clever)}
+
   test 'from clever service without family name import' do
     owner = create(:teacher)
     student_list = [
@@ -57,5 +59,15 @@ class CleverSectionTest < ActiveSupport::TestCase
     end
 
     DCDO.unstub(:get)
+  end
+
+  describe '#clever_id' do
+    subject(:clever_id) {described_instance.clever_id}
+
+    it 'returns Clever id extracted from section code' do
+      expected_clever_id = Faker::Alphanumeric.unique.alphanumeric(number: 24)
+      described_instance.code = "#{CleverSection::CODE_PREFIX}#{expected_clever_id}"
+      _clever_id.must_equal expected_clever_id
+    end
   end
 end

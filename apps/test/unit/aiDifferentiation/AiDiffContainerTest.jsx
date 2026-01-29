@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import AiDiffContainer from '@cdo/apps/aiDifferentiation/AiDiffContainer';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
@@ -25,13 +26,12 @@ jest.mock('@react-pdf/renderer', () => {
 
 const DEFAULT_PROPS = {
   closeTutor: () => {},
-  open: true,
   context: {
     type: AiDiffContext.LESSON,
     lessonId: 2,
   },
-  scriptName: 'test_lesson',
   curriculumCourses: [],
+  scriptName: 'test_lesson',
 };
 
 const defaultThreadListResponse = [
@@ -68,6 +68,7 @@ describe('AiDiffContainer', () => {
     registerReducers({
       currentUser,
       teacherSections,
+      aichat: aichatReducer,
     });
     store.dispatch(
       setInitialData({
@@ -88,7 +89,7 @@ describe('AiDiffContainer', () => {
   it('visible when open', async () => {
     renderDefault();
     await waitFor(() => {
-      expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+      screen.getByText('AI Teaching Assistant');
       screen.getByText('Experiment');
     });
   });

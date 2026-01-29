@@ -5,6 +5,8 @@
  *
  */
 
+import {getCode} from '@cdo/apps/blockly/utils';
+
 import {TestResults, ResultType} from '../constants';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
@@ -261,7 +263,7 @@ Jigsaw.onPuzzleComplete = function () {
     studioApp().playAudio('failure');
   }
 
-  var textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+  var textBlocks = getCode(Blockly.mainBlockSpace);
 
   Jigsaw.waitingForReport = true;
 

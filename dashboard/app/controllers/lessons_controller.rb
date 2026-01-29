@@ -1,7 +1,9 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties]
+  skip_authorize_resource only: :level_properties_by_id
+
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan, :level_properties, :level_properties_by_id]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -196,12 +198,20 @@ class LessonsController < ApplicationController
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
     unit_group_unit = unit_context[:unit_group_unit]
-
     @lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+      l.absolute_position == params[:lesson_position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
 
+    render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
+  end
+
+  # GET /lessons/:id/level_properties
+  def level_properties_by_id
+    unit_context = Queries::Courses.get_course_context(@lesson.script_id)
+    # TODO: unit_group_unit is only used here for a couple user-specific properties in level.rb,
+    # which should be moved to a different user-specific API, after which we can remove this parameter.
+    unit_group_unit = unit_context[:unit_group_unit]
     render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
   end
 

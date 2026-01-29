@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-01-20T05:14:17.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Data to the Display\r\n\r\nYour task is to use the data **schema** from the previous level to populate and display data for three food names on the screen.\r\n\r\n---\r\n## Sample Schema\r\n- foodNames: string(\"peanut butter\", \"pizza\", etc.)\r\n- allergen_name: string (\"peanuts\",\"gluten\", etc.)\r\n- severity: integer (1-mild, 2-moderate, etc.)\r\n- symptoms: string (\"rash\", \"swollen tongue\", etc.)\r\n- treatment: string (\"epiPen\", \"anti-histamine\", etc)\r\n\r\n---\r\n## Step 1: \r\n\r\n **Update HTML and CSS:** Using the schema above, or modify as you see fit, and work with AI to update the `index.html` and `style.css` files. Ensure they contain the structure and styling for the fields you want to display based on your schema.\r\n\r\n*Sample prompt: Update `index.html` and `style.css` so it has a clear layout to display three food items, and for each item, show all four fields from the schema (allergen_name, severity, symptoms, treatment). Use semantic HTML (like sections, headings, and paragraphs or list items).*\r\n\r\nCopy and paste the new code to replace the existing code. Tweak as necessary.\r\n\r\n## Step 2: \r\n\r\n **Define Parallel Arrays (Data):** In your `script.js` file, define three or more **parallel arrays** (lists) that hold your food data.\r\n \r\n - Each array must have at least three items.\r\n- **Critical:** The item at the same **index** (e.g., index `[0]`) across all arrays must belong to the food allergen category.\r\n\r\n*Example:* `const allergen_names = [\"peanut\", \"gluten\", \"shellfish\"];`\r\n    \r\n## Step 3: \r\n\r\n3.  **Manually Wire the Data (JavaScript):** Complete the empty `updateDisplay` function in `script.js`. Write code that uses **manual indexing** to assign array values to the correct HTML element.\r\n\r\n    * **Card 1:** Use the DOM variables for Card 1 (e.g., `name1`) and access the data at array **index `[0]`** (e.g., `foodNames[0]`).\r\n    * **Card 2:** Use the DOM variables for Card 2 (e.g., `name2`) and access the data at array **index `[1]`**.\r\n    * **Card 3:** Use the DOM variables for Card 3 (e.g., `name3`) and access the data at array **index `[2]`**.\r\n    \r\n*Example:*   \r\n  // Card 1\r\n  \r\n  `name1.textContent = foodNames[0];`\r\n\r\n  `allergen1.textContent = allergenNames[0];`\r\n  \r\n## Step 4:\r\n\r\n **Test:** Run your code. The three food cards in the preview should now correctly display the specific food name, allergen status, and safety note you defined in your arrays.\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Food Allergy Tracker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <header>\n    <h1>Food Allergy Tracker</h1>\n  </header>\n  \n  <main id=\"app\">\n    <div class=\"food-card unsafe\" id=\"card-1\">\n      <h2 class=\"food-name\" id=\"name-1\">Loading Food 1...</h2>\n      <p class=\"allergen-status\" id=\"allergen-1\">Allergen: Unknown</p>\n      <p class=\"safety-note\" id=\"note-1\">Safety Note: Awaiting data check.</p>\n    </div>\n\n    <div class=\"food-card safe\" id=\"card-2\">\n      <h2 class=\"food-name\" id=\"name-2\">Loading Food 2...</h2>\n      <p class=\"allergen-status\" id=\"allergen-2\">Allergen: Unknown</p>\n      <p class=\"safety-note\" id=\"note-2\">Safety Note: Awaiting data check.</p>\n    </div>\n\n    <div class=\"food-card unsafe\" id=\"card-3\">\n      <h2 class=\"food-name\" id=\"name-3\">Loading Food 3...</h2>\n      <p class=\"allergen-status\" id=\"allergen-3\">Allergen: Unknown</p>\n      <p class=\"safety-note\" id=\"note-3\">Safety Note: Awaiting data check.</p>\n    </div>\n  </main>\n\n  <script src=\"script.js\" defer></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Import a clean, readable font */\n@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\n\n:root {\n  /* Define colors for the safety statuses */\n  --color-safe: #4CAF50;    /* Green */\n  --color-warning: #FFC107; /* Yellow/Orange */\n  --color-unsafe: #F44336;  /* Red */\n  --color-neutral: #E0E0E0; /* Light Gray */\n  --color-text: #333333;\n  --color-bg: #f5f5f5;\n}\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  background-color: var(--color-bg);\n  color: var(--color-text);\n  margin: 0;\n  padding: 0;\n  text-align: center;\n}\n\nheader {\n  background-color: white;\n  padding: 20px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  margin-bottom: 20px;\n}\n\n#app {\n  display: flex;\n  justify-content: center;\n  gap: 20px;\n  padding: 20px;\n}\n\n.food-card {\n  width: 300px;\n  padding: 20px;\n  border-radius: 8px;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n  text-align: left;\n  transition: transform 0.2s;\n}\n\n.food-card:hover {\n  transform: translateY(-5px);\n}\n\n/* Specific styling for safety status based on card class */\n.food-card.safe {\n  background-color: white;\n  border-left: 8px solid var(--color-safe);\n}\n\n.food-card.warning {\n  background-color: white;\n  border-left: 8px solid var(--color-warning);\n}\n\n.food-card.unsafe {\n  background-color: white;\n  border-left: 8px solid var(--color-unsafe);\n}\n\n.food-name {\n  font-size: 1.5em;\n  margin-top: 0;\n  margin-bottom: 10px;\n}\n\n.allergen-status, .safety-note {\n  font-size: 0.9em;\n  margin: 5px 0;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "\n\n\nconst name1 = document.getElementById(\"name-1\");\nconst allergen1 = document.getElementById(\"allergen-1\");\nconst note1 = document.getElementById(\"note-1\");\n\nconst name2 = document.getElementById(\"name-2\");\nconst allergen2 = document.getElementById(\"allergen-2\");\nconst note2 = document.getElementById(\"note-2\");\n\nconst name3 = document.getElementById(\"name-3\");\nconst allergen3 = document.getElementById(\"allergen-3\");\nconst note3 = document.getElementById(\"note-3\");\n\n\n\nconst updateDisplay = () => {\n  \n\n  \n};\n\n// Call the function to run the updates when the script loads\nupdateDisplay();",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "3",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n1eouFM9CigF5sukFUq0k6b6BDhVstW6+\n",
+    "display_name": "Food Allergy Tracker",
+    "thumbnail_url": "https://images.code.org/06f9c7fcf3da68ed90ed6caa362c5549-foodallergy.png",
+    "bubble_choice_description": "Display your schema on the Food Allergy Tracker.",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-01-20T05:14:17.757+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U3-weblab-schema-7\\\"\"],\"cloned_from\":\"pl-aif-2-U3-weblab-schema-7\"}]"
+}]]></config>
+</Weblab2>

@@ -30,7 +30,7 @@ rescue LoadError
 end
 
 DEFAULT_S3_BUCKET = 'cdo-sound-library'.freeze
-DEFAULT_OUTPUT_FILE = 'apps/src/code-studio/soundLibrary.json'.freeze
+DEFAULT_OUTPUT_FILE = 'apps/static/json/code-studio/soundLibrary.json'.freeze
 
 class MetadataBuilder
   def initialize(options)

@@ -35,7 +35,23 @@ module Cdo
       @namespace = opts[:namespace] || 'App Server'
       @dimensions = opts[:dimensions] || {}
       @interval = opts[:interval] || 1
+      @instance_id = 'UNKNOWN'
       self.instance = self
+    end
+
+    # Fetch or retry the ID.
+    def instance_id
+      # Fast path: return the ID if it's already known.
+      unless @instance_id == 'UNKNOWN'
+        return @instance_id
+      end
+
+      if @instance_id == 'UNKNOWN'
+        fetched_id = AWS::EC2.instance_id
+        @instance_id = fetched_id if fetched_id # Update only on success.
+      end
+
+      @instance_id
     end
 
     def shutdown
@@ -50,12 +66,24 @@ module Cdo
 
     # Periodically collect unicorn-listener metrics.
     def collect_metrics(*_)
+      # Retrieve the best available ID (UNKNOWN or real i-xxxx)
+      current_instance_id = instance_id
+
       collect_listener_stats.each do |name, value|
         Cdo::Metrics.put(
           @namespace,
           name,
           value,
           @dimensions,
+          storage_resolution: 1,
+          unit: 'Count'
+        )
+        # Also publish active/queued/calling listener metrics with an EC2 Instance ID Dimension.
+        Cdo::Metrics.put(
+          @namespace,
+          name,
+          value,
+          @dimensions.merge(InstanceId: current_instance_id),
           storage_resolution: 1,
           unit: 'Count'
         )
@@ -73,34 +101,6 @@ module Cdo
       end.to_h
       stats[:calling] = @stats.max_calling.tap {@stats.max_calling = 0}
       stats
-    end
-
-    # Gathers cloudfront metrics from each puma worker process and logs it
-    # to CloudWatch segmented by Host and PID. To get overall values, you
-    # must aggregate/sum across all Host and PID dimensions in CloudWatch.
-    def self.start_background_metrics_thread(host:)
-      Thread.new do
-        dimensions = {
-          PID: Process.pid.to_s,
-          Host: host,
-        }
-
-        begin
-          dimensions[:InstanceId] = AWS::EC2.instance_id
-        rescue
-        end
-
-        loop do
-          Cdo::Metrics.put(
-            'ActionCable',
-            'ServerConnectionsCount',
-            ActionCable.server.connections.count,
-            dimensions,
-            unit: 'Count'
-          )
-          sleep 30.seconds
-        end
-      end
     end
   end
 

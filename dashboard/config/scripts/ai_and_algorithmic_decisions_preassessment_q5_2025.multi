@@ -7,7 +7,7 @@ wrong 'A color code that changes the text whenever you make a purchase'
 wrong 'A font style that highlights the most popular menu items'
 wrong 'A download counter that measures how many people use the app'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3

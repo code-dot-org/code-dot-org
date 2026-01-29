@@ -7,7 +7,7 @@ wrong 'It prevents the app from needing a database.'
 right 'It allows the team to predict how data will be rendered and ensures the AI scaffold generates valid logic for those types.'
 wrong 'It makes the website load faster on older browsers.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

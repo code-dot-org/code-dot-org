@@ -25,7 +25,7 @@ import {
   ProcedureBlockConfiguration,
   ProcedureType,
 } from '../types';
-import {setThemeAndRenderBlocks} from '../utils';
+import {getUserTheme, setThemeAndRenderBlocks} from '../utils';
 
 import CdoConnectionChecker from './cdoConnectionChecker';
 import {frameSizes} from './cdoConstants';
@@ -33,6 +33,7 @@ import {initializeAdditionalWorkspace} from './cdoKeyboardNavigation';
 import CdoMetricsManager from './cdoMetricsManager';
 import {initializeScrollbarPair} from './cdoScrollbar';
 import CdoTrashcan from './cdoTrashcan';
+import {removeIdsFromBlocks} from './cdoXml';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
@@ -64,12 +65,17 @@ export default class FunctionEditor {
 
     this.dom = modalEditor;
     this.isReadOnly = options.readOnly || false;
+    let toolbox = options.toolbox;
+    if (typeof options.toolbox === 'string') {
+      // Remove the block ids from the toolbox. Otherwise, it would be possible
+      // to add a block with the same id to multiple different procedure definitions.
+      // Because we mirror block creation onto the hidden workspace, we need to avoid
+      // trying to create blocks with ids that are already used in other definitions.
+      const toolboxDom = Blockly.Xml.textToDom(options.toolbox);
+      removeIdsFromBlocks(toolboxDom);
+      toolbox = Blockly.Xml.domToText(toolboxDom);
+    }
 
-    // Remove the block ids from the toolbox. Otherwise, it would be possible
-    // to add a block with the same id to multiple different procedure definitions.
-    // Because we mirror block creation onto the hidden workspace, we need to avoid
-    // trying to create blocks with ids that are already used in other definitions.
-    const toolbox = Blockly.cdoUtils.toolboxWithoutIds(options.toolbox);
     this.primaryWorkspace =
       Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
     // Customize auto-populated Functions toolbox category.
@@ -97,11 +103,11 @@ export default class FunctionEditor {
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
     }) as EditorWorkspaceSvg;
-    Blockly.cdoUtils
-      .getUserTheme(this.editorWorkspace.getTheme())
-      .then((theme: BlocklyCore.Theme) => {
+    getUserTheme(this.editorWorkspace.getTheme()).then(
+      (theme: BlocklyCore.Theme) => {
         setThemeAndRenderBlocks(this.editorWorkspace!, theme, defaultTheme);
-      });
+      }
+    );
     this.editorWorkspace.registerToolboxCategoryCallback(
       'VARIABLE',
       variablesFlyoutCategory
@@ -329,7 +335,7 @@ export default class FunctionEditor {
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
-      return Blockly.cdoUtils.getBlockColor(this.block);
+      return this.block?.style?.colourPrimary || '';
     };
 
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(

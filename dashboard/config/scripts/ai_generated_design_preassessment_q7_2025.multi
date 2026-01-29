@@ -7,7 +7,7 @@ wrong 'The site uses too many images, slowing it down.'
 right 'The website isn\'t responsive to different screen sizes.'
 wrong 'The website doesn\'t have enough interactive features.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lessons 8, 12

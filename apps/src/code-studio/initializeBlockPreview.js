@@ -1,3 +1,5 @@
+import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
+
 function update(blockSpace, container, editor) {
   try {
     // Populate with new xml; because we do this every time the editor
@@ -6,7 +8,7 @@ function update(blockSpace, container, editor) {
     // typing out the new content. Because of that and the fact that
     // this is simply an informative but not functional view, we simply
     // catch and ignore all errors.
-    Blockly.cdoUtils.loadBlocksToWorkspace(blockSpace, editor.getValue());
+    loadBlocksToWorkspace(blockSpace, editor.getValue());
   } catch (e) {
     return;
   }
@@ -15,7 +17,7 @@ function update(blockSpace, container, editor) {
   var metrics = blockSpace.getMetrics();
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  Blockly.cdoUtils.resizeSvg(blockSpace);
+  Blockly.svgResize(blockSpace);
 }
 
 module.exports = function (editor, container) {

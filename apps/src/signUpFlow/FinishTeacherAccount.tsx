@@ -478,7 +478,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             <GradeLevelChips
               inputLabel={locale.grades_taught()}
               values={selectedGrades}
-              setValues={vals => setSelectedGrades(vals)}
+              setValues={(vals: string[]) => setSelectedGrades(vals)}
               className={style.gradeSelectChips}
             />
           )}

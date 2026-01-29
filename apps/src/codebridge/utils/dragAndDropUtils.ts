@@ -143,13 +143,15 @@ export const getHighestPriorityCollision = (
   const dragType = active.data.current?.type;
   const activeId = active.data.current?.id;
   if (dragType === DragType.FOLDER) {
-    // Filter out any attempts to move into a folder that is a child of this folder.
+    // Filter out any attempts to move into a folder that is a child of this folder or into itself.
     const allChildren = getFolderChildren(
       activeId as string,
       Object.values(folders)
     );
     rectangleCollisions = rectangleCollisions.filter(
-      collision => !allChildren.includes(collision.id as string)
+      collision =>
+        !allChildren.includes(collision.id as string) &&
+        collision.id !== activeId
     );
   }
 

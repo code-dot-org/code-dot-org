@@ -7,7 +7,7 @@ wrong 'The app saves a screenshot of your old total and replaces it with a new p
 wrong 'The app uses a CSS filter to change the color of the text after every session.'
 right 'The app updates a variable that stores your total minutes, then changes the DOM to display the new value.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3

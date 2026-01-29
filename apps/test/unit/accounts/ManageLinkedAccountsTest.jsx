@@ -5,6 +5,7 @@ import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED,
 } from '@cdo/apps/accounts/ManageLinkedAccounts';
+import DCDO from '@cdo/apps/dcdo';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -19,6 +20,16 @@ const DEFAULT_PROPS = {
 };
 
 describe('ManageLinkedAccounts', () => {
+  // TODO: remove this DCDO manipulation after ClassLink LMS launch
+  beforeEach(() => {
+    DCDO.set('classlink_lms_enabled', true);
+  });
+
+  afterEach(() => {
+    DCDO.set('classlink_lms_enabled', false);
+  });
+  // End TODO
+
   it('renders a table with oauth provider rows', () => {
     const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
     expect(wrapper.find('table')).to.exist;
@@ -32,6 +43,9 @@ describe('ManageLinkedAccounts', () => {
       'Clever Account'
     );
     expect(wrapper.find('OauthConnection').at(3)).to.include.text(
+      'ClassLink Account'
+    );
+    expect(wrapper.find('OauthConnection').at(4)).to.include.text(
       'Facebook Account'
     );
   });
@@ -85,6 +99,11 @@ describe('ManageLinkedAccounts', () => {
         credentialType: 'clever',
         email: 'teacher@clever.com',
       },
+      5: {
+        id: 5,
+        credentialType: 'classlink',
+        email: 'teacher@classlink.com',
+      },
       3: {
         id: 3,
         credentialType: 'facebook',
@@ -120,7 +139,7 @@ describe('ManageLinkedAccounts', () => {
     );
     expect(cleverConnection.find('td').at(2)).to.have.text('Disconnect');
 
-    const facebookConnection = oauthConnections.at(3);
+    const facebookConnection = oauthConnections.at(4);
     expect(facebookConnection.find('td').at(1)).to.have.text(
       'teacher@facebook.com'
     );
@@ -175,6 +194,7 @@ describe('ManageLinkedAccounts', () => {
       '/users/auth/1/disconnect',
       '/users/auth/microsoft_v2_auth?action=connect',
       '/users/auth/clever?action=connect',
+      '/users/auth/classlink?action=connect',
       '/users/auth/2/disconnect',
     ];
     forms.forEach((form, i) => {
@@ -218,7 +238,7 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+    const facebookConnectButton = wrapper.find('BootstrapButton').at(4);
     expect(facebookConnectButton).to.have.attr('disabled');
   });
 
@@ -262,7 +282,7 @@ describe('ManageLinkedAccounts', () => {
           authenticationOptions={authOptions}
         />
       );
-      const ltiConnectButton = wrapper.find('BootstrapButton').at(4);
+      const ltiConnectButton = wrapper.find('BootstrapButton').at(5);
       expect(ltiConnectButton).to.have.attr('disabled');
     });
 

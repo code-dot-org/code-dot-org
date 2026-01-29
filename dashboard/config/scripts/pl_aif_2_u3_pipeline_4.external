@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Putting It All Together: Pipelines in JavaScript
 
-#### Once you understand **searching**, **filtering**, and **sorting** on their own, the real computational thinking comes from deciding **which tool to use — and in what order — to meet the needs of an app.**
+#### Once you understand **searching**, **filtering**, and **sorting** on their own, the real computational thinking comes from deciding **which tool to use, and in what order, to meet the needs of an app.**
 
 <br>
 
@@ -51,7 +51,7 @@ markdown <<MARKDOWN
 3. #### **Map** the top three videos into cards for display  
 
 #### Each step depends on the one before it.
-#### The app doesn’t jump straight to the final result — it builds it step by step.
+#### The app doesn’t jump straight to the final result; it builds it step by step.
 
 <div style="clear:both;"></div>
 
@@ -70,26 +70,9 @@ markdown <<MARKDOWN
 
 ---
 
-## A key idea to remember
-
-<br>
-
-<div style="text-align: center; width: 100%;">
-
-  <div style="display: inline-block; background-color: #efe7f8; border: 2px solid #8c52ba; border-radius: 12px; padding: 20px 30px; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-    <p style="font-size: 1.2rem;  margin: 0; line-height: 1.5; color: #3b0066;">
-      Strong programs aren’t built from one function — <br>
-      they’re built from <b>thoughtful pipelines</b>.
-    </p>
-  </div>
-
-</div>
-
----
-
 ## What's next?
 
 #### Next, you’ll practice creating a pipeline for an app with the help of AI.  
 
-![]()
+
 MARKDOWN

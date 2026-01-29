@@ -27,6 +27,12 @@
 
 import Visualization from '@code-dot-org/artist';
 
+import {
+  loadBlocksToWorkspace,
+  getCode,
+  getCodeFromBlockXmlSource,
+  getAllGeneratedCode,
+} from '@cdo/apps/blockly/utils';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
@@ -496,7 +502,7 @@ Artist.prototype.prepareForRemix = function () {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
+  loadBlocksToWorkspace(
     Blockly.mainBlockSpace,
     Blockly.Xml.domToText(blocksDom)
   );
@@ -555,9 +561,7 @@ Artist.prototype.afterInject_ = function (config) {
   visualization.appendChild(this.visualization.displayCanvas);
 
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
-    // Google Blockly uses forBlock, CDO Blockly does not.
-    const blockGeneratorFunctionDictionary =
-      Blockly.JavaScript.forBlock || Blockly.JavaScript;
+    const blockGeneratorFunctionDictionary = Blockly.JavaScript.forBlock;
     // Override colour_random to only generate random colors from within our frozen
     // palette
     blockGeneratorFunctionDictionary.colour_random = function () {
@@ -644,7 +648,7 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
 Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   let code;
   if (this.studioApp_.isUsingBlockly()) {
-    code = Blockly.cdoUtils.getCodeFromBlockXmlSource(blocksOrCode);
+    code = getCodeFromBlockXmlSource(blocksOrCode);
   } else {
     code = blocksOrCode;
   }
@@ -897,9 +901,7 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    const code = Blockly.cdoUtils.getAllGeneratedCode(
-      this.studioApp_.initializationCode
-    );
+    const code = getAllGeneratedCode(this.studioApp_.initializationCode);
     this.evalCode(code, executionInfo);
   }
 
@@ -1586,7 +1588,7 @@ Artist.prototype.checkAnswer = function () {
 
 Artist.prototype.getUserCode = function () {
   if (this.studioApp_.isUsingBlockly()) {
-    return Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+    return getCode(Blockly.mainBlockSpace);
   } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:

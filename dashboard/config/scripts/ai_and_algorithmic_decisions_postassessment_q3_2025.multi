@@ -7,7 +7,7 @@ right 'An event handler detects the click and runs a set of programmed steps to 
 wrong 'A variable stores the thank-you message so users can\'t edit it.'
 wrong 'The site\'s CSS file changes colors to show that an order is complete.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 2

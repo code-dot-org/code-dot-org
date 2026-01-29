@@ -120,9 +120,16 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
     }
 
     if (isNotification(event)) {
-      const {removeId, text, notificationType, files, timestamp} = event;
+      const {
+        removeId,
+        text,
+        notificationType,
+        files,
+        timestamp,
+        commitDescription,
+      } = event;
 
-      // Use special notification component for AI tutor version actions
+      // Use special notification component for AI tutor version actions.
       if (
         notificationType === 'aiTutorVersionActionAccept' ||
         notificationType === 'aiTutorVersionActionReject'
@@ -141,6 +148,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
             aria-label={`Notification: ${text}`}
             className={styles.chatMessageOutline}
             files={files}
+            commitDescription={commitDescription}
           />
         );
       }

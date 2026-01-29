@@ -1,3 +1,5 @@
+import {RadioButton} from '@code-dot-org/component-library/radioButton';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -24,17 +26,17 @@ describe('EvidenceLevelsForTeachers', () => {
     expect(wrapper.find('Heading6').props().children).to.equal(
       'Assign a Rubric Score'
     );
-    expect(wrapper.find('Memo(RadioButton)').length).to.equal(
+    expect(wrapper.find(RadioButton).length).to.equal(
       DEFAULT_PROPS.evidenceLevels.length
     );
-    expect(wrapper.find('BodyThreeText').length).to.equal(
+    expect(wrapper.find(BodyThreeText).length).to.equal(
       DEFAULT_PROPS.evidenceLevels.length
     );
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('BodyThreeText').at(0).props().children).to.equal(
+    expect(wrapper.find(BodyThreeText).at(0).props().children).to.equal(
       firstEvidenceLevel.teacherDescription
     );
-    expect(wrapper.find('Memo(RadioButton)').at(0).prop('label')).to.equal(
+    expect(wrapper.find(RadioButton).at(0).prop('label')).to.equal(
       UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]
     );
   });

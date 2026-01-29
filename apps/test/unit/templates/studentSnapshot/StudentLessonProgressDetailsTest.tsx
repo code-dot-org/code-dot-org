@@ -118,6 +118,7 @@ const mockStudentLevelProgressByUnit = {
   // unitId: unit info
   1: {
     // userId: user progress in unit
+    // User 1 completed a mix of levels
     1: {
       // levelId: user progress in level
       '101': {status: 'perfect'},
@@ -136,12 +137,33 @@ const mockStudentLevelProgressByUnit = {
       '142': {status: 'not_tried'},
       '143': {status: 'not_tried'},
     },
+    // User 2 completed all levels
+    2: {
+      // levelId: user progress in level
+      '101': {status: 'perfect'},
+      '102': {status: 'perfect'},
+      '103': {status: 'perfect'},
+      '111': {status: 'perfect'},
+      '112': {status: 'perfect'},
+      '113': {status: 'perfect'},
+      '121': {status: 'perfect'},
+      '122': {status: 'perfect'},
+      '123': {status: 'perfect'},
+      '131': {status: 'perfect'},
+      '132': {status: 'perfect'},
+      '133': {status: 'perfect'},
+      '141': {status: 'perfect'},
+      '142': {status: 'perfect'},
+      '143': {status: 'perfect'},
+    },
+    // User 3 completed no levels so they have no entry in studentLevelProgressByUnit
   },
 };
 const mockStudentLessonProgressByUnit = {
   // unitId: unit info
   1: {
     // userId: user progress in unit
+    // User 1 made some progress
     1: {
       // lessonId: user progress info in lesson
       10: {
@@ -165,6 +187,31 @@ const mockStudentLessonProgressByUnit = {
         timeSpent: 0,
       },
     },
+    // User 2 finished everything
+    2: {
+      // lessonId: user progress info in lesson
+      10: {
+        completedPercent: 100,
+        timeSpent: 200,
+      },
+      11: {
+        completedPercent: 100,
+        timeSpent: 20,
+      },
+      12: {
+        completedPercent: 100,
+        timeSpent: 300,
+      },
+      13: {
+        completedPercent: 100,
+        timeSpent: 200,
+      },
+      14: {
+        completedPercent: 100,
+        timeSpent: 50,
+      },
+    },
+    // User 3 did nothing so they have no data in studentLessonProgressByUnit
   },
 };
 
@@ -174,6 +221,9 @@ const mockStore = createStore(() => ({
     unitDataByUnit: mockUnitDataByUnit,
     studentLevelProgressByUnit: mockStudentLevelProgressByUnit,
     studentLessonProgressByUnit: mockStudentLessonProgressByUnit,
+  },
+  teacherSections: {
+    selectedStudents: [{id: 1}, {id: 2}, {id: 3}],
   },
 }));
 
@@ -190,7 +240,7 @@ describe('StudentLessonProgressDetailsWidget', () => {
     );
   }
 
-  it('renders all 3 details', () => {
+  it('renders all 3 details, class averages, and a note about validation tests', () => {
     renderDefault(10);
 
     screen.getByText('Progress');
@@ -199,6 +249,17 @@ describe('StudentLessonProgressDetailsWidget', () => {
     screen.getByText('1 of 2 passed');
     screen.getByText('Time spent');
     screen.getByText('00:02:20');
+
+    // Class averages
+    screen.getByText('Class Avg: 44%');
+    screen.getByText('Class Avg: 1 of 2 passed');
+    screen.getByText('Class Avg: 00:01:53');
+
+    // Note about validation tests
+    screen.getByText('1 test not passed');
+    screen.getByText(
+      'The app structure is correct, but key validation rules (e.g., form completion, value limits) were not implemented.'
+    );
   });
 
   it('shows 0s across the board if no progress has been made', () => {
@@ -210,6 +271,12 @@ describe('StudentLessonProgressDetailsWidget', () => {
     screen.getByText('0 of 3 passed');
     screen.getByText('Time spent');
     screen.getByText('00:00:00');
+
+    // Note about validation tests
+    screen.getByText('3 tests not passed');
+    screen.getByText(
+      'The app structure is correct, but key validation rules (e.g., form completion, value limits) were not implemented.'
+    );
   });
 
   it('shows all validation is complete if those are finished even if all levels are not finished', () => {
@@ -218,30 +285,40 @@ describe('StudentLessonProgressDetailsWidget', () => {
     screen.getByText('Progress');
     screen.getByText('66% complete');
     screen.getByText('Validation tests');
-    screen.getByText('100% complete');
+    screen.getByText('1 of 1 passed');
     screen.getByText('Time spent');
     screen.getByText('00:05:00');
+
+    // Note about validation tests
+    screen.getByText('There were no failed tests in this lesson.');
   });
 
   it('shows complete progress and complete validation if everything is done', () => {
     renderDefault(13);
 
     screen.getByText('Progress');
+    screen.getByText('100% complete');
     screen.getByText('Validation tests');
-    expect(screen.getAllByText('100% complete').length).toBe(2);
+    screen.getByText('3 of 3 passed');
     screen.getByText('Time spent');
     screen.getByText('00:00:20');
+
+    // Note about validation tests
+    screen.getByText('There were no failed tests in this lesson.');
   });
 
-  it('shows complete validation if lesson has no validation levels', () => {
+  it('shows 0 of 0 passed if lesson has no validation levels', () => {
     renderDefault(14);
 
     screen.getByText('Progress');
     screen.getByText('0% complete');
     screen.getByText('Validation tests');
-    screen.getByText('100% complete');
+    screen.getByText('0 of 0 passed');
     screen.getByText('Time spent');
     screen.getByText('00:00:00');
+
+    // Validation test note says no failed tests if it has no validation levels
+    screen.getByText('There were no failed tests in this lesson.');
   });
 
   it('shows 0s across the board if no data for the given unit is available', () => {
@@ -261,6 +338,9 @@ describe('StudentLessonProgressDetailsWidget', () => {
     screen.getByText('0 of 0 passed');
     screen.getByText('Time spent');
     screen.getByText('00:00:00');
+
+    // Validation test note says no failed tests if it has no unit data
+    screen.getByText('There were no failed tests in this lesson.');
   });
 
   it('shows 0s across the board if no data for the given lesson is available', () => {
@@ -280,6 +360,9 @@ describe('StudentLessonProgressDetailsWidget', () => {
     screen.getByText('0 of 0 passed');
     screen.getByText('Time spent');
     screen.getByText('00:00:00');
+
+    // Validation test note says no failed tests if it has no lesson data
+    screen.getByText('There were no failed tests in this lesson.');
   });
 
   it('shows 0s across the board if no data for the given student is available', () => {
@@ -299,5 +382,11 @@ describe('StudentLessonProgressDetailsWidget', () => {
     screen.getByText('0 of 3 passed');
     screen.getByText('Time spent');
     screen.getByText('00:00:00');
+
+    // Note about validation tests
+    screen.getByText('3 tests not passed');
+    screen.getByText(
+      'The app structure is correct, but key validation rules (e.g., form completion, value limits) were not implemented.'
+    );
   });
 });

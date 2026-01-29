@@ -1,38 +1,36 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getUrlForFile, getFolderPath} from '@codebridge/utils';
+import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
-import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
-
-import {IframeMessageType} from './constants';
 import {
-  updateLinksToHtmlFiles,
-  updateLinksToNonHtmlFiles,
-} from './htmlParsingHelpers';
-import PageNotFound from './PageNotFound';
+  IframeMessageType,
+  PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
+  ProjectServiceWorkerMessageType,
+} from './constants';
+import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
-const NOT_FOUND_FILE = 'NOT_FOUND';
 
+// Previewer for student code that utilizes a service worker to serve project files.
+// This allows us to handle linking between files within the project without hacking links in
+// the HTML, which is fragile and doesn't work for links set via JavaScript.
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
-  const [blobUrl, setBlobUrl] = React.useState<string | undefined>(undefined);
-  const [filesToBlobs, setFilesToBlobs] = React.useState<
-    Record<string, string>
-  >({});
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  // Numerical key used to trigger iframe reloads when we have updates.
+  const [previewKey, setPreviewKey] = useState(0);
+  const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
   const [allowScripts, setAllowScripts] = useState(false);
+  const [isLevelLoading, setIsLevelLoading] = useState(false);
 
   const parentOrigin = useMemo(() => {
-    const regex = /preview\.([^.]+)\.codeprojects\.org/;
+    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
     const port =
@@ -41,18 +39,8 @@ const InnerHTMLPreview = () => {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
 
-  // Wrapper around setFilesToBlobs that will revoke the previous blob URLs
-  // to prevent memory leaks.
-  const revokeAndSetFilesToBlobs = (
-    newFilesToBlobs: Record<string, string>
-  ) => {
-    setFilesToBlobs(prevFilesToBlobs => {
-      Object.values(prevFilesToBlobs).forEach(blobUrl =>
-        URL.revokeObjectURL(blobUrl)
-      );
-      return newFilesToBlobs;
-    });
-  };
+  const {serviceWorkerRegistration, serviceWorkerUnavailable} =
+    useProjectServiceWorker(source, parentOrigin);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -62,27 +50,19 @@ const InnerHTMLPreview = () => {
       }
       const {data} = event;
       if (data.type === IframeMessageType.SET_SOURCE) {
-        if (!data.source) {
-          // Clear the preview if no source is provided. We are likely changing levels.
-          revokeAndSetFilesToBlobs({});
-          setBlobUrl(undefined);
-        } else {
-          setSource(data.source);
-        }
-      } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
-        setCurrentFile(data.filePath);
-        // Tell the parent that we are changing the file, as this came from a link click.
-        window.parent.postMessage(
-          {type: IframeMessageType.FILE_UPDATED, fileName: data.filePath},
-          parentOrigin
-        );
+        setSource(data.source);
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
-        // We don't need to update the parent, because they initiated this change.
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
       } else if (data.type === IframeMessageType.REFRESH) {
         iframeRef.current?.contentWindow?.location.reload();
+      } else if (data.type === IframeMessageType.LEVEL_LOADING) {
+        setIsLevelLoading(data.isLoading);
+        if (data.isLoading) {
+          // If we are loading, mark service worker as not ready to prevent trying to preview too early.
+          setServiceWorkerReady(false);
+        }
       }
     },
     [parentOrigin]
@@ -101,82 +81,60 @@ const InnerHTMLPreview = () => {
     };
   }, [handleMessage, parentOrigin]);
 
-  function getFullyQualifiedFileName(
-    fileName: string,
-    folderId: string,
-    folders: MultiFileSource['folders']
-  ) {
-    if (folderId === DEFAULT_FOLDER_ID) {
-      return fileName; // root folder, no path needed
-    }
-    const fullPath = getFolderPath(folderId, folders) + '/' + fileName;
-    return fullPath.substring(1); // remove leading slash
-  }
-
   useEffect(() => {
-    if (currentFile && filesToBlobs) {
-      const newBlobUrl = filesToBlobs[currentFile];
-      if (newBlobUrl) {
-        setBlobUrl(newBlobUrl);
-      } else {
-        console.error(`current file ${currentFile} not found in source files`);
-        setBlobUrl(NOT_FOUND_FILE);
-      }
-    }
-  }, [currentFile, filesToBlobs, parentOrigin]);
-
-  // TODOs:
-  // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
-  useEffect(() => {
-    if (source) {
-      const files: Record<string, string> = {};
-      // Handle non-HTML files. These are just converted to Blobs.
-      Object.values(source.files).forEach(file => {
-        if (file.language !== 'html') {
-          const fullFileName = getFullyQualifiedFileName(
-            file.name,
-            file.folderId,
-            source.folders
-          );
-          files[fullFileName] = getUrlForFile(
-            file,
-            parentOrigin,
-            WEBLAB2_IMAGE_FILE_TYPES
-          );
-        }
-      });
-      // Handle HTML files. We do the following;
-      // 1. Set the Content Security Policy to allow requests to certain origins.
-      // 2. Replace src links to non-html files with blob URLs.
-      // 3. Update links to other files with a click handler that will post a message to us
-      //    to change the file.
-      const htmlFiles = Object.values(source.files).filter(
-        file => file.language === 'html'
+    if (serviceWorkerUnavailable) {
+      window.parent.postMessage(
+        {
+          type: IframeMessageType.SERVICE_WORKER_UNAVAILABLE,
+        },
+        parentOrigin
       );
-      htmlFiles.forEach(file => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(file.contents, 'text/html');
-
-        const fullFileName = getFullyQualifiedFileName(
-          file.name,
-          file.folderId,
-          source.folders
-        );
-
-        updateLinksToNonHtmlFiles(doc, files, fullFileName);
-        updateLinksToHtmlFiles(doc, fullFileName);
-        const updatedContents = doc.documentElement.outerHTML;
-        const blob = new Blob([updatedContents], {type: 'text/html'});
-        files[fullFileName] = URL.createObjectURL(blob);
-      });
-      revokeAndSetFilesToBlobs(files);
     }
-  }, [parentOrigin, source]);
+  }, [serviceWorkerUnavailable, parentOrigin]);
+
+  useEffect(() => {
+    window.addEventListener('unload', () => {
+      // Ensure the service worker is unregistered when we unload
+      serviceWorkerRegistration?.unregister();
+    });
+  }, [serviceWorkerRegistration]);
+
+  useEffect(() => {
+    // Set up a broadcast channel to receive messages from the service worker.
+    const broadcastChannel = new BroadcastChannel(
+      PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
+    );
+    broadcastChannel.onmessage = event => {
+      if (
+        event.data.type === ProjectServiceWorkerMessageType.SERVING_HTML_FILE
+      ) {
+        const filePath = event.data.filePath;
+        setCurrentFile(filePath);
+        // Notify parent of the file change
+        window.parent.postMessage(
+          {type: IframeMessageType.FILE_UPDATED, fileName: filePath},
+          parentOrigin
+        );
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
+      ) {
+        setServiceWorkerReady(true);
+        setPreviewKey(prevKey => prevKey + 1);
+      }
+    };
+    return () => {
+      broadcastChannel.close();
+    };
+  }, [parentOrigin]);
+
+  useEffect(() => {
+    if (iframeRef.current) {
+      iframeRef.current.contentWindow?.location.reload();
+    }
+  }, [previewKey]);
 
   const getPreview = useCallback(() => {
-    if (blobUrl === NOT_FOUND_FILE) {
-      return <PageNotFound />;
-    } else if (blobUrl) {
+    if (serviceWorkerReady && currentFile && !isLevelLoading) {
       return (
         <iframe
           ref={iframeRef}
@@ -185,9 +143,18 @@ const InnerHTMLPreview = () => {
           title="Inner HTML Preview"
           id="inner-preview"
           key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
-          src={blobUrl}
+          src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
+      );
+    } else if (serviceWorkerUnavailable) {
+      return (
+        <div className={moduleStyles.placeholderContainer}>
+          <CodebridgeEmptyState
+            title="Preview Unavailable"
+            description="We're sorry, the preview is unavailable in your browser. Please contact support@code.org for assistance."
+          />
+        </div>
       );
     } else {
       return (
@@ -196,7 +163,13 @@ const InnerHTMLPreview = () => {
         </div>
       );
     }
-  }, [blobUrl, allowScripts]);
+  }, [
+    allowScripts,
+    currentFile,
+    isLevelLoading,
+    serviceWorkerReady,
+    serviceWorkerUnavailable,
+  ]);
 
   return getPreview();
 };

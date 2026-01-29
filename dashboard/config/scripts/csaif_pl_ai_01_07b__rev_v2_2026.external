@@ -1,0 +1,25 @@
+name 'csaif_pl_ai_01_07b_-rev_v2_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Improving Responses through Prompting
+
+#### AI systems make probability-driven predictions, which means they choose outputs based on what seems most statistically likely, not necessarily what a human would intend. Because of this, an AI may produce an unexpected or incorrect result even when the prompt seems clear.
+
+#### For example, when prompted to draw an image where “the keys are on the table,” an AI produced the image below:
+
+<p align="center">
+<img src="https://images.code.org/2add661afc73dbcbc1e4d456cb07c956-Screenshot 2025-04-08 at 1.28.48 PM.png" alt="lesson plan diagram" width="30%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+#### While the image technically matches the prompt, it’s not what a human would normally picture. The AI focused on the words “keys,” “on,” and “table” and used them in the simplest, most literal way. 
+
+#### In doing so, it **abstracted** away important details that a person might assume: such as the size of the keys, the angle of the scene, or what “on the table” should realistically look like.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Abstraction</strong> is the process of focusing on only the essential details of a problem and ignoring everything else.</p>
+</div>
+
+#### As the user, you can improve AI-generated responses by making your prompt more specific or including examples. Your students will continue to practice this throughout the Problem Solving with AI Unit.
+MARKDOWN

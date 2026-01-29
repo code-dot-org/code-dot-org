@@ -3,6 +3,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -907,7 +908,7 @@ export default class P5Lab {
       this.message = null;
     } else {
       let textBlocks;
-      textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+      textBlocks = getCode(Blockly.mainBlockSpace);
       program = encodeURIComponent(textBlocks);
     }
 

@@ -106,6 +106,7 @@ def main
     "--stack-name gen-ai-curriculum-#{options[:environment]} " \
     "--template-file gen_ai_curriculum.yml " \
     "--role-arn arn:aws:iam::#{account_id}:role/admin/CloudFormationService " \
+    "--tags environment-type=#{options[:environment]} " \
     "--parameter-overrides " \
     "Environment=#{options[:environment]} " \
     "HuggingFaceImageUri=#{image_uri} " \

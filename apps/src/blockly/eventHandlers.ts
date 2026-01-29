@@ -13,7 +13,10 @@ import {
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
 } from './types';
-import {updateBlockEnabled, disableOrphanBlocks} from './utils';
+import {
+  updateBlockEnabled,
+  disableOrphanBlocks,
+} from './utils/workspace/disabledBlocks';
 
 // A custom version of Blockly's Events.disableOrphans. This makes a couple
 // changes to the original function.

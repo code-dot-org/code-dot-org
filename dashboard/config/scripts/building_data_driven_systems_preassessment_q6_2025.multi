@@ -7,7 +7,7 @@ wrong 'JavaScript requires every array method to be wrapped in a function to wor
 wrong 'Functions make the code run significantly faster by reducing memory usage.'
 wrong 'It prevents the AI from being able to read or suggest changes to the data.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3

@@ -38,7 +38,7 @@ class XhrProxyController < ApplicationController
     url = params[:u]
 
     begin
-      owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
+      owner_storage_id, _ = get_storage_id_and_project_id(channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError => exception
       render_error_response 403, "Invalid token: '#{channel_id}' for url: '#{url}' exception: #{exception.message}"
       return

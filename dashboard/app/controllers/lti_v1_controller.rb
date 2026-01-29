@@ -162,6 +162,11 @@ class LtiV1Controller < ApplicationController
       role_key = decoded_jwt[Policies::Lti::CLASSLINK_ROLE_KEY].present? ? Policies::Lti::CLASSLINK_ROLE_KEY : Policies::Lti::LTI_ROLES_KEY
       lti_account_type = Policies::Lti.get_account_type(decoded_jwt[role_key])
 
+      # Store deployment ID and issuer in session for later use
+      session[:external_lti_deployment_id] = deployment_id
+      session[:lti_issuer] = extracted_issuer_id
+      session[:lti_client_id] = extracted_client_id
+
       # If deployment name is nil, update it with the name from the JWT. This
       # could likely be removed after a period of time, as we also write the name
       # for all new deployments in the next block. This line is necessary to

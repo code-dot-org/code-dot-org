@@ -1,0 +1,44 @@
+name 'pl-aif-2-U4-project-overview-4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Begin with the End in Mind: Final Project Overview
+
+#### Unit 4: Iterating with AI culminates with a final **Interactive Data Dashboard** project. 
+
+## Data Dashboard
+#### In the Interactive Data Dashboard project, students build dashboards that update as filters are applied, showing counts, averages, and breakdowns similar to dashboards they may encounter in real life, like Spotify playlists, Amazon filters, and school dashboards.
+
+
+---
+## Sample project
+
+<img src="https://images.code.org/e5e75f6dba393136310fc8866cf35c52-image-1768412595902.png" alt="sample project of a song surfer with artist, genre, and mood" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+
+#### **When Project Begins:** Final lesson of the unit
+
+#### The project extends over five class periods beginning in Lesson 11.
+
+
+## What success looks like
+
+#### **By the end, the students will:**
+- #### Build a working dashboard that filters and summarizes a dataset
+- #### Show applied filters and calculations with clear transparency cues
+- #### Refine categories and defaults to improve findability
+- #### Balance AI scaffolds and their own logic, documenting choices
+- #### Reflect on who/what is surfaced or hidden by filtering
+
+---
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how AI can support the web development process.
+
+## Now, let’s see how we get here! 
+
+#### We will start with loops! 
+
+
+MARKDOWN

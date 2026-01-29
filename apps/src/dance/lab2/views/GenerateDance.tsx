@@ -306,6 +306,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            id="generate-dance-button"
             ariaLabel={
               aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
             }
@@ -343,6 +344,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
       {aiGenerateState === 'listened' && (
         <div className={styles.buttonRow}>
           <Button
+            id="back-to-prompt-button"
             ariaLabel={'Back to prompt'}
             text={'Back to prompt'}
             type="secondary"
@@ -359,6 +361,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            id="regenerate-button"
             ariaLabel={'Regenerate'}
             text={'Regenerate'}
             type="secondary"
@@ -374,6 +377,7 @@ const GenerateDance: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <Button
+            id="use-code-button"
             ariaLabel={'Use code'}
             text={'Use code'}
             type="primary"

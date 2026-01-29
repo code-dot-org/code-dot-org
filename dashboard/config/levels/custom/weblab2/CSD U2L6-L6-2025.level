@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-09T19:24:37.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Using RGB Colors",
+    "long_instructions": "# Use An RGB Tool\r\n\r\nExperiment with a useful tool that gives you the RGB values for the colors you want.\r\n\r\n# Do This\r\n1) Watch the gif below to see how to use an RGB color tool\r\n\r\n![](https://images.code.org/a23228ae567635d1c32df93f7bd5a5f9-image-1767997134234.gif)\r\n\r\n2) Once you see how to use the tool to get the RGB color values you want, go into the stylesheet and use the tool to give color to the HTML elements on this page.",
+    "bubble_choice_description": "Add RGB colors to a website.",
+    "thumbnail_url": "https://images.code.org/3bac6caac33a537914df55d840e8b345-image-1588269048057.44.47 AM.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <!-- facts about color -->\n    <h1>Fun Facts About Color</h1>\n    \n    <h3>Pink soothes the nerves and is often used for anger management.</h3>\n    \n    <p>Pink has been known to suppress anger and anxiety and have an overall calming effect.</p>\n    \n    <h3>Worldwide blue is the most common favorite color.</h3>\n    \n    <p>Studies conducted by various global marketing firms show that blue is the most common favorite color worldwide, followed by purple.</p>\n    \n    <h3>Some people have a phobia of color.</h3>\n    \n    <p>Chromophobia, or chromatophobia, is an ongoing and irrational fear of colors that can have a negative impact on a person’s daily activities.</p>\n    \n    <h3>Yellow and red together make you hungry.</h3>\n    \n    <p>Fast food chains figured this out years ago and use this color combination over and over in branding, advertising and restaurant decor.</p>\n    \n    <h3>The color wheel was invented by Isaac Newton.</h3>\n    \n    <p>Around 1665 Isaac Newton used a prism to turn white light into a rainbow and identified seven colors. He felt the last color, indigo, was a recurrence of the first color, red and decided to arrange the colors in a circle.</p> \n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* 2) Once you see how to use the tool to get the RGB color values you want, use the tool to give color to the HTML elements on this page */\nbody {\n  background: white;\n}\nh1{\n  color: rgb( 0 , 0, 0);\n}\n  h3 {\n  color: rgb( 0 , 0 , 0);\n}\n  p {\n  color: rgb( 0 , 0, 0);\n  }",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n4/r+NIUC3J8zPSU2uRw=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-09 19:26:47 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 19:28:19 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 22:15:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-09 22:19:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

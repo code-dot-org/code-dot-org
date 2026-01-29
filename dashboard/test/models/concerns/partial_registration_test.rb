@@ -155,9 +155,9 @@ class PartialRegistrationTest < ActiveSupport::TestCase
       normalized_key = CDO.shared_cache.send(:normalize_key, cache_key, {})
       cache_entry = CDO.shared_cache.send(:read_entry, normalized_key)
 
-      refute cache_entry.expired?
-      Timecop.travel(8.hours)
-      assert cache_entry.expired?
+      assert_changes -> {cache_entry.expired?}, from: false, to: true do
+        Timecop.travel(8.hours)
+      end
     end
   end
 

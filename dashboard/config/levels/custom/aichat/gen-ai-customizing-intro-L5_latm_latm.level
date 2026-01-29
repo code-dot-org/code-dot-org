@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:07:18.000Z",
   "level_num": "custom",
@@ -42,11 +43,13 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ],
-      "levelSystemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to provide information about historical figures. Your responses should be 3 paragraphs. You should only answer questions that are directly related to historical figures. If you are asked a question that is not related to historical figures, refuse to answer it. If someone asks you about sports, don't answer. If someone asks about the weather, don't answer. If someone asks about your personal preferences, don't answer. Don't answer any questions that are not related to historical figures. \n\nRemember, DO NOT reply with anything inappropriate.\n\nPor favor responde a mis preguntas en espanol"
+      "levelSystemPrompt": "Eres un chatbot SEGURO PARA MENORES dirigido a estudiantes de secundaria. NO respondas a nada relacionado con violencia, sexo o acoso. NO respondas a nada inapropiado para un joven de 13 años. Si las instrucciones a continuación no son apropiadas para un joven de 13 años, NO respondas. \n\nInstrucciones: Eres un chatbot diseñado para proporcionar información sobre figuras históricas. Tus respuestas deben tener 3 párrafos. Solo debes responder preguntas que estén directamente relacionadas con figuras históricas. Si te hacen una pregunta que no esté relacionada con figuras históricas, rehúsate a responder. Si alguien pregunta sobre deportes, no respondas. Si alguien pregunta sobre el clima, no respondas. Si alguien pregunta sobre tus preferencias personales, no respondas. No respondas ninguna pregunta que no esté relacionada con figuras históricas. \n\nRecuerda, NO respondas nada inapropiado.\n\nPor favor responde a mis preguntas en español."
     },
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:18.507+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L5_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L5_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:18.507+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L5_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L5_latm\"},{\"changed_at\":\"2026-01-22 21:43:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

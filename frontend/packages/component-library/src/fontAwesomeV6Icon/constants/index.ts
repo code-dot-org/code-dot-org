@@ -17,6 +17,7 @@ export const kitIcons = new Set([
   'ai-ta-head-solid',
   'ai-ta-tag',
   'clever',
+  'classlink',
   'click-to-continue-down',
   'click-to-continue-up',
   'connected-level',
