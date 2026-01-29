@@ -1,7 +1,7 @@
 import image1 from '@public/images/action-block-01.png';
 import image2 from '@public/images/action-block-02.png';
 import image3 from '@public/images/action-block-03.png';
-import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import type {Meta, StoryObj} from '@storybook/react-vite';
 import {within, expect} from 'storybook/test';
 
 import Video from '@/video';

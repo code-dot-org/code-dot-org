@@ -3,7 +3,7 @@ import type {
   ButtonProps as MuiButtonProps,
   IconButtonProps as MuiIconButtonProps,
 } from '@mui/material';
-import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {Meta, StoryFn} from '@storybook/react-vite';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 

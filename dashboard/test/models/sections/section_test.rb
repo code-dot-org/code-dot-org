@@ -801,6 +801,7 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -834,6 +835,7 @@ class SectionTest < ActiveSupport::TestCase
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -966,6 +968,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1026,6 +1029,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1092,6 +1096,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1158,6 +1163,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1215,6 +1221,7 @@ class SectionTest < ActiveSupport::TestCase
         at_risk_age_gated_us_state: nil,
         avatar_color: nil,
         avatar_emoji: nil,
+        is_assigned_essential_ai_chat: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)

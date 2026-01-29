@@ -92,6 +92,7 @@
     "display_name": "Grades.ly",
     "bubble_choice_description": "Add code to this program to calculate a user's average grade.",
     "thumbnail_url": "https://images.code.org/b8236d1e9c0180eee9d9ed686da16837-image-1649997125497.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
