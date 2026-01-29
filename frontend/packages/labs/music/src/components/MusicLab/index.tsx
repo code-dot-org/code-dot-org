@@ -98,7 +98,10 @@ const MusicLab = () => {
   const redo = useCallback(() => driverRef.current.redo(), [driverRef]);
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
   const allowPackSelection = true;
-  const setPlaying: (_: boolean) => void = _ => {};
+  const setPlaying = useCallback(
+    (play: boolean) => driverRef.current.setPlaying(play),
+    [driverRef],
+  );
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
 
