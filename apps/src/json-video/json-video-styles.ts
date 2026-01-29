@@ -34,7 +34,7 @@ iframe { width: 100%; height: 100%; border: none; background-color: white; point
     position: absolute; bottom: 0; left: 0; right: 0;
     background: linear-gradient(transparent, rgba(0,0,0,0.9));
     display: flex; flex-direction: column; padding: 0 12px 8px 12px;
-    gap: 0; z-index: 20;
+    gap: 0;
     transition: opacity 0.2s ease-in-out;
 }
 :host([controls]) #controls-bar { opacity: 1; }
