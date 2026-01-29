@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
-  # TODO: how do we get the cached queries back to 0?
   def setup
     @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
     @multi_lesson_unit_group = create(:single_unit_course, unit: @multi_lesson_unit)
