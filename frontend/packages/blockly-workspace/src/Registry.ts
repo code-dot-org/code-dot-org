@@ -171,21 +171,22 @@ class Registry<T extends Environment = Environment> {
     }
 
     // Register extensions if we have never seen it before and it exists
-    blockDefinition.extensions = [...(blockDefinition.extensions || [])].map(
-      extension => {
-        if (typeof extension !== 'string' && 'extension' in extension) {
-          this.registerExtension(extension as Extension);
-          return extension.name;
-        }
+    blockDefinition.extensions = [
+      ...(blockDefinition.extensions || []),
+      ...(blockDefinition.mixins || []),
+    ].map(extension => {
+      if (typeof extension !== 'string' && 'extension' in extension) {
+        this.registerExtension(extension as Extension);
+        return extension.name;
+      }
 
-        if (typeof extension !== 'string' && 'mixin' in extension) {
-          this.registerMixin(extension as Mixin);
-          return extension.name;
-        }
+      if (typeof extension !== 'string' && 'mixin' in extension) {
+        this.registerMixin(extension as Mixin);
+        return extension.name;
+      }
 
-        return extension;
-      },
-    );
+      return extension;
+    });
 
     return block;
   }

@@ -1,4 +1,4 @@
-import type {Mutator} from '../types';
+import type {Mutator, Environment} from '../types';
 
 import type {
   BaseBlockDefinition,
@@ -13,22 +13,28 @@ import type {
  * Input type for defineBlock when a mutator is provided.
  * The mutator property is required and determines the block type for the generator.
  */
-type BlockDefinitionInputWithMutator<T extends Mutator> =
-  BaseBlockDefinition & {
-    mutator: T;
-    generator: {
-      javascript: JavascriptBlockGenerator<MutatorBlock<T>>;
-    };
+type BlockDefinitionInputWithMutator<
+  T extends Mutator,
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+> = BaseBlockDefinition & {
+  mutator: T;
+  generator: {
+    javascript: JavascriptBlockGenerator<MutatorBlock<T, B>, U>;
   };
+};
 
 /**
  * Input type for defineBlock when no mutator is provided.
  * The generator receives a standard BlockSvg.
  */
-type BlockDefinitionInputWithoutMutator = BaseBlockDefinition & {
+type BlockDefinitionInputWithoutMutator<
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+> = BaseBlockDefinition & {
   mutator?: undefined;
   generator: {
-    javascript: JavascriptBlockGenerator<BlockSvg>;
+    javascript: JavascriptBlockGenerator<B, U>;
   };
 };
 
@@ -72,18 +78,30 @@ type BlockDefinitionInputWithoutMutator = BaseBlockDefinition & {
  *   },
  * });
  */
-export function defineBlock<T extends Mutator>(
-  def: BlockDefinitionInputWithMutator<T>,
-): BlockDefinitionWithMutator<T>;
-export function defineBlock(
-  def: BlockDefinitionInputWithoutMutator,
-): BlockDefinitionWithoutMutator;
-export function defineBlock(
+export function defineBlock<
+  T extends Mutator,
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+>(
+  def: BlockDefinitionInputWithMutator<T, U, B>,
+): BlockDefinitionWithMutator<T, U, B>;
+export function defineBlock<
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+>(
+  def: BlockDefinitionInputWithoutMutator<U, B>,
+): BlockDefinitionWithoutMutator<U, B>;
+export function defineBlock<
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+>(
   def:
-    | BlockDefinitionInputWithMutator<Mutator>
-    | BlockDefinitionInputWithoutMutator,
-): BlockDefinitionWithMutator<Mutator> | BlockDefinitionWithoutMutator {
+    | BlockDefinitionInputWithMutator<Mutator, U, B>
+    | BlockDefinitionInputWithoutMutator<U, B>,
+):
+  | BlockDefinitionWithMutator<Mutator, U, B>
+  | BlockDefinitionWithoutMutator<U, B> {
   return def as
-    | BlockDefinitionWithMutator<Mutator>
-    | BlockDefinitionWithoutMutator;
+    | BlockDefinitionWithMutator<Mutator, U, B>
+    | BlockDefinitionWithoutMutator<U, B>;
 }

@@ -1,5 +1,6 @@
 import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
+import type {Environment} from '@code-dot-org/blockly-workspace';
 import {defineBlock} from '@code-dot-org/blockly-workspace';
 
 import imgAiBot from '../../assets/ai/ai-bot-mini-2.svg';
@@ -37,6 +38,11 @@ import {
   fieldTuneDefinition,
 } from '../fields';
 
+interface MusicLabEnvironment extends Environment {
+  /** Which top block is current generating */
+  generating?: string;
+}
+
 const whenRunSimple2 = defineBlock({
   type: BlockTypes.WHEN_RUN_SIMPLE2,
   message0: 'when run',
@@ -46,12 +52,16 @@ const whenRunSimple2 = defineBlock({
   tooltip: 'when run',
   helpUrl: '',
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      environment.generating = block.id;
       const nextBlock =
         block.nextConnection && block.nextConnection.targetBlock();
       const handlerCode = javascriptGenerator.blockToCode(nextBlock, false);
+      environment.generating = undefined;
+
       return `
       if (__context == 'when_run') {
+        log(Sequencer);
         Sequencer.newSequence();
         Sequencer.startFunctionContext('when_run');
         Sequencer.playSequential();
@@ -82,7 +92,12 @@ const triggeredAtSimple2 = defineBlock({
   tooltip: 'at trigger',
   helpUrl: DOCS_BASE_URL + 'trigger',
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       const id = block.getFieldValue(TRIGGER_FIELD);
       const nextBlock =
         block.nextConnection && block.nextConnection.targetBlock();
@@ -111,7 +126,13 @@ const playSoundAtCurrentLocationSimple2 = defineBlock({
   extensions: [fieldSoundsValidatorExtension],
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
+      console.log('generating', block);
       return `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
         block.id
       }");\n`;
@@ -132,7 +153,12 @@ const playPatternAtCurrentLocationSimple2 = defineBlock({
   extensions: [fieldPatternsValidatorExtension],
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return `Sequencer.playPattern(${JSON.stringify(
         block.getFieldValue(FIELD_PATTERN_NAME),
       )}, "${block.id}");`;
@@ -162,7 +188,12 @@ const playPatternAiAtCurrentLocationSimple2 = defineBlock({
   extensions: [fieldPatternsValidatorExtension],
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return `Sequencer.playPattern(${JSON.stringify(
         block.getFieldValue(FIELD_PATTERN_AI_NAME),
       )}, "${block.id}");`;
@@ -182,7 +213,12 @@ const playChordAtCurrentLocationSimple2 = defineBlock({
   helpUrl: DOCS_BASE_URL + 'play_keys',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return `Sequencer.playChord(${JSON.stringify(
         block.getFieldValue(FIELD_CHORD_NAME),
       )},  "${block.id}");`;
@@ -202,7 +238,12 @@ const playTuneAtCurrentLocationSimple2 = defineBlock({
   helpUrl: DOCS_BASE_URL + 'play_tune',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return `Sequencer.playTune(${JSON.stringify(
         block.getFieldValue(FIELD_TUNE_NAME),
       )},  "${block.id}");`;
@@ -222,7 +263,12 @@ const playRestAtCurrentLocationSimple2 = defineBlock({
   helpUrl: DOCS_BASE_URL + 'rest',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return `Sequencer.rest(${block.getFieldValue(FIELD_REST_DURATION_NAME)});`;
     },
   },
@@ -251,7 +297,12 @@ const setEffectAtCurrentLocationSimple2 = defineBlock({
   helpUrl: DOCS_BASE_URL + 'set_effect',
   extensions: [fieldEffectsExtension],
   generator: {
-    javascript(block) {
+    javascript(block, _javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       const effectName = block.getFieldValue(FIELD_EFFECTS_NAME);
       const effectValue = block.getFieldValue(FIELD_EFFECTS_VALUE);
       return `Sequencer.setEffect('${effectName}', '${effectValue}');`;
@@ -277,7 +328,12 @@ const playSoundsTogether = defineBlock({
   helpUrl: DOCS_BASE_URL + 'play_together',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return ` Sequencer.playTogether();
         ${javascriptGenerator.statementToCode(block, 'code')}
         Sequencer.endTogether();
@@ -303,7 +359,12 @@ const playSoundsTogetherNoNext = defineBlock({
   helpUrl: DOCS_BASE_URL + 'play_together',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return ` Sequencer.playTogether();
         ${javascriptGenerator.statementToCode(block, 'code')}
         Sequencer.endTogether();
@@ -331,7 +392,12 @@ const playSoundsSequential = defineBlock({
   helpUrl: DOCS_BASE_URL + 'play_sequential',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       return ` Sequencer.playSequential();
         ${javascriptGenerator.statementToCode(block, 'code')}
         Sequencer.endSequential();
@@ -358,7 +424,12 @@ const playSoundsRandom = defineBlock({
   helpUrl: DOCS_BASE_URL + 'play_random',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       const resultArray = [];
       let currentBlock = block.getInputTargetBlock('code');
       while (currentBlock) {
@@ -416,7 +487,12 @@ const repeatSimple2 = defineBlock({
   helpUrl: DOCS_BASE_URL + 'repeat',
   mutator: nextConnectionMutator,
   generator: {
-    javascript(block, javascriptGenerator) {
+    javascript(block, javascriptGenerator, environment: MusicLabEnvironment) {
+      if (!environment.generating) {
+        // Ignore generating unless it is within a top block
+        return '';
+      }
+
       const repeats = block.getFieldValue('times');
 
       let branch = javascriptGenerator.statementToCode(block, 'code');

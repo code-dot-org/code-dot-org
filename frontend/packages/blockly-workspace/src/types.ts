@@ -46,7 +46,7 @@ export type LegacyProcedureBlock = ProcedureBlock & {
  * Our encapsulation of block mixins, which just add methods and properties to
  * particular block types.
  */
-export interface Mixin {
+export interface Mixin<T extends object = object> {
   /** The unique name of the mixin which can be referenced from other blocks. */
   name: string;
   /**
@@ -57,7 +57,7 @@ export interface Mixin {
    * the Blockly environment info which is then accessible by the block's
    * mixin methods.
    */
-  mixin: object;
+  mixin: T;
 }
 
 /**

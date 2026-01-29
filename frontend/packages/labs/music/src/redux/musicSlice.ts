@@ -39,9 +39,9 @@ export interface MusicState {
   /** The current 1-based playhead position, scaled to measures */
   currentPlayheadPosition: number;
   /** The ID of the currently selected block, or undefined if no block is selected */
-  selectedBlockId: string | undefined;
+  selectedBlockId?: string;
   /** The trigger ID of the currently selected trigger block, or undefined if no trigger block is selected */
-  selectedTriggerId: string | undefined;
+  selectedTriggerId?: string;
   /** If the timeline should be positioned at the top above the workspace */
   timelineAtTop: boolean;
   /** If instructions should be shown */
@@ -132,14 +132,17 @@ const musicSlice = createSlice({
     // If undefined is provided, we'll unselect all blocks.
     // During playback, we are dynamically highlighting blocks which overrides
     // the selection, so just do nothing here.
-    selectBlockId: (state, action: PayloadAction<string>) => {
+    selectBlockId: (state, action: PayloadAction<string | undefined>) => {
       if (state.isPlaying) {
+        console.log('skipping');
         return;
       }
 
       if (state.selectedBlockId === action.payload) {
+        console.log('setting state to', undefined);
         state.selectedBlockId = undefined;
       } else {
+        console.log('setting state to', action.payload);
         state.selectedBlockId = action.payload;
       }
     },

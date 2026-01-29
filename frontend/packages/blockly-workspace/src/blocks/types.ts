@@ -136,8 +136,9 @@ export interface BlockSvg<T extends Environment = Environment>
   isWithinHiddenWorkspace(): boolean;
 }
 
-export type MutatorBlock<T> =
-  T extends Mutator<infer _S, infer U> ? BlockSvg & U : BlockSvg;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type MutatorBlock<T, B extends BlockSvg<any> = BlockSvg> =
+  T extends Mutator<infer _S, infer U> ? B & U : B;
 
 /**
  * Specifically a block with the procedure mixin methods.
@@ -155,14 +156,16 @@ export type BlockGenerator<
 > = (
   block: B,
   generator: T,
-  environment?: U,
+  environment: U,
 ) => string | [string, number] | null;
 
 /**
  * The code generation function specific for Javascript generators.
  */
-export type JavascriptBlockGenerator<B extends BlockSvg = BlockSvg> =
-  BlockGenerator<B, JavascriptGenerator>;
+export type JavascriptBlockGenerator<
+  B extends BlockSvg = BlockSvg,
+  U extends Environment = Environment,
+> = BlockGenerator<B, JavascriptGenerator, U>;
 
 /**
  * Describes a custom block.
@@ -205,32 +208,41 @@ export interface BaseBlockDefinition {
   message3?: string;
   /** The fourth set of interactive arguments */
   args3?: BlockArgDefinition[];
-  /** Extensions / Mixins to add to this particular block type. */
-  extensions?: (string | Extension | Mixin)[];
+  /** Extensions to add to this particular block type. */
+  extensions?: (string | Extension)[];
+  /** Mixins to add properties and methods to the Block instance inside generators. */
+  mixins?: Mixin[];
 }
 
-export interface BlockDefinitionWithMutator<T extends Mutator>
-  extends BaseBlockDefinition {
+export interface BlockDefinitionWithMutator<
+  T extends Mutator,
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+> extends BaseBlockDefinition {
   /** A mutator to apply to this particular type of block. */
   mutator: T;
   /** The function that generates code for this block. */
   generator: {
-    javascript: JavascriptBlockGenerator<MutatorBlock<T>>;
+    javascript: JavascriptBlockGenerator<MutatorBlock<T, B>, U>;
   };
 }
 
-export interface BlockDefinitionWithoutMutator extends BaseBlockDefinition {
+export interface BlockDefinitionWithoutMutator<
+  U extends Environment = Environment,
+  B extends BlockSvg<U> = BlockSvg<U>,
+> extends BaseBlockDefinition {
   /** A mutator to apply to this particular type of block. */
   mutator?: never;
   /** The function that generates code for this block. */
   generator: {
-    javascript: JavascriptBlockGenerator<BlockSvg>;
+    javascript: JavascriptBlockGenerator<B, U>;
   };
 }
 
-export type BlockDefinition<T extends Mutator = Mutator> =
-  | BlockDefinitionWithMutator<T>
-  | BlockDefinitionWithoutMutator;
+export type BlockDefinition<
+  T extends Mutator = Mutator,
+  U extends Environment = Environment,
+> = BlockDefinitionWithMutator<T, U> | BlockDefinitionWithoutMutator<U>;
 
 /**
  * An older block definition that might be supplied which just has an init

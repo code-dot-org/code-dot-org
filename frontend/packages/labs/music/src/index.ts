@@ -2,3 +2,4 @@
 import './index.css';
 
 export {default as MusicRegistry} from './MusicRegistry';
+export * from './api';
