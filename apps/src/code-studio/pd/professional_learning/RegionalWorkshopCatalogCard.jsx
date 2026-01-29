@@ -68,7 +68,7 @@ const RegionalWorkshopCatalogCard = ({
         workshop_subject: subject,
         workshop_format: format,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     navigateToHref(`/professional-learning/workshops/${id}`);
   };
