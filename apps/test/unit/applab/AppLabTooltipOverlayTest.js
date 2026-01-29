@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
@@ -70,11 +71,9 @@ describe('AppLabTooltipOverlay', () => {
   it('shows coordinates for the current mouse position', () => {
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    expect(
-      screen.getByText(
-        `x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`
-      )
-    ).toBeInTheDocument();
+    screen.getByText(
+      `x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`
+    );
   });
 
   it('shows coordinates for the drag drop point when dragging', () => {
@@ -87,44 +86,42 @@ describe('AppLabTooltipOverlay', () => {
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    expect(
-      screen.getByText(
-        `x: ${Math.round(DROP_POINT_X)}, y: ${Math.round(DROP_POINT_Y)}`
-      )
-    ).toBeInTheDocument();
+    screen.getByText(
+      `x: ${Math.round(DROP_POINT_X)}, y: ${Math.round(DROP_POINT_Y)}`
+    );
   });
 
-  it('shows the element id when hovering an applab design element', () => {
+  it('shows the element id when hovering an applab design element', async () => {
     const {testDesignElement} = buildCrosshairDom({controlTagName: 'button'});
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    fireEvent.mouseMove(testDesignElement);
+    await userEvent.hover(testDesignElement);
 
-    expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
+    screen.getByText(`id: ${CONTROL_ID}`);
   });
 
-  it('shows the element id when hovering a resize handle', () => {
+  it('shows the element id when hovering a resize handle', async () => {
     const {resizeHandle} = buildCrosshairDom({includeResizeHandle: true});
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    fireEvent.mouseMove(resizeHandle);
+    await userEvent.hover(resizeHandle);
 
-    expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
+    screen.getByText(`id: ${CONTROL_ID}`);
   });
 
-  it('shows the screen id when hovering an applab screen', () => {
+  it('shows the screen id when hovering an applab screen', async () => {
     const {testScreen} = buildCrosshairDom();
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    fireEvent.mouseMove(testScreen);
+    await userEvent.hover(testScreen);
 
-    expect(screen.getByText(`id: ${SCREEN_ID}`)).toBeInTheDocument();
+    screen.getByText(`id: ${SCREEN_ID}`);
   });
 
-  it('shows the unprefixed id in design mode for a generic element', () => {
+  it('shows the unprefixed id in design mode for a generic element', async () => {
     const DESIGN_PREFIX = 'design_';
     const {testDesignElement} = buildCrosshairDom({
       controlId: `${DESIGN_PREFIX}${CONTROL_ID}`,
@@ -133,8 +130,8 @@ describe('AppLabTooltipOverlay', () => {
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} isInDesignMode={true} />);
 
-    fireEvent.mouseMove(testDesignElement);
+    await userEvent.hover(testDesignElement);
 
-    expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
+    screen.getByText(`id: ${CONTROL_ID}`);
   });
 });
