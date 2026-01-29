@@ -41,7 +41,7 @@ describe('InitialSectionCreationInterstitial', () => {
     expect(analyticsSpy.mock.calls[1]).toEqual([
       EVENTS.SECTION_SETUP_STARTED,
       {},
-      PLATFORMS.BOTH,
+      PLATFORMS.STATSIG,
     ]);
 
     analyticsSpy.mockRestore();
