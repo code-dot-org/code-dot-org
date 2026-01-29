@@ -256,16 +256,17 @@ class LtiV1Controller < ApplicationController
     honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: reason,
+        reason:,
         details: message,
       }
     )
     Clients::LtiLogger.log_event(
       message,
       {
-        reason: reason,
-        status: status,
-        error: error,
+        reason:,
+        status:,
+        error:,
+        honeybadger_id:,
       }
     )
     @lti_section_sync_result = {error: error, message: message}
