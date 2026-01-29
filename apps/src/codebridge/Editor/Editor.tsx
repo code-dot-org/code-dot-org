@@ -1,4 +1,6 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {setCspViolations} from '@codebridge/redux/workspaceRedux';
 import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import {linter, lintGutter} from '@codemirror/lint';
@@ -43,7 +45,14 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
   });
+  const cspViolations = useAppSelector(
+    state => state.codebridgeWorkspace.cspViolations
+  );
   const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    console.log('CSP Violations in Editor:', cspViolations);
+  }, [cspViolations]);
 
   const onChange = useCallback(
     (value: string) => {
@@ -113,6 +122,32 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
   return (
     <div className={moduleStyles.editorContainer}>
+      {cspViolations.length > 0 && (
+        <Alert
+          className={moduleStyles.cspViolationAlert}
+          text={
+            <>
+              <div>
+                The following image(s) isn't from an approved source:
+                <ul>
+                  {cspViolations.map(violation => (
+                    <li key={violation.displayedURI || violation.blockedURI}>
+                      {violation.displayedURI || violation.blockedURI}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                Upload the image file to your project or replace with a URL from
+                an approved image source. <strong>See approved sources.</strong>
+              </div>
+            </>
+          }
+          type="danger"
+          size="xs"
+          onClose={() => dispatch(setCspViolations([]))}
+        />
+      )}
       {file ? (
         <CodeEditor
           key={`${file.id}/${1}`}

@@ -1,8 +1,9 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
+import {setCspViolations} from '@codebridge/redux/workspaceRedux';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -122,6 +123,9 @@ export const HTMLPreview: React.FC = () => {
     PreviewViewMode.DESKTOP
   );
   const [isStopped, setIsStopped] = useState<boolean>(false);
+  const cspViolations = useAppSelector(
+    state => state.codebridgeWorkspace.cspViolations
+  );
   const isPredictLevel = levelProperties?.predictSettings?.isPredictLevel;
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
@@ -130,6 +134,36 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
+
+  const shortenURL = useCallback((url: string) => {
+    try {
+      const urlObj = new URL(url);
+      const hostname = urlObj.hostname;
+      const pathname = urlObj.pathname;
+      if (pathname === '/' || pathname === '') {
+        return hostname; // No path, just return hostname
+      }
+      // Get first directory after hostname
+      const pathParts = pathname.split('/').filter(part => part !== '');
+      if (pathParts.length === 0) {
+        return hostname;
+      }
+      // Return hostname plus path to next forward slash
+      return `${hostname}/${pathParts[0]}`;
+    } catch {
+      // If URL parsing fails, try to extract manually
+      const withoutProtocol = url.replace(/^https?:\/\//, '');
+      const parts = withoutProtocol.split('/').filter(part => part !== '');
+      if (parts.length === 0) {
+        return url; // Fallback to original
+      }
+      if (parts.length === 1) {
+        return parts[0]; // Just hostname
+      }
+      // Return hostname plus first directory
+      return `${parts[0]}/${parts[1]}`;
+    }
+  }, []);
 
   useEffect(() => {
     if (aiFilePathToPreview) {
@@ -294,6 +328,22 @@ export const HTMLPreview: React.FC = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logWarning('Service worker unavailable in HTMLPreview iframe.');
+      } else if (event.data.type === IframeMessageType.CSP_VIOLATION) {
+        // Dispatch the violation to Redux so it can be displayed in the Editor
+        const blockedURI = event.data.violation?.blockedURI;
+        console.log('CSP Violation in HTMLPreview:', blockedURI);
+        if (
+          blockedURI &&
+          !cspViolations.some(v => v.blockedURI === blockedURI)
+        ) {
+          const shortURL = shortenURL(blockedURI) + '...';
+          dispatch(
+            setCspViolations([
+              ...cspViolations,
+              {blockedURI, displayedURI: shortURL},
+            ])
+          );
+        }
       }
     };
 
@@ -305,6 +355,9 @@ export const HTMLPreview: React.FC = () => {
     navigationHistory,
     navigationHistoryIndex,
     debouncedSource,
+    dispatch,
+    cspViolations,
+    shortenURL,
   ]);
 
   useEffect(() => {

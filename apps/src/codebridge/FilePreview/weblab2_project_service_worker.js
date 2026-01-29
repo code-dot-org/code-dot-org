@@ -265,10 +265,7 @@ function main() {
       "          type: '" +
       CSP_VIOLATION +
       "'," +
-      '          directive: e.violatedDirective,' +
       '          blockedURI: e.blockedURI,' +
-      '          sourceFile: e.sourceFile,' +
-      '          lineNumber: e.lineNumber,' +
       '        });' +
       '' +
       '        setTimeout(function() {' +

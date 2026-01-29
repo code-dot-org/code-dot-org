@@ -124,8 +124,16 @@ const InnerHTMLPreview = () => {
         event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
       ) {
         // CSP violations are handled inline within the iframe in the preview.
-        // We also display an alert in the code workspace.
-        console.log('CSP Violation detected:', event.data);
+        // Forward the violation to the parent window for workspace alerts
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.CSP_VIOLATION,
+            violation: {
+              blockedURI: event.data.blockedURI,
+            },
+          },
+          parentOrigin
+        );
       }
     };
     return () => {
