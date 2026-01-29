@@ -10700,7 +10700,21 @@ indexes:
     type: 
     using: :btree
     comment: 
-  lesson_feedbacks: []
+  lesson_feedbacks:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lesson_feedbacks
+    name: index_lesson_feedbacks_on_lesson_student
+    unique: true
+    columns:
+    - lesson_id
+    - student_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   lesson_groups:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_groups
@@ -15053,7 +15067,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260120193121
+version: 20260128232147
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
