@@ -48,12 +48,6 @@ end
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
-CDO.stubs(override_pegasus: nil)
-CDO.stubs(override_dashboard: nil)
-
-Dashboard::Application.routes.default_url_options = {protocol: 'https', host: CDO.dashboard_hostname, port: nil}
-Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options
-Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_options
 
 require 'rails/test_help'
 
@@ -84,12 +78,6 @@ class ActiveSupport::TestCase
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
     Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
-
-    CDO.stubs(override_pegasus: nil)
-    CDO.stubs(override_dashboard: nil)
-
-    url_protocol = Dashboard::Application.routes.default_url_options[:protocol]
-    CDO.stubs(default_scheme: "#{url_protocol}:") if url_protocol.present?
 
     set_env :test
 
@@ -636,9 +624,8 @@ class ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    app_url_options = Dashboard::Application.routes.default_url_options
-    host! app_url_options[:host]
-    https! if app_url_options[:protocol].to_s.include?('https')
+    https!
+    host! Dashboard::Application.routes.default_url_options[:host]
   end
 
   def signed_in_user_id
