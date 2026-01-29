@@ -31,24 +31,24 @@ describe('AppLabTooltipOverlay', () => {
     crosshairContainer = document.createElement('div');
     crosshairContainer.className = 'withCrosshair';
 
-    const fakeScreen = document.createElement('div');
-    fakeScreen.className = 'screen';
-    fakeScreen.id = SCREEN_ID;
-    crosshairContainer.appendChild(fakeScreen);
+    const testScreen = document.createElement('div');
+    testScreen.className = 'screen';
+    testScreen.id = SCREEN_ID;
+    crosshairContainer.appendChild(testScreen);
 
     const testDesignElement = document.createElement(controlTagName);
     testDesignElement.id = controlId;
-    fakeScreen.appendChild(testDesignElement);
+    testScreen.appendChild(testDesignElement);
 
     let resizeHandle = null;
     if (includeResizeHandle) {
       resizeHandle = document.createElement('div');
       resizeHandle.className = 'ui-resizable-handle';
-      fakeScreen.appendChild(resizeHandle);
+      testScreen.appendChild(resizeHandle);
     }
 
     document.body.appendChild(crosshairContainer);
-    return {testDesignElement, fakeScreen, resizeHandle};
+    return {testDesignElement, testScreen, resizeHandle};
   };
 
   beforeEach(() => {
@@ -115,11 +115,11 @@ describe('AppLabTooltipOverlay', () => {
   });
 
   it('shows the screen id when hovering an applab screen', () => {
-    const {fakeScreen} = buildCrosshairDom();
+    const {testScreen} = buildCrosshairDom();
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    fireEvent.mouseMove(fakeScreen);
+    fireEvent.mouseMove(testScreen);
 
     expect(screen.getByText(`id: ${SCREEN_ID}`)).toBeInTheDocument();
   });
