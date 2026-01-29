@@ -1,156 +1,105 @@
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
-
-// ES5-style require necessary to stub gridUtils.draggedElementDropPoint
-var gridUtils = require('@cdo/apps/applab/gridUtils');
+import * as gridUtils from '@cdo/apps/applab/gridUtils';
 
 describe('AppLabTooltipOverlay', () => {
-  const TEST_APP_WIDTH = 100 * Math.random(),
-    TEST_APP_HEIGHT = 100 * Math.random(),
-    TEST_MOUSE_X = 100 * Math.random(),
-    TEST_MOUSE_Y = 100 * Math.random(),
-    TEST_PROPS = {
-      width: TEST_APP_WIDTH,
-      height: TEST_APP_HEIGHT,
-      mouseX: TEST_MOUSE_X,
-      mouseY: TEST_MOUSE_Y,
-      isInDesignMode: false,
-    };
-  var result, stubDraggedElementDropPoint;
+  const TEST_APP_WIDTH = 200;
+  const TEST_APP_HEIGHT = 150;
+  const TEST_MOUSE_X = 45.2;
+  const TEST_MOUSE_Y = 89.7;
+  const TEST_PROPS = {
+    width: TEST_APP_WIDTH,
+    height: TEST_APP_HEIGHT,
+    mouseX: TEST_MOUSE_X,
+    mouseY: TEST_MOUSE_Y,
+    isInDesignMode: false,
+  };
+
+  const CONTROL_ID = 'fake-id';
+  const SCREEN_ID = 'screen-id';
+
+  let stubDraggedElementDropPoint;
+  let crosshairContainer;
+
+  const buildCrosshairDom = () => {
+    crosshairContainer = document.createElement('div');
+    crosshairContainer.className = 'withCrosshair';
+
+    const fakeScreen = document.createElement('div');
+    fakeScreen.className = 'screen';
+    fakeScreen.id = SCREEN_ID;
+    crosshairContainer.appendChild(fakeScreen);
+
+    const fakeElement = document.createElement('div');
+    fakeElement.id = CONTROL_ID;
+    fakeScreen.appendChild(fakeElement);
+
+    document.body.appendChild(crosshairContainer);
+    return {fakeElement, fakeScreen};
+  };
 
   beforeEach(() => {
     stubDraggedElementDropPoint = jest
       .spyOn(gridUtils, 'draggedElementDropPoint')
       .mockClear()
       .mockImplementation();
+    stubDraggedElementDropPoint.mockReturnValue(null);
   });
 
   afterEach(() => {
     stubDraggedElementDropPoint.mockRestore();
+    if (crosshairContainer) {
+      crosshairContainer.remove();
+      crosshairContainer = null;
+    }
   });
 
-  describe('when not dragging', () => {
-    beforeEach(() => {
-      stubDraggedElementDropPoint.mockReturnValue(null);
-      result = shallow(<AppLabTooltipOverlay {...TEST_PROPS} />);
-    });
+  it('shows coordinates for the current mouse position', () => {
+    render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    it('renders a TooltipOverlay', () => {
-      var props = result.find('TooltipOverlay').props();
-      expect(props.width).toBe(TEST_APP_WIDTH);
-      expect(props.height).toBe(TEST_APP_HEIGHT);
-    });
-
-    it('renders with unmodified position', () => {
-      var props = result.find('TooltipOverlay').props();
-      expect(props.mouseX).toBe(TEST_MOUSE_X);
-      expect(props.mouseY).toBe(TEST_MOUSE_Y);
-    });
-
-    it('renders tooltip below cursor', () => {
-      var props = result.find('TooltipOverlay').props();
-      expect(props.tooltipAboveCursor).toBe(false);
-    });
-
-    it('always has a provider that returns current coordinate text', () => {
-      expect(result.props().providers.length).toBe(1);
-      expect(result.props().providers[0]).toBeInstanceOf(Function);
-      expect(result.props().providers[0](result.props())).toBe(
+    expect(
+      screen.getByText(
         `x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`
-      );
-    });
+      )
+    ).toBeInTheDocument();
   });
 
-  describe('when dragging', () => {
-    const DROP_POINT_X = 42,
-      DROP_POINT_Y = 43;
-
-    beforeEach(() => {
-      stubDraggedElementDropPoint.mockReturnValue({
-        left: DROP_POINT_X,
-        top: DROP_POINT_Y,
-      });
-      result = shallow(<AppLabTooltipOverlay {...TEST_PROPS} />);
+  it('shows coordinates for the drag drop point when dragging', () => {
+    const DROP_POINT_X = 42;
+    const DROP_POINT_Y = 43;
+    stubDraggedElementDropPoint.mockReturnValue({
+      left: DROP_POINT_X,
+      top: DROP_POINT_Y,
     });
 
-    it('renders with overridden position', () => {
-      var props = result.find('TooltipOverlay').props();
-      expect(props.mouseX).toBe(DROP_POINT_X);
-      expect(props.mouseY).toBe(DROP_POINT_Y);
-    });
+    render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    it('renders tooltip above cursor', () => {
-      var props = result.find('TooltipOverlay').props();
-      expect(props.tooltipAboveCursor).toBe(true);
-    });
-
-    it('gives modified position to coordinates provider', () => {
-      expect(result.props().providers[0]).toBeInstanceOf(Function);
-      expect(result.props().providers[0](result.props())).toBe(
-        `x: ${Math.floor(DROP_POINT_X)}, y: ${Math.floor(DROP_POINT_Y)}`
-      );
-    });
+    expect(
+      screen.getByText(
+        `x: ${Math.round(DROP_POINT_X)}, y: ${Math.round(DROP_POINT_Y)}`
+      )
+    ).toBeInTheDocument();
   });
 
-  describe('when over an applab control', () => {
-    const CONTROL_ID = 'fake-id';
-    const SCREEN_ID = 'screen-id';
-    let fakeElement, fakeScreen, fakeContainer;
+  it('shows the element id when hovering an applab control', () => {
+    const {fakeElement} = buildCrosshairDom();
 
-    beforeEach(() => {
-      // Create a container for the screen
-      fakeContainer = document.createElement('div');
-      fakeContainer.className = 'withCrosshair';
+    render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-      // Create an element on the screen
-      fakeScreen = document.createElement('div');
-      fakeScreen.className = 'screen';
-      fakeScreen.id = SCREEN_ID;
-      fakeContainer.appendChild(fakeScreen);
+    fireEvent.mouseMove(fakeElement);
 
-      fakeElement = document.createElement('div');
-      fakeElement.id = CONTROL_ID;
-      fakeScreen.appendChild(fakeElement);
-    });
+    expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
+  });
 
-    describe('over an applab button', () => {
-      beforeEach(() => {
-        var appLabTooltipOverlay = mount(
-          <AppLabTooltipOverlay {...TEST_PROPS} />
-        );
-        appLabTooltipOverlay.instance().onMouseMove({target: fakeElement});
-        appLabTooltipOverlay.update();
-        result = appLabTooltipOverlay.find('TooltipOverlay');
-      });
+  it('shows the screen id when hovering an applab screen', () => {
+    const {fakeScreen} = buildCrosshairDom();
 
-      it('has a second provider that returns the element ID', () => {
-        expect(result.props().providers.length).toBe(2);
-        expect(result.props().providers[1]).toBeInstanceOf(Function);
-        expect(result.props().providers[1](result.props)).toBe(
-          `id: ${CONTROL_ID}`
-        );
-      });
-    });
+    render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    describe('over an applab screen', () => {
-      beforeEach(() => {
-        var appLabTooltipOverlay = mount(
-          <AppLabTooltipOverlay {...TEST_PROPS} />
-        );
-        appLabTooltipOverlay.instance().onMouseMove({target: fakeScreen});
-        appLabTooltipOverlay.update();
-        result = appLabTooltipOverlay.find('TooltipOverlay');
-      });
+    fireEvent.mouseMove(fakeScreen);
 
-      it('has a second provider that returns the screen ID', () => {
-        expect(result.props().providers.length).toBe(2);
-        expect(result.props().providers[1]).toBeInstanceOf(Function);
-        expect(result.props().providers[1](result.props)).toBe(
-          `id: ${SCREEN_ID}`
-        );
-      });
-    });
+    expect(screen.getByText(`id: ${SCREEN_ID}`)).toBeInTheDocument();
   });
 });
