@@ -13,6 +13,7 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
+const CSP_VIOLATION = 'CSP_VIOLATION';
 
 function main() {
   let filesData = {};
@@ -113,7 +114,14 @@ function main() {
         }
         return await fetch(fetchUrl);
       }
-      return new Response(content, {
+
+      // For HTML files, inject CSP violation listener script
+      var modifiedContent = content;
+      if (mimeType === 'text/html') {
+        modifiedContent = injectCSPViolationListener(content);
+      }
+
+      return new Response(modifiedContent, {
         status: 200,
         headers: {
           'Content-Type': mimeType,
@@ -132,6 +140,163 @@ function main() {
         },
       });
     }
+  }
+
+  // Inject a script into HTML to listen for CSP violations and show inline error messages
+  function injectCSPViolationListener(htmlContent) {
+    var cspListenerScript =
+      '<style>' +
+      '.csp-blocked-image-container {' +
+      '  display: inline-block;' +
+      '  border: 2px solid #ffc107;' +
+      '  background-color: #fff3cd;' +
+      '  padding: 8px 10px;' +
+      '  border-radius: 4px;' +
+      '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;' +
+      '  max-width: 100%;' +
+      '  min-width: 300px;' +
+      '  box-sizing: border-box;' +
+      '}' +
+      '.csp-blocked-image-header {' +
+      '  display: flex;' +
+      '  align-items: center;' +
+      '  gap: 6px;' +
+      '  margin-bottom: 4px;' +
+      '  font-weight: bold;' +
+      '  color: #856404;' +
+      '  font-size: 13px;' +
+      '}' +
+      '.csp-blocked-image-icon {' +
+      '  font-size: 16px;' +
+      '  flex-shrink: 0;' +
+      '}' +
+      '.csp-blocked-image-details {' +
+      '  font-size: 11px;' +
+      '  color: #856404;' +
+      '  line-height: 1.3;' +
+      '  margin-bottom: 4px;' +
+      '}' +
+      '.csp-blocked-image-url {' +
+      '  background-color: rgba(0, 0, 0, 0.1);' +
+      '  padding: 3px 5px;' +
+      '  border-radius: 3px;' +
+      '  font-family: monospace;' +
+      '  font-size: 10px;' +
+      '  display: block;' +
+      '  word-break: break-all;' +
+      '}' +
+      '</style>' +
+      '<script>' +
+      '(function() {' +
+      "  var channel = new BroadcastChannel('" +
+      PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL +
+      "');" +
+      '  var reportedViolations = new Set();' +
+      '  var imageUrlToElements = new Map();' +
+      '' +
+      '  function replaceImageWithError(img, blockedURL) {' +
+      '    if (img.hasAttribute("data-csp-replaced")) return;' +
+      '    img.setAttribute("data-csp-replaced", "true");' +
+      '' +
+      '    var container = document.createElement("div");' +
+      '    container.className = "csp-blocked-image-container";' +
+      '' +
+      '    var computedStyle = window.getComputedStyle(img);' +
+      '    var width = img.width || parseInt(computedStyle.width) || 300;' +
+      '    if (width > 0) {' +
+      '      container.style.maxWidth = Math.max(width, 300) + "px";' +
+      '    }' +
+      '' +
+      '    if (computedStyle.display === "block") {' +
+      '      container.style.display = "block";' +
+      '    }' +
+      '' +
+      '    var header = document.createElement("div");' +
+      '    header.className = "csp-blocked-image-header";' +
+      '    header.innerHTML = ' +
+      '      \'<span class="csp-blocked-image-icon">\\u26A0\\uFE0F</span>\' +' +
+      "      '<span>Image URL Not Allowed</span>';" +
+      '' +
+      '    var details = document.createElement("div");' +
+      '    details.className = "csp-blocked-image-details";' +
+      '    details.textContent = "This image cannot be loaded because its URL is not on the allowlist.";' +
+      '' +
+      '    var urlDisplay = document.createElement("code");' +
+      '    urlDisplay.className = "csp-blocked-image-url";' +
+      '    urlDisplay.textContent = blockedURL;' +
+      '' +
+      '    container.appendChild(header);' +
+      '    container.appendChild(details);' +
+      '    container.appendChild(urlDisplay);' +
+      '' +
+      '    if (img.parentNode) {' +
+      '      img.parentNode.replaceChild(container, img);' +
+      '    }' +
+      '  }' +
+      '' +
+      '  function findAndReplaceImage(blockedURL) {' +
+      '    var images = document.querySelectorAll("img");' +
+      '    for (var i = 0; i < images.length; i++) {' +
+      '      var img = images[i];' +
+      '      var imgSrc = img.src || img.getAttribute("src") || "";' +
+      '      if (imgSrc && (imgSrc === blockedURL || imgSrc.indexOf(blockedURL) !== -1 || blockedURL.indexOf(imgSrc) !== -1)) {' +
+      '        replaceImageWithError(img, blockedURL);' +
+      '        return;' +
+      '      }' +
+      '    }' +
+      '  }' +
+      '' +
+      '  document.addEventListener("error", function(e) {' +
+      '    if (e.target && e.target.tagName === "IMG") {' +
+      '      var img = e.target;' +
+      '      var src = img.src || img.getAttribute("src");' +
+      '      if (src && !imageUrlToElements.has(src)) {' +
+      '        imageUrlToElements.set(src, img);' +
+      '      }' +
+      '    }' +
+      '  }, true);' +
+      '' +
+      "  document.addEventListener('securitypolicyviolation', function(e) {" +
+      "    if (e.violatedDirective.startsWith('img-src')) {" +
+      "      var violationKey = e.blockedURI + ':' + e.sourceFile;" +
+      '      if (!reportedViolations.has(violationKey)) {' +
+      '        reportedViolations.add(violationKey);' +
+      '        channel.postMessage({' +
+      "          type: '" +
+      CSP_VIOLATION +
+      "'," +
+      '          directive: e.violatedDirective,' +
+      '          blockedURI: e.blockedURI,' +
+      '          sourceFile: e.sourceFile,' +
+      '          lineNumber: e.lineNumber,' +
+      '        });' +
+      '' +
+      '        setTimeout(function() {' +
+      '          findAndReplaceImage(e.blockedURI);' +
+      '        }, 100);' +
+      '      }' +
+      '    }' +
+      '  });' +
+      '})();' +
+      '</script>';
+
+    // Inject the script at the beginning of the <head> or <html> tag
+    var headMatch = htmlContent.match(/<head[^>]*>/i);
+    if (headMatch) {
+      return htmlContent.replace(
+        /<head[^>]*>/i,
+        headMatch[0] + cspListenerScript
+      );
+    }
+    var htmlMatch = htmlContent.match(/<html[^>]*>/i);
+    if (htmlMatch) {
+      return htmlContent.replace(
+        /<html[^>]*>/i,
+        htmlMatch[0] + cspListenerScript
+      );
+    }
+    // If no <head> or <html> tag, prepend the script
+    return cspListenerScript + htmlContent;
   }
 }
 

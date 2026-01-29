@@ -8,6 +8,7 @@ export enum IframeMessageType {
   REFRESH = 'REFRESH',
   LEVEL_LOADING = 'LEVEL_LOADING',
   SERVICE_WORKER_UNAVAILABLE = 'SERVICE_WORKER_UNAVAILABLE',
+  CSP_VIOLATION = 'CSP_VIOLATION',
 }
 
 export enum PreviewViewMode {
@@ -24,4 +25,5 @@ export enum ProjectServiceWorkerMessageType {
   RECEIVED_SOURCE = 'RECEIVED_SOURCE',
   UPDATE_FILES = 'UPDATE_FILES',
   KEEP_ALIVE = 'KEEP_ALIVE',
+  CSP_VIOLATION = 'CSP_VIOLATION',
 }

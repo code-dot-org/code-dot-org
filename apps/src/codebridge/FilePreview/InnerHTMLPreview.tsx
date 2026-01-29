@@ -120,6 +120,12 @@ const InnerHTMLPreview = () => {
       ) {
         setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.CSP_VIOLATION
+      ) {
+        // CSP violations are handled inline within the iframe in the preview.
+        // We also display an alert in the code workspace.
+        console.log('CSP Violation detected:', event.data);
       }
     };
     return () => {
