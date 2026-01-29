@@ -1394,7 +1394,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal true, properties["usesProjects"]
     assert_equal true, properties["offerBrowserTts"]
     assert_match Regexp.new("^/s/bogus-script-[0-9]+"), properties["finishUrl"]
-    assert_nil properties["showRubric"]
+    assert_nil properties["rubricId"]
   end
 
   test "summarize_for_lab2_properties shows rubric if level matches lesson rubric level" do
@@ -1402,7 +1402,7 @@ class LevelTest < ActiveSupport::TestCase
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create(:music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"})
-    create(:rubric, level: level, lesson: lesson)
+    rubric = create(:rubric, level: level, lesson: lesson)
     script_level = create(
       :script_level,
       lesson: lesson,
@@ -1412,7 +1412,7 @@ class LevelTest < ActiveSupport::TestCase
 
     properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
 
-    assert_equal true, properties["showRubric"]
+    assert_equal rubric.id, properties["rubricId"]
   end
 
   test "summarize_for_lab2_properties shows rubric if level shares template with rubric level" do
@@ -1422,7 +1422,7 @@ class LevelTest < ActiveSupport::TestCase
     template_level = create(:music, name: 'music template')
     rubric_level = create(:music, name: 'music assessment project', properties: {project_template_level_name: template_level.name})
     level = create(:music, name: 'music 1', properties: {project_template_level_name: template_level.name})
-    create(:rubric, level: rubric_level, lesson: lesson)
+    rubric = create(:rubric, level: rubric_level, lesson: lesson)
     script_level = create(
       :script_level,
       lesson: lesson,
@@ -1432,7 +1432,7 @@ class LevelTest < ActiveSupport::TestCase
 
     properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
 
-    assert_equal true, properties["showRubric"]
+    assert_equal rubric.id, properties["rubricId"]
   end
 
   describe '#available_callouts' do
