@@ -163,6 +163,7 @@ module Services
     # representing the expected data does not accidentally load the actual
     # result of seeding from the database for any of its associated models. This
     # is ensured by using assert_queries(0) inside assert_script_trees_equal.
+    # TODO: get back to 0 queries
 
     test 'seed updates lesson groups' do
       script = create_script_tree(num_lesson_groups: 2)
