@@ -17,13 +17,17 @@ describe('AppLabTooltipOverlay', () => {
     isInDesignMode: false,
   };
 
-  const CONTROL_ID = 'fake-id';
-  const SCREEN_ID = 'screen-id';
+  const CONTROL_ID = 'button1';
+  const SCREEN_ID = 'screen1';
 
   let stubDraggedElementDropPoint;
   let crosshairContainer;
 
-  const buildCrosshairDom = () => {
+  const buildCrosshairDom = ({
+    controlId = CONTROL_ID,
+    controlTagName = 'div',
+    includeResizeHandle = false,
+  } = {}) => {
     crosshairContainer = document.createElement('div');
     crosshairContainer.className = 'withCrosshair';
 
@@ -32,12 +36,19 @@ describe('AppLabTooltipOverlay', () => {
     fakeScreen.id = SCREEN_ID;
     crosshairContainer.appendChild(fakeScreen);
 
-    const fakeElement = document.createElement('div');
-    fakeElement.id = CONTROL_ID;
-    fakeScreen.appendChild(fakeElement);
+    const testDesignElement = document.createElement(controlTagName);
+    testDesignElement.id = controlId;
+    fakeScreen.appendChild(testDesignElement);
+
+    let resizeHandle = null;
+    if (includeResizeHandle) {
+      resizeHandle = document.createElement('div');
+      resizeHandle.className = 'ui-resizable-handle';
+      fakeScreen.appendChild(resizeHandle);
+    }
 
     document.body.appendChild(crosshairContainer);
-    return {fakeElement, fakeScreen};
+    return {testDesignElement, fakeScreen, resizeHandle};
   };
 
   beforeEach(() => {
@@ -83,12 +94,22 @@ describe('AppLabTooltipOverlay', () => {
     ).toBeInTheDocument();
   });
 
-  it('shows the element id when hovering an applab control', () => {
-    const {fakeElement} = buildCrosshairDom();
+  it('shows the element id when hovering an applab design element', () => {
+    const {testDesignElement} = buildCrosshairDom({controlTagName: 'button'});
 
     render(<AppLabTooltipOverlay {...TEST_PROPS} />);
 
-    fireEvent.mouseMove(fakeElement);
+    fireEvent.mouseMove(testDesignElement);
+
+    expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
+  });
+
+  it('shows the element id when hovering a resize handle', () => {
+    const {resizeHandle} = buildCrosshairDom({includeResizeHandle: true});
+
+    render(<AppLabTooltipOverlay {...TEST_PROPS} />);
+
+    fireEvent.mouseMove(resizeHandle);
 
     expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
   });
@@ -101,5 +122,19 @@ describe('AppLabTooltipOverlay', () => {
     fireEvent.mouseMove(fakeScreen);
 
     expect(screen.getByText(`id: ${SCREEN_ID}`)).toBeInTheDocument();
+  });
+
+  it('shows the unprefixed id in design mode for a generic element', () => {
+    const DESIGN_PREFIX = 'design_';
+    const {testDesignElement} = buildCrosshairDom({
+      controlId: `${DESIGN_PREFIX}${CONTROL_ID}`,
+      controlTagName: 'div',
+    });
+
+    render(<AppLabTooltipOverlay {...TEST_PROPS} isInDesignMode={true} />);
+
+    fireEvent.mouseMove(testDesignElement);
+
+    expect(screen.getByText(`id: ${CONTROL_ID}`)).toBeInTheDocument();
   });
 });
