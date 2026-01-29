@@ -81,6 +81,7 @@
     "widget_mode": "false",
     "teacher_markdown": "**What information does the user input?**\r\nThe number of times the user wants the coin flipped.\r\n\r\n**How does the app process that information?**\r\nThe app calculates how many times heads or tails appear.\r\n\r\n**What is being repeated? Where is there an opportunity to use a loop?**\r\nThe coin flips and a check for heads or tails.\r\n\r\n**What information does the app output?**\r\nThe number of total heads and the number of total tails",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

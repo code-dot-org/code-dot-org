@@ -103,6 +103,7 @@
     "project_template_level_name": "U4 L13 Practice PT template_2025",
     "parent_level_id": 17755,
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

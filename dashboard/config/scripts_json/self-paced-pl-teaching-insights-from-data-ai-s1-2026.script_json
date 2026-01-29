@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-12 16:46:25 UTC",
+    "serialized_at": "2026-01-28 15:21:01 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -143,6 +143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_06_00-new_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -165,6 +168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_06_02-new_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -187,6 +193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_is_everywher_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -209,6 +218,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chk_DSisNot_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -231,6 +243,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_chk_answers_-rev_v2_2026"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -253,6 +268,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_Undestanding_Data_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -275,6 +293,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L1andL2_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -297,6 +318,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-SpreadsheetVocab_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -319,6 +343,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-data-science-ch1-lesson2-level1_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -341,6 +368,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -363,6 +393,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ThreeReadsexlemplar2_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -385,6 +418,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher-lesson2_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -407,6 +443,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-data_science_lesson2_ai_chat_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -429,6 +468,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_AI_chatbot_debrief_L12-2-data-science_-rev_v2_2026"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -451,6 +493,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L3andL4_-rev_v2_2026"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -473,6 +518,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-Ethical-Data-Collection_-rev_v2_2026"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -495,6 +543,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L5andL6_-rev_v2_2026"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -517,6 +568,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-datastory-L7_-rev_v2_2026"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -539,6 +593,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chk-dataStory-Vocab_-rev_v2_2026"
+        ],
         "progression": "Data Collection, Questions and Stories"
       },
       "bonus": false,
@@ -561,6 +618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L7_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -583,6 +643,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-barchartPanel-L3-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -605,6 +668,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-piechartPanel-L4-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -627,6 +693,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-editchartPanel-L5-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -649,6 +718,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-donutchartPanel-L6-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -671,6 +743,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-DotPlots_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -693,6 +768,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-sortData-panel-L30-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -715,6 +793,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-filtering-data-L31-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -737,6 +818,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-applyingFilters-L32-DS_-rev_v2_2026"
+        ],
         "progression": "Data Visualizations"
       },
       "bonus": false,
@@ -759,6 +843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L8andL9_-rev_v2_2026"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -781,6 +868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-cleaningData_-rev_v2_2026"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -803,6 +893,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-PizzaChoice_-rev_v2_2026"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -825,6 +918,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher-discuss-ethcialFramework_-rev_v2_2026"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -847,6 +943,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chkCodap_-rev_v2_2026"
+        ],
         "progression": "Cleaning and Interpreting Data"
       },
       "bonus": false,
@@ -869,6 +968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L11_-rev_v2_2026"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -891,6 +993,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_L11B_-rev_v2_2026"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -913,6 +1018,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacherEnd_-rev_v2_2026"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
@@ -935,6 +1043,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-sandbox-aif6-01-Closing_v2_2026"
+        ],
         "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,

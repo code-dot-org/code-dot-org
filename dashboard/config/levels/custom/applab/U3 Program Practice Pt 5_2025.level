@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:03.000Z",
   "level_num": "custom",
@@ -55,8 +54,10 @@
     "display_name": "Club Fair App",
     "thumbnail_url": "https://images.code.org/b7678177f6aa93f891da5fc69b9e71b5-image-1647323739380.52.28 PM.png",
     "bubble_choice_description": "Add code to the program so that the \"Go Back\" button takes the user back to the home screen.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:03.258+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 5_2024\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 5_2024\"},{\"changed_at\":\"2025-08-04 21:29:41 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>

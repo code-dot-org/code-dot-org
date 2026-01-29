@@ -18,7 +18,8 @@
     "name_suffix": "_2025",
     "encrypted": "false",
     "v1_initial_width": "10",
-    "v1_initial_height": "10"
+    "v1_initial_height": "10",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",
