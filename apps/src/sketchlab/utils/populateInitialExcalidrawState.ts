@@ -36,7 +36,9 @@ export const populateInitialExcalidrawState = async (
             // so proceed if we fail to encode an image for now and just track the error via this
             // upcall.
             if (error instanceof Error) {
-              onError(new Error(`Cannot load image '${file.id}' from sources.`));
+              onError(
+                new Error(`Cannot load image '${file.id}' from sources.`)
+              );
             }
           }
         }

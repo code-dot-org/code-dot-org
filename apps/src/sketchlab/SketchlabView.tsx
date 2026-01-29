@@ -115,7 +115,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       // Signal any loading errors
       if (initialErrors.current.length > 0) {
         api.setToast({
-          message: initialErrors.current[0].message,
+          message: `\u{2757} ${initialErrors.current[0].message}`,
         });
       }
     },
@@ -127,7 +127,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     if (api) {
       // The app is loaded, so just pop up the error
       api.setToast({
-        message: error.message,
+        message: `\u{2757} ${error.message}`,
       });
     } else {
       // Defer the error until the application loads
