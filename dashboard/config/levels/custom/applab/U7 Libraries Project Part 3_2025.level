@@ -89,6 +89,7 @@
     "project_template_level_name": "U7 Libraries Project Template_2025",
     "name_suffix": "_2025",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

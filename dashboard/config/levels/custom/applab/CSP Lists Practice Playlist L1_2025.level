@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:23:20.000Z",
   "level_num": "custom",
@@ -78,9 +77,10 @@
     "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png",
     "encrypted_examples": "LYF6P7CGK2+B0/bbMRY1uEFnoQZ+/f725YUjkfPH/COzwSbfYjP3Fa9MZLlo\n1VG0cIDZC9VK2IDEQvt/jUMKzg==\n",
     "name_suffix": "_2025",
-    "preload_asset_list": null,
-    "ai_tutor_available": "false"
+    "ai_tutor_available": "true",
+    "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:20.339+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Playlist L1\\\"\"],\"cloned_from\":\"CSP Lists Practice Playlist L1\"},{\"changed_at\":\"2025-11-21 23:27:27 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
   <blocks/>
