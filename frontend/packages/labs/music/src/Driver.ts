@@ -41,6 +41,10 @@ export const DriverEvent = {
   UpdateTimeline: 'update-timeline',
   /** We have preloaded the initial sounds */
   LoadedInitialSounds: 'loaded-initial-sounds',
+  /** When we start playing */
+  PlaybackStarted: 'playback-started',
+  /** When we stop playing */
+  PlaybackStopped: 'playback-stopped',
 } as const;
 
 interface DriverEvents extends EventMap {
@@ -51,6 +55,8 @@ interface DriverEvents extends EventMap {
   [DriverEvent.ClearTimeline]: () => void;
   [DriverEvent.UpdateTimeline]: (data: PlaybackExecutionData) => void;
   [DriverEvent.LoadedInitialSounds]: () => void;
+  [DriverEvent.PlaybackStarted]: () => void;
+  [DriverEvent.PlaybackStopped]: () => void;
 }
 
 const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
@@ -329,12 +335,22 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   /*
   clearCode(maintainPackId) {
   }
-
-  setPlaying(play: boolean) {
-  }
   */
 
-  togglePlaying() {}
+  setPlaying(play: boolean) {
+    this.isPlaying = play;
+
+    if (this.isPlaying) {
+      this.playSong();
+      this.emit(DriverEvent.PlaybackStarted);
+    } else {
+      this.emit(DriverEvent.PlaybackStopped);
+    }
+  }
+
+  togglePlaying() {
+    this.setPlaying(!this.isPlaying);
+  }
 
   playTrigger() {}
 
@@ -473,7 +489,34 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   }
   */
 
-  playSong() {}
+  async playSong() {
+    /*
+    this.setState({
+      hasRun: true,
+    });
+    */
+    //this.props.logLevelActivity();
+    /*if (this.props.isFirstAttempt) {
+      this.props.sendAttemptReport();
+    }*/
+    this.player.stopSong();
+    this.playingTriggers = [];
+
+    //this.musicBlocklyWorkspace?.hideChaff();
+
+    this.compileSong();
+
+    const playbackEvents = await this.populateCompiledSong();
+    //this.saveCode(true);
+
+    //this.player.playSong(playbackEvents, this.props.startingPlayheadPosition);
+    this.player.playSong(playbackEvents);
+
+    //this.props.setIsPlaying(true);
+    //this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
+    //this.props.clearSelectedBlockId();
+    //this.props.clearSelectedTriggerId();
+  }
 
   /*
   saveCode(forceSave: boolean = false) {
