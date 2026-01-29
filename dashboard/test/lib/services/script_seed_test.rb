@@ -82,7 +82,6 @@ module Services
 
       assert_equal counts_before, get_counts
       script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
-
       assert_script_trees_equal(script, script_after_seed)
       assert_equal script_after_seed.original_unit_group, script.original_unit_group
     end
@@ -161,7 +160,6 @@ module Services
     # representing the expected data does not accidentally load the actual
     # result of seeding from the database for any of its associated models. This
     # is ensured by using assert_queries(0) inside assert_script_trees_equal.
-    # TODO: get back to 0 queries
 
     test 'seed updates lesson groups' do
       script = create_script_tree(num_lesson_groups: 2)
