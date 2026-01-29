@@ -28,11 +28,13 @@ export const AutocompleteInput = memo(
     fetchOptions,
     errorMessage,
     id,
+    onKeyDown,
+    'aria-label': ariaLabel,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
     id: string;
-    label: string;
+    label?: string;
     name: string;
     size: TextFieldProps['size'];
     className: string;
@@ -40,6 +42,8 @@ export const AutocompleteInput = memo(
     value: string;
     fetchOptions: (value: string) => Promise<string[]>;
     errorMessage?: string;
+    onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+    'aria-label'?: string;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -124,6 +128,9 @@ export const AutocompleteInput = memo(
             break;
         }
       }
+      if (!e.defaultPrevented && onKeyDown) {
+        onKeyDown(e);
+      }
     };
 
     return (
@@ -139,6 +146,7 @@ export const AutocompleteInput = memo(
           placeholder={placeholder}
           onKeyDown={handleKeyDown}
           autoComplete="off"
+          aria-label={ariaLabel}
           role="combobox"
           aria-autocomplete="list"
           aria-controls={listboxId}

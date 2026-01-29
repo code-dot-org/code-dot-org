@@ -1,8 +1,9 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -22,6 +23,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {filterSourceForPreview} from '../utils/filterSourceForPreview';
+import {getFolderPath} from '../utils/getFolderPath';
 
 import {
   IframeMessageType,
@@ -130,6 +132,40 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateBack = navigationHistoryIndex > 0;
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
+
+  const htmlFileOptions = useMemo(() => {
+    if (!source) {
+      return [];
+    }
+    const options = Object.values(source.files)
+      .filter(
+        file =>
+          file.language === 'html' || file.name.toLowerCase().endsWith('.html')
+      )
+      .map(file => {
+        if (file.folderId === DEFAULT_FOLDER_ID) {
+          return file.name;
+        }
+        const folderPath = getFolderPath(file.folderId, source.folders);
+        const fullPath = `${folderPath}/${file.name}`;
+        return fullPath.startsWith('/') ? fullPath.substring(1) : fullPath;
+      })
+      .sort((a, b) => a.localeCompare(b));
+    return options;
+  }, [source]);
+
+  const fetchHtmlFileOptions = useCallback(
+    async (searchValue: string) => {
+      const normalizedSearch = searchValue.trim().toLowerCase();
+      if (!normalizedSearch) {
+        return htmlFileOptions;
+      }
+      return htmlFileOptions.filter(option =>
+        option.toLowerCase().includes(normalizedSearch)
+      );
+    },
+    [htmlFileOptions]
+  );
 
   useEffect(() => {
     if (aiFilePathToPreview) {
@@ -409,6 +445,7 @@ export const HTMLPreview: React.FC = () => {
           setPreviewViewMode={setPreviewViewMode}
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
+          fetchOptions={fetchHtmlFileOptions}
         />
         {isEmptyProject ? (
           <PreviewEmptyState />

@@ -2,11 +2,11 @@ import Button from '@code-dot-org/component-library/button';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import TextField from '@code-dot-org/component-library/textField';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 
+import {AutocompleteInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/AutocompleteInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
@@ -28,6 +28,7 @@ interface HTMLPreviewHeaderProps {
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
   onStopPreview: () => void;
   isStopEnabled: boolean;
+  fetchOptions: (value: string) => Promise<string[]>;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -44,12 +45,16 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   setPreviewViewMode,
   onStopPreview,
   isStopEnabled,
+  fetchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onSubmit(value);
     }
+  };
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange(event.target.value);
   };
   const previewViewModeButtonsProps: SegmentedButtonsProps = {
     color: 'strong',
@@ -112,14 +117,17 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             className={moduleStyles.iconButton}
           />
         </div>
-        <TextField
-          onChange={e => onChange(e.target.value)}
+        <AutocompleteInput
+          id="html-preview-url-listbox"
+          name="url-input"
+          size="s"
+          className={moduleStyles.urlBarInput}
+          onChange={handleInputChange}
           onKeyDown={handleKeyDown}
           value={value}
-          name={'url-input'}
+          fetchOptions={fetchOptions}
+          placeholder=""
           aria-label={weblab2I18n.addressBar()}
-          size={'s'}
-          className={moduleStyles.urlBarInput}
         />
         <Button
           onClick={onRefresh}
