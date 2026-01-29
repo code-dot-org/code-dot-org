@@ -30,6 +30,10 @@ export const AutocompleteInput = memo(
     id,
     onKeyDown,
     'aria-label': ariaLabel,
+    showAllOnFocus = false,
+    minChars = 3,
+    onBlur,
+    onSelect,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
@@ -44,10 +48,15 @@ export const AutocompleteInput = memo(
     errorMessage?: string;
     onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
     'aria-label'?: string;
+    showAllOnFocus?: boolean;
+    minChars?: number;
+    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+    onSelect?: (option: string) => void;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
     const skipApi = useRef(true);
+    const lastRequestedValue = useRef<string | null>(null);
     const listboxId = id;
     const [options, setOptions] = useState<string[]>([]);
     const [activeIndex, setActiveIndex] = useState(-1);
@@ -64,6 +73,26 @@ export const AutocompleteInput = memo(
 
     const containerRef = useOutsideClick<HTMLDivElement>(reset);
 
+    const fetchSuggestions = useCallback(
+      async (valueToFetch: string) => {
+        if (lastRequestedValue.current === valueToFetch) {
+          return;
+        }
+        lastRequestedValue.current = valueToFetch;
+        try {
+          setLoading(true);
+          const suggestedOptions = await fetchOptions(valueToFetch);
+          setOptions(suggestedOptions);
+          setActiveIndex(-1);
+        } catch (error) {
+          console.error(error);
+        } finally {
+          setLoading(false);
+        }
+      },
+      [fetchOptions]
+    );
+
     useEffect(() => {
       // skip api call when component first mounts if value already exists
       // also skip when an option is selected and value updates with result
@@ -71,22 +100,13 @@ export const AutocompleteInput = memo(
         skipApi.current = false;
         return;
       }
-      if (debouncedValue && debouncedValue.length >= 3) {
-        const fetchSuggestions = async () => {
-          try {
-            setLoading(true);
-            const suggestedOptions = await fetchOptions(debouncedValue);
-            setOptions(suggestedOptions);
-            setActiveIndex(-1);
-          } catch (error) {
-            console.error(error);
-          } finally {
-            setLoading(false);
-          }
-        };
-        fetchSuggestions();
+      if (
+        (debouncedValue && debouncedValue.length >= minChars) ||
+        (showAllOnFocus && debouncedValue.length === 0)
+      ) {
+        fetchSuggestions(debouncedValue);
       }
-    }, [debouncedValue, fetchOptions]);
+    }, [debouncedValue, fetchSuggestions, minChars, showAllOnFocus]);
 
     const handleSelectOption = useCallback(
       (option: string) => {
@@ -97,10 +117,11 @@ export const AutocompleteInput = memo(
             value: option,
           },
         } as ChangeEvent<HTMLInputElement>);
+        onSelect?.(option);
         reset();
         containerRef.current?.querySelector('input')?.focus();
       },
-      [containerRef, name, onChange, reset]
+      [containerRef, name, onChange, onSelect, reset]
     );
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -133,6 +154,21 @@ export const AutocompleteInput = memo(
       }
     };
 
+    const handleFocus = () => {
+      if (showAllOnFocus && value.length === 0) {
+        fetchSuggestions('');
+        return;
+      }
+      if (value.length >= minChars) {
+        fetchSuggestions(value);
+      }
+    };
+
+    const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+      onBlur?.(event);
+      reset();
+    };
+
     return (
       <div ref={containerRef} className={styles.autocompleteInputContainer}>
         <TextField
@@ -145,6 +181,8 @@ export const AutocompleteInput = memo(
           errorMessage={errorMessage}
           placeholder={placeholder}
           onKeyDown={handleKeyDown}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           autoComplete="off"
           aria-label={ariaLabel}
           role="combobox"
@@ -174,7 +212,10 @@ export const AutocompleteInput = memo(
                 className={classNames(styles.optionItem, {
                   [styles.active]: activeIndex === index,
                 })}
-                onClick={() => handleSelectOption(option)}
+                onMouseDown={event => {
+                  event.preventDefault();
+                  handleSelectOption(option);
+                }}
                 id={`${listboxId}-item-${index}`}
                 role="option"
                 aria-selected={activeIndex === index}

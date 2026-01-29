@@ -124,10 +124,18 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.urlBarInput}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
+          onSelect={onSubmit}
+          onBlur={() => {
+            if (value) {
+              onSubmit(value);
+            }
+          }}
           value={value}
           fetchOptions={fetchOptions}
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
+          showAllOnFocus
+          minChars={0}
         />
         <Button
           onClick={onRefresh}
