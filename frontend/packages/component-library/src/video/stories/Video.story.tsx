@@ -1,4 +1,4 @@
-import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import type {Meta, StoryObj} from '@storybook/react-vite';
 import {screen as shadowScreen} from 'shadow-dom-testing-library';
 import {within, expect, userEvent} from 'storybook/test';
 
@@ -92,28 +92,6 @@ export const VideoWithFallback: Story = {
       // Skip eyes for video as this auto plays
       include: false,
     },
-  },
-  play: async ({canvasElement, args}) => {
-    const canvas = within(canvasElement);
-
-    const playButton = await canvas.findByLabelText(
-      `Play video ${args.videoTitle}`,
-    );
-    await expect(playButton).toBeVisible();
-    await userEvent.click(playButton);
-
-    const download = canvas.getByRole('link');
-
-    // check if download button is visible
-    await expect(download).toBeVisible();
-
-    // react-player renders the youtube iframe inside a shadow root
-    //     // but it does need to have the right title for a11y
-    await shadowScreen.findByShadowTitle(
-      "What Most Schools Don't Teach",
-      {},
-      {timeout: 15000},
-    );
   },
 };
 

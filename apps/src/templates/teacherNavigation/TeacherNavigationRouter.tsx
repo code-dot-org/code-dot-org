@@ -97,17 +97,13 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
-  // TODO-AICHAT-PERMISSIONS: Update `!!selectedSection` to be whether there are any ai chat tools
-  // (essential or optional) in the curriculum assigned to the section.
-  const curriculumUsesAiChatTools = !!selectedSection;
-  const aiChatPermissionsExperimentActive =
-    experiments.isEnabledAllowingQueryString(
-      experiments.AI_CHAT_NEW_PERMISSIONS
-    );
-
   const showAiChatSettings = React.useMemo(
-    () => aiChatPermissionsExperimentActive && curriculumUsesAiChatTools,
-    [aiChatPermissionsExperimentActive, curriculumUsesAiChatTools]
+    () =>
+      !!selectedSection &&
+      experiments.isEnabledAllowingQueryString(
+        experiments.AI_CHAT_NEW_PERMISSIONS
+      ),
+    [selectedSection]
   );
 
   const studentCount = useAppSelector(
@@ -333,13 +329,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.aiChatSettings}
               element={
                 showAiChatSettings ? (
-                  <ElementOrEmptyPage
-                    showNoStudents={studentCount === 0}
-                    showNoCurriculumAssigned={false}
-                    element={
-                      <AiChatAccessControls sectionId={sectionId || 0} />
-                    }
-                  />
+                  <AiChatAccessControls />
                 ) : (
                   <Navigate
                     to={TEACHER_NAVIGATION_PATHS.progress}

@@ -216,6 +216,7 @@
     "widget_mode": "false",
     "parent_level_id": 15801,
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

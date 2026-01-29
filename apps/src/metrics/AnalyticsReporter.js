@@ -75,7 +75,7 @@ class AnalyticsReporter {
     includeProjectProperties = false
   ) {
     if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
-      // Include project properties in Statsig events.
+      // Include project properties in Statsig events (levelPath, appName).
       const statsigPayload = includeProjectProperties
         ? {...payload, ...this.projectContext}
         : payload;

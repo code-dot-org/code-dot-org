@@ -135,6 +135,50 @@ class StudentSnapshotsController < ApplicationController
     end
   end
 
+  # GET /student_snapshots/exemplar_code/{lesson_id}
+  def exemplar_code
+    # Cache until next deployment (refresh gets new content)
+    expires_in 12.hours, public: true
+
+    unless current_user.verified_instructor?
+      return render json: {error: "Unauthorized user"}, status: :forbidden
+    end
+
+    lesson = Lesson.find_by(id: params[:lesson_id])
+
+    unless lesson
+      return render json: {error: "Lesson not found"}, status: :not_found
+    end
+
+    level = lesson.levels.where(type: 'Pythonlab').last
+
+    unless level
+      return render json: {id: nil, name: nil, exemplarSources: nil}
+    end
+
+    render json: {
+      id: level.id,
+      name: level.name,
+      exemplarSources: level.exemplar_sources
+    }
+  end
+
+  # GET /student_snapshots/lesson_insight
+  # Returns the system prompt for generating insights
+  def lesson_insight
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+    section_id = params[:section_id]
+    teacher_id = current_user.id
+
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+
+    response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    render json: response
+  end
+
   # Returns the script_levels in a lesson that correspond to CFU progressions.
   private def cfu_script_levels_for(lesson)
     lesson.script_levels.select do |script_level|

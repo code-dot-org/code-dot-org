@@ -693,4 +693,12 @@ class UnitGroup < ApplicationRecord
   def duration_in_minutes
     default_units.sum(&:duration_in_minutes)
   end
+
+  def has_ai_chat_tools?
+    default_units.with_ai_chat_tools.exists?
+  end
+
+  def requires_ai_chat_tools?
+    default_units.with_essential_ai_chat_tools.exists?
+  end
 end

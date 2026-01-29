@@ -97,6 +97,25 @@ export const acceptRejectAnswerTypes = [
   'Build JavaScript',
 ];
 
+const acceptRejectCodeFileTypes = ['html', 'css', 'js'];
+
+/**
+ * Validates that all files have file types that are supported in the accept-reject flow.
+ * Returns true if all files are html, css, or js files.
+ */
+export const isAcceptRejectCodeFileTypes = (
+  files: Array<{name: string}>
+): boolean => {
+  let isValid = true;
+  files.forEach(file => {
+    const fileType = file.name.split('.').pop();
+    if (fileType && !acceptRejectCodeFileTypes.includes(fileType)) {
+      isValid = false;
+    }
+  });
+  return isValid;
+};
+
 export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   type: 'object',
   properties: {

@@ -4,8 +4,9 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {LevelProperties} from '@cdo/apps/lab2/types';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -13,14 +14,15 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
-jest.mock('@cdo/apps/metrics/AnalyticsReporter');
-const mockAnalyticsReporter = analyticsReporter as jest.Mocked<
-  typeof analyticsReporter
->;
+jest.mock('@cdo/apps/lab2/utils', () => ({
+  sendLab2AnalyticsEvent: jest.fn(),
+}));
+const mockSendLab2AnalyticsEvent =
+  sendLab2AnalyticsEvent as jest.MockedFunction<typeof sendLab2AnalyticsEvent>;
 
 const mockCurrentUser = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  state: any = {signInState: 'signedIn'},
+  state: any = {signInState: 'SignedIn'},
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   action: any
 ) => state;
@@ -31,28 +33,25 @@ const mockProgress = (
   action: any
 ) => state;
 
-interface LevelProperties {
-  isProjectLevel?: boolean;
-  id?: number;
-  name?: string;
-}
-
 const defaultLevelProperties: LevelProperties = {
   isProjectLevel: false,
   id: 123,
   name: 'Test Level',
+  appName: 'weblab2',
 };
 
 const projectLevelProperties: LevelProperties = {
   isProjectLevel: true,
   id: 456,
   name: 'Project Level',
+  appName: 'weblab2',
 };
 
 const differentLevelProperties: LevelProperties = {
   isProjectLevel: false,
   id: 789,
   name: 'Different Level',
+  appName: 'weblab2',
 };
 
 describe('useLevelActivityMetrics', () => {
@@ -92,14 +91,14 @@ describe('useLevelActivityMetrics', () => {
     it('does not trigger analytics when hook is initialized', () => {
       renderHookWithRedux(defaultLevelProperties);
 
-      expect(mockAnalyticsReporter.sendEvent).not.toHaveBeenCalled();
+      expect(mockSendLab2AnalyticsEvent).not.toHaveBeenCalled();
     });
 
     it('hook initializes without errors', () => {
       const {result} = renderHookWithRedux(defaultLevelProperties);
 
       expect(result.error).toBeUndefined();
-      expect(mockAnalyticsReporter.sendEvent).not.toHaveBeenCalled();
+      expect(mockSendLab2AnalyticsEvent).not.toHaveBeenCalled();
     });
   });
 
@@ -111,16 +110,16 @@ describe('useLevelActivityMetrics', () => {
         result.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.LEVEL_ACTIVITY,
         {
-          signedIn: 'signedIn',
+          signedIn: true,
           unitName: 'test-script',
           levelId: 123,
           levelName: 'Test Level',
         }
       );
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
     });
 
     it('logs PROJECT_ACTIVITY event when callback is invoked for project level', () => {
@@ -130,16 +129,16 @@ describe('useLevelActivityMetrics', () => {
         result.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.PROJECT_ACTIVITY,
         {
-          signedIn: 'signedIn',
+          signedIn: true,
           unitName: 'test-script',
           levelId: 456,
           levelName: 'Project Level',
         }
       );
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
     });
 
     it('includes complete payload with all required fields', () => {
@@ -149,10 +148,10 @@ describe('useLevelActivityMetrics', () => {
         result.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledWith(
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
         EVENTS.LEVEL_ACTIVITY,
         expect.objectContaining({
-          signedIn: expect.any(String),
+          signedIn: expect.any(Boolean),
           unitName: expect.any(String),
           levelId: expect.any(Number),
           levelName: expect.any(String),
@@ -171,7 +170,7 @@ describe('useLevelActivityMetrics', () => {
         result.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
     });
 
     it('verifies hasLoggedRef prevents duplicate events', () => {
@@ -185,7 +184,7 @@ describe('useLevelActivityMetrics', () => {
         result.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -197,7 +196,7 @@ describe('useLevelActivityMetrics', () => {
         result1.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(1);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
 
       const wrapper = ({children}: {children: React.ReactNode}) => (
         <Provider store={store}>{children}</Provider>
@@ -212,11 +211,11 @@ describe('useLevelActivityMetrics', () => {
         result2.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(2);
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenLastCalledWith(
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(2);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenLastCalledWith(
         EVENTS.LEVEL_ACTIVITY,
         {
-          signedIn: 'signedIn',
+          signedIn: true,
           unitName: 'test-script',
           levelId: 789,
           levelName: 'Different Level',
@@ -237,9 +236,9 @@ describe('useLevelActivityMetrics', () => {
         result2.current();
       });
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenCalledTimes(2);
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(2);
 
-      expect(mockAnalyticsReporter.sendEvent).toHaveBeenLastCalledWith(
+      expect(mockSendLab2AnalyticsEvent).toHaveBeenLastCalledWith(
         EVENTS.PROJECT_ACTIVITY,
         expect.objectContaining({
           levelId: 456,

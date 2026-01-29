@@ -29,7 +29,6 @@ import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRe
 
 import IncubatorBanner from './IncubatorBanner';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
-import NpsSurveyBlock from './NpsSurveyBlock';
 import RecentCourses from './RecentCourses';
 import shapes from './shapes';
 import TeacherResources from './TeacherResources';
@@ -51,7 +50,6 @@ export const UnconnectedTeacherHomepage = ({
   queryStringOpen,
   schoolYear,
   showCensusBanner,
-  showNpsSurvey,
   specialAnnouncement,
   teacherEmail,
   teacherId,
@@ -201,7 +199,6 @@ export const UnconnectedTeacherHomepage = ({
           )}
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
-        {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
           <GlobalEditionWrapper
             component={MarketingAnnouncementBanner}
@@ -320,7 +317,6 @@ UnconnectedTeacherHomepage.propTypes = {
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,
-  showNpsSurvey: PropTypes.bool,
   specialAnnouncement: shapes.specialAnnouncement,
   teacherEmail: PropTypes.string,
   teacherId: PropTypes.number,
