@@ -6,8 +6,8 @@ import '@cdo/apps/jsonVideo/jsonVideoElement';
 const LinkWrapper: React.FunctionComponent<
   React.AnchorHTMLAttributes<HTMLAnchorElement>
 > = ({children, ...props}) => {
-  if (props.href?.startsWith('https://json-video.org/')) {
-    const filename = props.href.slice('https://json-video.org/'.length);
+  if (props.href?.startsWith('https://example.com/json-video/')) {
+    const filename = props.href.slice('https://example.com/json-video/'.length);
     if (jsonAssets[filename]) {
       const uriEncodedJson = encodeURIComponent(jsonAssets[filename]);
       const uri = `data:application/json,${uriEncodedJson}`;
