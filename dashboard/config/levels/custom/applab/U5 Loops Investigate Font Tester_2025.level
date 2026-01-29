@@ -84,6 +84,7 @@
     "name_suffix": "_2025",
     "start_blocks": "var phrases = [\"The quick brown fox jumps over the lazy dog\", \r\n               \"To be or not to be, that is the question\", \r\n               \"Lorem ipsum dolor sit amet\",\r\n               \"Try to be a rainbow in someone's cloud\"];\r\n               \r\nonEvent(\"textInput\", \"input\", function( ) {\r\n  for (var i = 0; i < 5; i++) {\r\n    setProperty(\"text\"+i, \"text\", getText(\"textInput\"));\r\n  }\r\n});\r\nonEvent(\"fontSizeSlider\", \"change\", function( ) {\r\n  for (var i = 0; i < 5; i++) {\r\n    setProperty(\"text\"+i, \"font-size\", getNumber(\"fontSizeSlider\"));\r\n  }\r\n  playSound(\"sound://category_tap/puzzle_game_organic_wood_block_tone_tap_3_app_click.mp3\");\r\n});\r\nonEvent(\"colorDropdown\", \"input\", function( ) {\r\n  for (var i = 0; i < 5; i++) {\r\n    setProperty(\"text\"+i, \"text-color\", getText(\"colorDropdown\"));\r\n  }\r\n});\r\nonEvent(\"randomPhraseButton\", \"click\", function( ) {\r\n  var randomPhrase = phrases[randomNumber(0,phrases.length-1)];\r\n  for (var i = 0; i < 5; i++) {\r\n    setProperty(\"text\"+i, \"text\", randomPhrase);\r\n  }\r\n  setProperty(\"textInput\",\"text\", randomPhrase);\r\n\r\n});\r\n",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

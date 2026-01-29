@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-01-28T16:16:22.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Reflection\r\n\r\n#### Take a minute to reflect on your goals for this course. List one or two below. We'll come back to these at the end of this Professional Learning series.\r\n\r\n<br>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">Need Help?</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n#### Some example goals include…\r\n* #### Speed up classroom management with AI.\r\n* #### To be exposed to many AI options so I can choose from them later.\r\n* #### Learn the basics of AI so I can answer my student’s questions.\r\n\r\n</p></div>\r\n</details>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/c/ai-cs/ai-101-self-paced-pl-community/477\" target=\"_blank\">AI 101 Self-Paced PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader AI 101 learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n\r\n### <a href=\"https://forum.code.org/t/module-1-level-5-reflection-goals/39647\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n**Note About Using the Forum**: Our forum automatically flags suspicious accounts, to avoid your account being (temporary) suspended, we suggest that you take a minute before posting your message after drafting it.\r\n\r\n</p></div>\r\n</details>\r\n\r\n<br>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-01-28T16:16:22.949+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-opening_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-opening_02_2024\"}]"
+}]]></config>
+</FreeResponse>

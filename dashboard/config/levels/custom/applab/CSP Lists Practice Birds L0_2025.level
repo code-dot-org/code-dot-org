@@ -72,6 +72,7 @@
     "bubble_choice_description": "Build an app that helps a user to browse birds and select/save favorites.",
     "thumbnail_url": "https://images.code.org/0fdb1b51d1a815dd986c7af70b001676-Birds.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

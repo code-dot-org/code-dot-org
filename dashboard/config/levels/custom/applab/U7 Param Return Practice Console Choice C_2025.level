@@ -91,6 +91,7 @@
     "display_name": "Random Top 50",
     "bubble_choice_description": "Write a function that returns a random index from a list and then use it in a program that prints out a random track's information from the Spotify Top 50 lists.",
     "thumbnail_url": "https://images.code.org/7716646df1f971011d92ed691ff65f13-image-1649369095549.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
