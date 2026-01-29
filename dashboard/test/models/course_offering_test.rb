@@ -975,6 +975,30 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert new_course_offering.ai_teaching_assistant_available
   end
 
+  test "seed_all does not destroy ui-test- offerings" do
+    create(:course_offering, key: 'ui-test-example')
+
+    Dir.mktmpdir do |tmpdir|
+      # Call seed_all with an empty directory (no JSON files)
+      CourseOffering.seed_all(root_dir: Pathname.new(tmpdir), glob: "*.json")
+
+      # The ui-test- offering should still exist
+      assert CourseOffering.exists?(key: 'ui-test-example'), "ui-test- offerings should not be destroyed by seed_all"
+    end
+  end
+
+  test "seed_all destroys regular offerings without JSON files" do
+    create(:course_offering, key: 'regular-offering')
+
+    Dir.mktmpdir do |tmpdir|
+      # Call seed_all with an empty directory (no JSON files)
+      CourseOffering.seed_all(root_dir: Pathname.new(tmpdir), glob: "*.json")
+
+      # The regular offering should be destroyed
+      refute CourseOffering.exists?(key: 'regular-offering'), "regular offerings without JSON files should be destroyed by seed_all"
+    end
+  end
+
   test "validates grade_levels" do
     assert_raises ActiveRecord::RecordInvalid do
       CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')

@@ -454,6 +454,8 @@ class CourseOffering < ApplicationRecord
     Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
+    # Don't destroy ui-test-* course offerings; they are seeded separately
+    removed_records = removed_records.reject {|key| key.start_with?('ui-test-')}
     where(key: removed_records).destroy_all
   end
 
