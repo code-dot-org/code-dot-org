@@ -143,6 +143,30 @@ export interface AssignmentCourseOffering {
   middle: object;
 }
 
+export interface CourseOffering {
+  id: number;
+  display_name: string;
+  is_featured: boolean;
+  participant_audience: string;
+  course_versions: {
+    [courseVersionId: number]: CourseVersion;
+  };
+}
+
+export interface CourseVersion {
+  id: number;
+  content_root_id: number;
+  is_recommended: boolean;
+  is_stable: boolean;
+  key: string;
+  locale_codes: [string];
+  locale: [string];
+  name: string;
+  path: string;
+  units: object;
+  version_year: string;
+}
+
 export type SectionInstructor = {
   instructor_email: string;
   instructor_name: string;

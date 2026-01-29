@@ -2,7 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {useMemo, useState} from 'react';
+import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 
 import {clearPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -21,49 +21,105 @@ interface IdSet {
   [id: number]: boolean;
 }
 
-interface LessonList {
+interface ServerLessonInfo {
   id: number;
   name: string;
 }
 
 interface LessonInfo {
-  [unitId: number]: LessonList;
+  value: string;
+  text: string;
+}
+
+interface LessonList {
+  [unitId: string]: LessonInfo[];
 }
 
 const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const [selectedSectionIds, setSelectedSectionIds] = useState<IdSet>({});
-  const [lessonInfo, setLessonInfo] = useState<LessonInfo>({});
+  const [selectedUnitId, setSelectedUnitId] = useState<string>('');
+  const [selectedLessonId, setSelectedLessonId] = useState<string>('');
+  const [lessonInfo, setLessonInfo] = useState<LessonList>({});
+  const [unitLessons, setUnitLessons] = useState<LessonInfo[]>([]);
   const [toggleValue, setToggleValue] = useState<boolean>(true);
 
   const sections: TeacherSectionState = useAppSelector(state => {
-    console.log(state);
     return state.teacherSections || {};
   });
 
-  console.log(sections);
+  const swapLessonInfo = useCallback(
+    async (unitId: string) => {
+      // Look in state to see if we loaded lesson info yet
+      let nextLessonInfo = lessonInfo[unitId];
+
+      // Lazy load lesson names
+      if (!nextLessonInfo) {
+        setUnitLessons([]);
+        const response = await HttpClient.get(`/s/${unitId}/lessons`);
+        const unitLessonInfo = (await response.json()) as ServerLessonInfo[];
+        const formattedLessonInfo = unitLessonInfo.map(serverLesson => {
+          return {
+            value: serverLesson.id.toString(),
+            text: serverLesson.name,
+          };
+        });
+        setLessonInfo({...lessonInfo, [unitId]: formattedLessonInfo});
+        nextLessonInfo = formattedLessonInfo;
+      }
+
+      // Update lesson dropdown and select first lesson by default
+      setUnitLessons(nextLessonInfo);
+      if (nextLessonInfo[0]) {
+        setSelectedLessonId(nextLessonInfo[0].value);
+      }
+    },
+    [lessonInfo]
+  );
+
+  const handleUnitChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const unitId = event.target.value;
+    setSelectedUnitId(unitId);
+    swapLessonInfo(unitId);
+  };
+
+  const handleLessonChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedLessonId(event.target.value);
+  };
+
+  const onSubmit = () => {
+    const info = {
+      messageId: message.id,
+      sectionIds: Object.keys(selectedSectionIds),
+      unitId: selectedUnitId,
+      lessonId: selectedLessonId,
+    };
+    console.log(info);
+  };
 
   const unitMenuList = useMemo(() => {
     // TODO: dedupe these
-    const curriculumIds = sections.sectionIds.map(sectionId => {
-      return (({courseOfferingId, courseVersionId}) => ({
-        courseOfferingId,
-        courseVersionId,
-      }))(sections.sections[sectionId]);
-    });
+    const curriculumIds = sections.sectionIds
+      .filter(sectionId => sections.sections[sectionId])
+      .map(sectionId => {
+        return {
+          courseOfferingId: sections.sections[sectionId].courseOfferingId,
+          courseVersionId: sections.sections[sectionId].courseVersionId,
+        };
+      });
 
-    console.log(curriculumIds);
-
-    return curriculumIds
-      .map(({courseOfferingId, courseVersionId}) => {
-        const courseOffering = sections.courseOfferings[courseOfferingId];
-        console.log(`course offering id: ${courseOfferingId}`);
-        console.log(courseOffering);
-        if (!courseOffering) {
+    const menuItems = curriculumIds
+      .map(ids => {
+        const courseOfferingId = ids.courseOfferingId;
+        const courseVersionId = ids.courseVersionId;
+        if (
+          !courseOfferingId ||
+          !courseVersionId ||
+          !sections.courseOfferings[courseOfferingId]
+        ) {
           return null;
         }
+        const courseOffering = sections.courseOfferings[courseOfferingId];
         const courseVersion = courseOffering.course_versions[courseVersionId];
-        console.log('version:');
-        console.log(courseVersion);
         if (!courseVersion) {
           return null;
         }
@@ -77,39 +133,23 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           }),
         };
       })
-      .filter(item => item);
-  }, [sections]);
+      .filter(item => item !== null);
 
-  console.log(unitMenuList);
+    // Init lesson menu to initial unit
+    if (menuItems[0] && menuItems[0].groupItems[0]) {
+      swapLessonInfo(menuItems[0].groupItems[0].value);
+    }
+
+    return menuItems;
+  }, [sections, swapLessonInfo]);
 
   const dispatch = useAppDispatch();
-
-  console.log(selectedSectionIds);
 
   const toggleAll = () => {
     setSelectedSectionIds(
       sections.sectionIds.reduce((acc, id) => ({...acc, [id]: toggleValue}), {})
     );
     setToggleValue(oldValue => !oldValue);
-  };
-
-  const swapLessonInfo = unitId => {
-    if (lessonInfo[unitId]) {
-      setLessonList(lessonInfo[unitId]);
-      return;
-    }
-    const response = await HttpClient.get(`/s/${unitId}/lessons`);
-    const unitLessonInfo = await response.json();
-    console.log('loaded lesson info');
-    console.log(unitLessonInfo);
-    setLessonInfo({...lessonInfo, [unitId]: unitLessonInfo});
-    setLessonList(unitLessonInfo);
-  };
-
-  const handleUnitChange = event => {
-    const unitId = event.target.value;
-    console.log(`loading info for unit ${unitId}`);
-    swapLessonInfo(unitId);
   };
 
   return (
@@ -157,12 +197,15 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             itemGroups={unitMenuList}
             labelText="Unit"
             name="unit-dropdown"
+            selectedValue={selectedUnitId}
             onChange={handleUnitChange}
           />
           <SimpleDropdown
-            items={[1, 2].map(num => ({value: `${num}`, text: `${num}${num}`}))}
+            items={unitLessons}
             labelText="Lesson"
             name="lesson-dropdown"
+            selectedValue={selectedLessonId}
+            onChange={handleLessonChange}
           />
         </div>
       </div>
@@ -187,7 +230,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           size="m"
           type="primary"
           color="purple"
-          onClick={() => {}}
+          onClick={onSubmit}
           text="Save selections"
         />
       </div>
