@@ -16,7 +16,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "allow_multiple_attempts": "false",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:59.885+00:00\",\"changed\":[\"cloned from \\\"CSP U4L9 Predict2FR_2024\\\"\"],\"cloned_from\":\"CSP U4L9 Predict2FR_2024\"}]",
