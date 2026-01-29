@@ -8,6 +8,7 @@ import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
+
 // NOTE TO SELF: This is where you want to call the AI Lesson Feedback Function
 /**
  * Handles all logic for continuing lesson progression, either to the next level or finishing the lesson.
@@ -34,13 +35,28 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
     // 1. Take prompt and send to openAi
     // 2. Get response from openAi and print to console
     // 3. Get response from openAi and save to back end
-    printFeedbackPrompt(
+    getAiLessonFeedback(
       lessonId,
       scriptId, // Using lessonId for unitId temporarily
       getState().currentUser.userId,
       hardcodededTeacherId,
       hardcodedSectionId
     );
+
+    // // Call provideLessonFeedbackFromOpenAI and print the result
+    // provideLessonFeedbackFromOpenAI(
+    //   lessonId,
+    //   scriptId, // Using lessonId for unitId temporarily
+    //   getState().currentUser.userId,
+    //   hardcodededTeacherId,
+    //   hardcodedSectionId
+    // )
+    //   .then(aiFeedback => {
+    //     console.log('AI Lesson Feedback:', aiFeedback);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error getting AI lesson feedback:', error);
+    //   });
 
     // If there are no validation conditions and the level is not submittable or a predict level,
     // go ahead and send a success report when we continue.
@@ -63,7 +79,7 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
     }
   };
 
-async function printFeedbackPrompt(
+async function getAiLessonFeedback(
   lessonId: number,
   unitId: number,
   studentId: number,

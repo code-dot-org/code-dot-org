@@ -34,10 +34,11 @@ class StudentSnapshotsController < ApplicationController
     teacher_id = params[:teacher_id]
     section_id = params[:section_id]
 
-    prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(
-      lesson_id, unit_id, student_id, teacher_id, section_id
-    )
-    render json: {prompt: prompt}
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+
+    response = AiStudentSnapshotHelper.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    render json: response
   end
 
   # GET /student_snapshots/cfu_levels/:lesson_id
