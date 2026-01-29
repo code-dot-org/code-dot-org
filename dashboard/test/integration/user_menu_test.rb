@@ -33,7 +33,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     get '/home'
 
     assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
+    assert_select 'a[href="//code.org/teacher-dashboard"]', 0
   end
 
   test 'should redirect for signed out user' do

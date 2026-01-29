@@ -16,19 +16,19 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'tracking_pixel_url' do
     # hoc
-    assert_equal 'https://test-studio.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
+    assert_equal CDO.studio_url('/api/hour/begin_codeorg.png'), tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
 
-    assert_equal 'https://test-studio.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
-    assert_equal 'https://test-studio.code.org/api/hour/begin_artist.png', tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
+    assert_equal CDO.studio_url('/api/hour/begin_frozen.png'), tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
+    assert_equal CDO.studio_url('/api/hour/begin_artist.png'), tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
   end
 
   test 'hoc_finish_url' do
     # hoc
-    assert_equal 'https://test-studio.code.org/api/hour/finish', Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
+    assert_equal CDO.studio_url('/api/hour/finish'), Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
 
-    assert_equal 'https://test-studio.code.org/api/hour/finish/frozen', Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
-    assert_equal 'https://test-studio.code.org/api/hour/finish/starwars', Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
-    assert_equal 'https://test-studio.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
+    assert_equal CDO.studio_url('/api/hour/finish/frozen'), Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
+    assert_equal CDO.studio_url('/api/hour/finish/starwars'), Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
+    assert_equal CDO.studio_url('/api/hour/finish/artist'), Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
   end
 
   test 'unit name instead of lesson name in header for single-lesson unit' do

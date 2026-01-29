@@ -42,7 +42,7 @@ class PasswordsControllerTest < ActionController::TestCase
     assert_redirected_to '/users/password/new'
 
     assert_includes(flash[:notice], 'Reset password link sent to user if email was used to reset. You may also send this link directly:')
-    assert_includes(flash[:notice], 'http://test-studio.code.org/users/password/edit?reset_password_token=')
+    assert_includes(flash[:notice], edit_user_password_url(reset_password_token: ''))
   end
 
   test "create with valid username includes link for admin" do
@@ -57,7 +57,7 @@ class PasswordsControllerTest < ActionController::TestCase
     assert_redirected_to '/users/password/new'
 
     assert_includes(flash[:notice], 'Reset password link sent to user if email was used to reset. You may also send this link directly:')
-    assert_includes(flash[:notice], 'http://test-studio.code.org/users/password/edit?reset_password_token=')
+    assert_includes(flash[:notice], edit_user_password_url(reset_password_token: ''))
   end
 
   test "create with invalid email informs admin" do

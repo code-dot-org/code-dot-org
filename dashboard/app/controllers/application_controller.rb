@@ -150,7 +150,7 @@ class ApplicationController < ActionController::Base
 
   # Allow cross-origin requests from code.org
   def allow_cdo_cors
-    allowed_origin = CDO.code_org_url('', request.protocol.chomp('//'))
+    allowed_origin = CDO.code_org_url
 
     request_origin = request.headers['Origin']
     allowed_origin = request_origin if CDO.marketing_sites_hosts.include?(request_origin)

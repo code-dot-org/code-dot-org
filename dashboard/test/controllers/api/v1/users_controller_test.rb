@@ -323,7 +323,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     it 'allows CDO CORS from code.org by default' do
       get :signed_in
 
-      _(response.headers['Access-Control-Allow-Origin']).must_equal 'http://test.code.org'
+      _(response.headers['Access-Control-Allow-Origin']).must_equal '//code.org'
       _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
       _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
       _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'

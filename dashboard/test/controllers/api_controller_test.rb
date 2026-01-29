@@ -60,7 +60,9 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
     assert_response :success
-    assert_equal '["https://studio.code.org/projects/dance/example-1/view","https://studio.code.org/projects/dance/example-2/view"]', @response.body
+    expected_url1 = CDO.studio_url dance_project_view_projects_path('example-1')
+    expected_url2 = CDO.studio_url dance_project_view_projects_path('example-2')
+    assert_equal [expected_url1, expected_url2], JSON.parse(@response.body)
   end
 
   test "example_solutions should return expected example solutions when section id is empty" do
@@ -77,7 +79,8 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
     assert_response :success
-    assert_equal "[\"https://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
+    expected_url = CDO.studio_url script_lesson_script_level_path(script_level.script.name, 1, 1, solution: 'true')
+    assert_equal [expected_url], JSON.parse(@response.body)
   end
 
   test "example_solutions should return expected example solutions when section id is present" do
@@ -95,7 +98,8 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
     assert_response :success
-    assert_equal "[\"https://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
+    expected_url = CDO.studio_url script_lesson_script_level_path(script_level.script.name, 1, 1, section_id: section.id, solution: 'true')
+    assert_equal [expected_url], JSON.parse(@response.body)
   end
 
   test "should get text_responses for section with default script" do
@@ -215,7 +219,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
-        'url' => "https://test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => CDO.studio_url(script_lesson_script_level_path(script.name, 1, 1, section_id: @section.id, user_id: @student_1.id)),
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
@@ -223,7 +227,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
-        'url' => "https://test-studio.code.org/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => CDO.studio_url(script_lesson_script_level_path(script.name, 2, 1, section_id: @section.id, user_id: @student_1.id)),
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
@@ -231,7 +235,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
-        'url' => "https://test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
+        'url' => CDO.studio_url(script_lesson_script_level_path(script.name, 1, 1, section_id: @section.id, user_id: @student_2.id)),
       }
     ]
     assert_equal expected_response, JSON.parse(@response.body)
@@ -1477,7 +1481,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="https://test-studio.code.org/users/sign_in"]', 'Sign in'
+    assert_select "a[href=#{CDO.studio_url(user_session_path).inspect}]", 'Sign in'
   end
 
   test 'should show sign out link for signed in user' do
@@ -1487,7 +1491,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="https://test-studio.code.org/users/sign_out"]', 'Sign out'
+    assert_select "a[href=#{CDO.studio_url(destroy_user_session_path).inspect}]", 'Sign out'
   end
 
   test 'show link to pair programming when in a section' do
@@ -1509,20 +1513,20 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
+    assert_select "a[href=#{CDO.studio_url(pairing_path).inspect}]", false
   end
 
   test 'api routing' do
     # /dashboardapi urls
     assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/user_menu"},
+      {method: "get", path: CDO.studio_url(dashboardapi_user_menu_path)},
       {controller: "api", action: "user_menu"}
     )
 
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
+      {method: "get", path: CDO.studio_url(api_user_menu_path)}
     )
   end
 

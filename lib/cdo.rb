@@ -97,7 +97,7 @@ module Cdo
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
       sep = domain.include?('.code.org') ? '-' : '.'
       # developers and CI servers use localhost
-      return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
+      return "localhost#{sep}#{domain}" if rack_env?(:development)
       return "translate#{sep}#{domain}" if name == 'crowdin'
       "#{rack_env}#{sep}#{domain}"
     end
@@ -131,7 +131,7 @@ module Cdo
       if (rack_env?(:development) && !https_development) ||
           (ENV.fetch('CI', nil) && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
-        host += ":#{port}"
+        host += ":#{port}" if port
       end
       host
     end

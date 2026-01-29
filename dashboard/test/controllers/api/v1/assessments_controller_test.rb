@@ -288,7 +288,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "lesson" => script.name,
             "puzzle" => 1,
             "question" => "Long assessment 1",
-            "url" => "https://test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+            "url" => CDO.studio_url(course_unit_lesson_script_level_path(script.original_unit_group.name, 1, 1, 1, section_id: @section.id, user_id: @student_1.id)),
             "multi_correct" => 1,
             "multi_count" => 4,
             "match_correct" => 1,
@@ -406,7 +406,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_equal "https://test-studio.code.org/courses/#{modular_course.name}/units/1/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+    assert_equal CDO.studio_url(course_unit_lesson_script_level_path(modular_course.name, 1, 1, 1, section_id: @section.id, user_id: @student_1.id)),
                  JSON.parse(@response.body)[@student_1.id.to_s]['responses_by_assessment'][level1.id.to_s]['url']
   end
 
@@ -474,7 +474,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               "lesson" => script.name,
               "puzzle" => 1,
               "question" => "Long assessment 1",
-              "url" => "https://test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+              "url" => CDO.studio_url(course_unit_lesson_script_level_path(script.original_unit_group.name, 1, 1, 1, section_id: @section.id, user_id: @student_1.id)),
               "multi_correct" => 1,
               "multi_count" => 2,
               "match_correct" => 0,
