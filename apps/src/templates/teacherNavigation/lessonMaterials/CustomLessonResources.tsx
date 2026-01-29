@@ -6,10 +6,10 @@ import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {Resource} from './LessonMaterialTypes';
 import ResourceRow from './ResourceRow';
 
 import styles from './lesson-materials.module.scss';
-import {Resource} from './LessonMaterialTypes';
 
 type CustomResourcesProps = {
   unitId: number | null;
