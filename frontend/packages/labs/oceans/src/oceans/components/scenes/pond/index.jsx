@@ -195,7 +195,7 @@ let UnwrappedPond = class Pond extends React.Component {
           <button
             type="button"
             onClick={this.toggleRecall}
-            aria-label="Toggle Identified Fish"
+            aria-label="Show Matching Items"
             style={{
               ...styles.recallIcon,
               ...{borderTopLeftRadius: 8, borderBottomLeftRadius: 8},
@@ -207,7 +207,7 @@ let UnwrappedPond = class Pond extends React.Component {
           <button
             type="button"
             onClick={this.toggleRecall}
-            aria-label="Toggle Identified Trash"
+            aria-label="Show Non-Matching Items"
             style={{
               ...styles.recallIcon,
               ...{borderTopRightRadius: 8, borderBottomRightRadius: 8},
