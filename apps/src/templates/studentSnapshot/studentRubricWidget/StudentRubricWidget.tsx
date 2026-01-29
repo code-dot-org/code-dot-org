@@ -18,7 +18,7 @@ interface StudentRubricWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
   lessonId: number | null;
-  studentId: number;
+  studentId: number | null;
   studentName?: string; // Optional - student name for display in AiAssessment
   levelId?: number; // Optional - if not provided, uses lesson.rubric (first rubric for lesson)
   // These map directly to LearningGoals props so we can reuse it as-is.

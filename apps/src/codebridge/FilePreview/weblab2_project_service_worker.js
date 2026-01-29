@@ -20,6 +20,8 @@ function main() {
     PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL
   );
   const codeDotOrgOrigin = getCodeDotOrgOrigin();
+  // Generate a cache bust suffix for this service worker instance.
+  const cacheBustSuffix = Date.now().toString();
   let contentSecurityPolicyValue = null;
 
   addEventListener('install', () => {
@@ -103,9 +105,11 @@ function main() {
         let fetchUrl = url;
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
-          // Adding a temporary cache bust query parameter to avoid some caching issues with level starter assets.
-          const temporaryCacheBust = '?temp-cache-bust=1';
-          fetchUrl = codeDotOrgOrigin + url + temporaryCacheBust;
+          // We use a cache-busting query parameter to ensure that we get the correct response headers,
+          // specifically to avoid CORs issues with Access-Control-Allow-Origin being set to someone else's
+          // preview url.
+          const cacheBust = `?cache-bust=${cacheBustSuffix}`;
+          fetchUrl = codeDotOrgOrigin + url + cacheBust;
         }
         return await fetch(fetchUrl);
       }
