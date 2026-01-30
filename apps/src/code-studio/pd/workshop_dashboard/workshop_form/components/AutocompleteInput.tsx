@@ -32,6 +32,7 @@ export const AutocompleteInput = memo(
     'aria-label': ariaLabel,
     onBlur,
     onSelect,
+    onEnter,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
@@ -48,6 +49,7 @@ export const AutocompleteInput = memo(
     'aria-label'?: string;
     onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
     onSelect?: (option: string) => void;
+    onEnter?: (value: string) => void;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -96,10 +98,14 @@ export const AutocompleteInput = memo(
         skipApi.current = false;
         return;
       }
+      if (!value || value.length < 3) {
+        reset();
+        return;
+      }
       if (debouncedValue && debouncedValue.length >= 3) {
         fetchSuggestions(debouncedValue);
       }
-    }, [debouncedValue, fetchSuggestions]);
+    }, [debouncedValue, fetchSuggestions, reset, value]);
 
     const handleSelectOption = useCallback(
       (option: string) => {
@@ -134,6 +140,10 @@ export const AutocompleteInput = memo(
             if (activeIndex >= 0) {
               e.preventDefault();
               handleSelectOption(options[activeIndex]);
+            } else if (key === 'Enter' && onEnter) {
+              e.preventDefault();
+              onEnter(value);
+              reset();
             }
             break;
           case 'Escape':
