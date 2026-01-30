@@ -165,14 +165,17 @@ function main() {
       '  color: #576575;' +
       '}' +
       '.csp-blocked-image-header {' +
-      '  font-weight: bold;' +
+      '  font-size: 16px;' +
+      '  font-weight: 600;' +
+      '  line-height: 23.68px;' +
       '  color: #292F36;' +
-      '  font-size: 13px;' +
       '}' +
       '.csp-blocked-image-details {' +
-      '  font-size: 11px;' +
+      '  font-weight: 400;' +
+      '  line-height: 21.56px;' +
+      '  font-size: 14px;' +
       '  color: #292F36;' +
-      '  line-height: 1.3;' +
+      '  text-align: center;' +
       '}' +
       '.csp-blocked-image-approved-sources-button {' +
       '  display: inline-block;' +
@@ -181,7 +184,7 @@ function main() {
       '  padding: 5px 12px;' +
       '  border-radius: 4px;' +
       '  border: 1px solid #292F36;' +
-      '  font-size: 12px;' +
+      '  font-size: 14px;' +
       '  font-weight: 600;' +
       '  text-decoration: none;' +
       '  cursor: pointer;' +
