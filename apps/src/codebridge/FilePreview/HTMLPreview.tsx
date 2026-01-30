@@ -23,6 +23,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {filterSourceForPreview} from '../utils/filterSourceForPreview';
+import {getFilesByLanguage} from '../utils/getFilesByLanguage';
 import {getFolderPath} from '../utils/getFolderPath';
 
 import {
@@ -137,12 +138,7 @@ export const HTMLPreview: React.FC = () => {
     if (!source) {
       return [];
     }
-    const options = Object.values(source.files)
-      .filter(
-        file =>
-          file.language === 'html' || file.name.toLowerCase().endsWith('.html')
-      )
-      .map(file => {
+    const options = getFilesByLanguage(source, 'html').map(file => {
         if (file.folderId === DEFAULT_FOLDER_ID) {
           return file.name;
         }

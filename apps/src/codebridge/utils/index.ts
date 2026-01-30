@@ -12,6 +12,7 @@ export * from './findFolder';
 export * from './getEmptyProject';
 export * from './getErrorMessage';
 export * from './getFileNameWithNumberSuffix';
+export * from './getFilesByLanguage';
 export * from './getFolderChildren';
 export * from './getFolderLineage';
 export * from './getFolderPath';
