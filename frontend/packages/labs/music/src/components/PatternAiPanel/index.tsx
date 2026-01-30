@@ -20,7 +20,6 @@ import imgArrow from '../../assets/music-callout-arrow.png';
 
 import {useInterval} from '@code-dot-org/lab/hooks';
 
-import {generatePattern} from '../../ai/patternAi';
 import appConfig from '../../appConfig';
 import {
   PATTERN_AI_NUM_EVENTS,
@@ -518,6 +517,7 @@ const PatternAiPanel = ({initValue, onChange}: PatternAiPanelProps) => {
     onChange(currentValue.current);
 
     const startTime = Date.now();
+    const {generatePattern} = await import('../../ai/patternAi');
     generatePattern(
       seedEvents,
       PATTERN_AI_NUM_SEED_EVENTS,

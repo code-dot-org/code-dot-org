@@ -18,7 +18,9 @@ export default defineConfig({
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.
-    externalizeDeps(),
+    externalizeDeps({
+      useFile: path.resolve(__dirname, 'package.json'),
+    }),
   ],
   server: {
     allowedHosts: ['localhost-studio.code.org'],

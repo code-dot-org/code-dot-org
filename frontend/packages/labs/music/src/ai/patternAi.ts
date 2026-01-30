@@ -6,9 +6,16 @@ import type {InstrumentTickEvent} from '../player/interfaces/InstrumentEvent';
 
 import {Message} from './types';
 
-import PatternAiWorker from './patternAiWorker?worker&inline';
+import PatternAiWorker from './patternAiWorker?worker';
 
-const worker = new PatternAiWorker();
+let worker: Worker | undefined;
+
+function getWorker() {
+  if (!worker) {
+    worker = new PatternAiWorker();
+  }
+  return worker;
+}
 
 // Track the first generate attempt per page load separately, as it typically
 // takes much longer than subsequent attempts.
@@ -29,14 +36,15 @@ export function generatePattern(
   reporter.incrementCounter('MusicAI.GeneratePatternAttempt');
   analyticsReporter.onGenerateAiPatternStart(temperature);
 
-  worker.postMessage([
+  const w = getWorker();
+  w.postMessage([
     Message.GeneratePattern,
     seed,
     seedLength,
     generateLength,
     temperature,
   ]);
-  worker.onmessage = e => {
+  w.onmessage = e => {
     switch (e.data[0]) {
       case Message.ModelCreated:
         reportCreateModelTime(reporter, e.data[1]);
@@ -57,12 +65,12 @@ export function generatePattern(
     }
   };
 
-  worker.onmessageerror = e => {
+  w.onmessageerror = e => {
     reportError(reporter, new Error(e.data), 'MessageError');
     onError(new Error(e.data));
   };
 
-  worker.onerror = e => {
+  w.onerror = e => {
     reportError(reporter, e.error || e.message, 'GeneralError');
     onError(e.error || e.message);
   };
