@@ -14,6 +14,7 @@ const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
 const CSP_VIOLATION = 'CSP_VIOLATION';
+const OPEN_EXTERNAL_LINK = 'OPEN_EXTERNAL_LINK';
 
 function main() {
   let filesData = {};
@@ -142,48 +143,55 @@ function main() {
     }
   }
 
-  // Inject a script into HTML to listen for CSP violations and show inline error messages
+  // Inject a script into HTML to listen for CSP violations and show inline error messages.
   function injectCSPViolationListener(htmlContent) {
     var cspListenerScript =
       '<style>' +
       '.csp-blocked-image-container {' +
       '  display: inline-block;' +
-      '  border: 2px solid #ffc107;' +
-      '  background-color: #fff3cd;' +
+      '  background-color: #DFE3E9;' +
       '  padding: 8px 10px;' +
       '  border-radius: 4px;' +
       '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;' +
       '  max-width: 100%;' +
       '  min-width: 300px;' +
       '  box-sizing: border-box;' +
+      '  text-align: center;' +
       '}' +
-      '.csp-blocked-image-header {' +
-      '  display: flex;' +
-      '  align-items: center;' +
-      '  gap: 6px;' +
-      '  margin-bottom: 4px;' +
-      '  font-weight: bold;' +
-      '  color: #856404;' +
-      '  font-size: 13px;' +
+      '.csp-blocked-image-icon-container {' +
+      '  margin-bottom: 8px;' +
       '}' +
       '.csp-blocked-image-icon {' +
-      '  font-size: 16px;' +
-      '  flex-shrink: 0;' +
+      '  width: 24px;' +
+      '  height: 24px;' +
+      '  color: #576575;' +
+      '}' +
+      '.csp-blocked-image-header {' +
+      '  margin-bottom: 4px;' +
+      '  font-weight: bold;' +
+      '  color: #292F36;' +
+      '  font-size: 13px;' +
       '}' +
       '.csp-blocked-image-details {' +
       '  font-size: 11px;' +
-      '  color: #856404;' +
+      '  color: #292F36;' +
       '  line-height: 1.3;' +
-      '  margin-bottom: 4px;' +
+      '  margin-bottom: 8px;' +
       '}' +
-      '.csp-blocked-image-url {' +
-      '  background-color: rgba(0, 0, 0, 0.1);' +
-      '  padding: 3px 5px;' +
-      '  border-radius: 3px;' +
-      '  font-family: monospace;' +
-      '  font-size: 10px;' +
-      '  display: block;' +
-      '  word-break: break-all;' +
+      '.csp-blocked-image-approved-sources {' +
+      '  display: inline-block;' +
+      '  background-color: #FFF;' +
+      '  color: #292F36;' +
+      '  padding: 8px 16px;' +
+      '  border-radius: 4px;' +
+      '  font-size: 12px;' +
+      '  font-weight: 600;' +
+      '  text-decoration: none;' +
+      '  cursor: pointer;' +
+      '  transition: background-color 0.2s ease;' +
+      '}' +
+      '.csp-blocked-image-approved-sources:hover {' +
+      '  background-color: #EEE;' +
       '}' +
       '</style>' +
       '<script>' +
@@ -211,23 +219,37 @@ function main() {
       '      container.style.display = "block";' +
       '    }' +
       '' +
+      '    var iconContainer = document.createElement("div");' +
+      '    iconContainer.className = "csp-blocked-image-icon-container";' +
+      '    iconContainer.innerHTML = ' +
+      '      \'<svg class="csp-blocked-image-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zm32 224c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z"/></svg>\';' +
+      '' +
       '    var header = document.createElement("div");' +
       '    header.className = "csp-blocked-image-header";' +
-      '    header.innerHTML = ' +
-      '      \'<span class="csp-blocked-image-icon">\\u26A0\\uFE0F</span>\' +' +
-      "      '<span>Image URL Not Allowed</span>';" +
+      '    header.textContent = "Image source not allowed";' +
       '' +
       '    var details = document.createElement("div");' +
       '    details.className = "csp-blocked-image-details";' +
-      '    details.textContent = "This image cannot be loaded because its URL is not on the allowlist.";' +
+      '    details.textContent = "This image couldn\'t not load because its URL isn\'t from an approved source. Try uploading the image instead or use a URL form the supported image list.";' +
       '' +
-      '    var urlDisplay = document.createElement("code");' +
-      '    urlDisplay.className = "csp-blocked-image-url";' +
-      '    urlDisplay.textContent = blockedURL;' +
+      '    var approvedSourcesDisplay = document.createElement("a");' +
+      '    approvedSourcesDisplay.className = "csp-blocked-image-approved-sources";' +
+      '    approvedSourcesDisplay.textContent = "See approved image sources";' +
+      '    approvedSourcesDisplay.href = "#";' +
+      '    approvedSourcesDisplay.addEventListener("click", function(e) {' +
+      '      e.preventDefault();' +
+      '      channel.postMessage({' +
+      "        type: '" +
+      OPEN_EXTERNAL_LINK +
+      "'," +
+      '        url: "https://support.code.org/hc/en-us"' +
+      '      });' +
+      '    });' +
       '' +
+      '    container.appendChild(iconContainer);' +
       '    container.appendChild(header);' +
       '    container.appendChild(details);' +
-      '    container.appendChild(urlDisplay);' +
+      '    container.appendChild(approvedSourcesDisplay);' +
       '' +
       '    if (img.parentNode) {' +
       '      img.parentNode.replaceChild(container, img);' +

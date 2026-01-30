@@ -134,6 +134,17 @@ const InnerHTMLPreview = () => {
           },
           parentOrigin
         );
+      } else if (
+        event.data.type === ProjectServiceWorkerMessageType.OPEN_EXTERNAL_LINK
+      ) {
+        // Forward the request to open external link to the parent window
+        window.parent.postMessage(
+          {
+            type: IframeMessageType.OPEN_EXTERNAL_LINK,
+            url: event.data.url,
+          },
+          parentOrigin
+        );
       }
     };
     return () => {

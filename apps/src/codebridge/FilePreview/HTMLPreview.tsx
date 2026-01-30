@@ -315,6 +315,12 @@ export const HTMLPreview: React.FC = () => {
             ])
           );
         }
+      } else if (event.data.type === IframeMessageType.OPEN_EXTERNAL_LINK) {
+        // Open external link in a new window.
+        const url = event.data.url;
+        if (url) {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
       }
     };
 
