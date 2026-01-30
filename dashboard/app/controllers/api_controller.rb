@@ -702,6 +702,10 @@ class ApiController < ApplicationController
     end
   end
 
+  # The sections endpoint path varies between Clever API versions.
+  # v3 wants users/:uid/sections with the new role-agnostic Clever ID
+  # instead of the old teachers endpoint that used the now-deprecated teacher ID.
+  # TODO: Remove this method when we drop support for Clever API v2.1
   private def clever_sections_url_path(api_version:, uid:)
     case api_version
     when AuthenticationOption::Clever::VERSION[:v2_1]
