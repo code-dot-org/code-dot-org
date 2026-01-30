@@ -161,7 +161,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     }
 
     return menuItems;
-  }, [sections, swapLessonInfo, selectedUnitId]);
+  }, [activeStudentSections, sections, swapLessonInfo, selectedUnitId]);
 
   const dispatch = useAppDispatch();
 
