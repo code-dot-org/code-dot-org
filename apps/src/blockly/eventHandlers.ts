@@ -138,7 +138,7 @@ export function setPathFill(e: BlocklyCore.Events.Abstract) {
       .getAllBlocks()
       .map(block => block as ExtendedBlock)
       .forEach(block => {
-        const pattern = block.getFillPattern();
+        const pattern = block.getFillPattern?.();
         if (block instanceof BlocklyCore.BlockSvg) {
           if (!block.svgPathFill) {
             block.svgPathFill = Blockly.createSvgElement(

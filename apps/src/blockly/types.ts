@@ -265,9 +265,9 @@ export interface ExtendedConnection extends BlocklyCore.Connection {
 }
 
 export interface ExtendedBlock extends BlocklyCore.Block {
-  getFillPattern: () => string | undefined;
+  getFillPattern?: () => string | undefined;
   fillPattern?: string;
-  setFillPattern: (pattern: string) => void;
+  setFillPattern?: (pattern: string) => void;
   interpolateMsg: (
     this: ExtendedBlock,
     msg: string,

@@ -540,21 +540,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   extendedBlock.interpolateMsg = interpolateMsg;
 
-  /**
-   * Change the fill pattern of a block
-   * @param {string} pattern The id of the pattern
-   */
-  extendedBlock.setFillPattern = function (pattern: string) {
-    this.fillPattern = pattern;
-  };
-
-  /**
-   * Get the fill pattern for the block
-   * @return {string} Pattern name xlink
-   */
-  extendedBlock.getFillPattern = function () {
-    return this.fillPattern;
-  };
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 
