@@ -1,18 +1,19 @@
 {
-  "name": "allthemigratedthings",
+  "name": "ui-test-artist",
   "script_names": [
-    "allthemigratedthings"
+    "ui-test-artist"
   ],
   "original_script_names": [
-    "allthemigratedthings"
+    "ui-test-artist"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "allthemigratedthings",
-    "version_year": "2020"
+    "family_name": "ui-test-artist",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
   },
   "resources": [
 

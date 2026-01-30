@@ -52,7 +52,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     analyticsReporter.sendEvent(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
       {source: sourceName},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setShowCopiedMsg(true);
     setTimeout(() => {

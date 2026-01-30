@@ -208,7 +208,7 @@ describe('useSchoolInfo', () => {
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.COUNTRY_SELECTED,
           {country: 'CA'},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       });
     });
@@ -279,7 +279,7 @@ describe('useSchoolInfo', () => {
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ZIP_CODE_ENTERED,
           {country: 'US', zip: '90210'},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       });
 
@@ -321,7 +321,7 @@ describe('useSchoolInfo', () => {
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
           {country: 'US'},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
 
         act(() => {
@@ -331,7 +331,7 @@ describe('useSchoolInfo', () => {
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.ADD_MANUALLY_CLICKED,
           {country: 'US'},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
 
         act(() => {
@@ -341,7 +341,7 @@ describe('useSchoolInfo', () => {
         expect(sendAnalyticsEventSpy).toHaveBeenCalledWith(
           EVENTS.SCHOOL_SELECTED_FROM_LIST,
           {'nces Id': '2', country: 'US'},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       });
     });
