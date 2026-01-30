@@ -141,6 +141,11 @@ export default function RubricsContainer({
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );
+  const [selectedLevelDisplayName, setSelectedLevelDisplayName] = useState(
+    (!!rubric
+      ? submittableLevels.find(level => level.id === rubric.levelId)?.name
+      : submittableLevels[0]?.name) || ''
+  );
 
   // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
   const saveRubric = async event => {
@@ -166,6 +171,9 @@ export default function RubricsContainer({
 
   const handleDropdownChange = event => {
     setSelectedLevelForAssessment(event.target.value);
+    setSelectedLevelDisplayName(
+      event.target.options[event.target.selectedIndex].text
+    );
   };
 
   const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
@@ -176,7 +184,10 @@ export default function RubricsContainer({
       {hasSubmittableLevels && (
         <div>
           <BodyTwoText>
-            This rubric will be used for {unitName}, lesson {lessonNumber}.
+            This rubric will be used in {unitName}, lesson {lessonNumber}. It
+            will be evaluated on level {selectedLevelDisplayName}. If that level
+            shares a project template with any other levels in this lesson, the
+            rubric will also appear on those levels.
           </BodyTwoText>
           <div style={styles.containerStyle}>
             <label htmlFor="rubric_level_id">
