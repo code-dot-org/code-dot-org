@@ -50,12 +50,6 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
   });
 
   const isBlockSelected = eventData.blockId === selectedBlockId;
-  console.log(
-    'is block selected',
-    isBlockSelected,
-    selectedBlockId,
-    eventData.blockId,
-  );
 
   const soundType = isSoundEvent(eventData)
     ? eventData.soundType

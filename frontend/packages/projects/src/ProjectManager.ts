@@ -335,7 +335,6 @@ export default class ProjectManager {
   }
 
   async getVersionList(includeComments: boolean = false) {
-    console.log('GETTING VERSIONS', this.channelId);
     return await this.sourcesStore.getVersionList(
       this.channelId,
       includeComments,
@@ -378,7 +377,6 @@ export default class ProjectManager {
    */
   private async initializeForceNewVersionState(): Promise<void> {
     const currentVersionId = this.getCurrentVersionId();
-    console.log('CURRENT VERSION ID', currentVersionId);
     if (!currentVersionId) {
       this.setForceNewVersion(false);
       return;

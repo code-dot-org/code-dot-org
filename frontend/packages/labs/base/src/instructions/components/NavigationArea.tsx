@@ -63,10 +63,9 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
     disableEditRunForSubmission,
     offerBrowserTts,
   } = levelProperties;
-  const hasValidationConditions = useAppSelector(state => {
-    console.log(state);
-    return state.lab.validationState?.hasConditions;
-  });
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions,
+  );
   const validationMessage = useAppSelector(
     state => state.lab.validationState?.message,
   );

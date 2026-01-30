@@ -201,8 +201,6 @@ export const setUpWithLevel = createAsyncThunk<
     LifecycleEvent.LevelLoadStarted,
     payload.levelId,
   );
-  console.log('setUpWithLevel');
-
   try {
     // Update standalone channel ID early if we have one.
     if (payload.channelId) {
@@ -327,7 +325,6 @@ export const setUpWithLevel = createAsyncThunk<
       projectManager,
       thunkAPI.dispatch,
     );
-    console.log('LOADED', levelProperties, sources, channel);
     setProjectAndLevelData(
       {
         initialSources: sources,

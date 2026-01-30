@@ -82,7 +82,6 @@ export const ProjectProvider = ({
     // for a level that does not allow it.
     // TODO: the header hooks come later
     //dispatch(clearHeader());
-    console.log('project provider', currentLevelId, levelProperties);
 
     // If we have a level id, set up the lab with that level. If we also have a channel id,
     // we will load the project based on that channel id, otherwise we will look up a channel id
@@ -142,7 +141,6 @@ export const ProjectProvider = ({
     // then possibly load a new header if the level has one.
     // TODO: header hook
     //dispatch(clearHeader());
-    console.log('header clearHeader()');
     // If there is no channel, we can't load a header.
     if (loadedChannelId && isOwnerOfChannel) {
       if (isStandaloneProjectLevel) {

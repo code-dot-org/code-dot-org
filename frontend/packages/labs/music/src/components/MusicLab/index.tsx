@@ -34,7 +34,6 @@ import ExemplarPlayerView from '../ExemplarPlayerView';
 
 import AppConfig from '../../appConfig';
 import PlayerContext from '../../contexts/PlayerContext';
-import MusicPlayer from '../../player/MusicPlayer';
 import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
 import {useAppDispatch, useAppSelector} from '../../redux/store';
@@ -71,10 +70,8 @@ const MusicLab = () => {
   );
 
   const levelProperties = useLevelProperties<MusicLevelProperties>();
-  console.log(useLevelProperties);
 
   const {currentSources} = useSources<BlocklySerialization>();
-  console.log('SOURCES', currentSources);
 
   const {skipUrl} = levelProperties;
   const guideMode = levelProperties.levelData.guideMode;
@@ -90,17 +87,18 @@ const MusicLab = () => {
     onInject,
     onChange,
     javascriptGeneratorRef,
-    driverRef,
+    driver,
+    player,
   } = useContext(PlayerContext);
 
   const hideChaff = useCallback(() => {}, []);
-  const undo = useCallback(() => driverRef.current.undo(), [driverRef]);
-  const redo = useCallback(() => driverRef.current.redo(), [driverRef]);
+  const undo = useCallback(() => driver.undo(), [driver]);
+  const redo = useCallback(() => driver.redo(), [driver]);
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
   const allowPackSelection = true;
   const setPlaying = useCallback(
-    (play: boolean) => driverRef.current.setPlaying(play),
-    [driverRef],
+    (play: boolean) => driver.setPlaying(play),
+    [driver],
   );
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
@@ -150,8 +148,6 @@ const MusicLab = () => {
     [levelProperties],
   );
 
-  console.log('toolbox', toolboxBlocks);
-
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const instructionsPosition = useAppSelector(
@@ -160,12 +156,9 @@ const MusicLab = () => {
 
   const hasRun = false;
   const hasEdited = false;
-  const isPlaying = false;
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
   const showExemplarPlayer = false;
   const exemplarPlaybackEvents: PlaybackEvent[] = [];
-  const player: MusicPlayer = new MusicPlayer();
-
-  console.log(allowPackSelection, player);
 
   return (
     <BlocklyProvider
@@ -181,7 +174,7 @@ const MusicLab = () => {
             timelineAtTop && moduleStyles.reverse,
           )}
         >
-          {allowPackSelection && (
+          {allowPackSelection && player && (
             <PackDialog
               player={player}
               forcePackSelect={guideMode === 'aiCodeGenerate'}
@@ -218,7 +211,8 @@ const MusicLab = () => {
                 onInstructionsTextClick={onInstructionsTextClick}
                 bottomComponent={
                   exemplarPlayerInsideInstructions &&
-                  showExemplarPlayer && (
+                  showExemplarPlayer &&
+                  player && (
                     <ExemplarPlayerView
                       playbackEvents={exemplarPlaybackEvents}
                       title={

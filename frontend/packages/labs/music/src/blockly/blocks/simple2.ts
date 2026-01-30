@@ -61,7 +61,6 @@ const whenRunSimple2 = defineBlock({
 
       return `
       if (__context == 'when_run') {
-        log(Sequencer);
         Sequencer.newSequence();
         Sequencer.startFunctionContext('when_run');
         Sequencer.playSequential();
@@ -132,7 +131,6 @@ const playSoundAtCurrentLocationSimple2 = defineBlock({
         return '';
       }
 
-      console.log('generating', block);
       return `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
         block.id
       }");\n`;

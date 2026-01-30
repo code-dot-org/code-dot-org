@@ -130,7 +130,6 @@ const PackDialog = ({player, forcePackSelect}: PackDialogProps) => {
   const currentPackId = useAppSelector(state => state.music.packId);
 
   const library = MusicLibrary.getInstance();
-  console.log(library);
 
   // Use a ref for instant access to this value inside onPreview.
   const playingPreview = useRef<string | null>(null);

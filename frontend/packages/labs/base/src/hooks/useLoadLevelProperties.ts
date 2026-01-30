@@ -12,7 +12,6 @@ import {LevelPropertiesMapValidator} from '../responseValidators';
 import {LevelPropertiesMap} from '../types';
 
 async function loadLevelProperties(path: string) {
-  console.log('loadLevel', path);
   const response = await HttpClient.fetchJson<LevelPropertiesMap>(
     path,
     undefined,
@@ -31,7 +30,6 @@ export function useLoadLevelProperties() {
   const host = getDashboardApiUrl(getEnvironmentFromHostname());
 
   const path = useAppSelector(({progress}) => {
-    console.log(progress);
     const {scriptName, currentLevelId, lessons, currentLessonId} = progress;
     const lessonPosition = lessons?.find(
       lesson => lesson.id === currentLessonId,
@@ -50,7 +48,6 @@ export function useLoadLevelProperties() {
   });
 
   useEffect(() => {
-    console.log('path?', path);
     if (path) {
       loadLevelProperties(path)
         .then(setPropertiesMap)

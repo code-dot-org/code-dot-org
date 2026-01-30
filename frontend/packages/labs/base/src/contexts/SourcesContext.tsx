@@ -130,7 +130,6 @@ export const SourcesProvider = <
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources<U>, save: boolean = false) => {
-      console.log('REINIT SOURCES', sources);
       setCurrentSources(transform?.(sources) || sources);
       if (save && !readonlyWorkspaceRef.current) {
         (projectManager || LabRegistry.projectManager)?.save(
