@@ -17,9 +17,7 @@ export const moderateImage = async (
     return 'skipped';
   }
   const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
-  const appNameForMetrics = appName || 'unknown';
   metricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
-    {name: 'AppName', value: appNameForMetrics},
     {name: 'UploaderType', value: 'Lab2FileUploader'},
   ]);
   analyticsReporter.sendEvent(
@@ -37,21 +35,18 @@ export const moderateImage = async (
     if (!response.ok) {
       metricsReporter.logError('Error with image moderation: HTTP error');
       metricsReporter.incrementCounter('ModerateCustomImage.Error', [
-        {name: 'AppName', value: appNameForMetrics},
         {name: 'UploaderType', value: 'Lab2FileUploader'},
       ]);
       return 'skipped';
     }
     const json = await response.json();
     metricsReporter.incrementCounter('ModerateCustomImage.Success', [
-      {name: 'AppName', value: appNameForMetrics},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
       return 'ok';
     }
     metricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
-      {name: 'AppName', value: appNameForMetrics},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     analyticsReporter.sendEvent(
@@ -66,7 +61,6 @@ export const moderateImage = async (
   } catch (error) {
     metricsReporter.logError('Error with image moderation: ' + error);
     metricsReporter.incrementCounter('ModerateCustomImage.Error', [
-      {name: 'AppName', value: appNameForMetrics},
       {name: 'UploaderType', value: 'Lab2FileUploader'},
     ]);
     return 'skipped';

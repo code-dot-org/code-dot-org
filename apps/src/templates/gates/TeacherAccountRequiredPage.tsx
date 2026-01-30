@@ -17,7 +17,7 @@ const TeacherAccountRequiredPage: React.FunctionComponent = () => {
     analyticsReporter.sendEvent(
       EVENTS.UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT,
       {source: sourcePage},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }, [sourcePage]);
 

@@ -98,7 +98,7 @@ const LoginTypeSelection: React.FunctionComponent<{
           analyticsReporter.sendEvent(
             EVENTS.SIGN_UP_STARTED_EVENT,
             sourceParam,
-            PLATFORMS.BOTH
+            PLATFORMS.STATSIG
           );
           sessionStorage.setItem(
             ACCOUNT_TYPE_SESSION_KEY,
@@ -212,7 +212,7 @@ const LoginTypeSelection: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.LMS_INFORMATION_BUTTON_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -222,7 +222,7 @@ const LoginTypeSelection: React.FunctionComponent<{
       {
         'user login type': loginType,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }
 

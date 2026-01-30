@@ -24,7 +24,7 @@ class PrintCertificates extends Component {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(
       result => {

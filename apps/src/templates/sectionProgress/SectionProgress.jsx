@@ -134,7 +134,7 @@ class SectionProgress extends Component {
           windowWidth: window.innerWidth,
           windowHeight: window.innerHeight,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   }
@@ -149,7 +149,7 @@ class SectionProgress extends Component {
         oldUnitId: this.props.scriptId,
         unitId: scriptId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 

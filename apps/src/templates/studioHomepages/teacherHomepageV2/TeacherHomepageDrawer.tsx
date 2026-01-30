@@ -239,7 +239,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         hasNcesId: hasNcesId.toString(),
         attempt: showSchoolInfoUnknownError ? 2 : 1,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     try {
       await updateSchoolInfo({
@@ -254,7 +254,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {
           attempt: showSchoolInfoUnknownError ? 2 : 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       setSuccess(true);
@@ -265,7 +265,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
         {
           attempt: showSchoolInfoUnknownError ? 2 : 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       if (!showSchoolInfoUnknownError) {
@@ -289,7 +289,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       analyticsReporter.sendEvent(
         EVENTS.CONFIRM_SCHOOL_CLICKED,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
       setSchoolInfoInterstitialOpen(true);
       setSchoolInfoConfirmationOpen(false);
@@ -300,7 +300,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       analyticsReporter.sendEvent(
         EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       setAFEParticipate(true);
@@ -313,19 +313,19 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       analyticsReporter.sendEvent(
         EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (schoolInfoConfirmationOpen) {
       analyticsReporter.sendEvent(
         EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (AFEDrawerOpen) {
       analyticsReporter.sendEvent(
         EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       HttpClient.post(
