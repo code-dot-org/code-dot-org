@@ -75,9 +75,9 @@ class ApiController < ApplicationController
 
     v3_ao = current_user.authentication_options.find_by(
       credential_type: AuthenticationOption::CLEVER,
-      version: AuthenticationOption::Clever::VERSION[:v3_1]
+      version: AuthenticationOption::Clever::VERSION[:v3]
     )
-    api_version = v3_ao.present? ? AuthenticationOption::Clever::VERSION[:v3_1] : AuthenticationOption::Clever::VERSION[:v2_1]
+    api_version = v3_ao.present? ? AuthenticationOption::Clever::VERSION[:v3] : AuthenticationOption::Clever::VERSION[:v2_1]
     uid = v3_ao.present? ? v3_ao.authentication_id : current_user.uid_for_provider(AuthenticationOption::CLEVER)
 
     query_clever_service(api_version:, endpoint: clever_sections_url_path(api_version:, uid:)) do |response|
@@ -710,7 +710,7 @@ class ApiController < ApplicationController
     case api_version
     when AuthenticationOption::Clever::VERSION[:v2_1]
       "teachers/#{uid}/sections"
-    when AuthenticationOption::Clever::VERSION[:v3_1]
+    when AuthenticationOption::Clever::VERSION[:v3]
       "users/#{uid}/sections"
     else
       raise "Unsupported Clever API version: #{api_version}"
