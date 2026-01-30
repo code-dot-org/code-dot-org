@@ -30,6 +30,7 @@ import {
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
+import {setAngleHelperOptions} from '../blockly/addons/cdoAngleHelperOptions';
 import {Position} from '../constants';
 
 import Colours from './colours';
@@ -419,13 +420,13 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
-    block
+    const input = block
       .appendValueInput('VALUE')
-      .setCheck(blockly.BlockValueType.NUMBER)
-      .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
-        block,
-        direction: 'turnRight',
-      });
+      .setCheck(blockly.BlockValueType.NUMBER);
+    setAngleHelperOptions(input.connection, {
+      block,
+      direction: 'turnRight',
+    });
     block.appendDummyInput().appendField(msg.degrees());
   });
 
@@ -1184,13 +1185,11 @@ exports.install = function (blockly, blockInstallOptions) {
           );
         },
         () => {
-          this.appendValueInput('VALUE').addFieldHelper(
-            blockly.BlockFieldHelper.ANGLE_HELPER,
-            {
-              block: this,
-              directionTitle: 'DIR',
-            }
-          );
+          const input = this.appendValueInput('VALUE');
+          setAngleHelperOptions(input.connection, {
+            block: this,
+            directionTitle: 'DIR',
+          });
         },
         blockly.ALIGN_RIGHT
       );

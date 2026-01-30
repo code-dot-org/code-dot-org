@@ -98,7 +98,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   createSvgElement: typeof BlocklyCore.utils.dom.createSvgElement;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
-  BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;
   selected: BlocklyCore.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
@@ -242,27 +241,11 @@ export interface ExtendedBlockSvg extends BlocklyCore.BlockSvg {
   workspace: ExtendedWorkspaceSvg;
 }
 
-export interface FieldHelperOptions {
+export interface AngleHelperOptions {
   block: BlocklyCore.Block;
   directionTitle?: string; // Ex. 'DIR'
   direction?: string; // Ex. 'turnRight'
 }
-
-export interface FieldHelpers {
-  [fieldHelper: string]: FieldHelperOptions;
-}
-export interface ExtendedInput extends BlocklyCore.Input {
-  addFieldHelper: (
-    fieldHelper: string,
-    options: FieldHelperOptions
-  ) => ExtendedInput;
-}
-export interface ExtendedConnection extends BlocklyCore.Connection {
-  getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;
-  fieldHelpers_: FieldHelpers;
-  addFieldHelper(fieldHelper: string, options: FieldHelperOptions): unknown;
-}
-
 export interface ExtendedBlock extends BlocklyCore.Block {
   getFillPattern?: () => string | undefined;
   fillPattern?: string;

@@ -106,13 +106,10 @@ import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
   ExtendedBlocklyOptions,
-  ExtendedConnection,
-  ExtendedInput,
   ExtendedJavascriptGenerator,
   ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
-  FieldHelperOptions,
   BlocklyCoreInstance,
 } from './types';
 import {
@@ -473,42 +470,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blockspace = Blockly.getMainWorkspace()
   ) {
     blockspace.removeChangeListener(handler);
-  };
-
-  const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
-  const extendedConnection = blocklyWrapper.Connection
-    .prototype as ExtendedConnection;
-
-  /**
-   * Enable the specified field helper with the specified options for this
-   * input's connection
-   * @param {string} fieldHelper the field helper to retrieve. One of
-   *        Blockly.BlockFieldHelper
-   * @param {*} options for this helper
-   * @return {!Blockly.Input} The input being modified (to allow chaining).
-   */
-  extendedInput.addFieldHelper = function (
-    fieldHelper: string,
-    options: FieldHelperOptions
-  ) {
-    (this.connection as ExtendedConnection).addFieldHelper(
-      fieldHelper,
-      options
-    );
-    return this;
-  };
-
-  extendedConnection.addFieldHelper = function (
-    fieldHelper: string,
-    options: FieldHelperOptions
-  ) {
-    if (!this.fieldHelpers_) {
-      this.fieldHelpers_ = {};
-    }
-    this.fieldHelpers_[fieldHelper] = options;
-  };
-  extendedConnection.getFieldHelperOptions = function (fieldHelper: string) {
-    return this.fieldHelpers_ && this.fieldHelpers_[fieldHelper];
   };
 
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
