@@ -148,26 +148,23 @@ function main() {
     var cspListenerScript =
       '<style>' +
       '.csp-blocked-image-container {' +
-      '  display: inline-block;' +
+      '  display: flex;' +
+      '  flex-direction: column;' +
+      '  align-items: center;' +
+      '  gap: 16px;' +
       '  background-color: #DFE3E9;' +
-      '  padding: 8px 10px;' +
+      '  padding: 24px 16px;' +
       '  border-radius: 4px;' +
       '  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;' +
-      '  max-width: 100%;' +
-      '  min-width: 300px;' +
-      '  box-sizing: border-box;' +
-      '  text-align: center;' +
       '}' +
       '.csp-blocked-image-icon-container {' +
-      '  margin-bottom: 8px;' +
       '}' +
       '.csp-blocked-image-icon {' +
-      '  width: 24px;' +
-      '  height: 24px;' +
+      '  width: 48px;' +
+      '  height: 48px;' +
       '  color: #576575;' +
       '}' +
       '.csp-blocked-image-header {' +
-      '  margin-bottom: 4px;' +
       '  font-weight: bold;' +
       '  color: #292F36;' +
       '  font-size: 13px;' +
@@ -176,7 +173,6 @@ function main() {
       '  font-size: 11px;' +
       '  color: #292F36;' +
       '  line-height: 1.3;' +
-      '  margin-bottom: 8px;' +
       '}' +
       '.csp-blocked-image-approved-sources-button {' +
       '  display: inline-block;' +
