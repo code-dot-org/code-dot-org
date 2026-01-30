@@ -134,15 +134,12 @@ const musicSlice = createSlice({
     // the selection, so just do nothing here.
     selectBlockId: (state, action: PayloadAction<string | undefined>) => {
       if (state.isPlaying) {
-        console.log('skipping');
         return;
       }
 
       if (state.selectedBlockId === action.payload) {
-        console.log('setting state to', undefined);
         state.selectedBlockId = undefined;
       } else {
-        console.log('setting state to', action.payload);
         state.selectedBlockId = action.payload;
       }
     },

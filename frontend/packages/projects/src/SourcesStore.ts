@@ -26,7 +26,6 @@ export class SourcesStore {
 
     if (response.ok && !versionId) {
       // Only store the current version id if we are loading the latest version.
-      console.log('LOADING...', response, Array.from(response.headers.keys()));
       this.currentVersionId = response.headers.get('S3-Version-Id');
     }
 

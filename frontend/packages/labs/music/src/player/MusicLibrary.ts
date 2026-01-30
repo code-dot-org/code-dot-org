@@ -124,8 +124,6 @@ export default class MusicLibrary {
       ...libraryJson.kits,
     ];
 
-    console.log('loaded library', this.folders);
-
     this.packs = libraryJson.packs;
     this.instruments = libraryJson.instruments;
     this.kits = libraryJson.kits;

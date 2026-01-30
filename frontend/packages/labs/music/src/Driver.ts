@@ -23,6 +23,9 @@ import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {LabMetricsReporter} from '@code-dot-org/lab';
 import {LabConstants, LabRegistry} from '@code-dot-org/lab';
 
+// The tick rate that the Driver will emit Tick events during playback
+const UPDATE_RATE = 1000 / 30; // 30 times per second
+
 export const DriverEvent = {
   /** The music library was loaded and updated */
   LibraryUpdated: 'library-updated',
@@ -45,6 +48,10 @@ export const DriverEvent = {
   PlaybackStarted: 'playback-started',
   /** When we stop playing */
   PlaybackStopped: 'playback-stopped',
+  /** Playback 'tick' */
+  Tick: 'tick',
+  /** When we want to update the playback position */
+  UpdatePosition: 'update-position',
 } as const;
 
 interface DriverEvents extends EventMap {
@@ -57,6 +64,8 @@ interface DriverEvents extends EventMap {
   [DriverEvent.LoadedInitialSounds]: () => void;
   [DriverEvent.PlaybackStarted]: () => void;
   [DriverEvent.PlaybackStopped]: () => void;
+  [DriverEvent.Tick]: () => void;
+  [DriverEvent.UpdatePosition]: (position: number) => void;
 }
 
 const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
@@ -84,10 +93,11 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   private readonly metricsReporter: LabMetricsReporter;
   readonly player: MusicPlayer;
   private isPlaying: boolean;
-  private lastExecutedEvents: CompiledEvents;
   private blockMode: (typeof BlockMode)[keyof typeof BlockMode];
   private playingTriggers: TriggerEvents;
   private hasLoadedInitialSounds: boolean;
+  private updateTimer?: ReturnType<typeof setInterval>;
+  private startingPlayheadPosition: number;
 
   constructor() {
     super();
@@ -95,17 +105,22 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     this.hasLoadedInitialSounds = false;
     this.playingTriggers = [];
     this.blockMode = BlockMode.SIMPLE2;
-    this.lastExecutedEvents = {};
     this.metricsReporter = LabRegistry.metricsReporter;
     this.analyticsReporter = new AnalyticsReporter();
+    this.startingPlayheadPosition = 1;
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
+    console.log('new driver?');
     this.player = new MusicPlayer(
       parseInt(bpm || DEFAULT_BPM.toString()),
       KeyFromName[(key || KeyMapping[DEFAULT_KEY]).toUpperCase()],
       this.analyticsReporter,
     );
     this.isPlaying = false;
+  }
+
+  setStartingPlayheadPosition(position: number) {
+    this.startingPlayheadPosition = position;
   }
 
   setWorkspace(workspace: Blockly.WorkspaceSvg) {
@@ -128,8 +143,6 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     if (!this.workspace) {
       return;
     }
-
-    console.log('event', e);
 
     // A drag event can leave the blocks in a temporarily unusable state,
     // e.g. when a disabled variable is dragged into a slot, it can still
@@ -211,12 +224,9 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
     if (e.type === Blockly.Events.SELECTED) {
       const selectedEvent = e as Blockly.Events.Selected;
-      console.log('SELECTED', selectedEvent, selectedEvent.newElementId);
       this.emit(DriverEvent.Selected, selectedEvent.newElementId);
       return;
     }
-
-    console.log('compiling?');
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
@@ -328,7 +338,9 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
   getPlayingTriggers() {}
 
-  getCurrentPlayheadPosition() {}
+  getCurrentPlayheadPosition() {
+    return this.player.getCurrentPlayheadPosition();
+  }
 
   updateHighlightedBlocks() {}
 
@@ -338,13 +350,10 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   */
 
   setPlaying(play: boolean) {
-    this.isPlaying = play;
-
-    if (this.isPlaying) {
+    if (play) {
       this.playSong();
-      this.emit(DriverEvent.PlaybackStarted);
     } else {
-      this.emit(DriverEvent.PlaybackStopped);
+      this.stopSong();
     }
   }
 
@@ -372,14 +381,13 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
       return;
     }
 
-    console.log('compileSong');
-
     // Create the generator and compile the song
     this.generator = new Generator(
-      this.lastExecutedEvents,
+      this.generator?.events || {},
       this.workspace,
       this.javascriptGenerator,
       this.blockMode,
+      this.generator?.hooks || {},
     );
 
     // Update the list of triggers that are available in the workspace.
@@ -457,8 +465,6 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
       this.mergePlaybackData(data, this.executeTrigger(id, startPosition));
     }
 
-    this.lastExecutedEvents = this.generator.events;
-
     console.log('Execution time: ', Date.now() - startTime);
 
     return data;
@@ -499,6 +505,7 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     /*if (this.props.isFirstAttempt) {
       this.props.sendAttemptReport();
     }*/
+    this.isPlaying = true;
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -507,26 +514,68 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     this.compileSong();
 
     const playbackEvents = await this.populateCompiledSong();
-    //this.saveCode(true);
+    this.saveCode(true);
 
-    //this.player.playSong(playbackEvents, this.props.startingPlayheadPosition);
-    this.player.playSong(playbackEvents);
+    this.player.playSong(playbackEvents, this.startingPlayheadPosition);
 
-    //this.props.setIsPlaying(true);
-    //this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
-    //this.props.clearSelectedBlockId();
+    // Tell the world we have started playback
+    this.emit(DriverEvent.PlaybackStarted);
+
+    // Update the position
+    this.emit(DriverEvent.UpdatePosition, this.startingPlayheadPosition);
+
+    // Clear block selections
+    this.emit(DriverEvent.Selected);
+
     //this.props.clearSelectedTriggerId();
+
+    // Start the update timer
+    this.updateTimer = setInterval(() => {
+      this.emit(DriverEvent.Tick);
+    }, UPDATE_RATE);
   }
 
-  /*
-  saveCode(forceSave: boolean = false) {
+  saveCode(_forceSave: boolean = false) {
+    // TODO
   }
 
-  loadCode(code) {
+  loadCode(_code: string) {
+    // TODO
   }
-  */
 
-  stopSong() {}
+  stopSong() {
+    if (!this.isPlaying) {
+      return;
+    }
+
+    /*
+    const {hasConditions, message, satisfied} = this.props.validationState;
+
+    // If this level has validation, and the user has seen a validation message,
+    // log an attempt.
+    if (hasConditions && message) {
+      this.analyticsReporter.onValidationAttempt(
+        satisfied,
+        markdownToTxt(message)
+      );
+    }*/
+
+    // Stop the timer
+    if (this.updateTimer) {
+      clearInterval(this.updateTimer);
+      this.updateTimer = undefined;
+    }
+
+    this.isPlaying = false;
+    this.player.stopSong();
+    this.playingTriggers = [];
+
+    // Clear the timeline of triggered events when song is stopped.
+    this.populateCompiledSong();
+
+    this.emit(DriverEvent.PlaybackStopped);
+    //this.emit(DriverEvent.UpdatePosition(this.startingPlayheadPosition));
+  }
 
   /*
   hasTrigger(id: string) {
@@ -542,11 +591,6 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   getExemplarPlaybackEvents() {}
 
   generateExemplarPlaybackEvents() {}
-
-  /*
-  onBlockSpaceChange(e) {
-  }
-  */
 
   // Preload sounds.
   // Called by populateCompiledSong and executeSongCode.

@@ -152,7 +152,6 @@ class Driver<
    * If you give this method another list, it will replace the list of blocks currently in use.
    */
   set blocks(blocks: BlockDefinition[]) {
-    console.log('setting blocks to', blocks, 'from', this._blocks);
     this._blocks = blocks;
     this.registerBlocks();
   }

@@ -10,8 +10,6 @@ const App = ({levelId, ...props}: Omit<BlocklyLabProps, 'defaultSources'>) => {
     /^\/app\/projects\/music\/([^/]+)\/edit$/,
   )?.[1];
 
-  console.log('hmm', channelId, props.channelId || channelId);
-
   return (
     <>
       {/* The generic styles to base the lab styles upon */}
