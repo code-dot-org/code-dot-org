@@ -735,7 +735,11 @@ class TopInstructions extends Component {
             handleClickCollapser={this.handleClickCollapser}
             {...passThroughHeaderProps}
           />
-          <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
+          <div
+            style={
+              isCollapsed && isCSDorCSP ? commonStyles.hidden : undefined
+            }
+          >
             <div
               style={instructionsContainerStyle}
               className={instructionsContainerClass}
