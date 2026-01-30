@@ -178,19 +178,20 @@ function main() {
       '  line-height: 1.3;' +
       '  margin-bottom: 8px;' +
       '}' +
-      '.csp-blocked-image-approved-sources {' +
+      '.csp-blocked-image-approved-sources-button {' +
       '  display: inline-block;' +
       '  background-color: #FFF;' +
       '  color: #292F36;' +
-      '  padding: 8px 16px;' +
+      '  padding: 5px 12px;' +
       '  border-radius: 4px;' +
+      '  border: 1px solid #292F36;' +
       '  font-size: 12px;' +
       '  font-weight: 600;' +
       '  text-decoration: none;' +
       '  cursor: pointer;' +
       '  transition: background-color 0.2s ease;' +
       '}' +
-      '.csp-blocked-image-approved-sources:hover {' +
+      '.csp-blocked-image-approved-sources-button:hover {' +
       '  background-color: #EEE;' +
       '}' +
       '</style>' +
@@ -232,11 +233,12 @@ function main() {
       '    details.className = "csp-blocked-image-details";' +
       '    details.textContent = "This image couldn\'t not load because its URL isn\'t from an approved source. Try uploading the image instead or use a URL form the supported image list.";' +
       '' +
-      '    var approvedSourcesDisplay = document.createElement("a");' +
-      '    approvedSourcesDisplay.className = "csp-blocked-image-approved-sources";' +
-      '    approvedSourcesDisplay.textContent = "See approved image sources";' +
-      '    approvedSourcesDisplay.href = "#";' +
-      '    approvedSourcesDisplay.addEventListener("click", function(e) {' +
+      '    var approvedSourcesButton = document.createElement("a");' +
+      '    approvedSourcesButton.className = "csp-blocked-image-approved-sources-button";' +
+      '    approvedSourcesButton.innerHTML = ' +
+      '      \'See approved image sources <svg style="width: 12px; height: 12px; margin-left: 4px; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg>\';' +
+      '    approvedSourcesButton.href = "#";' +
+      '    approvedSourcesButton.addEventListener("click", function(e) {' +
       '      e.preventDefault();' +
       '      channel.postMessage({' +
       "        type: '" +
@@ -249,7 +251,7 @@ function main() {
       '    container.appendChild(iconContainer);' +
       '    container.appendChild(header);' +
       '    container.appendChild(details);' +
-      '    container.appendChild(approvedSourcesDisplay);' +
+      '    container.appendChild(approvedSourcesButton);' +
       '' +
       '    if (img.parentNode) {' +
       '      img.parentNode.replaceChild(container, img);' +
