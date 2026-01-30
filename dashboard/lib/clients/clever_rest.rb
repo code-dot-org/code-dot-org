@@ -2,12 +2,12 @@
 
 class Clients::CleverRest
   API_HOST = 'https://api.clever.com'
-  API_VERSION = 'v2.1'
 
-  attr_reader :oauth_token
+  attr_reader :oauth_token, :api_version
 
-  def initialize(oauth_token:)
+  def initialize(oauth_token:, api_version: 'v2.1')
     @oauth_token = oauth_token
+    @api_version = api_version
   end
 
   def get(endpoint)
@@ -21,6 +21,6 @@ class Clients::CleverRest
   end
 
   private def url_for(endpoint)
-    File.join(API_HOST, API_VERSION, endpoint)
+    File.join(API_HOST, api_version, endpoint)
   end
 end
