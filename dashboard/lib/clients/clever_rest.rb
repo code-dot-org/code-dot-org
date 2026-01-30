@@ -5,7 +5,7 @@ class Clients::CleverRest
 
   attr_reader :oauth_token, :api_version
 
-  def initialize(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2_1])
+  def initialize(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2])
     @oauth_token = oauth_token
     @api_version = api_version
   end

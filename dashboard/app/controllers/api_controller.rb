@@ -77,7 +77,7 @@ class ApiController < ApplicationController
       credential_type: AuthenticationOption::CLEVER,
       version: AuthenticationOption::Clever::VERSION[:v3]
     )
-    api_version = v3_ao.present? ? AuthenticationOption::Clever::VERSION[:v3] : AuthenticationOption::Clever::VERSION[:v2_1]
+    api_version = v3_ao.present? ? AuthenticationOption::Clever::VERSION[:v3] : AuthenticationOption::Clever::VERSION[:v2]
     uid = v3_ao.present? ? v3_ao.authentication_id : current_user.uid_for_provider(AuthenticationOption::CLEVER)
 
     query_clever_service(api_version:, endpoint: clever_sections_url_path(api_version:, uid:)) do |response|
@@ -102,7 +102,7 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service(api_version: AuthenticationOption::Clever::VERSION[:v2_1], endpoint: "sections/#{course_id}/students") do |students|
+    query_clever_service(api_version: AuthenticationOption::Clever::VERSION[:v2], endpoint: "sections/#{course_id}/students") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -708,7 +708,7 @@ class ApiController < ApplicationController
   # TODO: Remove this method when we drop support for Clever API v2.1
   private def clever_sections_url_path(api_version:, uid:)
     case api_version
-    when AuthenticationOption::Clever::VERSION[:v2_1]
+    when AuthenticationOption::Clever::VERSION[:v2]
       "teachers/#{uid}/sections"
     when AuthenticationOption::Clever::VERSION[:v3]
       "users/#{uid}/sections"

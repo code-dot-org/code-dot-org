@@ -2130,7 +2130,7 @@ class ApiControllerTest < ActionController::TestCase
     context 'when v2.1 auth option' do
       it 'creates REST client for v2.1' do
         clever_client = mock('clever_client')
-        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2_1]).returns(clever_client)
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
         clever_client.stubs(:get).returns({'data' => []})
 
         get_clever_classrooms
@@ -2140,7 +2140,7 @@ class ApiControllerTest < ActionController::TestCase
       it 'calls /teachers/:id/sections endpoint' do
         clever_client = mock('clever_client')
         expected_uid = teacher.uid_for_provider(AuthenticationOption::CLEVER)
-        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2_1]).returns(clever_client)
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
         clever_client.expects(:get).with("teachers/#{expected_uid}/sections").returns({'data' => []})
 
         get_clever_classrooms
