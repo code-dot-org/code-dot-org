@@ -50,6 +50,13 @@ class Rubric < ApplicationRecord
     my_lesson.seeding_key(seed_context)
   end
 
+  def summarize_for_lesson_edit
+    {
+      id: id,
+      levelName: level.name,
+    }
+  end
+
   def summarize_for_rubric_edit
     {
       id: id,

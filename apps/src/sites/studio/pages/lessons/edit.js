@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   const activities = mapActivityDataForEditor(lessonData.activities);
   const objectives = lessonData.objectives || [];
-  const rubric = lessonData.rubric;
+  const rubrics = lessonData.rubrics;
 
   registerReducers({
     ...reducers,
@@ -70,7 +70,7 @@ $(document).ready(function () {
           relatedLessons={relatedLessons}
           initialLessonData={lessonData}
           unitInfo={unitInfo}
-          rubricId={rubric ? rubric.id : null}
+          rubrics={rubrics}
         />
         <ExpandableImageDialog />
       </div>

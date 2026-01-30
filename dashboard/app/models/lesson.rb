@@ -467,7 +467,6 @@ class Lesson < ApplicationRecord
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       lessonPath: get_uncached_show_path,
-      # what is summarize_for_lesson_edit doing? The map converts this to an array, otherwise we try to stringify a collection.
       rubrics: rubrics.map(&:summarize_for_lesson_edit),
     }
   end

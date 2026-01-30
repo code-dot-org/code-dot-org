@@ -136,3 +136,8 @@ export const relatedLessonShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   editUrl: PropTypes.string.isRequired,
 });
+
+export const rubricSummaryShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  levelName: PropTypes.string.isRequired,
+});

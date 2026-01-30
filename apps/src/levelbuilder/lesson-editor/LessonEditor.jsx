@@ -24,6 +24,7 @@ import {
   vocabularyShape,
   programmingExpressionShape,
   standardShape,
+  rubricSummaryShape,
 } from '@cdo/apps/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
@@ -38,7 +39,7 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
-    rubricId: PropTypes.number,
+    rubrics: PropTypes.arrayOf(rubricSummaryShape),
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -140,7 +141,7 @@ class LessonEditor extends Component {
   };
 
   hasRubric = () => {
-    return !!this.props.rubricId;
+    return !!this.props.rubrics && this.props.rubrics.length > 0;
   };
 
   getLessonId = () => {
@@ -171,13 +172,8 @@ class LessonEditor extends Component {
       preparation,
       announcements,
     } = this.state;
-    const {
-      relatedLessons,
-      standards,
-      opportunityStandards,
-      unitInfo,
-      rubricId,
-    } = this.props;
+    const {relatedLessons, standards, opportunityStandards, unitInfo, rubrics} =
+      this.props;
     const frameworks = this.props.initialLessonData.frameworks;
 
     const allowMajorCurriculumChanges = unitInfo.allowMajorCurriculumChanges;
@@ -500,16 +496,17 @@ class LessonEditor extends Component {
             Add Rubric
           </a>
         )}
-        {this.hasRubric() && (
-          <a
-            className="btn add-rubric"
-            style={styles.addRubric}
-            href={'/rubrics/' + rubricId + '/edit'}
-          >
-            <i style={styles.buttonText} className="fa fa-plus-circle" />
-            Edit Rubric
-          </a>
-        )}
+        {this.hasRubric() &&
+          rubrics.map(rubric => (
+            <a
+              className="btn add-rubric"
+              style={styles.addRubric}
+              href={'/rubrics/' + rubric.id + '/edit'}
+            >
+              <i style={styles.buttonText} className="fa fa-plus-circle" />
+              Edit Rubric for level {rubric.levelName}
+            </a>
+          ))}
 
         <SaveBar
           handleSave={this.handleSave}
