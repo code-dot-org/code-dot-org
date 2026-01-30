@@ -50,6 +50,7 @@ class Slack
     raise "Failed to query users.list" unless members
     user = members.find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
+    return user['profile']['display_name'] unless user['profile']['display_name'] == ""
     user['name']
   end
 
