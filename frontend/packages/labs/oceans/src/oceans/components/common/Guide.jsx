@@ -193,6 +193,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                 ref={this.guideDialogRef}
                 aria-labelledby="guide-heading"
                 tabIndex={-1}
+                className="guide-dialog"
                 style={{
                   ...styles.guide,
                   ...styles[`guide${currentGuide.style}`]
