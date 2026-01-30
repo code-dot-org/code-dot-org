@@ -736,9 +736,7 @@ class TopInstructions extends Component {
             {...passThroughHeaderProps}
           />
           <div
-            style={
-              isCollapsed && isCSDorCSP ? commonStyles.hidden : undefined
-            }
+            style={isCollapsed && isCSDorCSP ? commonStyles.hidden : undefined}
           >
             <div
               style={instructionsContainerStyle}
