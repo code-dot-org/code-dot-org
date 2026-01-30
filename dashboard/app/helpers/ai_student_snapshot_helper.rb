@@ -1,4 +1,24 @@
 module AiStudentSnapshotHelper
+  # Saves AI-generated lesson feedback to the lesson_feedbacks table.
+  # Params:
+  # - feedback_json: The feedback content (string or JSON) from generate_lesson_feedback
+  # - student_id: Integer
+  # - lesson_id: Integer
+  # - section_id: Integer
+  # - teacher_id: Integer
+  # Returns: The LessonFeedback record (created or updated)
+  def self.save_lesson_feedback(feedback_json, student_id, lesson_id, section_id, teacher_id)
+    feedback_record = LessonFeedback.find_or_initialize_by(
+      lesson_id: lesson_id,
+      student_id: student_id
+    )
+    feedback_record.teacher_id = teacher_id
+    feedback_record.section_id = section_id
+    feedback_record.saved_feedback = feedback_json
+    feedback_record.save!
+    puts feedback_record
+  end
+
   API_KEY = CDO.openai_lesson_summaries_api_key # TODO before merge: CHANGE TO NEW KEY
   MODEL = SharedConstants::STUDENT_SNAPSHOT_MODEL_VERSION
 
@@ -38,6 +58,10 @@ module AiStudentSnapshotHelper
       response_body = JSON.parse(response.body)
       response_body = response_body['choices'][0]['message']['content']
       evaluation =  {status: response.code, json: response_body}
+
+      feedback_json = JSON.parse(response_body)
+      feedback_string = feedback_json.is_a?(Hash) ? feedback_json['feedback'] : feedback_json
+      save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
       return {status: evaluation[:status], json: evaluation[:json]}
     else
       raise StandardError.new("Recieved status code #{response.code} when processing AI lesson feedback: #{response.body}")
