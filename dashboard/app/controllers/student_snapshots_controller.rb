@@ -25,9 +25,9 @@ class StudentSnapshotsController < ApplicationController
     render json: {lessons: lessons_data, hasUnnumberedLessons: unit.has_unnumbered_lessons?}
   end
 
-  # GET /student_snapshots/lesson_feedback_prompt
+  # GET /student_snapshots/ai_generated_lesson_feedback
   # Returns the feedback system prompt for a given lesson, unit, student, teacher, and section
-  def lesson_feedback_prompt
+  def ai_generated_lesson_feedback
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]

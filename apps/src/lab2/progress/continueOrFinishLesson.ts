@@ -88,7 +88,7 @@ async function getAiLessonFeedback(
 ) {
   console.log('Fetching feedback prompt...');
   const response = await fetch(
-    `/student_snapshots/lesson_feedback_prompt?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}&teacher_id=${teacherId}&section_id=${sectionId}`
+    `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}&teacher_id=${teacherId}&section_id=${sectionId}`
   );
   const data = await response.json();
   console.log(data.prompt);

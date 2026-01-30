@@ -54,6 +54,43 @@ module AiStudentSnapshotHelper
       @model = model
     end
 
+    def request_lesson_feedback(prompt)
+      headers = {
+        "Content-Type" => "application/json",
+        "Authorization" => "Bearer #{api_key}"
+      }
+
+      response_props = {
+        feedback: {type: "string"},
+      }
+
+      data = {
+        model: model,
+        messages: [{
+          role: "system",
+          content: prompt
+        }],
+        response_format: {
+          type: "json_schema",
+          json_schema: {
+            name: "lesson_feedback",
+            schema: {
+              type: "object",
+              properties: response_props,
+            }
+          }
+        }
+      }
+
+      HTTParty.post(
+        OPEN_AI_URL,
+        headers: headers,
+        body: data.to_json,
+        open_timeout: DCDO.get('openai_http_open_timeout', 5),
+        read_timeout: DCDO.get('openai_http_read_timeout', 30)
+      )
+    end
+
     def request_lesson_insight(prompt)
       headers = {
         "Content-Type" => "application/json",
