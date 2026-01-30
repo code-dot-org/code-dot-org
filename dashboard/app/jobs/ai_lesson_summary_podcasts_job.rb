@@ -43,14 +43,18 @@ class AiLessonSummaryPodcastsJob < ApplicationJob
         request: request.to_json
       }
     )
-
     # Re-raise error to notify our system of the failed job.
     raise exception
   end
 
   def perform(request:)
     request[:lesson_ids].each do |lesson_id|
-      AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY])
+      script = AiLessonSummariesHelper.generate_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
+      script = JSON.parse(script)['podcast_script']
+      podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
+
+      # Temporary solution for testing until S3 storage is ready
+      File.binwrite('lesson_'+lesson_id.to_s+'_podcast.mp3', podcast)
     end
   end
 end
