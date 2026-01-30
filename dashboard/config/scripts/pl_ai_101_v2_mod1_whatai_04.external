@@ -1,0 +1,39 @@
+name 'pl-ai-101-V2-mod1-whatai-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#### Let’s hear from Sal Khan, the creater of Khan Academy, and Hadi Partovi, the founder of Code.org, on what AI is and its recent impacts.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">A Note on Vocabulary</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### We'll dive into all the vocabulary around AI in the next module, but here's a quick refresher of some key terms.
+
+>* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.
+>* #### **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
+>* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Key Points from the Video</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+* #### Recent advances like ChatGPT enable AI to generate creative content and ideas, expanding beyond pattern matching.
+* #### Recent technology progress marked a shift from novelty to practical utility in education, with AI now able to understand and generate meaningful content.
+* #### Generative AI can automate many educational tasks, potentially transforming the role of teachers and students.
+* #### AI's evolving capability to act as a tutor or teaching assistant highlights its transformative potential in education.
+
+</p></div>
+</details>
+
+<br>
+
+
+MARKDOWN
