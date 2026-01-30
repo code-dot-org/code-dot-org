@@ -30,8 +30,6 @@ export const AutocompleteInput = memo(
     id,
     onKeyDown,
     'aria-label': ariaLabel,
-    showAllOnFocus = false,
-    minChars = 3,
     onBlur,
     onSelect,
     placeholder = 'Type to see results',
@@ -48,8 +46,6 @@ export const AutocompleteInput = memo(
     errorMessage?: string;
     onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
     'aria-label'?: string;
-    showAllOnFocus?: boolean;
-    minChars?: number;
     onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
     onSelect?: (option: string) => void;
     placeholder?: string;
@@ -100,13 +96,10 @@ export const AutocompleteInput = memo(
         skipApi.current = false;
         return;
       }
-      if (
-        (debouncedValue && debouncedValue.length >= minChars) ||
-        (showAllOnFocus && debouncedValue.length === 0)
-      ) {
+      if (debouncedValue && debouncedValue.length >= 3) {
         fetchSuggestions(debouncedValue);
       }
-    }, [debouncedValue, fetchSuggestions, minChars, showAllOnFocus]);
+    }, [debouncedValue, fetchSuggestions]);
 
     const handleSelectOption = useCallback(
       (option: string) => {
@@ -155,11 +148,7 @@ export const AutocompleteInput = memo(
     };
 
     const handleFocus = () => {
-      if (showAllOnFocus && value.length === 0) {
-        fetchSuggestions('');
-        return;
-      }
-      if (value.length >= minChars) {
+      if (value.length >= 3) {
         fetchSuggestions(value);
       }
     };

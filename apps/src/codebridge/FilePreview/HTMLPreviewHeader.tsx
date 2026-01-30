@@ -48,11 +48,6 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   fetchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      onSubmit(value);
-    }
-  };
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.value);
   };
@@ -123,19 +118,11 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           size="s"
           className={moduleStyles.urlBarInput}
           onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
           onSelect={onSubmit}
-          onBlur={() => {
-            if (value) {
-              onSubmit(value);
-            }
-          }}
           value={value}
           fetchOptions={fetchOptions}
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
-          showAllOnFocus
-          minChars={0}
         />
         <Button
           onClick={onRefresh}

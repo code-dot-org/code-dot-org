@@ -138,7 +138,8 @@ export const HTMLPreview: React.FC = () => {
     if (!source) {
       return [];
     }
-    const options = getFilesByLanguage(source, 'html').map(file => {
+    const options = getFilesByLanguage(source, 'html')
+      .map(file => {
         if (file.folderId === DEFAULT_FOLDER_ID) {
           return file.name;
         }
