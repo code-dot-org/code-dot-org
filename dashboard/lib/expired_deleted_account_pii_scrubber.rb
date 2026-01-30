@@ -14,17 +14,13 @@ require 'cdo/honeybadger'
 #
 # Logs activity to the user-accounts and cron-daily Slack channels, as well as Cloudwatch.
 class ExpiredDeletedAccountPiiScrubber
-  class SafetyConstraintViolation < RuntimeError; end
-
-  attr_reader :dry_run, :deleted_since, :limit
-  attr_accessor :processed_user_ids
-  alias :dry_run? :dry_run
-
   LOGGING_NAMESPACE = 'Platform/PiiScrubber'
   SLACK_CHANNEL_FOR_SUMMARY = 'cron-daily'
   SLACK_CHANNEL_FOR_ERRORS = 'user-accounts'
   ACCOUNT_SCRUB_LIMIT = 8_000
   BATCH_SIZE = 1_000
+
+  attr_reader :processed_user_ids, :user_errors
 
   # @param dry_run [Boolean] If true, no accounts will actually be scrubbed.
   # @param deleted_since [Time] The time before which accounts should be scrubbed of PII.
@@ -47,77 +43,80 @@ class ExpiredDeletedAccountPiiScrubber
 
     # Users that we don't want to include in paged batches. Includes users who have already been processed or encountered an error.
     @processed_user_ids = []
-
-    reset_metrics
+    @user_errors = {}
   end
 
   def call
-    reset_metrics
-
-    ActiveRecord::Base.connected_to(role: :reporting) do
-      total_size = accounts_to_scrub.size
-      if total_size > limit
-        raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_size} exceeds limit of #{limit}"
-      end
-    end
-
+    start_time = Time.now
     # Process individual batches in a loop to avoid issues with find_each, which imposes
     # an order by id, causing an inefficient scan on the id index. Order does not matter
     # for this operation, so we can use a simple limit approach.
-    loop do
+    while remaining_limit.positive?
+      # Cap the batch size to avoid scrubbing more users than the remaining limit.
+      batch_size = [BATCH_SIZE, remaining_limit].min
+
       # Execute batch selection on the reporting replica and materialize results.
       account_batch = ActiveRecord::Base.connected_to(role: :reporting) do
-        accounts_to_scrub.limit(BATCH_SIZE).to_a
+        accounts_to_scrub.limit(batch_size).to_a
       end
 
       account_batch.each do |user|
-        ActiveRecord::Base.connected_to(role: :writing) do
-          scrub_user(user)
+        if dry_run?
+          log_message("Dry run: would scrub PII from user_id #{user.id}")
+        else
+          log_message("Scrubbing PII from user_id #{user.id}")
+          ActiveRecord::Base.connected_to(role: :writing) do
+            Services::User::PiiScrubber.call(user:)
+          end
         end
-        self.num_accounts_scrubbed += 1
       rescue StandardError => exception
-        self.num_errors += 1
-        Honeybadger.notify(exception, context: {user_id: user.id})
+        user_errors[user.id] = exception.message
         log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
       ensure
         processed_user_ids << user.id
       end
 
-      break if account_batch.size < BATCH_SIZE
+      break if account_batch.size < batch_size
     end
+    end_time = Time.now
 
     if dry_run?
-      log_message("Dry run complete: would scrub #{num_accounts_scrubbed} accounts. Encountered #{num_errors} errors.")
+      log_message("Dry run complete: would scrub #{num_accounts_scrubbed} accounts. Encountered #{user_errors.size} errors.")
     else
-      log_message(format("Scrubbed #{num_accounts_scrubbed} accounts in %.2f seconds. Encountered #{num_errors} errors.", (Time.now - start_time)))
+      log_message(format("Scrubbed #{num_accounts_scrubbed} accounts in %.2f seconds. Encountered #{user_errors.size} errors.", (end_time - start_time)))
       upload_metrics
     end
 
+    summary = "Removed PII from #{num_accounts_scrubbed} accounts"
+    summary += "\nEncountered #{user_errors.size} errors" if user_errors.present?
+    summary += "\nDuration #{Time.at(end_time.to_i - start_time.to_i).utc.strftime("%H:%M:%S")}"
+    summary += "\nDry run, no accounts actually scrubbed" if dry_run?
+
     log_to_slack(summary)
-    log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS) if num_errors.positive?
+
+    if user_errors.present?
+      log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS)
+      Honeybadger.notify('Failed to scrub PII for users', context: {num_accounts_scrubbed:, user_errors:})
+    end
+
+    summary
   end
 
   def accounts_to_scrub
     Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: processed_user_ids)
   end
 
-  def summary
-    summary = "Removed PII from #{num_accounts_scrubbed} accounts"
-    summary += "\nEncountered #{num_errors} errors" if num_errors.positive?
-    summary += "\nDuration #{Time.at(Time.now.to_i - start_time.to_i).utc.strftime("%H:%M:%S")}"
-    summary += "\nDry run, no accounts actually scrubbed" if dry_run?
-    summary
+  def num_accounts_scrubbed
+    processed_user_ids.size - user_errors.size
   end
 
-  private attr_accessor :num_accounts_scrubbed, :num_errors, :start_time
+  private attr_reader :deleted_since, :limit
+  private attr_writer :user_errors
 
-  private def scrub_user(user)
-    if dry_run?
-      log_message("Dry run: would scrub PII from user_id #{user.id}")
-    else
-      log_message("Scrubbing PII from user_id #{user.id}")
-      Services::User::PiiScrubber.call(user: user)
-    end
+  private def dry_run? = @dry_run
+
+  private def remaining_limit
+    limit - num_accounts_scrubbed
   end
 
   private def upload_metrics
@@ -132,7 +131,7 @@ class ExpiredDeletedAccountPiiScrubber
         },
         {
           metric_name: 'NumErrors',
-          value: num_errors,
+          value: user_errors.size,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ]
@@ -153,11 +152,5 @@ class ExpiredDeletedAccountPiiScrubber
     "*PII Scrub Cronjob*#{dry_run? ? ' (dry-run)' : ''} " \
     "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_pii_scrubber.rb|(source)>" \
     "\n#{message}"
-  end
-
-  private def reset_metrics
-    self.num_accounts_scrubbed = 0
-    self.num_errors = 0
-    self.start_time = Time.now
   end
 end

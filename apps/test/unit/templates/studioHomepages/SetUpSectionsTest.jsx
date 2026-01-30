@@ -44,7 +44,7 @@ describe('SetUpSections', () => {
     expect(analyticsSpy.mock.calls[0]).toEqual([
       'Section Setup Started',
       {},
-      PLATFORMS.BOTH,
+      PLATFORMS.STATSIG,
     ]);
 
     analyticsSpy.mockRestore();

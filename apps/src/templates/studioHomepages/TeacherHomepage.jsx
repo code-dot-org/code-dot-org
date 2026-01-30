@@ -163,7 +163,7 @@ export const UnconnectedTeacherHomepage = ({
       {
         'user id': currentUserId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }
 

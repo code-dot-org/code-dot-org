@@ -165,7 +165,7 @@ describe('CourseContentDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 
@@ -180,7 +180,7 @@ describe('CourseContentDropdown', () => {
       {
         lesson: '/courses/csd-2024/units/3/lessons/4/levels/1',
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     const unit = screen.getByText(
       "Unit 3 - Interactive Animations and Games ('24-'25)"
@@ -192,7 +192,7 @@ describe('CourseContentDropdown', () => {
       {
         lesson: '/courses/csd-2024/units/3',
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   });
 });

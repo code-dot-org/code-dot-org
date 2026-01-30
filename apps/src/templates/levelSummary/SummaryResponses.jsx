@@ -62,7 +62,7 @@ const SummaryResponses = ({
           sectionSelected: !!selectedSection,
           ...scriptData.reportingData,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     },
     [scriptData, levelNumber, selectedSection]
