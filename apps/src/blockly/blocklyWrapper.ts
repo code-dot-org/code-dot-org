@@ -478,11 +478,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blockspace.removeChangeListener(handler);
   };
 
-  const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
-  blocklyWrapper.BlockSvg.prototype.mixin = function (mixinObj) {
-    googleBlocklyMixin.call(this, mixinObj, true);
-  };
-
   const extendedBlockSvg = blocklyWrapper.BlockSvg
     .prototype as ExtendedBlockSvg;
 
