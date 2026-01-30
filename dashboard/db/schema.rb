@@ -922,10 +922,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_28_232147) do
     t.integer "lesson_id"
     t.text "saved_feedback"
     t.text "submitted_feedback"
-    t.datetime "submitted_at"
+    t.datetime "submitted_at", precision: nil
     t.json "resources"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["lesson_id", "student_id"], name: "index_lesson_feedbacks_on_lesson_student", unique: true
   end
 
@@ -2366,8 +2366,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_01_28_232147) do
     t.json "href_links"
     t.json "ai_prompts"
     t.integer "priority", default: 0
-    t.datetime "expires_at"
-    t.datetime "read_at"
+    t.datetime "expires_at", precision: nil
+    t.datetime "read_at", precision: nil
     t.boolean "is_dismissed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
