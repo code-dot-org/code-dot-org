@@ -10,6 +10,7 @@ import _ from 'lodash';
 
 import {
   addSerializationHooksToBlock,
+  interpolateMsg,
   registerCustomProcedureBlocks,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
@@ -985,7 +986,8 @@ exports.install = function (blockly, blockInstallOptions) {
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
-        this.interpolateMsg(
+        interpolateMsg(
+          this,
           msg.setSpritePosition(),
           () => {
             this.appendDummyInput().appendField(spriteIndexDropdown, 'SPRITE');
@@ -996,7 +998,8 @@ exports.install = function (blockly, blockInstallOptions) {
           blockly.ALIGN_RIGHT
         );
       } else {
-        this.interpolateMsg(
+        interpolateMsg(
+          this,
           msg.setPosition(),
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
@@ -1028,7 +1031,8 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.setSpritePosition(),
         () => {
           this.appendValueInput('SPRITE').setCheck(
@@ -1113,7 +1117,8 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.addGoalPosition(),
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');

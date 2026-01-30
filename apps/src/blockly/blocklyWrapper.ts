@@ -105,7 +105,6 @@ import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
-  ExtendedBlock,
   ExtendedBlockSvg,
   ExtendedBlocklyOptions,
   ExtendedConnection,
@@ -123,7 +122,6 @@ import {
   handleCodeGenerationFailure,
   strip,
   initializeVariableLocalization,
-  interpolateMsg,
   isDarkTheme,
   setThemeAndRenderBlocks,
   getUserTheme,
@@ -536,9 +534,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   extendedConnection.getFieldHelperOptions = function (fieldHelper: string) {
     return this.fieldHelpers_ && this.fieldHelpers_[fieldHelper];
   };
-  const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
-
-  extendedBlock.interpolateMsg = interpolateMsg;
 
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;

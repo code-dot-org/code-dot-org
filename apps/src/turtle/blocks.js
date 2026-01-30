@@ -26,6 +26,7 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {
   registerCustomProcedureBlocks,
   numberValidator,
+  interpolateMsg,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
@@ -653,7 +654,8 @@ exports.install = function (blockly, blockInstallOptions) {
           blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
         )
         .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
           msg.controlsForInputFromToBy(),
         ['FROM', 'Number', blockly.ALIGN_RIGHT],
@@ -702,7 +704,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendField(
@@ -740,7 +743,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.jumpByDirection(),
         () => {
           this.appendDummyInput().appendField(
@@ -1102,7 +1106,8 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.jumpToPosition(),
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
@@ -1134,7 +1139,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.jumpToOverDown(),
         () => {
           this.appendDummyInput().appendField(
@@ -1168,7 +1174,8 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setStyle(BlockStyles.DEFAULT);
-      this.interpolateMsg(
+      interpolateMsg(
+        this,
         msg.turnDirection(),
         () => {
           this.appendDummyInput().appendField(

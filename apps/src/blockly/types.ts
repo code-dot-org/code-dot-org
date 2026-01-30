@@ -268,11 +268,6 @@ export interface ExtendedBlock extends BlocklyCore.Block {
   getFillPattern?: () => string | undefined;
   fillPattern?: string;
   setFillPattern?: (pattern: string) => void;
-  interpolateMsg: (
-    this: ExtendedBlock,
-    msg: string,
-    ...inputArgs: [...([string, string, number] | (() => void))[], number]
-  ) => void;
   skipNextBlockGeneration?: boolean;
   svgPathFill: SVGElement;
 }
