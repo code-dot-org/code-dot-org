@@ -42,7 +42,7 @@ const LtiNewAccountCard = () => {
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_STARTED_EVENT,
       {source: 'LTI'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     analyticsReporter.sendEvent(
       EVENTS.LTI_NEW_ACCOUNT_CLICK,

@@ -1,5 +1,10 @@
 @use '@code-dot-org/component-library-styles/mixins' as mixins;
 
+// Import Swiper styles
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+
 :root {
   // Swiper CSS custom properties
   // See docs here: https://swiperjs.com/swiper-api#pagination

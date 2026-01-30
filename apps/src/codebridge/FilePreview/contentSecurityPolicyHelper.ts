@@ -29,7 +29,7 @@ export function generateContentSecurityPolicyForPreview(codeStudioUrl: string) {
   const script_src_inline = "'unsafe-inline'";
   const style_src_base = `'self' blob: ${allowedFontSrc}`;
   const style_src_inline = "'unsafe-inline'";
-  const img_src = `'self' data: blob: ${codeStudioUrl} ${allowedImageSrc}`;
+  const img_src = `'self' blob: ${codeStudioUrl} ${allowedImageSrc}`;
   const frame_ancestors = `${codeStudioUrl} 'self' ${previewUrl}`;
   const script_src = `${script_src_base} ${script_src_eval} ${script_src_inline}`;
   const style_src = `${style_src_base} ${style_src_inline}`;

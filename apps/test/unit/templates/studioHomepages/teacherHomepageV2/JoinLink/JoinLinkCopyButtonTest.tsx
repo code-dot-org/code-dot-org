@@ -65,7 +65,7 @@ describe('JoinLinkCopyButton', () => {
     expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
       {source: 'teacherHomepage'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     screen.getByText(i18n.copySectionCodeSuccess());

@@ -101,7 +101,7 @@ export function useSchoolInfo(
     analyticsReporter.sendEvent(
       EVENTS.COUNTRY_SELECTED,
       {country: value},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setState(prevState => ({
       ...prevState,
@@ -114,13 +114,13 @@ export function useSchoolInfo(
       analyticsReporter.sendEvent(
         EVENTS.DO_NOT_TEACH_AT_SCHOOL_CLICKED,
         {country: country},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (value === NonSchoolOptions.CLICK_TO_ADD) {
       analyticsReporter.sendEvent(
         EVENTS.ADD_MANUALLY_CLICKED,
         {country: country},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else {
       analyticsReporter.sendEvent(
@@ -129,7 +129,7 @@ export function useSchoolInfo(
           'nces Id': value,
           country: country,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
     setState(prevState => ({
@@ -143,7 +143,7 @@ export function useSchoolInfo(
       analyticsReporter.sendEvent(
         EVENTS.ZIP_CODE_ENTERED,
         {zip: value, country: country},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
 
