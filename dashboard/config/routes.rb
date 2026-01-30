@@ -1366,7 +1366,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :aidiff_artifacts, only: [:index]
+    resources :aidiff_artifacts, only: [:index, :create]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create]

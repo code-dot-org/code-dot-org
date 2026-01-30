@@ -27,15 +27,6 @@ const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
         iconLeft={{iconName: 'shapes'}}
         text="Create artifact"
       />
-      <Button
-        color="gray"
-        size="s"
-        type="secondary"
-        onClick={() => {}}
-        aria-label={'fnord'}
-        iconLeft={{iconName: 'rotate'}}
-        text="Regenerate"
-      />
       <br />
       <a href="#">
         What is an artifact?

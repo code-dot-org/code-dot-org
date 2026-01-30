@@ -71,7 +71,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   }, [context, scriptName]);
 
   const viewAsUserId = useAppSelector(state => {
-    console.log(state);
     return state.progress?.viewAsUserId || undefined;
   });
   const threadId = useAppSelector(state => state.aichat.threadId);

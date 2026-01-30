@@ -18,7 +18,7 @@ interface Props {
 }
 
 interface IdSet {
-  [id: number]: boolean;
+  [id: string]: boolean;
 }
 
 interface ServerLessonInfo {
@@ -46,6 +46,14 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
+
+  const activeStudentSections = sections.sectionIds
+    .map(sectionId => sections.sections[sectionId])
+    .filter(section => {
+      return !section.hidden && section.participantType === 'student';
+    });
+
+  console.log(activeStudentSections);
 
   const swapLessonInfo = useCallback(
     async (unitId: string) => {
@@ -78,6 +86,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
   const handleUnitChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const unitId = event.target.value;
+    console.log('reset 2');
     setSelectedUnitId(unitId);
     swapLessonInfo(unitId);
   };
@@ -87,25 +96,31 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   };
 
   const onSubmit = () => {
-    const info = {
+    const info = JSON.stringify({
       messageId: message.id,
-      sectionIds: Object.keys(selectedSectionIds),
+      sectionIds: Object.keys(selectedSectionIds).filter(
+        // Need to filter out the checkboxes that have been selected and then
+        // deselected. The key will exist in the object with a value of false.
+        id => selectedSectionIds[id]
+      ),
       unitId: selectedUnitId,
       lessonId: selectedLessonId,
-    };
+    });
+
+    HttpClient.post('/aidiff_artifacts/', info, true, {
+      'Content-Type': 'application/json',
+    }).then(() => dispatch(clearPendingArtifactMessage()));
     console.log(info);
   };
 
   const unitMenuList = useMemo(() => {
     // TODO: dedupe these
-    const curriculumIds = sections.sectionIds
-      .filter(sectionId => sections.sections[sectionId])
-      .map(sectionId => {
-        return {
-          courseOfferingId: sections.sections[sectionId].courseOfferingId,
-          courseVersionId: sections.sections[sectionId].courseVersionId,
-        };
-      });
+    const curriculumIds = activeStudentSections.map(section => {
+      return {
+        courseOfferingId: section.courseOfferingId,
+        courseVersionId: section.courseVersionId,
+      };
+    });
 
     const menuItems = curriculumIds
       .map(ids => {
@@ -137,11 +152,16 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
     // Init lesson menu to initial unit
     if (menuItems[0] && menuItems[0].groupItems[0]) {
-      swapLessonInfo(menuItems[0].groupItems[0].value);
+      const firstUnitId = menuItems[0].groupItems[0].value;
+      if (!selectedUnitId) {
+        console.log('reset 1');
+        setSelectedUnitId(firstUnitId);
+        swapLessonInfo(firstUnitId);
+      }
     }
 
     return menuItems;
-  }, [sections, swapLessonInfo]);
+  }, [sections, swapLessonInfo, selectedUnitId]);
 
   const dispatch = useAppDispatch();
 
@@ -168,18 +188,18 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         </div>
 
         <div className={style.artifactConfigurationCheckboxes}>
-          {sections?.sectionIds.map(sectionId => (
+          {activeStudentSections.map(section => (
             <Checkbox
               size="m"
-              label={sections.sections[sectionId].name}
-              key={`${sectionId}`}
-              name={`${sectionId}`}
-              value={`${sectionId}`}
-              checked={selectedSectionIds[sectionId] || false}
+              label={section.name}
+              key={`${section.id}`}
+              name={`${section.id}`}
+              value={`${section.id}`}
+              checked={selectedSectionIds[section.id] || false}
               onChange={e =>
                 setSelectedSectionIds({
                   ...selectedSectionIds,
-                  [sectionId]: e.target.checked,
+                  [section.id]: e.target.checked,
                 })
               }
             />
@@ -232,6 +252,12 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           color="purple"
           onClick={onSubmit}
           text="Save selections"
+          disabled={
+            Object.values(selectedSectionIds).filter(value => value === true)
+              .length === 0 ||
+            !selectedUnitId ||
+            !selectedLessonId
+          }
         />
       </div>
     </div>
