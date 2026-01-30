@@ -23,9 +23,6 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
     typeof option === 'string' ? option : ''
   );
 
-  console.log('CFUMatchAnswer level:', level);
-  console.log('CFUMatchAnswer response:', response);
-
   const rawStudentResult = response.student_result;
 
   const studentOrder: number[] | null = Array.isArray(rawStudentResult)
@@ -38,10 +35,6 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
         const answerIndex = studentOrder && studentOrder[index];
         const answer = answerIndex !== null && flatAnswers[answerIndex];
         const isCorrect = answer && answerIndex === index;
-        console.log('answer:', answer);
-        console.log('isCorrect:', isCorrect);
-        console.log('answerIndex:', answerIndex);
-        console.log('index:', index);
 
         return (
           <div key={optionText} className={styles.matchingAnswerPairContainer}>
