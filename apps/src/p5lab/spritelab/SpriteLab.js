@@ -73,7 +73,7 @@ export default class SpriteLab extends P5Lab {
       this.onP5Setup();
       this.p5Wrapper.p5.redraw();
     } else if (!studioApp().share) {
-      // in the share view, run is executed on load, so we can skip the preview execution
+      // In the share view, run is executed on load, so we can skip the preview execution.
       this.p5Wrapper.startExecution();
       this.p5Wrapper.setLoop(false);
     }
