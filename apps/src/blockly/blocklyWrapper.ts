@@ -12,7 +12,6 @@ import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import {
-  BlockColors,
   READ_ONLY_PROPERTIES,
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
@@ -83,6 +82,7 @@ import {
   adjustCalloutsOnViewportChange,
   bumpRTLBlocks,
   disableOrphans,
+  handleGrayUndeletableBlocks,
   reflowToolbox,
   setPathFill,
   storeWorkspaceWidth,
@@ -105,7 +105,6 @@ import CdoJigsawTheme from './themes/cdoJigsaw';
 import CdoTheme from './themes/cdoTheme';
 import {
   BlocklyWrapperType,
-  ExtendedBlockSvg,
   ExtendedBlocklyOptions,
   ExtendedConnection,
   ExtendedInput,
@@ -476,29 +475,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blockspace.removeChangeListener(handler);
   };
 
-  const extendedBlockSvg = blocklyWrapper.BlockSvg
-    .prototype as ExtendedBlockSvg;
-
-  // Labs like Maze and Artist turn undeletable blocks gray.
-  extendedBlockSvg.shouldBeGrayedOut = function () {
-    return (
-      blocklyWrapper.grayOutUndeletableBlocks &&
-      !this.workspace.isReadOnly() &&
-      !this.isDeletable()
-    );
-  };
-
-  const originalSetDeletable = blocklyWrapper.Block.prototype.setDeletable;
-  // Replace the original setDeletable with a version that will also re-color
-  // blocks if they are meant to be gray.
-  extendedBlockSvg.setDeletable = function (deletable) {
-    originalSetDeletable.call(this, deletable);
-    if (this.shouldBeGrayedOut()) {
-      const [h, s, v] = BlockColors.DISABLED;
-      this.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
-    }
-  };
-
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
@@ -818,8 +794,10 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       workspace.svgGroup_
     );
 
-    blocklyWrapper.grayOutUndeletableBlocks =
-      !!options.grayOutUndeletableBlocks;
+    if (!!options.grayOutUndeletableBlocks) {
+      workspace.addChangeListener(handleGrayUndeletableBlocks);
+    }
+
     blocklyWrapper.topLevelProcedureAutopopulate =
       !!options.topLevelProcedureAutopopulate;
     blocklyWrapper.showBlockHelp = !!optOptionsExtended.showBlockHelp;

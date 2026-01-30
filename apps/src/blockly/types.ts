@@ -103,7 +103,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   selected: BlocklyCore.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
-  grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
   blockly_: typeof BlocklyCore;
