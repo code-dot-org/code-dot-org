@@ -12,8 +12,10 @@ import '@code-dot-org/component-library-styles/colors.css';
 // Load Font Awesome Pro 6 icons from CDN
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
+/*
 import {LevelKind} from '@code-dot-org/api/models/levels';
 import type {LevelProperties} from '@code-dot-org/lab';
+*/
 
 injectFontAwesome();
 
@@ -22,6 +24,7 @@ import '@code-dot-org/lab/styles/variables.scss';
 
 import App from './App.tsx';
 
+/*
 const _mockLevelProperties: LevelProperties = {
   id: 1,
   appName: 'music',
@@ -36,6 +39,7 @@ const _mockLevelProperties: LevelProperties = {
     library: 'launch2024',
   },
 };
+*/
 
 const channelId = window.location.pathname.match(
   /^\/app\/projects\/music\/([^/]+)\/edit$/,
