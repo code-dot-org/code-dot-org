@@ -11,7 +11,8 @@ import {imageUrlToBase64} from './imageUrlToBase64';
 
 export const populateInitialExcalidrawState = async (
   sourcesWithExternalFiles: ExcalidrawSourceWithExternalFiles,
-  downloadedFileData: Record<ExcalidrawElement['id'], DataURL>
+  downloadedFileData: Record<ExcalidrawElement['id'], DataURL>,
+  onError: (error: Error) => void
 ) => {
   const excalidrawInitialState = cloneDeep(sourcesWithExternalFiles);
 
@@ -32,10 +33,13 @@ export const populateInitialExcalidrawState = async (
             downloadedFileData[file.id] = base64;
           } catch (error) {
             // Excalidraw handles files it can't load pretty well (ie, shows a placeholder image),
-            // so proceed if we fail to encode an image for now.
-            // Error handling investigation tracked here:
-            // https://codedotorg.atlassian.net/browse/AFL-345
-            console.error(error);
+            // so proceed if we fail to encode an image for now and just track the error via this
+            // upcall.
+            if (error instanceof Error) {
+              onError(
+                new Error(`Cannot load image '${file.id}' from sources.`)
+              );
+            }
           }
         }
       } else {
