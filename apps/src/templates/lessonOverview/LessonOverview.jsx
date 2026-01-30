@@ -66,7 +66,7 @@ class LessonOverview extends Component {
         unitName: props.lesson.unit.displayName,
         unitLink: props.lesson.unit.link,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }
 

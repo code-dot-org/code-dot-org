@@ -156,13 +156,13 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         {
           'user id': teacherId,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
     analyticsReporter.sendEvent(
       EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     // Temporarily check network availability on teacher login
@@ -190,7 +190,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       value === 'teaching'
         ? EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED
         : EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED;
-    analyticsReporter.sendEvent(toggleEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(toggleEvent, {}, PLATFORMS.STATSIG);
     setSelectedArchiveToggle(value);
   };
 

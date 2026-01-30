@@ -98,7 +98,7 @@ export class EditableTeacherFeedback extends Component {
           unitId: this.props.serverScriptId,
           levelId: this.props.serverLevelId,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   };
@@ -145,7 +145,7 @@ export class EditableTeacherFeedback extends Component {
         unitId: this.props.serverScriptId,
         levelId: this.props.serverLevelId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
@@ -192,7 +192,7 @@ export class EditableTeacherFeedback extends Component {
         isRubric: this.props.rubric,
         curriculumUmbrella: this.determineCurriculumUmbrella(),
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 

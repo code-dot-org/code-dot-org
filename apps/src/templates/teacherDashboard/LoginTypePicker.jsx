@@ -76,7 +76,7 @@ class LoginTypePicker extends Component {
       {
         source: SELECT_LOGIN_TYPE,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 

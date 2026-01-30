@@ -78,7 +78,7 @@ const CurriculumCatalog = ({
       {
         curriculum_offering: assignmentData.assignedTitle,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   };
 
