@@ -65,6 +65,7 @@
     "display_name": "Top 10 Songs",
     "thumbnail_url": "https://images.code.org/2875e6709da7a901c57d911a80fa3119-image-1649885755938.png",
     "bubble_choice_description": "Add code that allows the user to add songs to the Top 10 Songs.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

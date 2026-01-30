@@ -67,6 +67,7 @@
     "thumbnail_url": "https://images.code.org/8587f3b7560595bc091b6486c4bec862-image-1647410606735.png",
     "bubble_choice_description": "Write code to add items to a list of encouragement and display a random caption on a photo.",
     "encrypted_examples": "T1as/ihaKe8o5VgHSZlx4Glw4ZWjQkfdaMy4VWiYSNPYrSiMCZYk5AwMzmXV\nFeHisYfPpn2LidtarFfoWc/X/w==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

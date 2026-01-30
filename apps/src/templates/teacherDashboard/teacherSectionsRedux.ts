@@ -1021,7 +1021,7 @@ export const assignToSection = (
           newCourseId: courseOfferingId,
           newCourseVersionId: courseVersionId,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
 

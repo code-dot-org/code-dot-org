@@ -188,6 +188,7 @@ export const sectionFromServerSection = serverSection => ({
     ? Date.parse(serverSection.code_review_expires_at)
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
+  isAssignedEssentialAiChat: serverSection.is_assigned_essential_ai_chat,
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.sectionInstructors?.map(instructor => ({
     id: instructor?.id,

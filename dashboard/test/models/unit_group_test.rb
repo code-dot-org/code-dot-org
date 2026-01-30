@@ -1132,4 +1132,61 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal single_unit_course.default_units.first, single_unit_course.first_unit
     assert_equal multi_unit_course.default_units.first, multi_unit_course.first_unit
   end
+
+  test 'file_path returns UI test directory for ui-test- prefixed courses' do
+    expected = Rails.root.join('test/ui/config/courses/ui-test-example.course')
+    assert_equal expected, UnitGroup.file_path('ui-test-example')
+  end
+
+  test 'file_path returns normal directory for non-ui-test courses' do
+    expected = Rails.root.join('config/courses/regular-course.course')
+    assert_equal expected, UnitGroup.file_path('regular-course')
+  end
+
+  test 'file_path returns normal directory when ui-test is not a prefix' do
+    expected = Rails.root.join('config/courses/my-ui-test-course.course')
+    assert_equal expected, UnitGroup.file_path('my-ui-test-course')
+  end
+
+  test 'file_path respects custom root_path for UI test courses' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('test/ui/config/courses/ui-test-example.course')
+    assert_equal expected, UnitGroup.file_path('ui-test-example', custom_root)
+  end
+
+  test 'file_path respects custom root_path for normal courses' do
+    custom_root = Pathname.new('/custom/path')
+    expected = custom_root.join('config/courses/regular-course.course')
+    assert_equal expected, UnitGroup.file_path('regular-course', custom_root)
+  end
+
+  test 'file_path works with globbing pattern' do
+    # Globbing pattern '**' doesn't start with 'ui-test-', so goes to normal directory
+    result = UnitGroup.file_path('**', Rails.root)
+    assert_equal Rails.root.join('config/courses/**.course'), result
+  end
+
+  test 'has_ai_chat_tools? returns true for ai tutor available levels' do
+    unit = create(:unit, :with_levels, levels_count: 1)
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    refute unit_group.has_ai_chat_tools?
+    refute unit_group.requires_ai_chat_tools?
+
+    unit.levels.first.update!(ai_tutor_available: true)
+
+    assert unit_group.has_ai_chat_tools?
+    refute unit_group.requires_ai_chat_tools?
+  end
+
+  test 'requires_ai_chat_tools? returns true for essential ai chat level types' do
+    unit = create(:unit, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    activity_section = lesson.activity_sections.first
+    create(:script_level, levels: [create(:aichat)], activity_section: activity_section)
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    assert unit_group.has_ai_chat_tools?
+    assert unit_group.requires_ai_chat_tools?
+  end
 end

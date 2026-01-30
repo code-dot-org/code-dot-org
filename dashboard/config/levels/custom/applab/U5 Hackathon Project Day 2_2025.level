@@ -42,6 +42,7 @@
     "project_template_level_name": "CSP U5 Hackathon Template_2025",
     "long_instructions": "**Do This:** Continue working on your project. ",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

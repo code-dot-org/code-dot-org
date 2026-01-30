@@ -1,11 +1,11 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import {CFULevel, CFULevelResponse} from '../../types';
+import {CFULevel, CFULevelResponseResponse} from '../../types';
 
 interface CFUMatchAnswerProps {
   level: CFULevel;
-  response: CFULevelResponse;
+  response: CFULevelResponseResponse;
 }
 
 const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => (

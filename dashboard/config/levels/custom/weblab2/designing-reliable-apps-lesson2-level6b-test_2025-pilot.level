@@ -1,11 +1,68 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-01-26T23:33:22.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Robot Chef Logic</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <div class=\"card\">\n        <header>\n            <h1>Robot Chef 2.0</h1>\n            <p>Task Queue Monitor</p>\n        </header>\n\n        <div id=\"logBox\" class=\"console-screen\">\n            <div class=\"line system\">> System Ready...</div>\n        </div>\n\n        <div class=\"controls\">\n            <button id=\"runBtn\" class=\"primary-btn\">RUN ROUTINE ▶</button>\n        </div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n    background-color: #f0f2f5;\n    font-family: sans-serif;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100vh;\n    margin: 0;\n}\n\n.card {\n    background: white;\n    width: 400px;\n    padding: 30px;\n    border-radius: 12px;\n    box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\nheader h1 { margin: 0; font-size: 1.5rem; color: #333; }\nheader p { margin: 5px 0 20px 0; color: #666; font-size: 0.9rem; }\n\n/* The Log Box */\n.console-screen {\n    background-color: #2d2d2d;\n    color: #4cd137; /* Bright green text */\n    height: 250px;\n    border-radius: 8px;\n    padding: 15px;\n    overflow-y: auto;\n    font-family: monospace;\n    font-size: 0.95rem;\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n}\n\n.line { border-bottom: 1px solid #444; padding-bottom: 4px; }\n.system { color: #888; }\n.error { color: #ff4757; font-weight: bold; }\n\n/* Button & Status */\n.controls { margin-top: 20px; text-align: center; }\n\n.primary-btn {\n    background-color: #0097e6;\n    color: white;\n    border: none;\n    padding: 12px 24px;\n    font-size: 1rem;\n    font-weight: bold;\n    border-radius: 6px;\n    cursor: pointer;\n    width: 100%;\n}\n\n.primary-btn:hover { background-color: #007bbd; }\n.primary-btn:disabled { background-color: #ccc; cursor: not-allowed; }\n\n.status-text {\n    margin-top: 15px;\n    font-weight: bold;\n    color: #666;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const runBtn = document.getElementById('runBtn');\nconst logBox = document.getElementById('logBox');\n\nconst addLog = (text) => {\n    const div = document.createElement('div');\n    div.innerText = \"> \" + text;\n    logBox.appendChild(div);\n};\n\nrunBtn.addEventListener('click', () => {\n\n  \n    addLog(\"Order started...\");\n\n  \n    setTimeout(() => {\n        addLog(\"Coffee is brewed!\");\n    }, 5000);\n\n\n    setTimeout(() => {\n        addLog(\"Eggs are fried!\");\n    }, 3000);\n\n  \n    setTimeout(() => {\n        addLog(\"Toast popped!\");\n    }, 2000);\n\n\n    addLog(\"Pouring Orange Juice\");\n\n  \n    addLog(\"Ticket placed on counter.\");\n\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "The Asynchronous Kitchen",
+    "bubble_choice_description": "Predict the execution order of multiple kitchen tasks running on different timers.",
+    "thumbnail_url": "https://images.code.org/42f7124f1dabedb14ade068d5a9e7359-Pasted Graphic 4.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "long_instructions": "### The Asynchronous Kitchen\r\n\r\n**Do This:**\r\n\r\n1. **Read**: Look closely at the milliseconds (e.g. `2000`, `5000`) inside the code.\r\n\r\n2. **Predict**: In what order will the chef complete the tasks based on their timers? Submit your prediction in the box below.\r\n\r\n3. **Run**: Click the 'Run Routine' button to see the actual order in which the chef completes the tasks."
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2026-01-27 19:40:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 20:04:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:19:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:25:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:25:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:29:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:34:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-27 23:38:05 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 00:42:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 01:19:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-01-28 01:22:58 +0000\",\"changed\":[\"disable_edit_run_for_submission\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

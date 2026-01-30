@@ -110,7 +110,7 @@ function initPage() {
             ...reportingData,
             studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
           },
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       }
       ReactDOM.render(

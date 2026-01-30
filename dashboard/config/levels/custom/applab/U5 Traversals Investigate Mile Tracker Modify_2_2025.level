@@ -1,6 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
   "created_at": "2025-05-22T15:28:59.000Z",
   "level_num": "custom",
@@ -79,8 +78,10 @@
     "encrypted_examples": "1MTRy8JeitGE2FREHoghVsnvQsojAl47aaJwdEznZVF+4UqDXaucLOVD+ABW\nPLqgSVCiPaJhhC2DI/o2sTVIAw==\n",
     "name_suffix": "_2025",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-05-22T15:28:59.022+00:00\",\"changed\":[\"cloned from \\\"U5 Traversals Investigate Mile Tracker Modify_2025\\\"\"],\"cloned_from\":\"U5 Traversals Investigate Mile Tracker Modify_2025\"},{\"changed_at\":\"2025-05-22 15:30:13 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 15:37:29 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 15:46:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-20 21:23:42 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>

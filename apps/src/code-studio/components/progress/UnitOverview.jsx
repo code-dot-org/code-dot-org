@@ -89,7 +89,7 @@ class UnitOverview extends React.Component {
         {
           'unit name': props.scriptName,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else if (props.userType === 'student') {
       analyticsReporter.sendEvent(
@@ -97,7 +97,7 @@ class UnitOverview extends React.Component {
         {
           'unit name': props.scriptName,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     } else {
       analyticsReporter.sendEvent(
@@ -105,7 +105,7 @@ class UnitOverview extends React.Component {
         {
           'unit name': props.scriptName,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     }
   }
