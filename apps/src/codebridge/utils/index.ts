@@ -21,6 +21,7 @@ export * from './getPossibleDestinationFoldersForFolder';
 export * from './hasPreview';
 export * from './repairOpenFiles';
 export * from './sortFilesByName';
+export * from './shortenExternalURL';
 export * from './validateBackpackFileName';
 export * from './validateFileName';
 export * from './validateFolderMove';
