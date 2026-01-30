@@ -26,7 +26,7 @@ const LtiLinkAccountPage = () => {
     analyticsReporter.sendEvent(
       EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
       {source: 'lti'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }, []);
 

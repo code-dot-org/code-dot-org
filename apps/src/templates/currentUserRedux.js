@@ -327,13 +327,8 @@ export default function currentUser(state = initialState, action) {
       has_seen_homepage_welcome,
       ai_tutor_enabled_for_pilot,
     } = action.serverUser;
-    analyticsReport.setUserProperties(
-      id,
-      user_type,
-      experiments.getEnabledExperiments()
-    );
-    // Calling Statsig separately to emphasize different user integrations
-    // and because dual reporting is aspirationally temporary (March 2024)
+    // TODO: Once Amplitude is fully removed, the StatsigReporter class should be
+    // renamed to AnalyticsReporter.
     statsigReporter.setUserProperties({
       userId: id,
       userType: user_type,

@@ -31,7 +31,7 @@ before_fork do
   Cdo::AppServerHooks.before_fork
 end
 
-before_worker_boot do |_index|
+on_worker_boot do |_index|
   # Puma runs this hook in each worker process after it forks (cluster mode).
   # When the master preloads the app, the forked worker inherits the parent's in memory New Relic state,
   # including connection and background thread state. New Relic recommends calling `after_fork` in the worker
