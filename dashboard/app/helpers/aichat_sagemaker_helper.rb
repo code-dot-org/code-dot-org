@@ -72,7 +72,7 @@ module AichatSagemakerHelper
   end
 
   def self.get_endpoint_name(model_id)
-    "#{model_id}-#{rack_env?(:production) ? 'production' : 'test'}"
+    "#{model_id}-production"
   end
 end
 
