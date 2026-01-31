@@ -640,6 +640,15 @@ class ProjectsController < ApplicationController
     end
   end
 
+  # Get a JSON summary of a standalone level's properties
+  # Always returns a map to be consistent with the LevelsController
+  def level_properties
+    @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
+    properties = {}
+    properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user)
+    render json: properties
+  end
+
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game

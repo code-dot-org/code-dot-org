@@ -335,6 +335,7 @@ Dashboard::Application.routes.draw do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
           get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
+          get "/#{key}/level_properties", to: 'projects#level_properties', key: key.to_s, as: "#{key}_project_level_properties"
 
           # Weblab projects are shared on a codeprojects path. The share URL on code studio doesn't mean anything and instead
           # should be redirected to the corresponding codeprojects path.
