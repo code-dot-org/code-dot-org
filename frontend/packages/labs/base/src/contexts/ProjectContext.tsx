@@ -1,6 +1,7 @@
 import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useEffect} from 'react';
 
+import {useApiClient} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
@@ -46,6 +47,7 @@ export const ProjectProvider = ({
   channelId,
   children,
 }: ProjectProviderProps) => {
+  const apiClient = useApiClient();
   const levelProperties = useMaybeLevelProperties();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const userId = useAppSelector(
@@ -90,6 +92,7 @@ export const ProjectProvider = ({
       currentLevelId && levelProperties
         ? dispatch(
             labActions.setUpWithLevel({
+              apiClient,
               levelId: currentLevelId,
               userId,
               scriptId,
@@ -106,6 +109,7 @@ export const ProjectProvider = ({
       promise?.abort();
     };
   }, [
+    apiClient,
     channelId,
     currentLevelId,
     scriptId,

@@ -19,9 +19,6 @@ export const ProjectFileTypes = {
   SYSTEM_SUPPORT: 'system_support',
 } as const;
 
-export type ProjectFileType =
-  (typeof ProjectFileTypes)[keyof typeof ProjectFileTypes];
-
 export const FolderIdSchema = z.string();
 export const FileIdSchema = z.string();
 
@@ -61,4 +58,13 @@ export const ProjectVersionListSchema = z.array(ProjectVersionSchema);
 export const ProjectSourcesSchema = z.object({
   source: z.union([z.string(), MultiFileSourceSchema]),
   labConfig: z.record(z.string(), z.record(z.string(), z.string())).optional(),
+});
+
+export const SourcesUpdateResponseSchema = z.object({
+  timestamp: z.string().nullable(),
+  versionId: z.string(),
+});
+
+export const SourcesRestoreResponseSchema = z.object({
+  version_id: z.string().optional(),
 });

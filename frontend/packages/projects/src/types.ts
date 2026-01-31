@@ -18,6 +18,6 @@ export type {
   Source,
   UpdateSourceOptions,
   SaveSourceOptions,
-} from '@code-dot-org/api/sources';
+} from '@code-dot-org/core/api';
 
 export type DefaultChannel = Pick<Channel, 'name'>;

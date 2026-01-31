@@ -1,51 +1,61 @@
+// src/api/transports/mockTransport.ts
 import {
   ApiError,
   type Transport,
   type RequestOptions,
+  type ApiResponse,
+  type ResponseMeta,
   type HttpMethod,
 } from './types';
-import {toReplayKey} from './url';
 
-export type MockHandler = (req: RequestOptions) => unknown | Promise<unknown>;
+export type MockHandlerResult =
+  | unknown
+  | {data: unknown; meta?: Partial<ResponseMeta>};
+
+export type MockHandler = (
+  req: RequestOptions,
+) => MockHandlerResult | Promise<MockHandlerResult>;
 
 export type MockRoute = {
   method: HttpMethod;
-  /** Exact match or regex. Prefer regex for params. */
   url: string | RegExp;
   handler: MockHandler;
 };
 
-export type MockTransportOptions = {
+export function createMockTransport(opts: {
   routes: MockRoute[];
-  baseUrl?: string; // if you want to strip a prefix
+  baseUrl?: string;
   latencyMs?: number | {min: number; max: number};
-  /** e.g. 0.05 to throw random errors */
-  errorRate?: number;
-  /** deterministic seed behavior could be added later */
-};
+}): Transport {
+  const {routes, baseUrl, latencyMs = 0} = opts;
 
-export function createMockTransport(opts: MockTransportOptions): Transport {
-  const {routes, baseUrl, latencyMs = 0, errorRate = 0} = opts;
+  function normalize(url: string): string {
+    if (!baseUrl) return url;
+    const b = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    return url.startsWith(b) ? url.slice(b.length) || '/' : url;
+  }
+
+  async function maybeSleep() {
+    const ms =
+      typeof latencyMs === 'number'
+        ? latencyMs
+        : Math.floor(
+            latencyMs.min + Math.random() * (latencyMs.max - latencyMs.min),
+          );
+    if (ms > 0) await new Promise(r => setTimeout(r, ms));
+  }
 
   return {
-    async request<TResponse>(req: RequestOptions): Promise<TResponse> {
-      maybeSleep(latencyMs);
+    async requestWithMeta<T>(req: RequestOptions): Promise<ApiResponse<T>> {
+      await maybeSleep();
 
-      if (errorRate > 0 && Math.random() < errorRate) {
-        throw new ApiError(
-          `Mock error injected for ${toReplayKey(req)}`,
-          500,
-          req.url,
-          req.method,
-        );
-      }
-
-      const normalizedUrl = normalize(req.url, baseUrl);
+      const normalizedUrl = normalize(req.url);
 
       const route = routes.find(r => {
         if (r.method !== req.method) return false;
-        if (typeof r.url === 'string') return r.url === normalizedUrl;
-        return r.url.test(normalizedUrl);
+        return typeof r.url === 'string'
+          ? r.url === normalizedUrl
+          : r.url.test(normalizedUrl);
       });
 
       if (!route) {
@@ -58,23 +68,31 @@ export function createMockTransport(opts: MockTransportOptions): Transport {
       }
 
       const result = await route.handler({...req, url: normalizedUrl});
-      return result as TResponse;
+
+      // Allow handler to return either plain data or {data, meta}
+      const {data, meta} =
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        result && typeof result === 'object' && 'data' in (result as any)
+          ? (result as {data: unknown; meta?: Partial<ResponseMeta>})
+          : {data: result, meta: undefined};
+
+      const mergedMeta: ResponseMeta = {
+        status: meta?.status ?? 200,
+        url: meta?.url ?? normalizedUrl,
+        headers: Object.fromEntries(
+          Object.entries(meta?.headers ?? {}).map(([k, v]) => [
+            k.toLowerCase(),
+            v,
+          ]),
+        ),
+      };
+
+      return {data: data as T, meta: mergedMeta};
+    },
+
+    async request<T>(req: RequestOptions): Promise<T> {
+      const {data} = await this.requestWithMeta<T>(req);
+      return data;
     },
   };
-}
-
-function normalize(url: string, baseUrl?: string): string {
-  // If caller passes "/api/foo" and baseUrl is "/api", normalize to "/foo"
-  if (!baseUrl) return url;
-  const b = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
-  return url.startsWith(b) ? url.slice(b.length) || '/' : url;
-}
-
-async function maybeSleep(latency: number | {min: number; max: number}) {
-  const ms =
-    typeof latency === 'number'
-      ? latency
-      : Math.floor(latency.min + Math.random() * (latency.max - latency.min));
-  if (ms <= 0) return;
-  await new Promise(r => setTimeout(r, ms));
 }

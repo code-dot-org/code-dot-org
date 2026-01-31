@@ -1,11 +1,10 @@
-import {NetworkError} from '@code-dot-org/api';
-import {AppName, ProjectType} from '@code-dot-org/api/projects';
-import {
+import type {
+  ApiClient,
+  ProjectType,
   ProjectSources,
   SaveSourceOptions,
   UpdateSourceOptions,
-} from '@code-dot-org/api/sources';
-import * as sourcesApi from '@code-dot-org/api/sources';
+} from '@code-dot-org/core/api';
 import {getTabId} from '@code-dot-org/user';
 
 /**
@@ -17,22 +16,22 @@ export class SourcesStore {
   private firstSaveTime: string | null = null;
   private lastNewVersionTime: number | null = null;
 
-  async load(appName: AppName, channelId: string, versionId?: string) {
-    const {response, value} = await sourcesApi.get(
-      appName,
+  async load(api: ApiClient, channelId: string, versionId?: string) {
+    const {sources, versionId: newVersionId} = await api.sources.get({
       channelId,
       versionId,
-    );
+    });
 
-    if (response.ok && !versionId) {
+    if (!versionId) {
       // Only store the current version id if we are loading the latest version.
-      this.currentVersionId = response.headers.get('S3-Version-Id');
+      this.currentVersionId = newVersionId;
     }
 
-    return value;
+    return sources;
   }
 
   async save(
+    api: ApiClient,
     channelId: string,
     sources: ProjectSources,
     projectType?: ProjectType,
@@ -57,32 +56,28 @@ export class SourcesStore {
         tabId: getTabId(),
       } as UpdateSourceOptions;
     }
-    const response = await sourcesApi.update(channelId, sources, options);
-
-    if (response.ok) {
-      const {timestamp, versionId} = await response.json();
-      this.firstSaveTime = this.firstSaveTime || timestamp;
-      this.currentVersionId = versionId;
-    } else {
-      throw new NetworkError(
-        response.status + ' ' + response.statusText,
-        response,
-      );
-    }
-    return response;
+    const {timestamp, versionId} = await api.sources.update({
+      channelId,
+      sources,
+      options,
+    });
+    this.firstSaveTime = this.firstSaveTime || timestamp;
+    this.currentVersionId = versionId;
   }
 
-  async getVersionList(channelId: string, includeComments: boolean = false) {
-    const response = await sourcesApi.getVersionList(
+  async getVersionList(
+    api: ApiClient,
+    channelId: string,
+    includeComments: boolean = false,
+  ) {
+    return api.sources.getVersionList({
       channelId,
       includeComments,
-    );
-    return response.value || [];
+    });
   }
 
-  async restore(channelId: string, versionId: string) {
-    const response = await sourcesApi.restore(channelId, versionId);
-    const body = await response.json();
+  async restore(api: ApiClient, channelId: string, versionId: string) {
+    const body = await api.sources.restore({channelId, versionId});
     if (body?.version_id) {
       this.currentVersionId = body.version_id;
     }

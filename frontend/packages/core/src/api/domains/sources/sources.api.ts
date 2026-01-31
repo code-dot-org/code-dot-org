@@ -2,8 +2,10 @@ import type {Transport} from '../../transports/types';
 import {
   ProjectSourcesSchema,
   ProjectVersionListSchema,
+  SourcesRestoreResponseSchema,
+  SourcesUpdateResponseSchema,
 } from './sources.schemata';
-import type {ProjectSources, SaveSourceOptions} from './sources.types';
+import type {ProjectSourcesAny, SaveSourceOptions} from './sources.types';
 
 /** Default source file name */
 export const SOURCE_FILE = 'main.json';
@@ -13,15 +15,28 @@ export function createSourcesApi(transport: Transport) {
     /**
      * GET /v3/sources/:channelId/:sourceFile
      */
-    async get(params: {channelId: string; sourceFile?: string}) {
-      const {channelId, sourceFile = SOURCE_FILE} = params;
-
-      const raw = await transport.request<unknown>({
+    async get(params: {
+      channelId: string;
+      versionId?: string;
+      sourceFile?: string;
+    }): Promise<{
+      sources: ProjectSourcesAny;
+      versionId: string;
+    }> {
+      const {channelId, versionId, sourceFile = SOURCE_FILE} = params;
+      const resp = await transport.requestWithMeta<unknown>({
         method: 'GET',
-        url: `/v3/sources/${channelId}/${sourceFile}`,
+        url: `/v3/sources/${channelId}/${sourceFile}${versionId ? `?version=${versionId}` : ''}`,
       });
 
-      return ProjectSourcesSchema.parse(raw);
+      // Pull out the S3 version id
+      const newVersionId =
+        versionId || resp.meta.headers['S3-Version-Id'] || 'unknown';
+
+      return {
+        sources: ProjectSourcesSchema.parse(resp.data),
+        versionId: newVersionId,
+      };
     },
 
     /**
@@ -51,7 +66,7 @@ export function createSourcesApi(transport: Transport) {
      */
     async update(params: {
       channelId: string;
-      sources: ProjectSources;
+      sources: ProjectSourcesAny;
       options?: SaveSourceOptions;
     }) {
       const {channelId, sources, options} = params;
@@ -65,8 +80,21 @@ export function createSourcesApi(transport: Transport) {
         body: validatedSources,
       });
 
-      // TODO: validate response
-      return raw;
+      return SourcesUpdateResponseSchema.parse(raw);
+    },
+
+    /**
+     * PUT /v3/sources/:channelId/restore?version=:versionId
+     */
+    async restore(params: {channelId: string; versionId: string}) {
+      const {channelId, versionId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'PUT',
+        url: `/v3/sources/${channelId}/restore?version=${versionId}`,
+      });
+
+      return SourcesRestoreResponseSchema.parse(raw);
     },
   };
 }
