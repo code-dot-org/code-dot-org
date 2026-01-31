@@ -5,6 +5,10 @@
   width: 100%;
   position: relative;
 
+  label {
+    width: 100%;
+  }
+
   input {
     padding-right: 2rem;
   }
@@ -17,6 +21,12 @@
     font-size: 0.875rem;
     line-height: 125%;
     margin-right: 0.25rem;
+  }
+
+  &.hideIcon {
+    input {
+      padding-right: 0;
+    }
   }
 
   .optionList {
@@ -42,7 +52,8 @@
     }
 
     .optionItem {
-      padding: 0.5rem 1rem;
+      padding: 0.125rem 0.75rem;
+      line-height: 20px;
       cursor: pointer;
 
       &.active {

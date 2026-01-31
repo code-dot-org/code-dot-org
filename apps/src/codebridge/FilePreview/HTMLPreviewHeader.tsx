@@ -124,6 +124,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           fetchOptions={fetchOptions}
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
+          hideIcon
         />
         <Button
           onClick={onRefresh}
