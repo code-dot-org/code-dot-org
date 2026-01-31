@@ -51,9 +51,12 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
+    "@tanstack/react-query": "^5.90.20",
+    "@tanstack/react-query-devtools": "^5.91.3",
     "events": "^3.3.0",
     "flat": "^6.0.1",
-    "tldts": "^7.0.23"
+    "tldts": "^7.0.23",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
