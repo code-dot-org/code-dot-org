@@ -46,15 +46,26 @@ module Cdo
       namespace = @namespace
       dimensions = @dimensions
 
-      # Puma.stats_hash provides the true internal state of all workers
+      # Puma.stats_hash provides the internal state of all workers.
       stats = Puma.stats_hash
       worker_statuses = stats[:worker_status].map {|w| w[:last_status]}
 
-      # Aggregate metrics across the entire cluster on this instance
+      # Aggregate metrics across the entire cluster on this instance.
+      # Descriptions based on Puma 7.2 internal STAT_METHODS:
+      # https://github.com/puma/puma/blob/dc947d90fbe0aeb6aaabae9295ebdf94229b83b1/lib/puma/server.rb#L687
+      #
+      #   backlog - Requests accepted by workers but queued in their internal 'todo' sets waiting for an available thread.
+      #   running - Total spawned worker threads. Fluctuate between min/max thread settings aggregated across all child processes.
+      #   pool_capacity - Total immediate thread availability (max_threads - busy_threads). When 0, requests begin to backlog.
+      #   busy_threads - Number of threads actively processing requests across all child processes.
+      #   max_threads - The upper limit of threads allowed to spawn across all child processes.
+      #   booted_workers - Number of child processes currently alive and reporting to the parent master process.
       metrics = {
         'backlog' => worker_statuses.sum {|s| s[:backlog] || 0},
         'running' => worker_statuses.sum {|s| s[:running] || 0},
         'pool_capacity' => worker_statuses.sum {|s| s[:pool_capacity] || 0},
+        'busy_threads' => worker_statuses.sum {|s| s[:busy_threads] || 0},
+        'max_threads' => worker_statuses.sum {|s| s[:max_threads] || 0},
         'booted_workers' => stats[:booted_workers] || 0
       }
 

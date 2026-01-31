@@ -6,7 +6,6 @@ module Puma; end unless defined?(Puma)
 
 class AppServerMetricsTest < Minitest::Test
   def setup
-    # Make sure we pass dimensions here, mirroring your production fix
     @metrics = Cdo::AppServerMetrics.new(
       interval: 0.1,
       namespace: 'App Server',
@@ -25,27 +24,32 @@ class AppServerMetricsTest < Minitest::Test
   def test_collect_puma_stats
     AWS::EC2.stubs(:instance_id).returns('i-12345678')
 
-    # Fix 2: Puma constant is now guaranteed to exist due to the module definition above
+    # Simulate a cluster where:
+    # Worker 0: 1 thread busy, 4 capacity remaining.
+    # Worker 1: 5 threads busy (full), 2 requests in backlog.
     fake_puma_stats = {
       worker_status: [
-        {last_status: {backlog: 0, running: 1, pool_capacity: 4, max_threads: 5}},
-        {last_status: {backlog: 2, running: 5, pool_capacity: 0, max_threads: 5}}
+        {last_status: {backlog: 0, running: 1, pool_capacity: 4, busy_threads: 1, max_threads: 5}},
+        {last_status: {backlog: 2, running: 5, pool_capacity: 0, busy_threads: 5, max_threads: 5}}
       ],
       booted_workers: 2
     }
     Puma.stubs(:stats_hash).returns(fake_puma_stats)
 
+    # Summed values across both workers.
     expected_metrics = {
       'backlog' => 2,
       'running' => 6,
       'pool_capacity' => 4,
+      'busy_threads' => 6,
+      'max_threads' => 10,
       'booted_workers' => 2
     }
 
     sequence = sequence('metrics')
 
     expected_metrics.each do |name, value|
-      # Expect Deployment-level metric
+      # Expect Deployment-level metric (no InstanceId).
       Cdo::Metrics.expects(:put).with(
         'App Server',
         name,
@@ -54,7 +58,7 @@ class AppServerMetricsTest < Minitest::Test
         {storage_resolution: 1, unit: 'Count'}
       ).in_sequence(sequence)
 
-      # Expect Instance-level metric
+      # Expect Instance-level metric (with InstanceId).
       Cdo::Metrics.expects(:put).with(
         'App Server',
         name,
@@ -68,32 +72,23 @@ class AppServerMetricsTest < Minitest::Test
   end
 
   def test_start_puma_reporting_is_idempotent
-    # Create a real task object so we satisfy 'assert_kind_of' checks.
     task = Concurrent::TimerTask.new(execution_interval: 0.1) {}
-
-    # Stub 'with_observer' to return self (the task).
-    # This prevents the real method from running and ensures the chain continues on our terms.
     task.stubs(:with_observer).returns(task)
-
-    # Stub 'execute' to return self (the task).
     task.stubs(:execute).returns(task)
-
-    # Stub 'running?' for the idempotency check.
     task.stubs(:running?).returns(true)
 
-    # Force .new to return our prepared task.
     Concurrent::TimerTask.stubs(:new).returns(task)
 
-    # First call: Should return the task.
     task1 = @metrics.start_puma_reporting
     assert_kind_of Concurrent::TimerTask, task1
 
-    # Second call: Should return the SAME task object.
+    # Verify that we don't spawn a second task during phased restarts.
     task2 = @metrics.start_puma_reporting
     assert_same task1, task2
   end
 
   def test_dynamic_resolution
+    # Verify that resolution can be tuned for adhoc/cost management.
     adhoc_metrics = Cdo::AppServerMetrics.new(resolution: 60, interval: 60)
 
     Puma.stubs(:stats_hash).returns({worker_status: [], booted_workers: 0})
