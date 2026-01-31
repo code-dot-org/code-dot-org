@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {forwardRef, useRef, MutableRefObject} from 'react';
+import {forwardRef, useRef, type MutableRefObject} from 'react';
 
 import TextToSpeech from '@code-dot-org/audio/textToSpeech';
 

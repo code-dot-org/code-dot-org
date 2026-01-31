@@ -1,7 +1,7 @@
 import type {FunctionComponent} from 'react';
 import {useState} from 'react';
 
-import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import ExtraLinksModal from '../../components/ExtraLinksModal';
 import {useExtraLinks} from '../../hooks/useExtraLinks';

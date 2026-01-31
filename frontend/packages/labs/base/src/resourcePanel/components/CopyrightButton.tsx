@@ -1,7 +1,7 @@
 import type {FunctionComponent} from 'react';
 import {useMemo, useState} from 'react';
 
-import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import CopyrightDialog from '../../components/CopyrightDialog';
 

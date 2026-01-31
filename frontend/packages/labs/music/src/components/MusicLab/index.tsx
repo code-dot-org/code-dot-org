@@ -22,8 +22,6 @@ import Timeline from '../Timeline';
 import HeaderButtons from '../HeaderButtons';
 import PackDialog from '../PackDialog';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
-import '@code-dot-org/lab/resourcePanel/index.css';
-import '@code-dot-org/lab/index.css';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import {BlocklyProvider} from '@code-dot-org/blockly-workspace/contexts';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';

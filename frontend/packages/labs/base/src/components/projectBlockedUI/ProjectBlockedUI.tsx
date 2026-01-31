@@ -4,8 +4,8 @@ import {useState} from 'react';
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Markdown from '@code-dot-org/markdown';
 
-import LabRegistry from '@lab-base/LabRegistry';
-import {useAppSelector} from '@lab-base/redux/store';
+import LabRegistry from '../../LabRegistry';
+import {useAppSelector} from '../../redux/store';
 
 import moduleStyles from './projectBlockedUI.module.scss';
 

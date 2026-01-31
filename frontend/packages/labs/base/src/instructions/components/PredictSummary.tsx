@@ -1,5 +1,5 @@
 import type {FunctionComponent} from 'react';
-import {useEffect, useState} from 'react';
+import {useEffect, useReducer} from 'react';
 
 import {getSectionSummary} from '@code-dot-org/api/userLevels';
 import {LinkButton} from '@code-dot-org/component-library/button';
@@ -10,6 +10,32 @@ import {useAppSelector} from '../../redux/store';
 import moduleStyles from './predict-summary.module.scss';
 
 const SUMMARY_PATH = '/summary';
+
+type SummaryState = {
+  responseCount: number | null;
+  numStudents: number | null;
+};
+
+type SummaryAction =
+  | {type: 'reset'}
+  | {type: 'loaded'; responseCount: number; numStudents: number};
+
+const initialState: SummaryState = {responseCount: null, numStudents: null};
+
+function summaryReducer(
+  _state: SummaryState,
+  action: SummaryAction,
+): SummaryState {
+  switch (action.type) {
+    case 'reset':
+      return initialState;
+    case 'loaded':
+      return {
+        responseCount: action.responseCount,
+        numStudents: action.numStudents,
+      };
+  }
+}
 
 const PredictSummary: FunctionComponent = () => {
   // If viewing the page as Participant, be sure to rewrite the link URL
@@ -23,32 +49,33 @@ const PredictSummary: FunctionComponent = () => {
     state => state.teacherSections.selectedSectionId,
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const [responseCount, setResponseCount] = useState<number | null>(null);
-  const [numStudents, setNumStudents] = useState<number | null>(null);
+  const [{responseCount, numStudents}, dispatch] = useReducer(
+    summaryReducer,
+    initialState,
+  );
 
   useEffect(() => {
     if (currentSectionId && currentLevelId) {
+      dispatch({type: 'reset'});
       try {
         getSectionSummary(currentSectionId, currentLevelId).then(response => {
           if (response?.value) {
-            setResponseCount(response.value.response_count);
-            setNumStudents(response.value.num_students);
+            dispatch({
+              type: 'loaded',
+              responseCount: response.value.response_count,
+              numStudents: response.value.num_students,
+            });
           } else {
-            resetSummary();
+            dispatch({type: 'reset'});
           }
         });
       } catch {
-        resetSummary();
+        dispatch({type: 'reset'});
       }
     } else {
-      resetSummary();
+      dispatch({type: 'reset'});
     }
   }, [currentSectionId, currentLevelId]);
-
-  const resetSummary = () => {
-    setResponseCount(null);
-    setNumStudents(null);
-  };
 
   return (
     <div className={moduleStyles.predictSummaryContainer}>

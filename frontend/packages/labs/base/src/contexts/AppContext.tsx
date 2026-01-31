@@ -3,7 +3,7 @@ import {useState, createContext, useContext} from 'react';
 
 import type {ProjectManager} from '@code-dot-org/projects';
 
-import type {LabProps, LevelProperties} from '@lab-base/types';
+import type {LabProps, LevelProperties} from '../types';
 
 /**
  * Describes the current lab application we are viewing.

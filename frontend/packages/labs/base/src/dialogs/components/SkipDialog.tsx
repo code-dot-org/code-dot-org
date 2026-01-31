@@ -1,6 +1,6 @@
 import type {FunctionComponent} from 'react';
 
-import GenericDialog, {GenericDialogProps} from './GenericDialog';
+import GenericDialog, {type GenericDialogProps} from './GenericDialog';
 
 export type SkipDialogProps = GenericDialogProps & {
   handleConfirm?: () => void;

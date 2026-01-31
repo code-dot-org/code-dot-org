@@ -1,7 +1,7 @@
 import type {FunctionComponent, ReactNode} from 'react';
 
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
-import {Theme} from '@code-dot-org/component-library/common/contexts';
+import {Button, type ButtonProps} from '@code-dot-org/component-library/button';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import styles from './styles.module.scss';

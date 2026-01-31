@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type {FunctionComponent, ReactNode} from 'react';
 
 import {
-  TooltipProps,
+  type TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 

@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useEffect, useReducer} from 'react';
 
 import {HttpClient} from '@code-dot-org/api';
 import {progressActions} from '@code-dot-org/progress/redux';
@@ -6,7 +6,7 @@ import {progressActions} from '@code-dot-org/progress/redux';
 import {PERMISSIONS} from '../constants';
 import LabRegistry from '../LabRegistry';
 import {useAppSelector} from '../redux/store';
-import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
+import type {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
 
 const {getCurrentScriptLevelId} = progressActions;
 
@@ -56,11 +56,30 @@ async function fetchExtraLinksData(
   };
 }
 
+type FetchState = {
+  isLoading: boolean;
+  data: ExtraLinksData | null;
+};
+
+type FetchAction =
+  | {type: 'fetch'}
+  | {type: 'success'; data: ExtraLinksData}
+  | {type: 'error'};
+
+function fetchReducer(state: FetchState, action: FetchAction): FetchState {
+  switch (action.type) {
+    case 'fetch':
+      return {...state, isLoading: true};
+    case 'success':
+      return {isLoading: false, data: action.data};
+    case 'error':
+      return {...state, isLoading: false};
+  }
+}
+
 export const useExtraLinks = (levelId: number) => {
-  const [isExtraLinksLoading, setIsLoading] = useState(false);
-  const [extraLinksData, setExtraLinksData] = useState<ExtraLinksData | null>(
-    null,
-  );
+  const [{isLoading: isExtraLinksLoading, data: extraLinksData}, dispatch] =
+    useReducer(fetchReducer, {isLoading: false, data: null});
 
   const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
@@ -71,7 +90,8 @@ export const useExtraLinks = (levelId: number) => {
   const permissions = useAppSelector(state => state.lab.permissions);
 
   useEffect(() => {
-    setIsLoading(true);
+    dispatch({type: 'fetch'});
+
     const abortController = new AbortController();
     fetchExtraLinksData(
       permissions,
@@ -82,8 +102,7 @@ export const useExtraLinks = (levelId: number) => {
     )
       .then(data => {
         if (!abortController.signal.aborted) {
-          setExtraLinksData(data);
-          setIsLoading(false);
+          dispatch({type: 'success', data});
         }
       })
       .catch(e => {
@@ -98,7 +117,7 @@ export const useExtraLinks = (levelId: number) => {
             message: e.message,
           },
         );
-        setIsLoading(false);
+        dispatch({type: 'error'});
       });
 
     return () => abortController.abort();

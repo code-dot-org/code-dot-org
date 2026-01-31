@@ -3,7 +3,7 @@ import {
   useState,
   useCallback,
   useContext,
-  PropsWithChildren,
+  type PropsWithChildren,
 } from 'react';
 
 import type {
@@ -11,8 +11,8 @@ import type {
   DialogCloseActionType,
   DialogCloseFunctionType,
   DialogClosePromiseReturnType,
-} from '@lab-base/dialogs';
-import {getDeferredPromise, DeferredPromiseObject} from '@lab-base/utils';
+} from '../dialogs';
+import {getDeferredPromise, type DeferredPromiseObject} from '../utils';
 
 import type {DialogTypeType, AnyDialogType} from '../dialogs/types';
 

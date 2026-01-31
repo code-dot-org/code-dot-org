@@ -1,6 +1,6 @@
 import type {FunctionComponent} from 'react';
 
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
+import {Button, type ButtonProps} from '@code-dot-org/component-library/button';
 
 import continueOrFinishLesson from '../../progress/continueOrFinishLesson';
 import {useAppDispatch} from '../../redux/store';

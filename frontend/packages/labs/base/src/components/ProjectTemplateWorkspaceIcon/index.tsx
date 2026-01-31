@@ -1,6 +1,6 @@
 import type {FunctionComponent} from 'react';
 
-import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
+import type {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 

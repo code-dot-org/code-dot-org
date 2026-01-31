@@ -5,11 +5,12 @@ import {
   getEnvironmentFromHostname,
   getDashboardApiUrl,
 } from '@code-dot-org/core';
+import {progressActions} from '@code-dot-org/progress/redux';
 
 import {setPageError} from '../redux/labSlice';
 import {useAppDispatch, useAppSelector} from '../redux/store';
 import {LevelPropertiesMapValidator} from '../responseValidators';
-import {LevelPropertiesMap} from '../types';
+import type {LevelPropertiesMap} from '../types';
 
 async function loadLevelProperties(path: string) {
   const response = await HttpClient.fetchJson<LevelPropertiesMap>(
@@ -29,28 +30,47 @@ export function useLoadLevelProperties() {
   const [propertiesMap, setPropertiesMap] = useState<LevelPropertiesMap>();
   const host = getDashboardApiUrl(getEnvironmentFromHostname());
 
+  const standaloneProjectType = useAppSelector(
+    state => state.progress.standaloneProjectType,
+  );
+
   const path = useAppSelector(({progress}) => {
-    const {scriptName, currentLevelId, lessons, currentLessonId} = progress;
+    const {
+      scriptName,
+      currentLevelId,
+      standaloneProjectType,
+      lessons,
+      currentLessonId,
+    } = progress;
     const lessonPosition = lessons?.find(
       lesson => lesson.id === currentLessonId,
     )?.relativePosition;
+    if (standaloneProjectType) {
+      return `${host}/projects/${standaloneProjectType}/level_properties`;
+    }
     if (scriptName && lessonPosition) {
       return `${host}/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
     }
     if (currentLevelId) {
       return `${host}/levels/${currentLevelId}/level_properties`;
     }
-    // TODO: Standalone project levels
-    const projectType = '';
-    if (projectType) {
-      return `${host}/projects/${projectType}/level_properties`;
-    }
   });
 
   useEffect(() => {
     if (path) {
       loadLevelProperties(path)
-        .then(setPropertiesMap)
+        .then(propertiesMap => {
+          setPropertiesMap(propertiesMap);
+
+          // If this is a standalone project, set the current level
+          if (standaloneProjectType) {
+            dispatch(
+              progressActions.setCurrentLevelId(
+                parseInt(Object.keys(propertiesMap)[0]),
+              ),
+            );
+          }
+        })
         .catch(error => {
           dispatch(
             setPageError({
@@ -61,7 +81,7 @@ export function useLoadLevelProperties() {
           );
         });
     }
-  }, [dispatch, path]);
+  }, [standaloneProjectType, dispatch, path]);
 
   return propertiesMap;
 }

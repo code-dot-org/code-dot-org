@@ -4,10 +4,13 @@ import {useRef} from 'react';
 
 import {queryParams} from '@code-dot-org/api';
 import TextToSpeech from '@code-dot-org/audio/textToSpeech';
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {
+  type Theme,
+  useTheme,
+} from '@code-dot-org/component-library/common/contexts';
 
 import InstructorsOnly from '../../components/InstructorsOnly';
-import {LevelProperties} from '../../types';
+import type {LevelProperties} from '../../types';
 
 import MainInstructionsContent from './MainInstructionsContent';
 import NavigationArea from './NavigationArea';

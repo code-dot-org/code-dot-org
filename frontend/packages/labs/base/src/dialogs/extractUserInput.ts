@@ -1,4 +1,4 @@
-import {DialogClosePromiseReturnType} from '@lab-base/dialogs';
+import type {DialogClosePromiseReturnType} from '../dialogs';
 
 // given a promise returned from DialogControlProvider's showDialog({type : DialogType.GenericPrompt}), will return the input
 // that was typed in by the user.

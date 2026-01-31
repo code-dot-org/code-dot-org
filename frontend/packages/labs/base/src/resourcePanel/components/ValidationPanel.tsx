@@ -1,6 +1,6 @@
 import type {FunctionComponent} from 'react';
 
-import {ValidationSettings} from '../../instructions/components/Instructions';
+import type {ValidationSettings} from '../../instructions/components/Instructions';
 import ValidationButton from '../../instructions/components/ValidationButton';
 import {
   resourcePanelValidationTableElementId,

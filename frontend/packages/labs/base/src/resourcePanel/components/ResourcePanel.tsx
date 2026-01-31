@@ -20,7 +20,7 @@ import {useExtraLinksButton} from '../../contexts/ExtraLinksButtonContext';
 import usePanelPosition from '../../hooks/usePanelPosition';
 import ForTeachersOnly from '../../instructions/components/ForTeachersOnly';
 import Instructions, {
-  InstructionsProps,
+  type InstructionsProps,
 } from '../../instructions/components/Instructions';
 import NavigationArea from '../../instructions/components/NavigationArea';
 import {
@@ -30,7 +30,7 @@ import {
 } from '../../redux/labSlice';
 import {setIsStandaloneCollapsed} from '../../redux/labViewSlice';
 import {useAppSelector, useAppDispatch} from '../../redux/store';
-import {ProjectSources} from '../../types';
+import type {ProjectSources} from '../../types';
 import {sendLabAnalyticsEvent} from '../../utils/analyticsReporterHelper';
 //import {useRubric} from '@code-dot-org/rubrics/contexts';
 import {
@@ -129,7 +129,7 @@ export type ResourcePanelProps = InstructionsProps & {
 const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   className,
   headerClassName,
-  hiddenContextCallback,
+  //hiddenContextCallback,
   rightHeaderContent,
   settings,
   versionHistoryProps,
@@ -174,8 +174,8 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
   const hasValidationConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions,
   );
-  const levelName = instructionsProps.levelProperties.name;
-  const channelId = useAppSelector(state => state.lab.channel?.id);
+  //const levelName = instructionsProps.levelProperties.name;
+  //const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
@@ -277,7 +277,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     levelProperties,
     instructionsProps,
     hasValidationConditions,
-    hiddenContextCallback,
+    //hiddenContextCallback,
     //aiTutorVisible,
     isPermanentlyReadOnly,
     viewAsUserId,
@@ -287,8 +287,8 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     isUserTeacher,
     hideInstructionsNavigation,
     //aiTutorMultimodalEnabled,
-    levelName,
-    channelId,
+    //levelName,
+    //channelId,
     //aiTutorChatButtonData,
     //aiTutorSystemPromptName,
     //aiTutorResponseSchemaSettings,
@@ -320,18 +320,27 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     }
   }, [isProjectLevel, hasTabs, dispatch]);
 
-  useEffect(() => {
-    if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
-      setCurrentTab(getTypedKeys(availableTabs)[0]);
-    } else if (currentTab && !(currentTab in availableTabs)) {
-      setCurrentTab(getTypedKeys(availableTabs)[0]);
-    }
-  }, [currentTab, availableTabs]);
+  const updateTab = useCallback(
+    (tab: TabsType | undefined) => {
+      if (tab === undefined && Object.keys(availableTabs).length > 0) {
+        setCurrentTab(getTypedKeys(availableTabs)[0]);
+      } else if (tab && !(tab in availableTabs)) {
+        setCurrentTab(getTypedKeys(availableTabs)[0]);
+      }
+    },
+    [availableTabs, setCurrentTab],
+  );
 
-  useEffect(() => {
-    // Reset current tab to instructions when switching levels or viewAsUserId.
+  useEffect(() => {}, [currentTab, availableTabs]);
+
+  // Reset current tab to instructions when switching levels or viewAsUserId.
+  const [prevLevelId, setPrevLevelId] = useState(levelId);
+  const [prevViewAsUserId, setPrevViewAsUserId] = useState(viewAsUserId);
+  if (levelId !== prevLevelId || viewAsUserId !== prevViewAsUserId) {
     setCurrentTab(Tabs.Instructions);
-  }, [levelId, viewAsUserId]);
+    setPrevLevelId(levelId);
+    setPrevViewAsUserId(viewAsUserId);
+  }
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
   useEffect(() => {
@@ -425,7 +434,7 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
-            setCurrentTab={setCurrentTab}
+            setCurrentTab={updateTab}
             onValidate={instructionsProps.validationSettings?.onValidate}
           />
         )}

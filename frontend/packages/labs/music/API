@@ -1,0 +1,13 @@
+Blockly API and Interpreter
+
+generator: {
+  extraCode = 'foo';
+  return Interpreter<API>.emit((emit) => {
+    if (__context == 'when_run') {
+      Sequencer.newSequence();
+      Sequencer.startFunctionContext('when_run');
+      Sequencer.playSequential();
+      emit(extraCode);
+    }
+  });
+}

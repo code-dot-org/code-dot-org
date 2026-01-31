@@ -1,8 +1,8 @@
 import type {FunctionComponent} from 'react';
 
 import GenericDialog, {
-  GenericDialogProps,
-  GenericDialogBodyProps,
+  type GenericDialogProps,
+  type GenericDialogBodyProps,
 } from './GenericDialog';
 
 export type GenericAlertDialogProps = Pick<GenericDialogProps, 'title'> &

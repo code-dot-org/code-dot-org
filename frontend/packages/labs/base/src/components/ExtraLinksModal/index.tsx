@@ -6,10 +6,10 @@ import Dialog from '@code-dot-org/component-library/dialog';
 import {StrongText} from '@code-dot-org/component-library/typography';
 import {useCSRF} from '@code-dot-org/user/contexts';
 
-import {FeaturedProjectStatus} from '@lab-base/constants';
-import {useApp} from '@lab-base/contexts';
+import {FeaturedProjectStatus} from '../../constants';
+import {useApp} from '../../contexts';
 
-import {
+import type {
   ExtraLinksLevelData,
   ExtraLinksProjectData,
   ParentLevelPathLink,
@@ -195,7 +195,6 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
                   <li key={link.url}>
                     {link.url ? (
                       // This menu is only used by internal users, who have explicitly requested access keys.
-                      // eslint-disable-next-line jsx-a11y/no-access-key
                       <a href={link.url} accessKey={link.access_key}>
                         {link.text}
                       </a>

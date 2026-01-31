@@ -1,6 +1,6 @@
 import type {FunctionComponent, ReactNode} from 'react';
 
-import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import Dialog from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';

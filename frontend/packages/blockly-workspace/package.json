@@ -1,6 +1,7 @@
 {
   "name": "@code-dot-org/blockly-workspace",
   "version": "0.1.0",
+  "private": true,
   "keywords": [
     "blockly",
     "code.org"

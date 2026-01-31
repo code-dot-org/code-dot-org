@@ -1,7 +1,7 @@
 import type {ResponseValidator} from '@code-dot-org/api';
 import {ValidationError} from '@code-dot-org/api';
 
-import {LevelProperties, LevelPropertiesMap} from './types';
+import type {LevelProperties, LevelPropertiesMap} from './types';
 
 function missingFieldError(fieldName: string) {
   return new ValidationError('Missing required field: ' + fieldName);

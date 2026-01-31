@@ -3,13 +3,13 @@ import type {FunctionComponent} from 'react';
 
 import {
   SimpleDropdown,
-  SimpleDropdownProps,
+  type SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
-import {useDialogControl} from '@lab-base/contexts';
+import {useDialogControl} from '../../contexts';
 
-import GenericDialog, {GenericDialogProps} from './GenericDialog';
+import GenericDialog, {type GenericDialogProps} from './GenericDialog';
 
 export type GenericDropdownProps = Pick<GenericDialogProps, 'title'> & {
   dropdownLabel: string;

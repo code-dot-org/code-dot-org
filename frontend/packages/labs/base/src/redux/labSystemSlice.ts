@@ -1,4 +1,4 @@
-import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+import {type PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 // This slice represents the state of the system lifecycle, including loading the
 // coding environment and if the user's program is running. Individual labs are

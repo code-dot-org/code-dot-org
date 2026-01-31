@@ -133,7 +133,8 @@ const Controls = ({
             disableRun && moduleStyles.disabled,
           )}
           onClick={() => {
-            dispatch(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (dispatch as any)(
               predictLevelActions.submitPredictResponse({appType: 'music'}),
             );
             setPlaying(!isPlaying);

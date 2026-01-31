@@ -11,7 +11,7 @@ import {
 
 import {useDialogControl} from '../../contexts/DialogControlContext';
 import {useEnterKeyboardTrap, useEscapeKeyboardTrap} from '../../hooks';
-import {DialogCloseFunctionType, DialogCloseActionType} from '../types';
+import type {DialogCloseFunctionType, DialogCloseActionType} from '../types';
 
 export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
