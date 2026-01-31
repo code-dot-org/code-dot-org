@@ -11,7 +11,7 @@ import type {
   MultiFileSource,
   ProjectSources,
   ProjectVersion,
-} from '@code-dot-org/api/sources';
+} from '@code-dot-org/core/api';
 
 import LabRegistry from '../LabRegistry';
 import type {AppDispatch, RootState} from '../redux/store';
@@ -187,7 +187,7 @@ const projectSlice = createSlice({
       state.projectSources = {
         ...state.projectSources,
         source: action.payload,
-      } as ProjectSources<MultiFileSource> as unknown as ProjectSources;
+      };
     },
     setProjectSourceLevelId(state, action: PayloadAction<number | undefined>) {
       state.projectSourceLevelId = action.payload;

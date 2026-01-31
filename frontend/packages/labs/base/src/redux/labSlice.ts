@@ -1,6 +1,12 @@
 import {createSlice, createAction, createAsyncThunk} from '@reduxjs/toolkit';
 import type {PayloadAction, AnyAction, Slice} from '@reduxjs/toolkit';
 
+import type {
+  ApiClient,
+  AppName,
+  Channel,
+  ProjectSources,
+} from '@code-dot-org/core/api';
 import {
   HttpClient,
   NetworkError,
@@ -9,14 +15,12 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@code-dot-org/api';
-import type {AppName} from '@code-dot-org/api/projects';
 import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@code-dot-org/api/projects';
 import {getPredictResponse} from '@code-dot-org/api/userLevels';
 import type {Validation, ValidationState} from '@code-dot-org/progress';
 import {getInitialValidationState, LevelStatus} from '@code-dot-org/progress';
 import {progressActions} from '@code-dot-org/progress/redux';
 import {ProjectManagerFactory, ProjectManager} from '@code-dot-org/projects';
-import type {Channel, ProjectSources} from '@code-dot-org/projects';
 import {projectActions} from '@code-dot-org/projects/redux';
 import {CourseRoles} from '@code-dot-org/user';
 import {currentUserActions} from '@code-dot-org/user/redux';
@@ -188,6 +192,7 @@ const slice: Slice<LabState> = createSlice({
 export const setUpWithLevel = createAsyncThunk<
   void,
   {
+    apiClient: ApiClient;
     levelId: number;
     scriptId?: number;
     levelProperties: LevelProperties;
@@ -275,12 +280,14 @@ export const setUpWithLevel = createAsyncThunk<
     // create a project manager for the given level and script id.
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
+          payload.apiClient,
           payload.channelId,
           levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView,
           LabRegistry.metricsReporter,
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
+          payload.apiClient,
           payload.levelId,
           levelProperties.isProjectLevel || false,
           payload.userId,

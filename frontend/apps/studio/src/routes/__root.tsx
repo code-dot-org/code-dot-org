@@ -10,10 +10,13 @@ import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {ApiClientProvider, bootstrapApiClient} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 import Bootstrap from '@/modules/bootstrap';
+
+const api = bootstrapApiClient();
 
 const SIGNED_OUT_MENU_ITEMS = [
   {label: 'Learn', href: '/students'},
@@ -40,7 +43,9 @@ function RootLayout() {
           component="main"
           sx={{flex: 1, display: 'flex', flexDirection: 'column'}}
         >
-          <Outlet />
+          <ApiClientProvider client={api}>
+            <Outlet />
+          </ApiClientProvider>
         </Box>
         <StudioFooter />
         <TanStackRouterDevtools />

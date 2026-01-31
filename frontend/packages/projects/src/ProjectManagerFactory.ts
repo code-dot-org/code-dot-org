@@ -4,6 +4,7 @@
  * for the given type.
  */
 
+import type {ApiClient} from '@code-dot-org/core/api';
 import {metricsReporter as metricsReporterSingleton} from '@code-dot-org/metrics';
 import type {MetricsReporter} from '@code-dot-org/metrics';
 
@@ -20,12 +21,14 @@ export default class ProjectManagerFactory {
    * @returns A project manager
    */
   static getProjectManager(
+    apiClient: ApiClient,
     projectId: string,
     isStandaloneProjectLevel: boolean,
     isShareView: boolean = false,
     metricsReporter: MetricsReporter = metricsReporterSingleton,
   ): ProjectManager {
     return new ProjectManager({
+      apiClient,
       sourcesStore: new SourcesStore(),
       channelsStore: new ChannelsStore(),
       channelId: projectId,
@@ -46,6 +49,7 @@ export default class ProjectManagerFactory {
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
+    apiClient: ApiClient,
     levelId: number,
     isStandaloneProjectLevel: boolean,
     userId?: number,
@@ -74,6 +78,7 @@ export default class ProjectManagerFactory {
       throw new Error('Could not load channel for level');
     }
     return new ProjectManager({
+      apiClient,
       sourcesStore: new SourcesStore(),
       channelsStore,
       channelId,

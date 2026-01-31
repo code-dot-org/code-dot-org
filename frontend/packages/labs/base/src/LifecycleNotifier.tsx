@@ -1,4 +1,4 @@
-import type {Channel, ProjectSources} from '@code-dot-org/projects';
+import type {Channel, ProjectSources} from '@code-dot-org/core/api';
 
 import type {LevelProperties} from './types';
 

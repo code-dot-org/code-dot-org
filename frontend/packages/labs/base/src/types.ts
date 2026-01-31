@@ -23,7 +23,7 @@ import type {
   ProjectSources,
   ProjectVersion,
   Channel,
-} from '@code-dot-org/projects';
+} from '@code-dot-org/core/api';
 
 export type {ProjectVersion, ProjectSources};
 

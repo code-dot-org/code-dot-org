@@ -11,19 +11,24 @@
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
 import {ValidationError, NetworkError} from '@code-dot-org/api';
-import type {Channel, ProjectAndSources} from '@code-dot-org/api/channels';
 import {
   getProjectThumbnailUrl,
   updateProjectThumbnail,
 } from '@code-dot-org/api/files';
-import type {AppName} from '@code-dot-org/api/projects';
-import type {ProjectSources} from '@code-dot-org/api/sources';
+import type {
+  ApiClient,
+  AppName,
+  Channel,
+  ProjectAndSources,
+  ProjectSources,
+} from '@code-dot-org/core/api';
 import {MetricsReporter} from '@code-dot-org/metrics';
 
 import {ChannelsStore} from './ChannelsStore';
 import {SourcesStore} from './SourcesStore';
 
 export default class ProjectManager {
+  private readonly apiClient: ApiClient;
   private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
   private readonly channelsStore: ChannelsStore;
@@ -60,6 +65,7 @@ export default class ProjectManager {
   private isStandaloneProjectLevel: boolean = false;
 
   constructor({
+    apiClient,
     sourcesStore,
     channelsStore,
     channelId,
@@ -68,6 +74,7 @@ export default class ProjectManager {
     isShareView = false,
     metricsReporter,
   }: {
+    apiClient: ApiClient;
     sourcesStore: SourcesStore;
     channelsStore: ChannelsStore;
     channelId: string;
@@ -76,6 +83,7 @@ export default class ProjectManager {
     isStandaloneProjectLevel: boolean;
     isShareView?: boolean;
   }) {
+    this.apiClient = apiClient;
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
@@ -140,7 +148,11 @@ export default class ProjectManager {
     // Flush the enqueued save, if it exists, before restoring.
     await this.flushSave();
     try {
-      await this.sourcesStore.restore(this.channelId, versionId);
+      await this.sourcesStore.restore(
+        this.apiClient,
+        this.channelId,
+        versionId,
+      );
     } catch (e) {
       throw new Error('Error restoring sources', {cause: e});
     }
@@ -161,7 +173,7 @@ export default class ProjectManager {
     let sources: ProjectSources | undefined;
     try {
       sources = await this.sourcesStore.load(
-        appName,
+        this.apiClient,
         this.channelId,
         versionId,
       );
@@ -335,7 +347,8 @@ export default class ProjectManager {
   }
 
   async getVersionList(includeComments: boolean = false) {
-    return await this.sourcesStore.getVersionList(
+    return this.sourcesStore.getVersionList(
+      this.apiClient,
       this.channelId,
       includeComments,
     );
@@ -474,6 +487,7 @@ export default class ProjectManager {
     if (this.sourcesToSave && sourceChanged) {
       try {
         await this.sourcesStore.save(
+          this.apiClient,
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,

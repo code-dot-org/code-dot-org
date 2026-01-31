@@ -1,87 +1,46 @@
-import {ApiError, type Transport, type RequestOptions} from './types';
+import type {Transport, RequestOptions, ApiResponse} from './types';
 import {toReplayKey} from './url';
 import {idbGet, idbPut} from './simpleIdb';
-
-export type ReplayMode = 'replay' | 'record' | 'auto';
-
-export type ReplayTransportOptions = {
-  mode: ReplayMode;
-  namespace?: string; // separate recordings by app/lab/env
-  backingTransport: Transport; // typically httpTransport
-  /** If true, only record successful (2xx) responses */
-  recordOnlySuccess?: boolean;
-};
 
 type Recording = {
   key: string;
   createdAt: number;
-  request: RequestOptions;
-  response: unknown;
-  // optionally store status/headers if you care later
+  req: RequestOptions;
+  resp: ApiResponse<unknown>;
 };
 
-export function createReplayTransport(opts: ReplayTransportOptions): Transport {
-  const {
-    mode,
-    namespace = 'default',
-    backingTransport,
-    recordOnlySuccess = true,
-  } = opts;
+export function createReplayTransport(opts: {
+  mode: 'replay' | 'record' | 'auto';
+  namespace?: string;
+  backingTransport: Transport;
+}): Transport {
+  const {mode, namespace = 'default', backingTransport} = opts;
 
   return {
-    async request<TResponse>(req: RequestOptions): Promise<TResponse> {
+    async requestWithMeta<T>(req: RequestOptions): Promise<ApiResponse<T>> {
       const key = `${namespace}:${toReplayKey(req)}`;
 
-      if (mode === 'replay') {
-        const rec = await idbGet<Recording>(key);
-        if (!rec) {
-          throw new ApiError(
-            `No replay recording for ${key}`,
-            404,
-            req.url,
-            req.method,
-          );
-        }
-        return rec.response as TResponse;
+      if (mode !== 'record') {
+        const existing = await idbGet<Recording>(key);
+        if (existing) return existing.resp as ApiResponse<T>;
+        if (mode === 'replay')
+          throw new Error(`No replay recording for ${key}`);
       }
 
-      if (mode === 'auto') {
-        const rec = await idbGet<Recording>(key);
-        if (rec) return rec.response as TResponse;
-        // fallthrough to record
-      }
+      // record (or auto miss)
+      const resp = await backingTransport.requestWithMeta<T>(req);
+      await idbPut<Recording>(key, {
+        key,
+        createdAt: Date.now(),
+        req,
+        resp: resp as ApiResponse<unknown>,
+      });
+      return resp;
+    },
 
-      // record mode or auto-miss: hit backing transport
-      try {
-        const response = await backingTransport.request<TResponse>(req);
-
-        // record it
-        await idbPut<Recording>(key, {
-          key,
-          createdAt: Date.now(),
-          request: req,
-          response,
-        });
-
-        return response;
-      } catch (e) {
-        if (!recordOnlySuccess) {
-          await idbPut<Recording>(key, {
-            key,
-            createdAt: Date.now(),
-            request: req,
-            response: {__error: serializeError(e)},
-          });
-        }
-        throw e;
-      }
+    async request<T>(req: RequestOptions): Promise<T> {
+      const {data} = await this.requestWithMeta<T>(req);
+      return data;
     },
   };
-}
-
-function serializeError(e: unknown): unknown {
-  if (e instanceof Error) {
-    return {name: e.name, message: e.message, stack: e.stack};
-  }
-  return e;
 }
