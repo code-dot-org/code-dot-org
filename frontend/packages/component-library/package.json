@@ -422,6 +422,7 @@
     "@storybook/addon-styling-webpack": "^2.0.0",
     "@storybook/addon-themes": "^9.0.18",
     "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/react-vite": "^10.1.7",
     "@storybook/react-webpack5": "^9.0.18",
     "@storybook/test-runner": "^0.23.0",
     "@swc/core": "^1.9.3",

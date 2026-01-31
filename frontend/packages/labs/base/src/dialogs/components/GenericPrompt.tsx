@@ -1,16 +1,16 @@
 import debounce from 'lodash/debounce';
 import type {FunctionComponent} from 'react';
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useMemo, useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
-import {useDialogControl} from '@lab-base/contexts';
+import {useDialogControl} from '../../contexts';
 
 import GenericDialog, {
   defaultGetButtonCallback,
-  GenericDialogProps,
-  GetButtonCallbackArgs,
+  type GenericDialogProps,
+  type GetButtonCallbackArgs,
 } from './GenericDialog';
 
 const DEBOUNCE_TIME_OUT = 300;
@@ -73,9 +73,16 @@ const GenericPrompt: FunctionComponent<GenericPromptProps> = ({
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
   const prompt = (promiseArgs ?? (value || '')) as string;
-  const [errorMessage, setErrorMessage] = useState<string | undefined>(
-    undefined,
+  const [errorMessage, setErrorMessage] = useState<string | undefined>(() =>
+    validateInput(value || ''),
   );
+
+  // Populate promiseArgs with the initial value on mount.
+  const [initialized, setInitialized] = useState(false);
+  if (!initialized) {
+    setPromiseArgs(value || '');
+    setInitialized(true);
+  }
 
   const debouncedErrorHandler = useMemo(() => {
     return debounce((newInput: string) => {
@@ -106,10 +113,6 @@ const GenericPrompt: FunctionComponent<GenericPromptProps> = ({
       debouncedErrorHandler,
     ],
   );
-
-  // fire the handleInputChange callback once upon loading. This'll populate the given prompt into the promiseArgs
-  // as well as calling validateInput on it to confirm it's acceptable.'
-  useEffect(() => handleInputChange(prompt), []);
 
   // we're going to hand in a custom buttonCallback getter to the generic dialog. We don't need to worry about memoizing this,
   // since it'll get memoized up in the parent component. When the user clicks the confirm button, we're just going to re-validate

@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 
 import {EVENTS} from '@code-dot-org/metrics';
 
-import {ValidationSettings} from '../../instructions/components/Instructions';
+import type {ValidationSettings} from '../../instructions/components/Instructions';
 import {sendLabAnalyticsEvent} from '../../utils/analyticsReporterHelper';
 import {tryGetLocalStorage, trySetLocalStorage} from '../../utils/localStorage';
 import {
@@ -40,7 +40,13 @@ const ValidationTourSteps: FunctionComponent<ValidationTourStepsProps> = ({
   setCurrentTab,
   onValidate,
 }) => {
-  const [validationTourEnabled, setValidationTourEnabled] = useState(false);
+  const [validationTourEnabled, setValidationTourEnabled] = useState(
+    () =>
+      validationSettings &&
+      hasValidationConditions &&
+      validationTourSeen !== 'yes' &&
+      onboardingTourSeen === 'yes', // If user hasn't seen both tours, show onboarding tour first.
+  );
   const [validationTourStep, setValidationTourStep] = useState(0);
   const validationTabEnum = Tabs.Validation;
   const validationTourSeen = tryGetLocalStorage(VALIDATION_TOUR_SEEN, 'no');
@@ -66,22 +72,6 @@ const ValidationTourSteps: FunctionComponent<ValidationTourStepsProps> = ({
     false,
     false,
     true,
-  ]);
-
-  useEffect(() => {
-    const shouldShowValidationTour =
-      validationSettings &&
-      hasValidationConditions &&
-      validationTourSeen !== 'yes' &&
-      onboardingTourSeen === 'yes'; // If user hasn't seen both tours, show onboarding tour first.
-    if (shouldShowValidationTour) {
-      setValidationTourEnabled(true);
-    }
-  }, [
-    validationSettings,
-    hasValidationConditions,
-    validationTourSeen,
-    onboardingTourSeen,
   ]);
 
   // Add event listeners for validation tour progression.

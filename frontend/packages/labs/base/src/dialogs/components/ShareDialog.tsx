@@ -22,8 +22,8 @@ import {
   TEACHER_FEEDBACK_LINK,
   STUDENT_FEEDBACK_LINK,
   ProjectSubmissionStatus,
-} from '@lab-base/constants';
-import {useShare} from '@lab-base/contexts';
+} from '../../constants';
+import {useShare} from '../../contexts';
 
 import {useAppSelector} from '../../redux/store';
 

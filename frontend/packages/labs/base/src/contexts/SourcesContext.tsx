@@ -21,7 +21,7 @@ import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import {labActions} from '../redux';
 import {useAppSelector} from '../redux/store';
-import {LevelProperties, LabProps} from '../types';
+import type {LevelProperties, LabProps} from '../types';
 import {getInitialSources as defaultGetInitialSources} from '../utils';
 
 export type MessageType = 'text' | 'blocks' | 'custom';

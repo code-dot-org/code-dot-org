@@ -27,9 +27,9 @@ import type {
 
 export type {ProjectVersion, ProjectSources};
 
-import type {LevelPredictSettings} from '@lab-base/levelEditors';
+import type {LevelPredictSettings} from './levelEditors';
 
-export {Theme, ExemplarSettings};
+export type {Theme, ExemplarSettings};
 
 /// ------ USER APP OPTIONS ------ ///
 

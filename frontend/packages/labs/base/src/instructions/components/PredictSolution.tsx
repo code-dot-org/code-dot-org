@@ -6,7 +6,7 @@ import {
 } from '@code-dot-org/component-library/typography';
 
 import {
-  LevelPredictSettings,
+  type LevelPredictSettings,
   PredictQuestionType,
 } from '../../levelEditors/types';
 

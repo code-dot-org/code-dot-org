@@ -47,6 +47,10 @@ const channelId = window.location.pathname.match(
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App levelId={'62733'} channelId={channelId} isLoading={false} />
+    <App
+      standaloneProjectType="music"
+      channelId={channelId}
+      isLoading={false}
+    />
   </StrictMode>,
 );

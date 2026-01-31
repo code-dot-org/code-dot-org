@@ -1,6 +1,7 @@
 {
   "name": "@code-dot-org/lab",
   "version": "0.1.0",
+  "private": true,
   "keywords": [
     "lab",
     "code.org"
@@ -19,74 +20,71 @@
     "**/*.css",
     "**/*.scss"
   ],
+  "type": "module",
   "exports": {
-    "./package.json": "./package.json",
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./dialogs": {
-      "types": "./dist/types/dialogs/index.d.ts",
-      "import": "./dist/esm/dialogs/index.mjs",
-      "require": "./dist/cjs/dialogs/index.js"
+      "types": "./dist/dialogs/index.d.ts",
+      "import": "./dist/dialogs/index.mjs",
+      "require": "./dist/dialogs/index.js"
     },
     "./contexts": {
-      "types": "./dist/types/contexts/index.d.ts",
-      "import": "./dist/esm/contexts/index.mjs",
-      "require": "./dist/cjs/contexts/index.js"
+      "types": "./dist/contexts/index.d.ts",
+      "import": "./dist/contexts/index.mjs",
+      "require": "./dist/contexts/index.js"
     },
     "./instructions": {
-      "types": "./dist/types/instructions/index.d.ts",
-      "import": "./dist/esm/instructions/index.mjs",
-      "require": "./dist/cjs/instructions/index.js"
+      "types": "./dist/instructions/index.d.ts",
+      "import": "./dist/instructions/index.mjs",
+      "require": "./dist/instructions/index.js"
     },
     "./components": {
-      "types": "./dist/types/components/index.d.ts",
-      "import": "./dist/esm/components/index.mjs",
-      "require": "./dist/cjs/components/index.js"
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
     },
     "./resourcePanel": {
-      "types": "./dist/types/resourcePanel/index.d.ts",
-      "import": "./dist/esm/resourcePanel/index.mjs",
-      "require": "./dist/cjs/resourcePanel/index.js"
+      "types": "./dist/resourcePanel/index.d.ts",
+      "import": "./dist/resourcePanel/index.mjs",
+      "require": "./dist/resourcePanel/index.js"
     },
-    "./resourcePanel/index.css": "./dist/esm/resourcePanel/index.css",
     "./hooks": {
-      "types": "./dist/types/hooks/index.d.ts",
-      "import": "./dist/esm/hooks/index.mjs",
-      "require": "./dist/cjs/hooks/index.js"
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js"
     },
     "./redux": {
-      "types": "./dist/types/redux/index.d.ts",
-      "import": "./dist/esm/redux/index.mjs",
-      "require": "./dist/cjs/redux/index.js"
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.js"
     },
     "./redux/labSlice": {
-      "types": "./dist/types/redux/labSlice.d.ts"
+      "types": "./dist/redux/labSlice.d.ts"
     },
     "./redux/labViewSlice": {
-      "types": "./dist/types/redux/labViewSlice.d.ts"
+      "types": "./dist/redux/labViewSlice.d.ts"
     },
     "./redux/labSystemSlice": {
-      "types": "./dist/types/redux/labSystemSlice.d.ts"
+      "types": "./dist/redux/labSystemSlice.d.ts"
     },
     "./redux/labProjectSlice": {
-      "types": "./dist/types/redux/labProjectSlice.d.ts"
+      "types": "./dist/redux/labProjectSlice.d.ts"
     },
     "./redux/predictLevelSlice": {
-      "types": "./dist/types/redux/predictLevelSlice.d.ts"
+      "types": "./dist/redux/predictLevelSlice.d.ts"
     },
-    "./styles/variables.scss": "./src/components/layout/variables.scss",
-    "./index.css": "./dist/esm/index.css"
+    "./styles/variables.scss": "./src/components/layout/variables.scss"
   },
-  "main": "src/index.ts",
   "files": [
     "dist",
     "src/components/layout/variables.scss"
   ],
   "scripts": {
-    "build": "tsup --clean",
+    "build": "vite build && tsc --noEmit",
     "clean": "rimraf dist .turbo",
     "dev": "tsup --watch",
     "lint": "eslint .",
@@ -115,6 +113,7 @@
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
     "@code-dot-org/metrics": "workspace:*",
+    "@code-dot-org/progress": "workspace:*",
     "@code-dot-org/projects": "workspace:*",
     "@code-dot-org/redux": "workspace:*",
     "@code-dot-org/teacher-dashboard": "workspace:*",
@@ -172,16 +171,18 @@
     "tsc-alias": "^1.8.11",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.15.0"
+    "typescript-eslint": "^8.15.0",
+    "vite": "^7.2.4",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-externalize-deps": "^0.10.0",
+    "vitest": "^4.0.17"
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
     "react": ">=16",
     "react-dom": ">=16",
     "swiper": "^11.0.5"
-  },
-  "engines": {
-    "node": ">=20"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

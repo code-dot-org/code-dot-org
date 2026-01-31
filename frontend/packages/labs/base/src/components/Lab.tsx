@@ -13,16 +13,30 @@ import {useAppDispatch} from '../redux/store';
 import Loading from './Loading';
 
 interface LabWrapperProps extends PropsWithChildren {
-  levelId: string;
+  levelId?: string;
+  standaloneProjectType?: string;
 }
 
-const LabWrapper = ({levelId, children}: LabWrapperProps) => {
+const LabWrapper = ({
+  levelId,
+  standaloneProjectType,
+  children,
+}: LabWrapperProps) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     // Set the level id if it is known
-    dispatch(progressActions.setCurrentLevelId(parseInt(levelId)));
-  }, []);
+    if (levelId) {
+      dispatch(progressActions.setCurrentLevelId(parseInt(levelId)));
+    }
+  }, [dispatch, levelId]);
+
+  useEffect(() => {
+    // Set the level id if it is known
+    if (standaloneProjectType) {
+      dispatch(progressActions.setStandaloneProjectType(standaloneProjectType));
+    }
+  }, [dispatch, standaloneProjectType]);
 
   return children;
 };
@@ -31,7 +45,9 @@ export interface LabProps extends PropsWithChildren {
   /** Whether or not the lab considers itself loading */
   isLoading: boolean;
   /** The level id */
-  levelId: string;
+  levelId?: string;
+  /** The standalone project type, if not a particular level */
+  standaloneProjectType?: string;
   /** Optionally, a channel id for a standalone level */
   channelId?: string;
 }
@@ -40,7 +56,12 @@ export interface LabProps extends PropsWithChildren {
  * A wrapper for any lab that will connect it to the appropriate data sources
  * and contexts.
  */
-const Lab = ({isLoading, levelId, children}: LabProps) => {
+const Lab = ({
+  isLoading,
+  levelId,
+  standaloneProjectType,
+  children,
+}: LabProps) => {
   // Ensure FontAwesome icons are available for all labs
   useEffect(() => {
     injectFontAwesome();
@@ -57,7 +78,12 @@ const Lab = ({isLoading, levelId, children}: LabProps) => {
             <ExtraLinksButtonProvider>
               <LevelPropertiesProvider>
                 {/* The actual lab content */}
-                <LabWrapper levelId={levelId}>{children}</LabWrapper>
+                <LabWrapper
+                  levelId={levelId}
+                  standaloneProjectType={standaloneProjectType}
+                >
+                  {children}
+                </LabWrapper>
               </LevelPropertiesProvider>
             </ExtraLinksButtonProvider>
           </ThemeProvider>

@@ -4,14 +4,14 @@ import type {FunctionComponent, RefObject} from 'react';
 import {
   Button,
   LinkButton,
-  ButtonProps,
-  LinkButtonProps,
+  type ButtonProps,
+  type LinkButtonProps,
 } from '@code-dot-org/component-library/button';
-import {Theme} from '@code-dot-org/component-library/common/contexts';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import {
-  TooltipProps,
+  type TooltipProps,
   WithTooltip,
-  WithTooltipHandle,
+  type WithTooltipHandle,
 } from '@code-dot-org/component-library/tooltip';
 
 export interface IconButtonWithTooltipProps {

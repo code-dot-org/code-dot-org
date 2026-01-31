@@ -1,4 +1,4 @@
-import {AppName} from '@code-dot-org/projects';
+import type {AppName} from '@code-dot-org/projects';
 
 export const TEACHER_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';

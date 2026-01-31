@@ -55,6 +55,7 @@ export interface UnitProgress {
 export interface ProgressState {
   currentLevelId?: number;
   currentLessonId?: number;
+  standaloneProjectType?: string;
   deeperLearningCourse?: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons?: Lesson[];
@@ -93,6 +94,7 @@ export interface ProgressState {
 
 export interface InitProgressPayload {
   currentLevelId?: number;
+  standaloneProjectType?: string;
   deeperLearningCourse: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons: Lesson[];

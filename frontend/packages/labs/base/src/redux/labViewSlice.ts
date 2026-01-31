@@ -1,4 +1,8 @@
-import {PayloadAction, createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {
+  type PayloadAction,
+  createSlice,
+  createAsyncThunk,
+} from '@reduxjs/toolkit';
 
 import type {AppName} from '@code-dot-org/projects';
 

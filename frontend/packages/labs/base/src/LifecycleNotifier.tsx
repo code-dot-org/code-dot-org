@@ -1,6 +1,6 @@
 import type {Channel, ProjectSources} from '@code-dot-org/projects';
 
-import {LevelProperties} from './types';
+import type {LevelProperties} from './types';
 
 export const LifecycleEvent = {
   LevelChangeRequested: 0,

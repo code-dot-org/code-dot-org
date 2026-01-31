@@ -2,7 +2,7 @@ import {RuleType} from 'markdown-to-jsx';
 import type {FunctionComponent} from 'react';
 
 import Link from '@code-dot-org/component-library/link';
-import Markdown, {MarkdownProps} from '@code-dot-org/markdown';
+import Markdown, {type MarkdownProps} from '@code-dot-org/markdown';
 
 export interface EnhancedMarkdownProps extends MarkdownProps {
   onInstructionsTextClick?: (id: string) => void;

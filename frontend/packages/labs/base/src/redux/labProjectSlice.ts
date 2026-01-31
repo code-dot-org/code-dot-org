@@ -1,12 +1,12 @@
 import {
-  PayloadAction,
-  ThunkAction,
+  type PayloadAction,
+  type ThunkAction,
   createAsyncThunk,
   createSlice,
 } from '@reduxjs/toolkit';
-import {AnyAction} from 'redux';
+import type {AnyAction} from 'redux';
 
-import {
+import type {
   LabConfig,
   MultiFileSource,
   ProjectSources,

@@ -1,5 +1,5 @@
 import {
-  PayloadAction,
+  type PayloadAction,
   createAsyncThunk,
   createSelector,
   createSlice,

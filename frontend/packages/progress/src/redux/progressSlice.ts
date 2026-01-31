@@ -271,6 +271,7 @@ const _progressSlice = createSlice({
         state.currentLessonId ||
         (lessons.length === 1 ? lessons[0].id : undefined);
       state.currentLevelId ||= action.payload.currentLevelId;
+      state.standaloneProjectType ||= action.payload.standaloneProjectType;
       state.deeperLearningCourse = action.payload.deeperLearningCourse;
       state.saveAnswersBeforeNavigation =
         action.payload.saveAnswersBeforeNavigation;
@@ -296,6 +297,9 @@ const _progressSlice = createSlice({
     },
     setCurrentLevelId(state, action: PayloadAction<number>) {
       state.currentLevelId = action.payload;
+    },
+    setStandaloneProjectType(state, action: PayloadAction<string>) {
+      state.standaloneProjectType = action.payload;
     },
     setScriptProgress(
       state,
@@ -952,6 +956,7 @@ export const queryUserProgress =
 export const {
   initProgress,
   setCurrentLevelId,
+  setStandaloneProjectType,
   setScriptProgress,
   clearResults,
   useDbProgress,

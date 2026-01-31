@@ -4,7 +4,10 @@ import {useEffect, useMemo, useRef} from 'react';
 
 import {queryParams} from '@code-dot-org/api';
 import TextToSpeech from '@code-dot-org/audio/textToSpeech';
-import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {
+  type Theme,
+  useTheme,
+} from '@code-dot-org/component-library/common/contexts';
 import {LevelStatus} from '@code-dot-org/progress';
 import {progressActions} from '@code-dot-org/progress/redux';
 
@@ -12,7 +15,7 @@ import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 import {isPredictResponseSubmitted} from '../../redux/predictLevelSlice';
 import {useAppSelector} from '../../redux/store';
 import {resourcePanelNavigationButtonElementId} from '../../resourcePanel/constants';
-import {LevelProperties} from '../../types';
+import type {LevelProperties} from '../../types';
 
 import ContinueButton from './ContinueButton';
 import SubmitButton from './SubmitButton';
