@@ -10,7 +10,6 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {ValidationError, NetworkError} from '@code-dot-org/api';
 import {
   getProjectThumbnailUrl,
   updateProjectThumbnail,
@@ -22,6 +21,10 @@ import type {
   ProjectAndSources,
   ProjectSources,
   QueryClient,
+} from '@code-dot-org/core/api';
+import {
+  ApiError,
+  ValidationError,
 } from '@code-dot-org/core/api';
 import {MetricsReporter} from '@code-dot-org/metrics';
 
@@ -120,18 +123,18 @@ export default class ProjectManager {
 
     let channel: Channel;
     try {
-      channel = await this.channelsStore.load(this.channelId);
+      channel = await this.channelsStore.load(this.apiClient, this.queryClient, this.channelId);
     } catch (error) {
       throw new Error('Error loading channel', {cause: error});
     }
 
     this.lastChannel = channel;
     await this.initializeForceNewVersionState();
-    const abuseScore = await this.channelsStore.getAbuseScore(channel);
+    const abuseScore = await this.channelsStore.getAbuseScore(this.apiClient, this.queryClient, channel);
     const sharingDisabled =
-      await this.channelsStore.getSharingDisabled(channel);
+      await this.channelsStore.getSharingDisabled(this.apiClient, this.queryClient, channel);
     const isTeacherOfProjectOwner =
-      await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+      await this.channelsStore.getIsTeacherOfProjectOwner(this.apiClient, this.queryClient, channel);
     return {
       sources,
       channel,
@@ -194,8 +197,8 @@ export default class ProjectManager {
           `Error validating sources (${error.message}). Defaulting to empty sources.`,
         );
       } else if (
-        error instanceof NetworkError &&
-        (error as NetworkError).response.status === 404
+        error instanceof ApiError &&
+        (error as ApiError).status === 404
       ) {
         // This is expected if the project is new. Default to empty sources.
       } else {
@@ -558,12 +561,12 @@ export default class ProjectManager {
 
       let channelResponse;
       try {
-        channelResponse = await this.channelsStore.save(this.channelToSave);
+        channelResponse = await this.channelsStore.save(this.apiClient, this.queryClient, this.channelToSave);
       } catch (error) {
         this.onSaveFail('Error saving channel', error as Error);
         return;
       }
-      const channelSaveResponse = await channelResponse.json();
+      const channelSaveResponse = channelResponse;
       this.lastChannel = channelSaveResponse as Channel;
     }
 
@@ -708,9 +711,9 @@ export default class ProjectManager {
       return;
     }
     if (publish) {
-      return this.channelsStore.publish(this.lastChannel);
+      return this.channelsStore.publish(this.apiClient, this.queryClient, this.lastChannel);
     } else {
-      return this.channelsStore.unpublish(this.lastChannel);
+      return this.channelsStore.unpublish(this.apiClient, this.queryClient, this.lastChannel);
     }
   }
 

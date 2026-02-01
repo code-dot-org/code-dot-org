@@ -1733,7 +1733,6 @@ __metadata:
   dependencies:
     "@code-dot-org/lint-config": "workspace:*"
     "@tanstack/react-query": "npm:^5.90.20"
-    "@tanstack/react-query-devtools": "npm:^5.91.3"
     "@types/node": "npm:^20"
     "@types/tldjs": "npm:^2"
     eslint: "npm:^9.39.1"
@@ -2223,7 +2222,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/projects@workspace:packages/projects"
   dependencies:
-    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/user": "workspace:*"
@@ -2371,6 +2369,7 @@ __metadata:
     "@emotion/styled": "npm:^11.14.1"
     "@mui/material": "npm:^7.3.4"
     "@tanstack/react-devtools": "npm:^0.9.4"
+    "@tanstack/react-query-devtools": "npm:^5.91.3"
     "@tanstack/react-router": "npm:^1.139.14"
     "@tanstack/react-router-devtools": "npm:^1.139.14"
     "@tanstack/router-plugin": "npm:^1.139.14"
