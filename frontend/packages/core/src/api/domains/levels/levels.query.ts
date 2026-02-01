@@ -18,7 +18,7 @@ export function useLevelProperties(
 
   return useQuery({
     queryKey: levelsKeys.properties(
-      levelId,
+      standaloneProjectType ? undefined : levelId,
       standaloneProjectType,
       scriptName,
       lessonPosition,
