@@ -20,6 +20,13 @@ Within each domain, the relevant content is split across different files:
 - `*.query.ts` - React hooks to interact with API endpoints as needed.
 - `*.schemata.ts` - Each schema corresponding to what we expect our responses to be.
 - `*.types.ts` - The response types based on the schemata.
+- `*.kinds.ts` - When the types involved can be extended, this holds a registry of such schemata.
+
+For the `*.kinds.ts` files, these contain a registry of different extensions to the data
+model so that these might be validated on their case-by-case basis. This is rare, but two examples
+might be the Level metadata, which differs per level type and Source metadata where a lab might
+want to validate the structure of the content within the transport so that assumptions it makes
+on the shape of that data are correct to the lab type.
 
 ## Creating the Transport
 
