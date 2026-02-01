@@ -21,6 +21,7 @@ import type {
   Channel,
   ProjectAndSources,
   ProjectSources,
+  QueryClient,
 } from '@code-dot-org/core/api';
 import {MetricsReporter} from '@code-dot-org/metrics';
 
@@ -29,6 +30,7 @@ import {SourcesStore} from './SourcesStore';
 
 export default class ProjectManager {
   private readonly apiClient: ApiClient;
+  private readonly queryClient: QueryClient;
   private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
   private readonly channelsStore: ChannelsStore;
@@ -66,6 +68,7 @@ export default class ProjectManager {
 
   constructor({
     apiClient,
+    queryClient,
     sourcesStore,
     channelsStore,
     channelId,
@@ -75,6 +78,7 @@ export default class ProjectManager {
     metricsReporter,
   }: {
     apiClient: ApiClient;
+    queryClient: QueryClient;
     sourcesStore: SourcesStore;
     channelsStore: ChannelsStore;
     channelId: string;
@@ -84,6 +88,7 @@ export default class ProjectManager {
     isShareView?: boolean;
   }) {
     this.apiClient = apiClient;
+    this.queryClient = queryClient;
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
@@ -150,6 +155,7 @@ export default class ProjectManager {
     try {
       await this.sourcesStore.restore(
         this.apiClient,
+        this.queryClient,
         this.channelId,
         versionId,
       );
@@ -174,6 +180,7 @@ export default class ProjectManager {
     try {
       sources = await this.sourcesStore.load(
         this.apiClient,
+        this.queryClient,
         this.channelId,
         versionId,
       );
@@ -349,6 +356,7 @@ export default class ProjectManager {
   async getVersionList(includeComments: boolean = false) {
     return this.sourcesStore.getVersionList(
       this.apiClient,
+      this.queryClient,
       this.channelId,
       includeComments,
     );
@@ -488,6 +496,7 @@ export default class ProjectManager {
       try {
         await this.sourcesStore.save(
           this.apiClient,
+          this.queryClient,
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,

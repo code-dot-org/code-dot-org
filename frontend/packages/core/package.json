@@ -42,7 +42,6 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
     "@tanstack/react-query": "^5.90.20",
-    "@tanstack/react-query-devtools": "^5.91.3",
     "tldjs": "^2.3.2",
     "zod": "^4.3.6"
   },

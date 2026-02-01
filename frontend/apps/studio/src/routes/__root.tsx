@@ -5,12 +5,18 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
 import {ThemeProvider} from '@mui/material';
+import {TanStackDevtools} from '@tanstack/react-devtools';
+import {ReactQueryDevtoolsPanel} from '@tanstack/react-query-devtools';
 import {createRootRoute, Outlet} from '@tanstack/react-router';
-import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
+import {TanStackRouterDevtoolsPanel} from '@tanstack/react-router-devtools';
 
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
-import {ApiClientProvider, bootstrapApiClient} from '@code-dot-org/core/api';
+import {
+  ApiClientProvider,
+  bootstrapApiClient,
+  QueryClientProvider,
+} from '@code-dot-org/core/api';
 
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
 import Bootstrap from '@/modules/bootstrap';
@@ -27,6 +33,8 @@ const SIGNED_OUT_MENU_ITEMS = [
   {label: 'About', href: '/about'},
 ];
 
+console.log('root layout', import.meta);
+
 function RootLayout() {
   return (
     <ThemeProvider theme={CdoTheme}>
@@ -37,10 +45,23 @@ function RootLayout() {
         menuItems={SIGNED_OUT_MENU_ITEMS}
       />
 
-      <ApiClientProvider client={api}>
-        <Outlet />
-      </ApiClientProvider>
-      <TanStackRouterDevtools />
+      <QueryClientProvider>
+        <ApiClientProvider client={api}>
+          <Outlet />
+        </ApiClientProvider>
+        <TanStackDevtools
+          plugins={[
+            {
+              name: 'TanStack Query',
+              render: <ReactQueryDevtoolsPanel />,
+            },
+            {
+              name: 'TanStack Router',
+              render: <TanStackRouterDevtoolsPanel />,
+            },
+          ]}
+        />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }

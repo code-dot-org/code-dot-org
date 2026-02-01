@@ -25,6 +25,8 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.4",
+    "@tanstack/react-devtools": "^0.9.4",
+    "@tanstack/react-query-devtools": "^5.91.3",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
     "react": "^19.1.1",

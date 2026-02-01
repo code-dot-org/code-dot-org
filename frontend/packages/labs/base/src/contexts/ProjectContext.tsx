@@ -1,7 +1,7 @@
 import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useEffect} from 'react';
 
-import {useApiClient} from '@code-dot-org/core/api';
+import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
@@ -48,6 +48,7 @@ export const ProjectProvider = ({
   children,
 }: ProjectProviderProps) => {
   const apiClient = useApiClient();
+  const queryClient = useQueryClient();
   const levelProperties = useMaybeLevelProperties();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const userId = useAppSelector(
@@ -93,6 +94,7 @@ export const ProjectProvider = ({
         ? dispatch(
             labActions.setUpWithLevel({
               apiClient,
+              queryClient,
               levelId: currentLevelId,
               userId,
               scriptId,
