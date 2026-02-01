@@ -1,25 +1,10 @@
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 
-import {HttpClient} from '@code-dot-org/api';
-import {
-  getEnvironmentFromHostname,
-  getDashboardApiUrl,
-} from '@code-dot-org/core';
+import {useLevelProperties, useApiClient} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import {setPageError} from '../redux/labSlice';
 import {useAppDispatch, useAppSelector} from '../redux/store';
-import {LevelPropertiesMapValidator} from '../responseValidators';
-import type {LevelPropertiesMap} from '../types';
-
-async function loadLevelProperties(path: string) {
-  const response = await HttpClient.fetchJson<LevelPropertiesMap>(
-    path,
-    undefined,
-    LevelPropertiesMapValidator,
-  );
-  return response.value;
-}
 
 /**
  * Loads all level properties for all levels in the current lesson,
@@ -27,61 +12,45 @@ async function loadLevelProperties(path: string) {
  */
 export function useLoadLevelProperties() {
   const dispatch = useAppDispatch();
-  const [propertiesMap, setPropertiesMap] = useState<LevelPropertiesMap>();
-  const host = getDashboardApiUrl(getEnvironmentFromHostname());
 
-  const standaloneProjectType = useAppSelector(
-    state => state.progress.standaloneProjectType,
-  );
+  const {
+    scriptName,
+    currentLevelId,
+    standaloneProjectType,
+    lessons,
+    currentLessonId,
+  } = useAppSelector(({progress}) => progress);
 
-  const path = useAppSelector(({progress}) => {
-    const {
-      scriptName,
-      currentLevelId,
-      standaloneProjectType,
-      lessons,
-      currentLessonId,
-    } = progress;
-    const lessonPosition = lessons?.find(
-      lesson => lesson.id === currentLessonId,
-    )?.relativePosition;
-    if (standaloneProjectType) {
-      return `${host}/projects/${standaloneProjectType}/level_properties`;
-    }
-    if (scriptName && lessonPosition) {
-      return `${host}/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
-    }
-    if (currentLevelId) {
-      return `${host}/levels/${currentLevelId}/level_properties`;
-    }
+  const lessonPosition = lessons?.find(
+    lesson => lesson.id === currentLessonId,
+  )?.relativePosition;
+
+  const api = useApiClient();
+  const {data: mapData, error} = useLevelProperties(api, {
+    levelId: currentLevelId,
+    standaloneProjectType,
+    scriptName,
+    lessonPosition,
   });
 
   useEffect(() => {
-    if (path) {
-      loadLevelProperties(path)
-        .then(propertiesMap => {
-          setPropertiesMap(propertiesMap);
-
-          // If this is a standalone project, set the current level
-          if (standaloneProjectType) {
-            dispatch(
-              progressActions.setCurrentLevelId(
-                parseInt(Object.keys(propertiesMap)[0]),
-              ),
-            );
-          }
-        })
-        .catch(error => {
-          dispatch(
-            setPageError({
-              errorMessage: 'Error loading level properties',
-              error,
-              details: {path},
-            }),
-          );
-        });
+    if (mapData) {
+      // If this is a standalone project, set the current level
+      if (standaloneProjectType) {
+        dispatch(
+          progressActions.setCurrentLevelId(parseInt(Object.keys(mapData)[0])),
+        );
+      }
+    } else if (error) {
+      dispatch(
+        setPageError({
+          errorMessage: 'Error loading level properties',
+          error,
+          details: {},
+        }),
+      );
     }
-  }, [standaloneProjectType, dispatch, path]);
+  }, [standaloneProjectType, dispatch, error, mapData]);
 
-  return propertiesMap;
+  return mapData;
 }

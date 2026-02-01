@@ -18,7 +18,7 @@ export const ChannelSchema = z.object({
   updatedAt: z.string(),
   hidden: z.boolean().optional(),
   thumbnailUrl: z.string().optional(),
-  frozen: z.boolean().optional(),
+  frozen: z.boolean().nullable(),
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.

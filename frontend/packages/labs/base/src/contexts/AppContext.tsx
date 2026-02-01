@@ -1,9 +1,10 @@
 import type {FunctionComponent, PropsWithChildren} from 'react';
 import {useState, createContext, useContext} from 'react';
 
+import type {LevelProperties} from '@code-dot-org/core/api';
 import type {ProjectManager} from '@code-dot-org/projects';
 
-import type {LabProps, LevelProperties} from '../types';
+import type {LabProps} from '../types';
 
 /**
  * Describes the current lab application we are viewing.

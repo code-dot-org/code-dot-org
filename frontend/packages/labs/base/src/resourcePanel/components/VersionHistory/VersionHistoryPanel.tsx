@@ -289,7 +289,7 @@ const VersionHistoryPanel: FunctionComponent<VersionHistoryPanelProps> = ({
       setVersionLoading(true);
       setVersionLoadError(false);
       projectManager
-        .restoreSources(LabRegistry.appName, selectedVersion)
+        .restoreSources(selectedVersion)
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));

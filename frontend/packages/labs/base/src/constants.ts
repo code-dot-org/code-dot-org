@@ -1,4 +1,4 @@
-import type {AppName} from '@code-dot-org/projects';
+import type {ProjectType} from '@code-dot-org/core/api';
 
 export const TEACHER_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
@@ -7,9 +7,9 @@ export const STUDENT_FEEDBACK_LINK =
 
 export const SOURCE_FILE = 'main.json';
 
-export const BLOCKLY_LABS: AppName[] = ['dance', 'music'];
+export const BLOCKLY_LABS: ProjectType[] = ['dance', 'music'];
 
-export const LABS_WITH_JSON_SOURCES: AppName[] = ['aichat'];
+export const LABS_WITH_JSON_SOURCES: ProjectType[] = ['aichat'];
 
 export const MAIN_PYTHON_FILE = 'main.py';
 
@@ -28,7 +28,11 @@ export const EDIT_EXEMPLAR = 'edit_exemplar';
 export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
 
 // Text-based labs that are currently supported by lab2.
-export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
+export const TEXT_BASED_LABS: ProjectType[] = [
+  'aichat',
+  'pythonlab',
+  'weblab2',
+];
 
 // Banner messages to show LevelBuilders when in start mode. These don't need to be translated because LevelBuilder is English only.
 export const WARNING_BANNER_MESSAGES = {

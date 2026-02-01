@@ -52,6 +52,29 @@ export const ProjectTypes = [
   'basketball',
 ] as const;
 
+type ProjectType = (typeof ProjectTypes)[number];
+
+export const OPEN_ENDED_LEGACY_PROJECT_TYPES: ProjectType[] = [
+  'applab',
+  'gamelab',
+  'weblab',
+  'javalab',
+  'spritelab',
+  'poetry',
+  'playlab',
+] as const;
+
+export const OPEN_ENDED_LAB2_PROJECT_TYPES: ProjectType[] = [
+  'pythonlab',
+  'weblab2',
+] as const;
+
+export const OPEN_ENDED_PROJECTS_YOUNG_AGE: ProjectType[] = [
+  'spritelab',
+  'poetry',
+  'playlab',
+] as const;
+
 export const ProjectChannelForLevelSchema = z.object({
   channel: z.string().optional(),
   started: z.boolean().optional(),

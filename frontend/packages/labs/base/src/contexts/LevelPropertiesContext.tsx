@@ -3,7 +3,7 @@ import {createContext, useContext, useMemo} from 'react';
 
 import {useLoadLevelProperties} from '../hooks/useLoadLevelProperties';
 import {useAppSelector} from '../redux/store';
-import type {LevelProperties, LevelPropertiesMap} from '../types';
+import type {LevelProperties, LevelPropertiesMap} from '@code-dot-org/core/api';
 
 /**
  * Describes the state of the level properties metadata across the lesson.

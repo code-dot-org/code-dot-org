@@ -3,10 +3,11 @@ import {useCallback} from 'react';
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
+import type {LevelProperties} from '@code-dot-org/core/api';
 import type {ProjectSources, Source} from '@code-dot-org/projects';
 
 import {TOOLBOX_BLOCKS} from '../constants';
-import type {LevelProperties, BlocklyLevelProperties} from '../types';
+import type {BlocklyLevelProperties} from '../types';
 import {getInitialBlocklySources} from '../utils';
 
 import LabWithSources from './LabWithSources';

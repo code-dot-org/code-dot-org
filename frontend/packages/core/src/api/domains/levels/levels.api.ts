@@ -1,37 +1,64 @@
 import type {Transport} from '../../transports/types';
 import {getLevelKindSchema} from './levels.kinds';
-import {LevelPropertiesBaseSchema} from './levels.schemata';
-import type {LevelProperties} from './levels.types';
+import type {LevelPropertiesMap, LevelProperties} from './levels.types';
+import {LevelPropertiesMapSchema} from './levels.schemata';
 
 export function createLevelsApi(transport: Transport) {
   return {
     /**
-     * GET /levels/:id/level_properties
+     * GET /levels/:levelId/level_properties
+     * GET /projects/:standaloneProjectType/level_properties
+     * GET /s/:scriptName/lessons/:lessonPosition/level_properties
      */
-    async getLevelProperties<
-      T extends Record<string, unknown> = Record<string, unknown>,
-    >({id}: {id: number}): Promise<LevelProperties<T>> {
+    async getLevelProperties(params: {
+      levelId?: number;
+      standaloneProjectType?: string;
+      scriptName?: string;
+      lessonPosition?: number;
+    }): Promise<LevelPropertiesMap> {
+      const {levelId, standaloneProjectType, scriptName, lessonPosition} =
+        params;
+
       const raw = await transport.request<unknown>({
         method: 'GET',
-        url: `/levels/${id}/level_properties`,
+        url: standaloneProjectType
+          ? `/projects/${standaloneProjectType}/level_properties`
+          : scriptName && lessonPosition
+            ? `/s/${scriptName}/lessons/${lessonPosition}/level_properties`
+            : levelId
+              ? `/levels/${levelId}/level_properties`
+              : '',
+      });
+
+      // Transform 'true'/'false' into actual boolean values
+      Object.values(raw as LevelPropertiesMap).forEach(base => {
+        const simple = base as unknown as Record<string, string | boolean>;
+        Object.entries(simple).forEach(([key, value]) => {
+          if (value === 'true') {
+            simple[key] = true;
+          } else if (value === 'false') {
+            simple[key] = false;
+          }
+        });
       });
 
       // 1) validate base (and discover kind)
-      const base = LevelPropertiesBaseSchema.parse(raw);
+      const map = LevelPropertiesMapSchema.parse(raw);
 
-      // 2) validate extension if registered
-      const extSchema = getLevelKindSchema(base.appName);
-      if (!extSchema) {
-        // If the app kind is not registered, it is not validated past the base
-        // properties.
-        return base as LevelProperties<T>;
-      }
+      Object.entries(raw as LevelPropertiesMap).forEach(([key, base]) => {
+        // 2) validate extension if registered
+        const extSchema = getLevelKindSchema(base.appName);
+        if (extSchema) {
+          // If the app kind is registered, it is validated as well
+          // 3) parse extension and merge
+          const ext = extSchema.parse(base) as unknown as LevelProperties;
 
-      // 3) parse extension and merge
-      const ext = extSchema.parse(raw) as T;
+          // Merge (prefer extension fields if overlap)
+          map[key] = {...map[key], ...ext};
+        }
+      });
 
-      // Merge (prefer extension fields if overlap)
-      return {...base, ...ext};
+      return map;
     },
   };
 }

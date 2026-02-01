@@ -4,11 +4,7 @@
  * A ChannelsStore manages the loading and saving of channels.
  */
 
-import type {
-  ApiClient,
-  Channel,
-  QueryClient,
-} from '@code-dot-org/core/api';
+import type {ApiClient, Channel, QueryClient} from '@code-dot-org/core/api';
 import {channelsKeys, projectsKeys} from '@code-dot-org/core/api';
 
 import type {DefaultChannel} from './types';
@@ -16,7 +12,13 @@ import type {DefaultChannel} from './types';
 export class ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(api: ApiClient, query: QueryClient, levelId: number, scriptId?: number, userId?: number) {
+  loadForLevel(
+    api: ApiClient,
+    query: QueryClient,
+    levelId: number,
+    scriptId?: number,
+    userId?: number,
+  ) {
     return query.fetchQuery({
       queryKey: projectsKeys.channelForLevel({levelId, scriptId, userId}),
       queryFn: () =>
@@ -104,7 +106,11 @@ export class ChannelsStore {
     });
   }
 
-  getIsTeacherOfProjectOwner(api: ApiClient, query: QueryClient, channel: Channel) {
+  getIsTeacherOfProjectOwner(
+    api: ApiClient,
+    query: QueryClient,
+    channel: Channel,
+  ) {
     return query.fetchQuery({
       queryKey: channelsKeys.isTeacherOfProjectOwner(channel.id),
       queryFn: () =>

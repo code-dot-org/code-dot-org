@@ -4,7 +4,7 @@ import {
   createAsyncThunk,
 } from '@reduxjs/toolkit';
 
-import type {AppName} from '@code-dot-org/projects';
+import type {AppName} from '@code-dot-org/core/api';
 
 import type {FontSizeKey} from '../constants';
 import type {AppDispatch} from '../redux/store';

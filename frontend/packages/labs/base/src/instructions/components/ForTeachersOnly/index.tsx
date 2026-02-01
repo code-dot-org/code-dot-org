@@ -1,7 +1,8 @@
+import type {LevelProperties} from '@code-dot-org/core/api';
+
 import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
 
-import type {LevelProperties} from '../../../types';
 import PredictSolution from '../PredictSolution';
 import TeacherOnlyMarkdown from '../TeacherOnlyMarkdown';
 
