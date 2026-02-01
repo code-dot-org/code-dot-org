@@ -16,16 +16,12 @@ import {
 } from '@code-dot-org/api/files';
 import type {
   ApiClient,
-  AppName,
   Channel,
   ProjectAndSources,
   ProjectSources,
   QueryClient,
 } from '@code-dot-org/core/api';
-import {
-  ApiError,
-  ValidationError,
-} from '@code-dot-org/core/api';
+import {ApiError, ValidationError} from '@code-dot-org/core/api';
 import {MetricsReporter} from '@code-dot-org/metrics';
 
 import {ChannelsStore} from './ChannelsStore';
@@ -110,31 +106,41 @@ export default class ProjectManager {
   // Load the project from the sources and channels store.
   // If resetSource is true we return undefined for sources, otherwise we load the sources.
   // The lab itself handles undefined sources, generally by using the start sources instead.
-  async load(
-    appName: AppName,
-    resetSource?: boolean,
-  ): Promise<ProjectAndSources> {
+  async load(resetSource?: boolean): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = resetSource
-      ? undefined
-      : await this.loadAndStoreSources(appName);
+    const sources = resetSource ? undefined : await this.loadAndStoreSources();
 
     let channel: Channel;
     try {
-      channel = await this.channelsStore.load(this.apiClient, this.queryClient, this.channelId);
+      channel = await this.channelsStore.load(
+        this.apiClient,
+        this.queryClient,
+        this.channelId,
+      );
     } catch (error) {
       throw new Error('Error loading channel', {cause: error});
     }
 
     this.lastChannel = channel;
     await this.initializeForceNewVersionState();
-    const abuseScore = await this.channelsStore.getAbuseScore(this.apiClient, this.queryClient, channel);
-    const sharingDisabled =
-      await this.channelsStore.getSharingDisabled(this.apiClient, this.queryClient, channel);
+    const abuseScore = await this.channelsStore.getAbuseScore(
+      this.apiClient,
+      this.queryClient,
+      channel,
+    );
+    const sharingDisabled = await this.channelsStore.getSharingDisabled(
+      this.apiClient,
+      this.queryClient,
+      channel,
+    );
     const isTeacherOfProjectOwner =
-      await this.channelsStore.getIsTeacherOfProjectOwner(this.apiClient, this.queryClient, channel);
+      await this.channelsStore.getIsTeacherOfProjectOwner(
+        this.apiClient,
+        this.queryClient,
+        channel,
+      );
     return {
       sources,
       channel,
@@ -146,10 +152,7 @@ export default class ProjectManager {
 
   // Restore the given version of the project. This will call restore on the sources store
   // and then load and return the updated sources.
-  async restoreSources(
-    appName: AppName,
-    versionId: string,
-  ): Promise<ProjectSources | undefined> {
+  async restoreSources(versionId: string): Promise<ProjectSources | undefined> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('restore');
     }
@@ -167,18 +170,17 @@ export default class ProjectManager {
     }
     // Now that we've restored to the previous version, loading sources
     // will load the newly-restored version.
-    const sources = await this.loadAndStoreSources(appName);
+    const sources = await this.loadAndStoreSources();
     return sources;
   }
 
   /**
    * Load the sources for this project. If a versionId is provided, load that version, otherwise
    * load the latest version. The sources are not stored by the Project Manager.
-   * @param appName The lab name which will be used to validate the stored data.
    * @param versionId Optional version id to load. If not provided, the latest version is loaded.
    * @returns sources for the project.
    */
-  async loadSources(appName: AppName, versionId?: string) {
+  async loadSources(versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
       sources = await this.sourcesStore.load(
@@ -561,7 +563,11 @@ export default class ProjectManager {
 
       let channelResponse;
       try {
-        channelResponse = await this.channelsStore.save(this.apiClient, this.queryClient, this.channelToSave);
+        channelResponse = await this.channelsStore.save(
+          this.apiClient,
+          this.queryClient,
+          this.channelToSave,
+        );
       } catch (error) {
         this.onSaveFail('Error saving channel', error as Error);
         return;
@@ -711,9 +717,17 @@ export default class ProjectManager {
       return;
     }
     if (publish) {
-      return this.channelsStore.publish(this.apiClient, this.queryClient, this.lastChannel);
+      return this.channelsStore.publish(
+        this.apiClient,
+        this.queryClient,
+        this.lastChannel,
+      );
     } else {
-      return this.channelsStore.unpublish(this.apiClient, this.queryClient, this.lastChannel);
+      return this.channelsStore.unpublish(
+        this.apiClient,
+        this.queryClient,
+        this.lastChannel,
+      );
     }
   }
 
@@ -721,12 +735,11 @@ export default class ProjectManager {
    * Load the sources for the given version id, or the latest version if no version id is provided.
    * These sources are stored as lastSource, so any future changes to the sources will be compared
    * to these sources.
-   * @param appName The lab name to validate the loaded source data.
    * @param versionId Optional version id to load. If not provided, the latest version is loaded.
    * @returns sources for the project.
    */
-  private async loadAndStoreSources(appName: AppName, versionId?: string) {
-    const sources = await this.loadSources(appName, versionId);
+  private async loadAndStoreSources(versionId?: string) {
+    const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
     return sources;
   }

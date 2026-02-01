@@ -1,12 +1,12 @@
 import type {UnknownAction, ThunkAction, ThunkDispatch} from '@reduxjs/toolkit';
 
+import type {LevelProperties} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 // TODO: support the share button and dialog
 //import {shareLabProject} from '@cdo/apps/lab2/header/labHeaderShare';
 
 import type {RootState} from '../redux/store';
-import type {LevelProperties} from '../types';
 
 const {navigateToNextLevel, sendSuccessReport, nextLevelId} = progressActions;
 

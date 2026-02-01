@@ -8,6 +8,7 @@ import {
   type Theme,
   useTheme,
 } from '@code-dot-org/component-library/common/contexts';
+import type {LevelProperties} from '@code-dot-org/core/api';
 import {LevelStatus} from '@code-dot-org/progress';
 import {progressActions} from '@code-dot-org/progress/redux';
 
@@ -15,7 +16,6 @@ import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 import {isPredictResponseSubmitted} from '../../redux/predictLevelSlice';
 import {useAppSelector} from '../../redux/store';
 import {resourcePanelNavigationButtonElementId} from '../../resourcePanel/constants';
-import type {LevelProperties} from '../../types';
 
 import ContinueButton from './ContinueButton';
 import SubmitButton from './SubmitButton';

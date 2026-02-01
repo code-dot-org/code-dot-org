@@ -4,13 +4,10 @@ import {
   getAppOptionsViewingExemplar,
 } from '@code-dot-org/api';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
+import type {LevelProperties} from '@code-dot-org/core/api';
 
 import {START_SOURCES, TOOLBOX_BLOCKS} from '../constants';
-import type {
-  BlocklyLevelProperties,
-  LevelProperties,
-  ProjectSources,
-} from '../types';
+import type {BlocklyLevelProperties, ProjectSources} from '../types';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;

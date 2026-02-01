@@ -1,18 +1,33 @@
 import {useQuery, type UseQueryOptions} from '@tanstack/react-query';
 
-import type {LevelProperties} from './levels.types';
+import type {LevelPropertiesMap} from './levels.types';
 import {levelsKeys} from './levels.keys';
 import type {ApiClient} from '../../client/createApiClient';
 
 export function useLevelProperties(
   api: ApiClient,
-  levelId: number,
-  options?: Omit<UseQueryOptions<LevelProperties>, 'queryKey' | 'queryFn'>,
+  params: {
+    levelId?: number;
+    standaloneProjectType?: string;
+    scriptName?: string;
+    lessonPosition?: number;
+  },
+  options?: Omit<UseQueryOptions<LevelPropertiesMap>, 'queryKey' | 'queryFn'>,
 ) {
+  const {levelId, standaloneProjectType, scriptName, lessonPosition} = params;
+
   return useQuery({
-    queryKey: levelsKeys.properties(levelId),
-    queryFn: () => api.levels.getLevelProperties({id: levelId}),
-    enabled: Number.isFinite(levelId),
+    queryKey: levelsKeys.properties(
+      levelId,
+      standaloneProjectType,
+      scriptName,
+      lessonPosition,
+    ),
+    queryFn: () => api.levels.getLevelProperties(params),
+    enabled:
+      Number.isFinite(levelId) ||
+      !!standaloneProjectType ||
+      !!(scriptName || lessonPosition),
     ...options,
   });
 }

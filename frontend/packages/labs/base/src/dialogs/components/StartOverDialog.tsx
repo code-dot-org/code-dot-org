@@ -1,6 +1,6 @@
 import type {FunctionComponent} from 'react';
 
-import type {AppName} from '@code-dot-org/projects';
+import type {ProjectType} from '@code-dot-org/core/api';
 
 import {TEXT_BASED_LABS} from '../../constants';
 import {useApp} from '../../contexts/AppContext';
@@ -10,7 +10,7 @@ import GenericDialog, {type GenericDialogProps} from './GenericDialog';
 /**
  * Lab-specific messages for starting over.
  */
-const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
+const LAB_SPECIFIC_MESSAGES: {[appName in ProjectType]?: string} = {
   aichat:
     'This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.',
 };

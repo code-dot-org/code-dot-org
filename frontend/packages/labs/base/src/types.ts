@@ -7,11 +7,9 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
-import * as Blockly from 'blockly/core';
-
-import type {Level} from '@code-dot-org/api/models/levels';
 import type {Source} from '@code-dot-org/api/sources';
 import type {
+  Blockly,
   BlockDefinition,
   BlocklySerialization,
 } from '@code-dot-org/blockly-workspace';
@@ -19,10 +17,11 @@ import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {ExemplarSettings} from '@code-dot-org/progress';
 import type {
   AppName,
+  Channel,
   MultiFileSource,
   ProjectSources,
   ProjectVersion,
-  Channel,
+  LevelProperties,
 } from '@code-dot-org/core/api';
 
 export type {ProjectVersion, ProjectSources};
@@ -68,36 +67,6 @@ export interface BaseLabProperties {
   // Codebridge
   widgetView?: boolean;
 }
-
-/**
- * Labs may extend this type to add lab-specific properties.
- */
-export type LevelProperties<
-  T extends BaseLabProperties = BaseLabProperties,
-  U extends object = object,
-> = Level<T> & {
-  // Other level data
-  levelData: U;
-};
-
-export type BlocklyLevelProperties<
-  T extends BaseLabProperties = BaseLabProperties,
-  U extends object = object,
-> = LevelProperties<T, U> & {
-  toolboxDefinition?: Blockly.utils.toolbox.ToolboxInfo;
-  sharedBlocks?: BlockDefinition[];
-};
-
-export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
-
-export type StandaloneAppName =
-  | 'spritelab'
-  | 'story'
-  | 'science'
-  | 'poetry_hoc'
-  | 'poetry'
-  | 'time_capsule'
-  | 'dance';
 
 /// ------ VALIDATIONS ------ ///
 
@@ -174,5 +143,10 @@ export interface LabProps<
   isReadOnlyWorkspace?: boolean;
   channel?: Channel;
 }
+
+export type BlocklyLevelProperties = LevelProperties<{
+  toolboxDefinition?: Blockly.utils.toolbox.ToolboxInfo;
+  sharedBlocks?: BlockDefinition[];
+}>;
 
 export type BlocklySource = Source<BlocklySerialization>;

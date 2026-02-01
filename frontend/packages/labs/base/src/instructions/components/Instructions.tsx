@@ -8,9 +8,9 @@ import {
   type Theme,
   useTheme,
 } from '@code-dot-org/component-library/common/contexts';
+import type {LevelProperties} from '@code-dot-org/core/api';
 
 import InstructorsOnly from '../../components/InstructorsOnly';
-import type {LevelProperties} from '../../types';
 
 import MainInstructionsContent from './MainInstructionsContent';
 import NavigationArea from './NavigationArea';

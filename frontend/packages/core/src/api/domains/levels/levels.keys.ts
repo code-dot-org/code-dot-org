@@ -5,8 +5,26 @@ export const levelsKeys = {
   list: (filters?: unknown) => [...levelsKeys.lists(), {filters}] as const,
 
   details: () => [...levelsKeys.all, 'detail'] as const,
-  detail: (id: number) => [...levelsKeys.details(), id] as const,
+  detail: (
+    id?: number,
+    projectType?: string,
+    scriptName?: string,
+    lessonPosition?: number,
+  ) =>
+    [
+      ...levelsKeys.details(),
+      id || projectType || scriptName,
+      lessonPosition,
+    ] as const,
 
-  properties: (id: number) =>
-    [...levelsKeys.detail(id), 'level_properties'] as const,
+  properties: (
+    id?: number,
+    projectType?: string,
+    scriptName?: string,
+    lessonPosition?: number,
+  ) =>
+    [
+      ...levelsKeys.detail(id, projectType, scriptName, lessonPosition),
+      'level_properties',
+    ] as const,
 };

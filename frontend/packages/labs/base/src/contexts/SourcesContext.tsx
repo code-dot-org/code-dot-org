@@ -12,6 +12,7 @@ import {
 
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {Channel} from '@code-dot-org/api/channels';
+import type {LevelProperties} from '@code-dot-org/core/api';
 import type {ProjectManager, ProjectSources} from '@code-dot-org/projects';
 
 import {START_SOURCES} from '../constants';
@@ -21,7 +22,7 @@ import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import {labActions} from '../redux';
 import {useAppSelector} from '../redux/store';
-import type {LevelProperties, LabProps} from '../types';
+import type {LabProps} from '../types';
 import {getInitialSources as defaultGetInitialSources} from '../utils';
 
 export type MessageType = 'text' | 'blocks' | 'custom';

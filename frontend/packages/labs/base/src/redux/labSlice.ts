@@ -1,13 +1,6 @@
 import {createSlice, createAction, createAsyncThunk} from '@reduxjs/toolkit';
 import type {PayloadAction, AnyAction, Slice} from '@reduxjs/toolkit';
 
-import type {
-  ApiClient,
-  AppName,
-  Channel,
-  ProjectSources,
-  QueryClient,
-} from '@code-dot-org/core/api';
 import {
   HttpClient,
   NetworkError,
@@ -16,8 +9,15 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@code-dot-org/api';
-import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@code-dot-org/api/projects';
 import {getPredictResponse} from '@code-dot-org/api/userLevels';
+import type {
+  ApiClient,
+  Channel,
+  LevelProperties,
+  ProjectSources,
+  QueryClient,
+} from '@code-dot-org/core/api';
+import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@code-dot-org/core/api';
 import type {Validation, ValidationState} from '@code-dot-org/progress';
 import {getInitialValidationState, LevelStatus} from '@code-dot-org/progress';
 import {progressActions} from '@code-dot-org/progress/redux';
@@ -29,7 +29,7 @@ import {currentUserActions} from '@code-dot-org/user/redux';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import type {RootState, AppDispatch} from '../redux/store';
-import type {LevelProperties, PartialUserAppOptions} from '../types';
+import type {PartialUserAppOptions} from '../types';
 import {queryParams, updateQueryParam} from '../utils/queryParams';
 
 import {setProjectTooLarge} from './labProjectSlice';
@@ -331,11 +331,7 @@ export const setUpWithLevel = createAsyncThunk<
       abuseScore,
       sharingDisabled,
       isTeacherOfProjectOwner,
-    } = await setUpAndLoadProject(
-      levelProperties.appName,
-      projectManager,
-      thunkAPI.dispatch,
-    );
+    } = await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
       {
         initialSources: sources,
@@ -398,7 +394,6 @@ function getErrorFromThunkAction(
 // This should be called from a thunk, which will provide its
 // thunk dispatch method.
 async function setUpAndLoadProject(
-  appName: AppName,
   projectManager: ProjectManager,
   dispatch: AppDispatch,
 ) {
@@ -436,7 +431,7 @@ async function setUpAndLoadProject(
     updateQueryParam('reset', undefined);
     resetToStartSources = true;
   }
-  return await projectManager.load(appName, resetToStartSources);
+  return await projectManager.load(resetToStartSources);
 }
 
 // If any load is currently in progress.

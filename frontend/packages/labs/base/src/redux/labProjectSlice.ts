@@ -95,10 +95,8 @@ export const loadVersion = createAsyncThunk(
       await projectManager.flushSave();
       // Fall back to start source if we can't load the version.
       const sources =
-        (await projectManager.loadSources(
-          LabRegistry.appName,
-          payload.version?.versionId,
-        )) || payload.startSources;
+        (await projectManager.loadSources(payload.version?.versionId)) ||
+        payload.startSources;
       thunkAPI.dispatch(
         setPreviousVersionSource({
           sources,
