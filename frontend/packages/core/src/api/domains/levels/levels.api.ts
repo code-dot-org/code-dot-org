@@ -2,6 +2,7 @@ import type {Transport} from '../../transports/types';
 import {getLevelKindSchema} from './levels.kinds';
 import type {LevelPropertiesMap, LevelProperties} from './levels.types';
 import {
+  ExtraLinksLevelDataSchema,
   LevelPropertiesMapSchema,
   PredictResponseSchema,
   SectionSummarySchema,
@@ -102,6 +103,20 @@ export function createLevelsApi(transport: Transport) {
       });
 
       return SectionSummarySchema.parse(raw);
+    },
+
+    /**
+     * GET /levels/:levelId/extra_links
+     */
+    async getExtraLinksData(params: {levelId: number; scriptLevelId?: number}) {
+      const {levelId, scriptLevelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/levels/${levelId}/extra_links${scriptLevelId ? `?scriptLevelId=${scriptLevelId}` : ''}`,
+      });
+
+      return ExtraLinksLevelDataSchema.parse(raw);
     },
   };
 }

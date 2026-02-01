@@ -83,3 +83,34 @@ export const SectionSummarySchema = z.object({
   response_count: z.number(),
   num_students: z.number(),
 });
+
+export const ScriptLevelPathLinkSchema = z.object({
+  script: z.string(),
+  path: z.string(),
+});
+
+export const ParentLevelPathLinkSchema = z.object({
+  level_name: z.string(),
+  path: z.string(),
+  kind: z.string(),
+  position: z.string(),
+});
+
+export const ExtraLinksLevelDataSchema = z.object({
+  links: z.record(
+    z.string(),
+    z.array(
+      z.object({
+        text: z.string(),
+        url: z.string(),
+        access_key: z.string().optional(),
+      }),
+    ),
+  ),
+  can_clone: z.boolean(),
+  can_delete: z.boolean(),
+  level_name: z.string(),
+  script_level_path_links: z.array(ScriptLevelPathLinkSchema),
+  parent_level_path_links: z.array(ParentLevelPathLinkSchema),
+  is_standalone_project: z.boolean(),
+});

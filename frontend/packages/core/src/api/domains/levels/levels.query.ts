@@ -8,6 +8,7 @@ import {
 
 import type {ApiClient} from '../../client/createApiClient';
 import type {
+  ExtraLinksLevelData,
   LevelPropertiesMap,
   PredictResponse,
   SectionSummary,
@@ -93,6 +94,21 @@ export function useSectionSummary(
     queryKey: levelsKeys.sectionSummary(sectionId, levelId),
     queryFn: () => api.levels.getSectionSummary(params),
     enabled: Number.isFinite(sectionId) && Number.isFinite(levelId),
+    ...options,
+  });
+}
+
+export function useExtraLinksLevelData(
+  api: ApiClient,
+  params: {levelId: number; scriptLevelId?: number},
+  options?: Omit<UseQueryOptions<ExtraLinksLevelData>, 'queryKey' | 'queryFn'>,
+) {
+  const {levelId, scriptLevelId} = params;
+
+  return useQuery({
+    queryKey: levelsKeys.extraLinks(levelId, scriptLevelId),
+    queryFn: () => api.levels.getExtraLinksData(params),
+    enabled: Number.isFinite(levelId),
     ...options,
   });
 }
