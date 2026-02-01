@@ -1,4 +1,4 @@
-@import '../../components/common.scss';
+@use '../../components/common.scss';
 
 .dialogContainer {
   @extend %full-container-overlay;

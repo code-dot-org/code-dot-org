@@ -1,4 +1,4 @@
-@import '../common.scss';
+@use '../common.scss' as common;
 
 // We actually fade out the block to reveal the lab underneath.
 // We will do it over 1s, and then leave it invisible.
@@ -54,7 +54,7 @@
   pointer-events: none;
   position: fixed;
   right: 0;
-  top: $top-spacing;
+  top: common.$top-spacing;
   width: 100%;
   z-index: 70;
 
