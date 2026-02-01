@@ -1,8 +1,18 @@
-import {useQuery, type UseQueryOptions} from '@tanstack/react-query';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  type UseQueryOptions,
+  type UseMutationOptions,
+} from '@tanstack/react-query';
 
-import type {LevelPropertiesMap} from './levels.types';
-import {levelsKeys} from './levels.keys';
 import type {ApiClient} from '../../client/createApiClient';
+import type {
+  LevelPropertiesMap,
+  PredictResponse,
+  SectionSummary,
+} from './levels.types';
+import {levelsKeys} from './levels.keys';
 
 export function useLevelProperties(
   api: ApiClient,
@@ -28,6 +38,61 @@ export function useLevelProperties(
       Number.isFinite(levelId) ||
       !!standaloneProjectType ||
       !!(scriptName || lessonPosition),
+    ...options,
+  });
+}
+
+export function usePredictResponse(
+  api: ApiClient,
+  params: {levelId: number; scriptId: number},
+  options?: Omit<UseQueryOptions<PredictResponse>, 'queryKey' | 'queryFn'>,
+) {
+  const {levelId, scriptId} = params;
+
+  return useQuery({
+    queryKey: levelsKeys.predictResponse(scriptId, levelId),
+    queryFn: () => api.levels.getPredictResponse(params),
+    enabled: Number.isFinite(levelId) && Number.isFinite(scriptId),
+    ...options,
+  });
+}
+
+export function useResetPredictLevelProgress(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<
+      unknown,
+      Error,
+      {currentLevelId?: number; scriptId?: number}
+    >,
+    'mutationFn'
+  >,
+) {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (params: {currentLevelId?: number; scriptId?: number}) =>
+      api.levels.resetPredictLevelProgress(params),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: levelsKeys.all,
+      });
+    },
+    ...options,
+  });
+}
+
+export function useSectionSummary(
+  api: ApiClient,
+  params: {sectionId: number; levelId: number},
+  options?: Omit<UseQueryOptions<SectionSummary>, 'queryKey' | 'queryFn'>,
+) {
+  const {sectionId, levelId} = params;
+
+  return useQuery({
+    queryKey: levelsKeys.sectionSummary(sectionId, levelId),
+    queryFn: () => api.levels.getSectionSummary(params),
+    enabled: Number.isFinite(sectionId) && Number.isFinite(levelId),
     ...options,
   });
 }

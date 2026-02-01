@@ -27,4 +27,10 @@ export const levelsKeys = {
       ...levelsKeys.detail(id, projectType, scriptName, lessonPosition),
       'level_properties',
     ] as const,
+
+  predictResponse: (scriptId: number, levelId: number) =>
+    [...levelsKeys.all, 'predictResponse', scriptId, levelId] as const,
+
+  sectionSummary: (sectionId: number, levelId: number) =>
+    [...levelsKeys.all, 'sectionSummary', sectionId, levelId] as const,
 };

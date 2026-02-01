@@ -74,3 +74,12 @@ export const LevelPropertiesMapSchema = z.record(
   z.string(),
   LevelPropertiesBaseSchema,
 );
+
+export const PredictResponseSchema = z.object({
+  data: z.object(),
+});
+
+export const SectionSummarySchema = z.object({
+  response_count: z.number(),
+  num_students: z.number(),
+});
