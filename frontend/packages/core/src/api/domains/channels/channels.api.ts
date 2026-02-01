@@ -37,8 +37,7 @@ export function createChannelsApi(transport: Transport) {
         body: validatedChannel,
       });
 
-      // TODO: validate response
-      return raw;
+      return ChannelSchema.parse(raw);
     },
 
     /**

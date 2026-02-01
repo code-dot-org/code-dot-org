@@ -63,20 +63,21 @@ export default class ProjectManagerFactory {
     let channelId: string | undefined = undefined;
     let reduceChannelUpdates = false;
     const response = await channelsStore.loadForLevel(
+      apiClient,
+      queryClient,
       levelId,
       scriptId,
       userId,
     );
-    if (response.ok) {
-      const responseBody = await response.json();
-      if (responseBody && responseBody.channel) {
-        channelId = responseBody.channel;
-        reduceChannelUpdates = responseBody.reduceChannelUpdates;
-      } else if (responseBody && responseBody.started === false) {
-        // A teacher is attenpting to view a student's work, but the student has not yet started.
-        return null;
-      }
+
+    if (response.channel) {
+      channelId = response.channel;
+      reduceChannelUpdates = !!response.reduceChannelUpdates;
+    } else if (response.started === false) {
+      // A teacher is attenpting to view a student's work, but the student has not yet started.
+      return null;
     }
+
     if (!channelId) {
       throw new Error('Could not load channel for level');
     }

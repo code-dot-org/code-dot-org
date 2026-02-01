@@ -4,52 +4,113 @@
  * A ChannelsStore manages the loading and saving of channels.
  */
 
-import * as channelsApi from '@code-dot-org/api/channels';
-import * as projectsApi from '@code-dot-org/api/projects';
+import type {
+  ApiClient,
+  Channel,
+  QueryClient,
+} from '@code-dot-org/core/api';
+import {channelsKeys, projectsKeys} from '@code-dot-org/core/api';
 
-import type {Channel, DefaultChannel} from './types';
+import type {DefaultChannel} from './types';
 
 export class ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(levelId: number, scriptId?: number, userId?: number) {
-    return projectsApi.getChannelForLevel(levelId, scriptId, userId);
+  loadForLevel(api: ApiClient, query: QueryClient, levelId: number, scriptId?: number, userId?: number) {
+    return query.fetchQuery({
+      queryKey: projectsKeys.channelForLevel({levelId, scriptId, userId}),
+      queryFn: () =>
+        api.projects.getChannelForLevel({
+          levelId,
+          scriptId,
+          userId,
+        }),
+    });
   }
 
-  load(channelId: string) {
-    return channelsApi.get(channelId);
+  load(api: ApiClient, query: QueryClient, channelId: string) {
+    return query.fetchQuery({
+      queryKey: channelsKeys.detail(channelId),
+      queryFn: () =>
+        api.channels.get({
+          channelId,
+        }),
+    });
   }
 
-  save(channel: Channel) {
+  async save(api: ApiClient, query: QueryClient, channel: Channel) {
     channel = {...this.defaultChannel, ...channel};
-    return channelsApi.update(channel);
+
+    const response = await api.channels.update({
+      channel,
+    });
+
+    query.invalidateQueries({
+      queryKey: channelsKeys.detail(channel.id),
+    });
+
+    return response;
   }
 
   redirectToRemix(channel: Channel) {
-    projectsApi.redirectToRemix(channel.id, channel.projectType);
+    window.location.href = `/projects/${channel.projectType}/${channel.id}/remix`;
   }
 
   redirectToView(channel: Channel) {
-    projectsApi.redirectToView(channel.id, channel.projectType);
+    window.location.href = `/projects/${channel.projectType}/${channel.id}/view`;
   }
 
-  publish(channel: Channel) {
-    return channelsApi.publish(channel);
+  async publish(api: ApiClient, query: QueryClient, channel: Channel) {
+    const response = await api.channels.publish({
+      channel,
+    });
+
+    query.invalidateQueries({
+      queryKey: channelsKeys.detail(channel.id),
+    });
+
+    return response;
   }
 
-  unpublish(channel: Channel) {
-    return channelsApi.unpublish(channel);
+  async unpublish(api: ApiClient, query: QueryClient, channel: Channel) {
+    const response = await api.channels.unpublish({
+      channel,
+    });
+
+    query.invalidateQueries({
+      queryKey: channelsKeys.detail(channel.id),
+    });
+
+    return response;
   }
 
-  getAbuseScore(channel: Channel) {
-    return channelsApi.fetchAbuseScore(channel.id);
+  getAbuseScore(api: ApiClient, query: QueryClient, channel: Channel) {
+    return query.fetchQuery({
+      queryKey: channelsKeys.abuseScore(channel.id),
+      queryFn: () =>
+        api.channels.fetchAbuseScore({
+          channelId: channel.id,
+        }),
+    });
   }
 
-  getSharingDisabled(channel: Channel) {
-    return channelsApi.fetchSharingDisabled(channel.id);
+  getSharingDisabled(api: ApiClient, query: QueryClient, channel: Channel) {
+    return query.fetchQuery({
+      queryKey: channelsKeys.sharingDisabled(channel.id),
+      queryFn: () =>
+        api.channels.fetchSharingDisabled({
+          channelId: channel.id,
+        }),
+    });
   }
 
-  getIsTeacherOfProjectOwner(channel: Channel) {
-    return channelsApi.fetchIsTeacherOfProjectOwner(channel.id);
+  getIsTeacherOfProjectOwner(api: ApiClient, query: QueryClient, channel: Channel) {
+    return query.fetchQuery({
+      queryKey: channelsKeys.isTeacherOfProjectOwner(channel.id),
+      queryFn: () =>
+        api.channels.fetchIsTeacherOfProjectOwner({
+          channelId: channel.id,
+        }),
+    });
   }
 }
