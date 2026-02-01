@@ -11,9 +11,12 @@ import {
 } from 'react';
 
 import {getAppOptionsEditBlocks} from '@code-dot-org/api';
-import type {Channel} from '@code-dot-org/api/channels';
-import type {LevelProperties} from '@code-dot-org/core/api';
-import type {ProjectManager, ProjectSources} from '@code-dot-org/projects';
+import type {
+  Channel,
+  ProjectSources,
+  LevelProperties,
+} from '@code-dot-org/core/api';
+import type {ProjectManager} from '@code-dot-org/projects';
 
 import {START_SOURCES} from '../constants';
 import StartOverDialog from '../dialogs/components/StartOverDialog';

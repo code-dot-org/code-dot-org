@@ -1,4 +1,4 @@
-@import './dialog-manager.module.scss';
+@use './dialog-manager.module.scss';
 
 %generic-dialog {
   @extend %dialog;

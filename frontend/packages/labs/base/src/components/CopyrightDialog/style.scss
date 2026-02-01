@@ -1,5 +1,5 @@
-@import '@code-dot-org/component-library-styles/mixins';
-@import '@code-dot-org/component-library-styles/typography.module';
+@use '@code-dot-org/component-library-styles/mixins' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module' as typography;
 
 #copyright-modal {
   display: flex;
@@ -20,10 +20,10 @@
   }
 
   & p {
-    @include body-three;
+    @include typography.body-three;
 
     & a {
-      @include link-body-three;
+      @include mixins.link-body-three;
       color: var(--brand-purple-50);
       text-decoration: underline;
 
