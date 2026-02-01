@@ -6,6 +6,7 @@ import type {
   AppName,
   Channel,
   ProjectSources,
+  QueryClient,
 } from '@code-dot-org/core/api';
 import {
   HttpClient,
@@ -193,6 +194,7 @@ export const setUpWithLevel = createAsyncThunk<
   void,
   {
     apiClient: ApiClient;
+    queryClient: QueryClient;
     levelId: number;
     scriptId?: number;
     levelProperties: LevelProperties;
@@ -281,6 +283,7 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           payload.apiClient,
+          payload.queryClient,
           payload.channelId,
           levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView,
@@ -288,6 +291,7 @@ export const setUpWithLevel = createAsyncThunk<
         )
       : await ProjectManagerFactory.getProjectManagerForLevel(
           payload.apiClient,
+          payload.queryClient,
           payload.levelId,
           levelProperties.isProjectLevel || false,
           payload.userId,

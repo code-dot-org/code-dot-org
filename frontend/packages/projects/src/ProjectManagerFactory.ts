@@ -4,7 +4,7 @@
  * for the given type.
  */
 
-import type {ApiClient} from '@code-dot-org/core/api';
+import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
 import {metricsReporter as metricsReporterSingleton} from '@code-dot-org/metrics';
 import type {MetricsReporter} from '@code-dot-org/metrics';
 
@@ -22,6 +22,7 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     apiClient: ApiClient,
+    queryClient: QueryClient,
     projectId: string,
     isStandaloneProjectLevel: boolean,
     isShareView: boolean = false,
@@ -29,6 +30,7 @@ export default class ProjectManagerFactory {
   ): ProjectManager {
     return new ProjectManager({
       apiClient,
+      queryClient,
       sourcesStore: new SourcesStore(),
       channelsStore: new ChannelsStore(),
       channelId: projectId,
@@ -50,6 +52,7 @@ export default class ProjectManagerFactory {
    */
   static async getProjectManagerForLevel(
     apiClient: ApiClient,
+    queryClient: QueryClient,
     levelId: number,
     isStandaloneProjectLevel: boolean,
     userId?: number,
@@ -79,6 +82,7 @@ export default class ProjectManagerFactory {
     }
     return new ProjectManager({
       apiClient,
+      queryClient,
       sourcesStore: new SourcesStore(),
       channelsStore,
       channelId,

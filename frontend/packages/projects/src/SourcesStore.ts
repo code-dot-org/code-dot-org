@@ -2,9 +2,11 @@ import type {
   ApiClient,
   ProjectType,
   ProjectSources,
+  QueryClient,
   SaveSourceOptions,
   UpdateSourceOptions,
 } from '@code-dot-org/core/api';
+import {sourcesKeys} from '@code-dot-org/core/api';
 import {getTabId} from '@code-dot-org/user';
 
 /**
@@ -16,10 +18,19 @@ export class SourcesStore {
   private firstSaveTime: string | null = null;
   private lastNewVersionTime: number | null = null;
 
-  async load(api: ApiClient, channelId: string, versionId?: string) {
-    const {sources, versionId: newVersionId} = await api.sources.get({
-      channelId,
-      versionId,
+  async load(
+    api: ApiClient,
+    query: QueryClient,
+    channelId: string,
+    versionId?: string,
+  ) {
+    const {sources, versionId: newVersionId} = await query.fetchQuery({
+      queryKey: sourcesKeys.source(channelId, versionId),
+      queryFn: () =>
+        api.sources.get({
+          channelId,
+          versionId,
+        }),
     });
 
     if (!versionId) {
@@ -32,6 +43,7 @@ export class SourcesStore {
 
   async save(
     api: ApiClient,
+    query: QueryClient,
     channelId: string,
     sources: ProjectSources,
     projectType?: ProjectType,
@@ -63,25 +75,43 @@ export class SourcesStore {
     });
     this.firstSaveTime = this.firstSaveTime || timestamp;
     this.currentVersionId = versionId;
+
+    query.invalidateQueries({
+      queryKey: sourcesKeys.detail(channelId),
+    });
   }
 
   async getVersionList(
     api: ApiClient,
+    query: QueryClient,
     channelId: string,
     includeComments: boolean = false,
   ) {
-    return api.sources.getVersionList({
-      channelId,
-      includeComments,
+    return query.fetchQuery({
+      queryKey: sourcesKeys.versionList(channelId),
+      queryFn: () =>
+        api.sources.getVersionList({
+          channelId,
+          includeComments,
+        }),
     });
   }
 
-  async restore(api: ApiClient, channelId: string, versionId: string) {
+  async restore(
+    api: ApiClient,
+    query: QueryClient,
+    channelId: string,
+    versionId: string,
+  ) {
     const body = await api.sources.restore({channelId, versionId});
     if (body?.version_id) {
       this.currentVersionId = body.version_id;
     }
     this.lastNewVersionTime = Date.now();
+
+    query.invalidateQueries({
+      queryKey: sourcesKeys.detail(channelId),
+    });
   }
 
   shouldReplaceExistingVersion(): boolean {
