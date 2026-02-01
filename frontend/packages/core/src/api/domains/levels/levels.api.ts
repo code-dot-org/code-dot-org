@@ -1,7 +1,11 @@
 import type {Transport} from '../../transports/types';
 import {getLevelKindSchema} from './levels.kinds';
 import type {LevelPropertiesMap, LevelProperties} from './levels.types';
-import {LevelPropertiesMapSchema} from './levels.schemata';
+import {
+  LevelPropertiesMapSchema,
+  PredictResponseSchema,
+  SectionSummarySchema,
+} from './levels.schemata';
 
 export function createLevelsApi(transport: Transport) {
   return {
@@ -59,6 +63,45 @@ export function createLevelsApi(transport: Transport) {
       });
 
       return map;
+    },
+
+    async getPredictResponse(params: {levelId: number; scriptId: number}) {
+      const {levelId, scriptId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/user_levels/level_source/${scriptId}/${levelId}`,
+      });
+
+      return PredictResponseSchema.parse(raw);
+    },
+
+    async resetPredictLevelProgress(params: {
+      currentLevelId?: number;
+      scriptId?: number;
+    }) {
+      const {currentLevelId, scriptId} = params;
+
+      return await transport.request<unknown>({
+        method: 'POST',
+        url: '/delete_predict_level_progress',
+        body: {
+          script_id: scriptId || null,
+          level_id:
+            currentLevelId !== undefined ? currentLevelId.toString() : null,
+        },
+      });
+    },
+
+    async getSectionSummary(params: {sectionId: number; levelId: number}) {
+      const {sectionId, levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/user_levels/section_summary/${sectionId}/${levelId}`,
+      });
+
+      return SectionSummarySchema.parse(raw);
     },
   };
 }

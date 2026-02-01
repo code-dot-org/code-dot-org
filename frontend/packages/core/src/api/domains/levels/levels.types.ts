@@ -2,7 +2,9 @@ import {z} from 'zod';
 import {
   LevelPropertiesBaseSchema,
   LevelPropertiesMapSchema,
+  PredictResponseSchema,
   PredictQuestionTypes,
+  SectionSummarySchema,
 } from './levels.schemata';
 
 // The inferred base type
@@ -16,3 +18,6 @@ export type LevelPropertiesMap = z.infer<typeof LevelPropertiesMapSchema>;
 
 export type PredictQuestionType =
   (typeof PredictQuestionTypes)[keyof typeof PredictQuestionTypes];
+
+export type PredictResponse = z.infer<typeof PredictResponseSchema>;
+export type SectionSummary = z.infer<typeof SectionSummarySchema>;
