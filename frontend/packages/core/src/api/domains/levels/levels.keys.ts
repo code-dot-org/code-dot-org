@@ -33,4 +33,7 @@ export const levelsKeys = {
 
   sectionSummary: (sectionId: number, levelId: number) =>
     [...levelsKeys.all, 'sectionSummary', sectionId, levelId] as const,
+
+  extraLinks: (levelId: number, scriptLevelId?: number) =>
+    [...levelsKeys.all, 'extraLinks', levelId, scriptLevelId] as const,
 };

@@ -7,4 +7,7 @@ export const projectsKeys = {
     scriptId?: number;
     userId?: number;
   }) => [...projectsKeys.channelsForLevel(), params] as const,
+
+  extraLinks: (channelId: string) =>
+    [...projectsKeys.all, 'extraLinks', channelId] as const,
 };
