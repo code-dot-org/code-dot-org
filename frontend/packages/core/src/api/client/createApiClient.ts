@@ -2,23 +2,17 @@ import type {Transport} from '../transports/types';
 
 import {createChannelsApi} from '../domains/channels';
 import {createLevelsApi} from '../domains/levels';
+import {createMetricsApi} from '../domains/metrics';
 import {createProjectsApi} from '../domains/projects';
 import {createSourcesApi} from '../domains/sources';
 
-export type ApiClient = {
-  transport: Transport;
-  channels: ReturnType<typeof createChannelsApi>;
-  levels: ReturnType<typeof createLevelsApi>;
-  projects: ReturnType<typeof createProjectsApi>;
-  sources: ReturnType<typeof createSourcesApi>;
-};
+export const createApiClient = (transport: Transport) => ({
+  transport,
+  channels: createChannelsApi(transport),
+  levels: createLevelsApi(transport),
+  metrics: createMetricsApi(transport),
+  projects: createProjectsApi(transport),
+  sources: createSourcesApi(transport),
+});
 
-export function createApiClient(transport: Transport): ApiClient {
-  return {
-    transport,
-    channels: createChannelsApi(transport),
-    levels: createLevelsApi(transport),
-    projects: createProjectsApi(transport),
-    sources: createSourcesApi(transport),
-  };
-}
+export type ApiClient = ReturnType<typeof createApiClient>;
