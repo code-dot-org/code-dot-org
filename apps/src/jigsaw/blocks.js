@@ -101,7 +101,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     // add the pattern
     x = typeof offsetX === 'function' ? -offsetX() : -offsetX;
     y = typeof offsetY === 'function' ? -offsetY() : -offsetY;
-    pattern = Blockly.createSvgElement(
+    pattern = Blockly.utils.dom.createSvgElement(
       'pattern',
       {
         id: id,
@@ -113,7 +113,7 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
       },
       svgDefs
     );
-    patternImage = Blockly.createSvgElement(
+    patternImage = Blockly.utils.dom.createSvgElement(
       'image',
       {
         width: width,

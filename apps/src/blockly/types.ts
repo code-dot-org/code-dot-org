@@ -95,7 +95,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   ALIGN_LEFT: BlocklyCore.inputs.Align.LEFT;
   ALIGN_RIGHT: BlocklyCore.inputs.Align.RIGHT;
   inputTypes: typeof BlocklyCore.inputs.inputTypes;
-  createSvgElement: typeof BlocklyCore.utils.dom.createSvgElement;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
   enableParamEditing: boolean;

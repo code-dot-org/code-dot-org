@@ -141,7 +141,7 @@ export function setPathFill(e: BlocklyCore.Events.Abstract) {
         const pattern = block.getFillPattern?.();
         if (block instanceof BlocklyCore.BlockSvg) {
           if (!block.svgPathFill) {
-            block.svgPathFill = Blockly.createSvgElement(
+            block.svgPathFill = BlocklyCore.utils.dom.createSvgElement(
               'path',
               {class: 'blocklyPath'},
               block.getSvgRoot()

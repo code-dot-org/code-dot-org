@@ -1,3 +1,4 @@
+import * as BlocklyCore from 'blockly/core';
 import {EventEmitter} from 'events';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -2192,21 +2193,15 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
-      // For publicly cached pages, config.isSignedIn will be false even when signed in.
-      // Check the Redux store for the actual sign-in state.
-      const state = getStore().getState();
-      const signedIn = state.currentUser?.signInState === 'SignedIn' || false;
       analyticsReporter.sendEvent(
         eventName,
         {
-          signedIn: signedIn,
+          signedIn: config.isSignedIn,
           unitName: config.scriptName,
           levelId: config.serverLevelId,
           levelName: config.level.name,
-          appName: config.app,
-          levelPath: window.location.pathname,
         },
-        PLATFORMS.STATSIG
+        PLATFORMS.BOTH
       );
       runButtonWasClicked = true;
     }
@@ -3026,7 +3021,12 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // https://openradar.appspot.com/31725316
   // Resize the Blockly workspace after 500ms when clientWidth/Height
   // should be correct.
-  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
+  window.setTimeout(() => {
+    const workspace = BlocklyCore.getMainWorkspace();
+    if (workspace) {
+      BlocklyCore.svgResize(workspace);
+    }
+  }, 500);
 };
 
 /**

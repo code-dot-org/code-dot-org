@@ -411,13 +411,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       return Blockly.getSelected();
     },
   });
-  Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
-    get: function () {
-      return {
-        ANGLE_HELPER: 'Angle Helper',
-      };
-    },
-  });
 
   // Properties cannot be modified until wrapSettableProperty has been called
   SETTABLE_PROPERTIES.forEach(property =>
@@ -749,7 +742,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         options.theme as BlocklyCore.Theme
       );
     });
-    workspace.defs = Blockly.createSvgElement(
+    workspace.defs = BlocklyCore.utils.dom.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
       workspace.svgGroup_
@@ -910,13 +903,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     return workspace;
   };
 
-  // Used by StudioApp to tell Blockly to resize for Mobile Safari.
-  blocklyWrapper.fireUiEvent = function (element, eventName) {
-    if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
-    }
-  };
-
   blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
     this.mainWorkspace = mainWorkspace;
   };
@@ -938,8 +924,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   blocklyWrapper.getFunctionEditorWorkspace = function () {
     return blocklyWrapper.functionEditor?.getWorkspace();
   };
-
-  blocklyWrapper.createSvgElement = blocklyWrapper.utils.dom.createSvgElement;
 
   // Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {

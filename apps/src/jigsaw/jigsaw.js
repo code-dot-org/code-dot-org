@@ -118,7 +118,7 @@ var drawMap = function () {
 
   if (level.ghost) {
     var blockCanvas = Blockly.mainBlockSpace.getCanvas();
-    Blockly.createSvgElement(
+    Blockly.utils.dom.createSvgElement(
       'rect',
       {
         fill: 'url(#pat_' + level.id + 'A)',
