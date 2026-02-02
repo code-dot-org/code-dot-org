@@ -21,6 +21,17 @@ class Clients::CleverRest
   end
 
   private def url_for(endpoint)
-    File.join(API_HOST, api_version, endpoint)
+    File.join(API_HOST, version_path, endpoint)
+  end
+
+  private def version_path
+    case api_version
+    when AuthenticationOption::Clever::VERSION[:v2]
+      'v2.1'
+    when AuthenticationOption::Clever::VERSION[:v3]
+      'v3.0'
+    else
+      raise "Unsupported Clever API version: #{api_version}"
+    end
   end
 end
