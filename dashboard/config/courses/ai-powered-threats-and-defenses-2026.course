@@ -1,0 +1,24 @@
+{
+  "name": "ai-powered-threats-and-defenses-2026",
+  "script_names": [
+    "aif5-v3"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ai-powered-threats-and-defenses",
+    "has_verified_resources": true,
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
