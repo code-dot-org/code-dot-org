@@ -410,6 +410,7 @@ Dashboard::Application.routes.draw do
         get 'get_filtered_levels'
       end
       member do
+        get 'app_options', to: 'levels#get_app_options'
         get 'get_rubric'
         get 'embed_level'
         get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'

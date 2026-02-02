@@ -8,7 +8,7 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :get_app_options, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -173,6 +173,11 @@ class LevelsController < ApplicationController
   end
 
   use_reader_connection_for_route(:get_rubric)
+
+  # GET /levels/:id/app_options
+  def get_app_options
+    render json: app_options
+  end
 
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
