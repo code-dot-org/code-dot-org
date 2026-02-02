@@ -118,13 +118,11 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           size="s"
           className={moduleStyles.urlBarInput}
           onChange={handleInputChange}
-          onSelect={onSubmit}
-          onEnter={onSubmit}
           value={value}
           fetchOptions={fetchOptions}
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
-          hideIcon
+          // hideIcon
         />
         <Button
           onClick={onRefresh}
