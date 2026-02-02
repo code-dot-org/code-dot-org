@@ -68,10 +68,13 @@ module Cdo
       if (size = size([object])) > @batch_size
         raise ArgumentError, "Object size (#{size}) exceeds batch size (#{@batch_size})"
       end
+
       @buffer.synchronize do
         @buffer << BufferObject.new(object, now)
-        schedule_flush
       end
+
+      # Schedule outside the buffer lock.
+      schedule_flush
     end
 
     # Flush existing buffered objects.
@@ -122,9 +125,15 @@ module Cdo
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
     private def schedule_flush(force: false)
+      delay = nil
+
       @buffer.synchronize do
-        @task.reschedule {batch_ready(force)} unless @buffer.empty?
+        return if @buffer.empty?
+        delay = batch_ready(force)
       end
+
+      # Reschedule outside the buffer lock.
+      @task.reschedule {delay}
     end
 
     # Determine when the next batch of existing buffered objects will be ready to be flushed.
@@ -169,13 +178,23 @@ module Cdo
     end
 
     private def reset_if_forked
+      old_task = nil
+
       @buffer.synchronize do
-        if $$ != @ruby_pid
-          @buffer.clear
-          @task.cancel
-          @ruby_pid = $$
-        end
+        return if $$ == @ruby_pid
+
+        @buffer.clear
+        old_task = @task
+
+        # Recreate task in the forked process.
+        @task = RescheduledTask.new(0.0) {flush_batch}.
+          with_observer {schedule_flush}
+
+        @ruby_pid = $$
       end
+
+      # Cancel outside the buffer lock.
+      old_task&.cancel
     end
   end
 end
