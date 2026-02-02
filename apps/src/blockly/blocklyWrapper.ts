@@ -925,27 +925,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     return blocklyWrapper.functionEditor?.getWorkspace();
   };
 
-  // Blockly labs also need to clear separate workspaces for the function editor.
-  blocklyWrapper.clearAllStudentWorkspaces = function () {
-    // Disable Blockly events to prevent unnecessary event mirroring
-    Blockly.Events.disable();
-
-    const studentWorkspaces = [
-      Blockly.getMainWorkspace(),
-      Blockly.getFunctionEditorWorkspace(),
-      Blockly.getHiddenDefinitionWorkspace(),
-    ];
-
-    studentWorkspaces.forEach(workspace => {
-      if (workspace) {
-        workspace.clear();
-        workspace.getProcedureMap().clear();
-      }
-    });
-
-    Blockly.Events.enable();
-  };
-
   // Initialize metadata houses for original English source strings for
   // various Blockly metadata that gets installed. These are used by the
   // updateLocale(), localizeVariables(), etc, functions to translate a

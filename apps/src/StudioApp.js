@@ -905,7 +905,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.clearAllStudentWorkspaces();
+    BlocklyUtils.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -2875,7 +2875,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.clearAllStudentWorkspaces();
+        BlocklyUtils.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {

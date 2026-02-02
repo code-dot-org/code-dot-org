@@ -184,7 +184,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   getHiddenDefinitionWorkspace: () => ExtendedWorkspace;
   fireUiEvent: (element: Element, eventName: string) => void;
   getFunctionEditorWorkspace: () => ExtendedWorkspaceSvg | undefined;
-  clearAllStudentWorkspaces: () => void;
   getPointerBlockImageUrl: (
     block: ExtendedBlockSvg,
     pointerMetadataMap: PointerMetadataMap,
