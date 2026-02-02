@@ -245,43 +245,6 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
             statusBuckets={statusBuckets}
           />
         )}
-
-        <div style={{marginBottom: 12}}>
-          <ul style={{margin: '8px 0 0 18px', padding: 0}}>
-            {fetchedCfuLevels.map(level => {
-              const bucket = bucketForLevel(level.id);
-              return (
-                <li key={level.id} style={{marginBottom: 6}}>
-                  <BodyThreeText>
-                    {level.display_name} — {level.type} —{' '}
-                    <strong>{bucket}</strong>
-                  </BodyThreeText>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <BodyThreeText>
-          <strong>Raw data</strong>
-        </BodyThreeText>
-        <pre
-          style={{
-            whiteSpace: 'pre-wrap',
-            wordBreak: 'break-word',
-            fontFamily: 'monospace',
-            fontSize: 12,
-            margin: 0,
-          }}
-        >
-          {JSON.stringify(
-            {
-              levels: fetchedCfuLevels,
-              responses: fetchedCfuResponses || [],
-            },
-            null,
-            2
-          )}
-        </pre>
       </div>
     );
   }
