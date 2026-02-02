@@ -4,7 +4,7 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, useRef} from 'react';
 
 import {AutocompleteInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/AutocompleteInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -48,8 +48,18 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   fetchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const lastInputEventValue = useRef<string | null>(null);
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    lastInputEventValue.current = event.target.value;
     onChange(event.target.value);
+  };
+  const suggestionsDisabled = (searchValue: string) =>
+    lastInputEventValue.current !== searchValue;
+  const handleFetchOptions = async (searchValue: string) => {
+    if (suggestionsDisabled(searchValue)) {
+      return [];
+    }
+    return fetchOptions(searchValue);
   };
   const previewViewModeButtonsProps: SegmentedButtonsProps = {
     color: 'strong',
@@ -122,7 +132,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           hideIcon
           compactOptions
           value={value}
-          fetchOptions={fetchOptions}
+          fetchOptions={handleFetchOptions}
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
           // hideIcon
