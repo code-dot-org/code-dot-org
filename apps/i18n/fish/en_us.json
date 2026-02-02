@@ -12,7 +12,7 @@
   "fishvtrash-predicting-init2": "A.I. will analyze a random set of objects and label them based on your training.",
   "fishvtrash-predicting-init3": "Let’s go!",
   "fishvtrash-pond-init1": "Based on your training, here are some objects that A.I. identified as “fish”.  How did A.I. do?",
-  "fishvtrash-pond-recall": "Toggle here to switch between objects identified as “fish” and “not fish”.",
+  "fishvtrash-pond-recall": "Switch between objects identified as 'fish' and 'not fish'.",
   "fishvtrash-pond-init2": "You can train A.I. more...",
   "fishvtrash-pond-init3": "...or Continue.",
   "creaturesvtrashdemo-predicting-init1": "So far, we trained A.I. to identify objects as either “fish” or “not fish”.",
