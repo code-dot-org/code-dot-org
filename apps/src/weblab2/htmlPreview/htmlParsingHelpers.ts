@@ -1,4 +1,4 @@
-import {findFilePathByRelativePath} from '../utils';
+import {findFilePathByRelativePath} from '@codebridge/utils';
 
 import {IframeMessageType} from './constants';
 

@@ -12,6 +12,14 @@ markdown <<MARKDOWN
 #### **HTML (HyperText Markup Language)** is the code that gives a web page its structure. It tells the browser what to show — like headings, paragraphs, images, and links — so users can see and interact with the content.
 
 
+<div style="
+  border:3px solid #ccc;
+  border-radius:16px;
+  padding:12px;
+  margin:24px 0;
+  background:#fff;
+">
+
 >#### Look at the HTML below. Can you imagine what parts of the web page might look like?
 
 
@@ -36,8 +44,7 @@ Click to reveal the web page.
 
 </tr>
 </table>
-
-
+</div>
 
 
 ## The Structure of an HTML Page

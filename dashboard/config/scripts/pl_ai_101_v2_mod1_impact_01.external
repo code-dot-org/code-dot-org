@@ -1,0 +1,21 @@
+name 'pl-ai-101-V2-mod1-impact-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#### Let’s dive into AI and how it’s specifically affecting education and the role of teachers.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Key Points from the Video</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+* #### AI surprises educators by efficiently handling tasks like essay writing, lesson planning, and creative storytelling.
+* #### AI is unlikely to replace teachers, instead it aids educators by reducing administrative burdens and allowing educators to focus on student interaction.
+* #### By acting as virtual teaching assistants, AI can help address the global teacher shortage and reduce teacher burnout.
+
+</p></div>
+</details>
+MARKDOWN
