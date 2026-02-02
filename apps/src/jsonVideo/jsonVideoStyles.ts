@@ -82,13 +82,13 @@ iframe {
     align-items: center;
     gap: 8px;
     color: white;
-    height: 48px;
+    height: 40px;
 }
 
 /* Progress Bar */
 #progress-container {
     width: 100%;
-    height: 4px;
+    height: 5px;
     display: flex;
     align-items: center;
     margin-bottom: 4px;
@@ -96,7 +96,7 @@ iframe {
 
 #progress-bar {
     width: 100%;
-    height: 4px;
+    height: 5px;
     cursor: pointer;
     accent-color: white;
     margin: 0;
@@ -104,14 +104,11 @@ iframe {
     transition: height 0.1s;
 }
 
-#progress-bar:hover {
-    height: 6px;
-}
 
 /* Control Buttons (Data URIs) */
 .control-btn {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -125,7 +122,6 @@ iframe {
 
 .control-btn:hover {
     background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
 }
 
 #play-btn {
@@ -180,6 +176,7 @@ iframe {
     font-variant-numeric: tabular-nums;
     font-size: 13px;
     margin-left: 8px;
+    display: var(--time-display, block);
 }
 
 .hidden {
@@ -191,9 +188,9 @@ input[type=range] {
     -webkit-appearance: none;
     /* Hides the slider so that custom slider can be made */
     width: 100%;
+    --progress-value: 0%;
     /* Specific width is required for Firefox. */
-    background: transparent;
-    /* Otherwise white in Chrome */
+    background: linear-gradient(to right, #ffffff 0%, #ffffff var(--progress-value), #ccc var(--progress-value), #ccc 100%);
 }
 
 input[type=range]:focus {
@@ -204,19 +201,20 @@ input[type=range]:focus {
 /* Progress bar -  Webkit (Chrome, Safari, Edge) */
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* CRITICAL: This fixes the oblong shape in Safari */
-    height: 16px;
-    width: 16px;
+    /* This fixes the oblong shape in Safari */
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background: #ffffff;
     border: 1px solid #ddd;
-    /* Add a border if you like */
+    transition: opacity 0.2s ease-in-out;
+
     cursor: pointer;
 
     /* Vertical alignment logic */
-    /* margin-top = (track-height / 2) - (thumb-height / 2) */
-    /* Example: track is 4px, thumb is 16px. (4/2) - (16/2) = 2 - 8 = -6px */
-    margin-top: -6px;
+    /* margin-top = (track-height + / 2) + border-size (when not using border-box sixing) - (thumb-height / 2) */
+    /* Example: track is 5px, thumb is 10px. (5/2) + 2 - (12/2) = 2.5 + 2 - 6 = -1.5px */
+    margin-top: -1.5px;
 
     /* box-shadow for depth */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -224,32 +222,29 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Progress bar - Firefox */
 input[type=range]::-moz-range-thumb {
-    height: 16px;
-    width: 16px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background: #ffffff;
     border: 1px solid #ddd;
+    transition: opacity 0.2s ease-in-out;
+
     /* Firefox adds a grey border by default, override it */
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     /* Firefox centers the thumb on the track automatically, no margin-top needed */
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    background: #cccccc;
-    border-radius: 2px;
+#progress-container:not(:hover) > input[type=range]::-webkit-slider-thumb {
+    opacity: 0;
+    pointer-events: none;
+}
+#progress-container:not(:hover) > input[type=range]::-moz-range-thumb {
+    opacity: 0;
+    pointer-events: none;
 }
 
-input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    background: #cccccc;
-    border-radius: 2px;
-}
+
 `;
 
 export default styles;
