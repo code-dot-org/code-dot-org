@@ -16,7 +16,7 @@ import {useRubric} from './RubricWrapper';
 const RubricFABContainer: React.FC = () => {
   const {rubricData, showRubric, isLoading: isLoadingRubric} = useRubric();
   const {levelProperties} = useLevelProperties();
-  const {name: levelName, appName} = levelProperties;
+  const {name: levelName, appName, parentLevelName} = levelProperties;
 
   const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const labLoading = useAppSelector(isLabLoading);
@@ -99,6 +99,7 @@ const RubricFABContainer: React.FC = () => {
         aiEnabled={rubric.learningGoals?.some(lg => lg?.aiEnabled)}
         canShowTaScoresAlert={canShowTaScoresAlert}
         reloadOnStudentChange={false}
+        parentLevelName={parentLevelName}
       />
     </div>
   );

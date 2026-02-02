@@ -258,6 +258,7 @@ export interface LevelProperties {
   customHelperLibrary?: string;
   validationCode?: string;
   hideVersionHistory?: boolean;
+  parentLevelName?: string;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};

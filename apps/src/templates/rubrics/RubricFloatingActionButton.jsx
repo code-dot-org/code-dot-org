@@ -79,6 +79,7 @@ function RubricFloatingActionButton({
   aiEnabled,
   sectionId,
   canShowTaScoresAlert,
+  parentLevelName,
   reloadOnStudentChange = true,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
@@ -98,7 +99,10 @@ function RubricFloatingActionButton({
 
   const [internalError, setInternalError] = useState(null);
 
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
+  const onLevelForEvaluation =
+    currentLevelName === rubric.level.name ||
+    parentLevelName === rubric.level.name;
+  console.log({parentLevelName, rubricLevelName: rubric.level.name});
 
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
@@ -109,9 +113,17 @@ function RubricFloatingActionButton({
     return {
       ...reportingData,
       viewingStudentWork: !!studentLevelInfo,
-      viewingEvaluationLevel: rubric.level.name === currentLevelName,
+      viewingEvaluationLevel:
+        rubric.level.name === currentLevelName ||
+        rubric.level.name === parentLevelName,
     };
-  }, [reportingData, studentLevelInfo, rubric.level.name, currentLevelName]);
+  }, [
+    reportingData,
+    studentLevelInfo,
+    rubric.level.name,
+    currentLevelName,
+    parentLevelName,
+  ]);
 
   const handleClick = () => {
     const eventName = isOpen
@@ -301,6 +313,7 @@ RubricFloatingActionButton.propTypes = {
   sectionId: PropTypes.number,
   canShowTaScoresAlert: PropTypes.bool,
   reloadOnStudentChange: PropTypes.bool,
+  parentLevelName: PropTypes.string,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
