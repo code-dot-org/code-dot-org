@@ -1,17 +1,11 @@
 import {createSlice, createAction, createAsyncThunk} from '@reduxjs/toolkit';
 import type {PayloadAction, AnyAction, Slice} from '@reduxjs/toolkit';
 
-import {
-  HttpClient,
-  NetworkError,
-  getPublicCaching,
-  getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
-  getAppOptionsViewingExemplar,
-} from '@code-dot-org/api';
+import {HttpClient, NetworkError} from '@code-dot-org/api';
 import {getPredictResponse} from '@code-dot-org/api/userLevels';
 import type {
   ApiClient,
+  AppOptions,
   Channel,
   LevelProperties,
   ProjectSources,
@@ -60,6 +54,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // AppOptions block
+  appOptions: AppOptions | undefined;
   // Script id for the current level.
   scriptId: number | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
@@ -81,6 +77,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  appOptions: undefined,
   scriptId: undefined,
   isShareView: undefined,
   isBlockedAbuse: undefined,
@@ -129,17 +126,19 @@ const slice: Slice<LabState> = createSlice({
       state,
       action: PayloadAction<{
         channel?: Channel;
+        appOptions: AppOptions;
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
         abuseScore?: number;
         sharingDisabled?: boolean;
       }>,
     ) {
-      const levelProperties = action.payload.levelProperties;
+      const {levelProperties, appOptions} = action.payload;
       state.channel = action.payload.channel;
       // Cast needed because LevelProperties contains readonly nested types (BlockOptionsList)
       // that conflict with Immer's WritableDraft requirements
       state.levelProperties = levelProperties as typeof state.levelProperties;
+      state.appOptions = appOptions;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
         state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
@@ -195,6 +194,7 @@ export const setUpWithLevel = createAsyncThunk<
   {
     apiClient: ApiClient;
     queryClient: QueryClient;
+    appOptions: AppOptions;
     levelId: number;
     scriptId?: number;
     levelProperties: LevelProperties;
@@ -216,19 +216,19 @@ export const setUpWithLevel = createAsyncThunk<
       });
     }
 
+    const {levelProperties, appOptions} = payload;
+
     await cleanUpProjectManager();
-    const isViewingExemplar = getAppOptionsViewingExemplar();
-    const isEditingExemplar = getAppOptionsEditingExemplar();
+    const isViewingExemplar = appOptions.isViewingExemplar;
+    const isEditingExemplar = appOptions.isEditingExemplar;
 
     thunkAPI.dispatch(setScriptId(payload.scriptId));
-
-    const levelProperties = payload.levelProperties;
 
     // If we are cached, and there is a user app options path because we are in a script
     // level, then make an async call to the server to find out whether the user is an
     // instructor, and if they are, then update the user role.  This is needed for the
     // teacher panel to appear in cached levels.
-    if (getPublicCaching()) {
+    if (appOptions.publicCaching) {
       if (payload.userAppOptionsPath) {
         loadUserAppOptions(payload.userAppOptionsPath).then(result => {
           if (result.isInstructor) {
@@ -243,7 +243,7 @@ export const setUpWithLevel = createAsyncThunk<
     if (!levelProperties.usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
       setProjectAndLevelData(
-        {levelProperties},
+        {levelProperties, appOptions},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
         thunkAPI.getState,
@@ -254,10 +254,10 @@ export const setUpWithLevel = createAsyncThunk<
     // If we are in a block edit mode or are editing or viewing exemplars,
     // we don't use a channel id.
     // We can skip creating a project manager and just set the level data.
-    const isEditMode = !!getAppOptionsEditBlocks();
+    const isEditMode = !!appOptions.editBlocks;
     if (isEditMode || isViewingExemplar || isEditingExemplar) {
       setProjectAndLevelData(
-        {levelProperties},
+        {levelProperties, appOptions},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
         thunkAPI.getState,
@@ -309,7 +309,7 @@ export const setUpWithLevel = createAsyncThunk<
     if (!projectManager) {
       // If the level hasn't been started, we can skip loading projects data.
       setProjectAndLevelData(
-        {levelProperties},
+        {levelProperties, appOptions},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch,
         thunkAPI.getState,
@@ -337,6 +337,7 @@ export const setUpWithLevel = createAsyncThunk<
         initialSources: sources,
         channel,
         levelProperties,
+        appOptions,
         abuseScore,
         sharingDisabled,
         isTeacherOfProjectOwner,
@@ -483,9 +484,9 @@ function shouldBeReadonlyWhileRunning(state: RootState) {
 // Returns true if the workspace is permanently read-only.
 // This excludes temporary read-only states such as running/validating.
 export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
-  const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplar = getAppOptionsEditingExemplar();
-  const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isEditMode = !!state.lab.appOptions?.editBlocks;
+  const isEditingExemplar = !!state.lab.appOptions?.isEditingExemplar;
+  const isViewingExemplar = !!state.lab.appOptions?.isViewingExemplar;
   const isWidgetView = !!state.lab.levelProperties?.widgetView;
 
   // Exemplar and block edit modes do not have a channel.
@@ -504,9 +505,9 @@ export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplar = getAppOptionsEditingExemplar();
-  const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isEditMode = !!state.lab.appOptions?.editBlocks;
+  const isEditingExemplar = !!state.lab.appOptions?.isEditingExemplar;
+  const isViewingExemplar = !!state.lab.appOptions?.isViewingExemplar;
   const isWidgetView = !!state.lab.levelProperties?.widgetView;
 
   // Exemplar and block edit modes do not have a channel.
@@ -547,6 +548,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
 function setProjectAndLevelData(
   data: {
     levelProperties: LevelProperties;
+    appOptions: AppOptions;
     channel?: Channel;
     initialSources?: ProjectSources;
     abuseScore?: number;
