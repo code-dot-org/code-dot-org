@@ -5,20 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Let’s practice using AI to learn more about AI and its impact.
+#### Let’s use AI to learn more about AI and its impact on various industries. Use this as an opportunity to not only learn something new, but to practice your own prompting skills.
 
 ## Educator’s Choice
 
-#### Everyone is going to research the impact of AI, but the topic you research will be based on your role.
+#### 1. Choose an LLM, such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>, to prompt.
+#### 2. Select the drop-downs below that best aligns with your role to show what you'll be prompting about.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Content Area Teachers</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### Prompt the AI to learn more about how AI is impacting your content area.
+#### **Prompt the AI to learn more about how AI is influencing career pathways connected to your subject.**
 
-#### For example, if you teach biology, you may choose to learn about the latest in AI technology in biomedical fields. 
+#### For example, if you teach biology, biology, you may choose to learn about the latest in AI technology in biomedical fields.
 
 </p></div>
 </details>
@@ -29,9 +30,9 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### Prompt the AI to learn more about how AI is impacting the development of young students.
+#### **Prompt the AI to learn more about how AI is impacting the development of young students.**
 
-#### For example, you could learn more about how access to voice assisted AI technology (like Siri) is impacting communication skills.
+#### For example, you could learn more about how access to voice assisted AI technology (like Siri) is impacting communication skills in pre-K.
  
 </p></div>
 </details>
@@ -41,9 +42,9 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### Prompt the AI to learn more about how AI is affecting administrative and leadership tasks.
+#### **Prompt the AI to learn more about how AI is affecting administrative and leadership tasks.**
 
-#### For example, you could learn how AI can be used for developing goals and growth plans.
+#### For example, you could learn how AI can be used for developing goals and growth plans or in data-informed decision making (attendance, scheduling, intervention planning).
 
 </p></div>
 </details>
@@ -53,19 +54,14 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### Prompt the AI to learn more about how AI is effecting a field you’re interested in.
+#### **Prompt the AI to learn more about how AI is affecting a field you’re interested in.**
 
-#### For example, if you’re curious about dinosaurs you could see how advances in AI have been affecting paleontology.
+#### For example, if you’re curious about dinosaurs you could prompt about how AI has been affecting paleontology, and what tensions or tradeoffs does AI use create in that field.
 
 </p></div>
 </details>
 
-<br>
-
-## To Do
-#### Now that you have your research topic, choose an LLM (<a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>) to prompt.
-
-## Tips and Tricks
+## Prompting Tips and Tricks
 
 * #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
 * #### For more accurate and helpful responses, try to be as detailed as possible in your requests. The more context you provide, the better LLMs can tailor their answers to your needs.

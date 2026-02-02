@@ -3,37 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#### Let’s hear from Sal Khan, the creater of Khan Academy, and Hadi Partovi, the founder of Code.org, on what AI is and its recent impacts.
+# The Changing AI Landscape
 
-<br>
+#### Most people have been using AI for years, even if they didn’t always think of it as “AI.” For a long time, it showed up quietly in everyday tools that handled narrow, specific tasks, such as spellcheck and grammar suggestions, recommendation systems like Netflix or Amazon, and voice assistants that could set timers or answer simple questions. These systems worked by recognizing patterns and following rules. They were useful, but limited, and usually operated in the background.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">A Note on Vocabulary</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### In the past few years, there has been a notable shift. Advances in computing power, access to large amounts of data, and improvements in AI model design have led to a new generation of AI that people interact with directly. Instead of AI making small suggestions behind the scenes, users can now ask questions and receive full responses. Many people have already experienced this by using AI tools (such as ChatGPT or Gemini) to explain ideas, help draft or revise text, or generate images, code, or lesson ideas.
 
-#### We'll dive into all the vocabulary around AI in the next module, but here's a quick refresher of some key terms.
+#### AI is no longer a niche or hidden technology. It is visible, conversational, and widely accessible. Rather than passively receiving AI-generated outputs, people can actively engage with the technology, shaping the responses they get through questions and prompts.
 
->* #### **Artificial Intelligence (AI):** Teaching computers to think and make decisions like humans do.
->* #### **Large Language Models (LLMs):** Huge computer programs that are really good at understanding and generating human-like text based on what they've learned from a vast amount of written material. The technology behind ChatGPT.
->* #### **ChatGPT:** A smart chat program that can write and chat about almost anything by using what it's learned from a lot of books, websites, and other texts.
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📝 Key Points from the Video</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
-
-* #### Recent advances like ChatGPT enable AI to generate creative content and ideas, expanding beyond pattern matching.
-* #### Recent technology progress marked a shift from novelty to practical utility in education, with AI now able to understand and generate meaningful content.
-* #### Generative AI can automate many educational tasks, potentially transforming the role of teachers and students.
-* #### AI's evolving capability to act as a tutor or teaching assistant highlights its transformative potential in education.
-
-</p></div>
-</details>
-
-<br>
-
-
+#### For education, this shift is especially important. Because AI can understand and generate language, it can now support learning in ways that were not previously possible. AI tools can help explain concepts in multiple ways, generate examples or practice opportunities, and provide feedback to students. As a result, AI is moving from a futuristic concept to a practical classroom resource — one that teachers and students are encountering in their daily lives.
 MARKDOWN
