@@ -1,9 +1,8 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {getFolderPath} from '@codebridge/utils';
 import {useEffect, useMemo, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-
-import {getFolderPath} from '../utils';
 
 import {ProjectServiceWorkerMessageType} from './constants';
 import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicyHelper';

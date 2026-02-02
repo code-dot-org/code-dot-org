@@ -1,8 +1,8 @@
 import Button from '@code-dot-org/component-library/button';
 import React from 'react';
 
-import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import commonI18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/share-layout.module.scss';
