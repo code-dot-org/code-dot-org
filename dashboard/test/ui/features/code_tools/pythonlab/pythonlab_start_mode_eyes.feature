@@ -8,9 +8,9 @@ Feature: Python Lab start mode eyes
 Background:
   Given I create a levelbuilder named "Penelope"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?noIntrojs=true&show-ai-tutor=true"
-  And I wait until element "#uitest-extra-links-button" is visible
+  And I wait until element "#uitest-resource-panel-extra-links-button" is visible
   And I wait until element ".project_updated_at" contains text "Saved"
-  And I press "uitest-extra-links-button"
+  And I press "uitest-resource-panel-extra-links-button"
   And I wait until element "a:contains([s]tart)" is visible
   Then I click selector "a:contains([s]tart)" to load a new page
   And I wait to see "#uitest-codebridge-run"
