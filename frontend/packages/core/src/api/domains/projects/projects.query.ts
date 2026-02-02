@@ -1,4 +1,9 @@
-import {useQuery, type UseQueryOptions} from '@tanstack/react-query';
+import {
+  useQuery,
+  useMutation,
+  type UseQueryOptions,
+  type UseMutationOptions,
+} from '@tanstack/react-query';
 import {z} from 'zod';
 
 import type {ApiClient} from '../../client/createApiClient';
@@ -38,6 +43,27 @@ export function useExtraLinksProjectData(
     queryKey: projectsKeys.extraLinks(channelId),
     queryFn: () => api.projects.getExtraLinksData(params),
     enabled: !!channelId,
+    ...options,
+  });
+}
+
+export function useUpdateCommit(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<
+      unknown,
+      Error,
+      {channelId: string; versionId: string; comment: string}
+    >,
+    'mutationFn'
+  >,
+) {
+  return useMutation({
+    mutationFn: (params: {
+      channelId: string;
+      versionId: string;
+      comment: string;
+    }) => api.projects.updateCommit(params),
     ...options,
   });
 }

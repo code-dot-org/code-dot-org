@@ -28,7 +28,7 @@ export function createProjectsApi(transport: Transport) {
      * POST /project_commits
      */
     async updateCommit(params: {
-      channelId: number;
+      channelId: string;
       versionId: string;
       comment: string;
     }) {

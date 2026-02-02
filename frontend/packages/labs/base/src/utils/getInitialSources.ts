@@ -1,18 +1,18 @@
-import {
-  getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
-  getAppOptionsViewingExemplar,
-} from '@code-dot-org/api';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
 import type {LevelProperties} from '@code-dot-org/core/api';
 
-import {START_SOURCES, TOOLBOX_BLOCKS} from '../constants';
+//import {START_SOURCES, TOOLBOX_BLOCKS} from '../constants';
 import type {BlocklyLevelProperties, ProjectSources} from '../types';
 
-const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+// TODO: get app_options instead and do this dynamically
+/*const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isEditingExemplar = getAppOptionsEditingExemplar();
-const isViewingExemplar = getAppOptionsViewingExemplar();
+const isViewingExemplar = getAppOptionsViewingExemplar();*/
+const isStartMode = false;
+const isToolboxMode = false;
+const isEditingExemplar = false;
+const isViewingExemplar = false;
 
 /**
  * Computes which initial sources to present based on level and project information

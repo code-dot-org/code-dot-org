@@ -4,17 +4,16 @@ import {useEffect, useState} from 'react';
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Dialog from '@code-dot-org/component-library/dialog';
 import {StrongText} from '@code-dot-org/component-library/typography';
-import {useCSRF} from '@code-dot-org/user/contexts';
-
-import {FeaturedProjectStatus} from '../../constants';
-import {useApp} from '../../contexts';
-
 import type {
   ExtraLinksLevelData,
   ExtraLinksProjectData,
   ParentLevelPathLink,
   ScriptLevelPathLink,
-} from '../../types';
+} from '@code-dot-org/core/api';
+import {useCSRF} from '@code-dot-org/user/contexts';
+
+import {FeaturedProjectStatus} from '../../constants';
+import {useApp} from '../../contexts';
 
 import moduleStyles from './extra-links.module.scss';
 

@@ -10,7 +10,6 @@ import {
   useContext,
 } from 'react';
 
-import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {
   Channel,
   ProjectSources,
@@ -18,7 +17,6 @@ import type {
 } from '@code-dot-org/core/api';
 import type {ProjectManager} from '@code-dot-org/projects';
 
-import {START_SOURCES} from '../constants';
 import StartOverDialog from '../dialogs/components/StartOverDialog';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import LabRegistry from '../LabRegistry';
@@ -30,7 +28,9 @@ import {getInitialSources as defaultGetInitialSources} from '../utils';
 
 export type MessageType = 'text' | 'blocks' | 'custom';
 
-const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+// TODO: get this from app_options
+//const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+const isStartMode = false;
 
 /**
  * Describes the state of the sources available in the current lab.
@@ -156,7 +156,13 @@ export const SourcesProvider = <
         initialSources,
       ) || defaultSources,
     );
-  }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
+  }, [
+    getInitialSources,
+    reinitializeSources,
+    levelProperties,
+    initialSources,
+    defaultSources,
+  ]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
   const memoizedStartOverSources: ProjectSources<U> = useMemo(() => {

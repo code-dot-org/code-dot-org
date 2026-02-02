@@ -1,5 +1,6 @@
 import {z} from 'zod';
 import {
+  AppOptionsSchema,
   ExtraLinksLevelDataSchema,
   LevelPropertiesBaseSchema,
   LevelPropertiesMapSchema,
@@ -22,6 +23,7 @@ export type LevelPropertiesMap = z.infer<typeof LevelPropertiesMapSchema>;
 export type PredictQuestionType =
   (typeof PredictQuestionTypes)[keyof typeof PredictQuestionTypes];
 
+export type AppOptions = z.infer<typeof AppOptionsSchema>;
 export type ExtraLinksLevelData = z.infer<typeof ExtraLinksLevelDataSchema>;
 export type ParentLevelPathLink = z.infer<typeof ParentLevelPathLinkSchema>;
 export type PredictResponse = z.infer<typeof PredictResponseSchema>;

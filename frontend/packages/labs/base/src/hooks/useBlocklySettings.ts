@@ -1,31 +1,35 @@
-import {useEffect, useState} from 'react';
-
+import {
+  useApiClient,
+  useUpdateThemeSettings,
+  useThemeSettings,
+} from '@code-dot-org/core/api';
 import {useBlocklyContext} from '@code-dot-org/blockly-workspace/contexts';
 import {themes, themeOptions} from '@code-dot-org/blockly-workspace/themes';
 
 import type {Setting} from '../resourcePanel/types';
-import UserPreferences from '../UserPreferences';
 
 const BLOCKLY_THEME = 'blocklyTheme';
 
 export function useBlocklySettings(): Setting[] {
-  const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
+  const api = useApiClient();
+  const {data: themeSettings} = useThemeSettings(api, {
+    errorCallback: () => ({
+      blockly: localStorage.getItem(BLOCKLY_THEME) || themeOptions[0].value,
+    }),
+  });
+  const {mutate: setThemeSettings} = useUpdateThemeSettings(api);
 
   const {setTheme} = useBlocklyContext();
 
-  useEffect(() => {
-    new UserPreferences()
-      .getBlocklyTheme(
-        () => localStorage.getItem(BLOCKLY_THEME) || themeOptions[0].value,
-      )
-      .then((theme: string | undefined) => {
-        setSelectedTheme(theme || themeOptions[0].value);
-      });
-  }, []);
+  const selectedTheme = themeSettings?.blockly || themeOptions[0].value;
 
   const handleBlocklyThemeChange = (name: string) => {
     setTheme(themes[name]);
-    setSelectedTheme(name);
+    setThemeSettings({
+      themeUpdate: {
+        blockly: name,
+      },
+    });
   };
 
   return [

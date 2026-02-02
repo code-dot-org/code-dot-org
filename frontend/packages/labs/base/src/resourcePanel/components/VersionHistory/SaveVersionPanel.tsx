@@ -1,9 +1,9 @@
 import type {FunctionComponent} from 'react';
 import {useCallback, useState} from 'react';
 
-import {HttpClient} from '@code-dot-org/api';
 import {Button} from '@code-dot-org/component-library/button';
 import type {ProjectSources} from '@code-dot-org/projects';
+import {useApiClient, useUpdateCommit} from '@code-dot-org/core/api';
 
 import LabRegistry from '../../../LabRegistry';
 import {setAndSaveProjectSources} from '../../../redux/labProjectSlice';
@@ -29,6 +29,9 @@ const SaveVersionPanel: FunctionComponent<SaveVersionPanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const dispatch = useAppDispatch();
 
+  const api = useApiClient();
+  const {mutateAsync: saveProjectCommit} = useUpdateCommit(api);
+
   const onSaveVersion = useCallback(async () => {
     if (!projectSources || isSaving) return;
     setIsSaving(true);
@@ -50,22 +53,13 @@ const SaveVersionPanel: FunctionComponent<SaveVersionPanelProps> = ({
 
       const newVersionId = projectManager.getCurrentVersionId();
 
-      if (newVersionId && commitDescription.trim()) {
-        const payload = {
-          storage_id: channelId,
-          version_id: newVersionId,
-          comment: commitDescription,
-        };
-
+      if (channelId && newVersionId && commitDescription.trim()) {
         try {
-          await HttpClient.post(
-            '/project_commits',
-            JSON.stringify(payload),
-            true,
-            {
-              'Content-Type': 'application/json; charset=UTF-8',
-            },
-          );
+          await saveProjectCommit({
+            channelId: channelId,
+            versionId: newVersionId,
+            comment: commitDescription,
+          });
           // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
           projectManager.setForceNewVersion(true);
           setCommitDescription('');
@@ -81,6 +75,7 @@ const SaveVersionPanel: FunctionComponent<SaveVersionPanelProps> = ({
       setIsSaving(false);
     }
   }, [
+    saveProjectCommit,
     commitDescription,
     projectSources,
     dispatch,

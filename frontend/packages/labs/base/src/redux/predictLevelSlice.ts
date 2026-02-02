@@ -5,7 +5,9 @@ import {
   createSlice,
 } from '@reduxjs/toolkit';
 
-import * as userLevelsApi from '@code-dot-org/api/userLevels';
+import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
+import {levelsKeys} from '@code-dot-org/core/api';
+
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import type {RootState, AppDispatch} from '../redux/store';
@@ -30,20 +32,30 @@ const initialState: PredictLevelState = {
 // THUNKS
 export const resetPredictProgress = createAsyncThunk<
   void,
-  {scriptId?: number; currentLevelId?: number; userId: number},
+  {
+    apiClient: ApiClient;
+    queryClient: QueryClient;
+    scriptId?: number;
+    currentLevelId?: number;
+    userId: number;
+  },
   {dispatch: AppDispatch; state: RootState}
 >('predictLevel/resetPredictProgress', async (payload, thunkAPI) => {
   try {
-    const response = await userLevelsApi.resetPredictLevelProgress(
-      payload.currentLevelId,
-      payload.scriptId,
+    const {apiClient, queryClient, currentLevelId, scriptId} = payload;
+
+    apiClient.levels.resetPredictLevelProgress({
+      currentLevelId,
+      scriptId,
+    });
+    queryClient.invalidateQueries({
+      queryKey: levelsKeys.all,
+    });
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    thunkAPI.dispatch<any>(
+      progressActions.queryUserProgress(payload.userId.toString()),
     );
-    if (response.ok) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      thunkAPI.dispatch<any>(
-        progressActions.queryUserProgress(payload.userId.toString()),
-      );
-    }
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
   }

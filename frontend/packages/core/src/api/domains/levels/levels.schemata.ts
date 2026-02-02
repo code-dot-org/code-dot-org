@@ -114,3 +114,32 @@ export const ExtraLinksLevelDataSchema = z.object({
   parent_level_path_links: z.array(ParentLevelPathLinkSchema),
   is_standalone_project: z.boolean(),
 });
+
+export const AppOptionsSchema = z.object({
+  levelId: z.number(),
+  channel: z.string().optional(),
+  editBlocks: z.string().optional(),
+  isEditingExemplar: z.boolean().optional(),
+  isViewingExemplar: z.boolean().optional(),
+  share: z.boolean().optional(),
+  theme: z.string().optional(),
+  publicCaching: z.boolean().nullable(),
+  dialog: z
+    .object({
+      skipSound: z.boolean(),
+      preTitle: z.string().nullable(),
+      fallbackResponse: z.string().nullable(),
+      callback: z.string().nullable(),
+      sublevelCallback: z.string().nullable(),
+      app: z.string(),
+      level: z.string(),
+      shouldShowDialog: z.boolean(),
+    })
+    .optional(),
+  experiments: z.array(z.string()).optional(),
+  usingTextModePref: z.boolean().optional(),
+  muteMusic: z.boolean().optional(),
+  displayTheme: z.string().nullable(),
+  userSharingDisabled: z.boolean().optional(),
+  isSignedIn: z.boolean(),
+});

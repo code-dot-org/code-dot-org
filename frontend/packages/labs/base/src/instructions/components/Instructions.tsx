@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import type {FunctionComponent, MutableRefObject, ReactNode} from 'react';
 import {useRef} from 'react';
 
-import {queryParams} from '@code-dot-org/api';
 import TextToSpeech from '@code-dot-org/audio/textToSpeech';
 import {
   type Theme,
@@ -11,6 +10,7 @@ import {
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import InstructorsOnly from '../../components/InstructorsOnly';
+import {queryParams} from '../../utils/queryParams';
 
 import MainInstructionsContent from './MainInstructionsContent';
 import NavigationArea from './NavigationArea';
