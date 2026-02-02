@@ -10,12 +10,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
     {
       "provider": "clever",
-      "uid": "5966ed736b21538e3c000006",
+      "uid": "65cb9c1570fcf808965b9870",
       "info": {
-        "name": "Elizabeth Smith",
-        "first_name": "Elizabeth",
-        "last_name": "Smith",
-        "user_type": "student"
+        "name": "Maurice Schaefer",
+        "first_name": "Maurice",
+        "last_name": "Schaefer",
+        "email": "test@example.com",
+        "user_type": "user"
       },
       "credentials": {
         "token": "faketoken123455678",
@@ -24,11 +25,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       "extra": {
         "raw_info": {
           "me": {
-            "type": "student",
+            "type": "user",
             "data": {
-              "id": "5966ed736b21538e3c000006",
-              "district": "59484d29ae5dee0001fd3291",
-              "type": "student",
+              "id": "65cb9c1570fcf808965b9870",
+              "district": "54299f6ecc544da87c000070",
+              "type": "user",
               "authorized_by": "district"
             },
             "links": [
@@ -38,40 +39,44 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
               },
               {
                 "rel": "canonical",
-                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+                "uri": "/v3.0/users/65cb9c1570fcf808965b9870"
               },
               {
                 "rel": "district",
-                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+                "uri": "/v3.0/districts/54299f6ecc544da87c000070"
               }
             ]
           },
           "canonical": {
             "data": {
-              "created": "2017-07-13T03:48:03.512Z",
-              "district": "59484d29ae5dee0001fd3291",
-              "dob": "2000-05-21T00:00:00.000Z",
-              "enrollments": [],
-              "gender": "M",
-              "hispanic_ethnicity": "",
-              "last_modified": "2017-11-02T00:49:40.504Z",
+              "created": "2024-02-13T16:43:22.075Z",
+              "district": "54299f6ecc544da87c000070",
+              "email": "test@example.com",
+              "last_modified": "2024-02-13T16:43:22.075Z",
               "name": {
-                "first": "Elizabeth",
-                "last": "Smith",
-                "middle": ""
+                "first": "Maurice",
+                "last": "Schaefer"
               },
-              "race": "",
-              "school": "5966ed6cf9d478523c000004",
-              "schools": [
-                "5966ed6cf9d478523c000004"
-              ],
-              "sis_id": "202",
-              "id": "5966ed736b21538e3c000006"
+              "roles": {
+                "student": {
+                  "dob": "2012-02-12T00:00:00.000Z",
+                  "enrollments": [],
+                  "gender": "X",
+                  "hispanic_ethnicity": "Y",
+                  "race": "Race",
+                  "school": "65cb9c1570fcf808965b986d",
+                  "schools": [
+                    "65cb9c1570fcf808965b986d"
+                  ],
+                  "sis_id": "10435651"
+                }
+              },
+              "id": "65cb9c1570fcf808965b9870"
             },
             "links": [
               {
                 "rel": "self",
-                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+                "uri": "/v3.0/users/65cb9c1570fcf808965b9870"
               }
             ]
           }
@@ -192,10 +197,23 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         nickname: '',
         name: {'first' => 'Hat', 'last' => 'Cat'},
         email: 'first_last@clever-teacher.xx',
-        user_type: 'teacher',
+        user_type: 'user',
         dob: nil,
         gender: nil
       },
+      extra: {
+        raw_info: {
+          canonical: {
+            data: {
+              roles: {
+                teacher: {
+                  sis_id: '123456'
+                }
+              }
+            }
+          }
+        }
+      }
     )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -219,10 +237,23 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         nickname: '',
         name: {'first' => 'Hat', 'last' => 'Cat'},
         email: nil,
-        user_type: 'teacher',
+        user_type: 'user',
         dob: nil,
         gender: nil
       },
+      extra: {
+        raw_info: {
+          canonical: {
+            data: {
+              roles: {
+                teacher: {
+                  sis_id: '123456'
+                }
+              }
+            }
+          }
+        }
+      }
     )
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}

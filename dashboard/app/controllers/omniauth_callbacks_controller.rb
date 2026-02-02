@@ -38,7 +38,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def clever
     return connect_provider if should_connect_provider?
 
-    user = find_user_by_credential
+    user = find_user_by_credential || find_clever_user_by_legacy_id # TODO: remove legacy_id lookup once Clever v3 migration is complete
     return link_accounts user if should_link_accounts?
     if user
       sign_in_clever user
@@ -154,6 +154,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       hashed_email: hashed_email || '',
       credential_type: provider,
       authentication_id: auth_hash.uid,
+      # TODO: Change this to :v3 once Carl merges the new Clever OAuth versioning changes.
+      version: provider == AuthenticationOption::CLEVER ? AuthenticationOption::Clever::VERSION[:v3_1] : nil,
       data: new_data
     )
 
@@ -282,12 +284,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def sign_in_clever(user)
+    puts "Signing in clever user, #{auth_hash.to_json}"
     prepare_locale_cookie user
     user.update_oauth_credential_tokens auth_hash
     sign_in_user user
   end
 
   private def sign_up_clever
+    puts "Signing up clever user, #{auth_hash.to_json}"
     session[:sign_up_type] = AuthenticationOption::CLEVER
 
     auth_hash = inject_clever_data(auth_hash())
@@ -301,13 +305,24 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return redirect_to users_existing_account_path({provider: auth_hash.provider, email: email}) if email_already_exists
     end
 
+    # Get user type from Clever roles if not already specified
+    roles = auth_hash&.extra&.raw_info&.canonical&.data&.roles || {}
+    teacher_role_keys = %w[teacher staff].freeze
+    teacher_or_staff = roles.any? do |role, value|
+      teacher_role_keys.include?(role.to_s) && value.present?
+    end
+    user_type = teacher_or_staff ? User::TYPE_TEACHER : User::TYPE_STUDENT
+    puts "User type determined to be #{user_type} based on Clever roles: #{roles.to_json}"
+
     params = auth_params.presence || {}
+    cookies['sign_up_user_type'] = user_type unless params[:user_type]
     params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
     user = User.new.tap do |u|
       User.initialize_new_oauth_user(u, auth_hash, params)
       u.oauth_token = auth_hash.credentials&.token
       u.oauth_token_expiration = auth_hash.credentials&.expires_at
       u.oauth_refresh_token = auth_hash.credentials&.refresh_token
+      u.user_type = user_type
       prepare_locale_cookie u
     end
 
@@ -320,6 +335,20 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     User.find_by_credential \
       type: auth_hash.provider,
       id: auth_hash.uid
+  end
+
+  # Temporary method to find existing Clever users by their legacy_id field
+  private def find_clever_user_by_legacy_id
+    return nil unless auth_hash
+    # Teacher users in Clever have a legacy_id field in the v3 API response.
+    legacy_id = auth_hash.extra&.raw_info&.canonical&.data&.roles&.teacher&.legacy_id
+    return nil unless legacy_id
+
+    puts "Looking up clever user by legacy id: #{legacy_id}"
+
+    User.find_by_credential \
+      type: auth_hash.provider,
+      id: legacy_id
   end
 
   private def auth_hash
