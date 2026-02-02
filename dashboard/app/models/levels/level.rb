@@ -941,15 +941,26 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
 
-    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
-    # project template level as this level.
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level or the level's parent.
+    # In addition, show the rubric if the evaluation level shares the same project template level as this level.
+    # If the level is a sublevel and has a project template level, also show the rubric if the evaluation level has a sublevel
+    # with the same project template level.
     rubric_level_id = script_level&.lesson&.rubric&.level_id
     if rubric_level_id
-      if rubric_level_id == id
+      current_parent = parent_levels.find do |parent|
+        parent.script_levels.find do |script|
+          script&.script_id == script_level&.script_id
+        end
+      end
+      if rubric_level_id == id || rubric_level_id == current_parent&.id
         properties_camelized[:showRubric] = true
       else
-        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
-        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+        rubric_level = Level.find(rubric_level_id)
+        rubric_template_level = rubric_level&.try(:project_template_level)
+        rubric_templates_for_sublevels = rubric_level&.try(:sublevels)&.map {|sublevel| sublevel.try(:project_template_level)} || []
+        if try(:project_template_level)
+          properties_camelized[:showRubric] = (rubric_template_level && rubric_template_level == try(:project_template_level)) || rubric_templates_for_sublevels.include?(try(:project_template_level))
+        end
       end
     end
     properties_camelized
