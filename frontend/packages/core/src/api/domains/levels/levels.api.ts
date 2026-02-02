@@ -7,6 +7,7 @@ import {
   LevelPropertiesMapSchema,
   PredictResponseSchema,
   SectionSummarySchema,
+  UserAppOptionsSchema,
 } from './levels.schemata';
 
 export function createLevelsApi(transport: Transport) {
@@ -132,6 +133,22 @@ export function createLevelsApi(transport: Transport) {
       });
 
       return AppOptionsSchema.parse(raw);
+    },
+
+    async getUserAppOptions(params: {
+      scriptName: string;
+      lessonPosition: number;
+      levelPosition: number;
+      levelId: number;
+    }) {
+      const {scriptName, lessonPosition, levelPosition, levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${levelId}`,
+      });
+
+      return UserAppOptionsSchema.parse(raw);
     },
   };
 }

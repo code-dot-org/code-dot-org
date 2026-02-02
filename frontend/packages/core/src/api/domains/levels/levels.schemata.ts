@@ -117,7 +117,7 @@ export const ExtraLinksLevelDataSchema = z.object({
 
 export const AppOptionsSchema = z.object({
   levelId: z.number(),
-  channel: z.string().optional(),
+  channel: z.string().nullable(),
   editBlocks: z.string().optional(),
   isEditingExemplar: z.boolean().optional(),
   isViewingExemplar: z.boolean().optional(),
@@ -142,4 +142,15 @@ export const AppOptionsSchema = z.object({
   displayTheme: z.string().nullable(),
   userSharingDisabled: z.boolean().optional(),
   isSignedIn: z.boolean(),
+});
+
+export const UserAppOptionsSchema = z.object({
+  signedIn: z.boolean(),
+  isInstructor: z.boolean().optional(),
+  isStarted: z.boolean().optional(),
+  skipInstructionsPopup: z.boolean().optional(),
+  callouts: z.array(z.string()).optional(),
+  disableSocialShare: z.boolean().optional(),
+  channel: z.string().optional(),
+  reduceChannelUpdates: z.boolean().optional(),
 });
