@@ -35,33 +35,10 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'generate_podcast works when SingleUserExperiment is enabled' do
-    sign_in @teacher
-
-    # Mock the experiment to be enabled
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-
-    # Mock the helper methods
-    AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
-    AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
-
-    post :generate_podcast, params: {
-      lesson_id: @lesson.id,
-      unit_id: @unit.id,
-      lesson_summary: "Test summary",
-    }
-
-    assert_response :success
-    assert_equal 'audio/mpeg', response.content_type
-    assert_equal "attachment; filename=\"podcast.mp3\"; filename*=UTF-8''podcast.mp3", response.headers['Content-Disposition']
-    assert_equal @test_audio_data, response.body
-  end
-
   test 'generate_podcast works when DCDO flag is enabled' do
     sign_in @teacher
 
-    # Mock the experiment to be disabled but DCDO flag enabled
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(false)
+    # Mock the DCDO flag enabled
     DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Mock the helper methods
@@ -88,7 +65,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Expect the helpers
     AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
@@ -106,8 +83,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(false)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Mock the helpers to raise an error
     AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
@@ -130,7 +106,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Mock the helper methods
     AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
@@ -152,7 +128,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Mock with different audio data
     different_audio_data = "different_mp3_binary_content"
@@ -176,7 +152,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     # Enable access
-    SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
     AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
     AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
