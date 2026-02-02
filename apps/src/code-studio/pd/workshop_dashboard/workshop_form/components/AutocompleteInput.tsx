@@ -29,6 +29,7 @@ export const AutocompleteInput = memo(
     errorMessage,
     id,
     onEnter,
+    hideIcon = false,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
@@ -42,6 +43,7 @@ export const AutocompleteInput = memo(
     fetchOptions: (value: string) => Promise<string[]>;
     errorMessage?: string;
     onEnter?: (value: string) => void;
+    hideIcon?: boolean;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -134,7 +136,12 @@ export const AutocompleteInput = memo(
     };
 
     return (
-      <div ref={containerRef} className={styles.autocompleteInputContainer}>
+      <div
+        ref={containerRef}
+        className={classNames(styles.autocompleteInputContainer, {
+          [styles.hideIcon]: hideIcon,
+        })}
+      >
         <TextField
           name={name}
           label={label}
@@ -154,11 +161,13 @@ export const AutocompleteInput = memo(
             activeIndex >= 0 ? `${listboxId}-item-${activeIndex}` : undefined
           }
         />
-        <FontAwesomeV6Icon
-          iconName={loading ? 'spinner' : 'magnifying-glass'}
-          animationType={loading ? 'spin' : undefined}
-          aria-hidden={true}
-        />
+        {!hideIcon && (
+          <FontAwesomeV6Icon
+            iconName={loading ? 'spinner' : 'magnifying-glass'}
+            animationType={loading ? 'spin' : undefined}
+            aria-hidden={true}
+          />
+        )}
         {options.length > 0 && (
           <ul
             id={listboxId}

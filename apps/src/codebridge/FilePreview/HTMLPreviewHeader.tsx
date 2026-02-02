@@ -119,6 +119,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           className={moduleStyles.urlBarInput}
           onChange={handleInputChange}
           onEnter={onSubmit}
+          hideIcon
           value={value}
           fetchOptions={fetchOptions}
           placeholder=""
