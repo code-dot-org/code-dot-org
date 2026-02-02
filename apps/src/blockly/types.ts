@@ -154,7 +154,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   overrideFields: (
     overrides: [string, string, BlocklyCore.fieldRegistry.RegistrableField][]
   ) => void;
-  loopHighlight: (apiName: string, blockId: string) => string;
   getWorkspaceCode: () => string;
   addChangeListener: (
     blockspace: BlocklyCore.Workspace,

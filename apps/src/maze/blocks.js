@@ -26,6 +26,7 @@ import {utils as mazeUtils} from '@code-dot-org/maze';
 
 import {
   INFINITE_LOOP_TRAP,
+  loopHighlight,
   registerCustomProcedureBlocks,
 } from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
@@ -409,8 +410,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.maze_forever = function () {
     // Generate JavaScript for do forever loop.
     var branch = generator.statementToCode(this, 'DO');
-    branch =
-      INFINITE_LOOP_TRAP + Blockly.loopHighlight('Maze', this.id) + branch;
+    branch = INFINITE_LOOP_TRAP + loopHighlight('Maze', this.id) + branch;
     return 'while (Maze.notFinished()) {\n' + branch + '}\n';
   };
 

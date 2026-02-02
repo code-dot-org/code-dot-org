@@ -113,7 +113,6 @@ import {
   BlocklyCoreInstance,
 } from './types';
 import {
-  LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
   initializeVariableLocalization,
@@ -206,16 +205,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const blocklyWrapper = new (BlocklyWrapper as any)(
     blocklyInstance
   ) as BlocklyWrapperType;
-
-  blocklyWrapper.loopHighlight = function (apiName, blockId) {
-    let args = "'block_id_" + blockId + "'";
-    if (blockId === undefined) {
-      args = '%1';
-    }
-    return (
-      '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')')
-    );
-  };
 
   blocklyWrapper.getWorkspaceCode = function () {
     return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
