@@ -5,6 +5,7 @@ import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
+import {useLoadAppOptions} from '../hooks/useLoadAppOptions';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import {labActions, labProjectActions} from '../redux';
@@ -50,6 +51,7 @@ export const ProjectProvider = ({
   const apiClient = useApiClient();
   const queryClient = useQueryClient();
   const levelProperties = useMaybeLevelProperties();
+  const {appOptions} = useLoadAppOptions();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const userId = useAppSelector(
     state => state.progress.viewAsUserId || undefined,
@@ -90,11 +92,12 @@ export const ProjectProvider = ({
     // we will load the project based on that channel id, otherwise we will look up a channel id
     // for the level.
     const promise =
-      currentLevelId && levelProperties
+      currentLevelId && levelProperties && appOptions
         ? dispatch(
             labActions.setUpWithLevel({
               apiClient,
               queryClient,
+              appOptions,
               levelId: currentLevelId,
               userId,
               scriptId,
@@ -111,7 +114,9 @@ export const ProjectProvider = ({
       promise?.abort();
     };
   }, [
+    appOptions,
     apiClient,
+    queryClient,
     channelId,
     currentLevelId,
     scriptId,
