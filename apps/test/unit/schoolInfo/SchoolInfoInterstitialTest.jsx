@@ -82,7 +82,7 @@ describe('SchoolInfoInterstitial', () => {
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_SHOW,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     });
   });
@@ -111,7 +111,7 @@ describe('SchoolInfoInterstitial', () => {
           hasNcesId: 'true',
           attempt: 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       expect(mockSendEvent).toHaveBeenCalledWith(
@@ -119,7 +119,7 @@ describe('SchoolInfoInterstitial', () => {
         {
           attempt: 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       expect(mockOnClose).toHaveBeenCalled();
@@ -144,7 +144,7 @@ describe('SchoolInfoInterstitial', () => {
           hasNcesId: 'true',
           attempt: 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       expect(mockSendEvent).toHaveBeenCalledWith(
@@ -152,7 +152,7 @@ describe('SchoolInfoInterstitial', () => {
         {
           attempt: 1,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       expect(
@@ -172,7 +172,7 @@ describe('SchoolInfoInterstitial', () => {
           hasNcesId: 'true',
           attempt: 2,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       expect(mockSendEvent).toHaveBeenCalledWith(
@@ -180,7 +180,7 @@ describe('SchoolInfoInterstitial', () => {
         {
           attempt: 2,
         },
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
 
       expect(mockOnClose).toHaveBeenCalled();
@@ -198,7 +198,7 @@ describe('SchoolInfoInterstitial', () => {
       expect(mockSendEvent).toHaveBeenCalledWith(
         EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
         {},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
       expect(mockOnClose).toHaveBeenCalled();
     });

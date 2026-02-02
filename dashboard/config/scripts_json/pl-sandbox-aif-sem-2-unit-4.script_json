@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-26 15:41:02 UTC",
+    "serialized_at": "2026-01-28 17:17:11 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -97,12 +97,35 @@
       }
     },
     {
-      "key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9",
+      "key": "5a6f4092-5503-42ef-94fd-1265729b3cc0",
       "position": 4,
       "properties": {
+        "progression_name": "Filtering and Transparency"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0",
+        "lesson_activity.key": "faa2c7dc-6c1f-4203-bb25-3b7b0d770445"
+      }
+    },
+    {
+      "key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Copying Data"
       },
       "seeding_key": {
         "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9",
+        "lesson_activity.key": "faa2c7dc-6c1f-4203-bb25-3b7b0d770445"
+      }
+    },
+    {
+      "key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5",
+      "position": 6,
+      "properties": {
+        "progression_name": "Filtering Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5",
         "lesson_activity.key": "faa2c7dc-6c1f-4203-bb25-3b7b0d770445"
       }
     }
@@ -511,13 +534,13 @@
     {
       "chapter": 17,
       "position": 17,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-aif-2-U4-filters-intro"
         ],
-        "progression": "Displaying Objects with Loops"
+        "progression": "Filtering and Transparency"
       },
       "bonus": false,
       "seeding_key": {
@@ -527,7 +550,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
         "pl-aif-2-U4-filters-intro"
@@ -536,13 +559,13 @@
     {
       "chapter": 18,
       "position": 18,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-aif-2-U4-filters-active-bubble"
         ],
-        "progression": "Displaying Objects with Loops"
+        "progression": "Filtering and Transparency"
       },
       "bonus": false,
       "seeding_key": {
@@ -552,7 +575,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
         "pl-aif-2-U4-filters-active-bubble"
@@ -561,13 +584,13 @@
     {
       "chapter": 19,
       "position": 19,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-aif-2-U4-filtering-boolean-logic-weblab"
         ],
-        "progression": "Displaying Objects with Loops"
+        "progression": "Filtering and Transparency"
       },
       "bonus": false,
       "seeding_key": {
@@ -577,7 +600,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
         "pl-aif-2-U4-filtering-boolean-logic-weblab"
@@ -586,13 +609,13 @@
     {
       "chapter": 20,
       "position": 20,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "pl-aif-2-U4-fallback-bias-reflection"
         ],
-        "progression": "Displaying Objects with Loops"
+        "progression": "Filtering and Transparency"
       },
       "bonus": false,
       "seeding_key": {
@@ -602,10 +625,154 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
         "pl-aif-2-U4-fallback-bias-reflection"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-pure-methods-vocab"
+        ],
+        "progression": "Copying Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-pure-methods-vocab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-pure-methods-vocab"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-functions-side-effects-cfu"
+        ],
+        "progression": "Copying Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-functions-side-effects-cfu"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-functions-side-effects-cfu"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-cop-dont-mutate"
+        ],
+        "progression": "Copying Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-cop-dont-mutate"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-cop-dont-mutate"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-fix-reset-webLab"
+        ],
+        "progression": "Copying Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-fix-reset-webLab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-fix-reset-webLab"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-and-threshold"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filter-and-threshold"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-threshold-likes-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-threshold-likes-weblab"
       ]
     }
   ],
@@ -811,7 +978,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       }
     },
     {
@@ -823,7 +990,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       }
     },
     {
@@ -835,7 +1002,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       }
     },
     {
@@ -847,7 +1014,79 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+        "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-pure-methods-vocab",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-pure-methods-vocab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-functions-side-effects-cfu",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-functions-side-effects-cfu"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-cop-dont-mutate",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-cop-dont-mutate"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-fix-reset-webLab",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-fix-reset-webLab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "08b6b5a7-2414-42be-bca8-98b1cb0eadd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-filter-and-threshold",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-and-threshold"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-threshold-likes-weblab",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-threshold-likes-weblab"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "19c06cc7-0c24-4e43-8b0b-5ac2a55851b5"
       }
     }
   ],

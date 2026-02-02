@@ -1,0 +1,10 @@
+name 'pl-ai-101-V2-mod1-literacy-03'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# 
+
+#### AI Lit Framework overview - more time will be spent on this topic in Module 4, Bringing AI to the Classroom.
+
+MARKDOWN

@@ -44,7 +44,7 @@ export const LtiDynamicRegistrationPage = ({
         analyticsReporter.sendEvent(
           EVENTS.LTI_DYNAMIC_REGISTRATION_COMPLETED,
           {lms_name: lmsName},
-          PLATFORMS.BOTH
+          PLATFORMS.STATSIG
         );
       },
       error: xhr => {

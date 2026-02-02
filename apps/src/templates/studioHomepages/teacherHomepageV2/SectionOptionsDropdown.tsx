@@ -31,7 +31,7 @@ const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
   const hideShowEvent = section.hidden
     ? EVENTS.SECTION_CARD_RESTORE_CLICKED
     : EVENTS.SECTION_CARD_ARCHIVE_CLICKED;
-  analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
+  analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.STATSIG);
   dispatch(toggleSectionHidden(section.id));
 };
 
@@ -42,7 +42,7 @@ const onDeleteClick = (
   analyticsReporter.sendEvent(
     EVENTS.SECTION_CARD_DELETE_CLICKED,
     {},
-    PLATFORMS.BOTH
+    PLATFORMS.STATSIG
   );
   onDeleteClickCallback(sectionId);
 };
@@ -61,7 +61,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
     analyticsReporter.sendEvent(
       EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     HttpClient.fetchJson<Student[]>(
       `/dashboardapi/sections/${section.id}/students`

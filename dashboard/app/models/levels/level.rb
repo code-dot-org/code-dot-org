@@ -43,6 +43,13 @@ class Level < ApplicationRecord
   has_many :hint_view_requests
   has_many :rubrics, dependent: :destroy
 
+  scope :with_ai_tutor_available, -> {where("levels.properties->>'$.ai_tutor_available' = 'true'")}
+
+  # scope for levels that require ai chat tools to reasonably function.
+  scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
+
+  scope :with_any_ai_chat_tools, -> {with_essential_ai_chat_tools.or(with_ai_tutor_available)}
+
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
 
@@ -517,10 +524,6 @@ class Level < ApplicationRecord
     # Levelbuilders can select if External/
     # Markdown levels should display as Unplugged.
     unplugged? || properties["display_as_unplugged"] == "true"
-  end
-
-  def ai_tutor_available?
-    properties["ai_tutor_available"] == "true" || properties["ai_tutor_available"] == true
   end
 
   def summarize

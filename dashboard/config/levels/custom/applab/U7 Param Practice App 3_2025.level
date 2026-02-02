@@ -81,6 +81,7 @@
     "name_suffix": "_2025",
     "ai_enabled": "false",
     "data_library_tables": "TheRoot: 100 Influential African Americans",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

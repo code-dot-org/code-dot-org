@@ -11,7 +11,6 @@ interface FeedbackData {
 
 interface UseLessonFeedbackProps {
   lessonId: number | null;
-  studentId: number;
   teacherHasEnabledAi: boolean;
 }
 
@@ -52,7 +51,6 @@ interface UseLessonFeedbackReturn {
 
 export const useLessonFeedback = ({
   lessonId,
-  studentId,
   teacherHasEnabledAi,
 }: UseLessonFeedbackProps): UseLessonFeedbackReturn => {
   // State management

@@ -2,11 +2,7 @@ import $ from 'jquery';
 import jsonic from 'jsonic';
 
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {
-  getUserTheme,
-  parseElement,
-  shrinkBlockSpaceContainer,
-} from '@cdo/apps/blockly/utils';
+import {getUserTheme, shrinkBlockSpaceContainer} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import animationList, {
@@ -18,6 +14,7 @@ import {
   exampleSprites,
 } from '@cdo/apps/p5lab/spritelab/constants';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {parseElement} from '@cdo/apps/xml';
 
 function renderBlock(element) {
   const name = element.id;
