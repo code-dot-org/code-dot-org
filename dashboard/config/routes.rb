@@ -1195,6 +1195,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
+
     resources :ai_lesson_summary_podcasts do
       collection do
         get :generate_podcast, controller: :ai_lesson_summary_podcasts, action: :generate_podcast

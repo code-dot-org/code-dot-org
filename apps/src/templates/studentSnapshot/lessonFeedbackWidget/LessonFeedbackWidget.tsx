@@ -4,7 +4,7 @@ import {
   BodyThreeText,
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 import i18n from '@cdo/locale';
@@ -28,8 +28,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   studentId,
   teacherHasEnabledAi = false,
 }) => {
+  const [initialFeedback, setInitialFeedback] = useState<string>('');
+  const [feedbackLoading, setFeedbackLoading] = useState<boolean>(false);
+  const [feedbackError, setFeedbackError] = useState<string | null>(null);
+
+  // Existing hook usage
   const {
-    // State values
     isLoading,
     error,
     scrollable,
@@ -40,7 +44,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     showAddResourcePopup,
     tempResourceName,
     tempResourceLink,
-    // Event handlers
     handleFeedbackEdited,
     handleRecommendedActionChange,
     handleAddResourceClick,
@@ -57,13 +60,33 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     teacherHasEnabledAi,
   });
 
+  // Fetch lesson feedback from backend
+  useEffect(() => {
+    async function fetchLessonFeedback() {
+      if (!lessonId || !studentId) return;
+      setFeedbackLoading(true);
+      setFeedbackError(null);
+      try {
+        const response = await fetch(
+          `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
+        );
+        if (!response.ok) throw new Error('Failed to fetch feedback');
+        const data = await response.json();
+        setInitialFeedback(data.saved_feedback);
+      } catch (error) {
+        setFeedbackError('Error in final step:' + error);
+      } finally {
+        setFeedbackLoading(false);
+      }
+    }
+    fetchLessonFeedback();
+  }, [lessonId, studentId]);
+
   let widgetContent: React.ReactNode;
-
-  // TODO: Load feedback data from server when API is available - building off Liam's Lesson Insight work
-  // Update state according to the data from back end
-
-  if (error) {
-    widgetContent = <BodyThreeText>{error}</BodyThreeText>;
+  if (error || feedbackError) {
+    widgetContent = <BodyThreeText>{error || feedbackError}</BodyThreeText>;
+  } else if (feedbackLoading) {
+    widgetContent = <BodyThreeText>Loading feedback...</BodyThreeText>;
   } else {
     widgetContent = (
       <div className={styles.topContainer}>
@@ -76,7 +99,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         <div className={styles.feedbackTextBoxWrapper}>
           <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
           <FeedbackTextbox
-            feedbackText={feedbackText}
+            feedbackText={feedbackText || initialFeedback}
             onFeedbackChange={handleFeedbackEdited}
           />
         </div>

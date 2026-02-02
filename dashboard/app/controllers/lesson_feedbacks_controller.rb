@@ -22,6 +22,18 @@ class LessonFeedbacksController < ApplicationController
     end
   end
 
+  # GET /lesson_feedbacks/saved_feedback?student_id=...&lesson_id=...
+  def saved_feedback
+    student_id = params[:student_id]
+    lesson_id = params[:lesson_id]
+    feedback = LessonFeedback.find_by(student_id: student_id, lesson_id: lesson_id)
+    if feedback
+      render json: feedback
+    else
+      render json: {errors: feedback.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
   def lesson_feedback_params
     params.require(:lesson_feedback).permit(
       :teacher_id,
