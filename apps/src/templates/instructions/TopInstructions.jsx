@@ -44,7 +44,7 @@ import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
 import {hasInstructions} from './utils';
 
-import styles from './TopInstructions.module.scss';
+import styles from './top-instructions.module.scss';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];

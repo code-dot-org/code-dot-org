@@ -7,7 +7,7 @@ import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 
 import {convertXmlToBlockly} from './utils';
 
-import styles from './MarkdownInstructions.module.scss';
+import styles from './markdown-instructions.module.scss';
 
 class MarkdownInstructions extends React.Component {
   static propTypes = {

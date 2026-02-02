@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
 
-import styles from './ResourceLink.module.scss';
+import styles from './resource-link.module.scss';
 
 class ResourceLink extends React.Component {
   static propTypes = {

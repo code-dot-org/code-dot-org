@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import styles from './ChatBubbleTip.module.scss';
+import styles from './chat-bubble-tip.module.scss';
 
 const ChatBubbleTip = ({isRtl, color, background, isDashed}) => {
   background = background || 'white';

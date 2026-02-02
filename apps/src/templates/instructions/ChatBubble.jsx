@@ -8,7 +8,7 @@ import ChatBubbleTip from './ChatBubbleTip';
 import InlineAudio from './InlineAudio';
 import {shouldDisplayChatTips} from './utils';
 
-import styles from './ChatBubble.module.scss';
+import styles from './chat-bubble.module.scss';
 
 var audioStyle = {
   wrapper: {

@@ -7,7 +7,7 @@ import ReactTooltip from 'react-tooltip';
 import {CheckedRadioButton} from '@cdo/apps/templates/instructions/teacherFeedback/CheckedRadioButton';
 import i18n from '@cdo/locale';
 
-import styles from './RubricField.module.scss';
+import styles from './rubric-field.module.scss';
 
 const rubricPerformanceHeaders = {
   performanceLevel1: i18n.rubricLevelOneHeader(),

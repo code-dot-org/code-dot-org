@@ -6,7 +6,7 @@ import msg from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
-import styles from './CollapserButton.module.scss';
+import styles from './collapser-button.module.scss';
 
 /**
  * A button for toggling the collapse state of instructions in CSF

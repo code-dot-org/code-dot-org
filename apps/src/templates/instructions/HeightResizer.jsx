@@ -8,7 +8,7 @@ import React from 'react';
 
 import styleConstants from '../../styleConstants';
 
-import styles from './HeightResizer.module.scss';
+import styles from './height-resizer.module.scss';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
