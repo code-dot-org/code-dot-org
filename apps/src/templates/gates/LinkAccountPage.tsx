@@ -44,7 +44,7 @@ const LinkAccountPage: React.FunctionComponent = () => {
     analyticsReporter.sendEvent(
       EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
       {source: sourcePage},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
   }, [sourcePage]);
 

@@ -203,7 +203,7 @@ $(document).ready(() => {
   analyticsReporter.sendEvent(
     EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED,
     {'user type': userType},
-    PLATFORMS.BOTH
+    PLATFORMS.STATSIG
   );
 
   initializeCreatePersonalAccountControls();
