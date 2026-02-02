@@ -28,7 +28,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Mock the experiment and DCDO checks
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(false)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(false)
 
     post :generate_podcast
 
@@ -62,7 +62,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Mock the experiment to be disabled but DCDO flag enabled
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(false)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(true)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
 
     # Mock the helper methods
     AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
@@ -107,7 +107,7 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
 
     # Enable access
     SingleUserExperiment.stubs(:enabled?).with(user: @teacher, experiment_name: 'ai_lesson_summaries').returns(true)
-    DCDO.stubs(:get).with('show-aita-lesson-summaries', false).returns(false)
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(false)
 
     # Mock the helpers to raise an error
     AiLessonSummariesHelper.stubs(:generate_lesson_summary).returns(@test_script_response)
