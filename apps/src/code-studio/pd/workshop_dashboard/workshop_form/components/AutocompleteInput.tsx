@@ -73,6 +73,10 @@ export const AutocompleteInput = memo(
         skipApi.current = false;
         return;
       }
+      if (!value || value.length < 3) {
+        reset();
+        return;
+      }
       if (debouncedValue && debouncedValue.length >= 3) {
         const fetchSuggestions = async () => {
           try {
@@ -88,7 +92,7 @@ export const AutocompleteInput = memo(
         };
         fetchSuggestions();
       }
-    }, [debouncedValue, fetchOptions]);
+    }, [debouncedValue, fetchOptions, reset, value]);
 
     const handleSelectOption = useCallback(
       (option: string) => {
