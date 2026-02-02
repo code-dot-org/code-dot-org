@@ -63,5 +63,6 @@
 }
 
 .craftBody {
-  background-color: $below_header_background;
+  // $below-header-background from craft/style.scss
+  background-color: '#646464';
 }
