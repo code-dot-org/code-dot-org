@@ -1,0 +1,15 @@
+name 'pl-ai-101-V2-mod1-whatai-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Changing AI Landscape
+
+#### Most people have been using AI for years, even if they didn’t always think of it as “AI.” For a long time, it showed up quietly in everyday tools that handled narrow, specific tasks, such as spellcheck and grammar suggestions, recommendation systems like Netflix or Amazon, and voice assistants that could set timers or answer simple questions. These systems worked by recognizing patterns and following rules. They were useful, but limited, and usually operated in the background.
+
+#### In the past few years, there has been a notable shift. Advances in computing power, access to large amounts of data, and improvements in AI model design have led to a new generation of AI that people interact with directly. Instead of AI making small suggestions behind the scenes, users can now ask questions and receive full responses. Many people have already experienced this by using AI tools (such as ChatGPT or Gemini) to explain ideas, help draft or revise text, or generate images, code, or lesson ideas.
+
+#### AI is no longer a niche or hidden technology. It is visible, conversational, and widely accessible. Rather than passively receiving AI-generated outputs, people can actively engage with the technology, shaping the responses they get through questions and prompts.
+
+#### For education, this shift is especially important. Because AI can understand and generate language, it can now support learning in ways that were not previously possible. AI tools can help explain concepts in multiple ways, generate examples or practice opportunities, and provide feedback to students. As a result, AI is moving from a futuristic concept to a practical classroom resource — one that teachers and students are encountering in their daily lives.
+MARKDOWN
