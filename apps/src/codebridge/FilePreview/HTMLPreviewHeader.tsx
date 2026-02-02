@@ -120,6 +120,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           onChange={handleInputChange}
           onEnter={onSubmit}
           hideIcon
+          compactOptions
           value={value}
           fetchOptions={fetchOptions}
           placeholder=""

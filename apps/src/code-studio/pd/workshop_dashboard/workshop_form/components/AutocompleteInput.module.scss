@@ -46,8 +46,7 @@
     }
 
     .optionItem {
-      padding: 0.125rem 0.75rem;
-      line-height: 20px;
+      padding: 0.5rem 1rem;
       cursor: pointer;
 
       &.active {
@@ -55,6 +54,13 @@
         outline-offset: -2px;
         background-color: var(--background-neutral-tertiary);
       }
+    }
+  }
+
+  &.compactOptions {
+    .optionItem {
+      padding: 0.125rem 0.75rem;
+      line-height: 20px;
     }
   }
 }

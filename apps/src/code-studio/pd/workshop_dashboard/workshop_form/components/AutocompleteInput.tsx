@@ -30,6 +30,7 @@ export const AutocompleteInput = memo(
     id,
     onEnter,
     hideIcon = false,
+    compactOptions = false,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
@@ -44,6 +45,7 @@ export const AutocompleteInput = memo(
     errorMessage?: string;
     onEnter?: (value: string) => void;
     hideIcon?: boolean;
+    compactOptions?: boolean;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -140,6 +142,7 @@ export const AutocompleteInput = memo(
         ref={containerRef}
         className={classNames(styles.autocompleteInputContainer, {
           [styles.hideIcon]: hideIcon,
+          [styles.compactOptions]: compactOptions,
         })}
       >
         <TextField
