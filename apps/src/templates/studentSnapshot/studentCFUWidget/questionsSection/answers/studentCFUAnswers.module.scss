@@ -84,6 +84,10 @@
       border: 1px solid var(--borders-neutral-primary, #D4DAE1);
       background: var(--background-neutral-primary, #FFF);
 
+      > div:first-child {
+        flex: 1;
+      }
+
       &.correctOptionMatch {
         border: 1px solid var(--borders-success-primary, #3EA33E);
         background: var(--background-success-extra-light, #E2F6E2);

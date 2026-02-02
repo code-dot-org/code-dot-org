@@ -3,6 +3,8 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
 import {
   CFULevel,
   CFULevelResponseResponse,
@@ -44,7 +46,9 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
                 [styles.incorrectOptionMatch]: answer && !isCorrect,
               })}
             >
-              <Typography variant="body4">{optionText}</Typography>
+              <div>
+                <SafeMarkdown markdown={optionText} unwrapped />
+              </div>
               {isCorrect && (
                 <FontAwesomeV6Icon
                   iconName="check"
@@ -80,9 +84,10 @@ const CFUMatchAnswer: React.FC<CFUMatchAnswerProps> = ({level, response}) => {
             )}
 
             <div className={styles.matchingAnswerOptionContainer}>
-              <Typography variant="body4">
-                {answer ? answer.text : flatAnswers[index].text}
-              </Typography>
+              <SafeMarkdown
+                markdown={answer ? answer.text : flatAnswers[index].text}
+                unwrapped
+              />
             </div>
           </div>
         );
