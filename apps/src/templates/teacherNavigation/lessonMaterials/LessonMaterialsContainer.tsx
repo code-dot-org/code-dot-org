@@ -13,6 +13,7 @@ import {useSelector} from 'react-redux';
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -212,7 +213,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
-  const generatePodcastUrl = `/ai_lesson_summary_podcasts/generate_podcast?lesson_id=${selectedLesson?.id}`;
+  const podcastsEnabled =
+    DCDO.get('ai-lesson-summary-podcasts', false) ||
+    experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
     if (selectedLesson) {
@@ -344,12 +347,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {experiments.isEnabled('ai-lesson-podcasts') && (
+          {podcastsEnabled && (
             <div className={styles.lessonSummarySection}>
-              {/* The following link is temporary for testing and will be removed before official release */}
-              <a href={generatePodcastUrl}>
-                Generate Podcast (this may take a minute...)
-              </a>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
