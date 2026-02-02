@@ -36,4 +36,7 @@ export const levelsKeys = {
 
   extraLinks: (levelId: number, scriptLevelId?: number) =>
     [...levelsKeys.all, 'extraLinks', levelId, scriptLevelId] as const,
+
+  appOptions: (levelId: number) =>
+    [...levelsKeys.all, 'appOptions', levelId] as const,
 };
