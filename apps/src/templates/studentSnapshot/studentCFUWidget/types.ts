@@ -38,7 +38,7 @@ export interface CFULevelGroup extends CFULevelBase {
 
 // Other level types - answers is a single array
 export interface CFULevelOther extends CFULevelBase {
-  type: 'Multi' | 'Match' | 'FreeResponse';
+  type: Exclude<CFULevelType, 'LevelGroup'>;
   answers: CFUMultipleLevelAnswer[] | null;
 }
 

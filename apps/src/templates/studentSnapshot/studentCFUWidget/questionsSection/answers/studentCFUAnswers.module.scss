@@ -35,25 +35,6 @@
     border: 1px solid var(--borders-error-primary, #E02D16);
     background: var(--background-error-extra-light, #FFE1DD);
   }
-
-  .multiAnswerIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 0.9375rem;
-    height: 0.9375rem;
-    font-size: 0.9375rem;
-    flex-shrink: 0;
-    margin-left: auto;
-  }
-
-  .multiAnswerIconCorrect {
-    color: var(--sentiment-success-50, #3EA33E);
-  }
-
-  .multiAnswerIconIncorrect {
-    color: var(--sentiment-error-50, #E02D16);
-  }
 }
 
 .freeResponseAnswerContainer {
