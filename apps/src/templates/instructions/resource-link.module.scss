@@ -1,3 +1,5 @@
+@import 'color';
+
 .textLink {
   display: inline-block;
   margin: 8px;
@@ -9,7 +11,7 @@
 }
 
 .mapThumbnail {
-  background-color: #2ab7b5; // color.teal
+  background-color: $teal;
 }
 
 .commonThumbnail {
@@ -22,11 +24,11 @@
 }
 
 .mapIcon {
-  color: #fff;
+  color: $white;
 }
 
 .resourceIcon {
-  color: #2ab7b5; // color.teal
+  color: $teal;
 }
 
 .resourceStyle {

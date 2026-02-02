@@ -1,3 +1,5 @@
+@import 'color';
+
 .main {
   position: absolute;
   height: 13px; /* resize-bar-width from styleConstants */
@@ -16,7 +18,7 @@
 
 .ellipsis {
   width: 100%;
-  color: #9b9b9b; /* color.lighter_gray */
+  color: $lighter_gray;
   font-size: 24px;
   text-align: center;
   white-space: nowrap;

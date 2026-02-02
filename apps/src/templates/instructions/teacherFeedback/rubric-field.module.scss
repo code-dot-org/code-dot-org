@@ -1,3 +1,5 @@
+@import 'color';
+
 .rubricPerformanceHeaders {
   width: 100%;
 }
@@ -10,7 +12,7 @@
 .rubricHeader {
   font-size: 12px;
   margin-left: 10px;
-  color: #000;
+  color: $black;
   font-family: Figtree, sans-serif;
   font-weight: 600;
   outline: none;
@@ -24,18 +26,18 @@
   margin: 0 8px;
   padding: 4px;
   border-radius: 4px;
-  border: 1px solid #fff;
+  border: 1px solid $white;
 
   &:hover {
-    border: 1px solid #59b9dc;
+    border: 1px solid $light_cyan;
   }
 }
 
 .performanceLevelHeaderSelected {
-  background-color: #d9eff7;
+  background-color: $lightest_cyan;
 
   &:hover {
-    border: 1px solid #59b9dc;
+    border: 1px solid $light_cyan;
   }
 }
 
