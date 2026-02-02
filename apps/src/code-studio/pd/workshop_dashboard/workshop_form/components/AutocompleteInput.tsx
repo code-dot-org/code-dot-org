@@ -28,6 +28,7 @@ export const AutocompleteInput = memo(
     fetchOptions,
     errorMessage,
     id,
+    onEnter,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
@@ -40,6 +41,7 @@ export const AutocompleteInput = memo(
     value: string;
     fetchOptions: (value: string) => Promise<string[]>;
     errorMessage?: string;
+    onEnter?: (value: string) => void;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -115,7 +117,12 @@ export const AutocompleteInput = memo(
           case ' ':
             if (activeIndex >= 0) {
               e.preventDefault();
-              handleSelectOption(options[activeIndex]);
+              const selectedValue = options[activeIndex];
+              handleSelectOption(selectedValue);
+              onEnter?.(selectedValue);
+            } else if (key === 'Enter' && onEnter) {
+              e.preventDefault();
+              onEnter(value);
             }
             break;
           case 'Escape':
