@@ -24,7 +24,10 @@
 
 import {utils as mazeUtils} from '@code-dot-org/maze';
 
-import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
+import {
+  INFINITE_LOOP_TRAP,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
 import blockUtils from '../block_utils';
@@ -361,7 +364,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
@@ -385,7 +388,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.maze_untilBlocked = function () {
     var argument = 'Maze.isPathForward' + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 
@@ -407,9 +410,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Generate JavaScript for do forever loop.
     var branch = generator.statementToCode(this, 'DO');
     branch =
-      Blockly.getInfiniteLoopTrap() +
-      Blockly.loopHighlight('Maze', this.id) +
-      branch;
+      INFINITE_LOOP_TRAP + Blockly.loopHighlight('Maze', this.id) + branch;
     return 'while (Maze.notFinished()) {\n' + branch + '}\n';
   };
 
@@ -432,7 +433,7 @@ exports.install = function (blockly, blockInstallOptions) {
     var argument =
       'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
-    branch = Blockly.getInfiniteLoopTrap() + branch;
+    branch = INFINITE_LOOP_TRAP + branch;
     return 'while (' + argument + ') {\n' + branch + '}\n';
   };
 

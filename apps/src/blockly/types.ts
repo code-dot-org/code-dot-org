@@ -154,9 +154,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   overrideFields: (
     overrides: [string, string, BlocklyCore.fieldRegistry.RegistrableField][]
   ) => void;
-  setInfiniteLoopTrap: () => void;
-  clearInfiniteLoopTrap: () => void;
-  getInfiniteLoopTrap: () => string | null;
   loopHighlight: (apiName: string, blockId: string) => string;
   getWorkspaceCode: () => string;
   addChangeListener: (

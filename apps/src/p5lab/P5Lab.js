@@ -728,9 +728,6 @@ export default class P5Lab {
         ].join(',')
       );
       Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
-
-      // Don't add infinite loop protection
-      Blockly.clearInfiniteLoopTrap();
     }
 
     if (this.level.blocklyVariables) {

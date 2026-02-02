@@ -153,8 +153,6 @@ module.exports = class Maze {
         // This prevents students from overriding these with their own
         // functions/variables.
         Blockly.JavaScript.addReservedWords('Maze,code');
-
-        Blockly.setInfiniteLoopTrap();
       }
 
       const svg = document.getElementById('svgMaze');

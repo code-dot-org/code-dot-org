@@ -113,7 +113,6 @@ import {
   BlocklyCoreInstance,
 } from './types';
 import {
-  INFINITE_LOOP_TRAP,
   LOOP_HIGHLIGHT,
   handleCodeGenerationFailure,
   strip,
@@ -207,18 +206,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const blocklyWrapper = new (BlocklyWrapper as any)(
     blocklyInstance
   ) as BlocklyWrapperType;
-
-  blocklyWrapper.setInfiniteLoopTrap = function () {
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
-  };
-
-  blocklyWrapper.clearInfiniteLoopTrap = function () {
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
-  };
-
-  blocklyWrapper.getInfiniteLoopTrap = function () {
-    return Blockly.JavaScript.INFINITE_LOOP_TRAP;
-  };
 
   blocklyWrapper.loopHighlight = function (apiName, blockId) {
     let args = "'block_id_" + blockId + "'";
