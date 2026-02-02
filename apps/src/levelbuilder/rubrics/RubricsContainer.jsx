@@ -170,6 +170,7 @@ export default function RubricsContainer({
   };
 
   const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
+
   return (
     <div>
       <Heading1>{pageHeader}</Heading1>
