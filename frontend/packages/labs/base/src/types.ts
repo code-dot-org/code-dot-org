@@ -7,7 +7,6 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
-import type {Source} from '@code-dot-org/api/sources';
 import type {
   Blockly,
   BlockDefinition,
@@ -18,10 +17,11 @@ import type {ExemplarSettings} from '@code-dot-org/progress';
 import type {
   AppName,
   Channel,
+  LevelProperties,
   MultiFileSource,
   ProjectSources,
   ProjectVersion,
-  LevelProperties,
+  Source,
 } from '@code-dot-org/core/api';
 
 export type {ProjectVersion, ProjectSources};

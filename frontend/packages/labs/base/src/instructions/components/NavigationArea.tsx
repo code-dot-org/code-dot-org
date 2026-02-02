@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import type {FunctionComponent} from 'react';
 import {useEffect, useMemo, useRef} from 'react';
 
-import {queryParams} from '@code-dot-org/api';
 import TextToSpeech from '@code-dot-org/audio/textToSpeech';
 import {
   type Theme,
@@ -16,6 +15,7 @@ import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 import {isPredictResponseSubmitted} from '../../redux/predictLevelSlice';
 import {useAppSelector} from '../../redux/store';
 import {resourcePanelNavigationButtonElementId} from '../../resourcePanel/constants';
+import {queryParams} from '../../utils/queryParams';
 
 import ContinueButton from './ContinueButton';
 import SubmitButton from './SubmitButton';

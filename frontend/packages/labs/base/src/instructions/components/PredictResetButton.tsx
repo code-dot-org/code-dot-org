@@ -2,6 +2,7 @@ import type {FunctionComponent} from 'react';
 
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
+import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
 import {CourseRoles} from '@code-dot-org/user';
 
 import {resetPredictProgress} from '../../redux/predictLevelSlice';
@@ -29,6 +30,9 @@ const PredictResetButton: FunctionComponent = () => {
   const resetFailed = useAppSelector(state => state.predictLevel.resetFailed);
   const dispatch = useAppDispatch();
 
+  const apiClient = useApiClient();
+  const queryClient = useQueryClient();
+
   if (
     userRoleInCourse !== CourseRoles.Instructor ||
     teacherViewingStudentWork
@@ -39,7 +43,15 @@ const PredictResetButton: FunctionComponent = () => {
   function handleResetClick() {
     if (userId !== undefined) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      dispatch<any>(resetPredictProgress({scriptId, currentLevelId, userId}));
+      dispatch<any>(
+        resetPredictProgress({
+          apiClient,
+          queryClient,
+          scriptId,
+          currentLevelId,
+          userId,
+        }),
+      );
     }
   }
 

@@ -88,14 +88,16 @@ export const ExtraLinksProjectDataSchema = z.object({
       name: z.string(),
     })
     .optional(),
-  project_info: z.object({
-    id: z.number(),
-    sources_link: z.string(),
-    is_featured_project: z.boolean(),
-    featured_status: z.string(),
-    remix_ancestry: z.array(z.string()),
-    is_published_project: z.enum(['yes', 'no']),
-    abuse_score: z.number(),
-  }).optional,
-  meesage: z.string().optional(),
+  project_info: z
+    .object({
+      id: z.number(),
+      sources_link: z.string(),
+      is_featured_project: z.boolean(),
+      featured_status: z.string(),
+      remix_ancestry: z.array(z.string()),
+      is_published_project: z.enum(['yes', 'no']),
+      abuse_score: z.number(),
+    })
+    .optional(),
+  message: z.string().optional(),
 });

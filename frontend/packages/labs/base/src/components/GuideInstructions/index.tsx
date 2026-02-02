@@ -1,10 +1,11 @@
 import type {FunctionComponent} from 'react';
 
-import {queryParams} from '@code-dot-org/api';
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import MainInstructionsContent from '../../instructions/components/MainInstructionsContent';
 import NavigationArea from '../../instructions/components/NavigationArea';
+import {queryParams} from '../../utils/queryParams';
+
 import Guide from '../Guide';
 
 import styles from './guideInstructions.module.scss';

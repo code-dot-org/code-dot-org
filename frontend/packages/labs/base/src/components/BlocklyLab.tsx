@@ -1,12 +1,10 @@
 import {useCallback} from 'react';
 
-import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import {toolboxToWorkspaceBlocks} from '@code-dot-org/blockly-workspace/utils';
 import type {LevelProperties} from '@code-dot-org/core/api';
 import type {ProjectSources, Source} from '@code-dot-org/projects';
 
-import {TOOLBOX_BLOCKS} from '../constants';
 import type {BlocklyLevelProperties} from '../types';
 import {getInitialBlocklySources} from '../utils';
 
@@ -16,7 +14,8 @@ import type {LabWithSourcesProps} from './LabWithSources';
 export type BlocklyLabProps<T extends LevelProperties = LevelProperties> =
   LabWithSourcesProps<T, BlocklySerialization>;
 
-const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+// TODO - read this from app_options
+const isToolboxMode = false; //app_options.editBlocks === TOOLBOX_BLOCKS;
 
 export const STARTOVER_WORKSPACE_BLOCKS_MESSAGE =
   "This will reset the workspace to its start state and remove all the blocks you've added or changed.";
