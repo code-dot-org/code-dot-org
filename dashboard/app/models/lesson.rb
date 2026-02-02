@@ -587,12 +587,36 @@ class Lesson < ApplicationRecord
   end
 
   def summarize_for_rubric_edit
+    level_summary = levels.map do |level|
+      if level.type == 'BubbleChoice'
+        {
+          id: level.id,
+          name: level.name,
+          type: level.type,
+          sublevels: level.sublevels.map do |sublevel|
+            {
+              id: sublevel.id,
+              name: sublevel.name,
+              type: sublevel.type,
+            }
+          end,
+          isSubmittable: level.sublevels.any? {|sublevel| sublevel.properties['submittable'] == 'true'}
+        }
+      else
+        {
+          id: level.id,
+          name: level.name,
+          type: level.type,
+          isSubmittable: level.properties['submittable'] == 'true'
+        }
+      end
+    end
     {
       id: id,
       unitName: script.title_for_display,
       lessonNumber: relative_position,
       lessonName: name,
-      levels: levels
+      levels: level_summary
     }
   end
 
