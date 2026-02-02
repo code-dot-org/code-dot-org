@@ -9,6 +9,7 @@ import {
   PredictQuestionTypes,
   ScriptLevelPathLinkSchema,
   SectionSummarySchema,
+  UserAppOptionsSchema,
 } from './levels.schemata';
 
 // The inferred base type
@@ -29,3 +30,4 @@ export type ParentLevelPathLink = z.infer<typeof ParentLevelPathLinkSchema>;
 export type PredictResponse = z.infer<typeof PredictResponseSchema>;
 export type SectionSummary = z.infer<typeof SectionSummarySchema>;
 export type ScriptLevelPathLink = z.infer<typeof ScriptLevelPathLinkSchema>;
+export type UserAppOptions = z.infer<typeof UserAppOptionsSchema>;

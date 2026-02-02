@@ -39,4 +39,19 @@ export const levelsKeys = {
 
   appOptions: (levelId: number) =>
     [...levelsKeys.all, 'appOptions', levelId] as const,
+
+  userAppOptions: (
+    scriptName: string,
+    lessonPosition: number,
+    levelPosition: number,
+    levelId: number,
+  ) =>
+    [
+      ...levelsKeys.all,
+      'userAppOptions',
+      scriptName,
+      lessonPosition,
+      levelPosition,
+      levelId,
+    ] as const,
 };

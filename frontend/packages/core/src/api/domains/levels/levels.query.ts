@@ -13,6 +13,7 @@ import type {
   LevelPropertiesMap,
   PredictResponse,
   SectionSummary,
+  UserAppOptions,
 } from './levels.types';
 import {levelsKeys} from './levels.keys';
 
@@ -125,6 +126,35 @@ export function useAppOptions(
     queryKey: levelsKeys.appOptions(levelId),
     queryFn: () => api.levels.getAppOptions(params),
     enabled: Number.isFinite(levelId),
+    ...options,
+  });
+}
+
+export function useUserAppOptions(
+  api: ApiClient,
+  params: {
+    scriptName: string;
+    lessonPosition: number;
+    levelPosition: number;
+    levelId: number;
+  },
+  options?: Omit<UseQueryOptions<UserAppOptions>, 'queryKey' | 'queryFn'>,
+) {
+  const {scriptName, lessonPosition, levelPosition, levelId} = params;
+
+  return useQuery({
+    queryKey: levelsKeys.userAppOptions(
+      scriptName,
+      lessonPosition,
+      levelPosition,
+      levelId,
+    ),
+    queryFn: () => api.levels.getUserAppOptions(params),
+    enabled:
+      !!scriptName &&
+      Number.isFinite(lessonPosition) &&
+      Number.isFinite(levelPosition) &&
+      Number.isFinite(levelId),
     ...options,
   });
 }
