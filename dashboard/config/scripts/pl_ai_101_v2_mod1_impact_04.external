@@ -1,0 +1,23 @@
+name 'pl-ai-101-V2-mod1-impact-04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#### Let’s see what Sal and Hadi have to say about challenges and benefits of AI in education.
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">📝 Key Points from the Video</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+* #### AI in education poses risks such as errors, biases, misinformation, and potential to generate harmful content, prompting cautious integration by schools.
+* #### Different AI tools offer varied functions; not all are suited for educational use.
+* #### Some educational AI tools are specifically designed to mitigate risks by enhancing student privacy and reducing misinformation and biases.
+* #### Educators and IT departments need to carefully select AI tools that are appropriate and safe for educational settings, rather than outright banning or unselectively adopting AI.
+* #### It's important to recognize that existing educational tools and resources, including the Internet and human interactions, also exhibit biases and misinformation.
+
+</p></div>
+</details>
+
+MARKDOWN

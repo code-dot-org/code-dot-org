@@ -150,7 +150,6 @@ gem 'nakayoshi_fork'
 
 gem 'puma', '~> 7.2'
 gem 'puma_worker_killer'
-gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
