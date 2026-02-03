@@ -190,17 +190,16 @@ class ProgressLesson extends React.Component {
             </div>
             {viewAs === ViewType.Participant &&
               lesson.student_lesson_plan_html_url && (
-                <span style={styles.buttonStyle}>
-                  <Button
-                    __useDeprecatedTag
-                    className="ui-test-lesson-resources"
-                    href={lesson.student_lesson_plan_html_url}
-                    text={i18n.lessonResources()}
-                    icon="file-text"
-                    color="white"
-                    target="_blank"
-                  />
-                </span>
+                <Button
+                  __useDeprecatedTag
+                  className="ui-test-lesson-resources"
+                  href={lesson.student_lesson_plan_html_url}
+                  text={i18n.lessonResources()}
+                  icon="file-text"
+                  color="white"
+                  target="_blank"
+                  style={styles.buttonStyle}
+                />
               )}
           </div>
           {showNotAuthorizedWarning && (
@@ -266,7 +265,7 @@ const styles = {
     flexGrow: 1,
   },
   buttonStyle: {
-    marginLeft: 'auto',
+    boxShadow: 'none',
   },
   hiddenOrLocked: {
     borderStyle: 'dashed',
