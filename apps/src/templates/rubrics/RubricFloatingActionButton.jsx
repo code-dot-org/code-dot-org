@@ -104,10 +104,13 @@ function RubricFloatingActionButton({
   // the child levels. If the level is not a bubble choice level, we evaluate on the
   // level that matches the rubric level name, or any child levels of the level that
   // matches the rubric level name (likely the parent in this case is a Bubble Choice level).
-  const onLevelForEvaluation =
-    levelType !== 'BubbleChoice' &&
-    (currentLevelName === rubric.level.name ||
-      parentLevelName === rubric.level.name);
+  const onLevelForEvaluation = useMemo(
+    () =>
+      levelType !== 'BubbleChoice' &&
+      (currentLevelName === rubric.level.name ||
+        parentLevelName === rubric.level.name),
+    [levelType, currentLevelName, rubric.level.name, parentLevelName]
+  );
 
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
