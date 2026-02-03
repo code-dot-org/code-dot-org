@@ -1,6 +1,6 @@
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
-// Returns a list of files matching the given language (by file.language or extension).
+// Returns a list of files matching the given language/extension (eg, 'html').
 export const getFilesByLanguage = (
   source: MultiFileSource | undefined,
   language: string

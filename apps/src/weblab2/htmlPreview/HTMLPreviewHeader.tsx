@@ -27,7 +27,7 @@ interface HTMLPreviewHeaderProps {
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
   onStopPreview: () => void;
   isStopEnabled: boolean;
-  fetchOptions: (value: string) => Promise<string[]>;
+  fetchFileSearchOptions: (value: string) => Promise<string[]>;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -44,7 +44,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   setPreviewViewMode,
   onStopPreview,
   isStopEnabled,
-  fetchOptions,
+  fetchFileSearchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
 
@@ -77,9 +77,9 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
       if (suggestionsDisabled(searchValue)) {
         return [];
       }
-      return fetchOptions(searchValue);
+      return fetchFileSearchOptions(searchValue);
     },
-    [fetchOptions, suggestionsDisabled]
+    [fetchFileSearchOptions, suggestionsDisabled]
   );
 
   const previewViewModeButtonsProps: SegmentedButtonsProps = {

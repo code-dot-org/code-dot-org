@@ -17,6 +17,8 @@ import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 
 import styles from './AutocompleteInput.module.scss';
 
+const FETCH_SUGGESTIONS_MIN_LENGTH = 3;
+
 export const AutocompleteInput = memo(
   ({
     label,
@@ -66,21 +68,25 @@ export const AutocompleteInput = memo(
 
     const containerRef = useOutsideClick<HTMLDivElement>(reset);
 
+    // Clear options when input is cleared or reduced to a length below the minimum to fetch suggestions.
     useEffect(() => {
-      if (!value || value.length < 3) {
+      if (!value || value.length < FETCH_SUGGESTIONS_MIN_LENGTH) {
         reset();
       }
     }, [reset, value]);
 
     useEffect(() => {
-      // skip api call when component first mounts if value already exists
-      // also skip when an option is selected and value updates with result
+      // Skip API call when component first mounts if value already exists.
+      // Also skip when an option is selected and value updates with result
       if (skipApi.current) {
         skipApi.current = false;
         return;
       }
 
-      if (debouncedValue && debouncedValue.length >= 3) {
+      if (
+        debouncedValue &&
+        debouncedValue.length >= FETCH_SUGGESTIONS_MIN_LENGTH
+      ) {
         const fetchSuggestions = async () => {
           try {
             setLoading(true);
@@ -115,6 +121,7 @@ export const AutocompleteInput = memo(
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
       const {key} = e;
 
+      // If no option is selected from the dropdown and Enter is pressed, trigger onEnter with current value in the input.
       if (key === 'Enter' && onEnter && activeIndex < 0) {
         e.preventDefault();
         onEnter(value);

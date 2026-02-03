@@ -446,7 +446,7 @@ export const HTMLPreview: React.FC = () => {
           setPreviewViewMode={setPreviewViewMode}
           onStopPreview={onStopPreview}
           isStopEnabled={!isStopped}
-          fetchOptions={fetchHtmlFileOptions}
+          fetchFileSearchOptions={fetchHtmlFileOptions}
         />
         {isEmptyProject ? (
           <PreviewEmptyState />
