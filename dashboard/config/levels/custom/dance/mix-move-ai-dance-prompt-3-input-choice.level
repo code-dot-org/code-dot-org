@@ -1,5 +1,6 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2025-11-03T21:16:19.000Z",
   "level_num": "custom",
@@ -98,10 +99,15 @@
     },
     "long_instructions": "### Use AI to code your dance\r\nModify the prompt, then press Generate code.",
     "use_secondary_finish_button": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "offer_browser_tts": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-11-03T21:16:19.229+00:00\",\"changed\":[\"cloned from \\\"dance_moves_choice_2_3_4\\\"\"],\"cloned_from\":\"dance_moves_choice_2_3_4\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-11-03T21:16:19.229+00:00\",\"changed\":[\"cloned from \\\"dance_moves_choice_2_3_4\\\"\"],\"cloned_from\":\"dance_moves_choice_2_3_4\"},{\"changed_at\":\"2026-02-02 16:56:15 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>
