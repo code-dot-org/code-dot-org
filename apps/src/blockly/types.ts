@@ -257,7 +257,6 @@ export interface ExtendedWorkspaceSvg extends BlocklyCore.WorkspaceSvg {
   getVariableMap: () => ExtendedVariableMap;
   isReadOnly: () => boolean;
   cleanUp: (includeImmovableBlocks?: boolean) => void;
-  getBlockCount: () => number;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {

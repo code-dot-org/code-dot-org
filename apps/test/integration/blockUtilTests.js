@@ -16,9 +16,9 @@ describe('blockUtils', function () {
   it('can create a block from XML', function () {
     var blockXMLString =
       '<block type="math_number"><field name="NUM">10</field></block>';
-    assert(Blockly.getMainWorkspace().getBlockCount() === 0);
+    assert(Blockly.getMainWorkspace().getAllBlocks().length === 0);
     var newBlock = blockUtils.domStringToBlock(blockXMLString);
-    assert(Blockly.getMainWorkspace().getBlockCount() === 1);
+    assert(Blockly.getMainWorkspace().getAllBlocks().length === 1);
     assert(newBlock.getFieldValue('NUM') === 10);
     assert(getBlockFields(newBlock).length === 1);
   });
@@ -26,11 +26,11 @@ describe('blockUtils', function () {
   it('can create a block from XML and remove it from the workspace', function () {
     var blockXMLString =
       '<block type="math_number"><field name="NUM">10</field></block>';
-    assert(Blockly.getMainWorkspace().getBlockCount() === 0);
+    assert(Blockly.getMainWorkspace().getAllBlocks().length === 0);
     var newBlock = blockUtils.domStringToBlock(blockXMLString);
-    assert(Blockly.getMainWorkspace().getBlockCount() === 1);
+    assert(Blockly.getMainWorkspace().getAllBlocks().length === 1);
     newBlock.dispose();
-    assert(Blockly.getMainWorkspace().getBlockCount() === 0);
+    assert(Blockly.getMainWorkspace().getAllBlocks().length === 0);
   });
 });
 
