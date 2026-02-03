@@ -130,10 +130,10 @@ class BufferTest < Minitest::Test
 
   # Help reproduce a thread-safety bug by prepending `sleep` to several methods.
   class ThreadSafeTestBuffer < TestBuffer
-    %w(flush batch_ready buffer).each do |m|
-      define_method(m) do |*args|
+    %w(flush batch_ready buffer schedule_flush).each do |m|
+      define_method(m) do |*args, **kwargs|
         sleep @max_interval
-        super(*args)
+        super(*args, **kwargs)
       end
     end
   end
@@ -145,6 +145,42 @@ class BufferTest < Minitest::Test
     b = ThreadSafeTestBuffer.new(max_interval: duration.to_f / (n * 2))
     n.times {b.buffer('foo')}
     b.flush!
+  end
+
+  class AssertNotHoldingBufferLockTask
+    def initialize(buffer_monitor)
+      @buffer_monitor = buffer_monitor
+    end
+
+    def reschedule
+      if @buffer_monitor.mon_owned?
+        raise "BUG: called task.reschedule while holding buffer monitor"
+      end
+      yield if block_given?
+    end
+
+    def cancel
+      if @buffer_monitor.mon_owned?
+        raise "BUG: called task.cancel while holding buffer monitor"
+      end
+    end
+
+    def wait(*)
+      true
+    end
+  end
+
+  def test_schedule_flush_does_not_reschedule_while_holding_buffer_lock
+    b = TestBuffer.new(batch_count: 1, max_interval: 999)
+
+    buffer_monitor = b.instance_variable_get(:@buffer)
+    b.instance_variable_set(:@task, AssertNotHoldingBufferLockTask.new(buffer_monitor))
+
+    # This triggers schedule_flush -> @task.reschedule
+    b.buffer('foo')
+
+    # If old behavior exists, the test will raise before it gets here.
+    assert_equal 0, b.flushes
   end
 end
 
