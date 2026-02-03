@@ -1,12 +1,11 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import color from '@cdo/apps/util/color';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
-
-import styles from './resource-link.module.scss';
 
 class ResourceLink extends React.Component {
   static propTypes = {
@@ -56,21 +55,22 @@ class ResourceLink extends React.Component {
   render() {
     const {icon, text, highlight} = this.props;
 
-    const iconClass = classNames(styles.commonIcon, {
-      [styles.mapIcon]: highlight,
-      [styles.resourceIcon]: !highlight,
-    });
-    const thumbnailClass = classNames(styles.commonThumbnail, {
-      [styles.mapThumbnail]: highlight,
-    });
+    const iconStyle = {
+      ...styles.commonIcon,
+      ...(highlight ? styles.mapIcon : styles.resourceIcon),
+    };
+    const thumbnailStyle = {
+      ...styles.commonThumbnail,
+      ...(highlight && styles.mapThumbnail),
+    };
 
     return (
       <div>
-        <div className={styles.resourceStyle} onClick={this.selectResource}>
-          <span className={thumbnailClass}>
-            <FontAwesome icon={icon} className={iconClass} title={text} />
+        <div style={styles.resourceStyle} onClick={this.selectResource}>
+          <span style={thumbnailStyle}>
+            <FontAwesome icon={icon} style={iconStyle} title={text} />
           </span>
-          <a href={this.props.reference} className={styles.textLink}>
+          <a href={this.props.reference} style={styles.textLink}>
             {text}
           </a>
         </div>
@@ -79,4 +79,38 @@ class ResourceLink extends React.Component {
   }
 }
 
-export default ResourceLink;
+const styles = {
+  textLink: {
+    display: 'inline-block',
+    margin: 8,
+    fontWeight: 'bold',
+    fontSize: 16,
+    lineHeight: '25px',
+    cursor: 'pointer',
+    maxWidth: '90%',
+  },
+  mapThumbnail: {
+    backgroundColor: color.teal,
+  },
+  commonThumbnail: {
+    borderRadius: 5,
+    paddingLeft: 26,
+    paddingRight: 26,
+    paddingTop: 16,
+    paddingBottom: 9,
+  },
+  commonIcon: {
+    fontSize: 22,
+  },
+  mapIcon: {
+    color: color.white,
+  },
+  resourceIcon: {
+    color: color.teal,
+  },
+  resourceStyle: {
+    margin: 8,
+  },
+};
+
+export default Radium(ResourceLink);
