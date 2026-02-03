@@ -315,8 +315,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     puts "User type determined to be #{user_type} based on Clever roles: #{roles.to_json}"
 
     params = auth_params.presence || {}
-    cookies['sign_up_user_type'] = user_type unless params[:user_type]
-    params[:user_type] = cookies['sign_up_user_type'] unless params[:user_type]
+    cookies['sign_up_user_type'] = user_type
+
     user = User.new.tap do |u|
       User.initialize_new_oauth_user(u, auth_hash, params)
       u.oauth_token = auth_hash.credentials&.token
