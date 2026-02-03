@@ -1,12 +1,4 @@
 module AiStudentSnapshotHelper
-  # Saves AI-generated lesson feedback to the lesson_feedbacks table.
-  # Params:
-  # - feedback_json: The feedback content (string or JSON) from generate_lesson_feedback
-  # - student_id: Integer
-  # - lesson_id: Integer
-  # - section_id: Integer
-  # - teacher_id: Integer
-  # Returns: The LessonFeedback record (created or updated)
   def self.save_lesson_feedback(feedback_json, student_id, lesson_id, section_id, teacher_id)
     feedback_record = LessonFeedback.find_or_initialize_by(
       lesson_id: lesson_id,
@@ -16,7 +8,6 @@ module AiStudentSnapshotHelper
     feedback_record.section_id = section_id
     feedback_record.saved_feedback = feedback_json
     feedback_record.save!
-    puts feedback_record
   end
 
   API_KEY = CDO.openai_lesson_summaries_api_key # TODO before merge: CHANGE TO NEW KEY

@@ -8,8 +8,8 @@ import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 
-// NOTE TO SELF: This is where you want to call the AI Lesson Feedback Function
 /**
  * Handles all logic for continuing lesson progression, either to the next level or finishing the lesson.
  */
@@ -21,77 +21,63 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
       return;
     }
 
-    // Wrap all of this in a if statement that checks to see if the experiment is turned on
-    const hardcodedSectionId = 735;
-    const hardcodededTeacherId = 552;
-    const scriptId = getState().lab.scriptId;
-    const lessonId = getState().progress.currentLessonId;
-    if (scriptId === undefined || lessonId === undefined) {
-      // Handle the error or return early if scriptId is required
-      console.error('scriptId or lessonId is undefined');
-      return;
-    }
-    // TO DOs:
-    // 1. Take prompt and send to openAi
-    // 2. Get response from openAi and print to console
-    // 3. Get response from openAi and save to back end
-    getAiLessonFeedback(
-      lessonId,
-      scriptId, // Using lessonId for unitId temporarily
-      getState().currentUser.userId,
-      hardcodededTeacherId,
-      hardcodedSectionId
-    );
+    if (experiments.isEnabled('student_snapshot')) {
+      const scriptId = getState().lab.scriptId;
+      const lessonId = getState().progress.currentLessonId;
+      const studentId = getState().currentUser.userId;
+      if (scriptId === undefined || lessonId === undefined) {
+        // Handle the error or return early if scriptId is required
+        console.error('scriptId or lessonId is undefined');
+        return;
+      }
 
-    // // Call provideLessonFeedbackFromOpenAI and print the result
-    // provideLessonFeedbackFromOpenAI(
-    //   lessonId,
-    //   scriptId, // Using lessonId for unitId temporarily
-    //   getState().currentUser.userId,
-    //   hardcodededTeacherId,
-    //   hardcodedSectionId
-    // )
-    //   .then(aiFeedback => {
-    //     console.log('AI Lesson Feedback:', aiFeedback);
-    //   })
-    //   .catch(error => {
-    //     console.error('Error getting AI lesson feedback:', error);
-    //   });
+      getAiLessonFeedback(lessonId, scriptId, studentId);
 
-    // If there are no validation conditions and the level is not submittable or a predict level,
-    // go ahead and send a success report when we continue.
-    // For validated levels, success reports are managed by the ProgressContainer and ProgressManager.
-    // For submittable levels, success reports are handled by the submit button.
-    // For predict levels, success reports are handled by clicking run after writing a prediction.
-    if (
-      !getState().lab.validationState.hasConditions &&
-      !levelProperties.submittable &&
-      !levelProperties.predictSettings?.isPredictLevel
-    ) {
-      // Wait for the success report to complete before handling navigation,
-      // as navigation could cause a page reload (either switching to a non-lab2 level
-      // or redirecting to a finish URL).
-      dispatch(sendSuccessReport(levelProperties.appName)).then(() =>
-        handleNavigation(levelProperties, dispatch, getState)
-      );
-    } else {
-      handleNavigation(levelProperties, dispatch, getState);
+      if (
+        !getState().lab.validationState.hasConditions &&
+        !levelProperties.submittable &&
+        !levelProperties.predictSettings?.isPredictLevel
+      ) {
+        // Wait for the success report to complete before handling navigation,
+        // as navigation could cause a page reload (either switching to a non-lab2 level
+        // or redirecting to a finish URL).
+        dispatch(sendSuccessReport(levelProperties.appName)).then(() =>
+          handleNavigation(levelProperties, dispatch, getState)
+        );
+      } else {
+        handleNavigation(levelProperties, dispatch, getState);
+      }
     }
   };
 
 async function getAiLessonFeedback(
   lessonId: number,
   unitId: number,
-  studentId: number,
-  teacherId: number,
-  sectionId: number
+  studentId: number
 ) {
-  console.log('Fetching feedback prompt...');
-  const response = await fetch(
-    `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}&teacher_id=${teacherId}&section_id=${sectionId}`
-  );
-  const data = await response.json();
-  console.log(data.prompt);
+  try {
+    const response = await fetch(
+      `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+    );
+    if (!response.ok) {
+      console.error(
+        'Failed to fetch AI lesson feedback:',
+        response.status,
+        response.statusText
+      );
+      return null;
+    }
+    const data = await response.json();
+    // Optionally check for expected keys in data
+    if (!data || data.error) {
+      console.error('Error in AI feedback response:', data?.error);
+      return null;
+    }
+    return data;
+  } catch (err) {
+    console.error('Network or parsing error:', err);
+    return null;
+  }
 }
 
 function handleNavigation(

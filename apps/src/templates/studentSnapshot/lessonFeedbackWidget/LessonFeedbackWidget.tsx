@@ -30,12 +30,10 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 }) => {
   const [initialFeedback, setInitialFeedback] = useState<string>('');
   const [feedbackLoading, setFeedbackLoading] = useState<boolean>(false);
-  const [feedbackError, setFeedbackError] = useState<string | null>(null);
 
   // Existing hook usage
   const {
     isLoading,
-    error,
     scrollable,
     feedbackText,
     recommendedActionText,
@@ -65,7 +63,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     async function fetchLessonFeedback() {
       if (!lessonId || !studentId) return;
       setFeedbackLoading(true);
-      setFeedbackError(null);
       try {
         const response = await fetch(
           `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
@@ -74,7 +71,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         const data = await response.json();
         setInitialFeedback(data.saved_feedback);
       } catch (error) {
-        setFeedbackError('Error in final step:' + error);
+        console.error('Error in final step:' + error);
       } finally {
         setFeedbackLoading(false);
       }
@@ -83,9 +80,8 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   }, [lessonId, studentId]);
 
   let widgetContent: React.ReactNode;
-  if (error || feedbackError) {
-    widgetContent = <BodyThreeText>{error || feedbackError}</BodyThreeText>;
-  } else if (feedbackLoading) {
+  // TO DO: Use Loading widget when needed here.
+  if (feedbackLoading) {
     widgetContent = <BodyThreeText>Loading feedback...</BodyThreeText>;
   } else {
     widgetContent = (

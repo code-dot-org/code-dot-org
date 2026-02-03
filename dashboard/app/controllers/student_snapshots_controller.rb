@@ -26,13 +26,21 @@ class StudentSnapshotsController < ApplicationController
   end
 
   # GET /student_snapshots/ai_generated_lesson_feedback
-  # Returns the feedback system prompt for a given lesson, unit, student, teacher, and section
   def ai_generated_lesson_feedback
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
-    teacher_id = params[:teacher_id]
-    section_id = params[:section_id]
+
+    section_id = nil
+    teacher_id = nil
+    if student_id && unit_id
+      student = User.find_by(id: student_id)
+      if student
+        section = student.sections_as_student.joins(:script).where(scripts: {id: unit_id}).first
+        section_id = section&.id
+        teacher_id = section&.teacher.id
+      end
+    end
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 

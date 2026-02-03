@@ -1,6 +1,5 @@
 class LessonFeedbacksController < ApplicationController
-  # before_action :authenticate_teacher!
-  # Not sure what should be private... come back to this.
+  before_action :authenticate_user!
 
   def create
     feedback = LessonFeedback.new(lesson_feedback_params)
