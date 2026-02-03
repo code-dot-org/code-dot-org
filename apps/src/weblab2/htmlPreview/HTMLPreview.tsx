@@ -133,6 +133,9 @@ export const HTMLPreview: React.FC = () => {
   const canNavigateForward =
     navigationHistoryIndex < navigationHistory.length - 1;
 
+  // We use a ref here to avoid rerendering on every source change (ie, when the contents of a file are changed).
+  const htmlFileOptionsRef = useRef<string[]>([]);
+
   const htmlFileOptions = useMemo(() => {
     if (!source) {
       return [];
@@ -150,18 +153,20 @@ export const HTMLPreview: React.FC = () => {
     return options;
   }, [source]);
 
-  const fetchHtmlFileOptions = useCallback(
-    async (searchValue: string) => {
-      const normalizedSearch = searchValue.trim().toLowerCase();
-      if (!normalizedSearch) {
-        return htmlFileOptions;
-      }
-      return htmlFileOptions.filter(option =>
-        option.toLowerCase().includes(normalizedSearch)
-      );
-    },
-    [htmlFileOptions]
-  );
+  useEffect(() => {
+    htmlFileOptionsRef.current = htmlFileOptions;
+  }, [htmlFileOptions]);
+
+  const fetchHtmlFileOptions = useCallback(async (searchValue: string) => {
+    const normalizedSearch = searchValue.trim().toLowerCase();
+    const options = htmlFileOptionsRef.current;
+    if (!normalizedSearch) {
+      return options;
+    }
+    return options.filter(option =>
+      option.toLowerCase().includes(normalizedSearch)
+    );
+  }, []);
 
   useEffect(() => {
     if (aiFilePathToPreview) {
