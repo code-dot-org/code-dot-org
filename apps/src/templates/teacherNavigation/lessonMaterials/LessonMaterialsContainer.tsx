@@ -83,7 +83,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
-  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -131,13 +130,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  React.useEffect(() => {
-    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
-      setCanShowLessonSummaries(showAITALessonSummary);
-    }
-  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
+  const canShowLessonSummaries = React.useMemo(
+    () => !!unitToLoad && !!aiTALessonSummaryInfo && showAITALessonSummary,
+    [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]
+  );
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
