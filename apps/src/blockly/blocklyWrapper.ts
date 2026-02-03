@@ -429,10 +429,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     this.getVariableMap().addVariables(variableList);
   };
 
-  extendedWorkspaceSvg.getBlockCount = function () {
-    return this.getAllBlocks().length;
-  };
-
   const extendedVariableMap = blocklyWrapper.VariableMap
     .prototype as ExtendedVariableMap;
 
