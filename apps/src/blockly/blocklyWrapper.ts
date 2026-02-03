@@ -423,9 +423,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 
-  // Called by StudioApp, but only implemented for CDO Blockly.
-  extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
-
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
     return this.getAllBlocks().filter(
       block => block.isEnabled() && block.getRootBlock().isEnabled()
