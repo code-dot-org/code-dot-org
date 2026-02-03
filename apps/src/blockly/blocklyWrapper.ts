@@ -409,18 +409,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.JavaScript = javascriptGenerator;
 
-  // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
-  // See https://github.com/google/blockly/issues/2217
-  Object.defineProperty(blocklyWrapper, 'SNAP_RADIUS', {
-    get: function () {
-      return this.blockly_.SNAP_RADIUS;
-    },
-    set: function (snapRadius) {
-      this.blockly_.SNAP_RADIUS = snapRadius;
-      this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
-    },
-  });
-
   blocklyWrapper.addChangeListener = function (blockspace, handler) {
     blockspace.addChangeListener(handler);
   };
