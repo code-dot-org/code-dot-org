@@ -545,9 +545,6 @@ StudioApp.prototype.init = function (config) {
         BlocklyUtils.updateLocale(info.rtl);
       });
     }
-    Blockly.getMainWorkspace().addUnusedBlocksHelpListener(function (e) {
-      utils.showUnusedBlockQtip(e.target);
-    });
     // Store result so that we can cleanup later in tests
     this.changeListener = Blockly.getMainWorkspace().addChangeListener(
       _.bind(function () {
