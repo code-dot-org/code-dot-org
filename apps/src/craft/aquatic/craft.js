@@ -491,7 +491,6 @@ Craft.runButtonClick = function () {
   }
 
   studioApp().toggleRunReset('reset');
-  Blockly.getMainWorkspace().traceOn(true);
   studioApp().attempts++;
 
   Craft.executeUserCode();
@@ -528,9 +527,6 @@ Craft.executeUserCode = function () {
 
   studioApp().playAudio('start');
   let interpreter;
-
-  // Start tracing calls.
-  Blockly.getMainWorkspace().traceOn(true);
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();

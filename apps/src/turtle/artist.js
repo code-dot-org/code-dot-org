@@ -792,9 +792,6 @@ Artist.prototype.runButtonClick = function () {
   this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
-  if (this.studioApp_.isUsingBlockly()) {
-    Blockly.getMainWorkspace().traceOn(true);
-  }
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
 };

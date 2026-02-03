@@ -648,7 +648,6 @@ export default class Craft {
     }
 
     studioApp().toggleRunReset('reset');
-    Blockly.getMainWorkspace().traceOn(true);
     studioApp().attempts++;
 
     Craft.executeUserCode();
@@ -684,9 +683,6 @@ export default class Craft {
     }
 
     studioApp().playAudio('start');
-
-    // Start tracing calls.
-    Blockly.getMainWorkspace().traceOn(true);
 
     const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();

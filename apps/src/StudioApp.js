@@ -1911,10 +1911,6 @@ StudioApp.prototype.resetButtonClick = function () {
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
-  if (this.isUsingBlockly()) {
-    Blockly.getMainWorkspace().setEnableToolbox(true);
-    Blockly.getMainWorkspace().traceOn(false);
-  }
   this.reset(false);
 };
 

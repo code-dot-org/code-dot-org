@@ -2943,9 +2943,6 @@ Studio.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.getMainWorkspace().traceOn(true);
-  }
 
   // Stop the music the first time the run button is pressed (hoc2015)
   Studio.musicController.fadeOut();
