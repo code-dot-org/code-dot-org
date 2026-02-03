@@ -1,13 +1,12 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 
 import {convertXmlToBlockly} from './utils';
-
-import styles from './markdown-instructions.module.scss';
 
 class MarkdownInstructions extends React.Component {
   static propTypes = {
@@ -80,19 +79,35 @@ class MarkdownInstructions extends React.Component {
     const {inTopPane, markdown} = this.props;
 
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
-    const className = [
-      styles.standard,
-      inTopPane && styles.inTopPane,
-      inTopPane && canCollapse && styles.inTopPaneCanCollapse,
-    ]
-      .filter(Boolean)
-      .join(' ');
     return (
-      <div className={`instructions-markdown ${className}`}>
+      <div
+        className="instructions-markdown"
+        style={[
+          styles.standard,
+          inTopPane && styles.inTopPane,
+          inTopPane && canCollapse && styles.inTopPaneCanCollapse,
+        ]}
+      >
         <EnhancedSafeMarkdown markdown={markdown} expandableImages />
       </div>
     );
   }
 }
 
-export default MarkdownInstructions;
+const styles = {
+  standard: {
+    marginBottom: 35,
+    paddingTop: 19,
+  },
+  inTopPane: {
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 0,
+  },
+  inTopPaneCanCollapse: {
+    marginTop: 0,
+    marginBottom: 0,
+  },
+};
+
+export default Radium(MarkdownInstructions);
