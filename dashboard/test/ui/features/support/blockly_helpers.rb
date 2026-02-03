@@ -79,11 +79,11 @@ module BlocklyHelpers
   end
 
   def get_block_workspace_left(block_id)
-    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById('#{block_id}').getRelativeToSurfaceXY().x;")
+    @browser.execute_script("return Blockly.getMainWorkspace().getBlockById('#{block_id}').getRelativeToSurfaceXY().x;")
   end
 
   def get_block_workspace_top(block_id)
-    @browser.execute_script("return Blockly.mainBlockSpace.getBlockById('#{block_id}').getRelativeToSurfaceXY().y;")
+    @browser.execute_script("return Blockly.getMainWorkspace().getBlockById('#{block_id}').getRelativeToSurfaceXY().y;")
   end
 
   def modal_dialog_visible

@@ -291,7 +291,7 @@ module.exports = class Maze {
     }
     studioApp().toggleRunReset('reset');
     if (studioApp().isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
+      Blockly.getMainWorkspace().traceOn(true);
     }
     studioApp().reset(false);
     studioApp().attempts++;
@@ -476,7 +476,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      program = getCode(Blockly.mainBlockSpace);
+      program = getCode(Blockly.getMainWorkspace());
     }
 
     this.waitingForReport = true;

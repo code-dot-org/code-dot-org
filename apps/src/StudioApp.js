@@ -551,11 +551,11 @@ StudioApp.prototype.init = function (config) {
         BlocklyUtils.updateLocale(info.rtl);
       });
     }
-    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
+    Blockly.getMainWorkspace().addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });
     // Store result so that we can cleanup later in tests
-    this.changeListener = Blockly.mainBlockSpaceEditor.addChangeListener(
+    this.changeListener = Blockly.getMainWorkspace().addChangeListener(
       _.bind(function () {
         this.updateBlockCount();
       }, this)
@@ -878,7 +878,7 @@ StudioApp.prototype.scaleLegacyShare = function () {
 
 StudioApp.prototype.getCode = function (opt_showHidden) {
   if (!this.editCode) {
-    return Blockly.getWorkspaceCode(opt_showHidden);
+    return BlocklyUtils.getWorkspaceCode(opt_showHidden);
   }
   if (this.hideSource) {
     return this.startBlocks_;
@@ -1114,7 +1114,7 @@ StudioApp.prototype.runChangeHandlers = function (e) {
 StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    Blockly.addChangeListener(Blockly.getMainWorkspace(), runAllHandlers);
     if (Blockly.getHiddenDefinitionWorkspace()) {
       // If we have a hidden definition workspace, run change listeners on it too.
       // This ensures code changes in the hidden workspace trigger updates.
@@ -1304,7 +1304,7 @@ StudioApp.prototype.showNextHint = function () {
 /**
  * Initialize Blockly for a readonly iframe.  Called on page load. No sounds.
  * XML argument may be generated from the console with:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)).slice(5, -6)
+ * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.getMainWorkspace())).slice(5, -6)
  */
 StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
@@ -1321,7 +1321,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+  loadBlocksToWorkspace(Blockly.getMainWorkspace(), source);
 };
 
 /**
@@ -1421,9 +1421,11 @@ StudioApp.prototype.onResize = function () {
         this.lastWorkspaceWidth !== workspaceWidth
       ) {
         var blockOffset = workspaceWidth - this.lastWorkspaceWidth;
-        Blockly.mainBlockSpace.getTopBlocks().forEach(function (topBlock) {
-          topBlock.moveBy(blockOffset, 0);
-        });
+        Blockly.getMainWorkspace()
+          .getTopBlocks()
+          .forEach(function (topBlock) {
+            topBlock.moveBy(blockOffset, 0);
+          });
       }
     }
     this.lastWorkspaceWidth = workspaceWidth;
@@ -1922,8 +1924,8 @@ StudioApp.prototype.resetButtonClick = function () {
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    Blockly.mainBlockSpace.traceOn(false);
+    Blockly.getMainWorkspace().setEnableToolbox(true);
+    Blockly.getMainWorkspace().traceOn(false);
   }
   this.reset(false);
 };
@@ -2137,11 +2139,11 @@ function runButtonClickWrapper(callback) {
   }
 
   // inform Blockly that the run button has been pressed
-  if (window.Blockly && Blockly.mainBlockSpace) {
+  if (window.Blockly && Blockly.getMainWorkspace()) {
     var customEvent = utils.createEvent(
       Blockly.BlockSpace.EVENTS.RUN_BUTTON_CLICKED
     );
-    Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
+    Blockly.getMainWorkspace().getCanvas().dispatchEvent(customEvent);
   }
   getStore().dispatch(setFeedback(null));
   callback();
@@ -3247,7 +3249,7 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace
+  return Blockly.getMainWorkspace()
     .getAllUsedBlocks()
     .some(this.forLoopHasDuplicatedNestedVariables_);
 };

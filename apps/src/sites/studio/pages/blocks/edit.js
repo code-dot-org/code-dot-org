@@ -3,7 +3,7 @@ import jsonic from 'jsonic';
 
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
+import {getWorkspaceCode, loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
@@ -155,7 +155,9 @@ function validateTextFieldNames(json) {
 
 function validateBlockRenders() {
   if (
-    Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
+    Blockly.getMainWorkspace()
+      .getAllBlocks()
+      .some(block => !!block.unknownBlock)
   ) {
     throw 'Blockly is unable to render a block with the given configuration.';
   }
@@ -199,14 +201,13 @@ function updateBlockPreview() {
     customInputTypes,
   });
   const block = `<block type="${blockName}" />`;
-  Blockly.mainBlockSpace.clear();
-  loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
-  Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
+  Blockly.getMainWorkspace().clear();
+  loadBlocksToWorkspace(Blockly.getMainWorkspace(), block);
+  Blockly.addChangeListener(Blockly.getMainWorkspace(), onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {
-  document.getElementById('code-preview').innerText =
-    Blockly.getWorkspaceCode();
+  document.getElementById('code-preview').innerText = getWorkspaceCode();
 }
 
 function checkBlockNameChanges(blockName) {

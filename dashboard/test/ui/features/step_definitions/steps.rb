@@ -640,7 +640,7 @@ When /^I complete the CAPTCHA$/ do
 end
 
 When /^I press delete$/ do
-  script = "Blockly.mainBlockSpaceEditor.onKeyDown_("
+  script = "Blockly.getMainWorkspace().onKeyDown_("
   script += "{"
   script += "  target: {},"
   script += "  preventDefault: function() {},"

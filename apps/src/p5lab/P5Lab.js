@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {getCode} from '@cdo/apps/blockly/utils';
+import {getCode, getWorkspaceCode} from '@cdo/apps/blockly/utils';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -403,9 +403,9 @@ export default class P5Lab {
       this.setCrosshairCursorForPlaySpace();
 
       if (this.isBlockly) {
-        this.currentCode = Blockly.getWorkspaceCode();
+        this.currentCode = getWorkspaceCode();
         this.studioApp_.addChangeHandler(() => {
-          const newCode = Blockly.getWorkspaceCode();
+          const newCode = getWorkspaceCode();
           if (newCode !== this.currentCode) {
             this.currentCode = newCode;
             if (!getStore().getState().runState.isRunning) {
@@ -731,7 +731,7 @@ export default class P5Lab {
     }
 
     if (this.level.blocklyVariables) {
-      Blockly.mainBlockSpace.registerGlobalVariables(
+      Blockly.getMainWorkspace().registerGlobalVariables(
         this.level.blocklyVariables.split(',').map(varName => varName.trim())
       );
     }
@@ -905,7 +905,7 @@ export default class P5Lab {
       this.message = null;
     } else {
       let textBlocks;
-      textBlocks = getCode(Blockly.mainBlockSpace);
+      textBlocks = getCode(Blockly.getMainWorkspace());
       program = encodeURIComponent(textBlocks);
     }
 
@@ -961,7 +961,7 @@ export default class P5Lab {
     this.studioApp_.toggleRunReset('reset');
     // document.getElementById('spinner').style.visibility = 'visible';
     if (this.studioApp_.isUsingBlockly()) {
-      Blockly.mainBlockSpace.traceOn(true);
+      Blockly.getMainWorkspace().traceOn(true);
     }
     this.studioApp_.attempts++;
     this.execute();

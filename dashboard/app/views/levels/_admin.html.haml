@@ -82,7 +82,7 @@
       %button{type: 'button', onclick: 'window.levelbuilder.pasteBlocksToWorkspace()', class: 'btn btn-default btn-sm'}
         Paste block(s)
       %br
-      %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
+      %button{type: 'button', onclick: 'Blockly.getMainWorkspace().clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
       %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
         Undo

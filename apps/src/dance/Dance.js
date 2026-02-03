@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {getCode} from '@cdo/apps/blockly/utils';
+import {getCode, getWorkspaceCode} from '@cdo/apps/blockly/utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import localization from '@cdo/apps/localization';
@@ -154,7 +154,7 @@ Dance.prototype.init = function (config) {
           return;
         }
 
-        const newCode = Blockly.getWorkspaceCode();
+        const newCode = getWorkspaceCode();
         // Only execute preview if the student code has changed and we are not running the program.
         if (newCode !== this.currentCode && !this.studioApp_.isRunning()) {
           this.currentCode = newCode;
@@ -590,7 +590,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  let program = encodeURIComponent(getCode(Blockly.mainBlockSpace));
+  let program = encodeURIComponent(getCode(Blockly.getMainWorkspace()));
 
   if (this.testResults >= TestResults.FREE_PLAY) {
     this.studioApp_.playAudio('win');
@@ -673,7 +673,7 @@ Dance.prototype.runButtonClick = async function () {
     value: getStore().getState().dance.selectedSong,
   });
 
-  Blockly.mainBlockSpace.traceOn(true);
+  Blockly.getMainWorkspace().traceOn(true);
   this.studioApp_.attempts++;
 
   try {

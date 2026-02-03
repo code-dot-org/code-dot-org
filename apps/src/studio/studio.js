@@ -2419,7 +2419,7 @@ Studio.prepareForRemix = function () {
     return Promise.resolve();
   }
 
-  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.getMainWorkspace());
   const blocksDocument = blocksDom.ownerDocument;
 
   let whenRun = blocksDom.querySelector('block[type="when_run"]');
@@ -2515,9 +2515,9 @@ Studio.prepareForRemix = function () {
   whenRun.appendChild(next);
   cleanBlocks(blocksDom);
 
-  Blockly.mainBlockSpace.clear();
+  Blockly.getMainWorkspace().clear();
   loadBlocksToWorkspace(
-    Blockly.mainBlockSpace,
+    Blockly.getMainWorkspace(),
     Blockly.Xml.domToText(blocksDom)
   );
   return Promise.resolve();
@@ -2944,7 +2944,7 @@ Studio.runButtonClick = function () {
   }
   studioApp().toggleRunReset('reset');
   if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainWorkspace().traceOn(true);
   }
 
   // Stop the music the first time the run button is pressed (hoc2015)
@@ -3116,7 +3116,7 @@ var registerHandlers = function (
   matchParam2Val,
   argNames
 ) {
-  const blocks = [...Blockly.mainBlockSpace.getTopBlocks()];
+  const blocks = [...Blockly.getMainWorkspace().getTopBlocks()];
 
   // Account for hidden blocks, e.g. function definitions or blocks from
   // legacy levels that were set as invisible to the user.
@@ -3687,7 +3687,7 @@ Studio.sendPuzzleReport = function (onComplete = Studio.onReportComplete) {
 
     program = studioApp().getCode();
   } else {
-    program = getCode(Blockly.mainBlockSpace);
+    program = getCode(Blockly.getMainWorkspace());
   }
 
   Studio.waitingForReport = true;

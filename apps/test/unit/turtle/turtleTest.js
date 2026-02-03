@@ -452,8 +452,10 @@ describe('Artist', () => {
             return new XMLSerializer().serializeToString(dom);
           },
         },
-        mainBlockSpace: {
-          clear() {},
+        getMainWorkspace() {
+          return {
+            clear() {},
+          };
         },
       };
 

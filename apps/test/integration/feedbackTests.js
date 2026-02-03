@@ -37,7 +37,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.getMainWorkspace());
     assert(
       !args.blockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'
@@ -159,7 +159,7 @@ describe('getUserBlocks_', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.getMainWorkspace());
     assert(loaded, "we didn't correctly load our test blocks");
 
     var userBlocks = studioApp.feedback_.getUserBlocks_();
@@ -187,10 +187,10 @@ describe('getUserBlocks_', function () {
       '</xml>',
     ];
 
-    var readOnly = Blockly.mainBlockSpace.readOnly;
-    Blockly.mainBlockSpace.readOnly = true;
+    var readOnly = Blockly.getMainWorkspace().readOnly;
+    Blockly.getMainWorkspace().readOnly = true;
     validateNumUserBlocks(testBlockXml.join(''), 3);
-    Blockly.mainBlockSpace.readOnly = readOnly;
+    Blockly.getMainWorkspace().readOnly = readOnly;
   });
 });
 
@@ -269,7 +269,7 @@ describe('getMissingBlocks_ tests', function () {
 
     // make sure we loaded correctly. text wont match exactly, but make sure if
     // we had xml, we loaded something
-    var loaded = getCode(Blockly.mainBlockSpace);
+    var loaded = getCode(Blockly.getMainWorkspace());
     assert(
       !options.userBlockXml || loaded,
       'either we didnt have  input xml' + 'or we did, and we loaded something'

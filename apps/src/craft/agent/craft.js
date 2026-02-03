@@ -648,7 +648,7 @@ export default class Craft {
     }
 
     studioApp().toggleRunReset('reset');
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainWorkspace().traceOn(true);
     studioApp().attempts++;
 
     Craft.executeUserCode();
@@ -686,7 +686,7 @@ export default class Craft {
     studioApp().playAudio('start');
 
     // Start tracing calls.
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainWorkspace().traceOn(true);
 
     const appCodeOrgAPI = Craft.gameController.codeOrgAPI;
     appCodeOrgAPI.startCommandCollection();
@@ -841,7 +841,7 @@ export default class Craft {
       result: Craft.initialConfig.level.freePlay ? true : success,
       testResult: testResultType,
       image: encodedImage,
-      program: encodeURIComponent(getCode(Blockly.mainBlockSpace)),
+      program: encodeURIComponent(getCode(Blockly.getMainWorkspace())),
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {

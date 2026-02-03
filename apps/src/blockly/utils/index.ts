@@ -3,7 +3,6 @@ export * from './blocks/interpolateMsg';
 export * from './blocks/register';
 export * from './blocks/types';
 export * from './code/generators';
-export * from './code/handleCodeGenerationFailure';
 export * from './code/strip';
 export * from './fields/getBlockFields';
 export * from './fields/location';

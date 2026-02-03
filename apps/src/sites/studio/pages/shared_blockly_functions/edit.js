@@ -51,8 +51,8 @@ const blockXml = `<xml>
   </block>
 </xml>`;
 
-loadBlocksToWorkspace(Blockly.mainBlockSpace, blockXml);
-const block = Blockly.mainBlockSpace.getTopBlocks()[0];
+loadBlocksToWorkspace(Blockly.getMainWorkspace(), blockXml);
+const block = Blockly.getMainWorkspace().getTopBlocks()[0];
 const name = getInput('name').value || DEFAULT_NAME;
 
 if (name) {
@@ -67,7 +67,7 @@ const childBlock = Blockly.Xml.textToDom(
   '<xml>' + getInput('stack').value + '</xml>'
 ).firstChild;
 if (childBlock) {
-  const stack = Blockly.Xml.domToBlock(Blockly.mainBlockSpace, childBlock);
+  const stack = Blockly.Xml.domToBlock(Blockly.getMainWorkspace(), childBlock);
   block.attachBlockToInputName(stack, 'STACK');
 }
 

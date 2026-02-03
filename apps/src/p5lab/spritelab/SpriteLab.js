@@ -144,11 +144,11 @@ export default class SpriteLab extends P5Lab {
       if (
         lastState.animationList?.propsByKey !== state.animationList?.propsByKey
       ) {
-        if (window.Blockly && Blockly.mainBlockSpace) {
+        if (window.Blockly && Blockly.getMainWorkspace()) {
           const customEvent = utils.createEvent(
             Blockly.BlockSpace.EVENTS.ANIMATIONS_CHANGED
           );
-          Blockly.mainBlockSpace.events.dispatchEvent(customEvent);
+          Blockly.getMainWorkspace().events.dispatchEvent(customEvent);
         }
       }
     });

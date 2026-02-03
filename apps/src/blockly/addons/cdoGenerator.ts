@@ -36,9 +36,9 @@ export default function initializeGenerator(
     name: string,
     opt_typeFilter?: string | string[]
   ) {
-    let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
-      true /* ordered */
-    );
+    let blocksToGenerate = blocklyWrapper
+      .getMainWorkspace()
+      .getTopBlocks(true /* ordered */);
     if (blocklyWrapper.getHiddenDefinitionWorkspace()) {
       blocksToGenerate.push(
         ...(

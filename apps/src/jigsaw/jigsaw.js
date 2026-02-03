@@ -117,7 +117,7 @@ var drawMap = function () {
   visualizationColumn.style.display = 'none';
 
   if (level.ghost) {
-    var blockCanvas = Blockly.mainBlockSpace.getCanvas();
+    var blockCanvas = Blockly.getMainWorkspace().getCanvas();
     Blockly.utils.dom.createSvgElement(
       'rect',
       {
@@ -179,7 +179,7 @@ Jigsaw.init = function (config) {
     studioApp().init(config);
 
     document.getElementById('runButton').style.display = 'none';
-    Jigsaw.successListener = Blockly.mainBlockSpaceEditor.addChangeListener(
+    Jigsaw.successListener = Blockly.getMainWorkspace().addChangeListener(
       function (evt) {
         // Only used by level1, in which the success criteria is clicking on the block
         if (evt.type === 'click' && evt.blockId === 'jigsaw_1A') {
@@ -263,7 +263,7 @@ Jigsaw.onPuzzleComplete = function () {
     studioApp().playAudio('failure');
   }
 
-  var textBlocks = getCode(Blockly.mainBlockSpace);
+  var textBlocks = getCode(Blockly.getMainWorkspace());
 
   Jigsaw.waitingForReport = true;
 

@@ -138,7 +138,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   toolboxBlocks: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
   useModalFunctionEditor: boolean;
   functionEditor: FunctionEditor;
-  mainBlockSpace: ExtendedWorkspaceSvg;
   hiddenDefinitionWorkspace: ExtendedWorkspace;
   Generator: ExtendedCodeGenerator;
   Xml: ExtendedXml;
@@ -154,7 +153,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   overrideFields: (
     overrides: [string, string, BlocklyCore.fieldRegistry.RegistrableField][]
   ) => void;
-  getWorkspaceCode: () => string;
   addChangeListener: (
     blockspace: BlocklyCore.Workspace,
     handler: (e: BlocklyCore.Events.Abstract) => void

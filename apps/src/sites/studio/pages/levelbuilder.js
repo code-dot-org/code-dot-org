@@ -46,7 +46,7 @@ window.levelbuilder.installBlocks = function (app, blockly, options) {
 };
 
 window.levelbuilder.copyWorkspaceToClipboard = function () {
-  const workspaceXml = getProjectXml(Blockly.mainBlockSpace);
+  const workspaceXml = getProjectXml(Blockly.getMainWorkspace());
   removeIdsFromBlocks(workspaceXml);
 
   const str = Blockly.Xml.domToPrettyText(workspaceXml);
@@ -75,7 +75,7 @@ window.levelbuilder.pasteBlocksToWorkspace = function () {
     return;
   }
 
-  loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
+  loadBlocksToWorkspace(Blockly.getMainWorkspace(), str);
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.

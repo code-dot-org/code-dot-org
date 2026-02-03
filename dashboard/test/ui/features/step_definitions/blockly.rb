@@ -115,7 +115,7 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
 end
 
 Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
-  @browser.execute_script("Blockly.mainBlockSpace.centerOnBlock('#{block_id}')")
+  @browser.execute_script("Blockly.getMainWorkspace().centerOnBlock('#{block_id}')")
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
@@ -183,7 +183,7 @@ Then(/^block "([^"]*)" is in front of block "([^"]*)"$/) do |block_front, block_
 end
 
 Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
-  code = "return Blockly.mainBlockSpace.getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
+  code = "return Blockly.getMainWorkspace().getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
   result = @browser.execute_script(code)
   expect(result).to eq(n.to_i)
 end
@@ -206,7 +206,7 @@ Then(/^all blocks render with no unknown blocks$/) do
 end
 
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
-  code = "return Blockly.mainBlockSpace.getAllBlocks().some(function (block) { return block.id == '" + get_block_id(block_id) + "'; })"
+  code = "return Blockly.getMainWorkspace().getAllBlocks().some(function (block) { return block.id == '" + get_block_id(block_id) + "'; })"
   result = @browser.execute_script(code)
   if negation.nil?
     expect(result).to eq(false)
@@ -281,13 +281,13 @@ end
 
 Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
   script = "
-    Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
+    Blockly.getMainWorkspace().getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
   "
   @browser.execute_script(script)
 end
 
 Then(/^the open flyout has (.*?) blocks$/) do |n|
-  script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
+  script = "return Blockly.getMainWorkspace().getFlyout().getWorkspace().getTopBlocks().length"
   expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
@@ -369,7 +369,7 @@ end
 
 def clear_main_block_space
   wait_until do
-    @browser.execute_script("return Blockly && !!Blockly.mainBlockSpace")
+    @browser.execute_script("return Blockly && !!Blockly.getMainWorkspace()")
   end
-  @browser.execute_script("Blockly.mainBlockSpace.clear()")
+  @browser.execute_script("Blockly.getMainWorkspace().clear()")
 end

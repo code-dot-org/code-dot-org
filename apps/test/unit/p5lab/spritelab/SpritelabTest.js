@@ -199,13 +199,16 @@ describe('SpriteLab', () => {
       });
 
       describe('dispatching Blockly events', () => {
-        let store, eventSpy, originalMainBlockSpace;
+        let store, eventSpy, getMainWorkspaceSpy;
         beforeEach(() => {
           store = getStore();
           instance.setupReduxSubscribers(store);
-          originalMainBlockSpace = Blockly.mainBlockSpace;
+
           eventSpy = jest.fn();
-          Blockly.mainBlockSpace = {events: {dispatchEvent: eventSpy}};
+
+          getMainWorkspaceSpy = jest
+            .spyOn(Blockly, 'getMainWorkspace')
+            .mockReturnValue({events: {dispatchEvent: eventSpy}});
 
           const initialAnimationList = {
             orderedKeys: ['key1'],
@@ -234,7 +237,7 @@ describe('SpriteLab', () => {
 
         afterEach(() => {
           eventSpy.mockRestore();
-          Blockly.mainBlockSpace = originalMainBlockSpace;
+          getMainWorkspaceSpy.mockRestore();
         });
 
         it('dispatches event when animations are added', () => {

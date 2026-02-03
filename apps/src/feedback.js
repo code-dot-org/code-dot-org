@@ -12,6 +12,7 @@ import {
   getAllBlocks,
   getBlockLimit,
   getBlockFields,
+  getWorkspaceCode,
 } from '@cdo/apps/blockly/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -663,7 +664,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
           options.level.levelIncompleteError || msg.levelIncompleteError();
         break;
       case TestResults.EXTRA_TOP_BLOCKS_FAIL:
-        var hasWhenRun = Blockly.mainBlockSpace
+        var hasWhenRun = Blockly.getMainWorkspace()
           .getTopBlocks()
           .some(function (block) {
             return (
@@ -1072,7 +1073,7 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function () {
   } else if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   } else {
-    return Blockly.getWorkspaceCode();
+    return getWorkspaceCode();
   }
 };
 
@@ -1406,7 +1407,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function () {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.mainBlockSpace.isReadOnly()) {
+    if (!Blockly.getMainWorkspace().isReadOnly()) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
@@ -1508,7 +1509,8 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
         var test = block[testId].test;
         if (typeof test === 'string') {
           code =
-            code || Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+            code ||
+            Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace());
           if (code.indexOf(test) !== -1) {
             // Succeeded, moving to the next list of tests
             usedBlock = true;
@@ -1549,7 +1551,7 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
   ) {
     return false;
   }
-  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
+  var topBlocks = Blockly.getMainWorkspace().getTopBlocks();
   for (var i = 0; i < topBlocks.length; i++) {
     // ignore disabled top blocks. we have a level turtle:2_7 that depends on
     // having disabled top level blocks

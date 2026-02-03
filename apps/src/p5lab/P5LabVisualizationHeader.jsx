@@ -39,7 +39,7 @@ class P5LabVisualizationHeader extends React.Component {
     if (mode === P5LabInterfaceMode.CODE) {
       if (this.props.isBlockly) {
         // Sprite Lab (Blockly) doesn't need a window resize event, but it does need to rerender.
-        setTimeout(() => Blockly.mainBlockSpace.render(), 0);
+        setTimeout(() => Blockly.getMainWorkspace().render(), 0);
       } else {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);

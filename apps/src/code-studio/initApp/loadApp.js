@@ -128,7 +128,7 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          report.program = getCode(Blockly.mainBlockSpace);
+          report.program = getCode(Blockly.getMainWorkspace());
         }
         report.callback = appOptions.report.callback;
       }
@@ -523,13 +523,13 @@ const sourceHandler = {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
-      if (window.Blockly && Blockly.mainBlockSpace) {
+      if (window.Blockly && Blockly.getMainWorkspace()) {
         try {
           const getSourceAsJson = true;
           // If we're readOnly, source hasn't changed at all
-          source = Blockly.mainBlockSpace.isReadOnly()
+          source = Blockly.getMainWorkspace().isReadOnly()
             ? currentLevelSource
-            : getCode(Blockly.mainBlockSpace, getSourceAsJson);
+            : getCode(Blockly.getMainWorkspace(), getSourceAsJson);
           resolve(source);
         } catch (err) {
           MetricsReporter.logError({

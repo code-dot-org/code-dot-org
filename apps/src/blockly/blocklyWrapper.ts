@@ -17,9 +17,6 @@ import {
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
 import DCDO from '@cdo/apps/dcdo';
-import {MetricEvent} from '@cdo/apps/metrics/events';
-import {getStore} from '@cdo/apps/redux';
-import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
@@ -113,8 +110,6 @@ import {
   BlocklyCoreInstance,
 } from './types';
 import {
-  handleCodeGenerationFailure,
-  strip,
   initializeVariableLocalization,
   isDarkTheme,
   setThemeAndRenderBlocks,
@@ -131,9 +126,6 @@ const options: {contextMenu: true; shortcut: true} = {
 
 const crossTabCopyPastePlugin = new CrossTabCopyPaste();
 crossTabCopyPastePlugin.init(options);
-
-const MAX_GET_CODE_RETRIES = 2;
-const RETRY_GET_CODE_INTERVAL_MS = 500;
 
 /**
  * Wrapper class for https://github.com/RaspberryPiFoundation/blockly
@@ -205,41 +197,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const blocklyWrapper = new (BlocklyWrapper as any)(
     blocklyInstance
   ) as BlocklyWrapperType;
-
-  blocklyWrapper.getWorkspaceCode = function () {
-    return getWorkspaceCodeHelper(0, this.getHiddenDefinitionWorkspace());
-  };
-
-  const getWorkspaceCodeHelper = (
-    retryCount: number,
-    hiddenWorkspace: BlocklyCore.Workspace | undefined
-  ): string => {
-    let workspaceCode = '';
-    try {
-      workspaceCode = Blockly.JavaScript.workspaceToCode(
-        Blockly.mainBlockSpace
-      );
-      if (hiddenWorkspace) {
-        workspaceCode += Blockly.JavaScript.workspaceToCode(hiddenWorkspace);
-      }
-      workspaceCode = strip(workspaceCode);
-      getStore().dispatch(setFailedToGenerateCode(false));
-    } catch (e) {
-      if (retryCount < MAX_GET_CODE_RETRIES) {
-        // Sometimes we need to wait for Blockly change handlers to complete
-        // before the code will generate correctly. Retry after a short delay.
-        setTimeout(() => {
-          return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
-        }, RETRY_GET_CODE_INTERVAL_MS);
-      } else {
-        handleCodeGenerationFailure(
-          MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
-          e as Error
-        );
-      }
-    }
-    return workspaceCode;
-  };
 
   READ_ONLY_PROPERTIES.forEach(prop => {
     blocklyWrapper.wrapReadOnlyProperty(prop);
@@ -346,24 +303,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   registerAllContextMenuItems();
 
-  // This is wrapping a settable property, but we can't use wrapSettableProperty
-  // because the alias name is not the same as the underlying property name.
-  Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
-    get: function () {
-      return this.mainWorkspace || this.blockly_.getMainWorkspace();
-    },
-    // Setter is only used in tests.
-    set: function (workspace) {
-      this.mainWorkspace = workspace;
-    },
-  });
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
-  Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
-    get: function () {
-      return this.mainWorkspace || this.blockly_.getMainWorkspace();
-    },
-  });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
     get: function () {
       return this.blockly_.utils.dom.SVG_NS;
@@ -528,11 +469,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   blocklyWrapper.BlockSpace = {
     EVENTS: WORKSPACE_EVENTS,
     onMainBlockSpaceCreated: callback => {
-      if (Blockly.mainBlockSpace) {
+      if (Blockly.getMainWorkspace()) {
         callback();
       } else {
         document.addEventListener(
-          Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED,
+          Blockly.BlockSpace.EVENTS.MAIN_WORKSPACE_CREATED,
           callback
         );
       }
@@ -810,7 +751,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     window.addEventListener('resize', reflowToolbox);
 
     document.dispatchEvent(
-      utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
+      utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_WORKSPACE_CREATED)
     );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
@@ -894,7 +835,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
 
   blocklyWrapper.getMainWorkspace = function () {
-    return blocklyWrapper.mainBlockSpace;
+    return (this.mainWorkspace ||
+      this.blockly_.getMainWorkspace()) as ExtendedWorkspaceSvg;
   };
 
   blocklyWrapper.getFunctionEditorWorkspace = function () {

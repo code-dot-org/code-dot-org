@@ -408,8 +408,9 @@ describe('StudioApp', () => {
 
     it('should get the blockly workspace code if it is read only', () => {
       studioApp().editCode = false;
+      const blocklyUtils = require('@cdo/apps/blockly/utils');
       let stub = sinon
-        .stub(Blockly, 'getWorkspaceCode')
+        .stub(blocklyUtils, 'getWorkspaceCode')
         .returns('blockly workspace');
       expect(studioApp().getCode()).to.equal('blockly workspace');
       stub.restore();

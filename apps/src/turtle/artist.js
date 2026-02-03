@@ -438,7 +438,7 @@ Artist.prototype.init = function (config) {
  * orientation.
  */
 Artist.prototype.prepareForRemix = function () {
-  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+  const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.getMainWorkspace());
   const blocksDocument = blocksDom.ownerDocument;
   const remix_props = REMIX_PROPS_BY_SKIN[this.skin.id] || REMIX_PROPS;
   let next = false;
@@ -501,9 +501,9 @@ Artist.prototype.prepareForRemix = function () {
 
   cleanBlocks(blocksDom);
 
-  Blockly.mainBlockSpace.clear();
+  Blockly.getMainWorkspace().clear();
   loadBlocksToWorkspace(
-    Blockly.mainBlockSpace,
+    Blockly.getMainWorkspace(),
     Blockly.Xml.domToText(blocksDom)
   );
   return Promise.resolve();
@@ -793,7 +793,7 @@ Artist.prototype.runButtonClick = function () {
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
+    Blockly.getMainWorkspace().traceOn(true);
   }
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
@@ -1024,7 +1024,7 @@ Artist.prototype.finishExecution_ = function () {
 
   document.getElementById('spinner').style.visibility = 'hidden';
   if (this.studioApp_.isUsingBlockly()) {
-    Blockly.mainBlockSpace.highlightBlock(null);
+    Blockly.getMainWorkspace().highlightBlock(null);
   }
 
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
@@ -1588,7 +1588,7 @@ Artist.prototype.checkAnswer = function () {
 
 Artist.prototype.getUserCode = function () {
   if (this.studioApp_.isUsingBlockly()) {
-    return getCode(Blockly.mainBlockSpace);
+    return getCode(Blockly.getMainWorkspace());
   } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:

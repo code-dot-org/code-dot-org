@@ -1,9 +1,16 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {getProjectXml} from '@cdo/apps/blockly/addons/cdoXml';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {getStore} from '@cdo/apps/redux';
+import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
+import {strip} from '../code/strip';
 import {getProjectSerialization} from '../serialization/state';
 
+const MAX_GET_CODE_RETRIES = 2;
+const RETRY_GET_CODE_INTERVAL_MS = 500;
 /**
  * Retrieves the serialization of the workspace (student code).
  *
@@ -58,4 +65,59 @@ export function getAllGeneratedCode(extraCode?: string) {
     }
   );
   return code;
+}
+
+export function getWorkspaceCode() {
+  return getWorkspaceCodeHelper(0, Blockly.getHiddenDefinitionWorkspace());
+}
+
+const getWorkspaceCodeHelper = (
+  retryCount: number,
+  hiddenWorkspace: BlocklyCore.Workspace | undefined
+): string => {
+  let workspaceCode = '';
+  try {
+    workspaceCode = Blockly.JavaScript.workspaceToCode(
+      Blockly.getMainWorkspace()
+    );
+    if (hiddenWorkspace) {
+      workspaceCode += Blockly.JavaScript.workspaceToCode(hiddenWorkspace);
+    }
+    workspaceCode = strip(workspaceCode);
+    getStore().dispatch(setFailedToGenerateCode(false));
+  } catch (e) {
+    if (retryCount < MAX_GET_CODE_RETRIES) {
+      // Sometimes we need to wait for Blockly change handlers to complete
+      // before the code will generate correctly. Retry after a short delay.
+      setTimeout(() => {
+        return getWorkspaceCodeHelper(retryCount + 1, hiddenWorkspace);
+      }, RETRY_GET_CODE_INTERVAL_MS);
+    } else {
+      handleCodeGenerationFailure(
+        MetricEvent.GOOGLE_BLOCKLY_GET_CODE_ERROR,
+        e as Error
+      );
+    }
+  }
+  return workspaceCode;
+};
+
+/**
+ * Handle a failure to get workspace code by Blockly by updating the
+ * redux store and logging the error.
+ * We only want to log the error once per failure since getWorkspaceCode
+ * gets called many times and the error will be the same every time.
+ * @param {MetricEvent} eventName Event name to log
+ * @param {Error} error Error thrown by getWorkspaceCode
+ */
+function handleCodeGenerationFailure(eventName: MetricEvent, error: Error) {
+  const store = getStore();
+  if (!store.getState().blockly.failedToGenerateCode) {
+    store.dispatch(setFailedToGenerateCode(true));
+    MetricsReporter.logError({
+      event: eventName,
+      errorMessage: error.message,
+      stackTrace: error.stack,
+    });
+  }
 }

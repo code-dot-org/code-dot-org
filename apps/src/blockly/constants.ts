@@ -157,7 +157,7 @@ export const VARIABLE_BLOCK_TYPES: string[] = [
 export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];
 
 export const WORKSPACE_EVENTS = {
-  MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
+  MAIN_WORKSPACE_CREATED: 'mainWorkspaceCreated',
   EVENT_BLOCKS_IMPORTED: 'blocksImported',
   BLOCK_SPACE_CHANGE: 'blockSpaceChange',
   BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',

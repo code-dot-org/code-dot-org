@@ -155,12 +155,12 @@ export default class FunctionEditor {
     );
 
     // Set up the "new procedure" button in the toolbox
-    Blockly.mainBlockSpace.registerButtonCallback(
+    Blockly.getMainWorkspace().registerButtonCallback(
       'newProcedureCallback',
       () => {
         this.newProcedureCallback();
         // refresh the flyout after the new procedure is created
-        Blockly.mainBlockSpace?.getToolbox()?.refreshSelection();
+        Blockly.getMainWorkspace()?.getToolbox()?.refreshSelection();
       }
     );
 
@@ -389,7 +389,7 @@ export default class FunctionEditor {
       name
     );
     const mainProcedure = this.createProcedureModelForWorkspace(
-      Blockly.mainBlockSpace,
+      Blockly.getMainWorkspace(),
       hiddenProcedure
     );
 
@@ -398,7 +398,7 @@ export default class FunctionEditor {
     Blockly.getHiddenDefinitionWorkspace()
       .getProcedureMap()
       .add(hiddenProcedure);
-    Blockly.mainBlockSpace.getProcedureMap().add(mainProcedure);
+    Blockly.getMainWorkspace().getProcedureMap().add(mainProcedure);
 
     // Add the procedure model to the editor's map as well
     // Can't use the same underlying model or events get weird.
@@ -454,7 +454,7 @@ export default class FunctionEditor {
     // delete all caller blocks from the main workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
-      Blockly.mainBlockSpace
+      Blockly.getMainWorkspace()
     ).forEach(block => {
       block.dispose(true /* healStack */);
     });
@@ -478,11 +478,14 @@ export default class FunctionEditor {
     // workspace, as well as variables being created/renamed/deleted.
     this.editorWorkspace?.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
-      if (!Blockly.mainBlockSpace) return;
+      if (!Blockly.getMainWorkspace()) return;
       if (e instanceof ProcedureBase || e instanceof Blockly.Events.VarBase) {
         let event;
         try {
-          event = Blockly.Events.fromJson(e.toJson(), Blockly.mainBlockSpace);
+          event = Blockly.Events.fromJson(
+            e.toJson(),
+            Blockly.getMainWorkspace()
+          );
         } catch (err) {
           // Could not deserialize event. This is expected to happen. E.g. When
           // round-tripping parameter deletes, the delete in the secondary workspace
@@ -493,7 +496,7 @@ export default class FunctionEditor {
 
         // Update the toolbox in case this change is happening
         // while the flyout is open.
-        Blockly.mainBlockSpace?.getToolbox()?.refreshSelection();
+        Blockly.getMainWorkspace()?.getToolbox()?.refreshSelection();
       }
     });
 

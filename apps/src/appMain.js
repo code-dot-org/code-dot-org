@@ -18,7 +18,7 @@ import {valueOr} from './utils';
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),
   getBlockXML: () =>
-    Blockly.Xml.domToText(getProjectXml(Blockly.mainBlockSpace)),
+    Blockly.Xml.domToText(getProjectXml(Blockly.getMainWorkspace())),
   arrangeBlockPosition: (...args) => studioApp().arrangeBlockPosition(...args),
   getDropletContents: () => studioApp().editor.getValue(),
   getDroplet: () => studioApp().editor,

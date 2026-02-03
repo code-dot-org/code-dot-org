@@ -12,7 +12,7 @@ type BlockList = Array<BlocklyCore.Block | BlocklyCore.BlockSvg>;
 export function getCodeBlocks(): BlockList {
   let codeBlocks: BlockList = [];
   let hiddenBlocks: BlockList = [];
-  const mainBlocks = Blockly.mainBlockSpace.getTopBlocks(true) as BlockList;
+  const mainBlocks = Blockly.getMainWorkspace().getTopBlocks(true) as BlockList;
 
   // The hidden workspace is only present in Blockly labs where the modal
   // function editor is enabled.
@@ -38,7 +38,7 @@ export function getCodeBlocks(): BlockList {
  */
 export function getAllBlocks(): BlockList {
   return [
-    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...Blockly.getMainWorkspace().getAllUsedBlocks(),
     ...(Blockly.getHiddenDefinitionWorkspace()
       ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
       : []),
