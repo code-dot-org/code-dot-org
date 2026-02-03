@@ -39,10 +39,6 @@ import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
 
-interface AifInfo {
-  aif: boolean;
-}
-
 interface LessonMaterialsData {
   unitId: number;
   unitName?: string;
@@ -139,17 +135,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   // or if the section has AIF assigned in order to enable AI Lesson Summaries
   React.useEffect(() => {
     if (!!unitToLoad && !!aiTALessonSummaryInfo) {
-      if (!showAITALessonSummary) {
-        HttpClient.fetchJson<AifInfo>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
-        ).then(response => {
-          setCanShowLessonSummaries(response.value.aif);
-        });
-      } else {
-        setCanShowLessonSummaries(showAITALessonSummary);
-      }
-    } else {
-      setCanShowLessonSummaries(false);
+      setCanShowLessonSummaries(showAITALessonSummary);
     }
   }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
 
