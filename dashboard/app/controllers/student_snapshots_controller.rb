@@ -38,7 +38,7 @@ class StudentSnapshotsController < ApplicationController
       if student
         section = student.sections_as_student.joins(:script).where(scripts: {id: unit_id}).first
         section_id = section&.id
-        teacher_id = section&.teacher.id
+        teacher_id = section&.teacher&.id
       end
     end
 
