@@ -87,10 +87,14 @@ export function createHttpTransport(opts: {
       if (!res.ok) {
         throw new ApiError(
           `Request failed: ${req.method} ${url} -> ${res.status}`,
-          res.status,
-          url,
-          req.method,
-          payload,
+          {
+            status: res.status,
+            statusText: res.statusText,
+            type: res.type,
+            url,
+            method: req.method,
+            headers: res.headers,
+          },
         );
       }
 

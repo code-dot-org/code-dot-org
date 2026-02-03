@@ -11,7 +11,6 @@ import type {
   AppOptions,
   ExtraLinksLevelData,
   LevelPropertiesMap,
-  PredictResponse,
   SectionSummary,
   UserAppOptions,
 } from './levels.types';
@@ -48,7 +47,7 @@ export function useLevelProperties(
 export function usePredictResponse(
   api: ApiClient,
   params: {levelId: number; scriptId: number},
-  options?: Omit<UseQueryOptions<PredictResponse>, 'queryKey' | 'queryFn'>,
+  options?: Omit<UseQueryOptions<string>, 'queryKey' | 'queryFn'>,
 ) {
   const {levelId, scriptId} = params;
 

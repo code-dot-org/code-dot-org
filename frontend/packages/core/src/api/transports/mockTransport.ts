@@ -59,12 +59,11 @@ export function createMockTransport(opts: {
       });
 
       if (!route) {
-        throw new ApiError(
-          `No mock route for ${req.method} ${normalizedUrl}`,
-          404,
-          normalizedUrl,
-          req.method,
-        );
+        throw new ApiError(`No mock route for ${req.method} ${normalizedUrl}`, {
+          status: 404,
+          url: normalizedUrl,
+          method: req.method,
+        });
       }
 
       const result = await route.handler({...req, url: normalizedUrl});
