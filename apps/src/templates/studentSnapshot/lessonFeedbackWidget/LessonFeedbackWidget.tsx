@@ -71,6 +71,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           icon={{iconName: 'sparkles'}}
           text={i18n.lessonFeedbackAlertText()}
           type="aqua"
+          size="xs"
         />
         <div>
           <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
