@@ -1,16 +1,9 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import type {
-  AppOptions,
-  ExemplarSettings,
-} from '@code-dot-org/core/api';
+import type {AppOptions, ExemplarSettings} from '@code-dot-org/core/api';
 
-import {
-  Validation,
-  Validator,
-  ValidationState,
-} from './types';
+import {Validation, Validator, ValidationState} from './types';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
@@ -62,7 +55,8 @@ export default class ProgressManager {
     }
     const exemplarSettings = this.exemplarSettings;
     const shouldValidateExemplar =
-      !this.appOptions?.isEditingExemplar && exemplarSettings?.validationEnabled;
+      !this.appOptions?.isEditingExemplar &&
+      exemplarSettings?.validationEnabled;
 
     // Compute exemplar validation result and message only once if needed.
     let passedExemplar = false;

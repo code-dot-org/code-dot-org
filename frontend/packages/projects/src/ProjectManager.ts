@@ -434,7 +434,9 @@ export default class ProjectManager {
 
   setThumbnail(pngBlob: Blob) {
     this.thumbnailPngBlob = pngBlob;
-    this.thumbnailUrl = this.apiClient.projects.getProjectThumbnailUrl({channelId: this.channelId});
+    this.thumbnailUrl = this.apiClient.projects.getProjectThumbnailUrl({
+      channelId: this.channelId,
+    });
   }
 
   /**
