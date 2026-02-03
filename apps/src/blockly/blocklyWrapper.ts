@@ -305,11 +305,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
-  Object.defineProperty(blocklyWrapper, 'SVG_NS', {
-    get: function () {
-      return this.blockly_.utils.dom.SVG_NS;
-    },
-  });
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
       // In the event that the block is no longer focused, we can
