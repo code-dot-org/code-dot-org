@@ -265,6 +265,7 @@ const styles = {
     flexGrow: 1,
   },
   buttonStyle: {
+    marginLeft: 'auto',
     boxShadow: 'none',
   },
   hiddenOrLocked: {
