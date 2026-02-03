@@ -586,7 +586,6 @@ describe('teacherSectionsRedux', () => {
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
         isAssignedCSA: undefined,
-        isAssignedEssentialAiChat: undefined,
         sectionInstructors: [
           {
             id: 2,
@@ -613,6 +612,8 @@ describe('teacherSectionsRedux', () => {
         atRiskAgeGatedUsState: undefined,
         avatar_color: 1,
         avatar_emoji: 1,
+        isAssignedEssentialAiChat: undefined,
+        aiChatAccessLevel: undefined,
       });
     });
   });
@@ -951,7 +952,6 @@ describe('teacherSectionsRedux', () => {
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
-          isAssignedEssentialAiChat: undefined,
           sectionInstructors: [
             {
               id: 1,
@@ -972,6 +972,8 @@ describe('teacherSectionsRedux', () => {
           atRiskAgeGatedUsState: undefined,
           avatar_color: undefined,
           avatar_emoji: undefined,
+          isAssignedEssentialAiChat: undefined,
+          aiChatAccessLevel: undefined,
         },
       });
     });
