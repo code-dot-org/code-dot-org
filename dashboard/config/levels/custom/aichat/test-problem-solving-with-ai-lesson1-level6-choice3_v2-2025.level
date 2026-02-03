@@ -57,7 +57,8 @@
       "pexels-photo-833052.jpg": "f515df6b-587b-4378-b90b-5e48909c970b.jpg",
       "pexels-photo-1972115.jpg": "8080ef7b-c4f1-40ab-947f-41544f247c1c.jpg"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:34.131+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice3_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice3_2025\"}]"

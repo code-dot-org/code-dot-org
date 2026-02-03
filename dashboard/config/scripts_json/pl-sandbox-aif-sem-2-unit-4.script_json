@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-02 17:52:10 UTC",
+    "serialized_at": "2026-02-03 15:33:15 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -798,6 +798,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-schema-design"
+        ],
         "progression": "Filtering Data"
       },
       "bonus": false,
@@ -820,12 +823,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-reflect-wrap-3"
+        ],
         "progression": "Wrapping Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-wrap-project-1"
+          "pl-aif-2-U4-reflect-wrap-3"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -833,7 +839,7 @@
         "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
       },
       "level_keys": [
-        "pl-aif-2-U4-wrap-project-1"
+        "pl-aif-2-U4-reflect-wrap-3"
       ]
     },
     {
@@ -842,6 +848,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-aif-2-U4-lesson-resources-2"
+        ],
         "progression": "Wrapping Up"
       },
       "bonus": false,
@@ -864,28 +873,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif-2-U4-reflect-wrap-3"
+        "level_keys": [
+          "pl-aif-2-U4-final-level"
         ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
-      },
-      "level_keys": [
-        "pl-aif-2-U4-reflect-wrap-3"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
         "progression": "Wrapping Up"
       },
       "bonus": false,
@@ -1230,9 +1220,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-wrap-project-1",
+        "level.key": "pl-aif-2-U4-reflect-wrap-3",
         "script_level.level_keys": [
-          "pl-aif-2-U4-wrap-project-1"
+          "pl-aif-2-U4-reflect-wrap-3"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1245,18 +1235,6 @@
         "level.key": "pl-aif-2-U4-lesson-resources-2",
         "script_level.level_keys": [
           "pl-aif-2-U4-lesson-resources-2"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-4",
-        "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-aif-2-U4-reflect-wrap-3",
-        "script_level.level_keys": [
-          "pl-aif-2-U4-reflect-wrap-3"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
