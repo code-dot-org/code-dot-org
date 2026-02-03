@@ -4,7 +4,7 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {ChangeEvent, useCallback, useRef} from 'react';
+import React, {useEffect, ChangeEvent, useCallback, useRef} from 'react';
 
 import {AutocompleteInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/AutocompleteInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -50,7 +50,17 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   fetchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+
+  // Supports our preview page "navigation" feature so the autocomplete suggestions
+  // are only shown for user input and not for programmatic changes to the URL bar.
   const lastInputEventValue = useRef<string | null>(null);
+
+  // Clear out the last input event value (user-initiated) when the value prop changes programmatically.
+  useEffect(() => {
+    if (lastInputEventValue.current !== value) {
+      lastInputEventValue.current = null;
+    }
+  }, [value]);
 
   const handleInputChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
