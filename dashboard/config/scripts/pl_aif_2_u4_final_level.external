@@ -1,4 +1,4 @@
-name 'pl-ai-101-V2-mod1-closing-02'
+name 'pl-aif-2-U4-final-level'
 title 'title'
 description 'description here'
 
@@ -57,7 +57,7 @@ markdown <<MARKDOWN
                style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
+            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_csd_post?survey_data[module]=3" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
           </p>
         </div>
       </div>
@@ -67,12 +67,12 @@ markdown <<MARKDOWN
       <div style="display: flex; align-items: flex-start;">
         <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px;">3</span>
         <div style="width: 100%; text-align: left;">
-          <img src="https://images.code.org/27b24fae6424a4cd660cdd75e9a2ab86-download.png" 
-               alt="AI Bot" 
-               style="width: 20%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
-          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Continue Your Learning</p>
+          <img src="https://images.code.org/0a455cf3c74eb17e25fe5850442dfbf8-image-1756334953630.png" 
+               alt="A laptop computer with code displayed on the screen" 
+               style="width: 25%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
+          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Get Started with Students</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Click Continue to keep working through the AI 101 for Educators self-paced learning series.
+            Ready to teach? <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">Create a section</a> and assign <a href="https://studio.code.org/courses/artificial-intelligence-foundations-semester2-2025" target="blank" rel="noopener noreferrer">Unit 3: Building Data-Driven Systems with AI</a>.
           </p>
         </div>
       </div>

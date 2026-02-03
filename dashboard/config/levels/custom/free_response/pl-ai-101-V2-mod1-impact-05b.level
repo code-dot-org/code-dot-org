@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-02-02T16:58:37.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "# Realizing the Benefits of AI in Education\r\n\r\n#### With guidance, an education system may realize the potential benefits of AI to improve learning outcomes, support teacher instruction and quality of life, and enhance educational equity. Without guidance, teachers and students can be exposed to privacy violations, inconsistent disciplinary consequences, and counterproductive AI adoption practices.\r\n\r\n#### Take a look at the graphic below that highlights both some potential benefits and risks of AI in education.\r\n\r\n<br>\r\n<p style=\"text-align:center;\"><img src=\"https://images.code.org/87f60e79b8d9db1cdc81f7251d510b47-Screenshot 2024-04-15 at 1.33.49 PM.png\" alt=\"Potential benefits and risks of AI in education.\">\r\n\r\n## Reflection\r\n\r\n> #### In the reflection box below, answer the following questions:\r\n> - #### Which of the benefits above are you most excited about? How can you share this excitement with your students? \r\n> - #### Which are you most concerned about? How can you share these concerns with your administrators?\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Share in the forum!\r\n</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n####Participating in the <a href=\"https://forum.code.org/c/ai-cs/ai-101-self-paced-pl-community/477\" target=\"_blank\">AI 101 Self-Paced PL Community</a> is optional and not necessary to earn a certificate for this module. However, we encourage you to engage with the broader AI 101 learner community. Please share your response to this reflection in the forum and take the time to read and respond to other educators' posts.\r\n\r\n### <a href=\"https://forum.code.org/t/module-1-level-16-reflection-excitements-and-concens/39648\" target=\"_blank\">Direct Link to this Forum Topic</a>\r\n\r\n</p></div>\r\n</details>\r\n\r\n<br>",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-02-02T16:58:36.994+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-education_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-education_04_2024\"},{\"changed_at\":\"2026-02-02 17:01:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
