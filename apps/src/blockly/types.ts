@@ -254,17 +254,12 @@ export interface ExtendedWorkspaceSvg extends BlocklyCore.WorkspaceSvg {
     dispatchEvent: () => void;
   };
   registerGlobalVariables: (variableList: string[]) => void;
-  getVariableMap: () => ExtendedVariableMap;
   isReadOnly: () => boolean;
   cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
   svgFrame_: WorkspaceSvgFrame;
-}
-
-export interface ExtendedVariableMap extends BlocklyCore.VariableMap {
-  addVariables: (variableList: string[]) => void;
 }
 
 export interface ExtendedBlocklyOptions extends BlocklyCore.BlocklyOptions {

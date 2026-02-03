@@ -104,7 +104,6 @@ import {
   BlocklyWrapperType,
   ExtendedBlocklyOptions,
   ExtendedJavascriptGenerator,
-  ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
   BlocklyCoreInstance,
@@ -360,21 +359,20 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     // After clearing the workspace, we need to reinitialize global variables
     // if there are any.
     if (this.globalVariables) {
-      this.getVariableMap().addVariables(this.globalVariables);
+      const variableMap = this.getVariableMap();
+      this.globalVariables.forEach(varName => {
+        variableMap.createVariable(varName);
+      });
     }
   };
 
   // Used in levels with pre-defined "Blockly Variables"
   extendedWorkspaceSvg.registerGlobalVariables = function (variableList) {
     this.globalVariables = variableList;
-    this.getVariableMap().addVariables(variableList);
-  };
-
-  const extendedVariableMap = blocklyWrapper.VariableMap
-    .prototype as ExtendedVariableMap;
-
-  extendedVariableMap.addVariables = function (variableList) {
-    variableList.forEach(varName => this.createVariable(varName));
+    const variableMap = this.getVariableMap();
+    variableList.forEach(varName => {
+      variableMap.createVariable(varName);
+    });
   };
 
   gestureOverrides(blocklyWrapper);
