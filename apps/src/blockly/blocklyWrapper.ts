@@ -353,12 +353,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 
-  extendedWorkspaceSvg.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(
-      block => block.isEnabled() && block.getRootBlock().isEnabled()
-    );
-  };
-
   // Used in levels when starting over or resetting Version History
   const googleBlocklyBlocklyClear = blocklyWrapper.WorkspaceSvg.prototype.clear;
   extendedWorkspaceSvg.clear = function () {

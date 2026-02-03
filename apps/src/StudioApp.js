@@ -3237,9 +3237,9 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.getMainWorkspace()
-    .getAllUsedBlocks()
-    .some(this.forLoopHasDuplicatedNestedVariables_);
+  return BlocklyUtils.getAllUsedBlocks(Blockly.getMainWorkspace()).some(
+    this.forLoopHasDuplicatedNestedVariables_
+  );
 };
 
 /**
