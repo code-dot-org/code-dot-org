@@ -113,8 +113,16 @@ export const AutocompleteInput = memo(
     );
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      const {key} = e;
+
+      if (key === 'Enter' && onEnter && activeIndex < 0) {
+        e.preventDefault();
+        onEnter(value);
+        reset();
+        return;
+      }
+
       if (options.length > 0) {
-        const {key} = e;
         switch (key) {
           case 'ArrowDown':
             e.preventDefault();
@@ -131,9 +139,6 @@ export const AutocompleteInput = memo(
               const selectedValue = options[activeIndex];
               handleSelectOption(selectedValue);
               onEnter?.(selectedValue);
-            } else if (key === 'Enter' && onEnter) {
-              e.preventDefault();
-              onEnter(value);
             }
             break;
           case 'Escape':
