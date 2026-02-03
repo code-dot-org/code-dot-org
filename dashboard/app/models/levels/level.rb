@@ -940,11 +940,7 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
-    current_parent = parent_levels.find do |parent|
-      parent.script_levels.find do |parent_script|
-        parent_script&.script_id == script_level&.script_id
-      end
-    end
+    current_parent = get_parent_level_for_script(script.id)
     properties_camelized[:parentLevelName] = current_parent&.name
 
     # If there is a rubric for this lesson, show the rubric if it is evaluated on this level or the level's parent.
@@ -1067,6 +1063,14 @@ class Level < ApplicationRecord
   def uses_theme_preference?
     # These are the level types that set and use the theme preference in UserPreferences right now.
     is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
+  end
+
+  def get_parent_level_for_script(script_id)
+    parent_levels.find do |parent|
+      parent.script_levels.find do |script|
+        script&.script_id == script_id
+      end
+    end
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

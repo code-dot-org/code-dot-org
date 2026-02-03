@@ -80,6 +80,7 @@ function RubricFloatingActionButton({
   sectionId,
   canShowTaScoresAlert,
   parentLevelName,
+  levelType,
   reloadOnStudentChange = true,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
@@ -99,10 +100,14 @@ function RubricFloatingActionButton({
 
   const [internalError, setInternalError] = useState(null);
 
+  // We do not evaluate on Bubble Choice levels directly, we only evaluate on
+  // the child levels. If the level is not a bubble choice level, we evaluate on the
+  // level that matches the rubric level name, or any child levels of the level that
+  // matches the rubric level name (likely the parent in this case is a Bubble Choice level).
   const onLevelForEvaluation =
-    currentLevelName === rubric.level.name ||
-    parentLevelName === rubric.level.name;
-  console.log({parentLevelName, rubricLevelName: rubric.level.name});
+    levelType !== 'BubbleChoice' &&
+    (currentLevelName === rubric.level.name ||
+      parentLevelName === rubric.level.name);
 
   const readyStudentCount = useAppSelector(selectReadyStudentCount);
   const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
@@ -113,17 +118,9 @@ function RubricFloatingActionButton({
     return {
       ...reportingData,
       viewingStudentWork: !!studentLevelInfo,
-      viewingEvaluationLevel:
-        rubric.level.name === currentLevelName ||
-        rubric.level.name === parentLevelName,
+      viewingEvaluationLevel: onLevelForEvaluation,
     };
-  }, [
-    reportingData,
-    studentLevelInfo,
-    rubric.level.name,
-    currentLevelName,
-    parentLevelName,
-  ]);
+  }, [reportingData, studentLevelInfo, onLevelForEvaluation]);
 
   const handleClick = () => {
     const eventName = isOpen
@@ -314,6 +311,7 @@ RubricFloatingActionButton.propTypes = {
   canShowTaScoresAlert: PropTypes.bool,
   reloadOnStudentChange: PropTypes.bool,
   parentLevelName: PropTypes.string,
+  levelType: PropTypes.string,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
