@@ -5,12 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Defining AI
 
-#### We'll dive into all the vocabulary around AI in the next module, but here's a quick introduction to some key terms.
+#### We'll dive into more of the vocabulary around AI in the next module, but here's a quick introduction to some key terms.
 
->* #### **Artificial Intelligence (AI):** A broad term for computer systems designed to perform tasks that usually require human thinking, such as recognizing patterns, making decisions, or understanding language.
->* #### **Generative AI:** A type of AI that can create new content, like text, images, video, audio, or computer code.
->* #### **Large Language Models (LLMs):** Very large computer programs trained on huge amounts of text. They are especially good at understanding questions and generating human-like written responses.
->* #### **AI Chatbots**: The conversational tools (the chat interface) that people use to interact with AI models, usually by typing or speaking.
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Artificial Intelligence (AI):</strong> A broad term for computer systems designed to perform tasks that usually require human thinking, such as recognizing patterns, making decisions, or understanding language.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Generative AI:</strong> A type of AI that can create new content, like text, images, video, audio, or computer code.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Large Language Models (LLMs):</strong> Very large computer programs trained on huge amounts of text. They are especially good at understanding questions and generating human-like written responses.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>AI Chatbots:</strong> The conversational tools (the chat interface) that people use to interact with AI models, usually by typing or speaking.</p>
+</div>
 
 #### You may be familiar with one or more of the following AI tools:
 
