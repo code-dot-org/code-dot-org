@@ -182,6 +182,19 @@ class BufferTest < Minitest::Test
     # If old behavior exists, the test will raise before it gets here.
     assert_equal 0, b.flushes
   end
+
+  def test_reset_if_forked_does_not_cancel_while_holding_buffer_lock
+    b = TestBuffer.new(batch_count: 1, max_interval: 999)
+
+    buffer_monitor = b.instance_variable_get(:@buffer)
+    b.instance_variable_set(:@task, AssertNotHoldingBufferLockTask.new(buffer_monitor))
+
+    # Force the fork-detection path
+    b.instance_variable_set(:@ruby_pid, -1)
+
+    # This calls reset_if_forked, which should cancel outside the lock
+    b.buffer('foo')
+  end
 end
 
 require 'minitest/benchmark'
