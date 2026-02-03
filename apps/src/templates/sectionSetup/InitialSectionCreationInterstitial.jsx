@@ -32,7 +32,7 @@ class InitialSectionCreationInterstitial extends Component {
     analyticsReporter.sendEvent(
       EVENTS.SECTION_SETUP_STARTED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     this.props.beginEditingSection();
   };

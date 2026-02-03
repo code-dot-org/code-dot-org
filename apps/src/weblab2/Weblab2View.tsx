@@ -1,5 +1,4 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {DEFAULT_START_HTML_FILE} from '@codebridge/FilePreview/constants';
 import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
@@ -17,6 +16,7 @@ import {
   MultiFileSource,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {DEFAULT_START_HTML_FILE} from '@cdo/apps/weblab2/htmlPreview/constants';
 
 import {useSource} from '../codebridge/hooks/useSource';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';

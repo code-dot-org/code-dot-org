@@ -6,6 +6,8 @@ import {isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {getFilesByLanguage} from '@cdo/apps/codebridge/utils/getFilesByLanguage';
+import {getFolderPath} from '@cdo/apps/codebridge/utils/getFolderPath';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setIsFullScreenView} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -21,10 +23,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-
-import {filterSourceForPreview} from '../utils/filterSourceForPreview';
-import {getFilesByLanguage} from '../utils/getFilesByLanguage';
-import {getFolderPath} from '../utils/getFolderPath';
+import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
 
 import {
   IframeMessageType,
