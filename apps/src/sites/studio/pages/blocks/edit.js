@@ -203,7 +203,7 @@ function updateBlockPreview() {
   const block = `<block type="${blockName}" />`;
   Blockly.getMainWorkspace().clear();
   loadBlocksToWorkspace(Blockly.getMainWorkspace(), block);
-  Blockly.addChangeListener(Blockly.getMainWorkspace(), onBlockSpaceChange);
+  Blockly.getMainWorkspace().addChangeListener(onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {

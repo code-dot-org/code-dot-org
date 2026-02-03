@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import * as BlocklyUtils from '@cdo/apps/blockly/utils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -27,6 +28,13 @@ import {
 
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 
+jest.mock('@cdo/apps/blockly/utils', () => {
+  const actual = jest.requireActual('@cdo/apps/blockly/utils');
+  return {
+    ...actual,
+    getWorkspaceCode: jest.fn(),
+  };
+});
 describe('StudioApp', () => {
   sandboxDocumentBody();
   setBlocklyGlobal();
@@ -396,8 +404,11 @@ describe('StudioApp', () => {
   });
 
   describe('getCode', () => {
-    beforeEach(() => stubStudioApp);
-    afterEach(() => restoreStudioApp);
+    beforeEach(() => {
+      stubStudioApp();
+      BlocklyUtils.getWorkspaceCode.mockReset();
+    });
+    afterEach(() => restoreStudioApp());
 
     it('should get the starting blocks if the source is hidden', () => {
       studioApp().editCode = true;
@@ -408,12 +419,11 @@ describe('StudioApp', () => {
 
     it('should get the blockly workspace code if it is read only', () => {
       studioApp().editCode = false;
-      const blocklyUtils = require('@cdo/apps/blockly/utils');
-      let stub = sinon
-        .stub(blocklyUtils, 'getWorkspaceCode')
-        .returns('blockly workspace');
+
+      BlocklyUtils.getWorkspaceCode.mockReturnValue('blockly workspace');
+
       expect(studioApp().getCode()).to.equal('blockly workspace');
-      stub.restore();
+      expect(BlocklyUtils.getWorkspaceCode.mock.calls).to.have.length(1);
     });
 
     it('should get the code from the editor itself if editable and the source is not hidden', () => {
