@@ -1,8 +1,6 @@
 import {createSlice, createAction, createAsyncThunk} from '@reduxjs/toolkit';
 import type {PayloadAction, AnyAction, Slice} from '@reduxjs/toolkit';
 
-import {HttpClient, NetworkError} from '@code-dot-org/api';
-import {getPredictResponse} from '@code-dot-org/api/userLevels';
 import type {
   ApiClient,
   AppOptions,
@@ -10,8 +8,13 @@ import type {
   LevelProperties,
   ProjectSources,
   QueryClient,
+  UserAppOptions,
 } from '@code-dot-org/core/api';
-import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@code-dot-org/core/api';
+import {
+  ApiError,
+  levelsKeys,
+  OPEN_ENDED_LAB2_PROJECT_TYPES,
+} from '@code-dot-org/core/api';
 import type {Validation, ValidationState} from '@code-dot-org/progress';
 import {getInitialValidationState, LevelStatus} from '@code-dot-org/progress';
 import {progressActions} from '@code-dot-org/progress/redux';
@@ -23,7 +26,6 @@ import {currentUserActions} from '@code-dot-org/user/redux';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import type {RootState, AppDispatch} from '../redux/store';
-import type {PartialUserAppOptions} from '../types';
 import {queryParams, updateQueryParam} from '../utils/queryParams';
 
 import {setProjectTooLarge} from './labProjectSlice';
@@ -195,6 +197,7 @@ export const setUpWithLevel = createAsyncThunk<
     apiClient: ApiClient;
     queryClient: QueryClient;
     appOptions: AppOptions;
+    userAppOptions?: UserAppOptions;
     levelId: number;
     scriptId?: number;
     levelProperties: LevelProperties;
@@ -229,14 +232,10 @@ export const setUpWithLevel = createAsyncThunk<
     // instructor, and if they are, then update the user role.  This is needed for the
     // teacher panel to appear in cached levels.
     if (appOptions.publicCaching) {
-      if (payload.userAppOptionsPath) {
-        loadUserAppOptions(payload.userAppOptionsPath).then(result => {
-          if (result.isInstructor) {
-            thunkAPI.dispatch(
-              currentUserActions.setUserRoleInCourse(CourseRoles.Instructor),
-            );
-          }
-        });
+      if (payload.userAppOptions?.isInstructor) {
+        thunkAPI.dispatch(
+          currentUserActions.setUserRoleInCourse(CourseRoles.Instructor),
+        );
       }
     }
 
@@ -265,11 +264,16 @@ export const setUpWithLevel = createAsyncThunk<
       return;
     }
 
+    const {apiClient, queryClient} = payload;
+
     // If we have a predict level, we should try to load the existing response.
     // We only can load predict responses if we have a script id.
     if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
-      const predictResponse =
-        (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+      const {levelId, scriptId} = payload;
+      const predictResponse = await queryClient.fetchQuery({
+        queryKey: levelsKeys.predictResponse(scriptId, levelId),
+        queryFn: () => apiClient.levels.getPredictResponse({levelId, scriptId}),
+      });
       thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
     } else {
       // If this isn't a predict level, reset the response to an empty string
@@ -282,8 +286,8 @@ export const setUpWithLevel = createAsyncThunk<
     // create a project manager for the given level and script id.
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
-          payload.apiClient,
-          payload.queryClient,
+          apiClient,
+          queryClient,
           payload.channelId,
           levelProperties.isProjectLevel || false,
           thunkAPI.getState().lab.isShareView,
@@ -365,12 +369,9 @@ function getErrorFromThunkAction(
 
     // Get additional details if the error or its cause is a network error.
     let networkError = undefined;
-    if (payloadError instanceof NetworkError) {
+    if (payloadError instanceof ApiError) {
       networkError = payloadError;
-    } else if (
-      payloadError.cause &&
-      payloadError.cause instanceof NetworkError
-    ) {
+    } else if (payloadError.cause && payloadError.cause instanceof ApiError) {
       networkError = payloadError.cause;
     }
     if (networkError) {
@@ -576,14 +577,6 @@ function setProjectAndLevelData(
     data.sharingDisabled,
     data.isTeacherOfProjectOwner,
   );
-}
-
-async function loadUserAppOptions(
-  userAppOptionsPath: string,
-): Promise<PartialUserAppOptions> {
-  const response =
-    await HttpClient.fetchJson<PartialUserAppOptions>(userAppOptionsPath);
-  return response.value;
 }
 
 async function cleanUpProjectManager() {

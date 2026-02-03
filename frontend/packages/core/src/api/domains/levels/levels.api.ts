@@ -76,7 +76,7 @@ export function createLevelsApi(transport: Transport) {
         url: `/user_levels/level_source/${scriptId}/${levelId}`,
       });
 
-      return PredictResponseSchema.parse(raw);
+      return PredictResponseSchema.parse(raw).data;
     },
 
     async resetPredictLevelProgress(params: {

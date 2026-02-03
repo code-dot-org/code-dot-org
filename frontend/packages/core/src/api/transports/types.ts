@@ -32,26 +32,72 @@ export interface Transport {
   ): Promise<ApiResponse<TResponse>>;
 }
 
+export interface ApiErrorDetails {
+  /** HTTP Status of response */
+  status: number;
+  /** Any human-readable status text reported */
+  statusText?: string;
+  /** URL of the request */
+  url: string;
+  /** Method uses (GET, POST) */
+  method: HttpMethod;
+  /** Type of response (basic, cors, etc) */
+  type?: string;
+  /** Response headers, if any */
+  headers: Record<string, string>;
+}
+
 /** A structured error so callers can inspect status / payload. */
 export class ApiError extends Error {
   readonly status: number;
+  readonly statusText?: string;
   readonly url: string;
   readonly method: HttpMethod;
+  readonly type?: string;
   readonly details?: unknown;
+  readonly headers?: Headers;
   name = 'ApiError' as const;
 
   constructor(
     message: string,
-    status: number,
-    url: string,
-    method: HttpMethod,
-    details?: unknown,
+    details: {
+      status: number;
+      statusText?: string;
+      type?: string;
+      url: string;
+      method: HttpMethod;
+      headers?: Headers;
+    },
   ) {
     super(message);
 
-    this.status = status;
-    this.url = url;
-    this.method = method;
-    this.details = details;
+    this.status = details.status;
+    this.statusText = details.statusText;
+    this.type = details.type;
+    this.url = details.url;
+    this.method = details.method;
+    this.headers = details.headers;
+  }
+
+  getDetails(): ApiErrorDetails {
+    // Convert Headers() to a hash
+    const headers = (
+      Array.from(this.headers || new Headers()) as [string, string][]
+    ).reduce(
+      (a, b) => {
+        a[b[0]] = b[1];
+        return a;
+      },
+      {} as Record<string, string>,
+    );
+
+    return {
+      status: this.status,
+      statusText: this.statusText,
+      url: this.url,
+      type: this.type,
+      method: this.method,
+      headers,
+    };
   }
 }

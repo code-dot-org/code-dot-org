@@ -1,10 +1,12 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {getAppOptionsEditingExemplar} from '@code-dot-org/api';
+import type {
+  AppOptions,
+  ExemplarSettings,
+} from '@code-dot-org/core/api';
 
 import {
-  ExemplarSettings,
   Validation,
   Validator,
   ValidationState,
@@ -19,14 +21,14 @@ export const getInitialValidationState: () => ValidationState = () => ({
 });
 
 export default class ProgressManager {
-  private currentValidations: Validation[] | undefined;
-  private validator: Validator | undefined;
+  private appOptions?: AppOptions;
+  private currentValidations?: Validation[];
+  private validator?: Validator;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
-  private exemplarSettings: ExemplarSettings | undefined;
+  private exemplarSettings?: ExemplarSettings;
 
   constructor(onProgressChange: () => void) {
-    this.currentValidations = undefined;
     this.onProgressChange = onProgressChange;
     this.currentValidationState = getInitialValidationState();
   }
@@ -36,9 +38,11 @@ export default class ProgressManager {
    * Resets validation status internally.
    */
   onLevelChange(
+    appOptions: AppOptions,
     validations?: Validation[],
     exemplarSettings?: ExemplarSettings,
   ) {
+    this.appOptions = appOptions;
     this.currentValidations = validations;
     this.exemplarSettings = exemplarSettings;
     this.resetValidation();
@@ -58,7 +62,7 @@ export default class ProgressManager {
     }
     const exemplarSettings = this.exemplarSettings;
     const shouldValidateExemplar =
-      !getAppOptionsEditingExemplar() && exemplarSettings?.validationEnabled;
+      !this.appOptions?.isEditingExemplar && exemplarSettings?.validationEnabled;
 
     // Compute exemplar validation result and message only once if needed.
     let passedExemplar = false;
