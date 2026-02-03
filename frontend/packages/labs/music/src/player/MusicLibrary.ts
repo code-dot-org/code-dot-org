@@ -1,16 +1,16 @@
-import cloneDeep from 'lodash/cloneDeep';
-
-import type {ResponseValidator, GetResponse} from '@code-dot-org/api';
-import {HttpClient} from '@code-dot-org/api';
-import {localization} from '@code-dot-org/core';
-
+import type {
+  Instrument,
+  Kit,
+  LibraryJson,
+  MusicApiClient,
+  Pack,
+  SoundFolder,
+} from '../api';
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
 import type {Key} from '../utils/Notes';
 
-// This value can be modifed each time we know that there is an important new version
-// of the library on S3, to help bypass any caching of an older version.
-const requestVersion = 'launch2024-3';
+import type {ImageAttributionCopyright, SoundData, Sounds} from './types';
 
 /**
  * Loads a sound library JSON file.
@@ -19,48 +19,16 @@ const requestVersion = 'launch2024-3';
  * URL param, that will take precedence.
  * @returns the Music Library
  */
-export async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
+export async function loadLibrary(
+  api: MusicApiClient,
+  libraryName: string,
+): Promise<MusicLibrary> {
   const libraryParameter = AppConfig.getValue('library') || libraryName;
   const libraryFilename = `music-library-${libraryParameter}`;
 
-  const url =
-    AppConfig.getValue('local-library') === 'true'
-      ? `/${libraryFilename}.json`
-      : `${getBaseAssetUrl()}${libraryFilename}.json${requestVersion ? `?version=${requestVersion}` : ''}`;
-
-  const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
-    url,
-    {credentials: 'omit'},
-    LibraryValidator,
-  );
-  const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
-    libraryJsonResponsePromise,
-  ];
-
-  const locale = localization.locale.toLowerCase().replace('-', '_');
-  if (locale !== 'en_us') {
-    const translationPromise = HttpClient.fetchJson<Translations>(
-      getBaseAssetUrl() + libraryFilename + '-loc/' + locale + '.json',
-      {credentials: 'omit'},
-    );
-    promises.push(translationPromise);
-  }
-
-  // translations will be undefined if locale is en_us.
-  const [libraryJsonResponse, translations] =
-    await Promise.allSettled(promises);
-
-  let libraryJson = {} as LibraryJson;
-  if (libraryJsonResponse.status === 'fulfilled') {
-    libraryJson = libraryJsonResponse.value.value as LibraryJson;
-  }
-
-  if (translations && translations.status === 'fulfilled') {
-    libraryJson = localizeLibrary(
-      libraryJson,
-      translations.value.value as Translations,
-    );
-  }
+  const libraryJson = await api.music.getLibrary({
+    library: libraryFilename,
+  });
 
   return new MusicLibrary(libraryName, libraryJson);
 }
@@ -69,12 +37,15 @@ export default class MusicLibrary {
   private static instance: MusicLibrary | undefined;
   public static libraryLoader?: Promise<MusicLibrary>;
 
-  static async loadLibrary(libraryName: string): Promise<MusicLibrary> {
+  static async loadLibrary(
+    api: MusicApiClient,
+    libraryName: string,
+  ): Promise<MusicLibrary> {
     if (this.instance?.name === libraryName) {
       return this.instance;
     }
 
-    this.libraryLoader = loadLibrary(libraryName);
+    this.libraryLoader = loadLibrary(api, libraryName);
     this.instance = await this.libraryLoader;
     return this.instance;
   }
@@ -85,9 +56,9 @@ export default class MusicLibrary {
 
   name: string;
 
-  packs: SoundFolder[];
-  instruments: SoundFolder[];
-  kits: SoundFolder[];
+  packs: Pack[];
+  instruments: Instrument[];
+  kits: Kit[];
 
   private folders: SoundFolder[];
 
@@ -122,7 +93,7 @@ export default class MusicLibrary {
       ...libraryJson.packs,
       ...libraryJson.instruments,
       ...libraryJson.kits,
-    ];
+    ] as unknown as SoundFolder[];
 
     this.packs = libraryJson.packs;
     this.instruments = libraryJson.instruments;
@@ -364,144 +335,4 @@ export default class MusicLibrary {
       availableFolder?.sounds.some(sound => sound.src === soundSrc) || false
     );
   }
-}
-
-export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
-  const libraryJson = response as LibraryJson;
-  if (!libraryJson) {
-    throw new Error(`Invalid library JSON: ${response}`);
-  }
-  return libraryJson;
-};
-
-const localizeLibrary = (
-  library: LibraryJson,
-  translations: Translations,
-): LibraryJson => {
-  const libraryJsonLocalized = cloneDeep(library);
-  libraryJsonLocalized.instruments.forEach(
-    instrument =>
-      (instrument.name = translations[instrument.id] || instrument.name),
-  );
-
-  libraryJsonLocalized.kits.forEach(kit => {
-    const kitId = kit.id;
-    kit.name = translations[kitId] || kit.name;
-    kit.sounds.forEach(sound => {
-      const soundId = `${kitId}/${sound.src}`;
-      sound.name = translations[soundId] || sound.name;
-    });
-  });
-
-  libraryJsonLocalized.packs.forEach(pack => {
-    const packId = pack.id;
-    if (!pack.skipLocalization) {
-      pack.name = translations[packId] || pack.name;
-    }
-    pack.sounds.forEach(sound => {
-      if (!sound.skipLocalization) {
-        const soundId = `${packId}/${sound.src}`;
-        sound.name = translations[soundId] || sound.name;
-      }
-    });
-  });
-
-  return libraryJsonLocalized;
-};
-
-export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
-
-/**
- * A single event in a {@link SampleSequence}
- */
-export interface SequenceEvent {
-  /** 1-indexed start position of this event, in 16th notes */
-  position: number;
-  /**
-   * The note value of this event, expressed as a numerical semitone
-   * offset from the project root note.
-   */
-  noteOffset: number;
-  /** Length of this event, in 16th notes */
-  length: number;
-}
-
-/**
- * A sequence of individual samples, used to programmaticaly
- * generate sounds at the current key and BPM.
- */
-export interface SampleSequence {
-  instrument: string;
-  events: SequenceEvent[];
-}
-
-export interface SoundData {
-  name: string;
-  path?: string;
-  src: string;
-  length: number;
-  pickupLength?: number;
-  type: SoundType;
-  note?: number;
-  restricted?: boolean;
-  sequence?: SampleSequence;
-  bpm?: number;
-  key?: Key;
-  skipLocalization?: boolean;
-}
-
-export interface ImageAttributionCopyright extends ImageAttribution {
-  artist: string;
-}
-
-// A Creative Commons (2, 3, or 4) or regular copyright license.
-export type ImageAttributionLicenseVersion = 'CC2' | 'CC3' | 'CC4' | 'C';
-
-export interface ImageAttribution {
-  author: string;
-  color?: string;
-  position?: 'left' | 'right';
-  src?: string;
-  licenseVersion: ImageAttributionLicenseVersion;
-  year?: string;
-}
-
-export type SoundFolderType = 'sound' | 'kit' | 'instrument';
-
-export interface SoundFolder {
-  name: string;
-  artist?: string;
-  id: string;
-  type?: SoundFolderType;
-  path: string;
-  imageSrc: string;
-  color?: string;
-  restricted?: boolean;
-  sounds: SoundData[];
-  bpm?: number;
-  key?: Key;
-  imageAttribution?: ImageAttribution;
-  skipLocalization?: boolean;
-}
-
-export type LibraryJson = {
-  id: string;
-  name: string;
-  imageSrc: string;
-  path: string;
-  bpm?: number;
-  key?: number;
-  defaultSound?: string;
-  folders: SoundFolder[];
-  instruments: SoundFolder[];
-  kits: SoundFolder[];
-  packs: SoundFolder[];
-};
-
-export interface Sounds {
-  [category: string]: string[];
-}
-
-interface Translations {
-  [key: string]: string;
 }

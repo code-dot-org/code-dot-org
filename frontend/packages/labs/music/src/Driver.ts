@@ -5,6 +5,7 @@ import EventEmitter from 'events';
 import type TypedEmitter from 'typed-emitter';
 import type {EventMap} from 'typed-emitter';
 
+import type {MusicApiClient} from './api';
 import AppConfig from './appConfig';
 import {BlockTypes} from './blockly/blockTypes';
 import {TRIGGER_FIELD} from './blockly/constants';
@@ -19,9 +20,8 @@ import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
 import {KeyFromName, KeyMapping} from './utils/Notes';
 import AnalyticsReporter from './LabMusicMetricsReporter';
 
-import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import type {LabMetricsReporter} from '@code-dot-org/lab';
-import {LabConstants, LabRegistry} from '@code-dot-org/lab';
+import {LabRegistry} from '@code-dot-org/lab';
 
 // The tick rate that the Driver will emit Tick events during playback
 const UPDATE_RATE = 1000 / 30; // 30 times per second
@@ -68,7 +68,9 @@ interface DriverEvents extends EventMap {
   [DriverEvent.UpdatePosition]: (position: number) => void;
 }
 
-const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
+// TODO: use AppOptions api
+//const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
+const isToolboxMode = false;
 
 export type TriggerEvents = {id: string; startPosition: number}[];
 
@@ -85,6 +87,7 @@ export type PlaybackExecutionData = {
  * classes.
  */
 class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEvents>) {
+  protected readonly api: MusicApiClient;
   protected workspace?: Blockly.WorkspaceSvg;
   protected javascriptGenerator?: JavascriptGenerator;
   protected generator?: Generator;
@@ -99,9 +102,10 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   private updateTimer?: ReturnType<typeof setInterval>;
   private startingPlayheadPosition: number;
 
-  constructor() {
+  constructor(api: MusicApiClient) {
     super();
 
+    this.api = api;
     this.hasLoadedInitialSounds = false;
     this.playingTriggers = [];
     this.blockMode = BlockMode.SIMPLE2;
@@ -112,6 +116,7 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     const key = AppConfig.getValue('key');
     console.log('new driver?');
     this.player = new MusicPlayer(
+      api,
       parseInt(bpm || DEFAULT_BPM.toString()),
       KeyFromName[(key || KeyMapping[DEFAULT_KEY]).toUpperCase()],
       this.analyticsReporter,
@@ -132,7 +137,7 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
   }
 
   async loadAndInitializePlayer(libraryName: string) {
-    this.library = await MusicLibrary.loadLibrary(libraryName);
+    this.library = await MusicLibrary.loadLibrary(this.api, libraryName);
     this.emit(DriverEvent.LibraryUpdated, this.library);
   }
 

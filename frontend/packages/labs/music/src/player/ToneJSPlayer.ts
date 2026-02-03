@@ -15,15 +15,18 @@ import type {Source, SourceOptions} from 'tone/build/esm/source/Source';
 import type {LabMetricsReporter} from '@code-dot-org/lab';
 import {LabRegistry} from '@code-dot-org/lab';
 
+import type {MusicApiClient} from '../api';
 import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
 import type {SoundLoadCallbacks} from '../types';
 
 import type {Effects} from './interfaces/Effects';
-import SoundCache from './SoundCache';
+import soundCacheInstance, {type SoundCache} from './SoundCache';
 import type {
   InstrumentData,
   PlayerEvent,
+  Sample,
   SampleEvent,
+  SampleMap,
   SamplerSequence,
 } from './types';
 import {generateEffectsKeyString} from './utils';
@@ -37,6 +40,7 @@ const EMPTY_EFFECTS_KEY = '';
  * - Sample sequences
  */
 class ToneJSPlayer {
+  private api: MusicApiClient;
   private samplers: {[instrument: string]: {[effectsKey: string]: Sampler}};
   private previewSamplers: {[instrument: string]: Sampler};
   private activePlayers: Source<SourceOptions>[];
@@ -54,11 +58,13 @@ class ToneJSPlayer {
   private readonly metricsReporter: LabMetricsReporter;
 
   constructor(
+    api: MusicApiClient,
     bpm = DEFAULT_BPM,
-    soundCache: SoundCache = SoundCache.getInstance(),
+    soundCache: SoundCache = soundCacheInstance,
     metricsReporter: LabMetricsReporter = LabRegistry.metricsReporter,
   ) {
     Transport.bpm.value = bpm;
+    this.api = api;
     this.soundCache = soundCache;
     this.metricsReporter = metricsReporter;
     this.activePlayers = [];
@@ -95,17 +101,17 @@ class ToneJSPlayer {
   }
 
   async loadSounds(
-    sampleUrls: string[],
+    sampleInfos: Sample[],
     instruments: InstrumentData[],
     callbacks?: SoundLoadCallbacks,
   ) {
     // Combine sound sample URLs and instrument sample URLs to load together.
-    const urlsToLoad = [...sampleUrls];
+    const soundsToLoad = [...sampleInfos];
     for (const {instrumentName, sampleMap} of instruments) {
-      urlsToLoad.push(...Object.values(sampleMap));
+      soundsToLoad.push(...Object.values(sampleMap));
       this.loadingInstruments[instrumentName] = true;
     }
-    await this.soundCache.loadSounds(urlsToLoad, callbacks);
+    await this.soundCache.loadSounds(this.api, soundsToLoad, callbacks);
 
     for (const {instrumentName, sampleMap} of instruments) {
       // Instrument loads should now be instantaneous since the samples are already loaded.
@@ -115,7 +121,7 @@ class ToneJSPlayer {
 
   async loadInstrument(
     instrumentName: string,
-    sampleMap: {[note: number]: string},
+    sampleMap: SampleMap,
     callbacks?: SoundLoadCallbacks,
   ) {
     if (this.samplers[instrumentName]) {
@@ -123,7 +129,11 @@ class ToneJSPlayer {
     }
     this.loadingInstruments[instrumentName] = true;
     const urls: {[note: number]: AudioBuffer} = {};
-    await this.soundCache.loadSounds(Object.values(sampleMap), callbacks);
+    await this.soundCache.loadSounds(
+      this.api,
+      Object.values(sampleMap),
+      callbacks,
+    );
     Object.keys(sampleMap).forEach(note => {
       const buffer = this.soundCache.getSound(sampleMap[parseInt(note)]);
       if (buffer) {
@@ -163,20 +173,19 @@ class ToneJSPlayer {
     await this.startContextIfNeeded();
     this.cancelPreviews();
 
-    this.currentPreview = {url: sample.sampleUrl};
+    this.currentPreview = {url: sample.key};
 
-    const buffer = await this.soundCache.loadSound(sample.sampleUrl);
+    const buffer = await this.soundCache.loadSound(this.api, sample);
     if (!buffer) {
       this.metricsReporter.logWarning(
-        'Could not load sound which should have been in cache: ' +
-          sample.sampleUrl,
+        'Could not load sound which should have been in cache: ' + sample.key,
       );
       return;
     }
 
-    if (this.currentPreview?.url !== sample.sampleUrl) {
+    if (this.currentPreview?.url !== sample.key) {
       console.log(
-        `Sample preview ${sample.sampleUrl} playback canceled after load but before play.`,
+        `Sample preview ${sample.key} playback canceled after load but before play.`,
       );
       return;
     }
@@ -194,7 +203,7 @@ class ToneJSPlayer {
     player.onstop = () => {
       player.dispose();
 
-      if (this.currentPreview?.url === sample.sampleUrl) {
+      if (this.currentPreview?.url === sample.key) {
         this.currentPreview = null;
       }
 
@@ -284,11 +293,10 @@ class ToneJSPlayer {
   }
 
   scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
-    const buffer = this.soundCache.getSound(sample.sampleUrl);
+    const buffer = this.soundCache.getSound(sample);
     if (!buffer) {
       this.metricsReporter.logWarning(
-        'Could not load sound which should have been in cache: ' +
-          sample.sampleUrl,
+        'Could not load sound which should have been in cache: ' + sample.key,
       );
       return;
     }

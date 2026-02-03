@@ -13,7 +13,7 @@ import {useAppSelector} from '../../redux/store';
 
 import {getBaseAssetUrl} from '../../appConfig';
 import AnalyticsContext from '../../contexts/AnalyticsContext';
-import type {SoundFolder} from '../../player/MusicLibrary';
+import type {SoundFolder} from '../../api';
 import MusicLibrary from '../../player/MusicLibrary';
 
 import moduleStyles from './headerButtons.module.scss';

@@ -10,10 +10,6 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {
-  getProjectThumbnailUrl,
-  updateProjectThumbnail,
-} from '@code-dot-org/api/files';
 import type {
   ApiClient,
   Channel,
@@ -438,7 +434,7 @@ export default class ProjectManager {
 
   setThumbnail(pngBlob: Blob) {
     this.thumbnailPngBlob = pngBlob;
-    this.thumbnailUrl = getProjectThumbnailUrl(this.channelId);
+    this.thumbnailUrl = this.apiClient.projects.getProjectThumbnailUrl({channelId: this.channelId});
   }
 
   /**
@@ -447,10 +443,13 @@ export default class ProjectManager {
   async saveThumbnail() {
     if (this.thumbnailUrl && this.thumbnailPngBlob) {
       try {
-        updateProjectThumbnail(this.channelId, this.thumbnailPngBlob);
+        return this.apiClient.projects.updateProjectThumbnail({
+          channelId: this.channelId,
+          file: this.thumbnailPngBlob,
+        });
       } catch (_) {
         this.metricsReporter.logWarning('Failed to save thumbnail.');
-        return;
+        return Promise.resolve();
       }
     } else {
       return Promise.resolve();

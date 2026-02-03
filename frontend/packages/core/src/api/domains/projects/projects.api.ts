@@ -58,5 +58,24 @@ export function createProjectsApi(transport: Transport) {
 
       return ExtraLinksProjectDataSchema.parse(raw);
     },
+
+    /** Helper method to determind the thumbnail URL */
+    getProjectThumbnailUrl(params: {channelId: string}) {
+      const {channelId} = params;
+      return `/v3/files/${channelId}/.metadata/thumbnail.png`;
+    },
+
+    /**
+     * PUT /v3/files/:channelId/.metadata/thumbnail.png
+     */
+    async updateProjectThumbnail(params: {channelId: string; file: Blob}) {
+      const {channelId, file} = params;
+
+      return await transport.request<unknown>({
+        method: 'PUT',
+        url: `/v3/files/${channelId}/.metadata/thumbnail.png`,
+        body: file,
+      });
+    },
   };
 }

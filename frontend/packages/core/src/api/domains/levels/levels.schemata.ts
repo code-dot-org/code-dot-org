@@ -44,6 +44,7 @@ export const LevelPropertiesBaseSchema = z.object({
   hideShareAndRemix: z.boolean().optional(),
   usesProjects: z.boolean().optional(),
   startSources: MultiFileSourceSchema.optional(),
+  multipleChoice: z.boolean().optional(),
   templateSources: MultiFileSourceSchema.optional(),
   exemplarSources: z
     .union([ProjectSourcesSchema, MultiFileSourceSchema])

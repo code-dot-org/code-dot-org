@@ -1,4 +1,4 @@
-import type {SoundType} from '../MusicLibrary';
+import type {SoundType} from '../../api';
 
 import type {PlaybackEvent} from './PlaybackEvent';
 

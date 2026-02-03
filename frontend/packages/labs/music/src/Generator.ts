@@ -12,7 +12,7 @@ import {
 import {BlockMode} from './constants';
 import AdvancedSequencer from './player/sequencer/AdvancedSequencer';
 import Simple2Sequencer from './player/sequencer/Simple2Sequencer';
-import {SequencerAPI} from './api';
+import {SequencerAPI} from './interpreterApi';
 
 export type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
 

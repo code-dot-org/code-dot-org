@@ -11,13 +11,10 @@ import {
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
 
+import type {SoundFolder, SoundType} from '../../api';
 import {getBaseAssetUrl} from '../../appConfig';
 import MusicLibrary from '../../player/MusicLibrary';
-import type {
-  SoundData,
-  SoundFolder,
-  SoundType,
-} from '../../player/MusicLibrary';
+import type {SoundData} from '../../player/types';
 import SoundStyle from '../../utils/SoundStyle';
 
 import styles from './soundsPanel.module.scss';

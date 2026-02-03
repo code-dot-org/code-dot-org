@@ -16,9 +16,9 @@ import {
 // The inferred base type
 export type LevelPropertiesBase = z.infer<typeof LevelPropertiesBaseSchema>;
 
-export type LevelProperties<
-  T extends Record<string, unknown> = Record<string, unknown>,
-> = LevelPropertiesBase & T;
+export type LevelProperties<T = never> = [T] extends [never]
+  ? LevelPropertiesBase
+  : LevelPropertiesBase & T;
 
 export type LevelPropertiesMap = z.infer<typeof LevelPropertiesMapSchema>;
 
