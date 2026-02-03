@@ -553,7 +553,7 @@ const STANDARD_INPUT_TYPES = {
     addInputRow(blockly, block, inputConfig) {
       const inputRow = block
         .appendValueInput(inputConfig.name)
-        .setAlign(blockly.ALIGN_RIGHT);
+        .setAlign(blockly.inputs.Align.RIGHT);
       inputRow.setCheck(inputConfig.type);
       return inputRow;
     },

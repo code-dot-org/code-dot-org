@@ -256,8 +256,8 @@ function addRepeatedActionBlock(
       interpolateMsg(
         this,
         blockMsg,
-        ['NUM', 'Number', Blockly.ALIGN_RIGHT],
-        Blockly.ALIGN_RIGHT
+        ['NUM', 'Number', Blockly.inputs.Align.RIGHT],
+        Blockly.inputs.Align.RIGHT
       );
 
       this.setInputsInline(true);

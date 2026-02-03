@@ -995,7 +995,7 @@ exports.install = function (blockly, blockInstallOptions) {
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
           },
-          blockly.ALIGN_RIGHT
+          blockly.inputs.Align.RIGHT
         );
       } else {
         interpolateMsg(
@@ -1004,7 +1004,7 @@ exports.install = function (blockly, blockInstallOptions) {
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
           },
-          blockly.ALIGN_RIGHT
+          blockly.inputs.Align.RIGHT
         );
       }
       this.setPreviousStatement(true);
@@ -1042,7 +1042,7 @@ exports.install = function (blockly, blockInstallOptions) {
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1123,7 +1123,7 @@ exports.install = function (blockly, blockInstallOptions) {
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -2591,11 +2591,11 @@ exports.install = function (blockly, blockInstallOptions) {
       if (options.params) {
         this.appendValueInput('TITLE')
           .setCheck(blockly.BlockValueType.STRING)
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .appendField(msg.showTitleScreenTitle());
         this.appendValueInput('TEXT')
           .setCheck(blockly.BlockValueType.STRING)
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .appendField(msg.showTitleScreenText());
       } else {
         this.appendDummyInput()
