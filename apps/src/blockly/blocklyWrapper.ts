@@ -370,10 +370,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     this.getVariableMap().addVariables(variableList);
   };
 
-  extendedWorkspaceSvg.getContainer = function () {
-    return this.svgGroup_.parentNode;
-  };
-
   extendedWorkspaceSvg.events = {
     dispatchEvent: () => {}, // TODO
   };
