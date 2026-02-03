@@ -98,6 +98,8 @@ module Cdo
         # Lock TimerSet.synchronize before ScheduledTask.synchronize to avoid deadlock
         # this makes it match the order that TimerSet#process_tasks background thread uses
         # the locks so there's no risk of lock inversion.
+        #
+        # See: https://github.com/ruby-concurrency/concurrent-ruby/issues/1099
         Concurrent.global_timer_set.send(:synchronize) do
           synchronize do
             delay = yield
