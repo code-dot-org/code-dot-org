@@ -329,10 +329,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blocklyWrapper.wrapSettableProperty(property)
   );
 
-  blocklyWrapper.ALIGN_CENTRE = blocklyWrapper.inputs.Align.CENTRE;
-  blocklyWrapper.ALIGN_LEFT = blocklyWrapper.inputs.Align.LEFT;
-  blocklyWrapper.ALIGN_RIGHT = blocklyWrapper.inputs.Align.RIGHT;
-
   // Allows for dynamically setting the workspace theme with workspace.setTheme()
   blocklyWrapper.themes = {
     [Themes.MODERN]: CdoTheme,

@@ -543,7 +543,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.PROCEDURE);
       this.appendDummyInput().appendField(msg.drawASquare());
       this.appendValueInput('VALUE')
-        .setAlign(blockly.ALIGN_RIGHT)
+        .setAlign(blockly.inputs.Align.RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
@@ -577,7 +577,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setStyle(BlockStyles.PROCEDURE);
       this.appendDummyInput().appendField(msg.drawASnowman());
       this.appendValueInput('VALUE')
-        .setAlign(blockly.ALIGN_RIGHT)
+        .setAlign(blockly.inputs.Align.RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
@@ -659,10 +659,10 @@ exports.install = function (blockly, blockInstallOptions) {
         this,
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
           msg.controlsForInputFromToBy(),
-        ['FROM', 'Number', blockly.ALIGN_RIGHT],
-        ['TO', 'Number', blockly.ALIGN_RIGHT],
-        ['BY', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['FROM', 'Number', blockly.inputs.Align.RIGHT],
+        ['TO', 'Number', blockly.inputs.Align.RIGHT],
+        ['BY', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.appendStatementInput('DO').appendField(
         Blockly.Msg.CONTROLS_FOR_INPUT_DO
@@ -714,8 +714,8 @@ exports.install = function (blockly, blockInstallOptions) {
             'DIR'
           );
         },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['VALUE', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -753,8 +753,8 @@ exports.install = function (blockly, blockInstallOptions) {
             'DIR'
           );
         },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['VALUE', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1113,7 +1113,7 @@ exports.install = function (blockly, blockInstallOptions) {
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1155,7 +1155,7 @@ exports.install = function (blockly, blockInstallOptions) {
             'YPOS'
           );
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1191,7 +1191,7 @@ exports.install = function (blockly, blockInstallOptions) {
             directionTitle: 'DIR',
           });
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);

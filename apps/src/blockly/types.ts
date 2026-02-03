@@ -91,9 +91,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
   isDarkTheme: boolean | undefined;
   varsInGlobals: boolean;
   disableVariableEditing: boolean;
-  ALIGN_CENTRE: BlocklyCore.inputs.Align.CENTRE;
-  ALIGN_LEFT: BlocklyCore.inputs.Align.LEFT;
-  ALIGN_RIGHT: BlocklyCore.inputs.Align.RIGHT;
   inputTypes: typeof BlocklyCore.inputs.inputTypes;
   analyticsData: AnalyticsData;
   showUnusedBlocks: boolean | undefined;
