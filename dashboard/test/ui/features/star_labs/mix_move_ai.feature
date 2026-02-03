@@ -8,7 +8,7 @@ Scenario: Dancer, music, dance
   ### Create a dancer
   ###
 
-  Given I am on "http://studio.code.org/courses/mix-move-ai-2025/units/1/lessons/1/levels/3?noIntrojs=true"
+  Given I am on "http://studio.code.org/courses/mix-move-ai-2025/units/1/lessons/1/levels/3"
   And I rotate to landscape
 
   # Generate.
