@@ -12,11 +12,6 @@ import '@code-dot-org/component-library-styles/colors.css';
 // Load Font Awesome Pro 6 icons from CDN
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
-/*
-import {LevelKind} from '@code-dot-org/api/models/levels';
-import type {LevelProperties} from '@code-dot-org/lab';
-*/
-
 injectFontAwesome();
 
 // Import lab CSS variables (borders, z-indices, etc.)

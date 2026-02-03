@@ -1,6 +1,7 @@
 import type {LabMetricsReporter} from '@code-dot-org/lab';
 import {LabRegistry} from '@code-dot-org/lab';
 
+import type {MusicApiClient, SoundFolder} from '../api';
 import {
   DEFAULT_CHORD_LENGTH,
   MIN_BPM,
@@ -33,13 +34,17 @@ import type {PlaybackEvent} from './interfaces/PlaybackEvent';
 import type {SoundEvent} from './interfaces/SoundEvent';
 import {isSoundEvent} from './interfaces/SoundEvent';
 import MusicLibrary from './MusicLibrary';
-import type {SampleSequence, SoundData, SoundFolder} from './MusicLibrary';
 import ToneJSPlayer from './ToneJSPlayer';
+import {getSoundKey} from './SoundCache';
 import type {
   InstrumentData,
   PlayerEvent,
+  Sample,
   SampleEvent,
+  SampleMap,
+  SampleSequence,
   SamplerSequence,
+  SoundData,
 } from './types';
 
 /**
@@ -60,6 +65,7 @@ export default class MusicPlayer {
   private key: Key = DEFAULT_KEY;
 
   constructor(
+    api: MusicApiClient,
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
     analyticsReporter?: AnalyticsReporter | undefined,
@@ -67,7 +73,7 @@ export default class MusicPlayer {
     metricsReporter: LabMetricsReporter = LabRegistry.metricsReporter,
   ) {
     console.log('[MusicPlayer] Using ToneJSPlayer');
-    this.audioPlayer = audioPlayer || new ToneJSPlayer();
+    this.audioPlayer = audioPlayer || new ToneJSPlayer(api);
     this.metricsReporter = metricsReporter;
     this.analyticsReporter = analyticsReporter;
     this.updateConfiguration(bpm, key);
@@ -153,18 +159,30 @@ export default class MusicPlayer {
         instruments.push({instrumentName, sampleMap});
       }
     }
+
+    const library = MusicLibrary.getInstance();
+
     // Filter out instrument/kit events
-    const sampleUrls = Array.from(
+    const sampleInfos: Sample[] = Array.from(
       new Set(
         events
           .filter(event => isSoundEvent(event))
           .map(event => this.soundEventToSamples(event))
           .flat()
-          .map(sampleEvent => sampleEvent.sampleUrl),
+          .map(sampleEvent => ({
+            key: getSoundKey({
+              library: library!.getPath(),
+              folder: sampleEvent.folder,
+              soundData: sampleEvent.soundData,
+            }),
+            library: library!.getPath(),
+            folder: sampleEvent.folder,
+            soundData: sampleEvent.soundData,
+          })),
       ),
     );
 
-    return this.audioPlayer.loadSounds(sampleUrls, instruments, {
+    return this.audioPlayer.loadSounds(sampleInfos, instruments, {
       onLoadFinished,
       updateLoadProgress: this.updateLoadProgress,
     });
@@ -369,7 +387,14 @@ export default class MusicPlayer {
     return [
       {
         id: event.id,
-        sampleUrl: library.generateSoundUrl(folder, soundData),
+        folder,
+        soundData,
+        library: library.getPath(),
+        key: getSoundKey({
+          library: library.getPath(),
+          folder,
+          soundData,
+        }),
         playbackPosition: event.when,
         pickupLength: soundData.pickupLength,
         triggered: event.triggered,
@@ -381,7 +406,7 @@ export default class MusicPlayer {
     ];
   }
 
-  private getSampleForNote(note: number, instrument: string): string | null {
+  private getSampleForNote(note: number, instrument: string): Sample | null {
     const library = MusicLibrary.getInstance();
     if (!library) {
       return null;
@@ -402,8 +427,18 @@ export default class MusicPlayer {
       return null;
     }
 
-    const url = library.generateSoundUrl(folder, soundData);
-    return url;
+    const libraryPath = library.getPath();
+
+    return {
+      key: getSoundKey({
+        library: libraryPath,
+        folder,
+        soundData,
+      }),
+      library: libraryPath,
+      folder,
+      soundData,
+    };
   }
 
   private getSamplesForSequence(
@@ -420,12 +455,12 @@ export default class MusicPlayer {
         this.key,
         event.noteOffset,
       );
-      const sampleUrl = this.getSampleForNote(transposedNote, instrument);
-      if (sampleUrl !== null) {
+      const sampleInfo = this.getSampleForNote(transposedNote, instrument);
+      if (sampleInfo !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
-          id: sampleUrl,
-          sampleUrl,
+          ...sampleInfo,
+          id: sampleInfo.key,
           playbackPosition: eventWhen,
           length: event.length,
           triggered,
@@ -549,7 +584,7 @@ export default class MusicPlayer {
     });
   }
 
-  private generateSampleMap(instrument: string) {
+  private generateSampleMap(instrument: string): SampleMap | undefined {
     const library = MusicLibrary.getInstance();
     if (library === undefined) {
       this.metricsReporter.logWarning('Library not set. Cannot load sampler.');
@@ -561,18 +596,23 @@ export default class MusicPlayer {
       return;
     }
 
-    return folder.sounds.reduce(
-      (map, sound, index) => {
-        const soundData = library.getSoundForId(`${folder.id}/${sound.src}`);
-        if (soundData) {
-          map[sound.note || index] = library.generateSoundUrl(
+    const libraryPath = library.getPath();
+
+    return folder.sounds.reduce((map, sound, index) => {
+      const soundData = library.getSoundForId(`${folder.id}/${sound.src}`);
+      if (soundData) {
+        map[sound.note || index] = {
+          key: getSoundKey({
+            library: libraryPath,
             folder,
             soundData,
-          );
-        }
-        return map;
-      },
-      {} as {[note: number]: string},
-    );
+          }),
+          library: libraryPath,
+          folder,
+          soundData,
+        };
+      }
+      return map;
+    }, {} as SampleMap);
   }
 }

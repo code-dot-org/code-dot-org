@@ -1,6 +1,6 @@
+import type {SoundType} from '../api';
 import type {ChordEvent} from '../player/interfaces/ChordEvent';
 import type {InstrumentEvent} from '../player/interfaces/InstrumentEvent';
-import type {SoundType} from '../player/MusicLibrary';
 
 import styles from '../components/soundStyle.module.scss';
 

@@ -14,7 +14,7 @@ import {useAppDispatch, useAppSelector} from '../../redux/store';
 import appConfig from '../../appConfig';
 import {DEFAULT_PACK} from '../../constants';
 import AnalyticsContext from '../../contexts/AnalyticsContext';
-import type {SoundFolder} from '../../player/MusicLibrary';
+import type {SoundFolder} from '../../api';
 import MusicLibrary from '../../player/MusicLibrary';
 import MusicPlayer from '../../player/MusicPlayer';
 import {setPackId} from '../../redux/musicSlice';

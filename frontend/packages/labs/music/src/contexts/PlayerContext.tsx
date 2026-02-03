@@ -11,6 +11,7 @@ import {
   useState,
 } from 'react';
 
+import type {MusicApiClient} from '../api';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicRegistry from '../MusicRegistry';
@@ -46,6 +47,10 @@ const PlayerContext = createContext<PlayerContent>(
   {} as unknown as PlayerContent,
 );
 
+export interface PlayerProviderProps extends PropsWithChildren {
+  api: MusicApiClient;
+}
+
 /**
  * This keeps track of the different components related to the music library
  * and playback. Namely, this keeps a reference to a Driver class and facilitates
@@ -53,14 +58,14 @@ const PlayerContext = createContext<PlayerContent>(
  *
  * This plus the Driver class generally take the place of the old MusicView wrapper.
  */
-export const PlayerProvider = ({children}: PropsWithChildren) => {
+export const PlayerProvider = ({api, children}: PlayerProviderProps) => {
   const [library, setLibrary] = useState<MusicLibrary | undefined>(undefined);
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
   const javascriptGeneratorRef = useRef<JavascriptGenerator | null>(null);
 
   const driver = useMemo(() => {
-    return new Driver();
-  }, []);
+    return new Driver(api);
+  }, [api]);
 
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {

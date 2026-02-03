@@ -4,12 +4,11 @@ import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 import {BlockTypes} from '../../blockly/blockTypes';
 import {BlockMode} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {getAppOptionsEditBlocks} from '@code-dot-org/api';
 import {BlocklyWorkspace} from '@code-dot-org/blockly-workspace';
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
 import {
   GuideInstructions,
-  LabConstants,
+  //LabConstants,
   PanelContainer,
   WorkspaceHeader,
 } from '@code-dot-org/lab';
@@ -45,8 +44,10 @@ const DEFAULT_TOOLBOX = toolboxes[BlockMode.SIMPLE2];
 const exemplarPlayerInsideInstructions =
   AppConfig.getValue('exemplar-player-bottom') !== 'true';
 
+// TODO: use AppOptions api;
 //const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
+//const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
+const isToolboxMode = false;
 
 /** By default, a blank level should at least show a 'When Run' block */
 const DefaultStartBlocks: BlocklySerialization = {
@@ -263,7 +264,6 @@ const MusicLab = () => {
                   }}
                   startBlocks={
                     currentSources?.source ||
-                    levelProperties.template?.startBlocks ||
                     levelProperties.startBlocks ||
                     DefaultStartBlocks
                   }

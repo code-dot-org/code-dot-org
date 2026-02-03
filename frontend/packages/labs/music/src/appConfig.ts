@@ -1,9 +1,9 @@
-import {queryParams} from '@code-dot-org/api';
+import {utils} from '@code-dot-org/lab';
 
 import {baseAssetUrl} from './constants';
 
 export const getBaseAssetUrl = (): string => {
-  const url = queryParams('base-asset-url') as string | undefined;
+  const url = utils.queryParams('base-asset-url') as string | undefined;
   if (url) {
     return url + '/';
   } else {
@@ -14,6 +14,6 @@ export const getBaseAssetUrl = (): string => {
 export default {
   // Returns a config value.
   getValue(name: string): string | undefined {
-    return queryParams(name) as string | undefined;
+    return utils.queryParams(name) as string | undefined;
   },
 };

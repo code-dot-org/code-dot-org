@@ -3,20 +3,11 @@ import type * as Blockly from 'blockly/core';
 import type {AdlibType} from '@code-dot-org/lab';
 
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
-import type {
-  ExemplarSettings,
-  LevelProperties,
-  BaseLabProperties,
-} from '@code-dot-org/lab';
+import type {ExemplarSettings, LevelProperties} from '@code-dot-org/core/api';
 
 import type {ToolboxData} from './blockly/toolbox/types';
 import type {BlockModeType} from './constants';
-import type {Sounds} from './player/MusicLibrary';
-
-export interface MusicData extends BaseLabProperties {
-  startBlocks?: BlocklySerialization;
-  toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
-}
+import type {Sounds} from './player/types';
 
 export interface MusicLevelData {
   toolbox?: ToolboxData;
@@ -48,7 +39,13 @@ export interface MusicLevelData {
   danceMove?: string;
 }
 
-export type MusicLevelProperties = LevelProperties<MusicData, MusicLevelData>;
+export interface MusicData {
+  startBlocks?: BlocklySerialization;
+  toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
+  levelData: MusicLevelData;
+}
+
+export type MusicLevelProperties = LevelProperties<MusicData>;
 
 export type ExemplarValidationMode = 'default' | 'type';
 export interface MusicExemplarSettings extends ExemplarSettings {

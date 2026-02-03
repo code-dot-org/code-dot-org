@@ -57,14 +57,21 @@ export function createHttpTransport(opts: {
     return {res, url};
   }
 
-  async function parseResponse(res: Response): Promise<unknown> {
+  async function parseResponse(
+    res: Response,
+    blob?: boolean,
+  ): Promise<unknown> {
     const contentType = res.headers.get('content-type') ?? '';
     const isJson = contentType.includes('application/json');
 
     if (res.status === 204) return undefined;
 
     try {
-      return isJson ? await res.json() : await res.text();
+      return blob
+        ? await res.blob()
+        : isJson
+          ? await res.json()
+          : await res.text();
     } catch {
       return undefined;
     }
@@ -79,10 +86,13 @@ export function createHttpTransport(opts: {
   }
 
   return {
-    async requestWithMeta<T>(req: RequestOptions): Promise<ApiResponse<T>> {
+    async requestWithMeta<T>(
+      req: RequestOptions,
+      blob?: boolean,
+    ): Promise<ApiResponse<T>> {
       const {res, url} = await doFetch(req);
       const meta = extractMeta(res, url);
-      const payload = await parseResponse(res);
+      const payload = await parseResponse(res, blob);
 
       if (!res.ok) {
         throw new ApiError(
@@ -103,6 +113,11 @@ export function createHttpTransport(opts: {
 
     async request<T>(req: RequestOptions): Promise<T> {
       const {data} = await this.requestWithMeta<T>(req);
+      return data;
+    },
+
+    async requestBlob(req: RequestOptions): Promise<Blob> {
+      const {data} = await this.requestWithMeta<Blob>(req, true);
       return data;
     },
   };

@@ -26,9 +26,13 @@ export interface Transport {
   /** Convenience for “just give me the data” */
   request<TResponse>(req: RequestOptions): Promise<TResponse>;
 
+  /** Convenience for “just give me the blob” */
+  requestBlob(req: RequestOptions): Promise<Blob>;
+
   /** For endpoints that depend on headers/status/etc */
   requestWithMeta<TResponse>(
     req: RequestOptions,
+    blob?: boolean,
   ): Promise<ApiResponse<TResponse>>;
 }
 

@@ -1,3 +1,4 @@
+export * from './auth';
 export * from './channels';
 export * from './levels';
 export * from './metrics';

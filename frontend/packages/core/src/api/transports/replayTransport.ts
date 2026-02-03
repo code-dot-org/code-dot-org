@@ -42,5 +42,10 @@ export function createReplayTransport(opts: {
       const {data} = await this.requestWithMeta<T>(req);
       return data;
     },
+
+    async requestBlob(req: RequestOptions): Promise<Blob> {
+      const {data} = await this.requestWithMeta<Blob>(req, true);
+      return data;
+    },
   };
 }
