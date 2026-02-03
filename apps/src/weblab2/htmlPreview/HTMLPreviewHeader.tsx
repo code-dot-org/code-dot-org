@@ -6,7 +6,7 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useEffect, ChangeEvent, useCallback, useRef} from 'react';
 
-import {AutocompleteInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/AutocompleteInput';
+import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/AutocompleteInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
