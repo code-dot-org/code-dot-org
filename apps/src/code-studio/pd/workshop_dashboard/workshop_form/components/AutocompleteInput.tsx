@@ -79,22 +79,22 @@ export const AutocompleteInput = memo(
         skipApi.current = false;
         return;
       }
-      if (!debouncedValue || debouncedValue.length < 3) {
-        return;
+
+      if (debouncedValue && debouncedValue.length >= 3) {
+        const fetchSuggestions = async () => {
+          try {
+            setLoading(true);
+            const suggestedOptions = await fetchOptions(debouncedValue);
+            setOptions(suggestedOptions);
+            setActiveIndex(-1);
+          } catch (error) {
+            console.error(error);
+          } finally {
+            setLoading(false);
+          }
+        };
+        fetchSuggestions();
       }
-      const fetchSuggestions = async () => {
-        try {
-          setLoading(true);
-          const suggestedOptions = await fetchOptions(debouncedValue);
-          setOptions(suggestedOptions);
-          setActiveIndex(-1);
-        } catch (error) {
-          console.error(error);
-        } finally {
-          setLoading(false);
-        }
-      };
-      fetchSuggestions();
     }, [debouncedValue, fetchOptions]);
 
     const handleSelectOption = useCallback(
@@ -147,10 +147,11 @@ export const AutocompleteInput = memo(
     return (
       <div
         ref={containerRef}
-        className={classNames(styles.autocompleteInputContainer, {
-          [styles.hideIcon]: hideIcon,
-          [styles.compactOptions]: compactOptions,
-        })}
+        className={classNames(
+          styles.autocompleteInputContainer,
+          hideIcon && styles.hideIcon,
+          compactOptions && styles.compactOptions
+        )}
       >
         <TextField
           name={name}

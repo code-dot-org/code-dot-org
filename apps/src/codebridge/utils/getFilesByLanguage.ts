@@ -3,8 +3,7 @@ import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 // Returns a list of files matching the given language (by file.language or extension).
 export const getFilesByLanguage = (
   source: MultiFileSource | undefined,
-  language: string,
-  includeExtensionMatch = true
+  language: string
 ): ProjectFile[] => {
   if (!source) {
     return [];
@@ -15,10 +14,5 @@ export const getFilesByLanguage = (
     if (fileLanguage === normalizedLanguage) {
       return true;
     }
-    if (!includeExtensionMatch) {
-      return false;
-    }
-    const extension = file.name.split('.').pop()?.toLowerCase();
-    return extension === normalizedLanguage;
   });
 };
