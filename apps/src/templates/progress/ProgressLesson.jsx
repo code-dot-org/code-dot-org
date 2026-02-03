@@ -197,7 +197,7 @@ class ProgressLesson extends React.Component {
                     href={lesson.student_lesson_plan_html_url}
                     text={i18n.lessonResources()}
                     icon="file-text"
-                    color="purple"
+                    color="white"
                     target="_blank"
                   />
                 </span>
