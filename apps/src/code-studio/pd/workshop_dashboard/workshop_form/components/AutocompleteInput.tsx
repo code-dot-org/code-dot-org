@@ -67,32 +67,35 @@ export const AutocompleteInput = memo(
     const containerRef = useOutsideClick<HTMLDivElement>(reset);
 
     useEffect(() => {
+      if (!value || value.length < 3) {
+        reset();
+      }
+    }, [reset, value]);
+
+    useEffect(() => {
       // skip api call when component first mounts if value already exists
       // also skip when an option is selected and value updates with result
       if (skipApi.current) {
         skipApi.current = false;
         return;
       }
-      if (!value || value.length < 3) {
-        reset();
+      if (!debouncedValue || debouncedValue.length < 3) {
         return;
       }
-      if (debouncedValue && debouncedValue.length >= 3) {
-        const fetchSuggestions = async () => {
-          try {
-            setLoading(true);
-            const suggestedOptions = await fetchOptions(debouncedValue);
-            setOptions(suggestedOptions);
-            setActiveIndex(-1);
-          } catch (error) {
-            console.error(error);
-          } finally {
-            setLoading(false);
-          }
-        };
-        fetchSuggestions();
-      }
-    }, [debouncedValue, fetchOptions, reset, value]);
+      const fetchSuggestions = async () => {
+        try {
+          setLoading(true);
+          const suggestedOptions = await fetchOptions(debouncedValue);
+          setOptions(suggestedOptions);
+          setActiveIndex(-1);
+        } catch (error) {
+          console.error(error);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchSuggestions();
+    }, [debouncedValue, fetchOptions]);
 
     const handleSelectOption = useCallback(
       (option: string) => {

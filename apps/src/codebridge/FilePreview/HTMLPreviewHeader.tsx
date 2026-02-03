@@ -4,7 +4,7 @@ import SegmentedButtons, {
 } from '@code-dot-org/component-library/segmentedButtons';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React, {ChangeEvent, useRef} from 'react';
+import React, {ChangeEvent, useCallback, useRef} from 'react';
 
 import {AutocompleteInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/AutocompleteInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -13,6 +13,8 @@ import weblab2I18n from '@cdo/apps/weblab2/locale';
 import {PreviewViewMode} from './constants';
 
 import moduleStyles from './styles/html-preview-header.module.scss';
+
+const EMPTY_OPTIONS: string[] = [];
 
 interface HTMLPreviewHeaderProps {
   value: string;
@@ -49,18 +51,30 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
   const lastInputEventValue = useRef<string | null>(null);
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    lastInputEventValue.current = event.target.value;
-    onChange(event.target.value);
-  };
-  const suggestionsDisabled = (searchValue: string) =>
-    lastInputEventValue.current !== searchValue;
-  const handleFetchOptions = async (searchValue: string) => {
-    if (suggestionsDisabled(searchValue)) {
-      return [];
-    }
-    return fetchOptions(searchValue);
-  };
+
+  const handleInputChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      lastInputEventValue.current = event.target.value;
+      onChange(event.target.value);
+    },
+    [onChange]
+  );
+
+  const suggestionsDisabled = useCallback(
+    (searchValue: string) => lastInputEventValue.current !== searchValue,
+    []
+  );
+
+  const handleFetchOptions = useCallback(
+    async (searchValue: string) => {
+      if (suggestionsDisabled(searchValue)) {
+        return EMPTY_OPTIONS;
+      }
+      return fetchOptions(searchValue);
+    },
+    [fetchOptions, suggestionsDisabled]
+  );
+
   const previewViewModeButtonsProps: SegmentedButtonsProps = {
     color: 'strong',
     buttons: [
@@ -135,7 +149,6 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
           fetchOptions={handleFetchOptions}
           placeholder=""
           aria-label={weblab2I18n.addressBar()}
-          // hideIcon
         />
         <Button
           onClick={onRefresh}
