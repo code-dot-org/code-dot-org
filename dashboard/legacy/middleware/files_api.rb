@@ -1071,7 +1071,7 @@ class FilesApi < Sinatra::Base
     content_type_header = request.content_type
 
     # Validate allowed content types
-    unless ['image/png', 'image/jpeg'].include?(content_type_header)
+    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
       status 400
       return {error: 'Unsupported image type. Only PNG and JPEG files are allowed.'}.to_json
     end
