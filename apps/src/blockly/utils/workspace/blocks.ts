@@ -38,7 +38,7 @@ export function getCodeBlocks(): BlockList {
  */
 export function getAllBlocks(): BlockList {
   return [
-    ...Blockly.mainBlockSpace.getAllUsedBlocks(),
+    ...getAllUsedBlocks(Blockly.getMainWorkspace()),
     ...(Blockly.getHiddenDefinitionWorkspace()
       ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
       : []),
@@ -51,4 +51,10 @@ export function loopHighlight(apiName: string, blockId: string) {
     args = '%1';
   }
   return '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
+}
+
+export function getAllUsedBlocks(workspace: BlocklyCore.Workspace) {
+  return workspace
+    .getAllBlocks()
+    .filter(block => block.isEnabled() && block.getRootBlock().isEnabled());
 }
