@@ -13,9 +13,6 @@ import weblab2I18n from '@cdo/apps/weblab2/locale';
 import {PreviewViewMode} from './constants';
 
 import moduleStyles from './styles/html-preview-header.module.scss';
-
-const EMPTY_OPTIONS: string[] = [];
-
 interface HTMLPreviewHeaderProps {
   value: string;
   onChange: (value: string) => void;
@@ -78,7 +75,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   const handleFetchOptions = useCallback(
     async (searchValue: string) => {
       if (suggestionsDisabled(searchValue)) {
-        return EMPTY_OPTIONS;
+        return [];
       }
       return fetchOptions(searchValue);
     },

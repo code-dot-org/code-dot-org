@@ -8,10 +8,10 @@ export const getFilesByLanguage = (
   if (!source) {
     return [];
   }
-  const normalizedLanguage = language.toLowerCase();
+
   return Object.values(source.files).filter(file => {
     const fileLanguage = file.language?.toLowerCase();
-    if (fileLanguage === normalizedLanguage) {
+    if (fileLanguage === language) {
       return true;
     }
   });
