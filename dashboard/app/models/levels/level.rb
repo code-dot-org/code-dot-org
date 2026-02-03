@@ -959,7 +959,7 @@ class Level < ApplicationRecord
         rubric_template_level = rubric_level&.try(:project_template_level)
         rubric_templates_for_sublevels = rubric_level&.try(:sublevels)&.map {|sublevel| sublevel.try(:project_template_level)} || []
         if try(:project_template_level)
-          properties_camelized[:showRubric] = (rubric_template_level && rubric_template_level == try(:project_template_level)) || rubric_templates_for_sublevels.include?(try(:project_template_level))
+          properties_camelized[:showRubric] = (rubric_template_level && rubric_template_level == project_template_level) || rubric_templates_for_sublevels.include?(project_template_level)
         end
       end
     end
