@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-29 21:51:27 UTC",
+    "serialized_at": "2026-02-02 17:02:10 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -288,6 +288,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-whatai-04"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -310,6 +313,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-applications-01b"
+        ],
         "progression": "Applications of AI"
       },
       "bonus": false,
@@ -382,6 +388,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-applications-04"
+        ],
         "progression": "Applications of AI"
       },
       "bonus": false,
@@ -404,6 +413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-impact-01"
+        ],
         "progression": "Impact of AI on Education"
       },
       "bonus": false,
@@ -476,6 +488,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-impact-04"
+        ],
         "progression": "Impact of AI on Education"
       },
       "bonus": false,
@@ -498,15 +513,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-ai-101-V2-mod1-impact-05"
-        ],
         "progression": "Impact of AI on Education"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-ai-101-V2-mod1-impact-05"
+          "pl-ai-101-V2-mod1-impact-05b"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -514,7 +526,7 @@
         "activity_section.key": "a8acfa51-cfb7-4e3e-8008-f75f03de9eae"
       },
       "level_keys": [
-        "pl-ai-101-V2-mod1-impact-05"
+        "pl-ai-101-V2-mod1-impact-05b"
       ]
     },
     {
@@ -573,6 +585,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-literacy-03"
+        ],
         "progression": "AI Literacy"
       },
       "bonus": false,
@@ -595,6 +610,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-literacy-04"
+        ],
         "progression": "AI Literacy"
       },
       "bonus": false,
@@ -617,6 +635,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-ai-101-V2-mod1-literacy-05"
+        ],
         "progression": "AI Literacy"
       },
       "bonus": false,
@@ -917,9 +938,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-ai-101-V2-mod1-impact-05",
+        "level.key": "pl-ai-101-V2-mod1-impact-05b",
         "script_level.level_keys": [
-          "pl-ai-101-V2-mod1-impact-05"
+          "pl-ai-101-V2-mod1-impact-05b"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
