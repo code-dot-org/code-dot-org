@@ -1,12 +1,11 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
 import msg from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-
-import styles from './collapser-button.module.scss';
+import color from '../../util/color';
 
 /**
  * A button for toggling the collapse state of instructions in CSF
@@ -27,8 +26,7 @@ class CollapserButton extends Component {
     return (
       <button
         type="button"
-        className={styles.collapseButton}
-        style={this.props.style}
+        style={[styles.collapseButton, this.props.style]}
         id="toggleButton"
         onClick={this.props.onClick}
       >
@@ -46,26 +44,28 @@ class CollapserButton extends Component {
             icon={
               this.props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'
             }
-            className={
+            style={
               this.props.isRtl ? styles.collapseIconRtl : styles.collapseIcon
             }
           />
         )}
-        <div className={styles.textWrapper}>
-          <div className={styles.labelGrid}>
+        <div style={{display: 'inline-block', userSelect: 'none'}}>
+          <div style={{display: 'grid'}}>
             <div
-              className={classNames(
-                styles.label,
-                this.props.collapsed ? styles.show : styles.hide
-              )}
+              style={{
+                opacity: this.props.collapsed ? 1 : 0,
+                gridRow: 1,
+                gridColumn: 1,
+              }}
             >
               {msg.more()}
             </div>
             <div
-              className={classNames(
-                styles.label,
-                this.props.collapsed ? styles.hide : styles.show
-              )}
+              style={{
+                opacity: this.props.collapsed ? 0 : 1,
+                gridRow: 1,
+                gridColumn: 1,
+              }}
             >
               {msg.less()}
             </div>
@@ -76,4 +76,27 @@ class CollapserButton extends Component {
   }
 }
 
-export default CollapserButton;
+const styles = {
+  collapseButton: {
+    backgroundColor: color.neutral_white,
+    border: `2px solid ${color.neutral_dark}`,
+    color: color.neutral_dark,
+    whiteSpace: 'nowrap',
+    ':hover': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
+    ':focus': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
+  },
+  collapseIcon: {
+    marginRight: 5,
+  },
+  collapseIconRtl: {
+    marginLeft: 5,
+  },
+};
+
+export default Radium(CollapserButton);

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
@@ -58,11 +59,11 @@ class InlineHint extends React.Component {
   }
 }
 
-export const StatelessInlineHint = InlineHint;
+export const StatelessInlineHint = Radium(InlineHint);
 export default connect(state => ({
   isBlockly: state.pageConstants.isBlockly,
   isMinecraft: state.pageConstants.isMinecraft,
   skinId: state.pageConstants.skinId,
   textToSpeechEnabled:
     state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
-}))(InlineHint);
+}))(Radium(InlineHint));
