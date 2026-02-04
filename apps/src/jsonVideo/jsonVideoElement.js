@@ -45,9 +45,6 @@ export class JsonVideo extends HTMLElement {
             <iframe id="scene-renderer" src="about:blank" scrolling="no"></iframe>
             <div id="closed-caption-overlay" class="hidden"><span class="cc-text"></span></div>
             <div id="controls-bar">
-                <div id="progress-container">
-                    <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
-                </div>
                 <div class="controls-row">
                     <button id="play-btn" class="control-btn"></button>
                     <div class="volume-control">
@@ -59,6 +56,9 @@ export class JsonVideo extends HTMLElement {
                     </div>
                     <div style="flex-grow: 1;"></div>
                     <button id="cc-btn" class="control-btn"></button>
+                </div>
+                <div id="progress-container">
+                    <input type="range" id="progress-bar" min="0" max="100" value="0" step="0.1">
                 </div>
             </div>
         `;
@@ -81,6 +81,25 @@ export class JsonVideo extends HTMLElement {
     };
 
     this._bindEvents();
+    this._setupResizeObserver();
+  }
+
+  _setupResizeObserver() {
+    const resizeObserver = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        if (entry.target !== this) {
+          console.error('unexpected ResizeObserver target:', entry.target);
+        } else {
+          let timeDisplay = 'none';
+          if (entry.contentRect.width > 275) {
+            timeDisplay = 'block';
+          }
+          this.style.setProperty('--time-display', timeDisplay);
+        }
+      }
+    });
+
+    resizeObserver.observe(this);
   }
 
   _bindEvents() {
@@ -253,6 +272,10 @@ export class JsonVideo extends HTMLElement {
     this.ui.progress.value =
       (this._currentTimeMs / this._totalDurationMs) * 100 || 0;
     this.ui.curTime.textContent = this._formatTime(this._currentTimeMs);
+    this.ui.progress.style.setProperty(
+      '--progress-value',
+      this.ui.progress.value + '%'
+    );
   }
 
   _formatTime(ms) {

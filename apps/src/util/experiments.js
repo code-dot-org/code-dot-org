@@ -68,8 +68,6 @@ experiments.LEGACY_LAB_AI_TUTOR = 'legacy-lab-ai-tutor';
 experiments.ACTIONCABLE_LOAD_TESTING = 'actioncable-load-testing';
 // Use AI Tutor system prompts from Langfuse
 experiments.USE_LANGFUSE_PROMPT = 'use-langfuse-prompt';
-// Enable AI lesson summaries
-experiments.AI_LESSON_SUMMARIES = 'ai_lesson_summaries';
 // Enable AI lesson podcasts
 experiments.AI_LESSON_PODCASTS = 'ai-lesson-podcasts';
 // Use channel-id based preview urls on localhost for Web Lab 2

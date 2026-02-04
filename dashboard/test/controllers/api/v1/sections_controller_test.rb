@@ -1505,6 +1505,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'can set ai_chat_access_level by the section teacher' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :success
+    @section.reload
+    assert_equal SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED], @section.ai_chat_access_level
+  end
+
+  test 'cannot set ai_chat_access_level by a different teacher' do
+    sign_in @following_teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level returns 403 for unauthorized access' do
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level fails when section does not exist' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: -1, ai_chat_access_level: SharedConstants::AI_CHAT_ACCESS_LEVELS[:ENABLED]}
+    assert_response :forbidden
+  end
+
+  test 'set ai_chat_access_level fails for invalid value' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: 'invalid_value'}
+    assert_response :bad_request
+  end
+
+  test 'set ai_chat_access_level fails when passed nil' do
+    sign_in @teacher
+    post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: nil}
+    assert_response :bad_request
+  end
+
   test 'valid_course_offerings includes only published courses' do
     sign_in @teacher
     get :valid_course_offerings, params: {login_type: Section::LOGIN_TYPE_EMAIL}
