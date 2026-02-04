@@ -11,6 +11,18 @@ import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSel
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+const canParseUrl = (urlString: string | object | boolean): boolean => {
+  if (urlString && typeof urlString === 'string') {
+    try {
+      new URL(urlString);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  return false;
+};
+
 import {getFullName} from '../manageStudents/utils';
 
 import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
@@ -107,23 +119,21 @@ const StudentSnapshot: React.FC = () => {
         hasUnnumberedLessons={hasUnnumberedLessons}
       />
 
-      {feedbackLink &&
-        typeof feedbackLink === 'string' &&
-        URL.canParse(feedbackLink) && (
-          <Alert
-            type={'primary'}
-            size={'s'}
-            text={
-              "We'd love your feedback on the new Student Snapshot page. Just a few minutes will help us improve!"
-            }
-            link={{
-              text: 'Feedback form',
-              href: String(feedbackLink),
-              openInNewTab: true,
-            }}
-            icon={{iconName: 'comment-dots', iconStyle: 'regular'}}
-          />
-        )}
+      {canParseUrl(feedbackLink) && (
+        <Alert
+          type={'primary'}
+          size={'s'}
+          text={
+            "We'd love your feedback on the new Student Snapshot page. Just a few minutes will help us improve!"
+          }
+          link={{
+            text: 'Feedback form',
+            href: String(feedbackLink),
+            openInNewTab: true,
+          }}
+          icon={{iconName: 'comment-dots', iconStyle: 'regular'}}
+        />
+      )}
 
       {selectedStudent && (
         <Typography
