@@ -61,9 +61,9 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
                 "student": {
                   "dob": "2012-02-12T00:00:00.000Z",
                   "enrollments": [],
-                  "gender": "X",
-                  "hispanic_ethnicity": "Y",
-                  "race": "Race",
+                  "gender": "",
+                  "hispanic_ethnicity": "",
+                  "race": "",
                   "school": "65cb9c1570fcf808965b986d",
                   "schools": [
                     "65cb9c1570fcf808965b986d"
@@ -190,31 +190,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with unknown clever teacher account" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
+    auth = generate_auth_user_hash(
       provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever-teacher.xx',
-        user_type: 'user',
-        dob: nil,
-        gender: nil
-      },
-      extra: {
-        raw_info: {
-          canonical: {
-            data: {
-              roles: {
-                teacher: {
-                  sis_id: '123456'
-                }
-              }
-            }
-          }
-        }
-      }
+      uid: '1111',
+      email: 'first_last@clever-teacher.xx',
+      user_type: 'user'
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {sis_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -230,31 +212,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with unknown clever teacher account needs additional information" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
+    auth = generate_auth_user_hash(
       provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: nil,
-        user_type: 'user',
-        dob: nil,
-        gender: nil
-      },
-      extra: {
-        raw_info: {
-          canonical: {
-            data: {
-              roles: {
-                teacher: {
-                  legacy_id: '123456'
-                }
-              }
-            }
-          }
-        }
-      }
+      uid: '1111',
+      email: nil,
+      user_type: 'user'
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -266,6 +230,29 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
+  end
+
+  test "login: authorizing with unknown clever staff account creates teacher" do
+    auth = generate_auth_user_hash(
+      provider: 'clever',
+      uid: '2222',
+      email: 'staff_member@clever-staff.xx',
+      user_type: 'user'
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '654321'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :clever
+    end
+
+    assert_equal 200, @response.status
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal auth.uid, partial_user.uid
+    assert_equal User::TYPE_TEACHER, partial_user.user_type
   end
 
   test "login: authorizing with unknown clever student account creates student" do
@@ -434,6 +421,31 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I am signed in
+    user.reload
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'clever: signs in user if user is found by legacy_id' do
+    legacy_id = 'legacy-id-123'
+    user = create(:teacher)
+    create(
+      :authentication_option,
+      user: user,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: legacy_id
+    )
+
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: 'new-uid'
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: legacy_id}}}}
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :clever
+    end
+
     user.reload
     assert_equal user.id, signed_in_user_id
   end
