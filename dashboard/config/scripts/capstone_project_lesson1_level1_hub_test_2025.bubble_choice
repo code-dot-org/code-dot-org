@@ -1,0 +1,14 @@
+name 'capstone-project-lesson1-level1-hub-test-2025'
+display_name 'Milestone 1 Hub'
+description '**Goal:** I can clearly explain who this is for, what problem it solves, and what this version will include. 
+
+Use these levels in whatever way helps you clarify your project\’s purpose and scope. You decide when and how to use these supports as you define who your project is for and what this first version should focus on.
+
+*This milestone is about **thinking and decision-making**, not building. You should return to these levels any time your idea or scope changes.*'
+uses_lab2
+
+sublevels
+level 'capstone-project-lesson1-level1a-test-2025'
+level 'capstone-project-lesson1-level1b-test-2025'
+
+

@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-02-03T17:31:38.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Random Joke (Promise Chain)</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header>\n    <h1>Random Joke Generator</h1>\n    <p>Click the button to load a joke from the Official Joke API.</p>\n  </header>\n\n  <main>\n    <button id=\"btn\">Get a joke</button>\n    <p id=\"status\">Status: ready</p>\n\n    <section class=\"card\" aria-live=\"polite\">\n      <h2>Joke</h2>\n      <p id=\"setup\">(setup will appear here)</p>\n      <p id=\"punchline\">(punchline will appear here)</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  margin: 24px;\n  line-height: 1.4;\n}\nbutton {\n  padding: 10px 14px;\n  font-size: 16px;\n}\n.card {\n  margin-top: 16px;\n  padding: 16px;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  max-width: 650px;\n}\n#status {\n  margin-top: 12px;\n  font-weight: 600;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.querySelector(\"#btn\");\nconst statusEl = document.querySelector(\"#status\");\nconst setupEl = document.querySelector(\"#setup\");\nconst punchlineEl = document.querySelector(\"#punchline\");\n\nbtn.addEventListener(\"click\", function () {\n  statusEl.textContent = \"Status: loading...\";\n\n  fetch(\"https://official-joke-api.appspot.com/random_joke\")\n    .then(function (response) {\n      return response.json();\n    })\n    .then(function (data) {\n      setupEl.textContent = data.setup;\n      punchlineEl.textContent = data.punchline;\n      statusEl.textContent = \"Status: done\";\n    });\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "original_script.js",
+          "language": "js",
+          "contents": "const btn = document.querySelector(\"#btn\");\nconst statusEl = document.querySelector(\"#status\");\nconst setupEl = document.querySelector(\"#setup\");\nconst punchlineEl = document.querySelector(\"#punchline\");\n\nbtn.addEventListener(\"click\", function () {\n  statusEl.textContent = \"Status: loading...\";\n\n  fetch(\"https://official-joke-api.appspot.com/random_joke\")\n    .then(function (response) {\n      return response.json();\n    })\n    .then(function (data) {\n      setupEl.textContent = data.setup;\n      punchlineEl.textContent = data.punchline;\n      statusEl.textContent = \"Status: done\";\n    });\n});",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "4"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Refactor the Code\r\n\r\nThis `.then()` promise chain loads a joke from the [Random Joke API](https://official-joke-api.appspot.com/random_joke) but the code is hard to read.\r\n\r\nYour task is to refactor the code in `script.js` using `async` and `await`.\r\n\r\n:::details [Not sure where to start?]\r\n1) Create an async function `getJoke()`.\r\n2) Move the `fetch(...)` code inside `getJoke()` and rewrite it using:\r\n   - `await fetch(url)`\r\n   - `await response.json()`\r\n3) Update the button click handler so it calls `getJoke()`. \r\n4) Check that clicking “Get a joke” displays a setup and punchline.\r\n:::\r\n\r\nOnce you have working code, use AI Tutor to generate a refactored version of the original code. \r\n\r\n*Hint: Prompt AI Tutor to refactor `original_script.js` which contains the original `.then()` chain.*\r\n\r\n**Discuss:** What differences do you notice between the manually refactored code and AI refactored code? Which version do you prefer to use? ",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\n/WjHW2I/AcTJ/dRSUmMHx/Cnr1tDD9c=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-03 17:34:29 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 17:34:30 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 17:44:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 17:56:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 17:56:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 18:03:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 18:09:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 18:20:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 18:21:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 18:21:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:14:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:15:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:17:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:18:55 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:19:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

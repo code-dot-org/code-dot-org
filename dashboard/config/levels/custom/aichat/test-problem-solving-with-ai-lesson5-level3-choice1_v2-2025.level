@@ -43,7 +43,8 @@
     "display_name": "Government",
     "bubble_choice_description": "Practice asking the same question in different ways about local community programs for youth.",
     "thumbnail_url": "https://images.code.org/27c36efae3ae585fc84645fc408704b0-Community Program Icon.png",
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:48.419+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice1_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice1_2025\"}]"
