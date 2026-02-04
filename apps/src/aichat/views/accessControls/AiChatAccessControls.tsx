@@ -12,8 +12,9 @@ import React, {useEffect, useState} from 'react';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
@@ -26,13 +27,7 @@ import style from './ai-chat-access-controls.module.scss';
 /**
  * Renders toggles to control student access to AI chat features.
  * Used in Teacher Dashboard (not in lab2).
- *
- * TODO-AICHAT-PERMISSIONS: uncomment references to Section.aiChatAccessLevel
- * and updateSectionAiChatAccessLevel once implemented
  */
-
-// TODO-AICHAT-PERMISSIONS: the default should be based on the curriculum assigned to the section.
-const defaultAccessLevel = AiChatAccessLevels.DISABLED;
 
 const calculateAccessLevel = (
   accessToggle: boolean,
@@ -48,14 +43,12 @@ const calculateAccessLevel = (
 };
 
 const essentialOnlyCheckboxState = (
-  accessLevel: AiChatAccessLevel | undefined
+  accessLevel: AiChatAccessLevel
 ): boolean => {
   return accessLevel !== AiChatAccessLevels.DISABLED;
 };
 
-const accessToggleState = (
-  accessLevel: AiChatAccessLevel | undefined
-): boolean => {
+const accessToggleState = (accessLevel: AiChatAccessLevel): boolean => {
   return accessLevel === AiChatAccessLevels.ENABLED;
 };
 
@@ -69,10 +62,10 @@ const AiChatAccessControls: React.FC = () => {
   );
 
   const [accessToggle, setAccessToggle] = useState(
-    accessToggleState(/*section.aiChatAccessLevel*/ defaultAccessLevel)
+    accessToggleState(section.aiChatAccessLevel)
   );
   const [essentialOnlyCheckbox, setEssentialOnlyCheckbox] = useState(
-    essentialOnlyCheckboxState(/*section.aiChatAccessLevel*/ defaultAccessLevel)
+    essentialOnlyCheckboxState(section.aiChatAccessLevel)
   );
 
   const shouldShowAlert =
@@ -80,16 +73,16 @@ const AiChatAccessControls: React.FC = () => {
     calculateAccessLevel(accessToggle, essentialOnlyCheckbox) ===
       AiChatAccessLevels.DISABLED;
 
-  // const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   const updateAccessLevel = async (newAccessLevel: AiChatAccessLevel) => {
     await handleUpdateSectionAiChatAccessLevel(section.id, newAccessLevel);
-    // dispatch(
-    //   updateSectionAiChatAccessLevel({
-    //     sectionId: section.id,
-    //     aiChatAccessLevel: newAccessLevel,
-    //   })
-    // );
+    dispatch(
+      updateSectionAiChatAccessLevel({
+        sectionId: section.id,
+        aiChatAccessLevel: newAccessLevel,
+      })
+    );
     analyticsReporter.sendEvent(EVENTS.AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED, {
       sectionId: section.id,
       newAccessLevel: newAccessLevel,
@@ -123,7 +116,7 @@ const AiChatAccessControls: React.FC = () => {
   };
 
   useEffect(() => {
-    const accessLevel = /*section.aiChatAccessLevel ||*/ defaultAccessLevel;
+    const accessLevel = section.aiChatAccessLevel;
     setEssentialOnlyCheckbox(essentialOnlyCheckboxState(accessLevel));
     setAccessToggle(accessToggleState(accessLevel));
   }, [section]);
