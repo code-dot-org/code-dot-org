@@ -1,3 +1,4 @@
+import * as BlocklyCore from 'blockly/core';
 import _ from 'lodash';
 
 import {
@@ -553,7 +554,7 @@ const STANDARD_INPUT_TYPES = {
     addInputRow(blockly, block, inputConfig) {
       const inputRow = block
         .appendValueInput(inputConfig.name)
-        .setAlign(blockly.inputs.Align.RIGHT);
+        .setAlign(BlocklyCore.inputs.Align.RIGHT);
       inputRow.setCheck(inputConfig.type);
       return inputRow;
     },
