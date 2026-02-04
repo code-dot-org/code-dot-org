@@ -89,6 +89,7 @@ module AidiffPromptHelper
     end
 
     prompt = format('%{prompt}
+
       Format your response in JSON using the following schema:
 
       %{json_schema}
@@ -125,6 +126,7 @@ module AidiffPromptHelper
     end
 
     prompt = format('%{prompt}
+
       Format your response in JSON using the following schema:
 
       %{json_schema}
