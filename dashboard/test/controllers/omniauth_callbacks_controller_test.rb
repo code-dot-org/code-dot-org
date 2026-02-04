@@ -196,7 +196,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       email: 'first_last@clever-teacher.xx',
       user_type: 'user'
     )
-    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {sis_id: '123456'}}}}
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
