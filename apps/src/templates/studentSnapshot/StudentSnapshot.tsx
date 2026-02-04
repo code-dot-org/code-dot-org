@@ -113,7 +113,9 @@ const StudentSnapshot: React.FC = () => {
           <Alert
             type={'primary'}
             size={'s'}
-            text={'Give us feedback on the new Student Snapshot page!'}
+            text={
+              "We'd love your feedback on the new Student Snapshot page. Just a few minutes will help us improve!"
+            }
             link={{
               text: 'Feedback form',
               href: String(feedbackLink),
