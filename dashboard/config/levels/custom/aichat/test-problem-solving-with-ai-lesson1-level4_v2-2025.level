@@ -49,7 +49,8 @@
       "bedroom5.jpg": "8498da93-f84d-4369-a843-b8641ba19fb1.jpg",
       "bedroom6.jpg": "bdcfcaa5-f4b1-49a5-8d87-0a22dedbcdf7.jpg"
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:33.189+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level4_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level4_2025\"}]"
