@@ -3,9 +3,19 @@ require_relative '../deployment'
 require 'json'
 require 'open3'
 
+# Extract our custom --query argument before passing the rest to pumactl.
+query_path = nil
+ARGV.reject! do |arg|
+  if arg.start_with?('--query=', '-q=')
+    query_path = arg.split('=', 2).last
+    true
+  else
+    false
+  end
+end
+
 raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
 token = CDO.puma_control_server_token
-
 socket_url = "unix://#{dashboard_dir('tmp', 'pumactl.sock')}"
 
 cmd = [
@@ -17,26 +27,37 @@ cmd = [
 stdout, stderr, status = Open3.capture3(*cmd)
 
 if status.success?
-  # Check if pumactl output JSON (possibly after some preamble text like "Command stats sent success").
+  # Pretty print JSON output and also allow dig expressions on the JSON output.
   json_start_index = stdout.index('{')
 
   if json_start_index
-    # Extract the JSON.
+    # pumactl often outputs a preamble like ("Command stats sent success") before the JSON result.
+    preamble = stdout[0...json_start_index]
     json_part = stdout[json_start_index..].strip
+
     begin
-      # Parse and pretty-generate the extracted JSON.
-      puts JSON.pretty_generate(JSON.parse(json_part))
+      data = JSON.parse(json_part)
+
+      if query_path
+        # Support dot-notation (e.g., "worker_status.0.last_status.backlog"). Dig handles nested hashes and arrays.
+        keys = query_path.split('.').map {|k| /^\d+$/.match?(k) ? k.to_i : k}
+        result = data.dig(*keys)
+        puts preamble
+        puts (result.is_a?(Hash) || result.is_a?(Array)) ? JSON.generate(result) : result
+      else
+        # Standard human-friendly mode: print preamble + pretty JSON.
+        puts preamble unless preamble.strip.empty?
+        puts JSON.pretty_generate(data)
+      end
     rescue JSON::ParserError
-      # If parsing fails, fall back to the raw output.
-      puts stdout unless stdout.empty?
+      puts stdout
     end
   else
-    # Commands like 'phased-restart' or 'stop' don't return JSON.
-    puts stdout unless stdout.empty?
+    puts stdout # Commands like 'restart' don't output JSON.
   end
 else
   warn "Error executing pumactl:"
-  warn stdout # Some types of non-success outcomes contain useful information in standard out.
+  warn stdout # For some non-success results, pumactl returns useful information in standard output.
   warn stderr
   exit status.exitstatus
 end
