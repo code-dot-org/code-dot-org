@@ -28,7 +28,7 @@ module AiDiffBedrockHelper
                     end: 55,
                     start: 0
                   },
-                  text: '{key: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"}'
+                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                 }
               },
               retrieved_references: [
@@ -50,7 +50,7 @@ module AiDiffBedrockHelper
             }
           ],
           output: {
-            text: '{"key": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}'
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           },
           session_id: "fake_session_id"
         }
@@ -232,7 +232,6 @@ module AiDiffBedrockHelper
         text = json_text
       end
     end
-
     # Remove useless references such as '(Sources 1 and 7)' from the response
     text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
 
