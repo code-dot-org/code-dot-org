@@ -17,16 +17,26 @@ cmd = [
 stdout, stderr, status = Open3.capture3(*cmd)
 
 if status.success?
-  begin
-    # Attempt to parse and pretty-print if the output is JSON (like for 'stats').
-    puts JSON.pretty_generate(JSON.parse(stdout))
-  rescue JSON::ParserError
-    # Output raw text for non-JSON commands like 'status' or 'phased-restart'.
+  # Check if pumactl output JSON (possibly after some preamble text like "Command stats sent success").
+  json_start_index = stdout.index('{')
+
+  if json_start_index
+    # Extract the JSON.
+    json_part = stdout[json_start_index..].strip
+    begin
+      # Parse and pretty-generate the extracted JSON.
+      puts JSON.pretty_generate(JSON.parse(json_part))
+    rescue JSON::ParserError
+      # If parsing fails, fall back to the raw output.
+      puts stdout unless stdout.empty?
+    end
+  else
+    # Commands like 'phased-restart' or 'stop' don't return JSON.
     puts stdout unless stdout.empty?
   end
 else
   warn "Error executing pumactl:"
-  warn stdout
+  warn stdout # Some types of non-success outcomes contain useful information in standard out.
   warn stderr
   exit status.exitstatus
 end
