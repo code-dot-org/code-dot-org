@@ -30,9 +30,10 @@ export const AutocompleteInput = memo(
     fetchOptions,
     errorMessage,
     id,
-    onEnter,
+    onSubmit,
     hideIcon = false,
     compactOptions = false,
+    focusInputOnSelect = true,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
@@ -45,9 +46,10 @@ export const AutocompleteInput = memo(
     value: string;
     fetchOptions: (value: string) => Promise<string[]>;
     errorMessage?: string;
-    onEnter?: (value: string) => void;
+    onSubmit?: (value: string) => void;
     hideIcon?: boolean;
     compactOptions?: boolean;
+    focusInputOnSelect?: boolean;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -56,7 +58,7 @@ export const AutocompleteInput = memo(
     const [options, setOptions] = useState<string[]>([]);
     const [activeIndex, setActiveIndex] = useState(-1);
     const [loading, setLoading] = useState(false);
-    const [isFocused, setIsFocused] = useState(false);
+    const isFocusedRef = useRef(false);
     const debouncedValue = useDebounce(value, debounceDelay);
 
     const reset = useCallback(() => {
@@ -81,6 +83,10 @@ export const AutocompleteInput = memo(
       // Also skip when an option is selected and value updates with result
       if (skipApi.current) {
         skipApi.current = false;
+        return;
+      }
+
+      if (!isFocusedRef.current) {
         return;
       }
 
@@ -113,19 +119,23 @@ export const AutocompleteInput = memo(
             value: option,
           },
         } as ChangeEvent<HTMLInputElement>);
+        onSubmit?.(option);
         reset();
-        containerRef.current?.querySelector('input')?.focus();
+
+        if (focusInputOnSelect) {
+          containerRef.current?.querySelector('input')?.focus();
+        }
       },
-      [containerRef, name, onChange, reset]
+      [containerRef, name, onChange, reset, onSubmit, focusInputOnSelect]
     );
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
       const {key} = e;
 
-      // If no option is selected from the dropdown and Enter is pressed, trigger onEnter with current value in the input.
-      if (key === 'Enter' && onEnter && activeIndex < 0) {
+      // If no option is selected from the dropdown and Enter is pressed, trigger onSubmit with current value in the input.
+      if (key === 'Enter' && onSubmit && activeIndex < 0) {
         e.preventDefault();
-        onEnter(value);
+        onSubmit(value);
         reset();
         return;
       }
@@ -146,7 +156,6 @@ export const AutocompleteInput = memo(
               e.preventDefault();
               const selectedValue = options[activeIndex];
               handleSelectOption(selectedValue);
-              onEnter?.(selectedValue);
             }
             break;
           case 'Escape':
@@ -159,12 +168,11 @@ export const AutocompleteInput = memo(
 
     // Tracking the focus state makes sure we're not accidentally showing the options when the input is not focused.
     const handleFocus = () => {
-      setIsFocused(true);
+      isFocusedRef.current = true;
     };
 
     const handleBlur = () => {
-      setIsFocused(false);
-      reset();
+      isFocusedRef.current = false;
     };
 
     return (
@@ -204,7 +212,7 @@ export const AutocompleteInput = memo(
             aria-hidden={true}
           />
         )}
-        {isFocused && options.length > 0 && (
+        {isFocusedRef.current && options.length > 0 && (
           <ul
             id={listboxId}
             role="listbox"
