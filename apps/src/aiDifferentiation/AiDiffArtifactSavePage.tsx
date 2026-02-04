@@ -53,8 +53,6 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
       return !section.hidden && section.participantType === 'student';
     });
 
-  console.log(activeStudentSections);
-
   const swapLessonInfo = useCallback(
     async (unitId: string) => {
       // Look in state to see if we loaded lesson info yet
@@ -86,7 +84,6 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
   const handleUnitChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const unitId = event.target.value;
-    console.log('reset 2');
     setSelectedUnitId(unitId);
     swapLessonInfo(unitId);
   };
@@ -110,7 +107,6 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     HttpClient.post('/aidiff_artifacts/', info, true, {
       'Content-Type': 'application/json',
     }).then(() => dispatch(clearPendingArtifactMessage()));
-    console.log(info);
   };
 
   const unitMenuList = useMemo(() => {
@@ -154,7 +150,6 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     if (menuItems[0] && menuItems[0].groupItems[0]) {
       const firstUnitId = menuItems[0].groupItems[0].value;
       if (!selectedUnitId) {
-        console.log('reset 1');
         setSelectedUnitId(firstUnitId);
         swapLessonInfo(firstUnitId);
       }

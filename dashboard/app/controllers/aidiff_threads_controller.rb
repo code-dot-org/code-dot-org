@@ -207,8 +207,6 @@ class AidiffThreadsController < ApplicationController
     response = request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts, get_labs(context_type), params[:artifactType])
     #TODO: check for profanity/PII in model response
 
-    puts response.inspect
-
     {
       role: "assistant",
       status: response[:status],

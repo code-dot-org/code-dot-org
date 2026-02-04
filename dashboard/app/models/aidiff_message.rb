@@ -30,7 +30,6 @@ class AidiffMessage < ApplicationRecord
   }
 
   def summarize
-    puts inspect
     {
       id: id,
       role: role,

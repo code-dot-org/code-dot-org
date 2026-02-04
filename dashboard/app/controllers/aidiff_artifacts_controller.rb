@@ -3,28 +3,19 @@ class AidiffArtifactsController <ApplicationController
   load_and_authorize_resource except: [:create]
 
   def create
-    puts 'create'
     section_ids = params[:sectionIds].filter do |id|
       current_user.sections_instructed.any? {|section| id.to_i == section.id}
     end
-    puts section_ids.inspect
 
     message = AidiffMessage.find(params[:messageId])
-    puts message.inspect
-    puts 'calling authorize'
     authorize! :manage, message
-    puts 'authorized'
 
     unless message.is_artifact_candidate
       return head :bad_request
     end
 
-    puts params.inspect
-
     unit_id = params[:unitId]
     lesson_id = params[:lessonId].to_i
-    puts unit_id
-    puts lesson_id
 
     thing = {
       unit_id: unit_id,
@@ -32,13 +23,8 @@ class AidiffArtifactsController <ApplicationController
       section_id: section_ids[0].to_i
     }
 
-    puts thing.inspect
-    puts current_user.id
-
-    puts SharedConstants::AI_DIFF_ARTIFACT_TYPE[message.artifact_candidate_type]
-
-    @aidiff_exit_ticket = AidiffArtifact.create(
-      type: SharedConstants::AI_DIFF_ARTIFACT_TYPE[message.artifact_candidate_type.upcase.to_sym],
+    @artifact = AidiffArtifact.create(
+      type: message.artifact_candidate_type,
       aidiff_thread: message.aidiff_thread,
       content: message.content,
       user: current_user,
@@ -52,13 +38,8 @@ class AidiffArtifactsController <ApplicationController
       end
     )
 
-    puts 'created exit ticket'
-    puts @aidiff_exit_ticket.inspect
-
-    #AidiffExitTicket.create!(validate_params.merge(user_id: current_user.id))
-    render json: @aidiff_exit_ticket.summarize
+    render json: @artifact.summarize
   rescue StandardError => exception
-    puts exception.full_message
     return render status: :bad_request, json: {error: exception.message}
   end
 
