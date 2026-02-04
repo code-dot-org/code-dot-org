@@ -56,8 +56,6 @@ class AidiffArtifactsControllerTest < ActionController::TestCase
     thread1 = create(:aidiff_thread, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: nil, lesson_id: nil, context_type: "course")
     message1 = create(:aidiff_message, aidiff_thread: thread1, content: {blah: 'lol'}, is_artifact_candidate: true, artifact_candidate_type: SharedConstants::AI_DIFF_ARTIFACT_TYPE[:EXIT_TICKET])
 
-    unit_group1 = create(:unit_group, family_name: 'blah')
-    unit_group3 = create(:unit_group, family_name: 'more')
     section1 = create(:section, user: @teacher)
     section2 = create(:section, user: @teacher)
 

@@ -17,12 +17,6 @@ class AidiffArtifactsController <ApplicationController
     unit_id = params[:unitId]
     lesson_id = params[:lessonId].to_i
 
-    thing = {
-      unit_id: unit_id,
-      lesson_id: lesson_id,
-      section_id: section_ids[0].to_i
-    }
-
     @artifact = AidiffArtifact.create(
       type: message.artifact_candidate_type,
       aidiff_thread: message.aidiff_thread,
