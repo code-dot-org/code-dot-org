@@ -6,9 +6,8 @@ require 'open3'
 raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
 token = CDO.puma_control_server_token
 
-socket_url = "unix:///#{dashboard_dir('tmp', 'pumactl.sock')}"
+socket_url = "unix://#{dashboard_dir('tmp', 'pumactl.sock')}"
 
-# Using the long-form switches as requested.
 cmd = [
   'bundle', 'exec', 'pumactl',
   '--control-url', socket_url,
@@ -27,6 +26,7 @@ if status.success?
   end
 else
   warn "Error executing pumactl:"
+  warn stdout
   warn stderr
   exit status.exitstatus
 end
