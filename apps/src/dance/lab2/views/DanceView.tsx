@@ -625,7 +625,6 @@ const DanceView: React.FunctionComponent<{
           className={!guideMode ? moduleStyles.instructionsArea : ''}
           settings={settings}
           sidebarOnly={!!guideMode}
-          isOnboardingTourEnabled={false}
         />
         <div className={moduleStyles.divider} />
         {!isToolboxMode && (

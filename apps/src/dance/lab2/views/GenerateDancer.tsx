@@ -394,7 +394,6 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           isRunning={false}
           // We only display the sidebar, so none of the above props matter.
           sidebarOnly={true}
-          isOnboardingTourEnabled={false}
         />
         <Guide id="generate-panel">
           {aiGenerateState === 'none' && levelProperties.longInstructions && (

@@ -16,7 +16,7 @@ interface IntroJSTourWrapperProps {
  */
 const IntroJSTourWrapper: React.FC<IntroJSTourWrapperProps> = ({
   children,
-  enabled = true,
+  enabled,
 }) => {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
