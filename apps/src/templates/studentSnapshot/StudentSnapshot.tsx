@@ -1,8 +1,10 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
@@ -71,6 +73,8 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
+  const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
+
   React.useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
@@ -102,6 +106,22 @@ const StudentSnapshot: React.FC = () => {
         setSelectedStudentId={setSelectedStudentId}
         hasUnnumberedLessons={hasUnnumberedLessons}
       />
+
+      {feedbackLink &&
+        typeof feedbackLink === 'string' &&
+        URL.canParse(feedbackLink) && (
+          <Alert
+            type={'primary'}
+            size={'s'}
+            text={'Give us feedback on the new Student Snapshot page!'}
+            link={{
+              text: 'Feedback form',
+              href: String(feedbackLink),
+              openInNewTab: true,
+            }}
+            icon={{iconName: 'comment-dots', iconStyle: 'regular'}}
+          />
+        )}
 
       {selectedStudent && (
         <Typography
