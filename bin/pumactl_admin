@@ -5,12 +5,14 @@ require 'open3'
 
 raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
 token = CDO.puma_control_server_token
-socket_path = "unix://#{dashboard_dir(CDO.puma_control_server_relative_socket_path)}"
 
+socket_url = "unix:///#{dashboard_dir('tmp', 'pumactl.sock')}"
+
+# Using the long-form switches as requested.
 cmd = [
   'bundle', 'exec', 'pumactl',
-  '-u', socket_path,
-  '-T', token
+  '--control-url', socket_url,
+  '--control-token', token
 ] + ARGV
 
 stdout, stderr, status = Open3.capture3(*cmd)
@@ -20,7 +22,7 @@ if status.success?
     # Attempt to parse and pretty-print if the output is JSON (like for 'stats').
     puts JSON.pretty_generate(JSON.parse(stdout))
   rescue JSON::ParserError
-    # Default to raw output for non-JSON commands (like 'status' or 'restart').
+    # Output raw text for non-JSON commands like 'status' or 'phased-restart'.
     puts stdout unless stdout.empty?
   end
 else
