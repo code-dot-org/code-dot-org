@@ -332,8 +332,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Temporary method to find existing Clever users by their legacy_id field
   private def find_clever_user_by_legacy_id
     return nil unless auth_hash
-    # Teacher users in Clever have a legacy_id field in the v3 API response.
-    legacy_id = auth_hash.extra&.raw_info&.canonical&.data&.roles&.teacher&.legacy_id
+    # Teacher and staff users in Clever have a legacy_id field in the v3 API response.
+    roles = auth_hash.extra&.raw_info&.canonical&.data&.roles
+    return nil unless roles
+
+    legacy_id = nil
+    CLEVER_TEACHER_ROLE_KEYS.each do |role_key|
+      role = roles[role_key]
+      legacy_id = role&.legacy_id
+      break if legacy_id
+    end
     return nil unless legacy_id
 
     User.find_by_credential \
