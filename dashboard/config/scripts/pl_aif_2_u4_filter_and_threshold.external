@@ -3,75 +3,104 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Copying Data: Undo & Reset
+# Filters, Labels, and What Gets Seen
 
-#### Sometimes your app should filter or transform data without permanently changing it.
-#### Other times, data will change and users need a way to recover when they make a mistake.
+#### When you browse a website or app, filters help narrow down large lists of items.
 
-## When should we copy data?
+### But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
 
-#### Copy data when you want to try something (like filtering, sorting, or editing) without losing the original.
-#### **This is especially important when:**
+## Two Websites, Same Goal
+#### Below are two websites that sell similar products.
+#### Both allow users to filter results, but they do it differently.
 
-- #### Users might want to undo an action
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
 
-- #### Users might want to reset back to the original state
+  <p style="font-size:14pt; margin-top:0;">
+    💡 <strong>Look at each retail website’s filtering system.</strong>
+  </p>
 
-- #### Multiple parts of your app rely on the same dataset
+  <ul>
+    <li style="font-size:14pt;">Which do you prefer?</li>
+    <li style="font-size:14pt;">Which would be easier to use?</li>
+  </ul>
 
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Key idea:</strong> If you mutate the original data, you can’t easily “go back” unless you saved a copy first.</p> </div>
+</div>
 
----
+ 
 
-<img src="https://images.code.org/8fcfacdaf4be65223e4409f847e0df09-image-1769615559049.png" alt="spreadsheet with the drop down showing undo and redo" width="350px" style="border-radius:10px; float:right; margin: 0 20px 00px 20px;">
+<img src="https://images.code.org/8450f6ede3493d945da1a84d3313bea4-image-1770049168398.png" alt="Two shopping websites with different filter options" width="650px" style="display:block; margin-left:auto; margin-right:auto; border-radius:10px;">
 
-## Real-world examples: Undo and Reset
+<details style="background-color:#ececec; padding:12px; margin:18px auto; border:1px solid transparent; border-radius:8px; max-width:85%;">
+  <summary style="font-size:1.4em; font-weight:bold;">🔍 Check your thinking</summary>
 
-#### Think about tools like word processors, drawing apps, or photo editors.
-#### **They work because they support recovery:**
+<div style="margin-top:12px; line-height:140%;">
 
-- #### Undo lets you step back one change at a time
+<p style="font-size:14pt; margin-top:0;">
+      Take a closer look at the filters each site offers:
+    </p>
 
-- #### Reset restores the original version all at once
+<ul>
+      <li style="font-size:14pt;">
+        <strong>Website 1</strong> has many filters (Deals, Rating, Occasion, Price, Category)
+      </li>
+      <li style="font-size:14pt; margin-top:8px;">
+        <strong>Website 2</strong> has fewer filters and simpler labels
+      </li>
+    </ul>
 
-#### Users expect these options because mistakes are normal. A good interface helps them recover quickly.
+<p style="font-size:14pt; margin-top:12px;">
+      <strong>This design choice affects:</strong>
+    </p>
 
-<div style="clear:both;"></div>
+<ul>
+      <li style="font-size:14pt;">What items appear first</li>
+      <li style="font-size:14pt;">What feels easy vs. hard to find</li>
+      <li style="font-size:14pt;">Which users feel supported — and which feel overwhelmed</li>
+    </ul>
+
+  </div>
+</details>
 
 
-
-<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">↩️ Undo</strong> <ul> <li style="font-size:14pt;">Reverses the most recent change</li> <li style="font-size:14pt;">Useful for small mistakes</li> <li style="font-size:14pt;">Often repeatable (undo multiple steps)</li> </ul> </div> <div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">🔄 Reset</strong> <ul> <li style="font-size:14pt;">Restores the original starting point</li> <li style="font-size:14pt;">Useful when users want a “clean slate”</li> <li style="font-size:14pt;">Fast recovery from major changes</li> </ul> </div> </div>
-
----
-
-## Design thinking: Why this matters
-#### If users don’t have recovery options, they may:
-
-- #### Lose work
-
-- #### Stop trusting the tool
-
-- #### Avoid exploring features
-
-#### Copying data supports good design because it makes recovery possible.
-
----
-## Reflect
-
-#### Take a moment to reflect before moving on.
-
-- #### What do undo and reset help you do as a user?
-
-- #### What information would an app need to store to make undo/reset possible?
-
-- #### How could changing the original data make recovery harder?
-
-<details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;"> <summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking</summary> <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;"> <ul> <li style = "font-size: 14pt";>Undo and reset let users recover from mistakes without fear. They support experimentation by making it safe to try things and go back if something doesn’t work.</li> <li style = "font-size: 14pt">The app needs access to a previous version of the data (often the original state or a history of changes) so it can restore what existed before the change.</li> <li style = "font-size: 14pt">If the original data is mutated, the previous state is lost. Without a saved copy, the app has nothing to return to, making undo or reset difficult or impossible.</li> </ul> </div> </details>
+<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
 
 ---
+
+
+## Example
+
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%; display:flex; gap:18px; align-items:flex-start;">
+
+
+
+  <!-- Text content -->
+ <div>
+ <p style="font-size:14pt; margin-top:0;">
+      A user searching for <strong>Deals</strong> or <strong>Occasion</strong> may succeed on Website 1.
+    </p>
+
+<p style="font-size:14pt;">
+      That same user may struggle on Website 2, not because the items don’t exist, but because the filters don’t.
+    </p>
+
+ <p style="font-size:14pt; margin-bottom:0;">
+      <strong>👉</strong> Filters don’t just show things, they also exclude things.
+    </p>
+  </div>
+
+</div>
+
+
+
+## Key Terms
+
+<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Threshold</strong> <p style="font-size:14pt;"> A <strong>threshold</strong> is a cutoff value used to decide which items pass a filter. </p> <p style="font-size:14pt;"> <strong>Example:</strong> An art site only features artists with at least <strong>500 followers</strong>. The threshold is 500. </p> </div>
+
+<div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Fallback value</strong> <p style="font-size:14pt;"> A <strong>fallback value</strong> is a default label or value used when data is missing or doesn’t match a category. </p> <p style="font-size:14pt;"> <strong>Example:</strong> If a user doesn’t enter an email, the app shows <em>Email: Not provided</em> instead of leaving it blank. </p> </div> </div>
+
+
 
 ## Next up
-
-#### In Web Lab, you’ll add Undo and Reset functions and make them work by storing a safe copy of the original data.
+#### You’ll explore how filters and thresholds work in code — and how small design choices can have big impacts on who gets seen.
 
 MARKDOWN

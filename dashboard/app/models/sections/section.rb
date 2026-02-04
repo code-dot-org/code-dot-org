@@ -116,6 +116,8 @@ class Section < ApplicationRecord
 
   scope :visible, -> {where(hidden: false)}
 
+  validates :ai_chat_access_level, inclusion: {in: SharedConstants::AI_CHAT_ACCESS_LEVELS.values}
+
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
@@ -482,6 +484,7 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
+        ai_chat_access_level: ai_chat_access_level,
       }
     end
   end
@@ -569,6 +572,7 @@ class Section < ApplicationRecord
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
+          ai_chat_access_level: ai_chat_access_level,
         }
       )
     end

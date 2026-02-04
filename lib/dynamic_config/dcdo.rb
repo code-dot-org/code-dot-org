@@ -69,6 +69,7 @@ class DCDOBase < DynamicConfigBase
       'disable-progress-v1': DCDO.get('disable-progress-v1', false),
       'detect-remote-network-config': DCDO.get('detect-remote-network-config', {}),
       'show-aita-lesson-summaries': DCDO.get('show-aita-lesson-summaries', false),
+      'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       # TODO: Remove this after the ClassLink LMS launch

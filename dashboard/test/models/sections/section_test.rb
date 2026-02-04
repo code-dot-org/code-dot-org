@@ -802,6 +802,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -836,6 +837,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -969,6 +971,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1030,6 +1033,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1097,6 +1101,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1164,6 +1169,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1222,6 +1228,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         is_assigned_essential_ai_chat: false,
+        ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)

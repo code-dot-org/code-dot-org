@@ -13,6 +13,7 @@ import {useSelector} from 'react-redux';
 import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
 import {fetchThreadMessages} from '@cdo/apps/aichat/redux/thunks';
 import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -37,10 +38,6 @@ import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
-
-interface AifInfo {
-  aif: boolean;
-}
 
 interface LessonMaterialsData {
   unitId: number;
@@ -86,7 +83,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
-  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -134,23 +130,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  // This checks to see if the AI lesson summaries experiment or DCDO key are set
-  // or if the section has AIF assigned in order to enable AI Lesson Summaries
-  React.useEffect(() => {
-    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
-      if (!showAITALessonSummary) {
-        HttpClient.fetchJson<AifInfo>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${unitToLoad}`
-        ).then(response => {
-          setCanShowLessonSummaries(response.value.aif);
-        });
-      } else {
-        setCanShowLessonSummaries(showAITALessonSummary);
-      }
-    } else {
-      setCanShowLessonSummaries(false);
-    }
-  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
+  const canShowLessonSummaries = React.useMemo(
+    () => !!unitToLoad && !!aiTALessonSummaryInfo && showAITALessonSummary,
+    [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]
+  );
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -212,7 +195,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
-  const generatePodcastUrl = `/ai_lesson_summary_podcasts/generate_podcast?lesson_id=${selectedLesson?.id}`;
+  const podcastsEnabled =
+    DCDO.get('ai-lesson-summary-podcasts', false) ||
+    experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
     if (selectedLesson) {
@@ -344,12 +329,8 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           />
         )}
         <div className={styles.lessonSummaryContainer}>
-          {experiments.isEnabled('ai-lesson-podcasts') && (
+          {podcastsEnabled && (
             <div className={styles.lessonSummarySection}>
-              {/* The following link is temporary for testing and will be removed before official release */}
-              <a href={generatePodcastUrl}>
-                Generate Podcast (this may take a minute...)
-              </a>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
                   <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />

@@ -1,0 +1,14 @@
+name 'capstone-project-lesson1-level2-hub-test-2025'
+display_name 'Milestone Two Hub'
+description '**Goal:** I can explain how this version of my product works as a system, including user interactions and logic.
+
+Use these levels in whatever way helps you explain how your app works as a system. You are in control of how and when you use these supports to describe user interactions, logic, and how information moves through your app.
+
+This milestone is about **understanding and explanation**, not building. You should revisit these levels anytime your system design changes.'
+uses_lab2
+
+sublevels
+level 'capstone-project-lesson1-level2a-test-2025'
+level 'capstone-project-lesson1-level2b-test-2025'
+
+

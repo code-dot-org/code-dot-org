@@ -50,7 +50,8 @@
       "plant_cell.png": "fa1431b8-1a1a-47f9-ad0d-5bb5d12499bb.png",
       "simple_machines.png": "1f112d23-5776-4226-8132-15ec331d124b.png",
       "basic-geometry-formulas.png": "7d48f920-a5d1-4f7c-9963-d216e490167e.png"
-    }
+    },
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:33.950+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson1-level6-choice2_2025\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson1-level6-choice2_2025\"}]"

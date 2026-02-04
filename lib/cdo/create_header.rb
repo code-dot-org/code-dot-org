@@ -44,6 +44,10 @@ class CreateHeader
     dance: {
       image: "header-dance-party-icon.png"
     },
+    music_dance_ai: {
+      image: "header-music-dance-ai-icon.png",
+      url: CDO.code_org_url("/mix-move-ai")
+    },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
@@ -61,13 +65,8 @@ class CreateHeader
 
   def self.get_create_dropdown_contents(options)
     entries = options[:limit_project_types] == "true" ?
-      %w(spritelab minecraft_designer) :
-      %w(spritelab applab gamelab)
-
-    entries << "music"
-    entries += options[:limit_project_types] == "true" ?
-      %w(artist dance) :
-      %w(pythonlab artist dance)
+      %w(spritelab minecraft_designer music artist dance) :
+      %w(music_dance_ai spritelab applab gamelab music pythonlab artist dance)
 
     if options[:project_type] &&
         !entries.include?(options[:project_type]) &&
