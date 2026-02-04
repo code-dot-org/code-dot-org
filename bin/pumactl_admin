@@ -1,17 +1,31 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
-require 'shellwords'
+require 'json'
+require 'open3'
 
 raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
 token = CDO.puma_control_server_token
-socket_path = dashboard_dir(CDO.puma_control_server_relative_socket_path)
+socket_path = "unix://#{dashboard_dir(CDO.puma_control_server_relative_socket_path)}"
 
-# Use Shellwords to ensure arguments are safely escaped.
-args = [
+cmd = [
   'bundle', 'exec', 'pumactl',
   '-S', socket_path,
   '-T', token
 ] + ARGV
 
-# Use exec to replace the current process with pumactl to ensure token remains in the Ruby process memory until execution.
-exec(*args)
+stdout, stderr, status = Open3.capture3(*cmd)
+
+if status.success?
+  begin
+    # Attempt to parse and pretty-print if the output is JSON.
+    parsed = JSON.parse(stdout)
+    puts JSON.pretty_generate(parsed)
+  rescue JSON::ParserError
+    # Default to raw output for non-JSON commands (like 'status' or 'restart')
+    puts stdout unless stdout.empty?
+  end
+else
+  warn "Error executing pumactl:"
+  warn stderr
+  exit status.exitstatus
+end
