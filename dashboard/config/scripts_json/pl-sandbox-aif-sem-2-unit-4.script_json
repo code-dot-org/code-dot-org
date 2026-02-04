@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-03 15:33:15 UTC",
+    "serialized_at": "2026-02-03 17:44:06 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -137,6 +137,17 @@
       },
       "seeding_key": {
         "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3",
+        "lesson_activity.key": "faa2c7dc-6c1f-4203-bb25-3b7b0d770445"
+      }
+    },
+    {
+      "key": "57b13157-6ec8-40f9-b425-682033b7307e",
+      "position": 8,
+      "properties": {
+        "progression_name": "Progress Bar Sandbox"
+      },
+      "seeding_key": {
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e",
         "lesson_activity.key": "faa2c7dc-6c1f-4203-bb25-3b7b0d770445"
       }
     }
@@ -891,6 +902,116 @@
       "level_keys": [
         "pl-aif-2-U4-final-level"
       ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Progress Bar Sandbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-progress-bar-sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      },
+      "level_keys": [
+        "pl-progress-bar-sandbox"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Progress Bar Sandbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-progress-bar-option-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      },
+      "level_keys": [
+        "pl-progress-bar-option-1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Progress Bar Sandbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-progress-bar-option-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      },
+      "level_keys": [
+        "pl-progress-bar-option-2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Progress Bar Sandbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-progress-bar-option-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      },
+      "level_keys": [
+        "pl-progress-bar-option-3"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Progress Bar Sandbox"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-progress-bar-option-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      },
+      "level_keys": [
+        "pl-progress-bar-option-4"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1252,6 +1373,66 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-4",
         "activity_section.key": "12caedcb-fb94-49c8-85df-b6c0ac390cc3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-progress-bar-sandbox",
+        "script_level.level_keys": [
+          "pl-progress-bar-sandbox"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-progress-bar-option-1",
+        "script_level.level_keys": [
+          "pl-progress-bar-option-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-progress-bar-option-2",
+        "script_level.level_keys": [
+          "pl-progress-bar-option-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-progress-bar-option-3",
+        "script_level.level_keys": [
+          "pl-progress-bar-option-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-progress-bar-option-4",
+        "script_level.level_keys": [
+          "pl-progress-bar-option-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "57b13157-6ec8-40f9-b425-682033b7307e"
       }
     }
   ],
