@@ -406,6 +406,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               documentationUrl={'/docs/ide/music'}
               sidebarOnly={!!guideMode}
               versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
+              isOnboardingTourEnabled={false}
             />
           </div>
 
