@@ -56,6 +56,7 @@ export const AutocompleteInput = memo(
     const [options, setOptions] = useState<string[]>([]);
     const [activeIndex, setActiveIndex] = useState(-1);
     const [loading, setLoading] = useState(false);
+    const [isFocused, setIsFocused] = useState(false);
     const debouncedValue = useDebounce(value, debounceDelay);
 
     const reset = useCallback(() => {
@@ -156,6 +157,16 @@ export const AutocompleteInput = memo(
       }
     };
 
+    // Tracking the focus state makes sure we're not accidentally showing the options when the input is not focused.
+    const handleFocus = () => {
+      setIsFocused(true);
+    };
+
+    const handleBlur = () => {
+      setIsFocused(false);
+      reset();
+    };
+
     return (
       <div
         ref={containerRef}
@@ -175,6 +186,8 @@ export const AutocompleteInput = memo(
           errorMessage={errorMessage}
           placeholder={placeholder}
           onKeyDown={handleKeyDown}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           autoComplete="off"
           role="combobox"
           aria-autocomplete="list"
@@ -191,7 +204,7 @@ export const AutocompleteInput = memo(
             aria-hidden={true}
           />
         )}
-        {options.length > 0 && (
+        {isFocused && options.length > 0 && (
           <ul
             id={listboxId}
             role="listbox"
