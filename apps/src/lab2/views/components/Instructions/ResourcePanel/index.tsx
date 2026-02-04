@@ -144,6 +144,7 @@ type ResourcePanelProps = InstructionsProps & {
     fileType: string,
     uploadFunction: () => Promise<void>
   ) => void;
+  hasInstructionsDrawer?: boolean;
 };
 
 /**
@@ -170,8 +171,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   sidebarOnly = false,
   backpackProps,
   onImageFlagged,
+  hasInstructionsDrawer,
   ...instructionsProps
 }) => {
+  console.log('hasInstructionsDrawer', hasInstructionsDrawer);
   const {theme} = useTheme();
   const {showRubric} = useRubric();
   const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
@@ -255,17 +258,36 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (hiddenContextCallback && aiTutorVisible) {
-      tabMap[Tabs.AiTutor] = (
-        <AiTutorChat
-          hiddenContextCallback={hiddenContextCallback}
-          aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-          levelName={levelName}
-          channelId={channelId}
-          aiTutorChatButtonData={aiTutorChatButtonData}
-          aiTutorSystemPromptName={aiTutorSystemPromptName}
-          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-        />
-      );
+      if (!hasInstructionsDrawer) {
+        tabMap[Tabs.AiTutor] = (
+          <AiTutorChat
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          />
+        );
+      } else {
+        tabMap[Tabs.AiTutor] = (
+          <>
+            <div>
+              <p>This is where instructions drawer will be displayed.</p>
+            </div>
+            <AiTutorChat
+              hiddenContextCallback={hiddenContextCallback}
+              aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+              levelName={levelName}
+              channelId={channelId}
+              aiTutorChatButtonData={aiTutorChatButtonData}
+              aiTutorSystemPromptName={aiTutorSystemPromptName}
+              aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            />
+          </>
+        );
+      }
     }
 
     // The version history tab is hidden in permanently read-only mode with the following exception:
@@ -351,6 +373,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     onImageFlagged,
+    hasInstructionsDrawer,
   ]);
 
   const hasTabs = useMemo(() => {
