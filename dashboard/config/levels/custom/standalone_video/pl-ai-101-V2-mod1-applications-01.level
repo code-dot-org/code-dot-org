@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-01-28T17:07:55.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "self-paced-pl-ai-101-Applications_of_AI",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21258,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "#### AI is being used everywhere! Let's learn more about what sort of impact that will have on other fields.\r\n\r\n<br>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.5em; font-weight: bold;\">📝 Key Points from the Video</summary>\r\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;\">\r\n    <p>\r\n\r\n#### AI is impacting the following fields...\r\n* #### Education: AI can function as an equalizer, potentially reducing disparities in learning opportunities and resources.\r\n* #### Healthcare: In the medical field, AI is being leveraged to develop new drugs and improve diagnostics, enhancing patient care.\r\n* #### Science and Technology: AI assists in advancing scientific research and technology development, speeding up innovations.\r\n\r\n#### While AI offers considerable benefits, it is crucial to consider the associated risks and consequences of its deployment, ensuring responsible and ethical use.\r\n\r\n</p></div>\r\n</details>\r\n\r\n\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-01-28T17:07:55.699+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod2-apps_01_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod2-apps_01_2024\"}]"
+}]]></config>
+</StandaloneVideo>

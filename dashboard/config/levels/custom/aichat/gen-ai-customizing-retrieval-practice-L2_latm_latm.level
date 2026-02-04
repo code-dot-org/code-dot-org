@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:09:34.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
         "temperature": "0.5",
-        "systemPrompt": "You are a chatbot providing recommendations and plot summaries of movies. Only answer questions related to movies.",
+        "systemPrompt": "Eres un chatbot que ofrece recomendaciones y resúmenes de tramas de películas. Responde solo preguntas relacionadas con películas.",
         "retrievalContexts": [
 
         ],
@@ -44,9 +45,11 @@
       ],
       "levelSystemPrompt": "Por favor responde a mis preguntas en espanol."
     },
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:09:34.000+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L2_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L2_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:09:34.000+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L2_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L2_latm\"},{\"changed_at\":\"2026-01-22 21:21:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Aichat>

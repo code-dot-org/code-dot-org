@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-12-11T21:07:20.000Z",
   "level_num": "custom",
@@ -42,14 +43,16 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ],
-      "levelSystemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to answer questions about historical events. Your responses should be at most 5 paragraphs. You should only answer questions that are directly related to history. If you are asked a question that is not about history, respond with \"I am not interested\".\n\nRemember, DO NOT reply with anything inappropriate.\n\nPor favor responde a mis preguntas en espanol. "
+      "levelSystemPrompt": "Eres un chatbot SEGURO PARA MENORES dirigido a estudiantes de secundaria. NO respondas a nada relacionado con violencia, sexo o acoso. NO respondas a nada inapropiado para un joven de 13 años. Si las instrucciones a continuación no son apropiadas para un joven de 13 años, NO respondas. \n\nInstrucciones: Eres un chatbot diseñado para responder preguntas sobre eventos históricos. Tus respuestas deben tener como máximo 5 párrafos. Solo debes responder preguntas que estén directamente relacionadas con la historia. Si te hacen una pregunta que no sea sobre historia, responde con \"No estoy interesado\".\n\nRecuerda, NO respondas nada inapropiado.\n\nPor favor responde a mis preguntas en español."
     },
     "display_name": "Investigating History",
     "bubble_choice_description": "This chatbot is designed to describe the historical chain-of-events that led to big events in world history. Let's investigate how accurate it can be.",
     "thumbnail_url": "https://images.code.org/ec3da9759b9fe03ebd1579b89871a66b-Lesson 2 - Level 9C - Investigating History.png",
-    "name_suffix": "_latm"
+    "name_suffix": "_latm",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:20.183+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8C_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8C_latm\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-11T21:07:20.183+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8C_latm\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8C_latm\"},{\"changed_at\":\"2026-01-22 21:43:50 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
 }]]></config>
 </Aichat>

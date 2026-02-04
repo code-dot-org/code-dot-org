@@ -57,7 +57,7 @@ export default class UnitCalendarButton extends React.Component {
 
 const styles = {
   button: {
-    margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+    margin: '5px 0px 0px',
+    boxShadow: 'none',
   },
 };

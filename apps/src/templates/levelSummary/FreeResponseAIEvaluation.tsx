@@ -104,7 +104,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         levelId: levelData.levelId,
         unitId: levelData.unitId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setEvaluationsPending(true);
     // Filter responses to only those without an existing evaluation or where the prior evaluation is older than the response
@@ -174,7 +174,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         levelId: levelData.levelId,
         unitId: levelData.unitId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     setShowDetailedAnalysis(true);
   };

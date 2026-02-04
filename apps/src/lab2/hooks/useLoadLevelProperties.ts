@@ -1,11 +1,17 @@
 import {useEffect, useState} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {setPageError} from '../lab2Redux';
 import {LevelPropertiesMapValidator} from '../responseValidators';
 import {LevelPropertiesMap} from '../types';
+
+const useLessonIdPath = DCDO.get(
+  'lab2-fetch-level-properties-by-lesson-id',
+  true
+);
 
 async function loadLevelProperties(path: string) {
   const response = await HttpClient.fetchJson<LevelPropertiesMap>(
@@ -30,7 +36,9 @@ export default function useLoadLevelProperties() {
       lesson => lesson.id === currentLessonId
     )?.position;
     if (scriptName && lessonPosition) {
-      return `/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
+      return useLessonIdPath
+        ? `/lessons/${currentLessonId}/level_properties`
+        : `/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
     }
     if (currentLevelId) {
       return `/levels/${currentLevelId}/level_properties`;

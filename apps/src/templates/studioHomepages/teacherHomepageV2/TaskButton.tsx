@@ -39,7 +39,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
         : path === 'materials'
         ? EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED
         : EVENTS.SECTION_CARD_GO_TO_COURSE_BUTTON_CLICKED;
-    analyticsReporter.sendEvent(navEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(navEvent, {}, PLATFORMS.STATSIG);
   };
 
   return (

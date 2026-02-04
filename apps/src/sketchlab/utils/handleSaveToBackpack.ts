@@ -32,7 +32,7 @@ export const handleSaveToBackpack = async (
     if (!containsValidCharacters) {
       return {
         type: 'error',
-        text: 'Sketch names can only contain letters, numbers, hypens and underscores.',
+        text: 'Sketch names can only contain letters, numbers, hyphens and underscores.',
       };
     }
     if (backpackFileList.includes(sketchName + '.png')) {

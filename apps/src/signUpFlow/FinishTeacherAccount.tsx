@@ -148,7 +148,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
       {'user type': 'teacher', country: countryCode},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     const fetchGdprData = async () => {
@@ -370,7 +370,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'educator role': educatorRole,
         country: countryCode,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     // Log to Google Analytics
