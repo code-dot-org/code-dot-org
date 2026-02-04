@@ -18,7 +18,7 @@ interface CFUFreeResponseAnswerProps {
 
 const CFUFreeResponseAnswer: React.FC<CFUFreeResponseAnswerProps> = ({
   response,
-  hasAiInsight = true,
+  hasAiInsight = false,
   aiInsightText = 'Some ai evaluation text goes here',
 }) => (
   <div className={styles.freeResponseAnswerContainer}>

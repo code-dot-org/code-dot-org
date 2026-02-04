@@ -39,7 +39,7 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
   isOpen,
   onToggle,
   // this is a placeholder prop for future AI insight functionality, update when implemented
-  hasAiInsight = true,
+  hasAiInsight = false,
 }) => (
   <div
     className={`${styles.cfuQuestionWrapper} ${
