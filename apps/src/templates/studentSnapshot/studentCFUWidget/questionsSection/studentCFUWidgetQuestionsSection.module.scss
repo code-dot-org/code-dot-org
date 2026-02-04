@@ -91,6 +91,10 @@
       align-items: center;
       gap: 0.25rem;
 
+      .cfuQuestionRightPartAiInsightIcon {
+        color: var(--background-brand-aqua-strong);
+      }
+
 
       .cfuStatusBucketTags-correct {
         > div {

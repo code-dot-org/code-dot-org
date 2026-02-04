@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -9,10 +10,16 @@ import styles from './studentCFUAnswers.module.scss';
 
 interface CFUFreeResponseAnswerProps {
   response: CFULevelResponseResponse;
+  // this is a placeholder prop for future AI insight functionality, update when implemented
+  hasAiInsight?: boolean;
+  // this is a placeholder prop for future AI insight functionality, update when implemented
+  aiInsightText?: string;
 }
 
 const CFUFreeResponseAnswer: React.FC<CFUFreeResponseAnswerProps> = ({
   response,
+  hasAiInsight = true,
+  aiInsightText = 'Some ai evaluation text goes here',
 }) => (
   <div className={styles.freeResponseAnswerContainer}>
     <div className={styles.freeResponseAnswer}>
@@ -27,6 +34,17 @@ const CFUFreeResponseAnswer: React.FC<CFUFreeResponseAnswerProps> = ({
         />
       </Typography>
     </div>
+    {hasAiInsight && (
+      <div className={styles.freeResponseAiInsightContainer}>
+        <div className={styles.freeResponseAiInsight}>
+          <div className={styles.freeResponseAiInsightLabel}>
+            <FontAwesomeV6Icon iconName="sparkles" />
+            <Typography variant="label3">AI Insight</Typography>
+          </div>
+          <Typography variant="body4">{aiInsightText}</Typography>
+        </div>
+      </div>
+    )}
   </div>
 );
 
