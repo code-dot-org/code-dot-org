@@ -83,6 +83,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
+  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -130,10 +131,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  const canShowLessonSummaries = React.useMemo(
-    () => !!unitToLoad && !!aiTALessonSummaryInfo && showAITALessonSummary,
-    [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]
-  );
+  React.useEffect(() => {
+    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
+      setCanShowLessonSummaries(showAITALessonSummary);
+    }
+  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
