@@ -47,7 +47,7 @@ class CleverSection < OmniAuthSection
     students = student_list.map do |student|
       data = student['data']
       student_role_data = data['roles']['student']
-      return nil unless student_role_data.present?
+      next if student_role_data.blank?
 
       OmniAuth::AuthHash.new(
         uid: data['id'],
