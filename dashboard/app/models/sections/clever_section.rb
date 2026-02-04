@@ -44,20 +44,21 @@ class CleverSection < OmniAuthSection
   def self.from_service(course_id, owner_id, student_list, section_name)
     code = "#{CODE_PREFIX}#{course_id}"
 
-    set_family_name = DCDO.get('clever_family_name', false)
-
     students = student_list.map do |student|
       data = student['data']
+      student_role_data = data['roles']['student']
+      return nil unless student_role_data.present?
+
       OmniAuth::AuthHash.new(
         uid: data['id'],
         provider: 'clever',
         info: {
-          name: set_family_name ? data['name']['first'] : data['name'],
-          family_name: set_family_name ? data['name']['last'] : nil,
-          dob: data['dob'],
+          name: data['name']['first'],
+          family_name: data['name']['last'],
+          dob: student_role_data['dob'],
         },
       )
-    end
+    end.compact
 
     from_omniauth(
       code: code,
