@@ -2,12 +2,12 @@
 
 class Clients::CleverRest
   API_HOST = 'https://api.clever.com'
-  API_VERSION = 'v2.1'
 
-  attr_reader :oauth_token
+  attr_reader :oauth_token, :api_version
 
-  def initialize(oauth_token:)
+  def initialize(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2])
     @oauth_token = oauth_token
+    @api_version = api_version
   end
 
   def get(endpoint)
@@ -21,6 +21,17 @@ class Clients::CleverRest
   end
 
   private def url_for(endpoint)
-    File.join(API_HOST, API_VERSION, endpoint)
+    File.join(API_HOST, version_path, endpoint)
+  end
+
+  private def version_path
+    case api_version
+    when AuthenticationOption::Clever::VERSION[:v2]
+      'v2.1'
+    when AuthenticationOption::Clever::VERSION[:v3]
+      'v3.0'
+    else
+      raise "Unsupported Clever API version: #{api_version}"
+    end
   end
 end

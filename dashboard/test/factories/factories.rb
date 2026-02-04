@@ -209,6 +209,10 @@ FactoryBot.define do
       after(:create, &:demigrate_from_multi_auth)
     end
 
+    transient do
+      auth_option_version {nil}
+    end
+
     factory :teacher, class: Teacher do
       user_type {User::TYPE_TEACHER}
       birthday {Date.new(1980, 3, 14)}
@@ -719,7 +723,7 @@ FactoryBot.define do
     end
 
     trait :with_clever_authentication_option do
-      after(:create) do |user|
+      after(:create) do |user, evaluator|
         create(
           :authentication_option,
           user: user,
@@ -727,6 +731,7 @@ FactoryBot.define do
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
           authentication_id: SecureRandom.uuid,
+          version: evaluator.auth_option_version,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
