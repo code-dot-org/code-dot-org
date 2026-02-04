@@ -37,7 +37,6 @@ class AidiffArtifactsController <ApplicationController
 
     puts SharedConstants::AI_DIFF_ARTIFACT_TYPE[message.artifact_candidate_type]
 
-
     @aidiff_exit_ticket = AidiffArtifact.create(
       type: SharedConstants::AI_DIFF_ARTIFACT_TYPE[message.artifact_candidate_type.upcase.to_sym],
       aidiff_thread: message.aidiff_thread,
@@ -49,8 +48,8 @@ class AidiffArtifactsController <ApplicationController
           lesson_id: lesson_id,
           section_id: id.to_i,
           association_type: SharedConstants::AI_DIFF_ASSOCIATION[:LESSON]
-       }
-     end
+        }
+      end
     )
 
     puts 'created exit ticket'
@@ -83,6 +82,4 @@ class AidiffArtifactsController <ApplicationController
       content: {}
     )
   end
-
-
 end
