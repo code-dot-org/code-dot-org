@@ -318,9 +318,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
       return (
         <CustomLessonResources
-          unitId={1}
+          unitId={selectedSection.unitId}
           lessonId={selectedLesson.id}
-          sectionId={3}
+          sectionId={selectedSection.id}
         />
       );
     } else {
