@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'shellwords'
+
+raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
+token = CDO.puma_control_server_token
+socket_path = dashboard_dir(CDO.puma_control_server_relative_socket_path)
+
+# Use Shellwords to ensure arguments are safely escaped.
+args = [
+  'bundle', 'exec', 'pumactl',
+  '-S', socket_path,
+  '-T', token
+] + ARGV
+
+# Use exec to replace the current process with pumactl to ensure token remains in the Ruby process memory until execution.
+exec(*args)
