@@ -226,7 +226,9 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     content = <BodyThreeText>Loading CFU data...</BodyThreeText>;
   } else if (!fetchedCfuLevels || fetchedCfuLevels.length === 0) {
     content = (
-      <BodyThreeText>No CFU data available for this lesson.</BodyThreeText>
+      <BodyThreeText>
+        This lesson doesn't have any "Check for Understanding" questions.
+      </BodyThreeText>
     );
   } else {
     scrollable = true;
@@ -251,7 +253,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="CFU"
+      widgetName="Check for Understanding Summary"
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={loading}
