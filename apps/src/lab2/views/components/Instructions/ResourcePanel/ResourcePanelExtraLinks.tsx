@@ -37,7 +37,7 @@ const ResourcePanelExtraLinks: React.FunctionComponent<
     <ButtonWithDialog
       text={'Extra Links'}
       ariaLabel={lab2I18n.extraLinks()}
-      id={'extra-links'}
+      id={'resource-panel-extra-links'}
       theme={theme}
       Dialog={innerDialog}
       iconName={'link'}

@@ -65,6 +65,7 @@ class UnitOverview extends React.Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     participantAudience: PropTypes.string,
     showAiAssessmentsAnnouncement: PropTypes.bool,
+    isOnTeacherDashboard: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -156,6 +157,7 @@ class UnitOverview extends React.Component {
       publishedState,
       participantAudience,
       showAiAssessmentsAnnouncement,
+      isOnTeacherDashboard = false,
     } = this.props;
 
     const displayRedirectDialog =
@@ -197,6 +199,7 @@ class UnitOverview extends React.Component {
             courseName={courseName}
             courseId={courseId}
             userId={userId}
+            isOnTeacherDashboard={isOnTeacherDashboard}
           >
             <UnitOverviewActionRow
               courseVersionId={courseVersionId}

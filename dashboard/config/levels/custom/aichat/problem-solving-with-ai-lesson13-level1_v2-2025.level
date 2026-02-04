@@ -44,7 +44,8 @@
     "bubble_choice_description": "Use AI Chat to do some market research for your product or app. ",
     "display_name": "Marketing Research Chat",
     "thumbnail_url": "https://images.code.org/0c2e3bb0e1a6a1b4ee36a79baa8f9df5-analytics.png",
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:53:26.723+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson13-level1_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson13-level1_2025\"}]"

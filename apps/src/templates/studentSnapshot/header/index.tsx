@@ -135,7 +135,7 @@ const Header: React.FC<HeaderProps> = ({
     <div className={styles.header}>
       <div className={styles.headerColumn}>
         <UnitSelectorV2
-          filterToSelectedCourse={true}
+          filterToSelectedCourse={false}
           className={styles.unitSelector}
           isLabelVisible={true}
           labelText="Unit"

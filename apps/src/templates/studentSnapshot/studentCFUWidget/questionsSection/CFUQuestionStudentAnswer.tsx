@@ -7,6 +7,7 @@ import {CFULevel, CFULevelResponse, CFUMultipleLevelAnswer} from './../types';
 import CFUFreeResponseAnswer from './answers/CFUFreeResponseAnswer';
 import CFUMatchAnswer from './answers/CFUMatchAnswer';
 import CFUMultiAnswer from './answers/CFUMultiAnswer';
+import NotSupportedCFUQuestion from './NotSupportedCFUQuestion';
 
 import styles from './studentCFUWidgetQuestionsSection.module.scss';
 
@@ -18,6 +19,8 @@ interface CFUQuestionStudentAnswerProps {
   levelGroupLevelIndex?: number;
   questionText?: string;
 }
+
+const UNSUPPORTED_CFU_TYPES = ['Panels', 'Aichat'];
 
 const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
   level,
@@ -67,33 +70,31 @@ const CFUQuestionStudentAnswer: React.FC<CFUQuestionStudentAnswerProps> = ({
       case 'FreeResponse':
         return <CFUFreeResponseAnswer response={studentResponse} />;
       default:
-        return (
-          <Typography variant="body4">
-            {/* TODO: Handle additional CFU level type: {levelType} */}
-            {`"${levelType}" Student answer placeholder`}
-          </Typography>
-        );
+        return <NotSupportedCFUQuestion level={level} />;
     }
   };
 
   return (
     <div className={styles.cfuQuestionStudentAnswer}>
-      {isOpen && (
-        <>
-          <div className={styles.cfuQuestionStudentAnswerQuestion}>
-            <Typography variant="body3">
-              <strong>Question</strong>
-            </Typography>
-            <SafeMarkdown markdown={questionText} />
-          </div>
-          <div className={styles.cfuQuestionStudentAnswerContent}>
-            <Typography variant="body3">
-              <strong>Student Answer</strong>
-            </Typography>
-            {renderStudentAnswerByType(level)}
-          </div>
-        </>
-      )}
+      {isOpen &&
+        (UNSUPPORTED_CFU_TYPES.includes(level.type) ? (
+          <NotSupportedCFUQuestion level={level} />
+        ) : (
+          <>
+            <div className={styles.cfuQuestionStudentAnswerQuestion}>
+              <Typography variant="body3">
+                <strong>Question</strong>
+              </Typography>
+              <SafeMarkdown markdown={questionText} />
+            </div>
+            <div className={styles.cfuQuestionStudentAnswerContent}>
+              <Typography variant="body3">
+                <strong>Student Answer</strong>
+              </Typography>
+              {renderStudentAnswerByType(level)}
+            </div>
+          </>
+        ))}
     </div>
   );
 };

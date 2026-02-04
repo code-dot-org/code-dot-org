@@ -57,7 +57,7 @@ markdown <<MARKDOWN
                style="width: 35%; height: auto; border-radius: 10px; margin: 0 auto 0px auto; display: block;">
           <p style="font-size: 14pt; font-weight: bold; margin: 0;">Help Us Improve</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/form/selfpaced_pd_teaching_aif_problem_solving_post_survey" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
+            Your feedback shapes future learning experiences. Please take our short <a href="https://studio.code.org/" target="blank" rel="noopener noreferrer">end-of-module survey</a>.
           </p>
         </div>
       </div>
@@ -67,12 +67,12 @@ markdown <<MARKDOWN
       <div style="display: flex; align-items: flex-start;">
         <span style="font-size: 30pt; font-weight: bold; color: #717171; margin-right: 15px;">3</span>
         <div style="width: 100%; text-align: left;">
-          <img src="https://images.code.org/0a455cf3c74eb17e25fe5850442dfbf8-image-1756334953630.png" 
-               alt="A laptop computer with code displayed on the screen" 
-               style="width: 25%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
-          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Get Started with Students</p>
+          <img src="https://images.code.org/27b24fae6424a4cd660cdd75e9a2ab86-download.png" 
+               alt="AI Bot" 
+               style="width: 20%; height: auto; border-radius: 10px; margin: 0 auto 25px auto; display: block;">
+          <p style="font-size: 14pt; font-weight: bold; margin: 0;">Continue Your Learning</p>
           <p style="font-size: 14pt; margin-top: 10px; line-height: 1.2">
-            Ready to teach? <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">Create a section</a> and assign the <a href="https://studio.code.org/teacher_dashboard/sections/5963300/courses/artificial-intelligence-foundations-v2-2025/units/1" target="blank" rel="noopener noreferrer">Problem Solving with AI</a> unit.
+            Click Continue to keep working through the AI 101 for Educators self-paced learning series.
           </p>
         </div>
       </div>
