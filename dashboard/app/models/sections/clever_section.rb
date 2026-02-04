@@ -44,7 +44,7 @@ class CleverSection < OmniAuthSection
   def self.from_service(course_id, owner_id, student_list, section_name)
     code = "#{CODE_PREFIX}#{course_id}"
 
-    students = student_list.map do |student|
+    students = student_list.filter_map do |student|
       data = student['data']
       student_role_data = data['roles']['student']
       next if student_role_data.blank?
@@ -58,7 +58,7 @@ class CleverSection < OmniAuthSection
           dob: student_role_data['dob'],
         },
       )
-    end.compact
+    end
 
     from_omniauth(
       code: code,
