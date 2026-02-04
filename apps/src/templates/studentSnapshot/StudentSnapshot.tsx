@@ -34,20 +34,6 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
-interface StudentCodeData {
-  studentCode: Record<string, string>;
-}
-
-const getStudentCode = (
-  unitId: number,
-  lessonId: number,
-  studentId: number
-): Promise<Record<string, string>> => {
-  return HttpClient.fetchJson<StudentCodeData>(
-    `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
-  ).then(response => response?.value?.studentCode || {});
-};
-
 const StudentSnapshot: React.FC = () => {
   const [selectedStudentId, setSelectedStudentId] = React.useState<
     number | null
@@ -57,9 +43,6 @@ const StudentSnapshot: React.FC = () => {
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
-  const [isStudentCodeLoading, setIsStudentCodeLoading] =
-    useState<boolean>(false);
-  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -108,29 +91,6 @@ const StudentSnapshot: React.FC = () => {
     }
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
-  // Fetch Student Code when student or lesson changes
-  React.useEffect(() => {
-    if (selectedUnitId && selectedLessonId && selectedStudentId) {
-      setIsStudentCodeLoading(true);
-      getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
-        .then(code => {
-          setStudentCode(code);
-        })
-        .catch(error => {
-          console.error('Error fetching student code:', error);
-          setStudentCode({});
-        })
-        .finally(() => {
-          setIsStudentCodeLoading(false);
-        });
-    } else {
-      setStudentCode({});
-    }
-  }, [selectedUnitId, selectedLessonId, selectedStudentId]);
-
-  // TODO(lfm): figure out what this is supposed to do
-  console.log(isStudentCodeLoading);
-
   return (
     <div className={styles.snapshotContainer}>
       <Header
@@ -177,7 +137,11 @@ const StudentSnapshot: React.FC = () => {
           lessonId={selectedLessonId}
           studentId={selectedStudentId}
         />
-        <StudentCodeWidget studentCode={studentCode} />
+        <StudentCodeWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <StudentRubricWidget
           gridWidth={2}
           gridHeight={2}
