@@ -247,7 +247,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
             data: {
               roles: {
                 teacher: {
-                  sis_id: '123456'
+                  legacy_id: '123456'
                 }
               }
             }
@@ -285,21 +285,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with known clever student account does not alter email or hashed email" do
-    clever_student = create(:student, provider: 'clever', uid: '111133')
+    clever_student = create(:student, provider: 'clever', uid: TEST_CLEVER_STUDENT_DATA.uid)
     student_hashed_email = clever_student.hashed_email
 
-    auth = OmniAuth::AuthHash.new(
-      uid: '111133',
-      provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'hat.cat@example.com',
-        user_type: 'student',
-        dob: Time.zone.today - 10.years,
-        gender: 'f'
-      },
-    )
+    auth = TEST_CLEVER_STUDENT_DATA.dup
+    auth.info.email = 'different-email@example.com' # different email than the one on record
+
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -1015,8 +1006,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: clever does not silently add authentication_option to migrated student with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
+    email = TEST_CLEVER_STUDENT_DATA.info.email
+    uid =  TEST_CLEVER_STUDENT_DATA.uid
     user = create(:student, email: email)
     auth = generate_auth_user_hash(provider: AuthenticationOption::CLEVER, uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
@@ -1036,7 +1027,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
-      user_type: User::TYPE_TEACHER,
       email: email
     )
     @request.env['omniauth.auth'] = auth
