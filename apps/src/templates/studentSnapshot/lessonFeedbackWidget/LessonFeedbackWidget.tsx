@@ -17,14 +17,77 @@ import styles from './lessonFeeedback.module.scss';
 interface LessonFeedbackWidgetProps {
   lessonId: number | null;
   teacherHasEnabledAi: boolean;
-  initialFeedback?: string;
+  studentId: number | null;
+  unitId: number | null;
 }
 
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   lessonId,
   teacherHasEnabledAi = false,
-  initialFeedback = '',
+  studentId,
+  unitId,
 }) => {
+  const [initialFeedback, setInitialFeedback] = React.useState<string>('');
+
+  // Fetch lesson feedback from backend, and if not found, try generating ai feedback
+  // TODO: Add loading state while fetching feedback
+  // TODO: check to see if there is progress before getting ai feedback
+  React.useEffect(() => {
+    async function getAiLessonFeedback(
+      lessonId: number,
+      unitId: number,
+      studentId: number
+    ) {
+      try {
+        const response = await fetch(
+          `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+        );
+        if (!response.ok) {
+          console.error(
+            'Failed to fetch AI lesson feedback:',
+            response.status,
+            response.statusText
+          );
+          return null;
+        }
+        const data = await response.json();
+        return data;
+      } catch (err) {
+        console.error('Network or parsing error:', err);
+        return null;
+      }
+    }
+
+    async function fetchLessonFeedback() {
+      if (!lessonId || !studentId || !unitId) {
+        setInitialFeedback('');
+        return;
+      }
+      setInitialFeedback(''); // Clear feedback before fetching
+      try {
+        const response = await fetch(
+          `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
+        );
+
+        if (!response.ok) {
+          // Try getting AI feedback from student work.
+          const aiData = await getAiLessonFeedback(lessonId, unitId, studentId);
+          if (aiData && aiData.json) {
+            const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
+            setInitialFeedback(aiGeneratedInitialFeedback);
+          }
+        } else {
+          const data = await response.json();
+          if (data.saved_feedback) {
+            setInitialFeedback(data.saved_feedback);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching feedback:', error);
+      }
+    }
+    fetchLessonFeedback();
+  }, [lessonId, studentId, unitId]);
   // Existing hook usage
   const {
     isLoading,
