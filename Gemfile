@@ -33,7 +33,13 @@ gem 'rails-controller-testing', '~> 1.0.5'
 # Ref: https://github.com/rails/sprockets/pull/469
 # Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
 gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
-gem 'sprockets-rails'
+
+# Starting in Rails 7, sprockets is no longer an automatic dependency, so we
+# need to declare it specifically. We pin to the specific version we are
+# currently using to reduce moving parts during the Rails upgrade; we can
+# loosen this to something like "~> 3.5" once we're fully on Rails 7.
+# In the long term, we probably want to migrate away from sprockets entirely.
+gem 'sprockets-rails', '3.3.0'
 
 # Rails depends on zeitwerk ~>2.3, but cpath support added in 2.6.9 plays a bit
 # nicer with some of our more convoluted model names (eg, LevelsScriptLevel).
