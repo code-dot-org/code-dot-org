@@ -30,7 +30,7 @@ module AiStudentSnapshotHelper
       evaluation =  {status: response.code, json: response_body}
       return {status: evaluation[:status], json: evaluation[:json]}
     else
-      raise StandardError.new("Recieved status code #{response.code} when processing AI lesson insight: #{response.body}")
+      raise StandardError.new("Received status code #{response.code} when processing AI lesson insight: #{response.body}")
     end
   end
 
