@@ -4,7 +4,6 @@
 
 .topContainer {
   display: flex;
-  width: 100%;
   padding: 8px;
   flex-direction: column;
   align-items: flex-start;
@@ -22,6 +21,14 @@ label.typographyLabelTwo {
   input {
     width: 100%;
   }
+}
+
+.feedbackTextBoxWrapper {
+  width: 100%;
+}
+
+.alertBox {
+  width: calc(100% - 30px);
 }
 
 .inputWrapper {
@@ -49,6 +56,12 @@ label.typographyLabelTwo {
     border-color: var(--borders-brand-teal-primary) !important;
     box-shadow: 0 0 0 2px var(--brand-teal-50) !important;
   }
+}
+
+.feedbackInputBox {
+  width: calc(100% - 10px) !important;
+  font-size: 14px;
+  resize: none !important;
 }
 
 .resourcePopUpDivider {

@@ -10,7 +10,9 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">In this professional learning module, you learned to:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Realize the benefits and address the risks of AI in an educational setting.
+      <li>Explain what AI is as well as it's impact on industry and education.
+</li><br>
+	  <li>Realize the benefits and address the risks of AI in an educational setting.
 </li><br>
       <li>Describe AI Literacy and explain the benefits of AI literacy for both educators and students.</li>
     </ul>
@@ -18,21 +20,21 @@ markdown <<MARKDOWN
   <div>
     <img src="https://images.code.org/89644a0804bcdfc2839b17f70bcef23c-Screenshot 2025-12-04 at 2.33.30 PM.png" 
          alt="Icon with computer and weblayout" 
-         style="border-radius: 10px; width: 300px; height: auto;">
+         style="border-radius: 10px; width: 200px; height: auto;">
   </div>
 </div>
 
 ## Resources
-* #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI
-* #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org
+* #### <a href="https://www.teachai.org/" target="_blank">TeachAI.org</a> Empowering educators to teach with and about AI.
+* #### <a href="https://www.teachai.org/ailiteracy" target="_blank">AILit Framework</a> from TeachAI.org.
 * #### <a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw with Google</a> a quick and fun AI-powered game.
 * #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a> Khanacademy’s on-demand AI-powered support for education.
 * #### <a href="https://labs.google/" target="_blank">Labs.Google</a> Google’s home for the latest AI tools, technology and discourse.
 
 
-## Additional Practice
+## Take it Further
 
-#### Need some additional practice? Try out the following optional activities.
+#### Want to learn more? Try out the following optional activities.
   <!-- Dropdown 1 -->
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
@@ -57,11 +59,11 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 16px; font-weight: bold">
-	AI Literacy Learning Scenarios
+	AI Literacy Activities for the Classroom
 </summary>
 
 <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd;">
-<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">TeachAI.org has ready-to-use AI Literacy focused activity ideas for every subject. Designed to fit into a 40-minute class with almost no prep required.<br> Review these activities and  your classroom.
+<p style="margin: 5px 0 10px 0; font-size: 16px; line-height: 1.5;">TeachAI.org has ready-to-use AI Literacy focused activity ideas for every subject. Designed to fit into a 40-minute class with almost no prep required.<br> Review these activities and choose one to implement in your classroom.
 </p>
 
 <a href="https://www.teachai.org/media/learningscenarios_deck_final-j9gmue" 
@@ -75,7 +77,7 @@ markdown <<MARKDOWN
 
 ## What's Next in AI 101 for Educators?
 
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:1200px; border-collapse:separate; border-spacing:20px; font-family:Arial, Helvetica, sans-serif; color:#1f2937;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:1200px; border-collapse:separate; border-spacing:10px; font-family:Arial, Helvetica, sans-serif; color:#1f2937;">
 <tr>
 <td style="vertical-align:top; text-align:center">
 <img src="https://images.code.org/8a0afcbf8eec19ee302524d55d369e5b-Screenshot 2026-02-02 at 5.37.35 PM.png" alt="Introducing AI for Educators" style="width:120px; height:100px; object-fit:contain; border-radius:10px" />
@@ -98,7 +100,7 @@ markdown <<MARKDOWN
 <td style="font-size:16px; font-weight:700; text-align:center">Understanding AI</td>
 <td style="font-size:16px; font-weight:700; text-align:center">Transforming Teaching with AI</td>
 <td style="font-size:16px; font-weight:700; text-align:center">Bringing AI to the Classroom</td>
-<td style="font-size:16px; font-weight:700; text-align:center">Ensuring a Responsible Approach to AI</td>
+<td style="font-size:16px; font-weight:700; text-align:center">Responsible Approach to AI</td>
 </tr>
 <tr>
 <td style="font-size:14px; color:#4b5563; line-height:1.5; text-align:center">Explore the benefits and risks of AI and why AI literacy matters.</td>

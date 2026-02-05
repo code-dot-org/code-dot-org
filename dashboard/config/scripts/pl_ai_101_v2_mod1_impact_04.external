@@ -3,21 +3,18 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#### Let’s see what Sal and Hadi have to say about challenges and benefits of AI in education.
-<br>
+# Impact on Educators
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📝 Key Points from the Video</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### For many educators, AI is surprising in how well it can assist with tasks such as drafting lesson plans, providing feedback on writing, and supporting creative activities like storytelling or project brainstorming.
 
-* #### AI in education poses risks such as errors, biases, misinformation, and potential to generate harmful content, prompting cautious integration by schools.
-* #### Different AI tools offer varied functions; not all are suited for educational use.
-* #### Some educational AI tools are specifically designed to mitigate risks by enhancing student privacy and reducing misinformation and biases.
-* #### Educators and IT departments need to carefully select AI tools that are appropriate and safe for educational settings, rather than outright banning or unselectively adopting AI.
-* #### It's important to recognize that existing educational tools and resources, including the Internet and human interactions, also exhibit biases and misinformation.
+#### As the graphic below shows, teachers spend a significant portion of their roughly 50-hour workweek on preparation, evaluation, and administrative tasks—often outside of direct interaction with students. These are areas where AI can help save time without changing the core role of the teacher.
 
-</p></div>
-</details>
+<p style="text-align:center;"><img src="https://images.code.org/43c45055ef874764a0fdf2a7c1d0387a-Screenshot 2026-02-04 at 2.27.14 PM.png" alt="Pie chart showing 49% of a teacher's time in direct interaction with students."></p>
+
+*Image: McKinsey 2020*
+
+#### AI is not likely to replace teachers; instead, it functions best as a virtual teaching assistant that reduces workload and supports day-to-day tasks. By handling routine or time-consuming work, AI can help educators spend more time on student instruction, coaching, and relationship-building—the parts of teaching that matter most. When used thoughtfully, AI also has the potential to ease teacher burnout and help schools manage staffing challenges by supporting, rather than replacing, educators.
+
+#### We'll dive into how educators can use AI to help save time on tasks such as preparation, evaluation, feedback, and administrative tasks in Module 3, Transforming Teaching with AI.
 
 MARKDOWN
