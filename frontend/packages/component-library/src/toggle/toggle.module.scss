@@ -60,14 +60,15 @@
           content: '\f00c';
           background-color: var(--background-brand-teal-primary);
           padding-left: 4px;
+          text-align: start;
         }
 
         // Unchecked styles
         &::after {
           content: '\f00d';
           background-color: var(--background-neutral-senary);
-          text-align: right;
           padding-right: 4px;
+          text-align: end;
         }
       }
 
