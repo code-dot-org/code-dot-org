@@ -35,10 +35,11 @@
   background: linear-gradient(
     90deg,
     var(--borders-brand-aqua-primary),
-    var(--borders-brand-purple-light)
+    var(--borders-brand-purple-light) 60%
   );
-  height: 500px;
-  width: 500px;
+  min-height: 142%;
+  min-width: 142%;
+  aspect-ratio: 1/1;
   position: absolute;
   animation: rotate 8s linear infinite;
   z-index: 0;
