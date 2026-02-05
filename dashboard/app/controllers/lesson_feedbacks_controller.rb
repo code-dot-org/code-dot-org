@@ -42,7 +42,7 @@ class LessonFeedbacksController < ApplicationController
       :saved_feedback,
       :submitted_feedback,
       :submitted_at,
-      resources: [:message, :link_name, :link]
+      resources: [:recommended_action, :resource_name, :resource_link]
     )
   end
 end
