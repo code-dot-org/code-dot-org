@@ -216,7 +216,7 @@ class ScriptLevelsController < ApplicationController
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?(@script_level.lesson)
-      @rubric_data[:parentLevelName] = @script_level.level.name if @script_level.bubble_choice?
+      @rubric_data[:parentLevelName] = @level.get_parent_level_for_script(@script.id)&.name
       @rubric_data[:levelType] = @level.type
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)

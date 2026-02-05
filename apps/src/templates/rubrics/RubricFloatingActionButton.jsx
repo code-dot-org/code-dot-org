@@ -101,7 +101,7 @@ function RubricFloatingActionButton({
   const [internalError, setInternalError] = useState(null);
 
   // We do not evaluate on Bubble Choice levels directly, we only evaluate on
-  // the child levels. If the level is not a bubble choice level, we evaluate on the
+  // their child levels. If this level is not a bubble choice level, we evaluate on the
   // level that matches the rubric level name, or any child levels of the level that
   // matches the rubric level name (likely the parent in this case is a Bubble Choice level).
   const onLevelForEvaluation = useMemo(
