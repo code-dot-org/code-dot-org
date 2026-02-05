@@ -241,13 +241,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
+    const instructionsContent = (
+      <Instructions
+        {...instructionsProps}
+        hideNavigation={hideInstructionsNavigation}
+      />
+    );
+
     if (levelProperties.longInstructions) {
-      tabMap[Tabs.Instructions] = (
-        <Instructions
-          {...instructionsProps}
-          hideNavigation={hideInstructionsNavigation}
-        />
-      );
+      tabMap[Tabs.Instructions] = instructionsContent;
     }
 
     if (instructionsProps.validationSettings && hasValidationConditions) {
@@ -279,6 +281,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             aiTutorChatButtonData={aiTutorChatButtonData}
             aiTutorSystemPromptName={aiTutorSystemPromptName}
             aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+            instructionsContent={instructionsContent}
           />
         );
       }

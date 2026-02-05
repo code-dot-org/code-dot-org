@@ -20,6 +20,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   isInstructionsCollapsed?: boolean;
+  instructionsContent?: React.ReactNode;
 }
 
 const MIN_INSTRUCTIONS_HEIGHT = 150;
@@ -37,6 +38,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
   isInstructionsCollapsed = false,
+  instructionsContent,
 }) => {
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
@@ -129,7 +131,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             className={styles.instructionsDrawer}
             style={{height: instructionsHeight}}
           >
-            <p>This is where instructions drawer will be displayed.</p>
+            {instructionsContent}
           </div>
           <Button
             className={styles.toggleButton}
