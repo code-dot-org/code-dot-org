@@ -43,17 +43,14 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
         );
         if (!response.ok) {
-          console.error(
-            'Failed to fetch AI lesson feedback:',
-            response.status,
-            response.statusText
+          throw new Error(
+            `Failed to fetch AI lesson feedback: ${response.status} ${response.statusText}`
           );
-          return null;
         }
         const data = await response.json();
         return data;
       } catch (err) {
-        console.error('Network or parsing error:', err);
+        console.error('AI lesson feedback error:', err);
         return null;
       }
     }
