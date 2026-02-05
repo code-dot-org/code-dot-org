@@ -1,4 +1,4 @@
-import React, {useState, ChangeEvent} from 'react';
+import React, {useState, useEffect, ChangeEvent} from 'react';
 
 import styles from './lessonFeeedback.module.scss';
 
@@ -12,6 +12,10 @@ const FeedbackTextbox: React.FC<FeedbackTextboxProps> = ({
   onFeedbackChange,
 }) => {
   const [text, setText] = useState(feedbackText);
+
+  useEffect(() => {
+    setText(feedbackText);
+  }, [feedbackText]);
 
   const handleTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     const newText = event.target.value;

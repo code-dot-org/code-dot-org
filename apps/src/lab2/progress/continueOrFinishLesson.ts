@@ -8,7 +8,6 @@ import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Handles all logic for continuing lesson progression, either to the next level or finishing the lesson.
@@ -19,19 +18,6 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
     if (!levelProperties) {
       // Level has not been set up yet.
       return;
-    }
-
-    if (experiments.isEnabled('student_snapshot')) {
-      const scriptId = getState().lab.scriptId;
-      const lessonId = getState().progress.currentLessonId;
-      const studentId = getState().currentUser.userId;
-      if (scriptId === undefined || lessonId === undefined) {
-        // Handle the error or return early if scriptId is required
-        console.error('scriptId or lessonId is undefined');
-        return;
-      }
-
-      getAiLessonFeedback(lessonId, scriptId, studentId);
     }
 
     // If there are no validation conditions and the level is not submittable or a predict level,
@@ -54,31 +40,6 @@ export default (): ThunkAction<void, RootState, undefined, AnyAction> =>
       handleNavigation(levelProperties, dispatch, getState);
     }
   };
-
-async function getAiLessonFeedback(
-  lessonId: number,
-  unitId: number,
-  studentId: number
-) {
-  try {
-    const response = await fetch(
-      `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
-    );
-    if (!response.ok) {
-      console.error(
-        'Failed to fetch AI lesson feedback:',
-        response.status,
-        response.statusText
-      );
-      return null;
-    }
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    console.error('Network or parsing error:', err);
-    return null;
-  }
-}
 
 function handleNavigation(
   levelProperties: LevelProperties,

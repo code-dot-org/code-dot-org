@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -60,6 +60,7 @@ const StudentSnapshot: React.FC = () => {
   const [isStudentCodeLoading, setIsStudentCodeLoading] =
     useState<boolean>(false);
   const [studentCode, setStudentCode] = useState<Record<string, string>>({});
+  const [initialFeedback, setInitialFeedback] = useState<string>('');
 
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -88,7 +89,70 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
-  React.useEffect(() => {
+  async function getAiLessonFeedback(
+    lessonId: number,
+    unitId: number,
+    studentId: number
+  ) {
+    try {
+      const response = await fetch(
+        `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+      );
+      if (!response.ok) {
+        console.error(
+          'Failed to fetch AI lesson feedback:',
+          response.status,
+          response.statusText
+        );
+        return null;
+      }
+      const data = await response.json();
+      return data;
+    } catch (err) {
+      console.error('Network or parsing error:', err);
+      return null;
+    }
+  }
+
+  // Fetch lesson feedback from backend, and if not found, try AI feedback
+  useEffect(() => {
+    async function fetchLessonFeedback() {
+      if (!selectedLessonId || !selectedStudentId || !selectedUnitId) {
+        setInitialFeedback('');
+        return;
+      }
+      setInitialFeedback(''); // Clear feedback before fetching
+      try {
+        const response = await fetch(
+          `/lesson_feedbacks/saved_feedback?lesson_id=${selectedLessonId}&student_id=${selectedStudentId}`
+        );
+
+        if (!response.ok) {
+          // Try getting AI feedback from student work.
+          // TODO: Modify this so we only try this if students have completed work in the lesson (or catch empty lesson state eariler)
+          const aiData = await getAiLessonFeedback(
+            selectedLessonId,
+            selectedUnitId,
+            selectedStudentId
+          );
+          const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
+          if (aiData) {
+            setInitialFeedback(aiGeneratedInitialFeedback);
+          }
+        } else {
+          const data = await response.json();
+          if (data.saved_feedback) {
+            setInitialFeedback(data.saved_feedback);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching feedback:', error);
+      }
+    }
+    fetchLessonFeedback();
+  }, [selectedLessonId, selectedStudentId, selectedUnitId]);
+
+  useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
       lessonsCachedLoader(selectedUnitId)
@@ -109,7 +173,7 @@ const StudentSnapshot: React.FC = () => {
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
   // Fetch Student Code when student or lesson changes
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
       setIsStudentCodeLoading(true);
       getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
@@ -168,8 +232,8 @@ const StudentSnapshot: React.FC = () => {
         />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
-          studentId={selectedStudentId}
           teacherHasEnabledAi={aiTaEnabled}
+          initialFeedback={initialFeedback}
         />
         <StudentCFUWidget
           gridWidth={2}
