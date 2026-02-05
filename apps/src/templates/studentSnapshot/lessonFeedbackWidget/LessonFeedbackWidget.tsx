@@ -1,9 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  BodyThreeText,
-  BodyFourText,
-} from '@code-dot-org/component-library/typography';
+import {BodyFourText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
@@ -19,19 +16,78 @@ import styles from './lessonFeeedback.module.scss';
 
 interface LessonFeedbackWidgetProps {
   lessonId: number | null;
-  studentId: number | null;
   teacherHasEnabledAi: boolean;
+  studentId: number | null;
+  unitId: number | null;
 }
 
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   lessonId,
-  studentId,
   teacherHasEnabledAi = false,
+  studentId,
+  unitId,
 }) => {
+  const [initialFeedback, setInitialFeedback] = React.useState<string>('');
+
+  // Fetch lesson feedback from backend, and if not found, try generating ai feedback
+  // TODO: Add loading state while fetching feedback
+  // TODO: check to see if there is progress before getting ai feedback
+  React.useEffect(() => {
+    async function getAiLessonFeedback(
+      lessonId: number,
+      unitId: number,
+      studentId: number
+    ) {
+      try {
+        const response = await fetch(
+          `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+        );
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch AI lesson feedback: ${response.status} ${response.statusText}`
+          );
+        }
+        const data = await response.json();
+        return data;
+      } catch (err) {
+        console.error('AI lesson feedback error:', err);
+        return null;
+      }
+    }
+
+    async function fetchLessonFeedback() {
+      if (!lessonId || !studentId || !unitId) {
+        setInitialFeedback('');
+        return;
+      }
+      setInitialFeedback(''); // Clear feedback before fetching
+      try {
+        const response = await fetch(
+          `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
+        );
+
+        if (!response.ok) {
+          // Try getting AI feedback from student work.
+          const aiData = await getAiLessonFeedback(lessonId, unitId, studentId);
+          if (aiData && aiData.json) {
+            const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
+            setInitialFeedback(aiGeneratedInitialFeedback);
+          }
+        } else {
+          const data = await response.json();
+          if (data.saved_feedback) {
+            setInitialFeedback(data.saved_feedback);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching feedback:', error);
+      }
+    }
+    fetchLessonFeedback();
+  }, [lessonId, studentId, unitId]);
+  // Existing hook usage
   const {
-    // State values
     isLoading,
-    error,
     scrollable,
     feedbackText,
     recommendedActionText,
@@ -40,7 +96,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     showAddResourcePopup,
     tempResourceName,
     tempResourceLink,
-    // Event handlers
     handleFeedbackEdited,
     handleRecommendedActionChange,
     handleAddResourceClick,
@@ -57,82 +112,75 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     teacherHasEnabledAi,
   });
 
-  let widgetContent: React.ReactNode;
-
-  // TODO: Load feedback data from server when API is available - building off Liam's Lesson Insight work
-  // Update state according to the data from back end
-
-  if (error) {
-    widgetContent = <BodyThreeText>{error}</BodyThreeText>;
-  } else {
-    widgetContent = (
-      <div className={styles.topContainer}>
-        <Alert
-          icon={{iconName: 'sparkles'}}
-          text={i18n.lessonFeedbackAlertText()}
-          type="aqua"
+  // TO DO: Use Loading widget when needed here.
+  const widgetContent = (
+    <div className={styles.topContainer}>
+      <Alert
+        icon={{iconName: 'sparkles'}}
+        text={i18n.lessonFeedbackAlertText()}
+        type="aqua"
+        className={styles.alertBox}
+      />
+      <div className={styles.feedbackTextBoxWrapper}>
+        <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
+        <FeedbackTextbox
+          feedbackText={feedbackText || initialFeedback}
+          onFeedbackChange={handleFeedbackEdited}
         />
-        <div>
-          <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
-          <FeedbackTextbox
-            feedbackText={feedbackText}
-            onFeedbackChange={handleFeedbackEdited}
+      </div>
+      <div className={styles.recommendedActionContainer}>
+        <label className={styles.typographyLabelTwo}>
+          {i18n.lessonFeedbackRecommendedAction()}
+        </label>
+        <BodyFourText noMargin>
+          {i18n.lessonFeedbackRecommendedActionDirections()}
+        </BodyFourText>
+        <div className={styles.inputWrapper}>
+          <input
+            className={styles.inputBox}
+            type="text"
+            placeholder={'Write a message'}
+            value={recommendedActionText}
+            onChange={handleRecommendedActionChange}
           />
-        </div>
-        <div className={styles.recommendedActionContainer}>
-          <label className={styles.typographyLabelTwo}>
-            {i18n.lessonFeedbackRecommendedAction()}
-          </label>
-          <BodyFourText noMargin>
-            {i18n.lessonFeedbackRecommendedActionDirections()}
-          </BodyFourText>
-          <div className={styles.inputWrapper}>
-            <input
-              className={styles.inputBox}
-              type="text"
-              placeholder={'Write a message'}
-              value={recommendedActionText}
-              onChange={handleRecommendedActionChange}
-            />
-            <Button
-              text={'Add resource link'}
-              size="xs"
-              type="secondary"
-              color="gray"
-              disabled={!!resourceLink}
-              iconLeft={{
-                iconStyle: 'solid',
-                iconName: 'plus',
-                title: 'Add Resource',
-              }}
-              onClick={handleAddResourceClick}
-            />
-            {resourceLink && resourceName && (
-              <UrlTab
-                urlName={resourceName}
-                onClickHandler={deleteResourceLink}
-              />
-            )}
-          </div>
-          {showAddResourcePopup && (
-            <AddResourceDialog
-              tempResourceName={tempResourceName}
-              tempResourceLink={tempResourceLink}
-              onResourceNameChange={handleTempResourceNameChange}
-              onResourceLinkChange={handleTempResourceLinkChange}
-              onCancel={exitResourcePopup}
-              onSave={handleResourceSave}
-              onClose={handleCloseResourcePopup}
+          <Button
+            text={'Add resource link'}
+            size="xs"
+            type="secondary"
+            color="gray"
+            disabled={!!resourceLink}
+            iconLeft={{
+              iconStyle: 'solid',
+              iconName: 'plus',
+              title: 'Add Resource',
+            }}
+            onClick={handleAddResourceClick}
+          />
+          {resourceLink && resourceName && (
+            <UrlTab
+              urlName={resourceName}
+              onClickHandler={deleteResourceLink}
             />
           )}
         </div>
-        <ActionButtons
-          onSaveAsDraft={handleSaveAsDraft}
-          onSendToStudent={handleSendToStudent}
-        />
+        {showAddResourcePopup && (
+          <AddResourceDialog
+            tempResourceName={tempResourceName}
+            tempResourceLink={tempResourceLink}
+            onResourceNameChange={handleTempResourceNameChange}
+            onResourceLinkChange={handleTempResourceLinkChange}
+            onCancel={exitResourcePopup}
+            onSave={handleResourceSave}
+            onClose={handleCloseResourcePopup}
+          />
+        )}
       </div>
-    );
-  }
+      <ActionButtons
+        onSaveAsDraft={handleSaveAsDraft}
+        onSendToStudent={handleSendToStudent}
+      />
+    </div>
+  );
 
   return (
     <WidgetTemplate
