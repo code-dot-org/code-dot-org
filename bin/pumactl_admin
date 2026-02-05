@@ -3,7 +3,6 @@ require_relative '../deployment'
 require 'json'
 require 'open3'
 
-# Extract our custom --query argument before passing the rest to pumactl.
 query_path = nil
 ARGV.reject! do |arg|
   if arg.start_with?('--query=', '-q=')
@@ -16,6 +15,7 @@ end
 
 raise 'CDO.puma_control_server_token is not defined' unless CDO.puma_control_server_token
 token = CDO.puma_control_server_token
+
 socket_url = "unix://#{dashboard_dir('tmp', 'pumactl.sock')}"
 
 cmd = [
@@ -27,11 +27,10 @@ cmd = [
 stdout, stderr, status = Open3.capture3(*cmd)
 
 if status.success?
-  # Pretty print JSON output and also allow dig expressions on the JSON output.
+  # pumactl sometimes outputs a preamble ("command stats sent success") before JSON output.
   json_start_index = stdout.index('{')
 
   if json_start_index
-    # pumactl often outputs a preamble like ("Command stats sent success") before the JSON result.
     preamble = stdout[0...json_start_index]
     json_part = stdout[json_start_index..].strip
 
@@ -39,25 +38,36 @@ if status.success?
       data = JSON.parse(json_part)
 
       if query_path
-        # Support dot-notation (e.g., "worker_status.0.last_status.backlog"). Dig handles nested hashes and arrays.
+        # Send preamble STDERR so it doesn't corrupt the pipe.
+        warn preamble unless preamble.strip.empty?
+
+        # Navigate the JSON safely using the query path.
         keys = query_path.split('.').map {|k| /^\d+$/.match?(k) ? k.to_i : k}
         result = data.dig(*keys)
-        puts preamble
-        puts (result.is_a?(Hash) || result.is_a?(Array)) ? JSON.generate(result) : result
+
+        # Output ONLY the data to STDOUT.
+        if result.is_a?(Hash) || result.is_a?(Array)
+          puts JSON.generate(result)
+        else
+          puts result
+        end
       else
-        # Standard human-friendly mode: print preamble + pretty JSON.
+        # HUMAN MODE: Preamble and Pretty JSON go to STDOUT.
         puts preamble unless preamble.strip.empty?
         puts JSON.pretty_generate(data)
       end
     rescue JSON::ParserError
+      # Fallback for parsing failures.
       puts stdout
     end
   else
-    puts stdout # Commands like 'restart' don't output JSON.
+    # Non-JSON output (e.g. 'restart' command).
+    puts stdout unless stdout.empty?
   end
 else
+  # Error Handling
   warn "Error executing pumactl:"
-  warn stdout # For some non-success results, pumactl returns useful information in standard output.
+  warn stdout
   warn stderr
   exit status.exitstatus
 end
