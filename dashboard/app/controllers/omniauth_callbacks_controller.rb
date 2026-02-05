@@ -333,7 +333,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def find_clever_user_by_legacy_id
     return nil unless auth_hash
     # Teacher and staff users in Clever have a legacy_id field in the v3 API response.
-    roles = auth_hash.extra&.raw_info&.canonical&.data&.roles
+    roles = auth_hash.dig(:extra, :raw_info, :canonical, :data, :roles)
     return nil unless roles
 
     legacy_id = nil

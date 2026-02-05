@@ -276,7 +276,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     student_hashed_email = clever_student.hashed_email
 
     auth = TEST_CLEVER_STUDENT_DATA.dup
-    auth.info.email = 'different-email@example.com' # different email than the one on record
+    auth.info.email = Faker::Internet.email # different email than the one on record
 
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
@@ -426,7 +426,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'clever: signs in user if user is found by legacy_id' do
-    legacy_id = 'legacy-id-123'
+    legacy_id = SecureRandom.alphanumeric(10)
     user = create(:teacher)
     create(
       :authentication_option,
