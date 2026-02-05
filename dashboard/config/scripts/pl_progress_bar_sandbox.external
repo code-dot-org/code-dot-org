@@ -59,8 +59,8 @@ markdown <<MARKDOWN
 
 **Option 3**: Table-style “agenda tracker” (easy to scan)
 
-**Best for**: clarity + “what’s left” pacing
-**How it works:** a simple table with a status column. You manually set ✅ / ⏳.
+This would be used at the beginning or end of each section. Or, just an overview at the beginning. 
+
 <div style="max-width:85%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 <p style="font-size:14pt; margin:0 0 10px 0;"><strong>Today’s agenda</strong> (90 minutes)</p>
 <table style="width:100%; border-collapse:collapse; font-size:13pt;">
@@ -98,8 +98,7 @@ markdown <<MARKDOWN
 
 ## Option 4: “Learning module sidebar” feel (Levelbuilder-friendly approximation)
 
-**Reality check:** you probably can’t create a true persistent left panel across pages without platform support.
-But you can create a “sidebar block” that visually mimics it and place it at the top of each level.
+This is an attempt to create a sidebar similar to ones in coureses like Coursear. Levelbuilder can't quite capture it. 
 
 <div style="max-width:85%; margin:16px auto; display:flex; gap:14px; align-items:flex-start;">
 

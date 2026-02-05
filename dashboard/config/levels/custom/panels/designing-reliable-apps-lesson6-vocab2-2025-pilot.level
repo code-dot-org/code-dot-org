@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-04T18:44:45.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Parsing JSON\n\nParsing means looking at a string of symbols and breaking it down into smaller, meaningful sections.\n\nWhen we parse JSON, we turn the raw data into JavaScript objects usable by our program.",
+        "imageUrl": "https://images.code.org/60863d9c9048d22333cdae9700879eb6-Screenshot 2026-02-04 at 1.21.30 PM.png",
+        "key": "designing-reliable-apps-lesson2-level1-test_2025-pilot-e834eace-42c5-4df8-990e-d9987f293a0f",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-04T18:44:45.434+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson6-vocab1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson6-vocab1-2025-pilot\"},{\"changed_at\":\"2026-02-04 18:45:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 20:22:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
