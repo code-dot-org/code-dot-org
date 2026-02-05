@@ -4,4 +4,5 @@ export * from './levels';
 export * from './metrics';
 export * from './preferences';
 export * from './projects';
+export * from './sections';
 export * from './sources';

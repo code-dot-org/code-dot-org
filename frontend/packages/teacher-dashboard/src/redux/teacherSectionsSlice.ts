@@ -7,12 +7,14 @@ import {
 } from '@reduxjs/toolkit';
 import _ from 'lodash';
 
-import {HttpClient} from '@code-dot-org/api';
-import {
+import {SectionLoginType} from '@code-dot-org/api/models/sections';
+import type {
   Section,
   SectionInstructor,
-  SectionLoginType,
+  SectionLoginTypeKey,
 } from '@code-dot-org/api/models/sections';
+import {sectionsKeys} from '@code-dot-org/core/api';
+import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
 import {analyticsReporter, firehoseClient, EVENTS} from '@code-dot-org/metrics';
 import {OAuthSectionType} from '@code-dot-org/user';
 
@@ -109,7 +111,7 @@ export interface TeacherSectionState {
   initialUnitName?: string | null;
   initialCourseOfferingId?: number | null;
   initialCourseVersionId?: number | null;
-  initialLoginType?: SectionLoginType;
+  initialLoginType?: SectionLoginTypeKey;
   coteacherInvite?: SectionInstructor;
   coteacherInviteForPl?: SectionInstructor;
   needsReload?: boolean;
@@ -738,7 +740,12 @@ const sectionSlice = createSlice({
     setSectionOrder: {
       reducer(
         state,
-        action: PayloadAction<{sectionOrder: number[]; save: boolean}>,
+        action: PayloadAction<{
+          apiClient: ApiClient;
+          queryClient: QueryClient;
+          sectionOrder: number[];
+          save: boolean;
+        }>,
       ) {
         const result = getFilteredSectionOrderIds(
           Object.values(state.sections),
@@ -748,14 +755,25 @@ const sectionSlice = createSlice({
           action.payload.save &&
           !_.isEqual(result, action.payload.sectionOrder)
         ) {
-          saveSectionOrder(result);
+          saveSectionOrder(
+            action.payload.apiClient,
+            action.payload.queryClient,
+            result,
+          );
         }
 
         state.sectionOrder = result;
       },
-      prepare(sectionOrder: number[], save = false) {
+      prepare(
+        apiClient: ApiClient,
+        queryClient: QueryClient,
+        sectionOrder: number[],
+        save = false,
+      ) {
         return {
           payload: {
+            apiClient,
+            queryClient,
             sectionOrder,
             save,
           },
@@ -901,33 +919,38 @@ type ParticipantTypesResponse = {
 };
 
 export const asyncLoadTeacherHomepageSectionData =
-  (): SectionThunkAction => (dispatch, getState) => {
+  (apiClient: ApiClient, queryClient: QueryClient): SectionThunkAction =>
+  (dispatch, getState) => {
     dispatch(beginAsyncLoad());
 
     const promises: Promise<object>[] = [
-      HttpClient.fetchJson<AssignmentCourseOffering[]>(
-        '/dashboardapi/sections/valid_course_offerings',
-      ).then(response => dispatch(setCourseOfferings(response.value))),
-      HttpClient.fetchJson<ParticipantTypesResponse>(
-        '/dashboardapi/sections/available_participant_types',
-      ).then(response => {
-        if (
-          response.value.availableParticipantTypes.length === 1 &&
-          getState().teacherSections.sectionBeingEdited &&
-          !getState().teacherSections.sectionBeingEdited?.participantType
-        ) {
-          dispatch(
-            editSectionProperties({
-              participantType: response.value.availableParticipantTypes[0],
-            }),
+      queryClient
+        .fetchQuery({
+          queryKey: sectionsKeys.validCourseOfferings(),
+          queryFn: () => apiClient.sections.getValidCourseOfferings(),
+        })
+        .then(response => dispatch(setCourseOfferings(response))),
+      queryClient
+        .fetchQuery({
+          queryKey: sectionsKeys.availableParticipantTypes(),
+          queryFn: () => apiClient.sections.getAvailableParticipantTypes(),
+        })
+        .then(response => {
+          if (
+            response.availableParticipantTypes.length === 1 &&
+            getState().teacherSections.sectionBeingEdited &&
+            !getState().teacherSections.sectionBeingEdited?.participantType
+          ) {
+            dispatch(
+              editSectionProperties({
+                participantType: response.availableParticipantTypes[0],
+              }),
+            );
+          }
+          return dispatch(
+            setAvailableParticipantTypes(response.availableParticipantTypes),
           );
-        }
-        return dispatch(
-          setAvailableParticipantTypes(
-            response.value.availableParticipantTypes,
-          ),
-        );
-      }),
+        }),
     ];
 
     return Promise.all(promises)

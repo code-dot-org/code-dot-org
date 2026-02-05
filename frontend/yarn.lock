@@ -1887,7 +1887,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab@workspace:packages/labs/base"
   dependencies:
-    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/audio": "workspace:*"
     "@code-dot-org/blockly-workspace": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
@@ -2151,6 +2150,7 @@ __metadata:
     vite-plugin-css-injected-by-js: "npm:^3.5.2"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    zod: "npm:^4.3.6"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0

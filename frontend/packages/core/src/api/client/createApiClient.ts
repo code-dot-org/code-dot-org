@@ -6,6 +6,7 @@ import {createLevelsApi} from '../domains/levels';
 import {createMetricsApi} from '../domains/metrics';
 import {createPreferencesApi} from '../domains/preferences';
 import {createProjectsApi} from '../domains/projects';
+import {createSectionsApi} from '../domains/sections';
 import {createSourcesApi} from '../domains/sources';
 
 export const createApiClient = (transport: Transport) => ({
@@ -16,6 +17,7 @@ export const createApiClient = (transport: Transport) => ({
   metrics: createMetricsApi(transport),
   preferences: createPreferencesApi(transport),
   projects: createProjectsApi(transport),
+  sections: createSectionsApi(transport),
   sources: createSourcesApi(transport),
 });
 

@@ -1,7 +1,8 @@
 import _ from 'lodash';
 
-import {HttpClient} from '@code-dot-org/api';
-import {Section} from '@code-dot-org/api/models/sections';
+import type {Section} from '@code-dot-org/api/models/sections';
+import {preferencesKeys} from '@code-dot-org/core/api';
+import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
 
 import {ParticipantAudience} from './constants';
 
@@ -43,13 +44,15 @@ export const getFilteredSectionOrderIds = (
   return getOrderedSectionIds(filteredSectionIds, orderedSectionIds);
 };
 
-export const saveSectionOrder = (orderedSectionIds: number[]) => {
-  HttpClient.put(
-    '/user_preference',
-    JSON.stringify({sectionOrder: orderedSectionIds}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-  );
+export const saveSectionOrder = (
+  api: ApiClient,
+  query: QueryClient,
+  orderedSectionIds: number[],
+) => {
+  api.preferences.setSectionOrder({
+    orderedSectionIds,
+  });
+  query.invalidateQueries({
+    queryKey: preferencesKeys.sectionOrder(),
+  });
 };

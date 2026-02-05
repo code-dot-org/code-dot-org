@@ -14,4 +14,6 @@ export const preferencesKeys = {
     [...preferencesKeys.fontSizes(), 'editor', appName] as const,
 
   themeSettings: () => [...preferencesKeys.all, 'themeSettings'] as const,
+
+  sectionOrder: () => [...preferencesKeys.all, 'sectionOrder'] as const,
 };

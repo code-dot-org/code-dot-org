@@ -25,7 +25,7 @@ export function createPreferencesApi(transport: Transport) {
     }) {
       const {usingTextMode, context} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/me/using_text_mode',
         body: {
@@ -53,7 +53,7 @@ export function createPreferencesApi(transport: Transport) {
     async setDisplayTheme(params: {displayTheme: string}) {
       const {displayTheme} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/me/display_theme',
         body: {
@@ -80,7 +80,7 @@ export function createPreferencesApi(transport: Transport) {
     async setMuteMusic(params: {muteMusic: boolean}) {
       const {muteMusic} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/me/mute_music',
         body: {
@@ -107,7 +107,7 @@ export function createPreferencesApi(transport: Transport) {
     async setSortByFamilyName(params: {sortByFamilyName: boolean}) {
       const {sortByFamilyName} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/sort_by_family_name',
         body: {
@@ -122,7 +122,7 @@ export function createPreferencesApi(transport: Transport) {
     async setShowProgressTableV2(params: {showProgressTableV2: boolean}) {
       const {showProgressTableV2} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/show_progress_table_v2',
         body: {
@@ -137,7 +137,7 @@ export function createPreferencesApi(transport: Transport) {
     async setHasSeenHomepageWelcome(params: {hasSeenHomepageWelcome: boolean}) {
       const {hasSeenHomepageWelcome} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/has_seen_homepage_welcome',
         body: {
@@ -154,7 +154,7 @@ export function createPreferencesApi(transport: Transport) {
     }) {
       const {hasDismissedPersonalizationAlert} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/has_dismissed_personalization_alert',
         body: {
@@ -181,7 +181,7 @@ export function createPreferencesApi(transport: Transport) {
     async setAiRubricsDisabled(params: {aiRubricsDisabled: boolean}) {
       const {aiRubricsDisabled} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/ai_rubrics_disabled',
         body: {
@@ -198,7 +198,7 @@ export function createPreferencesApi(transport: Transport) {
     }) {
       const {aiDifferentiationEnabled} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'POST',
         url: '/api/v1/users/ai_differentiation_enabled',
         body: {
@@ -217,7 +217,7 @@ export function createPreferencesApi(transport: Transport) {
     }) {
       const {fontSize, appName, field} = params;
 
-      return await transport.request<unknown>({
+      return transport.request<unknown>({
         method: 'PUT',
         url: '/user_preference',
         body: {
@@ -256,6 +256,21 @@ export function createPreferencesApi(transport: Transport) {
 
       const validated = EditorFontSizeSchema.parse(raw);
       return (validated.editor_font_size[appName] || 'Medium') as FontSize;
+    },
+
+    /**
+     * PUT /user_preference?sectionOrder=:orderedSectionIds
+     */
+    async setSectionOrder(params: {orderedSectionIds: number[]}) {
+      const {orderedSectionIds} = params;
+
+      return transport.request<unknown>({
+        method: 'PUT',
+        url: '/user_preference',
+        body: {
+          sectionOrder: orderedSectionIds,
+        },
+      });
     },
 
     /**
