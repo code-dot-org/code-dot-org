@@ -107,7 +107,7 @@ module AiLessonSummariesHelper
 
   private_class_method def self.get_existing_summary(lesson_id, user_id, response_format)
     if response_format.present?
-      response_format == AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
+      AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:BRIEF_SUMMARY] ?
         AiLessonSummary.where(
           user_id: user_id,
           lesson_id: lesson_id

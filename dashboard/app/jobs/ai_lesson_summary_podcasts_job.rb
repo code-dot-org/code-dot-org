@@ -49,7 +49,7 @@ class AiLessonSummaryPodcastsJob < ApplicationJob
 
   def perform(request:)
     request[:lesson_ids].each do |lesson_id|
-      script = AiLessonSummariesHelper.generate_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
+      script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
       script = JSON.parse(script)['podcast_script']
       podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
 
