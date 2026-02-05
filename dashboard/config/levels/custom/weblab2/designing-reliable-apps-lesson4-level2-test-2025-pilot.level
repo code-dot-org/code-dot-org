@@ -5,7 +5,61 @@
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Refactor the Code\r\n\r\nThis `.then()` promise chain loads advice from the [Random Advice API](https://api.adviceslip.com/advice) but the code is hard to read.\r\n\r\nYour task is to refactor the code in `script.js` using `async` and `await`. You can use AI Tutor to suggest next steps and help you debug your code.\r\n\r\n**Discuss:** What differences do you notice between the manually refactored code on this level and AI refactored code in the previous level? Which version do you prefer to use? ",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Random Advice</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header>\n    <h1>Random Advice Generator</h1>\n    <p>Click the button to load advice.</p>\n  </header>\n\n  <main>\n    <button id=\"btn\">Get Advice</button>\n    <p id=\"status\">Status: ready</p>\n\n    <section class=\"card\">\n      <h2>Advice</h2>\n      <p id=\"advice-text\">(advice will appear here)</p>\n    </section>\n  </main>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.querySelector(\"#btn\");\nconst statusEl = document.querySelector(\"#status\");\nconst adviceEl = document.querySelector(\"#advice-text\");\n\nbtn.addEventListener(\"click\", function () {\n  statusEl.textContent = \"Status: loading...\";\n\n  fetch(\"https://api.adviceslip.com/advice\")\n    .then(function (response) {\n      return response.json();\n    })\n    .then(function (data) {\n      adviceEl.textContent = data.slip.advice;\n      statusEl.textContent = \"Status: done\";\n    });\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Basic Reset */\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  background-color: #f0f2f5;\n  color: #333;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  text-align: center;\n}\n\nheader {\n  margin-bottom: 2rem;\n}\n\nh1 {\n  color: #2c3e50;\n  margin-bottom: 0.5rem;\n}\n\n/* Button Styling */\n#btn {\n  background-color: #3498db;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  font-size: 1rem;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: background-color 0.3s ease, transform 0.1s;\n}\n\n#btn:hover {\n  background-color: #2980b9;\n}\n\n#btn:active {\n  transform: scale(0.98);\n}\n\n/* Status Text */\n#status {\n  margin-top: 1rem;\n  font-size: 0.9rem;\n  color: #7f8c8d;\n  font-style: italic;\n}\n\n/* Advice Card */\n.card {\n  background: white;\n  margin-top: 2rem;\n  padding: 2rem;\n  border-radius: 12px;\n  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n  max-width: 400px;\n  width: 90%;\n}\n\n.card h2 {\n  font-size: 0.8rem;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  color: #95a5a6;\n  margin-bottom: 1rem;\n}\n\n#advice-text {\n  font-size: 1.25rem;\n  line-height: 1.6;\n  color: #2c3e50;\n  font-weight: 500;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-04 17:49:04 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 17:51:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 17:53:54 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 17:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 17:58:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

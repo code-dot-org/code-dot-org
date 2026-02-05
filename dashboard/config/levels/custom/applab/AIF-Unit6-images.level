@@ -1,14 +1,13 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 41,
-  "created_at": "2025-12-19T01:12:40.000Z",
+  "created_at": "2026-02-04T20:03:57.000Z",
   "level_num": "custom",
   "user_id": 981,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
-    "validation_enabled": "true",
+    "validation_enabled": true,
     "code_functions": {
       "onEvent": null,
       "button": null,
@@ -213,37 +212,9 @@
       "ledScreen.scrollString": null,
       "compass.getHeading": null
     },
-    "embed": "false",
-    "long_instructions": "![](https://images.code.org/e8500fb7430544e6550286a0c88eb2bf-image-1766107100073.png)\r\n\r\n![](https://images.code.org/6813b547224a43e4e6b0cd652860f383-image-1768408609416.jpeg)\r\n\r\n![](https://images.code.org/fa90ae3c0e8b3b30dc10dd5c5271b287-image-1770232126609.png)\r\n\r\n![](https://images.code.org/f726f4501ebd3bad92625f62d539c1cc-image-1770232126607.png)\r\n\r\n![](https://images.code.org/ff93e09ed6982db9d9d8f301c4b74716-image-1770232126611.png)\r\n\r\n![](https://images.code.org/4876718ab15cd9f722a34e299f850265-image-1770232126610.png)\r\n\r\n![](https://images.code.org/42a5899a8398e1fd60427d7542cf7b1a-image-1770232126610.png)\r\n\r\n![](https://images.code.org/6cbc52285fc3fa8ca73d43a9b69bd872-image-1770232126608.png)\r\n\r\n![](https://images.code.org/826cf2c7ca84b56e9a322ee3720b9b08-image-1770232126610.png)\r\n\r\n![](https://images.code.org/06cc5251aaa9deb2608c3460445e35cc-image-1770232126602.png)\r\n\r\n![](https://images.code.org/64d60a87e867408d83b163ac9cf49960-image-1770232126605.png)\r\n\r\n![](https://images.code.org/bb24a06a17673be82ad37b6c5ecef46c-image-1770232126603.png)\r\n\r\n![](https://images.code.org/9212a3c8db90f342e45babea28e02a68-image-1770232126609.png)\r\n\r\n![](https://images.code.org/3a7dfd3c1033588d3c9e2d3146cc7ecf-image-1770232126606.png)\r\n\r\n![](https://images.code.org/3f90b68411ce80c826c7ee11c3babf63-image-1770232126605.png)\r\n\r\n![](https://images.code.org/8d226b966eef82b8db75ffd13d606ce2-image-1770232126584.png)\r\n\r\n![](https://images.code.org/62db0ad1b0d1a601b073687638868ddf-image-1770232126609.png)\r\n\r\n![](https://images.code.org/78367f1328ba3613d2e50105ea6158e0-image-1770232126604.png)\r\n\r\n![](https://images.code.org/cdc907549dd9bad9ad83e0c2c1697feb-image-1770233875936.png)\r\n\r\n![](https://images.code.org/d2c4d1ccddaac448bff79fdb57cce3cc-image-1770233875937.png)\r\n\r\n![](https://images.code.org/3dde18bd30f23feef90665bac9a9ce62-image-1770233875937.png)\r\n\r\n![](https://images.code.org/0b2b46e8085223c3f577edec84fd5a60-image-1770234023360.jpg)",
-    "mini_rubric": "false",
-    "ai_tutor_available": "false",
-    "submittable": "false",
-    "hide_share_and_remix": "false",
-    "never_autoplay_video": "false",
-    "droplet_tooltips_disabled": "false",
-    "lock_zero_param_functions": "false",
-    "free_play": "false",
-    "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false",
-    "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
-    "design_mode_at_start": "false",
-    "hide_design_mode": "false",
-    "beginner_mode": "false",
-    "hide_view_data_button": "false",
-    "show_debug_watch": "false",
-    "expand_debugger": "false",
-    "fail_on_lint_errors": "false",
-    "debugger_disabled": "false",
-    "widget_mode": "false",
-    "libraries_enabled": "false",
-    "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-14 16:37:06 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":981,\"changed_by_email\":\"jorge@code.org\"},{\"changed_at\":\"2026-02-04 20:02:47 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":981,\"changed_by_email\":\"jorge@code.org\"}]"
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>
