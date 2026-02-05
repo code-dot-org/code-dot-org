@@ -38,6 +38,7 @@ import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
+import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
@@ -272,20 +273,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         );
       } else {
         tabMap[Tabs.AiTutor] = (
-          <>
-            <div>
-              <p>This is where instructions drawer will be displayed.</p>
-            </div>
-            <AiTutorChat
-              hiddenContextCallback={hiddenContextCallback}
-              aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-              levelName={levelName}
-              channelId={channelId}
-              aiTutorChatButtonData={aiTutorChatButtonData}
-              aiTutorSystemPromptName={aiTutorSystemPromptName}
-              aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-            />
-          </>
+          <AiTutorChatWithInstructionDrawer
+            hiddenContextCallback={hiddenContextCallback}
+            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
+            levelName={levelName}
+            channelId={channelId}
+            aiTutorChatButtonData={aiTutorChatButtonData}
+            aiTutorSystemPromptName={aiTutorSystemPromptName}
+            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          />
         );
       }
     }
