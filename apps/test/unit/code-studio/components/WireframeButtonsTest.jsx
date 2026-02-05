@@ -56,7 +56,7 @@ describe('WireframeButtons', () => {
       expect(wrapper).to.containMatchingElement(
         <span>
           <a className="WireframeButtons_button" href="/s/artist">
-            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
+            <i className="fa fa-pen-to-square" /> {i18n.makeMyOwn()}
           </a>
         </span>
       );
@@ -65,7 +65,7 @@ describe('WireframeButtons', () => {
       expect(wrapper).to.containMatchingElement(
         <span>
           <a className="WireframeButtons_button" href="/p/artist">
-            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
+            <i className="fa fa-pen-to-square" /> {i18n.makeMyOwn()}
           </a>
         </span>
       );

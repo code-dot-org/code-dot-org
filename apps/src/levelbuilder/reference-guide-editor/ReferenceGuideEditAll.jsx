@@ -197,7 +197,7 @@ export default function ReferenceGuideEditAll(props) {
           return [
             <div key={`${guide.key}-actions`} className="actions-box">
               <MiniIconButton
-                icon="pencil-square-o"
+                icon="pen-to-square"
                 alt="edit"
                 href={`${baseUrl}/${guide.key}/edit`}
               />
