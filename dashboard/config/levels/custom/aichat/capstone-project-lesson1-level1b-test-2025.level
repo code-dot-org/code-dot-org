@@ -1,6 +1,5 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2026-02-03T17:57:54.000Z",
   "level_num": "custom",
@@ -46,9 +45,10 @@
       "multimodalEnabled": true
     },
     "display_name": "Project Ideas & Scope ",
-    "bubble_choice_description": "Use this chat to think through your project’s idea, audience, scope, and potential impact. It can help you refine your purpose, make realistic MVP decisions, and consider who your design serves. ***(supports completing Milestone 1)***.",
+    "bubble_choice_description": "Use this chat to think through your project’s idea, audience, scope, and potential impact. It can help you refine your purpose, make realistic MVP decisions, and consider who your design serves. ***(useful for Milestone 1)***.",
     "thumbnail_url": "https://images.code.org/443b0ad9b35e6fec04838f1eb982baa5-Light Bulb Icon.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-03T17:57:54.718+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level1c-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level1c-test-2025\"},{\"changed_at\":\"2026-02-03 18:03:08 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:39:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:27:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-03T17:57:54.718+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level1c-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level1c-test-2025\"},{\"changed_at\":\"2026-02-03 18:03:08 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 20:39:27 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-03 21:27:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-04 19:54:24 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -3,144 +3,18 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#### Let’s see what Sal and Hadi have to say about challenges and benefits of AI in education.
-<br>
+# Impact on Educators
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📝 Key Points from the Video</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+#### For many educators, AI is surprising in how well it can assist with tasks such as drafting lesson plans, providing feedback on writing, and supporting creative activities like storytelling or project brainstorming.
 
-* #### AI in education poses risks such as errors, biases, misinformation, and potential to generate harmful content, prompting cautious integration by schools.
-* #### Different AI tools offer varied functions; not all are suited for educational use.
-* #### Some educational AI tools are specifically designed to mitigate risks by enhancing student privacy and reducing misinformation and biases.
-* #### Educators and IT departments need to carefully select AI tools that are appropriate and safe for educational settings, rather than outright banning or unselectively adopting AI.
-* #### It's important to recognize that existing educational tools and resources, including the Internet and human interactions, also exhibit biases and misinformation.
+#### As the graphic below shows, teachers spend a significant portion of their roughly 50-hour workweek on preparation, evaluation, and administrative tasks—often outside of direct interaction with students. These are areas where AI can help save time without changing the core role of the teacher.
 
-</p></div>
-</details>
+<p style="text-align:center;"><img src="https://images.code.org/43c45055ef874764a0fdf2a7c1d0387a-Screenshot 2026-02-04 at 2.27.14 PM.png" alt="Pie chart showing 49% of a teacher's time in direct interaction with students."></p>
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 15px;">
+*Image: McKinsey 2020*
 
-<!-- Scenario 1 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A middle school assistant principal uses AI to summarize attendance records and behavior referrals across all grade levels. The tool highlights patterns by time of day and student group that would take hours to find manually. This allows the administrator to plan targeted interventions and share clear data with teachers during team meetings.
-</p>
-</div>
+#### AI is not likely to replace teachers; instead, it functions best as a virtual teaching assistant that reduces workload and supports day-to-day tasks. By handling routine or time-consuming work, AI can help educators spend more time on student instruction, coaching, and relationship-building—the parts of teaching that matter most. When used thoughtfully, AI also has the potential to ease teacher burnout and help schools manage staffing challenges by supporting, rather than replacing, educators.
 
-<!-- Scenario 2 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A 10th-grade student submits a polished history essay on the Civil Rights Movement that was generated almost entirely by AI. When asked follow-up questions during a class discussion, the student struggles to explain key events or arguments from the essay. This reveals a gap between the submitted work and the student’s actual understanding.
-</p>
-</div>
-
-<!-- Scenario 3 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A 4th-grade science teacher uses AI to generate reading passages about ecosystems at multiple reading levels, including simplified texts and vocabulary supports for English learners. Students work on the same topic while accessing materials that match their reading ability. The teacher reviews and edits the content to ensure accuracy and appropriateness.
-</p>
-</div>
-
-<!-- Scenario 4 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A 7th-grade math student regularly uses AI to solve homework problems without attempting them first. During a unit test that does not allow AI, the student has difficulty explaining steps and reasoning. Over time, this dependence weakens problem-solving skills and confidence.
-</p>
-</div>
-
-<!-- Scenario 5 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-In an 8th-grade English class, students receive AI-generated feedback on essay drafts focused on organization, clarity, and grammar. They revise their writing based on the feedback before submitting a final draft. This allows the teacher to focus grading time on deeper analysis and argument quality.
-</p>
-</div>
-
-<!-- Scenario 6 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A class uses an AI writing tool that requires students to create accounts using their school email addresses. The tool stores student writing samples and usage data, but it is unclear how long the data is kept or who can access it. This raises concerns about student privacy and data security.
-</p>
-</div>
-
-<!-- Scenario 7 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A high school Algebra I student who missed several classes uses an AI tutor to review linear equations at home. The tutor provides step-by-step explanations and adjusts practice problems based on the student’s responses. This personalized support helps the student prepare for the upcoming unit assessment.
-</p>
-</div>
-
-<!-- Scenario 8 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-An elementary teacher begins using AI-generated lesson plans every day without modifying them for their class. Lessons become more generic and less responsive to student questions, interests, and pacing. Over time, both teacher autonomy and student engagement begin to decline.
-</p>
-</div>
-
-<!-- Scenario 9 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-In a 6th-grade social studies class, students use AI to brainstorm ideas for a group project on ancient civilizations. The tool suggests guiding questions, research topics, and possible presentation formats. Students choose which ideas to develop and create the final project collaboratively.
-</p>
-</div>
-
-<!-- Scenario 10 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A high school student uses AI to generate examples for a career research assignment. The AI consistently associates certain careers with specific genders or cultural backgrounds. This reinforces stereotypes and can influence how students view their own future opportunities.
-</p>
-</div>
-
-<!-- Scenario 11 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A school district considers banning all AI tools after concerns about misuse, while some teachers are already using them informally. The IT department and instructional leaders instead work together to evaluate specific AI tools for privacy, safety, and instructional value. They adopt a small set of approved tools and provide guidance for responsible classroom use.</p>
-</div>
-
-<!-- Scenario 12 -->
-<div style="background:#fff; padding:15px; text-align:center; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:18px;">
-<div style="height:90px; background:#ececec; border-radius:6px; margin-bottom:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:#666;">
-Image placeholder
-</div>
-<p style="font-size:14px;">
-A high school student uses AI to research information for a current events presentation. The AI confidently provides incorrect or outdated facts mixed in with accurate information. Without verifying sources, the student includes the misinformation in their project.</p>
-</div>
-
-</div>
-
+#### We'll dive into how educators can use AI to help save time on tasks such as preparation, evaluation, feedback, and administrative tasks in Module 3, Transforming Teaching with AI.
 
 MARKDOWN
