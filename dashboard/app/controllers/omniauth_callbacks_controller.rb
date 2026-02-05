@@ -430,7 +430,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Get user type from Clever roles to set in info hash. This maintains compatibility
     # with existing logic that reads user_type from info hash during sign up.
-    roles = auth&.extra&.raw_info&.canonical&.data&.roles || {}
+    roles = auth.dig(:extra, :raw_info, :canonical, :data, :roles) || {}
     teacher_or_staff = roles.any? do |role, value|
       CLEVER_TEACHER_ROLE_KEYS.include?(role.to_s) && value.present?
     end

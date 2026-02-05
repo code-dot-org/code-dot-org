@@ -15,7 +15,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         "name": "Maurice Schaefer",
         "first_name": "Maurice",
         "last_name": "Schaefer",
-        "email": "test@example.com",
+        "email": "#{Faker::Internet.email}",
         "user_type": "user"
       },
       "credentials": {
@@ -51,7 +51,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
             "data": {
               "created": "2024-02-13T16:43:22.075Z",
               "district": "54299f6ecc544da87c000070",
-              "email": "test@example.com",
+              "email": "#{Faker::Internet.email}",
               "last_modified": "2024-02-13T16:43:22.075Z",
               "name": {
                 "first": "Maurice",
@@ -193,7 +193,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     auth = generate_auth_user_hash(
       provider: 'clever',
       uid: '1111',
-      email: 'first_last@clever-teacher.xx',
+      email: Faker::Internet.email,
       user_type: 'user'
     )
     auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
@@ -236,7 +236,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     auth = generate_auth_user_hash(
       provider: 'clever',
       uid: '2222',
-      email: 'staff_member@clever-staff.xx',
+      email: Faker::Internet.email,
       user_type: 'user'
     )
     auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '654321'}}}}
