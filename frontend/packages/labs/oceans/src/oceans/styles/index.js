@@ -421,8 +421,8 @@ const styles = {
     cursor: 'pointer',
     height: '100%',
     border: 'none',
-    padding: '10px 10px',
-    margin: 0,
+    padding: '10px',
+    margin: 0
   },
   infoIconContainer: {
     position: 'absolute',
