@@ -8,8 +8,9 @@
 # EXAMPLES:
 #   bin/pumactl_admin stats
 #   bin/pumactl_admin stats --query=booted_workers
-#   bin/pumactl_admin stats -q=worker_status.0.last_status.backlog
+#   bin/pumactl_admin stats --query=worker_status.0.last_status.backlog
 #   bin/pumactl_admin phased-restart
+#   bin/pumactl_admin thread-backtraces
 #
 # CUSTOM ARGUMENTS:
 #   --query, -q    JSON path to extract specific data from the output.
