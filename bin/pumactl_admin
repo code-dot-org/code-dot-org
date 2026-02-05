@@ -62,7 +62,7 @@ if status.success?
 
       if query_path
         # Send preamble STDERR so it doesn't corrupt the pipe.
-        warn preamble unless preamble.strip.empty?
+        warn preamble.strip unless preamble.strip.empty?
 
         # Navigate the JSON safely using the query path.
         keys = query_path.split('.').map {|k| /^\d+$/.match?(k) ? k.to_i : k}
