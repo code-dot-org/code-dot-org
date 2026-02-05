@@ -26,6 +26,30 @@ class StudentSnapshotsController < ApplicationController
     render json: {lessons: lessons_data, hasUnnumberedLessons: unit.has_unnumbered_lessons?}
   end
 
+  # GET /student_snapshots/ai_generated_lesson_feedback
+  def ai_generated_lesson_feedback
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+
+    section_id = nil
+    teacher_id = nil
+    if student_id && unit_id
+      student = User.find_by(id: student_id)
+      if student
+        section = student.sections_as_student.joins(:script).where(scripts: {id: unit_id}).first
+        section_id = section&.id
+        teacher_id = section&.teacher&.id
+      end
+    end
+
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+
+    response = AiStudentSnapshotHelper.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    render json: response
+  end
+
   # GET /student_snapshots/cfu_levels/:lesson_id
   # Returns all CFU levels from the specified lesson, including metadata and basic question content.
   # CFU levels are identified by progression: "Check Your Understanding"
