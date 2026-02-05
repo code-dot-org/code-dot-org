@@ -5,6 +5,10 @@ class AichatGeminiClient < AichatAiClient
     "https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent?key=#{api_key}"
   end
 
+  private def stream_url
+    "https://generativelanguage.googleapis.com/v1beta/models/#{model}:streamGenerateContent?key=#{api_key}&alt=sse"
+  end
+
   # Take response_body and raise any errors if appropriate.
   private def raise_possible_response_errors_from_body(response_body)
     raise StandardError.new(response_body['error']) if response_body['error']
@@ -36,7 +40,7 @@ class AichatGeminiClient < AichatAiClient
   end
 
   # Create request body.
-  private def create_body(config, request, context = [])
+  private def create_body(config, request, context = [], stream: false) # stream argument is not used in gemini client
     if config.dig(:response, :validation, :type) == 'jsonSchema'
       response_mime_type = config[:response][:mimeType]
       response_json_schema = config[:response][:validation][:schema]
@@ -89,5 +93,21 @@ class AichatGeminiClient < AichatAiClient
   # Helper to format gemini "parts" array from internal representation.
   private def format_parts(internal_parts)
     internal_parts&.map {|internal_part| format_part(internal_part)}
+  end
+
+  private def extract_text_from_event(event)
+    event.dig('candidates', 0, 'content', 'parts', 0, 'text')
+  end
+
+  private def http_open_timeout(fallback = 5)
+    DCDO.get('gemini_http_open_timeout', fallback || 5)
+  end
+
+  private def http_read_timeout(fallback = 30)
+    DCDO.get('gemini_http_read_timeout', fallback || 30)
+  end
+
+  private def streaming_header_attributes
+    {'Accept' => 'application/json'}
   end
 end

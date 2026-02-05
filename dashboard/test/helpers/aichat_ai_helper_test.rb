@@ -265,4 +265,236 @@ class AichatAiHelperTest < ActionView::TestCase
       _(err.message).must_include "boom"
     end
   end
+
+  describe '.stream_assistant_response' do
+    let(:model_id) {'gpt-4o-mini'}
+    let(:client_type) {SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB]}
+    let(:level_id) {101}
+    let(:project_id) {202}
+    let(:user_id) {303}
+    let(:encrypted_channel_id) {'encrypted-channel-id'}
+    let(:customizations) do
+      {
+        'selectedModelId' => model_id,
+        'temperature' => '0.6',
+        'clientType' => client_type,
+        'systemPrompt' => 'System prompt',
+        'retrievalContexts' => ['context'],
+        'responseJsonSchema' => {'type' => 'string'}
+      }
+    end
+    let(:stored_messages) {[]}
+    let(:new_message) {{'chatMessageText' => 'Hello'}}
+
+    before do
+      AichatAiHelper.stubs(:storage_id_for_user_id).with(user_id).returns('storage-id')
+      AichatAiHelper.stubs(:storage_encrypt_channel_id).with('storage-id', project_id).returns(encrypted_channel_id)
+    end
+
+    it 'streams deltas and returns the full response' do
+      usage_reporter = stub('usage_reporter')
+      client = Class.new do
+        def stream_response(_, _, _)
+          yield 'Hello'
+          yield nil
+          yield ''
+          yield ' world'
+        end
+      end.new
+      config = stub('config')
+      request = stub('request')
+      context = stub('context')
+
+      AichatAiUsageReporter.expects(:new).with(model_id, user_id, project_id, level_id).returns(usage_reporter)
+      AichatAiHelper.expects(:create_ai_client_instance).with(client_type, model_id, usage_reporter).returns(client)
+      AichatAiHelper.expects(:get_config_request_context).with(
+        stored_messages,
+        new_message,
+        0.6,
+        'System prompt',
+        ['context'],
+        model_id,
+        level_id,
+        encrypted_channel_id,
+        user_id,
+        project_id,
+        client_type,
+        {'type' => 'string'}
+      ).returns([config, request, context])
+
+      deltas = []
+      full_text = AichatAiHelper.stream_assistant_response(
+        customizations,
+        stored_messages,
+        new_message,
+        level_id,
+        project_id,
+        user_id
+      ) do |delta, error|
+        deltas << [delta, error]
+      end
+
+      _(full_text).must_equal 'Hello world'
+      _(deltas).must_equal [['Hello', nil], [' world', nil]]
+    end
+
+    it 'raises an error when client does not support streaming' do
+      usage_reporter = stub('usage_reporter')
+      client = Object.new
+
+      AichatAiUsageReporter.expects(:new).with(model_id, user_id, nil, level_id).returns(usage_reporter)
+      AichatAiHelper.expects(:create_ai_client_instance).with(client_type, model_id, usage_reporter).returns(client)
+
+      err = _(
+        lambda do
+          AichatAiHelper.stream_assistant_response(
+            customizations,
+            stored_messages,
+            new_message,
+            level_id,
+            nil,
+            user_id
+          )
+        end
+      ).must_raise ArgumentError
+
+      _(err.message).must_include "Streaming is not supported for model #{model_id}"
+    end
+  end
+
+  describe '.broadcast_error' do
+    it 'broadcasts a standardized error payload' do
+      AichatAiHelper.expects(:broadcast_to_stream).with(
+        'stream-name',
+        {event: 'error', code: 'MODEL_TIMEOUT', details: 'details', request_id: 5}
+      )
+
+      AichatAiHelper.broadcast_error('stream-name', 'MODEL_TIMEOUT', 5, 'details')
+    end
+  end
+
+  describe '.broadcast_to_stream' do
+    it 'uses ActionCable to broadcast a payload' do
+      ActionCable.server.expects(:broadcast).with('stream-name', {event: 'ping'})
+
+      AichatAiHelper.broadcast_to_stream('stream-name', {event: 'ping'})
+    end
+  end
+
+  describe '.token_throttling_key' do
+    it 'includes model and user identifiers' do
+      key = AichatAiHelper.token_throttling_key('model-id', 42)
+
+      _(key).must_equal 'aichat/tokens/model/model-id/user/42'
+    end
+  end
+
+  describe '.handle_error' do
+    it 'updates the request and notifies Honeybadger' do
+      request = mock('request')
+      details = 'Something went wrong'
+
+      AichatAiHelper.stubs(:rack_env?).with(:development).returns(false)
+      request.expects(:update!).with(response: details, execution_status: 500)
+      request.stubs(:to_json).returns('{"id":1}')
+      request.stubs(:user_id).returns(123)
+      Honeybadger.expects(:notify).with(
+        'source',
+        context: {
+          request: '{"id":1}',
+          user_id: 123,
+          details: details,
+          locale: 'en'
+        }
+      )
+
+      AichatAiHelper.handle_error('source', details, request, 'en', 500)
+    end
+  end
+
+  describe '.report_job_start' do
+    it 'pushes a start metric with environment and model id' do
+      request = OpenStruct.new(model_customizations: {'selectedModelId' => 'model-id'})
+      metrics_payload = nil
+
+      CDO.stubs(:rack_env).returns('test')
+      Cdo::Metrics.expects(:push).with do |_, payload|
+        metrics_payload = payload
+      end
+
+      AichatAiHelper.report_job_start('TestJob', request)
+
+      _(metrics_payload.length).must_equal 1
+      metric = metrics_payload.first
+      _(metric[:metric_name]).must_equal 'TestJob.Start'
+      _(metric[:dimensions]).must_equal [
+        {name: 'Environment', value: 'test'},
+        {name: 'ModelId', value: 'model-id'}
+      ]
+    end
+  end
+
+  describe '.report_job_finish' do
+    it 'pushes finish and execution time metrics including multimodal dimension' do
+      model_id = SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+      request = OpenStruct.new(
+        execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS],
+        model_customizations: {'selectedModelId' => model_id},
+        new_message: {'assets' => [{'filename' => 'image.png'}]},
+        stored_messages: []
+      )
+      metrics_payload = nil
+
+      CDO.stubs(:rack_env).returns('test')
+      AichatAiHelper.instance_variable_set(:@start_time, Time.at(0))
+      Time.stubs(:now).returns(Time.at(10))
+      Cdo::Metrics.expects(:push).with do |_, payload|
+        metrics_payload = payload
+      end
+
+      AichatAiHelper.report_job_finish('TestJob', request)
+
+      _(metrics_payload.length).must_equal 3
+      finish_metric = metrics_payload.find {|metric| metric[:metric_name] == 'TestJob.Finish'}
+      _(finish_metric[:dimensions]).must_include({name: 'Environment', value: 'test'})
+      _(finish_metric[:dimensions]).must_include({name: 'ModelId', value: model_id})
+      _(finish_metric[:dimensions]).must_include({name: 'ExecutionStatus', value: 'SUCCESS'})
+
+      execution_metrics = metrics_payload.select {|metric| metric[:metric_name] == 'TestJob.ExecutionTime'}
+      _(execution_metrics.length).must_equal 2
+      _(execution_metrics.all? {|metric| metric[:value] == 10}).must_equal true
+      _(execution_metrics.any? {|metric| metric[:dimensions].include?({name: 'Multimodal', value: 'true'})}).must_equal true
+    end
+  end
+
+  describe '.request_multimodal?' do
+    it 'returns true when the new message includes assets' do
+      request = OpenStruct.new(new_message: {'assets' => [{'filename' => 'image.png'}]}, stored_messages: [])
+
+      _(AichatAiHelper.request_multimodal?(request)).must_equal true
+    end
+
+    it 'returns false when no assets are present' do
+      request = OpenStruct.new(new_message: {}, stored_messages: [{'chatMessageText' => 'hi'}])
+
+      _(AichatAiHelper.request_multimodal?(request)).must_equal false
+    end
+  end
+
+  describe '.openai_or_gemini?' do
+    it 'recognizes OpenAI and Gemini model ids' do
+      model_id = SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+
+      _(AichatAiHelper.openai_or_gemini?(model_id)).must_equal true
+      _(AichatAiHelper.openai_or_gemini?('other-model')).must_equal false
+    end
+  end
+
+  describe '.get_model_id' do
+    it 'returns the selected model id from the request' do
+      request = OpenStruct.new(model_customizations: {'selectedModelId' => 'model-id'})
+
+      _(AichatAiHelper.get_model_id(request)).must_equal 'model-id'
+    end
+  end
 end

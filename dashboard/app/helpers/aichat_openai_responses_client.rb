@@ -5,6 +5,10 @@ class AichatOpenaiResponsesClient < AichatAiClient
     "https://api.openai.com/v1/responses"
   end
 
+  private def stream_url
+    url
+  end
+
   # Take response_body and raise any errors if appropriate.
   private def raise_possible_response_errors_from_body(response_body)
     raise StandardError.new(response_body['error']) if response_body['error']
@@ -26,7 +30,7 @@ class AichatOpenaiResponsesClient < AichatAiClient
   end
 
   # Create request body.
-  private def create_body(config, request, context = [])
+  private def create_body(config, request, context = [], stream: false)
     if config.dig(:response, :validation, :type) == 'jsonSchema'
       response_json_schema = config[:response][:validation][:schema]
       text = {
@@ -56,6 +60,7 @@ class AichatOpenaiResponsesClient < AichatAiClient
       input: input
     }.compact # Use compact to remove null text
 
+    body[:stream] = true if stream
     body
   end
 
@@ -109,5 +114,31 @@ class AichatOpenaiResponsesClient < AichatAiClient
       end
     end
     message
+  end
+
+  private def extract_text_from_event(event)
+    case event['type']
+    when 'response.output_text.delta'
+      return event['delta'] if event['delta'].is_a?(String)
+      return event.dig('delta', 'content') if event['delta'].is_a?(Hash)
+    end
+
+    if event.key?('choices')
+      return event.dig('choices', 0, 'delta', 'content')
+    end
+
+    nil
+  end
+
+  private def http_open_timeout(fallback = 5)
+    DCDO.get('openai_http_open_timeout', fallback || 5)
+  end
+
+  private def http_read_timeout(fallback = 30)
+    DCDO.get('openai_http_read_timeout', fallback || 30)
+  end
+
+  private def streaming_header_attributes
+    {"Accept" => "text/event-stream"}
   end
 end

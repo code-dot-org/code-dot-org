@@ -163,6 +163,52 @@ class AichatAiClientTest < ActionView::TestCase
     AichatAssetHelper.stubs(:get_asset_base64_string).returns(@image_data, @pdf_data)
   end
 
+  describe 'process_sse_stream' do
+    let(:client) {AichatAiClient.new('api-key', 'model-id')}
+
+    it 'yields parsed SSE data in order and skips invalid chunks' do
+      http = mock
+      req = mock
+      response = mock
+      response.stubs(:is_a?).with(Net::HTTPSuccess).returns(true)
+      response.expects(:read_body).multiple_yields(
+        "data: {\"first\":1}\n",
+        "data: {\"second\":2}\ndata: [DONE]\n",
+        "data: {\"thi",
+        "rd\":3}\n",
+        "data:\n",
+        "data: not json\n"
+      )
+
+      http.expects(:request).with(req).yields(response)
+
+      yielded = []
+      client.send(:process_sse_stream, http, req) do |parsed|
+        yielded << parsed
+      end
+
+      assert_equal [{"first" => 1}, {"second" => 2}, {"third" => 3}], yielded
+    end
+
+    it 'raises when response is not successful' do
+      http = mock
+      req = mock
+      response = mock
+      response.stubs(:is_a?).with(Net::HTTPSuccess).returns(false)
+      response.stubs(:code).returns('500')
+      response.stubs(:body).returns('boom')
+
+      http.expects(:request).with(req).yields(response)
+
+      error = assert_raises(StandardError) do
+        client.send(:process_sse_stream, http, req) {}
+      end
+
+      assert_includes error.message, '500'
+      assert_includes error.message, 'boom'
+    end
+  end
+
   private def call_get_response(model_id, level, new_message, json_schema)
     usage_reporter = AichatAiUsageReporter.new(model_id, @user_id, @project_id, level.id)
 

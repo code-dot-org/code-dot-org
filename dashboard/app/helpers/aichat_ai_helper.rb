@@ -203,23 +203,76 @@ module AichatAiHelper
     response
   end
 
+  def self.stream_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id, &on_delta)
+    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
+
+    model_id = aichat_model_customizations["selectedModelId"]
+    temperature = aichat_model_customizations['temperature'].to_f
+    client_type = aichat_model_customizations['clientType']
+    system_prompt = aichat_model_customizations['systemPrompt']
+    retrieval_contexts = aichat_model_customizations['retrievalContexts']
+    json_schema = aichat_model_customizations['responseJsonSchema']
+
+    usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
+    client = create_ai_client_instance(client_type, model_id, usage_reporter)
+    raise ArgumentError, "Streaming is not supported for model #{model_id}" unless client.respond_to?(:stream_response)
+
+    config, request, context = get_config_request_context(
+      stored_messages,
+      new_message,
+      temperature,
+      system_prompt,
+      retrieval_contexts,
+      model_id,
+      level_id,
+      encrypted_channel_id,
+      user_id,
+      project_id,
+      client_type,
+      json_schema
+    )
+
+    full_text = +""
+
+    client.stream_response(config, request, context) do |text_delta|
+      next if text_delta.nil? || text_delta == ''
+
+      full_text << text_delta
+
+      on_delta&.call(text_delta, nil)
+    end
+
+    full_text
+  end
+
+  def self.broadcast_error(stream_name, code, request_id = nil, details = nil)
+    payload = {event: 'error', code: code, details: details, request_id: request_id}
+
+    broadcast_to_stream(stream_name, payload)
+  end
+
+  def self.broadcast_to_stream(stream_name, payload)
+    ActionCable.server.broadcast(stream_name, payload)
+  end
+
   def self.token_throttling_key(model_id, user_id)
     # "/user/" included to leave space for potential throttling at the classroom/teacher level.
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
     TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
   end
 
-  def self.handle_error(source, exception, request, locale)
+  def self.handle_error(source, details, request, locale, status_code = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
     if rack_env?(:development)
-      puts "#{source} Error: #{exception.full_message}"
+      puts "#{source} Error: #{details}"
     end
 
-    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    request&.update!(response: details, execution_status: status_code)
     Honeybadger.notify(
-      "#{source} failed with unexpected error: #{exception.message}",
+      source,
       context: {
-        request: request.to_json,
-        user_id: request.user_id,
+        request: request&.to_json,
+        user_id: request&.user_id,
+        details: details,
         locale: locale
       }
     )
@@ -256,5 +309,87 @@ module AichatAiHelper
       _, project_id = get_storage_id_and_project_id(context[:channelId])
       project_id
     end
+  end
+
+  def self.report_job_start(job_name, request)
+    @start_time = Time.now
+
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: "#{job_name}.Start",
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'ModelId', value: get_model_id(request)},
+          ],
+        }
+      ]
+    )
+  end
+
+  def self.report_job_finish(job_name, request)
+    execution_time = Time.now - @start_time
+    status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
+
+    execution_time_metric_base = {
+      metric_name: "#{job_name}.ExecutionTime",
+      value: execution_time,
+      unit: 'Seconds',
+      timestamp: Time.now,
+      dimensions: [],
+    }
+
+    execution_time_dimensions_base = [
+      {name: 'Environment', value: CDO.rack_env},
+      {name: 'ModelId', value: get_model_id(request)},
+    ]
+
+    metrics = [
+      {
+        metric_name: "#{job_name}.Finish",
+        value: 1,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [
+          {name: 'Environment', value: CDO.rack_env},
+          {name: 'ModelId', value: get_model_id(request)},
+          {name: 'ExecutionStatus', value: status_name},
+        ],
+      },
+      execution_time_metric_base.merge({dimensions: execution_time_dimensions_base}),
+    ]
+
+    model_id = get_model_id(request)
+    if openai_or_gemini?(model_id)
+      multimodal_dimension = {name: 'Multimodal', value: request_multimodal?(request).to_s}
+      execution_time_metric_multimodal = execution_time_metric_base.merge({dimensions: execution_time_dimensions_base + [multimodal_dimension]})
+      metrics.push(execution_time_metric_multimodal)
+    end
+
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
+  end
+
+  def self.request_multimodal?(request)
+    (request.new_message['assets']&.length || 0) > 0 ||
+      request.stored_messages.any? {|message| (message['assets']&.length || 0) > 0}
+  end
+
+  def self.openai_or_gemini?(model_id)
+    [
+      SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_3_PRO_PREVIEW],
+    ].include? model_id
+  end
+
+  def self.get_model_id(request)
+    request.model_customizations['selectedModelId']
   end
 end
