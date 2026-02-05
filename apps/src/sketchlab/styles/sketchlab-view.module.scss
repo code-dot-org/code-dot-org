@@ -12,3 +12,7 @@
 :global(.excalidraw .popover) {
   display: block;
 }
+
+:global(.excalidraw .sidebar-trigger) {
+  display: none;
+}
