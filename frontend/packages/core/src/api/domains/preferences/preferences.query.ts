@@ -346,3 +346,17 @@ export function useSetAiDifferentiationEnabled(
     ...options,
   });
 }
+
+export function useSetSectionOrder(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<unknown, Error, {orderedSectionIds: number[]}>,
+    'mutationFn'
+  >,
+) {
+  return useMutation({
+    mutationFn: (params: {orderedSectionIds: number[]}) =>
+      api.preferences.setSectionOrder(params),
+    ...options,
+  });
+}

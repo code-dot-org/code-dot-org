@@ -80,10 +80,15 @@ export const PredictResponseSchema = z.object({
   data: z.string(),
 });
 
-export const SectionSummarySchema = z.object({
-  response_count: z.number(),
-  num_students: z.number(),
-});
+export const SectionSummarySchema = z
+  .object({
+    response_count: z.number(),
+    num_students: z.number(),
+  })
+  .transform(data => ({
+    responseCount: data.response_count,
+    numStudents: data.num_students,
+  }));
 
 export const ScriptLevelPathLinkSchema = z.object({
   script: z.string(),

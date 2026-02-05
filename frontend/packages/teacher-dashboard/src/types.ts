@@ -1,6 +1,9 @@
 // Based partly on the generated curriculum shared constants.
 
-import {Section, SectionLoginType} from '@code-dot-org/api/models/sections';
+import type {
+  Section,
+  SectionLoginTypeKey,
+} from '@code-dot-org/api/models/sections';
 import {UserType, OAuthSectionType} from '@code-dot-org/user';
 
 export enum PublishedState {
@@ -191,7 +194,7 @@ export interface UserEditableSection {
   grades?: string[];
   hidden?: boolean;
   lessonExtras?: boolean;
-  loginType?: SectionLoginType;
+  loginType?: SectionLoginTypeKey;
   name?: string;
   pairingAllowed?: boolean;
   participantType?: string;
@@ -245,7 +248,7 @@ export interface ServerSection {
   isAssignedStandaloneCourse: boolean;
   is_assigned_single_unit_course?: boolean;
   lesson_extras: boolean;
-  login_type: SectionLoginType;
+  login_type: SectionLoginTypeKey;
   login_type_name?: string;
   name: string;
   pairing_allowed: boolean;
