@@ -10,7 +10,7 @@ import {getStore} from '@cdo/apps/redux';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {findProfanity, extractTextFromCode} from '@cdo/apps/utils';
+import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import Spinner from '../../../sharedComponents/Spinner';
@@ -21,6 +21,7 @@ import loadLibrary from './libraryLoader';
 import LibraryPublisher from './LibraryPublisher';
 import PublishSuccessDisplay from './PublishSuccessDisplay';
 import ShareTeacherLibraries from './ShareTeacherLibraries';
+import {extractTextFromCode} from './utils';
 
 const DEFAULT_COPY_BUTTON_TEXT = i18n.copyId();
 
