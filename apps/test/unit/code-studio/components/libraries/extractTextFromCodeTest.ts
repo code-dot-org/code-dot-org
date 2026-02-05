@@ -1,4 +1,4 @@
-import {extractTextFromCode} from '@cdo/apps/code-studio/components/libraries/utils';
+import {extractTextFromCode} from '@cdo/apps/code-studio/components/libraries/extractTextFromCode';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -49,7 +49,6 @@ describe('extractTextFromCode', () => {
     const code = 'if(artistList[i]) == artist';
     const result = extractTextFromCode(code);
     expect(result).to.equal('if artistList artist');
-    expect(result).to.not.include('if(artlistList');
   });
 
   it('removes brackets that affect tokenization', () => {
