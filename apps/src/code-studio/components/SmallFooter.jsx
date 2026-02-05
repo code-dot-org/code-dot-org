@@ -221,7 +221,7 @@ export default class SmallFooter extends React.Component {
         color="gray"
         icon={{
           iconName: 'copyright',
-          iconStyle: 'light',
+          iconStyle: 'regular',
         }}
         isIconOnly
         onClick={this.clickBaseCopyright}
