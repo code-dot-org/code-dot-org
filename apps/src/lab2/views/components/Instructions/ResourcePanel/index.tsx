@@ -21,6 +21,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
@@ -137,6 +138,11 @@ type ResourcePanelProps = InstructionsProps & {
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
   backpackProps?: BackpackProps;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 };
 
 /**
@@ -162,6 +168,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   documentationUrl,
   sidebarOnly = false,
   backpackProps,
+  onImageFlagged,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -292,6 +299,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
+          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -340,6 +348,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackProps,
     setBackpackTabAsActive,
     backpackRefreshKey,
+    onImageFlagged,
   ]);
 
   const hasTabs = useMemo(() => {
@@ -464,15 +473,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {isOnboardingTourEnabled && <OnboardingTourSteps />}
-        {isValidationTourEnabled && (
+        <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
+          <OnboardingTourSteps />
+        </IntroJSTourWrapper>
+        <IntroJSTourWrapper enabled={isValidationTourEnabled}>
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
             setCurrentTab={setCurrentTab}
             onValidate={instructionsProps.validationSettings?.onValidate}
           />
-        )}
+        </IntroJSTourWrapper>
         <div
           className={classNames(
             styles.sidebar,

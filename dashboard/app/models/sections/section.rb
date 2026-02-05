@@ -116,6 +116,8 @@ class Section < ApplicationRecord
 
   scope :visible, -> {where(hidden: false)}
 
+  validates :ai_chat_access_level, inclusion: {in: SharedConstants::AI_CHAT_ACCESS_LEVELS.values}
+
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
@@ -481,6 +483,8 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
+        ai_chat_access_level: ai_chat_access_level,
       }
     end
   end
@@ -567,6 +571,8 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          is_assigned_essential_ai_chat: assigned_essential_ai_chat?,
+          ai_chat_access_level: ai_chat_access_level,
         }
       )
     end
@@ -694,6 +700,14 @@ class Section < ApplicationRecord
     units = Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)})
     unit_groups = units.map(&:unit_groups).flatten.uniq
     unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
+  end
+
+  def assigned_essential_ai_chat?
+    !!(script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?)
+  end
+
+  def assigned_any_ai_chat?
+    !!(script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

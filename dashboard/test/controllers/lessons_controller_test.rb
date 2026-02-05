@@ -247,6 +247,11 @@ class LessonsControllerTest < ActionController::TestCase
                               params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson2.relative_position}},
                               name: 'anyone can fetch lesson level properties on a lesson without a lesson plan'
 
+  # anyone can fetch lesson level properties by ID
+  test_user_gets_response_for :level_properties_by_id, params: -> {{id: @lesson.id}}, user: nil, response: :success
+
+  test_user_gets_response_for :level_properties_by_id, user: nil, response: :success, params: -> {{id: @lesson2.id}}, name: 'anyone can fetch lesson level properties by ID on a lesson without a lesson plan'
+
   test 'show includes correct SEO data' do
     get :show, params: {
       course_course_name: @course.name,

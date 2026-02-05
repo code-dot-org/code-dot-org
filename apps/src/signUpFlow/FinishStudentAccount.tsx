@@ -102,7 +102,7 @@ const FinishStudentAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
       {'user type': 'student'},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     const fetchGdprData = async () => {
@@ -147,7 +147,7 @@ const FinishStudentAccount: React.FunctionComponent<{
     analyticsReporter.sendEvent(
       EVENTS.PARENT_OR_GUARDIAN_SIGN_UP_CLICKED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     const newIsParentCheckedChoice = !isParent;
     // If the user unchecks the parent checkbox, clear the parent email field
@@ -225,7 +225,7 @@ const FinishStudentAccount: React.FunctionComponent<{
         'has marketing value selected': true,
         'has display name': !nameErrorMessage,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
 
     // Log to Google Analytics

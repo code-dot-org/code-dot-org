@@ -256,16 +256,17 @@ class LtiV1Controller < ApplicationController
     honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
-        reason: reason,
+        reason:,
         details: message,
       }
     )
     Clients::LtiLogger.log_event(
       message,
       {
-        reason: reason,
-        status: status,
-        error: error,
+        reason:,
+        status:,
+        error:,
+        honeybadger_id:,
       }
     )
     @lti_section_sync_result = {error: error, message: message}
@@ -314,11 +315,8 @@ class LtiV1Controller < ApplicationController
       deployment_id = lti_course.lti_deployment_id
       context_id = lti_course.context_id
       nrps_url = lti_course.nrps_url
-      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
-      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
-      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
-      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
-      # records with that.
+      # Requests from the sync button will not include a resource link ID, so it will generally
+      # be nil at this point. Use the one from the lti_course record if present.
       resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
@@ -332,6 +330,17 @@ class LtiV1Controller < ApplicationController
       context_id = params[:context_id]
       nrps_url = params[:nrps_url]
     end
+
+    # This query is also responsible for updating the RLID if it has changed.
+    # This has to happen before we call NRPS, or we will get an error back if the LMS
+    # platform requires an RLID (like Canvas) and the one we have is stale.
+    lti_course ||= Queries::Lti.find_or_create_lti_course(
+      lti_integration_id: lti_integration.id,
+      context_id: context_id,
+      deployment_id: deployment_id,
+      nrps_url: nrps_url,
+      resource_link_id: resource_link_id
+    )
 
     lti_advantage_client = Clients::LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
     begin
@@ -358,14 +367,6 @@ class LtiV1Controller < ApplicationController
     total_sections = 0
     total_students = 0
     ActiveRecord::Base.transaction do
-      lti_course ||= Queries::Lti.find_or_create_lti_course(
-        lti_integration_id: lti_integration.id,
-        context_id: context_id,
-        deployment_id: deployment_id,
-        nrps_url: nrps_url,
-        resource_link_id: resource_link_id
-      )
-
       result = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, current_user: current_user)
       had_changes ||= !result[:changed].empty?
 

@@ -1,5 +1,6 @@
 class StudentSnapshotsController < ApplicationController
   include LevelsHelper
+  include Rails.application.routes.url_helpers
 
   before_action :authenticate_user!
 
@@ -37,11 +38,39 @@ class StudentSnapshotsController < ApplicationController
     return render json: {error: "Can't find Lesson id=#{lesson_id}"}, status: :bad_request unless lesson
 
     lesson_level_ids = lesson.levels&.map(&:id)&.presence || []
+    script = lesson.script
+    unit_group_unit = script&.unit_group_units&.first
     cfu_levels_data = []
     cfu_script_levels_for(lesson).each do |script_level|
       script_level.levels.each do |level|
         question_text, answers = get_level_question_and_answers(level)
+
+        # For matching CFUs, include the list of options (terms) for the left column.
+        # Match levels from DSL use questions (terms) and answers (definitions).
+        options = nil
+        if level.is_a?(Match)
+          if level.questions.present?
+            options = level.questions.map {|q| q['text'] || q[:text]}.compact
+          else
+            # Legacy format: content1, content2, etc. hold the option strings
+            summary = level.summarize_for_lesson_show(false)
+            options = summary[:content] if summary && summary[:content].present?
+          end
+        end
         level_index_in_lesson = lesson_level_ids.index(level.id)
+
+        # Build URL to the level using the existing helper
+        level_url = begin
+          if unit_group_unit
+            build_script_level_url(script_level, unit_group_unit: unit_group_unit)
+          else
+            nil
+          end
+        rescue => exception
+          # If URL building fails, log error but don't break the response
+          Rails.logger.warn("Failed to build level URL for script_level #{script_level.id}: #{exception.message}")
+          nil
+        end
 
         cfu_levels_data << {
           id: level.id,
@@ -54,7 +83,9 @@ class StudentSnapshotsController < ApplicationController
           progression: script_level.progression,
           progression_display_name: script_level.progression ? I18n.t(script_level.progression, scope: %i[data progressions], default: script_level.progression) : nil,
           question_text: question_text,
-          answers: answers
+          answers: answers,
+          options: options,
+          level_url: level_url
         }
       end
     end
@@ -161,6 +192,22 @@ class StudentSnapshotsController < ApplicationController
       name: level.name,
       exemplarSources: level.exemplar_sources
     }
+  end
+
+  # GET /student_snapshots/lesson_insight
+  # Returns the system prompt for generating insights
+  def lesson_insight
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+    section_id = params[:section_id]
+    teacher_id = current_user.id
+
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
+
+    response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    render json: response
   end
 
   # Returns the script_levels in a lesson that correspond to CFU progressions.

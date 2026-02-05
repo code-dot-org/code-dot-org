@@ -147,8 +147,11 @@ module FakeDashboard
     end
 
     # Temporary tables may shadow persistent tables we don't want to drop.
-    def data_source_exists?(_)
-      false
+    def data_source_exists?(table_name)
+      return [
+        ActiveRecord::Base.schema_migrations_table_name,
+        ActiveRecord::Base.internal_metadata_table_name
+      ].include?(table_name)
     end
 
     # Temporary tables don't support foreign key indexes, so ignore them.

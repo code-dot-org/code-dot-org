@@ -205,6 +205,8 @@ export const sectionFromServerSection = serverSection => ({
   atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
   avatar_color: serverSection.avatar_color,
   avatar_emoji: serverSection.avatar_emoji,
+  isAssignedEssentialAiChat: serverSection.is_assigned_essential_ai_chat,
+  aiChatAccessLevel: serverSection.ai_chat_access_level,
 });
 
 /**

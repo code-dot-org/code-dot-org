@@ -238,6 +238,7 @@
     ],
     "project_template_level_name": "U4 Conditionals Predict Template_2025",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

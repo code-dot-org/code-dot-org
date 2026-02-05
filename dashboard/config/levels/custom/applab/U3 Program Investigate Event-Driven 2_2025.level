@@ -46,6 +46,7 @@
     "encrypted_examples": "NXAcs04O4Y0VG0RWA5siR2k326dKJA9uR4DSXsZBqqGObFltZ+a05nprzKjM\ncpGCOwMgNL1W7oqS9sbRFD5FPQ==\n",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,
