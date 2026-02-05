@@ -940,7 +940,7 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
-    current_parent = get_parent_level_for_script(script.id)
+    current_parent = get_parent_level_for_script(script&.id)
     properties_camelized[:parentLevelName] = current_parent&.name
 
     # If there is a rubric for this lesson, show the rubric if it is evaluated on this level or the level's parent.
@@ -1068,6 +1068,9 @@ class Level < ApplicationRecord
   end
 
   def get_parent_level_for_script(script_id)
+    unless script_id
+      return
+    end
     parent_levels.find do |parent|
       parent.script_levels.find do |script|
         script&.script_id == script_id
