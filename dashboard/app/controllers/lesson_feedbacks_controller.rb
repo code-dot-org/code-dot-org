@@ -34,7 +34,7 @@ class LessonFeedbacksController < ApplicationController
   end
 
   def lesson_feedback_params
-    params.require(:lesson_feedback).permit(
+    params.permit(
       :teacher_id,
       :student_id,
       :section_id,
@@ -42,7 +42,7 @@ class LessonFeedbacksController < ApplicationController
       :saved_feedback,
       :submitted_feedback,
       :submitted_at,
-      resources: {}
+      resources: [:message, :link_name, :link]
     )
   end
 end

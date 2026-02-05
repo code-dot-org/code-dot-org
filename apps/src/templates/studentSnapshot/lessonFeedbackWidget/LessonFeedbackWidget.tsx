@@ -4,6 +4,7 @@ import {BodyFourText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import ActionButtons from './ActionButtons';
@@ -28,6 +29,8 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   unitId,
 }) => {
   const [initialFeedback, setInitialFeedback] = React.useState<string>('');
+  const [existingFeedbackData, setExistingFeedbackData] =
+    React.useState<any>(null);
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
   // TODO: Add loading state while fetching feedback
@@ -78,6 +81,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           if (data.saved_feedback) {
             setInitialFeedback(data.saved_feedback);
           }
+          setExistingFeedbackData(data);
         }
       } catch (error) {
         console.error('Error fetching feedback:', error);
@@ -104,13 +108,75 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     handleTempResourceLinkChange,
     exitResourcePopup,
     handleResourceSave,
-    handleSaveAsDraft,
     handleSendToStudent,
     deleteResourceLink,
   } = useLessonFeedback({
     lessonId,
     teacherHasEnabledAi,
   });
+
+  // Save as draft: update local state and persist to backend
+  const handleSaveAsDraft = async () => {
+    // Build resources array from recommended actions
+    const resources: Array<{message: string; link_name: string; link: string}> =
+      [];
+    if (recommendedActionText || resourceName || resourceLink) {
+      resources.push({
+        message: recommendedActionText,
+        link_name: resourceName,
+        link: resourceLink,
+      });
+    }
+
+    // Update local state
+    setExistingFeedbackData((prev: any) => ({
+      ...prev,
+      saved_feedback: feedbackText,
+      resources,
+    }));
+
+    // Persist to backend
+    if (!lessonId || !studentId) return;
+    try {
+      let response;
+      if (existingFeedbackData && existingFeedbackData.id) {
+        // Update existing feedback
+        response = await fetch(`/lesson_feedbacks/${existingFeedbackData.id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify({
+            saved_feedback: feedbackText,
+            resources,
+          }),
+        });
+      } else {
+        // Create new feedback
+        response = await fetch('/lesson_feedbacks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+          body: JSON.stringify({
+            lesson_id: lessonId,
+            student_id: studentId,
+            saved_feedback: feedbackText,
+            resources,
+          }),
+        });
+      }
+      if (!response.ok) {
+        throw new Error('Failed to save draft feedback');
+      }
+      const data = await response.json();
+      setExistingFeedbackData(data);
+    } catch (err) {
+      console.error('Error saving draft feedback:', err);
+    }
+  };
 
   // TO DO: Use Loading widget when needed here.
   const widgetContent = (
