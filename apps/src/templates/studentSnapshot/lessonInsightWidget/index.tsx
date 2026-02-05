@@ -42,7 +42,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
       !selectedStudentId ||
       !sectionId
     ) {
-      console.log('Missing required parameters');
+      console.error('Missing required parameters');
       return;
     }
 

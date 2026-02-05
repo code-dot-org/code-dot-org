@@ -5,11 +5,130 @@ description 'description here'
 markdown <<MARKDOWN
 # The Changing AI Landscape
 
-#### Most people have been using AI for years, even if they didn’t always think of it as “AI.” For a long time, it showed up quietly in everyday tools that handled narrow, specific tasks, such as spellcheck and grammar suggestions, recommendation systems like Netflix or Amazon, and voice assistants that could set timers or answer simple questions. These systems worked by recognizing patterns and following rules. They were useful, but limited, and usually operated in the background.
+#### You may be surprised to know that the term AI was coined in 1955, and AI has been used in commercial products as early as the 1980s. 
 
-#### In the past few years, there has been a notable shift. Advances in computing power, access to large amounts of data, and improvements in AI model design have led to a new generation of AI that people interact with directly. Instead of AI making small suggestions behind the scenes, users can now ask questions and receive full responses. Many people have already experienced this by using AI tools (such as ChatGPT or Gemini) to explain ideas, help draft or revise text, or generate images, code, or lesson ideas.
+#### Click each time period to explore how AI has evolved over the last couple of decades including what changed technologically, what you as educators may have noticed, and the the affect on education.
 
-#### AI is no longer a niche or hidden technology. It is visible, conversational, and widely accessible. Rather than passively receiving AI-generated outputs, people can actively engage with the technology, shaping the responses they get through questions and prompts.
+<div style="
+  border:3px solid #ccc;
+  border-radius:16px;
+  padding:12px;
+  margin:24px 0;
+  background:#fff;
+">
 
-#### For education, this shift is especially important. Because AI can understand and generate language, it can now support learning in ways that were not previously possible. AI tools can help explain concepts in multiple ways, generate examples or practice opportunities, and provide feedback to students. As a result, AI is moving from a futuristic concept to a practical classroom resource — one that teachers and students are encountering in their daily lives.
+<div style="position:relative; max-width:800px; margin:20px auto 40px; padding-left:40px; font-size:16px;">
+
+<div style="position:absolute; left:24px; top:12px; bottom:12px; width:4px; background:#d0d0d0; border-radius:2px;"></div>
+
+<!-- 2010–2014 -->
+<details style="margin-bottom:60px;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="width:16px; height:16px; background:#7a6fa6; border-radius:50%; box-shadow:0 0 0 5px rgba(122,111,166,0.08);"></div>
+<div style="font-size:1.35em; font-weight:700;">~2010–2014: Background AI Tools</div>
+</div>
+</summary>
+
+<div style="background:#f3f1fa; margin-top:10px; padding:14px; border-radius:8px;">
+<div style="flex:1;">
+<p style="font-size:1.125em;">AI appeared in everyday software like spellcheck, search engines, recommendation systems, and basic voice assistants, quietly recognizing patterns and following rules behind the scenes.</p>
+<p style="font-size:1.125em;"><strong>How this showed up in schools</strong><br/>
+Teachers saw autocorrect and search tools influence student work, but AI itself was not discussed as a learning technology and offered no meaningful interaction.</p>
+<p style="font-size:1.125em;"><strong>Impact on education</strong><br/>
+AI had little instructional value and played no direct role in teaching or learning.</p>
+</div>
+</div>
+</details>
+
+<!-- 2015–2018 -->
+<details style="margin-bottom:40px;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="width:16px; height:16px; background:#5aaebc; border-radius:50%; box-shadow:0 0 0 5px rgba(90,174,188,0.08);"></div>
+<div style="font-size:1.32em; font-weight:700;">~2015–2018: More Accurate Pattern Recognition</div>
+</div>
+</summary>
+
+<div style="background:#eef7f9; margin-top:10px; padding:14px; border-radius:8px;">
+<div style="flex:1;">
+<p style="font-size:1.125em;">As computing power and data increased, AI became much better at recognizing speech, images, and text, making tools like voice typing, translation, and adaptive software far more reliable.</p>
+<p style="font-size:1.125em;"><strong>How this showed up in schools</strong><br/>
+Speech-to-text, text-to-speech, translation tools, and adaptive learning platforms became usable and more common, though AI still operated mostly in the background.</p>
+<p style="font-size:1.125em;"><strong>Impact on education</strong><br/>
+AI improved accessibility and personalization but remained a largely invisible support rather than an interactive learning tool.</p>
+</div>
+</div>
+</details>
+
+<!-- 2019–2021 -->
+<details style="margin-bottom:26px;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="width:16px; height:16px; background:#7a6fa6; border-radius:50%; box-shadow:0 0 0 5px rgba(122,111,166,0.08);"></div>
+<div style="font-size:1.3em; font-weight:700;">~2019–2021: Better Language Understanding</div>
+</div>
+</summary>
+
+<div style="background:#f3f1fa; margin-top:10px; padding:14px; border-radius:8px;">
+<div style="flex:1;">
+<p style="font-size:1.125em;">AI systems improved at understanding context and generating longer, more coherent text, enabling stronger writing suggestions, summarization, and early conversational tools.</p>
+<p style="font-size:1.125em;"><strong>How this showed up in schools</strong><br/>
+Teachers noticed more advanced writing and revision tools and began encountering AI-generated text in student work, alongside growing concerns about academic integrity.</p>
+<p style="font-size:1.125em;"><strong>Impact on education</strong><br/>
+AI began to function as a learning aid, prompting educators to reconsider how writing, revision, and assessment should work.</p>
+</div>
+</div>
+</details>
+
+<!-- 2022–2023 -->
+<details style="margin-bottom:12px;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="width:16px; height:16px; background:#5aaebc; border-radius:50%; box-shadow:0 0 0 5px rgba(90,174,188,0.08);"></div>
+<div style="font-size:1.28em; font-weight:700;">~2022–2023: Conversational AI Emerges</div>
+</div>
+</summary>
+
+<div style="background:#eef7f9; margin-top:10px; padding:14px; border-radius:8px;">
+<div style="flex:1;">
+<p style="font-size:1.125em;">Public conversational AI tools such as ChatGPT became widely available, allowing users to ask questions and receive full explanations through ongoing dialogue.</p>
+<p style="font-size:1.125em;"><strong>How this showed up in schools</strong><br/>
+Students and teachers started using AI directly to explain concepts, draft and revise writing, generate examples, and support lesson planning.</p>
+<p style="font-size:1.125em;"><strong>Impact on education</strong><br/>
+AI shifted from a background tool to an active learning partner, raising urgent questions about authorship, assessment, and learning goals.</p>
+</div>
+</div>
+</details>
+
+<!-- 2024–Present -->
+<details style="margin-bottom:18px;">
+<summary style="list-style:none; cursor:pointer;">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="width:16px; height:16px; background:#7a6fa6; border-radius:50%; box-shadow:0 0 0 5px rgba(122,111,166,0.08);"></div>
+<div style="font-size:1.3em; font-weight:700;">~2024–Present: AI in Everyday Classrooms</div>
+</div>
+</summary>
+
+<div style="background:#f3f1fa; margin-top:10px; padding:14px; border-radius:8px;">
+<div style="flex:1;">
+<p style="font-size:1.125em;">AI tools are now widely accessible and commonly used by students and teachers both inside and outside of school.</p>
+<p style="font-size:1.125em;"><strong>How this showed up in schools</strong><br/>
+Educators increasingly see students arriving with AI experience and are experimenting with AI for explanation, practice, feedback, and differentiation.</p>
+<p style="font-size:1.125em;"><strong>Impact on education</strong><br/>
+AI is now part of the everyday learning environment, shifting the focus from whether to use AI to how to use it thoughtfully and responsibly.</p>
+</div>
+</div>
+</details>
+
+</div>
+
+
+
+
+</div>
+
+>#### **💬 Quick Reflection:** During which time period did you first notice AI in your school/classroom? In your everyday life?
+
+#### The changes in AI technology has effected most industries, including education, as well as everyday life. Before we look more at the effects of AI on education, we'll spend some time learning about the broader impacts of AI.
 MARKDOWN

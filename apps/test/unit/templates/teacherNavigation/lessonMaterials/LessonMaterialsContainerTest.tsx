@@ -319,11 +319,6 @@ describe('LessonMaterialsContainer', () => {
           value: {lesson_summary: JSON.stringify(lessonSummary)},
           response: new Response(),
         });
-      } else if (path.includes('unit_in_aif')) {
-        return Promise.resolve({
-          value: {aif: aif_unit},
-          response: new Response(),
-        });
       }
     });
   };
@@ -681,21 +676,6 @@ describe('LessonMaterialsContainer', () => {
 
     it('renders lesson summary when showAITALessonSummary is true and lesson summary has been generated', async () => {
       await renderDefault();
-
-      screen.getByText(i18n.audioSummary());
-      screen.getByText(i18n.teachingTips());
-      screen.getByText(LESSON_SUMMARY.learning_objective);
-      LESSON_SUMMARY.lesson_beats.forEach(beat => screen.getByText(beat));
-      LESSON_SUMMARY.misconceptions.forEach(misconception =>
-        screen.getByText(misconception)
-      );
-      LESSON_SUMMARY.tips.forEach(tip => screen.getByText(tip));
-    });
-
-    it('renders lesson summary when AIF unit is assigned', async () => {
-      store.dispatch(setShowAITALessonSummary(false));
-
-      await renderDefault(false, mockLessonData, LESSON_SUMMARY, true);
 
       screen.getByText(i18n.audioSummary());
       screen.getByText(i18n.teachingTips());

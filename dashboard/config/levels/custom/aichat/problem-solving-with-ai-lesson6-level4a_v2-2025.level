@@ -50,7 +50,8 @@
     },
     "offer_browser_tts": "false",
     "submittable": "false",
-    "disable_edit_run_for_submission": "false"
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-09-25T19:52:56.209+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4a_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4a_2025\"}]"
