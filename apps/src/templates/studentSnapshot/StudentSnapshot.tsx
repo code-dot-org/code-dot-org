@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -88,7 +88,7 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
       lessonsCachedLoader(selectedUnitId)
@@ -109,7 +109,7 @@ const StudentSnapshot: React.FC = () => {
   }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
 
   // Fetch Student Code when student or lesson changes
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
       setIsStudentCodeLoading(true);
       getStudentCode(selectedUnitId, selectedLessonId, selectedStudentId)
@@ -168,8 +168,9 @@ const StudentSnapshot: React.FC = () => {
         />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
-          studentId={selectedStudentId}
           teacherHasEnabledAi={aiTaEnabled}
+          studentId={selectedStudentId}
+          unitId={selectedUnitId}
         />
         <StudentCFUWidget
           gridWidth={2}

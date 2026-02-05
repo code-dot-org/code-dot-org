@@ -9,10 +9,8 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import {shouldShowAiTutor} from '@cdo/apps/aiTutor/helpers/shouldShowAiTutor';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -23,6 +21,7 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
+import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
@@ -196,7 +195,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const levelId = instructionsProps.levelProperties.id;
   const hasValidationConditions = useAppSelector(
@@ -475,15 +473,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        {!isStartMode && isOnboardingTourEnabled && <OnboardingTourSteps />}
-        {!isStartMode && isValidationTourEnabled && (
+        <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
+          <OnboardingTourSteps />
+        </IntroJSTourWrapper>
+        <IntroJSTourWrapper enabled={isValidationTourEnabled}>
           <ValidationTourSteps
             hasValidationConditions={hasValidationConditions}
             validationSettings={instructionsProps.validationSettings}
             setCurrentTab={setCurrentTab}
             onValidate={instructionsProps.validationSettings?.onValidate}
           />
-        )}
+        </IntroJSTourWrapper>
         <div
           className={classNames(
             styles.sidebar,
