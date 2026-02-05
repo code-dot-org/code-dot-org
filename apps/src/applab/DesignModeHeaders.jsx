@@ -169,7 +169,7 @@ export default class DesignModeHeaders extends React.Component {
         <PaneButton
           id="design-mode-versions-header"
           style={this.props.isRunning ? styles.runningVersionHistoryButton : {}}
-          iconClass="fa fa-clock-o"
+          iconClass="fa fa-clock"
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
           isRtl={this.props.isRtl}

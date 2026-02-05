@@ -140,7 +140,7 @@ class WebLabView extends React.Component {
                 {!this.props.isFullScreenPreviewOn && (
                   <PaneButton
                     id="versions-header"
-                    iconClass="fa fa-clock-o"
+                    iconClass="fa fa-clock"
                     leftJustified={true}
                     headerHasFocus={true}
                     isRtl={false}

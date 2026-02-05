@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 export const tipTypes = {
   teachingTip: {
     displayName: i18n.teachingTip(),
-    icon: 'lightbulb-o',
+    icon: 'lightbulb',
     color: color.orange,
     backgroundColor: color.lightest_orange,
   },

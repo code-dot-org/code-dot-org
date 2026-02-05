@@ -230,7 +230,7 @@ class CodeWorkspace extends React.Component {
             <PaneButton
               id="versions-header"
               headerHasFocus={hasFocus}
-              iconClass="fa fa-clock-o"
+              iconClass="fa fa-clock"
               label={i18n.showVersionsHeader()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}

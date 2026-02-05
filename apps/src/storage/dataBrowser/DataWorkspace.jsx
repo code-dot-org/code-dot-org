@@ -51,7 +51,7 @@ class DataWorkspace extends React.Component {
           <div id="dataModeHeaders">
             <PaneButton
               id="data-mode-versions-header"
-              iconClass="fa fa-clock-o"
+              iconClass="fa fa-clock"
               label={msg.showVersionsHeader()}
               headerHasFocus={!this.props.isRunning}
               isRtl={this.props.isRtl}
