@@ -1,8 +1,30 @@
 #!/usr/bin/env ruby
+#
+# Wrapper for pumactl that handles authentication and socket location automatically.
+#
+# USAGE:
+#   bin/pumactl_admin [COMMAND] [ARGS] [--query=PATH]
+#
+# EXAMPLES:
+#   bin/pumactl_admin stats
+#   bin/pumactl_admin stats --query=booted_workers
+#   bin/pumactl_admin stats -q=worker_status.0.last_status.backlog
+#   bin/pumactl_admin phased-restart
+#
+# CUSTOM ARGUMENTS:
+#   --query, -q    JSON path to extract specific data from the output.
+#                  Supports dot notation for hashes and arrays (e.g. 'a.b.0.c').
+#                  When used, 'preamble' text is sent to STDERR to allow clean piping.
+#
+# STANDARD ARGUMENTS:
+#   Accepts all standard pumactl commands (stats, stop, restart, etc).
+#   See https://github.com/puma/puma/blob/master/lib/puma/control_cli.rb
+#
 require_relative '../deployment'
 require 'json'
 require 'open3'
 
+# Parse and extract the custom --query argument
 query_path = nil
 ARGV.reject! do |arg|
   if arg.start_with?('--query=', '-q=')
@@ -65,7 +87,6 @@ if status.success?
     puts stdout unless stdout.empty?
   end
 else
-  # Error Handling
   warn "Error executing pumactl:"
   warn stdout
   warn stderr
