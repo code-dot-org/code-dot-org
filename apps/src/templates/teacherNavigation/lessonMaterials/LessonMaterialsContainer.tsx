@@ -83,6 +83,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [showTranscriptDialog, setShowTranscriptDialog] = useState(false);
   const [finishedListeningToSummary, setFinishedListeningToSummary] =
     useState(false);
+  const [canShowLessonSummaries, setCanShowLessonSummaries] = useState(false);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -130,10 +131,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.currentUser.showAITALessonSummary
   );
 
-  const canShowLessonSummaries = React.useMemo(
-    () => !!unitToLoad && !!aiTALessonSummaryInfo && showAITALessonSummary,
-    [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]
-  );
+  React.useEffect(() => {
+    if (!!unitToLoad && !!aiTALessonSummaryInfo) {
+      setCanShowLessonSummaries(showAITALessonSummary);
+    }
+  }, [unitToLoad, aiTALessonSummaryInfo, showAITALessonSummary]);
 
   React.useEffect(() => {
     const selectedSectionId = selectedSection.id;
@@ -200,7 +202,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
-    if (selectedLesson) {
+    if (selectedLesson && showAITALessonSummary) {
       HttpClient.fetchJson<LessonSummaryInfoResponse>(
         `/ai_lesson_summaries/show?lesson_id=${selectedLesson?.id}`
       )
@@ -217,7 +219,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           console.log(`Error: ${error}`);
         });
     }
-  }, [userId, selectedLesson]);
+  }, [userId, selectedLesson, showAITALessonSummary]);
 
   const handleLessonSummaryAskAITAClick = () => {
     dispatch(
