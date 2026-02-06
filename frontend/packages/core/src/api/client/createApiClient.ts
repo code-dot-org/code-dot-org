@@ -8,6 +8,7 @@ import {createPreferencesApi} from '../domains/preferences';
 import {createProjectsApi} from '../domains/projects';
 import {createSectionsApi} from '../domains/sections';
 import {createSourcesApi} from '../domains/sources';
+import {createUsersApi} from '../domains/users';
 
 export const createApiClient = (transport: Transport) => ({
   transport,
@@ -19,6 +20,7 @@ export const createApiClient = (transport: Transport) => ({
   projects: createProjectsApi(transport),
   sections: createSectionsApi(transport),
   sources: createSourcesApi(transport),
+  users: createUsersApi(transport),
 });
 
 export type ApiClient = ReturnType<typeof createApiClient>;

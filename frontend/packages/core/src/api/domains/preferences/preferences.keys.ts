@@ -4,8 +4,6 @@ export const preferencesKeys = {
   usingTextMode: () => [...preferencesKeys.all, 'usingTextMode'] as const,
   displayTheme: () => [...preferencesKeys.all, 'displayTheme'] as const,
   muteMusic: () => [...preferencesKeys.all, 'muteMusic'] as const,
-  hasDismissedPersonalizationAlert: () =>
-    [...preferencesKeys.all, 'hasDismissedPersonalizationAlert'] as const,
 
   fontSizes: () => [...preferencesKeys.all, 'fontSize'] as const,
   consoleFontSize: (appName: string) =>

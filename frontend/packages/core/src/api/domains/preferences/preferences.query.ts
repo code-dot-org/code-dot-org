@@ -11,7 +11,6 @@ import type {ApiError} from '../../transports/types';
 import type {
   DisplayTheme,
   FontSize,
-  HasDismissedPersonalizationAlert,
   MuteMusic,
   UserThemeSettings,
   UsingTextMode,
@@ -49,20 +48,6 @@ export function useMuteMusic(
   return useQuery({
     queryKey: preferencesKeys.muteMusic(),
     queryFn: () => api.preferences.getMuteMusic(),
-    ...options,
-  });
-}
-
-export function useHasDismissedPersonalizationAlert(
-  api: ApiClient,
-  options?: Omit<
-    UseQueryOptions<HasDismissedPersonalizationAlert>,
-    'queryKey' | 'queryFn'
-  >,
-) {
-  return useQuery({
-    queryKey: preferencesKeys.hasDismissedPersonalizationAlert(),
-    queryFn: () => api.preferences.getHasDismissedPersonalizationAlert(),
     ...options,
   });
 }
@@ -186,31 +171,6 @@ export function useSetMuteMusic(
   });
 }
 
-export function useSetHasDismissedPersonalizationAlert(
-  api: ApiClient,
-  options?: Omit<
-    UseMutationOptions<
-      unknown,
-      Error,
-      {hasDismissedPersonalizationAlert: boolean}
-    >,
-    'mutationFn'
-  >,
-) {
-  const queryClient = useQueryClient();
-
-  return useMutation({
-    mutationFn: (params: {hasDismissedPersonalizationAlert: boolean}) =>
-      api.preferences.setHasDismissedPersonalizationAlert(params),
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: preferencesKeys.hasDismissedPersonalizationAlert(),
-      });
-    },
-    ...options,
-  });
-}
-
 export function useSetFontSize(
   api: ApiClient,
   options?: Omit<
@@ -301,20 +261,6 @@ export function useSetShowProgressTableV2(
   return useMutation({
     mutationFn: (params: {showProgressTableV2: boolean}) =>
       api.preferences.setShowProgressTableV2(params),
-    ...options,
-  });
-}
-
-export function useSetHasSeenHomepageWelcome(
-  api: ApiClient,
-  options?: Omit<
-    UseMutationOptions<unknown, Error, {hasSeenHomepageWelcome: boolean}>,
-    'mutationFn'
-  >,
-) {
-  return useMutation({
-    mutationFn: (params: {hasSeenHomepageWelcome: boolean}) =>
-      api.preferences.setHasSeenHomepageWelcome(params),
     ...options,
   });
 }

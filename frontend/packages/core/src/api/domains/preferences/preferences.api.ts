@@ -4,7 +4,6 @@ import {
   ConsoleFontSizeSchema,
   DisplayThemeSchema,
   EditorFontSizeSchema,
-  HasDismissedPersonalizationAlertSchema,
   MuteMusicSchema,
   UserThemeSettingsSchema,
   UsingTextModeSchema,
@@ -129,50 +128,6 @@ export function createPreferencesApi(transport: Transport) {
           sort_by_family_name: showProgressTableV2,
         },
       });
-    },
-
-    /**
-     * POST /api/v1/users/has_seen_homepage_welcome
-     */
-    async setHasSeenHomepageWelcome(params: {hasSeenHomepageWelcome: boolean}) {
-      const {hasSeenHomepageWelcome} = params;
-
-      return transport.request<unknown>({
-        method: 'POST',
-        url: '/api/v1/users/has_seen_homepage_welcome',
-        body: {
-          has_seen_homepage_welcome: hasSeenHomepageWelcome,
-        },
-      });
-    },
-
-    /**
-     * POST /api/v1/users/has_dismissed_personalization_alert
-     */
-    async setHasDismissedPersonalizationAlert(params: {
-      hasDismissedPersonalizationAlert: boolean;
-    }) {
-      const {hasDismissedPersonalizationAlert} = params;
-
-      return transport.request<unknown>({
-        method: 'POST',
-        url: '/api/v1/users/has_dismissed_personalization_alert',
-        body: {
-          has_dismissed_personalization_alert: hasDismissedPersonalizationAlert,
-        },
-      });
-    },
-
-    /**
-     * GET /api/v1/users/has_dismissed_personalization_alert
-     */
-    async getHasDismissedPersonalizationAlert() {
-      const raw = await transport.request<unknown>({
-        method: 'GET',
-        url: '/api/v1/users/has_dismissed_personalization_alert',
-      });
-
-      return HasDismissedPersonalizationAlertSchema.parse(raw);
     },
 
     /**
