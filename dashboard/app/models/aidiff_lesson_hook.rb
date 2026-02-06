@@ -17,4 +17,7 @@
 #  index_aidiff_artifacts_on_user_id           (user_id)
 #
 class AidiffLessonHook < AidiffArtifact
+  def self.to_markdown(json)
+    "***EXIT TICKET*** #{text}"
+  end
 end
