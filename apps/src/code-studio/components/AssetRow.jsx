@@ -101,7 +101,7 @@ export default class AssetRow extends React.Component {
                 className={usage > 0 ? '' : 'btn-danger'}
                 onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
               >
-                <i className="fa fa-trash-o" />
+                <i className="fa-regular fa-trash" />
               </button>
             )}
 

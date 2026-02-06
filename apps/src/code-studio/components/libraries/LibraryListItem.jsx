@@ -93,7 +93,7 @@ export class LibraryListItem extends React.Component {
                 )}
                 disabled={!!library.fromLevelbuilder}
               >
-                <FontAwesome icon="trash-o" className={styles.iconPadding} />
+                <FontAwesome icon="trash" className={styles.iconPadding} />
               </button>
             </Tooltip>
           )}
