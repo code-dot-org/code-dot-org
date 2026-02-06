@@ -78,6 +78,7 @@ interface CourseSummary {
   course_versions: {[id: string]: Version};
   announcements: Announcement[];
   has_verified_resources: boolean;
+  requires_ai_chat_tools: boolean;
 }
 
 interface Response {
@@ -260,6 +261,8 @@ const TeacherCourseOverview: React.FC = () => {
       userId={userId}
       userType={UserTypes.TEACHER}
       participantAudience={courseSummary.participant_audience}
+      requiresAiChatTools={courseSummary.requires_ai_chat_tools}
+      sectionAiChatAccessLevel={selectedSection?.aiChatAccessLevel}
     />
   );
 };

@@ -280,6 +280,14 @@
       "import": "./dist/modal/index.mjs",
       "require": "./dist/modal/index.js"
     },
+    "./notificationBanner": {
+      "types": {
+        "import": "./dist/notificationBanner/index.d.ts",
+        "require": "./dist/notificationBanner/index.d.ts"
+      },
+      "import": "./dist/notificationBanner/index.mjs",
+      "require": "./dist/notificationBanner/index.js"
+    },
     "./popover": {
       "types": {
         "import": "./dist/popover/index.d.ts",

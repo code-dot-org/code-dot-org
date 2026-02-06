@@ -140,6 +140,7 @@ const AiChatAccessControls: React.FC = () => {
                   href: AI_SETTINGS_SUPPORT_LINK,
                   text: 'Learn more',
                 }}
+                icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
                 className={style.alert}
               />
             )}

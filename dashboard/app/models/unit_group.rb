@@ -363,7 +363,8 @@ class UnitGroup < ApplicationRecord
         course_offering_id: course_version&.course_offering&.id,
         course_version_id: course_version&.id,
         course_path: link,
-        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil
+        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil,
+        requires_ai_chat_tools: requires_ai_chat_tools?
       }
     end
   end
