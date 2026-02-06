@@ -43,8 +43,6 @@ const CurriculumCatalog = ({
   forceTranslated,
   ...props
 }) => {
-  console.log('CurriculumCatalog render');
-  console.log('curriculaData:', curriculaData);
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
