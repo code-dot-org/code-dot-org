@@ -3,6 +3,8 @@ import {getLevelKindSchema} from './levels.kinds';
 import type {LevelPropertiesMap, LevelProperties} from './levels.types';
 import {
   AppOptionsSchema,
+  CloneLevelResponseSchema,
+  DeleteLevelResponseSchema,
   ExtraLinksLevelDataSchema,
   LevelPropertiesMapSchema,
   PredictResponseSchema,
@@ -149,6 +151,28 @@ export function createLevelsApi(transport: Transport) {
       });
 
       return UserAppOptionsSchema.parse(raw);
+    },
+
+    async cloneLevel(params: {levelId: number; clonedLevelName: string}) {
+      const {levelId, clonedLevelName} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'POST',
+        url: `/levels/${levelId}/clone?name=${clonedLevelName}`,
+      });
+
+      return CloneLevelResponseSchema.parse(raw);
+    },
+
+    async deleteLevel(params: {levelId: number}) {
+      const {levelId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'DELETE',
+        url: `/levels/${levelId}`,
+      });
+
+      return DeleteLevelResponseSchema.parse(raw);
     },
   };
 }

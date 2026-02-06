@@ -85,6 +85,18 @@ export function createChannelsApi(transport: Transport) {
     },
 
     /**
+     * POST /v3/channels/:channelId/abuse/delete
+     */
+    async deleteAbuseScore(params: {channelId: string}) {
+      const {channelId} = params;
+
+      return transport.request<unknown>({
+        method: 'POST',
+        url: `/v3/channels/${channelId}/abuse/delete`,
+      });
+    },
+
+    /**
      * GET /v3/channels/:channelId/sharing_disabled
      */
     async fetchSharingDisabled(params: {channelId: string}) {

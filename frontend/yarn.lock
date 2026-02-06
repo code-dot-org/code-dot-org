@@ -2468,7 +2468,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/user@workspace:packages/user"
   dependencies:
-    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/metrics": "workspace:*"

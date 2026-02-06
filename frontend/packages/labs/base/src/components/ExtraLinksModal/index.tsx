@@ -10,7 +10,7 @@ import type {
   ParentLevelPathLink,
   ScriptLevelPathLink,
 } from '@code-dot-org/core/api';
-import {useCSRF} from '@code-dot-org/user/contexts';
+import {useApiClient} from '@code-dot-org/core/api';
 
 import {FeaturedProjectStatus} from '../../constants';
 import {useApp} from '../../contexts';
@@ -35,6 +35,7 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
   closeModal,
   levelId,
 }) => {
+  const api = useApiClient();
   const [showCloneField, setShowCloneField] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [clonedLevelName, setClonedLevelName] = useState('');
@@ -75,33 +76,16 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
     setDeleteError('');
   };
 
-  const {token} = useCSRF();
-
   const handleClone = async () => {
     if (clonedLevelName) {
       try {
-        const response = await fetch(
-          `/levels/${levelId}/clone?name=${clonedLevelName}`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json;charset=UTF-8',
-              ...(token
-                ? {
-                    'X-CSRF-TOKEN': token,
-                  }
-                : {}),
-            },
-          },
-        );
-        if (!response.ok) {
-          const responseText = await response.text();
-          setCloneError(responseText);
-        } else {
-          const result = await response.json();
-          if (result.redirect) {
-            window.location.href = result.redirect;
-          }
+        const result = await api.levels.cloneLevel({
+          levelId,
+          clonedLevelName,
+        });
+
+        if (result.redirect) {
+          window.location.href = result.redirect;
         }
       } catch (e) {
         setCloneError((e as Error).message);
@@ -111,26 +95,9 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`/levels/${levelId}`, {
-        method: 'DELETE',
-        headers: {
-          Accept: 'application/json',
-          ...(token
-            ? {
-                'X-CSRF-TOKEN': token,
-              }
-            : {}),
-        },
-      });
-
-      if (!response.ok) {
-        const responseText = await response.text();
-        setDeleteError(responseText);
-      } else {
-        const result = await response.json();
-        if (result.redirect) {
-          window.location.href = result.redirect;
-        }
+      const result = await api.levels.deleteLevel({levelId});
+      if (result.redirect) {
+        window.location.href = result.redirect;
       }
     } catch (e) {
       setDeleteError((e as Error).message);
@@ -139,17 +106,9 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
 
   const onBookmark = async () => {
     try {
-      await fetch(`/featured_projects/${channelId}/bookmark`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json;charset=UTF-8',
-          ...(token
-            ? {
-                'X-CSRF-TOKEN': token,
-              }
-            : {}),
-        },
-      });
+      if (channelId) {
+        await api.projects.featureProjectBookmark({channelId});
+      }
       setFeaturedProjectStatus(FeaturedProjectStatus.bookmarked);
     } catch (e) {
       console.log('Error bookmarking project', e);
@@ -158,18 +117,9 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
 
   const onResetAbuseScore = async () => {
     try {
-      await fetch(`/v3/channels/${channelId}/abuse/delete`, {
-        method: 'POST',
-        body: '',
-        headers: {
-          'Content-Type': 'application/json;charset=UTF-8',
-          ...(token
-            ? {
-                'X-CSRF-TOKEN': token,
-              }
-            : {}),
-        },
-      });
+      if (channelId) {
+        await api.channels.deleteAbuseScore({channelId});
+      }
       setAbuseScore(0);
     } catch (_) {
       // Set abuse score to number < 0 so that error message will be displayed to the admin user.

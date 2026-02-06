@@ -160,3 +160,11 @@ export const UserAppOptionsSchema = z.object({
   channel: z.string().optional(),
   reduceChannelUpdates: z.boolean().optional(),
 });
+
+export const CloneLevelResponseSchema = z.object({
+  redirect: z.string().optional(),
+});
+
+export const DeleteLevelResponseSchema = z.object({
+  redirect: z.string().optional(),
+});
