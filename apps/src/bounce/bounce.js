@@ -1102,7 +1102,6 @@ Bounce.runButtonClick = function () {
     resetButton.style.minWidth = runButton.offsetWidth + 'px';
   }
   studioApp().toggleRunReset('reset');
-  Blockly.mainBlockSpace.traceOn(true);
   studioApp().reset(false);
   studioApp().attempts++;
   Bounce.execute();

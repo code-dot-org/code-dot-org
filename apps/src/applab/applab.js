@@ -1119,9 +1119,6 @@ Applab.serializeAndSave = function (callback) {
 Applab.runButtonClick = function () {
   Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
   Applab.execute();
   const analyticsData = studioApp().analyticsData();
   // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case

@@ -249,8 +249,6 @@ export interface ExtendedWorkspaceSvg extends BlocklyCore.WorkspaceSvg {
   };
   registerGlobalVariables: (variableList: string[]) => void;
   getVariableMap: () => ExtendedVariableMap;
-  setEnableToolbox: () => void;
-  traceOn: () => void;
   isReadOnly: () => boolean;
   cleanUp: (includeImmovableBlocks?: boolean) => void;
   getBlockCount: () => number;

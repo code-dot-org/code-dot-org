@@ -429,10 +429,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     this.getVariableMap().addVariables(variableList);
   };
 
-  // TODO - called by StudioApp, not sure whether they're still needed.
-  extendedWorkspaceSvg.setEnableToolbox = function () {};
-  extendedWorkspaceSvg.traceOn = function () {};
-
   extendedWorkspaceSvg.getBlockCount = function () {
     return this.getAllBlocks().length;
   };
