@@ -107,4 +107,16 @@ markdown <<MARKDOWN
 > - #### Senses the environment?
 > - #### Learns from data?
 > - #### Makes predictions or decisions?
+
+<!-- progress bar -->
+<div style="float:left; display:flex; gap:20px; align-items:center; margin-right:20px; max-width:70%; flex-wrap:wrap;">
+<div style="font-size:13px; color:#6b6f75;">Opening</div>
+<div style="font-size:14px; font-weight:600; color:#292F36; border-bottom:3px solid #0093A4; padding-bottom:2px;">What is AI?</div>
+<div style="font-size:13px; color:#6b6f75;">Applications of AI</div>
+<div style="font-size:13px; color:#6b6f75;">Impact on Education</div>
+<div style="font-size:13px; color:#6b6f75;">AI Literacy</div>
+<div style="font-size:13px; color:#6b6f75;">Closing</div>
+</div>
+
+
 MARKDOWN

@@ -1,0 +1,21 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-06T00:17:32.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Milestone\n\nA **milestone** helps you determine the tasks to complete and the evidence you will show at each benchmark.",
+        "imageUrl": "",
+        "key": "undefined-7fcb598e-1242-4643-9b90-6c7a6113e6da"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-06T00:17:32.446+00:00\",\"changed\":[\"cloned from \\\"capstone-project-benchmark-test-2025\\\"\"],\"cloned_from\":\"capstone-project-benchmark-test-2025\"},{\"changed_at\":\"2026-02-06 00:17:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
