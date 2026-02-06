@@ -4,6 +4,7 @@ import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   stubRedux,
@@ -706,6 +707,29 @@ describe('LessonMaterialsContainer', () => {
         screen.getByText(transcriptLine.timeStamp);
         screen.getByText(transcriptLine.text);
       });
+    });
+
+    it('does not render audio component when experiment and DCDO flag are false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      experiments.isEnabled = jest.fn(() => false);
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+    });
+
+    it('renders audio component when experiment is true and DCDO flag is false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+    });
+
+    it('renders audio component when experiment is false and DCDO flag is true', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', true);
+      experiments.isEnabled = jest.fn(() => false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
     });
 
     it('does not render Personalization Quiz note if user has completed the quiz', async () => {

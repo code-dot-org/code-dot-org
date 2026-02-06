@@ -23,4 +23,10 @@ class AidiffLessonHook < AidiffArtifact
     "**Activity:**  \n#{json['lesson_hook']['activity']}  \n***\n" \
     "**Wrap Up:** #{json['lesson_hook']['wrap_up']}"
   end
+
+  def summarize
+    super.merge(
+      url: "/aidiff_lesson_hooks/#{id}"
+    )
+  end
 end

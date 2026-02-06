@@ -2,18 +2,17 @@ import Button from '@code-dot-org/component-library/button';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import TextField from '@code-dot-org/component-library/textField';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, ChangeEvent, useCallback, useRef} from 'react';
 
+import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/AutocompleteInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
 import {PreviewViewMode} from './constants';
 
 import moduleStyles from './styles/html-preview-header.module.scss';
-
 interface HTMLPreviewHeaderProps {
   value: string;
   onChange: (value: string) => void;
@@ -28,6 +27,7 @@ interface HTMLPreviewHeaderProps {
   setPreviewViewMode: (previewViewMode: PreviewViewMode) => void;
   onStopPreview: () => void;
   isStopEnabled: boolean;
+  fetchFileSearchOptions: (value: string) => Promise<string[]>;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -44,13 +44,44 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   setPreviewViewMode,
   onStopPreview,
   isStopEnabled,
+  fetchFileSearchOptions,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      onSubmit(value);
+
+  // Supports our preview page "navigation" feature so the autocomplete suggestions
+  // are only shown for user input and not for programmatic changes to the URL bar.
+  const lastInputEventValue = useRef<string | null>(null);
+
+  // Clear out the last input event value (user-initiated) when the value prop changes programmatically.
+  useEffect(() => {
+    if (lastInputEventValue.current !== value) {
+      lastInputEventValue.current = null;
     }
-  };
+  }, [value]);
+
+  const handleInputChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      lastInputEventValue.current = event.target.value;
+      onChange(event.target.value);
+    },
+    [onChange]
+  );
+
+  const suggestionsDisabled = useCallback(
+    (searchValue: string) => lastInputEventValue.current !== searchValue,
+    []
+  );
+
+  const handleFetchOptions = useCallback(
+    async (searchValue: string) => {
+      if (suggestionsDisabled(searchValue)) {
+        return [];
+      }
+      return fetchFileSearchOptions(searchValue);
+    },
+    [fetchFileSearchOptions, suggestionsDisabled]
+  );
+
   const previewViewModeButtonsProps: SegmentedButtonsProps = {
     color: 'strong',
     buttons: [
@@ -112,14 +143,20 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
             className={moduleStyles.iconButton}
           />
         </div>
-        <TextField
-          onChange={e => onChange(e.target.value)}
-          onKeyDown={handleKeyDown}
-          value={value}
-          name={'url-input'}
-          aria-label={weblab2I18n.addressBar()}
-          size={'s'}
+        <AutocompleteInput
+          id="html-preview-url-listbox"
+          name="url-input"
+          size="s"
           className={moduleStyles.urlBarInput}
+          onChange={handleInputChange}
+          onSubmit={onSubmit}
+          hideIcon
+          compactOptions
+          focusInputOnSelect={false}
+          value={value}
+          fetchOptions={handleFetchOptions}
+          placeholder=""
+          aria-label={weblab2I18n.addressBar()}
         />
         <Button
           onClick={onRefresh}

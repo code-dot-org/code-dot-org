@@ -23,4 +23,10 @@ class AidiffExitTicket < AidiffArtifact
         "**Question #{i+1}:** #{item['question']}\n\n**Answer:** #{item['answer']}\n"
       end.join("\n\n***\n\n")
   end
+
+  def summarize
+    super.merge(
+      url: "/aidiff_exit_tickets/#{id}"
+    )
+  end
 end
