@@ -3,7 +3,7 @@
 # Wrapper for pumactl that handles authentication and socket location automatically.
 #
 # USAGE:
-#   bin/pumactl_admin [COMMAND] [ARGS] [--query=PATH]
+#   bin/pumactl_admin [COMMAND] [ARGS] [--query=JMESPath]
 #
 # EXAMPLES:
 #   bin/pumactl_admin stats
@@ -13,9 +13,7 @@
 #   bin/pumactl_admin thread-backtraces
 #
 # CUSTOM ARGUMENTS:
-#   --query, -q    JSON path to extract specific data from the output.
-#                  Supports dot notation for hashes and arrays (e.g. 'a.b.0.c').
-#                  When used, 'preamble' text is sent to STDERR to allow clean piping.
+#   --query, -q    JMESPath to extract specific data from the output; similar to AWS CLI --query. https://jmespath.org
 #
 # STANDARD ARGUMENTS:
 #   Accepts all standard pumactl commands (stats, stop, restart, etc).
@@ -24,6 +22,7 @@
 require_relative '../deployment'
 require 'json'
 require 'open3'
+require 'jmespath'
 
 # Parse and extract the custom --query argument
 query_path = nil
@@ -64,9 +63,8 @@ if status.success?
         # Send the preamble to STDERR.
         warn preamble.strip.chomp unless preamble.strip.empty?
 
-        # Navigate the JSON safely using the query path.
-        keys = query_path.split('.').map {|k| /^\d+$/.match?(k) ? k.to_i : k}
-        result = data.dig(*keys)
+        # Use JMESPath to search the JSON response.
+        result = JMESPath.search(query_path, data)
 
         if result.is_a?(Hash) || result.is_a?(Array)
           puts JSON.pretty_generate(result)

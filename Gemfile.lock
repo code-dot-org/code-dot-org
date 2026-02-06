@@ -1077,6 +1077,7 @@ DEPENDENCIES
   image_optim_pack (~> 0.5.0)!
   image_optim_rails (~> 0.4.0)
   image_size
+  jmespath (~> 1.4)
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
   json-jwt (~> 1.15)
