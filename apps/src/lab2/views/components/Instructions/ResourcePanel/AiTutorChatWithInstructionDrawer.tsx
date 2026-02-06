@@ -1,6 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {throttle} from 'lodash';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
@@ -22,10 +20,9 @@ interface AiTutorChatWithInstructionDrawerProps {
   isInstructionsCollapsed?: boolean;
   instructionsContent?: React.ReactNode;
 }
-
-const MIN_INSTRUCTIONS_HEIGHT = 150;
-const MIN_CHAT_HEIGHT = 200;
-const INITIAL_INSTRUCTIONS_HEIGHT = 300;
+const MIN_INSTRUCTIONS_HEIGHT = 20;
+const MIN_CHAT_HEIGHT = 20;
+const INITIAL_CHAT_HEIGHT = 150;
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
@@ -37,131 +34,67 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorChatButtonData,
   aiTutorSystemPromptName,
   aiTutorResponseSchemaSettings,
-  isInstructionsCollapsed = false,
   instructionsContent,
 }) => {
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
-  >(INITIAL_INSTRUCTIONS_HEIGHT);
-  const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(
-    isInstructionsCollapsed || false
+  >(undefined);
+  const [chatHeight, setChatHeight] = useState<number | undefined>(
+    INITIAL_CHAT_HEIGHT
   );
-
   const {
-    position: rawInstructionsHeight,
+    position: rawChatHeight,
     separatorProps,
     isDragging,
   } = useResizable({
     axis: 'y',
-    initial: INITIAL_INSTRUCTIONS_HEIGHT,
-    min: MIN_INSTRUCTIONS_HEIGHT,
+    initial: INITIAL_CHAT_HEIGHT,
+    min: MIN_CHAT_HEIGHT,
+    reverse: true,
+    containerRef,
   });
+  console.log('rawChatHeight', rawChatHeight);
 
-  const adjustPanelHeights = useCallback(() => {
-    // Get the available height for panels (container height minus resize bar)
-    const containerElement = document.querySelector(`.${styles.container}`);
-    const availableHeight = containerElement
-      ? containerElement.clientHeight - (isCollapsed ? 0 : RESIZE_BAR_SIZE_PX)
-      : window.innerHeight - (isCollapsed ? 0 : RESIZE_BAR_SIZE_PX);
-
-    if (isCollapsed) {
-      // When collapsed, instructions take 0 height and chat takes full height
-      setInstructionsHeight(0);
-      setChatHeight(availableHeight);
-    } else {
-      // Calculate new heights, respecting minimum sizes
-      const newInstructionsHeight = Math.max(
-        Math.min(rawInstructionsHeight, availableHeight - MIN_CHAT_HEIGHT),
-        MIN_INSTRUCTIONS_HEIGHT
-      );
-
-      const newChatHeight = Math.max(
-        availableHeight - newInstructionsHeight,
-        MIN_CHAT_HEIGHT
-      );
-
-      setInstructionsHeight(newInstructionsHeight);
-      setChatHeight(newChatHeight);
-    }
-  }, [rawInstructionsHeight, isCollapsed]);
-
-  // Sync internal state with prop changes
-  useEffect(() => {
-    setIsCollapsed(isInstructionsCollapsed || false);
-  }, [isInstructionsCollapsed]);
-
-  const throttledAdjustPanelHeights = useMemo(
-    () => throttle(adjustPanelHeights, 30),
-    [adjustPanelHeights]
-  );
-
-  useEffect(() => {
-    throttledAdjustPanelHeights();
-  }, [throttledAdjustPanelHeights]);
-
-  useEffect(() => {
-    window.addEventListener('resize', throttledAdjustPanelHeights);
-    return () =>
-      window.removeEventListener('resize', throttledAdjustPanelHeights);
-  }, [throttledAdjustPanelHeights]);
-
-  const toggleInstructions = useCallback(() => {
-    setIsCollapsed(prev => !prev);
-  }, []);
-
-  // Use the raw position for button placement to avoid lag during dragging
-  const buttonTop = useMemo(() => {
-    if (isCollapsed) return 0;
-    const containerElement = document.querySelector(`.${styles.container}`);
+  const adjustInstructionsHeight = useCallback(() => {
+    const containerElement = containerRef.current;
     const availableHeight = containerElement
       ? containerElement.clientHeight - RESIZE_BAR_SIZE_PX
       : window.innerHeight - RESIZE_BAR_SIZE_PX;
-    return Math.max(
-      Math.min(rawInstructionsHeight, availableHeight - MIN_CHAT_HEIGHT),
-      MIN_INSTRUCTIONS_HEIGHT
+    setInstructionsHeight(
+      Math.max(availableHeight - rawChatHeight, MIN_INSTRUCTIONS_HEIGHT)
     );
-  }, [rawInstructionsHeight, isCollapsed]);
+    const newChatHeight = Math.min(
+      rawChatHeight,
+      availableHeight - MIN_INSTRUCTIONS_HEIGHT
+    );
+    setChatHeight(newChatHeight);
+  }, [rawChatHeight, setChatHeight, setInstructionsHeight]);
+
+  useEffect(() => {
+    adjustInstructionsHeight();
+  }, [adjustInstructionsHeight]);
+
+  useEffect(() => {
+    window.addEventListener('resize', adjustInstructionsHeight);
+    return () => {
+      window.removeEventListener('resize', adjustInstructionsHeight);
+    };
+  }, [adjustInstructionsHeight]);
 
   return (
-    <div className={styles.container}>
-      {!isCollapsed && (
-        <>
-          <div
-            className={styles.instructionsDrawer}
-            style={{height: instructionsHeight}}
-          >
-            {instructionsContent}
-          </div>
-          <Button
-            className={styles.toggleButton}
-            style={{top: buttonTop}}
-            onClick={toggleInstructions}
-            text="Hide Instructions"
-            aria-label="Hide instructions"
-            type="tertiary"
-            size="xs"
-            iconRight={{iconName: 'chevron-up', iconStyle: 'solid'}}
-          />
-          <ResizeBar
-            isVertical={false}
-            separatorProps={separatorProps}
-            isDragging={isDragging}
-          />
-        </>
-      )}
-
-      {isCollapsed && (
-        <Button
-          className={styles.toggleButtonCollapsed}
-          onClick={toggleInstructions}
-          text="Show Instructions"
-          aria-label="Show instructions"
-          type="tertiary"
-          size="xs"
-          iconRight={{iconName: 'chevron-down', iconStyle: 'solid'}}
-        />
-      )}
+    <div ref={containerRef} className={styles.container}>
+      <div
+        className={styles.instructionsDrawer}
+        style={{height: instructionsHeight}}
+      >
+        {instructionsContent}
+      </div>
+      <ResizeBar
+        isVertical={false}
+        separatorProps={separatorProps}
+        isDragging={isDragging}
+      />
 
       <div className={styles.chatPanel} style={{height: chatHeight}}>
         <AiTutorChat
