@@ -11,8 +11,6 @@ $(document).ready(function () {
 function displayExitTicket() {
   const lessonHookData = getScriptData('artifact');
 
-  console.log(lessonHookData);
-
   ReactDOM.render(
     <AiDiffLessonHook
       title={lessonHookData['title']}
