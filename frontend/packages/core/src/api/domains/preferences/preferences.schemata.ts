@@ -12,10 +12,6 @@ export const DisplayThemeSchema = z.object({
   display_theme: z.string(),
 });
 
-export const HasDismissedPersonalizationAlertSchema = z.object({
-  has_dismissed_personalization_alert: z.boolean(),
-});
-
 export const FontSizes = {
   Tiny: 10,
   Small: 13, // Default font size
