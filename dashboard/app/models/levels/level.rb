@@ -1072,8 +1072,8 @@ class Level < ApplicationRecord
       return
     end
     parent_levels.find do |parent|
-      parent.script_levels.find do |script|
-        script&.script_id == script_id
+      parent.script_levels.find do |script_level|
+        script_level&.script_id == script_id
       end
     end
   end
