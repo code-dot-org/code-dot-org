@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
@@ -85,9 +85,10 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
+
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedUnitId) {
       setIsLessonsLoading(true);
       lessonsCachedLoader(selectedUnitId)
@@ -160,8 +161,9 @@ const StudentSnapshot: React.FC = () => {
         />
         <LessonFeedbackWidget
           lessonId={selectedLessonId}
-          studentId={selectedStudentId}
           teacherHasEnabledAi={aiTaEnabled}
+          studentId={selectedStudentId}
+          unitId={selectedUnitId}
         />
         <StudentCFUWidget
           gridWidth={2}

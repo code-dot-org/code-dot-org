@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import {AutocompleteInput} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_form/components/AutocompleteInput';
+import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/AutocompleteInput';
 
 const mockRef = React.createRef();
 jest.mock('@cdo/apps/util/hooks/useOutsideClick', () => ({

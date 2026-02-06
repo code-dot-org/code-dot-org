@@ -1472,6 +1472,76 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal true, properties["showRubric"]
   end
 
+  test "summarize_for_lab2_properties shows rubric if parent level matches lesson rubric level" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    parent_level = create(:bubble_choice_level, name: 'parent bubble choice')
+    child_level = create(:music, name: 'music sublevel')
+    parent_level.child_levels << child_level
+    create(:rubric, level: parent_level, lesson: lesson)
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [parent_level]
+    )
+
+    properties = child_level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal true, properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties does not show rubric if parent level is in different script" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    other_script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    parent_level = create(:bubble_choice_level, name: 'parent bubble choice 2')
+    child_level = create(:music, name: 'music sublevel 2')
+    parent_level.child_levels << child_level
+    create(:rubric, level: parent_level, lesson: lesson)
+    # Parent is in other_script, not the script with the rubric
+    create(:script_level, script: other_script, levels: [parent_level])
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [child_level]
+    )
+
+    properties = child_level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_nil properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties shows rubric for sublevel when rubric level has sublevel with same template" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    template_level = create(:music, name: 'shared music template')
+
+    # Rubric level is a bubble choice with a sublevel that has the template
+    rubric_level = create(:bubble_choice_level, name: 'rubric bubble choice')
+    rubric_sublevel = create(:music, name: 'rubric sublevel', properties: {project_template_level_name: template_level.name})
+    rubric_level.child_levels << rubric_sublevel
+
+    # Current level is a sublevel with the same template
+    current_level = create(:music, name: 'current sublevel', properties: {project_template_level_name: template_level.name})
+
+    create(:rubric, level: rubric_level, lesson: lesson)
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [current_level]
+    )
+
+    properties = current_level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal true, properties["showRubric"]
+  end
+
   describe '#available_callouts' do
     let(:available_callouts) {level.available_callouts(script_level)}
 

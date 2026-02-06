@@ -15,8 +15,8 @@ markdown <<MARKDOWN
 
 <div style="display:flex; flex-wrap:wrap; gap:16px;">
 
-<div style="flex:1 1 320px; background-color:#f3fbfc; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#1b798c; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is</div>
+<div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is</div>
 <div style="padding:14px 16px 16px 16px;">
 
 <div style="display:flex; align-items:flex-start; margin-bottom:10px;">
@@ -62,8 +62,8 @@ markdown <<MARKDOWN
 </div>
 </div>
 
-<div style="flex:1 1 320px; background-color:#fff7f0; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#e57a24; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is NOT</div>
+<div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Literacy Is NOT</div>
 <div style="padding:14px 16px 16px 16px;">
 
 <div style="display:flex; align-items:flex-start; margin-bottom:10px;">

@@ -15,7 +15,7 @@ module Services
 
         # @return [OmniAuthSection] Synchronized section
         def call
-          clever_students = clever_client.get("sections/#{section.clever_id}/students").fetch('data')
+          clever_students = clever_client.get("sections/#{section.clever_id}/users?role=student").fetch('data')
           CleverSection.from_service(section.clever_id, teacher.id, clever_students, section.name)
         end
 

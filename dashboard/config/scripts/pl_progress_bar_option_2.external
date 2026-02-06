@@ -3,17 +3,17 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<div style="max-width:85%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+<div style="max-width:95%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
   <p style="font-size:14pt; margin:0 0 10px 0;"><strong>Module roadmap</strong> (90 minutes)</p>
 
   <div style="display:flex; flex-wrap:wrap; gap:8px;">
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#e4d7f0;">✅ Introduction (5)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#e4d7f0;">✅ Loops (20)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#e4d7f0;">✅Cards + Loops (20)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#0093A4; color:white;"><strong>▶ Filtering + Transparency (15)</strong></div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Copying Data (15)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Filtering Data (10)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Wrap-up (5)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Intro (5)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Loops (20)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Cards + Loops (20)</div>
+    <div style="font-size:10pt; padding:4px 10px; border-radius:999px; background:#0093A4; color:white;"><strong>▶Filtering + Transparency(15)</strong></div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Copying Data (15)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Filtering Data (10)</div>
+    <div style="font-size:10pt; padding:5px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Wrap-up (5)</div>
   </div>
 </div>
 
@@ -139,17 +139,17 @@ markdown <<MARKDOWN
 
 #### Let's see how filters work in JavaScript.
 
-<div style="max-width:85%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+<div style="max-width:95%; margin:16px auto; background:#f7f8fa; border-radius:12px; padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
   <p style="font-size:14pt; margin:0 0 10px 0;"><strong>Module roadmap</strong> (90 minutes)</p>
 
   <div style="display:flex; flex-wrap:wrap; gap:8px;">
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#e4d7f0;">✅ Introduction (5)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#e4d7f0;">✅ Loops (20)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#e4d7f0;">✅Cards + Loops (20)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#0093A4; color:white;"><strong>▶ Filtering + Transparency (15)</strong></div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Copying Data (15)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Filtering Data (10)</div>
-    <div style="font-size:13pt; padding:8px 10px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Wrap-up (5)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Intro (5)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Loops (20)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#e4d7f0;">✅ Cards + Loops (20)</div>
+    <div style="font-size:10pt; padding:4px 10px; border-radius:999px; background:#0093A4; color:white;"><strong>▶Filtering + Transparency(15)</strong></div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Copying Data (15)</div>
+    <div style="font-size:10pt; padding:4px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Filtering Data (10)</div>
+    <div style="font-size:10pt; padding:5px 5px; border-radius:999px; background:#ffffff; box-shadow:0 1px 4px rgba(0,0,0,0.08);">Wrap-up (5)</div>
   </div>
 </div>
 MARKDOWN
