@@ -124,25 +124,27 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
           value={resourceData[0]?.recommended_action}
           onChange={handleRecommendedActionInputChange}
         />
-        <Button
-          text={'Add resource link'}
-          size="xs"
-          type="secondary"
-          color="gray"
-          disabled={!!resourceData[0]?.resource_name}
-          iconLeft={{
-            iconStyle: 'solid',
-            iconName: 'plus',
-            title: 'Add Resource',
-          }}
-          onClick={handleAddResourceClick}
-        />
-        {resourceData[0]?.resource_name && resourceData[0]?.resource_link && (
-          <UrlTab
-            urlName={resourceData[0]?.resource_name}
-            onClickHandler={deleteResourceLink}
+        <div className={styles.resourceRow}>
+          <Button
+            text={'Add resource link'}
+            size="xs"
+            type="secondary"
+            color="gray"
+            disabled={!!resourceData[0]?.resource_name}
+            iconLeft={{
+              iconStyle: 'solid',
+              iconName: 'plus',
+              title: 'Add Resource',
+            }}
+            onClick={handleAddResourceClick}
           />
-        )}
+          {resourceData[0]?.resource_name && resourceData[0]?.resource_link && (
+            <UrlTab
+              urlName={resourceData[0]?.resource_name}
+              onClickHandler={deleteResourceLink}
+            />
+          )}
+        </div>
       </div>
       {showAddResourcePopup && (
         <AddResourceDialog

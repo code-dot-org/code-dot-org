@@ -161,6 +161,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         icon={{iconName: 'sparkles'}}
         text={i18n.lessonFeedbackAlertText()}
         type="aqua"
+        size="xs"
         className={styles.alertBox}
       />
       <div className={styles.feedbackTextBoxWrapper}>
