@@ -2117,6 +2117,61 @@ class ApiControllerTest < ActionController::TestCase
     end
   end
 
+  describe 'GET /api/clever_classrooms' do
+    subject(:get_clever_classrooms) {get :clever_classrooms}
+    let(:teacher) {create(:teacher, :with_clever_authentication_option)}
+    let(:oauth_token) {teacher.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]}
+    let(:clever_auth_option) {teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when v2.1 auth option' do
+      it 'creates REST client for v2.1' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /teachers/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = teacher.uid_for_provider(AuthenticationOption::CLEVER)
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v2]).returns(clever_client)
+        clever_client.expects(:get).with("teachers/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+    end
+
+    context 'when v3 auth option' do
+      let(:teacher) {create(:teacher, :with_clever_authentication_option, auth_option_version: AuthenticationOption::Clever::VERSION[:v3])}
+
+      it 'creates REST client for v3' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3]).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /users/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = clever_auth_option.authentication_id
+        Clients::CleverRest.expects(:new).with(oauth_token:, api_version: AuthenticationOption::Clever::VERSION[:v3]).returns(clever_client)
+        clever_client.expects(:get).with("users/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+    end
+  end
+
   private def create_script_with_bonus_levels
     script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)

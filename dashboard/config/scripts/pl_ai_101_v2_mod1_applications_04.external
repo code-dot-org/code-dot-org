@@ -9,10 +9,13 @@ markdown <<MARKDOWN
 
 ## Educator’s Choice
 
+
+<img src="https://images.code.org/ef45b482f16ccd1f8a437f0c963f7c04-585015d9-e611-4704-b06e-83b52f8be36b.png" alt="Propmting tips and tricks. Ask follow-up questions. Be specific. Use feedback. Keep a critical eye and fact check." width="55%" style="border-radius:10px; float:right; margin: 0 0 10px 40px; border: 3px solid black;">
+
 #### 1. Choose an LLM, such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, <a href="https://www.bing.com/chat" target="_blank">Copilot</a>, or <a href="https://gemini.google.com/" target="_blank">Gemini</a>, to prompt.
 #### 2. Select the drop-downs below that best aligns with your role to show what you'll be prompting about.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Content Area Teachers</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
@@ -25,7 +28,7 @@ markdown <<MARKDOWN
 </details>
 
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Elementary Teachers</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
@@ -37,7 +40,7 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Administrators</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
@@ -49,7 +52,7 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 60%; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Wildcard (Anyone)</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
@@ -61,13 +64,5 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-## Prompting Tips and Tricks
-
-* #### When you’re prompting the AI don’t just stop after the first prompt! Keep asking it more questions and diving deeper.
-* #### For more accurate and helpful responses, try to be as detailed as possible in your requests. The more context you provide, the better LLMs can tailor their answers to your needs.
-* #### Don’t forget to use the feedback mechanisms to improve your experience. Whether it’s clarifying misunderstandings, asking for further details, or simply exploring different approaches, your interactions can help guide the conversation to more effectively meet your goals.
-* #### Keep your critical thinking cap on. Don’t trust the AI at face value. We’ll learn more about AI and misinformation in a future module, but for now use your better judgment and fact check anything that maybe doesn’t sound right. 
-
-
-
+<div style="clear:both;"></div>
 MARKDOWN
