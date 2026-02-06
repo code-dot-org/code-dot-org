@@ -17,6 +17,8 @@ import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 
 import styles from './AutocompleteInput.module.scss';
 
+const FETCH_SUGGESTIONS_MIN_LENGTH = 3;
+
 export const AutocompleteInput = memo(
   ({
     label,
@@ -28,11 +30,15 @@ export const AutocompleteInput = memo(
     fetchOptions,
     errorMessage,
     id,
+    onSubmit,
+    hideIcon = false,
+    compactOptions = false,
+    focusInputOnSelect = true,
     placeholder = 'Type to see results',
     debounceDelay = 300,
   }: {
     id: string;
-    label: string;
+    label?: string;
     name: string;
     size: TextFieldProps['size'];
     className: string;
@@ -40,6 +46,10 @@ export const AutocompleteInput = memo(
     value: string;
     fetchOptions: (value: string) => Promise<string[]>;
     errorMessage?: string;
+    onSubmit?: (value: string) => void;
+    hideIcon?: boolean;
+    compactOptions?: boolean;
+    focusInputOnSelect?: boolean;
     placeholder?: string;
     debounceDelay?: number;
   }) => {
@@ -48,6 +58,7 @@ export const AutocompleteInput = memo(
     const [options, setOptions] = useState<string[]>([]);
     const [activeIndex, setActiveIndex] = useState(-1);
     const [loading, setLoading] = useState(false);
+    const isFocusedRef = useRef(false);
     const debouncedValue = useDebounce(value, debounceDelay);
 
     const reset = useCallback(() => {
@@ -60,14 +71,29 @@ export const AutocompleteInput = memo(
 
     const containerRef = useOutsideClick<HTMLDivElement>(reset);
 
+    // Clear options when input is cleared or reduced to a length below the minimum to fetch suggestions.
     useEffect(() => {
-      // skip api call when component first mounts if value already exists
-      // also skip when an option is selected and value updates with result
+      if (!value || value.length < FETCH_SUGGESTIONS_MIN_LENGTH) {
+        reset();
+      }
+    }, [reset, value]);
+
+    useEffect(() => {
+      // Skip API call when component first mounts if value already exists.
+      // Also skip when an option is selected and value updates with result
       if (skipApi.current) {
         skipApi.current = false;
         return;
       }
-      if (debouncedValue && debouncedValue.length >= 3) {
+
+      if (!isFocusedRef.current) {
+        return;
+      }
+
+      if (
+        debouncedValue &&
+        debouncedValue.length >= FETCH_SUGGESTIONS_MIN_LENGTH
+      ) {
         const fetchSuggestions = async () => {
           try {
             setLoading(true);
@@ -93,15 +119,28 @@ export const AutocompleteInput = memo(
             value: option,
           },
         } as ChangeEvent<HTMLInputElement>);
+        onSubmit?.(option);
         reset();
-        containerRef.current?.querySelector('input')?.focus();
+
+        if (focusInputOnSelect) {
+          containerRef.current?.querySelector('input')?.focus();
+        }
       },
-      [containerRef, name, onChange, reset]
+      [containerRef, name, onChange, reset, onSubmit, focusInputOnSelect]
     );
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      const {key} = e;
+
+      // If no option is selected from the dropdown and Enter is pressed, trigger onSubmit with current value in the input.
+      if (key === 'Enter' && onSubmit && activeIndex < 0) {
+        e.preventDefault();
+        onSubmit(value);
+        reset();
+        return;
+      }
+
       if (options.length > 0) {
-        const {key} = e;
         switch (key) {
           case 'ArrowDown':
             e.preventDefault();
@@ -115,7 +154,8 @@ export const AutocompleteInput = memo(
           case ' ':
             if (activeIndex >= 0) {
               e.preventDefault();
-              handleSelectOption(options[activeIndex]);
+              const selectedValue = options[activeIndex];
+              handleSelectOption(selectedValue);
             }
             break;
           case 'Escape':
@@ -126,8 +166,24 @@ export const AutocompleteInput = memo(
       }
     };
 
+    // Tracking the focus state makes sure we're not accidentally showing the options when the input is not focused.
+    const handleFocus = () => {
+      isFocusedRef.current = true;
+    };
+
+    const handleBlur = () => {
+      isFocusedRef.current = false;
+    };
+
     return (
-      <div ref={containerRef} className={styles.autocompleteInputContainer}>
+      <div
+        ref={containerRef}
+        className={classNames(
+          styles.autocompleteInputContainer,
+          hideIcon && styles.hideIcon,
+          compactOptions && styles.compactOptions
+        )}
+      >
         <TextField
           name={name}
           label={label}
@@ -138,6 +194,8 @@ export const AutocompleteInput = memo(
           errorMessage={errorMessage}
           placeholder={placeholder}
           onKeyDown={handleKeyDown}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           autoComplete="off"
           role="combobox"
           aria-autocomplete="list"
@@ -147,12 +205,14 @@ export const AutocompleteInput = memo(
             activeIndex >= 0 ? `${listboxId}-item-${activeIndex}` : undefined
           }
         />
-        <FontAwesomeV6Icon
-          iconName={loading ? 'spinner' : 'magnifying-glass'}
-          animationType={loading ? 'spin' : undefined}
-          aria-hidden={true}
-        />
-        {options.length > 0 && (
+        {!hideIcon && (
+          <FontAwesomeV6Icon
+            iconName={loading ? 'spinner' : 'magnifying-glass'}
+            animationType={loading ? 'spin' : undefined}
+            aria-hidden={true}
+          />
+        )}
+        {isFocusedRef.current && options.length > 0 && (
           <ul
             id={listboxId}
             role="listbox"

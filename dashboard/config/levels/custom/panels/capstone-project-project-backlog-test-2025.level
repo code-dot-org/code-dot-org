@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-02-06T00:19:40.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Project Backlog\n\nA **project backlog** is a prioritized list of tasks a team plans to work on.",
+        "imageUrl": "https://images.code.org/56c5238fbf345dba65522b9c5de2db09-Screenshot 2026-02-05 165244.png",
+        "key": "undefined-7fcb598e-1242-4643-9b90-6c7a6113e6da",
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-02-06T00:19:40.860+00:00\",\"changed\":[\"cloned from \\\"capstone-project-scope-test-2025\\\"\"],\"cloned_from\":\"capstone-project-scope-test-2025\"},{\"changed_at\":\"2026-02-06 00:20:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-06 00:53:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
