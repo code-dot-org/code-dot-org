@@ -18,9 +18,9 @@
 #
 class AidiffLessonHook < AidiffArtifact
   def self.to_markdown(json)
-    "#{json['comment']}\n\n***\n\n"\
-    "**Introduction:** #{json['lesson_hook']['introduction']}  \n***\n"\
-    "**Activity:**  \n#{json['lesson_hook']['activity']}  \n***\n"\
+    "#{json['comment']}\n\n***\n\n" \
+    "**Introduction:** #{json['lesson_hook']['introduction']}  \n***\n" \
+    "**Activity:**  \n#{json['lesson_hook']['activity']}  \n***\n" \
     "**Wrap Up:** #{json['lesson_hook']['wrap_up']}"
   end
 end
