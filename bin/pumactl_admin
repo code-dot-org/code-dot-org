@@ -61,16 +61,15 @@ if status.success?
       data = JSON.parse(json_part)
 
       if query_path
-        # Send preamble STDERR so it doesn't corrupt the pipe.
-        warn preamble.strip unless preamble.strip.empty?
+        # Send the preamble to STDERR.
+        warn preamble.strip.chomp unless preamble.strip.empty?
 
         # Navigate the JSON safely using the query path.
         keys = query_path.split('.').map {|k| /^\d+$/.match?(k) ? k.to_i : k}
         result = data.dig(*keys)
 
-        # Output ONLY the data to STDOUT.
         if result.is_a?(Hash) || result.is_a?(Array)
-          puts JSON.generate(result)
+          puts JSON.pretty_generate(result)
         else
           puts result
         end
@@ -80,7 +79,8 @@ if status.success?
         puts JSON.pretty_generate(data)
       end
     rescue JSON::ParserError
-      # Fallback for parsing failures.
+      # If parsing fails, we warn the error and output the raw pumactl response.
+      warn "Failed to parse JSON part."
       puts stdout
     end
   else
