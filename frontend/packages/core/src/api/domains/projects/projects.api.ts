@@ -77,5 +77,14 @@ export function createProjectsApi(transport: Transport) {
         body: file,
       });
     },
+
+    async featureProjectBookmark(params: {channelId: string}) {
+      const {channelId} = params;
+
+      return await transport.request<unknown>({
+        method: 'PUT',
+        url: `/featured_projects/${channelId}/bookmark`,
+      });
+    },
   };
 }

@@ -25,11 +25,6 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
-    "./contexts": {
-      "types": "./dist/types/contexts/index.d.ts",
-      "import": "./dist/esm/contexts/index.mjs",
-      "require": "./dist/cjs/contexts/index.js"
-    },
     "./redux": {
       "types": "./dist/types/redux/index.d.ts",
       "import": "./dist/esm/redux/index.mjs",
@@ -63,7 +58,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/api": "workspace:*",
     "@code-dot-org/metrics": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "react-redux": "^9.2.0"

@@ -1,6 +1,8 @@
 import {z} from 'zod';
 import {
   AppOptionsSchema,
+  CloneLevelResponseSchema,
+  DeleteLevelResponseSchema,
   ExemplarSettingsSchema,
   ExtraLinksLevelDataSchema,
   LevelPropertiesBaseSchema,
@@ -33,3 +35,5 @@ export type SectionSummary = z.infer<typeof SectionSummarySchema>;
 export type ScriptLevelPathLink = z.infer<typeof ScriptLevelPathLinkSchema>;
 export type UserAppOptions = z.infer<typeof UserAppOptionsSchema>;
 export type ExemplarSettings = z.infer<typeof ExemplarSettingsSchema>;
+export type CloneLevelResponse = z.infer<typeof CloneLevelResponseSchema>;
+export type DeleteLevelResponse = z.infer<typeof DeleteLevelResponseSchema>;
