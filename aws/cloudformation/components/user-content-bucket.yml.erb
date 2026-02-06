@@ -6,13 +6,15 @@
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      BucketName: cdo.<%=environment%>.user-content
+      BucketName: <%=s3_bucket_namespace%>.user-content
       # To constrain costs, impose a hard limit here. We should consider more proactive cleanup in-platform.
       LifecycleConfiguration:
         Rules:
-          - Id: expire-after-6-months
+          # Expire Just-In-Time Professional Learning content after 6 months.
+          - Id: expire-jitpl-after-6-months
             Status: Enabled
             ExpirationInDays: 180
+            Prefix: just-in-time-pl/podcasts/
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
@@ -20,5 +22,4 @@
         RestrictPublicBuckets: true
       LoggingConfiguration:
         DestinationBucketName: cdo-logs
-        # TODO: confirm this is where we want these logs
-        LogFilePrefix: s3/user-content/<%=environment%>/
+        LogFilePrefix: s3/<%=s3_bucket_namespace%>.user-content/
