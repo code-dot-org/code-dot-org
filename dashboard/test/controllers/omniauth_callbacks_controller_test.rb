@@ -10,12 +10,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   TEST_CLEVER_STUDENT_DATA = OmniAuth::AuthHash.new(JSON.parse(<<~JSON
     {
       "provider": "clever",
-      "uid": "5966ed736b21538e3c000006",
+      "uid": "65cb9c1570fcf808965b9870",
       "info": {
-        "name": "Elizabeth Smith",
-        "first_name": "Elizabeth",
-        "last_name": "Smith",
-        "user_type": "student"
+        "name": "Maurice Schaefer",
+        "first_name": "Maurice",
+        "last_name": "Schaefer",
+        "email": "#{Faker::Internet.email}",
+        "user_type": "user"
       },
       "credentials": {
         "token": "faketoken123455678",
@@ -24,11 +25,11 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       "extra": {
         "raw_info": {
           "me": {
-            "type": "student",
+            "type": "user",
             "data": {
-              "id": "5966ed736b21538e3c000006",
-              "district": "59484d29ae5dee0001fd3291",
-              "type": "student",
+              "id": "65cb9c1570fcf808965b9870",
+              "district": "54299f6ecc544da87c000070",
+              "type": "user",
               "authorized_by": "district"
             },
             "links": [
@@ -38,40 +39,44 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
               },
               {
                 "rel": "canonical",
-                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+                "uri": "/v3.0/users/65cb9c1570fcf808965b9870"
               },
               {
                 "rel": "district",
-                "uri": "/v2.1/districts/59484d29ae5dee0001fd3291"
+                "uri": "/v3.0/districts/54299f6ecc544da87c000070"
               }
             ]
           },
           "canonical": {
             "data": {
-              "created": "2017-07-13T03:48:03.512Z",
-              "district": "59484d29ae5dee0001fd3291",
-              "dob": "2000-05-21T00:00:00.000Z",
-              "enrollments": [],
-              "gender": "M",
-              "hispanic_ethnicity": "",
-              "last_modified": "2017-11-02T00:49:40.504Z",
+              "created": "2024-02-13T16:43:22.075Z",
+              "district": "54299f6ecc544da87c000070",
+              "email": "#{Faker::Internet.email}",
+              "last_modified": "2024-02-13T16:43:22.075Z",
               "name": {
-                "first": "Elizabeth",
-                "last": "Smith",
-                "middle": ""
+                "first": "Maurice",
+                "last": "Schaefer"
               },
-              "race": "",
-              "school": "5966ed6cf9d478523c000004",
-              "schools": [
-                "5966ed6cf9d478523c000004"
-              ],
-              "sis_id": "202",
-              "id": "5966ed736b21538e3c000006"
+              "roles": {
+                "student": {
+                  "dob": "2012-02-12T00:00:00.000Z",
+                  "enrollments": [],
+                  "gender": "",
+                  "hispanic_ethnicity": "",
+                  "race": "",
+                  "school": "65cb9c1570fcf808965b986d",
+                  "schools": [
+                    "65cb9c1570fcf808965b986d"
+                  ],
+                  "sis_id": "10435651"
+                }
+              },
+              "id": "65cb9c1570fcf808965b9870"
             },
             "links": [
               {
                 "rel": "self",
-                "uri": "/v2.1/students/5966ed736b21538e3c000006"
+                "uri": "/v3.0/users/65cb9c1570fcf808965b9870"
               }
             ]
           }
@@ -185,18 +190,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with unknown clever teacher account" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
+    auth = generate_auth_user_hash(
       provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'first_last@clever-teacher.xx',
-        user_type: 'teacher',
-        dob: nil,
-        gender: nil
-      },
+      uid: '1111',
+      email: Faker::Internet.email,
+      user_type: 'user'
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -212,18 +212,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with unknown clever teacher account needs additional information" do
-    auth = OmniAuth::AuthHash.new(
-      uid: '1111',
+    auth = generate_auth_user_hash(
       provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: nil,
-        user_type: 'teacher',
-        dob: nil,
-        gender: nil
-      },
+      uid: '1111',
+      email: nil,
+      user_type: 'user'
     )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: '123456'}}}}
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -235,6 +230,29 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
+  end
+
+  test "login: authorizing with unknown clever staff account creates teacher" do
+    auth = generate_auth_user_hash(
+      provider: 'clever',
+      uid: '2222',
+      email: Faker::Internet.email,
+      user_type: 'user'
+    )
+    auth.extra[:raw_info][:canonical] = {data: {roles: {staff: {legacy_id: '654321'}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :clever
+    end
+
+    assert_equal 200, @response.status
+    assert_template 'omniauth/redirect'
+    partial_user = User.new_from_partial_registration(session)
+    assert_equal AuthenticationOption::CLEVER, partial_user.provider
+    assert_equal auth.uid, partial_user.uid
+    assert_equal User::TYPE_TEACHER, partial_user.user_type
   end
 
   test "login: authorizing with unknown clever student account creates student" do
@@ -254,21 +272,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "login: authorizing with known clever student account does not alter email or hashed email" do
-    clever_student = create(:student, provider: 'clever', uid: '111133')
+    clever_student = create(:student, provider: 'clever', uid: TEST_CLEVER_STUDENT_DATA.uid)
     student_hashed_email = clever_student.hashed_email
 
-    auth = OmniAuth::AuthHash.new(
-      uid: '111133',
-      provider: 'clever',
-      info: {
-        nickname: '',
-        name: {'first' => 'Hat', 'last' => 'Cat'},
-        email: 'hat.cat@example.com',
-        user_type: 'student',
-        dob: Time.zone.today - 10.years,
-        gender: 'f'
-      },
-    )
+    auth = TEST_CLEVER_STUDENT_DATA.dup
+    auth.info.email = Faker::Internet.email # different email than the one on record
+
     @request.env['omniauth.auth'] = auth
     @request.env['omniauth.params'] = {}
 
@@ -412,6 +421,31 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I am signed in
+    user.reload
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'clever: signs in user if user is found by legacy_id' do
+    legacy_id = SecureRandom.alphanumeric(10)
+    user = create(:teacher)
+    create(
+      :authentication_option,
+      user: user,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: legacy_id
+    )
+
+    auth = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: 'new-uid'
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: legacy_id}}}}
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    assert_does_not_create(User) do
+      get :clever
+    end
+
     user.reload
     assert_equal user.id, signed_in_user_id
   end
@@ -984,8 +1018,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'login: clever does not silently add authentication_option to migrated student with matching email' do
-    email = 'test@foo.xyz'
-    uid = '654321'
+    email = TEST_CLEVER_STUDENT_DATA.info.email
+    uid =  TEST_CLEVER_STUDENT_DATA.uid
     user = create(:student, email: email)
     auth = generate_auth_user_hash(provider: AuthenticationOption::CLEVER, uid: uid, user_type: User::TYPE_STUDENT, email: email)
     @request.env['omniauth.auth'] = auth
@@ -1005,7 +1039,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
-      user_type: User::TYPE_TEACHER,
       email: email
     )
     @request.env['omniauth.auth'] = auth

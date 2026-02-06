@@ -29,6 +29,43 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
+  test 'with_ai_tutor_available returns levels with ai_tutor_available true' do
+    level_true = Level.create(name: 'ai_tutor_true', properties: {'ai_tutor_available' => true})
+    level_str_true = Level.create(name: 'ai_tutor_str_true', properties: {'ai_tutor_available' => 'true'})
+    level_false = Level.create(name: 'ai_tutor_false', properties: {'ai_tutor_available' => false})
+    level_nil = Level.create(name: 'ai_tutor_nil', properties: {})
+
+    result = Level.with_ai_tutor_available
+    assert_includes result, level_true
+    assert_includes result, level_str_true
+    refute_includes result, level_false
+    refute_includes result, level_nil
+  end
+
+  test 'with_essential_ai_chat_tools returns levels with type Aichat or Weblab2' do
+    aichat_level = Level.create(name: 'aichat', type: 'Aichat')
+    weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
+    maze_level = Level.create(name: 'maze', type: 'Maze')
+
+    result = Level.with_essential_ai_chat_tools
+    assert_includes result, aichat_level
+    assert_includes result, weblab2_level
+    refute_includes result, maze_level
+  end
+
+  test 'with_any_ai_chat_tools returns levels with type Aichat, Weblab2, or ai_tutor_available true' do
+    aichat_level = Level.create(name: 'aichat', type: 'Aichat')
+    weblab2_level = Level.create(name: 'weblab2', type: 'Weblab2')
+    ai_tutor_level = Level.create(name: 'ai_tutor', properties: {'ai_tutor_available' => 'true'})
+    maze_level = Level.create(name: 'maze', type: 'Maze')
+
+    result = Level.with_any_ai_chat_tools
+    assert_includes result, aichat_level
+    assert_includes result, weblab2_level
+    assert_includes result, ai_tutor_level
+    refute_includes result, maze_level
+  end
+
   test 'types marked as having ideal level sources' do
     raise_unless_specifies_ideal_level_source(Level)
   end
@@ -1431,6 +1468,76 @@ class LevelTest < ActiveSupport::TestCase
     )
 
     properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal true, properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties shows rubric if parent level matches lesson rubric level" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    parent_level = create(:bubble_choice_level, name: 'parent bubble choice')
+    child_level = create(:music, name: 'music sublevel')
+    parent_level.child_levels << child_level
+    create(:rubric, level: parent_level, lesson: lesson)
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [parent_level]
+    )
+
+    properties = child_level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal true, properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties does not show rubric if parent level is in different script" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    other_script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    parent_level = create(:bubble_choice_level, name: 'parent bubble choice 2')
+    child_level = create(:music, name: 'music sublevel 2')
+    parent_level.child_levels << child_level
+    create(:rubric, level: parent_level, lesson: lesson)
+    # Parent is in other_script, not the script with the rubric
+    create(:script_level, script: other_script, levels: [parent_level])
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [child_level]
+    )
+
+    properties = child_level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_nil properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties shows rubric for sublevel when rubric level has sublevel with same template" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    template_level = create(:music, name: 'shared music template')
+
+    # Rubric level is a bubble choice with a sublevel that has the template
+    rubric_level = create(:bubble_choice_level, name: 'rubric bubble choice')
+    rubric_sublevel = create(:music, name: 'rubric sublevel', properties: {project_template_level_name: template_level.name})
+    rubric_level.child_levels << rubric_sublevel
+
+    # Current level is a sublevel with the same template
+    current_level = create(:music, name: 'current sublevel', properties: {project_template_level_name: template_level.name})
+
+    create(:rubric, level: rubric_level, lesson: lesson)
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [current_level]
+    )
+
+    properties = current_level.summarize_for_lab2_properties(script, script_level).stringify_keys
 
     assert_equal true, properties["showRubric"]
   end

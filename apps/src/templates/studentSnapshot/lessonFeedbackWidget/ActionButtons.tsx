@@ -18,6 +18,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
         text={'Save as draft'}
         type="secondary"
         size="xs"
+        color="gray"
         onClick={onSaveAsDraft}
       />
       <Button

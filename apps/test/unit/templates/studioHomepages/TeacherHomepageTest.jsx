@@ -105,10 +105,7 @@ jest.mock('@cdo/apps/templates/studioHomepages/RecentCourses', () => props => (
   // eslint-disable-next-line react/forbid-dom-props
   <div data-testid={'test-RecentCourses'} data-props={JSON.stringify(props)} />
 ));
-jest.mock('@cdo/apps/templates/studioHomepages/NpsSurveyBlock', () => props => (
-  // eslint-disable-next-line react/forbid-dom-props
-  <div data-testid={'test-NpsSurveyBlock'} data-props={JSON.stringify(props)} />
-));
+
 jest.mock(
   '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner',
   () => props =>
@@ -193,7 +190,7 @@ describe('TeacherHomepage', () => {
     expect(calls[0]).toEqual([
       EVENTS.TEACHER_LOGIN_EVENT,
       {'user id': 42},
-      'Both',
+      'Statsig',
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.

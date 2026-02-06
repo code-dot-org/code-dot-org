@@ -53,6 +53,18 @@ class Slack
     user['name']
   end
 
+  # Returns a mention tag '<@id>' for a user based on their email.
+  # @param email [String] The email of the Slack user.
+  # @raise [ArgumentError] If the email does not correspond to a Slack user.
+  # @return [nil | String] The user (mention) tag for the Slack user.
+  def self.user_mention_tag(email)
+    members = post_to_slack("https://slack.com/api/users.list")['members']
+    raise "Failed to query users.list" unless members
+    user = members.find {|member| email == member['profile']['email']}
+    raise "Slack email #{email} not found" unless user
+    "<@#{user['id']}>"
+  end
+
   def self.user_id(name)
     members = post_to_slack("https://slack.com/api/users.list")['members']
     raise "Failed to query users.list" unless members

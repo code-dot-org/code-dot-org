@@ -33,7 +33,6 @@ import teacherSections, {
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
-import experiments from '@cdo/apps/util/experiments';
 
 // 6 seconds
 const FLASH_DURATION = 6 * 1000;
@@ -76,7 +75,7 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  if (showAITALessonSummary || experiments.isEnabled('ai_lesson_summaries')) {
+  if (showAITALessonSummary) {
     store.dispatch(setShowAITALessonSummary(true));
     store.dispatch(
       setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)

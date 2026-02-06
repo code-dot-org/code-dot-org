@@ -6721,6 +6721,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_chat_access_level
+    sql_type_metadata: *3
+    'null': true
+    default: disabled
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   seed_info:
   - *9
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -10692,7 +10700,21 @@ indexes:
     type: 
     using: :btree
     comment: 
-  lesson_feedbacks: []
+  lesson_feedbacks:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lesson_feedbacks
+    name: index_lesson_feedbacks_on_lesson_student
+    unique: true
+    columns:
+    - lesson_id
+    - student_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   lesson_groups:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_groups
@@ -15045,7 +15067,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260120185836
+version: 20260128232147
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

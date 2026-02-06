@@ -213,6 +213,7 @@ Dashboard::Application.routes.draw do
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_tutor_enabled', to: 'sections#set_ai_tutor_enabled'
+          post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
         end
         collection do
           get 'membership'
@@ -559,6 +560,7 @@ Dashboard::Application.routes.draw do
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
+        get :level_properties, to: 'lessons#level_properties_by_id', format: false
         post :clone
       end
     end
@@ -1184,13 +1186,17 @@ Dashboard::Application.routes.draw do
     # Routes used for the Student Snapshot page on the teacher dashboard
     resources :student_snapshots, only: [] do
       collection do
-        get '/lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
-        get '/cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
-        get '/cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
+        get 'lessons/:unit_id', controller: :student_snapshots, action: :lessons # GET /student_snapshots/lessons/{unit_id}
+        get 'cfu_levels/:lesson_id', controller: :student_snapshots, action: :cfu_levels # GET /student_snapshots/cfu_levels/{lesson_id}
+        get 'cfu_responses/:lesson_id', controller: :student_snapshots, action: :cfu_responses # GET /student_snapshots/cfu_responses/{lesson_id}?student_id=123
         get 'exemplar_code/:lesson_id', action: :exemplar_code # GET /student_snapshots/exemplar_code/{lesson_id}
         get 'units/:unit_id/lessons/:lesson_id/students/:student_id/code', action: :student_code # GET /student_snapshots/units/:unit_id/lessons/:lesson_id/students/:student_id/code
+        get 'ai_generated_lesson_feedback', controller: :student_snapshots, action: :ai_generated_lesson_feedback # GET /student_snapshots/ai_generated_lesson_feedback
+        get 'lesson_insight', controller: :student_snapshots, action: :lesson_insight # GET /student_snapshots/lesson_insight
       end
     end
+
+    get '/lesson_feedbacks/saved_feedback', to: 'lesson_feedbacks#saved_feedback'
 
     resources :ai_lesson_summary_podcasts do
       collection do

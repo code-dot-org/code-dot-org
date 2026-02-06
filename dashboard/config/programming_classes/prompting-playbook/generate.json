@@ -1,0 +1,14 @@
+{
+  "category_key": "prompt_patterns",
+  "content": "",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "generate",
+  "name": "1. Generate",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+
+  ]
+}

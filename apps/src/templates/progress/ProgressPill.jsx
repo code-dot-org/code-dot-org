@@ -119,6 +119,7 @@ class ProgressPill extends React.Component {
         style={{textDecoration: 'none'}}
         className="uitest-ProgressPill"
         onClick={onClick}
+        aria-label={`Level ${text}`}
       >
         <div {...tooltipProps} style={style}>
           {icon && <FontAwesome icon={icon} />}

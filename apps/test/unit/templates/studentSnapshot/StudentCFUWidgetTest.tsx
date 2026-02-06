@@ -1,4 +1,5 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {act, render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -25,8 +26,10 @@ const SAMPLE_CFU_LEVELS = [
     type: 'Multi',
     key: 'programming-fundamentals-lesson5-level6_2025-launch_2025',
     script_level_id: 1943,
+    level_position: 1,
     progression: 'Check Your Understanding',
     progression_display_name: 'Check Your Understanding',
+    question_text: 'What is the correct answer?',
   },
   {
     id: 11816,
@@ -35,8 +38,10 @@ const SAMPLE_CFU_LEVELS = [
     type: 'Match',
     key: 'programming-fundamentals-lesson5-vocab_2025',
     script_level_id: 1947,
+    level_position: 2,
     progression: 'Check Your Understanding',
     progression_display_name: 'Check Your Understanding',
+    question_text: 'Match the terms',
   },
 ];
 
@@ -52,6 +57,17 @@ const SAMPLE_CFU_RESPONSES = [
     submitted: true,
     timestamp: '2025-01-01T00:00:00Z',
   },
+  {
+    level_id: 11816,
+    script_level_id: 1947,
+    response: {
+      type: 'Match',
+      student_result: [0, 1, 2],
+      status: 'correct',
+    },
+    submitted: true,
+    timestamp: '2025-01-01T00:00:00Z',
+  },
 ];
 
 const SAMPLE_LEVEL_GROUP_CFU_LEVELS = [
@@ -62,10 +78,11 @@ const SAMPLE_LEVEL_GROUP_CFU_LEVELS = [
     type: 'LevelGroup',
     key: 'programming-fundamentals-lesson3-level7_2025',
     script_level_id: 1927,
+    level_position: 1,
     progression: 'Check for Understanding',
     progression_display_name: 'Check for Understanding',
-    question_text: null,
-    answers: null,
+    question_text: ['Free response sublevel question'],
+    answers: [null],
   },
 ];
 
@@ -134,7 +151,7 @@ describe('StudentCFUWidget', () => {
     });
   });
 
-  it('renders raw CFU JSON when data is provided', async () => {
+  it('renders CFU levels with structured UI when data is provided', async () => {
     HttpClient.fetchJson.mockImplementation((url: string) => {
       if (url.startsWith('/student_snapshots/cfu_levels/')) {
         return Promise.resolve({
@@ -162,21 +179,17 @@ describe('StudentCFUWidget', () => {
       />
     );
 
-    // Check for a couple of key strings from the sample data to ensure JSON is rendered
+    // Check that the structured CFU UI renders with question types and level details
     await waitFor(() => {
-      expect(
-        screen.getAllByText(
-          /programming-fundamentals-lesson5-level6_2025-launch_2025/
-        ).length
-      ).toBeGreaterThan(0);
-      expect(
-        screen.getAllByText(/programming-fundamentals-lesson5-vocab_2025/)
-          .length
-      ).toBeGreaterThan(0);
+      expect(screen.getByText('Level Details')).toBeInTheDocument();
+      expect(screen.getByText('Multiple Choice')).toBeInTheDocument();
+      expect(screen.getByText('Matching')).toBeInTheDocument();
     });
   });
 
-  it('renders raw CFU JSON for LevelGroup text-input CFUs', async () => {
+  it('renders LevelGroup CFUs with sublevel student answers', async () => {
+    const user = userEvent.setup();
+
     HttpClient.fetchJson.mockImplementation((url: string) => {
       if (url.startsWith('/student_snapshots/cfu_levels/')) {
         return Promise.resolve({
@@ -205,12 +218,18 @@ describe('StudentCFUWidget', () => {
     );
 
     await waitFor(() => {
-      expect(
-        screen.getAllByText(/programming-fundamentals-lesson3-level7_2025/)
-          .length
-      ).toBeGreaterThan(0);
-      expect(screen.getAllByText(/LevelGroup/).length).toBeGreaterThan(0);
-      expect(screen.getAllByText(/hello world/).length).toBeGreaterThan(0);
+      expect(screen.getByText('Level Details')).toBeInTheDocument();
+      expect(screen.getByText('Level Group')).toBeInTheDocument();
+    });
+
+    // Expand the LevelGroup to see the student answer
+    const expandButtons = screen.getAllByRole('button');
+    await act(async () => {
+      await user.click(expandButtons[0]);
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText('hello world')).toBeInTheDocument();
     });
   });
 });

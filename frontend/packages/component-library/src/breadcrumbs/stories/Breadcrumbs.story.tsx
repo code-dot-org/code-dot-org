@@ -1,5 +1,5 @@
 import {Breadcrumbs as MUIBreadcrumbs} from '@mui/material';
-import {Meta, StoryFn} from '@storybook/react-webpack5';
+import {Meta, StoryFn} from '@storybook/react-vite';
 import {within, expect} from 'storybook/test';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';

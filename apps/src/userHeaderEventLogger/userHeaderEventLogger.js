@@ -127,7 +127,7 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
       analyticsReporter.sendEvent(
         EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
         {pageUrl: pageUrl},
-        PLATFORMS.BOTH
+        PLATFORMS.STATSIG
       );
     });
   }
@@ -142,7 +142,7 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
     );
   });
 
-  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.BOTH, false);
+  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.STATSIG, false);
 };
 
 const addSignedInMetrics = (pageUrl, headerCreateMenu) => {

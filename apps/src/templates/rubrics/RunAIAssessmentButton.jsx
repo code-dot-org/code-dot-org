@@ -178,7 +178,7 @@ function RunAIAssessmentButton({
         rubricId: rubricId,
         studentId: studentUserId,
       },
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     fetch(url, {
       method: 'POST',

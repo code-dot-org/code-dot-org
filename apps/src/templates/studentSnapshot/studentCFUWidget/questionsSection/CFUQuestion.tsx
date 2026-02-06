@@ -18,6 +18,9 @@ const questionTypeMap: Record<CFULevelType, string> = {
   Match: 'Matching',
   Multi: 'Multiple Choice',
   FreeResponse: 'Free Response',
+  LevelGroup: 'Level Group',
+  Panels: 'Panels',
+  Aichat: 'AI Chat',
 };
 
 interface CFUQuestionProps {
@@ -78,10 +81,12 @@ const CFUQuestion: React.FC<CFUQuestionProps> = ({
     </div>
     {Array.isArray(level.question_text) ? (
       <>
-        {level.question_text.map(questionText => (
+        {level.question_text.map((questionText, index) => (
           <CFUQuestionStudentAnswer
             key={questionText}
             level={level}
+            isLevelGroupAnswer
+            levelGroupLevelIndex={index}
             response={response}
             questionText={questionText}
             isOpen={isOpen}

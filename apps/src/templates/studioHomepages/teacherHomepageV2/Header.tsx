@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({
     analyticsReporter.sendEvent(
       EVENTS.SECTION_SETUP_STARTED,
       {},
-      PLATFORMS.BOTH
+      PLATFORMS.STATSIG
     );
     dispatch(beginEditingSection());
   };

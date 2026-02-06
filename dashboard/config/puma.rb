@@ -31,7 +31,12 @@ before_fork do
   Cdo::AppServerHooks.before_fork
 end
 
-on_worker_boot do |_index|
-  Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
+before_worker_boot do |_index|
+  Cdo::AppServerHooks.before_worker_boot(host: CDO.dashboard_hostname)
   ActiveRecord::Base.establish_connection
+end
+
+# Code to run in the Puma parent process after it boots, and also after a phased restart completes.
+after_booted do
+  Cdo::AppServerHooks.after_booted
 end

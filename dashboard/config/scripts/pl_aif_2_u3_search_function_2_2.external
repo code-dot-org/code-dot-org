@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 
 
 
-<img src="https://images.code.org/27526a2ffecd3d3b9ca19967d1489a5e-image-1767803724551.png" alt="JavaScript code sample with a searching function for a calendar" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<img src="https://images.code.org/27526a2ffecd3d3b9ca19967d1489a5e-image-1767803724551.png" alt="JavaScript code sample with a searching function for a calendar" width="850px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
 ---
 
@@ -37,18 +37,18 @@ markdown <<MARKDOWN
 
 #### **1. The data (array of objects)** 
 
-<img src="https://images.code.org/140a16e283fdb9d39f28457606140f8f-image-1767803913974.png" alt="array of songs in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+<img src="https://images.code.org/140a16e283fdb9d39f28457606140f8f-image-1767803913974.png" alt="array of songs in javascript" width="650px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
 
 #### This is the data the app starts with. 
 #### Each page is an object, and all the pages together are stored in an array. 
 
 <br><br>
-
+<div style="clear:both;"></div>
 
 #### **2. The search logic (inside a function)**
 
 <div style="clear:both;"></div>
-<img src="https://images.code.org/b888879a13a1a1f5bfce1f20f47dc052-image-1767804325162.png" alt="function with search algorithm" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+<img src="https://images.code.org/b888879a13a1a1f5bfce1f20f47dc052-image-1767804325162.png" alt="function with search algorithm" width="650px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
 
 
 #### This function defines the search rule.
@@ -59,10 +59,11 @@ markdown <<MARKDOWN
 
 <br><br>
 
+<div style="clear:both;"></div>
 
 #### **3. Using the function**
 
-<img src="https://images.code.org/11e47568ea70e49b94ebda716af3df8d-image-1767804025432.png" alt="calling the function in javascript" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
+<img src="https://images.code.org/11e47568ea70e49b94ebda716af3df8d-image-1767804025432.png" alt="calling the function in javascript" width="650px" style="border-radius:10px; float:right; margin: 0 0 40px 20px;">
 
 #### This line runs the function using the original data.
 #### The result is a new array that contains only the pages that match the search term.
@@ -72,5 +73,5 @@ markdown <<MARKDOWN
 
 #### Let's see what our final function, the sorting function, does.
 
-![]()
+
 MARKDOWN

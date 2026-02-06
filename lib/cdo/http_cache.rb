@@ -168,7 +168,8 @@ class HttpCache
             path: '/assets/*',
             proxy: 'cdo-assets',
             headers: S3_FORWARD_HEADERS,
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # For .png images, don't forward any cookies or additional headers.
           {
@@ -181,7 +182,8 @@ class HttpCache
           {
             path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # Dashboard-based API paths in Pegasus are session-specific, allowlist all cookies.
           {
@@ -199,19 +201,22 @@ class HttpCache
                 /poste*
               ),
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           {
             path: '/dashboardapi/*',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           {
             path: '/i18n/track_string_usage',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           # Cached paths that specifically filter query-parameters.
           {
