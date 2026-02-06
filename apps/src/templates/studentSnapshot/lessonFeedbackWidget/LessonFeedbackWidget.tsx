@@ -10,6 +10,7 @@ import i18n from '@cdo/locale';
 import ActionButtons from './ActionButtons';
 import AddResourceDialog from './AddResourceDialog';
 import FeedbackTextbox from './FeedbackTextbox';
+import RecommendedActions from './RecommendedActions';
 import UrlTab from './UrlTab';
 import {useLessonFeedback} from './useLessonFeedback';
 
@@ -28,10 +29,10 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   studentId,
   unitId,
 }) => {
-  const [initialFeedback, setInitialFeedback] = React.useState<string>('');
+  const [feedbackText, setFeedbackText] = React.useState<string>('');
   const [existingFeedbackData, setExistingFeedbackData] =
     React.useState<any>(null);
-  const [exisitingResources, setExistingResources] = React.useState<
+  const [resourceData, setResourceData] = React.useState<
     Array<{
       recommended_action: string;
       resource_name: string;
@@ -67,10 +68,12 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     async function fetchLessonFeedback() {
       if (!lessonId || !studentId || !unitId) {
-        setInitialFeedback('');
+        setFeedbackText('');
+        setResourceData([]);
         return;
       }
-      setInitialFeedback(''); // Clear feedback before fetching
+      setFeedbackText(''); // Clear feedback before fetching
+      setResourceData([]); // Clear resource data before fetching
       try {
         const response = await fetch(
           `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
@@ -81,16 +84,16 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           const aiData = await getAiLessonFeedback(lessonId, unitId, studentId);
           if (aiData && aiData.json) {
             const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
-            setInitialFeedback(aiGeneratedInitialFeedback);
+            setFeedbackText(aiGeneratedInitialFeedback);
           }
         } else {
           const data = await response.json();
           if (data.saved_feedback) {
-            setInitialFeedback(data.saved_feedback);
+            setFeedbackText(data.saved_feedback);
           }
           setExistingFeedbackData(data);
           if (data.resources) {
-            setExistingResources(data.resources);
+            setResourceData(data.resources);
           }
         }
       } catch (error) {
@@ -100,52 +103,18 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     fetchLessonFeedback();
   }, [lessonId, studentId, unitId]);
   // Existing hook usage
-  const {
-    isLoading,
-    scrollable,
-    feedbackText,
-    recommendedActionText,
-    resourceLink,
-    resourceName,
-    showAddResourcePopup,
-    tempResourceName,
-    tempResourceLink,
-    handleFeedbackEdited,
-    handleRecommendedActionChange,
-    handleAddResourceClick,
-    handleCloseResourcePopup,
-    handleTempResourceNameChange,
-    handleTempResourceLinkChange,
-    exitResourcePopup,
-    handleResourceSave,
-    handleSendToStudent,
-    deleteResourceLink,
-  } = useLessonFeedback({
+  const {isLoading, scrollable, handleSendToStudent} = useLessonFeedback({
     lessonId,
     teacherHasEnabledAi,
   });
 
   // Save as draft: update local state and persist to backend
   const handleSaveAsDraft = async () => {
-    // Build resources array from recommended actions
-    const resources: Array<{
-      recommended_action: string;
-      resource_name: string;
-      resource_link: string;
-    }> = [];
-    if (recommendedActionText || resourceName || resourceLink) {
-      resources.push({
-        recommended_action: recommendedActionText,
-        resource_name: resourceName,
-        resource_link: resourceLink,
-      });
-    }
-
     // Update local state
     setExistingFeedbackData((prev: any) => ({
       ...prev,
       saved_feedback: feedbackText,
-      resources,
+      resources: resourceData,
     }));
 
     // Persist to backend
@@ -162,7 +131,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           },
           body: JSON.stringify({
             saved_feedback: feedbackText,
-            resources,
+            resources: resourceData,
           }),
         });
       } else {
@@ -177,7 +146,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             lesson_id: lessonId,
             student_id: studentId,
             saved_feedback: feedbackText,
-            resources,
+            resources: resourceData,
           }),
         });
       }
@@ -203,60 +172,14 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       <div className={styles.feedbackTextBoxWrapper}>
         <label className={styles.typographyLabelTwo}>{i18n.feedback()}</label>
         <FeedbackTextbox
-          feedbackText={feedbackText || initialFeedback}
-          onFeedbackChange={handleFeedbackEdited}
+          feedbackText={feedbackText}
+          onFeedbackChange={setFeedbackText}
         />
       </div>
-      <div className={styles.recommendedActionContainer}>
-        <label className={styles.typographyLabelTwo}>
-          {i18n.lessonFeedbackRecommendedAction()}
-        </label>
-        <BodyFourText noMargin>
-          {i18n.lessonFeedbackRecommendedActionDirections()}
-        </BodyFourText>
-        <div className={styles.inputWrapper}>
-          <input
-            className={styles.inputBox}
-            type="text"
-            placeholder={'Write a message'}
-            value={
-              exisitingResources[0]?.recommended_action || recommendedActionText
-            }
-            onChange={handleRecommendedActionChange}
-          />
-          <Button
-            text={'Add resource link'}
-            size="xs"
-            type="secondary"
-            color="gray"
-            disabled={!!exisitingResources[0]?.resource_name}
-            iconLeft={{
-              iconStyle: 'solid',
-              iconName: 'plus',
-              title: 'Add Resource',
-            }}
-            onClick={handleAddResourceClick}
-          />
-          {exisitingResources[0]?.resource_name &&
-            exisitingResources[0]?.resource_link && (
-              <UrlTab
-                urlName={exisitingResources[0]?.resource_name}
-                onClickHandler={deleteResourceLink}
-              />
-            )}
-        </div>
-        {showAddResourcePopup && (
-          <AddResourceDialog
-            tempResourceName={tempResourceName}
-            tempResourceLink={tempResourceLink}
-            onResourceNameChange={handleTempResourceNameChange}
-            onResourceLinkChange={handleTempResourceLinkChange}
-            onCancel={exitResourcePopup}
-            onSave={handleResourceSave}
-            onClose={handleCloseResourcePopup}
-          />
-        )}
-      </div>
+      <RecommendedActions
+        resourceData={resourceData}
+        setResourceData={setResourceData}
+      />
       <ActionButtons
         onSaveAsDraft={handleSaveAsDraft}
         onSendToStudent={handleSendToStudent}
