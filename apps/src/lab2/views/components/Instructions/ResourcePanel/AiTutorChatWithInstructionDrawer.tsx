@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {throttle} from 'lodash';
 import React, {useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
@@ -44,6 +45,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const [chatHeight, setChatHeight] = useState<number | undefined>(
     INITIAL_CHAT_HEIGHT
   );
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   const {
     position: rawChatHeight,
     separatorProps,
@@ -62,6 +65,11 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       return;
     }
     const availableHeight = containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
+    if (isCollapsed) {
+      setInstructionsHeight(0);
+      setChatHeight(availableHeight);
+      return;
+    }
     setInstructionsHeight(
       Math.max(availableHeight - rawChatHeight, MIN_INSTRUCTIONS_HEIGHT)
     );
@@ -70,7 +78,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       availableHeight - MIN_INSTRUCTIONS_HEIGHT
     );
     setChatHeight(newChatHeight);
-  }, [rawChatHeight, setChatHeight, setInstructionsHeight]);
+  }, [rawChatHeight, setChatHeight, setInstructionsHeight, isCollapsed]);
 
   const throttledAdjustInstructionsHeight = useMemo(
     () =>
@@ -84,20 +92,36 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     throttledAdjustInstructionsHeight();
   }, [throttledAdjustInstructionsHeight]);
 
+  const toggleInstructions = useCallback(() => {
+    setIsCollapsed(prev => !prev);
+  }, []);
+
   return (
     <div ref={containerRef} className={styles.container}>
-      <div
-        className={styles.instructionsDrawer}
-        style={{height: instructionsHeight}}
-      >
-        {instructionsContent}
-      </div>
-      <ResizeBar
-        isVertical={false}
-        separatorProps={separatorProps}
-        isDragging={isDragging}
-      />
-
+      {!isCollapsed && (
+        <>
+          <div
+            className={styles.instructionsDrawer}
+            style={{height: instructionsHeight}}
+          >
+            {instructionsContent}
+          </div>
+          <Button
+            className={styles.toggleButton}
+            style={{top: instructionsHeight}}
+            onClick={toggleInstructions}
+            text="Hide Instructions"
+            type="tertiary"
+            size="xs"
+            color="black"
+          />
+          <ResizeBar
+            isVertical={false}
+            separatorProps={separatorProps}
+            isDragging={isDragging}
+          />
+        </>
+      )}
       <div className={styles.chatPanel} style={{height: chatHeight}}>
         <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
