@@ -31,9 +31,9 @@ class AidiffArtifact < ApplicationRecord
     # Put spaces at the end of the line for Markdown newlines
     new_text = text.gsub('\n', '    \n')
 
-    return Kernel.const_get(type).to_markdown(JSON.parse(new_text))
+    Kernel.const_get(type).to_markdown(JSON::Validator.parse(new_text))
   rescue
-    return text
+    text
   end
 
   def summarize
