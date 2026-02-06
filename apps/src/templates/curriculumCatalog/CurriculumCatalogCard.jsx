@@ -69,6 +69,7 @@ const CurriculumCatalogCard = ({
   isTeacher,
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
+  aiChatToolsDependency,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -160,6 +161,7 @@ CurriculumCatalogCard.propTypes = {
   isSignedOut: PropTypes.bool.isRequired,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
+  aiChatToolsDependency: PropTypes.string,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -198,6 +200,7 @@ const CustomizableCurriculumCatalogCard = ({
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
   wide,
+  aiChatToolsDependency,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -241,6 +244,7 @@ const CustomizableCurriculumCatalogCard = ({
       return (
         <MultipleSectionsAssigner
           assignmentName={courseDisplayNameWithLatestYear}
+          aiChatToolsDependency={aiChatToolsDependency}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
@@ -485,7 +489,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   availableResources: PropTypes.object,
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
-
+  aiChatToolsDependency: PropTypes.string,
   wide: PropTypes.bool,
 };
 

@@ -348,6 +348,14 @@ class CourseOffering < ApplicationRecord
     facilitated_workshops.sort_by {|ws| ws.sessions.first.start}
   end
 
+  def ai_chat_tools_dependency
+    units = course_versions.map(&:units).flatten
+    return 'essential' if units.any?(&:requires_ai_chat_tools?)
+    return 'available' if units.any?(&:has_ai_chat_tools?)
+
+    'none'
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -397,7 +405,8 @@ class CourseOffering < ApplicationRecord
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       available_resources: get_available_resources(locale_code),
-      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog)
+      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog),
+      ai_chat_tools_dependency: ai_chat_tools_dependency,
     }
   end
 

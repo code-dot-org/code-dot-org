@@ -43,6 +43,8 @@ const CurriculumCatalog = ({
   forceTranslated,
   ...props
 }) => {
+  console.log('CurriculumCatalog render');
+  console.log('curriculaData:', curriculaData);
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
@@ -227,6 +229,7 @@ const CurriculumCatalog = ({
                 published_date,
                 self_paced_pl_course_offering_path,
                 available_resources,
+                ai_chat_tools_dependency,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -240,6 +243,7 @@ const CurriculumCatalog = ({
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
+                  aiChatToolsDependency={ai_chat_tools_dependency}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}

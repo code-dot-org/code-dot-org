@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import AiChatToolsAvailableAlert from '@cdo/apps/aiComponentLibrary/sectionAssignmentAlerts/AiChatToolsAvailableAlert';
+import AiChatToolsRequiredAlert from '@cdo/apps/aiComponentLibrary/sectionAssignmentAlerts/AiChatToolsRequiredAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -17,6 +19,7 @@ import {
   unassignSection,
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
@@ -27,6 +30,7 @@ const MultipleSectionsAssigner = ({
   onClose,
   courseOfferingId,
   courseVersionId,
+  aiChatToolsDependency,
   scriptId,
   reassignConfirm = () => {},
   isAssigningCourseOnly,
@@ -243,6 +247,14 @@ const MultipleSectionsAssigner = ({
             styleAsText
             color={Button.ButtonColor.brandSecondaryDefault}
           />
+          {experiments.AI_CHAT_NEW_PERMISSIONS &&
+            aiChatToolsDependency === 'essential' && (
+              <AiChatToolsRequiredAlert />
+            )}
+          {!experiments.AI_CHAT_NEW_PERMISSIONS &&
+            aiChatToolsDependency === 'available' && (
+              <AiChatToolsAvailableAlert />
+            )}
         </div>
       </div>
       <div className={moduleStyle.buttonContainer}>
@@ -275,6 +287,7 @@ MultipleSectionsAssigner.propTypes = {
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
   sectionDirections: PropTypes.string,
+  aiChatToolsDependency: PropTypes.string,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,
