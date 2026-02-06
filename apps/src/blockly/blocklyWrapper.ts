@@ -364,11 +364,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
       return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
-  Object.defineProperty(blocklyWrapper, 'SVG_NS', {
-    get: function () {
-      return this.blockly_.utils.dom.SVG_NS;
-    },
-  });
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
       // In the event that the block is no longer focused, we can
