@@ -198,7 +198,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
 
   const podcastsEnabled =
-    DCDO.get('ai-lesson-summary-podcasts', false) ||
+    !!DCDO.get('ai-lesson-summary-podcasts', false) ||
     experiments.isEnabled('ai-lesson-podcasts');
 
   React.useEffect(() => {
