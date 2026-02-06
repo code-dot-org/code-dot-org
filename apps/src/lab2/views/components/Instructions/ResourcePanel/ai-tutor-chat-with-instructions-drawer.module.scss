@@ -27,7 +27,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  background-color: #fff;
+  background-color: var(--background-neutral-primary);
 }
 
 .toggleButtonCollapsed {
@@ -35,6 +35,6 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff;
+  background-color: var(--background-neutral-primary);
   z-index: 10;
 }
