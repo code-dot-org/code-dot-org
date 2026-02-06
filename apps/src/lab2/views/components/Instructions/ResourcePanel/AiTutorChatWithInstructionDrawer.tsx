@@ -1,4 +1,5 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import {throttle} from 'lodash';
+import React, {useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
@@ -71,16 +72,17 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     setChatHeight(newChatHeight);
   }, [rawChatHeight, setChatHeight, setInstructionsHeight]);
 
-  useEffect(() => {
-    adjustInstructionsHeight();
-  }, [adjustInstructionsHeight]);
+  const throttledAdjustInstructionsHeight = useMemo(
+    () =>
+      throttle(() => {
+        adjustInstructionsHeight();
+      }, 30),
+    [adjustInstructionsHeight]
+  );
 
   useEffect(() => {
-    window.addEventListener('resize', adjustInstructionsHeight);
-    return () => {
-      window.removeEventListener('resize', adjustInstructionsHeight);
-    };
-  }, [adjustInstructionsHeight]);
+    throttledAdjustInstructionsHeight();
+  }, [throttledAdjustInstructionsHeight]);
 
   return (
     <div ref={containerRef} className={styles.container}>
