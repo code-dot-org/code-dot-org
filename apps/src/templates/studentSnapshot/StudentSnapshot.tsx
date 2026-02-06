@@ -85,7 +85,6 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
-
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
 
   useEffect(() => {
