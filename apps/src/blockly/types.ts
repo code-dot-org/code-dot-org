@@ -152,14 +152,6 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
     overrides: [string, string, BlocklyCore.fieldRegistry.RegistrableField][]
   ) => void;
   getWorkspaceCode: () => string;
-  addChangeListener: (
-    blockspace: BlocklyCore.Workspace,
-    handler: (e: BlocklyCore.Events.Abstract) => void
-  ) => void;
-  removeChangeListener: (
-    handler: (e: BlocklyCore.Events.Abstract) => void,
-    blockspace: BlocklyCore.Workspace
-  ) => void;
   getGenerator: () => ExtendedJavascriptGenerator;
   addEmbeddedWorkspace: (workspace: BlocklyCore.Workspace) => void;
   isEmbeddedWorkspace: (workspace: BlocklyCore.Workspace) => boolean;

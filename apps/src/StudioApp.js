@@ -1111,14 +1111,11 @@ StudioApp.prototype.runChangeHandlers = function (e) {
 StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    Blockly.mainBlockSpace.addChangeListener(runAllHandlers);
     if (Blockly.getHiddenDefinitionWorkspace()) {
       // If we have a hidden definition workspace, run change listeners on it too.
       // This ensures code changes in the hidden workspace trigger updates.
-      Blockly.addChangeListener(
-        Blockly.getHiddenDefinitionWorkspace(),
-        runAllHandlers
-      );
+      Blockly.getHiddenDefinitionWorkspace().addChangeListener(runAllHandlers);
     }
   } else {
     this.editor.on('change', runAllHandlers);
@@ -3450,13 +3447,17 @@ if (IN_UNIT_TEST) {
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
-      Blockly.removeChangeListener(instance.changeListener);
+      Blockly.getMainWorkspace().removeChangeListener(instance.changeListener);
     }
     if (instance.hiddenWorkspaceChangeListener) {
-      Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
+      Blockly.getHiddenDefinitionWorkspace().removeChangeListener(
+        instance.hiddenWorkspaceChangeListener
+      );
     }
     if (instance.mainWorkspaceChangeListener) {
-      Blockly.removeChangeListener(instance.mainWorkspaceChangeListener);
+      Blockly.getMainWorkspace().removeChangeListener(
+        instance.mainWorkspaceChangeListener
+      );
     }
     instance = __oldInstance;
     __oldInstance = null;

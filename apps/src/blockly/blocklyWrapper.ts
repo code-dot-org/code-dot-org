@@ -409,17 +409,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.JavaScript = javascriptGenerator;
 
-  blocklyWrapper.addChangeListener = function (blockspace, handler) {
-    blockspace.addChangeListener(handler);
-  };
-
-  blocklyWrapper.removeChangeListener = function (
-    handler,
-    blockspace = Blockly.getMainWorkspace()
-  ) {
-    blockspace.removeChangeListener(handler);
-  };
-
   const extendedWorkspaceSvg = blocklyWrapper.WorkspaceSvg
     .prototype as ExtendedWorkspaceSvg;
 

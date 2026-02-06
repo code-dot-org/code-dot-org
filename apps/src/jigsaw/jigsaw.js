@@ -208,7 +208,7 @@ Jigsaw.init = function (config) {
 function checkForSuccess() {
   var success = level.goal.successCondition();
   if (success) {
-    Blockly.removeChangeListener(Jigsaw.successListener);
+    Blockly.getMainWorkspace().removeChangeListener(Jigsaw.successListener);
 
     Jigsaw.result = ResultType.SUCCESS;
     Jigsaw.onPuzzleComplete();
