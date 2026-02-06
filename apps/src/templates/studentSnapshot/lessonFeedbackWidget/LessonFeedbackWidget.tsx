@@ -1,6 +1,4 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
@@ -8,10 +6,8 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import ActionButtons from './ActionButtons';
-import AddResourceDialog from './AddResourceDialog';
 import FeedbackTextbox from './FeedbackTextbox';
 import RecommendedActions from './RecommendedActions';
-import UrlTab from './UrlTab';
 import {useLessonFeedback} from './useLessonFeedback';
 
 import styles from './lessonFeeedback.module.scss';
@@ -41,8 +37,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   >([]);
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
-  // TODO: Add loading state while fetching feedback
-  // TODO: check to see if there is progress before getting ai feedback
   React.useEffect(() => {
     async function getAiLessonFeedback(
       lessonId: number,
