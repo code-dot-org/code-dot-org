@@ -1,6 +1,7 @@
-import {AI_SETTINGS_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React from 'react';
+
+import {AI_SETTINGS_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
 
 /**
  * Warns that the assigned course or unit needs AI chat tools enabled.

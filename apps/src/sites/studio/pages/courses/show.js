@@ -106,6 +106,7 @@ function showCourseOverview() {
         userId={userId}
         userType={scriptData.user_type}
         participantAudience={courseSummary.participant_audience}
+        aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
       />
     </Provider>,
     document.getElementById('course_overview')
