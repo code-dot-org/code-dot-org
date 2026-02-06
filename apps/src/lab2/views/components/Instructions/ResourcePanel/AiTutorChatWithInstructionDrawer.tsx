@@ -21,7 +21,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   instructionsContent?: React.ReactNode;
 }
 const MIN_INSTRUCTIONS_HEIGHT = 20;
-const MIN_CHAT_HEIGHT = 20;
+const MIN_CHAT_HEIGHT = 130; // Minimum so that user message editor is always visible + some chat.
 const INITIAL_CHAT_HEIGHT = 150;
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -54,13 +54,13 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     reverse: true,
     containerRef,
   });
-  console.log('rawChatHeight', rawChatHeight);
 
   const adjustInstructionsHeight = useCallback(() => {
     const containerElement = containerRef.current;
-    const availableHeight = containerElement
-      ? containerElement.clientHeight - RESIZE_BAR_SIZE_PX
-      : window.innerHeight - RESIZE_BAR_SIZE_PX;
+    if (!containerElement) {
+      return;
+    }
+    const availableHeight = containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
     setInstructionsHeight(
       Math.max(availableHeight - rawChatHeight, MIN_INSTRUCTIONS_HEIGHT)
     );
