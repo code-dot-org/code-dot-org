@@ -119,6 +119,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         icon={{iconName: 'sparkles'}}
         text={i18n.lessonFeedbackAlertText()}
         type="aqua"
+        size="xs"
         className={styles.alertBox}
       />
       <div className={styles.feedbackTextBoxWrapper}>
@@ -143,25 +144,27 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             value={recommendedActionText}
             onChange={handleRecommendedActionChange}
           />
-          <Button
-            text={'Add resource link'}
-            size="xs"
-            type="secondary"
-            color="gray"
-            disabled={!!resourceLink}
-            iconLeft={{
-              iconStyle: 'solid',
-              iconName: 'plus',
-              title: 'Add Resource',
-            }}
-            onClick={handleAddResourceClick}
-          />
-          {resourceLink && resourceName && (
-            <UrlTab
-              urlName={resourceName}
-              onClickHandler={deleteResourceLink}
+          <div className={styles.resourceRow}>
+            <Button
+              text={'Add resource link'}
+              size="xs"
+              type="secondary"
+              color="gray"
+              disabled={!!resourceLink}
+              iconLeft={{
+                iconStyle: 'solid',
+                iconName: 'plus',
+                title: 'Add Resource',
+              }}
+              onClick={handleAddResourceClick}
             />
-          )}
+            {resourceLink && resourceName && (
+              <UrlTab
+                urlName={resourceName}
+                onClickHandler={deleteResourceLink}
+              />
+            )}
+          </div>
         </div>
         {showAddResourcePopup && (
           <AddResourceDialog
