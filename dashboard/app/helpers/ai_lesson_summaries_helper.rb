@@ -33,6 +33,26 @@ module AiLessonSummariesHelper
 
     # Obtain AiLessonSummary for this lesson + user pairing if it exists with a format other than the desired response_format
     existing_summary = get_existing_summary(lesson_id, user_id, nil)
+
+    if AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT]
+      existing_script = AiLessonSummary.where(
+        lesson_id: lesson_id
+              ).where.not(script: nil)&.first
+
+      # Since we are only generating one podcast per lesson, if a script for this lesson already
+      # exists, we will copy that into this user's lesson summary. Eventually we may change this
+      # if we move on to custom podcasts per user.
+      if existing_script.present?
+        if existing_summary.present?
+          existing_summary.update!(script: existing_script.script)
+        else
+          {user_id: user_id, lesson_id: lesson_id, script: existing_script.script}
+          AiLessonSummary.create!(new_ai_lesson_summary_params)
+        end
+        return existing_script.script
+      end
+    end
+
     # Generate lesson summary in the desired response_format
     new_ai_lesson_summary = generate_lesson_summary(lesson_id, user_id, response_format)
 

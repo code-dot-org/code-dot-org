@@ -4,34 +4,34 @@ class AiLessonSummaryPodcastsJob < ApplicationJob
   queue_as :default
 
   after_perform do |job|
-    # next unless DCDO.get('ai-lesson-summaries-notifications-enabled', false)
+    next unless DCDO.get('ai-lesson-summaries-notifications-enabled', false)
 
-    # request = job.arguments.first[:request]
+    request = job.arguments.first[:request]
 
-    # lesson_ids = request[:lesson_ids]
-    # user_id = request[:user_id]
+    lesson_ids = request[:lesson_ids]
+    user_id = request[:user_id]
 
-    # user = User.find_by(id: user_id)
-    # next unless user
+    user = User.find_by(id: user_id)
+    next unless user
 
-    # unit_id = request[:unit_id]
-    # unit = Unit.find_by(id: unit_id)
-    # section = unit_id.present? ? user.sections.where(script_id: unit_id).first : nil
-    # section ||= user.sections.first
+    unit_id = request[:unit_id]
+    unit = Unit.find_by(id: unit_id)
+    section = unit_id.present? ? user.sections.where(script_id: unit_id).first : nil
+    section ||= user.sections.first
 
-    # unit_text = unit ? "for #{unit.title_for_display}" : ''
+    unit_text = unit ? "for #{unit.title_for_display}" : ''
 
-    # if section
-    #   TeacherNotification.create!(
-    #     user_id: user_id,
-    #     title: 'AI Lesson Summaries ready to view',
-    #     description: "Your personalized lesson summaries for #{lesson_ids.length} lessons #{unit_text} are live — prepare for your next class in minutes!",
-    #     icon_name: 'solid-flask-sparkle',
-    #     icon_color: 'Aqua',
-    #     href_links: [{text: 'View lesson materials',
-    #                  url: "/teacher_dashboard/sections/#{section.id}/materials"}],
-    #   )
-    # end
+    if section
+      TeacherNotification.create!(
+        user_id: user_id,
+        title: 'Your AI Lesson Summary Podcasts are ready',
+        description: "Your lesson summary podcasts for #{lesson_ids.length} lessons #{unit_text} are live — prepare for your next class in minutes!",
+        icon_name: 'solid-flask-sparkle',
+        icon_color: 'Aqua',
+        href_links: [{text: 'View lesson materials',
+                     url: "/teacher_dashboard/sections/#{section.id}/materials"}],
+      )
+    end
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly.
@@ -52,9 +52,12 @@ class AiLessonSummaryPodcastsJob < ApplicationJob
       script = AiLessonSummariesHelper.retrieve_and_save_ai_lesson_summary(lesson_id, request[:user_id], AiSystemPrompts::LessonSummariesSystemPromptHelper::RESPONSE_FORMATS[:PODCAST_SCRIPT])[:json]
       script = JSON.parse(script)['podcast_script']
       podcast = AiLessonSummaryPodcastsHelper.get_podcast_from_script(script)
+      filename = 'lesson_'+lesson_id.to_s+'_podcast.mp3'
 
       # Temporary solution for testing until S3 storage is ready
-      File.binwrite('lesson_'+lesson_id.to_s+'_podcast.mp3', podcast)
+      unless File.exist?(filename)
+        File.binwrite('lesson_'+lesson_id.to_s+'_podcast.mp3', podcast)
+      end
     end
   end
 end

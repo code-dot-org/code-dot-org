@@ -979,6 +979,7 @@ export const assignToSection = (
 ): SectionThunkAction => {
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
+    // Generate AI lesson summaries
     if (
       unitId &&
       section.unitId !== unitId &&
@@ -989,6 +990,18 @@ export const assignToSection = (
       ).catch(error => {
         console.error(error);
       });
+      // Generate AI podcasts
+
+      if (
+        !!DCDO.get('ai-lesson-summary-podcasts', false) ||
+        experiments.isEnabled('ai-lesson-podcasts')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      }
     }
     // Only log if the assignment is changing.
     if (
