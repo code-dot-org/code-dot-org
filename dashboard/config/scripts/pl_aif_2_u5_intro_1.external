@@ -1,10 +1,10 @@
-name 'pl-aif-2-U3-Intro-1'
+name 'pl-aif-2-U5-Intro-1'
 title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
 <div style="position: relative; text-align: center; color: white; margin-top: 20px;">
-    <img src="https://images.code.org/ce7cbc10881c44be5b601d1063955dc5-image-1765207617354.png" alt="Banner image that says, Welcome to Teaching Building Data-driven systems" style="width: 100%; border-radius: 10px;">
+    <img src="https://images.code.org/b9ec2b9419701a0750c82b41935dc3f2-image-1768410703151.png" alt="Banner image that says, Welcome to Teaching Iterating with AI" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
     </div>
 </div>
@@ -12,7 +12,8 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+#### This professional learning module prepares you to teach a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+
 
 
 
@@ -29,10 +30,11 @@ ___
 
 #### **By the end of this professional learning module, you will be able to:**
 
-* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design
-* #### Model core data-structure skills in Web Lab
-* #### Teach common array and object operations
-* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code
+* #### Explain how iteration and loops work
+* #### Implement loops in JavaScript to create interactive features such as filters, searches, and views
+* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.
+
+
 
 
 
@@ -76,7 +78,7 @@ ___
 
 ---
 
-### **Suggested total time for this module:** 75 minutes
+### **Suggested total time for this module:** 90 minutes
 
 
 MARKDOWN
