@@ -74,7 +74,8 @@ class DCDOBase < DynamicConfigBase
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       # TODO: Remove this after the ClassLink LMS launch
       classlink_lms_enabled: DCDO.get('classlink_lms_enabled', false),
-      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true)
+      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
+      'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
     }
   end
 end

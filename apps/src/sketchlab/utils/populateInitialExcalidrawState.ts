@@ -21,12 +21,10 @@ export const populateInitialExcalidrawState = async (
       excalidrawInitialState.files
     ).map(async file => {
       if (!Object.keys(downloadedFileData).includes(file.id)) {
-        const fileUrl = excalidrawInitialState.externalFiles?.[file.id].url;
-        if (fileUrl) {
-          // While we're still storing base64 encodings of strings in parallel with S3 uploads,
-          // delete these so that we can confirm that the load from S3 is working.
-          delete file.dataURL;
-
+        const externalFile = excalidrawInitialState.externalFiles?.[file.id];
+        const fileUrl = externalFile?.url;
+        const successfullyUploaded = externalFile?.uploaded;
+        if (fileUrl && successfullyUploaded) {
           try {
             const base64 = (await imageUrlToBase64(fileUrl)) as DataURL;
             file.dataURL = base64 as DataURL;

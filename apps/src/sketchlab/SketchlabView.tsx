@@ -9,11 +9,11 @@ import {
   AppState,
   BinaryFiles,
   ExcalidrawImperativeAPI,
-  ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
+import DCDO from '@cdo/apps/dcdo';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -30,7 +30,6 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDialogControl} from '../lab2/views/dialogs';
@@ -61,8 +60,6 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 500;
 
 const DEFAULT_SOURCES = {source: {}};
-
-const S3_IMAGE_EXPERIMENT = 's3-images';
 
 const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
@@ -135,13 +132,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 
   const initialData = useMemo(
     () =>
-      experiments.isEnabledAllowingQueryString(S3_IMAGE_EXPERIMENT)
-        ? populateInitialExcalidrawState(
-            currentSources.source,
-            downloadedFilesDataRef.current,
-            onError
-          )
-        : (currentSources.source as ExcalidrawInitialDataState),
+      populateInitialExcalidrawState(
+        currentSources.source,
+        downloadedFilesDataRef.current,
+        onError
+      ),
     [currentSources.source, onError]
   );
 
@@ -235,6 +230,18 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
           levelName,
           channelId
         );
+
+        // We remove base64 encoded images from the serialized data before storing them to a student's project.
+        // The images are instead uploaded to/retrieved from S3.
+        // Including an experiment flag as well in case we observe issues and need to turn this off quickly.
+        Object.entries(serializedData.files).forEach(([id, file]) => {
+          if (
+            savedFiles[id]?.uploaded &&
+            DCDO.get('sketchlab-s3-image-storage', true)
+          ) {
+            delete file.dataURL;
+          }
+        });
 
         updateSources({
           source: {
