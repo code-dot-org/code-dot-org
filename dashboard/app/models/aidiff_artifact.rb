@@ -28,14 +28,12 @@ class AidiffArtifact < ApplicationRecord
   accepts_nested_attributes_for :aidiff_artifact_associations, allow_destroy: true
 
   def self.to_markdown(text, type)
-    begin
-      # Put spaces at the end of the line for Markdown newlines
-      new_text = text.gsub('\n', '    \n')
+    # Put spaces at the end of the line for Markdown newlines
+    new_text = text.gsub('\n', '    \n')
 
-      return Kernel.const_get(type).to_markdown(JSON.parse(new_text))
-    rescue => e
-      return text
-    end
+    return Kernel.const_get(type).to_markdown(JSON.parse(new_text))
+  rescue
+    return text
   end
 
   def summarize
