@@ -279,7 +279,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
               },
             });
           } else {
-            // If the serialization is stale only save the external files upload status.
+            // If the serialization is stale, only save the external files upload status.
             updateSources({
               source: {
                 ...currentSources.source,
