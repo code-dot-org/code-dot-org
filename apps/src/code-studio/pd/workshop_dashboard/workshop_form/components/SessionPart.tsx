@@ -18,6 +18,7 @@ import React, {
 import {useSelector} from 'react-redux';
 
 import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {AutocompleteInput} from '@cdo/apps/templates/autocompleteInput/AutocompleteInput';
 
 import {TIME_FORMAT} from '../../workshopConstants';
 import {
@@ -26,8 +27,6 @@ import {
   SessionAction,
   SessionError,
 } from '../../workshops/types';
-
-import {AutocompleteInput} from './AutocompleteInput';
 
 import styles from './SessionsEditor.module.scss';
 import commonStyles from '../WorkshopForm.module.scss';

@@ -24,7 +24,7 @@ class Services::Roster::Clever::SectionSyncerTest < ActiveSupport::TestCase
     end
 
     before do
-      clever_client_mock.stubs(:get).with("sections/#{section.clever_id}/students").returns({'data' => clever_students_data})
+      clever_client_mock.stubs(:get).with("sections/#{section.clever_id}/users?role=student").returns({'data' => clever_students_data})
     end
 
     it 'returns synced Clever section' do

@@ -102,7 +102,7 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service(api_version: AuthenticationOption::Clever::VERSION[:v2], endpoint: "sections/#{course_id}/students") do |students|
+    query_clever_service(api_version: AuthenticationOption::Clever::VERSION[:v3], endpoint: "sections/#{course_id}/users?role=student") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
