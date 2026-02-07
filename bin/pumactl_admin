@@ -7,10 +7,12 @@
 #
 # EXAMPLES:
 #   bin/pumactl_admin stats
-#   bin/pumactl_admin stats --query=booted_workers
-#   bin/pumactl_admin stats --query=worker_status.0.last_status.backlog
+#   bin/pumactl_admin stats --query="booted_workers"
+#   bin/pumactl_admin stats --query="worker_status[0].last_status.backlog"
+#   bin/pumactl_admin stats --query="worker_status[?pid == \`433276\`].last_status.backlog | [0]"
+#   bin/pumactl_admin stats --query="length(worker_status)"
 #   bin/pumactl_admin phased-restart
-#   bin/pumactl_admin thread-backtraces
+#   bin/pumactl_admin thread-backtraces   # Only outputs for parent puma process threads.
 #
 # CUSTOM ARGUMENTS:
 #   --query, -q    JMESPath to extract specific data from the output; similar to AWS CLI --query. https://jmespath.org
