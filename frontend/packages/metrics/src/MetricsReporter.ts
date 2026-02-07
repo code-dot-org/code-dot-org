@@ -1,4 +1,5 @@
 import {isDevelopmentEnvironment} from '@code-dot-org/core';
+import type {ApiClient} from '@code-dot-org/core/api';
 
 import {getBrowserName} from './browserDetector';
 import DashboardMetricsApi from './DashboardMetricsApi';
@@ -29,16 +30,20 @@ const ALWAYS_SEND = false;
  * Firehose reporting and {@link logToCloud} for New Relic reporting.
  */
 export class MetricsReporter {
+  private api?: ApiClient;
   private lastCheckCanReportTime: number = 0;
+  private readonly metricsApi: MetricsApi;
 
-  constructor(
-    private readonly metricsApi: MetricsApi = new DashboardMetricsApi(),
-  ) {
+  constructor(metricsApi: MetricsApi = new DashboardMetricsApi()) {
     this.metricsApi = metricsApi;
     if (typeof window !== 'undefined') {
       this.lastCheckCanReportTime =
         parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
     }
+  }
+
+  set apiClient(api: ApiClient) {
+    this.api = api;
   }
 
   /**
@@ -49,6 +54,7 @@ export class MetricsReporter {
       console.log(message);
       return;
     }
+
     this.log('INFO', message);
   }
 
@@ -60,6 +66,7 @@ export class MetricsReporter {
       console.warn(message);
       return;
     }
+
     this.log('WARNING', message);
   }
 
@@ -71,6 +78,7 @@ export class MetricsReporter {
       console.error(message);
       return;
     }
+
     this.log('SEVERE', message);
   }
 
@@ -100,10 +108,12 @@ export class MetricsReporter {
       unit,
       dimensions: dimensions.concat(this.getDeviceDimensions()),
     };
+
     if (!this.shouldReport()) {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
       return;
     }
+
     // Send a version of the metric with and without the browser version dimension
     this.sendMetrics([
       metric,
@@ -127,7 +137,11 @@ export class MetricsReporter {
     }
 
     try {
-      await this.metricsApi.sendLogs([payload]);
+      if (this.api) {
+        await this.metricsApi.sendLogs(this.api, [payload]);
+      } else {
+        console.warn('MetricsReporter ApiClient not provided.');
+      }
     } catch (error) {
       this.fallbackLog(payload);
       this.handleError(error as Error);
@@ -141,7 +155,11 @@ export class MetricsReporter {
     }
 
     try {
-      await this.metricsApi.sendMetricData(metrics);
+      if (this.api) {
+        await this.metricsApi.sendMetricData(this.api, metrics);
+      } else {
+        console.warn('MetricsReporter ApiClient not provided.');
+      }
     } catch (error) {
       this.fallbackLog(metrics);
       this.handleError(error as Error);

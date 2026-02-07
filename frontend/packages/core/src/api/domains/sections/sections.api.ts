@@ -2,10 +2,25 @@ import type {Transport} from '../../transports/types';
 import {
   AssignmentCourseOfferingsSchema,
   AvailableParticipantTypesSchema,
+  SectionSchema,
 } from './sections.schemata';
 
 export function createSectionsApi(transport: Transport) {
   return {
+    /**
+     * GET /api/section?section_id=:sectionId
+     */
+    async getSection(params: {sectionId: number}) {
+      const {sectionId} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/api/section?section_id=${sectionId}`,
+      });
+
+      return SectionSchema.parse(raw);
+    },
+
     /**
      * GET /dashboardapi/sections/valid_course_offerings
      */

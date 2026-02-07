@@ -1,3 +1,5 @@
+import type {ApiClient} from '@code-dot-org/core/api';
+
 import type {MetricDatum} from './types';
 
 /**
@@ -7,9 +9,9 @@ export interface MetricsApi {
   /**
    * Send a list of log objects.
    */
-  sendLogs: (logs: object[]) => Promise<Response>;
+  sendLogs: (api: ApiClient, logs: object[]) => Promise<void>;
   /**
    * Send a list of metric data.
    */
-  sendMetricData: (metricData: MetricDatum[]) => Promise<Response>;
+  sendMetricData: (api: ApiClient, metricData: MetricDatum[]) => Promise<void>;
 }

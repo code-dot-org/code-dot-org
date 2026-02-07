@@ -15,7 +15,7 @@ export function createMetricsApi(transport: Transport) {
       });
     },
 
-    async sendMetricsData(params: {metricData: MetricData}) {
+    async sendMetricData(params: {metricData: MetricData}) {
       const {metricData} = params;
 
       const validatedData = MetricDataSchema.parse(metricData);

@@ -37,9 +37,11 @@ export const SignedInCurrentUserSchema = z
     ai_tutor_enabled_for_pilot: z.boolean(),
   })
   .transform(data => ({
-    ...data,
+    id: data.id,
+    username: data.username,
     displayName: data.display_name,
     userType: data.user_type,
+    isSignedIn: data.is_signed_in,
     shortName: data.short_name,
     isVerifiedInstructor: data.is_verified_instructor,
     isLti: data.is_lti,
@@ -71,16 +73,18 @@ export const SignedInCurrentUserSchema = z
     aiTutorEnabledForPilot: data.ai_tutor_enabled_for_pilot,
   }));
 
-export const SignedOutCurrentUserSchema = z.object({
-  is_signed_in: z.literal(false),
-});
-
-export const CurrentUserSchema = z
-  .union([SignedInCurrentUserSchema, SignedOutCurrentUserSchema])
+export const SignedOutCurrentUserSchema = z
+  .object({
+    is_signed_in: z.literal(false),
+  })
   .transform(data => ({
-    ...data,
     isSignedIn: data.is_signed_in,
   }));
+
+export const CurrentUserSchema = z.union([
+  SignedInCurrentUserSchema,
+  SignedOutCurrentUserSchema,
+]);
 
 export const SignedInResponseSchema = z.object({
   is_signed_in: z.boolean(),
