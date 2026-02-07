@@ -20,6 +20,7 @@ import {
   sectionHasNewData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
@@ -248,11 +249,11 @@ const MultipleSectionsAssigner = ({
             color={Button.ButtonColor.brandSecondaryDefault}
           />
           {experiments.AI_CHAT_NEW_PERMISSIONS &&
-            aiChatToolsDependency === 'essential' && (
+            aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
               <AiChatToolsRequiredAlert />
             )}
           {!experiments.AI_CHAT_NEW_PERMISSIONS &&
-            aiChatToolsDependency === 'available' && (
+            aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
               <AiChatToolsAvailableAlert />
             )}
         </div>
