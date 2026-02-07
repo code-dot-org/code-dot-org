@@ -108,6 +108,7 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
     });
   };
 
+  // TO DO: Figure out what fields are required and adjust UI accordingly.
   return (
     <div className={styles.recommendedActionContainer}>
       <label className={styles.typographyLabelTwo}>

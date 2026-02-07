@@ -19,6 +19,16 @@ interface LessonFeedbackWidgetProps {
   unitId: number | null;
 }
 
+interface LessonFeedbackData {
+  id?: number;
+  saved_feedback?: string;
+  resources?: Array<{
+    recommended_action?: string;
+    resource_name?: string;
+    resource_link?: string;
+  }>;
+}
+
 const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   lessonId,
   teacherHasEnabledAi = false,
@@ -27,7 +37,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 }) => {
   const [feedbackText, setFeedbackText] = React.useState<string>('');
   const [existingFeedbackData, setExistingFeedbackData] =
-    React.useState<any>(null);
+    React.useState<LessonFeedbackData | null>(null);
   const [resourceData, setResourceData] = React.useState<
     Array<{
       recommended_action: string;
@@ -119,7 +129,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   // Save as draft: update local state and persist to backend
   const handleSaveAsDraft = async () => {
     // Update local state
-    setExistingFeedbackData((prev: any) => ({
+    setExistingFeedbackData((prev: LessonFeedbackData | null) => ({
       ...prev,
       saved_feedback: feedbackText,
       resources: resourceData,
