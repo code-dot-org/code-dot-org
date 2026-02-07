@@ -104,6 +104,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   // sources being initialized (eg, when level changes, teacher views a student's project, etc).
   const [excalidrawMountKey, setExcalidrawMountKey] = useState(0);
 
+  // Used to track the most recent serialization of the workspace,
+  // so that if multiple serializations are in-flight at once, we only save the most recent one.
+  const latestSerializationIdRef = useRef(0);
+
   const onLoad = useCallback(
     (api: ExcalidrawImperativeAPI) => {
       // Retain the API reference
@@ -204,6 +208,10 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
       }
 
       saveSourcesTimeoutRef.current = setTimeout(async () => {
+        // Increment the counter and capture this serialization's ID
+        latestSerializationIdRef.current = latestSerializationIdRef.current + 1;
+        const thisSerializationId = latestSerializationIdRef.current;
+
         const serializedData: SerializedExcalidrawState = JSON.parse(
           serializeAsJSON(elements, state, files, 'local')
         );
@@ -253,16 +261,32 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             filesBeingUploadedRef
           );
 
-          // We update sources again on upload completion to update the upload status of the new files.
-          updateSources({
-            source: {
-              ...serializedData,
-              externalFiles: {
-                ...currentSources.source.externalFiles,
-                ...newFilesWithUploadStatus,
+          const updatedExternalFiles = {
+            ...currentSources.source.externalFiles,
+            ...newFilesWithUploadStatus,
+          };
+
+          // Check if this is still the most recent serialization.
+          const isStillLatest =
+            thisSerializationId === latestSerializationIdRef.current;
+
+          if (isStillLatest) {
+            // If still the latest, update everything, including serialized Excalidraw state.
+            updateSources({
+              source: {
+                ...serializedData,
+                externalFiles: updatedExternalFiles,
               },
-            },
-          });
+            });
+          } else {
+            // If the serialization is stale only save the external files upload status.
+            updateSources({
+              source: {
+                ...currentSources.source,
+                externalFiles: updatedExternalFiles,
+              },
+            });
+          }
         }
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
