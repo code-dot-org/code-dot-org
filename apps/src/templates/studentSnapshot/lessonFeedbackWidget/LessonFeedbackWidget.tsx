@@ -63,11 +63,15 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     async function fetchLessonFeedback() {
       if (!lessonId || !studentId || !unitId) {
         setFeedbackText('');
-        setResourceData([]);
+        setResourceData([
+          {recommended_action: '', resource_name: '', resource_link: ''},
+        ]);
         return;
       }
-      setFeedbackText(''); // Clear feedback before fetching
-      setResourceData([]); // Clear resource data before fetching
+      setFeedbackText('');
+      setResourceData([
+        {recommended_action: '', resource_name: '', resource_link: ''},
+      ]);
       try {
         const response = await fetch(
           `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
@@ -79,6 +83,9 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           if (aiData && aiData.json) {
             const aiGeneratedInitialFeedback = JSON.parse(aiData.json).feedback;
             setFeedbackText(aiGeneratedInitialFeedback);
+            setResourceData([
+              {recommended_action: '', resource_name: '', resource_link: ''},
+            ]);
           }
         } else {
           const data = await response.json();
@@ -86,12 +93,19 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             setFeedbackText(data.saved_feedback);
           }
           setExistingFeedbackData(data);
-          if (data.resources) {
+          if (data.resources && data.resources.length > 0) {
             setResourceData(data.resources);
+          } else {
+            setResourceData([
+              {recommended_action: '', resource_name: '', resource_link: ''},
+            ]);
           }
         }
       } catch (error) {
         console.error('Error fetching feedback:', error);
+        setResourceData([
+          {recommended_action: '', resource_name: '', resource_link: ''},
+        ]);
       }
     }
     fetchLessonFeedback();
