@@ -13,13 +13,13 @@ export function useSendLogs(
   });
 }
 
-export function useSendMetricsData(
+export function useSendMetricData(
   api: ApiClient,
   options?: Omit<UseMutationOptions<unknown, Error, MetricData>, 'mutationFn'>,
 ) {
   return useMutation({
     mutationFn: (metricData: MetricData) =>
-      api.metrics.sendMetricsData({metricData}),
+      api.metrics.sendMetricData({metricData}),
     ...options,
   });
 }

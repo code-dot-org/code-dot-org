@@ -1,6 +1,8 @@
 import type {FunctionComponent} from 'react';
 import {useEffect} from 'react';
 
+import {useApiClient} from '@code-dot-org/core/api';
+
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
@@ -24,6 +26,12 @@ const MetricsAdapter: FunctionComponent = () => {
   const pageError = useAppSelector(state => state.lab.pageError);
 
   const isShareView = useAppSelector(state => state.lab.isShareView);
+
+  const api = useApiClient();
+
+  useEffect(() => {
+    LabRegistry.metricsReporter.apiClient = api;
+  }, [api]);
 
   useEffect(() => {
     // Reset the reporter on level change.

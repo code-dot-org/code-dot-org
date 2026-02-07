@@ -8,6 +8,7 @@ import {
   AssignmentCourseOfferingSchema,
   AssignmentCourseOfferingsSchema,
   AvailableParticipantTypesSchema,
+  SectionSchema,
 } from './sections.schemata';
 
 export type AssignmentCourseVersionUnit = z.infer<
@@ -31,3 +32,4 @@ export type AssignmentCourseOfferings = z.infer<
 export type AvailableParticipantTypes = z.infer<
   typeof AvailableParticipantTypesSchema
 >;
+export type Section = z.infer<typeof SectionSchema>;
