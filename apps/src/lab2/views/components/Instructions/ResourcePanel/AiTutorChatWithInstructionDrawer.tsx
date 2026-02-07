@@ -24,7 +24,7 @@ interface AiTutorChatWithInstructionDrawerProps {
 }
 const MIN_CHAT_HEIGHT = 130; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
-const INITIAL_INSTRUCTIONS_HEIGHT = 250;
+const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250;
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
@@ -39,10 +39,14 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   instructionsContent,
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const instructionsContentRef = React.useRef<HTMLDivElement>(null);
   const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
-  >(INITIAL_INSTRUCTIONS_HEIGHT);
+  >(DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT);
+  const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
+    number | undefined
+  >(undefined);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [toggleButtonText, setToggleButtonText] = useState('Hide Instructions');
 
@@ -50,10 +54,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     position: rawInstructionsHeight,
     separatorProps,
     isDragging,
+    setPosition: setRawInstructionsHeight,
   } = useResizable({
     axis: 'y',
-    initial: INITIAL_INSTRUCTIONS_HEIGHT,
+    initial: DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT,
     min: MIN_INSTRUCTIONS_HEIGHT,
+    max: maxInstructionsHeight,
     containerRef,
   });
 
@@ -95,6 +101,23 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     throttledAdjustChatHeight();
   }, [throttledAdjustChatHeight]);
 
+  // Measure the instructions content height once when loaded
+  // and adjust the initial height if content is smaller.
+  useEffect(() => {
+    const instructionsContentElement = instructionsContentRef.current;
+    if (!instructionsContentElement) {
+      return;
+    }
+
+    const contentHeight = instructionsContentElement.scrollHeight;
+    setMaxInstructionsHeight(contentHeight);
+
+    // If content is smaller than initial height, adjust to fit content.
+    if (contentHeight < DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT) {
+      setRawInstructionsHeight(contentHeight);
+    }
+  }, [instructionsContent, setRawInstructionsHeight]);
+
   const toggleInstructions = useCallback(() => {
     setIsCollapsed(prev => !prev);
     setToggleButtonText(prev =>
@@ -108,7 +131,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         className={styles.instructionsDrawer}
         style={{height: instructionsHeight}}
       >
-        {instructionsContent}
+        <div ref={instructionsContentRef}>{instructionsContent}</div>
       </div>
       <Button
         className={styles.toggleButton}
