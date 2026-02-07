@@ -22,9 +22,9 @@ interface AiTutorChatWithInstructionDrawerProps {
   isInstructionsCollapsed?: boolean;
   instructionsContent?: React.ReactNode;
 }
-const MIN_INSTRUCTIONS_HEIGHT = 20;
 const MIN_CHAT_HEIGHT = 130; // Minimum so that user message editor is always visible + some chat.
-const INITIAL_CHAT_HEIGHT = 150;
+const MIN_INSTRUCTIONS_HEIGHT = 150;
+const INITIAL_INSTRUCTIONS_HEIGHT = 250;
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
@@ -39,59 +39,61 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   instructionsContent,
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const [chatHeight, setChatHeight] = useState<number | undefined>(undefined);
   const [instructionsHeight, setInstructionsHeight] = useState<
     number | undefined
-  >(undefined);
-  const [chatHeight, setChatHeight] = useState<number | undefined>(
-    INITIAL_CHAT_HEIGHT
-  );
+  >(INITIAL_INSTRUCTIONS_HEIGHT);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [toggleButtonText, setToggleButtonText] = useState('Hide Instructions');
 
   const {
-    position: rawChatHeight,
+    position: rawInstructionsHeight,
     separatorProps,
     isDragging,
   } = useResizable({
     axis: 'y',
-    initial: INITIAL_CHAT_HEIGHT,
-    min: MIN_CHAT_HEIGHT,
-    reverse: true,
+    initial: INITIAL_INSTRUCTIONS_HEIGHT,
+    min: MIN_INSTRUCTIONS_HEIGHT,
     containerRef,
   });
 
-  const adjustInstructionsHeight = useCallback(() => {
+  const adjustChatHeight = useCallback(() => {
     const containerElement = containerRef.current;
     if (!containerElement) {
       return;
     }
     const availableHeight = containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
     if (isCollapsed) {
-      setInstructionsHeight(0);
       setChatHeight(availableHeight);
+      setInstructionsHeight(0);
       return;
     }
-    setInstructionsHeight(
-      Math.max(availableHeight - rawChatHeight, MIN_INSTRUCTIONS_HEIGHT)
+    setChatHeight(
+      Math.max(availableHeight - rawInstructionsHeight, MIN_CHAT_HEIGHT)
     );
-    const newChatHeight = Math.min(
-      rawChatHeight,
-      availableHeight - MIN_INSTRUCTIONS_HEIGHT
+    const newInstructionsHeight = Math.min(
+      rawInstructionsHeight,
+      availableHeight - MIN_CHAT_HEIGHT
     );
-    setChatHeight(newChatHeight);
-  }, [rawChatHeight, setChatHeight, setInstructionsHeight, isCollapsed]);
+    setInstructionsHeight(newInstructionsHeight);
+  }, [
+    isCollapsed,
+    rawInstructionsHeight,
+    setChatHeight,
+    setInstructionsHeight,
+  ]);
 
-  const throttledAdjustInstructionsHeight = useMemo(
+  const throttledAdjustChatHeight = useMemo(
     () =>
       throttle(() => {
-        adjustInstructionsHeight();
+        adjustChatHeight();
       }, 30),
-    [adjustInstructionsHeight]
+    [adjustChatHeight]
   );
 
   useEffect(() => {
-    throttledAdjustInstructionsHeight();
-  }, [throttledAdjustInstructionsHeight]);
+    throttledAdjustChatHeight();
+  }, [throttledAdjustChatHeight]);
 
   const toggleInstructions = useCallback(() => {
     setIsCollapsed(prev => !prev);
