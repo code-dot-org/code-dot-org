@@ -46,6 +46,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     INITIAL_CHAT_HEIGHT
   );
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [toggleButtonText, setToggleButtonText] = useState('Hide Instructions');
 
   const {
     position: rawChatHeight,
@@ -94,35 +95,42 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 
   const toggleInstructions = useCallback(() => {
     setIsCollapsed(prev => !prev);
+    setToggleButtonText(prev =>
+      prev === 'Hide Instructions' ? 'Show Instructions' : 'Hide Instructions'
+    );
   }, []);
 
   return (
     <div ref={containerRef} className={styles.container}>
+      <div
+        className={styles.instructionsDrawer}
+        style={{height: instructionsHeight}}
+      >
+        {instructionsContent}
+      </div>
+      <Button
+        className={styles.toggleButton}
+        style={{top: instructionsHeight}}
+        onClick={toggleInstructions}
+        text={toggleButtonText}
+        type="tertiary"
+        size="xs"
+        color="black"
+      />
       {!isCollapsed && (
-        <>
-          <div
-            className={styles.instructionsDrawer}
-            style={{height: instructionsHeight}}
-          >
-            {instructionsContent}
-          </div>
-          <Button
-            className={styles.toggleButton}
-            style={{top: instructionsHeight}}
-            onClick={toggleInstructions}
-            text="Hide Instructions"
-            type="tertiary"
-            size="xs"
-            color="black"
-          />
-          <ResizeBar
-            isVertical={false}
-            separatorProps={separatorProps}
-            isDragging={isDragging}
-          />
-        </>
+        <ResizeBar
+          isVertical={false}
+          separatorProps={separatorProps}
+          isDragging={isDragging}
+        />
       )}
-      <div className={styles.chatPanel} style={{height: chatHeight}}>
+      <div
+        className={styles.chatPanel}
+        style={{
+          height: chatHeight,
+          paddingTop: isCollapsed ? '40px' : '0',
+        }}
+      >
         <AiTutorChat
           hiddenContextCallback={hiddenContextCallback}
           aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
