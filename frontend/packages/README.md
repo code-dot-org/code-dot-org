@@ -44,7 +44,7 @@ The [`@code-dot-org/audio`](./audio) package provides a sound and music manager 
 
 The [`@code-dot-org/markdown`](./markdown) package provides our Markdown component to render markdown content with our component library typography.
 
-The [`@code-dot-org/metrics`](./metrics) package provides interfaces for user metrics and analytics.
+The [`@code-dot-org/core/metrics`](./metrics) package provides interfaces for user metrics and analytics.
 
 ## Blockly
 

@@ -4,7 +4,7 @@ import {Blockly} from '@code-dot-org/blockly-workspace';
 import {isDarkTheme} from '@code-dot-org/blockly-workspace/themes';
 import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
 import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
-import {experiments} from '@code-dot-org/metrics';
+import {experiments} from '@code-dot-org/core/metrics';
 
 import MusicRegistry from '../../MusicRegistry';
 import MusicLibrary from '../../player/MusicLibrary';

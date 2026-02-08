@@ -1,5 +1,5 @@
-import {MetricsReporter} from '@code-dot-org/metrics';
-import type {MetricDimension, MetricUnit} from '@code-dot-org/metrics';
+import {MetricsReporter} from '@code-dot-org/core/metrics';
+import type {MetricDimension, MetricUnit} from '@code-dot-org/core/metrics';
 
 /**
  * Properties that this metric reporter will add to log payloads.

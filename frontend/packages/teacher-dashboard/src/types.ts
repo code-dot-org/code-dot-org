@@ -5,7 +5,7 @@ import type {
   SectionLoginType,
   SectionParticipationType,
 } from '@code-dot-org/core/api';
-import {UserType, OAuthSectionType} from '@code-dot-org/user';
+import type {UserType, OAuthSectionType} from '@code-dot-org/user';
 
 // Typescript definitions for types relating to teacherSections. Note that many
 // of these are "duplicated" in `/templates/teacherDashboard/shapes.jsx, which defined

@@ -43,9 +43,9 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
   const [deleteError, setDeleteError] = useState('');
   const [featuredProjectStatus, setFeaturedProjectStatus] = useState<
     string | undefined
-  >(projectLinkData?.project_info?.featured_status);
+  >(projectLinkData?.projectInfo?.featuredStatus);
   const [abuseScore, setAbuseScore] = useState<number | undefined>(
-    projectLinkData?.project_info?.abuse_score,
+    projectLinkData?.projectInfo?.abuseScore,
   );
 
   const channelId: string | undefined = useApp().lab?.channel?.id;
@@ -53,18 +53,18 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
     !!useApp().lab?.levelProperties?.isProjectLevel;
 
   useEffect(() => {
-    setClonedLevelName(levelLinkData.level_name);
+    setClonedLevelName(levelLinkData.levelName);
   }, [levelLinkData]);
 
   useEffect(() => {
-    if (projectLinkData?.project_info) {
-      setFeaturedProjectStatus(projectLinkData?.project_info.featured_status);
+    if (projectLinkData?.projectInfo) {
+      setFeaturedProjectStatus(projectLinkData?.projectInfo.featuredStatus);
     }
   }, [projectLinkData]);
 
   useEffect(() => {
-    if (projectLinkData?.project_info?.abuse_score) {
-      setAbuseScore(projectLinkData.project_info.abuse_score);
+    if (projectLinkData?.projectInfo?.abuseScore) {
+      setAbuseScore(projectLinkData.projectInfo.abuseScore);
     }
   }, [projectLinkData]);
 
@@ -121,7 +121,7 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
         await api.channels.deleteAbuseScore({channelId});
       }
       setAbuseScore(0);
-    } catch (_) {
+    } catch {
       // Set abuse score to number < 0 so that error message will be displayed to the admin user.
       setAbuseScore(-1);
     }
@@ -144,7 +144,7 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
                   <li key={link.url}>
                     {link.url ? (
                       // This menu is only used by internal users, who have explicitly requested access keys.
-                      <a href={link.url} accessKey={link.access_key}>
+                      <a href={link.url} accessKey={link.accessKey}>
                         {link.text}
                       </a>
                     ) : (
@@ -165,7 +165,7 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
       customBottomContent={
         <>
           <CloneLevelButton
-            canClone={levelLinkData.can_clone}
+            canClone={levelLinkData.canClone}
             isStandaloneProject={isStandaloneProject}
             setShowCloneField={setShowCloneField}
             showCloneField={showCloneField}
@@ -175,7 +175,7 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
             cloneError={cloneError}
           />
           <DeleteLevelButton
-            canDelete={levelLinkData.can_delete}
+            canDelete={levelLinkData.canDelete}
             isStandaloneProject={isStandaloneProject}
             showDeleteConfirm={showDeleteConfirm}
             setShowDeleteConfirm={setShowDeleteConfirm}
@@ -183,10 +183,10 @@ const ExtraLinksModal: FunctionComponent<ExtraLinksModalProps> = ({
             deleteError={deleteError}
           />
           <ScriptLevelPathLinks
-            scriptLevelPathLinks={levelLinkData.script_level_path_links}
+            scriptLevelPathLinks={levelLinkData.scriptLevelPathLinks}
           />
           <ParentLevelPathLinks
-            parentLevelPathLinks={levelLinkData.parent_level_path_links}
+            parentLevelPathLinks={levelLinkData.parentLevelPathLinks}
           />
           <ProjectLinkData
             isStandaloneProject={isStandaloneProject}
@@ -391,8 +391,8 @@ const ProjectLinkData: FunctionComponent<ProjectLinkDataProps> = ({
   if (!projectLinkData) {
     return null;
   }
-  const ownerInfo = projectLinkData.owner_info;
-  const projectInfo = projectLinkData.project_info;
+  const ownerInfo = projectLinkData.ownerInfo;
+  const projectInfo = projectLinkData.projectInfo;
   if (!ownerInfo || !projectInfo) {
     return null;
   }
@@ -401,20 +401,20 @@ const ProjectLinkData: FunctionComponent<ProjectLinkDataProps> = ({
       <StrongText>Project Info</StrongText>
       <ul>
         <li>Project owner: {ownerInfo.name}</li>
-        <li>Owner storage id: {ownerInfo.storage_id}</li>
+        <li>Owner storage id: {ownerInfo.storageId}</li>
         <li>Project id: {projectInfo.id}</li>
         <li>
-          S3 links: <a href={`${projectInfo.sources_link}`}>Sources</a>
+          S3 links: <a href={`${projectInfo.sourcesLink}`}>Sources</a>
         </li>
         {isStandaloneProject && (
           <>
             <li>
               Remix ancestry:
               <ul>
-                <RemixAncestry remixList={projectInfo.remix_ancestry} />
+                <RemixAncestry remixList={projectInfo.remixAncestry} />
               </ul>
             </li>
-            <li>Project submitted: {projectInfo.is_published_project}</li>
+            <li>Project submitted: {projectInfo.isPublishedProject}</li>
             <li>
               <FeaturedProjectInfo
                 featuredProjectStatus={featuredProjectStatus}
@@ -482,7 +482,7 @@ const ParentLevelPathLinks: FunctionComponent<ParentLevelPathLinksProps> = ({
       <ul>
         {parentLevelPathLinks.map(link => (
           <li key={link.path}>
-            {link.kind} in <a href={link.path}>{link.level_name}</a> (position{' '}
+            {link.kind} in <a href={link.path}>{link.levelName}</a> (position{' '}
             {link.position})
           </li>
         ))}

@@ -3,8 +3,8 @@ import type {ApiClient} from '@code-dot-org/core/api';
 
 import {getBrowserName} from './browserDetector';
 import DashboardMetricsApi from './DashboardMetricsApi';
-import {MetricsApi} from './MetricsApi';
-import {LogLevel, MetricDatum, MetricDimension, MetricUnit} from './types';
+import type {MetricsApi} from './MetricsApi';
+import type {LogLevel, MetricDatum, MetricDimension, MetricUnit} from './types';
 
 /**
  * If we receive an unauthorized response from the server, this may

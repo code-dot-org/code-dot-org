@@ -49,6 +49,7 @@ export default defineConfig({
         'src/api/index.ts',
         'src/plugins/localization/index.ts',
         'src/plugins/observability/index.ts',
+        'src/metrics/index.ts',
       ],
       name: 'core',
     },

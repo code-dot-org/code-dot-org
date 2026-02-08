@@ -13,7 +13,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useLocalization} from '@code-dot-org/core';
-import {EVENTS} from '@code-dot-org/metrics';
+import {EVENTS} from '@code-dot-org/core/metrics';
 
 import {INITIAL_VERSION_ID} from '../../../constants';
 import useLifecycleNotifier from '../../../hooks/useLifecycleNotifier';

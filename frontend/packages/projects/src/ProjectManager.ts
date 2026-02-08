@@ -18,7 +18,7 @@ import type {
   QueryClient,
 } from '@code-dot-org/core/api';
 import {ApiError, ValidationError} from '@code-dot-org/core/api';
-import {MetricsReporter} from '@code-dot-org/metrics';
+import {MetricsReporter} from '@code-dot-org/core/metrics';
 
 import {ChannelsStore} from './ChannelsStore';
 import {SourcesStore} from './SourcesStore';

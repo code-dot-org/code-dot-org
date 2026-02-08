@@ -2,7 +2,7 @@ import {Steps} from 'intro.js-react';
 import type {FunctionComponent} from 'react';
 import {useState, useEffect} from 'react';
 
-import {EVENTS} from '@code-dot-org/metrics';
+import {EVENTS} from '@code-dot-org/core/metrics';
 
 import type {ValidationSettings} from '../../instructions/components/Instructions';
 import {sendLabAnalyticsEvent} from '../../utils/analyticsReporterHelper';

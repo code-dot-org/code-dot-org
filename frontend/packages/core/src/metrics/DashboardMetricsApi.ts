@@ -1,6 +1,6 @@
 import type {ApiClient} from '@code-dot-org/core/api';
 
-import {MetricsApi} from './MetricsApi';
+import type {MetricsApi} from './MetricsApi';
 import type {MetricDatum} from './types';
 
 /**
