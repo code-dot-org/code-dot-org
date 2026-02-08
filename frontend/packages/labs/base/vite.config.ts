@@ -51,7 +51,6 @@ export default defineConfig({
       'react/jsx-dev-runtime',
       'react-redux',
       '@reduxjs/toolkit',
-      '@code-dot-org/redux',
     ],
     alias: {
       '@': path.resolve(__dirname, './src'),
