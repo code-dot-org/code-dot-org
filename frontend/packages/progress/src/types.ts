@@ -1,21 +1,15 @@
-import type {LessonGroup} from '@code-dot-org/api/models/lessonGroups';
-import type {Lesson} from '@code-dot-org/api/models/lessons';
-import type {Level} from '@code-dot-org/api/models/levels';
+import type {
+  Lesson,
+  LessonGroupSummary,
+  UnitLevel,
+  Sublevel,
+} from '@code-dot-org/core/api';
 
 import type {TestResults} from './constants';
 import {LevelStatus} from './constants';
 
 // LevelResults is a map of levelId -> TestResults. TestResults is a number.
 export type LevelResults = {[key: number]: TestResults};
-
-export type NumberedLevel = Level & {
-  ids: number[];
-  activeId: number;
-  levelNumber: number;
-  isCurrentLevel: boolean;
-  sublevels?: NumberedLevel[];
-  status?: LevelStatus;
-};
 
 export const ReviewStates = {
   completed: 'completed',
@@ -52,6 +46,33 @@ export interface UnitProgress {
   timeSpent: number | undefined;
 }
 
+export interface NumberedLevelFields {
+  ids: number[];
+  activeId: number;
+  levelNumber: number;
+  isCurrentLevel: boolean;
+  sublevels?: NumberedLevel[];
+  bubbleText?: string;
+  scriptLevelId?: number;
+  parentLevelId?: number;
+  // TODO: these are user_progress API return values. replace them with something in core/api
+  status?: LevelStatus;
+  paired?: boolean;
+  isLocked?: boolean;
+  timeSpent?: number;
+  teacherFeedbackReviewState?: string;
+  teacherFeedbackNew?: boolean;
+  teacherFeedbackCommented?: boolean;
+  lastTimestamp?: string;
+  pages?: UnitProgress[];
+}
+
+export type NumberedSublevel = Sublevel & NumberedLevelFields;
+
+export type NumberedLevel =
+  | (UnitLevel & NumberedLevelFields)
+  | NumberedSublevel;
+
 export interface ProgressState {
   currentLevelId?: number;
   currentLessonId?: number;
@@ -59,7 +80,7 @@ export interface ProgressState {
   deeperLearningCourse?: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons?: Lesson[];
-  lessonGroups?: LessonGroup[];
+  lessonGroups?: LessonGroupSummary[];
   scriptId?: number;
   viewAsUserId?: number;
   scriptName?: string;
@@ -98,7 +119,7 @@ export interface InitProgressPayload {
   deeperLearningCourse: boolean;
   saveAnswersBeforeNavigation?: boolean;
   lessons: Lesson[];
-  lessonGroups?: LessonGroup[];
+  lessonGroups?: LessonGroupSummary[];
   scriptId?: number;
   scriptName?: string;
   scriptDisplayName?: string;

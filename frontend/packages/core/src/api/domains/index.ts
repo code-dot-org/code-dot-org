@@ -1,5 +1,6 @@
 export * from './auth';
 export * from './channels';
+export * from './courses';
 export * from './levels';
 export * from './metrics';
 export * from './preferences';

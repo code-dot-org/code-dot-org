@@ -1,14 +1,16 @@
 import _ from 'lodash';
 
-import {Section} from '@code-dot-org/api/models/sections';
+import {
+  SectionLoginTypes,
+  SectionParticipationTypes,
+} from '@code-dot-org/core/api';
+import type {Section, SectionParticipationType} from '@code-dot-org/core/api';
 
 import {
   ParticipantAudience,
   AssignmentCourseOffering,
   AssignmentCourseVersion,
   AssignmentCourseVersionUnit,
-  ServerSection,
-  ServerStudent,
 } from '../types';
 
 import type {RootState} from './store';
@@ -156,159 +158,15 @@ export function getAssignmentName(state: RootState, sectionId: number) {
   const {sections, courseOfferings} = getRoot(state);
   return assignmentNames(courseOfferings, sections[sectionId])[0];
 }
-/**
- * Maps from the data we get back from the server for a section, to the format
- * we want to have in our store.
- */
-export const sectionFromServerSection: (
-  serverSection: ServerSection,
-) => Section = (serverSection: ServerSection) => ({
-  id: serverSection.id,
-  name: serverSection.name,
-  courseVersionName: serverSection.courseVersionName,
-  unitName: serverSection.is_assigned_single_unit_course
-    ? serverSection.script?.name
-    : serverSection.unitName,
-  unitPosition:
-    serverSection.unitPosition === null
-      ? undefined
-      : serverSection.unitPosition,
-  isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
-  isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
-  createdAt: serverSection.createdAt,
-  loginType: serverSection.login_type,
-  loginTypeName: serverSection.login_type_name,
-  grades: serverSection.grades || [],
-  providerManaged: !!serverSection.providerManaged,
-  lessonExtras: serverSection.lesson_extras,
-  pairingAllowed: serverSection.pairing_allowed,
-  ttsAutoplayEnabled: !!serverSection.tts_autoplay_enabled,
-  sharingDisabled: serverSection.sharing_disabled,
-  studentCount: serverSection.studentCount,
-  code: serverSection.code,
-  courseOfferingId: serverSection.course_offering_id || undefined,
-  courseVersionId: serverSection.course_version_id || undefined,
-  courseDisplayName: serverSection.course_display_name || undefined,
-  course: serverSection.course
-    ? {
-        courseOfferingId: serverSection.course.course_offering_id || undefined,
-        versionId: serverSection.course.version_id || undefined,
-        unitId: serverSection.course.unit_id || undefined,
-        lessonExtrasAvailable: serverSection.course.lesson_extras_available,
-        textToSpeechEnabled: serverSection.course.text_to_speech_enabled,
-      }
-    : undefined,
-  unitId: serverSection.is_assigned_single_unit_course
-    ? serverSection.script?.id || undefined
-    : serverSection.unit_id || undefined,
-  courseId: serverSection.course_id || undefined,
-  hidden: serverSection.hidden,
-  restrictSection: !!serverSection.restrict_section,
-  postMilestoneDisabled: serverSection.post_milestone_disabled,
-  codeReviewExpiresAt: serverSection.code_review_expires_at
-    ? Date.parse(serverSection.code_review_expires_at)
-    : undefined,
-  isAssignedCSA: serverSection.is_assigned_csa,
-  participantType: serverSection.participant_type,
-  sectionInstructors: serverSection.sectionInstructors?.map(instructor => ({
-    id: instructor?.id,
-    status: instructor?.status,
-    instructorEmail: instructor?.instructor_email,
-    instructorName: instructor?.instructor_name,
-    sectionName: instructor?.section_name,
-    sectionId: instructor?.section_id,
-    invitedByEmail: instructor?.invited_by_email,
-    invitedByName: instructor?.invited_by_name,
-    participantType: instructor?.participant_type,
-  })),
-  primaryInstructor: serverSection.primaryInstructor,
-  syncEnabled: serverSection.sync_enabled,
-  aiTutorEnabled: !!serverSection.ai_tutor_enabled,
-  anyStudentHasProgress: serverSection.any_student_has_progress,
-  atRiskAgeGatedDate: serverSection.at_risk_age_gated_date
-    ? new Date(serverSection.at_risk_age_gated_date)
-    : undefined,
-  atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
-  avatarColor: serverSection.avatar_color || undefined,
-  avatarEmoji: serverSection.avatar_emoji || undefined,
-});
 
-/**
- * Maps from the data we get back from the server for a student, to the format
- * we want to have in our store.
- */
-export const studentFromServerStudent = (
-  serverStudent: ServerStudent,
-  sectionId: number,
-) => ({
-  sectionId: sectionId,
-  id: serverStudent.id,
-  name: serverStudent.name,
-  familyName: serverStudent.family_name,
-  sharingDisabled: serverStudent.sharing_disabled,
-
-  // @deprecated Use `secretPictureUrl` instead
-  secretPicturePath: serverStudent.secret_picture_path,
-  secretPictureUrl: serverStudent.secret_picture_url,
-
-  secretPictureName: serverStudent.secret_picture_name,
-  secretWords: serverStudent.secret_words,
-  userType: serverStudent.user_type,
-});
-
-/**
- * Map from client sectionShape to well-formatted params for updating the
- * section on the server via the sections API.
- * @param {sectionShape} section
- */
-export function serverSectionFromSection(section: Section): ServerSection {
-  // Lazy: We leave some extra properties on this object (they're ignored by
-  // the server for now) hoping this can eventually become a pass-through.
-  return {
-    ...section,
-    course:
-      section.course !== undefined
-        ? {
-            course_offering_id: section.course.courseOfferingId || null,
-            version_id: section.course.versionId || null,
-            unit_id: section.course.unitId || null,
-            lesson_extras_available: section.course.lessonExtrasAvailable,
-            text_to_speech_enabled: section.course.textToSpeechEnabled,
-          }
-        : undefined,
-    sectionInstructors: section.sectionInstructors?.map(instructor => ({
-      id: instructor?.id,
-      status: instructor?.status,
-      instructor_email: instructor?.instructorEmail,
-      instructor_name: instructor?.instructorName,
-      section_name: instructor?.sectionName,
-      section_id: instructor?.sectionId,
-      invited_by_email: instructor?.invitedByEmail,
-      invited_by_name: instructor?.invitedByName,
-      participant_type: instructor?.participantType,
-    })),
-    login_type: section.loginType!,
-    lesson_extras: section.lessonExtras,
-    pairing_allowed: section.pairingAllowed,
-    tts_autoplay_enabled: section.ttsAutoplayEnabled,
-    sharing_disabled: section.sharingDisabled,
-    course_offering_id: section.courseOfferingId,
-    course_version_id: section.courseVersionId,
-    unit_id: section.unitId,
-    course_id: section.courseId || null,
-    restrict_section: section.restrictSection,
-    participant_type: section.participantType,
-    ai_tutor_enabled: section.aiTutorEnabled,
-    at_risk_age_gated_date: section.atRiskAgeGatedDate?.toISOString(),
-    at_risk_age_gated_us_state: section.atRiskAgeGatedUsState,
-  };
-}
-
-export function newSectionData(participantType?: string): Section {
+export function newSectionData(
+  participantType?: SectionParticipationType,
+): Section {
   return {
     id: PENDING_NEW_SECTION_ID,
     name: '',
-    loginType: undefined,
+    loginType: SectionLoginTypes.Email,
+    loginTypeName: SectionLoginTypes.Email,
     grades: [''],
     providerManaged: false,
     lessonExtras: true,
@@ -316,12 +174,35 @@ export function newSectionData(participantType?: string): Section {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
-    participantType,
+    participantType: participantType || SectionParticipationTypes.Student,
     code: '',
-    isAssignedStandaloneCourse: false,
+    isAssignedSingleUnitCourse: false,
     hidden: false,
     restrictSection: false,
+    students: [],
+    script: null,
+    course: null,
+    anyStudentHasProgress: false,
+    primaryInstructor: null,
+    avatarColor: 9,
+    avatarEmoji: 18,
+    courseDisplayName: null,
+    courseVersionName: null,
+    courseVersionId: null,
+    courseOfferingId: null,
+    courseId: null,
+    unitId: null,
+    unitName: null,
+    unitPosition: null,
+    createdAt: '',
+    postMilestoneDisabled: false,
+    codeReviewExpiresAt: null,
+    isAssignedCsa: false,
+    sectionInstructors: [],
+    syncEnabled: false,
     aiTutorEnabled: false,
+    atRiskAgeGatedDate: null,
+    atRiskAgeGatedUsState: null,
   };
 }
 

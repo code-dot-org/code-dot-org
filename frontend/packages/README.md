@@ -25,17 +25,6 @@ The [`@code-dot-org/component-library`](./component-library) package contains th
 contains the UI theming for our UI package (Material UI) and some basic core components that
 create a consistent student and teacher experience throughout the site.
 
-## API
-
-The [`@code-dot-org/api`](./api) package contains the various logic that fetches data from corresponding
-API routes served via our backend server, which is maintained in a different ecosystem off of
-the `/dashboard` directory of the repository as a Rails application.
-
-The [`@code-dot-org/api/models`](./api/models) namespace includes the types for different data models in the
-system that correspond mostly to our database records. This data is generally what is pulled
-from the backend server and is the expected payload that is marshalled throughout the other
-parts of the application.
-
 ## Redux
 
 Our frontend application has a legacy dependency on Redux and makes use of the `redux-toolkit` library

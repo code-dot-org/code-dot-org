@@ -2046,7 +2046,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/metrics@workspace:packages/metrics"
   dependencies:
-    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
@@ -2161,7 +2160,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/progress@workspace:packages/progress"
   dependencies:
-    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/projects": "workspace:*"
