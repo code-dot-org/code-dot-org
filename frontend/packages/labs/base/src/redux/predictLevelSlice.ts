@@ -8,7 +8,7 @@ import {
 import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
 import {levelsKeys} from '@code-dot-org/core/api';
 
-import {progressActions} from '@code-dot-org/progress/redux';
+import {progressActions} from '@code-dot-org/platform/progress';
 
 import type {RootState, AppDispatch} from '../redux/store';
 

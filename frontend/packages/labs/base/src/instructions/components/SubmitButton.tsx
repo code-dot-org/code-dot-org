@@ -1,8 +1,7 @@
 import type {FunctionComponent} from 'react';
 
 import {Button} from '@code-dot-org/component-library/button';
-import {LevelStatus} from '@code-dot-org/progress';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {LevelStatuses, progressActions} from '@code-dot-org/platform/progress';
 
 // TODO: add user level interaction back in
 //import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
@@ -38,7 +37,7 @@ const SubmitButton: FunctionComponent<SubmitButtonProps> = ({
   tooltipMessage,
 }) => {
   const hasSubmitted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.submitted,
+    state => getCurrentLevel(state)?.status === LevelStatuses.Submitted,
   );
   //const scriptId = useAppSelector(
   //  state => state.progress.scriptId || undefined

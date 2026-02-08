@@ -3,7 +3,7 @@ import {Suspense, useEffect} from 'react';
 
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {injectFontAwesome} from '@code-dot-org/fonts';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {progressActions} from '@code-dot-org/platform/progress';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';

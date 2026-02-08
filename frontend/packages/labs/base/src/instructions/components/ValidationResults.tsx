@@ -7,7 +7,7 @@ import {
   Heading6,
   StrongText,
 } from '@code-dot-org/component-library/typography';
-import type {ValidationResult} from '@code-dot-org/progress';
+import type {ValidationResult} from '@code-dot-org/platform/progress';
 
 import {useAppSelector} from '../../redux/store';
 

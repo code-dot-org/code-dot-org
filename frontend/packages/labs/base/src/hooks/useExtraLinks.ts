@@ -3,7 +3,7 @@ import {
   useExtraLinksLevelData,
   useExtraLinksProjectData,
 } from '@code-dot-org/core/api';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {progressActions} from '@code-dot-org/platform/progress';
 
 import {PERMISSIONS} from '../constants';
 import {useAppSelector} from '../redux/store';

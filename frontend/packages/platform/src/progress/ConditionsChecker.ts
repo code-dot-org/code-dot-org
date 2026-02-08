@@ -5,18 +5,20 @@
 import _ from 'lodash';
 import queryString from 'query-string';
 
-import {Condition} from './types';
+import type {Condition} from './types';
 
 class ConditionsChecker {
   private currentSatisfiedConditions: Condition[];
   private conditionNames: string[];
+  private readonly logChanges: boolean;
 
   constructor(
     conditionNames: string[],
-    private readonly logChanges = queryString.parse(window.location.search)[
+    logChanges: boolean = queryString.parse(window.location.search)[
       'log-validator-condition-changes'
     ] === 'true',
   ) {
+    this.logChanges = logChanges;
     this.currentSatisfiedConditions = [];
     this.conditionNames = conditionNames;
   }

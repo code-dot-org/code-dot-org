@@ -2,7 +2,7 @@ import type {FunctionComponent} from 'react';
 
 import {LinkButton} from '@code-dot-org/component-library/button';
 import {useApiClient, useSectionSummary} from '@code-dot-org/core/api';
-import {ViewType} from '@code-dot-org/progress';
+import {ViewTypes} from '@code-dot-org/platform/progress';
 
 import {useAppSelector} from '../../redux/store';
 
@@ -14,8 +14,8 @@ const PredictSummary: FunctionComponent = () => {
   // If viewing the page as Participant, be sure to rewrite the link URL
   // to view as Instructor, so we don't just get redirected back.
   const params = document.location.search.replace(
-    `viewAs=${ViewType.Participant}`,
-    `viewAs=${ViewType.Instructor}`,
+    `viewAs=${ViewTypes.Participant}`,
+    `viewAs=${ViewTypes.Instructor}`,
   );
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
   const currentSectionId = useAppSelector(

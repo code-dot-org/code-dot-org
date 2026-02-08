@@ -1,8 +1,8 @@
 // Music Lab specific validations.
 
 import * as Blockly from 'blockly/core';
-import type {ValidationResult} from '@code-dot-org/progress';
-import {ConditionsChecker, Validator} from '@code-dot-org/progress';
+import type {ValidationResult} from '@code-dot-org/platform/progress';
+import {ConditionsChecker, Validator} from '@code-dot-org/platform/progress';
 import type {Condition, ConditionType} from '@code-dot-org/lab';
 
 import {

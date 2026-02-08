@@ -1,0 +1,76 @@
+{
+  "name": "@code-dot-org/platform",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "platform",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/platform/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/platform"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./progress": {
+      "types": "./dist/progress/index.d.ts",
+      "import": "./dist/progress/index.mjs",
+      "require": "./dist/progress/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/projects": "workspace:*",
+    "@code-dot-org/user": "workspace:*",
+    "@reduxjs/toolkit": "^2.8.2",
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
+    "query-string": "^9.2.2",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@types/node": "^20",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "prettier": "3.4.2",
+    "react": "^19.2.0",
+    "stylelint": "^16.14.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-externalize-deps": "^0.10.0",
+    "vitest": "^4.0.17"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  }
+}

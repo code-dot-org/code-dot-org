@@ -1,4 +1,4 @@
-import type {ValidationResult} from '@code-dot-org/progress';
+import type {ValidationResult} from '@code-dot-org/platform/progress';
 
 export function getStatusForResult(result: ValidationResult) {
   switch (result.result) {
