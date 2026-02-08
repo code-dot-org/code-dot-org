@@ -13,7 +13,7 @@ import type {
 } from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import styles from './studenRubricWidget.module.scss';
+import styles from './studentRubricWidget.module.scss';
 
 type AiEvaluation = InferProps<typeof aiEvaluationShape>['isRequired'];
 
