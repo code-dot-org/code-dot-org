@@ -13,7 +13,7 @@ import type {
   BlocklySerialization,
 } from '@code-dot-org/blockly-workspace';
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
-import type {ExemplarSettings} from '@code-dot-org/progress';
+import type {ExemplarSettings} from '@code-dot-org/platform/progress';
 import type {
   AppName,
   Channel,

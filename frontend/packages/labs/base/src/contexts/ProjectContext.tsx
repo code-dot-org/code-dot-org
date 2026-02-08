@@ -2,7 +2,7 @@ import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useEffect} from 'react';
 
 import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {progressActions} from '@code-dot-org/platform/progress';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import {useLoadAppOptions} from '../hooks/useLoadAppOptions';

@@ -8,8 +8,7 @@ import {
   useTheme,
 } from '@code-dot-org/component-library/common/contexts';
 import type {LevelProperties} from '@code-dot-org/core/api';
-import {LevelStatus} from '@code-dot-org/progress';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {LevelStatuses, progressActions} from '@code-dot-org/platform/progress';
 
 import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 import {isPredictResponseSubmitted} from '../../redux/predictLevelSlice';
@@ -97,7 +96,7 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
 
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
   const hasSubmitted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.submitted,
+    state => getCurrentLevel(state)?.status === LevelStatuses.Submitted,
   );
 
   // The secondary finish button avoids a reappearance animation by not using

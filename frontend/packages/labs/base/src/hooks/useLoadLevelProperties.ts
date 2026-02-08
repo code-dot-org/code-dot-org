@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 
 import {useLevelProperties, useApiClient} from '@code-dot-org/core/api';
-import {progressActions} from '@code-dot-org/progress/redux';
+import {progressActions} from '@code-dot-org/platform/progress';
 
 import {setPageError} from '../redux/labSlice';
 import {useAppDispatch, useAppSelector} from '../redux/store';

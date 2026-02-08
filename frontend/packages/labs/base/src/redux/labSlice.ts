@@ -15,9 +15,15 @@ import {
   levelsKeys,
   OPEN_ENDED_LAB2_PROJECT_TYPES,
 } from '@code-dot-org/core/api';
-import type {Validation, ValidationState} from '@code-dot-org/progress';
-import {getInitialValidationState, LevelStatus} from '@code-dot-org/progress';
-import {progressActions} from '@code-dot-org/progress/redux';
+import type {
+  Validation,
+  ValidationState,
+} from '@code-dot-org/platform/progress';
+import {
+  getInitialValidationState,
+  LevelStatuses,
+  progressActions,
+} from '@code-dot-org/platform/progress';
 import {ProjectManagerFactory, ProjectManager} from '@code-dot-org/projects';
 import {projectActions} from '@code-dot-org/projects/redux';
 import {CourseRoles} from '@code-dot-org/user';
@@ -524,7 +530,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const isFrozen = !!state.lab.channel?.frozen;
   const readonlyPredictLevel = isReadOnlyPredictLevel(state);
   const hasSubmitted =
-    progressActions.getCurrentLevel(state)?.status === LevelStatus.submitted;
+    progressActions.getCurrentLevel(state)?.status === LevelStatuses.Submitted;
   const isViewingOldVersion = state.labProject.viewingOldVersion;
   const isRunningAndReadonly =
     (state.labSystem.isRunning || state.labSystem.isValidating) &&

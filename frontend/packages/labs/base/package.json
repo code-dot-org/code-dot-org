@@ -116,7 +116,7 @@
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/js-interpreter": "^1.3.13",
     "@code-dot-org/markdown": "workspace:*",
-    "@code-dot-org/progress": "workspace:*",
+    "@code-dot-org/platform": "workspace:*",
     "@code-dot-org/projects": "workspace:*",
     "@code-dot-org/teacher-dashboard": "workspace:*",
     "@code-dot-org/user": "workspace:*",

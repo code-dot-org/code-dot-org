@@ -3,7 +3,8 @@
 
 import type {AppOptions, ExemplarSettings} from '@code-dot-org/core/api';
 
-import {Validation, Validator, ValidationState} from './types';
+import type {Validation, ValidationState} from './types';
+import {Validator} from './types';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,

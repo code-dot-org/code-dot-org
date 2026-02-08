@@ -11,7 +11,7 @@ import _ from 'lodash';
 import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
 import {LevelKinds} from '@code-dot-org/core/api';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
-import currentUserSlice from '@code-dot-org/user/redux/currentUserSlice';
+import type {default as currentUserSlice} from '@code-dot-org/user/redux/currentUserSlice';
 
 type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
 type RootState = StateFor<Store>;
@@ -26,24 +26,28 @@ type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction>;
 
 import {
   PUZZLE_PAGE_NONE,
-  LevelStatus,
+  LevelStatuses,
+  ProgressLevelTypes,
   TestResults,
   MINIMUM_PASS_RESULT,
   MINIMUM_OPTIMAL_RESULT,
+  ViewTypes,
 } from '../constants';
-import {
-  LevelResults,
-  PeerReviewLevelInfo,
-  ProgressState,
-  UnitProgress,
-  UnitProgressDefinition,
+import type {
   InitProgressPayload,
-  ViewType,
+  LevelResults,
+  LevelStatus,
   MilestoneReport,
-  OptionalMilestoneData,
-  ProgressLevelType,
   NumberedLevel,
   NumberedSublevel,
+  OptionalMilestoneData,
+  PeerReviewLevelInfo,
+  ProgressLevelType,
+  ProgressState,
+  TestResult,
+  UnitProgress,
+  UnitProgressDefinition,
+  ViewType,
 } from '../types';
 
 /**
@@ -53,9 +57,9 @@ import {
  * @returns The better result.
  */
 export const mergeActivityResult: (
-  a: TestResults,
-  b: TestResults,
-) => TestResults = (a, b) => {
+  a: TestResult,
+  b: TestResult,
+) => TestResult = (a, b) => {
   a = a || 0;
   b = b || 0;
   if (a === 0) {
@@ -64,56 +68,52 @@ export const mergeActivityResult: (
   if (b === 0) {
     return a;
   }
-  return Math.max(a, b);
+  return Math.max(a, b) as TestResult;
 };
 
-export const activityCssClass: (
-  result: TestResults,
-) => LevelStatus = result => {
+export const activityCssClass: (result: TestResult) => LevelStatus = result => {
   if (!result || result === TestResults.NO_TESTS_RUN) {
-    return LevelStatus.not_tried;
+    return LevelStatuses.NotTried;
   }
   if (result === TestResults.REVIEW_ACCEPTED_RESULT) {
-    return LevelStatus.review_accepted;
+    return LevelStatuses.ReviewAccepted;
   }
   if (result === TestResults.REVIEW_REJECTED_RESULT) {
-    return LevelStatus.review_rejected;
+    return LevelStatuses.ReviewRejected;
   }
   if (result === TestResults.SUBMITTED_RESULT) {
-    return LevelStatus.submitted;
+    return LevelStatuses.Submitted;
   }
   if (result >= MINIMUM_OPTIMAL_RESULT) {
-    return LevelStatus.perfect;
+    return LevelStatuses.Perfect;
   }
   if (result >= MINIMUM_PASS_RESULT) {
-    return LevelStatus.passed;
+    return LevelStatuses.Passed;
   }
-  return LevelStatus.attempted;
+  return LevelStatuses.Attempted;
 };
 
 /**
  * Inverse of the above function.
  * Given a status string, returns a result value.
  */
-export const resultFromStatus: (
-  status: LevelStatus,
-) => TestResults = status => {
-  if (status === LevelStatus.review_accepted) {
+export const resultFromStatus: (status: LevelStatus) => TestResult = status => {
+  if (status === LevelStatuses.ReviewAccepted) {
     return TestResults.REVIEW_ACCEPTED_RESULT;
   }
-  if (status === LevelStatus.review_rejected) {
+  if (status === LevelStatuses.ReviewRejected) {
     return TestResults.REVIEW_REJECTED_RESULT;
   }
-  if (status === LevelStatus.submitted) {
+  if (status === LevelStatuses.Submitted) {
     return TestResults.SUBMITTED_RESULT;
   }
-  if (status === LevelStatus.free_play_complete) {
+  if (status === LevelStatuses.FreePlayComplete) {
     return TestResults.FREE_PLAY;
   }
-  if (status === LevelStatus.perfect) {
+  if (status === LevelStatuses.Perfect) {
     return TestResults.ALL_PASS;
   }
-  if (status === LevelStatus.passed) {
+  if (status === LevelStatuses.Passed) {
     return MINIMUM_PASS_RESULT;
   }
   return TestResults.NO_TESTS_RUN;
@@ -121,7 +121,7 @@ export const resultFromStatus: (
 
 export const getLevelResult: (
   serverProgress: UnitProgressDefinition,
-) => TestResults = serverProgress => {
+) => TestResult = serverProgress => {
   return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
@@ -131,7 +131,7 @@ export const getLevelResult: (
  * a result value into our data model that uses studentLevelProgressType objects.
  */
 export const levelProgressFromResult: (
-  result: TestResults,
+  result: TestResult,
 ) => UnitProgress = result => {
   return levelProgressFromStatus(activityCssClass(result));
 };
@@ -191,10 +191,10 @@ const getPagesProgress: (
   serverProgress: UnitProgressDefinition,
 ) => UnitProgress[] | undefined = serverProgress => {
   if ((serverProgress.pages_completed?.length || 0) > 1) {
-    return serverProgress.pages_completed?.map((pageResult: TestResults) => {
+    return serverProgress.pages_completed?.map((pageResult: TestResult) => {
       const pageProgress =
         (pageResult && levelProgressFromResult(pageResult)) ||
-        levelProgressFromStatus(LevelStatus.not_tried);
+        levelProgressFromStatus(LevelStatuses.NotTried);
       pageProgress.locked = serverProgress.locked || false;
       return pageProgress;
     });
@@ -212,7 +212,7 @@ export const levelProgressFromServer: (
   serverProgress: UnitProgressDefinition,
 ) => UnitProgress = serverProgress => {
   return {
-    status: serverProgress.status || LevelStatus.not_tried,
+    status: serverProgress.status || LevelStatuses.NotTried,
     result: getLevelResult(serverProgress),
     locked: serverProgress.locked || false,
     paired: serverProgress.paired || false,
@@ -443,9 +443,9 @@ const _progressSlice = createSlice({
     setViewAsUserId(state, action: PayloadAction<number | undefined>) {
       state.viewAsUserId = action.payload;
     },
-    setViewType(state, action: PayloadAction<keyof typeof ViewType>) {
+    setViewType(state, action: PayloadAction<ViewType>) {
       state.isSummaryView =
-        action.payload === ViewType.Participant &&
+        action.payload === ViewTypes.Participant &&
         state.studentDefaultsSummaryView;
     },
   },
@@ -526,7 +526,7 @@ export const levelById: (
  */
 function sendReportHelper(
   appType: string,
-  result: number,
+  result: TestResult,
   dispatch: AppDispatch,
   getState: () => RootState,
   extraData?: OptionalMilestoneData,
@@ -579,9 +579,9 @@ export const getProgressLevelType: (
   state: RootState,
 ) => ProgressLevelType | undefined = state => {
   if (state.progress.lessons) {
-    return ProgressLevelType.SCRIPT_LEVEL;
+    return ProgressLevelTypes.ScriptLevel;
   } else if (state.progress.currentLevelId) {
-    return ProgressLevelType.LEVEL;
+    return ProgressLevelTypes.Level;
   }
 };
 
@@ -591,7 +591,7 @@ export const getProgressLevelType: (
  * currently on the last level.
  */
 export const nextLevelId: (state: RootState) => number | undefined = state => {
-  if (getProgressLevelType(state) !== ProgressLevelType.SCRIPT_LEVEL) {
+  if (getProgressLevelType(state) !== ProgressLevelTypes.ScriptLevel) {
     return;
   }
 
@@ -631,7 +631,7 @@ export function navigateToNextLevel(): ProgressThunkAction {
  */
 export const bestResultLevelId: (
   levelIds: number[],
-  progressData: Record<number, TestResults>,
+  progressData: Record<number, TestResult>,
 ) => number = (levelIds, progressData) => {
   // The usual case
   if (levelIds.length === 1) {
@@ -687,7 +687,7 @@ const levelWithProgress: (
   }
 
   // default values
-  let status = LevelStatus.not_tried;
+  let status: LevelStatus = LevelStatuses.NotTried;
   let locked = isLockable;
   let teacherFeedbackReviewState = null;
 
@@ -924,7 +924,7 @@ const userProgressFromServer = (
     dispatch(clearResults());
   }
 
-  return new Promise((resolve, reject) => {
+  return new Promise<void>((resolve, reject) => {
     (async () => {
       const response = await fetch(`/api/user_progress/${state.scriptName}`, {
         body: JSON.stringify({
@@ -966,6 +966,7 @@ const userProgressFromServer = (
 
       if (data.completed) {
         dispatch(setScriptCompleted());
+        resolve();
       }
 
       // Merge progress from server

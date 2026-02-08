@@ -5,11 +5,14 @@ import type {
   Sublevel,
 } from '@code-dot-org/core/api';
 
-import type {TestResults} from './constants';
-import {LevelStatus} from './constants';
+import type {ProgressLevelTypes, TestResults} from './constants';
+import {LevelStatuses, ViewTypes} from './constants';
 
-// LevelResults is a map of levelId -> TestResults. TestResults is a number.
-export type LevelResults = {[key: number]: TestResults};
+export type TestResult = (typeof TestResults)[keyof typeof TestResults];
+export type LevelStatus = (typeof LevelStatuses)[keyof typeof LevelStatuses];
+
+// LevelResults is a map of levelId -> TestResult. TestResult is a number.
+export type LevelResults = {[key: number]: TestResult};
 
 export const ReviewStates = {
   completed: 'completed',
@@ -24,9 +27,9 @@ export interface UnitProgressDefinition {
   status: LevelStatus;
   last_progress_at?: number;
   locked?: boolean;
-  pages_completed?: TestResults[];
+  pages_completed?: TestResult[];
   paired?: boolean;
-  result?: TestResults;
+  result?: TestResult;
   teacher_feedback_commented?: boolean;
   teacher_feedback_review_state?: keyof typeof ReviewStates;
   teacher_feedback_new?: boolean;
@@ -38,7 +41,7 @@ export interface UnitProgress {
   locked: boolean;
   pages?: UnitProgress[];
   paired: boolean;
-  result: TestResults;
+  result: TestResult;
   status: LevelStatus;
   teacherFeedbackCommented: boolean;
   teacherFeedbackReviewState: keyof typeof ReviewStates | undefined;
@@ -161,10 +164,7 @@ export interface PeerReviewLessonInfo {
   lockable: boolean;
 }
 
-export const ViewType = {
-  Participant: 'Participant',
-  Instructor: 'Instructor',
-};
+export type ViewType = (typeof ViewTypes)[keyof typeof ViewTypes];
 
 // A validation condition.
 export interface Condition {
@@ -237,15 +237,8 @@ export interface OptionalMilestoneData {
 export interface MilestoneReport extends OptionalMilestoneData {
   app: string;
   result: boolean;
-  testResult: number;
+  testResult: TestResult;
 }
 
-/**
- * Returns whether we appear to be in a script level or a standalone level.
- * A script level is identified because it has lessons.
- * A standalone level doesn't have lessons, but it does have a level ID.
- */
-export enum ProgressLevelType {
-  SCRIPT_LEVEL = 'script_level',
-  LEVEL = 'level',
-}
+export type ProgressLevelType =
+  (typeof ProgressLevelTypes)[keyof typeof ProgressLevelTypes];
