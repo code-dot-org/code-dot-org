@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type {FunctionComponent, MutableRefObject, ReactNode} from 'react';
 import {useRef} from 'react';
 
-import TextToSpeech from '@code-dot-org/audio/textToSpeech';
+import TextToSpeech from '@code-dot-org/core/textToSpeech';
 import {
   type Theme,
   useTheme,

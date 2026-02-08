@@ -50,6 +50,8 @@ export default defineConfig({
         'src/plugins/localization/index.ts',
         'src/plugins/observability/index.ts',
         'src/metrics/index.ts',
+        'src/audio/index.ts',
+        'src/textToSpeech/index.ts',
       ],
       name: 'core',
     },

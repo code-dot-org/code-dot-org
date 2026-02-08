@@ -51,10 +51,15 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
     "@newrelic/browser-agent": "^1.294.0",
     "@statsig/js-client": "^3.20.2",
@@ -65,9 +70,12 @@
     "@types/new-relic-browser": "^1.230.5",
     "aws-sdk": "^2.1692.0",
     "camelcase-keys": "^10.0.2",
+    "classnames": "^2.5.1",
     "events": "^3.3.0",
     "flat": "^6.0.1",
     "js-cookie": "^3.0.5",
+    "markdown-to-txt": "^2.0.1",
+    "query-string": "^9.3.1",
     "tldts": "^7.0.23",
     "zod": "^4.3.6"
   },
@@ -86,6 +94,7 @@
     "ky": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
+    "stylelint": "catalog:",
     "typescript": "catalog:",
     "uuid": "^14.0.0",
     "vite": "catalog:",
