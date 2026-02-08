@@ -41,10 +41,15 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
     "@newrelic/browser-agent": "^1.294.0",
     "@statsig/js-client": "^3.20.2",
@@ -54,7 +59,10 @@
     "@types/new-relic-browser": "^1.230.5",
     "aws-sdk": "^2.1692.0",
     "camelcase-keys": "^10.0.2",
+    "classnames": "^2.5.1",
     "js-cookie": "^3.0.5",
+    "markdown-to-txt": "^2.0.1",
+    "query-string": "^9.3.1",
     "tldjs": "^2.3.2",
     "zod": "^4.3.6"
   },
@@ -69,6 +77,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "prettier": "3.4.2",
     "react": "^19.2.0",
+    "stylelint": "^16.14.1",
     "typescript": "~5.9.3",
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4",

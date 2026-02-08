@@ -1542,29 +1542,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/audio@workspace:*, @code-dot-org/audio@workspace:packages/audio":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/audio@workspace:packages/audio"
-  dependencies:
-    "@code-dot-org/lint-config": "workspace:*"
-    "@types/node": "npm:^20"
-    "@types/tldjs": "npm:^2"
-    eslint: "npm:^9.39.1"
-    eslint-plugin-react-hooks: "npm:^7.0.1"
-    eslint-plugin-react-refresh: "npm:^0.4.24"
-    prettier: "npm:3.4.2"
-    react: "npm:^19.2.0"
-    tldjs: "npm:^2.3.2"
-    typescript: "npm:~5.9.3"
-    vite: "npm:^7.2.4"
-    vite-plugin-dts: "npm:^4.5.4"
-    vite-plugin-externalize-deps: "npm:^0.10.0"
-    vitest: "npm:^4.0.17"
-  peerDependencies:
-    react: ^17.0.0 || ^18.0.0 || ^19.0.0
-  languageName: unknown
-  linkType: soft
-
 "@code-dot-org/blockly-workspace@workspace:*, @code-dot-org/blockly-workspace@workspace:packages/blockly-workspace":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace"
@@ -1718,12 +1695,16 @@ __metadata:
     "@types/tldjs": "npm:^2"
     aws-sdk: "npm:^2.1692.0"
     camelcase-keys: "npm:^10.0.2"
+    classnames: "npm:^2.5.1"
     eslint: "npm:^9.39.1"
     eslint-plugin-react-hooks: "npm:^7.0.1"
     eslint-plugin-react-refresh: "npm:^0.4.24"
     js-cookie: "npm:^3.0.5"
+    markdown-to-txt: "npm:^2.0.1"
     prettier: "npm:3.4.2"
+    query-string: "npm:^9.3.1"
     react: "npm:^19.2.0"
+    stylelint: "npm:^16.14.1"
     tldjs: "npm:^2.3.2"
     typescript: "npm:~5.9.3"
     vite: "npm:^7.2.4"
@@ -1832,29 +1813,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/interpreter@workspace:*, @code-dot-org/interpreter@workspace:packages/interpreter":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/interpreter@workspace:packages/interpreter"
-  dependencies:
-    "@code-dot-org/js-interpreter": "npm:^1.3.13"
-    "@code-dot-org/lint-config": "workspace:*"
-    "@types/node": "npm:^20"
-    "@types/tldjs": "npm:^2"
-    eslint: "npm:^9.39.1"
-    eslint-plugin-react-hooks: "npm:^7.0.1"
-    eslint-plugin-react-refresh: "npm:^0.4.24"
-    prettier: "npm:3.4.2"
-    react: "npm:^19.2.0"
-    typescript: "npm:~5.9.3"
-    vite: "npm:^7.2.4"
-    vite-plugin-dts: "npm:^4.5.4"
-    vite-plugin-externalize-deps: "npm:^0.10.0"
-    vitest: "npm:^4.0.17"
-  peerDependencies:
-    react: ^17.0.0 || ^18.0.0 || ^19.0.0
-  languageName: unknown
-  linkType: soft
-
 "@code-dot-org/js-interpreter@npm:^1.3.13":
   version: 1.3.13
   resolution: "@code-dot-org/js-interpreter@npm:1.3.13"
@@ -1870,7 +1828,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab@workspace:packages/labs/base"
   dependencies:
-    "@code-dot-org/audio": "workspace:*"
     "@code-dot-org/blockly-workspace": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
@@ -2035,7 +1992,6 @@ __metadata:
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
-    "@code-dot-org/interpreter": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@eslint/js": "catalog:"
@@ -20583,7 +20539,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"query-string@npm:^9.2.2":
+"query-string@npm:^9.2.2, query-string@npm:^9.3.1":
   version: 9.3.1
   resolution: "query-string@npm:9.3.1"
   dependencies:

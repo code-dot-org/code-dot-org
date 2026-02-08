@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {forwardRef, useRef, type MutableRefObject} from 'react';
 
-import TextToSpeech from '@code-dot-org/audio/textToSpeech';
+import TextToSpeech from '@code-dot-org/core/textToSpeech';
 
 import EnhancedMarkdown from '../../components/EnhancedMarkdown';
 
