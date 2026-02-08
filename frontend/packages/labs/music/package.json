@@ -55,7 +55,6 @@
     "@code-dot-org/interpreter": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
-    "@code-dot-org/metrics": "workspace:*",
     "@magenta/music": "^1.23.1",
     "@react-hook/resize-observer": "^2.0.2",
     "@rexxars/react-split-pane": "^1.0.0",

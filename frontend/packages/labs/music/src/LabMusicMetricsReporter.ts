@@ -1,7 +1,11 @@
 import type * as Blockly from 'blockly/core';
 
 import {LabRegistry} from '@code-dot-org/lab';
-import {DCDO, AnalyticsReporter, GoogleAnalytics} from '@code-dot-org/metrics';
+import {
+  DCDO,
+  AnalyticsReporter,
+  GoogleAnalytics,
+} from '@code-dot-org/core/metrics';
 
 import {BlockTypes} from './blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from './blockly/constants';

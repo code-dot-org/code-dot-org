@@ -10,29 +10,31 @@ declare global {
   }
 }
 
-export enum PageAction {
-  DropletTransitionError = 'DropletTransitionError',
-  SanitizedLevelHtml = 'SanitizedLevelHtml',
-  UserJavaScriptError = 'UserJavaScriptError',
-  RunButtonClick = 'RunButtonClick',
-  StartWebRequest = 'StartWebRequest',
-  StaticResourceFetchError = 'StaticResourceFetchError',
-  PegasusSectionsRedirect = 'PegasusSectionsRedirect',
-  DancePartyOnInit = 'DancePartyOnInit',
-  BrambleError = 'BrambleError',
-  BrambleFilesystemResetSuccess = 'BrambleFilesystemResetSuccess',
-  BrambleFilesystemResetFailed = 'BrambleFilesystemResetFailed',
-  JotFormFrameLoaded = 'JotFormFrameLoaded',
-  JotFormLoadFailed = 'JotFormLoadFailed',
-  BlockLoadFailed = 'BlockLoadFailed',
-  MapboxMarkerLoadError = 'MapboxMarkerLoadError',
-  LoadScriptProgressStarted = 'LoadScriptProgressStarted',
-  LoadScriptProgressFinished = 'LoadScriptProgressFinished',
-  SectionProgressRenderedWithData = 'SectionProgressRenderedWithData',
-  JavabuilderWebSocketConnectionError = 'JavabuilderWebSocketConnectionError',
-  NoValidAmplitudeEventNameError = 'NoValidAmplitudeEventNameError',
-  NoValidStatsigEventNameError = 'NoValidStatsigEventNameError',
-}
+export const PageActions = {
+  DropletTransitionError: 'DropletTransitionError',
+  SanitizedLevelHtml: 'SanitizedLevelHtml',
+  UserJavaScriptError: 'UserJavaScriptError',
+  RunButtonClick: 'RunButtonClick',
+  StartWebRequest: 'StartWebRequest',
+  StaticResourceFetchError: 'StaticResourceFetchError',
+  PegasusSectionsRedirect: 'PegasusSectionsRedirect',
+  DancePartyOnInit: 'DancePartyOnInit',
+  BrambleError: 'BrambleError',
+  BrambleFilesystemResetSuccess: 'BrambleFilesystemResetSuccess',
+  BrambleFilesystemResetFailed: 'BrambleFilesystemResetFailed',
+  JotFormFrameLoaded: 'JotFormFrameLoaded',
+  JotFormLoadFailed: 'JotFormLoadFailed',
+  BlockLoadFailed: 'BlockLoadFailed',
+  MapboxMarkerLoadError: 'MapboxMarkerLoadError',
+  LoadScriptProgressStarted: 'LoadScriptProgressStarted',
+  LoadScriptProgressFinished: 'LoadScriptProgressFinished',
+  SectionProgressRenderedWithData: 'SectionProgressRenderedWithData',
+  JavabuilderWebSocketConnectionError: 'JavabuilderWebSocketConnectionError',
+  NoValidAmplitudeEventNameError: 'NoValidAmplitudeEventNameError',
+  NoValidStatsigEventNameError: 'NoValidStatsigEventNameError',
+} as const;
+
+export type PageAction = (typeof PageActions)[keyof typeof PageActions];
 
 const MAX_FIELD_LENGTH = 4095;
 const REPORT_PAGE_SIZE: boolean = Math.random() < 0.01;
@@ -46,7 +48,7 @@ export const addPageAction = (
     return;
   }
 
-  if (actionName in PageAction) {
+  if (actionName in PageActions) {
     console.log('Unknown actionName: ' + actionName);
     return;
   }

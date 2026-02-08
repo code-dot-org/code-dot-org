@@ -20,8 +20,13 @@ import type {
   SectionParticipationType,
   QueryClient,
 } from '@code-dot-org/core/api';
-import {analyticsReporter, firehoseClient, EVENTS} from '@code-dot-org/metrics';
-import {OAuthSectionType} from '@code-dot-org/user';
+import {
+  analyticsReporter,
+  firehoseClient,
+  EVENTS,
+} from '@code-dot-org/core/metrics';
+import {OAuthSectionTypes} from '@code-dot-org/user';
+import type {OAuthSectionType} from '@code-dot-org/user';
 
 import {
   getFilteredSectionOrderIds,
@@ -177,7 +182,7 @@ const mapProviderToSectionType: (
 ) => OAuthSectionType = provider => {
   switch (provider) {
     case 'google_oauth2':
-      return OAuthSectionType.GoogleClassroom;
+      return OAuthSectionTypes.GoogleClassroom;
     default:
       return provider as OAuthSectionType;
   }
@@ -195,7 +200,7 @@ const sectionSlice = createSlice({
       // since this action is triggered on every section load.
       if (
         action.payload &&
-        (Object.values(OAuthSectionType).includes(
+        (Object.values(OAuthSectionTypes).includes(
           action.payload as OAuthSectionType,
         ) ||
           action.payload === SectionLoginTypes.LtiV1)
@@ -1164,8 +1169,8 @@ function removeNullValues(_key: string, val?: string | number | null) {
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider: {[key: string]: string} = {
-  [OAuthSectionType.GoogleClassroom]: '/dashboardapi/google_classrooms',
-  [OAuthSectionType.Clever]: '/dashboardapi/clever_classrooms',
+  [OAuthSectionTypes.GoogleClassroom]: '/dashboardapi/google_classrooms',
+  [OAuthSectionTypes.Clever]: '/dashboardapi/clever_classrooms',
 } as const;
 
 /**
@@ -1209,8 +1214,8 @@ export const beginImportRosterFlow =
 
 /** @const {Object} Map oauth section type to relative import URL. */
 const importUrlByProvider: {[key: string]: string} = {
-  [OAuthSectionType.GoogleClassroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionType.Clever]: '/dashboardapi/import_clever_classroom',
+  [OAuthSectionTypes.GoogleClassroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.Clever]: '/dashboardapi/import_clever_classroom',
   [SectionLoginTypes.LtiV1]: '/lti/v1/sync_course',
 } as const;
 

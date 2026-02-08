@@ -5,8 +5,8 @@
  */
 
 import type {ApiClient, QueryClient} from '@code-dot-org/core/api';
-import {metricsReporter as metricsReporterSingleton} from '@code-dot-org/metrics';
-import type {MetricsReporter} from '@code-dot-org/metrics';
+import {metricsReporter as metricsReporterSingleton} from '@code-dot-org/core/metrics';
+import type {MetricsReporter} from '@code-dot-org/core/metrics';
 
 import {ChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';

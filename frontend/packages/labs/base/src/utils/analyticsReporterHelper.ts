@@ -1,4 +1,4 @@
-import {analyticsReporter} from '@code-dot-org/metrics';
+import {analyticsReporter} from '@code-dot-org/core/metrics';
 
 /**
  * Sends an analytics event to the analytics reporter.

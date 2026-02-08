@@ -135,7 +135,7 @@ export class StatsigReporter {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         NewRelicReporter.addPageAction(
-          NewRelicReporter.PageAction.NoValidStatsigEventNameError,
+          NewRelicReporter.PageActions.NoValidStatsigEventNameError,
           {
             payload,
           },

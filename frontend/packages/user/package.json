@@ -58,7 +58,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/metrics": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "react-redux": "^9.2.0"
   },

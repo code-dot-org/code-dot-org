@@ -1,9 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 
-import {analyticsReporter, experiments} from '@code-dot-org/metrics';
+import {analyticsReporter, experiments} from '@code-dot-org/core/metrics';
 
-import {UserType, CourseRoles, SignInState} from '../types';
+import {UserTypes, CourseRoles, SignInStates} from '../constants';
+import type {UserType, CourseRole, SignInState} from '../types';
 
 export interface CurrentUserDefinition {
   id?: number;
@@ -40,7 +41,7 @@ export interface CurrentUserState {
   userName?: string;
   userType?: UserType;
   displayName?: string;
-  userRoleInCourse: CourseRoles;
+  userRoleInCourse: CourseRole;
   signInState: SignInState;
   hasSeenStandardsReportInfo: boolean;
   aiRubricsDisabled?: boolean;
@@ -67,9 +68,9 @@ export interface CurrentUserState {
 }
 
 const initialState: CurrentUserState = {
-  userType: UserType.Unknown,
+  userType: UserTypes.Unknown,
   userRoleInCourse: CourseRoles.Unknown,
-  signInState: SignInState.Unknown,
+  signInState: SignInStates.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
@@ -100,8 +101,8 @@ const currentUserSlice = createSlice({
     },
     setUserSignedIn: (state, action: PayloadAction<boolean>) => {
       state.signInState = action.payload
-        ? SignInState.SignedIn
-        : SignInState.SignedOut;
+        ? SignInStates.SignedIn
+        : SignInStates.SignedOut;
     },
     setUserType: (
       state,
@@ -116,7 +117,7 @@ const currentUserSlice = createSlice({
     setOver21: (state, action: PayloadAction<boolean>) => {
       state.over21 = action.payload;
     },
-    setUserRoleInCourse: (state, action: PayloadAction<CourseRoles>) => {
+    setUserRoleInCourse: (state, action: PayloadAction<CourseRole>) => {
       state.userRoleInCourse = action.payload;
     },
     setInitialData: (state, action: PayloadAction<CurrentUserDefinition>) => {
@@ -171,7 +172,7 @@ const currentUserSlice = createSlice({
       state.aiDifferentiationEnabled = ai_differentiation_enabled;
       state.progressTableV2ClosedBeta = progress_table_v2_closed_beta;
       state.isLti = is_lti;
-      state.isTeacher = user_type === UserType.Teacher;
+      state.isTeacher = user_type === UserTypes.Teacher;
       state.inUSA = ['US', 'RD'].includes(country_code || '');
       state.dateProgressTableInvitationDelayed =
         date_progress_table_invitation_last_delayed;
@@ -241,7 +242,7 @@ export const {
 export const isSignedIn: (
   currentUserState: CurrentUserState,
 ) => boolean = currentUserState => {
-  return currentUserState.signInState === SignInState.SignedIn;
+  return currentUserState.signInState === SignInStates.SignedIn;
 };
 
 export default currentUserSlice;

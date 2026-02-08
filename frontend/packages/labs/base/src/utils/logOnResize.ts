@@ -1,4 +1,4 @@
-import {EVENTS, analyticsReporter} from '@code-dot-org/metrics';
+import {EVENTS, analyticsReporter} from '@code-dot-org/core/metrics';
 
 export const logOnResize = (
   labType?: string,

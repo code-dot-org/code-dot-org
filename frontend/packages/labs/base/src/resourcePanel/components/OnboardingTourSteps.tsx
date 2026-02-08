@@ -2,7 +2,7 @@ import {Steps} from 'intro.js-react';
 import type {FunctionComponent} from 'react';
 import {useState} from 'react';
 
-import {EVENTS} from '@code-dot-org/metrics';
+import {EVENTS} from '@code-dot-org/core/metrics';
 
 import {useAppSelector} from '../../redux/store';
 import {sendLabAnalyticsEvent} from '../../utils/analyticsReporterHelper';

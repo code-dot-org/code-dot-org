@@ -6,7 +6,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {EVENTS} from '@code-dot-org/metrics';
+import {EVENTS} from '@code-dot-org/core/metrics';
 
 //import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 //import {shouldShowAiTutor} from '@cdo/apps/lab2/ai/shouldShowAiTutor';

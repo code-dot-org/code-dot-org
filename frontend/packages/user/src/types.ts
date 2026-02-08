@@ -1,23 +1,12 @@
-export enum OAuthSectionType {
-  GoogleClassroom = 'google_classroom',
-  Clever = 'clever',
-  MicrosoftClassroom = 'microsoft_classroom',
-}
+import {
+  OAuthSectionTypes,
+  SignInStates,
+  CourseRoles,
+  UserTypes,
+} from './constants';
 
-export enum SignInState {
-  Unknown = 'Unknown',
-  SignedIn = 'SignedIn',
-  SignedOut = 'SignedOut',
-}
-
-export enum CourseRoles {
-  Unknown = 'Unknown',
-  Instructor = 'Instructor',
-  Participant = 'Participant',
-}
-
-export enum UserType {
-  Unknown = 'unknown',
-  Student = 'student',
-  Teacher = 'teacher',
-}
+export type OAuthSectionType =
+  (typeof OAuthSectionTypes)[keyof typeof OAuthSectionTypes];
+export type SignInState = (typeof SignInStates)[keyof typeof SignInStates];
+export type CourseRole = (typeof CourseRoles)[keyof typeof CourseRoles];
+export type UserType = (typeof UserTypes)[keyof typeof UserTypes];

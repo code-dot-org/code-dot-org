@@ -15,7 +15,7 @@ import {
   analyticsReporter,
   EVENTS,
   DCDO,
-} from '@code-dot-org/metrics';
+} from '@code-dot-org/core/metrics';
 import type {ProjectType} from '@code-dot-org/projects';
 
 import {

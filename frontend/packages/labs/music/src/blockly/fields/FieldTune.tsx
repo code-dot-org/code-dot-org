@@ -4,7 +4,7 @@ import {createRoot} from 'react-dom/client';
 import type {BlockSvg} from '@code-dot-org/blockly-workspace';
 import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
 import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
-import {experiments} from '@code-dot-org/metrics';
+import {experiments} from '@code-dot-org/core/metrics';
 
 import {DEFAULT_KEY} from '../../constants';
 import MusicRegistry from '../../MusicRegistry';

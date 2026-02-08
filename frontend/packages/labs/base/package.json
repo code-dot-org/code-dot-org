@@ -111,7 +111,6 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
-    "@code-dot-org/metrics": "workspace:*",
     "@code-dot-org/progress": "workspace:*",
     "@code-dot-org/projects": "workspace:*",
     "@code-dot-org/redux": "workspace:*",

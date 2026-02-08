@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 
 import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
 import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
-import {experiments} from '@code-dot-org/metrics';
+import {experiments} from '@code-dot-org/core/metrics';
 
 import ChordPanel from '../../components/ChordPanel';
 import type {ChordEventValue} from '../../player/interfaces/ChordEvent';
